@@ -84,31 +84,30 @@ final class ad extends ia {
         RuntimeException var4 = null;
         int var5 = 0;
         try {
-          if ((this.field_k.field_m[param1.field_t] & 4) != 0) {
-            if (param1.field_y < 0) {
-              var4_int = this.field_k.field_n[param1.field_t] / qk.field_j;
-              var5 = (-param1.field_B + (1048575 + var4_int)) / var4_int;
-              param1.field_B = 1048575 & param1.field_B + param2 * var4_int;
-              if (param2 >= var5) {
-                if (this.field_k.field_u[param1.field_t] == 0) {
-                  param1.field_u = kl.a(param1.field_i, param1.field_u.h(), param1.field_u.i(), param1.field_u.k());
+          if (((this.field_k.field_m[param1.field_t] & 4) != 0) &&
+              (param1.field_y < 0)) {
+            var4_int = this.field_k.field_n[param1.field_t] / qk.field_j;
+            var5 = (-param1.field_B + (1048575 + var4_int)) / var4_int;
+            param1.field_B = 1048575 & param1.field_B + param2 * var4_int;
+            if (param2 >= var5) {
+              if (this.field_k.field_u[param1.field_t] == 0) {
+                param1.field_u = kl.a(param1.field_i, param1.field_u.h(), param1.field_u.i(), param1.field_u.k());
+              } else {
+                param1.field_u = kl.a(param1.field_i, param1.field_u.h(), 0, param1.field_u.k());
+                stackIn_6_0 = this.field_k;
+                stackIn_6_1 = (pc) (param1);
+                stackIn_6_2 = -70;
+                if (param1.field_z.field_j[param1.field_D] >= 0) {
+                  stackIn_7_3 = false;
                 } else {
-                  param1.field_u = kl.a(param1.field_i, param1.field_u.h(), 0, param1.field_u.k());
-                  stackIn_6_0 = this.field_k;
-                  stackIn_6_1 = (pc) (param1);
-                  stackIn_6_2 = -70;
-                  if (param1.field_z.field_j[param1.field_D] >= 0) {
-                    stackIn_7_3 = false;
-                  } else {
-                    stackIn_7_3 = true;
-                  }
-                  ((kj) (Object) stackIn_6_0).a(stackIn_6_1, (byte) stackIn_6_2, stackIn_7_3);
+                  stackIn_7_3 = true;
                 }
-                if (param1.field_z.field_j[param1.field_D] < 0) {
-                  param1.field_u.g(-1);
-                }
-                param2 = param1.field_B / var4_int;
+                ((kj) (Object) stackIn_6_0).a(stackIn_6_1, (byte) stackIn_6_2, stackIn_7_3);
               }
+              if (param1.field_z.field_j[param1.field_D] < 0) {
+                param1.field_u.g(-1);
+              }
+              param2 = param1.field_B / var4_int;
             }
           }
           if (param0 != -1) {
@@ -229,51 +228,50 @@ final class ad extends ia {
         kl var11 = null;
         try {
           L0: {
-            if ((4 & this.field_k.field_m[param4.field_t]) != 0) {
-              if (param4.field_y < 0) {
-                var7_int = this.field_k.field_n[param4.field_t] / qk.field_j;
-                while (true) {
-                  var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
-                  if (param0 < var8) {
-                    param4.field_B = param4.field_B + param0 * var7_int;
-                    break L0;
-                  }
-                  param4.field_u.a(param3, param5, var8);
-                  param0 = param0 - var8;
-                  param5 = param5 + var8;
-                  param4.field_B = param4.field_B + (-1048576 + var7_int * var8);
-                  var9 = qk.field_j / 100;
-                  var10 = 262144 / var7_int;
-                  if (var10 < var9) {
-                    var9 = var10;
-                  }
-                  var11 = param4.field_u;
-                  if (this.field_k.field_u[param4.field_t] == 0) {
-                    param4.field_u = kl.a(param4.field_i, var11.h(), var11.i(), var11.k());
+            if (((4 & this.field_k.field_m[param4.field_t]) != 0) &&
+                (param4.field_y < 0)) {
+              var7_int = this.field_k.field_n[param4.field_t] / qk.field_j;
+              while (true) {
+                var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
+                if (param0 < var8) {
+                  param4.field_B = param4.field_B + param0 * var7_int;
+                  break L0;
+                }
+                param4.field_u.a(param3, param5, var8);
+                param0 = param0 - var8;
+                param5 = param5 + var8;
+                param4.field_B = param4.field_B + (-1048576 + var7_int * var8);
+                var9 = qk.field_j / 100;
+                var10 = 262144 / var7_int;
+                if (var10 < var9) {
+                  var9 = var10;
+                }
+                var11 = param4.field_u;
+                if (this.field_k.field_u[param4.field_t] == 0) {
+                  param4.field_u = kl.a(param4.field_i, var11.h(), var11.i(), var11.k());
+                } else {
+                  param4.field_u = kl.a(param4.field_i, var11.h(), 0, var11.k());
+                  stackIn_11_0 = this.field_k;
+                  stackIn_11_1 = (pc) (param4);
+                  stackIn_11_2 = -70;
+                  if (param4.field_z.field_j[param4.field_D] >= 0) {
+                    stackIn_12_3 = false;
                   } else {
-                    param4.field_u = kl.a(param4.field_i, var11.h(), 0, var11.k());
-                    stackIn_11_0 = this.field_k;
-                    stackIn_11_1 = (pc) (param4);
-                    stackIn_11_2 = -70;
-                    if (param4.field_z.field_j[param4.field_D] >= 0) {
-                      stackIn_12_3 = false;
-                    } else {
-                      stackIn_12_3 = true;
-                    }
-                    ((kj) (Object) stackIn_11_0).a(stackIn_11_1, (byte) stackIn_11_2, stackIn_12_3);
-                    param4.field_u.c(var9, var11.i());
+                    stackIn_12_3 = true;
                   }
-                  if (param4.field_z.field_j[param4.field_D] < 0) {
-                    param4.field_u.g(-1);
-                  }
-                  var11.c(var9);
-                  var11.a(param3, param5, param2 - param5);
-                  if (!var11.g()) {
-                    continue;
-                  }
-                  this.field_m.a(var11);
+                  ((kj) (Object) stackIn_11_0).a(stackIn_11_1, (byte) stackIn_11_2, stackIn_12_3);
+                  param4.field_u.c(var9, var11.i());
+                }
+                if (param4.field_z.field_j[param4.field_D] < 0) {
+                  param4.field_u.g(-1);
+                }
+                var11.c(var9);
+                var11.a(param3, param5, param2 - param5);
+                if (!var11.g()) {
                   continue;
                 }
+                this.field_m.a(var11);
+                continue;
               }
             }
           }

@@ -217,21 +217,19 @@ final class ed {
           }
         }
         L9: {
-          if (this.field_h > 0) {
-            if (this.field_r > 0) {
-              var11 = (int)((double)this.field_h * var3);
-              for (var12 = var11; var12 < param0; var12++) {
-                field_f[var12] = field_f[var12] + field_f[var12 - var11] * this.field_r / 100;
-              }
-              break L9;
+          if ((this.field_h > 0) &&
+              (this.field_r > 0)) {
+            var11 = (int)((double)this.field_h * var3);
+            for (var12 = var11; var12 < param0; var12++) {
+              field_f[var12] = field_f[var12] + field_f[var12 - var11] * this.field_r / 100;
             }
+            break L9;
           }
         }
         L11: {
-          if (this.field_e.field_b[0] <= 0) {
-            if (this.field_e.field_b[1] <= 0) {
-              break L11;
-            }
+          if ((this.field_e.field_b[0] <= 0) &&
+              (this.field_e.field_b[1] <= 0)) {
+            break L11;
           }
           this.field_k.a();
           var11 = this.field_k.a(param0 + 1);

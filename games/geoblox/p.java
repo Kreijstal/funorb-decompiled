@@ -125,54 +125,46 @@ final class p extends hf {
                 }
               }
               L10: {
-                if (null != param2.field_L) {
-                  if (param2.field_d != null) {
-                    if (param2.field_C != null) {
-                      if (param2.field_x != null) {
-                        if (null != param2.field_a) {
-                          if (param2.field_y != null) {
-                            if (param2.field_l != null) {
-                              if (null != param2.field_p) {
-                                if (param2.field_b != null) {
-                                  var23 = 0;
-                                  while (true) {
-                                    if (~var23 <= ~param2.field_f) {
-                                      break L10;
-                                    }
-                                    var24 = param2.field_L[var23];
-                                    var25 = param2.field_d[var23];
-                                    var26 = param2.field_C[var23];
-                                    ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
-                                    pg.field_d[var23] = var10 + (var26 * var19 + var16 * var25 + var24 * var13 >> 16);
-                                    kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
-                                    var24 = param2.field_x[var23];
-                                    var25 = param2.field_a[var23];
-                                    var26 = param2.field_y[var23];
-                                    qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 16) + var9;
-                                    ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16);
-                                    vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 16) + var11;
-                                    var24 = param2.field_l[var23];
-                                    var25 = param2.field_p[var23];
-                                    var26 = param2.field_b[var23];
-                                    qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
-                                    ba.field_h[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
-                                    hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
-                                    var23++;
-                                    if (var30 != 0) {
-                                      return;
-                                    }
-                                    if (var30 == 0) {
-                                      continue;
-                                    }
-                                    break L10;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                if ((null != param2.field_L) &&
+                    (param2.field_d != null) &&
+                    (param2.field_C != null) &&
+                    (param2.field_x != null) &&
+                    (null != param2.field_a) &&
+                    (param2.field_y != null) &&
+                    (param2.field_l != null) &&
+                    (null != param2.field_p) &&
+                    (param2.field_b != null)) {
+                  var23 = 0;
+                  while (true) {
+                    if (~var23 <= ~param2.field_f) {
+                      break L10;
                     }
+                    var24 = param2.field_L[var23];
+                    var25 = param2.field_d[var23];
+                    var26 = param2.field_C[var23];
+                    ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
+                    pg.field_d[var23] = var10 + (var26 * var19 + var16 * var25 + var24 * var13 >> 16);
+                    kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
+                    var24 = param2.field_x[var23];
+                    var25 = param2.field_a[var23];
+                    var26 = param2.field_y[var23];
+                    qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 16) + var9;
+                    ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16);
+                    vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 16) + var11;
+                    var24 = param2.field_l[var23];
+                    var25 = param2.field_p[var23];
+                    var26 = param2.field_b[var23];
+                    qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
+                    ba.field_h[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
+                    hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
+                    var23++;
+                    if (var30 != 0) {
+                      return;
+                    }
+                    if (var30 == 0) {
+                      continue;
+                    }
+                    break L10;
                   }
                 }
               }

@@ -100,18 +100,16 @@ final class vd {
         if (this.field_j) {
           return 2;
         }
-        if (this.field_f == 2) {
-          if (this.field_c > 0) {
-            return 2;
-          }
+        if ((this.field_f == 2) &&
+            (this.field_c > 0)) {
+          return 2;
         }
         if (wh.field_n == this.field_h) {
           return 1;
         }
-        if (vk.field_a == 2) {
-          if (v.a(this.field_i, (byte) 89)) {
-            return 1;
-          }
+        if ((vk.field_a == 2) &&
+            (v.a(this.field_i, (byte) 89))) {
+          return 1;
         }
         if (param0 > 113) {
           return 0;

@@ -264,11 +264,10 @@ final class n extends q {
           }
           if (this.field_i instanceof nl) {
             var3 = ((nl) ((Object) this.field_i)).a((byte) -106);
-            if (var3 != null) {
-              if (var3.a((byte) -105) != kk.field_w) {
-                stackIn_9_0 = si.field_m;
-                return stackIn_9_0;
-              }
+            if ((var3 != null) &&
+                (var3.a((byte) -105) != kk.field_w)) {
+              stackIn_9_0 = si.field_m;
+              return stackIn_9_0;
             }
           }
           if (!param1.equals(this.field_i.field_s)) {
@@ -308,11 +307,10 @@ final class n extends q {
           if (this.field_i instanceof nl) {
             var3 = ((nl) ((Object) this.field_i)).a((byte) -118);
             if (var3 != null) {
-              if (var3.a((byte) -105) == kk.field_w) {
-                if (!param1.equals(this.field_i.field_s)) {
-                  stackIn_8_0 = sj.field_b;
-                  return stackIn_8_0;
-                }
+              if ((var3.a((byte) -105) == kk.field_w) &&
+                  (!param1.equals(this.field_i.field_s))) {
+                stackIn_8_0 = sj.field_b;
+                return stackIn_8_0;
               }
               stackIn_10_0 = var3.c(-21666);
               return stackIn_10_0;

@@ -17,35 +17,32 @@ final class oi {
         byte[] var2_ref_byte__;
         int var2;
         byte[] var3;
-        if (param1 == 100) {
-          if (hb.field_b > 0) {
-            fieldTemp$3 = hb.field_b - 1;
-            hb.field_b = hb.field_b - 1;
-            var2_ref_byte__ = dj.field_I[fieldTemp$3];
-            dj.field_I[hb.field_b] = null;
-            return var2_ref_byte__;
-          }
+        if ((param1 == 100) &&
+            (hb.field_b > 0)) {
+          fieldTemp$3 = hb.field_b - 1;
+          hb.field_b = hb.field_b - 1;
+          var2_ref_byte__ = dj.field_I[fieldTemp$3];
+          dj.field_I[hb.field_b] = null;
+          return var2_ref_byte__;
         }
-        if (param1 == 5000) {
-          if (0 < ah.field_d) {
-            fieldTemp$4 = ah.field_d - 1;
-            ah.field_d = ah.field_d - 1;
-            var2_ref_byte__ = rd.field_s[fieldTemp$4];
-            rd.field_s[ah.field_d] = null;
-            return var2_ref_byte__;
-          }
+        if ((param1 == 5000) &&
+            (0 < ah.field_d)) {
+          fieldTemp$4 = ah.field_d - 1;
+          ah.field_d = ah.field_d - 1;
+          var2_ref_byte__ = rd.field_s[fieldTemp$4];
+          rd.field_s[ah.field_d] = null;
+          return var2_ref_byte__;
         }
         if (param0) {
           return (byte[]) null;
         }
-        if (param1 == 30000) {
-          if (ag.field_i > 0) {
-            fieldTemp$5 = ag.field_i - 1;
-            ag.field_i = ag.field_i - 1;
-            var2_ref_byte__ = sd.field_C[fieldTemp$5];
-            sd.field_C[ag.field_i] = null;
-            return var2_ref_byte__;
-          }
+        if ((param1 == 30000) &&
+            (ag.field_i > 0)) {
+          fieldTemp$5 = ag.field_i - 1;
+          ag.field_i = ag.field_i - 1;
+          var2_ref_byte__ = sd.field_C[fieldTemp$5];
+          sd.field_C[ag.field_i] = null;
+          return var2_ref_byte__;
         }
         L3: {
           if (sg.field_c != null) {

@@ -36,11 +36,10 @@ final class cf extends q {
           }
           var5 = (CharSequence) ((Object) param1);
           var3_int = ol.a(false, var5);
-          if (var3_int > 0) {
-            if (130 >= var3_int) {
-              stackIn_11_0 = kk.field_w;
-              return stackIn_11_0;
-            }
+          if ((var3_int > 0) &&
+              (130 >= var3_int)) {
+            stackIn_11_0 = kk.field_w;
+            return stackIn_11_0;
           }
           stackIn_9_0 = si.field_m;
           return stackIn_9_0;
@@ -156,15 +155,13 @@ final class cf extends q {
             return false;
           }
           for (var2 = 0; var1.field_f > var2; var2++) {
-            if (null != var4.field_n[var2]) {
-              if (var4.field_n[var2].field_a == 0) {
-                return false;
-              }
+            if ((null != var4.field_n[var2]) &&
+                (var4.field_n[var2].field_a == 0)) {
+              return false;
             }
-            if (var4.field_i[var2] != null) {
-              if (var4.field_i[var2].field_a == 0) {
-                return false;
-              }
+            if ((var4.field_i[var2] != null) &&
+                (var4.field_i[var2].field_a == 0)) {
+              return false;
             }
           }
           return true;

@@ -91,11 +91,10 @@ final class nb {
             stackIn_21_7 = 0.0f;
             stackIn_21_8 = (float)param3;
             stackIn_21_9 = (float)(-param3 + 240);
-            if (var12 != 2) {
-              if (1 != var12) {
-                stackIn_23_10 = -1;
-                break L5;
-              }
+            if ((var12 != 2) &&
+                (1 != var12)) {
+              stackIn_23_10 = -1;
+              break L5;
             }
             stackIn_23_10 = param2;
           }

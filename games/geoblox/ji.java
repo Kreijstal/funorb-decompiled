@@ -146,10 +146,9 @@ abstract class ji {
             return null;
           }
           L0: {
-            if (param0 != null) {
-              if (var4_int == param0.length) {
-                break L0;
-              }
+            if ((param0 != null) &&
+                (var4_int == param0.length)) {
+              break L0;
             }
             param0 = new short[var4_int];
           }

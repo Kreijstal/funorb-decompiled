@@ -78,14 +78,13 @@ final class fi {
           if (param0 != 0) {
             field_h = (String) null;
           }
-          if (param1 != null) {
-            if (param1 != fe.field_e) {
-              uh.field_y.d(-9268);
-              fj.field_p.a();
-              fe.field_e = param1;
-              uh.field_y.a(true, fe.field_e, -1706);
-              return;
-            }
+          if ((param1 != null) &&
+              (param1 != fe.field_e)) {
+            uh.field_y.d(-9268);
+            fj.field_p.a();
+            fe.field_e = param1;
+            uh.field_y.a(true, fe.field_e, -1706);
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

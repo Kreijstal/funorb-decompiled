@@ -56,27 +56,22 @@ final class eb {
             this.a(0, var5, -123);
             return false;
           }
-          if (var5.field_l >= 0) {
-            if (!var5.field_i.a((byte) 102, var5.field_l)) {
-              this.a(var5.field_i.b((byte) 36, var5.field_l), var5, -119);
-              return false;
-            }
+          if ((var5.field_l >= 0) &&
+              (!var5.field_i.a((byte) 102, var5.field_l))) {
+            this.a(var5.field_i.b((byte) 36, var5.field_l), var5, -119);
+            return false;
           }
-          if (null != var5.field_f) {
-            if (!var5.field_i.a(var5.field_f, (byte) -126)) {
-              this.a(var5.field_i.a(0, var5.field_f), var5, -123);
-              return false;
-            }
+          if ((null != var5.field_f) &&
+              (!var5.field_i.a(var5.field_f, (byte) -126))) {
+            this.a(var5.field_i.a(0, var5.field_f), var5, -123);
+            return false;
           }
-          if (var5.field_l < 0) {
-            if (var5.field_f == null) {
-              if (null != var5.field_m) {
-                if (!var5.field_i.b(true)) {
-                  this.a(var5.field_i.b((byte) 106), var5, -108);
-                  return false;
-                }
-              }
-            }
+          if ((var5.field_l < 0) &&
+              (var5.field_f == null) &&
+              (null != var5.field_m) &&
+              (!var5.field_i.b(true))) {
+            this.a(var5.field_i.b((byte) 106), var5, -108);
+            return false;
           }
           this.field_h = this.field_h + 1;
         }

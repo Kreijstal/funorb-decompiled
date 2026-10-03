@@ -71,9 +71,8 @@ class ff implements dh, cc {
               var12 = this.field_i;
               if (var12 != 0) {
                 if (var12 != 2) {
-                  if (var12 != 3) {
-                    if (var12 != 1) {
-                    }
+                  if ((var12 != 3) &&
+                      (var12 != 1)) {
                   }
                   var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> 1) + this.field_n.field_o;
                 } else {
@@ -83,18 +82,17 @@ class ff implements dh, cc {
                 var11 = this.field_n.field_o;
               }
               var12 = this.field_g;
-              if (var12 != 0) {
-                if (var12 != 3) {
-                  if (var12 == 1) {
-                    this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
-                    break L0;
-                  }
-                  if (var12 != 2) {
-                    break L0;
-                  }
-                  this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
+              if ((var12 != 0) &&
+                  (var12 != 3)) {
+                if (var12 == 1) {
+                  this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                   break L0;
                 }
+                if (var12 != 2) {
+                  break L0;
+                }
+                this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
+                break L0;
               }
               this.field_n.a(this.c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
             } else {
@@ -156,9 +154,8 @@ class ff implements dh, cc {
           var6 = this.field_i;
           if (var6 != 0) {
             if (var6 != 2) {
-              if (var6 != 3) {
-                if (var6 == 1) {
-                }
+              if ((var6 != 3) &&
+                  (var6 == 1)) {
               }
               var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
             } else {
@@ -169,24 +166,23 @@ class ff implements dh, cc {
           }
           L4: {
             var6 = this.field_g;
-            if (var6 != 0) {
-              if (var6 != 3) {
-                if (var6 == 1) {
-                  if (!(param1.field_w instanceof vc)) {
-                    break L4;
-                  }
-                  ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
-                  return;
-                }
-                if (var6 != 2) {
-                  break L4;
-                }
+            if ((var6 != 0) &&
+                (var6 != 3)) {
+              if (var6 == 1) {
                 if (!(param1.field_w instanceof vc)) {
                   break L4;
                 }
-                ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+                ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
                 return;
               }
+              if (var6 != 2) {
+                break L4;
+              }
+              if (!(param1.field_w instanceof vc)) {
+                break L4;
+              }
+              ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+              return;
             }
             if (param1.field_w instanceof vc) {
               ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);

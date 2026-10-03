@@ -35,12 +35,10 @@ final class fc {
           while (var1 != null) {
             L2: {
               var1.b(true);
-              if (5 != var1.field_z) {
-                if (var1.field_z != 7) {
-                  if (var1.field_z != 8) {
-                    break L2;
-                  }
-                }
+              if ((5 != var1.field_z) &&
+                  (var1.field_z != 7) &&
+                  (var1.field_z != 8)) {
+                break L2;
               }
               pf.field_D = false;
               if (var1.field_G >= 3) {

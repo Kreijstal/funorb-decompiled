@@ -39,10 +39,9 @@ final class lc {
             }
             L3: {
               L4: {
-                if (kj.field_o[99]) {
-                  if (ji.field_r.c(13519)) {
-                    break L4;
-                  }
+                if ((kj.field_o[99]) &&
+                    (ji.field_r.c(13519))) {
+                  break L4;
                 }
                 if (~kb.field_c <= ~kc.field_a) {
                   if (ul.field_b != 0) {
@@ -53,33 +52,30 @@ final class lc {
                   }
                 }
               }
-              if (0 < wd.field_e.a(param0 ^ -170)) {
-                if (!el.field_o.field_N) {
-                  ji.field_r.a(-48, wd.field_e.b((byte) -124));
-                  hd.f(2);
-                  kc.field_a = 0;
-                }
+              if ((0 < wd.field_e.a(param0 ^ -170)) &&
+                  (!el.field_o.field_N)) {
+                ji.field_r.a(-48, wd.field_e.b((byte) -124));
+                hd.f(2);
+                kc.field_a = 0;
               }
             }
             kc.field_a = kc.field_a + 1;
-            if (wd.field_e.a(param0 ^ 143) < 3) {
-              if (ma.c((byte) -53)) {
-                if (!el.field_o.b(true)) {
-                  var1 = (ja) ((Object) ra.field_a.b((byte) -101));
-                  if (null != var1) {
-                    var2 = 2.0 * Math.random() * 3.141592653589793;
-                    var4 = 240.0f * (float)Math.cos(var2) + 320.0f;
-                    var5 = 240.0f + (float)Math.sin(var2) * 240.0f;
-                    var6 = 320.0f - var4;
-                    var7 = -var5 + 240.0f;
-                    var8 = 1.0 / Math.sqrt((double)(var7 * var7 + var6 * var6));
-                    var7 = (float)((double)var7 * var8);
-                    var6 = (float)((double)var6 * var8);
-                    var1.a(101, var4, vd.a(param0 ^ 741924143), og.field_r * var6, nf.c((byte) -67), kc.field_a + kb.field_c * (1 + wd.field_e.a(111)), 0.0f, var5, var7 * og.field_r, ij.m(param0 ^ 131), 0.0f);
-                    wd.field_e.a(-47, var1);
-                    mf.b(false);
-                  }
-                }
+            if ((wd.field_e.a(param0 ^ 143) < 3) &&
+                (ma.c((byte) -53)) &&
+                (!el.field_o.b(true))) {
+              var1 = (ja) ((Object) ra.field_a.b((byte) -101));
+              if (null != var1) {
+                var2 = 2.0 * Math.random() * 3.141592653589793;
+                var4 = 240.0f * (float)Math.cos(var2) + 320.0f;
+                var5 = 240.0f + (float)Math.sin(var2) * 240.0f;
+                var6 = 320.0f - var4;
+                var7 = -var5 + 240.0f;
+                var8 = 1.0 / Math.sqrt((double)(var7 * var7 + var6 * var6));
+                var7 = (float)((double)var7 * var8);
+                var6 = (float)((double)var6 * var8);
+                var1.a(101, var4, vd.a(param0 ^ 741924143), og.field_r * var6, nf.c((byte) -67), kc.field_a + kb.field_c * (1 + wd.field_e.a(111)), 0.0f, var5, var7 * og.field_r, ij.m(param0 ^ 131), 0.0f);
+                wd.field_e.a(-47, var1);
+                mf.b(false);
               }
             }
             return;

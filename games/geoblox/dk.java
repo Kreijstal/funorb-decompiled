@@ -93,10 +93,9 @@ abstract class dk {
             var10 = param3.charAt(var9);
             if (var10 != 60) {
               if (var10 != 62) {
-                if (var6 == 0) {
-                  if (32 == var10) {
-                    var5_int++;
-                  }
+                if ((var6 == 0) &&
+                    (32 == var10)) {
+                  var5_int++;
                 }
               } else {
                 var6 = 0;
@@ -187,11 +186,10 @@ abstract class dk {
           field_b = 49;
         }
         L1: {
-          if (null != this.field_a) {
-            if (this.field_a.length > 0) {
-              stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
-              break L1;
-            }
+          if ((null != this.field_a) &&
+              (this.field_a.length > 0)) {
+            stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
+            break L1;
           }
           stackIn_7_0 = 0;
         }
@@ -223,33 +221,30 @@ abstract class dk {
         int var8;
         int var9;
         var9 = Geoblox.field_C;
-        if (null != this.field_a) {
-          if (this.field_a.length != 0) {
-            if (this.field_a[0].field_d <= param2) {
-              if (this.field_a[-1 + this.field_a.length].field_a < param2) {
-                return -1;
-              }
-              if (this.field_a.length == 1) {
-                return this.field_a[0].a(71, param0);
-              }
-              var4 = 0;
-              var5 = -2 % ((15 - param1) / 32);
-              for (var6 = 0; var6 < this.field_a.length; var6++) {
-                var7 = this.field_a[var6];
-                if (param2 >= var7.field_d) {
-                  if (var7.field_a >= param2) {
-                    var8 = var7.a(-79, param0);
-                    if (-1 != var8) {
-                      return var4 + var8;
-                    }
-                    return -1;
-                  }
-                }
-                var4 = var4 + (var7.field_c.length - 1);
+        if ((null != this.field_a) &&
+            (this.field_a.length != 0) &&
+            (this.field_a[0].field_d <= param2)) {
+          if (this.field_a[-1 + this.field_a.length].field_a < param2) {
+            return -1;
+          }
+          if (this.field_a.length == 1) {
+            return this.field_a[0].a(71, param0);
+          }
+          var4 = 0;
+          var5 = -2 % ((15 - param1) / 32);
+          for (var6 = 0; var6 < this.field_a.length; var6++) {
+            var7 = this.field_a[var6];
+            if ((param2 >= var7.field_d) &&
+                (var7.field_a >= param2)) {
+              var8 = var7.a(-79, param0);
+              if (-1 != var8) {
+                return var4 + var8;
               }
               return -1;
             }
+            var4 = var4 + (var7.field_c.length - 1);
           }
+          return -1;
         }
         return -1;
     }

@@ -117,22 +117,21 @@ final class ge {
           while (true) {
             if (8L < param1) {
               var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
-              if (var8 >= 0) {
-                if (256 > var8) {
-                  this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
-                  this.field_h = this.field_h + (-var7 + 8);
-                  this.field_e = this.field_e + 1;
-                  if (512 == this.field_h) {
-                    this.c(param2 ^ 111);
-                    this.field_e = 0;
-                    this.field_h = 0;
-                  }
-                  this.field_i[this.field_e] = (byte)cd.a(255, var8 << -var7 + 8);
-                  param1 = param1 - 8L;
-                  this.field_h = this.field_h + var7;
-                  var5_int++;
-                  continue;
+              if ((var8 >= 0) &&
+                  (256 > var8)) {
+                this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
+                this.field_h = this.field_h + (-var7 + 8);
+                this.field_e = this.field_e + 1;
+                if (512 == this.field_h) {
+                  this.c(param2 ^ 111);
+                  this.field_e = 0;
+                  this.field_h = 0;
                 }
+                this.field_i[this.field_e] = (byte)cd.a(255, var8 << -var7 + 8);
+                param1 = param1 - 8L;
+                this.field_h = this.field_h + var7;
+                var5_int++;
+                continue;
               }
               throw new RuntimeException("LOGIC ERROR");
             }

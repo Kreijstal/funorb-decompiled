@@ -63,11 +63,10 @@ final class qi extends hf {
                   var5 = uj.a(';', true, var4);
                   for (var6 = 0; var6 < var5.length; var6++) {
                     var7 = var5[var6].indexOf('=');
-                    if (var7 >= 0) {
-                      if (var5[var6].substring(0, var7).trim().equals(param0)) {
-                        stackIn_7_0 = var5[var6].substring(1 + var7).trim();
-                        return stackIn_7_0;
-                      }
+                    if ((var7 >= 0) &&
+                        (var5[var6].substring(0, var7).trim().equals(param0))) {
+                      stackIn_7_0 = var5[var6].substring(1 + var7).trim();
+                      return stackIn_7_0;
                     }
                   }
                   break L0;

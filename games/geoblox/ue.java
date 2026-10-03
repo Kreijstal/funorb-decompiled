@@ -95,10 +95,9 @@ final class ue {
             L4: {
               var12 = ((double)var8 - var6) * 3.141592653589793;
               var14 = var10;
-              if (!(var12 < -0.0001)) {
-                if (!(0.0001 < var12)) {
-                  break L4;
-                }
+              if ((!(var12 < -0.0001)) &&
+                  (!(0.0001 < var12))) {
+                break L4;
               }
               var14 = var14 * (Math.sin(var12) / var12);
             }

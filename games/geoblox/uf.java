@@ -101,15 +101,13 @@ final class uf implements Runnable {
             L1: {
               var6 = (o) ((Object) this.field_k.c((byte) 121));
               while (var6 != null) {
-                if ((long)param1 == var6.field_i) {
-                  if (var6.field_w == param0) {
-                    if (2 == var6.field_x) {
-                      var4.field_y = var6.field_y;
-                      var4.field_u = false;
-                      stackIn_11_0 = (o) (var4);
-                      return stackIn_11_0;
-                    }
-                  }
+                if (((long)param1 == var6.field_i) &&
+                    (var6.field_w == param0) &&
+                    (2 == var6.field_x)) {
+                  var4.field_y = var6.field_y;
+                  var4.field_u = false;
+                  stackIn_11_0 = (o) (var4);
+                  return stackIn_11_0;
                 }
                 var6 = (o) ((Object) this.field_k.a(-20));
               }

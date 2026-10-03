@@ -140,138 +140,131 @@ final class ma extends hf {
           if (param5 == null) {
             return;
           }
-          if (param4 > 0) {
-            if (0 < param2) {
-              if (param5[3] == null) {
-                stackIn_10_0 = 0;
-              } else {
-                stackIn_10_0 = param5[3].field_s;
-              }
-              var6_int = stackIn_10_0;
-              if (null == param5[5]) {
-                stackIn_13_0 = 0;
-              } else {
-                stackIn_13_0 = param5[5].field_s;
-              }
-              var7 = stackIn_13_0;
-              if (param3 != -92) {
-                return;
-              }
-              if (null != param5[1]) {
-                stackIn_18_0 = param5[1].field_o;
-              } else {
-                stackIn_18_0 = 0;
-              }
-              var8 = stackIn_18_0;
-              if (null != param5[7]) {
-                stackIn_21_0 = param5[7].field_o;
-              } else {
-                stackIn_21_0 = 0;
-              }
-              var9 = stackIn_21_0;
-              var10 = param4 + param1;
-              var11 = param0 + param2;
-              var12 = param1 + var6_int;
-              var13 = var10 - var7;
-              var14 = param0 + var8;
-              var15 = -var9 + var11;
-              var16 = var12;
-              var17 = var13;
-              if (var16 > var17) {
-                var17 = var6_int * param4 / (var6_int + var7) + param1;
-                var16 = var6_int * param4 / (var6_int + var7) + param1;
-              }
-              var18 = var14;
-              var19 = var15;
-              vb.a(hd.field_I);
-              if (var19 < var18) {
-                var19 = param2 * var8 / (var8 + var9) + param0;
-                var18 = param2 * var8 / (var8 + var9) + param0;
-              }
-              if (null != param5[0]) {
-                vb.b(param1, param0, var16, var18);
-                param5[0].b(param1, param0);
-                vb.b(hd.field_I);
-              }
-              if (param5[2] != null) {
-                vb.b(var17, param0, var10, var18);
-                param5[2].b(var13, param0);
-                vb.b(hd.field_I);
-              }
-              if (null != param5[6]) {
-                vb.b(param1, var19, var16, var11);
-                param5[6].b(param1, var15);
-                vb.b(hd.field_I);
-              }
-              if (null != param5[8]) {
-                vb.b(var17, var19, var10, var11);
-                param5[8].b(var13, var15);
-                vb.b(hd.field_I);
-              }
-              L11: {
-                if (null != param5[1]) {
-                  if (param5[1].field_s != 0) {
-                    vb.b(var16, param0, var17, var18);
-                    for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_s) {
-                      param5[1].b(var20, param0);
-                    }
-                    vb.b(hd.field_I);
-                    break L11;
-                  }
-                }
-              }
-              L13: {
-                if (param5[7] != null) {
-                  if (0 != param5[7].field_s) {
-                    vb.b(var16, var19, var17, var11);
-                    for (var20 = var12; var20 < var13; var20 = var20 + param5[7].field_s) {
-                      param5[7].b(var20, var15);
-                    }
-                    vb.b(hd.field_I);
-                    break L13;
-                  }
-                }
-              }
-              L15: {
-                if (param5[3] != null) {
-                  if (0 != param5[3].field_o) {
-                    vb.b(param1, var18, var16, var19);
-                    for (var20 = var14; var15 > var20; var20 = var20 + param5[3].field_o) {
-                      param5[3].b(param1, var20);
-                    }
-                    vb.b(hd.field_I);
-                    break L15;
-                  }
-                }
-              }
-              L17: {
-                if (param5[5] != null) {
-                  if (param5[5].field_o != 0) {
-                    vb.b(var17, var18, var10, var19);
-                    for (var20 = var14; var20 < var15; var20 = var20 + param5[5].field_o) {
-                      param5[5].b(var13, var20);
-                    }
-                    vb.b(hd.field_I);
-                    break L17;
-                  }
-                }
-              }
-              if (param5[4] != null) {
-                if (param5[4].field_s != 0) {
-                  if (0 != param5[4].field_o) {
-                    vb.b(var16, var18, var17, var19);
-                    for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
-                      for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
-                        param5[4].b(var21, var20);
-                      }
-                    }
-                    vb.b(hd.field_I);
-                    return;
-                  }
-                }
-              }
+          if ((param4 > 0) &&
+              (0 < param2)) {
+            if (param5[3] == null) {
+              stackIn_10_0 = 0;
+            } else {
+              stackIn_10_0 = param5[3].field_s;
+            }
+            var6_int = stackIn_10_0;
+            if (null == param5[5]) {
+              stackIn_13_0 = 0;
+            } else {
+              stackIn_13_0 = param5[5].field_s;
+            }
+            var7 = stackIn_13_0;
+            if (param3 != -92) {
               return;
             }
+            if (null != param5[1]) {
+              stackIn_18_0 = param5[1].field_o;
+            } else {
+              stackIn_18_0 = 0;
+            }
+            var8 = stackIn_18_0;
+            if (null != param5[7]) {
+              stackIn_21_0 = param5[7].field_o;
+            } else {
+              stackIn_21_0 = 0;
+            }
+            var9 = stackIn_21_0;
+            var10 = param4 + param1;
+            var11 = param0 + param2;
+            var12 = param1 + var6_int;
+            var13 = var10 - var7;
+            var14 = param0 + var8;
+            var15 = -var9 + var11;
+            var16 = var12;
+            var17 = var13;
+            if (var16 > var17) {
+              var17 = var6_int * param4 / (var6_int + var7) + param1;
+              var16 = var6_int * param4 / (var6_int + var7) + param1;
+            }
+            var18 = var14;
+            var19 = var15;
+            vb.a(hd.field_I);
+            if (var19 < var18) {
+              var19 = param2 * var8 / (var8 + var9) + param0;
+              var18 = param2 * var8 / (var8 + var9) + param0;
+            }
+            if (null != param5[0]) {
+              vb.b(param1, param0, var16, var18);
+              param5[0].b(param1, param0);
+              vb.b(hd.field_I);
+            }
+            if (param5[2] != null) {
+              vb.b(var17, param0, var10, var18);
+              param5[2].b(var13, param0);
+              vb.b(hd.field_I);
+            }
+            if (null != param5[6]) {
+              vb.b(param1, var19, var16, var11);
+              param5[6].b(param1, var15);
+              vb.b(hd.field_I);
+            }
+            if (null != param5[8]) {
+              vb.b(var17, var19, var10, var11);
+              param5[8].b(var13, var15);
+              vb.b(hd.field_I);
+            }
+            L11: {
+              if ((null != param5[1]) &&
+                  (param5[1].field_s != 0)) {
+                vb.b(var16, param0, var17, var18);
+                for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_s) {
+                  param5[1].b(var20, param0);
+                }
+                vb.b(hd.field_I);
+                break L11;
+              }
+            }
+            L13: {
+              if ((param5[7] != null) &&
+                  (0 != param5[7].field_s)) {
+                vb.b(var16, var19, var17, var11);
+                for (var20 = var12; var20 < var13; var20 = var20 + param5[7].field_s) {
+                  param5[7].b(var20, var15);
+                }
+                vb.b(hd.field_I);
+                break L13;
+              }
+            }
+            L15: {
+              if ((param5[3] != null) &&
+                  (0 != param5[3].field_o)) {
+                vb.b(param1, var18, var16, var19);
+                for (var20 = var14; var15 > var20; var20 = var20 + param5[3].field_o) {
+                  param5[3].b(param1, var20);
+                }
+                vb.b(hd.field_I);
+                break L15;
+              }
+            }
+            L17: {
+              if ((param5[5] != null) &&
+                  (param5[5].field_o != 0)) {
+                vb.b(var17, var18, var10, var19);
+                for (var20 = var14; var20 < var15; var20 = var20 + param5[5].field_o) {
+                  param5[5].b(var13, var20);
+                }
+                vb.b(hd.field_I);
+                break L17;
+              }
+            }
+            if ((param5[4] != null) &&
+                (param5[4].field_s != 0) &&
+                (0 != param5[4].field_o)) {
+              vb.b(var16, var18, var17, var19);
+              for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
+                for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
+                  param5[4].b(var21, var20);
+                }
+              }
+              vb.b(hd.field_I);
+              return;
+            }
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -299,23 +292,20 @@ final class ma extends hf {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.a(0)) {
-            if (param2.a("commonui", (byte) -127)) {
-              if (param1.a(param3 + 11652)) {
-                if (param1.a("commonui", (byte) -124)) {
-                  if (param3 != -11652) {
-                    return false;
-                  }
-                  if (param0.a(0)) {
-                    if (param0.a("button.gif", (byte) -125)) {
-                      return true;
-                    }
-                  }
-                  return false;
-                }
+          if ((param2.a(0)) &&
+              (param2.a("commonui", (byte) -127))) {
+            if ((param1.a(param3 + 11652)) &&
+                (param1.a("commonui", (byte) -124))) {
+              if (param3 != -11652) {
+                return false;
+              }
+              if ((param0.a(0)) &&
+                  (param0.a("button.gif", (byte) -125))) {
+                return true;
               }
               return false;
             }
+            return false;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

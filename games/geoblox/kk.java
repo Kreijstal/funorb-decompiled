@@ -66,10 +66,9 @@ final class kk extends ji {
               }
             }
             if (this.field_u == null) {
-              if (this.a(-78) == 0) {
-                if (0 == this.a(false)) {
-                  return true;
-                }
+              if ((this.a(-78) == 0) &&
+                  (0 == this.a(false))) {
+                return true;
               }
               return false;
             }
@@ -230,10 +229,9 @@ final class kk extends ji {
               this.field_b = this.field_b + 1;
               this.field_q = -2;
               this.field_u = null;
-              if (0 == this.a(param0 - 216)) {
-                if (this.a(false) == 0) {
-                  return true;
-                }
+              if ((0 == this.a(param0 - 216)) &&
+                  (this.a(false) == 0)) {
+                return true;
               }
               return false;
             }
@@ -262,42 +260,39 @@ final class kk extends ji {
             return false;
           }
           var3_int = param1.length();
-          if (var3_int >= 1) {
-            if (12 >= var3_int) {
-              var4 = oe.a(param1, param2 ^ 122);
-              if (var4 == null) {
-                return false;
-              }
-              if (var4.length() < 1) {
-                return false;
-              }
-              if (!gg.a((byte) -62, var4.charAt(0))) {
-                if (!gg.a((byte) -98, var4.charAt(-1 + var4.length()))) {
+          if ((var3_int >= 1) &&
+              (12 >= var3_int)) {
+            var4 = oe.a(param1, param2 ^ 122);
+            if (var4 == null) {
+              return false;
+            }
+            if (var4.length() < 1) {
+              return false;
+            }
+            if ((!gg.a((byte) -62, var4.charAt(0))) &&
+                (!gg.a((byte) -98, var4.charAt(-1 + var4.length())))) {
+              var5 = 0;
+              for (var6 = 0; var6 < param1.length(); var6++) {
+                var7 = param1.charAt(var6);
+                if (!gg.a((byte) -93, (char) var7)) {
                   var5 = 0;
-                  for (var6 = 0; var6 < param1.length(); var6++) {
-                    var7 = param1.charAt(var6);
-                    if (!gg.a((byte) -93, (char) var7)) {
-                      var5 = 0;
-                    } else {
-                      var5++;
-                    }
-                    if (var5 >= 2) {
-                      if (!param0) {
-                        return false;
-                      }
-                    }
-                  }
-                  if (param2 != 118) {
-                    return false;
-                  }
-                  if (var5 <= 0) {
-                    return true;
-                  }
+                } else {
+                  var5++;
+                }
+                if ((var5 >= 2) &&
+                    (!param0)) {
                   return false;
                 }
               }
+              if (param2 != 118) {
+                return false;
+              }
+              if (var5 <= 0) {
+                return true;
+              }
               return false;
             }
+            return false;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

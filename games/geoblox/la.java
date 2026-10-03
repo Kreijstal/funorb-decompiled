@@ -37,18 +37,16 @@ final class la extends sh {
         try {
           L0: {
             L1: {
-              if (this.field_A instanceof hk) {
-                if (!((hk) ((Object) this.field_A)).field_D) {
-                  break L1;
-                }
+              if ((this.field_A instanceof hk) &&
+                  (!((hk) ((Object) this.field_A)).field_D)) {
+                break L1;
               }
               if (this.field_f == 1) {
                 var5_int = qa.field_a - this.field_D - param3;
                 var6 = -this.field_H + (ue.field_e - param1);
-                if (this.field_v == var5_int) {
-                  if (var6 == this.field_m) {
-                    break L0;
-                  }
+                if ((this.field_v == var5_int) &&
+                    (var6 == this.field_m)) {
+                  break L0;
                 }
                 this.field_m = var6;
                 this.field_v = var5_int;
@@ -139,10 +137,9 @@ final class la extends sh {
             this.a(param3, param2, 34, param1);
             this.b(param3, param1, param2, param0 + 0);
             discarded$70 = param1.append(" revert=").append(this.field_C);
-            if (this.field_B != 2147483647) {
-              if (this.field_G != 2147483647) {
-                discarded$71 = param1.append(" to ").append(this.field_B).append(',').append(this.field_G);
-              }
+            if ((this.field_B != 2147483647) &&
+                (this.field_G != 2147483647)) {
+              discarded$71 = param1.append(" to ").append(this.field_B).append(',').append(this.field_G);
             }
           }
           if (param0 != 0) {
@@ -182,10 +179,9 @@ final class la extends sh {
         try {
           var8_int = super.a(param0, 53, param2, param3, param4, param5, param6) ? 1 : 0;
           var9 = 5 % ((-3 - param1) / 38);
-          if (var8_int != 0) {
-            if (this.field_F) {
-              return true;
-            }
+          if ((var8_int != 0) &&
+              (this.field_F)) {
+            return true;
           }
           if (!this.a(param4, -1, param5, param0, param2)) {
             stackIn_10_0 = var8_int;

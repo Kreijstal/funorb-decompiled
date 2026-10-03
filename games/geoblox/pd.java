@@ -103,11 +103,10 @@ final class pd {
                 continue;
               }
               var10 = var7[var9].getRefreshRate();
-              if (var8 != 0) {
-                if (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4)) {
-                  var9++;
-                  continue;
-                }
+              if ((var8 != 0) &&
+                  (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4))) {
+                var9++;
+                continue;
               }
               param4 = var10;
               var8 = 1;

@@ -213,10 +213,9 @@ class ee extends el implements ql {
 
     void a(int param0, int param1, byte param2, int param3) {
         int var8 = Geoblox.field_C;
-        if (param3 == 0) {
-            if (!(this.field_q == null)) {
-                this.field_q.a(param0, -9, param1, true, (el) (this));
-            }
+        if ((param3 == 0) &&
+            (!(this.field_q == null))) {
+            this.field_q.a(param0, -9, param1, true, (el) (this));
         }
         int var6 = -58 % ((param2 - 1) / 43);
         gb var5 = new gb(this.field_z);
@@ -447,10 +446,9 @@ class ee extends el implements ql {
           var8 = (el) ((Object) var9.c((byte) 88));
           while (var8 != null) {
             if (var8.a(120)) {
-              if (var8.e((byte) 54)) {
-                if (var8.a(param0, 13, param2, param3)) {
-                  return true;
-                }
+              if ((var8.e((byte) 54)) &&
+                  (var8.a(param0, 13, param2, param3))) {
+                return true;
               }
               var8 = (el) ((Object) var9.a((byte) 110));
               continue;
@@ -581,10 +579,9 @@ class ee extends el implements ql {
           var9 = (el) ((Object) var11.c((byte) 88));
           while (var9 != null) {
             if (var9.a(127)) {
-              if (var9.e((byte) 54)) {
-                if (var9.a(param0, param1, param2, param3 + 0, param4, param5, param6)) {
-                  return true;
-                }
+              if ((var9.e((byte) 54)) &&
+                  (var9.a(param0, param1, param2, param3 + 0, param4, param5, param6))) {
+                return true;
               }
               var9 = (el) ((Object) var11.a((byte) 124));
               continue;

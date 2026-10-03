@@ -43,19 +43,18 @@ final class eh {
           if (param2 != -51) {
             field_a = (String) null;
           }
-          if (var6 > 0) {
-            if (var6 < 50) {
-              if (var6 >= 20) {
-                if (var6 >= 30) {
-                  var7 = 256 * (-var6 + 50) / 20;
-                  cd.field_l.c(var3, var4, var7);
-                } else {
-                  cd.field_l.c(var3, var4, 256);
-                }
-              } else {
-                var7 = var6 * 256 / 20;
+          if ((var6 > 0) &&
+              (var6 < 50)) {
+            if (var6 >= 20) {
+              if (var6 >= 30) {
+                var7 = 256 * (-var6 + 50) / 20;
                 cd.field_l.c(var3, var4, var7);
+              } else {
+                cd.field_l.c(var3, var4, 256);
               }
+            } else {
+              var7 = var6 * 256 / 20;
+              cd.field_l.c(var3, var4, var7);
             }
           }
         } else {
@@ -65,19 +64,18 @@ final class eh {
             var6 = -125 + gb.field_f;
             if (param2 != -51) {
               field_a = (String) null;
-              if (var6 > 0) {
-                if (var6 < 50) {
-                  if (var6 >= 20) {
-                    if (var6 >= 30) {
-                      var7 = 256 * (-var6 + 50) / 20;
-                      cd.field_l.c(var3, var4, var7);
-                    } else {
-                      cd.field_l.c(var3, var4, 256);
-                    }
-                  } else {
-                    var7 = var6 * 256 / 20;
+              if ((var6 > 0) &&
+                  (var6 < 50)) {
+                if (var6 >= 20) {
+                  if (var6 >= 30) {
+                    var7 = 256 * (-var6 + 50) / 20;
                     cd.field_l.c(var3, var4, var7);
+                  } else {
+                    cd.field_l.c(var3, var4, 256);
                   }
+                } else {
+                  var7 = var6 * 256 / 20;
+                  cd.field_l.c(var3, var4, var7);
                 }
               }
               var6 = gb.field_f - 140;
@@ -153,34 +151,32 @@ final class eh {
           var6 = -125 + gb.field_f;
           if (param2 != -51) {
             field_a = (String) null;
-            if (var6 > 0) {
-              if (var6 < 50) {
-                if (var6 >= 20) {
-                  if (var6 >= 30) {
-                    var7 = 256 * (-var6 + 50) / 20;
-                    cd.field_l.c(var3, var4, var7);
-                  } else {
-                    cd.field_l.c(var3, var4, 256);
-                  }
-                } else {
-                  var7 = var6 * 256 / 20;
+            if ((var6 > 0) &&
+                (var6 < 50)) {
+              if (var6 >= 20) {
+                if (var6 >= 30) {
+                  var7 = 256 * (-var6 + 50) / 20;
                   cd.field_l.c(var3, var4, var7);
+                } else {
+                  cd.field_l.c(var3, var4, 256);
                 }
+              } else {
+                var7 = var6 * 256 / 20;
+                cd.field_l.c(var3, var4, var7);
               }
             }
           } else {
-            if (var6 > 0) {
-              if (var6 < 50) {
-                if (var6 < 20) {
-                  var7 = var6 * 256 / 20;
-                  cd.field_l.c(var3, var4, var7);
+            if ((var6 > 0) &&
+                (var6 < 50)) {
+              if (var6 < 20) {
+                var7 = var6 * 256 / 20;
+                cd.field_l.c(var3, var4, var7);
+              } else {
+                if (var6 < 30) {
+                  cd.field_l.c(var3, var4, 256);
                 } else {
-                  if (var6 < 30) {
-                    cd.field_l.c(var3, var4, 256);
-                  } else {
-                    var7 = 256 * (-var6 + 50) / 20;
-                    cd.field_l.c(var3, var4, var7);
-                  }
+                  var7 = 256 * (-var6 + 50) / 20;
+                  cd.field_l.c(var3, var4, var7);
                 }
               }
             }

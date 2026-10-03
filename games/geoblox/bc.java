@@ -44,14 +44,13 @@ final class bc {
           for (var6 = 0; param3 > var6; var6++) {
             var7 = param1[param2 + var6] & 255;
             if (var7 != 0) {
-              if (var7 >= 128) {
-                if (var7 < 160) {
-                  var8 = lf.field_e[-128 + var7];
-                  if (var8 == 0) {
-                    var8 = 63;
-                  }
-                  var7 = var8;
+              if ((var7 >= 128) &&
+                  (var7 < 160)) {
+                var8 = lf.field_e[-128 + var7];
+                if (var8 == 0) {
+                  var8 = 63;
                 }
+                var7 = var8;
               }
               incrementValue$1 = var5;
               var5++;

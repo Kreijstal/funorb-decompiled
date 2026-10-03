@@ -124,38 +124,36 @@ final class cm extends cj {
                     }
                   }
                   L9: {
-                    if (var21 != null) {
-                      if (ge.a(var21, (byte) 12)) {
-                        var8[1][var13] = wd.field_f;
-                        var9[1][var13] = null;
-                        var31[1][var13] = var22;
-                        var13++;
-                        var27.field_f = var24;
-                        for (var25 = 0; var25 < var7; var25++) {
-                          incrementValue$3 = var16;
-                          var16++;
-                          var11[1][incrementValue$3] = var27.a((byte) -122);
-                        }
-                        break L9;
+                    if ((var21 != null) &&
+                        (ge.a(var21, (byte) 12))) {
+                      var8[1][var13] = wd.field_f;
+                      var9[1][var13] = null;
+                      var31[1][var13] = var22;
+                      var13++;
+                      var27.field_f = var24;
+                      for (var25 = 0; var25 < var7; var25++) {
+                        incrementValue$3 = var16;
+                        var16++;
+                        var11[1][incrementValue$3] = var27.a((byte) -122);
                       }
+                      break L9;
                     }
                   }
                   L11: {
-                    if (var14 < var6) {
-                      if (!id.field_b[var20].field_c) {
-                        id.field_b[var20].field_c = true;
-                        var8[2][var14] = var21;
-                        var9[2][var14] = id.field_b[var20].field_a;
-                        var31[2][var14] = var22;
-                        var14++;
-                        var27.field_f = var24;
-                        for (var25 = 0; var7 > var25; var25++) {
-                          incrementValue$4 = var17;
-                          var17++;
-                          var11[2][incrementValue$4] = var27.a((byte) -101);
-                        }
-                        break L11;
+                    if ((var14 < var6) &&
+                        (!id.field_b[var20].field_c)) {
+                      id.field_b[var20].field_c = true;
+                      var8[2][var14] = var21;
+                      var9[2][var14] = id.field_b[var20].field_a;
+                      var31[2][var14] = var22;
+                      var14++;
+                      var27.field_f = var24;
+                      for (var25 = 0; var7 > var25; var25++) {
+                        incrementValue$4 = var17;
+                        var17++;
+                        var11[2][incrementValue$4] = var27.a((byte) -101);
                       }
+                      break L11;
                     }
                   }
                 }
@@ -208,15 +206,13 @@ final class cm extends cj {
             Throwable decompiledCaughtException = null;
             L0: {
               if (null != oc.field_e) {
-                if (param1 >= 0) {
-                  if (pk.field_l != eh.field_b) {
-                    break L0;
-                  }
+                if ((param1 >= 0) &&
+                    (pk.field_l != eh.field_b)) {
+                  break L0;
                 }
-                if (0 == fj.field_q.field_f) {
-                  if (~oa.a(-12520) < ~(10000L + v.field_r)) {
-                    fj.field_q.a(param1, (byte) -76);
-                  }
+                if ((0 == fj.field_q.field_f) &&
+                    (~oa.a(-12520) < ~(10000L + v.field_r))) {
+                  fj.field_q.a(param1, (byte) -76);
                 }
                 if (param0 > ~fj.field_q.field_f) {
                   try {
@@ -267,10 +263,9 @@ final class cm extends cj {
         while (true) {
           var4++;
           this.field_c = this.field_c + param1;
-          if (var4 < 10) {
-            if (~this.field_c > ~this.field_e) {
-              continue;
-            }
+          if ((var4 < 10) &&
+              (~this.field_c > ~this.field_e)) {
+            continue;
           }
           if (this.field_e > this.field_c) {
             this.field_c = this.field_e;
@@ -285,14 +280,13 @@ final class cm extends cj {
         long var2 = System.nanoTime();
         long var4 = -this.field_i + var2;
         this.field_i = var2;
-        if (-5000000000L < var4) {
-            if (!(5000000000L <= var4)) {
-                this.field_f[this.field_d] = var4;
-                if (this.field_g < 1) {
-                    this.field_g = this.field_g + 1;
-                }
-                this.field_d = (this.field_d + 1) % 10;
+        if ((-5000000000L < var4) &&
+            (!(5000000000L <= var4))) {
+            this.field_f[this.field_d] = var4;
+            if (this.field_g < 1) {
+                this.field_g = this.field_g + 1;
             }
+            this.field_d = (this.field_d + 1) % 10;
         }
         long var6 = (long)param0;
         for (var8 = 1; var8 <= this.field_g; var8++) {

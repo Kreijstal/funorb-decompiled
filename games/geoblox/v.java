@@ -75,10 +75,9 @@ final class v {
             var3 = var9.c((byte) 34);
             var4 = var9.a((byte) -97);
             if (var4 >= 0) {
-              if (uj.field_b != 0) {
-                if (var4 > uj.field_b) {
-                  break L0;
-                }
+              if ((uj.field_b != 0) &&
+                  (var4 > uj.field_b)) {
+                break L0;
               }
               if (param1 == ~var3) {
                 var12 = new byte[var4];
@@ -91,10 +90,9 @@ final class v {
               L2: {
                 var5 = var9.a((byte) -49);
                 if (var5 >= 0) {
-                  if (uj.field_b != 0) {
-                    if (uj.field_b < var5) {
-                      break L2;
-                    }
+                  if ((uj.field_b != 0) &&
+                      (uj.field_b < var5)) {
+                    break L2;
                   }
                   var13 = new byte[var5];
                   var11 = var13;
@@ -191,10 +189,9 @@ final class v {
               }
             }
           }
-          if (kh.field_d == this.field_a) {
-            if (ok.field_c == this.field_h) {
-              return;
-            }
+          if ((kh.field_d == this.field_a) &&
+              (ok.field_c == this.field_h)) {
+            return;
           }
           this.field_u.a(-2964, this.field_a, this.field_h);
           return;

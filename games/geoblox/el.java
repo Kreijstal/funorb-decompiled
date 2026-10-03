@@ -225,10 +225,9 @@ class el extends hf {
         this.a(false, param3, (el) (this), param2);
         var5 = this.e((byte) 54) ? 1 : 0;
         if (!param0) {
-          if (var5 != 0) {
-            if (bi.field_g != 0) {
-              this.d(-126);
-            }
+          if ((var5 != 0) &&
+              (bi.field_g != 0)) {
+            this.d(-126);
           }
           ij.field_X = gf.field_a;
           sa.a(this.c((byte) 69), (byte) 72);
@@ -236,23 +235,20 @@ class el extends hf {
         }
         if (0 == vc.field_i) {
           if (0 == bi.field_g) {
-            if (gf.field_a == 0) {
-              if (0 != ij.field_X) {
-                this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                var8 = lh.field_b;
-                if (var8 != null) {
-                  if (var8.field_u instanceof rg) {
-                    ((rg) ((Object) var8.field_u)).a((fk) null, var8, 22176);
-                  }
-                  lh.field_b = null;
+            if ((gf.field_a == 0) &&
+                (0 != ij.field_X)) {
+              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              var8 = lh.field_b;
+              if (var8 != null) {
+                if (var8.field_u instanceof rg) {
+                  ((rg) ((Object) var8.field_u)).a((fk) null, var8, 22176);
                 }
-                if (var7 != 0) {
-                  if (var5 != 0) {
-                    if (bi.field_g != 0) {
-                      this.d(-126);
-                    }
-                  }
-                }
+                lh.field_b = null;
+              }
+              if ((var7 != 0) &&
+                  (var5 != 0) &&
+                  (bi.field_g != 0)) {
+                this.d(-126);
               }
             }
             ij.field_X = gf.field_a;
@@ -262,23 +258,20 @@ class el extends hf {
           L19: {
             if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
               if (var5 == 0) {
-                if (gf.field_a == 0) {
-                  if (0 != ij.field_X) {
-                    this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                    var9 = lh.field_b;
-                    if (var9 != null) {
-                      if (var9.field_u instanceof rg) {
-                        ((rg) ((Object) var9.field_u)).a((fk) null, var9, 22176);
-                      }
-                      lh.field_b = null;
+                if ((gf.field_a == 0) &&
+                    (0 != ij.field_X)) {
+                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                  var9 = lh.field_b;
+                  if (var9 != null) {
+                    if (var9.field_u instanceof rg) {
+                      ((rg) ((Object) var9.field_u)).a((fk) null, var9, 22176);
                     }
-                    if (var7 != 0) {
-                      if (var5 != 0) {
-                        if (bi.field_g != 0) {
-                          this.d(-126);
-                        }
-                      }
-                    }
+                    lh.field_b = null;
+                  }
+                  if ((var7 != 0) &&
+                      (var5 != 0) &&
+                      (bi.field_g != 0)) {
+                    this.d(-126);
                   }
                 }
                 ij.field_X = gf.field_a;
@@ -310,12 +303,10 @@ class el extends hf {
             }
             lh.field_b = null;
           }
-          if (var7 != 0) {
-            if (var5 != 0) {
-              if (bi.field_g != 0) {
-                this.d(-126);
-              }
-            }
+          if ((var7 != 0) &&
+              (var5 != 0) &&
+              (bi.field_g != 0)) {
+            this.d(-126);
           }
           ij.field_X = gf.field_a;
           sa.a(this.c((byte) 69), (byte) 72);
@@ -324,24 +315,21 @@ class el extends hf {
         if (var5 != 0) {
           this.a(param3, vc.field_i, param2, -1, qa.field_a, (el) (this), ue.field_e);
           if (0 == bi.field_g) {
-            if (gf.field_a == 0) {
-              if (0 != ij.field_X) {
-                this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                var15 = lh.field_b;
-                var6 = var15;
-                if (var15 != null) {
-                  if (var15.field_u instanceof rg) {
-                    ((rg) ((Object) var15.field_u)).a((fk) null, var15, 22176);
-                  }
-                  lh.field_b = null;
+            if ((gf.field_a == 0) &&
+                (0 != ij.field_X)) {
+              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              var15 = lh.field_b;
+              var6 = var15;
+              if (var15 != null) {
+                if (var15.field_u instanceof rg) {
+                  ((rg) ((Object) var15.field_u)).a((fk) null, var15, 22176);
                 }
-                if (var7 != 0) {
-                  if (var5 != 0) {
-                    if (bi.field_g != 0) {
-                      this.d(-126);
-                    }
-                  }
-                }
+                lh.field_b = null;
+              }
+              if ((var7 != 0) &&
+                  (var5 != 0) &&
+                  (bi.field_g != 0)) {
+                this.d(-126);
               }
             }
             ij.field_X = gf.field_a;
@@ -351,24 +339,21 @@ class el extends hf {
           L0: {
             if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
               if (var5 == 0) {
-                if (gf.field_a == 0) {
-                  if (0 != ij.field_X) {
-                    this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                    var16 = lh.field_b;
-                    var6 = var16;
-                    if (var16 != null) {
-                      if (var16.field_u instanceof rg) {
-                        ((rg) ((Object) var16.field_u)).a((fk) null, var16, 22176);
-                      }
-                      lh.field_b = null;
+                if ((gf.field_a == 0) &&
+                    (0 != ij.field_X)) {
+                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                  var16 = lh.field_b;
+                  var6 = var16;
+                  if (var16 != null) {
+                    if (var16.field_u instanceof rg) {
+                      ((rg) ((Object) var16.field_u)).a((fk) null, var16, 22176);
                     }
-                    if (var7 != 0) {
-                      if (var5 != 0) {
-                        if (bi.field_g != 0) {
-                          this.d(-126);
-                        }
-                      }
-                    }
+                    lh.field_b = null;
+                  }
+                  if ((var7 != 0) &&
+                      (var5 != 0) &&
+                      (bi.field_g != 0)) {
+                    this.d(-126);
                   }
                 }
                 ij.field_X = gf.field_a;
@@ -401,35 +386,30 @@ class el extends hf {
             }
             lh.field_b = null;
           }
-          if (var7 != 0) {
-            if (var5 != 0) {
-              if (bi.field_g != 0) {
-                this.d(-126);
-              }
-            }
+          if ((var7 != 0) &&
+              (var5 != 0) &&
+              (bi.field_g != 0)) {
+            this.d(-126);
           }
           ij.field_X = gf.field_a;
           sa.a(this.c((byte) 69), (byte) 72);
           return param0;
         }
         if (0 == bi.field_g) {
-          if (gf.field_a == 0) {
-            if (0 != ij.field_X) {
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-              var11 = lh.field_b;
-              if (var11 != null) {
-                if (var11.field_u instanceof rg) {
-                  ((rg) ((Object) var11.field_u)).a((fk) null, var11, 22176);
-                }
-                lh.field_b = null;
+          if ((gf.field_a == 0) &&
+              (0 != ij.field_X)) {
+            this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+            var11 = lh.field_b;
+            if (var11 != null) {
+              if (var11.field_u instanceof rg) {
+                ((rg) ((Object) var11.field_u)).a((fk) null, var11, 22176);
               }
-              if (var7 != 0) {
-                if (var5 != 0) {
-                  if (bi.field_g != 0) {
-                    this.d(-126);
-                  }
-                }
-              }
+              lh.field_b = null;
+            }
+            if ((var7 != 0) &&
+                (var5 != 0) &&
+                (bi.field_g != 0)) {
+              this.d(-126);
             }
           }
           ij.field_X = gf.field_a;
@@ -503,12 +483,10 @@ class el extends hf {
           }
           lh.field_b = null;
         }
-        if (var7 != 0) {
-          if (var5 != 0) {
-            if (bi.field_g != 0) {
-              this.d(-126);
-            }
-          }
+        if ((var7 != 0) &&
+            (var5 != 0) &&
+            (bi.field_g != 0)) {
+          this.d(-126);
         }
         ij.field_X = gf.field_a;
         sa.a(this.c((byte) 69), (byte) 72);

@@ -78,10 +78,9 @@ abstract class ka {
             if (ki.field_d == 97) {
               this.a((byte) 90, param0);
             } else {
-              if (ki.field_d != 84) {
-                if (ki.field_d != 83) {
-                  break L1;
-                }
+              if ((ki.field_d != 84) &&
+                  (ki.field_d != 83)) {
+                break L1;
               }
               this.b(param0, (byte) -2);
             }
@@ -126,19 +125,17 @@ abstract class ka {
 
     int a(int param0, int param1, byte param2) {
         int var4;
-        if (this.field_j <= param0) {
-          if (param0 < this.field_f) {
-            if (this.field_k <= param1) {
-              if (param2 < 20) {
-                return 81;
-              }
-              var4 = (param1 - this.field_k) / this.field_d;
-              if (this.field_e > var4) {
-                return var4;
-              }
-              return -1;
-            }
+        if ((this.field_j <= param0) &&
+            (param0 < this.field_f) &&
+            (this.field_k <= param1)) {
+          if (param2 < 20) {
+            return 81;
           }
+          var4 = (param1 - this.field_k) / this.field_d;
+          if (this.field_e > var4) {
+            return var4;
+          }
+          return -1;
         }
         return -1;
     }
@@ -173,15 +170,14 @@ abstract class ka {
               this.field_g = false;
             }
           } else {
-            if (gf.field_a != 0) {
-              if (this.field_g) {
-                var2 = this.field_b;
-                if (var2 == -1) {
-                  break L0;
-                }
-                this.a(var2, qa.field_a, false, -(this.field_d * var2) + (ue.field_e - this.field_k), true, gf.field_a);
+            if ((gf.field_a != 0) &&
+                (this.field_g)) {
+              var2 = this.field_b;
+              if (var2 == -1) {
                 break L0;
               }
+              this.a(var2, qa.field_a, false, -(this.field_d * var2) + (ue.field_e - this.field_k), true, gf.field_a);
+              break L0;
             }
             this.field_g = false;
             if (wb.field_a) {

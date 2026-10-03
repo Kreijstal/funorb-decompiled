@@ -39,15 +39,14 @@ final class qd extends m {
           var10 = var10 + var12;
           var9 = var9 + var12;
         }
-        if (param3 > 0) {
-          if (param4 > 0) {
-            if (!param6) {
-              qd.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
-            } else {
-              bg.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
-            }
-            return;
+        if ((param3 > 0) &&
+            (param4 > 0)) {
+          if (!param6) {
+            qd.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
+          } else {
+            bg.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
           }
+          return;
         }
     }
 
@@ -113,15 +112,14 @@ final class qd extends m {
           var11 = var11 + var13;
           var10 = var10 + var13;
         }
-        if (param3 > 0) {
-          if (param4 > 0) {
-            if (!param7) {
-              qd.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
-            } else {
-              bg.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
-            }
-            return;
+        if ((param3 > 0) &&
+            (param4 > 0)) {
+          if (!param7) {
+            qd.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+          } else {
+            bg.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
+          return;
         }
     }
 

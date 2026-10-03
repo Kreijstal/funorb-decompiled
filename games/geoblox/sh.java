@@ -56,42 +56,41 @@ abstract class sh extends el implements ql {
           if (param5 <= param0 + 1) {
             return;
           }
-          if (param0 + 5 < param5) {
-            if (param3 != param2) {
-              var7_int = (1 & (param3 & param2)) + (param2 >> 1) + (param3 >> 1);
-              var8 = param0;
-              var9 = param3;
-              if (param4 < 106) {
-                return;
-              }
-              var10 = param2;
-              for (var11 = param0; var11 < param5; var11++) {
-                var12 = qi.field_i[var11];
-                if (!param6) {
-                  stackIn_24_0 = gk.field_a[var12];
-                } else {
-                  stackIn_24_0 = hg.field_a[var12];
-                }
-                var13 = stackIn_24_0;
-                if (var13 > var7_int) {
-                  qi.field_i[var11] = qi.field_i[var8];
-                  incrementValue$0 = var8;
-                  var8++;
-                  qi.field_i[incrementValue$0] = var12;
-                  if (var9 > var13) {
-                    var9 = var13;
-                  }
-                } else {
-                  if (var10 >= var13) {
-                    continue;
-                  }
-                  var10 = var13;
-                }
-              }
-              sh.a(param0, param1, var9, param3, (byte) 118, var8, param6);
-              sh.a(var8, param1, param2, var10, (byte) 107, param5, param6);
+          if ((param0 + 5 < param5) &&
+              (param3 != param2)) {
+            var7_int = (1 & (param3 & param2)) + (param2 >> 1) + (param3 >> 1);
+            var8 = param0;
+            var9 = param3;
+            if (param4 < 106) {
               return;
             }
+            var10 = param2;
+            for (var11 = param0; var11 < param5; var11++) {
+              var12 = qi.field_i[var11];
+              if (!param6) {
+                stackIn_24_0 = gk.field_a[var12];
+              } else {
+                stackIn_24_0 = hg.field_a[var12];
+              }
+              var13 = stackIn_24_0;
+              if (var13 > var7_int) {
+                qi.field_i[var11] = qi.field_i[var8];
+                incrementValue$0 = var8;
+                var8++;
+                qi.field_i[incrementValue$0] = var12;
+                if (var9 > var13) {
+                  var9 = var13;
+                }
+              } else {
+                if (var10 >= var13) {
+                  continue;
+                }
+                var10 = var13;
+              }
+            }
+            sh.a(param0, param1, var9, param3, (byte) 118, var8, param6);
+            sh.a(var8, param1, param2, var10, (byte) 107, param5, param6);
+            return;
           }
           for (var7_int = -1 + param5; var7_int > param0; var7_int--) {
             for (var8 = param0; var8 < var7_int; var8++) {
@@ -161,24 +160,22 @@ abstract class sh extends el implements ql {
             return false;
           }
           var3 = oa.a(-12520);
-          if (ab.field_b != 0) {
-            if (pc.field_f < 0) {
-              var5_ref_ma = (ma) ((Object) va.field_c.g(0));
-              if (var5_ref_ma != null) {
-                if (var3 > var5_ref_ma.field_f) {
-                  var5_ref_ma.a(false);
-                  p.field_k = var5_ref_ma.field_g.length;
-                  eh.field_d.field_f = 0;
-                  for (var6_int = 0; var6_int < p.field_k; var6_int++) {
-                    eh.field_d.field_j[var6_int] = var5_ref_ma.field_g[var6_int];
-                  }
-                  ad.field_o = dc.field_b;
-                  dc.field_b = kg.field_n;
-                  kg.field_n = me.field_l;
-                  me.field_l = var5_ref_ma.field_h;
-                  return true;
-                }
+          if ((ab.field_b != 0) &&
+              (pc.field_f < 0)) {
+            var5_ref_ma = (ma) ((Object) va.field_c.g(0));
+            if ((var5_ref_ma != null) &&
+                (var3 > var5_ref_ma.field_f)) {
+              var5_ref_ma.a(false);
+              p.field_k = var5_ref_ma.field_g.length;
+              eh.field_d.field_f = 0;
+              for (var6_int = 0; var6_int < p.field_k; var6_int++) {
+                eh.field_d.field_j[var6_int] = var5_ref_ma.field_g[var6_int];
               }
+              ad.field_o = dc.field_b;
+              dc.field_b = kg.field_n;
+              kg.field_n = me.field_l;
+              me.field_l = var5_ref_ma.field_h;
+              return true;
             }
           }
           while (true) {
@@ -272,10 +269,9 @@ abstract class sh extends el implements ql {
 
     el e(int param0) {
         el var2 = this.field_A;
-        if (var2 != null) {
-            if (!(!var2.e((byte) 54))) {
-                return var2;
-            }
+        if ((var2 != null) &&
+            (!(!var2.e((byte) 54)))) {
+            return var2;
         }
         if (param0 == -4863) {
             return null;
@@ -286,10 +282,9 @@ abstract class sh extends el implements ql {
     }
 
     void a(int param0, int param1, byte param2, int param3) {
-        if (0 == param3) {
-            if (!(this.field_q == null)) {
-                this.field_q.a(param0, -50, param1, true, (el) (this));
-            }
+        if ((0 == param3) &&
+            (!(this.field_q == null))) {
+            this.field_q.a(param0, -50, param1, true, (el) (this));
         }
         int var5 = 85 % ((param2 - 1) / 43);
         if (this.field_A != null) {
@@ -510,12 +505,10 @@ abstract class sh extends el implements ql {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != this.field_A) {
-            if (this.field_A.e((byte) 54)) {
-              if (this.field_A.a(param0, 13, param2, param3)) {
-                return true;
-              }
-            }
+          if ((null != this.field_A) &&
+              (this.field_A.e((byte) 54)) &&
+              (this.field_A.a(param0, 13, param2, param3))) {
+            return true;
           }
           if (param1 != 13) {
             field_y = (sc) null;

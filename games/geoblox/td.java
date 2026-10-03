@@ -93,33 +93,30 @@ final class td extends hk {
           var7 = -74 % ((param2 - 1) / 43);
           var6 = param1 - (-this.field_m - (this.field_h >> 1));
           var9 = this.field_F.a((byte) -105);
-          if (var9 != bf.field_g) {
-            if (si.field_n != var9) {
-              if (si.field_m == var9) {
-                var14 = oa.field_e[2];
-                var14.c(-(var14.field_r >> 1) + var5, var6 - (var14.field_m >> 1), 256);
-                break L0;
-              }
-              if (var9 != kk.field_w) {
-                break L0;
-              }
-              var15 = oa.field_e[1];
-              var15.c(-(var15.field_r >> 1) + var5, var6 - (var15.field_m >> 1), 256);
+          if ((var9 != bf.field_g) &&
+              (si.field_n != var9)) {
+            if (si.field_m == var9) {
+              var14 = oa.field_e[2];
+              var14.c(-(var14.field_r >> 1) + var5, var6 - (var14.field_m >> 1), 256);
               break L0;
             }
+            if (var9 != kk.field_w) {
+              break L0;
+            }
+            var15 = oa.field_e[1];
+            var15.c(-(var15.field_r >> 1) + var5, var6 - (var15.field_m >> 1), 256);
+            break L0;
           }
           L2: {
             var13 = oa.field_e[0];
             var10 = var13.field_s << 1;
             var11 = var13.field_o << 1;
-            if (null != da.field_b) {
-              if (var10 <= da.field_b.field_r) {
-                if (var11 <= da.field_b.field_m) {
-                  Geoblox.a(1, da.field_b);
-                  vb.c();
-                  break L2;
-                }
-              }
+            if ((null != da.field_b) &&
+                (var10 <= da.field_b.field_r) &&
+                (var11 <= da.field_b.field_m)) {
+              Geoblox.a(1, da.field_b);
+              vb.c();
+              break L2;
             }
             da.field_b = new dm(var10, var11);
             Geoblox.a(1, da.field_b);
@@ -166,25 +163,24 @@ final class td extends hk {
             td.a(-80, (gd) null);
           }
           var4_int = param1.length();
-          if (param2 >= 0) {
-            if (var4_int >= param2) {
-              var5 = param0.length();
-              if (var5 == 0) {
-                stackIn_9_0 = (StringBuilder) (param1);
-                return stackIn_9_0;
-              }
-              var6 = param2 + var5;
-              if (var4_int < var6) {
-                param1.setLength(var6);
-              }
-              for (var7 = 0; var7 < var5; var7++) {
-                incrementValue$1 = param2;
-                param2++;
-                param1.setCharAt(incrementValue$1, param0.charAt(var7));
-              }
-              stackIn_17_0 = (StringBuilder) (param1);
-              return stackIn_17_0;
+          if ((param2 >= 0) &&
+              (var4_int >= param2)) {
+            var5 = param0.length();
+            if (var5 == 0) {
+              stackIn_9_0 = (StringBuilder) (param1);
+              return stackIn_9_0;
             }
+            var6 = param2 + var5;
+            if (var4_int < var6) {
+              param1.setLength(var6);
+            }
+            for (var7 = 0; var7 < var5; var7++) {
+              incrementValue$1 = param2;
+              param2++;
+              param1.setCharAt(incrementValue$1, param0.charAt(var7));
+            }
+            stackIn_17_0 = (StringBuilder) (param1);
+            return stackIn_17_0;
           }
           throw new StringIndexOutOfBoundsException("length=" + var4_int + " startPos=" + param2);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

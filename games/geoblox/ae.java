@@ -182,12 +182,11 @@ final class ae {
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_f) {
-            if (var2 != 0) {
-              if (ua.b() == 0) {
-                this.field_a[var14] = 0;
-                var14++;
-                continue;
-              }
+            if ((var2 != 0) &&
+                (ua.b() == 0)) {
+              this.field_a[var14] = 0;
+              var14++;
+              continue;
             }
             this.field_a[var14] = ua.b(5) + 1;
             var14++;

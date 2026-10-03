@@ -46,12 +46,10 @@ class dj extends hk {
               var7 = (cc) ((Object) this.field_q);
               var6 = var7.a((el) (this), qa.field_a, -15539, param1, ue.field_e, param3);
               if (-1 != var6) {
-                if (this.field_G) {
-                  if (this.field_J > var6) {
-                    if (this.field_L < var6) {
-                      var6 = this.field_J;
-                    }
-                  }
+                if ((this.field_G) &&
+                    (this.field_J > var6) &&
+                    (this.field_L < var6)) {
+                  var6 = this.field_J;
                 }
                 this.field_H = var6;
               }
@@ -223,35 +221,33 @@ class dj extends hk {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, 104, param2, param3, param4, param5, param6)) {
-            if (this.field_q instanceof cc) {
-              var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.field_a, -15539, param0, ue.field_e, param2);
-              if (var8_int != -1) {
-                stackIn_5_1 = var8_int;
-              } else {
-                stackIn_5_1 = 0;
-              }
-              this.a(stackIn_5_1, (byte) -123);
-              var8_long = oa.a(-12520);
-              if (var8_long - this.field_P >= 250L) {
-                stackIn_8_1 = false;
-              } else {
-                stackIn_8_1 = true;
-              }
-              ((dj) (this)).field_G = stackIn_8_1;
-              if (this.field_G) {
-                this.field_L = this.j((byte) 77);
-                this.field_H = this.h((byte) -57);
-                if (0 < this.field_H) {
-                  if (this.field_s.charAt(this.field_H - 1) == 32) {
-                    this.field_H = this.field_H - 1;
-                  }
-                }
-                this.field_J = this.field_H;
-              }
-              this.field_P = var8_long;
-              return true;
+          if ((super.a(param0, 104, param2, param3, param4, param5, param6)) &&
+              (this.field_q instanceof cc)) {
+            var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.field_a, -15539, param0, ue.field_e, param2);
+            if (var8_int != -1) {
+              stackIn_5_1 = var8_int;
+            } else {
+              stackIn_5_1 = 0;
             }
+            this.a(stackIn_5_1, (byte) -123);
+            var8_long = oa.a(-12520);
+            if (var8_long - this.field_P >= 250L) {
+              stackIn_8_1 = false;
+            } else {
+              stackIn_8_1 = true;
+            }
+            ((dj) (this)).field_G = stackIn_8_1;
+            if (this.field_G) {
+              this.field_L = this.j((byte) 77);
+              this.field_H = this.h((byte) -57);
+              if ((0 < this.field_H) &&
+                  (this.field_s.charAt(this.field_H - 1) == 32)) {
+                this.field_H = this.field_H - 1;
+              }
+              this.field_J = this.field_H;
+            }
+            this.field_P = var8_long;
+            return true;
           }
           var8_int = 70 / ((param1 + 3) / 38);
           return false;
@@ -295,19 +291,18 @@ class dj extends hk {
         long var7;
         L0: {
           var5 = -124 % ((param2 - 1) / 43);
-          if (this.field_q != null) {
-            if (param3 == 0) {
-              this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
-              if (this.field_q instanceof cc) {
-                var6 = (cc) ((Object) this.field_q);
-                if (this.field_H != this.field_L) {
-                  var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
-                }
-                var7 = oa.a(-12520);
-                if ((-this.field_O + var7) % 1000L < 500L) {
-                  var6.a(param0, this.field_H, -2, (el) (this), param1);
-                  break L0;
-                }
+          if ((this.field_q != null) &&
+              (param3 == 0)) {
+            this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
+            if (this.field_q instanceof cc) {
+              var6 = (cc) ((Object) this.field_q);
+              if (this.field_H != this.field_L) {
+                var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
+              }
+              var7 = oa.a(-12520);
+              if ((-this.field_O + var7) % 1000L < 500L) {
+                var6.a(param0, this.field_H, -2, (el) (this), param1);
+                break L0;
               }
             }
           }
@@ -382,31 +377,29 @@ class dj extends hk {
           if (param2 == 62) {
             return false;
           }
-          if (32 <= param2) {
-            if (param2 <= 126) {
-              if (this.field_H != this.field_L) {
-                this.g(0);
-              }
-              L2: {
-                if (-1 != this.field_M) {
-                  if (this.field_s.length() >= this.field_M) {
-                    break L2;
-                  }
-                }
-                if (this.field_H >= this.field_s.length()) {
-                  this.field_s = this.field_s + param2;
-                  dupTemp$0 = this.field_s.length();
-                  this.field_H = dupTemp$0;
-                  this.field_L = dupTemp$0;
-                } else {
-                  this.field_s = this.field_s.substring(0, this.field_H) + param2 + this.field_s.substring(this.field_H, this.field_s.length());
-                  this.field_H = this.field_H + 1;
-                  this.field_L = this.field_H;
-                }
-                this.g((byte) -36);
-              }
-              return true;
+          if ((32 <= param2) &&
+              (param2 <= 126)) {
+            if (this.field_H != this.field_L) {
+              this.g(0);
             }
+            L2: {
+              if ((-1 != this.field_M) &&
+                  (this.field_s.length() >= this.field_M)) {
+                break L2;
+              }
+              if (this.field_H >= this.field_s.length()) {
+                this.field_s = this.field_s + param2;
+                dupTemp$0 = this.field_s.length();
+                this.field_H = dupTemp$0;
+                this.field_L = dupTemp$0;
+              } else {
+                this.field_s = this.field_s.substring(0, this.field_H) + param2 + this.field_s.substring(this.field_H, this.field_s.length());
+                this.field_H = this.field_H + 1;
+                this.field_L = this.field_H;
+              }
+              this.g((byte) -36);
+            }
+            return true;
           }
           if (param0 == 85) {
             if (this.field_H != this.field_L) {
@@ -458,23 +451,20 @@ class dj extends hk {
                     this.m((byte) 111);
                     return true;
                   }
-                  if (kj.field_o[82]) {
-                    if (param0 == 65) {
-                      this.h(112);
-                      return true;
-                    }
+                  if ((kj.field_o[82]) &&
+                      (param0 == 65)) {
+                    this.h(112);
+                    return true;
                   }
-                  if (kj.field_o[82]) {
-                    if (param0 == 66) {
-                      this.i(-23161);
-                      return true;
-                    }
+                  if ((kj.field_o[82]) &&
+                      (param0 == 66)) {
+                    this.i(-23161);
+                    return true;
                   }
-                  if (kj.field_o[82]) {
-                    if (67 == param0) {
-                      this.f(82);
-                      return true;
-                    }
+                  if ((kj.field_o[82]) &&
+                      (67 == param0)) {
+                    this.f(82);
+                    return true;
                   }
                 }
               }
@@ -568,10 +558,9 @@ class dj extends hk {
           }
           this.field_s = param1;
           var5 = param1.length();
-          if (this.field_M != -1) {
-            if (this.field_M < var5) {
-              this.field_s = this.field_s.substring(0, this.field_M);
-            }
+          if ((this.field_M != -1) &&
+              (this.field_M < var5)) {
+            this.field_s = this.field_s.substring(0, this.field_M);
           }
           dupTemp$1 = this.field_s.length();
           this.field_L = dupTemp$1;

@@ -44,12 +44,10 @@ final class rh {
             }
             if (null == var2.field_K) {
               var2.b(true);
-              if (3 == var2.field_z) {
-                if (var2.field_t) {
-                  if (0 >= var2.field_E) {
-                    w.field_f = true;
-                  }
-                }
+              if ((3 == var2.field_z) &&
+                  (var2.field_t) &&
+                  (0 >= var2.field_E)) {
+                w.field_f = true;
               }
               if (var1_float < (var2.field_o - 320.0f) * (-320.0f + var2.field_o) + (var2.field_v - 240.0f) * (var2.field_v - 240.0f)) {
                 var1_float = (-240.0f + var2.field_v) * (-240.0f + var2.field_v) + (-320.0f + var2.field_o) * (-320.0f + var2.field_o);
@@ -417,14 +415,11 @@ final class rh {
           L4: {
             L5: {
               if (param2 != null) {
-                if (param2[0] == 0) {
-                  if (param2[1] == 0) {
-                    if (param2[2] == 0) {
-                      if (0 == param2[3]) {
-                        break L5;
-                      }
-                    }
-                  }
+                if ((param2[0] == 0) &&
+                    (param2[1] == 0) &&
+                    (param2[2] == 0) &&
+                    (0 == param2[3])) {
+                  break L5;
                 }
                 var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
                 var24 = var34;
@@ -593,10 +588,9 @@ final class rh {
         if (param0 != 37) {
             return true;
         }
-        if (null != this.field_e[param1]) {
-            if (!(this.field_e[param1][param2] == null)) {
-                return true;
-            }
+        if ((null != this.field_e[param1]) &&
+            (!(this.field_e[param1][param2] == null))) {
+            return true;
         }
         if (this.field_f[param1] != null) {
             return true;
@@ -628,10 +622,9 @@ final class rh {
           }
           L1: {
             var5 = null;
-            if (this.field_e[param0] != null) {
-              if (null != this.field_e[param0][param3]) {
-                break L1;
-              }
+            if ((this.field_e[param0] != null) &&
+                (null != this.field_e[param0][param3])) {
+              break L1;
             }
             if (!this.a(param3, 4, param2, param0)) {
               this.a(param0, -118);
@@ -940,22 +933,19 @@ final class rh {
             L3: {
               var2_long = var2_long * 37L;
               var6 = param0.charAt(var5);
-              if (var6 >= 65) {
-                if (var6 <= 90) {
-                  var2_long = var2_long + (long)(-65 + (1 + var6));
-                  break L3;
-                }
+              if ((var6 >= 65) &&
+                  (var6 <= 90)) {
+                var2_long = var2_long + (long)(-65 + (1 + var6));
+                break L3;
               }
-              if (var6 >= 97) {
-                if (var6 <= 122) {
-                  var2_long = var2_long + (long)(-96 + var6);
-                  break L3;
-                }
+              if ((var6 >= 97) &&
+                  (var6 <= 122)) {
+                var2_long = var2_long + (long)(-96 + var6);
+                break L3;
               }
-              if (48 <= var6) {
-                if (57 >= var6) {
-                  var2_long = var2_long + (long)(-48 + var6 + 27);
-                }
+              if ((48 <= var6) &&
+                  (57 >= var6)) {
+                var2_long = var2_long + (long)(-48 + var6 + 27);
               }
             }
             if (177917621779460413L > var2_long) {

@@ -9,13 +9,12 @@ final class jc {
     final static void a(int param0, boolean param1) {
         int var3;
         var3 = Geoblox.field_C;
-        if (7 == param0) {
-          if (ka.field_h != 36) {
-            ka.field_h = 36;
-            pa.field_g = 110;
-            nd.field_a = 6;
-            td.a(-348, fl.field_c[23]);
-          }
+        if ((7 == param0) &&
+            (ka.field_h != 36)) {
+          ka.field_h = 36;
+          pa.field_g = 110;
+          nd.field_a = 6;
+          td.a(-348, fl.field_c[23]);
         }
         if (pa.field_g > 0) {
           if (param0 == 3) {
@@ -51,28 +50,22 @@ final class jc {
                     }
                   }
                 } else {
-                  if (12 != ka.field_h) {
-                    if (ka.field_h != 24) {
-                      if (30 != ka.field_h) {
-                        if (36 != ka.field_h) {
-                          td.a(-348, fl.field_c[26]);
-                        }
-                      }
-                    }
+                  if ((12 != ka.field_h) &&
+                      (ka.field_h != 24) &&
+                      (30 != ka.field_h) &&
+                      (36 != ka.field_h)) {
+                    td.a(-348, fl.field_c[26]);
                   }
                   nd.field_a = 2;
                   ka.field_h = 12;
                 }
               }
             } else {
-              if (ka.field_h != 0) {
-                if (24 != ka.field_h) {
-                  if (ka.field_h != 30) {
-                    if (ka.field_h != 36) {
-                      td.a(-348, fl.field_c[25]);
-                    }
-                  }
-                }
+              if ((ka.field_h != 0) &&
+                  (24 != ka.field_h) &&
+                  (ka.field_h != 30) &&
+                  (ka.field_h != 36)) {
+                td.a(-348, fl.field_c[25]);
               }
               ka.field_h = 0;
               nd.field_a = 0;
@@ -80,14 +73,11 @@ final class jc {
           } else {
             field_a = (dm) null;
             if (param0 == 0) {
-              if (ka.field_h != 0) {
-                if (24 != ka.field_h) {
-                  if (ka.field_h != 30) {
-                    if (ka.field_h != 36) {
-                      td.a(-348, fl.field_c[25]);
-                    }
-                  }
-                }
+              if ((ka.field_h != 0) &&
+                  (24 != ka.field_h) &&
+                  (ka.field_h != 30) &&
+                  (ka.field_h != 36)) {
+                td.a(-348, fl.field_c[25]);
               }
               ka.field_h = 0;
               nd.field_a = 0;
@@ -118,14 +108,11 @@ final class jc {
                     }
                   }
                 } else {
-                  if (12 != ka.field_h) {
-                    if (ka.field_h != 24) {
-                      if (30 != ka.field_h) {
-                        if (36 != ka.field_h) {
-                          td.a(-348, fl.field_c[26]);
-                        }
-                      }
-                    }
+                  if ((12 != ka.field_h) &&
+                      (ka.field_h != 24) &&
+                      (30 != ka.field_h) &&
+                      (36 != ka.field_h)) {
+                    td.a(-348, fl.field_c[26]);
                   }
                   nd.field_a = 2;
                   ka.field_h = 12;

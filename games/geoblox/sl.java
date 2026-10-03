@@ -76,22 +76,19 @@ final class sl {
           while (var2_int > var4) {
             L3: {
               var5 = param0.charAt(var4);
-              if (var5 >= 65) {
-                if (var5 <= 90) {
-                  var3[var4] = (char)(-65 + (var5 + 97));
-                  break L3;
-                }
+              if ((var5 >= 65) &&
+                  (var5 <= 90)) {
+                var3[var4] = (char)(-65 + (var5 + 97));
+                break L3;
               }
               L5: {
-                if (var5 >= 97) {
-                  if (var5 <= 122) {
-                    break L5;
-                  }
+                if ((var5 >= 97) &&
+                    (var5 <= 122)) {
+                  break L5;
                 }
-                if (var5 >= 48) {
-                  if (var5 <= 57) {
-                    break L5;
-                  }
+                if ((var5 >= 48) &&
+                    (var5 <= 57)) {
+                  break L5;
                 }
                 var3[var4] = (char)95;
                 break L3;

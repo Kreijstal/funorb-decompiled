@@ -35,26 +35,25 @@ final class fe {
             String stackIn_19_2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              if (param1.field_j[param1.field_f] == 31) {
-                if (-117 == param1.field_j[1 + param1.field_f]) {
-                  if (this.field_i == null) {
-                    this.field_i = new java.util.zip.Inflater(true);
-                  }
-                  try {
-                    this.field_i.setInput(param1.field_j, param1.field_f + 10, param1.field_j.length - 8 - (param1.field_f + 10));
-                    if (param0 != -1) {
-                      fe.a(76);
-                    }
-                    this.field_i.inflate(param2);
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    exception = (Exception) (Object) decompiledCaughtException;
-                    this.field_i.reset();
-                    throw new RuntimeException("");
-                  }
-                  this.field_i.reset();
-                  return;
+              if ((param1.field_j[param1.field_f] == 31) &&
+                  (-117 == param1.field_j[1 + param1.field_f])) {
+                if (this.field_i == null) {
+                  this.field_i = new java.util.zip.Inflater(true);
                 }
+                try {
+                  this.field_i.setInput(param1.field_j, param1.field_f + 10, param1.field_j.length - 8 - (param1.field_f + 10));
+                  if (param0 != -1) {
+                    fe.a(76);
+                  }
+                  this.field_i.inflate(param2);
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  exception = (Exception) (Object) decompiledCaughtException;
+                  this.field_i.reset();
+                  throw new RuntimeException("");
+                }
+                this.field_i.reset();
+                return;
               }
               throw new RuntimeException("");
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

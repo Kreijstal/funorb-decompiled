@@ -92,67 +92,62 @@ final class pa {
         int var9 = 0;
         int var10 = 0;
         try {
-          if (2 <= param2) {
-            if (param2 <= 36) {
-              var4_int = 0;
-              var5 = 0;
-              var6 = 0;
-              var7 = param0.length();
-              if (param3 != 87) {
-                field_b = (uj) null;
-              }
-              for (var8 = 0; var8 < var7; var8++) {
-                L3: {
-                  var9 = param0.charAt(var8);
-                  if (var8 == 0) {
-                    if (45 == var9) {
-                      var4_int = 1;
-                      break L3;
-                    }
-                    if (var9 == 43) {
-                      if (param1) {
-                        break L3;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (var9 >= 48) {
-                      if (var9 <= 57) {
-                        var9 -= 48;
-                        break L5;
-                      }
-                    }
-                    if (var9 >= 65) {
-                      if (var9 <= 90) {
-                        var9 -= 55;
-                        break L5;
-                      }
-                    }
-                    if (var9 >= 97) {
-                      if (var9 <= 122) {
-                        var9 -= 87;
-                        break L5;
-                      }
-                    }
-                    return false;
-                  }
-                  if (var9 >= param2) {
-                    return false;
-                  }
-                  if (var4_int != 0) {
-                    var9 = -var9;
-                  }
-                  var10 = var6 * param2 + var9;
-                  if (var6 != var10 / param2) {
-                    return false;
-                  }
-                  var6 = var10;
-                  var5 = 1;
-                }
-              }
-              stackIn_41_0 = var5;
-              return stackIn_41_0 != 0;
+          if ((2 <= param2) &&
+              (param2 <= 36)) {
+            var4_int = 0;
+            var5 = 0;
+            var6 = 0;
+            var7 = param0.length();
+            if (param3 != 87) {
+              field_b = (uj) null;
             }
+            for (var8 = 0; var8 < var7; var8++) {
+              L3: {
+                var9 = param0.charAt(var8);
+                if (var8 == 0) {
+                  if (45 == var9) {
+                    var4_int = 1;
+                    break L3;
+                  }
+                  if ((var9 == 43) &&
+                      (param1)) {
+                    break L3;
+                  }
+                }
+                L5: {
+                  if ((var9 >= 48) &&
+                      (var9 <= 57)) {
+                    var9 -= 48;
+                    break L5;
+                  }
+                  if ((var9 >= 65) &&
+                      (var9 <= 90)) {
+                    var9 -= 55;
+                    break L5;
+                  }
+                  if ((var9 >= 97) &&
+                      (var9 <= 122)) {
+                    var9 -= 87;
+                    break L5;
+                  }
+                  return false;
+                }
+                if (var9 >= param2) {
+                  return false;
+                }
+                if (var4_int != 0) {
+                  var9 = -var9;
+                }
+                var10 = var6 * param2 + var9;
+                if (var6 != var10 / param2) {
+                  return false;
+                }
+                var6 = var10;
+                var5 = 1;
+              }
+            }
+            stackIn_41_0 = var5;
+            return stackIn_41_0 != 0;
           }
           throw new IllegalArgumentException("" + param2);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,10 +183,9 @@ final class pa {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
             try {
-              if (d.field_b.startsWith("win")) {
-                if (gh.a(param0, false)) {
-                  return;
-                }
+              if ((d.field_b.startsWith("win")) &&
+                  (gh.a(param0, false))) {
+                return;
               }
               try {
                 var4_int = -83 / ((param1 + 55) / 62);

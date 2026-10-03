@@ -88,10 +88,9 @@ final class ua extends hf {
         int var6;
         float[] var7;
         byte[] var12;
-        if (param0 != null) {
-          if (param0[0] <= 0) {
-            return null;
-          }
+        if ((param0 != null) &&
+            (param0[0] <= 0)) {
+          return null;
         }
         if (this.field_E == null) {
           this.field_M = 0;
@@ -101,10 +100,9 @@ final class ua extends hf {
           this.field_x = 0;
         }
         while (this.field_x < this.field_p.length) {
-          if (param0 != null) {
-            if (param0[0] <= 0) {
-              return null;
-            }
+          if ((param0 != null) &&
+              (param0[0] <= 0)) {
+            return null;
           }
           L4: {
             var7 = this.c(this.field_x);
@@ -484,26 +482,24 @@ final class ua extends hf {
         }
         L4: {
           var7 = var4 >> 1;
-          if (var3 != 0) {
-            if (var5 == 0) {
-              var8 = (var4 >> 2) - (field_v >> 2);
-              var9 = (var4 >> 2) + (field_v >> 2);
-              var10 = field_v >> 1;
-              break L4;
-            }
+          if ((var3 != 0) &&
+              (var5 == 0)) {
+            var8 = (var4 >> 2) - (field_v >> 2);
+            var9 = (var4 >> 2) + (field_v >> 2);
+            var10 = field_v >> 1;
+            break L4;
           }
           var8 = 0;
           var9 = var7;
           var10 = var4 >> 1;
         }
         L6: {
-          if (var3 != 0) {
-            if (var6 == 0) {
-              var11 = var4 - (var4 >> 2) - (field_v >> 2);
-              var12 = var4 - (var4 >> 2) + (field_v >> 2);
-              var13 = field_v >> 1;
-              break L6;
-            }
+          if ((var3 != 0) &&
+              (var6 == 0)) {
+            var11 = var4 - (var4 >> 2) - (field_v >> 2);
+            var12 = var4 - (var4 >> 2) + (field_v >> 2);
+            var13 = field_v >> 1;
+            break L6;
           }
           var11 = var7;
           var12 = var4;

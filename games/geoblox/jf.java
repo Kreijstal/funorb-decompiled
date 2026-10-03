@@ -163,28 +163,27 @@ final class jf implements dh {
         CharSequence var12 = null;
         var11 = Geoblox.field_C;
         try {
-          if (param0 != null) {
-            if (param3 > 0) {
-              var6_int = param0[0].field_s;
-              var7 = param0[2].field_s;
-              var8 = param0[1].field_s;
-              param0[0].e(param2, param4, param1);
-              param0[2].e(-var7 + (param2 + param3), param4, param1);
-              vb.a(da.field_d);
-              vb.b(var6_int + param2, param4, -var7 + param3 + param2, param4 + param0[1].field_o);
-              var9 = param2 + var6_int;
-              var10 = -var7 + (param2 + param3);
-              for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-                param0[1].e(param2, param4, param1);
-              }
-              vb.b(da.field_d);
-              if (param5 == -17154) {
-                return;
-              }
-              var12 = (CharSequence) null;
-              jf.a((CharSequence) null, (byte) 66);
+          if ((param0 != null) &&
+              (param3 > 0)) {
+            var6_int = param0[0].field_s;
+            var7 = param0[2].field_s;
+            var8 = param0[1].field_s;
+            param0[0].e(param2, param4, param1);
+            param0[2].e(-var7 + (param2 + param3), param4, param1);
+            vb.a(da.field_d);
+            vb.b(var6_int + param2, param4, -var7 + param3 + param2, param4 + param0[1].field_o);
+            var9 = param2 + var6_int;
+            var10 = -var7 + (param2 + param3);
+            for (param2 = var9; param2 < var10; param2 = param2 + var8) {
+              param0[1].e(param2, param4, param1);
+            }
+            vb.b(da.field_d);
+            if (param5 == -17154) {
               return;
             }
+            var12 = (CharSequence) null;
+            jf.a((CharSequence) null, (byte) 66);
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,15 +225,13 @@ final class jf implements dh {
             L2: {
               L3: {
                 var5 = param0.charAt(var4);
-                if (var5 > 0) {
-                  if (var5 < 128) {
-                    break L3;
-                  }
+                if ((var5 > 0) &&
+                    (var5 < 128)) {
+                  break L3;
                 }
-                if (var5 >= 160) {
-                  if (255 >= var5) {
-                    break L3;
-                  }
+                if ((var5 >= 160) &&
+                    (255 >= var5)) {
+                  break L3;
                 }
                 if (8364 == var5) {
                   var3[var4] = (byte)-128;

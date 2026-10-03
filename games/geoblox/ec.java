@@ -55,18 +55,17 @@ final class ec {
         int var12 = 0;
         var11 = Geoblox.field_C;
         try {
-          if (0 == h.field_a) {
-            if (0 < wb.field_b) {
-              if (w.field_f) {
-                return false;
-              }
-              gf.field_f = 0;
-              if (el.field_o.field_T == 463) {
-                el.field_o.field_y = 1;
-                el.field_o.c(false);
-              }
+          if ((0 == h.field_a) &&
+              (0 < wb.field_b)) {
+            if (w.field_f) {
               return false;
             }
+            gf.field_f = 0;
+            if (el.field_o.field_T == 463) {
+              el.field_o.field_y = 1;
+              el.field_o.c(false);
+            }
+            return false;
           }
           if (h.field_a == 0) {
             return false;
@@ -100,11 +99,10 @@ final class ec {
           var1_int = var12;
           while (var12 < h.field_a) {
             L8: {
-              if (-1 + h.field_a > var12) {
-                if (nk.field_f[var12] == nk.field_f[var12 + 1]) {
-                  nk.field_f[var12] = 0;
-                  break L8;
-                }
+              if ((-1 + h.field_a > var12) &&
+                  (nk.field_f[var12] == nk.field_f[var12 + 1])) {
+                nk.field_f[var12] = 0;
+                break L8;
               }
               var2 = (nk.field_f[var12] & 1072693248) >> 20;
               var3 = nk.field_f[var12] >> 10 & 1023;
@@ -112,29 +110,27 @@ final class ec {
               var5 = tl.field_g[var2];
               var6 = tl.field_g[var3];
               var7 = tl.field_g[var4];
-              if (var5.field_E <= 0) {
-                if (var6.field_E <= 0) {
-                  if (var7.field_E <= 0) {
-                    td.a(-348, fl.field_c[31]);
-                    gf.field_f = gf.field_f + 1;
-                    if (gf.field_f > 1) {
-                      el.field_o.field_y = -1;
-                    }
-                    if (-1073741824 == (-1073741824 & nk.field_f[var12])) {
-                      var8 = 90 * gf.field_f;
-                      ra.a(fa.field_e ^ 255, -100, fa.field_e);
-                    } else {
-                      var8 = 30 * gf.field_f;
-                    }
-                    var9 = 0;
-                    var9 = (int)var5.field_o;
-                    var10 = 0;
-                    var10 = (int)var5.field_v;
-                    ug.a(var8, true, var10, gf.field_f, var9);
-                    nk.field_f[var12] = 0;
-                    break L8;
-                  }
+              if ((var5.field_E <= 0) &&
+                  (var6.field_E <= 0) &&
+                  (var7.field_E <= 0)) {
+                td.a(-348, fl.field_c[31]);
+                gf.field_f = gf.field_f + 1;
+                if (gf.field_f > 1) {
+                  el.field_o.field_y = -1;
                 }
+                if (-1073741824 == (-1073741824 & nk.field_f[var12])) {
+                  var8 = 90 * gf.field_f;
+                  ra.a(fa.field_e ^ 255, -100, fa.field_e);
+                } else {
+                  var8 = 30 * gf.field_f;
+                }
+                var9 = 0;
+                var9 = (int)var5.field_o;
+                var10 = 0;
+                var10 = (int)var5.field_v;
+                ug.a(var8, true, var10, gf.field_f, var9);
+                nk.field_f[var12] = 0;
+                break L8;
               }
               var8_ref_ja = var5;
               var9_ref_ja = var6;

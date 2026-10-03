@@ -134,38 +134,37 @@ final class si {
             field_n = (lh) null;
           }
           var6 = param0.c(120, param3);
-          if (var6 != null) {
-            if (null != param0.field_n) {
-              if (this.field_e < 0) {
-                return;
-              }
-              stackIn_20_0 = param0.field_n;
-              stackIn_20_1 = (String) (var6);
-              if (this.field_b != -2147483648) {
-                stackIn_21_2 = this.field_b;
-              } else {
-                stackIn_21_2 = 0;
-              }
-              stackIn_23_2 = stackIn_21_2 + param0.field_e + param3.field_v + param1;
-              stackIn_23_3 = param0.field_m;
-              stackIn_23_4 = param3.field_m + param2;
-              if (this.field_f == -2147483648) {
-                stackIn_24_5 = 0;
-              } else {
-                stackIn_24_5 = this.field_f;
-              }
-              stackIn_26_3 = stackIn_23_3 + (stackIn_23_4 + stackIn_24_5);
-              stackIn_26_4 = -param0.field_e + param3.field_r - param0.field_j;
-              stackIn_26_5 = -param0.field_b + (-param0.field_m + param3.field_h);
-              stackIn_26_6 = this.field_e;
-              stackIn_26_7 = this.field_d;
-              if (this.field_k != -2147483648) {
-                stackIn_27_8 = this.field_k;
-              } else {
-                stackIn_27_8 = 256;
-              }
-              ((m) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_g, param0.field_i, param0.field_f);
+          if ((var6 != null) &&
+              (null != param0.field_n)) {
+            if (this.field_e < 0) {
+              return;
             }
+            stackIn_20_0 = param0.field_n;
+            stackIn_20_1 = (String) (var6);
+            if (this.field_b != -2147483648) {
+              stackIn_21_2 = this.field_b;
+            } else {
+              stackIn_21_2 = 0;
+            }
+            stackIn_23_2 = stackIn_21_2 + param0.field_e + param3.field_v + param1;
+            stackIn_23_3 = param0.field_m;
+            stackIn_23_4 = param3.field_m + param2;
+            if (this.field_f == -2147483648) {
+              stackIn_24_5 = 0;
+            } else {
+              stackIn_24_5 = this.field_f;
+            }
+            stackIn_26_3 = stackIn_23_3 + (stackIn_23_4 + stackIn_24_5);
+            stackIn_26_4 = -param0.field_e + param3.field_r - param0.field_j;
+            stackIn_26_5 = -param0.field_b + (-param0.field_m + param3.field_h);
+            stackIn_26_6 = this.field_e;
+            stackIn_26_7 = this.field_d;
+            if (this.field_k != -2147483648) {
+              stackIn_27_8 = this.field_k;
+            } else {
+              stackIn_27_8 = 256;
+            }
+            ((m) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_g, param0.field_i, param0.field_f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

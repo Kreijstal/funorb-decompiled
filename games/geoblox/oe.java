@@ -341,31 +341,25 @@ abstract class oe extends dd {
               }
               for (var9 = 0; pg.field_a.length > var9; var9++) {
                 L15: {
-                  if ((1 << var9 & var5) == 0) {
-                    if (param0) {
-                      break L15;
-                    }
+                  if (((1 << var9 & var5) == 0) &&
+                      (param0)) {
+                    break L15;
                   }
-                  if (!da.a(0, 88)) {
-                    if (var9 == 16) {
-                      if (!qi.d(109)) {
-                        break L15;
-                      }
-                    }
+                  if ((!da.a(0, 88)) &&
+                      (var9 == 16) &&
+                      (!qi.d(109))) {
+                    break L15;
                   }
-                  if (mc.field_a >= var3_int) {
-                    if (mc.field_a <= var3_int + 32) {
-                      if (var4 <= he.field_d) {
-                        if (he.field_d <= var4 + 32) {
-                          if (a.field_e == var9) {
-                            a.field_e = -1;
-                            return;
-                          }
-                          a.field_e = var9;
-                          return;
-                        }
-                      }
+                  if ((mc.field_a >= var3_int) &&
+                      (mc.field_a <= var3_int + 32) &&
+                      (var4 <= he.field_d) &&
+                      (he.field_d <= var4 + 32)) {
+                    if (a.field_e == var9) {
+                      a.field_e = -1;
+                      return;
                     }
+                    a.field_e = var9;
+                    return;
                   }
                   incrementValue$1 = var6;
                   var6++;
@@ -377,10 +371,9 @@ abstract class oe extends dd {
                     if (!param1) {
                       var4 += 5;
                     }
-                    if (param0) {
-                      if (var8 < 8) {
-                        var3_int = var3_int + var7;
-                      }
+                    if ((param0) &&
+                        (var8 < 8)) {
+                      var3_int = var3_int + var7;
                     }
                   }
                 }
@@ -398,31 +391,25 @@ abstract class oe extends dd {
             }
             for (var9 = 0; pg.field_a.length > var9; var9++) {
               L7: {
-                if ((1 << var9 & var5) == 0) {
-                  if (param0) {
-                    break L7;
-                  }
+                if (((1 << var9 & var5) == 0) &&
+                    (param0)) {
+                  break L7;
                 }
-                if (!da.a(0, 88)) {
-                  if (var9 == 16) {
-                    if (!qi.d(109)) {
-                      break L7;
-                    }
-                  }
+                if ((!da.a(0, 88)) &&
+                    (var9 == 16) &&
+                    (!qi.d(109))) {
+                  break L7;
                 }
-                if (mc.field_a >= var3_int) {
-                  if (mc.field_a <= var3_int + 32) {
-                    if (var4 <= he.field_d) {
-                      if (he.field_d <= var4 + 32) {
-                        if (a.field_e == var9) {
-                          a.field_e = -1;
-                          return;
-                        }
-                        a.field_e = var9;
-                        return;
-                      }
-                    }
+                if ((mc.field_a >= var3_int) &&
+                    (mc.field_a <= var3_int + 32) &&
+                    (var4 <= he.field_d) &&
+                    (he.field_d <= var4 + 32)) {
+                  if (a.field_e == var9) {
+                    a.field_e = -1;
+                    return;
                   }
+                  a.field_e = var9;
+                  return;
                 }
                 incrementValue$0 = var6;
                 var6++;
@@ -434,10 +421,9 @@ abstract class oe extends dd {
                   if (!param1) {
                     var4 += 5;
                   }
-                  if (param0) {
-                    if (var8 < 8) {
-                      var3_int = var3_int + var7;
-                    }
+                  if ((param0) &&
+                      (var8 < 8)) {
+                    var3_int = var3_int + var7;
                   }
                 }
               }

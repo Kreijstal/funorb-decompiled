@@ -114,18 +114,16 @@ final class ld {
             og.field_r = og.field_r + 0.055555559694767f;
             sa.b(!param0);
           }
-          if ((kd.field_f[ji.field_h] & 1) != 0) {
-            if (ag.field_k < 7) {
-              ag.field_k = ag.field_k + 1;
-            }
+          if (((kd.field_f[ji.field_h] & 1) != 0) &&
+              (ag.field_k < 7)) {
+            ag.field_k = ag.field_k + 1;
           }
           if (param0) {
             ld.b(true);
           }
-          if ((kd.field_f[ji.field_h] & 2) != 0) {
-            if (f.field_qb < 7) {
-              f.field_qb = f.field_qb + 1;
-            }
+          if (((kd.field_f[ji.field_h] & 2) != 0) &&
+              (f.field_qb < 7)) {
+            f.field_qb = f.field_qb + 1;
           }
           if (0 != (kd.field_f[ji.field_h] & 16)) {
             sa.field_c = sa.field_c + 0.05;

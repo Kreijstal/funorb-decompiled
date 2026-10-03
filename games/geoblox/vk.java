@@ -37,10 +37,9 @@ abstract class vk {
             return (byte[]) ((Object) stackIn_3_0);
           }
           L0: {
-            if (param0 != null) {
-              if (param0.length == var4_int) {
-                break L0;
-              }
+            if ((param0 != null) &&
+                (param0.length == var4_int)) {
+              break L0;
             }
             param0 = new byte[var4_int];
           }

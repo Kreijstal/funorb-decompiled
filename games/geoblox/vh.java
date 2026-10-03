@@ -191,28 +191,27 @@ final class vh extends ee implements pl {
           if (param0 != 126) {
             return;
           }
-          if (param1 != null) {
-            if (param1.length != 0) {
-              var3_int = param1.length;
-              this.field_C = new String[var3_int];
-              for (var4_int = 0; var3_int > var4_int; var4_int++) {
-                this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
-              }
-              var4 = new fh(ng.field_F, 0, 1);
-              this.field_I = new hk[var3_int + 1];
-              for (var5 = 0; var5 < var3_int; var5++) {
-                this.field_I[var5] = new hk(this.field_C[var5], (bb) (this));
-                this.field_I[var5].field_q = (dh) ((Object) var4);
-                this.field_I[var5].field_j = ml.field_u;
-                this.field_I[var5].a(15, 80, (byte) -14, var5 * 16 + 20, 0);
-                this.b((byte) -126, this.field_I[var5]);
-              }
-              this.field_I[var3_int] = new hk(ll.field_a, (bb) (this));
-              this.field_I[var3_int].field_q = (dh) ((Object) var4);
-              this.field_I[var3_int].a(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
-              this.b((byte) -122, this.field_I[var3_int]);
-              return;
+          if ((param1 != null) &&
+              (param1.length != 0)) {
+            var3_int = param1.length;
+            this.field_C = new String[var3_int];
+            for (var4_int = 0; var3_int > var4_int; var4_int++) {
+              this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
             }
+            var4 = new fh(ng.field_F, 0, 1);
+            this.field_I = new hk[var3_int + 1];
+            for (var5 = 0; var5 < var3_int; var5++) {
+              this.field_I[var5] = new hk(this.field_C[var5], (bb) (this));
+              this.field_I[var5].field_q = (dh) ((Object) var4);
+              this.field_I[var5].field_j = ml.field_u;
+              this.field_I[var5].a(15, 80, (byte) -14, var5 * 16 + 20, 0);
+              this.b((byte) -126, this.field_I[var5]);
+            }
+            this.field_I[var3_int] = new hk(ll.field_a, (bb) (this));
+            this.field_I[var3_int].field_q = (dh) ((Object) var4);
+            this.field_I[var3_int].a(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
+            this.b((byte) -122, this.field_I[var3_int]);
+            return;
           }
           this.field_C = null;
           return;

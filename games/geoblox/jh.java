@@ -24,19 +24,18 @@ final class jh {
           var5 = this.field_d;
           synchronized (var5) {
             L0: {
-              if (0 <= param3) {
-                if (param3 <= this.field_a) {
-                  if (param1 != -53) {
-                    var8 = (kj) null;
-                    jh.a((java.awt.Component) null, (d) null, false, (kj) null, false, -103);
-                  }
-                  var6 = this.a(255, param3, param2, param0, true) ? 1 : 0;
-                  if (var6 == 0) {
-                    var6 = this.a(255, param3, param2, param0, false) ? 1 : 0;
-                  }
-                  stackIn_9_0 = var6;
-                  break L0;
+              if ((0 <= param3) &&
+                  (param3 <= this.field_a)) {
+                if (param1 != -53) {
+                  var8 = (kj) null;
+                  jh.a((java.awt.Component) null, (d) null, false, (kj) null, false, -103);
                 }
+                var6 = this.a(255, param3, param2, param0, true) ? 1 : 0;
+                if (var6 == 0) {
+                  var6 = this.a(255, param3, param2, param0, false) ? 1 : 0;
+                }
+                stackIn_9_0 = var6;
+                break L0;
               }
               throw new IllegalArgumentException();
             }
@@ -216,10 +215,9 @@ final class jh {
                       this.field_c.a(param0 - 228, (long)(param2 * 6));
                       this.field_c.a(dj.field_F, 6, 0, 9868);
                       var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
-                      if (var7_int > 0) {
-                        if (this.field_d.a((byte) 46) / 520L >= (long)var7_int) {
-                          break L0;
-                        }
+                      if ((var7_int > 0) &&
+                          (this.field_d.a((byte) 46) / 520L >= (long)var7_int)) {
+                        break L0;
                       }
                       return false;
                     }
@@ -281,17 +279,14 @@ final class jh {
                               var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 16) + (65280 & dj.field_F[7] << 8);
                               var12 = (dj.field_F[4] << 8 & 65280) + (255 & dj.field_F[5]);
                             }
-                            if (var11 == param2) {
-                              if (var9 == var12) {
-                                if (var13 == this.field_b) {
-                                  if (var10 >= 0) {
-                                    if (~(this.field_d.a((byte) 46) / 520L) <= ~(long)var10) {
-                                      break L5;
-                                    }
-                                  }
-                                  return false;
-                                }
+                            if ((var11 == param2) &&
+                                (var9 == var12) &&
+                                (var13 == this.field_b)) {
+                              if ((var10 >= 0) &&
+                                  (~(this.field_d.a((byte) 46) / 520L) <= ~(long)var10)) {
+                                break L5;
                               }
+                              return false;
                             }
                             return false;
                           }

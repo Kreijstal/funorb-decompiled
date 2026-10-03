@@ -31,15 +31,13 @@ final class em {
         }
         L1: {
           L2: {
-            if (65 <= param0) {
-              if (param0 <= 90) {
-                break L2;
-              }
+            if ((65 <= param0) &&
+                (param0 <= 90)) {
+              break L2;
             }
-            if (97 <= param0) {
-              if (param0 <= 122) {
-                break L2;
-              }
+            if ((97 <= param0) &&
+                (param0 <= 122)) {
+              break L2;
             }
             stackIn_10_0 = false;
             break L1;
@@ -78,25 +76,24 @@ final class em {
           if (this.field_b == null) {
             throw new RuntimeException();
           }
-          if (param0 >= 0) {
-            if (this.field_d.length > param0) {
-              if (null != this.field_d[param0]) {
-                stackIn_9_0 = this.field_d[param0];
-                return stackIn_9_0;
-              }
-              this.field_b.field_f = 6 + 72 * param0;
-              var6_int = this.field_b.a((byte) -108);
-              var7 = this.field_b.a((byte) -55);
-              var13 = new byte[64];
-              if (param1 != -9) {
-                this.field_h = (sd) null;
-              }
-              this.field_b.b(29915, 64, var13, 0);
-              var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
-              this.field_d[param0] = var9;
-              stackIn_13_0 = (bj) (var9);
-              return stackIn_13_0;
+          if ((param0 >= 0) &&
+              (this.field_d.length > param0)) {
+            if (null != this.field_d[param0]) {
+              stackIn_9_0 = this.field_d[param0];
+              return stackIn_9_0;
             }
+            this.field_b.field_f = 6 + 72 * param0;
+            var6_int = this.field_b.a((byte) -108);
+            var7 = this.field_b.a((byte) -55);
+            var13 = new byte[64];
+            if (param1 != -9) {
+              this.field_h = (sd) null;
+            }
+            this.field_b.b(29915, 64, var13, 0);
+            var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
+            this.field_d[param0] = var9;
+            stackIn_13_0 = (bj) (var9);
+            return stackIn_13_0;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -182,13 +179,12 @@ final class em {
           var11 = var13;
           var4 = var11;
           var10.b(29915, var13.length, var13, 0);
-          if (this.field_c != null) {
-            if (this.field_e != null) {
-              var12 = new java.math.BigInteger(var13);
-              var7_ref_java_math_BigInteger = var12.modPow(this.field_c, this.field_e);
-              var5 = var7_ref_java_math_BigInteger.toByteArray();
-              break L1;
-            }
+          if ((this.field_c != null) &&
+              (this.field_e != null)) {
+            var12 = new java.math.BigInteger(var13);
+            var7_ref_java_math_BigInteger = var12.modPow(this.field_c, this.field_e);
+            var5 = var7_ref_java_math_BigInteger.toByteArray();
+            break L1;
           }
           var5 = var4;
         }
@@ -269,13 +265,12 @@ final class em {
           if (param1 < 53) {
             em.a(26);
           }
-          if (param0 != null) {
-            if (param0.length() >= wg.field_m) {
-              if (param0.length() > bm.field_j) {
-                return true;
-              }
-              return false;
+          if ((param0 != null) &&
+              (param0.length() >= wg.field_m)) {
+            if (param0.length() > bm.field_j) {
+              return true;
             }
+            return false;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

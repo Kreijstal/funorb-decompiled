@@ -160,12 +160,11 @@ final class hi extends ee implements ta, pl {
         try {
           L0: {
             var44 = param5;
-            if (null != var44.field_n) {
-              if (var44.field_v > 1) {
-                var60 = var44.field_n;
-                va.a(0, var60, 0, uh.field_x, (byte) -85);
-                break L0;
-              }
+            if ((null != var44.field_n) &&
+                (var44.field_v > 1)) {
+              var60 = var44.field_n;
+              va.a(0, var60, 0, uh.field_x, (byte) -85);
+              break L0;
             }
             vc.d(2971);
           }
@@ -231,17 +230,13 @@ final class hi extends ee implements ta, pl {
             }
             L7: {
               var20 = stackIn_33_0;
-              if (l.field_i != null) {
-                if (param5.field_G != null) {
-                  if (param5.field_G.length > var14) {
-                    if (param5.field_G[var14] != -1) {
-                      if (l.field_i.length > param5.field_G[var14]) {
-                        stackIn_40_0 = l.field_i[param5.field_G[var14]];
-                        break L7;
-                      }
-                    }
-                  }
-                }
+              if ((l.field_i != null) &&
+                  (param5.field_G != null) &&
+                  (param5.field_G.length > var14) &&
+                  (param5.field_G[var14] != -1) &&
+                  (l.field_i.length > param5.field_G[var14])) {
+                stackIn_40_0 = l.field_i[param5.field_G[var14]];
+                break L7;
               }
               stackIn_40_0 = null;
             }
@@ -253,23 +248,22 @@ final class hi extends ee implements ta, pl {
               var25 = dj.field_N[var16];
               var26 = sh.field_x[var17];
               var27 = dj.field_N[var17];
-              if (var18 == var19) {
-                if (var20 == var19) {
-                  var28 = var54[var18];
-                  var29 = var64[var18];
-                  if (var21 != null) {
-                    stackIn_45_0 = var21.field_a;
-                  } else {
-                    stackIn_45_0 = 8355711;
-                  }
-                  var30 = stackIn_45_0;
-                  var31 = var30 & 16711935;
-                  var32 = 65280 & var30;
-                  var33 = (-16711703 & var31 * var28) >>> 8 | -285147392 & var32 * var28 >>> 8;
-                  var33 = var33 + var29 * 65793;
-                  gi.a(var26, -122, var27, var25, var24, var22, var23, 8355711 & var33 >> 1);
-                  break L9;
+              if ((var18 == var19) &&
+                  (var20 == var19)) {
+                var28 = var54[var18];
+                var29 = var64[var18];
+                if (var21 != null) {
+                  stackIn_45_0 = var21.field_a;
+                } else {
+                  stackIn_45_0 = 8355711;
                 }
+                var30 = stackIn_45_0;
+                var31 = var30 & 16711935;
+                var32 = 65280 & var30;
+                var33 = (-16711703 & var31 * var28) >>> 8 | -285147392 & var32 * var28 >>> 8;
+                var33 = var33 + var29 * 65793;
+                gi.a(var26, -122, var27, var25, var24, var22, var23, 8355711 & var33 >> 1);
+                break L9;
               }
               var28 = var54[var18];
               var29 = var54[var19];
@@ -332,15 +326,13 @@ final class hi extends ee implements ta, pl {
             L1: {
               L2: {
                 var8 = param0.charAt(param2 + var7);
-                if (0 < var8) {
-                  if (var8 < 128) {
-                    break L2;
-                  }
+                if ((0 < var8) &&
+                    (var8 < 128)) {
+                  break L2;
                 }
-                if (var8 >= 160) {
-                  if (var8 <= 255) {
-                    break L2;
-                  }
+                if ((var8 >= 160) &&
+                    (var8 <= 255)) {
+                  break L2;
                 }
                 if (var8 == 8364) {
                   param1[var7 + param4] = (byte)-128;

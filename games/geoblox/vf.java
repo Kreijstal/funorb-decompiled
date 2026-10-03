@@ -302,10 +302,9 @@ class vf extends hk {
         try {
           L0: {
             var4_int = 122 % ((41 - param1) / 55);
-            if (null != this.field_J) {
-              if (param0 < this.field_J.length) {
-                break L0;
-              }
+            if ((null != this.field_J) &&
+                (param0 < this.field_J.length)) {
+              break L0;
             }
             L2: {
               var5 = new String[param0 + 1];
@@ -360,14 +359,11 @@ class vf extends hk {
         while (var4 != null) {
           var6 = var4;
           while (var6 != null) {
-            if (var6.field_k <= param2) {
-              if (param1 >= var6.field_i) {
-                if (param2 < var6.field_f + var6.field_k) {
-                  if (param1 <= var6.field_i + var6.field_n) {
-                    return var4;
-                  }
-                }
-              }
+            if ((var6.field_k <= param2) &&
+                (param1 >= var6.field_i) &&
+                (param2 < var6.field_f + var6.field_k) &&
+                (param1 <= var6.field_i + var6.field_n)) {
+              return var4;
             }
             var6 = var6.field_h;
           }

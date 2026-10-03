@@ -113,10 +113,9 @@ final class jk {
             L2: {
               var4 = param1.charAt(var3);
               if (45 == var4) {
-                if (var3 != 0) {
-                  if (var3 != -1 + var2_int) {
-                    break L2;
-                  }
+                if ((var3 != 0) &&
+                    (var3 != -1 + var2_int)) {
+                  break L2;
                 }
                 stackIn_18_0 = ii.field_h;
                 return stackIn_18_0;

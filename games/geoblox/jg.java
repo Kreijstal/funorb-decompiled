@@ -184,18 +184,16 @@ abstract class jg {
             jg.a((byte) 74, (String) null);
           }
           while (var5_int < 33) {
-            if (ck.field_c[var5_int] > 0) {
-              if (ck.field_c[var5_int] != 1) {
-                var5_int++;
-                continue;
-              }
+            if ((ck.field_c[var5_int] > 0) &&
+                (ck.field_c[var5_int] != 1)) {
+              var5_int++;
+              continue;
             }
             L3: {
-              if (var5_int >= 10) {
-                if (26 >= var5_int) {
-                  var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
-                  break L3;
-                }
+              if ((var5_int >= 10) &&
+                  (26 >= var5_int)) {
+                var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
+                break L3;
               }
               var6 = te.field_c.b(1, w.field_b[var5_int]);
             }
@@ -278,24 +276,22 @@ abstract class jg {
               var4_float = (float)((field_f[var1][var2] & 65454) >> 8) / 255.0f;
               var5_float = (float)(255 & field_f[var1][var2]) / 255.0f;
               var9 = 0;
-              if (var3_float > var4_float) {
-                if (var3_float > var5_float) {
-                  var7 = var3_float;
-                  if (!(var4_float > var5_float)) {
-                    var6 = var4_float;
-                    break L6;
-                  }
-                  var6 = var5_float;
+              if ((var3_float > var4_float) &&
+                  (var3_float > var5_float)) {
+                var7 = var3_float;
+                if (!(var4_float > var5_float)) {
+                  var6 = var4_float;
                   break L6;
                 }
+                var6 = var5_float;
+                break L6;
               }
-              if (var4_float > var3_float) {
-                if (var4_float > var5_float) {
-                  var6 = (!(var3_float > var5_float)) ? var3_float : var5_float;
-                  var9 = 1;
-                  var7 = var4_float;
-                  break L6;
-                }
+              if ((var4_float > var3_float) &&
+                  (var4_float > var5_float)) {
+                var6 = (!(var3_float > var5_float)) ? var3_float : var5_float;
+                var9 = 1;
+                var7 = var4_float;
+                break L6;
               }
               var7 = var5_float;
               var9 = 2;

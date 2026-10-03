@@ -121,10 +121,9 @@ final class i {
           var6 = param0 * 3;
           var7 = var5_int - 10;
           oe.l(0);
-          if (param2.field_v > 0) {
-            if (null != param2.field_n) {
-              ma.a((byte) -35);
-            }
+          if ((param2.field_v > 0) &&
+              (null != param2.field_n)) {
+            ma.a((byte) -35);
           }
           ch.field_b = 0;
           var8 = 0;
@@ -153,16 +152,14 @@ final class i {
                     }
                   }
                   var12 = bj.field_j[var9];
-                  if (-2147483648 == var12) {
-                    if (var19 == 0) {
-                      break L4;
-                    }
+                  if ((-2147483648 == var12) &&
+                      (var19 == 0)) {
+                    break L4;
                   }
                   var13 = bj.field_j[var10];
-                  if (-2147483648 == var13) {
-                    if (var19 == 0) {
-                      break L4;
-                    }
+                  if ((-2147483648 == var13) &&
+                      (var19 == 0)) {
+                    break L4;
                   }
                   var14 = bj.field_j[var11];
                   if (var14 != -2147483648) {
@@ -198,11 +195,10 @@ final class i {
                       var18 = stackIn_39_0;
                       pj.field_i[var18] = var8;
                       ch.field_d[var16] = 1 + var17;
-                      if (0 < param2.field_v) {
-                        if (null != param2.field_n) {
-                          dupTemp$0 = param2.field_n[var8];
-                          uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
-                        }
+                      if ((0 < param2.field_v) &&
+                          (null != param2.field_n)) {
+                        dupTemp$0 = param2.field_n[var8];
+                        uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
                       }
                       ch.field_b = ch.field_b + 1;
                       break L4;
@@ -217,26 +213,25 @@ final class i {
               stackIn_49_0 = -1;
             }
             L15: {
-              if (stackIn_49_0 > ~param2.field_v) {
-                if (null != param2.field_n) {
-                  var8 = 0;
-                  var9 = 0;
-                  while (true) {
-                    if (uh.field_x.length <= var9) {
-                      break L15;
-                    }
-                    var10 = uh.field_x[var9];
-                    uh.field_x[var9] = var8;
-                    var8 = var8 + var10;
-                    var9++;
-                    if (var19 != 0) {
-                      return;
-                    }
-                    if (var19 == 0) {
-                      continue;
-                    }
+              if ((stackIn_49_0 > ~param2.field_v) &&
+                  (null != param2.field_n)) {
+                var8 = 0;
+                var9 = 0;
+                while (true) {
+                  if (uh.field_x.length <= var9) {
                     break L15;
                   }
+                  var10 = uh.field_x[var9];
+                  uh.field_x[var9] = var8;
+                  var8 = var8 + var10;
+                  var9++;
+                  if (var19 != 0) {
+                    return;
+                  }
+                  if (var19 == 0) {
+                    continue;
+                  }
+                  break L15;
                 }
               }
             }
