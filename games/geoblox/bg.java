@@ -167,15 +167,10 @@ final class bg extends m {
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         int var9;
         int var10;
         int var11;
@@ -204,9 +199,7 @@ final class bg extends m {
                   var11++;
                   continue;
                 }
-                incrementValue$1 = param4;
-                param4++;
-                param0[incrementValue$1] = param2;
+                param0[param4++] = param2;
                 var11++;
                 continue;
               }
@@ -216,27 +209,21 @@ final class bg extends m {
             if (param1[incrementValue$2] == 0) {
               param4++;
             } else {
-              incrementValue$3 = param4;
-              param4++;
-              param0[incrementValue$3] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$4 = param3;
             param3++;
             if (param1[incrementValue$4] == 0) {
               param4++;
             } else {
-              incrementValue$5 = param4;
-              param4++;
-              param0[incrementValue$5] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$6 = param3;
             param3++;
             if (param1[incrementValue$6] == 0) {
               param4++;
             } else {
-              incrementValue$7 = param4;
-              param4++;
-              param0[incrementValue$7] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$8 = param3;
             param3++;
@@ -245,9 +232,7 @@ final class bg extends m {
               var11++;
               continue;
             }
-            incrementValue$9 = param4;
-            param4++;
-            param0[incrementValue$9] = param2;
+            param0[param4++] = param2;
             var11++;
             continue;
           }

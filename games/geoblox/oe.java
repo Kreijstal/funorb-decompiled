@@ -89,14 +89,6 @@ abstract class oe extends dd {
     }
 
     final static void l(int param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -111,30 +103,14 @@ abstract class oe extends dd {
           var2 = param0;
           var3 = var5.length;
           while (var2 < var3) {
-            incrementValue$16 = var2;
-            var2++;
-            var5[incrementValue$16] = 0;
-            incrementValue$17 = var2;
-            var2++;
-            var5[incrementValue$17] = 0;
-            incrementValue$18 = var2;
-            var2++;
-            var5[incrementValue$18] = 0;
-            incrementValue$19 = var2;
-            var2++;
-            var5[incrementValue$19] = 0;
-            incrementValue$20 = var2;
-            var2++;
-            var5[incrementValue$20] = 0;
-            incrementValue$21 = var2;
-            var2++;
-            var5[incrementValue$21] = 0;
-            incrementValue$22 = var2;
-            var2++;
-            var5[incrementValue$22] = 0;
-            incrementValue$23 = var2;
-            var2++;
-            var5[incrementValue$23] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

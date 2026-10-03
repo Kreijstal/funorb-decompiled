@@ -693,16 +693,13 @@ class dm extends wh {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
-                    incrementValue$1 = param5;
-                    param5++;
-                    param0[incrementValue$1] = param2;
+                    param0[param5++] = param2;
                 } else {
                     param5++;
                 }
@@ -807,7 +804,6 @@ class dm extends wh {
     final void g(int param0) {
         int var4 = 0;
         int var5 = 0;
-        int incrementValue$1 = 0;
         int[] var2;
         int var3;
         int var6;
@@ -837,9 +833,7 @@ class dm extends wh {
                 }
               }
             }
-            incrementValue$1 = var3;
-            var3++;
-            var2[incrementValue$1] = var6;
+            var2[var3++] = var6;
           }
         }
         this.field_v = var2;
@@ -1151,7 +1145,6 @@ class dm extends wh {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int var10;
         int var11;
         int var12;
@@ -1207,9 +1200,7 @@ class dm extends wh {
               var16++;
               continue;
             }
-            incrementValue$3 = param4;
-            param4++;
-            param0[incrementValue$3] = param2;
+            param0[param4++] = param2;
             var16++;
             continue;
           }
@@ -1409,15 +1400,10 @@ class dm extends wh {
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         int var9;
         int var10;
         int var11;
@@ -1447,9 +1433,7 @@ class dm extends wh {
                   var11++;
                   continue;
                 }
-                incrementValue$1 = param4;
-                param4++;
-                param0[incrementValue$1] = param2;
+                param0[param4++] = param2;
                 var11++;
                 continue;
               }
@@ -1460,9 +1444,7 @@ class dm extends wh {
             if (param2 == 0) {
               param4++;
             } else {
-              incrementValue$3 = param4;
-              param4++;
-              param0[incrementValue$3] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$4 = param3;
             param3++;
@@ -1470,9 +1452,7 @@ class dm extends wh {
             if (param2 == 0) {
               param4++;
             } else {
-              incrementValue$5 = param4;
-              param4++;
-              param0[incrementValue$5] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$6 = param3;
             param3++;
@@ -1480,9 +1460,7 @@ class dm extends wh {
             if (param2 == 0) {
               param4++;
             } else {
-              incrementValue$7 = param4;
-              param4++;
-              param0[incrementValue$7] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$8 = param3;
             param3++;
@@ -1492,9 +1470,7 @@ class dm extends wh {
               var11++;
               continue;
             }
-            incrementValue$9 = param4;
-            param4++;
-            param0[incrementValue$9] = param2;
+            param0[param4++] = param2;
             var11++;
             continue;
           }
@@ -1646,15 +1622,10 @@ class dm extends wh {
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         int var9;
         int var10;
         int var11;
@@ -1683,9 +1654,7 @@ class dm extends wh {
                   var11++;
                   continue;
                 }
-                incrementValue$1 = param4;
-                param4++;
-                param0[incrementValue$1] = param2;
+                param0[param4++] = param2;
                 var11++;
                 continue;
               }
@@ -1695,27 +1664,21 @@ class dm extends wh {
             if (param1[incrementValue$2] == 0) {
               param4++;
             } else {
-              incrementValue$3 = param4;
-              param4++;
-              param0[incrementValue$3] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$4 = param3;
             param3++;
             if (param1[incrementValue$4] == 0) {
               param4++;
             } else {
-              incrementValue$5 = param4;
-              param4++;
-              param0[incrementValue$5] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$6 = param3;
             param3++;
             if (param1[incrementValue$6] == 0) {
               param4++;
             } else {
-              incrementValue$7 = param4;
-              param4++;
-              param0[incrementValue$7] = param2;
+              param0[param4++] = param2;
             }
             incrementValue$8 = param3;
             param3++;
@@ -1724,9 +1687,7 @@ class dm extends wh {
               var11++;
               continue;
             }
-            incrementValue$9 = param4;
-            param4++;
-            param0[incrementValue$9] = param2;
+            param0[param4++] = param2;
             var11++;
             continue;
           }
@@ -1847,47 +1808,17 @@ class dm extends wh {
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                incrementValue$0 = param3;
-                param3++;
-                incrementValue$1 = param2;
-                param2++;
-                param0[incrementValue$0] = param1[incrementValue$1];
-                incrementValue$2 = param3;
-                param3++;
-                incrementValue$3 = param2;
-                param2++;
-                param0[incrementValue$2] = param1[incrementValue$3];
-                incrementValue$4 = param3;
-                param3++;
-                incrementValue$5 = param2;
-                param2++;
-                param0[incrementValue$4] = param1[incrementValue$5];
-                incrementValue$6 = param3;
-                param3++;
-                incrementValue$7 = param2;
-                param2++;
-                param0[incrementValue$6] = param1[incrementValue$7];
+                param0[param3++] = param1[param2++];
+                param0[param3++] = param1[param2++];
+                param0[param3++] = param1[param2++];
+                param0[param3++] = param1[param2++];
             }
             var9 += 3;
             while (param3 < var9) {
-                incrementValue$8 = param3;
-                param3++;
-                incrementValue$9 = param2;
-                param2++;
-                param0[incrementValue$8] = param1[incrementValue$9];
+                param0[param3++] = param1[param2++];
             }
             param3 = param3 + param6;
             param2 = param2 + param7;
@@ -1940,7 +1871,6 @@ class dm extends wh {
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         int var12;
         int var13;
@@ -1968,9 +1898,7 @@ class dm extends wh {
               continue;
             }
             if (param2 >> 8 != (param2 & 65535)) {
-              incrementValue$13 = param4;
-              param4++;
-              param0[incrementValue$13] = param2;
+              param0[param4++] = param2;
               param5++;
               continue;
             }
@@ -2524,16 +2452,13 @@ class dm extends wh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        int incrementValue$1 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
             var15 = (param4 >> 16) * param11;
             for (var16 = -param7; var16 < 0; var16++) {
                 param2 = param1[(param3 >> 16) + var15];
                 if (param2 != 0) {
-                    incrementValue$1 = param5;
-                    param5++;
-                    param0[incrementValue$1] = param12;
+                    param0[param5++] = param12;
                 } else {
                     param5++;
                 }
