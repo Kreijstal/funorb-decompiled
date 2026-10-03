@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,982 explicit guarded rules: 59 classes, 743 fields, 543 method
-declarations, 1,605 parameters and 3,032 locals. This is not full deobfuscation.
+There are 6,081 explicit guarded rules: 59 classes, 767 fields, 547 method
+declarations, 1,615 parameters and 3,093 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -2569,3 +2569,86 @@ unchanged. These controlled cases do not establish arbitrary malformed-input,
 optional gzip-header, deep Bzip2 state/control-flow or real-asset equivalence.
 Unknown static helpers and large labeled bodies remain unfinished; full
 gameplay and phone/FPS/heap behavior remain unverified.
+
+## Bzip2 block tables, move-to-front state and output runs (pass 75)
+
+Every `Bzip2Decoder` field, method, parameter and local now has a guarded name.
+Every `Bzip2DecoderState` instance field is named; its unrelated static
+validation/socket helpers remain unchanged. `kb.bzip2TransformTable` names
+the shared workspace. This pass adds 99 identities without restructuring the
+large labeled bodies or changing their evaluation/publication order.
+
+| Decoder routine | Role |
+| --- | --- |
+| `decodeBlocks(state)` | Parse block metadata, construct decoding tables, decode symbols, build inverse-transform links and emit each block |
+| `buildByteAlphabet(state)` | Map ascending used byte values to a dense alphabet |
+| `buildHuffmanTables(limits, bases, symbols, codeLengths, minimumLength, maximumLength, alphabetSize)` | Build canonical symbol order, length limits and code offsets |
+| `emitBlockRuns(state)` | Traverse inverse-transform links, expand runs and save state when the destination is full |
+
+`decodeBlocks` forces `blockSize100k` to 1 and allocates 100,000 ints only if
+the shared transform workspace is absent. It does not resize an existing
+workspace. A first byte of 23 returns immediately. Other marker/CRC bytes and
+the randomized bit are consumed without validation or randomized-block
+handling. The next three bytes form the 24-bit `originalPointer`.
+
+`usedByteGroups` and `usedBytes` describe the 16 group flags and 256 byte flags.
+`buildByteAlphabet` resets `alphabetSize` and fills `alphabetBytes` in byte-value
+order. `selectorMoveToFrontValues` holds unary selector ranks;
+`huffmanSelectors` holds the table IDs after move-to-front decoding. The six
+table rows use `huffmanCodeLengths`, `huffmanLimits`, `huffmanBases`,
+`huffmanSymbols` and `minimumCodeLengths`. Each selector supplies 50 symbols.
+
+Canonical table construction orders symbols by length, then symbol index. It
+counts lengths, forms prefix counts, builds each length's maximum code and
+adjusts bases for symbol lookup. Original signed byte lengths, 23-slot setup
+loops, integer shifts and unchecked malformed-input behavior remain.
+
+The byte move-to-front list uses `moveToFrontBytes`, a 4,096-byte workspace,
+and sixteen `moveToFrontBlockStarts`. Ordinary symbols move the selected byte
+to the front; small ranks use the original unrolled shifts, and larger ranks
+move across sixteen chunks. Exhausting the first chunk rebuilds their layout.
+RUNA/RUNB symbols accumulate weighted repeats of the front byte. Decoded bytes
+populate the low byte of `bzip2TransformTable`; `byteFrequencies` counts them.
+`blockLength` is this last-column length, before the output run expansion.
+
+`byteBucketPositions` first holds frequency prefix sums, then scatter cursors.
+The decoder adds source-row links in the upper bits of the transform table.
+`transformPositionOrEntry` deliberately names a reused slot: it can hold a
+packed table entry before shifting right by eight to obtain the next position.
+Other reused locals retain both selector and byte-list roles rather than
+pretending the original variable had a single lifetime.
+
+`emitBlockRuns` snapshots the shared table and follows its links. Literal bytes
+retain signed byte conversion; after four equal bytes the run-count byte is
+treated as unsigned and adds four. `pendingRunByte`, `pendingRunLength`,
+`currentByte` and `blockBytesConsumed` describe the retained output state.
+The block-end target is `blockLength + 1`. Partial exits publish the original
+table alias, output cursor/allowance and pending run state at their existing
+points; duplicated publication tails and empty overflow checks remain.
+Another block is decoded only when all block bytes are consumed and no run
+remains. The integer `continueDecodingBlocks` keeps its original 0/1 form.
+
+The new 40-case fixture uses six fixed stripped Bzh1 streams: empty data, mixed
+runs followed by all byte values, repeated byte alphabets, deterministic
+pseudorandom bytes, a long single-byte run and a 120,064-byte two-block stream.
+Thirty-four destination cases check zero, short, exact and oversized buffers,
+with independent prefix/count/tail assertions. Inputs stay unchanged and
+successful calls clear the assigned input/output references.
+
+Three malformed cases use an empty input, a negative offset and null input.
+Their unchecked exceptions release the state monitor while retaining the
+assigned arrays and unchanged destination. Each is followed by a successful
+recovery call that produces the expected bytes and clears those references.
+All forty native/raw/readable traces match
+`f237b1b6fd8e69c006fa43ec005f742ae5909d107d0ba5ec4574f2c804ad3ba9`.
+Fixed compressed vectors live in the existing probe, with no runtime Python
+dependency or additional report JSON.
+
+All 5,982 prior complete rules and raw source/generator pins remain unchanged.
+The export compiles, preserves 138,558 bindings and 388 overrides, reproduces
+byte-for-byte and reverses to the raw source bytes. Eight previous native
+traces remain unchanged. These fixtures do not establish arbitrary corrupt or
+randomized-stream handling, shared-state concurrency, live asset compatibility
+or whole-game/device behavior. Remaining large labeled bodies and opaque
+static helpers still need work; the memory, startup and FPS targets remain
+unverified.

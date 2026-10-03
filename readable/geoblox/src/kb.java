@@ -5,7 +5,7 @@ final class kb {
     static int spawnReleaseIntervalTicks;
     static int field_b;
     static int field_d;
-    static int[] field_a;
+    static int[] bzip2TransformTable;
 
     final static void a(int param0, int param1, String[] param2, String param3) {
         RuntimeException var4 = null;
@@ -117,10 +117,10 @@ final class kb {
     public static void c(int param0) {
         if (param0 != 105) {
             spawnReleaseIntervalTicks = 71;
-            field_a = null;
+            bzip2TransformTable = null;
             return;
         }
-        field_a = null;
+        bzip2TransformTable = null;
     }
 
     static {

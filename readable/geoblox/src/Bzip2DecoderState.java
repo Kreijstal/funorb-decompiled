@@ -3,38 +3,38 @@
  */
 final class Bzip2DecoderState {
     static boolean avatarShockContactPending;
-    int field_q;
+    int blockLength;
     int outputBytesWritten;
-    byte[] field_e;
-    byte field_h;
-    byte[] field_r;
+    byte[] moveToFrontBytes;
+    byte pendingRunByte;
+    byte[] huffmanSelectors;
     int outputPosition;
     int inputPosition;
-    int[][] field_E;
-    int[][] field_f;
+    int[][] huffmanLimits;
+    int[][] huffmanBases;
     byte[] inputBytes;
     int inputBytesRead;
-    boolean[] field_b;
+    boolean[] usedByteGroups;
     byte[] outputBytes;
     int bufferedBitCount;
-    int field_k;
-    int[][] field_l;
-    byte[] field_x;
-    int[] field_m;
-    int[] field_y;
-    byte[][] field_v;
-    int field_d;
-    int field_o;
-    int field_D;
-    int[] field_w;
-    int field_a;
+    int pendingRunLength;
+    int[][] huffmanSymbols;
+    byte[] alphabetBytes;
+    int[] byteFrequencies;
+    int[] moveToFrontBlockStarts;
+    byte[][] huffmanCodeLengths;
+    int originalPointer;
+    int blockSize100k;
+    int transformPositionOrEntry;
+    int[] minimumCodeLengths;
+    int alphabetSize;
     int remainingOutputBytes;
     int bitBuffer;
-    int[] field_F;
-    boolean[] field_n;
-    int field_c;
-    int field_G;
-    byte[] field_z;
+    int[] byteBucketPositions;
+    boolean[] usedBytes;
+    int currentByte;
+    int blockBytesConsumed;
+    byte[] selectorMoveToFrontValues;
 
     final static boolean a(ByteArrayBuffer param0, int param1) {
         int var2_int = 0;
@@ -87,20 +87,20 @@ final class Bzip2DecoderState {
     Bzip2DecoderState() {
         this.outputPosition = 0;
         this.inputPosition = 0;
-        this.field_E = new int[6][258];
-        this.field_r = new byte[18002];
-        this.field_b = new boolean[16];
-        this.field_x = new byte[256];
-        this.field_y = new int[16];
-        this.field_l = new int[6][258];
-        this.field_m = new int[256];
-        this.field_w = new int[6];
-        this.field_f = new int[6][258];
-        this.field_F = new int[257];
-        this.field_e = new byte[4096];
-        this.field_z = new byte[18002];
-        this.field_v = new byte[6][258];
-        this.field_n = new boolean[256];
+        this.huffmanLimits = new int[6][258];
+        this.huffmanSelectors = new byte[18002];
+        this.usedByteGroups = new boolean[16];
+        this.alphabetBytes = new byte[256];
+        this.moveToFrontBlockStarts = new int[16];
+        this.huffmanSymbols = new int[6][258];
+        this.byteFrequencies = new int[256];
+        this.minimumCodeLengths = new int[6];
+        this.huffmanBases = new int[6][258];
+        this.byteBucketPositions = new int[257];
+        this.moveToFrontBytes = new byte[4096];
+        this.selectorMoveToFrontValues = new byte[18002];
+        this.huffmanCodeLengths = new byte[6][258];
+        this.usedBytes = new boolean[256];
     }
 
     static {

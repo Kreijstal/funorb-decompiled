@@ -8,394 +8,394 @@ final class Bzip2Decoder {
         return (byte)Bzip2Decoder.readBits(8, state);
     }
 
-    private final static void e(Bzip2DecoderState param0) {
-        int dupTemp$1 = 0;
-        int dupTemp$0 = 0;
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        Object var23;
-        Object var24;
-        Object var25;
-        int var26;
-        byte[] var27_ref_byte__;
-        int var27;
-        int var28;
-        int var29;
-        int var30;
-        int var31;
-        int var32;
-        int var33;
-        int var34;
-        int var35;
-        byte[] var36;
-        byte[] var37;
-        var4 = 0;
-        var5 = 0;
-        var6 = 0;
-        var7 = 0;
-        var8 = 0;
-        var9 = 0;
-        var10 = 0;
-        var11 = 0;
-        var12 = 0;
-        var13 = 0;
-        var14 = 0;
-        var15 = 0;
-        var16 = 0;
-        var17 = 0;
-        var18 = 0;
-        var19 = 0;
-        var20 = 0;
-        var21 = 0;
-        var22 = 0;
-        var23 = null;
-        var24 = null;
-        var25 = null;
-        param0.field_o = 1;
-        if (kb.field_a == null) {
-          kb.field_a = new int[param0.field_o * 100000];
+    private final static void decodeBlocks(Bzip2DecoderState state) {
+        int transformBucketPosition = 0;
+        int frequencyByteValue = 0;
+        int byteOrBitValue;
+        int minimumCodeLength;
+        int maximumCodeLength;
+        int index;
+        int byteInGroupOrSelectorRank;
+        int huffmanTableIndex;
+        int huffmanAlphabetSize;
+        int huffmanTableCount;
+        int selectorCount;
+        int endOfBlockSymbol;
+        int selectorIndex;
+        int symbolsRemainingInGroup;
+        int symbol;
+        int blockLength;
+        int runLength;
+        int runWeight;
+        int codeLength;
+        int currentCodeLength;
+        int codeBits;
+        int nextCodeBit;
+        int selectedTableIndex;
+        int selectedMinimumCodeLength;
+        Object selectedLimits;
+        Object selectedBases;
+        Object selectedSymbols;
+        int continueDecodingBlocks;
+        byte[] selectorOrderAlias;
+        int mtfBlockIndex;
+        int selectorTableOrMtfByteIndex;
+        int selectorRankOrMtfWritePosition;
+        int mtfPosition;
+        int mtfBlockIndexForMove;
+        int mtfOffsetInBlock;
+        int mtfRank;
+        int mtfShiftPosition;
+        int mtfCursor;
+        byte[] selectorOrder;
+        byte[] allocatedSelectorOrder;
+        index = 0;
+        byteInGroupOrSelectorRank = 0;
+        huffmanTableIndex = 0;
+        huffmanAlphabetSize = 0;
+        huffmanTableCount = 0;
+        selectorCount = 0;
+        endOfBlockSymbol = 0;
+        selectorIndex = 0;
+        symbolsRemainingInGroup = 0;
+        symbol = 0;
+        blockLength = 0;
+        runLength = 0;
+        runWeight = 0;
+        codeLength = 0;
+        currentCodeLength = 0;
+        codeBits = 0;
+        nextCodeBit = 0;
+        selectedTableIndex = 0;
+        selectedMinimumCodeLength = 0;
+        selectedLimits = null;
+        selectedBases = null;
+        selectedSymbols = null;
+        state.blockSize100k = 1;
+        if (kb.bzip2TransformTable == null) {
+          kb.bzip2TransformTable = new int[state.blockSize100k * 100000];
         }
-        var26 = 1;
+        continueDecodingBlocks = 1;
         L1: while (true) {
-          if (var26 == 0) {
+          if (continueDecodingBlocks == 0) {
             return;
           }
           {
-            var1 = Bzip2Decoder.readByte(param0);
-            if (var1 == 23) {
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            if (byteOrBitValue == 23) {
               return;
             }
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readByte(param0);
-            var1 = Bzip2Decoder.readBit(param0);
-            if (var1 == 0) {
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            byteOrBitValue = Bzip2Decoder.readBit(state);
+            if (byteOrBitValue == 0) {
             }
-            param0.field_d = 0;
-            var1 = Bzip2Decoder.readByte(param0);
-            param0.field_d = param0.field_d << 8 | var1 & 255;
-            var1 = Bzip2Decoder.readByte(param0);
-            param0.field_d = param0.field_d << 8 | var1 & 255;
-            var1 = Bzip2Decoder.readByte(param0);
-            param0.field_d = param0.field_d << 8 | var1 & 255;
-            L3: for (var4 = 0; var4 < 16; var4++) {
-              var1 = Bzip2Decoder.readBit(param0);
-              if (var1 != 1) {
-                param0.field_b[var4] = false;
+            state.originalPointer = 0;
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
+            byteOrBitValue = Bzip2Decoder.readByte(state);
+            state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
+            L3: for (index = 0; index < 16; index++) {
+              byteOrBitValue = Bzip2Decoder.readBit(state);
+              if (byteOrBitValue != 1) {
+                state.usedByteGroups[index] = false;
                 continue L3;
               }
-              param0.field_b[var4] = true;
+              state.usedByteGroups[index] = true;
             }
-            for (var4 = 0; var4 < 256; var4++) {
-              param0.field_n[var4] = false;
+            for (index = 0; index < 256; index++) {
+              state.usedBytes[index] = false;
             }
-            L5: for (var4 = 0; var4 < 16; var4++) {
-              if (!param0.field_b[var4]) {
+            L5: for (index = 0; index < 16; index++) {
+              if (!state.usedByteGroups[index]) {
                 continue L5;
               }
-              L42: for (var5 = 0; var5 < 16; var5++) {
-                var1 = Bzip2Decoder.readBit(param0);
-                if (var1 != 1) {
+              L42: for (byteInGroupOrSelectorRank = 0; byteInGroupOrSelectorRank < 16; byteInGroupOrSelectorRank++) {
+                byteOrBitValue = Bzip2Decoder.readBit(state);
+                if (byteOrBitValue != 1) {
                   continue L42;
                 }
-                param0.field_n[var4 * 16 + var5] = true;
+                state.usedBytes[index * 16 + byteInGroupOrSelectorRank] = true;
               }
             }
-            Bzip2Decoder.c(param0);
-            var7 = param0.field_a + 2;
-            var8 = Bzip2Decoder.readBits(3, param0);
-            var9 = Bzip2Decoder.readBits(15, param0);
-            var4 = 0;
+            Bzip2Decoder.buildByteAlphabet(state);
+            huffmanAlphabetSize = state.alphabetSize + 2;
+            huffmanTableCount = Bzip2Decoder.readBits(3, state);
+            selectorCount = Bzip2Decoder.readBits(15, state);
+            index = 0;
             L6: while (true) {
-              if (var4 < var9) {
-                var5 = 0;
+              if (index < selectorCount) {
+                byteInGroupOrSelectorRank = 0;
                 L41: while (true) {
-                  var1 = Bzip2Decoder.readBit(param0);
-                  if (var1 != 0) {
-                    var5++;
+                  byteOrBitValue = Bzip2Decoder.readBit(state);
+                  if (byteOrBitValue != 0) {
+                    byteInGroupOrSelectorRank++;
                     continue L41;
                   }
-                  param0.field_z[var4] = (byte)var5;
-                  var4++;
+                  state.selectorMoveToFrontValues[index] = (byte)byteInGroupOrSelectorRank;
+                  index++;
                   continue L6;
                 }
               }
               {
-                var37 = new byte[6];
-                var36 = var37;
-                var27_ref_byte__ = var36;
-                var29 = 0;
-                L7: while (var29 < var8) {
-                  var27_ref_byte__[var29] = (byte)var29;
-                  var29 = (byte)(var29 + 1);
+                allocatedSelectorOrder = new byte[6];
+                selectorOrder = allocatedSelectorOrder;
+                selectorOrderAlias = selectorOrder;
+                selectorRankOrMtfWritePosition = 0;
+                L7: while (selectorRankOrMtfWritePosition < huffmanTableCount) {
+                  selectorOrderAlias[selectorRankOrMtfWritePosition] = (byte)selectorRankOrMtfWritePosition;
+                  selectorRankOrMtfWritePosition = (byte)(selectorRankOrMtfWritePosition + 1);
                 }
-                for (var4 = 0; var4 < var9; var4++) {
-                  var29 = param0.field_z[var4];
-                  var28 = var37[var29];
-                  L40: while (var29 > 0) {
-                    var27_ref_byte__[var29] = var27_ref_byte__[var29 - 1];
-                    var29 = (byte)(var29 - 1);
+                for (index = 0; index < selectorCount; index++) {
+                  selectorRankOrMtfWritePosition = state.selectorMoveToFrontValues[index];
+                  selectorTableOrMtfByteIndex = allocatedSelectorOrder[selectorRankOrMtfWritePosition];
+                  L40: while (selectorRankOrMtfWritePosition > 0) {
+                    selectorOrderAlias[selectorRankOrMtfWritePosition] = selectorOrderAlias[selectorRankOrMtfWritePosition - 1];
+                    selectorRankOrMtfWritePosition = (byte)(selectorRankOrMtfWritePosition - 1);
                   }
-                  var27_ref_byte__[0] = (byte)var28;
-                  param0.field_r[var4] = (byte)var28;
+                  selectorOrderAlias[0] = (byte)selectorTableOrMtfByteIndex;
+                  state.huffmanSelectors[index] = (byte)selectorTableOrMtfByteIndex;
                 }
-                var6 = 0;
+                huffmanTableIndex = 0;
                 L9: while (true) {
-                  if (var6 < var8) {
-                    var17 = Bzip2Decoder.readBits(5, param0);
-                    var4 = 0;
+                  if (huffmanTableIndex < huffmanTableCount) {
+                    codeLength = Bzip2Decoder.readBits(5, state);
+                    index = 0;
                     L38: while (true) {
-                      if (var4 >= var7) {
-                        var6++;
+                      if (index >= huffmanAlphabetSize) {
+                        huffmanTableIndex++;
                         continue L9;
                       }
                       L39: while (true) {
-                        var1 = Bzip2Decoder.readBit(param0);
-                        if (var1 == 0) {
-                          param0.field_v[var6][var4] = (byte)var17;
-                          var4++;
+                        byteOrBitValue = Bzip2Decoder.readBit(state);
+                        if (byteOrBitValue == 0) {
+                          state.huffmanCodeLengths[huffmanTableIndex][index] = (byte)codeLength;
+                          index++;
                           continue L38;
                         }
-                        var1 = Bzip2Decoder.readBit(param0);
-                        if (var1 != 0) {
-                          var17--;
+                        byteOrBitValue = Bzip2Decoder.readBit(state);
+                        if (byteOrBitValue != 0) {
+                          codeLength--;
                           continue L39;
                         }
-                        var17++;
+                        codeLength++;
                         continue L39;
                       }
                     }
                   }
                   {
-                    for (var6 = 0; var6 < var8; var6++) {
-                      var2 = 32;
-                      var3 = 0;
-                      L36: for (var4 = 0; var4 < var7; var4++) {
-                        if (param0.field_v[var6][var4] > var3) {
-                          var3 = param0.field_v[var6][var4];
+                    for (huffmanTableIndex = 0; huffmanTableIndex < huffmanTableCount; huffmanTableIndex++) {
+                      minimumCodeLength = 32;
+                      maximumCodeLength = 0;
+                      L36: for (index = 0; index < huffmanAlphabetSize; index++) {
+                        if (state.huffmanCodeLengths[huffmanTableIndex][index] > maximumCodeLength) {
+                          maximumCodeLength = state.huffmanCodeLengths[huffmanTableIndex][index];
                         }
-                        if (param0.field_v[var6][var4] >= var2) {
+                        if (state.huffmanCodeLengths[huffmanTableIndex][index] >= minimumCodeLength) {
                           continue L36;
                         }
-                        var2 = param0.field_v[var6][var4];
+                        minimumCodeLength = state.huffmanCodeLengths[huffmanTableIndex][index];
                       }
-                      Bzip2Decoder.a(param0.field_E[var6], param0.field_f[var6], param0.field_l[var6], param0.field_v[var6], var2, var3, var7);
-                      param0.field_w[var6] = var2;
+                      Bzip2Decoder.buildHuffmanTables(state.huffmanLimits[huffmanTableIndex], state.huffmanBases[huffmanTableIndex], state.huffmanSymbols[huffmanTableIndex], state.huffmanCodeLengths[huffmanTableIndex], minimumCodeLength, maximumCodeLength, huffmanAlphabetSize);
+                      state.minimumCodeLengths[huffmanTableIndex] = minimumCodeLength;
                     }
-                    var10 = param0.field_a + 1;
-                    var11 = -1;
-                    var12 = 0;
-                    for (var4 = 0; var4 <= 255; var4++) {
-                      param0.field_m[var4] = 0;
+                    endOfBlockSymbol = state.alphabetSize + 1;
+                    selectorIndex = -1;
+                    symbolsRemainingInGroup = 0;
+                    for (index = 0; index <= 255; index++) {
+                      state.byteFrequencies[index] = 0;
                     }
-                    var29 = 4095;
-                    for (var27 = 15; var27 >= 0; var27--) {
-                      for (var28 = 15; var28 >= 0; var28--) {
-                        param0.field_e[var29] = (byte)(var27 * 16 + var28);
-                        var29--;
+                    selectorRankOrMtfWritePosition = 4095;
+                    for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
+                      for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
+                        state.moveToFrontBytes[selectorRankOrMtfWritePosition] = (byte)(mtfBlockIndex * 16 + selectorTableOrMtfByteIndex);
+                        selectorRankOrMtfWritePosition--;
                       }
-                      param0.field_y[var27] = var29 + 1;
+                      state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
                     }
-                    var14 = 0;
-                    if (var12 == 0) {
-                      var11++;
-                      var12 = 50;
-                      var21 = param0.field_r[var11];
-                      var22 = param0.field_w[var21];
-                      var23 = param0.field_E[var21];
-                      var25 = param0.field_l[var21];
-                      var24 = param0.field_f[var21];
+                    blockLength = 0;
+                    if (symbolsRemainingInGroup == 0) {
+                      selectorIndex++;
+                      symbolsRemainingInGroup = 50;
+                      selectedTableIndex = state.huffmanSelectors[selectorIndex];
+                      selectedMinimumCodeLength = state.minimumCodeLengths[selectedTableIndex];
+                      selectedLimits = state.huffmanLimits[selectedTableIndex];
+                      selectedSymbols = state.huffmanSymbols[selectedTableIndex];
+                      selectedBases = state.huffmanBases[selectedTableIndex];
                     }
-                    var12--;
-                    var18 = var22;
-                    var19 = Bzip2Decoder.readBits(var18, param0);
-                    L14: while (var19 > ((int[]) (var23))[var18]) {
-                      var18++;
-                      var20 = Bzip2Decoder.readBit(param0);
-                      var19 = var19 << 1 | var20;
+                    symbolsRemainingInGroup--;
+                    currentCodeLength = selectedMinimumCodeLength;
+                    codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
+                    L14: while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
+                      currentCodeLength++;
+                      nextCodeBit = Bzip2Decoder.readBit(state);
+                      codeBits = codeBits << 1 | nextCodeBit;
                     }
-                    var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
+                    symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
                     L15: while (true) {
-                      if (var13 == var10) {
-                        param0.field_k = 0;
-                        param0.field_h = (byte) 0;
-                        param0.field_F[0] = 0;
-                        for (var4 = 1; var4 <= 256; var4++) {
-                          param0.field_F[var4] = param0.field_m[var4 - 1];
+                      if (symbol == endOfBlockSymbol) {
+                        state.pendingRunLength = 0;
+                        state.pendingRunByte = (byte) 0;
+                        state.byteBucketPositions[0] = 0;
+                        for (index = 1; index <= 256; index++) {
+                          state.byteBucketPositions[index] = state.byteFrequencies[index - 1];
                         }
-                        for (var4 = 1; var4 <= 256; var4++) {
-                          param0.field_F[var4] = param0.field_F[var4] + param0.field_F[var4 - 1];
+                        for (index = 1; index <= 256; index++) {
+                          state.byteBucketPositions[index] = state.byteBucketPositions[index] + state.byteBucketPositions[index - 1];
                         }
-                        for (var4 = 0; var4 < var14; var4++) {
-                          var1 = (byte)(kb.field_a[var4] & 255);
-                          dupTemp$1 = param0.field_F[var1 & 255];
-                          kb.field_a[dupTemp$1] = kb.field_a[dupTemp$1] | var4 << 8;
-                          param0.field_F[var1 & 255] = param0.field_F[var1 & 255] + 1;
+                        for (index = 0; index < blockLength; index++) {
+                          byteOrBitValue = (byte)(kb.bzip2TransformTable[index] & 255);
+                          transformBucketPosition = state.byteBucketPositions[byteOrBitValue & 255];
+                          kb.bzip2TransformTable[transformBucketPosition] = kb.bzip2TransformTable[transformBucketPosition] | index << 8;
+                          state.byteBucketPositions[byteOrBitValue & 255] = state.byteBucketPositions[byteOrBitValue & 255] + 1;
                         }
-                        param0.field_D = kb.field_a[param0.field_d] >> 8;
-                        param0.field_G = 0;
-                        param0.field_D = kb.field_a[param0.field_D];
-                        param0.field_c = (byte)(param0.field_D & 255);
-                        param0.field_D = param0.field_D >> 8;
-                        param0.field_G = param0.field_G + 1;
-                        param0.field_q = var14;
-                        Bzip2Decoder.d(param0);
-                        if (param0.field_G == param0.field_q + 1) {
-                          if (param0.field_k == 0) {
-                            var26 = 1;
+                        state.transformPositionOrEntry = kb.bzip2TransformTable[state.originalPointer] >> 8;
+                        state.blockBytesConsumed = 0;
+                        state.transformPositionOrEntry = kb.bzip2TransformTable[state.transformPositionOrEntry];
+                        state.currentByte = (byte)(state.transformPositionOrEntry & 255);
+                        state.transformPositionOrEntry = state.transformPositionOrEntry >> 8;
+                        state.blockBytesConsumed = state.blockBytesConsumed + 1;
+                        state.blockLength = blockLength;
+                        Bzip2Decoder.emitBlockRuns(state);
+                        if (state.blockBytesConsumed == state.blockLength + 1) {
+                          if (state.pendingRunLength == 0) {
+                            continueDecodingBlocks = 1;
                             continue L1;
                           }
                         }
-                        var26 = 0;
+                        continueDecodingBlocks = 0;
                         continue L1;
                       }
-                      if (var13 != 0) {
-                        if (var13 != 1) {
+                      if (symbol != 0) {
+                        if (symbol != 1) {
                           L17: {
-                            var33 = var13 - 1;
-                            if (var33 < 16) {
-                              var30 = param0.field_y[0];
-                              var1 = param0.field_e[var30 + var33];
-                              L22: while (var33 > 3) {
-                                var34 = var30 + var33;
-                                param0.field_e[var34] = param0.field_e[var34 - 1];
-                                param0.field_e[var34 - 1] = param0.field_e[var34 - 2];
-                                param0.field_e[var34 - 2] = param0.field_e[var34 - 3];
-                                param0.field_e[var34 - 3] = param0.field_e[var34 - 4];
-                                var33 -= 4;
+                            mtfRank = symbol - 1;
+                            if (mtfRank < 16) {
+                              mtfPosition = state.moveToFrontBlockStarts[0];
+                              byteOrBitValue = state.moveToFrontBytes[mtfPosition + mtfRank];
+                              L22: while (mtfRank > 3) {
+                                mtfShiftPosition = mtfPosition + mtfRank;
+                                state.moveToFrontBytes[mtfShiftPosition] = state.moveToFrontBytes[mtfShiftPosition - 1];
+                                state.moveToFrontBytes[mtfShiftPosition - 1] = state.moveToFrontBytes[mtfShiftPosition - 2];
+                                state.moveToFrontBytes[mtfShiftPosition - 2] = state.moveToFrontBytes[mtfShiftPosition - 3];
+                                state.moveToFrontBytes[mtfShiftPosition - 3] = state.moveToFrontBytes[mtfShiftPosition - 4];
+                                mtfRank -= 4;
                               }
-                              L23: while (var33 > 0) {
-                                param0.field_e[var30 + var33] = param0.field_e[var30 + var33 - 1];
-                                var33--;
+                              L23: while (mtfRank > 0) {
+                                state.moveToFrontBytes[mtfPosition + mtfRank] = state.moveToFrontBytes[mtfPosition + mtfRank - 1];
+                                mtfRank--;
                               }
-                              param0.field_e[var30] = (byte)var1;
+                              state.moveToFrontBytes[mtfPosition] = (byte)byteOrBitValue;
                               break L17;
                             }
                             {
-                              var31 = var33 / 16;
-                              var32 = var33 % 16;
-                              var35 = param0.field_y[var31] + var32;
-                              var30 = var35;
-                              var1 = param0.field_e[var35];
-                              L18: while (var35 > param0.field_y[var31]) {
-                                param0.field_e[var35] = param0.field_e[var35 - 1];
-                                var35--;
+                              mtfBlockIndexForMove = mtfRank / 16;
+                              mtfOffsetInBlock = mtfRank % 16;
+                              mtfCursor = state.moveToFrontBlockStarts[mtfBlockIndexForMove] + mtfOffsetInBlock;
+                              mtfPosition = mtfCursor;
+                              byteOrBitValue = state.moveToFrontBytes[mtfCursor];
+                              L18: while (mtfCursor > state.moveToFrontBlockStarts[mtfBlockIndexForMove]) {
+                                state.moveToFrontBytes[mtfCursor] = state.moveToFrontBytes[mtfCursor - 1];
+                                mtfCursor--;
                               }
-                              param0.field_y[var31] = param0.field_y[var31] + 1;
-                              L19: while (var31 > 0) {
-                                param0.field_y[var31] = param0.field_y[var31] - 1;
-                                param0.field_e[param0.field_y[var31]] = param0.field_e[param0.field_y[var31 - 1] + 16 - 1];
-                                var31--;
+                              state.moveToFrontBlockStarts[mtfBlockIndexForMove] = state.moveToFrontBlockStarts[mtfBlockIndexForMove] + 1;
+                              L19: while (mtfBlockIndexForMove > 0) {
+                                state.moveToFrontBlockStarts[mtfBlockIndexForMove] = state.moveToFrontBlockStarts[mtfBlockIndexForMove] - 1;
+                                state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndexForMove]] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndexForMove - 1] + 16 - 1];
+                                mtfBlockIndexForMove--;
                               }
-                              param0.field_y[0] = param0.field_y[0] - 1;
-                              param0.field_e[param0.field_y[0]] = (byte)var1;
-                              if (param0.field_y[0] != 0) {
+                              state.moveToFrontBlockStarts[0] = state.moveToFrontBlockStarts[0] - 1;
+                              state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] = (byte)byteOrBitValue;
+                              if (state.moveToFrontBlockStarts[0] != 0) {
                                 break L17;
                               }
-                              var29 = 4095;
-                              for (var27 = 15; var27 >= 0; var27--) {
-                                for (var28 = 15; var28 >= 0; var28--) {
-                                  param0.field_e[var29] = param0.field_e[param0.field_y[var27] + var28];
-                                  var29--;
+                              selectorRankOrMtfWritePosition = 4095;
+                              for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
+                                for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
+                                  state.moveToFrontBytes[selectorRankOrMtfWritePosition] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndex] + selectorTableOrMtfByteIndex];
+                                  selectorRankOrMtfWritePosition--;
                                 }
-                                param0.field_y[var27] = var29 + 1;
+                                state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
                               }
                               break L17;
                             }
                           }
-                          dupTemp$0 = param0.field_x[var1 & 255] & 255;
-                          param0.field_m[dupTemp$0] = param0.field_m[dupTemp$0] + 1;
-                          kb.field_a[var14] = param0.field_x[var1 & 255] & 255;
-                          var14++;
-                          if (var12 == 0) {
-                            var11++;
-                            var12 = 50;
-                            var21 = param0.field_r[var11];
-                            var22 = param0.field_w[var21];
-                            var23 = param0.field_E[var21];
-                            var25 = param0.field_l[var21];
-                            var24 = param0.field_f[var21];
+                          frequencyByteValue = state.alphabetBytes[byteOrBitValue & 255] & 255;
+                          state.byteFrequencies[frequencyByteValue] = state.byteFrequencies[frequencyByteValue] + 1;
+                          kb.bzip2TransformTable[blockLength] = state.alphabetBytes[byteOrBitValue & 255] & 255;
+                          blockLength++;
+                          if (symbolsRemainingInGroup == 0) {
+                            selectorIndex++;
+                            symbolsRemainingInGroup = 50;
+                            selectedTableIndex = state.huffmanSelectors[selectorIndex];
+                            selectedMinimumCodeLength = state.minimumCodeLengths[selectedTableIndex];
+                            selectedLimits = state.huffmanLimits[selectedTableIndex];
+                            selectedSymbols = state.huffmanSymbols[selectedTableIndex];
+                            selectedBases = state.huffmanBases[selectedTableIndex];
                           }
-                          var12--;
-                          var18 = var22;
-                          var19 = Bzip2Decoder.readBits(var18, param0);
-                          L25: while (var19 > ((int[]) (var23))[var18]) {
-                            var18++;
-                            var20 = Bzip2Decoder.readBit(param0);
-                            var19 = var19 << 1 | var20;
+                          symbolsRemainingInGroup--;
+                          currentCodeLength = selectedMinimumCodeLength;
+                          codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
+                          L25: while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
+                            currentCodeLength++;
+                            nextCodeBit = Bzip2Decoder.readBit(state);
+                            codeBits = codeBits << 1 | nextCodeBit;
                           }
-                          var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
+                          symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
                           continue L15;
                         }
                       }
-                      var15 = -1;
-                      var16 = 1;
+                      runLength = -1;
+                      runWeight = 1;
                       L26: while (true) {
-                        if (var13 != 0) {
-                          if (var13 == 1) {
-                            var15 = var15 + 2 * var16;
+                        if (symbol != 0) {
+                          if (symbol == 1) {
+                            runLength = runLength + 2 * runWeight;
                           }
                         } else {
-                          var15 = var15 + 1 * var16;
+                          runLength = runLength + 1 * runWeight;
                         }
-                        var16 = var16 * 2;
-                        if (var12 == 0) {
-                          var11++;
-                          var12 = 50;
-                          var21 = param0.field_r[var11];
-                          var22 = param0.field_w[var21];
-                          var23 = param0.field_E[var21];
-                          var25 = param0.field_l[var21];
-                          var24 = param0.field_f[var21];
+                        runWeight = runWeight * 2;
+                        if (symbolsRemainingInGroup == 0) {
+                          selectorIndex++;
+                          symbolsRemainingInGroup = 50;
+                          selectedTableIndex = state.huffmanSelectors[selectorIndex];
+                          selectedMinimumCodeLength = state.minimumCodeLengths[selectedTableIndex];
+                          selectedLimits = state.huffmanLimits[selectedTableIndex];
+                          selectedSymbols = state.huffmanSymbols[selectedTableIndex];
+                          selectedBases = state.huffmanBases[selectedTableIndex];
                         }
-                        var12--;
-                        var18 = var22;
-                        var19 = Bzip2Decoder.readBits(var18, param0);
-                        L29: while (var19 > ((int[]) (var23))[var18]) {
-                          var18++;
-                          var20 = Bzip2Decoder.readBit(param0);
-                          var19 = var19 << 1 | var20;
+                        symbolsRemainingInGroup--;
+                        currentCodeLength = selectedMinimumCodeLength;
+                        codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
+                        L29: while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
+                          currentCodeLength++;
+                          nextCodeBit = Bzip2Decoder.readBit(state);
+                          codeBits = codeBits << 1 | nextCodeBit;
                         }
-                        var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-                        if (var13 == 0) {
+                        symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
+                        if (symbol == 0) {
                           continue L26;
                         }
-                        if (var13 == 1) {
+                        if (symbol == 1) {
                           continue L26;
                         }
-                        var15++;
-                        var1 = param0.field_x[param0.field_e[param0.field_y[0]] & 255];
-                        param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;
-                        L30: while (var15 > 0) {
-                          kb.field_a[var14] = var1 & 255;
-                          var14++;
-                          var15--;
+                        runLength++;
+                        byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
+                        state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;
+                        L30: while (runLength > 0) {
+                          kb.bzip2TransformTable[blockLength] = byteOrBitValue & 255;
+                          blockLength++;
+                          runLength--;
                         }
                         continue L15;
                       }
@@ -408,43 +408,43 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
-        int var9 = 0;
-        int dupTemp$0 = 0;
-        int var7;
-        int var8;
-        int var10;
-        var7 = 0;
-        for (var8 = param4; var8 <= param5; var8++) {
-          L7: for (var9 = 0; var9 < param6; var9++) {
-            if (param3[var9] != var8) {
+    private final static void buildHuffmanTables(int[] limits, int[] bases, int[] symbols, byte[] codeLengths, int minimumLength, int maximumLength, int alphabetSize) {
+        int symbolIndex = 0;
+        int lengthBucketIndex = 0;
+        int symbolWritePosition;
+        int tableIndexOrCodeLength;
+        int nextCode;
+        symbolWritePosition = 0;
+        for (tableIndexOrCodeLength = minimumLength; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
+          L7: for (symbolIndex = 0; symbolIndex < alphabetSize; symbolIndex++) {
+            if (codeLengths[symbolIndex] != tableIndexOrCodeLength) {
               continue L7;
             }
-            param2[var7] = var9;
-            var7++;
+            symbols[symbolWritePosition] = symbolIndex;
+            symbolWritePosition++;
           }
         }
-        for (var8 = 0; var8 < 23; var8++) {
-          param1[var8] = 0;
+        for (tableIndexOrCodeLength = 0; tableIndexOrCodeLength < 23; tableIndexOrCodeLength++) {
+          bases[tableIndexOrCodeLength] = 0;
         }
-        for (var8 = 0; var8 < param6; var8++) {
-          dupTemp$0 = param3[var8] + 1;
-          param1[dupTemp$0] = param1[dupTemp$0] + 1;
+        for (tableIndexOrCodeLength = 0; tableIndexOrCodeLength < alphabetSize; tableIndexOrCodeLength++) {
+          lengthBucketIndex = codeLengths[tableIndexOrCodeLength] + 1;
+          bases[lengthBucketIndex] = bases[lengthBucketIndex] + 1;
         }
-        for (var8 = 1; var8 < 23; var8++) {
-          param1[var8] = param1[var8] + param1[var8 - 1];
+        for (tableIndexOrCodeLength = 1; tableIndexOrCodeLength < 23; tableIndexOrCodeLength++) {
+          bases[tableIndexOrCodeLength] = bases[tableIndexOrCodeLength] + bases[tableIndexOrCodeLength - 1];
         }
-        for (var8 = 0; var8 < 23; var8++) {
-          param0[var8] = 0;
+        for (tableIndexOrCodeLength = 0; tableIndexOrCodeLength < 23; tableIndexOrCodeLength++) {
+          limits[tableIndexOrCodeLength] = 0;
         }
-        var10 = 0;
-        for (var8 = param4; var8 <= param5; var8++) {
-          var10 = var10 + (param1[var8 + 1] - param1[var8]);
-          param0[var8] = var10 - 1;
-          var10 = var10 << 1;
+        nextCode = 0;
+        for (tableIndexOrCodeLength = minimumLength; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
+          nextCode = nextCode + (bases[tableIndexOrCodeLength + 1] - bases[tableIndexOrCodeLength]);
+          limits[tableIndexOrCodeLength] = nextCode - 1;
+          nextCode = nextCode << 1;
         }
-        for (var8 = param4 + 1; var8 <= param5; var8++) {
-          param1[var8] = (param0[var8 - 1] + 1 << 1) - param1[var8];
+        for (tableIndexOrCodeLength = minimumLength + 1; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
+          bases[tableIndexOrCodeLength] = (limits[tableIndexOrCodeLength - 1] + 1 << 1) - bases[tableIndexOrCodeLength];
         }
     }
 
@@ -472,15 +472,15 @@ final class Bzip2Decoder {
         decoderState = null;
     }
 
-    private final static void c(Bzip2DecoderState param0) {
-        int var1 = 0;
-        param0.field_a = 0;
-        L0: for (var1 = 0; var1 < 256; var1++) {
-          if (!param0.field_n[var1]) {
+    private final static void buildByteAlphabet(Bzip2DecoderState state) {
+        int byteValue = 0;
+        state.alphabetSize = 0;
+        L0: for (byteValue = 0; byteValue < 256; byteValue++) {
+          if (!state.usedBytes[byteValue]) {
             continue L0;
           }
-          param0.field_x[param0.field_a] = (byte)var1;
-          param0.field_a = param0.field_a + 1;
+          state.alphabetBytes[state.alphabetSize] = (byte)byteValue;
+          state.alphabetSize = state.alphabetSize + 1;
         }
     }
 
@@ -499,7 +499,7 @@ final class Bzip2Decoder {
           decoderState.bitBuffer = 0;
           decoderState.inputBytesRead = 0;
           decoderState.outputBytesWritten = 0;
-          Bzip2Decoder.e(decoderState);
+          Bzip2Decoder.decodeBlocks(decoderState);
           outputLimitOrBytesWritten = outputLimitOrBytesWritten - decoderState.remainingOutputBytes;
           decoderState.inputBytes = null;
           decoderState.outputBytes = null;
@@ -508,149 +508,149 @@ final class Bzip2Decoder {
         return bytesWrittenBeforeReturn;
     }
 
-    private final static void d(Bzip2DecoderState param0) {
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int[] var6;
-        int var7;
-        byte[] var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int[] var14;
-        int[] var15;
-        var2 = param0.field_h;
-        var3 = param0.field_k;
-        var4 = param0.field_G;
-        var5 = param0.field_c;
-        var15 = kb.field_a;
-        var14 = var15;
-        var6 = var14;
-        var7 = param0.field_D;
-        var8 = param0.outputBytes;
-        var9 = param0.outputPosition;
-        var10 = param0.remainingOutputBytes;
-        var11 = var10;
-        var12 = param0.field_q + 1;
+    private final static void emitBlockRuns(Bzip2DecoderState state) {
+        int nextByteOrRunCount;
+        int runByte;
+        int remainingRunLength;
+        int blockBytesConsumed;
+        int currentByte;
+        int[] transformTable;
+        int transformPositionOrEntry;
+        byte[] outputBytes;
+        int outputPosition;
+        int remainingOutputBytes;
+        int initialOutputAllowance;
+        int blockEndPosition;
+        int previousOutputBytesWritten;
+        int[] transformTableAlias;
+        int[] sharedTransformTableSnapshot;
+        runByte = state.pendingRunByte;
+        remainingRunLength = state.pendingRunLength;
+        blockBytesConsumed = state.blockBytesConsumed;
+        currentByte = state.currentByte;
+        sharedTransformTableSnapshot = kb.bzip2TransformTable;
+        transformTableAlias = sharedTransformTableSnapshot;
+        transformTable = transformTableAlias;
+        transformPositionOrEntry = state.transformPositionOrEntry;
+        outputBytes = state.outputBytes;
+        outputPosition = state.outputPosition;
+        remainingOutputBytes = state.remainingOutputBytes;
+        initialOutputAllowance = remainingOutputBytes;
+        blockEndPosition = state.blockLength + 1;
         L0: while (true) {
           L1: {
             L2: {
-              if (var3 > 0) {
+              if (remainingRunLength > 0) {
                 L3: while (true) {
-                  if (var10 == 0) {
-                    var13 = param0.outputBytesWritten;
-                    param0.outputBytesWritten = param0.outputBytesWritten + (var11 - var10);
-                    if (param0.outputBytesWritten >= var13) {
+                  if (remainingOutputBytes == 0) {
+                    previousOutputBytesWritten = state.outputBytesWritten;
+                    state.outputBytesWritten = state.outputBytesWritten + (initialOutputAllowance - remainingOutputBytes);
+                    if (state.outputBytesWritten >= previousOutputBytesWritten) {
                     }
-                    param0.field_h = (byte) var2;
-                    param0.field_k = var3;
-                    param0.field_G = var4;
-                    param0.field_c = var5;
-                    kb.field_a = var6;
-                    param0.field_D = var7;
-                    param0.outputBytes = var8;
-                    param0.outputPosition = var9;
-                    param0.remainingOutputBytes = var10;
+                    state.pendingRunByte = (byte) runByte;
+                    state.pendingRunLength = remainingRunLength;
+                    state.blockBytesConsumed = blockBytesConsumed;
+                    state.currentByte = currentByte;
+                    kb.bzip2TransformTable = transformTable;
+                    state.transformPositionOrEntry = transformPositionOrEntry;
+                    state.outputBytes = outputBytes;
+                    state.outputPosition = outputPosition;
+                    state.remainingOutputBytes = remainingOutputBytes;
                     return;
                   }
-                  if (var3 != 1) {
-                    var8[var9] = (byte)var2;
-                    var3--;
-                    var9++;
-                    var10--;
+                  if (remainingRunLength != 1) {
+                    outputBytes[outputPosition] = (byte)runByte;
+                    remainingRunLength--;
+                    outputPosition++;
+                    remainingOutputBytes--;
                     continue L3;
                   }
-                  if (var10 == 0) {
-                    var3 = 1;
+                  if (remainingOutputBytes == 0) {
+                    remainingRunLength = 1;
                     break L1;
                   }
-                  var8[var9] = (byte)var2;
-                  var9++;
-                  var10--;
+                  outputBytes[outputPosition] = (byte)runByte;
+                  outputPosition++;
+                  remainingOutputBytes--;
                   break L2;
                 }
               }
             }
-            L5: while (var4 != var12) {
-              var15 = var14;
-              var2 = (byte)var5;
-              var7 = var15[var7];
-              var1 = (byte)var7;
-              var7 = var7 >> 8;
-              var4++;
-              if (var1 == var5) {
-                if (var4 != var12) {
-                  var3 = 2;
-                  var7 = var15[var7];
-                  var1 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
-                  if (var4 == var12) {
+            L5: while (blockBytesConsumed != blockEndPosition) {
+              sharedTransformTableSnapshot = transformTableAlias;
+              runByte = (byte)currentByte;
+              transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+              nextByteOrRunCount = (byte)transformPositionOrEntry;
+              transformPositionOrEntry = transformPositionOrEntry >> 8;
+              blockBytesConsumed++;
+              if (nextByteOrRunCount == currentByte) {
+                if (blockBytesConsumed != blockEndPosition) {
+                  remainingRunLength = 2;
+                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                  nextByteOrRunCount = (byte)transformPositionOrEntry;
+                  transformPositionOrEntry = transformPositionOrEntry >> 8;
+                  blockBytesConsumed++;
+                  if (blockBytesConsumed == blockEndPosition) {
                     continue L0;
                   }
-                  if (var1 != var5) {
-                    var5 = var1;
+                  if (nextByteOrRunCount != currentByte) {
+                    currentByte = nextByteOrRunCount;
                     continue L0;
                   }
-                  var3 = 3;
-                  var7 = var15[var7];
-                  var1 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
-                  if (var4 == var12) {
+                  remainingRunLength = 3;
+                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                  nextByteOrRunCount = (byte)transformPositionOrEntry;
+                  transformPositionOrEntry = transformPositionOrEntry >> 8;
+                  blockBytesConsumed++;
+                  if (blockBytesConsumed == blockEndPosition) {
                     continue L0;
                   }
-                  if (var1 != var5) {
-                    var5 = var1;
+                  if (nextByteOrRunCount != currentByte) {
+                    currentByte = nextByteOrRunCount;
                     continue L0;
                   }
-                  var7 = var15[var7];
-                  var1 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
-                  var3 = (var1 & 255) + 4;
-                  var7 = var15[var7];
-                  var5 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
+                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                  nextByteOrRunCount = (byte)transformPositionOrEntry;
+                  transformPositionOrEntry = transformPositionOrEntry >> 8;
+                  blockBytesConsumed++;
+                  remainingRunLength = (nextByteOrRunCount & 255) + 4;
+                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                  currentByte = (byte)transformPositionOrEntry;
+                  transformPositionOrEntry = transformPositionOrEntry >> 8;
+                  blockBytesConsumed++;
                   continue L0;
                 }
-                if (var10 == 0) {
-                  var3 = 1;
+                if (remainingOutputBytes == 0) {
+                  remainingRunLength = 1;
                   break L1;
                 }
               } else {
-                var5 = var1;
-                if (var10 == 0) {
-                  var3 = 1;
+                currentByte = nextByteOrRunCount;
+                if (remainingOutputBytes == 0) {
+                  remainingRunLength = 1;
                   break L1;
                 }
               }
-              var8[var9] = (byte)var2;
-              var9++;
-              var10--;
+              outputBytes[outputPosition] = (byte)runByte;
+              outputPosition++;
+              remainingOutputBytes--;
             }
-            var3 = 0;
+            remainingRunLength = 0;
             break L1;
           }
-          var13 = param0.outputBytesWritten;
-          param0.outputBytesWritten = param0.outputBytesWritten + (var11 - var10);
-          if (param0.outputBytesWritten >= var13) {
+          previousOutputBytesWritten = state.outputBytesWritten;
+          state.outputBytesWritten = state.outputBytesWritten + (initialOutputAllowance - remainingOutputBytes);
+          if (state.outputBytesWritten >= previousOutputBytesWritten) {
           }
-          param0.field_h = (byte) var2;
-          param0.field_k = var3;
-          param0.field_G = var4;
-          param0.field_c = var5;
-          kb.field_a = var6;
-          param0.field_D = var7;
-          param0.outputBytes = var8;
-          param0.outputPosition = var9;
-          param0.remainingOutputBytes = var10;
+          state.pendingRunByte = (byte) runByte;
+          state.pendingRunLength = remainingRunLength;
+          state.blockBytesConsumed = blockBytesConsumed;
+          state.currentByte = currentByte;
+          kb.bzip2TransformTable = transformTable;
+          state.transformPositionOrEntry = transformPositionOrEntry;
+          state.outputBytes = outputBytes;
+          state.outputPosition = outputPosition;
+          state.remainingOutputBytes = remainingOutputBytes;
           return;
         }
     }

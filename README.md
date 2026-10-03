@@ -19,20 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 75 guarded identities for archive decompression,
-`GzipInflater`, `Bzip2Decoder`/`Bzip2DecoderState` and selected entry/bit-reader
-state. Every gzip instance declaration and selected entry contract/local has
-a name. A new 74-case native fixture confirms controlled payloads, length limits,
-type routing, gzip partial/error/reset behavior and two Bzip2 vectors.
+The current naming pass adds 99 guarded identities for Bzip2 block decoding,
+Huffman tables, move-to-front state, inverse-transform links and output runs.
+Every `Bzip2Decoder` field/API/parameter/local and `Bzip2DecoderState` instance
+field has a name. A new 40-case native fixture checks varied blocks, two-block
+input, partial destinations, malformed input and recovery.
 
-The 5,982 rules apply 48,544 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,907 previous complete rules
+The 6,081 rules apply 49,618 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,982 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
-byte-exact reversal support the names. The seven prior native traces remain
-unchanged; compression payloads/results match native/raw/readable Java in the
-controlled cases. Deep Bzip2 state/control flow, comprehensive buffering/concurrency, static names,
-large labeled bodies, full assets/gameplay and device performance remain
-unfinished or unverified. One manifest holds current evidence, with Git for history.
+byte-exact reversal support the names. The eight prior native traces remain
+unchanged; controlled Bzip2 payloads and state match native/raw/readable Java.
+Large labeled decoder bodies, comprehensive buffering/concurrency, static names,
+full assets/gameplay and device performance remain unfinished or unverified.
+One manifest holds current evidence, with Git for history.
+
+Pass 74 named archive decompression, `GzipInflater`, Bzip2 entry/bit-reader
+contracts and selected state. Its 74-case native fixture confirms controlled
+payloads, length limits, type routing and gzip partial/error/reset behavior.
 
 Pass 73 named `DiskArchiveCache` and the shared sector scratch buffer, including
 the two retained header-EOF states. Its 138-case native fixture confirms controlled
