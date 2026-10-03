@@ -298,7 +298,7 @@ final class GameplaySession {
             SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
             if (!this.debugReducedRendering) {
-              dc.drawAttachedEntities(7838);
+              AttachedEntityRenderer.drawAttachedEntities(7838);
             }
             NodeHashTableIterator.a(10, 90, 460, -27085, 460);
             this.boardRasterDirty = false;
@@ -374,7 +374,7 @@ final class GameplaySession {
         }
         MultiHandleSliderRenderer.rotatedThemeForegroundRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
-        ec.selectedThemeForeground.rotateNearest(ec.selectedThemeForeground.fullWidth << 3, ec.selectedThemeForeground.fullHeight << 3, MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullWidth << 3, MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullHeight << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
+        MatchScoringSupport.selectedThemeForeground.rotateNearest(MatchScoringSupport.selectedThemeForeground.fullWidth << 3, MatchScoringSupport.selectedThemeForeground.fullHeight << 3, MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullWidth << 3, MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullHeight << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         w.a(MultiHandleSliderRenderer.rotatedThemeForegroundRaster, -(MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullWidth >> 1) + 320, -(MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullHeight >> 1) + 240);
         if (!this.debugReducedRendering) {
@@ -432,7 +432,7 @@ final class GameplaySession {
                       continue;
                     }
                   }
-                  debugEntityQueue = a.attachedEntities;
+                  debugEntityQueue = BoardEntityState.attachedEntities;
                 }
                 renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                 while (true) {
@@ -495,7 +495,7 @@ final class GameplaySession {
                 }
               }
             }
-            ek.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, af.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
+            DebugOverviewCompositor.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, af.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
             break;
           }
         }
@@ -511,7 +511,7 @@ final class GameplaySession {
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
             }
             if (this.showSessionCounters) {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SingleChildWidget.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SingleChildWidget.field_z, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             L53: {
@@ -719,7 +719,7 @@ final class GameplaySession {
               L25: {
                 inputDerivedModuloIndex = (kd.field_c + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + ki.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
-                  dc.achievementTrackingBits = dc.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
+                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
@@ -851,7 +851,7 @@ final class GameplaySession {
                     break L30;
                   }
                 }
-                dc.achievementTrackingBits = dc.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter << 17;
+                AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter << 17;
               }
             }
             L44: {
@@ -880,9 +880,9 @@ final class GameplaySession {
             }
             this.delayedActionCountdown = this.delayedActionCountdown - 1;
             if (this.delayedActionCountdown == 0) {
-              ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
+              PlayfieldRules.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
             }
-            nextBoardClearBonusEligible = (!fa.entitiesDetachedThisTick) && (a.attachedEntities.isEmpty(13519)) && (0 < ul.releasedInCurrentTheme);
+            nextBoardClearBonusEligible = (!fa.entitiesDetachedThisTick) && (BoardEntityState.attachedEntities.isEmpty(13519)) && (0 < MatchCandidateSupport.releasedInCurrentTheme);
             L52: {
               ((GameplaySession) (this)).boardClearBonusEligible = nextBoardClearBonusEligible;
               if ((this.boardClearBonusEligible) &&
@@ -901,9 +901,9 @@ final class GameplaySession {
             SecondaryNodeDequeIterator.advanceActiveEntityAnimations((byte) -15);
             BoardReconciliationSupport.reconcileBoardEntities(methodGuard + 1578896101);
             if (EntityMotionSupport.boardContactStateDirty) {
-              ul.collectMatchCandidates(-2);
+              MatchCandidateSupport.collectMatchCandidates(-2);
             }
-            this.matchBatchProcessedThisTick = ec.processMatchCandidates(-18913);
+            this.matchBatchProcessedThisTick = MatchScoringSupport.processMatchCandidates(-18913);
             if (this.boundaryCheckRequested) {
               BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
             }
@@ -924,7 +924,7 @@ final class GameplaySession {
               (this.sceneAnimationTick > 1000)) {
             this.requestSessionExitScreen(28809);
           }
-          fc.advanceEndingEntityAnimations(19);
+          EndingAnimationSupport.advanceEndingEntityAnimations(19);
           AgeValidator.advanceScorePopups((byte) 24);
           MessageDialog.advanceGameplayAvatarAnimation(600);
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
@@ -1352,7 +1352,7 @@ final class GameplaySession {
           PointerInputListener.a((byte) -39);
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
-          i.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
+          MeshDepthSupport.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         }
         int nextSceneAnimationTick = this.sceneAnimationTick + 1;
@@ -1468,7 +1468,7 @@ final class GameplaySession {
           this.sceneAnimationTick = 0;
           if (ArchiveNetworkClient.difficultyStep > 0) {
             qe.adjustThemeReleaseQuota(10);
-            ld.advanceDifficulty(false);
+            PlayfieldRules.advanceDifficulty(false);
           }
         }
         if (methodGuard > -76) {
@@ -1501,7 +1501,7 @@ final class GameplaySession {
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
             FadingDialog.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
             if (this.boardEmptyAtResultStart) {
-              FadingDialog.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
+              FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
             }
             if (clientControlFlowGuard == 0) {
               break L1;
@@ -1512,7 +1512,7 @@ final class GameplaySession {
           countdownBonusText = Integer.toString(this.resultBonusPoints);
           FadingDialog.uiPaletteFont.drawCenteredText(countdownBonusText, 320, 312, 0, -1);
           if (this.boardEmptyAtResultStart) {
-            FadingDialog.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
+            FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
           }
         }
         FadingDialog.uiPaletteFont.drawParagraph(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
@@ -1544,9 +1544,9 @@ final class GameplaySession {
           L1: {
             L2: {
               this.resultBonusPoints = this.resultBonusPoints + 179;
-              this.boardEmptyAtResultStart = a.attachedEntities.isEmpty(13519);
+              this.boardEmptyAtResultStart = BoardEntityState.attachedEntities.isEmpty(13519);
               this.resultSequenceCountdown = 150;
-              endingEntity = i.findOutermostAttachedEntity((byte) -128);
+              endingEntity = MeshDepthSupport.findOutermostAttachedEntity((byte) -128);
               if (null == endingEntity) {
                 this.endingEntityRadius = 29;
                 if (controlFlowGuard == 0) {
@@ -1625,7 +1625,7 @@ final class GameplaySession {
             }
             if (this.sessionPhase != 2) {
               if (this.resultSequenceCountdown == 150) {
-                ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[28]);
+                ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[28]);
               }
               this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
               if (controlFlowGuard == 0) {
@@ -1635,7 +1635,7 @@ final class GameplaySession {
             if (!((this.resultExpansionAudioStream != null) &&
                   (!this.resultExpansionAudioStream.isSamplePositionOutOfRange()))) {
               resultProgressPercent = this.sceneAnimationTick * 100 / 460;
-              this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
+              this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
             if (this.resultPanelX <= 320 - (lj.smallBoxSprite.fullWidth >> 1)) {
@@ -1650,11 +1650,11 @@ final class GameplaySession {
           this.sceneAnimationTick = 0;
           this.sessionPhase = 5;
           if (this.boardEmptyAtResultStart) {
-            ld.spawnPointsPopup(350, 320, 66, 2000);
+            PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
             SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.field_i ^ 255, methodGuard - 101, ArchiveLoadSequence.field_i);
             this.connectivityRebuiltThisTick = false;
           }
-          ld.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
+          PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
         }
         AgeValidator.advanceScorePopups((byte) 33);
         MessageDialog.advanceGameplayAvatarAnimation(600);
@@ -1710,7 +1710,7 @@ final class GameplaySession {
               break L0;
             }
           }
-          remainingThemeReleases = -ul.releasedInCurrentTheme + fa.releasesPerTheme;
+          remainingThemeReleases = -MatchCandidateSupport.releasedInCurrentTheme + fa.releasesPerTheme;
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
           FadingDialog.uiPaletteFont.drawRightAlignedText(w.field_e, 621, 441, 0, -1);
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
@@ -1779,7 +1779,7 @@ final class GameplaySession {
         AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;
         UiWidget.achievementTrackingAccumulator = 8801;
         SpriteButtonRenderer.field_r = 1385;
-        dc.achievementTrackingBits = 0;
+        AttachedEntityRenderer.achievementTrackingBits = 0;
         oa.field_a = 4703;
         DequeCursor.field_g = 5997;
         kb.field_d = 275;
@@ -1825,8 +1825,8 @@ final class GameplaySession {
         if (markSubmissionBlocked) {
             this.submissionBlocked = true;
         }
-        ld.spawnPointsPopup(34, 20 + (this.pointsPanelX + 60), 79, this.pendingPopupPoints);
-        ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[32]);
+        PlayfieldRules.spawnPointsPopup(34, 20 + (this.pointsPanelX + 60), 79, this.pendingPopupPoints);
+        ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[32]);
         this.pendingPopupPoints = 0;
     }
 
@@ -1871,18 +1871,18 @@ final class GameplaySession {
         this.sessionPhase = 0;
         try {
           this.gameApplet = ownerApplet;
-          ug.newAchievementMask = 0;
+          ScorePopupSupport.newAchievementMask = 0;
           ArchiveRequest.pendingActionMarkers.clearNodes((byte) -126);
           this.pendingPopupPoints = 0;
-          this.boardMaskOffsetX = -(i.avatarMaskRaster.width >> 1);
+          this.boardMaskOffsetX = -(MeshDepthSupport.avatarMaskRaster.width >> 1);
           this.tutorialMode = enableTutorial;
           this.tutorialPromptActive = enableTutorial;
           this.score = 0;
-          this.boardMaskOffsetY = -(i.avatarMaskRaster.height >> 1);
+          this.boardMaskOffsetY = -(MeshDepthSupport.avatarMaskRaster.height >> 1);
           this.boardAngleRadians = 0.0f;
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
-          i.avatarMaskRaster.drawSilhouette(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
+          MeshDepthSupport.avatarMaskRaster.drawSilhouette(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
           SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
@@ -1906,12 +1906,12 @@ final class GameplaySession {
           this.showGameOverOverlay = false;
           IntrusiveNode.selectThemeAudio(-116, 1);
           if (MultiHandleSliderRenderer.rotatedThemeForegroundRaster == null) {
-            MultiHandleSliderRenderer.rotatedThemeForegroundRaster = new Sprite(ec.selectedThemeForeground.width, ec.selectedThemeForeground.height);
+            MultiHandleSliderRenderer.rotatedThemeForegroundRaster = new Sprite(MatchScoringSupport.selectedThemeForeground.width, MatchScoringSupport.selectedThemeForeground.height);
           }
           oa.field_a = 4703;
           kb.field_d = 275;
           lb.secondaryAchievementTrackingCounter = 935;
-          dc.achievementTrackingBits = 0;
+          AttachedEntityRenderer.achievementTrackingBits = 0;
           SpriteButtonRenderer.field_r = 1385;
           UiWidget.achievementTrackingAccumulator = 8801;
           AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;

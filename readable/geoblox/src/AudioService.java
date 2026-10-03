@@ -25,7 +25,7 @@ final class AudioService implements Runnable {
         }
         if (!(FadingDialog.field_J == null)) {
             if (!FadingDialog.field_J.ensureIndexLoaded(0)) {
-                return ri.field_c;
+                return LoginProtocolSupport.field_c;
             }
             return CachedTextLayout.field_g;
         }
@@ -38,11 +38,11 @@ final class AudioService implements Runnable {
         if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -127)) {
             return AccountWelcomePanel.loadingGraphicsText + " - " + DirectByteStorage.field_h.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!(dc.field_c.ensureIndexLoaded(0))) {
+        if (!(AttachedEntityRenderer.field_c.ensureIndexLoaded(0))) {
             return EntityLinkSupport.waitingForFontsText;
         }
-        if (!dc.field_c.loadGroupByName("commonui", (byte) -125)) {
-            return EntitySpawnSupport.loadingFontsText + " - " + dc.field_c.getGroupProgressByName(0, "commonui") + "%";
+        if (!AttachedEntityRenderer.field_c.loadGroupByName("commonui", (byte) -125)) {
+            return EntitySpawnSupport.loadingFontsText + " - " + AttachedEntityRenderer.field_c.getGroupProgressByName(0, "commonui") + "%";
         }
         if (!DialRenderer.field_n.ensureIndexLoaded(0)) {
             return ByteShortQuery.waitingForExtraDataText;

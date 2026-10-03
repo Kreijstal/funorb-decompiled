@@ -75,10 +75,10 @@ final class SecondaryNodeDeque implements Iterable {
         if ((InstrumentPatch.earnedAchievementMask & achievementBit) != 0) {
           return;
         }
-        ug.newAchievementMask = ug.newAchievementMask | achievementBit;
+        ScorePopupSupport.newAchievementMask = ScorePopupSupport.newAchievementMask | achievementBit;
         UiWidget.gameplaySession.newActionCount = UiWidget.gameplaySession.newActionCount + 1;
         achievementIdThenPanelEmptyFlag = achievementId;
-        alreadyTrackedFlagValue = ((1 << achievementIdThenPanelEmptyFlag & dc.achievementTrackingBits) == 0) ? 0 : 1;
+        alreadyTrackedFlagValue = ((1 << achievementIdThenPanelEmptyFlag & AttachedEntityRenderer.achievementTrackingBits) == 0) ? 0 : 1;
         alreadyTrackedFlag = alreadyTrackedFlagValue;
         if (methodGuard < -47) {
           if (alreadyTrackedFlag != 0) {
@@ -86,7 +86,7 @@ final class SecondaryNodeDeque implements Iterable {
             panelEmptyAfterExistingTracking = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             achievementIdThenPanelEmptyFlag = panelEmptyAfterExistingTracking;
           } else {
-            dc.achievementTrackingBits = dc.achievementTrackingBits | 1 << achievementIdThenPanelEmptyFlag;
+            AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | 1 << achievementIdThenPanelEmptyFlag;
             UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - (1 << achievementIdThenPanelEmptyFlag);
             InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | achievementBit;
             panelEmptyAfterNewTracking = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
@@ -99,7 +99,7 @@ final class SecondaryNodeDeque implements Iterable {
             panelEmptyAfterExistingTrackingInvalidGuard = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             achievementIdThenPanelEmptyFlag = panelEmptyAfterExistingTrackingInvalidGuard;
           } else {
-            dc.achievementTrackingBits = dc.achievementTrackingBits | 1 << achievementIdThenPanelEmptyFlag;
+            AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | 1 << achievementIdThenPanelEmptyFlag;
             UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - (1 << achievementIdThenPanelEmptyFlag);
             InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | achievementBit;
             panelEmptyAfterNewTrackingInvalidGuard = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
@@ -111,7 +111,7 @@ final class SecondaryNodeDeque implements Iterable {
           EntityCollisionSupport.preparePendingActionPanel((byte) -122);
         }
         if (!UiWidget.gameplaySession.submissionBlocked) {
-          GameplayEntity.pendingAchievementSubmissions.addLast(-44, new AchievementSubmission(achievementId, achievementCheckByte, dc.achievementTrackingBits, UiWidget.achievementTrackingAccumulator, AwtRasterBuffer.primaryAchievementTrackingCounter, lb.secondaryAchievementTrackingCounter));
+          GameplayEntity.pendingAchievementSubmissions.addLast(-44, new AchievementSubmission(achievementId, achievementCheckByte, AttachedEntityRenderer.achievementTrackingBits, UiWidget.achievementTrackingAccumulator, AwtRasterBuffer.primaryAchievementTrackingCounter, lb.secondaryAchievementTrackingCounter));
         }
         return;
     }

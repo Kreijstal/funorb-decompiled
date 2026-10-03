@@ -38,7 +38,7 @@ final class HighscoreNameEntry {
             if ((!((!((MidiPcmStream.heldInternalKeys[99]) &&
                   (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
                 (~kb.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease)) ||
-                (!(ul.releasedInCurrentTheme != 0) &&
+                (!(MatchCandidateSupport.releasedInCurrentTheme != 0) &&
                   !(UiWidget.gameplaySession.tutorialMode)))) {
               if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
                   (!UiWidget.gameplaySession.spawnReleaseDisabled)) {
@@ -289,8 +289,8 @@ final class HighscoreNameEntry {
           var1 = eh.field_d;
           var2 = var1.readUnsignedByte((byte) 34);
           if (var2 == 0) {
-            if (ug.field_a == null) {
-              ug.field_a = new SecondaryNodeHashTable(128);
+            if (ScorePopupSupport.secondarySocialEntriesByNameHash == null) {
+              ScorePopupSupport.secondarySocialEntriesByNameHash = new SecondaryNodeHashTable(128);
               FifoResponseToken.field_i = 0;
             }
             stackIn_15_0 = (var1.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
@@ -299,21 +299,21 @@ final class HighscoreNameEntry {
             if (var3_int != 0) {
               var1.readNullTerminatedText((byte) 108);
             }
-            var5 = ud.findSecondarySocialEntry(0, var4_ref_String);
+            var5 = AchievementProtocolSupport.findSecondarySocialEntry(0, var4_ref_String);
             var6 = var1.readNullTerminatedText((byte) 103);
             var7 = ResizableDialog.a((CharSequence) ((Object) var4_ref_String), 12);
             if (null == var7) {
               var7 = var4_ref_String;
             }
             if (var5 == null) {
-              var5 = ud.findSecondarySocialEntry(methodGuard ^ 104, var6);
+              var5 = AchievementProtocolSupport.findSecondarySocialEntry(methodGuard ^ 104, var6);
               if (var5 != null) {
-                ug.field_a.put((long)var7.hashCode(), 113, var5);
+                ScorePopupSupport.secondarySocialEntriesByNameHash.put((long)var7.hashCode(), 113, var5);
               }
             }
             if (null == var5) {
               var5 = new SocialListEntry();
-              ug.field_a.put((long)var7.hashCode(), 94, var5);
+              ScorePopupSupport.secondarySocialEntriesByNameHash.put((long)var7.hashCode(), 94, var5);
               fieldTemp$0 = FifoResponseToken.field_i;
               FifoResponseToken.field_i = FifoResponseToken.field_i + 1;
               var5.insertionIndex = fieldTemp$0;
@@ -386,7 +386,7 @@ final class HighscoreNameEntry {
                 if (var8 != 0) {
                   break L15;
                 }
-                if (ul.socialEntrySortsAfter(stackIn_61_0, var7_ref, (byte) 127)) {
+                if (MatchCandidateSupport.socialEntrySortsAfter(stackIn_61_0, var7_ref, (byte) 127)) {
                   var7_ref = (SocialListEntry) ((Object) ProgressBarWidget.field_B.nextForIteration(1));
                   continue;
                 }

@@ -18,7 +18,7 @@ final class fa {
             return;
         }
         try {
-            va.field_d = true;
+            MeshPrioritySupport.field_d = true;
             Geoblox.activeMessageDialog = new MessageDialog(kd.field_e, hh.field_c, messageText, AgeValidator.field_i, VisualPropertyOverrides.field_I);
             kd.field_e.showDialog(false, Geoblox.activeMessageDialog);
         } catch (RuntimeException messageDialogFailure) {

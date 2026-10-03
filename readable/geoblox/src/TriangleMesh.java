@@ -181,7 +181,7 @@ final class TriangleMesh {
           AccountCreationForm.field_C = new boolean[2 * param2];
         }
         md.field_c = 0;
-        va.field_b = -2147483648;
+        MeshPrioritySupport.field_b = -2147483648;
         ok.field_b = 2147483647;
         ProxyAuthenticationRequiredException.field_a = -2147483648;
         LoginPayloadKind.field_a = param0;
@@ -201,7 +201,7 @@ final class TriangleMesh {
             for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
                 rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[pixelIndex], 255)];
             }
-            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixels);
+            sprites[spriteIndex] = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixels);
         }
         if (methodGuard != 255) {
             screenTransitionTick = 40;

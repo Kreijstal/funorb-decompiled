@@ -3263,11 +3263,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "9b812d9c89626764cfc09971b1499118ebac9b82",
+    "commit": "9581255db52d2cb80b3d612a04f3f360e578e365",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "e2d2312496a045c8d208c9569471d16a125573e7151a31c4a5e315ee2c8f106b"
+      "sha256": "9e76bcbb70c58303301e29e52c5e15b80a51fdc92744dd4d45e525963bbc72fb"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "2c484739875974414ece3eee5edc52aabfcd7ce012183ea699381ff0177687fa",
@@ -3277,10 +3277,10 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "393e7ceab781989c3d9f532006d258c873c24de7583eb482ed6a5048492cf205",
+    "outputTreeSha256": "a06e79f283fe68d05b4cb34b0d48a28959d28d7d016bd1a4b98b77ee7481a7d2",
     "files": 303,
-    "rules": 10038,
-    "identifierEdits": 79782,
+    "rules": 10324,
+    "identifierEdits": 81351,
     "bindingsCompared": 136612,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
@@ -3360,5 +3360,60 @@
     "nativeProbeFilesPassed": 7,
     "dictionaryReversalByteExactFiles": 303,
     "scope": "Mixed-purpose static helper owners named by their gameplay operation; unrelated functions and globals remain on each owner. Contact mask clipping/scan, reciprocal-link context, input cleanup, ranked-index sorting and applet navigation names follow guarded source declarations. Existing native fixture scopes retain fixed hashes; no new whole-game, asset, navigation/network, browser/phone or heap/FPS equivalence."
+  },
+  "progressionSessionNaming": {
+    "historicalPassVersion": 121,
+    "workflowRepository": "Kreijstal/dekobloko-work",
+    "workflowCommit": "9581255db52d2cb80b3d612a04f3f360e578e365",
+    "previousRulesCommit": "9b812d9c89626764cfc09971b1499118ebac9b82",
+    "rulesAdded": 286,
+    "kindsAdded": {
+      "C": 14,
+      "F": 19,
+      "L": 185,
+      "M": 24,
+      "P": 44
+    },
+    "allPreviousCompleteRulesPreserved": 10038,
+    "identifierEditsAdded": 1569,
+    "classNamesAfter": {
+      "renamed": 247,
+      "originalMeaningful": 1,
+      "opaque": 55
+    },
+    "owners": {
+      "a": "BoardEntityState",
+      "dc": "AttachedEntityRenderer",
+      "ec": "MatchScoringSupport",
+      "ek": "DebugOverviewCompositor",
+      "fc": "EndingAnimationSupport",
+      "fl": "GameSoundResources",
+      "i": "MeshDepthSupport",
+      "ld": "PlayfieldRules",
+      "pg": "GameplaySetupSupport",
+      "ri": "LoginProtocolSupport",
+      "ud": "AchievementProtocolSupport",
+      "ug": "ScorePopupSupport",
+      "ul": "MatchCandidateSupport",
+      "va": "MeshPrioritySupport"
+    },
+    "sharedLoginStageNames": [
+      "requestReadyStage",
+      "awaitingInitialLoginReplyStage",
+      "awaitingLoginResultStage",
+      "awaitingLoginDetailsStage",
+      "awaitingLoginFailureTextStage",
+      "connectedSessionStage"
+    ],
+    "sourceToolAndNativePinsUnchanged": true,
+    "rawSourceBodiesEdited": false,
+    "bytecodeChanged": false,
+    "declarationLocalOrdinalsChanged": false,
+    "bindingsCompared": 136612,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestsPassed": 24,
+    "nativeProbeFilesPassed": 7,
+    "dictionaryReversalByteExactFiles": 303,
+    "scope": "Mixed-purpose static owners retain unrelated functions and globals. Source-supported names expose candidate packing, scoring, difficulty, popup/render helpers, shared login stages, achievement protocol and reflection decoder data, reuse and failures. Original numeric protocol/state values, guards, arithmetic, control flow and exception order remain. Existing native fixture hashes match; no new live login/reflection/server, asset/audio/AWT/browser/phone or heap/FPS equivalence claim."
   }
 }

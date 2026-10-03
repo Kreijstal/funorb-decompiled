@@ -7,7 +7,7 @@ import java.util.*;
 final class IterableNodeHashTable implements Iterable {
     IntrusiveNode[] field_a;
     static int avatarBlinkClockTicks;
-    static ClientProtocolStage field_d;
+    static ClientProtocolStage requestReadyStage;
     private IntrusiveNode field_f;
     int field_c;
     static int[] transformedMeshNormalZ;
@@ -20,7 +20,7 @@ final class IterableNodeHashTable implements Iterable {
         int var1;
         int var2;
         var2 = Geoblox.clientControlFlowFlag;
-        va.field_d = false;
+        MeshPrioritySupport.field_d = false;
         if (param0 != -12618) {
           return;
         }
@@ -259,7 +259,7 @@ final class IterableNodeHashTable implements Iterable {
         if (param0 != -1) {
             return;
         }
-        field_d = null;
+        requestReadyStage = null;
         transformedMeshNormalZ = null;
     }
 
@@ -293,7 +293,7 @@ final class IterableNodeHashTable implements Iterable {
 
     static {
         avatarBlinkClockTicks = 0;
-        field_d = new ClientProtocolStage();
+        requestReadyStage = new ClientProtocolStage();
         transformedMeshNormalZ = new int[8192];
     }
 }

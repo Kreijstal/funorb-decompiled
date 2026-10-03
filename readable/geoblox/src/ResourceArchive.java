@@ -36,7 +36,7 @@ final class ResourceArchive {
             ResourceArchive.updateAttachedEntities((byte) 28);
           }
           maximumEntityRadiusSquared = 0.0f;
-          attachedEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+          attachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
           while (attachedEntity != null) {
             attachedEntity.matchCooldownTicks = attachedEntity.matchCooldownTicks - 1;
             if (attachedEntity.matchCooldownTicks == 0) {
@@ -53,7 +53,7 @@ final class ResourceArchive {
                 maximumEntityRadiusSquared = (-240.0f + attachedEntity.positionY) * (-240.0f + attachedEntity.positionY) + (-320.0f + attachedEntity.positionX) * (-320.0f + attachedEntity.positionX);
               }
             }
-            attachedEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+            attachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
           }
           CrcAcknowledgedPacket.requestAvatarTintForRadius(maximumEntityRadiusSquared, (byte) 14);
           if (10000.0f > maximumEntityRadiusSquared) {

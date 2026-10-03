@@ -1392,7 +1392,7 @@ final class GameScreen extends MenuScreen {
                   return;
                 }
               }
-              dc.achievementTrackingBits = dc.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
+              AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
             }
             return;
           }
@@ -1433,7 +1433,7 @@ final class GameScreen extends MenuScreen {
               DelayedIncomingPacket.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
               DelayedIncomingPacket.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
               DelayedIncomingPacket.drawNineSlicePanel(345, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
-              ri.a(70, 180, 29497);
+              LoginProtocolSupport.drawAvatarFaceLayers(70, 180, 29497);
               HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].draw((HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullHeight >> 1));
@@ -1523,18 +1523,18 @@ final class GameScreen extends MenuScreen {
           orbitCenterYOrTextLeft = 155;
           orbitXOrPageIndexOrLineHeight = pageIndex;
           if (orbitXOrPageIndexOrLineHeight == 0) {
-            FadingDialog.uiPaletteFont.drawText(a.field_a[0], orbitCenterYOrTextLeft, paragraphY, 0, -1);
-            pageParagraph = ec.field_e[0];
-            FadingDialog.uiPaletteFont.drawText(a.field_a[1], orbitCenterYOrTextLeft, paragraphY + 110, 0, -1);
+            FadingDialog.uiPaletteFont.drawText(BoardEntityState.instructionPageTitles[0], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+            pageParagraph = MatchScoringSupport.instructionParagraphs[0];
+            FadingDialog.uiPaletteFont.drawText(BoardEntityState.instructionPageTitles[1], orbitCenterYOrTextLeft, paragraphY + 110, 0, -1);
           } else {
             if ((1 == orbitXOrPageIndexOrLineHeight) &&
                 (clientControlFlowGuard == 0)) {
-              FadingDialog.uiPaletteFont.drawText(a.field_a[2], orbitCenterYOrTextLeft, paragraphY, 0, -1);
-              pageParagraph = ec.field_e[1];
+              FadingDialog.uiPaletteFont.drawText(BoardEntityState.instructionPageTitles[2], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+              pageParagraph = MatchScoringSupport.instructionParagraphs[1];
             } else {
               if (orbitXOrPageIndexOrLineHeight == 2) {
-                FadingDialog.uiPaletteFont.drawText(a.field_a[3], orbitCenterYOrTextLeft, paragraphY, 0, -1);
-                pageParagraph = ec.field_e[2];
+                FadingDialog.uiPaletteFont.drawText(BoardEntityState.instructionPageTitles[3], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                pageParagraph = MatchScoringSupport.instructionParagraphs[2];
               } else {
                 if (orbitXOrPageIndexOrLineHeight == 3) {
                   HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
@@ -1550,13 +1550,13 @@ final class GameScreen extends MenuScreen {
                   SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                   HotspotTextWidget.spriteScratchRaster.addOutline(1);
                   HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), 282 - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
-                  FadingDialog.uiPaletteFont.drawText(a.field_a[4], orbitCenterYOrTextLeft, paragraphY, 0, -1);
-                  pageParagraph = ec.field_e[3];
+                  FadingDialog.uiPaletteFont.drawText(BoardEntityState.instructionPageTitles[4], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                  pageParagraph = MatchScoringSupport.instructionParagraphs[3];
                 } else {
                   if (4 == orbitXOrPageIndexOrLineHeight) {
                     HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                     SoftwareRasterizer.clearFramebuffer();
-                    fc.blackOrbFrames[this.tutorialEffectFrame].draw(-(fc.blackOrbFrames[this.tutorialEffectFrame].fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(fc.blackOrbFrames[this.tutorialEffectFrame].fullHeight >> 1) + (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
+                    EndingAnimationSupport.blackOrbFrames[this.tutorialEffectFrame].draw(-(EndingAnimationSupport.blackOrbFrames[this.tutorialEffectFrame].fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(EndingAnimationSupport.blackOrbFrames[this.tutorialEffectFrame].fullHeight >> 1) + (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
                     NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
                     SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
@@ -1571,8 +1571,8 @@ final class GameScreen extends MenuScreen {
                     SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + 282);
-                    FadingDialog.uiPaletteFont.drawText(a.field_a[5], orbitCenterYOrTextLeft, paragraphY, 0, -1);
-                    pageParagraph = ec.field_e[4];
+                    FadingDialog.uiPaletteFont.drawText(BoardEntityState.instructionPageTitles[5], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                    pageParagraph = MatchScoringSupport.instructionParagraphs[4];
                   }
                 }
               }
@@ -1839,7 +1839,7 @@ final class GameScreen extends MenuScreen {
               (50 >= this.volumePreviewTicks)) {
             return;
           }
-          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.gameSoundSamples[8], 100, SocialListEntry.field_gb);
+          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[8], 100, SocialListEntry.field_gb);
           GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
           this.volumePreviewTicks = 0;
           return;
@@ -1889,7 +1889,7 @@ final class GameScreen extends MenuScreen {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[29]);
+          ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[29]);
           newSessionTutorialModeFlag = 0;
           suppressPressAnimationFlag = 0;
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
@@ -1955,7 +1955,7 @@ final class GameScreen extends MenuScreen {
                   }
                 case 14:
                   InstrumentPatch.earnedAchievementMask = 0;
-                  ug.newAchievementMask = 0;
+                  ScorePopupSupport.newAchievementMask = 0;
                   SecondaryNodeDeque.receivedAchievementMask = -2147483648;
                 case 5:
                   if ((2 != this.screenId) &&
@@ -2008,11 +2008,11 @@ final class GameScreen extends MenuScreen {
                     if (UnderlinedButtonRenderer.c(-114)) {
                       if (!((!UiWidget.gameplaySession.tutorialMode) &&
                             (UiWidget.gameplaySession.score == 0) &&
-                            (ug.newAchievementMask == 0)) &&
+                            (ScorePopupSupport.newAchievementMask == 0)) &&
                           !((UiWidget.gameplaySession.tutorialMode) &&
                             (UiWidget.gameplaySession.updateTick < 750))) {
                         if ((0 == UiWidget.gameplaySession.score) &&
-                            (0 == ug.newAchievementMask)) {
+                            (0 == ScorePopupSupport.newAchievementMask)) {
                           ScoreSubmission.requestedScreenId = 0;
                           if (clientControlFlowGuard == 0) {
                             break L34;
@@ -2029,7 +2029,7 @@ final class GameScreen extends MenuScreen {
                       }
                     }
                     if ((UiWidget.gameplaySession.score == 0) &&
-                        (ug.newAchievementMask == 0)) {
+                        (ScorePopupSupport.newAchievementMask == 0)) {
                       ScoreSubmission.requestedScreenId = 0;
                       if (clientControlFlowGuard == 0) {
                         break L34;
@@ -2131,14 +2131,14 @@ final class GameScreen extends MenuScreen {
               }
             }
             BoardReconciliationSupport.sessionStartAttemptCount = BoardReconciliationSupport.sessionStartAttemptCount + 1;
-            pg.resetGameplayDifficulty(methodGuard ^ -9410);
+            GameplaySetupSupport.resetGameplayDifficulty(methodGuard ^ -9410);
             UiWidget.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
             PointerInputListener.a((byte) -39);
             ScoreSubmission.requestedScreenId = -1;
           }
           if (suppressPressAnimationFlag == 0) {
             this.menuPressAnimationActive = true;
-            a.field_e = -1;
+            BoardEntityState.selectedAchievementIndex = -1;
           }
           if (~this.screenId != ~ScoreSubmission.requestedScreenId) {
             if ((this.screenId != 1) &&

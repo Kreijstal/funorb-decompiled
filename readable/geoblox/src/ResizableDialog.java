@@ -9,13 +9,13 @@ abstract class ResizableDialog extends FadingDialog {
     private int resizeDurationTicks;
     private int resizeTargetWidth;
     private int resizeStartHeight;
-    static ClientProtocolStage field_T;
+    static ClientProtocolStage awaitingInitialLoginReplyStage;
     private int resizeTick;
     static int field_V;
     static boolean field_S;
 
     public static void j(int param0) {
-        field_T = null;
+        awaitingInitialLoginReplyStage = null;
         if (param0 != 89) {
             field_S = false;
         }
@@ -299,7 +299,7 @@ abstract class ResizableDialog extends FadingDialog {
             var4 -= 10;
           }
           if (param0) {
-            stackIn_7_0 = ug.newAchievementMask;
+            stackIn_7_0 = ScorePopupSupport.newAchievementMask;
           } else {
             stackIn_7_0 = InstrumentPatch.earnedAchievementMask;
           }
@@ -314,7 +314,7 @@ abstract class ResizableDialog extends FadingDialog {
             if (var8 >= 8) {
               var3_int = var3_int + (-160 + var7);
             }
-            for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
+            for (var9 = 0; GameplaySetupSupport.achievementTitles.length > var9; var9++) {
               if (!(((1 << var9 & var5) == 0) &&
                     (param0)) &&
                   !((!da.a(0, 88)) &&
@@ -324,11 +324,11 @@ abstract class ResizableDialog extends FadingDialog {
                     (mc.pointerPressXSnapshot <= var3_int + 32) &&
                     (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
                     (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
-                  if (a.field_e == var9) {
-                    a.field_e = -1;
+                  if (BoardEntityState.selectedAchievementIndex == var9) {
+                    BoardEntityState.selectedAchievementIndex = -1;
                     return;
                   }
-                  a.field_e = var9;
+                  BoardEntityState.selectedAchievementIndex = var9;
                   return;
                 }
                 incrementValue$1 = var6;
@@ -358,7 +358,7 @@ abstract class ResizableDialog extends FadingDialog {
             if (var8 >= 8) {
               var3_int = var3_int + (-160 + var7);
             }
-            for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
+            for (var9 = 0; GameplaySetupSupport.achievementTitles.length > var9; var9++) {
               if (!(((1 << var9 & var5) == 0) &&
                     (param0)) &&
                   !((!da.a(0, 88)) &&
@@ -368,11 +368,11 @@ abstract class ResizableDialog extends FadingDialog {
                     (mc.pointerPressXSnapshot <= var3_int + 32) &&
                     (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
                     (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
-                  if (a.field_e == var9) {
-                    a.field_e = -1;
+                  if (BoardEntityState.selectedAchievementIndex == var9) {
+                    BoardEntityState.selectedAchievementIndex = -1;
                     return;
                   }
-                  a.field_e = var9;
+                  BoardEntityState.selectedAchievementIndex = var9;
                   return;
                 }
                 incrementValue$0 = var6;
@@ -516,7 +516,7 @@ abstract class ResizableDialog extends FadingDialog {
     static {
         awtKeyCodeToInternalCode = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1, -1, -1, -1, 13, -1, -1, -1, -1, 83, 104, 105, 103, 102, 96, 98, 97, 99, -1, -1, -1, -1, -1, -1, -1, 25, 16, 17, 18, 19, 20, 21, 22, 23, 24, -1, -1, -1, -1, -1, -1, -1, 48, 68, 66, 50, 34, 51, 52, 53, 39, 54, 55, 56, 70, 69, 40, 41, 32, 35, 49, 36, 38, 67, 33, 65, 37, 64, -1, -1, -1, -1, -1, 228, 231, 227, 233, 224, 219, 225, 230, 226, 232, 89, 87, -1, 88, 229, 90, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -1, -1, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         connectionRestoredText = "Connection restored.";
-        field_T = new ClientProtocolStage();
+        awaitingInitialLoginReplyStage = new ClientProtocolStage();
         field_V = 0;
         field_S = false;
     }

@@ -161,9 +161,9 @@ final class w {
                     CacheReference.field_q.position = 0;
                     var5.position = 0;
                     MidiNoteMixer.field_o = param0 ? -2 : -1;
-                    dc.field_b = param0 ? -2 : -1;
+                    AttachedEntityRenderer.field_b = param0 ? -2 : -1;
                     VisualPropertyNode.field_n = param0 ? -2 : -1;
-                    PacketBuffer.currentProtocolStage = IterableNodeHashTable.field_d;
+                    PacketBuffer.currentProtocolStage = IterableNodeHashTable.requestReadyStage;
                     ke.writeConnectionHeader(qe.field_b, true, ok.field_f, EmailAvailabilityValidator.field_l, CacheReference.field_q);
                     NanoFrameTimer.a(param1 ^ -53, -1);
                 } catch (IOException iOException) {

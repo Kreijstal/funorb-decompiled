@@ -156,13 +156,13 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         var8 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = -108 / ((-71 - param0) / 45);
-          if (eh.field_b != PacketBuffer.currentProtocolStage) {
+          if (eh.connectedSessionStage != PacketBuffer.currentProtocolStage) {
             return false;
           }
           var3 = oa.a(-12520);
           if ((EntityMotionSupport.field_b != 0) &&
               (MidiNote.field_f < 0)) {
-            var5_ref_ma = (DelayedIncomingPacket) ((Object) va.field_c.firstForIteration(0));
+            var5_ref_ma = (DelayedIncomingPacket) ((Object) MeshPrioritySupport.field_c.firstForIteration(0));
             if ((var5_ref_ma != null) &&
                 (var3 > var5_ref_ma.deliveryTimeMillis)) {
               var5_ref_ma.unlinkNode(false);
@@ -171,8 +171,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
               for (var6_int = 0; var6_int < AchievementSubmission.field_k; var6_int++) {
                 eh.field_d.bytes[var6_int] = var5_ref_ma.payload[var6_int];
               }
-              MidiNoteMixer.field_o = dc.field_b;
-              dc.field_b = VisualPropertyNode.field_n;
+              MidiNoteMixer.field_o = AttachedEntityRenderer.field_b;
+              AttachedEntityRenderer.field_b = VisualPropertyNode.field_n;
               VisualPropertyNode.field_n = ScorePopup.field_l;
               ScorePopup.field_l = var5_ref_ma.packetOpcode;
               return true;
@@ -192,16 +192,16 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
               return false;
             }
             if (EntityMotionSupport.field_b == 0) {
-              MidiNoteMixer.field_o = dc.field_b;
-              dc.field_b = VisualPropertyNode.field_n;
+              MidiNoteMixer.field_o = AttachedEntityRenderer.field_b;
+              AttachedEntityRenderer.field_b = VisualPropertyNode.field_n;
               VisualPropertyNode.field_n = ScorePopup.field_l;
               ScorePopup.field_l = MidiNote.field_f;
               MidiNote.field_f = -1;
               return true;
             }
             var5 = EntityMotionSupport.field_b;
-            if (0.0 != fc.field_a) {
-              var5 = (int)((double)var5 + DelegatingCanvas.field_d.nextGaussian() * fc.field_a);
+            if (0.0 != EndingAnimationSupport.field_a) {
+              var5 = (int)((double)var5 + DelegatingCanvas.field_d.nextGaussian() * EndingAnimationSupport.field_a);
               if (var5 < 0) {
                 var5 = 0;
               }
@@ -210,7 +210,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             for (var7 = 0; AchievementSubmission.field_k > var7; var7++) {
               var6.payload[var7] = eh.field_d.bytes[var7];
             }
-            va.field_c.addLast(-108, var6);
+            MeshPrioritySupport.field_c.addLast(-108, var6);
             MidiNote.field_f = -1;
             continue;
           }

@@ -24,7 +24,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             RasterTargetSnapshot.field_f[5] = FullscreenErrorDialog.menuText;
             RasterTargetSnapshot.field_f[0] = TextPairLoginPayload.startGameText;
             RasterTargetSnapshot.field_f[4] = SessionGameApplet.fullscreenText;
-            RasterTargetSnapshot.field_f[param0] = fc.musicLabelText;
+            RasterTargetSnapshot.field_f[param0] = EndingAnimationSupport.musicLabelText;
             RasterTargetSnapshot.field_f[10] = bl.achievementsText;
             RasterTargetSnapshot.field_f[11] = RasterTargetSnapshot.previousText;
             RasterTargetSnapshot.field_f[15] = ArchiveCatalog.field_a;

@@ -30,8 +30,8 @@ final class TextValidationFailure {
           }
           var7 = stackIn_17_0;
           ClientProtocolStage.field_a[md.field_c] = var7;
-          if (va.field_b < var7) {
-            va.field_b = var7;
+          if (MeshPrioritySupport.field_b < var7) {
+            MeshPrioritySupport.field_b = var7;
           }
           md.field_c = md.field_c + 1;
           if (LoginPayloadKind.field_a <= var7) {
@@ -40,7 +40,7 @@ final class TextValidationFailure {
           LoginPayloadKind.field_a = var7;
           return;
         }
-        va.field_b = param5;
+        MeshPrioritySupport.field_b = param5;
         TextHotspotBounds.field_m[md.field_c] = param3;
         NodeHashTableIterator.field_i[md.field_c] = param4;
         FrameTimer.field_b[md.field_c] = param0;
@@ -53,8 +53,8 @@ final class TextValidationFailure {
         }
         var7 = stackIn_7_0;
         ClientProtocolStage.field_a[md.field_c] = var7;
-        if (va.field_b < var7) {
-          va.field_b = var7;
+        if (MeshPrioritySupport.field_b < var7) {
+          MeshPrioritySupport.field_b = var7;
         }
         md.field_c = md.field_c + 1;
         if (LoginPayloadKind.field_a <= var7) {

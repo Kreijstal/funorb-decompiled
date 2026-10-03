@@ -121,7 +121,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.newsOptInCheckbox = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.createButton = new ButtonWidget(TextTemplateDefinitionLoader.createText, (WidgetListener) null);
         this.backButton = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
-        this.displayNameInput.hoverText = ud.createDisplayNameTooltipText;
+        this.displayNameInput.hoverText = AchievementProtocolSupport.createDisplayNameTooltipText;
         this.emailInput.hoverText = ll.createEmailTooltipText;
         this.confirmEmailInput.hoverText = ok.createEmailConfirmationTooltipText;
         this.passwordInput.hoverText = FullscreenErrorDialog.createPasswordTooltipText;
@@ -148,7 +148,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.passwordInput.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = OpacityWidget.a(ArchiveIndex.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
         int var3 = 20;
-        var3 = var3 + this.a(var3, ug.createEmailText, 170, this.emailInput, 5);
+        var3 = var3 + this.a(var3, ScorePopupSupport.createEmailText, 170, this.emailInput, 5);
         var3 = var3 + (5 + this.a(this.confirmEmailInput, 170, ok.createEmailConfirmationText, 20, "", var3, (byte) -65));
         var3 = var3 + this.a(var3, LoginPayloadKind.createPasswordText, 170, this.passwordInput, 5);
         var3 = var3 + (this.a(-99, this.confirmPasswordInput, CanvasResizeController.createPasswordConfirmationText, var3, 170, createPasswordHintText) + 5);

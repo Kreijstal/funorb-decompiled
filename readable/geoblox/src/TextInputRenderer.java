@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class TextInputRenderer extends TextWidgetRenderer {
-    static ClientProtocolStage field_v;
+    static ClientProtocolStage awaitingLoginFailureTextStage;
     static int field_s;
     static String[] mustLoginAlternateTexts;
     static TextWidgetRenderer field_t;
@@ -119,11 +119,11 @@ class TextInputRenderer extends TextWidgetRenderer {
           if (!param1) {
             stackIn_7_0 = InstrumentPatch.earnedAchievementMask;
           } else {
-            stackIn_7_0 = ug.newAchievementMask;
+            stackIn_7_0 = ScorePopupSupport.newAchievementMask;
           }
           var5 = stackIn_7_0;
           var6 = 0;
-          var7 = a.field_e;
+          var7 = BoardEntityState.selectedAchievementIndex;
           var8 = 0;
           var9 = 0;
           if (param1) {
@@ -139,7 +139,7 @@ class TextInputRenderer extends TextWidgetRenderer {
           if (8 <= var9) {
             var3_int = var3_int + (-160 + var8);
           }
-          for (var10 = 0; var10 < pg.achievementTitles.length; var10++) {
+          for (var10 = 0; var10 < GameplaySetupSupport.achievementTitles.length; var10++) {
             if ((!da.a(0, -119)) &&
                 (var10 == 16) &&
                 (!AchievementQuery.hasReceivedAchievementSixteen(105))) {
@@ -157,7 +157,7 @@ class TextInputRenderer extends TextWidgetRenderer {
               }
               SoftwareRasterizer.drawRoundedRectangle(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
             }
-            if (var10 == a.field_e) {
+            if (var10 == BoardEntityState.selectedAchievementIndex) {
               SoftwareRasterizer.fillRoundedRectangle(var3_int, var4, 32, 32, 2, 15488514);
               SoftwareRasterizer.drawRoundedRectangle(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
             }
@@ -195,7 +195,7 @@ class TextInputRenderer extends TextWidgetRenderer {
           }
           var10 = stackIn_59_0 + stackIn_60_1;
           if (var7 != -1) {
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(pg.achievementTitles[var7], 315, var10, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(GameplaySetupSupport.achievementTitles[var7], 315, var10, 0, -1);
             var11 = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
             var12 = 280;
             if (0 != (1 << var7 & var5)) {
@@ -209,7 +209,7 @@ class TextInputRenderer extends TextWidgetRenderer {
               FadingDialog.uiPaletteFont.drawText(DebouncedValidationProvider.field_d, 318, var12, 0, -1);
               FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
             }
-            var12 = var12 + (IntrusiveNodeHashTable.smallFont.drawParagraph(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
+            var12 = var12 + (IntrusiveNodeHashTable.smallFont.drawParagraph(LoginProtocolSupport.achievementDescriptions[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
             var12 += 10;
             IntrusiveNodeHashTable.smallFont.drawText(OpacityWidget.a(UsernameAvailabilityQuery.orbPointsText, new String[]{Integer.toString(AlternateLongAndTextLoginPayload.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
             for (var13 = 0; var13 < SocketArchiveNetworkClient.field_s[var7]; var13++) {
@@ -237,14 +237,14 @@ class TextInputRenderer extends TextWidgetRenderer {
         field_t = null;
         mustLoginAlternateTexts = null;
         secondVertexTransformedY = null;
-        field_v = null;
+        awaitingLoginFailureTextStage = null;
         if (param0 < 62) {
             field_s = -128;
         }
     }
 
     static {
-        field_v = new ClientProtocolStage();
+        awaitingLoginFailureTextStage = new ClientProtocolStage();
         mustLoginAlternateTexts = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         secondVertexTransformedY = new int[8192];
         field_u = 11;

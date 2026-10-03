@@ -38,23 +38,23 @@ final class LabeledChildWidget extends SingleChildWidget {
           return;
         }
         TextTemplateDefinitionLoader.releasedInDifficultyStep = TextTemplateDefinitionLoader.releasedInDifficultyStep + 1;
-        ul.releasedInCurrentTheme = ul.releasedInCurrentTheme + 1;
+        MatchCandidateSupport.releasedInCurrentTheme = MatchCandidateSupport.releasedInCurrentTheme + 1;
         if ((ContextualRuntimeException.releasesPerDifficultyStep == TextTemplateDefinitionLoader.releasedInDifficultyStep) &&
             (DequeCursor.field_c < 2)) {
           TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
-          ld.advanceDifficulty(false);
+          PlayfieldRules.advanceDifficulty(false);
           DequeCursor.field_c = DequeCursor.field_c + 1;
         }
         if (param0 != 2) {
           nineSliceSavedClip = (int[]) null;
         }
-        if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
-          ul.releasedInCurrentTheme = 0;
+        if (fa.releasesPerTheme == MatchCandidateSupport.releasedInCurrentTheme) {
+          MatchCandidateSupport.releasedInCurrentTheme = 0;
           CacheReference.field_m = 0;
           UiWidget.gameplaySession.sessionPhase = 1;
           TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
           if (DequeCursor.field_c < 2) {
-            ld.advanceDifficulty(false);
+            PlayfieldRules.advanceDifficulty(false);
           }
           DequeCursor.field_c = 0;
           UiWidget.completedThemeCount = UiWidget.completedThemeCount + 1;

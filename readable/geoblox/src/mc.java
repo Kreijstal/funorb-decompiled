@@ -75,7 +75,7 @@ final class mc {
     final static void snapshotPointerInput(byte methodGuard) {
         Throwable unusedPointerSnapshotFailureCarrier = null;
         Object pointerMonitor = null;
-        pointerMonitor = pg.pointerListener;
+        pointerMonitor = GameplaySetupSupport.pointerListener;
         synchronized (pointerMonitor) {
           GameplaySession.pointerIdleTicks = GameplaySession.pointerIdleTicks + 1;
           EntityCollisionSupport.heldPointerButtonSnapshot = Under13TermsPanel.liveHeldPointerButton;
@@ -84,8 +84,8 @@ final class mc {
           }
           PrefixCodeDecoder.pointerXSnapshot = lj.livePointerX;
           PcmResampler.pointerYSnapshot = ReflectionCheckRequest.livePointerY;
-          wb.pointerActivitySnapshot = fc.pointerActivityPending;
-          fc.pointerActivityPending = false;
+          wb.pointerActivitySnapshot = EndingAnimationSupport.pointerActivityPending;
+          EndingAnimationSupport.pointerActivityPending = false;
           CheckboxRenderer.pointerPressButtonSnapshot = ClientSessionSnapshot.pendingPointerPressButton;
           pointerPressXSnapshot = ah.livePointerPressX;
           FullscreenFocusCanvas.pointerPressYSnapshot = DisplayNamePanel.livePointerPressY;

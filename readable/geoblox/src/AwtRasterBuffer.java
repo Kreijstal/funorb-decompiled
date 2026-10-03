@@ -27,7 +27,7 @@ abstract class AwtRasterBuffer {
         for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
             rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt(255, (int) paletteIndices[pixelIndex])];
         }
-        Sprite sprite = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], rgbPixels);
+        Sprite sprite = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], rgbPixels);
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprite;
     }

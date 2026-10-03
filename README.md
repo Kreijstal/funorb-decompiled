@@ -17,14 +17,36 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 120 adds 149 guarded names: seven classes, four fields, 15 methods,
+Pass 121 adds 286 guarded names: 14 classes, 19 fields, 24 methods,
+44 parameters and 185 locals. The game now reads through `MatchCandidateSupport`,
+`MatchScoringSupport`, `PlayfieldRules`, `ScorePopupSupport`,
+`AttachedEntityRenderer`, `EndingAnimationSupport`, `DebugOverviewCompositor`,
+`MeshDepthSupport`, `MeshPrioritySupport`, `GameplaySetupSupport`,
+`BoardEntityState` and `GameSoundResources`. Session calls expose
+`LoginProtocolSupport.advanceLoginHandshake` and `AchievementProtocolSupport`.
+All parameters and locals in the 14 audited owners now have guarded names.
+Shared login phases expose request readiness, initial reply, result, details,
+failure text and connected-session identity. The reflection decoder names its
+operation/class/member/argument data, reused argument-count/integer-write slot,
+serialized buffers and per-operation failures. Its generated increment state
+keeps the original zero/one values and control flow. Class names describe helper
+families; unrelated static functions and globals stay on each owner.
+All 10,038 previous complete rules, raw bodies, local ordinals, bytecode and
+source/tool/native trace pins remain. The export has 10,324 rules and 81,351
+identifier edits. All 303 raw/readable sources compile, compare 136,612 bindings
+and preserve 388 override relationships. Class coverage is 247 renamed, one
+meaningful original name and 55 opaque names. Six large labeled bodies and
+207 block labels remain. New naming does not establish full login/reflection/
+server, asset/audio/AWT/browser/phone or heap/FPS equivalence.
+
+Pass 120 added 149 guarded names: seven classes, four fields, 15 methods,
 28 parameters and 95 locals. The main gameplay helper owners now read as
 `EntityMotionSupport`, `EntityCollisionSupport`, `EntitySpawnSupport`,
 `BoardReconciliationSupport`, `EntityContactSupport`, `EntityLinkSupport` and
@@ -163,8 +185,8 @@ reflection spellings remain unchanged. Update the single preview in place using
 `node readable/reproduce-geoblox.mjs --update`; earlier versions live in Git.
 
 Pass 109 names `AchievementQuery`, `cf.requestAchievementState`,
-`re.writeAchievementStateRequest`, `ud.handleAchievementResponse`,
-`ud.resendAchievementMessages` and the singleton query/queue/result fields.
+`re.writeAchievementStateRequest`, `AchievementProtocolSupport.handleAchievementResponse`,
+`AchievementProtocolSupport.resendAchievementMessages` and the singleton query/queue/result fields.
 It adds 53 guarded names, bringing the total to 8,556 and 66,611 edits, while
 retaining every previous rule and the raw/decompiler pins. The existing
 achievement probe adds a separate 284-case native/raw/readable trace covering
@@ -695,7 +717,7 @@ hand and no new JSON snapshots are created.
 
 The earlier integral-guard pass reused cached JVM integral-predicate evidence to
 simplify relational inversions during nested-tail reconstruction. It removes
-18 lines across four files and reduces `ld.advanceDifficulty` from 56 lines to
+18 lines across four files and reduces `PlayfieldRules.advanceDifficulty` from 56 lines to
 38. Variant, recursive-advance and category updates now each have one path;
 category flags are still read after the recursive call, preserving partial
 updates and array failures. The earlier local and nested passes reduced this

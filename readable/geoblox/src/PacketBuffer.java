@@ -102,7 +102,7 @@ final class PacketBuffer extends ByteArrayBuffer {
               } else {
                 sampleBeforeResampling = te.gameSoundSampleCache.getSynthesizedSampleByName(1, w.gameSoundResourceNames[soundIndexThenFlagReset]);
               }
-              fl.gameSoundSamples[soundIndexThenFlagReset] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
+              GameSoundResources.gameSoundSamples[soundIndexThenFlagReset] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
               SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndexThenFlagReset] = true;
             }
             soundIndexThenFlagReset++;

@@ -10,7 +10,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
 
     final static void b(int param0) {
         AgeValidator.field_i = false;
-        va.field_d = false;
+        MeshPrioritySupport.field_d = false;
         MidiNote.a(-1, false);
         WidgetSkinState.field_g = DiskCacheWorker.field_l;
         kd.field_b = DiskCacheWorker.field_l;

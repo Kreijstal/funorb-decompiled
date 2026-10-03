@@ -160,14 +160,14 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           ProgressBarWidget.field_D[1] = DelegatingCanvas.field_d.nextInt();
           ProgressBarWidget.field_D[2] = (int)(ak.field_a >> 32);
           ProgressBarWidget.field_D[3] = (int)ak.field_a;
-          fc.field_d.position = 0;
-          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[0]);
-          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[1]);
-          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[2]);
-          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[3]);
-          SpriteState.a(fc.field_d, true);
-          fc.field_d.writeShortBE(param1, 28695);
-          param3.writePayload(124, fc.field_d);
+          EndingAnimationSupport.loginPayloadBuffer.position = 0;
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[0]);
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[1]);
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[2]);
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[3]);
+          SpriteState.a(EndingAnimationSupport.loginPayloadBuffer, true);
+          EndingAnimationSupport.loginPayloadBuffer.writeShortBE(param1, 28695);
+          param3.writePayload(124, EndingAnimationSupport.loginPayloadBuffer);
           CacheReference.field_q.position = 0;
           if (param2) {
             CacheReference.field_q.writeByte((byte) 121, 18);
@@ -191,7 +191,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (param4) {
             var6 = var6 | 8;
           }
-          if (null != fl.field_b) {
+          if (null != GameSoundResources.optionalLoginText) {
             var6 = var6 | 16;
           }
           CacheReference.field_q.writeByte((byte) 127, var6);
@@ -200,10 +200,10 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             var7 = "";
           }
           CacheReference.field_q.writeNullTerminatedText(var7, 0);
-          if (null != fl.field_b) {
-            CacheReference.field_q.writeZeroPrefixedNullTerminatedText(fl.field_b, (byte) -126);
+          if (null != GameSoundResources.optionalLoginText) {
+            CacheReference.field_q.writeZeroPrefixedNullTerminatedText(GameSoundResources.optionalLoginText, (byte) -126);
           }
-          UiWidget.a(false, fc.field_d, CacheReference.field_q, ld.field_c, InstrumentPatch.field_l);
+          UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.field_q, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
           CacheReference.field_q.backpatchLengthShortBE(-var5_int + CacheReference.field_q.position, true);
           NanoFrameTimer.a(-1, -1);
           return;

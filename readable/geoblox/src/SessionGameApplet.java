@@ -28,7 +28,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (ArchiveLoadStep.field_e) {
           return -1;
         }
-        var2 = ri.a(true, ContextualRuntimeException.a(true), this.field_r, this.field_v, al.b(param0 + 1), 0);
+        var2 = LoginProtocolSupport.advanceLoginHandshake(true, ContextualRuntimeException.a(true), this.field_r, this.field_v, al.b(param0 + 1), 0);
         if (var2 == param0) {
           return -1;
         }
@@ -105,11 +105,11 @@ abstract class SessionGameApplet extends GameApplet {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        va.field_a = this.field_u;
-        da.a(true, va.field_a);
+        MeshPrioritySupport.field_a = this.field_u;
+        da.a(true, MeshPrioritySupport.field_a);
         if (param0 == -70) {
-            ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, va.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
-            TextInputValidator.initializeArchiveServices(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
+            ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, MeshPrioritySupport.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
+            TextInputValidator.initializeArchiveServices(param7, MeshPrioritySupport.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
             StatefulWidgetRenderer.b(28);
             CachedTextLayout.mouseWheelInput = TextValidationFailure.a(param0 + 113);
             UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
@@ -129,7 +129,7 @@ abstract class SessionGameApplet extends GameApplet {
             return;
         }
         String var2 = HotspotTextWidget.i(1000);
-        va.a(var2, NodeHashTableIterator.c(111), param0 + 10);
+        MeshPrioritySupport.updateSessionCookie(var2, NodeHashTableIterator.c(111), param0 + 10);
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
@@ -173,10 +173,10 @@ abstract class SessionGameApplet extends GameApplet {
             ByteArrayBuffer.resendByteShortQueries(true, 2);
           }
           if (OpacityWidget.field_G[2]) {
-            ec.a(param0 ^ 76, 3);
+            MatchScoringSupport.resendScoreAndHighscoreRequests(param0 ^ 76, 3);
           }
           if (OpacityWidget.field_G[3]) {
-            ud.resendAchievementMessages((byte) -125, 4);
+            AchievementProtocolSupport.resendAchievementMessages((byte) -125, 4);
           }
           if (OpacityWidget.field_G[4]) {
             oi.resendIntRecordRequests(5, 116);
@@ -350,15 +350,15 @@ abstract class SessionGameApplet extends GameApplet {
           VisualPropertyOverrides.field_C = 1;
         }
         if (VisualPropertyOverrides.field_C == 1) {
-          if (va.field_a != 0) {
+          if (MeshPrioritySupport.field_a != 0) {
             FadingDialog.field_J = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.field_e, (byte) -62);
           }
           DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.field_c, (byte) -18, true, false, 1);
-          dc.field_c = DisplayModeInfo.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
+          AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
           DialRenderer.field_n = DisplayModeInfo.a(sb.field_d, (byte) -41, true, false, 1);
           ki.basicUiGraphicsArchive = DirectByteStorage.field_h;
           VisualPropertyOverrides.field_C = 2;
-          RankedListQuery.field_i = dc.field_c;
+          RankedListQuery.field_i = AttachedEntityRenderer.field_c;
         }
         if (VisualPropertyOverrides.field_C == 2) {
           if ((FadingDialog.field_J != null) &&
@@ -378,23 +378,23 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if ((3 == VisualPropertyOverrides.field_C) &&
-            (DelayedIncomingPacket.a(DialRenderer.field_n, dc.field_c, DirectByteStorage.field_h, -11652)) &&
+            (DelayedIncomingPacket.a(DialRenderer.field_n, AttachedEntityRenderer.field_c, DirectByteStorage.field_h, -11652)) &&
             (DisplayModeInfo.a((byte) -127, DialRenderer.field_n))) {
           tj.c((byte) -105);
           ke.b((byte) 120);
           oi.field_e = ArchiveSource.loadingText;
           kf.field_e = false;
-          CacheReference.a((byte) 114, DialRenderer.field_n, rb.field_c, dc.field_c, DirectByteStorage.field_h);
-          if (!((!ri.field_a) &&
+          CacheReference.a((byte) 114, DialRenderer.field_n, rb.field_c, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
+          if (!((!LoginProtocolSupport.field_a) &&
               (SocketConnector.field_d == null))) {
             stackIn_100_0 = 2274;
             stackIn_100_1 = SocketConnector.field_d;
-            if (ri.field_a) {
+            if (LoginProtocolSupport.field_a) {
               stackIn_101_2 = false;
             } else {
               stackIn_101_2 = true;
             }
-            if (ri.field_a) {
+            if (LoginProtocolSupport.field_a) {
               stackIn_104_3 = false;
             } else {
               stackIn_104_3 = true;
@@ -410,14 +410,14 @@ abstract class SessionGameApplet extends GameApplet {
           }
           bk.a(DialRenderer.field_n, ValidatedTextInputWidget.field_R, 111, DelegatingCanvas.field_a);
           DialRenderer.field_n = null;
-          dc.field_c = null;
+          AttachedEntityRenderer.field_c = null;
           DirectByteStorage.field_h = null;
           MeshMaterial.a((java.applet.Applet) (this), -82);
           EntityContactSupport.resetFrameTimingHistory(-69);
           VisualPropertyOverrides.field_C = 10;
         }
         if (10 == VisualPropertyOverrides.field_C) {
-          if (va.field_a != 0) {
+          if (MeshPrioritySupport.field_a != 0) {
             ak.field_b = SocketArchiveNetworkClient.createResourceArchive(ah.field_a, (byte) -62);
           }
           VisualPropertyOverrides.field_C = 11;
@@ -427,7 +427,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (null != ak.field_b) {
               if (!((ak.field_b.ensureIndexLoaded(0)) &&
                   (ak.field_b.loadAllGroups(true)))) {
-                HighscoreNameEntry.a(WidgetSkinState.a(ri.field_c, 2147483647, CachedTextLayout.field_g, ak.field_b), -2, 0.0f);
+                HighscoreNameEntry.a(WidgetSkinState.a(LoginProtocolSupport.field_c, 2147483647, CachedTextLayout.field_g, ak.field_b), -2, 0.0f);
                 break L30;
               }
             }
@@ -518,7 +518,7 @@ abstract class SessionGameApplet extends GameApplet {
             Boolean var11 = null;
             ByteArrayBuffer var12 = null;
             var8 = Geoblox.clientControlFlowFlag;
-            var4 = ClientProtocolStage.a(va.field_a, CachedTextLayout.wheelRotationSnapshot, param1, (byte) -117);
+            var4 = ClientProtocolStage.a(MeshPrioritySupport.field_a, CachedTextLayout.wheelRotationSnapshot, param1, (byte) -117);
             if (param2 == ~var4) {
               throw new IllegalStateException();
             }
@@ -549,7 +549,7 @@ abstract class SessionGameApplet extends GameApplet {
                 SocialListEntry.e(-21754);
               }
               if (!param0) {
-                var5_int = ri.a(false, ContextualRuntimeException.a(true), this.field_r, this.field_v, al.b(~param2), ~param2);
+                var5_int = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.a(true), this.field_r, this.field_v, al.b(~param2), ~param2);
                 if (var5_int != -1) {
                   if (var5_int == 0) {
                     CheckboxWidget.field_H = oa.field_c;
@@ -737,13 +737,13 @@ abstract class SessionGameApplet extends GameApplet {
             return;
           }
           if (var2 == 1) {
-            ec.handleByteShortReply(-1073741824);
+            MatchScoringSupport.handleByteShortReply(-1073741824);
           } else {
             if (var2 == 2) {
               NanoFrameTimer.handleRankingResponse(-24839);
             } else {
               if (3 == var2) {
-                ud.handleAchievementResponse(119);
+                AchievementProtocolSupport.handleAchievementResponse(119);
               } else {
                 if (var2 != 4) {
                   if (5 == var2) {
@@ -754,7 +754,7 @@ abstract class SessionGameApplet extends GameApplet {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          pg.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, eh.field_d);
+                          GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, eh.field_d);
                         } else {
                           if (var2 == 16) {
                             DualLinkNode.b(1);

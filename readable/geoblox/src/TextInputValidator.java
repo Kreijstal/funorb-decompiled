@@ -133,7 +133,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          va.field_d = false;
+          MeshPrioritySupport.field_d = false;
           ArchiveLoadStep.field_a = false;
           if ((null != Geoblox.activeMessageDialog) &&
               (Geoblox.activeMessageDialog.dialogVisible)) {

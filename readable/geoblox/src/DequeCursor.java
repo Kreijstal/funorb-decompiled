@@ -21,7 +21,7 @@ final class DequeCursor {
         var4 = Geoblox.clientControlFlowFlag;
         try {
           if (MatchingTextValidator.field_j == param0) {
-            ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[25]);
+            ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[25]);
           }
           MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
           while (true) {
@@ -36,7 +36,7 @@ final class DequeCursor {
               UnderlinedButtonRenderer.field_c = MatchingTextValidator.field_j;
               CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
               if (10 == CachedTextLayout.field_h) {
-                ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[26]);
+                ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
               }
             }
             var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
@@ -47,12 +47,12 @@ final class DequeCursor {
             var3 = MatchingTextValidator.field_j << 2;
             if ((!sg.field_d) &&
                 (-var3 + 900 <= 320 + var2)) {
-              ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[7]);
+              ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[7]);
               sg.field_d = true;
             }
             if ((!EntityMotionSupport.field_d) &&
                 (-var2 + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
-              ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[8]);
+              ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[8]);
               EntityMotionSupport.field_d = true;
             }
             stackIn_25_0 = !(494 > MatchingTextValidator.field_j);
@@ -121,7 +121,7 @@ final class DequeCursor {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.clientControlFlowFlag;
         try {
-          kd.field_e.processPointerFrame(true, 127, ec.field_d, mj.field_b);
+          kd.field_e.processPointerFrame(true, 127, MatchScoringSupport.field_d, mj.field_b);
           kd.field_e.advanceDialogAnimations(-65);
           while (hh.pollKeyboardEvent(77)) {
             kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
@@ -132,7 +132,7 @@ final class DequeCursor {
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
-          if (va.field_d) {
+          if (MeshPrioritySupport.field_d) {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }

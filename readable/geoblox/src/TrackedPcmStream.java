@@ -16,7 +16,7 @@ final class TrackedPcmStream extends IntrusiveNode {
                 (!(!MouseWheelInput.achievementStateQuery.completed))) {
                 SecondaryNodeDeque.receivedAchievementMask = MouseWheelInput.achievementStateQuery.achievementMask;
                 hj.achievementMaskReceived = true;
-                ug.newAchievementMask = ug.newAchievementMask & ~SecondaryNodeDeque.receivedAchievementMask;
+                ScorePopupSupport.newAchievementMask = ScorePopupSupport.newAchievementMask & ~SecondaryNodeDeque.receivedAchievementMask;
                 InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | SecondaryNodeDeque.receivedAchievementMask;
             }
             if (methodGuard >= -119) {

@@ -7,7 +7,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
 
     final static void a(byte param0) {
         ArchiveNetworkClient.movingEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
-        a.attachedEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
+        BoardEntityState.attachedEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         SecondaryDeque.spawnQueue.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         DelegatingCanvas.transientEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
@@ -57,11 +57,11 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent event) {
         try {
-            if (pg.pointerListener != null) {
+            if (GameplaySetupSupport.pointerListener != null) {
                 GameplaySession.pointerIdleTicks = 0;
                 lj.livePointerX = event.getX();
                 ReflectionCheckRequest.livePointerY = event.getY();
-                fc.pointerActivityPending = true;
+                EndingAnimationSupport.pointerActivityPending = true;
             }
         } catch (RuntimeException callbackFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseEntered(" + (event != null ? "{...}" : "null") + ')');
@@ -96,10 +96,10 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (null != pg.pointerListener) {
+          if (null != GameplaySetupSupport.pointerListener) {
             GameplaySession.pointerIdleTicks = 0;
             Under13TermsPanel.liveHeldPointerButton = 0;
-            fc.pointerActivityPending = true;
+            EndingAnimationSupport.pointerActivityPending = true;
             eventModifiers = event.getModifiers();
             if (0 == (eventModifiers & 4)) {
             }
@@ -136,11 +136,11 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent event) {
         try {
-            if (null != pg.pointerListener) {
+            if (null != GameplaySetupSupport.pointerListener) {
                 GameplaySession.pointerIdleTicks = 0;
                 lj.livePointerX = event.getX();
                 ReflectionCheckRequest.livePointerY = event.getY();
-                fc.pointerActivityPending = true;
+                EndingAnimationSupport.pointerActivityPending = true;
             }
         } catch (RuntimeException callbackFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseDragged(" + (event != null ? "{...}" : "null") + ')');
@@ -154,13 +154,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (null == pg.pointerListener) {
+          if (null == GameplaySetupSupport.pointerListener) {
             return;
           }
           GameplaySession.pointerIdleTicks = 0;
           lj.livePointerX = -1;
           ReflectionCheckRequest.livePointerY = -1;
-          fc.pointerActivityPending = true;
+          EndingAnimationSupport.pointerActivityPending = true;
           return;
         } catch (java.lang.RuntimeException callbackFailure) {
           caughtCallbackFailure = callbackFailure;
@@ -184,7 +184,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (pg.pointerListener != null) {
+          if (GameplaySetupSupport.pointerListener != null) {
             GameplaySession.pointerIdleTicks = 0;
             ah.livePointerPressX = event.getX();
             DisplayNamePanel.livePointerPressY = event.getY();
@@ -203,7 +203,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
             }
             if (0 != (eventModifiers & 4)) {
             }
-            fc.pointerActivityPending = true;
+            EndingAnimationSupport.pointerActivityPending = true;
           }
           if (!event.isPopupTrigger()) {
             return;
@@ -231,7 +231,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (null == pg.pointerListener) {
+          if (null == GameplaySetupSupport.pointerListener) {
             return;
           }
           Under13TermsPanel.liveHeldPointerButton = 0;
@@ -257,13 +257,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (null == pg.pointerListener) {
+          if (null == GameplaySetupSupport.pointerListener) {
             return;
           }
           GameplaySession.pointerIdleTicks = 0;
           lj.livePointerX = event.getX();
           ReflectionCheckRequest.livePointerY = event.getY();
-          fc.pointerActivityPending = true;
+          EndingAnimationSupport.pointerActivityPending = true;
           return;
         } catch (java.lang.RuntimeException callbackFailure) {
           caughtCallbackFailure = callbackFailure;

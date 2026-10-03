@@ -80,7 +80,7 @@ abstract class IndexedSpriteState {
         try {
             id.field_c = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
             UnderlinedButtonRenderer.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
-            AvatarFeedbackSupport.grayJagexLogoSprite = ug.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
+            AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
             MouseWheelInput.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
             hh.field_d = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
@@ -89,10 +89,10 @@ abstract class IndexedSpriteState {
             var18 = new Sprite(param1.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
             SocketConnector.loadIndexedSprite(param2, 1, "commonui", "dropdown");
             var5 = MenuScreen.loadIndexedSpriteFrames("commonui", "screen_options", true, param2);
-            ek.field_a = new IndexedSprite[4];
+            DebugOverviewCompositor.field_a = new IndexedSprite[4];
             sb.field_e = new IndexedSprite[4];
             lj.field_c = new IndexedSprite[4];
-            var6 = new IndexedSprite[][]{ek.field_a, sb.field_e, lj.field_c};
+            var6 = new IndexedSprite[][]{DebugOverviewCompositor.field_a, sb.field_e, lj.field_c};
             var20 = new int[4][];
             var17 = var20;
             var7 = var17;

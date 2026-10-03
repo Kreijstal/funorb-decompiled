@@ -118,8 +118,8 @@ final class WidgetTheme {
             var6.field_g = 0;
             var7 = new StatefulWidgetRenderer(var4, true);
             var7.field_g = 0;
-            var7.a((byte) 124, va.a(8947848, (byte) -112));
-            var7.a(-116, 1).a(va.a(11184810, (byte) -112), true).b(256, 2236962);
+            var7.a((byte) 124, MeshPrioritySupport.createSolidCenterSlices(8947848, (byte) -112));
+            var7.a(-116, 1).a(MeshPrioritySupport.createSolidCenterSlices(11184810, (byte) -112), true).b(256, 2236962);
             this.field_c = (WidgetRenderer) ((Object) new CheckboxRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
             discarded$0 = new DialRenderer(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
             discarded$1 = new MultiHandleSliderRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);

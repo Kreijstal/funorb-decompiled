@@ -193,7 +193,7 @@ final class NanoFrameTimer extends FrameTimer {
             Throwable decompiledCaughtException = null;
             if (null != SpriteCheckboxRenderer.field_e) {
               if (!((param1 >= 0) &&
-                  (PacketBuffer.currentProtocolStage != eh.field_b))) {
+                  (PacketBuffer.currentProtocolStage != eh.connectedSessionStage))) {
                 if ((0 == CacheReference.field_q.position) &&
                     (~oa.a(-12520) < ~(10000L + CanvasResizeController.field_r))) {
                   CacheReference.field_q.writeCipherByte(param1, (byte) -76);

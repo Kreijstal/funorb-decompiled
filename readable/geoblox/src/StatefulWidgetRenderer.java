@@ -309,7 +309,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             return;
         }
         try {
-            fl.field_b = param1;
+            GameSoundResources.optionalLoginText = param1;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "rd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

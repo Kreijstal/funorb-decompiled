@@ -27,9 +27,9 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.displayNameInput = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetRenderer var1 = new TextWidgetRenderer(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(sb.loginNoDisplayNameText, var1, (WidgetListener) null);
-        this.confirmButton = new ButtonWidget(ec.okText, (WidgetListener) null);
+        this.confirmButton = new ButtonWidget(MatchScoringSupport.okText, (WidgetListener) null);
         this.cancelButton = new ButtonWidget(TextTemplateArgumentType.cancelText, (WidgetListener) null);
-        this.displayNameInput.hoverText = ud.createDisplayNameTooltipText;
+        this.displayNameInput.hoverText = AchievementProtocolSupport.createDisplayNameTooltipText;
         this.displayNameInput.a((byte) -58, new UsernameAvailabilityValidator(this.displayNameInput));
         this.confirmButton.enabled = false;
         this.confirmButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
@@ -162,7 +162,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           if ((null != meshForPriorityDecision.facePriorities) &&
               (meshForPriorityDecision.facePriorityCount > 1)) {
             facePriorities = meshForPriorityDecision.facePriorities;
-            va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, PasswordWidgetRenderer.meshFacePriorityWriteOffsets, (byte) -85);
+            MeshPrioritySupport.groupQueuedMeshFacesByPriority(0, facePriorities, 0, PasswordWidgetRenderer.meshFacePriorityWriteOffsets, (byte) -85);
           } else {
             CachedTextLayout.compactDepthBucketFaceOrder(2971);
           }

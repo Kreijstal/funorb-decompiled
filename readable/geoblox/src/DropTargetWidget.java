@@ -35,12 +35,12 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.addMouseListener(pg.pointerListener);
+            param0.addMouseListener(GameplaySetupSupport.pointerListener);
             if (param1 != 1) {
                 field_B = (TextTemplateArgumentType) null;
             }
-            param0.addMouseMotionListener(pg.pointerListener);
-            param0.addFocusListener(pg.pointerListener);
+            param0.addMouseMotionListener(GameplaySetupSupport.pointerListener);
+            param0.addFocusListener(GameplaySetupSupport.pointerListener);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

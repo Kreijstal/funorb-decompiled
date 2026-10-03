@@ -27,7 +27,7 @@ final class bk {
             if (param2 < 97) {
                 bk.a(true, -54);
             }
-            ul.a(-21541, param0);
+            MatchCandidateSupport.prepareFinalFrameSlices(-21541, param0);
             jk.b((byte) -91);
             MidiNoteMixer.a((byte) -32);
             DequeCursor.logoAnimationTick = -DiskCacheWorker.logoStartDelayTicks + 0;

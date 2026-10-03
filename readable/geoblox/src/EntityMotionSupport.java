@@ -116,7 +116,7 @@ final class EntityMotionSupport {
     }
 
     final static IndexedSprite buildFirstIndexedSpriteFromDecodedSheet(int methodGuard) {
-        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], NanoFrameTimer.decodedSpritePalette);
+        IndexedSprite sprite = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], NanoFrameTimer.decodedSpritePalette);
         int sentinelDivision = -128 / ((methodGuard - 52) / 49);
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprite;
@@ -192,7 +192,7 @@ final class EntityMotionSupport {
           movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntity != null) {
             L2: {
-              if (a.attachedEntities != movingEntity.entityQueue) {
+              if (BoardEntityState.attachedEntities != movingEntity.entityQueue) {
                 if (!UiWidget.gameplaySession.tutorialPromptActive) {
                   movingEntity.integrateEntityVelocity((byte) -59);
                   movingEntity.advanceEntityAnimation(true);
@@ -218,7 +218,7 @@ final class EntityMotionSupport {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
                     }
                     movingEntity.positionY = (float)ValidationIconWidget.rotatedEntityScreenY;
-                    movingEntity.entityQueue = a.attachedEntities;
+                    movingEntity.entityQueue = BoardEntityState.attachedEntities;
                     movingEntity.positionX = (float)DialogLayer.rotatedEntityScreenX;
                   }
                   if (!movingEntity.detachedFromBoard) {
@@ -231,7 +231,7 @@ final class EntityMotionSupport {
                 if (DelayedIncomingPacket.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
                   neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
                   contactedEntity = RasterTargetSnapshot.entitiesById[neighborIndexOrKindFlagOrContactIdOrDivisionGuard];
-                  if (a.attachedEntities == contactedEntity.entityQueue) {
+                  if (BoardEntityState.attachedEntities == contactedEntity.entityQueue) {
                     break L2;
                   }
                   sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);

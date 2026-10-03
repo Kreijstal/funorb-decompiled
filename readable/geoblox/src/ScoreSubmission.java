@@ -30,8 +30,8 @@ final class ScoreSubmission extends IntrusiveNode {
         int fieldTemp$0 = 0;
         try {
             this.thirdContextValue = thirdContextValue;
-            fieldTemp$0 = fc.nextScoreSubmissionId;
-            fc.nextScoreSubmissionId = fc.nextScoreSubmissionId + 1;
+            fieldTemp$0 = EndingAnimationSupport.nextScoreSubmissionId;
+            EndingAnimationSupport.nextScoreSubmissionId = EndingAnimationSupport.nextScoreSubmissionId + 1;
             this.submissionId = 65535 & fieldTemp$0;
             this.secondContextValue = secondContextValue;
             this.fourthContextValue = fourthContextValue;

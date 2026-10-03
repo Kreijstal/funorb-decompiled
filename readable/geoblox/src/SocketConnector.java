@@ -195,7 +195,7 @@ abstract class SocketConnector {
             } else {
               sampleBeforeResampling = te.gameSoundSampleCache.getSynthesizedSampleByName(1, w.gameSoundResourceNames[soundIndex]);
             }
-            fl.gameSoundSamples[soundIndex] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
+            GameSoundResources.gameSoundSamples[soundIndex] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
             SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndex] = true;
             soundIndex++;
           }

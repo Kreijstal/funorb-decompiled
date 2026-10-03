@@ -18,8 +18,8 @@ final class EntityCollisionSupport {
         }
         eh.pendingActionPanelTop = 480;
         MidiPcmStream.pendingActionPanelPhase = 0;
-        MultiHandleSliderRenderer.pendingActionPanelWidth = 72 + FadingDialog.uiPaletteFont.measureMaximumWrappedWidth(pg.achievementTitles[pendingActionMarker.actionId], 100);
-        RasterTargetSnapshot.pendingActionPanelHeight = 30 * FadingDialog.uiPaletteFont.countWrappedLines(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
+        MultiHandleSliderRenderer.pendingActionPanelWidth = 72 + FadingDialog.uiPaletteFont.measureMaximumWrappedWidth(GameplaySetupSupport.achievementTitles[pendingActionMarker.actionId], 100);
+        RasterTargetSnapshot.pendingActionPanelHeight = 30 * FadingDialog.uiPaletteFont.countWrappedLines(GameplaySetupSupport.achievementTitles[pendingActionMarker.actionId], 100) + 30;
         if (62 > RasterTargetSnapshot.pendingActionPanelHeight) {
             RasterTargetSnapshot.pendingActionPanelHeight = 62;
             return;

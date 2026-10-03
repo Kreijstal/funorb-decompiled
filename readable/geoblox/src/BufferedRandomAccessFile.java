@@ -418,22 +418,22 @@ final class BufferedRandomAccessFile {
             return false;
           }
           bk.boardOwnershipRaster.setAsRasterTarget();
-          if (!ld.hasPixelsAtPlayfieldBoundary(-61)) {
+          if (!PlayfieldRules.hasPixelsAtPlayfieldBoundary(-61)) {
             SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
             return false;
           }
           UiWidget.gameplaySession.startSessionEndSequence((byte) 116);
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-          seedEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+          seedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.lastForIteration(false));
           farthestEntity = seedEntity;
           farthestRadiusSquared = (-320.0f + seedEntity.positionX) * (-320.0f + seedEntity.positionX) + (seedEntity.positionY - 240.0f) * (seedEntity.positionY - 240.0f);
-          candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+          candidateEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.lastForIteration(false));
           while (candidateEntity != null) {
             if (farthestRadiusSquared < (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (-240.0f + candidateEntity.positionY) * (-240.0f + candidateEntity.positionY)) {
               farthestRadiusSquared = (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (candidateEntity.positionY - 240.0f) * (-240.0f + candidateEntity.positionY);
               farthestEntity = candidateEntity;
             }
-            candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
+            candidateEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.previousForIteration(0));
           }
           cascadeFrontier = new SecondaryDeque();
           visitedCascadeEntities = new SecondaryDeque();

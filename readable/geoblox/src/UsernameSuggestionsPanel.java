@@ -49,7 +49,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (param0 > -68) {
           largeBoxSprite = (Sprite) null;
         }
-        stackIn_6_0 = (SpriteCheckboxRenderer.field_e != null) && (PacketBuffer.currentProtocolStage.a(true));
+        stackIn_6_0 = (SpriteCheckboxRenderer.field_e != null) && (PacketBuffer.currentProtocolStage.isPostRequestStage(true));
         return stackIn_6_0;
     }
 

@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 120)
+## Current readability (pass 121)
 
-The export has 10,038 guarded names and 79,782 identifier edits. Class coverage is
-233 semantic renames, one already meaningful `Geoblox` name and 69 opaque names.
+The export has 10,324 guarded names and 81,351 identifier edits. Class coverage is
+247 semantic renames, one already meaningful `Geoblox` name and 55 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -23,7 +23,29 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 120 adds 149 guarded names: seven classes, four fields, 15 methods,
+Pass 121 adds 286 guarded names: 14 classes, 19 fields, 24 methods,
+44 parameters and 185 locals. The game now reads through `MatchCandidateSupport`,
+`MatchScoringSupport`, `PlayfieldRules`, `ScorePopupSupport`,
+`AttachedEntityRenderer`, `EndingAnimationSupport`, `DebugOverviewCompositor`,
+`MeshDepthSupport`, `MeshPrioritySupport`, `GameplaySetupSupport`,
+`BoardEntityState` and `GameSoundResources`. Session calls expose
+`LoginProtocolSupport.advanceLoginHandshake` and `AchievementProtocolSupport`.
+All parameters and locals in the 14 audited owners now have guarded names.
+Shared login phases expose request readiness, initial reply, result, details,
+failure text and connected-session identity. The reflection decoder names its
+operation/class/member/argument data, reused argument-count/integer-write slot,
+serialized buffers and per-operation failures. Its generated increment state
+keeps the original zero/one values and control flow. Class names describe helper
+families; unrelated static functions and globals stay on each owner.
+All 10,038 previous complete rules, raw bodies, local ordinals, bytecode and
+source/tool/native trace pins remain. The export has 10,324 rules and 81,351
+identifier edits. All 303 raw/readable sources compile, compare 136,612 bindings
+and preserve 388 override relationships. Class coverage is 247 renamed, one
+meaningful original name and 55 opaque names. Six large labeled bodies and
+207 block labels remain. New naming does not establish full login/reflection/
+server, asset/audio/AWT/browser/phone or heap/FPS equivalence.
+
+Pass 120 added 149 guarded names: seven classes, four fields, 15 methods,
 28 parameters and 95 locals. The main gameplay helper owners now read as
 `EntityMotionSupport`, `EntityCollisionSupport`, `EntitySpawnSupport`,
 `BoardReconciliationSupport`, `EntityContactSupport`, `EntityLinkSupport` and
@@ -325,7 +347,7 @@ not already tracked, sets the earned mask and queues a `PendingActionMarker`.
 A first notification calls `EntityCollisionSupport.preparePendingActionPanel`; subsequent notifications
 wait in order. `lh.updatePendingActionPanel` moves the panel through phase 0
 (entering), 1 (holding) and 2 (exiting), then consumes the marker and prepares
-the next one. Title text comes from `pg.achievementTitles[actionId]`.
+the next one. Title text comes from `GameplaySetupSupport.achievementTitles[actionId]`.
 
 When the session permits submission, `AchievementSubmission` captures the ID,
 caller-supplied check byte and four tracking integers. Normal gameplay supplies
@@ -344,7 +366,7 @@ calls `ol.writeAchievementSubmissionPacket`.
 | Version | 1 | Literal 1 |
 | Achievement ID | 1 | Low byte of record ID |
 | Check value | 1 | Low byte of caller-supplied check value |
-| Tracking bits | 4 | Big-endian snapshot of `dc.achievementTrackingBits` |
+| Tracking bits | 4 | Big-endian snapshot of `AttachedEntityRenderer.achievementTrackingBits` |
 | Tracking accumulator | 4 | Big-endian snapshot of `UiWidget.achievementTrackingAccumulator` |
 | Primary tracking counter | 4 | Big-endian snapshot from `AwtRasterBuffer` |
 | Secondary tracking counter | 4 | Big-endian snapshot from `lb` |
@@ -354,11 +376,11 @@ calls `ol.writeAchievementSubmissionPacket`.
 `cf.requestAchievementState`, `re.writeAchievementStateRequest` and
 `LoginPayloadKind.ensureAchievementStateRequested` for request creation and the
 singleton used by mask import. A request queues its holder before guard division
-and writes ciphered opcode, version 1 and subtype 2. `ud.resendAchievementMessages`
+and writes ciphered opcode, version 1 and subtype 2. `AchievementProtocolSupport.resendAchievementMessages`
 resends retained submissions followed by one request per pending query; neither
 queue is consumed. This order and ownership matter during retries.
 
-`ud.handleAchievementResponse` reads one subtype byte:
+`AchievementProtocolSupport.handleAchievementResponse` reads one subtype byte:
 
 | Subtype | Input and queue effects |
 | --- | --- |
@@ -634,7 +656,7 @@ middle frames until its length check fails, then increments the phase and sets
 feedback hold200. Other phase values cycle the four end frames. Negative cursors,
 integer overflow, null arrays and external phase values keep their original behavior.
 
-`fc.advanceEndingEntityAnimations` sets `endingEntityScanClear=true`, scans attached
+`EndingAnimationSupport.advanceEndingEntityAnimations` sets `endingEntityScanClear=true`, scans attached
 entities before transient entities and advances each with the original true argument.
 Observing attached kind6 or transient kind5/7/8 clears the flag, including when that
 entity reaches frame>=3 and joins the available queue in the same pass. The flag
@@ -824,7 +846,7 @@ and dictionary reversal, with no new dynamic menu/tutorial/asset/device coverage
 ## Gameplay graphics and theme selection
 
 `Geoblox.prepareGameAssets` loads the game resources through named wrappers:
-`ug.loadSprite`, `wj.loadSpriteFrames`, `jg.loadIndexedSprite`,
+`ScorePopupSupport.loadSprite`, `wj.loadSpriteFrames`, `jg.loadIndexedSprite`,
 `w.loadPaletteFont` and `gi.loadBitmapFont`. Their arguments distinguish
 `groupName`, `resourceName`, glyph graphics and font metrics archives. The
 resolved `archiveGroupId` and `archiveFileId` locals retain their original
@@ -843,7 +865,7 @@ Halloween source overrides retained. `blackOrbFrames`, `silverStarFrames`,
 `sparkleFrames`, `bangFrames` and the other effect arrays keep their original
 frame selection and reset behavior.
 
-`cd.selectThemeRenderAssets` chooses `ec.selectedThemeForeground` and
+`cd.selectThemeRenderAssets` chooses `MatchScoringSupport.selectedThemeForeground` and
 `mf.selectedThemeBackground` for the committed `GameScreen.selectedThemeId`:
 
 | Theme ID | Resource group |
@@ -994,10 +1016,10 @@ The motion, contact and match stages are named separately:
 - `BoardReconciliationSupport.reconcileBoardEntities` resolves contacts and rebuilds dirty connectivity.
   `EntityLinkSupport.linkTouchingEntities` updates the reciprocal neighbor lists and counts;
   `EntityContactSupport.linkEntityAtMaskContacts` decodes the ownership-mask pixels.
-- `ul.collectMatchCandidates` finds triples sharing `entityCategoryKey` or
+- `MatchCandidateSupport.collectMatchCandidates` finds triples sharing `entityCategoryKey` or
   `spriteVariantIndex`. `nk.packedMatchCandidates` stores three 10-bit entity IDs
   and two equality flags; `h.matchCandidateCount` bounds the array.
-- `ec.processMatchCandidates` sorts and deduplicates the triples. All three
+- `MatchScoringSupport.processMatchCandidates` sorts and deduplicates the triples. All three
   `matchCooldownTicks` values must be nonpositive before it awards points.
   Points are 30 or 90 multiplied by the increasing `EntityCollisionSupport.matchChainLength`.
 - `rh.updateAttachedEntities` decrements cooldowns, updates attached animations
@@ -1078,7 +1100,7 @@ both flags together. The probe preserves that behavior rather than rewriting it.
 
 ## Playfield boundary scan
 
-`ld.hasPixelsAtPlayfieldBoundary` tests the discrete radius-230 perimeter around
+`PlayfieldRules.hasPixelsAtPlayfieldBoundary` tests the discrete radius-230 perimeter around
 (320,240), using any nonzero framebuffer pixel as a hit. It does not test every
 pixel outside the circle or decide a game-ending policy by itself.
 `upperNearRowCenterIndex` and `lowerNearRowCenterIndex` address column 320 at
@@ -1112,7 +1134,7 @@ reordered.
 
 ## Score popups and text writes
 
-`ug.spawnScorePopup` takes a popup from the pool. Pool exhaustion credits the
+`ScorePopupSupport.spawnScorePopup` takes a popup from the pool. Pool exhaustion credits the
 points immediately; pooled popups enter the active queue with zero progress.
 `cf.advanceScorePopups` advances their float progress, including native NaN
 behavior, then credits points to the score or pending panel according to the
@@ -1137,10 +1159,10 @@ helper side effect; it is outside the direct text-writer probe.
 
 `lc.updateSpawnQueue` advances `SecondaryDeque.spawnQueue` and releases ready members into
 `ji.movingEntities` unless `spawnReleaseDisabled` is set. `hd.recordEntityRelease`
-increments `ul.releasedInCurrentTheme` and `di.releasedInDifficultyStep` outside
+increments `MatchCandidateSupport.releasedInCurrentTheme` and `di.releasedInDifficultyStep` outside
 tutorial mode. The theme threshold is `fa.releasesPerTheme`; `qe.a` calculates
 `sa.releasesPerDifficultyStep` as its ceiling divided by three.
-`ld.advanceDifficulty` increments `ji.difficultyStep` and reads
+`PlayfieldRules.advanceDifficulty` increments `ji.difficultyStep` and reads
 `kd.difficultyStepFlags`. Its normal callers pass `recursiveAdvanceGuard=false`.
 The true guard recursively advances the shared index and may throw when a
 caller resumes and re-reads an exhausted table; partial updates remain visible. The
@@ -1177,7 +1199,7 @@ the interval. The scale threshold is a gate, with no clamp after addition.
 Past the flag table, the special-kind probability is reduced by 0.05 only when
 above the original exact double threshold 0.15000000000000002.
 
-`pg.resetGameplayDifficulty` initializes three sprite variants, four categories,
+`GameplaySetupSupport.resetGameplayDifficulty` initializes three sprite variants, four categories,
 speed 0.4f, scale 0.75f, rotation and the release quota. Guard 9408 additionally
 resets remaining counters and updates the interval. `qe.adjustThemeReleaseQuota`
 adds the signed `additionalReleases` plus a step-dependent ten and computes the
@@ -1218,7 +1240,7 @@ sampling and extreme quota-overflow loops remain outside those fixtures.
 | 5 | Result complete; scene transition requested |
 
 `updateResultSequence` initializes `resultBonusPoints` with an additional 179,
-uses `i.findOutermostAttachedEntity` to select an entity and computes
+uses `MeshDepthSupport.findOutermostAttachedEntity` to select an entity and computes
 `endingEntityRadius` from nontransparent sprite pixels, then advances
 the effect phases. Shrinking ticks add seven bonus points each. The completion
 tick uses `resultCompletionTickOffset + 150`. `boardEmptyAtResultStart` snapshots
@@ -1235,7 +1257,7 @@ shows remaining theme releases during normal play or phase-specific text.
 `EntityContactSupport.areEntityQueuesSettled` requires the moving, spawn and transient animation
 queues to be empty and `jl.field_t` to be clear; attached entities can remain.
 `sk.checkBoundaryLossAndStartCascade` selects the ownership raster and calls
-`ld.hasPixelsAtPlayfieldBoundary`, a radius-230 circle probe centered at (320,240).
+`PlayfieldRules.hasPixelsAtPlayfieldBoundary`, a radius-230 circle probe centered at (320,240).
 On loss it starts the session-ending path and traverses the contact graph from
 the farthest attached entity, assigning staggered lifetimes in increments of 50.
 The end path sets `sessionEnding`; it is distinct from the normal result phases.
@@ -1273,7 +1295,7 @@ guard; the generated source retains its other outcomes too.
 
 The first walk handles `ji.movingEntities`: entities queued for attachment have
 their trail/masks updated, their primary and secondary links removed, and are
-inserted into `a.attachedEntities`. Their queue marker is cleared and the board
+inserted into `BoardEntityState.attachedEntities`. Their queue marker is cleared and the board
 raster is marked dirty.
 
 When connectivity is dirty, an attached-entity walk uses
@@ -1398,7 +1420,7 @@ proof. Several guards, scratch carriers and shared helper names remain opaque.
 
 `ScorePopup` replaces the instance class `me`. It stores `points`, `pointsText`,
 `originX`, `originY`, `progress` and `chainMultiplier`.
-`ug.spawnScorePopup` takes an object from `ue.availableScorePopups`, initializes
+`ScorePopupSupport.spawnScorePopup` takes an object from `ue.availableScorePopups`, initializes
 it and inserts it into `md.activeScorePopups`. An empty pool credits points
 directly. `bd.drawScorePopups` interpolates toward the points panel and displays
 the chain multiplier when it is not one. `cf.advanceScorePopups` updates progress
@@ -1581,7 +1603,7 @@ output frequency. `playPcmSample` registers a stream at rate 100 and volume 96.
 
 `qf.resultMusicTrack` is loaded from `bonus_bubble_jingle`.
 `ra.selectBackgroundMusic` retains null/current-track early returns and the
-original MIDI stop/reset/start path. `ld.spawnPointsPopup` names the shared
+original MIDI stop/reset/start path. `PlayfieldRules.spawnPointsPopup` names the shared
 wrapper used by difficulty, result and points-panel bonuses; its argument order
 is y, x, method guard, points.
 
@@ -1838,10 +1860,10 @@ loaded from preference byte zero.
 `ah.livePointerPressX`/`hi.livePointerPressY`. Press button 2 means right button;
 other presses use 1. Releases/focus loss clear `s.liveHeldPointerButton`; focus
 loss retains pending press/activity state. Motion/enter/exit/press/release reset
-`GameplaySession.pointerIdleTicks` and mark `fc.pointerActivityPending`.
+`GameplaySession.pointerIdleTicks` and mark `EndingAnimationSupport.pointerActivityPending`.
 Exit uses position (-1,-1). Popup press/release/click events are consumed.
 
-`mc.snapshotPointerInput` copies these fields under `pg.pointerListener` into
+`mc.snapshotPointerInput` copies these fields under `GameplaySetupSupport.pointerListener` into
 position, press position/button, held-button and activity snapshots, then clears
 pending press/activity. A second snapshot retains held-button/position state but
 has no new press or activity. The session debug-spawn/tutorial handlers use
@@ -2024,7 +2046,7 @@ It makes no new assumption about actual archive completion.
 
 The debug overview is a distinct composite, not an ordinary sprite copy.
 `SoftwareRasterizer.blurRasterRegion` applies row then column box averaging.
-`ek.compositeScaledDebugOverview` retains Q16 scale/trim/clip calculations.
+`DebugOverviewCompositor.compositeScaledDebugOverview` retains Q16 scale/trim/clip calculations.
 `lc.blendScaledDebugOverviewPixels` skips zero source or destination pixels,
 then mixes a0x112233 tint with per-channel products using source mean gray as
 weights. Its destination gray starts as `((2*red + blue)/3 + green) >> 1`.
@@ -3723,7 +3745,7 @@ wrapped failure contexts and literals remain.
 
 The lighting caller now names its preparation branches directly:
 `vc.compactDepthBucketFaceOrder` compacts depth-bucket entries into the face
-prefix; `va.groupQueuedMeshFacesByPriority` consumes signed priority bytes,
+prefix; `MeshPrioritySupport.groupQueuedMeshFacesByPriority` consumes signed priority bytes,
 increments the chosen write offset and writes into the same face-order array.
 Names expose the original alias and mutation order; this pass does not assume
 stable grouping or change overlapping storage behavior.
@@ -3767,7 +3789,7 @@ matching transformed-coordinate names, including the prior
 not aliases for the mesh's short vertex XYZ. Their construction and asset purpose
 remain unknown; this pass does not label them as texture coordinates.
 
-`i.queueMeshFacesByDepth` optionally rejects backfaces using the projected signed
+`MeshDepthSupport.queueMeshFacesByDepth` optionally rejects backfaces using the projected signed
 cross product and skips a face if any vertex has clipped depth. It normalizes the
 sum of its relative depths into a bucket using `hj.unsignedBitLength`, then queues
 the face in a 16-entry bucket. Full buckets spill toward lower indices. Face
@@ -3852,7 +3874,7 @@ an unconditional permutation. Lighting rotates with the clock, or uses pointer
 snapshots when both coordinates are available. Normalization retains integer
 overflow and NaN-to-int behavior. Guard division runs after rendering.
 
-Projection uses `i.queueMeshFacesByDepthWithIntegerGuard` to preserve full JVM
+Projection uses `MeshDepthSupport.queueMeshFacesByDepthWithIntegerGuard` to preserve full JVM
 integer arguments. The original byte-guard collector remains available. A
 source byte cast changed -8170 to 22 and skipped cleanup in 120 native scene
 cases; the new generic entry point fixes that mismatch without changing bytecode.
@@ -4175,3 +4197,62 @@ uses the original nested failure/print/context boundaries and the `quit.ws` path
 `EntityLinkSupport.drawGradientWidgetBorder` retains its fixed top/bottom colors
 and clipped grayscale side edges. Names clarify those operations without
 simplifying guards, packet payloads, failure scopes or memory writes.
+
+## Progression and session map (pass121)
+
+| Readable owner | Original owner | Main operations/state |
+| --- | --- | --- |
+| `MatchCandidateSupport` | `ul` | `collectMatchCandidates`, packed triple flags and GMT calendar |
+| `MatchScoringSupport` | `ec` | `processMatchCandidates`, ranking resends, instruction paragraphs |
+| `PlayfieldRules` | `ld` | Boundary scan, difficulty advancement and ordinary points popup |
+| `ScorePopupSupport` | `ug` | Pooled popup creation, sprite lookup, builder padding, social name-hash index |
+| `AttachedEntityRenderer` | `dc` | `drawAttachedEntities` |
+| `EndingAnimationSupport` | `fc` | Ending entity advancement, prepared frame presentation, login payload buffer |
+| `DebugOverviewCompositor` | `ek` | Scaled/cropped/clipped overview compositing |
+| `MeshDepthSupport` | `i` | Face depth buckets, outermost entity search, main-raster canvas drawing |
+| `MeshPrioritySupport` | `va` | Face priority grouping, session cookie, solid center slice |
+| `GameplaySetupSupport` | `pg` | Difficulty reset, setup globals and reflection-request decoding |
+| `BoardEntityState` | `a` | Attached queue, instruction titles and selected achievement index |
+| `GameSoundResources` | `fl` | 33 sample slots, space foreground and optional login text |
+| `LoginProtocolSupport` | `ri` | Staged handshake/retry, avatar face layers and achievement descriptions |
+| `AchievementProtocolSupport` | `ud` | Submission/state resends, response handling and secondary-social lookup |
+
+The shared static owners retain all their functions, fields and initialization.
+`frameLoopRateEstimate` follows the 32-timestamp GameApplet ring formula and is
+a loop timing estimate. It does not count actual browser-presented frames.
+`selectedAchievementIndex` follows click toggling in the achievement grid,
+including its -1 deselection value. These roles come from both writers and readers.
+
+`LoginProtocolSupport.advanceLoginHandshake` is easier to follow through these
+shared object-identity stages:
+
+| Stage field | Source operation |
+| --- | --- |
+| `IterableNodeHashTable.requestReadyStage` | Prepare opcode 14 plus payload-kind byte; also used by account-query preparation |
+| `ResizableDialog.awaitingInitialLoginReplyStage` | Wait for one byte; zero advances to the server-long stage, other values select failure text |
+| `MessageDialog.awaitingLoginLongState` | Wait for/read eight bytes and build the login request |
+| `da.awaitingLoginResultStage` | Wait for one byte; original 0/1/8 and rejection paths remain distinct |
+| `da.awaitingLoginDetailsStage` | Gate the existing detail parser, optional extension, cookie, name and cipher setup |
+| `TextInputRenderer.awaitingLoginFailureTextStage` | Read failure text, close and retain response7 retry handling |
+| `eh.connectedSessionStage` | Select connected-session identity before directional cipher initialization |
+
+`useLongLoginPayload` selects the existing long-plus-text form or two-text form.
+`affiliateId` comes from applet `affid`; `enableLoginFlagBitEight` describes only
+the proven request bit. The optional reply string is passed to the settings
+cookie writer. Cipher seed adjustment adds 50 in place for the incoming direction.
+The server long, other reply fields and unknown flag purposes retain their
+source identities without invented wire meanings. This is a source reading map,
+not a newly executed login/server interoperability result.
+
+In `GameplaySetupSupport.readReflectionCheckRequest`, the decoder reads a byte
+operation count and int request ID, then allocates operation/error/task arrays.
+Operations 0/1/2 read class and field names; only 1 reads an integer write value.
+Operations 3/4 read class/method names, a byte argument count and argument type
+names; only 3 reads int-length-prefixed serialized argument bytes. Lookup tasks
+are requested after class resolution. The reused `argumentCountOrIntegerWriteValue`
+and `serializedArgumentLengthThenClassIndexSnapshot` expose both original roles.
+Per-operation ClassNotFoundException, SecurityException, NullPointerException,
+Exception and Throwable record -1, -2, -3, -4, -5 respectively. Unknown operations
+increment their index before `operationIncrementAlreadyApplied` skips the ordinary
+increment. Its values and generated control flow remain intact. The accepted
+guard -4 enqueues the request; the invalid recursive path is preserved.

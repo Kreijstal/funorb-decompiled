@@ -35,7 +35,7 @@ final class cl {
           if (IntrusiveDeque.field_d == WidgetSkinState.field_g) {
             return null;
           }
-          if ((WidgetSkinState.field_g == va.field_e) &&
+          if ((WidgetSkinState.field_g == MeshPrioritySupport.field_e) &&
               (param1.equals(DelayedPcmStream.field_k))) {
             WidgetSkinState.field_g = DiskCacheWorker.field_l;
             stackIn_8_0 = ScorePopup.field_g;

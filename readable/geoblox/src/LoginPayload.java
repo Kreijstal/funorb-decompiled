@@ -11,12 +11,12 @@ abstract class LoginPayload {
 
     final static void a(boolean param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener(pg.pointerListener);
-            param1.removeMouseMotionListener(pg.pointerListener);
+            param1.removeMouseListener(GameplaySetupSupport.pointerListener);
+            param1.removeMouseMotionListener(GameplaySetupSupport.pointerListener);
             if (param0) {
                 spaceBackgroundSprite = (IndexedSprite) null;
             }
-            param1.removeFocusListener(pg.pointerListener);
+            param1.removeFocusListener(GameplaySetupSupport.pointerListener);
             Under13TermsPanel.liveHeldPointerButton = 0;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

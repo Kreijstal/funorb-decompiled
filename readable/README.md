@@ -1,11 +1,35 @@
 # Readable GeoBlox
 
-The current export has 10,038 guarded naming rules: 233 classes, 1,360 fields,
-985 methods, 2,924 parameters and 4,536 local declarations. Both 303-file corpora
+The current export has 10,324 guarded naming rules: 247 classes, 1,379 fields,
+1,009 methods, 2,968 parameters and 4,721 local declarations. Both 303-file corpora
 compile, comparing 136,612 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current gameplay support names (pass 120)
+## Current progression and session names (pass 121)
+
+Pass 121 adds 286 guarded names: 14 classes, 19 fields, 24 methods,
+44 parameters and 185 locals. The game now reads through `MatchCandidateSupport`,
+`MatchScoringSupport`, `PlayfieldRules`, `ScorePopupSupport`,
+`AttachedEntityRenderer`, `EndingAnimationSupport`, `DebugOverviewCompositor`,
+`MeshDepthSupport`, `MeshPrioritySupport`, `GameplaySetupSupport`,
+`BoardEntityState` and `GameSoundResources`. Session calls expose
+`LoginProtocolSupport.advanceLoginHandshake` and `AchievementProtocolSupport`.
+All parameters and locals in the 14 audited owners now have guarded names.
+Shared login phases expose request readiness, initial reply, result, details,
+failure text and connected-session identity. The reflection decoder names its
+operation/class/member/argument data, reused argument-count/integer-write slot,
+serialized buffers and per-operation failures. Its generated increment state
+keeps the original zero/one values and control flow. Class names describe helper
+families; unrelated static functions and globals stay on each owner.
+All 10,038 previous complete rules, raw bodies, local ordinals, bytecode and
+source/tool/native trace pins remain. The export has 10,324 rules and 81,351
+identifier edits. All 303 raw/readable sources compile, compare 136,612 bindings
+and preserve 388 override relationships. Class coverage is 247 renamed, one
+meaningful original name and 55 opaque names. Six large labeled bodies and
+207 block labels remain. New naming does not establish full login/reflection/
+server, asset/audio/AWT/browser/phone or heap/FPS equivalence.
+
+## Previous gameplay support names (pass 120)
 
 Pass 120 adds 149 guarded names: seven classes, four fields, 15 methods,
 28 parameters and 95 locals. The main gameplay helper owners now read as
@@ -65,7 +89,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -309,7 +333,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f`;
 the current readable tree is
-`393e7ceab781989c3d9f532006d258c873c24de7583eb482ed6a5048492cf205`.
+`a06e79f283fe68d05b4cb34b0d48a28959d28d7d016bd1a4b98b77ee7481a7d2`.
 The pinned decompiler-source SHA-256 is
 `c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3`.
 All seven existing native/raw/readable probes pass with their pinned traces.
@@ -323,16 +347,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
-previous manifest's Git repository, commit and hash; pass120 refers to the
-Deko-owned pass119 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
+previous manifest's Git repository, commit and hash; pass121 refers to the
+Deko-owned pass120 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `9b812d9c89626764cfc09971b1499118ebac9b82`; the
-manifest SHA-256 is `e2d2312496a045c8d208c9569471d16a125573e7151a31c4a5e315ee2c8f106b`.
+The current Deko workflow/manifest commit is `9581255db52d2cb80b3d612a04f3f360e578e365`; the
+manifest SHA-256 is `9e76bcbb70c58303301e29e52c5e15b80a51fdc92744dd4d45e525963bbc72fb`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -381,13 +405,13 @@ incomplete holder before guard arithmetic and sends version 1/subtype 2 through
 `re.writeAchievementStateRequest`. Mixed-purpose static helpers remain on the
 instance owner; no unrelated helper role is inferred from the class name.
 
-`ud.handleAchievementResponse` names the response-type and value-count flow.
+`AchievementProtocolSupport.handleAchievementResponse` names the response-type and value-count flow.
 Type 0 reads the count and integers into an eight-value array before consulting
 the query queue; it stores the array, completed flag and first-value mask, then
 unlinks the first holder. Type 1 unlinks the oldest unacknowledged submission.
 Type 2 stores eight zero values and a zero mask, marks complete and unlinks the
 first query. Empty queues close the session socket; unknown types log and close.
-`ud.resendAchievementMessages` writes retained submissions in order, followed by
+`AchievementProtocolSupport.resendAchievementMessages` writes retained submissions in order, followed by
 one version/subtype request per pending query, without consuming either queue.
 `AchievementQuery.hasReceivedAchievementSixteen` preserves the positive-mask
 check as well as bit 16; a negative mask with that bit set still returns false.
@@ -1654,7 +1678,7 @@ A full JVM int was forwarded to the collector's byte parameter without `i2b`.
 The generated Java cast narrowed -8170 to 22, incorrectly skipping sprite
 cleanup. Generic java-tools now emits a deterministic int-parameter entry point
 for owned static targets reached through int stack carriers. The readable name
-is `i.queueMeshFacesByDepthWithIntegerGuard`. The original collector's signature
+is `MeshDepthSupport.queueMeshFacesByDepthWithIntegerGuard`. The original collector's signature
 and body remain. Its additional body is identical except the name and guard
 parameter type. Only `i.java` and `p.java` change in the raw export: one added
 body and one call replacement. All original declarations/ordinals and 388
@@ -1740,7 +1764,7 @@ and browser/phone memory/startup/FPS acceptance remain unfinished or unverified.
 Pass 83 adds 142 guarded identities: 25 fields, five methods, 16 parameters and
 96 locals. `p.projectMeshAndQueueFaces` composes the camera/model rotation bases,
 subtracts their translations, projects mesh vertices, optionally stores camera
-coordinates and transforms normals, then calls `i.queueMeshFacesByDepth`.
+coordinates and transforms normals, then calls `MeshDepthSupport.queueMeshFacesByDepth`.
 `meshCameraTransform` and `meshModelTransform` name the shared caller arrays;
 their first three entries are translations and the remaining nine form Q16
 rotation bases. `meshProjectionShift` scales the projection numerators.
@@ -1803,7 +1827,7 @@ overflow, partial writes and diagnostic strings stay unchanged. Reused segment
 slots have explicit combined names rather than being split or reordered.
 
 `vc.compactDepthBucketFaceOrder` copies later depth buckets into the face prefix;
-`va.groupQueuedMeshFacesByPriority` reads bucket entries, increments the selected
+`MeshPrioritySupport.groupQueuedMeshFacesByPriority` reads bucket entries, increments the selected
 priority offset and writes into the same face-order array. All parameters/locals
 in these helpers are named. Original in-place alias behavior and mutation/failure
 order remain; no stable or nonoverlapping group order is assumed. The existing
@@ -3234,7 +3258,7 @@ equivalence.
 
 The previous pass folded 77 literal assignment branches into conditional
 assignments, removing 308 lines across 36 files. That pass made the 17 repeated integer Boolean
-assignments in `ld.advanceDifficulty` compact expressions. Folding requires
+assignments in `PlayfieldRules.advanceDifficulty` compact expressions. Folding requires
 complete single-assignment arms, the same primitive literal type and a proven
 local of that exact type. Reference values, effects, boxing and narrow constant
 assignments retain their branches. Integer carriers and shared tails remain.

@@ -34,7 +34,7 @@ final class StrongCacheReference extends CacheReference {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.clientControlFlowFlag;
         try {
-          kd.field_b = va.field_e;
+          kd.field_b = MeshPrioritySupport.field_e;
           if (param2 != 30) {
             return;
           }
@@ -98,12 +98,12 @@ final class StrongCacheReference extends CacheReference {
         GameplayEntity var1 = null;
         int var2 = Geoblox.clientControlFlowFlag;
         try {
-            var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+            var1 = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
             while (var1 != null) {
                 if (var1.entitySpriteKindId != 0) {
                     var1.drawEntityAtPosition(1643839728);
                 }
-                var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+                var1 = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
             }
             if (param0 > -33) {
                 StrongCacheReference.drawSpecialAttachedEntities((byte) 90);

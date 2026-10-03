@@ -205,7 +205,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (text == null) {
           return 0;
         }
-        ug.a(wrappingBuffer, (byte) -126, ' ', 0);
+        ScorePopupSupport.resizeAndPadTextBuilder(wrappingBuffer, (byte) -126, ' ', 0);
         lineWidth = 0;
         outputLineStart = 0;
         breakPosition = -1;

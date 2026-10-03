@@ -4,8 +4,8 @@
 final class da {
     static int[] field_d;
     static int field_a;
-    static ClientProtocolStage field_f;
-    static ClientProtocolStage field_g;
+    static ClientProtocolStage awaitingLoginDetailsStage;
+    static ClientProtocolStage awaitingLoginResultStage;
     static int field_c;
     static Sprite field_b;
     static String createEmailValidText;
@@ -38,7 +38,7 @@ final class da {
 
     final static void a(boolean param0, int param1) {
         SocialListEntry.field_lb = InstrumentEnvelope.field_k[param1];
-        ri.field_c = IntrusiveDeque.field_e[param1];
+        LoginProtocolSupport.field_c = IntrusiveDeque.field_e[param1];
         CachedTextLayout.field_g = PointerInputListener.field_b[param1];
         if (!param0) {
             field_d = (int[]) null;
@@ -50,21 +50,21 @@ final class da {
         createEmailValidText = null;
         if (param0 == 50) {
             field_d = null;
-            field_g = null;
-            field_f = null;
+            awaitingLoginResultStage = null;
+            awaitingLoginDetailsStage = null;
             return;
         }
         field_d = (int[]) null;
         field_d = null;
-        field_g = null;
-        field_f = null;
+        awaitingLoginResultStage = null;
+        awaitingLoginDetailsStage = null;
     }
 
     static {
         field_d = new int[4];
         field_a = 0;
-        field_f = new ClientProtocolStage();
-        field_g = new ClientProtocolStage();
+        awaitingLoginDetailsStage = new ClientProtocolStage();
+        awaitingLoginResultStage = new ClientProtocolStage();
         createEmailValidText = "Email is valid";
         field_c = 0;
     }

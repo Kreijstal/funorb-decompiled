@@ -1260,7 +1260,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "retry");
                 if (textResourceBytes != null) {
-                  a.retryText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  BoardEntityState.retryText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "back");
                 if (null != textResourceBytes) {
@@ -1544,7 +1544,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_email");
                 if (textResourceBytes != null) {
-                  ug.createEmailText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ScorePopupSupport.createEmailText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_email_confirm");
                 if (null != textResourceBytes) {
@@ -1652,7 +1652,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_displayname_tooltip");
                 if (null != textResourceBytes) {
-                  ud.createDisplayNameTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  AchievementProtocolSupport.createDisplayNameTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_displayname_hint");
                 if (null != textResourceBytes) {
@@ -1948,7 +1948,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "loading_soundeffects");
                 if (textResourceBytes != null) {
-                  ud.loadingSoundEffectsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  AchievementProtocolSupport.loadingSoundEffectsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "loading_music");
                 if (textResourceBytes != null) {
@@ -2031,7 +2031,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "music_colon");
                 if (textResourceBytes != null) {
-                  fc.musicLabelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  EndingAnimationSupport.musicLabelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fullscreen");
                 if (textResourceBytes != null) {
@@ -2159,7 +2159,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "ok");
                 if (null != textResourceBytes) {
-                  ec.okText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  MatchScoringSupport.okText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "on");
                 if (textResourceBytes != null) {

@@ -14,12 +14,12 @@ final class AvatarFeedbackSupport {
           MenuScreen.avatarFeedbackFrameBase = 36;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
           TextValidationFailure.avatarFeedbackModeId = 6;
-          ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[23]);
+          ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[23]);
         }
         if (LimitedRandomAccessFile.avatarFeedbackHoldTicks > 0) {
           if (feedbackRequestId == 3) {
             WidgetTheme.avatarShockEffectTicks = 50;
-            ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[27]);
+            ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[27]);
           }
         } else {
           if (!clearSpriteGuard) {
@@ -34,7 +34,7 @@ final class AvatarFeedbackSupport {
                     WidgetTheme.avatarShockEffectTicks = 50;
                     LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                     TextValidationFailure.avatarFeedbackModeId = 3;
-                    ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[27]);
+                    ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[27]);
                   } else {
                     if (feedbackRequestId == 4) {
                       LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
@@ -45,7 +45,7 @@ final class AvatarFeedbackSupport {
                         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                         TextValidationFailure.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
-                        ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[24]);
+                        ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[24]);
                       }
                     }
                   }
@@ -54,7 +54,7 @@ final class AvatarFeedbackSupport {
                       (MenuScreen.avatarFeedbackFrameBase != 24) &&
                       (30 != MenuScreen.avatarFeedbackFrameBase) &&
                       (36 != MenuScreen.avatarFeedbackFrameBase)) {
-                    ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[26]);
+                    ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
                   }
                   TextValidationFailure.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;
@@ -65,7 +65,7 @@ final class AvatarFeedbackSupport {
                   (24 != MenuScreen.avatarFeedbackFrameBase) &&
                   (MenuScreen.avatarFeedbackFrameBase != 30) &&
                   (MenuScreen.avatarFeedbackFrameBase != 36)) {
-                ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[25]);
+                ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
               TextValidationFailure.avatarFeedbackModeId = 0;
@@ -77,7 +77,7 @@ final class AvatarFeedbackSupport {
                   (24 != MenuScreen.avatarFeedbackFrameBase) &&
                   (MenuScreen.avatarFeedbackFrameBase != 30) &&
                   (MenuScreen.avatarFeedbackFrameBase != 36)) {
-                ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[25]);
+                ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
               TextValidationFailure.avatarFeedbackModeId = 0;
@@ -92,7 +92,7 @@ final class AvatarFeedbackSupport {
                     WidgetTheme.avatarShockEffectTicks = 50;
                     LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                     TextValidationFailure.avatarFeedbackModeId = 3;
-                    ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[27]);
+                    ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[27]);
                   } else {
                     if (feedbackRequestId == 4) {
                       LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
@@ -103,7 +103,7 @@ final class AvatarFeedbackSupport {
                         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                         TextValidationFailure.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
-                        ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[24]);
+                        ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[24]);
                       }
                     }
                   }
@@ -112,7 +112,7 @@ final class AvatarFeedbackSupport {
                       (MenuScreen.avatarFeedbackFrameBase != 24) &&
                       (30 != MenuScreen.avatarFeedbackFrameBase) &&
                       (36 != MenuScreen.avatarFeedbackFrameBase)) {
-                    ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[26]);
+                    ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
                   }
                   TextValidationFailure.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;

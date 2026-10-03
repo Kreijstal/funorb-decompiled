@@ -4,7 +4,7 @@
 final class eh {
     static int pendingActionPanelTop;
     static String openInPopupWindowText;
-    static ClientProtocolStage field_b;
+    static ClientProtocolStage connectedSessionStage;
     static PacketBuffer field_d;
 
     final static void a(int param0, int param1, int param2) {
@@ -196,7 +196,7 @@ final class eh {
     public static void a(int param0) {
         openInPopupWindowText = null;
         field_d = null;
-        field_b = null;
+        connectedSessionStage = null;
         if (param0 != -6910) {
             pendingActionPanelTop = -22;
         }
@@ -213,6 +213,6 @@ final class eh {
 
     static {
         openInPopupWindowText = "Open in popup window";
-        field_b = new ClientProtocolStage();
+        connectedSessionStage = new ClientProtocolStage();
     }
 }

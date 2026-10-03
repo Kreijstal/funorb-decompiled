@@ -29,17 +29,17 @@ final class ClientProtocolStage {
         field_d = null;
     }
 
-    final boolean a(boolean param0) {
-        if (!param0) {
+    final boolean isPostRequestStage(boolean checkEnabled) {
+        if (!checkEnabled) {
             return true;
         }
-        if (this == da.field_g) {
+        if (this == da.awaitingLoginResultStage) {
             return true;
         }
-        if (da.field_f == this) {
+        if (da.awaitingLoginDetailsStage == this) {
             return true;
         }
-        if (eh.field_b != this) {
+        if (eh.connectedSessionStage != this) {
             return false;
         }
         return true;

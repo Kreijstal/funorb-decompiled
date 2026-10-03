@@ -197,7 +197,7 @@ abstract class ArchiveNetworkClient {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         IndexedSprite[] sprites = new IndexedSprite[sb.decodedSpriteCount];
         for (spriteIndex = firstSpriteIndex; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            sprites[spriteIndex] = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
+            sprites[spriteIndex] = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
         }
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprites;

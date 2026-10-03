@@ -75,7 +75,7 @@ final class GameplayEntity extends DualLinkNode {
         HotspotTextWidget.spriteScratchRaster.drawSilhouette(-(HotspotTextWidget.spriteScratchRaster.fullWidth / 2) + (int)this.positionX, (int)this.positionY - HotspotTextWidget.spriteScratchRaster.fullHeight / verticalDivisor, this.entityId + 1);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         bk.boardOwnershipRaster.setAsRasterTarget();
-        i.avatarMaskRaster.drawSilhouette(320 + UiWidget.gameplaySession.boardMaskOffsetX, 240 + UiWidget.gameplaySession.boardMaskOffsetY, 16777215);
+        MeshDepthSupport.avatarMaskRaster.drawSilhouette(320 + UiWidget.gameplaySession.boardMaskOffsetX, 240 + UiWidget.gameplaySession.boardMaskOffsetY, 16777215);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(verticalDivisor + 253);
     }
 
@@ -132,7 +132,7 @@ final class GameplayEntity extends DualLinkNode {
 
     final static void resetAvatarFeedbackState(int initialFrameIndex) {
         af.avatarFrameStepTicks = 0;
-        ul.currentAvatarCryFrame = null;
+        MatchCandidateSupport.currentAvatarCryFrame = null;
         gg.avatarCryPhase = 0;
         PasswordValidator.avatarCryFrameCursor = 0;
         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 0;
@@ -246,7 +246,7 @@ final class GameplayEntity extends DualLinkNode {
         } else {
           if (this.entitySpriteKindId == 4) {
             this.spriteVariantIndex = -1;
-            this.entitySprite = fc.blackOrbFrames[0];
+            this.entitySprite = EndingAnimationSupport.blackOrbFrames[0];
             this.entityCategoryKey = -1;
           } else {
             if (this.entitySpriteKindId == 3) {
@@ -410,7 +410,7 @@ final class GameplayEntity extends DualLinkNode {
             if ((15 & this.entityUpdateTick) == 0) {
               kind4AnimationFrame = this.animationFrameIndex;
               this.animationFrameIndex = this.animationFrameIndex + 1;
-              this.entitySprite = fc.blackOrbFrames[kind4AnimationFrame];
+              this.entitySprite = EndingAnimationSupport.blackOrbFrames[kind4AnimationFrame];
               if (this.animationFrameIndex == 4) {
                 this.animationFrameIndex = 0;
               }

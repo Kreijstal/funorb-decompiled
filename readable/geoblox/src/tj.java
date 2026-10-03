@@ -94,17 +94,17 @@ final class tj {
         if (VisualPropertyOverrides.field_C < 2) {
           return 0;
         }
-        if (va.field_a == 0) {
+        if (MeshPrioritySupport.field_a == 0) {
           if (!DirectByteStorage.field_h.ensureIndexLoaded(0)) {
             return 20;
           }
           if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -127)) {
             return 40;
           }
-          if (!dc.field_c.ensureIndexLoaded(0)) {
+          if (!AttachedEntityRenderer.field_c.ensureIndexLoaded(0)) {
             return 50;
           }
-          if (!dc.field_c.loadGroupByName("commonui", (byte) -127)) {
+          if (!AttachedEntityRenderer.field_c.loadGroupByName("commonui", (byte) -127)) {
             return 60;
           }
           if (!DialRenderer.field_n.ensureIndexLoaded(0)) {
@@ -132,10 +132,10 @@ final class tj {
         if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -125)) {
           return 57;
         }
-        if (!dc.field_c.ensureIndexLoaded(0)) {
+        if (!AttachedEntityRenderer.field_c.ensureIndexLoaded(0)) {
           return 71;
         }
-        if (!dc.field_c.loadGroupByName("commonui", (byte) -128)) {
+        if (!AttachedEntityRenderer.field_c.loadGroupByName("commonui", (byte) -128)) {
           return 80;
         }
         if (!DialRenderer.field_n.ensureIndexLoaded(param0 - 73)) {

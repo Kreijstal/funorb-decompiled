@@ -281,7 +281,7 @@ final class MatchingTextValidator extends TextInputValidator {
             throw new IllegalStateException();
         }
         int var1 = 28 % ((-79 - param0) / 44);
-        if (va.field_e == kd.field_b) {
+        if (MeshPrioritySupport.field_e == kd.field_b) {
             kd.field_b = DiskCacheWorker.field_l;
             return dl.field_a;
         }

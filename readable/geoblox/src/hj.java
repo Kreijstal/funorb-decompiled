@@ -83,7 +83,7 @@ final class hj {
             for (rgbPixelIndex = 0; pixelCount > rgbPixelIndex; rgbPixelIndex++) {
               rgbPixelsForUpdates[rgbPixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[rgbPixelIndex], 255)];
             }
-            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixelsSnapshot);
+            sprites[spriteIndex] = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixelsSnapshot);
             spriteIndex++;
             continue;
           }
@@ -97,7 +97,7 @@ final class hj {
           for (argbPixelIndex = 0; argbPixelIndex < pixelCount; argbPixelIndex++) {
             argbPixelsForUpdates[argbPixelIndex] = lb.orInt(ProxySocketConnector.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[argbPixelIndex], 255)]);
           }
-          sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
+          sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
           spriteIndex++;
           continue;
         }

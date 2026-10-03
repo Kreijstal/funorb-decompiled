@@ -25,7 +25,7 @@ final class kb {
           if (param1 != 6568) {
             return;
           }
-          WidgetSkinState.field_g = va.field_e;
+          WidgetSkinState.field_g = MeshPrioritySupport.field_e;
           if (param0 != 255) {
             if (param0 < 100) {
               ScorePopup.field_g = ig.a(param3, param0, false);

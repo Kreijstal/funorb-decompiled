@@ -294,7 +294,7 @@ final class CachedTextLayout extends TextLayout {
             pendingActionDrawTop = eh.pendingActionPanelTop;
             DelayedIncomingPacket.drawNineSlicePanel(pendingActionDrawTop, 10, RasterTargetSnapshot.pendingActionPanelHeight, (byte) -92, MultiHandleSliderRenderer.pendingActionPanelWidth, ll.frameNineSliceSprites);
             UsernameAvailabilityQuery.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (RasterTargetSnapshot.pendingActionPanelHeight - 15)) / 2);
-            FadingDialog.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, MultiHandleSliderRenderer.pendingActionPanelWidth - 42 - 30, RasterTargetSnapshot.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
+            FadingDialog.uiPaletteFont.drawParagraph(GameplaySetupSupport.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, MultiHandleSliderRenderer.pendingActionPanelWidth - 42 - 30, RasterTargetSnapshot.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
         }
     }
 

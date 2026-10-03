@@ -271,24 +271,24 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (IterableNodeHashTable.field_d == PacketBuffer.currentProtocolStage) {
+          if (IterableNodeHashTable.requestReadyStage == PacketBuffer.currentProtocolStage) {
             CacheReference.field_q.position = 0;
             IntrusiveNodeHashTable.field_b = null;
             if (param4 != null) {
               var9 = 0;
-              fc.field_d.position = 0;
+              EndingAnimationSupport.loginPayloadBuffer.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
-              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
-              fc.field_d.writeZeroPrefixedNullTerminatedText(var13, (byte) -126);
-              fc.field_d.writeZeroPrefixedNullTerminatedText(var8, (byte) -126);
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(var13, (byte) -126);
+              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(var8, (byte) -126);
               var14 = (CharSequence) ((Object) param4);
-              fc.field_d.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.a(var14, 48), (byte) -126);
-              fc.field_d.writeShortBE(param0, 28695);
-              fc.field_d.writeByte((byte) -94, param1);
-              fc.field_d.writeByte((byte) 123, var9);
+              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.a(var14, 48), (byte) -126);
+              EndingAnimationSupport.loginPayloadBuffer.writeShortBE(param0, 28695);
+              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) -94, param1);
+              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) 123, var9);
               CacheReference.field_q.writeByte((byte) 127, 18);
               CacheReference.field_q.position = CacheReference.field_q.position + 2;
               var10 = CacheReference.field_q.position;
@@ -297,20 +297,20 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 var11_ref_String = "";
               }
               CacheReference.field_q.writeNullTerminatedText(var11_ref_String, 0);
-              UiWidget.a(false, fc.field_d, CacheReference.field_q, ld.field_c, InstrumentPatch.field_l);
+              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.field_q, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
               CacheReference.field_q.backpatchLengthShortBE(-var10 + CacheReference.field_q.position, true);
             } else {
-              fc.field_d.position = 0;
-              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
-              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
-              stackIn_9_0 = fc.field_d;
+              EndingAnimationSupport.loginPayloadBuffer.position = 0;
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              stackIn_9_0 = EndingAnimationSupport.loginPayloadBuffer;
               if (!param2.isIncludedInLookupRequest((byte) 97)) {
                 stackIn_10_1 = "";
               } else {
                 stackIn_10_1 = var13;
               }
               ((ByteArrayBuffer) (Object) stackIn_9_0).writeZeroPrefixedNullTerminatedText(stackIn_10_1, (byte) -126);
-              stackIn_12_0 = fc.field_d;
+              stackIn_12_0 = EndingAnimationSupport.loginPayloadBuffer;
               if (!param3.isIncludedInLookupRequest((byte) 126)) {
                 stackIn_13_1 = "";
               } else {
@@ -320,7 +320,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               CacheReference.field_q.writeByte((byte) 124, 16);
               CacheReference.field_q.position = CacheReference.field_q.position + 1;
               var9 = CacheReference.field_q.position;
-              UiWidget.a(false, fc.field_d, CacheReference.field_q, ld.field_c, InstrumentPatch.field_l);
+              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.field_q, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
               CacheReference.field_q.backpatchLengthByte(11700, CacheReference.field_q.position - var9);
             }
             NanoFrameTimer.a(-1, -1);
@@ -760,7 +760,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) (this));
             }
           } else {
-            this.loginOrRetryButton = new ButtonWidget(a.retryText, (WidgetListener) null);
+            this.loginOrRetryButton = new ButtonWidget(BoardEntityState.retryText, (WidgetListener) null);
             this.alternateButton = new ButtonWidget(DisplayModeInfo.quitToWebsiteText, (WidgetListener) null);
             this.loginIdentifierInput.enabled = false;
           }

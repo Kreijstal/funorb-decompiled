@@ -46,7 +46,7 @@ final class BoardReconciliationSupport {
                 }
                 continue;
               }
-              SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, va.field_b, (byte) 112, md.field_c + entryLimit, false);
+              SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, md.field_c + entryLimit, false);
             }
             if (entryLimit < md.field_c) {
               md.field_c = entryLimit;
@@ -114,7 +114,7 @@ final class BoardReconciliationSupport {
                     if (clientControlSnapshot != 0) {
                       break L3;
                     }
-                    if (entityQueueThenAttachedQueue != a.attachedEntities) {
+                    if (entityQueueThenAttachedQueue != BoardEntityState.attachedEntities) {
                       if (!(!activeEntity.detachedFromBoard)) {
                         fa.entitiesDetachedThisTick = true;
                       }
@@ -123,7 +123,7 @@ final class BoardReconciliationSupport {
                       activeEntity.drawEntityIdOnBoardMask(2);
                       activeEntity.unlinkNode(false);
                       activeEntity.unlinkSecondaryNode((byte) 54);
-                      a.attachedEntities.addLast(-80, activeEntity);
+                      BoardEntityState.attachedEntities.addLast(-80, activeEntity);
                       UiWidget.gameplaySession.boardRasterDirty = true;
                     }
                     activeEntity.entityQueue = null;
@@ -133,7 +133,7 @@ final class BoardReconciliationSupport {
                   if (!RankedListQuery.connectivityDirty) {
                     break L2;
                   }
-                  entityQueueThenAttachedQueue = a.attachedEntities;
+                  entityQueueThenAttachedQueue = BoardEntityState.attachedEntities;
                 }
                 activeEntity = (GameplayEntity) ((Object) ((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
                 while (true) {
@@ -240,7 +240,7 @@ final class BoardReconciliationSupport {
                           }
                         }
                       }
-                      activeEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+                      activeEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
                       continue;
                     }
                     RankedListQuery.connectivityDirty = false;
@@ -263,7 +263,7 @@ final class BoardReconciliationSupport {
               }
               visitedResetIndexThenKindFourCount = 0;
             }
-            routedAttachedEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+            routedAttachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
             while (routedAttachedEntity != null) {
               if ((!(null == routedAttachedEntity.entityQueue) ||
                   (!(!w.avatarShockPending) &&
@@ -336,7 +336,7 @@ final class BoardReconciliationSupport {
                       } else {
                         popupPoints = 100;
                       }
-                      ld.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
+                      PlayfieldRules.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
                     }
                     if (4 != routedAttachedEntity.entitySpriteKindId) {
                       routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
@@ -352,7 +352,7 @@ final class BoardReconciliationSupport {
                 }
                 UiWidget.gameplaySession.boardRasterDirty = true;
               }
-              routedAttachedEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+              routedAttachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
               if (clientControlSnapshot == 0) {
                 continue;
               }

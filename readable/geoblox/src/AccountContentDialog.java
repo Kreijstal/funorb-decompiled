@@ -27,14 +27,14 @@ final class AccountContentDialog extends ContentTransitionDialog {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (hj.field_a == 0) {
                 PcmResampler.a(param0, false, (byte) -102);
-                i.a(0, (byte) 42, param2, 0);
+                MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 42, param2, 0);
               } else {
-                fc.a(true, param2);
+                EndingAnimationSupport.presentPreparedFrame(true, param2);
               }
             } else {
               SoftwareRasterizer.clearFramebuffer();
               eh.a(240, 320, -51);
-              i.a(0, (byte) 51, param2, 0);
+              MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 51, param2, 0);
             }
           }
           if (param1 != 0) {

@@ -222,7 +222,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             if (gg.avatarCryPhase == 0) {
               if (!LoginPanel.endingEntityScanClear) {
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
-                ul.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
+                MatchCandidateSupport.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                 avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 heldCryBeginShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -239,7 +239,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               }
               gg.avatarCryPhase = gg.avatarCryPhase + 1;
               PasswordValidator.avatarCryFrameCursor = 0;
-              MeshMaterial.a(300, fl.gameSoundSamples[22], false, SocialListEntry.field_gb);
+              MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.field_gb);
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
               avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               heldCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -256,7 +256,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             }
             if (gg.avatarCryPhase == 1) {
               if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
-                ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
+                MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                 avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 heldCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -288,7 +288,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               return;
             }
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
-            ul.currentAvatarCryFrame = ld.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
+            MatchCandidateSupport.currentAvatarCryFrame = PlayfieldRules.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
           }
           avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
@@ -347,7 +347,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               if (gg.avatarCryPhase == 0) {
                 if (!LoginPanel.endingEntityScanClear) {
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
-                  ul.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
+                  MatchCandidateSupport.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                   avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                   steeredCryBeginShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -364,7 +364,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 }
                 gg.avatarCryPhase = gg.avatarCryPhase + 1;
                 PasswordValidator.avatarCryFrameCursor = 0;
-                MeshMaterial.a(300, fl.gameSoundSamples[22], false, SocialListEntry.field_gb);
+                MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.field_gb);
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                 avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 steeredCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -381,7 +381,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               }
               if (gg.avatarCryPhase == 1) {
                 if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
-                  ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
+                  MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                   avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                   steeredCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -413,7 +413,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 return;
               }
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
-              ul.currentAvatarCryFrame = ld.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
+              MatchCandidateSupport.currentAvatarCryFrame = PlayfieldRules.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
             }
             avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
@@ -492,7 +492,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           if (gg.avatarCryPhase == 0) {
             if (!LoginPanel.endingEntityScanClear) {
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
-              ul.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
+              MatchCandidateSupport.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
               avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               steppedCryBeginShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -517,7 +517,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             }
             gg.avatarCryPhase = gg.avatarCryPhase + 1;
             PasswordValidator.avatarCryFrameCursor = 0;
-            MeshMaterial.a(300, fl.gameSoundSamples[22], false, SocialListEntry.field_gb);
+            MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.field_gb);
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
             avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steppedCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -541,7 +541,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           }
           if (gg.avatarCryPhase == 1) {
             if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
-              ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
+              MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
               avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               steppedCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -574,7 +574,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
           }
           PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
-          ul.currentAvatarCryFrame = ld.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
+          MatchCandidateSupport.currentAvatarCryFrame = PlayfieldRules.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
           PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
         }
         avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
@@ -657,13 +657,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             if (errorKind != 256) {
               buttonTextContentSnapshot = errorTextContent;
               if (this.showRetryLoginOnDismiss) {
-                retryOrBackButtonText = a.retryText;
+                retryOrBackButtonText = BoardEntityState.retryText;
               } else {
                 retryOrBackButtonText = ll.backText;
               }
               ((MessageDialogContent) (Object) buttonTextContentSnapshot).appendActionButton(retryOrBackButtonText, 1, -1);
             } else {
-              errorTextContent.appendButton(-2, a.retryText, (WidgetListener) (this));
+              errorTextContent.appendButton(-2, BoardEntityState.retryText, (WidgetListener) (this));
             }
           }
           if (errorKind == 3) {

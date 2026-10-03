@@ -315,12 +315,12 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         if (!param0) {
           archiveClientId = -8;
         }
-        if (pg.pointerListener == null) {
+        if (GameplaySetupSupport.pointerListener == null) {
           return;
         }
-        var1 = pg.pointerListener;
+        var1 = GameplaySetupSupport.pointerListener;
         synchronized (var1) {
-          pg.pointerListener = null;
+          GameplaySetupSupport.pointerListener = null;
         }
     }
 

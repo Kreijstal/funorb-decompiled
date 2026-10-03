@@ -27,139 +27,139 @@ abstract class SpriteState extends DualLinkNode {
           LoginPanel.field_O = param1;
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_names,0");
           if (null != var2) {
-            pg.achievementTitles[0] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[0] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_names,1");
           if (var2 != null) {
-            pg.achievementTitles[1] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[1] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "achievement_names,2");
           if (var2 != null) {
-            pg.achievementTitles[2] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[2] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "achievement_names,3");
           if (null != var2) {
-            pg.achievementTitles[3] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[3] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "achievement_names,4");
           if (null != var2) {
-            pg.achievementTitles[4] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[4] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "achievement_names,5");
           if (var2 != null) {
-            pg.achievementTitles[5] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[5] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "achievement_names,6");
           if (var2 != null) {
-            pg.achievementTitles[6] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[6] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "achievement_names,7");
           if (null != var2) {
-            pg.achievementTitles[7] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[7] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "achievement_names,8");
           if (null != var2) {
-            pg.achievementTitles[8] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[8] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_names,9");
           if (var2 != null) {
-            pg.achievementTitles[9] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[9] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_names,10");
           if (null != var2) {
-            pg.achievementTitles[10] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[10] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "achievement_names,11");
           if (null != var2) {
-            pg.achievementTitles[11] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[11] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_names,12");
           if (var2 != null) {
-            pg.achievementTitles[12] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[12] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "achievement_names,13");
           if (null != var2) {
-            pg.achievementTitles[13] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[13] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "achievement_names,14");
           if (var2 != null) {
-            pg.achievementTitles[14] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[14] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(123, "achievement_names,15");
           if (null != var2) {
-            pg.achievementTitles[15] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[15] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "achievement_names,16");
           if (var2 != null) {
-            pg.achievementTitles[16] = EmailValidator.decodeTextBytes(1, var2);
+            GameplaySetupSupport.achievementTitles[16] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_criteria,0");
           if (null != var2) {
-            ri.field_b[0] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[0] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "achievement_criteria,1");
           if (null != var2) {
-            ri.field_b[1] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[1] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "achievement_criteria,2");
           if (null != var2) {
-            ri.field_b[2] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[2] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "achievement_criteria,3");
           if (var2 != null) {
-            ri.field_b[3] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[3] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "achievement_criteria,4");
           if (null != var2) {
-            ri.field_b[4] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[4] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "achievement_criteria,5");
           if (null != var2) {
-            ri.field_b[5] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[5] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "achievement_criteria,6");
           if (var2 != null) {
-            ri.field_b[6] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[6] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "achievement_criteria,7");
           if (var2 != null) {
-            ri.field_b[7] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[7] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "achievement_criteria,8");
           if (null != var2) {
-            ri.field_b[8] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[8] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "achievement_criteria,9");
           if (null != var2) {
-            ri.field_b[9] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[9] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_criteria,10");
           if (null != var2) {
-            ri.field_b[10] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[10] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "achievement_criteria,11");
           if (var2 != null) {
-            ri.field_b[11] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[11] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "achievement_criteria,12");
           if (var2 != null) {
-            ri.field_b[12] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[12] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "achievement_criteria,13");
           if (null != var2) {
-            ri.field_b[13] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[13] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "achievement_criteria,14");
           if (null != var2) {
-            ri.field_b[14] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[14] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "achievement_criteria,15");
           if (null != var2) {
-            ri.field_b[15] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[15] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "achievement_criteria,16");
           if (null != var2) {
-            ri.field_b[16] = EmailValidator.decodeTextBytes(1, var2);
+            LoginProtocolSupport.achievementDescriptions[16] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "starting");
           if (null != var2) {
@@ -191,7 +191,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "youreGreat");
           if (null != var2) {
-            ld.field_a = EmailValidator.decodeTextBytes(1, var2);
+            PlayfieldRules.twoThousandBonusText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "bubbleBonus");
           if (var2 != null) {
@@ -302,47 +302,47 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "instructionTitles,0");
           if (var2 != null) {
-            a.field_a[0] = EmailValidator.decodeTextBytes(1, var2);
+            BoardEntityState.instructionPageTitles[0] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "instructionTitles,1");
           if (var2 != null) {
-            a.field_a[1] = EmailValidator.decodeTextBytes(1, var2);
+            BoardEntityState.instructionPageTitles[1] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "instructionTitles,2");
           if (null != var2) {
-            a.field_a[2] = EmailValidator.decodeTextBytes(1, var2);
+            BoardEntityState.instructionPageTitles[2] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "instructionTitles,3");
           if (null != var2) {
-            a.field_a[3] = EmailValidator.decodeTextBytes(1, var2);
+            BoardEntityState.instructionPageTitles[3] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(123, "instructionTitles,4");
           if (var2 != null) {
-            a.field_a[4] = EmailValidator.decodeTextBytes(1, var2);
+            BoardEntityState.instructionPageTitles[4] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "instructionTitles,5");
           if (null != var2) {
-            a.field_a[5] = EmailValidator.decodeTextBytes(1, var2);
+            BoardEntityState.instructionPageTitles[5] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(124, "instructionText,0");
           if (null != var2) {
-            ec.field_e[0] = EmailValidator.decodeTextBytes(1, var2);
+            MatchScoringSupport.instructionParagraphs[0] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "instructionText,1");
           if (var2 != null) {
-            ec.field_e[1] = EmailValidator.decodeTextBytes(1, var2);
+            MatchScoringSupport.instructionParagraphs[1] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "instructionText,2");
           if (var2 != null) {
-            ec.field_e[2] = EmailValidator.decodeTextBytes(1, var2);
+            MatchScoringSupport.instructionParagraphs[2] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "instructionText,3");
           if (var2 != null) {
-            ec.field_e[3] = EmailValidator.decodeTextBytes(1, var2);
+            MatchScoringSupport.instructionParagraphs[3] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(123, "instructionText,4");
           if (null != var2) {
-            ec.field_e[4] = EmailValidator.decodeTextBytes(1, var2);
+            MatchScoringSupport.instructionParagraphs[4] = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "pleaseLogin");
           if (var2 != null) {

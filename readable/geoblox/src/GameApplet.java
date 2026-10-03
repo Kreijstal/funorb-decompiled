@@ -876,7 +876,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if ((0L != var4) &&
               (var4 < var2_long)) {
             var6_int = (int)(-var4 + var2_long);
-            ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
+            MatchScoringSupport.frameLoopRateEstimate = (32000 + (var6_int >> 1)) / var6_int;
           }
           L2: {
             fieldTemp$1 = DisplayModeInfo.field_i;
