@@ -114,14 +114,11 @@ final class kc {
                     if (clientControlSnapshot != 0) {
                       break L3;
                     }
-                    L5: {
-                      if (entityQueueThenAttachedQueue != a.attachedEntities) {
-                        if (!activeEntity.detachedFromBoard) {
-                          break L5;
-                        }
+                    if (entityQueueThenAttachedQueue != a.attachedEntities) {
+                      if (!(!activeEntity.detachedFromBoard)) {
                         fa.entitiesDetachedThisTick = true;
-                        break L5;
                       }
+                    } else {
                       activeEntity.eraseEntityTrail(30383);
                       activeEntity.drawEntityIdOnBoardMask(2);
                       activeEntity.unlinkNode(false);
@@ -160,19 +157,17 @@ final class kc {
                         L12: while (true) {
                           poppedEntityOrSearchStart = (GameplayEntity) ((Object) pendingConnectivityEntities.removeFirst(true));
                           while (true) {
-                            L15: {
-                              currentConnectivityEntity = poppedEntityOrSearchStart;
-                              currentConnectivityEntityAlias = currentConnectivityEntity;
-                              connectivityAliasThenDetachingEntity = currentConnectivityEntityAlias;
-                              if (currentConnectivityEntityAlias != null) {
-                                PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
-                                directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
-                                avatarContactThenDetachDecision = directAvatarContactValue ? 1 : 0;
-                                poppedEntityTouchesAvatar = directAvatarContactValue;
-                                if (poppedEntityTouchesAvatar) {
-                                  componentCanDetach = 0;
-                                  break L15;
-                                }
+                            currentConnectivityEntity = poppedEntityOrSearchStart;
+                            currentConnectivityEntityAlias = currentConnectivityEntity;
+                            connectivityAliasThenDetachingEntity = currentConnectivityEntityAlias;
+                            if (currentConnectivityEntityAlias != null) {
+                              PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
+                              directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
+                              avatarContactThenDetachDecision = directAvatarContactValue ? 1 : 0;
+                              poppedEntityTouchesAvatar = directAvatarContactValue;
+                              if (poppedEntityTouchesAvatar) {
+                                componentCanDetach = 0;
+                              } else {
                                 visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
                                 componentNeighborIndex = 0;
                                 L17: while (true) {
@@ -203,7 +198,6 @@ final class kc {
                                           continue;
                                         }
                                         pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
-                                        break L20;
                                       }
                                       componentNeighborIndex++;
                                       continue L17;

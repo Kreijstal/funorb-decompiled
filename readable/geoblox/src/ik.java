@@ -111,7 +111,7 @@ final class ik {
             } else {
               firstIsKindOne = 1;
             }
-            L5: {
+            {
               if ((secondIsKindOne ^ firstIsKindOne) != 0) {
                 if ((secondEntity.entitySpriteKindId == 1) &&
                     (firstEntity.entitySpriteKindId == 0)) {
@@ -138,21 +138,20 @@ final class ik {
                   }
                 }
               } else {
-                if ((2 != secondEntity.entitySpriteKindId) &&
-                    (firstEntity.entitySpriteKindId != 2)) {
-                  break L5;
-                }
-                if ((secondEntity.entitySpriteKindId == 2) &&
-                    (2 != firstEntity.entitySpriteKindId)) {
-                  secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
-                  neighborIndexThenDetachSecond = 1;
-                } else {
-                  if ((firstEntity.entitySpriteKindId == 2) &&
-                      (2 != secondEntity.entitySpriteKindId)) {
-                    detachFirst = 1;
-                    propagateCategory = 1;
+                if (!((2 != secondEntity.entitySpriteKindId) &&
+                    (firstEntity.entitySpriteKindId != 2))) {
+                  if ((secondEntity.entitySpriteKindId == 2) &&
+                      (2 != firstEntity.entitySpriteKindId)) {
+                    secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
                     neighborIndexThenDetachSecond = 1;
-                    firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
+                  } else {
+                    if ((firstEntity.entitySpriteKindId == 2) &&
+                        (2 != secondEntity.entitySpriteKindId)) {
+                      detachFirst = 1;
+                      propagateCategory = 1;
+                      neighborIndexThenDetachSecond = 1;
+                      firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
+                    }
                   }
                 }
               }

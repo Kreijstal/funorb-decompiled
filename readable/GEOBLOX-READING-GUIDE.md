@@ -7,7 +7,7 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 111)
+## Current readability (pass 112)
 
 The export has 8,898 guarded names and 71,946 identifier edits. Class coverage is
 169 semantic renames, one already meaningful `Geoblox` name and 133 opaque names.
@@ -20,7 +20,15 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass111 adds 26 class roles and 265 field/method/parameter names without changing
+Pass112 revisits proven exits exposed by final guard cleanup, replacing 13
+generated labels across nine bodies with ordinary guards and alternatives.
+There remain 207 generated plain block labels and six large labeled spans.
+`kc.reconcileBoardEntities` is now 339 lines with nine labels;
+`SpriteState.drawSortedHalfBlendRgbTriangle` is 364 lines with seven. All 8,898
+complete naming rules and ordered bindings stay unchanged; source-byte and
+native evidence covers the documented transforms and probe scopes.
+
+Pass111 added 26 class roles and 265 field/method/parameter names without changing
 raw bodies or earlier naming rules. Audio codebook/residue/mapping state and the
 instrument synthesizer now have named fields and direct methods. Rendering
 strategies share `drawWidget`, and widgets exposing validation share

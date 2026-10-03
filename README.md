@@ -23,6 +23,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 112 revisits proven exits after final guard/frame cleanup. Nine bodies in
+eight files lose 13 generated block labels and 20 lines, leaving 207 labels.
+Board reconciliation falls from 345 to 339 lines and 11 to 9 labels; the sorted
+half-blend triangle falls from 372 to 364 lines and 11 to 7 labels. All 8,898
+complete naming rules, local ordinals, 137,964 bindings and 388 override pairs
+remain unchanged. Every regenerated token stream matches the expected recovery;
+a clean tracked decompiler-source archive reproduces all Java and diagnostics
+bytes. Six large labeled spans remain, and full game/device equivalence is still
+unverified. The decompiler-source SHA-256 is
+`f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5`.
+
 Pass 111 adds 26 class roles and 265 field/method/parameter names, including
 `VorbisCodebook`, `VorbisResidue`, `SynthesizedSoundInstrument`, `LoginPayload`,
 `CheckboxWidget`, `DialWidget` and `MultiHandleSliderWidget`. The backing

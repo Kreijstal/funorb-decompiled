@@ -53,16 +53,16 @@ final class GameScreen extends MenuScreen {
               actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
               if ((actionId == 8) &&
                   (clientControlFlowGuard == 0)) {
-                L4: {
+                {
                   if (102 != ki.currentKeyboardEventCode) {
                     if (ki.currentKeyboardEventCode != 103) {
                       super.handleMenuKey(itemIndex, -53);
-                      break L4;
+                    } else {
+                      j.field_gb = 80;
                     }
-                    j.field_gb = 80;
-                    break L4;
+                  } else {
+                    j.field_gb = 0;
                   }
-                  j.field_gb = 0;
                 }
                 this.previewMusicVolume(0);
                 break L0;
@@ -997,20 +997,18 @@ final class GameScreen extends MenuScreen {
                       if (clientControlFlowGuard != 0) {
                         break L10;
                       }
-                      L12: {
-                        if (nullEntryOrSessionSentinel != categoryNames[entryIndex]) {
-                          hasDisplayedEntryFlag = 1;
-                          entryName = categoryNames[entryIndex];
-                          if ((currentScoreHighlightedFlag == 0) &&
-                              (null != UiWidget.gameplaySession) &&
-                              (categoryScores[entryIndex] == Math.abs(UiWidget.gameplaySession.score)) &&
-                              (WhirlpoolHash.a(entryName, (byte) 12))) {
-                            currentScoreHighlightedFlag = 1;
-                            scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 16610816, -1);
-                            scoreFont.drawText(entryName, 165, entryTextY, 16610816, -1);
-                            scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 16610816, -1);
-                            break L12;
-                          }
+                      if (nullEntryOrSessionSentinel != categoryNames[entryIndex]) {
+                        hasDisplayedEntryFlag = 1;
+                        entryName = categoryNames[entryIndex];
+                        if ((currentScoreHighlightedFlag == 0) &&
+                            (null != UiWidget.gameplaySession) &&
+                            (categoryScores[entryIndex] == Math.abs(UiWidget.gameplaySession.score)) &&
+                            (WhirlpoolHash.a(entryName, (byte) 12))) {
+                          currentScoreHighlightedFlag = 1;
+                          scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 16610816, -1);
+                          scoreFont.drawText(entryName, 165, entryTextY, 16610816, -1);
+                          scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 16610816, -1);
+                        } else {
                           scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 1, -1);
                           scoreFont.drawText(entryName, 165, entryTextY, 1, -1);
                           scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 1, -1);

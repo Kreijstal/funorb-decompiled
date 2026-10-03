@@ -97,7 +97,7 @@ final class AchievementSubmission extends IntrusiveNode {
                 if (controlFlagSnapshot != 0) {
                   break L3;
                 }
-                L5: {
+                {
                   if (nearPlaneOrNormalCapacityOrQueueMinDepth >= invertedDepthOrNormalIndexOrQueueGuard) {
                     SingleChildWidget.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
                     TextInputWidget.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
@@ -108,9 +108,9 @@ final class AchievementSubmission extends IntrusiveNode {
                       maximumVisibleDepth = cameraZBasisOrCameraDepth;
                     }
                     CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
-                    break L5;
+                  } else {
+                    CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = -2147483648;
                   }
-                  CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = -2147483648;
                 }
                 if (storeCameraCoordinates) {
                   a.cameraMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled >> ok.meshProjectionShift;

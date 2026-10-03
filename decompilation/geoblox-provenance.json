@@ -3215,6 +3215,12 @@
         }
       }
     ],
-    "scope": "Revisits eight existing destination/scope exit proofs after final guard/frame cleanup. Accepted steps strictly decrease the label/transfer measure and terminate at a fixed point; no new value facts or scalar dispatch selection are added. Effect order, conditions, checked/unchecked exception and finally/monitor ownership remain. All303 produced token streams equal an independent application of the same proven recovery to the pinned raw bodies, and all19591 declarations/118373 references/388 full override pairs retain ordered identities. A clean tracked source tar reproduces every emitted Java byte and diagnostics; diagnostic stage capture changes no output bytes. Four focused emitter test files pass, including25200 native comparisons and10 independent oracles across14 variants. All8898 prior naming objects/local ordinals remain. Larger game/menu/session continuations and full asset/game/browser/phone equivalence remain unfinished or unverified. Current game-probe evidence belongs in the single readable manifest."
+    "scope": "Revisits eight existing destination/scope exit proofs after final guard/frame cleanup. Accepted steps strictly decrease the label/transfer measure and terminate at a fixed point; no new value facts or scalar dispatch selection are added. Effect order, conditions, checked/unchecked exception and finally/monitor ownership remain. All303 produced token streams equal an independent application of the same proven recovery to the pinned raw bodies, and all19591 declarations/118373 references/388 full override pairs retain ordered identities. A clean tracked source tar reproduces every emitted Java byte and diagnostics; diagnostic stage capture changes no output bytes. Four focused emitter test files pass, including25200 native comparisons and10 independent oracles across14 variants. All8898 prior naming objects/local ordinals remain. Larger game/menu/session continuations and full asset/game/browser/phone equivalence remain unfinished or unverified. Current game-probe evidence belongs in the single readable manifest.",
+    "previousSourceCommit": "3c17228365ac550c86439445c9e76311ba3f86d6",
+    "sourceCommit": "7e18b39724d1743768edf69a96887e3c4c895c7b",
+    "previousSourceTreeSha256": "05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b",
+    "sourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
+    "sourceProofTest": "readable/tests/test-geoblox-post-guard-source.mjs",
+    "sourceProofTestSha256": "9eac61ef53adbc3cd5c2869d0009ce27676cafb27e0841b7cb266144595b9a31"
   }
 }
