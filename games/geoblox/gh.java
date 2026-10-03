@@ -233,63 +233,43 @@ final class gh {
         tf var16 = null;
         var14 = Geoblox.field_C;
         if (!ll.field_g[c.field_ab]) {
-          L0: {
-            L1: {
-              L2: {
-                L3: {
-                  L4: {
-                    L5: {
-                      var3 = c.field_ab;
-                      if ((var3 == 4) &&
-                          (var14 == 0)) {
-                        var2_ref_String = "baking";
-                        if (var14 == 0) {
-                          break L0;
-                        }
-                      } else if (!((var3 == 6) &&
-                          (var14 == 0))) {
-                        if ((var3 == 5) &&
-                            (var14 == 0)) {
-                          break L5;
-                        }
-                        if (var3 == 0) {
-                          break L4;
-                        }
-                        if ((3 == var3) &&
-                            (var14 == 0)) {
-                          break L3;
-                        }
-                        if (var3 == 2) {
-                          break L2;
-                        }
-                        break L1;
-                      }
-                      var2_ref_String = "space";
-                      if (var14 == 0) {
-                        break L0;
-                      }
-                    }
-                    var2_ref_String = "sports";
-                    if (var14 == 0) {
-                      break L0;
-                    }
-                  }
-                  var2_ref_String = "jewels";
-                  if (var14 == 0) {
-                    break L0;
-                  }
-                }
-                var2_ref_String = "germs";
-                if (var14 == 0) {
-                  break L0;
-                }
+          var3 = c.field_ab;
+          switch ((var14 == 0
+              || var3 == 0
+              || var3 == 2
+            ) ? var3 : -1) {
+            case 4:
+              var2_ref_String = "baking";
+              if (var14 == 0) {
+                break;
               }
+            case 6:
+              var2_ref_String = "space";
+              if (var14 == 0) {
+                break;
+              }
+            case 5:
+              var2_ref_String = "sports";
+              if (var14 == 0) {
+                break;
+              }
+            case 0:
+              var2_ref_String = "jewels";
+              if (var14 == 0) {
+                break;
+              }
+            case 3:
+              var2_ref_String = "germs";
+              if (var14 == 0) {
+                break;
+              }
+            case 2:
               var2_ref_String = "sweets";
               if (var14 == 0) {
-                break L0;
+                break;
               }
-            }
-            var2_ref_String = "";
+            default:
+              var2_ref_String = "";
           }
           var3_ref_String = gf.a(ff.field_l, ll.field_f, var2_ref_String, wi.field_F, true);
           var4 = 30 + dd.field_G.a(var3_ref_String);
