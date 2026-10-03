@@ -302,13 +302,11 @@ final class gh {
           dd.field_G.b(var3_ref_String, 320, 250, 0, -1);
           return;
         }
-        L11: {
-          if ((ih.a(0)) &&
-              (this.field_H) &&
-              (this.field_i)) {
-            stackIn_49_0 = 1;
-            break L11;
-          }
+        if ((ih.a(0)) &&
+            (this.field_H) &&
+            (this.field_i)) {
+          stackIn_49_0 = 1;
+        } else {
           stackIn_49_0 = 0;
         }
         L13: {
@@ -372,12 +370,9 @@ final class gh {
               break L19;
             }
           }
-          L22: {
-            lj.field_d.b(var3, var4);
-            if ((0 == this.field_bb) &&
-                (!ih.a(0))) {
-              break L22;
-            }
+          lj.field_d.b(var3, var4);
+          if (!((0 == this.field_bb) &&
+              (!ih.a(0)))) {
             vh.field_G.b(446, 410);
             if (var14 == 0) {
               break L19;

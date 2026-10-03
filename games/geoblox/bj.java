@@ -236,32 +236,30 @@ final class bj extends nh {
           }
         }
         try {
-          L4: {
-            if ((var5 != null) &&
-                (var18.length > 2)) {
-              ge.field_f.reset();
-              ge.field_f.update(var5, 0, var18.length - 2);
-              var6_int = (int)ge.field_f.getValue();
-              if (var6_int != this.field_u.field_q[param2]) {
-                throw new RuntimeException();
-              }
-              if ((null != this.field_u.field_r) &&
-                  (null != this.field_u.field_r[param2])) {
-                var30 = this.field_u.field_r[param2];
-                var29 = wh.a(-2 + var18.length, 0, var18, 8);
-                var11 = 0;
-                var9 = var11;
-                while (var11 < 64) {
-                  if (~var29[var11] != ~var30[var11]) {
-                    throw new RuntimeException();
-                  }
-                  var11++;
-                }
-              }
-              this.field_f.field_b = 0;
-              this.field_f.field_q = 0;
-              break L4;
+          if ((var5 != null) &&
+              (var18.length > 2)) {
+            ge.field_f.reset();
+            ge.field_f.update(var5, 0, var18.length - 2);
+            var6_int = (int)ge.field_f.getValue();
+            if (var6_int != this.field_u.field_q[param2]) {
+              throw new RuntimeException();
             }
+            if ((null != this.field_u.field_r) &&
+                (null != this.field_u.field_r[param2])) {
+              var30 = this.field_u.field_r[param2];
+              var29 = wh.a(-2 + var18.length, 0, var18, 8);
+              var11 = 0;
+              var9 = var11;
+              while (var11 < 64) {
+                if (~var29[var11] != ~var30[var11]) {
+                  throw new RuntimeException();
+                }
+                var11++;
+              }
+            }
+            this.field_f.field_b = 0;
+            this.field_f.field_q = 0;
+          } else {
             throw new RuntimeException();
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -42,19 +42,17 @@ final class re extends hf {
             if (!param0) {
               field_f = (String) null;
             }
-            L2: {
-              vd.field_n = pc.field_p;
-              nk.field_e = nk.field_e + 1;
-              if (ii.field_c < 0) {
-                var5 = 0;
-                var2 = var5;
-                while (var5 < 112) {
-                  kj.field_o[var5] = false;
-                  var5++;
-                }
-                ii.field_c = gk.field_b;
-                break L2;
+            vd.field_n = pc.field_p;
+            nk.field_e = nk.field_e + 1;
+            if (ii.field_c < 0) {
+              var5 = 0;
+              var2 = var5;
+              while (var5 < 112) {
+                kj.field_o[var5] = false;
+                var5++;
               }
+              ii.field_c = gk.field_b;
+            } else {
               while (gk.field_b != ii.field_c) {
                 var2 = gf.field_c[gk.field_b];
                 gk.field_b = 1 + gk.field_b & 127;

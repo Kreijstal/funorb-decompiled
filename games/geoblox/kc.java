@@ -490,15 +490,13 @@ final class kc {
                     var2_ref_ja.field_G = 0;
                     if ((var2_ref_ja.field_t) &&
                         (w.field_f)) {
-                      L48: {
-                        stackIn_88_0 = (int)var2_ref_ja.field_v;
-                        stackIn_88_1 = (int)var2_ref_ja.field_o;
-                        stackIn_88_2 = 117;
-                        if ((var2_ref_ja.field_z != 4) &&
-                            (var2_ref_ja.field_z != 3)) {
-                          stackIn_90_3 = 10;
-                          break L48;
-                        }
+                      stackIn_88_0 = (int)var2_ref_ja.field_v;
+                      stackIn_88_1 = (int)var2_ref_ja.field_o;
+                      stackIn_88_2 = 117;
+                      if ((var2_ref_ja.field_z != 4) &&
+                          (var2_ref_ja.field_z != 3)) {
+                        stackIn_90_3 = 10;
+                      } else {
                         stackIn_90_3 = 100;
                       }
                       ld.a(stackIn_88_0, stackIn_88_1, stackIn_88_2, stackIn_90_3);

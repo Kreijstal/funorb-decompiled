@@ -29,14 +29,12 @@ final class em {
         if (param1 != 97) {
           field_a = (String) null;
         }
-        L1: {
-          if (!((65 <= param0) &&
-                (param0 <= 90)) &&
-              !((97 <= param0) &&
-                (param0 <= 122))) {
-            stackIn_10_0 = false;
-            break L1;
-          }
+        if (!((65 <= param0) &&
+              (param0 <= 90)) &&
+            !((97 <= param0) &&
+              (param0 <= 122))) {
+          stackIn_10_0 = false;
+        } else {
           stackIn_10_0 = true;
         }
         return stackIn_10_0;
@@ -165,22 +163,20 @@ final class em {
         if (this.field_h.field_u) {
           return false;
         }
-        L1: {
-          var10 = new qc(this.field_h.e(397));
-          var10.field_f = 5;
-          var3 = var10.c((byte) 34);
-          var10.field_f = var10.field_f + var3 * 72;
-          var13 = new byte[var10.field_j.length - var10.field_f];
-          var11 = var13;
-          var4 = var11;
-          var10.b(29915, var13.length, var13, 0);
-          if ((this.field_c != null) &&
-              (this.field_e != null)) {
-            var12 = new java.math.BigInteger(var13);
-            var7_ref_java_math_BigInteger = var12.modPow(this.field_c, this.field_e);
-            var5 = var7_ref_java_math_BigInteger.toByteArray();
-            break L1;
-          }
+        var10 = new qc(this.field_h.e(397));
+        var10.field_f = 5;
+        var3 = var10.c((byte) 34);
+        var10.field_f = var10.field_f + var3 * 72;
+        var13 = new byte[var10.field_j.length - var10.field_f];
+        var11 = var13;
+        var4 = var11;
+        var10.b(29915, var13.length, var13, 0);
+        if ((this.field_c != null) &&
+            (this.field_e != null)) {
+          var12 = new java.math.BigInteger(var13);
+          var7_ref_java_math_BigInteger = var12.modPow(this.field_c, this.field_e);
+          var5 = var7_ref_java_math_BigInteger.toByteArray();
+        } else {
           var5 = var4;
         }
         if (var5.length != 65) {

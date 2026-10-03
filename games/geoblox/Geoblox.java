@@ -759,17 +759,15 @@ public final class Geoblox extends wf {
                   fieldTemp$0 = nf.field_A + 1;
                   nf.field_A = nf.field_A + 1;
                   if (fieldTemp$0 == 160) {
-                    L23: {
-                      if ((el.field_i != -1) &&
-                          (fh.c(-109))) {
-                        if (cd.field_j != 0) {
-                          kb.a(-106);
-                        } else {
-                          nj.a((byte) 118);
-                        }
-                        pg.field_e = true;
-                        break L23;
+                    if ((el.field_i != -1) &&
+                        (fh.c(-109))) {
+                      if (cd.field_j != 0) {
+                        kb.a(-106);
+                      } else {
+                        nj.a((byte) 118);
                       }
+                      pg.field_e = true;
+                    } else {
                       if (tc.field_c == 2) {
                         ca.field_f = null;
                       }

@@ -25,16 +25,14 @@ final class pf extends ee implements ga, pl {
           var3 = (pk) null;
           pf.a(-108, (pk) null);
         }
-        L1: {
-          if (!((param1 >= 48) &&
-                (param1 <= 57)) &&
-              !((param1 >= 65) &&
-                (param1 <= 90)) &&
-              !((param1 >= 97) &&
-                (param1 <= 122))) {
-            stackIn_13_0 = false;
-            break L1;
-          }
+        if (!((param1 >= 48) &&
+              (param1 <= 57)) &&
+            !((param1 >= 65) &&
+              (param1 <= 90)) &&
+            !((param1 >= 97) &&
+              (param1 <= 122))) {
+          stackIn_13_0 = false;
+        } else {
           stackIn_13_0 = true;
         }
         return stackIn_13_0;

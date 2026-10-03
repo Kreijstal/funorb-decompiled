@@ -86,16 +86,14 @@ final class nb {
           stackIn_17_3 = var12;
           stackIn_17_4 = (float)(320 - param1);
           stackIn_18_5 = (var12 != 2) ? -1 : param4;
-          L5: {
-            stackIn_21_6 = 0;
-            stackIn_21_7 = 0.0f;
-            stackIn_21_8 = (float)param3;
-            stackIn_21_9 = (float)(-param3 + 240);
-            if ((var12 != 2) &&
-                (1 != var12)) {
-              stackIn_23_10 = -1;
-              break L5;
-            }
+          stackIn_21_6 = 0;
+          stackIn_21_7 = 0.0f;
+          stackIn_21_8 = (float)param3;
+          stackIn_21_9 = (float)(-param3 + 240);
+          if ((var12 != 2) &&
+              (1 != var12)) {
+            stackIn_23_10 = -1;
+          } else {
             stackIn_23_10 = param2;
           }
           ((ja) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5, stackIn_21_6, stackIn_21_7, stackIn_21_8, stackIn_21_9, stackIn_23_10, 0.0f);

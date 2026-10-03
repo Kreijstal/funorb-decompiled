@@ -44,18 +44,16 @@ final class ja extends rc {
         if (param0 != -16096) {
           return;
         }
-        L0: {
-          var5 = (int)(Math.sin((double)el.field_o.field_J) * (double)var2 + (double)var3 * Math.cos((double)el.field_o.field_J) + 240.0);
-          if ((this.field_z != 2) &&
-              (1 != this.field_z)) {
-            vf.field_L.e();
-            vb.c();
-            this.field_J.c(-this.field_J.field_s + vf.field_L.field_s >> 1, vf.field_L.field_o - this.field_J.field_o >> 1);
-            k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
-            sh.field_y.a(param0 + 16351);
-            vf.field_L.a(vf.field_L.field_s << 3, vf.field_L.field_o << 3, var4 << 4, var5 << 4, (int)(65535.0 * ((double)(-el.field_o.field_J + this.field_u) / 6.283185307179586)), 4096);
-            break L0;
-          }
+        var5 = (int)(Math.sin((double)el.field_o.field_J) * (double)var2 + (double)var3 * Math.cos((double)el.field_o.field_J) + 240.0);
+        if ((this.field_z != 2) &&
+            (1 != this.field_z)) {
+          vf.field_L.e();
+          vb.c();
+          this.field_J.c(-this.field_J.field_s + vf.field_L.field_s >> 1, vf.field_L.field_o - this.field_J.field_o >> 1);
+          k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
+          sh.field_y.a(param0 + 16351);
+          vf.field_L.a(vf.field_L.field_s << 3, vf.field_L.field_o << 3, var4 << 4, var5 << 4, (int)(65535.0 * ((double)(-el.field_o.field_J + this.field_u) / 6.283185307179586)), 4096);
+        } else {
           if (1 == this.field_z) {
             vf.field_L.e();
             vb.c();
@@ -92,20 +90,18 @@ final class ja extends rc {
         int var9;
         int var10;
         int var11;
-        L0: {
-          var11 = Geoblox.field_C;
-          var2 = this.field_o - 320.0f;
-          var3 = this.field_v - 240.0f;
-          var4 = el.field_o.field_J;
-          var5 = (int)(320.0 + ((double)var2 * Math.cos((double)var4) - Math.sin((double)var4) * (double)var3));
-          var6 = (int)(240.0 + ((double)var2 * Math.sin((double)var4) + Math.cos((double)var4) * (double)var3));
-          if ((this.field_z != 1) &&
-              (2 != this.field_z)) {
-            vf.field_L.e();
-            vb.c();
-            this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)(((double)this.field_u - (double)var4 / 6.283185307179586) * 65535.0), 4096);
-            break L0;
-          }
+        var11 = Geoblox.field_C;
+        var2 = this.field_o - 320.0f;
+        var3 = this.field_v - 240.0f;
+        var4 = el.field_o.field_J;
+        var5 = (int)(320.0 + ((double)var2 * Math.cos((double)var4) - Math.sin((double)var4) * (double)var3));
+        var6 = (int)(240.0 + ((double)var2 * Math.sin((double)var4) + Math.cos((double)var4) * (double)var3));
+        if ((this.field_z != 1) &&
+            (2 != this.field_z)) {
+          vf.field_L.e();
+          vb.c();
+          this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)(((double)this.field_u - (double)var4 / 6.283185307179586) * 65535.0), 4096);
+        } else {
           if (this.field_z != 1) {
             vf.field_L.e();
             vb.c();

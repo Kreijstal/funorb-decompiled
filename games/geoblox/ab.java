@@ -210,13 +210,10 @@ final class ab {
                   }
                   var2.field_L = 0;
                   stackIn_17_0 = (var2.field_z != 2) ? 0 : 1;
-                  L11: {
-                    var3 = stackIn_17_0;
-                    ih.a(-1, td.field_E, var2, ng.field_G);
-                    if ((var3 != 0) &&
-                        (var2.field_z != 2)) {
-                      break L11;
-                    }
+                  var3 = stackIn_17_0;
+                  ih.a(-1, td.field_E, var2, ng.field_G);
+                  if (!((var3 != 0) &&
+                      (var2.field_z != 2))) {
                     if (var2.field_z != 2) {
                       var2.field_u = var2.field_u - param1;
                     }

@@ -32,25 +32,21 @@ final class sk {
           if (~this.field_b < ~this.field_e) {
             this.field_e = this.field_b;
           }
-          L3: {
-            var2 = -1L;
-            var4 = -1L;
-            if ((this.field_c >= this.field_g) &&
-                (~((long)this.field_i + this.field_g) < ~this.field_c)) {
-              var2 = this.field_c;
-              break L3;
-            }
+          var2 = -1L;
+          var4 = -1L;
+          if ((this.field_c >= this.field_g) &&
+              (~((long)this.field_i + this.field_g) < ~this.field_c)) {
+            var2 = this.field_c;
+          } else {
             if ((this.field_c <= this.field_g) &&
                 (~this.field_g > ~(this.field_c + (long)this.field_d))) {
               var2 = this.field_g;
             }
           }
-          L5: {
-            if ((~this.field_g > ~(this.field_c + (long)this.field_d)) &&
-                (this.field_g + (long)this.field_i >= (long)this.field_d + this.field_c)) {
-              var4 = (long)this.field_d + this.field_c;
-              break L5;
-            }
+          if ((~this.field_g > ~(this.field_c + (long)this.field_d)) &&
+              (this.field_g + (long)this.field_i >= (long)this.field_d + this.field_c)) {
+            var4 = (long)this.field_d + this.field_c;
+          } else {
             if ((~((long)this.field_i + this.field_g) < ~this.field_c) &&
                 (~(this.field_c + (long)this.field_d) <= ~((long)this.field_i + this.field_g))) {
               var4 = this.field_g + (long)this.field_i;
@@ -178,25 +174,21 @@ final class sk {
                   }
                 }
               }
-              L12: {
-                var9 = -1L;
-                if ((~this.field_c <= ~var5_long) &&
-                    (~this.field_c > ~((long)var8 + var5_long))) {
-                  var9 = this.field_c;
-                  break L12;
-                }
+              var9 = -1L;
+              if ((~this.field_c <= ~var5_long) &&
+                  (~this.field_c > ~((long)var8 + var5_long))) {
+                var9 = this.field_c;
+              } else {
                 if ((~this.field_c >= ~var5_long) &&
                     (var5_long < this.field_c + (long)this.field_d)) {
                   var9 = var5_long;
                 }
               }
-              L14: {
-                var11 = -1L;
-                if ((~var5_long > ~((long)this.field_d + this.field_c)) &&
-                    ((long)var8 + var5_long >= (long)this.field_d + this.field_c)) {
-                  var11 = this.field_c + (long)this.field_d;
-                  break L14;
-                }
+              var11 = -1L;
+              if ((~var5_long > ~((long)this.field_d + this.field_c)) &&
+                  ((long)var8 + var5_long >= (long)this.field_d + this.field_c)) {
+                var11 = this.field_c + (long)this.field_d;
+              } else {
                 if ((this.field_c < var5_long + (long)var8) &&
                     (~(var5_long + (long)var8) >= ~(this.field_c + (long)this.field_d))) {
                   var11 = (long)var8 + var5_long;
@@ -309,25 +301,21 @@ final class sk {
             if (~this.field_b < ~this.field_e) {
               this.field_e = this.field_b;
             }
-            L6: {
-              var5_long = -1L;
-              var7 = -1L;
-              if ((~this.field_g >= ~this.field_f) &&
-                  (~this.field_f > ~(this.field_g + (long)this.field_i))) {
-                var5_long = this.field_f;
-                break L6;
-              }
+            var5_long = -1L;
+            var7 = -1L;
+            if ((~this.field_g >= ~this.field_f) &&
+                (~this.field_f > ~(this.field_g + (long)this.field_i))) {
+              var5_long = this.field_f;
+            } else {
               if ((~this.field_g <= ~this.field_f) &&
                   (~this.field_g > ~(this.field_f + (long)param0))) {
                 var5_long = this.field_g;
               }
             }
-            L8: {
-              if ((~this.field_g > ~((long)param0 + this.field_f)) &&
-                  (~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0))) {
-                var7 = this.field_f + (long)param0;
-                break L8;
-              }
+            if ((~this.field_g > ~((long)param0 + this.field_f)) &&
+                (~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0))) {
+              var7 = this.field_f + (long)param0;
+            } else {
               if ((this.field_f < this.field_g + (long)this.field_i) &&
                   (~(this.field_g + (long)this.field_i) >= ~(this.field_f + (long)param0))) {
                 var7 = (long)this.field_i + this.field_g;

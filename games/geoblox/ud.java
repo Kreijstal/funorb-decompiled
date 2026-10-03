@@ -118,32 +118,30 @@ final class ud {
         int[] var16 = null;
         var8 = Geoblox.field_C;
         try {
-          L0: {
-            var12 = eh.field_d;
-            var2 = var12.c((byte) 34);
-            if (0 == var2) {
-              var10 = wf.j(89);
-              var16 = var10;
-              var13 = var16;
-              var3 = var13;
-              var9 = var10;
-              var4 = var9;
-              var5 = var12;
-              var6 = ((qc) ((Object) var5)).c((byte) 34);
-              for (var7 = 0; var7 < var6; var7++) {
-                var9[var7] = ((qc) ((Object) var5)).a((byte) -97);
-              }
-              var14 = (qi) ((Object) k.field_e.g(0));
-              if (var14 == null) {
-                jl.a((byte) -117);
-                return;
-              }
-              var14.field_g = var3;
-              var14.field_f = true;
-              var14.field_j = var16[0];
-              var14.a(false);
-              break L0;
+          var12 = eh.field_d;
+          var2 = var12.c((byte) 34);
+          if (0 == var2) {
+            var10 = wf.j(89);
+            var16 = var10;
+            var13 = var16;
+            var3 = var13;
+            var9 = var10;
+            var4 = var9;
+            var5 = var12;
+            var6 = ((qc) ((Object) var5)).c((byte) 34);
+            for (var7 = 0; var7 < var6; var7++) {
+              var9[var7] = ((qc) ((Object) var5)).a((byte) -97);
             }
+            var14 = (qi) ((Object) k.field_e.g(0));
+            if (var14 == null) {
+              jl.a((byte) -117);
+              return;
+            }
+            var14.field_g = var3;
+            var14.field_f = true;
+            var14.field_j = var16[0];
+            var14.a(false);
+          } else {
             if (var2 == 1) {
               var11 = (p) ((Object) rh.field_a.g(0));
               if (var11 == null) {

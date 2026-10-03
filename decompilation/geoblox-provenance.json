@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "d63d66ce9426ee8b704b348b4e8b552c2fb160a5",
+      "commit": "fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1",
-        "reproduce": "git archive --format=tar d63d66ce9426ee8b704b348b4e8b552c2fb160a5 | sha256sum",
+        "sha256": "9e15df0c94b6052b0419e15dc09fb1e35069a45b42e1ffcffb86549fd16a2ec2",
+        "reproduce": "git archive --format=tar fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78",
-  "previousSourceTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df",
-  "changedJavaFiles": 50,
+  "sourceTreeSha256": "f776980914ad1eb66192c516599a34f8afa5052ada3675be33dd5550465fb915",
+  "previousSourceTreeSha256": "1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78",
+  "changedJavaFiles": 45,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2413,5 +2413,53 @@
     "instrumentPatchConstructorBlockLabelsBefore": 9,
     "instrumentPatchConstructorBlockLabelsAfter": 1,
     "scope": "Remove breaks only where final plain blocks, if branches and plain labels naturally complete at the same destination. Bare branches retain an empty statement and predicates. Intermediate loops/switches/protected regions refuse the rewrite; enclosing cleanup stays intact. No declaration or effect moves. Native comparisons cover failures, scopes, ancestor transfers, enclosing finally state after invocation and monitor ownership/release. All303 token streams and ordered naming bindings remain. Large overlapping spans and whole-game/browser/phone acceptance remain unfinished or unverified."
+  },
+  "conditionalPlainBlockAlternatives": {
+    "historicalPassVersion": 90,
+    "javaToolsCommit": "fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8",
+    "sourceArchiveSha256": "9e15df0c94b6052b0419e15dc09fb1e35069a45b42e1ffcffb86549fd16a2ec2",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 45,
+    "sourceLinesBefore": 78441,
+    "sourceLinesAfter": 78296,
+    "sourceLinesRemoved": 145,
+    "labelsAndBreaksReconstructed": 64,
+    "conditionalAlternatives": 47,
+    "ordinaryGuards": 17,
+    "blocksUnwrapped": 64,
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 119181,
+    "sourceReferenceOccurrencesAfter": 119181,
+    "orderedDeclarationsReferencesAndOverridesUnchanged": true,
+    "localOrdinalMigrations": 0,
+    "overrideRelationshipsPreserved": 388,
+    "expectedRewriteTokenStreamsCheckedJavaFiles": 303,
+    "genericEmitterTestsRegistered": 53,
+    "genericEmitterTestsPassed": 52,
+    "genericEmitterTestsSkipped": 1,
+    "newNativeEmitterComparisons": 6720,
+    "genericExceptionExitGroups": 8,
+    "genericIntegerArgumentGroups": 2,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "methodBodies": 2080,
+    "largeMethodSpansAtLeast300Lines": 21,
+    "largeMethodSpansWithGeneratedBlockLabelsBefore": 13,
+    "largeMethodSpansWithGeneratedBlockLabelsAfter": 12,
+    "instrumentPatchConstructorLinesBefore": 468,
+    "instrumentPatchConstructorLinesAfter": 466,
+    "instrumentPatchConstructorBlockLabelsBefore": 1,
+    "instrumentPatchConstructorBlockLabelsAfter": 0,
+    "gameplayRendererLinesBefore": 395,
+    "gameplayRendererLinesAfter": 390,
+    "gameplayRendererBlockLabelsBefore": 22,
+    "gameplayRendererBlockLabelsAfter": 20,
+    "boardReconciliationLinesBefore": 504,
+    "boardReconciliationLinesAfter": 502,
+    "boardReconciliationBlockLabelsBefore": 17,
+    "boardReconciliationBlockLabelsAfter": 16,
+    "scope": "A direct braced conditional whose final statement is the only break to a unique plain block becomes if/else over the existing fallback. A bare-break branch becomes a logical-negation guard. Prefix/branch effects and scopes stay intact; no work/predicate is duplicated and no local added. Intermediate protected/loop/switch exits and multi-exit trees refuse this proof.6720 native comparisons cover scopes, failures, NaNs/unboxing, ancestor transfers, finally effects and monitors. All303 expected token streams and ordered naming bindings remain. Large overlapping spans and whole-game/browser/phone acceptance remain unfinished or unverified."
   }
 }

@@ -288,21 +288,18 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               (((String) (var1)).indexOf("apple") == -1)) {
                             break L4;
                           }
-                          L6: {
-                            var2 = d.field_t;
-                            if ((!var2.equals("1.1")) &&
-                                (!var2.startsWith("1.1.")) &&
-                                (!var2.equals("1.2")) &&
-                                (!var2.startsWith("1.2.")) &&
-                                (!var2.equals("1.3")) &&
-                                (!var2.startsWith("1.3.")) &&
-                                (!var2.equals("1.4")) &&
-                                (!var2.startsWith("1.4.")) &&
-                                (!var2.equals("1.5")) &&
-                                (!var2.startsWith("1.5.")) &&
-                                (!var2.equals("1.6.0"))) {
-                              break L6;
-                            }
+                          var2 = d.field_t;
+                          if (!((!var2.equals("1.1")) &&
+                              (!var2.startsWith("1.1.")) &&
+                              (!var2.equals("1.2")) &&
+                              (!var2.startsWith("1.2.")) &&
+                              (!var2.equals("1.3")) &&
+                              (!var2.startsWith("1.3.")) &&
+                              (!var2.equals("1.4")) &&
+                              (!var2.startsWith("1.4.")) &&
+                              (!var2.equals("1.5")) &&
+                              (!var2.startsWith("1.5.")) &&
+                              (!var2.equals("1.6.0")))) {
                             this.a((byte) 79, "wrongjava");
                             if (var5 == 0) {
                               break L1;
@@ -898,15 +895,12 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             fieldTemp$1 = rj.field_i;
             rj.field_i = rj.field_i + 1;
             if (fieldTemp$1 > 50) {
-              L3: {
-                rj.field_i = rj.field_i - 50;
-                dl.field_c = true;
-                f.field_kb.setSize(kh.field_d, ok.field_c);
-                f.field_kb.setVisible(true);
-                if ((sg.field_a != null) &&
-                    (he.field_a == null)) {
-                  break L3;
-                }
+              rj.field_i = rj.field_i - 50;
+              dl.field_c = true;
+              f.field_kb.setSize(kh.field_d, ok.field_c);
+              f.field_kb.setVisible(true);
+              if (!((sg.field_a != null) &&
+                  (he.field_a == null))) {
                 f.field_kb.setLocation(qa.field_b, hk.field_B);
                 if (Geoblox.field_C == 0) {
                   break L2;

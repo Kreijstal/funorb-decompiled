@@ -454,107 +454,105 @@ final class rh {
           if (this.field_h) {
             this.field_f[param3] = null;
           }
-          L10: {
-            if (var5_int > 1) {
-              if (this.field_b == 2) {
-                var11 = var35.length;
-                var11--;
-                var12 = 255 & var22[var11];
-                var11 = var11 - var5_int * (var12 * 4);
-                var31 = new qc(var42);
-                var14 = 0;
-                var15 = 0;
-                var31.field_f = var11;
-                for (var16 = 0; var16 < var12; var16++) {
-                  var17 = 0;
-                  for (var18 = 0; var18 < var5_int; var18++) {
-                    var17 = var17 + var31.a((byte) -126);
-                    if (var6 == null) {
-                      var19 = var18;
-                    } else {
-                      var19 = var33[var18];
-                    }
-                    if (param0 == var19) {
-                      var14 = var14 + var17;
-                      var15 = var19;
-                    }
-                  }
-                }
-                if (var14 == 0) {
-                  return true;
-                }
-                var43 = new byte[var14];
-                var31.field_f = var11;
-                var14 = 0;
-                var17 = 0;
-                for (var18 = 0; var18 < var12; var18++) {
-                  var19 = 0;
-                  for (var20 = 0; var20 < var5_int; var20++) {
-                    var19 = var19 + var31.a((byte) -82);
-                    if (var6 == null) {
-                      var21 = var20;
-                    } else {
-                      var21 = var33[var20];
-                    }
-                    if (var21 == param0) {
-                      sf.a(var42, var17, var43, var14, var19);
-                      var14 = var14 + var19;
-                    }
-                    var17 = var17 + var19;
-                  }
-                }
-                var7[var15] = var43;
-                return true;
-              }
+          if (var5_int > 1) {
+            if (this.field_b == 2) {
               var11 = var35.length;
               var11--;
               var12 = 255 & var22[var11];
-              var11 = var11 - 4 * var12 * var5_int;
-              var28 = new qc(var42);
-              var37 = new int[var5_int];
-              var29 = var37;
-              var14_ref_int__ = var29;
-              var28.field_f = var11;
-              for (var15 = 0; var15 < var12; var15++) {
-                var16 = 0;
-                for (var17 = 0; var17 < var5_int; var17++) {
-                  var16 = var16 + var28.a((byte) -27);
-                  var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
+              var11 = var11 - var5_int * (var12 * 4);
+              var31 = new qc(var42);
+              var14 = 0;
+              var15 = 0;
+              var31.field_f = var11;
+              for (var16 = 0; var16 < var12; var16++) {
+                var17 = 0;
+                for (var18 = 0; var18 < var5_int; var18++) {
+                  var17 = var17 + var31.a((byte) -126);
+                  if (var6 == null) {
+                    var19 = var18;
+                  } else {
+                    var19 = var33[var18];
+                  }
+                  if (param0 == var19) {
+                    var14 = var14 + var17;
+                    var15 = var19;
+                  }
                 }
               }
-              var38 = new byte[var5_int][];
-              var30 = var38;
-              var15_ref_byte____ = var30;
-              for (var16 = 0; var5_int > var16; var16++) {
-                array$1 = new byte[var37[var16]];
-                var15_ref_byte____[var16] = array$1;
-                var37[var16] = 0;
+              if (var14 == 0) {
+                return true;
               }
-              var28.field_f = var11;
-              var16 = 0;
-              for (var17 = 0; var12 > var17; var17++) {
-                var18 = 0;
-                for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var28.a((byte) -106);
-                  sf.a(var35, var16, var38[var19], var37[var19], var18);
-                  var16 = var16 + var18;
-                  var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
+              var43 = new byte[var14];
+              var31.field_f = var11;
+              var14 = 0;
+              var17 = 0;
+              for (var18 = 0; var18 < var12; var18++) {
+                var19 = 0;
+                for (var20 = 0; var20 < var5_int; var20++) {
+                  var19 = var19 + var31.a((byte) -82);
+                  if (var6 == null) {
+                    var21 = var20;
+                  } else {
+                    var21 = var33[var20];
+                  }
+                  if (var21 == param0) {
+                    sf.a(var42, var17, var43, var14, var19);
+                    var14 = var14 + var19;
+                  }
+                  var17 = var17 + var19;
                 }
               }
-              for (var17 = 0; var5_int > var17; var17++) {
-                if (var6 == null) {
-                  var18 = var17;
-                } else {
-                  var18 = var33[var17];
-                }
-                if (this.field_b != 0) {
-                  var7[var18] = var38[var17];
-                } else {
-                  var7[var18] = hf.a(param1 - 126, var38[var17], false);
-                }
-              }
-              break L10;
+              var7[var15] = var43;
+              return true;
             }
+            var11 = var35.length;
+            var11--;
+            var12 = 255 & var22[var11];
+            var11 = var11 - 4 * var12 * var5_int;
+            var28 = new qc(var42);
+            var37 = new int[var5_int];
+            var29 = var37;
+            var14_ref_int__ = var29;
+            var28.field_f = var11;
+            for (var15 = 0; var15 < var12; var15++) {
+              var16 = 0;
+              for (var17 = 0; var17 < var5_int; var17++) {
+                var16 = var16 + var28.a((byte) -27);
+                var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
+              }
+            }
+            var38 = new byte[var5_int][];
+            var30 = var38;
+            var15_ref_byte____ = var30;
+            for (var16 = 0; var5_int > var16; var16++) {
+              array$1 = new byte[var37[var16]];
+              var15_ref_byte____[var16] = array$1;
+              var37[var16] = 0;
+            }
+            var28.field_f = var11;
+            var16 = 0;
+            for (var17 = 0; var12 > var17; var17++) {
+              var18 = 0;
+              for (var19 = 0; var5_int > var19; var19++) {
+                var18 = var18 + var28.a((byte) -106);
+                sf.a(var35, var16, var38[var19], var37[var19], var18);
+                var16 = var16 + var18;
+                var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
+              }
+            }
+            for (var17 = 0; var5_int > var17; var17++) {
+              if (var6 == null) {
+                var18 = var17;
+              } else {
+                var18 = var33[var17];
+              }
+              if (this.field_b != 0) {
+                var7[var18] = var38[var17];
+              } else {
+                var7[var18] = hf.a(param1 - 126, var38[var17], false);
+              }
+            }
+          } else {
             if (var6 != null) {
               var11 = var33[0];
             } else {
@@ -620,12 +618,9 @@ final class rh {
             stackIn_4_0 = null;
             return (byte[]) ((Object) stackIn_4_0);
           }
-          L1: {
-            var5 = null;
-            if ((this.field_e[param0] != null) &&
-                (null != this.field_e[param0][param3])) {
-              break L1;
-            }
+          var5 = null;
+          if (!((this.field_e[param0] != null) &&
+              (null != this.field_e[param0][param3]))) {
             if (!this.a(param3, 4, param2, param0)) {
               this.a(param0, -118);
               if (!this.a(param3, 4, param2, param0)) {

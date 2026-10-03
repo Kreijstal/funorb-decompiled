@@ -185,15 +185,12 @@ final class wa {
           if (-1 == var7) {
             var7 = this.field_m.field_q + this.field_m.field_o;
           }
-          L1: {
-            var8 = vb.field_f >> 2;
-            var9 = this.field_m.a(param1);
-            var10 = this.field_m.field_q + this.field_m.field_o;
-            var11 = 1;
-            if ((var8 >= var9) &&
-                (-1 == param1.indexOf("<br>"))) {
-              break L1;
-            }
+          var8 = vb.field_f >> 2;
+          var9 = this.field_m.a(param1);
+          var10 = this.field_m.field_q + this.field_m.field_o;
+          var11 = 1;
+          if (!((var8 >= var9) &&
+              (-1 == param1.indexOf("<br>")))) {
             if (dd.field_E == null) {
               dd.field_E = new String[16];
             }

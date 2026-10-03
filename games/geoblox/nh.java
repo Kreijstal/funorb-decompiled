@@ -55,15 +55,12 @@ abstract class nh {
                 (fa.field_c.field_j.length >= var7_int))) {
             fa.field_c = new qc(var7_int);
           }
-          L4: {
-            fa.field_c.field_f = 0;
-            fa.field_c.a(param5, -97, param4, param2);
-            fa.field_c.a((byte) -84, var7_int);
-            fa.field_c.a(var12, (byte) -33);
-            if ((vf.field_I != null) &&
-                (vf.field_I.field_j.length >= 100)) {
-              break L4;
-            }
+          fa.field_c.field_f = 0;
+          fa.field_c.a(param5, -97, param4, param2);
+          fa.field_c.a((byte) -84, var7_int);
+          fa.field_c.a(var12, (byte) -33);
+          if (!((vf.field_I != null) &&
+              (vf.field_I.field_j.length >= 100))) {
             vf.field_I = new qc(100);
           }
           vf.field_I.field_f = 0;

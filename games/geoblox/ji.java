@@ -149,15 +149,13 @@ abstract class ji {
                 (var4_int == param0.length))) {
             param0 = new short[var4_int];
           }
-          L2: {
-            var5 = param3.e((byte) -17, 4);
-            var6 = (short)param3.e((byte) -17, 16);
-            if (var5 <= 0) {
-              for (var7 = 0; var4_int > var7; var7++) {
-                param0[var7] = (short)var6;
-              }
-              break L2;
+          var5 = param3.e((byte) -17, 4);
+          var6 = (short)param3.e((byte) -17, 16);
+          if (var5 <= 0) {
+            for (var7 = 0; var4_int > var7; var7++) {
+              param0[var7] = (short)var6;
             }
+          } else {
             for (var7 = 0; var4_int > var7; var7++) {
               param0[var7] = (short)(var6 + param3.e((byte) -17, var5));
             }

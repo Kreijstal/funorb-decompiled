@@ -50,31 +50,29 @@ final class c extends ka {
         try {
           L0: {
             L1: {
-              L2: {
-                var3_int = t.field_i[this.field_K][param0];
-                if ((var3_int == 8) &&
-                    (var4 == 0)) {
-                  L4: {
-                    if (102 != ki.field_d) {
-                      if (ki.field_d != 103) {
-                        super.a(param0, -53);
-                        if (var4 == 0) {
-                          break L4;
-                        }
-                      }
-                      j.field_gb = 80;
+              var3_int = t.field_i[this.field_K][param0];
+              if ((var3_int == 8) &&
+                  (var4 == 0)) {
+                L4: {
+                  if (102 != ki.field_d) {
+                    if (ki.field_d != 103) {
+                      super.a(param0, -53);
                       if (var4 == 0) {
                         break L4;
                       }
                     }
-                    j.field_gb = 0;
+                    j.field_gb = 80;
+                    if (var4 == 0) {
+                      break L4;
+                    }
                   }
-                  this.d(0);
-                  if (var4 == 0) {
-                    break L0;
-                  }
-                  break L2;
+                  j.field_gb = 0;
                 }
+                this.d(0);
+                if (var4 == 0) {
+                  break L0;
+                }
+              } else {
                 if (var3_int != 9) {
                   break L1;
                 }
@@ -781,23 +779,21 @@ final class c extends ka {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          L1: {
-            var3_int = 121 % ((44 - param1) / 36);
-            var4 = t.field_i[this.field_K][param0];
-            if ((var4 == 8) &&
-                (var5 == 0)) {
-              if (j.field_gb > 10) {
-                j.field_gb = j.field_gb - 10;
-                if (var5 == 0) {
-                  return;
-                }
-              }
-              j.field_gb = 0;
+          var3_int = 121 % ((44 - param1) / 36);
+          var4 = t.field_i[this.field_K][param0];
+          if ((var4 == 8) &&
+              (var5 == 0)) {
+            if (j.field_gb > 10) {
+              j.field_gb = j.field_gb - 10;
               if (var5 == 0) {
                 return;
               }
-              break L1;
             }
+            j.field_gb = 0;
+            if (var5 == 0) {
+              return;
+            }
+          } else {
             if (9 != var4) {
               return;
             }
@@ -2485,14 +2481,11 @@ final class c extends ka {
             param3 += 295;
           }
           L11: {
-            L12: {
-              var8 = dd.field_G;
-              var9 = 320;
-              var10 = 160;
-              if ((0 != this.field_K) &&
-                  (this.field_K != 1)) {
-                break L12;
-              }
+            var8 = dd.field_G;
+            var9 = 320;
+            var10 = 160;
+            if (!((0 != this.field_K) &&
+                (this.field_K != 1))) {
               var11 = 322;
               if (var14 == 0) {
                 break L11;

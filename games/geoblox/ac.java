@@ -193,32 +193,30 @@ class ac extends ff {
           } else {
             stackIn_60_1 = -2;
           }
-          L9: {
-            var10 = stackIn_59_0 + stackIn_60_1;
-            if (var7 != -1) {
-              fi.field_d.b(pg.field_a[var7], 315, var10, 0, -1);
-              var11 = -fi.field_d.field_q + fi.field_d.field_o;
-              var12 = 280;
-              if (0 != (1 << var7 & var5)) {
-                sl.field_f[var7].b(160, var12);
-                var12 += 30;
-                dd.field_G.a(kd.field_a, 318, var12, 0, -1);
-              } else {
-                am.field_b.b(160, var12);
-                var12 += 30;
-                dd.field_G.field_K[0][wf.field_p] = 15488514;
-                dd.field_G.a(ib.field_d, 318, var12, 0, -1);
-                dd.field_G.field_K[0][wf.field_p] = 16689938;
-              }
-              var12 = var12 + (fi.field_d.a(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
-              var12 += 10;
-              fi.field_d.a(wj.a(sl.field_h, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
-              for (var13 = 0; var13 < kk.field_s[var7]; var13++) {
-                uk.field_m.f(318 + 10 * var13, 370);
-              }
-              var12 = var12 + var11;
-              break L9;
+          var10 = stackIn_59_0 + stackIn_60_1;
+          if (var7 != -1) {
+            fi.field_d.b(pg.field_a[var7], 315, var10, 0, -1);
+            var11 = -fi.field_d.field_q + fi.field_d.field_o;
+            var12 = 280;
+            if (0 != (1 << var7 & var5)) {
+              sl.field_f[var7].b(160, var12);
+              var12 += 30;
+              dd.field_G.a(kd.field_a, 318, var12, 0, -1);
+            } else {
+              am.field_b.b(160, var12);
+              var12 += 30;
+              dd.field_G.field_K[0][wf.field_p] = 15488514;
+              dd.field_G.a(ib.field_d, 318, var12, 0, -1);
+              dd.field_G.field_K[0][wf.field_p] = 16689938;
             }
+            var12 = var12 + (fi.field_d.a(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
+            var12 += 10;
+            fi.field_d.a(wj.a(sl.field_h, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
+            for (var13 = 0; var13 < kk.field_s[var7]; var13++) {
+              uk.field_m.f(318 + 10 * var13, 370);
+            }
+            var12 = var12 + var11;
+          } else {
             fi.field_d.b(w.field_a, 315, var10, 0, -1);
             if (fh.c(-94)) {
               dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);

@@ -318,12 +318,10 @@ class f extends qf implements pl {
           } else {
             var1_int = -ka.field_h + uf.field_b;
             if (1 != jk.field_d) {
-              L2: {
-                if ((2 == jk.field_d) &&
-                    (5 > var1_int)) {
-                  uf.field_b = uf.field_b + 1;
-                  break L2;
-                }
+              if ((2 == jk.field_d) &&
+                  (5 > var1_int)) {
+                uf.field_b = uf.field_b + 1;
+              } else {
                 if (0 == jk.field_d) {
                   if (var1_int < 3) {
                     uf.field_b = uf.field_b + 1;

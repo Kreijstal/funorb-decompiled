@@ -310,32 +310,30 @@ final class vl extends hf {
           for (var11_int = 0; var11_int < var9; var11_int++) {
             var10[var11_int] = var38.f((byte) 125);
           }
-          L6: {
-            var38.field_f = var38.field_f + 1;
-            var9++;
-            var53 = new byte[var9];
-            var39 = var53;
-            var11 = var39;
-            if (var9 > 1) {
-              var53[1] = (byte) 1;
-              var13_int = 1;
-              var12 = 2;
-              for (var14 = 2; var9 > var14; var14++) {
-                var15_int = var38.c((byte) 34);
-                if (0 == var15_int) {
-                  incrementValue$0 = var12;
-                  var12++;
-                  var13_int = incrementValue$0;
-                } else {
-                  if (var15_int <= var13_int) {
-                    var15_int--;
-                  }
-                  var13_int = var15_int;
+          var38.field_f = var38.field_f + 1;
+          var9++;
+          var53 = new byte[var9];
+          var39 = var53;
+          var11 = var39;
+          if (var9 > 1) {
+            var53[1] = (byte) 1;
+            var13_int = 1;
+            var12 = 2;
+            for (var14 = 2; var9 > var14; var14++) {
+              var15_int = var38.c((byte) 34);
+              if (0 == var15_int) {
+                incrementValue$0 = var12;
+                var12++;
+                var13_int = incrementValue$0;
+              } else {
+                if (var15_int <= var13_int) {
+                  var15_int--;
                 }
-                var11[var14] = (byte)var13_int;
+                var13_int = var15_int;
               }
-              break L6;
+              var11[var14] = (byte)var13_int;
             }
+          } else {
             var12 = var9;
           }
           var13 = new t[var12];

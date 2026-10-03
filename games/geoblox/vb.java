@@ -1508,20 +1508,18 @@ final class vb {
           var19 = var19 + (var18 - var13) * field_f;
         }
         while (var13 < var18) {
-          L26: {
-            if (var13 + param4 + param5 + param3 < field_d) {
-              for (var20 = 0; var20 < param8; var20++) {
-                incrementValue$5 = var14;
-                var14++;
-                param1 = param0[incrementValue$5];
-                var9[var20] = var9[var20] + (param1 >> 16 & 255);
-                var10[var20] = var10[var20] + (param1 >> 8 & 255);
-                var11[var20] = var11[var20] + (param1 & 255);
-              }
-              var14 = var14 + param6;
-              var17++;
-              break L26;
+          if (var13 + param4 + param5 + param3 < field_d) {
+            for (var20 = 0; var20 < param8; var20++) {
+              incrementValue$5 = var14;
+              var14++;
+              param1 = param0[incrementValue$5];
+              var9[var20] = var9[var20] + (param1 >> 16 & 255);
+              var10[var20] = var10[var20] + (param1 >> 8 & 255);
+              var11[var20] = var11[var20] + (param1 & 255);
             }
+            var14 = var14 + param6;
+            var17++;
+          } else {
             var14 = var14 + field_f;
           }
           for (var20 = 0; var20 < param8; var20++) {

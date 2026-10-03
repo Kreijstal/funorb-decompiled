@@ -139,12 +139,10 @@ final class ih {
                     if (var25 != 0) {
                       var26_ref = (ja) ((Object) ra.field_a.e(1));
                       if (var26_ref != null) {
-                        L12: {
-                          if ((param2.field_z == 2) &&
-                              (var25 != 0)) {
-                            var26_ref.a(param0 ^ -97, (float)param3, 8, param2.field_w, param2.field_M, 0, param2.field_u, (float)param1, param2.field_F, param2.field_C, 0.0f);
-                            break L12;
-                          }
+                        if ((param2.field_z == 2) &&
+                            (var25 != 0)) {
+                          var26_ref.a(param0 ^ -97, (float)param3, 8, param2.field_w, param2.field_M, 0, param2.field_u, (float)param1, param2.field_F, param2.field_C, 0.0f);
+                        } else {
                           var26_ref.a(-121, var24.field_o, 8, var24.field_w, var24.field_M, 0, var24.field_u, var24.field_v, var24.field_F, var24.field_C, 0.0f);
                         }
                         bh.field_c.a(-42, var26_ref);

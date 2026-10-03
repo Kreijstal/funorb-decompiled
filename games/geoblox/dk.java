@@ -185,12 +185,10 @@ abstract class dk {
         if (param0 != -3111) {
           field_b = 49;
         }
-        L1: {
-          if ((null != this.field_a) &&
-              (this.field_a.length > 0)) {
-            stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
-            break L1;
-          }
+        if ((null != this.field_a) &&
+            (this.field_a.length > 0)) {
+          stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
+        } else {
           stackIn_7_0 = 0;
         }
         return stackIn_7_0;

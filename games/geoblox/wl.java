@@ -110,14 +110,12 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (je.field_j != null) {
-            L1: {
-              nk.field_e = 0;
-              var2_int = param0.getKeyCode();
-              if ((var2_int >= 0) &&
-                  (oe.field_P.length > var2_int)) {
-                var2_int = oe.field_P[var2_int] & -129;
-                break L1;
-              }
+            nk.field_e = 0;
+            var2_int = param0.getKeyCode();
+            if ((var2_int >= 0) &&
+                (oe.field_P.length > var2_int)) {
+              var2_int = oe.field_P[var2_int] & -129;
+            } else {
               var2_int = -1;
             }
             if ((ii.field_c >= 0) &&

@@ -144,17 +144,15 @@ final class ri {
                 if (var6 != null) {
                   tc.a(100, var6, k.c(112));
                 }
-                L17: {
-                  if ((og.field_n <= 0) &&
-                      (!fe.field_b)) {
-                    try {
-                      wk.a((byte) -6, k.c(107), "unzap");
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var8_ref_Throwable = decompiledCaughtException;
-                    }
-                    break L17;
+                if ((og.field_n <= 0) &&
+                    (!fe.field_b)) {
+                  try {
+                    wk.a((byte) -6, k.c(107), "unzap");
+                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var8_ref_Throwable = decompiledCaughtException;
                   }
+                } else {
                   try {
                     wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, k.c(param5 + 119), "zap");
                   } catch (java.lang.Throwable decompiledCaughtParameter1) {

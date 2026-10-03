@@ -23,20 +23,18 @@ final class jh {
         try {
           var5 = this.field_d;
           synchronized (var5) {
-            L0: {
-              if ((0 <= param3) &&
-                  (param3 <= this.field_a)) {
-                if (param1 != -53) {
-                  var8 = (kj) null;
-                  jh.a((java.awt.Component) null, (d) null, false, (kj) null, false, -103);
-                }
-                var6 = this.a(255, param3, param2, param0, true) ? 1 : 0;
-                if (var6 == 0) {
-                  var6 = this.a(255, param3, param2, param0, false) ? 1 : 0;
-                }
-                stackIn_9_0 = var6;
-                break L0;
+            if ((0 <= param3) &&
+                (param3 <= this.field_a)) {
+              if (param1 != -53) {
+                var8 = (kj) null;
+                jh.a((java.awt.Component) null, (d) null, false, (kj) null, false, -103);
               }
+              var6 = this.a(255, param3, param2, param0, true) ? 1 : 0;
+              if (var6 == 0) {
+                var6 = this.a(255, param3, param2, param0, false) ? 1 : 0;
+              }
+              stackIn_9_0 = var6;
+            } else {
               throw new IllegalArgumentException();
             }
           }

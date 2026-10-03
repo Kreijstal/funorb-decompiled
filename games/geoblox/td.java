@@ -107,17 +107,15 @@ final class td extends hk {
             var15.c(-(var15.field_r >> 1) + var5, var6 - (var15.field_m >> 1), 256);
             break L0;
           }
-          L2: {
-            var13 = oa.field_e[0];
-            var10 = var13.field_s << 1;
-            var11 = var13.field_o << 1;
-            if ((null != da.field_b) &&
-                (var10 <= da.field_b.field_r) &&
-                (var11 <= da.field_b.field_m)) {
-              Geoblox.a(1, da.field_b);
-              vb.c();
-              break L2;
-            }
+          var13 = oa.field_e[0];
+          var10 = var13.field_s << 1;
+          var11 = var13.field_o << 1;
+          if ((null != da.field_b) &&
+              (var10 <= da.field_b.field_r) &&
+              (var11 <= da.field_b.field_m)) {
+            Geoblox.a(1, da.field_b);
+            vb.c();
+          } else {
             da.field_b = new dm(var10, var11);
             Geoblox.a(1, da.field_b);
           }
