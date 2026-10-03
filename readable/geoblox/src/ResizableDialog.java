@@ -461,10 +461,7 @@ abstract class ResizableDialog extends FadingDialog {
           var10 = 0;
           var11 = this.widgetWidth;
           if (var7 <= 20) {
-            while (true) {
-              if (var10 > 20) {
-                break;
-              }
+            while (!(var10 > 20)) {
               var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
               if (var12 > 462) {
                 var10++;

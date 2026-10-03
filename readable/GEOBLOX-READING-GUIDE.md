@@ -7,7 +7,7 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 102)
+## Current readability (pass 103)
 
 The export has 8,439 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -17,15 +17,25 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-The latest reconstruction converts 78 terminal labeled exits to ordinary loop
+The previous reconstruction converted 78 terminal labeled exits to ordinary loop
 breaks and removes 38 unused labels/blocks across 28 files, saving 76 lines.
 It proves an empty continuation from the nearest loop to the same plain block
 end; intervening work, other loops/switches and protected boundaries refuse the
 rewrite. Inner cleanup and declaration scopes remain. `Sprite.rotateNearest`
-now has no generated block labels, though its body remains 529 lines. Gameplay
+now has no generated block labels. Gameplay
 render/update and board reconciliation each lose one label. All 8,439 complete
 naming objects, 66,223 edits and ordered binding identities are preserved.
 There remain 267 generated plain block labels across the source tree.
+
+The latest reconstruction turns fourteen leading conditional loop exits into
+ordinary while conditions across eleven files, saving 42 lines. Original
+predicates stay under logical negation; nonconstant proof protects Java
+reachability. Scope, effect/exception order, cleanup and continue targets remain.
+`Sprite.rotateNearest` is now 526 lines, `GameplaySession.updateSession` 638 and
+the sorted half-blend triangle 385. This pass preserves every naming object and
+ordered binding identity. Its 96,768 generic native comparisons and six
+independent entry/NaN/cleanup oracles pass along with all six game probes.
+Other mixed-effect and multi-destination continuations still need reconstruction.
 
 There remain 21 method/constructor spans of at least 300 lines, nine with generated
 block labels. The 3,042-line interface text-loader span includes three nested
@@ -38,10 +48,10 @@ large bodies are:
 | `GameScreen.updateScreen` | 330 | 6 |
 | `GameScreen.activateMenuItem` | 322 | 17 |
 | `GameplaySession.renderSession` | 377 | 17 |
-| `GameplaySession.updateSession` | 641 | 13 |
+| `GameplaySession.updateSession` | 638 | 13 |
 | `kc.reconcileBoardEntities` | 494 | 14 |
 | `MessageDialog.advanceGameplayAvatarAnimation` | 434 | 1 |
-| `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | 385 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
 
 Every field, method, parameter and local in GameScreen, MenuScreen and
@@ -51,8 +61,9 @@ init lifecycle spellings remain original. Other shared helpers and mixed-effect
 exits remain. Larger reconstructions need
 proofs for intermediate loops/protected regions and multiple continuations;
 control flags are not assumed constant. The retained 16,128-case guard-tree
-comparison, new 11,520-case terminal-loop comparison with five independent
-oracles, and six recorded native probes establish controlled behavior only.
+comparison, 11,520-case terminal-loop comparison, new 96,768-case leading-loop
+comparison with six independent oracles, and six recorded native probes
+establish controlled behavior only.
 Complete assets/gameplay and browser/phone memory/startup/FPS targets remain
 unverified. Sections
 labeled with earlier passes below describe their historical counts and scope.

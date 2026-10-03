@@ -46,10 +46,7 @@ final class oi {
         }
         if (sg.field_c != null) {
           var2 = 0;
-          while (true) {
-            if (var2 >= nk.field_c.length) {
-              break;
-            }
+          while (!(var2 >= nk.field_c.length)) {
             if (nk.field_c[var2] != param1) {
               var2++;
               continue;

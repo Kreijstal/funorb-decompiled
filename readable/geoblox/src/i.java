@@ -216,10 +216,7 @@ final class i {
                 (null != mesh.facePriorities)) {
               faceIndexOrPriorityPrefix = 0;
               vertexAOrPriorityIndex = 0;
-              while (true) {
-                if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
-                  break;
-                }
+              while (!(uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
                 vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
                 uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
                 faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
@@ -384,10 +381,7 @@ final class i {
                 (null != mesh.facePriorities)) {
               faceIndexOrPriorityPrefix = 0;
               vertexAOrPriorityIndex = 0;
-              while (true) {
-                if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
-                  break;
-                }
+              while (!(uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
                 vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
                 uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
                 faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;

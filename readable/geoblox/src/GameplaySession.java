@@ -880,10 +880,7 @@ final class GameplaySession {
               if ((kj.heldInternalKeys[99]) &&
                   (!this.tutorialPromptActive)) {
                 fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-                while (true) {
-                  if (null == fastForwardEntity) {
-                    break;
-                  }
+                while (!(null == fastForwardEntity)) {
                   detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
                   if (clientControlFlowGuard != 0) {
                     break L44;

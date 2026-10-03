@@ -134,10 +134,7 @@ final class p extends IntrusiveNode {
                   (null != mesh.thirdVertexSourceY) &&
                   (mesh.thirdVertexSourceZ != null)) {
                 cameraXBasisOrDeltaZOrVertexIndex = 0;
-                while (true) {
-                  if (~cameraXBasisOrDeltaZOrVertexIndex <= ~mesh.faceCount) {
-                    break;
-                  }
+                while (!(~cameraXBasisOrDeltaZOrVertexIndex <= ~mesh.faceCount)) {
                   cameraYBasisOrVertexX = mesh.firstVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexY = mesh.firstVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexZ = mesh.firstVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
@@ -177,10 +174,7 @@ final class p extends IntrusiveNode {
                 cameraYYOrNormalYZQ16 = modelTransform[10];
                 cameraZYOrNormalZZQ16 = modelTransform[11];
                 cameraXZQ16OrNormalIndex = 0;
-                while (true) {
-                  if (~mesh.normalCount >= ~cameraXZQ16OrNormalIndex) {
-                    break;
-                  }
+                while (!(~mesh.normalCount >= ~cameraXZQ16OrNormalIndex)) {
                   nearPlaneOrNormalCapacityOrQueueMinDepth = ok.transformedMeshNormalX.length;
                   invertedDepthOrNormalIndexOrQueueGuard = cameraXZQ16OrNormalIndex;
                   if (controlFlagSnapshot != 0) {

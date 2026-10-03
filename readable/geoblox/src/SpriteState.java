@@ -646,10 +646,7 @@ abstract class SpriteState extends DualLinkNode {
                     }
                   }
                   edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];
-                  while (true) {
-                    if (~middleY >= ~topY) {
-                      break;
-                    }
+                  while (!(~middleY >= ~topY)) {
                     spanStartOrWidthOrBottomXQ16 = leftXQ16 >> 16;
                     invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
                     invertedSpanStartOrNegativeOne = ~spanStartOrWidthOrBottomXQ16;

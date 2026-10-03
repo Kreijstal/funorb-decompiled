@@ -19,6 +19,20 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 103 turns fourteen newly exposed leading loop exits into ordinary while
+conditions across eleven files, saving 42 lines. Original predicates remain
+under logical negation; nonconstant proof protects Java reachability, while
+scopes, exception coverage, cleanup and continue targets stay intact. All 8,439
+complete naming objects and 66,223 edits remain. Both 303-file corpora compile;
+ordered bindings and all expected rewrite token streams match. A clean decompiler
+archive reproduces sources/diagnostics byte-for-byte. The emitter passes 63 tests
+with one historical optional skip, including 96,768 new native comparisons and
+six loop-entry/NaN/cleanup oracles. All six existing game probes, reproduction
+and dictionary reversal pass. Sprite nearest rotation is 526 lines; session
+update is 638 and the sorted half-blend triangle is 385. There remain 267 generated
+plain block labels and 21 overlapping large spans, nine labeled. Further joins,
+unknown names and full game/browser/phone acceptance remain open.
+
 Pass 102 reconstructs 78 terminal labeled exits as ordinary loop breaks and
 removes 38 unused plain labels/blocks across 28 files, saving 76 lines. The loop
 must reach the same block end without intervening work or protected regions;

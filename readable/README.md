@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`4a37782ec52b041d73f65b9e6d54dc975a1d84e9`. It comes from java-tools
-`a3a98476775c603b4c05f34196b6ba6a0c818466` and Deko
+`66eb34efef67a46c3c2913687b16d7c4d020f415`. It comes from java-tools
+`faf744e8439fd84dcc90336dbb6f1bc489eab14c` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`6388138b5ab1a91efb6893969dd008096ce7d7012c65dcf6cdd21e9b7739986e`:
+`dc190d740966d401d60800003140aacfbea8dd71680d7637c50c2fedca4001e0`:
 
 ```sh
-git archive --format=tar a3a98476775c603b4c05f34196b6ba6a0c818466 | sha256sum
+git archive --format=tar faf744e8439fd84dcc90336dbb6f1bc489eab14c | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,67 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Leading while conditions (pass 103)
+
+The fourteen direct leading ordinary-break candidates exposed by pass102 now
+use ordinary while conditions across eleven files. This saves 42 lines
+(77,875 to 77,833). For example, the fixed-source-coordinate sprite pixel loop
+now puts `!(negativePixelCounter >= 0)` in its while header instead of using an
+infinite loop with a separate initial exit. Body braces, pixel/update order and
+continue targets remain. No relational inverse is guessed, preserving floating
+NaNs and original predicate evaluation. No naming object changes: all 8,439
+rules and 66,223 edits remain, without local ordinal migrations.
+
+Only a direct first `if`, without an alternate, whose body contains exactly one
+ordinary break may become a loop condition. It must belong to `while (true)`
+with a braced body. Prefix work/declarations and protected entry guards stay in
+the loop; differently labeled transfers are not guessed. The predicate must be
+proven nonconstant using a visible nonfinal local, an actual emitted formal/
+catch/enhanced-for parameter, a null literal or a runtime expression form.
+Unknown/final/qualified-field constants refuse the proof. Block scopes and
+for/catch/enhanced-for bindings are tracked; later declarations and disjoint
+blocks do not provide evidence. Emitted method metadata supplies formal names;
+the independent corpus comparison obtains them from JDK-parsed source.
+
+This distinction follows Java8's [reachability rules](https://docs.oracle.com/javase/specs/jls/se8/html/jls-14.html#jls-14.21)
+and [constant expressions](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.28).
+Compiler probes retain five original constant guards, demonstrate that naive
+true/false loop rewrites produce unreachable code, and accept the reconstructed
+null-comparison condition. No predicate, effect, cleanup or local is duplicated.
+Condition evaluation remains before every iteration, in the same surrounding
+exception/monitor region; body-local cleanup remains after successful entry.
+
+The full emitter file registers 64 tests: 63 pass and one historical optional
+fixture skips. Four new groups cover supported shapes, refusals, compiler
+reachability and 96,768 native comparisons over twenty-four original/rebuilt
+variants, eight failure/control modes, nullable booleans, seven floating inputs
+(including infinities, signed zeros and NaN), four limits and nullable monitors.
+Six independent oracles check entry bypass, iteration/NaN behavior, direct
+floating skip/fallthrough and inner-versus-outer cleanup. The matrix includes
+assignments, short circuits, body-local declarations, own/ancestor continues,
+finally overrides, checked/unchecked predicate failures, nested loops and
+monitor ownership. Eight exception-exit and two integer-argument groups pass.
+
+All 19,591 declarations, 119,181 references and 388 override relationships retain
+their ordered identities. All 303 token streams match the independently applied
+leading-loop rewrite; diagnostics are unchanged. A clean Git decompiler archive
+regenerates all 303 sources and diagnostics byte-for-byte. Both raw and readable
+corpora compile and compare 138,772 bindings. All six game probes retain their
+fixed native traces within the already documented scopes; native sources/stub
+JAR/naming tool pins remain. Full reproduction, dictionary reversal and the
+nine/eight/six rule-builder/source-refusal/text-resource tests pass.
+
+The raw tree SHA-256 is
+`1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272`; the readable tree SHA-256 is
+`d77ac935dc675856f1b882282093dfbf2b987d8246d33e88cc1c5667a6c2df45`. Decompiler source archive SHA-256 is recorded above and identifies
+the tracked decompiler Git source, separately from either tree or a game JAR.
+`Sprite.rotateNearest` is 526 lines with no block labels; the session updater is
+638/13 and the sorted half-blend triangle is 385/11. The inventory remains 267
+generated plain block labels and 21 overlapping large method/constructor spans,
+nine labeled. Multi-destination dispatch, mixed-effect/exception continuations,
+unknown shared names and full assets/game/browser/phone acceptance remain
+unfinished or unverified. Sections below describe historical counts and scope.
 
 ## Terminal loop exits (pass 102)
 
@@ -111,11 +172,11 @@ A follow-up complete-body AST scan finds fourteen newly exposed `while (true)`
 loops with a direct leading conditional ordinary break; the raw92 corpus had
 zero. One incomplete/nested executable body refuses scanning. These are
 candidates for ordinary while conditions, including sprite rotation and gameplay
-rendering. They remain unchanged in this export. The next proof must preserve
+iteration. At pass102 they remained unchanged. The next proof needed to preserve
 condition evaluation and exceptions, Java constant-expression reachability,
 local visibility, continue/backedge targets and inner cleanup. This new evidence
-supersedes the earlier zero-candidate loop-entry result; it does not prove a
-loop-condition rewrite.
+superseded the earlier zero-candidate loop-entry result; the scan did not prove a
+loop-condition rewrite. Pass103 above now records the verified reconstruction.
 
 ## Pointer frames, dragging, drops and wheel input (pass 101)
 
@@ -2663,8 +2724,9 @@ Pass 88 retained it and added 144 naming rules. Passes 89 through 91 recorded
 terminal-break, single-alternative and ordered multi-exit source migrations.
 Pass 92 recorded the predicate-only guard-tree migration with no naming changes.
 Passes 93 through 101 retained that source and expanded guarded semantic names.
-Current pass 102 records terminal-loop exit reconstruction in `sourceChange`
-with an empty `ruleChanges` list, preserving all 8,439 complete naming objects.
+Pass 102 recorded terminal-loop exit reconstruction. Current pass103 records
+leading nonconstant while guards in `sourceChange`, with an empty `ruleChanges`
+list preserving all 8,439 complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -2687,7 +2749,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `ba01dcb53e4008252421ea97b14937357d4b521fee2ef0952952aa4f9c448556` |
-| Readable | `b932aff1769ac98bd7c75292c47510a28e08aee81f2c14c2fff10b9bc6b5df8f` |
+| Raw | `1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272` |
+| Readable | `d77ac935dc675856f1b882282093dfbf2b987d8246d33e88cc1c5667a6c2df45` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

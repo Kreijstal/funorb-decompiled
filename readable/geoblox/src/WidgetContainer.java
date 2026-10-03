@@ -144,10 +144,7 @@ class WidgetContainer extends UiWidget implements ql {
               var5 = new DequeCursor(this.children);
               var5.beginReverseAt(var4, (byte) 123);
               var6 = (UiWidget) ((Object) var5.nextReverse(26));
-              while (true) {
-                if (var6 == null) {
-                  break;
-                }
+              while (!(var6 == null)) {
                 if (!var6.requestKeyboardFocus((byte) -39, param1)) {
                   var6 = (UiWidget) ((Object) var5.nextReverse(26));
                   continue;
@@ -289,10 +286,7 @@ class WidgetContainer extends UiWidget implements ql {
               var5 = new DequeCursor(this.children);
               var5.beginForwardAt((byte) 56, var4);
               var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
-              while (true) {
-                if (var6 == null) {
-                  break;
-                }
+              while (!(var6 == null)) {
                 if (!var6.requestKeyboardFocus((byte) -56, param0)) {
                   var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
                   continue;

@@ -325,10 +325,7 @@ class AudioOutput {
                     var11 = this.field_a[var7_int];
                     var14 = var11;
                     var14 = var11;
-                    while (true) {
-                      if (var11 == null) {
-                        break;
-                      }
+                    while (!(var11 == null)) {
                       var12 = var11.field_g;
                       if ((var12 != null) &&
                           (var12.field_f > var8_int)) {
