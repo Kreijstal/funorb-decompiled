@@ -168,7 +168,7 @@ final class pg {
                 var15 = (ByteArrayBuffer) null;
                 pg.a(96, (PlatformTaskDispatcher) null, -109, (ByteArrayBuffer) null);
               }
-              sl.field_k.addLast(-92, var19);
+              UsernameAvailabilityQuery.field_k.addLast(-92, var19);
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
               decompiledCaughtException = decompiledCaughtParameter5;

@@ -154,7 +154,7 @@ final class jc {
           materialCount = input.readBits((byte) -17, 12);
           materials = new MeshMaterial[materialCount];
           for (materialIndex = 0; materialCount > materialIndex; materialIndex++) {
-            if (!ac.a((byte) 71, input)) {
+            if (!TextInputRenderer.a((byte) 71, input)) {
               referencedMaterialIndex = input.readBits((byte) -17, td.a(materialIndex - 1, (byte) 66));
               materials[materialIndex] = materials[referencedMaterialIndex];
             } else {

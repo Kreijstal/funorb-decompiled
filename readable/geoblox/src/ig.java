@@ -57,16 +57,16 @@ final class ig {
         return true;
     }
 
-    final static sl a(String param0, int param1, boolean param2) {
-        sl var3 = null;
+    final static UsernameAvailabilityQuery a(String param0, int param1, boolean param2) {
+        UsernameAvailabilityQuery var3 = null;
         RuntimeException var3_ref = null;
-        sl stackIn_1_0 = null;
+        UsernameAvailabilityQuery stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new sl(param2);
+          var3 = new UsernameAvailabilityQuery(param2);
           var3.field_j = param1;
           var3.field_e = param0;
           stackIn_1_0 = var3;

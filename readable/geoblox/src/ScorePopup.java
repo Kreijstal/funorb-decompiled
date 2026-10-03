@@ -10,7 +10,7 @@ final class ScorePopup extends IntrusiveNode {
     float originX;
     static String field_j;
     int points;
-    static sl field_g;
+    static UsernameAvailabilityQuery field_g;
 
     final static void b(int param0) {
         if (param0 <= 65) {
@@ -46,17 +46,17 @@ final class ScorePopup extends IntrusiveNode {
     final static void a(int param0, ByteArrayBuffer param1) {
         int var2_int = 0;
         try {
-            rd.field_v = param1.readUnsignedShortBE(true) << 5;
+            StatefulWidgetRenderer.field_v = param1.readUnsignedShortBE(true) << 5;
             var2_int = param1.readUnsignedByte((byte) 34);
-            rd.field_v = rd.field_v + (var2_int >> 3);
-            h.field_b = var2_int << 18 & 1835008;
-            h.field_b = h.field_b + (param1.readUnsignedShortBE(true) << 2);
+            StatefulWidgetRenderer.field_v = StatefulWidgetRenderer.field_v + (var2_int >> 3);
+            EmailAvailabilityQuery.field_b = var2_int << 18 & 1835008;
+            EmailAvailabilityQuery.field_b = EmailAvailabilityQuery.field_b + (param1.readUnsignedShortBE(true) << 2);
             var2_int = param1.readUnsignedByte((byte) 34);
             if (param0 <= 105) {
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 114);
             }
             GzipInflater.field_g = var2_int << 15 & 2064384;
-            h.field_b = h.field_b + (var2_int >> 6);
+            EmailAvailabilityQuery.field_b = EmailAvailabilityQuery.field_b + (var2_int >> 6);
             GzipInflater.field_g = GzipInflater.field_g + (param1.readUnsignedByte((byte) 34) << 7);
             var2_int = param1.readUnsignedByte((byte) 34);
             GzipInflater.field_g = GzipInflater.field_g + (var2_int >> 1);

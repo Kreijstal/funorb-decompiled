@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ValidatedTextInputWidget extends TextInputWidget implements nl {
+final class ValidatedTextInputWidget extends TextInputWidget implements ValidationProviderSource {
     static int archiveClientId;
     private int field_S;
     static int field_R;
@@ -42,7 +42,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements nl {
           if (param0 <= 80) {
             field_R = -109;
           }
-          stackIn_3_0 = bi.a(false, param1, (byte) -121);
+          stackIn_3_0 = CheckboxRenderer.a(false, param1, (byte) -121);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,8 +74,8 @@ final class ValidatedTextInputWidget extends TextInputWidget implements nl {
         super(param0, param1, param2);
     }
 
-    public final ValidationProvider a(byte param0) {
-        if (param0 > -97) {
+    public final ValidationProvider getValidationProvider(byte methodGuard) {
+        if (methodGuard > -97) {
             goBackText = (String) null;
             return this.field_Q;
         }

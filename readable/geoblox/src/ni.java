@@ -98,7 +98,7 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param1, param2);
-          var4.renderer = (WidgetRenderer) ((Object) new ml());
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
           var5 = param0 + this.widgetHeight;
           this.setWidgetBounds(34 + this.widgetHeight, this.widgetWidth, (byte) -53, 0, 0);
           var4.setWidgetBounds(30, this.widgetWidth - 14, (byte) -33, var5, 7);

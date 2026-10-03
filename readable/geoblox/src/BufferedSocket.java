@@ -303,7 +303,7 @@ final class BufferedSocket implements Runnable {
                 BufferedSocket.clearSessionAndReload((byte) 45, (java.applet.Applet) null);
             }
             va.a("", applet, -1);
-            h.a(applet, false);
+            EmailAvailabilityQuery.a(applet, false);
         } catch (RuntimeException reloadFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reloadFailure), "ba.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }

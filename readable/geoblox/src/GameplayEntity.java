@@ -136,7 +136,7 @@ final class GameplayEntity extends DualLinkNode {
         gg.avatarCryPhase = 0;
         PasswordValidator.avatarCryFrameCursor = 0;
         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 0;
-        jf.avatarTintFadeTicks = 0;
+        MultiHandleSliderRenderer.avatarTintFadeTicks = 0;
         DiskCacheWorker.avatarFeedbackFrameIndex = initialFrameIndex;
         IndexedSpriteState.avatarShockFrameIndex = 0;
         rj.avatarTintColor = 5167632;
@@ -252,7 +252,7 @@ final class GameplayEntity extends DualLinkNode {
             if (this.entitySpriteKindId == 3) {
               this.entityCategoryKey = -1;
               this.spriteVariantIndex = -1;
-              this.entitySprite = hb.silverStarFrames[0];
+              this.entitySprite = DialRenderer.silverStarFrames[0];
             } else {
               if (1 == this.entitySpriteKindId) {
                 this.entitySprite = s.geometrySpritesByThemeAndCategory[GameScreen.selectedThemeId][this.entityCategoryKey];
@@ -390,7 +390,7 @@ final class GameplayEntity extends DualLinkNode {
                 if ((this.entityUpdateTick & 15) == 0) {
                   kind3AnimationFrame = this.animationFrameIndex;
                   this.animationFrameIndex = this.animationFrameIndex + 1;
-                  this.entitySprite = hb.silverStarFrames[kind3AnimationFrame];
+                  this.entitySprite = DialRenderer.silverStarFrames[kind3AnimationFrame];
                   if (this.animationFrameIndex == 4) {
                     this.animationFrameIndex = 0;
                   }

@@ -60,8 +60,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
         }
         try {
-            ml.field_t = new pf(prefilledUsername, prefilledPassword, false, true, true);
-            ButtonWidget.field_C.replaceContent(ml.field_t, -81);
+            SpriteButtonRenderer.field_t = new pf(prefilledUsername, prefilledPassword, false, true, true);
+            ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -81);
         } catch (RuntimeException loginFormFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFormFailure), "f.HA(" + (prefilledUsername != null ? "{...}" : "null") + ',' + (prefilledPassword != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
@@ -89,18 +89,18 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         }
         if (methodGuard >= -48) {
             availableEntityCategoryCount = -112;
-            InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
+            InstrumentPatch.field_n = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
             if (null != InstrumentPatch.field_n) {
-                sl.a(InstrumentPatch.field_n, 57);
+                UsernameAvailabilityQuery.a(InstrumentPatch.field_n, 57);
                 return;
             }
             return;
         }
-        InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
+        InstrumentPatch.field_n = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
         if (null == InstrumentPatch.field_n) {
             return;
         }
-        sl.a(InstrumentPatch.field_n, 57);
+        UsernameAvailabilityQuery.a(InstrumentPatch.field_n, 57);
     }
 
     final void dismissDialog(byte methodGuard) {
@@ -224,14 +224,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
                 ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 heldCryBeginShockTicksSnapshot = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (heldCryBeginShockTicksSnapshot > 0) {
                   IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
-                heldCryBeginTintTicksSnapshot = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                heldCryBeginTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+                MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                 if (heldCryBeginTintTicksSnapshot > 0) {
                   rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
                 }
@@ -241,14 +241,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               PasswordValidator.avatarCryFrameCursor = 0;
               MeshMaterial.a(300, fl.field_c[22], false, j.field_gb);
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               heldCryStartShockTicksSnapshot = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (heldCryStartShockTicksSnapshot > 0) {
                 IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               }
-              heldCryStartTintTicksSnapshot = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              heldCryStartTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+              MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
               if (heldCryStartTintTicksSnapshot > 0) {
                 rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
               }
@@ -258,14 +258,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
                 ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 heldCryMiddleShockTicksSnapshot = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (heldCryMiddleShockTicksSnapshot > 0) {
                   IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
-                heldCryMiddleTintTicksSnapshot = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                heldCryMiddleTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+                MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                 if (heldCryMiddleTintTicksSnapshot > 0) {
                   rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
                 }
@@ -274,14 +274,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               gg.avatarCryPhase = gg.avatarCryPhase + 1;
               LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               heldCryHoldShockTicksSnapshot = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (heldCryHoldShockTicksSnapshot > 0) {
                 IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               }
-              heldCryHoldTintTicksSnapshot = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              heldCryHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+              MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
               if (heldCryHoldTintTicksSnapshot > 0) {
                 rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
               }
@@ -291,12 +291,12 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             ul.currentAvatarCryFrame = ld.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
           }
-          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
           heldTailShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
           if (heldTailShockTicksSnapshot <= 0) {
-            heldTailTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            heldTailTintWithoutShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+            MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (heldTailTintWithoutShockSnapshot <= 0) {
               return;
             }
@@ -304,8 +304,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-          heldTailTintAfterShockSnapshot = jf.avatarTintFadeTicks;
-          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          heldTailTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+          MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (heldTailTintAfterShockSnapshot > 0) {
             rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
           }
@@ -349,14 +349,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
                   ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                   steeredCryBeginShockTicksSnapshot = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (steeredCryBeginShockTicksSnapshot > 0) {
                     IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
-                  steeredCryBeginTintTicksSnapshot = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                  steeredCryBeginTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+                  MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                   if (steeredCryBeginTintTicksSnapshot > 0) {
                     rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
                   }
@@ -366,14 +366,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 PasswordValidator.avatarCryFrameCursor = 0;
                 MeshMaterial.a(300, fl.field_c[22], false, j.field_gb);
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 steeredCryStartShockTicksSnapshot = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (steeredCryStartShockTicksSnapshot > 0) {
                   IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
-                steeredCryStartTintTicksSnapshot = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                steeredCryStartTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+                MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                 if (steeredCryStartTintTicksSnapshot > 0) {
                   rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
                 }
@@ -383,14 +383,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
                   ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                   steeredCryMiddleShockTicksSnapshot = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (steeredCryMiddleShockTicksSnapshot > 0) {
                     IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
-                  steeredCryMiddleTintTicksSnapshot = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                  steeredCryMiddleTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+                  MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                   if (steeredCryMiddleTintTicksSnapshot > 0) {
                     rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
                   }
@@ -399,14 +399,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 gg.avatarCryPhase = gg.avatarCryPhase + 1;
                 LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 steeredCryHoldShockTicksSnapshot = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (steeredCryHoldShockTicksSnapshot > 0) {
                   IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
-                steeredCryHoldTintTicksSnapshot = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                steeredCryHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+                MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                 if (steeredCryHoldTintTicksSnapshot > 0) {
                   rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
                 }
@@ -416,12 +416,12 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               ul.currentAvatarCryFrame = ld.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
             }
-            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steeredTailShockTicksSnapshot = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
             if (steeredTailShockTicksSnapshot <= 0) {
-              steeredTailTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              steeredTailTintWithoutShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+              MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
               if (steeredTailTintWithoutShockSnapshot <= 0) {
                 return;
               }
@@ -429,8 +429,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               return;
             }
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-            steeredTailTintAfterShockSnapshot = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            steeredTailTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+            MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (steeredTailTintAfterShockSnapshot > 0) {
               rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
             }
@@ -467,12 +467,12 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
         }
         if (!UiWidget.gameplaySession.sessionEnding) {
-          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
           steppedActiveShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
           if (steppedActiveShockTicksSnapshot <= 0) {
-            steppedActiveTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            steppedActiveTintWithoutShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+            MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (steppedActiveTintWithoutShockSnapshot <= 0) {
               return;
             }
@@ -480,8 +480,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-          steppedActiveTintAfterShockSnapshot = jf.avatarTintFadeTicks;
-          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          steppedActiveTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+          MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (steppedActiveTintAfterShockSnapshot <= 0) {
             return;
           }
@@ -494,12 +494,12 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
               ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               steppedCryBeginShockTicksSnapshot = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (steppedCryBeginShockTicksSnapshot <= 0) {
-                steppedCryBeginTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                steppedCryBeginTintWithoutShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+                MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                 if (steppedCryBeginTintWithoutShockSnapshot <= 0) {
                   return;
                 }
@@ -507,8 +507,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 return;
               }
               IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-              steppedCryBeginTintAfterShockSnapshot = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              steppedCryBeginTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+              MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
               if (steppedCryBeginTintAfterShockSnapshot <= 0) {
                 return;
               }
@@ -519,12 +519,12 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             PasswordValidator.avatarCryFrameCursor = 0;
             MeshMaterial.a(300, fl.field_c[22], false, j.field_gb);
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steppedCryStartShockTicksSnapshot = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
             if (steppedCryStartShockTicksSnapshot <= 0) {
-              steppedCryStartTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              steppedCryStartTintWithoutShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+              MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
               if (steppedCryStartTintWithoutShockSnapshot <= 0) {
                 return;
               }
@@ -532,8 +532,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               return;
             }
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-            steppedCryStartTintAfterShockSnapshot = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            steppedCryStartTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+            MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (steppedCryStartTintAfterShockSnapshot > 0) {
               rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
             }
@@ -543,14 +543,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
               ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               steppedCryMiddleShockTicksSnapshot = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (steppedCryMiddleShockTicksSnapshot > 0) {
                 IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               }
-              steppedCryMiddleTintTicksSnapshot = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              steppedCryMiddleTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+              MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
               if (steppedCryMiddleTintTicksSnapshot > 0) {
                 rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
               }
@@ -559,14 +559,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             gg.avatarCryPhase = gg.avatarCryPhase + 1;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steppedCryHoldShockTicksSnapshot = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
             if (steppedCryHoldShockTicksSnapshot > 0) {
               IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             }
-            steppedCryHoldTintTicksSnapshot = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            steppedCryHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+            MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (steppedCryHoldTintTicksSnapshot <= 0) {
               return;
             }
@@ -577,12 +577,12 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           ul.currentAvatarCryFrame = ld.avatarCryEndFrames[PasswordValidator.avatarCryFrameCursor];
           PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
         }
-        avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+        avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
         steppedTailShockTicksSnapshot = wa.avatarShockEffectTicks;
         wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
         if (steppedTailShockTicksSnapshot <= 0) {
-          steppedTailTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
-          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          steppedTailTintWithoutShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+          MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (steppedTailTintWithoutShockSnapshot <= 0) {
             return;
           }
@@ -590,8 +590,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           return;
         }
         IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-        steppedTailTintAfterShockSnapshot = jf.avatarTintFadeTicks;
-        jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+        steppedTailTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
+        MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
         if (steppedTailTintAfterShockSnapshot <= 0) {
           return;
         }
@@ -680,7 +680,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 errorTextContent.a(-2, IntrusiveNodeHashTable.changeDisplayNameText, (WidgetListener) (this));
               }
             } else {
-              errorTextContent.a(hb.playFreeVersionText, 1, 8);
+              errorTextContent.a(DialRenderer.playFreeVersionText, 1, 8);
             }
           }
           this.replaceContent(errorTextContent, methodGuard ^ -19736);

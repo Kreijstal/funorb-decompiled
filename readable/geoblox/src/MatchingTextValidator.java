@@ -3,7 +3,7 @@
  */
 final class MatchingTextValidator extends TextInputValidator {
     private TextInputWidget referenceInput;
-    static vd[] field_k;
+    static ClientSessionSnapshot[] field_k;
     static IntrusiveDeque field_l;
     static int field_j;
 
@@ -203,16 +203,16 @@ final class MatchingTextValidator extends TextInputValidator {
             stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
-          if (this.referenceInput instanceof nl) {
-            referenceValidation = ((nl) ((Object) this.referenceInput)).a((byte) -106);
+          if (this.referenceInput instanceof ValidationProviderSource) {
+            referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -106);
             if ((referenceValidation != null) &&
                 (referenceValidation.a((byte) -105) != SocketArchiveNetworkClient.field_w)) {
-              stackIn_9_0 = si.field_m;
+              stackIn_9_0 = WidgetSkinState.field_m;
               return stackIn_9_0;
             }
           }
           if (!candidateText.equals(this.referenceInput.widgetText)) {
-            stackIn_13_0 = si.field_m;
+            stackIn_13_0 = WidgetSkinState.field_m;
           } else {
             stackIn_13_0 = SocketArchiveNetworkClient.field_w;
           }
@@ -245,12 +245,12 @@ final class MatchingTextValidator extends TextInputValidator {
           if (guard != 422) {
             field_l = (IntrusiveDeque) null;
           }
-          if (this.referenceInput instanceof nl) {
-            referenceValidation = ((nl) ((Object) this.referenceInput)).a((byte) -118);
+          if (this.referenceInput instanceof ValidationProviderSource) {
+            referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -118);
             if (referenceValidation != null) {
               if ((referenceValidation.a((byte) -105) == SocketArchiveNetworkClient.field_w) &&
                   (!candidateText.equals(this.referenceInput.widgetText))) {
-                stackIn_8_0 = sj.createMismatchAlertText;
+                stackIn_8_0 = GrowableIntList.createMismatchAlertText;
                 return stackIn_8_0;
               }
               stackIn_10_0 = referenceValidation.c(-21666);
@@ -260,7 +260,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (candidateText.equals(this.referenceInput.widgetText)) {
             return null;
           }
-          stackIn_14_0 = sj.createMismatchAlertText;
+          stackIn_14_0 = GrowableIntList.createMismatchAlertText;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,7 +276,7 @@ final class MatchingTextValidator extends TextInputValidator {
         }
     }
 
-    final static sl d(byte param0) {
+    final static UsernameAvailabilityQuery d(byte param0) {
         if (!(DiskCacheWorker.field_l != kd.field_b)) {
             throw new IllegalStateException();
         }

@@ -12,7 +12,7 @@ final class jk {
             return;
         }
         nb.a(-2, InstrumentPatch.field_n);
-        InstrumentPatch.field_n.a(0, MenuScreen.platformTaskDispatcher);
+        InstrumentPatch.field_n.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         if (param0 <= -14) {
             InstrumentPatch.field_n = null;
             if (!(null == rb.field_d)) {
@@ -53,16 +53,16 @@ final class jk {
         try {
           TriangleRasterState.prepareTriangleClipFromRasterizer();
           ok.meshProjectionShift = 11;
-          jf.meshSpecularResponseByAbsDot = new int[260];
+          MultiHandleSliderRenderer.meshSpecularResponseByAbsDot = new int[260];
           var1_int = -29 / ((param0 + 40) / 45);
           for (var2 = 0; 256 > var2; var2++) {
             var3 = 15.0;
-            jf.meshSpecularResponseByAbsDot[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));
+            MultiHandleSliderRenderer.meshSpecularResponseByAbsDot[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));
           }
           var6 = 256;
           var1_int = var6;
-          while (jf.meshSpecularResponseByAbsDot.length > var6) {
-            jf.meshSpecularResponseByAbsDot[var6] = 255;
+          while (MultiHandleSliderRenderer.meshSpecularResponseByAbsDot.length > var6) {
+            MultiHandleSliderRenderer.meshSpecularResponseByAbsDot[var6] = 255;
             var6++;
           }
           return;

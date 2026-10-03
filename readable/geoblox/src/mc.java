@@ -33,7 +33,7 @@ final class mc {
             return true;
           }
           CachedArchiveSource.field_s = param5;
-          rd.field_u = param2;
+          StatefulWidgetRenderer.field_u = param2;
           dl.field_a = null;
           ResourceArchive.field_i = param1;
           kd.field_b = IntrusiveDeque.field_d;
@@ -86,10 +86,10 @@ final class mc {
           PcmResampler.pointerYSnapshot = eg.livePointerY;
           wb.pointerActivitySnapshot = fc.pointerActivityPending;
           fc.pointerActivityPending = false;
-          bi.pointerPressButtonSnapshot = vd.pendingPointerPressButton;
+          CheckboxRenderer.pointerPressButtonSnapshot = ClientSessionSnapshot.pendingPointerPressButton;
           pointerPressXSnapshot = ah.livePointerPressX;
-          he.pointerPressYSnapshot = hi.livePointerPressY;
-          vd.pendingPointerPressButton = 0;
+          FullscreenFocusCanvas.pointerPressYSnapshot = hi.livePointerPressY;
+          ClientSessionSnapshot.pendingPointerPressButton = 0;
         }
     }
 

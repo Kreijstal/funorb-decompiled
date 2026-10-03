@@ -28,7 +28,7 @@ final class je extends IntrusiveNode {
                     if (pendingSubmission == null) {
                         break;
                     }
-                    sj.submitAchievementRecord(pendingSubmission, -56, 4);
+                    GrowableIntList.submitAchievementRecord(pendingSubmission, -56, 4);
                 }
             }
         } catch (RuntimeException achievementSubmissionFailure) {

@@ -3,8 +3,8 @@
  */
 final class ih {
     static String ticketingOneUnreadText;
-    static df field_a;
-    static h field_c;
+    static LoginPayload field_a;
+    static EmailAvailabilityQuery field_c;
 
     final static void b(int param0) {
         int var1_int = 0;

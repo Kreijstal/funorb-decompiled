@@ -109,7 +109,7 @@ final class AsyncResourceDownloader implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_h.getFile() + "\n\n"));
-              var3.write(jf.encodeTextBytes(var5, (byte) 127));
+              var3.write(MultiHandleSliderRenderer.encodeTextBytes(var5, (byte) 127));
               this.field_c = new DataInputStream(var4.getInputStream());
             }
             this.field_n.position = 0;

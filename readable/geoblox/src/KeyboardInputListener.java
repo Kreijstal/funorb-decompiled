@@ -17,7 +17,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           if (je.keyboardListener == null) {
             return;
           }
-          nk.keyboardIdleTicks = 0;
+          TextPairLoginPayload.keyboardIdleTicks = 0;
           internalKeyCode = event.getKeyCode();
           if ((internalKeyCode >= 0) &&
               (ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode)) {
@@ -38,7 +38,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           }
           if (internalKeyCode >= 0) {
             nextEventWriteIndexOrModifiers = 127 & 1 + BufferedSocket.keyEventWriteIndex;
-            if (nextEventWriteIndexOrModifiers != vd.keyboardEventReadIndex) {
+            if (nextEventWriteIndexOrModifiers != ClientSessionSnapshot.keyboardEventReadIndex) {
               MidiPcmStream.queuedKeyboardEventCodes[BufferedSocket.keyEventWriteIndex] = internalKeyCode;
               ai.queuedKeyboardEventCharacters[BufferedSocket.keyEventWriteIndex] = (char)0;
               BufferedSocket.keyEventWriteIndex = nextEventWriteIndexOrModifiers;
@@ -85,7 +85,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
                 typedCharacterCode = event.getKeyChar();
                 if (typedCharacterCode != 0 && typedCharacterCode != 65535 && tc.a((byte) -112, (char) typedCharacterCode)) {
                     nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;
-                    if (nextEventWriteIndex != vd.keyboardEventReadIndex) {
+                    if (nextEventWriteIndex != ClientSessionSnapshot.keyboardEventReadIndex) {
                         MidiPcmStream.queuedKeyboardEventCodes[BufferedSocket.keyEventWriteIndex] = -1;
                         ai.queuedKeyboardEventCharacters[BufferedSocket.keyEventWriteIndex] = (char)typedCharacterCode;
                         BufferedSocket.keyEventWriteIndex = nextEventWriteIndex;
@@ -107,7 +107,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         RuntimeException caughtCallbackFailure = null;
         try {
           if (je.keyboardListener != null) {
-            nk.keyboardIdleTicks = 0;
+            TextPairLoginPayload.keyboardIdleTicks = 0;
             internalKeyCode = event.getKeyCode();
             if ((internalKeyCode >= 0) &&
                 (ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode)) {

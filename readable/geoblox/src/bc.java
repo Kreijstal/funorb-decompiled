@@ -46,7 +46,7 @@ final class bc {
             if (characterCode != 0) {
               if ((characterCode >= 128) &&
                   (characterCode < 160)) {
-                mappedCharacterCode = lf.extendedTextCharacters[-128 + characterCode];
+                mappedCharacterCode = LongAndTextLoginPayload.extendedTextCharacters[-128 + characterCode];
                 if (mappedCharacterCode == 0) {
                   mappedCharacterCode = 63;
                 }

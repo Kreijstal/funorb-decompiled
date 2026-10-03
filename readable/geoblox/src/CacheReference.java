@@ -50,11 +50,11 @@ abstract class CacheReference extends DualLinkNode {
         try {
             ih.field_c = ImageProducerRasterBuffer.a((byte) 86, "");
             int var5_int = 103 / ((param0 - 70) / 34);
-            ih.field_c.a((byte) -126, false);
+            ih.field_c.complete((byte) -126, false);
             IndexedSpriteState.a((byte) 103, param1, param4, param3);
             qh.h((byte) -121);
             kd.field_b = DiskCacheWorker.field_l;
-            si.field_g = DiskCacheWorker.field_l;
+            WidgetSkinState.field_g = DiskCacheWorker.field_l;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -44,14 +44,14 @@ final class StrongCacheReference extends CacheReference {
               return;
             }
             if (param1 <= 105) {
-              dl.field_a = ac.a(28, param3);
+              dl.field_a = TextInputRenderer.a(28, param3);
               return;
             }
             dl.field_a = ig.a(param0, param1, false);
             return;
           }
           stackIn_6_0 = -106;
-          if (rd.field_u >= 13) {
+          if (StatefulWidgetRenderer.field_u >= 13) {
             stackIn_7_1 = false;
           } else {
             stackIn_7_1 = true;

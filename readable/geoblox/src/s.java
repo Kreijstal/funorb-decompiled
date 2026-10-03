@@ -18,11 +18,11 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
             tl.field_f = new String[19];
             tl.field_f[12] = ValidationState.nextText;
             tl.field_f[7] = tc.quitText;
-            tl.field_f[6] = df.endGameText;
+            tl.field_f[6] = LoginPayload.endGameText;
             tl.field_f[8] = wb.soundLabelText;
             tl.field_f[14] = PacketByteCipher.field_c;
             tl.field_f[5] = ij.menuText;
-            tl.field_f[0] = nk.startGameText;
+            tl.field_f[0] = TextPairLoginPayload.startGameText;
             tl.field_f[4] = SessionGameApplet.fullscreenText;
             tl.field_f[param0] = fc.musicLabelText;
             tl.field_f[10] = bl.achievementsText;
@@ -32,16 +32,16 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
             tl.field_f[13] = StrongCacheReference.field_t;
             tl.field_f[3] = SecondaryNodeDequeIterator.instructionsText;
             tl.field_f[2] = ii.highscoresText;
-            tl.field_f[18] = vd.highscoreModeNames[2];
-            tl.field_f[16] = vd.highscoreModeNames[0];
-            tl.field_f[17] = vd.highscoreModeNames[1];
+            tl.field_f[18] = ClientSessionSnapshot.highscoreModeNames[2];
+            tl.field_f[16] = ClientSessionSnapshot.highscoreModeNames[0];
+            tl.field_f[17] = ClientSessionSnapshot.highscoreModeNames[1];
             return;
         }
     }
 
-    final static void a(vd param0, int param1) {
+    final static void a(ClientSessionSnapshot param0, int param1) {
         int var2_int = 0;
-        vd var3 = null;
+        ClientSessionSnapshot var3 = null;
         int var4 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -95,8 +95,8 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
         try {
             this.field_C = param0;
             this.field_K = new ButtonWidget(cl.continueText, (WidgetListener) null);
-            this.field_K.renderer = (WidgetRenderer) ((Object) new ml());
-            var7 = OpacityWidget.a(nk.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
+            this.field_K.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
+            var7 = OpacityWidget.a(TextPairLoginPayload.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
             var4 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
             this.field_J = new vf(var7, var4);

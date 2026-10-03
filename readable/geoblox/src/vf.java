@@ -21,12 +21,12 @@ class vf extends ButtonWidget {
         }
     }
 
-    final static df a(boolean param0, String param1, String param2, boolean param3) {
+    final static LoginPayload a(boolean param0, String param1, String param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        df stackIn_6_0 = null;
+        LoginPayload stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

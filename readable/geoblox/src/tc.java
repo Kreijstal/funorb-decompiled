@@ -26,7 +26,7 @@ final class tc {
             if (param1 == 0) {
               return false;
             }
-            var6 = lf.extendedTextCharacters;
+            var6 = LongAndTextLoginPayload.extendedTextCharacters;
             var2 = var6;
             for (var3 = 0; var6.length > var3; var3++) {
               var4 = var6[var3];

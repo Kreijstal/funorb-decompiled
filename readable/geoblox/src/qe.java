@@ -28,7 +28,7 @@ final class qe {
             return null;
           }
           if (param1 == ~param0) {
-            var10 = vi.a(param1 ^ -112, param4);
+            var10 = CheckboxWidget.a(param1 ^ -112, param4);
             var6 = var10;
             if (var6 == null) {
               stackIn_7_0 = null;

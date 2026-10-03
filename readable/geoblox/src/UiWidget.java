@@ -61,7 +61,7 @@ class UiWidget extends IntrusiveNode {
             return;
         }
         if (null != this.renderer) {
-            this.renderer.a(parentX, -81, parentY, true, (UiWidget) (this));
+            this.renderer.drawWidget(parentX, -81, parentY, true, (UiWidget) (this));
             var5 = 35 % ((1 - methodGuard) / 43);
             return;
         }
@@ -176,7 +176,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String text, WidgetListener listener) {
-        this(text, hb.field_j.field_b, listener);
+        this(text, DialRenderer.field_j.field_b, listener);
     }
 
     boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
@@ -226,7 +226,7 @@ class UiWidget extends IntrusiveNode {
         focusFlag = this.hasKeyboardFocus((byte) 54) ? 1 : 0;
         if (!pointerEventsAvailable) {
           if ((focusFlag != 0) &&
-              (bi.pointerPressButtonSnapshot != 0)) {
+              (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             this.clearKeyboardFocus(-126);
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
@@ -234,7 +234,7 @@ class UiWidget extends IntrusiveNode {
           return pointerEventsAvailable;
         }
         if (0 == CachedTextLayout.wheelRotationSnapshot) {
-          if (0 == bi.pointerPressButtonSnapshot) {
+          if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
             if ((gf.heldPointerButtonSnapshot == 0) &&
                 (0 != ij.previousUiPointerButton)) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
@@ -247,7 +247,7 @@ class UiWidget extends IntrusiveNode {
               }
               if ((clientControlFlowSnapshot != 0) &&
                   (focusFlag != 0) &&
-                  (bi.pointerPressButtonSnapshot != 0)) {
+                  (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
                 this.clearKeyboardFocus(-126);
               }
             }
@@ -256,7 +256,7 @@ class UiWidget extends IntrusiveNode {
             return pointerEventsAvailable;
           }
           L19: {
-            if (!this.handlePointerPress(parentY, -109, parentX, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (UiWidget) (this))) {
+            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               if (focusFlag == 0) {
                 if ((gf.heldPointerButtonSnapshot == 0) &&
                     (0 != ij.previousUiPointerButton)) {
@@ -270,7 +270,7 @@ class UiWidget extends IntrusiveNode {
                   }
                   if ((clientControlFlowSnapshot != 0) &&
                       (focusFlag != 0) &&
-                      (bi.pointerPressButtonSnapshot != 0)) {
+                      (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
                     this.clearKeyboardFocus(-126);
                   }
                 }
@@ -305,7 +305,7 @@ class UiWidget extends IntrusiveNode {
           }
           if ((clientControlFlowSnapshot != 0) &&
               (focusFlag != 0) &&
-              (bi.pointerPressButtonSnapshot != 0)) {
+              (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             this.clearKeyboardFocus(-126);
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
@@ -314,7 +314,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (focusFlag != 0) {
           this.handlePointerWheel(parentY, CachedTextLayout.wheelRotationSnapshot, parentX, -1, PrefixCodeDecoder.pointerXSnapshot, (UiWidget) (this), PcmResampler.pointerYSnapshot);
-          if (0 == bi.pointerPressButtonSnapshot) {
+          if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
             if ((gf.heldPointerButtonSnapshot == 0) &&
                 (0 != ij.previousUiPointerButton)) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
@@ -328,7 +328,7 @@ class UiWidget extends IntrusiveNode {
               }
               if ((clientControlFlowSnapshot != 0) &&
                   (focusFlag != 0) &&
-                  (bi.pointerPressButtonSnapshot != 0)) {
+                  (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
                 this.clearKeyboardFocus(-126);
               }
             }
@@ -337,7 +337,7 @@ class UiWidget extends IntrusiveNode {
             return pointerEventsAvailable;
           }
           L0: {
-            if (!this.handlePointerPress(parentY, -109, parentX, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (UiWidget) (this))) {
+            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               this.clearKeyboardFocus(-127);
               if (clientControlFlowSnapshot == 0) {
                 break L0;
@@ -366,14 +366,14 @@ class UiWidget extends IntrusiveNode {
           }
           if ((clientControlFlowSnapshot != 0) &&
               (focusFlag != 0) &&
-              (bi.pointerPressButtonSnapshot != 0)) {
+              (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             this.clearKeyboardFocus(-126);
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
-        if (0 == bi.pointerPressButtonSnapshot) {
+        if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
           if ((gf.heldPointerButtonSnapshot == 0) &&
               (0 != ij.previousUiPointerButton)) {
             this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
@@ -386,7 +386,7 @@ class UiWidget extends IntrusiveNode {
             }
             if ((clientControlFlowSnapshot != 0) &&
                 (focusFlag != 0) &&
-                (bi.pointerPressButtonSnapshot != 0)) {
+                (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
               this.clearKeyboardFocus(-126);
             }
           }
@@ -394,7 +394,7 @@ class UiWidget extends IntrusiveNode {
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
-        if (!this.handlePointerPress(parentY, -109, parentX, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (UiWidget) (this))) {
+        if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
           if (gf.heldPointerButtonSnapshot != 0) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
@@ -444,7 +444,7 @@ class UiWidget extends IntrusiveNode {
         }
         if ((clientControlFlowSnapshot != 0) &&
             (focusFlag != 0) &&
-            (bi.pointerPressButtonSnapshot != 0)) {
+            (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
           this.clearKeyboardFocus(-126);
         }
         ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
@@ -508,9 +508,9 @@ class UiWidget extends IntrusiveNode {
           }
           break;
         }
-        var5 = lf.c((byte) 55);
+        var5 = LongAndTextLoginPayload.c((byte) 55);
         if (var5 != null) {
-          hb.field_j.a(PendingActionMarker.field_g, true, bc.field_a, var5);
+          DialRenderer.field_j.a(PendingActionMarker.field_g, true, bc.field_a, var5);
         }
     }
 

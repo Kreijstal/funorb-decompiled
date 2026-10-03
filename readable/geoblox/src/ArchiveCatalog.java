@@ -19,7 +19,7 @@ final class ArchiveCatalog {
             return false;
         }
         nb.a(-2, InstrumentPatch.field_n);
-        InstrumentPatch.field_n.a(0, MenuScreen.platformTaskDispatcher);
+        InstrumentPatch.field_n.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         InstrumentPatch.field_n = null;
         return true;
     }

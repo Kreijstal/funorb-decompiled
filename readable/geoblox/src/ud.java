@@ -15,7 +15,7 @@ final class ud {
         try {
           unacknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
           while (unacknowledgedSubmission != null) {
-            ol.writeAchievementSubmissionPacket(packetOpcode, unacknowledgedSubmission, 30175);
+            MultiHandleSliderWidget.writeAchievementSubmissionPacket(packetOpcode, unacknowledgedSubmission, 30175);
             unacknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.nextForIteration(1));
           }
           pendingQuery = NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0);

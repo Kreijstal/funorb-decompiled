@@ -322,7 +322,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                             if (!MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) var4))) {
                               break L4;
                             }
-                            if (ol.a(false, (CharSequence) ((Object) var4)) >= 10) {
+                            if (MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var4)) >= 10) {
                               break L4;
                             }
                             this.a((byte) 79, "wrongjava");
@@ -484,7 +484,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             MessageDialog.gameCanvas.getParent().remove((java.awt.Component) ((Object) MessageDialog.gameCanvas));
           }
           L1: {
-            if (he.field_a == null) {
+            if (FullscreenFocusCanvas.field_a == null) {
               if (null == sg.field_a) {
                 if (kg.field_m != null) {
                   var2 = kg.field_m;
@@ -502,7 +502,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 break L1;
               }
             }
-            var2 = he.field_a;
+            var2 = FullscreenFocusCanvas.field_a;
           }
           L5: {
             ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
@@ -706,7 +706,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 (-Geoblox.canvasCreationTimeMillis + oa.a(-12520) > 1000L)) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (~var2.width > ~qb.field_G) {
+                if (~var2.width > ~DialWidget.field_G) {
                   return;
                 }
                 if (NetworkArchiveRequest.field_w > var2.height) {
@@ -739,7 +739,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
             MenuScreen.appletStopDeadlineMillis = oa.a(-12520);
             bc.sleepMillis(0, 5000L);
-            ml.field_s = null;
+            SpriteButtonRenderer.field_s = null;
             this.a((byte) 14, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.destroy()");
@@ -777,7 +777,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 PrefixCodeDecoder.field_b = 0;
                 ButtonWidget.field_B = 0;
                 AudioService.field_d = param4;
-                qb.field_G = param4;
+                DialWidget.field_G = param4;
                 PrefixCodeDecoder.field_d = (GameApplet) (this);
                 GameScreen.errorReportApplet = NodeHashTableIterator.c(107);
                 if (param1 != -14948) {
@@ -785,7 +785,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
                 MenuScreen.platformTaskDispatcher = dupTemp$0;
-                ml.field_s = dupTemp$0;
+                SpriteButtonRenderer.field_s = dupTemp$0;
                 var8 = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
                 while (true) {
                   if (var8.status == 0) {
@@ -887,7 +887,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               MessageDialog.gameCanvas.setSize(AudioService.field_d, ok.field_c);
               MessageDialog.gameCanvas.setVisible(true);
               if (!((sg.field_a != null) &&
-                  (he.field_a == null))) {
+                  (FullscreenFocusCanvas.field_a == null))) {
                 MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break L2;

@@ -1,29 +1,37 @@
 # Readable GeoBlox
 
-The current export has 8,607 guarded naming rules: 143 classes, 999 fields,
-800 methods, 2,372 parameters and 4,293 local declarations. Both 303-file corpora
+The current export has 8,898 guarded naming rules: 169 classes, 1,106 fields,
+846 methods, 2,484 parameters and 4,293 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Class roles and the single preview (pass 110)
+## Class roles and the single preview (pass 111)
 
 The canonical preview is `readable/geoblox/src` in this checkout. Update it with
 `node readable/reproduce-geoblox.mjs --update`; check it with `--check`. Do not
 keep numbered export directories or separate preview checkouts. Validation-only
 copies must be temporary and removed after the check; Git retains earlier passes.
 
-This pass adds 51 class rules, taking class coverage from 92 to 143 of 303 files.
-`Geoblox` already has a meaningful original name; 159 filenames remain opaque.
+This pass adds 26 class rules, taking class coverage from 143 to 169 of 303 files.
+`Geoblox` already has a meaningful original name; 133 filenames remain opaque.
 The total rule count includes methods, fields, parameters and locals and must not
-be reported as class-name coverage. The renamed families include intrusive hash
-tables/iterators, text editing/layout/validation, audio streams/synthesis, frame
-timers, the applet/session base, sockets and resource downloads. These names
+be reported as class-name coverage. The newly named families include codebooks,
+residues and mappings in music decoding, synthesized instruments, checkbox/dial
+and multi-handle slider controls, skin composition, login payloads and query
+records. These names
 follow instance state and callers. Obfuscation placed unrelated static helpers
 on many of those owners; the class name does not describe every static member.
 
-All 8,556 prior rule objects remain unchanged. The 51 additions change 3,064
-class declaration/reference occurrences and 46 constructor spellings, bringing
-identifier edits to 69,721. Raw source, decompiler source/archive, naming tool,
+All 8,607 prior rule objects remain unchanged. There are 291 additions: 26
+classes, 107 fields, 46 methods and 112 parameters. They change 2,197 bound
+declaration/reference occurrences and 28 constructor spellings, bringing
+identifier edits to 71,946. The complete drawing-strategy family has ten named
+declarations; both validation-provider-source declarations are named. Slider
+backing state is a growable integer list with multiple handles. Skin flushing
+draws the preceding composed state before copying an overlay; it does not draw
+the new overlay immediately. Login subclass names describe byte layouts without
+assigning an unproved credential meaning to base38 text.
+Raw source, decompiler source/archive, naming tool,
 stubs and all seven native probe source/trace pins are unchanged. There is no
 new control-flow rewrite or runtime coverage in this naming pass. Literal
 reflective lookups keep `gl`, `ve`, `tk`, `pd` and `of` unchanged; renaming those
@@ -32,7 +40,7 @@ requires a separately verified literal-lookup transformation.
 The raw tree remains
 `05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b`;
 the current readable tree is
-`e901726c84615c4b0d0f5949c50a0b70fb077e8b1db95b3f253d4c46fd509861`.
+`929bf301d6e4cd51ad88c9b83c0ccb894e4df1ee02b64c2d836d97c711c8c794`.
 The pinned decompiler-source SHA-256 remains
 `181f076a1fa60e43792a4326a36369f4b82b1a00a32424e9a539fc0107c81d41`.
 All seven existing native/raw/readable probes pass with their pinned traces.

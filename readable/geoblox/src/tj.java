@@ -42,33 +42,33 @@ final class tj {
             Geoblox.activeMessageDialog.dismissDialog((byte) -104);
             if (param0 >= -47) {
                 field_a = (String) null;
-                var3 = ml.c(7789);
-                ml.field_t = new pf(var3, (String) null, true, false, false);
+                var3 = SpriteButtonRenderer.c(7789);
+                SpriteButtonRenderer.field_t = new pf(var3, (String) null, true, false, false);
                 kd.field_e.showDialog(false, ButtonWidget.field_C);
-                ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+                ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
                 ButtonWidget.field_C.finishTransition(true);
                 return;
             }
-            var2 = ml.c(7789);
-            ml.field_t = new pf(var2, (String) null, true, false, false);
+            var2 = SpriteButtonRenderer.c(7789);
+            SpriteButtonRenderer.field_t = new pf(var2, (String) null, true, false, false);
             kd.field_e.showDialog(false, ButtonWidget.field_C);
-            ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+            ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
             ButtonWidget.field_C.finishTransition(true);
             return;
         }
         if (param0 < -47) {
-            var5 = ml.c(7789);
-            ml.field_t = new pf(var5, (String) null, true, false, false);
+            var5 = SpriteButtonRenderer.c(7789);
+            SpriteButtonRenderer.field_t = new pf(var5, (String) null, true, false, false);
             kd.field_e.showDialog(false, ButtonWidget.field_C);
-            ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+            ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
             ButtonWidget.field_C.finishTransition(true);
             return;
         }
         field_a = (String) null;
-        String var4 = ml.c(7789);
-        ml.field_t = new pf(var4, (String) null, true, false, false);
+        String var4 = SpriteButtonRenderer.c(7789);
+        SpriteButtonRenderer.field_t = new pf(var4, (String) null, true, false, false);
         kd.field_e.showDialog(false, ButtonWidget.field_C);
-        ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+        ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
         ButtonWidget.field_C.finishTransition(true);
     }
 
@@ -107,10 +107,10 @@ final class tj {
           if (!dc.field_c.loadGroupByName("commonui", (byte) -127)) {
             return 60;
           }
-          if (!hb.field_n.ensureIndexLoaded(0)) {
+          if (!DialRenderer.field_n.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (hb.field_n.loadAllGroups(true)) {
+          if (DialRenderer.field_n.loadAllGroups(true)) {
             return 100;
           }
           return 80;
@@ -138,10 +138,10 @@ final class tj {
         if (!dc.field_c.loadGroupByName("commonui", (byte) -128)) {
           return 80;
         }
-        if (!hb.field_n.ensureIndexLoaded(param0 - 73)) {
+        if (!DialRenderer.field_n.ensureIndexLoaded(param0 - 73)) {
           return 82;
         }
-        if (!hb.field_n.loadAllGroups(true)) {
+        if (!DialRenderer.field_n.loadAllGroups(true)) {
           return 86;
         }
         return 100;

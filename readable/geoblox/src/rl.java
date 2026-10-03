@@ -3,7 +3,7 @@
  */
 final class rl extends ResizableDialog {
     private String field_Y;
-    static od field_W;
+    static LoginMethod field_W;
     private boolean field_ab;
     private boolean field_Z;
     private hl field_bb;
@@ -59,7 +59,7 @@ final class rl extends ResizableDialog {
         if (param0 != -1071908447) {
             return false;
         }
-        return IntrusiveDeque.field_d == si.field_g ? true : false;
+        return IntrusiveDeque.field_d == WidgetSkinState.field_g ? true : false;
     }
 
     final void m(int param0) {
@@ -86,7 +86,7 @@ final class rl extends ResizableDialog {
           if (param1 == 534) {
             return;
           }
-          field_W = (od) null;
+          field_W = (LoginMethod) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class rl extends ResizableDialog {
 
     public static void h(byte param0) {
         if (param0 != 57) {
-            field_W = (od) null;
+            field_W = (LoginMethod) null;
             field_W = null;
             return;
         }
@@ -176,6 +176,6 @@ final class rl extends ResizableDialog {
     }
 
     static {
-        field_W = new od("usename");
+        field_W = new LoginMethod("usename");
     }
 }

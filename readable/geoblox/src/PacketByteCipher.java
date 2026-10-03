@@ -191,9 +191,9 @@ final class PacketByteCipher {
 
     final static void a(byte param0) {
         int var1 = DiskCacheWorker.avatarTintPalette[-1 + DiskCacheWorker.avatarTintPalette.length];
-        SocketArchiveNetworkClient.field_x = (float)(-(255 & si.field_j) + (255 & var1));
-        MenuScreen.introTintGreenDelta = (float)(-(si.field_j >> 8 & 255) + (var1 >> 8 & 255));
-        TextLayoutLine.field_b = (float)(((var1 & 16735942) >> 16) - (si.field_j >> 16 & 255));
+        SocketArchiveNetworkClient.field_x = (float)(-(255 & WidgetSkinState.field_j) + (255 & var1));
+        MenuScreen.introTintGreenDelta = (float)(-(WidgetSkinState.field_j >> 8 & 255) + (var1 >> 8 & 255));
+        TextLayoutLine.field_b = (float)(((var1 & 16735942) >> 16) - (WidgetSkinState.field_j >> 16 & 255));
         int var2 = 80 % ((5 - param0) / 52);
         IntrusiveNodeHashTable.a(0, ll.field_d);
     }

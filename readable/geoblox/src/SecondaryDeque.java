@@ -157,11 +157,11 @@ final class SecondaryDeque {
         this.sentinel.previousSecondaryNode = this.sentinel;
     }
 
-    final static df a(boolean param0, long param1, String param2, String param3, boolean param4) {
+    final static LoginPayload a(boolean param0, long param1, String param2, String param3, boolean param4) {
         RuntimeException var6 = null;
-        th stackIn_7_0 = null;
-        nk stackIn_9_0 = null;
-        lf stackIn_11_0 = null;
+        AlternateLongAndTextLoginPayload stackIn_7_0 = null;
+        TextPairLoginPayload stackIn_9_0 = null;
+        LongAndTextLoginPayload stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -174,15 +174,15 @@ final class SecondaryDeque {
           }
           if ((param1 == 0L) &&
               (param2 != null)) {
-            stackIn_9_0 = new nk(param2, param3);
-            return (df) ((Object) stackIn_9_0);
+            stackIn_9_0 = new TextPairLoginPayload(param2, param3);
+            return (LoginPayload) ((Object) stackIn_9_0);
           }
           if (!param4) {
-            stackIn_11_0 = new lf(param1, param3);
-            return (df) ((Object) stackIn_11_0);
+            stackIn_11_0 = new LongAndTextLoginPayload(param1, param3);
+            return (LoginPayload) ((Object) stackIn_11_0);
           }
-          stackIn_7_0 = new th(param1, param3);
-          return (df) ((Object) stackIn_7_0);
+          stackIn_7_0 = new AlternateLongAndTextLoginPayload(param1, param3);
+          return (LoginPayload) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

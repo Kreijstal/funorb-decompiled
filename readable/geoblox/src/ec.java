@@ -55,7 +55,7 @@ final class ec {
         int candidateIndex = 0;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          if ((0 == h.matchCandidateCount) &&
+          if ((0 == EmailAvailabilityQuery.matchCandidateCount) &&
               (0 < wb.newAttachmentCount)) {
             if (w.avatarShockPending) {
               return false;
@@ -67,11 +67,11 @@ final class ec {
             }
             return false;
           }
-          if (h.matchCandidateCount == 0) {
+          if (EmailAvailabilityQuery.matchCandidateCount == 0) {
             return false;
           }
           if (gf.matchChainLength >= 5) {
-            SecondaryNodeDeque.recordAchievement(jf.field_g ^ 255, -99, jf.field_g);
+            SecondaryNodeDeque.recordAchievement(MultiHandleSliderRenderer.field_g ^ 255, -99, MultiHandleSliderRenderer.field_g);
           }
           if (gf.matchChainLength >= 6) {
             SecondaryNodeDeque.recordAchievement(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
@@ -79,32 +79,32 @@ final class ec {
           if (gf.matchChainLength >= 7) {
             SecondaryNodeDeque.recordAchievement(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
           }
-          for (sortInsertionIndex = 1; sortInsertionIndex < h.matchCandidateCount; sortInsertionIndex++) {
+          for (sortInsertionIndex = 1; sortInsertionIndex < EmailAvailabilityQuery.matchCandidateCount; sortInsertionIndex++) {
             sortCursorThenFirstEntityId = sortInsertionIndex - 1;
-            packedCandidateThenSecondEntityId = nk.packedMatchCandidates[sortInsertionIndex];
+            packedCandidateThenSecondEntityId = TextPairLoginPayload.packedMatchCandidates[sortInsertionIndex];
             while (sortCursorThenFirstEntityId >= 0) {
-              if (~nk.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
-                nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = nk.packedMatchCandidates[sortCursorThenFirstEntityId];
+              if (~TextPairLoginPayload.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
+                TextPairLoginPayload.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = TextPairLoginPayload.packedMatchCandidates[sortCursorThenFirstEntityId];
                 sortCursorThenFirstEntityId--;
                 continue;
               }
               break;
             }
-            nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = packedCandidateThenSecondEntityId;
+            TextPairLoginPayload.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = packedCandidateThenSecondEntityId;
           }
           if (methodGuard != -18913) {
             ec.processMatchCandidates(-33);
           }
           candidateIndex = 0;
           sortInsertionIndex = candidateIndex;
-          while (candidateIndex < h.matchCandidateCount) {
-            if ((-1 + h.matchCandidateCount > candidateIndex) &&
-                (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1])) {
-              nk.packedMatchCandidates[candidateIndex] = 0;
+          while (candidateIndex < EmailAvailabilityQuery.matchCandidateCount) {
+            if ((-1 + EmailAvailabilityQuery.matchCandidateCount > candidateIndex) &&
+                (TextPairLoginPayload.packedMatchCandidates[candidateIndex] == TextPairLoginPayload.packedMatchCandidates[candidateIndex + 1])) {
+              TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
             } else {
-              sortCursorThenFirstEntityId = (nk.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
-              packedCandidateThenSecondEntityId = nk.packedMatchCandidates[candidateIndex] >> 10 & 1023;
-              thirdEntityId = 1023 & nk.packedMatchCandidates[candidateIndex];
+              sortCursorThenFirstEntityId = (TextPairLoginPayload.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
+              packedCandidateThenSecondEntityId = TextPairLoginPayload.packedMatchCandidates[candidateIndex] >> 10 & 1023;
+              thirdEntityId = 1023 & TextPairLoginPayload.packedMatchCandidates[candidateIndex];
               firstMatchedEntity = tl.entitiesById[sortCursorThenFirstEntityId];
               secondMatchedEntity = tl.entitiesById[packedCandidateThenSecondEntityId];
               thirdMatchedEntity = tl.entitiesById[thirdEntityId];
@@ -116,7 +116,7 @@ final class ec {
                 if (gf.matchChainLength > 1) {
                   UiWidget.gameplaySession.pointsPanelSlideDirection = -1;
                 }
-                if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
+                if (-1073741824 == (-1073741824 & TextPairLoginPayload.packedMatchCandidates[candidateIndex])) {
                   awardedPoints = 90 * gf.matchChainLength;
                   SecondaryNodeDeque.recordAchievement(fa.field_e ^ 255, -100, fa.field_e);
                 } else {
@@ -127,19 +127,19 @@ final class ec {
                 popupY = 0;
                 popupY = (int)firstMatchedEntity.positionY;
                 ug.spawnScorePopup(awardedPoints, true, popupY, gf.matchChainLength, popupX);
-                nk.packedMatchCandidates[candidateIndex] = 0;
+                TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
               } else {
                 firstBlockedEntity = firstMatchedEntity;
                 secondBlockedEntity = secondMatchedEntity;
                 thirdMatchedEntity.entityQueue = null;
                 secondBlockedEntity.entityQueue = null;
                 firstBlockedEntity.entityQueue = null;
-                nk.packedMatchCandidates[candidateIndex] = 0;
+                TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
               }
             }
             candidateIndex++;
           }
-          h.matchCandidateCount = 0;
+          EmailAvailabilityQuery.matchCandidateCount = 0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

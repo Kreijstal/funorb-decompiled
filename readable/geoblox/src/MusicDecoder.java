@@ -6,10 +6,10 @@ import java.io.*;
 final class MusicDecoder extends IntrusiveNode {
     private boolean field_A;
     private static int[] field_l;
-    private static ui[] field_k;
+    private static VorbisResidue[] field_k;
     private int sampleCount;
     private static int[] field_f;
-    static ae[] field_u;
+    static VorbisCodebook[] field_u;
     private static int shortBlockSize;
     private static float[] workBlock;
     private static boolean[] field_o;
@@ -17,7 +17,7 @@ final class MusicDecoder extends IntrusiveNode {
     private boolean field_i;
     private static int bitCursor;
     private static int byteCursor;
-    private static we[] field_N;
+    private static VorbisMapping[] field_N;
     private static float[] field_K;
     private static float[] field_r;
     private int field_m;
@@ -328,9 +328,9 @@ final class MusicDecoder extends IntrusiveNode {
           field_l = var9;
         }
         var1 = MusicDecoder.readBits(8) + 1;
-        field_u = new ae[var1];
+        field_u = new VorbisCodebook[var1];
         for (var2 = 0; var2 < var1; var2++) {
-          field_u[var2] = new ae();
+          field_u[var2] = new VorbisCodebook();
         }
         var2 = MusicDecoder.readBits(6) + 1;
         for (var3 = 0; var3 < var2; var3++) {
@@ -342,14 +342,14 @@ final class MusicDecoder extends IntrusiveNode {
           field_F[var3] = new MusicDecodeStage();
         }
         var3 = MusicDecoder.readBits(6) + 1;
-        field_k = new ui[var3];
+        field_k = new VorbisResidue[var3];
         for (var4 = 0; var4 < var3; var4++) {
-          field_k[var4] = new ui();
+          field_k[var4] = new VorbisResidue();
         }
         var4 = MusicDecoder.readBits(6) + 1;
-        field_N = new we[var4];
+        field_N = new VorbisMapping[var4];
         for (var5 = 0; var5 < var4; var5++) {
-          field_N[var5] = new we();
+          field_N[var5] = new VorbisMapping();
         }
         var5 = MusicDecoder.readBits(6) + 1;
         field_o = new boolean[var5];
@@ -412,7 +412,7 @@ final class MusicDecoder extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        we var14;
+        VorbisMapping var14;
         int var15;
         int var16;
         int var17_int;
@@ -451,7 +451,7 @@ final class MusicDecoder extends IntrusiveNode {
         float var39;
         float[] var40;
         int var41;
-        ui var42;
+        VorbisResidue var42;
         int[] var44;
         float[] var45;
         float[] var46;
@@ -499,19 +499,19 @@ final class MusicDecoder extends IntrusiveNode {
           var13 = var4 >> 1;
         }
         var14 = field_N[field_D[var2]];
-        var16 = var14.field_a;
-        var17_int = var14.field_c[var16];
+        var16 = var14.mux;
+        var17_int = var14.floorIndices[var16];
         stackIn_22_0 = (field_F[var17_int].b()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16 = var15;
-        for (var17_int = 0; var17_int < var14.field_b; var17_int++) {
-          var42 = field_k[var14.field_d[var17_int]];
+        for (var17_int = 0; var17_int < var14.submapCount; var17_int++) {
+          var42 = field_k[var14.residueIndices[var17_int]];
           var52 = workBlock;
-          var42.a(var52, var4 >> 1, var16 != 0);
+          var42.decodeResidue(var52, var4 >> 1, var16 != 0);
         }
         if (var15 == 0) {
-          var17_int = var14.field_a;
-          var18_int = var14.field_c[var17_int];
+          var17_int = var14.mux;
+          var18_int = var14.floorIndices[var17_int];
           field_F[var18_int].a(workBlock, var4 >> 1);
         }
         if (var15 != 0) {

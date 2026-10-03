@@ -346,8 +346,8 @@ abstract class ResizableDialog extends FadingDialog {
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
                 if ((mc.pointerPressXSnapshot >= var3_int) &&
                     (mc.pointerPressXSnapshot <= var3_int + 32) &&
-                    (var4 <= he.pointerPressYSnapshot) &&
-                    (he.pointerPressYSnapshot <= var4 + 32)) {
+                    (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
+                    (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
                   if (a.field_e == var9) {
                     a.field_e = -1;
                     return;
@@ -390,8 +390,8 @@ abstract class ResizableDialog extends FadingDialog {
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
                 if ((mc.pointerPressXSnapshot >= var3_int) &&
                     (mc.pointerPressXSnapshot <= var3_int + 32) &&
-                    (var4 <= he.pointerPressYSnapshot) &&
-                    (he.pointerPressYSnapshot <= var4 + 32)) {
+                    (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
+                    (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
                   if (a.field_e == var9) {
                     a.field_e = -1;
                     return;

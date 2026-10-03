@@ -134,7 +134,7 @@ class TextInputWidget extends ButtonWidget {
         this.field_J = -1;
         try {
             this.field_M = param2;
-            this.renderer = hb.field_j.field_g;
+            this.renderer = DialRenderer.field_j.field_g;
             this.a(-128, param0, true);
             this.field_E = true;
             this.field_O = oa.a(-12520);
@@ -292,7 +292,7 @@ class TextInputWidget extends ButtonWidget {
         var5 = -124 % ((methodGuard - 1) / 43);
         if ((this.renderer != null) &&
             (renderPass == 0)) {
-          this.renderer.a(parentX, -8, parentY, this.enabled, (UiWidget) (this));
+          this.renderer.drawWidget(parentX, -8, parentY, this.enabled, (UiWidget) (this));
           if (this.renderer instanceof TextWidgetLayout) {
             var6 = (TextWidgetLayout) ((Object) this.renderer);
             if (this.field_H != this.field_L) {
@@ -307,8 +307,8 @@ class TextInputWidget extends ButtonWidget {
     }
 
     private final void m(byte param0) {
-        if (this.listener instanceof ga) {
-            ((ga) ((Object) this.listener)).a((TextInputWidget) (this), -18649);
+        if (this.listener instanceof TextInputListener) {
+            ((TextInputListener) ((Object) this.listener)).a((TextInputWidget) (this), -18649);
         }
         if (param0 < 107) {
             this.field_G = true;
@@ -581,8 +581,8 @@ class TextInputWidget extends ButtonWidget {
         if (param0 >= -16) {
             return;
         }
-        if (!(!(this.listener instanceof ga))) {
-            ((ga) ((Object) this.listener)).a((TextInputWidget) (this), (byte) 74);
+        if (!(!(this.listener instanceof TextInputListener))) {
+            ((TextInputListener) ((Object) this.listener)).a((TextInputWidget) (this), (byte) 74);
         }
     }
 

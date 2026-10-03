@@ -39,7 +39,7 @@ final class DialogLayer extends SingleChildWidget {
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (null != this.renderer) {
-            this.renderer.a(parentX, -70, parentY, true, (UiWidget) (this));
+            this.renderer.drawWidget(parentX, -70, parentY, true, (UiWidget) (this));
         }
         int guardResidue = 75 / ((1 - methodGuard) / 43);
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
@@ -54,7 +54,7 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 != -13912) {
             return;
         }
-        sl.field_k = new IntrusiveDeque();
+        UsernameAvailabilityQuery.field_k = new IntrusiveDeque();
     }
 
     final static void h(int param0) {

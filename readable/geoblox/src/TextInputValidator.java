@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class TextInputValidator extends DebouncedValidationProvider implements ga {
+abstract class TextInputValidator extends DebouncedValidationProvider implements TextInputListener {
     static uj field_h;
     static double field_f;
     private TextInputWidget validatedInput;
@@ -144,7 +144,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               } else {
                 param2 = DualLinkNode.invalidPasswordText;
               }
-              ml.field_t.a(b.field_a, 0);
+              SpriteButtonRenderer.field_t.a(b.field_a, 0);
             }
             var3_int = 1;
             if (param1 == 10) {
@@ -163,7 +163,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             if ((param1 != 256) &&
                 (param1 != 10) &&
                 (!AgeValidator.field_i)) {
-              ml.field_t.i(-119);
+              SpriteButtonRenderer.field_t.i(-119);
             }
           }
           if (param0 == 124) {

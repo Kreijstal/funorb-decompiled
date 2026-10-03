@@ -38,7 +38,7 @@ final class IterableNodeHashTable implements Iterable {
             TextWidgetRenderer.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }
           Geoblox.activeMessageDialog.dismissDialog((byte) -104);
-          rd.c(520);
+          StatefulWidgetRenderer.c(520);
         }
     }
 
@@ -186,7 +186,7 @@ final class IterableNodeHashTable implements Iterable {
               if (null == GameScreen.errorReportApplet) {
                 return;
               }
-              stackIn_13_0 = ml.field_s;
+              stackIn_13_0 = SpriteButtonRenderer.field_s;
               stackIn_13_1 = -14;
               stackIn_13_2 = null;
               stackIn_13_3 = null;
@@ -195,7 +195,7 @@ final class IterableNodeHashTable implements Iterable {
               if (null == UsernameAvailabilityValidator.field_p) {
                 stackIn_14_2 = null;
                 stackIn_14_3 = null;
-                stackIn_14_6 = "" + vi.field_H;
+                stackIn_14_6 = "" + CheckboxWidget.field_H;
               } else {
                 stackIn_14_2 = null;
                 stackIn_14_3 = null;

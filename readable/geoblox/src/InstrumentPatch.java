@@ -12,7 +12,7 @@ final class InstrumentPatch extends IntrusiveNode {
     InstrumentEnvelope[] keyEnvelopes;
     byte[] keyGroups;
     static int earnedAchievementMask;
-    static he field_n;
+    static FullscreenFocusCanvas field_n;
     int globalVolume;
 
     final boolean loadSelectedSamples(int[] sampleBudget, byte[] noteSelectionMask, int methodGuard, SoundSampleCache sampleCache) {

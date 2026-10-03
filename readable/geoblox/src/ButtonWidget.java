@@ -72,7 +72,7 @@ class ButtonWidget extends UiWidget {
     }
 
     ButtonWidget(String text, WidgetListener listener) {
-        this(text, hb.field_j.field_j, listener);
+        this(text, DialRenderer.field_j.field_j, listener);
     }
 
     void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
@@ -171,7 +171,7 @@ class ButtonWidget extends UiWidget {
     }
 
     final static void e(int param0) {
-        rd.c(520);
+        StatefulWidgetRenderer.c(520);
         MidiNote.a(4, false);
         if (param0 != 83) {
             ButtonWidget.f((byte) -65);
@@ -278,7 +278,7 @@ class ButtonWidget extends UiWidget {
         this.enabled = true;
         this.focusable = true;
         this.focused = false;
-        this.renderer = hb.field_j.field_l;
+        this.renderer = DialRenderer.field_j.field_l;
     }
 
     static {

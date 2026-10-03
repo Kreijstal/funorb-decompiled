@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class pf extends WidgetContainer implements ga, ButtonActivationListener {
+final class pf extends WidgetContainer implements TextInputListener, ButtonActivationListener {
     private String field_L;
     static ResourceArchive field_O;
     private TextInputWidget field_P;
@@ -79,12 +79,12 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             } else {
               if (var2 == 1) {
                 var4 = var9.readSignedSmart(76);
-                var5 = (se) ((Object) sj.field_g.firstForIteration(0));
+                var5 = (se) ((Object) GrowableIntList.field_g.firstForIteration(0));
                 while (true) {
                   if (var5 != null) {
                     if (!((var5.field_g == var3) &&
                         (var5.field_j == var4))) {
-                      var5 = (se) ((Object) sj.field_g.nextForIteration(1));
+                      var5 = (se) ((Object) GrowableIntList.field_g.nextForIteration(1));
                       continue;
                     }
                   }
@@ -285,7 +285,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               fc.field_d.writeZeroPrefixedNullTerminatedText(var13, (byte) -126);
               fc.field_d.writeZeroPrefixedNullTerminatedText(var8, (byte) -126);
               var14 = (CharSequence) ((Object) param4);
-              fc.field_d.writeZeroPrefixedNullTerminatedText(sl.a(var14, 48), (byte) -126);
+              fc.field_d.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.a(var14, 48), (byte) -126);
               fc.field_d.writeShortBE(param0, 28695);
               fc.field_d.writeByte((byte) -94, param1);
               fc.field_d.writeByte((byte) 123, var9);
@@ -333,10 +333,10 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             if ((var9 >= 100) &&
                 (var9 <= 105)) {
               PacketBuffer.field_l = v.field_l;
-              si.field_i = new String[var9 - 100];
+              WidgetSkinState.field_i = new String[var9 - 100];
             } else {
               if (var9 == 248) {
-                sj.a(NodeHashTableIterator.c(124), (byte) 123);
+                GrowableIntList.a(NodeHashTableIterator.c(124), (byte) 123);
                 AudioService.field_a = ph.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 ck.field_e = false;
@@ -360,9 +360,9 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               var10 = eh.field_d.readUnsignedShortBE(true);
               eh.field_d.position = 0;
               if (UiWidget.b(30000, var10)) {
-                var11 = si.field_i.length;
+                var11 = WidgetSkinState.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  si.field_i[var12] = eh.field_d.readZeroPrefixedNullTerminatedText(27425);
+                  WidgetSkinState.field_i[var12] = eh.field_d.readZeroPrefixedNullTerminatedText(27425);
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -114);
                 ck.field_e = false;
@@ -401,9 +401,9 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               return stackIn_63_0;
             }
             var9 = NetworkArchiveRequest.field_x;
-            NetworkArchiveRequest.field_x = ac.field_s;
+            NetworkArchiveRequest.field_x = TextInputRenderer.field_s;
             ck.field_e = true;
-            ac.field_s = var9;
+            TextInputRenderer.field_s = var9;
           }
           stackIn_66_0 = -1;
           return stackIn_66_0;
@@ -449,7 +449,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             this.g(0);
           } else {
             if (this.field_M == param4) {
-              jf.a((byte) 108);
+              MultiHandleSliderRenderer.a((byte) 108);
             } else {
               if (this.field_G == param4) {
                 if (!this.field_N) {
@@ -524,7 +524,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             var19 = null;
             var21 = null;
             try {
-              var13 = (eg) ((Object) sl.field_k.firstForIteration(0));
+              var13 = (eg) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
               var17 = var13;
               if (var17 == null) {
                 return;
@@ -707,11 +707,11 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ml var6 = null;
+        SpriteButtonRenderer var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        od var9 = null;
+        LoginMethod var9 = null;
         hd var12 = null;
         hd var13 = null;
         try {
@@ -764,9 +764,9 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             this.field_G = new ButtonWidget(rj.quitToWebsiteText, (WidgetListener) null);
             this.field_J.enabled = false;
           }
-          this.field_J.renderer = (WidgetRenderer) ((Object) new ac(10000536));
+          this.field_J.renderer = (WidgetRenderer) ((Object) new TextInputRenderer(10000536));
           this.field_P.renderer = (WidgetRenderer) ((Object) new PasswordWidgetRenderer(10000536));
-          var6 = new ml();
+          var6 = new SpriteButtonRenderer();
           this.field_E.renderer = (WidgetRenderer) ((Object) var6);
           if (this.field_G != null) {
             this.field_G.renderer = (WidgetRenderer) ((Object) var6);
@@ -784,7 +784,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             if (!this.field_I) {
               this.field_G.renderer = (WidgetRenderer) ((Object) new fh());
             } else {
-              this.field_G.hoverText = vi.loginJustPlayTooltipText;
+              this.field_G.hoverText = CheckboxWidget.loginJustPlayTooltipText;
               this.field_G.renderer = (WidgetRenderer) ((Object) new fh());
             }
           }
@@ -794,13 +794,13 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             this.widgetY = this.widgetY + (var7.measureWrappedHeight(this.field_L, this.widgetWidth - 40, var7.maxAscent) + 5);
           }
           var8 = WeightedObjectCache.loginUsernameEmailText;
-          var9 = th.a(NodeHashTableIterator.c(120), 200);
+          var9 = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.c(120), 200);
           if (var9 != mb.field_b) {
             if (var9 == rl.field_W) {
               var8 = bk.loginUsernameText;
             }
           } else {
-            var8 = sl.loginEmailText;
+            var8 = UsernameAvailabilityQuery.loginEmailText;
           }
           dupTemp$0 = new hd(10, this.widgetY, -20 + this.widgetWidth, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;

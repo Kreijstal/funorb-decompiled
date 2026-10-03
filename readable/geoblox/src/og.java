@@ -168,8 +168,8 @@ final class og extends DualLinkNode {
             return;
         }
         try {
-            ml.field_t = new pf(b.field_a, (String) null, AgeValidator.field_i, param2, param3);
-            ButtonWidget.field_C = new ei(kd.field_e, ml.field_t);
+            SpriteButtonRenderer.field_t = new pf(b.field_a, (String) null, AgeValidator.field_i, param2, param3);
+            ButtonWidget.field_C = new ei(kd.field_e, SpriteButtonRenderer.field_t);
             kd.field_e.showDialog(false, ButtonWidget.field_C);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

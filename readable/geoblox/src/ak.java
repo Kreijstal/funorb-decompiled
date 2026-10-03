@@ -90,11 +90,11 @@ final class ak {
         }
     }
 
-    final static od[] a(boolean param0) {
+    final static LoginMethod[] a(boolean param0) {
         if (param0) {
             ak.a(false);
         }
-        return new od[]{mb.field_b, rl.field_W, td.field_I};
+        return new LoginMethod[]{mb.field_b, rl.field_W, td.field_I};
     }
 
     static {

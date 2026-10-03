@@ -162,18 +162,18 @@ final class PasswordValidator extends TextInputValidator {
           var3 = this.field_k.widgetText.toLowerCase();
           var4 = candidateText.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_5_0 = si.field_m;
+            stackIn_5_0 = WidgetSkinState.field_m;
             return stackIn_5_0;
           }
           if (!FadingDialog.a(var4, var3, -25321)) {
-            stackIn_8_0 = si.field_m;
+            stackIn_8_0 = WidgetSkinState.field_m;
             return stackIn_8_0;
           }
           if (!this.a(candidateText, -29267)) {
             stackIn_13_0 = SocketArchiveNetworkClient.field_w;
             return stackIn_13_0;
           }
-          stackIn_11_0 = si.field_m;
+          stackIn_11_0 = WidgetSkinState.field_m;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

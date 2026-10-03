@@ -8,7 +8,7 @@ final class ki {
     static String fullscreenNonmemberText;
     static String js5ConnectErrorText;
 
-    final static void a(vd param0, int param1) {
+    final static void a(ClientSessionSnapshot param0, int param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -78,8 +78,8 @@ final class ki {
         fullscreenNonmemberText = null;
         basicUiGraphicsArchive = null;
         if (param0 != -64) {
-            vd var2 = (vd) null;
-            ki.a((vd) null, -13);
+            ClientSessionSnapshot var2 = (ClientSessionSnapshot) null;
+            ki.a((ClientSessionSnapshot) null, -13);
         }
     }
 

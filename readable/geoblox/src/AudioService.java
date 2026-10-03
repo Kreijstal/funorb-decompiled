@@ -44,11 +44,11 @@ final class AudioService implements Runnable {
         if (!dc.field_c.loadGroupByName("commonui", (byte) -125)) {
             return nb.loadingFontsText + " - " + dc.field_c.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!hb.field_n.ensureIndexLoaded(0)) {
+        if (!DialRenderer.field_n.ensureIndexLoaded(0)) {
             return ph.waitingForExtraDataText;
         }
-        if (!hb.field_n.loadAllGroups(true)) {
-            return ByteStorage.loadingExtraDataText + " - " + hb.field_n.getLoadProgress((byte) 101) + "%";
+        if (!DialRenderer.field_n.loadAllGroups(true)) {
+            return ByteStorage.loadingExtraDataText + " - " + DialRenderer.field_n.getLoadProgress((byte) 101) + "%";
         }
         return vg.pleaseWaitText;
     }

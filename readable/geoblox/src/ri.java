@@ -49,7 +49,7 @@ final class ri {
                 }
                 CacheReference.field_q.position = 0;
                 CacheReference.field_q.writeByte((byte) -102, 14);
-                CacheReference.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).wireId);
+                CacheReference.field_q.writeByte((byte) -78, ih.field_a.payloadKind((byte) -32).wireId);
                 NanoFrameTimer.a(-1, -1);
                 PacketBuffer.field_l = ResizableDialog.field_T;
               }
@@ -59,7 +59,7 @@ final class ri {
                 eh.field_d.position = 0;
                 if (var6_int != 0) {
                   AchievementSubmission.field_k = -1;
-                  PacketBuffer.field_l = ac.field_v;
+                  PacketBuffer.field_l = TextInputRenderer.field_v;
                   ScorePopup.field_l = var6_int;
                 } else {
                   PacketBuffer.field_l = MessageDialog.awaitingLoginLongState;
@@ -86,7 +86,7 @@ final class ri {
                   if ((var6_int != 0) &&
                       (var6_int != 1)) {
                     if (var6_int != 8) {
-                      PacketBuffer.field_l = ac.field_v;
+                      PacketBuffer.field_l = TextInputRenderer.field_v;
                       AchievementSubmission.field_k = -1;
                       break L6;
                     }
@@ -133,12 +133,12 @@ final class ri {
                 vg.field_b = ResizableDialog.a(var12, 12);
                 ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
                 PacketBuffer.field_l = eh.field_b;
-                if (ih.field_a.a((byte) -32) != ej.field_b) {
-                  if (ih.field_a.a((byte) -32) == Geoblox.longAndNameLoginType) {
-                    rl.field_W.a(NodeHashTableIterator.c(108), 0);
+                if (ih.field_a.payloadKind((byte) -32) != ej.field_b) {
+                  if (ih.field_a.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
+                    rl.field_W.rememberMethod(NodeHashTableIterator.c(108), 0);
                   }
                 } else {
-                  mb.field_b.a(NodeHashTableIterator.c(122), 0);
+                  mb.field_b.rememberMethod(NodeHashTableIterator.c(122), 0);
                 }
                 ck.field_e = false;
                 if (var6 != null) {
@@ -171,7 +171,7 @@ final class ri {
                 stackIn_78_0 = ScorePopup.field_l;
                 return stackIn_78_0;
               }
-              if ((PacketBuffer.field_l == ac.field_v) &&
+              if ((PacketBuffer.field_l == TextInputRenderer.field_v) &&
                   (TriangleMesh.a(false))) {
                 Bzip2DecoderState.closeSessionSocket((byte) -118);
                 if ((ScorePopup.field_l == 7) &&
@@ -200,8 +200,8 @@ final class ri {
                   return stackIn_99_0;
                 }
                 var6_int = NetworkArchiveRequest.field_x;
-                NetworkArchiveRequest.field_x = ac.field_s;
-                ac.field_s = var6_int;
+                NetworkArchiveRequest.field_x = TextInputRenderer.field_s;
+                TextInputRenderer.field_s = var6_int;
                 ck.field_e = true;
               }
               stackIn_102_0 = -1;

@@ -12,7 +12,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
     private ButtonWidget field_J;
 
     private final boolean h(byte param0) {
-        if (!this.a(-115, (nl) (this.field_E))) {
+        if (!this.a(-115, (ValidationProviderSource) (this.field_E))) {
             return false;
         }
         if (param0 != -118) {
@@ -32,9 +32,9 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
         this.field_E.hoverText = ud.createDisplayNameTooltipText;
         this.field_E.a((byte) -58, new UsernameAvailabilityValidator(this.field_E));
         this.field_H.enabled = false;
-        this.field_H.renderer = (WidgetRenderer) ((Object) new ml());
+        this.field_H.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
         this.field_J.renderer = (WidgetRenderer) ((Object) new fh());
-        this.field_E.renderer = (WidgetRenderer) ((Object) new ac(10000536));
+        this.field_E.renderer = (WidgetRenderer) ((Object) new TextInputRenderer(10000536));
         int var3 = 20;
         int var4 = 4;
         var2.setWidgetBounds(50, 270, (byte) -8, var3, 20);
@@ -72,7 +72,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
           var11 = new hd(20, param0, param5 + 120, 25, param6, false, 120, 3, DialogLayer.sharedUiFont, 16777215, param2);
           var10 = -110 / ((70 - param1) / 33);
           this.addChild((byte) -108, var11);
-          var9 = new pi(((nl) ((Object) param6)).a((byte) -113), param3, 126, param0 + var11.widgetHeight, 25 + param5, param4);
+          var9 = new pi(((ValidationProviderSource) ((Object) param6)).getValidationProvider((byte) -113), param3, 126, param0 + var11.widgetHeight, 25 + param5, param4);
           var9.listener = (WidgetListener) (this);
           this.addChild((byte) -115, var9);
           stackIn_1_0 = var9.widgetHeight + var11.widgetHeight;
@@ -193,7 +193,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
             }
             diffuseResponseOrFaceIndex = diffuseResponseCandidate;
             specularResponseOrVertexA = halfVectorZQ8 * transformedNormalsZ[normalOrFaceQueueIndex] + (halfVectorXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + halfVectorYQ8 * transformedNormalsY[normalOrFaceQueueIndex]) >> 8;
-            specularResponseTableSnapshot = jf.meshSpecularResponseByAbsDot;
+            specularResponseTableSnapshot = MultiHandleSliderRenderer.meshSpecularResponseByAbsDot;
             if (specularResponseOrVertexA < 0) {
               absoluteHalfVectorDot = -specularResponseOrVertexA;
             } else {
@@ -460,7 +460,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
         }
     }
 
-    private final boolean a(int param0, nl param1) {
+    private final boolean a(int param0, ValidationProviderSource param1) {
         ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -471,7 +471,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a((byte) -98);
+          var3 = param1.getValidationProvider((byte) -98);
           if (var3 == null) {
             return true;
           }
@@ -495,7 +495,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
 
     public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         boolean discarded$1 = false;
-        nl var7 = null;
+        ValidationProviderSource var7 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -510,8 +510,8 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
             DebouncedValidationProvider.d(24107);
           }
           if (param1 != -20) {
-            var7 = (nl) null;
-            discarded$1 = this.a(-4, (nl) null);
+            var7 = (ValidationProviderSource) null;
+            discarded$1 = this.a(-4, (ValidationProviderSource) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -600,7 +600,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
     }
 
     public final void a(byte param0) {
-        ((UsernameAvailabilityValidator) ((Object) this.field_E.a((byte) -117))).c((byte) -80);
+        ((UsernameAvailabilityValidator) ((Object) this.field_E.getValidationProvider((byte) -117))).c((byte) -80);
         if (param0 != 83) {
             this.field_H = (ButtonWidget) null;
         }

@@ -36,7 +36,7 @@ final class bk {
         }
     }
 
-    final static vd a(boolean param0, int param1) {
+    final static ClientSessionSnapshot a(boolean param0, int param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -53,7 +53,7 @@ final class bk {
         var3 = var8.readUnsignedByte((byte) 34);
         StrongCacheReference.field_u = var3 & 127;
         stackIn_3_0 = !((param1 & var3) == 0);
-        vd.field_l = stackIn_3_0;
+        ClientSessionSnapshot.field_l = stackIn_3_0;
         ArchiveIndex.field_s = var8.readUnsignedByte((byte) 34);
         DiskCacheWorker.field_c = var8.readLongBE(2901);
         if (StrongCacheReference.field_u != 2) {
@@ -83,11 +83,11 @@ final class bk {
         if (!param0) {
           re.field_f = PrefixCodeDecoder.readCompressedText(var8, 0, 80);
           vj.field_c = null;
-          return new vd(param0);
+          return new ClientSessionSnapshot(param0);
         }
         var5 = var8.readUnsignedShortBE(true);
         try {
-          var9 = rd.field_r.a((byte) -14, var5);
+          var9 = StatefulWidgetRenderer.field_r.a((byte) -14, var5);
           re.field_f = var9.e((byte) -69);
           if (!jc.field_b.equals(SecondaryDeque.field_f)) {
             stackIn_22_0 = var9.field_m;
@@ -101,9 +101,9 @@ final class bk {
           IterableNodeHashTable.a((Throwable) ((Object) var6), "CC1", (byte) 125);
           vj.field_c = null;
           re.field_f = null;
-          return new vd(param0);
+          return new ClientSessionSnapshot(param0);
         }
-        return new vd(param0);
+        return new ClientSessionSnapshot(param0);
     }
 
     static {

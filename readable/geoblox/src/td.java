@@ -3,7 +3,7 @@
  */
 final class td extends ButtonWidget {
     private ValidationProvider field_F;
-    static od field_I;
+    static LoginMethod field_I;
     private int field_G;
     static boolean field_H;
     static int rotatedEntityScreenY;
@@ -93,8 +93,8 @@ final class td extends ButtonWidget {
         var6 = parentY - (-this.widgetY - (this.widgetHeight >> 1));
         var9 = this.field_F.a((byte) -105);
         if ((var9 != ImageProducerRasterBuffer.field_g) &&
-            (si.field_n != var9)) {
-          if (si.field_m == var9) {
+            (WidgetSkinState.field_n != var9)) {
+          if (WidgetSkinState.field_m == var9) {
             var14 = oa.field_e[2];
             var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
           } else if (!(var9 != SocketArchiveNetworkClient.field_w)) {
@@ -263,6 +263,6 @@ final class td extends ButtonWidget {
     }
 
     static {
-        field_I = new od("");
+        field_I = new LoginMethod("");
     }
 }

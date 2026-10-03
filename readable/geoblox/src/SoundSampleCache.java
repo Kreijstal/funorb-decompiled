@@ -169,17 +169,17 @@ final class SoundSampleCache {
         }
     }
 
-    final static h a(int param0, String param1) {
+    final static EmailAvailabilityQuery a(int param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
-        h stackIn_7_0 = null;
+        EmailAvailabilityQuery stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((ih.field_c.a(-87)) &&
-              (!param1.equals(ih.field_c.b(19491)))) {
+          if ((ih.field_c.isCompleted(-87)) &&
+              (!param1.equals(ih.field_c.candidateEmail(19491)))) {
             ih.field_c = ImageProducerRasterBuffer.a((byte) 86, param1);
           }
           if (param0 != -1) {

@@ -22,7 +22,7 @@ final class oc implements WidgetRenderer {
                 var2 = tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
                 if (CachedTextLayout.field_h >= 11) {
                     var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-                    tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(-(tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1) + 240), si.field_j);
+                    tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(-(tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1) + 240), WidgetSkinState.field_j);
                     qh.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].fullHeight >> 1) + 240);
                     qh.introGeometryFrames[1].draw(-var2 + 320 - qh.introGeometryFrames[1].fullWidth, -(qh.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
                     return;
@@ -35,11 +35,11 @@ final class oc implements WidgetRenderer {
                 }
                 if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
                     qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
-                    tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
+                    tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), WidgetSkinState.field_j);
                     return;
                 }
                 qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
-                tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
+                tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), WidgetSkinState.field_j);
                 return;
             }
             AudioService.screenTitleSprites[0].drawAdditive(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
@@ -47,7 +47,7 @@ final class oc implements WidgetRenderer {
         var2 = tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
         if (CachedTextLayout.field_h >= 11) {
             var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(-(tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1) + 240), si.field_j);
+            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(-(tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1) + 240), WidgetSkinState.field_j);
             qh.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].fullHeight >> 1) + 240);
             qh.introGeometryFrames[1].draw(-var2 + 320 - qh.introGeometryFrames[1].fullWidth, -(qh.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
             return;
@@ -57,21 +57,21 @@ final class oc implements WidgetRenderer {
             qh.introGeometryFrames[0].draw(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].fullHeight >> 1)));
             if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
                 qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
-                tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
+                tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), WidgetSkinState.field_j);
                 return;
             }
             qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
-            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
+            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), WidgetSkinState.field_j);
             return;
         }
         qh.introGeometryFrames[0].draw(320 + var2, 206 - (qh.introGeometryFrames[0].fullHeight >> 1));
         if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
             qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
-            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
+            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), WidgetSkinState.field_j);
             return;
         }
         qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
-        tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
+        tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), WidgetSkinState.field_j);
     }
 
     public static void a(boolean param0) {
@@ -83,7 +83,7 @@ final class oc implements WidgetRenderer {
         field_a = null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -93,18 +93,18 @@ final class oc implements WidgetRenderer {
         int var7 = 0;
         Sprite var8 = null;
         try {
-          var6_int = param4.widgetX + param0;
-          var7 = param4.widgetY + param2;
-          ik.a(var6_int, param4.widgetHeight, var7, param4.widgetWidth, -1540604944);
+          var6_int = widget.widgetX + parentX;
+          var7 = widget.widgetY + parentY;
+          ik.a(var6_int, widget.widgetHeight, var7, widget.widgetWidth, -1540604944);
           var8 = oa.field_e[1];
-          if ((param4 instanceof ButtonWidget) &&
-              (((ButtonWidget) ((Object) param4)).active)) {
-            var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + param4.widgetWidth >> 1)), (-var8.fullHeight + param4.widgetHeight >> 1) + 1 + var7, 256);
+          if ((widget instanceof ButtonWidget) &&
+              (((ButtonWidget) ((Object) widget)).active)) {
+            var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + widget.widgetWidth >> 1)), (-var8.fullHeight + widget.widgetHeight >> 1) + 1 + var7, 256);
           }
-          if (param4.hasKeyboardFocus((byte) 54)) {
-            ImageProducerRasterBuffer.a(var7 + 2, -4 + param4.widgetWidth, 14164, -4 + param4.widgetHeight, var6_int + 2);
+          if (widget.hasKeyboardFocus((byte) 54)) {
+            ImageProducerRasterBuffer.a(var7 + 2, -4 + widget.widgetWidth, 14164, -4 + widget.widgetHeight, var6_int + 2);
           }
-          if (param1 < -5) {
+          if (methodGuard < -5) {
             return;
           }
           field_c = 68;
@@ -113,8 +113,8 @@ final class oc implements WidgetRenderer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_11_0 = var6;
-          stackIn_11_1 = new StringBuilder().append("oc.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_11_1 = new StringBuilder().append("oc.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+          if (widget == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";

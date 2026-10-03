@@ -284,7 +284,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         if ((0 == renderPass) &&
             (!(this.renderer == null))) {
-            this.renderer.a(parentX, -50, parentY, true, (UiWidget) (this));
+            this.renderer.drawWidget(parentX, -50, parentY, true, (UiWidget) (this));
         }
         int var5 = 85 % ((methodGuard - 1) / 43);
         if (this.child != null) {

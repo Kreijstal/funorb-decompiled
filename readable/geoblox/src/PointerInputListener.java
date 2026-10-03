@@ -190,10 +190,10 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
             hi.livePointerPressY = event.getY();
             oa.a(-12520);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
-              vd.pendingPointerPressButton = 2;
+              ClientSessionSnapshot.pendingPointerPressButton = 2;
               s.liveHeldPointerButton = 2;
             } else {
-              vd.pendingPointerPressButton = 1;
+              ClientSessionSnapshot.pendingPointerPressButton = 1;
               s.liveHeldPointerButton = 1;
             }
             eventModifiers = event.getModifiers();

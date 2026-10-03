@@ -26,7 +26,7 @@ abstract class SocketConnector {
         if (param0 != 7) {
             return true;
         }
-        return !ih.field_c.a(-95) ? true : false;
+        return !ih.field_c.isCompleted(-95) ? true : false;
     }
 
     final static j a(byte param0, String param1) {
@@ -166,18 +166,18 @@ abstract class SocketConnector {
         var7 = Geoblox.clientControlFlowFlag;
         try {
           kf.field_c = param3;
-          sl.field_l = param4;
+          UsernameAvailabilityQuery.field_l = param4;
           AchievementSubmission.field_i = new PcmResampler(22050, AudioOutput.sampleRateHz);
           ll.field_d = MusicScore.loadNamedScore(kf.field_c, "", "title_music_loop");
           pi.field_S = MusicScore.loadNamedScore(kf.field_c, "", "game_over");
           IntrusiveNode.field_d = MusicScore.loadNamedScore(kf.field_c, "", "sun");
           ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(kf.field_c, "", "bonus_bubble_jingle");
           te.field_c = new SoundSampleCache(param0, param2);
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, sl.field_l);
+          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, UsernameAvailabilityQuery.field_l);
           EmailValidator.field_j[1] = true;
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ContentTransitionDialog.resultMusicTrack, sl.field_l);
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, pi.field_S, sl.field_l);
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ll.field_d, sl.field_l);
+          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ContentTransitionDialog.resultMusicTrack, UsernameAvailabilityQuery.field_l);
+          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, pi.field_S, UsernameAvailabilityQuery.field_l);
+          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ll.field_d, UsernameAvailabilityQuery.field_l);
           var5_int = 0;
           if (param1 < 69) {
             var8 = (String) null;

@@ -24,7 +24,7 @@ final class r extends MessageDialog implements ButtonActivationListener {
         }
     }
 
-    private final void a(boolean param0, sl param1, byte param2) {
+    private final void a(boolean param0, UsernameAvailabilityQuery param1, byte param2) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -175,7 +175,7 @@ final class r extends MessageDialog implements ButtonActivationListener {
                 stackIn_41_0 = ii.field_h;
                 return stackIn_41_0;
               }
-              if (rd.field_w.indexOf(var5) == -1) {
+              if (StatefulWidgetRenderer.field_w.indexOf(var5) == -1) {
                 stackIn_46_0 = ii.field_h;
                 return stackIn_46_0;
               }
@@ -226,7 +226,7 @@ final class r extends MessageDialog implements ButtonActivationListener {
     }
 
     final boolean advanceDialogAnimation(int param0) {
-        sl var2 = null;
+        UsernameAvailabilityQuery var2 = null;
         if (param0 != -1) {
             field_sb = (String) null;
         }

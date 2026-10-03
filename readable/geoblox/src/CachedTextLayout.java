@@ -73,7 +73,7 @@ final class CachedTextLayout extends TextLayout {
           var10 = var9;
           var10.field_c[0] = param0 - param3.measureTextWidth(param4);
           var10.field_c[param4.length()] = param0;
-          qb.a(0, var10, param4, 60, param3);
+          DialWidget.a(0, var10, param4, 60, param3);
           if (param2 >= -12) {
             var7 = (BitmapFont) null;
             this.a(98, 34, (String) null, 56, (BitmapFont) null, 65, 122, -79);
@@ -120,7 +120,7 @@ final class CachedTextLayout extends TextLayout {
             var7 = param4.measureTextWidth(param0);
             var8.field_c[0] = param2 - (var7 >> 1);
             var8.field_c[param0.length()] = (var7 >> 1) + param2;
-            qb.a(0, var8, param0, 60, param4);
+            DialWidget.a(0, var8, param0, 60, param4);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -149,7 +149,7 @@ final class CachedTextLayout extends TextLayout {
             var8 = var7;
             var7.field_c[0] = param1;
             var8.field_c[param2.length()] = param4.measureTextWidth(param2) + param1;
-            qb.a(0, var8, param2, 60, param4);
+            DialWidget.a(0, var8, param2, 60, param4);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -257,7 +257,7 @@ final class CachedTextLayout extends TextLayout {
               } else {
                 stackIn_40_0 = this.a(-116, param4.measureTextWidth(var13), param5, var13);
               }
-              qb.a(stackIn_40_0, var14, var13, 60, param4);
+              DialWidget.a(stackIn_40_0, var14, var13, 60, param4);
             }
             this.field_a[var12] = var14;
             var11 = var11 + param3;
@@ -292,9 +292,9 @@ final class CachedTextLayout extends TextLayout {
         PendingActionMarker pendingActionMarkerBeforeNullCheck = pendingActionMarkerForDrawing;
         if (pendingActionMarkerBeforeNullCheck != null) {
             pendingActionDrawTop = eh.pendingActionPanelTop;
-            ma.drawNineSlicePanel(pendingActionDrawTop, 10, tl.pendingActionPanelHeight, (byte) -92, jf.pendingActionPanelWidth, ll.frameNineSliceSprites);
-            sl.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (tl.pendingActionPanelHeight - 15)) / 2);
-            FadingDialog.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, jf.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
+            ma.drawNineSlicePanel(pendingActionDrawTop, 10, tl.pendingActionPanelHeight, (byte) -92, MultiHandleSliderRenderer.pendingActionPanelWidth, ll.frameNineSliceSprites);
+            UsernameAvailabilityQuery.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (tl.pendingActionPanelHeight - 15)) / 2);
+            FadingDialog.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, MultiHandleSliderRenderer.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
         }
     }
 

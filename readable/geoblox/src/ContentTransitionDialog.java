@@ -56,7 +56,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.contentOpacityWidget.opacity = 256 - (this.contentFadeTick << 8) / this.fadeOutDurationTicks;
             return super.advanceDialogAnimation(-1);
         }
-        if (qb.contentFadeInPhase != this.contentTransitionPhase) {
+        if (DialWidget.contentFadeInPhase != this.contentTransitionPhase) {
             return super.advanceDialogAnimation(-1);
         }
         int nextFadeInTick = this.contentFadeTick + 1;
@@ -84,7 +84,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
         if (methodGuard < -20) {
             this.contentFadeTick = 0;
-            this.contentTransitionPhase = qb.contentFadeInPhase;
+            this.contentTransitionPhase = DialWidget.contentFadeInPhase;
             this.installContent(-21102, this.pendingContent);
             this.pendingContent = null;
             this.contentOpacityWidget.opacity = 0;
@@ -92,7 +92,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
         secondVertexTransformedX = (int[]) null;
         this.contentFadeTick = 0;
-        this.contentTransitionPhase = qb.contentFadeInPhase;
+        this.contentTransitionPhase = DialWidget.contentFadeInPhase;
         this.installContent(-21102, this.pendingContent);
         this.pendingContent = null;
         this.contentOpacityWidget.opacity = 0;
@@ -245,7 +245,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             super.finishTransition(finishResize);
             return;
         }
-        if (this.contentTransitionPhase != qb.contentFadeInPhase) {
+        if (this.contentTransitionPhase != DialWidget.contentFadeInPhase) {
             this.resizeAndCenter(this.pendingContent.widgetHeight + (this.contentVerticalInset + 12), 106, this.pendingContent.widgetWidth + 12);
             this.installContent(-21102, this.pendingContent);
         } else {

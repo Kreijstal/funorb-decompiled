@@ -394,7 +394,7 @@ final class kc {
                 SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
               }
               if (rb.kindFourRemovalCount >= 5) {
-                SecondaryNodeDeque.recordAchievement(255 ^ vd.field_p, -83, vd.field_p);
+                SecondaryNodeDeque.recordAchievement(255 ^ ClientSessionSnapshot.field_p, -83, ClientSessionSnapshot.field_p);
               }
               return;
             }

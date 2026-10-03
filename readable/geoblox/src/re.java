@@ -42,8 +42,8 @@ final class re extends IntrusiveNode {
             if (!methodGuard) {
               field_f = (String) null;
             }
-            vd.keyboardEventReadIndex = MidiNote.keyboardEventFrameEndIndex;
-            nk.keyboardIdleTicks = nk.keyboardIdleTicks + 1;
+            ClientSessionSnapshot.keyboardEventReadIndex = MidiNote.keyboardEventFrameEndIndex;
+            TextPairLoginPayload.keyboardIdleTicks = TextPairLoginPayload.keyboardIdleTicks + 1;
             if (ii.keyStateWriteIndexOrResetSentinel < 0) {
               resetKeyIndex = 0;
               keyStateChangeOrResetIndex = resetKeyIndex;

@@ -4,7 +4,7 @@
 final class SynthesizedSoundEffect {
     private int field_c;
     private int field_b;
-    private ed[] field_a;
+    private SynthesizedSoundInstrument[] field_a;
 
     final PcmSample a() {
         byte[] var1 = this.b();
@@ -26,10 +26,10 @@ final class SynthesizedSoundEffect {
           if (this.field_a[var2] == null) {
             continue;
           }
-          if (this.field_a[var2].field_d + this.field_a[var2].field_v <= var1) {
+          if (this.field_a[var2].durationMillis + this.field_a[var2].startDelayMillis <= var1) {
             continue;
           }
-          var1 = this.field_a[var2].field_d + this.field_a[var2].field_v;
+          var1 = this.field_a[var2].durationMillis + this.field_a[var2].startDelayMillis;
         }
         if (var1 == 0) {
           return new byte[]{};
@@ -45,9 +45,9 @@ final class SynthesizedSoundEffect {
             var4++;
             continue;
           }
-          var5 = this.field_a[var4].field_d * 22050 / 1000;
-          var6 = this.field_a[var4].field_v * 22050 / 1000;
-          var13 = this.field_a[var4].a(var5, this.field_a[var4].field_d);
+          var5 = this.field_a[var4].durationMillis * 22050 / 1000;
+          var6 = this.field_a[var4].startDelayMillis * 22050 / 1000;
+          var13 = this.field_a[var4].synthesize(var5, this.field_a[var4].durationMillis);
           for (var8 = 0; var8 < var5; var8++) {
             var9 = var3[var8 + var6] + (var13[var8] >> 8);
             if ((var9 + 128 & -256) != 0) {
@@ -63,15 +63,15 @@ final class SynthesizedSoundEffect {
     private SynthesizedSoundEffect(ByteArrayBuffer param0) {
         int var2 = 0;
         int var3;
-        this.field_a = new ed[10];
+        this.field_a = new SynthesizedSoundInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.readUnsignedByte((byte) 34);
           if (var3 == 0) {
             continue;
           }
           param0.position = param0.position - 1;
-          this.field_a[var2] = new ed();
-          this.field_a[var2].a(param0);
+          this.field_a[var2] = new SynthesizedSoundInstrument();
+          this.field_a[var2].decode(param0);
         }
         this.field_c = param0.readUnsignedShortBE(true);
         this.field_b = param0.readUnsignedShortBE(true);

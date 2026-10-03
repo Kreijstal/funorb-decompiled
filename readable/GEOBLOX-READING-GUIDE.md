@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 110)
+## Current readability (pass 111)
 
-The export has 8,607 guarded names and 69,721 identifier edits. Class coverage is
-143 semantic renames, one already meaningful `Geoblox` name and 159 opaque names.
+The export has 8,898 guarded names and 71,946 identifier edits. Class coverage is
+169 semantic renames, one already meaningful `Geoblox` name and 133 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -20,7 +20,14 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass110 adds 51 class roles without changing raw bodies or earlier naming rules.
+Pass111 adds 26 class roles and 265 field/method/parameter names without changing
+raw bodies or earlier naming rules. Audio codebook/residue/mapping state and the
+instrument synthesizer now have named fields and direct methods. Rendering
+strategies share `drawWidget`, and widgets exposing validation share
+`getValidationProvider`. The slider supports multiple handles through
+`GrowableIntList`; skin flushing draws the preceding composed state before an
+overlay. Login payload classes describe their exact byte layouts rather than
+guessing the purpose of encoded text.
 Use the one current `readable/geoblox/src` preview; numbered previews are obsolete.
 These are useful entry points for the newly named families:
 
@@ -32,6 +39,10 @@ These are useful entry points for the newly named families:
 | Validation | [ValidationProvider](geoblox/src/ValidationProvider.java), [DebouncedValidationProvider](geoblox/src/DebouncedValidationProvider.java), [ValidationState](geoblox/src/ValidationState.java), [EmailValidator](geoblox/src/EmailValidator.java), [AgeValidator](geoblox/src/AgeValidator.java), [PasswordValidator](geoblox/src/PasswordValidator.java) |
 | PCM and MIDI | [PcmStream](geoblox/src/PcmStream.java), [PcmStreamMixer](geoblox/src/PcmStreamMixer.java), [DelayedPcmStream](geoblox/src/DelayedPcmStream.java), [MidiPcmStream](geoblox/src/MidiPcmStream.java), [MidiNote](geoblox/src/MidiNote.java), [MidiNoteMixer](geoblox/src/MidiNoteMixer.java) |
 | Sound loading and synthesis | [SoundSampleCache](geoblox/src/SoundSampleCache.java), [SynthesizedSoundEffect](geoblox/src/SynthesizedSoundEffect.java), [SoundEnvelope](geoblox/src/SoundEnvelope.java), [SoundFilter](geoblox/src/SoundFilter.java), [PcmResampler](geoblox/src/PcmResampler.java), [JavaSoundAudioOutput](geoblox/src/JavaSoundAudioOutput.java) |
+| Decoding and synthesis internals | [VorbisCodebook](geoblox/src/VorbisCodebook.java), [VorbisResidue](geoblox/src/VorbisResidue.java), [VorbisMapping](geoblox/src/VorbisMapping.java), [SynthesizedSoundInstrument](geoblox/src/SynthesizedSoundInstrument.java) |
+| Checkbox, dial and slider | [CheckboxWidget](geoblox/src/CheckboxWidget.java), [DialWidget](geoblox/src/DialWidget.java), [MultiHandleSliderWidget](geoblox/src/MultiHandleSliderWidget.java), [GrowableIntList](geoblox/src/GrowableIntList.java) |
+| Skins and validation queries | [StatefulWidgetRenderer](geoblox/src/StatefulWidgetRenderer.java), [WidgetSkinState](geoblox/src/WidgetSkinState.java), [ValidationProviderSource](geoblox/src/ValidationProviderSource.java), [EmailAvailabilityQuery](geoblox/src/EmailAvailabilityQuery.java), [UsernameAvailabilityQuery](geoblox/src/UsernameAvailabilityQuery.java) |
+| Login payloads | [LoginPayload](geoblox/src/LoginPayload.java), [LongAndTextLoginPayload](geoblox/src/LongAndTextLoginPayload.java), [TextPairLoginPayload](geoblox/src/TextPairLoginPayload.java), [AlternateLongAndTextLoginPayload](geoblox/src/AlternateLongAndTextLoginPayload.java), [LoginMethod](geoblox/src/LoginMethod.java) |
 | Network and storage | [SocketConnector](geoblox/src/SocketConnector.java), [ProxySocketConnector](geoblox/src/ProxySocketConnector.java), [AsyncResourceDownloader](geoblox/src/AsyncResourceDownloader.java), [ByteStorage](geoblox/src/ByteStorage.java), [DirectByteStorage](geoblox/src/DirectByteStorage.java) |
 
 Class names describe supported instance roles. Unrelated static helpers remain

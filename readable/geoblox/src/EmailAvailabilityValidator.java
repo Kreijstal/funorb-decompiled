@@ -23,14 +23,14 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     final static void a(int param0, boolean param1) {
         if (param0 >= 0) {
             EmailAvailabilityValidator.a(83, true);
-            ih.field_c.a((byte) -110, param1);
+            ih.field_c.complete((byte) -110, param1);
             return;
         }
-        ih.field_c.a((byte) -110, param1);
+        ih.field_c.complete((byte) -110, param1);
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {
-        h var3 = null;
+        EmailAvailabilityQuery var3 = null;
         RuntimeException var3_ref = null;
         ValidationState stackIn_2_0 = null;
         ValidationState stackIn_8_0 = null;
@@ -40,21 +40,21 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_m.validationStateForText(guard, candidateText) == si.field_m) {
-            stackIn_2_0 = si.field_m;
+          if (this.field_m.validationStateForText(guard, candidateText) == WidgetSkinState.field_m) {
+            stackIn_2_0 = WidgetSkinState.field_m;
             return stackIn_2_0;
           }
           if (!candidateText.equals(this.field_j)) {
             var3 = SoundSampleCache.a(-1, candidateText);
-            if (!var3.a(-76)) {
-              stackIn_8_0 = si.field_n;
+            if (!var3.isCompleted(-76)) {
+              stackIn_8_0 = WidgetSkinState.field_n;
               return stackIn_8_0;
             }
             this.field_j = candidateText;
-            this.field_i = var3.a((byte) -52);
+            this.field_i = var3.isAvailable((byte) -52);
           }
           if (!this.field_i) {
-            stackIn_13_0 = si.field_m;
+            stackIn_13_0 = WidgetSkinState.field_m;
           } else {
             stackIn_13_0 = SocketArchiveNetworkClient.field_w;
           }
@@ -85,11 +85,11 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           if (guard != 422) {
             EmailAvailabilityValidator.c((byte) -50);
           }
-          if (this.field_m.validationStateForText(-257, candidateText) == si.field_m) {
+          if (this.field_m.validationStateForText(-257, candidateText) == WidgetSkinState.field_m) {
             stackIn_5_0 = this.field_m.validationMessageForText(422, candidateText);
             return stackIn_5_0;
           }
-          if (this.validationStateForText(-257, candidateText) != si.field_m) {
+          if (this.validationStateForText(-257, candidateText) != WidgetSkinState.field_m) {
             return da.createEmailValidText;
           }
           stackIn_9_0 = PasswordValidator.createEmailUnavailableAlertText;

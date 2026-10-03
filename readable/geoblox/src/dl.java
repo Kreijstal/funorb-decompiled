@@ -3,7 +3,7 @@
  */
 final class dl {
     static boolean field_b;
-    static sl field_a;
+    static UsernameAvailabilityQuery field_a;
     static volatile boolean field_c;
 
     public static void a(boolean param0) {

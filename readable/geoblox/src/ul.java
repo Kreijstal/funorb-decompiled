@@ -51,7 +51,7 @@ final class ul {
         int controlFlowGuard = 0;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          h.matchCandidateCount = 0;
+          EmailAvailabilityQuery.matchCandidateCount = 0;
           eligibleNeighborhoodVisited = 0;
           dualMatchFound = 0;
           centralEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
@@ -128,9 +128,9 @@ final class ul {
                         smallestPackedEntityId = largestPackedEntityId;
                         largestPackedEntityId = swappedEntityId;
                       }
-                      stackIn_64_0 = nk.packedMatchCandidates;
-                      stackIn_64_1 = h.matchCandidateCount;
-                      stackIn_64_2 = nk.packedMatchCandidates[h.matchCandidateCount];
+                      stackIn_64_0 = TextPairLoginPayload.packedMatchCandidates;
+                      stackIn_64_1 = EmailAvailabilityQuery.matchCandidateCount;
+                      stackIn_64_2 = TextPairLoginPayload.packedMatchCandidates[EmailAvailabilityQuery.matchCandidateCount];
                       stackIn_64_3 = smallestPackedEntityId;
                       if (tripleSharesCategory == 0) {
                         stackIn_65_4 = 0;
@@ -143,7 +143,7 @@ final class ul {
                         stackIn_68_5 = 1073741824;
                       }
                       stackIn_64_0[stackIn_64_1] = lb.orInt(stackIn_64_2, lb.orInt(stackIn_64_3, lb.orInt(lb.orInt(lb.orInt(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
-                      h.matchCandidateCount = h.matchCandidateCount + 1;
+                      EmailAvailabilityQuery.matchCandidateCount = EmailAvailabilityQuery.matchCandidateCount + 1;
                     }
                     if (tripleSharesCategory == 0) {
                       continue;

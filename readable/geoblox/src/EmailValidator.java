@@ -20,7 +20,7 @@ final class EmailValidator extends TextInputValidator {
           if (guard != 422) {
             archiveGameCrc = -21;
           }
-          if (this.validationStateForText(-257, candidateText) != si.field_m) {
+          if (this.validationStateForText(-257, candidateText) != WidgetSkinState.field_m) {
             stackIn_6_0 = da.createEmailValidText;
             return stackIn_6_0;
           }
@@ -149,7 +149,7 @@ final class EmailValidator extends TextInputValidator {
           stackIn_3_0 = (null != ca.a(candidateText, 1)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
-            stackIn_5_0 = si.field_m;
+            stackIn_5_0 = WidgetSkinState.field_m;
             return stackIn_5_0;
           }
           if (guard != -257) {
@@ -217,7 +217,7 @@ final class EmailValidator extends TextInputValidator {
 
     final static void c(int param0, String param1) {
         try {
-            rd.a(-119, param1);
+            StatefulWidgetRenderer.a(-119, param1);
             if (param0 != 12607) {
                 archiveGameCrc = 32;
             }

@@ -210,7 +210,7 @@ class WidgetContainer extends UiWidget implements ql {
         int var8 = Geoblox.clientControlFlowFlag;
         if ((renderPass == 0) &&
             (!(this.renderer == null))) {
-            this.renderer.a(parentX, -9, parentY, true, (UiWidget) (this));
+            this.renderer.drawWidget(parentX, -9, parentY, true, (UiWidget) (this));
         }
         int var6 = -58 % ((methodGuard - 1) / 43);
         DequeCursor var5 = new DequeCursor(this.children);

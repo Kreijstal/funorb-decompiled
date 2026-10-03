@@ -41,7 +41,7 @@ final class DequeCursor {
             }
             var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
             if (11 > CachedTextLayout.field_h) {
-              si.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
+              WidgetSkinState.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
             }
             var2 = tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
             var3 = MatchingTextValidator.field_j << 2;
@@ -136,11 +136,11 @@ final class DequeCursor {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (si.field_g == IntrusiveDeque.field_d) {
+          if (WidgetSkinState.field_g == IntrusiveDeque.field_d) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!ih.field_c.a(-106)) {
+          if (!ih.field_c.isCompleted(-106)) {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }

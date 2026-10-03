@@ -25,7 +25,7 @@ final class kb {
           if (param1 != 6568) {
             return;
           }
-          si.field_g = va.field_e;
+          WidgetSkinState.field_g = va.field_e;
           if (param0 != 255) {
             if (param0 < 100) {
               ScorePopup.field_g = ig.a(param3, param0, false);
@@ -37,11 +37,11 @@ final class kb {
             }
             var7 = param2;
             SoundSampleCache.a(var7, 416577356);
-            ScorePopup.field_g = ac.a(param1 - 6540, param2);
+            ScorePopup.field_g = TextInputRenderer.a(param1 - 6540, param2);
             return;
           }
           stackIn_11_0 = param1 ^ 6648;
-          if (rd.field_u >= 13) {
+          if (StatefulWidgetRenderer.field_u >= 13) {
             stackIn_12_1 = false;
           } else {
             stackIn_12_1 = true;

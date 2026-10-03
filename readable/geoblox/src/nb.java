@@ -12,7 +12,7 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         try {
           kc.detachKeyboardListener((java.awt.Component) ((Object) param1), 0);
-          df.a(false, (java.awt.Component) ((Object) param1));
+          LoginPayload.a(false, (java.awt.Component) ((Object) param1));
           if (param0 != -2) {
             loadingFontsText = (String) null;
           }

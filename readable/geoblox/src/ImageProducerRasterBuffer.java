@@ -9,9 +9,9 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     private java.awt.image.ImageConsumer imageConsumer;
     static ResourceArchive activeTextArchive;
 
-    final static h a(byte param0, String param1) {
+    final static EmailAvailabilityQuery a(byte param0, String param1) {
         RuntimeException var2 = null;
-        h stackIn_3_0 = null;
+        EmailAvailabilityQuery stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -20,7 +20,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           if (param0 != 86) {
             activeTextArchive = (ResourceArchive) null;
           }
-          stackIn_3_0 = new h(param1);
+          stackIn_3_0 = new EmailAvailabilityQuery(param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

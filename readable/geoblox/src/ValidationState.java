@@ -21,14 +21,14 @@ final class ValidationState {
             if (panelPhase == 0) {
               eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
               if (eh.pendingActionPanelTop <= -10 - (tl.pendingActionPanelHeight - 480)) {
-                h.pendingActionPanelHoldTicks = 0;
+                EmailAvailabilityQuery.pendingActionPanelHoldTicks = 0;
                 MidiPcmStream.pendingActionPanelPhase = 1;
                 return;
               }
             } else {
               if (panelPhase == 1) {
-                holdTicksBeforeIncrement = h.pendingActionPanelHoldTicks;
-                h.pendingActionPanelHoldTicks = h.pendingActionPanelHoldTicks + 1;
+                holdTicksBeforeIncrement = EmailAvailabilityQuery.pendingActionPanelHoldTicks;
+                EmailAvailabilityQuery.pendingActionPanelHoldTicks = EmailAvailabilityQuery.pendingActionPanelHoldTicks + 1;
                 if (holdTicksBeforeIncrement <= 450) {
                   return;
                 }
@@ -58,13 +58,13 @@ final class ValidationState {
           if (eh.pendingActionPanelTop > -10 - (tl.pendingActionPanelHeight - 480)) {
             return;
           }
-          h.pendingActionPanelHoldTicks = 0;
+          EmailAvailabilityQuery.pendingActionPanelHoldTicks = 0;
           MidiPcmStream.pendingActionPanelPhase = 1;
           return;
         }
         if (panelPhase == 1) {
-          holdTicksBeforeInvalidGuardIncrement = h.pendingActionPanelHoldTicks;
-          h.pendingActionPanelHoldTicks = h.pendingActionPanelHoldTicks + 1;
+          holdTicksBeforeInvalidGuardIncrement = EmailAvailabilityQuery.pendingActionPanelHoldTicks;
+          EmailAvailabilityQuery.pendingActionPanelHoldTicks = EmailAvailabilityQuery.pendingActionPanelHoldTicks + 1;
           if (holdTicksBeforeInvalidGuardIncrement <= 450) {
             return;
           }

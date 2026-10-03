@@ -7,8 +7,8 @@ final class hh {
     static java.awt.Font field_a;
     static BitmapFont field_c;
 
-    final static sl a(int param0, boolean param1) {
-        sl var2 = new sl(true);
+    final static UsernameAvailabilityQuery a(int param0, boolean param1) {
+        UsernameAvailabilityQuery var2 = new UsernameAvailabilityQuery(true);
         var2.field_d = param1 ? true : false;
         int var3 = -105 / ((-35 - param0) / 37);
         return var2;
@@ -29,12 +29,12 @@ final class hh {
           if (methodGuard <= 41) {
             return false;
           }
-          if (vd.keyboardEventReadIndex == MidiNote.keyboardEventFrameEndIndex) {
+          if (ClientSessionSnapshot.keyboardEventReadIndex == MidiNote.keyboardEventFrameEndIndex) {
             return false;
           }
-          ki.currentKeyboardEventCode = MidiPcmStream.queuedKeyboardEventCodes[vd.keyboardEventReadIndex];
-          te.currentKeyboardEventCharacter = ai.queuedKeyboardEventCharacters[vd.keyboardEventReadIndex];
-          vd.keyboardEventReadIndex = 1 + vd.keyboardEventReadIndex & 127;
+          ki.currentKeyboardEventCode = MidiPcmStream.queuedKeyboardEventCodes[ClientSessionSnapshot.keyboardEventReadIndex];
+          te.currentKeyboardEventCharacter = ai.queuedKeyboardEventCharacters[ClientSessionSnapshot.keyboardEventReadIndex];
+          ClientSessionSnapshot.keyboardEventReadIndex = 1 + ClientSessionSnapshot.keyboardEventReadIndex & 127;
           eventAvailable = true;
         }
         return eventAvailable;

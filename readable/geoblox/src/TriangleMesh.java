@@ -148,9 +148,9 @@ final class TriangleMesh {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (!((hb.field_l != null) &&
-              (hb.field_l.length >= param2))) {
-          hb.field_l = new int[param2 * 2];
+        if (!((DialRenderer.field_l != null) &&
+              (DialRenderer.field_l.length >= param2))) {
+          DialRenderer.field_l = new int[param2 * 2];
         }
         if (!((null != hg.field_a) &&
               (param2 <= hg.field_a.length))) {

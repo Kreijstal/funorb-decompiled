@@ -473,17 +473,17 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         }
     }
 
-    public void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
         if (!(null != this.field_n)) {
             return;
         }
         try {
-            this.a(param0, param2, param4, true);
-            if (param1 >= -5) {
+            this.a(parentX, parentY, widget, true);
+            if (methodGuard >= -5) {
                 this.field_c = -8;
             }
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ff.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -562,7 +562,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             PasswordWidgetRenderer.a(param4 + param3.widgetY, param0 + param3.widgetX, -14045, param4 + param3.widgetY + param3.widgetHeight, param3.widgetWidth + param0 + param3.widgetX);
-            hb.field_j.a(var12, var10, this.field_c, var11, var10, 8947848);
+            DialRenderer.field_j.a(var12, var10, this.field_c, var11, var10, 8947848);
             id.a(true);
           }
           if (param2 != -2) {
@@ -673,7 +673,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
                 stackIn_20_0 = var19.a(var9, 124);
               }
               var15 = stackIn_20_0;
-              hb.field_j.a(var13.field_d + (param2 + param5.widgetY + this.field_m + param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
+              DialRenderer.field_j.a(var13.field_d + (param2 + param5.widgetY + this.field_m + param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
             }
             id.a(true);
             return;

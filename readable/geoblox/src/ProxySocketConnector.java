@@ -26,7 +26,7 @@ final class ProxySocketConnector extends SocketConnector {
             ec.selectedThemeForeground = PacketByteCipher.sunForegroundSprite;
           } else {
             if (GameScreen.selectedThemeId == 3) {
-              ec.selectedThemeForeground = sl.germsForegroundSprite;
+              ec.selectedThemeForeground = UsernameAvailabilityQuery.germsForegroundSprite;
               mf.selectedThemeBackground = sg.germsBackgroundSprite;
             } else {
               if (GameScreen.selectedThemeId != 0) {
@@ -37,12 +37,12 @@ final class ProxySocketConnector extends SocketConnector {
                       ec.selectedThemeForeground = lb.sweetsForegroundSprite;
                     }
                   } else {
-                    mf.selectedThemeBackground = th.sportsBackgroundSprite;
+                    mf.selectedThemeBackground = AlternateLongAndTextLoginPayload.sportsBackgroundSprite;
                     ec.selectedThemeForeground = hd.sportsForegroundSprite;
                   }
                 } else {
                   ec.selectedThemeForeground = fl.spaceForegroundSprite;
-                  mf.selectedThemeBackground = df.spaceBackgroundSprite;
+                  mf.selectedThemeBackground = LoginPayload.spaceBackgroundSprite;
                 }
               } else {
                 mf.selectedThemeBackground = CachedArchiveSource.jewelsBackgroundSprite;

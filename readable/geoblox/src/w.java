@@ -140,7 +140,7 @@ final class w {
             PacketBuffer var4 = null;
             PacketBuffer var5 = null;
             if (null == NetworkArchiveRequest.field_B) {
-                NetworkArchiveRequest.field_B = GameplayEntity.field_D.requestSocket(NetworkArchiveRequest.field_x, ol.field_I, false);
+                NetworkArchiveRequest.field_B = GameplayEntity.field_D.requestSocket(NetworkArchiveRequest.field_x, MultiHandleSliderWidget.field_I, false);
             }
             if (param1 != 52) {
                 field_d = (ck) null;

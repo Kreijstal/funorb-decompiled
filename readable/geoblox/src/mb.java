@@ -5,7 +5,7 @@ final class mb {
     static String[] field_a;
     private String field_d;
     private boolean field_c;
-    static od field_b;
+    static LoginMethod field_b;
 
     mb(String param0) {
         this(param0, false);
@@ -73,6 +73,6 @@ final class mb {
 
     static {
         field_a = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-        field_b = new od("email");
+        field_b = new LoginMethod("email");
     }
 }

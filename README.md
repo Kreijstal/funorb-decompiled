@@ -23,9 +23,21 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 111 adds 26 class roles and 265 field/method/parameter names, including
+`VorbisCodebook`, `VorbisResidue`, `SynthesizedSoundInstrument`, `LoginPayload`,
+`CheckboxWidget`, `DialWidget` and `MultiHandleSliderWidget`. The backing
+`GrowableIntList` supports several slider handles; login subclasses describe
+their byte layout without guessing the meaning of base38 text. The complete
+drawing-strategy and validation-provider-source override families are named.
+Class coverage is 169 renamed classes, one already meaningful `Geoblox` name
+and 133 opaque names. There are 8,898 guarded rules and 71,946 identifier edits.
+All 8,607 prior rule objects, raw source and tool/probe pins remain unchanged.
+The single preview is `readable/geoblox/src`; update it with
+`node readable/reproduce-geoblox.mjs --update`. Earlier exports live in Git.
+
 Pass 110 names 51 additional class roles, including `GameApplet`,
 `TextInputWidget`, `PcmStream`, `MidiPcmStream`, `IntrusiveNodeHashTable`,
-`FrameTimer` and `ProxySocketConnector`. Class coverage is now 143 renamed
+`FrameTimer` and `ProxySocketConnector`. Class coverage at that pass is 143 renamed
 classes, one already meaningful `Geoblox` name and 159 opaque names. The total
 is 8,607 guarded rules and 69,721 identifier edits; raw source, decompiler/tool
 pins and previous rule objects remain unchanged. Class names describe instance

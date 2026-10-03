@@ -126,7 +126,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                     bodyXorByteIndex = 0;
                     bodyXorStartSnapshotOrGroupId = bodyXorByteIndex;
                     while (bodyReadLengthOrHeaderXorIndexOrArchiveId > bodyXorByteIndex) {
-                      this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex] = (byte)h.xorInt((int) this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex], (int) this.responseXorKey);
+                      this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex] = (byte)EmailAvailabilityQuery.xorInt((int) this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex], (int) this.responseXorKey);
                       bodyXorByteIndex++;
                     }
                   }
@@ -149,7 +149,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.socket.readFully(this.responseHeaderBuffer.bytes, (byte) -97, this.responseHeaderBuffer.position, responseLimitOrHeaderReadLength);
                   if (this.responseXorKey != 0) {
                     for (bodyReadLengthOrHeaderXorIndexOrArchiveId = 0; bodyReadLengthOrHeaderXorIndexOrArchiveId < responseLimitOrHeaderReadLength; bodyReadLengthOrHeaderXorIndexOrArchiveId++) {
-                      this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId] = (byte)h.xorInt((int) this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId], (int) this.responseXorKey);
+                      this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId] = (byte)EmailAvailabilityQuery.xorInt((int) this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId], (int) this.responseXorKey);
                     }
                   }
                   this.responseHeaderBuffer.position = this.responseHeaderBuffer.position + responseLimitOrHeaderReadLength;

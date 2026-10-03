@@ -133,7 +133,7 @@ final class pi extends vf {
         var14 = Geoblox.clientControlFlowFlag;
         var6 = this.field_M.a((byte) -105);
         if ((var6 != ImageProducerRasterBuffer.field_g) &&
-            (var6 != si.field_n)) {
+            (var6 != WidgetSkinState.field_n)) {
           var5 = this.field_M.c(-21666);
           if (!(var5 != null)) {
             var5 = this.field_N;
@@ -177,8 +177,8 @@ final class pi extends vf {
           this.field_Q.drawAdditive(-(var19.fullWidth >> 1) + var9, var10 - var19.fullHeight, 256);
           return;
         }
-        if (var6 != si.field_n) {
-          if (si.field_m == var6) {
+        if (var6 != WidgetSkinState.field_n) {
+          if (WidgetSkinState.field_m == var6) {
             var17 = oa.field_e[2];
             var17.drawAdditive(var9, var10 - (var17.height >> 1), 256);
             return;

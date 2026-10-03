@@ -12,7 +12,7 @@ final class fh implements WidgetRenderer {
         AgeValidator.field_i = false;
         va.field_d = false;
         MidiNote.a(-1, false);
-        si.field_g = DiskCacheWorker.field_l;
+        WidgetSkinState.field_g = DiskCacheWorker.field_l;
         kd.field_b = DiskCacheWorker.field_l;
         if (param0 != -6011) {
             field_c = 36;
@@ -77,7 +77,7 @@ final class fh implements WidgetRenderer {
         return null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+    public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -92,36 +92,36 @@ final class fh implements WidgetRenderer {
         int var11 = 0;
         var11 = Geoblox.clientControlFlowFlag;
         try {
-          if ((!param4.pointerInside) &&
-              (!param4.hasKeyboardFocus((byte) 54))) {
+          if ((!widget.pointerInside) &&
+              (!widget.hasKeyboardFocus((byte) 54))) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.widgetText + "</u>", param4.widgetX + param0, param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var6_int, -1, this.field_b, this.field_a, this.field_d.maxAscent + this.field_d.maxDescent);
-          if (param1 > -5) {
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.widgetText + "</u>", widget.widgetX + parentX, parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, var6_int, -1, this.field_b, this.field_a, this.field_d.maxAscent + this.field_d.maxDescent);
+          if (methodGuard > -5) {
             fh.a(53L, -116);
           }
-          if (!param4.hasKeyboardFocus((byte) 54)) {
+          if (!widget.hasKeyboardFocus((byte) 54)) {
             return;
           }
-          var7 = this.field_d.measureTextWidth(param4.widgetText);
+          var7 = this.field_d.measureTextWidth(widget.widgetText);
           var8 = this.field_d.maxDescent + this.field_d.maxAscent;
-          var9 = param4.widgetX + param0;
+          var9 = widget.widgetX + parentX;
           if (this.field_b == 2) {
-            var9 = var9 + (-var7 + param4.widgetWidth);
+            var9 = var9 + (-var7 + widget.widgetWidth);
           } else {
             if (this.field_b == 1) {
-              var9 = var9 + (-var7 + param4.widgetWidth >> 1);
+              var9 = var9 + (-var7 + widget.widgetWidth >> 1);
             }
           }
-          var10 = param2 + param4.widgetY;
+          var10 = parentY + widget.widgetY;
           if (this.field_a == 2) {
-            var10 = var10 + (param4.widgetHeight - var8);
+            var10 = var10 + (widget.widgetHeight - var8);
           } else {
             if (this.field_a == 1) {
-              var10 = var10 + (param4.widgetHeight - var8 >> 1);
+              var10 = var10 + (widget.widgetHeight - var8 >> 1);
             }
           }
           ImageProducerRasterBuffer.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
@@ -130,8 +130,8 @@ final class fh implements WidgetRenderer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_22_0 = var6;
-          stackIn_22_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_22_1 = new StringBuilder().append("fh.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+          if (widget == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";

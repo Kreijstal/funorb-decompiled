@@ -331,7 +331,7 @@ final class WhirlpoolHash {
               if (4 != qh.archiveHandshakeStage) {
                 return -1;
               }
-              AsyncResourceDownloader.archiveNetworkClient.attachSocket(li.archiveHandshakeSocket, false, si.archiveUseControlOpcode2);
+              AsyncResourceDownloader.archiveNetworkClient.attachSocket(li.archiveHandshakeSocket, false, WidgetSkinState.archiveUseControlOpcode2);
               StrongCacheReference.archiveConnectTask = null;
               qh.archiveHandshakeStage = 0;
               li.archiveHandshakeSocket = null;

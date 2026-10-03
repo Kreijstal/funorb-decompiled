@@ -17,9 +17,9 @@ final class qj {
     final static int b(byte param0) {
         if (param0 != 81) {
             qj.b((byte) -12);
-            return rd.field_u;
+            return StatefulWidgetRenderer.field_u;
         }
-        return rd.field_u;
+        return StatefulWidgetRenderer.field_u;
     }
 
     final static String a(String param0, String param1, char param2, byte param3) {

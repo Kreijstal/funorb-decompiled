@@ -60,11 +60,11 @@ final class vh extends WidgetContainer implements ButtonActivationListener {
         if (kd.field_b == IntrusiveDeque.field_d) {
             return ResourceArchive.field_i;
         }
-        if (!ih.field_c.a(-113)) {
-            return ih.field_c.b(param0 + 19391);
+        if (!ih.field_c.isCompleted(-113)) {
+            return ih.field_c.candidateEmail(param0 + 19391);
         }
-        if (si.field_g == IntrusiveDeque.field_d) {
-            return ih.field_c.b(19491);
+        if (WidgetSkinState.field_g == IntrusiveDeque.field_d) {
+            return ih.field_c.candidateEmail(19491);
         }
         return b.field_a;
     }
@@ -203,7 +203,7 @@ final class vh extends WidgetContainer implements ButtonActivationListener {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new ButtonWidget(this.field_C[var5], (WidgetListener) (this));
               this.field_I[var5].renderer = (WidgetRenderer) ((Object) var4);
-              this.field_I[var5].hoverText = ml.createSelectAlternativeText;
+              this.field_I[var5].hoverText = SpriteButtonRenderer.createSelectAlternativeText;
               this.field_I[var5].setWidgetBounds(15, 80, (byte) -14, var5 * 16 + 20, 0);
               this.addChild((byte) -126, this.field_I[var5]);
             }

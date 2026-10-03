@@ -18,19 +18,19 @@ final class oi {
         int var2;
         byte[] var3;
         if ((param1 == 100) &&
-            (hb.field_b > 0)) {
-          fieldTemp$3 = hb.field_b - 1;
-          hb.field_b = hb.field_b - 1;
+            (DialRenderer.field_b > 0)) {
+          fieldTemp$3 = DialRenderer.field_b - 1;
+          DialRenderer.field_b = DialRenderer.field_b - 1;
           var2_ref_byte__ = TextInputWidget.field_I[fieldTemp$3];
-          TextInputWidget.field_I[hb.field_b] = null;
+          TextInputWidget.field_I[DialRenderer.field_b] = null;
           return var2_ref_byte__;
         }
         if ((param1 == 5000) &&
             (0 < ah.field_d)) {
           fieldTemp$4 = ah.field_d - 1;
           ah.field_d = ah.field_d - 1;
-          var2_ref_byte__ = rd.field_s[fieldTemp$4];
-          rd.field_s[ah.field_d] = null;
+          var2_ref_byte__ = StatefulWidgetRenderer.field_s[fieldTemp$4];
+          StatefulWidgetRenderer.field_s[ah.field_d] = null;
           return var2_ref_byte__;
         }
         if (param0) {
@@ -46,8 +46,8 @@ final class oi {
         }
         if (sg.field_c != null) {
           var2 = 0;
-          while (!(var2 >= nk.field_c.length)) {
-            if (nk.field_c[var2] != param1) {
+          while (!(var2 >= TextPairLoginPayload.field_c.length)) {
+            if (TextPairLoginPayload.field_c[var2] != param1) {
               var2++;
               continue;
             }
@@ -74,10 +74,10 @@ final class oi {
         RuntimeException var2 = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (se) ((Object) sj.field_g.firstForIteration(0));
+          var4 = (se) ((Object) GrowableIntList.field_g.firstForIteration(0));
           while (var4 != null) {
             tj.a(param0, 86, var4);
-            var4 = (se) ((Object) sj.field_g.nextForIteration(1));
+            var4 = (se) ((Object) GrowableIntList.field_g.nextForIteration(1));
           }
           if (param1 < 115) {
             field_b = (Sprite) null;
@@ -113,7 +113,7 @@ final class oi {
           var5 = -59 % ((41 - param0) / 39);
           var4_int = param3.findGroupId((byte) 127, param2);
           var6 = param3.findFileId(param1, -101, var4_int);
-          stackIn_1_0 = rd.a(var4_int, -122, var6, param3);
+          stackIn_1_0 = StatefulWidgetRenderer.a(var4_int, -122, var6, param3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

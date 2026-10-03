@@ -45,7 +45,7 @@ final class wc extends IntrusiveNode {
     }
 
     final static void requestAvatarTintForRadius(float maxAttachedRadiusSquared, byte methodGuard) {
-        if (!(jf.avatarTintFadeTicks <= 0)) {
+        if (!(MultiHandleSliderRenderer.avatarTintFadeTicks <= 0)) {
             return;
         }
         r.avatarTintStartColor = rj.avatarTintColor;
@@ -55,7 +55,7 @@ final class wc extends IntrusiveNode {
         md.avatarTintRedDelta = (float)(-(rj.avatarTintColor >> 16 & 255) + ((DiskCacheWorker.avatarTintPalette[tintPaletteIndex] & 16722826) >> 16));
         GzipInflater.avatarTintGreenDelta = (float)((DiskCacheWorker.avatarTintPalette[tintPaletteIndex] >> 8 & 255) - (rj.avatarTintColor >> 8 & 255));
         UsernameAvailabilityValidator.avatarTintBlueDelta = (float)(-(255 & rj.avatarTintColor) + (255 & DiskCacheWorker.avatarTintPalette[tintPaletteIndex]));
-        jf.avatarTintFadeTicks = 50;
+        MultiHandleSliderRenderer.avatarTintFadeTicks = 50;
     }
 
     private wc() throws Throwable {

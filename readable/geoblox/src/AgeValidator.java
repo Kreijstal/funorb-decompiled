@@ -7,7 +7,7 @@ final class AgeValidator extends TextInputValidator {
     static boolean field_i;
 
     final static void h(int param0) {
-        sj.a(NodeHashTableIterator.c(108), (byte) 110);
+        GrowableIntList.a(NodeHashTableIterator.c(108), (byte) 110);
         if (param0 >= -24) {
             field_k = true;
         }
@@ -31,17 +31,17 @@ final class AgeValidator extends TextInputValidator {
           }
           var4 = (CharSequence) ((Object) candidateText);
           if (!MessageDialog.isSignedDecimalInt((byte) -123, var4)) {
-            stackIn_4_0 = si.field_m;
+            stackIn_4_0 = WidgetSkinState.field_m;
             return stackIn_4_0;
           }
           var5 = (CharSequence) ((Object) candidateText);
-          var3_int = ol.a(false, var5);
+          var3_int = MultiHandleSliderWidget.a(false, var5);
           if ((var3_int > 0) &&
               (130 >= var3_int)) {
             stackIn_11_0 = SocketArchiveNetworkClient.field_w;
             return stackIn_11_0;
           }
-          stackIn_9_0 = si.field_m;
+          stackIn_9_0 = WidgetSkinState.field_m;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,8 +73,8 @@ final class AgeValidator extends TextInputValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validationStateForText(-257, candidateText) == si.field_m) {
-            stackIn_2_0 = sl.createInvalidAgeAlertText;
+          if (this.validationStateForText(-257, candidateText) == WidgetSkinState.field_m) {
+            stackIn_2_0 = UsernameAvailabilityQuery.createInvalidAgeAlertText;
             return stackIn_2_0;
           }
           if (guard == 422) {
@@ -149,7 +149,7 @@ final class AgeValidator extends TextInputValidator {
           if (param0 != -114) {
             return true;
           }
-          var4 = (eg) ((Object) sl.field_k.firstForIteration(0));
+          var4 = (eg) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
           var1 = var4;
           if (var1 == null) {
             return false;

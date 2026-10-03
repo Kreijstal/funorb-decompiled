@@ -14,7 +14,7 @@ class IntrusiveNode {
         var3 = Geoblox.clientControlFlowFlag;
         IntrusiveDeque.a(111, param1);
         PacketBuffer.h(-120, param1);
-        od.b((byte) -24);
+        LoginMethod.b((byte) -24);
         if (param0 > -90) {
           loginMessage3Text = (String) null;
         }
@@ -44,7 +44,7 @@ class IntrusiveNode {
             IntrusiveNodeHashTable.a(0, te.field_b);
           }
         } else {
-          IntrusiveNodeHashTable.a(0, qb.field_M);
+          IntrusiveNodeHashTable.a(0, DialWidget.field_M);
         }
     }
 
@@ -76,7 +76,7 @@ class IntrusiveNode {
             return stackIn_8_0;
           }
           if (param2) {
-            stackIn_13_0 = nk.a(param1, 0);
+            stackIn_13_0 = TextPairLoginPayload.a(param1, 0);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param1);

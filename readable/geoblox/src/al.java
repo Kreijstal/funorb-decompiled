@@ -175,13 +175,13 @@ final class al {
         if (!(IntrusiveDeque.field_d != kd.field_b)) {
             return oc.field_a;
         }
-        if (IntrusiveDeque.field_d == si.field_g) {
+        if (IntrusiveDeque.field_d == WidgetSkinState.field_g) {
             return DelayedPcmStream.field_k;
         }
         if (param0 != 0) {
             al.b(66);
         }
-        if (!ih.field_c.a(-91)) {
+        if (!ih.field_c.isCompleted(-91)) {
             return DelayedPcmStream.field_k;
         }
         return b.field_a;

@@ -62,11 +62,11 @@ final class ic {
               ok.field_f = param3;
               lb.field_c = param1;
               NetworkArchiveRequest.field_x = param13;
-              ac.field_s = param7;
+              TextInputRenderer.field_s = param7;
               MessageDialog.loginHeaderInt = param0;
               rb.field_c = param4;
               EmailAvailabilityValidator.field_l = param10;
-              ol.field_I = param9;
+              MultiHandleSliderWidget.field_I = param9;
               ll.field_e = param5;
               qe.field_b = param6;
               if (GameplayEntity.field_D.randomSeedFile != null) {

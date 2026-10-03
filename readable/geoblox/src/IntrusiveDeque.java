@@ -55,28 +55,28 @@ final class IntrusiveDeque {
                 if (6 != var2) {
                   if (5 == var2) {
                     NodeHashTableIterator.field_f = MusicScore.loadNamedScore(kf.field_c, "", "sport");
-                    PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, NodeHashTableIterator.field_f, sl.field_l);
+                    PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, NodeHashTableIterator.field_f, UsernameAvailabilityQuery.field_l);
                   } else {
                     if (2 == var2) {
                       j.field_ib = MusicScore.loadNamedScore(kf.field_c, "", "sweets");
-                      PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, j.field_ib, sl.field_l);
+                      PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, j.field_ib, UsernameAvailabilityQuery.field_l);
                     }
                   }
                 } else {
                   SessionGameApplet.field_o = MusicScore.loadNamedScore(kf.field_c, "", "space");
-                  PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, SessionGameApplet.field_o, sl.field_l);
+                  PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, SessionGameApplet.field_o, UsernameAvailabilityQuery.field_l);
                 }
               } else {
                 ej.field_d = MusicScore.loadNamedScore(kf.field_c, "", "jewellery");
-                PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ej.field_d, sl.field_l);
+                PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ej.field_d, UsernameAvailabilityQuery.field_l);
               }
             } else {
               te.field_b = MusicScore.loadNamedScore(kf.field_c, "", "germs");
-              PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, te.field_b, sl.field_l);
+              PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, te.field_b, UsernameAvailabilityQuery.field_l);
             }
           } else {
-            qb.field_M = MusicScore.loadNamedScore(kf.field_c, "", "baking");
-            PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, qb.field_M, sl.field_l);
+            DialWidget.field_M = MusicScore.loadNamedScore(kf.field_c, "", "baking");
+            PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, DialWidget.field_M, UsernameAvailabilityQuery.field_l);
           }
           EmailValidator.field_j[param1] = true;
           if (param0 <= 110) {

@@ -138,7 +138,7 @@ abstract class IndexedSpriteState {
 
     final static int a(int param0) {
         int var1 = 77 / ((param0 + 17) / 52);
-        return nk.keyboardIdleTicks;
+        return TextPairLoginPayload.keyboardIdleTicks;
     }
 
     static {

@@ -20,9 +20,9 @@ final class cl {
         field_b = null;
     }
 
-    final static sl a(byte param0, String param1) {
+    final static UsernameAvailabilityQuery a(byte param0, String param1) {
         RuntimeException var2 = null;
-        sl stackIn_8_0 = null;
+        UsernameAvailabilityQuery stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -32,20 +32,20 @@ final class cl {
           if (param0 <= 56) {
             field_a = -115;
           }
-          if (IntrusiveDeque.field_d == si.field_g) {
+          if (IntrusiveDeque.field_d == WidgetSkinState.field_g) {
             return null;
           }
-          if ((si.field_g == va.field_e) &&
+          if ((WidgetSkinState.field_g == va.field_e) &&
               (param1.equals(DelayedPcmStream.field_k))) {
-            si.field_g = DiskCacheWorker.field_l;
+            WidgetSkinState.field_g = DiskCacheWorker.field_l;
             stackIn_8_0 = ScorePopup.field_g;
             return stackIn_8_0;
           }
-          si.field_g = IntrusiveDeque.field_d;
+          WidgetSkinState.field_g = IntrusiveDeque.field_d;
           DelayedPcmStream.field_k = param1;
           ScorePopup.field_g = null;
           stackIn_10_0 = null;
-          return (sl) (stackIn_10_0);
+          return (UsernameAvailabilityQuery) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -404,7 +404,7 @@ final class GameScreen extends MenuScreen {
             if (!((5 != this.screenId) &&
                   (7 != this.screenId))) {
               AudioService.screenTitleSprites[4].draw(0, 20);
-              ac.a(false, false, (byte) -93);
+              TextInputRenderer.a(false, false, (byte) -93);
               if (clientControlFlowGuard == 0) {
                 return;
               }
@@ -470,7 +470,7 @@ final class GameScreen extends MenuScreen {
                         !(PcmResampler.pointerYSnapshot >= 299)))) {
                     FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
                   }
-                  FadingDialog.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.drawCenteredText(DialWidget.fullscreenMembersButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
                   FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
                   if (clientControlFlowGuard == 0) {
                     return;
@@ -487,7 +487,7 @@ final class GameScreen extends MenuScreen {
                     SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainX);
                     ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
                     textYOrButtonTop = 170;
-                    textYOrButtonTop = textYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                    textYOrButtonTop = textYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(GrowableIntList.fullscreenUnavailableText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
                     textYOrButtonTop += 40;
                     dialogButtonWidth = 100;
                     dialogButtonLeft = 320 - (dialogButtonWidth + 20 >> 1);
@@ -629,7 +629,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             AudioService.screenTitleSprites[7].draw(0, 20);
-            ac.a(false, true, (byte) -122);
+            TextInputRenderer.a(false, true, (byte) -122);
             if (clientControlFlowGuard == 0) {
               return;
             }
@@ -948,7 +948,7 @@ final class GameScreen extends MenuScreen {
         try {
           if ((ca.field_f == null) &&
               (!fh.c(-115))) {
-            ca.field_f = qb.b(22, 1, 0, 10, 3);
+            ca.field_f = DialWidget.b(22, 1, 0, 10, 3);
           }
           L1: {
             if (0 != da.field_c) {
@@ -1196,7 +1196,7 @@ final class GameScreen extends MenuScreen {
               previousPointerPressCountdown = di.field_a;
               di.field_a = di.field_a - 1;
               if (0 > previousPointerPressCountdown) {
-                if (bi.pointerPressButtonSnapshot == 0) {
+                if (CheckboxRenderer.pointerPressButtonSnapshot == 0) {
                   break L15;
                 }
                 di.field_a = 50;
@@ -1204,9 +1204,9 @@ final class GameScreen extends MenuScreen {
                   break L15;
                 }
               }
-              bi.pointerPressButtonSnapshot = 0;
+              CheckboxRenderer.pointerPressButtonSnapshot = 0;
             }
-            if (bi.pointerPressButtonSnapshot != 0) {
+            if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
               if (!((this.screenId != 5) &&
                     (7 != this.screenId))) {
                 ResizableDialog.a(false, false, methodGuard ^ 189);
@@ -1225,10 +1225,10 @@ final class GameScreen extends MenuScreen {
                   break L21;
                 }
               }
-              if (bi.pointerPressButtonSnapshot != 0) {
+              if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
                 if (fh.c(-104)) {
-                  if ((265 < he.pointerPressYSnapshot) &&
-                      (he.pointerPressYSnapshot < 299)) {
+                  if ((265 < FullscreenFocusCanvas.pointerPressYSnapshot) &&
+                      (FullscreenFocusCanvas.pointerPressYSnapshot < 299)) {
                     if ((mc.pointerPressXSnapshot > 350) &&
                         (mc.pointerPressXSnapshot < 470)) {
                       this.pointerInteractionActive = true;
@@ -1262,8 +1262,8 @@ final class GameScreen extends MenuScreen {
                 }
                 if ((og.field_n > 0) &&
                     (null != InstrumentPatch.field_n)) {
-                  if ((he.pointerPressYSnapshot > 317) &&
-                      (352 > he.pointerPressYSnapshot)) {
+                  if ((FullscreenFocusCanvas.pointerPressYSnapshot > 317) &&
+                      (352 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
                     if (!((mc.pointerPressXSnapshot > 350) &&
                           (mc.pointerPressXSnapshot < 470))) {
                       if (!((mc.pointerPressXSnapshot > 170) &&
@@ -1306,7 +1306,7 @@ final class GameScreen extends MenuScreen {
             this.previousPointerX = PrefixCodeDecoder.pointerXSnapshot;
             if (this.selectedItemIndex != 0) {
               L39: {
-                inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot - (-kd.field_c - ki.currentKeyboardEventCode)) % 8;
+                inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-kd.field_c - ki.currentKeyboardEventCode)) % 8;
                 if (inputDerivedStateBranch != 0) {
                   if (inputDerivedStateBranch != 1) {
                     if (inputDerivedStateBranch != 2) {
@@ -1321,7 +1321,7 @@ final class GameScreen extends MenuScreen {
                         if (inputDerivedStateBranch != 5) {
                           if (6 == inputDerivedStateBranch) {
                             DequeCursor.field_g = DequeCursor.field_g - 1;
-                            ml.field_r = ml.field_r - kb.field_d;
+                            SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - kb.field_d;
                             if (clientControlFlowGuard == 0) {
                               break L39;
                             }
@@ -1330,19 +1330,19 @@ final class GameScreen extends MenuScreen {
                             break L39;
                           }
                           kb.field_d = kb.field_d - 1;
-                          ml.field_r = ml.field_r - DequeCursor.field_g;
+                          SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - DequeCursor.field_g;
                           if (clientControlFlowGuard == 0) {
                             break L39;
                           }
                         }
                         kb.field_d = kb.field_d + 1;
-                        ml.field_r = ml.field_r + DequeCursor.field_g;
+                        SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + DequeCursor.field_g;
                         if (clientControlFlowGuard == 0) {
                           break L39;
                         }
                       }
                       DequeCursor.field_g = DequeCursor.field_g + 1;
-                      ml.field_r = ml.field_r + kb.field_d;
+                      SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + kb.field_d;
                       if (clientControlFlowGuard == 0) {
                         break L39;
                       }
@@ -1362,7 +1362,7 @@ final class GameScreen extends MenuScreen {
                 oa.field_a = oa.field_a + kb.field_d;
                 DequeCursor.field_g = DequeCursor.field_g - 1;
               }
-              inputDerivedStateBranch = (ki.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-he.pointerPressYSnapshot - kd.field_c)) % 5;
+              inputDerivedStateBranch = (ki.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - kd.field_c)) % 5;
               if (0 != inputDerivedStateBranch) {
                 if (inputDerivedStateBranch != 1) {
                   if (inputDerivedStateBranch == 2) {
@@ -1568,7 +1568,7 @@ final class GameScreen extends MenuScreen {
                     if (this.tutorialStarFrameOrColorIndex >= 4) {
                       this.tutorialStarFrameOrColorIndex = 0;
                     }
-                    hb.silverStarFrames[this.tutorialStarFrameOrColorIndex].draw(-(hb.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (hb.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullHeight >> 1));
+                    DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].draw(-(DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullHeight >> 1));
                     NodeHashTableIterator.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
                     SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
@@ -1677,7 +1677,7 @@ final class GameScreen extends MenuScreen {
           }
           if ((unsignedByteOrCodePoint >= 128) &&
               (160 > unsignedByteOrCodePoint)) {
-            extendedCodePoint = lf.extendedTextCharacters[-128 + unsignedByteOrCodePoint];
+            extendedCodePoint = LongAndTextLoginPayload.extendedTextCharacters[-128 + unsignedByteOrCodePoint];
             if (0 == extendedCodePoint) {
               extendedCodePoint = 63;
             }

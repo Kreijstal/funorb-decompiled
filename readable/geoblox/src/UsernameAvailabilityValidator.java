@@ -77,7 +77,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
                 }
                 return null;
             }
-            return vd.tutorialShapeMatchMessage;
+            return ClientSessionSnapshot.tutorialShapeMatchMessage;
         }
         var2 = tutorialStepId;
         if (var2 == 0) {
@@ -95,7 +95,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             }
             return null;
         }
-        return vd.tutorialShapeMatchMessage;
+        return ClientSessionSnapshot.tutorialShapeMatchMessage;
     }
 
     final static byte[] a(boolean param0, int param1, Object param2) {
@@ -130,7 +130,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             stackIn_9_0 = var4;
             return stackIn_9_0;
           }
-          stackIn_7_0 = nk.a(var4, 0);
+          stackIn_7_0 = TextPairLoginPayload.a(var4, 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, df param3, boolean param4) {
+    final static void a(int param0, int param1, boolean param2, LoginPayload param3, boolean param4) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -167,7 +167,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           fc.field_d.writeIntBE((byte) 95, hl.field_D[3]);
           SpriteState.a(fc.field_d, true);
           fc.field_d.writeShortBE(param1, 28695);
-          param3.a(124, fc.field_d);
+          param3.writePayload(124, fc.field_d);
           CacheReference.field_q.position = 0;
           if (param2) {
             CacheReference.field_q.writeByte((byte) 121, 18);
@@ -224,7 +224,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     final String validationMessageForText(int guard, String candidateText) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        sl var4 = null;
+        UsernameAvailabilityQuery var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         Object stackIn_8_0 = null;
@@ -282,7 +282,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {
-        sl var3 = null;
+        UsernameAvailabilityQuery var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         CharSequence var5 = null;
@@ -300,7 +300,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           }
           var5 = (CharSequence) ((Object) candidateText);
           if (!ValidatedTextInputWidget.a((byte) 82, var5)) {
-            stackIn_4_0 = si.field_m;
+            stackIn_4_0 = WidgetSkinState.field_m;
             return stackIn_4_0;
           }
           if (!candidateText.equals(this.field_k)) {
@@ -310,14 +310,14 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
               this.field_n = var3.field_g;
               this.field_k = candidateText;
             } else {
-              stackIn_10_0 = si.field_n;
+              stackIn_10_0 = WidgetSkinState.field_n;
               return stackIn_10_0;
             }
           }
           if (this.field_n) {
             stackIn_15_0 = SocketArchiveNetworkClient.field_w;
           } else {
-            stackIn_15_0 = si.field_m;
+            stackIn_15_0 = WidgetSkinState.field_m;
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

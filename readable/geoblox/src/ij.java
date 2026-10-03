@@ -26,7 +26,7 @@ final class ij extends ResizableDialog implements ButtonActivationListener {
           if (param1 != 87) {
             previousUiPointerButton = 121;
           }
-          var4.renderer = (WidgetRenderer) ((Object) new ml());
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
           var5 = this.widgetHeight - 6;
           this.widgetHeight = this.widgetHeight + 38;
           var4.setWidgetBounds(30, -14 + (this.widgetWidth - 16), (byte) -111, var5, 15);

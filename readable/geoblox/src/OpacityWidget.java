@@ -79,7 +79,7 @@ final class OpacityWidget extends SingleChildWidget {
                 continue;
               }
               var5++;
-              var8 = ol.a(false, (CharSequence) ((Object) var7_ref_String));
+              var8 = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
               continue;
             }
@@ -114,7 +114,7 @@ final class OpacityWidget extends SingleChildWidget {
                 continue;
               }
               var5++;
-              var10 = ol.a(false, (CharSequence) ((Object) var9));
+              var10 = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var9));
               discarded$0 = var6.append(param0.substring(var7, var8));
               var7 = var5;
               discarded$1 = var6.append(param1[var10]);

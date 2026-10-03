@@ -11,7 +11,7 @@ final class nd {
         int var6;
         int var7;
         int var8;
-        hb.field_l[md.field_c] = param1;
+        DialRenderer.field_l[md.field_c] = param1;
         AchievementQuery.field_i[md.field_c] = md.field_c;
         hg.field_a[md.field_c] = param5;
         if (ok.field_b > param5) {

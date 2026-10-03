@@ -133,7 +133,7 @@ final class ck {
         try {
           if (!IntrusiveDeque.a((byte) 124)) {
             if ((InstrumentPatch.field_n != null) &&
-                (InstrumentPatch.field_n.field_c)) {
+                (InstrumentPatch.field_n.focusLost)) {
               jk.a((byte) -87);
               oh.field_b.showDialog(false, new ij(oh.field_b, ei.field_hb));
             }
