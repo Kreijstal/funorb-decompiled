@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`4f02f56a771c27f1cf814157be4606fb4450cc9b`. It comes from java-tools
-`5420742cd2ea194a1f128fb0059e1e2bf3487e8e` and Deko
+`e38d0eccc0deda0553930a2a1227c684a47f4ac3`. It comes from java-tools
+`f0763fad063121cd249c9cfd0c522fa52d9b4ace` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`1cb7031c92759a6a2847c2baf87db5def26a4edbaa50a6020409fb436987ae47`:
+`6f7b251bee18053f7db1c3970dc6a52d421b1709d3366b65c4cb11cf0b3c370e`:
 
 ```sh
-git archive --format=tar 5420742cd2ea194a1f128fb0059e1e2bf3487e8e | sha256sum
+git archive --format=tar f0763fad063121cd249c9cfd0c522fa52d9b4ace | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,52 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current mesh projection and depth queues
+## Current nested guard reconstruction
+
+Pass 84 changes the generic decompiler rather than adding names.
+`foldNestedIfGuards` replaces 710 nested braced guard chains with ordered
+short-circuit conditions, merging 913 conditions across 131 files. The corpus
+shrinks from 79,632 to 78,719 lines. Mesh projection's nine optional-coordinate
+null checks now form one readable guard; session/menu, loader and rendering
+checks also lose unnecessary indentation.
+
+The proof requires braced ifs with no alternates and only another if in each
+removed body. Predicate bytes/evaluation order and the innermost declaration
+block remain. It does not cross intervening declarations, labels, try/finally
+or monitor boundaries. Unsupported syntax, comments, Unicode escapes and nested
+executables refuse reconstruction. Budgets are 16 conditions and 512 predicate
+tokens, and oversized chains remain intact. Whitespace-only dedenting keeps
+ordinary multiline conditions and their bodies readable.
+
+`NODE_PATH=/home/kreijstal/git/java-tools/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/javaAstEmitterLoopExits.test.js`
+passes 46 tests with one optional historical pass77 corpus check skipped.
+The two new groups include 17,280 native comparisons of short circuits,
+nullable unboxing, floating/NaN predicates, assignment effects, failures,
+early returns, body scopes, finally effects observed after invocation and
+monitor ownership/release. The exception-loop suite passes eight groups.
+An independent JDK source-position inventory locates method and initializer
+bodies; applying only the new guard rule and retained frame cleanup to the prior
+corpus reproduces the exact token streams of all 303 regenerated files.
+
+The ordered raw declaration/reference/override rows remain 19,558/118,944/388,
+with no spelling, identity or local-ordinal changes. All 6,549 complete naming
+rules are preserved; they apply 52,854 edits and compare 138,502 bindings.
+Current verification counters have also been corrected to include pass 83's
+names. One maintained manifest records the explicit source migration; Git holds
+previous versions. Text-loader bytes/resource positions, frozen naming tools,
+stubs and all native probe sources/pins remain unchanged.
+
+A clean pinned decompiler Git-source tar regenerates all 303 raw files and
+unchanged diagnostics byte-for-byte. Raw/readable sources compile, reproduction
+and dictionary reversal are byte-exact, and all seven native game probes retain
+their traces. The rule-builder/source-migration/text-resource checks pass 9/8/6.
+The latest source survey has 2,079 method/constructor bodies, including 21 spans
+of at least 300 lines, 15 with generated block labels. The outer text-loader span
+includes three helper spans, so this is not a count of unique dispatchers.
+Opaque names, reused scratch phases, large control bodies, real assets/gameplay
+and browser/phone memory/startup/FPS acceptance remain unfinished or unverified.
+
+## Previous mesh projection and depth queues
 
 Pass 83 adds 142 guarded identities: 25 fields, five methods, 16 parameters and
 96 locals. `p.projectMeshAndQueueFaces` composes the camera/model rotation bases,
@@ -1685,8 +1730,8 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The current structural pass records its source migration in `sourceChange`
-and retains all 6,081 complete rules with an empty `ruleChanges` list.
-All six native probe sources and their traces are pinned in
+and retains all 6,549 complete rules with an empty `ruleChanges` list.
+All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
 ## Update this export
@@ -1708,7 +1753,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17` |
-| Readable | `6cb7908a2be3c9a91ffcc47eb26197692dec831e24500c0caea87bf0ae379ddf` |
+| Raw | `fe14e8a5abf577b825d5d210ee51cce9b3d43481bc3715bff080220b5636cd25` |
+| Readable | `7e1bde5cb76eb4fa8aa849a65ba4759744de86a2b29aadb7ee78bac3850a2578` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

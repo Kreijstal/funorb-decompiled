@@ -91,11 +91,10 @@ final class nb {
             unusedMotionFloat = 0.0f;
             boardYForCategorySelection = (float)pointerY;
             inwardVelocityYForCategorySelection = (float)(-pointerY + 240);
-            if (spriteKindId != 2) {
-              if (1 != spriteKindId) {
-                initializationCategory = -1;
-                break L5;
-              }
+            if ((spriteKindId != 2) &&
+                (1 != spriteKindId)) {
+              initializationCategory = -1;
+              break L5;
             }
             initializationCategory = categoryId;
           }

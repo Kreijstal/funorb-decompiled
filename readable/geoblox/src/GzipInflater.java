@@ -35,26 +35,25 @@ final class GzipInflater {
             String destinationDescription = null;
             Throwable caughtInflateFailure = null;
             try {
-              if (buffer.bytes[buffer.position] == 31) {
-                if (-117 == buffer.bytes[1 + buffer.position]) {
-                  if (this.inflater == null) {
-                    this.inflater = new java.util.zip.Inflater(true);
-                  }
-                  try {
-                    this.inflater.setInput(buffer.bytes, buffer.position + 10, buffer.bytes.length - 8 - (buffer.position + 10));
-                    if (methodGuard != -1) {
-                      GzipInflater.a(76);
-                    }
-                    this.inflater.inflate(destination);
-                  } catch (java.lang.Exception inflateOperationException) {
-                    caughtInflateFailure = inflateOperationException;
-                    inflateException = (Exception) (Object) caughtInflateFailure;
-                    this.inflater.reset();
-                    throw new RuntimeException("");
-                  }
-                  this.inflater.reset();
-                  return;
+              if ((buffer.bytes[buffer.position] == 31) &&
+                  (-117 == buffer.bytes[1 + buffer.position])) {
+                if (this.inflater == null) {
+                  this.inflater = new java.util.zip.Inflater(true);
                 }
+                try {
+                  this.inflater.setInput(buffer.bytes, buffer.position + 10, buffer.bytes.length - 8 - (buffer.position + 10));
+                  if (methodGuard != -1) {
+                    GzipInflater.a(76);
+                  }
+                  this.inflater.inflate(destination);
+                } catch (java.lang.Exception inflateOperationException) {
+                  caughtInflateFailure = inflateOperationException;
+                  inflateException = (Exception) (Object) caughtInflateFailure;
+                  this.inflater.reset();
+                  throw new RuntimeException("");
+                }
+                this.inflater.reset();
+                return;
               }
               throw new RuntimeException("");
             } catch (java.lang.RuntimeException inflateFailure) {

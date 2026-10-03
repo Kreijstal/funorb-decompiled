@@ -46,16 +46,15 @@ final class GameplayEntity extends DualLinkNode {
         }
         L0: {
           rotatedEntityY = (int)(Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
-          if (this.entitySpriteKindId != 2) {
-            if (1 != this.entitySpriteKindId) {
-              vf.spriteScratchRaster.setAsRasterTarget();
-              SoftwareRasterizer.clearFramebuffer();
-              this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
-              k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-              sh.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
-              vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
-              break L0;
-            }
+          if ((this.entitySpriteKindId != 2) &&
+              (1 != this.entitySpriteKindId)) {
+            vf.spriteScratchRaster.setAsRasterTarget();
+            SoftwareRasterizer.clearFramebuffer();
+            this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
+            k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+            sh.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
+            vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
+            break L0;
           }
           if (1 == this.entitySpriteKindId) {
             vf.spriteScratchRaster.setAsRasterTarget();
@@ -100,13 +99,12 @@ final class GameplayEntity extends DualLinkNode {
           boardAngle = el.gameplaySession.boardAngleRadians;
           rotatedEntityX = (int)(320.0 + ((double)entityOffsetX * Math.cos((double)boardAngle) - Math.sin((double)boardAngle) * (double)entityOffsetY));
           rotatedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)boardAngle) + Math.cos((double)boardAngle) * (double)entityOffsetY));
-          if (this.entitySpriteKindId != 1) {
-            if (2 != this.entitySpriteKindId) {
-              vf.spriteScratchRaster.setAsRasterTarget();
-              SoftwareRasterizer.clearFramebuffer();
-              this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
-              break L0;
-            }
+          if ((this.entitySpriteKindId != 1) &&
+              (2 != this.entitySpriteKindId)) {
+            vf.spriteScratchRaster.setAsRasterTarget();
+            SoftwareRasterizer.clearFramebuffer();
+            this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
+            break L0;
           }
           if (this.entitySpriteKindId != 1) {
             vf.spriteScratchRaster.setAsRasterTarget();
@@ -351,13 +349,12 @@ final class GameplayEntity extends DualLinkNode {
                 this.animationFrameIndex = this.animationFrameIndex % 4;
               }
             } else {
-              if (8 == this.entitySpriteKindId) {
-                if (this.entityUpdateTick % 24 == 0) {
-                  kind8AnimationFrame = this.animationFrameIndex;
-                  this.animationFrameIndex = this.animationFrameIndex + 1;
-                  this.entitySprite = ej.amorphousCrackFrames[kind8AnimationFrame];
-                  this.animationFrameIndex = this.animationFrameIndex % 4;
-                }
+              if ((8 == this.entitySpriteKindId) &&
+                  (this.entityUpdateTick % 24 == 0)) {
+                kind8AnimationFrame = this.animationFrameIndex;
+                this.animationFrameIndex = this.animationFrameIndex + 1;
+                this.entitySprite = ej.amorphousCrackFrames[kind8AnimationFrame];
+                this.animationFrameIndex = this.animationFrameIndex % 4;
               }
             }
           } else {
@@ -382,14 +379,12 @@ final class GameplayEntity extends DualLinkNode {
             if (this.entitySpriteKindId != 3) {
               if (this.entitySpriteKindId == 6) {
                 this.remainingLifetimeTicks = this.remainingLifetimeTicks - 1;
-                if (this.remainingLifetimeTicks < 0) {
-                  if (this.entityUpdateTick % 24 == 0) {
-                    if (4 > this.animationFrameIndex) {
-                      kind6AnimationFrame = this.animationFrameIndex;
-                      this.animationFrameIndex = this.animationFrameIndex + 1;
-                      this.entitySprite = vj.bangFrames[kind6AnimationFrame];
-                    }
-                  }
+                if ((this.remainingLifetimeTicks < 0) &&
+                    (this.entityUpdateTick % 24 == 0) &&
+                    (4 > this.animationFrameIndex)) {
+                  kind6AnimationFrame = this.animationFrameIndex;
+                  this.animationFrameIndex = this.animationFrameIndex + 1;
+                  this.entitySprite = vj.bangFrames[kind6AnimationFrame];
                 }
               }
             } else {
@@ -458,10 +453,9 @@ final class GameplayEntity extends DualLinkNode {
             this.relatedEntities[this.relatedEntityCount] = null;
             break;
           }
-          if (this.sameVariantEntityCount <= this.relatedEntityCount) {
-            if (this.relatedEntityCount >= this.sameCategoryEntityCount) {
-              return;
-            }
+          if ((this.sameVariantEntityCount <= this.relatedEntityCount) &&
+              (this.relatedEntityCount >= this.sameCategoryEntityCount)) {
+            return;
           }
           throw new IllegalStateException("");
         } catch (java.lang.RuntimeException neighborRemovalException) {

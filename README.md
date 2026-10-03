@@ -19,7 +19,19 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,502 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 142 guarded identities for mesh projection and
+The current structural pass replaces 710 nested braced guard chains with ordered
+short-circuit checks, merging 913 conditions across 131 files and removing 913
+lines. Predicate bytes/order and the innermost declaration scope stay intact;
+intervening statements and protected boundaries are not crossed. The generic
+fixtures add 17,280 native comparisons. An independent JDK body inventory proves
+that only the documented guard/frame transforms account for all 303 regenerated
+token streams. Every ordered binding and all 6,549 guarded naming rules remain.
+Clean committed decompiler source reproduces raw Java and unchanged diagnostics;
+raw/readable corpora compile and reproduce/reverse byte-for-byte. All seven native
+probes retain their traces. This changes source readability; it does not establish
+whole-game behavior or browser/phone performance targets.
+
+Pass 83 added 142 guarded identities for mesh projection and
 face collection: camera/model bases, perspective coordinates, normal transforms,
 optional coordinate triples, backface rejection, depth buckets and priority counts.
 Every parameter/local in the five selected methods has a name. Original shifts,

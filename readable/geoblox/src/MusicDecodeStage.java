@@ -360,10 +360,9 @@ final class MusicDecodeStage {
             this.field_c[incrementValue$0] = MusicDecoder.readBits(var4);
           }
         }
-        if (field_a != null) {
-          if (field_a.length >= var5) {
-            return;
-          }
+        if ((field_a != null) &&
+            (field_a.length >= var5)) {
+          return;
         }
         field_a = new int[var5];
         field_g = new int[var5];

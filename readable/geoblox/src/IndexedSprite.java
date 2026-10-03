@@ -144,12 +144,11 @@ final class IndexedSprite extends IndexedSpriteState {
             return;
           }
           remainingColumnsScratch = drawWidth;
-          if (sourceIndex > 0) {
-            if (sourceIndices[sourceIndex - 1] == -1) {
-              remainingColumnsScratch--;
-              sourceIndex++;
-              destinationIndex++;
-            }
+          if ((sourceIndex > 0) &&
+              (sourceIndices[sourceIndex - 1] == -1)) {
+            remainingColumnsScratch--;
+            sourceIndex++;
+            destinationIndex++;
           }
           while (true) {
             if (remainingColumnsScratch <= 0) {

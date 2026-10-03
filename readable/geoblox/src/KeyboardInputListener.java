@@ -20,25 +20,23 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           L0: {
             nk.keyboardIdleTicks = 0;
             internalKeyCode = event.getKeyCode();
-            if (internalKeyCode >= 0) {
-              if (oe.awtKeyCodeToInternalCode.length > internalKeyCode) {
-                internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode];
-                if ((internalKeyCode & 128) == 0) {
-                  break L0;
-                }
-                internalKeyCode = -1;
+            if ((internalKeyCode >= 0) &&
+                (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+              internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode];
+              if ((internalKeyCode & 128) == 0) {
                 break L0;
               }
+              internalKeyCode = -1;
+              break L0;
             }
             internalKeyCode = -1;
           }
-          if (ii.keyStateWriteIndexOrResetSentinel >= 0) {
-            if (internalKeyCode >= 0) {
-              gf.queuedKeyStateChanges[ii.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
-              ii.keyStateWriteIndexOrResetSentinel = 127 & 1 + ii.keyStateWriteIndexOrResetSentinel;
-              if (gk.keyStateReadIndex == ii.keyStateWriteIndexOrResetSentinel) {
-                ii.keyStateWriteIndexOrResetSentinel = -1;
-              }
+          if ((ii.keyStateWriteIndexOrResetSentinel >= 0) &&
+              (internalKeyCode >= 0)) {
+            gf.queuedKeyStateChanges[ii.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
+            ii.keyStateWriteIndexOrResetSentinel = 127 & 1 + ii.keyStateWriteIndexOrResetSentinel;
+            if (gk.keyStateReadIndex == ii.keyStateWriteIndexOrResetSentinel) {
+              ii.keyStateWriteIndexOrResetSentinel = -1;
             }
           }
           if (internalKeyCode >= 0) {
@@ -50,12 +48,10 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             }
           }
           nextEventWriteIndexOrModifiers = event.getModifiers();
-          if ((nextEventWriteIndexOrModifiers & 10) == 0) {
-            if (85 != internalKeyCode) {
-              if (internalKeyCode != 10) {
-                return;
-              }
-            }
+          if (((nextEventWriteIndexOrModifiers & 10) == 0) &&
+              (85 != internalKeyCode) &&
+              (internalKeyCode != 10)) {
+            return;
           }
           event.consume();
           return;
@@ -117,21 +113,19 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             L1: {
               nk.keyboardIdleTicks = 0;
               internalKeyCode = event.getKeyCode();
-              if (internalKeyCode >= 0) {
-                if (oe.awtKeyCodeToInternalCode.length > internalKeyCode) {
-                  internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode] & -129;
-                  break L1;
-                }
+              if ((internalKeyCode >= 0) &&
+                  (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+                internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode] & -129;
+                break L1;
               }
               internalKeyCode = -1;
             }
-            if (ii.keyStateWriteIndexOrResetSentinel >= 0) {
-              if (0 <= internalKeyCode) {
-                gf.queuedKeyStateChanges[ii.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
-                ii.keyStateWriteIndexOrResetSentinel = 1 + ii.keyStateWriteIndexOrResetSentinel & 127;
-                if (gk.keyStateReadIndex == ii.keyStateWriteIndexOrResetSentinel) {
-                  ii.keyStateWriteIndexOrResetSentinel = -1;
-                }
+            if ((ii.keyStateWriteIndexOrResetSentinel >= 0) &&
+                (0 <= internalKeyCode)) {
+              gf.queuedKeyStateChanges[ii.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
+              ii.keyStateWriteIndexOrResetSentinel = 1 + ii.keyStateWriteIndexOrResetSentinel & 127;
+              if (gk.keyStateReadIndex == ii.keyStateWriteIndexOrResetSentinel) {
+                ii.keyStateWriteIndexOrResetSentinel = -1;
               }
             }
           }

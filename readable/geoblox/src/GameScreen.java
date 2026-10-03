@@ -52,29 +52,28 @@ final class GameScreen extends MenuScreen {
             L1: {
               L2: {
                 actionId = t.menuActionIds[this.screenId][itemIndex];
-                if (actionId == 8) {
-                  if (var4 == 0) {
-                    L4: {
-                      if (102 != ki.currentKeyboardEventCode) {
-                        if (ki.currentKeyboardEventCode != 103) {
-                          super.handleMenuKey(itemIndex, -53);
-                          if (var4 == 0) {
-                            break L4;
-                          }
-                        }
-                        j.field_gb = 80;
+                if ((actionId == 8) &&
+                    (var4 == 0)) {
+                  L4: {
+                    if (102 != ki.currentKeyboardEventCode) {
+                      if (ki.currentKeyboardEventCode != 103) {
+                        super.handleMenuKey(itemIndex, -53);
                         if (var4 == 0) {
                           break L4;
                         }
                       }
-                      j.field_gb = 0;
+                      j.field_gb = 80;
+                      if (var4 == 0) {
+                        break L4;
+                      }
                     }
-                    this.previewMusicVolume(0);
-                    if (var4 == 0) {
-                      break L0;
-                    }
-                    break L2;
+                    j.field_gb = 0;
                   }
+                  this.previewMusicVolume(0);
+                  if (var4 == 0) {
+                    break L0;
+                  }
+                  break L2;
                 }
                 if (actionId != 9) {
                   break L1;
@@ -97,36 +96,33 @@ final class GameScreen extends MenuScreen {
                 break L0;
               }
             }
-            if (ki.currentKeyboardEventCode == 13) {
-              if (!this.field_C) {
-                L10: {
-                  if (this.screenId == 1) {
-                    ai.requestedScreenId = -1;
-                    if (var4 == 0) {
-                      break L10;
-                    }
-                  }
-                  ai.requestedScreenId = oc.previousMenuScreenId;
-                }
-                if (~ai.requestedScreenId == ~this.screenId) {
-                  break L0;
-                }
-                if (this.screenId != 1) {
-                  if (this.screenId != 0) {
-                    break L0;
+            if ((ki.currentKeyboardEventCode == 13) &&
+                (!this.field_C)) {
+              L10: {
+                if (this.screenId == 1) {
+                  ai.requestedScreenId = -1;
+                  if (var4 == 0) {
+                    break L10;
                   }
                 }
-                oc.previousMenuScreenId = this.screenId;
-                if (var4 == 0) {
-                  break L0;
-                }
+                ai.requestedScreenId = oc.previousMenuScreenId;
+              }
+              if (~ai.requestedScreenId == ~this.screenId) {
+                break L0;
+              }
+              if ((this.screenId != 1) &&
+                  (this.screenId != 0)) {
+                break L0;
+              }
+              oc.previousMenuScreenId = this.screenId;
+              if (var4 == 0) {
+                break L0;
               }
             }
             if (this.field_C) {
-              if (ki.currentKeyboardEventCode != 84) {
-                if (83 != ki.currentKeyboardEventCode) {
-                  break L0;
-                }
+              if ((ki.currentKeyboardEventCode != 84) &&
+                  (83 != ki.currentKeyboardEventCode)) {
+                break L0;
               }
               if (!fh.c(-103)) {
                 L16: {
@@ -134,14 +130,11 @@ final class GameScreen extends MenuScreen {
                     if (this.field_o == 0) {
                       break L16;
                     }
-                    if (PrefixCodeDecoder.pointerXSnapshot > 190) {
-                      if (PrefixCodeDecoder.pointerXSnapshot < 449) {
-                        if (265 < ue.pointerYSnapshot) {
-                          if (ue.pointerYSnapshot < 299) {
-                            break L16;
-                          }
-                        }
-                      }
+                    if ((PrefixCodeDecoder.pointerXSnapshot > 190) &&
+                        (PrefixCodeDecoder.pointerXSnapshot < 449) &&
+                        (265 < ue.pointerYSnapshot) &&
+                        (ue.pointerYSnapshot < 299)) {
+                      break L16;
                     }
                   }
                   if (vl.field_n == null) {
@@ -436,348 +429,342 @@ final class GameScreen extends MenuScreen {
           var2_int = 270;
           var3 = 140;
           var4 = 400;
-          if (this.screenId != 0) {
-            if (this.screenId != 1) {
-              if (this.screenId != 4) {
-                L1: {
-                  if (2 == this.screenId) {
-                    var2_int = 235;
-                    if (var12 == 0) {
-                      break L1;
-                    }
-                  }
-                  var2_int = 285;
+          if ((this.screenId != 0) &&
+              (this.screenId != 1) &&
+              (this.screenId != 4)) {
+            L1: {
+              if (2 == this.screenId) {
+                var2_int = 235;
+                if (var12 == 0) {
+                  break L1;
                 }
-                L3: {
-                  var5 = 120;
-                  if (this.screenId == 3) {
-                    var5 += 10;
-                    if (var12 == 0) {
-                      break L3;
-                    }
-                  }
-                  if (this.screenId != 8) {
-                    if (this.screenId != 7) {
-                      break L3;
-                    }
-                  }
-                  var4 += 20;
-                  var5 -= 10;
-                }
-                ma.drawNineSlicePanel(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
               }
+              var2_int = 285;
             }
+            L3: {
+              var5 = 120;
+              if (this.screenId == 3) {
+                var5 += 10;
+                if (var12 == 0) {
+                  break L3;
+                }
+              }
+              if ((this.screenId != 8) &&
+                  (this.screenId != 7)) {
+                break L3;
+              }
+              var4 += 20;
+              var5 -= 10;
+            }
+            ma.drawNineSlicePanel(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
           }
           if (!this.field_E) {
             super.renderScreen(param0 + 0);
           }
-          if (this.screenId != 2) {
-            if (this.screenId != 8) {
-              L9: {
-                if (5 != this.screenId) {
-                  if (7 != this.screenId) {
-                    break L9;
-                  }
-                }
-                kh.screenTitleSprites[4].draw(0, 20);
-                ac.a(false, false, (byte) -93);
+          if ((this.screenId != 2) &&
+              (this.screenId != 8)) {
+            L9: {
+              if ((5 != this.screenId) &&
+                  (7 != this.screenId)) {
+                break L9;
+              }
+              kh.screenTitleSprites[4].draw(0, 20);
+              ac.a(false, false, (byte) -93);
+              if (var12 == 0) {
+                return;
+              }
+            }
+            if (this.screenId != 6) {
+              if (this.screenId == 4) {
+                kh.screenTitleSprites[8].draw(0, 20);
+                ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
+                var5 = 184;
+                dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
+                var5 = 185;
+                fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
+                ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
+                fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                 if (var12 == 0) {
                   return;
                 }
               }
-              if (this.screenId != 6) {
-                if (this.screenId == 4) {
-                  kh.screenTitleSprites[8].draw(0, 20);
-                  ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
-                  var5 = 184;
-                  dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
-                  var5 = 185;
-                  fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
-                  ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
-                  fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
-                  if (var12 == 0) {
-                    return;
-                  }
+              if (this.screenId != 3) {
+                kh.screenTitleSprites[0].draw(0, 20);
+                if ((this.screenId != 0) &&
+                    (this.screenId != 1)) {
+                  return;
                 }
-                if (this.screenId != 3) {
-                  kh.screenTitleSprites[0].draw(0, 20);
-                  if (this.screenId != 0) {
-                    if (this.screenId != 1) {
-                      return;
-                    }
-                  }
-                  if (!this.field_C) {
-                    return;
-                  }
-                  if (fh.c(-93)) {
-                    if (this.activeTicks <= 200) {
-                      stackIn_73_0 = this.activeTicks;
-                    } else {
-                      stackIn_73_0 = 200;
-                    }
-                    L17: {
-                      var5 = stackIn_73_0;
-                      SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                      ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
-                      var6 = 170;
-                      fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
-                      var7 = 100;
-                      var8 = -(20 + var7 >> 1) + 410;
-                      var6 = 265;
-                      var9 = var8 - (-(var7 >> 1) - 10);
-                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                      if (1 != this.field_o) {
-                        if (this.field_o >= 0) {
-                          break L17;
-                        }
-                        if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
-                          break L17;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                          break L17;
-                        }
-                        if (ue.pointerYSnapshot <= 265) {
-                          break L17;
-                        }
-                        if (ue.pointerYSnapshot >= 299) {
-                          break L17;
-                        }
-                      }
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                    }
-                    L19: {
-                      dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                      var8 = 320 - (20 + var7 >> 1) - 90;
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                      var6 = 265;
-                      var9 = 10 + (var7 >> 1) + var8;
-                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                      if (this.field_o != 0) {
-                        if (0 <= this.field_o) {
-                          break L19;
-                        }
-                        if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
-                          break L19;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                          break L19;
-                        }
-                        if (ue.pointerYSnapshot <= 265) {
-                          break L19;
-                        }
-                        if (ue.pointerYSnapshot >= 299) {
-                          break L19;
-                        }
-                      }
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                    }
-                    dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                    if (var12 == 0) {
-                      return;
-                    }
-                  }
-                  if (og.field_n > 0) {
-                    if (vl.field_n == null) {
-                      if (this.activeTicks > 200) {
-                        stackIn_122_0 = 200;
-                      } else {
-                        stackIn_122_0 = this.activeTicks;
-                      }
-                      L24: {
-                        var5 = stackIn_122_0;
-                        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                        ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
-                        var6 = 170;
-                        var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                        var6 += 40;
-                        var7 = 100;
-                        var8 = 320 - (var7 + 20 >> 1);
-                        var9 = (var7 >> 1) + (var8 + 10);
-                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                        if (0 != this.field_o) {
-                          if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
-                            break L24;
-                          }
-                          if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
-                            break L24;
-                          }
-                          if (ue.pointerYSnapshot <= 274) {
-                            break L24;
-                          }
-                          if (ue.pointerYSnapshot >= 309) {
-                            break L24;
-                          }
-                        }
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                      }
-                      dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                      if (var12 == 0) {
-                        return;
-                      }
-                    }
-                    if (this.activeTicks <= 200) {
-                      stackIn_144_0 = this.activeTicks;
-                    } else {
-                      stackIn_144_0 = 200;
-                    }
-                    L27: {
-                      var5 = stackIn_144_0;
-                      SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                      ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
-                      var6 = 170;
-                      var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
-                      var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                      var6 += 10;
-                      var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
-                      if ((1500 - this.activeTicks) / 150 <= 0) {
-                        var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                        if (var12 == 0) {
-                          break L27;
-                        }
-                      }
-                      var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                    }
-                    L29: {
-                      var6 += 40;
-                      var9 = 100;
-                      var10 = -(20 + var9 >> 1) + 320 + 90;
-                      ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
-                      var11 = 10 + ((var9 >> 1) + var10);
-                      if (this.field_o != 1) {
-                        if (0 <= this.field_o) {
-                          break L29;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
-                          break L29;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                          break L29;
-                        }
-                        if (ue.pointerYSnapshot <= 317) {
-                          break L29;
-                        }
-                        if (ue.pointerYSnapshot >= 352) {
-                          break L29;
-                        }
-                      }
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                    }
-                    L31: {
-                      dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                      var10 = 320 - (20 + var9 >> 1) - 90;
-                      var11 = 10 + (var9 >> 1) + var10;
-                      ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
-                      if (this.field_o != 0) {
-                        if (this.field_o >= 0) {
-                          break L31;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
-                          break L31;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                          break L31;
-                        }
-                        if (ue.pointerYSnapshot <= 317) {
-                          break L31;
-                        }
-                        if (ue.pointerYSnapshot >= 352) {
-                          break L31;
-                        }
-                      }
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                    }
-                    dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                    if (var12 == 0) {
-                      return;
-                    }
-                  }
-                  if (this.activeTicks > 200) {
-                    stackIn_191_0 = 200;
+                if (!this.field_C) {
+                  return;
+                }
+                if (fh.c(-93)) {
+                  if (this.activeTicks <= 200) {
+                    stackIn_73_0 = this.activeTicks;
                   } else {
-                    stackIn_191_0 = this.activeTicks;
+                    stackIn_73_0 = 200;
                   }
-                  L34: {
-                    var5 = stackIn_191_0;
+                  L17: {
+                    var5 = stackIn_73_0;
                     SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                    ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
-                    var6 = 180;
-                    fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                    var7 = 242;
-                    var8 = 320 - (var7 + 20 >> 1);
-                    var9 = 10 + (var8 + (var7 >> 1));
+                    ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
+                    var6 = 170;
+                    fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                    var7 = 100;
+                    var8 = -(20 + var7 >> 1) + 410;
                     var6 = 265;
-                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                    if (this.field_o != 0) {
-                      if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
-                        break L34;
+                    var9 = var8 - (-(var7 >> 1) - 10);
+                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                    if (1 != this.field_o) {
+                      if (this.field_o >= 0) {
+                        break L17;
                       }
-                      if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
-                        break L34;
+                      if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
+                        break L17;
+                      }
+                      if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
+                        break L17;
                       }
                       if (ue.pointerYSnapshot <= 265) {
-                        break L34;
+                        break L17;
                       }
-                      if (299 <= ue.pointerYSnapshot) {
-                        break L34;
+                      if (ue.pointerYSnapshot >= 299) {
+                        break L17;
                       }
                     }
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                  L19: {
+                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                    var8 = 320 - (20 + var7 >> 1) - 90;
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                    var6 = 265;
+                    var9 = 10 + (var7 >> 1) + var8;
+                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                    if (this.field_o != 0) {
+                      if (0 <= this.field_o) {
+                        break L19;
+                      }
+                      if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
+                        break L19;
+                      }
+                      if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
+                        break L19;
+                      }
+                      if (ue.pointerYSnapshot <= 265) {
+                        break L19;
+                      }
+                      if (ue.pointerYSnapshot >= 299) {
+                        break L19;
+                      }
+                    }
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                  }
+                  dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                   if (var12 == 0) {
                     return;
                   }
                 }
-                kh.screenTitleSprites[5].draw(0, 20);
-                if (!this.field_E) {
-                  this.b(-97, this.field_q);
+                if (og.field_n > 0) {
+                  if (vl.field_n == null) {
+                    if (this.activeTicks > 200) {
+                      stackIn_122_0 = 200;
+                    } else {
+                      stackIn_122_0 = this.activeTicks;
+                    }
+                    L24: {
+                      var5 = stackIn_122_0;
+                      SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                      ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
+                      var6 = 170;
+                      var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                      var6 += 40;
+                      var7 = 100;
+                      var8 = 320 - (var7 + 20 >> 1);
+                      var9 = (var7 >> 1) + (var8 + 10);
+                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                      if (0 != this.field_o) {
+                        if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
+                          break L24;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
+                          break L24;
+                        }
+                        if (ue.pointerYSnapshot <= 274) {
+                          break L24;
+                        }
+                        if (ue.pointerYSnapshot >= 309) {
+                          break L24;
+                        }
+                      }
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    }
+                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                    if (var12 == 0) {
+                      return;
+                    }
+                  }
+                  if (this.activeTicks <= 200) {
+                    stackIn_144_0 = this.activeTicks;
+                  } else {
+                    stackIn_144_0 = 200;
+                  }
+                  L27: {
+                    var5 = stackIn_144_0;
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                    ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
+                    var6 = 170;
+                    var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
+                    var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                    var6 += 10;
+                    var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
+                    if ((1500 - this.activeTicks) / 150 <= 0) {
+                      var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                      if (var12 == 0) {
+                        break L27;
+                      }
+                    }
+                    var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                  }
+                  L29: {
+                    var6 += 40;
+                    var9 = 100;
+                    var10 = -(20 + var9 >> 1) + 320 + 90;
+                    ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
+                    var11 = 10 + ((var9 >> 1) + var10);
+                    if (this.field_o != 1) {
+                      if (0 <= this.field_o) {
+                        break L29;
+                      }
+                      if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
+                        break L29;
+                      }
+                      if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
+                        break L29;
+                      }
+                      if (ue.pointerYSnapshot <= 317) {
+                        break L29;
+                      }
+                      if (ue.pointerYSnapshot >= 352) {
+                        break L29;
+                      }
+                    }
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                  }
+                  L31: {
+                    dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                    var10 = 320 - (20 + var9 >> 1) - 90;
+                    var11 = 10 + (var9 >> 1) + var10;
+                    ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
+                    if (this.field_o != 0) {
+                      if (this.field_o >= 0) {
+                        break L31;
+                      }
+                      if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
+                        break L31;
+                      }
+                      if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
+                        break L31;
+                      }
+                      if (ue.pointerYSnapshot <= 317) {
+                        break L31;
+                      }
+                      if (ue.pointerYSnapshot >= 352) {
+                        break L31;
+                      }
+                    }
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                  }
+                  dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                   if (var12 == 0) {
                     return;
                   }
                 }
-                L37: {
-                  var5 = this.field_F;
-                  if (!this.field_v) {
-                    var5 = 640 - var5;
-                    SoftwareRasterizer.setClip(0, 0, var5, 480);
-                    this.b(-85, this.field_n);
-                    this.field_S = true;
-                    super.renderScreen(-28750);
-                    this.field_S = false;
-                    SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                    this.b(param0 ^ 28757, this.field_q);
-                    super.renderScreen(-28750);
-                    SoftwareRasterizer.setClip(0, 0, 640, 480);
-                    qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + var5, 240, -49150, 4096);
-                    if (var12 == 0) {
-                      break L37;
+                if (this.activeTicks > 200) {
+                  stackIn_191_0 = 200;
+                } else {
+                  stackIn_191_0 = this.activeTicks;
+                }
+                L34: {
+                  var5 = stackIn_191_0;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                  ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
+                  var6 = 180;
+                  fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                  var7 = 242;
+                  var8 = 320 - (var7 + 20 >> 1);
+                  var9 = 10 + (var8 + (var7 >> 1));
+                  var6 = 265;
+                  ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                  if (this.field_o != 0) {
+                    if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
+                      break L34;
+                    }
+                    if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
+                      break L34;
+                    }
+                    if (ue.pointerYSnapshot <= 265) {
+                      break L34;
+                    }
+                    if (299 <= ue.pointerYSnapshot) {
+                      break L34;
                     }
                   }
-                  SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                  this.b(-17, this.field_n);
-                  this.field_S = true;
-                  super.renderScreen(-28750);
-                  this.field_S = false;
-                  SoftwareRasterizer.setClip(0, 0, var5, 480);
-                  this.b(-48, this.field_q);
-                  super.renderScreen(-28750);
-                  SoftwareRasterizer.setClip(0, 0, 640, 480);
-                  qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + var5, 240, -16383, 4096);
+                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 }
+                dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                 if (var12 == 0) {
                   return;
                 }
               }
-              kh.screenTitleSprites[7].draw(0, 20);
-              ac.a(false, true, (byte) -122);
+              kh.screenTitleSprites[5].draw(0, 20);
+              if (!this.field_E) {
+                this.b(-97, this.field_q);
+                if (var12 == 0) {
+                  return;
+                }
+              }
+              L37: {
+                var5 = this.field_F;
+                if (!this.field_v) {
+                  var5 = 640 - var5;
+                  SoftwareRasterizer.setClip(0, 0, var5, 480);
+                  this.b(-85, this.field_n);
+                  this.field_S = true;
+                  super.renderScreen(-28750);
+                  this.field_S = false;
+                  SoftwareRasterizer.setClip(var5, 0, 640, 480);
+                  this.b(param0 ^ 28757, this.field_q);
+                  super.renderScreen(-28750);
+                  SoftwareRasterizer.setClip(0, 0, 640, 480);
+                  qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + var5, 240, -49150, 4096);
+                  if (var12 == 0) {
+                    break L37;
+                  }
+                }
+                SoftwareRasterizer.setClip(var5, 0, 640, 480);
+                this.b(-17, this.field_n);
+                this.field_S = true;
+                super.renderScreen(-28750);
+                this.field_S = false;
+                SoftwareRasterizer.setClip(0, 0, var5, 480);
+                this.b(-48, this.field_q);
+                super.renderScreen(-28750);
+                SoftwareRasterizer.setClip(0, 0, 640, 480);
+                qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + var5, 240, -16383, 4096);
+              }
               if (var12 == 0) {
                 return;
               }
+            }
+            kh.screenTitleSprites[7].draw(0, 20);
+            ac.a(false, true, (byte) -122);
+            if (var12 == 0) {
+              return;
             }
           }
           this.b(30);
@@ -800,20 +787,19 @@ final class GameScreen extends MenuScreen {
           L1: {
             var3_int = 121 % ((44 - param1) / 36);
             actionId = t.menuActionIds[this.screenId][itemIndex];
-            if (actionId == 8) {
-              if (var5 == 0) {
-                if (j.field_gb > 10) {
-                  j.field_gb = j.field_gb - 10;
-                  if (var5 == 0) {
-                    return;
-                  }
-                }
-                j.field_gb = 0;
+            if ((actionId == 8) &&
+                (var5 == 0)) {
+              if (j.field_gb > 10) {
+                j.field_gb = j.field_gb - 10;
                 if (var5 == 0) {
                   return;
                 }
-                break L1;
               }
+              j.field_gb = 0;
+              if (var5 == 0) {
+                return;
+              }
+              break L1;
             }
             if (9 != actionId) {
               return;
@@ -856,42 +842,40 @@ final class GameScreen extends MenuScreen {
           if (param0 >= -40) {
             this.b(77, -13);
           }
-          if (3 == this.screenId) {
-            if (!this.field_E) {
-              L2: {
-                if (this.field_q != 4) {
-                  if (this.selectedItemIndex == 3) {
-                    break L2;
-                  }
+          if ((3 == this.screenId) &&
+              (!this.field_E)) {
+            L2: {
+              if ((this.field_q != 4) &&
+                  (this.selectedItemIndex == 3)) {
+                break L2;
+              }
+              if (4 == this.field_q) {
+                if (this.selectedItemIndex == 2) {
+                  this.selectedItemIndex = 3;
                 }
-                if (4 == this.field_q) {
-                  if (this.selectedItemIndex == 2) {
-                    this.selectedItemIndex = 3;
-                  }
-                  if (oc.previousMenuScreenId != 1) {
-                    return;
-                  }
-                  if (this.selectedItemIndex != 3) {
-                    return;
-                  }
-                  this.selectedItemIndex = 0;
-                  if (var3 == 0) {
-                    return;
-                  }
-                }
-                if (this.field_q != 0) {
+                if (oc.previousMenuScreenId != 1) {
                   return;
                 }
-                if (this.selectedItemIndex != 0) {
+                if (this.selectedItemIndex != 3) {
                   return;
                 }
-                this.selectedItemIndex = 1;
+                this.selectedItemIndex = 0;
                 if (var3 == 0) {
                   return;
                 }
               }
-              this.selectedItemIndex = 0;
+              if (this.field_q != 0) {
+                return;
+              }
+              if (this.selectedItemIndex != 0) {
+                return;
+              }
+              this.selectedItemIndex = 1;
+              if (var3 == 0) {
+                return;
+              }
             }
+            this.selectedItemIndex = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -928,176 +912,153 @@ final class GameScreen extends MenuScreen {
             stackIn_2_0 = -109;
             return stackIn_2_0;
           }
-          if (0 != this.screenId) {
-            if (this.screenId != 1) {
-              L1: {
-                if (this.screenId == 3) {
-                  if (pointerY > 430) {
-                    if (pointerY < 470) {
-                      if (this.field_q != 0) {
-                        if (pointerX > 130) {
-                          if (pointerX < 253) {
-                            stackIn_162_0 = 0;
-                            return stackIn_162_0;
-                          }
+          if ((0 != this.screenId) &&
+              (this.screenId != 1)) {
+            L1: {
+              if (this.screenId == 3) {
+                if ((pointerY > 430) &&
+                    (pointerY < 470)) {
+                  if ((this.field_q != 0) &&
+                      (pointerX > 130) &&
+                      (pointerX < 253)) {
+                    stackIn_162_0 = 0;
+                    return stackIn_162_0;
+                  }
+                  if ((pointerX > 268) &&
+                      (391 > pointerX)) {
+                    stackIn_168_0 = 1;
+                    return stackIn_168_0;
+                  }
+                  if ((this.field_q != 4) &&
+                      (pointerX > 406) &&
+                      (pointerX < 529)) {
+                    stackIn_179_0 = 2;
+                    return stackIn_179_0;
+                  }
+                  if ((this.field_q == 4) &&
+                      (oc.previousMenuScreenId != 1) &&
+                      (pointerX > 406) &&
+                      (pointerX < 635)) {
+                    stackIn_193_0 = 3;
+                    return stackIn_193_0;
+                  }
+                }
+              } else {
+                if (this.screenId != 5) {
+                  if ((this.screenId != 7) &&
+                      (this.screenId != 8)) {
+                    if (2 == this.screenId) {
+                      if ((pointerY > 380) &&
+                          (pointerY < 420)) {
+                        if ((pointerX > 61) &&
+                            (220 > pointerX)) {
+                          stackIn_133_0 = 0;
+                          return stackIn_133_0;
                         }
-                      }
-                      if (pointerX > 268) {
-                        if (391 > pointerX) {
-                          stackIn_168_0 = 1;
-                          return stackIn_168_0;
+                        if ((241 < pointerX) &&
+                            (pointerX < 400)) {
+                          stackIn_125_0 = 1;
+                          return stackIn_125_0;
                         }
-                      }
-                      if (this.field_q != 4) {
-                        if (pointerX > 406) {
-                          if (pointerX < 529) {
-                            stackIn_179_0 = 2;
-                            return stackIn_179_0;
-                          }
+                        if (pointerX <= 420) {
+                          break L1;
                         }
-                      }
-                      if (this.field_q == 4) {
-                        if (oc.previousMenuScreenId != 1) {
-                          if (pointerX > 406) {
-                            if (pointerX < 635) {
-                              stackIn_193_0 = 3;
-                              return stackIn_193_0;
-                            }
-                          }
+                        if (pointerX >= 579) {
+                          break L1;
                         }
+                        stackIn_131_0 = 2;
+                        return stackIn_131_0;
                       }
+                      if (pointerY <= 430) {
+                        break L1;
+                      }
+                      if (pointerY >= 470) {
+                        break L1;
+                      }
+                      if (pointerX <= 279) {
+                        break L1;
+                      }
+                      if (pointerX >= 362) {
+                        break L1;
+                      }
+                      stackIn_145_0 = 3;
+                      return stackIn_145_0;
+                    }
+                    if (this.screenId == 4) {
+                      if (pointerX <= 171) {
+                        break L1;
+                      }
+                      if (pointerX >= 469) {
+                        break L1;
+                      }
+                      if ((265 < pointerY) &&
+                          (pointerY < 301)) {
+                        stackIn_78_0 = 0;
+                        return stackIn_78_0;
+                      }
+                      if (pointerY <= 395) {
+                        break L1;
+                      }
+                      if (431 <= pointerY) {
+                        break L1;
+                      }
+                      stackIn_84_0 = 1;
+                      return stackIn_84_0;
+                    }
+                    if (6 != this.screenId) {
+                      break L1;
+                    }
+                    if (pointerY <= 430) {
+                      break L1;
+                    }
+                    if (470 <= pointerY) {
+                      break L1;
+                    }
+                    if ((pointerX > 146) &&
+                        (pointerX < 306)) {
+                      stackIn_99_0 = 0;
+                      return stackIn_99_0;
+                    }
+                    if (pointerX <= 326) {
+                      break L1;
+                    }
+                    if (pointerX >= 486) {
+                      break L1;
+                    }
+                    stackIn_107_0 = 1;
+                    return stackIn_107_0;
+                  }
+                  if ((pointerY > 437) &&
+                      (pointerY < 473)) {
+                    if ((pointerX > 121) &&
+                        (356 > pointerX)) {
+                      stackIn_54_0 = 0;
+                      return stackIn_54_0;
+                    }
+                    if ((436 < pointerX) &&
+                        (pointerY < 518)) {
+                      stackIn_60_0 = 1;
+                      return stackIn_60_0;
                     }
                   }
                 } else {
-                  if (this.screenId != 5) {
-                    if (this.screenId != 7) {
-                      if (this.screenId != 8) {
-                        if (2 == this.screenId) {
-                          if (pointerY > 380) {
-                            if (pointerY < 420) {
-                              if (pointerX > 61) {
-                                if (220 > pointerX) {
-                                  stackIn_133_0 = 0;
-                                  return stackIn_133_0;
-                                }
-                              }
-                              if (241 < pointerX) {
-                                if (pointerX < 400) {
-                                  stackIn_125_0 = 1;
-                                  return stackIn_125_0;
-                                }
-                              }
-                              if (pointerX <= 420) {
-                                break L1;
-                              }
-                              if (pointerX >= 579) {
-                                break L1;
-                              }
-                              stackIn_131_0 = 2;
-                              return stackIn_131_0;
-                            }
-                          }
-                          if (pointerY <= 430) {
-                            break L1;
-                          }
-                          if (pointerY >= 470) {
-                            break L1;
-                          }
-                          if (pointerX <= 279) {
-                            break L1;
-                          }
-                          if (pointerX >= 362) {
-                            break L1;
-                          }
-                          stackIn_145_0 = 3;
-                          return stackIn_145_0;
-                        }
-                        if (this.screenId == 4) {
-                          if (pointerX <= 171) {
-                            break L1;
-                          }
-                          if (pointerX >= 469) {
-                            break L1;
-                          }
-                          if (265 < pointerY) {
-                            if (pointerY < 301) {
-                              stackIn_78_0 = 0;
-                              return stackIn_78_0;
-                            }
-                          }
-                          if (pointerY <= 395) {
-                            break L1;
-                          }
-                          if (431 <= pointerY) {
-                            break L1;
-                          }
-                          stackIn_84_0 = 1;
-                          return stackIn_84_0;
-                        }
-                        if (6 != this.screenId) {
-                          break L1;
-                        }
-                        if (pointerY <= 430) {
-                          break L1;
-                        }
-                        if (470 <= pointerY) {
-                          break L1;
-                        }
-                        if (pointerX > 146) {
-                          if (pointerX < 306) {
-                            stackIn_99_0 = 0;
-                            return stackIn_99_0;
-                          }
-                        }
-                        if (pointerX <= 326) {
-                          break L1;
-                        }
-                        if (pointerX >= 486) {
-                          break L1;
-                        }
-                        stackIn_107_0 = 1;
-                        return stackIn_107_0;
-                      }
-                    }
-                    if (pointerY > 437) {
-                      if (pointerY < 473) {
-                        if (pointerX > 121) {
-                          if (356 > pointerX) {
-                            stackIn_54_0 = 0;
-                            return stackIn_54_0;
-                          }
-                        }
-                        if (436 < pointerX) {
-                          if (pointerY < 518) {
-                            stackIn_60_0 = 1;
-                            return stackIn_60_0;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (pointerY > 435) {
-                      if (470 > pointerY) {
-                        if (pointerX > 279) {
-                          if (361 > pointerX) {
-                            stackIn_36_0 = 0;
-                            return stackIn_36_0;
-                          }
-                        }
-                      }
-                    }
+                  if ((pointerY > 435) &&
+                      (470 > pointerY) &&
+                      (pointerX > 279) &&
+                      (361 > pointerX)) {
+                    stackIn_36_0 = 0;
+                    return stackIn_36_0;
                   }
                 }
               }
-              stackIn_195_0 = -1;
-              return stackIn_195_0;
             }
+            stackIn_195_0 = -1;
+            return stackIn_195_0;
           }
-          if (pointerX >= 149) {
-            if (490 >= pointerX) {
-              stackIn_18_0 = super.hitTestMenuItem(pointerX, pointerY, (byte) 127);
-              return stackIn_18_0;
-            }
+          if ((pointerX >= 149) &&
+              (490 >= pointerX)) {
+            stackIn_18_0 = super.hitTestMenuItem(pointerX, pointerY, (byte) 127);
+            return stackIn_18_0;
           }
           stackIn_16_0 = -1;
           return stackIn_16_0;
@@ -1127,10 +1088,9 @@ final class GameScreen extends MenuScreen {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          if (ca.field_f == null) {
-            if (!fh.c(-115)) {
-              ca.field_f = qb.b(22, 1, 0, 10, 3);
-            }
+          if ((ca.field_f == null) &&
+              (!fh.c(-115))) {
+            ca.field_f = qb.b(22, 1, 0, 10, 3);
           }
           L1: {
             if (0 != da.field_c) {
@@ -1154,91 +1114,87 @@ final class GameScreen extends MenuScreen {
             this.updateTransition(-78);
           }
           L5: {
-            if (null != ca.field_f) {
-              if (null != ca.field_f.field_k) {
-                if (!ca.field_f.field_j) {
-                  var2 = eb.field_f;
-                  var3 = 76 + (150 + dd.uiPaletteFont.maxAscent);
-                  dd.uiPaletteFont.drawCenteredText(var2, 322, var3, 0, -1);
-                  if (var10 == 0) {
-                    break L5;
-                  }
-                }
-                L8: {
-                  var2_int = 0;
-                  var3_ref_String__ = ca.field_f.field_k[da.field_c];
-                  var4 = fi.smallFont;
-                  if (var3_ref_String__ != null) {
-                    var5 = ca.field_f.field_h[da.field_c];
-                    var6 = var4.maxAscent + 150;
-                    var7 = 0;
-                    var8_int = 0;
-                    while (true) {
-                      L10: {
-                        if (var8_int < 10) {
-                          stackIn_59_0 = null;
-                          if (var10 != 0) {
-                            break L10;
-                          }
-                          L12: {
-                            if (stackIn_59_0 != var3_ref_String__[var8_int]) {
-                              var2_int = 1;
-                              var9 = var3_ref_String__[var8_int];
-                              if (var7 == 0) {
-                                if (null != el.gameplaySession) {
-                                  if (var5[var8_int] == Math.abs(el.gameplaySession.score)) {
-                                    if (WhirlpoolHash.a(var9, (byte) 12)) {
-                                      var7 = 1;
-                                      var4.drawRightAlignedText(1 + var8_int + ". ", 165, var6, 16610816, -1);
-                                      var4.drawText(var9, 165, var6, 16610816, -1);
-                                      var4.drawRightAlignedText(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
-                                      if (var10 == 0) {
-                                        break L12;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                              var4.drawRightAlignedText(1 + var8_int + ". ", 165, var6, 1, -1);
-                              var4.drawText(var9, 165, var6, 1, -1);
-                              var4.drawRightAlignedText(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
-                            }
-                          }
-                          var6 += 15;
-                          var8_int++;
-                          if (var10 == 0) {
-                            continue;
-                          }
-                        }
-                        if (var7 != 0) {
-                          break L8;
-                        }
-                        stackIn_59_0 = null;
-                      }
-                      if (stackIn_59_0 == el.gameplaySession) {
-                        break L8;
-                      }
-                      if (el.gameplaySession.score == 0) {
-                        break L8;
-                      }
-                      if (el.gameplaySession.score == -2147483648) {
-                        break L8;
-                      }
-                      var8 = SecondaryDeque.field_f;
-                      var4.drawText(var8, 165, var6, 16724225, -1);
-                      var4.drawRightAlignedText(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
-                      break L8;
-                    }
-                  }
-                }
-                if (var2_int == 0) {
-                  var5_ref = sb.noHighscoresText;
-                  var6 = 76 + dd.uiPaletteFont.maxAscent + 150;
-                  dd.uiPaletteFont.drawCenteredText(var5_ref, 322, var6, 0, -1);
-                }
+            if ((null != ca.field_f) &&
+                (null != ca.field_f.field_k)) {
+              if (!ca.field_f.field_j) {
+                var2 = eb.field_f;
+                var3 = 76 + (150 + dd.uiPaletteFont.maxAscent);
+                dd.uiPaletteFont.drawCenteredText(var2, 322, var3, 0, -1);
                 if (var10 == 0) {
                   break L5;
                 }
+              }
+              L8: {
+                var2_int = 0;
+                var3_ref_String__ = ca.field_f.field_k[da.field_c];
+                var4 = fi.smallFont;
+                if (var3_ref_String__ != null) {
+                  var5 = ca.field_f.field_h[da.field_c];
+                  var6 = var4.maxAscent + 150;
+                  var7 = 0;
+                  var8_int = 0;
+                  while (true) {
+                    L10: {
+                      if (var8_int < 10) {
+                        stackIn_59_0 = null;
+                        if (var10 != 0) {
+                          break L10;
+                        }
+                        L12: {
+                          if (stackIn_59_0 != var3_ref_String__[var8_int]) {
+                            var2_int = 1;
+                            var9 = var3_ref_String__[var8_int];
+                            if ((var7 == 0) &&
+                                (null != el.gameplaySession) &&
+                                (var5[var8_int] == Math.abs(el.gameplaySession.score)) &&
+                                (WhirlpoolHash.a(var9, (byte) 12))) {
+                              var7 = 1;
+                              var4.drawRightAlignedText(1 + var8_int + ". ", 165, var6, 16610816, -1);
+                              var4.drawText(var9, 165, var6, 16610816, -1);
+                              var4.drawRightAlignedText(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
+                              if (var10 == 0) {
+                                break L12;
+                              }
+                            }
+                            var4.drawRightAlignedText(1 + var8_int + ". ", 165, var6, 1, -1);
+                            var4.drawText(var9, 165, var6, 1, -1);
+                            var4.drawRightAlignedText(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
+                          }
+                        }
+                        var6 += 15;
+                        var8_int++;
+                        if (var10 == 0) {
+                          continue;
+                        }
+                      }
+                      if (var7 != 0) {
+                        break L8;
+                      }
+                      stackIn_59_0 = null;
+                    }
+                    if (stackIn_59_0 == el.gameplaySession) {
+                      break L8;
+                    }
+                    if (el.gameplaySession.score == 0) {
+                      break L8;
+                    }
+                    if (el.gameplaySession.score == -2147483648) {
+                      break L8;
+                    }
+                    var8 = SecondaryDeque.field_f;
+                    var4.drawText(var8, 165, var6, 16724225, -1);
+                    var4.drawRightAlignedText(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
+                    break L8;
+                  }
+                }
+              }
+              if (var2_int == 0) {
+                var5_ref = sb.noHighscoresText;
+                var6 = 76 + dd.uiPaletteFont.maxAscent + 150;
+                dd.uiPaletteFont.drawCenteredText(var5_ref, 322, var6, 0, -1);
+              }
+              if (var10 == 0) {
+                break L5;
               }
             }
             L15: {
@@ -1296,13 +1252,11 @@ final class GameScreen extends MenuScreen {
           jk.field_a = this.field_C;
           this.volumePreviewTicks = this.volumePreviewTicks + 1;
           this.activeTicks = this.activeTicks + 1;
-          if (this.field_C) {
-            if (vl.field_n != null) {
-              if (this.activeTicks > 1500) {
-                ArchiveCatalog.b(255);
-                this.field_C = false;
-              }
-            }
+          if ((this.field_C) &&
+              (vl.field_n != null) &&
+              (this.activeTicks > 1500)) {
+            ArchiveCatalog.b(255);
+            this.field_C = false;
           }
           while (true) {
             L4: {
@@ -1315,14 +1269,11 @@ final class GameScreen extends MenuScreen {
                   continue;
                 }
               }
-              if (this.screenId == 3) {
-                if (this.selectedItemIndex == 0) {
-                  if (this.field_q == 0) {
-                    if (!this.field_H) {
-                      this.selectedItemIndex = this.selectedItemIndex + 1;
-                    }
-                  }
-                }
+              if ((this.screenId == 3) &&
+                  (this.selectedItemIndex == 0) &&
+                  (this.field_q == 0) &&
+                  (!this.field_H)) {
+                this.selectedItemIndex = this.selectedItemIndex + 1;
               }
             }
             if (this.screenId == 3) {
@@ -1344,12 +1295,11 @@ final class GameScreen extends MenuScreen {
                 this.field_L = qi.b(7, 1);
                 this.field_z = 0;
               }
-              if (this.field_q < 4) {
-                if (this.animationTick % 24 == 0) {
-                  this.field_w = this.field_w + 1;
-                  if (this.field_w >= 4) {
-                    this.field_w = 0;
-                  }
+              if ((this.field_q < 4) &&
+                  (this.animationTick % 24 == 0)) {
+                this.field_w = this.field_w + 1;
+                if (this.field_w >= 4) {
+                  this.field_w = 0;
                 }
               }
               L11: {
@@ -1408,10 +1358,9 @@ final class GameScreen extends MenuScreen {
             }
             if (bi.pointerPressButtonSnapshot != 0) {
               L18: {
-                if (this.screenId != 5) {
-                  if (7 != this.screenId) {
-                    break L18;
-                  }
+                if ((this.screenId != 5) &&
+                    (7 != this.screenId)) {
+                  break L18;
                 }
                 oe.a(false, false, param0 ^ 189);
               }
@@ -1431,38 +1380,35 @@ final class GameScreen extends MenuScreen {
               }
               if (bi.pointerPressButtonSnapshot != 0) {
                 if (fh.c(-104)) {
-                  if (265 < he.pointerPressYSnapshot) {
-                    if (he.pointerPressYSnapshot < 299) {
-                      if (mc.pointerPressXSnapshot > 350) {
-                        if (mc.pointerPressXSnapshot < 470) {
-                          this.pointerInteractionActive = true;
-                          this.field_C = false;
-                          if (var3 == 0) {
-                            break L21;
-                          }
-                        }
-                      }
-                      L26: {
-                        if (mc.pointerPressXSnapshot > 170) {
-                          if (mc.pointerPressXSnapshot < 290) {
-                            break L26;
-                          }
-                        }
-                        this.pointerInteractionActive = false;
-                        if (var3 == 0) {
-                          break L21;
-                        }
-                      }
+                  if ((265 < he.pointerPressYSnapshot) &&
+                      (he.pointerPressYSnapshot < 299)) {
+                    if ((mc.pointerPressXSnapshot > 350) &&
+                        (mc.pointerPressXSnapshot < 470)) {
                       this.pointerInteractionActive = true;
-                      if (null != el.gameplaySession) {
-                        el.gameplaySession.submitScore((byte) -70);
-                      }
-                      ai.requestedScreenId = -1;
-                      el.gameplayReturnScreenId = 0;
-                      cd.gameplayOriginScreenId = 0;
+                      this.field_C = false;
                       if (var3 == 0) {
                         break L21;
                       }
+                    }
+                    L26: {
+                      if ((mc.pointerPressXSnapshot > 170) &&
+                          (mc.pointerPressXSnapshot < 290)) {
+                        break L26;
+                      }
+                      this.pointerInteractionActive = false;
+                      if (var3 == 0) {
+                        break L21;
+                      }
+                    }
+                    this.pointerInteractionActive = true;
+                    if (null != el.gameplaySession) {
+                      el.gameplaySession.submitScore((byte) -70);
+                    }
+                    ai.requestedScreenId = -1;
+                    el.gameplayReturnScreenId = 0;
+                    cd.gameplayOriginScreenId = 0;
+                    if (var3 == 0) {
+                      break L21;
                     }
                   }
                   this.pointerInteractionActive = false;
@@ -1470,45 +1416,41 @@ final class GameScreen extends MenuScreen {
                     break L21;
                   }
                 }
-                if (og.field_n > 0) {
-                  if (null != vl.field_n) {
-                    if (he.pointerPressYSnapshot > 317) {
-                      if (352 > he.pointerPressYSnapshot) {
-                        L31: {
-                          if (mc.pointerPressXSnapshot > 350) {
-                            if (mc.pointerPressXSnapshot < 470) {
-                              break L31;
-                            }
-                          }
-                          L33: {
-                            if (mc.pointerPressXSnapshot > 170) {
-                              if (mc.pointerPressXSnapshot < 290) {
-                                break L33;
-                              }
-                            }
-                            this.pointerInteractionActive = false;
-                            if (var3 == 0) {
-                              break L21;
-                            }
-                          }
-                          this.field_C = false;
-                          this.pointerInteractionActive = true;
-                          if (var3 == 0) {
-                            break L21;
-                          }
+                if ((og.field_n > 0) &&
+                    (null != vl.field_n)) {
+                  if ((he.pointerPressYSnapshot > 317) &&
+                      (352 > he.pointerPressYSnapshot)) {
+                    L31: {
+                      if ((mc.pointerPressXSnapshot > 350) &&
+                          (mc.pointerPressXSnapshot < 470)) {
+                        break L31;
+                      }
+                      L33: {
+                        if ((mc.pointerPressXSnapshot > 170) &&
+                            (mc.pointerPressXSnapshot < 290)) {
+                          break L33;
                         }
-                        this.field_C = false;
-                        ArchiveCatalog.b(255);
-                        this.pointerInteractionActive = true;
+                        this.pointerInteractionActive = false;
                         if (var3 == 0) {
                           break L21;
                         }
                       }
+                      this.field_C = false;
+                      this.pointerInteractionActive = true;
+                      if (var3 == 0) {
+                        break L21;
+                      }
                     }
-                    this.pointerInteractionActive = false;
+                    this.field_C = false;
+                    ArchiveCatalog.b(255);
+                    this.pointerInteractionActive = true;
                     if (var3 == 0) {
                       break L21;
                     }
+                  }
+                  this.pointerInteractionActive = false;
+                  if (var3 == 0) {
+                    break L21;
                   }
                 }
                 this.pointerInteractionActive = true;
@@ -1516,10 +1458,9 @@ final class GameScreen extends MenuScreen {
               }
             }
             L35: {
-              if (PrefixCodeDecoder.pointerXSnapshot == this.field_s) {
-                if (~ue.pointerYSnapshot == ~this.field_Y) {
-                  break L35;
-                }
+              if ((PrefixCodeDecoder.pointerXSnapshot == this.field_s) &&
+                  (~ue.pointerYSnapshot == ~this.field_Y)) {
+                break L35;
               }
               this.field_o = -1;
             }
@@ -1646,15 +1587,13 @@ final class GameScreen extends MenuScreen {
           L0: {
             var3_int = 180;
             SoftwareRasterizer.saveClip(this.field_P);
-            if (param1 != 0) {
-              if (1 != param1) {
-                if (param1 != 2) {
-                  ma.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
-                  ma.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
-                  if (var11 == 0) {
-                    break L0;
-                  }
-                }
+            if ((param1 != 0) &&
+                (1 != param1) &&
+                (param1 != 2)) {
+              ma.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+              ma.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+              if (var11 == 0) {
+                break L0;
               }
             }
             L2: {
@@ -1756,12 +1695,11 @@ final class GameScreen extends MenuScreen {
               var4 = ec.field_e[0];
               dd.uiPaletteFont.drawText(a.field_a[1], var5, var3_int + 110, 0, -1);
             } else {
-              if (1 == var6) {
-                if (var11 == 0) {
-                  dd.uiPaletteFont.drawText(a.field_a[2], var5, var3_int, 0, -1);
-                  var4 = ec.field_e[1];
-                  break L4;
-                }
+              if ((1 == var6) &&
+                  (var11 == 0)) {
+                dd.uiPaletteFont.drawText(a.field_a[2], var5, var3_int, 0, -1);
+                var4 = ec.field_e[1];
+                break L4;
               }
               if (var6 == 2) {
                 dd.uiPaletteFont.drawText(a.field_a[3], var5, var3_int, 0, -1);
@@ -1904,14 +1842,13 @@ final class GameScreen extends MenuScreen {
           if (var2_int == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2_int, 16));
           }
-          if (var2_int >= 128) {
-            if (160 > var2_int) {
-              var3 = lf.extendedTextCharacters[-128 + var2_int];
-              if (0 == var3) {
-                var3 = 63;
-              }
-              var2_int = var3;
+          if ((var2_int >= 128) &&
+              (160 > var2_int)) {
+            var3 = lf.extendedTextCharacters[-128 + var2_int];
+            if (0 == var3) {
+              var3 = 63;
             }
+            var2_int = var3;
           }
           if (param0 <= 21) {
             GameScreen.d((byte) -112);
@@ -1948,29 +1885,28 @@ final class GameScreen extends MenuScreen {
           if (param0 < 73) {
             this.field_V = 15;
           }
-          if (0 == this.field_T) {
-            if (!this.field_H) {
-              L2: {
-                if (0 == this.field_F) {
-                  if (this.keyboardSelectionActive) {
-                    if (this.field_q != 4) {
-                      break L2;
-                    }
-                    this.selectedItemIndex = 3;
-                    if (Geoblox.field_C == 0) {
-                      break L2;
-                    }
+          if ((0 == this.field_T) &&
+              (!this.field_H)) {
+            L2: {
+              if (0 == this.field_F) {
+                if (this.keyboardSelectionActive) {
+                  if (this.field_q != 4) {
+                    break L2;
                   }
-                  this.selectedItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, ue.pointerYSnapshot, (byte) 54);
+                  this.selectedItemIndex = 3;
+                  if (Geoblox.field_C == 0) {
+                    break L2;
+                  }
                 }
+                this.selectedItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, ue.pointerYSnapshot, (byte) 54);
               }
-              this.field_F = this.field_F + 8;
-              if (~(640 + qj.transitionCurtain.height) > ~this.field_F) {
-                this.field_E = false;
-                this.field_F = 0;
-              }
-              return;
             }
+            this.field_F = this.field_F + 8;
+            if (~(640 + qj.transitionCurtain.height) > ~this.field_F) {
+              this.field_E = false;
+              this.field_F = 0;
+            }
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1987,33 +1923,29 @@ final class GameScreen extends MenuScreen {
           if (param0 != 89) {
             return;
           }
-          if (3 == this.screenId) {
-            if (!this.field_E) {
-              L1: {
-                if (this.field_q != 4) {
-                  if (this.selectedItemIndex == 3) {
-                    this.selectedItemIndex = 2;
-                    if (Geoblox.field_C == 0) {
-                      break L1;
-                    }
-                  }
-                }
-                if (this.field_q == 4) {
-                  if (this.selectedItemIndex == 2) {
-                    this.selectedItemIndex = 1;
-                  }
-                  if (oc.previousMenuScreenId == 1) {
-                    if (this.selectedItemIndex == 3) {
-                      this.selectedItemIndex = 1;
-                    }
-                  }
+          if ((3 == this.screenId) &&
+              (!this.field_E)) {
+            L1: {
+              if ((this.field_q != 4) &&
+                  (this.selectedItemIndex == 3)) {
+                this.selectedItemIndex = 2;
+                if (Geoblox.field_C == 0) {
+                  break L1;
                 }
               }
-              if (this.field_q == 0) {
-                if (this.selectedItemIndex == 0) {
-                  this.selectedItemIndex = 2;
+              if (this.field_q == 4) {
+                if (this.selectedItemIndex == 2) {
+                  this.selectedItemIndex = 1;
+                }
+                if ((oc.previousMenuScreenId == 1) &&
+                    (this.selectedItemIndex == 3)) {
+                  this.selectedItemIndex = 1;
                 }
               }
+            }
+            if ((this.field_q == 0) &&
+                (this.selectedItemIndex == 0)) {
+              this.selectedItemIndex = 2;
             }
           }
           return;
@@ -2071,12 +2003,10 @@ final class GameScreen extends MenuScreen {
           if (param0 != 0) {
             return;
           }
-          if (null != this.volumePreviewStream) {
-            if (!this.volumePreviewStream.isSamplePositionOutOfRange()) {
-              if (50 >= this.volumePreviewTicks) {
-                return;
-              }
-            }
+          if ((null != this.volumePreviewStream) &&
+              (!this.volumePreviewStream.isSamplePositionOutOfRange()) &&
+              (50 >= this.volumePreviewTicks)) {
+            return;
           }
           this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, j.field_gb);
           GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
@@ -2138,19 +2068,17 @@ final class GameScreen extends MenuScreen {
           L1: {
             L2: {
               var6_int = actionId;
-              if (var6_int == 15) {
-                if (var7 == 0) {
-                  if (1 == oc.previousMenuScreenId) {
-                    return;
-                  }
-                  var3_int = 1;
-                  break L2;
+              if ((var6_int == 15) &&
+                  (var7 == 0)) {
+                if (1 == oc.previousMenuScreenId) {
+                  return;
                 }
+                var3_int = 1;
+                break L2;
               }
-              if (var6_int == 0) {
-                if (var7 == 0) {
-                  break L2;
-                }
+              if ((var6_int == 0) &&
+                  (var7 == 0)) {
+                break L2;
               }
               L5: {
                 L6: {
@@ -2166,32 +2094,28 @@ final class GameScreen extends MenuScreen {
                                     L16: {
                                       L17: {
                                         L18: {
-                                          if (1 == var6_int) {
+                                          if ((1 == var6_int) &&
+                                              (var7 == 0)) {
+                                            ai.requestedScreenId = -1;
                                             if (var7 == 0) {
-                                              ai.requestedScreenId = -1;
-                                              if (var7 == 0) {
-                                                break L1;
-                                              }
-                                              break L18;
+                                              break L1;
                                             }
+                                            break L18;
                                           }
-                                          if (var6_int == 2) {
-                                            if (var7 == 0) {
-                                              break L18;
-                                            }
+                                          if ((var6_int == 2) &&
+                                              (var7 == 0)) {
+                                            break L18;
                                           }
                                           if (var6_int == 3) {
                                             break L17;
                                           }
-                                          if (var6_int == 4) {
-                                            if (var7 == 0) {
-                                              break L16;
-                                            }
+                                          if ((var6_int == 4) &&
+                                              (var7 == 0)) {
+                                            break L16;
                                           }
-                                          if (14 == var6_int) {
-                                            if (var7 == 0) {
-                                              break L15;
-                                            }
+                                          if ((14 == var6_int) &&
+                                              (var7 == 0)) {
+                                            break L15;
                                           }
                                           if (var6_int == 5) {
                                             break L14;
@@ -2199,10 +2123,9 @@ final class GameScreen extends MenuScreen {
                                           if (var6_int == 13) {
                                             break L13;
                                           }
-                                          if (6 == var6_int) {
-                                            if (var7 == 0) {
-                                              break L12;
-                                            }
+                                          if ((6 == var6_int) &&
+                                              (var7 == 0)) {
+                                            break L12;
                                           }
                                           if (var6_int == 7) {
                                             break L11;
@@ -2216,10 +2139,9 @@ final class GameScreen extends MenuScreen {
                                           if (var6_int == 10) {
                                             break L8;
                                           }
-                                          if (16 == var6_int) {
-                                            if (var7 == 0) {
-                                              break L7;
-                                            }
+                                          if ((16 == var6_int) &&
+                                              (var7 == 0)) {
+                                            break L7;
                                           }
                                           if (var6_int == 17) {
                                             break L6;
@@ -2248,12 +2170,10 @@ final class GameScreen extends MenuScreen {
                                     if (vl.field_n == null) {
                                       this.field_C = true;
                                     }
-                                    if (!ArchiveCatalog.b(255)) {
-                                      if (og.field_n > 0) {
-                                        if (sa.a(MenuScreen.field_i, (byte) 37)) {
-                                          f.i((byte) -128);
-                                        }
-                                      }
+                                    if ((!ArchiveCatalog.b(255)) &&
+                                        (og.field_n > 0) &&
+                                        (sa.a(MenuScreen.field_i, (byte) 37))) {
+                                      f.i((byte) -128);
                                     }
                                     this.field_o = 0;
                                     this.pointerInteractionActive = false;
@@ -2266,16 +2186,13 @@ final class GameScreen extends MenuScreen {
                                   ug.field_c = 0;
                                   ra.field_d = -2147483648;
                                 }
-                                if (2 != this.screenId) {
-                                  if (this.screenId != 4) {
-                                    if (6 != this.screenId) {
-                                      if (oc.previousMenuScreenId == 1) {
-                                        ai.requestedScreenId = 1;
-                                        if (var7 == 0) {
-                                          break L1;
-                                        }
-                                      }
-                                    }
+                                if ((2 != this.screenId) &&
+                                    (this.screenId != 4) &&
+                                    (6 != this.screenId) &&
+                                    (oc.previousMenuScreenId == 1)) {
+                                  ai.requestedScreenId = 1;
+                                  if (var7 == 0) {
+                                    break L1;
                                   }
                                 }
                                 ai.requestedScreenId = 0;
@@ -2290,12 +2207,10 @@ final class GameScreen extends MenuScreen {
                                 L31: {
                                   ai.requestedScreenId = -1;
                                   if (this.screenId != 8) {
-                                    if (4 == this.screenId) {
-                                      if (null != el.gameplaySession) {
-                                        if (el.gameplaySession.newActionCount == 0) {
-                                          break L31;
-                                        }
-                                      }
+                                    if ((4 == this.screenId) &&
+                                        (null != el.gameplaySession) &&
+                                        (el.gameplaySession.newActionCount == 0)) {
+                                      break L31;
                                     }
                                     if (this.screenId != 7) {
                                       el.gameplayReturnScreenId = 6;
@@ -2323,24 +2238,20 @@ final class GameScreen extends MenuScreen {
                               el.gameplaySession.resultBonusPoints = 0;
                               if (fh.c(-114)) {
                                 L36: {
-                                  if (!el.gameplaySession.tutorialMode) {
-                                    if (el.gameplaySession.score == 0) {
-                                      if (ug.field_c == 0) {
-                                        break L36;
-                                      }
-                                    }
+                                  if ((!el.gameplaySession.tutorialMode) &&
+                                      (el.gameplaySession.score == 0) &&
+                                      (ug.field_c == 0)) {
+                                    break L36;
                                   }
-                                  if (el.gameplaySession.tutorialMode) {
-                                    if (el.gameplaySession.updateTick < 750) {
-                                      break L36;
-                                    }
+                                  if ((el.gameplaySession.tutorialMode) &&
+                                      (el.gameplaySession.updateTick < 750)) {
+                                    break L36;
                                   }
-                                  if (0 == el.gameplaySession.score) {
-                                    if (0 == ug.field_c) {
-                                      ai.requestedScreenId = 0;
-                                      if (var7 == 0) {
-                                        break L34;
-                                      }
+                                  if ((0 == el.gameplaySession.score) &&
+                                      (0 == ug.field_c)) {
+                                    ai.requestedScreenId = 0;
+                                    if (var7 == 0) {
+                                      break L34;
                                     }
                                   }
                                   ai.requestedScreenId = 4;
@@ -2353,12 +2264,11 @@ final class GameScreen extends MenuScreen {
                                   break L34;
                                 }
                               }
-                              if (el.gameplaySession.score == 0) {
-                                if (ug.field_c == 0) {
-                                  ai.requestedScreenId = 0;
-                                  if (var7 == 0) {
-                                    break L34;
-                                  }
+                              if ((el.gameplaySession.score == 0) &&
+                                  (ug.field_c == 0)) {
+                                ai.requestedScreenId = 0;
+                                if (var7 == 0) {
+                                  break L34;
                                 }
                               }
                               el.gameplaySession.submitScore((byte) -70);
@@ -2381,10 +2291,9 @@ final class GameScreen extends MenuScreen {
                           }
                         }
                         L42: {
-                          if (this.field_q < 4) {
-                            if (!this.field_E) {
-                              break L42;
-                            }
+                          if ((this.field_q < 4) &&
+                              (!this.field_E)) {
+                            break L42;
                           }
                           var4 = 1;
                           if (var7 == 0) {
@@ -2400,10 +2309,9 @@ final class GameScreen extends MenuScreen {
                         }
                       }
                       L44: {
-                        if (this.field_q > 0) {
-                          if (!this.field_E) {
-                            break L44;
-                          }
+                        if ((this.field_q > 0) &&
+                            (!this.field_E)) {
+                          break L44;
                         }
                         var4 = 1;
                         if (var7 == 0) {
@@ -2444,22 +2352,19 @@ final class GameScreen extends MenuScreen {
             }
             L47: {
               if (var3_int == 0) {
-                if (fh.c(param1 ^ 107)) {
-                  if (kc.field_c == 0) {
-                    var3_int = 1;
-                    if (var7 == 0) {
-                      break L47;
-                    }
+                if ((fh.c(param1 ^ 107)) &&
+                    (kc.field_c == 0)) {
+                  var3_int = 1;
+                  if (var7 == 0) {
+                    break L47;
                   }
                 }
-                if (ca.field_f != null) {
-                  if (ca.field_f.field_j) {
-                    if (ca.field_f.field_k != null) {
-                      var6 = ca.field_f.field_k[1];
-                      stackIn_105_0 = (var6[0] != null) ? 0 : 1;
-                      var3_int = stackIn_105_0;
-                    }
-                  }
+                if ((ca.field_f != null) &&
+                    (ca.field_f.field_j) &&
+                    (ca.field_f.field_k != null)) {
+                  var6 = ca.field_f.field_k[1];
+                  stackIn_105_0 = (var6[0] != null) ? 0 : 1;
+                  var3_int = stackIn_105_0;
                 }
               }
             }
@@ -2474,10 +2379,9 @@ final class GameScreen extends MenuScreen {
             a.field_e = -1;
           }
           if (~this.screenId != ~ai.requestedScreenId) {
-            if (this.screenId != 1) {
-              if (this.screenId != 0) {
-                return;
-              }
+            if ((this.screenId != 1) &&
+                (this.screenId != 0)) {
+              return;
             }
             oc.previousMenuScreenId = this.screenId;
           }
@@ -2564,10 +2468,9 @@ final class GameScreen extends MenuScreen {
           L1: {
             var5_int = stackIn_7_0;
             if (3 == this.screenId) {
-              if (itemIndex == 0) {
-                if (var5_int == 0) {
-                  return;
-                }
+              if ((itemIndex == 0) &&
+                  (var5_int == 0)) {
+                return;
               }
               if (itemIndex != 2) {
                 break L1;
@@ -2582,47 +2485,37 @@ final class GameScreen extends MenuScreen {
             actionId = t.menuActionIds[this.screenId][itemIndex];
             var7 = tl.field_f[actionId];
             if (actionId == 15) {
-              if (var5_int == 4) {
-                if (oc.previousMenuScreenId != 1) {
-                  break L4;
-                }
+              if ((var5_int == 4) &&
+                  (oc.previousMenuScreenId != 1)) {
+                break L4;
               }
               return;
             }
           }
-          if (3 == this.screenId) {
-            if (this.field_E) {
-              if (this.field_q == 4) {
-                if (oc.previousMenuScreenId != 1) {
-                  if (itemIndex == 2) {
-                    if (this.selectedItemIndex == 3) {
-                      selected = true;
-                    }
-                  }
-                }
-              }
-            }
+          if ((3 == this.screenId) &&
+              (this.field_E) &&
+              (this.field_q == 4) &&
+              (oc.previousMenuScreenId != 1) &&
+              (itemIndex == 2) &&
+              (this.selectedItemIndex == 3)) {
+            selected = true;
           }
           L7: {
             L8: {
-              if (this.screenId != 3) {
-                if (this.screenId != 2) {
-                  break L8;
-                }
+              if ((this.screenId != 3) &&
+                  (this.screenId != 2)) {
+                break L8;
               }
               rowY += 280;
               if (var14 == 0) {
                 break L7;
               }
             }
-            if (this.screenId != 5) {
-              if (this.screenId != 7) {
-                if (this.screenId != 6) {
-                  if (this.screenId != 4) {
-                    break L7;
-                  }
-                }
-              }
+            if ((this.screenId != 5) &&
+                (this.screenId != 7) &&
+                (this.screenId != 6) &&
+                (this.screenId != 4)) {
+              break L7;
             }
             rowY += 295;
           }
@@ -2631,10 +2524,9 @@ final class GameScreen extends MenuScreen {
               var8 = dd.uiPaletteFont;
               var9 = 320;
               var10 = 160;
-              if (0 != this.screenId) {
-                if (this.screenId != 1) {
-                  break L12;
-                }
+              if ((0 != this.screenId) &&
+                  (this.screenId != 1)) {
+                break L12;
               }
               var11 = 322;
               if (var14 == 0) {
@@ -2644,75 +2536,72 @@ final class GameScreen extends MenuScreen {
             var11 = var8.measureMaximumWrappedWidth(var7, 400);
           }
           L14: {
-            if (this.screenId != 3) {
-              if (this.screenId != 2) {
-                if (this.screenId != 6) {
-                  if (this.screenId != 7) {
-                    if (this.screenId != 8) {
-                      if (this.screenId != 4) {
-                        if (selected) {
-                          var9 = var9 + this.field_T;
-                          var10 = var10 + this.field_T;
-                          rowY = rowY - this.field_T;
-                        }
-                        var10 = 320 - (var11 + 20 >> 1);
-                        stackIn_98_0 = rowY;
-                        stackIn_98_1 = var10;
-                        if (!selected) {
-                          stackIn_99_2 = 0;
-                        } else {
-                          stackIn_99_2 = this.field_T;
-                        }
-                        ma.drawNineSlicePanel(stackIn_98_0, stackIn_98_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
-                        if (var14 == 0) {
-                          break L14;
-                        }
-                      }
-                      L20: {
-                        var11 = 278;
-                        var10 = 320 - (var11 + 20 >> 1);
-                        if (actionId != 13) {
-                          rowY = 395;
-                          if (var14 == 0) {
-                            break L20;
-                          }
-                        }
-                        rowY = 265;
-                      }
-                      var9 = 10 + (var11 >> 1) + var10;
-                      if (selected) {
-                        var10 = var10 + this.field_T;
-                        rowY = rowY - this.field_T;
-                        var9 = var9 + this.field_T;
-                      }
-                      ma.drawNineSlicePanel(rowY, var10, 36, (byte) -92, 20 + var11, eb.mouseBoxFrames);
-                      if (var14 == 0) {
-                        break L14;
-                      }
-                    }
-                  }
-                  L23: {
-                    rowY = 437;
-                    if (actionId == 13) {
-                      var10 = 121;
-                      var9 = (var11 >> 1) + var10 + 10;
-                      if (var14 == 0) {
-                        break L23;
-                      }
-                    }
-                    var10 = 436;
-                    var9 = (var11 >> 1) + var10 + 10;
-                  }
+            if ((this.screenId != 3) &&
+                (this.screenId != 2) &&
+                (this.screenId != 6)) {
+              if ((this.screenId != 7) &&
+                  (this.screenId != 8)) {
+                if (this.screenId != 4) {
                   if (selected) {
                     var9 = var9 + this.field_T;
-                    rowY = rowY - this.field_T;
                     var10 = var10 + this.field_T;
+                    rowY = rowY - this.field_T;
                   }
-                  ma.drawNineSlicePanel(rowY, var10, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
+                  var10 = 320 - (var11 + 20 >> 1);
+                  stackIn_98_0 = rowY;
+                  stackIn_98_1 = var10;
+                  if (!selected) {
+                    stackIn_99_2 = 0;
+                  } else {
+                    stackIn_99_2 = this.field_T;
+                  }
+                  ma.drawNineSlicePanel(stackIn_98_0, stackIn_98_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
                   if (var14 == 0) {
                     break L14;
                   }
                 }
+                L20: {
+                  var11 = 278;
+                  var10 = 320 - (var11 + 20 >> 1);
+                  if (actionId != 13) {
+                    rowY = 395;
+                    if (var14 == 0) {
+                      break L20;
+                    }
+                  }
+                  rowY = 265;
+                }
+                var9 = 10 + (var11 >> 1) + var10;
+                if (selected) {
+                  var10 = var10 + this.field_T;
+                  rowY = rowY - this.field_T;
+                  var9 = var9 + this.field_T;
+                }
+                ma.drawNineSlicePanel(rowY, var10, 36, (byte) -92, 20 + var11, eb.mouseBoxFrames);
+                if (var14 == 0) {
+                  break L14;
+                }
+              }
+              L23: {
+                rowY = 437;
+                if (actionId == 13) {
+                  var10 = 121;
+                  var9 = (var11 >> 1) + var10 + 10;
+                  if (var14 == 0) {
+                    break L23;
+                  }
+                }
+                var10 = 436;
+                var9 = (var11 >> 1) + var10 + 10;
+              }
+              if (selected) {
+                var9 = var9 + this.field_T;
+                rowY = rowY - this.field_T;
+                var10 = var10 + this.field_T;
+              }
+              ma.drawNineSlicePanel(rowY, var10, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
+              if (var14 == 0) {
+                break L14;
               }
             }
             L26: {
@@ -2784,10 +2673,9 @@ final class GameScreen extends MenuScreen {
           }
           L35: {
             L36: {
-              if (actionId != 8) {
-                if (9 != actionId) {
-                  break L36;
-                }
+              if ((actionId != 8) &&
+                  (9 != actionId)) {
+                break L36;
               }
               var8.drawRightAlignedText(var7, 285 + var12, 30 + rowY, 0, -1);
               NetworkArchiveRequest.barSprite.draw(var12 + 280, rowY + 15);
@@ -2861,21 +2749,20 @@ final class GameScreen extends MenuScreen {
                   }
                 }
                 if (ki.currentKeyboardEventCode != 97) {
-                  if (ki.currentKeyboardEventCode == 98) {
-                    if (2 == this.screenId) {
-                      if (this.selectedItemIndex < 0) {
-                        this.selectedItemIndex = 3;
-                        if (var3 == 0) {
-                          break L4;
-                        }
-                      }
-                      if (5 != t.menuActionIds[this.screenId][this.selectedItemIndex]) {
-                        break L4;
-                      }
-                      this.selectedItemIndex = 1;
+                  if ((ki.currentKeyboardEventCode == 98) &&
+                      (2 == this.screenId)) {
+                    if (this.selectedItemIndex < 0) {
+                      this.selectedItemIndex = 3;
                       if (var3 == 0) {
                         break L4;
                       }
+                    }
+                    if (5 != t.menuActionIds[this.screenId][this.selectedItemIndex]) {
+                      break L4;
+                    }
+                    this.selectedItemIndex = 1;
+                    if (var3 == 0) {
+                      break L4;
                     }
                   }
                   if (ki.currentKeyboardEventCode != 99) {
@@ -2902,10 +2789,9 @@ final class GameScreen extends MenuScreen {
                   if (this.field_o == 1) {
                     break L4;
                   }
-                  if (!fh.c(-122)) {
-                    if (og.field_n <= 0) {
-                      break L4;
-                    }
+                  if ((!fh.c(-122)) &&
+                      (og.field_n <= 0)) {
+                    break L4;
                   }
                   this.field_o = 1;
                   if (var3 == 0) {
@@ -2953,55 +2839,47 @@ final class GameScreen extends MenuScreen {
               this.handleMenuKey(this.selectedItemIndex, -29);
             }
           }
-          if (ki.currentKeyboardEventCode == 69) {
-            if (this.screenId == 3) {
-              if (this.field_q < 4) {
-                this.field_q = this.field_q + 1;
-                if (var3 == 0) {
-                  return;
-                }
-              }
+          if ((ki.currentKeyboardEventCode == 69) &&
+              (this.screenId == 3) &&
+              (this.field_q < 4)) {
+            this.field_q = this.field_q + 1;
+            if (var3 == 0) {
+              return;
             }
           }
-          if (ki.currentKeyboardEventCode == 41) {
-            if (this.screenId == 3) {
-              if (this.field_q > 0) {
-                this.field_q = this.field_q - 1;
-                if (var3 == 0) {
-                  return;
-                }
-              }
+          if ((ki.currentKeyboardEventCode == 41) &&
+              (this.screenId == 3) &&
+              (this.field_q > 0)) {
+            this.field_q = this.field_q - 1;
+            if (var3 == 0) {
+              return;
             }
           }
-          if (13 == ki.currentKeyboardEventCode) {
-            if (!this.field_C) {
-              if (4 != this.screenId) {
-                L22: {
-                  if (this.screenId == 1) {
-                    ai.requestedScreenId = -1;
-                    if (var3 == 0) {
-                      break L22;
-                    }
-                  }
-                  if (this.screenId != 6) {
-                    if (this.screenId != 2) {
-                      ai.requestedScreenId = oc.previousMenuScreenId;
-                      if (var3 == 0) {
-                        break L22;
-                      }
-                    }
-                  }
-                  ai.requestedScreenId = 0;
-                }
-                if (~this.screenId != ~ai.requestedScreenId) {
-                  if (this.screenId != 1) {
-                    if (this.screenId != 0) {
-                      return;
-                    }
-                  }
-                  oc.previousMenuScreenId = this.screenId;
+          if ((13 == ki.currentKeyboardEventCode) &&
+              (!this.field_C) &&
+              (4 != this.screenId)) {
+            L22: {
+              if (this.screenId == 1) {
+                ai.requestedScreenId = -1;
+                if (var3 == 0) {
+                  break L22;
                 }
               }
+              if ((this.screenId != 6) &&
+                  (this.screenId != 2)) {
+                ai.requestedScreenId = oc.previousMenuScreenId;
+                if (var3 == 0) {
+                  break L22;
+                }
+              }
+              ai.requestedScreenId = 0;
+            }
+            if (~this.screenId != ~ai.requestedScreenId) {
+              if ((this.screenId != 1) &&
+                  (this.screenId != 0)) {
+                return;
+              }
+              oc.previousMenuScreenId = this.screenId;
             }
           }
           return;

@@ -149,66 +149,58 @@ final class TriangleMesh {
 
     final static void a(int param0, int param1, int param2) {
         L0: {
-          if (hb.field_l != null) {
-            if (hb.field_l.length >= param2) {
-              break L0;
-            }
+          if ((hb.field_l != null) &&
+              (hb.field_l.length >= param2)) {
+            break L0;
           }
           hb.field_l = new int[param2 * 2];
         }
         L2: {
-          if (null != hg.field_a) {
-            if (param2 <= hg.field_a.length) {
-              break L2;
-            }
+          if ((null != hg.field_a) &&
+              (param2 <= hg.field_a.length)) {
+            break L2;
           }
           hg.field_a = new int[param2 * 2];
         }
         L4: {
-          if (null != fb.field_m) {
-            if (fb.field_m.length >= param2) {
-              break L4;
-            }
+          if ((null != fb.field_m) &&
+              (fb.field_m.length >= param2)) {
+            break L4;
           }
           fb.field_m = new int[param2 * 2];
         }
         L6: {
-          if (null != k.field_i) {
-            if (param2 <= k.field_i.length) {
-              break L6;
-            }
+          if ((null != k.field_i) &&
+              (param2 <= k.field_i.length)) {
+            break L6;
           }
           k.field_i = new int[param2 * 2];
         }
         L8: {
-          if (null != cj.field_b) {
-            if (cj.field_b.length >= param2) {
-              break L8;
-            }
+          if ((null != cj.field_b) &&
+              (cj.field_b.length >= param2)) {
+            break L8;
           }
           cj.field_b = new int[2 * param2];
         }
         L10: {
-          if (null != gk.field_a) {
-            if (gk.field_a.length >= param2) {
-              break L10;
-            }
+          if ((null != gk.field_a) &&
+              (gk.field_a.length >= param2)) {
+            break L10;
           }
           gk.field_a = new int[param2 * 2];
         }
         L12: {
-          if (null != qi.field_i) {
-            if (qi.field_i.length >= param2 + param1) {
-              break L12;
-            }
+          if ((null != qi.field_i) &&
+              (qi.field_i.length >= param2 + param1)) {
+            break L12;
           }
           qi.field_i = new int[(param2 + param1) * 2];
         }
         L14: {
-          if (null != qh.field_C) {
-            if (qh.field_C.length >= param2) {
-              break L14;
-            }
+          if ((null != qh.field_C) &&
+              (qh.field_C.length >= param2)) {
+            break L14;
           }
           qh.field_C = new boolean[2 * param2];
         }

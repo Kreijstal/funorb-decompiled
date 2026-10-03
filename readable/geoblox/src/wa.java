@@ -190,10 +190,9 @@ final class wa {
             var9 = this.field_m.measureTextWidth(param1);
             var10 = this.field_m.maxDescent + this.field_m.maxAscent;
             var11 = 1;
-            if (var8 >= var9) {
-              if (-1 == param1.indexOf("<br>")) {
-                break L1;
-              }
+            if ((var8 >= var9) &&
+                (-1 == param1.indexOf("<br>"))) {
+              break L1;
             }
             if (dd.field_E == null) {
               dd.field_E = new String[16];

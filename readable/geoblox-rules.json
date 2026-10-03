@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "4f02f56a771c27f1cf814157be4606fb4450cc9b",
+    "commit": "e38d0eccc0deda0553930a2a1227c684a47f4ac3",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17",
+  "inputTreeSha256": "fe14e8a5abf577b825d5d210ee51cce9b3d43481bc3715bff080220b5636cd25",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -39305,19 +39305,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 12,
-  "version": 83,
+  "revision": 13,
+  "version": 84,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "5420742cd2ea194a1f128fb0059e1e2bf3487e8e",
+      "commit": "f0763fad063121cd249c9cfd0c522fa52d9b4ace",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "1cb7031c92759a6a2847c2baf87db5def26a4edbaa50a6020409fb436987ae47",
-        "reproduce": "git archive --format=tar 5420742cd2ea194a1f128fb0059e1e2bf3487e8e | sha256sum",
+        "sha256": "6f7b251bee18053f7db1c3970dc6a52d421b1709d3366b65c4cb11cf0b3c370e",
+        "reproduce": "git archive --format=tar f0763fad063121cd249c9cfd0c522fa52d9b4ace | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -39326,1437 +39326,16 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "931bddbb635796ae5961918216f1c559503a5f64",
+      "commit": "2666ceee776e312ec33eecf79ed4289253e0ce52",
       "path": "readable/geoblox-rules.json",
-      "sha256": "8445faf9ce506847646adbc7489ff1cbfd1dc2734920bb1f1be26c6543cc795b"
+      "sha256": "b212c77b789678a8fceb39ce19034d53a3d2636f39267e0fb5579a0a2e1bc596"
     },
-    "ruleChanges": [
-      {
-        "symbol": "F:a.field_c:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:a.field_c:[I",
-          "originalName": "field_c",
-          "to": "cameraMeshVertexX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: cameraMeshVertexX. "
-        }
-      },
-      {
-        "symbol": "F:ac.field_w:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:ac.field_w:[I",
-          "originalName": "field_w",
-          "to": "secondVertexTransformedY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: secondVertexTransformedY. "
-        }
-      },
-      {
-        "symbol": "F:am.field_a:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:am.field_a:[I",
-          "originalName": "field_a",
-          "to": "meshCameraTransform",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: meshCameraTransform. "
-        }
-      },
-      {
-        "symbol": "F:bj.field_j:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:bj.field_j:[I",
-          "originalName": "field_j",
-          "to": "projectedMeshVertexDepth",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: projectedMeshVertexDepth. A vertex below depth 50 receives Integer.MIN_VALUE while projected X/Y remain untouched; i uses that sentinel to skip faces."
-        }
-      },
-      {
-        "symbol": "F:gf.field_b:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:gf.field_b:[I",
-          "originalName": "field_b",
-          "to": "cameraMeshVertexZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: cameraMeshVertexZ. "
-        }
-      },
-      {
-        "symbol": "F:hg.field_c:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:hg.field_c:[I",
-          "originalName": "field_c",
-          "to": "thirdVertexTransformedZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: thirdVertexTransformedZ. "
-        }
-      },
-      {
-        "symbol": "F:ii.field_d:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:ii.field_d:[I",
-          "originalName": "field_d",
-          "to": "firstVertexTransformedX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: firstVertexTransformedX. "
-        }
-      },
-      {
-        "symbol": "F:kf.field_a:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:kf.field_a:[I",
-          "originalName": "field_a",
-          "to": "firstVertexTransformedZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: firstVertexTransformedZ. "
-        }
-      },
-      {
-        "symbol": "F:lk.field_f:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:lk.field_f:[I",
-          "originalName": "field_f",
-          "to": "meshModelTransform",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: meshModelTransform. "
-        }
-      },
-      {
-        "symbol": "F:nf.field_C:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_C:[I",
-          "originalName": "field_C",
-          "to": "firstVertexSourceZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: firstVertexSourceZ. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_L:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_L:[I",
-          "originalName": "field_L",
-          "to": "firstVertexSourceX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: firstVertexSourceX. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_a:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_a:[I",
-          "originalName": "field_a",
-          "to": "secondVertexSourceY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: secondVertexSourceY. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_b:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_b:[I",
-          "originalName": "field_b",
-          "to": "thirdVertexSourceZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: thirdVertexSourceZ. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_d:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_d:[I",
-          "originalName": "field_d",
-          "to": "firstVertexSourceY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: firstVertexSourceY. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_f:S",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_f:S",
-          "originalName": "field_f",
-          "to": "faceCount",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: faceCount. "
-        }
-      },
-      {
-        "symbol": "F:nf.field_l:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_l:[I",
-          "originalName": "field_l",
-          "to": "thirdVertexSourceX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: thirdVertexSourceX. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_p:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_p:[I",
-          "originalName": "field_p",
-          "to": "thirdVertexSourceY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: thirdVertexSourceY. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_x:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_x:[I",
-          "originalName": "field_x",
-          "to": "secondVertexSourceX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: secondVertexSourceX. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:nf.field_y:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:nf.field_y:[I",
-          "originalName": "field_y",
-          "to": "secondVertexSourceZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: secondVertexSourceZ. These optional int coordinate triples are indexed by faceCount; their construction and asset purpose are not inferred. They are distinct from the short vertex XYZ arrays."
-        }
-      },
-      {
-        "symbol": "F:ok.field_g:I",
-        "before": null,
-        "after": {
-          "symbol": "F:ok.field_g:I",
-          "originalName": "field_g",
-          "to": "meshProjectionShift",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: meshProjectionShift. This is the shift used for scaled projection numerators; the default is 9, and Java masks extreme shift distances as usual."
-        }
-      },
-      {
-        "symbol": "F:pg.field_d:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:pg.field_d:[I",
-          "originalName": "field_d",
-          "to": "firstVertexTransformedY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: firstVertexTransformedY. "
-        }
-      },
-      {
-        "symbol": "F:qe.field_c:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:qe.field_c:[I",
-          "originalName": "field_c",
-          "to": "thirdVertexTransformedX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: thirdVertexTransformedX. "
-        }
-      },
-      {
-        "symbol": "F:qf.field_Y:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:qf.field_Y:[I",
-          "originalName": "field_Y",
-          "to": "secondVertexTransformedX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: secondVertexTransformedX. "
-        }
-      },
-      {
-        "symbol": "F:uk.field_i:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:uk.field_i:[I",
-          "originalName": "field_i",
-          "to": "cameraMeshVertexY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: cameraMeshVertexY. "
-        }
-      },
-      {
-        "symbol": "F:vk.field_c:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:vk.field_c:[I",
-          "originalName": "field_c",
-          "to": "secondVertexTransformedZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Data role: secondVertexTransformedZ. "
-        }
-      },
-      {
-        "symbol": "L:hj.a(BI)I#0",
-        "before": null,
-        "after": {
-          "symbol": "L:hj.a(BI)I#0",
-          "originalName": "var2",
-          "to": "shiftedBitCount",
-          "evidence": "hj counts the bit length of an unsigned 32-bit value by shifting 16/8/4/2/1 bits. Guard 58 returns this length, any other byte returns -21. i uses it to normalize the face-depth bucket range. Native checks compare Integer.numberOfLeadingZeros for zero, power-of-two, negative and other values. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#0",
-          "originalName": "dupTemp$0",
-          "to": "facePriority",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#1",
-          "originalName": "stackIn_11_0",
-          "to": "cullBackfacesSnapshot",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#10",
-          "originalName": "var5_int",
-          "to": "depthRangeBitLength",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#11",
-          "originalName": "var5",
-          "to": "contextFailure",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#12",
-          "originalName": "var6",
-          "to": "minimumDepthTimesThree",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#13",
-          "originalName": "var7",
-          "to": "depthBucketShift",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#14",
-          "originalName": "var8",
-          "to": "faceIndexOrPriorityPrefix",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#15",
-          "originalName": "var9",
-          "to": "vertexAOrPriorityIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#16",
-          "originalName": "var10",
-          "to": "vertexBOrPriorityCount",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#17",
-          "originalName": "var11",
-          "to": "vertexC",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#18",
-          "originalName": "var12",
-          "to": "projectedAXOrVertexADepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#19",
-          "originalName": "var13",
-          "to": "projectedAYOrVertexBDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#2",
-          "originalName": "stackIn_28_0",
-          "to": "scaledRelativeDepthSum",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#20",
-          "originalName": "var14",
-          "to": "edgeBXOrVertexCDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#21",
-          "originalName": "var15",
-          "to": "edgeCXOrRelativeDepthSum",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#22",
-          "originalName": "var16",
-          "to": "edgeBYOrDepthBucketIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#23",
-          "originalName": "var17",
-          "to": "edgeCYOrBucketOccupancy",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#24",
-          "originalName": "var18",
-          "to": "faceOrderWriteIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#25",
-          "originalName": "var19",
-          "to": "controlFlagSnapshot",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#26",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#3",
-          "originalName": "stackIn_39_0",
-          "to": "bucketIndexOrFaceOrderIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#4",
-          "originalName": "stackIn_49_0",
-          "to": "cullFlagOrPriorityLoopSentinel",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#5",
-          "originalName": "stackIn_68_0",
-          "to": "failureContextCause",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#6",
-          "originalName": "stackIn_68_1",
-          "to": "failureContextBuilder",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#7",
-          "originalName": "stackIn_69_2",
-          "to": "meshContextDescription",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#8",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:i.a(IBLnf;IZ)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:i.a(IBLnf;IZ)V#9",
-          "originalName": "stackOut_10_0",
-          "to": "cullBackfacesCarrier",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#0",
-          "originalName": "incrementValue$16",
-          "to": "clearIndex0",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#1",
-          "originalName": "incrementValue$17",
-          "to": "clearIndex1",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#10",
-          "originalName": "var3",
-          "to": "arrayLength",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#11",
-          "originalName": "var4",
-          "to": "controlFlagSnapshot",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#12",
-          "originalName": "var5",
-          "to": "priorityCounts",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#13",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#14",
-          "originalName": "var1_ref",
-          "to": "contextFailure",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#15",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#2",
-          "originalName": "incrementValue$18",
-          "to": "clearIndex2",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#3",
-          "originalName": "incrementValue$19",
-          "to": "clearIndex3",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#4",
-          "originalName": "incrementValue$20",
-          "to": "clearIndex4",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#5",
-          "originalName": "incrementValue$21",
-          "to": "clearIndex5",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#6",
-          "originalName": "incrementValue$22",
-          "to": "clearIndex6",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#7",
-          "originalName": "incrementValue$23",
-          "to": "clearIndex7",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#8",
-          "originalName": "var1",
-          "to": "priorityCountsAlias",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:ma.a(B)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:ma.a(B)V#9",
-          "originalName": "var2",
-          "to": "clearIndex",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#0",
-          "originalName": "incrementValue$16",
-          "to": "clearIndex0",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#1",
-          "originalName": "incrementValue$17",
-          "to": "clearIndex1",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#10",
-          "originalName": "var3",
-          "to": "arrayLength",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#11",
-          "originalName": "var4",
-          "to": "controlFlagSnapshot",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#12",
-          "originalName": "var5",
-          "to": "depthBucketCounts",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#13",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#14",
-          "originalName": "var1_ref",
-          "to": "contextFailure",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#15",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#2",
-          "originalName": "incrementValue$18",
-          "to": "clearIndex2",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#3",
-          "originalName": "incrementValue$19",
-          "to": "clearIndex3",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#4",
-          "originalName": "incrementValue$20",
-          "to": "clearIndex4",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#5",
-          "originalName": "incrementValue$21",
-          "to": "clearIndex5",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#6",
-          "originalName": "incrementValue$22",
-          "to": "clearIndex6",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#7",
-          "originalName": "incrementValue$23",
-          "to": "clearIndex7",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#8",
-          "originalName": "var1",
-          "to": "depthBucketCountsAlias",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:oe.l(I)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:oe.l(I)V#9",
-          "originalName": "var2",
-          "to": "clearIndex",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#0",
-          "originalName": "stackIn_66_0",
-          "to": "nearPlaneOrNormalCapacityOrQueueMinDepth",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#1",
-          "originalName": "stackIn_66_1",
-          "to": "invertedDepthOrNormalIndexOrQueueGuard",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#10",
-          "originalName": "var7_int",
-          "to": "minimumVisibleDepth",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#11",
-          "originalName": "var7",
-          "to": "contextFailure",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#12",
-          "originalName": "var8",
-          "to": "maximumVisibleDepth",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#13",
-          "originalName": "var9",
-          "to": "cameraTranslationXScaledOrNormalXXQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#14",
-          "originalName": "var10",
-          "to": "cameraTranslationYScaledOrNormalYXQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#15",
-          "originalName": "var11",
-          "to": "cameraTranslationZOrNormalZXQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#16",
-          "originalName": "var12",
-          "to": "cameraXXOrNormalXYQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#17",
-          "originalName": "var13",
-          "to": "cameraYXOrNormalYYQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#18",
-          "originalName": "var14",
-          "to": "cameraZXOrNormalZYQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#19",
-          "originalName": "var15",
-          "to": "cameraXYOrNormalXZQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#2",
-          "originalName": "stackIn_71_0",
-          "to": "failureContextCause",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#20",
-          "originalName": "var16",
-          "to": "cameraYYOrNormalYZQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#21",
-          "originalName": "var17",
-          "to": "cameraZYOrNormalZZQ16",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#22",
-          "originalName": "var18",
-          "to": "cameraXZQ16OrNormalIndex",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#23",
-          "originalName": "var19",
-          "to": "cameraYZQ16OrNormalX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#24",
-          "originalName": "var20",
-          "to": "cameraZZQ16OrNormalY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#25",
-          "originalName": "var21",
-          "to": "cameraXBasisOrDeltaXOrClipCenterXOrNormalZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#26",
-          "originalName": "var22",
-          "to": "cameraXBasisOrDeltaYOrClipCenterY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#27",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#27",
-          "originalName": "var23",
-          "to": "cameraXBasisOrDeltaZOrVertexIndex",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#28",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#28",
-          "originalName": "var24",
-          "to": "cameraYBasisOrVertexX",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#29",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#29",
-          "originalName": "var25",
-          "to": "cameraYBasisOrVertexY",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#3",
-          "originalName": "stackIn_71_1",
-          "to": "cameraContextBuilder",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#30",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#30",
-          "originalName": "var26",
-          "to": "cameraYBasisOrVertexZ",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#31",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#31",
-          "originalName": "var27",
-          "to": "cameraZBasisOrCameraXScaled",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#32",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#32",
-          "originalName": "var28",
-          "to": "cameraZBasisOrCameraYScaled",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#33",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#33",
-          "originalName": "var29",
-          "to": "cameraZBasisOrCameraDepth",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#34",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#34",
-          "originalName": "var30",
-          "to": "controlFlagSnapshot",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#35",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#35",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#4",
-          "originalName": "stackIn_72_2",
-          "to": "cameraContextDescription",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#5",
-          "originalName": "stackIn_75_1",
-          "to": "modelContextBuilder",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#6",
-          "originalName": "stackIn_76_2",
-          "to": "modelContextDescription",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#7",
-          "originalName": "stackIn_79_1",
-          "to": "meshContextBuilder",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#8",
-          "originalName": "stackIn_80_2",
-          "to": "meshContextDescription",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "L:p.a([I[ILnf;ZZZZ)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:p.a([I[ILnf;ZZZZ)V#9",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit."
-        }
-      },
-      {
-        "symbol": "M:hj.a(BI)I",
-        "before": null,
-        "after": {
-          "symbol": "M:hj.a(BI)I",
-          "originalName": "a",
-          "to": "unsignedBitLength",
-          "evidence": "hj counts the bit length of an unsigned 32-bit value by shifting 16/8/4/2/1 bits. Guard 58 returns this length, any other byte returns -21. i uses it to normalize the face-depth bucket range. Native checks compare Integer.numberOfLeadingZeros for zero, power-of-two, negative and other values."
-        }
-      },
-      {
-        "symbol": "M:i.a(IBLnf;IZ)V",
-        "before": null,
-        "after": {
-          "symbol": "M:i.a(IBLnf;IZ)V",
-          "originalName": "a",
-          "to": "queueMeshFacesByDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed."
-        }
-      },
-      {
-        "symbol": "M:ma.a(B)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ma.a(B)V",
-          "originalName": "a",
-          "to": "clearMeshPriorityCounts",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged."
-        }
-      },
-      {
-        "symbol": "M:oe.l(I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:oe.l(I)V",
-          "originalName": "l",
-          "to": "clearMeshDepthBucketCounts",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged."
-        }
-      },
-      {
-        "symbol": "M:p.a([I[ILnf;ZZZZ)V",
-        "before": null,
-        "after": {
-          "symbol": "M:p.a([I[ILnf;ZZZZ)V",
-          "originalName": "a",
-          "to": "projectMeshAndQueueFaces",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified."
-        }
-      },
-      {
-        "symbol": "P:hj.a(BI)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:hj.a(BI)I#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "hj counts the bit length of an unsigned 32-bit value by shifting 16/8/4/2/1 bits. Guard 58 returns this length, any other byte returns -21. i uses it to normalize the face-depth bucket range. Native checks compare Integer.numberOfLeadingZeros for zero, power-of-two, negative and other values. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:hj.a(BI)I#1",
-        "before": null,
-        "after": {
-          "symbol": "P:hj.a(BI)I#1",
-          "originalName": "param1",
-          "to": "remainingBits",
-          "evidence": "hj counts the bit length of an unsigned 32-bit value by shifting 16/8/4/2/1 bits. Guard 58 returns this length, any other byte returns -21. i uses it to normalize the face-depth bucket range. Native checks compare Integer.numberOfLeadingZeros for zero, power-of-two, negative and other values. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:i.a(IBLnf;IZ)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:i.a(IBLnf;IZ)V#0",
-          "originalName": "param0",
-          "to": "minimumVisibleDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:i.a(IBLnf;IZ)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:i.a(IBLnf;IZ)V#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:i.a(IBLnf;IZ)V#2",
-        "before": null,
-        "after": {
-          "symbol": "P:i.a(IBLnf;IZ)V#2",
-          "originalName": "param2",
-          "to": "mesh",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:i.a(IBLnf;IZ)V#3",
-        "before": null,
-        "after": {
-          "symbol": "P:i.a(IBLnf;IZ)V#3",
-          "originalName": "param3",
-          "to": "maximumVisibleDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:i.a(IBLnf;IZ)V#4",
-        "before": null,
-        "after": {
-          "symbol": "P:i.a(IBLnf;IZ)V#4",
-          "originalName": "param4",
-          "to": "cullBackfaces",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:ma.a(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ma.a(B)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "This helper clears priorityCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The byte guard must be -35; array length is read before rejecting other guards. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:oe.l(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:oe.l(I)V#0",
-          "originalName": "param0",
-          "to": "startIndex",
-          "evidence": "This helper clears depthBucketCounts using eight sequential post-increment stores per iteration, without a final partial-group check. The supplied start index is used without alignment or range correction. Native reset oracle checks null/non-multiple-of-eight arrays, partial writes and bad guards/indices. The loops and failure contexts remain unchanged. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:p.a([I[ILnf;ZZZZ)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:p.a([I[ILnf;ZZZZ)V#0",
-          "originalName": "param0",
-          "to": "cameraTransform",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:p.a([I[ILnf;ZZZZ)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:p.a([I[ILnf;ZZZZ)V#1",
-          "originalName": "param1",
-          "to": "modelTransform",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:p.a([I[ILnf;ZZZZ)V#2",
-        "before": null,
-        "after": {
-          "symbol": "P:p.a([I[ILnf;ZZZZ)V#2",
-          "originalName": "param2",
-          "to": "mesh",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:p.a([I[ILnf;ZZZZ)V#3",
-        "before": null,
-        "after": {
-          "symbol": "P:p.a([I[ILnf;ZZZZ)V#3",
-          "originalName": "param3",
-          "to": "preserveSharedResources",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:p.a([I[ILnf;ZZZZ)V#4",
-        "before": null,
-        "after": {
-          "symbol": "P:p.a([I[ILnf;ZZZZ)V#4",
-          "originalName": "param4",
-          "to": "storeCameraCoordinates",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:p.a([I[ILnf;ZZZZ)V#5",
-        "before": null,
-        "after": {
-          "symbol": "P:p.a([I[ILnf;ZZZZ)V#5",
-          "originalName": "param5",
-          "to": "cullBackfaces",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Parameter role follows its reads and call-site ordering."
-        }
-      },
-      {
-        "symbol": "P:p.a([I[ILnf;ZZZZ)V#6",
-        "before": null,
-        "after": {
-          "symbol": "P:p.a([I[ILnf;ZZZZ)V#6",
-          "originalName": "param6",
-          "to": "transformNormals",
-          "evidence": "p composes Q16 rotation bases using camera entries shifted to Q14, subtracts camera from model translation, projects only depth >= 50 and queues faces through i. ck passes am camera and lk model transforms. Optional per-face coordinate triples and model-only normal transforms preserve original integer overflow, Java shift counts, buffer capacity checks, partial writes and control-flag paths. False preserveSharedResources calls p.b(-2), clearing shared references and setting field_k to 120. Native projection trace and limited identity-coordinate oracle cover these paths; complete asset/camera behavior is unverified. Parameter role follows its reads and call-site ordering."
-        }
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "Geoblox.java",
-        "sha256": "3125384062305789c725c11ff473cbf79161a44396f6ca3dcc02bdb9517d4bda"
+        "sha256": "eab99a15d2846a94a80e4709fc619c39a4204050aa1496541c782319aea8524c"
       },
       {
         "file": "a.java",
@@ -40768,11 +39347,11 @@
       },
       {
         "file": "ab.java",
-        "sha256": "94252d180941517ed7c0aa1309ada7b0c542a35f1a7ef2705512f4b6f0f80326"
+        "sha256": "5c66abc0246af62e60cfadde9e0816d0e963ba0f82a16778975d16ac25e29f22"
       },
       {
         "file": "ac.java",
-        "sha256": "14ccf55b4f51441f33bd12df7a53fa605404eb10ccd93ca2ddb5b136902edc40"
+        "sha256": "1f2976d198bc9b917ebb05f528cc8a443d7114ccde74944bc8d78c6fd472442c"
       },
       {
         "file": "af.java",
@@ -40788,7 +39367,7 @@
       },
       {
         "file": "ai.java",
-        "sha256": "22b8d6358e13980d45cc703d45307407ce6c001c30fedb1809d0a509ace3651c"
+        "sha256": "e9f422ce271aa82285d7851cd81d35d3d19452f72a583e69ce7a5469cd0d02e0"
       },
       {
         "file": "aj.java",
@@ -40804,19 +39383,19 @@
       },
       {
         "file": "bc.java",
-        "sha256": "c037ae69e1976b13b00cea7359067c747dea1aef9d68d93748127d44647d9db5"
+        "sha256": "18d04485265b34a49bc4907b6b8e2b58cdca8c1d4f7052a34f1791ba4ad971e9"
       },
       {
         "file": "bf.java",
-        "sha256": "cd602b588480c6b08c000bf8eaf906fd39dd48982a463a9403de238fd08243d9"
+        "sha256": "62a0ef22476d91047c6e02faea71d616ffc84dadeee48ec800e26b59d8ac70d1"
       },
       {
         "file": "bg.java",
-        "sha256": "9441e3caca6eed4b6174b59d53b9e8323a7be1f6d501913a076d6bf6decdc203"
+        "sha256": "c1cd7db975045ee2c2a95d98a90c2477aed58b3b00058d10a52664b7ec455ebb"
       },
       {
         "file": "bh.java",
-        "sha256": "78fd75421c35076a69eda531b0d229e9d942a6fe4a257a8e8ad481ad75f65149"
+        "sha256": "7cdf42fc21ea4e066d91945e92947126bba8c762599c1bb8ad0885b1f8a081c1"
       },
       {
         "file": "bi.java",
@@ -40824,7 +39403,7 @@
       },
       {
         "file": "bj.java",
-        "sha256": "80c6e1d97953277aa33d9ee82121ed98d7f158a7c92e6c7dbbaf70faacd4ce24"
+        "sha256": "26dd5ac24a201e78c77bfa075a9c5988662a1672e35ac4268da4fcc34a26d54d"
       },
       {
         "file": "bk.java",
@@ -40832,15 +39411,15 @@
       },
       {
         "file": "bm.java",
-        "sha256": "895780ae82f29ef866fbb62ab27fe983864cb7da42e5fb89f1b02bd83e60b94d"
+        "sha256": "4038d084e03cb34613f645e3819d09606507e5822ca544660b0ef113757fedf7"
       },
       {
         "file": "c.java",
-        "sha256": "a8613425e8e1cd880be1cc1616f3e6265ee44d045c7c647d98770bdd470d9630"
+        "sha256": "c329f7da710b0c2b22975c58b67ca26a93aa759caa58554cacea97af37fe402f"
       },
       {
         "file": "ca.java",
-        "sha256": "398d4628a4ae12f67b41baa0d0848a469bc52a69ed04fd2b658922cb83dc1fcd"
+        "sha256": "bd472d293dcc3544337eb664229c1ea401d875acfcbb615e480e6525b5a16263"
       },
       {
         "file": "cb.java",
@@ -40848,15 +39427,15 @@
       },
       {
         "file": "cd.java",
-        "sha256": "0a220e1f6106775e85ce4a30780d8d632de82c9450288f6e5cc2de33734bad9d"
+        "sha256": "02c392d13986a8581be510964a15241f1fdc0d0cbce6dd97e6490908a6597b90"
       },
       {
         "file": "cf.java",
-        "sha256": "1d1f06e5741763e0ef51e3f27bd893662ab722809d43cda2047837ac8f68b700"
+        "sha256": "d2c1198adc34fdd8785ed7bf079d4e5be1f7c88f3b464a36d512575108668ef0"
       },
       {
         "file": "ch.java",
-        "sha256": "cae45b2a33b0dd0d76ad5088a9be395383a566be398fbceb41d805e7f1fc5b28"
+        "sha256": "7bfc5f48ca6493d95f34aa4af3c4efa6c11de3f3b747dc776c378ec10401d0a1"
       },
       {
         "file": "cj.java",
@@ -40864,19 +39443,19 @@
       },
       {
         "file": "ck.java",
-        "sha256": "58e5a8fd09255b67ae26bd7e3513150c0034fe654e8085fb317182e2ce6adc65"
+        "sha256": "e230435455d4bf6263699fc13389a31e35bb7d291914e3ea2ee2296dc6a31027"
       },
       {
         "file": "cl.java",
-        "sha256": "335fdf8fe1b02ba2a8910be1f7743a94c30e4efbba5af396e005ca2119c2c254"
+        "sha256": "698d50d24d4a52abd1696f7001864b20aef6cb819801dc1181d08c26c8223d81"
       },
       {
         "file": "cm.java",
-        "sha256": "e3384ef65fa4829c7b3a87d977ccc9311ac1304dbf2d9b41281a73df76aad4ac"
+        "sha256": "f288dd5554dc38504f3405b27941f3f3f3e740aa5ab7ea001ae57b697d15bd5d"
       },
       {
         "file": "d.java",
-        "sha256": "c89708cc96ab627d025fc76991c6568aa8e3c91dd717e959ef2819e6c81abfa6"
+        "sha256": "472a07857d2cb82d4ba42feb925b327c9965f9f9d3d0cbbaa4af987d94e6bfcb"
       },
       {
         "file": "dd.java",
@@ -40888,15 +39467,15 @@
       },
       {
         "file": "dj.java",
-        "sha256": "6775ab9c8b61e45c596941c89867f4a9ccf4544471e2c25b1d4e232f57ff6bb7"
+        "sha256": "f184cc1f9d3a390bf303844c4c73d612c8ce98f4137a396ba0b0aebb4790ac36"
       },
       {
         "file": "dk.java",
-        "sha256": "7029e04c4a8e9131c5b6bc4be66219a0339e9ac0ed9061a770087f7a2857a344"
+        "sha256": "2eef46c0633f01872586d32952821b32e912d1b8c149f39c66d98adfb69c4b62"
       },
       {
         "file": "dm.java",
-        "sha256": "267a3f94645e1e378d67fb6077accf4d35a8938d41cfa23b4c42762a1aa86eab"
+        "sha256": "6f43627adc6de9ec3a01cc444b17c5e0ffb9617cc269caddf9b9d2528bc274ce"
       },
       {
         "file": "ea.java",
@@ -40904,23 +39483,23 @@
       },
       {
         "file": "eb.java",
-        "sha256": "71b032c94dc77bb2882147201859d6e7e8bb6d58dade36e0a18465dbed32c368"
+        "sha256": "bb72f56c7df33e0edc578fe4bfebbce32010eee5c00d4da35f977a214cbd86d6"
       },
       {
         "file": "ec.java",
-        "sha256": "de1eda9822f45f318b436f677a32556b6de4a770c77d119a2d4f01e706dc41b8"
+        "sha256": "c7b20985585abfee94c0f56208e7375528419b5240b65404d9079fa9628dd196"
       },
       {
         "file": "ee.java",
-        "sha256": "d644db826fd9dddd31f02ab15aa5404db80cac382faa08f447d9ef5b222062a6"
+        "sha256": "38cbe95363441de249920da0203853db074ffdd0d457d8742de32817b91f2cb6"
       },
       {
         "file": "eg.java",
-        "sha256": "c8f7fb5d6ddfc5873fc26bec68853df71a096588a4b7681dd2e6cb2c26a45308"
+        "sha256": "d579917a6727c3c872f0abb4ac4ba50e48e422a258a8686537b03ba6c3c4425e"
       },
       {
         "file": "eh.java",
-        "sha256": "bbbc4f4eb3fe19eed55d13f4a6e51c5ede72f97bc8601564ea3e0744c4835839"
+        "sha256": "49383bfc8a61ae06c3d26a54499783d9d140e0f58590da39bf6d4932a4f39c8b"
       },
       {
         "file": "ej.java",
@@ -40932,19 +39511,19 @@
       },
       {
         "file": "el.java",
-        "sha256": "0f5e313ffc89fa4d0969c6b67baa6ffbb17dc7b94bdea634a3978df2ea281011"
+        "sha256": "87927427ea33bcda15de54adde89137906bee6ce2d0cc516089961e671f2be64"
       },
       {
         "file": "em.java",
-        "sha256": "c69dd481edef069340778cfed8bc6b5e0561a4fcf93cf132f1dacd9f8577a427"
+        "sha256": "ef533dbaaebb9a0ce88e8e0ce144a2aefb7e506a6d4d3376c54874377f079b17"
       },
       {
         "file": "f.java",
-        "sha256": "9a930f4c2b4a3c56eeca6cbd60a4704bdeb4052b374cb47580d124eaedb6c5d6"
+        "sha256": "b68ceeb86fd03b9b61e50663e84ad7bb84a7d81e608f77ca1a21cf0d8b9a6717"
       },
       {
         "file": "fc.java",
-        "sha256": "a4a7fc3c253fea490eaf6df2df0e0b6e85fb4c00be2502cb16b9df2394cc164b"
+        "sha256": "1b1bdd0c342eba4c98151c99266a996a0b3f52e99c2a9eabcdc7cc1adac42714"
       },
       {
         "file": "fd.java",
@@ -40952,11 +39531,11 @@
       },
       {
         "file": "fe.java",
-        "sha256": "a11d61790369a071d1d919419820ef785ef8df77407ff919351c59d0ee670279"
+        "sha256": "89cbea64d4712aa0bf8985d3511857df0398a9fdb45be04c64aac029085420b6"
       },
       {
         "file": "fi.java",
-        "sha256": "95faa5255ea439b9fcf8827f606af1614ee8b853628d1d74d738533b0250d107"
+        "sha256": "fef103c309a7df00e53af7b856be1f734ba0331a9b5eeb91e6b90d7b69b24ede"
       },
       {
         "file": "fk.java",
@@ -40968,11 +39547,11 @@
       },
       {
         "file": "g.java",
-        "sha256": "a725190ed05da2f64f5e0f16073268a127bd6d38a3fb2a542839d1d3ea5e129c"
+        "sha256": "935de2a3a20028a8882b70a9e4e769e3ccab9fd34ae55dfe195175821f78d901"
       },
       {
         "file": "gb.java",
-        "sha256": "16696ece8ce049bbff923f14101010f04b40d4e319e296798e2283d1117a7d34"
+        "sha256": "29451d90351fa16fe1b2f9b99b2ece296beb8942ca6f07427f069323ba6422c9"
       },
       {
         "file": "gd.java",
@@ -40980,7 +39559,7 @@
       },
       {
         "file": "ge.java",
-        "sha256": "3a8c6f402f1be256361357e1a14266f434fb6725d7a2c6117a0db09a419e49d5"
+        "sha256": "36fd1cb973a2a0495eccdcaf5d30d868772d25b16643c8992b68e7309b985d93"
       },
       {
         "file": "gf.java",
@@ -40992,7 +39571,7 @@
       },
       {
         "file": "gh.java",
-        "sha256": "21e59ee1672ac632376d137c780454964b69593d2a5cd85ae43c247694ae4db8"
+        "sha256": "44c65c4eb3d927372748e3e7a291277f0251734981516d5728d4d29a9f96bb98"
       },
       {
         "file": "gi.java",
@@ -41020,11 +39599,11 @@
       },
       {
         "file": "hc.java",
-        "sha256": "98d3a44b92313e26af91d2b9d4035fb620a08b1b52ca126be68f999718fd5a27"
+        "sha256": "bf802b8e17a0a4cd9f54b75cacf05e5f5852d8c79ddb04942643e54a27a0c251"
       },
       {
         "file": "hd.java",
-        "sha256": "426287ee047708b794bc14d907d39588781a44dfd92ae5826c9ed5cc3e586382"
+        "sha256": "870fecb6108c4b765f26738417628689f3f5cabc191bba45c332891e16b6242d"
       },
       {
         "file": "he.java",
@@ -41044,7 +39623,7 @@
       },
       {
         "file": "hi.java",
-        "sha256": "1b704d94dd4340fbcfd8d72818cf3e890c10202fa90676af121c855f303617bd"
+        "sha256": "71ca45a00e9fe4133fdf9993d98f9d006f591cc9df70ee384beb1b856d0b0cca"
       },
       {
         "file": "hj.java",
@@ -41056,7 +39635,7 @@
       },
       {
         "file": "i.java",
-        "sha256": "85e42d7106512f0946d8a26c44f77fec5120f97d088cb58b1f753bd1658d77c6"
+        "sha256": "edd3df1d088986b0bf4c7e64e5839ac484dffb44c24d6a8d89ffbf6bc67bceef"
       },
       {
         "file": "ib.java",
@@ -41072,7 +39651,7 @@
       },
       {
         "file": "ih.java",
-        "sha256": "617efed8dea65d784154281e42db334bf0d3eecbd1691d176166c1ad9d2d64b0"
+        "sha256": "22e08fa72f55ac7e4d779e7546852ceb9a64ee737229c85239554f24b2f84d2f"
       },
       {
         "file": "ii.java",
@@ -41084,39 +39663,39 @@
       },
       {
         "file": "ik.java",
-        "sha256": "186a6936bc8a5255453625e2267983a1881cfe39290288234882e84926cd7097"
+        "sha256": "df35b8b6954d5fbb9759de3f90130c417da549c1789249d908f759b39c987103"
       },
       {
         "file": "il.java",
-        "sha256": "7451dee608e21675c35409c475ac24a35c857cf7e4c6a0ca0669b3a97ecfb6d8"
+        "sha256": "72c73c10c3edc46015ade2d44bf5fda4d56b28cef8248f53b74f6be37e607a0f"
       },
       {
         "file": "ja.java",
-        "sha256": "706c58c903d2b476989b739b544c71752b9bbb2600451949d6b17cadb0ca7452"
+        "sha256": "b599178e381c7dbf310ae64ef01e80d8549f383b1d6f0bbe0da2ced7b8c1b28a"
       },
       {
         "file": "jc.java",
-        "sha256": "0c97f83b5080c7d6f0225ea7797e98b42270d6cda34166bf41b2330a6bfbf353"
+        "sha256": "7be71b18e324467536c836324ef153dbf814133ac88e4ffa417c519cb1caa09e"
       },
       {
         "file": "je.java",
-        "sha256": "86c18f5396460df6c8f2837278fbe19cd80a8ed6c9db6602fed76c495b5155b3"
+        "sha256": "3a440bca829ac0bf45393018a193ce17ad6d3762a3c75032a8acd13db920e2a1"
       },
       {
         "file": "jf.java",
-        "sha256": "e9bef6b718e5da203bf3159910db903e230f6f5a47dd1e44ee88da59403067f8"
+        "sha256": "f4ee835bd36679514bb2760fa218870f0bb13d8df0048ac8c8aa0efa6ca57594"
       },
       {
         "file": "jg.java",
-        "sha256": "c64ffb17da67400e0b2d7f7e20f734573e144abb2e34c1863d2ef28f92cb91bf"
+        "sha256": "529ce77410c9ed09550253e88c2c063ade187bcf7224fa196dc2ea46784f4fa2"
       },
       {
         "file": "jh.java",
-        "sha256": "f2419a126676ac06de28e0a5c475245e686f6dd89f91bfefeadd214e63e39a70"
+        "sha256": "52341bc5c2e41aa952569cf7efe77a7f95d98c19d5c8c72ef5089b1203557124"
       },
       {
         "file": "ji.java",
-        "sha256": "b0c6e6001b530a222617626921b06294e8553d2968dd5ed5b0a7a671f2a056a8"
+        "sha256": "13eb14a2baf1b5723b7803899a65ccca29cd3eb5d6c459095271a16ef2088a4f"
       },
       {
         "file": "jj.java",
@@ -41124,7 +39703,7 @@
       },
       {
         "file": "jk.java",
-        "sha256": "a8ea8c5c7eff0ac594dc836eebd774b72cf1eb0cd3513bfec3b93e6eb28f4995"
+        "sha256": "774d685304299dc2b8aa9f4048e2e4c60b048fb01cbb4325357d4e92a6bbfb84"
       },
       {
         "file": "jl.java",
@@ -41136,7 +39715,7 @@
       },
       {
         "file": "ka.java",
-        "sha256": "7791d233baa87e312cc31ba00ec9ed4cf67d6ecdc42869c001b570031240e98f"
+        "sha256": "043f5d235e6a7fb3d4678ca498d5214847f2f77b96708af77f938263e3dca401"
       },
       {
         "file": "kb.java",
@@ -41144,7 +39723,7 @@
       },
       {
         "file": "kc.java",
-        "sha256": "d48f461ab574955a2e648ab4d11f0d338b6cdced65872b0fd2c2af10a56a8f03"
+        "sha256": "05a0bee627c1329882f97cd3152dcea1409e6793fd98063c9bb166869b73649e"
       },
       {
         "file": "kd.java",
@@ -41168,15 +39747,15 @@
       },
       {
         "file": "kj.java",
-        "sha256": "05b95c735a8a36fccdafdac3900eadd700caadbfd061005bd5f696371d21c73e"
+        "sha256": "8f57ba23ed19a8337ca189f5b913bf8a657229a83561ec10d2f8e0a5fb25bec0"
       },
       {
         "file": "kk.java",
-        "sha256": "e6e3d37379a5a5ba976321e8a4b7e4361c150c0b9c45354e31125ed6b431e2c2"
+        "sha256": "77951c5c55d6ca26fb72f1f25c1f19461772d8adc21182a3ccf6a07e1cf7d1dc"
       },
       {
         "file": "kl.java",
-        "sha256": "c3ec3c1524b162288719663ee22b47f46d45f24159b61d61df96341e1149ce73"
+        "sha256": "7838173d09ebd2e7ae827d6ce03e947dea23b00b8558996b0ae663c9d93c62fb"
       },
       {
         "file": "l.java",
@@ -41188,11 +39767,11 @@
       },
       {
         "file": "lc.java",
-        "sha256": "768b49a4c705297ff5758d24d9074aed1849b5e4ed42db702fd68bc256d41eda"
+        "sha256": "1d8b58aa0d6cda24999be21c3d77988ed37e2325c50cce0cad1c3bb75381c0a8"
       },
       {
         "file": "ld.java",
-        "sha256": "18b7f9afff204828f21675fee194c01b857d681f91a4a2c0490ddc0e9bff1770"
+        "sha256": "aff2d3e4734c2337db1e3b6df8120376bac4b0a0cd42f1b03936c262fc5f5daf"
       },
       {
         "file": "le.java",
@@ -41220,11 +39799,11 @@
       },
       {
         "file": "m.java",
-        "sha256": "6faaf35843bb7de61b42ce383671fbf1a84f49ab989566b2b78688860f41032f"
+        "sha256": "2a75a439a0d81d238b1ae93ec45e264d7ac1fddf34c15bc267772db4c0fd2187"
       },
       {
         "file": "ma.java",
-        "sha256": "27dec9bf74553fe58de3b10b96379e285accf9c6d05c84110a5011284ee0b27f"
+        "sha256": "9a519b0b2869fbd5d94208ad2a04a119e52ca350959086c6a01d6a904579b70f"
       },
       {
         "file": "mc.java",
@@ -41256,15 +39835,15 @@
       },
       {
         "file": "na.java",
-        "sha256": "e1a9473bd5a801c2ccc0f88b6ab3d02585d7c4410d1d4bc2ececadf701951dff"
+        "sha256": "90f73454c8c85c6e2c5dc170e994471a681eaf3590730f98daba85a1930ab351"
       },
       {
         "file": "nb.java",
-        "sha256": "eacebef58f30189459837ce6211c9ba88ef6a3500a9a759a6bff846af0d14161"
+        "sha256": "c3e4aa45647b610234fad6b1b3eebe01d0121b47ab4a531105e15f6b5bd1263e"
       },
       {
         "file": "nc.java",
-        "sha256": "96abb38042089572b86e6c0da755ea2c09ee33ae5032af56381f2dc7da092088"
+        "sha256": "52c07242a17d8d356899d252c2eac6c5835210dec9f5b17134b4bf92c621e9c3"
       },
       {
         "file": "ne.java",
@@ -41272,7 +39851,7 @@
       },
       {
         "file": "nf.java",
-        "sha256": "3a55be4c7d28f7c5d9c6236dfed04df5e734cc3d3f062f6beaa020eca4f3335f"
+        "sha256": "3d7df8d2146c465785b00db3198327657bf67f6861faefbdb569c68fdc4aa4a1"
       },
       {
         "file": "ng.java",
@@ -41280,7 +39859,7 @@
       },
       {
         "file": "nh.java",
-        "sha256": "731e6b29b43e8969e5ea822c4870ba2d945e9d46f4093e7563bd9fbb27627deb"
+        "sha256": "aeb9c4110c2cda7a82d1ceec57155acb3d1467073d70147fc834ce984da81ff1"
       },
       {
         "file": "ni.java",
@@ -41300,11 +39879,11 @@
       },
       {
         "file": "oc.java",
-        "sha256": "db1dda04101d73d846240132050d9101c7342b45379a47df478ce6419a27b6d4"
+        "sha256": "0fcb4211fe2300ccdab791714a706256acb3fbbfeffe526e0574c8617a48915f"
       },
       {
         "file": "oe.java",
-        "sha256": "bcc8caebb4942ae88f5987928cad2f1a83236e309b13167d0481a0da11b5c33c"
+        "sha256": "7a87ae0901714f3e44ce288efad4a06d14169bcdc3143b82ca11465f331e291e"
       },
       {
         "file": "ok.java",
@@ -41312,11 +39891,11 @@
       },
       {
         "file": "p.java",
-        "sha256": "f19972540cd5c4d959c13144b0dc91c9c3e6d5d54ec0d069205e4878ac36748d"
+        "sha256": "067f3370104e958e4e6cb510430de17366936455a8b889f7ffd4b53537291f65"
       },
       {
         "file": "pa.java",
-        "sha256": "aebabf6dd5dd0ba1ed3a94793fdbbaf1fda2db794288dbf210f6823e14965647"
+        "sha256": "c1ac48c2b6d823b30b154c9854c93df28df9ec9a58c2e7f36f56776fec9ac8f4"
       },
       {
         "file": "pb.java",
@@ -41328,11 +39907,11 @@
       },
       {
         "file": "pd.java",
-        "sha256": "beaf2ba4af542d4070dc34d39421ae1134f9d6ebdab5e1c9d7c552f4cda432e2"
+        "sha256": "f22d39e885cafd74e497193765871d7c2c00c804d8d102c9c75be966c196352b"
       },
       {
         "file": "pg.java",
-        "sha256": "5d5a04a24091ab8f06a71d858eedd0d4281622db0f423d47dbabbce44e38b88c"
+        "sha256": "7e015b5ae3bf58760a9cf86624cfa6c4cdedfe3182c63128961d841fe5325058"
       },
       {
         "file": "ph.java",
@@ -41340,7 +39919,7 @@
       },
       {
         "file": "pi.java",
-        "sha256": "2df6d62a94dc241608190141ef5eba35d6118378ba71edd2d523e3f2c751ed46"
+        "sha256": "56d1562937ef66593071e9a415bab6b04e8278733ca4775e120f2f764706f7f4"
       },
       {
         "file": "pj.java",
@@ -41348,15 +39927,15 @@
       },
       {
         "file": "pk.java",
-        "sha256": "88d28e6b14430df9e8e5f64cf5b5a491bb60eb485c47126bf9334b7c9250cc04"
+        "sha256": "5e1e5716f065c04cc6047537fe21a719e7ac824d9cd8e34402112271facde5ff"
       },
       {
         "file": "q.java",
-        "sha256": "0de28a8c9ddd94c68eb74e0f203d9aa11ef2ccdb1a56f6c330fd8671d22d8d1d"
+        "sha256": "5395a1601cd226ab6f69d5f0dc6d04ff1a30d3c327c9958365c33d70149e89e7"
       },
       {
         "file": "qa.java",
-        "sha256": "6e1b2da8d8c3d5475ed3628845b0d3348998337ff99efb6f7a4013d51e279f60"
+        "sha256": "9501673d99169ebcfc02cf508fcc7954a24224f082ff9eb2910c0e01090e1174"
       },
       {
         "file": "qb.java",
@@ -41364,15 +39943,15 @@
       },
       {
         "file": "qc.java",
-        "sha256": "94baa70d0629547e6955d4576f2f9ce56e51deb45729bc09468664e75b4fa828"
+        "sha256": "92d61f28dc3d804d4d25eccb217c2c1c0ff8d834b0f3954abdb8f15a701e9980"
       },
       {
         "file": "qd.java",
-        "sha256": "a9360b4ffb3e45586fd314ff84389d4e4dfa381da914954ecac610b60e67902a"
+        "sha256": "af31429dcca708776740541ea8ceb2c1b2bc6f85c0738782cce55724bc849fee"
       },
       {
         "file": "qe.java",
-        "sha256": "a46903ed3b7323dbf55ac9242838943843ad3f100573b11a7e2371340f9274fa"
+        "sha256": "17cc609d62fc599cf1078eda6f4cd1e7c0e94e3a94b97b38e58f5960aca388a9"
       },
       {
         "file": "qf.java",
@@ -41384,15 +39963,15 @@
       },
       {
         "file": "qi.java",
-        "sha256": "9a08f86bd97a7808e44cc54ed9f2b091e335ed70f153b04322059b62bb31fde2"
+        "sha256": "ea2d47fd7351cf1d046381839d1639f7d657ac1b561e9545feef78d26113c0c3"
       },
       {
         "file": "qk.java",
-        "sha256": "9f8af1da030fbe1b7c3b1a3fb18a4173608cab56cbebfbc4321d512e4fe09320"
+        "sha256": "438b4f8ab1a284dd23ecfd93d4620dad893ff08d68e53338ce57a8f776580008"
       },
       {
         "file": "r.java",
-        "sha256": "acafe7adfc88c04897ff41e42867b368492c298a7f3dfb334a23504a33e6f95e"
+        "sha256": "114222b60b285dba413147665e9a322859cc389d7f752fda1712040cc8e2429f"
       },
       {
         "file": "ra.java",
@@ -41408,7 +39987,7 @@
       },
       {
         "file": "rd.java",
-        "sha256": "945d04c0c9169e65f365271981fc2b1cf2b4c6e4f355255cc81785671c150a88"
+        "sha256": "809f208305d55ed15c858d99a45c0b3245daba28524f7c0789d2250904cd3f3d"
       },
       {
         "file": "re.java",
@@ -41416,11 +39995,11 @@
       },
       {
         "file": "rh.java",
-        "sha256": "4ab4cfc0425276b009a1a8f0531506991bd5cc3a3dc20d5794e4f10ede456ada"
+        "sha256": "7307d68ecbcf7266f4c0fb36950f651994656c8a15a68414988e00c0b71eab3c"
       },
       {
         "file": "ri.java",
-        "sha256": "c6674e0142da6c53c5576d9e8c95239e5e6148c9ca1cc4549b418157757403fc"
+        "sha256": "49222a9c8661b1b59c03d07e647ab903f20b4364d82f61c706e3351ee748cbec"
       },
       {
         "file": "rj.java",
@@ -41428,11 +40007,11 @@
       },
       {
         "file": "s.java",
-        "sha256": "be5e1874d72724ea441a81da7f48d97147e265fb70b30072d49c29cae7050ab0"
+        "sha256": "e931e844409ea352bc86794fed52f419dce010512977015eb506991959f432ed"
       },
       {
         "file": "sa.java",
-        "sha256": "ad288cf5414cbdee9f46eddb2e2e7e80def6a35cab29c09055508d6985a93fff"
+        "sha256": "ce7e5c980ff5b3c0d28692647541f6ae9c8450ed053552b62464314e0a516278"
       },
       {
         "file": "sb.java",
@@ -41444,7 +40023,7 @@
       },
       {
         "file": "sd.java",
-        "sha256": "bb557f50dc5d591ba541e939ff5a8c4876b679e8f99076fedb1009dbe3d4622e"
+        "sha256": "9f03036eff0f2415cadeeeaf376df3267264d5491e0c1158c29622a0f8b62e0f"
       },
       {
         "file": "sg.java",
@@ -41452,31 +40031,31 @@
       },
       {
         "file": "sh.java",
-        "sha256": "c6e04f9ab1064d7792d6200e80ba4933f481c07c400c403f2c9d9136cbe07334"
+        "sha256": "ad548807a76fb4d7e4be2f62dca9d0676499b5aec45a55b28f655a2ed09b4c18"
       },
       {
         "file": "si.java",
-        "sha256": "c03e1e1bd9eecca42940419426b7a4542a68b77998d44925a657968492a166c3"
+        "sha256": "bdbe81ac66141639ce1cdd22301f58421acb45ccec0dfce670eb6b8a3faa0eca"
       },
       {
         "file": "sk.java",
-        "sha256": "495a3cb375fea3a46b7cbe0f90bfcfa23768d0b9054208ed4ab6b527b15157d2"
+        "sha256": "6305e51eb7819a1efb7cc3fcbdb8016a818419033fa527ca376f9e5549b3f3bc"
       },
       {
         "file": "sl.java",
-        "sha256": "41d9d89d9bfaf9cbbdacd930538e4240ebbc2f20d4a71a0f4f297d3acb3e0bca"
+        "sha256": "c9a3c5663aa70f5605b908885e5bc27dfc694cdd3925caf447208ab9e6078e48"
       },
       {
         "file": "tb.java",
-        "sha256": "ba33fc2adf50a3c0f52720b7c819128cda6fd789d5998217abd28b1f206084a2"
+        "sha256": "89626a9747d10f7e24536265df0e2ebbd65056fcef2f03deda1568963e8a9886"
       },
       {
         "file": "tc.java",
-        "sha256": "a38959903fd92ecdadba7ce34001c04d60d5c7bf940325e9ab7248d77155781e"
+        "sha256": "f22f5851c42444d2c71c62d8c83ba27c771ce72562dde62337e0ff8d28ad9c00"
       },
       {
         "file": "td.java",
-        "sha256": "bc9ee64c754de3b5f08c48148467b166f31fc7ae7a78d7ade655a669af261cd3"
+        "sha256": "9978fec72796e45f9b78b6063f4a9024b6f935b4082fee3551e329cafad803c9"
       },
       {
         "file": "te.java",
@@ -41500,15 +40079,15 @@
       },
       {
         "file": "u.java",
-        "sha256": "c6479cc1c58bb1e09c618fbcd2b34e01ebca2a2804b12477b7ebae8f6e7e1ee0"
+        "sha256": "c1da302bb40578d38b2e97147bf309d2507d9f3c281bf0750b9a01ce2a9251f1"
       },
       {
         "file": "ue.java",
-        "sha256": "d91acb8d6b6edc4a5300e0c83831a234a9752ba011b8b9da72f3c0f72b4dc831"
+        "sha256": "f197a2d04aa39915b1e2274dd3d128bf21d1bed619d8876fc0b83ec4e9f386f1"
       },
       {
         "file": "uf.java",
-        "sha256": "91d2aa8116f73e313f30e47abb84974ae4cd8e4faccf33846f1ba4202421a3ed"
+        "sha256": "81b2e80841d3c7fb78f7abde75dcdcff36e2996fc7383e234fbc4ef7454183fa"
       },
       {
         "file": "ug.java",
@@ -41524,15 +40103,15 @@
       },
       {
         "file": "uk.java",
-        "sha256": "3b30ccd19d1ac105f348c4dd5cd4060dddbae1d6c898ff651e4100280a504adf"
+        "sha256": "c3c6a0a5437d637ba50d87719bf3975701e767df8d0087d0549aa3d3d8d56ad9"
       },
       {
         "file": "ul.java",
-        "sha256": "bc93b4bcd0ca30675611a64cddd4a241389989f16c289d182a61c238754b4dc1"
+        "sha256": "ce71776e1ac03bd5a5207334f70f7dfb9a6f02f9d348aca98d5cacefaefbfd8a"
       },
       {
         "file": "v.java",
-        "sha256": "164994232433982aca1375fd2bf24b20ea2f51b4af656d9b96fbaf1317047ae0"
+        "sha256": "57c02fae4c9533d4b0942e2aaa224e5f3a2a6ab3fb9d8bcf9b6e74f352a9d8bc"
       },
       {
         "file": "va.java",
@@ -41540,15 +40119,15 @@
       },
       {
         "file": "vb.java",
-        "sha256": "dbc1d96f16bbafe8771a31079403a65f3f41fe89f573328c80f7017e19a67558"
+        "sha256": "fa64561db890931d8d1ed2e201c6fa67d3c8a44dfef0049c029683f76f67f074"
       },
       {
         "file": "vc.java",
-        "sha256": "09ebfd80b1a199c5fcb619922c837228d04d065d66dcfc8ab043e738ba8f8f31"
+        "sha256": "f19ec4b36c261bb3d934da686b87a5716b58c55d190d999f78fa9f9e77cd6b7a"
       },
       {
         "file": "vd.java",
-        "sha256": "819d1d246449db8f808080e99ea62caba7e0f4ff50270fc6ed5b4e29bbc3e236"
+        "sha256": "f4896dcbfaed064bb726ce0d1a3a3180fc5b2a8f34a0e0f84e5a055ab1d776df"
       },
       {
         "file": "ve.java",
@@ -41556,7 +40135,7 @@
       },
       {
         "file": "vf.java",
-        "sha256": "cea3fbd7f64062785033450a155e74a6499574539b64c654b66ff935347fb8ba"
+        "sha256": "e90661f65a173e549d881d9f9c8b3384eaa35aeaf2bcc1a34710566292f34eb5"
       },
       {
         "file": "vg.java",
@@ -41564,7 +40143,7 @@
       },
       {
         "file": "vh.java",
-        "sha256": "3c16fb41d43411f684d4ce78adf3ec66b2d42f5b2da304e765e392674abdbe39"
+        "sha256": "e130a9f9a19110355d22a8f5a7fd432a3fd49a35e69c223f85f16439acdb51de"
       },
       {
         "file": "vj.java",
@@ -41572,7 +40151,7 @@
       },
       {
         "file": "vk.java",
-        "sha256": "491c97e2b64aafbc8f07b3d52743a58b111b2dbc03b996089cf56aea865a8399"
+        "sha256": "9b4bfedb91ab174b90a414f50ce5e66a144b64a2904b98dfbd2ec1cd670f0eea"
       },
       {
         "file": "w.java",
@@ -41588,11 +40167,11 @@
       },
       {
         "file": "wd.java",
-        "sha256": "a96474d325ea00853afe0c4413b4cdac8f9a64bdc4f96513d241a6d5d615f36a"
+        "sha256": "e94e3f1613a0f717181443253eb24628f21ae14e00ea062ab53fcc9cdc5ced72"
       },
       {
         "file": "wf.java",
-        "sha256": "bd8147007f08a61092130cb52a8da3d9b983d3c8531b54d5a18e8f79b0746684"
+        "sha256": "f72208a660acbd40061abac4aed8d5a70b81fe424de283e57e5f6e66d603e18c"
       },
       {
         "file": "wg.java",
@@ -41600,7 +40179,7 @@
       },
       {
         "file": "wh.java",
-        "sha256": "5a3096cc3a471d1336925b8d2c98f296c7454bfb6efd31cc4e614719d052b4ac"
+        "sha256": "f288c32d9df001698be2de0980671b024c9d2bff34275897e76ecd3f1bd46e3c"
       },
       {
         "file": "wi.java",
@@ -41612,7 +40191,7 @@
       },
       {
         "file": "wl.java",
-        "sha256": "bef81fd52dc8de77f32031c1f702b1ed7c3de69070781552d327d8815e37c2fe"
+        "sha256": "3b480c26f191de1c697025a0e190ad9680d2f07e87234a739b3bd7d002fe533e"
       }
     ],
     "nativeEvidence": [
@@ -43926,7 +42505,7 @@
       "sourceDeclarations": 19558,
       "bindingsCompared": 138502,
       "overrideRelationships": 388,
-      "identifierEdits": 51926,
+      "identifierEdits": 52854,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -43982,7 +42561,8 @@
         "Pass74 names all GzipInflater instance declarations and selected archive/Bzip2 entry and bit-reader contracts/state. Signed lengths, optional nonzero maximum, complement raw branch, allocation/alias order, fixed gzip header/full backing input, ignored inflate count/finished/trailer, unchanged input cursor, reused inflater/reset, shared locks, Bzip2 unused packed length/partial output and success-only array release remain. Native74 controlled cases cover limits/routing, declared packed-length mismatch, gzip corrupted magic/deflate/trailer and partial destinations, reset/cursor, one stripped Bzh1 vector and early end. Seven previous native traces and all previous rules/source pins remain. Deep Bzip2 locals/state/control flow, arbitrary malformed inputs, optional gzip header fields, full assets/gameplay and phone/FPS/heap behavior remain unverified or unfinished.",
         "Pass75 names all Bzip2Decoder declarations and Bzip2DecoderState instance fields. Forced100k workspace, byte alphabet, canonical Huffman limits/bases/symbols,50-symbol selectors, RUNA/RUNB weighting, chunked MTF movement/rebuild, packed inverse links and signed pending-run emission keep numeric/alias/partial-state/empty-overflow effects. Reused roles remain explicit; large labeled bodies and duplicate publication tails are not restructured. Native40 controlled cases compare six fixed level1 stripped vectors including120064-byte multi-block data, independent full/partial output oracles and three malformed inputs followed by recovery. Failures retain assigned input/output arrays and successful recovery clears them. Eight previous traces, all previous complete rules and source pins remain. Arbitrary corrupt/randomized streams, comprehensive Bzip2 continuation/corruption/concurrency behavior, real assets/server/gameplay and phone/FPS/heap remain unverified. Unknown static helpers and large control-flow bodies remain unfinished.",
         "Pass77 removes only redundant labels and nondeclaring plain block frames after exact lexical jump-destination proof. Java AST event streams and all transfer destinations match for303 files; variable scopes, try/catch/finally and monitor ownership remain. Generic2048 native comparisons verify controlled effects, shadows, failures and lock release. Three wider try-with-resources fixture failures also occur on the pinned pre-cleanup baseline. Large labeled bodies, opaque helpers, full assets/gameplay and phone/FPS/heap remain unverified.",
-        "Pass78 folds17 literal primitive-local boolean decisions through exact same-block breaks. All predicate operand bytes/order, unboxing/NaNs, calls, failures and partial state remain, with no relational complement. Extra branch effects/declarations/alternate branches, protected/monitor crossings, boxed/field/ambiguous targets and unknown syntax refuse folding. Native13824 comparisons cover the generic decision/protection scopes;42 emitter tests pass and the optional pass77 frame-only AST corpus check is skipped for this syntax change. All declarations and override rows remain; only17 duplicate local-store references disappear. Full assets/platform/server/gameplay and browser/phone acceptance remain unverified."
+        "Pass78 folds17 literal primitive-local boolean decisions through exact same-block breaks. All predicate operand bytes/order, unboxing/NaNs, calls, failures and partial state remain, with no relational complement. Extra branch effects/declarations/alternate branches, protected/monitor crossings, boxed/field/ambiguous targets and unknown syntax refuse folding. Native13824 comparisons cover the generic decision/protection scopes;42 emitter tests pass and the optional pass77 frame-only AST corpus check is skipped for this syntax change. All declarations and override rows remain; only17 duplicate local-store references disappear. Full assets/platform/server/gameplay and browser/phone acceptance remain unverified.",
+        "Pass84 folds710 braced guard chains, merging913 conditions across131 files without alternate/intervening work. Predicate bytes/order, innermost declaration blocks and protected boundaries remain. Generic17280 native comparisons cover short circuits, nullable unboxing, NaNs, partial effects, failures, early returns, finally effects after invocation and lock ownership. All303 corpus token streams match only this documented guard/frame transform; all ordered naming bindings/ordinals remain. The optional pass77 frame-only AST check stays historical. Real assets/platform/server/gameplay and browser/phone acceptance remain unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -44018,13 +42598,13 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 6407,
-      "namedLocalDeclarations": 3260,
+      "guardedNamingRules": 6549,
+      "namedLocalDeclarations": 3356,
       "nonselectorDeclarationsPreserved": 19549,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 0,
+      "rawSourceLinesRemoved": 913,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -44049,7 +42629,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 44,
+      "genericEmitterTestGroups": 46,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -44057,7 +42637,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass83 changes only guarded identifier tokens. Raw source/decompiler pins remain those of pass79. No binding identity, order, ordinal or override changes.",
+      "referenceRemovalAttribution": "Pass84 changes only nested guard/control-frame syntax. Ordered declarations/references/overrides and every guarded naming object remain unchanged, with no ordinal migrations.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -44073,7 +42653,7 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 142,
+      "ruleChangesInCurrentPass": 0,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
@@ -44088,14 +42668,14 @@
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 142,
-      "sourceInputChangedInCurrentPass": false,
+      "namingRulesAddedInCurrentPass": 0,
+      "sourceInputChangedInCurrentPass": true,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 928,
-      "lastStructuralPassVersion": 79,
+      "identifierEditsAddedInCurrentPass": 0,
+      "lastStructuralPassVersion": 84,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -44480,7 +43060,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 45,
+      "genericEmitterTestsRegistered": 47,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -44560,7 +43140,68 @@
       "nativeMeshProjectionFaultTraceCases": 2016,
       "nativeMeshFaceCollectorTraceCases": 720,
       "nativeMeshUniformDepthQueueOracleCases": 5,
-      "nativeMeshProjectionTraceSha256": "57934a58138344ef260c50eab4b271b90db9c07dd51825e4a4f30874eeef3f34"
+      "nativeMeshProjectionTraceSha256": "57934a58138344ef260c50eab4b271b90db9c07dd51825e4a4f30874eeef3f34",
+      "nestedBracedGuardHistoricalPassVersion": 84,
+      "nestedBracedGuardChainsFolded": 710,
+      "nestedBracedGuardConditionsMerged": 913,
+      "nestedBracedGuardChangedJavaFiles": 131,
+      "nestedBracedGuardSourceLinesBefore": 79632,
+      "nestedBracedGuardSourceLinesAfter": 78719,
+      "nativeNestedBracedGuardComparisons": 17280,
+      "nestedBracedGuardMaximumConditions": 16,
+      "nestedBracedGuardMaximumPredicateTokens": 512,
+      "nestedBracedGuardExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "allOrderedNamingBindingsUnchanged": true,
+      "allGuardedRuleObjectsPreserved": true
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "4f02f56a771c27f1cf814157be4606fb4450cc9b",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "5420742cd2ea194a1f128fb0059e1e2bf3487e8e",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "1cb7031c92759a6a2847c2baf87db5def26a4edbaa50a6020409fb436987ae47",
+              "reproduce": "git archive --format=tar 5420742cd2ea194a1f128fb0059e1e2bf3487e8e | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "e38d0eccc0deda0553930a2a1227c684a47f4ac3",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "f0763fad063121cd249c9cfd0c522fa52d9b4ace",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "6f7b251bee18053f7db1c3970dc6a52d421b1709d3366b65c4cb11cf0b3c370e",
+              "reproduce": "git archive --format=tar f0763fad063121cd249c9cfd0c522fa52d9b4ace | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "fe14e8a5abf577b825d5d210ee51cce9b3d43481bc3715bff080220b5636cd25"
+      },
+      "reason": "Pass84 folds only proven nested braced guards and preserves all ordered declaration/reference/override identities, spellings and local ordinals. All6549 prior complete guarded rules are retained."
     }
   }
 }

@@ -163,28 +163,27 @@ final class jf implements dh {
         CharSequence var12 = null;
         var11 = Geoblox.field_C;
         try {
-          if (param0 != null) {
-            if (param3 > 0) {
-              var6_int = param0[0].fullWidth;
-              var7 = param0[2].fullWidth;
-              var8 = param0[1].fullWidth;
-              param0[0].drawGrayTinted(param2, param4, param1);
-              param0[2].drawGrayTinted(-var7 + (param2 + param3), param4, param1);
-              SoftwareRasterizer.saveClip(da.field_d);
-              SoftwareRasterizer.intersectClip(var6_int + param2, param4, -var7 + param3 + param2, param4 + param0[1].fullHeight);
-              var9 = param2 + var6_int;
-              var10 = -var7 + (param2 + param3);
-              for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-                param0[1].drawGrayTinted(param2, param4, param1);
-              }
-              SoftwareRasterizer.restoreClip(da.field_d);
-              if (param5 == -17154) {
-                return;
-              }
-              var12 = (CharSequence) null;
-              jf.encodeTextBytes((CharSequence) null, (byte) 66);
+          if ((param0 != null) &&
+              (param3 > 0)) {
+            var6_int = param0[0].fullWidth;
+            var7 = param0[2].fullWidth;
+            var8 = param0[1].fullWidth;
+            param0[0].drawGrayTinted(param2, param4, param1);
+            param0[2].drawGrayTinted(-var7 + (param2 + param3), param4, param1);
+            SoftwareRasterizer.saveClip(da.field_d);
+            SoftwareRasterizer.intersectClip(var6_int + param2, param4, -var7 + param3 + param2, param4 + param0[1].fullHeight);
+            var9 = param2 + var6_int;
+            var10 = -var7 + (param2 + param3);
+            for (param2 = var9; param2 < var10; param2 = param2 + var8) {
+              param0[1].drawGrayTinted(param2, param4, param1);
+            }
+            SoftwareRasterizer.restoreClip(da.field_d);
+            if (param5 == -17154) {
               return;
             }
+            var12 = (CharSequence) null;
+            jf.encodeTextBytes((CharSequence) null, (byte) 66);
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,15 +225,13 @@ final class jf implements dh {
             L2: {
               L3: {
                 characterCode = text.charAt(characterIndex);
-                if (characterCode > 0) {
-                  if (characterCode < 128) {
-                    break L3;
-                  }
+                if ((characterCode > 0) &&
+                    (characterCode < 128)) {
+                  break L3;
                 }
-                if (characterCode >= 160) {
-                  if (255 >= characterCode) {
-                    break L3;
-                  }
+                if ((characterCode >= 160) &&
+                    (255 >= characterCode)) {
+                  break L3;
                 }
                 if (8364 == characterCode) {
                   encodedBytes[characterIndex] = (byte)-128;

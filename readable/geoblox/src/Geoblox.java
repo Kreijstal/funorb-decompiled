@@ -254,82 +254,74 @@ public final class Geoblox extends wf {
           return true;
         }
         s.g(9);
-        if (wj.field_F.ensureIndexLoaded(0)) {
-          if (wj.field_F.loadAllGroups(true)) {
-            if (ah.field_c.ensureIndexLoaded(0)) {
-              stackIn_10_0 = ah.field_c;
-              stackIn_11_1 = (param0) ? false : true;
-              if (((ResourceArchive) (Object) stackIn_10_0).loadAllGroups(stackIn_11_1)) {
-                if (GzipInflater.field_a.ensureIndexLoaded(0)) {
-                  if (GzipInflater.field_a.loadAllGroups(true)) {
-                    if (cd.field_m.ensureIndexLoaded(0)) {
-                      if (cd.field_m.loadAllGroups(true)) {
-                        if (ii.fontMetricsArchive.ensureIndexLoaded(0)) {
-                          if (ii.fontMetricsArchive.loadAllGroups(true)) {
-                            if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
-                              if (ll.gameGraphicsArchive.loadGroupByName("", (byte) -127)) {
-                                if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
-                                  if (ll.gameGraphicsArchive.loadGroupByName("sun", (byte) -127)) {
-                                    L8: {
-                                      if (da.a(0, -112)) {
-                                        if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
-                                          if (ll.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127)) {
-                                            break L8;
-                                          }
-                                        }
-                                        lc.a(gf.formatArchiveGroupProgress(s.field_F, ll.gameGraphicsArchive, "halloween", uj.field_c, true), -2, 45.0f);
-                                        return false;
-                                      }
-                                    }
-                                    if (ki.basicUiGraphicsArchive.ensureIndexLoaded(0)) {
-                                      if (ki.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124)) {
-                                        if (param0) {
-                                          return true;
-                                        }
-                                        SecondaryDeque.c(480);
-                                        lc.a(uj.field_a, -2, 50.0f);
-                                        this.renderFrame(25853);
-                                        ef.field_e = true;
-                                        return true;
-                                      }
-                                    }
-                                    stackIn_47_0 = ff.waitingForGraphicsText;
-                                    stackIn_47_1 = ki.basicUiGraphicsArchive;
-                                    stackIn_47_2 = "basic";
-                                    stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
-                                    stackIn_48_4 = (param0) ? false : true;
-                                    lc.a(gf.formatArchiveGroupProgress(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4), -2, 50.0f);
-                                    return false;
-                                  }
-                                }
-                                lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
-                                return false;
-                              }
+        if ((wj.field_F.ensureIndexLoaded(0)) &&
+            (wj.field_F.loadAllGroups(true))) {
+          if (ah.field_c.ensureIndexLoaded(0)) {
+            stackIn_10_0 = ah.field_c;
+            stackIn_11_1 = (param0) ? false : true;
+            if (((ResourceArchive) (Object) stackIn_10_0).loadAllGroups(stackIn_11_1)) {
+              if ((GzipInflater.field_a.ensureIndexLoaded(0)) &&
+                  (GzipInflater.field_a.loadAllGroups(true))) {
+                if ((cd.field_m.ensureIndexLoaded(0)) &&
+                    (cd.field_m.loadAllGroups(true))) {
+                  if ((ii.fontMetricsArchive.ensureIndexLoaded(0)) &&
+                      (ii.fontMetricsArchive.loadAllGroups(true))) {
+                    if ((ll.gameGraphicsArchive.ensureIndexLoaded(0)) &&
+                        (ll.gameGraphicsArchive.loadGroupByName("", (byte) -127))) {
+                      if ((ll.gameGraphicsArchive.ensureIndexLoaded(0)) &&
+                          (ll.gameGraphicsArchive.loadGroupByName("sun", (byte) -127))) {
+                        L8: {
+                          if (da.a(0, -112)) {
+                            if ((ll.gameGraphicsArchive.ensureIndexLoaded(0)) &&
+                                (ll.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127))) {
+                              break L8;
                             }
-                            lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                            lc.a(gf.formatArchiveGroupProgress(s.field_F, ll.gameGraphicsArchive, "halloween", uj.field_c, true), -2, 45.0f);
                             return false;
                           }
                         }
-                        stackIn_27_0 = ik.waitingForFontsText;
-                        stackIn_27_1 = ii.fontMetricsArchive;
-                        stackIn_27_2 = "";
-                        stackIn_27_3 = nb.loadingFontsText;
-                        stackIn_28_4 = (param0) ? false : true;
-                        lc.a(gf.formatArchiveGroupProgress(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4), -2, 35.0f);
+                        if ((ki.basicUiGraphicsArchive.ensureIndexLoaded(0)) &&
+                            (ki.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124))) {
+                          if (param0) {
+                            return true;
+                          }
+                          SecondaryDeque.c(480);
+                          lc.a(uj.field_a, -2, 50.0f);
+                          this.renderFrame(25853);
+                          ef.field_e = true;
+                          return true;
+                        }
+                        stackIn_47_0 = ff.waitingForGraphicsText;
+                        stackIn_47_1 = ki.basicUiGraphicsArchive;
+                        stackIn_47_2 = "basic";
+                        stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
+                        stackIn_48_4 = (param0) ? false : true;
+                        lc.a(gf.formatArchiveGroupProgress(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4), -2, 50.0f);
                         return false;
                       }
+                      lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                      return false;
                     }
-                    lc.a(vd.a(ud.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
+                    lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                     return false;
                   }
+                  stackIn_27_0 = ik.waitingForFontsText;
+                  stackIn_27_1 = ii.fontMetricsArchive;
+                  stackIn_27_2 = "";
+                  stackIn_27_3 = nb.loadingFontsText;
+                  stackIn_28_4 = (param0) ? false : true;
+                  lc.a(gf.formatArchiveGroupProgress(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4), -2, 35.0f);
+                  return false;
                 }
-                lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
+                lc.a(vd.a(ud.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
                 return false;
               }
+              lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
+              return false;
             }
-            lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
-            return false;
           }
+          lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
+          return false;
         }
         lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
         return false;
@@ -626,11 +618,10 @@ public final class Geoblox extends wf {
         if (param0) {
           return;
         }
-        if (vl.field_n != null) {
-          if (vl.field_n.field_c) {
-            vl.field_n.a(0, MenuScreen.field_i);
-            vl.field_n = null;
-          }
+        if ((vl.field_n != null) &&
+            (vl.field_n.field_c)) {
+          vl.field_n.a(0, MenuScreen.field_i);
+          vl.field_n = null;
         }
         if (null == vl.field_n) {
           stackIn_9_1 = false;
@@ -655,12 +646,11 @@ public final class Geoblox extends wf {
             L6: {
               if (!ib.gameAssetsInitialized) {
                 oj.a(vc.field_i, (byte) -98);
-                if (this.pollArchiveLoading(false)) {
-                  if (this.prepareGameAssets(25869)) {
-                    ib.gameAssetsInitialized = true;
-                    this.initializeScreens(82);
-                    break L6;
-                  }
+                if ((this.pollArchiveLoading(false)) &&
+                    (this.prepareGameAssets(25869))) {
+                  ib.gameAssetsInitialized = true;
+                  this.initializeScreens(82);
+                  break L6;
                 }
                 cm.a(-1, 0);
                 return;
@@ -668,35 +658,33 @@ public final class Geoblox extends wf {
               if (!uk.g(79)) {
                 lc.a(ph.waitingForExtraDataText, -2, 100.0f);
               } else {
-                if (dd.a((byte) 47)) {
-                  if (!jk.field_a) {
-                    stackIn_91_0 = !(vl.field_n == null);
-                    L10: {
-                      var2 = sl.a(stackIn_91_0, (wf) (this), false);
-                      if (var2 != 2364824) {
-                        if (var2 != 1) {
-                          if (2 != var2) {
-                            break L10;
-                          }
-                        }
-                        if (null != vl.field_n) {
-                          vl.field_n.a(0, MenuScreen.field_i);
-                          vl.field_n = null;
-                        }
-                        if (var2 == 2) {
-                          gf.a(k.c(109), 62);
-                        }
-                      } else {
-                        DualLinkNode.c(-8);
+                if ((dd.a((byte) 47)) &&
+                    (!jk.field_a)) {
+                  stackIn_91_0 = !(vl.field_n == null);
+                  L10: {
+                    var2 = sl.a(stackIn_91_0, (wf) (this), false);
+                    if (var2 != 2364824) {
+                      if ((var2 != 1) &&
+                          (2 != var2)) {
+                        break L10;
                       }
+                      if (null != vl.field_n) {
+                        vl.field_n.a(0, MenuScreen.field_i);
+                        vl.field_n = null;
+                      }
+                      if (var2 == 2) {
+                        gf.a(k.c(109), 62);
+                      }
+                    } else {
+                      DualLinkNode.c(-8);
                     }
-                    if (!kg.field_o) {
-                      break L6;
-                    }
-                    rj.a((byte) 121, 50);
-                    kg.field_o = false;
+                  }
+                  if (!kg.field_o) {
                     break L6;
                   }
+                  rj.a((byte) 121, 50);
+                  kg.field_o = false;
+                  break L6;
                 }
                 if (!kg.field_o) {
                   rj.a((byte) 121, 150);
@@ -736,10 +724,9 @@ public final class Geoblox extends wf {
                         og.screens[0].activeTicks = 0;
                       }
                     }
-                    if (null != el.gameplaySession) {
-                      if (el.gameplaySession.score > 0) {
-                        el.gameplaySession.submitScore((byte) -70);
-                      }
+                    if ((null != el.gameplaySession) &&
+                        (el.gameplaySession.score > 0)) {
+                      el.gameplaySession.submitScore((byte) -70);
                     }
                     ai.requestedScreenId = el.gameplayReturnScreenId;
                   } else {
@@ -750,10 +737,9 @@ public final class Geoblox extends wf {
                   qj.clearGameplayDuringTransition = true;
                 }
                 if (ai.requestedScreenId != tc.currentScreenId) {
-                  if (6 == ai.requestedScreenId) {
-                    if (ug.field_c <= 0) {
-                      ai.requestedScreenId = 2;
-                    }
+                  if ((6 == ai.requestedScreenId) &&
+                      (ug.field_c <= 0)) {
+                    ai.requestedScreenId = 2;
                   }
                   if (-1 < tc.currentScreenId) {
                     og.screens[tc.currentScreenId].updateTransition(16405);
@@ -774,16 +760,15 @@ public final class Geoblox extends wf {
                   TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
                   if (fieldTemp$0 == 160) {
                     L23: {
-                      if (el.gameplayReturnScreenId != -1) {
-                        if (fh.c(-109)) {
-                          if (cd.gameplayOriginScreenId != 0) {
-                            kb.a(-106);
-                          } else {
-                            PendingActionMarker.a((byte) 118);
-                          }
-                          pg.screenChangePending = true;
-                          break L23;
+                      if ((el.gameplayReturnScreenId != -1) &&
+                          (fh.c(-109))) {
+                        if (cd.gameplayOriginScreenId != 0) {
+                          kb.a(-106);
+                        } else {
+                          PendingActionMarker.a((byte) 118);
                         }
+                        pg.screenChangePending = true;
+                        break L23;
                       }
                       if (tc.currentScreenId == 2) {
                         ca.field_f = null;
@@ -868,34 +853,32 @@ public final class Geoblox extends wf {
         L1: {
           sh.mainRasterBuffer.setAsRasterTarget(param0 - 25598);
           SoftwareRasterizer.clearFramebuffer();
-          if (tc.currentScreenId == ai.requestedScreenId) {
-            if (el.gameplayReturnScreenId == -1) {
-              if (tc.currentScreenId != -1) {
-                og.screens[tc.currentScreenId].renderScreen(-28750);
-                break L1;
-              }
-              if (!dl.field_b) {
-                el.gameplaySession.renderSession((byte) -49);
-                break L1;
-              }
-              oc.c(240);
+          if ((tc.currentScreenId == ai.requestedScreenId) &&
+              (el.gameplayReturnScreenId == -1)) {
+            if (tc.currentScreenId != -1) {
+              og.screens[tc.currentScreenId].renderScreen(-28750);
               break L1;
             }
+            if (!dl.field_b) {
+              el.gameplaySession.renderSession((byte) -49);
+              break L1;
+            }
+            oc.c(240);
+            break L1;
           }
           L3: {
             transitionSplitY = -480 + (TriangleMesh.screenTransitionTick * 6 + 35);
-            if (el.gameplayReturnScreenId == -1) {
-              if (!qj.clearGameplayDuringTransition) {
-                if (ai.requestedScreenId == -1) {
-                  el.gameplaySession.renderSession((byte) -68);
-                  break L3;
-                }
-                if (tc.currentScreenId != -1) {
-                  break L3;
-                }
+            if ((el.gameplayReturnScreenId == -1) &&
+                (!qj.clearGameplayDuringTransition)) {
+              if (ai.requestedScreenId == -1) {
                 el.gameplaySession.renderSession((byte) -68);
                 break L3;
               }
+              if (tc.currentScreenId != -1) {
+                break L3;
+              }
+              el.gameplaySession.renderSession((byte) -68);
+              break L3;
             }
             SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 1);
           }
@@ -1029,10 +1012,9 @@ public final class Geoblox extends wf {
           var4 = 1;
         }
         L6: {
-          if (7 != param1) {
-            if (8 != param1) {
-              break L6;
-            }
+          if ((7 != param1) &&
+              (8 != param1)) {
+            break L6;
           }
           var5 = -1;
           var4 = -1;

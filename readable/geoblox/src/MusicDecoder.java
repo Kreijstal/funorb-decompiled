@@ -88,10 +88,9 @@ final class MusicDecoder extends IntrusiveNode {
         int unsignedPcmSample;
         float[] decodedSamples;
         byte[] completedPcm;
-        if (sampleBudget != null) {
-          if (sampleBudget[0] <= 0) {
-            return null;
-          }
+        if ((sampleBudget != null) &&
+            (sampleBudget[0] <= 0)) {
+          return null;
         }
         if (this.pcmBytes == null) {
           this.previousBlockSize = 0;
@@ -101,10 +100,9 @@ final class MusicDecoder extends IntrusiveNode {
           this.packetCursor = 0;
         }
         while (this.packetCursor < this.packets.length) {
-          if (sampleBudget != null) {
-            if (sampleBudget[0] <= 0) {
-              return null;
-            }
+          if ((sampleBudget != null) &&
+              (sampleBudget[0] <= 0)) {
+            return null;
           }
           L4: {
             decodedSamples = this.decodePacket(this.packetCursor);
@@ -484,26 +482,24 @@ final class MusicDecoder extends IntrusiveNode {
         }
         L4: {
           var7 = var4 >> 1;
-          if (var3 != 0) {
-            if (var5 == 0) {
-              var8 = (var4 >> 2) - (shortBlockSize >> 2);
-              var9 = (var4 >> 2) + (shortBlockSize >> 2);
-              var10 = shortBlockSize >> 1;
-              break L4;
-            }
+          if ((var3 != 0) &&
+              (var5 == 0)) {
+            var8 = (var4 >> 2) - (shortBlockSize >> 2);
+            var9 = (var4 >> 2) + (shortBlockSize >> 2);
+            var10 = shortBlockSize >> 1;
+            break L4;
           }
           var8 = 0;
           var9 = var7;
           var10 = var4 >> 1;
         }
         L6: {
-          if (var3 != 0) {
-            if (var6 == 0) {
-              var11 = var4 - (var4 >> 2) - (shortBlockSize >> 2);
-              var12 = var4 - (var4 >> 2) + (shortBlockSize >> 2);
-              var13 = shortBlockSize >> 1;
-              break L6;
-            }
+          if ((var3 != 0) &&
+              (var6 == 0)) {
+            var11 = var4 - (var4 >> 2) - (shortBlockSize >> 2);
+            var12 = var4 - (var4 >> 2) + (shortBlockSize >> 2);
+            var13 = shortBlockSize >> 1;
+            break L6;
           }
           var11 = var7;
           var12 = var4;

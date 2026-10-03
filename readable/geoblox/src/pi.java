@@ -133,15 +133,14 @@ final class pi extends vf {
         L0: {
           var14 = Geoblox.field_C;
           var6 = this.field_M.a((byte) -105);
-          if (var6 != ImageProducerRasterBuffer.field_g) {
-            if (var6 != si.field_n) {
-              var5 = this.field_M.c(-21666);
-              if (var5 != null) {
-                break L0;
-              }
-              var5 = this.field_N;
+          if ((var6 != ImageProducerRasterBuffer.field_g) &&
+              (var6 != si.field_n)) {
+            var5 = this.field_M.c(-21666);
+            if (var5 != null) {
               break L0;
             }
+            var5 = this.field_N;
+            break L0;
           }
           var5 = cm.checkingText;
         }

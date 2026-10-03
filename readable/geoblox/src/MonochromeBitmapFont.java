@@ -39,15 +39,14 @@ final class MonochromeBitmapFont extends BitmapFont {
           sourceRowSkip = sourceRowSkip + clippedPixels;
           destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (width > 0) {
-          if (height > 0) {
-            if (SoftwareRasterizer.scanlineMaskStarts == null) {
-              MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
-            } else {
-              MonochromeBitmapFont.blitGlyphThroughScanlineMask(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], x, y, width, height, color, sourceIndex, destinationIndex, destinationRowSkip, sourceRowSkip, SoftwareRasterizer.scanlineMaskStarts, SoftwareRasterizer.scanlineMaskWidths);
-            }
-            return;
+        if ((width > 0) &&
+            (height > 0)) {
+          if (SoftwareRasterizer.scanlineMaskStarts == null) {
+            MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
+          } else {
+            MonochromeBitmapFont.blitGlyphThroughScanlineMask(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], x, y, width, height, color, sourceIndex, destinationIndex, destinationRowSkip, sourceRowSkip, SoftwareRasterizer.scanlineMaskStarts, SoftwareRasterizer.scanlineMaskWidths);
           }
+          return;
         }
     }
 

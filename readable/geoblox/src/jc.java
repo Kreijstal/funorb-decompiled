@@ -9,13 +9,12 @@ final class jc {
     final static void requestAvatarFeedback(int feedbackRequestId, boolean clearSpriteGuard) {
         int unusedClientControlSnapshot;
         unusedClientControlSnapshot = Geoblox.field_C;
-        if (7 == feedbackRequestId) {
-          if (MenuScreen.avatarFeedbackFrameBase != 36) {
-            MenuScreen.avatarFeedbackFrameBase = 36;
-            LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
-            nd.avatarFeedbackModeId = 6;
-            td.playPcmSample(-348, fl.field_c[23]);
-          }
+        if ((7 == feedbackRequestId) &&
+            (MenuScreen.avatarFeedbackFrameBase != 36)) {
+          MenuScreen.avatarFeedbackFrameBase = 36;
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
+          nd.avatarFeedbackModeId = 6;
+          td.playPcmSample(-348, fl.field_c[23]);
         }
         if (LimitedRandomAccessFile.avatarFeedbackHoldTicks > 0) {
           if (feedbackRequestId == 3) {
@@ -51,28 +50,22 @@ final class jc {
                     }
                   }
                 } else {
-                  if (12 != MenuScreen.avatarFeedbackFrameBase) {
-                    if (MenuScreen.avatarFeedbackFrameBase != 24) {
-                      if (30 != MenuScreen.avatarFeedbackFrameBase) {
-                        if (36 != MenuScreen.avatarFeedbackFrameBase) {
-                          td.playPcmSample(-348, fl.field_c[26]);
-                        }
-                      }
-                    }
+                  if ((12 != MenuScreen.avatarFeedbackFrameBase) &&
+                      (MenuScreen.avatarFeedbackFrameBase != 24) &&
+                      (30 != MenuScreen.avatarFeedbackFrameBase) &&
+                      (36 != MenuScreen.avatarFeedbackFrameBase)) {
+                    td.playPcmSample(-348, fl.field_c[26]);
                   }
                   nd.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;
                 }
               }
             } else {
-              if (MenuScreen.avatarFeedbackFrameBase != 0) {
-                if (24 != MenuScreen.avatarFeedbackFrameBase) {
-                  if (MenuScreen.avatarFeedbackFrameBase != 30) {
-                    if (MenuScreen.avatarFeedbackFrameBase != 36) {
-                      td.playPcmSample(-348, fl.field_c[25]);
-                    }
-                  }
-                }
+              if ((MenuScreen.avatarFeedbackFrameBase != 0) &&
+                  (24 != MenuScreen.avatarFeedbackFrameBase) &&
+                  (MenuScreen.avatarFeedbackFrameBase != 30) &&
+                  (MenuScreen.avatarFeedbackFrameBase != 36)) {
+                td.playPcmSample(-348, fl.field_c[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
               nd.avatarFeedbackModeId = 0;
@@ -80,14 +73,11 @@ final class jc {
           } else {
             field_a = (Sprite) null;
             if (feedbackRequestId == 0) {
-              if (MenuScreen.avatarFeedbackFrameBase != 0) {
-                if (24 != MenuScreen.avatarFeedbackFrameBase) {
-                  if (MenuScreen.avatarFeedbackFrameBase != 30) {
-                    if (MenuScreen.avatarFeedbackFrameBase != 36) {
-                      td.playPcmSample(-348, fl.field_c[25]);
-                    }
-                  }
-                }
+              if ((MenuScreen.avatarFeedbackFrameBase != 0) &&
+                  (24 != MenuScreen.avatarFeedbackFrameBase) &&
+                  (MenuScreen.avatarFeedbackFrameBase != 30) &&
+                  (MenuScreen.avatarFeedbackFrameBase != 36)) {
+                td.playPcmSample(-348, fl.field_c[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
               nd.avatarFeedbackModeId = 0;
@@ -118,14 +108,11 @@ final class jc {
                     }
                   }
                 } else {
-                  if (12 != MenuScreen.avatarFeedbackFrameBase) {
-                    if (MenuScreen.avatarFeedbackFrameBase != 24) {
-                      if (30 != MenuScreen.avatarFeedbackFrameBase) {
-                        if (36 != MenuScreen.avatarFeedbackFrameBase) {
-                          td.playPcmSample(-348, fl.field_c[26]);
-                        }
-                      }
-                    }
+                  if ((12 != MenuScreen.avatarFeedbackFrameBase) &&
+                      (MenuScreen.avatarFeedbackFrameBase != 24) &&
+                      (30 != MenuScreen.avatarFeedbackFrameBase) &&
+                      (36 != MenuScreen.avatarFeedbackFrameBase)) {
+                    td.playPcmSample(-348, fl.field_c[26]);
                   }
                   nd.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;

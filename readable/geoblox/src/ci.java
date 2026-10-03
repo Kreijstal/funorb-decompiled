@@ -178,10 +178,9 @@ final class ci {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ih.field_c.a(-87)) {
-            if (!param1.equals(ih.field_c.b(19491))) {
-              ih.field_c = ImageProducerRasterBuffer.a((byte) 86, param1);
-            }
+          if ((ih.field_c.a(-87)) &&
+              (!param1.equals(ih.field_c.b(19491)))) {
+            ih.field_c = ImageProducerRasterBuffer.a((byte) 86, param1);
           }
           if (param0 != -1) {
             var3 = (String) null;
@@ -283,10 +282,9 @@ final class ci {
             stackIn_5_0 = (PcmSample) (var8);
             return stackIn_5_0;
           }
-          if (param0 != null) {
-            if (param0[0] <= 0) {
-              return null;
-            }
+          if ((param0 != null) &&
+              (param0[0] <= 0)) {
+            return null;
           }
           var9 = fg.a(this.field_c, param2, param3);
           if (var9 == null) {
@@ -343,11 +341,10 @@ final class ci {
             stackIn_6_0 = (PcmSample) (var8);
             return stackIn_6_0;
           }
-          if (param0 != null) {
-            if (param0[0] <= 0) {
-              stackIn_10_0 = null;
-              return (PcmSample) ((Object) stackIn_10_0);
-            }
+          if ((param0 != null) &&
+              (param0[0] <= 0)) {
+            stackIn_10_0 = null;
+            return (PcmSample) ((Object) stackIn_10_0);
           }
           var9 = (MusicDecoder) ((Object) this.field_a.a(var6, (byte) -96));
           if (var9 == null) {

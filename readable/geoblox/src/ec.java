@@ -55,18 +55,17 @@ final class ec {
         int candidateIndex = 0;
         controlFlowGuard = Geoblox.field_C;
         try {
-          if (0 == h.matchCandidateCount) {
-            if (0 < wb.newAttachmentCount) {
-              if (w.avatarShockPending) {
-                return false;
-              }
-              gf.matchChainLength = 0;
-              if (el.gameplaySession.pointsPanelX == 463) {
-                el.gameplaySession.pointsPanelSlideDirection = 1;
-                el.gameplaySession.emitPointsPopup(false);
-              }
+          if ((0 == h.matchCandidateCount) &&
+              (0 < wb.newAttachmentCount)) {
+            if (w.avatarShockPending) {
               return false;
             }
+            gf.matchChainLength = 0;
+            if (el.gameplaySession.pointsPanelX == 463) {
+              el.gameplaySession.pointsPanelSlideDirection = 1;
+              el.gameplaySession.emitPointsPopup(false);
+            }
+            return false;
           }
           if (h.matchCandidateCount == 0) {
             return false;
@@ -100,11 +99,10 @@ final class ec {
           sortInsertionIndex = candidateIndex;
           while (candidateIndex < h.matchCandidateCount) {
             L8: {
-              if (-1 + h.matchCandidateCount > candidateIndex) {
-                if (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1]) {
-                  nk.packedMatchCandidates[candidateIndex] = 0;
-                  break L8;
-                }
+              if ((-1 + h.matchCandidateCount > candidateIndex) &&
+                  (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1])) {
+                nk.packedMatchCandidates[candidateIndex] = 0;
+                break L8;
               }
               sortCursorThenFirstEntityId = (nk.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
               packedCandidateThenSecondEntityId = nk.packedMatchCandidates[candidateIndex] >> 10 & 1023;
@@ -112,29 +110,27 @@ final class ec {
               firstMatchedEntity = tl.entitiesById[sortCursorThenFirstEntityId];
               secondMatchedEntity = tl.entitiesById[packedCandidateThenSecondEntityId];
               thirdMatchedEntity = tl.entitiesById[thirdEntityId];
-              if (firstMatchedEntity.matchCooldownTicks <= 0) {
-                if (secondMatchedEntity.matchCooldownTicks <= 0) {
-                  if (thirdMatchedEntity.matchCooldownTicks <= 0) {
-                    td.playPcmSample(-348, fl.field_c[31]);
-                    gf.matchChainLength = gf.matchChainLength + 1;
-                    if (gf.matchChainLength > 1) {
-                      el.gameplaySession.pointsPanelSlideDirection = -1;
-                    }
-                    if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
-                      awardedPoints = 90 * gf.matchChainLength;
-                      ra.a(fa.field_e ^ 255, -100, fa.field_e);
-                    } else {
-                      awardedPoints = 30 * gf.matchChainLength;
-                    }
-                    popupX = 0;
-                    popupX = (int)firstMatchedEntity.positionX;
-                    popupY = 0;
-                    popupY = (int)firstMatchedEntity.positionY;
-                    ug.spawnScorePopup(awardedPoints, true, popupY, gf.matchChainLength, popupX);
-                    nk.packedMatchCandidates[candidateIndex] = 0;
-                    break L8;
-                  }
+              if ((firstMatchedEntity.matchCooldownTicks <= 0) &&
+                  (secondMatchedEntity.matchCooldownTicks <= 0) &&
+                  (thirdMatchedEntity.matchCooldownTicks <= 0)) {
+                td.playPcmSample(-348, fl.field_c[31]);
+                gf.matchChainLength = gf.matchChainLength + 1;
+                if (gf.matchChainLength > 1) {
+                  el.gameplaySession.pointsPanelSlideDirection = -1;
                 }
+                if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
+                  awardedPoints = 90 * gf.matchChainLength;
+                  ra.a(fa.field_e ^ 255, -100, fa.field_e);
+                } else {
+                  awardedPoints = 30 * gf.matchChainLength;
+                }
+                popupX = 0;
+                popupX = (int)firstMatchedEntity.positionX;
+                popupY = 0;
+                popupY = (int)firstMatchedEntity.positionY;
+                ug.spawnScorePopup(awardedPoints, true, popupY, gf.matchChainLength, popupX);
+                nk.packedMatchCandidates[candidateIndex] = 0;
+                break L8;
               }
               firstBlockedEntity = firstMatchedEntity;
               secondBlockedEntity = secondMatchedEntity;

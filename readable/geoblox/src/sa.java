@@ -18,11 +18,10 @@ final class sa extends RuntimeException {
         int var3 = 0;
         var3 = Geoblox.field_C;
         try {
-          if (-1 == k.field_g) {
-            if (gb.field_e == -1) {
-              k.field_g = PrefixCodeDecoder.pointerXSnapshot;
-              gb.field_e = ue.pointerYSnapshot;
-            }
+          if ((-1 == k.field_g) &&
+              (gb.field_e == -1)) {
+            k.field_g = PrefixCodeDecoder.pointerXSnapshot;
+            gb.field_e = ue.pointerYSnapshot;
           }
           L1: {
             oe.field_V = oe.field_V + 1;
@@ -68,21 +67,18 @@ final class sa extends RuntimeException {
               vl.field_q = false;
             }
           }
-          if (!vl.field_q) {
-            if (wg.field_e > oe.field_V) {
-              if (wb.pointerActivitySnapshot) {
-                oe.field_V = 0;
-                bc.field_a = k.field_g;
-                PendingActionMarker.field_g = gb.field_e;
-              }
-            }
+          if ((!vl.field_q) &&
+              (wg.field_e > oe.field_V) &&
+              (wb.pointerActivitySnapshot)) {
+            oe.field_V = 0;
+            bc.field_a = k.field_g;
+            PendingActionMarker.field_g = gb.field_e;
           }
           tc.field_a = param0;
-          if (vl.field_q) {
-            if (cl.field_a == oe.field_V) {
-              vl.field_q = false;
-              oe.field_V = 0;
-            }
+          if ((vl.field_q) &&
+              (cl.field_a == oe.field_V)) {
+            vl.field_q = false;
+            oe.field_V = 0;
           }
           gb.field_e = -1;
           k.field_g = -1;

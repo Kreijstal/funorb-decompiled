@@ -39,10 +39,9 @@ final class lc {
             }
             L3: {
               L4: {
-                if (kj.heldInternalKeys[99]) {
-                  if (ArchiveNetworkClient.movingEntities.isEmpty(13519)) {
-                    break L4;
-                  }
+                if ((kj.heldInternalKeys[99]) &&
+                    (ArchiveNetworkClient.movingEntities.isEmpty(13519))) {
+                  break L4;
                 }
                 if (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease) {
                   if (ul.releasedInCurrentTheme != 0) {
@@ -53,33 +52,30 @@ final class lc {
                   }
                 }
               }
-              if (0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) {
-                if (!el.gameplaySession.spawnReleaseDisabled) {
-                  ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
-                  hd.recordEntityRelease(2);
-                  kc.ticksSinceLastEntityRelease = 0;
-                }
+              if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
+                  (!el.gameplaySession.spawnReleaseDisabled)) {
+                ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
+                hd.recordEntityRelease(2);
+                kc.ticksSinceLastEntityRelease = 0;
               }
             }
             kc.ticksSinceLastEntityRelease = kc.ticksSinceLastEntityRelease + 1;
-            if (SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) {
-              if (ma.c((byte) -53)) {
-                if (!el.gameplaySession.canAdvanceSession(true)) {
-                  queuedEntityThenPooledEntity = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
-                  if (null != queuedEntityThenPooledEntity) {
-                    spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;
-                    spawnPositionX = 240.0f * (float)Math.cos(spawnAngleRadians) + 320.0f;
-                    spawnPositionY = 240.0f + (float)Math.sin(spawnAngleRadians) * 240.0f;
-                    inwardDirectionX = 320.0f - spawnPositionX;
-                    inwardDirectionY = -spawnPositionY + 240.0f;
-                    inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
-                    inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
-                    inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
-                    queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, vd.chooseSpawnSpriteKind(methodGuard ^ 741924143), og.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * og.entityMotionSpeed, ij.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
-                    SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
-                    mf.b(false);
-                  }
-                }
+            if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
+                (ma.c((byte) -53)) &&
+                (!el.gameplaySession.canAdvanceSession(true))) {
+              queuedEntityThenPooledEntity = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
+              if (null != queuedEntityThenPooledEntity) {
+                spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;
+                spawnPositionX = 240.0f * (float)Math.cos(spawnAngleRadians) + 320.0f;
+                spawnPositionY = 240.0f + (float)Math.sin(spawnAngleRadians) * 240.0f;
+                inwardDirectionX = 320.0f - spawnPositionX;
+                inwardDirectionY = -spawnPositionY + 240.0f;
+                inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
+                inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
+                inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
+                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, vd.chooseSpawnSpriteKind(methodGuard ^ 741924143), og.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * og.entityMotionSpeed, ij.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
+                SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
+                mf.b(false);
               }
             }
             return;

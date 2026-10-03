@@ -2989,3 +2989,34 @@ state includes projected/camera/normal/optional-coordinate buffers, face order,
 buckets, priorities, queue count, selected cleanup effects and failure contexts.
 Earlier drawing trace pins remain. Complete general projection geometry, actual
 assets/gameplay and browser/phone behavior remain unverified.
+
+## Nested guard reconstruction (pass 84)
+
+The generic decompiler now combines braced guards with no else or intervening
+work. Mesh projection's nine optional-coordinate checks read as one multiline
+short-circuit guard, with the same left-to-right null checks before array access.
+Session/menu/loading/rendering checks likewise lose extra nested braces.
+The innermost body block and its declarations remain, including original
+try/finally, monitors, labels and transfers. Removed wrappers contain only the
+next if; no effect or predicate is moved across a protected boundary.
+
+The pass folds 710 chains and merges 913 conditions across 131 files, removing
+913 lines. Every raw ordered declaration/reference/override row remains
+19,558/118,944/388; all 6,549 complete naming rules and 52,854 edits survive
+without ordinal migrations. Clean source-archive export, compilation, full
+reproduction and dictionary reversal remain byte-exact. Diagnostics, text-loader
+resources and frozen tools/stubs/probes retain their pins.
+
+Generic fixtures add 17,280 native comparisons for short circuits, unboxing,
+NaNs, partial effects, failure identity, body scopes, early returns, finally effects
+after invocation and monitor ownership. An independent JDK method/initializer
+inventory verifies that only the documented guard/frame rules produce all 303
+new token streams. All seven native game probes retain their expected traces.
+The generic emitter suite passes 46 tests with its optional historical pass77
+frame-only proof skipped; the exception suite passes eight groups.
+
+The current survey still has 21 method/constructor spans of at least 300 lines,
+15 with generated block labels. Three text-loader helpers occur inside the large
+outer span, so these counts do not represent unique dispatchers. Opaque helpers,
+reused scratch phases and large control bodies remain; actual assets/gameplay
+and browser/phone acceptance are unverified.

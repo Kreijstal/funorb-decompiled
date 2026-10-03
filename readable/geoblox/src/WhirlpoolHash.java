@@ -117,22 +117,21 @@ final class WhirlpoolHash {
           while (true) {
             if (8L < remainingBitCount) {
               shiftedSourceByte = 255 & source[sourceByteIndex] << sourceBitShift | (source[sourceByteIndex + 1] & 255) >>> -sourceBitShift + 8;
-              if (shiftedSourceByte >= 0) {
-                if (256 > shiftedSourceByte) {
-                  this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
-                  this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
-                  this.bufferBytePosition = this.bufferBytePosition + 1;
-                  if (512 == this.bufferedBitCount) {
-                    this.processBlock(methodGuard ^ 111);
-                    this.bufferBytePosition = 0;
-                    this.bufferedBitCount = 0;
-                  }
-                  this.blockBuffer[this.bufferBytePosition] = (byte)cd.andInt(255, shiftedSourceByte << -bufferPartialByteBits + 8);
-                  remainingBitCount = remainingBitCount - 8L;
-                  this.bufferedBitCount = this.bufferedBitCount + bufferPartialByteBits;
-                  sourceByteIndex++;
-                  continue;
+              if ((shiftedSourceByte >= 0) &&
+                  (256 > shiftedSourceByte)) {
+                this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
+                this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
+                this.bufferBytePosition = this.bufferBytePosition + 1;
+                if (512 == this.bufferedBitCount) {
+                  this.processBlock(methodGuard ^ 111);
+                  this.bufferBytePosition = 0;
+                  this.bufferedBitCount = 0;
                 }
+                this.blockBuffer[this.bufferBytePosition] = (byte)cd.andInt(255, shiftedSourceByte << -bufferPartialByteBits + 8);
+                remainingBitCount = remainingBitCount - 8L;
+                this.bufferedBitCount = this.bufferedBitCount + bufferPartialByteBits;
+                sourceByteIndex++;
+                continue;
               }
               throw new RuntimeException("LOGIC ERROR");
             }

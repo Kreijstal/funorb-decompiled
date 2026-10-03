@@ -102,10 +102,9 @@ final class ik {
             firstNeighborInsertionIndex = firstEntity.relatedEntityCount;
             firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
             firstEntity.relatedEntities[firstNeighborInsertionIndex] = secondEntity;
-            if (secondEntity.entitySpriteKindId == 0) {
-              if (firstEntity.entitySpriteKindId == 0) {
-                break L1;
-              }
+            if ((secondEntity.entitySpriteKindId == 0) &&
+                (firstEntity.entitySpriteKindId == 0)) {
+              break L1;
             }
             variantPropagationThenNeighborIndex = 0;
             propagateCategory = 0;
@@ -117,93 +116,80 @@ final class ik {
             }
             L5: {
               if ((secondIsKindOne ^ firstIsKindOne) != 0) {
-                if (secondEntity.entitySpriteKindId == 1) {
-                  if (firstEntity.entitySpriteKindId == 0) {
-                    secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
-                    break L5;
-                  }
+                if ((secondEntity.entitySpriteKindId == 1) &&
+                    (firstEntity.entitySpriteKindId == 0)) {
+                  secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+                  break L5;
                 }
-                if (secondEntity.entitySpriteKindId == 0) {
-                  if (firstEntity.entitySpriteKindId == 1) {
-                    variantPropagationThenNeighborIndex = 1;
-                    break L5;
-                  }
+                if ((secondEntity.entitySpriteKindId == 0) &&
+                    (firstEntity.entitySpriteKindId == 1)) {
+                  variantPropagationThenNeighborIndex = 1;
+                  break L5;
                 }
-                if (firstEntity.entitySpriteKindId == 2) {
-                  if (secondEntity.entitySpriteKindId == 1) {
-                    neighborIndexThenDetachSecond = 1;
-                    detachFirst = 1;
-                    propagateCategory = 1;
-                    secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
-                    break L5;
-                  }
+                if ((firstEntity.entitySpriteKindId == 2) &&
+                    (secondEntity.entitySpriteKindId == 1)) {
+                  neighborIndexThenDetachSecond = 1;
+                  detachFirst = 1;
+                  propagateCategory = 1;
+                  secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+                  break L5;
                 }
-                if (1 == firstEntity.entitySpriteKindId) {
-                  if (secondEntity.entitySpriteKindId == 2) {
-                    secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
-                    variantPropagationThenNeighborIndex = 1;
-                    neighborIndexThenDetachSecond = 1;
-                  }
+                if ((1 == firstEntity.entitySpriteKindId) &&
+                    (secondEntity.entitySpriteKindId == 2)) {
+                  secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
+                  variantPropagationThenNeighborIndex = 1;
+                  neighborIndexThenDetachSecond = 1;
                 }
               } else {
-                if (2 != secondEntity.entitySpriteKindId) {
-                  if (firstEntity.entitySpriteKindId != 2) {
-                    break L5;
-                  }
+                if ((2 != secondEntity.entitySpriteKindId) &&
+                    (firstEntity.entitySpriteKindId != 2)) {
+                  break L5;
                 }
-                if (secondEntity.entitySpriteKindId == 2) {
-                  if (2 != firstEntity.entitySpriteKindId) {
-                    secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
-                    neighborIndexThenDetachSecond = 1;
-                    break L5;
-                  }
+                if ((secondEntity.entitySpriteKindId == 2) &&
+                    (2 != firstEntity.entitySpriteKindId)) {
+                  secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
+                  neighborIndexThenDetachSecond = 1;
+                  break L5;
                 }
-                if (firstEntity.entitySpriteKindId == 2) {
-                  if (2 != secondEntity.entitySpriteKindId) {
-                    detachFirst = 1;
-                    propagateCategory = 1;
-                    neighborIndexThenDetachSecond = 1;
-                    firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
-                  }
+                if ((firstEntity.entitySpriteKindId == 2) &&
+                    (2 != secondEntity.entitySpriteKindId)) {
+                  detachFirst = 1;
+                  propagateCategory = 1;
+                  neighborIndexThenDetachSecond = 1;
+                  firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
                 }
               }
             }
             L11: {
-              if (variantPropagationThenNeighborIndex == 0) {
-                if (propagateCategory == 0) {
-                  break L11;
-                }
+              if ((variantPropagationThenNeighborIndex == 0) &&
+                  (propagateCategory == 0)) {
+                break L11;
               }
               bh.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
             }
-            if (secondEntity.entitySpriteKindId == 1) {
-              if (firstEntity.entitySpriteKindId == 1) {
-                if (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey) {
-                  secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
-                  firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
-                  break L1;
-                }
-              }
+            if ((secondEntity.entitySpriteKindId == 1) &&
+                (firstEntity.entitySpriteKindId == 1) &&
+                (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey)) {
+              secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
+              firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
+              break L1;
             }
-            if (secondEntity.entitySpriteKindId == 2) {
-              if (firstEntity.entitySpriteKindId == 2) {
-                if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
-                  secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
-                  firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
-                }
-              }
+            if ((secondEntity.entitySpriteKindId == 2) &&
+                (firstEntity.entitySpriteKindId == 2) &&
+                (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex)) {
+              secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
+              firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
             }
           }
-          if (secondEntity.entitySpriteKindId == 0) {
-            if (firstEntity.entitySpriteKindId == 0) {
-              if (secondEntity.entityCategoryKey == firstEntity.entityCategoryKey) {
-                secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
-                firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
-              }
-              if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
-                secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
-                firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
-              }
+          if ((secondEntity.entitySpriteKindId == 0) &&
+              (firstEntity.entitySpriteKindId == 0)) {
+            if (secondEntity.entityCategoryKey == firstEntity.entityCategoryKey) {
+              secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
+              firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
+            }
+            if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
+              secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
+              firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
             }
           }
           L16: {

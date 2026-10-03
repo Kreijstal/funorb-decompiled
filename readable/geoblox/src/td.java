@@ -93,33 +93,30 @@ final class td extends hk {
           var7 = -74 % ((param2 - 1) / 43);
           var6 = param1 - (-this.field_m - (this.field_h >> 1));
           var9 = this.field_F.a((byte) -105);
-          if (var9 != ImageProducerRasterBuffer.field_g) {
-            if (si.field_n != var9) {
-              if (si.field_m == var9) {
-                var14 = oa.field_e[2];
-                var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
-                break L0;
-              }
-              if (var9 != SocketArchiveNetworkClient.field_w) {
-                break L0;
-              }
-              var15 = oa.field_e[1];
-              var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
+          if ((var9 != ImageProducerRasterBuffer.field_g) &&
+              (si.field_n != var9)) {
+            if (si.field_m == var9) {
+              var14 = oa.field_e[2];
+              var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
               break L0;
             }
+            if (var9 != SocketArchiveNetworkClient.field_w) {
+              break L0;
+            }
+            var15 = oa.field_e[1];
+            var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
+            break L0;
           }
           L2: {
             var13 = oa.field_e[0];
             var10 = var13.fullWidth << 1;
             var11 = var13.fullHeight << 1;
-            if (null != da.field_b) {
-              if (var10 <= da.field_b.width) {
-                if (var11 <= da.field_b.height) {
-                  Geoblox.setRasterTarget(1, da.field_b);
-                  SoftwareRasterizer.clearFramebuffer();
-                  break L2;
-                }
-              }
+            if ((null != da.field_b) &&
+                (var10 <= da.field_b.width) &&
+                (var11 <= da.field_b.height)) {
+              Geoblox.setRasterTarget(1, da.field_b);
+              SoftwareRasterizer.clearFramebuffer();
+              break L2;
             }
             da.field_b = new Sprite(var10, var11);
             Geoblox.setRasterTarget(1, da.field_b);
@@ -166,25 +163,24 @@ final class td extends hk {
             td.playPcmSample(-80, (PcmSample) null);
           }
           originalLength = destination.length();
-          if (writeOffset >= 0) {
-            if (originalLength >= writeOffset) {
-              sourceLength = sourceText.length();
-              if (sourceLength == 0) {
-                stackIn_9_0 = (StringBuilder) (destination);
-                return stackIn_9_0;
-              }
-              writeEndOffset = writeOffset + sourceLength;
-              if (originalLength < writeEndOffset) {
-                destination.setLength(writeEndOffset);
-              }
-              for (sourceCharacterIndex = 0; sourceCharacterIndex < sourceLength; sourceCharacterIndex++) {
-                characterWriteOffset = writeOffset;
-                writeOffset++;
-                destination.setCharAt(characterWriteOffset, sourceText.charAt(sourceCharacterIndex));
-              }
-              stackIn_17_0 = (StringBuilder) (destination);
-              return stackIn_17_0;
+          if ((writeOffset >= 0) &&
+              (originalLength >= writeOffset)) {
+            sourceLength = sourceText.length();
+            if (sourceLength == 0) {
+              stackIn_9_0 = (StringBuilder) (destination);
+              return stackIn_9_0;
             }
+            writeEndOffset = writeOffset + sourceLength;
+            if (originalLength < writeEndOffset) {
+              destination.setLength(writeEndOffset);
+            }
+            for (sourceCharacterIndex = 0; sourceCharacterIndex < sourceLength; sourceCharacterIndex++) {
+              characterWriteOffset = writeOffset;
+              writeOffset++;
+              destination.setCharAt(characterWriteOffset, sourceText.charAt(sourceCharacterIndex));
+            }
+            stackIn_17_0 = (StringBuilder) (destination);
+            return stackIn_17_0;
           }
           throw new StringIndexOutOfBoundsException("length=" + originalLength + " startPos=" + writeOffset);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

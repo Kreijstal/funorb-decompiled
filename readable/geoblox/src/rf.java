@@ -559,87 +559,82 @@ final class rf extends IntrusiveNode {
                 var15++;
                 var28 = var28 + param0.bytes[incrementValue$7] & 127;
                 var51.writeByte((byte) 126, var28);
-                if (var28 != 0) {
-                  if (var28 != 32) {
-                    if (var28 == 1) {
-                      incrementValue$19 = var34;
-                      var34++;
-                      var66 = param0.bytes[incrementValue$19];
-                      break L12;
-                    }
-                    if (var28 == 33) {
-                      incrementValue$18 = var41;
-                      var41++;
-                      var66 = param0.bytes[incrementValue$18];
-                      break L12;
-                    }
-                    if (var28 == 7) {
-                      incrementValue$17 = var35;
-                      var35++;
-                      var66 = param0.bytes[incrementValue$17];
-                      break L12;
-                    }
-                    if (var28 == 39) {
-                      incrementValue$16 = var42;
-                      var42++;
-                      var66 = param0.bytes[incrementValue$16];
-                      break L12;
-                    }
-                    if (var28 == 10) {
-                      incrementValue$15 = var36;
-                      var36++;
-                      var66 = param0.bytes[incrementValue$15];
-                      break L12;
-                    }
-                    if (var28 == 42) {
-                      incrementValue$14 = var43;
-                      var43++;
-                      var66 = param0.bytes[incrementValue$14];
-                      break L12;
-                    }
-                    if (var28 == 99) {
-                      incrementValue$13 = var46;
-                      var46++;
-                      var66 = param0.bytes[incrementValue$13];
-                      break L12;
-                    }
-                    if (var28 == 98) {
-                      incrementValue$12 = var47;
-                      var47++;
-                      var66 = param0.bytes[incrementValue$12];
-                      break L12;
-                    }
-                    if (var28 == 101) {
-                      incrementValue$11 = var48;
-                      var48++;
-                      var66 = param0.bytes[incrementValue$11];
-                      break L12;
-                    }
-                    if (var28 == 100) {
-                      incrementValue$10 = var49;
-                      var49++;
-                      var66 = param0.bytes[incrementValue$10];
-                      break L12;
-                    }
-                    if (var28 != 64) {
-                      if (var28 != 65) {
-                        if (var28 != 120) {
-                          if (var28 != 121) {
-                            if (var28 != 123) {
-                              incrementValue$8 = var39;
-                              var39++;
-                              var66 = param0.bytes[incrementValue$8];
-                              break L12;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    incrementValue$9 = var30;
-                    var30++;
-                    var66 = param0.bytes[incrementValue$9];
+                if ((var28 != 0) &&
+                    (var28 != 32)) {
+                  if (var28 == 1) {
+                    incrementValue$19 = var34;
+                    var34++;
+                    var66 = param0.bytes[incrementValue$19];
                     break L12;
                   }
+                  if (var28 == 33) {
+                    incrementValue$18 = var41;
+                    var41++;
+                    var66 = param0.bytes[incrementValue$18];
+                    break L12;
+                  }
+                  if (var28 == 7) {
+                    incrementValue$17 = var35;
+                    var35++;
+                    var66 = param0.bytes[incrementValue$17];
+                    break L12;
+                  }
+                  if (var28 == 39) {
+                    incrementValue$16 = var42;
+                    var42++;
+                    var66 = param0.bytes[incrementValue$16];
+                    break L12;
+                  }
+                  if (var28 == 10) {
+                    incrementValue$15 = var36;
+                    var36++;
+                    var66 = param0.bytes[incrementValue$15];
+                    break L12;
+                  }
+                  if (var28 == 42) {
+                    incrementValue$14 = var43;
+                    var43++;
+                    var66 = param0.bytes[incrementValue$14];
+                    break L12;
+                  }
+                  if (var28 == 99) {
+                    incrementValue$13 = var46;
+                    var46++;
+                    var66 = param0.bytes[incrementValue$13];
+                    break L12;
+                  }
+                  if (var28 == 98) {
+                    incrementValue$12 = var47;
+                    var47++;
+                    var66 = param0.bytes[incrementValue$12];
+                    break L12;
+                  }
+                  if (var28 == 101) {
+                    incrementValue$11 = var48;
+                    var48++;
+                    var66 = param0.bytes[incrementValue$11];
+                    break L12;
+                  }
+                  if (var28 == 100) {
+                    incrementValue$10 = var49;
+                    var49++;
+                    var66 = param0.bytes[incrementValue$10];
+                    break L12;
+                  }
+                  if ((var28 != 64) &&
+                      (var28 != 65) &&
+                      (var28 != 120) &&
+                      (var28 != 121) &&
+                      (var28 != 123)) {
+                    incrementValue$8 = var39;
+                    var39++;
+                    var66 = param0.bytes[incrementValue$8];
+                    break L12;
+                  }
+                  incrementValue$9 = var30;
+                  var30++;
+                  var66 = param0.bytes[incrementValue$9];
+                  break L12;
                 }
                 incrementValue$20 = var44;
                 var44++;

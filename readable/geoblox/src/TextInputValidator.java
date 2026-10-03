@@ -135,38 +135,35 @@ abstract class TextInputValidator extends ib implements ga {
         try {
           va.field_d = false;
           ii.field_a = false;
-          if (null != Geoblox.field_y) {
-            if (Geoblox.field_y.field_I) {
-              if (8 == param1) {
-                param1 = 2;
-                if (!cf.field_i) {
-                  param2 = mi.invalidUserOrPasswordText;
-                } else {
-                  param2 = DualLinkNode.invalidPasswordText;
-                }
-                ml.field_t.a(b.field_a, 0);
+          if ((null != Geoblox.field_y) &&
+              (Geoblox.field_y.field_I)) {
+            if (8 == param1) {
+              param1 = 2;
+              if (!cf.field_i) {
+                param2 = mi.invalidUserOrPasswordText;
+              } else {
+                param2 = DualLinkNode.invalidPasswordText;
               }
-              var3_int = 1;
-              if (param1 == 10) {
-                MatchingTextValidator.c((byte) -4);
-                var3_int = 0;
+              ml.field_t.a(b.field_a, 0);
+            }
+            var3_int = 1;
+            if (param1 == 10) {
+              MatchingTextValidator.c((byte) -4);
+              var3_int = 0;
+            }
+            if (var3_int != 0) {
+              if (ii.field_a) {
+                param2 = wj.a(mi.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
               }
-              if (var3_int != 0) {
-                if (ii.field_a) {
-                  param2 = wj.a(mi.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
-                }
-                if (mi.field_I) {
-                  param2 = kf.pleaseTryAgainText;
-                }
-                Geoblox.field_y.a(param1, param0 + 19686, param2);
+              if (mi.field_I) {
+                param2 = kf.pleaseTryAgainText;
               }
-              if (param1 != 256) {
-                if (param1 != 10) {
-                  if (!cf.field_i) {
-                    ml.field_t.i(-119);
-                  }
-                }
-              }
+              Geoblox.field_y.a(param1, param0 + 19686, param2);
+            }
+            if ((param1 != 256) &&
+                (param1 != 10) &&
+                (!cf.field_i)) {
+              ml.field_t.i(-119);
             }
           }
           if (param0 == 124) {

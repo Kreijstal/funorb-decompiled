@@ -122,19 +122,17 @@ final class PlatformTaskDispatcher implements Runnable {
                         } else {
                           if (taskType == 8) {
                             methodLookupArguments = (Object[]) (task.input);
-                            if (this.privilegedServicesEnabled) {
-                              if (((Class) (methodLookupArguments[0])).getClassLoader() == null) {
-                                throw new SecurityException();
-                              }
+                            if ((this.privilegedServicesEnabled) &&
+                                (((Class) (methodLookupArguments[0])).getClassLoader() == null)) {
+                              throw new SecurityException();
                             }
                             task.result = ((Class) (methodLookupArguments[0])).getDeclaredMethod((String) (methodLookupArguments[1]), (Class[]) (methodLookupArguments[2]));
                           } else {
                             if (taskType == 9) {
                               fieldLookupArguments = (Object[]) (task.input);
-                              if (this.privilegedServicesEnabled) {
-                                if (null == ((Class) (fieldLookupArguments[0])).getClassLoader()) {
-                                  throw new SecurityException();
-                                }
+                              if ((this.privilegedServicesEnabled) &&
+                                  (null == ((Class) (fieldLookupArguments[0])).getClassLoader())) {
+                                throw new SecurityException();
                               }
                               task.result = ((Class) (fieldLookupArguments[0])).getDeclaredField((String) (fieldLookupArguments[1]));
                             } else {
@@ -189,37 +187,34 @@ final class PlatformTaskDispatcher implements Runnable {
                                                 openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) 19, cacheVariant, "", (String) (task.input));
                                                 task.result = openedPreferencesFile;
                                               } else {
-                                                if (this.privilegedServicesEnabled) {
-                                                  if (taskType == 14) {
-                                                    cursorXOrVisibleFlag = task.firstIntArgument;
-                                                    cursorY = task.secondIntArgument;
-                                                    if (!this.useMicrosoftVmBackend) {
-                                                      Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
-                                                      break L7;
-                                                    }
-                                                    this.microsoftCursorBackend.a(-71, cursorY, cursorXOrVisibleFlag);
+                                                if ((this.privilegedServicesEnabled) &&
+                                                    (taskType == 14)) {
+                                                  cursorXOrVisibleFlag = task.firstIntArgument;
+                                                  cursorY = task.secondIntArgument;
+                                                  if (!this.useMicrosoftVmBackend) {
+                                                    Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
                                                     break L7;
                                                   }
+                                                  this.microsoftCursorBackend.a(-71, cursorY, cursorXOrVisibleFlag);
+                                                  break L7;
                                                 }
-                                                if (this.privilegedServicesEnabled) {
-                                                  if (taskType == 15) {
-                                                    cursorVisibleInt = (task.firstIntArgument == 0) ? 0 : 1;
-                                                    cursorXOrVisibleFlag = cursorVisibleInt;
-                                                    cursorComponent = (java.awt.Component) (task.input);
-                                                    if (this.useMicrosoftVmBackend) {
-                                                      this.microsoftCursorBackend.a(12758, cursorXOrVisibleFlag != 0, cursorComponent);
-                                                      break L7;
-                                                    }
-                                                    Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
+                                                if ((this.privilegedServicesEnabled) &&
+                                                    (taskType == 15)) {
+                                                  cursorVisibleInt = (task.firstIntArgument == 0) ? 0 : 1;
+                                                  cursorXOrVisibleFlag = cursorVisibleInt;
+                                                  cursorComponent = (java.awt.Component) (task.input);
+                                                  if (this.useMicrosoftVmBackend) {
+                                                    this.microsoftCursorBackend.a(12758, cursorXOrVisibleFlag != 0, cursorComponent);
                                                     break L7;
                                                   }
+                                                  Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
+                                                  break L7;
                                                 }
-                                                if (!this.useMicrosoftVmBackend) {
-                                                  if (taskType == 17) {
-                                                    customCursorArguments = (Object[]) (task.input);
-                                                    Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
-                                                    break L7;
-                                                  }
+                                                if ((!this.useMicrosoftVmBackend) &&
+                                                    (taskType == 17)) {
+                                                  customCursorArguments = (Object[]) (task.input);
+                                                  Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
+                                                  break L7;
                                                 }
                                                 if (taskType != 16) {
                                                   throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -230,10 +225,9 @@ final class PlatformTaskDispatcher implements Runnable {
                                                       throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
                                                     urlToLaunch = (String) (task.input);
-                                                    if (!urlToLaunch.startsWith("http://")) {
-                                                      if (!urlToLaunch.startsWith("https://")) {
-                                                        throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                      }
+                                                    if ((!urlToLaunch.startsWith("http://")) &&
+                                                        (!urlToLaunch.startsWith("https://"))) {
+                                                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
                                                     allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                                                     for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
@@ -359,11 +353,10 @@ final class PlatformTaskDispatcher implements Runnable {
             directoryIndex = 0;
             while (directoryIndex < searchDirectories.length) {
               searchDirectory = searchDirectories[directoryIndex];
-              if (0 < searchDirectory.length()) {
-                if (!new File(searchDirectory).exists()) {
-                  directoryIndex++;
-                  continue;
-                }
+              if ((0 < searchDirectory.length()) &&
+                  (!new File(searchDirectory).exists())) {
+                directoryIndex++;
+                continue;
               }
               try {
                 preferencesFile = new LimitedRandomAccessFile(new File(searchDirectory, preferencesFilename), "rw", 10000L);

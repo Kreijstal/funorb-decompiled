@@ -172,11 +172,10 @@ final class SecondaryDeque {
           if (!param0) {
             field_f = (String) null;
           }
-          if (param1 == 0L) {
-            if (param2 != null) {
-              stackIn_9_0 = new nk(param2, param3);
-              return (df) ((Object) stackIn_9_0);
-            }
+          if ((param1 == 0L) &&
+              (param2 != null)) {
+            stackIn_9_0 = new nk(param2, param3);
+            return (df) ((Object) stackIn_9_0);
           }
           if (!param4) {
             stackIn_11_0 = new lf(param1, param3);

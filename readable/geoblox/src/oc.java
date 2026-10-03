@@ -97,10 +97,9 @@ final class oc implements dh {
           var7 = param4.field_m + param2;
           ik.a(var6_int, param4.field_h, var7, param4.field_r, -1540604944);
           var8 = oa.field_e[1];
-          if (param4 instanceof hk) {
-            if (((hk) ((Object) param4)).field_y) {
-              var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + param4.field_r >> 1)), (-var8.fullHeight + param4.field_h >> 1) + 1 + var7, 256);
-            }
+          if ((param4 instanceof hk) &&
+              (((hk) ((Object) param4)).field_y)) {
+            var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + param4.field_r >> 1)), (-var8.fullHeight + param4.field_h >> 1) + 1 + var7, 256);
           }
           if (param4.e((byte) 54)) {
             ImageProducerRasterBuffer.a(var7 + 2, -4 + param4.field_r, 14164, -4 + param4.field_h, var6_int + 2);

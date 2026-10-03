@@ -72,12 +72,11 @@ final class ck {
           var7 = 0;
           var8 = bh.a((byte) 81, var6) >> 8;
           var9 = fi.a(var6, 2048) >> 8;
-          if (PrefixCodeDecoder.pointerXSnapshot != -1) {
-            if (ue.pointerYSnapshot != -1) {
-              var7 = -320 + PrefixCodeDecoder.pointerXSnapshot;
-              var9 = -128;
-              var8 = -ue.pointerYSnapshot + 240;
-            }
+          if ((PrefixCodeDecoder.pointerXSnapshot != -1) &&
+              (ue.pointerYSnapshot != -1)) {
+            var7 = -320 + PrefixCodeDecoder.pointerXSnapshot;
+            var9 = -128;
+            var8 = -ue.pointerYSnapshot + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var8 * var8 + (var7 * var7 + var9 * var9)));
           var8 = (int)((double)var8 * var10);
@@ -133,11 +132,10 @@ final class ck {
         var2 = Geoblox.field_C;
         try {
           if (!IntrusiveDeque.a((byte) 124)) {
-            if (vl.field_n != null) {
-              if (vl.field_n.field_c) {
-                jk.a((byte) -87);
-                oh.field_b.a(false, new ij(oh.field_b, ei.field_hb));
-              }
+            if ((vl.field_n != null) &&
+                (vl.field_n.field_c)) {
+              jk.a((byte) -87);
+              oh.field_b.a(false, new ij(oh.field_b, ei.field_hb));
             }
             return;
           }

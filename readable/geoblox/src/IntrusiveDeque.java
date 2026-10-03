@@ -46,44 +46,43 @@ final class IntrusiveDeque {
         int var2;
         int var3;
         var3 = Geoblox.field_C;
-        if (null != kf.field_c) {
-          if (!ag.field_j[param1]) {
-            var2 = param1;
-            if (var2 != 4) {
-              if (3 != var2) {
-                if (var2 != 0) {
-                  if (6 != var2) {
-                    if (5 == var2) {
-                      k.field_f = rf.a(kf.field_c, "", "sport");
-                      uh.field_y.a(te.field_c, 0, -1, k.field_f, sl.field_l);
-                    } else {
-                      if (2 == var2) {
-                        j.field_ib = rf.a(kf.field_c, "", "sweets");
-                        uh.field_y.a(te.field_c, 0, -1, j.field_ib, sl.field_l);
-                      }
-                    }
+        if ((null != kf.field_c) &&
+            (!ag.field_j[param1])) {
+          var2 = param1;
+          if (var2 != 4) {
+            if (3 != var2) {
+              if (var2 != 0) {
+                if (6 != var2) {
+                  if (5 == var2) {
+                    k.field_f = rf.a(kf.field_c, "", "sport");
+                    uh.field_y.a(te.field_c, 0, -1, k.field_f, sl.field_l);
                   } else {
-                    wf.field_o = rf.a(kf.field_c, "", "space");
-                    uh.field_y.a(te.field_c, 0, -1, wf.field_o, sl.field_l);
+                    if (2 == var2) {
+                      j.field_ib = rf.a(kf.field_c, "", "sweets");
+                      uh.field_y.a(te.field_c, 0, -1, j.field_ib, sl.field_l);
+                    }
                   }
                 } else {
-                  ej.field_d = rf.a(kf.field_c, "", "jewellery");
-                  uh.field_y.a(te.field_c, 0, -1, ej.field_d, sl.field_l);
+                  wf.field_o = rf.a(kf.field_c, "", "space");
+                  uh.field_y.a(te.field_c, 0, -1, wf.field_o, sl.field_l);
                 }
               } else {
-                te.field_b = rf.a(kf.field_c, "", "germs");
-                uh.field_y.a(te.field_c, 0, -1, te.field_b, sl.field_l);
+                ej.field_d = rf.a(kf.field_c, "", "jewellery");
+                uh.field_y.a(te.field_c, 0, -1, ej.field_d, sl.field_l);
               }
             } else {
-              qb.field_M = rf.a(kf.field_c, "", "baking");
-              uh.field_y.a(te.field_c, 0, -1, qb.field_M, sl.field_l);
+              te.field_b = rf.a(kf.field_c, "", "germs");
+              uh.field_y.a(te.field_c, 0, -1, te.field_b, sl.field_l);
             }
-            ag.field_j[param1] = true;
-            if (param0 <= 110) {
-              field_f = 13;
-            }
-            return;
+          } else {
+            qb.field_M = rf.a(kf.field_c, "", "baking");
+            uh.field_y.a(te.field_c, 0, -1, qb.field_M, sl.field_l);
           }
+          ag.field_j[param1] = true;
+          if (param0 <= 110) {
+            field_f = 13;
+          }
+          return;
         }
     }
 

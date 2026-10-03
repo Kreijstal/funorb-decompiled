@@ -41,15 +41,13 @@ final class qe {
                   continue;
                 }
                 if (var10[var8].field_f == param2) {
-                  if (param5 != 0) {
-                    if (param5 != var10[var8].field_a) {
-                      continue;
-                    }
+                  if ((param5 != 0) &&
+                      (param5 != var10[var8].field_a)) {
+                    continue;
                   }
-                  if (var7_int != 0) {
-                    if (param0 >= var10[var8].field_h) {
-                      continue;
-                    }
+                  if ((var7_int != 0) &&
+                      (param0 >= var10[var8].field_h)) {
+                    continue;
                   }
                   var7_int = 1;
                   param0 = var10[var8].field_h;
@@ -103,10 +101,9 @@ final class qe {
         RuntimeException quotaUpdateFailureForContext = null;
         clientControlFlowGuard = Geoblox.field_C;
         try {
-          if (ArchiveNetworkClient.difficultyStep != 0) {
-            if (ArchiveNetworkClient.difficultyStep < 21) {
-              fa.releasesPerTheme = fa.releasesPerTheme + 10;
-            }
+          if ((ArchiveNetworkClient.difficultyStep != 0) &&
+              (ArchiveNetworkClient.difficultyStep < 21)) {
+            fa.releasesPerTheme = fa.releasesPerTheme + 10;
           }
           fa.releasesPerTheme = fa.releasesPerTheme + additionalReleases;
           sa.releasesPerDifficultyStep = fa.releasesPerTheme / 3;

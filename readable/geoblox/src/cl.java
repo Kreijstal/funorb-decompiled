@@ -35,12 +35,11 @@ final class cl {
           if (IntrusiveDeque.field_d == si.field_g) {
             return null;
           }
-          if (si.field_g == va.field_e) {
-            if (param1.equals(cg.field_k)) {
-              si.field_g = DiskCacheWorker.field_l;
-              stackIn_8_0 = ScorePopup.field_g;
-              return stackIn_8_0;
-            }
+          if ((si.field_g == va.field_e) &&
+              (param1.equals(cg.field_k))) {
+            si.field_g = DiskCacheWorker.field_l;
+            stackIn_8_0 = ScorePopup.field_g;
+            return stackIn_8_0;
           }
           si.field_g = IntrusiveDeque.field_d;
           cg.field_k = param1;

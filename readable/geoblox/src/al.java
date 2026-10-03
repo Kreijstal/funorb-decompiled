@@ -135,10 +135,9 @@ final class al {
                   var4 = uj.a(';', true, var3);
                   for (var5 = 0; var5 < var4.length; var5++) {
                     var6 = var4[var5].indexOf('=');
-                    if (var6 >= 0) {
-                      if (var4[var5].substring(0, var6).trim().equals(var8)) {
-                        return true;
-                      }
+                    if ((var6 >= 0) &&
+                        (var4[var5].substring(0, var6).trim().equals(var8))) {
+                      return true;
                     }
                   }
                   if (param0 != -109) {

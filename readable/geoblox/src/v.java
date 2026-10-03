@@ -75,10 +75,9 @@ final class v {
             compressionType = buffer.readUnsignedByte((byte) 34);
             packedLength = buffer.readIntBE((byte) -97);
             if (packedLength >= 0) {
-              if (uj.maximumArchiveLength != 0) {
-                if (packedLength > uj.maximumArchiveLength) {
-                  break L0;
-                }
+              if ((uj.maximumArchiveLength != 0) &&
+                  (packedLength > uj.maximumArchiveLength)) {
+                break L0;
               }
               if (uncompressedTypeComplement == ~compressionType) {
                 allocatedUncompressedBytes = new byte[packedLength];
@@ -91,10 +90,9 @@ final class v {
               L2: {
                 unpackedLength = buffer.readIntBE((byte) -49);
                 if (unpackedLength >= 0) {
-                  if (uj.maximumArchiveLength != 0) {
-                    if (uj.maximumArchiveLength < unpackedLength) {
-                      break L2;
-                    }
+                  if ((uj.maximumArchiveLength != 0) &&
+                      (uj.maximumArchiveLength < unpackedLength)) {
+                    break L2;
                   }
                   allocatedDecompressedBytes = new byte[unpackedLength];
                   decompressedBytesAlias = allocatedDecompressedBytes;
@@ -191,10 +189,9 @@ final class v {
               }
             }
           }
-          if (kh.field_d == this.field_a) {
-            if (ok.field_c == this.field_h) {
-              return;
-            }
+          if ((kh.field_d == this.field_a) &&
+              (ok.field_c == this.field_h)) {
+            return;
           }
           this.field_u.a(-2964, this.field_a, this.field_h);
           return;

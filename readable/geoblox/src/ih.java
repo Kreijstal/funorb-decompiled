@@ -140,11 +140,10 @@ final class ih {
                       var26_ref = (GameplayEntity) ((Object) ra.availableEntities.removeLast(1));
                       if (var26_ref != null) {
                         L12: {
-                          if (entity.entitySpriteKindId == 2) {
-                            if (var25 != 0) {
-                              var26_ref.initializeEntityMotion(param0 ^ -97, (float)contactX, 8, entity.velocityX, entity.spriteVariantIndex, 0, entity.spriteAngleRadians, (float)contactY, entity.velocityY, entity.entityCategoryKey, 0.0f);
-                              break L12;
-                            }
+                          if ((entity.entitySpriteKindId == 2) &&
+                              (var25 != 0)) {
+                            var26_ref.initializeEntityMotion(param0 ^ -97, (float)contactX, 8, entity.velocityX, entity.spriteVariantIndex, 0, entity.spriteAngleRadians, (float)contactY, entity.velocityY, entity.entityCategoryKey, 0.0f);
+                            break L12;
                           }
                           var26_ref.initializeEntityMotion(-121, var24.positionX, 8, var24.velocityX, var24.spriteVariantIndex, 0, var24.spriteAngleRadians, var24.positionY, var24.velocityY, var24.entityCategoryKey, 0.0f);
                         }

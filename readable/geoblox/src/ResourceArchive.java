@@ -44,12 +44,10 @@ final class ResourceArchive {
             }
             if (null == attachedEntity.entityQueue) {
               attachedEntity.advanceEntityAnimation(true);
-              if (3 == attachedEntity.entitySpriteKindId) {
-                if (attachedEntity.touchesAvatar) {
-                  if (0 >= attachedEntity.matchCooldownTicks) {
-                    w.avatarShockPending = true;
-                  }
-                }
+              if ((3 == attachedEntity.entitySpriteKindId) &&
+                  (attachedEntity.touchesAvatar) &&
+                  (0 >= attachedEntity.matchCooldownTicks)) {
+                w.avatarShockPending = true;
               }
               if (maximumEntityRadiusSquared < (attachedEntity.positionX - 320.0f) * (-320.0f + attachedEntity.positionX) + (attachedEntity.positionY - 240.0f) * (attachedEntity.positionY - 240.0f)) {
                 maximumEntityRadiusSquared = (-240.0f + attachedEntity.positionY) * (-240.0f + attachedEntity.positionY) + (-320.0f + attachedEntity.positionX) * (-320.0f + attachedEntity.positionX);
@@ -417,14 +415,11 @@ final class ResourceArchive {
           L4: {
             L5: {
               if (decryptionKey != null) {
-                if (decryptionKey[0] == 0) {
-                  if (decryptionKey[1] == 0) {
-                    if (decryptionKey[2] == 0) {
-                      if (0 == decryptionKey[3]) {
-                        break L5;
-                      }
-                    }
-                  }
+                if ((decryptionKey[0] == 0) &&
+                    (decryptionKey[1] == 0) &&
+                    (decryptionKey[2] == 0) &&
+                    (0 == decryptionKey[3])) {
+                  break L5;
                 }
                 copiedPackedBytes = uk.a(true, methodGuard ^ -114, this.packedGroups[groupId]);
                 packedBytesForDecryption = copiedPackedBytes;
@@ -593,10 +588,9 @@ final class ResourceArchive {
         if (methodGuard != 37) {
             return true;
         }
-        if (null != this.decodedFiles[groupId]) {
-            if (!(this.decodedFiles[groupId][fileId] == null)) {
-                return true;
-            }
+        if ((null != this.decodedFiles[groupId]) &&
+            (!(this.decodedFiles[groupId][fileId] == null))) {
+            return true;
         }
         if (this.packedGroups[groupId] != null) {
             return true;
@@ -628,10 +622,9 @@ final class ResourceArchive {
           }
           L1: {
             fileBytesOrFailureForContext = null;
-            if (this.decodedFiles[groupId] != null) {
-              if (null != this.decodedFiles[groupId][fileId]) {
-                break L1;
-              }
+            if ((this.decodedFiles[groupId] != null) &&
+                (null != this.decodedFiles[groupId][fileId])) {
+              break L1;
             }
             if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
               this.loadPackedGroup(groupId, -118);
@@ -940,22 +933,19 @@ final class ResourceArchive {
             L3: {
               var2_long = var2_long * 37L;
               var6 = param0.charAt(var5);
-              if (var6 >= 65) {
-                if (var6 <= 90) {
-                  var2_long = var2_long + (long)(-65 + (1 + var6));
-                  break L3;
-                }
+              if ((var6 >= 65) &&
+                  (var6 <= 90)) {
+                var2_long = var2_long + (long)(-65 + (1 + var6));
+                break L3;
               }
-              if (var6 >= 97) {
-                if (var6 <= 122) {
-                  var2_long = var2_long + (long)(-96 + var6);
-                  break L3;
-                }
+              if ((var6 >= 97) &&
+                  (var6 <= 122)) {
+                var2_long = var2_long + (long)(-96 + var6);
+                break L3;
               }
-              if (48 <= var6) {
-                if (57 >= var6) {
-                  var2_long = var2_long + (long)(-48 + var6 + 27);
-                }
+              if ((48 <= var6) &&
+                  (57 >= var6)) {
+                var2_long = var2_long + (long)(-48 + var6 + 27);
               }
             }
             if (177917621779460413L > var2_long) {

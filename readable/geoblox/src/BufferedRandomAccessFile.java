@@ -35,36 +35,31 @@ final class BufferedRandomAccessFile {
           L3: {
             overlapStart = -1L;
             overlapEnd = -1L;
-            if (this.writeBufferStart >= this.readBufferStart) {
-              if (~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart) {
-                overlapStart = this.writeBufferStart;
-                break L3;
-              }
+            if ((this.writeBufferStart >= this.readBufferStart) &&
+                (~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart)) {
+              overlapStart = this.writeBufferStart;
+              break L3;
             }
-            if (this.writeBufferStart <= this.readBufferStart) {
-              if (~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength)) {
-                overlapStart = this.readBufferStart;
-              }
+            if ((this.writeBufferStart <= this.readBufferStart) &&
+                (~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength))) {
+              overlapStart = this.readBufferStart;
             }
           }
           L5: {
-            if (~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength)) {
-              if (this.readBufferStart + (long)this.readBufferLength >= (long)this.writeBufferLength + this.writeBufferStart) {
-                overlapEnd = (long)this.writeBufferLength + this.writeBufferStart;
-                break L5;
-              }
+            if ((~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength)) &&
+                (this.readBufferStart + (long)this.readBufferLength >= (long)this.writeBufferLength + this.writeBufferStart)) {
+              overlapEnd = (long)this.writeBufferLength + this.writeBufferStart;
+              break L5;
             }
-            if (~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart) {
-              if (~(this.writeBufferStart + (long)this.writeBufferLength) <= ~((long)this.readBufferLength + this.readBufferStart)) {
-                overlapEnd = this.readBufferStart + (long)this.readBufferLength;
-              }
+            if ((~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart) &&
+                (~(this.writeBufferStart + (long)this.writeBufferLength) <= ~((long)this.readBufferLength + this.readBufferStart))) {
+              overlapEnd = this.readBufferStart + (long)this.readBufferLength;
             }
           }
-          if (overlapStart > -1L) {
-            if (overlapEnd > overlapStart) {
-              overlapLength = (int)(overlapEnd - overlapStart);
-              sf.a(this.writeBuffer, (int)(-this.writeBufferStart + overlapStart), this.readBuffer, (int)(-this.readBufferStart + overlapStart), overlapLength);
-            }
+          if ((overlapStart > -1L) &&
+              (overlapEnd > overlapStart)) {
+            overlapLength = (int)(overlapEnd - overlapStart);
+            sf.a(this.writeBuffer, (int)(-this.writeBufferStart + overlapStart), this.readBuffer, (int)(-this.readBufferStart + overlapStart), overlapLength);
           }
           this.writeBufferLength = 0;
           this.writeBufferStart = -1L;
@@ -113,14 +108,12 @@ final class BufferedRandomAccessFile {
             if (remainingLength + destinationOffset > destination.length) {
               throw new ArrayIndexOutOfBoundsException(-destination.length + destinationOffset + remainingLength);
             }
-            if (-1L != this.writeBufferStart) {
-              if (this.position >= this.writeBufferStart) {
-                if ((long)this.writeBufferLength + this.writeBufferStart >= (long)remainingLength + this.position) {
-                  sf.a(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, remainingLength);
-                  this.position = this.position + (long)remainingLength;
-                  return;
-                }
-              }
+            if ((-1L != this.writeBufferStart) &&
+                (this.position >= this.writeBufferStart) &&
+                ((long)this.writeBufferLength + this.writeBufferStart >= (long)remainingLength + this.position)) {
+              sf.a(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, remainingLength);
+              this.position = this.position + (long)remainingLength;
+              return;
             }
             initialPosition = this.position;
             initialDestinationOffset = destinationOffset;
@@ -128,17 +121,16 @@ final class BufferedRandomAccessFile {
             if (methodGuard != 9868) {
               BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(-115);
             }
-            if (~this.position <= ~this.readBufferStart) {
-              if (~((long)this.readBufferLength + this.readBufferStart) < ~this.position) {
-                readCountOrZeroFillEnd = (int)((long)this.readBufferLength - this.position + this.readBufferStart);
-                if (remainingLength < readCountOrZeroFillEnd) {
-                  readCountOrZeroFillEnd = remainingLength;
-                }
-                sf.a(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, readCountOrZeroFillEnd);
-                remainingLength = remainingLength - readCountOrZeroFillEnd;
-                this.position = this.position + (long)readCountOrZeroFillEnd;
-                destinationOffset = destinationOffset + readCountOrZeroFillEnd;
+            if ((~this.position <= ~this.readBufferStart) &&
+                (~((long)this.readBufferLength + this.readBufferStart) < ~this.position)) {
+              readCountOrZeroFillEnd = (int)((long)this.readBufferLength - this.position + this.readBufferStart);
+              if (remainingLength < readCountOrZeroFillEnd) {
+                readCountOrZeroFillEnd = remainingLength;
               }
+              sf.a(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, readCountOrZeroFillEnd);
+              remainingLength = remainingLength - readCountOrZeroFillEnd;
+              this.position = this.position + (long)readCountOrZeroFillEnd;
+              destinationOffset = destinationOffset + readCountOrZeroFillEnd;
             }
             L5: {
               if (this.readBuffer.length < remainingLength) {
@@ -191,40 +183,35 @@ final class BufferedRandomAccessFile {
               }
               L12: {
                 overlayStart = -1L;
-                if (~this.writeBufferStart <= ~initialPosition) {
-                  if (~this.writeBufferStart > ~((long)requestedLength + initialPosition)) {
-                    overlayStart = this.writeBufferStart;
-                    break L12;
-                  }
+                if ((~this.writeBufferStart <= ~initialPosition) &&
+                    (~this.writeBufferStart > ~((long)requestedLength + initialPosition))) {
+                  overlayStart = this.writeBufferStart;
+                  break L12;
                 }
-                if (~this.writeBufferStart >= ~initialPosition) {
-                  if (initialPosition < this.writeBufferStart + (long)this.writeBufferLength) {
-                    overlayStart = initialPosition;
-                  }
+                if ((~this.writeBufferStart >= ~initialPosition) &&
+                    (initialPosition < this.writeBufferStart + (long)this.writeBufferLength)) {
+                  overlayStart = initialPosition;
                 }
               }
               L14: {
                 overlayEnd = -1L;
-                if (~initialPosition > ~((long)this.writeBufferLength + this.writeBufferStart)) {
-                  if ((long)requestedLength + initialPosition >= (long)this.writeBufferLength + this.writeBufferStart) {
-                    overlayEnd = this.writeBufferStart + (long)this.writeBufferLength;
-                    break L14;
-                  }
+                if ((~initialPosition > ~((long)this.writeBufferLength + this.writeBufferStart)) &&
+                    ((long)requestedLength + initialPosition >= (long)this.writeBufferLength + this.writeBufferStart)) {
+                  overlayEnd = this.writeBufferStart + (long)this.writeBufferLength;
+                  break L14;
                 }
-                if (this.writeBufferStart < initialPosition + (long)requestedLength) {
-                  if (~(initialPosition + (long)requestedLength) >= ~(this.writeBufferStart + (long)this.writeBufferLength)) {
-                    overlayEnd = (long)requestedLength + initialPosition;
-                  }
+                if ((this.writeBufferStart < initialPosition + (long)requestedLength) &&
+                    (~(initialPosition + (long)requestedLength) >= ~(this.writeBufferStart + (long)this.writeBufferLength))) {
+                  overlayEnd = (long)requestedLength + initialPosition;
                 }
               }
-              if (overlayStart > -1L) {
-                if (overlayStart < overlayEnd) {
-                  overlayLength = (int)(-overlayStart + overlayEnd);
-                  sf.a(this.writeBuffer, (int)(overlayStart - this.writeBufferStart), destination, initialDestinationOffset + (int)(-initialPosition + overlayStart), overlayLength);
-                  if (overlayEnd > this.position) {
-                    remainingLength = (int)((long)remainingLength - (overlayEnd - this.position));
-                    this.position = overlayEnd;
-                  }
+              if ((overlayStart > -1L) &&
+                  (overlayStart < overlayEnd)) {
+                overlayLength = (int)(-overlayStart + overlayEnd);
+                sf.a(this.writeBuffer, (int)(overlayStart - this.writeBufferStart), destination, initialDestinationOffset + (int)(-initialPosition + overlayStart), overlayLength);
+                if (overlayEnd > this.position) {
+                  remainingLength = (int)((long)remainingLength - (overlayEnd - this.position));
+                  this.position = overlayEnd;
                 }
               }
             }
@@ -282,16 +269,15 @@ final class BufferedRandomAccessFile {
                 this.flush((byte) 99);
               }
             }
-            if (-1L != this.writeBufferStart) {
-              if ((long)remainingLength + this.position > (long)this.writeBuffer.length + this.writeBufferStart) {
-                bytesUntilWriteBufferFull = (int)((long)this.writeBuffer.length + this.writeBufferStart - this.position);
-                sf.a(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), bytesUntilWriteBufferFull);
-                this.position = this.position + (long)bytesUntilWriteBufferFull;
-                sourceOffset = sourceOffset + bytesUntilWriteBufferFull;
-                remainingLength = remainingLength - bytesUntilWriteBufferFull;
-                this.writeBufferLength = this.writeBuffer.length;
-                this.flush((byte) 127);
-              }
+            if ((-1L != this.writeBufferStart) &&
+                ((long)remainingLength + this.position > (long)this.writeBuffer.length + this.writeBufferStart)) {
+              bytesUntilWriteBufferFull = (int)((long)this.writeBuffer.length + this.writeBufferStart - this.position);
+              sf.a(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), bytesUntilWriteBufferFull);
+              this.position = this.position + (long)bytesUntilWriteBufferFull;
+              sourceOffset = sourceOffset + bytesUntilWriteBufferFull;
+              remainingLength = remainingLength - bytesUntilWriteBufferFull;
+              this.writeBufferLength = this.writeBuffer.length;
+              this.flush((byte) 127);
             }
             if (methodGuard) {
               return;
@@ -329,36 +315,31 @@ final class BufferedRandomAccessFile {
             L6: {
               overlapStart = -1L;
               overlapEnd = -1L;
-              if (~this.readBufferStart >= ~this.position) {
-                if (~this.position > ~(this.readBufferStart + (long)this.readBufferLength)) {
-                  overlapStart = this.position;
-                  break L6;
-                }
+              if ((~this.readBufferStart >= ~this.position) &&
+                  (~this.position > ~(this.readBufferStart + (long)this.readBufferLength))) {
+                overlapStart = this.position;
+                break L6;
               }
-              if (~this.readBufferStart <= ~this.position) {
-                if (~this.readBufferStart > ~(this.position + (long)remainingLength)) {
-                  overlapStart = this.readBufferStart;
-                }
+              if ((~this.readBufferStart <= ~this.position) &&
+                  (~this.readBufferStart > ~(this.position + (long)remainingLength))) {
+                overlapStart = this.readBufferStart;
               }
             }
             L8: {
-              if (~this.readBufferStart > ~((long)remainingLength + this.position)) {
-                if (~((long)this.readBufferLength + this.readBufferStart) <= ~(this.position + (long)remainingLength)) {
-                  overlapEnd = this.position + (long)remainingLength;
-                  break L8;
-                }
+              if ((~this.readBufferStart > ~((long)remainingLength + this.position)) &&
+                  (~((long)this.readBufferLength + this.readBufferStart) <= ~(this.position + (long)remainingLength))) {
+                overlapEnd = this.position + (long)remainingLength;
+                break L8;
               }
-              if (this.position < this.readBufferStart + (long)this.readBufferLength) {
-                if (~(this.readBufferStart + (long)this.readBufferLength) >= ~(this.position + (long)remainingLength)) {
-                  overlapEnd = (long)this.readBufferLength + this.readBufferStart;
-                }
+              if ((this.position < this.readBufferStart + (long)this.readBufferLength) &&
+                  (~(this.readBufferStart + (long)this.readBufferLength) >= ~(this.position + (long)remainingLength))) {
+                overlapEnd = (long)this.readBufferLength + this.readBufferStart;
               }
             }
-            if (overlapStart > -1L) {
-              if (~overlapStart > ~overlapEnd) {
-                overlapLength = (int)(-overlapStart + overlapEnd);
-                sf.a(source, (int)(overlapStart + ((long)sourceOffset - this.position)), this.readBuffer, (int)(overlapStart - this.readBufferStart), overlapLength);
-              }
+            if ((overlapStart > -1L) &&
+                (~overlapStart > ~overlapEnd)) {
+              overlapLength = (int)(-overlapStart + overlapEnd);
+              sf.a(source, (int)(overlapStart + ((long)sourceOffset - this.position)), this.readBuffer, (int)(overlapStart - this.readBufferStart), overlapLength);
             }
             this.position = this.position + (long)remainingLength;
             return;

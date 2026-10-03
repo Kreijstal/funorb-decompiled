@@ -160,12 +160,11 @@ final class hi extends ee implements ta, pl {
         try {
           L0: {
             meshForPriorityDecision = mesh;
-            if (null != meshForPriorityDecision.facePriorities) {
-              if (meshForPriorityDecision.facePriorityCount > 1) {
-                facePriorities = meshForPriorityDecision.facePriorities;
-                va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
-                break L0;
-              }
+            if ((null != meshForPriorityDecision.facePriorities) &&
+                (meshForPriorityDecision.facePriorityCount > 1)) {
+              facePriorities = meshForPriorityDecision.facePriorities;
+              va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
+              break L0;
             }
             vc.compactDepthBucketFaceOrder(2971);
           }
@@ -231,17 +230,13 @@ final class hi extends ee implements ta, pl {
             }
             L7: {
               faceNormalC = faceNormalCIndexOrMissing;
-              if (l.meshMaterials != null) {
-                if (mesh.faceMaterialIndices != null) {
-                  if (mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex) {
-                    if (mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1) {
-                      if (l.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]) {
-                        faceMaterialOrNull = l.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
-                        break L7;
-                      }
-                    }
-                  }
-                }
+              if ((l.meshMaterials != null) &&
+                  (mesh.faceMaterialIndices != null) &&
+                  (mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex) &&
+                  (mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1) &&
+                  (l.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex])) {
+                faceMaterialOrNull = l.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
+                break L7;
               }
               faceMaterialOrNull = null;
             }
@@ -253,23 +248,22 @@ final class hi extends ee implements ta, pl {
               vertexBY = dj.projectedMeshVertexY[faceVertexB];
               vertexCX = sh.projectedMeshVertexX[faceVertexC];
               vertexCY = dj.projectedMeshVertexY[faceVertexC];
-              if (faceNormalA == faceNormalB) {
-                if (faceNormalC == faceNormalB) {
-                  diffuseA = diffuseResponses[faceNormalA];
-                  flatSpecularOrDiffuseB = specularResponses[faceNormalA];
-                  if (faceMaterial != null) {
-                    flatBaseRgbOrDefault = faceMaterial.baseRgb;
-                  } else {
-                    flatBaseRgbOrDefault = 8355711;
-                  }
-                  flatBaseRgbOrDiffuseC = flatBaseRgbOrDefault;
-                  flatRedBlueMaskOrSpecularA = flatBaseRgbOrDiffuseC & 16711935;
-                  flatGreenMaskOrSpecularB = 65280 & flatBaseRgbOrDiffuseC;
-                  flatLitRgbOrSpecularC = (-16711703 & flatRedBlueMaskOrSpecularA * diffuseA) >>> 8 | -285147392 & flatGreenMaskOrSpecularB * diffuseA >>> 8;
-                  flatLitRgbOrSpecularC = flatLitRgbOrSpecularC + flatSpecularOrDiffuseB * 65793;
-                  gi.drawHalfBlendSolidTriangle(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
-                  break L9;
+              if ((faceNormalA == faceNormalB) &&
+                  (faceNormalC == faceNormalB)) {
+                diffuseA = diffuseResponses[faceNormalA];
+                flatSpecularOrDiffuseB = specularResponses[faceNormalA];
+                if (faceMaterial != null) {
+                  flatBaseRgbOrDefault = faceMaterial.baseRgb;
+                } else {
+                  flatBaseRgbOrDefault = 8355711;
                 }
+                flatBaseRgbOrDiffuseC = flatBaseRgbOrDefault;
+                flatRedBlueMaskOrSpecularA = flatBaseRgbOrDiffuseC & 16711935;
+                flatGreenMaskOrSpecularB = 65280 & flatBaseRgbOrDiffuseC;
+                flatLitRgbOrSpecularC = (-16711703 & flatRedBlueMaskOrSpecularA * diffuseA) >>> 8 | -285147392 & flatGreenMaskOrSpecularB * diffuseA >>> 8;
+                flatLitRgbOrSpecularC = flatLitRgbOrSpecularC + flatSpecularOrDiffuseB * 65793;
+                gi.drawHalfBlendSolidTriangle(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
+                break L9;
               }
               diffuseA = diffuseResponses[faceNormalA];
               flatSpecularOrDiffuseB = diffuseResponses[faceNormalB];
@@ -332,15 +326,13 @@ final class hi extends ee implements ta, pl {
             L1: {
               L2: {
                 characterCode = text.charAt(characterStart + characterIndex);
-                if (0 < characterCode) {
-                  if (characterCode < 128) {
-                    break L2;
-                  }
+                if ((0 < characterCode) &&
+                    (characterCode < 128)) {
+                  break L2;
                 }
-                if (characterCode >= 160) {
-                  if (characterCode <= 255) {
-                    break L2;
-                  }
+                if ((characterCode >= 160) &&
+                    (characterCode <= 255)) {
+                  break L2;
                 }
                 if (characterCode == 8364) {
                   destination[characterIndex + destinationOffset] = (byte)-128;

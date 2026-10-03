@@ -155,10 +155,9 @@ final class kc {
                         break L8;
                       }
                       L10: {
-                        if (alreadyVisited) {
-                          if (clientControlSnapshot == 0) {
-                            break L10;
-                          }
+                        if ((alreadyVisited) &&
+                            (clientControlSnapshot == 0)) {
+                          break L10;
                         }
                         pendingConnectivityEntities = new SecondaryDeque();
                         visitedNonAvatarEntities = new SecondaryDeque();
@@ -206,10 +205,9 @@ final class kc {
                                                 if (clientControlSnapshot != 0) {
                                                   break L21;
                                                 }
-                                                if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
-                                                  if (clientControlSnapshot == 0) {
-                                                    break L20;
-                                                  }
+                                                if ((comparedThenUnlinkTarget == neighborThenUnlinkArgument) &&
+                                                    (clientControlSnapshot == 0)) {
+                                                  break L20;
                                                 }
                                                 componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
                                                 if (clientControlSnapshot == 0) {
@@ -468,10 +466,9 @@ final class kc {
                         break L41;
                       }
                     }
-                    if (routedAttachedEntity.entityQueue != bh.transientEntities) {
-                      if (!w.avatarShockPending) {
-                        break L40;
-                      }
+                    if ((routedAttachedEntity.entityQueue != bh.transientEntities) &&
+                        (!w.avatarShockPending)) {
+                      break L40;
                     }
                     transientNeighborIndex = 0;
                     while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
@@ -494,22 +491,20 @@ final class kc {
                     routedAttachedEntity.remainingLifetimeTicks = 50;
                     bh.transientEntities.addLast(-100, routedAttachedEntity);
                     routedAttachedEntity.animationFrameIndex = 0;
-                    if (routedAttachedEntity.touchesAvatar) {
-                      if (w.avatarShockPending) {
-                        L48: {
-                          popupOriginYInput = (int)routedAttachedEntity.positionY;
-                          popupOriginXInput = (int)routedAttachedEntity.positionX;
-                          popupGuardInput = 117;
-                          if (routedAttachedEntity.entitySpriteKindId != 4) {
-                            if (routedAttachedEntity.entitySpriteKindId != 3) {
-                              popupPoints = 10;
-                              break L48;
-                            }
-                          }
-                          popupPoints = 100;
+                    if ((routedAttachedEntity.touchesAvatar) &&
+                        (w.avatarShockPending)) {
+                      L48: {
+                        popupOriginYInput = (int)routedAttachedEntity.positionY;
+                        popupOriginXInput = (int)routedAttachedEntity.positionX;
+                        popupGuardInput = 117;
+                        if ((routedAttachedEntity.entitySpriteKindId != 4) &&
+                            (routedAttachedEntity.entitySpriteKindId != 3)) {
+                          popupPoints = 10;
+                          break L48;
                         }
-                        ld.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
+                        popupPoints = 100;
                       }
+                      ld.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
                     }
                     if (4 != routedAttachedEntity.entitySpriteKindId) {
                       routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);

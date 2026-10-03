@@ -66,10 +66,9 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               }
             }
             if (this.socket == null) {
-              if (this.countPriorityRequests(-78) == 0) {
-                if (0 == this.countBackgroundRequests(false)) {
-                  return true;
-                }
+              if ((this.countPriorityRequests(-78) == 0) &&
+                  (0 == this.countBackgroundRequests(false))) {
+                return true;
               }
               return false;
             }
@@ -230,10 +229,9 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.failureCount = this.failureCount + 1;
               this.failureCode = -2;
               this.socket = null;
-              if (0 == this.countPriorityRequests(methodGuard - 216)) {
-                if (this.countBackgroundRequests(false) == 0) {
-                  return true;
-                }
+              if ((0 == this.countPriorityRequests(methodGuard - 216)) &&
+                  (this.countBackgroundRequests(false) == 0)) {
+                return true;
               }
               return false;
             }
@@ -262,42 +260,39 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             return false;
           }
           var3_int = param1.length();
-          if (var3_int >= 1) {
-            if (12 >= var3_int) {
-              var4 = oe.a(param1, param2 ^ 122);
-              if (var4 == null) {
-                return false;
-              }
-              if (var4.length() < 1) {
-                return false;
-              }
-              if (!gg.a((byte) -62, var4.charAt(0))) {
-                if (!gg.a((byte) -98, var4.charAt(-1 + var4.length()))) {
+          if ((var3_int >= 1) &&
+              (12 >= var3_int)) {
+            var4 = oe.a(param1, param2 ^ 122);
+            if (var4 == null) {
+              return false;
+            }
+            if (var4.length() < 1) {
+              return false;
+            }
+            if ((!gg.a((byte) -62, var4.charAt(0))) &&
+                (!gg.a((byte) -98, var4.charAt(-1 + var4.length())))) {
+              var5 = 0;
+              for (var6 = 0; var6 < param1.length(); var6++) {
+                var7 = param1.charAt(var6);
+                if (!gg.a((byte) -93, (char) var7)) {
                   var5 = 0;
-                  for (var6 = 0; var6 < param1.length(); var6++) {
-                    var7 = param1.charAt(var6);
-                    if (!gg.a((byte) -93, (char) var7)) {
-                      var5 = 0;
-                    } else {
-                      var5++;
-                    }
-                    if (var5 >= 2) {
-                      if (!param0) {
-                        return false;
-                      }
-                    }
-                  }
-                  if (param2 != 118) {
-                    return false;
-                  }
-                  if (var5 <= 0) {
-                    return true;
-                  }
+                } else {
+                  var5++;
+                }
+                if ((var5 >= 2) &&
+                    (!param0)) {
                   return false;
                 }
               }
+              if (param2 != 118) {
+                return false;
+              }
+              if (var5 <= 0) {
+                return true;
+              }
               return false;
             }
+            return false;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

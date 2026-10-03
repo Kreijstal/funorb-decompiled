@@ -310,26 +310,24 @@ class Sprite extends SpriteState {
                 continue;
               }
               L68: {
-                if (sourceYQ12 >= 0) {
-                  if (sourceXQ12 - (this.width << 12) < 0) {
-                    if (sourceYQ12 - (this.height << 12) < 0) {
-                      while (true) {
-                        if (negativePixelCounter >= 0) {
-                          break L68;
-                        }
-                        sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                        if (sampledPixel == 0) {
-                          destinationIndex++;
-                          negativePixelCounter++;
-                          continue;
-                        }
-                        writeIndexFixedXFixedY = destinationIndex;
-                        destinationIndex++;
-                        SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = sampledPixel;
-                        negativePixelCounter++;
-                        continue;
-                      }
+                if ((sourceYQ12 >= 0) &&
+                    (sourceXQ12 - (this.width << 12) < 0) &&
+                    (sourceYQ12 - (this.height << 12) < 0)) {
+                  while (true) {
+                    if (negativePixelCounter >= 0) {
+                      break L68;
                     }
+                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                    if (sampledPixel == 0) {
+                      destinationIndex++;
+                      negativePixelCounter++;
+                      continue;
+                    }
+                    writeIndexFixedXFixedY = destinationIndex;
+                    destinationIndex++;
+                    SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = sampledPixel;
+                    negativePixelCounter++;
+                    continue;
                   }
                 }
               }
@@ -346,32 +344,31 @@ class Sprite extends SpriteState {
                 sourceXQ12 = rowSourceXQ12;
                 sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
                 negativePixelCounter = rightThenNegativeWidth;
-                if (sourceXQ12 >= 0) {
-                  if (sourceXQ12 - (this.width << 12) < 0) {
-                    if (sourceYQ12 < 0) {
-                      clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
-                      negativePixelCounter = negativePixelCounter + clipPixelCount;
-                      sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                      destinationIndex = destinationIndex + clipPixelCount;
-                    }
-                    clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
-                    if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
-                      negativePixelCounter = clipPixelCount;
-                    }
-                    while (negativePixelCounter < 0) {
-                      sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                      if (sampledPixel == 0) {
-                        destinationIndex++;
-                      } else {
-                        writeIndexFixedXForwardY = destinationIndex;
-                        destinationIndex++;
-                        SoftwareRasterizer.framebuffer[writeIndexFixedXForwardY] = sampledPixel;
-                      }
-                      sourceYQ12 = sourceYQ12 + inverseSinStep;
-                      negativePixelCounter++;
-                    }
-                    break L56;
+                if ((sourceXQ12 >= 0) &&
+                    (sourceXQ12 - (this.width << 12) < 0)) {
+                  if (sourceYQ12 < 0) {
+                    clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
+                    negativePixelCounter = negativePixelCounter + clipPixelCount;
+                    sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                    destinationIndex = destinationIndex + clipPixelCount;
                   }
+                  clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+                  if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                    negativePixelCounter = clipPixelCount;
+                  }
+                  while (negativePixelCounter < 0) {
+                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                    if (sampledPixel == 0) {
+                      destinationIndex++;
+                    } else {
+                      writeIndexFixedXForwardY = destinationIndex;
+                      destinationIndex++;
+                      SoftwareRasterizer.framebuffer[writeIndexFixedXForwardY] = sampledPixel;
+                    }
+                    sourceYQ12 = sourceYQ12 + inverseSinStep;
+                    negativePixelCounter++;
+                  }
+                  break L56;
                 }
               }
               negativeRowCounter++;
@@ -435,32 +432,31 @@ class Sprite extends SpriteState {
                 sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
                 sourceYQ12 = rowSourceYQ12;
                 negativePixelCounter = rightThenNegativeWidth;
-                if (sourceYQ12 >= 0) {
-                  if (sourceYQ12 - (this.height << 12) < 0) {
-                    if (sourceXQ12 < 0) {
-                      clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
-                      negativePixelCounter = negativePixelCounter + clipPixelCount;
-                      sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                      destinationIndex = destinationIndex + clipPixelCount;
-                    }
-                    clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
-                    if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
-                      negativePixelCounter = clipPixelCount;
-                    }
-                    while (negativePixelCounter < 0) {
-                      sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                      if (sampledPixel == 0) {
-                        destinationIndex++;
-                      } else {
-                        writeIndexForwardXFixedY = destinationIndex;
-                        destinationIndex++;
-                        SoftwareRasterizer.framebuffer[writeIndexForwardXFixedY] = sampledPixel;
-                      }
-                      sourceXQ12 = sourceXQ12 + inverseCosStep;
-                      negativePixelCounter++;
-                    }
-                    break L30;
+                if ((sourceYQ12 >= 0) &&
+                    (sourceYQ12 - (this.height << 12) < 0)) {
+                  if (sourceXQ12 < 0) {
+                    clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
+                    negativePixelCounter = negativePixelCounter + clipPixelCount;
+                    sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                    destinationIndex = destinationIndex + clipPixelCount;
                   }
+                  clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+                  if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                    negativePixelCounter = clipPixelCount;
+                  }
+                  while (negativePixelCounter < 0) {
+                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                    if (sampledPixel == 0) {
+                      destinationIndex++;
+                    } else {
+                      writeIndexForwardXFixedY = destinationIndex;
+                      destinationIndex++;
+                      SoftwareRasterizer.framebuffer[writeIndexForwardXFixedY] = sampledPixel;
+                    }
+                    sourceXQ12 = sourceXQ12 + inverseCosStep;
+                    negativePixelCounter++;
+                  }
+                  break L30;
                 }
               }
               negativeRowCounter++;
@@ -575,33 +571,32 @@ class Sprite extends SpriteState {
               sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
               sourceYQ12 = rowSourceYQ12;
               negativePixelCounter = rightThenNegativeWidth;
-              if (sourceYQ12 >= 0) {
-                if (sourceYQ12 - (this.height << 12) < 0) {
-                  clipPixelCount = sourceXQ12 - (this.width << 12);
-                  if (sourceXQ12 - (this.width << 12) >= 0) {
-                    clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
-                    negativePixelCounter = negativePixelCounter + clipPixelCount;
-                    sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                    destinationIndex = destinationIndex + clipPixelCount;
-                  }
-                  clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
-                  if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
-                    negativePixelCounter = clipPixelCount;
-                  }
-                  while (negativePixelCounter < 0) {
-                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                    if (sampledPixel == 0) {
-                      destinationIndex++;
-                    } else {
-                      writeIndexReverseXFixedY = destinationIndex;
-                      destinationIndex++;
-                      SoftwareRasterizer.framebuffer[writeIndexReverseXFixedY] = sampledPixel;
-                    }
-                    sourceXQ12 = sourceXQ12 + inverseCosStep;
-                    negativePixelCounter++;
-                  }
-                  break L50;
+              if ((sourceYQ12 >= 0) &&
+                  (sourceYQ12 - (this.height << 12) < 0)) {
+                clipPixelCount = sourceXQ12 - (this.width << 12);
+                if (sourceXQ12 - (this.width << 12) >= 0) {
+                  clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+                  negativePixelCounter = negativePixelCounter + clipPixelCount;
+                  sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                  destinationIndex = destinationIndex + clipPixelCount;
                 }
+                clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
+                if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                  negativePixelCounter = clipPixelCount;
+                }
+                while (negativePixelCounter < 0) {
+                  sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                  if (sampledPixel == 0) {
+                    destinationIndex++;
+                  } else {
+                    writeIndexReverseXFixedY = destinationIndex;
+                    destinationIndex++;
+                    SoftwareRasterizer.framebuffer[writeIndexReverseXFixedY] = sampledPixel;
+                  }
+                  sourceXQ12 = sourceXQ12 + inverseCosStep;
+                  negativePixelCounter++;
+                }
+                break L50;
               }
             }
             negativeRowCounter++;
@@ -800,14 +795,11 @@ class Sprite extends SpriteState {
                     continue;
                   }
                 }
-                if (scanThenLeftEdge == 0) {
-                  if (scanThenRightEdge == this.width - 1) {
-                    if (rowOffsetThenTopEdge == 0) {
-                      if (bottomEdge == this.height - 1) {
-                        return;
-                      }
-                    }
-                  }
+                if ((scanThenLeftEdge == 0) &&
+                    (scanThenRightEdge == this.width - 1) &&
+                    (rowOffsetThenTopEdge == 0) &&
+                    (bottomEdge == this.height - 1)) {
+                  return;
                 }
                 scanRowThenCroppedWidth = scanThenRightEdge + 1 - scanThenLeftEdge;
                 croppedHeight = bottomEdge + 1 - rowOffsetThenTopEdge;
@@ -843,28 +835,24 @@ class Sprite extends SpriteState {
             L2: {
               pixelOrOutlineColor = this.pixels[pixelIndex];
               if (pixelOrOutlineColor == 0) {
-                if (column > 0) {
-                  if (this.pixels[pixelIndex - 1] != 0) {
-                    pixelOrOutlineColor = color;
-                    break L2;
-                  }
+                if ((column > 0) &&
+                    (this.pixels[pixelIndex - 1] != 0)) {
+                  pixelOrOutlineColor = color;
+                  break L2;
                 }
-                if (row > 0) {
-                  if (this.pixels[pixelIndex - this.width] != 0) {
-                    pixelOrOutlineColor = color;
-                    break L2;
-                  }
+                if ((row > 0) &&
+                    (this.pixels[pixelIndex - this.width] != 0)) {
+                  pixelOrOutlineColor = color;
+                  break L2;
                 }
-                if (column < this.width - 1) {
-                  if (this.pixels[pixelIndex + 1] != 0) {
-                    pixelOrOutlineColor = color;
-                    break L2;
-                  }
+                if ((column < this.width - 1) &&
+                    (this.pixels[pixelIndex + 1] != 0)) {
+                  pixelOrOutlineColor = color;
+                  break L2;
                 }
-                if (row < this.height - 1) {
-                  if (this.pixels[pixelIndex + this.width] != 0) {
-                    pixelOrOutlineColor = color;
-                  }
+                if ((row < this.height - 1) &&
+                    (this.pixels[pixelIndex + this.width] != 0)) {
+                  pixelOrOutlineColor = color;
                 }
               }
             }
@@ -1223,21 +1211,20 @@ class Sprite extends SpriteState {
             sourceRed = sourcePixel >> 16 & 255;
             sourceGreen = sourcePixel >> 8 & 255;
             sourceBlue = sourcePixel & 255;
-            if (sourceRed == sourceGreen) {
-              if (sourceGreen == sourceBlue) {
-                if (sourceRed > 128) {
-                  destinationWriteIndex = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[destinationWriteIndex] = (tintRed * (256 - sourceRed) + 255 * (sourceRed - 128) >> 7 << 16) + (tintGreen * (256 - sourceGreen) + 255 * (sourceGreen - 128) >> 7 << 8) + (tintBlue * (256 - sourceBlue) + 255 * (sourceBlue - 128) >> 7);
-                  negativeColumn++;
-                  continue;
-                }
-                destinationWriteIndex2 = destinationIndex;
+            if ((sourceRed == sourceGreen) &&
+                (sourceGreen == sourceBlue)) {
+              if (sourceRed > 128) {
+                destinationWriteIndex = destinationIndex;
                 destinationIndex++;
-                destinationPixels[destinationWriteIndex2] = (sourceRed * tintRed >> 7 << 16) + (sourceGreen * tintGreen >> 7 << 8) + (sourceBlue * tintBlue >> 7);
+                destinationPixels[destinationWriteIndex] = (tintRed * (256 - sourceRed) + 255 * (sourceRed - 128) >> 7 << 16) + (tintGreen * (256 - sourceGreen) + 255 * (sourceGreen - 128) >> 7 << 8) + (tintBlue * (256 - sourceBlue) + 255 * (sourceBlue - 128) >> 7);
                 negativeColumn++;
                 continue;
               }
+              destinationWriteIndex2 = destinationIndex;
+              destinationIndex++;
+              destinationPixels[destinationWriteIndex2] = (sourceRed * tintRed >> 7 << 16) + (sourceGreen * tintGreen >> 7 << 8) + (sourceBlue * tintBlue >> 7);
+              negativeColumn++;
+              continue;
             }
             destinationWriteIndex3 = destinationIndex;
             destinationIndex++;
@@ -2389,17 +2376,16 @@ class Sprite extends SpriteState {
               }
               if (canSample != 0) {
                 while (negativePixelCounter < 0) {
-                  if (sourceXQ12 >= -4096) {
-                    if (sourceYQ12 >= -4096) {
-                      sourcePixelX = sourceXQ12 >> 12;
-                      sourcePixelY = sourceYQ12 >> 12;
-                      this.sampleBilinear(destinationIndex, sourcePixelX, sourcePixelY, sourceXQ12, sourceYQ12);
-                      negativePixelCounter++;
-                      sourceXQ12 = sourceXQ12 + inverseCosStep;
-                      sourceYQ12 = sourceYQ12 + inverseSinStep;
-                      destinationIndex++;
-                      continue;
-                    }
+                  if ((sourceXQ12 >= -4096) &&
+                      (sourceYQ12 >= -4096)) {
+                    sourcePixelX = sourceXQ12 >> 12;
+                    sourcePixelY = sourceYQ12 >> 12;
+                    this.sampleBilinear(destinationIndex, sourcePixelX, sourcePixelY, sourceXQ12, sourceYQ12);
+                    negativePixelCounter++;
+                    sourceXQ12 = sourceXQ12 + inverseCosStep;
+                    sourceYQ12 = sourceYQ12 + inverseSinStep;
+                    destinationIndex++;
+                    continue;
                   }
                   break;
                 }

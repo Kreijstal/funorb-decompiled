@@ -57,19 +57,16 @@ final class s extends ee implements pe, pl {
             return;
           }
           L0: {
-            if (param0.field_o == 0) {
-              if (0 == param0.field_d) {
-                break L0;
-              }
+            if ((param0.field_o == 0) &&
+                (0 == param0.field_d)) {
+              break L0;
             }
             for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
               var3 = MatchingTextValidator.field_k[var2_int];
-              if (2 == var3.field_f) {
-                if (param0.field_o == var3.field_o) {
-                  if (param0.field_d == var3.field_d) {
-                    return;
-                  }
-                }
+              if ((2 == var3.field_f) &&
+                  (param0.field_o == var3.field_o) &&
+                  (param0.field_d == var3.field_d)) {
+                return;
               }
             }
             break L0;
@@ -286,11 +283,10 @@ final class s extends ee implements pe, pl {
                   var5 = uj.a(';', true, var4);
                   for (var6 = 0; var5.length > var6; var6++) {
                     var7 = var5[var6].indexOf('=');
-                    if (var7 >= 0) {
-                      if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                        stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
-                        return stackIn_5_0;
-                      }
+                    if ((var7 >= 0) &&
+                        (var5[var6].substring(0, var7).trim().equals(var3))) {
+                      stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
+                      return stackIn_5_0;
                     }
                   }
                   break L0;

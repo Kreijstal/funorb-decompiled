@@ -76,141 +76,113 @@ final class ArchiveIndex {
         try {
           indexBuffer = new ByteArrayBuffer(v.decompressArchive(packedIndexBytes, -1));
           formatVersion = indexBuffer.readUnsignedByte((byte) 34);
-          if (5 <= formatVersion) {
-            if (formatVersion <= 7) {
-              if (formatVersion < 6) {
-                this.indexRevision = 0;
-              } else {
-                this.indexRevision = indexBuffer.readIntBE((byte) -121);
-              }
-              formatFlags = indexBuffer.readUnsignedByte((byte) 34);
-              hasNameHashesSnapshot = (0 == (1 & formatFlags)) ? 0 : 1;
-              hasNameHashes = hasNameHashesSnapshot;
-              hasGroupDigestsSnapshot = ((2 & formatFlags) == 0) ? 0 : 1;
-              hasGroupDigests = hasGroupDigestsSnapshot;
-              if (formatVersion >= 7) {
-                this.groupCount = indexBuffer.readUnsignedShortOrInt((byte) -27);
-              } else {
-                this.groupCount = indexBuffer.readUnsignedShortBE(true);
-              }
-              L5: {
-                accumulatedId = 0;
-                this.groupIds = new int[this.groupCount];
-                maximumGroupId = -1;
-                if (7 <= formatVersion) {
-                  for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
-                    groupIdAfterWideDelta = accumulatedId + indexBuffer.readUnsignedShortOrInt((byte) -27);
-                    accumulatedId = groupIdAfterWideDelta;
-                    this.groupIds[groupOrdinalOrSlotIndex] = groupIdAfterWideDelta;
-                    if (this.groupIds[groupOrdinalOrSlotIndex] > maximumGroupId) {
-                      maximumGroupId = this.groupIds[groupOrdinalOrSlotIndex];
-                    }
-                  }
-                  break L5;
-                }
-                for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
-                  groupIdAfterShortDelta = accumulatedId + indexBuffer.readUnsignedShortBE(true);
-                  accumulatedId = groupIdAfterShortDelta;
-                  this.groupIds[groupOrdinalOrSlotIndex] = groupIdAfterShortDelta;
-                  if (maximumGroupId < this.groupIds[groupOrdinalOrSlotIndex]) {
+          if ((5 <= formatVersion) &&
+              (formatVersion <= 7)) {
+            if (formatVersion < 6) {
+              this.indexRevision = 0;
+            } else {
+              this.indexRevision = indexBuffer.readIntBE((byte) -121);
+            }
+            formatFlags = indexBuffer.readUnsignedByte((byte) 34);
+            hasNameHashesSnapshot = (0 == (1 & formatFlags)) ? 0 : 1;
+            hasNameHashes = hasNameHashesSnapshot;
+            hasGroupDigestsSnapshot = ((2 & formatFlags) == 0) ? 0 : 1;
+            hasGroupDigests = hasGroupDigestsSnapshot;
+            if (formatVersion >= 7) {
+              this.groupCount = indexBuffer.readUnsignedShortOrInt((byte) -27);
+            } else {
+              this.groupCount = indexBuffer.readUnsignedShortBE(true);
+            }
+            L5: {
+              accumulatedId = 0;
+              this.groupIds = new int[this.groupCount];
+              maximumGroupId = -1;
+              if (7 <= formatVersion) {
+                for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
+                  groupIdAfterWideDelta = accumulatedId + indexBuffer.readUnsignedShortOrInt((byte) -27);
+                  accumulatedId = groupIdAfterWideDelta;
+                  this.groupIds[groupOrdinalOrSlotIndex] = groupIdAfterWideDelta;
+                  if (this.groupIds[groupOrdinalOrSlotIndex] > maximumGroupId) {
                     maximumGroupId = this.groupIds[groupOrdinalOrSlotIndex];
                   }
                 }
                 break L5;
               }
-              this.groupSlotCount = 1 + maximumGroupId;
-              if (hasGroupDigests != 0) {
-                this.groupWhirlpoolDigests = new byte[this.groupSlotCount][];
-              }
-              L11: {
-                this.groupCrc32 = new int[this.groupSlotCount];
-                this.fileCounts = new int[this.groupSlotCount];
-                this.groupRevisions = new int[this.groupSlotCount];
-                this.fileSlotCounts = new int[this.groupSlotCount];
-                this.fileIds = new int[this.groupSlotCount][];
-                if (hasNameHashes != 0) {
-                  this.groupNameHashes = new int[this.groupSlotCount];
-                  for (groupOrdinalOrSlotIndex = 0; this.groupSlotCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
-                    this.groupNameHashes[groupOrdinalOrSlotIndex] = -1;
-                  }
-                  for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
-                    this.groupNameHashes[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readIntBE((byte) -76);
-                  }
-                  this.groupNameLookup = new IntKeyLookup(this.groupNameHashes);
-                  break L11;
+              for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
+                groupIdAfterShortDelta = accumulatedId + indexBuffer.readUnsignedShortBE(true);
+                accumulatedId = groupIdAfterShortDelta;
+                this.groupIds[groupOrdinalOrSlotIndex] = groupIdAfterShortDelta;
+                if (maximumGroupId < this.groupIds[groupOrdinalOrSlotIndex]) {
+                  maximumGroupId = this.groupIds[groupOrdinalOrSlotIndex];
                 }
               }
-              for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
-                this.groupCrc32[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readIntBE((byte) -95);
-              }
-              L15: {
-                if (hasGroupDigests != 0) {
-                  for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
-                    newGroupDigest = new byte[64];
-                    indexBuffer.readBytes(29915, 64, newGroupDigest, 0);
-                    this.groupWhirlpoolDigests[this.groupIds[groupOrdinalOrSlotIndex]] = newGroupDigest;
-                  }
-                  break L15;
-                }
-              }
-              groupOrdinalOrSlotIndex = 0;
-              if (methodGuard < 109) {
-                unusedNullPackedBytesSnapshot = (byte[]) null;
-                this.decodeIndex((byte) -96, (byte[]) null);
-              }
-              while (this.groupCount > groupOrdinalOrSlotIndex) {
-                this.groupRevisions[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readIntBE((byte) -110);
-                groupOrdinalOrSlotIndex++;
-              }
-              L19: {
-                if (formatVersion >= 7) {
-                  for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
-                    this.fileCounts[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readUnsignedShortOrInt((byte) -27);
-                  }
-                  for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
-                    groupId = this.groupIds[groupOrdinalOrSlotIndex];
-                    accumulatedId = 0;
-                    actualFileCount = this.fileCounts[groupId];
-                    maximumFileIdOrFileSlotIndex = -1;
-                    newWideFileIds = new int[actualFileCount];
-                    this.fileIds[groupId] = newWideFileIds;
-                    for (fileOrdinalOrFileId = 0; actualFileCount > fileOrdinalOrFileId; fileOrdinalOrFileId++) {
-                      fileIdAfterWideDelta = accumulatedId + indexBuffer.readUnsignedShortOrInt((byte) -27);
-                      accumulatedId = fileIdAfterWideDelta;
-                      wideFileIdsForStore = this.fileIds[groupId];
-                      wideFileIdsForStore[fileOrdinalOrFileId] = fileIdAfterWideDelta;
-                      reconstructedFileId = fileIdAfterWideDelta;
-                      if (~maximumFileIdOrFileSlotIndex > ~reconstructedFileId) {
-                        maximumFileIdOrFileSlotIndex = reconstructedFileId;
-                      }
-                    }
-                    this.fileSlotCounts[groupId] = maximumFileIdOrFileSlotIndex + 1;
-                    if (actualFileCount == 1 + maximumFileIdOrFileSlotIndex) {
-                      this.fileIds[groupId] = null;
-                    }
-                  }
-                  break L19;
-                }
-                for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
-                  this.fileCounts[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readUnsignedShortBE(true);
+              break L5;
+            }
+            this.groupSlotCount = 1 + maximumGroupId;
+            if (hasGroupDigests != 0) {
+              this.groupWhirlpoolDigests = new byte[this.groupSlotCount][];
+            }
+            L11: {
+              this.groupCrc32 = new int[this.groupSlotCount];
+              this.fileCounts = new int[this.groupSlotCount];
+              this.groupRevisions = new int[this.groupSlotCount];
+              this.fileSlotCounts = new int[this.groupSlotCount];
+              this.fileIds = new int[this.groupSlotCount][];
+              if (hasNameHashes != 0) {
+                this.groupNameHashes = new int[this.groupSlotCount];
+                for (groupOrdinalOrSlotIndex = 0; this.groupSlotCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
+                  this.groupNameHashes[groupOrdinalOrSlotIndex] = -1;
                 }
                 for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
+                  this.groupNameHashes[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readIntBE((byte) -76);
+                }
+                this.groupNameLookup = new IntKeyLookup(this.groupNameHashes);
+                break L11;
+              }
+            }
+            for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
+              this.groupCrc32[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readIntBE((byte) -95);
+            }
+            L15: {
+              if (hasGroupDigests != 0) {
+                for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
+                  newGroupDigest = new byte[64];
+                  indexBuffer.readBytes(29915, 64, newGroupDigest, 0);
+                  this.groupWhirlpoolDigests[this.groupIds[groupOrdinalOrSlotIndex]] = newGroupDigest;
+                }
+                break L15;
+              }
+            }
+            groupOrdinalOrSlotIndex = 0;
+            if (methodGuard < 109) {
+              unusedNullPackedBytesSnapshot = (byte[]) null;
+              this.decodeIndex((byte) -96, (byte[]) null);
+            }
+            while (this.groupCount > groupOrdinalOrSlotIndex) {
+              this.groupRevisions[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readIntBE((byte) -110);
+              groupOrdinalOrSlotIndex++;
+            }
+            L19: {
+              if (formatVersion >= 7) {
+                for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
+                  this.fileCounts[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readUnsignedShortOrInt((byte) -27);
+                }
+                for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
                   groupId = this.groupIds[groupOrdinalOrSlotIndex];
                   accumulatedId = 0;
                   actualFileCount = this.fileCounts[groupId];
-                  newShortFileIds = new int[actualFileCount];
-                  this.fileIds[groupId] = newShortFileIds;
                   maximumFileIdOrFileSlotIndex = -1;
+                  newWideFileIds = new int[actualFileCount];
+                  this.fileIds[groupId] = newWideFileIds;
                   for (fileOrdinalOrFileId = 0; actualFileCount > fileOrdinalOrFileId; fileOrdinalOrFileId++) {
-                    fileIdAfterShortDelta = accumulatedId + indexBuffer.readUnsignedShortBE(true);
-                    accumulatedId = fileIdAfterShortDelta;
-                    shortFileIdsForStore = this.fileIds[groupId];
-                    shortFileIdsForStore[fileOrdinalOrFileId] = fileIdAfterShortDelta;
-                    reconstructedFileId = fileIdAfterShortDelta;
-                    if (~maximumFileIdOrFileSlotIndex <= ~reconstructedFileId) {
-                      continue;
+                    fileIdAfterWideDelta = accumulatedId + indexBuffer.readUnsignedShortOrInt((byte) -27);
+                    accumulatedId = fileIdAfterWideDelta;
+                    wideFileIdsForStore = this.fileIds[groupId];
+                    wideFileIdsForStore[fileOrdinalOrFileId] = fileIdAfterWideDelta;
+                    reconstructedFileId = fileIdAfterWideDelta;
+                    if (~maximumFileIdOrFileSlotIndex > ~reconstructedFileId) {
+                      maximumFileIdOrFileSlotIndex = reconstructedFileId;
                     }
-                    maximumFileIdOrFileSlotIndex = reconstructedFileId;
                   }
                   this.fileSlotCounts[groupId] = maximumFileIdOrFileSlotIndex + 1;
                   if (actualFileCount == 1 + maximumFileIdOrFileSlotIndex) {
@@ -219,31 +191,58 @@ final class ArchiveIndex {
                 }
                 break L19;
               }
-              if (hasNameHashes != 0) {
-                this.fileNameHashes = new int[maximumGroupId + 1][];
-                this.fileNameLookups = new IntKeyLookup[1 + maximumGroupId];
-                for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
-                  groupId = this.groupIds[groupOrdinalOrSlotIndex];
-                  actualFileCount = this.fileCounts[groupId];
-                  newFileNameHashSlots = new int[this.fileSlotCounts[groupId]];
-                  this.fileNameHashes[groupId] = newFileNameHashSlots;
-                  for (maximumFileIdOrFileSlotIndex = 0; this.fileSlotCounts[groupId] > maximumFileIdOrFileSlotIndex; maximumFileIdOrFileSlotIndex++) {
-                    this.fileNameHashes[groupId][maximumFileIdOrFileSlotIndex] = -1;
+              for (groupOrdinalOrSlotIndex = 0; this.groupCount > groupOrdinalOrSlotIndex; groupOrdinalOrSlotIndex++) {
+                this.fileCounts[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readUnsignedShortBE(true);
+              }
+              for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
+                groupId = this.groupIds[groupOrdinalOrSlotIndex];
+                accumulatedId = 0;
+                actualFileCount = this.fileCounts[groupId];
+                newShortFileIds = new int[actualFileCount];
+                this.fileIds[groupId] = newShortFileIds;
+                maximumFileIdOrFileSlotIndex = -1;
+                for (fileOrdinalOrFileId = 0; actualFileCount > fileOrdinalOrFileId; fileOrdinalOrFileId++) {
+                  fileIdAfterShortDelta = accumulatedId + indexBuffer.readUnsignedShortBE(true);
+                  accumulatedId = fileIdAfterShortDelta;
+                  shortFileIdsForStore = this.fileIds[groupId];
+                  shortFileIdsForStore[fileOrdinalOrFileId] = fileIdAfterShortDelta;
+                  reconstructedFileId = fileIdAfterShortDelta;
+                  if (~maximumFileIdOrFileSlotIndex <= ~reconstructedFileId) {
+                    continue;
                   }
-                  for (maximumFileIdOrFileSlotIndex = 0; maximumFileIdOrFileSlotIndex < actualFileCount; maximumFileIdOrFileSlotIndex++) {
-                    if (this.fileIds[groupId] != null) {
-                      fileOrdinalOrFileId = this.fileIds[groupId][maximumFileIdOrFileSlotIndex];
-                    } else {
-                      fileOrdinalOrFileId = maximumFileIdOrFileSlotIndex;
-                    }
-                    this.fileNameHashes[groupId][fileOrdinalOrFileId] = indexBuffer.readIntBE((byte) -78);
-                  }
-                  this.fileNameLookups[groupId] = new IntKeyLookup(this.fileNameHashes[groupId]);
+                  maximumFileIdOrFileSlotIndex = reconstructedFileId;
                 }
-                return;
+                this.fileSlotCounts[groupId] = maximumFileIdOrFileSlotIndex + 1;
+                if (actualFileCount == 1 + maximumFileIdOrFileSlotIndex) {
+                  this.fileIds[groupId] = null;
+                }
+              }
+              break L19;
+            }
+            if (hasNameHashes != 0) {
+              this.fileNameHashes = new int[maximumGroupId + 1][];
+              this.fileNameLookups = new IntKeyLookup[1 + maximumGroupId];
+              for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
+                groupId = this.groupIds[groupOrdinalOrSlotIndex];
+                actualFileCount = this.fileCounts[groupId];
+                newFileNameHashSlots = new int[this.fileSlotCounts[groupId]];
+                this.fileNameHashes[groupId] = newFileNameHashSlots;
+                for (maximumFileIdOrFileSlotIndex = 0; this.fileSlotCounts[groupId] > maximumFileIdOrFileSlotIndex; maximumFileIdOrFileSlotIndex++) {
+                  this.fileNameHashes[groupId][maximumFileIdOrFileSlotIndex] = -1;
+                }
+                for (maximumFileIdOrFileSlotIndex = 0; maximumFileIdOrFileSlotIndex < actualFileCount; maximumFileIdOrFileSlotIndex++) {
+                  if (this.fileIds[groupId] != null) {
+                    fileOrdinalOrFileId = this.fileIds[groupId][maximumFileIdOrFileSlotIndex];
+                  } else {
+                    fileOrdinalOrFileId = maximumFileIdOrFileSlotIndex;
+                  }
+                  this.fileNameHashes[groupId][fileOrdinalOrFileId] = indexBuffer.readIntBE((byte) -78);
+                }
+                this.fileNameLookups[groupId] = new IntKeyLookup(this.fileNameHashes[groupId]);
               }
               return;
             }
+            return;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException indexFailure) {

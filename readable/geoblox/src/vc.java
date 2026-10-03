@@ -58,16 +58,12 @@ final class vc extends dk {
             this.field_a = null;
             return;
           }
-          if (this.field_p == param3) {
-            if (this.field_d) {
-              if (this.field_k == 2) {
-                if (null != this.field_n) {
-                  if (this.field_n.equals(param4)) {
-                    return;
-                  }
-                }
-              }
-            }
+          if ((this.field_p == param3) &&
+              (this.field_d) &&
+              (this.field_k == 2) &&
+              (null != this.field_n) &&
+              (this.field_n.equals(param4))) {
+            return;
           }
           this.field_p = param3;
           this.field_n = param4;
@@ -140,10 +136,9 @@ final class vc extends dk {
         if (param3 > -89) {
             menuForegroundSprite = (Sprite) null;
         }
-        if (this.field_p == param4 && this.field_d && 0 == this.field_k && this.field_n != null) {
-            if (!(!this.field_n.equals(param2))) {
-                return;
-            }
+        if ((this.field_p == param4 && this.field_d && 0 == this.field_k && this.field_n != null) &&
+            (!(!this.field_n.equals(param2)))) {
+            return;
         }
         try {
             this.field_n = param2;
@@ -193,24 +188,16 @@ final class vc extends dk {
             this.field_a = null;
             return;
           }
-          if (param4 == this.field_p) {
-            if (!this.field_d) {
-              if (this.field_k == param6) {
-                if (this.field_m == param0) {
-                  if (this.field_e == param3) {
-                    if (param7 == this.field_o) {
-                      if (param5 == this.field_l) {
-                        if (null != this.field_n) {
-                          if (this.field_n.equals(param2)) {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+          if ((param4 == this.field_p) &&
+              (!this.field_d) &&
+              (this.field_k == param6) &&
+              (this.field_m == param0) &&
+              (this.field_e == param3) &&
+              (param7 == this.field_o) &&
+              (param5 == this.field_l) &&
+              (null != this.field_n) &&
+              (this.field_n.equals(param2))) {
+            return;
           }
           this.field_o = param7;
           this.field_k = param6;
@@ -223,10 +210,9 @@ final class vc extends dk {
           var16 = new String[param1 + param4.countWrappedLines(param2, param5)];
           var17 = var16;
           var10 = Math.max(1, param4.wrapText(param2, new int[]{param5}, var17));
-          if (this.field_m == 3) {
-            if (var10 == 1) {
-              this.field_m = 1;
-            }
+          if ((this.field_m == 3) &&
+              (var10 == 1)) {
+            this.field_m = 1;
           }
           this.field_a = new lk[var10];
           if (this.field_m != 0) {

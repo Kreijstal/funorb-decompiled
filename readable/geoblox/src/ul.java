@@ -60,10 +60,9 @@ final class ul {
           }
           while (centralEntity != null) {
             L3: {
-              if (centralEntity.sameVariantEntityCount <= 1) {
-                if (centralEntity.sameCategoryEntityCount <= 1) {
-                  break L3;
-                }
+              if ((centralEntity.sameVariantEntityCount <= 1) &&
+                  (centralEntity.sameCategoryEntityCount <= 1)) {
+                break L3;
               }
               centralEntity.entityQueue = bh.transientEntities;
               stackIn_10_0 = (centralEntity.sameVariantEntityCount <= 1) ? 0 : 1;
@@ -85,10 +84,9 @@ final class ul {
                 }
                 L10: {
                   firstNeighborSharesCategory = stackIn_27_0;
-                  if (firstNeighborSharesVariant == 0) {
-                    if (firstNeighborSharesCategory == 0) {
-                      break L10;
-                    }
+                  if ((firstNeighborSharesVariant == 0) &&
+                      (firstNeighborSharesCategory == 0)) {
+                    break L10;
                   }
                   for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
                     if (firstNeighborSharesCategory != 0) {
@@ -104,10 +102,9 @@ final class ul {
                     }
                     L15: {
                       tripleSharesVariant = stackIn_44_0;
-                      if (tripleSharesCategory == 0) {
-                        if (tripleSharesVariant == 0) {
-                          break L15;
-                        }
+                      if ((tripleSharesCategory == 0) &&
+                          (tripleSharesVariant == 0)) {
+                        break L15;
                       }
                       centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.transientEntities;
                       centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.transientEntities;
@@ -122,9 +119,8 @@ final class ul {
                       if (tripleSharesVariant != 0) {
                         dd.variantMatchCandidateCount = dd.variantMatchCandidateCount + 1;
                       }
-                      if (tripleSharesVariant != 0) {
-                        if (tripleSharesCategory != 0) {
-                        }
+                      if ((tripleSharesVariant != 0) &&
+                          (tripleSharesCategory != 0)) {
                       }
                       if (tripleSharesCategory != 0) {
                         dk.categoryMatchCandidateCount = dk.categoryMatchCandidateCount + 1;

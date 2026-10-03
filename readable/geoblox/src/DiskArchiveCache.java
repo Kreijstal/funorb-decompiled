@@ -24,19 +24,18 @@ final class DiskArchiveCache {
           dataFileMonitor = this.dataFile;
           synchronized (dataFileMonitor) {
             L0: {
-              if (0 <= length) {
-                if (length <= this.maximumEntryLength) {
-                  if (methodGuard != -53) {
-                    unusedAudioConfigurationSnapshot = (kj) null;
-                    DiskArchiveCache.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (kj) null, false, -103);
-                  }
-                  writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, true) ? 1 : 0;
-                  if (writeSucceeded == 0) {
-                    writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, false) ? 1 : 0;
-                  }
-                  writeSucceededBeforeReturn = writeSucceeded;
-                  break L0;
+              if ((0 <= length) &&
+                  (length <= this.maximumEntryLength)) {
+                if (methodGuard != -53) {
+                  unusedAudioConfigurationSnapshot = (kj) null;
+                  DiskArchiveCache.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (kj) null, false, -103);
                 }
+                writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, true) ? 1 : 0;
+                if (writeSucceeded == 0) {
+                  writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, false) ? 1 : 0;
+                }
+                writeSucceededBeforeReturn = writeSucceeded;
+                break L0;
               }
               throw new IllegalArgumentException();
             }
@@ -216,10 +215,9 @@ final class DiskArchiveCache {
                       this.indexFile.seek(methodGuard - 228, (long)(entryId * 6));
                       this.indexFile.readFully(dj.diskSectorBuffer, 6, 0, 9868);
                       sectorNumber = (dj.diskSectorBuffer[5] & 255) + (((255 & dj.diskSectorBuffer[4]) << 8) + ((255 & dj.diskSectorBuffer[3]) << 16));
-                      if (sectorNumber > 0) {
-                        if (this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber) {
-                          break L0;
-                        }
+                      if ((sectorNumber > 0) &&
+                          (this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber)) {
+                        break L0;
                       }
                       return false;
                     }
@@ -281,17 +279,14 @@ final class DiskArchiveCache {
                               nextSectorNumber = (dj.diskSectorBuffer[8] & 255) + ((255 & dj.diskSectorBuffer[6]) << 16) + (65280 & dj.diskSectorBuffer[7] << 8);
                               headerChunkNumber = (dj.diskSectorBuffer[4] << 8 & 65280) + (255 & dj.diskSectorBuffer[5]);
                             }
-                            if (headerEntryIdOrPayloadLength == entryId) {
-                              if (chunkNumber == headerChunkNumber) {
-                                if (headerArchiveId == this.archiveId) {
-                                  if (nextSectorNumber >= 0) {
-                                    if (~(this.dataFile.length((byte) 46) / 520L) <= ~(long)nextSectorNumber) {
-                                      break L5;
-                                    }
-                                  }
-                                  return false;
-                                }
+                            if ((headerEntryIdOrPayloadLength == entryId) &&
+                                (chunkNumber == headerChunkNumber) &&
+                                (headerArchiveId == this.archiveId)) {
+                              if ((nextSectorNumber >= 0) &&
+                                  (~(this.dataFile.length((byte) 46) / 520L) <= ~(long)nextSectorNumber)) {
+                                break L5;
                               }
+                              return false;
                             }
                             return false;
                           }

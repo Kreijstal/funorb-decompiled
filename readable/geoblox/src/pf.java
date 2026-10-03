@@ -27,20 +27,17 @@ final class pf extends ee implements ga, pl {
         }
         L1: {
           L2: {
-            if (param1 >= 48) {
-              if (param1 <= 57) {
-                break L2;
-              }
+            if ((param1 >= 48) &&
+                (param1 <= 57)) {
+              break L2;
             }
-            if (param1 >= 65) {
-              if (param1 <= 90) {
-                break L2;
-              }
+            if ((param1 >= 65) &&
+                (param1 <= 90)) {
+              break L2;
             }
-            if (param1 >= 97) {
-              if (param1 <= 122) {
-                break L2;
-              }
+            if ((param1 >= 97) &&
+                (param1 <= 122)) {
+              break L2;
             }
             stackIn_13_0 = false;
             break L1;
@@ -96,10 +93,9 @@ final class pf extends ee implements ga, pl {
               while (true) {
                 L2: {
                   if (var5 != null) {
-                    if (var5.field_g == var3) {
-                      if (var5.field_j == var4) {
-                        break L2;
-                      }
+                    if ((var5.field_g == var3) &&
+                        (var5.field_j == var4)) {
+                      break L2;
                     }
                     var5 = (se) ((Object) sj.field_g.nextForIteration(1));
                     continue;
@@ -282,11 +278,10 @@ final class pf extends ee implements ga, pl {
         try {
           var13 = param2.b(16925);
           var8 = param3.b(16925);
-          if (oc.field_e == null) {
-            if (!w.a(false, 52)) {
-              stackIn_4_0 = -1;
-              return stackIn_4_0;
-            }
+          if ((oc.field_e == null) &&
+              (!w.a(false, 52))) {
+            stackIn_4_0 = -1;
+            return stackIn_4_0;
           }
           if (gi.field_d == PacketBuffer.field_l) {
             fj.field_q.position = 0;
@@ -344,34 +339,32 @@ final class pf extends ee implements ga, pl {
             PacketBuffer.field_l = field_K;
           }
           L7: {
-            if (field_K == PacketBuffer.field_l) {
-              if (el.b(30000, 1)) {
-                var9 = eh.field_d.readUnsignedByte((byte) 34);
+            if ((field_K == PacketBuffer.field_l) &&
+                (el.b(30000, 1))) {
+              var9 = eh.field_d.readUnsignedByte((byte) 34);
+              eh.field_d.position = 0;
+              if ((var9 >= 100) &&
+                  (var9 <= 105)) {
+                PacketBuffer.field_l = v.field_l;
+                si.field_i = new String[var9 - 100];
+                break L7;
+              }
+              if (var9 == 248) {
+                sj.a(k.c(124), (byte) 123);
+                kh.field_a = ph.createUnableText;
+                Bzip2DecoderState.a((byte) -124);
+                ck.field_e = false;
+                stackIn_31_0 = var9;
+                return stackIn_31_0;
+              }
+              if (99 != var9) {
+                PacketBuffer.field_l = qh.field_F;
+                p.field_k = -1;
+                ScorePopup.field_l = var9;
+              } else {
+                el.b(30000, DualLinkNode.d(112));
+                fi.field_b = new Boolean(Bzip2DecoderState.a(eh.field_d, 0));
                 eh.field_d.position = 0;
-                if (var9 >= 100) {
-                  if (var9 <= 105) {
-                    PacketBuffer.field_l = v.field_l;
-                    si.field_i = new String[var9 - 100];
-                    break L7;
-                  }
-                }
-                if (var9 == 248) {
-                  sj.a(k.c(124), (byte) 123);
-                  kh.field_a = ph.createUnableText;
-                  Bzip2DecoderState.a((byte) -124);
-                  ck.field_e = false;
-                  stackIn_31_0 = var9;
-                  return stackIn_31_0;
-                }
-                if (99 != var9) {
-                  PacketBuffer.field_l = qh.field_F;
-                  p.field_k = -1;
-                  ScorePopup.field_l = var9;
-                } else {
-                  el.b(30000, DualLinkNode.d(112));
-                  fi.field_b = new Boolean(Bzip2DecoderState.a(eh.field_d, 0));
-                  eh.field_d.position = 0;
-                }
               }
             }
           }
@@ -392,21 +385,20 @@ final class pf extends ee implements ga, pl {
               }
             }
           }
-          if (PacketBuffer.field_l == qh.field_F) {
-            if (TriangleMesh.a(false)) {
-              if (ScorePopup.field_l != 255) {
-                kh.field_a = eh.field_d.readNullTerminatedText((byte) 98);
-              } else {
-                var9_ref_String = eh.field_d.readNullableNullTerminatedText((byte) 53);
-                if (var9_ref_String != null) {
-                  tc.a(-128, var9_ref_String, k.c(106));
-                }
+          if ((PacketBuffer.field_l == qh.field_F) &&
+              (TriangleMesh.a(false))) {
+            if (ScorePopup.field_l != 255) {
+              kh.field_a = eh.field_d.readNullTerminatedText((byte) 98);
+            } else {
+              var9_ref_String = eh.field_d.readNullableNullTerminatedText((byte) 53);
+              if (var9_ref_String != null) {
+                tc.a(-128, var9_ref_String, k.c(106));
               }
-              Bzip2DecoderState.a((byte) -114);
-              ck.field_e = false;
-              stackIn_54_0 = ScorePopup.field_l;
-              return stackIn_54_0;
             }
+            Bzip2DecoderState.a((byte) -114);
+            ck.field_e = false;
+            stackIn_54_0 = ScorePopup.field_l;
+            return stackIn_54_0;
           }
           if (param6 < 56) {
             field_K = (gk) null;
@@ -770,10 +762,9 @@ final class pf extends ee implements ga, pl {
           L3: {
             ((pf) (this)).field_I = stackIn_10_1;
             if (this.field_N) {
-              if (!this.field_C) {
-                if (!this.field_I) {
-                  break L3;
-                }
+              if ((!this.field_C) &&
+                  (!this.field_I)) {
+                break L3;
               }
               throw new IllegalStateException();
             }
@@ -868,12 +859,11 @@ final class pf extends ee implements ga, pl {
           }
           L17: {
             if (this.field_G != null) {
-              if (!this.field_N) {
-                if (!this.field_I) {
-                  this.field_G.a(20, 40, (byte) -55, this.field_m, 8);
-                  this.field_m = this.field_m + 25;
-                  break L17;
-                }
+              if ((!this.field_N) &&
+                  (!this.field_I)) {
+                this.field_G.a(20, 40, (byte) -55, this.field_m, 8);
+                this.field_m = this.field_m + 25;
+                break L17;
               }
               this.field_G.a(30, -10 + (this.field_r - 6), (byte) -64, this.field_m, 8);
               this.field_m = this.field_m + 35;

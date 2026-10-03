@@ -78,10 +78,9 @@ abstract class MenuScreen {
             if (ki.currentKeyboardEventCode == 97) {
               this.increaseMenuValue((byte) 90, itemIndex);
             } else {
-              if (ki.currentKeyboardEventCode != 84) {
-                if (ki.currentKeyboardEventCode != 83) {
-                  break L1;
-                }
+              if ((ki.currentKeyboardEventCode != 84) &&
+                  (ki.currentKeyboardEventCode != 83)) {
+                break L1;
               }
               this.activateMenuItem(itemIndex, (byte) -2);
             }
@@ -126,19 +125,17 @@ abstract class MenuScreen {
 
     int hitTestMenuItem(int pointerX, int pointerY, byte param2) {
         int var4;
-        if (this.hitLeftX <= pointerX) {
-          if (pointerX < this.hitRightX) {
-            if (this.firstItemY <= pointerY) {
-              if (param2 < 20) {
-                return 81;
-              }
-              var4 = (pointerY - this.firstItemY) / this.itemSpacing;
-              if (this.itemCount > var4) {
-                return var4;
-              }
-              return -1;
-            }
+        if ((this.hitLeftX <= pointerX) &&
+            (pointerX < this.hitRightX) &&
+            (this.firstItemY <= pointerY)) {
+          if (param2 < 20) {
+            return 81;
           }
+          var4 = (pointerY - this.firstItemY) / this.itemSpacing;
+          if (this.itemCount > var4) {
+            return var4;
+          }
+          return -1;
         }
         return -1;
     }
@@ -173,15 +170,14 @@ abstract class MenuScreen {
               this.pointerInteractionActive = false;
             }
           } else {
-            if (gf.heldPointerButtonSnapshot != 0) {
-              if (this.pointerInteractionActive) {
-                hitItemIndex = this.selectedItemIndex;
-                if (hitItemIndex == -1) {
-                  break L0;
-                }
-                this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (ue.pointerYSnapshot - this.firstItemY), true, gf.heldPointerButtonSnapshot);
+            if ((gf.heldPointerButtonSnapshot != 0) &&
+                (this.pointerInteractionActive)) {
+              hitItemIndex = this.selectedItemIndex;
+              if (hitItemIndex == -1) {
                 break L0;
               }
+              this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (ue.pointerYSnapshot - this.firstItemY), true, gf.heldPointerButtonSnapshot);
+              break L0;
             }
             this.pointerInteractionActive = false;
             if (wb.pointerActivitySnapshot) {

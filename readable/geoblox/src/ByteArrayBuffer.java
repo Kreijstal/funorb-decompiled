@@ -96,23 +96,20 @@ class ByteArrayBuffer extends IntrusiveNode {
             if (textLength > characterIndex) {
               L3: {
                 characterCode = text.charAt(characterIndex);
-                if (characterCode >= 65) {
-                  if (90 >= characterCode) {
-                    accumulatedChunk = accumulatedChunk + (long)(-63 + characterCode);
-                    break L3;
-                  }
+                if ((characterCode >= 65) &&
+                    (90 >= characterCode)) {
+                  accumulatedChunk = accumulatedChunk + (long)(-63 + characterCode);
+                  break L3;
                 }
-                if (characterCode >= 97) {
-                  if (characterCode <= 122) {
-                    accumulatedChunk = accumulatedChunk + (long)(-97 + (2 + characterCode));
-                    break L3;
-                  }
+                if ((characterCode >= 97) &&
+                    (characterCode <= 122)) {
+                  accumulatedChunk = accumulatedChunk + (long)(-97 + (2 + characterCode));
+                  break L3;
                 }
-                if (characterCode >= 48) {
-                  if (characterCode <= 57) {
-                    accumulatedChunk = accumulatedChunk + (long)(-48 + characterCode + 28);
-                    break L3;
-                  }
+                if ((characterCode >= 48) &&
+                    (characterCode <= 57)) {
+                  accumulatedChunk = accumulatedChunk + (long)(-48 + characterCode + 28);
+                  break L3;
                 }
                 accumulatedChunk = accumulatedChunk + 1L;
               }
@@ -379,15 +376,13 @@ class ByteArrayBuffer extends IntrusiveNode {
         int encodedByte;
         L0: {
           L1: {
-            if (0 < character) {
-              if (character < 128) {
-                break L1;
-              }
+            if ((0 < character) &&
+                (character < 128)) {
+              break L1;
             }
-            if (character >= 160) {
-              if (255 >= character) {
-                break L1;
-              }
+            if ((character >= 160) &&
+                (255 >= character)) {
+              break L1;
             }
             if (character == 8364) {
               encodedByte = -128;
@@ -830,11 +825,10 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.writeByte((byte) 125, 64 + value);
             return;
         }
-        if (value < 16384) {
-            if (!(value < -16384)) {
-                this.writeShortBE(49152 + value, 28695);
-                return;
-            }
+        if ((value < 16384) &&
+            (!(value < -16384))) {
+            this.writeShortBE(49152 + value, 28695);
+            return;
         }
         if (methodGuard != -5962) {
             this.readUnsignedShortOrInt((byte) -105);

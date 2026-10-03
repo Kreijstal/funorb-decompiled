@@ -121,10 +121,9 @@ final class i {
           minimumDepthTimesThree = minimumVisibleDepth * 3;
           depthBucketShift = depthRangeBitLength - 10;
           oe.clearMeshDepthBucketCounts(0);
-          if (mesh.facePriorityCount > 0) {
-            if (null != mesh.facePriorities) {
-              ma.clearMeshPriorityCounts((byte) -35);
-            }
+          if ((mesh.facePriorityCount > 0) &&
+              (null != mesh.facePriorities)) {
+            ma.clearMeshPriorityCounts((byte) -35);
           }
           ch.queuedMeshFaceCount = 0;
           faceIndexOrPriorityPrefix = 0;
@@ -153,16 +152,14 @@ final class i {
                     }
                   }
                   projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                  if (-2147483648 == projectedAXOrVertexADepth) {
-                    if (controlFlagSnapshot == 0) {
-                      break L4;
-                    }
+                  if ((-2147483648 == projectedAXOrVertexADepth) &&
+                      (controlFlagSnapshot == 0)) {
+                    break L4;
                   }
                   projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                  if (-2147483648 == projectedAYOrVertexBDepth) {
-                    if (controlFlagSnapshot == 0) {
-                      break L4;
-                    }
+                  if ((-2147483648 == projectedAYOrVertexBDepth) &&
+                      (controlFlagSnapshot == 0)) {
+                    break L4;
                   }
                   edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
                   if (edgeBXOrVertexCDepth != -2147483648) {
@@ -198,11 +195,10 @@ final class i {
                       faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
                       pj.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                       ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
-                      if (0 < mesh.facePriorityCount) {
-                        if (null != mesh.facePriorities) {
-                          facePriority = mesh.facePriorities[faceIndexOrPriorityPrefix];
-                          uh.meshFacePriorityWriteOffsets[facePriority] = uh.meshFacePriorityWriteOffsets[facePriority] + 1;
-                        }
+                      if ((0 < mesh.facePriorityCount) &&
+                          (null != mesh.facePriorities)) {
+                        facePriority = mesh.facePriorities[faceIndexOrPriorityPrefix];
+                        uh.meshFacePriorityWriteOffsets[facePriority] = uh.meshFacePriorityWriteOffsets[facePriority] + 1;
                       }
                       ch.queuedMeshFaceCount = ch.queuedMeshFaceCount + 1;
                       break L4;
@@ -217,26 +213,25 @@ final class i {
               cullFlagOrPriorityLoopSentinel = -1;
             }
             L15: {
-              if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) {
-                if (null != mesh.facePriorities) {
-                  faceIndexOrPriorityPrefix = 0;
-                  vertexAOrPriorityIndex = 0;
-                  while (true) {
-                    if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
-                      break L15;
-                    }
-                    vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
-                    uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
-                    faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
-                    vertexAOrPriorityIndex++;
-                    if (controlFlagSnapshot != 0) {
-                      return;
-                    }
-                    if (controlFlagSnapshot == 0) {
-                      continue;
-                    }
+              if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
+                  (null != mesh.facePriorities)) {
+                faceIndexOrPriorityPrefix = 0;
+                vertexAOrPriorityIndex = 0;
+                while (true) {
+                  if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
                     break L15;
                   }
+                  vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
+                  uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
+                  faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
+                  vertexAOrPriorityIndex++;
+                  if (controlFlagSnapshot != 0) {
+                    return;
+                  }
+                  if (controlFlagSnapshot == 0) {
+                    continue;
+                  }
+                  break L15;
                 }
               }
             }

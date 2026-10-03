@@ -97,11 +97,10 @@ final class PacketBuffer extends ByteArrayBuffer {
             }
             if (!vg.field_j[var2_int]) {
               L3: {
-                if (10 <= var2_int) {
-                  if (26 >= var2_int) {
-                    var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
-                    break L3;
-                  }
+                if ((10 <= var2_int) &&
+                    (26 >= var2_int)) {
+                  var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
+                  break L3;
                 }
                 var3 = te.field_c.b(1, w.field_b[var2_int]);
               }

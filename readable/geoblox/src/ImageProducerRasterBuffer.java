@@ -181,69 +181,65 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             return;
           }
           L4: {
-            if (param4 >= SoftwareRasterizer.clipLeft) {
-              if (param4 < SoftwareRasterizer.clipRight) {
-                var11 = param4 + var8 * SoftwareRasterizer.stride;
-                var12 = var10 + 1 - var8 >> 1;
-                while (true) {
-                  var12--;
-                  if (0 > var12) {
-                    break L4;
-                  }
-                  SoftwareRasterizer.framebuffer[var11] = 16777215;
-                  var11 = var11 + SoftwareRasterizer.stride * 2;
-                  continue;
+            if ((param4 >= SoftwareRasterizer.clipLeft) &&
+                (param4 < SoftwareRasterizer.clipRight)) {
+              var11 = param4 + var8 * SoftwareRasterizer.stride;
+              var12 = var10 + 1 - var8 >> 1;
+              while (true) {
+                var12--;
+                if (0 > var12) {
+                  break L4;
                 }
+                SoftwareRasterizer.framebuffer[var11] = 16777215;
+                var11 = var11 + SoftwareRasterizer.stride * 2;
+                continue;
               }
             }
           }
           L6: {
-            if (param0 >= SoftwareRasterizer.clipTop) {
-              if (SoftwareRasterizer.clipBottom > var6) {
-                var11 = var7 + SoftwareRasterizer.stride * param0;
-                var12 = -var7 + 1 + var9 >> 1;
-                while (true) {
-                  var12--;
-                  if (var12 < 0) {
-                    break L6;
-                  }
-                  SoftwareRasterizer.framebuffer[var11] = 16777215;
-                  var11 += 2;
-                  continue;
-                }
-              }
-            }
-          }
-          L8: {
-            if (var5_int >= SoftwareRasterizer.clipLeft) {
-              if (SoftwareRasterizer.clipRight > var5_int) {
-                var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
-                var12 = -var8 + 1 + var10 >> 1;
-                while (true) {
-                  var12--;
-                  if (0 > var12) {
-                    break L8;
-                  }
-                  SoftwareRasterizer.framebuffer[var11] = 16777215;
-                  var11 = var11 + 2 * SoftwareRasterizer.stride;
-                  continue;
-                }
-              }
-            }
-          }
-          if (SoftwareRasterizer.clipTop <= param0) {
-            if (SoftwareRasterizer.clipBottom > var6) {
-              var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
-              var12 = 1 - (-var9 + var7) >> 1;
+            if ((param0 >= SoftwareRasterizer.clipTop) &&
+                (SoftwareRasterizer.clipBottom > var6)) {
+              var11 = var7 + SoftwareRasterizer.stride * param0;
+              var12 = -var7 + 1 + var9 >> 1;
               while (true) {
                 var12--;
                 if (var12 < 0) {
-                  return;
+                  break L6;
                 }
                 SoftwareRasterizer.framebuffer[var11] = 16777215;
                 var11 += 2;
                 continue;
               }
+            }
+          }
+          L8: {
+            if ((var5_int >= SoftwareRasterizer.clipLeft) &&
+                (SoftwareRasterizer.clipRight > var5_int)) {
+              var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
+              var12 = -var8 + 1 + var10 >> 1;
+              while (true) {
+                var12--;
+                if (0 > var12) {
+                  break L8;
+                }
+                SoftwareRasterizer.framebuffer[var11] = 16777215;
+                var11 = var11 + 2 * SoftwareRasterizer.stride;
+                continue;
+              }
+            }
+          }
+          if ((SoftwareRasterizer.clipTop <= param0) &&
+              (SoftwareRasterizer.clipBottom > var6)) {
+            var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
+            var12 = 1 - (-var9 + var7) >> 1;
+            while (true) {
+              var12--;
+              if (var12 < 0) {
+                return;
+              }
+              SoftwareRasterizer.framebuffer[var11] = 16777215;
+              var11 += 2;
+              continue;
             }
           }
           return;

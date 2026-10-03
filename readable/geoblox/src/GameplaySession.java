@@ -104,27 +104,21 @@ final class GameplaySession {
           ma.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
           fi.smallFont.drawParagraph(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
-            if (PrefixCodeDecoder.pointerXSnapshot > 100) {
-              if (PrefixCodeDecoder.pointerXSnapshot < 340) {
-                if (ue.pointerYSnapshot > 440) {
-                  if (ue.pointerYSnapshot < 476) {
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                  }
-                }
-              }
+            if ((PrefixCodeDecoder.pointerXSnapshot > 100) &&
+                (PrefixCodeDecoder.pointerXSnapshot < 340) &&
+                (ue.pointerYSnapshot > 440) &&
+                (ue.pointerYSnapshot < 476)) {
+              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
             }
             ma.drawNineSlicePanel(440, 100, 36, (byte) -92, 240, eb.mouseBoxFrames);
             dd.uiPaletteFont.drawCenteredText(cf.field_j, 220, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             ma.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
-            if (380 < PrefixCodeDecoder.pointerXSnapshot) {
-              if (540 > PrefixCodeDecoder.pointerXSnapshot) {
-                if (ue.pointerYSnapshot > 440) {
-                  if (476 > ue.pointerYSnapshot) {
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                  }
-                }
-              }
+            if ((380 < PrefixCodeDecoder.pointerXSnapshot) &&
+                (540 > PrefixCodeDecoder.pointerXSnapshot) &&
+                (ue.pointerYSnapshot > 440) &&
+                (476 > ue.pointerYSnapshot)) {
+              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
             }
             dd.uiPaletteFont.drawCenteredText(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
@@ -133,14 +127,11 @@ final class GameplaySession {
             }
           }
           ma.drawNineSlicePanel(440, 240, 36, (byte) -92, 160, eb.mouseBoxFrames);
-          if (250 < PrefixCodeDecoder.pointerXSnapshot) {
-            if (PrefixCodeDecoder.pointerXSnapshot < 389) {
-              if (ue.pointerYSnapshot > 440) {
-                if (476 > ue.pointerYSnapshot) {
-                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                }
-              }
-            }
+          if ((250 < PrefixCodeDecoder.pointerXSnapshot) &&
+              (PrefixCodeDecoder.pointerXSnapshot < 389) &&
+              (ue.pointerYSnapshot > 440) &&
+              (476 > ue.pointerYSnapshot)) {
+            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
           }
           dd.uiPaletteFont.drawCenteredText(mi.field_y, 320, 468, 0, -1);
           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
@@ -167,10 +158,9 @@ final class GameplaySession {
             if (param1) {
               return true;
             }
-            if (!param0.startsWith("http://")) {
-              if (!param0.startsWith("https://")) {
-                return false;
-              }
+            if ((!param0.startsWith("http://")) &&
+                (!param0.startsWith("https://"))) {
+              return false;
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             var3 = 0;
@@ -251,32 +241,28 @@ final class GameplaySession {
                     L5: {
                       L6: {
                         selectedThemeIdOrScoreBoxX = GameScreen.selectedThemeId;
-                        if (selectedThemeIdOrScoreBoxX == 4) {
+                        if ((selectedThemeIdOrScoreBoxX == 4) &&
+                            (clientControlFlowGuard == 0)) {
+                          themeResourceGroup = "baking";
                           if (clientControlFlowGuard == 0) {
-                            themeResourceGroup = "baking";
-                            if (clientControlFlowGuard == 0) {
-                              break L0;
-                            }
-                            break L6;
+                            break L0;
                           }
+                          break L6;
                         }
-                        if (selectedThemeIdOrScoreBoxX == 6) {
-                          if (clientControlFlowGuard == 0) {
-                            break L6;
-                          }
+                        if ((selectedThemeIdOrScoreBoxX == 6) &&
+                            (clientControlFlowGuard == 0)) {
+                          break L6;
                         }
-                        if (selectedThemeIdOrScoreBoxX == 5) {
-                          if (clientControlFlowGuard == 0) {
-                            break L5;
-                          }
+                        if ((selectedThemeIdOrScoreBoxX == 5) &&
+                            (clientControlFlowGuard == 0)) {
+                          break L5;
                         }
                         if (selectedThemeIdOrScoreBoxX == 0) {
                           break L4;
                         }
-                        if (3 == selectedThemeIdOrScoreBoxX) {
-                          if (clientControlFlowGuard == 0) {
-                            break L3;
-                          }
+                        if ((3 == selectedThemeIdOrScoreBoxX) &&
+                            (clientControlFlowGuard == 0)) {
+                          break L3;
                         }
                         if (selectedThemeIdOrScoreBoxX == 2) {
                           break L2;
@@ -317,13 +303,11 @@ final class GameplaySession {
           return;
         }
         L11: {
-          if (ih.areEntityQueuesSettled(0)) {
-            if (this.sceneTransitionRequested) {
-              if (this.sceneTransitionInProgress) {
-                selectedSceneTransitionFlag = 1;
-                break L11;
-              }
-            }
+          if ((ih.areEntityQueuesSettled(0)) &&
+              (this.sceneTransitionRequested) &&
+              (this.sceneTransitionInProgress)) {
+            selectedSceneTransitionFlag = 1;
+            break L11;
           }
           selectedSceneTransitionFlag = 0;
         }
@@ -390,10 +374,9 @@ final class GameplaySession {
           }
           L22: {
             lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
-            if (0 == this.sessionPhase) {
-              if (!ih.areEntityQueuesSettled(0)) {
-                break L22;
-              }
+            if ((0 == this.sessionPhase) &&
+                (!ih.areEntityQueuesSettled(0))) {
+              break L22;
             }
             vh.largeBoxSprite.draw(446, 410);
             if (clientControlFlowGuard == 0) {
@@ -408,10 +391,9 @@ final class GameplaySession {
               if (sceneTransitionFlag == 0) {
                 break L24;
               }
-              if (0 != this.sessionPhase) {
-                if (this.sessionPhase != 1) {
-                  break L24;
-                }
+              if ((0 != this.sessionPhase) &&
+                  (this.sessionPhase != 1)) {
+                break L24;
               }
             }
             this.renderProgressHud(-46);
@@ -420,10 +402,9 @@ final class GameplaySession {
         if (!this.debugReducedRendering) {
           h.drawMovingEntities(-1);
         }
-        if (!this.debugReducedRendering) {
-          if (sceneTransitionFlag == 0) {
-            oc.boardSceneRaster.draw(0, 0);
-          }
+        if ((!this.debugReducedRendering) &&
+            (sceneTransitionFlag == 0)) {
+          oc.boardSceneRaster.draw(0, 0);
         }
         ij.drawAvatarFaceOrCryFrame((byte) 18);
         if (!this.debugReducedRendering) {
@@ -534,12 +515,11 @@ final class GameplaySession {
                           }
                           lj.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                         }
-                        if (this.sessionPhase == 0) {
-                          if (!ih.areEntityQueuesSettled(0)) {
-                            g.countBoxSprite.drawScaledSilhouette(234, 205, g.countBoxSprite.fullWidth / 2, g.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                            if (clientControlFlowGuard == 0) {
-                              break L43;
-                            }
+                        if ((this.sessionPhase == 0) &&
+                            (!ih.areEntityQueuesSettled(0))) {
+                          g.countBoxSprite.drawScaledSilhouette(234, 205, g.countBoxSprite.fullWidth / 2, g.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                          if (clientControlFlowGuard == 0) {
+                            break L43;
                           }
                         }
                         vh.largeBoxSprite.drawScaledSilhouette(223, 205, vh.largeBoxSprite.fullWidth / 2, vh.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
@@ -566,10 +546,9 @@ final class GameplaySession {
               dd.uiPaletteFont.drawCenteredText(KeyboardInputListener.field_b, 320, 310, 0, -1);
             }
             eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
-            if (640 > this.pointsPanelX) {
-              if (0 < this.pendingPopupPoints) {
-                dd.uiPaletteFont.drawText(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
-              }
+            if ((640 > this.pointsPanelX) &&
+                (0 < this.pendingPopupPoints)) {
+              dd.uiPaletteFont.drawText(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
             }
             if (this.showSessionCounters) {
               dd.uiPaletteFont.drawText(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
@@ -594,10 +573,9 @@ final class GameplaySession {
               dd.uiPaletteFont.drawText(wj.a(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (ih.areEntityQueuesSettled(0)) {
                 L56: {
-                  if (0 != this.sessionPhase) {
-                    if (this.sessionPhase != 1) {
-                      break L56;
-                    }
+                  if ((0 != this.sessionPhase) &&
+                      (this.sessionPhase != 1)) {
+                    break L56;
                   }
                   if (sceneTransitionFlag == 0) {
                     break L55;
@@ -663,16 +641,14 @@ final class GameplaySession {
         L2: {
           if (0 == (this.updateTick & 1)) {
             L3: {
-              if (-1 == this.pointsPanelSlideDirection) {
-                if (463 < this.pointsPanelX) {
-                  break L3;
-                }
+              if ((-1 == this.pointsPanelSlideDirection) &&
+                  (463 < this.pointsPanelX)) {
+                break L3;
               }
               L5: {
-                if (this.pointsPanelSlideDirection == 1) {
-                  if (this.pointsPanelX < 640) {
-                    break L5;
-                  }
+                if ((this.pointsPanelSlideDirection == 1) &&
+                    (this.pointsPanelX < 640)) {
+                  break L5;
                 }
                 if (this.pointsPanelX != 463) {
                   break L2;
@@ -698,10 +674,9 @@ final class GameplaySession {
           if (!this.sessionEnding) {
             L9: {
               L10: {
-                if (ih.areEntityQueuesSettled(0)) {
-                  if (!this.matchBatchProcessedThisTick) {
-                    break L10;
-                  }
+                if ((ih.areEntityQueuesSettled(0)) &&
+                    (!this.matchBatchProcessedThisTick)) {
+                  break L10;
                 }
                 if (this.preserveScoreOnTransition) {
                   break L9;
@@ -709,10 +684,9 @@ final class GameplaySession {
               }
               if (this.canAdvanceSession(true)) {
                 L12: {
-                  if (0 != this.sessionPhase) {
-                    if (this.sessionPhase != 5) {
-                      break L12;
-                    }
+                  if ((0 != this.sessionPhase) &&
+                      (this.sessionPhase != 5)) {
+                    break L12;
                   }
                   if (!this.sceneTransitionRequested) {
                     break L7;
@@ -942,39 +916,37 @@ final class GameplaySession {
             }
             L44: {
               L45: {
-                if (kj.heldInternalKeys[99]) {
-                  if (!this.tutorialPromptActive) {
-                    fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-                    while (true) {
-                      if (null == fastForwardEntity) {
-                        break L45;
-                      }
-                      detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
-                      if (clientControlFlowGuard != 0) {
-                        break L44;
-                      }
-                      if (!detachedEntityOrPositiveRotationKeySnapshot) {
-                        fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
-                        fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
-                        if (clientControlFlowGuard == 0) {
-                          break L45;
-                        }
-                      }
-                      fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
-                      if (clientControlFlowGuard == 0) {
-                        continue;
-                      }
+                if ((kj.heldInternalKeys[99]) &&
+                    (!this.tutorialPromptActive)) {
+                  fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
+                  while (true) {
+                    if (null == fastForwardEntity) {
                       break L45;
                     }
+                    detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
+                    if (clientControlFlowGuard != 0) {
+                      break L44;
+                    }
+                    if (!detachedEntityOrPositiveRotationKeySnapshot) {
+                      fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
+                      fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
+                      if (clientControlFlowGuard == 0) {
+                        break L45;
+                      }
+                    }
+                    fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
+                    if (clientControlFlowGuard == 0) {
+                      continue;
+                    }
+                    break L45;
                   }
                 }
               }
               detachedEntityOrPositiveRotationKeySnapshot = kj.heldInternalKeys[positiveRotationKeyCode];
             }
-            if (!detachedEntityOrPositiveRotationKeySnapshot) {
-              if (!kj.heldInternalKeys[negativeRotationKeyCode]) {
-                jj.clearAvatarSteering(-106);
-              }
+            if ((!detachedEntityOrPositiveRotationKeySnapshot) &&
+                (!kj.heldInternalKeys[negativeRotationKeyCode])) {
+              jj.clearAvatarSteering(-106);
             }
             this.delayedActionCountdown = this.delayedActionCountdown - 1;
             if (this.delayedActionCountdown == 0) {
@@ -983,15 +955,14 @@ final class GameplaySession {
             nextBoardClearBonusEligible = (!fa.entitiesDetachedThisTick) && (a.attachedEntities.isEmpty(13519)) && (0 < ul.releasedInCurrentTheme);
             L52: {
               ((GameplaySession) (this)).boardClearBonusEligible = nextBoardClearBonusEligible;
-              if (this.boardClearBonusEligible) {
-                if (this.connectivityRebuiltThisTick) {
-                  this.connectivityRebuiltThisTick = false;
-                  this.delayedActionCountdown = 300;
-                  this.boardClearBonusEligible = false;
-                  ra.a(PointerInputListener.field_a ^ 255, -88, PointerInputListener.field_a);
-                  if (clientControlFlowGuard == 0) {
-                    break L52;
-                  }
+              if ((this.boardClearBonusEligible) &&
+                  (this.connectivityRebuiltThisTick)) {
+                this.connectivityRebuiltThisTick = false;
+                this.delayedActionCountdown = 300;
+                this.boardClearBonusEligible = false;
+                ra.a(PointerInputListener.field_a ^ 255, -88, PointerInputListener.field_a);
+                if (clientControlFlowGuard == 0) {
+                  break L52;
                 }
               }
               this.connectivityRebuiltThisTick = false;
@@ -1018,12 +989,10 @@ final class GameplaySession {
           if (this.sceneAnimationTick == 0) {
             fi.a(methodGuard ^ -1578896191, pi.field_S);
           }
-          if (pf.field_D) {
-            if (od.a(-3)) {
-              if (this.sceneAnimationTick > 1000) {
-                this.requestSessionExitScreen(28809);
-              }
-            }
+          if ((pf.field_D) &&
+              (od.a(-3)) &&
+              (this.sceneAnimationTick > 1000)) {
+            this.requestSessionExitScreen(28809);
           }
           fc.a(19);
           cf.advanceScorePopups((byte) 24);
@@ -1047,10 +1016,9 @@ final class GameplaySession {
                   }
                   ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
                 }
-                if (oc.field_f >= 2) {
-                  if (PacketBuffer.field_r.equalsIgnoreCase("brk")) {
-                    this.gameApplet.h((byte) 41);
-                  }
+                if ((oc.field_f >= 2) &&
+                    (PacketBuffer.field_r.equalsIgnoreCase("brk"))) {
+                  this.gameApplet.h((byte) 41);
                 }
               }
               if (ki.currentKeyboardEventCode == 13) {
@@ -1063,44 +1031,40 @@ final class GameplaySession {
                 this.requestSessionExitScreen(28809);
                 return;
               }
-              if (ki.currentKeyboardEventCode == 83) {
-                if (this.tutorialMode) {
-                  this.leaveTutorial(7000);
-                }
+              if ((ki.currentKeyboardEventCode == 83) &&
+                  (this.tutorialMode)) {
+                this.leaveTutorial(7000);
               }
               L67: {
-                if (ki.currentKeyboardEventCode == 84) {
-                  if (this.tutorialStepPhase == 0) {
-                    this.tutorialStepPhase = 1;
-                    this.tutorialPromptActive = false;
-                    if (this.tutorialStepId != 0) {
-                      if (this.tutorialStepId != 1) {
-                        if (this.tutorialStepId != 2) {
-                          break L67;
-                        }
-                        this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
-                        if (clientControlFlowGuard == 0) {
-                          break L67;
-                        }
+                if ((ki.currentKeyboardEventCode == 84) &&
+                    (this.tutorialStepPhase == 0)) {
+                  this.tutorialStepPhase = 1;
+                  this.tutorialPromptActive = false;
+                  if (this.tutorialStepId != 0) {
+                    if (this.tutorialStepId != 1) {
+                      if (this.tutorialStepId != 2) {
+                        break L67;
                       }
-                      this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                      this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
                       if (clientControlFlowGuard == 0) {
                         break L67;
                       }
                     }
-                    this.tutorialProgressMetric = 0;
+                    this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                    if (clientControlFlowGuard == 0) {
+                      break L67;
+                    }
                   }
+                  this.tutorialProgressMetric = 0;
                 }
               }
-              if (ki.currentKeyboardEventCode == 85) {
-                if (5 == this.tutorialStepId) {
-                  if (this.tutorialStepPhase == 0) {
-                    this.leaveTutorial(methodGuard ^ -1578897511);
-                    this.tutorialMode = true;
-                    this.tutorialStepId = 0;
-                    this.tutorialPromptActive = true;
-                  }
-                }
+              if ((ki.currentKeyboardEventCode == 85) &&
+                  (5 == this.tutorialStepId) &&
+                  (this.tutorialStepPhase == 0)) {
+                this.leaveTutorial(methodGuard ^ -1578897511);
+                this.tutorialMode = true;
+                this.tutorialStepId = 0;
+                this.tutorialPromptActive = true;
               }
               if (jg.swapRotationControlsKeyCode == ki.currentKeyboardEventCode) {
                 if (this.rotationControlsSwapped) {
@@ -1244,60 +1208,53 @@ final class GameplaySession {
             debugKeySentinelOrPointerEventSentinel = -1;
           }
           if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
-            if (this.debugPointerSpawnEnabled) {
-              if (oc.field_f >= 2) {
-                nb.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, he.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
-              }
+            if ((this.debugPointerSpawnEnabled) &&
+                (oc.field_f >= 2)) {
+              nb.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, he.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
             }
             L100: {
-              if (this.tutorialMode) {
-                if (this.tutorialStepPhase == 0) {
-                  if (this.tutorialStepId != 5) {
-                    this.tutorialPromptActive = false;
-                    this.tutorialStepPhase = 1;
-                    if (this.tutorialStepId == 0) {
-                      this.tutorialProgressMetric = 0;
-                      if (clientControlFlowGuard == 0) {
-                        break L100;
-                      }
-                    }
-                    if (this.tutorialStepId == 1) {
-                      this.tutorialProgressMetric = dd.variantMatchCandidateCount;
-                      if (clientControlFlowGuard == 0) {
-                        break L100;
-                      }
-                    }
-                    if (this.tutorialStepId != 2) {
-                      return;
-                    }
-                    this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
+              if ((this.tutorialMode) &&
+                  (this.tutorialStepPhase == 0)) {
+                if (this.tutorialStepId != 5) {
+                  this.tutorialPromptActive = false;
+                  this.tutorialStepPhase = 1;
+                  if (this.tutorialStepId == 0) {
+                    this.tutorialProgressMetric = 0;
                     if (clientControlFlowGuard == 0) {
                       break L100;
                     }
                   }
-                  if (mc.pointerPressXSnapshot > 100) {
-                    if (340 > mc.pointerPressXSnapshot) {
-                      if (he.pointerPressYSnapshot > 440) {
-                        if (476 > he.pointerPressYSnapshot) {
-                          this.leaveTutorial(methodGuard ^ -1578897511);
-                          this.tutorialStepId = 0;
-                          this.tutorialMode = true;
-                          this.tutorialPromptActive = true;
-                        }
-                      }
+                  if (this.tutorialStepId == 1) {
+                    this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                    if (clientControlFlowGuard == 0) {
+                      break L100;
                     }
                   }
-                  if (mc.pointerPressXSnapshot > 380) {
-                    if (540 > mc.pointerPressXSnapshot) {
-                      if (he.pointerPressYSnapshot > 440) {
-                        if (he.pointerPressYSnapshot >= 476) {
-                          return;
-                        }
-                        this.tutorialPromptActive = false;
-                        this.tutorialStepPhase = 1;
-                      }
-                    }
+                  if (this.tutorialStepId != 2) {
+                    return;
                   }
+                  this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
+                  if (clientControlFlowGuard == 0) {
+                    break L100;
+                  }
+                }
+                if ((mc.pointerPressXSnapshot > 100) &&
+                    (340 > mc.pointerPressXSnapshot) &&
+                    (he.pointerPressYSnapshot > 440) &&
+                    (476 > he.pointerPressYSnapshot)) {
+                  this.leaveTutorial(methodGuard ^ -1578897511);
+                  this.tutorialStepId = 0;
+                  this.tutorialMode = true;
+                  this.tutorialPromptActive = true;
+                }
+                if ((mc.pointerPressXSnapshot > 380) &&
+                    (540 > mc.pointerPressXSnapshot) &&
+                    (he.pointerPressYSnapshot > 440)) {
+                  if (he.pointerPressYSnapshot >= 476) {
+                    return;
+                  }
+                  this.tutorialPromptActive = false;
+                  this.tutorialStepPhase = 1;
                 }
               }
             }
@@ -1351,10 +1308,9 @@ final class GameplaySession {
           }
           oa.field_a = oa.field_a + pointsForCounters;
         }
-        if (da.a(0, -117)) {
-          if (this.score >= 7000) {
-            ra.a(239, -120, 16);
-          }
+        if ((da.a(0, -117)) &&
+            (this.score >= 7000)) {
+          ra.a(239, -120, 16);
         }
         return;
     }
@@ -1411,10 +1367,9 @@ final class GameplaySession {
           }
           if (1 == this.tutorialStepPhase) {
             L2: {
-              if (this.tutorialStepId != 3) {
-                if (this.tutorialStepId != 5) {
-                  break L2;
-                }
+              if ((this.tutorialStepId != 3) &&
+                  (this.tutorialStepId != 5)) {
+                break L2;
               }
               this.leaveTutorial(7000);
             }
@@ -1422,19 +1377,17 @@ final class GameplaySession {
               this.tutorialAdvanceRequested = false;
               this.tutorialStepPhase = 2;
             }
-            if (this.tutorialStepId == 0) {
-              if (this.tutorialProgressMetric > 450) {
-                this.tutorialStepPhase = 2;
-                if (clientControlFlowGuard == 0) {
-                  break L0;
-                }
+            if ((this.tutorialStepId == 0) &&
+                (this.tutorialProgressMetric > 450)) {
+              this.tutorialStepPhase = 2;
+              if (clientControlFlowGuard == 0) {
+                break L0;
               }
             }
             L6: {
-              if (this.tutorialStepId == 1) {
-                if (0 < dd.variantMatchCandidateCount - this.tutorialProgressMetric) {
-                  break L6;
-                }
+              if ((this.tutorialStepId == 1) &&
+                  (0 < dd.variantMatchCandidateCount - this.tutorialProgressMetric)) {
+                break L6;
               }
               if (this.tutorialStepId != 2) {
                 break L0;
@@ -1526,33 +1479,28 @@ final class GameplaySession {
                           L15: {
                             L16: {
                               L17: {
-                                if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
-                                  if (clientControlFlowGuard == 0) {
-                                    break L17;
-                                  }
+                                if ((selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) &&
+                                    (clientControlFlowGuard == 0)) {
+                                  break L17;
                                 }
-                                if (themeIndexThenId == 1) {
-                                  if (clientControlFlowGuard == 0) {
-                                    break L16;
-                                  }
+                                if ((themeIndexThenId == 1) &&
+                                    (clientControlFlowGuard == 0)) {
+                                  break L16;
                                 }
-                                if (themeIndexThenId == 3) {
-                                  if (clientControlFlowGuard == 0) {
-                                    break L15;
-                                  }
+                                if ((themeIndexThenId == 3) &&
+                                    (clientControlFlowGuard == 0)) {
+                                  break L15;
                                 }
-                                if (themeIndexThenId == 0) {
-                                  if (clientControlFlowGuard == 0) {
-                                    break L14;
-                                  }
+                                if ((themeIndexThenId == 0) &&
+                                    (clientControlFlowGuard == 0)) {
+                                  break L14;
                                 }
                                 if (themeIndexThenId == 6) {
                                   break L13;
                                 }
-                                if (5 == themeIndexThenId) {
-                                  if (clientControlFlowGuard == 0) {
-                                    break L12;
-                                  }
+                                if ((5 == themeIndexThenId) &&
+                                    (clientControlFlowGuard == 0)) {
+                                  break L12;
                                 }
                                 if (2 != themeIndexThenId) {
                                   break L10;
@@ -1785,10 +1733,9 @@ final class GameplaySession {
               }
             }
             L18: {
-              if (this.resultExpansionAudioStream != null) {
-                if (!this.resultExpansionAudioStream.isSamplePositionOutOfRange()) {
-                  break L18;
-                }
+              if ((this.resultExpansionAudioStream != null) &&
+                  (!this.resultExpansionAudioStream.isSamplePositionOutOfRange())) {
+                break L18;
               }
               resultProgressPercent = this.sceneAnimationTick * 100 / 460;
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.field_c[28], 2 * resultProgressPercent + 200, 45);
@@ -1823,10 +1770,9 @@ final class GameplaySession {
         if (methodGuard != -70) {
             return;
         }
-        if (0 < this.score && !this.submissionBlocked) {
-            if (!fh.c(-102)) {
-                qf.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, ml.field_r, 65513, 3, gb.field_g);
-            }
+        if ((0 < this.score && !this.submissionBlocked) &&
+            (!fh.c(-102))) {
+            qf.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, ml.field_r, 65513, 3, gb.field_g);
         }
         ca.field_f = null;
     }
@@ -1919,10 +1865,9 @@ final class GameplaySession {
             }
           }
           L5: {
-            if (this.score <= 0) {
-              if (this.newActionCount <= 0) {
-                break L5;
-              }
+            if ((this.score <= 0) &&
+                (this.newActionCount <= 0)) {
+              break L5;
             }
             ai.requestedScreenId = 4;
             if (clientControlFlowGuard == 0) {

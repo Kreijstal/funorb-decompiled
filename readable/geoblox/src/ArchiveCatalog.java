@@ -31,15 +31,13 @@ final class ArchiveCatalog {
         }
         L1: {
           L2: {
-            if (65 <= param0) {
-              if (param0 <= 90) {
-                break L2;
-              }
+            if ((65 <= param0) &&
+                (param0 <= 90)) {
+              break L2;
             }
-            if (97 <= param0) {
-              if (param0 <= 122) {
-                break L2;
-              }
+            if ((97 <= param0) &&
+                (param0 <= 122)) {
+              break L2;
             }
             stackIn_10_0 = false;
             break L1;
@@ -78,25 +76,24 @@ final class ArchiveCatalog {
           if (this.catalogBuffer == null) {
             throw new RuntimeException();
           }
-          if (archiveId >= 0) {
-            if (this.archiveSources.length > archiveId) {
-              if (null != this.archiveSources[archiveId]) {
-                cachedSourceBeforeReturn = this.archiveSources[archiveId];
-                return cachedSourceBeforeReturn;
-              }
-              this.catalogBuffer.position = 6 + 72 * archiveId;
-              expectedIndexCrc32 = this.catalogBuffer.readIntBE((byte) -108);
-              expectedIndexRevision = this.catalogBuffer.readIntBE((byte) -55);
-              expectedIndexWhirlpoolDigest = new byte[64];
-              if (methodGuard != -9) {
-                this.catalogRequest = (NetworkArchiveRequest) null;
-              }
-              this.catalogBuffer.readBytes(29915, 64, expectedIndexWhirlpoolDigest, 0);
-              source = new CachedArchiveSource(archiveId, groupDiskCache, indexDiskCache, this.networkClient, this.diskWorker, expectedIndexCrc32, expectedIndexWhirlpoolDigest, expectedIndexRevision, sweepCompletedRequests);
-              this.archiveSources[archiveId] = source;
-              createdSourceBeforeReturn = (CachedArchiveSource) (source);
-              return createdSourceBeforeReturn;
+          if ((archiveId >= 0) &&
+              (this.archiveSources.length > archiveId)) {
+            if (null != this.archiveSources[archiveId]) {
+              cachedSourceBeforeReturn = this.archiveSources[archiveId];
+              return cachedSourceBeforeReturn;
             }
+            this.catalogBuffer.position = 6 + 72 * archiveId;
+            expectedIndexCrc32 = this.catalogBuffer.readIntBE((byte) -108);
+            expectedIndexRevision = this.catalogBuffer.readIntBE((byte) -55);
+            expectedIndexWhirlpoolDigest = new byte[64];
+            if (methodGuard != -9) {
+              this.catalogRequest = (NetworkArchiveRequest) null;
+            }
+            this.catalogBuffer.readBytes(29915, 64, expectedIndexWhirlpoolDigest, 0);
+            source = new CachedArchiveSource(archiveId, groupDiskCache, indexDiskCache, this.networkClient, this.diskWorker, expectedIndexCrc32, expectedIndexWhirlpoolDigest, expectedIndexRevision, sweepCompletedRequests);
+            this.archiveSources[archiveId] = source;
+            createdSourceBeforeReturn = (CachedArchiveSource) (source);
+            return createdSourceBeforeReturn;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException sourceFailure) {
@@ -182,13 +179,12 @@ final class ArchiveCatalog {
           verificationBytesAlias = encodedVerificationBytes;
           rawVerificationBytes = verificationBytesAlias;
           catalogBuffer.readBytes(29915, encodedVerificationBytes.length, encodedVerificationBytes, 0);
-          if (this.verificationExponent != null) {
-            if (this.verificationModulus != null) {
-              encodedVerificationInteger = new java.math.BigInteger(encodedVerificationBytes);
-              verificationIntegerAfterModPow = encodedVerificationInteger.modPow(this.verificationExponent, this.verificationModulus);
-              verificationBytes = verificationIntegerAfterModPow.toByteArray();
-              break L1;
-            }
+          if ((this.verificationExponent != null) &&
+              (this.verificationModulus != null)) {
+            encodedVerificationInteger = new java.math.BigInteger(encodedVerificationBytes);
+            verificationIntegerAfterModPow = encodedVerificationInteger.modPow(this.verificationExponent, this.verificationModulus);
+            verificationBytes = verificationIntegerAfterModPow.toByteArray();
+            break L1;
           }
           verificationBytes = rawVerificationBytes;
         }
@@ -269,13 +265,12 @@ final class ArchiveCatalog {
           if (param1 < 53) {
             ArchiveCatalog.a(26);
           }
-          if (param0 != null) {
-            if (param0.length() >= wg.field_m) {
-              if (param0.length() > ArchiveIndex.field_j) {
-                return true;
-              }
-              return false;
+          if ((param0 != null) &&
+              (param0.length() >= wg.field_m)) {
+            if (param0.length() > ArchiveIndex.field_j) {
+              return true;
             }
+            return false;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

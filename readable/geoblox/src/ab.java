@@ -63,45 +63,41 @@ final class ab {
             return stackIn_4_0;
           }
           var3_int = param2.length();
-          if (var3_int >= 1) {
-            if (var3_int <= 12) {
-              var4 = oe.a(param2, 12);
-              if (param1 != 2) {
-                ab.a((byte) 112);
-              }
-              if (var4 != null) {
-                if (var4.length() >= 1) {
-                  if (!gg.a((byte) -32, var4.charAt(0))) {
-                    if (!gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
-                      var5 = 0;
-                      for (var6 = 0; var6 < param2.length(); var6++) {
-                        var7 = param2.charAt(var6);
-                        if (gg.a((byte) -96, (char) var7)) {
-                          var5++;
-                        } else {
-                          var5 = 0;
-                        }
-                        if (2 <= var5) {
-                          if (!param0) {
-                            stackIn_31_0 = fa.createDoubleSpaceAlertText;
-                            return stackIn_31_0;
-                          }
-                        }
-                      }
-                      if (var5 <= 0) {
-                        return null;
-                      }
-                      stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
-                      return stackIn_36_0;
-                    }
-                  }
-                  stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
-                  return stackIn_21_0;
-                }
-              }
-              stackIn_16_0 = gg.createNameLengthAlertText;
-              return stackIn_16_0;
+          if ((var3_int >= 1) &&
+              (var3_int <= 12)) {
+            var4 = oe.a(param2, 12);
+            if (param1 != 2) {
+              ab.a((byte) 112);
             }
+            if ((var4 != null) &&
+                (var4.length() >= 1)) {
+              if ((!gg.a((byte) -32, var4.charAt(0))) &&
+                  (!gg.a((byte) -75, var4.charAt(-1 + var4.length())))) {
+                var5 = 0;
+                for (var6 = 0; var6 < param2.length(); var6++) {
+                  var7 = param2.charAt(var6);
+                  if (gg.a((byte) -96, (char) var7)) {
+                    var5++;
+                  } else {
+                    var5 = 0;
+                  }
+                  if ((2 <= var5) &&
+                      (!param0)) {
+                    stackIn_31_0 = fa.createDoubleSpaceAlertText;
+                    return stackIn_31_0;
+                  }
+                }
+                if (var5 <= 0) {
+                  return null;
+                }
+                stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
+                return stackIn_36_0;
+              }
+              stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
+              return stackIn_21_0;
+            }
+            stackIn_16_0 = gg.createNameLengthAlertText;
+            return stackIn_16_0;
           }
           stackIn_9_0 = gg.createNameLengthAlertText;
           return stackIn_9_0;
@@ -217,10 +213,9 @@ final class ab {
                   L11: {
                     neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
                     ih.linkEntityAtMaskContacts(-1, td.rotatedEntityScreenY, movingEntity, ng.rotatedEntityScreenX);
-                    if (neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) {
-                      if (movingEntity.entitySpriteKindId != 2) {
-                        break L11;
-                      }
+                    if ((neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) &&
+                        (movingEntity.entitySpriteKindId != 2)) {
+                      break L11;
                     }
                     if (movingEntity.entitySpriteKindId != 2) {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
@@ -264,14 +259,13 @@ final class ab {
                   nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
                   movingEntityMovesOutwardIntSnapshot = (!(centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX < nextCenterOffsetYThenSquared + nextCenterOffsetXThenSquared)) ? 0 : 1;
                   movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
-                  if (contactedEntityMovesOutwardInt != 0) {
-                    if (movingEntityMovesOutwardInt != 0) {
-                      centerOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
-                      centerOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
-                      midpointInwardSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
-                      sharedVelocityXOrCrossProduct = centerOffsetX * midpointInwardSpeedScale;
-                      sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetY;
-                    }
+                  if ((contactedEntityMovesOutwardInt != 0) &&
+                      (movingEntityMovesOutwardInt != 0)) {
+                    centerOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
+                    centerOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
+                    midpointInwardSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
+                    sharedVelocityXOrCrossProduct = centerOffsetX * midpointInwardSpeedScale;
+                    sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetY;
                   }
                   movingEntity.velocityY = movingEntity.velocityY * -1.0f;
                   movingEntity.velocityX = movingEntity.velocityX * -1.0f;
@@ -284,14 +278,13 @@ final class ab {
                   inwardOffsetX = 320.0f - movingEntity.positionX;
                   inwardOffsetY = 240.0f - movingEntity.positionY;
                   sharedVelocityXOrCrossProduct = -(inwardOffsetY * movingEntity.positionX) + movingEntity.positionY * inwardOffsetX;
-                  if (movingEntity.relatedEntityCount == 0) {
-                    if (sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f) {
-                      movingEntity.velocityX = inwardOffsetX;
-                      movingEntity.velocityY = inwardOffsetY;
-                      sharedVelocityYOrDirectionScale = og.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));
-                      movingEntity.velocityX = movingEntity.velocityX * sharedVelocityYOrDirectionScale;
-                      movingEntity.velocityY = movingEntity.velocityY * sharedVelocityYOrDirectionScale;
-                    }
+                  if ((movingEntity.relatedEntityCount == 0) &&
+                      (sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f)) {
+                    movingEntity.velocityX = inwardOffsetX;
+                    movingEntity.velocityY = inwardOffsetY;
+                    sharedVelocityYOrDirectionScale = og.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));
+                    movingEntity.velocityX = movingEntity.velocityX * sharedVelocityYOrDirectionScale;
+                    movingEntity.velocityY = movingEntity.velocityY * sharedVelocityYOrDirectionScale;
                   }
                 }
                 movingEntity.drawEntityIdOnPointerMask((byte) 51);

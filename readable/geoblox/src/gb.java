@@ -31,13 +31,12 @@ final class gb {
               }
               return true;
             }
-            if (0 == MatchingTextValidator.field_j % 40) {
-              if (vc.field_h < 11) {
-                fh.field_c = MatchingTextValidator.field_j;
-                vc.field_h = vc.field_h + 1;
-                if (10 == vc.field_h) {
-                  td.playPcmSample(-348, fl.field_c[26]);
-                }
+            if ((0 == MatchingTextValidator.field_j % 40) &&
+                (vc.field_h < 11)) {
+              fh.field_c = MatchingTextValidator.field_j;
+              vc.field_h = vc.field_h + 1;
+              if (10 == vc.field_h) {
+                td.playPcmSample(-348, fl.field_c[26]);
               }
             }
             var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
@@ -46,17 +45,15 @@ final class gb {
             }
             var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
             var3 = MatchingTextValidator.field_j << 2;
-            if (!sg.field_d) {
-              if (-var3 + 900 <= 320 + var2) {
-                td.playPcmSample(-348, fl.field_c[7]);
-                sg.field_d = true;
-              }
+            if ((!sg.field_d) &&
+                (-var3 + 900 <= 320 + var2)) {
+              td.playPcmSample(-348, fl.field_c[7]);
+              sg.field_d = true;
             }
-            if (!ab.field_d) {
-              if (-var2 + (320 - qh.introGeometryFrames[1].fullWidth) <= -1200 + var3) {
-                td.playPcmSample(-348, fl.field_c[8]);
-                ab.field_d = true;
-              }
+            if ((!ab.field_d) &&
+                (-var2 + (320 - qh.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
+              td.playPcmSample(-348, fl.field_c[8]);
+              ab.field_d = true;
             }
             stackIn_25_0 = !(494 > MatchingTextValidator.field_j);
             return stackIn_25_0;

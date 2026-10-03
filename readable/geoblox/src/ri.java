@@ -35,11 +35,10 @@ final class ri {
             CharSequence var12 = null;
             var9 = Geoblox.field_C;
             try {
-              if (null == oc.field_e) {
-                if (!w.a(param0, 52)) {
-                  stackIn_5_0 = -1;
-                  return stackIn_5_0;
-                }
+              if ((null == oc.field_e) &&
+                  (!w.a(param0, 52))) {
+                stackIn_5_0 = -1;
+                return stackIn_5_0;
               }
               if (PacketBuffer.field_l == gi.field_d) {
                 if (!param0) {
@@ -54,153 +53,145 @@ final class ri {
                 cm.a(-1, -1);
                 PacketBuffer.field_l = oe.field_T;
               }
-              if (oe.field_T == PacketBuffer.field_l) {
-                if (el.b(30000, 1)) {
-                  var6_int = eh.field_d.readUnsignedByte((byte) 34);
-                  eh.field_d.position = 0;
-                  if (var6_int != 0) {
-                    p.field_k = -1;
-                    PacketBuffer.field_l = ac.field_v;
-                    ScorePopup.field_l = var6_int;
-                  } else {
-                    PacketBuffer.field_l = f.field_hb;
-                  }
+              if ((oe.field_T == PacketBuffer.field_l) &&
+                  (el.b(30000, 1))) {
+                var6_int = eh.field_d.readUnsignedByte((byte) 34);
+                eh.field_d.position = 0;
+                if (var6_int != 0) {
+                  p.field_k = -1;
+                  PacketBuffer.field_l = ac.field_v;
+                  ScorePopup.field_l = var6_int;
+                } else {
+                  PacketBuffer.field_l = f.field_hb;
                 }
               }
-              if (f.field_hb == PacketBuffer.field_l) {
-                if (el.b(30000, 8)) {
-                  ak.field_a = eh.field_d.readLongBE(2901);
-                  eh.field_d.position = 0;
-                  uk.a(26, param2, param0, ih.field_a, param3);
-                  PacketBuffer.field_l = da.field_g;
-                }
+              if ((f.field_hb == PacketBuffer.field_l) &&
+                  (el.b(30000, 8))) {
+                ak.field_a = eh.field_d.readLongBE(2901);
+                eh.field_d.position = 0;
+                uk.a(26, param2, param0, ih.field_a, param3);
+                PacketBuffer.field_l = da.field_g;
               }
               if (param5 != 0) {
                 var10 = (String) null;
                 ri.a(false, (String) null, 95, false, (String) null, 13);
               }
               L6: {
-                if (da.field_g == PacketBuffer.field_l) {
-                  if (el.b(30000, 1)) {
-                    var6_int = eh.field_d.readUnsignedByte((byte) 34);
-                    eh.field_d.position = 0;
-                    fl.field_b = null;
-                    ScorePopup.field_l = var6_int;
-                    if (var6_int != 0) {
-                      if (var6_int != 1) {
-                        if (var6_int != 8) {
-                          PacketBuffer.field_l = ac.field_v;
-                          p.field_k = -1;
-                          break L6;
-                        }
-                        Bzip2DecoderState.a((byte) -116);
-                        ck.field_e = false;
-                        stackIn_33_0 = var6_int;
-                        return stackIn_33_0;
-                      }
+                if ((da.field_g == PacketBuffer.field_l) &&
+                    (el.b(30000, 1))) {
+                  var6_int = eh.field_d.readUnsignedByte((byte) 34);
+                  eh.field_d.position = 0;
+                  fl.field_b = null;
+                  ScorePopup.field_l = var6_int;
+                  if ((var6_int != 0) &&
+                      (var6_int != 1)) {
+                    if (var6_int != 8) {
+                      PacketBuffer.field_l = ac.field_v;
+                      p.field_k = -1;
+                      break L6;
                     }
-                    p.field_k = -1;
-                    PacketBuffer.field_l = da.field_f;
+                    Bzip2DecoderState.a((byte) -116);
+                    ck.field_e = false;
+                    stackIn_33_0 = var6_int;
+                    return stackIn_33_0;
                   }
+                  p.field_k = -1;
+                  PacketBuffer.field_l = da.field_f;
                 }
               }
-              if (da.field_f == PacketBuffer.field_l) {
-                if (TriangleMesh.a(false)) {
-                  oa.field_c = eh.field_d.readLongBE(2901);
-                  oc.field_f = eh.field_d.readUnsignedByte((byte) 34);
-                  eh.field_d.readUnsignedByte((byte) 34);
-                  og.field_n = eh.field_d.readUnsignedShortBE(true);
-                  var6 = eh.field_d.readNullableNullTerminatedText((byte) 53);
-                  var7 = eh.field_d.readUnsignedByte((byte) 34);
-                  if ((1 & var7) != 0) {
-                    ic.a((byte) 65);
+              if ((da.field_f == PacketBuffer.field_l) &&
+                  (TriangleMesh.a(false))) {
+                oa.field_c = eh.field_d.readLongBE(2901);
+                oc.field_f = eh.field_d.readUnsignedByte((byte) 34);
+                eh.field_d.readUnsignedByte((byte) 34);
+                og.field_n = eh.field_d.readUnsignedShortBE(true);
+                var6 = eh.field_d.readNullableNullTerminatedText((byte) 53);
+                var7 = eh.field_d.readUnsignedByte((byte) 34);
+                if ((1 & var7) != 0) {
+                  ic.a((byte) 65);
+                }
+                if (!param0) {
+                  stackIn_45_0 = !((var7 & 4) == 0);
+                  GzipInflater.field_b = stackIn_45_0;
+                  stackIn_48_0 = !((var7 & 8) == 0);
+                  fb.field_l = stackIn_48_0;
+                  if (!fb.field_l) {
                   }
-                  if (!param0) {
-                    stackIn_45_0 = !((var7 & 4) == 0);
-                    GzipInflater.field_b = stackIn_45_0;
-                    stackIn_48_0 = !((var7 & 8) == 0);
-                    fb.field_l = stackIn_48_0;
-                    if (!fb.field_l) {
+                }
+                L13: {
+                  if (ll.field_e) {
+                    eh.field_d.readUnsignedByte((byte) 34);
+                    eh.field_d.readUnsignedByte((byte) 34);
+                    eh.field_d.readIntBE((byte) -48);
+                    PacketBuffer.field_n = eh.field_d.readUnsignedShortBE(true);
+                    hc.field_K = new byte[PacketBuffer.field_n];
+                    for (var8 = 0; PacketBuffer.field_n > var8; var8++) {
+                      hc.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
                     }
+                    break L13;
                   }
-                  L13: {
-                    if (ll.field_e) {
-                      eh.field_d.readUnsignedByte((byte) 34);
-                      eh.field_d.readUnsignedByte((byte) 34);
-                      eh.field_d.readIntBE((byte) -48);
-                      PacketBuffer.field_n = eh.field_d.readUnsignedShortBE(true);
-                      hc.field_K = new byte[PacketBuffer.field_n];
-                      for (var8 = 0; PacketBuffer.field_n > var8; var8++) {
-                        hc.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
-                      }
-                      break L13;
-                    }
+                }
+                SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);
+                var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
+                vg.field_b = oe.a(var12, 12);
+                ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
+                PacketBuffer.field_l = eh.field_b;
+                if (ih.field_a.a((byte) -32) != ej.field_b) {
+                  if (ih.field_a.a((byte) -32) == Geoblox.field_B) {
+                    rl.field_W.a(k.c(108), 0);
                   }
-                  SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);
-                  var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
-                  vg.field_b = oe.a(var12, 12);
-                  ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
-                  PacketBuffer.field_l = eh.field_b;
-                  if (ih.field_a.a((byte) -32) != ej.field_b) {
-                    if (ih.field_a.a((byte) -32) == Geoblox.field_B) {
-                      rl.field_W.a(k.c(108), 0);
-                    }
-                  } else {
-                    mb.field_b.a(k.c(122), 0);
-                  }
-                  ck.field_e = false;
-                  if (var6 != null) {
-                    tc.a(100, var6, k.c(112));
-                  }
-                  L17: {
-                    if (og.field_n <= 0) {
-                      if (!GzipInflater.field_b) {
-                        try {
-                          wk.a((byte) -6, k.c(107), "unzap");
-                        } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                          decompiledCaughtException = decompiledCaughtParameter0;
-                          var8_ref_Throwable = decompiledCaughtException;
-                        }
-                        break L17;
-                      }
-                    }
+                } else {
+                  mb.field_b.a(k.c(122), 0);
+                }
+                ck.field_e = false;
+                if (var6 != null) {
+                  tc.a(100, var6, k.c(112));
+                }
+                L17: {
+                  if ((og.field_n <= 0) &&
+                      (!GzipInflater.field_b)) {
                     try {
-                      wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, k.c(param5 + 119), "zap");
-                    } catch (java.lang.Throwable decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
+                      wk.a((byte) -6, k.c(107), "unzap");
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
                       var8_ref_Throwable = decompiledCaughtException;
                     }
+                    break L17;
                   }
-                  if (og.field_n > 0) {
-                    rb.field_c = true;
+                  try {
+                    wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, k.c(param5 + 119), "zap");
+                  } catch (java.lang.Throwable decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var8_ref_Throwable = decompiledCaughtException;
                   }
-                  fj.field_q.initializeCipher(hl.field_D, false);
-                  for (var8 = 0; var8 < 4; var8++) {
-                    hl.field_D[var8] = hl.field_D[var8] + 50;
-                  }
-                  eh.field_d.initializeCipher(hl.field_D, false);
-                  stackIn_78_0 = ScorePopup.field_l;
-                  return stackIn_78_0;
                 }
+                if (og.field_n > 0) {
+                  rb.field_c = true;
+                }
+                fj.field_q.initializeCipher(hl.field_D, false);
+                for (var8 = 0; var8 < 4; var8++) {
+                  hl.field_D[var8] = hl.field_D[var8] + 50;
+                }
+                eh.field_d.initializeCipher(hl.field_D, false);
+                stackIn_78_0 = ScorePopup.field_l;
+                return stackIn_78_0;
               }
-              if (PacketBuffer.field_l == ac.field_v) {
-                if (TriangleMesh.a(false)) {
-                  Bzip2DecoderState.a((byte) -118);
-                  if (ScorePopup.field_l == 7) {
-                    if (!ck.field_e) {
-                      ck.field_e = true;
-                      stackIn_86_0 = -1;
-                      return stackIn_86_0;
-                    }
-                  }
-                  if (ScorePopup.field_l == 7) {
-                    ScorePopup.field_l = 3;
-                  }
-                  kh.field_a = eh.field_d.readNullTerminatedText((byte) 101);
-                  ck.field_e = false;
-                  stackIn_91_0 = ScorePopup.field_l;
-                  return stackIn_91_0;
+              if ((PacketBuffer.field_l == ac.field_v) &&
+                  (TriangleMesh.a(false))) {
+                Bzip2DecoderState.a((byte) -118);
+                if ((ScorePopup.field_l == 7) &&
+                    (!ck.field_e)) {
+                  ck.field_e = true;
+                  stackIn_86_0 = -1;
+                  return stackIn_86_0;
                 }
+                if (ScorePopup.field_l == 7) {
+                  ScorePopup.field_l = 3;
+                }
+                kh.field_a = eh.field_d.readNullTerminatedText((byte) 101);
+                ck.field_e = false;
+                stackIn_91_0 = ScorePopup.field_l;
+                return stackIn_91_0;
               }
               if (null == oc.field_e) {
                 if (ck.field_e) {

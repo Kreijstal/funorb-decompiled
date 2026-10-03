@@ -130,15 +130,12 @@ final class CachedArchiveSource extends ArchiveSource {
         unusedClientGuardSnapshot = Geoblox.field_C;
         cachedRequest = (ArchiveRequest) ((Object) this.groupRequests.a((long)groupId, (byte) -124));
         request = cachedRequest;
-        if (cachedRequest != null) {
-          if (requestMode == 0) {
-            if (!cachedRequest.priority) {
-              if (cachedRequest.pending) {
-                cachedRequest.unlinkNode(false);
-                request = null;
-              }
-            }
-          }
+        if ((cachedRequest != null) &&
+            (requestMode == 0) &&
+            (!cachedRequest.priority) &&
+            (cachedRequest.pending)) {
+          cachedRequest.unlinkNode(false);
+          request = null;
         }
         if (request == null) {
           L2: {
@@ -164,11 +161,10 @@ final class CachedArchiveSource extends ArchiveSource {
                 request = this.networkClient.queueRequest((byte) 2, this.archiveId, methodGuard + 50, groupId, false);
               }
             } else {
-              if (null != this.groupDiskCache) {
-                if (-1 != this.groupDiskStatus[groupId]) {
-                  request = this.diskWorker.readSynchronously(this.groupDiskCache, groupId, 15079962);
-                  break L2;
-                }
+              if ((null != this.groupDiskCache) &&
+                  (-1 != this.groupDiskStatus[groupId])) {
+                request = this.diskWorker.readSynchronously(this.groupDiskCache, groupId, 15079962);
+                break L2;
               }
               if (this.networkClient.isPriorityQueueFull(20)) {
                 return null;
@@ -189,43 +185,41 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         if (request instanceof DiskArchiveRequest) {
           try {
-            if (groupBytes != null) {
-              if (groupBytesForPayloadChecks.length > 2) {
-                WhirlpoolHash.field_f.reset();
-                WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
-                payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
-                if (payloadCrc32 != this.index.groupCrc32[groupId]) {
-                  throw new RuntimeException();
-                }
-                L12: {
-                  if (this.index.groupWhirlpoolDigests != null) {
-                    if (null != this.index.groupWhirlpoolDigests[groupId]) {
-                      expectedDiskGroupDigest = this.index.groupWhirlpoolDigests[groupId];
-                      computedDiskGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
-                      for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
-                        if (~expectedDiskGroupDigest[digestByteIndex] != ~computedDiskGroupDigest[digestByteIndex]) {
-                          throw new RuntimeException();
-                        }
-                      }
-                      break L12;
+            if ((groupBytes != null) &&
+                (groupBytesForPayloadChecks.length > 2)) {
+              WhirlpoolHash.field_f.reset();
+              WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
+              payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
+              if (payloadCrc32 != this.index.groupCrc32[groupId]) {
+                throw new RuntimeException();
+              }
+              L12: {
+                if ((this.index.groupWhirlpoolDigests != null) &&
+                    (null != this.index.groupWhirlpoolDigests[groupId])) {
+                  expectedDiskGroupDigest = this.index.groupWhirlpoolDigests[groupId];
+                  computedDiskGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
+                  for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
+                    if (~expectedDiskGroupDigest[digestByteIndex] != ~computedDiskGroupDigest[digestByteIndex]) {
+                      throw new RuntimeException();
                     }
                   }
+                  break L12;
                 }
-                storedGroupRevision = (groupBytes[-2 + groupBytesForPayloadChecks.length] << 8 & 65280) + (groupBytes[groupBytesForPayloadChecks.length - 1] & 255);
-                if ((65535 & this.index.groupRevisions[groupId]) != storedGroupRevision) {
-                  throw new RuntimeException();
-                }
-                if (this.groupDiskStatus[groupId] != 1) {
-                  if (this.groupDiskStatus[groupId] != 0) {
-                  }
-                  this.groupDiskStatus[groupId] = (byte) 1;
-                }
-                if (!((ArchiveRequest) (request)).priority) {
-                  ((ArchiveRequest) (request)).unlinkNode(false);
-                }
-                validatedDiskRequestBeforeReturn = request;
-                return (ArchiveRequest) ((Object) validatedDiskRequestBeforeReturn);
               }
+              storedGroupRevision = (groupBytes[-2 + groupBytesForPayloadChecks.length] << 8 & 65280) + (groupBytes[groupBytesForPayloadChecks.length - 1] & 255);
+              if ((65535 & this.index.groupRevisions[groupId]) != storedGroupRevision) {
+                throw new RuntimeException();
+              }
+              if (this.groupDiskStatus[groupId] != 1) {
+                if (this.groupDiskStatus[groupId] != 0) {
+                }
+                this.groupDiskStatus[groupId] = (byte) 1;
+              }
+              if (!((ArchiveRequest) (request)).priority) {
+                ((ArchiveRequest) (request)).unlinkNode(false);
+              }
+              validatedDiskRequestBeforeReturn = request;
+              return (ArchiveRequest) ((Object) validatedDiskRequestBeforeReturn);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception diskFailure) {
@@ -246,35 +240,33 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         try {
           L4: {
-            if (groupBytes != null) {
-              if (groupBytesForPayloadChecks.length > 2) {
-                WhirlpoolHash.field_f.reset();
-                WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
-                payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
-                if (payloadCrc32 != this.index.groupCrc32[groupId]) {
-                  throw new RuntimeException();
-                }
-                L6: {
-                  if (null != this.index.groupWhirlpoolDigests) {
-                    if (null != this.index.groupWhirlpoolDigests[groupId]) {
-                      expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
-                      computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
-                      networkDigestByteIndex = 0;
-                      digestByteIndex = networkDigestByteIndex;
-                      while (networkDigestByteIndex < 64) {
-                        if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
-                          throw new RuntimeException();
-                        }
-                        networkDigestByteIndex++;
-                      }
-                      break L6;
-                    }
-                  }
-                }
-                this.networkClient.failureCount = 0;
-                this.networkClient.failureCode = 0;
-                break L4;
+            if ((groupBytes != null) &&
+                (groupBytesForPayloadChecks.length > 2)) {
+              WhirlpoolHash.field_f.reset();
+              WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
+              payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
+              if (payloadCrc32 != this.index.groupCrc32[groupId]) {
+                throw new RuntimeException();
               }
+              L6: {
+                if ((null != this.index.groupWhirlpoolDigests) &&
+                    (null != this.index.groupWhirlpoolDigests[groupId])) {
+                  expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
+                  computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
+                  networkDigestByteIndex = 0;
+                  digestByteIndex = networkDigestByteIndex;
+                  while (networkDigestByteIndex < 64) {
+                    if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
+                      throw new RuntimeException();
+                    }
+                    networkDigestByteIndex++;
+                  }
+                  break L6;
+                }
+              }
+              this.networkClient.failureCount = 0;
+              this.networkClient.failureCode = 0;
+              break L4;
             }
             throw new RuntimeException();
           }
@@ -283,11 +275,10 @@ final class CachedArchiveSource extends ArchiveSource {
           networkValidationFailure = (RuntimeException) (Object) caughtValidationFailure;
           this.networkClient.resetAfterValidationFailure(20);
           ((ArchiveRequest) (request)).unlinkNode(false);
-          if (((ArchiveRequest) (request)).priority) {
-            if (!this.networkClient.isPriorityQueueFull(methodGuard ^ -83)) {
-              request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
-              this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
-            }
+          if ((((ArchiveRequest) (request)).priority) &&
+              (!this.networkClient.isPriorityQueueFull(methodGuard ^ -83))) {
+            request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
+            this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
           }
           return null;
         }

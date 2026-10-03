@@ -91,15 +91,14 @@ final class PaletteBitmapFont extends BitmapFont {
           sourceRowSkip = sourceRowSkip + clippedPixels;
           destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (width > 0) {
-          if (height > 0) {
-            if (!shadowPass) {
-              PaletteBitmapFont.blitPaletteGlyph(0, SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
-            } else {
-              MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
-            }
-            return;
+        if ((width > 0) &&
+            (height > 0)) {
+          if (!shadowPass) {
+            PaletteBitmapFont.blitPaletteGlyph(0, SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
+          } else {
+            MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
           }
+          return;
         }
     }
 
@@ -138,15 +137,14 @@ final class PaletteBitmapFont extends BitmapFont {
           sourceRowSkip = sourceRowSkip + clippedPixels;
           destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (width > 0) {
-          if (height > 0) {
-            if (!shadowPass) {
-              PaletteBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
-            } else {
-              MonochromeBitmapFont.blitGlyphMaskAlpha(SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
-            }
-            return;
+        if ((width > 0) &&
+            (height > 0)) {
+          if (!shadowPass) {
+            PaletteBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
+          } else {
+            MonochromeBitmapFont.blitGlyphMaskAlpha(SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
           }
+          return;
         }
     }
 

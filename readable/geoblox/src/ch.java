@@ -26,11 +26,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_4_0 = null;
             return (java.net.URL) ((Object) stackIn_4_0);
           }
-          if (null != kg.field_m) {
-            if (this != kg.field_m) {
-              stackIn_10_0 = kg.field_m.getDocumentBase();
-              return stackIn_10_0;
-            }
+          if ((null != kg.field_m) &&
+              (this != kg.field_m)) {
+            stackIn_10_0 = kg.field_m.getDocumentBase();
+            return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
           return stackIn_12_0;
@@ -285,35 +284,24 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       L4: {
                         if (PlatformTaskDispatcher.javaVendor != null) {
                           var1 = PlatformTaskDispatcher.javaVendor.toLowerCase();
-                          if (-1 == ((String) (var1)).indexOf("sun")) {
-                            if (((String) (var1)).indexOf("apple") == -1) {
-                              break L4;
-                            }
+                          if ((-1 == ((String) (var1)).indexOf("sun")) &&
+                              (((String) (var1)).indexOf("apple") == -1)) {
+                            break L4;
                           }
                           L6: {
                             var2 = PlatformTaskDispatcher.javaVersion;
-                            if (!var2.equals("1.1")) {
-                              if (!var2.startsWith("1.1.")) {
-                                if (!var2.equals("1.2")) {
-                                  if (!var2.startsWith("1.2.")) {
-                                    if (!var2.equals("1.3")) {
-                                      if (!var2.startsWith("1.3.")) {
-                                        if (!var2.equals("1.4")) {
-                                          if (!var2.startsWith("1.4.")) {
-                                            if (!var2.equals("1.5")) {
-                                              if (!var2.startsWith("1.5.")) {
-                                                if (!var2.equals("1.6.0")) {
-                                                  break L6;
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
+                            if ((!var2.equals("1.1")) &&
+                                (!var2.startsWith("1.1.")) &&
+                                (!var2.equals("1.2")) &&
+                                (!var2.startsWith("1.2.")) &&
+                                (!var2.equals("1.3")) &&
+                                (!var2.startsWith("1.3.")) &&
+                                (!var2.equals("1.4")) &&
+                                (!var2.startsWith("1.4.")) &&
+                                (!var2.equals("1.5")) &&
+                                (!var2.startsWith("1.5.")) &&
+                                (!var2.equals("1.6.0"))) {
+                              break L6;
                             }
                             this.a((byte) 79, "wrongjava");
                             if (var5 == 0) {
@@ -367,13 +355,12 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             if (var5 != 0) {
                               break L11;
                             }
-                            if (stackIn_78_0 >= stackIn_78_1) {
-                              if (var3 <= 57) {
-                                var2_int = 10 * var2_int - 48 + var3;
-                                var1_int++;
-                                if (var5 == 0) {
-                                  continue;
-                                }
+                            if ((stackIn_78_0 >= stackIn_78_1) &&
+                                (var3 <= 57)) {
+                              var2_int = 10 * var2_int - 48 + var3;
+                              var1_int++;
+                              if (var5 == 0) {
+                                continue;
                               }
                             }
                           }
@@ -474,11 +461,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_2_0 = null;
             return (java.applet.AppletContext) ((Object) stackIn_2_0);
           }
-          if (kg.field_m != null) {
-            if (this != kg.field_m) {
-              stackIn_8_0 = kg.field_m.getAppletContext();
-              return stackIn_8_0;
-            }
+          if ((kg.field_m != null) &&
+              (this != kg.field_m)) {
+            stackIn_8_0 = kg.field_m.getAppletContext();
+            return stackIn_8_0;
           }
           stackIn_10_0 = super.getAppletContext();
           return stackIn_10_0;
@@ -562,11 +548,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == PrefixCodeDecoder.field_d) {
-            if (!ad.field_p) {
-              MenuScreen.field_a = 0L;
-              return;
-            }
+          if ((this == PrefixCodeDecoder.field_d) &&
+              (!ad.field_p)) {
+            MenuScreen.field_a = 0L;
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -623,12 +608,11 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           var11 = var11.substring(var11.lastIndexOf(' ') + 1);
           var11 = var11.substring(1 + var11.lastIndexOf('\t'));
           var2 = var2 + var11;
-          if (var9 != -1) {
-            if (-1 != var10) {
-              var12 = var8.indexOf(".java:", var9);
-              if (var12 >= 0) {
-                var2 = var2 + var8.substring(var12 + 5, var10);
-              }
+          if ((var9 != -1) &&
+              (-1 != var10)) {
+            var12 = var8.indexOf(".java:", var9);
+            if (var12 >= 0) {
+              var2 = var2 + var8.substring(var12 + 5, var10);
             }
           }
           var2 = var2 + ' ';
@@ -651,10 +635,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         if (null != sg.field_a) {
           return null;
         }
-        if (null != kg.field_m) {
-          if (kg.field_m != this) {
-            return kg.field_m.getCodeBase();
-          }
+        if ((null != kg.field_m) &&
+            (kg.field_m != this)) {
+          return kg.field_m.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -698,9 +681,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           var4 = tl.field_l[ij.field_cb];
           tl.field_l[ij.field_cb] = var2_long;
           ij.field_cb = 31 & 1 + ij.field_cb;
-          if (var4 != 0L) {
-            if (var2_long > var4) {
-            }
+          if ((var4 != 0L) &&
+              (var2_long > var4)) {
           }
           var6 = this;
           synchronized (var6) {
@@ -727,25 +709,23 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (PrefixCodeDecoder.field_d == this) {
-            if (!ad.field_p) {
-              dl.field_c = true;
-              if (oe.field_S) {
-                if (-Geoblox.field_D + oa.a(-12520) > 1000L) {
-                  var2 = param0.getClipBounds();
-                  if (null != var2) {
-                    if (~var2.width > ~qb.field_G) {
-                      return;
-                    }
-                    if (NetworkArchiveRequest.field_w > var2.height) {
-                      return;
-                    }
-                  }
-                  ab.field_a = true;
+          if ((PrefixCodeDecoder.field_d == this) &&
+              (!ad.field_p)) {
+            dl.field_c = true;
+            if ((oe.field_S) &&
+                (-Geoblox.field_D + oa.a(-12520) > 1000L)) {
+              var2 = param0.getClipBounds();
+              if (null != var2) {
+                if (~var2.width > ~qb.field_G) {
+                  return;
+                }
+                if (NetworkArchiveRequest.field_w > var2.height) {
+                  return;
                 }
               }
-              return;
+              ab.field_a = true;
             }
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -873,11 +853,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_4_0 = null;
             return (String) ((Object) stackIn_4_0);
           }
-          if (kg.field_m != null) {
-            if (this != kg.field_m) {
-              stackIn_10_0 = kg.field_m.getParameter(param0);
-              return stackIn_10_0;
-            }
+          if ((kg.field_m != null) &&
+              (this != kg.field_m)) {
+            stackIn_10_0 = kg.field_m.getParameter(param0);
+            return stackIn_10_0;
           }
           stackIn_12_0 = super.getParameter(param0);
           return stackIn_12_0;
@@ -911,11 +890,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           var4 = ArchiveRequest.field_p[GzipInflater.field_k];
           ArchiveRequest.field_p[GzipInflater.field_k] = var2_long;
           GzipInflater.field_k = 31 & GzipInflater.field_k + 1;
-          if (0L != var4) {
-            if (var4 < var2_long) {
-              var6_int = (int)(-var4 + var2_long);
-              ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
-            }
+          if ((0L != var4) &&
+              (var4 < var2_long)) {
+            var6_int = (int)(-var4 + var2_long);
+            ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
           }
           L2: {
             fieldTemp$1 = rj.field_i;
@@ -926,10 +904,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 dl.field_c = true;
                 f.field_kb.setSize(kh.field_d, ok.field_c);
                 f.field_kb.setVisible(true);
-                if (sg.field_a != null) {
-                  if (he.field_a == null) {
-                    break L3;
-                  }
+                if ((sg.field_a != null) &&
+                    (he.field_a == null)) {
+                  break L3;
                 }
                 f.field_kb.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
                 if (Geoblox.field_C == 0) {
@@ -953,11 +930,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == PrefixCodeDecoder.field_d) {
-            if (!ad.field_p) {
-              MenuScreen.field_a = 4000L + oa.a(-12520);
-              return;
-            }
+          if ((this == PrefixCodeDecoder.field_d) &&
+              (!ad.field_p)) {
+            MenuScreen.field_a = 4000L + oa.a(-12520);
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

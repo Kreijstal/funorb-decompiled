@@ -44,14 +44,13 @@ final class bc {
           for (byteIndex = 0; length > byteIndex; byteIndex++) {
             characterCode = textBytes[offset + byteIndex] & 255;
             if (characterCode != 0) {
-              if (characterCode >= 128) {
-                if (characterCode < 160) {
-                  mappedCharacterCode = lf.extendedTextCharacters[-128 + characterCode];
-                  if (mappedCharacterCode == 0) {
-                    mappedCharacterCode = 63;
-                  }
-                  characterCode = mappedCharacterCode;
+              if ((characterCode >= 128) &&
+                  (characterCode < 160)) {
+                mappedCharacterCode = lf.extendedTextCharacters[-128 + characterCode];
+                if (mappedCharacterCode == 0) {
+                  mappedCharacterCode = 63;
                 }
+                characterCode = mappedCharacterCode;
               }
               outputIndex = decodedLength;
               decodedLength++;

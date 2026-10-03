@@ -39,15 +39,14 @@ final class CoverageBitmapFont extends BitmapFont {
           sourceRowSkip = sourceRowSkip + clippedPixels;
           destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (width > 0) {
-          if (height > 0) {
-            if (!shadowPass) {
-              CoverageBitmapFont.blitCoverageGlyph(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
-            } else {
-              MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
-            }
-            return;
+        if ((width > 0) &&
+            (height > 0)) {
+          if (!shadowPass) {
+            CoverageBitmapFont.blitCoverageGlyph(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
+          } else {
+            MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
           }
+          return;
         }
     }
 
@@ -113,15 +112,14 @@ final class CoverageBitmapFont extends BitmapFont {
           sourceRowSkip = sourceRowSkip + clippedPixels;
           destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (width > 0) {
-          if (height > 0) {
-            if (!shadowPass) {
-              CoverageBitmapFont.blitCoverageGlyphAlpha(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
-            } else {
-              MonochromeBitmapFont.blitGlyphMaskAlpha(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
-            }
-            return;
+        if ((width > 0) &&
+            (height > 0)) {
+          if (!shadowPass) {
+            CoverageBitmapFont.blitCoverageGlyphAlpha(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
+          } else {
+            MonochromeBitmapFont.blitGlyphMaskAlpha(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
           }
+          return;
         }
     }
 
