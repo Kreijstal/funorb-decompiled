@@ -175,9 +175,7 @@ final class gh {
                     return false;
                   }
                   var3++;
-                  if (var4 == 0) {
-                    continue;
-                  }
+                  continue;
                 }
                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
                 stackIn_20_0 = 1;
@@ -868,15 +866,10 @@ final class gh {
                   if (!stackIn_233_0) {
                     var4.field_v = var4.field_v + 4.0f * var4.field_F;
                     var4.field_o = var4.field_o + 4.0f * var4.field_w;
-                    if (var5 == 0) {
-                      break;
-                    }
+                    break;
                   }
                   var4 = (ja) ((Object) ji.field_r.d(1));
-                  if (var5 == 0) {
-                    continue;
-                  }
-                  break;
+                  continue;
                 }
               }
               stackIn_233_0 = kj.field_o[var3];
@@ -1137,9 +1130,7 @@ final class gh {
                 continue;
               }
               this.field_h = true;
-              if (var5 == 0) {
-                continue;
-              }
+              continue;
             }
             stackIn_464_0 = ~bi.field_g;
             stackIn_464_1 = -1;
@@ -1382,19 +1373,13 @@ final class gh {
                     if (stackIn_27_0 == stackIn_27_1) {
                       if (0 < var3) {
                         var2 = ee.field_B[var3 - 1];
-                        if (var4 == 0) {
-                          break L7;
-                        }
-                      }
-                      var2 = ee.field_B[6];
-                      if (var4 == 0) {
                         break L7;
                       }
+                      var2 = ee.field_B[6];
+                      break L7;
                     }
                     var3++;
-                    if (var4 == 0) {
-                      continue;
-                    }
+                    continue;
                   }
                 }
                 var3 = var2;
@@ -1579,7 +1564,7 @@ final class gh {
               L4: while (true) {
                 stackIn_11_0 = var6;
                 stackIn_11_1 = vf.field_L.field_r;
-                L5: while (true) {
+                while (true) {
                   if (stackIn_11_0 < stackIn_11_1) {
                     stackIn_23_0 = 0;
                     if (var11 != 0) {
@@ -1589,9 +1574,6 @@ final class gh {
                     while (vf.field_L.field_m > var7) {
                       stackIn_11_0 = 0;
                       stackIn_11_1 = vf.field_L.field_v[vf.field_L.field_r * var7 + var6];
-                      if (var11 != 0) {
-                        continue L5;
-                      }
                       if (stackIn_11_0 != stackIn_11_1) {
                         var8 = var4 + var6;
                         var9 = var7 + var5;
@@ -1601,15 +1583,10 @@ final class gh {
                         }
                       }
                       var7++;
-                      if (var11 == 0) {
-                        continue;
-                      }
-                      break;
+                      continue;
                     }
                     var6++;
-                    if (var11 == 0) {
-                      continue L4;
-                    }
+                    continue L4;
                   }
                   this.field_c = (int)(0.5 + Math.sqrt((double)var3));
                   break L2;

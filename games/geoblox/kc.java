@@ -44,9 +44,7 @@ final class kc {
                 if (var3 != 0) {
                   break L1;
                 }
-                if (var3 == 0) {
-                  continue;
-                }
+                continue;
               }
               sh.a(param0, param0 + param0, qg.field_a, va.field_b, (byte) 112, md.field_c + param0, false);
             }
@@ -122,9 +120,7 @@ final class kc {
                           break L5;
                         }
                         fa.field_a = true;
-                        if (var9 == 0) {
-                          break L5;
-                        }
+                        break L5;
                       }
                       var1.j(30383);
                       var1.k(2);
@@ -135,9 +131,7 @@ final class kc {
                     }
                     var1.field_K = null;
                     var1 = (ja) ((Object) ji.field_r.d(1));
-                    if (var9 == 0) {
-                      continue;
-                    }
+                    continue;
                   }
                   if (!re.field_j) {
                     break L2;
@@ -165,186 +159,66 @@ final class kc {
                         var4_int = 1;
                         L12: while (true) {
                           stackIn_20_0 = (ja) ((Object) var11.a(true));
-                          L13: while (true) {
-                            L14: {
-                              L15: {
-                                var10 = stackIn_20_0;
-                                var12 = var10;
-                                var5_ref_ja = var12;
-                                if (var12 != null) {
-                                  pk.field_o[var10.field_H] = true;
-                                  stackOut_21_0 = var12.field_t;
-                                  stackIn_44_0 = stackOut_21_0 ? 1 : 0;
-                                  stackIn_22_0 = stackOut_21_0;
-                                  if (var9 != 0) {
-                                    break L14;
-                                  }
-                                  if (stackIn_22_0) {
-                                    var4_int = 0;
-                                    if (var9 == 0) {
-                                      break L15;
-                                    }
-                                  }
-                                  var13.a(var12, false);
-                                  var6_int = 0;
-                                  L17: while (true) {
-                                    if (var6_int < var12.field_L) {
-                                      var7 = var10.field_n[var6_int];
-                                      stackIn_20_0 = (ja) ((Object) var13.c((byte) 121));
-                                      if (var9 != 0) {
-                                        continue L13;
-                                      }
-                                      var8 = stackIn_20_0;
-                                      while (true) {
-                                        L20: {
-                                          L21: {
-                                            if (var8 != null) {
-                                              stackIn_51_0 = var8;
-                                              stackIn_51_1 = var7;
-                                              if (var9 != 0) {
-                                                break L21;
-                                              }
-                                              if ((stackIn_51_0 == stackIn_51_1) &&
-                                                  (var9 == 0)) {
-                                                break L20;
-                                              }
-                                              var8 = (ja) ((Object) var13.a(-45));
-                                              if (var9 == 0) {
-                                                continue;
-                                              }
-                                            }
-                                            var8 = (ja) ((Object) var11.c((byte) 121));
-                                            while (var8 != null) {
-                                              stackIn_51_0 = var8;
-                                              stackIn_51_1 = var7;
-                                              if (var9 != 0) {
-                                                break L21;
-                                              }
-                                              if (stackIn_51_0 == stackIn_51_1) {
-                                                break L20;
-                                              }
-                                              var8 = (ja) ((Object) var11.a(54));
-                                              if (var9 == 0) {
-                                                continue;
-                                              }
-                                              break;
-                                            }
-                                            var11.a(var7, false);
+                          while (true) {
+                            L15: {
+                              var10 = stackIn_20_0;
+                              var12 = var10;
+                              var5_ref_ja = var12;
+                              if (var12 != null) {
+                                pk.field_o[var10.field_H] = true;
+                                stackOut_21_0 = var12.field_t;
+                                stackIn_44_0 = stackOut_21_0 ? 1 : 0;
+                                stackIn_22_0 = stackOut_21_0;
+                                if (stackIn_22_0) {
+                                  var4_int = 0;
+                                  break L15;
+                                }
+                                var13.a(var12, false);
+                                var6_int = 0;
+                                L17: while (true) {
+                                  if (var6_int < var12.field_L) {
+                                    var7 = var10.field_n[var6_int];
+                                    stackIn_20_0 = (ja) ((Object) var13.c((byte) 121));
+                                    var8 = stackIn_20_0;
+                                    while (true) {
+                                      L20: {
+                                        if (var8 != null) {
+                                          stackIn_51_0 = var8;
+                                          stackIn_51_1 = var7;
+                                          if ((stackIn_51_0 == stackIn_51_1) &&
+                                              (var9 == 0)) {
                                             break L20;
                                           }
-                                          while (true) {
-                                            L27: {
-                                              ((ja) (Object) stackIn_51_0).a(stackIn_51_1, 0);
-                                              var6_int++;
-                                              if (var9 != 0) {
-                                                while (true) {
-                                                  if (var5_ref_ja == null) {
-                                                    break L10;
-                                                  }
-                                                  var5_ref_ja.field_K = ji.field_r;
-                                                  var5_ref_ja.field_t = false;
-                                                  var5_ref_ja.field_B = true;
-                                                  fa.field_a = true;
-                                                  stackIn_56_0 = 0;
-                                                  if (var9 != 0) {
-                                                    break L8;
-                                                  }
-                                                  var6_int = stackIn_56_0;
-                                                  if (var6_int < var5_ref_ja.field_L) {
-                                                    break L27;
-                                                  }
-                                                  var6 = var5_ref_ja;
-                                                  var7 = var5_ref_ja;
-                                                  var5_ref_ja.field_L = 0;
-                                                  var6.field_N = 0;
-                                                  var7.field_m = 0;
-                                                  var5_ref_ja = (ja) ((Object) var13.a(true));
-                                                  if (var9 == 0) {
-                                                    continue;
-                                                  }
-                                                  break L10;
-                                                }
-                                              }
-                                              if (var9 == 0) {
-                                                while (var6_int >= var5_ref_ja.field_L) {
-                                                  var6 = var5_ref_ja;
-                                                  var7 = var5_ref_ja;
-                                                  var5_ref_ja.field_L = 0;
-                                                  var6.field_N = 0;
-                                                  var7.field_m = 0;
-                                                  var5_ref_ja = (ja) ((Object) var13.a(true));
-                                                  if (var9 != 0) {
-                                                    break L10;
-                                                  }
-                                                  if (var5_ref_ja == null) {
-                                                    break L10;
-                                                  }
-                                                  var5_ref_ja.field_K = ji.field_r;
-                                                  var5_ref_ja.field_t = false;
-                                                  var5_ref_ja.field_B = true;
-                                                  fa.field_a = true;
-                                                  stackIn_56_0 = 0;
-                                                  if (var9 != 0) {
-                                                    break L8;
-                                                  }
-                                                  var6_int = stackIn_56_0;
-                                                }
-                                              } else {
-                                                while (true) {
-                                                  var6 = var5_ref_ja;
-                                                  var7 = var5_ref_ja;
-                                                  var5_ref_ja.field_L = 0;
-                                                  var6.field_N = 0;
-                                                  var7.field_m = 0;
-                                                  var5_ref_ja = (ja) ((Object) var13.a(true));
-                                                  if (var9 != 0) {
-                                                    break L10;
-                                                  }
-                                                  if (var5_ref_ja == null) {
-                                                    break L10;
-                                                  }
-                                                  var5_ref_ja.field_K = ji.field_r;
-                                                  var5_ref_ja.field_t = false;
-                                                  var5_ref_ja.field_B = true;
-                                                  fa.field_a = true;
-                                                  stackIn_56_0 = 0;
-                                                  if (var9 != 0) {
-                                                    break L8;
-                                                  }
-                                                  var6_int = stackIn_56_0;
-                                                  if (var6_int >= var5_ref_ja.field_L) {
-                                                    continue;
-                                                  }
-                                                  break;
-                                                }
-                                              }
-                                            }
-                                            stackIn_51_0 = var5_ref_ja.field_n[var6_int];
-                                            stackIn_51_1 = var5_ref_ja;
-                                            continue;
+                                          var8 = (ja) ((Object) var13.a(-45));
+                                          continue;
+                                        }
+                                        var8 = (ja) ((Object) var11.c((byte) 121));
+                                        while (var8 != null) {
+                                          stackIn_51_0 = var8;
+                                          stackIn_51_1 = var7;
+                                          if (stackIn_51_0 == stackIn_51_1) {
+                                            break L20;
                                           }
+                                          var8 = (ja) ((Object) var11.a(54));
+                                          continue;
                                         }
-                                        var6_int++;
-                                        if (var9 == 0) {
-                                          continue L17;
-                                        }
-                                        break;
+                                        var11.a(var7, false);
+                                        break L20;
                                       }
+                                      var6_int++;
+                                      continue L17;
                                     }
-                                    if (var9 == 0) {
-                                      continue L12;
-                                    }
-                                    break L15;
                                   }
+                                  continue L12;
                                 }
                               }
-                              stackIn_44_0 = var4_int;
                             }
+                            stackIn_44_0 = var4_int;
                             if (stackIn_44_0 == 0) {
                               break L10;
                             }
                             var5_ref_ja = (ja) ((Object) var13.a(true));
-                            L31: while (true) {
+                            while (true) {
                               if (var5_ref_ja == null) {
                                 break L10;
                               }
@@ -353,22 +227,13 @@ final class kc {
                               var5_ref_ja.field_B = true;
                               fa.field_a = true;
                               stackIn_56_0 = 0;
-                              if (var9 != 0) {
-                                break L8;
-                              }
                               var6_int = stackIn_56_0;
                               while (var6_int < var5_ref_ja.field_L) {
                                 stackIn_51_0 = var5_ref_ja.field_n[var6_int];
                                 stackIn_51_1 = var5_ref_ja;
                                 ((ja) (Object) stackIn_51_0).a(stackIn_51_1, 0);
                                 var6_int++;
-                                if (var9 != 0) {
-                                  continue L31;
-                                }
-                                if (var9 == 0) {
-                                  continue;
-                                }
-                                break;
+                                continue;
                               }
                               var6 = var5_ref_ja;
                               var7 = var5_ref_ja;
@@ -376,18 +241,13 @@ final class kc {
                               var6.field_N = 0;
                               var7.field_m = 0;
                               var5_ref_ja = (ja) ((Object) var13.a(true));
-                              if (var9 == 0) {
-                                continue;
-                              }
-                              break L10;
+                              continue;
                             }
                           }
                         }
                       }
                       var1 = (ja) ((Object) a.field_d.d(1));
-                      if (var9 == 0) {
-                        continue;
-                      }
+                      continue;
                     }
                     re.field_j = false;
                     el.field_o.field_B = true;
@@ -403,10 +263,7 @@ final class kc {
                     if (var9 != 0) {
                       break L1;
                     }
-                    if (var9 == 0) {
-                      continue;
-                    }
-                    break L2;
+                    continue;
                   }
                 }
               }
@@ -440,10 +297,7 @@ final class kc {
                         if (var9 != 0) {
                           break L39;
                         }
-                        if (var9 == 0) {
-                          continue;
-                        }
-                        break;
+                        continue;
                       }
                       var7 = var2_ref_ja;
                       var8 = var2_ref_ja;
@@ -467,10 +321,7 @@ final class kc {
                       if (var9 != 0) {
                         break L39;
                       }
-                      if (var9 == 0) {
-                        continue;
-                      }
-                      break;
+                      continue;
                     }
                     var3 = var2_ref_ja;
                     var2_ref_ja.field_L = 0;
@@ -528,9 +379,7 @@ final class kc {
                     var3.field_K = null;
                   }
                   var3 = (ja) ((Object) bh.field_c.d(1));
-                  if (var9 == 0) {
-                    continue;
-                  }
+                  continue;
                 }
                 if (w.field_f) {
                   jc.a(3, false);

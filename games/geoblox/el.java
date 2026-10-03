@@ -338,28 +338,6 @@ class el extends hf {
           }
           L0: {
             if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
-              if (var5 == 0) {
-                if ((gf.field_a == 0) &&
-                    (0 != ij.field_X)) {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                  var16 = lh.field_b;
-                  var6 = var16;
-                  if (var16 != null) {
-                    if (var16.field_u instanceof rg) {
-                      ((rg) ((Object) var16.field_u)).a((fk) null, var16, 22176);
-                    }
-                    lh.field_b = null;
-                  }
-                  if ((var7 != 0) &&
-                      (var5 != 0) &&
-                      (bi.field_g != 0)) {
-                    this.d(-126);
-                  }
-                }
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
               this.d(-127);
               if (var7 == 0) {
                 break L0;
@@ -416,55 +394,36 @@ class el extends hf {
           sa.a(this.c((byte) 69), (byte) 72);
           return param0;
         }
-        L10: {
-          if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
-            if (var5 == 0) {
-              if (gf.field_a != 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              if (0 == ij.field_X) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-              var12 = lh.field_b;
-              var6 = var12;
-              if (var12 != null) {
-                if (var12.field_u instanceof rg) {
-                  ((rg) ((Object) var12.field_u)).a((fk) null, var12, 22176);
-                }
-                lh.field_b = null;
-              }
-              if (var7 == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              if (var5 == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              if (bi.field_g == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              this.d(-126);
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            this.d(-127);
-            if (var7 == 0) {
-              break L10;
-            }
+        if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+          if (gf.field_a != 0) {
+            ij.field_X = gf.field_a;
+            sa.a(this.c((byte) 69), (byte) 72);
+            return param0;
           }
-          param0 = false;
+          if (0 == ij.field_X) {
+            ij.field_X = gf.field_a;
+            sa.a(this.c((byte) 69), (byte) 72);
+            return param0;
+          }
+          this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+          var12 = lh.field_b;
+          var6 = var12;
+          if (var12 != null) {
+            if (var12.field_u instanceof rg) {
+              ((rg) ((Object) var12.field_u)).a((fk) null, var12, 22176);
+            }
+            lh.field_b = null;
+          }
+          if (var7 == 0) {
+            ij.field_X = gf.field_a;
+            sa.a(this.c((byte) 69), (byte) 72);
+            return param0;
+          }
+          ij.field_X = gf.field_a;
+          sa.a(this.c((byte) 69), (byte) 72);
+          return param0;
         }
+        param0 = false;
         if (gf.field_a != 0) {
           ij.field_X = gf.field_a;
           sa.a(this.c((byte) 69), (byte) 72);

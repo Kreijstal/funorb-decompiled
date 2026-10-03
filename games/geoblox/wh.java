@@ -411,10 +411,7 @@ abstract class wh extends rc {
                 if (var7 != 0) {
                   break L0;
                 }
-                if (var7 == 0) {
-                  continue;
-                }
-                break;
+                continue;
               }
               if (var7 == 0) {
                 break L0;
@@ -666,15 +663,11 @@ abstract class wh extends rc {
                           L18: {
                             if (0 <= var37) {
                               jf.a(var37 + var36, var39, 33423689, var21, var41, var25, var40, var38, var29, param11);
-                              if (var42 == 0) {
-                                break L18;
-                              }
+                              break L18;
                             }
                             jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
                           }
-                          if (var42 == 0) {
-                            break L15;
-                          }
+                          break L15;
                         }
                         if ((var37 >= 0) &&
                             (~var37 > ~mh.field_c)) {
@@ -695,10 +688,7 @@ abstract class wh extends rc {
                     var17_int = var17_int + var19;
                     var21 = var21 + var23;
                     var36 = var36 + vb.field_f;
-                    if (var42 == 0) {
-                      continue;
-                    }
-                    break;
+                    continue;
                   }
                 }
                 var36 = param4 - param15;
@@ -778,15 +768,11 @@ abstract class wh extends rc {
                       L30: {
                         if (var36 < 0) {
                           jf.a(var35, var38, 33423689, var21 - var38 * var36, var40, var25 - var36 * var39, var39, var37 + var36, -(var36 * var40) + var29, param11);
-                          if (var42 == 0) {
-                            break L30;
-                          }
+                          break L30;
                         }
                         jf.a(var36 + var35, var38, 33423689, var21, var40, var25, var39, var37, var29, param11);
                       }
-                      if (var42 == 0) {
-                        break L27;
-                      }
+                      break L27;
                     }
                     if ((var36 >= 0) &&
                         (mh.field_c > var36)) {
@@ -807,9 +793,7 @@ abstract class wh extends rc {
                 var21 = var21 + var23;
                 var17_int = var17_int + var19;
                 var30 = var30 + var32;
-                if (var42 == 0) {
-                  continue;
-                }
+                continue;
               }
               return;
             }
@@ -864,9 +848,7 @@ abstract class wh extends rc {
                           if (!((stackIn_17_0 != stackIn_17_1) &&
                               (var5 == 0))) {
                             var3_int++;
-                            if (var5 == 0) {
-                              continue;
-                            }
+                            continue;
                           }
                         }
                         stackIn_17_0 = 24;
@@ -890,10 +872,7 @@ abstract class wh extends rc {
                           decompiledRegionSelector0 = 1;
                           break L7;
                         }
-                        if (var5 == 0) {
-                          continue;
-                        }
-                        break;
+                        continue;
                       }
                       decompiledRegionSelector0 = 0;
                     }

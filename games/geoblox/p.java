@@ -108,9 +108,7 @@ final class p extends hf {
                       var8 = var29;
                     }
                     bj.field_j[var23] = var29;
-                    if (var30 == 0) {
-                      break L5;
-                    }
+                    break L5;
                   }
                   bj.field_j[var23] = -2147483648;
                 }
@@ -120,9 +118,7 @@ final class p extends hf {
                   gf.field_b[var23] = var29;
                 }
                 var23++;
-                if (var30 == 0) {
-                  continue;
-                }
+                continue;
               }
               if ((null != param2.field_L) &&
                   (param2.field_d != null) &&
@@ -157,10 +153,7 @@ final class p extends hf {
                   if (var30 != 0) {
                     return;
                   }
-                  if (var30 == 0) {
-                    continue;
-                  }
-                  break;
+                  continue;
                 }
               }
               if (param6) {
@@ -190,10 +183,7 @@ final class p extends hf {
                   oa.field_f[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
                   gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                   var18++;
-                  if (var30 == 0) {
-                    continue;
-                  }
-                  break;
+                  continue;
                 }
               }
               stackIn_66_0 = var7_int;

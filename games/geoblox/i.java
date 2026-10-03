@@ -172,26 +172,17 @@ final class i {
                     var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
                     var17 = ch.field_d[var16];
                     while (true) {
-                      L10: {
-                        if (var17 >> 4 != 0) {
-                          var16--;
-                          stackIn_39_0 = var16;
-                          if (var19 != 0) {
-                            break L10;
-                          }
-                          if (stackIn_39_0 < 0) {
-                            System.err.println("Out of range!");
-                            if (var19 == 0) {
-                              break;
-                            }
-                          }
-                          var17 = ch.field_d[var16];
-                          if (var19 == 0) {
-                            continue;
-                          }
+                      if (var17 >> 4 != 0) {
+                        var16--;
+                        stackIn_39_0 = var16;
+                        if (stackIn_39_0 < 0) {
+                          System.err.println("Out of range!");
+                          break;
                         }
-                        stackIn_39_0 = (var16 << 4) + var17;
+                        var17 = ch.field_d[var16];
+                        continue;
                       }
+                      stackIn_39_0 = (var16 << 4) + var17;
                       var18 = stackIn_39_0;
                       pj.field_i[var18] = var8;
                       ch.field_d[var16] = 1 + var17;
@@ -206,9 +197,7 @@ final class i {
                   }
                 }
                 var8++;
-                if (var19 == 0) {
-                  continue;
-                }
+                continue;
               }
               stackIn_49_0 = -1;
             }
@@ -224,10 +213,7 @@ final class i {
                 if (var19 != 0) {
                   return;
                 }
-                if (var19 == 0) {
-                  continue;
-                }
-                break;
+                continue;
               }
             }
             if (param1 != 22) {
@@ -337,26 +323,17 @@ final class i {
                     var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
                     var17 = ch.field_d[var16];
                     while (true) {
-                      L10: {
-                        if (var17 >> 4 != 0) {
-                          var16--;
-                          stackIn_39_0 = var16;
-                          if (var19 != 0) {
-                            break L10;
-                          }
-                          if (stackIn_39_0 < 0) {
-                            System.err.println("Out of range!");
-                            if (var19 == 0) {
-                              break;
-                            }
-                          }
-                          var17 = ch.field_d[var16];
-                          if (var19 == 0) {
-                            continue;
-                          }
+                      if (var17 >> 4 != 0) {
+                        var16--;
+                        stackIn_39_0 = var16;
+                        if (stackIn_39_0 < 0) {
+                          System.err.println("Out of range!");
+                          break;
                         }
-                        stackIn_39_0 = (var16 << 4) + var17;
+                        var17 = ch.field_d[var16];
+                        continue;
                       }
+                      stackIn_39_0 = (var16 << 4) + var17;
                       var18 = stackIn_39_0;
                       pj.field_i[var18] = var8;
                       ch.field_d[var16] = 1 + var17;
@@ -371,9 +348,7 @@ final class i {
                   }
                 }
                 var8++;
-                if (var19 == 0) {
-                  continue;
-                }
+                continue;
               }
               stackIn_49_0 = -1;
             }
@@ -389,10 +364,7 @@ final class i {
                 if (var19 != 0) {
                   return;
                 }
-                if (var19 == 0) {
-                  continue;
-                }
-                break;
+                continue;
               }
             }
             if (param1 != 22) {

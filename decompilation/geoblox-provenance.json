@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "27c5718ac886355eccee422dc45c0678b0aea62a",
+      "commit": "18c1062fc902b9d9b800155c9ccab3d868cfc98d",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "eb3e76c76d9a535ef7baf8738794e5505cf1be3f13f5c126c917136079b5d4a4",
-        "reproduce": "git archive --format=tar 27c5718ac886355eccee422dc45c0678b0aea62a | sha256sum",
+        "sha256": "181f076a1fa60e43792a4326a36369f4b82b1a00a32424e9a539fc0107c81d41",
+        "reproduce": "git archive --format=tar 18c1062fc902b9d9b800155c9ccab3d868cfc98d | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "27a6066eccc5c5e6cfeaf5f6cf49b604a761eb2ade03fa6f5ebe913defe281e1",
-  "previousSourceTreeSha256": "2e4f5a2dec59816c3cdc3897291d55002e7ff596d367de5a33bab1392dbac23c",
-  "changedJavaFiles": 2,
+  "sourceTreeSha256": "05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b",
+  "previousSourceTreeSha256": "27a6066eccc5c5e6cfeaf5f6cf49b604a761eb2ade03fa6f5ebe913defe281e1",
+  "changedJavaFiles": 10,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2838,5 +2838,165 @@
       }
     ],
     "scope": "A transparent plain-label ladder with a pure equality/inequality classifier over unique scoped int locals becomes a switch with original numeric cases. Mentioned constants plus Other form an exhaustive partition. An optional one-constant guard must select the same case or default for every alternate partition; no control flag is assumed zero. Actions, guards, order, prefix effects, nested scopes, fallthrough, exceptions and cleanup stay intact. Direct declarations, effectful/field/formal/boxed/non-int classifiers, ambiguous/removed action jump targets, captured bare breaks and unsupported/malformed/nested/comment/Unicode syntax refuse proof. Effects before another discarded classifier refuse reconstruction; proof depth, constants, conditions and label chains are bounded. Switch results receive only safe frame cleanup.61152 native comparisons cover26 variants both before and after frame cleanup, selector extremes/unknowns, seven guard values, six failure/mutation modes and nullable monitors; ten independent effect/exit/fallthrough/cleanup oracles pass. All303 expected token streams match. JDK audit attributes31 old and15 new references exclusively to the four existing classifier-local identities; all other19591 declarations, references and388 complete override pairs retain ordered identities. Menu action dispatch falls322 to277 lines and17 to4 plain labels; theme rendering377 to357 lines and17 to11 labels. Twenty overlapping large spans remain, six labeled; unknown shared names, other control-flow reconstruction and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
+  },
+  "pathImpliedIntegerGuards": {
+    "historicalPassVersion": 107,
+    "javaToolsCommit": "18c1062fc902b9d9b800155c9ccab3d868cfc98d",
+    "sourceArchiveSha256": "181f076a1fa60e43792a4326a36369f4b82b1a00a32424e9a539fc0107c81d41",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 10,
+    "changedMethodBodies": 24,
+    "sourceLinesBefore": 77738,
+    "sourceLinesAfter": 77354,
+    "guardsSpecialized": 97,
+    "plainBlockLabelsRemoved": 13,
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 118650,
+    "sourceReferenceOccurrencesAfter": 118373,
+    "referenceOccurrencesRemoved": 277,
+    "namedReferenceOccurrencesRemoved": 242,
+    "orderedSurvivingDeclarationsReferencesAndOverridesUnchanged": true,
+    "localOrdinalMigrations": 0,
+    "fullOverridePairsPreserved": 388,
+    "expectedRewriteTokenStreamsCheckedJavaFiles": 303,
+    "genericEmitterTestsRegistered": 80,
+    "genericEmitterTestsPassed": 79,
+    "genericEmitterTestsSkipped": 1,
+    "newPathGuardTestGroups": 4,
+    "newNativeEmitterComparisons": 16560,
+    "independentNativeOracles": 12,
+    "genericExceptionExitGroups": 8,
+    "genericIntegerArgumentGroups": 2,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "methodBodies": 2080,
+    "largeMethodSpansAtLeast300Lines": 20,
+    "largeMethodSpansWithGeneratedBlockLabelsAfter": 6,
+    "generatedPlainBlockLabelsAfter": 220,
+    "changes": [
+      {
+        "file": "c.java",
+        "name": "c.a",
+        "guardsSpecialized": 3
+      },
+      {
+        "file": "c.java",
+        "name": "c.b",
+        "guardsSpecialized": 6
+      },
+      {
+        "file": "c.java",
+        "name": "c.a",
+        "guardsSpecialized": 2
+      },
+      {
+        "file": "c.java",
+        "name": "c.b",
+        "guardsSpecialized": 2
+      },
+      {
+        "file": "c.java",
+        "name": "c.h",
+        "guardsSpecialized": 1
+      },
+      {
+        "file": "ch.java",
+        "name": "ch.run",
+        "guardsSpecialized": 3
+      },
+      {
+        "file": "ch.java",
+        "name": "ch.a",
+        "guardsSpecialized": 1
+      },
+      {
+        "file": "el.java",
+        "name": "el.a",
+        "guardsSpecialized": 3
+      },
+      {
+        "file": "gh.java",
+        "name": "gh.a",
+        "guardsSpecialized": 1
+      },
+      {
+        "file": "gh.java",
+        "name": "gh.a",
+        "guardsSpecialized": 3
+      },
+      {
+        "file": "gh.java",
+        "name": "gh.b",
+        "guardsSpecialized": 3
+      },
+      {
+        "file": "gh.java",
+        "name": "gh.f",
+        "guardsSpecialized": 3
+      },
+      {
+        "file": "i.java",
+        "name": "i.a",
+        "guardsSpecialized": 5
+      },
+      {
+        "file": "i.java",
+        "name": "i.$cfr$intArgs$a$77236d03e70d",
+        "guardsSpecialized": 5
+      },
+      {
+        "file": "kc.java",
+        "name": "kc.a",
+        "guardsSpecialized": 1
+      },
+      {
+        "file": "kc.java",
+        "name": "kc.b",
+        "guardsSpecialized": 20
+      },
+      {
+        "file": "lc.java",
+        "name": "lc.a",
+        "guardsSpecialized": 1
+      },
+      {
+        "file": "lc.java",
+        "name": "lc.a",
+        "guardsSpecialized": 5
+      },
+      {
+        "file": "lc.java",
+        "name": "lc.a",
+        "guardsSpecialized": 1
+      },
+      {
+        "file": "n.java",
+        "name": "n.a",
+        "guardsSpecialized": 15
+      },
+      {
+        "file": "p.java",
+        "name": "p.a",
+        "guardsSpecialized": 4
+      },
+      {
+        "file": "wh.java",
+        "name": "wh.a",
+        "guardsSpecialized": 1
+      },
+      {
+        "file": "wh.java",
+        "name": "wh.a",
+        "guardsSpecialized": 6
+      },
+      {
+        "file": "wh.java",
+        "name": "wh.a",
+        "guardsSpecialized": 2
+      }
+    ],
+    "scope": "Preceding conditional arms and abrupt exits establish equality/inequality facts for unique, scoped primitive int locals. A later or cyclic write invalidates the fact; fields/formals/boxed/non-int operands, ambiguous bindings, switch completion and unproven loop completion remain opaque. Only entirely pure local predicates are replaced; selected arm scopes remain. Java completion tracks loop/label ownership and finally overrides before removing unreachable suffixes. Discarded declarations refuse proof, preserving all naming objects and local ordinals. Checked or unresolved catch regions, unsupported/nested syntax, missing terminators, comments/Unicode and excessive predicate depth refuse reconstruction.16560 native comparisons cover23 variants before and after frame cleanup, six guard values, six secondary values, five failure modes and nullable monitors; twelve independent selection/exit/fallthrough/mutation/cleanup/monitor oracles pass. All303 expected token streams match. A separate diagnostic captures the exact compiler stage before synthetic checked-exception wrappers are installed; unique token-subsequence matching proves its input against the pinned raw source, and instrumentation changes no Java or diagnostics bytes. Character provenance attributes277 removed refs to original predicate/discarded-arm/unreachable-suffix spans. All19591 declarations,118373 surviving refs and388 complete override pairs retain ordered identities. Board reconciliation falls494 to351 lines/14 to11 plain labels; session update638 to631 lines, half-blend triangle385 to372. Six large labeled spans and220 plain labels remain. Unknown shared names, remaining continuations and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
   }
 }

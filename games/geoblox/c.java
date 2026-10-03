@@ -57,21 +57,15 @@ final class c extends ka {
                   if (102 != ki.field_d) {
                     if (ki.field_d != 103) {
                       super.a(param0, -53);
-                      if (var4 == 0) {
-                        break L4;
-                      }
-                    }
-                    j.field_gb = 80;
-                    if (var4 == 0) {
                       break L4;
                     }
+                    j.field_gb = 80;
+                    break L4;
                   }
                   j.field_gb = 0;
                 }
                 this.d(0);
-                if (var4 == 0) {
-                  break L0;
-                }
+                break L0;
               } else {
                 if (var3_int != 9) {
                   break L1;
@@ -269,23 +263,13 @@ final class c extends ka {
                 }
                 var3 = stackIn_16_0;
                 while (true) {
-                  L5: {
-                    if (~-ee.field_A.field_o >= ~var3) {
-                      ee.field_A.c(var2_int, var3);
-                      var3 = var3 - ee.field_A.field_o;
-                      if (var4 != 0) {
-                        break L5;
-                      }
-                      if (var4 == 0) {
-                        continue;
-                      }
-                    }
-                    var2_int = var2_int + ee.field_A.field_s;
+                  if (~-ee.field_A.field_o >= ~var3) {
+                    ee.field_A.c(var2_int, var3);
+                    var3 = var3 - ee.field_A.field_o;
+                    continue;
                   }
-                  if (var4 == 0) {
-                    continue L1;
-                  }
-                  break;
+                  var2_int = var2_int + ee.field_A.field_s;
+                  continue L1;
                 }
               }
               this.field_I = this.field_I % vc.field_j.field_o;
@@ -300,23 +284,13 @@ final class c extends ka {
                 }
                 var3 = this.field_I + vc.field_j.field_o + 480;
                 while (true) {
-                  L11: {
-                    if (~var3 <= ~-vc.field_j.field_o) {
-                      vc.field_j.b(var2_int, var3);
-                      var3 = var3 - vc.field_j.field_o;
-                      if (var4 != 0) {
-                        break L11;
-                      }
-                      if (var4 == 0) {
-                        continue;
-                      }
-                    }
-                    var2_int = var2_int - vc.field_j.field_s;
+                  if (~var3 <= ~-vc.field_j.field_o) {
+                    vc.field_j.b(var2_int, var3);
+                    var3 = var3 - vc.field_j.field_o;
+                    continue;
                   }
-                  if (var4 == 0) {
-                    continue L7;
-                  }
-                  break;
+                  var2_int = var2_int - vc.field_j.field_s;
+                  continue L7;
                 }
               }
               return;
@@ -683,14 +657,10 @@ final class c extends ka {
               (var5 == 0)) {
             if (j.field_gb > 10) {
               j.field_gb = j.field_gb - 10;
-              if (var5 == 0) {
-                return;
-              }
-            }
-            j.field_gb = 0;
-            if (var5 == 0) {
               return;
             }
+            j.field_gb = 0;
+            return;
           } else {
             if (9 != var4) {
               return;
@@ -1039,9 +1009,7 @@ final class c extends ka {
                             var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
                             var4.a(var9, 165, var6, 16610816, -1);
                             var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
-                            if (var10 == 0) {
-                              break L12;
-                            }
+                            break L12;
                           }
                           var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
                           var4.a(var9, 165, var6, 1, -1);
@@ -1050,9 +1018,7 @@ final class c extends ka {
                       }
                       var6 += 15;
                       var8_int++;
-                      if (var10 == 0) {
-                        continue;
-                      }
+                      continue;
                     }
                     if (var7 != 0) {
                       break;
@@ -1151,9 +1117,7 @@ final class c extends ka {
                 if (var3 != 0) {
                   break L4;
                 }
-                if (var3 == 0) {
-                  continue;
-                }
+                continue;
               }
               if ((this.field_K == 3) &&
                   (this.field_b == 0) &&
