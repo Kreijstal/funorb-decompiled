@@ -84,15 +84,13 @@ abstract class BitmapFont extends DualLinkNode {
         byte[][] leadingProfilesSnapshot;
         byte[][] trailingProfilesSnapshot;
         int[] profileOffsetsSnapshot;
-        L0: {
-          this.glyphAdvances = new int[256];
-          if (metrics.length == 257) {
-            for (glyphIndexOrMetricsOffset = 0; glyphIndexOrMetricsOffset < this.glyphAdvances.length; glyphIndexOrMetricsOffset++) {
-              this.glyphAdvances[glyphIndexOrMetricsOffset] = metrics[glyphIndexOrMetricsOffset] & 255;
-            }
-            this.lineAdvance = metrics[256] & 255;
-            break L0;
+        this.glyphAdvances = new int[256];
+        if (metrics.length == 257) {
+          for (glyphIndexOrMetricsOffset = 0; glyphIndexOrMetricsOffset < this.glyphAdvances.length; glyphIndexOrMetricsOffset++) {
+            this.glyphAdvances[glyphIndexOrMetricsOffset] = metrics[glyphIndexOrMetricsOffset] & 255;
           }
+          this.lineAdvance = metrics[256] & 255;
+        } else {
           glyphIndexOrMetricsOffset = 0;
           for (advanceGlyphIndex = 0; advanceGlyphIndex < 256; advanceGlyphIndex++) {
             advanceReadOffsetBeforeIncrement = glyphIndexOrMetricsOffset;

@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "66eb34efef67a46c3c2913687b16d7c4d020f415",
+    "commit": "e9a083a49cbc1abedc9878510144e29350283258",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272",
+  "inputTreeSha256": "9b9a14f0d5063ad8801b7cc7593865a2b093947780937310ed913195a8397a61",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -50645,19 +50645,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 32,
-  "version": 103,
+  "revision": 33,
+  "version": 104,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "faf744e8439fd84dcc90336dbb6f1bc489eab14c",
+      "commit": "6a6275c84203e94667cfc8add2a5763d44f08f0f",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "dc190d740966d401d60800003140aacfbea8dd71680d7637c50c2fedca4001e0",
-        "reproduce": "git archive --format=tar faf744e8439fd84dcc90336dbb6f1bc489eab14c | sha256sum",
+        "sha256": "7b39ce315376ef968a17850878eca26ddeb06662032b8acac840418062c7aa09",
+        "reproduce": "git archive --format=tar 6a6275c84203e94667cfc8add2a5763d44f08f0f | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -50666,9 +50666,9 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "22a646792894e3d9056b4a13baf576e8b1867b04",
+      "commit": "0b24a8f82782a52136f30687dec6a1d064b01fac",
       "path": "readable/geoblox-rules.json",
-      "sha256": "8003f791b9ab692fb06fab0e2403e11a65832e94579daf351a9e6887d2f8dd62"
+      "sha256": "c4d4bbfc53ecc6f6dba2aeb7315f136ca40381e2eb3bf9b9539bde38cbf4c271"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
@@ -50696,6 +50696,10 @@
       {
         "file": "ad.java",
         "sha256": "2a59ff78492a8e1cf26c2ad7197e587516af983449c13c1731380f0942bb262f"
+      },
+      {
+        "file": "ae.java",
+        "sha256": "71f6a54c2c9c17c10554701e3d4e102db8162be8326b5a5de47748da8c62c059"
       },
       {
         "file": "af.java",
@@ -50751,7 +50755,7 @@
       },
       {
         "file": "bj.java",
-        "sha256": "c58827c5bd461e66cdd6b1f18f3fe3bec6fa1fb2db6268c04af8b2b916dc97e0"
+        "sha256": "5fc749420e7d67e71de46afce0f3e5f79188af572b739df810874b301d8f7935"
       },
       {
         "file": "bk.java",
@@ -50763,7 +50767,7 @@
       },
       {
         "file": "c.java",
-        "sha256": "9c02233201a088a0cd49eda11c8b5c0771e1d8b0adfe2147227cc0862c9814a8"
+        "sha256": "ac62a4cdda37e4c042576336bb5d9040a04b125a4fba2409cba5b590d35135bd"
       },
       {
         "file": "ca.java",
@@ -50811,7 +50815,7 @@
       },
       {
         "file": "d.java",
-        "sha256": "b7b4cdf7cf226569cc3b79c49b1ed935808f709ecd4afe9435d67f681251441e"
+        "sha256": "ec11a40b358142c71dd9ddd80bf2f597e62558a0216dae4654122388ae946f26"
       },
       {
         "file": "da.java",
@@ -50843,7 +50847,7 @@
       },
       {
         "file": "dm.java",
-        "sha256": "2c331011ea731ca59aa98998e5acab304c0a480d1ccee482d560c8500d0d1620"
+        "sha256": "ea1f5eb9fcb296150d987172a20745d9bdfb6966ebf025abfd535e717557498a"
       },
       {
         "file": "ea.java",
@@ -50895,7 +50899,7 @@
       },
       {
         "file": "f.java",
-        "sha256": "f1d088c0b4ff2850de9370265f1526c907b2ca5f0abdfa46be36eee8e9e7e8c8"
+        "sha256": "89db7b67304ecbed08331565cc4fd3486d8412b6e4329fa51e27270fd5f8a727"
       },
       {
         "file": "fa.java",
@@ -51067,7 +51071,7 @@
       },
       {
         "file": "ik.java",
-        "sha256": "230310abb2fb04e15dcd7f4ace675df77c15edbaf0025457ec008d25e066190b"
+        "sha256": "37a4b4ee3bda3a9957ed8e2b831d0b5d19cb3cdecc1b2aaa5af75f5ec7e36035"
       },
       {
         "file": "il.java",
@@ -51131,7 +51135,7 @@
       },
       {
         "file": "kc.java",
-        "sha256": "c79d8bc5d408d68f3c3312a3f72fb4023510e8186c4fa9f6c100c854056b88be"
+        "sha256": "15b8f21b3c32d385cf7a2e1d1010f7a69b08ad920e819dbbd520a908619db352"
       },
       {
         "file": "kd.java",
@@ -51155,7 +51159,7 @@
       },
       {
         "file": "kj.java",
-        "sha256": "dc9bdceaee8a8a0c2fedb75a1240392b25d2b972c19dc2a3ec6742c217c91163"
+        "sha256": "ccb4b33f27b75c8fcb66e3c84ed3dcb99a479ccb15847b66805daf2c72fcd65b"
       },
       {
         "file": "kk.java",
@@ -51219,7 +51223,7 @@
       },
       {
         "file": "m.java",
-        "sha256": "8c1e64a95e0691d5b56f140685742b28537817d561ee3868d5ea3b3fa50e9f1e"
+        "sha256": "bcb7d9aa6489eae93126793ef0fa9c0f7d8024c25384d91f391cdcb7ca19803d"
       },
       {
         "file": "ma.java",
@@ -51322,6 +51326,10 @@
         "sha256": "d65a785d976100161be8e946389ddda6ab306b1fa895829d1d5b36dea58eb9af"
       },
       {
+        "file": "og.java",
+        "sha256": "278629dcd6d871221cc6a4b2a6e92cbfae7058b7fafd3fc10b0c5fad0d5e9f32"
+      },
+      {
         "file": "oi.java",
         "sha256": "23003f04f6532b85802c6b1ddf0173eeda3b0317c11a4af962d9f7f4cb9b2bcc"
       },
@@ -51355,7 +51363,7 @@
       },
       {
         "file": "pf.java",
-        "sha256": "b50c2ad372b6bbf5e8c0cd4d3a672f19e19b12338ad8378d93a7fa48bb74fcb0"
+        "sha256": "35f9a280730821e957d55f7ffc927a7bc34dd8304f708ba6770bc03edda63047"
       },
       {
         "file": "pg.java",
@@ -51451,7 +51459,7 @@
       },
       {
         "file": "rd.java",
-        "sha256": "809f208305d55ed15c858d99a45c0b3245daba28524f7c0789d2250904cd3f3d"
+        "sha256": "519647f4c0752796f6888de57898233e5f8674dfa708fc574340b71228f6812d"
       },
       {
         "file": "re.java",
@@ -51579,7 +51587,7 @@
       },
       {
         "file": "ua.java",
-        "sha256": "72a7ed19b548542dd0db90a23db2181ee9be1ed1cb88e09d5ed4524b44633c89"
+        "sha256": "dd1e8293db70e7863b5aa6fd71e185ee770b0fdbbed1319f0839ca6456bdecc5"
       },
       {
         "file": "ue.java",
@@ -51595,7 +51603,11 @@
       },
       {
         "file": "uh.java",
-        "sha256": "2b697dc4e4846578b8924b5f07ef0f6090a5bd0aa537daef00b70b29f6d5f973"
+        "sha256": "a6aec4b61f7cb7549a6cdb163f41247775478c34b849877bb4d2674f1412f5db"
+      },
+      {
+        "file": "ui.java",
+        "sha256": "be2ea9d2734a7736e8f57fa1e1264d290549a353135d62821ca661255c0c24d3"
       },
       {
         "file": "uj.java",
@@ -51603,7 +51615,7 @@
       },
       {
         "file": "uk.java",
-        "sha256": "c3c6a0a5437d637ba50d87719bf3975701e767df8d0087d0549aa3d3d8d56ad9"
+        "sha256": "d82bba6be29dfcd34e8f0b469be666099497a58a72d505df47636cbdcb8de12c"
       },
       {
         "file": "ul.java",
@@ -54109,7 +54121,8 @@
         "Pass101 source-audits UiWidget frame availability and base pointer bodies, ButtonWidget activation/press/release/key paths, draggable movement/capture and drop routing, callback coordinate orders and wheel input. Complete13/8/3/6/8 update/press/wheel/release/hover method families are named with all parameters; selected bodies also have all locals named. Event availability is consumed by presses; base can store a button while returningfalse. Release listener callback before boolean check/catch, drop clear after callback, mutable active-drag snapshots, integer easing and wrong-guard recursion/partial writes remain. The literal reflective gl class and its AWT callback spelling remain; no broad class-string rewrite is introduced. Duplicated continuations, unrelated widget internals/static helpers,21 overlapping large spans/10 labeled spans and full assets/browser/phone acceptance remain unfinished or unverified. Existing native probes add no new live pointer/wheel/drag/drop/AWT/network/device execution coverage.",
         "Pass102 proves only terminal plain-block exits whose nearest breakable frame is a loop and whose completed-loop path to the label has no intermediate work/loop/switch/protected region. Inner finally/catch/monitor bodies stay on the same abrupt loop exit; ordinary breaks retain update/condition bypass, enclosing cleanup and monitor release.11520 generic native comparisons plus five loop/update/iteration oracles cover the reconstructed forms. All303 expected rewrite token streams and19591/119181/388 ordered declarations/references/override identities remain; all8439 complete naming rules and local ordinals are unchanged. Sprite nearest rotation loses its final label; gameplay render/update/reconciliation each lose one.267 generated plain block labels and21 overlapping large method spans remain, nine large spans labeled. This does not establish every state-machine/continuation reconstruction or full asset/game/browser/phone acceptance.",
         "Historical pass102: a complete-body AST scan of raw92 and raw102 found0 then14 while(true) loops whose first statement was an if without else containing exactly one ordinary break. One incomplete/nested executable body refused scanning. These were candidates at that pass, not yet proved transformations. The prior zero-candidate loop-entry prototype was superseded by the newly localized breaks. Pass103 now reconstructs all14 under its separately recorded nonconstant/scope/transfer proof and native/compilation/corpus checks.",
-        "Pass103 reconstructs all14 direct leading ordinary-break loop candidates exposed by pass102. Predicates stay verbatim under logical negation; no relational inverse is guessed, preserving NaNs, nullable unboxing, short circuits and mutation order. Nonconstant proof uses scoped nonfinal declarations, emitted formal/catch/enhanced-for parameters, null literals or runtime expression forms; final/unknown/qualified-field constants refuse proof. Prefix work/declarations and protected entry guards remain in the loop. Body scopes, checked/unchecked predicate exceptions, own/ancestor continues, finally overrides, nested loops and monitors are covered by96768 generic native comparisons plus six independent oracles. Compiler probes demonstrate constant if/while reachability differences; unknown/nested syntax and invalid transfer namespaces refuse. All303 expected token streams and19591/119181/388 ordered identities remain, with no naming or local ordinal migration.267 generated plain block labels and21 overlapping large spans, nine labeled, remain; larger joins/dispatch/state reconstruction and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
+        "Pass103 reconstructs all14 direct leading ordinary-break loop candidates exposed by pass102. Predicates stay verbatim under logical negation; no relational inverse is guessed, preserving NaNs, nullable unboxing, short circuits and mutation order. Nonconstant proof uses scoped nonfinal declarations, emitted formal/catch/enhanced-for parameters, null literals or runtime expression forms; final/unknown/qualified-field constants refuse proof. Prefix work/declarations and protected entry guards remain in the loop. Body scopes, checked/unchecked predicate exceptions, own/ancestor continues, finally overrides, nested loops and monitors are covered by96768 generic native comparisons plus six independent oracles. Compiler probes demonstrate constant if/while reachability differences; unknown/nested syntax and invalid transfer namespaces refuse. All303 expected token streams and19591/119181/388 ordered identities remain, with no naming or local ordinal migration.267 generated plain block labels and21 overlapping large spans, nine labeled, remain; larger joins/dispatch/state reconstruction and whole-game/assets/browser/phone acceptance remain unfinished or unverified.",
+        "Pass104 reconstructs25 effectful plain-block exits across17 files, saving30 lines and15 labels.24192 generic native comparisons and six independent oracles cover effects, skipped/executed cleanup, monitor ownership, failure identity, nullable inputs, NaNs, short circuits, assignments, scopes, checked failures, own/ancestor transfers and finally overrides. Direct remainder declarations and crossed continuations/protected boundaries refuse reconstruction. All303 expected token streams and19591/119181/388 ordered identities remain. Avatar animation and music decoding lose their final labels, leaving252 generated plain block labels and21 overlapping large spans, seven labeled. Ending/crying lifecycle, mixed-effect/multiple destinations, unknown shared names and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -54151,7 +54164,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 42,
+      "rawSourceLinesRemoved": 30,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -54176,7 +54189,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 63,
+      "genericEmitterTestGroups": 66,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -54184,7 +54197,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass103 replaces14 direct leading if/break guards with nonconstant while conditions, preserving each expression verbatim under logical negation. No declaration/reference is removed or reordered; all8439 complete naming objects and66223 identifier edits remain. Formal parameters are supplied from emitted metadata and independently parsed by JDK in the corpus proof; scoped locals do not leak across blocks or later declarations.",
+      "referenceRemovalAttribution": "Pass104 replaces25 effectful conditional plain-block breaks with ordinary if/else arms and removes15 unused labels/blocks. Prefix/predicate/effects and scopes remain in their original order. No declaration/reference is removed or reordered; all8439 complete naming objects and66223 identifier edits remain without local ordinal migration.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -54221,7 +54234,7 @@
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
       "identifierEditsAddedInCurrentPass": 0,
-      "lastStructuralPassVersion": 103,
+      "lastStructuralPassVersion": 104,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -54606,7 +54619,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 64,
+      "genericEmitterTestsRegistered": 67,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -54744,7 +54757,7 @@
       "sessionUpdaterLabelsAfter": 14,
       "sourceMethodBodies": 2080,
       "sourceLargeMethodSpansAtLeast300Lines": 21,
-      "sourceLargeMethodSpansWithGeneratedBlockLabels": 9,
+      "sourceLargeMethodSpansWithGeneratedBlockLabels": 7,
       "currentRecordedNativeProbeCount": 6,
       "namedMusicRulesAdded": {
         "C": 3,
@@ -54995,7 +55008,7 @@
       "pointerConstructorClassNameEdits": 2,
       "allSelectedPointerDispatchParametersAndLocalsNamed": true,
       "reflectiveWheelListenerClassNamePreserved": true,
-      "sourceGeneratedPlainBlockLabels": 267,
+      "sourceGeneratedPlainBlockLabels": 252,
       "terminalLoopBreaksHistoricalPassVersion": 102,
       "terminalLoopBreaksLocalized": 78,
       "terminalLoopUnusedLabelsRemoved": 38,
@@ -55044,33 +55057,26 @@
       "leadingWhileGameplayUpdaterLinesBefore": 641,
       "leadingWhileGameplayUpdaterLinesAfter": 638,
       "leadingWhileSortedHalfBlendTriangleLinesBefore": 388,
-      "leadingWhileSortedHalfBlendTriangleLinesAfter": 385
+      "leadingWhileSortedHalfBlendTriangleLinesAfter": 385,
+      "effectfulPlainBlockExitsHistoricalPassVersion": 104,
+      "effectfulPlainBlockExitsRecovered": 25,
+      "effectfulPlainBlockUnusedLabelsRemoved": 15,
+      "effectfulPlainBlockChangedJavaFiles": 17,
+      "effectfulPlainBlockSourceLinesBefore": 77833,
+      "effectfulPlainBlockSourceLinesAfter": 77803,
+      "effectfulPlainBlockExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "effectfulPlainBlockGenericTestGroups": 3,
+      "effectfulPlainBlockNativeComparisons": 24192,
+      "effectfulPlainBlockIndependentNativeOracles": 6,
+      "effectfulPlainBlockAvatarLinesBefore": 434,
+      "effectfulPlainBlockAvatarLinesAfter": 432,
+      "effectfulPlainBlockAvatarLabelsAfter": 0,
+      "effectfulPlainBlockMusicDecoderLinesBefore": 323,
+      "effectfulPlainBlockMusicDecoderLinesAfter": 321,
+      "effectfulPlainBlockMusicDecoderLabelsAfter": 0
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "4a37782ec52b041d73f65b9e6d54dc975a1d84e9",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "a3a98476775c603b4c05f34196b6ba6a0c818466",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "6388138b5ab1a91efb6893969dd008096ce7d7012c65dcf6cdd21e9b7739986e",
-              "reproduce": "git archive --format=tar a3a98476775c603b4c05f34196b6ba6a0c818466 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "ba01dcb53e4008252421ea97b14937357d4b521fee2ef0952952aa4f9c448556"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "66eb34efef67a46c3c2913687b16d7c4d020f415",
@@ -55093,7 +55099,30 @@
         },
         "inputTreeSha256": "1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272"
       },
-      "reason": "Pass103 recovers14 direct leading while guards across11 files, saving42 lines. A first conditional ordinary break in a while(true) body becomes a while condition using logical negation of the original predicate. Only proven nonconstant conditions are eligible; scoped nonfinal locals/actual emitted parameters/runtime forms establish proof. Constant/unproven names, prefix/protected entry work, different jumps and incomplete/nested syntax refuse rewriting. Body/variable scopes, cleanup, predicate order/exception coverage and loop transfers remain. All303 expected token streams and ordered declarations/references/overrides match; all8439 full naming objects and local ordinals remain."
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "e9a083a49cbc1abedc9878510144e29350283258",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "6a6275c84203e94667cfc8add2a5763d44f08f0f",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "7b39ce315376ef968a17850878eca26ddeb06662032b8acac840418062c7aa09",
+              "reproduce": "git archive --format=tar 6a6275c84203e94667cfc8add2a5763d44f08f0f | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "9b9a14f0d5063ad8801b7cc7593865a2b093947780937310ed913195a8397a61"
+      },
+      "reason": "Pass104 recovers25 effectful exits across17 files as ordinary if/else arms, removes15 unused plain-block labels and saves30 lines. The original arm retains its prefix/effects/scope; the skipped remainder becomes its else. An empty normal continuation to the same plain block is proven through final blocks/if arms/plain labels only. Direct remainder declarations, intervening work, crossed protected/loop/switch boundaries, other prefix jumps to that destination and incomplete/ambiguous syntax refuse proof. All303 expected token streams and ordered declarations/references/overrides match; all8439 complete naming objects and local ordinals remain."
     }
   }
 }

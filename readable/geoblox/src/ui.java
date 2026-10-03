@@ -57,23 +57,21 @@ final class ui {
             var22 = var19;
             var10 = 0;
             while (var10 < var4) {
-              L7: {
-                var11 = var22[var9];
-                var12 = this.field_g[var11 * 8 + var8];
-                if (var12 >= 0) {
-                  var13 = this.field_c + var9 * this.field_f;
-                  var14 = MusicDecoder.field_u[var12];
-                  if (this.field_d != 0) {
-                    var15 = 0;
-                    while (var15 < this.field_f) {
-                      var28 = var14.a();
-                      for (var17 = 0; var17 < var14.field_e; var17++) {
-                        param0[var13 + var15] = param0[var13 + var15] + var28[var17];
-                        var15++;
-                      }
+              var11 = var22[var9];
+              var12 = this.field_g[var11 * 8 + var8];
+              if (var12 >= 0) {
+                var13 = this.field_c + var9 * this.field_f;
+                var14 = MusicDecoder.field_u[var12];
+                if (this.field_d != 0) {
+                  var15 = 0;
+                  while (var15 < this.field_f) {
+                    var28 = var14.a();
+                    for (var17 = 0; var17 < var14.field_e; var17++) {
+                      param0[var13 + var15] = param0[var13 + var15] + var28[var17];
+                      var15++;
                     }
-                    break L7;
                   }
+                } else {
                   var15 = this.field_f / var14.field_e;
                   for (var16 = 0; var16 < var15; var16++) {
                     var27 = var14.a();

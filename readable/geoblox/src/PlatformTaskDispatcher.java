@@ -214,33 +214,33 @@ final class PlatformTaskDispatcher implements Runnable {
                                                     (taskType == 17)) {
                                                   customCursorArguments = (Object[]) (task.input);
                                                   Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
-                                                  break L7;
-                                                }
-                                                if (taskType != 16) {
-                                                  throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
-                                                }
-                                                try {
-                                                  if (!osNameLowerCase.startsWith("win")) {
-                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                } else {
+                                                  if (taskType != 16) {
+                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                   }
-                                                  urlToLaunch = (String) (task.input);
-                                                  if ((!urlToLaunch.startsWith("http://")) &&
-                                                      (!urlToLaunch.startsWith("https://"))) {
-                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                  }
-                                                  allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                  for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
-                                                    if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
+                                                  try {
+                                                    if (!osNameLowerCase.startsWith("win")) {
                                                       throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
+                                                    urlToLaunch = (String) (task.input);
+                                                    if ((!urlToLaunch.startsWith("http://")) &&
+                                                        (!urlToLaunch.startsWith("https://"))) {
+                                                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                    }
+                                                    allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                                    for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
+                                                      if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
+                                                        throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                      }
+                                                    }
+                                                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
+                                                    task.result = null;
+                                                  } catch (java.lang.Exception caughtUrlLaunchFailure) {
+                                                    caughtTaskThrowable = caughtUrlLaunchFailure;
+                                                    urlLaunchFailure = (Exception) (Object) caughtTaskThrowable;
+                                                    task.result = urlLaunchFailure;
+                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(urlLaunchFailure);
                                                   }
-                                                  Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
-                                                  task.result = null;
-                                                } catch (java.lang.Exception caughtUrlLaunchFailure) {
-                                                  caughtTaskThrowable = caughtUrlLaunchFailure;
-                                                  urlLaunchFailure = (Exception) (Object) caughtTaskThrowable;
-                                                  task.result = urlLaunchFailure;
-                                                  throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(urlLaunchFailure);
                                                 }
                                               }
                                             }

@@ -815,27 +815,25 @@ class Sprite extends SpriteState {
         pixelIndex = 0;
         for (row = 0; row < this.height; row++) {
           for (column = 0; column < this.width; column++) {
-            L2: {
-              pixelOrOutlineColor = this.pixels[pixelIndex];
-              if (pixelOrOutlineColor == 0) {
-                if ((column > 0) &&
-                    (this.pixels[pixelIndex - 1] != 0)) {
-                  pixelOrOutlineColor = color;
-                  break L2;
-                }
+            pixelOrOutlineColor = this.pixels[pixelIndex];
+            if (pixelOrOutlineColor == 0) {
+              if ((column > 0) &&
+                  (this.pixels[pixelIndex - 1] != 0)) {
+                pixelOrOutlineColor = color;
+              } else {
                 if ((row > 0) &&
                     (this.pixels[pixelIndex - this.width] != 0)) {
                   pixelOrOutlineColor = color;
-                  break L2;
-                }
-                if ((column < this.width - 1) &&
-                    (this.pixels[pixelIndex + 1] != 0)) {
-                  pixelOrOutlineColor = color;
-                  break L2;
-                }
-                if ((row < this.height - 1) &&
-                    (this.pixels[pixelIndex + this.width] != 0)) {
-                  pixelOrOutlineColor = color;
+                } else {
+                  if ((column < this.width - 1) &&
+                      (this.pixels[pixelIndex + 1] != 0)) {
+                    pixelOrOutlineColor = color;
+                  } else {
+                    if ((row < this.height - 1) &&
+                        (this.pixels[pixelIndex + this.width] != 0)) {
+                      pixelOrOutlineColor = color;
+                    }
+                  }
                 }
               }
             }

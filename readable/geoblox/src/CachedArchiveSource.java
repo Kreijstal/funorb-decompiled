@@ -138,34 +138,32 @@ final class CachedArchiveSource extends ArchiveSource {
           request = null;
         }
         if (request == null) {
-          L2: {
-            if (requestMode != 0) {
-              if (requestMode == 1) {
-                if (null == this.groupDiskCache) {
-                  throw new RuntimeException();
-                }
-                request = this.diskWorker.queueRead(methodGuard + 131, this.groupDiskCache, groupId);
-              } else {
-                if (requestMode != 2) {
-                  throw new RuntimeException();
-                }
-                if (null == this.groupDiskCache) {
-                  throw new RuntimeException();
-                }
-                if (this.groupDiskStatus[groupId] != -1) {
-                  throw new RuntimeException();
-                }
-                if (this.networkClient.isBackgroundQueueFull(-21)) {
-                  return null;
-                }
-                request = this.networkClient.queueRequest((byte) 2, this.archiveId, methodGuard + 50, groupId, false);
+          if (requestMode != 0) {
+            if (requestMode == 1) {
+              if (null == this.groupDiskCache) {
+                throw new RuntimeException();
               }
+              request = this.diskWorker.queueRead(methodGuard + 131, this.groupDiskCache, groupId);
             } else {
-              if ((null != this.groupDiskCache) &&
-                  (-1 != this.groupDiskStatus[groupId])) {
-                request = this.diskWorker.readSynchronously(this.groupDiskCache, groupId, 15079962);
-                break L2;
+              if (requestMode != 2) {
+                throw new RuntimeException();
               }
+              if (null == this.groupDiskCache) {
+                throw new RuntimeException();
+              }
+              if (this.groupDiskStatus[groupId] != -1) {
+                throw new RuntimeException();
+              }
+              if (this.networkClient.isBackgroundQueueFull(-21)) {
+                return null;
+              }
+              request = this.networkClient.queueRequest((byte) 2, this.archiveId, methodGuard + 50, groupId, false);
+            }
+          } else {
+            if ((null != this.groupDiskCache) &&
+                (-1 != this.groupDiskStatus[groupId])) {
+              request = this.diskWorker.readSynchronously(this.groupDiskCache, groupId, 15079962);
+            } else {
               if (this.networkClient.isPriorityQueueFull(20)) {
                 return null;
               }

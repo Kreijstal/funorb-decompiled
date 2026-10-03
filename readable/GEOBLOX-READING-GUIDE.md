@@ -7,7 +7,7 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 103)
+## Current readability (pass 104)
 
 The export has 8,439 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -25,9 +25,9 @@ rewrite. Inner cleanup and declaration scopes remain. `Sprite.rotateNearest`
 now has no generated block labels. Gameplay
 render/update and board reconciliation each lose one label. All 8,439 complete
 naming objects, 66,223 edits and ordered binding identities are preserved.
-There remain 267 generated plain block labels across the source tree.
+After pass102/103, 267 generated plain block labels remained across the source tree.
 
-The latest reconstruction turns fourteen leading conditional loop exits into
+Pass103 turns fourteen leading conditional loop exits into
 ordinary while conditions across eleven files, saving 42 lines. Original
 predicates stay under logical negation; nonconstant proof protects Java
 reachability. Scope, effect/exception order, cleanup and continue targets remain.
@@ -37,7 +37,19 @@ ordered binding identity. Its 96,768 generic native comparisons and six
 independent entry/NaN/cleanup oracles pass along with all six game probes.
 Other mixed-effect and multi-destination continuations still need reconstruction.
 
-There remain 21 method/constructor spans of at least 300 lines, nine with generated
+The latest reconstruction replaces 25 effectful conditional plain-block exits
+with ordinary `if/else`, removes 15 unused labels/braces and saves 30 lines across
+17 files. Original predicates/effects and nested scopes remain; the skipped
+remainder becomes the else arm. Empty normal continuations are proven without
+crossing protected or loop/switch boundaries; direct remainder declarations and
+ambiguous targets refuse reconstruction. Avatar animation is now 432 lines and
+music decoding 321, each with zero generated block labels. No control flag or
+apparently stable field is assumed constant. The 24,192 new generic native
+comparisons and six independent effect/cleanup/monitor/failure checks pass.
+Ending/crying lifecycle and whole-game equivalence remain unverified.
+
+There remain 252 generated plain block labels. There are 21 method/constructor
+spans of at least 300 lines, seven with generated
 block labels. The 3,042-line interface text-loader span includes three nested
 helpers, so this inventory does not count unique state machines. The labeled
 large bodies are:
@@ -50,9 +62,7 @@ large bodies are:
 | `GameplaySession.renderSession` | 377 | 17 |
 | `GameplaySession.updateSession` | 638 | 13 |
 | `kc.reconcileBoardEntities` | 494 | 14 |
-| `MessageDialog.advanceGameplayAvatarAnimation` | 434 | 1 |
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 385 | 11 |
-| `MusicDecoder.decodePacket` | 323 | 1 |
 
 Every field, method, parameter and local in GameScreen, MenuScreen and
 GameplaySession now has a guarded name, with constructor names supplied by their
@@ -62,6 +72,7 @@ exits remain. Larger reconstructions need
 proofs for intermediate loops/protected regions and multiple continuations;
 control flags are not assumed constant. The retained 16,128-case guard-tree
 comparison, 11,520-case terminal-loop comparison, new 96,768-case leading-loop
+comparison with six independent oracles, the new 24,192-case effectful-exit
 comparison with six independent oracles, and six recorded native probes
 establish controlled behavior only.
 Complete assets/gameplay and browser/phone memory/startup/FPS targets remain

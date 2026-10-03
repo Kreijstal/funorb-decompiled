@@ -187,41 +187,39 @@ final class ae {
             var14++;
           }
         }
-        L7: {
-          this.c();
-          var2 = MusicDecoder.readBits(4);
-          if (var2 > 0) {
-            var3 = MusicDecoder.d(MusicDecoder.readBits(32));
-            var4 = MusicDecoder.d(MusicDecoder.readBits(32));
-            var5 = MusicDecoder.readBits(4) + 1;
-            stackIn_23_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
-            var6 = stackIn_23_0;
-            if (var2 != 1) {
-              var7 = this.field_f * this.field_e;
-            } else {
-              var7 = ae.a(this.field_f, this.field_e);
-            }
-            this.field_b = new int[var7];
-            for (var8 = 0; var8 < var7; var8++) {
-              this.field_b[var8] = MusicDecoder.readBits(var5);
-            }
-            this.field_c = new float[this.field_f][this.field_e];
-            if (var2 == 1) {
-              for (var8 = 0; var8 < this.field_f; var8++) {
-                var9 = 0.0f;
-                var10 = 1;
-                for (var11 = 0; var11 < this.field_e; var11++) {
-                  var12_int = var8 / var10 % var7;
-                  var13 = (float)this.field_b[var12_int] * var4 + var3 + var9;
-                  this.field_c[var8][var11] = var13;
-                  if (var6 != 0) {
-                    var9 = var13;
-                  }
-                  var10 = var10 * var7;
+        this.c();
+        var2 = MusicDecoder.readBits(4);
+        if (var2 > 0) {
+          var3 = MusicDecoder.d(MusicDecoder.readBits(32));
+          var4 = MusicDecoder.d(MusicDecoder.readBits(32));
+          var5 = MusicDecoder.readBits(4) + 1;
+          stackIn_23_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
+          var6 = stackIn_23_0;
+          if (var2 != 1) {
+            var7 = this.field_f * this.field_e;
+          } else {
+            var7 = ae.a(this.field_f, this.field_e);
+          }
+          this.field_b = new int[var7];
+          for (var8 = 0; var8 < var7; var8++) {
+            this.field_b[var8] = MusicDecoder.readBits(var5);
+          }
+          this.field_c = new float[this.field_f][this.field_e];
+          if (var2 == 1) {
+            for (var8 = 0; var8 < this.field_f; var8++) {
+              var9 = 0.0f;
+              var10 = 1;
+              for (var11 = 0; var11 < this.field_e; var11++) {
+                var12_int = var8 / var10 % var7;
+                var13 = (float)this.field_b[var12_int] * var4 + var3 + var9;
+                this.field_c[var8][var11] = var13;
+                if (var6 != 0) {
+                  var9 = var13;
                 }
+                var10 = var10 * var7;
               }
-              break L7;
             }
+          } else {
             for (var8 = 0; var8 < this.field_f; var8++) {
               var9 = 0.0f;
               var10 = var8 * this.field_e;

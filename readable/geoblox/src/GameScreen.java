@@ -1555,23 +1555,21 @@ final class GameScreen extends MenuScreen {
             }
             SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
           }
-          L4: {
-            ma.drawNineSlicePanel(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
-            FadingDialog.uiPaletteFont.drawCenteredText(pageIndex + 1 + "/5", 580, 170, 0, -1);
-            pageParagraph = null;
-            orbitCenterYOrTextLeft = 155;
-            orbitXOrPageIndexOrLineHeight = pageIndex;
-            if (orbitXOrPageIndexOrLineHeight == 0) {
-              FadingDialog.uiPaletteFont.drawText(a.field_a[0], orbitCenterYOrTextLeft, paragraphY, 0, -1);
-              pageParagraph = ec.field_e[0];
-              FadingDialog.uiPaletteFont.drawText(a.field_a[1], orbitCenterYOrTextLeft, paragraphY + 110, 0, -1);
+          ma.drawNineSlicePanel(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
+          FadingDialog.uiPaletteFont.drawCenteredText(pageIndex + 1 + "/5", 580, 170, 0, -1);
+          pageParagraph = null;
+          orbitCenterYOrTextLeft = 155;
+          orbitXOrPageIndexOrLineHeight = pageIndex;
+          if (orbitXOrPageIndexOrLineHeight == 0) {
+            FadingDialog.uiPaletteFont.drawText(a.field_a[0], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+            pageParagraph = ec.field_e[0];
+            FadingDialog.uiPaletteFont.drawText(a.field_a[1], orbitCenterYOrTextLeft, paragraphY + 110, 0, -1);
+          } else {
+            if ((1 == orbitXOrPageIndexOrLineHeight) &&
+                (clientControlFlowGuard == 0)) {
+              FadingDialog.uiPaletteFont.drawText(a.field_a[2], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+              pageParagraph = ec.field_e[1];
             } else {
-              if ((1 == orbitXOrPageIndexOrLineHeight) &&
-                  (clientControlFlowGuard == 0)) {
-                FadingDialog.uiPaletteFont.drawText(a.field_a[2], orbitCenterYOrTextLeft, paragraphY, 0, -1);
-                pageParagraph = ec.field_e[1];
-                break L4;
-              }
               if (orbitXOrPageIndexOrLineHeight == 2) {
                 FadingDialog.uiPaletteFont.drawText(a.field_a[3], orbitCenterYOrTextLeft, paragraphY, 0, -1);
                 pageParagraph = ec.field_e[2];

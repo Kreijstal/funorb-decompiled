@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`66eb34efef67a46c3c2913687b16d7c4d020f415`. It comes from java-tools
-`faf744e8439fd84dcc90336dbb6f1bc489eab14c` and Deko
+`e9a083a49cbc1abedc9878510144e29350283258`. It comes from java-tools
+`6a6275c84203e94667cfc8add2a5763d44f08f0f` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`dc190d740966d401d60800003140aacfbea8dd71680d7637c50c2fedca4001e0`:
+`7b39ce315376ef968a17850878eca26ddeb06662032b8acac840418062c7aa09`:
 
 ```sh
-git archive --format=tar faf744e8439fd84dcc90336dbb6f1bc489eab14c | sha256sum
+git archive --format=tar 6a6275c84203e94667cfc8add2a5763d44f08f0f | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,61 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Effectful plain-block exits (pass 104)
+
+Twenty-five conditional arms that performed work before a labeled exit now use
+ordinary `if/else`, across seventeen files. The original effect arm keeps its
+scope, predicate and effects; the existing skipped remainder becomes its else.
+For example, avatar frame advancement skips its alternate steering adjustments
+before continuing with the existing blink/shock/tint tail. It no longer needs
+its final label. Field reads are preserved even where direction values appear
+contradictory; no global control flag or concurrent state is assumed constant.
+Music packet decoding also loses its final label. Both methods remain large,
+432 and 321 lines respectively, but have ordinary control flow at this join.
+
+The proof requires an empty normal continuation from the containing block to
+the same plain-block destination, through final blocks, if arms and plain labels
+only. Prefix work and arm-local declarations stay in place. A direct declaration
+in the remainder refuses the rewrite because introducing an else would change
+its scope. Intervening work, crossed loop/switch/try/finally/monitor boundaries,
+another prefix jump to that destination, duplicate labels, nested executables,
+comments/Unicode escapes or incomplete syntax also refuse it. Whole nested and
+enclosing cleanup regions are retained; the rewrite does not duplicate code or
+reevaluate predicates. One candidate is edited per call, then safe frame cleanup
+and discovery repeat, avoiding overlapping edits and allowing chained arms.
+
+The full emitter file registers 67 tests: 66 pass and one historical optional
+fixture skips. Three new groups cover supported shapes, refusals and 24,192
+native original/reconstructed comparisons over 24 variants, eight failure/control
+modes, nullable booleans, seven floating inputs and nullable monitors. Six
+independent checks cover prefix/effect/tail order, remainder execution,
+skipped/executed remainder cleanup, monitor ownership and failure before the
+predicate. Cases include short circuits, assignments, scopes, checked/unchecked
+failures, own/ancestor transfers and finally overrides. Eight exception-exit and
+two integer-argument test groups also pass.
+
+Fifteen unused plain-block labels/braces disappear, saving thirty lines
+(77,833 to 77,803). All 303 token streams match the expected conditional rewrites
+and cleanup. All 19,591 declarations, 119,181 references and 388 override
+relationships preserve their ordered identities. A clean Git source archive
+regenerates every source and diagnostics byte-for-byte. Both Java corpora
+compile and compare 138,772 bindings; all 8,439 complete naming objects and
+66,223 identifier edits are retained with no local ordinal migration. Native
+probe sources/traces, stub JAR and naming-tool pins remain unchanged. All six
+game probes, reproduction, dictionary reversal and the nine/eight/six
+rule-builder/source-refusal/text-resource tests pass in their existing scopes.
+
+Raw tree SHA-256:
+`9b9a14f0d5063ad8801b7cc7593865a2b093947780937310ed913195a8397a61`.
+Readable tree SHA-256:
+`fbf75001f2aeae318e3fb96f336f0681c25e8bc1f194747cc9a026a17340377a`.
+The decompiler source archive SHA-256 above identifies tracked decompiler Git
+source, separately from either tree or a game JAR. The current inventory is
+252 generated plain block labels and 21 overlapping large method/constructor
+spans, seven labeled. Ending/crying lifecycle, mixed-effect/multiple destinations,
+unknown shared names and whole-game/assets/browser/phone acceptance remain
+unfinished or unverified. Sections below record historical passes.
 
 ## Leading while conditions (pass 103)
 
@@ -109,7 +164,7 @@ The raw tree SHA-256 is
 `d77ac935dc675856f1b882282093dfbf2b987d8246d33e88cc1c5667a6c2df45`. Decompiler source archive SHA-256 is recorded above and identifies
 the tracked decompiler Git source, separately from either tree or a game JAR.
 `Sprite.rotateNearest` is 526 lines with no block labels; the session updater is
-638/13 and the sorted half-blend triangle is 385/11. The inventory remains 267
+638/13 and the sorted half-blend triangle is 385/11. At pass103 the inventory was 267
 generated plain block labels and 21 overlapping large method/constructor spans,
 nine labeled. Multi-destination dispatch, mixed-effect/exception continuations,
 unknown shared names and full assets/game/browser/phone acceptance remain
@@ -2724,9 +2779,10 @@ Pass 88 retained it and added 144 naming rules. Passes 89 through 91 recorded
 terminal-break, single-alternative and ordered multi-exit source migrations.
 Pass 92 recorded the predicate-only guard-tree migration with no naming changes.
 Passes 93 through 101 retained that source and expanded guarded semantic names.
-Pass 102 recorded terminal-loop exit reconstruction. Current pass103 records
-leading nonconstant while guards in `sourceChange`, with an empty `ruleChanges`
-list preserving all 8,439 complete naming objects.
+Pass 102 recorded terminal-loop exit reconstruction. Pass103 recorded
+leading nonconstant while guards. Current pass104 records effectful plain-block
+exits in `sourceChange`, with an empty `ruleChanges` list preserving all 8,439
+complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 

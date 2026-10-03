@@ -124,19 +124,17 @@ final class uh extends ac {
           if (ac.a((byte) 102, param0)) {
             var5.faceMaterialIndices = ArchiveNetworkClient.a(var5.faceMaterialIndices, 16, 0, param0);
           }
-          L4: {
-            if (ac.a((byte) 37, param0)) {
-              var5.facePriorities = MouseWheelInput.a(var5.facePriorities, param0, 16, 8);
-              var6 = 0;
-              for (var7 = 0; var5.facePriorities.length > var7; var7++) {
-                if (~(255 & var5.facePriorities[var7]) < ~var6) {
-                  var6 = 255 & var5.facePriorities[var7];
-                }
+          if (ac.a((byte) 37, param0)) {
+            var5.facePriorities = MouseWheelInput.a(var5.facePriorities, param0, 16, 8);
+            var6 = 0;
+            for (var7 = 0; var5.facePriorities.length > var7; var7++) {
+              if (~(255 & var5.facePriorities[var7]) < ~var6) {
+                var6 = 255 & var5.facePriorities[var7];
               }
-              if (var6 != 0) {
-                var5.facePriorityCount = (byte)(1 + var6);
-                break L4;
-              }
+            }
+            if (var6 != 0) {
+              var5.facePriorityCount = (byte)(1 + var6);
+            } else {
               var5.facePriorities = null;
             }
           }

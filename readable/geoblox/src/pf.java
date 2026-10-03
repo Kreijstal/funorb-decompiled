@@ -76,29 +76,29 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                 var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 34) << cd.andInt(var7 << 8, 768));
               }
               var4_ref_ea.unlinkNode(false);
-              break L0;
-            }
-            if (var2 == 1) {
-              var4 = var9.readSignedSmart(76);
-              var5 = (se) ((Object) sj.field_g.firstForIteration(0));
-              while (true) {
-                if (var5 != null) {
-                  if (!((var5.field_g == var3) &&
-                      (var5.field_j == var4))) {
-                    var5 = (se) ((Object) sj.field_g.nextForIteration(1));
-                    continue;
+            } else {
+              if (var2 == 1) {
+                var4 = var9.readSignedSmart(76);
+                var5 = (se) ((Object) sj.field_g.firstForIteration(0));
+                while (true) {
+                  if (var5 != null) {
+                    if (!((var5.field_g == var3) &&
+                        (var5.field_j == var4))) {
+                      var5 = (se) ((Object) sj.field_g.nextForIteration(1));
+                      continue;
+                    }
                   }
+                  if (var5 != null) {
+                    var5.unlinkNode(false);
+                    break L0;
+                  }
+                  Bzip2DecoderState.a((byte) -116);
+                  return;
                 }
-                if (var5 != null) {
-                  var5.unlinkNode(false);
-                  break L0;
-                }
-                Bzip2DecoderState.a((byte) -116);
-                return;
               }
+              gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
+              Bzip2DecoderState.a((byte) -123);
             }
-            gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
-            Bzip2DecoderState.a((byte) -123);
           }
           if (param0 >= -95) {
             field_O = (ResourceArchive) null;
@@ -326,17 +326,15 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             cm.a(-1, -1);
             PacketBuffer.field_l = field_K;
           }
-          L7: {
-            if ((field_K == PacketBuffer.field_l) &&
-                (UiWidget.b(30000, 1))) {
-              var9 = eh.field_d.readUnsignedByte((byte) 34);
-              eh.field_d.position = 0;
-              if ((var9 >= 100) &&
-                  (var9 <= 105)) {
-                PacketBuffer.field_l = v.field_l;
-                si.field_i = new String[var9 - 100];
-                break L7;
-              }
+          if ((field_K == PacketBuffer.field_l) &&
+              (UiWidget.b(30000, 1))) {
+            var9 = eh.field_d.readUnsignedByte((byte) 34);
+            eh.field_d.position = 0;
+            if ((var9 >= 100) &&
+                (var9 <= 105)) {
+              PacketBuffer.field_l = v.field_l;
+              si.field_i = new String[var9 - 100];
+            } else {
               if (var9 == 248) {
                 sj.a(k.c(124), (byte) 123);
                 kh.field_a = ph.createUnableText;
@@ -830,14 +828,12 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             this.field_M.setWidgetBounds(30, -10 + this.widgetWidth - 6, (byte) -42, this.widgetY, 8);
             this.widgetY = this.widgetY + 35;
           }
-          L17: {
-            if (this.field_G != null) {
-              if ((!this.field_N) &&
-                  (!this.field_I)) {
-                this.field_G.setWidgetBounds(20, 40, (byte) -55, this.widgetY, 8);
-                this.widgetY = this.widgetY + 25;
-                break L17;
-              }
+          if (this.field_G != null) {
+            if ((!this.field_N) &&
+                (!this.field_I)) {
+              this.field_G.setWidgetBounds(20, 40, (byte) -55, this.widgetY, 8);
+              this.widgetY = this.widgetY + 25;
+            } else {
               this.field_G.setWidgetBounds(30, -10 + (this.widgetWidth - 6), (byte) -64, this.widgetY, 8);
               this.widgetY = this.widgetY + 35;
             }

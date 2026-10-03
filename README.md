@@ -19,6 +19,18 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 104 reconstructs 25 effectful plain-block exits as ordinary `if/else`
+arms across 17 files. The original predicate and effects remain in order, and
+the skipped remainder becomes the else arm. Fifteen unused labels disappear,
+saving 30 lines. Avatar animation and music decoding lose their final labels;
+252 generated plain block labels remain, with seven of 21 overlapping large
+spans labeled. All 8,439 naming objects and 66,223 edits remain unchanged. The
+emitter passes 66 tests with one historical optional skip, including 24,192 new
+native comparisons and six independent behavior checks. Clean decompiler-source
+reproduction, ordered bindings, all six game probes, dictionary reversal and
+publication checks pass. Unknown shared names, larger continuations and full
+game/browser/phone acceptance remain open.
+
 Pass 103 turns fourteen newly exposed leading loop exits into ordinary while
 conditions across eleven files, saving 42 lines. Original predicates remain
 under logical negation; nonconstant proof protects Java reachability, while
@@ -29,8 +41,8 @@ archive reproduces sources/diagnostics byte-for-byte. The emitter passes 63 test
 with one historical optional skip, including 96,768 new native comparisons and
 six loop-entry/NaN/cleanup oracles. All six existing game probes, reproduction
 and dictionary reversal pass. Sprite nearest rotation is 526 lines; session
-update is 638 and the sorted half-blend triangle is 385. There remain 267 generated
-plain block labels and 21 overlapping large spans, nine labeled. Further joins,
+update is 638 and the sorted half-blend triangle is 385. At that pass, 267 generated
+plain block labels and 21 overlapping large spans, nine labeled, remained. Further joins,
 unknown names and full game/browser/phone acceptance remain open.
 
 Pass 102 reconstructs 78 terminal labeled exits as ordinary loop breaks and

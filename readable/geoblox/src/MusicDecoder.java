@@ -514,13 +514,11 @@ final class MusicDecoder extends IntrusiveNode {
           var18_int = var14.field_c[var17_int];
           field_F[var18_int].a(workBlock, var4 >> 1);
         }
-        L11: {
-          if (var15 != 0) {
-            for (var17_int = var4 >> 1; var17_int < var4; var17_int++) {
-              workBlock[var17_int] = 0.0f;
-            }
-            break L11;
+        if (var15 != 0) {
+          for (var17_int = var4 >> 1; var17_int < var4; var17_int++) {
+            workBlock[var17_int] = 0.0f;
           }
+        } else {
           var17_int = var4 >> 1;
           var18_int = var4 >> 2;
           var19 = var4 >> 3;

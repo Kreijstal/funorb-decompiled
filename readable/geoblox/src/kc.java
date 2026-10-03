@@ -289,34 +289,34 @@ final class kc {
                                                   }
                                                   componentNeighborIndex = visitedFlagThenResetIndex;
                                                 }
-                                                break L27;
-                                              }
-                                              while (true) {
-                                                entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
-                                                neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
-                                                connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
-                                                entityForComponentCategoryReset.sameCategoryEntityCount = 0;
-                                                neighborThenCountResetEntity.sameVariantEntityCount = 0;
-                                                connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
-                                                if (clientControlSnapshot != 0) {
-                                                  break L10;
+                                              } else {
+                                                while (true) {
+                                                  entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
+                                                  neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
+                                                  connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
+                                                  entityForComponentCategoryReset.sameCategoryEntityCount = 0;
+                                                  neighborThenCountResetEntity.sameVariantEntityCount = 0;
+                                                  connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                                                  if (clientControlSnapshot != 0) {
+                                                    break L10;
+                                                  }
+                                                  if (connectivityAliasThenDetachingEntity == null) {
+                                                    break L10;
+                                                  }
+                                                  connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
+                                                  connectivityAliasThenDetachingEntity.touchesAvatar = false;
+                                                  connectivityAliasThenDetachingEntity.detachedFromBoard = true;
+                                                  fa.entitiesDetachedThisTick = true;
+                                                  visitedFlagThenResetIndex = 0;
+                                                  if (clientControlSnapshot != 0) {
+                                                    break L8;
+                                                  }
+                                                  componentNeighborIndex = visitedFlagThenResetIndex;
+                                                  if (componentNeighborIndex >= connectivityAliasThenDetachingEntity.relatedEntityCount) {
+                                                    continue;
+                                                  }
+                                                  break;
                                                 }
-                                                if (connectivityAliasThenDetachingEntity == null) {
-                                                  break L10;
-                                                }
-                                                connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
-                                                connectivityAliasThenDetachingEntity.touchesAvatar = false;
-                                                connectivityAliasThenDetachingEntity.detachedFromBoard = true;
-                                                fa.entitiesDetachedThisTick = true;
-                                                visitedFlagThenResetIndex = 0;
-                                                if (clientControlSnapshot != 0) {
-                                                  break L8;
-                                                }
-                                                componentNeighborIndex = visitedFlagThenResetIndex;
-                                                if (componentNeighborIndex >= connectivityAliasThenDetachingEntity.relatedEntityCount) {
-                                                  continue;
-                                                }
-                                                break;
                                               }
                                             }
                                             comparedThenUnlinkTarget = connectivityAliasThenDetachingEntity.relatedEntities[componentNeighborIndex];

@@ -303,15 +303,13 @@ final class uk extends TextInputValidator {
             stackIn_4_0 = si.field_m;
             return stackIn_4_0;
           }
-          L1: {
-            if (!candidateText.equals(this.field_k)) {
-              var3 = cl.a((byte) 108, candidateText);
-              if ((var3 != null) &&
-                  (var3.field_e == null)) {
-                this.field_n = var3.field_g;
-                this.field_k = candidateText;
-                break L1;
-              }
+          if (!candidateText.equals(this.field_k)) {
+            var3 = cl.a((byte) 108, candidateText);
+            if ((var3 != null) &&
+                (var3.field_e == null)) {
+              this.field_n = var3.field_g;
+              this.field_k = candidateText;
+            } else {
               stackIn_10_0 = si.field_n;
               return stackIn_10_0;
             }

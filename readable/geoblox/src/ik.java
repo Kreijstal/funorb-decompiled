@@ -116,26 +116,26 @@ final class ik {
                 if ((secondEntity.entitySpriteKindId == 1) &&
                     (firstEntity.entitySpriteKindId == 0)) {
                   secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
-                  break L5;
-                }
-                if ((secondEntity.entitySpriteKindId == 0) &&
-                    (firstEntity.entitySpriteKindId == 1)) {
-                  variantPropagationThenNeighborIndex = 1;
-                  break L5;
-                }
-                if ((firstEntity.entitySpriteKindId == 2) &&
-                    (secondEntity.entitySpriteKindId == 1)) {
-                  neighborIndexThenDetachSecond = 1;
-                  detachFirst = 1;
-                  propagateCategory = 1;
-                  secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
-                  break L5;
-                }
-                if ((1 == firstEntity.entitySpriteKindId) &&
-                    (secondEntity.entitySpriteKindId == 2)) {
-                  secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
-                  variantPropagationThenNeighborIndex = 1;
-                  neighborIndexThenDetachSecond = 1;
+                } else {
+                  if ((secondEntity.entitySpriteKindId == 0) &&
+                      (firstEntity.entitySpriteKindId == 1)) {
+                    variantPropagationThenNeighborIndex = 1;
+                  } else {
+                    if ((firstEntity.entitySpriteKindId == 2) &&
+                        (secondEntity.entitySpriteKindId == 1)) {
+                      neighborIndexThenDetachSecond = 1;
+                      detachFirst = 1;
+                      propagateCategory = 1;
+                      secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+                    } else {
+                      if ((1 == firstEntity.entitySpriteKindId) &&
+                          (secondEntity.entitySpriteKindId == 2)) {
+                        secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
+                        variantPropagationThenNeighborIndex = 1;
+                        neighborIndexThenDetachSecond = 1;
+                      }
+                    }
+                  }
                 }
               } else {
                 if ((2 != secondEntity.entitySpriteKindId) &&
@@ -146,14 +146,14 @@ final class ik {
                     (2 != firstEntity.entitySpriteKindId)) {
                   secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
                   neighborIndexThenDetachSecond = 1;
-                  break L5;
-                }
-                if ((firstEntity.entitySpriteKindId == 2) &&
-                    (2 != secondEntity.entitySpriteKindId)) {
-                  detachFirst = 1;
-                  propagateCategory = 1;
-                  neighborIndexThenDetachSecond = 1;
-                  firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
+                } else {
+                  if ((firstEntity.entitySpriteKindId == 2) &&
+                      (2 != secondEntity.entitySpriteKindId)) {
+                    detachFirst = 1;
+                    propagateCategory = 1;
+                    neighborIndexThenDetachSecond = 1;
+                    firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
+                  }
                 }
               }
             }
