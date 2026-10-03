@@ -1,11 +1,39 @@
 # Readable GeoBlox
 
-The current export has 10,538 guarded naming rules: 260 classes, 1,396 fields,
-1,041 methods, 3,017 parameters and 4,824 local declarations. Both 303-file corpora
+The current export has 10,596 guarded naming rules: 265 classes, 1,402 fields,
+1,043 methods, 3,035 parameters and 4,851 local declarations. Both 303-file corpora
 compile, comparing 136,612 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current logo and UI support names (pass 122)
+## Current reflected implementation names (pass 123)
+
+Pass 123 names the five previously held reflective implementations:
+`AwtMouseWheelListener`, `BufferedImageRasterBuffer`, `AwtFullscreenBridge`,
+`AwtCursorBridge` and `LegacyDirectSoundBridge`. It adds 58 guarded naming rules:
+five classes, six fields, two methods, 18 parameters and 27 locals. All 10,538
+previous complete rules and raw/decompiler/bytecode inputs remain. The export
+has 10,596 rules and 83,103 identifier edits, plus 11 separately recorded class-name
+literal edits. All 303 sources compile, compare 136,612 Java bindings and
+388 override relationships; 11 literal target/position records are checked
+separately. Class coverage is 265 renamed, one meaningful original name and
+37 opaque names. Six large labeled bodies and 207 block labels remain.
+
+The generic naming dependency now supports an explicit, count-guarded policy
+for direct `java.lang.Class.forName` literals targeting owned classes. It proves
+the called Java method through javac, leaves ordinary strings/comments and
+public reflective member spellings unchanged, refuses escaped renamed targets,
+and reverses the new literal edits through the same dictionary. Dynamic strings,
+concatenation, `ClassLoader.loadClass` and reflective member-name rewriting are
+outside this policy. Twelve generic tests and 25 publication tests pass. All
+eight native probes retain fixed hashes, including 122 new headless checks for
+five class loads/member contracts, wheel factory/event/guard/drain behavior and
+preferred buffered-raster factory/shared pixel/draw behavior. Hardware fullscreen,
+Robot, COM audio, full assets/game/server/browser/phone and heap/FPS remain
+unverified. The raw decompiler source/archive and prior seven probe pins do not
+change; the naming dependency and its new literal policy have an explicit
+source-change record.
+
+## Previous logo and UI support names (pass 122)
 
 Pass 122 adds 214 guarded names: 13 classes, 17 fields, 32 methods,
 49 parameters and 103 locals. The logo loading path now reads through
@@ -110,7 +138,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -248,7 +276,7 @@ exposes tooltip drawing. `DirectDrawFullscreenController` and
 native callback names and unsupported peer carriers remain. The marker contracts
 are `TextValidationFailure`, `FullscreenFailureReason`, `ClientProtocolStage`,
 `ChildWidgetOwner` and `DirectSoundCompatibility`; literal reflected owners
-`gl`, `ve`, `tk`, `pd` and `of` remain unchanged.
+`gl`, `ve`, `tk`, `pd` and `of` remained unchanged at pass114. Pass123 maps them.
 
 Regeneration compiles all 303 raw/readable sources and compares 137,964 bindings
 and 388 override relationships. Dictionary reversal restores all 303 raw files
@@ -348,16 +376,16 @@ It preserved raw source, decompiler source/archive, naming tool,
 stubs and all seven native probe source/trace pins, with no
 control-flow rewrite or runtime coverage added. Pass112 preserves all resulting
 8,898 rules. Literal
-reflective lookups keep `gl`, `ve`, `tk`, `pd` and `of` unchanged; renaming those
-requires a separately verified literal-lookup transformation.
+reflective lookups kept `gl`, `ve`, `tk`, `pd` and `of` unchanged at pass112.
+Pass123 adds the guarded direct-literal policy and their readable class names.
 
 The current raw tree is
 `ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f`;
 the current readable tree is
-`7254ad7253ed77c819e4d7289766198a149f7d4ea3e75272d9ac8eacf1112bc7`.
+`5088f96cf997cb2418a5518c922435c5f0860f37f1b7418ea1bfc7185df030c5`.
 The pinned decompiler-source SHA-256 is
 `c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3`.
-All seven existing native/raw/readable probes pass with their pinned traces.
+All eight native/raw/readable probes pass with their pinned traces.
 Regeneration compares all 303 files and 136,612 bindings; dictionary reversal
 recovers all 303 pinned raw files byte-for-byte. Publication checks pass.
 Historical sections below retain their original pass counts and spellings.
@@ -368,16 +396,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
-previous manifest's Git repository, commit and hash; pass122 refers to the
-Deko-owned pass121 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
+previous manifest's Git repository, commit and hash; pass123 refers to the
+Deko-owned pass122 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `f5e43aaad42307da97f8447100c8e2c86719e36d`; the
-manifest SHA-256 is `c4e04826c1512078f83c432af10df922f6ea2d52f94c73849f67db3a0a24e544`.
+The current Deko workflow/manifest commit is `326816a3f5fbb4099ae77ed336b8e174e8fe3a6c`; the
+manifest SHA-256 is `183a3184d2160b6524c7fa7dc1123c8792f5c932aef6f8af506aeb2db3f79d96`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -385,8 +413,9 @@ The raw input is `games/geoblox` at
 `1ede093bd14022751b56a4736ac6fb7ae72703c5`. It comes from java-tools
 `98292d12a3026b1c08ce589e83feb9510746564c` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
-`a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
-`cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
+`5510687e701287f03b3217d2d2c1ad3c097b53cc` in Deko; its selected generic-source
+archive SHA-256 is `2f99a85aaffc6c3a1fff2118d86a817c5876855363b7a79557c8f06deea1bec5`.
+The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
 `c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3`:
@@ -918,10 +947,11 @@ null failures, sentinels and guard side effects remain.
 `wheelRotationSnapshot` is the frame's signed wheel rotation drained from
 `mouseWheelInput`. The synchronized concrete listener accumulates rotation and
 consumes each event; draining snapshots then resets. Its attach/detach/drain
-families and instance arguments/locals are named. The concrete class `gl` and
-AWT `mouseWheelMoved` spelling remain original because the factory uses the
-literal `Class.forName("gl")`. Wrong guards still retain their original writes,
-arithmetic or null-event failure paths. No reflective string rewrite is added.
+families and instance arguments/locals are named. At that pass, concrete class `gl` and
+AWT `mouseWheelMoved` spelling remained original because the factory used
+`Class.forName("gl")`. Pass123 maps the class/literal together; the callback stays. Wrong guards still retain their original writes,
+arithmetic or null-event failure paths. That earlier pass added no reflective
+string rewrite; pass123 verifies the successful named wheel factory.
 
 Both 303-file corpora compile, comparing 138,772 bindings and preserving 388
 overrides. Deterministic reproduction, dictionary reversal, the three focused
@@ -2789,8 +2819,9 @@ image observer are explicit. Gameplay switches back to
 Unrelated static utilities retain their original owners.
 
 `fk.createCanvasRasterBuffer` names preferred/fallback implementation paths and
-exception transport. Its literal `Class.forName("ve")` and the `ve` class spelling
-stay unchanged, preserving reflection. Inherited methods and parameters in `ve`
+exception transport. Its literal `Class.forName("ve")` and `ve` class spelling
+stayed unchanged in that earlier pass. Pass123 maps both to
+`BufferedImageRasterBuffer`. Inherited methods and parameters in that implementation
 are named. Original diagnostic strings, API callback names, sentinel effects,
 monitors and allocation/publication order remain.
 

@@ -111,7 +111,7 @@ abstract class SessionGameApplet extends GameApplet {
             ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, MeshPrioritySupport.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
             TextInputValidator.initializeArchiveServices(param7, MeshPrioritySupport.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
             StatefulWidgetRenderer.b(28);
-            CachedTextLayout.mouseWheelInput = TextValidationFailure.a(param0 + 113);
+            CachedTextLayout.mouseWheelInput = TextValidationFailure.createMouseWheelInput(param0 + 113);
             UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
             TextLayoutLine.field_e = param2;
             DebouncedValidationProvider.field_c = param4;

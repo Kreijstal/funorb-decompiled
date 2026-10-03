@@ -100,7 +100,7 @@ final class DropTargetWidget extends SingleChildWidget {
             Throwable caughtFactoryThrowable = null;
             try {
               try {
-                bufferImplementationClass = Class.forName("ve");
+                bufferImplementationClass = Class.forName("BufferedImageRasterBuffer");
                 if (returnNullGuard) {
                   nullBufferForGuard = (AwtRasterBuffer) null;
                   return nullBufferForGuard;

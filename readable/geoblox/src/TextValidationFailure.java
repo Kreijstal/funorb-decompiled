@@ -63,26 +63,26 @@ final class TextValidationFailure {
         LoginPayloadKind.field_a = var7;
     }
 
-    final static MouseWheelInput a(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int methodGuard) {
         try {
-            Throwable var1 = null;
-            MouseWheelInput stackIn_3_0 = null;
-            Throwable decompiledCaughtException = null;
-            if (param0 < 2) {
+            Throwable ignoredWheelFactoryFailure = null;
+            MouseWheelInput wheelInputBeforeReturn = null;
+            Throwable caughtWheelFactoryFailure = null;
+            if (methodGuard < 2) {
               field_b = -62L;
             }
             try {
-              stackIn_3_0 = (MouseWheelInput) (Class.forName("gl").newInstance());
-              return stackIn_3_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
+              wheelInputBeforeReturn = (MouseWheelInput) (Class.forName("AwtMouseWheelListener").newInstance());
+              return wheelInputBeforeReturn;
+            } catch (java.lang.Throwable wheelFactoryFailure) {
+              caughtWheelFactoryFailure = wheelFactoryFailure;
+              ignoredWheelFactoryFailure = caughtWheelFactoryFailure;
               return null;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedWheelFactoryFailure) {
+            throw uncheckedWheelFactoryFailure;
+        } catch (Throwable checkedWheelFactoryFailure) {
+            throw new RuntimeException(checkedWheelFactoryFailure);
         }
     }
 

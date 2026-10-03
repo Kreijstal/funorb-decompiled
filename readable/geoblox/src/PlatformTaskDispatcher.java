@@ -169,14 +169,14 @@ final class PlatformTaskDispatcher implements Runnable {
                                           if (this.useMicrosoftVmBackend) {
                                             this.microsoftFullscreenBackend.enterFullscreen(8, task.firstIntArgument >>> 16, fullscreenFrame, task.secondIntArgument >> 16, task.firstIntArgument & 65535, task.secondIntArgument & 65535);
                                           } else {
-                                            Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveFullscreenBackend, new Object[]{fullscreenFrame, new Integer(task.firstIntArgument >>> 16), new Integer(task.firstIntArgument & 65535), new Integer(task.secondIntArgument >> 16), new Integer(task.secondIntArgument & 65535)});
+                                            Class.forName("AwtFullscreenBridge").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveFullscreenBackend, new Object[]{fullscreenFrame, new Integer(task.firstIntArgument >>> 16), new Integer(task.firstIntArgument & 65535), new Integer(task.secondIntArgument >> 16), new Integer(task.secondIntArgument & 65535)});
                                           }
                                         } else {
                                           if (taskType == 7) {
                                             if (this.useMicrosoftVmBackend) {
                                               this.microsoftFullscreenBackend.exitFullscreen(111, (java.awt.Frame) (task.input));
                                             } else {
-                                              Class.forName("pd").getMethod("exit", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
+                                              Class.forName("AwtFullscreenBridge").getMethod("exit", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
                                             }
                                           } else {
                                             if (12 == taskType) {
@@ -192,7 +192,7 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   cursorXOrVisibleFlag = task.firstIntArgument;
                                                   cursorY = task.secondIntArgument;
                                                   if (!this.useMicrosoftVmBackend) {
-                                                    Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
+                                                    Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
                                                     break L7;
                                                   }
                                                   this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
@@ -207,13 +207,13 @@ final class PlatformTaskDispatcher implements Runnable {
                                                     this.microsoftCursorBackend.setCursorVisible(12758, cursorXOrVisibleFlag != 0, cursorComponent);
                                                     break L7;
                                                   }
-                                                  Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
+                                                  Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
                                                   break L7;
                                                 }
                                                 if ((!this.useMicrosoftVmBackend) &&
                                                     (taskType == 17)) {
                                                   customCursorArguments = (Object[]) (task.input);
-                                                  Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
+                                                  Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
                                                 } else {
                                                   if (taskType != 16) {
                                                     throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -248,7 +248,7 @@ final class PlatformTaskDispatcher implements Runnable {
                                         }
                                       } else {
                                         if (!this.useMicrosoftVmBackend) {
-                                          task.result = Class.forName("pd").getMethod("listmodes", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
+                                          task.result = Class.forName("AwtFullscreenBridge").getMethod("listmodes", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
                                         } else {
                                           task.result = this.microsoftFullscreenBackend.listDisplayModes(8);
                                         }
@@ -605,7 +605,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.useMicrosoftVmBackend) {
             try {
-              Class.forName("of").newInstance();
+              Class.forName("LegacyDirectSoundBridge").newInstance();
             } catch (java.lang.Throwable microsoftCompatibilitySetupFailure) {
               caughtSetupThrowable = microsoftCompatibilitySetupFailure;
               ignoredSetupThrowable = caughtSetupThrowable;
@@ -616,7 +616,7 @@ final class PlatformTaskDispatcher implements Runnable {
               createdMicrosoftFullscreenBackend = new DirectDrawFullscreenController();
               this.microsoftFullscreenBackend = createdMicrosoftFullscreenBackend;
             } else {
-              this.reflectiveFullscreenBackend = Class.forName("pd").newInstance();
+              this.reflectiveFullscreenBackend = Class.forName("AwtFullscreenBridge").newInstance();
             }
           } catch (java.lang.Throwable fullscreenBackendSetupFailure) {
             caughtSetupThrowable = fullscreenBackendSetupFailure;
@@ -624,7 +624,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.useMicrosoftVmBackend) {
-              this.reflectiveCursorBackend = Class.forName("tk").newInstance();
+              this.reflectiveCursorBackend = Class.forName("AwtCursorBridge").newInstance();
             } else {
               this.microsoftCursorBackend = new WindowsCursorController();
             }

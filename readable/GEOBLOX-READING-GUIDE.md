@@ -7,13 +7,14 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 122)
+## Current readability (pass 123)
 
-The export has 10,538 guarded names and 82,881 identifier edits. Class coverage is
-260 semantic renames, one already meaningful `Geoblox` name and 42 opaque names.
+The export has 10,596 guarded names and 83,103 identifier edits, plus 11 recorded
+class-name literal edits. Class coverage is 265 semantic renames, one already
+meaningful `Geoblox` name and 37 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -23,7 +24,33 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 122 adds 214 guarded names: 13 classes, 17 fields, 32 methods,
+Pass 123 names the five previously held reflective implementations:
+`AwtMouseWheelListener`, `BufferedImageRasterBuffer`, `AwtFullscreenBridge`,
+`AwtCursorBridge` and `LegacyDirectSoundBridge`. It adds 58 guarded naming rules:
+five classes, six fields, two methods, 18 parameters and 27 locals. All 10,538
+previous complete rules and raw/decompiler/bytecode inputs remain. The export
+has 10,596 rules and 83,103 identifier edits, plus 11 separately recorded class-name
+literal edits. All 303 sources compile, compare 136,612 Java bindings and
+388 override relationships; 11 literal target/position records are checked
+separately. Class coverage is 265 renamed, one meaningful original name and
+37 opaque names. Six large labeled bodies and 207 block labels remain.
+
+The generic naming dependency now supports an explicit, count-guarded policy
+for direct `java.lang.Class.forName` literals targeting owned classes. It proves
+the called Java method through javac, leaves ordinary strings/comments and
+public reflective member spellings unchanged, refuses escaped renamed targets,
+and reverses the new literal edits through the same dictionary. Dynamic strings,
+concatenation, `ClassLoader.loadClass` and reflective member-name rewriting are
+outside this policy. Twelve generic tests and 25 publication tests pass. All
+eight native probes retain fixed hashes, including 122 new headless checks for
+five class loads/member contracts, wheel factory/event/guard/drain behavior and
+preferred buffered-raster factory/shared pixel/draw behavior. Hardware fullscreen,
+Robot, COM audio, full assets/game/server/browser/phone and heap/FPS remain
+unverified. The raw decompiler source/archive and prior seven probe pins do not
+change; the naming dependency and its new literal policy have an explicit
+source-change record.
+
+Pass 122 added 214 guarded names: 13 classes, 17 fields, 32 methods,
 49 parameters and 103 locals. The logo loading path now reads through
 `LogoPreparationSupport.prepareLogoAnimation`, `EntityMotionSupport.decodeLogoAudio`,
 `FullscreenSupport.prepareMeshSpecularResponse`, `MidiNoteMixer.prepareLogoGlowRaster`
@@ -218,8 +245,9 @@ These are useful entry points for the newly named families:
 | Network and storage | [SocketConnector](geoblox/src/SocketConnector.java), [ProxySocketConnector](geoblox/src/ProxySocketConnector.java), [AsyncResourceDownloader](geoblox/src/AsyncResourceDownloader.java), [ByteStorage](geoblox/src/ByteStorage.java), [DirectByteStorage](geoblox/src/DirectByteStorage.java) |
 
 Class names describe supported instance roles. Unrelated static helpers remain
-on the same owners because obfuscation mixed them together. `gl`, `ve`, `tk`,
-`pd` and `of` remain opaque to preserve literal reflection lookups. Historical
+on the same owners because obfuscation mixed them together. Pass123 names the
+five previously held reflected implementations and maps their direct class
+literals with explicit guards. Public reflection member contracts remain. Historical
 sections retain their original pass counts and spellings; use the current symbol
 dictionary to resolve those spellings.
 
@@ -492,9 +520,9 @@ target. No finally clear, local merge or callback reordering is introduced.
 
 `wheelRotationSnapshot` is shared by UI/gameplay after `mouseWheelInput` drains
 its signed accumulator each frame. `MouseWheelInput` exposes attach/detach/drain;
-the synchronized concrete `gl` listener consumes AWT events after accumulating
-rotation and resets only on drain. The reflective factory still loads literal
-`gl`, so that concrete class and AWT callback spelling remain unchanged.
+the synchronized concrete `AwtMouseWheelListener` consumes AWT events after
+accumulating rotation and resets only on drain. `createMouseWheelInput` maps its
+direct class literal under the guarded policy. The AWT callback spelling remains.
 
 Selected base/button/drag/drop/wheel bodies have all parameters and locals named.
 Other subclass internals, repeated control-flow tails and unrelated statics remain
@@ -1982,13 +2010,15 @@ board masks and scene rasters, then calls
 `sh.mainRasterBuffer.setAsRasterTarget(...)` to resume canvas rendering.
 
 `fk.createCanvasRasterBuffer` reflectively constructs the BufferedImage-backed
-implementation `ve`, calling `initialize(height, component, width, guard)`.
+implementation `BufferedImageRasterBuffer`, calling
+`initialize(height, component, width, guard)`.
 It shares its integer pixels through `pixelDataBuffer`, `rgbColorModel` and
 `imageRaster`, and keeps the component as `imageObserverComponent`. The factory
 catches failure to construct it and creates `ImageProducerRasterBuffer` instead.
 The latter sends pixels to its consumer under synchronization before `drawImage`.
-The reflective name `ve` is deliberately preserved; API callback names and all
-original guard, exception, preparation and publication ordering remain.
+Pass123 maps the direct reflected class name together with its declaration.
+API callback names and all original guard, exception, preparation and publication
+ordering remain; the headless probe verifies the preferred factory is selected.
 
 `ma.drawNineSlicePanel(panelTop, panelLeft, panelHeight, guard, panelWidth,
 nineSliceSprites)` draws row-major slots:
@@ -4335,3 +4365,43 @@ it keeps length 1–63, allowed-character and edge-hyphen rules and source failu
 objects. `getConfiguredUpdateRate` and `setConfiguredUpdateRate` expose the
 reciprocal nanosecond timer setting; integer truncation, division by zero,
 negative values and guarded fallback remain. They do not count presented frames.
+
+## Reflected platform implementations
+
+| Readable class | Raw JVM identity | Contract retained |
+| --- | --- | --- |
+| `AwtMouseWheelListener` | `gl` | AWT wheel event callback and synchronized accumulator/drain |
+| `BufferedImageRasterBuffer` | `ve` | Shared int pixel buffer, image raster and graphics drawing |
+| `AwtFullscreenBridge` | `pd` | Public `enter`, `exit`, `listmodes` entry names |
+| `AwtCursorBridge` | `tk` | Public `movemouse`, `showcursor`, `setcustomcursor` entry names |
+| `LegacyDirectSoundBridge` | `of` | Legacy compatibility interface and constructor allocations |
+
+Only 11 source literals at resolved direct `java.lang.Class.forName` calls are
+rewritten: nine in the task dispatcher, one in the preferred raster factory and
+one in the wheel factory. Their original strings and UTF-16 positions stay in
+the reversible dictionary as separate class-name literal edits. Other strings,
+comments, diagnostics, dynamic class names and public reflection method names
+stay unchanged. The Java symbol binding count remains 136,612; the 11 literal
+target/position records are verified separately. The policy does not infer runtime
+server-provided names or promise compatibility with arbitrary foreign class loaders.
+
+Fullscreen bridge fields now read as `graphicsDevice` and `savedDisplayMode`.
+The constructor selects the default fullscreen-capable device or the first
+supported nonnull candidate; `enter` snapshots the mode before window updates
+and chooses a zero-requested refresh rate nearest the saved rate among exact
+width/height/depth matches. `exit` restores and verifies the saved mode before
+clearing it and leaving fullscreen. Cursor fields name `mouseRobot` and
+`cursorHiddenComponent`; `showcursor` restores the previous component before
+installing a new blank cursor, and true selects the default cursor. Custom cursor
+creation retains type-2 ARGB image copying and hotspot behavior. The DirectSound
+bridge keeps its two descriptors/cursor holders and unused constructor allocations.
+The new headless probe checks class/member loading for these three bridges; it
+does not exercise successful hardware fullscreen, Robot or COM operations.
+
+The native/raw/readable reflection probe has 122 independently asserted scenarios:
+five class loads, 80 wheel cases, 36 buffered-raster cases and one null-return
+factory guard. It checks the actual factories, so a renamed lookup cannot pass
+by silently returning null or selecting the image-producer fallback. Wheel checks
+cover overflow, event consumption, null-event failure without draining, reset and
+listener-removal guard timing. Raster checks cover shared storage, image pixel
+values, draw offsets and observer guards. All prior seven probe hashes remain.

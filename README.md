@@ -17,14 +17,40 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 122 adds 214 guarded names: 13 classes, 17 fields, 32 methods,
+Pass 123 names the five previously held reflective implementations:
+`AwtMouseWheelListener`, `BufferedImageRasterBuffer`, `AwtFullscreenBridge`,
+`AwtCursorBridge` and `LegacyDirectSoundBridge`. It adds 58 guarded naming rules:
+five classes, six fields, two methods, 18 parameters and 27 locals. All 10,538
+previous complete rules and raw/decompiler/bytecode inputs remain. The export
+has 10,596 rules and 83,103 identifier edits, plus 11 separately recorded class-name
+literal edits. All 303 sources compile, compare 136,612 Java bindings and
+388 override relationships; 11 literal target/position records are checked
+separately. Class coverage is 265 renamed, one meaningful original name and
+37 opaque names. Six large labeled bodies and 207 block labels remain.
+
+The generic naming dependency now supports an explicit, count-guarded policy
+for direct `java.lang.Class.forName` literals targeting owned classes. It proves
+the called Java method through javac, leaves ordinary strings/comments and
+public reflective member spellings unchanged, refuses escaped renamed targets,
+and reverses the new literal edits through the same dictionary. Dynamic strings,
+concatenation, `ClassLoader.loadClass` and reflective member-name rewriting are
+outside this policy. Twelve generic tests and 25 publication tests pass. All
+eight native probes retain fixed hashes, including 122 new headless checks for
+five class loads/member contracts, wheel factory/event/guard/drain behavior and
+preferred buffered-raster factory/shared pixel/draw behavior. Hardware fullscreen,
+Robot, COM audio, full assets/game/server/browser/phone and heap/FPS remain
+unverified. The raw decompiler source/archive and prior seven probe pins do not
+change; the naming dependency and its new literal policy have an explicit
+source-change record.
+
+Pass 122 added 214 guarded names: 13 classes, 17 fields, 32 methods,
 49 parameters and 103 locals. The logo loading path now reads through
 `LogoPreparationSupport.prepareLogoAnimation`, `EntityMotionSupport.decodeLogoAudio`,
 `FullscreenSupport.prepareMeshSpecularResponse`, `MidiNoteMixer.prepareLogoGlowRaster`
