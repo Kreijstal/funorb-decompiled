@@ -138,34 +138,32 @@ final class bj extends nh {
           var4 = null;
         }
         if (var4 == null) {
-          L2: {
-            if (param1 != 0) {
-              if (param1 == 1) {
-                if (null == this.field_e) {
-                  throw new RuntimeException();
-                }
-                var4 = this.field_i.a(param0 + 131, this.field_e, param2);
-              } else {
-                if (param1 != 2) {
-                  throw new RuntimeException();
-                }
-                if (null == this.field_e) {
-                  throw new RuntimeException();
-                }
-                if (this.field_k[param2] != -1) {
-                  throw new RuntimeException();
-                }
-                if (this.field_f.b(-21)) {
-                  return null;
-                }
-                var4 = this.field_f.a((byte) 2, this.field_p, param0 + 50, param2, false);
+          if (param1 != 0) {
+            if (param1 == 1) {
+              if (null == this.field_e) {
+                throw new RuntimeException();
               }
+              var4 = this.field_i.a(param0 + 131, this.field_e, param2);
             } else {
-              if ((null != this.field_e) &&
-                  (-1 != this.field_k[param2])) {
-                var4 = this.field_i.a(this.field_e, param2, 15079962);
-                break L2;
+              if (param1 != 2) {
+                throw new RuntimeException();
               }
+              if (null == this.field_e) {
+                throw new RuntimeException();
+              }
+              if (this.field_k[param2] != -1) {
+                throw new RuntimeException();
+              }
+              if (this.field_f.b(-21)) {
+                return null;
+              }
+              var4 = this.field_f.a((byte) 2, this.field_p, param0 + 50, param2, false);
+            }
+          } else {
+            if ((null != this.field_e) &&
+                (-1 != this.field_k[param2])) {
+              var4 = this.field_i.a(this.field_e, param2, 15079962);
+            } else {
               if (this.field_f.g(20)) {
                 return null;
               }

@@ -66,18 +66,16 @@ final class og extends rc {
         qc var10 = null;
         var9 = Geoblox.field_C;
         try {
-          L0: {
-            if (1 == param0) {
-              this.field_p = uj.a('<', true, param1.e((byte) 116));
-            } else {
-              if (2 == param0) {
-                var4_int = param1.c((byte) 34);
-                this.field_m = new int[var4_int];
-                for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_m[var5] = param1.b(true);
-                }
-                break L0;
+          if (1 == param0) {
+            this.field_p = uj.a('<', true, param1.e((byte) 116));
+          } else {
+            if (2 == param0) {
+              var4_int = param1.c((byte) 34);
+              this.field_m = new int[var4_int];
+              for (var5 = 0; var5 < var4_int; var5++) {
+                this.field_m[var5] = param1.b(true);
               }
+            } else {
               if (3 == param0) {
                 var4_int = param1.c((byte) 34);
                 this.field_s = new int[var4_int][];
@@ -94,9 +92,9 @@ final class og extends rc {
                     }
                   }
                 }
-                break L0;
-              }
-              if (param0 != 4) {
+              } else {
+                if (param0 != 4) {
+                }
               }
             }
           }

@@ -76,29 +76,29 @@ final class pf extends ee implements ga, pl {
                 var6[var7 >> 2] = var6[var7 >> 2] + (var9.c((byte) 34) << cd.a(var7 << 8, 768));
               }
               var4_ref_ea.a(false);
-              break L0;
-            }
-            if (var2 == 1) {
-              var4 = var9.h(76);
-              var5 = (se) ((Object) sj.field_g.g(0));
-              while (true) {
-                if (var5 != null) {
-                  if (!((var5.field_g == var3) &&
-                      (var5.field_j == var4))) {
-                    var5 = (se) ((Object) sj.field_g.d(1));
-                    continue;
+            } else {
+              if (var2 == 1) {
+                var4 = var9.h(76);
+                var5 = (se) ((Object) sj.field_g.g(0));
+                while (true) {
+                  if (var5 != null) {
+                    if (!((var5.field_g == var3) &&
+                        (var5.field_j == var4))) {
+                      var5 = (se) ((Object) sj.field_g.d(1));
+                      continue;
+                    }
                   }
+                  if (var5 != null) {
+                    var5.a(false);
+                    break L0;
+                  }
+                  jl.a((byte) -116);
+                  return;
                 }
-                if (var5 != null) {
-                  var5.a(false);
-                  break L0;
-                }
-                jl.a((byte) -116);
-                return;
               }
+              gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
+              jl.a((byte) -123);
             }
-            gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
-            jl.a((byte) -123);
           }
           if (param0 >= -95) {
             field_O = (rh) null;
@@ -326,17 +326,15 @@ final class pf extends ee implements ga, pl {
             cm.a(-1, -1);
             pk.field_l = field_K;
           }
-          L7: {
-            if ((field_K == pk.field_l) &&
-                (el.b(30000, 1))) {
-              var9 = eh.field_d.c((byte) 34);
-              eh.field_d.field_f = 0;
-              if ((var9 >= 100) &&
-                  (var9 <= 105)) {
-                pk.field_l = v.field_l;
-                si.field_i = new String[var9 - 100];
-                break L7;
-              }
+          if ((field_K == pk.field_l) &&
+              (el.b(30000, 1))) {
+            var9 = eh.field_d.c((byte) 34);
+            eh.field_d.field_f = 0;
+            if ((var9 >= 100) &&
+                (var9 <= 105)) {
+              pk.field_l = v.field_l;
+              si.field_i = new String[var9 - 100];
+            } else {
               if (var9 == 248) {
                 sj.a(k.c(124), (byte) 123);
                 kh.field_a = ph.field_k;
@@ -830,14 +828,12 @@ final class pf extends ee implements ga, pl {
             this.field_M.a(30, -10 + this.field_r - 6, (byte) -42, this.field_m, 8);
             this.field_m = this.field_m + 35;
           }
-          L17: {
-            if (this.field_G != null) {
-              if ((!this.field_N) &&
-                  (!this.field_I)) {
-                this.field_G.a(20, 40, (byte) -55, this.field_m, 8);
-                this.field_m = this.field_m + 25;
-                break L17;
-              }
+          if (this.field_G != null) {
+            if ((!this.field_N) &&
+                (!this.field_I)) {
+              this.field_G.a(20, 40, (byte) -55, this.field_m, 8);
+              this.field_m = this.field_m + 25;
+            } else {
               this.field_G.a(30, -10 + (this.field_r - 6), (byte) -64, this.field_m, 8);
               this.field_m = this.field_m + 35;
             }

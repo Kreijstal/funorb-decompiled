@@ -815,27 +815,25 @@ class dm extends wh {
         var3 = 0;
         for (var4 = 0; var4 < this.field_m; var4++) {
           for (var5 = 0; var5 < this.field_r; var5++) {
-            L2: {
-              var6 = this.field_v[var3];
-              if (var6 == 0) {
-                if ((var5 > 0) &&
-                    (this.field_v[var3 - 1] != 0)) {
-                  var6 = param0;
-                  break L2;
-                }
+            var6 = this.field_v[var3];
+            if (var6 == 0) {
+              if ((var5 > 0) &&
+                  (this.field_v[var3 - 1] != 0)) {
+                var6 = param0;
+              } else {
                 if ((var4 > 0) &&
                     (this.field_v[var3 - this.field_r] != 0)) {
                   var6 = param0;
-                  break L2;
-                }
-                if ((var5 < this.field_r - 1) &&
-                    (this.field_v[var3 + 1] != 0)) {
-                  var6 = param0;
-                  break L2;
-                }
-                if ((var4 < this.field_m - 1) &&
-                    (this.field_v[var3 + this.field_r] != 0)) {
-                  var6 = param0;
+                } else {
+                  if ((var5 < this.field_r - 1) &&
+                      (this.field_v[var3 + 1] != 0)) {
+                    var6 = param0;
+                  } else {
+                    if ((var4 < this.field_m - 1) &&
+                        (this.field_v[var3 + this.field_r] != 0)) {
+                      var6 = param0;
+                    }
+                  }
                 }
               }
             }

@@ -124,19 +124,17 @@ final class uh extends ac {
           if (ac.a((byte) 102, param0)) {
             var5.field_G = ji.a(var5.field_G, 16, 0, param0);
           }
-          L4: {
-            if (ac.a((byte) 37, param0)) {
-              var5.field_n = vk.a(var5.field_n, param0, 16, 8);
-              var6 = 0;
-              for (var7 = 0; var5.field_n.length > var7; var7++) {
-                if (~(255 & var5.field_n[var7]) < ~var6) {
-                  var6 = 255 & var5.field_n[var7];
-                }
+          if (ac.a((byte) 37, param0)) {
+            var5.field_n = vk.a(var5.field_n, param0, 16, 8);
+            var6 = 0;
+            for (var7 = 0; var5.field_n.length > var7; var7++) {
+              if (~(255 & var5.field_n[var7]) < ~var6) {
+                var6 = 255 & var5.field_n[var7];
               }
-              if (var6 != 0) {
-                var5.field_v = (byte)(1 + var6);
-                break L4;
-              }
+            }
+            if (var6 != 0) {
+              var5.field_v = (byte)(1 + var6);
+            } else {
               var5.field_n = null;
             }
           }

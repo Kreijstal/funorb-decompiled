@@ -289,34 +289,34 @@ final class kc {
                                                   }
                                                   var6_int = stackIn_56_0;
                                                 }
-                                                break L27;
-                                              }
-                                              while (true) {
-                                                var6 = var5_ref_ja;
-                                                var7 = var5_ref_ja;
-                                                var5_ref_ja.field_L = 0;
-                                                var6.field_N = 0;
-                                                var7.field_m = 0;
-                                                var5_ref_ja = (ja) ((Object) var13.a(true));
-                                                if (var9 != 0) {
-                                                  break L10;
+                                              } else {
+                                                while (true) {
+                                                  var6 = var5_ref_ja;
+                                                  var7 = var5_ref_ja;
+                                                  var5_ref_ja.field_L = 0;
+                                                  var6.field_N = 0;
+                                                  var7.field_m = 0;
+                                                  var5_ref_ja = (ja) ((Object) var13.a(true));
+                                                  if (var9 != 0) {
+                                                    break L10;
+                                                  }
+                                                  if (var5_ref_ja == null) {
+                                                    break L10;
+                                                  }
+                                                  var5_ref_ja.field_K = ji.field_r;
+                                                  var5_ref_ja.field_t = false;
+                                                  var5_ref_ja.field_B = true;
+                                                  fa.field_a = true;
+                                                  stackIn_56_0 = 0;
+                                                  if (var9 != 0) {
+                                                    break L8;
+                                                  }
+                                                  var6_int = stackIn_56_0;
+                                                  if (var6_int >= var5_ref_ja.field_L) {
+                                                    continue;
+                                                  }
+                                                  break;
                                                 }
-                                                if (var5_ref_ja == null) {
-                                                  break L10;
-                                                }
-                                                var5_ref_ja.field_K = ji.field_r;
-                                                var5_ref_ja.field_t = false;
-                                                var5_ref_ja.field_B = true;
-                                                fa.field_a = true;
-                                                stackIn_56_0 = 0;
-                                                if (var9 != 0) {
-                                                  break L8;
-                                                }
-                                                var6_int = stackIn_56_0;
-                                                if (var6_int >= var5_ref_ja.field_L) {
-                                                  continue;
-                                                }
-                                                break;
                                               }
                                             }
                                             stackIn_51_0 = var5_ref_ja.field_n[var6_int];

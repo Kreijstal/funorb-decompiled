@@ -253,23 +253,21 @@ final class rd extends ff {
           if (param1 >= -5) {
             field_s = (byte[][]) null;
           }
-          L3: {
-            this.field_t.a((byte) -28);
-            var7.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
-            if (var10 != null) {
-              if (var10.field_y) {
-                var11 = this.field_x[1];
-                if (var11 != null) {
-                  var11.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
-                }
+          this.field_t.a((byte) -28);
+          var7.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+          if (var10 != null) {
+            if (var10.field_y) {
+              var11 = this.field_x[1];
+              if (var11 != null) {
+                var11.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
               }
-              if (var10.field_l) {
-                var12 = this.field_x[3];
-                if ((var10.field_f != 0) &&
-                    (var12 != null)) {
-                  var12.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
-                  break L3;
-                }
+            }
+            if (var10.field_l) {
+              var12 = this.field_x[3];
+              if ((var10.field_f != 0) &&
+                  (var12 != null)) {
+                var12.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+              } else {
                 var9 = this.field_x[2];
                 if (var9 != null) {
                   var9.a(param0, param2, this.field_t, (rd) (this), -16566, param4);

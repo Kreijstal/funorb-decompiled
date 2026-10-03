@@ -303,15 +303,13 @@ final class uk extends q {
             stackIn_4_0 = si.field_m;
             return stackIn_4_0;
           }
-          L1: {
-            if (!param1.equals(this.field_k)) {
-              var3 = cl.a((byte) 108, param1);
-              if ((var3 != null) &&
-                  (var3.field_e == null)) {
-                this.field_n = var3.field_g;
-                this.field_k = param1;
-                break L1;
-              }
+          if (!param1.equals(this.field_k)) {
+            var3 = cl.a((byte) 108, param1);
+            if ((var3 != null) &&
+                (var3.field_e == null)) {
+              this.field_n = var3.field_g;
+              this.field_k = param1;
+            } else {
               stackIn_10_0 = si.field_n;
               return stackIn_10_0;
             }

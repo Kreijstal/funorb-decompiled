@@ -84,15 +84,13 @@ abstract class m extends rc {
         byte[][] var15;
         byte[][] var16;
         int[] var17;
-        L0: {
-          this.field_v = new int[256];
-          if (param0.length == 257) {
-            for (var2 = 0; var2 < this.field_v.length; var2++) {
-              this.field_v[var2] = param0[var2] & 255;
-            }
-            this.field_p = param0[256] & 255;
-            break L0;
+        this.field_v = new int[256];
+        if (param0.length == 257) {
+          for (var2 = 0; var2 < this.field_v.length; var2++) {
+            this.field_v[var2] = param0[var2] & 255;
           }
+          this.field_p = param0[256] & 255;
+        } else {
           var2 = 0;
           for (var3_int = 0; var3_int < 256; var3_int++) {
             incrementValue$6 = var2;

@@ -214,33 +214,33 @@ final class d implements Runnable {
                                                     (var2_int == 17)) {
                                                   var11 = (Object[]) (var9.field_f);
                                                   Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_u, new Object[]{var11[0], var11[1], new Integer(var9.field_c), new Integer(var9.field_g), var11[2]});
-                                                  break L7;
-                                                }
-                                                if (var2_int != 16) {
-                                                  throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
-                                                }
-                                                try {
-                                                  if (!field_b.startsWith("win")) {
-                                                    throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                } else {
+                                                  if (var2_int != 16) {
+                                                    throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                   }
-                                                  var8 = (String) (var9.field_f);
-                                                  if ((!var8.startsWith("http://")) &&
-                                                      (!var8.startsWith("https://"))) {
-                                                    throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                  }
-                                                  var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                  for (var5 = 0; var5 < var8.length(); var5++) {
-                                                    if (-1 == var4.indexOf((int) var8.charAt(var5))) {
+                                                  try {
+                                                    if (!field_b.startsWith("win")) {
                                                       throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
+                                                    var8 = (String) (var9.field_f);
+                                                    if ((!var8.startsWith("http://")) &&
+                                                        (!var8.startsWith("https://"))) {
+                                                      throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                    }
+                                                    var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                                    for (var5 = 0; var5 < var8.length(); var5++) {
+                                                      if (-1 == var4.indexOf((int) var8.charAt(var5))) {
+                                                        throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                      }
+                                                    }
+                                                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
+                                                    var9.field_b = null;
+                                                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                                                    decompiledCaughtException = decompiledCaughtParameter1;
+                                                    var3_ref2 = (Exception) (Object) decompiledCaughtException;
+                                                    var9.field_b = var3_ref2;
+                                                    throw d.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                                                   }
-                                                  Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
-                                                  var9.field_b = null;
-                                                } catch (java.lang.Exception decompiledCaughtParameter1) {
-                                                  decompiledCaughtException = decompiledCaughtParameter1;
-                                                  var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                                                  var9.field_b = var3_ref2;
-                                                  throw d.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                                                 }
                                               }
                                             }

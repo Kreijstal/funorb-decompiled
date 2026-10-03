@@ -1555,23 +1555,21 @@ final class c extends ka {
             }
             vb.b(this.field_P);
           }
-          L4: {
-            ma.a(140, 550, 40, (byte) -92, 60, ll.field_h);
-            dd.field_G.b(param1 + 1 + "/5", 580, 170, 0, -1);
-            var4 = null;
-            var5 = 155;
-            var6 = param1;
-            if (var6 == 0) {
-              dd.field_G.a(a.field_a[0], var5, var3_int, 0, -1);
-              var4 = ec.field_e[0];
-              dd.field_G.a(a.field_a[1], var5, var3_int + 110, 0, -1);
+          ma.a(140, 550, 40, (byte) -92, 60, ll.field_h);
+          dd.field_G.b(param1 + 1 + "/5", 580, 170, 0, -1);
+          var4 = null;
+          var5 = 155;
+          var6 = param1;
+          if (var6 == 0) {
+            dd.field_G.a(a.field_a[0], var5, var3_int, 0, -1);
+            var4 = ec.field_e[0];
+            dd.field_G.a(a.field_a[1], var5, var3_int + 110, 0, -1);
+          } else {
+            if ((1 == var6) &&
+                (var11 == 0)) {
+              dd.field_G.a(a.field_a[2], var5, var3_int, 0, -1);
+              var4 = ec.field_e[1];
             } else {
-              if ((1 == var6) &&
-                  (var11 == 0)) {
-                dd.field_G.a(a.field_a[2], var5, var3_int, 0, -1);
-                var4 = ec.field_e[1];
-                break L4;
-              }
               if (var6 == 2) {
                 dd.field_G.a(a.field_a[3], var5, var3_int, 0, -1);
                 var4 = ec.field_e[2];
