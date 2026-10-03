@@ -40,7 +40,7 @@ final class vh extends ee implements pl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class vh extends ee implements pl {
         try {
             this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class vh extends ee implements pl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class vh extends ee implements pl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class vh extends ee implements pl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

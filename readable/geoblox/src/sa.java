@@ -34,7 +34,7 @@ final class sa extends RuntimeException {
                 break L1;
               }
             }
-            if (!vl.field_q) {
+            if (!InstrumentPatch.field_q) {
               if (wg.field_e <= oe.field_V) {
                 stackIn_16_0 = (oe.field_V < ue.field_j + wg.field_e) ? 1 : 0;
               } else {
@@ -47,7 +47,7 @@ final class sa extends RuntimeException {
             if (param0 == null) {
               oe.field_V = 0;
             } else {
-              if (vl.field_q) {
+              if (InstrumentPatch.field_q) {
                 oe.field_V = wg.field_e;
               } else {
                 if (var2_int == 0) {
@@ -61,13 +61,13 @@ final class sa extends RuntimeException {
             bc.field_a = k.field_g;
             if (param0 == null) {
               if (var2_int != 0) {
-                vl.field_q = true;
+                InstrumentPatch.field_q = true;
               }
             } else {
-              vl.field_q = false;
+              InstrumentPatch.field_q = false;
             }
           }
-          if ((!vl.field_q) &&
+          if ((!InstrumentPatch.field_q) &&
               (wg.field_e > oe.field_V) &&
               (wb.pointerActivitySnapshot)) {
             oe.field_V = 0;
@@ -75,9 +75,9 @@ final class sa extends RuntimeException {
             PendingActionMarker.field_g = gb.field_e;
           }
           tc.field_a = param0;
-          if ((vl.field_q) &&
+          if ((InstrumentPatch.field_q) &&
               (cl.field_a == oe.field_V)) {
-            vl.field_q = false;
+            InstrumentPatch.field_q = false;
             oe.field_V = 0;
           }
           gb.field_e = -1;
@@ -97,7 +97,7 @@ final class sa extends RuntimeException {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class sa extends RuntimeException {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

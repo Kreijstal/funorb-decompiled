@@ -91,7 +91,7 @@ class IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ class IntrusiveNode {
           } else {
             spriteBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) decodeFailureBeforeDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(spriteBytesDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodeFailureBeforeDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(spriteBytesDescription).append(')').toString());
         }
     }
 

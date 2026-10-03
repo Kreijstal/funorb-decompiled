@@ -54,7 +54,7 @@ final class hc extends dj implements nl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class hc extends dj implements nl {
             super.a(param0, param1, param2, param3);
             this.field_S = -this.field_v + (PrefixCodeDecoder.pointerXSnapshot - param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class hc extends dj implements nl {
             this.field_Q = param1;
             int var3_int = 48 % ((param0 - 34) / 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

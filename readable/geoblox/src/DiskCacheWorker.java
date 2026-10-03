@@ -73,7 +73,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             bytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessageBeforeBytes).append(bytesDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessageBeforeBytes).append(bytesDescription).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             diskCacheDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(diskCacheDescription).append(',').append(groupId).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(diskCacheDescription).append(',').append(groupId).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             requestDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) enqueueFailureBeforeContext), ((StringBuilder) (Object) enqueueMessagePrefix).append(requestDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) enqueueFailureBeforeContext), ((StringBuilder) (Object) enqueueMessagePrefix).append(requestDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             diskCacheDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(diskCacheDescription).append(',').append(groupId).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(diskCacheDescription).append(',').append(groupId).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ final class DiskCacheWorker implements Runnable {
             }
             this.workerThread = (Thread) (threadTask.result);
         } catch (RuntimeException constructionFailure) {
-            throw t.a((Throwable) ((Object) constructionFailure), "uf.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "uf.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ')');
         }
     }
 

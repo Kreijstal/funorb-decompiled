@@ -44,7 +44,7 @@ abstract class TextInputValidator extends ib implements ga {
                 this.validatedInput = (dj) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "q.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "q.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ abstract class TextInputValidator extends ib implements ga {
             cl.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
             gb.archiveCatalog = new ArchiveCatalog(wg.archiveNetworkClient, cl.archiveDiskWorker);
         } catch (RuntimeException initializationFailure) {
-            throw t.a((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
         }
     }
 
@@ -120,7 +120,7 @@ abstract class TextInputValidator extends ib implements ga {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ abstract class TextInputValidator extends ib implements ga {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ abstract class TextInputValidator extends ib implements ga {
           } else {
             glyphArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageBeforeGlyphArchive).append(glyphArchiveDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageBeforeGlyphArchive).append(glyphArchiveDescription).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ abstract class TextInputValidator extends ib implements ga {
         try {
             this.validatedInput = validatedInput;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "q.<init>(" + (validatedInput != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "q.<init>(" + (validatedInput != null ? "{...}" : "null") + ')');
         }
     }
 

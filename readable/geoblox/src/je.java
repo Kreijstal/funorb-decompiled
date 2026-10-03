@@ -17,7 +17,7 @@ final class je extends IntrusiveNode {
                 ra.field_d = vk.field_b.field_j;
                 hj.field_c = true;
                 ug.field_c = ug.field_c & ~ra.field_d;
-                vl.field_p = vl.field_p | ra.field_d;
+                InstrumentPatch.field_p = InstrumentPatch.field_p | ra.field_d;
             }
             if (param0 >= -119) {
                 keyboardListener = (KeyboardInputListener) null;
@@ -32,7 +32,7 @@ final class je extends IntrusiveNode {
                 }
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "je.C(" + param0 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "je.C(" + param0 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class je extends IntrusiveNode {
               } else {
                 stackIn_8_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -98,7 +98,7 @@ final class je extends IntrusiveNode {
             this.field_f = param1;
             this.field_g.f(this.field_i * j.field_gb / 80);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

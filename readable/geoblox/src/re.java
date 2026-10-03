@@ -72,7 +72,7 @@ final class re extends IntrusiveNode {
         } catch (java.lang.RuntimeException keyboardFrameFailure) {
           caughtKeyboardFrameFailure = keyboardFrameFailure;
           keyboardFrameFailureForContext = (RuntimeException) (Object) caughtKeyboardFrameFailure;
-          throw t.a((Throwable) ((Object) keyboardFrameFailureForContext), "re.C(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyboardFrameFailureForContext), "re.C(" + methodGuard + ')');
         }
     }
 

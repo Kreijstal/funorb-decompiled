@@ -51,7 +51,7 @@ final class fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "fc.B(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "fc.B(" + param0 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class fc {
             ByteArrayBuffer.a(ArchiveRequest.field_s, oi.field_e, lb.field_a, (byte) -40);
             i.a(0, (byte) 117, param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

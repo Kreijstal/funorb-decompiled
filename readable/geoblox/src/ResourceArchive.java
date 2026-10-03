@@ -70,7 +70,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException attachedUpdateFailure) {
           caughtAttachedUpdateFailure = attachedUpdateFailure;
           attachedUpdateFailureForContext = caughtAttachedUpdateFailure;
-          throw t.a((Throwable) ((Object) attachedUpdateFailureForContext), "rh.I(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) attachedUpdateFailureForContext), "rh.I(" + methodGuard + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class ResourceArchive {
           } else {
             groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(groupNameDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(groupNameDescription).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class ResourceArchive {
           } else {
             fileNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(fileNameDescription).append(',').append(methodGuard).append(',').append(groupId).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(fileNameDescription).append(',').append(methodGuard).append(',').append(groupId).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class ResourceArchive {
           } else {
             groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) progressFailureBeforeDescription), ((StringBuilder) (Object) progressMessagePrefix).append(groupNameDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressFailureBeforeDescription), ((StringBuilder) (Object) progressMessagePrefix).append(groupNameDescription).append(')').toString());
         }
     }
 
@@ -449,7 +449,7 @@ final class ResourceArchive {
             } else {
               keySuppliedForDiagnostic = true;
             }
-            throw t.a((Throwable) ((Object) decompressionFailureBeforeContext), ((StringBuilder) (Object) decompressionMessagePrefix).append(keySuppliedForDiagnostic).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard + 95, packedBytes.length)).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard ^ 73, packedBytes.length - 2)).append(" ").append(this.index.groupCrc32[groupId]).append(" ").append(this.index.indexCrc32).toString());
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decompressionFailureBeforeContext), ((StringBuilder) (Object) decompressionMessagePrefix).append(keySuppliedForDiagnostic).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard + 95, packedBytes.length)).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard ^ 73, packedBytes.length - 2)).append(" ").append(this.index.groupCrc32[groupId]).append(" ").append(this.index.indexCrc32).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[groupId] = null;
@@ -577,7 +577,7 @@ final class ResourceArchive {
           } else {
             decryptionKeyDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) unpackFailureBeforeContext), ((StringBuilder) (Object) unpackMessagePrefix).append(decryptionKeyDescription).append(',').append(groupId).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) unpackFailureBeforeContext), ((StringBuilder) (Object) unpackMessagePrefix).append(decryptionKeyDescription).append(',').append(groupId).append(')').toString());
         }
     }
 
@@ -668,7 +668,7 @@ final class ResourceArchive {
           } else {
             decryptionKeyDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fileFailureBeforeContext), ((StringBuilder) (Object) fileMessagePrefix).append(decryptionKeyDescription).append(',').append(fileId).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fileFailureBeforeContext), ((StringBuilder) (Object) fileMessagePrefix).append(decryptionKeyDescription).append(',').append(fileId).append(')').toString());
         }
     }
 
@@ -710,7 +710,7 @@ final class ResourceArchive {
           } else {
             groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(groupNameDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(groupNameDescription).append(')').toString());
         }
     }
 
@@ -745,7 +745,7 @@ final class ResourceArchive {
           } else {
             groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) groupFailureBeforeContext), ((StringBuilder) (Object) groupMessagePrefix).append(groupNameDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) groupFailureBeforeContext), ((StringBuilder) (Object) groupMessagePrefix).append(groupNameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -826,7 +826,7 @@ final class ResourceArchive {
           } else {
             groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) availabilityFailureBeforeContext), ((StringBuilder) (Object) availabilityMessageBeforeGroup).append(groupNameDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) availabilityFailureBeforeContext), ((StringBuilder) (Object) availabilityMessageBeforeGroup).append(groupNameDescription).append(')').toString());
         }
     }
 
@@ -840,7 +840,7 @@ final class ResourceArchive {
             this.archiveSource = archiveSource;
             this.discardPackedGroups = discardPackedGroups ? true : false;
         } catch (RuntimeException constructionFailure) {
-            throw t.a((Throwable) ((Object) constructionFailure), "rh.<init>(" + (archiveSource != null ? "{...}" : "null") + ',' + discardPackedGroups + ',' + fileRetentionPolicy + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "rh.<init>(" + (archiveSource != null ? "{...}" : "null") + ',' + discardPackedGroups + ',' + fileRetentionPolicy + ')');
         }
     }
 
@@ -890,7 +890,7 @@ final class ResourceArchive {
           } else {
             groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fileFailureBeforeContext), ((StringBuilder) (Object) fileMessageBeforeGroup).append(groupNameDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fileFailureBeforeContext), ((StringBuilder) (Object) fileMessageBeforeGroup).append(groupNameDescription).append(')').toString());
         }
     }
 
@@ -972,7 +972,7 @@ final class ResourceArchive {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

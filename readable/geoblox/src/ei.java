@@ -52,7 +52,7 @@ final class ei extends qf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class ei extends qf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ei extends qf {
             }
             super.b(param0, -22);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ei.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ei.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

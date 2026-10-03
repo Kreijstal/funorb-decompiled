@@ -37,7 +37,7 @@ final class va {
                 }
                 oj.a(param1, 20000000);
             } catch (RuntimeException runtimeException) {
-                throw t.a((Throwable) ((Object) runtimeException), "va.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+                throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "va.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -116,7 +116,7 @@ final class va {
           } else {
             offsetsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) groupingFailureBeforeContext), ((StringBuilder) (Object) messageBeforeOffsets).append(offsetsDescription).append(',').append(guard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) groupingFailureBeforeContext), ((StringBuilder) (Object) messageBeforeOffsets).append(offsetsDescription).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -19,7 +19,7 @@ abstract class df {
             param1.removeFocusListener(pg.pointerListener);
             s.liveHeldPointerButton = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

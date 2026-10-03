@@ -63,7 +63,7 @@ final class h {
               } else {
                 stackIn_12_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -100,7 +100,7 @@ final class h {
         } catch (java.lang.RuntimeException movingDrawFailure) {
           caughtMovingDrawFailure = movingDrawFailure;
           movingDrawFailureForContext = caughtMovingDrawFailure;
-          throw t.a((Throwable) ((Object) movingDrawFailureForContext), "h.B(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) movingDrawFailureForContext), "h.B(" + methodGuard + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class h {
         try {
             this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

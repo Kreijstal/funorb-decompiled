@@ -41,7 +41,7 @@ final class uh extends ac {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class uh extends ac {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class uh extends ac {
         } catch (java.lang.RuntimeException spawnQueueDrawFailure) {
           caughtSpawnDrawFailure = spawnQueueDrawFailure;
           spawnDrawFailureForContext = caughtSpawnDrawFailure;
-          throw t.a((Throwable) ((Object) spawnDrawFailureForContext), "uh.DA(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) spawnDrawFailureForContext), "uh.DA(" + methodGuard + ')');
         }
     }
 

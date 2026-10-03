@@ -50,7 +50,7 @@ final class ij extends oe implements pl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class ij extends oe implements pl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class ij extends oe implements pl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

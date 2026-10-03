@@ -19,6 +19,15 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 88 names `InstrumentPatch` and `InstrumentEnvelope`, including all 77
+locals in the 492-line patch constructor. Its 144 guarded additions bring the
+export to 7,015 rules and 57,278 edits, preserving all previous rules and source
+pins. A separately pinned 1,759-case native/raw/readable trace checks decoded
+patch arrays/envelope identity, rounded/clamped curves, selective cached sample
+installation, ID/pitch cleanup, floor division, exception context and truncated
+inputs. Actual archived patches, uncached samples and synthesized audio remain
+unverified; large control-flow bodies and browser/phone acceptance remain.
+
 Pass 87 names `MusicScore`, `MidiTrackReader` and `InstrumentNoteMask`, including
 all 96 locals in the 541-line compact-to-MIDI constructor. It adds 188 guarded
 identities, bringing the export to 6,871 rules and 54,798 edits; every previous

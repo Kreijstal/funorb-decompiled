@@ -29,7 +29,7 @@ final class fk extends sh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -42,7 +42,7 @@ final class fk extends sh {
             param0.addMouseMotionListener(pg.pointerListener);
             param0.addFocusListener(pg.pointerListener);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class fk extends sh {
         try {
             this.field_A = param6;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class fk extends sh {
                 lh.field_b = null;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fk.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fk.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class fk extends sh {
               } else {
                 componentArgumentDescription = "{...}";
               }
-              throw t.a((Throwable) ((Object) factoryFailureBeforeComponentDescription), ((StringBuilder) (Object) factoryMessagePrefix).append(componentArgumentDescription).append(',').append(height).append(',').append(width).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) factoryFailureBeforeComponentDescription), ((StringBuilder) (Object) factoryMessagePrefix).append(componentArgumentDescription).append(',').append(height).append(',').append(width).append(')').toString());
             }
         } catch (RuntimeException | Error uncheckedFactoryFailure) {
             throw uncheckedFactoryFailure;

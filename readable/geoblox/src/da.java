@@ -37,7 +37,7 @@ final class da {
     }
 
     final static void a(boolean param0, int param1) {
-        j.field_lb = t.field_k[param1];
+        j.field_lb = InstrumentEnvelope.field_k[param1];
         ri.field_c = IntrusiveDeque.field_e[param1];
         vc.field_g = PointerInputListener.field_b[param1];
         if (!param0) {

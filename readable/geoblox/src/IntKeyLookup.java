@@ -123,7 +123,7 @@ final class IntKeyLookup {
           } else {
             keysDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessagePrefix).append(keysDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessagePrefix).append(keysDescription).append(')').toString());
         }
     }
 

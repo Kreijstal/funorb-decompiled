@@ -69,7 +69,7 @@ final class bc {
           } else {
             textBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) decodingFailureBeforeDescription), ((StringBuilder) (Object) decodingMessagePrefix).append(textBytesDescription).append(',').append(offset).append(',').append(length).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodingFailureBeforeDescription), ((StringBuilder) (Object) decodingMessagePrefix).append(textBytesDescription).append(',').append(offset).append(',').append(length).append(')').toString());
         }
     }
 

@@ -46,7 +46,7 @@ final class SecondaryDeque {
             node.previousSecondaryNode.nextSecondaryNode = node;
             node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw t.a((Throwable) ((Object) insertionFailure), "wd.L(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "wd.L(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class SecondaryDeque {
             node.previousSecondaryNode.nextSecondaryNode = node;
             node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw t.a((Throwable) ((Object) insertionFailure), "wd.I(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "wd.I(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class SecondaryDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "wd.K(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "wd.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class SecondaryDeque {
                 contactProbeOffsetX = 99;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class SecondaryDeque {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 

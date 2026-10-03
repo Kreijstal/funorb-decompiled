@@ -27,7 +27,7 @@ class ac extends ff {
             }
             super.a(param0, -11, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ class ac extends ff {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ class ac extends ff {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ class ac extends ff {
             var4 -= 10;
           }
           if (!param1) {
-            stackIn_7_0 = vl.field_p;
+            stackIn_7_0 = InstrumentPatch.field_p;
           } else {
             stackIn_7_0 = ug.field_c;
           }
@@ -234,7 +234,7 @@ class ac extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "ac.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "ac.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

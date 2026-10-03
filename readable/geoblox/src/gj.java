@@ -17,7 +17,7 @@ final class gj extends fj {
             var3.writeByte((byte) 125, 0);
             var3.writeByte((byte) -90, param2.field_f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class gj extends fj {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class gj extends fj {
                 return;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class gj extends fj {
         try {
             this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

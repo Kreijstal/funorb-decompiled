@@ -234,7 +234,7 @@ final class p extends IntrusiveNode {
           } else {
             meshContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) meshContextBuilder).append(meshContextDescription).append(',').append(preserveSharedResources).append(',').append(storeCameraCoordinates).append(',').append(cullBackfaces).append(',').append(transformNormals).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) meshContextBuilder).append(meshContextDescription).append(',').append(preserveSharedResources).append(',').append(storeCameraCoordinates).append(',').append(cullBackfaces).append(',').append(transformNormals).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ final class p extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "p.A(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "p.A(" + param0 + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class p extends IntrusiveNode {
             this.field_h = param1;
             this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "p.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "p.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class p extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

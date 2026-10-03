@@ -99,7 +99,7 @@ final class ld {
         } catch (java.lang.RuntimeException boundaryScanFailure) {
           caughtBoundaryScanFailure = boundaryScanFailure;
           boundaryScanFailureForContext = caughtBoundaryScanFailure;
-          throw t.a((Throwable) ((Object) boundaryScanFailureForContext), "ld.B(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) boundaryScanFailureForContext), "ld.B(" + methodGuard + ')');
         }
     }
 

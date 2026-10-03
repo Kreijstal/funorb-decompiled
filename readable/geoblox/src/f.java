@@ -48,7 +48,7 @@ class f extends qf implements pl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ class f extends qf implements pl {
             ml.field_t = new pf(param0, param1, false, true, true);
             hk.field_C.b(ml.field_t, -81);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "f.HA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "f.HA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -79,28 +79,28 @@ class f extends qf implements pl {
             this.field_pb.field_C = true;
             this.b((byte) -61, (el) (this.field_pb));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void i(byte param0) {
-        if (!(vl.field_n == null)) {
+        if (!(InstrumentPatch.field_n == null)) {
             return;
         }
         if (param0 >= -48) {
             availableEntityCategoryCount = -112;
-            vl.field_n = od.a(480, 0, 0, -3, MenuScreen.field_i, 640);
-            if (null != vl.field_n) {
-                sl.a(vl.field_n, 57);
+            InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.field_i, 640);
+            if (null != InstrumentPatch.field_n) {
+                sl.a(InstrumentPatch.field_n, 57);
                 return;
             }
             return;
         }
-        vl.field_n = od.a(480, 0, 0, -3, MenuScreen.field_i, 640);
-        if (null == vl.field_n) {
+        InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.field_i, 640);
+        if (null == InstrumentPatch.field_n) {
             return;
         }
-        sl.a(vl.field_n, 57);
+        sl.a(InstrumentPatch.field_n, 57);
     }
 
     final void h(byte param0) {
@@ -154,7 +154,7 @@ class f extends qf implements pl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -699,7 +699,7 @@ class f extends qf implements pl {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -726,7 +726,7 @@ class f extends qf implements pl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

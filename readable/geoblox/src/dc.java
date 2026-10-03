@@ -33,7 +33,7 @@ final class dc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "dc.A(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "dc.A(" + param0 + ')');
         }
     }
 

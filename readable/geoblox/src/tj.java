@@ -27,7 +27,7 @@ final class tj {
             var6.appendCrc32(104, var4);
             var6.backpatchLengthByte(11700, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

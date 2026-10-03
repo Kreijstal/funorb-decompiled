@@ -21,7 +21,7 @@ final class ih {
             }
             TriangleMesh.field_w = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class ih {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(contactX).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(contactX).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class ih {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

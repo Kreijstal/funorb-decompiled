@@ -203,7 +203,7 @@ final class eh {
     }
 
     final static void a(byte param0) {
-        vl.field_q = false;
+        InstrumentPatch.field_q = false;
         tc.field_a = null;
         int var1 = 46 / ((param0 + 64) / 39);
         oe.field_V = 0;

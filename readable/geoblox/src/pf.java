@@ -112,7 +112,7 @@ final class pf extends ee implements ga, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "pf.K(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "pf.K(" + param0 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class pf extends ee implements ga, pl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class pf extends ee implements ga, pl {
             }
             this.field_P.i((byte) 110);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class pf extends ee implements ga, pl {
                 js5CrcErrorText = (String) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -224,7 +224,7 @@ final class pf extends ee implements ga, pl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class pf extends ee implements ga, pl {
                 var11_ref_String = "";
               }
               fj.field_q.writeNullTerminatedText(var11_ref_String, 0);
-              el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
+              el.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
               fj.field_q.backpatchLengthShortBE(-var10 + fj.field_q.position, true);
             } else {
               fc.field_d.position = 0;
@@ -325,7 +325,7 @@ final class pf extends ee implements ga, pl {
               fj.field_q.writeByte((byte) 124, 16);
               fj.field_q.position = fj.field_q.position + 1;
               var9 = fj.field_q.position;
-              el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
+              el.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
               fj.field_q.backpatchLengthByte(11700, fj.field_q.position - var9);
             }
             cm.a(-1, -1);
@@ -436,7 +436,7 @@ final class pf extends ee implements ga, pl {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -482,7 +482,7 @@ final class pf extends ee implements ga, pl {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -685,7 +685,7 @@ final class pf extends ee implements ga, pl {
               } else {
                 stackIn_68_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -887,7 +887,7 @@ final class pf extends ee implements ga, pl {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

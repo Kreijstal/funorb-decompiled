@@ -333,7 +333,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -667,7 +667,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             expectedDigestDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessageBeforeDigest).append(expectedDigestDescription).append(',').append(expectedIndexRevision).append(',').append(sweepCompletedRequests).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessageBeforeDigest).append(expectedDigestDescription).append(',').append(expectedIndexRevision).append(',').append(sweepCompletedRequests).append(')').toString());
         }
     }
 

@@ -48,7 +48,7 @@ abstract class ArchiveNetworkClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "ji.B(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "ji.B(" + param0 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ abstract class ArchiveNetworkClient {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

@@ -122,7 +122,7 @@ abstract class dk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ abstract class dk {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw t.a((Throwable) ((Object) var1), "dk.O(" + param0 + ')');
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "dk.O(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

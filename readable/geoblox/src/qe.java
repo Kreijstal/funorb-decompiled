@@ -84,7 +84,7 @@ final class qe {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class qe {
         } catch (java.lang.RuntimeException quotaUpdateFailure) {
           caughtQuotaUpdateFailure = quotaUpdateFailure;
           quotaUpdateFailureForContext = caughtQuotaUpdateFailure;
-          throw t.a((Throwable) ((Object) quotaUpdateFailureForContext), "qe.B(" + additionalReleases + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) quotaUpdateFailureForContext), "qe.B(" + additionalReleases + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class qe {
                 qe.a(91, -118, 58, -45, (PlatformTaskDispatcher) null, -79);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

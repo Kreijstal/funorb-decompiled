@@ -199,7 +199,7 @@ final class GameplaySession {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1999,7 +1999,7 @@ final class GameplaySession {
           } else {
             appletArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) constructorFailureForContext), ((StringBuilder) (Object) constructorMessagePrefix).append(appletArgumentDescription).append(',').append(enableTutorial).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructorFailureForContext), ((StringBuilder) (Object) constructorMessagePrefix).append(appletArgumentDescription).append(',').append(enableTutorial).append(')').toString());
         }
     }
 

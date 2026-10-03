@@ -79,7 +79,7 @@ final class lc {
         } catch (java.lang.RuntimeException spawnQueueFailure) {
           caughtSpawnQueueFailure = spawnQueueFailure;
           spawnQueueFailureForContext = caughtSpawnQueueFailure;
-          throw t.a((Throwable) ((Object) spawnQueueFailureForContext), "lc.E(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) spawnQueueFailureForContext), "lc.E(" + methodGuard + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class lc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class lc {
           } else {
             sourceArrayArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) blendFailureBeforeArrayDescriptions), ((StringBuilder) (Object) blendMessageBeforeSourceDescription).append(sourceArrayArgumentDescription).append(',').append(sampleColor).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) blendFailureBeforeArrayDescriptions), ((StringBuilder) (Object) blendMessageBeforeSourceDescription).append(sourceArrayArgumentDescription).append(',').append(sampleColor).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class lc {
           } else {
             metricsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "lc.D(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "lc.D(" + param0 + ')');
         }
     }
 

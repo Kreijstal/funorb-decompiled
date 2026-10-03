@@ -51,7 +51,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
                 fc.pointerActivityPending = true;
             }
         } catch (RuntimeException callbackFailure) {
-            throw t.a((Throwable) ((Object) callbackFailure), "le.mouseEntered(" + (event != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseEntered(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
             param2.previousNode.nextNode = param2;
             param2.nextNode.previousNode = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
                 fc.pointerActivityPending = true;
             }
         } catch (RuntimeException callbackFailure) {
-            throw t.a((Throwable) ((Object) callbackFailure), "le.mouseDragged(" + (event != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseDragged(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 

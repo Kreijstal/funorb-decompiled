@@ -65,7 +65,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             }
             event.consume();
         } catch (RuntimeException callbackFailure) {
-            throw t.a((Throwable) ((Object) callbackFailure), "wl.keyTyped(" + (event != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "wl.keyTyped(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           } else {
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 

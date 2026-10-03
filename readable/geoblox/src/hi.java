@@ -99,7 +99,7 @@ final class hi extends ee implements ta, pl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ final class hi extends ee implements ta, pl {
           } else {
             meshDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) renderFailureBeforeContext), ((StringBuilder) (Object) renderMessagePrefix).append(meshDescription).append(',').append(halfVectorYQ8).append(',').append(lightDirectionYQ8).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) renderFailureBeforeContext), ((StringBuilder) (Object) renderMessagePrefix).append(meshDescription).append(',').append(halfVectorYQ8).append(',').append(lightDirectionYQ8).append(')').toString());
         }
     }
 
@@ -466,7 +466,7 @@ final class hi extends ee implements ta, pl {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) encodingFailureBeforeTextDescription), ((StringBuilder) (Object) encodingMessageBeforeDestination).append(destinationDescription).append(',').append(characterStart).append(',').append(characterEnd).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encodingFailureBeforeTextDescription), ((StringBuilder) (Object) encodingMessageBeforeDestination).append(destinationDescription).append(',').append(characterStart).append(',').append(characterEnd).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -499,7 +499,7 @@ final class hi extends ee implements ta, pl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -534,7 +534,7 @@ final class hi extends ee implements ta, pl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -549,7 +549,7 @@ final class hi extends ee implements ta, pl {
             var4 = param0;
             ((dj) ((Object) var3)).a(param1 - 136, var4, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hi.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hi.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -558,7 +558,7 @@ final class hi extends ee implements ta, pl {
             super.a(param0, param1, param2, param3);
             this.field_H.field_D = this.h((byte) -118);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -605,7 +605,7 @@ final class hi extends ee implements ta, pl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -655,7 +655,7 @@ final class hi extends ee implements ta, pl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

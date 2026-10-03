@@ -51,7 +51,7 @@ final class GameScreen extends MenuScreen {
           L0: {
             L1: {
               L2: {
-                actionId = t.menuActionIds[this.screenId][itemIndex];
+                actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
                 if ((actionId == 8) &&
                     (var4 == 0)) {
                   L4: {
@@ -137,7 +137,7 @@ final class GameScreen extends MenuScreen {
                       break L16;
                     }
                   }
-                  if (vl.field_n == null) {
+                  if (InstrumentPatch.field_n == null) {
                     if (0 != this.field_o) {
                       if (PrefixCodeDecoder.pointerXSnapshot <= 260) {
                         break L0;
@@ -273,7 +273,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "c.M(" + itemIndex + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "c.M(" + itemIndex + ',' + param1 + ')');
         }
     }
 
@@ -361,7 +361,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.I(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.I(" + param0 + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.Q(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.Q(" + param0 + ')');
         }
     }
 
@@ -563,7 +563,7 @@ final class GameScreen extends MenuScreen {
                   }
                 }
                 if (og.field_n > 0) {
-                  if (vl.field_n == null) {
+                  if (InstrumentPatch.field_n == null) {
                     if (this.activeTicks > 200) {
                       stackIn_122_0 = 200;
                     } else {
@@ -769,7 +769,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.T(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.T(" + param0 + ')');
         }
     }
 
@@ -783,7 +783,7 @@ final class GameScreen extends MenuScreen {
         try {
           L1: {
             var3_int = 121 % ((44 - param1) / 36);
-            actionId = t.menuActionIds[this.screenId][itemIndex];
+            actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
             if ((actionId == 8) &&
                 (var5 == 0)) {
               if (j.field_gb > 10) {
@@ -813,7 +813,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) runtimeException), "c.N(" + itemIndex + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "c.N(" + itemIndex + ',' + param1 + ')');
         }
     }
 
@@ -826,7 +826,7 @@ final class GameScreen extends MenuScreen {
                 GameScreen.c(79, (byte) -113);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "c.S(" + param0 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "c.S(" + param0 + ')');
         }
     }
 
@@ -875,7 +875,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.C(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.C(" + param0 + ')');
         }
     }
 
@@ -1059,7 +1059,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var4), "c.P(" + pointerX + ',' + pointerY + ',' + param2 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var4), "c.P(" + pointerX + ',' + pointerY + ',' + param2 + ')');
         }
     }
 
@@ -1214,7 +1214,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "c.U(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2_ref), "c.U(" + param0 + ')');
         }
     }
 
@@ -1247,7 +1247,7 @@ final class GameScreen extends MenuScreen {
           this.volumePreviewTicks = this.volumePreviewTicks + 1;
           this.activeTicks = this.activeTicks + 1;
           if ((this.field_C) &&
-              (vl.field_n != null) &&
+              (InstrumentPatch.field_n != null) &&
               (this.activeTicks > 1500)) {
             ArchiveCatalog.b(255);
             this.field_C = false;
@@ -1405,7 +1405,7 @@ final class GameScreen extends MenuScreen {
                   }
                 }
                 if ((og.field_n > 0) &&
-                    (null != vl.field_n)) {
+                    (null != InstrumentPatch.field_n)) {
                   if ((he.pointerPressYSnapshot > 317) &&
                       (352 > he.pointerPressYSnapshot)) {
                     if (!((mc.pointerPressXSnapshot > 350) &&
@@ -1545,7 +1545,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.R(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.R(" + param0 + ')');
         }
     }
 
@@ -1737,7 +1737,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) runtimeException), "c.B(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "c.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1753,7 +1753,7 @@ final class GameScreen extends MenuScreen {
             this.field_q = -45;
           }
           L2: {
-            actionId = t.menuActionIds[this.screenId][itemIndex];
+            actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
             var8 = actionId;
             if (var8 == 8) {
               L4: {
@@ -1806,7 +1806,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var7), "c.G(" + itemIndex + ',' + pointerX + ',' + initialClick + ',' + rowOffsetY + ',' + heldRepeat + ',' + pointerButton + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var7), "c.G(" + itemIndex + ',' + pointerX + ',' + initialClick + ',' + rowOffsetY + ',' + heldRepeat + ',' + pointerButton + ')');
         }
     }
 
@@ -1837,7 +1837,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.A(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1853,7 +1853,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "c.J(" + param0 + ',' + itemCount + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "c.J(" + param0 + ',' + itemCount + ')');
         }
     }
 
@@ -1891,7 +1891,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.E(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.E(" + param0 + ')');
         }
     }
 
@@ -1931,12 +1931,12 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.F(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.F(" + param0 + ')');
         }
     }
 
     GameScreen(Geoblox param0, int param1) {
-        super(t.menuActionIds[param1].length, 140, 500, 140, 40);
+        super(InstrumentEnvelope.menuActionIds[param1].length, 140, 500, 140, 40);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1971,7 +1971,7 @@ final class GameScreen extends MenuScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1994,7 +1994,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.H(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.H(" + param0 + ')');
         }
     }
 
@@ -2021,7 +2021,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.K(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.K(" + param0 + ')');
         }
     }
 
@@ -2040,7 +2040,7 @@ final class GameScreen extends MenuScreen {
           td.playPcmSample(-348, fl.field_c[29]);
           var3_int = 0;
           var4 = 0;
-          actionId = t.menuActionIds[this.screenId][itemIndex];
+          actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
           if (param1 != -2) {
             this.updateTransition(-70);
           }
@@ -2146,7 +2146,7 @@ final class GameScreen extends MenuScreen {
                                         break L1;
                                       }
                                     }
-                                    if (vl.field_n == null) {
+                                    if (InstrumentPatch.field_n == null) {
                                       this.field_C = true;
                                     }
                                     if ((!ArchiveCatalog.b(255)) &&
@@ -2161,7 +2161,7 @@ final class GameScreen extends MenuScreen {
                                       break L1;
                                     }
                                   }
-                                  vl.field_p = 0;
+                                  InstrumentPatch.field_p = 0;
                                   ug.field_c = 0;
                                   ra.field_d = -2147483648;
                                 }
@@ -2357,7 +2357,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "c.L(" + itemIndex + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "c.L(" + itemIndex + ',' + param1 + ')');
         }
     }
 
@@ -2369,7 +2369,7 @@ final class GameScreen extends MenuScreen {
         var4 = Geoblox.field_C;
         try {
           L0: {
-            actionId = t.menuActionIds[this.screenId][itemIndex];
+            actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
             if (actionId == 8) {
               if (j.field_gb >= 70) {
                 j.field_gb = 80;
@@ -2401,7 +2401,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) runtimeException), "c.V(" + param0 + ',' + itemIndex + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "c.V(" + param0 + ',' + itemIndex + ')');
         }
     }
 
@@ -2450,7 +2450,7 @@ final class GameScreen extends MenuScreen {
             }
           }
           L4: {
-            actionId = t.menuActionIds[this.screenId][itemIndex];
+            actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
             var7 = tl.field_f[actionId];
             if (actionId == 15) {
               if ((var5_int == 4) &&
@@ -2660,7 +2660,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var5), "c.O(" + selected + ',' + param1 + ',' + itemIndex + ',' + rowY + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var5), "c.O(" + selected + ',' + param1 + ',' + itemIndex + ',' + rowY + ')');
         }
     }
 
@@ -2719,7 +2719,7 @@ final class GameScreen extends MenuScreen {
                         break L4;
                       }
                     }
-                    if (5 != t.menuActionIds[this.screenId][this.selectedItemIndex]) {
+                    if (5 != InstrumentEnvelope.menuActionIds[this.screenId][this.selectedItemIndex]) {
                       break L4;
                     }
                     this.selectedItemIndex = 1;
@@ -2739,7 +2739,7 @@ final class GameScreen extends MenuScreen {
                       break L4;
                     }
                   }
-                  if (t.menuActionIds[this.screenId][this.selectedItemIndex] == 5) {
+                  if (InstrumentEnvelope.menuActionIds[this.screenId][this.selectedItemIndex] == 5) {
                     break L4;
                   }
                   this.selectedItemIndex = 3;
@@ -2848,7 +2848,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "c.D(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.D(" + param0 + ')');
         }
     }
 

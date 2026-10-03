@@ -37,7 +37,7 @@ final class l extends oj {
         try {
             this.field_f.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -27,7 +27,7 @@ final class vg {
             param2.secondaryKey = param0;
             param2.nextSecondaryNode.previousSecondaryNode = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

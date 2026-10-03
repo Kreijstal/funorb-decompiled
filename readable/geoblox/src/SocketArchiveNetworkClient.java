@@ -305,7 +305,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               } else {
                 socketDescription = "{...}";
               }
-              throw t.a((Throwable) ((Object) attachmentFailureBeforeContext), ((StringBuilder) (Object) attachmentMessagePrefix).append(socketDescription).append(',').append(methodGuard).append(',').append(useControlOpcode2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) attachmentFailureBeforeContext), ((StringBuilder) (Object) attachmentMessagePrefix).append(socketDescription).append(',').append(methodGuard).append(',').append(useControlOpcode2).append(')').toString());
             }
         } catch (RuntimeException | Error uncheckedAttachmentFailure) {
             throw uncheckedAttachmentFailure;

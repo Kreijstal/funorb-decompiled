@@ -135,7 +135,7 @@ final class td extends hk {
             }
             GameplayEntity.registerAudioStream(false, PcmSampleStream.createForPlaybackRate(sample, 100, 96));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "td.G(" + methodGuard + ',' + (sample != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.G(" + methodGuard + ',' + (sample != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class td extends hk {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(writeOffset).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(writeOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class td extends hk {
             this.field_G = this.field_G + 1;
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "td.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class td extends hk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class td extends hk {
         try {
             this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

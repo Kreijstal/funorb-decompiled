@@ -58,7 +58,7 @@ final class gi implements Iterable {
             param2.field_a = param0;
             param2.nextNode.previousNode = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "gi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class gi implements Iterable {
           } else {
             groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageAfterThirdDescription).append(groupNameDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageAfterThirdDescription).append(groupNameDescription).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class gi implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "gi.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "gi.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

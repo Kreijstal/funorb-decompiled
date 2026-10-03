@@ -379,7 +379,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_311_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_310_0), ((StringBuilder) (Object) stackIn_310_1).append(stackIn_311_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_310_0), ((StringBuilder) (Object) stackIn_310_1).append(stackIn_311_2).append(')').toString());
         }
         if (ch.field_h) {
           var3++;
@@ -442,7 +442,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) digestFailureBeforeContext), ((StringBuilder) (Object) digestMessagePrefix).append(sourceDescription).append(',').append(bitsPerByte).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) digestFailureBeforeContext), ((StringBuilder) (Object) digestMessagePrefix).append(sourceDescription).append(',').append(bitsPerByte).append(')').toString());
         }
     }
 
@@ -831,7 +831,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) rasterFailureBeforeContext), ((StringBuilder) (Object) rasterMessagePrefix).append(destinationDescription).append(',').append(topGreen).append(',').append(bottomX).append(',').append(topBlue).append(',').append(middleY).append(',').append(guard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rasterFailureBeforeContext), ((StringBuilder) (Object) rasterMessagePrefix).append(destinationDescription).append(',').append(topGreen).append(',').append(bottomX).append(',').append(topBlue).append(',').append(middleY).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -930,7 +930,7 @@ abstract class SpriteState extends DualLinkNode {
               } else {
                 stackIn_36_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -952,7 +952,7 @@ abstract class SpriteState extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "wh.LA(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "wh.LA(" + param0 + ')');
         }
     }
 
@@ -969,7 +969,7 @@ abstract class SpriteState extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "wh.NA(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "wh.NA(" + param0 + ')');
         }
     }
 

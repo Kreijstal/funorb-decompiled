@@ -38,7 +38,7 @@ final class bd extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "bd.B(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "bd.B(" + param0 + ')');
         }
     }
 

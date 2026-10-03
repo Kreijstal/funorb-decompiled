@@ -61,7 +61,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) triangleFailureBeforeContext), ((StringBuilder) (Object) triangleMessagePrefix).append(destinationDescription).append(',').append(bottomY).append(',').append(bottomX).append(',').append(middleY).append(',').append(topY).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) triangleFailureBeforeContext), ((StringBuilder) (Object) triangleMessagePrefix).append(destinationDescription).append(',').append(bottomY).append(',').append(bottomX).append(',').append(middleY).append(',').append(topY).append(')').toString());
         }
     }
 

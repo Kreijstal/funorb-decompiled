@@ -57,7 +57,7 @@ final class gf {
             entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
             sh.mainRasterBuffer.setAsRasterTarget(255);
         } catch (RuntimeException collisionSpriteRenderFailure) {
-            throw t.a((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class gf {
               } else {
                 stackIn_9_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -171,7 +171,7 @@ final class gf {
           } else {
             labelArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) progressFailureBeforeArgumentDescriptions), ((StringBuilder) (Object) progressMessageBeforeLabelDescription).append(labelArgumentDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressFailureBeforeArgumentDescriptions), ((StringBuilder) (Object) progressMessageBeforeLabelDescription).append(labelArgumentDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

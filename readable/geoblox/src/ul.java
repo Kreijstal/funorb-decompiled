@@ -180,7 +180,7 @@ final class ul {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ul.C(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ul.C(" + methodGuard + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class ul {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class ul {
             cl.field_b.trimY = bk.field_b.height;
             id.a(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

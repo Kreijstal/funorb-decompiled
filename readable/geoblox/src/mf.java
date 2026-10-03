@@ -57,7 +57,7 @@ final class mf {
           } else {
             graphicsArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) decodeFailureBeforeArchiveDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(graphicsArchiveDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodeFailureBeforeArchiveDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(graphicsArchiveDescription).append(')').toString());
         }
     }
 

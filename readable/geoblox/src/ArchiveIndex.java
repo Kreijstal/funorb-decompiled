@@ -255,7 +255,7 @@ final class ArchiveIndex {
           } else {
             packedBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) indexFailureBeforeContext), ((StringBuilder) (Object) indexMessagePrefix).append(packedBytesDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) indexFailureBeforeContext), ((StringBuilder) (Object) indexMessagePrefix).append(packedBytesDescription).append(')').toString());
         }
     }
 
@@ -289,7 +289,7 @@ final class ArchiveIndex {
             var8.appendCrc32(78, var4);
             var8.backpatchLengthByte(11700, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class ArchiveIndex {
             }
             this.decodeIndex((byte) 119, packedIndexBytes);
         } catch (RuntimeException constructionFailure) {
-            throw t.a((Throwable) ((Object) constructionFailure), "bm.<init>(" + (packedIndexBytes != null ? "{...}" : "null") + ',' + expectedCrc32 + ',' + (expectedWhirlpoolDigest != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "bm.<init>(" + (packedIndexBytes != null ? "{...}" : "null") + ',' + expectedCrc32 + ',' + (expectedWhirlpoolDigest != null ? "{...}" : "null") + ')');
         }
     }
 

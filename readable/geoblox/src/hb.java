@@ -49,7 +49,7 @@ final class hb implements dh {
                 this.field_a.drawParagraph(param4.field_s, var13 + (param0 + param4.field_v), param2 + param4.field_m + this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class hb implements dh {
             this.field_g = param6;
             this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

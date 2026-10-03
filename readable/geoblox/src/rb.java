@@ -41,7 +41,7 @@ final class rb {
           } else {
             metricsArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeArchiveDescriptions), ((StringBuilder) (Object) fontMessageBeforeMetricsArchive).append(metricsArchiveDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeArchiveDescriptions), ((StringBuilder) (Object) fontMessageBeforeMetricsArchive).append(metricsArchiveDescription).append(')').toString());
         }
     }
 

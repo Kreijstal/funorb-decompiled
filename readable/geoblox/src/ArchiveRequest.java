@@ -102,7 +102,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

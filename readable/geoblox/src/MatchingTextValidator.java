@@ -12,7 +12,7 @@ final class MatchingTextValidator extends TextInputValidator {
         try {
             this.referenceInput = referenceInput;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "n.<init>(" + (validatedInput != null ? "{...}" : "null") + ',' + (referenceInput != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "n.<init>(" + (validatedInput != null ? "{...}" : "null") + ',' + (referenceInput != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class MatchingTextValidator extends TextInputValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class MatchingTextValidator extends TextInputValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

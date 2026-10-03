@@ -27,7 +27,7 @@ final class ol extends hk {
         try {
             var5.backpatchLengthByte(11700, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class ol extends hk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ol extends hk {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

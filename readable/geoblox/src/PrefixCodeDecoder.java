@@ -48,7 +48,7 @@ final class PrefixCodeDecoder {
           } else {
             bufferDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) textFailureBeforeDescription), ((StringBuilder) (Object) textMessagePrefix).append(bufferDescription).append(',').append(guardAndDestinationOffset).append(',').append(maximumDecodedLength).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textFailureBeforeDescription), ((StringBuilder) (Object) textMessagePrefix).append(bufferDescription).append(',').append(guardAndDestinationOffset).append(',').append(maximumDecodedLength).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class PrefixCodeDecoder {
           } else {
             metricsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(',').append(runNullMetricsGuardCall).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(',').append(runNullMetricsGuardCall).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class PrefixCodeDecoder {
           } else {
             sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) decodingFailureBeforeDestination), ((StringBuilder) (Object) decodingMessageBeforeSource).append(sourceDescription).append(',').append(destinationPosition).append(',').append(methodGuard).append(',').append(outputLengthThenEnd).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodingFailureBeforeDestination), ((StringBuilder) (Object) decodingMessageBeforeSource).append(sourceDescription).append(',').append(destinationPosition).append(',').append(methodGuard).append(',').append(outputLengthThenEnd).append(')').toString());
         }
     }
 

@@ -142,7 +142,7 @@ final class IntrusiveDeque {
             }
             node.nextNode.previousNode = node;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tf.A(" + (node != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tf.A(" + (node != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class IntrusiveDeque {
                 this.addLast(52, (IntrusiveNode) null);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tf.I(" + (destination != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tf.I(" + (destination != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class IntrusiveDeque {
             node.previousNode.nextNode = node;
             node.nextNode.previousNode = node;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tf.P(" + param0 + ',' + (node != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tf.P(" + param0 + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

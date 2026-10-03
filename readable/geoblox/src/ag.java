@@ -36,7 +36,7 @@ final class ag extends TextInputValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class ag extends TextInputValidator {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class ag extends TextInputValidator {
           } else {
             textBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) decodingFailureBeforeDescription), ((StringBuilder) (Object) decodingMessagePrefix).append(textBytesDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodingFailureBeforeDescription), ((StringBuilder) (Object) decodingMessagePrefix).append(textBytesDescription).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class ag extends TextInputValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class ag extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "ag.F(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2_ref), "ag.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class ag extends TextInputValidator {
             }
             fa.a(rj.loggingInText, 480, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

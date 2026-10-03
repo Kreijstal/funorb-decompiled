@@ -111,7 +111,7 @@ final class ck {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
-          throw t.a((Throwable) ((Object) contextFailure), "ck.D(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contextFailure), "ck.D(" + methodGuard + ')');
         }
     }
 
@@ -132,8 +132,8 @@ final class ck {
         var2 = Geoblox.field_C;
         try {
           if (!IntrusiveDeque.a((byte) 124)) {
-            if ((vl.field_n != null) &&
-                (vl.field_n.field_c)) {
+            if ((InstrumentPatch.field_n != null) &&
+                (InstrumentPatch.field_n.field_c)) {
               jk.a((byte) -87);
               oh.field_b.a(false, new ij(oh.field_b, ei.field_hb));
             }
@@ -151,7 +151,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ck.B(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ck.B(" + param0 + ')');
         }
     }
 

@@ -33,7 +33,7 @@ final class ic {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "ic.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "ic.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class ic {
               } else {
                 stackIn_20_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

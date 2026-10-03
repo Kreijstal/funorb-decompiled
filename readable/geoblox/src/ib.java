@@ -28,7 +28,7 @@ abstract class ib implements dg {
             }
             int guardRemainder = -30 % ((-2 - guard) / 40);
         } catch (RuntimeException caughtSpanFailure) {
-            throw t.a((Throwable) ((Object) caughtSpanFailure), "ib.AA(" + guard + ',' + (destinationPixels != null ? "{...}" : "null") + ',' + destinationIndex + ',' + halfRgb + ',' + pixelCount + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caughtSpanFailure), "ib.AA(" + guard + ',' + (destinationPixels != null ? "{...}" : "null") + ',' + destinationIndex + ',' + halfRgb + ',' + pixelCount + ')');
         }
     }
 
@@ -72,7 +72,7 @@ abstract class ib implements dg {
             var3.writeByte((byte) -84, param2.field_f);
             var3.writeByte((byte) 125, param2.field_l);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ib.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ib.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

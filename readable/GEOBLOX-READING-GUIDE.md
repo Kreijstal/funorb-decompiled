@@ -3145,3 +3145,58 @@ the controlled decoding/cache behavior, not real archived songs, arbitrary
 malformed files, synthesized audio or game/device performance. All score/reader
 parameters and locals now have guarded names. Large-method counts remain 21
 spans of at least 300 lines, 15 containing labels.
+
+## Instrument-patch decoding and selective sample loading (pass 88)
+
+`InstrumentPatch.loadInstrumentPatch(patchId, methodGuard, archive)` fetches a
+single-file archive entry and returns null if absent. `kj` loads patches by the
+instrument IDs found in `MusicScore.instrumentNoteMasks`, then calls
+`loadSelectedSamples(sampleBudget, noteSelectionMask, methodGuard, sampleCache)`.
+Successful real archive fetching/uncached decoding is source-audited here.
+
+The private patch constructor decodes 128 keys. It scans zero-terminated runs
+for key groups, panning and envelope assignments, preserving separate cursors
+for their reserved value streams. An envelope-index map reuses or creates
+`InstrumentEnvelope` objects. A fourth run table drives sample IDs and base
+volumes; pitch bytes are cumulative unsigned low/high deltas. Sample IDs also
+add the original high-bit loop flag to each signed short, keeping wraparound.
+`kj` subtracts the low 15 bits from the key's pitch and uses the sign for looping.
+Key-group/pan/envelope runs count active sample keys, whereas sample/volume runs
+cover physical keys. Empty sample runs leave defaults or carry the prior volume.
+
+Per-key fields now read `encodedSampleIds`, `keySamples`,
+`pitchOffsetsAndLoopFlag`, `keyGroups`, `keyPans`, `keyVolumes` and `keyEnvelopes`;
+`globalVolume` multiplies the per-key amplitude. Volume/release envelopes store
+alternating time/value bytes. Release pairs start at value 64 and end at the
+zero-initialized final value. Envelope times accumulate unsigned deltas plus one.
+Optional key gain and pan curves apply across all 128 keys, including inactive
+ones. Interpolation uses `divideFloorWithPositiveDivisor`; gain keeps signed-byte
+volume arithmetic, and pan treats the existing byte as unsigned then clamps
+between 0 and 128. The fixture oracle checks negative rounding and wraps.
+
+Envelope fields identify volume/release pair arrays and their key scaling,
+exponential `decayRate`/`decayKeyScaling`, plus `vibratoPhaseStep`, `vibratoDepth`
+and `vibratoRampTicks`. These roles follow the playback controller's actual
+volume, pitch and per-tick updates. The envelope holder also contains shared
+static UI data and `withFailureContext`; those utilities are separate from the
+instance envelope meaning. The latter preserves an existing failure wrapper
+and its original cause while appending context, or creates a wrapper for a new
+cause. Diagnostic string literals retain their original JVM method spellings.
+
+Selected-sample loading skips zero-mask keys, resolves nonzero IDs through the
+existing sample cache, and reuses the preceding ID's result. Subtracting one
+from the encoded ID yields a cache-family bit and the sample index shifted by
+two. Successfully resolved keys receive the exact cached sample object and
+clear their encoded ID. Missing samples return false while retaining IDs;
+a short mask or null provider can fail after partial installation. The method's
+guard can write a shared UI flag after the loop completes without throwing; that flag is not
+renamed as music state. `clearEncodedSampleIds` releases IDs; guard >-94 also
+clears pitch data. Installed samples remain.
+
+The fixed patch probe has 960 decoding cases, 64 sample-loading cases, 256
+cleanup cases, 98 floor-division checks, 12 wrapper checks and 369 null/truncated
+inputs. Native/raw/readable results match. Cache hits and zero-budget misses
+are controlled; uncached sample decoding, real patches, synthesized sound and
+game/device performance are unverified. All patch music parameters/locals and
+instance fields now have guarded names, while the constructor's nine generated
+block labels and the overall 21 large spans/15 labeled spans remain.

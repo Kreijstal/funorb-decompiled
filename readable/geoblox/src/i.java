@@ -11,7 +11,7 @@ final class i {
                 avatarMaskRaster = (Sprite) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "i.A(" + param0 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "i.A(" + param0 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "i.D(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "i.D(" + methodGuard + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class i {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class i {
           } else {
             meshContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(meshContextDescription).append(',').append(maximumVisibleDepth).append(',').append(cullBackfaces).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(meshContextDescription).append(',').append(maximumVisibleDepth).append(',').append(cullBackfaces).append(')').toString());
         }
     }
 
@@ -420,7 +420,7 @@ final class i {
           } else {
             meshContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(meshContextDescription).append(',').append(maximumVisibleDepth).append(',').append(cullBackfaces).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(meshContextDescription).append(',').append(maximumVisibleDepth).append(',').append(cullBackfaces).append(')').toString());
         }
     }
 }

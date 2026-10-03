@@ -74,7 +74,7 @@ final class jf implements dh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class jf implements dh {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) spanFailureBeforeContext), ((StringBuilder) (Object) spanMessagePrefix).append(destinationDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) spanFailureBeforeContext), ((StringBuilder) (Object) spanMessagePrefix).append(destinationDescription).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class jf implements dh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class jf implements dh {
           } else {
             textDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) encodingFailureBeforeDescription), ((StringBuilder) (Object) encodingMessagePrefix).append(textDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encodingFailureBeforeDescription), ((StringBuilder) (Object) encodingMessagePrefix).append(textDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ final class jf implements dh {
             this.field_k = param1;
             this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

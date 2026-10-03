@@ -38,7 +38,7 @@ final class ra implements Iterable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class ra implements Iterable {
             GzipInflater.field_e = track;
             uh.field_y.a(false, GzipInflater.field_e, -1706);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class ra implements Iterable {
           return;
         }
         var3 = 1 << param2;
-        if ((vl.field_p & var3) != 0) {
+        if ((InstrumentPatch.field_p & var3) != 0) {
           return;
         }
         ug.field_c = ug.field_c | var3;
@@ -82,26 +82,26 @@ final class ra implements Iterable {
         var5 = stackIn_8_0;
         if (param1 < -47) {
           if (var5 != 0) {
-            vl.field_p = vl.field_p | var3;
+            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
             stackIn_35_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             var4 = stackIn_35_0;
           } else {
             dc.field_a = dc.field_a | 1 << var4;
             el.field_g = el.field_g - (1 << var4);
-            vl.field_p = vl.field_p | var3;
+            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
             stackIn_45_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             var4 = stackIn_45_0;
           }
         } else {
           ticketingUnreadCountText = (String) null;
           if (var5 != 0) {
-            vl.field_p = vl.field_p | var3;
+            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
             stackIn_23_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             var4 = stackIn_23_0;
           } else {
             dc.field_a = dc.field_a | 1 << var4;
             el.field_g = el.field_g - (1 << var4);
-            vl.field_p = vl.field_p | var3;
+            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
             stackIn_13_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             var4 = stackIn_13_0;
           }
@@ -154,7 +154,7 @@ final class ra implements Iterable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

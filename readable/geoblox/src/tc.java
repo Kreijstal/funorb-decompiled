@@ -40,7 +40,7 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "tc.A(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2_ref), "tc.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class tc {
                 }
                 oj.a(param2, 20000000);
             } catch (RuntimeException runtimeException) {
-                throw t.a((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+                throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

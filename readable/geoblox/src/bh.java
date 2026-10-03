@@ -31,7 +31,7 @@ final class bh extends java.awt.Canvas {
         try {
             this.field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class bh extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "bh.B(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "bh.B(" + param0 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class bh extends java.awt.Canvas {
         try {
             this.field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class bh extends java.awt.Canvas {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(propagateVariant).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(propagateVariant).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class bh extends java.awt.Canvas {
         try {
             this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

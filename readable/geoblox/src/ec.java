@@ -32,7 +32,7 @@ final class ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "ec.C(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "ec.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ec.A(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ec.A(" + methodGuard + ')');
         }
     }
 

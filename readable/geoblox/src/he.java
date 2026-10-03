@@ -11,7 +11,7 @@ final class he extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
             this.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "he.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "he.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class he extends java.awt.Canvas implements java.awt.event.FocusListener {
                 field_a = (java.awt.Frame) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "he.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "he.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -51,7 +51,7 @@ final class DiskArchiveCache {
           } else {
             bytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(entryId).append(',').append(length).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(entryId).append(',').append(length).append(')').toString());
         }
     }
 
@@ -364,7 +364,7 @@ final class DiskArchiveCache {
               } else {
                 bytesDescription = "{...}";
               }
-              throw t.a((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessagePrefix).append(bytesDescription).append(',').append(reuseExistingChain).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessagePrefix).append(bytesDescription).append(',').append(reuseExistingChain).append(')').toString());
             }
         } catch (RuntimeException | Error uncheckedWriteFailure) {
             throw uncheckedWriteFailure;
@@ -392,7 +392,7 @@ final class DiskArchiveCache {
             ag.a(j.field_gb, (byte) -67);
             fj.field_p.b(param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class DiskArchiveCache {
             this.indexFile = indexFile;
             this.archiveId = archiveId;
         } catch (RuntimeException constructionFailure) {
-            throw t.a((Throwable) ((Object) constructionFailure), "jh.<init>(" + archiveId + ',' + (dataFile != null ? "{...}" : "null") + ',' + (indexFile != null ? "{...}" : "null") + ',' + maximumEntryLength + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "jh.<init>(" + archiveId + ',' + (dataFile != null ? "{...}" : "null") + ',' + (indexFile != null ? "{...}" : "null") + ',' + maximumEntryLength + ')');
         }
     }
 

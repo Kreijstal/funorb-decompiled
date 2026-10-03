@@ -468,7 +468,7 @@ final class GameplayEntity extends DualLinkNode {
           } else {
             relatedEntityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) neighborRemovalFailureForContext), ((StringBuilder) (Object) neighborRemovalMessagePrefix).append(relatedEntityArgumentDescription).append(',').append(startingChildIndex).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) neighborRemovalFailureForContext), ((StringBuilder) (Object) neighborRemovalMessagePrefix).append(relatedEntityArgumentDescription).append(',').append(startingChildIndex).append(')').toString());
         }
     }
 
@@ -578,7 +578,7 @@ final class GameplayEntity extends DualLinkNode {
                 GameplayEntity.registerAudioStream(false, (PcmSampleStream) null);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ja.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ja.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

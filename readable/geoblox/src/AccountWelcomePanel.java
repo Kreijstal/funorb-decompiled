@@ -36,7 +36,7 @@ final class AccountWelcomePanel extends ee implements pl {
             this.b((byte) -102, this.createAccountButton);
             this.b((byte) -104, this.justPlayButton);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wi.<init>()");
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.<init>()");
         }
     }
 
@@ -74,7 +74,7 @@ final class AccountWelcomePanel extends ee implements pl {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class AccountWelcomePanel extends ee implements pl {
             ng.field_F.drawParagraph(ArchiveNetworkClient.createWelcomeText, var6 + 20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.maxAscent);
             super.a(param0, param1, (byte) 63, param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wi.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class AccountWelcomePanel extends ee implements pl {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 AccountWelcomePanel.f(69);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ')');
         }
     }
 
@@ -3176,7 +3176,7 @@ final class AccountWelcomePanel extends ee implements pl {
                   } else {
                     archiveContextToken = "{...}";
                   }
-                  throw t.a((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) failureContextBuilder).append(archiveContextToken).append(')').toString());
+                  throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) failureContextBuilder).append(archiveContextToken).append(')').toString());
                 }
                 if (sharedFlowFlag != 0) {
                   invertedClientFlagValue = (!ch.field_h);

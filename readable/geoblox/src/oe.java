@@ -72,7 +72,7 @@ abstract class oe extends dd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ abstract class oe extends dd {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
-          throw t.a((Throwable) ((Object) contextFailure), "oe.N(" + startIndex + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contextFailure), "oe.N(" + startIndex + ')');
         }
     }
 
@@ -188,7 +188,7 @@ abstract class oe extends dd {
           } else {
             bytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) checksumFailureBeforeDescription), ((StringBuilder) (Object) checksumMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(startPosition).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checksumFailureBeforeDescription), ((StringBuilder) (Object) checksumMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(startPosition).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ abstract class oe extends dd {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ abstract class oe extends dd {
           if (param0) {
             stackIn_7_0 = ug.field_c;
           } else {
-            stackIn_7_0 = vl.field_p;
+            stackIn_7_0 = InstrumentPatch.field_p;
           }
           var5 = stackIn_7_0;
           var6 = 0;
@@ -424,7 +424,7 @@ abstract class oe extends dd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "oe.R(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "oe.R(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -531,8 +531,8 @@ abstract class oe extends dd {
         if (param1 != 20) {
           this.field_M = -34;
         }
-        vl.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
-        vl.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
+        InstrumentPatch.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
+        InstrumentPatch.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
         var4 = this.field_h - 79;
         var5 = 169;
         var6 = 127;

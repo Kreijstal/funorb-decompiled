@@ -67,7 +67,7 @@ final class ad extends ia {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -97,14 +97,14 @@ final class ad extends ia {
                 stackIn_6_0 = this.field_k;
                 stackIn_6_1 = (pc) (param1);
                 stackIn_6_2 = -70;
-                if (param1.field_z.field_j[param1.field_D] >= 0) {
+                if (param1.field_z.pitchOffsetsAndLoopFlag[param1.field_D] >= 0) {
                   stackIn_7_3 = false;
                 } else {
                   stackIn_7_3 = true;
                 }
                 ((kj) (Object) stackIn_6_0).a(stackIn_6_1, (byte) stackIn_6_2, stackIn_7_3);
               }
-              if (param1.field_z.field_j[param1.field_D] < 0) {
+              if (param1.field_z.pitchOffsetsAndLoopFlag[param1.field_D] < 0) {
                 param1.field_u.g(-1);
               }
               param2 = param1.field_B / var4_int;
@@ -125,7 +125,7 @@ final class ad extends ia {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class ad extends ia {
             var1.drawHalfSize(0, 0);
             id.a(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ad.H(" + param0 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ad.H(" + param0 + ')');
         }
     }
 
@@ -254,7 +254,7 @@ final class ad extends ia {
                   stackIn_11_0 = this.field_k;
                   stackIn_11_1 = (pc) (param4);
                   stackIn_11_2 = -70;
-                  if (param4.field_z.field_j[param4.field_D] >= 0) {
+                  if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] >= 0) {
                     stackIn_12_3 = false;
                   } else {
                     stackIn_12_3 = true;
@@ -262,7 +262,7 @@ final class ad extends ia {
                   ((kj) (Object) stackIn_11_0).a(stackIn_11_1, (byte) stackIn_11_2, stackIn_12_3);
                   param4.field_u.c(var9, var11.i());
                 }
-                if (param4.field_z.field_j[param4.field_D] < 0) {
+                if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] < 0) {
                   param4.field_u.g(-1);
                 }
                 var11.c(var9);
@@ -296,7 +296,7 @@ final class ad extends ia {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class ad extends ia {
         try {
             this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

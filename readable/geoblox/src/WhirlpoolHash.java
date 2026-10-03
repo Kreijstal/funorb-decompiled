@@ -167,7 +167,7 @@ final class WhirlpoolHash {
           } else {
             sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) hashUpdateFailureBeforeDescription), ((StringBuilder) (Object) hashUpdateMessagePrefix).append(sourceDescription).append(',').append(remainingBitCount).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) hashUpdateFailureBeforeDescription), ((StringBuilder) (Object) hashUpdateMessagePrefix).append(sourceDescription).append(',').append(remainingBitCount).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class WhirlpoolHash {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ final class WhirlpoolHash {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) digestFailureBeforeDescription), ((StringBuilder) (Object) digestMessagePrefix).append(destinationDescription).append(',').append(destinationOffset).append(',').append(skipResetGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) digestFailureBeforeDescription), ((StringBuilder) (Object) digestMessagePrefix).append(destinationDescription).append(',').append(destinationOffset).append(',').append(skipResetGuard).append(')').toString());
         }
     }
 

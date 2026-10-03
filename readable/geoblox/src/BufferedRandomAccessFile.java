@@ -235,7 +235,7 @@ final class BufferedRandomAccessFile {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(remainingLength).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(remainingLength).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class BufferedRandomAccessFile {
           } else {
             sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessagePrefix).append(sourceDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) writeFailureBeforeContext), ((StringBuilder) (Object) writeMessagePrefix).append(sourceDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -368,7 +368,7 @@ final class BufferedRandomAccessFile {
             this.readFully(destination, destination.length, 0, 9868);
             int unusedReadGuardQuotient = -83 / ((methodGuard + 9) / 39);
         } catch (RuntimeException readAllFailure) {
-            throw t.a((Throwable) ((Object) readAllFailure), "sk.I(" + methodGuard + ',' + (destination != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readAllFailure), "sk.I(" + methodGuard + ',' + (destination != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -496,7 +496,7 @@ final class BufferedRandomAccessFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "sk.D(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "sk.D(" + param0 + ')');
         }
     }
 
@@ -514,7 +514,7 @@ final class BufferedRandomAccessFile {
             this.readBuffer = new byte[readBufferCapacity];
             this.position = 0L;
         } catch (RuntimeException constructionFailure) {
-            throw t.a((Throwable) ((Object) constructionFailure), "sk.<init>(" + (file != null ? "{...}" : "null") + ',' + readBufferCapacity + ',' + writeBufferCapacity + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "sk.<init>(" + (file != null ? "{...}" : "null") + ',' + readBufferCapacity + ',' + writeBufferCapacity + ')');
         }
     }
 

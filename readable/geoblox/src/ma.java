@@ -61,7 +61,7 @@ final class ma extends IntrusiveNode {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
-          throw t.a((Throwable) ((Object) contextFailure), "ma.E(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contextFailure), "ma.E(" + methodGuard + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class ma extends IntrusiveNode {
           } else {
             entityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) contactOverlapFailureBeforeEntityDescription), ((StringBuilder) (Object) contactOverlapMessagePrefix).append(entityArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contactOverlapFailureBeforeEntityDescription), ((StringBuilder) (Object) contactOverlapMessagePrefix).append(entityArgumentDescription).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ final class ma extends IntrusiveNode {
           } else {
             spriteArrayArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) panelFailureBeforeSpriteDescription), ((StringBuilder) (Object) panelMessagePrefix).append(spriteArrayArgumentDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelFailureBeforeSpriteDescription), ((StringBuilder) (Object) panelMessagePrefix).append(spriteArrayArgumentDescription).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class ma extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class ma extends IntrusiveNode {
             this.field_g = param2;
             this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ma.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ma.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

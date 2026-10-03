@@ -52,7 +52,7 @@ final class uk extends TextInputValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class uk extends TextInputValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class uk extends TextInputValidator {
           if (null != fl.field_b) {
             fj.field_q.writeZeroPrefixedNullTerminatedText(fl.field_b, (byte) -126);
           }
-          el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
+          el.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
           fj.field_q.backpatchLengthShortBE(-var5_int + fj.field_q.position, true);
           cm.a(-1, -1);
           return;
@@ -217,7 +217,7 @@ final class uk extends TextInputValidator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class uk extends TextInputValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class uk extends TextInputValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -363,7 +363,7 @@ final class uk extends TextInputValidator {
             v.field_e = param1;
             pc.a(12, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "uk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "uk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

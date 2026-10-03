@@ -129,7 +129,7 @@ final class BufferedSocket implements Runnable {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) readFailureForMessage), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(guard).append(',').append(destinationOffset).append(',').append(remainingLength).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureForMessage), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(guard).append(',').append(destinationOffset).append(',').append(remainingLength).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class BufferedSocket implements Runnable {
           } else {
             sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) enqueueFailureForMessage), ((StringBuilder) (Object) enqueueMessagePrefix).append(sourceDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) enqueueFailureForMessage), ((StringBuilder) (Object) enqueueMessagePrefix).append(sourceDescription).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class BufferedSocket implements Runnable {
             va.a("", applet, -1);
             h.a(applet, false);
         } catch (RuntimeException reloadFailure) {
-            throw t.a((Throwable) ((Object) reloadFailure), "ba.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reloadFailure), "ba.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class BufferedSocket implements Runnable {
             this.outputStream = this.socket.getOutputStream();
             this.bufferCapacity = bufferCapacity;
         } catch (RuntimeException socketConfigurationFailure) {
-            throw t.a((Throwable) ((Object) socketConfigurationFailure), "ba.<init>(" + (socket != null ? "{...}" : "null") + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) socketConfigurationFailure), "ba.<init>(" + (socket != null ? "{...}" : "null") + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
         }
     }
 

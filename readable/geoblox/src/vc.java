@@ -38,7 +38,7 @@ final class vc extends dk {
         } catch (java.lang.RuntimeException caughtCompactionParameter) {
           caughtCompactionFailure = caughtCompactionParameter;
           compactionFailure = caughtCompactionFailure;
-          throw t.a((Throwable) ((Object) compactionFailure), "vc.G(" + guard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) compactionFailure), "vc.G(" + guard + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class vc extends dk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class vc extends dk {
             var8.field_c[param0.length()] = (var7 >> 1) + param2;
             qb.a(0, var8, param0, 60, param4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class vc extends dk {
             var8.field_c[param2.length()] = param4.measureTextWidth(param2) + param1;
             qb.a(0, var8, param2, 60, param4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -279,7 +279,7 @@ final class vc extends dk {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ final class vc extends dk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

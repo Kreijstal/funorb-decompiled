@@ -28,7 +28,7 @@ final class eb {
             }
             this.field_j = var4_float * (float)this.field_c / (float)(1 + this.field_d);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "eb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "eb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class eb {
               } else {
                 stackIn_12_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

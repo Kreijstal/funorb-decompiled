@@ -25,7 +25,7 @@ final class LimitedRandomAccessFile {
             this.file.write(source, sourceOffset, length);
             this.position = this.position + (long)length;
         } catch (RuntimeException writeFailure) {
-            throw t.a((Throwable) ((Object) writeFailure), "pa.A(" + (source != null ? "{...}" : "null") + ',' + sourceOffset + ',' + methodGuard + ',' + length + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) writeFailure), "pa.A(" + (source != null ? "{...}" : "null") + ',' + sourceOffset + ',' + methodGuard + ',' + length + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class LimitedRandomAccessFile {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class LimitedRandomAccessFile {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class LimitedRandomAccessFile {
               } else {
                 stackIn_14_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -240,7 +240,7 @@ final class LimitedRandomAccessFile {
             }
             this.file.seek(0L);
         } catch (RuntimeException constructionFailure) {
-            throw t.a((Throwable) ((Object) constructionFailure), "pa.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maximumLength + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "pa.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
     }
 

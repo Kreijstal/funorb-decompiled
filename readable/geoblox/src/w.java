@@ -131,7 +131,7 @@ final class w {
           } else {
             resourceNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageAfterThirdDescription).append(resourceNameDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageAfterThirdDescription).append(resourceNameDescription).append(')').toString());
         }
     }
 

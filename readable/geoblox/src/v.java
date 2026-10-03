@@ -123,7 +123,7 @@ final class v {
           } else {
             packedBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) unpackFailureBeforeContext), ((StringBuilder) (Object) unpackMessagePrefix).append(packedBytesDescription).append(',').append(uncompressedTypeComplement).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) unpackFailureBeforeContext), ((StringBuilder) (Object) unpackMessagePrefix).append(packedBytesDescription).append(',').append(uncompressedTypeComplement).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class v {
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
-        if (null != vl.field_n) {
+        if (null != InstrumentPatch.field_n) {
           return;
         }
         if (param0 < -108) {
@@ -447,7 +447,7 @@ final class v {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

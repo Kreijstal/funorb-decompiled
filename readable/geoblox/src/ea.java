@@ -76,7 +76,7 @@ final class ea extends IntrusiveNode {
               } else {
                 stackIn_16_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -118,7 +118,7 @@ final class ea extends IntrusiveNode {
           } else {
             metricsArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeArchiveDescriptions), ((StringBuilder) (Object) fontMessageBeforeMetricsArchive).append(metricsArchiveDescription).append(',').append(fileId).append(',').append(groupId).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeArchiveDescriptions), ((StringBuilder) (Object) fontMessageBeforeMetricsArchive).append(metricsArchiveDescription).append(',').append(fileId).append(',').append(groupId).append(')').toString());
         }
     }
 

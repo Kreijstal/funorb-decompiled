@@ -11,7 +11,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
         try {
             this.notesUsed = notesUsed;
         } catch (RuntimeException caughtFailure) {
-            throw t.a((Throwable) ((Object) caughtFailure), "pj.<init>(" + (notesUsed != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caughtFailure), "pj.<init>(" + (notesUsed != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -181,7 +181,7 @@ final class jc {
           } else {
             inputContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(inputContextDescription).append(',').append(readEnabled).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(inputContextDescription).append(',').append(readEnabled).append(')').toString());
         }
     }
 

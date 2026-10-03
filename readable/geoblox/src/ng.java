@@ -32,7 +32,7 @@ final class ng extends sh {
             var3.field_I = true;
             var3.a((byte) -37, (el) (this));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ng.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ng.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

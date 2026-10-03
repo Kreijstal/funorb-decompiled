@@ -72,7 +72,7 @@ final class GzipInflater {
               } else {
                 destinationDescription = "{...}";
               }
-              throw t.a((Throwable) ((Object) inflateFailureBeforeContext), ((StringBuilder) (Object) inflateMessageBeforeDestination).append(destinationDescription).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) inflateFailureBeforeContext), ((StringBuilder) (Object) inflateMessageBeforeDestination).append(destinationDescription).append(')').toString());
             }
         } catch (RuntimeException | Error uncheckedInflateFailure) {
             throw uncheckedInflateFailure;
@@ -160,7 +160,7 @@ final class GzipInflater {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

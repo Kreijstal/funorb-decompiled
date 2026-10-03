@@ -15,7 +15,7 @@ final class ke {
             buffer.writeShortBE(serverNumber, 28695);
             buffer.writeByte((byte) 124, languageId);
         } catch (RuntimeException headerWriteFailure) {
-            throw t.a((Throwable) ((Object) headerWriteFailure), "ke.B(" + languageId + ',' + methodGuard + ',' + clientId + ',' + serverNumber + ',' + (buffer != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) headerWriteFailure), "ke.B(" + languageId + ',' + methodGuard + ',' + clientId + ',' + serverNumber + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -220,7 +220,7 @@ final class PacketByteCipher {
             }
             this.initialize(true);
         } catch (RuntimeException cipherConstructionFailure) {
-            throw t.a((Throwable) ((Object) cipherConstructionFailure), "ne.<init>(" + (seed != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cipherConstructionFailure), "ne.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

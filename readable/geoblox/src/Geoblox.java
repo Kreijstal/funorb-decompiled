@@ -32,8 +32,8 @@ public final class Geoblox extends wf {
             this.loadJewelsTheme(true);
         }
         ScorePopup.b(122);
-        if (!(vl.field_n == null)) {
-            vl.field_n.a(0, MenuScreen.field_i);
+        if (!(InstrumentPatch.field_n == null)) {
+            InstrumentPatch.field_n.a(0, MenuScreen.field_i);
         }
         pc.a((byte) 124);
     }
@@ -425,8 +425,8 @@ public final class Geoblox extends wf {
         bh.a((byte) 81);
         ec.a(true);
         InstrumentNoteMask.b(false);
-        vl.b(true);
-        t.a(17348);
+        InstrumentPatch.b(true);
+        InstrumentEnvelope.a(17348);
         kh.a(104);
         PacketByteCipher.b((byte) -125);
         SocketArchiveNetworkClient.i(-84);
@@ -589,7 +589,7 @@ public final class Geoblox extends wf {
                 Geoblox.setRasterTarget(-34, (Sprite) null);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "Geoblox.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "Geoblox.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -618,12 +618,12 @@ public final class Geoblox extends wf {
         if (param0) {
           return;
         }
-        if ((vl.field_n != null) &&
-            (vl.field_n.field_c)) {
-          vl.field_n.a(0, MenuScreen.field_i);
-          vl.field_n = null;
+        if ((InstrumentPatch.field_n != null) &&
+            (InstrumentPatch.field_n.field_c)) {
+          InstrumentPatch.field_n.a(0, MenuScreen.field_i);
+          InstrumentPatch.field_n = null;
         }
-        if (null == vl.field_n) {
+        if (null == InstrumentPatch.field_n) {
           stackIn_9_1 = false;
         } else {
           stackIn_9_1 = true;
@@ -660,7 +660,7 @@ public final class Geoblox extends wf {
               } else {
                 if ((dd.a((byte) 47)) &&
                     (!jk.field_a)) {
-                  stackIn_91_0 = !(vl.field_n == null);
+                  stackIn_91_0 = !(InstrumentPatch.field_n == null);
                   L10: {
                     var2 = sl.a(stackIn_91_0, (wf) (this), false);
                     if (var2 != 2364824) {
@@ -668,9 +668,9 @@ public final class Geoblox extends wf {
                           (2 != var2)) {
                         break L10;
                       }
-                      if (null != vl.field_n) {
-                        vl.field_n.a(0, MenuScreen.field_i);
-                        vl.field_n = null;
+                      if (null != InstrumentPatch.field_n) {
+                        InstrumentPatch.field_n.a(0, MenuScreen.field_i);
+                        InstrumentPatch.field_n = null;
                       }
                       if (var2 == 2) {
                         gf.a(k.c(109), 62);
@@ -717,8 +717,8 @@ public final class Geoblox extends wf {
                   pg.screenChangePending = false;
                   if (!fh.c(-95)) {
                     if (0 < og.field_n) {
-                      t.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
-                      og.screens[1].setItemCount(-12831, t.menuActionIds[1].length);
+                      InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
+                      og.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
                       if (0 == el.gameplayReturnScreenId) {
                         f.i((byte) -112);
                         og.screens[0].activeTicks = 0;
@@ -826,14 +826,14 @@ public final class Geoblox extends wf {
         int transitionSplitY;
         int var4;
         var4 = field_C;
-        if (vl.field_n != null) {
-          stackIn_3_0 = vl.field_n;
+        if (InstrumentPatch.field_n != null) {
+          stackIn_3_0 = InstrumentPatch.field_n;
         } else {
           stackIn_3_0 = f.field_kb;
         }
         var2 = stackIn_3_0;
         if (bl.b(255)) {
-          if (vl.field_n != null) {
+          if (InstrumentPatch.field_n != null) {
             stackIn_7_0 = true;
           } else {
             stackIn_7_0 = lh.field_d;
@@ -897,7 +897,7 @@ public final class Geoblox extends wf {
           qj.transitionCurtain.draw(0, 6 * TriangleMesh.screenTransitionTick - 480);
         }
         if (cg.b(true)) {
-          if (null == vl.field_n) {
+          if (null == InstrumentPatch.field_n) {
             stackIn_42_0 = lh.field_d;
           } else {
             stackIn_42_0 = true;
@@ -1042,7 +1042,7 @@ public final class Geoblox extends wf {
         int screenIndex = 0;
         int var3 = field_C;
         if (!(og.field_n > 0)) {
-            t.menuActionIds[1] = new int[]{1, 8, 9, 3, 6};
+            InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 3, 6};
         }
         for (screenIndex = 0; screenIndex < 9; screenIndex++) {
             og.screens[screenIndex] = new GameScreen((Geoblox) (this), screenIndex);

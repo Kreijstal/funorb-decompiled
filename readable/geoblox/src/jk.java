@@ -8,13 +8,13 @@ final class jk {
     static String returnToGameText;
 
     final static void a(byte param0) {
-        if (vl.field_n == null) {
+        if (InstrumentPatch.field_n == null) {
             return;
         }
-        nb.a(-2, vl.field_n);
-        vl.field_n.a(0, MenuScreen.field_i);
+        nb.a(-2, InstrumentPatch.field_n);
+        InstrumentPatch.field_n.a(0, MenuScreen.field_i);
         if (param0 <= -14) {
-            vl.field_n = null;
+            InstrumentPatch.field_n = null;
             if (!(null == rb.field_d)) {
                 rb.field_d.b((byte) -101);
             }
@@ -23,7 +23,7 @@ final class jk {
         }
         PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
         jk.a((java.awt.Frame) null, 17, (PlatformTaskDispatcher) null);
-        vl.field_n = null;
+        InstrumentPatch.field_n = null;
         if (!(null == rb.field_d)) {
             rb.field_d.b((byte) -101);
         }
@@ -69,7 +69,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "jk.F(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "jk.F(" + param0 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class jk {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class jk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

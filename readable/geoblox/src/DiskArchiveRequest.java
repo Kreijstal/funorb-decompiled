@@ -41,7 +41,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             param1.field_h = var5.readIntBE((byte) -54);
             var5.backpatchLengthByte(param2 ^ 11696, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "o.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "o.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

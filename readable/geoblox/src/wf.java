@@ -96,7 +96,7 @@ abstract class wf extends ch {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ abstract class wf extends ch {
         try {
             this.a(480, param1, param0, (byte) 81, param2);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wf.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wf.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ abstract class wf extends ch {
         java.awt.Container var6;
         var5 = Geoblox.field_C;
         if (null != rb.field_d) {
-          if (vl.field_n == null) {
+          if (InstrumentPatch.field_n == null) {
             var6 = jf.a(true);
             var4 = var6.getSize();
             rb.field_d.a((byte) 126, var4.height, var4.width);
@@ -260,7 +260,7 @@ abstract class wf extends ch {
           vc.field_i = vc.field_f.a(true);
         }
         L4: {
-          if (t.b(param1 ^ 19649)) {
+          if (InstrumentEnvelope.b(param1 ^ 19649)) {
             var3 = 1200 * sb.a(true);
             if (!this.field_t) {
               if (~var3 <= ~IndexedSpriteState.a(-76)) {
@@ -500,7 +500,7 @@ abstract class wf extends ch {
           }
         } else {
           stackIn_3_1 = false;
-          if (vl.field_n == null) {
+          if (InstrumentPatch.field_n == null) {
             stackIn_4_2 = false;
           } else {
             stackIn_4_2 = true;
@@ -725,7 +725,7 @@ abstract class wf extends ch {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

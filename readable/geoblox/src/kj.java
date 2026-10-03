@@ -83,7 +83,7 @@ final class kj extends ia {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -105,8 +105,8 @@ final class kj extends ia {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        t var10 = null;
-        t var11 = null;
+        InstrumentEnvelope var10 = null;
+        InstrumentEnvelope var11 = null;
         int stackIn_3_0 = 0;
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -126,27 +126,27 @@ final class kj extends ia {
           var4 = 16384 + var4 * param1.field_w >> 15;
           var4 = 128 + var4 * this.field_R >> 8;
           var4 = var4 * this.field_L[param1.field_t] + 128 >> 8;
-          if (var11.field_c > 0) {
-            var4 = (int)(0.5 + Math.pow(0.5, 0.00001953125 * (double)param1.field_l * (double)var11.field_c) * (double)var4);
+          if (var11.decayRate > 0) {
+            var4 = (int)(0.5 + Math.pow(0.5, 0.00001953125 * (double)param1.field_l * (double)var11.decayRate) * (double)var4);
           }
-          if (null != var11.field_f) {
+          if (null != var11.volumeEnvelope) {
             var6 = param1.field_o;
-            var7 = var11.field_f[1 + param1.field_k];
-            if (param1.field_k < var11.field_f.length - 2) {
-              var8 = (var10.field_f[param1.field_k] & 255) << 8;
-              var9 = (255 & var11.field_f[param1.field_k + 2]) << 8;
-              var7 = var7 + (var11.field_f[param1.field_k + 3] - var7) * (-var8 + var6) / (var9 - var8);
+            var7 = var11.volumeEnvelope[1 + param1.field_k];
+            if (param1.field_k < var11.volumeEnvelope.length - 2) {
+              var8 = (var10.volumeEnvelope[param1.field_k] & 255) << 8;
+              var9 = (255 & var11.volumeEnvelope[param1.field_k + 2]) << 8;
+              var7 = var7 + (var11.volumeEnvelope[param1.field_k + 3] - var7) * (-var8 + var6) / (var9 - var8);
             }
             var4 = var4 * var7 + 32 >> 6;
           }
           if ((param1.field_y > 0) &&
-              (var11.field_e != null)) {
+              (var11.releaseEnvelope != null)) {
             var6 = param1.field_y;
-            var7 = var11.field_e[1 + param1.field_q];
-            if (-2 + var11.field_e.length > param1.field_q) {
-              var8 = var10.field_e[param1.field_q] << 8 & 65280;
-              var9 = var11.field_e[param1.field_q + 2] << 8 & 65280;
-              var7 = var7 + (var11.field_e[param1.field_q + 3] - var7) * (-var8 + var6) / (-var8 + var9);
+            var7 = var11.releaseEnvelope[1 + param1.field_q];
+            if (-2 + var11.releaseEnvelope.length > param1.field_q) {
+              var8 = var10.releaseEnvelope[param1.field_q] << 8 & 65280;
+              var9 = var11.releaseEnvelope[param1.field_q + 2] << 8 & 65280;
+              var7 = var7 + (var11.releaseEnvelope[param1.field_q + 3] - var7) * (-var8 + var6) / (-var8 + var9);
             }
             var4 = var7 * var4 + 32 >> 6;
           }
@@ -162,7 +162,7 @@ final class kj extends ia {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class kj extends ia {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        t var4 = null;
+        InstrumentEnvelope var4 = null;
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -184,13 +184,13 @@ final class kj extends ia {
             var3_int = (param1.field_n * param1.field_s >> 12) + param1.field_E;
             var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> 12);
             var4 = param1.field_x;
-            if (0 < var4.field_d) {
-              if ((var4.field_b <= 0) &&
+            if (0 < var4.vibratoPhaseStep) {
+              if ((var4.vibratoDepth <= 0) &&
                   (this.field_s[param1.field_t] <= 0)) {
                 break L0;
               }
-              var5 = var4.field_b << 2;
-              var6 = var4.field_j << 1;
+              var5 = var4.vibratoDepth << 2;
+              var6 = var4.vibratoRampTicks << 1;
               if (var6 > param1.field_j) {
                 var5 = var5 * param1.field_j / var6;
               }
@@ -216,7 +216,7 @@ final class kj extends ia {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ final class kj extends ia {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        t var7 = null;
+        InstrumentEnvelope var7 = null;
         int var8 = 0;
         double var9 = 0.0;
         try {
@@ -288,38 +288,38 @@ final class kj extends ia {
           }
           param3.field_u.d(this.a(112, param3));
           var7 = param3.field_x;
-          param3.field_m = param3.field_m + var7.field_d;
+          param3.field_m = param3.field_m + var7.vibratoPhaseStep;
           param3.field_j = param3.field_j + 1;
           var8 = param4 ? 1 : 0;
           var9 = 0.000005086263020833333 * (double)((-60 + param3.field_D << 8) + (param3.field_n * param3.field_s >> 12));
-          if (var7.field_c > 0) {
-            if (var7.field_h > 0) {
-              param3.field_l = param3.field_l + (int)(128.0 * Math.pow(2.0, (double)var7.field_h * var9) + 0.5);
+          if (var7.decayRate > 0) {
+            if (var7.decayKeyScaling > 0) {
+              param3.field_l = param3.field_l + (int)(128.0 * Math.pow(2.0, (double)var7.decayKeyScaling * var9) + 0.5);
             } else {
               param3.field_l = param3.field_l + 128;
             }
-            if (var7.field_c * param3.field_l >= 819200) {
+            if (var7.decayRate * param3.field_l >= 819200) {
               var8 = 1;
             }
           }
           L7: {
-            if (var7.field_f != null) {
-              if (var7.field_g > 0) {
-                param3.field_o = param3.field_o + (int)(0.5 + 128.0 * Math.pow(2.0, var9 * (double)var7.field_g));
+            if (var7.volumeEnvelope != null) {
+              if (var7.volumeEnvelopeKeyScaling > 0) {
+                param3.field_o = param3.field_o + (int)(0.5 + 128.0 * Math.pow(2.0, var9 * (double)var7.volumeEnvelopeKeyScaling));
               } else {
                 param3.field_o = param3.field_o + 128;
               }
-              while (param3.field_k < -2 + var7.field_f.length) {
-                if ((65280 & var7.field_f[param3.field_k + 2] << 8) < param3.field_o) {
+              while (param3.field_k < -2 + var7.volumeEnvelope.length) {
+                if ((65280 & var7.volumeEnvelope[param3.field_k + 2] << 8) < param3.field_o) {
                   param3.field_k = param3.field_k + 2;
                   continue;
                 }
                 break;
               }
-              if (param3.field_k != -2 + var7.field_f.length) {
+              if (param3.field_k != -2 + var7.volumeEnvelope.length) {
                 break L7;
               }
-              if (var7.field_f[param3.field_k + 1] != 0) {
+              if (var7.volumeEnvelope[param3.field_k + 1] != 0) {
                 break L7;
               }
               var8 = 1;
@@ -328,25 +328,25 @@ final class kj extends ia {
           }
           L11: {
             if ((param3.field_y >= 0) &&
-                (var7.field_e != null) &&
+                (var7.releaseEnvelope != null) &&
                 ((this.field_m[param3.field_t] & 1) == 0)) {
               if ((0 <= param3.field_r) &&
                   (param3 == this.field_D[param3.field_t][param3.field_r])) {
                 break L11;
               }
-              if (0 < var7.field_a) {
-                param3.field_y = param3.field_y + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.field_a) * 128.0);
+              if (0 < var7.releaseEnvelopeKeyScaling) {
+                param3.field_y = param3.field_y + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.releaseEnvelopeKeyScaling) * 128.0);
               } else {
                 param3.field_y = param3.field_y + 128;
               }
-              while (-2 + var7.field_e.length > param3.field_q) {
-                if (param3.field_y > (var7.field_e[param3.field_q + 2] & 255) << 8) {
+              while (-2 + var7.releaseEnvelope.length > param3.field_q) {
+                if (param3.field_y > (var7.releaseEnvelope[param3.field_q + 2] & 255) << 8) {
                   param3.field_q = param3.field_q + 2;
                   continue;
                 }
                 break;
               }
-              if (-2 + var7.field_e.length != param3.field_q) {
+              if (-2 + var7.releaseEnvelope.length != param3.field_q) {
                 break L11;
               }
               var8 = 1;
@@ -391,7 +391,7 @@ final class kj extends ia {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ final class kj extends ia {
         Object var7 = null;
         InstrumentNoteMask var8 = null;
         int var9 = 0;
-        vl var10 = null;
+        InstrumentPatch var10 = null;
         int var11 = 0;
         var11 = Geoblox.field_C;
         try {
@@ -439,9 +439,9 @@ final class kj extends ia {
           var8 = (InstrumentNoteMask) ((Object) param3.instrumentNoteMasks.a((byte) 125));
           while (var8 != null) {
             var9 = (int)var8.field_a;
-            var10 = (vl) ((Object) this.field_q.a((long)var9, (byte) -91));
+            var10 = (InstrumentPatch) ((Object) this.field_q.a((long)var9, (byte) -91));
             if (var10 == null) {
-              var10 = vl.a(var9, (byte) 121, param4);
+              var10 = InstrumentPatch.loadInstrumentPatch(var9, (byte) 121, param4);
               if (var10 != null) {
                 this.field_q.a((byte) 102, var10, (long)var9);
               } else {
@@ -449,7 +449,7 @@ final class kj extends ia {
               }
             }
             if ((var10 != null) &&
-                (!var10.a((int[]) (var7), var8.notesUsed, param2 + 36, param0))) {
+                (!var10.loadSelectedSamples((int[]) (var7), var8.notesUsed, param2 + 36, param0))) {
               var6_int = 0;
             }
             var8 = (InstrumentNoteMask) ((Object) param3.instrumentNoteMasks.b(param2 - 100));
@@ -481,7 +481,7 @@ final class kj extends ia {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -552,7 +552,7 @@ final class kj extends ia {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -597,7 +597,7 @@ final class kj extends ia {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -886,7 +886,7 @@ final class kj extends ia {
             }
             this.a(param2 + 1832, param1, param0, true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "kj.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "kj.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -949,10 +949,10 @@ final class kj extends ia {
         if (param0 <= 65) {
             this.c(-76, (byte) -34);
         }
-        vl var4 = (vl) ((Object) this.field_q.a((byte) 125));
+        InstrumentPatch var4 = (InstrumentPatch) ((Object) this.field_q.a((byte) 125));
         while (var4 != null) {
-            var4.a((byte) -121);
-            var4 = (vl) ((Object) this.field_q.b(-52));
+            var4.clearEncodedSampleIds((byte) -121);
+            var4 = (InstrumentPatch) ((Object) this.field_q.b(-52));
         }
     }
 
@@ -1073,7 +1073,7 @@ final class kj extends ia {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1096,8 +1096,8 @@ final class kj extends ia {
         PcmSample var6;
         pc var7;
         pc var8;
-        vl var9;
-        vl var10;
+        InstrumentPatch var9;
+        InstrumentPatch var10;
         L0: {
           this.b(23327, param3, 64, param1);
           if (0 != (2 & this.field_m[param1])) {
@@ -1119,12 +1119,12 @@ final class kj extends ia {
             break L0;
           }
         }
-        var9 = (vl) ((Object) this.field_q.a((long)this.field_S[param1], (byte) -105));
+        var9 = (InstrumentPatch) ((Object) this.field_q.a((long)this.field_S[param1], (byte) -105));
         var10 = var9;
         if (var10 == null) {
           return;
         }
-        var6 = var9.field_k[param3];
+        var6 = var9.keySamples[param3];
         if (var6 == null) {
           return;
         }
@@ -1132,12 +1132,12 @@ final class kj extends ia {
         var7.field_t = param1;
         var7.field_z = var10;
         var7.field_i = var6;
-        var7.field_x = var9.field_f[param3];
-        var7.field_r = var9.field_i[param3];
+        var7.field_x = var9.keyEnvelopes[param3];
+        var7.field_r = var9.keyGroups[param3];
         var7.field_D = param3;
-        var7.field_w = var9.field_o[param3] * var10.field_g * (param2 * param2) + 1024 >> 11;
-        var7.field_h = 255 & var9.field_m[param3];
-        var7.field_E = (param3 << 8) - (var9.field_j[param3] & 32767);
+        var7.field_w = var9.keyVolumes[param3] * var10.globalVolume * (param2 * param2) + 1024 >> 11;
+        var7.field_h = 255 & var9.keyPans[param3];
+        var7.field_E = (param3 << 8) - (var9.pitchOffsetsAndLoopFlag[param3] & 32767);
         var7.field_q = 0;
         var7.field_l = 0;
         var7.field_o = 0;
@@ -1149,7 +1149,7 @@ final class kj extends ia {
           var7.field_u = PcmSampleStream.a(var6, this.a(83, var7), 0, this.a(var7, 761736646));
           stackIn_15_1 = (pc) (var7);
           stackIn_15_2 = -70;
-          if (0 <= var9.field_j[param3]) {
+          if (0 <= var9.pitchOffsetsAndLoopFlag[param3]) {
             stackIn_16_0 = this;
             stackIn_16_3 = false;
           } else {
@@ -1158,7 +1158,7 @@ final class kj extends ia {
           }
           this.a(stackIn_15_1, (byte) stackIn_15_2, stackIn_16_3);
         }
-        if (var9.field_j[param3] < 0) {
+        if (var9.pitchOffsetsAndLoopFlag[param3] < 0) {
           var7.field_u.g(-1);
         }
         if (0 <= var7.field_r) {
@@ -1231,7 +1231,7 @@ final class kj extends ia {
             this.field_k = this.field_C.trackTicks[this.field_t];
             this.field_A = this.field_C.getTickTime(this.field_k);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "kj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "kj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

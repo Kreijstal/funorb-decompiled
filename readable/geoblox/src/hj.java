@@ -43,7 +43,7 @@ final class hj {
             param1.addKeyListener(je.keyboardListener);
             param1.addFocusListener(je.keyboardListener);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

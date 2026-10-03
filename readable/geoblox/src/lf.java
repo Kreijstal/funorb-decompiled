@@ -30,7 +30,7 @@ class lf extends df {
                 extendedTextCharacters = (char[]) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "lf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "lf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,14 +39,14 @@ class lf extends df {
             this.field_c = param0;
             this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "lf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "lf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String c(byte param0) {
         if (param0 <= 14) {
             extendedTextCharacters = (char[]) null;
-            if (vl.field_q) {
+            if (InstrumentPatch.field_q) {
                 return null;
             }
             if (wg.field_e > oe.field_V) {
@@ -57,7 +57,7 @@ class lf extends df {
             }
             return null;
         }
-        if (vl.field_q) {
+        if (InstrumentPatch.field_q) {
             return null;
         }
         if (wg.field_e > oe.field_V) {

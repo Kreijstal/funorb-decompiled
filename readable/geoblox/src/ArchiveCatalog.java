@@ -15,12 +15,12 @@ final class ArchiveCatalog {
         if (param0 != 255) {
             return false;
         }
-        if (null == vl.field_n) {
+        if (null == InstrumentPatch.field_n) {
             return false;
         }
-        nb.a(-2, vl.field_n);
-        vl.field_n.a(0, MenuScreen.field_i);
-        vl.field_n = null;
+        nb.a(-2, InstrumentPatch.field_n);
+        InstrumentPatch.field_n.a(0, MenuScreen.field_i);
+        InstrumentPatch.field_n = null;
         return true;
     }
 
@@ -107,7 +107,7 @@ final class ArchiveCatalog {
           } else {
             groupDiskCacheDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) sourceFailureBeforeContext), ((StringBuilder) (Object) sourceMessageBeforeGroupCache).append(groupDiskCacheDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) sourceFailureBeforeContext), ((StringBuilder) (Object) sourceMessageBeforeGroupCache).append(groupDiskCacheDescription).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class ArchiveCatalog {
           } else {
             verificationModulusDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessageBeforeModulus).append(verificationModulusDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessageBeforeModulus).append(verificationModulusDescription).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class ArchiveCatalog {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

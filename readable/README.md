@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 6,871 guarded naming rules: 65 classes, 854 fields,
-598 methods, 1,762 parameters and 3,592 local declarations. Both 303-file corpora
+The current export has 7,015 guarded naming rules: 67 classes, 871 fields,
+603 methods, 1,776 parameters and 3,698 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,55 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Instrument patches and envelopes (pass 88)
+
+`InstrumentPatch` replaces `vl`; `InstrumentEnvelope` replaces `t`. All eight
+patch instance fields and nine envelope instance fields now have guarded roles.
+The 492-line patch constructor names its input and all 77 local declarations:
+run lengths/values, map indexes, sample/pitch reads, shared envelope assignments,
+curve interpolation, aliases, reused slots and exception-context carriers.
+The patch archive loader, selected-sample installer and encoded-ID cleanup also
+name every parameter/local. Shared static UI/graphics/authentication data keeps
+its independent identities; naming the instance holder does not assign those
+fields musical meanings.
+
+This naming-only pass adds 144 rules (two classes, 17 fields, five methods,
+14 parameters and 106 locals). It retains all 6,871 previous complete rules,
+raw source, decompiler and naming-tool pins. The current 7,015 rules apply 57,278
+edits, including one constructor spelling supplied by the new class rule.
+The same manifest records the additions; no source/decompiler migration or new
+JSON snapshot is introduced.
+
+The existing result-helper probe adds a separately pinned patch trace:
+`632bd2079878bac0a78c60d5bce99a688b1fdc552641b56dd62ad9d21e7d5b24`.
+Its 1,759 cases comprise 960 patch-decoding oracles, 64 selected-sample/cache
+oracles, 256 cleanup oracles, 98 positive-divisor floor oracles, 12 failure-context
+oracles and 369 null/truncated-input checks. The patch fixtures cross five sample
+layouts, one/two/four run groups, four envelope layouts, four gain/pan curve
+layouts and four seeds. Expected arrays/parameters come from those absolute
+fixture values, not a second implementation of the run/cursor decoder. They
+check signed-byte/short wrapping, active-key run consumption, envelope identity,
+curve rounding/clamping, default values and input retention.
+
+Sample fixtures prepopulate the real sample cache and check exact installed
+sample references, retained unresolved IDs, zero budget, selected/unselected
+keys, short-mask/null-provider partial failures and guard side-effect order.
+Cleanup retains samples and conditionally clears pitch data. The floor helper
+is checked against mathematical floor division only for positive divisors and
+guard -6. `InstrumentEnvelope.withFailureContext` preserves wrapper identity,
+original cause and accumulated context. Its other static methods retain their
+previous names until independently understood. The truncation checks require
+failure with original patch diagnostic context; exact failure traces also match
+native bytecode, without claiming arbitrary malformed-input equivalence.
+
+Native/raw/readable patch traces and every pre-existing result-helper trace
+match. Rules/migration/text checks pass; reproduction compiles both 303-file
+corpora and compares 138,772 bindings. Dictionary reversal recovers the pinned
+source byte-for-byte. Real archive loading, uncached PCM/Vorbis decoding, audio
+synthesis, complete gameplay and browser/phone acceptance remain unverified.
+No control-flow rewrite is made: 21 large spans, 15 with generated block labels,
+still remain.
 
 ## Music scores and track reading (pass 87)
 
@@ -1878,9 +1927,9 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 Pass 86 recorded its source migration in `sourceChange` with an empty
-`ruleChanges` list. Current pass 87 retains that source identity and records
-188 naming additions in `ruleChanges`, preserving all 6,683 previous complete
-naming objects.
+`ruleChanges` list. Pass 87 retained that source identity and added 188 naming rules.
+Current pass 88 retains it and records 144 additions in `ruleChanges`,
+preserving all 6,871 previous complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 

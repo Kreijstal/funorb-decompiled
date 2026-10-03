@@ -15,7 +15,7 @@ final class ik {
         try {
             var3.writeByte((byte) -49, param0.field_g);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class ik {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var5), "ik.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var5), "ik.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class ik {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(forceDetachSecond).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(forceDetachSecond).append(')').toString());
         }
     }
 

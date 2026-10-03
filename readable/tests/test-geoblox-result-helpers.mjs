@@ -21,6 +21,7 @@ const expectedArchiveSectorSha256 = '77dc4b47188f20793aaecb76f198e59850d0fc3d8af
 const expectedArchiveCompressionSha256 = '191d74dde65e8e0a6b5dc72a0193765baa165a94ab82ef5df15f10d86fd6f8fe';
 const expectedBzip2BlockSha256 = 'f237b1b6fd8e69c006fa43ec005f742ae5909d107d0ba5ec4574f2c804ad3ba9';
 const expectedMusicScoreSha256 = 'dbb5328e2411eeac81a8c9f515fb6ab1cd3f07f56a2bca7ffda0508a6f444ff4';
+const expectedInstrumentPatchSha256 = '632bd2079878bac0a78c60d5bce99a688b1fdc552641b56dd62ad9d21e7d5b24';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -45,7 +46,7 @@ try {
     assert.equal(files.length, pin.files);
     assert.equal(hash.digest('hex'), pin.sha256);
   }
-  let expected, expectedArchiveSectorSha256Baseline, expectedArchiveCompressionBaseline, expectedBzip2BlockBaseline, expectedMusicScoreBaseline;
+  let expected, expectedArchiveSectorSha256Baseline, expectedArchiveCompressionBaseline, expectedBzip2BlockBaseline, expectedMusicScoreBaseline, expectedInstrumentPatchBaseline;
   for (const variant of [...(nativeInput ? ['native'] : []), 'original', 'renamed']) {
     const native = variant === 'native', renamed = variant === 'renamed';
     const name = (symbol, original) => renamed ? aliases.get(symbol) ?? original : original;
@@ -1022,6 +1023,148 @@ try {
           check(cases==1671,"music case count");System.out.println("music-complete:"+cases+":1536:128");
         }
       }
+
+      class InstrumentPatchBehavior extends MusicScoreBehavior {
+        static class Envelope {
+          byte[] volume,release;int decay,volumeScale,releaseScale,decayScale,phase,depth,ramp;
+          Envelope(int mode,int seed,int index) {
+            int v=mode==1?2:mode==3?3:0,r=mode==2||mode==3?2:0;
+            if(v>0){volume=new byte[2*v];for(int i=0;i<v;i++){volume[2*i]=(byte)(i*(index+2));volume[2*i+1]=(byte)(64-i*32+seed);}}
+            if(r>0){release=new byte[2*r+2];release[1]=64;for(int i=1;i<=r;i++)release[2*i]=(byte)(i*(index+2));for(int i=1;i<r;i++)release[2*i+1]=(byte)(32+seed);}
+            decay=mode==0?0:seed+index+1;volumeScale=v>0?seed+2:0;releaseScale=r>0?seed+3:0;decayScale=decay>0?seed+4:0;
+            phase=(seed+index)%3==0?0:index+1;depth=phase>0&&(seed+index)%2==0?7:0;ramp=depth>0?seed+5:0;
+          }
+        }
+        static class Patch {
+          int segments,shape,seed,mode,curves;int[] ids;Envelope[] envelopes;int[] keys,gain,pan;
+          Patch(int shape,int segments,int mode,int curves,int seed) {
+            this.shape=shape;this.segments=segments;this.seed=seed;this.mode=mode;this.curves=curves;
+            ids=new int[segments];envelopes=new Envelope[segments];
+            for(int i=0;i<segments;i++){ids[i]=shape==0?0:shape==1?1:shape==2?(i%2==0?2:5):shape==3?(i==0?0:i+2):new int[]{4,7,10,17}[i];envelopes[i]=new Envelope(mode,seed,i);}
+            keys=curves==3?new int[]{16,64,112}:new int[]{32,96};
+            if(curves==1||curves==3)gain=curves==3?new int[]{-32,64,127}:new int[]{32,96};
+            if(curves==2||curves==3)pan=curves==3?new int[]{-64,64,0}:new int[]{-32,32};
+          }
+        }
+        static void runs(java.io.ByteArrayOutputStream out,Patch p){for(int i=1;i<p.segments;i++)out.write(128/p.segments);out.write(0);}
+        static byte[] packPatch(Patch p) {
+          java.io.ByteArrayOutputStream out=new java.io.ByteArrayOutputStream();runs(out,p);for(int i=0;i<p.segments;i++)out.write(new int[]{0,1,127,-128}[i]);
+          runs(out,p);for(int i=0;i<p.segments;i++)out.write(new int[]{-16,0,16,8}[i]);
+          runs(out,p);for(int i=2;i<p.segments;i++)out.write(0);
+          for(Envelope e:p.envelopes){out.write(e.volume==null?0:e.volume.length/2);out.write(e.release==null?0:(e.release.length-2)/2);}
+          out.write(p.gain==null?0:p.keys.length);out.write(p.pan==null?0:p.keys.length);runs(out,p);
+          for(int i=0;i<128;i++)out.write(new int[]{0,1,127,255}[p.seed]);
+          for(int i=0;i<128;i++)out.write(new int[]{0,1,2,255}[p.seed]);
+          for(int id:p.ids)vlq(out,id);
+          for(int i=0;i<p.segments;i++)if(p.ids[i]>0)out.write(new int[]{0,63,127,255}[(p.seed+i)&3]);
+          out.write(new int[]{0,127,255,63}[p.seed]);
+          for(Envelope e:p.envelopes){if(e.volume!=null)for(int i=1;i<e.volume.length;i+=2)out.write(e.volume[i]);if(e.release!=null)for(int i=3;i<e.release.length-2;i+=2)out.write(e.release[i]);}
+          if(p.gain!=null)for(int v:p.gain)out.write(v);if(p.pan!=null)for(int v:p.pan)out.write(v);
+          for(Envelope e:p.envelopes)if(e.release!=null)for(int i=2;i<e.release.length;i+=2)out.write((e.release[i]&255)-(e.release[i-2]&255)-1);
+          for(Envelope e:p.envelopes)if(e.volume!=null)for(int i=2;i<e.volume.length;i+=2)out.write((e.volume[i]&255)-(e.volume[i-2]&255)-1);
+          if(p.gain!=null){out.write(p.keys[0]);for(int i=1;i<p.keys.length;i++)out.write(p.keys[i]-p.keys[i-1]-1);}
+          if(p.pan!=null){out.write(p.keys[0]);for(int i=1;i<p.keys.length;i++)out.write(p.keys[i]-p.keys[i-1]-1);}
+          for(Envelope e:p.envelopes)out.write(e.decay);
+          for(Envelope e:p.envelopes){if(e.volume!=null)out.write(e.volumeScale);if(e.release!=null)out.write(e.releaseScale);if(e.decay>0)out.write(e.decayScale);}
+          for(Envelope e:p.envelopes)out.write(e.phase);for(Envelope e:p.envelopes)if(e.phase>0)out.write(e.depth);for(Envelope e:p.envelopes)if(e.depth>0)out.write(e.ramp);
+          return out.toByteArray();
+        }
+        static int curve(int key,int[] keys,int[] values,int factor) {
+          if(key<keys[0])return values[0]*factor;
+          for(int i=1;i<keys.length;i++)if(key<keys[i]) {
+            int width=keys[i]-keys[i-1],left=values[i-1]*factor,right=values[i]*factor;
+            return Math.floorDiv(left*width+width/2+(right-left)*(key-keys[i-1]),width);
+          }
+          return values[values.length-1]*factor;
+        }
+        static int integer(Object object,String f) throws Exception {return (Integer)get("${type('t')}",f,object);}
+        static void checkEnvelope(Object actual,Envelope e) throws Exception {
+          check(Arrays.equals((byte[])${get('t','field_f','[B','actual')},e.volume)&&Arrays.equals((byte[])${get('t','field_e','[B','actual')},e.release),"envelope pair oracle");
+          check(integer(actual,"${field('t','field_c','I')}")==e.decay&&integer(actual,"${field('t','field_g','I')}")==e.volumeScale&&integer(actual,"${field('t','field_a','I')}")==e.releaseScale&&integer(actual,"${field('t','field_h','I')}")==e.decayScale,"envelope key-scaling oracle");
+          check(integer(actual,"${field('t','field_d','I')}")==e.phase&&integer(actual,"${field('t','field_b','I')}")==e.depth&&integer(actual,"${field('t','field_j','I')}")==e.ramp,"vibrato parameter oracle");
+        }
+        static String failure(Throwable error) throws Exception {
+          if(error==null)return "ok";
+          if(error.getClass().getName().equals("${type('sa')}"))return ((Throwable)${get('sa','field_a','Ljava/lang/Throwable;','error')}).getClass().getName()+":"+${get('sa','field_d','Ljava/lang/String;','error')};
+          return error.getClass().getName();
+        }
+        public static void main(String[] args) throws Exception {
+          int cases=0,decodes=0,loads=0,clears=0,floors=0,wrappers=0,truncations=0;
+          for(int shape=0;shape<5;shape++)for(int segments:new int[]{1,2,4})for(int mode=0;mode<4;mode++)for(int curves=0;curves<4;curves++)for(int seed=0;seed<4;seed++) {
+            Patch expected=new Patch(shape,segments,mode,curves,seed);byte[] packed=packPatch(expected),before=packed.clone();
+            Object patch=construct("${type('vl')}",new Class<?>[]{byte[].class},(Object)packed);
+            int[] ids=(int[])${get('vl','field_h','[I','patch')};short[] pitch=(short[])${get('vl','field_j','[S','patch')};byte[] groups=(byte[])${get('vl','field_i','[B','patch')},pans=(byte[])${get('vl','field_m','[B','patch')},volumes=(byte[])${get('vl','field_o','[B','patch')};Object[] envelopes=(Object[])${get('vl','field_f','[Lt;','patch')},samples=(Object[])${get('vl','field_k','[Lgd;','patch')};
+            check(ids.length==128&&pitch.length==128&&groups.length==128&&pans.length==128&&volumes.length==128&&envelopes.length==128&&samples.length==128,"128-key allocation oracle");
+            Object[] shared=new Object[segments];int active=0,volume=0;int[] expectedVolume=new int[segments];
+            for(int i=0;i<segments;i++){if(expected.ids[i]>0)volume=(byte)(new int[]{0,63,127,255}[(seed+i)&3]+1);expectedVolume[i]=volume;}
+            for(int key=0;key<128;key++) {
+              int zone=key/(128/segments),id=expected.ids[zone];check(ids[key]==id&&samples[key]==null,"initial sample ID/reference oracle");
+              short wantedPitch=(short)(new int[]{0,1,127,255}[seed]*(key+1)+(new int[]{0,1,2,255}[seed]*(key+1)<<8)+(((id-1)<<14)&32768));check(pitch[key]==wantedPitch,"pitch/flag wrapping oracle");
+              int wantedPan=0,wantedGroup=0;
+              if(id!=0){int group=active++/(128/segments);wantedGroup=(byte)(new int[]{0,1,127,-128}[group]-1);wantedPan=(byte)((new int[]{-16,0,16,8}[group]+16)<<2);check(envelopes[key]!=null,"active key envelope");if(shared[group]==null)shared[group]=envelopes[key];else check(shared[group]==envelopes[key],"shared envelope identity");checkEnvelope(envelopes[key],expected.envelopes[group]);}
+              else check(envelopes[key]==null,"inactive key envelope");
+              check(groups[key]==(byte)wantedGroup,"exclusive key group oracle");
+              int wantedVolume=expectedVolume[zone];if(expected.gain!=null)wantedVolume=(byte)((wantedVolume*curve(key,expected.keys,expected.gain,1)+32)>>6);
+              if(expected.pan!=null)wantedPan=Math.max(0,Math.min(128,(wantedPan&255)+curve(key,expected.keys,expected.pan,2)));
+              check(volumes[key]==(byte)wantedVolume&&pans[key]==(byte)wantedPan,"gain/pan curve oracle "+cases+":"+key);
+            }
+            for(int i=0;i<segments;i++)for(int j=0;j<i;j++)if(shared[i]!=null&&shared[j]!=null)check(shared[i]!=shared[j],"distinct envelope allocations");
+            check((Integer)${get('vl','field_g','I','patch')}==new int[]{0,127,255,63}[seed]+1,"global volume oracle");check(Arrays.equals(packed,before),"packed patch retained");
+            System.out.println("patch:"+shape+":"+segments+":"+mode+":"+curves+":"+seed+":"+Arrays.hashCode(ids)+":"+Arrays.hashCode(pitch)+":"+ArchiveSectorBehavior.digest(groups)+":"+ArchiveSectorBehavior.digest(pans)+":"+ArchiveSectorBehavior.digest(volumes));cases++;decodes++;
+          }
+          Method load=method("${type('vl')}","${method('vl','a([I[BILci;)Z')}",int[].class,byte[].class,int.class,Class.forName("${type('ci')}"));
+          Method clear=method("${type('vl')}","${method('vl','a(B)V')}",byte.class);
+          for(int provider=0;provider<4;provider++)for(int maskKind=0;maskKind<4;maskKind++)for(int guard:new int[]{-1,8,9,Integer.MAX_VALUE}) {
+            Object patch=allocate("${type('vl')}");int[] ids=new int[128];for(int key=0;key<128;key++)ids[key]=new int[]{1,2,3,4,5,6,0}[(key/8)%7];int[] wantedIds=ids.clone();Object[] samples=(Object[])java.lang.reflect.Array.newInstance(Class.forName("${type('gd')}"),128),wantedSamples=new Object[128];
+            ${set('vl','field_h','[I','patch','ids')}${set('vl','field_k','[Lgd;','patch','samples')}${set('vl','field_q','Z','null','false')}
+            byte[] mask=maskKind==0?null:new byte[maskKind==3?64:128];if(mask!=null)for(int key=0;key<mask.length;key++)mask[key]=(byte)(maskKind==1?0:maskKind==3||key%3==0?1:0);
+            Object cache=null;Object[][] cached=new Object[2][3];
+            if(provider!=3) {
+              Object archive=allocate("${type('rh')}"),index=allocate("${type('bm')}");${set('bm','field_k','[I','index','new int[]{32}')}${set('rh','field_c','Lbm;','archive','index')}
+              cache=construct("${type('ci')}",new Class<?>[]{Class.forName("${type('rh')}"),Class.forName("${type('rh')}")},archive,archive);Object table=${get('ci','field_b','Lfi;','cache')};
+              Method put=method("${type('fi')}","${method('fi','a(BLhf;J)V')}",byte.class,Class.forName("${type('hf')}"),long.class);
+              for(int family=0;family<2;family++)for(int id=0;id<3;id++)if(provider==0||provider==1&&family==0) {
+                Object sample=construct("${type('gd')}",new Class<?>[]{int.class,byte[].class,int.class,int.class},22050,new byte[]{(byte)(family*8+id)},0,1);cached[family][id]=sample;put.invoke(table,(byte)102,sample,(long)id^(family==0?0L:4294967296L));
+              }
+            }
+            boolean complete=true;String wantedFailure=null;
+            for(int key=0;key<128;key++) {
+              if(mask!=null&&key>=mask.length){wantedFailure="java.lang.ArrayIndexOutOfBoundsException";break;}if(mask!=null&&mask[key]==0||wantedIds[key]==0)continue;
+              if(provider==3){wantedFailure="java.lang.NullPointerException";break;}
+              int code=wantedIds[key]-1;Object sample=cached[code&1][code>>2];if(sample==null)complete=false;else{wantedSamples[key]=sample;wantedIds[key]=0;}
+            }
+            Boolean result=null;Throwable error=null;int[] budget={0};
+            try{result=(Boolean)load.invoke(patch,budget,mask,guard,cache);}catch(InvocationTargetException thrown){error=thrown.getCause();}
+            String status=failure(error);check(wantedFailure==null?error==null:status.startsWith(wantedFailure+":"),"sample-load failure oracle");if(error==null)check(result==complete,"sample-load completeness oracle");
+            check(Arrays.equals(ids,wantedIds),"resolved IDs cleared; unresolved IDs preserved");for(int key=0;key<128;key++)check(samples[key]==wantedSamples[key],"cached sample alias oracle");check(budget[0]==0,"cached/failed sample budget unchanged");
+            check((Boolean)${get('vl','field_q','Z')}==(error==null&&guard<=8),"guard side-effect order");
+            System.out.println("patch-load:"+provider+":"+maskKind+":"+guard+":"+result+":"+status+":"+Arrays.hashCode(ids));cases++;loads++;
+            for(byte clearGuard:new byte[]{-128,-94,-93,127}) {
+              short[] pitches=new short[128];int[] encoded=new int[128];${set('vl','field_j','[S','patch','pitches')}${set('vl','field_h','[I','patch','encoded')}
+              clear.invoke(patch,clearGuard);check(${get('vl','field_h','[I','patch')}==null,"encoded sample IDs released");check(${get('vl','field_j','[S','patch')}==(clearGuard>-94?null:pitches),"pitch guard cleanup oracle");check(${get('vl','field_k','[Lgd;','patch')}==samples,"resolved samples retained");
+              System.out.println("patch-clear:"+provider+":"+maskKind+":"+guard+":"+clearGuard);cases++;clears++;
+            }
+          }
+          Method floor=method("${type('pk')}","${method('pk','a(IBI)I')}",int.class,byte.class,int.class);
+          for(int divisor:new int[]{1,2,3,7,64,127,Integer.MAX_VALUE})for(int numerator:new int[]{Integer.MIN_VALUE,Integer.MIN_VALUE+1,-10001,-129,-128,-127,-1,0,1,127,128,129,10001,Integer.MAX_VALUE}) {
+            int value=(Integer)floor.invoke(null,divisor,(byte)-6,numerator);check(value==Math.floorDiv(numerator,divisor),"positive-divisor floor oracle");System.out.println("patch-floor:"+divisor+":"+numerator+":"+value);cases++;floors++;
+          }
+          Method wrap=method("${type('t')}","${method('t','a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;')}",Throwable.class,String.class);
+          for(int kind=0;kind<3;kind++)for(String context:new String[]{null,"","next","ñ"}) {
+            Throwable cause=kind==0?null:new RuntimeException("cause");Object old=kind==2?wrap.invoke(null,cause,"first"):cause;Object wrapped=wrap.invoke(null,old,context);
+            check(${get('sa','field_a','Ljava/lang/Throwable;','wrapped')}==cause,"context original-cause identity");check(Objects.equals(${get('sa','field_d','Ljava/lang/String;','wrapped')},kind==2?"first "+context:context),"context text oracle");check(kind!=2||wrapped==old,"context wrapper reuse");
+            System.out.println("patch-context:"+kind+":"+context+":"+${get('sa','field_d','Ljava/lang/String;','wrapped')});cases++;wrappers++;
+          }
+          byte[] full=packPatch(new Patch(4,4,3,3,3));
+          for(int length=-1;length<full.length;length++) {
+            byte[] input=length<0?null:Arrays.copyOf(full,length);Throwable error=null;
+            try{construct("${type('vl')}",new Class<?>[]{byte[].class},(Object)input);}catch(InvocationTargetException thrown){error=thrown.getCause();}
+            check(error!=null,"truncated patch must fail");String status=failure(error);check(status.contains("vl.<init>("),"original patch diagnostic context");System.out.println("patch-truncated:"+length+":"+status);cases++;truncations++;
+          }
+          check(decodes==960&&loads==64&&clears==256&&floors==98&&wrappers==12,"patch case inventory");
+          System.out.println("patch-complete:"+cases+":"+decodes+":"+loads+":"+clears+":"+floors+":"+wrappers+":"+truncations);
+        }
+      }
 `;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
@@ -1034,6 +1177,15 @@ try {
     const list = path.join(directory, 'sources.txt');
     fs.writeFileSync(list, [...sources, harnessFile].map(file => JSON.stringify(file)).join('\n') + '\n');
     captureProcess('javac', ['--release','8','-proc:none','-encoding','UTF-8','-classpath',cp,'-d',classes,'@'+list]);
+
+
+    const patchOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'InstrumentPatchBehavior']).stdout;
+    const instrumentPatchSha256 = crypto.createHash('sha256').update(patchOutput).digest('hex');
+    console.log(JSON.stringify({variant, instrumentPatchSha256, completion: patchOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(instrumentPatchSha256, expectedInstrumentPatchSha256, variant);
+    if (variant === 'native') expectedInstrumentPatchBaseline = patchOutput;
+    if (nativeInput && variant !== 'native') assert.equal(Buffer.compare(patchOutput, expectedInstrumentPatchBaseline), 0, variant);
 
     const musicOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
       'MusicScoreBehavior']).stdout;

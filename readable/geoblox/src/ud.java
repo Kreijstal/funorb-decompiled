@@ -30,7 +30,7 @@ final class ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "ud.A(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2_ref), "ud.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class ud {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ud.D(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ud.D(" + param0 + ')');
         }
     }
 

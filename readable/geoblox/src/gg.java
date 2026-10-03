@@ -49,7 +49,7 @@ final class gg {
           } else {
             bytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) checksumFailureBeforeContext), ((StringBuilder) (Object) checksumMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(length).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checksumFailureBeforeContext), ((StringBuilder) (Object) checksumMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(length).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class gg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

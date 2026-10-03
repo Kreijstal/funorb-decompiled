@@ -54,7 +54,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           } else {
             textDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) textWriteFailureBeforeDescription), ((StringBuilder) (Object) textWriteMessagePrefix).append(textDescription).append(',').append(resetPositionGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailureBeforeDescription), ((StringBuilder) (Object) textWriteMessagePrefix).append(textDescription).append(',').append(resetPositionGuard).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.position = this.position + 1;
             this.bytes[terminatorByteIndex] = (byte) 0;
         } catch (RuntimeException textWriteFailure) {
-            throw t.a((Throwable) ((Object) textWriteFailure), "qc.HA(" + (text != null ? "{...}" : "null") + ',' + characterStart + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailure), "qc.HA(" + (text != null ? "{...}" : "null") + ',' + characterStart + ')');
         }
     }
 
@@ -272,7 +272,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             }
             pi.a(true, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -323,7 +323,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "qc.PA(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "qc.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -359,7 +359,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           } else {
             arrayDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) copyFailureBeforeDescription), ((StringBuilder) (Object) copyMessagePrefix).append(arrayDescription).append(',').append(sourceOffset).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) copyFailureBeforeDescription), ((StringBuilder) (Object) copyMessagePrefix).append(arrayDescription).append(',').append(sourceOffset).append(')').toString());
         }
     }
 
@@ -530,7 +530,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           } else {
             arrayDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) copyFailureBeforeDescription), ((StringBuilder) (Object) copyMessagePrefix).append(arrayDescription).append(',').append(destinationOffset).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) copyFailureBeforeDescription), ((StringBuilder) (Object) copyMessagePrefix).append(arrayDescription).append(',').append(destinationOffset).append(')').toString());
         }
     }
 
@@ -599,7 +599,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           } else {
             keyDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) cryptoFailureBeforeDescription), ((StringBuilder) (Object) cryptoMessagePrefix).append(keyDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cryptoFailureBeforeDescription), ((StringBuilder) (Object) cryptoMessagePrefix).append(keyDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -680,7 +680,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           } else {
             keyDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) cryptoFailureBeforeDescription), ((StringBuilder) (Object) cryptoMessagePrefix).append(keyDescription).append(',').append(startPosition).append(',').append(endPosition).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cryptoFailureBeforeDescription), ((StringBuilder) (Object) cryptoMessagePrefix).append(keyDescription).append(',').append(startPosition).append(',').append(endPosition).append(')').toString());
         }
     }
 
@@ -799,7 +799,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.position = this.position + 1;
             this.bytes[terminatorByteIndex] = (byte) 0;
         } catch (RuntimeException textWriteFailure) {
-            throw t.a((Throwable) ((Object) textWriteFailure), "qc.VA(" + (text != null ? "{...}" : "null") + ',' + methodGuard + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailure), "qc.VA(" + (text != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -939,7 +939,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -972,7 +972,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.writeShortBE(transformedBytes.length, 28695);
             this.writeBytes(transformedBytes.length, -97, transformedBytes, 0);
         } catch (RuntimeException modPowFailure) {
-            throw t.a((Throwable) ((Object) modPowFailure), "qc.CB(" + resultPositionGuard + ',' + (modulus != null ? "{...}" : "null") + ',' + (exponent != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) modPowFailure), "qc.CB(" + resultPositionGuard + ',' + (modulus != null ? "{...}" : "null") + ',' + (exponent != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -986,7 +986,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.bytes = bytes;
             this.position = 0;
         } catch (RuntimeException constructionFailure) {
-            throw t.a((Throwable) ((Object) constructionFailure), "qc.<init>(" + (bytes != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "qc.<init>(" + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -34,7 +34,7 @@ final class ab {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class ab {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class ab {
           } else {
             textDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) hashFailureBeforeDescription), ((StringBuilder) (Object) hashMessagePrefix).append(textDescription).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) hashFailureBeforeDescription), ((StringBuilder) (Object) hashMessagePrefix).append(textDescription).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class ab {
         } catch (java.lang.RuntimeException motionFailure) {
           caughtMotionFailure = motionFailure;
           motionFailureForContext = caughtMotionFailure;
-          throw t.a((Throwable) ((Object) motionFailureForContext), "ab.C(" + methodGuard + ',' + boardAngleRadians + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) motionFailureForContext), "ab.C(" + methodGuard + ',' + boardAngleRadians + ')');
         }
     }
 

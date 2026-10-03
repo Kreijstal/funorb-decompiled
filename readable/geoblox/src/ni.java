@@ -81,7 +81,7 @@ final class ni extends ee implements pl {
           } else {
             archiveContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(archiveContextDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(archiveContextDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class ni extends ee implements pl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ni extends ee implements pl {
             var4_int = null == this.field_K ? 0 : this.field_G.measureWrappedHeight(this.field_K, 260, this.field_G.maxAscent);
             this.a(var4_int + 22, 288, (byte) -119, 0, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class ni extends ee implements pl {
         } catch (java.lang.RuntimeException transientDrawFailure) {
           caughtTransientDrawFailure = transientDrawFailure;
           transientDrawFailureForContext = caughtTransientDrawFailure;
-          throw t.a((Throwable) ((Object) transientDrawFailureForContext), "ni.JA(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) transientDrawFailureForContext), "ni.JA(" + methodGuard + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class ni extends ee implements pl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class ni extends ee implements pl {
             this.field_F[var4_int] = this.a(-2, param0, (bb) (this));
             this.field_H[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ni.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ni.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class ni extends ee implements pl {
           } else {
             metricsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

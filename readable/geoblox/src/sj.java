@@ -16,7 +16,7 @@ final class sj {
             ol.a(param2, param0, 30175);
             int var3_int = -18 % ((param1 - 3) / 40);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class sj {
         try {
             ea.a((byte) 115, var4, param0, var2, var3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "sj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

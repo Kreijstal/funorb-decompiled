@@ -11,7 +11,7 @@ final class pc extends IntrusiveNode {
     int field_q;
     static int field_f;
     int field_g;
-    vl field_z;
+    InstrumentPatch field_z;
     int field_E;
     int field_s;
     PcmSampleStream field_u;
@@ -26,7 +26,7 @@ final class pc extends IntrusiveNode {
     int field_D;
     int field_n;
     static int field_v;
-    t field_x;
+    InstrumentEnvelope field_x;
 
     final static void a(byte param0) {
         int var1 = -125 / ((param0 - 56) / 54);

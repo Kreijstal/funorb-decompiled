@@ -107,7 +107,7 @@ final class nd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "nd.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "nd.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

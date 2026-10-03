@@ -41,22 +41,22 @@ final class PacketBuffer extends ByteArrayBuffer {
           } else {
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) readFailureBeforeDescription), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(length).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeDescription), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(length).append(')').toString());
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
-        int var3 = param2 >>> 31;
-        if (param1 != -6) {
+    final static int divideFloorWithPositiveDivisor(int divisor, byte methodGuard, int numerator) {
+        int numeratorSign = numerator >>> 31;
+        if (methodGuard != -6) {
             PacketBuffer.k((byte) 101);
         }
-        return -var3 + (param2 + var3) / param0;
+        return -numeratorSign + (numerator + numeratorSign) / divisor;
     }
 
     final static void k(byte param0) {
         da.field_a = 0;
         if (param0 != -13) {
-            PacketBuffer.a(106, (byte) 22, 96);
+            PacketBuffer.divideFloorWithPositiveDivisor(106, (byte) 22, 96);
         }
     }
 
@@ -67,7 +67,7 @@ final class PacketBuffer extends ByteArrayBuffer {
                 this.endBitAccess(-68);
             }
         } catch (RuntimeException cipherInitializationFailure) {
-            throw t.a((Throwable) ((Object) cipherInitializationFailure), "pk.JB(" + (seed != null ? "{...}" : "null") + ',' + finishBitAccess + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cipherInitializationFailure), "pk.JB(" + (seed != null ? "{...}" : "null") + ',' + finishBitAccess + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class PacketBuffer extends ByteArrayBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "pk.IB(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "pk.IB(" + param0 + ',' + param1 + ')');
         }
     }
 

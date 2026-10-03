@@ -91,7 +91,7 @@ final class ek {
           } else {
             overviewSpriteArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) compositeFailureBeforeSpriteDescription), ((StringBuilder) (Object) compositeMessagePrefix).append(overviewSpriteArgumentDescription).append(',').append(destinationTop).append(',').append(destinationWidth).append(',').append(destinationLeft).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) compositeFailureBeforeSpriteDescription), ((StringBuilder) (Object) compositeMessagePrefix).append(overviewSpriteArgumentDescription).append(',').append(destinationTop).append(',').append(destinationWidth).append(',').append(destinationLeft).append(')').toString());
         }
     }
 

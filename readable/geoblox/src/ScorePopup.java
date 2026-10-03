@@ -63,7 +63,7 @@ final class ScorePopup extends IntrusiveNode {
             lc.field_b = (var2_int & 1) << 16;
             lc.field_b = lc.field_b + param1.readUnsignedShortBE(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "me.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "me.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
