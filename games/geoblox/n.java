@@ -120,36 +120,33 @@ final class n extends q {
               stackIn_24_1 = param8;
               L13: while (true) {
                 L14: {
-                  L15: {
-                    if (stackIn_24_0 < stackIn_24_1) {
-                      stackIn_34_0 = 0;
+                  if (stackIn_24_0 < stackIn_24_1) {
+                    stackIn_34_0 = 0;
+                    if (var15 != 0) {
+                      break L14;
+                    }
+                    var12 = stackIn_34_0;
+                    while (var9 > var12) {
+                      var10[0].field_v[var12 + var11 * var9] = param2;
+                      var10[0].field_v[var11 + var12 * var9] = param2;
+                      stackIn_24_0 = ~(-var11 + var9);
+                      stackIn_24_1 = ~var12;
                       if (var15 != 0) {
-                        break L14;
+                        continue L13;
                       }
-                      var12 = stackIn_34_0;
-                      while (var9 > var12) {
-                        var10[0].field_v[var12 + var11 * var9] = param2;
-                        var10[0].field_v[var11 + var12 * var9] = param2;
-                        stackIn_24_0 = ~(-var11 + var9);
-                        stackIn_24_1 = ~var12;
-                        if (var15 != 0) {
-                          continue L13;
-                        }
-                        if (stackIn_24_0 < stackIn_24_1) {
-                          var10[2].field_v[var9 * var11 + var12] = param2;
-                          var10[6].field_v[var11 + var12 * var9] = param2;
-                        }
-                        var12++;
-                        if (var15 == 0) {
-                          continue;
-                        }
-                        break;
+                      if (stackIn_24_0 < stackIn_24_1) {
+                        var10[2].field_v[var9 * var11 + var12] = param2;
+                        var10[6].field_v[var11 + var12 * var9] = param2;
                       }
-                      var11++;
+                      var12++;
                       if (var15 == 0) {
-                        continue L12;
+                        continue;
                       }
-                      break L15;
+                      break;
+                    }
+                    var11++;
+                    if (var15 == 0) {
+                      continue L12;
                     }
                   }
                   stackIn_34_0 = 0;

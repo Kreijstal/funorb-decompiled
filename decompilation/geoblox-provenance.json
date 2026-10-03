@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "4c1b05352b59d68fd556df1ce2072ad5d57eefbd",
+      "commit": "d63d66ce9426ee8b704b348b4e8b552c2fb160a5",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4",
-        "reproduce": "git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum",
+        "sha256": "0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1",
+        "reproduce": "git archive --format=tar d63d66ce9426ee8b704b348b4e8b552c2fb160a5 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df",
-  "previousSourceTreeSha256": "2995331e604149cd5b7e6e4cbc608fbd8eca8f61cc104b3da7f1910ced8a4399",
-  "changedJavaFiles": 25,
+  "sourceTreeSha256": "1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78",
+  "previousSourceTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df",
+  "changedJavaFiles": 50,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2374,5 +2374,44 @@
     "sessionUpdaterLabelsBefore": 19,
     "sessionUpdaterLabelsAfter": 14,
     "scope": "Unique plain blocks whose only label references are leading bare guard breaks become ordinary if guards over short-circuit negated original predicates. The remainder block preserves declarations, effects and protected boundaries.4032 native comparisons cover unboxing, NaNs, predicate order/failures, partial state, scopes, ancestor transfers, loop/switch breaks, returns, finally state after invocation and lock ownership/release. All303 expected token streams and ordered bindings remain. Large overlapping spans and complete assets/platform/gameplay/browser/phone acceptance remain unfinished or unverified."
+  },
+  "terminalPlainBlockBreaks": {
+    "historicalPassVersion": 89,
+    "javaToolsCommit": "d63d66ce9426ee8b704b348b4e8b552c2fb160a5",
+    "sourceArchiveSha256": "0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 50,
+    "sourceLinesBefore": 78689,
+    "sourceLinesAfter": 78441,
+    "sourceLinesRemoved": 248,
+    "breaksRemoved": 102,
+    "labelsRemoved": 73,
+    "blocksUnwrapped": 73,
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 119181,
+    "sourceReferenceOccurrencesAfter": 119181,
+    "orderedDeclarationsReferencesAndOverridesUnchanged": true,
+    "localOrdinalMigrations": 0,
+    "overrideRelationshipsPreserved": 388,
+    "expectedRewriteTokenStreamsCheckedJavaFiles": 303,
+    "genericEmitterTestsRegistered": 51,
+    "genericEmitterTestsPassed": 50,
+    "genericEmitterTestsSkipped": 1,
+    "newNativeEmitterComparisons": 5376,
+    "genericExceptionExitGroups": 8,
+    "genericIntegerArgumentGroups": 2,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "methodBodies": 2080,
+    "largeMethodSpansAtLeast300Lines": 21,
+    "largeMethodSpansWithGeneratedBlockLabelsBefore": 15,
+    "largeMethodSpansWithGeneratedBlockLabelsAfter": 13,
+    "instrumentPatchConstructorLinesBefore": 492,
+    "instrumentPatchConstructorLinesAfter": 468,
+    "instrumentPatchConstructorBlockLabelsBefore": 9,
+    "instrumentPatchConstructorBlockLabelsAfter": 1,
+    "scope": "Remove breaks only where final plain blocks, if branches and plain labels naturally complete at the same destination. Bare branches retain an empty statement and predicates. Intermediate loops/switches/protected regions refuse the rewrite; enclosing cleanup stays intact. No declaration or effect moves. Native comparisons cover failures, scopes, ancestor transfers, enclosing finally state after invocation and monitor ownership/release. All303 token streams and ordered naming bindings remain. Large overlapping spans and whole-game/browser/phone acceptance remain unfinished or unverified."
   }
 }

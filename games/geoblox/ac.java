@@ -121,22 +121,19 @@ class ac extends ff {
           } else {
             stackIn_7_0 = ug.field_c;
           }
-          L2: {
-            var5 = stackIn_7_0;
-            var6 = 0;
-            var7 = a.field_e;
-            var8 = 0;
-            var9 = 0;
-            if (param1) {
-              for (var10 = 16; var10 >= 0; var10--) {
-                if ((!((!da.a(0, -100)) &&
-                      (var10 == 16))) &&
-                    ((1 << var10 & var5) == 0)) {
-                  var9++;
-                  var8 += 20;
-                }
+          var5 = stackIn_7_0;
+          var6 = 0;
+          var7 = a.field_e;
+          var8 = 0;
+          var9 = 0;
+          if (param1) {
+            for (var10 = 16; var10 >= 0; var10--) {
+              if ((!((!da.a(0, -100)) &&
+                    (var10 == 16))) &&
+                  ((1 << var10 & var5) == 0)) {
+                var9++;
+                var8 += 20;
               }
-              break L2;
             }
           }
           if (8 <= var9) {

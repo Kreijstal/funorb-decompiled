@@ -214,19 +214,16 @@ final class ge {
         int var8 = 0;
         var8 = Geoblox.field_C;
         try {
-          L0: {
-            this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], 128 >>> cd.a(this.field_h, 7));
-            this.field_e = this.field_e + 1;
-            if (this.field_e > 32) {
-              while (this.field_e < 64) {
-                fieldTemp$0 = this.field_e;
-                this.field_e = this.field_e + 1;
-                this.field_i[fieldTemp$0] = (byte) 0;
-              }
-              this.c(116);
-              this.field_e = 0;
-              break L0;
+          this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], 128 >>> cd.a(this.field_h, 7));
+          this.field_e = this.field_e + 1;
+          if (this.field_e > 32) {
+            while (this.field_e < 64) {
+              fieldTemp$0 = this.field_e;
+              this.field_e = this.field_e + 1;
+              this.field_i[fieldTemp$0] = (byte) 0;
             }
+            this.c(116);
+            this.field_e = 0;
           }
           if (!param2) {
             this.a(-38);

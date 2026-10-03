@@ -161,23 +161,20 @@ final class sk {
               }
             }
             if (-1L != this.field_c) {
-              L9: {
-                if (~this.field_c < ~this.field_f) {
-                  stackIn_32_0 = -1;
-                  stackIn_32_1 = ~param1;
-                  if (stackIn_32_0 > stackIn_32_1) {
-                    var9_int = param2 + (int)(-this.field_f + this.field_c);
-                    if (param2 + param1 < var9_int) {
-                      var9_int = param2 + param1;
-                    }
-                    while (var9_int > param2) {
-                      param1--;
-                      incrementValue$0 = param2;
-                      param2++;
-                      param0[incrementValue$0] = (byte) 0;
-                      this.field_f = this.field_f + 1L;
-                    }
-                    break L9;
+              if (~this.field_c < ~this.field_f) {
+                stackIn_32_0 = -1;
+                stackIn_32_1 = ~param1;
+                if (stackIn_32_0 > stackIn_32_1) {
+                  var9_int = param2 + (int)(-this.field_f + this.field_c);
+                  if (param2 + param1 < var9_int) {
+                    var9_int = param2 + param1;
+                  }
+                  while (var9_int > param2) {
+                    param1--;
+                    incrementValue$0 = param2;
+                    param2++;
+                    param0[incrementValue$0] = (byte) 0;
+                    this.field_f = this.field_f + 1L;
                   }
                 }
               }

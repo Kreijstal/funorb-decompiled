@@ -118,17 +118,14 @@ final class ri {
                   if (!fb.field_l) {
                   }
                 }
-                L13: {
-                  if (ll.field_e) {
-                    eh.field_d.c((byte) 34);
-                    eh.field_d.c((byte) 34);
-                    eh.field_d.a((byte) -48);
-                    pk.field_n = eh.field_d.b(true);
-                    hc.field_K = new byte[pk.field_n];
-                    for (var8 = 0; pk.field_n > var8; var8++) {
-                      hc.field_K[var8] = eh.field_d.f((byte) 72);
-                    }
-                    break L13;
+                if (ll.field_e) {
+                  eh.field_d.c((byte) 34);
+                  eh.field_d.c((byte) 34);
+                  eh.field_d.a((byte) -48);
+                  pk.field_n = eh.field_d.b(true);
+                  hc.field_K = new byte[pk.field_n];
+                  for (var8 = 0; pk.field_n > var8; var8++) {
+                    hc.field_K[var8] = eh.field_d.f((byte) 72);
                   }
                 }
                 wd.field_f = eh.field_d.e((byte) 105);

@@ -133,7 +133,6 @@ class qk {
               bc.a(0, 50L);
             }
             field_r = null;
-            break L0;
           }
         }
         this.f();
@@ -185,16 +184,13 @@ class qk {
             }
             var1 = oa.a(-12520);
             try {
-              L0: {
-                if (var1 > this.field_n + 6000L) {
-                  this.field_n = var1 - 6000L;
-                }
-                while (var1 > this.field_n + 5000L) {
-                  this.b(256);
-                  this.field_n = this.field_n + (long)(256000 / field_j);
-                  var1 = oa.a(-12520);
-                }
-                break L0;
+              if (var1 > this.field_n + 6000L) {
+                this.field_n = var1 - 6000L;
+              }
+              while (var1 > this.field_n + 5000L) {
+                this.b(256);
+                this.field_n = this.field_n + (long)(256000 / field_j);
+                var1 = oa.a(-12520);
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,61 +201,58 @@ class qk {
               return;
             }
             try {
-              L4: {
-                if (this.field_m != 0L) {
-                  if (var1 < this.field_m) {
+              if (this.field_m != 0L) {
+                if (var1 < this.field_m) {
+                  return;
+                }
+                this.a(this.field_g);
+                this.field_m = 0L;
+                this.field_o = true;
+              }
+              var3_int = this.g();
+              if (this.field_t - var3_int > this.field_s) {
+                this.field_s = this.field_t - var3_int;
+              }
+              var4 = this.field_i + this.field_p;
+              if (var4 + 256 > 16384) {
+                var4 = 16128;
+              }
+              if (var4 + 256 > this.field_g) {
+                this.field_g = this.field_g + 1024;
+                if (this.field_g > 16384) {
+                  this.field_g = 16384;
+                }
+                this.f();
+                this.a(this.field_g);
+                var3_int = 0;
+                this.field_o = true;
+                if (var4 + 256 > this.field_g) {
+                  var4 = this.field_g - 256;
+                  this.field_p = var4 - this.field_i;
+                }
+              }
+              while (var3_int < var4) {
+                this.a(this.field_c, 256);
+                this.e();
+                var3_int += 256;
+              }
+              if (var1 > this.field_e) {
+                if (this.field_o) {
+                  this.field_o = false;
+                } else {
+                  if ((this.field_s == 0) &&
+                      (this.field_f == 0)) {
+                    this.f();
+                    this.field_m = var1 + 2000L;
                     return;
                   }
-                  this.a(this.field_g);
-                  this.field_m = 0L;
-                  this.field_o = true;
+                  this.field_p = Math.min(this.field_f, this.field_s);
+                  this.field_f = this.field_s;
                 }
-                var3_int = this.g();
-                if (this.field_t - var3_int > this.field_s) {
-                  this.field_s = this.field_t - var3_int;
-                }
-                var4 = this.field_i + this.field_p;
-                if (var4 + 256 > 16384) {
-                  var4 = 16128;
-                }
-                if (var4 + 256 > this.field_g) {
-                  this.field_g = this.field_g + 1024;
-                  if (this.field_g > 16384) {
-                    this.field_g = 16384;
-                  }
-                  this.f();
-                  this.a(this.field_g);
-                  var3_int = 0;
-                  this.field_o = true;
-                  if (var4 + 256 > this.field_g) {
-                    var4 = this.field_g - 256;
-                    this.field_p = var4 - this.field_i;
-                  }
-                }
-                while (var3_int < var4) {
-                  this.a(this.field_c, 256);
-                  this.e();
-                  var3_int += 256;
-                }
-                if (var1 > this.field_e) {
-                  if (this.field_o) {
-                    this.field_o = false;
-                  } else {
-                    if ((this.field_s == 0) &&
-                        (this.field_f == 0)) {
-                      this.f();
-                      this.field_m = var1 + 2000L;
-                      return;
-                    }
-                    this.field_p = Math.min(this.field_f, this.field_s);
-                    this.field_f = this.field_s;
-                  }
-                  this.field_s = 0;
-                  this.field_e = var1 + 2000L;
-                }
-                this.field_t = var3_int;
-                break L4;
+                this.field_s = 0;
+                this.field_e = var1 + 2000L;
               }
+              this.field_t = var3_int;
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -358,15 +351,12 @@ class qk {
                           if (var4 >= this.field_l) {
                             break L3;
                           }
-                          L10: {
-                            var14 = var11.b();
-                            if (var14 != null) {
-                              var15_int = var11.field_i;
-                              while (var14 != null) {
-                                this.a(var14, var15_int * var14.a() >> 8);
-                                var14 = var11.c();
-                              }
-                              break L10;
+                          var14 = var11.b();
+                          if (var14 != null) {
+                            var15_int = var11.field_i;
+                            while (var14 != null) {
+                              this.a(var14, var15_int * var14.a() >> 8);
+                              var14 = var11.c();
                             }
                           }
                           var15 = var11.field_h;

@@ -193,17 +193,14 @@ final class bj extends nh {
               if (var6_int != this.field_u.field_q[param2]) {
                 throw new RuntimeException();
               }
-              L12: {
-                if ((this.field_u.field_r != null) &&
-                    (null != this.field_u.field_r[param2])) {
-                  var27 = this.field_u.field_r[param2];
-                  var28 = wh.a(-2 + var18.length, 0, var18, 8);
-                  for (var9 = 0; var9 < 64; var9++) {
-                    if (~var27[var9] != ~var28[var9]) {
-                      throw new RuntimeException();
-                    }
+              if ((this.field_u.field_r != null) &&
+                  (null != this.field_u.field_r[param2])) {
+                var27 = this.field_u.field_r[param2];
+                var28 = wh.a(-2 + var18.length, 0, var18, 8);
+                for (var9 = 0; var9 < 64; var9++) {
+                  if (~var27[var9] != ~var28[var9]) {
+                    throw new RuntimeException();
                   }
-                  break L12;
                 }
               }
               var7 = (var5[-2 + var18.length] << 8 & 65280) + (var5[var18.length - 1] & 255);
@@ -248,20 +245,17 @@ final class bj extends nh {
               if (var6_int != this.field_u.field_q[param2]) {
                 throw new RuntimeException();
               }
-              L6: {
-                if ((null != this.field_u.field_r) &&
-                    (null != this.field_u.field_r[param2])) {
-                  var30 = this.field_u.field_r[param2];
-                  var29 = wh.a(-2 + var18.length, 0, var18, 8);
-                  var11 = 0;
-                  var9 = var11;
-                  while (var11 < 64) {
-                    if (~var29[var11] != ~var30[var11]) {
-                      throw new RuntimeException();
-                    }
-                    var11++;
+              if ((null != this.field_u.field_r) &&
+                  (null != this.field_u.field_r[param2])) {
+                var30 = this.field_u.field_r[param2];
+                var29 = wh.a(-2 + var18.length, 0, var18, 8);
+                var11 = 0;
+                var9 = var11;
+                while (var11 < 64) {
+                  if (~var29[var11] != ~var30[var11]) {
+                    throw new RuntimeException();
                   }
-                  break L6;
+                  var11++;
                 }
               }
               this.field_f.field_b = 0;
@@ -582,7 +576,6 @@ final class bj extends nh {
                 }
                 var2 = (pb) ((Object) this.field_g.b(74));
               }
-              break L2;
             }
             this.field_n = 1000L + oa.a(param0 - 12482);
           }

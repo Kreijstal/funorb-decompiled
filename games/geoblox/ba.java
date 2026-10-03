@@ -154,23 +154,20 @@ final class ba implements Runnable {
           }
           var5 = this;
           synchronized (var5) {
-            L1: {
-              for (var6 = 0; param2 > var6; var6++) {
-                this.field_d[this.field_e] = param3[param1 + var6];
-                this.field_e = (this.field_e + 1) % this.field_b;
-                if (this.field_e == (this.field_b + (this.field_k - 100)) % this.field_b) {
-                  throw new IOException();
-                }
+            for (var6 = 0; param2 > var6; var6++) {
+              this.field_d[this.field_e] = param3[param1 + var6];
+              this.field_e = (this.field_e + 1) % this.field_b;
+              if (this.field_e == (this.field_b + (this.field_k - 100)) % this.field_b) {
+                throw new IOException();
               }
-              if (param0 != 100) {
-                this.field_a = (OutputStream) null;
-              }
-              if (null == this.field_m) {
-                this.field_m = this.field_l.a((Runnable) (this), 0, 3);
-              }
-              this.notifyAll();
-              break L1;
             }
+            if (param0 != 100) {
+              this.field_a = (OutputStream) null;
+            }
+            if (null == this.field_m) {
+              this.field_m = this.field_l.a((Runnable) (this), 0, 3);
+            }
+            this.notifyAll();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -104,29 +104,26 @@ final class ua extends hf {
               (param0[0] <= 0)) {
             return null;
           }
-          L4: {
-            var7 = this.c(this.field_x);
-            if (var7 != null) {
-              var3 = this.field_J;
-              var4 = var7.length;
-              if (var4 > this.field_H - var3) {
-                var4 = this.field_H - var3;
-              }
-              for (var5 = 0; var5 < var4; var5++) {
-                var6 = (int)(128.0f + var7[var5] * 128.0f);
-                if ((var6 & -256) != 0) {
-                  var6 = ~var6 >> 31;
-                }
-                incrementValue$0 = var3;
-                var3++;
-                this.field_E[incrementValue$0] = (byte)(var6 - 128);
-              }
-              if (param0 != null) {
-                param0[0] = param0[0] - (var3 - this.field_J);
-              }
-              this.field_J = var3;
-              break L4;
+          var7 = this.c(this.field_x);
+          if (var7 != null) {
+            var3 = this.field_J;
+            var4 = var7.length;
+            if (var4 > this.field_H - var3) {
+              var4 = this.field_H - var3;
             }
+            for (var5 = 0; var5 < var4; var5++) {
+              var6 = (int)(128.0f + var7[var5] * 128.0f);
+              if ((var6 & -256) != 0) {
+                var6 = ~var6 >> 31;
+              }
+              incrementValue$0 = var3;
+              var3++;
+              this.field_E[incrementValue$0] = (byte)(var6 - 128);
+            }
+            if (param0 != null) {
+              param0[0] = param0[0] - (var3 - this.field_J);
+            }
+            this.field_J = var3;
           }
           this.field_x = this.field_x + 1;
         }
@@ -686,29 +683,23 @@ final class ua extends hf {
             break L11;
           }
         }
-        L35: {
-          var17 = null;
-          if (this.field_M > 0) {
-            L36: {
-              var18_int = this.field_M + var4 >> 2;
-              var50 = new float[var18_int];
-              var46 = var50;
-              var40 = var46;
-              var17 = var40;
-              if (!this.field_i) {
-                for (var19 = 0; var19 < this.field_m; var19++) {
-                  var20 = (this.field_M >> 1) + var19;
-                  var40[var19] = var40[var19] + this.field_C[var20];
-                }
-                break L36;
-              }
+        var17 = null;
+        if (this.field_M > 0) {
+          var18_int = this.field_M + var4 >> 2;
+          var50 = new float[var18_int];
+          var46 = var50;
+          var40 = var46;
+          var17 = var40;
+          if (!this.field_i) {
+            for (var19 = 0; var19 < this.field_m; var19++) {
+              var20 = (this.field_M >> 1) + var19;
+              var40[var19] = var40[var19] + this.field_C[var20];
             }
-            if (var15 == 0) {
-              for (var19 = var8; var19 < var4 >> 1; var19++) {
-                var20 = var50.length - (var4 >> 1) + var19;
-                var40[var20] = var40[var20] + field_B[var19];
-              }
-              break L35;
+          }
+          if (var15 == 0) {
+            for (var19 = var8; var19 < var4 >> 1; var19++) {
+              var20 = var50.length - (var4 >> 1) + var19;
+              var40[var20] = var40[var20] + field_B[var19];
             }
           }
         }

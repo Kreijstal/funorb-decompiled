@@ -69,7 +69,6 @@ final class s extends ee implements pe, pl {
                 return;
               }
             }
-            break L0;
           }
           if (null == param0.field_g) {
           }
@@ -276,20 +275,17 @@ final class s extends ee implements pe, pl {
             RuntimeException var2_ref = null;
             try {
               try {
-                L0: {
-                  var8 = param1.getParameter("cookieprefix");
-                  var3 = var8 + "settings";
-                  var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                  var5 = uj.a(';', true, var4);
-                  for (var6 = 0; var5.length > var6; var6++) {
-                    var7 = var5[var6].indexOf('=');
-                    if ((var7 >= 0) &&
-                        (var5[var6].substring(0, var7).trim().equals(var3))) {
-                      stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
-                      return stackIn_5_0;
-                    }
+                var8 = param1.getParameter("cookieprefix");
+                var3 = var8 + "settings";
+                var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
+                var5 = uj.a(';', true, var4);
+                for (var6 = 0; var5.length > var6; var6++) {
+                  var7 = var5[var6].indexOf('=');
+                  if ((var7 >= 0) &&
+                      (var5[var6].substring(0, var7).trim().equals(var3))) {
+                    stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
+                    return stackIn_5_0;
                   }
-                  break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

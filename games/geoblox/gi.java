@@ -168,50 +168,47 @@ final class gi implements Iterable {
             String var8 = null;
             String var9 = null;
             try {
-              L0: {
-                var3 = "";
+              var3 = "";
+              if (param0 != null) {
+                var3 = ch.a(param0, param2 - 124);
+              }
+              if (param1 != null) {
                 if (param0 != null) {
-                  var3 = ch.a(param0, param2 - 124);
+                  var3 = var3 + " | ";
                 }
-                if (param1 != null) {
-                  if (param0 != null) {
-                    var3 = var3 + " | ";
-                  }
-                  var3 = var3 + param1;
-                }
-                gb.a(var3, (byte) -75);
-                var6 = og.a(var3, "%3a", true, ":");
-                var7 = og.a(var6, "%40", true, "@");
-                var8 = og.a(var7, "%26", true, "&");
-                var9 = og.a(var8, "%23", true, "#");
-                if (null == c.field_x) {
-                  return;
-                }
-                stackIn_13_0 = ml.field_s;
-                stackIn_13_1 = -14;
-                stackIn_13_2 = null;
-                stackIn_13_3 = null;
-                stackIn_13_4 = c.field_x.getCodeBase();
-                stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
-                if (null == uk.field_p) {
-                  stackIn_14_2 = null;
-                  stackIn_14_3 = null;
-                  stackIn_14_6 = "" + vi.field_H;
-                } else {
-                  stackIn_14_2 = null;
-                  stackIn_14_3 = null;
-                  stackIn_14_6 = uk.field_p;
-                }
-                var4 = ((d) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
-                while (var4.field_a == 0) {
-                  bc.a(param2 - 125, 1L);
-                }
-                if (var4.field_a == 1) {
-                  var5 = (DataInputStream) (var4.field_b);
-                  var5.read();
-                  var5.close();
-                }
-                break L0;
+                var3 = var3 + param1;
+              }
+              gb.a(var3, (byte) -75);
+              var6 = og.a(var3, "%3a", true, ":");
+              var7 = og.a(var6, "%40", true, "@");
+              var8 = og.a(var7, "%26", true, "&");
+              var9 = og.a(var8, "%23", true, "#");
+              if (null == c.field_x) {
+                return;
+              }
+              stackIn_13_0 = ml.field_s;
+              stackIn_13_1 = -14;
+              stackIn_13_2 = null;
+              stackIn_13_3 = null;
+              stackIn_13_4 = c.field_x.getCodeBase();
+              stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
+              if (null == uk.field_p) {
+                stackIn_14_2 = null;
+                stackIn_14_3 = null;
+                stackIn_14_6 = "" + vi.field_H;
+              } else {
+                stackIn_14_2 = null;
+                stackIn_14_3 = null;
+                stackIn_14_6 = uk.field_p;
+              }
+              var4 = ((d) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
+              while (var4.field_a == 0) {
+                bc.a(param2 - 125, 1L);
+              }
+              if (var4.field_a == 1) {
+                var5 = (DataInputStream) (var4.field_b);
+                var5.read();
+                var5.close();
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

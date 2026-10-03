@@ -448,26 +448,23 @@ final class il extends dm {
           if (var26 == 0) {
             var33 = var22;
             while (var33 < 0) {
-              L60: {
-                var34 = var23;
-                var35 = var30;
-                var36 = var31;
-                var37 = var20;
-                if ((var35 >= 0) &&
-                    (var36 >= 0) &&
-                    (var35 - (this.field_r << 12) < 0) &&
-                    (var36 - (this.field_m << 12) < 0)) {
-                  while (var37 < 0) {
-                    var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                    var39 = vb.field_c[var34];
-                    var40 = var38 >>> 24;
-                    var41 = 256 - var40;
-                    incrementValue$8 = var34;
-                    var34++;
-                    vb.field_c[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                    var37++;
-                  }
-                  break L60;
+              var34 = var23;
+              var35 = var30;
+              var36 = var31;
+              var37 = var20;
+              if ((var35 >= 0) &&
+                  (var36 >= 0) &&
+                  (var35 - (this.field_r << 12) < 0) &&
+                  (var36 - (this.field_m << 12) < 0)) {
+                while (var37 < 0) {
+                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                  var39 = vb.field_c[var34];
+                  var40 = var38 >>> 24;
+                  var41 = 256 - var40;
+                  incrementValue$8 = var34;
+                  var34++;
+                  vb.field_c[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                  var37++;
                 }
               }
               var33++;
@@ -478,35 +475,32 @@ final class il extends dm {
           if (var26 >= 0) {
             var33 = var22;
             while (var33 < 0) {
-              L50: {
-                var34 = var23;
-                var35 = var30;
-                var36 = var31 + (var28 * var26 >> 4);
-                var37 = var20;
-                if ((var35 >= 0) &&
-                    (var35 - (this.field_r << 12) < 0)) {
-                  if (var36 < 0) {
-                    var32 = (var26 - 1 - var36) / var26;
-                    var37 = var37 + var32;
-                    var36 = var36 + var26 * var32;
-                    var34 = var34 + var32;
-                  }
-                  var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
-                  if ((1 + var36 - (this.field_m << 12) - var26) / var26 > var37) {
-                    var37 = var32;
-                  }
-                  while (var37 < 0) {
-                    var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                    var39 = vb.field_c[var34];
-                    var40 = var38 >>> 24;
-                    var41 = 256 - var40;
-                    incrementValue$6 = var34;
-                    var34++;
-                    vb.field_c[incrementValue$6] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                    var36 = var36 + var26;
-                    var37++;
-                  }
-                  break L50;
+              var34 = var23;
+              var35 = var30;
+              var36 = var31 + (var28 * var26 >> 4);
+              var37 = var20;
+              if ((var35 >= 0) &&
+                  (var35 - (this.field_r << 12) < 0)) {
+                if (var36 < 0) {
+                  var32 = (var26 - 1 - var36) / var26;
+                  var37 = var37 + var32;
+                  var36 = var36 + var26 * var32;
+                  var34 = var34 + var32;
+                }
+                var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
+                if ((1 + var36 - (this.field_m << 12) - var26) / var26 > var37) {
+                  var37 = var32;
+                }
+                while (var37 < 0) {
+                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                  var39 = vb.field_c[var34];
+                  var40 = var38 >>> 24;
+                  var41 = 256 - var40;
+                  incrementValue$6 = var34;
+                  var34++;
+                  vb.field_c[incrementValue$6] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                  var36 = var36 + var26;
+                  var37++;
                 }
               }
               var33++;
@@ -517,36 +511,33 @@ final class il extends dm {
           }
           var33 = var22;
           while (var33 < 0) {
-            L55: {
-              var34 = var23;
-              var35 = var30;
-              var36 = var31 + (var28 * var26 >> 4);
-              var37 = var20;
-              if ((var35 >= 0) &&
-                  (var35 - (this.field_r << 12) < 0)) {
-                var32 = var36 - (this.field_m << 12);
-                if (var36 - (this.field_m << 12) >= 0) {
-                  var32 = (var26 - var32) / var26;
-                  var37 = var37 + var32;
-                  var36 = var36 + var26 * var32;
-                  var34 = var34 + var32;
-                }
-                var32 = (var36 - var26) / var26;
-                if ((var36 - var26) / var26 > var37) {
-                  var37 = var32;
-                }
-                while (var37 < 0) {
-                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                  var39 = vb.field_c[var34];
-                  var40 = var38 >>> 24;
-                  var41 = 256 - var40;
-                  incrementValue$7 = var34;
-                  var34++;
-                  vb.field_c[incrementValue$7] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                  var36 = var36 + var26;
-                  var37++;
-                }
-                break L55;
+            var34 = var23;
+            var35 = var30;
+            var36 = var31 + (var28 * var26 >> 4);
+            var37 = var20;
+            if ((var35 >= 0) &&
+                (var35 - (this.field_r << 12) < 0)) {
+              var32 = var36 - (this.field_m << 12);
+              if (var36 - (this.field_m << 12) >= 0) {
+                var32 = (var26 - var32) / var26;
+                var37 = var37 + var32;
+                var36 = var36 + var26 * var32;
+                var34 = var34 + var32;
+              }
+              var32 = (var36 - var26) / var26;
+              if ((var36 - var26) / var26 > var37) {
+                var37 = var32;
+              }
+              while (var37 < 0) {
+                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                var39 = vb.field_c[var34];
+                var40 = var38 >>> 24;
+                var41 = 256 - var40;
+                incrementValue$7 = var34;
+                var34++;
+                vb.field_c[incrementValue$7] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                var36 = var36 + var26;
+                var37++;
               }
             }
             var33++;
@@ -559,35 +550,32 @@ final class il extends dm {
           if (var26 == 0) {
             var33 = var22;
             while (var33 < 0) {
-              L28: {
-                var34 = var23;
-                var35 = var30 + (var28 * var27 >> 4);
-                var36 = var31;
-                var37 = var20;
-                if ((var36 >= 0) &&
-                    (var36 - (this.field_m << 12) < 0)) {
-                  if (var35 < 0) {
-                    var32 = (var27 - 1 - var35) / var27;
-                    var37 = var37 + var32;
-                    var35 = var35 + var27 * var32;
-                    var34 = var34 + var32;
-                  }
-                  var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
-                  if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
-                    var37 = var32;
-                  }
-                  while (var37 < 0) {
-                    var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                    var39 = vb.field_c[var34];
-                    var40 = var38 >>> 24;
-                    var41 = 256 - var40;
-                    incrementValue$2 = var34;
-                    var34++;
-                    vb.field_c[incrementValue$2] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                    var35 = var35 + var27;
-                    var37++;
-                  }
-                  break L28;
+              var34 = var23;
+              var35 = var30 + (var28 * var27 >> 4);
+              var36 = var31;
+              var37 = var20;
+              if ((var36 >= 0) &&
+                  (var36 - (this.field_m << 12) < 0)) {
+                if (var35 < 0) {
+                  var32 = (var27 - 1 - var35) / var27;
+                  var37 = var37 + var32;
+                  var35 = var35 + var27 * var32;
+                  var34 = var34 + var32;
+                }
+                var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
+                if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
+                  var37 = var32;
+                }
+                while (var37 < 0) {
+                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                  var39 = vb.field_c[var34];
+                  var40 = var38 >>> 24;
+                  var41 = 256 - var40;
+                  incrementValue$2 = var34;
+                  var34++;
+                  vb.field_c[incrementValue$2] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                  var35 = var35 + var27;
+                  var37++;
                 }
               }
               var33++;
@@ -695,36 +683,33 @@ final class il extends dm {
         if (var26 == 0) {
           var33 = var22;
           while (var33 < 0) {
-            L45: {
-              var34 = var23;
-              var35 = var30 + (var28 * var27 >> 4);
-              var36 = var31;
-              var37 = var20;
-              if ((var36 >= 0) &&
-                  (var36 - (this.field_m << 12) < 0)) {
-                var32 = var35 - (this.field_r << 12);
-                if (var35 - (this.field_r << 12) >= 0) {
-                  var32 = (var27 - var32) / var27;
-                  var37 = var37 + var32;
-                  var35 = var35 + var27 * var32;
-                  var34 = var34 + var32;
-                }
-                var32 = (var35 - var27) / var27;
-                if ((var35 - var27) / var27 > var37) {
-                  var37 = var32;
-                }
-                while (var37 < 0) {
-                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                  var39 = vb.field_c[var34];
-                  var40 = var38 >>> 24;
-                  var41 = 256 - var40;
-                  incrementValue$5 = var34;
-                  var34++;
-                  vb.field_c[incrementValue$5] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                  var35 = var35 + var27;
-                  var37++;
-                }
-                break L45;
+            var34 = var23;
+            var35 = var30 + (var28 * var27 >> 4);
+            var36 = var31;
+            var37 = var20;
+            if ((var36 >= 0) &&
+                (var36 - (this.field_m << 12) < 0)) {
+              var32 = var35 - (this.field_r << 12);
+              if (var35 - (this.field_r << 12) >= 0) {
+                var32 = (var27 - var32) / var27;
+                var37 = var37 + var32;
+                var35 = var35 + var27 * var32;
+                var34 = var34 + var32;
+              }
+              var32 = (var35 - var27) / var27;
+              if ((var35 - var27) / var27 > var37) {
+                var37 = var32;
+              }
+              while (var37 < 0) {
+                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                var39 = vb.field_c[var34];
+                var40 = var38 >>> 24;
+                var41 = 256 - var40;
+                incrementValue$5 = var34;
+                var34++;
+                vb.field_c[incrementValue$5] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                var35 = var35 + var27;
+                var37++;
               }
             }
             var33++;

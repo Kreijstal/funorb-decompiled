@@ -123,19 +123,16 @@ final class od {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
-          L0: {
-            if (null != te.field_c) {
-              for (var1_int = 0; var1_int < 7; var1_int++) {
-                if (!ag.field_j[var1_int]) {
-                  return;
-                }
+          if (null != te.field_c) {
+            for (var1_int = 0; var1_int < 7; var1_int++) {
+              if (!ag.field_j[var1_int]) {
+                return;
               }
-              kf.field_c = null;
-              sl.field_l = null;
-              uh.field_y.c((byte) 83);
-              te.field_c = null;
-              break L0;
             }
+            kf.field_c = null;
+            sl.field_l = null;
+            uh.field_y.c((byte) 83);
+            te.field_c = null;
           }
           if (param0 == -24) {
             return;

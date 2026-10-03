@@ -98,20 +98,17 @@ final class uf implements Runnable {
           var4.field_x = 1;
           var5 = this.field_k;
           synchronized (var5) {
-            L1: {
-              var6 = (o) ((Object) this.field_k.c((byte) 121));
-              while (var6 != null) {
-                if (((long)param1 == var6.field_i) &&
-                    (var6.field_w == param0) &&
-                    (2 == var6.field_x)) {
-                  var4.field_y = var6.field_y;
-                  var4.field_u = false;
-                  stackIn_11_0 = (o) (var4);
-                  return stackIn_11_0;
-                }
-                var6 = (o) ((Object) this.field_k.a(-20));
+            var6 = (o) ((Object) this.field_k.c((byte) 121));
+            while (var6 != null) {
+              if (((long)param1 == var6.field_i) &&
+                  (var6.field_w == param0) &&
+                  (2 == var6.field_x)) {
+                var4.field_y = var6.field_y;
+                var4.field_u = false;
+                stackIn_11_0 = (o) (var4);
+                return stackIn_11_0;
               }
-              break L1;
+              var6 = (o) ((Object) this.field_k.a(-20));
             }
           }
           var4.field_y = param0.a(param1, (byte) -78);

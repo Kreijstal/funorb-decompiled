@@ -189,36 +189,30 @@ final class ik {
               param0.field_m = param0.field_m + 1;
             }
           }
-          L16: {
-            if (var3_int != 0) {
-              for (var5_int = 0; param1.field_L > var5_int; var5_int++) {
-                param1.field_n[var5_int].a(param1, 0);
-              }
-              var5 = param1;
-              param1.field_N = 0;
-              var6 = param1;
-              var6.field_m = 0;
-              var5.field_L = 0;
-              param1.field_K = ji.field_r;
-              param1.field_B = true;
-              break L16;
+          if (var3_int != 0) {
+            for (var5_int = 0; param1.field_L > var5_int; var5_int++) {
+              param1.field_n[var5_int].a(param1, 0);
             }
+            var5 = param1;
+            param1.field_N = 0;
+            var6 = param1;
+            var6.field_m = 0;
+            var5.field_L = 0;
+            param1.field_K = ji.field_r;
+            param1.field_B = true;
           }
-          L18: {
-            if (var4 != 0) {
-              for (var5_int = 0; param0.field_L > var5_int; var5_int++) {
-                param0.field_n[var5_int].a(param0, 0);
-              }
-              var5 = param0;
-              param0.field_N = 0;
-              var6 = param0;
-              var5.field_L = 0;
-              param0.field_t = false;
-              param0.field_B = true;
-              param0.field_K = ji.field_r;
-              var6.field_m = 0;
-              break L18;
+          if (var4 != 0) {
+            for (var5_int = 0; param0.field_L > var5_int; var5_int++) {
+              param0.field_n[var5_int].a(param0, 0);
             }
+            var5 = param0;
+            param0.field_N = 0;
+            var6 = param0;
+            var5.field_L = 0;
+            param0.field_t = false;
+            param0.field_B = true;
+            param0.field_K = ji.field_r;
+            var6.field_m = 0;
           }
           stackIn_77_0 = var3_int;
           return stackIn_77_0 != 0;

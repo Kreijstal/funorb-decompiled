@@ -129,21 +129,18 @@ final class al {
                 return true;
               }
               try {
-                L0: {
-                  var8 = "tuhstatbut";
-                  var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                  var4 = uj.a(';', true, var3);
-                  for (var5 = 0; var5 < var4.length; var5++) {
-                    var6 = var4[var5].indexOf('=');
-                    if ((var6 >= 0) &&
-                        (var4[var5].substring(0, var6).trim().equals(var8))) {
-                      return true;
-                    }
+                var8 = "tuhstatbut";
+                var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
+                var4 = uj.a(';', true, var3);
+                for (var5 = 0; var5 < var4.length; var5++) {
+                  var6 = var4[var5].indexOf('=');
+                  if ((var6 >= 0) &&
+                      (var4[var5].substring(0, var6).trim().equals(var8))) {
+                    return true;
                   }
-                  if (param0 != -109) {
-                    al.a(114, -32);
-                  }
-                  break L0;
+                }
+                if (param0 != -109) {
+                  al.a(114, -32);
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

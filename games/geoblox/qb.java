@@ -58,26 +58,23 @@ final class qb extends hk {
             var8_int = 35 % ((-3 - param1) / 38);
             return false;
           }
-          L0: {
-            var8_int = -this.field_E - (this.field_v + (param2 - param4));
-            var9 = param5 - (this.field_m + param0 + this.field_O);
-            if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
-              var10 = Math.atan2((double)var9, (double)var8_int) - q.field_f;
-              if (!(var10 < 0.0)) {
-                if (0.0 < var10) {
-                  var10 = var10 + 3.141592653589793 / (double)this.field_H;
-                }
-              } else {
-                var10 = var10 - 3.141592653589793 / (double)this.field_H;
+          var8_int = -this.field_E - (this.field_v + (param2 - param4));
+          var9 = param5 - (this.field_m + param0 + this.field_O);
+          if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
+            var10 = Math.atan2((double)var9, (double)var8_int) - q.field_f;
+            if (!(var10 < 0.0)) {
+              if (0.0 < var10) {
+                var10 = var10 + 3.141592653589793 / (double)this.field_H;
               }
-              this.field_I = (int)(var10 * (double)this.field_H / 6.283185307179586);
-              while (this.field_I >= this.field_H) {
-                this.field_I = this.field_I - this.field_H;
-              }
-              while (this.field_I < 0) {
-                this.field_I = this.field_I + this.field_H;
-              }
-              break L0;
+            } else {
+              var10 = var10 - 3.141592653589793 / (double)this.field_H;
+            }
+            this.field_I = (int)(var10 * (double)this.field_H / 6.283185307179586);
+            while (this.field_I >= this.field_H) {
+              this.field_I = this.field_I - this.field_H;
+            }
+            while (this.field_I < 0) {
+              this.field_I = this.field_I + this.field_H;
             }
           }
           return true;

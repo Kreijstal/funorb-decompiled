@@ -121,16 +121,13 @@ final class kk extends ji {
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  L12: {
-                    this.field_u.a(this.field_f.field_A.field_j, (byte) -97, this.field_f.field_A.field_f, var6);
-                    if (this.field_i != 0) {
-                      var17 = 0;
-                      var7 = var17;
-                      while (var6 > var17) {
-                        this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17] = (byte)h.a((int) this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17], (int) this.field_i);
-                        var17++;
-                      }
-                      break L12;
+                  this.field_u.a(this.field_f.field_A.field_j, (byte) -97, this.field_f.field_A.field_f, var6);
+                  if (this.field_i != 0) {
+                    var17 = 0;
+                    var7 = var17;
+                    while (var6 > var17) {
+                      this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17] = (byte)h.a((int) this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17], (int) this.field_i);
+                      var17++;
                     }
                   }
                   this.field_f.field_D = this.field_f.field_D + var6;
@@ -149,13 +146,10 @@ final class kk extends ji {
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  L15: {
-                    this.field_u.a(this.field_j.field_j, (byte) -97, this.field_j.field_f, var5);
-                    if (this.field_i != 0) {
-                      for (var6 = 0; var6 < var5; var6++) {
-                        this.field_j.field_j[this.field_j.field_f + var6] = (byte)h.a((int) this.field_j.field_j[this.field_j.field_f + var6], (int) this.field_i);
-                      }
-                      break L15;
+                  this.field_u.a(this.field_j.field_j, (byte) -97, this.field_j.field_f, var5);
+                  if (this.field_i != 0) {
+                    for (var6 = 0; var6 < var5; var6++) {
+                      this.field_j.field_j[this.field_j.field_f + var6] = (byte)h.a((int) this.field_j.field_j[this.field_j.field_f + var6], (int) this.field_i);
                     }
                   }
                   this.field_j.field_f = this.field_j.field_f + var5;
@@ -189,7 +183,6 @@ final class kk extends ji {
                           }
                           var14_ref = (sd) ((Object) this.field_e.a(72));
                         }
-                        break L18;
                       }
                       if (var14_ref == null) {
                         throw new IOException();

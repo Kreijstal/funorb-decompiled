@@ -233,7 +233,6 @@ class hf {
                   var10 = stackIn_44_0 | stackIn_45_1;
                 }
               }
-              break L6;
             }
             ng.field_E[var4] = var10 != 0;
           }

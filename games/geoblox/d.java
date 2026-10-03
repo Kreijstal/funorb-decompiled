@@ -220,25 +220,22 @@ final class d implements Runnable {
                                                   throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                 }
                                                 try {
-                                                  L14: {
-                                                    if (!field_b.startsWith("win")) {
-                                                      throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                    }
-                                                    var8 = (String) (var9.field_f);
-                                                    if ((!var8.startsWith("http://")) &&
-                                                        (!var8.startsWith("https://"))) {
-                                                      throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                    }
-                                                    var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                    for (var5 = 0; var5 < var8.length(); var5++) {
-                                                      if (-1 == var4.indexOf((int) var8.charAt(var5))) {
-                                                        throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                      }
-                                                    }
-                                                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
-                                                    var9.field_b = null;
-                                                    break L14;
+                                                  if (!field_b.startsWith("win")) {
+                                                    throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                   }
+                                                  var8 = (String) (var9.field_f);
+                                                  if ((!var8.startsWith("http://")) &&
+                                                      (!var8.startsWith("https://"))) {
+                                                    throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                  }
+                                                  var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                                  for (var5 = 0; var5 < var8.length(); var5++) {
+                                                    if (-1 == var4.indexOf((int) var8.charAt(var5))) {
+                                                      throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                    }
+                                                  }
+                                                  Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
+                                                  var9.field_b = null;
                                                 } catch (java.lang.Exception decompiledCaughtParameter1) {
                                                   decompiledCaughtException = decompiledCaughtParameter1;
                                                   var3_ref2 = (Exception) (Object) decompiledCaughtException;
@@ -417,24 +414,21 @@ final class d implements Runnable {
                 var2_ref2 = (IOException) (Object) decompiledCaughtException;
               }
             }
-            L10: {
-              if (null != this.field_r) {
-                var2_int = 0;
-                while (var2_int < this.field_r.length) {
-                  if (this.field_r[var2_int] == null) {
-                    var2_int++;
-                    continue;
-                  }
-                  try {
-                    this.field_r[var2_int].a((byte) -5);
-                    var2_int++;
-                  } catch (java.io.IOException decompiledCaughtParameter3) {
-                    decompiledCaughtException = decompiledCaughtParameter3;
-                    var3 = (IOException) (Object) decompiledCaughtException;
-                    var2_int++;
-                  }
+            if (null != this.field_r) {
+              var2_int = 0;
+              while (var2_int < this.field_r.length) {
+                if (this.field_r[var2_int] == null) {
+                  var2_int++;
+                  continue;
                 }
-                break L10;
+                try {
+                  this.field_r[var2_int].a((byte) -5);
+                  var2_int++;
+                } catch (java.io.IOException decompiledCaughtParameter3) {
+                  decompiledCaughtException = decompiledCaughtParameter3;
+                  var3 = (IOException) (Object) decompiledCaughtException;
+                  var2_int++;
+                }
               }
             }
             if (null != this.field_n) {
@@ -600,46 +594,43 @@ final class d implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        L21: {
-          aj.a((byte) 66, field_p, field_f);
-          if (this.field_h) {
-            this.field_n = new pa(aj.a((String) null, -27533, "random.dat", field_f), "rw", 25L);
-            this.field_j = new pa(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
-            this.field_s = new pa(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
-            this.field_r = new pa[param2];
-            for (var5_int = 0; var5_int < param2; var5_int++) {
-              this.field_r[var5_int] = new pa(aj.a("main_file_cache.idx" + var5_int, (byte) -104), "rw", 1048576L);
+        aj.a((byte) 66, field_p, field_f);
+        if (this.field_h) {
+          this.field_n = new pa(aj.a((String) null, -27533, "random.dat", field_f), "rw", 25L);
+          this.field_j = new pa(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
+          this.field_s = new pa(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
+          this.field_r = new pa[param2];
+          for (var5_int = 0; var5_int < param2; var5_int++) {
+            this.field_r[var5_int] = new pa(aj.a("main_file_cache.idx" + var5_int, (byte) -104), "rw", 1048576L);
+          }
+          if (this.field_l) {
+            try {
+              Class.forName("of").newInstance();
+            } catch (java.lang.Throwable decompiledCaughtParameter8) {
+              decompiledCaughtException = decompiledCaughtParameter8;
+              throwable = decompiledCaughtException;
             }
+          }
+          try {
             if (this.field_l) {
-              try {
-                Class.forName("of").newInstance();
-              } catch (java.lang.Throwable decompiledCaughtParameter8) {
-                decompiledCaughtException = decompiledCaughtParameter8;
-                throwable = decompiledCaughtException;
-              }
+              var6 = new ie();
+              this.field_w = var6;
+            } else {
+              this.field_e = Class.forName("pd").newInstance();
             }
-            try {
-              if (this.field_l) {
-                var6 = new ie();
-                this.field_w = var6;
-              } else {
-                this.field_e = Class.forName("pd").newInstance();
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter9) {
-              decompiledCaughtException = decompiledCaughtParameter9;
-              throwable = decompiledCaughtException;
+          } catch (java.lang.Throwable decompiledCaughtParameter9) {
+            decompiledCaughtException = decompiledCaughtParameter9;
+            throwable = decompiledCaughtException;
+          }
+          try {
+            if (!this.field_l) {
+              this.field_u = Class.forName("tk").newInstance();
+            } else {
+              this.field_a = new tg();
             }
-            try {
-              if (!this.field_l) {
-                this.field_u = Class.forName("tk").newInstance();
-              } else {
-                this.field_a = new tg();
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter10) {
-              decompiledCaughtException = decompiledCaughtParameter10;
-              throwable = decompiledCaughtException;
-            }
-            break L21;
+          } catch (java.lang.Throwable decompiledCaughtParameter10) {
+            decompiledCaughtException = decompiledCaughtParameter10;
+            throwable = decompiledCaughtException;
           }
         }
         this.field_c = false;

@@ -187,43 +187,37 @@ final class ed {
             field_i[var14] = field_i[var14] + ((var12 * field_c[var14] >> 16) + field_p[var14]);
           }
         }
-        L4: {
-          if (this.field_q != null) {
-            this.field_q.a();
-            this.field_m.a();
-            var11 = 0;
-            var12 = 0;
-            var13 = 1;
-            for (var14 = 0; var14 < param0; var14++) {
-              var15 = this.field_q.a(param0);
-              var16 = this.field_m.a(param0);
-              if (var13 == 0) {
-                var12 = this.field_q.field_j + ((this.field_q.field_g - this.field_q.field_j) * var16 >> 8);
-              } else {
-                var12 = this.field_q.field_j + ((this.field_q.field_g - this.field_q.field_j) * var15 >> 8);
-              }
-              var11 += 256;
-              if (var11 >= var12) {
-                var11 = 0;
-                stackIn_36_0 = (var13 != 0) ? 0 : 1;
-                var13 = stackIn_36_0;
-              }
-              if (var13 == 0) {
-                continue;
-              }
-              field_f[var14] = 0;
+        if (this.field_q != null) {
+          this.field_q.a();
+          this.field_m.a();
+          var11 = 0;
+          var12 = 0;
+          var13 = 1;
+          for (var14 = 0; var14 < param0; var14++) {
+            var15 = this.field_q.a(param0);
+            var16 = this.field_m.a(param0);
+            if (var13 == 0) {
+              var12 = this.field_q.field_j + ((this.field_q.field_g - this.field_q.field_j) * var16 >> 8);
+            } else {
+              var12 = this.field_q.field_j + ((this.field_q.field_g - this.field_q.field_j) * var15 >> 8);
             }
-            break L4;
+            var11 += 256;
+            if (var11 >= var12) {
+              var11 = 0;
+              stackIn_36_0 = (var13 != 0) ? 0 : 1;
+              var13 = stackIn_36_0;
+            }
+            if (var13 == 0) {
+              continue;
+            }
+            field_f[var14] = 0;
           }
         }
-        L9: {
-          if ((this.field_h > 0) &&
-              (this.field_r > 0)) {
-            var11 = (int)((double)this.field_h * var3);
-            for (var12 = var11; var12 < param0; var12++) {
-              field_f[var12] = field_f[var12] + field_f[var12 - var11] * this.field_r / 100;
-            }
-            break L9;
+        if ((this.field_h > 0) &&
+            (this.field_r > 0)) {
+          var11 = (int)((double)this.field_h * var3);
+          for (var12 = var11; var12 < param0; var12++) {
+            field_f[var12] = field_f[var12] + field_f[var12 - var11] * this.field_r / 100;
           }
         }
         L11: {

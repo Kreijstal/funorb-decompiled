@@ -321,7 +321,6 @@ final class tb {
                       }
                       param0.field_y[var27] = var29 + 1;
                     }
-                    break L17;
                   }
                   dupTemp$0 = param0.field_x[var1 & 255] & 255;
                   param0.field_m[dupTemp$0] = param0.field_m[dupTemp$0] + 1;
@@ -613,7 +612,6 @@ final class tb {
               var10--;
             }
             var3 = 0;
-            break L1;
           }
           var13 = param0.field_i;
           param0.field_i = param0.field_i + (var11 - var10);

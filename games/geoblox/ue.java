@@ -129,43 +129,40 @@ final class ue {
         int[] var16 = null;
         int[] var18 = null;
         try {
-          L0: {
-            var3_int = -6 / ((param0 + 18) / 49);
-            if (this.field_a != null) {
-              var4 = (int)((long)param1.length * (long)this.field_h / (long)this.field_i) + 14;
-              var16 = new int[var4];
-              var14 = var16;
-              var5 = var14;
-              var6 = 0;
-              var7 = 0;
-              for (var8 = 0; param1.length > var8; var8++) {
-                var9 = param1[var8];
-                var18 = this.field_a[var7];
-                for (var11 = 0; var11 < 14; var11++) {
-                  var5[var6 + var11] = var5[var6 + var11] + var9 * var18[var11];
-                }
-                var7 = var7 + this.field_h;
-                var11 = var7 / this.field_i;
-                var6 = var6 + var11;
-                var7 = var7 - this.field_i * var11;
+          var3_int = -6 / ((param0 + 18) / 49);
+          if (this.field_a != null) {
+            var4 = (int)((long)param1.length * (long)this.field_h / (long)this.field_i) + 14;
+            var16 = new int[var4];
+            var14 = var16;
+            var5 = var14;
+            var6 = 0;
+            var7 = 0;
+            for (var8 = 0; param1.length > var8; var8++) {
+              var9 = param1[var8];
+              var18 = this.field_a[var7];
+              for (var11 = 0; var11 < 14; var11++) {
+                var5[var6 + var11] = var5[var6 + var11] + var9 * var18[var11];
               }
-              param1 = new byte[var4];
-              var12 = 0;
-              var8 = var12;
-              while (var12 < var4) {
-                var9 = var16[var12] + 32768 >> 16;
-                if (-128 > var9) {
-                  param1[var12] = (byte)-128;
+              var7 = var7 + this.field_h;
+              var11 = var7 / this.field_i;
+              var6 = var6 + var11;
+              var7 = var7 - this.field_i * var11;
+            }
+            param1 = new byte[var4];
+            var12 = 0;
+            var8 = var12;
+            while (var12 < var4) {
+              var9 = var16[var12] + 32768 >> 16;
+              if (-128 > var9) {
+                param1[var12] = (byte)-128;
+              } else {
+                if (var9 <= 127) {
+                  param1[var12] = (byte)var9;
                 } else {
-                  if (var9 <= 127) {
-                    param1[var12] = (byte)var9;
-                  } else {
-                    param1[var12] = (byte)127;
-                  }
+                  param1[var12] = (byte)127;
                 }
-                var12++;
               }
-              break L0;
+              var12++;
             }
           }
           stackIn_16_0 = (byte[]) (param1);

@@ -490,155 +490,131 @@ final class vl extends hf {
           }
           this.field_g = 1 + var38.c((byte) 34);
           for (var27 = 0; var12 > var27; var27++) {
-            L61: {
-              var45 = var13[var27];
-              if (null != var45.field_f) {
-                for (var29 = 1; var45.field_f.length > var29; var29 += 2) {
-                  var45.field_f[var29] = var38.f((byte) 76);
-                }
-                break L61;
+            var45 = var13[var27];
+            if (null != var45.field_f) {
+              for (var29 = 1; var45.field_f.length > var29; var29 += 2) {
+                var45.field_f[var29] = var38.f((byte) 76);
               }
             }
-            L63: {
-              if (var45.field_e != null) {
-                for (var29 = 3; -2 + var45.field_e.length > var29; var29 += 2) {
-                  var45.field_e[var29] = var38.f((byte) 102);
-                }
-                break L63;
+            if (var45.field_e != null) {
+              for (var29 = 3; -2 + var45.field_e.length > var29; var29 += 2) {
+                var45.field_e[var29] = var38.f((byte) 102);
               }
             }
           }
-          L23: {
-            if (null != var15) {
-              for (var27 = 1; var27 < var46.length; var27 += 2) {
-                var15[var27] = var38.f((byte) 96);
-              }
-              break L23;
+          if (null != var15) {
+            for (var27 = 1; var27 < var46.length; var27 += 2) {
+              var15[var27] = var38.f((byte) 96);
             }
           }
-          L25: {
-            if (var16 != null) {
-              for (var27 = 1; var47.length > var27; var27 += 2) {
-                var16[var27] = var38.f((byte) 75);
-              }
-              break L25;
+          if (var16 != null) {
+            for (var27 = 1; var47.length > var27; var27 += 2) {
+              var16[var27] = var38.f((byte) 75);
             }
           }
           for (var27 = 0; var27 < var12; var27++) {
-            L59: {
-              var48 = var13[var27];
-              if (null != var48.field_e) {
-                var19 = 0;
-                for (var29 = 2; var29 < var48.field_e.length; var29 += 2) {
-                  var19 = var38.c((byte) 34) + (1 + var19);
-                  var48.field_e[var29] = (byte)var19;
-                }
-                break L59;
+            var48 = var13[var27];
+            if (null != var48.field_e) {
+              var19 = 0;
+              for (var29 = 2; var29 < var48.field_e.length; var29 += 2) {
+                var19 = var38.c((byte) 34) + (1 + var19);
+                var48.field_e[var29] = (byte)var19;
               }
             }
           }
           for (var27 = 0; var12 > var27; var27++) {
-            L57: {
-              var49 = var13[var27];
-              if (null != var49.field_f) {
-                var19 = 0;
-                for (var29 = 2; var29 < var49.field_f.length; var29 += 2) {
-                  var19 = var38.c((byte) 34) + (1 + var19);
-                  var49.field_f[var29] = (byte)var19;
-                }
-                break L57;
+            var49 = var13[var27];
+            if (null != var49.field_f) {
+              var19 = 0;
+              for (var29 = 2; var29 < var49.field_f.length; var29 += 2) {
+                var19 = var38.c((byte) 34) + (1 + var19);
+                var49.field_f[var29] = (byte)var19;
               }
             }
           }
-          L29: {
-            if (null != var15) {
-              var19 = var38.c((byte) 34);
-              var15[0] = (byte)var19;
-              for (var27 = 2; var27 < var46.length; var27 += 2) {
-                var19 = var38.c((byte) 34) + 1 + var19;
-                var15[var27] = (byte)var19;
-              }
-              var27 = var46[0];
-              var28 = var46[1];
-              for (var29 = 0; var27 > var29; var29++) {
-                this.field_o[var29] = (byte)(this.field_o[var29] * var28 + 32 >> 6);
-              }
-              for (var29 = 2; var46.length > var29; var29 += 2) {
-                var30 = var46[var29];
-                var31 = var15[1 + var29];
-                var32 = var28 * (var30 - var27) + (-var27 + var30) / 2;
-                for (var33 = var27; var30 > var33; var33++) {
-                  var34 = pk.a(var30 - var27, (byte) -6, var32);
-                  this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> 6);
-                  var32 = var32 + (var31 - var28);
-                }
-                var27 = var30;
-                var28 = var31;
-              }
-              for (var30 = var27; var30 < 128; var30++) {
-                this.field_o[var30] = (byte)(32 + this.field_o[var30] * var28 >> 6);
-              }
-              var15 = null;
-              break L29;
+          if (null != var15) {
+            var19 = var38.c((byte) 34);
+            var15[0] = (byte)var19;
+            for (var27 = 2; var27 < var46.length; var27 += 2) {
+              var19 = var38.c((byte) 34) + 1 + var19;
+              var15[var27] = (byte)var19;
             }
+            var27 = var46[0];
+            var28 = var46[1];
+            for (var29 = 0; var27 > var29; var29++) {
+              this.field_o[var29] = (byte)(this.field_o[var29] * var28 + 32 >> 6);
+            }
+            for (var29 = 2; var46.length > var29; var29 += 2) {
+              var30 = var46[var29];
+              var31 = var15[1 + var29];
+              var32 = var28 * (var30 - var27) + (-var27 + var30) / 2;
+              for (var33 = var27; var30 > var33; var33++) {
+                var34 = pk.a(var30 - var27, (byte) -6, var32);
+                this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> 6);
+                var32 = var32 + (var31 - var28);
+              }
+              var27 = var30;
+              var28 = var31;
+            }
+            for (var30 = var27; var30 < 128; var30++) {
+              this.field_o[var30] = (byte)(32 + this.field_o[var30] * var28 >> 6);
+            }
+            var15 = null;
           }
-          L35: {
-            if (var16 != null) {
-              var19 = var38.c((byte) 34);
-              var16[0] = (byte)var19;
-              for (var27 = 2; var27 < var47.length; var27 += 2) {
-                var19 = var38.c((byte) 34) + 1 + var19;
-                var16[var27] = (byte)var19;
-              }
-              var27 = var47[0];
-              var28 = var47[1] << 1;
-              for (var29 = 0; var27 > var29; var29++) {
-                var30 = (255 & this.field_m[var29]) + var28;
-                if (var30 < 0) {
-                  var30 = 0;
-                }
-                if (var30 > 128) {
-                  var30 = 128;
-                }
-                this.field_m[var29] = (byte)var30;
-              }
-              var29 = 2;
-              while (var29 < var47.length) {
-                var30 = var47[var29];
-                var31 = var16[var29 + 1] << 1;
-                var32 = (var30 - var27) * var28 + (-var27 + var30) / 2;
-                var37 = var27;
-                var33 = var37;
-                while (var30 > var37) {
-                  var34 = pk.a(var30 - var27, (byte) -6, var32);
-                  var35 = (this.field_m[var37] & 255) + var34;
-                  if (var35 < 0) {
-                    var35 = 0;
-                  }
-                  if (var35 > 128) {
-                    var35 = 128;
-                  }
-                  this.field_m[var37] = (byte)var35;
-                  var32 = var32 + (var31 - var28);
-                  var37++;
-                }
-                var29 += 2;
-                var28 = var31;
-                var27 = var30;
-              }
-              for (var30 = var27; var30 < 128; var30++) {
-                var31 = (this.field_m[var30] & 255) + var28;
-                if (var31 < 0) {
-                  var31 = 0;
-                }
-                if (var31 > 128) {
-                  var31 = 128;
-                }
-                this.field_m[var30] = (byte)var31;
-              }
-              var16 = null;
-              break L35;
+          if (var16 != null) {
+            var19 = var38.c((byte) 34);
+            var16[0] = (byte)var19;
+            for (var27 = 2; var27 < var47.length; var27 += 2) {
+              var19 = var38.c((byte) 34) + 1 + var19;
+              var16[var27] = (byte)var19;
             }
+            var27 = var47[0];
+            var28 = var47[1] << 1;
+            for (var29 = 0; var27 > var29; var29++) {
+              var30 = (255 & this.field_m[var29]) + var28;
+              if (var30 < 0) {
+                var30 = 0;
+              }
+              if (var30 > 128) {
+                var30 = 128;
+              }
+              this.field_m[var29] = (byte)var30;
+            }
+            var29 = 2;
+            while (var29 < var47.length) {
+              var30 = var47[var29];
+              var31 = var16[var29 + 1] << 1;
+              var32 = (var30 - var27) * var28 + (-var27 + var30) / 2;
+              var37 = var27;
+              var33 = var37;
+              while (var30 > var37) {
+                var34 = pk.a(var30 - var27, (byte) -6, var32);
+                var35 = (this.field_m[var37] & 255) + var34;
+                if (var35 < 0) {
+                  var35 = 0;
+                }
+                if (var35 > 128) {
+                  var35 = 128;
+                }
+                this.field_m[var37] = (byte)var35;
+                var32 = var32 + (var31 - var28);
+                var37++;
+              }
+              var29 += 2;
+              var28 = var31;
+              var27 = var30;
+            }
+            for (var30 = var27; var30 < 128; var30++) {
+              var31 = (this.field_m[var30] & 255) + var28;
+              if (var31 < 0) {
+                var31 = 0;
+              }
+              if (var31 > 128) {
+                var31 = 128;
+              }
+              this.field_m[var30] = (byte)var31;
+            }
+            var16 = null;
           }
           for (var27 = 0; var12 > var27; var27++) {
             var13[var27].field_c = var38.c((byte) 34);

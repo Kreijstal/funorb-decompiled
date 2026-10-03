@@ -427,43 +427,40 @@ final class kc {
                 }
                 L39: {
                   L40: {
-                    L41: {
-                      re.field_j = true;
-                      var2_ref_ja.a(false);
-                      var2_ref_ja.a((byte) 100);
-                      el.field_o.field_F = true;
-                      var2_ref_ja.f(92);
-                      if (ji.field_r == var2_ref_ja.field_K) {
-                        var2_ref_ja.a(-el.field_o.field_J, -117);
-                        var3_float = -var2_ref_ja.field_o + 320.0f;
-                        var4_float = -var2_ref_ja.field_v + 240.0f;
-                        var5 = (double)og.field_r / Math.sqrt((double)(var4_float * var4_float + var3_float * var3_float));
-                        var3_float = (float)((double)var3_float * var5);
-                        var4_float = (float)((double)var4_float * var5);
-                        var2_ref_ja.field_F = var4_float;
-                        var2_ref_ja.field_w = var3_float;
-                        var7_int = 0;
-                        while (var2_ref_ja.field_L > var7_int) {
-                          var2_ref_ja.field_n[var7_int].a(var2_ref_ja, 0);
-                          var7_int++;
-                          if (var9 != 0) {
-                            break L39;
-                          }
-                          if (var9 == 0) {
-                            continue;
-                          }
-                          break;
+                    re.field_j = true;
+                    var2_ref_ja.a(false);
+                    var2_ref_ja.a((byte) 100);
+                    el.field_o.field_F = true;
+                    var2_ref_ja.f(92);
+                    if (ji.field_r == var2_ref_ja.field_K) {
+                      var2_ref_ja.a(-el.field_o.field_J, -117);
+                      var3_float = -var2_ref_ja.field_o + 320.0f;
+                      var4_float = -var2_ref_ja.field_v + 240.0f;
+                      var5 = (double)og.field_r / Math.sqrt((double)(var4_float * var4_float + var3_float * var3_float));
+                      var3_float = (float)((double)var3_float * var5);
+                      var4_float = (float)((double)var4_float * var5);
+                      var2_ref_ja.field_F = var4_float;
+                      var2_ref_ja.field_w = var3_float;
+                      var7_int = 0;
+                      while (var2_ref_ja.field_L > var7_int) {
+                        var2_ref_ja.field_n[var7_int].a(var2_ref_ja, 0);
+                        var7_int++;
+                        if (var9 != 0) {
+                          break L39;
                         }
-                        var7 = var2_ref_ja;
-                        var8 = var2_ref_ja;
-                        var2_ref_ja.field_L = 0;
-                        var7.field_N = 0;
-                        var8.field_m = 0;
-                        ji.field_r.a(-36, var2_ref_ja);
                         if (var9 == 0) {
-                          break L40;
+                          continue;
                         }
-                        break L41;
+                        break;
+                      }
+                      var7 = var2_ref_ja;
+                      var8 = var2_ref_ja;
+                      var2_ref_ja.field_L = 0;
+                      var7.field_N = 0;
+                      var8.field_m = 0;
+                      ji.field_r.a(-36, var2_ref_ja);
+                      if (var9 == 0) {
+                        break L40;
                       }
                     }
                     if ((var2_ref_ja.field_K != bh.field_c) &&
@@ -515,7 +512,6 @@ final class kc {
                     var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 7);
                     var1_int++;
                     rb.field_b = rb.field_b + 1;
-                    break L40;
                   }
                   var2_ref_ja.field_K = null;
                 }

@@ -402,25 +402,22 @@ abstract class wh extends rc {
         var7 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (param1 > 0) {
-                var4 = new byte[param0];
-                var5_int = 0;
-                while (~param0 < ~var5_int) {
-                  var4[var5_int] = param2[param1 + var5_int];
-                  var5_int++;
-                  if (var7 != 0) {
-                    break L0;
-                  }
-                  if (var7 == 0) {
-                    continue;
-                  }
-                  break;
-                }
-                if (var7 == 0) {
+            if (param1 > 0) {
+              var4 = new byte[param0];
+              var5_int = 0;
+              while (~param0 < ~var5_int) {
+                var4[var5_int] = param2[param1 + var5_int];
+                var5_int++;
+                if (var7 != 0) {
                   break L0;
                 }
-                break L1;
+                if (var7 == 0) {
+                  continue;
+                }
+                break;
+              }
+              if (var7 == 0) {
+                break L0;
               }
             }
             var4 = param2;
@@ -907,7 +904,6 @@ abstract class wh extends rc {
                         break;
                       }
                       decompiledRegionSelector0 = 0;
-                      break L7;
                     }
                   }
                   if (!(decompiledRegionSelector0 == 0)) {

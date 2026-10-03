@@ -289,21 +289,18 @@ class dj extends hk {
         int var5;
         cc var6;
         long var7;
-        L0: {
-          var5 = -124 % ((param2 - 1) / 43);
-          if ((this.field_q != null) &&
-              (param3 == 0)) {
-            this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
-            if (this.field_q instanceof cc) {
-              var6 = (cc) ((Object) this.field_q);
-              if (this.field_H != this.field_L) {
-                var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
-              }
-              var7 = oa.a(-12520);
-              if ((-this.field_O + var7) % 1000L < 500L) {
-                var6.a(param0, this.field_H, -2, (el) (this), param1);
-                break L0;
-              }
+        var5 = -124 % ((param2 - 1) / 43);
+        if ((this.field_q != null) &&
+            (param3 == 0)) {
+          this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
+          if (this.field_q instanceof cc) {
+            var6 = (cc) ((Object) this.field_q);
+            if (this.field_H != this.field_L) {
+              var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
+            }
+            var7 = oa.a(-12520);
+            if ((-this.field_O + var7) % 1000L < 500L) {
+              var6.a(param0, this.field_H, -2, (el) (this), param1);
             }
           }
         }

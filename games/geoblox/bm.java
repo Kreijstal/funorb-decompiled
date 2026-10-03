@@ -116,41 +116,34 @@ final class bm {
                   var9 = this.field_i[var10];
                 }
               }
-              break L5;
             }
             this.field_b = 1 + var9;
             if (var7 != 0) {
               this.field_r = new byte[this.field_b][];
             }
-            L11: {
-              this.field_q = new int[this.field_b];
-              this.field_a = new int[this.field_b];
-              this.field_t = new int[this.field_b];
-              this.field_k = new int[this.field_b];
-              this.field_o = new int[this.field_b][];
-              if (var6 != 0) {
-                this.field_d = new int[this.field_b];
-                for (var10 = 0; this.field_b > var10; var10++) {
-                  this.field_d[var10] = -1;
-                }
-                for (var10 = 0; var10 < this.field_h; var10++) {
-                  this.field_d[this.field_i[var10]] = var18.a((byte) -76);
-                }
-                this.field_n = new am(this.field_d);
-                break L11;
+            this.field_q = new int[this.field_b];
+            this.field_a = new int[this.field_b];
+            this.field_t = new int[this.field_b];
+            this.field_k = new int[this.field_b];
+            this.field_o = new int[this.field_b][];
+            if (var6 != 0) {
+              this.field_d = new int[this.field_b];
+              for (var10 = 0; this.field_b > var10; var10++) {
+                this.field_d[var10] = -1;
               }
+              for (var10 = 0; var10 < this.field_h; var10++) {
+                this.field_d[this.field_i[var10]] = var18.a((byte) -76);
+              }
+              this.field_n = new am(this.field_d);
             }
             for (var10 = 0; var10 < this.field_h; var10++) {
               this.field_q[this.field_i[var10]] = var18.a((byte) -95);
             }
-            L15: {
-              if (var7 != 0) {
-                for (var10 = 0; this.field_h > var10; var10++) {
-                  var22 = new byte[64];
-                  var18.b(29915, 64, var22, 0);
-                  this.field_r[this.field_i[var10]] = var22;
-                }
-                break L15;
+            if (var7 != 0) {
+              for (var10 = 0; this.field_h > var10; var10++) {
+                var22 = new byte[64];
+                var18.b(29915, 64, var22, 0);
+                this.field_r[this.field_i[var10]] = var22;
               }
             }
             var10 = 0;
@@ -217,7 +210,6 @@ final class bm {
                   this.field_o[var11] = null;
                 }
               }
-              break L19;
             }
             if (var6 != 0) {
               this.field_e = new int[var9 + 1][];
