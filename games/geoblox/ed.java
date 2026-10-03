@@ -220,35 +220,16 @@ final class ed {
             field_f[var12] = field_f[var12] + field_f[var12 - var11] * this.field_r / 100;
           }
         }
-        L11: {
-          if ((this.field_e.field_b[0] <= 0) &&
-              (this.field_e.field_b[1] <= 0)) {
-            break L11;
-          }
-          this.field_k.a();
-          var11 = this.field_k.a(param0 + 1);
-          var12 = this.field_e.a(0, (float)var11 / 65536.0f);
-          var13 = this.field_e.a(1, (float)var11 / 65536.0f);
-          if (param0 >= var12 + var13) {
-            var14 = 0;
-            var15 = var13;
-            if (var15 > param0 - var12) {
-              var15 = param0 - var12;
-            }
-            while (var14 < var15) {
-              var16 = (int)((long)field_f[var14 + var12] * (long)ub.field_a >> 16);
-              for (var17 = 0; var17 < var12; var17++) {
-                var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
-              }
-              for (var17 = 0; var17 < var14; var17++) {
-                var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
-              }
-              field_f[var14] = var16;
-              var11 = this.field_k.a(param0 + 1);
-              var14++;
-            }
-            var15 = 128;
-            while (true) {
+        {
+          if (!((this.field_e.field_b[0] <= 0) &&
+              (this.field_e.field_b[1] <= 0))) {
+            this.field_k.a();
+            var11 = this.field_k.a(param0 + 1);
+            var12 = this.field_e.a(0, (float)var11 / 65536.0f);
+            var13 = this.field_e.a(1, (float)var11 / 65536.0f);
+            if (param0 >= var12 + var13) {
+              var14 = 0;
+              var15 = var13;
               if (var15 > param0 - var12) {
                 var15 = param0 - var12;
               }
@@ -257,32 +238,50 @@ final class ed {
                 for (var17 = 0; var17 < var12; var17++) {
                   var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
                 }
-                for (var17 = 0; var17 < var13; var17++) {
+                for (var17 = 0; var17 < var14; var17++) {
                   var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
                 }
                 field_f[var14] = var16;
                 var11 = this.field_k.a(param0 + 1);
                 var14++;
               }
-              if (var14 < param0 - var12) {
-                var12 = this.field_e.a(0, (float)var11 / 65536.0f);
-                var13 = this.field_e.a(1, (float)var11 / 65536.0f);
-                var15 += 128;
-                continue;
-              }
-              while (var14 < param0) {
-                var16 = 0;
-                for (var17 = var14 + var12 - param0; var17 < var12; var17++) {
-                  var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
+              var15 = 128;
+              while (true) {
+                if (var15 > param0 - var12) {
+                  var15 = param0 - var12;
                 }
-                for (var17 = 0; var17 < var13; var17++) {
-                  var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
+                while (var14 < var15) {
+                  var16 = (int)((long)field_f[var14 + var12] * (long)ub.field_a >> 16);
+                  for (var17 = 0; var17 < var12; var17++) {
+                    var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
+                  }
+                  for (var17 = 0; var17 < var13; var17++) {
+                    var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
+                  }
+                  field_f[var14] = var16;
+                  var11 = this.field_k.a(param0 + 1);
+                  var14++;
                 }
-                field_f[var14] = var16;
-                var11 = this.field_k.a(param0 + 1);
-                var14++;
+                if (var14 < param0 - var12) {
+                  var12 = this.field_e.a(0, (float)var11 / 65536.0f);
+                  var13 = this.field_e.a(1, (float)var11 / 65536.0f);
+                  var15 += 128;
+                  continue;
+                }
+                while (var14 < param0) {
+                  var16 = 0;
+                  for (var17 = var14 + var12 - param0; var17 < var12; var17++) {
+                    var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
+                  }
+                  for (var17 = 0; var17 < var13; var17++) {
+                    var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
+                  }
+                  field_f[var14] = var16;
+                  var11 = this.field_k.a(param0 + 1);
+                  var14++;
+                }
+                break;
               }
-              break;
             }
           }
         }

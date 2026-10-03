@@ -53,16 +53,16 @@ final class c extends ka {
               var3_int = t.field_i[this.field_K][param0];
               if ((var3_int == 8) &&
                   (var4 == 0)) {
-                L4: {
+                {
                   if (102 != ki.field_d) {
                     if (ki.field_d != 103) {
                       super.a(param0, -53);
-                      break L4;
+                    } else {
+                      j.field_gb = 80;
                     }
-                    j.field_gb = 80;
-                    break L4;
+                  } else {
+                    j.field_gb = 0;
                   }
-                  j.field_gb = 0;
                 }
                 this.d(0);
                 break L0;
@@ -997,20 +997,18 @@ final class c extends ka {
                       if (var10 != 0) {
                         break L10;
                       }
-                      L12: {
-                        if (stackIn_59_0 != var3_ref_String__[var8_int]) {
-                          var2_int = 1;
-                          var9 = var3_ref_String__[var8_int];
-                          if ((var7 == 0) &&
-                              (null != el.field_o) &&
-                              (var5[var8_int] == Math.abs(el.field_o.field_o)) &&
-                              (ge.a(var9, (byte) 12))) {
-                            var7 = 1;
-                            var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
-                            var4.a(var9, 165, var6, 16610816, -1);
-                            var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
-                            break L12;
-                          }
+                      if (stackIn_59_0 != var3_ref_String__[var8_int]) {
+                        var2_int = 1;
+                        var9 = var3_ref_String__[var8_int];
+                        if ((var7 == 0) &&
+                            (null != el.field_o) &&
+                            (var5[var8_int] == Math.abs(el.field_o.field_o)) &&
+                            (ge.a(var9, (byte) 12))) {
+                          var7 = 1;
+                          var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
+                          var4.a(var9, 165, var6, 16610816, -1);
+                          var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
+                        } else {
                           var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
                           var4.a(var9, 165, var6, 1, -1);
                           var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);

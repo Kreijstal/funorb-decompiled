@@ -114,14 +114,11 @@ final class kc {
                     if (var9 != 0) {
                       break L3;
                     }
-                    L5: {
-                      if (stackIn_12_0 != a.field_d) {
-                        if (!var1.field_B) {
-                          break L5;
-                        }
+                    if (stackIn_12_0 != a.field_d) {
+                      if (!(!var1.field_B)) {
                         fa.field_a = true;
-                        break L5;
                       }
+                    } else {
                       var1.j(30383);
                       var1.k(2);
                       var1.a(false);
@@ -160,19 +157,17 @@ final class kc {
                         L12: while (true) {
                           stackIn_20_0 = (ja) ((Object) var11.a(true));
                           while (true) {
-                            L15: {
-                              var10 = stackIn_20_0;
-                              var12 = var10;
-                              var5_ref_ja = var12;
-                              if (var12 != null) {
-                                pk.field_o[var10.field_H] = true;
-                                stackOut_21_0 = var12.field_t;
-                                stackIn_44_0 = stackOut_21_0 ? 1 : 0;
-                                stackIn_22_0 = stackOut_21_0;
-                                if (stackIn_22_0) {
-                                  var4_int = 0;
-                                  break L15;
-                                }
+                            var10 = stackIn_20_0;
+                            var12 = var10;
+                            var5_ref_ja = var12;
+                            if (var12 != null) {
+                              pk.field_o[var10.field_H] = true;
+                              stackOut_21_0 = var12.field_t;
+                              stackIn_44_0 = stackOut_21_0 ? 1 : 0;
+                              stackIn_22_0 = stackOut_21_0;
+                              if (stackIn_22_0) {
+                                var4_int = 0;
+                              } else {
                                 var13.a(var12, false);
                                 var6_int = 0;
                                 L17: while (true) {
@@ -203,7 +198,6 @@ final class kc {
                                           continue;
                                         }
                                         var11.a(var7, false);
-                                        break L20;
                                       }
                                       var6_int++;
                                       continue L17;

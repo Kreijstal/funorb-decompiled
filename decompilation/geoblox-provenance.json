@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "18c1062fc902b9d9b800155c9ccab3d868cfc98d",
+      "commit": "09e713519641a1b628f1353a6398e327e1fe9fdd",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "181f076a1fa60e43792a4326a36369f4b82b1a00a32424e9a539fc0107c81d41",
-        "reproduce": "git archive --format=tar 18c1062fc902b9d9b800155c9ccab3d868cfc98d | sha256sum",
+        "sha256": "f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5",
+        "reproduce": "git archive --format=tar 09e713519641a1b628f1353a6398e327e1fe9fdd | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b",
-  "previousSourceTreeSha256": "27a6066eccc5c5e6cfeaf5f6cf49b604a761eb2ade03fa6f5ebe913defe281e1",
-  "changedJavaFiles": 10,
+  "sourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
+  "previousSourceTreeSha256": "05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b",
+  "changedJavaFiles": 8,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2998,5 +2998,223 @@
       }
     ],
     "scope": "Preceding conditional arms and abrupt exits establish equality/inequality facts for unique, scoped primitive int locals. A later or cyclic write invalidates the fact; fields/formals/boxed/non-int operands, ambiguous bindings, switch completion and unproven loop completion remain opaque. Only entirely pure local predicates are replaced; selected arm scopes remain. Java completion tracks loop/label ownership and finally overrides before removing unreachable suffixes. Discarded declarations refuse proof, preserving all naming objects and local ordinals. Checked or unresolved catch regions, unsupported/nested syntax, missing terminators, comments/Unicode and excessive predicate depth refuse reconstruction.16560 native comparisons cover23 variants before and after frame cleanup, six guard values, six secondary values, five failure modes and nullable monitors; twelve independent selection/exit/fallthrough/mutation/cleanup/monitor oracles pass. All303 expected token streams match. A separate diagnostic captures the exact compiler stage before synthetic checked-exception wrappers are installed; unique token-subsequence matching proves its input against the pinned raw source, and instrumentation changes no Java or diagnostics bytes. Character provenance attributes277 removed refs to original predicate/discarded-arm/unreachable-suffix spans. All19591 declarations,118373 surviving refs and388 complete override pairs retain ordered identities. Board reconciliation falls494 to345 lines/14 to11 plain labels; session update638 to631 lines, half-blend triangle385 to372. Six large labeled spans and220 plain labels remain. Unknown shared names, remaining continuations and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
+  },
+  "postGuardExitRecovery": {
+    "historicalPassVersion": 112,
+    "javaToolsCommit": "09e713519641a1b628f1353a6398e327e1fe9fdd",
+    "sourceArchiveSha256": "f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 8,
+    "changedMethodBodies": 9,
+    "sourceLinesBefore": 77354,
+    "sourceLinesAfter": 77334,
+    "plainBlockLabelsBefore": 220,
+    "plainBlockLabelsAfter": 207,
+    "plainBlockLabelsRemoved": 13,
+    "counts": {
+      "voidReturnFrames": 1,
+      "fallthroughBreaks": 1,
+      "exitTreeFrames": 3,
+      "ifElseFrames": 4,
+      "guardTreeFrames": 1,
+      "effectfulExits": 4,
+      "localizedLoopBreaks": 0,
+      "leadingLoopGuards": 0,
+      "labelsRemoved": 5,
+      "jumpsUnlabeled": 0,
+      "blocksUnwrapped": 8
+    },
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 118373,
+    "sourceReferenceOccurrencesAfter": 118373,
+    "orderedDeclarationsReferencesAndOverridesUnchanged": true,
+    "localOrdinalMigrations": 0,
+    "fullOverridePairsPreserved": 388,
+    "expectedRewriteTokenStreamsCheckedJavaFiles": 303,
+    "genericFocusedTestFilesPassed": 4,
+    "newPostGuardTestGroups": 4,
+    "newNativeEmitterComparisons": 25200,
+    "independentNativeOracles": 10,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "methodBodies": 2080,
+    "largeMethodSpansAtLeast300Lines": 20,
+    "largeMethodSpansWithGeneratedBlockLabelsAfter": 6,
+    "changes": [
+      {
+        "file": "c.java",
+        "name": "c.a",
+        "line": 44,
+        "rewrites": 1,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 1,
+          "ifElseFrames": 0,
+          "guardTreeFrames": 0,
+          "effectfulExits": 0,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 0,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 0
+        }
+      },
+      {
+        "file": "c.java",
+        "name": "c.b",
+        "line": 930,
+        "rewrites": 1,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 0,
+          "ifElseFrames": 0,
+          "guardTreeFrames": 0,
+          "effectfulExits": 1,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 1,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 1
+        }
+      },
+      {
+        "file": "ed.java",
+        "name": "ed.a",
+        "line": 112,
+        "rewrites": 1,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 0,
+          "ifElseFrames": 1,
+          "guardTreeFrames": 0,
+          "effectfulExits": 0,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 0,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 0
+        }
+      },
+      {
+        "file": "ff.java",
+        "name": "ff.b",
+        "line": 133,
+        "rewrites": 1,
+        "counts": {
+          "voidReturnFrames": 1,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 0,
+          "ifElseFrames": 0,
+          "guardTreeFrames": 0,
+          "effectfulExits": 0,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 1,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 1
+        }
+      },
+      {
+        "file": "ik.java",
+        "name": "ik.a",
+        "line": 69,
+        "rewrites": 1,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 0,
+          "ifElseFrames": 0,
+          "guardTreeFrames": 1,
+          "effectfulExits": 0,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 0,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 0
+        }
+      },
+      {
+        "file": "kc.java",
+        "name": "kc.b",
+        "line": 63,
+        "rewrites": 3,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 1,
+          "exitTreeFrames": 1,
+          "ifElseFrames": 0,
+          "guardTreeFrames": 0,
+          "effectfulExits": 1,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 1,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 2
+        }
+      },
+      {
+        "file": "lc.java",
+        "name": "lc.a",
+        "line": 105,
+        "rewrites": 1,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 1,
+          "ifElseFrames": 0,
+          "guardTreeFrames": 0,
+          "effectfulExits": 0,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 0,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 0
+        }
+      },
+      {
+        "file": "p.java",
+        "name": "p.a",
+        "line": 16,
+        "rewrites": 1,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 0,
+          "ifElseFrames": 1,
+          "guardTreeFrames": 0,
+          "effectfulExits": 0,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 0,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 0
+        }
+      },
+      {
+        "file": "wh.java",
+        "name": "wh.a",
+        "line": 443,
+        "rewrites": 3,
+        "counts": {
+          "voidReturnFrames": 0,
+          "fallthroughBreaks": 0,
+          "exitTreeFrames": 0,
+          "ifElseFrames": 2,
+          "guardTreeFrames": 0,
+          "effectfulExits": 2,
+          "localizedLoopBreaks": 0,
+          "leadingLoopGuards": 0,
+          "labelsRemoved": 2,
+          "jumpsUnlabeled": 0,
+          "blocksUnwrapped": 4
+        }
+      }
+    ],
+    "scope": "Revisits eight existing destination/scope exit proofs after final guard/frame cleanup. Accepted steps strictly decrease the label/transfer measure and terminate at a fixed point; no new value facts or scalar dispatch selection are added. Effect order, conditions, checked/unchecked exception and finally/monitor ownership remain. All303 produced token streams equal an independent application of the same proven recovery to the pinned raw bodies, and all19591 declarations/118373 references/388 full override pairs retain ordered identities. A clean tracked source tar reproduces every emitted Java byte and diagnostics; diagnostic stage capture changes no output bytes. Four focused emitter test files pass, including25200 native comparisons and10 independent oracles across14 variants. All8898 prior naming objects/local ordinals remain. Larger game/menu/session continuations and full asset/game/browser/phone equivalence remain unfinished or unverified. Current game-probe evidence belongs in the single readable manifest."
   }
 }
