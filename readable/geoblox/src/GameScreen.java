@@ -1944,253 +1944,208 @@ final class GameScreen extends MenuScreen {
               newSessionTutorialModeFlag = 1;
             } else if (!((selectedActionSnapshot == 0) &&
                 (clientControlFlowGuard == 0))) {
-              L5: {
-                L6: {
-                  L7: {
-                    L8: {
-                      L9: {
-                        L10: {
-                          L11: {
-                            L12: {
-                              L13: {
-                                L14: {
-                                  L15: {
-                                    L16: {
-                                      L17: {
-                                        if ((1 == selectedActionSnapshot) &&
-                                            (clientControlFlowGuard == 0)) {
-                                          ai.requestedScreenId = -1;
-                                          if (clientControlFlowGuard == 0) {
-                                            break L1;
-                                          }
-                                        } else if (!((selectedActionSnapshot == 2) &&
-                                            (clientControlFlowGuard == 0))) {
-                                          if (selectedActionSnapshot == 3) {
-                                            break L17;
-                                          }
-                                          if ((selectedActionSnapshot == 4) &&
-                                              (clientControlFlowGuard == 0)) {
-                                            break L16;
-                                          }
-                                          if ((14 == selectedActionSnapshot) &&
-                                              (clientControlFlowGuard == 0)) {
-                                            break L15;
-                                          }
-                                          if (selectedActionSnapshot == 5) {
-                                            break L14;
-                                          }
-                                          if (selectedActionSnapshot == 13) {
-                                            break L13;
-                                          }
-                                          if ((6 == selectedActionSnapshot) &&
-                                              (clientControlFlowGuard == 0)) {
-                                            break L12;
-                                          }
-                                          if (selectedActionSnapshot == 7) {
-                                            break L11;
-                                          }
-                                          if (selectedActionSnapshot == 12) {
-                                            break L10;
-                                          }
-                                          if (selectedActionSnapshot == 11) {
-                                            break L9;
-                                          }
-                                          if (selectedActionSnapshot == 10) {
-                                            break L8;
-                                          }
-                                          if ((16 == selectedActionSnapshot) &&
-                                              (clientControlFlowGuard == 0)) {
-                                            break L7;
-                                          }
-                                          if (selectedActionSnapshot == 17) {
-                                            break L6;
-                                          }
-                                          if (selectedActionSnapshot == 18) {
-                                            break L5;
-                                          }
-                                          break L1;
-                                        }
-                                        if (!fh.c(-100)) {
-                                          ai.requestedScreenId = 2;
-                                          if (clientControlFlowGuard == 0) {
-                                            break L1;
-                                          }
-                                        }
-                                        ai.requestedScreenId = 8;
-                                        if (clientControlFlowGuard == 0) {
-                                          break L1;
-                                        }
-                                      }
-                                      ai.requestedScreenId = 3;
-                                      if (clientControlFlowGuard == 0) {
-                                        break L1;
-                                      }
-                                    }
-                                    if (InstrumentPatch.field_n == null) {
-                                      this.fullscreenDialogActive = true;
-                                    }
-                                    if ((!ArchiveCatalog.b(255)) &&
-                                        (og.field_n > 0) &&
-                                        (sa.a(MenuScreen.platformTaskDispatcher, (byte) 37))) {
-                                      MessageDialog.requestFullscreen((byte) -128);
-                                    }
-                                    this.fullscreenDialogButtonIndex = 0;
-                                    this.pointerInteractionActive = false;
-                                    this.activeTicks = 0;
-                                    if (clientControlFlowGuard == 0) {
-                                      break L1;
-                                    }
-                                  }
-                                  InstrumentPatch.field_p = 0;
-                                  ug.field_c = 0;
-                                  ra.field_d = -2147483648;
-                                }
-                                if ((2 != this.screenId) &&
-                                    (this.screenId != 4) &&
-                                    (6 != this.screenId) &&
-                                    (oc.previousMenuScreenId == 1)) {
-                                  ai.requestedScreenId = 1;
-                                  if (clientControlFlowGuard == 0) {
-                                    break L1;
-                                  }
-                                }
-                                ai.requestedScreenId = 0;
-                                if (clientControlFlowGuard == 0) {
-                                  break L1;
-                                }
-                              }
-                              if (null != UiWidget.gameplaySession) {
-                                UiWidget.gameplaySession.submitScore((byte) -70);
-                              }
-                              L30: {
-                                ai.requestedScreenId = -1;
-                                if (this.screenId != 8) {
-                                  if (!((4 == this.screenId) &&
-                                      (null != UiWidget.gameplaySession) &&
-                                      (UiWidget.gameplaySession.newActionCount == 0))) {
-                                    if (this.screenId != 7) {
-                                      UiWidget.gameplayReturnScreenId = 6;
-                                      if (clientControlFlowGuard == 0) {
-                                        break L30;
-                                      }
-                                    }
-                                    UiWidget.gameplayReturnScreenId = 5;
-                                    if (clientControlFlowGuard == 0) {
-                                      break L30;
-                                    }
-                                  }
-                                }
-                                UiWidget.gameplayReturnScreenId = 2;
-                              }
-                              cd.gameplayOriginScreenId = this.screenId;
-                              if (clientControlFlowGuard == 0) {
-                                break L1;
-                              }
-                            }
-                            L34: {
-                              UiWidget.gameplaySession.emitPointsPopup(false);
-                              UiWidget.gameplaySession.addScore((byte) 127, wa.collectUnfinishedPopupPoints(methodGuard ^ 25864));
-                              UiWidget.gameplaySession.addScore((byte) 127, UiWidget.gameplaySession.resultBonusPoints);
-                              UiWidget.gameplaySession.resultBonusPoints = 0;
-                              if (fh.c(-114)) {
-                                if (!((!UiWidget.gameplaySession.tutorialMode) &&
-                                      (UiWidget.gameplaySession.score == 0) &&
-                                      (ug.field_c == 0)) &&
-                                    !((UiWidget.gameplaySession.tutorialMode) &&
-                                      (UiWidget.gameplaySession.updateTick < 750))) {
-                                  if ((0 == UiWidget.gameplaySession.score) &&
-                                      (0 == ug.field_c)) {
-                                    ai.requestedScreenId = 0;
-                                    if (clientControlFlowGuard == 0) {
-                                      break L34;
-                                    }
-                                  }
-                                  ai.requestedScreenId = 4;
-                                  if (clientControlFlowGuard == 0) {
-                                    break L34;
-                                  }
-                                }
-                                ai.requestedScreenId = 0;
-                                if (clientControlFlowGuard == 0) {
-                                  break L34;
-                                }
-                              }
-                              if ((UiWidget.gameplaySession.score == 0) &&
-                                  (ug.field_c == 0)) {
-                                ai.requestedScreenId = 0;
-                                if (clientControlFlowGuard == 0) {
-                                  break L34;
-                                }
-                              }
-                              UiWidget.gameplaySession.submitScore((byte) -70);
-                              if (0 < UiWidget.gameplaySession.newActionCount) {
-                                ai.requestedScreenId = 6;
-                                if (clientControlFlowGuard == 0) {
-                                  break L34;
-                                }
-                              }
-                              ai.requestedScreenId = 2;
-                            }
-                            fi.a(methodGuard + 2, ll.field_d);
-                            if (clientControlFlowGuard == 0) {
-                              break L1;
-                            }
-                          }
-                          gf.a(k.c(methodGuard ^ -125), 62);
-                          if (clientControlFlowGuard == 0) {
-                            break L1;
-                          }
-                        }
-                        if (!((this.tutorialPageIndex < 4) &&
-                              (!this.tutorialSlideActive))) {
-                          suppressPressAnimationFlag = 1;
-                          if (clientControlFlowGuard == 0) {
-                            break L1;
-                          }
-                        }
-                        this.previousTutorialPageIndex = this.tutorialPageIndex;
-                        this.tutorialPageIndex = this.tutorialPageIndex + 1;
-                        this.tutorialSlideForward = true;
-                        this.tutorialSlideActive = true;
-                        if (clientControlFlowGuard == 0) {
-                          break L1;
-                        }
-                      }
-                      if (!((this.tutorialPageIndex > 0) &&
-                            (!this.tutorialSlideActive))) {
-                        suppressPressAnimationFlag = 1;
-                        if (clientControlFlowGuard == 0) {
-                          break L1;
-                        }
-                      }
-                      this.previousTutorialPageIndex = this.tutorialPageIndex;
-                      this.tutorialSlideActive = true;
-                      this.tutorialPageIndex = this.tutorialPageIndex - 1;
-                      this.tutorialSlideForward = false;
-                      if (clientControlFlowGuard == 0) {
-                        break L1;
-                      }
-                    }
-                    if (fh.c(-112)) {
-                      ai.requestedScreenId = 7;
-                      if (clientControlFlowGuard == 0) {
-                        break L1;
-                      }
-                    }
-                    ai.requestedScreenId = 5;
+              switch ((clientControlFlowGuard == 0
+                  || selectedActionSnapshot == 3
+                  || selectedActionSnapshot == 5
+                  || selectedActionSnapshot == 7
+                  || selectedActionSnapshot == 10
+                  || selectedActionSnapshot == 11
+                  || selectedActionSnapshot == 12
+                  || selectedActionSnapshot == 13
+                  || selectedActionSnapshot == 17
+                  || selectedActionSnapshot == 18
+                ) ? selectedActionSnapshot : -1) {
+                case 1:
+                  ai.requestedScreenId = -1;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 2:
+                  if (!fh.c(-100)) {
+                    ai.requestedScreenId = 2;
                     if (clientControlFlowGuard == 0) {
                       break L1;
                     }
                   }
+                  ai.requestedScreenId = 8;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 3:
+                  ai.requestedScreenId = 3;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 4:
+                  if (InstrumentPatch.field_n == null) {
+                    this.fullscreenDialogActive = true;
+                  }
+                  if ((!ArchiveCatalog.b(255)) &&
+                      (og.field_n > 0) &&
+                      (sa.a(MenuScreen.platformTaskDispatcher, (byte) 37))) {
+                    MessageDialog.requestFullscreen((byte) -128);
+                  }
+                  this.fullscreenDialogButtonIndex = 0;
+                  this.pointerInteractionActive = false;
+                  this.activeTicks = 0;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 14:
+                  InstrumentPatch.field_p = 0;
+                  ug.field_c = 0;
+                  ra.field_d = -2147483648;
+                case 5:
+                  if ((2 != this.screenId) &&
+                      (this.screenId != 4) &&
+                      (6 != this.screenId) &&
+                      (oc.previousMenuScreenId == 1)) {
+                    ai.requestedScreenId = 1;
+                    if (clientControlFlowGuard == 0) {
+                      break L1;
+                    }
+                  }
+                  ai.requestedScreenId = 0;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 13:
+                  if (null != UiWidget.gameplaySession) {
+                    UiWidget.gameplaySession.submitScore((byte) -70);
+                  }
+                  L30: {
+                    ai.requestedScreenId = -1;
+                    if (this.screenId != 8) {
+                      if (!((4 == this.screenId) &&
+                          (null != UiWidget.gameplaySession) &&
+                          (UiWidget.gameplaySession.newActionCount == 0))) {
+                        if (this.screenId != 7) {
+                          UiWidget.gameplayReturnScreenId = 6;
+                          if (clientControlFlowGuard == 0) {
+                            break L30;
+                          }
+                        }
+                        UiWidget.gameplayReturnScreenId = 5;
+                        if (clientControlFlowGuard == 0) {
+                          break L30;
+                        }
+                      }
+                    }
+                    UiWidget.gameplayReturnScreenId = 2;
+                  }
+                  cd.gameplayOriginScreenId = this.screenId;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 6:
+                  L34: {
+                    UiWidget.gameplaySession.emitPointsPopup(false);
+                    UiWidget.gameplaySession.addScore((byte) 127, wa.collectUnfinishedPopupPoints(methodGuard ^ 25864));
+                    UiWidget.gameplaySession.addScore((byte) 127, UiWidget.gameplaySession.resultBonusPoints);
+                    UiWidget.gameplaySession.resultBonusPoints = 0;
+                    if (fh.c(-114)) {
+                      if (!((!UiWidget.gameplaySession.tutorialMode) &&
+                            (UiWidget.gameplaySession.score == 0) &&
+                            (ug.field_c == 0)) &&
+                          !((UiWidget.gameplaySession.tutorialMode) &&
+                            (UiWidget.gameplaySession.updateTick < 750))) {
+                        if ((0 == UiWidget.gameplaySession.score) &&
+                            (0 == ug.field_c)) {
+                          ai.requestedScreenId = 0;
+                          if (clientControlFlowGuard == 0) {
+                            break L34;
+                          }
+                        }
+                        ai.requestedScreenId = 4;
+                        if (clientControlFlowGuard == 0) {
+                          break L34;
+                        }
+                      }
+                      ai.requestedScreenId = 0;
+                      if (clientControlFlowGuard == 0) {
+                        break L34;
+                      }
+                    }
+                    if ((UiWidget.gameplaySession.score == 0) &&
+                        (ug.field_c == 0)) {
+                      ai.requestedScreenId = 0;
+                      if (clientControlFlowGuard == 0) {
+                        break L34;
+                      }
+                    }
+                    UiWidget.gameplaySession.submitScore((byte) -70);
+                    if (0 < UiWidget.gameplaySession.newActionCount) {
+                      ai.requestedScreenId = 6;
+                      if (clientControlFlowGuard == 0) {
+                        break L34;
+                      }
+                    }
+                    ai.requestedScreenId = 2;
+                  }
+                  fi.a(methodGuard + 2, ll.field_d);
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 7:
+                  gf.a(k.c(methodGuard ^ -125), 62);
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 12:
+                  if (!((this.tutorialPageIndex < 4) &&
+                        (!this.tutorialSlideActive))) {
+                    suppressPressAnimationFlag = 1;
+                    if (clientControlFlowGuard == 0) {
+                      break L1;
+                    }
+                  }
+                  this.previousTutorialPageIndex = this.tutorialPageIndex;
+                  this.tutorialPageIndex = this.tutorialPageIndex + 1;
+                  this.tutorialSlideForward = true;
+                  this.tutorialSlideActive = true;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 11:
+                  if (!((this.tutorialPageIndex > 0) &&
+                        (!this.tutorialSlideActive))) {
+                    suppressPressAnimationFlag = 1;
+                    if (clientControlFlowGuard == 0) {
+                      break L1;
+                    }
+                  }
+                  this.previousTutorialPageIndex = this.tutorialPageIndex;
+                  this.tutorialSlideActive = true;
+                  this.tutorialPageIndex = this.tutorialPageIndex - 1;
+                  this.tutorialSlideForward = false;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 10:
+                  if (fh.c(-112)) {
+                    ai.requestedScreenId = 7;
+                    if (clientControlFlowGuard == 0) {
+                      break L1;
+                    }
+                  }
+                  ai.requestedScreenId = 5;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 16:
                   da.field_c = 0;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
-                }
-                da.field_c = 1;
-                if (clientControlFlowGuard == 0) {
+                case 17:
+                  da.field_c = 1;
+                  if (clientControlFlowGuard == 0) {
+                    break L1;
+                  }
+                case 18:
+                  break;
+                default:
                   break L1;
-                }
               }
               da.field_c = 2;
               break L1;

@@ -233,63 +233,43 @@ final class GameplaySession {
         IntrusiveDeque debugMovingQueueSnapshot = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
-          L0: {
-            L1: {
-              L2: {
-                L3: {
-                  L4: {
-                    L5: {
-                      selectedThemeIdOrScoreBoxX = GameScreen.selectedThemeId;
-                      if ((selectedThemeIdOrScoreBoxX == 4) &&
-                          (clientControlFlowGuard == 0)) {
-                        themeResourceGroup = "baking";
-                        if (clientControlFlowGuard == 0) {
-                          break L0;
-                        }
-                      } else if (!((selectedThemeIdOrScoreBoxX == 6) &&
-                          (clientControlFlowGuard == 0))) {
-                        if ((selectedThemeIdOrScoreBoxX == 5) &&
-                            (clientControlFlowGuard == 0)) {
-                          break L5;
-                        }
-                        if (selectedThemeIdOrScoreBoxX == 0) {
-                          break L4;
-                        }
-                        if ((3 == selectedThemeIdOrScoreBoxX) &&
-                            (clientControlFlowGuard == 0)) {
-                          break L3;
-                        }
-                        if (selectedThemeIdOrScoreBoxX == 2) {
-                          break L2;
-                        }
-                        break L1;
-                      }
-                      themeResourceGroup = "space";
-                      if (clientControlFlowGuard == 0) {
-                        break L0;
-                      }
-                    }
-                    themeResourceGroup = "sports";
-                    if (clientControlFlowGuard == 0) {
-                      break L0;
-                    }
-                  }
-                  themeResourceGroup = "jewels";
-                  if (clientControlFlowGuard == 0) {
-                    break L0;
-                  }
-                }
-                themeResourceGroup = "germs";
-                if (clientControlFlowGuard == 0) {
-                  break L0;
-                }
+          selectedThemeIdOrScoreBoxX = GameScreen.selectedThemeId;
+          switch ((clientControlFlowGuard == 0
+              || selectedThemeIdOrScoreBoxX == 0
+              || selectedThemeIdOrScoreBoxX == 2
+            ) ? selectedThemeIdOrScoreBoxX : -1) {
+            case 4:
+              themeResourceGroup = "baking";
+              if (clientControlFlowGuard == 0) {
+                break;
               }
+            case 6:
+              themeResourceGroup = "space";
+              if (clientControlFlowGuard == 0) {
+                break;
+              }
+            case 5:
+              themeResourceGroup = "sports";
+              if (clientControlFlowGuard == 0) {
+                break;
+              }
+            case 0:
+              themeResourceGroup = "jewels";
+              if (clientControlFlowGuard == 0) {
+                break;
+              }
+            case 3:
+              themeResourceGroup = "germs";
+              if (clientControlFlowGuard == 0) {
+                break;
+              }
+            case 2:
               themeResourceGroup = "sweets";
               if (clientControlFlowGuard == 0) {
-                break L0;
+                break;
               }
-            }
-            themeResourceGroup = "";
+            default:
+              themeResourceGroup = "";
           }
           graphicsLoadingMessage = gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
           loadingPanelWidthOrScoreBoxY = 30 + FadingDialog.uiPaletteFont.measureTextWidth(graphicsLoadingMessage);

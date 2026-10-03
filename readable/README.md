@@ -2,7 +2,7 @@
 
 The current export has 8,439 guarded naming rules: 90 classes, 976 fields,
 787 methods, 2,344 parameters and 4,242 local declarations. Both 303-file corpora
-compile, comparing 138,257 bindings and preserving 388 override relationships. Unknown
+compile, comparing 138,241 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`f52271abff84ff66ef9d73d8fd3d7a38cbf919e5`. It comes from java-tools
-`28c78aa9333f9958868c8359ca0d8b77d9c62cf8` and Deko
+`cadb388be7dba547885b789512581e0e40de4a39`. It comes from java-tools
+`27c5718ac886355eccee422dc45c0678b0aea62a` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`c6294dd3b9ae8f81da915bb49946f6a30643a681f46c48865afcf4aae564e9d3`:
+`eb3e76c76d9a535ef7baf8738794e5505cf1be3f13f5c126c917136079b5d4a4`:
 
 ```sh
-git archive --format=tar 28c78aa9333f9958868c8359ca0d8b77d9c62cf8 | sha256sum
+git archive --format=tar 27c5718ac886355eccee422dc45c0678b0aea62a | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,58 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Scalar dispatch switches (pass 106)
+
+Menu action dispatch (`GameScreen.activateMenuItem`) and loading-theme selection
+(`GameplaySession.renderSession`) now use ordinary numeric switches instead of
+label-block ladders. Action IDs and theme IDs remain unchanged. The actions stay
+in their physical order, retaining conditional breaks and deliberate fallthrough,
+including action 14 into action 5. The client control flag is not assumed zero.
+For example, nonzero flags still permit theme 0 to fall through jewels, germs,
+sweets and the empty default; unrelated themes still select the empty default.
+
+The generic decompiler proves the classifier using equality/inequality tests of
+unique, scoped primitive int locals. Each mentioned constant and an Other class
+form an exhaustive partition; an optional one-constant guard must select the same
+case or default in its alternate partition. Only these pure reads are replaced.
+Prefix effects run once before selection. Actions, guards, nested declarations,
+cleanup and exception/monitor boundaries remain. Direct declarations in removed
+scopes, effectful/field/formal/boxed/non-int classifiers, invalid or captured jump
+targets, effects before another discarded classifier, malformed/nested syntax,
+comments/Unicode and excessive proof size refuse reconstruction. Only safe frame
+cleanup follows; action predicates are not folded using presumed entry values.
+
+Four new groups pass 61,152 native comparisons across 26 variants, before and
+after frame cleanup. They cover selector extremes and unknown values, seven
+guard values, six failure/mutation modes, nullable monitors, action fallthrough,
+ancestor exits, loop/switch destinations, throws, finally overrides and definite
+assignment. Ten independent checks establish action selection, nonzero-flag
+fallthrough, unknown/default exits, mutation effects and cleanup failure. The
+other emitter files pass 71 tests with one historical optional skip; eight
+exception-exit and two integer-argument groups also pass.
+
+All 303 token streams match the expected rewrite; clean tracked decompiler
+source reproduces all Java and diagnostics byte-for-byte. JDK audits attribute
+31 old and 15 new reads exclusively to the same four classifier-local identities.
+All non-classifier declarations/references and 388 complete override pairs retain
+ordered identities. All 8,439 naming objects and local ordinals remain. Naming
+edits fall by 16 to 66,175, with 138,241 binding comparisons. Both corpora compile;
+all six existing game probes, publication checks and 303-file dictionary reversal
+pass within their documented scopes. Native probe sources, traces, stub JAR and
+naming-tool pins remain unchanged.
+
+Nineteen labels and 65 lines disappear: 77,803 to 77,738 source lines.
+Menu dispatch is now 277 lines/four labels; gameplay rendering is 357/eleven.
+There remain 233 plain block labels and 20 overlapping large spans, six labeled.
+Unknown shared names, other continuations, full assets/ending/game behavior and
+browser/phone memory/startup/FPS acceptance remain unfinished or unverified.
+Raw tree SHA-256:
+`27a6066eccc5c5e6cfeaf5f6cf49b604a761eb2ade03fa6f5ebe913defe281e1`.
+Readable tree SHA-256:
+`9614aa491ceae7509b211e26e693c141ee66fffc3d572dbd2c55495a2310543e`.
+The decompiler-source archive SHA-256 above identifies the tracked tool source,
+independently of the game input or output trees. Sections below are historical.
 
 ## Exact local-reference casts (pass 105)
 
@@ -2845,8 +2897,8 @@ Pass 92 recorded the predicate-only guard-tree migration with no naming changes.
 Passes 93 through 101 retained that source and expanded guarded semantic names.
 Pass 102 recorded terminal-loop exit reconstruction. Pass103 recorded
 leading nonconstant while guards. Pass104 recorded effectful plain-block
-exits. Current pass105 records exact local-reference cast cleanup in
-`sourceChange`, with an empty `ruleChanges` list preserving all 8,439 complete
+exits. Pass105 recorded exact local-reference cast cleanup. Current pass106
+records scalar dispatch switches in `sourceChange`, with an empty `ruleChanges` list preserving all 8,439 complete
 naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.

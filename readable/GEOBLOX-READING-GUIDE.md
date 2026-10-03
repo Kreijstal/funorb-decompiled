@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 105)
+## Current readability (pass 106)
 
-The export has 8,439 guarded names and 66,191 identifier edits. All 303 sources
-compile and compare 138,257 bindings, reproduce and
+The export has 8,439 guarded names and 66,175 identifier edits. All 303 sources
+compile and compare 138,241 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -49,7 +49,7 @@ apparently stable field is assumed constant. The 24,192 new generic native
 comparisons and six independent effect/cleanup/monitor/failure checks pass.
 Ending/crying lifecycle and whole-game equivalence remain unverified.
 
-The current pass removes 525 identity reference casts across 170 files/423
+Pass105 removes 525 identity reference casts across 170 files/423
 bodies. A unique ordinary-block local cast back to its exact declared type now
 appears directly, with its static type, scope and evaluation preserved. Necessary
 casts, primitive conversions, postfix operations, field/formal assumptions and
@@ -60,19 +60,27 @@ native comparisons, seven independent checks and 24 identical compiled
 instruction/exception-table pairs verify the supported cleanup family.
 
 A catch-only loop-boundary prototype found no candidates, so exception-region
-exit rules were not relaxed. This cleanup leaves the remaining control flow
-unchanged. There remain 252 generated plain block labels. There are 21 method/constructor
-spans of at least 300 lines, seven with generated
-block labels. The 3,042-line interface text-loader span includes three nested
-helpers, so this inventory does not count unique state machines. The labeled
-large bodies are:
+exit rules were not relaxed. Pass106 instead reconstructs two scalar dispatch
+ladders as ordinary switches: menu actions and loading-theme selection. The
+numeric IDs, original action order, conditional exits and intentional fallthrough
+remain for both control-flag partitions. Pure comparisons use captured int
+locals; no flag is assumed zero. Nineteen labels and 65 lines disappear, with
+31 classifier reads replaced by 15 reads of the same four local identities.
+All other ordered bindings and complete override pairs remain. Its 61,152 native
+comparisons test both the rewrite and frame cleanup, with ten independent checks.
+
+There remain 233 generated plain block labels. Twenty method/constructor spans
+have at least 300 lines, six with generated block labels. The 3,042-line
+interface text-loader span includes three nested helpers, so these are overlapping
+spans, not a count of unique state machines. The six large labeled bodies are
+listed below, alongside the shortened menu dispatcher for comparison.
 
 | Method | Lines | Block labels |
 | --- | ---: | ---: |
 | `GameScreen.renderScreen` | 304 | 4 |
 | `GameScreen.updateScreen` | 330 | 6 |
-| `GameScreen.activateMenuItem` | 322 | 17 |
-| `GameplaySession.renderSession` | 377 | 17 |
+| `GameScreen.activateMenuItem` | 277 | 4 |
+| `GameplaySession.renderSession` | 357 | 11 |
 | `GameplaySession.updateSession` | 638 | 13 |
 | `kc.reconcileBoardEntities` | 494 | 14 |
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 385 | 11 |
@@ -86,7 +94,8 @@ proofs for intermediate loops/protected regions and multiple continuations;
 control flags are not assumed constant. The retained 16,128-case guard-tree
 comparison, 11,520-case terminal-loop comparison, new 96,768-case leading-loop
 comparison with six independent oracles, the new 24,192-case effectful-exit
-comparison with six independent oracles, and six recorded native probes
+comparison with six independent oracles, the new 61,152-case scalar dispatch
+comparison with ten independent checks, and six recorded native probes
 establish controlled behavior only.
 Complete assets/gameplay and browser/phone memory/startup/FPS targets remain
 unverified. Sections
