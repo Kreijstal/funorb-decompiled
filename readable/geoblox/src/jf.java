@@ -89,56 +89,56 @@ final class jf implements dh {
         return (java.awt.Container) ((Object) k.c(122));
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
-        int[] var10 = null;
-        RuntimeException var10_ref = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var16 = Geoblox.field_C;
+    final static void drawHalfBlendRgbGradientSpan(int destinationIndex, int redStepQ16, int guard, int redQ16, int blueStepQ16, int greenQ16, int greenStepQ16, int pixelCount, int blueQ16, int[] destinationPixels) {
+        int[] destinationForWrite = null;
+        RuntimeException spanFailure = null;
+        int destinationIndexForWrite = 0;
+        int redForWriteQ16 = 0;
+        int greenForWriteQ16 = 0;
+        int blueForWriteQ16 = 0;
+        int previousPixelHalf = 0;
+        int controlFlagSnapshot = 0;
+        int[] destinationForRead = null;
+        RuntimeException spanFailureBeforeContext = null;
+        StringBuilder spanMessagePrefix = null;
+        String destinationDescription = null;
+        RuntimeException caughtSpanFailure = null;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
           while (true) {
-            param7--;
-            if (param7 < 0) {
-              if (param2 == 33423689) {
+            pixelCount--;
+            if (pixelCount < 0) {
+              if (guard == 33423689) {
                 return;
               }
               pendingActionPanelWidth = -7;
               return;
             }
-            var17 = param9;
-            var10 = var17;
-            var11 = param0;
-            var12 = param3;
-            var13 = param5;
-            var14 = param8;
-            var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = cd.andInt(255, var14 >> 17) + ((cd.andInt(33423689, var13) >> 9) + (cd.andInt(33423360, var12) >> 1)) + var15;
-            param0++;
-            param8 = param8 + param4;
-            param3 = param3 + param1;
-            param5 = param5 + param6;
+            destinationForRead = destinationPixels;
+            destinationForWrite = destinationForRead;
+            destinationIndexForWrite = destinationIndex;
+            redForWriteQ16 = redQ16;
+            greenForWriteQ16 = greenQ16;
+            blueForWriteQ16 = blueQ16;
+            previousPixelHalf = destinationForRead[destinationIndexForWrite] >> 1 & 8355711;
+            destinationForWrite[destinationIndexForWrite] = cd.andInt(255, blueForWriteQ16 >> 17) + ((cd.andInt(33423689, greenForWriteQ16) >> 9) + (cd.andInt(33423360, redForWriteQ16) >> 1)) + previousPixelHalf;
+            destinationIndex++;
+            blueQ16 = blueQ16 + blueStepQ16;
+            redQ16 = redQ16 + redStepQ16;
+            greenQ16 = greenQ16 + greenStepQ16;
             continue;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var10_ref = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var10_ref);
-          stackIn_8_1 = new StringBuilder().append("jf.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException caughtSpanParameter) {
+          caughtSpanFailure = caughtSpanParameter;
+          spanFailure = caughtSpanFailure;
+          spanFailureBeforeContext = (RuntimeException) (spanFailure);
+          spanMessagePrefix = new StringBuilder().append("jf.F(").append(destinationIndex).append(',').append(redStepQ16).append(',').append(guard).append(',').append(redQ16).append(',').append(blueStepQ16).append(',').append(greenQ16).append(',').append(greenStepQ16).append(',').append(pixelCount).append(',').append(blueQ16).append(',');
+          if (destinationPixels == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw t.a((Throwable) ((Object) spanFailureBeforeContext), ((StringBuilder) (Object) spanMessagePrefix).append(destinationDescription).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class jf implements dh {
         try {
           if (methodGuard < 117) {
             unusedNullIntArraySnapshot = (int[]) null;
-            jf.a(25, 87, -85, 85, 111, -85, 50, 110, -77, (int[]) null);
+            jf.drawHalfBlendRgbGradientSpan(25, 87, -85, 85, 111, -85, 50, 110, -77, (int[]) null);
           }
           textLength = text.length();
           encodedBytes = new byte[textLength];

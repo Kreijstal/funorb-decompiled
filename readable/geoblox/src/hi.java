@@ -291,7 +291,7 @@ final class hi extends ee implements ta, pl {
               var37 = var37 + 65793 * var31;
               var39 = var30 * var36 >>> 8 & 1543569152 | var30 * var35 >>> 8 & -536936193;
               var39 = var39 + var33 * 65793;
-              nb.a(255 & var37, 255 & var37 >> 8, var39 >> 16, var39 >> 8 & 255, var25, 255 & var38, var37 >> 16, var23, var26, 255 & var39, -2, var38 >> 16, 255 & var38 >> 8, var24, var22, var27);
+              nb.drawHalfBlendRgbTriangle(255 & var37, 255 & var37 >> 8, var39 >> 16, var39 >> 8 & 255, var25, 255 & var38, var37 >> 16, var23, var26, 255 & var39, -2, var38 >> 16, 255 & var38 >> 8, var24, var22, var27);
             }
           }
           return;

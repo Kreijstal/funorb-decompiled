@@ -51,7 +51,7 @@ final class jk {
         RuntimeException var1 = null;
         var5 = Geoblox.field_C;
         try {
-          mh.b();
+          TriangleRasterState.prepareTriangleClipFromRasterizer();
           ok.field_g = 11;
           jf.field_b = new int[260];
           var1_int = -29 / ((param0 + 40) / 45);

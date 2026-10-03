@@ -16,7 +16,8 @@ const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'geoblox-nine-slice-'));
 const expectedNativeSha256 = '16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9';
 const expectedSpritePixelsSha256 = 'c986ff493508bf516e6bd33e187ee51ed478a012dfebf467a8b76e00f78a1f09';
 const expectedSpriteTransformsSha256 = 'dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1';
-let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null;
+const expectedTriangleRasterSha256 = '3a708f0eb4343a68f9cd859b75cc6d42db0eda690188b95deb7619a998603760';
+let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null;
 try {
   if(nativeInput) {
     const files=[];
@@ -55,7 +56,8 @@ try {
       }
       public static void main(String[]args)throws Exception {
         if(args.length!=0){
-          if(args[0].equals("sprite-transforms"))SpriteTransformBehavior.main(args);
+          if(args[0].equals("triangle-raster"))TriangleRasterBehavior.main(args);
+          else if(args[0].equals("sprite-transforms"))SpriteTransformBehavior.main(args);
           else SpritePixelBehavior.main(args);
           return;
         }
@@ -83,6 +85,112 @@ try {
           System.out.println(result);cases++;
         }
         if(cases!=2592)throw new AssertionError(cases);
+      }
+    }
+    class TriangleRasterBehavior {
+      static MessageDigest trace;
+      static int cases,spanCases,viewportCases,triangleCases;
+      static Field f(String owner,String name)throws Exception {Field f=Class.forName(owner).getDeclaredField(name);f.setAccessible(true);return f;}
+      static int[] background(int size){int[] p=new int[size];for(int i=0;i<size;i++)p[i]=i*0x123457+0x87654321;return p;}
+      static String failure(Throwable error)throws Exception {
+        if(error==null)return "ok";
+        if(error instanceof ${type('sa')})return f("${type('sa')}","${field('sa','field_a','Ljava/lang/Throwable;')}").get(error).getClass().getName()
+          +":"+f("${type('sa')}","${field('sa','field_d','Ljava/lang/String;')}").get(error);
+        return error.getClass().getName();
+      }
+      static String rootFailure(Throwable error)throws Exception {
+        if(error==null)return "ok";
+        if(error instanceof ${type('sa')})error=(Throwable)f("${type('sa')}","${field('sa','field_a','Ljava/lang/Throwable;')}").get(error);
+        return error.getClass().getName();
+      }
+      static void record(String label,int[] pixels)throws Exception {
+        trace.update((label+":"+java.util.Arrays.toString(pixels)+"\\n").getBytes("UTF-8"));cases++;
+      }
+      static void viewport(int[] pixels,int[] clip)throws Exception {
+        ${call('vb','a([III)V')}(pixels,20,12);
+        ${call('vb','e(IIII)V')}(clip[0],clip[1],clip[2],clip[3]);
+        ${call('mh','b()V')}();
+        int width=clip[2]-clip[0],height=clip[3]-clip[1];
+        if(f("${type('mh')}","${field('mh','field_c','I')}").getInt(null)!=width
+            ||f("${type('mh')}","${field('mh','field_h','I')}").getInt(null)!=height
+            ||f("${type('mh')}","${field('mh','field_d','I')}").getInt(null)!=width/2
+            ||f("${type('mh')}","${field('mh','field_i','I')}").getInt(null)!=height/2)throw new AssertionError("viewport size/center");
+        int[] rows=(int[])f("${type('mh')}","${field('mh','field_b','[I')}").get(null);
+        for(int y=0;y<height;y++)if(rows[y]!=(clip[1]+y)*20+clip[0])throw new AssertionError("viewport row offset");
+      }
+      public static void main(String[] args)throws Exception {
+        trace=MessageDigest.getInstance("SHA-256");
+        f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,0);
+        int[] sine=(int[])f("${type('mh')}","${field('mh','field_f','[I')}").get(null);
+        int[] cosine=(int[])f("${type('mh')}","${field('mh','field_g','[I')}").get(null);
+        int[] inverse15=(int[])f("${type('mh')}","${field('mh','field_e','[I')}").get(null);
+        int[] inverse16=(int[])f("${type('mh')}","${field('mh','field_a','[I')}").get(null);
+        for(int i=0;i<2048;i++) {
+          if(sine[i]!=(int)(65536.0*Math.sin(i*0.0030679615))||cosine[i]!=(int)(65536.0*Math.cos(i*0.0030679615))
+              ||inverse16[i]!=(i==0?0:65536/i)||i<512&&inverse15[i]!=(i==0?0:32768/i))throw new AssertionError("triangle lookup tables");
+        }
+        record("sine-q16",sine);record("cosine-q16",cosine);record("inverse-q15",inverse15);record("inverse-q16",inverse16);
+        int[][] colors={{0,0,0},{128<<16,64<<16,255<<16},{-1,Integer.MAX_VALUE,Integer.MIN_VALUE},
+          {0xff01fe,0x8001ff,0x0100ff},{0x12345678,0x76543210,-0x2345678}};
+        int[][] steps={{0,0,0},{65536,-32768,16384},{Integer.MIN_VALUE,Integer.MAX_VALUE,-1}};
+        for(int count:new int[]{-2,0,1,2,5})for(int start:new int[]{-1,0,3,6})for(int[] color:colors)
+        for(int[] step:steps)for(int guard:new int[]{33423689,0})for(int buffer=0;buffer<3;buffer++) {
+          int[] actual=buffer==0?background(8):buffer==1?null:background(2);
+          int[] expected=actual==null?null:actual.clone();
+          int red=color[0],green=color[1],blue=color[2],index=start,remaining=count,expectedGuard=91;
+          Throwable oracleError=null,actualError=null;
+          try {
+            while(--remaining>=0){int previous=(expected[index]>>1)&0x7f7f7f;
+              expected[index]=((red&33423360)>>1)+((green&33423689)>>9)+((blue>>17)&255)+previous;
+              index++;red+=step[0];green+=step[1];blue+=step[2];}
+            if(guard!=33423689)expectedGuard=-7;
+          }catch(RuntimeException error){oracleError=error;}
+          f("${type('jf')}","${field('jf','field_c','I')}").setInt(null,91);
+          try {${call('jf','a(IIIIIIIII[I)V')}(start,step[0],guard,color[0],step[2],color[1],step[1],count,color[2],actual);}
+          catch(RuntimeException error){actualError=error;}
+          if(!java.util.Arrays.equals(actual,expected)||!rootFailure(actualError).equals(rootFailure(oracleError))
+              ||f("${type('jf')}","${field('jf','field_c','I')}").getInt(null)!=expectedGuard)throw new AssertionError("span oracle");
+          record("span:"+failure(actualError)+":"+expectedGuard,actual);spanCases++;
+        }
+        int[][] clips={{0,0,20,12},{3,2,17,9},{0,0,0,0},{2,1,8,5}};
+        int[][] shapes={{2,1,12,4,6,9},{-4,-3,10,4,2,14},{1,2,12,2,4,9},{2,1,2,5,2,9},
+          {2,4,6,4,9,4},{24,1,30,4,27,9},{-5,1,-3,4,-7,9},{0,-2,19,0,4,11}};
+        int[][] permutations={{0,1,2},{0,2,1},{1,0,2},{1,2,0},{2,0,1},{2,1,0}};
+        int[][] vertexColors={{0xff0000,0x00ff00,0x0000ff},{0,0,0},{0xffffff,0x123456,0xabcdef}};
+        for(int[] clip:clips) {
+          int[] probe=background(240);viewport(probe,clip);record("viewport:"+java.util.Arrays.toString(clip),probe);viewportCases++;
+          for(int[] shape:shapes)for(int[] permutation:permutations)for(int[] rgb:vertexColors)
+          for(int flag:new int[]{-1,0,1})for(int guard:new int[]{-2,-1}) {
+            int a=permutation[0],b=permutation[1],c=permutation[2];
+            int[] target=background(240);viewport(target,clip);
+            f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);
+            Throwable error=null;
+            try {${call('nb','a(IIIIIIIIIIIIIIII)V')}(rgb[b]&255,(rgb[b]>>8)&255,rgb[c]>>16,(rgb[c]>>8)&255,
+              shape[a*2+1],rgb[a]&255,rgb[b]>>16,shape[b*2+1],shape[c*2],rgb[c]&255,guard,
+              rgb[a]>>16,(rgb[a]>>8)&255,shape[a*2],shape[b*2],shape[c*2+1]);}
+            catch(RuntimeException caught){error=caught;}
+            if(guard!=-2&&!java.util.Arrays.equals(target,background(240)))throw new AssertionError("triangle guard");
+            record("triangle:"+failure(error),target);triangleCases++;
+          }
+        }
+        ${call('vb','a([III)V')}(new int[2054],2,1027);${call('mh','b()V')}();
+        int[] expanded=(int[])f("${type('mh')}","${field('mh','field_b','[I')}").get(null);
+        if(expanded.length<1027)throw new AssertionError("triangle rows grow");
+        for(int i=0;i<1027;i++)if(expanded[i]!=i*2)throw new AssertionError("grown row offset");
+        record("grown-row-offsets",expanded);
+        ${call('mh','c()V')}();
+        if(f("${type('mh')}","${field('mh','field_f','[I')}").get(null)!=null
+            ||f("${type('mh')}","${field('mh','field_g','[I')}").get(null)!=null
+            ||f("${type('mh')}","${field('mh','field_e','[I')}").get(null)!=null
+            ||f("${type('mh')}","${field('mh','field_a','[I')}").get(null)!=null
+            ||f("${type('mh')}","${field('mh','field_b','[I')}").get(null)!=null)throw new AssertionError("triangle table release");
+        record("released-state:"+f("${type('mh')}","${field('mh','field_c','I')}").getInt(null)
+          +":"+f("${type('mh')}","${field('mh','field_h','I')}").getInt(null)
+          +":"+f("${type('mh')}","${field('mh','field_d','I')}").getInt(null)
+          +":"+f("${type('mh')}","${field('mh','field_i','I')}").getInt(null),null);
+        if(spanCases!=1800||viewportCases!=4||triangleCases!=3456||cases!=5266)throw new AssertionError("case inventory");
+        StringBuilder sha=new StringBuilder();for(byte value:trace.digest())sha.append(String.format("%02x",value&255));
+        System.out.println("triangle-raster:"+cases+":"+spanCases+":"+viewportCases+":"+triangleCases+":6:"+sha);
       }
     }
     class SpritePixelBehavior {
@@ -499,6 +607,13 @@ try {
     assert.equal(transformSha,expectedSpriteTransformsSha256,variant+': fixed native sprite-transform trace');
     if(expectedSpriteTransforms===null)expectedSpriteTransforms=transformOutput;
     else assert.deepEqual(transformOutput,expectedSpriteTransforms,variant+': transform pixel buffers and failure mutations');
+    const triangleOutput=captureProcess('java',['-Djava.awt.headless=true','-cp',classes+path.delimiter+cp,'NineSliceBehavior','triangle-raster']).stdout;
+    const triangleSha=crypto.createHash('sha256').update(triangleOutput).digest('hex');
+    console.log(JSON.stringify({variant,triangleRasterTrace:triangleOutput.toString().trim(),sha256:triangleSha}));
+    assert.match(triangleOutput.toString(),/^triangle-raster:5266:1800:4:3456:6:[a-f0-9]{64}\n$/);
+    assert.equal(triangleSha,expectedTriangleRasterSha256,variant+': fixed native triangle-raster trace');
+    if(expectedTriangleRaster===null)expectedTriangleRaster=triangleOutput;
+    else assert.deepEqual(triangleOutput,expectedTriangleRaster,variant+': triangle pixels, viewport state and failure mutations');
   }
 }catch(error){if(error.stderr)process.stderr.write(error.stderr);throw error;}
 finally{fs.rmSync(temporary,{recursive:true,force:true});}

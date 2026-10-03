@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 6,081 guarded naming rules: 59 classes, 767 fields,
-547 methods, 1,615 parameters and 3,093 local declarations. Both 303-file corpora
+The current export has 6,197 guarded naming rules: 60 classes, 776 fields,
+554 methods, 1,662 parameters and 3,145 local declarations. Both 303-file corpora
 compile, preserving 138,502 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,46 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current direct void exit paths
+## Current triangle raster names
+
+Pass 80 adds 116 guarded names: one class, nine fields, seven methods,
+47 parameters and 52 locals. `TriangleRasterState` owns the clip-relative
+dimensions/centers, framebuffer row offsets and reciprocal/sine/cosine tables.
+`prepareTriangleClipFromRasterizer` imports the software clip;
+`setTriangleClip` fills row offsets and grows their table when necessary.
+`releaseTriangleTables` releases all five arrays without resetting dimensions.
+
+`nb.drawHalfBlendRgbTriangle` orders three vertices by Y and forwards their
+matching X/R/G/B attributes to `SpriteState.drawSortedHalfBlendRgbTriangle`.
+The latter interpolates left/right X and RGB values with Q16 edge slopes and
+calls `jf.drawHalfBlendRgbGradientSpan`. The span adds the original masked and
+shifted color values to the half-intensity existing pixel. Every parameter/local
+in these three selected methods has a guarded name. Original locals reused for
+different phases retain explicit combined names; no variable is split or moved.
+Guard values, ties, masks, clipping, partial writes and diagnostic strings remain.
+
+The existing drawing probe gains a separately pinned 5,266-case native trace:
+1,800 independent scanline oracle cases cover overflow, negative/zero counts,
+null/short buffers, partial writes and wrong-guard state. Four viewport cases
+check dimensions, centers and offsets; six further checks cover the four lookup
+tables, row-table growth and release. The 3,456 triangle cases preserve native
+traces across vertex permutations, RGB inputs, flat/clipped geometry and control
+flags. Complete triangle pixel geometry has no independent oracle in this probe.
+The new trace SHA-256 is
+`3a708f0eb4343a68f9cd859b75cc6d42db0eda690188b95deb7619a998603760`.
+Previous sprite/nine-slice traces retain their pins.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs VERIFIED_CLASSES`
+compares native, raw and readable outputs. The rule-builder, source-migration
+and text-resource tests pass 9, 8 and 6 groups respectively. Both 303-file corpora
+compile; reproduction and dictionary reversal are byte-exact. The raw source,
+decompiler pins and all 6,081 prior complete naming rules stay unchanged.
+The 6,197 rules apply 50,682 edits, preserving 138,502 bindings and 388 overrides.
+The same current manifest stores all additions and the new probe pin; Git stores
+history. Other static helpers and large bodies still need names/structure; full
+assets/platform/server/gameplay and browser/phone performance remain unverified.
+
+## Previous direct void exit paths
 
 Pass 79 converts 95 block breaks in 38 plain exit blocks across 25 files to
 ordinary `return;` statements. The destination must be an immediately following
@@ -1530,6 +1569,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17` |
-| Readable | `e3fc2927ff480cb3dfa2e1513e8c12951e35bec405eaa13ab1d44615336903ca` |
+| Readable | `30cac8dc442e3a515a5224229f270f1a5bb1c2a737cb253aab0f492fc309584a` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

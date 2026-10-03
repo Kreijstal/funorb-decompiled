@@ -80,8 +80,8 @@ final class p extends IntrusiveNode {
           if (!param3) {
             p.b(-2);
           }
-          var21 = mh.field_d;
-          var22 = mh.field_i;
+          var21 = TriangleRasterState.clipCenterX;
+          var22 = TriangleRasterState.clipCenterY;
           var23 = 0;
           while (true) {
             L3: {

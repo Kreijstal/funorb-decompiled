@@ -85,7 +85,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         var19 = Geoblox.field_C;
         try {
           if (param5 >= 0) {
-            if (param8 < mh.field_h) {
+            if (param8 < TriangleRasterState.clipHeight) {
               if (0 > param1) {
                 if (param0 < 0) {
                   if (param6 < 0) {
@@ -93,9 +93,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                   }
                 }
               }
-              if (param1 >= mh.field_c) {
-                if (param0 >= mh.field_c) {
-                  if (mh.field_c <= param6) {
+              if (param1 >= TriangleRasterState.clipWidth) {
+                if (param0 >= TriangleRasterState.clipWidth) {
+                  if (TriangleRasterState.clipWidth <= param6) {
                     return;
                   }
                 }
@@ -156,14 +156,14 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                     var9_int = var9_int + var11 * param8;
                     param8 = 0;
                   }
-                  var16 = mh.field_b[param8];
+                  var16 = TriangleRasterState.rowBaseOffsets[param8];
                   while (param8 < param7) {
                     var17 = var9_int >> 16;
-                    if (mh.field_c > var17) {
+                    if (TriangleRasterState.clipWidth > var17) {
                       var18 = (var10 >> 16) - (var9_int >> 16);
                       if (var18 != 0) {
-                        if (var17 + var18 >= mh.field_c) {
-                          var18 = -1 + (-var17 + mh.field_c);
+                        if (var17 + var18 >= TriangleRasterState.clipWidth) {
+                          var18 = -1 + (-var17 + TriangleRasterState.clipWidth);
                         }
                         if (0 <= var17) {
                           ib.a(47, param4, var16 + var17, param2, var18);
@@ -172,14 +172,14 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                         }
                       } else {
                         if (var17 >= 0) {
-                          if (mh.field_c > var17) {
+                          if (TriangleRasterState.clipWidth > var17) {
                             ib.a(-61, param4, var17 + var16, param2, var18);
                           }
                         }
                       }
                     }
                     param8++;
-                    if (param8 >= mh.field_h) {
+                    if (param8 >= TriangleRasterState.clipHeight) {
                       return;
                     }
                     var16 = var16 + SoftwareRasterizer.stride;
@@ -210,20 +210,20 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 param8 = 0;
               }
               var16 = -91 % ((param3 - 74) / 33);
-              var15 = mh.field_b[param8];
+              var15 = TriangleRasterState.rowBaseOffsets[param8];
               while (param5 > param8) {
                 var17 = var9_int >> 16;
-                if (mh.field_c > var17) {
+                if (TriangleRasterState.clipWidth > var17) {
                   var18 = (var10 >> 16) - (var9_int >> 16);
                   if (var18 == 0) {
                     if (var17 >= 0) {
-                      if (mh.field_c > var17) {
+                      if (TriangleRasterState.clipWidth > var17) {
                         ib.a(-67, param4, var17 + var15, param2, var18);
                       }
                     }
                   } else {
-                    if (mh.field_c <= var18 + var17) {
-                      var18 = -var17 + mh.field_c - 1;
+                    if (TriangleRasterState.clipWidth <= var18 + var17) {
+                      var18 = -var17 + TriangleRasterState.clipWidth - 1;
                     }
                     if (0 > var17) {
                       ib.a(127, param4, var15, param2, var17 + var18);
@@ -233,7 +233,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                   }
                 }
                 param8++;
-                if (mh.field_h <= param8) {
+                if (TriangleRasterState.clipHeight <= param8) {
                   return;
                 }
                 var9_int = var9_int + var11;

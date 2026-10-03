@@ -19,24 +19,27 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,502 remaining bindings
 and 388 override relationships.
 
-The current structural pass converts 95 jumps in 38 exit blocks across 25 files
-to direct void returns. Menu rendering, tutorial input and sprite rotation now
-exit without an unnecessary outer label. Predicates, effects, scopes and exception
-regions stay in place. Five unreachable trailing returns disappear; the pass
-removes 81 lines, reducing the raw corpus from 79,713 to 79,632 lines.
+The current naming pass adds 116 guarded identities for triangle rendering:
+`TriangleRasterState`, clip/lookup tables, vertex sorting, RGB edge interpolation
+and scanline blending. Every parameter/local in the three selected rendering
+methods now has a name. Existing guards, masks, variable reuse and control flow
+remain. Raw source and decompiler pins are unchanged.
 
-The emitter suite passes 44 tests, including 46,080 new native comparisons of
-cleanup, failures, lock ownership and all loop forms. Its optional pass77
-frame-only corpus checker is skipped for this new transfer rewrite.
-Exception-exit tests pass eight groups. All 6,081 complete naming rules survive
-without ordinal migration, applying 49,577 edits and preserving 138,502 bindings
-and 388 overrides. Every ordered binding event matches the previous export;
-the documented rewrite produces all 303 regenerated token streams. Clean source-archive regeneration and
-diagnostics, readable reproduction and dictionary reversal are byte-exact.
-Existing native probe traces retain their pins within their documented scopes.
-The single manifest records source/decompiler migration and evidence; Git stores
-history. Opaque helpers, large bodies, full assets/platform/server/gameplay and
-browser/phone memory/startup/FPS targets remain unfinished or unverified.
+The drawing probe adds 5,266 native/raw/readable cases, including independent
+scanline, clip and lookup-table oracles plus vertex-order/geometry/failure traces.
+Previous sprite and nine-slice traces retain their pins. The rule-builder,
+source-migration and text-resource tests pass 9, 8 and 6 groups. All 303 sources
+compile, reproduce and reverse byte-for-byte. The 6,197 rules apply 50,682 edits,
+preserving 138,502 bindings and 388 overrides; all 6,081 prior complete rules
+remain unchanged. The single current manifest stores additions and probe pins;
+Git stores history. Full triangle geometry has no independent oracle here.
+Opaque helpers, large bodies, real assets/platform/server/gameplay and browser/
+phone memory/startup/FPS targets remain unfinished or unverified.
+
+The preceding structural pass converts 95 jumps in 38 exit blocks to direct void
+returns, removing 81 lines across 25 files. Its generic tests add 46,080 native
+comparisons of cleanup and failure behavior. These structural proofs retain their
+documented scope alongside the current naming/probe evidence.
 
 Pass 77 removed 508 redundant labels, simplified 450 labeled continues and
 removed 588 lines across 153 files. Its independent Java AST corpus comparison

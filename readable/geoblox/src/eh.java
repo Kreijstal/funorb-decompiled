@@ -28,7 +28,7 @@ final class eh {
           var5 = (250 - gb.field_f << 8) / 50;
         }
         Geoblox.setRasterTarget(1, ki.field_c);
-        mh.b();
+        TriangleRasterState.prepareTriangleClipFromRasterizer();
         SoftwareRasterizer.clearFramebuffer();
         ck.a((byte) 123);
         if (var5 < 256) {

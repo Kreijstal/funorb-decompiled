@@ -185,6 +185,12 @@
       "evidence": "The instance stores points/text, origin coordinates, progress and chain multiplier. ug initializes it, bd interpolates its display, cf credits completed points and wa collects unfinished points. Unrelated static helpers retain their own identities."
     },
     {
+      "symbol": "C:mh",
+      "originalName": "mh",
+      "to": "TriangleRasterState",
+      "evidence": "mh owns triangle clip dimensions, centers and framebuffer row offsets plus Q15/Q16 reciprocal and Q16 sine/cosine lookup tables; b imports the current SoftwareRasterizer clip for wh.KA."
+    },
+    {
       "symbol": "C:n",
       "to": "MatchingTextValidator",
       "originalName": "n",
@@ -3279,6 +3285,60 @@
       "originalName": "field_a",
       "to": "selectedThemeBackground",
       "evidence": "cd.a(B)V selects this indexed background alongside ec.field_c for the seven selectedThemeId values; gh.renderSession draws it at (0,0)."
+    },
+    {
+      "symbol": "F:mh.field_a:[I",
+      "originalName": "field_a",
+      "to": "reciprocalQ16",
+      "evidence": "Triangle raster state: 65536/index for indexes 1..2047. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_b:[I",
+      "originalName": "field_b",
+      "to": "rowBaseOffsets",
+      "evidence": "Triangle raster state: framebuffer offsets beginning at clipTop * stride + clipLeft, growing for clip height. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_c:I",
+      "originalName": "field_c",
+      "to": "clipWidth",
+      "evidence": "Triangle raster state: clipRight - clipLeft. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_d:I",
+      "originalName": "field_d",
+      "to": "clipCenterX",
+      "evidence": "Triangle raster state: clipWidth/2. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_e:[I",
+      "originalName": "field_e",
+      "to": "reciprocalQ15",
+      "evidence": "Triangle raster state: 32768/index for indexes 1..511. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_f:[I",
+      "originalName": "field_f",
+      "to": "sineQ16",
+      "evidence": "Triangle raster state: int(65536 * sin(index * 0.0030679615)), 2048 entries. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_g:[I",
+      "originalName": "field_g",
+      "to": "cosineQ16",
+      "evidence": "Triangle raster state: int(65536 * cos(index * 0.0030679615)), 2048 entries. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_h:I",
+      "originalName": "field_h",
+      "to": "clipHeight",
+      "evidence": "Triangle raster state: clipBottom - clipTop. Direct native table/viewport checks preserve the original values and release behavior."
+    },
+    {
+      "symbol": "F:mh.field_i:I",
+      "originalName": "field_i",
+      "to": "clipCenterY",
+      "evidence": "Triangle raster state: clipHeight/2. Direct native table/viewport checks preserve the original values and release behavior."
     },
     {
       "symbol": "F:mi.field_B:[Ldm;",
@@ -13463,6 +13523,90 @@
       "evidence": "Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body."
     },
     {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#0",
+      "originalName": "var10",
+      "to": "destinationForWrite",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#1",
+      "originalName": "var10_ref",
+      "to": "spanFailure",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#10",
+      "originalName": "stackIn_8_1",
+      "to": "spanMessagePrefix",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#11",
+      "originalName": "stackIn_9_2",
+      "to": "destinationDescription",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#12",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtSpanFailure",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#13",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtSpanParameter",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#2",
+      "originalName": "var11",
+      "to": "destinationIndexForWrite",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#3",
+      "originalName": "var12",
+      "to": "redForWriteQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#4",
+      "originalName": "var13",
+      "to": "greenForWriteQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#5",
+      "originalName": "var14",
+      "to": "blueForWriteQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#6",
+      "originalName": "var15",
+      "to": "previousPixelHalf",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#7",
+      "originalName": "var16",
+      "to": "controlFlagSnapshot",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#8",
+      "originalName": "var17",
+      "to": "destinationForRead",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:jf.a(IIIIIIIII[I)V#9",
+      "originalName": "stackIn_8_0",
+      "to": "spanFailureBeforeContext",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
       "symbol": "L:jf.a(Ljava/lang/CharSequence;B)[B#0",
       "originalName": "var4",
       "to": "characterIndex",
@@ -16253,6 +16397,24 @@
       "evidence": "Read graphicsArchive bytes by group/file, retain the unused byte-array snapshot, return false when guard<102 or bytes are null, otherwise decode with readGuard=true. The archive read occurs before the guard check. Source-audited decoded sprite/font loading path: shared scratch arrays, captured aliases/indices, guards, diagnostic strings, exception scopes, allocation/cleanup order and original arithmetic remain. Names only; no new native sprite-sheet/archive/font loading or real-asset/device coverage."
     },
     {
+      "symbol": "L:mh.<initializer>()V#0",
+      "originalName": "var0",
+      "to": "lookupIndex",
+      "evidence": "Initializer index reused for the Q15/Q16 reciprocal loops and the Q16 sine/cosine table loop; index zero keeps the original reciprocal default."
+    },
+    {
+      "symbol": "L:mh.a(IIII)V#0",
+      "originalName": "var5",
+      "to": "rowIndex",
+      "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:mh.a(IIII)V#1",
+      "originalName": "var4",
+      "to": "rowBaseOffset",
+      "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
       "symbol": "L:n.a(IIIIBIIII)[Ldm;#10",
       "to": "borderIndex",
       "originalName": "var11",
@@ -16575,6 +16737,12 @@
       "originalName": "var14",
       "to": "destinationPixel",
       "evidence": "Indexed drawAlpha skips index zero, converts signed bytes to unsigned palette indexes, and blends palette colors with the original signed shift. Local role: destinationPixel."
+    },
+    {
+      "symbol": "L:nb.a(IIIIIIIIIIIIIIII)V#0",
+      "originalName": "var17",
+      "to": "controlFlagSnapshot",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
     },
     {
       "symbol": "L:nb.a(IIIIIZ)V#0",
@@ -23285,6 +23453,210 @@
       "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
     },
     {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#0",
+      "originalName": "stackIn_73_0",
+      "to": "invertedClipWidthOrLowerRows",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#1",
+      "originalName": "stackIn_73_1",
+      "to": "invertedSpanStartOrNegativeOne",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#10",
+      "originalName": "var20",
+      "to": "rightXStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#11",
+      "originalName": "var21",
+      "to": "leftRedQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#12",
+      "originalName": "var22",
+      "to": "rightRedQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#13",
+      "originalName": "var23",
+      "to": "leftRedStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#14",
+      "originalName": "var24",
+      "to": "rightRedStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#15",
+      "originalName": "var25",
+      "to": "leftGreenQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#16",
+      "originalName": "var26",
+      "to": "rightGreenQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#17",
+      "originalName": "var27",
+      "to": "leftGreenStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#18",
+      "originalName": "var28",
+      "to": "rightGreenStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#19",
+      "originalName": "var29",
+      "to": "leftBlueQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#2",
+      "originalName": "stackIn_113_0",
+      "to": "rasterFailureBeforeContext",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#20",
+      "originalName": "var30",
+      "to": "rightBlueQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#21",
+      "originalName": "var31",
+      "to": "leftBlueStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#22",
+      "originalName": "var32",
+      "to": "rightBlueStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#23",
+      "originalName": "var33",
+      "to": "middleVertexOnRight",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#24",
+      "originalName": "var34",
+      "to": "topToBottomRows",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#25",
+      "originalName": "var35",
+      "to": "edgeSegmentRowsThenRowBase",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#26",
+      "originalName": "var36",
+      "to": "edgeSwapOrRowBaseOrLowerRowsThenLeftX",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#27",
+      "originalName": "var37",
+      "to": "spanStartOrWidthOrBottomXQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#28",
+      "originalName": "var38",
+      "to": "spanWidthOrRedStepOrBottomRedQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#29",
+      "originalName": "var39",
+      "to": "spanRedStepOrGreenStepOrBottomGreenQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#3",
+      "originalName": "stackIn_113_1",
+      "to": "rasterMessagePrefix",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#30",
+      "originalName": "var40",
+      "to": "spanGreenStepOrBlueStepOrBottomBlueQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#31",
+      "originalName": "var41",
+      "to": "spanBlueStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#32",
+      "originalName": "var42",
+      "to": "controlFlagSnapshot",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#33",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtRasterParameter",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#4",
+      "originalName": "stackIn_114_2",
+      "to": "destinationDescription",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#5",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtRasterFailure",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#6",
+      "originalName": "var17_int",
+      "to": "leftXQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#7",
+      "originalName": "var17",
+      "to": "rasterFailure",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#8",
+      "originalName": "var18",
+      "to": "rightXQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
+      "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#9",
+      "originalName": "var19",
+      "to": "leftXStepQ16",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+    },
+    {
       "symbol": "L:wh.a(II[BI)[B#0",
       "originalName": "var4",
       "to": "digestInput",
@@ -24905,6 +25277,12 @@
       "evidence": "Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles."
     },
     {
+      "symbol": "M:jf.a(IIIIIIIII[I)V",
+      "originalName": "a",
+      "to": "drawHalfBlendRgbGradientSpan",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers."
+    },
+    {
       "symbol": "M:jf.a(Ljava/lang/CharSequence;B)[B",
       "originalName": "a",
       "to": "encodeTextBytes",
@@ -25349,6 +25727,30 @@
       "evidence": "Read graphicsArchive bytes by group/file, retain the unused byte-array snapshot, return false when guard<102 or bytes are null, otherwise decode with readGuard=true. The archive read occurs before the guard check. Source-audited decoded sprite/font loading path: shared scratch arrays, captured aliases/indices, guards, diagnostic strings, exception scopes, allocation/cleanup order and original arithmetic remain. Names only; no new native sprite-sheet/archive/font loading or real-asset/device coverage."
     },
     {
+      "symbol": "M:mh.a()V",
+      "originalName": "a",
+      "to": "updateTriangleClipCenter",
+      "evidence": "Sets clipCenterX=clipWidth/2 and clipCenterY=clipHeight/2."
+    },
+    {
+      "symbol": "M:mh.a(IIII)V",
+      "originalName": "a",
+      "to": "setTriangleClip",
+      "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged."
+    },
+    {
+      "symbol": "M:mh.b()V",
+      "originalName": "b",
+      "to": "prepareTriangleClipFromRasterizer",
+      "evidence": "Imports SoftwareRasterizer clip bounds through mh.a(IIII)V."
+    },
+    {
+      "symbol": "M:mh.c()V",
+      "originalName": "c",
+      "to": "releaseTriangleTables",
+      "evidence": "Releases all five triangle lookup/row-offset arrays without resetting clip dimensions or centers."
+    },
+    {
       "symbol": "M:mk.a(ILjava/lang/String;)Llh;",
       "to": "validationStateForText",
       "originalName": "a",
@@ -25419,6 +25821,12 @@
       "originalName": "b",
       "to": "blitPaletteAlpha",
       "evidence": "Indexed drawAlpha skips index zero, converts signed bytes to unsigned palette indexes, and blends palette colors with the original signed shift."
+    },
+    {
+      "symbol": "M:nb.a(IIIIIIIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "drawHalfBlendRgbTriangle",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain."
     },
     {
       "symbol": "M:nb.a(IIIIIZ)V",
@@ -26769,6 +27177,12 @@
       "originalName": "c",
       "to": "firstForIteration",
       "evidence": "Returns the first secondary node and initializes the cursor, or returns null and clears the cursor; normal guard 121. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+    },
+    {
+      "symbol": "M:wh.a(IIIIIIIIIII[IIIIII)V",
+      "originalName": "a",
+      "to": "drawSortedHalfBlendRgbTriangle",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged."
     },
     {
       "symbol": "M:wh.a(II[BI)[B",
@@ -31247,6 +31661,66 @@
       "evidence": "Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity."
     },
     {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#0",
+      "originalName": "param0",
+      "to": "destinationIndex",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#1",
+      "originalName": "param1",
+      "to": "redStepQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#2",
+      "originalName": "param2",
+      "to": "guard",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#3",
+      "originalName": "param3",
+      "to": "redQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#4",
+      "originalName": "param4",
+      "to": "blueStepQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#5",
+      "originalName": "param5",
+      "to": "greenQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#6",
+      "originalName": "param6",
+      "to": "greenStepQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#7",
+      "originalName": "param7",
+      "to": "pixelCount",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#8",
+      "originalName": "param8",
+      "to": "blueQ16",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:jf.a(IIIIIIIII[I)V#9",
+      "originalName": "param9",
+      "to": "destinationPixels",
+      "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
       "symbol": "P:jf.a(Ljava/lang/CharSequence;B)[B#0",
       "originalName": "param0",
       "to": "text",
@@ -32531,6 +33005,30 @@
       "evidence": "Read graphicsArchive bytes by group/file, retain the unused byte-array snapshot, return false when guard<102 or bytes are null, otherwise decode with readGuard=true. The archive read occurs before the guard check. Source-audited decoded sprite/font loading path: shared scratch arrays, captured aliases/indices, guards, diagnostic strings, exception scopes, allocation/cleanup order and original arithmetic remain. Names only; no new native sprite-sheet/archive/font loading or real-asset/device coverage."
     },
     {
+      "symbol": "P:mh.a(IIII)V#0",
+      "originalName": "param0",
+      "to": "clipLeft",
+      "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:mh.a(IIII)V#1",
+      "originalName": "param1",
+      "to": "clipTop",
+      "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:mh.a(IIII)V#2",
+      "originalName": "param2",
+      "to": "clipRight",
+      "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:mh.a(IIII)V#3",
+      "originalName": "param3",
+      "to": "clipBottom",
+      "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
       "symbol": "P:mk.a(ILjava/lang/String;)Llh;#0",
       "to": "guard",
       "originalName": "param0",
@@ -32949,6 +33447,102 @@
       "originalName": "param9",
       "to": "alpha256",
       "evidence": "Indexed drawAlpha skips index zero, converts signed bytes to unsigned palette indexes, and blends palette colors with the original signed shift. Parameter role: alpha256; original argument position and scratch mutations remain."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#0",
+      "originalName": "param0",
+      "to": "vertexBBlue",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#1",
+      "originalName": "param1",
+      "to": "vertexBGreen",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#10",
+      "originalName": "param10",
+      "to": "guard",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#11",
+      "originalName": "param11",
+      "to": "vertexARed",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#12",
+      "originalName": "param12",
+      "to": "vertexAGreen",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#13",
+      "originalName": "param13",
+      "to": "vertexAX",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#14",
+      "originalName": "param14",
+      "to": "vertexBX",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#15",
+      "originalName": "param15",
+      "to": "vertexCY",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#2",
+      "originalName": "param2",
+      "to": "vertexCRed",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#3",
+      "originalName": "param3",
+      "to": "vertexCGreen",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#4",
+      "originalName": "param4",
+      "to": "vertexAY",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#5",
+      "originalName": "param5",
+      "to": "vertexABlue",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#6",
+      "originalName": "param6",
+      "to": "vertexBRed",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#7",
+      "originalName": "param7",
+      "to": "vertexBY",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#8",
+      "originalName": "param8",
+      "to": "vertexCX",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#9",
+      "originalName": "param9",
+      "to": "vertexCBlue",
+      "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
     },
     {
       "symbol": "P:nb.a(IIIIIZ)V#0",
@@ -36395,6 +36989,108 @@
       "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
     },
     {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#0",
+      "originalName": "param0",
+      "to": "bottomGreen",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#1",
+      "originalName": "param1",
+      "to": "topRed",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#10",
+      "originalName": "param10",
+      "to": "middleRed",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#11",
+      "originalName": "param11",
+      "to": "destinationPixels",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#12",
+      "originalName": "param12",
+      "to": "topGreen",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#13",
+      "originalName": "param13",
+      "to": "bottomX",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#14",
+      "originalName": "param14",
+      "to": "topBlue",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#15",
+      "originalName": "param15",
+      "to": "middleY",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#16",
+      "originalName": "param16",
+      "to": "guard",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#2",
+      "originalName": "param2",
+      "to": "topX",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#3",
+      "originalName": "param3",
+      "to": "middleGreen",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#4",
+      "originalName": "param4",
+      "to": "bottomY",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#5",
+      "originalName": "param5",
+      "to": "bottomBlue",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#6",
+      "originalName": "param6",
+      "to": "bottomRed",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#7",
+      "originalName": "param7",
+      "to": "middleBlue",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#8",
+      "originalName": "param8",
+      "to": "topY",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
+      "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#9",
+      "originalName": "param9",
+      "to": "middleX",
+      "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+    },
+    {
       "symbol": "P:wh.a(II[BI)[B#0",
       "originalName": "param0",
       "to": "length",
@@ -36497,8 +37193,8 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 8,
-  "version": 79,
+  "revision": 9,
+  "version": 80,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -36518,11 +37214,1172 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "efdf5812611fe4ab91fb79e770bd8c71ecb654ab",
+      "commit": "3c7df9ab1ae954afea683e46140faf563c998b37",
       "path": "readable/geoblox-rules.json",
-      "sha256": "f91e2278baf26626a255ebeb478ecc5c60b4bf26dd28132fd9fff91afa42ae66"
+      "sha256": "bb983bffcab8aff0ff10eaa1af5b5c0685945d5444623e85ab9aaef3259eebf2"
     },
-    "ruleChanges": [],
+    "ruleChanges": [
+      {
+        "symbol": "C:mh",
+        "before": null,
+        "after": {
+          "symbol": "C:mh",
+          "originalName": "mh",
+          "to": "TriangleRasterState",
+          "evidence": "mh owns triangle clip dimensions, centers and framebuffer row offsets plus Q15/Q16 reciprocal and Q16 sine/cosine lookup tables; b imports the current SoftwareRasterizer clip for wh.KA."
+        }
+      },
+      {
+        "symbol": "F:mh.field_a:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_a:[I",
+          "originalName": "field_a",
+          "to": "reciprocalQ16",
+          "evidence": "Triangle raster state: 65536/index for indexes 1..2047. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_b:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_b:[I",
+          "originalName": "field_b",
+          "to": "rowBaseOffsets",
+          "evidence": "Triangle raster state: framebuffer offsets beginning at clipTop * stride + clipLeft, growing for clip height. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_c:I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_c:I",
+          "originalName": "field_c",
+          "to": "clipWidth",
+          "evidence": "Triangle raster state: clipRight - clipLeft. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_d:I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_d:I",
+          "originalName": "field_d",
+          "to": "clipCenterX",
+          "evidence": "Triangle raster state: clipWidth/2. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_e:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_e:[I",
+          "originalName": "field_e",
+          "to": "reciprocalQ15",
+          "evidence": "Triangle raster state: 32768/index for indexes 1..511. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_f:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_f:[I",
+          "originalName": "field_f",
+          "to": "sineQ16",
+          "evidence": "Triangle raster state: int(65536 * sin(index * 0.0030679615)), 2048 entries. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_g:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_g:[I",
+          "originalName": "field_g",
+          "to": "cosineQ16",
+          "evidence": "Triangle raster state: int(65536 * cos(index * 0.0030679615)), 2048 entries. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_h:I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_h:I",
+          "originalName": "field_h",
+          "to": "clipHeight",
+          "evidence": "Triangle raster state: clipBottom - clipTop. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "F:mh.field_i:I",
+        "before": null,
+        "after": {
+          "symbol": "F:mh.field_i:I",
+          "originalName": "field_i",
+          "to": "clipCenterY",
+          "evidence": "Triangle raster state: clipHeight/2. Direct native table/viewport checks preserve the original values and release behavior."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#0",
+          "originalName": "var10",
+          "to": "destinationForWrite",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#1",
+          "originalName": "var10_ref",
+          "to": "spanFailure",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#10",
+          "originalName": "stackIn_8_1",
+          "to": "spanMessagePrefix",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#11",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#11",
+          "originalName": "stackIn_9_2",
+          "to": "destinationDescription",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#12",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#12",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtSpanFailure",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#13",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#13",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "caughtSpanParameter",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#2",
+          "originalName": "var11",
+          "to": "destinationIndexForWrite",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#3",
+          "originalName": "var12",
+          "to": "redForWriteQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#4",
+          "originalName": "var13",
+          "to": "greenForWriteQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#5",
+          "originalName": "var14",
+          "to": "blueForWriteQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#6",
+          "originalName": "var15",
+          "to": "previousPixelHalf",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#7",
+          "originalName": "var16",
+          "to": "controlFlagSnapshot",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#8",
+          "originalName": "var17",
+          "to": "destinationForRead",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:jf.a(IIIIIIIII[I)V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:jf.a(IIIIIIIII[I)V#9",
+          "originalName": "stackIn_8_0",
+          "to": "spanFailureBeforeContext",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:mh.<initializer>()V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:mh.<initializer>()V#0",
+          "originalName": "var0",
+          "to": "lookupIndex",
+          "evidence": "Initializer index reused for the Q15/Q16 reciprocal loops and the Q16 sine/cosine table loop; index zero keeps the original reciprocal default."
+        }
+      },
+      {
+        "symbol": "L:mh.a(IIII)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:mh.a(IIII)V#0",
+          "originalName": "var5",
+          "to": "rowIndex",
+          "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:mh.a(IIII)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:mh.a(IIII)V#1",
+          "originalName": "var4",
+          "to": "rowBaseOffset",
+          "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:nb.a(IIIIIIIIIIIIIIII)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:nb.a(IIIIIIIIIIIIIIII)V#0",
+          "originalName": "var17",
+          "to": "controlFlagSnapshot",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#0",
+          "originalName": "stackIn_73_0",
+          "to": "invertedClipWidthOrLowerRows",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#1",
+          "originalName": "stackIn_73_1",
+          "to": "invertedSpanStartOrNegativeOne",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#10",
+          "originalName": "var20",
+          "to": "rightXStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#11",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#11",
+          "originalName": "var21",
+          "to": "leftRedQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#12",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#12",
+          "originalName": "var22",
+          "to": "rightRedQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#13",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#13",
+          "originalName": "var23",
+          "to": "leftRedStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#14",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#14",
+          "originalName": "var24",
+          "to": "rightRedStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#15",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#15",
+          "originalName": "var25",
+          "to": "leftGreenQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#16",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#16",
+          "originalName": "var26",
+          "to": "rightGreenQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#17",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#17",
+          "originalName": "var27",
+          "to": "leftGreenStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#18",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#18",
+          "originalName": "var28",
+          "to": "rightGreenStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#19",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#19",
+          "originalName": "var29",
+          "to": "leftBlueQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#2",
+          "originalName": "stackIn_113_0",
+          "to": "rasterFailureBeforeContext",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#20",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#20",
+          "originalName": "var30",
+          "to": "rightBlueQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#21",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#21",
+          "originalName": "var31",
+          "to": "leftBlueStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#22",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#22",
+          "originalName": "var32",
+          "to": "rightBlueStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#23",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#23",
+          "originalName": "var33",
+          "to": "middleVertexOnRight",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#24",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#24",
+          "originalName": "var34",
+          "to": "topToBottomRows",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#25",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#25",
+          "originalName": "var35",
+          "to": "edgeSegmentRowsThenRowBase",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#26",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#26",
+          "originalName": "var36",
+          "to": "edgeSwapOrRowBaseOrLowerRowsThenLeftX",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#27",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#27",
+          "originalName": "var37",
+          "to": "spanStartOrWidthOrBottomXQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#28",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#28",
+          "originalName": "var38",
+          "to": "spanWidthOrRedStepOrBottomRedQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#29",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#29",
+          "originalName": "var39",
+          "to": "spanRedStepOrGreenStepOrBottomGreenQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#3",
+          "originalName": "stackIn_113_1",
+          "to": "rasterMessagePrefix",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#30",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#30",
+          "originalName": "var40",
+          "to": "spanGreenStepOrBlueStepOrBottomBlueQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#31",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#31",
+          "originalName": "var41",
+          "to": "spanBlueStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#32",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#32",
+          "originalName": "var42",
+          "to": "controlFlagSnapshot",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#33",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#33",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "caughtRasterParameter",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#4",
+          "originalName": "stackIn_114_2",
+          "to": "destinationDescription",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#5",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtRasterFailure",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#6",
+          "originalName": "var17_int",
+          "to": "leftXQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#7",
+          "originalName": "var17",
+          "to": "rasterFailure",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#8",
+          "originalName": "var18",
+          "to": "rightXQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#9",
+          "originalName": "var19",
+          "to": "leftXStepQ16",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Local role follows the arithmetic, transfers or failure-context construction; reused roles stay explicit."
+        }
+      },
+      {
+        "symbol": "M:jf.a(IIIIIIIII[I)V",
+        "before": null,
+        "after": {
+          "symbol": "M:jf.a(IIIIIIIII[I)V",
+          "originalName": "a",
+          "to": "drawHalfBlendRgbGradientSpan",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers."
+        }
+      },
+      {
+        "symbol": "M:mh.a()V",
+        "before": null,
+        "after": {
+          "symbol": "M:mh.a()V",
+          "originalName": "a",
+          "to": "updateTriangleClipCenter",
+          "evidence": "Sets clipCenterX=clipWidth/2 and clipCenterY=clipHeight/2."
+        }
+      },
+      {
+        "symbol": "M:mh.a(IIII)V",
+        "before": null,
+        "after": {
+          "symbol": "M:mh.a(IIII)V",
+          "originalName": "a",
+          "to": "setTriangleClip",
+          "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged."
+        }
+      },
+      {
+        "symbol": "M:mh.b()V",
+        "before": null,
+        "after": {
+          "symbol": "M:mh.b()V",
+          "originalName": "b",
+          "to": "prepareTriangleClipFromRasterizer",
+          "evidence": "Imports SoftwareRasterizer clip bounds through mh.a(IIII)V."
+        }
+      },
+      {
+        "symbol": "M:mh.c()V",
+        "before": null,
+        "after": {
+          "symbol": "M:mh.c()V",
+          "originalName": "c",
+          "to": "releaseTriangleTables",
+          "evidence": "Releases all five triangle lookup/row-offset arrays without resetting clip dimensions or centers."
+        }
+      },
+      {
+        "symbol": "M:nb.a(IIIIIIIIIIIIIIII)V",
+        "before": null,
+        "after": {
+          "symbol": "M:nb.a(IIIIIIIIIIIIIIII)V",
+          "originalName": "a",
+          "to": "drawHalfBlendRgbTriangle",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain."
+        }
+      },
+      {
+        "symbol": "M:wh.a(IIIIIIIIIII[IIIIII)V",
+        "before": null,
+        "after": {
+          "symbol": "M:wh.a(IIIIIIIIIII[IIIIII)V",
+          "originalName": "a",
+          "to": "drawSortedHalfBlendRgbTriangle",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#0",
+          "originalName": "param0",
+          "to": "destinationIndex",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#1",
+          "originalName": "param1",
+          "to": "redStepQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#2",
+          "originalName": "param2",
+          "to": "guard",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#3",
+          "originalName": "param3",
+          "to": "redQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#4",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#4",
+          "originalName": "param4",
+          "to": "blueStepQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#5",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#5",
+          "originalName": "param5",
+          "to": "greenQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#6",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#6",
+          "originalName": "param6",
+          "to": "greenStepQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#7",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#7",
+          "originalName": "param7",
+          "to": "pixelCount",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#8",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#8",
+          "originalName": "param8",
+          "to": "blueQ16",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:jf.a(IIIIIIIII[I)V#9",
+        "before": null,
+        "after": {
+          "symbol": "P:jf.a(IIIIIIIII[I)V#9",
+          "originalName": "param9",
+          "to": "destinationPixels",
+          "evidence": "jf.F advances interpolated RGB channels across a scanline and adds their original masked/shifted values to (previousPixel >> 1) & 0x7f7f7f. The original masks 33423360/33423689, decrement-before-test count, guard 33423689, wrong-guard side effect and partial writes are preserved. The 1800-case native scanline oracle includes overflow and null/short buffers. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:mh.a(IIII)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:mh.a(IIII)V#0",
+          "originalName": "param0",
+          "to": "clipLeft",
+          "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:mh.a(IIII)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:mh.a(IIII)V#1",
+          "originalName": "param1",
+          "to": "clipTop",
+          "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:mh.a(IIII)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:mh.a(IIII)V#2",
+          "originalName": "param2",
+          "to": "clipRight",
+          "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:mh.a(IIII)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:mh.a(IIII)V#3",
+          "originalName": "param3",
+          "to": "clipBottom",
+          "evidence": "mh sets clip-relative width/height and centers, grows the row-base table if needed and fills offsets by the software-rasterizer stride; coordinates remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#0",
+          "originalName": "param0",
+          "to": "vertexBBlue",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#1",
+          "originalName": "param1",
+          "to": "vertexBGreen",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#10",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#10",
+          "originalName": "param10",
+          "to": "guard",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#11",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#11",
+          "originalName": "param11",
+          "to": "vertexARed",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#12",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#12",
+          "originalName": "param12",
+          "to": "vertexAGreen",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#13",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#13",
+          "originalName": "param13",
+          "to": "vertexAX",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#14",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#14",
+          "originalName": "param14",
+          "to": "vertexBX",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#15",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#15",
+          "originalName": "param15",
+          "to": "vertexCY",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#2",
+          "originalName": "param2",
+          "to": "vertexCRed",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#3",
+          "originalName": "param3",
+          "to": "vertexCGreen",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#4",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#4",
+          "originalName": "param4",
+          "to": "vertexAY",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#5",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#5",
+          "originalName": "param5",
+          "to": "vertexABlue",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#6",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#6",
+          "originalName": "param6",
+          "to": "vertexBRed",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#7",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#7",
+          "originalName": "param7",
+          "to": "vertexBY",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#8",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#8",
+          "originalName": "param8",
+          "to": "vertexCX",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#9",
+        "before": null,
+        "after": {
+          "symbol": "P:nb.a(IIIIIIIIIIIIIIII)V#9",
+          "originalName": "param9",
+          "to": "vertexCBlue",
+          "evidence": "nb sorts the three vertex Y values into six orderings and forwards matching X/R/G/B attributes plus the framebuffer to wh.KA. hi passes packed-color channel extractions. Vertex A is (param13,param4), B (param14,param7), C (param8,param15); sentinel -2 and all original order/tie behavior remain. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#0",
+          "originalName": "param0",
+          "to": "bottomGreen",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#1",
+          "originalName": "param1",
+          "to": "topRed",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#10",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#10",
+          "originalName": "param10",
+          "to": "middleRed",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#11",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#11",
+          "originalName": "param11",
+          "to": "destinationPixels",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#12",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#12",
+          "originalName": "param12",
+          "to": "topGreen",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#13",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#13",
+          "originalName": "param13",
+          "to": "bottomX",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#14",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#14",
+          "originalName": "param14",
+          "to": "topBlue",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#15",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#15",
+          "originalName": "param15",
+          "to": "middleY",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#16",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#16",
+          "originalName": "param16",
+          "to": "guard",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#2",
+          "originalName": "param2",
+          "to": "topX",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#3",
+          "originalName": "param3",
+          "to": "middleGreen",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#4",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#4",
+          "originalName": "param4",
+          "to": "bottomY",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#5",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#5",
+          "originalName": "param5",
+          "to": "bottomBlue",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#6",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#6",
+          "originalName": "param6",
+          "to": "bottomRed",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#7",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#7",
+          "originalName": "param7",
+          "to": "middleBlue",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#8",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#8",
+          "originalName": "param8",
+          "to": "topY",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      },
+      {
+        "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#9",
+        "before": null,
+        "after": {
+          "symbol": "P:wh.a(IIIIIIIIIII[IIIIII)V#9",
+          "originalName": "param9",
+          "to": "middleX",
+          "evidence": "wh.KA interpolates sorted top/middle/bottom vertex X and RGB values with Q16 edge slopes, clips against mh dimensions/row offsets and calls jf.F for a legacy half-blended scanline. nb sorts vertices by Y; hi extracts each RGB channel before dispatch. Arithmetic masks, guard -1275583984, partial writes, flat edges and control-flag paths remain unchanged. Parameter role follows the full positional signature and its caller wiring."
+        }
+      }
+    ],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
@@ -36986,6 +38843,10 @@
         "sha256": "64e3a6be620cf237506c1f38c62bdc22ad9e96407a47459d402211cba113fd87"
       },
       {
+        "file": "mh.java",
+        "sha256": "5fa13b4e4723de8e980bbcc81dc9739dc822731813de1a69f07f82b0b89f5c12"
+      },
+      {
         "file": "mi.java",
         "sha256": "84cce1672cfaa43c1d0670023fd3c286283e43b9df75db33091857b77ec2a030"
       },
@@ -37400,7 +39261,7 @@
       },
       {
         "file": "tests/test-geoblox-nine-slice.mjs",
-        "sha256": "ac737cbb57fb55ad554ce31904f11943155d97f7fddb36df7a48b86a54d31abd",
+        "sha256": "3ebfc697790d11b5d17dd50772bfd11f0e4bf4e64564720fa50d9c12a4a64129",
         "nativeOutputSha256": "16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9",
         "scenarios": 2592,
         "scope": "Controlled nine-slice sprites, every pixel and cleanup side effect.",
@@ -37414,6 +39275,11 @@
             "constant": "expectedSpriteTransformsSha256",
             "sha256": "dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1",
             "scenarios": 33168
+          },
+          {
+            "constant": "expectedTriangleRasterSha256",
+            "sha256": "3a708f0eb4343a68f9cd859b75cc6d42db0eda690188b95deb7619a998603760",
+            "scenarios": 5266
           }
         ]
       },
@@ -39637,7 +41503,7 @@
       "sourceDeclarations": 19558,
       "bindingsCompared": 138502,
       "overrideRelationships": 388,
-      "identifierEdits": 49577,
+      "identifierEdits": 50682,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -39729,13 +41595,13 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 6081,
-      "namedLocalDeclarations": 3093,
+      "guardedNamingRules": 6197,
+      "namedLocalDeclarations": 3145,
       "nonselectorDeclarationsPreserved": 19549,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 81,
+      "rawSourceLinesRemoved": 0,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -39768,7 +41634,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass79 preserves every ordered declaration/reference identity and spelling, all local ordinals and override rows. All6081 complete guarded rules remain unchanged; no references are added or removed.",
+      "referenceRemovalAttribution": "Pass80 changes only guarded identifier tokens. Raw source and decompiler pins remain those of pass79. No declaration/reference identity, order, ordinal or override changes.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -39784,7 +41650,7 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 0,
+      "ruleChangesInCurrentPass": 116,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
@@ -39799,13 +41665,13 @@
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 0,
-      "sourceInputChangedInCurrentPass": true,
+      "namingRulesAddedInCurrentPass": 116,
+      "sourceInputChangedInCurrentPass": false,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 0,
+      "identifierEditsAddedInCurrentPass": 1105,
       "lastStructuralPassVersion": 79,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
@@ -40213,55 +42079,23 @@
       "voidReturnExitSourceLinesAfter": 79632,
       "nativeVoidReturnExitComparisons": 46080,
       "voidReturnExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
-      "voidReturnResourceHeaderSyntaxRefused": true
-    },
-    "sourceChange": {
-      "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "1b46d772b7dd2ddb026d31dd849f0ea77424cab7",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "d4ad201b2cc96e98089be0c4ccfe819dd7a924da",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda",
-              "reproduce": "git archive --format=tar d4ad201b2cc96e98089be0c4ccfe819dd7a924da | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd"
+      "voidReturnResourceHeaderSyntaxRefused": true,
+      "namedTriangleRasterRulesAdded": {
+        "M": 7,
+        "P": 47,
+        "L": 52,
+        "C": 1,
+        "F": 9
       },
-      "after": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "4f02f56a771c27f1cf814157be4606fb4450cc9b",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "5420742cd2ea194a1f128fb0059e1e2bf3487e8e",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "1cb7031c92759a6a2847c2baf87db5def26a4edbaa50a6020409fb436987ae47",
-              "reproduce": "git archive --format=tar 5420742cd2ea194a1f128fb0059e1e2bf3487e8e | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17"
-      }
+      "namedTriangleRasterRulesAddedHistoricalPassVersion": 80,
+      "allSelectedTriangleRasterParametersAndLocalsNamed": true,
+      "allTriangleRasterStateDeclarationsNamed": true,
+      "nativeTriangleRasterCases": 5266,
+      "nativeTriangleSpanOracleCases": 1800,
+      "nativeTriangleClipOracleCases": 4,
+      "nativeTriangleTableGrowthAndReleaseOracleCases": 6,
+      "nativeTriangleGeometryTraceCases": 3456,
+      "nativeTriangleRasterTraceSha256": "3a708f0eb4343a68f9cd859b75cc6d42db0eda690188b95deb7619a998603760"
     }
   }
 }

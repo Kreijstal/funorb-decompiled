@@ -446,380 +446,380 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int param12, int param13, int param14, int param15, int param16) {
-        int stackIn_73_0 = 0;
-        int stackIn_73_1 = 0;
-        RuntimeException stackIn_113_0 = null;
-        StringBuilder stackIn_113_1 = null;
-        String stackIn_114_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var17_int = 0;
-        RuntimeException var17 = null;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        var42 = Geoblox.field_C;
+    final static void drawSortedHalfBlendRgbTriangle(int bottomGreen, int topRed, int topX, int middleGreen, int bottomY, int bottomBlue, int bottomRed, int middleBlue, int topY, int middleX, int middleRed, int[] destinationPixels, int topGreen, int bottomX, int topBlue, int middleY, int guard) {
+        int invertedClipWidthOrLowerRows = 0;
+        int invertedSpanStartOrNegativeOne = 0;
+        RuntimeException rasterFailureBeforeContext = null;
+        StringBuilder rasterMessagePrefix = null;
+        String destinationDescription = null;
+        RuntimeException caughtRasterFailure = null;
+        int leftXQ16 = 0;
+        RuntimeException rasterFailure = null;
+        int rightXQ16 = 0;
+        int leftXStepQ16 = 0;
+        int rightXStepQ16 = 0;
+        int leftRedQ16 = 0;
+        int rightRedQ16 = 0;
+        int leftRedStepQ16 = 0;
+        int rightRedStepQ16 = 0;
+        int leftGreenQ16 = 0;
+        int rightGreenQ16 = 0;
+        int leftGreenStepQ16 = 0;
+        int rightGreenStepQ16 = 0;
+        int leftBlueQ16 = 0;
+        int rightBlueQ16 = 0;
+        int leftBlueStepQ16 = 0;
+        int rightBlueStepQ16 = 0;
+        int middleVertexOnRight = 0;
+        int topToBottomRows = 0;
+        int edgeSegmentRowsThenRowBase = 0;
+        int edgeSwapOrRowBaseOrLowerRowsThenLeftX = 0;
+        int spanStartOrWidthOrBottomXQ16 = 0;
+        int spanWidthOrRedStepOrBottomRedQ16 = 0;
+        int spanRedStepOrGreenStepOrBottomGreenQ16 = 0;
+        int spanGreenStepOrBlueStepOrBottomBlueQ16 = 0;
+        int spanBlueStepQ16 = 0;
+        int controlFlagSnapshot = 0;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          if (param4 >= 0) {
-            if (~mh.field_h < ~param8) {
-              if (param2 < 0) {
-                if (param9 < 0) {
-                  if (param13 < 0) {
+          if (bottomY >= 0) {
+            if (~TriangleRasterState.clipHeight < ~topY) {
+              if (topX < 0) {
+                if (middleX < 0) {
+                  if (bottomX < 0) {
                     return;
                   }
                 }
               }
-              if (~mh.field_c >= ~param2) {
-                if (~mh.field_c >= ~param9) {
-                  if (param13 >= mh.field_c) {
+              if (~TriangleRasterState.clipWidth >= ~topX) {
+                if (~TriangleRasterState.clipWidth >= ~middleX) {
+                  if (bottomX >= TriangleRasterState.clipWidth) {
                     return;
                   }
                 }
               }
-              if (param16 != -1275583984) {
+              if (guard != -1275583984) {
                 return;
               }
               L3: {
-                var34 = -param8 + param4;
-                if (param8 == param15) {
+                topToBottomRows = -topY + bottomY;
+                if (topY == middleY) {
                   L5: {
-                    if (~param4 == ~param8) {
-                      var29 = param14;
-                      var17_int = param2 << 16;
-                      var31 = 0;
-                      var30 = param7;
-                      var19 = 0;
-                      var21 = param1;
-                      var24 = 0;
-                      var32 = 0;
-                      var20 = 0;
-                      var26 = param3;
-                      var23 = 0;
-                      var22 = param10;
-                      var27 = 0;
-                      var28 = 0;
-                      var18 = param9 << 16;
-                      var25 = param12;
-                      if (var42 == 0) {
+                    if (~bottomY == ~topY) {
+                      leftBlueQ16 = topBlue;
+                      leftXQ16 = topX << 16;
+                      leftBlueStepQ16 = 0;
+                      rightBlueQ16 = middleBlue;
+                      leftXStepQ16 = 0;
+                      leftRedQ16 = topRed;
+                      rightRedStepQ16 = 0;
+                      rightBlueStepQ16 = 0;
+                      rightXStepQ16 = 0;
+                      rightGreenQ16 = middleGreen;
+                      leftRedStepQ16 = 0;
+                      rightRedQ16 = middleRed;
+                      leftGreenStepQ16 = 0;
+                      rightGreenStepQ16 = 0;
+                      rightXQ16 = middleX << 16;
+                      leftGreenQ16 = topGreen;
+                      if (controlFlagSnapshot == 0) {
                         break L5;
                       }
                     }
-                    var35 = -param15 + param4;
-                    if (param9 <= param2) {
-                      var27 = (param0 - param3 << 16) / var35;
-                      var29 = param7 << 16;
-                      var20 = (param13 - param2 << 16) / var34;
-                      var24 = (param6 - param1 << 16) / var34;
-                      var17_int = param9 << 16;
-                      var23 = (-param10 + param6 << 16) / var35;
-                      var18 = param2 << 16;
-                      var31 = (-param7 + param5 << 16) / var35;
-                      var32 = (-param14 + param5 << 16) / var34;
-                      var25 = param3 << 16;
-                      var30 = param14 << 16;
-                      var28 = (-param12 + param0 << 16) / var34;
-                      var19 = (-param9 + param13 << 16) / var35;
-                      var21 = param10 << 16;
-                      var22 = param1 << 16;
-                      var26 = param12 << 16;
-                      if (var42 == 0) {
+                    edgeSegmentRowsThenRowBase = -middleY + bottomY;
+                    if (middleX <= topX) {
+                      leftGreenStepQ16 = (bottomGreen - middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                      leftBlueQ16 = middleBlue << 16;
+                      rightXStepQ16 = (bottomX - topX << 16) / topToBottomRows;
+                      rightRedStepQ16 = (bottomRed - topRed << 16) / topToBottomRows;
+                      leftXQ16 = middleX << 16;
+                      leftRedStepQ16 = (-middleRed + bottomRed << 16) / edgeSegmentRowsThenRowBase;
+                      rightXQ16 = topX << 16;
+                      leftBlueStepQ16 = (-middleBlue + bottomBlue << 16) / edgeSegmentRowsThenRowBase;
+                      rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                      leftGreenQ16 = middleGreen << 16;
+                      rightBlueQ16 = topBlue << 16;
+                      rightGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
+                      leftXStepQ16 = (-middleX + bottomX << 16) / edgeSegmentRowsThenRowBase;
+                      leftRedQ16 = middleRed << 16;
+                      rightRedQ16 = topRed << 16;
+                      rightGreenQ16 = topGreen << 16;
+                      if (controlFlagSnapshot == 0) {
                         break L5;
                       }
                     }
-                    var28 = (param0 - param3 << 16) / var35;
-                    var23 = (param6 - param1 << 16) / var34;
-                    var19 = (param13 - param2 << 16) / var34;
-                    var25 = param12 << 16;
-                    var22 = param10 << 16;
-                    var32 = (param5 - param7 << 16) / var35;
-                    var26 = param3 << 16;
-                    var17_int = param2 << 16;
-                    var24 = (-param10 + param6 << 16) / var35;
-                    var21 = param1 << 16;
-                    var30 = param7 << 16;
-                    var18 = param9 << 16;
-                    var20 = (param13 - param9 << 16) / var35;
-                    var31 = (param5 - param14 << 16) / var34;
-                    var27 = (param0 - param12 << 16) / var34;
-                    var29 = param14 << 16;
+                    rightGreenStepQ16 = (bottomGreen - middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                    leftRedStepQ16 = (bottomRed - topRed << 16) / topToBottomRows;
+                    leftXStepQ16 = (bottomX - topX << 16) / topToBottomRows;
+                    leftGreenQ16 = topGreen << 16;
+                    rightRedQ16 = middleRed << 16;
+                    rightBlueStepQ16 = (bottomBlue - middleBlue << 16) / edgeSegmentRowsThenRowBase;
+                    rightGreenQ16 = middleGreen << 16;
+                    leftXQ16 = topX << 16;
+                    rightRedStepQ16 = (-middleRed + bottomRed << 16) / edgeSegmentRowsThenRowBase;
+                    leftRedQ16 = topRed << 16;
+                    rightBlueQ16 = middleBlue << 16;
+                    rightXQ16 = middleX << 16;
+                    rightXStepQ16 = (bottomX - middleX << 16) / edgeSegmentRowsThenRowBase;
+                    leftBlueStepQ16 = (bottomBlue - topBlue << 16) / topToBottomRows;
+                    leftGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
+                    leftBlueQ16 = topBlue << 16;
                   }
-                  var33 = 0;
-                  if (0 <= param8) {
+                  middleVertexOnRight = 0;
+                  if (0 <= topY) {
                     break L3;
                   }
-                  param8 = Math.min(-param8, param15 - param8);
-                  var22 = var22 + var24 * param8;
-                  var30 = var30 + param8 * var32;
-                  var18 = var18 + var20 * param8;
-                  var17_int = var17_int + var19 * param8;
-                  var25 = var25 + var27 * param8;
-                  var21 = var21 + var23 * param8;
-                  var29 = var29 + var31 * param8;
-                  var26 = var26 + param8 * var28;
-                  param8 = 0;
-                  if (var42 == 0) {
+                  topY = Math.min(-topY, middleY - topY);
+                  rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
+                  rightBlueQ16 = rightBlueQ16 + topY * rightBlueStepQ16;
+                  rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
+                  leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
+                  leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
+                  leftRedQ16 = leftRedQ16 + leftRedStepQ16 * topY;
+                  leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                  rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                  topY = 0;
+                  if (controlFlagSnapshot == 0) {
                     break L3;
                   }
                 }
                 L8: {
-                  var18 = param2 << 16;
-                  var17_int = param2 << 16;
-                  var30 = param14 << 16;
-                  var29 = param14 << 16;
-                  var26 = param12 << 16;
-                  var25 = param12 << 16;
-                  var22 = param1 << 16;
-                  var21 = param1 << 16;
-                  var35 = param15 - param8;
-                  var20 = (-param2 + param13 << 16) / var34;
-                  var19 = (param9 - param2 << 16) / var35;
-                  if (var20 <= var19) {
-                    var23 = (-param1 + param6 << 16) / var34;
-                    var27 = (-param12 + param0 << 16) / var34;
-                    var31 = (-param14 + param5 << 16) / var34;
-                    var36 = var19;
-                    var19 = var20;
-                    var20 = var36;
-                    var28 = (-param12 + param3 << 16) / var35;
-                    var33 = 1;
-                    var32 = (-param14 + param7 << 16) / var35;
-                    var24 = (-param1 + param10 << 16) / var35;
-                    if (var42 == 0) {
+                  rightXQ16 = topX << 16;
+                  leftXQ16 = topX << 16;
+                  rightBlueQ16 = topBlue << 16;
+                  leftBlueQ16 = topBlue << 16;
+                  rightGreenQ16 = topGreen << 16;
+                  leftGreenQ16 = topGreen << 16;
+                  rightRedQ16 = topRed << 16;
+                  leftRedQ16 = topRed << 16;
+                  edgeSegmentRowsThenRowBase = middleY - topY;
+                  rightXStepQ16 = (-topX + bottomX << 16) / topToBottomRows;
+                  leftXStepQ16 = (middleX - topX << 16) / edgeSegmentRowsThenRowBase;
+                  if (rightXStepQ16 <= leftXStepQ16) {
+                    leftRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
+                    leftGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
+                    leftBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                    edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXStepQ16;
+                    leftXStepQ16 = rightXStepQ16;
+                    rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                    rightGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                    middleVertexOnRight = 1;
+                    rightBlueStepQ16 = (-topBlue + middleBlue << 16) / edgeSegmentRowsThenRowBase;
+                    rightRedStepQ16 = (-topRed + middleRed << 16) / edgeSegmentRowsThenRowBase;
+                    if (controlFlagSnapshot == 0) {
                       break L8;
                     }
                   }
-                  var32 = (-param14 + param5 << 16) / var34;
-                  var28 = (param0 - param12 << 16) / var34;
-                  var23 = (param10 - param1 << 16) / var35;
-                  var24 = (-param1 + param6 << 16) / var34;
-                  var31 = (param7 - param14 << 16) / var35;
-                  var27 = (-param12 + param3 << 16) / var35;
-                  var33 = 0;
+                  rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                  rightGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
+                  leftRedStepQ16 = (middleRed - topRed << 16) / edgeSegmentRowsThenRowBase;
+                  rightRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
+                  leftBlueStepQ16 = (middleBlue - topBlue << 16) / edgeSegmentRowsThenRowBase;
+                  leftGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                  middleVertexOnRight = 0;
                 }
                 L10: {
                   L11: {
                     L12: {
-                      if (param8 < 0) {
-                        if (param15 >= 0) {
-                          param8 = -param8;
-                          var30 = var30 + var32 * param8;
-                          var26 = var26 + param8 * var28;
-                          var29 = var29 + var31 * param8;
-                          var25 = var25 + param8 * var27;
-                          var17_int = var17_int + param8 * var19;
-                          var18 = var18 + param8 * var20;
-                          var22 = var22 + var24 * param8;
-                          var21 = var21 + param8 * var23;
-                          param8 = 0;
-                          if (var42 == 0) {
+                      if (topY < 0) {
+                        if (middleY >= 0) {
+                          topY = -topY;
+                          rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
+                          rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                          leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                          leftGreenQ16 = leftGreenQ16 + topY * leftGreenStepQ16;
+                          leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                          rightXQ16 = rightXQ16 + topY * rightXStepQ16;
+                          rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
+                          leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
+                          topY = 0;
+                          if (controlFlagSnapshot == 0) {
                             break L12;
                           }
                         }
-                        param8 = param15 - param8;
-                        var21 = var21 + param8 * var23;
-                        var26 = var26 + param8 * var28;
-                        var17_int = var17_int + param8 * var19;
-                        var18 = var18 + param8 * var20;
-                        var25 = var25 + var27 * param8;
-                        var30 = var30 + var32 * param8;
-                        var22 = var22 + param8 * var24;
-                        var29 = var29 + var31 * param8;
-                        param8 = param15;
-                        if (var42 == 0) {
+                        topY = middleY - topY;
+                        leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
+                        rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                        leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                        rightXQ16 = rightXQ16 + topY * rightXStepQ16;
+                        leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
+                        rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
+                        rightRedQ16 = rightRedQ16 + topY * rightRedStepQ16;
+                        leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                        topY = middleY;
+                        if (controlFlagSnapshot == 0) {
                           break L11;
                         }
                       }
                     }
-                    var36 = mh.field_b[param8];
+                    edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];
                     while (true) {
-                      if (~param15 >= ~param8) {
+                      if (~middleY >= ~topY) {
                         break L11;
                       }
-                      var37 = var17_int >> 16;
-                      stackIn_73_0 = ~mh.field_c;
-                      stackIn_73_1 = ~var37;
-                      if (var42 != 0) {
+                      spanStartOrWidthOrBottomXQ16 = leftXQ16 >> 16;
+                      invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
+                      invertedSpanStartOrNegativeOne = ~spanStartOrWidthOrBottomXQ16;
+                      if (controlFlagSnapshot != 0) {
                         break L10;
                       }
                       L15: {
-                        if (stackIn_73_0 < stackIn_73_1) {
-                          var38 = (var18 >> 16) - (var17_int >> 16);
-                          if (var38 != 0) {
-                            var39 = (var22 - var21) / var38;
-                            var40 = (-var25 + var26) / var38;
-                            var41 = (var30 - var29) / var38;
-                            if (mh.field_c <= var38 + var37) {
-                              var38 = -1 + (mh.field_c - var37);
+                        if (invertedClipWidthOrLowerRows < invertedSpanStartOrNegativeOne) {
+                          spanWidthOrRedStepOrBottomRedQ16 = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                          if (spanWidthOrRedStepOrBottomRedQ16 != 0) {
+                            spanRedStepOrGreenStepOrBottomGreenQ16 = (rightRedQ16 - leftRedQ16) / spanWidthOrRedStepOrBottomRedQ16;
+                            spanGreenStepOrBlueStepOrBottomBlueQ16 = (-leftGreenQ16 + rightGreenQ16) / spanWidthOrRedStepOrBottomRedQ16;
+                            spanBlueStepQ16 = (rightBlueQ16 - leftBlueQ16) / spanWidthOrRedStepOrBottomRedQ16;
+                            if (TriangleRasterState.clipWidth <= spanWidthOrRedStepOrBottomRedQ16 + spanStartOrWidthOrBottomXQ16) {
+                              spanWidthOrRedStepOrBottomRedQ16 = -1 + (TriangleRasterState.clipWidth - spanStartOrWidthOrBottomXQ16);
                             }
                             L18: {
-                              if (0 <= var37) {
-                                jf.a(var37 + var36, var39, 33423689, var21, var41, var25, var40, var38, var29, param11);
-                                if (var42 == 0) {
+                              if (0 <= spanStartOrWidthOrBottomXQ16) {
+                                jf.drawHalfBlendRgbGradientSpan(spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanRedStepOrGreenStepOrBottomGreenQ16, 33423689, leftRedQ16, spanBlueStepQ16, leftGreenQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, spanWidthOrRedStepOrBottomRedQ16, leftBlueQ16, destinationPixels);
+                                if (controlFlagSnapshot == 0) {
                                   break L18;
                                 }
                               }
-                              jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
+                              jf.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanRedStepOrGreenStepOrBottomGreenQ16, 33423689, -(spanRedStepOrGreenStepOrBottomGreenQ16 * spanStartOrWidthOrBottomXQ16) + leftRedQ16, spanBlueStepQ16, leftGreenQ16 - spanStartOrWidthOrBottomXQ16 * spanGreenStepOrBlueStepOrBottomBlueQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, spanWidthOrRedStepOrBottomRedQ16 + spanStartOrWidthOrBottomXQ16, -(spanBlueStepQ16 * spanStartOrWidthOrBottomXQ16) + leftBlueQ16, destinationPixels);
                             }
-                            if (var42 == 0) {
+                            if (controlFlagSnapshot == 0) {
                               break L15;
                             }
                           }
-                          if (var37 >= 0) {
-                            if (~var37 > ~mh.field_c) {
-                              jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
+                          if (spanStartOrWidthOrBottomXQ16 >= 0) {
+                            if (~spanStartOrWidthOrBottomXQ16 > ~TriangleRasterState.clipWidth) {
+                              jf.drawHalfBlendRgbGradientSpan(spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanWidthOrRedStepOrBottomRedQ16, leftBlueQ16, destinationPixels);
                             }
                           }
                         }
                       }
-                      param8++;
-                      if (~param8 <= ~mh.field_h) {
+                      topY++;
+                      if (~topY <= ~TriangleRasterState.clipHeight) {
                         return;
                       }
-                      var18 = var18 + var20;
-                      var26 = var26 + var28;
-                      var22 = var22 + var24;
-                      var25 = var25 + var27;
-                      var29 = var29 + var31;
-                      var30 = var30 + var32;
-                      var17_int = var17_int + var19;
-                      var21 = var21 + var23;
-                      var36 = var36 + SoftwareRasterizer.stride;
-                      if (var42 == 0) {
+                      rightXQ16 = rightXQ16 + rightXStepQ16;
+                      rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16;
+                      rightRedQ16 = rightRedQ16 + rightRedStepQ16;
+                      leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16;
+                      leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16;
+                      rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
+                      leftXQ16 = leftXQ16 + leftXStepQ16;
+                      leftRedQ16 = leftRedQ16 + leftRedStepQ16;
+                      edgeSwapOrRowBaseOrLowerRowsThenLeftX = edgeSwapOrRowBaseOrLowerRowsThenLeftX + SoftwareRasterizer.stride;
+                      if (controlFlagSnapshot == 0) {
                         continue;
                       }
                       break L11;
                     }
                   }
-                  var36 = param4 - param15;
-                  stackIn_73_0 = ~var36;
-                  stackIn_73_1 = -1;
+                  edgeSwapOrRowBaseOrLowerRowsThenLeftX = bottomY - middleY;
+                  invertedClipWidthOrLowerRows = ~edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  invertedSpanStartOrNegativeOne = -1;
                 }
-                if (stackIn_73_0 == stackIn_73_1) {
-                  var23 = 0;
-                  var27 = 0;
-                  var20 = 0;
-                  var19 = 0;
-                  var24 = 0;
-                  var31 = 0;
-                  var28 = 0;
-                  var32 = 0;
-                  if (var42 == 0) {
+                if (invertedClipWidthOrLowerRows == invertedSpanStartOrNegativeOne) {
+                  leftRedStepQ16 = 0;
+                  leftGreenStepQ16 = 0;
+                  rightXStepQ16 = 0;
+                  leftXStepQ16 = 0;
+                  rightRedStepQ16 = 0;
+                  leftBlueStepQ16 = 0;
+                  rightGreenStepQ16 = 0;
+                  rightBlueStepQ16 = 0;
+                  if (controlFlagSnapshot == 0) {
                     break L3;
                   }
                 }
                 L21: {
-                  var37 = param13 << 16;
-                  var38 = param6 << 16;
-                  var39 = param0 << 16;
-                  var40 = param5 << 16;
-                  if (var33 == 0) {
-                    var17_int = param9 << 16;
-                    var29 = param7 << 16;
-                    var21 = param10 << 16;
-                    var25 = param3 << 16;
-                    if (var42 == 0) {
+                  spanStartOrWidthOrBottomXQ16 = bottomX << 16;
+                  spanWidthOrRedStepOrBottomRedQ16 = bottomRed << 16;
+                  spanRedStepOrGreenStepOrBottomGreenQ16 = bottomGreen << 16;
+                  spanGreenStepOrBlueStepOrBottomBlueQ16 = bottomBlue << 16;
+                  if (middleVertexOnRight == 0) {
+                    leftXQ16 = middleX << 16;
+                    leftBlueQ16 = middleBlue << 16;
+                    leftRedQ16 = middleRed << 16;
+                    leftGreenQ16 = middleGreen << 16;
+                    if (controlFlagSnapshot == 0) {
                       break L21;
                     }
                   }
-                  var22 = param10 << 16;
-                  var18 = param9 << 16;
-                  var26 = param3 << 16;
-                  var30 = param7 << 16;
+                  rightRedQ16 = middleRed << 16;
+                  rightXQ16 = middleX << 16;
+                  rightGreenQ16 = middleGreen << 16;
+                  rightBlueQ16 = middleBlue << 16;
                 }
-                var28 = (var39 - var26) / var36;
-                var31 = (-var29 + var40) / var36;
-                var19 = (var37 - var17_int) / var36;
-                var23 = (-var21 + var38) / var36;
-                var27 = (var39 - var25) / var36;
-                var24 = (var38 - var22) / var36;
-                var20 = (var37 - var18) / var36;
-                var32 = (-var30 + var40) / var36;
+                rightGreenStepQ16 = (spanRedStepOrGreenStepOrBottomGreenQ16 - rightGreenQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                leftBlueStepQ16 = (-leftBlueQ16 + spanGreenStepOrBlueStepOrBottomBlueQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                leftXStepQ16 = (spanStartOrWidthOrBottomXQ16 - leftXQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                leftRedStepQ16 = (-leftRedQ16 + spanWidthOrRedStepOrBottomRedQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                leftGreenStepQ16 = (spanRedStepOrGreenStepOrBottomGreenQ16 - leftGreenQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                rightRedStepQ16 = (spanWidthOrRedStepOrBottomRedQ16 - rightRedQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                rightXStepQ16 = (spanStartOrWidthOrBottomXQ16 - rightXQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                rightBlueStepQ16 = (-rightBlueQ16 + spanGreenStepOrBlueStepOrBottomBlueQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
               }
-              if (param8 < 0) {
-                param8 = -param8;
-                var18 = var18 + param8 * var20;
-                var17_int = var17_int + param8 * var19;
-                var22 = var22 + var24 * param8;
-                var30 = var30 + param8 * var32;
-                var21 = var21 + var23 * param8;
-                var29 = var29 + param8 * var31;
-                var26 = var26 + var28 * param8;
-                var25 = var25 + var27 * param8;
-                param8 = 0;
+              if (topY < 0) {
+                topY = -topY;
+                rightXQ16 = rightXQ16 + topY * rightXStepQ16;
+                leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
+                rightBlueQ16 = rightBlueQ16 + topY * rightBlueStepQ16;
+                leftRedQ16 = leftRedQ16 + leftRedStepQ16 * topY;
+                leftBlueQ16 = leftBlueQ16 + topY * leftBlueStepQ16;
+                rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16 * topY;
+                leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
+                topY = 0;
               }
-              var35 = mh.field_b[param8];
+              edgeSegmentRowsThenRowBase = TriangleRasterState.rowBaseOffsets[topY];
               while (true) {
-                if (param4 > param8) {
-                  var36 = var17_int >> 16;
-                  if (var42 != 0) {
+                if (bottomY > topY) {
+                  edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXQ16 >> 16;
+                  if (controlFlagSnapshot != 0) {
                     return;
                   }
                   L27: {
-                    if (var36 < mh.field_c) {
-                      var37 = -(var17_int >> 16) + (var18 >> 16);
-                      if (var37 != 0) {
-                        var38 = (var22 - var21) / var37;
-                        var39 = (var26 - var25) / var37;
-                        var40 = (-var29 + var30) / var37;
-                        if (var37 + var36 >= mh.field_c) {
-                          var37 = mh.field_c - var36 - 1;
+                    if (edgeSwapOrRowBaseOrLowerRowsThenLeftX < TriangleRasterState.clipWidth) {
+                      spanStartOrWidthOrBottomXQ16 = -(leftXQ16 >> 16) + (rightXQ16 >> 16);
+                      if (spanStartOrWidthOrBottomXQ16 != 0) {
+                        spanWidthOrRedStepOrBottomRedQ16 = (rightRedQ16 - leftRedQ16) / spanStartOrWidthOrBottomXQ16;
+                        spanRedStepOrGreenStepOrBottomGreenQ16 = (rightGreenQ16 - leftGreenQ16) / spanStartOrWidthOrBottomXQ16;
+                        spanGreenStepOrBlueStepOrBottomBlueQ16 = (-leftBlueQ16 + rightBlueQ16) / spanStartOrWidthOrBottomXQ16;
+                        if (spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX >= TriangleRasterState.clipWidth) {
+                          spanStartOrWidthOrBottomXQ16 = TriangleRasterState.clipWidth - edgeSwapOrRowBaseOrLowerRowsThenLeftX - 1;
                         }
                         L30: {
-                          if (var36 < 0) {
-                            jf.a(var35, var38, 33423689, var21 - var38 * var36, var40, var25 - var36 * var39, var39, var37 + var36, -(var36 * var40) + var29, param11);
-                            if (var42 == 0) {
+                          if (edgeSwapOrRowBaseOrLowerRowsThenLeftX < 0) {
+                            jf.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16 - spanWidthOrRedStepOrBottomRedQ16 * edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16 - edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanRedStepOrGreenStepOrBottomGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, -(edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanGreenStepOrBlueStepOrBottomBlueQ16) + leftBlueQ16, destinationPixels);
+                            if (controlFlagSnapshot == 0) {
                               break L30;
                             }
                           }
-                          jf.a(var36 + var35, var38, 33423689, var21, var40, var25, var39, var37, var29, param11);
+                          jf.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX + edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
                         }
-                        if (var42 == 0) {
+                        if (controlFlagSnapshot == 0) {
                           break L27;
                         }
                       }
-                      if (var36 >= 0) {
-                        if (mh.field_c > var36) {
-                          jf.a(var35 + var36, 0, 33423689, var21, 0, var25, 0, var37, var29, param11);
+                      if (edgeSwapOrRowBaseOrLowerRowsThenLeftX >= 0) {
+                        if (TriangleRasterState.clipWidth > edgeSwapOrRowBaseOrLowerRowsThenLeftX) {
+                          jf.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
                         }
                       }
                     }
                   }
-                  param8++;
-                  if (~mh.field_h >= ~param8) {
+                  topY++;
+                  if (~TriangleRasterState.clipHeight >= ~topY) {
                     return;
                   }
-                  var18 = var18 + var20;
-                  var22 = var22 + var24;
-                  var35 = var35 + SoftwareRasterizer.stride;
-                  var25 = var25 + var27;
-                  var26 = var26 + var28;
-                  var29 = var29 + var31;
-                  var21 = var21 + var23;
-                  var17_int = var17_int + var19;
-                  var30 = var30 + var32;
-                  if (var42 == 0) {
+                  rightXQ16 = rightXQ16 + rightXStepQ16;
+                  rightRedQ16 = rightRedQ16 + rightRedStepQ16;
+                  edgeSegmentRowsThenRowBase = edgeSegmentRowsThenRowBase + SoftwareRasterizer.stride;
+                  leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16;
+                  rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16;
+                  leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16;
+                  leftRedQ16 = leftRedQ16 + leftRedStepQ16;
+                  leftXQ16 = leftXQ16 + leftXStepQ16;
+                  rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
+                  if (controlFlagSnapshot == 0) {
                     continue;
                   }
                 }
@@ -828,17 +828,17 @@ abstract class SpriteState extends DualLinkNode {
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var17 = decompiledCaughtException;
-          stackIn_113_0 = (RuntimeException) (var17);
-          stackIn_113_1 = new StringBuilder().append("wh.KA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
-          if (param11 == null) {
-            stackIn_114_2 = "null";
+        } catch (java.lang.RuntimeException caughtRasterParameter) {
+          caughtRasterFailure = caughtRasterParameter;
+          rasterFailure = caughtRasterFailure;
+          rasterFailureBeforeContext = (RuntimeException) (rasterFailure);
+          rasterMessagePrefix = new StringBuilder().append("wh.KA(").append(bottomGreen).append(',').append(topRed).append(',').append(topX).append(',').append(middleGreen).append(',').append(bottomY).append(',').append(bottomBlue).append(',').append(bottomRed).append(',').append(middleBlue).append(',').append(topY).append(',').append(middleX).append(',').append(middleRed).append(',');
+          if (destinationPixels == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_114_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw t.a((Throwable) ((Object) rasterFailureBeforeContext), ((StringBuilder) (Object) rasterMessagePrefix).append(destinationDescription).append(',').append(topGreen).append(',').append(bottomX).append(',').append(topBlue).append(',').append(middleY).append(',').append(guard).append(')').toString());
         }
     }
 

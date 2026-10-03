@@ -105,32 +105,32 @@ final class nb {
         ArchiveNetworkClient.movingEntities.addLast(methodGuard ^ 28286, pooledEntity);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int var17 = Geoblox.field_C;
-        if (param10 != -2) {
+    final static void drawHalfBlendRgbTriangle(int vertexBBlue, int vertexBGreen, int vertexCRed, int vertexCGreen, int vertexAY, int vertexABlue, int vertexBRed, int vertexBY, int vertexCX, int vertexCBlue, int guard, int vertexARed, int vertexAGreen, int vertexAX, int vertexBX, int vertexCY) {
+        int controlFlagSnapshot = Geoblox.field_C;
+        if (guard != -2) {
             return;
         }
-        if (param4 <= param7) {
-            if (param15 > param7) {
-                SpriteState.a(param3, param11, param13, param1, param15, param9, param2, param0, param4, param14, param6, SoftwareRasterizer.framebuffer, param12, param8, param5, param7, -1275583984);
+        if (vertexAY <= vertexBY) {
+            if (vertexCY > vertexBY) {
+                SpriteState.drawSortedHalfBlendRgbTriangle(vertexCGreen, vertexARed, vertexAX, vertexBGreen, vertexCY, vertexCBlue, vertexCRed, vertexBBlue, vertexAY, vertexBX, vertexBRed, SoftwareRasterizer.framebuffer, vertexAGreen, vertexCX, vertexABlue, vertexBY, -1275583984);
                 return;
             }
-            if (param15 > param4) {
-                SpriteState.a(param1, param11, param13, param3, param7, param0, param6, param9, param4, param8, param2, SoftwareRasterizer.framebuffer, param12, param14, param5, param15, -1275583984);
+            if (vertexCY > vertexAY) {
+                SpriteState.drawSortedHalfBlendRgbTriangle(vertexBGreen, vertexARed, vertexAX, vertexCGreen, vertexBY, vertexBBlue, vertexBRed, vertexCBlue, vertexAY, vertexCX, vertexCRed, SoftwareRasterizer.framebuffer, vertexAGreen, vertexBX, vertexABlue, vertexCY, -1275583984);
                 return;
             }
-            SpriteState.a(param1, param2, param8, param12, param7, param0, param6, param5, param15, param13, param11, SoftwareRasterizer.framebuffer, param3, param14, param9, param4, -1275583984);
+            SpriteState.drawSortedHalfBlendRgbTriangle(vertexBGreen, vertexCRed, vertexCX, vertexAGreen, vertexBY, vertexBBlue, vertexBRed, vertexABlue, vertexCY, vertexAX, vertexARed, SoftwareRasterizer.framebuffer, vertexCGreen, vertexBX, vertexCBlue, vertexAY, -1275583984);
             return;
         }
-        if (param4 < param15) {
-            SpriteState.a(param3, param6, param14, param12, param15, param9, param2, param5, param7, param13, param11, SoftwareRasterizer.framebuffer, param1, param8, param0, param4, param10 ^ 1275583982);
+        if (vertexAY < vertexCY) {
+            SpriteState.drawSortedHalfBlendRgbTriangle(vertexCGreen, vertexBRed, vertexBX, vertexAGreen, vertexCY, vertexCBlue, vertexCRed, vertexABlue, vertexBY, vertexAX, vertexARed, SoftwareRasterizer.framebuffer, vertexBGreen, vertexCX, vertexBBlue, vertexAY, guard ^ 1275583982);
             return;
         }
-        if (param15 > param7) {
-            SpriteState.a(param12, param6, param14, param3, param4, param5, param11, param9, param7, param8, param2, SoftwareRasterizer.framebuffer, param1, param13, param0, param15, -1275583984);
+        if (vertexCY > vertexBY) {
+            SpriteState.drawSortedHalfBlendRgbTriangle(vertexAGreen, vertexBRed, vertexBX, vertexCGreen, vertexAY, vertexABlue, vertexARed, vertexCBlue, vertexBY, vertexCX, vertexCRed, SoftwareRasterizer.framebuffer, vertexBGreen, vertexAX, vertexBBlue, vertexCY, -1275583984);
             return;
         }
-        SpriteState.a(param12, param2, param8, param1, param4, param5, param11, param0, param15, param14, param6, SoftwareRasterizer.framebuffer, param3, param13, param9, param7, -1275583984);
+        SpriteState.drawSortedHalfBlendRgbTriangle(vertexAGreen, vertexCRed, vertexCX, vertexBGreen, vertexAY, vertexABlue, vertexARed, vertexBBlue, vertexCY, vertexBX, vertexBRed, SoftwareRasterizer.framebuffer, vertexCGreen, vertexAX, vertexCBlue, vertexBY, -1275583984);
     }
 
     final static boolean a(boolean param0) {

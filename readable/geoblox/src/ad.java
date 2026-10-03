@@ -141,7 +141,7 @@ final class ad extends ia {
             }
             var1 = new Sprite(540, 140);
             Geoblox.setRasterTarget(1, var1);
-            mh.b();
+            TriangleRasterState.prepareTriangleClipFromRasterizer();
             SoftwareRasterizer.clearFramebuffer();
             gb.field_f = 0;
             ck.a((byte) -73);

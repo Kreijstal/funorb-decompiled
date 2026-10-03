@@ -445,7 +445,7 @@ public final class Geoblox extends wf {
         ij.i((byte) -80);
         bk.a(true);
         ff.a(true);
-        mh.c();
+        TriangleRasterState.releaseTriangleTables();
         MusicDecoder.a();
         dc.b(126);
         nf.b((byte) 115);

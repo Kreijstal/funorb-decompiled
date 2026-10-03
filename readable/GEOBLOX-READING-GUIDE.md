@@ -2798,3 +2798,48 @@ regeneration, readable reproduction and dictionary reversal are exact. Existing
 native/raw/readable game probes retain their documented traces. Whole-game
 execution, actual assets/platform/server traffic, remaining opaque helpers and
 browser/phone performance remain outside these proofs.
+
+## Triangle shading (pass 80)
+
+The triangle path begins in the model renderer `hi`: it extracts each vertex's
+red, green and blue channels and calls `nb.drawHalfBlendRgbTriangle`. Its parameters
+name the three X/Y pairs `vertexAX`/`vertexAY`, `vertexBX`/`vertexBY` and
+`vertexCX`/`vertexCY`; the entry wrapper sorts their Y coordinates before
+dispatching matching X/R/G/B values. Numeric
+sentinels and tie behavior remain unchanged.
+
+`SpriteState.drawSortedHalfBlendRgbTriangle` traverses the upper and lower
+segments using left/right `XQ16`, `RedQ16`, `GreenQ16` and `BlueQ16` values and
+their per-row steps. `middleVertexOnRight` records which edge the middle vertex
+occupies. The short edge changes at the middle Y while the long edge continues.
+The helper uses `TriangleRasterState.clipWidth`/`clipHeight` and `rowBaseOffsets`
+to clip spans and locate their framebuffer rows. Original reused scratch slots
+have combined names, such as `edgeSegmentRowsThenRowBase`; they remain one local.
+The large labeled body and all control-flag paths remain.
+
+`jf.drawHalfBlendRgbGradientSpan` advances the interpolated channels for each
+pixel and combines them with `(previousPixel >> 1) & 0x7f7f7f`. Its red/green
+masks retain the original decimal constants, including 33423689; this naming
+pass does not repair or normalize the arithmetic. The decrement-before-test
+pixel count, bad-guard mutation and partial-buffer failure behavior remain.
+
+`TriangleRasterState.prepareTriangleClipFromRasterizer` imports the current
+software-rasterizer clip and fills framebuffer row offsets. Centers are half
+the clip width/height. Its private tables are `sineQ16`, `cosineQ16`,
+`reciprocalQ15` and `reciprocalQ16`; `releaseTriangleTables` releases all five
+arrays while preserving the clip dimensions/centers.
+
+All parameters/locals in the three selected triangle methods and all declarations
+in `TriangleRasterState` now have guarded names: 116 additions in total.
+Raw source and decompiler pins remain those of pass79. The 6,197 rules apply
+50,682 edits, preserving all 138,502 bindings and 388 overrides. Reproduction
+and dictionary reversal are byte-exact; the dictionary retains every original
+identity and spelling.
+
+The drawing probe adds 5,266 native/raw/readable comparisons. Independent oracles
+cover 1,800 scanline cases, four clip configurations and six table/growth/release
+checks. Another 3,456 triangle cases preserve native pixel and failure traces,
+including all vertex permutations, flat/clipped triangles, RGB inputs, guards
+and control flags. Complete triangle geometry has no independent oracle here;
+whole-model/real-asset rendering, remaining opaque helpers and large bodies,
+full gameplay and browser/phone performance remain unverified.
