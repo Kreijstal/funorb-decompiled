@@ -89,14 +89,14 @@ class f extends qf implements pl {
         }
         if (param0 >= -48) {
             availableEntityCategoryCount = -112;
-            InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.field_i, 640);
+            InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
             if (null != InstrumentPatch.field_n) {
                 sl.a(InstrumentPatch.field_n, 57);
                 return;
             }
             return;
         }
-        InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.field_i, 640);
+        InstrumentPatch.field_n = od.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
         if (null == InstrumentPatch.field_n) {
             return;
         }

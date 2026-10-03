@@ -121,9 +121,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (MenuScreen.field_i != null) {
+          if (MenuScreen.platformTaskDispatcher != null) {
             try {
-              MenuScreen.field_i.shutdown((byte) 13);
+              MenuScreen.platformTaskDispatcher.shutdown((byte) 13);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -391,8 +391,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   eg.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {
                     L18: {
-                      if (0L != MenuScreen.field_a) {
-                        stackIn_99_0 = $cfr$lcmp(~MenuScreen.field_a, ~oa.a(-12520));
+                      if (0L != MenuScreen.appletStopDeadlineMillis) {
+                        stackIn_99_0 = $cfr$lcmp(~MenuScreen.appletStopDeadlineMillis, ~oa.a(-12520));
                         if (var5 != 0) {
                           break L18;
                         }
@@ -417,7 +417,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           }
                         }
                         this.d(32000);
-                        wj.a(MenuScreen.field_i, (byte) 83, f.field_kb);
+                        wj.a(MenuScreen.platformTaskDispatcher, (byte) 83, f.field_kb);
                       }
                       if (var5 == 0) {
                         continue L17;
@@ -546,7 +546,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         try {
           if ((this == PrefixCodeDecoder.field_d) &&
               (!ad.field_p)) {
-            MenuScreen.field_a = 0L;
+            MenuScreen.appletStopDeadlineMillis = 0L;
             return;
           }
           return;
@@ -743,7 +743,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             return;
         }
         try {
-            MenuScreen.field_a = oa.a(-12520);
+            MenuScreen.appletStopDeadlineMillis = oa.a(-12520);
             bc.sleepMillis(0, 5000L);
             ml.field_s = null;
             this.a((byte) 14, false);
@@ -791,9 +791,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     return;
                   }
                   dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
-                  MenuScreen.field_i = dupTemp$0;
+                  MenuScreen.platformTaskDispatcher = dupTemp$0;
                   ml.field_s = dupTemp$0;
-                  var8 = MenuScreen.field_i.startThread((Runnable) (this), 0, 1);
+                  var8 = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
                   while (true) {
                     if (var8.status == 0) {
                       bc.sleepMillis(0, 10L);
@@ -922,7 +922,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         try {
           if ((this == PrefixCodeDecoder.field_d) &&
               (!ad.field_p)) {
-            MenuScreen.field_a = 4000L + oa.a(-12520);
+            MenuScreen.appletStopDeadlineMillis = 4000L + oa.a(-12520);
             return;
           }
           return;

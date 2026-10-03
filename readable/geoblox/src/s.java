@@ -6,7 +6,7 @@ final class s extends ee implements pe, pl {
     static ck field_E;
     private vf field_J;
     private r field_C;
-    static int field_H;
+    static int menuPointerRepeatCountdown;
     static volatile int liveHeldPointerButton;
     static Sprite[][] geometrySpritesByThemeAndCategory;
     static String field_F;

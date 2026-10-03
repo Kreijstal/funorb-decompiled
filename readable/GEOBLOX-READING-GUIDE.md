@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 94)
+## Current readability (pass 95)
 
-The export has 7,249 guarded names. All 303 sources compile, reproduce and
+The export has 7,314 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -35,9 +35,9 @@ large bodies are:
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
 
-Every GameScreen field, method, parameter and local now has a guarded name,
-with the constructor name supplied by its class rule. Base-menu/shared helpers
-and mixed-effect exits remain. Larger reconstructions need
+Every field, method, parameter and local in GameScreen and MenuScreen now has
+a guarded name, with constructor names supplied by their class rules. Other
+shared helpers and mixed-effect exits remain. Larger reconstructions need
 proofs for intermediate loops/protected regions and multiple continuations;
 control flags are not assumed constant. The 16,128-case generic comparison and
 six recorded native probes establish controlled behavior only. Complete assets/
@@ -56,6 +56,44 @@ remain intact.
 
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
+
+## Base menu selection and pointer repeat
+
+`MenuScreen` stores `hitLeftX`, exclusive `hitRightX`, `firstItemY`, `itemSpacing`
+and `itemCount`. Its hit test computes the row only inside that strip and returns
+-1 for a miss; the original wrong guard still returns 81 inside the strip.
+Its constructor assigns the five layout arguments without adding validation.
+`renderScreen` walks rows at the original spacing and calls the virtual
+`renderMenuItem` with selection equality. The wrong render guard still calls
+`updatePointer(false)` first.
+
+`updatePointer(pointerUpdateGuard)` handles press coordinates before held-repeat
+or hover coordinates. A successful fresh press selects the hit item and passes
+`initialClick = !pointerUpdateGuard`; false guard also changes the left bound to
+56. Held-repeat uses the selected item and current pointer snapshots. Hover
+misses preserve keyboard selection while `keyboardSelectionActive` is true.
+Original receiver/control snapshots remain even when unused. Nothing here
+normalizes the guard into a conventional event flag or changes hit boundaries.
+
+`handleMenuPointer` immediately activates button 1 or decreases the menu value
+for other buttons, then initializes `s.menuPointerRepeatCountdown` from
+`lj.menuPointerInitialRepeatDelay`. Held-repeat decrements the countdown and
+repeats at zero or below, resetting from `fj.menuPointerRepeatInterval`.
+`initialClick` clears keyboard selection after these actions.
+`da.configureMenuPointerRepeat(rateScale, baseInitialDelay)` computes
+`baseInitialDelay * rateScale / 50` and `rateScale * 4 / 50`, respectively;
+Geoblox passes `(150, 20)`, giving 60 and 12. Integer overflow/truncation and
+nonpositive arguments remain unchanged; these values are not FPS measurements.
+
+The static indexed-frame wrapper resolves `groupName` then `resourceName` and
+calls `NetworkArchiveRequest.loadIndexedSpriteFramesById` with file ID before
+group ID. That helper decodes the archive sheet, then builds indexed frames.
+Both keep their early null return for false guards and original failure context.
+The three otherwise unrelated static base-menu fields now identify their roles:
+`platformTaskDispatcher`, `appletStopDeadlineMillis` and `introTintGreenDelta`.
+The deadline belongs to applet lifecycle; the tint delta belongs to the intro,
+not an instance menu animation. These names have compile/binding/reversal proof,
+with no new dynamic menu/repeat, actual assets, lifecycle/thread or device coverage.
 
 ## Menu rendering and tutorial curtain
 

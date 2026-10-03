@@ -5,72 +5,72 @@ abstract class MenuScreen {
     static Sprite[][][] amorphousFramesByThemeAndVariant;
     int firstItemY;
     int itemCount;
-    static float field_c;
+    static float introTintGreenDelta;
     int itemSpacing;
-    static PlatformTaskDispatcher field_i;
+    static PlatformTaskDispatcher platformTaskDispatcher;
     static int avatarFeedbackFrameBase;
     int selectedItemIndex;
     private int hitRightX;
     boolean pointerInteractionActive;
     boolean keyboardSelectionActive;
-    static long field_a;
+    static long appletStopDeadlineMillis;
     private int hitLeftX;
 
-    final static IndexedSprite[] a(String param0, String param1, boolean param2, ResourceArchive param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        IndexedSprite[] stackIn_2_0 = null;
-        IndexedSprite[] stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static IndexedSprite[] loadIndexedSpriteFrames(String groupName, String resourceName, boolean methodGuard, ResourceArchive graphicsArchive) {
+        int groupId = 0;
+        RuntimeException spriteLoadFailure = null;
+        int fileId = 0;
+        IndexedSprite[] guardedNullResult = null;
+        IndexedSprite[] loadedFramesResult = null;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String groupContextDescription = null;
+        StringBuilder contextAfterGroup = null;
+        String resourceContextDescription = null;
+        StringBuilder contextBeforeArchive = null;
+        String archiveContextDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (!param2) {
-            stackIn_2_0 = (IndexedSprite[]) null;
-            return stackIn_2_0;
+          if (!methodGuard) {
+            guardedNullResult = (IndexedSprite[]) null;
+            return guardedNullResult;
           }
-          var4_int = param3.findGroupId((byte) 126, param0);
-          var5 = param3.findFileId(param1, -89, var4_int);
-          stackIn_4_0 = NetworkArchiveRequest.a(true, param3, var5, var4_int);
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var4);
-          stackIn_7_1 = new StringBuilder().append("ka.W(");
-          if (param0 == null) {
-            stackIn_8_2 = "null";
+          groupId = graphicsArchive.findGroupId((byte) 126, groupName);
+          fileId = graphicsArchive.findFileId(resourceName, -89, groupId);
+          loadedFramesResult = NetworkArchiveRequest.loadIndexedSpriteFramesById(true, graphicsArchive, fileId, groupId);
+          return loadedFramesResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          spriteLoadFailure = caughtFailure;
+          failureContextCause = (RuntimeException) (spriteLoadFailure);
+          failureContextBuilder = new StringBuilder().append("ka.W(");
+          if (groupName == null) {
+            groupContextDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            groupContextDescription = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          contextAfterGroup = ((StringBuilder) (Object) failureContextBuilder).append(groupContextDescription).append(',');
+          if (resourceName == null) {
+            resourceContextDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            resourceContextDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_14_2 = "null";
+          contextBeforeArchive = ((StringBuilder) (Object) contextAfterGroup).append(resourceContextDescription).append(',').append(methodGuard).append(',');
+          if (graphicsArchive == null) {
+            archiveContextDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            archiveContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) contextBeforeArchive).append(archiveContextDescription).append(')').toString());
         }
     }
 
-    abstract void increaseMenuValue(byte param0, int itemIndex);
+    abstract void increaseMenuValue(byte methodGuard, int itemIndex);
 
-    void handleMenuKey(int itemIndex, int param1) {
-        int var4;
-        var4 = Geoblox.field_C;
-        if (param1 >= -26) {
+    void handleMenuKey(int itemIndex, int methodGuard) {
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.field_C;
+        if (methodGuard >= -26) {
           this.hitLeftX = 8;
         }
         if (ki.currentKeyboardEventCode != 96) {
@@ -88,23 +88,23 @@ abstract class MenuScreen {
     }
 
     void handleMenuPointer(int itemIndex, int pointerX, boolean initialClick, int rowOffsetY, boolean heldRepeat, int pointerButton) {
-        int var8 = Geoblox.field_C;
+        int clientControlFlowGuard = Geoblox.field_C;
         if (!heldRepeat) {
             if (1 != pointerButton) {
                 this.decreaseMenuValue(itemIndex, (byte) -121);
             } else {
                 this.activateMenuItem(itemIndex, (byte) -2);
             }
-            s.field_H = lj.field_a;
+            s.menuPointerRepeatCountdown = lj.menuPointerInitialRepeatDelay;
         } else {
-            s.field_H = s.field_H - 1;
-            if (s.field_H <= 0) {
+            s.menuPointerRepeatCountdown = s.menuPointerRepeatCountdown - 1;
+            if (s.menuPointerRepeatCountdown <= 0) {
                 if (pointerButton == 1) {
                     this.activateMenuItem(itemIndex, (byte) -2);
                 } else {
                     this.decreaseMenuValue(itemIndex, (byte) 6);
                 }
-                s.field_H = fj.field_o;
+                s.menuPointerRepeatCountdown = fj.menuPointerRepeatInterval;
             }
         }
         if (initialClick) {
@@ -112,57 +112,57 @@ abstract class MenuScreen {
         }
     }
 
-    abstract void renderMenuItem(boolean selected, byte param1, int itemIndex, int rowY);
+    abstract void renderMenuItem(boolean selected, byte methodGuard, int itemIndex, int rowY);
 
-    public static void a(byte param0) {
-        int var1 = -15 / ((param0 - 75) / 32);
+    public static void releaseStaticReferences(byte methodGuard) {
+        int guardQuotient = -15 / ((methodGuard - 75) / 32);
         amorphousFramesByThemeAndVariant = (Sprite[][][]) null;
-        field_i = null;
+        platformTaskDispatcher = null;
     }
 
-    int hitTestMenuItem(int pointerX, int pointerY, byte param2) {
-        int var4;
+    int hitTestMenuItem(int pointerX, int pointerY, byte methodGuard) {
+        int hitRowIndex;
         if ((this.hitLeftX <= pointerX) &&
             (pointerX < this.hitRightX) &&
             (this.firstItemY <= pointerY)) {
-          if (param2 < 20) {
+          if (methodGuard < 20) {
             return 81;
           }
-          var4 = (pointerY - this.firstItemY) / this.itemSpacing;
-          if (this.itemCount > var4) {
-            return var4;
+          hitRowIndex = (pointerY - this.firstItemY) / this.itemSpacing;
+          if (this.itemCount > hitRowIndex) {
+            return hitRowIndex;
           }
           return -1;
         }
         return -1;
     }
 
-    abstract void activateMenuItem(int itemIndex, byte param1);
+    abstract void activateMenuItem(int itemIndex, byte methodGuard);
 
-    final void updatePointer(boolean param0) {
+    final void updatePointer(boolean pointerUpdateGuard) {
         int hitItemIndex;
-        int var3;
-        int stackIn_16_1 = 0;
-        int stackIn_16_2 = 0;
-        Object stackIn_17_0;
-        boolean stackIn_17_3;
+        int clientControlFlowGuard;
+        int pressedItemSnapshot = 0;
+        int pressedPointerXSnapshot = 0;
+        Object pointerTargetSnapshot;
+        boolean initialClickSnapshot;
         L0: {
-          var3 = Geoblox.field_C;
+          clientControlFlowGuard = Geoblox.field_C;
           if (bi.pointerPressButtonSnapshot != 0) {
             hitItemIndex = this.hitTestMenuItem(mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (byte) 28);
             this.selectedItemIndex = hitItemIndex;
             if (hitItemIndex != -1) {
               this.pointerInteractionActive = true;
-              stackIn_16_1 = hitItemIndex;
-              stackIn_16_2 = mc.pointerPressXSnapshot;
-              if (param0) {
-                stackIn_17_0 = this;
-                stackIn_17_3 = false;
+              pressedItemSnapshot = hitItemIndex;
+              pressedPointerXSnapshot = mc.pointerPressXSnapshot;
+              if (pointerUpdateGuard) {
+                pointerTargetSnapshot = this;
+                initialClickSnapshot = false;
               } else {
-                stackIn_17_0 = this;
-                stackIn_17_3 = true;
+                pointerTargetSnapshot = this;
+                initialClickSnapshot = true;
               }
-              this.handleMenuPointer(stackIn_16_1, stackIn_16_2, stackIn_17_3, -(hitItemIndex * this.itemSpacing) - this.firstItemY + he.pointerPressYSnapshot, false, bi.pointerPressButtonSnapshot);
+              this.handleMenuPointer(pressedItemSnapshot, pressedPointerXSnapshot, initialClickSnapshot, -(hitItemIndex * this.itemSpacing) - this.firstItemY + he.pointerPressYSnapshot, false, bi.pointerPressButtonSnapshot);
             } else {
               this.pointerInteractionActive = false;
             }
@@ -191,27 +191,27 @@ abstract class MenuScreen {
             }
           }
         }
-        if (!param0) {
+        if (!pointerUpdateGuard) {
           this.hitLeftX = 56;
         }
     }
 
-    MenuScreen(int param0, int param1, int param2, int param3, int param4) {
+    MenuScreen(int itemCount, int hitLeftX, int hitRightX, int firstItemY, int itemSpacing) {
         this.keyboardSelectionActive = true;
         this.selectedItemIndex = 0;
-        this.hitLeftX = param1;
-        this.itemSpacing = param4;
-        this.hitRightX = param2;
-        this.itemCount = param0;
-        this.firstItemY = param3;
+        this.hitLeftX = hitLeftX;
+        this.itemSpacing = itemSpacing;
+        this.hitRightX = hitRightX;
+        this.itemCount = itemCount;
+        this.firstItemY = firstItemY;
     }
 
-    abstract void decreaseMenuValue(int itemIndex, byte param1);
+    abstract void decreaseMenuValue(int itemIndex, byte methodGuard);
 
-    void renderScreen(int param0) {
-        int var4 = Geoblox.field_C;
+    void renderScreen(int methodGuard) {
+        int clientControlFlowGuard = Geoblox.field_C;
         int itemIndex = 0;
-        if (param0 != -28750) {
+        if (methodGuard != -28750) {
             this.updatePointer(false);
         }
         int rowY = this.firstItemY;
@@ -225,6 +225,6 @@ abstract class MenuScreen {
     static {
         amorphousFramesByThemeAndVariant = new Sprite[7][7][4];
         avatarFeedbackFrameBase = 0;
-        field_a = 0L;
+        appletStopDeadlineMillis = 0L;
     }
 }

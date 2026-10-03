@@ -19,6 +19,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 95 adds 65 guarded base-menu and direct-helper names, completing every
+MenuScreen field, nonconstructor method, parameter and local. Shared dispatcher,
+applet stop deadline and intro tint state have independently traced roles.
+Pointer-repeat fields/configuration and the indexed-frame loader chain are named
+without changing guards, integer formulas, file/group order or null/failure paths.
+All 7,249 previous complete rules and raw/decompiler/native evidence pins remain.
+The 7,314 rules apply 58,939 edits. Compilation/binding checks, full reproduction
+and dictionary reversal pass. Other shared code, large control bodies and whole-
+game/browser/phone acceptance remain; this pass adds no dynamic menu/repeat,
+asset, applet lifecycle or thread coverage.
+
 Pass 94 adds 173 guarded identities, completing names for every GameScreen field,
 nonconstructor method, parameter and local. It covers screen input, fullscreen
 state, menu press animation, tutorial demonstrations, hit tests, volume controls,

@@ -6,7 +6,7 @@ abstract class fj extends DualLinkNode {
     static int field_m;
     int field_n;
     static AudioOutput field_p;
-    static int field_o;
+    static int menuPointerRepeatInterval;
 
     abstract boolean g(int param0);
 
@@ -61,6 +61,6 @@ abstract class fj extends DualLinkNode {
     }
 
     static {
-        field_o = 4;
+        menuPointerRepeatInterval = 4;
     }
 }

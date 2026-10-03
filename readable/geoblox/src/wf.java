@@ -108,8 +108,8 @@ abstract class wf extends ch {
         va.field_a = this.field_u;
         da.a(true, va.field_a);
         if (param0 == -70) {
-            ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, va.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.field_i, 64, this.field_l);
-            TextInputValidator.initializeArchiveServices(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.field_i, this.field_n, this.field_s, this.field_w);
+            ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, va.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
+            TextInputValidator.initializeArchiveServices(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
             rd.b(28);
             vc.field_f = nd.a(param0 + 113);
             sl.a(f.field_kb, 57);
@@ -601,7 +601,7 @@ abstract class wf extends ch {
             if (var4 == 13) {
               try {
                 if (null == mk.field_n) {
-                  mk.field_n = new wg(MenuScreen.field_i, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                  mk.field_n = new wg(MenuScreen.platformTaskDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                 }
                 if (mk.field_n.a((byte) 45)) {
                   var12 = mk.field_n.b((byte) 91);
@@ -754,7 +754,7 @@ abstract class wf extends ch {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          pg.a(-4, MenuScreen.field_i, p.field_k, eh.field_d);
+                          pg.a(-4, MenuScreen.platformTaskDispatcher, p.field_k, eh.field_d);
                         } else {
                           if (var2 == 16) {
                             DualLinkNode.b(1);

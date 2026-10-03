@@ -88,7 +88,7 @@ abstract class IndexedSpriteState {
             hh.field_c = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14bold", "commonui", param2));
             var18 = new Sprite(param1.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) f.field_kb));
             jg.loadIndexedSprite(param2, 1, "commonui", "dropdown");
-            var5 = MenuScreen.a("commonui", "screen_options", true, param2);
+            var5 = MenuScreen.loadIndexedSpriteFrames("commonui", "screen_options", true, param2);
             ek.field_a = new IndexedSprite[4];
             sb.field_e = new IndexedSprite[4];
             lj.field_c = new IndexedSprite[4];

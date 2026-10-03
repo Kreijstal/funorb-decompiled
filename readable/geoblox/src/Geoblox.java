@@ -33,7 +33,7 @@ public final class Geoblox extends wf {
         }
         ScorePopup.b(122);
         if (!(InstrumentPatch.field_n == null)) {
-            InstrumentPatch.field_n.a(0, MenuScreen.field_i);
+            InstrumentPatch.field_n.a(0, MenuScreen.platformTaskDispatcher);
         }
         pc.a((byte) 124);
     }
@@ -408,7 +408,7 @@ public final class Geoblox extends wf {
         df.a(param0 + 64);
         PacketBuffer.j(param0 ^ -64);
         ki.a((byte) -64);
-        MenuScreen.a((byte) 26);
+        MenuScreen.releaseStaticReferences((byte) 26);
         oh.a((byte) -88);
         SecondaryDeque.b(-10943);
         GameplayEntity.e((byte) 104);
@@ -617,7 +617,7 @@ public final class Geoblox extends wf {
         }
         if ((InstrumentPatch.field_n != null) &&
             (InstrumentPatch.field_n.field_c)) {
-          InstrumentPatch.field_n.a(0, MenuScreen.field_i);
+          InstrumentPatch.field_n.a(0, MenuScreen.platformTaskDispatcher);
           InstrumentPatch.field_n = null;
         }
         if (null == InstrumentPatch.field_n) {
@@ -662,7 +662,7 @@ public final class Geoblox extends wf {
                   if (!((var2 != 1) &&
                       (2 != var2))) {
                     if (null != InstrumentPatch.field_n) {
-                      InstrumentPatch.field_n.a(0, MenuScreen.field_i);
+                      InstrumentPatch.field_n.a(0, MenuScreen.platformTaskDispatcher);
                       InstrumentPatch.field_n = null;
                     }
                     if (var2 == 2) {
@@ -1042,7 +1042,7 @@ public final class Geoblox extends wf {
         if (param0 <= 68) {
             this.loadJewelsTheme(true);
         }
-        da.b(150, 20);
+        da.configureMenuPointerRepeat(150, 20);
     }
 
     private final void loadSweetsTheme(int param0) {
@@ -1067,7 +1067,7 @@ public final class Geoblox extends wf {
         this.a((byte) -70, 9, 8, 10, 0, false, 7, 1);
         kj var2 = new kj();
         var2.e(-1636, 9, 128);
-        DiskArchiveCache.a((java.awt.Component) ((Object) f.field_kb), MenuScreen.field_i, false, var2, true, 22050);
+        DiskArchiveCache.a((java.awt.Component) ((Object) f.field_kb), MenuScreen.platformTaskDispatcher, false, var2, true, 22050);
         this.a(false, false, true, true, -95);
     }
 

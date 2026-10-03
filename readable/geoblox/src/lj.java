@@ -4,7 +4,7 @@
 final class lj {
     static volatile int livePointerX;
     static ck field_e;
-    static int field_a;
+    static int menuPointerInitialRepeatDelay;
     static Sprite smallBoxSprite;
     static IndexedSprite[] field_c;
     private static String field_z;
@@ -26,6 +26,6 @@ final class lj {
         field_z = "lj.A(";
         livePointerX = -1;
         field_e = new ck(6, 0, 4, 2);
-        field_a = 20;
+        menuPointerInitialRepeatDelay = 20;
     }
 }

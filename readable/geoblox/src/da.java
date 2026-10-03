@@ -10,9 +10,9 @@ final class da {
     static Sprite field_b;
     static String createEmailValidText;
 
-    final static void b(int param0, int param1) {
-        lj.field_a = param1 * param0 / 50;
-        fj.field_o = param0 * 4 / 50;
+    final static void configureMenuPointerRepeat(int rateScale, int baseInitialDelay) {
+        lj.menuPointerInitialRepeatDelay = baseInitialDelay * rateScale / 50;
+        fj.menuPointerRepeatInterval = rateScale * 4 / 50;
     }
 
     final static boolean a(int param0, int param1) {

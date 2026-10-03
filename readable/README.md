@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,249 guarded naming rules: 67 classes, 900 fields,
-612 methods, 1,801 parameters and 3,869 local declarations. Both 303-file corpora
+The current export has 7,314 guarded naming rules: 67 classes, 906 fields,
+616 methods, 1,825 parameters and 3,900 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,46 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Base menu and direct helpers (pass 95)
+
+This naming-only pass adds 65 guarded identities: six fields, four methods,
+24 parameters and 31 locals. Every field, nonconstructor method, parameter and
+local in `MenuScreen` now has a name, as already holds for `GameScreen`.
+Constructor names follow their class rules. The base selection, fresh/held/hover
+pointer routes, horizontal/row hit tests, virtual menu contracts, row rendering
+and indexed-frame loader now use source-audited names.
+
+Shared static fields have independently traced roles: `platformTaskDispatcher`
+is the dispatcher alias created by the applet and used by game services;
+`appletStopDeadlineMillis` is cleared by start, set to now+4000 by stop and to now
+by destroy; `introTintGreenDelta` supplies the intro's green-channel interpolation.
+These fields do not represent one menu state. The dispatcher cleanup retains
+its original guard arithmetic and does not introduce shutdown work.
+
+Pointer-repeat state now reads as `menuPointerRepeatCountdown`,
+`menuPointerInitialRepeatDelay` and `menuPointerRepeatInterval`.
+`da.configureMenuPointerRepeat(rateScale, baseInitialDelay)` preserves the
+original integer formulas. Initialization `(150, 20)` yields 60 and 12; default
+values remain 20 and four. False `pointerUpdateGuard` still produces an initial
+click and sets the left bound to 56. Unused control/receiver snapshots remain.
+`MenuScreen.loadIndexedSpriteFrames` resolves group then file by name and calls
+`NetworkArchiveRequest.loadIndexedSpriteFramesById` with file ID before group
+ID. False guards, archive decode/shared-sheet state, nulls and diagnostics remain.
+
+All 7,249 previous complete naming rules, raw/decompiler pins and six native
+probe sources/traces remain unchanged. The 7,314 rules apply 58,939 edits.
+Both 303-file corpora compile, preserving 138,772 bindings and 388 override
+relationships. Rule-builder/source-migration/text-resource checks pass all three
+files; full reproduction and dictionary reversal recover the pinned raw Git
+input byte-for-byte. Pass95's readable source-tree SHA-256 is
+`f6ae4e2ff0ab87cd07e77dde34afdaf64ad46a479672b5d47903208cc62afc29`.
+
+No new dynamic menu/repeat, real indexed assets, applet lifecycle, thread or
+browser/device coverage is claimed. The structural inventory remains 21
+overlapping large spans, ten with block labels. Other shared helpers, larger
+gameplay reconstruction and whole-game/browser/phone acceptance remain unfinished
+or unverified. Earlier sections describe historical counts and scope.
 
 ## GameScreen declaration names and axis correction (pass 94)
 

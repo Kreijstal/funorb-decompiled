@@ -2039,7 +2039,7 @@ final class GameScreen extends MenuScreen {
                                     }
                                     if ((!ArchiveCatalog.b(255)) &&
                                         (og.field_n > 0) &&
-                                        (sa.a(MenuScreen.field_i, (byte) 37))) {
+                                        (sa.a(MenuScreen.platformTaskDispatcher, (byte) 37))) {
                                       f.i((byte) -128);
                                     }
                                     this.fullscreenDialogButtonIndex = 0;
