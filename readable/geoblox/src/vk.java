@@ -6,7 +6,7 @@ abstract class vk {
     static qi field_b;
     static Sprite[] field_e;
     static hi field_d;
-    static int[] field_c;
+    static int[] secondVertexTransformedZ;
 
     abstract void a(java.awt.Component param0, byte param1);
 
@@ -81,7 +81,7 @@ abstract class vk {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        secondVertexTransformedZ = null;
         field_e = null;
         field_b = null;
         if (param0 >= -9) {
@@ -91,6 +91,6 @@ abstract class vk {
     }
 
     static {
-        field_c = new int[8192];
+        secondVertexTransformedZ = new int[8192];
     }
 }

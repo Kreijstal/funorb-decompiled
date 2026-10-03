@@ -1056,7 +1056,7 @@ public final class Geoblox extends wf {
           var4 = 1;
           var5 = 1;
         }
-        lk.field_f = ArchiveIndex.a(var2 * var4, param0, var5 * var2);
+        lk.meshModelTransform = ArchiveIndex.a(var2 * var4, param0, var5 * var2);
     }
 
     private final void initializeScreens(int param0) {

@@ -6,32 +6,32 @@ final class hj {
     static boolean field_c;
     static int field_b;
 
-    final static int a(byte param0, int param1) {
-        int var2 = 0;
-        if (0 > param1 || param1 >= 65536) {
-            param1 = param1 >>> 16;
-            var2 += 16;
+    final static int unsignedBitLength(byte methodGuard, int remainingBits) {
+        int shiftedBitCount = 0;
+        if (0 > remainingBits || remainingBits >= 65536) {
+            remainingBits = remainingBits >>> 16;
+            shiftedBitCount += 16;
         }
-        if (!(param1 < 256)) {
-            var2 += 8;
-            param1 = param1 >>> 8;
+        if (!(remainingBits < 256)) {
+            shiftedBitCount += 8;
+            remainingBits = remainingBits >>> 8;
         }
-        if (!(16 > param1)) {
-            var2 += 4;
-            param1 = param1 >>> 4;
+        if (!(16 > remainingBits)) {
+            shiftedBitCount += 4;
+            remainingBits = remainingBits >>> 4;
         }
-        if (param1 >= 4) {
-            var2 += 2;
-            param1 = param1 >>> 2;
+        if (remainingBits >= 4) {
+            shiftedBitCount += 2;
+            remainingBits = remainingBits >>> 2;
         }
-        if (1 <= param1) {
-            param1 = param1 >>> 1;
-            var2++;
+        if (1 <= remainingBits) {
+            remainingBits = remainingBits >>> 1;
+            shiftedBitCount++;
         }
-        if (param0 != 58) {
+        if (methodGuard != 58) {
             return -21;
         }
-        return param1 + var2;
+        return remainingBits + shiftedBitCount;
     }
 
     final static void a(byte param0, java.awt.Component param1) {

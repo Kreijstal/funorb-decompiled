@@ -3,7 +3,7 @@
  */
 final class qe {
     static int field_b;
-    static int[] field_c;
+    static int[] thirdVertexTransformedX;
     static int field_a;
 
     final static java.awt.Frame a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
@@ -94,7 +94,7 @@ final class qe {
         if (param0 != -8616) {
             qe.a(87);
         }
-        field_c = null;
+        thirdVertexTransformedX = null;
     }
 
     final static void adjustThemeReleaseQuota(int additionalReleases) {
@@ -133,6 +133,6 @@ final class qe {
     }
 
     static {
-        field_c = new int[8192];
+        thirdVertexTransformedX = new int[8192];
     }
 }

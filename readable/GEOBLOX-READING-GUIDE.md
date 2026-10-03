@@ -2940,3 +2940,52 @@ Prior sprite, triangle and mesh-lighting traces retain their pins. Full flat
 triangle geometry has no independent oracle here. Mesh/model loading/preparation,
 opaque helpers, large bodies, complete assets/gameplay and browser/phone behavior
 remain unfinished or unverified.
+
+## Mesh projection and face collection (pass 83)
+
+The rendering caller passes `IntKeyLookup.meshCameraTransform` and
+`lk.meshModelTransform` into `p.projectMeshAndQueueFaces`. Their first three
+entries are translations; the next nine are Q16 basis coefficients. The method
+shifts the camera basis to Q14 before composition, subtracts camera translation
+from model translation and forms scaled camera X/Y and unscaled depth. All
+arithmetic keeps Java integer overflow and masked shift counts.
+
+Vertices at depth 50 or greater receive perspective X/Y and a retained depth.
+Closer vertices only receive the `Integer.MIN_VALUE` depth marker; their old
+projected X/Y remain. `storeCameraCoordinates` optionally writes camera XYZ.
+`transformNormals` uses the model basis, checking capacity only on transformed
+normal X. An insufficient Y/Z buffer can therefore fail after earlier writes.
+A false `preserveSharedResources` calls the original cleanup helper before
+vertex processing; it clears shared references and sets the existing integer
+field to 120. Control flags retain their early collector and return paths.
+
+The optional per-face coordinate triples are named `firstVertexSourceX/Y/Z`,
+`secondVertexSourceX/Y/Z` and `thirdVertexSourceX/Y/Z`. Their outputs retain the
+matching transformed-coordinate names, including the prior
+`BufferedSocket.thirdVertexTransformedY` identity. These are separate int arrays,
+not aliases for the mesh's short vertex XYZ. Their construction and asset purpose
+remain unknown; this pass does not label them as texture coordinates.
+
+`i.queueMeshFacesByDepth` optionally rejects backfaces using the projected signed
+cross product and skips a face if any vertex has clipped depth. It normalizes the
+sum of its relative depths into a bucket using `hj.unsignedBitLength`, then queues
+the face in a 16-entry bucket. Full buckets spill toward lower indices. Face
+priorities use signed byte indices, count into offsets and then turn into prefix
+sums. `oe.clearMeshDepthBucketCounts` and `ma.clearMeshPriorityCounts` preserve
+eight sequential stores per loop, including partial writes for short arrays.
+The original guard-triggered avatar cleanup and failure contexts remain.
+
+All parameters/locals in these five methods are named. Combined scratch names
+such as `cameraXXOrNormalXYQ16` expose reused phases, which remain unsplit.
+The 142 additions bring the current export to 6,549 rules and 52,854 edits; every
+prior complete rule, 138,502 bindings and 388 overrides remain. All 303 raw and
+readable files compile, reproduce and reverse byte-for-byte.
+
+The existing drawing probe adds 5,992 native/raw/readable comparisons: 384 bit-
+length checks, 64 clearing checks, 216 identity-coordinate checks, 2,592 general
+geometry traces, 2,016 fault traces and 720 direct collector traces. Five direct
+cases independently check uniform-depth spill order and bucket counts. Recorded
+state includes projected/camera/normal/optional-coordinate buffers, face order,
+buckets, priorities, queue count, selected cleanup effects and failure contexts.
+Earlier drawing trace pins remain. Complete general projection geometry, actual
+assets/gameplay and browser/phone behavior remain unverified.

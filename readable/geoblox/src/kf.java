@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kf {
-    static int[] field_a;
+    static int[] firstVertexTransformedZ;
     static String pleaseTryAgainText;
     static boolean field_e;
     static int field_d;
@@ -10,7 +10,7 @@ final class kf {
 
     public static void b(int param0) {
         pleaseTryAgainText = null;
-        field_a = null;
+        firstVertexTransformedZ = null;
         if (param0 != -15647) {
             return;
         }
@@ -24,7 +24,7 @@ final class kf {
 
     static {
         pleaseTryAgainText = "Please try again in a few minutes.";
-        field_a = new int[8192];
+        firstVertexTransformedZ = new int[8192];
         field_d = 10;
     }
 }

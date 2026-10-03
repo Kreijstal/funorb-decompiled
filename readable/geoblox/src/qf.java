@@ -8,7 +8,7 @@ abstract class qf extends oe {
     private int field_fb;
     private int field_X;
     private hh field_Z;
-    static int[] field_Y;
+    static int[] secondVertexTransformedX;
     static rf resultMusicTrack;
     private wj field_W;
     private int field_cb;
@@ -75,7 +75,7 @@ abstract class qf extends oe {
             return;
         }
         resultMusicTrack = null;
-        field_Y = null;
+        secondVertexTransformedX = null;
     }
 
     final void k(int param0) {
@@ -90,7 +90,7 @@ abstract class qf extends oe {
             this.field_W.field_D = 0;
             return;
         }
-        field_Y = (int[]) null;
+        secondVertexTransformedX = (int[]) null;
         this.field_X = 0;
         this.field_Z = qb.field_N;
         this.b(-21102, this.field_eb);
@@ -260,6 +260,6 @@ abstract class qf extends oe {
     }
 
     static {
-        field_Y = new int[8192];
+        secondVertexTransformedX = new int[8192];
     }
 }

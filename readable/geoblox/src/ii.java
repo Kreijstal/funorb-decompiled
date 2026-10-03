@@ -8,7 +8,7 @@ final class ii {
     static boolean field_a;
     static nd field_h;
     static String highscoresText;
-    static int[] field_d;
+    static int[] firstVertexTransformedX;
     String field_f;
     String field_g;
     int field_l;
@@ -21,7 +21,7 @@ final class ii {
             field_h = null;
             fontMetricsArchive = null;
             createPasswordValidText = null;
-            field_d = null;
+            firstVertexTransformedX = null;
             highscoresText = null;
             return;
         }
@@ -29,7 +29,7 @@ final class ii {
         field_h = null;
         fontMetricsArchive = null;
         createPasswordValidText = null;
-        field_d = null;
+        firstVertexTransformedX = null;
         highscoresText = null;
     }
 
@@ -39,7 +39,7 @@ final class ii {
 
     static {
         keyStateWriteIndexOrResetSentinel = 0;
-        field_d = new int[8192];
+        firstVertexTransformedX = new int[8192];
         highscoresText = "Highscores";
         field_h = new nd();
         createPasswordValidText = "Password is valid";

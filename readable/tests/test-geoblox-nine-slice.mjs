@@ -19,7 +19,8 @@ const expectedSpriteTransformsSha256 = 'dd7445f0f6dc8c030467f58606545b95ee42afc9
 const expectedTriangleRasterSha256 = '3a708f0eb4343a68f9cd859b75cc6d42db0eda690188b95deb7619a998603760';
 const expectedMeshLightingSha256 = '8606f3fa1d8808bbfd5e5bfafe3b67872487172f07455401ac290acf79f5fdc6';
 const expectedFlatTriangleRasterSha256 = '60e7b9df0d8b178901617ebcd5a7b8da7745fdaf40f40beea681676733237ab7';
-let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null, expectedMeshLighting=null, expectedFlatTriangleRaster=null;
+const expectedMeshProjectionSha256 = '57934a58138344ef260c50eab4b271b90db9c07dd51825e4a4f30874eeef3f34';
+let expectedMeshProjection=null, expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null, expectedMeshLighting=null, expectedFlatTriangleRaster=null;
 try {
   if(nativeInput) {
     const files=[];
@@ -58,7 +59,8 @@ try {
       }
       public static void main(String[]args)throws Exception {
         if(args.length!=0){
-          if(args[0].equals("flat-triangle"))FlatTriangleBehavior.main(args);
+          if(args[0].equals("mesh-projection"))MeshProjectionBehavior.main(args);
+          else if(args[0].equals("flat-triangle"))FlatTriangleBehavior.main(args);
           else if(args[0].equals("mesh-lighting"))MeshLightingBehavior.main(args);
           else if(args[0].equals("triangle-raster"))TriangleRasterBehavior.main(args);
           else if(args[0].equals("sprite-transforms"))SpriteTransformBehavior.main(args);
@@ -89,6 +91,144 @@ try {
           System.out.println(result);cases++;
         }
         if(cases!=2592)throw new AssertionError(cases);
+      }
+    }
+    class MeshProjectionBehavior extends TriangleRasterBehavior {
+      static final String[] owners={"${type('sh')}","${type('dj')}","${type('bj')}","${type('a')}","${type('uk')}","${type('gf')}",
+        "${type('ok')}","${type('oa')}","${type('gi')}","${type('ii')}","${type('pg')}","${type('kf')}",
+        "${type('qf')}","${type('ac')}","${type('vk')}","${type('qe')}","${type('ba')}","${type('hg')}","${type('ch')}","${type('pj')}","${type('uh')}"};
+      static final String[] names={"${field('sh','field_x','[I')}","${field('dj','field_N','[I')}","${field('bj','field_j','[I')}",
+        "${field('a','field_c','[I')}","${field('uk','field_i','[I')}","${field('gf','field_b','[I')}",
+        "${field('ok','field_h','[I')}","${field('oa','field_f','[I')}","${field('gi','field_b','[I')}",
+        "${field('ii','field_d','[I')}","${field('pg','field_d','[I')}","${field('kf','field_a','[I')}",
+        "${field('qf','field_Y','[I')}","${field('ac','field_w','[I')}","${field('vk','field_c','[I')}",
+        "${field('qe','field_c','[I')}","${field('ba','field_h','[I')}","${field('hg','field_c','[I')}",
+        "${field('ch','field_d','[I')}","${field('pj','field_i','[I')}","${field('uh','field_x','[I')}"};
+      static int[] buffer(int index)throws Exception{return (int[])f(owners[index],names[index]).get(null);}
+      static void buffer(int index,int[] values)throws Exception{f(owners[index],names[index]).set(null,values);}
+      static int[] matrix(){return new int[]{0,0,0,65536,0,0,0,65536,0,0,0,65536};}
+      static ${type('nf')} prepare(int shift,boolean optional)throws Exception {
+        for(int i=0;i<owners.length;i++)buffer(i,background(i==18?1024:i==19?16384:i==20?8:4));
+        f("${type('ok')}","${field('ok','field_g','I')}").setInt(null,shift);
+        f("${type('mh')}","${field('mh','field_d','I')}").setInt(null,10);
+        f("${type('mh')}","${field('mh','field_i','I')}").setInt(null,6);
+        f("${type('ch')}","${field('ch','field_b','I')}").setInt(null,-77);
+        f("${type('p')}","${field('p','field_k','I')}").setInt(null,321);
+        f("${type('p')}","${field('p','field_o','[I')}").set(null,new int[]{123});
+        f("${type('p')}","${field('p','field_i','Lue;')}").set(null,null);
+        f("${type('i')}","${field('i','field_a','Ldm;')}").set(null,new ${type('dm')}(1,1));
+        ${type('nf')} mesh=new ${type('nf')}();mesh.${field('nf','field_o','S')}=3;mesh.${field('nf','field_m','S')}=3;mesh.${field('nf','field_f','S')}=3;
+        mesh.${field('nf','field_O','[S')}=new short[]{-10,20,0};mesh.${field('nf','field_q','[S')}=new short[]{0,10,-20};mesh.${field('nf','field_K','[S')}=new short[]{0,10,-10};
+        mesh.${field('nf','field_M','[S')}=new short[]{256,0,-128};mesh.${field('nf','field_t','[S')}=new short[]{0,256,64};mesh.${field('nf','field_i','[S')}=new short[]{0,0,128};
+        mesh.${field('nf','field_r','[S')}=new short[]{0,0,1};mesh.${field('nf','field_B','[S')}=new short[]{1,2,0};mesh.${field('nf','field_c','[S')}=new short[]{2,1,2};
+        mesh.${field('nf','field_v','B')}=3;mesh.${field('nf','field_n','[B')}=new byte[]{2,0,1};
+        if(optional){
+          mesh.${field('nf','field_L','[I')}=new int[]{1,-2,3};mesh.${field('nf','field_d','[I')}=new int[]{4,5,-6};mesh.${field('nf','field_C','[I')}=new int[]{7,-8,9};
+          mesh.${field('nf','field_x','[I')}=new int[]{10,11,-12};mesh.${field('nf','field_a','[I')}=new int[]{13,-14,15};mesh.${field('nf','field_y','[I')}=new int[]{-16,17,18};
+          mesh.${field('nf','field_l','[I')}=new int[]{19,20,-21};mesh.${field('nf','field_p','[I')}=new int[]{22,-23,24};mesh.${field('nf','field_b','[I')}=new int[]{25,26,-27};
+        }
+        return mesh;
+      }
+      static void state(String label,Throwable error)throws Exception {
+        record(label+":"+failure(error)+":"+f("${type('ch')}","${field('ch','field_b','I')}").getInt(null)
+          +":"+f("${type('p')}","${field('p','field_k','I')}").getInt(null)
+          +":"+(f("${type('p')}","${field('p','field_o','[I')}").get(null)==null)
+          +":"+(f("${type('i')}","${field('i','field_a','Ldm;')}").get(null)==null),null);
+        for(int i=0;i<owners.length;i++){
+          int[] values=buffer(i);ByteBuffer bytes=ByteBuffer.allocate(values==null?4:4+values.length*4);
+          bytes.putInt(values==null?-1:values.length);if(values!=null)for(int value:values)bytes.putInt(value);trace.update(bytes.array());
+        }
+      }
+      static Throwable project(int[] camera,int[] model,${type('nf')} mesh,int mask){
+        try{${call('p','a([I[ILnf;ZZZZ)V')}(camera,model,mesh,(mask&1)!=0,(mask&2)!=0,(mask&4)!=0,(mask&8)!=0);return null;}
+        catch(RuntimeException error){return error;}
+      }
+      public static void main(String[] args)throws Exception {
+        trace=MessageDigest.getInstance("SHA-256");cases=0;int bits=0,resets=0,oracles=0,geometry=0,faults=0,collectors=0;
+        for(int seed=0;seed<128;seed++)for(byte guard:new byte[]{58,0,-1}) {
+          int value=seed<33?seed==32?-1:seed==0?0:1<<(seed-1):seed*0x1234567;
+          int actual=${call('hj','a(BI)I')}(guard,value),expected=guard==58?32-Integer.numberOfLeadingZeros(value):-21;
+          if(actual!=expected)throw new AssertionError("unsigned bit length");record("bits:"+actual,null);bits++;
+        }
+        for(int length:new int[]{-1,0,1,7,8,9,16,17})for(int offset:new int[]{-1,0,1,8}) {
+          int[] actual=length<0?null:background(length),expected=actual==null?null:actual.clone();Throwable error=null,oracleError=null;
+          buffer(18,actual);try{for(int i=offset;i<expected.length;i+=8)for(int j=0;j<8;j++)expected[i+j]=0;}catch(RuntimeException caught){oracleError=caught;}
+          try{${call('oe','l(I)V')}(offset);}catch(RuntimeException caught){error=caught;}
+          if(!java.util.Arrays.equals(actual,expected)||!rootFailure(error).equals(rootFailure(oracleError)))throw new AssertionError("bucket reset");
+          record("bucket-reset:"+failure(error),actual);resets++;
+        }
+        for(int length:new int[]{-1,0,1,7,8,9,16,17})for(byte guard:new byte[]{-35,0,1,35}) {
+          int[] actual=length<0?null:background(length),expected=actual==null?null:actual.clone();Throwable error=null,oracleError=null;
+          buffer(20,actual);try{int size=expected.length;if(guard==-35)for(int i=0;i<size;i+=8)for(int j=0;j<8;j++)expected[i+j]=0;}catch(RuntimeException caught){oracleError=caught;}
+          try{${call('ma','a(B)V')}(guard);}catch(RuntimeException caught){error=caught;}
+          if(!java.util.Arrays.equals(actual,expected)||!rootFailure(error).equals(rootFailure(oracleError)))throw new AssertionError("priority reset");
+          record("priority-reset:"+failure(error),actual);resets++;
+        }
+        f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,0);
+        for(int depth:new int[]{-1,39,49,50,60,1000})for(int shift:new int[]{0,9,11})for(int tx:new int[]{-7,0,11})for(int mask:new int[]{1,3,9,11}) {
+          ${type('nf')} mesh=prepare(shift,false);mesh.${field('nf','field_f','S')}=0;
+          int[] camera=matrix(),model=matrix();model[0]=tx;model[1]=-3;model[2]=depth;
+          Throwable error=project(camera,model,mesh,mask);if(error!=null)throw new AssertionError("identity projection",error);
+          for(int v=0;v<3;v++){
+            int z=mesh.${field('nf','field_K','[S')}[v]+depth,x=mesh.${field('nf','field_O','[S')}[v]+tx,y=mesh.${field('nf','field_q','[S')}[v]-3;
+            int old=background(4)[v];
+            if(buffer(0)[v]!=(z>=50?(x<<shift)/z+10:old)||buffer(1)[v]!=(z>=50?(y<<shift)/z+6:old)
+                ||buffer(2)[v]!=(z>=50?z:Integer.MIN_VALUE))throw new AssertionError("projected coordinates");
+            if((mask&2)!=0&&(buffer(3)[v]!=x||buffer(4)[v]!=y||buffer(5)[v]!=z))throw new AssertionError("camera coordinates");
+            if((mask&8)!=0&&(buffer(6)[v]!=mesh.${field('nf','field_M','[S')}[v]||buffer(7)[v]!=mesh.${field('nf','field_t','[S')}[v]
+                ||buffer(8)[v]!=mesh.${field('nf','field_i','[S')}[v]))throw new AssertionError("identity normals");
+          }
+          if(f("${type('ch')}","${field('ch','field_b','I')}").getInt(null)!=0)throw new AssertionError("empty face queue");
+          state("identity",error);oracles++;
+        }
+        for(int matrixMode=0;matrixMode<3;matrixMode++)for(int depth:new int[]{39,60,1000})for(int shift:new int[]{0,9,31})
+        for(int mask=0;mask<16;mask++)for(int flag:new int[]{-1,0,1})for(boolean optional:new boolean[]{false,true}) {
+          ${type('nf')} mesh=prepare(shift,optional);int[] camera=matrix(),model=matrix();model[2]=depth;
+          if(matrixMode==1){camera[3]=0;camera[4]=65536;camera[6]=-65536;camera[7]=0;model[0]=-17;model[1]=11;model[3]=32768;model[7]=-65536;}
+          if(matrixMode==2){camera[0]=Integer.MIN_VALUE;camera[3]=Integer.MAX_VALUE;camera[11]=Integer.MIN_VALUE;model[1]=Integer.MAX_VALUE;model[8]=-1234567;model[10]=987654321;}
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);
+          state("geometry:"+matrixMode+":"+depth+":"+shift+":"+mask+":"+flag+":"+optional,project(camera,model,mesh,mask));geometry++;
+        }
+        for(int fault=0;fault<28;fault++)for(int mask:new int[]{0,1,2,3,8,9,14,15})for(int flag:new int[]{-1,0,1})for(int count:new int[]{0,1,3}) {
+          ${type('nf')} mesh=prepare(9,true);mesh.${field('nf','field_o','S')}=(short)count;int[] camera=matrix(),model=matrix();model[2]=100;
+          switch(fault){
+            case 0:camera=null;break;case 1:camera=new int[11];break;case 2:model=null;break;case 3:model=new int[10];break;
+            case 4:mesh=null;break;case 5:mesh.${field('nf','field_O','[S')}=null;break;case 6:mesh.${field('nf','field_q','[S')}=new short[]{7};break;
+            case 7:mesh.${field('nf','field_K','[S')}=null;break;case 8:buffer(0,null);break;case 9:buffer(1,new int[]{123});break;
+            case 10:buffer(2,new int[0]);break;case 11:buffer(3,null);break;case 12:buffer(4,new int[0]);break;
+            case 13:buffer(6,new int[0]);break;case 14:buffer(7,new int[0]);break;case 15:mesh.${field('nf','field_t','[S')}=null;break;
+            case 16:mesh.${field('nf','field_L','[I')}=null;break;case 17:mesh.${field('nf','field_y','[I')}=new int[]{7};break;
+            case 18:buffer(15,null);break;case 19:buffer(18,new int[9]);break;case 20:buffer(19,new int[0]);break;
+            case 21:buffer(20,new int[2]);break;case 22:mesh.${field('nf','field_n','[B')}=new byte[]{-1,0,1};break;
+            case 23:mesh.${field('nf','field_r','[S')}=new short[]{99,0,0};break;case 24:mesh.${field('nf','field_v','B')}=0;break;
+            case 25:mesh.${field('nf','field_n','[B')}=null;break;case 26:mesh.${field('nf','field_f','S')}=0;break;
+            case 27:buffer(6,null);break;
+          }
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);
+          state("fault:"+fault+":"+mask+":"+flag+":"+count,project(camera,model,mesh,mask));faults++;
+        }
+        for(int count:new int[]{0,1,3,17,33})for(int depthMode=0;depthMode<3;depthMode++)for(boolean cull:new boolean[]{false,true})
+        for(byte guard:new byte[]{22,0})for(int flag:new int[]{-1,0,1})for(int fault=0;fault<4;fault++) {
+          ${type('nf')} mesh=prepare(9,false);mesh.${field('nf','field_f','S')}=(short)count;
+          mesh.${field('nf','field_r','[S')}=new short[count];mesh.${field('nf','field_B','[S')}=new short[count];mesh.${field('nf','field_c','[S')}=new short[count];
+          for(int face=0;face<count;face++){mesh.${field('nf','field_B','[S')}[face]=1;mesh.${field('nf','field_c','[S')}[face]=2;}
+          mesh.${field('nf','field_n','[B')}=fault==0?null:new byte[count];
+          if(fault!=0)for(int face=0;face<count;face++)mesh.${field('nf','field_n','[B')}[face]=(byte)(fault==1?face%3:fault==2?-1:7);
+          if(fault==3)buffer(20,new int[2]);
+          buffer(0,new int[]{2,10,4});buffer(1,new int[]{2,4,9});buffer(2,depthMode==0?new int[]{100,100,100}
+            :depthMode==1?new int[]{100,110,90}:new int[]{100,Integer.MIN_VALUE,100});
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);Throwable error=null;
+          try{${call('i','a(IBLnf;IZ)V')}(depthMode==1?90:100,guard,mesh,depthMode==1?110:100,cull);}catch(RuntimeException caught){error=caught;}
+          if(depthMode==0&&!cull&&guard==22&&flag==0&&fault==0){
+            if(error!=null||f("${type('ch')}","${field('ch','field_b','I')}").getInt(null)!=count)throw new AssertionError("uniform depth queue");
+            for(int face=0;face<count;face++)if(buffer(19)[((1023-face/16)<<4)+(face%16)]!=face)throw new AssertionError("bucket spill order");
+            for(int bucket=0;bucket<1024;bucket++)if(buffer(18)[bucket]!=Math.max(0,Math.min(16,count-(1023-bucket)*16)))throw new AssertionError("bucket occupancy");
+          }
+          state("collector:"+count+":"+depthMode+":"+cull+":"+guard+":"+flag+":"+fault,error);collectors++;
+        }
+        if(bits!=384||resets!=64||oracles!=216||geometry!=2592||faults!=2016||collectors!=720||cases!=5992)throw new AssertionError("projection case inventory "+cases);
+        StringBuilder sha=new StringBuilder();for(byte value:trace.digest())sha.append(String.format("%02x",value&255));
+        System.out.println("mesh-projection:"+cases+":"+bits+":"+resets+":"+oracles+":"+geometry+":"+faults+":"+collectors+":"+sha);
       }
     }
     class FlatTriangleBehavior extends TriangleRasterBehavior {
@@ -760,6 +900,13 @@ try {
     assert.equal(flatSha,expectedFlatTriangleRasterSha256,variant+': fixed native flat-triangle trace');
     if(expectedFlatTriangleRaster===null)expectedFlatTriangleRaster=flatOutput;
     else assert.deepEqual(flatOutput,expectedFlatTriangleRaster,variant+': flat triangle pixels, guard timing and partial writes');
+    const projectionOutput=captureProcess('java',['-Djava.awt.headless=true','-cp',classes+path.delimiter+cp,'NineSliceBehavior','mesh-projection']).stdout;
+    const projectionSha=crypto.createHash('sha256').update(projectionOutput).digest('hex');
+    console.log(JSON.stringify({variant,meshProjectionTrace:projectionOutput.toString().trim(),sha256:projectionSha}));
+    assert.match(projectionOutput.toString(),/^mesh-projection:5992:384:64:216:2592:2016:720:[a-f0-9]{64}\n$/);
+    assert.equal(projectionSha,expectedMeshProjectionSha256,variant+': fixed native mesh-projection trace');
+    if(expectedMeshProjection===null)expectedMeshProjection=projectionOutput;
+    else assert.deepEqual(projectionOutput,expectedMeshProjection,variant+': projected/camera/normal/corner buffers, face queues and partial failures');
   }
 }catch(error){if(error.stderr)process.stderr.write(error.stderr);throw error;}
 finally{fs.rmSync(temporary,{recursive:true,force:true});}

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lk {
-    static int[] field_f;
+    static int[] meshModelTransform;
     static int field_e;
     int field_d;
     static float field_b;
@@ -11,7 +11,7 @@ final class lk {
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_f = (int[]) null;
+            meshModelTransform = (int[]) null;
             if (this.field_c == null) {
                 return 0;
             }
@@ -51,10 +51,10 @@ final class lk {
     public static void a(byte param0) {
         if (param0 != 0) {
             lk.a((byte) 43);
-            field_f = null;
+            meshModelTransform = null;
             return;
         }
-        field_f = null;
+        meshModelTransform = null;
     }
 
     lk(int param0, int param1, int param2) {

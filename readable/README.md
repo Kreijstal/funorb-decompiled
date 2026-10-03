@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 6,407 guarded naming rules: 62 classes, 812 fields,
-564 methods, 1,709 parameters and 3,260 local declarations. Both 303-file corpora
+The current export has 6,549 guarded naming rules: 62 classes, 837 fields,
+569 methods, 1,725 parameters and 3,356 local declarations. Both 303-file corpora
 compile, preserving 138,502 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,57 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current flat triangle and face-order names
+## Current mesh projection and depth queues
+
+Pass 83 adds 142 guarded identities: 25 fields, five methods, 16 parameters and
+96 locals. `p.projectMeshAndQueueFaces` composes the camera/model rotation bases,
+subtracts their translations, projects mesh vertices, optionally stores camera
+coordinates and transforms normals, then calls `i.queueMeshFacesByDepth`.
+`meshCameraTransform` and `meshModelTransform` name the shared caller arrays;
+their first three entries are translations and the remaining nine form Q16
+rotation bases. `meshProjectionShift` scales the projection numerators.
+
+Depths below 50 receive `Integer.MIN_VALUE` in `projectedMeshVertexDepth` while
+previous projected X/Y remain untouched. Normal transforms use the model basis,
+with a capacity check only on transformed normal X. Nine optional source arrays
+and eight previously unnamed transformed arrays have coordinate names; the
+existing `thirdVertexTransformedY` identity is preserved. These per-face triples
+are distinct from short vertex coordinates. Their construction and asset purpose
+are not inferred from this dormant optional path.
+
+The face collector optionally rejects backfaces by signed projected cross product,
+skips clipped depths and queues indices into 16-entry depth buckets. A full bucket
+spills toward lower bucket indices. Signed priority bytes increment counts, then
+prefix sums replace those counts. `hj.unsignedBitLength`,
+`oe.clearMeshDepthBucketCounts` and `ma.clearMeshPriorityCounts` expose its helpers.
+The clearing loops retain eight sequential stores without a partial-group check.
+Bad indices, null/short buffers, guard timing, control flags, integer overflow,
+Java shift masking, partial writes and original diagnostics remain unchanged.
+All parameters/locals in these five selected methods are named. Reused scratch
+slots keep explicit combined names; this naming pass does not split their phases.
+
+The existing drawing probe adds 5,992 pinned native/raw/readable comparisons:
+384 unsigned-bit-length oracle cases, 64 clearing-oracle cases, 216 limited
+identity-projection oracle cases, 2,592 general projection traces, 2,016 fault
+traces and 720 direct face-collector traces. Five of the latter independently
+check uniform-depth occupancy and spill order for 0/1/3/17/33 faces. Projection
+traces capture projected/camera/normal/optional-coordinate arrays, depth buckets,
+face ordering, priority offsets, queue counts, selected cleanup side effects and
+failure contexts. General camera/model geometry has no complete independent
+oracle here. The trace SHA-256 is
+`57934a58138344ef260c50eab4b271b90db9c07dd51825e4a4f30874eeef3f34`.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs VERIFIED_CLASSES`
+passes native/raw/readable variants and every earlier drawing trace retains its
+pin. Rule-builder/source-migration/text-resource tests pass 9/8/6 groups.
+`node readable/reproduce-geoblox.mjs --check` compiles and compares both 303-file
+corpora; dictionary reversal is byte-exact. The 6,549 rules apply 52,854 edits,
+preserving 138,502 bindings and 388 overrides. All 6,407 prior complete rules and
+raw/decompiler pins remain unchanged. One current manifest records this pass;
+Git stores history. Opaque helpers, model loading, large control bodies, complete
+assets/gameplay and browser/phone performance remain unfinished or unverified.
+
+## Previous flat triangle and face-order names
 
 Pass 82 adds 80 guarded identities: five methods, 28 parameters and 47 locals.
 `gi.drawHalfBlendSolidTriangle` sorts the three vertices by Y and forwards them
@@ -1659,6 +1709,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17` |
-| Readable | `3ba2f91279dffbec66e8a5e53f67b236612187cf4d6e3dff3a738adc8dc37346` |
+| Readable | `6cb7908a2be3c9a91ffcc47eb26197692dec831e24500c0caea87bf0ae379ddf` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

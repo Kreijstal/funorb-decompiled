@@ -6,7 +6,7 @@ class ac extends ff {
     static int field_s;
     static String[] mustLoginAlternateTexts;
     static ff field_t;
-    static int[] field_w;
+    static int[] secondVertexTransformedY;
     static int field_u;
 
     ac(BitmapFont param0, int param1) {
@@ -256,7 +256,7 @@ class ac extends ff {
     public static void a(byte param0) {
         field_t = null;
         mustLoginAlternateTexts = null;
-        field_w = null;
+        secondVertexTransformedY = null;
         field_v = null;
         if (param0 < 62) {
             field_s = -128;
@@ -266,7 +266,7 @@ class ac extends ff {
     static {
         field_v = new gk();
         mustLoginAlternateTexts = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
-        field_w = new int[8192];
+        secondVertexTransformedY = new int[8192];
         field_u = 11;
     }
 }

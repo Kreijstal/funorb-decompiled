@@ -13,155 +13,155 @@ final class p extends IntrusiveNode {
     static int field_k;
     int field_f;
 
-    final static void a(int[] param0, int[] param1, TriangleMesh param2, boolean param3, boolean param4, boolean param5, boolean param6) {
-        int stackIn_66_0 = 0;
-        int stackIn_66_1 = 0;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
-        String stackIn_72_2 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_76_2 = null;
-        StringBuilder stackIn_79_1 = null;
-        String stackIn_80_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        var30 = Geoblox.field_C;
+    final static void projectMeshAndQueueFaces(int[] cameraTransform, int[] modelTransform, TriangleMesh mesh, boolean preserveSharedResources, boolean storeCameraCoordinates, boolean cullBackfaces, boolean transformNormals) {
+        int nearPlaneOrNormalCapacityOrQueueMinDepth = 0;
+        int invertedDepthOrNormalIndexOrQueueGuard = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder cameraContextBuilder = null;
+        String cameraContextDescription = null;
+        StringBuilder modelContextBuilder = null;
+        String modelContextDescription = null;
+        StringBuilder meshContextBuilder = null;
+        String meshContextDescription = null;
+        RuntimeException caughtFailure = null;
+        int minimumVisibleDepth = 0;
+        RuntimeException contextFailure = null;
+        int maximumVisibleDepth = 0;
+        int cameraTranslationXScaledOrNormalXXQ16 = 0;
+        int cameraTranslationYScaledOrNormalYXQ16 = 0;
+        int cameraTranslationZOrNormalZXQ16 = 0;
+        int cameraXXOrNormalXYQ16 = 0;
+        int cameraYXOrNormalYYQ16 = 0;
+        int cameraZXOrNormalZYQ16 = 0;
+        int cameraXYOrNormalXZQ16 = 0;
+        int cameraYYOrNormalYZQ16 = 0;
+        int cameraZYOrNormalZZQ16 = 0;
+        int cameraXZQ16OrNormalIndex = 0;
+        int cameraYZQ16OrNormalX = 0;
+        int cameraZZQ16OrNormalY = 0;
+        int cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = 0;
+        int cameraXBasisOrDeltaYOrClipCenterY = 0;
+        int cameraXBasisOrDeltaZOrVertexIndex = 0;
+        int cameraYBasisOrVertexX = 0;
+        int cameraYBasisOrVertexY = 0;
+        int cameraYBasisOrVertexZ = 0;
+        int cameraZBasisOrCameraXScaled = 0;
+        int cameraZBasisOrCameraYScaled = 0;
+        int cameraZBasisOrCameraDepth = 0;
+        int controlFlagSnapshot = 0;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          var7_int = 2147483647;
-          var8 = -2147483648;
-          var21 = param0[3] >> 2;
-          var22 = param0[4] >> 2;
-          var23 = param0[5] >> 2;
-          var24 = param0[6] >> 2;
-          var25 = param0[7] >> 2;
-          var26 = param0[8] >> 2;
-          var27 = param0[9] >> 2;
-          var28 = param0[10] >> 2;
-          var13 = var25 * param1[4] + (param1[3] * var24 + var26 * param1[5]) >> 14;
-          var29 = param0[11] >> 2;
-          var12 = param1[3] * var21 + var22 * param1[4] + var23 * param1[5] >> 14;
-          var18 = param1[11] * var23 + (param1[10] * var22 + param1[9] * var21) >> 14;
-          var15 = param1[6] * var21 - (-(param1[7] * var22) - param1[8] * var23) >> 14;
-          var16 = var25 * param1[7] + (var24 * param1[6] + var26 * param1[8]) >> 14;
-          var14 = var29 * param1[5] + param1[3] * var27 + param1[4] * var28 >> 14;
-          var19 = param1[10] * var25 + var24 * param1[9] + param1[11] * var26 >> 14;
-          var20 = var27 * param1[9] + var28 * param1[10] + param1[11] * var29 >> 14;
-          var17 = param1[8] * var29 + param1[6] * var27 + var28 * param1[7] >> 14;
-          var21 = param1[0] - param0[0];
-          var22 = -param0[1] + param1[1];
-          var23 = param1[2] - param0[2];
-          var9 = param0[3] * var21 - (-(var22 * param0[4]) - param0[5] * var23) >> -ok.field_g + 16;
-          var10 = var23 * param0[8] + (var21 * param0[6] + var22 * param0[7]) >> 16 - ok.field_g;
-          var11 = param0[11] * var23 + var21 * param0[9] + var22 * param0[10] >> 16;
-          if (!param3) {
+          minimumVisibleDepth = 2147483647;
+          maximumVisibleDepth = -2147483648;
+          cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = cameraTransform[3] >> 2;
+          cameraXBasisOrDeltaYOrClipCenterY = cameraTransform[4] >> 2;
+          cameraXBasisOrDeltaZOrVertexIndex = cameraTransform[5] >> 2;
+          cameraYBasisOrVertexX = cameraTransform[6] >> 2;
+          cameraYBasisOrVertexY = cameraTransform[7] >> 2;
+          cameraYBasisOrVertexZ = cameraTransform[8] >> 2;
+          cameraZBasisOrCameraXScaled = cameraTransform[9] >> 2;
+          cameraZBasisOrCameraYScaled = cameraTransform[10] >> 2;
+          cameraYXOrNormalYYQ16 = cameraYBasisOrVertexY * modelTransform[4] + (modelTransform[3] * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * modelTransform[5]) >> 14;
+          cameraZBasisOrCameraDepth = cameraTransform[11] >> 2;
+          cameraXXOrNormalXYQ16 = modelTransform[3] * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + cameraXBasisOrDeltaYOrClipCenterY * modelTransform[4] + cameraXBasisOrDeltaZOrVertexIndex * modelTransform[5] >> 14;
+          cameraXZQ16OrNormalIndex = modelTransform[11] * cameraXBasisOrDeltaZOrVertexIndex + (modelTransform[10] * cameraXBasisOrDeltaYOrClipCenterY + modelTransform[9] * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 14;
+          cameraXYOrNormalXZQ16 = modelTransform[6] * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ - (-(modelTransform[7] * cameraXBasisOrDeltaYOrClipCenterY) - modelTransform[8] * cameraXBasisOrDeltaZOrVertexIndex) >> 14;
+          cameraYYOrNormalYZQ16 = cameraYBasisOrVertexY * modelTransform[7] + (cameraYBasisOrVertexX * modelTransform[6] + cameraYBasisOrVertexZ * modelTransform[8]) >> 14;
+          cameraZXOrNormalZYQ16 = cameraZBasisOrCameraDepth * modelTransform[5] + modelTransform[3] * cameraZBasisOrCameraXScaled + modelTransform[4] * cameraZBasisOrCameraYScaled >> 14;
+          cameraYZQ16OrNormalX = modelTransform[10] * cameraYBasisOrVertexY + cameraYBasisOrVertexX * modelTransform[9] + modelTransform[11] * cameraYBasisOrVertexZ >> 14;
+          cameraZZQ16OrNormalY = cameraZBasisOrCameraXScaled * modelTransform[9] + cameraZBasisOrCameraYScaled * modelTransform[10] + modelTransform[11] * cameraZBasisOrCameraDepth >> 14;
+          cameraZYOrNormalZZQ16 = modelTransform[8] * cameraZBasisOrCameraDepth + modelTransform[6] * cameraZBasisOrCameraXScaled + cameraZBasisOrCameraYScaled * modelTransform[7] >> 14;
+          cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = modelTransform[0] - cameraTransform[0];
+          cameraXBasisOrDeltaYOrClipCenterY = -cameraTransform[1] + modelTransform[1];
+          cameraXBasisOrDeltaZOrVertexIndex = modelTransform[2] - cameraTransform[2];
+          cameraTranslationXScaledOrNormalXXQ16 = cameraTransform[3] * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ - (-(cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[4]) - cameraTransform[5] * cameraXBasisOrDeltaZOrVertexIndex) >> -ok.meshProjectionShift + 16;
+          cameraTranslationYScaledOrNormalYXQ16 = cameraXBasisOrDeltaZOrVertexIndex * cameraTransform[8] + (cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraTransform[6] + cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[7]) >> 16 - ok.meshProjectionShift;
+          cameraTranslationZOrNormalZXQ16 = cameraTransform[11] * cameraXBasisOrDeltaZOrVertexIndex + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraTransform[9] + cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[10] >> 16;
+          if (!preserveSharedResources) {
             p.b(-2);
           }
-          var21 = TriangleRasterState.clipCenterX;
-          var22 = TriangleRasterState.clipCenterY;
-          var23 = 0;
+          cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = TriangleRasterState.clipCenterX;
+          cameraXBasisOrDeltaYOrClipCenterY = TriangleRasterState.clipCenterY;
+          cameraXBasisOrDeltaZOrVertexIndex = 0;
           while (true) {
             L3: {
-              if (param2.vertexCount > var23) {
-                var24 = param2.vertexX[var23];
-                var25 = param2.vertexY[var23];
-                var26 = param2.vertexZ[var23];
-                var27 = (var24 * var12 + var25 * var15 + var18 * var26 >> -ok.field_g + 16) + var9;
-                var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
-                var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
-                stackIn_66_0 = -51;
-                stackIn_66_1 = ~var29;
-                if (var30 != 0) {
+              if (mesh.vertexCount > cameraXBasisOrDeltaZOrVertexIndex) {
+                cameraYBasisOrVertexX = mesh.vertexX[cameraXBasisOrDeltaZOrVertexIndex];
+                cameraYBasisOrVertexY = mesh.vertexY[cameraXBasisOrDeltaZOrVertexIndex];
+                cameraYBasisOrVertexZ = mesh.vertexZ[cameraXBasisOrDeltaZOrVertexIndex];
+                cameraZBasisOrCameraXScaled = (cameraYBasisOrVertexX * cameraXXOrNormalXYQ16 + cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ >> -ok.meshProjectionShift + 16) + cameraTranslationXScaledOrNormalXXQ16;
+                cameraZBasisOrCameraYScaled = cameraTranslationYScaledOrNormalYXQ16 + (cameraYXOrNormalYYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexY * cameraYYOrNormalYZQ16 + cameraYBasisOrVertexZ * cameraYZQ16OrNormalX >> 16 - ok.meshProjectionShift);
+                cameraZBasisOrCameraDepth = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX + cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY >> 16);
+                nearPlaneOrNormalCapacityOrQueueMinDepth = -51;
+                invertedDepthOrNormalIndexOrQueueGuard = ~cameraZBasisOrCameraDepth;
+                if (controlFlagSnapshot != 0) {
                   break L3;
                 }
                 L5: {
-                  if (stackIn_66_0 >= stackIn_66_1) {
-                    sh.projectedMeshVertexX[var23] = var27 / var29 + var21;
-                    dj.projectedMeshVertexY[var23] = var22 + var28 / var29;
-                    if (~var29 > ~var7_int) {
-                      var7_int = var29;
+                  if (nearPlaneOrNormalCapacityOrQueueMinDepth >= invertedDepthOrNormalIndexOrQueueGuard) {
+                    sh.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
+                    dj.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
+                    if (~cameraZBasisOrCameraDepth > ~minimumVisibleDepth) {
+                      minimumVisibleDepth = cameraZBasisOrCameraDepth;
                     }
-                    if (var8 < var29) {
-                      var8 = var29;
+                    if (maximumVisibleDepth < cameraZBasisOrCameraDepth) {
+                      maximumVisibleDepth = cameraZBasisOrCameraDepth;
                     }
-                    CachedArchiveSource.field_j[var23] = var29;
-                    if (var30 == 0) {
+                    CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
+                    if (controlFlagSnapshot == 0) {
                       break L5;
                     }
                   }
-                  CachedArchiveSource.field_j[var23] = -2147483648;
+                  CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = -2147483648;
                 }
-                if (param4) {
-                  a.field_c[var23] = var27 >> ok.field_g;
-                  uk.field_i[var23] = var28 >> ok.field_g;
-                  gf.field_b[var23] = var29;
+                if (storeCameraCoordinates) {
+                  a.cameraMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled >> ok.meshProjectionShift;
+                  uk.cameraMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraYScaled >> ok.meshProjectionShift;
+                  gf.cameraMeshVertexZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
                 }
-                var23++;
-                if (var30 == 0) {
+                cameraXBasisOrDeltaZOrVertexIndex++;
+                if (controlFlagSnapshot == 0) {
                   continue;
                 }
               }
               L10: {
-                if (null != param2.field_L) {
-                  if (param2.field_d != null) {
-                    if (param2.field_C != null) {
-                      if (param2.field_x != null) {
-                        if (null != param2.field_a) {
-                          if (param2.field_y != null) {
-                            if (param2.field_l != null) {
-                              if (null != param2.field_p) {
-                                if (param2.field_b != null) {
-                                  var23 = 0;
+                if (null != mesh.firstVertexSourceX) {
+                  if (mesh.firstVertexSourceY != null) {
+                    if (mesh.firstVertexSourceZ != null) {
+                      if (mesh.secondVertexSourceX != null) {
+                        if (null != mesh.secondVertexSourceY) {
+                          if (mesh.secondVertexSourceZ != null) {
+                            if (mesh.thirdVertexSourceX != null) {
+                              if (null != mesh.thirdVertexSourceY) {
+                                if (mesh.thirdVertexSourceZ != null) {
+                                  cameraXBasisOrDeltaZOrVertexIndex = 0;
                                   while (true) {
-                                    if (~var23 <= ~param2.field_f) {
+                                    if (~cameraXBasisOrDeltaZOrVertexIndex <= ~mesh.faceCount) {
                                       break L10;
                                     }
-                                    var24 = param2.field_L[var23];
-                                    var25 = param2.field_d[var23];
-                                    var26 = param2.field_C[var23];
-                                    ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
-                                    pg.field_d[var23] = var10 + (var26 * var19 + var16 * var25 + var24 * var13 >> 16);
-                                    kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
-                                    var24 = param2.field_x[var23];
-                                    var25 = param2.field_a[var23];
-                                    var26 = param2.field_y[var23];
-                                    qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 16) + var9;
-                                    ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16);
-                                    vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 16) + var11;
-                                    var24 = param2.field_l[var23];
-                                    var25 = param2.field_p[var23];
-                                    var26 = param2.field_b[var23];
-                                    qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
-                                    BufferedSocket.thirdVertexTransformedY[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
-                                    hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
-                                    var23++;
-                                    if (var30 != 0) {
+                                    cameraYBasisOrVertexX = mesh.firstVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
+                                    cameraYBasisOrVertexY = mesh.firstVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
+                                    cameraYBasisOrVertexZ = mesh.firstVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
+                                    ii.firstVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX - (-(cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY) - cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                                    pg.firstVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexZ * cameraYZQ16OrNormalX + cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 >> 16);
+                                    kf.firstVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + (cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX) >> 16) + cameraTranslationZOrNormalZXQ16;
+                                    cameraYBasisOrVertexX = mesh.secondVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
+                                    cameraYBasisOrVertexY = mesh.secondVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
+                                    cameraYBasisOrVertexZ = mesh.secondVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
+                                    qf.secondVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY + cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                                    ac.secondVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYZQ16OrNormalX * cameraYBasisOrVertexZ + cameraYBasisOrVertexY * cameraYYOrNormalYZQ16 + cameraYXOrNormalYYQ16 * cameraYBasisOrVertexX >> 16);
+                                    vk.secondVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexX * cameraZXOrNormalZYQ16 + cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY >> 16) + cameraTranslationZOrNormalZXQ16;
+                                    cameraYBasisOrVertexX = mesh.thirdVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
+                                    cameraYBasisOrVertexY = mesh.thirdVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
+                                    cameraYBasisOrVertexZ = mesh.thirdVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
+                                    qe.thirdVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                                    BufferedSocket.thirdVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 + (cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYZQ16OrNormalX * cameraYBasisOrVertexZ) >> 16);
+                                    hg.thirdVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexY * cameraZYOrNormalZZQ16 + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX >> 16);
+                                    cameraXBasisOrDeltaZOrVertexIndex++;
+                                    if (controlFlagSnapshot != 0) {
                                       return;
                                     }
-                                    if (var30 == 0) {
+                                    if (controlFlagSnapshot == 0) {
                                       continue;
                                     }
                                     break L10;
@@ -177,72 +177,72 @@ final class p extends IntrusiveNode {
                 }
               }
               L12: {
-                if (param6) {
-                  var9 = param1[3];
-                  var10 = param1[4];
-                  var11 = param1[5];
-                  var12 = param1[6];
-                  var13 = param1[7];
-                  var14 = param1[8];
-                  var15 = param1[9];
-                  var16 = param1[10];
-                  var17 = param1[11];
-                  var18 = 0;
+                if (transformNormals) {
+                  cameraTranslationXScaledOrNormalXXQ16 = modelTransform[3];
+                  cameraTranslationYScaledOrNormalYXQ16 = modelTransform[4];
+                  cameraTranslationZOrNormalZXQ16 = modelTransform[5];
+                  cameraXXOrNormalXYQ16 = modelTransform[6];
+                  cameraYXOrNormalYYQ16 = modelTransform[7];
+                  cameraZXOrNormalZYQ16 = modelTransform[8];
+                  cameraXYOrNormalXZQ16 = modelTransform[9];
+                  cameraYYOrNormalYZQ16 = modelTransform[10];
+                  cameraZYOrNormalZZQ16 = modelTransform[11];
+                  cameraXZQ16OrNormalIndex = 0;
                   while (true) {
-                    if (~param2.normalCount >= ~var18) {
+                    if (~mesh.normalCount >= ~cameraXZQ16OrNormalIndex) {
                       break L12;
                     }
-                    stackIn_66_0 = ok.transformedMeshNormalX.length;
-                    stackIn_66_1 = var18;
-                    if (var30 != 0) {
+                    nearPlaneOrNormalCapacityOrQueueMinDepth = ok.transformedMeshNormalX.length;
+                    invertedDepthOrNormalIndexOrQueueGuard = cameraXZQ16OrNormalIndex;
+                    if (controlFlagSnapshot != 0) {
                       break L3;
                     }
-                    if (stackIn_66_0 <= stackIn_66_1) {
+                    if (nearPlaneOrNormalCapacityOrQueueMinDepth <= invertedDepthOrNormalIndexOrQueueGuard) {
                       break L12;
                     }
-                    var19 = param2.normalX[var18];
-                    var20 = param2.normalY[var18];
-                    var21 = param2.normalZ[var18];
-                    ok.transformedMeshNormalX[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
-                    oa.transformedMeshNormalY[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
-                    gi.transformedMeshNormalZ[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
-                    var18++;
-                    if (var30 == 0) {
+                    cameraYZQ16OrNormalX = mesh.normalX[cameraXZQ16OrNormalIndex];
+                    cameraZZQ16OrNormalY = mesh.normalY[cameraXZQ16OrNormalIndex];
+                    cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = mesh.normalZ[cameraXZQ16OrNormalIndex];
+                    ok.transformedMeshNormalX[cameraXZQ16OrNormalIndex] = cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraZZQ16OrNormalY + cameraYZQ16OrNormalX * cameraTranslationXScaledOrNormalXXQ16) >> 16;
+                    oa.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
+                    gi.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
+                    cameraXZQ16OrNormalIndex++;
+                    if (controlFlagSnapshot == 0) {
                       continue;
                     }
                     break L12;
                   }
                 }
               }
-              stackIn_66_0 = var7_int;
-              stackIn_66_1 = 22;
+              nearPlaneOrNormalCapacityOrQueueMinDepth = minimumVisibleDepth;
+              invertedDepthOrNormalIndexOrQueueGuard = 22;
             }
-            i.a(stackIn_66_0, (byte) stackIn_66_1, param2, var8, param5);
+            i.queueMeshFacesByDepth(nearPlaneOrNormalCapacityOrQueueMinDepth, (byte) invertedDepthOrNormalIndexOrQueueGuard, mesh, maximumVisibleDepth, cullBackfaces);
             return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_71_0 = (RuntimeException) (var7);
-          stackIn_71_1 = new StringBuilder().append("p.B(");
-          if (param0 == null) {
-            stackIn_72_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          contextFailure = caughtFailure;
+          failureContextCause = (RuntimeException) (contextFailure);
+          cameraContextBuilder = new StringBuilder().append("p.B(");
+          if (cameraTransform == null) {
+            cameraContextDescription = "null";
           } else {
-            stackIn_72_2 = "{...}";
+            cameraContextDescription = "{...}";
           }
-          stackIn_75_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',');
-          if (param1 == null) {
-            stackIn_76_2 = "null";
+          modelContextBuilder = ((StringBuilder) (Object) cameraContextBuilder).append(cameraContextDescription).append(',');
+          if (modelTransform == null) {
+            modelContextDescription = "null";
           } else {
-            stackIn_76_2 = "{...}";
+            modelContextDescription = "{...}";
           }
-          stackIn_79_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',');
-          if (param2 == null) {
-            stackIn_80_2 = "null";
+          meshContextBuilder = ((StringBuilder) (Object) modelContextBuilder).append(modelContextDescription).append(',');
+          if (mesh == null) {
+            meshContextDescription = "null";
           } else {
-            stackIn_80_2 = "{...}";
+            meshContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) meshContextBuilder).append(meshContextDescription).append(',').append(preserveSharedResources).append(',').append(storeCameraCoordinates).append(',').append(cullBackfaces).append(',').append(transformNormals).append(')').toString());
         }
     }
 

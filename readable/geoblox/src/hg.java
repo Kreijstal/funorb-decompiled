@@ -5,7 +5,7 @@ final class hg {
     static String field_d;
     static Sprite[] blackOrbImplosionFrames;
     static int[] field_a;
-    static int[] field_c;
+    static int[] thirdVertexTransformedZ;
 
     final static void b(int param0) {
         if (param0 != -23738) {
@@ -15,7 +15,7 @@ final class hg {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        thirdVertexTransformedZ = null;
         if (param0 != -17525) {
             return;
         }
@@ -25,6 +25,6 @@ final class hg {
     }
 
     static {
-        field_c = new int[8192];
+        thirdVertexTransformedZ = new int[8192];
     }
 }

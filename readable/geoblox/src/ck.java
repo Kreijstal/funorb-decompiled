@@ -45,7 +45,7 @@ final class ck {
         TriangleMesh var17 = null;
         var19 = Geoblox.field_C;
         try {
-          IntKeyLookup.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          IntKeyLookup.meshCameraTransform = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = ArchiveIndex.field_l.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -57,17 +57,17 @@ final class ck {
             var5 = var4_ref_nf.minX + var4_ref_nf.maxX >> 1;
             var6 = var4_ref_nf.minY + var4_ref_nf.maxY >> 1;
             var7 = var4_ref_nf.maxZ + var4_ref_nf.minZ >> 1;
-            var8 = IntKeyLookup.field_a[9] >> 2;
-            var9 = IntKeyLookup.field_a[10] >> 2;
-            var10_int = IntKeyLookup.field_a[11] >> 2;
-            var11 = var10_int * lk.field_f[5] + var8 * lk.field_f[3] + lk.field_f[4] * var9 >> 14;
-            var12 = var9 * lk.field_f[7] + (var8 * lk.field_f[6] + lk.field_f[8] * var10_int) >> 14;
-            var13 = var10_int * lk.field_f[11] + (var8 * lk.field_f[9] + lk.field_f[10] * var9) >> 14;
+            var8 = IntKeyLookup.meshCameraTransform[9] >> 2;
+            var9 = IntKeyLookup.meshCameraTransform[10] >> 2;
+            var10_int = IntKeyLookup.meshCameraTransform[11] >> 2;
+            var11 = var10_int * lk.meshModelTransform[5] + var8 * lk.meshModelTransform[3] + lk.meshModelTransform[4] * var9 >> 14;
+            var12 = var9 * lk.meshModelTransform[7] + (var8 * lk.meshModelTransform[6] + lk.meshModelTransform[8] * var10_int) >> 14;
+            var13 = var10_int * lk.meshModelTransform[11] + (var8 * lk.meshModelTransform[9] + lk.meshModelTransform[10] * var9) >> 14;
             var2[var3] = var5 * var11 + var12 * var6 + var13 * var7 >> 16;
           }
-          var3 = IntKeyLookup.field_a[9] >> 8;
-          var4 = IntKeyLookup.field_a[10] >> 8;
-          var5 = IntKeyLookup.field_a[11] >> 8;
+          var3 = IntKeyLookup.meshCameraTransform[9] >> 8;
+          var4 = IntKeyLookup.meshCameraTransform[10] >> 8;
+          var5 = IntKeyLookup.meshCameraTransform[11] >> 8;
           var6 = gb.field_f << 4;
           var7 = 0;
           var8 = bh.a((byte) 81, var6) >> 8;
@@ -102,9 +102,9 @@ final class ck {
             var17 = ArchiveIndex.field_l[var16];
             Geoblox.a((byte) -112, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              lk.field_f[var18] = lk.field_f[var18] + pi.field_R[var15][var18];
+              lk.meshModelTransform[var18] = lk.meshModelTransform[var18] + pi.field_R[var15][var18];
             }
-            p.a(IntKeyLookup.field_a, lk.field_f, var17, true, false, false, true);
+            p.projectMeshAndQueueFaces(IntKeyLookup.meshCameraTransform, lk.meshModelTransform, var17, true, false, false, true);
             hi.renderLitQueuedMeshFaces(var14, var9, var12, 6562, var7, var17, var13, var8);
           }
           var15 = 123 / ((48 - param0) / 59);

@@ -3,7 +3,7 @@
  */
 final class pg {
     static PointerInputListener pointerListener;
-    static int[] field_d;
+    static int[] firstVertexTransformedY;
     static String[] achievementTitles;
     static boolean screenChangePending;
     static int decodedSpriteCanvasWidth;
@@ -204,7 +204,7 @@ final class pg {
     }
 
     public static void b(int param0) {
-        field_d = null;
+        firstVertexTransformedY = null;
         pointerListener = null;
         achievementTitles = null;
         if (param0 != 22059) {
@@ -213,7 +213,7 @@ final class pg {
     }
 
     static {
-        field_d = new int[8192];
+        firstVertexTransformedY = new int[8192];
         pointerListener = new PointerInputListener();
         achievementTitles = new String[]{"Geoblox Flush", "Ordered Geometry", "Perfect Geometry", "Chain Geometry", "Sequence Geometry", "Succession Geometry", "Dark Geometry", "Lightning Geometrician", "Natural Geometrician", "Sweet Geometrician", "Sparkly Geometrician", "Sick Geometrician", "Stellar Geometrician", "Sporty Geometrician", "Cooking Geometrician", "Parallel Geometrician", "Spooky Geometrician"};
     }

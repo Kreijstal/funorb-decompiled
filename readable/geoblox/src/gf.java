@@ -5,7 +5,7 @@ final class gf {
     static int matchChainLength;
     static int heldPointerButtonSnapshot;
     static int[] queuedKeyStateChanges;
-    static int[] field_b;
+    static int[] cameraMeshVertexZ;
     static qh field_d;
     static String createPasswordContainsNameAlertText;
 
@@ -28,7 +28,7 @@ final class gf {
 
     public static void a(boolean param0) {
         field_d = null;
-        field_b = null;
+        cameraMeshVertexZ = null;
         if (param0) {
             queuedKeyStateChanges = null;
             createPasswordContainsNameAlertText = null;
@@ -135,7 +135,7 @@ final class gf {
         RuntimeException caughtProgressFailure = null;
         try {
           if (!methodGuard) {
-            field_b = (int[]) null;
+            cameraMeshVertexZ = (int[]) null;
           }
           if (!archive.ensureIndexLoaded(0)) {
             fallbackBeforeReturn = (String) (fallbackMessage);
@@ -177,7 +177,7 @@ final class gf {
 
     final static String a(int param0) {
         if (param0 != 240) {
-            field_b = (int[]) null;
+            cameraMeshVertexZ = (int[]) null;
             return v.field_e;
         }
         return v.field_e;
@@ -187,7 +187,7 @@ final class gf {
         matchChainLength = 0;
         queuedKeyStateChanges = new int[128];
         heldPointerButtonSnapshot = 0;
-        field_b = new int[8192];
+        cameraMeshVertexZ = new int[8192];
         createPasswordContainsNameAlertText = "This password contains your Player Name, and would be easy to guess";
     }
 }

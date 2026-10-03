@@ -97,7 +97,7 @@ final class uh extends ac {
           var5.vertexX = ArchiveNetworkClient.a(var5.vertexX, 16, 0, param0);
           var5.vertexY = ArchiveNetworkClient.a(var5.vertexY, 16, 0, param0);
           var5.vertexZ = ArchiveNetworkClient.a(var5.vertexZ, 16, 0, param0);
-          var5.field_f = (short)param0.readBits((byte) -17, 16);
+          var5.faceCount = (short)param0.readBits((byte) -17, 16);
           var5.faceVertexA = ArchiveNetworkClient.a(var5.faceVertexA, 16, 0, param0);
           if (param1 < 111) {
             field_y = (kj) null;

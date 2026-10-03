@@ -88,120 +88,120 @@ final class i {
         }
     }
 
-    final static void a(int param0, byte param1, TriangleMesh param2, int param3, boolean param4) {
-        byte dupTemp$0 = 0;
-        boolean stackIn_11_0 = false;
-        int stackIn_28_0 = 0;
-        int stackIn_39_0 = 0;
-        int stackIn_49_0 = 0;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        String stackIn_69_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        boolean stackOut_10_0;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        var19 = Geoblox.field_C;
+    final static void queueMeshFacesByDepth(int minimumVisibleDepth, byte methodGuard, TriangleMesh mesh, int maximumVisibleDepth, boolean cullBackfaces) {
+        byte facePriority = 0;
+        boolean cullBackfacesSnapshot = false;
+        int scaledRelativeDepthSum = 0;
+        int bucketIndexOrFaceOrderIndex = 0;
+        int cullFlagOrPriorityLoopSentinel = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String meshContextDescription = null;
+        RuntimeException caughtFailure = null;
+        boolean cullBackfacesCarrier;
+        int depthRangeBitLength = 0;
+        RuntimeException contextFailure = null;
+        int minimumDepthTimesThree = 0;
+        int depthBucketShift = 0;
+        int faceIndexOrPriorityPrefix = 0;
+        int vertexAOrPriorityIndex = 0;
+        int vertexBOrPriorityCount = 0;
+        int vertexC = 0;
+        int projectedAXOrVertexADepth = 0;
+        int projectedAYOrVertexBDepth = 0;
+        int edgeBXOrVertexCDepth = 0;
+        int edgeCXOrRelativeDepthSum = 0;
+        int edgeBYOrDepthBucketIndex = 0;
+        int edgeCYOrBucketOccupancy = 0;
+        int faceOrderWriteIndex = 0;
+        int controlFlagSnapshot = 0;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          var5_int = hj.a((byte) 58, (param3 - param0) * 3);
-          var6 = param0 * 3;
-          var7 = var5_int - 10;
-          oe.l(0);
-          if (param2.facePriorityCount > 0) {
-            if (null != param2.facePriorities) {
-              ma.a((byte) -35);
+          depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
+          minimumDepthTimesThree = minimumVisibleDepth * 3;
+          depthBucketShift = depthRangeBitLength - 10;
+          oe.clearMeshDepthBucketCounts(0);
+          if (mesh.facePriorityCount > 0) {
+            if (null != mesh.facePriorities) {
+              ma.clearMeshPriorityCounts((byte) -35);
             }
           }
           ch.queuedMeshFaceCount = 0;
-          var8 = 0;
+          faceIndexOrPriorityPrefix = 0;
           while (true) {
             L2: {
-              if (var8 < param2.field_f) {
-                var9 = param2.faceVertexA[var8];
-                var10 = param2.faceVertexB[var8];
-                var11 = param2.faceVertexC[var8];
-                stackOut_10_0 = param4;
-                stackIn_49_0 = stackOut_10_0 ? 1 : 0;
-                stackIn_11_0 = stackOut_10_0;
-                if (var19 != 0) {
+              if (faceIndexOrPriorityPrefix < mesh.faceCount) {
+                vertexAOrPriorityIndex = mesh.faceVertexA[faceIndexOrPriorityPrefix];
+                vertexBOrPriorityCount = mesh.faceVertexB[faceIndexOrPriorityPrefix];
+                vertexC = mesh.faceVertexC[faceIndexOrPriorityPrefix];
+                cullBackfacesCarrier = cullBackfaces;
+                cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
+                cullBackfacesSnapshot = cullBackfacesCarrier;
+                if (controlFlagSnapshot != 0) {
                   break L2;
                 }
                 L4: {
-                  if (stackIn_11_0) {
-                    var12 = sh.projectedMeshVertexX[var9];
-                    var13 = dj.projectedMeshVertexY[var9];
-                    var14 = sh.projectedMeshVertexX[var10] - var12;
-                    var15 = sh.projectedMeshVertexX[var11] - var12;
-                    var16 = dj.projectedMeshVertexY[var10] - var13;
-                    var17 = -var13 + dj.projectedMeshVertexY[var11];
-                    if (-(var16 * var15) + var14 * var17 >= 0) {
+                  if (cullBackfacesSnapshot) {
+                    projectedAXOrVertexADepth = sh.projectedMeshVertexX[vertexAOrPriorityIndex];
+                    projectedAYOrVertexBDepth = dj.projectedMeshVertexY[vertexAOrPriorityIndex];
+                    edgeBXOrVertexCDepth = sh.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
+                    edgeCXOrRelativeDepthSum = sh.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
+                    edgeBYOrDepthBucketIndex = dj.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
+                    edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + dj.projectedMeshVertexY[vertexC];
+                    if (-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0) {
                       break L4;
                     }
                   }
-                  var12 = CachedArchiveSource.field_j[var9];
-                  if (-2147483648 == var12) {
-                    if (var19 == 0) {
+                  projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
+                  if (-2147483648 == projectedAXOrVertexADepth) {
+                    if (controlFlagSnapshot == 0) {
                       break L4;
                     }
                   }
-                  var13 = CachedArchiveSource.field_j[var10];
-                  if (-2147483648 == var13) {
-                    if (var19 == 0) {
+                  projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
+                  if (-2147483648 == projectedAYOrVertexBDepth) {
+                    if (controlFlagSnapshot == 0) {
                       break L4;
                     }
                   }
-                  var14 = CachedArchiveSource.field_j[var11];
-                  if (var14 != -2147483648) {
-                    var15 = var13 + (var12 + var14 - var6);
-                    if (var7 < 0) {
-                      stackIn_28_0 = var15 << -var7;
+                  edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
+                  if (edgeBXOrVertexCDepth != -2147483648) {
+                    edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepth + (projectedAXOrVertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
+                    if (depthBucketShift < 0) {
+                      scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
                     } else {
-                      stackIn_28_0 = var15 >> var7;
+                      scaledRelativeDepthSum = edgeCXOrRelativeDepthSum >> depthBucketShift;
                     }
-                    var16 = -stackIn_28_0 + (-1 + ch.meshFaceCountsByDepthBucket.length);
-                    var17 = ch.meshFaceCountsByDepthBucket[var16];
+                    edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + ch.meshFaceCountsByDepthBucket.length);
+                    edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
                     while (true) {
                       L10: {
-                        if (var17 >> 4 != 0) {
-                          var16--;
-                          stackIn_39_0 = var16;
-                          if (var19 != 0) {
+                        if (edgeCYOrBucketOccupancy >> 4 != 0) {
+                          edgeBYOrDepthBucketIndex--;
+                          bucketIndexOrFaceOrderIndex = edgeBYOrDepthBucketIndex;
+                          if (controlFlagSnapshot != 0) {
                             break L10;
                           }
-                          if (stackIn_39_0 < 0) {
+                          if (bucketIndexOrFaceOrderIndex < 0) {
                             System.err.println("Out of range!");
-                            if (var19 == 0) {
+                            if (controlFlagSnapshot == 0) {
                               break L4;
                             }
                           }
-                          var17 = ch.meshFaceCountsByDepthBucket[var16];
-                          if (var19 == 0) {
+                          edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                          if (controlFlagSnapshot == 0) {
                             continue;
                           }
                         }
-                        stackIn_39_0 = (var16 << 4) + var17;
+                        bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
                       }
-                      var18 = stackIn_39_0;
-                      pj.meshFaceOrder[var18] = var8;
-                      ch.meshFaceCountsByDepthBucket[var16] = 1 + var17;
-                      if (0 < param2.facePriorityCount) {
-                        if (null != param2.facePriorities) {
-                          dupTemp$0 = param2.facePriorities[var8];
-                          uh.meshFacePriorityWriteOffsets[dupTemp$0] = uh.meshFacePriorityWriteOffsets[dupTemp$0] + 1;
+                      faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
+                      pj.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
+                      ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
+                      if (0 < mesh.facePriorityCount) {
+                        if (null != mesh.facePriorities) {
+                          facePriority = mesh.facePriorities[faceIndexOrPriorityPrefix];
+                          uh.meshFacePriorityWriteOffsets[facePriority] = uh.meshFacePriorityWriteOffsets[facePriority] + 1;
                         }
                       }
                       ch.queuedMeshFaceCount = ch.queuedMeshFaceCount + 1;
@@ -209,30 +209,30 @@ final class i {
                     }
                   }
                 }
-                var8++;
-                if (var19 == 0) {
+                faceIndexOrPriorityPrefix++;
+                if (controlFlagSnapshot == 0) {
                   continue;
                 }
               }
-              stackIn_49_0 = -1;
+              cullFlagOrPriorityLoopSentinel = -1;
             }
             L15: {
-              if (stackIn_49_0 > ~param2.facePriorityCount) {
-                if (null != param2.facePriorities) {
-                  var8 = 0;
-                  var9 = 0;
+              if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) {
+                if (null != mesh.facePriorities) {
+                  faceIndexOrPriorityPrefix = 0;
+                  vertexAOrPriorityIndex = 0;
                   while (true) {
-                    if (uh.meshFacePriorityWriteOffsets.length <= var9) {
+                    if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
                       break L15;
                     }
-                    var10 = uh.meshFacePriorityWriteOffsets[var9];
-                    uh.meshFacePriorityWriteOffsets[var9] = var8;
-                    var8 = var8 + var10;
-                    var9++;
-                    if (var19 != 0) {
+                    vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
+                    uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
+                    faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
+                    vertexAOrPriorityIndex++;
+                    if (controlFlagSnapshot != 0) {
                       return;
                     }
-                    if (var19 == 0) {
+                    if (controlFlagSnapshot == 0) {
                       continue;
                     }
                     break L15;
@@ -240,22 +240,22 @@ final class i {
                 }
               }
             }
-            if (param1 != 22) {
+            if (methodGuard != 22) {
               avatarMaskRaster = (Sprite) null;
             }
             return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_68_0 = (RuntimeException) (var5);
-          stackIn_68_1 = new StringBuilder().append("i.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_69_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          contextFailure = caughtFailure;
+          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextBuilder = new StringBuilder().append("i.B(").append(minimumVisibleDepth).append(',').append(methodGuard).append(',');
+          if (mesh == null) {
+            meshContextDescription = "null";
           } else {
-            stackIn_69_2 = "{...}";
+            meshContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(meshContextDescription).append(',').append(maximumVisibleDepth).append(',').append(cullBackfaces).append(')').toString());
         }
     }
 

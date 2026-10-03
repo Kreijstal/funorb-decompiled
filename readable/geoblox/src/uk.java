@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uk extends TextInputValidator {
-    static int[] field_i;
+    static int[] cameraMeshVertexY;
     private boolean field_n;
     static float avatarTintBlueDelta;
     static int field_o;
@@ -32,7 +32,7 @@ final class uk extends TextInputValidator {
           param1 = qj.a(param1, "", '_', (byte) 119);
           var3 = CachedArchiveSource.a(105, param2);
           if (param0 != 8) {
-            field_i = (int[]) null;
+            cameraMeshVertexY = (int[]) null;
           }
           stackIn_7_0 = !(param1.indexOf(param2) == -1) || !(param1.indexOf(var3) == -1);
           return stackIn_7_0;
@@ -372,19 +372,19 @@ final class uk extends TextInputValidator {
         if (param0 >= 70) {
             orbCoinSprite = null;
             field_p = null;
-            field_i = null;
+            cameraMeshVertexY = null;
             monthNames = null;
             return;
         }
         orbCoinSprite = (Sprite) null;
         orbCoinSprite = null;
         field_p = null;
-        field_i = null;
+        cameraMeshVertexY = null;
         monthNames = null;
     }
 
     static {
-        field_i = new int[8192];
+        cameraMeshVertexY = new int[8192];
         monthNames = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

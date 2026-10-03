@@ -8,7 +8,7 @@ final class ok {
     static String justPlayText;
     static int[] transformedMeshNormalX;
     static String createEmailConfirmationText;
-    static int field_g;
+    static int meshProjectionShift;
     static int field_c;
     static int field_b;
     private static String field_z;
@@ -29,7 +29,7 @@ final class ok {
         createEmailConfirmationTooltipText = "Type your email address again to make sure it's correct";
         justPlayText = "Just play";
         transformedMeshNormalX = new int[8192];
-        field_g = 9;
+        meshProjectionShift = 9;
         createEmailConfirmationText = "Confirm Email:";
     }
 }

@@ -52,7 +52,7 @@ final class jk {
         var5 = Geoblox.field_C;
         try {
           TriangleRasterState.prepareTriangleClipFromRasterizer();
-          ok.field_g = 11;
+          ok.meshProjectionShift = 11;
           jf.meshSpecularResponseByAbsDot = new int[260];
           var1_int = -29 / ((param0 + 40) / 45);
           for (var2 = 0; 256 > var2; var2++) {

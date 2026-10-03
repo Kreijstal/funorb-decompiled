@@ -7,7 +7,7 @@ final class IntKeyLookup {
     static Sprite unachievedSprite;
     static ck field_d;
     private int[] keyIndexPairs;
-    static int[] field_a;
+    static int[] meshCameraTransform;
 
     public static void a(byte param0) {
         unachievedSprite = null;
@@ -15,7 +15,7 @@ final class IntKeyLookup {
         if (param0 != 49) {
             IntKeyLookup.a((byte) 72);
         }
-        field_a = null;
+        meshCameraTransform = null;
     }
 
     final int findIndex(boolean preserveUnachievedSprite, int key) {
@@ -128,7 +128,7 @@ final class IntKeyLookup {
     }
 
     static {
-        field_a = new int[12];
+        meshCameraTransform = new int[12];
         field_d = new ck(12, 0, 1, 0);
     }
 }

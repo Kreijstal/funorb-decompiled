@@ -5,7 +5,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private fi groupRequests;
     static boolean field_s;
     private int expectedIndexRevision;
-    static int[] field_j;
+    static int[] projectedMeshVertexDepth;
     private ArchiveNetworkClient networkClient;
     private ArchiveRequest indexRequest;
     private int archiveId;
@@ -375,7 +375,7 @@ final class CachedArchiveSource extends ArchiveSource {
             return;
         }
         jewelsBackgroundSprite = null;
-        field_j = null;
+        projectedMeshVertexDepth = null;
     }
 
     final void requestAllGroups(int methodGuard) {
@@ -681,6 +681,6 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     static {
-        field_j = new int[8192];
+        projectedMeshVertexDepth = new int[8192];
     }
 }

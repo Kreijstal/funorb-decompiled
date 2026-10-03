@@ -6,62 +6,62 @@ final class ma extends IntrusiveNode {
     long field_f;
     byte[] field_g;
 
-    final static void a(byte param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var4 = Geoblox.field_C;
+    final static void clearMeshPriorityCounts(byte methodGuard) {
+        int clearIndex0 = 0;
+        int clearIndex1 = 0;
+        int clearIndex2 = 0;
+        int clearIndex3 = 0;
+        int clearIndex4 = 0;
+        int clearIndex5 = 0;
+        int clearIndex6 = 0;
+        int clearIndex7 = 0;
+        int[] priorityCountsAlias = null;
+        int clearIndex = 0;
+        int arrayLength = 0;
+        int controlFlagSnapshot = 0;
+        int[] priorityCounts = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException contextFailure = null;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          var5 = uh.meshFacePriorityWriteOffsets;
-          var1 = var5;
-          var2 = 0;
-          var3 = var5.length;
-          if (param0 != -35) {
+          priorityCounts = uh.meshFacePriorityWriteOffsets;
+          priorityCountsAlias = priorityCounts;
+          clearIndex = 0;
+          arrayLength = priorityCounts.length;
+          if (methodGuard != -35) {
             return;
           }
-          while (var2 < var3) {
-            incrementValue$16 = var2;
-            var2++;
-            var5[incrementValue$16] = 0;
-            incrementValue$17 = var2;
-            var2++;
-            var5[incrementValue$17] = 0;
-            incrementValue$18 = var2;
-            var2++;
-            var5[incrementValue$18] = 0;
-            incrementValue$19 = var2;
-            var2++;
-            var5[incrementValue$19] = 0;
-            incrementValue$20 = var2;
-            var2++;
-            var5[incrementValue$20] = 0;
-            incrementValue$21 = var2;
-            var2++;
-            var5[incrementValue$21] = 0;
-            incrementValue$22 = var2;
-            var2++;
-            var5[incrementValue$22] = 0;
-            incrementValue$23 = var2;
-            var2++;
-            var5[incrementValue$23] = 0;
+          while (clearIndex < arrayLength) {
+            clearIndex0 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex0] = 0;
+            clearIndex1 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex1] = 0;
+            clearIndex2 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex2] = 0;
+            clearIndex3 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex3] = 0;
+            clearIndex4 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex4] = 0;
+            clearIndex5 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex5] = 0;
+            clearIndex6 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex6] = 0;
+            clearIndex7 = clearIndex;
+            clearIndex++;
+            priorityCounts[clearIndex7] = 0;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "ma.E(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          contextFailure = caughtFailure;
+          throw t.a((Throwable) ((Object) contextFailure), "ma.E(" + methodGuard + ')');
         }
     }
 
