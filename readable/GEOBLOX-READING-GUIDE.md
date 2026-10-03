@@ -3020,3 +3020,48 @@ The current survey still has 21 method/constructor spans of at least 300 lines,
 outer span, so these counts do not represent unique dispatchers. Opaque helpers,
 reused scratch phases and large control bodies remain; actual assets/gameplay
 and browser/phone acceptance are unverified.
+
+
+## Animated logo scene (pass 85)
+
+`ni.loadLogoMeshesAndMaterials` loads `logo.fo3d`, reads a mesh count, decodes
+materials/meshes and centers the scaled geometry. `jc.readMeshMaterials` checks
+version/read enable, reads base RGB values for new materials and aliases earlier
+entries for references. Other encoded values remain unnamed in meaning because
+the decoder discards them. Successful real archive decoding is source-audited;
+only null-archive failures and controlled material streams are executed here.
+
+`logoAnimationTick` advances through `td.advanceLogoAnimationTick` and completes
+when `wj.isLogoAnimationComplete` observes a tick greater than 250. The guard
+remainder precedes the increment, so division failure leaves the tick untouched.
+`logoStartDelayTicks` comes from the original millisecond-to-tick conversion.
+
+`Geoblox.prepareLogoMeshRotation` uses the original three easing branches and
+mesh-specific X/Y signs. `ArchiveIndex.buildLogoRotationTransform` composes inverse X/Y
+rotations using `bh.sineQ16`, `fi.cosineQ16` and `quarterSineQ16`. Translation is
+zero and the remaining nine coefficients are column-major Q16 values. Product
+shifts precede selected negations; the code retains those rounding choices.
+
+`ck.renderLogoMeshes` installs a camera at Z=-8144, computes rotated mesh bounds
+midpoint depths and repeatedly selects the strictly greatest remaining key.
+It rotates the selected mesh but reads `logoMeshCenters` by draw-order index.
+That original distinction stays explicit. Equal keys retain the first candidate;
+all-MIN_VALUE keys can select an already used mesh, so this is not documented as
+an unconditional permutation. Lighting rotates with the clock, or uses pointer
+snapshots when both coordinates are available. Normalization retains integer
+overflow and NaN-to-int behavior. Guard division runs after rendering.
+
+Projection uses `i.queueMeshFacesByDepthWithIntegerGuard` to preserve full JVM
+integer arguments. The original byte-guard collector remains available. A
+source byte cast changed -8170 to 22 and skipped cleanup in 120 native scene
+cases; the new generic entry point fixes that mismatch without changing bytecode.
+Its original and integer bodies currently coexist, adding code rather than
+simplifying the collector. Generic discovery covers owned static targets through
+int stack carriers; other invocation shapes remain outside this proof.
+
+The fixed native trace compares 56,862 cases across bytecode/raw/readable
+variants, including 804 successful scenes and 216 pixel-changing scenes.
+Independent checks cover the trigonometric table and matrix composition within
+one integer unit, clock state, 48 valid material inputs and 72 zero-rotation
+center/depth cases. Whole-frame pixels and general easing use native traces;
+real logo assets, full gameplay and browser/phone performance remain unverified.

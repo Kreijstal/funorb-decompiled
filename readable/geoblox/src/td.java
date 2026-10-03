@@ -212,11 +212,11 @@ final class td extends hk {
         }
     }
 
-    final static void g(byte param0) {
-        int var1 = -28 % ((param0 - 36) / 43);
-        if (gb.field_f != -DiskCacheWorker.field_a + 0 && 250 - DiskCacheWorker.field_a == gb.field_f) {
+    final static void advanceLogoAnimationTick(byte methodGuard) {
+        int guardRemainder = -28 % ((methodGuard - 36) / 43);
+        if (gb.logoAnimationTick != -DiskCacheWorker.logoStartDelayTicks + 0 && 250 - DiskCacheWorker.logoStartDelayTicks == gb.logoAnimationTick) {
         }
-        gb.field_f = gb.field_f + 1;
+        gb.logoAnimationTick = gb.logoAnimationTick + 1;
     }
 
     final boolean a(byte param0, el param1) {

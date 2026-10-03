@@ -124,64 +124,64 @@ final class jc {
         }
     }
 
-    final static MeshMaterial[] a(PacketBuffer param0, boolean param1) {
-        int var5 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        MeshMaterial[] var4 = null;
-        MeshMaterial var6_ref_fd = null;
-        int var6 = 0;
-        int var7 = 0;
-        MeshMaterial[] stackIn_3_0 = null;
-        Object stackIn_6_0 = null;
-        MeshMaterial[] stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.field_C;
+    final static MeshMaterial[] readMeshMaterials(PacketBuffer input, boolean readEnabled) {
+        int materialIndex = 0;
+        int formatVersion = 0;
+        RuntimeException contextFailure = null;
+        int materialCount = 0;
+        MeshMaterial[] materials = null;
+        MeshMaterial newMaterial = null;
+        int referencedMaterialIndex = 0;
+        int controlFlagSnapshot = 0;
+        MeshMaterial[] disabledResult = null;
+        Object unsupportedVersionResult = null;
+        MeshMaterial[] decodedMaterialsResult = null;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String inputContextDescription = null;
+        RuntimeException caughtFailure = null;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          var2_int = param0.readBits((byte) -17, 8);
-          if (!param1) {
-            stackIn_3_0 = (MeshMaterial[]) null;
-            return stackIn_3_0;
+          formatVersion = input.readBits((byte) -17, 8);
+          if (!readEnabled) {
+            disabledResult = (MeshMaterial[]) null;
+            return disabledResult;
           }
-          if (0 < var2_int) {
-            stackIn_6_0 = null;
-            return (MeshMaterial[]) ((Object) stackIn_6_0);
+          if (0 < formatVersion) {
+            unsupportedVersionResult = null;
+            return (MeshMaterial[]) ((Object) unsupportedVersionResult);
           }
-          var3 = param0.readBits((byte) -17, 12);
-          var4 = new MeshMaterial[var3];
-          for (var5 = 0; var3 > var5; var5++) {
-            if (!ac.a((byte) 71, param0)) {
-              var6 = param0.readBits((byte) -17, td.a(var5 - 1, (byte) 66));
-              var4[var5] = var4[var6];
+          materialCount = input.readBits((byte) -17, 12);
+          materials = new MeshMaterial[materialCount];
+          for (materialIndex = 0; materialCount > materialIndex; materialIndex++) {
+            if (!ac.a((byte) 71, input)) {
+              referencedMaterialIndex = input.readBits((byte) -17, td.a(materialIndex - 1, (byte) 66));
+              materials[materialIndex] = materials[referencedMaterialIndex];
             } else {
-              var6_ref_fd = new MeshMaterial();
-              param0.readBits((byte) -17, 24);
-              param0.readBits((byte) -17, 24);
-              var6_ref_fd.baseRgb = param0.readBits((byte) -17, 24);
-              param0.readBits((byte) -17, 9);
-              param0.readBits((byte) -17, 12);
-              param0.readBits((byte) -17, 12);
-              param0.readBits((byte) -17, 12);
-              var4[var5] = var6_ref_fd;
+              newMaterial = new MeshMaterial();
+              input.readBits((byte) -17, 24);
+              input.readBits((byte) -17, 24);
+              newMaterial.baseRgb = input.readBits((byte) -17, 24);
+              input.readBits((byte) -17, 9);
+              input.readBits((byte) -17, 12);
+              input.readBits((byte) -17, 12);
+              input.readBits((byte) -17, 12);
+              materials[materialIndex] = newMaterial;
             }
           }
-          stackIn_14_0 = (MeshMaterial[]) (var4);
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var2);
-          stackIn_17_1 = new StringBuilder().append("jc.D(");
-          if (param0 == null) {
-            stackIn_18_2 = "null";
+          decodedMaterialsResult = (MeshMaterial[]) (materials);
+          return decodedMaterialsResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          contextFailure = caughtFailure;
+          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextBuilder = new StringBuilder().append("jc.D(");
+          if (input == null) {
+            inputContextDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            inputContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(inputContextDescription).append(',').append(readEnabled).append(')').toString());
         }
     }
 

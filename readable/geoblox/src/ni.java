@@ -32,56 +32,56 @@ final class ni extends ee implements pl {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        TriangleMesh var5 = null;
-        int[] var6 = null;
-        int var7 = 0;
-        PacketBuffer var8 = null;
-        int var9 = 0;
-        PacketBuffer var10 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var7 = Geoblox.field_C;
+    final static void loadLogoMeshesAndMaterials(ResourceArchive archive, int methodGuard) {
+        int meshCount = 0;
+        int meshIndexOrInitialCursor = 0;
+        TriangleMesh mesh = null;
+        int[] meshCenter = null;
+        int controlFlagSnapshot = 0;
+        PacketBuffer logoInput = null;
+        int centerMeshIndex = 0;
+        PacketBuffer logoInputAlias = null;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String archiveContextDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException contextFailure = null;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          var8 = new PacketBuffer(param0.getNamedFile(param1 + param1, "", "logo.fo3d"));
-          var10 = var8;
-          var3 = var10.readUnsignedByte((byte) 34);
-          var10.beginBitAccess(param1 + 8);
-          l.meshMaterials = jc.a(var10, true);
-          ArchiveIndex.field_l = new TriangleMesh[var3];
-          pi.field_R = new int[var3][];
-          for (var4 = 0; var4 < var3; var4++) {
-            ArchiveIndex.field_l[var4] = uh.a(var8, (byte) 113);
+          logoInput = new PacketBuffer(archive.getNamedFile(methodGuard + methodGuard, "", "logo.fo3d"));
+          logoInputAlias = logoInput;
+          meshCount = logoInputAlias.readUnsignedByte((byte) 34);
+          logoInputAlias.beginBitAccess(methodGuard + 8);
+          l.meshMaterials = jc.readMeshMaterials(logoInputAlias, true);
+          ArchiveIndex.logoMeshes = new TriangleMesh[meshCount];
+          pi.logoMeshCenters = new int[meshCount][];
+          for (meshIndexOrInitialCursor = 0; meshIndexOrInitialCursor < meshCount; meshIndexOrInitialCursor++) {
+            ArchiveIndex.logoMeshes[meshIndexOrInitialCursor] = uh.a(logoInput, (byte) 113);
           }
-          var10.endBitAccess(-16989);
-          var9 = 0;
-          var4 = var9;
-          while (var3 > var9) {
-            var5 = ArchiveIndex.field_l[var9];
-            var5.scaleVertices(6, 1, (byte) 89, 6, 6);
-            var5.refreshBounds((byte) -99);
-            var6 = new int[]{var5.minX + var5.maxX >> 1, var5.maxY + var5.minY >> 1, var5.maxZ + var5.minZ >> 1};
-            pi.field_R[var9] = var6;
-            var5.translateVertices(-var6[0], -var6[1], -9121, -var6[2]);
-            var9++;
+          logoInputAlias.endBitAccess(-16989);
+          centerMeshIndex = 0;
+          meshIndexOrInitialCursor = centerMeshIndex;
+          while (meshCount > centerMeshIndex) {
+            mesh = ArchiveIndex.logoMeshes[centerMeshIndex];
+            mesh.scaleVertices(6, 1, (byte) 89, 6, 6);
+            mesh.refreshBounds((byte) -99);
+            meshCenter = new int[]{mesh.minX + mesh.maxX >> 1, mesh.maxY + mesh.minY >> 1, mesh.maxZ + mesh.minZ >> 1};
+            pi.logoMeshCenters[centerMeshIndex] = meshCenter;
+            mesh.translateVertices(-meshCenter[0], -meshCenter[1], -9121, -meshCenter[2]);
+            centerMeshIndex++;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var2);
-          stackIn_10_1 = new StringBuilder().append("ni.KA(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          contextFailure = caughtFailure;
+          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextBuilder = new StringBuilder().append("ni.KA(");
+          if (archive == null) {
+            archiveContextDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            archiveContextDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(archiveContextDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

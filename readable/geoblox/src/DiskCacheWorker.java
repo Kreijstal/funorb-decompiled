@@ -4,7 +4,7 @@
 final class DiskCacheWorker implements Runnable {
     static int[] avatarTintPalette;
     private SecondaryDeque requestQueue;
-    static int field_a;
+    static int logoStartDelayTicks;
     static al field_l;
     static String createPasswordContainsEmailAlertText;
     int queuedRequestCount;
@@ -93,7 +93,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           request = new DiskArchiveRequest();
           if (methodGuard != 15079962) {
-            field_a = -116;
+            logoStartDelayTicks = -116;
           }
           request.operationType = 1;
           queueMonitor = this.requestQueue;

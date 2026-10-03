@@ -3,7 +3,7 @@
  */
 final class gb {
     static ArchiveCatalog archiveCatalog;
-    static int field_f;
+    static int logoAnimationTick;
     static int field_c;
     static int field_g;
     private IntrusiveDeque field_a;

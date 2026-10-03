@@ -142,8 +142,8 @@ final class ad extends ia {
             Geoblox.setRasterTarget(1, var1);
             TriangleRasterState.prepareTriangleClipFromRasterizer();
             SoftwareRasterizer.clearFramebuffer();
-            gb.field_f = 0;
-            ck.a((byte) -73);
+            gb.logoAnimationTick = 0;
+            ck.renderLogoMeshes((byte) -73);
             var2 = var1.copy();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.drawSilhouette(-2, -2, 16777215);

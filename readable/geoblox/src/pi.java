@@ -4,7 +4,7 @@
 final class pi extends vf {
     private Sprite field_Q;
     private int field_P;
-    static int[][] field_R;
+    static int[][] logoMeshCenters;
     private dg field_M;
     static IndexedSprite sweetsBackgroundSprite;
     static rf field_S;
@@ -221,10 +221,10 @@ final class pi extends vf {
     }
 
     public static void j(int param0) {
-        field_R = (int[][]) null;
+        logoMeshCenters = (int[][]) null;
         field_S = null;
         if (param0 != 24033) {
-            field_R = (int[][]) null;
+            logoMeshCenters = (int[][]) null;
             sweetsBackgroundSprite = null;
             return;
         }

@@ -256,4 +256,171 @@ final class i {
 
     static {
     }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void queueMeshFacesByDepthWithIntegerGuard(int minimumVisibleDepth, int integerMethodGuard, TriangleMesh mesh, int maximumVisibleDepth, boolean cullBackfaces) {
+        byte facePriority = 0;
+        boolean cullBackfacesSnapshot = false;
+        int scaledRelativeDepthSum = 0;
+        int bucketIndexOrFaceOrderIndex = 0;
+        int cullFlagOrPriorityLoopSentinel = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String meshContextDescription = null;
+        RuntimeException caughtFailure = null;
+        boolean cullBackfacesCarrier;
+        int depthRangeBitLength = 0;
+        RuntimeException contextFailure = null;
+        int minimumDepthTimesThree = 0;
+        int depthBucketShift = 0;
+        int faceIndexOrPriorityPrefix = 0;
+        int vertexAOrPriorityIndex = 0;
+        int vertexBOrPriorityCount = 0;
+        int vertexC = 0;
+        int projectedAXOrVertexADepth = 0;
+        int projectedAYOrVertexBDepth = 0;
+        int edgeBXOrVertexCDepth = 0;
+        int edgeCXOrRelativeDepthSum = 0;
+        int edgeBYOrDepthBucketIndex = 0;
+        int edgeCYOrBucketOccupancy = 0;
+        int faceOrderWriteIndex = 0;
+        int controlFlagSnapshot = 0;
+        controlFlagSnapshot = Geoblox.field_C;
+        try {
+          depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
+          minimumDepthTimesThree = minimumVisibleDepth * 3;
+          depthBucketShift = depthRangeBitLength - 10;
+          oe.clearMeshDepthBucketCounts(0);
+          if ((mesh.facePriorityCount > 0) &&
+              (null != mesh.facePriorities)) {
+            ma.clearMeshPriorityCounts((byte) -35);
+          }
+          ch.queuedMeshFaceCount = 0;
+          faceIndexOrPriorityPrefix = 0;
+          while (true) {
+            L2: {
+              if (faceIndexOrPriorityPrefix < mesh.faceCount) {
+                vertexAOrPriorityIndex = mesh.faceVertexA[faceIndexOrPriorityPrefix];
+                vertexBOrPriorityCount = mesh.faceVertexB[faceIndexOrPriorityPrefix];
+                vertexC = mesh.faceVertexC[faceIndexOrPriorityPrefix];
+                cullBackfacesCarrier = cullBackfaces;
+                cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
+                cullBackfacesSnapshot = cullBackfacesCarrier;
+                if (controlFlagSnapshot != 0) {
+                  break L2;
+                }
+                L4: {
+                  if (cullBackfacesSnapshot) {
+                    projectedAXOrVertexADepth = sh.projectedMeshVertexX[vertexAOrPriorityIndex];
+                    projectedAYOrVertexBDepth = dj.projectedMeshVertexY[vertexAOrPriorityIndex];
+                    edgeBXOrVertexCDepth = sh.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
+                    edgeCXOrRelativeDepthSum = sh.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
+                    edgeBYOrDepthBucketIndex = dj.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
+                    edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + dj.projectedMeshVertexY[vertexC];
+                    if (-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0) {
+                      break L4;
+                    }
+                  }
+                  projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
+                  if ((-2147483648 == projectedAXOrVertexADepth) &&
+                      (controlFlagSnapshot == 0)) {
+                    break L4;
+                  }
+                  projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
+                  if ((-2147483648 == projectedAYOrVertexBDepth) &&
+                      (controlFlagSnapshot == 0)) {
+                    break L4;
+                  }
+                  edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
+                  if (edgeBXOrVertexCDepth != -2147483648) {
+                    edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepth + (projectedAXOrVertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
+                    if (depthBucketShift < 0) {
+                      scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
+                    } else {
+                      scaledRelativeDepthSum = edgeCXOrRelativeDepthSum >> depthBucketShift;
+                    }
+                    edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + ch.meshFaceCountsByDepthBucket.length);
+                    edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                    while (true) {
+                      L10: {
+                        if (edgeCYOrBucketOccupancy >> 4 != 0) {
+                          edgeBYOrDepthBucketIndex--;
+                          bucketIndexOrFaceOrderIndex = edgeBYOrDepthBucketIndex;
+                          if (controlFlagSnapshot != 0) {
+                            break L10;
+                          }
+                          if (bucketIndexOrFaceOrderIndex < 0) {
+                            System.err.println("Out of range!");
+                            if (controlFlagSnapshot == 0) {
+                              break L4;
+                            }
+                          }
+                          edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                          if (controlFlagSnapshot == 0) {
+                            continue;
+                          }
+                        }
+                        bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
+                      }
+                      faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
+                      pj.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
+                      ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
+                      if ((0 < mesh.facePriorityCount) &&
+                          (null != mesh.facePriorities)) {
+                        facePriority = mesh.facePriorities[faceIndexOrPriorityPrefix];
+                        uh.meshFacePriorityWriteOffsets[facePriority] = uh.meshFacePriorityWriteOffsets[facePriority] + 1;
+                      }
+                      ch.queuedMeshFaceCount = ch.queuedMeshFaceCount + 1;
+                      break L4;
+                    }
+                  }
+                }
+                faceIndexOrPriorityPrefix++;
+                if (controlFlagSnapshot == 0) {
+                  continue;
+                }
+              }
+              cullFlagOrPriorityLoopSentinel = -1;
+            }
+            L15: {
+              if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
+                  (null != mesh.facePriorities)) {
+                faceIndexOrPriorityPrefix = 0;
+                vertexAOrPriorityIndex = 0;
+                while (true) {
+                  if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
+                    break L15;
+                  }
+                  vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
+                  uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
+                  faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
+                  vertexAOrPriorityIndex++;
+                  if (controlFlagSnapshot != 0) {
+                    return;
+                  }
+                  if (controlFlagSnapshot == 0) {
+                    continue;
+                  }
+                  break L15;
+                }
+              }
+            }
+            if (integerMethodGuard != 22) {
+              avatarMaskRaster = (Sprite) null;
+            }
+            return;
+          }
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          contextFailure = caughtFailure;
+          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextBuilder = new StringBuilder().append("i.B(").append(minimumVisibleDepth).append(',').append(integerMethodGuard).append(',');
+          if (mesh == null) {
+            meshContextDescription = "null";
+          } else {
+            meshContextDescription = "{...}";
+          }
+          throw t.a((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(meshContextDescription).append(',').append(maximumVisibleDepth).append(',').append(cullBackfaces).append(')').toString());
+        }
+    }
 }

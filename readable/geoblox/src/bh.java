@@ -9,15 +9,15 @@ final class bh extends java.awt.Canvas {
     private java.awt.Component field_b;
     static ob field_a;
 
-    final static int a(byte param0, int param1) {
-        if (param0 <= 7) {
+    final static int sineQ16(byte methodGuard, int angle8192) {
+        if (methodGuard <= 7) {
             return -8;
         }
-        param1 = param1 & 8191;
-        if (param1 < 4096) {
-            return param1 < 2048 ? ai.field_l[param1] : ai.field_l[4096 - param1];
+        angle8192 = angle8192 & 8191;
+        if (angle8192 < 4096) {
+            return angle8192 < 2048 ? ai.quarterSineQ16[angle8192] : ai.quarterSineQ16[4096 - angle8192];
         }
-        return param1 >= 6144 ? -ai.field_l[-param1 + 8192] : -ai.field_l[param1 - 4096];
+        return angle8192 >= 6144 ? -ai.quarterSineQ16[-angle8192 + 8192] : -ai.quarterSineQ16[angle8192 - 4096];
     }
 
     public static void a(byte param0) {

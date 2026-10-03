@@ -1,8 +1,8 @@
 # Readable GeoBlox
 
-The current export has 6,549 guarded naming rules: 62 classes, 837 fields,
-569 methods, 1,725 parameters and 3,356 local declarations. Both 303-file corpora
-compile, preserving 138,502 bindings and 388 override relationships. Unknown
+The current export has 6,683 guarded naming rules: 62 classes, 842 fields,
+579 methods, 1,746 parameters and 3,454 local declarations. Both 303-file corpora
+compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`e38d0eccc0deda0553930a2a1227c684a47f4ac3`. It comes from java-tools
-`f0763fad063121cd249c9cfd0c522fa52d9b4ace` and Deko
+`d248ccd417468ca72a4ec5227ed4c41c0059c7bb`. It comes from java-tools
+`ac70ec74349c21a7d91b321575243577a4a3734a` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`6f7b251bee18053f7db1c3970dc6a52d421b1709d3366b65c4cb11cf0b3c370e`:
+`c7a180dd8a0c328443818cbdd414a05e5af77e370cad17eebebd20b777060d50`:
 
 ```sh
-git archive --format=tar f0763fad063121cd249c9cfd0c522fa52d9b4ace | sha256sum
+git archive --format=tar ac70ec74349c21a7d91b321575243577a4a3734a | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,65 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current nested guard reconstruction
+## Current logo scene and integer-argument correction
+
+Pass 85 adds 134 guarded identities: five fields, ten methods, 21 parameters
+and 98 locals. It names logo loading/material decoding, the animation clock,
+rotation transforms and rendering, plus the additional integer-guard collector.
+All 6,549 previous complete naming objects remain. The 6,683 rules apply
+53,607 edits. SourceEvidence entries are refreshed in the same maintained
+manifest; no versioned JSON snapshots are added.
+
+`ck.renderLogoMeshes` computes bounds depths, selects the greatest remaining
+key, prepares the selected mesh's rotation, adds centers by draw-order index,
+then projects and lights faces. Centers retain that original index behavior.
+The three easing branches, mesh-specific rotation signs, pointer-driven light,
+overflow, guard timing and failure contexts remain. `quarterSineQ16`,
+`logoAnimationTick`, `logoStartDelayTicks`, `logoMeshes` and `logoMeshCenters`
+name shared data; existing pointer snapshot names stay unchanged.
+
+The new logo probe exposed a real source/bytecode mismatch in 120 scene cases.
+A full JVM int was forwarded to the collector's byte parameter without `i2b`.
+The generated Java cast narrowed -8170 to 22, incorrectly skipping sprite
+cleanup. Generic java-tools now emits a deterministic int-parameter entry point
+for owned static targets reached through int stack carriers. The readable name
+is `i.queueMeshFacesByDepthWithIntegerGuard`. The original collector's signature
+and body remain. Its additional body is identical except the name and guard
+parameter type. Only `i.java` and `p.java` change in the raw export: one added
+body and one call replacement. All original declarations/ordinals and 388
+overrides remain; 33 declarations and 238 references are added, with one old
+call reference replaced. The current audit compares 19,591 declarations and
+119,181 references. This corrects behavior and adds source size; it does not
+reduce the large-method count.
+
+`NODE_PATH=/path/to/dependencies node test/cfrNarrowIntegerArguments.test.js`
+passes two groups: 201 native invocation results compared through directory,
+JAR and multi-class AST exports, plus target/descriptor refusal checks.
+Discovery currently covers int-typed stack carriers to owned static methods.
+Arbitrary direct int expressions, external/virtual/constructor calls and
+boolean encodings are outside this proof. The original and integer bodies
+currently coexist.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs VERIFIED_CLASSES`
+compares native/raw/readable traces with the original native hash unchanged.
+The 56,862 logo cases include 49,200 trigonometric checks, 256 transform checks,
+2,268 orientation traces, 224 clock oracles, 576 material traces (48 valid-input
+oracles), 18 null-archive loader traces and 4,320 controlled rendering traces.
+There are 72 zero-rotation draw-order/depth oracles, 804 successful scene calls
+and 216 pixel-changing scenes. Trig/composition checks allow one integer unit
+for the original lookup/product rounding. General easing and complete pixels
+lack new independent oracles; successful actual archive decoding remains
+unverified. Trace SHA-256:
+`7a9551ce1b3e69ac61c2aa291b1b88b9a20d3bd45f2ee903b37657f7d9e00351`.
+
+A clean committed decompiler source tar generates all 303 raw files and current
+diagnostics. Reproduction compiles and compares both corpora, and dictionary
+reversal is byte-exact against the pinned Git input. Rule-builder/migration/text
+checks pass 9/8/6 groups. Earlier drawing traces retain their hashes. Opaque
+names, large control bodies, real assets/gameplay and browser/phone performance
+acceptance remain unfinished or unverified.
+
+## Previous nested guard reconstruction
 
 Pass 84 changes the generic decompiler rather than adding names.
 `foldNestedIfGuards` replaces 710 nested braced guard chains with ordered
@@ -1729,8 +1787,8 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-The current structural pass records its source migration in `sourceChange`
-and retains all 6,549 complete rules with an empty `ruleChanges` list.
+Pass 85 records its source migration in `sourceChange` and 134 additions in
+`ruleChanges`, preserving all 6,549 previous complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -1753,7 +1811,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `fe14e8a5abf577b825d5d210ee51cce9b3d43481bc3715bff080220b5636cd25` |
-| Readable | `7e1bde5cb76eb4fa8aa849a65ba4759744de86a2b29aadb7ee78bac3850a2578` |
+| Raw | `2995331e604149cd5b7e6e4cbc608fbd8eca8f61cc104b3da7f1910ced8a4399` |
+| Readable | `6262c0a55baa8057c09e0954fc49344374312c01eed8e28e0da9286a5db4b390` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

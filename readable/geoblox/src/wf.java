@@ -499,8 +499,8 @@ abstract class wf extends ch {
         var3 = Geoblox.field_C;
         if (!fj.f(-31456)) {
           if (mi.field_C >= 10) {
-            if (!wj.f(7426)) {
-              td.g((byte) 88);
+            if (!wj.isLogoAnimationComplete(7426)) {
+              td.advanceLogoAnimationTick((byte) 88);
             } else {
               if (hj.field_a != 0) {
                 oj.a(vc.field_i, (byte) -96);

@@ -32,20 +32,20 @@ final class fi {
         return null;
     }
 
-    final static int a(int param0, int param1) {
-        if (param1 != 2048) {
+    final static int cosineQ16(int angle8192, int methodGuard) {
+        if (methodGuard != 2048) {
             changeDisplayNameText = (String) null;
-            param0 = param0 & 8191;
-            if (param0 >= 4096) {
-                return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
+            angle8192 = angle8192 & 8191;
+            if (angle8192 >= 4096) {
+                return angle8192 >= 6144 ? ai.quarterSineQ16[-6144 + angle8192] : -ai.quarterSineQ16[-angle8192 + 6144];
             }
-            return 2048 <= param0 ? -ai.field_l[param0 - 2048] : ai.field_l[-param0 + 2048];
+            return 2048 <= angle8192 ? -ai.quarterSineQ16[angle8192 - 2048] : ai.quarterSineQ16[-angle8192 + 2048];
         }
-        param0 = param0 & 8191;
-        if (param0 >= 4096) {
-            return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
+        angle8192 = angle8192 & 8191;
+        if (angle8192 >= 4096) {
+            return angle8192 >= 6144 ? ai.quarterSineQ16[-6144 + angle8192] : -ai.quarterSineQ16[-angle8192 + 6144];
         }
-        return 2048 <= param0 ? -ai.field_l[param0 - 2048] : ai.field_l[-param0 + 2048];
+        return 2048 <= angle8192 ? -ai.quarterSineQ16[angle8192 - 2048] : ai.quarterSineQ16[-angle8192 + 2048];
     }
 
     final void a(byte param0, IntrusiveNode param1, long param2) {

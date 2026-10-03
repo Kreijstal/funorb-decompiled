@@ -24,7 +24,7 @@ final class ei extends qf {
             }
             ArchiveRequest.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, kh.a((byte) -85));
           } else {
-            if (wj.f(7426)) {
+            if (wj.isLogoAnimationComplete(7426)) {
               if (hj.field_a == 0) {
                 ue.a(param0, false, (byte) -102);
                 i.a(0, (byte) 42, param2, 0);

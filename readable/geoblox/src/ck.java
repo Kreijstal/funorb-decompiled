@@ -16,102 +16,102 @@ final class ck {
         return true;
     }
 
-    final static void a(byte param0) {
-        int var17_int = 0;
-        int var18 = 0;
-        int var1_int = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        TriangleMesh var4_ref_nf = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10_int = 0;
-        double var10 = 0.0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var19 = 0;
-        int[] var20 = null;
-        int[] var21 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        TriangleMesh var17 = null;
-        var19 = Geoblox.field_C;
+    final static void renderLogoMeshes(byte methodGuard) {
+        int depthCandidateIndex = 0;
+        int translationComponentIndex = 0;
+        int meshCount = 0;
+        int[] meshDepthKeysAlias = null;
+        int meshIndexOrViewDirectionXQ8 = 0;
+        TriangleMesh meshForDepthBounds = null;
+        int viewDirectionYQ8 = 0;
+        int boundsCenterXOrViewDirectionZQ8 = 0;
+        int boundsCenterYOrLightAngle = 0;
+        int boundsCenterZOrLightDirectionXQ8 = 0;
+        int cameraDepthBasisXQ14OrLightDirectionYQ8 = 0;
+        int cameraDepthBasisYQ14OrLightDirectionZQ8 = 0;
+        int cameraDepthBasisZQ14 = 0;
+        double directionNormalizationScale = 0.0;
+        int meshDepthFromXQ16 = 0;
+        int meshDepthFromYQ16OrHalfVectorXQ8 = 0;
+        int meshDepthFromZQ16OrHalfVectorYQ8 = 0;
+        int halfVectorZQ8 = 0;
+        int drawOrderIndexOrFinalGuardQuotient = 0;
+        int selectedMeshIndex = 0;
+        int controlFlagSnapshot = 0;
+        int[] allocatedDepthKeysAlias = null;
+        int[] meshDepthKeys = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException contextFailure = null;
+        TriangleMesh selectedMesh = null;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
           IntKeyLookup.meshCameraTransform = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = ArchiveIndex.field_l.length;
-          var21 = new int[var1_int];
-          var20 = var21;
-          var2 = var20;
-          for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_nf = ArchiveIndex.field_l[var3];
-            var4_ref_nf.refreshBounds((byte) -99);
-            Geoblox.a((byte) -112, var3);
-            var5 = var4_ref_nf.minX + var4_ref_nf.maxX >> 1;
-            var6 = var4_ref_nf.minY + var4_ref_nf.maxY >> 1;
-            var7 = var4_ref_nf.maxZ + var4_ref_nf.minZ >> 1;
-            var8 = IntKeyLookup.meshCameraTransform[9] >> 2;
-            var9 = IntKeyLookup.meshCameraTransform[10] >> 2;
-            var10_int = IntKeyLookup.meshCameraTransform[11] >> 2;
-            var11 = var10_int * lk.meshModelTransform[5] + var8 * lk.meshModelTransform[3] + lk.meshModelTransform[4] * var9 >> 14;
-            var12 = var9 * lk.meshModelTransform[7] + (var8 * lk.meshModelTransform[6] + lk.meshModelTransform[8] * var10_int) >> 14;
-            var13 = var10_int * lk.meshModelTransform[11] + (var8 * lk.meshModelTransform[9] + lk.meshModelTransform[10] * var9) >> 14;
-            var2[var3] = var5 * var11 + var12 * var6 + var13 * var7 >> 16;
+          meshCount = ArchiveIndex.logoMeshes.length;
+          meshDepthKeys = new int[meshCount];
+          allocatedDepthKeysAlias = meshDepthKeys;
+          meshDepthKeysAlias = allocatedDepthKeysAlias;
+          for (meshIndexOrViewDirectionXQ8 = 0; meshCount > meshIndexOrViewDirectionXQ8; meshIndexOrViewDirectionXQ8++) {
+            meshForDepthBounds = ArchiveIndex.logoMeshes[meshIndexOrViewDirectionXQ8];
+            meshForDepthBounds.refreshBounds((byte) -99);
+            Geoblox.prepareLogoMeshRotation((byte) -112, meshIndexOrViewDirectionXQ8);
+            boundsCenterXOrViewDirectionZQ8 = meshForDepthBounds.minX + meshForDepthBounds.maxX >> 1;
+            boundsCenterYOrLightAngle = meshForDepthBounds.minY + meshForDepthBounds.maxY >> 1;
+            boundsCenterZOrLightDirectionXQ8 = meshForDepthBounds.maxZ + meshForDepthBounds.minZ >> 1;
+            cameraDepthBasisXQ14OrLightDirectionYQ8 = IntKeyLookup.meshCameraTransform[9] >> 2;
+            cameraDepthBasisYQ14OrLightDirectionZQ8 = IntKeyLookup.meshCameraTransform[10] >> 2;
+            cameraDepthBasisZQ14 = IntKeyLookup.meshCameraTransform[11] >> 2;
+            meshDepthFromXQ16 = cameraDepthBasisZQ14 * lk.meshModelTransform[5] + cameraDepthBasisXQ14OrLightDirectionYQ8 * lk.meshModelTransform[3] + lk.meshModelTransform[4] * cameraDepthBasisYQ14OrLightDirectionZQ8 >> 14;
+            meshDepthFromYQ16OrHalfVectorXQ8 = cameraDepthBasisYQ14OrLightDirectionZQ8 * lk.meshModelTransform[7] + (cameraDepthBasisXQ14OrLightDirectionYQ8 * lk.meshModelTransform[6] + lk.meshModelTransform[8] * cameraDepthBasisZQ14) >> 14;
+            meshDepthFromZQ16OrHalfVectorYQ8 = cameraDepthBasisZQ14 * lk.meshModelTransform[11] + (cameraDepthBasisXQ14OrLightDirectionYQ8 * lk.meshModelTransform[9] + lk.meshModelTransform[10] * cameraDepthBasisYQ14OrLightDirectionZQ8) >> 14;
+            meshDepthKeysAlias[meshIndexOrViewDirectionXQ8] = boundsCenterXOrViewDirectionZQ8 * meshDepthFromXQ16 + meshDepthFromYQ16OrHalfVectorXQ8 * boundsCenterYOrLightAngle + meshDepthFromZQ16OrHalfVectorYQ8 * boundsCenterZOrLightDirectionXQ8 >> 16;
           }
-          var3 = IntKeyLookup.meshCameraTransform[9] >> 8;
-          var4 = IntKeyLookup.meshCameraTransform[10] >> 8;
-          var5 = IntKeyLookup.meshCameraTransform[11] >> 8;
-          var6 = gb.field_f << 4;
-          var7 = 0;
-          var8 = bh.a((byte) 81, var6) >> 8;
-          var9 = fi.a(var6, 2048) >> 8;
+          meshIndexOrViewDirectionXQ8 = IntKeyLookup.meshCameraTransform[9] >> 8;
+          viewDirectionYQ8 = IntKeyLookup.meshCameraTransform[10] >> 8;
+          boundsCenterXOrViewDirectionZQ8 = IntKeyLookup.meshCameraTransform[11] >> 8;
+          boundsCenterYOrLightAngle = gb.logoAnimationTick << 4;
+          boundsCenterZOrLightDirectionXQ8 = 0;
+          cameraDepthBasisXQ14OrLightDirectionYQ8 = bh.sineQ16((byte) 81, boundsCenterYOrLightAngle) >> 8;
+          cameraDepthBasisYQ14OrLightDirectionZQ8 = fi.cosineQ16(boundsCenterYOrLightAngle, 2048) >> 8;
           if ((PrefixCodeDecoder.pointerXSnapshot != -1) &&
               (ue.pointerYSnapshot != -1)) {
-            var7 = -320 + PrefixCodeDecoder.pointerXSnapshot;
-            var9 = -128;
-            var8 = -ue.pointerYSnapshot + 240;
+            boundsCenterZOrLightDirectionXQ8 = -320 + PrefixCodeDecoder.pointerXSnapshot;
+            cameraDepthBasisYQ14OrLightDirectionZQ8 = -128;
+            cameraDepthBasisXQ14OrLightDirectionYQ8 = -ue.pointerYSnapshot + 240;
           }
-          var10 = 256.0 / Math.sqrt((double)(var8 * var8 + (var7 * var7 + var9 * var9)));
-          var8 = (int)((double)var8 * var10);
-          var7 = (int)((double)var7 * var10);
-          var9 = (int)((double)var9 * var10);
-          var12 = var7 - var3;
-          var13 = var8 - var4;
-          var14 = -var5 + var9;
-          var10 = 256.0 / Math.sqrt((double)(var14 * var14 + (var13 * var13 + var12 * var12)));
-          var14 = (int)((double)var14 * var10);
-          var12 = (int)((double)var12 * var10);
-          var13 = (int)((double)var13 * var10);
-          for (var15 = 0; ArchiveIndex.field_l.length > var15; var15++) {
-            var16 = 0;
-            for (var17_int = 1; ArchiveIndex.field_l.length > var17_int; var17_int++) {
-              if (var21[var17_int] <= var21[var16]) {
+          directionNormalizationScale = 256.0 / Math.sqrt((double)(cameraDepthBasisXQ14OrLightDirectionYQ8 * cameraDepthBasisXQ14OrLightDirectionYQ8 + (boundsCenterZOrLightDirectionXQ8 * boundsCenterZOrLightDirectionXQ8 + cameraDepthBasisYQ14OrLightDirectionZQ8 * cameraDepthBasisYQ14OrLightDirectionZQ8)));
+          cameraDepthBasisXQ14OrLightDirectionYQ8 = (int)((double)cameraDepthBasisXQ14OrLightDirectionYQ8 * directionNormalizationScale);
+          boundsCenterZOrLightDirectionXQ8 = (int)((double)boundsCenterZOrLightDirectionXQ8 * directionNormalizationScale);
+          cameraDepthBasisYQ14OrLightDirectionZQ8 = (int)((double)cameraDepthBasisYQ14OrLightDirectionZQ8 * directionNormalizationScale);
+          meshDepthFromYQ16OrHalfVectorXQ8 = boundsCenterZOrLightDirectionXQ8 - meshIndexOrViewDirectionXQ8;
+          meshDepthFromZQ16OrHalfVectorYQ8 = cameraDepthBasisXQ14OrLightDirectionYQ8 - viewDirectionYQ8;
+          halfVectorZQ8 = -boundsCenterXOrViewDirectionZQ8 + cameraDepthBasisYQ14OrLightDirectionZQ8;
+          directionNormalizationScale = 256.0 / Math.sqrt((double)(halfVectorZQ8 * halfVectorZQ8 + (meshDepthFromZQ16OrHalfVectorYQ8 * meshDepthFromZQ16OrHalfVectorYQ8 + meshDepthFromYQ16OrHalfVectorXQ8 * meshDepthFromYQ16OrHalfVectorXQ8)));
+          halfVectorZQ8 = (int)((double)halfVectorZQ8 * directionNormalizationScale);
+          meshDepthFromYQ16OrHalfVectorXQ8 = (int)((double)meshDepthFromYQ16OrHalfVectorXQ8 * directionNormalizationScale);
+          meshDepthFromZQ16OrHalfVectorYQ8 = (int)((double)meshDepthFromZQ16OrHalfVectorYQ8 * directionNormalizationScale);
+          for (drawOrderIndexOrFinalGuardQuotient = 0; ArchiveIndex.logoMeshes.length > drawOrderIndexOrFinalGuardQuotient; drawOrderIndexOrFinalGuardQuotient++) {
+            selectedMeshIndex = 0;
+            for (depthCandidateIndex = 1; ArchiveIndex.logoMeshes.length > depthCandidateIndex; depthCandidateIndex++) {
+              if (meshDepthKeys[depthCandidateIndex] <= meshDepthKeys[selectedMeshIndex]) {
                 continue;
               }
-              var16 = var17_int;
+              selectedMeshIndex = depthCandidateIndex;
             }
-            var21[var16] = -2147483648;
-            var17 = ArchiveIndex.field_l[var16];
-            Geoblox.a((byte) -112, var16);
-            for (var18 = 0; var18 < 3; var18++) {
-              lk.meshModelTransform[var18] = lk.meshModelTransform[var18] + pi.field_R[var15][var18];
+            meshDepthKeys[selectedMeshIndex] = -2147483648;
+            selectedMesh = ArchiveIndex.logoMeshes[selectedMeshIndex];
+            Geoblox.prepareLogoMeshRotation((byte) -112, selectedMeshIndex);
+            for (translationComponentIndex = 0; translationComponentIndex < 3; translationComponentIndex++) {
+              lk.meshModelTransform[translationComponentIndex] = lk.meshModelTransform[translationComponentIndex] + pi.logoMeshCenters[drawOrderIndexOrFinalGuardQuotient][translationComponentIndex];
             }
-            p.projectMeshAndQueueFaces(IntKeyLookup.meshCameraTransform, lk.meshModelTransform, var17, true, false, false, true);
-            hi.renderLitQueuedMeshFaces(var14, var9, var12, 6562, var7, var17, var13, var8);
+            p.projectMeshAndQueueFaces(IntKeyLookup.meshCameraTransform, lk.meshModelTransform, selectedMesh, true, false, false, true);
+            hi.renderLitQueuedMeshFaces(halfVectorZQ8, cameraDepthBasisYQ14OrLightDirectionZQ8, meshDepthFromYQ16OrHalfVectorXQ8, 6562, boundsCenterZOrLightDirectionXQ8, selectedMesh, meshDepthFromZQ16OrHalfVectorYQ8, cameraDepthBasisXQ14OrLightDirectionYQ8);
           }
-          var15 = 123 / ((48 - param0) / 59);
+          drawOrderIndexOrFinalGuardQuotient = 123 / ((48 - methodGuard) / 59);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ck.D(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          contextFailure = caughtFailure;
+          throw t.a((Throwable) ((Object) contextFailure), "ck.D(" + methodGuard + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class ck {
             return;
           }
           if (param0 != 1) {
-            ck.a((byte) 8);
+            ck.renderLogoMeshes((byte) 8);
           }
           oh.field_b.a(true, 127, dk.field_c, ni.field_I);
           oh.field_b.i(-50);

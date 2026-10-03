@@ -16,10 +16,21 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 138,502 remaining bindings
-and 388 override relationships.
+identities. Both 303-file Java corpora compile and compare 138,772 bindings,
+preserving 388 override relationships.
 
-The current structural pass replaces 710 nested braced guard chains with ordered
+Pass 85 names the animated logo scene, adding 134 guarded identities for its
+clock, rotations, materials, loader, rendering and integer-guard face collector.
+The 6,683 rules apply 53,607 edits and preserve every previous naming object.
+A new 56,862-case native logo trace exposed 120 cleanup mismatches caused by
+narrowing a full JVM integer to a Java byte. The generic decompiler now preserves
+that integer through an additional owned static entry point. The original
+collector signature/body remain; only two raw files change. Native/raw/readable
+logo traces now match the fixed native hash. Trig/matrix/clock/material and limited
+draw-order/depth oracles retain their documented scope; real archive decoding,
+whole-game rendering and browser/phone performance remain unverified.
+
+The previous structural pass replaces 710 nested braced guard chains with ordered
 short-circuit checks, merging 913 conditions across 131 files and removing 913
 lines. Predicate bytes/order and the innermost declaration scope stay intact;
 intervening statements and protected boundaries are not crossed. The generic
@@ -36,7 +47,7 @@ face collection: camera/model bases, perspective coordinates, normal transforms,
 optional coordinate triples, backface rejection, depth buckets and priority counts.
 Every parameter/local in the five selected methods has a name. Original shifts,
 overflow, guard/control paths, aliases, partial writes and diagnostics remain.
-Raw/decompiler pins are unchanged.
+That naming pass kept its raw/decompiler pins unchanged.
 
 The existing drawing probe adds 5,992 native/raw/readable cases, including limited
 identity-projection, bit-length and buffer-clearing oracles, general geometry and

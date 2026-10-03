@@ -209,7 +209,7 @@ final class p extends IntrusiveNode {
               nearPlaneOrNormalCapacityOrQueueMinDepth = minimumVisibleDepth;
               invertedDepthOrNormalIndexOrQueueGuard = 22;
             }
-            i.queueMeshFacesByDepth(nearPlaneOrNormalCapacityOrQueueMinDepth, (byte) invertedDepthOrNormalIndexOrQueueGuard, mesh, maximumVisibleDepth, cullBackfaces);
+            i.queueMeshFacesByDepthWithIntegerGuard(nearPlaneOrNormalCapacityOrQueueMinDepth, invertedDepthOrNormalIndexOrQueueGuard, mesh, maximumVisibleDepth, cullBackfaces);
             return;
           }
         } catch (java.lang.RuntimeException caughtParameter) {

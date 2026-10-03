@@ -15,31 +15,31 @@ final class eh {
         int var7;
         int var8;
         var8 = Geoblox.field_C;
-        if (gb.field_f < 0) {
+        if (gb.logoAnimationTick < 0) {
           return;
         }
         var3 = -135 + param1;
         var4 = param0 - 35;
         var5 = 256;
-        if (75 > gb.field_f) {
-          var5 = (gb.field_f << 8) / 75;
+        if (75 > gb.logoAnimationTick) {
+          var5 = (gb.logoAnimationTick << 8) / 75;
         }
-        if (gb.field_f > 200) {
-          var5 = (250 - gb.field_f << 8) / 50;
+        if (gb.logoAnimationTick > 200) {
+          var5 = (250 - gb.logoAnimationTick << 8) / 50;
         }
         Geoblox.setRasterTarget(1, ki.field_c);
         TriangleRasterState.prepareTriangleClipFromRasterizer();
         SoftwareRasterizer.clearFramebuffer();
-        ck.a((byte) 123);
+        ck.renderLogoMeshes((byte) 123);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
           id.a(true);
-          if (gb.field_f >= 150) {
+          if (gb.logoAnimationTick >= 150) {
             bk.field_b.drawAlpha(15 + var3, var4 + 10, var5);
           } else {
             ki.field_c.drawHalfSize(var3, var4);
           }
-          var6 = -125 + gb.field_f;
+          var6 = -125 + gb.logoAnimationTick;
           if (param2 != -51) {
             openInPopupWindowText = (String) null;
           }
@@ -59,9 +59,9 @@ final class eh {
           }
         } else {
           id.a(true);
-          if (gb.field_f >= 150) {
+          if (gb.logoAnimationTick >= 150) {
             bk.field_b.drawAlpha(15 + var3, var4 + 10, var5);
-            var6 = -125 + gb.field_f;
+            var6 = -125 + gb.logoAnimationTick;
             if (param2 != -51) {
               openInPopupWindowText = (String) null;
               if ((var6 > 0) &&
@@ -78,7 +78,7 @@ final class eh {
                   cd.field_l.drawAdditive(var3, var4, var7);
                 }
               }
-              var6 = gb.field_f - 140;
+              var6 = gb.logoAnimationTick - 140;
               if (var6 > 0) {
                 var7 = 256;
                 if (var6 < 20) {
@@ -88,7 +88,7 @@ final class eh {
               }
             } else {
               if (var6 <= 0) {
-                var6 = gb.field_f - 140;
+                var6 = gb.logoAnimationTick - 140;
                 if (var6 > 0) {
                   var7 = 256;
                   if (var6 < 20) {
@@ -98,7 +98,7 @@ final class eh {
                 }
               } else {
                 if (var6 >= 50) {
-                  var6 = gb.field_f - 140;
+                  var6 = gb.logoAnimationTick - 140;
                   if (var6 > 0) {
                     var7 = 256;
                     if (var6 < 20) {
@@ -110,7 +110,7 @@ final class eh {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
                     cd.field_l.drawAdditive(var3, var4, var7);
-                    var6 = gb.field_f - 140;
+                    var6 = gb.logoAnimationTick - 140;
                     if (var6 > 0) {
                       var7 = 256;
                       if (var6 < 20) {
@@ -121,7 +121,7 @@ final class eh {
                   } else {
                     if (var6 < 30) {
                       cd.field_l.drawAdditive(var3, var4, 256);
-                      var6 = gb.field_f - 140;
+                      var6 = gb.logoAnimationTick - 140;
                       if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
@@ -132,7 +132,7 @@ final class eh {
                     } else {
                       var7 = 256 * (-var6 + 50) / 20;
                       cd.field_l.drawAdditive(var3, var4, var7);
-                      var6 = gb.field_f - 140;
+                      var6 = gb.logoAnimationTick - 140;
                       if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
@@ -148,7 +148,7 @@ final class eh {
             return;
           }
           ki.field_c.drawHalfSize(var3, var4);
-          var6 = -125 + gb.field_f;
+          var6 = -125 + gb.logoAnimationTick;
           if (param2 != -51) {
             openInPopupWindowText = (String) null;
             if ((var6 > 0) &&
@@ -182,7 +182,7 @@ final class eh {
             }
           }
         }
-        var6 = gb.field_f - 140;
+        var6 = gb.logoAnimationTick - 140;
         if (var6 > 0) {
           var7 = 256;
           if (var6 < 20) {

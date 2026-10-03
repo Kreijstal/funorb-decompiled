@@ -20,7 +20,8 @@ const expectedTriangleRasterSha256 = '3a708f0eb4343a68f9cd859b75cc6d42db0eda6901
 const expectedMeshLightingSha256 = '8606f3fa1d8808bbfd5e5bfafe3b67872487172f07455401ac290acf79f5fdc6';
 const expectedFlatTriangleRasterSha256 = '60e7b9df0d8b178901617ebcd5a7b8da7745fdaf40f40beea681676733237ab7';
 const expectedMeshProjectionSha256 = '57934a58138344ef260c50eab4b271b90db9c07dd51825e4a4f30874eeef3f34';
-let expectedMeshProjection=null, expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null, expectedMeshLighting=null, expectedFlatTriangleRaster=null;
+const expectedLogoSceneSha256 = '7a9551ce1b3e69ac61c2aa291b1b88b9a20d3bd45f2ee903b37657f7d9e00351';
+let expectedLogoScene=null, expectedMeshProjection=null, expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null, expectedMeshLighting=null, expectedFlatTriangleRaster=null;
 try {
   if(nativeInput) {
     const files=[];
@@ -59,7 +60,8 @@ try {
       }
       public static void main(String[]args)throws Exception {
         if(args.length!=0){
-          if(args[0].equals("mesh-projection"))MeshProjectionBehavior.main(args);
+          if(args[0].equals("logo-scene"))LogoSceneBehavior.main(args);
+          else if(args[0].equals("mesh-projection"))MeshProjectionBehavior.main(args);
           else if(args[0].equals("flat-triangle"))FlatTriangleBehavior.main(args);
           else if(args[0].equals("mesh-lighting"))MeshLightingBehavior.main(args);
           else if(args[0].equals("triangle-raster"))TriangleRasterBehavior.main(args);
@@ -91,6 +93,134 @@ try {
           System.out.println(result);cases++;
         }
         if(cases!=2592)throw new AssertionError(cases);
+      }
+    }
+    class LogoSceneBehavior extends MeshProjectionBehavior {
+      static String values(int[] a){return java.util.Arrays.toString(a);}
+      static int[] model()throws Exception{return (int[])f("${type('lk')}","${field('lk','field_f','[I')}").get(null);}
+      static int bitPosition(${type('pk')} input)throws Exception{return f("${type('pk')}","${field('pk','field_s','I')}").getInt(input);}
+      static class Bits {
+        final byte[] data=new byte[2048];int position;
+        void write(int value,int count){for(int i=count-1;i>=0;i--){if(((value>>>i)&1)!=0)data[position>>>3]|=(byte)(1<<(7-(position&7)));position++;}}
+        byte[] bytes(){return java.util.Arrays.copyOf(data,(position+7)/8);}
+      }
+      static String materials(${type('fd')}[] materials){
+        if(materials==null)return "null";StringBuilder result=new StringBuilder();
+        for(int i=0;i<materials.length;i++){
+          if(materials[i]==null){result.append("null;");continue;}int first=0;while(materials[first]!=materials[i])first++;
+          result.append(first).append(':').append(materials[i].${field('fd','field_a','I')}).append(';');
+        }
+        return result.toString();
+      }
+      static ${type('nf')} sceneMesh(int index)throws Exception {
+        ${type('nf')} mesh=new ${type('nf')}();mesh.${field('nf','field_o','S')}=3;mesh.${field('nf','field_m','S')}=1;mesh.${field('nf','field_f','S')}=1;
+        mesh.${field('nf','field_O','[S')}=new short[]{-20,20,0};mesh.${field('nf','field_q','[S')}=new short[]{-10,-10,20};
+        mesh.${field('nf','field_K','[S')}=new short[]{(short)(index*25-25),(short)(index*25-25),(short)(index*25-25)};
+        mesh.${field('nf','field_r','[S')}=new short[]{0};mesh.${field('nf','field_B','[S')}=new short[]{1};mesh.${field('nf','field_c','[S')}=new short[]{2};
+        mesh.${field('nf','field_M','[S')}=new short[]{0};mesh.${field('nf','field_t','[S')}=new short[]{0};mesh.${field('nf','field_i','[S')}=new short[]{256};
+        mesh.${field('nf','field_P','[S')}=new short[]{0};mesh.${field('nf','field_u','[S')}=new short[]{0};mesh.${field('nf','field_e','[S')}=new short[]{0};
+        mesh.${field('nf','field_G','[S')}=new short[]{(short)index};return mesh;
+      }
+      public static void main(String[] args)throws Exception {
+        trace=MessageDigest.getInstance("SHA-256");cases=0;int trigCases=0,matrixCases=0,orientationCases=0,clockCases=0,materialCases=0,loaderCases=0,sceneCases=0,sceneSuccesses=0,changedScenes=0;
+        f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,0);
+        for(int sample=0;sample<8200;sample++)for(byte sinGuard:new byte[]{8,7,-128})for(int cosGuard:new int[]{2048,0}) {
+          int angle=sample<8192?sample:new int[]{Integer.MIN_VALUE,Integer.MAX_VALUE,-8193,-8192,-1,8192,8193,16384}[sample-8192];
+          f("${type('fi')}","${field('fi','field_h','Ljava/lang/String;')}").set(null,"cos-marker");
+          int sine=${call('bh','a(BI)I')}(sinGuard,angle),cosine=${call('fi','a(II)I')}(angle,cosGuard);
+          int phase=Math.floorMod(angle,8192);long expectedSin=Math.round(65536.0*Math.sin(phase*Math.PI/4096.0)),expectedCos=Math.round(65536.0*Math.cos(phase*Math.PI/4096.0));
+          if(sinGuard<=7?sine!=-8:Math.abs((long)sine-expectedSin)>1||Math.abs((long)cosine-expectedCos)>1)throw new AssertionError("trigonometric oracle");
+          if(Math.abs((long)cosine-expectedCos)>1)throw new AssertionError("cosine oracle");
+          boolean marker=f("${type('fi')}","${field('fi','field_h','Ljava/lang/String;')}").get(null)!=null;
+          if(marker!=(cosGuard==2048))throw new AssertionError("cosine guard side effect");
+          record("trig:"+angle+":"+sinGuard+":"+cosGuard+":"+sine+":"+cosine+":"+marker,null);trigCases++;
+        }
+        int[] angles={0,1,1024,2048,4096,8191,Integer.MIN_VALUE,Integer.MAX_VALUE};
+        for(int x:angles)for(int y:angles)for(byte guard:new byte[]{-128,-65,-64,0}) {
+          int[] actual=${call('bm','a(IBI)[I')}(x,guard,y);
+          if(guard>-65){if(actual!=null)throw new AssertionError("matrix guard");}
+          else{
+            if(actual.length!=12||actual[0]!=0||actual[1]!=0||actual[2]!=0)throw new AssertionError("matrix shape/translation");
+            int sx=${call('bh','a(BI)I')}((byte)69,x),cx=${call('fi','a(II)I')}(x,2048),sy=${call('bh','a(BI)I')}((byte)101,y),cy=${call('fi','a(II)I')}(y,2048);
+            int[][] rx={{65536,0,0},{0,cx,sx},{0,-sx,cx}},ry={{cy,0,-sy},{0,65536,0},{sy,0,cy}};
+            for(int row=0;row<3;row++)for(int col=0;col<3;col++){
+              long product=0;for(int k=0;k<3;k++)product+=(long)ry[row][k]*rx[k][col];int expected=(int)(product>>16);
+              // The original negates selected positive products after shifting.
+              if(Math.abs((long)actual[3+col*3+row]-expected)>1)throw new AssertionError("rotation composition");
+            }
+          }
+          record("matrix:"+x+":"+y+":"+guard,actual);matrixCases++;
+        }
+        int[] ticks={Integer.MIN_VALUE,-50,-1,0,4,5,104,105,119,120,249,250,251,Integer.MAX_VALUE};
+        for(int tick:ticks)for(int index=-1;index<=16;index++)for(byte guard:new byte[]{-112,-65,-64})for(int flag:new int[]{-1,0,1}) {
+          f("${type('gb')}","${field('gb','field_f','I')}").setInt(null,tick);f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);Throwable error=null;
+          f("${type('lk')}","${field('lk','field_f','[I')}").set(null,new int[]{123});
+          try{${call('Geoblox','a(BI)V')}(guard,index);}catch(RuntimeException caught){error=caught;}
+          record("orientation:"+tick+":"+index+":"+guard+":"+flag+":"+failure(error),model());orientationCases++;
+        }
+        for(int tick:ticks)for(int delay:new int[]{0,50})for(byte guard:new byte[]{123,0,36,-128})for(int completeGuard:new int[]{7426,0}) {
+          f("${type('gb')}","${field('gb','field_f','I')}").setInt(null,tick);f("${type('uf')}","${field('uf','field_a','I')}").setInt(null,delay);
+          f("${type('wj')}","${field('wj','field_E','Ljava/lang/String;')}").set(null,"clock-marker");Throwable error=null;
+          try{${call('td','g(B)V')}(guard);}catch(RuntimeException caught){error=caught;}
+          int actual=f("${type('gb')}","${field('gb','field_f','I')}").getInt(null),expected=tick+(((guard-36)/43)!=0?1:0);
+          boolean complete=${call('wj','f(I)Z')}(completeGuard),marker=f("${type('wj')}","${field('wj','field_E','Ljava/lang/String;')}").get(null)!=null;
+          if(actual!=expected||complete!=(expected>250)||marker!=(completeGuard==7426)||((error==null)!=(((guard-36)/43)!=0)))throw new AssertionError("logo clock oracle");
+          record("clock:"+tick+":"+delay+":"+guard+":"+completeGuard+":"+actual+":"+complete+":"+marker+":"+failure(error),null);clockCases++;
+        }
+        for(int seed=0;seed<3;seed++)for(int count:new int[]{0,1,3,7})for(int version:new int[]{0,1})for(boolean enabled:new boolean[]{false,true})for(int flag:new int[]{-1,0,1})for(int cut=0;cut<4;cut++){
+          Bits writer=new Bits();writer.write(version,8);writer.write(count,12);int[] colors=new int[count];
+          for(int i=0;i<count;i++){
+            if((i&1)==0){writer.write(1,1);writer.write(0x123456+seed,24);writer.write(0xabcdef-i,24);colors[i]=(0x13579b^(seed*0x213421)^(i*0x81713))&0xffffff;
+              writer.write(colors[i],24);writer.write(seed+7,9);writer.write(i+11,12);writer.write(seed+13,12);writer.write(i+17,12);
+            }else{writer.write(0,1);writer.write(i-1,32-Integer.numberOfLeadingZeros(i-1));colors[i]=colors[i-1];}
+          }
+          byte[] bytes=writer.bytes();if(cut==1)bytes=new byte[0];if(cut==2)bytes=java.util.Arrays.copyOf(bytes,1);if(cut==3)bytes=java.util.Arrays.copyOf(bytes,bytes.length-1);
+          ${type('pk')} input=new ${type('pk')}(bytes);input.${name('M:pk.k(I)V','k')}(8);${type('fd')}[] actual=null;Throwable error=null;
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);
+          try{actual=${call('jc','a(Lpk;Z)[Lfd;')}(input,enabled);}catch(RuntimeException caught){error=caught;}
+          if(cut==0&&flag==0){
+            if(error!=null)throw new AssertionError("valid material input",error);
+            if(!enabled||version!=0){if(actual!=null||bitPosition(input)!=8)throw new AssertionError("material version/enable");}
+            else{if(actual.length!=count||bitPosition(input)!=writer.position)throw new AssertionError("material shape/cursor");
+              for(int i=0;i<count;i++){if(actual[i].${field('fd','field_a','I')}!=colors[i]||(i%2==1&&actual[i]!=actual[i-1]))throw new AssertionError("material color/alias");}
+            }
+          }
+          record("materials:"+seed+":"+count+":"+version+":"+enabled+":"+flag+":"+cut+":"+failure(error)+":"+bitPosition(input)+":"+materials(actual),null);materialCases++;
+        }
+        for(int guard:new int[]{0,1,Integer.MAX_VALUE})for(int flag:new int[]{-1,0,1})for(int count:new int[]{0,1}) {
+          ${type('nf')}[] meshes=new ${type('nf')}[count];int[][] centers=new int[count][];${type('fd')}[] palette=new ${type('fd')}[count];
+          ${type('bm')}.${field('bm','field_l','[Lnf;')}=meshes;${type('pi')}.${field('pi','field_R','[[I')}=centers;${type('l')}.${field('l','field_i','[Lfd;')}=palette;
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);Throwable error=null;
+          try{${call('ni','a(Lrh;I)V')}((${type('rh')})null,guard);}catch(RuntimeException caught){error=caught;}
+          if(error==null||${type('bm')}.${field('bm','field_l','[Lnf;')}!=meshes||${type('pi')}.${field('pi','field_R','[[I')}!=centers||${type('l')}.${field('l','field_i','[Lfd;')}!=palette)throw new AssertionError("null archive failure");
+          record("loader-null:"+guard+":"+flag+":"+count+":"+failure(error),null);loaderCases++;
+        }
+        int[][] pointers={{-1,-1},{320,240},{0,0},{Integer.MAX_VALUE,Integer.MIN_VALUE}};
+        for(int tick:new int[]{0,5,104,119,120,250})for(int[] pointer:pointers)for(int meshMode=0;meshMode<5;meshMode++)for(byte guard:new byte[]{123,0,-128})for(int flag:new int[]{-1,0,1})for(int fault=0;fault<4;fault++){
+          prepare(11,false);int[] pixels=background(240),before=pixels.clone();viewport(pixels,new int[]{0,0,20,12});
+          ${type('nf')}[] meshes=meshMode==4?null:new ${type('nf')}[meshMode];if(meshes!=null)for(int i=0;i<meshes.length;i++)meshes[i]=sceneMesh(i);
+          if(fault==3&&meshes!=null&&meshes.length!=0)meshes[0]=null;
+          int[][] centers=fault==1?new int[0][]:new int[][]{{-12,0,0},{12,0,4},{0,8,-4}};
+          ${type('bm')}.${field('bm','field_l','[Lnf;')}=meshes;${type('pi')}.${field('pi','field_R','[[I')}=centers;
+          ${type('fd')}[] palette=new ${type('fd')}[3];for(int i=0;i<3;i++){palette[i]=new ${type('fd')}();palette[i].${field('fd','field_a','I')}=new int[]{0xff2403,0x14e840,0x0819ef}[i];}${type('l')}.${field('l','field_i','[Lfd;')}=palette;
+          ${type('jf')}.${field('jf','field_b','[I')}=new int[260];for(int i=0;i<256;i++)${type('jf')}.${field('jf','field_b','[I')}[i]=(int)(255.0*Math.pow((float)i/256.0f,15.0));for(int i=256;i<260;i++)${type('jf')}.${field('jf','field_b','[I')}[i]=255;
+          if(fault==2)buffer(7,null);
+          f("${type('gb')}","${field('gb','field_f','I')}").setInt(null,tick);f("${type('qa')}","${field('qa','field_a','I')}").setInt(null,pointer[0]);f("${type('ue')}","${field('ue','field_e','I')}").setInt(null,pointer[1]);
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);Throwable error=null;
+          try{${call('ck','a(B)V')}(guard);}catch(RuntimeException caught){error=caught;}
+          if(flag==0&&fault==0&&meshMode>0&&meshMode<4&&guard!=0&&(tick==0||tick>=120)){
+            if(error!=null)throw new AssertionError("valid zero-rotation scene",error);
+            int[] transform=model();for(int axis=0;axis<3;axis++)if(transform[axis]!=centers[meshMode-1][axis])throw new AssertionError("draw-order center index");
+            for(int vertex=0;vertex<3;vertex++)if(buffer(2)[vertex]!=8144-25+centers[meshMode-1][2])throw new AssertionError("last depth-selected mesh");
+          }
+          if(error==null)sceneSuccesses++;if(!java.util.Arrays.equals(pixels,before))changedScenes++;
+          StringBuilder meshState=new StringBuilder();if(meshes!=null)for(${type('nf')} mesh:meshes)meshState.append(mesh==null?"null":MeshLightingBehavior.meshState(mesh)).append(';');
+          state("scene:"+tick+":"+values(pointer)+":"+meshMode+":"+guard+":"+flag+":"+fault+":"+values(model())
+            +":"+values(${type('am')}.${field('am','field_a','[I')})+":"+meshState+":"+values(pixels),error);sceneCases++;
+        }
+        if(trigCases!=49200||matrixCases!=256||orientationCases!=2268||clockCases!=224||materialCases!=576||loaderCases!=18||sceneCases!=4320||cases!=56862||sceneSuccesses==0||changedScenes==0)throw new AssertionError("logo case inventory "+cases+":"+sceneSuccesses+":"+changedScenes);
+        StringBuilder sha=new StringBuilder();for(byte value:trace.digest())sha.append(String.format("%02x",value&255));
+        System.out.println("logo-scene:"+cases+":"+trigCases+":"+matrixCases+":"+orientationCases+":"+clockCases+":"+materialCases+":"+loaderCases+":"+sceneCases+":"+sceneSuccesses+":"+changedScenes+":"+sha);
       }
     }
     class MeshProjectionBehavior extends TriangleRasterBehavior {
@@ -907,6 +1037,13 @@ try {
     assert.equal(projectionSha,expectedMeshProjectionSha256,variant+': fixed native mesh-projection trace');
     if(expectedMeshProjection===null)expectedMeshProjection=projectionOutput;
     else assert.deepEqual(projectionOutput,expectedMeshProjection,variant+': projected/camera/normal/corner buffers, face queues and partial failures');
+    const logoOutput=captureProcess('java',['-Djava.awt.headless=true','-cp',classes+path.delimiter+cp,'NineSliceBehavior','logo-scene']).stdout;
+    const logoSha=crypto.createHash('sha256').update(logoOutput).digest('hex');
+    console.log(JSON.stringify({variant,logoSceneTrace:logoOutput.toString().trim(),sha256:logoSha}));
+    assert.match(logoOutput.toString(),/^logo-scene:56862:49200:256:2268:224:576:18:4320:[0-9]+:[0-9]+:[a-f0-9]{64}\n$/);
+    assert.equal(logoSha,expectedLogoSceneSha256,variant+': fixed native logo-scene trace');
+    if(expectedLogoScene===null)expectedLogoScene=logoOutput;
+    else assert.deepEqual(logoOutput,expectedLogoScene,variant+': logo transforms, materials, clock, pixels, face queues and partial failures');
   }
 }catch(error){if(error.stderr)process.stderr.write(error.stderr);throw error;}
 finally{fs.rmSync(temporary,{recursive:true,force:true});}

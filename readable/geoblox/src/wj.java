@@ -14,11 +14,11 @@ final class wj extends sh {
         this.field_D = 256;
     }
 
-    final static boolean f(int param0) {
-        if (param0 != 7426) {
+    final static boolean isLogoAnimationComplete(int methodGuard) {
+        if (methodGuard != 7426) {
             createDisplayNameText = (String) null;
         }
-        return 250 < gb.field_f ? true : false;
+        return 250 < gb.logoAnimationTick ? true : false;
     }
 
     wj(el param0) {

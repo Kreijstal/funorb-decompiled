@@ -970,75 +970,75 @@ public final class Geoblox extends wf {
         qe.a(ki.basicUiGraphicsArchive, re.field_i, -84);
     }
 
-    final static void a(byte param0, int param1) {
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        var6 = field_C;
-        var2 = 0;
-        var3 = gb.field_f;
-        if (var3 >= 5) {
-          if (var3 < 105) {
-            var2 = (-40960 + 16384 * var3) / 220;
+    final static void prepareLogoMeshRotation(byte methodGuard, int meshIndex) {
+        int rotationAngle8192;
+        int animationTickOrRemainingTicks;
+        int xRotationSign;
+        int yRotationSign;
+        int controlFlagSnapshot;
+        controlFlagSnapshot = field_C;
+        rotationAngle8192 = 0;
+        animationTickOrRemainingTicks = gb.logoAnimationTick;
+        if (animationTickOrRemainingTicks >= 5) {
+          if (animationTickOrRemainingTicks < 105) {
+            rotationAngle8192 = (-40960 + 16384 * animationTickOrRemainingTicks) / 220;
           } else {
-            if (120 > var3) {
-              var3 = 120 - var3;
-              var2 = -(var3 * (var3 * 8192) / 3300) + 8192;
+            if (120 > animationTickOrRemainingTicks) {
+              animationTickOrRemainingTicks = 120 - animationTickOrRemainingTicks;
+              rotationAngle8192 = -(animationTickOrRemainingTicks * (animationTickOrRemainingTicks * 8192) / 3300) + 8192;
             }
           }
         } else {
-          var2 = 8192 * var3 * var3 / 1100;
+          rotationAngle8192 = 8192 * animationTickOrRemainingTicks * animationTickOrRemainingTicks / 1100;
         }
-        var4 = 1;
-        var5 = 0;
-        if (param1 == 1) {
-          var5 = 1;
+        xRotationSign = 1;
+        yRotationSign = 0;
+        if (meshIndex == 1) {
+          yRotationSign = 1;
         }
-        if (3 == param1) {
-          var4 = -1;
+        if (3 == meshIndex) {
+          xRotationSign = -1;
         }
-        if (4 == param1) {
-          var4 = 1;
-          var5 = 1;
+        if (4 == meshIndex) {
+          xRotationSign = 1;
+          yRotationSign = 1;
         }
-        if (param1 == 5) {
-          var5 = 1;
-          var4 = -1;
+        if (meshIndex == 5) {
+          yRotationSign = 1;
+          xRotationSign = -1;
         }
-        if (param1 == 6) {
-          var5 = -1;
-          var4 = 1;
+        if (meshIndex == 6) {
+          yRotationSign = -1;
+          xRotationSign = 1;
         }
         L6: {
-          if ((7 != param1) &&
-              (8 != param1)) {
+          if ((7 != meshIndex) &&
+              (8 != meshIndex)) {
             break L6;
           }
-          var5 = -1;
-          var4 = -1;
+          yRotationSign = -1;
+          xRotationSign = -1;
         }
-        if (param1 == 11) {
-          var4 = -1;
+        if (meshIndex == 11) {
+          xRotationSign = -1;
         }
-        if (param1 == 12) {
-          var5 = -1;
-          var4 = -1;
+        if (meshIndex == 12) {
+          yRotationSign = -1;
+          xRotationSign = -1;
         }
-        if (param1 == 13) {
-          var5 = -1;
-          var4 = 1;
+        if (meshIndex == 13) {
+          yRotationSign = -1;
+          xRotationSign = 1;
         }
-        if (param1 == 14) {
-          var4 = -1;
-          var5 = 1;
+        if (meshIndex == 14) {
+          xRotationSign = -1;
+          yRotationSign = 1;
         }
-        if (param1 == 15) {
-          var4 = 1;
-          var5 = 1;
+        if (meshIndex == 15) {
+          xRotationSign = 1;
+          yRotationSign = 1;
         }
-        lk.meshModelTransform = ArchiveIndex.a(var2 * var4, param0, var5 * var2);
+        lk.meshModelTransform = ArchiveIndex.buildLogoRotationTransform(rotationAngle8192 * xRotationSign, methodGuard, yRotationSign * rotationAngle8192);
     }
 
     private final void initializeScreens(int param0) {

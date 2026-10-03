@@ -21,22 +21,22 @@ final class ArchiveIndex {
     IntKeyLookup groupNameLookup;
     static int field_s;
     static int archiveServerNumber;
-    static TriangleMesh[] field_l;
+    static TriangleMesh[] logoMeshes;
     int[] fileCounts;
 
-    final static int[] a(int param0, byte param1, int param2) {
-        int var3 = bh.a((byte) 69, param0);
-        int var4 = fi.a(param0, 2048);
-        int var5 = bh.a((byte) 101, param2);
-        int var6 = fi.a(param2, 2048);
-        int var7 = (int)((long)var3 * (long)var5 >> 16);
-        int var8 = (int)((long)var6 * (long)var3 >> 16);
-        int var9 = (int)((long)var4 * (long)var5 >> 16);
-        int var10 = (int)((long)var6 * (long)var4 >> 16);
-        if (param1 > -65) {
+    final static int[] buildLogoRotationTransform(int xAngle8192, byte methodGuard, int yAngle8192) {
+        int sinXQ16 = bh.sineQ16((byte) 69, xAngle8192);
+        int cosXQ16 = fi.cosineQ16(xAngle8192, 2048);
+        int sinYQ16 = bh.sineQ16((byte) 101, yAngle8192);
+        int cosYQ16 = fi.cosineQ16(yAngle8192, 2048);
+        int sinXsinYQ16 = (int)((long)sinXQ16 * (long)sinYQ16 >> 16);
+        int sinXcosYQ16 = (int)((long)cosYQ16 * (long)sinXQ16 >> 16);
+        int cosXsinYQ16 = (int)((long)cosXQ16 * (long)sinYQ16 >> 16);
+        int cosXcosYQ16 = (int)((long)cosYQ16 * (long)cosXQ16 >> 16);
+        if (methodGuard > -65) {
             return (int[]) null;
         }
-        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
+        return new int[]{0, 0, 0, cosYQ16, 0, sinYQ16, sinXsinYQ16, cosXQ16, -sinXcosYQ16, -cosXsinYQ16, sinXQ16, cosXcosYQ16};
     }
 
     private final void decodeIndex(byte methodGuard, byte[] packedIndexBytes) {
@@ -294,7 +294,7 @@ final class ArchiveIndex {
     }
 
     public static void a(int param0) {
-        field_l = null;
+        logoMeshes = null;
         createAgreeTermsText = null;
         int var1 = -24 % ((param0 + 88) / 36);
     }
