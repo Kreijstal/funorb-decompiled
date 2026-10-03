@@ -375,15 +375,10 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static byte encodeTextCharacter(char character, boolean returnEncodedByte) {
         int encodedByte;
         L0: {
-          L1: {
-            if ((0 < character) &&
-                (character < 128)) {
-              break L1;
-            }
-            if ((character >= 160) &&
-                (255 >= character)) {
-              break L1;
-            }
+          if (!((0 < character) &&
+                (character < 128)) &&
+              !((character >= 160) &&
+                (255 >= character))) {
             if (character == 8364) {
               encodedByte = -128;
               break L0;

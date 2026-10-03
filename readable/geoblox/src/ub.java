@@ -106,11 +106,8 @@ final class ub {
                 var7++;
               }
             }
-            L3: {
-              if ((var4 == 0) &&
-                  (this.field_e[1] == this.field_e[0])) {
-                break L3;
-              }
+            if (!((var4 == 0) &&
+                  (this.field_e[1] == this.field_e[0]))) {
               param1.b(param0);
             }
             break L0;

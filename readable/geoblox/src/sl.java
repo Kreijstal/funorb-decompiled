@@ -81,15 +81,10 @@ final class sl {
                 var3[var4] = (char)(-65 + (var5 + 97));
                 break L3;
               }
-              L5: {
-                if ((var5 >= 97) &&
-                    (var5 <= 122)) {
-                  break L5;
-                }
-                if ((var5 >= 48) &&
-                    (var5 <= 57)) {
-                  break L5;
-                }
+              if (!((var5 >= 97) &&
+                    (var5 <= 122)) &&
+                  !((var5 >= 48) &&
+                    (var5 <= 57))) {
                 var3[var4] = (char)95;
                 break L3;
               }

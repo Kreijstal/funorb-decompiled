@@ -463,11 +463,8 @@ final class GameScreen extends MenuScreen {
           }
           if ((this.screenId != 2) &&
               (this.screenId != 8)) {
-            L9: {
-              if ((5 != this.screenId) &&
-                  (7 != this.screenId)) {
-                break L9;
-              }
+            if (!((5 != this.screenId) &&
+                  (7 != this.screenId))) {
               kh.screenTitleSprites[4].draw(0, 20);
               ac.a(false, false, (byte) -93);
               if (var12 == 0) {
@@ -844,11 +841,8 @@ final class GameScreen extends MenuScreen {
           }
           if ((3 == this.screenId) &&
               (!this.field_E)) {
-            L2: {
-              if ((this.field_q != 4) &&
-                  (this.selectedItemIndex == 3)) {
-                break L2;
-              }
+            if (!((this.field_q != 4) &&
+                  (this.selectedItemIndex == 3))) {
               if (4 == this.field_q) {
                 if (this.selectedItemIndex == 2) {
                   this.selectedItemIndex = 3;
@@ -1357,11 +1351,8 @@ final class GameScreen extends MenuScreen {
               bi.pointerPressButtonSnapshot = 0;
             }
             if (bi.pointerPressButtonSnapshot != 0) {
-              L18: {
-                if ((this.screenId != 5) &&
-                    (7 != this.screenId)) {
-                  break L18;
-                }
+              if (!((this.screenId != 5) &&
+                    (7 != this.screenId))) {
                 oe.a(false, false, param0 ^ 189);
               }
               if (this.screenId == 6) {
@@ -1390,11 +1381,8 @@ final class GameScreen extends MenuScreen {
                         break L21;
                       }
                     }
-                    L26: {
-                      if ((mc.pointerPressXSnapshot > 170) &&
-                          (mc.pointerPressXSnapshot < 290)) {
-                        break L26;
-                      }
+                    if (!((mc.pointerPressXSnapshot > 170) &&
+                          (mc.pointerPressXSnapshot < 290))) {
                       this.pointerInteractionActive = false;
                       if (var3 == 0) {
                         break L21;
@@ -1420,16 +1408,10 @@ final class GameScreen extends MenuScreen {
                     (null != vl.field_n)) {
                   if ((he.pointerPressYSnapshot > 317) &&
                       (352 > he.pointerPressYSnapshot)) {
-                    L31: {
-                      if ((mc.pointerPressXSnapshot > 350) &&
-                          (mc.pointerPressXSnapshot < 470)) {
-                        break L31;
-                      }
-                      L33: {
-                        if ((mc.pointerPressXSnapshot > 170) &&
-                            (mc.pointerPressXSnapshot < 290)) {
-                          break L33;
-                        }
+                    if (!((mc.pointerPressXSnapshot > 350) &&
+                          (mc.pointerPressXSnapshot < 470))) {
+                      if (!((mc.pointerPressXSnapshot > 170) &&
+                            (mc.pointerPressXSnapshot < 290))) {
                         this.pointerInteractionActive = false;
                         if (var3 == 0) {
                           break L21;
@@ -1457,11 +1439,8 @@ final class GameScreen extends MenuScreen {
                 this.field_C = false;
               }
             }
-            L35: {
-              if ((PrefixCodeDecoder.pointerXSnapshot == this.field_s) &&
-                  (~ue.pointerYSnapshot == ~this.field_Y)) {
-                break L35;
-              }
+            if (!((PrefixCodeDecoder.pointerXSnapshot == this.field_s) &&
+                  (~ue.pointerYSnapshot == ~this.field_Y))) {
               this.field_o = -1;
             }
             this.field_Y = ue.pointerYSnapshot;
@@ -2237,16 +2216,11 @@ final class GameScreen extends MenuScreen {
                               el.gameplaySession.addScore((byte) 127, el.gameplaySession.resultBonusPoints);
                               el.gameplaySession.resultBonusPoints = 0;
                               if (fh.c(-114)) {
-                                L36: {
-                                  if ((!el.gameplaySession.tutorialMode) &&
+                                if (!((!el.gameplaySession.tutorialMode) &&
                                       (el.gameplaySession.score == 0) &&
-                                      (ug.field_c == 0)) {
-                                    break L36;
-                                  }
-                                  if ((el.gameplaySession.tutorialMode) &&
-                                      (el.gameplaySession.updateTick < 750)) {
-                                    break L36;
-                                  }
+                                      (ug.field_c == 0)) &&
+                                    !((el.gameplaySession.tutorialMode) &&
+                                      (el.gameplaySession.updateTick < 750))) {
                                   if ((0 == el.gameplaySession.score) &&
                                       (0 == ug.field_c)) {
                                     ai.requestedScreenId = 0;
@@ -2290,11 +2264,8 @@ final class GameScreen extends MenuScreen {
                             break L1;
                           }
                         }
-                        L42: {
-                          if ((this.field_q < 4) &&
-                              (!this.field_E)) {
-                            break L42;
-                          }
+                        if (!((this.field_q < 4) &&
+                              (!this.field_E))) {
                           var4 = 1;
                           if (var7 == 0) {
                             break L1;
@@ -2308,11 +2279,8 @@ final class GameScreen extends MenuScreen {
                           break L1;
                         }
                       }
-                      L44: {
-                        if ((this.field_q > 0) &&
-                            (!this.field_E)) {
-                          break L44;
-                        }
+                      if (!((this.field_q > 0) &&
+                            (!this.field_E))) {
                         var4 = 1;
                         if (var7 == 0) {
                           break L1;
@@ -2501,11 +2469,8 @@ final class GameScreen extends MenuScreen {
             selected = true;
           }
           L7: {
-            L8: {
-              if ((this.screenId != 3) &&
-                  (this.screenId != 2)) {
-                break L8;
-              }
+            if (!((this.screenId != 3) &&
+                  (this.screenId != 2))) {
               rowY += 280;
               if (var14 == 0) {
                 break L7;
@@ -2672,11 +2637,8 @@ final class GameScreen extends MenuScreen {
             var12 = 0;
           }
           L35: {
-            L36: {
-              if ((actionId != 8) &&
-                  (9 != actionId)) {
-                break L36;
-              }
+            if (!((actionId != 8) &&
+                  (9 != actionId))) {
               var8.drawRightAlignedText(var7, 285 + var12, 30 + rowY, 0, -1);
               NetworkArchiveRequest.barSprite.draw(var12 + 280, rowY + 15);
               if (actionId == 8) {

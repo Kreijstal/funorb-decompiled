@@ -145,11 +145,8 @@ abstract class ArchiveNetworkClient {
           if (var4_int == param2) {
             return null;
           }
-          L0: {
-            if ((param0 != null) &&
-                (var4_int == param0.length)) {
-              break L0;
-            }
+          if (!((param0 != null) &&
+                (var4_int == param0.length))) {
             param0 = new short[var4_int];
           }
           L2: {

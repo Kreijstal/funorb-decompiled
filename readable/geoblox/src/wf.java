@@ -279,11 +279,8 @@ abstract class wf extends ch {
             hi.field_G = oa.a(-12520) + 15000L;
           }
         }
-        L6: {
-          if ((ib.archiveLoadStatus != -1) &&
-              (ib.archiveLoadStatus != 0)) {
-            break L6;
-          }
+        if (!((ib.archiveLoadStatus != -1) &&
+              (ib.archiveLoadStatus != 0))) {
           stackIn_24_0 = (-1 != ib.archiveLoadStatus) ? 0 : 1;
           var3 = stackIn_24_0;
           ib.archiveLoadStatus = ma.tickArchiveLoading(15869);
@@ -342,23 +339,15 @@ abstract class wf extends ch {
             }
           }
         }
-        L12: {
-          L13: {
-            if ((ib.archiveLoadStatus != -1) &&
-                (ib.archiveLoadStatus != 0)) {
-              break L13;
-            }
-            if (!sb.a(param1 - 19585)) {
-              break L12;
-            }
-          }
-          if (~hi.field_G >= ~oa.a(param1 - 32180)) {
-            ii.field_e = false;
-            if ((-1 != ib.archiveLoadStatus) &&
-                (ib.archiveLoadStatus != 0)) {
-              ib.archiveLoadStatus = -1;
-              j.e(-21754);
-            }
+        if ((!((!((ib.archiveLoadStatus != -1) &&
+                (ib.archiveLoadStatus != 0))) &&
+              (!sb.a(param1 - 19585)))) &&
+            (~hi.field_G >= ~oa.a(param1 - 32180))) {
+          ii.field_e = false;
+          if ((-1 != ib.archiveLoadStatus) &&
+              (ib.archiveLoadStatus != 0)) {
+            ib.archiveLoadStatus = -1;
+            j.e(-21754);
           }
         }
         if ((ib.archiveLoadStatus == 0) &&

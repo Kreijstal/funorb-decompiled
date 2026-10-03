@@ -103,11 +103,8 @@ final class ai extends IntrusiveNode {
                       continue;
                     }
                   }
-                  L5: {
-                    if ((!var5.regionMatches(var6, "/s=", 0, 3)) &&
-                        (!var5.regionMatches(var6, "/c=", 0, 3))) {
-                      break L5;
-                    }
+                  if (!((!var5.regionMatches(var6, "/s=", 0, 3)) &&
+                        (!var5.regionMatches(var6, "/c=", 0, 3)))) {
                     var7_int = var5.indexOf('/', var6 + 1);
                     if (0 <= var7_int) {
                       if (param0 != null) {

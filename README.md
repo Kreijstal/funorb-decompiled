@@ -19,6 +19,18 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 86 removes 57 labeled skip blocks and 66 guard breaks across 25 files,
+reconstructing ordinary conditional guards without moving declarations, effects
+or protected boundaries. It removes 197 lines; `updateSession` shrinks from
+660 to 643 lines and loses five labels. All ordered declarations/references,
+local ordinals, 388 overrides and 6,683 complete naming objects remain.
+Independent JDK body positions prove all 303 token streams contain only the
+documented skip/nested-guard transforms. Generic fixtures add 4,032 native
+comparisons; the clean decompiler archive reproduces all raw files and unchanged
+diagnostics. The six recorded native probes retain their hashes. Reproduction
+and dictionary reversal are byte-exact. Large bodies and whole-game/browser/phone
+acceptance remain unfinished or unverified.
+
 Pass 85 names the animated logo scene, adding 134 guarded identities for its
 clock, rotations, materials, loader, rendering and integer-guard face collector.
 The 6,683 rules apply 53,607 edits and preserve every previous naming object.

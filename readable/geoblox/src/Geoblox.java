@@ -1011,11 +1011,8 @@ public final class Geoblox extends wf {
           yRotationSign = -1;
           xRotationSign = 1;
         }
-        L6: {
-          if ((7 != meshIndex) &&
-              (8 != meshIndex)) {
-            break L6;
-          }
+        if (!((7 != meshIndex) &&
+              (8 != meshIndex))) {
           yRotationSign = -1;
           xRotationSign = -1;
         }

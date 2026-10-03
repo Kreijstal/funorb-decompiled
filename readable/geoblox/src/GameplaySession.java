@@ -572,11 +572,8 @@ final class GameplaySession {
             L55: {
               dd.uiPaletteFont.drawText(wj.a(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (ih.areEntityQueuesSettled(0)) {
-                L56: {
-                  if ((0 != this.sessionPhase) &&
-                      (this.sessionPhase != 1)) {
-                    break L56;
-                  }
+                if (!((0 != this.sessionPhase) &&
+                      (this.sessionPhase != 1))) {
                   if (sceneTransitionFlag == 0) {
                     break L55;
                   }
@@ -640,16 +637,10 @@ final class GameplaySession {
         }
         L2: {
           if (0 == (this.updateTick & 1)) {
-            L3: {
-              if ((-1 == this.pointsPanelSlideDirection) &&
-                  (463 < this.pointsPanelX)) {
-                break L3;
-              }
-              L5: {
-                if ((this.pointsPanelSlideDirection == 1) &&
-                    (this.pointsPanelX < 640)) {
-                  break L5;
-                }
+            if (!((-1 == this.pointsPanelSlideDirection) &&
+                  (463 < this.pointsPanelX))) {
+              if (!((this.pointsPanelSlideDirection == 1) &&
+                    (this.pointsPanelX < 640))) {
                 if (this.pointsPanelX != 463) {
                   break L2;
                 }
@@ -672,34 +663,23 @@ final class GameplaySession {
         }
         L7: {
           if (!this.sessionEnding) {
-            L9: {
-              L10: {
-                if ((ih.areEntityQueuesSettled(0)) &&
-                    (!this.matchBatchProcessedThisTick)) {
-                  break L10;
+            if ((!((!((ih.areEntityQueuesSettled(0)) &&
+                    (!this.matchBatchProcessedThisTick))) &&
+                  (this.preserveScoreOnTransition))) &&
+                (this.canAdvanceSession(true))) {
+              if (!((0 != this.sessionPhase) &&
+                    (this.sessionPhase != 5))) {
+                if (!this.sceneTransitionRequested) {
+                  break L7;
                 }
-                if (this.preserveScoreOnTransition) {
-                  break L9;
-                }
-              }
-              if (this.canAdvanceSession(true)) {
-                L12: {
-                  if ((0 != this.sessionPhase) &&
-                      (this.sessionPhase != 5)) {
-                    break L12;
-                  }
-                  if (!this.sceneTransitionRequested) {
-                    break L7;
-                  }
-                  this.updateSceneTransition((byte) -80);
-                  if (clientControlFlowGuard == 0) {
-                    break L7;
-                  }
-                }
-                this.updateResultSequence(10);
+                this.updateSceneTransition((byte) -80);
                 if (clientControlFlowGuard == 0) {
                   break L7;
                 }
+              }
+              this.updateResultSequence(10);
+              if (clientControlFlowGuard == 0) {
+                break L7;
               }
             }
             if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
@@ -1366,11 +1346,8 @@ final class GameplaySession {
             }
           }
           if (1 == this.tutorialStepPhase) {
-            L2: {
-              if ((this.tutorialStepId != 3) &&
-                  (this.tutorialStepId != 5)) {
-                break L2;
-              }
+            if (!((this.tutorialStepId != 3) &&
+                  (this.tutorialStepId != 5))) {
               this.leaveTutorial(7000);
             }
             if (this.tutorialAdvanceRequested) {
@@ -1384,11 +1361,8 @@ final class GameplaySession {
                 break L0;
               }
             }
-            L6: {
-              if ((this.tutorialStepId == 1) &&
-                  (0 < dd.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-                break L6;
-              }
+            if (!((this.tutorialStepId == 1) &&
+                  (0 < dd.variantMatchCandidateCount - this.tutorialProgressMetric))) {
               if (this.tutorialStepId != 2) {
                 break L0;
               }
@@ -1478,11 +1452,8 @@ final class GameplaySession {
                         L14: {
                           L15: {
                             L16: {
-                              L17: {
-                                if ((selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) &&
-                                    (clientControlFlowGuard == 0)) {
-                                  break L17;
-                                }
+                              if (!((selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) &&
+                                    (clientControlFlowGuard == 0))) {
                                 if ((themeIndexThenId == 1) &&
                                     (clientControlFlowGuard == 0)) {
                                   break L16;
@@ -1732,11 +1703,8 @@ final class GameplaySession {
                 break L10;
               }
             }
-            L18: {
-              if ((this.resultExpansionAudioStream != null) &&
-                  (!this.resultExpansionAudioStream.isSamplePositionOutOfRange())) {
-                break L18;
-              }
+            if (!((this.resultExpansionAudioStream != null) &&
+                  (!this.resultExpansionAudioStream.isSamplePositionOutOfRange()))) {
               resultProgressPercent = this.sceneAnimationTick * 100 / 460;
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.field_c[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
@@ -1864,11 +1832,8 @@ final class GameplaySession {
               break L1;
             }
           }
-          L5: {
-            if ((this.score <= 0) &&
-                (this.newActionCount <= 0)) {
-              break L5;
-            }
+          if (!((this.score <= 0) &&
+                (this.newActionCount <= 0))) {
             ai.requestedScreenId = 4;
             if (clientControlFlowGuard == 0) {
               break L1;

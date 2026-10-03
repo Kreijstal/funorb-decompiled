@@ -38,18 +38,14 @@ final class lc {
               }
             }
             L3: {
-              L4: {
-                if ((kj.heldInternalKeys[99]) &&
-                    (ArchiveNetworkClient.movingEntities.isEmpty(13519))) {
-                  break L4;
+              if ((!((kj.heldInternalKeys[99]) &&
+                    (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
+                  (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease)) {
+                if (ul.releasedInCurrentTheme != 0) {
+                  break L3;
                 }
-                if (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease) {
-                  if (ul.releasedInCurrentTheme != 0) {
-                    break L3;
-                  }
-                  if (el.gameplaySession.tutorialMode) {
-                    break L3;
-                  }
+                if (el.gameplaySession.tutorialMode) {
+                  break L3;
                 }
               }
               if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&

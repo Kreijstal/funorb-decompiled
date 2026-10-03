@@ -160,11 +160,8 @@ final class ik {
                 }
               }
             }
-            L11: {
-              if ((variantPropagationThenNeighborIndex == 0) &&
-                  (propagateCategory == 0)) {
-                break L11;
-              }
+            if (!((variantPropagationThenNeighborIndex == 0) &&
+                  (propagateCategory == 0))) {
               bh.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
             }
             if ((secondEntity.entitySpriteKindId == 1) &&

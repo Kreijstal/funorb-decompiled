@@ -3065,3 +3065,34 @@ Independent checks cover the trigonometric table and matrix composition within
 one integer unit, clock state, 48 valid material inputs and 72 zero-rotation
 center/depth cases. Whole-frame pixels and general easing use native traces;
 real logo assets, full gameplay and browser/phone performance remain unverified.
+
+
+## Ordinary guards from labeled skip blocks (pass 86)
+
+Some generated labels mean only “skip the remaining block when this condition
+holds.” Those decisions now read as ordinary conditional guards. For example,
+logo rotation's old `L6` block broke out when the mesh index was neither seven
+nor eight. It now uses a negated ordinary guard around the same sign assignments.
+A chain of leading guards uses short-circuit negation in its original order;
+explicit `!` retains floating/NaN and nullable-boolean behavior.
+
+This requires a unique plain block whose only label references are those leading
+bare breaks. It preserves the remaining declaration scope. Other exits,
+alternates, work inside/before the guard, protected wrappers between the guard
+and its target, duplicate/unbound labels and unsupported syntax stay intact.
+Whole enclosing try/finally or synchronized regions and protected work in the
+remaining body keep their original boundaries.
+
+The pass consumes 57 labels and 66 breaks across 25 files. The main
+`GameplaySession.updateSession` loses five labels and shrinks from 660 to 643
+lines. Every ordered source binding/local ordinal remains unchanged, and the
+6,683 complete naming rules stay identical. Native 4,032-case generic comparisons
+cover predicate effects/failures, unboxing, NaNs, scopes, ancestor transfers,
+finally state after invocation and lock ownership/release. The recorded game
+probes retain their previous trace hashes and verification scope.
+
+There are still 21 method/constructor spans of at least 300 lines, 15 containing
+generated block labels. The text-loader outer span includes nested helpers, so
+these are not 21 unique state machines. Larger control reconstruction, opaque
+names, complete asset/gameplay execution and browser/phone targets remain
+unfinished or unverified.

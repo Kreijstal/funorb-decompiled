@@ -1448,11 +1448,8 @@ final class SoftwareRasterizer {
         int[] redSumsSnapshot;
         int[] greenSumsSnapshot;
         int[] blueSumsSnapshot;
-        L0: {
-          if ((blurColumnRedSums != null) &&
-              (blurColumnRedSums.length >= regionWidth)) {
-            break L0;
-          }
+        if (!((blurColumnRedSums != null) &&
+              (blurColumnRedSums.length >= regionWidth))) {
           blurColumnRedSums = new int[regionWidth];
           blurColumnGreenSums = new int[regionWidth];
           blurColumnBlueSums = new int[regionWidth];

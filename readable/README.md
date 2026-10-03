@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`d248ccd417468ca72a4ec5227ed4c41c0059c7bb`. It comes from java-tools
-`ac70ec74349c21a7d91b321575243577a4a3734a` and Deko
+`d290b8609553a0785782aab7968653ae68a5ac76`. It comes from java-tools
+`4c1b05352b59d68fd556df1ce2072ad5d57eefbd` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`c7a180dd8a0c328443818cbdd414a05e5af77e370cad17eebebd20b777060d50`:
+`3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4`:
 
 ```sh
-git archive --format=tar ac70ec74349c21a7d91b321575243577a4a3734a | sha256sum
+git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,56 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current logo scene and integer-argument correction
+## Current labeled skip-guard reconstruction
+
+Pass 86 changes the generic decompiler, preserving all 6,683 complete naming
+objects and 53,607 identifier edits. `foldLabeledSkipGuards` replaces 57 plain
+exit-block labels and 66 leading guard breaks with ordinary conditional guards
+across 25 files. Source lines fall from 78,886 to 78,689. The main gameplay
+updater loses five labels and shrinks from 660 to 643 lines. Rendering, input,
+archive and UI helper decisions also become ordinary `if` statements.
+
+Only a unique plain block whose label references are exactly its leading bare
+guard breaks qualifies. The remaining body must be nonempty, and retains its
+original declaration block. Predicates keep their bytes under logical negation
+and evaluate left-to-right with short circuits. Explicit `!` preserves NaNs and
+nullable unboxing; opposite comparisons are not guessed. Work before/inside a
+guard, alternates, remaining exits, loop/switch labels, duplicate/unbound labels,
+comments, Unicode escapes, nested executables, unsupported/malformed statements
+and unproven lexical extents refuse reconstruction. Budgets are 16 guards and
+512 predicate tokens. No effect, declaration or protected boundary moves.
+
+Nested guard merging runs first and again when a new ordinary guard exposes
+another chain. The initial placement before guard merging changed none of the
+corpus; the corrected ordering exposes the actual skip decisions. A JDK body
+position inventory locates every method and initializer, and applying only the
+new skip/nested-guard rules to the previous source yields the exact token streams
+of all 303 regenerated files. Raw sources compile. Every ordered declaration,
+reference, local ordinal and override remains: 19,591/119,181/388.
+
+`NODE_PATH=/path/to/dependencies JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/javaAstEmitterLoopExits.test.js`
+passes 48 groups with one optional historical pass77 check skipped. Two new
+groups include 4,032 native comparisons of throwing/ordered predicates,
+nullable booleans, NaNs, declaration scopes, partial effects, ancestor jumps,
+loop/switch breaks, returns, finally state after invocation and monitor
+ownership/release. Exception exits retain eight passing groups; full-integer
+argument regression retains two passing groups.
+
+A clean pinned decompiler Git-source tar reproduces all 303 raw files and
+unchanged diagnostics byte-for-byte. All six recorded native probes retain
+unchanged sources and trace hashes across native/raw/readable variants.
+Rule-builder/migration/text checks pass 9/8/6 groups. Reproduction compiles both
+303-file corpora and compares 138,772 bindings; dictionary reversal is byte-exact
+against the pinned Git input. One maintained manifest records the explicit source
+migration with no naming changes or new JSON snapshots.
+
+The current survey has 2,080 method/constructor bodies, including 21 spans of at
+least 300 lines, 15 with generated labels. Some spans contain nested helpers.
+This pass simplifies decisions inside those bodies without reducing that count.
+Opaque names, larger control reconstructions, real assets/gameplay and
+browser/phone memory/startup/FPS acceptance remain unfinished or unverified.
+
+## Previous logo scene and integer-argument correction
 
 Pass 85 adds 134 guarded identities: five fields, ten methods, 21 parameters
 and 98 locals. It names logo loading/material decoding, the animation clock,
@@ -1787,8 +1836,8 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-Pass 85 records its source migration in `sourceChange` and 134 additions in
-`ruleChanges`, preserving all 6,549 previous complete naming objects.
+Pass 86 records its source migration in `sourceChange` with an empty
+`ruleChanges` list, preserving all 6,683 previous complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -1811,7 +1860,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `2995331e604149cd5b7e6e4cbc608fbd8eca8f61cc104b3da7f1910ced8a4399` |
-| Readable | `6262c0a55baa8057c09e0954fc49344374312c01eed8e28e0da9286a5db4b390` |
+| Raw | `9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df` |
+| Readable | `2feceddf14ba0ad73b9822dd3ecfcf4bada845a826058cfba5d7cd6fbd03a356` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

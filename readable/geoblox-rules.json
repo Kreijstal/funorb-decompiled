@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "d248ccd417468ca72a4ec5227ed4c41c0059c7bb",
+    "commit": "d290b8609553a0785782aab7968653ae68a5ac76",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "2995331e604149cd5b7e6e4cbc608fbd8eca8f61cc104b3da7f1910ced8a4399",
+  "inputTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -40109,19 +40109,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 14,
-  "version": 85,
+  "revision": 15,
+  "version": 86,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "ac70ec74349c21a7d91b321575243577a4a3734a",
+      "commit": "4c1b05352b59d68fd556df1ce2072ad5d57eefbd",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "c7a180dd8a0c328443818cbdd414a05e5af77e370cad17eebebd20b777060d50",
-        "reproduce": "git archive --format=tar ac70ec74349c21a7d91b321575243577a4a3734a | sha256sum",
+        "sha256": "3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4",
+        "reproduce": "git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -40130,1357 +40130,16 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "9fea6402104313cd46839bd83f736b7a67d92155",
+      "commit": "eb0985c63bd7a0613427fa56fc2782e9864965e4",
       "path": "readable/geoblox-rules.json",
-      "sha256": "0b7fc10b1bba836ee11b30ed740bc6596a6243909bc9ffdfb951d67b37ca4116"
+      "sha256": "c00a9e316fa30349f8427f61cd2a2d9e469a06309d84fda29f815fb725e50dd6"
     },
-    "ruleChanges": [
-      {
-        "symbol": "F:ai.field_l:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:ai.field_l:[I",
-          "originalName": "field_l",
-          "to": "quarterSineQ16",
-          "evidence": "bh/fi mask angles by8191 and use the2049-entry quarter-sine Q16 table with quadrant reflection/signs. Native49200 oracle cases cover all8192 phases, extreme/wrapped angles and guard side effects; mathematical rounded sine/cosine are checked within one integer unit. bh guard <=7 returns -8 before lookup; fi guard !=2048 clears its marker string before lookup."
-        }
-      },
-      {
-        "symbol": "F:bm.field_l:[Lnf;",
-        "before": null,
-        "after": {
-          "symbol": "F:bm.field_l:[Lnf;",
-          "originalName": "field_l",
-          "to": "logoMeshes",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified."
-        }
-      },
-      {
-        "symbol": "F:gb.field_f:I",
-        "before": null,
-        "after": {
-          "symbol": "F:gb.field_f:I",
-          "originalName": "field_f",
-          "to": "logoAnimationTick",
-          "evidence": "td increments the shared logo tick after evaluating -28 % ((guard-36)/43); zero divisor throws before increment. Its delay/tick conditional has an empty body and stays unchanged. wj reports tick >250 and clears its marker string unless guard7426. Native224 clock oracle cases verify int wrap, failure timing, completion and marker effects. bk initializes it from the negative millisecond-derived delay and ad resets it to0; eh/ck read it for logo rendering."
-        }
-      },
-      {
-        "symbol": "F:pi.field_R:[[I",
-        "before": null,
-        "after": {
-          "symbol": "F:pi.field_R:[[I",
-          "originalName": "field_R",
-          "to": "logoMeshCenters",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Loader stores centers by original mesh index; ck consumes them by draw-order index, which remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:uf.field_a:I",
-        "before": null,
-        "after": {
-          "symbol": "F:uf.field_a:I",
-          "originalName": "field_a",
-          "to": "logoStartDelayTicks",
-          "evidence": "td increments the shared logo tick after evaluating -28 % ((guard-36)/43); zero divisor throws before increment. Its delay/tick conditional has an empty body and stays unchanged. wj reports tick >250 and clears its marker string unless guard7426. Native224 clock oracle cases verify int wrap, failure timing, completion and marker effects. bk assigns param1*sb.a(true)/1000 and initializes negative gb tick from it."
-        }
-      },
-      {
-        "symbol": "L:Geoblox.a(BI)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:Geoblox.a(BI)V#0",
-          "originalName": "var2",
-          "to": "rotationAngle8192",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:Geoblox.a(BI)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:Geoblox.a(BI)V#1",
-          "originalName": "var3",
-          "to": "animationTickOrRemainingTicks",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:Geoblox.a(BI)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:Geoblox.a(BI)V#2",
-          "originalName": "var4",
-          "to": "xRotationSign",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:Geoblox.a(BI)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:Geoblox.a(BI)V#3",
-          "originalName": "var5",
-          "to": "yRotationSign",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:Geoblox.a(BI)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:Geoblox.a(BI)V#4",
-          "originalName": "var6",
-          "to": "controlFlagSnapshot",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#0",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#0",
-          "originalName": "var3",
-          "to": "sinXQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#1",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#1",
-          "originalName": "var4",
-          "to": "cosXQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#2",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#2",
-          "originalName": "var5",
-          "to": "sinYQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#3",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#3",
-          "originalName": "var6",
-          "to": "cosYQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#4",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#4",
-          "originalName": "var7",
-          "to": "sinXsinYQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#5",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#5",
-          "originalName": "var8",
-          "to": "sinXcosYQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#6",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#6",
-          "originalName": "var9",
-          "to": "cosXsinYQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:bm.a(IBI)[I#7",
-        "before": null,
-        "after": {
-          "symbol": "L:bm.a(IBI)[I#7",
-          "originalName": "var10",
-          "to": "cosXcosYQ16",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#0",
-          "originalName": "var17_int",
-          "to": "depthCandidateIndex",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#1",
-          "originalName": "var18",
-          "to": "translationComponentIndex",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#10",
-          "originalName": "var8",
-          "to": "cameraDepthBasisXQ14OrLightDirectionYQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#11",
-          "originalName": "var9",
-          "to": "cameraDepthBasisYQ14OrLightDirectionZQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#12",
-          "originalName": "var10_int",
-          "to": "cameraDepthBasisZQ14",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#13",
-          "originalName": "var10",
-          "to": "directionNormalizationScale",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#14",
-          "originalName": "var11",
-          "to": "meshDepthFromXQ16",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#15",
-          "originalName": "var12",
-          "to": "meshDepthFromYQ16OrHalfVectorXQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#16",
-          "originalName": "var13",
-          "to": "meshDepthFromZQ16OrHalfVectorYQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#17",
-          "originalName": "var14",
-          "to": "halfVectorZQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#18",
-          "originalName": "var15",
-          "to": "drawOrderIndexOrFinalGuardQuotient",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#19",
-          "originalName": "var16",
-          "to": "selectedMeshIndex",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#2",
-          "originalName": "var1_int",
-          "to": "meshCount",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#20",
-          "originalName": "var19",
-          "to": "controlFlagSnapshot",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#21",
-          "originalName": "var20",
-          "to": "allocatedDepthKeysAlias",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#22",
-          "originalName": "var21",
-          "to": "meshDepthKeys",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#23",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#24",
-          "originalName": "var1",
-          "to": "contextFailure",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#25",
-          "originalName": "var17",
-          "to": "selectedMesh",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#26",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#3",
-          "originalName": "var2",
-          "to": "meshDepthKeysAlias",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#4",
-          "originalName": "var3",
-          "to": "meshIndexOrViewDirectionXQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#5",
-          "originalName": "var4_ref_nf",
-          "to": "meshForDepthBounds",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#6",
-          "originalName": "var4",
-          "to": "viewDirectionYQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#7",
-          "originalName": "var5",
-          "to": "boundsCenterXOrViewDirectionZQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#8",
-          "originalName": "var6",
-          "to": "boundsCenterYOrLightAngle",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ck.a(B)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:ck.a(B)V#9",
-          "originalName": "var7",
-          "to": "boundsCenterZOrLightDirectionXQ8",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#0",
-          "originalName": "dupTemp$0",
-          "to": "facePriority",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#1",
-          "originalName": "stackIn_11_0",
-          "to": "cullBackfacesSnapshot",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#10",
-          "originalName": "var5_int",
-          "to": "depthRangeBitLength",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#11",
-          "originalName": "var5",
-          "to": "contextFailure",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#12",
-          "originalName": "var6",
-          "to": "minimumDepthTimesThree",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#13",
-          "originalName": "var7",
-          "to": "depthBucketShift",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#14",
-          "originalName": "var8",
-          "to": "faceIndexOrPriorityPrefix",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#15",
-          "originalName": "var9",
-          "to": "vertexAOrPriorityIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#16",
-          "originalName": "var10",
-          "to": "vertexBOrPriorityCount",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#17",
-          "originalName": "var11",
-          "to": "vertexC",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#18",
-          "originalName": "var12",
-          "to": "projectedAXOrVertexADepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#19",
-          "originalName": "var13",
-          "to": "projectedAYOrVertexBDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#2",
-          "originalName": "stackIn_28_0",
-          "to": "scaledRelativeDepthSum",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#20",
-          "originalName": "var14",
-          "to": "edgeBXOrVertexCDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#21",
-          "originalName": "var15",
-          "to": "edgeCXOrRelativeDepthSum",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#22",
-          "originalName": "var16",
-          "to": "edgeBYOrDepthBucketIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#23",
-          "originalName": "var17",
-          "to": "edgeCYOrBucketOccupancy",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#24",
-          "originalName": "var18",
-          "to": "faceOrderWriteIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#25",
-          "originalName": "var19",
-          "to": "controlFlagSnapshot",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#26",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#3",
-          "originalName": "stackIn_39_0",
-          "to": "bucketIndexOrFaceOrderIndex",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#4",
-          "originalName": "stackIn_49_0",
-          "to": "cullFlagOrPriorityLoopSentinel",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#5",
-          "originalName": "stackIn_68_0",
-          "to": "failureContextCause",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#6",
-          "originalName": "stackIn_68_1",
-          "to": "failureContextBuilder",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#7",
-          "originalName": "stackIn_69_2",
-          "to": "meshContextDescription",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#8",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#9",
-          "originalName": "stackOut_10_0",
-          "to": "cullBackfacesCarrier",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Local follows its arithmetic, stores or diagnostic construction; multi-phase scratch roles remain explicit. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#0",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#0",
-          "originalName": "var5",
-          "to": "materialIndex",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#1",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#1",
-          "originalName": "var2_int",
-          "to": "formatVersion",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#10",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#10",
-          "originalName": "stackIn_14_0",
-          "to": "decodedMaterialsResult",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#11",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#11",
-          "originalName": "stackIn_17_0",
-          "to": "failureContextCause",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#12",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#12",
-          "originalName": "stackIn_17_1",
-          "to": "failureContextBuilder",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#13",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#13",
-          "originalName": "stackIn_18_2",
-          "to": "inputContextDescription",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#14",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#14",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#15",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#15",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#2",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#2",
-          "originalName": "var2",
-          "to": "contextFailure",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#3",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#3",
-          "originalName": "var3",
-          "to": "materialCount",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#4",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#4",
-          "originalName": "var4",
-          "to": "materials",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#5",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#5",
-          "originalName": "var6_ref_fd",
-          "to": "newMaterial",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#6",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#6",
-          "originalName": "var6",
-          "to": "referencedMaterialIndex",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#7",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#7",
-          "originalName": "var7",
-          "to": "controlFlagSnapshot",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#8",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#8",
-          "originalName": "stackIn_3_0",
-          "to": "disabledResult",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:jc.a(Lpk;Z)[Lfd;#9",
-        "before": null,
-        "after": {
-          "symbol": "L:jc.a(Lpk;Z)[Lfd;#9",
-          "originalName": "stackIn_6_0",
-          "to": "unsupportedVersionResult",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#0",
-          "originalName": "var3",
-          "to": "meshCount",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#1",
-          "originalName": "var4",
-          "to": "meshIndexOrInitialCursor",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#10",
-          "originalName": "stackIn_11_2",
-          "to": "archiveContextDescription",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#11",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#12",
-          "originalName": "var2",
-          "to": "contextFailure",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#13",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#2",
-          "originalName": "var5",
-          "to": "mesh",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#3",
-          "originalName": "var6",
-          "to": "meshCenter",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#4",
-          "originalName": "var7",
-          "to": "controlFlagSnapshot",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#5",
-          "originalName": "var8",
-          "to": "logoInput",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#6",
-          "originalName": "var9",
-          "to": "centerMeshIndex",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#7",
-          "originalName": "var10",
-          "to": "logoInputAlias",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#8",
-          "originalName": "stackIn_10_0",
-          "to": "failureContextCause",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:ni.a(Lrh;I)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:ni.a(Lrh;I)V#9",
-          "originalName": "stackIn_10_1",
-          "to": "failureContextBuilder",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "L:td.g(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:td.g(B)V#0",
-          "originalName": "var1",
-          "to": "guardRemainder",
-          "evidence": "td increments the shared logo tick after evaluating -28 % ((guard-36)/43); zero divisor throws before increment. Its delay/tick conditional has an empty body and stays unchanged. wj reports tick >250 and clears its marker string unless guard7426. Native224 clock oracle cases verify int wrap, failure timing, completion and marker effects. Local role follows its reads/stores; reused scratch phases and failure-context roles stay explicit."
-        }
-      },
-      {
-        "symbol": "M:Geoblox.a(BI)V",
-        "before": null,
-        "after": {
-          "symbol": "M:Geoblox.a(BI)V",
-          "originalName": "a",
-          "to": "prepareLogoMeshRotation",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle."
-        }
-      },
-      {
-        "symbol": "M:bh.a(BI)I",
-        "before": null,
-        "after": {
-          "symbol": "M:bh.a(BI)I",
-          "originalName": "a",
-          "to": "sineQ16",
-          "evidence": "bh/fi mask angles by8191 and use the2049-entry quarter-sine Q16 table with quadrant reflection/signs. Native49200 oracle cases cover all8192 phases, extreme/wrapped angles and guard side effects; mathematical rounded sine/cosine are checked within one integer unit. bh guard <=7 returns -8 before lookup; fi guard !=2048 clears its marker string before lookup."
-        }
-      },
-      {
-        "symbol": "M:bm.a(IBI)[I",
-        "before": null,
-        "after": {
-          "symbol": "M:bm.a(IBI)[I",
-          "originalName": "a",
-          "to": "buildLogoRotationTransform",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made."
-        }
-      },
-      {
-        "symbol": "M:ck.a(B)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ck.a(B)V",
-          "originalName": "a",
-          "to": "renderLogoMeshes",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified."
-        }
-      },
-      {
-        "symbol": "M:fi.a(II)I",
-        "before": null,
-        "after": {
-          "symbol": "M:fi.a(II)I",
-          "originalName": "a",
-          "to": "cosineQ16",
-          "evidence": "bh/fi mask angles by8191 and use the2049-entry quarter-sine Q16 table with quadrant reflection/signs. Native49200 oracle cases cover all8192 phases, extreme/wrapped angles and guard side effects; mathematical rounded sine/cosine are checked within one integer unit. bh guard <=7 returns -8 before lookup; fi guard !=2048 clears its marker string before lookup."
-        }
-      },
-      {
-        "symbol": "M:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V",
-        "before": null,
-        "after": {
-          "symbol": "M:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V",
-          "originalName": "$cfr$intArgs$a$77236d03e70d",
-          "to": "queueMeshFacesByDepthWithIntegerGuard",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "M:jc.a(Lpk;Z)[Lfd;",
-        "before": null,
-        "after": {
-          "symbol": "M:jc.a(Lpk;Z)[Lfd;",
-          "originalName": "a",
-          "to": "readMeshMaterials",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred."
-        }
-      },
-      {
-        "symbol": "M:ni.a(Lrh;I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ni.a(Lrh;I)V",
-          "originalName": "a",
-          "to": "loadLogoMeshesAndMaterials",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe."
-        }
-      },
-      {
-        "symbol": "M:td.g(B)V",
-        "before": null,
-        "after": {
-          "symbol": "M:td.g(B)V",
-          "originalName": "g",
-          "to": "advanceLogoAnimationTick",
-          "evidence": "td increments the shared logo tick after evaluating -28 % ((guard-36)/43); zero divisor throws before increment. Its delay/tick conditional has an empty body and stays unchanged. wj reports tick >250 and clears its marker string unless guard7426. Native224 clock oracle cases verify int wrap, failure timing, completion and marker effects."
-        }
-      },
-      {
-        "symbol": "M:wj.f(I)Z",
-        "before": null,
-        "after": {
-          "symbol": "M:wj.f(I)Z",
-          "originalName": "f",
-          "to": "isLogoAnimationComplete",
-          "evidence": "td increments the shared logo tick after evaluating -28 % ((guard-36)/43); zero divisor throws before increment. Its delay/tick conditional has an empty body and stays unchanged. wj reports tick >250 and clears its marker string unless guard7426. Native224 clock oracle cases verify int wrap, failure timing, completion and marker effects."
-        }
-      },
-      {
-        "symbol": "P:Geoblox.a(BI)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:Geoblox.a(BI)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:Geoblox.a(BI)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:Geoblox.a(BI)V#1",
-          "originalName": "param1",
-          "to": "meshIndex",
-          "evidence": "Geoblox computes logo rotation from gb tick using the existing <5, <105 and <120 integer easing branches, then chooses X/Y signs from the mesh index and stores bm rotation in lk. Ticks >=120 use zero angle; overflow and guard-dependent null transforms remain. Native2268 orientation traces cover negative/extreme ticks, mesh indexes -1..16, flags and guards; general easing lacks a new complete independent oracle. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:bh.a(BI)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:bh.a(BI)I#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "bh/fi mask angles by8191 and use the2049-entry quarter-sine Q16 table with quadrant reflection/signs. Native49200 oracle cases cover all8192 phases, extreme/wrapped angles and guard side effects; mathematical rounded sine/cosine are checked within one integer unit. bh guard <=7 returns -8 before lookup; fi guard !=2048 clears its marker string before lookup. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:bh.a(BI)I#1",
-        "before": null,
-        "after": {
-          "symbol": "P:bh.a(BI)I#1",
-          "originalName": "param1",
-          "to": "angle8192",
-          "evidence": "bh/fi mask angles by8191 and use the2049-entry quarter-sine Q16 table with quadrant reflection/signs. Native49200 oracle cases cover all8192 phases, extreme/wrapped angles and guard side effects; mathematical rounded sine/cosine are checked within one integer unit. bh guard <=7 returns -8 before lookup; fi guard !=2048 clears its marker string before lookup. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:bm.a(IBI)[I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:bm.a(IBI)[I#0",
-          "originalName": "param0",
-          "to": "xAngle8192",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:bm.a(IBI)[I#1",
-        "before": null,
-        "after": {
-          "symbol": "P:bm.a(IBI)[I#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:bm.a(IBI)[I#2",
-        "before": null,
-        "after": {
-          "symbol": "P:bm.a(IBI)[I#2",
-          "originalName": "param2",
-          "to": "yAngle8192",
-          "evidence": "bm builds the inverse X/Y logo rotation composition in a12-entry transform: first3 translation values zero, remaining9 column-major Q16 coefficients from bh/fi lookup. Selected products are shifted before negation, preserving one-unit rounding differences from multiplying negative coefficients. Guard >-65 returns null after calculations. Native256 matrix oracles compare mathematical composition within one integer unit; no algebraic body rewrite is made. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:ck.a(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ck.a(B)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "ck renders the animated logo.fo3d meshes. It installs a Q16 camera with Z=-8144, computes rotated bounds midpoint depths, repeatedly selects the strictly greatest depth, marks that key MIN_VALUE, applies selected-mesh rotation, then adds centers by draw-order index before projection and lighting. The source can reselect a mesh if all keys are MIN_VALUE; no universal permutation/stable-sort claim is made. Default light rotates with logo tick; valid pointer snapshots override it, and light/half vectors normalize to Q8 with original overflow/NaN casts. Guard division follows rendering, so failed calls may have drawn. Native56862-case logo trace includes804 successful controlled scenes,216 pixel-changing scenes,72 zero-rotation draw-order/depth oracles and all21 shared geometry/queue buffers; whole pixel rendering lacks a new independent oracle and real archive loading remains unverified. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:fi.a(II)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:fi.a(II)I#0",
-          "originalName": "param0",
-          "to": "angle8192",
-          "evidence": "bh/fi mask angles by8191 and use the2049-entry quarter-sine Q16 table with quadrant reflection/signs. Native49200 oracle cases cover all8192 phases, extreme/wrapped angles and guard side effects; mathematical rounded sine/cosine are checked within one integer unit. bh guard <=7 returns -8 before lookup; fi guard !=2048 clears its marker string before lookup. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:fi.a(II)I#1",
-        "before": null,
-        "after": {
-          "symbol": "P:fi.a(II)I#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "bh/fi mask angles by8191 and use the2049-entry quarter-sine Q16 table with quadrant reflection/signs. Native49200 oracle cases cover all8192 phases, extreme/wrapped angles and guard side effects; mathematical rounded sine/cosine are checked within one integer unit. bh guard <=7 returns -8 before lookup; fi guard !=2048 clears its marker string before lookup. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#0",
-          "originalName": "param0",
-          "to": "minimumVisibleDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#1",
-          "originalName": "param1",
-          "to": "integerMethodGuard",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#2",
-        "before": null,
-        "after": {
-          "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#2",
-          "originalName": "param2",
-          "to": "mesh",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#3",
-        "before": null,
-        "after": {
-          "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#3",
-          "originalName": "param3",
-          "to": "maximumVisibleDepth",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#4",
-        "before": null,
-        "after": {
-          "symbol": "P:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V#4",
-          "originalName": "param4",
-          "to": "cullBackfaces",
-          "evidence": "i queues mesh face indices into 16-slot depth buckets, optionally rejecting backfaces by signed projected cross product and skipping clipped MIN_VALUE depths. Unsigned bit length of three times the depth range selects a shift; full buckets spill toward lower indices. Signed priority bytes count into write offsets, later replaced by prefix sums. Reset helpers write in groups of eight; original partial failures, aliasing, guard-22 avatar cleanup and control-flag transfers remain. Native projection/collector traces include bucket spill and invalid buffers/priorities; no stable ordering beyond the observed writes is assumed. Parameter role follows its reads and call-site ordering. The generic decompiler emits an additional body for full JVM integer arguments to the original byte guard. The JVM invocation does not narrow, so -8170 must not become22. Original collector signature/body remain; p uses this entry point.301 files unchanged, p has exactly one call replacement, i adds the identical body with an int guard. The native logo trace corrects120 previously differing sprite-cleanup cases. All existing collector rules/scopes remain."
-        }
-      },
-      {
-        "symbol": "P:jc.a(Lpk;Z)[Lfd;#0",
-        "before": null,
-        "after": {
-          "symbol": "P:jc.a(Lpk;Z)[Lfd;#0",
-          "originalName": "param0",
-          "to": "input",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:jc.a(Lpk;Z)[Lfd;#1",
-        "before": null,
-        "after": {
-          "symbol": "P:jc.a(Lpk;Z)[Lfd;#1",
-          "originalName": "param1",
-          "to": "readEnabled",
-          "evidence": "jc reads an8-bit version before checking readEnabled, rejects positive versions, then reads a12-bit material count. New entries discard two24-bit values, store third24-bit base RGB, discard9+3*12 bits; reference entries alias an earlier material using bitLength(index-1). Native576 traces include48 valid-input oracles for colors, reference identity and exact bit cursor, plus flags and truncated input failures. No texture or discarded-field meaning is inferred. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:ni.a(Lrh;I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ni.a(Lrh;I)V#0",
-          "originalName": "param0",
-          "to": "archive",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:ni.a(Lrh;I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:ni.a(Lrh;I)V#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "ni loads logo.fo3d through the supplied archive and guard-derived group index, reads mesh count, starts bit access, decodes materials through jc and meshes through uh, then ends bit access. Each mesh is scaled by6, bounds refreshed, midpoint stored in pi centers and geometry translated by its negative midpoint. Native18 null-archive traces preserve array references and diagnostic context. Successful real archive/mesh loading is source-audited, not verified by this probe. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:td.g(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:td.g(B)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "td increments the shared logo tick after evaluating -28 % ((guard-36)/43); zero divisor throws before increment. Its delay/tick conditional has an empty body and stays unchanged. wj reports tick >250 and clears its marker string unless guard7426. Native224 clock oracle cases verify int wrap, failure timing, completion and marker effects. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      },
-      {
-        "symbol": "P:wj.f(I)Z#0",
-        "before": null,
-        "after": {
-          "symbol": "P:wj.f(I)Z#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "td increments the shared logo tick after evaluating -28 % ((guard-36)/43); zero divisor throws before increment. Its delay/tick conditional has an empty body and stays unchanged. wj reports tick >250 and clears its marker string unless guard7426. Native224 clock oracle cases verify int wrap, failure timing, completion and marker effects. Parameter role follows arithmetic, call-site ordering and side effects."
-        }
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "Geoblox.java",
-        "sha256": "eab99a15d2846a94a80e4709fc619c39a4204050aa1496541c782319aea8524c"
+        "sha256": "48e26e98e3ef58777f63ad3305941c31c6619764994b7b4fb60cbc5bae042eb1"
       },
       {
         "file": "a.java",
@@ -41496,7 +40155,7 @@
       },
       {
         "file": "ac.java",
-        "sha256": "1f2976d198bc9b917ebb05f528cc8a443d7114ccde74944bc8d78c6fd472442c"
+        "sha256": "14ad593098a8e96986f052f2cecff6b4229315ac89316d210809341a2148a435"
       },
       {
         "file": "ad.java",
@@ -41516,7 +40175,7 @@
       },
       {
         "file": "ai.java",
-        "sha256": "e9f422ce271aa82285d7851cd81d35d3d19452f72a583e69ce7a5469cd0d02e0"
+        "sha256": "d8127b4767d2e4601c6ae2fca3bff72495bda88334c93ef32175f503f992da91"
       },
       {
         "file": "aj.java",
@@ -41544,7 +40203,7 @@
       },
       {
         "file": "bh.java",
-        "sha256": "7cdf42fc21ea4e066d91945e92947126bba8c762599c1bb8ad0885b1f8a081c1"
+        "sha256": "f45c44247a56667e815d642d130cb784183e72e009225eedb09ae622c14ae139"
       },
       {
         "file": "bi.java",
@@ -41564,7 +40223,7 @@
       },
       {
         "file": "c.java",
-        "sha256": "c329f7da710b0c2b22975c58b67ca26a93aa759caa58554cacea97af37fe402f"
+        "sha256": "ffab24c8765e1cb65e2dcdc67cf38f9cd9327be4c87966eb9673f4e4b8ef8b12"
       },
       {
         "file": "ca.java",
@@ -41616,7 +40275,7 @@
       },
       {
         "file": "dj.java",
-        "sha256": "f184cc1f9d3a390bf303844c4c73d612c8ce98f4137a396ba0b0aebb4790ac36"
+        "sha256": "0e85beb5620bb53f399e315f47e0b691f3e974e221a3e56e762f31ff8d308596"
       },
       {
         "file": "dk.java",
@@ -41664,7 +40323,7 @@
       },
       {
         "file": "em.java",
-        "sha256": "ef533dbaaebb9a0ce88e8e0ce144a2aefb7e506a6d4d3376c54874377f079b17"
+        "sha256": "79aa41f8b19a2e49f08cbcb29c3139add6170cdfc78f69313ca77bc42f9268f9"
       },
       {
         "file": "f.java",
@@ -41720,7 +40379,7 @@
       },
       {
         "file": "gh.java",
-        "sha256": "44c65c4eb3d927372748e3e7a291277f0251734981516d5728d4d29a9f96bb98"
+        "sha256": "3868e5ba11ebe85e765696b442660a6e375b93f7e7ddb5c80136b1db04a0d689"
       },
       {
         "file": "gi.java",
@@ -41812,7 +40471,7 @@
       },
       {
         "file": "ik.java",
-        "sha256": "df35b8b6954d5fbb9759de3f90130c417da549c1789249d908f759b39c987103"
+        "sha256": "fd97ef74e206aabc82b2c83034cf5c3b0565feb2f15c341af115c1d62d78889f"
       },
       {
         "file": "il.java",
@@ -41844,7 +40503,7 @@
       },
       {
         "file": "ji.java",
-        "sha256": "13eb14a2baf1b5723b7803899a65ccca29cd3eb5d6c459095271a16ef2088a4f"
+        "sha256": "2a0fc5fb00f0e51c3f428a28a4dc4f42d5c95a85a101a5f02bfc633a10429212"
       },
       {
         "file": "jj.java",
@@ -41896,7 +40555,7 @@
       },
       {
         "file": "kj.java",
-        "sha256": "8f57ba23ed19a8337ca189f5b913bf8a657229a83561ec10d2f8e0a5fb25bec0"
+        "sha256": "c09c0345941f1b24ecad59c86c21215202f3be8d0fd825531790f565abdfbbc8"
       },
       {
         "file": "kk.java",
@@ -41916,7 +40575,7 @@
       },
       {
         "file": "lc.java",
-        "sha256": "1d8b58aa0d6cda24999be21c3d77988ed37e2325c50cce0cad1c3bb75381c0a8"
+        "sha256": "edddffb70e2880c75b22d40d190463de745fc769493afdc6d042b4e2187bf5b4"
       },
       {
         "file": "ld.java",
@@ -42000,7 +40659,7 @@
       },
       {
         "file": "nf.java",
-        "sha256": "3d7df8d2146c465785b00db3198327657bf67f6861faefbdb569c68fdc4aa4a1"
+        "sha256": "bd8b5bad81d2d5aeb741817ee2e68459dd098dc6d4e0b2b351dea9d695bc729f"
       },
       {
         "file": "ng.java",
@@ -42008,7 +40667,7 @@
       },
       {
         "file": "nh.java",
-        "sha256": "aeb9c4110c2cda7a82d1ceec57155acb3d1467073d70147fc834ce984da81ff1"
+        "sha256": "3ebaa4d40a47f537e04668026645385255c4df4d7a2116396aa62cd2c5d48829"
       },
       {
         "file": "ni.java",
@@ -42032,7 +40691,7 @@
       },
       {
         "file": "oe.java",
-        "sha256": "7a87ae0901714f3e44ce288efad4a06d14169bcdc3143b82ca11465f331e291e"
+        "sha256": "7cdb017daf049c6942087af393a08edc74972f69aac0032a5e5640bf6d2d00fa"
       },
       {
         "file": "ok.java",
@@ -42092,7 +40751,7 @@
       },
       {
         "file": "qc.java",
-        "sha256": "92d61f28dc3d804d4d25eccb217c2c1c0ff8d834b0f3954abdb8f15a701e9980"
+        "sha256": "d504422473269f9d4ae1c4b5819b04fe9c55bd6a4bb848a658fa97b51716c0a1"
       },
       {
         "file": "qd.java",
@@ -42192,7 +40851,7 @@
       },
       {
         "file": "sl.java",
-        "sha256": "c9a3c5663aa70f5605b908885e5bc27dfc694cdd3925caf447208ab9e6078e48"
+        "sha256": "cd7cf9c67470bb66eb42eb482d8841f85b2b4dbdf52f4783b5879ab698a86e6e"
       },
       {
         "file": "tb.java",
@@ -42200,7 +40859,7 @@
       },
       {
         "file": "tc.java",
-        "sha256": "f22f5851c42444d2c71c62d8c83ba27c771ce72562dde62337e0ff8d28ad9c00"
+        "sha256": "8efd3e0a152692736bc2e27c17c116dd72ee23df7a6e7d1235424169e8ebf872"
       },
       {
         "file": "td.java",
@@ -42268,7 +40927,7 @@
       },
       {
         "file": "vb.java",
-        "sha256": "fa64561db890931d8d1ed2e201c6fa67d3c8a44dfef0049c029683f76f67f074"
+        "sha256": "d303de029274d3ae5a43c1e0a93f3aba938ba8f8b6e9d6b7582ce7afd09f349f"
       },
       {
         "file": "vc.java",
@@ -42300,7 +40959,7 @@
       },
       {
         "file": "vk.java",
-        "sha256": "9b4bfedb91ab174b90a414f50ce5e66a144b64a2904b98dfbd2ec1cd670f0eea"
+        "sha256": "1469654978dd3e8aaed40082f0b08e190f70e38a7b4d2bf8629c4bb44d0e687a"
       },
       {
         "file": "w.java",
@@ -42320,7 +40979,7 @@
       },
       {
         "file": "wf.java",
-        "sha256": "f72208a660acbd40061abac4aed8d5a70b81fe424de283e57e5f6e66d603e18c"
+        "sha256": "a0783d6a8f867ee8f7e18b68c7107c5651e495bf322a470b67e4007b730a4c09"
       },
       {
         "file": "wg.java",
@@ -44717,7 +43376,8 @@
         "Pass77 removes only redundant labels and nondeclaring plain block frames after exact lexical jump-destination proof. Java AST event streams and all transfer destinations match for303 files; variable scopes, try/catch/finally and monitor ownership remain. Generic2048 native comparisons verify controlled effects, shadows, failures and lock release. Three wider try-with-resources fixture failures also occur on the pinned pre-cleanup baseline. Large labeled bodies, opaque helpers, full assets/gameplay and phone/FPS/heap remain unverified.",
         "Pass78 folds17 literal primitive-local boolean decisions through exact same-block breaks. All predicate operand bytes/order, unboxing/NaNs, calls, failures and partial state remain, with no relational complement. Extra branch effects/declarations/alternate branches, protected/monitor crossings, boxed/field/ambiguous targets and unknown syntax refuse folding. Native13824 comparisons cover the generic decision/protection scopes;42 emitter tests pass and the optional pass77 frame-only AST corpus check is skipped for this syntax change. All declarations and override rows remain; only17 duplicate local-store references disappear. Full assets/platform/server/gameplay and browser/phone acceptance remain unverified.",
         "Pass84 folds710 braced guard chains, merging913 conditions across131 files without alternate/intervening work. Predicate bytes/order, innermost declaration blocks and protected boundaries remain. Generic17280 native comparisons cover short circuits, nullable unboxing, NaNs, partial effects, failures, early returns, finally effects after invocation and lock ownership. All303 corpus token streams match only this documented guard/frame transform; all ordered naming bindings/ordinals remain. The optional pass77 frame-only AST check stays historical. Real assets/platform/server/gameplay and browser/phone acceptance remain unverified.",
-        "Pass85 names the logo clock/transforms/materials/loader/rendering path and adds an int-guard collector entry point. Native56862 logo cases include trig/matrix oracles within one integer unit,224 clock cases,48 valid material-input oracles,72 draw-order/depth oracles and4320 scene traces.804 scene calls succeed,216 change pixels. Native corrected120 sprite-reference cleanup mismatches caused by a narrowing byte cast. Only null-archive loader failures are executed; complete logo archive decoding, general easing and whole-game rendering/performance are unverified. Integer-argument discovery covers owned static targets reached through int stackIn carriers, not arbitrary direct expressions/external/virtual/constructor/boolean paths. The original and full-int collector bodies coexist; large bodies remain."
+        "Pass85 names the logo clock/transforms/materials/loader/rendering path and adds an int-guard collector entry point. Native56862 logo cases include trig/matrix oracles within one integer unit,224 clock cases,48 valid material-input oracles,72 draw-order/depth oracles and4320 scene traces.804 scene calls succeed,216 change pixels. Native corrected120 sprite-reference cleanup mismatches caused by a narrowing byte cast. Only null-archive loader failures are executed; complete logo archive decoding, general easing and whole-game rendering/performance are unverified. Integer-argument discovery covers owned static targets reached through int stackIn carriers, not arbitrary direct expressions/external/virtual/constructor/boolean paths. The original and full-int collector bodies coexist; large bodies remain.",
+        "Pass86 reconstructs57 plain labeled skip blocks whose only label references are66 leading bare guard breaks. Logical negation retains predicate bytes, NaNs, unboxing and left-to-right effects; remaining declaration blocks/protected boundaries stay intact.4032 native comparisons cover scopes, failures, cleanup state after invocation, ancestor transfers and monitor ownership/release. All303 token streams match only the skip/nested-guard transforms and every ordered binding/ordinal remains. Session updater falls660 to643 lines and19 to14 labels;21 overlapping method spans >=300 lines,15 with labels remain. Recorded native probes keep their prior scopes/pins; real assets/full-game/browser/phone acceptance remain unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -44759,7 +43419,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 913,
+      "rawSourceLinesRemoved": 197,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -44774,8 +43434,8 @@
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
       "nativeEmitterComparisons": 54549,
-      "sourceReferenceOccurrencesRemoved": 1,
-      "sourceReferenceOccurrencesAdded": 238,
+      "sourceReferenceOccurrencesRemoved": 0,
+      "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
       "nativeDifficultySequenceTicks": 60,
@@ -44784,7 +43444,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 46,
+      "genericEmitterTestGroups": 48,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -44792,7 +43452,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass85 adds33 bridge declarations and238 reference occurrences, replacing one p reference to the narrow collector with the int entry point. All previous declarations/ordinals and388 overrides remain; added body is byte-identical except header name/parameter type.",
+      "referenceRemovalAttribution": "Pass86 changes only labeled skip/control-guard syntax. All ordered declarations/references/overrides, local ordinals and every guarded naming object remain unchanged.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -44808,7 +43468,7 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 134,
+      "ruleChangesInCurrentPass": 0,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
@@ -44823,14 +43483,14 @@
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 134,
+      "namingRulesAddedInCurrentPass": 0,
       "sourceInputChangedInCurrentPass": true,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 753,
-      "lastStructuralPassVersion": 85,
+      "identifierEditsAddedInCurrentPass": 0,
+      "lastStructuralPassVersion": 86,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -45215,7 +43875,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 47,
+      "genericEmitterTestsRegistered": 49,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -45306,7 +43966,7 @@
       "nestedBracedGuardMaximumConditions": 16,
       "nestedBracedGuardMaximumPredicateTokens": 512,
       "nestedBracedGuardExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
-      "allOrderedNamingBindingsUnchanged": false,
+      "allOrderedNamingBindingsUnchanged": true,
       "allGuardedRuleObjectsPreserved": true,
       "allPreviousDeclarationsAndOrdinalsPreserved": true,
       "allPreviousGuardedRuleObjectsPreserved": true,
@@ -45337,33 +43997,28 @@
         "directory",
         "jar",
         "multi-class-ast"
-      ]
+      ],
+      "labeledSkipGuardsHistoricalPassVersion": 86,
+      "labeledSkipGuardExitFramesRemoved": 57,
+      "labeledSkipGuardJumpsRemoved": 66,
+      "labeledSkipGuardChangedJavaFiles": 25,
+      "labeledSkipGuardSourceLinesBefore": 78886,
+      "labeledSkipGuardSourceLinesAfter": 78689,
+      "labeledSkipGuardExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "nativeLabeledSkipGuardComparisons": 4032,
+      "labeledSkipGuardMaximumPredicates": 16,
+      "labeledSkipGuardMaximumPredicateTokens": 512,
+      "sessionUpdaterLinesBefore": 660,
+      "sessionUpdaterLinesAfter": 643,
+      "sessionUpdaterLabelsBefore": 19,
+      "sessionUpdaterLabelsAfter": 14,
+      "sourceMethodBodies": 2080,
+      "sourceLargeMethodSpansAtLeast300Lines": 21,
+      "sourceLargeMethodSpansWithGeneratedBlockLabels": 15,
+      "currentRecordedNativeProbeCount": 6
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "e38d0eccc0deda0553930a2a1227c684a47f4ac3",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "f0763fad063121cd249c9cfd0c522fa52d9b4ace",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "6f7b251bee18053f7db1c3970dc6a52d421b1709d3366b65c4cb11cf0b3c370e",
-              "reproduce": "git archive --format=tar f0763fad063121cd249c9cfd0c522fa52d9b4ace | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "fe14e8a5abf577b825d5d210ee51cce9b3d43481bc3715bff080220b5636cd25"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "d248ccd417468ca72a4ec5227ed4c41c0059c7bb",
@@ -45386,7 +44041,30 @@
         },
         "inputTreeSha256": "2995331e604149cd5b7e6e4cbc608fbd8eca8f61cc104b3da7f1910ced8a4399"
       },
-      "reason": "Pass85 preserves full int stack arguments through an additional owned static entry point, retaining every previous declaration/ordinal/name and adding logo semantic names. Original source/signature/body remain; only one p call changes target. Native logo trace verifies corrected sprite cleanup."
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "d290b8609553a0785782aab7968653ae68a5ac76",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "4c1b05352b59d68fd556df1ce2072ad5d57eefbd",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4",
+              "reproduce": "git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df"
+      },
+      "reason": "Pass86 reconstructs57 plain labeled skip decisions, consuming66 leading guard breaks across25 files, with197 fewer lines. Original predicate bytes remain under logical negation and left-to-right short circuits; remainder blocks retain scope/effects/protected boundaries. Every ordered binding/ordinal and all6683 previous complete naming objects remain unchanged."
     }
   }
 }
