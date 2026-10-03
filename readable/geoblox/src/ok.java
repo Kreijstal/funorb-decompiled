@@ -9,7 +9,7 @@ final class ok {
     static int[] transformedMeshNormalX;
     static String createEmailConfirmationText;
     static int meshProjectionShift;
-    static int field_c;
+    static int canvasHeight;
     static int field_b;
     private static String field_z;
 

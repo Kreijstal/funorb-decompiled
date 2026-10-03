@@ -83,7 +83,7 @@ final class HighscoreNameEntry {
         RuntimeException var3 = null;
         try {
           if (param1 != -2) {
-            HighscoreNameEntry.a((byte) -59);
+            HighscoreNameEntry.handleSocialListResponse((byte) -59);
           }
           oi.field_e = param0;
           ArchiveRequest.field_s = param2;
@@ -261,11 +261,11 @@ final class HighscoreNameEntry {
         }
     }
 
-    final static void a(byte param0) {
+    final static void handleSocialListResponse(byte methodGuard) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_15_0 = 0;
-        j stackIn_61_0 = null;
+        SocialListEntry stackIn_61_0 = null;
         RuntimeException decompiledCaughtException = null;
         PacketBuffer var1 = null;
         RuntimeException var1_ref = null;
@@ -274,16 +274,16 @@ final class HighscoreNameEntry {
         Object var3 = null;
         String var4_ref_String = null;
         int var4 = 0;
-        j var5 = null;
+        SocialListEntry var5 = null;
         String var5_ref = null;
         String var6 = null;
-        j var6_ref = null;
+        SocialListEntry var6_ref = null;
         String var7 = null;
-        j var7_ref = null;
+        SocialListEntry var7_ref = null;
         int var8 = 0;
         var8 = Geoblox.clientControlFlowFlag;
         try {
-          if (param0 != 104) {
+          if (methodGuard != 104) {
             field_b = 67;
           }
           var1 = eh.field_d;
@@ -291,7 +291,7 @@ final class HighscoreNameEntry {
           if (var2 == 0) {
             if (ug.field_a == null) {
               ug.field_a = new SecondaryNodeHashTable(128);
-              ca.field_i = 0;
+              FifoResponseToken.field_i = 0;
             }
             stackIn_15_0 = (var1.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
@@ -299,27 +299,27 @@ final class HighscoreNameEntry {
             if (var3_int != 0) {
               var1.readNullTerminatedText((byte) 108);
             }
-            var5 = ud.a(0, var4_ref_String);
+            var5 = ud.findSecondarySocialEntry(0, var4_ref_String);
             var6 = var1.readNullTerminatedText((byte) 103);
             var7 = ResizableDialog.a((CharSequence) ((Object) var4_ref_String), 12);
             if (null == var7) {
               var7 = var4_ref_String;
             }
             if (var5 == null) {
-              var5 = ud.a(param0 ^ 104, var6);
+              var5 = ud.findSecondarySocialEntry(methodGuard ^ 104, var6);
               if (var5 != null) {
                 ug.field_a.put((long)var7.hashCode(), 113, var5);
               }
             }
             if (null == var5) {
-              var5 = new j();
+              var5 = new SocialListEntry();
               ug.field_a.put((long)var7.hashCode(), 94, var5);
-              fieldTemp$0 = ca.field_i;
-              ca.field_i = ca.field_i + 1;
-              var5.field_kb = fieldTemp$0;
-              TextTemplateDefinitionLoader.field_e.addLast(param0 ^ -86, var5);
+              fieldTemp$0 = FifoResponseToken.field_i;
+              FifoResponseToken.field_i = FifoResponseToken.field_i + 1;
+              var5.insertionIndex = fieldTemp$0;
+              TextTemplateDefinitionLoader.field_e.addLast(methodGuard ^ -86, var5);
             }
-            var5.field_hb = var4_ref_String;
+            var5.displayName = var4_ref_String;
             return;
           }
           if (var2 != 1) {
@@ -342,9 +342,9 @@ final class HighscoreNameEntry {
             }
             MouseWheelInput.field_a = 1;
             var3 = var1.readNullTerminatedText((byte) 122);
-            ReflectionCheckRequest.field_l = ((String) (var3)).intern();
+            ReflectionCheckRequest.currentSocialLocationLabel = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) 34);
-            ValidationMessageWidget.c(var4, param0 ^ -12742);
+            ValidationMessageWidget.c(var4, methodGuard ^ -12742);
             return;
           }
           if (ArchiveSource.field_a == null) {
@@ -357,28 +357,28 @@ final class HighscoreNameEntry {
           }
           var4_ref_String = var1.readNullTerminatedText((byte) 102);
           var5_ref = var1.readNullTerminatedText((byte) 110);
-          var6_ref = SocketConnector.a((byte) -62, var4_ref_String);
+          var6_ref = SocketConnector.findSocialEntry((byte) -62, var4_ref_String);
           if (null == var6_ref) {
-            var6_ref = SocketConnector.a((byte) -62, var5_ref);
+            var6_ref = SocketConnector.findSocialEntry((byte) -62, var5_ref);
             if (null != var6_ref) {
               ArchiveSource.field_a.put((long)ResizableDialog.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
             }
           }
           if (null == var6_ref) {
-            var6_ref = new j();
-            ArchiveSource.field_a.put((long)ResizableDialog.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
+            var6_ref = new SocialListEntry();
+            ArchiveSource.field_a.put((long)ResizableDialog.a((CharSequence) ((Object) var4_ref_String), methodGuard ^ 100).hashCode(), 110, var6_ref);
             fieldTemp$1 = HighscoreQuery.field_g;
             HighscoreQuery.field_g = HighscoreQuery.field_g + 1;
-            var6_ref.field_kb = fieldTemp$1;
+            var6_ref.insertionIndex = fieldTemp$1;
             ProgressBarWidget.field_B.addLast(-59, var6_ref);
           }
           if (var3 != null) {
             var3 = ((String) (var3)).intern();
           }
-          var6_ref.field_hb = var4_ref_String;
-          var6_ref.field_mb = (String) (var3);
+          var6_ref.displayName = var4_ref_String;
+          var6_ref.locationLabel = (String) (var3);
           var6_ref.unlinkNode(false);
-          var7_ref = (j) ((Object) ProgressBarWidget.field_B.firstForIteration(0));
+          var7_ref = (SocialListEntry) ((Object) ProgressBarWidget.field_B.firstForIteration(0));
           while (true) {
             L15: {
               if (null != var7_ref) {
@@ -386,8 +386,8 @@ final class HighscoreNameEntry {
                 if (var8 != 0) {
                   break L15;
                 }
-                if (ul.a(stackIn_61_0, var7_ref, (byte) 127)) {
-                  var7_ref = (j) ((Object) ProgressBarWidget.field_B.nextForIteration(1));
+                if (ul.socialEntrySortsAfter(stackIn_61_0, var7_ref, (byte) 127)) {
+                  var7_ref = (SocialListEntry) ((Object) ProgressBarWidget.field_B.nextForIteration(1));
                   continue;
                 }
               }
@@ -405,7 +405,7 @@ final class HighscoreNameEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "lc.D(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "lc.D(" + methodGuard + ')');
         }
     }
 

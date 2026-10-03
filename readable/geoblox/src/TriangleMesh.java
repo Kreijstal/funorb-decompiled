@@ -38,7 +38,7 @@ final class TriangleMesh {
     short normalCount;
     short[] field_g;
     short[] normalY;
-    static IntrusiveDeque field_j;
+    static IntrusiveDeque pendingScoreSubmissions;
     int minY;
     short[] field_k;
     int maxX;
@@ -68,7 +68,7 @@ final class TriangleMesh {
     }
 
     public static void b(byte param0) {
-        field_j = null;
+        pendingScoreSubmissions = null;
         reloadGameText = null;
         if (param0 != 115) {
             TriangleMesh.a(124, -30, -53);
@@ -245,6 +245,6 @@ final class TriangleMesh {
 
     static {
         reloadGameText = "Reload game";
-        field_j = new IntrusiveDeque();
+        pendingScoreSubmissions = new IntrusiveDeque();
     }
 }

@@ -29,16 +29,16 @@ abstract class SocketConnector {
         return !ih.field_c.isCompleted(-95) ? true : false;
     }
 
-    final static j a(byte param0, String param1) {
+    final static SocialListEntry findSocialEntry(byte methodGuard, String displayName) {
         String var2 = null;
-        j var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        j stackIn_10_0 = null;
+        SocialListEntry stackIn_10_0 = null;
         Object stackIn_13_0 = null;
-        j stackIn_20_0 = null;
+        SocialListEntry stackIn_20_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -49,39 +49,39 @@ abstract class SocketConnector {
           if (ArchiveSource.field_a == null) {
             return null;
           }
-          if (param1 == null) {
+          if (displayName == null) {
             return null;
           }
-          if (param1.length() == 0) {
+          if (displayName.length() == 0) {
             return null;
           }
-          if (param0 != -62) {
-            stackIn_10_0 = (j) null;
+          if (methodGuard != -62) {
+            stackIn_10_0 = (SocialListEntry) null;
             return stackIn_10_0;
           }
-          var6 = (CharSequence) ((Object) param1);
+          var6 = (CharSequence) ((Object) displayName);
           var2 = ResizableDialog.a(var6, 12);
           if (var2 == null) {
             stackIn_13_0 = null;
-            return (j) (stackIn_13_0);
+            return (SocialListEntry) (stackIn_13_0);
           }
-          var3 = (j) ((Object) ArchiveSource.field_a.findFirst((long)var2.hashCode(), -1));
+          var3 = (SocialListEntry) ((Object) ArchiveSource.field_a.findFirst((long)var2.hashCode(), -1));
           while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_hb);
+            var7 = (CharSequence) ((Object) var3.displayName);
             var4 = ResizableDialog.a(var7, 12);
             if (var4.equals(var2)) {
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }
-            var3 = (j) ((Object) ArchiveSource.field_a.findNext(-29925));
+            var3 = (SocialListEntry) ((Object) ArchiveSource.field_a.findNext(-29925));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_25_0 = var2_ref;
-          stackIn_25_1 = new StringBuilder().append("jg.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_25_1 = new StringBuilder().append("jg.B(").append(methodGuard).append(',');
+          if (displayName == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
@@ -181,7 +181,7 @@ abstract class SocketConnector {
           var5_int = 0;
           if (param1 < 69) {
             var8 = (String) null;
-            SocketConnector.a((byte) 74, (String) null);
+            SocketConnector.findSocialEntry((byte) 74, (String) null);
           }
           while (var5_int < 33) {
             if ((TextTemplateArgumentType.field_c[var5_int] > 0) &&

@@ -366,7 +366,7 @@ final class GameplayEntity extends DualLinkNode {
           if (this.entityUpdateTick % 20 == 0) {
             kind5AnimationFrame = this.animationFrameIndex;
             this.animationFrameIndex = this.animationFrameIndex + 1;
-            this.entitySprite = mi.sparkleFrames[kind5AnimationFrame];
+            this.entitySprite = VisualPropertyOverrides.sparkleFrames[kind5AnimationFrame];
             this.animationFrameIndex = this.animationFrameIndex % 4;
           }
         }

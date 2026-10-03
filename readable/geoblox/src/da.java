@@ -37,7 +37,7 @@ final class da {
     }
 
     final static void a(boolean param0, int param1) {
-        j.field_lb = InstrumentEnvelope.field_k[param1];
+        SocialListEntry.field_lb = InstrumentEnvelope.field_k[param1];
         ri.field_c = IntrusiveDeque.field_e[param1];
         CachedTextLayout.field_g = PointerInputListener.field_b[param1];
         if (!param0) {

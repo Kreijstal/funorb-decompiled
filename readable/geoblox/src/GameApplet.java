@@ -26,9 +26,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if ((null != kg.field_m) &&
-              (this != kg.field_m)) {
-            stackIn_10_0 = kg.field_m.getDocumentBase();
+          if ((null != VisualPropertyNode.field_m) &&
+              (this != VisualPropertyNode.field_m)) {
+            stackIn_10_0 = VisualPropertyNode.field_m.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -47,7 +47,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          kg.field_m = param0;
+          VisualPropertyNode.field_m = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,8 +100,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             MidiNoteMixer.field_p = true;
           }
-          if (null != kg.field_m) {
-            kg.field_m.destroy();
+          if (null != VisualPropertyNode.field_m) {
+            VisualPropertyNode.field_m.destroy();
           }
           try {
             this.serviceAudio(1);
@@ -368,8 +368,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   var1 = PrefixCodeDecoder.field_d;
-                  if (null != kg.field_m) {
-                    var1 = kg.field_m;
+                  if (null != VisualPropertyNode.field_m) {
+                    var1 = VisualPropertyNode.field_m;
                   }
                   var2_ref = PlatformTaskDispatcher.setFocusCycleRootMethod;
                   if (null != var2_ref) {
@@ -382,7 +382,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   }
                   SpriteCheckboxRenderer.a(75);
                   this.b(true);
-                  SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.field_c, AudioService.field_d);
+                  SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.canvasHeight, AudioService.canvasWidth);
                   this.initializeGame(117);
                   ReflectionCheckRequest.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {
@@ -451,9 +451,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if ((kg.field_m != null) &&
-              (this != kg.field_m)) {
-            stackIn_8_0 = kg.field_m.getAppletContext();
+          if ((VisualPropertyNode.field_m != null) &&
+              (this != VisualPropertyNode.field_m)) {
+            stackIn_8_0 = VisualPropertyNode.field_m.getAppletContext();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getAppletContext();
@@ -486,8 +486,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           L1: {
             if (FullscreenFocusCanvas.field_a == null) {
               if (null == sg.field_a) {
-                if (kg.field_m != null) {
-                  var2 = kg.field_m;
+                if (VisualPropertyNode.field_m != null) {
+                  var2 = VisualPropertyNode.field_m;
                   if (var4 == 0) {
                     break L1;
                   }
@@ -508,7 +508,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
             MessageDialog.gameCanvas = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
             ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
-            MessageDialog.gameCanvas.setSize(AudioService.field_d, ok.field_c);
+            MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ok.canvasHeight);
             MessageDialog.gameCanvas.setVisible(param0);
             if (sg.field_a != var2) {
               MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
@@ -625,9 +625,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != sg.field_a) {
           return null;
         }
-        if ((null != kg.field_m) &&
-            (kg.field_m != this)) {
-          return kg.field_m.getCodeBase();
+        if ((null != VisualPropertyNode.field_m) &&
+            (VisualPropertyNode.field_m != this)) {
+          return VisualPropertyNode.field_m.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -772,11 +772,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
                 SocketArchiveNetworkClient.field_t = param2;
-                ok.field_c = param3;
+                ok.canvasHeight = param3;
                 NetworkArchiveRequest.field_w = param3;
                 PrefixCodeDecoder.field_b = 0;
                 ButtonWidget.field_B = 0;
-                AudioService.field_d = param4;
+                AudioService.canvasWidth = param4;
                 DialWidget.field_G = param4;
                 PrefixCodeDecoder.field_d = (GameApplet) (this);
                 GameScreen.errorReportApplet = NodeHashTableIterator.c(107);
@@ -836,9 +836,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if ((kg.field_m != null) &&
-              (this != kg.field_m)) {
-            stackIn_10_0 = kg.field_m.getParameter(param0);
+          if ((VisualPropertyNode.field_m != null) &&
+              (this != VisualPropertyNode.field_m)) {
+            stackIn_10_0 = VisualPropertyNode.field_m.getParameter(param0);
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getParameter(param0);
@@ -884,7 +884,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (fieldTemp$1 > 50) {
               DisplayModeInfo.field_i = DisplayModeInfo.field_i - 50;
               dl.field_c = true;
-              MessageDialog.gameCanvas.setSize(AudioService.field_d, ok.field_c);
+              MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ok.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
               if (!((sg.field_a != null) &&
                   (FullscreenFocusCanvas.field_a == null))) {

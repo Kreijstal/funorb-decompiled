@@ -61,7 +61,7 @@ final class LoginMethod {
 
     final void rememberMethod(java.applet.Applet applet, int methodGuard) {
         try {
-            ea.a((byte) -25, 31536000L, applet, "jagex-last-login-method", this.methodName);
+            IntArrayQuery.a((byte) -25, 31536000L, applet, "jagex-last-login-method", this.methodName);
             if (methodGuard != 0) {
                 java.applet.Applet var4 = (java.applet.Applet) null;
                 this.rememberMethod((java.applet.Applet) null, -71);

@@ -12,7 +12,7 @@ final class al {
         RuntimeException var1 = null;
         int var4 = 0;
         Object var5 = null;
-        ca var8 = null;
+        FifoResponseToken var8 = null;
         byte[] var13 = null;
         var6 = Geoblox.clientControlFlowFlag;
         try {
@@ -22,7 +22,7 @@ final class al {
           var9 = eh.field_d;
           var2 = var9.readUnsignedByte((byte) 34);
           if (var2 == 0) {
-            var8 = (ca) ((Object) PrefixCodeDecoder.field_e.firstForIteration(0));
+            var8 = (FifoResponseToken) ((Object) PrefixCodeDecoder.field_e.firstForIteration(0));
             if (var8 == null) {
               Bzip2DecoderState.closeSessionSocket((byte) -124);
               return;

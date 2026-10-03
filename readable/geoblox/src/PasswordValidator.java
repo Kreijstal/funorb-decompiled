@@ -50,7 +50,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_6_0;
           }
           if (ak.a(var5, (byte) -120)) {
-            stackIn_10_0 = ai.createPasswordCharacterAlertText;
+            stackIn_10_0 = ScoreSubmission.createPasswordCharacterAlertText;
             return stackIn_10_0;
           }
           if (SecondaryNodeDeque.a(guard + 18303, var5)) {

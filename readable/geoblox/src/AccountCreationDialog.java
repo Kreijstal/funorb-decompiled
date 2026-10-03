@@ -101,7 +101,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     AccountCreationDialog(DialogLayer dialogLayer, AccountCreationForm accountForm) {
-        super(dialogLayer, hh.field_c, se.creatingYourAccountText, false, false);
+        super(dialogLayer, hh.field_c, KeyedIntRecordSubmission.creatingYourAccountText, false, false);
         try {
             this.accountForm = accountForm;
         } catch (RuntimeException runtimeException) {

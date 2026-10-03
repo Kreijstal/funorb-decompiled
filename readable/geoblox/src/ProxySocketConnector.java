@@ -19,7 +19,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
         if (GameScreen.selectedThemeId == 4) {
           ec.selectedThemeForeground = DisplayNamePanel.bakingForegroundSprite;
-          mf.selectedThemeBackground = ca.bakingBackgroundSprite;
+          mf.selectedThemeBackground = FifoResponseToken.bakingBackgroundSprite;
         } else {
           if (GameScreen.selectedThemeId == 1) {
             mf.selectedThemeBackground = GzipInflater.sunBackgroundSprite;

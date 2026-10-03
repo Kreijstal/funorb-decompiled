@@ -133,7 +133,7 @@ final class GameplaySession {
               (476 > PcmResampler.pointerYSnapshot)) {
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
           }
-          FadingDialog.uiPaletteFont.drawCenteredText(mi.field_y, 320, 468, 0, -1);
+          FadingDialog.uiPaletteFont.drawCenteredText(VisualPropertyOverrides.field_y, 320, 468, 0, -1);
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
         }
     }
@@ -334,11 +334,11 @@ final class GameplaySession {
               tutorialTopOrDebugColorOrTransitionClipTop = 10;
             }
             tutorialLineHeightOrDebugEntityRadius = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
-            tutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(v.tutorialSkipMessage, 640) + 40;
-            tutorialTextHeightOrDebugPanelTop = IntrusiveNodeHashTable.smallFont.countWrappedLines(v.tutorialSkipMessage, 640) * tutorialLineHeightOrDebugEntityRadius + 10;
+            tutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
+            tutorialTextHeightOrDebugPanelTop = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * tutorialLineHeightOrDebugEntityRadius + 10;
             DelayedIncomingPacket.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, ll.frameNineSliceSprites);
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(v.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(v.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(CanvasResizeController.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(CanvasResizeController.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
             if (clientControlFlowGuard == 0) {
               break L19;
             }
@@ -469,8 +469,8 @@ final class GameplaySession {
                             tutorialTextHeightOrDebugPanelTop = 10;
                           }
                           debugTutorialLineHeight = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent;
-                          debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(v.tutorialSkipMessage, 640) + 40;
-                          debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(v.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
+                          debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
+                          debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
                           SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                           break L43;
                         }
@@ -953,7 +953,7 @@ final class GameplaySession {
               }
               if (ki.currentKeyboardEventCode == 13) {
                 if (!this.sessionEnding) {
-                  ai.requestedScreenId = 1;
+                  ScoreSubmission.requestedScreenId = 1;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
@@ -1669,9 +1669,9 @@ final class GameplaySession {
         }
         if ((0 < this.score && !this.submissionBlocked) &&
             (!UnderlinedButtonRenderer.c(-102))) {
-            ContentTransitionDialog.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, SpriteButtonRenderer.field_r, 65513, 3, DequeCursor.field_g);
+            ContentTransitionDialog.createAndSubmitScore(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, SpriteButtonRenderer.field_r, 65513, 3, DequeCursor.field_g);
         }
-        ca.field_f = null;
+        FifoResponseToken.activeHighscoreQuery = null;
     }
 
     final void addPopupPoints(int points, int methodGuard) {
@@ -1746,29 +1746,29 @@ final class GameplaySession {
           if (!UnderlinedButtonRenderer.c(-93)) {
             if (this.newActionCount <= 0) {
               if (this.score > 0) {
-                ai.requestedScreenId = 2;
+                ScoreSubmission.requestedScreenId = 2;
                 if (clientControlFlowGuard == 0) {
                   break L1;
                 }
               }
-              ai.requestedScreenId = 0;
+              ScoreSubmission.requestedScreenId = 0;
               if (clientControlFlowGuard == 0) {
                 break L1;
               }
             }
-            ai.requestedScreenId = 6;
+            ScoreSubmission.requestedScreenId = 6;
             if (clientControlFlowGuard == 0) {
               break L1;
             }
           }
           if (!((this.score <= 0) &&
                 (this.newActionCount <= 0))) {
-            ai.requestedScreenId = 4;
+            ScoreSubmission.requestedScreenId = 4;
             if (clientControlFlowGuard == 0) {
               break L1;
             }
           }
-          ai.requestedScreenId = 0;
+          ScoreSubmission.requestedScreenId = 0;
         }
         IntrusiveNodeHashTable.a(0, ll.field_d);
     }

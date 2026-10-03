@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PendingActionMarker extends IntrusiveNode {
-    static IntrusiveDeque field_f;
+    static IntrusiveDeque pendingRankedListQueries;
     int actionId;
     static int field_g;
 
@@ -16,14 +16,14 @@ final class PendingActionMarker extends IntrusiveNode {
             hj.field_a = 0;
             return;
         }
-        field_f = (IntrusiveDeque) null;
+        pendingRankedListQueries = (IntrusiveDeque) null;
         TextInputValidator.a((byte) 107, false);
         hj.field_a = 0;
     }
 
     public static void c(byte param0) {
         int var1 = -118 / ((-11 - param0) / 40);
-        field_f = null;
+        pendingRankedListQueries = null;
     }
 
     PendingActionMarker(int param0) {
@@ -32,6 +32,6 @@ final class PendingActionMarker extends IntrusiveNode {
 
     static {
         field_g = -1;
-        field_f = new IntrusiveDeque();
+        pendingRankedListQueries = new IntrusiveDeque();
     }
 }

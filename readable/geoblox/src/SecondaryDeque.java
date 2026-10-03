@@ -113,23 +113,23 @@ final class SecondaryDeque {
     final static void setAvatarPositiveRotationSteering(byte methodGuard) {
         jk.avatarSteeringDirectionId = 2;
         if (methodGuard < 45) {
-            SecondaryDeque.a(true, -75);
+            SecondaryDeque.resendRankedListQueries(true, -75);
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void resendRankedListQueries(boolean methodGuard, int packetOpcode) {
         RuntimeException var2 = null;
         int var3 = 0;
-        re var4 = null;
+        RankedListQuery var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
+          var4 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
           while (var4 != null) {
-            ik.a(var4, param1, (byte) 107);
-            var4 = (re) ((Object) PendingActionMarker.field_f.nextForIteration(1));
+            ik.writeRankedListQuery(var4, packetOpcode, (byte) 107);
+            var4 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
           }
-          if (param0) {
+          if (methodGuard) {
             return;
           }
           contactProbeOffsetX = -80;
@@ -137,7 +137,7 @@ final class SecondaryDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "wd.K(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "wd.K(" + methodGuard + ',' + packetOpcode + ')');
         }
     }
 

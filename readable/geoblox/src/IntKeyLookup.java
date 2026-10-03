@@ -54,19 +54,19 @@ final class IntKeyLookup {
                 return guardResultBeforeReturn;
               }
               indexDiskCacheOrIoFailure = null;
-              if (ph.archiveTaskDispatcher.cacheDataFile != null) {
-                af.field_d = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheDataFile, 5200, 0);
-                ph.archiveTaskDispatcher.cacheDataFile = null;
-                indexDiskCacheOrIoFailure = new DiskArchiveCache(255, af.field_d, new BufferedRandomAccessFile(ph.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
+              if (ByteShortQuery.archiveTaskDispatcher.cacheDataFile != null) {
+                af.field_d = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheDataFile, 5200, 0);
+                ByteShortQuery.archiveTaskDispatcher.cacheDataFile = null;
+                indexDiskCacheOrIoFailure = new DiskArchiveCache(255, af.field_d, new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
               }
               groupDiskCache = null;
               if (af.field_d != null) {
                 if (TrackedPcmStream.field_h == null) {
-                  TrackedPcmStream.field_h = new BufferedRandomAccessFile[ph.archiveTaskDispatcher.cacheIndexFiles.length];
+                  TrackedPcmStream.field_h = new BufferedRandomAccessFile[ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles.length];
                 }
                 if (TrackedPcmStream.field_h[archiveId] == null) {
-                  TrackedPcmStream.field_h[archiveId] = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
-                  ph.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
+                  TrackedPcmStream.field_h[archiveId] = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
+                  ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
                 }
                 groupDiskCache = new DiskArchiveCache(archiveId, af.field_d, TrackedPcmStream.field_h[archiveId], 2097152);
               }

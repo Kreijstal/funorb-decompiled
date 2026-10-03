@@ -37,15 +37,15 @@ final class IntrusiveNodeHashTable {
             changeDisplayNameText = (String) null;
             angle8192 = angle8192 & 8191;
             if (angle8192 >= 4096) {
-                return angle8192 >= 6144 ? ai.quarterSineQ16[-6144 + angle8192] : -ai.quarterSineQ16[-angle8192 + 6144];
+                return angle8192 >= 6144 ? ScoreSubmission.quarterSineQ16[-6144 + angle8192] : -ScoreSubmission.quarterSineQ16[-angle8192 + 6144];
             }
-            return 2048 <= angle8192 ? -ai.quarterSineQ16[angle8192 - 2048] : ai.quarterSineQ16[-angle8192 + 2048];
+            return 2048 <= angle8192 ? -ScoreSubmission.quarterSineQ16[angle8192 - 2048] : ScoreSubmission.quarterSineQ16[-angle8192 + 2048];
         }
         angle8192 = angle8192 & 8191;
         if (angle8192 >= 4096) {
-            return angle8192 >= 6144 ? ai.quarterSineQ16[-6144 + angle8192] : -ai.quarterSineQ16[-angle8192 + 6144];
+            return angle8192 >= 6144 ? ScoreSubmission.quarterSineQ16[-6144 + angle8192] : -ScoreSubmission.quarterSineQ16[-angle8192 + 6144];
         }
-        return 2048 <= angle8192 ? -ai.quarterSineQ16[angle8192 - 2048] : ai.quarterSineQ16[-angle8192 + 2048];
+        return 2048 <= angle8192 ? -ScoreSubmission.quarterSineQ16[angle8192 - 2048] : ScoreSubmission.quarterSineQ16[-angle8192 + 2048];
     }
 
     final void a(byte param0, IntrusiveNode param1, long param2) {

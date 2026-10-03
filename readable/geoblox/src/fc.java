@@ -8,7 +8,7 @@ final class fc {
     static double field_a;
     static Sprite[] avatarEyeFrames;
     static volatile boolean pointerActivityPending;
-    static int field_c;
+    static int nextScoreSubmissionId;
 
     final static void advanceEndingEntityAnimations(int methodGuard) {
         RuntimeException caughtEndingAnimationException = null;

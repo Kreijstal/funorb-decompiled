@@ -19,7 +19,7 @@ class UiWidget extends IntrusiveNode {
     int field_n;
     WidgetListener listener;
     String hoverText;
-    static IntrusiveDeque field_p;
+    static IntrusiveDeque pendingByteShortQueries;
     static int gameplayReturnScreenId;
     static GameplaySession gameplaySession;
     static int achievementTrackingAccumulator;
@@ -51,7 +51,7 @@ class UiWidget extends IntrusiveNode {
             return;
         }
         gameplaySession = null;
-        field_p = null;
+        pendingByteShortQueries = null;
     }
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
@@ -70,7 +70,7 @@ class UiWidget extends IntrusiveNode {
 
     int d(byte param0) {
         if (param0 < 82) {
-            field_p = (IntrusiveDeque) null;
+            pendingByteShortQueries = (IntrusiveDeque) null;
             return 0;
         }
         return 0;
@@ -724,7 +724,7 @@ class UiWidget extends IntrusiveNode {
     final static void a(boolean param0, ByteArrayBuffer param1, ByteArrayBuffer param2, java.math.BigInteger param3, java.math.BigInteger param4) {
         try {
             if (param0) {
-                field_p = (IntrusiveDeque) null;
+                pendingByteShortQueries = (IntrusiveDeque) null;
             }
             ArchiveSource.a(param4, param3, 0, param2, param1.bytes, param1.position, true);
         } catch (RuntimeException runtimeException) {
@@ -834,7 +834,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     static {
-        field_p = new IntrusiveDeque();
+        pendingByteShortQueries = new IntrusiveDeque();
         gameplayReturnScreenId = -1;
     }
 }

@@ -86,7 +86,7 @@ final class ki {
     final static void a(int param0) {
         AccountCreationDialog.a(ResourceArchive.field_i, (byte) -61, true, ByteStorage.field_a);
         int var1 = -30 % ((param0 + 30) / 36);
-        mi.field_I = true;
+        VisualPropertyOverrides.field_I = true;
     }
 
     static {

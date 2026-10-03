@@ -58,10 +58,10 @@ final class GameScreen extends MenuScreen {
                     if (ki.currentKeyboardEventCode != 103) {
                       super.handleMenuKey(itemIndex, -53);
                     } else {
-                      j.field_gb = 80;
+                      SocialListEntry.field_gb = 80;
                     }
                   } else {
-                    j.field_gb = 0;
+                    SocialListEntry.field_gb = 0;
                   }
                 }
                 this.previewMusicVolume(0);
@@ -92,14 +92,14 @@ final class GameScreen extends MenuScreen {
                 (!this.fullscreenDialogActive)) {
               L10: {
                 if (this.screenId == 1) {
-                  ai.requestedScreenId = -1;
+                  ScoreSubmission.requestedScreenId = -1;
                   if (clientControlFlowGuard == 0) {
                     break L10;
                   }
                 }
-                ai.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
+                ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
               }
-              if (~ai.requestedScreenId == ~this.screenId) {
+              if (~ScoreSubmission.requestedScreenId == ~this.screenId) {
                 break L0;
               }
               if ((this.screenId != 1) &&
@@ -220,7 +220,7 @@ final class GameScreen extends MenuScreen {
                 UiWidget.gameplaySession.submitScore((byte) -70);
               }
               UiWidget.gameplayReturnScreenId = 0;
-              ai.requestedScreenId = -1;
+              ScoreSubmission.requestedScreenId = -1;
               ProxySocketConnector.gameplayOriginScreenId = 0;
               if (clientControlFlowGuard == 0) {
                 break L0;
@@ -655,11 +655,11 @@ final class GameScreen extends MenuScreen {
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
           if ((actionId == 8) &&
               (clientControlFlowGuard == 0)) {
-            if (j.field_gb > 10) {
-              j.field_gb = j.field_gb - 10;
+            if (SocialListEntry.field_gb > 10) {
+              SocialListEntry.field_gb = SocialListEntry.field_gb - 10;
               return;
             }
-            j.field_gb = 0;
+            SocialListEntry.field_gb = 0;
             return;
           } else {
             if (9 != actionId) {
@@ -946,9 +946,9 @@ final class GameScreen extends MenuScreen {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          if ((ca.field_f == null) &&
+          if ((FifoResponseToken.activeHighscoreQuery == null) &&
               (!UnderlinedButtonRenderer.c(-115))) {
-            ca.field_f = DialWidget.getOrRequestHighscores(22, 1, 0, 10, 3);
+            FifoResponseToken.activeHighscoreQuery = DialWidget.getOrRequestHighscores(22, 1, 0, 10, 3);
           }
           L1: {
             if (0 != da.field_c) {
@@ -972,9 +972,9 @@ final class GameScreen extends MenuScreen {
             this.updateTransition(-78);
           }
           L5: {
-            if ((null != ca.field_f) &&
-                (null != ca.field_f.namesByView)) {
-              if (!ca.field_f.completed) {
+            if ((null != FifoResponseToken.activeHighscoreQuery) &&
+                (null != FifoResponseToken.activeHighscoreQuery.namesByView)) {
+              if (!FifoResponseToken.activeHighscoreQuery.completed) {
                 statusOrFriendTipText = ArchiveLoadSequence.field_f;
                 statusTextY = 76 + (150 + FadingDialog.uiPaletteFont.maxAscent);
                 FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
@@ -983,10 +983,10 @@ final class GameScreen extends MenuScreen {
                 }
               }
               hasDisplayedEntryFlag = 0;
-              categoryNames = ca.field_f.namesByView[da.field_c];
+              categoryNames = FifoResponseToken.activeHighscoreQuery.namesByView[da.field_c];
               scoreFont = IntrusiveNodeHashTable.smallFont;
               if (categoryNames != null) {
-                categoryScores = ca.field_f.valuesByView[da.field_c];
+                categoryScores = FifoResponseToken.activeHighscoreQuery.valuesByView[da.field_c];
                 entryTextY = scoreFont.maxAscent + 150;
                 currentScoreHighlightedFlag = 0;
                 entryIndex = 0;
@@ -1246,7 +1246,7 @@ final class GameScreen extends MenuScreen {
                     if (null != UiWidget.gameplaySession) {
                       UiWidget.gameplaySession.submitScore((byte) -70);
                     }
-                    ai.requestedScreenId = -1;
+                    ScoreSubmission.requestedScreenId = -1;
                     UiWidget.gameplayReturnScreenId = 0;
                     ProxySocketConnector.gameplayOriginScreenId = 0;
                     if (clientControlFlowGuard == 0) {
@@ -1488,7 +1488,7 @@ final class GameScreen extends MenuScreen {
               }
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              mi.sparkleFrames[this.tutorialEffectFrame].drawScaled(-10 + (KeyboardInputListener.field_a.fullWidth >> 1), (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
+              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled(-10 + (KeyboardInputListener.field_a.fullWidth >> 1), (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
@@ -1498,7 +1498,7 @@ final class GameScreen extends MenuScreen {
               orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(0.5 + Math.cos(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius);
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              mi.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
+              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
@@ -1509,7 +1509,7 @@ final class GameScreen extends MenuScreen {
               orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(Math.cos(this.tutorialOrbitAngleRadians + orbitAngleSpacing) * (double)this.tutorialOrbitRadius + 0.5);
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              mi.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.field_a.fullHeight >> 1), 20, 20);
+              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.field_a.fullHeight >> 1), 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
@@ -1612,17 +1612,17 @@ final class GameScreen extends MenuScreen {
                 pointerX -= 280;
                 if (pointerX > 0) {
                   if (pointerX < NetworkArchiveRequest.barSprite.fullWidth) {
-                    j.field_gb = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
+                    SocialListEntry.field_gb = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
                     if (clientControlFlowGuard == 0) {
                       break L4;
                     }
                   }
-                  j.field_gb = 80;
+                  SocialListEntry.field_gb = 80;
                   if (clientControlFlowGuard == 0) {
                     break L4;
                   }
                 }
-                j.field_gb = 0;
+                SocialListEntry.field_gb = 0;
               }
               this.previewMusicVolume(0);
               if (clientControlFlowGuard == 0) {
@@ -1839,7 +1839,7 @@ final class GameScreen extends MenuScreen {
               (50 >= this.volumePreviewTicks)) {
             return;
           }
-          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, j.field_gb);
+          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, SocialListEntry.field_gb);
           GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
           this.volumePreviewTicks = 0;
           return;
@@ -1918,23 +1918,23 @@ final class GameScreen extends MenuScreen {
                   || selectedActionSnapshot == 18
                 ) ? selectedActionSnapshot : -1) {
                 case 1:
-                  ai.requestedScreenId = -1;
+                  ScoreSubmission.requestedScreenId = -1;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
                 case 2:
                   if (!UnderlinedButtonRenderer.c(-100)) {
-                    ai.requestedScreenId = 2;
+                    ScoreSubmission.requestedScreenId = 2;
                     if (clientControlFlowGuard == 0) {
                       break L1;
                     }
                   }
-                  ai.requestedScreenId = 8;
+                  ScoreSubmission.requestedScreenId = 8;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
                 case 3:
-                  ai.requestedScreenId = 3;
+                  ScoreSubmission.requestedScreenId = 3;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
@@ -1962,12 +1962,12 @@ final class GameScreen extends MenuScreen {
                       (this.screenId != 4) &&
                       (6 != this.screenId) &&
                       (SpriteCheckboxRenderer.previousMenuScreenId == 1)) {
-                    ai.requestedScreenId = 1;
+                    ScoreSubmission.requestedScreenId = 1;
                     if (clientControlFlowGuard == 0) {
                       break L1;
                     }
                   }
-                  ai.requestedScreenId = 0;
+                  ScoreSubmission.requestedScreenId = 0;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
@@ -1976,7 +1976,7 @@ final class GameScreen extends MenuScreen {
                     UiWidget.gameplaySession.submitScore((byte) -70);
                   }
                   L30: {
-                    ai.requestedScreenId = -1;
+                    ScoreSubmission.requestedScreenId = -1;
                     if (this.screenId != 8) {
                       if (!((4 == this.screenId) &&
                           (null != UiWidget.gameplaySession) &&
@@ -2013,36 +2013,36 @@ final class GameScreen extends MenuScreen {
                             (UiWidget.gameplaySession.updateTick < 750))) {
                         if ((0 == UiWidget.gameplaySession.score) &&
                             (0 == ug.newAchievementMask)) {
-                          ai.requestedScreenId = 0;
+                          ScoreSubmission.requestedScreenId = 0;
                           if (clientControlFlowGuard == 0) {
                             break L34;
                           }
                         }
-                        ai.requestedScreenId = 4;
+                        ScoreSubmission.requestedScreenId = 4;
                         if (clientControlFlowGuard == 0) {
                           break L34;
                         }
                       }
-                      ai.requestedScreenId = 0;
+                      ScoreSubmission.requestedScreenId = 0;
                       if (clientControlFlowGuard == 0) {
                         break L34;
                       }
                     }
                     if ((UiWidget.gameplaySession.score == 0) &&
                         (ug.newAchievementMask == 0)) {
-                      ai.requestedScreenId = 0;
+                      ScoreSubmission.requestedScreenId = 0;
                       if (clientControlFlowGuard == 0) {
                         break L34;
                       }
                     }
                     UiWidget.gameplaySession.submitScore((byte) -70);
                     if (0 < UiWidget.gameplaySession.newActionCount) {
-                      ai.requestedScreenId = 6;
+                      ScoreSubmission.requestedScreenId = 6;
                       if (clientControlFlowGuard == 0) {
                         break L34;
                       }
                     }
-                    ai.requestedScreenId = 2;
+                    ScoreSubmission.requestedScreenId = 2;
                   }
                   IntrusiveNodeHashTable.a(methodGuard + 2, ll.field_d);
                   if (clientControlFlowGuard == 0) {
@@ -2085,12 +2085,12 @@ final class GameScreen extends MenuScreen {
                   }
                 case 10:
                   if (UnderlinedButtonRenderer.c(-112)) {
-                    ai.requestedScreenId = 7;
+                    ScoreSubmission.requestedScreenId = 7;
                     if (clientControlFlowGuard == 0) {
                       break L1;
                     }
                   }
-                  ai.requestedScreenId = 5;
+                  ScoreSubmission.requestedScreenId = 5;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
@@ -2121,10 +2121,10 @@ final class GameScreen extends MenuScreen {
                     break L47;
                   }
                 }
-                if ((ca.field_f != null) &&
-                    (ca.field_f.completed) &&
-                    (ca.field_f.namesByView != null)) {
-                  scoreCategoryNames = ca.field_f.namesByView[1];
+                if ((FifoResponseToken.activeHighscoreQuery != null) &&
+                    (FifoResponseToken.activeHighscoreQuery.completed) &&
+                    (FifoResponseToken.activeHighscoreQuery.namesByView != null)) {
+                  scoreCategoryNames = FifoResponseToken.activeHighscoreQuery.namesByView[1];
                   missingFirstScoreNameFlag = (scoreCategoryNames[0] != null) ? 0 : 1;
                   newSessionTutorialModeFlag = missingFirstScoreNameFlag;
                 }
@@ -2134,13 +2134,13 @@ final class GameScreen extends MenuScreen {
             pg.resetGameplayDifficulty(methodGuard ^ -9410);
             UiWidget.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
             PointerInputListener.a((byte) -39);
-            ai.requestedScreenId = -1;
+            ScoreSubmission.requestedScreenId = -1;
           }
           if (suppressPressAnimationFlag == 0) {
             this.menuPressAnimationActive = true;
             a.field_e = -1;
           }
-          if (~this.screenId != ~ai.requestedScreenId) {
+          if (~this.screenId != ~ScoreSubmission.requestedScreenId) {
             if ((this.screenId != 1) &&
                 (this.screenId != 0)) {
               return;
@@ -2165,13 +2165,13 @@ final class GameScreen extends MenuScreen {
           L0: {
             actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
             if (actionId == 8) {
-              if (j.field_gb >= 70) {
-                j.field_gb = 80;
+              if (SocialListEntry.field_gb >= 70) {
+                SocialListEntry.field_gb = 80;
                 if (clientControlFlowGuard == 0) {
                   break L0;
                 }
               }
-              j.field_gb = j.field_gb + 10;
+              SocialListEntry.field_gb = SocialListEntry.field_gb + 10;
               if (clientControlFlowGuard == 0) {
                 break L0;
               }
@@ -2425,13 +2425,13 @@ final class GameScreen extends MenuScreen {
               rowFont.drawRightAlignedText(actionText, 285 + itemColumnOrPressOffset, 30 + rowY, 0, -1);
               NetworkArchiveRequest.barSprite.draw(itemColumnOrPressOffset + 280, rowY + 15);
               if (actionId == 8) {
-                volumeLevelSnapshot = j.field_gb;
+                volumeLevelSnapshot = SocialListEntry.field_gb;
               } else {
                 volumeLevelSnapshot = SpriteCheckboxRenderer.field_c;
               }
               volumeLevelOrSliderOffset = volumeLevelSnapshot;
               volumeLevelOrSliderOffset = volumeLevelOrSliderOffset * (-4 + NetworkArchiveRequest.barSprite.fullWidth) / 80;
-              re.widgetSprite.draw(280 + volumeLevelOrSliderOffset - 1 + itemColumnOrPressOffset, 9 + rowY);
+              RankedListQuery.widgetSprite.draw(280 + volumeLevelOrSliderOffset - 1 + itemColumnOrPressOffset, 9 + rowY);
               if (clientControlFlowGuard == 0) {
                 break L35;
               }
@@ -2597,21 +2597,21 @@ final class GameScreen extends MenuScreen {
               (4 != this.screenId)) {
             L22: {
               if (this.screenId == 1) {
-                ai.requestedScreenId = -1;
+                ScoreSubmission.requestedScreenId = -1;
                 if (clientControlFlowGuard == 0) {
                   break L22;
                 }
               }
               if ((this.screenId != 6) &&
                   (this.screenId != 2)) {
-                ai.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
+                ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
                 if (clientControlFlowGuard == 0) {
                   break L22;
                 }
               }
-              ai.requestedScreenId = 0;
+              ScoreSubmission.requestedScreenId = 0;
             }
-            if (~this.screenId != ~ai.requestedScreenId) {
+            if (~this.screenId != ~ScoreSubmission.requestedScreenId) {
               if ((this.screenId != 1) &&
                   (this.screenId != 0)) {
                 return;

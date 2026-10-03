@@ -178,9 +178,9 @@ final class gf {
     final static String a(int param0) {
         if (param0 != 240) {
             cameraMeshVertexZ = (int[]) null;
-            return v.field_e;
+            return CanvasResizeController.field_e;
         }
-        return v.field_e;
+        return CanvasResizeController.field_e;
     }
 
     static {

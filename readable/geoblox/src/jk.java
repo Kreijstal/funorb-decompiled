@@ -16,7 +16,7 @@ final class jk {
         if (param0 <= -14) {
             InstrumentPatch.field_n = null;
             if (!(null == rb.field_d)) {
-                rb.field_d.b((byte) -101);
+                rb.field_d.restoreSize((byte) -101);
             }
             MessageDialog.gameCanvas.requestFocus();
             return;
@@ -25,7 +25,7 @@ final class jk {
         jk.a((java.awt.Frame) null, 17, (PlatformTaskDispatcher) null);
         InstrumentPatch.field_n = null;
         if (!(null == rb.field_d)) {
-            rb.field_d.b((byte) -101);
+            rb.field_d.restoreSize((byte) -101);
         }
         MessageDialog.gameCanvas.requestFocus();
     }

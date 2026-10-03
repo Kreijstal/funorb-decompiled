@@ -5,17 +5,17 @@ final class ik {
     static int field_a;
     static String waitingForFontsText;
 
-    final static void a(re param0, int param1, byte param2) {
+    final static void writeRankedListQuery(RankedListQuery query, int packetOpcode, byte methodGuard) {
         PacketBuffer var3 = CacheReference.field_q;
-        var3.writeCipherByte(param1, (byte) -77);
-        var3.writeByte((byte) 123, param0.field_k);
-        if (param2 < 80) {
+        var3.writeCipherByte(packetOpcode, (byte) -77);
+        var3.writeByte((byte) 123, query.queryId);
+        if (methodGuard < 80) {
             return;
         }
         try {
-            var3.writeByte((byte) -49, param0.field_g);
+            var3.writeByte((byte) -49, query.entryLimit);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ik.C(" + (query != null ? "{...}" : "null") + ',' + packetOpcode + ',' + methodGuard + ')');
         }
     }
 

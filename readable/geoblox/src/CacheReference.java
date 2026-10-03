@@ -22,7 +22,7 @@ abstract class CacheReference extends DualLinkNode {
             if (hj.field_a < 10) {
                 return false;
             }
-            if (mi.field_C >= 13) {
+            if (VisualPropertyOverrides.field_C >= 13) {
                 return true;
             }
             return false;
@@ -30,7 +30,7 @@ abstract class CacheReference extends DualLinkNode {
         if (hj.field_a < 10) {
             return false;
         }
-        if (mi.field_C >= 13) {
+        if (VisualPropertyOverrides.field_C >= 13) {
             return true;
         }
         return false;

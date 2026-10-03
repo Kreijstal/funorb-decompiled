@@ -257,7 +257,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             avatarTintBlueDelta = -0.46423107385635376f;
           }
           if (this.field_n) {
-            stackIn_16_0 = ph.createUsernameAvailableText;
+            stackIn_16_0 = ByteShortQuery.createUsernameAvailableText;
             return stackIn_16_0;
           }
           stackIn_14_0 = ResourceArchive.createUsernameUnavailableText;
@@ -358,7 +358,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             if (param0) {
                 UsernameAvailabilityValidator.d((byte) 81);
             }
-            v.field_e = param1;
+            CanvasResizeController.field_e = param1;
             MidiNote.a(12, param0);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "uk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

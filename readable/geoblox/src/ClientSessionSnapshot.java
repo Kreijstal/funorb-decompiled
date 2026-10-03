@@ -108,7 +108,7 @@ final class ClientSessionSnapshot {
           return 1;
         }
         if ((MouseWheelInput.field_a == 2) &&
-            (v.a(this.field_i, (byte) 89))) {
+            (CanvasResizeController.a(this.field_i, (byte) 89))) {
           return 1;
         }
         if (param0 > 113) {
@@ -123,7 +123,7 @@ final class ClientSessionSnapshot {
         this.field_f = StrongCacheReference.field_u;
         this.field_h = DiskCacheWorker.field_c;
         this.field_d = UsernameAvailabilityValidator.field_o;
-        this.field_k = re.field_f;
+        this.field_k = RankedListQuery.field_f;
         this.field_j = field_l;
         if (param0) {
             this.field_g = vj.field_c;

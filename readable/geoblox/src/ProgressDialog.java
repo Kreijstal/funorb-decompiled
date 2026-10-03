@@ -71,7 +71,7 @@ final class ProgressDialog extends ResizableDialog {
         }
     }
 
-    final static void a(int param0, int param1, ph param2) {
+    final static void writeByteShortQuery(int packetOpcode, int methodGuard, ByteShortQuery query) {
         PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -80,10 +80,10 @@ final class ProgressDialog extends ResizableDialog {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = CacheReference.field_q;
-          var3.writeCipherByte(param0, (byte) -85);
-          var3.writeByte((byte) 123, param2.field_f);
-          var3.writeShortBE(param2.field_h, param1 + 28161);
-          if (param1 == 534) {
+          var3.writeCipherByte(packetOpcode, (byte) -85);
+          var3.writeByte((byte) 123, query.queryByte);
+          var3.writeShortBE(query.queryShort, methodGuard + 28161);
+          if (methodGuard == 534) {
             return;
           }
           field_W = (LoginMethod) null;
@@ -92,8 +92,8 @@ final class ProgressDialog extends ResizableDialog {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
-          stackIn_5_1 = new StringBuilder().append("rl.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_5_1 = new StringBuilder().append("rl.G(").append(packetOpcode).append(',').append(methodGuard).append(',');
+          if (query == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";

@@ -287,7 +287,7 @@ final class WhirlpoolHash {
             }
             try {
               if (AccountCreationForm.archiveHandshakeStage == 0) {
-                StrongCacheReference.archiveConnectTask = ph.archiveTaskDispatcher.requestSocket(SecondaryNodeHashTable.archivePort, GameplaySession.archiveHost, false);
+                StrongCacheReference.archiveConnectTask = ByteShortQuery.archiveTaskDispatcher.requestSocket(SecondaryNodeHashTable.archivePort, GameplaySession.archiveHost, false);
                 AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
               }
               if (AccountCreationForm.archiveHandshakeStage == 1) {
@@ -304,7 +304,7 @@ final class WhirlpoolHash {
                 WhirlpoolHash.a((String) null, (byte) -15);
               }
               if (2 == AccountCreationForm.archiveHandshakeStage) {
-                li.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ph.archiveTaskDispatcher);
+                li.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ByteShortQuery.archiveTaskDispatcher);
                 handshakePacket = new ByteArrayBuffer(13);
                 ke.writeConnectionHeader(MidiNote.archiveLanguageId, true, ValidatedTextInputWidget.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
                 handshakePacket.writeByte((byte) -54, 15);

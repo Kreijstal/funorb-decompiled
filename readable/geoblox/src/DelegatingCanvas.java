@@ -15,9 +15,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
         angle8192 = angle8192 & 8191;
         if (angle8192 < 4096) {
-            return angle8192 < 2048 ? ai.quarterSineQ16[angle8192] : ai.quarterSineQ16[4096 - angle8192];
+            return angle8192 < 2048 ? ScoreSubmission.quarterSineQ16[angle8192] : ScoreSubmission.quarterSineQ16[4096 - angle8192];
         }
-        return angle8192 >= 6144 ? -ai.quarterSineQ16[-angle8192 + 8192] : -ai.quarterSineQ16[angle8192 - 4096];
+        return angle8192 >= 6144 ? -ScoreSubmission.quarterSineQ16[-angle8192 + 8192] : -ScoreSubmission.quarterSineQ16[angle8192 - 4096];
     }
 
     public static void a(byte param0) {
@@ -35,11 +35,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(int param0) {
+    final static void handleRankedListResponse(int methodGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        re var3 = null;
+        RankedListQuery var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -55,14 +55,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
         var12 = Geoblox.clientControlFlowFlag;
         try {
           var14 = eh.field_d;
-          if (param0 != 2) {
+          if (methodGuard != 2) {
             return;
           }
           var2 = var14.readUnsignedByte((byte) 34);
-          var3 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
+          var3 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
           while (var3 != null) {
-            if (var2 != var3.field_k) {
-              var3 = (re) ((Object) PendingActionMarker.field_f.nextForIteration(1));
+            if (var2 != var3.queryId) {
+              var3 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
               continue;
             }
             break;
@@ -74,7 +74,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           var4 = var14.readUnsignedByte((byte) 34);
           if (var4 != 0) {
             oi.field_a[0] = SecondaryDeque.field_f;
-            var5 = var3.field_g;
+            var5 = var3.entryLimit;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               oi.field_a[var6_int] = var14.readNullTerminatedText((byte) 120);
             }
@@ -134,7 +134,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "bh.B(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "bh.B(" + methodGuard + ')');
         }
     }
 

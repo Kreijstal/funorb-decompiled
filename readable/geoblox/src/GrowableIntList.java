@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GrowableIntList {
-    static IntrusiveDeque field_g;
+    static IntrusiveDeque pendingIntRecordSubmissions;
     private boolean multiplicativeGrowth;
     private int lastIndex;
     private int[] values;
@@ -21,7 +21,7 @@ final class GrowableIntList {
     }
 
     public static void a(int param0) {
-        field_g = null;
+        pendingIntRecordSubmissions = null;
         fullscreenUnavailableText = null;
         createMismatchAlertText = null;
         int var1 = -116 / ((param0 - 72) / 36);
@@ -126,7 +126,7 @@ final class GrowableIntList {
             return;
         }
         try {
-            ea.a((byte) 115, var4, param0, var2, var3);
+            IntArrayQuery.a((byte) 115, var4, param0, var2, var3);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -137,7 +137,7 @@ final class GrowableIntList {
     }
 
     static {
-        field_g = new IntrusiveDeque();
+        pendingIntRecordSubmissions = new IntrusiveDeque();
         fullscreenUnavailableText = "Unfortunately your configuration doesn't support fullscreen mode.";
         createMismatchAlertText = "This entry doesn't match";
     }

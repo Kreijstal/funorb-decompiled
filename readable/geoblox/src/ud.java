@@ -23,7 +23,7 @@ final class ud {
             createDisplayNameTooltipText = (String) null;
           }
           while (pendingQuery != null) {
-            re.writeAchievementStateRequest(-101, packetOpcode);
+            RankedListQuery.writeAchievementStateRequest(-101, packetOpcode);
             pendingQuery = NodeHashTableIterator.pendingAchievementQueries.nextForIteration(1);
           }
           return;
@@ -34,15 +34,15 @@ final class ud {
         }
     }
 
-    final static j a(int param0, String param1) {
+    final static SocialListEntry findSecondarySocialEntry(int methodGuard, String displayName) {
         String var2 = null;
-        j var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         String var6 = null;
         CharSequence var7 = null;
         CharSequence var8 = null;
-        j stackIn_16_0 = null;
+        SocialListEntry stackIn_16_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -53,35 +53,35 @@ final class ud {
           if (null == ug.field_a) {
             return null;
           }
-          var7 = (CharSequence) ((Object) param1);
+          var7 = (CharSequence) ((Object) displayName);
           var2 = ResizableDialog.a(var7, 12);
           if (var2 == null) {
-            var2 = param1;
+            var2 = displayName;
           }
-          var3 = (j) ((Object) ug.field_a.findFirst((long)var2.hashCode(), -1));
-          if (param0 != 0) {
+          var3 = (SocialListEntry) ((Object) ug.field_a.findFirst((long)var2.hashCode(), -1));
+          if (methodGuard != 0) {
             var6 = (String) null;
-            ud.a(55, (String) null);
+            ud.findSecondarySocialEntry(55, (String) null);
           }
           while (var3 != null) {
-            var8 = (CharSequence) ((Object) var3.field_hb);
+            var8 = (CharSequence) ((Object) var3.displayName);
             var4 = ResizableDialog.a(var8, 12);
             if (var4 == null) {
-              var4 = var3.field_hb;
+              var4 = var3.displayName;
             }
             if (var4.equals(var2)) {
               stackIn_16_0 = var3;
               return stackIn_16_0;
             }
-            var3 = (j) ((Object) ug.field_a.findNext(param0 ^ -29925));
+            var3 = (SocialListEntry) ((Object) ug.field_a.findNext(methodGuard ^ -29925));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_21_0 = var2_ref;
-          stackIn_21_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("ud.C(").append(methodGuard).append(',');
+          if (displayName == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";

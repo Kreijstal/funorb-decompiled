@@ -5,7 +5,7 @@ final class rb {
     static String fullscreenCancelButtonText;
     static boolean field_c;
     static int kindFourRemovalCount;
-    static v field_d;
+    static CanvasResizeController field_d;
 
     final static MonochromeBitmapFont loadMonochromeFontById(int fileId, int methodGuard, ResourceArchive glyphGraphicsArchive, int groupId, ResourceArchive fontMetricsArchive) {
         RuntimeException fontFailureForContext = null;

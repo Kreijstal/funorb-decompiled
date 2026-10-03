@@ -387,7 +387,7 @@ final class DiskArchiveCache {
             oh.field_a.b(WhirlpoolHash.field_d);
             PasswordWidgetRenderer.field_y = param3;
             AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c);
-            EmailValidator.a(j.field_gb, (byte) -67);
+            EmailValidator.a(SocialListEntry.field_gb, (byte) -67);
             CacheReference.field_p.b(param3);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

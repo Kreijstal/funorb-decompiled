@@ -1,11 +1,45 @@
 # Readable GeoBlox
 
-The current export has 9,380 guarded naming rules: 212 classes, 1,264 fields,
-904 methods, 2,707 parameters and 4,293 local declarations. Both 303-file corpora
+The current export has 9,536 guarded naming rules: 223 classes, 1,317 fields,
+927 methods, 2,776 parameters and 4,293 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current names (pass 114)
+## Current names (pass 115)
+
+This pass adds 11 classes, 53 fields, 23 methods and 69 parameters: 156 rules.
+There are 76,813 identifier edits, including 1,101 additional bound occurrences
+and 11 constructor spellings. Class coverage is 223 renamed classes, one
+meaningful original `Geoblox` name and 79 opaque filenames. All 9,380 prior
+complete naming objects, raw bodies, source/tool pins and native-probe pins remain.
+
+`GameplaySession.submitScore` calls `createAndSubmitScore`, which constructs a
+`ScoreSubmission`, enqueues it and calls `writeScoreSubmission`. The ranking
+response matches the submission ID and unlinks the record. Context integers and
+short values keep neutral names where their server meaning is unknown.
+`IntArrayQuery`, `KeyedIntRecordSubmission`, `ByteShortQuery` and `RankedListQuery`
+name their packet layout and queue roles. Private constructors that throw stay
+unchanged. `FifoResponseToken` describes the fieldless node consumed by a response;
+its producer and server meaning have not been established.
+
+`SocialListEntry` is shared by the primary and secondary social collections.
+`handleSocialListResponse` decodes normalized names, optional interned location
+labels and insertion indices; the comparator retains its original arithmetic.
+The secondary collection is not assigned an unproved ignore-list role.
+`CanvasResizeController` names requested/restored dimensions, constraints, timer
+and callback. `heapCapacityEstimateMiB` comes from the Runtime maximum heap with
+its original rounding and fallback, rather than measured heap usage.
+`CanvasResizeListener.onCanvasResize` has no implementation in this source corpus.
+`VisualPropertyOverrides.mergeDefinedProperties` names the optional font/text
+and nondefault merge behavior; unused sprite/scalar slots remain opaque.
+
+Regeneration compiles both 303-file corpora and compares all 137,964 bindings and
+388 override relationships. Exact dictionary reversal, publication checks and
+all seven existing native probes pass. This adds no live query/social/resize/UI,
+network or device coverage. The raw control flow remains unchanged, including
+207 plain block labels and six large labeled spans.
+
+## Earlier names (pass 114)
 
 This pass adds 23 class roles, 77 fields, 31 methods and 97 parameters. There are
 75,701 identifier edits: 1,864 additional bound occurrences and 17 constructor
@@ -144,7 +178,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a`;
 the current readable tree is
-`eda870c5a2361d0f33ef0eb8026fd9f37cbdbdd8fd23d6185f6785a2c548533a`.
+`67281399d3325d9da87f3d11d5f0aa58faa618979d717dca98ff4e8600957609`.
 The pinned decompiler-source SHA-256 is
 `f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5`.
 All seven existing native/raw/readable probes pass with their pinned traces.

@@ -172,8 +172,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
                 eh.field_d.bytes[var6_int] = var5_ref_ma.payload[var6_int];
               }
               MidiNoteMixer.field_o = dc.field_b;
-              dc.field_b = kg.field_n;
-              kg.field_n = ScorePopup.field_l;
+              dc.field_b = VisualPropertyNode.field_n;
+              VisualPropertyNode.field_n = ScorePopup.field_l;
               ScorePopup.field_l = var5_ref_ma.packetOpcode;
               return true;
             }
@@ -193,8 +193,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             }
             if (ab.field_b == 0) {
               MidiNoteMixer.field_o = dc.field_b;
-              dc.field_b = kg.field_n;
-              kg.field_n = ScorePopup.field_l;
+              dc.field_b = VisualPropertyNode.field_n;
+              VisualPropertyNode.field_n = ScorePopup.field_l;
               ScorePopup.field_l = MidiNote.field_f;
               MidiNote.field_f = -1;
               return true;

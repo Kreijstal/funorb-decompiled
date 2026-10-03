@@ -11,17 +11,17 @@ final class ec {
     final static void a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        ai var5 = null;
+        ScoreSubmission var5 = null;
         HighscoreQuery var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = Geoblox.clientControlFlowFlag;
         try {
           var3 = 57 % ((param0 - 57) / 46);
-          var5 = (ai) ((Object) TriangleMesh.field_j.firstForIteration(0));
+          var5 = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
           while (var5 != null) {
-            ArchiveIndex.a(var5, param1, -127);
-            var5 = (ai) ((Object) TriangleMesh.field_j.nextForIteration(1));
+            ArchiveIndex.writeScoreSubmission(var5, param1, -127);
+            var5 = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
           }
           var6 = (HighscoreQuery) ((Object) ResourceArchive.field_d.firstForIteration(0));
           while (var6 != null) {
@@ -148,8 +148,8 @@ final class ec {
         }
     }
 
-    final static void a(int param0) {
-        ph var1 = (ph) ((Object) UiWidget.field_p.firstForIteration(param0 ^ param0));
+    final static void handleByteShortReply(int methodGuard) {
+        ByteShortQuery var1 = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(methodGuard ^ methodGuard));
         if (!(var1 != null)) {
             Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;

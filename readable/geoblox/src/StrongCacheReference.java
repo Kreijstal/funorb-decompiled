@@ -7,17 +7,17 @@ final class StrongCacheReference extends CacheReference {
     static PlatformTask archiveConnectTask;
     private Object field_r;
 
-    final static void a(byte param0, int param1, ea param2) {
+    final static void writeIntArrayQuery(byte methodGuard, int packetOpcode, IntArrayQuery query) {
         PacketBuffer var3 = null;
         try {
             var3 = CacheReference.field_q;
-            var3.writeCipherByte(param1, (byte) -80);
-            int var4 = 66 % ((param0 - 23) / 51);
+            var3.writeCipherByte(packetOpcode, (byte) -80);
+            int var4 = 66 % ((methodGuard - 23) / 51);
             var3.writeByte((byte) 122, 2);
             var3.writeByte((byte) 125, 0);
-            var3.writeByte((byte) -90, param2.field_f);
+            var3.writeByte((byte) -90, query.queryByte);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "gj.E(" + methodGuard + ',' + packetOpcode + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -83,7 +83,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             ValidatedTextInputWidget.archiveClientId = clientId;
             MidiNote.archiveLanguageId = languageId;
             SecondaryNodeHashTable.archivePort = primaryPort;
-            ph.archiveTaskDispatcher = taskDispatcher;
+            ByteShortQuery.archiveTaskDispatcher = taskDispatcher;
             if (methodGuard != -23949) {
                 field_f = -0.8279321027589008;
             }
@@ -140,7 +140,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             if (8 == param1) {
               param1 = 2;
               if (!AgeValidator.field_i) {
-                param2 = mi.invalidUserOrPasswordText;
+                param2 = VisualPropertyOverrides.invalidUserOrPasswordText;
               } else {
                 param2 = DualLinkNode.invalidPasswordText;
               }
@@ -153,9 +153,9 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             }
             if (var3_int != 0) {
               if (ArchiveLoadStep.field_a) {
-                param2 = OpacityWidget.a(mi.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
+                param2 = OpacityWidget.a(VisualPropertyOverrides.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
               }
-              if (mi.field_I) {
+              if (VisualPropertyOverrides.field_I) {
                 param2 = kf.pleaseTryAgainText;
               }
               Geoblox.activeMessageDialog.installErrorContent(param1, param0 + 19686, param2);
@@ -209,7 +209,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
           }
           archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 126, groupName);
           archiveFileId = glyphGraphicsArchive.findFileId(resourceName, methodGuard - 69, archiveGroupId);
-          fontBeforeReturn = ea.loadCoverageFontById(glyphGraphicsArchive, (byte) -127, fontMetricsArchive, archiveFileId, archiveGroupId);
+          fontBeforeReturn = IntArrayQuery.loadCoverageFontById(glyphGraphicsArchive, (byte) -127, fontMetricsArchive, archiveFileId, archiveGroupId);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;

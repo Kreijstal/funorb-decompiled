@@ -100,7 +100,7 @@ final class AgeValidator extends TextInputValidator {
         AchievementQuery query = new AchievementQuery();
         NodeHashTableIterator.pendingAchievementQueries.addLast(-49, query);
         int guardDivision = -104 / ((-51 - methodGuard) / 44);
-        re.writeAchievementStateRequest(-78, packetOpcode);
+        RankedListQuery.writeAchievementStateRequest(-78, packetOpcode);
         return query;
     }
 

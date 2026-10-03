@@ -5,29 +5,29 @@ final class tj {
     static int field_b;
     static String field_a;
 
-    final static void a(int param0, int param1, se param2) {
+    final static void writeIntRecordSubmission(int packetOpcode, int methodGuard, KeyedIntRecordSubmission submission) {
         PacketBuffer var6 = null;
         int var4 = 0;
         try {
             var6 = CacheReference.field_q;
-            var6.writeCipherByte(param0, (byte) -63);
+            var6.writeCipherByte(packetOpcode, (byte) -63);
             var6.position = var6.position + 1;
-            if (param1 != 86) {
-                se var5 = (se) null;
-                tj.a(-12, 107, (se) null);
+            if (methodGuard != 86) {
+                KeyedIntRecordSubmission var5 = (KeyedIntRecordSubmission) null;
+                tj.writeIntRecordSubmission(-12, 107, (KeyedIntRecordSubmission) null);
             }
             var4 = var6.position;
             var6.writeByte((byte) 127, 1);
-            var6.writeByte((byte) 124, param2.field_g);
-            var6.writeSignedSmart(param2.field_j, param1 - 6048);
-            var6.writeIntBE((byte) 95, param2.field_k);
-            var6.writeIntBE((byte) 95, param2.field_h);
-            var6.writeIntBE((byte) 95, param2.field_l);
-            var6.writeIntBE((byte) 95, param2.field_f);
+            var6.writeByte((byte) 124, submission.byteKey);
+            var6.writeSignedSmart(submission.signedSmartKey, methodGuard - 6048);
+            var6.writeIntBE((byte) 95, submission.firstValue);
+            var6.writeIntBE((byte) 95, submission.secondValue);
+            var6.writeIntBE((byte) 95, submission.thirdValue);
+            var6.writeIntBE((byte) 95, submission.fourthValue);
             var6.appendCrc32(104, var4);
             var6.backpatchLengthByte(11700, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tj.B(" + packetOpcode + ',' + methodGuard + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class tj {
         if (param0 != 73) {
           tj.a(-5);
         }
-        if (mi.field_C < 2) {
+        if (VisualPropertyOverrides.field_C < 2) {
           return 0;
         }
         if (va.field_a == 0) {

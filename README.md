@@ -23,6 +23,15 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 115 names 11 classes and 145 fields, methods and parameters. The score path
+now reads through `createAndSubmitScore`, `ScoreSubmission` and
+`writeScoreSubmission`. Typed query records, shared social entries, canvas resize
+controls and visual-property overrides describe their source-supported roles.
+There are 223 class renames, one meaningful `Geoblox` name and 79 opaque names,
+with 9,536 guarded rules and 76,813 identifier edits. All 9,380 prior naming
+objects, raw bodies and tool/probe pins remain unchanged. Unknown wire values
+keep neutral names; this pass adds no live network, UI or device coverage.
+
 Pass 114 names 23 record/helper classes and 205 fields, methods and parameters.
 The additions cover staged archive loading, raster snapshots, display modes,
 tracked audio streams, highscore views, queued reflection checks, delayed incoming

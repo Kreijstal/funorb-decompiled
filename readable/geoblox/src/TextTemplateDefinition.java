@@ -20,7 +20,7 @@ final class TextTemplateDefinition extends DualLinkNode {
         String var7;
         String var8;
         var5 = Geoblox.clientControlFlowFlag;
-        var6 = "(" + MidiNoteMixer.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
+        var6 = "(" + MidiNoteMixer.field_o + " " + dc.field_b + " " + VisualPropertyNode.field_n + ") " + ScorePopup.field_l;
         var1 = var6;
         if (0 < AchievementSubmission.field_k) {
           var1 = var6 + ":";

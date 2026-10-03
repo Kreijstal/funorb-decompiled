@@ -146,7 +146,7 @@ final class EmailValidator extends TextInputValidator {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != ca.a(candidateText, 1)) ? 0 : 1;
+          stackIn_3_0 = (null != FifoResponseToken.a(candidateText, 1)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
             stackIn_5_0 = WidgetSkinState.field_m;
@@ -179,7 +179,7 @@ final class EmailValidator extends TextInputValidator {
         RuntimeException var2_ref = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          j.field_gb = param0;
+          SocialListEntry.field_gb = param0;
           var2 = (TrackedPcmStream) ((Object) PrefixCodeDecoder.field_f.firstForIteration(0));
           if (param1 != -67) {
             return;
@@ -188,7 +188,7 @@ final class EmailValidator extends TextInputValidator {
             if (!var2.lifetimeNode.isLinked(126)) {
               var2.unlinkNode(false);
             } else {
-              var2.stream.f((int)((float)(j.field_gb * var2.initialVolume / 80) * 1.399999976158142f));
+              var2.stream.f((int)((float)(SocialListEntry.field_gb * var2.initialVolume / 80) * 1.399999976158142f));
             }
             var2 = (TrackedPcmStream) ((Object) PrefixCodeDecoder.field_f.nextForIteration(1));
           }

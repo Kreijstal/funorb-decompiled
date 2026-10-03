@@ -12,8 +12,8 @@ final class ul {
         field_c = null;
         currentAvatarCryFrame = null;
         if (param0 > -58) {
-            j var2 = (j) null;
-            ul.a((j) null, (j) null, (byte) -96);
+            SocialListEntry var2 = (SocialListEntry) null;
+            ul.socialEntrySortsAfter((SocialListEntry) null, (SocialListEntry) null, (byte) -96);
         }
     }
 
@@ -173,7 +173,7 @@ final class ul {
         }
     }
 
-    final static boolean a(j param0, j param1, byte param2) {
+    final static boolean socialEntrySortsAfter(SocialListEntry first, SocialListEntry second, byte methodGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -185,21 +185,21 @@ final class ul {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.clientControlFlowFlag;
         try {
-          if (param2 != 127) {
+          if (methodGuard != 127) {
             return false;
           }
-          var3_int = param0.field_kb - param1.field_kb;
-          if (ReflectionCheckRequest.field_l != param0.field_mb) {
-            if (param0.field_mb == null) {
+          var3_int = first.insertionIndex - second.insertionIndex;
+          if (ReflectionCheckRequest.currentSocialLocationLabel != first.locationLabel) {
+            if (first.locationLabel == null) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (param1.field_mb == ReflectionCheckRequest.field_l) {
+          if (second.locationLabel == ReflectionCheckRequest.currentSocialLocationLabel) {
             var3_int += 200;
           } else {
-            if (null == param1.field_mb) {
+            if (null == second.locationLabel) {
               var3_int -= 200;
             }
           }
@@ -209,18 +209,18 @@ final class ul {
           var3 = decompiledCaughtException;
           stackIn_18_0 = var3;
           stackIn_18_1 = new StringBuilder().append("ul.D(");
-          if (param0 == null) {
+          if (first == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
           stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param1 == null) {
+          if (second == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(methodGuard).append(')').toString());
         }
     }
 

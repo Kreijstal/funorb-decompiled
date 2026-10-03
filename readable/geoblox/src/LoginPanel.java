@@ -38,15 +38,15 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         return stackIn_13_0;
     }
 
-    final static void f(int param0) {
+    final static void handleIntRecordReply(int methodGuard) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        ea var4_ref_ea = null;
-        se var5 = null;
+        IntArrayQuery var4_ref_ea = null;
+        KeyedIntRecordSubmission var5 = null;
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
@@ -60,13 +60,13 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             var2 = var9.readUnsignedByte((byte) 34);
             var3 = var9.readUnsignedByte((byte) 34);
             if (0 == var2) {
-              var4_ref_ea = (ea) ((Object) ea.field_g.firstForIteration(0));
+              var4_ref_ea = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
               if (var4_ref_ea == null) {
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
                 return;
               }
               var5_int = -var9.position + AchievementSubmission.field_k;
-              var11 = var4_ref_ea.field_h;
+              var11 = var4_ref_ea.responseWords;
               var10 = var11;
               var6 = var10;
               if (var5_int > var11.length << 2) {
@@ -79,12 +79,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             } else {
               if (var2 == 1) {
                 var4 = var9.readSignedSmart(76);
-                var5 = (se) ((Object) GrowableIntList.field_g.firstForIteration(0));
+                var5 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
                 while (true) {
                   if (var5 != null) {
-                    if (!((var5.field_g == var3) &&
-                        (var5.field_j == var4))) {
-                      var5 = (se) ((Object) GrowableIntList.field_g.nextForIteration(1));
+                    if (!((var5.byteKey == var3) &&
+                        (var5.signedSmartKey == var4))) {
+                      var5 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
                       continue;
                     }
                   }
@@ -100,14 +100,14 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               Bzip2DecoderState.closeSessionSocket((byte) -123);
             }
           }
-          if (param0 >= -95) {
+          if (methodGuard >= -95) {
             field_O = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "pf.K(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "pf.K(" + methodGuard + ')');
         }
     }
 
@@ -332,12 +332,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             eh.field_d.position = 0;
             if ((var9 >= 100) &&
                 (var9 <= 105)) {
-              PacketBuffer.currentProtocolStage = v.field_l;
+              PacketBuffer.currentProtocolStage = CanvasResizeController.field_l;
               WidgetSkinState.field_i = new String[var9 - 100];
             } else {
               if (var9 == 248) {
                 GrowableIntList.a(NodeHashTableIterator.c(124), (byte) 123);
-                AudioService.field_a = ph.createUnableText;
+                AudioService.field_a = ByteShortQuery.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 TextTemplateArgumentType.field_e = false;
                 stackIn_31_0 = var9;
@@ -354,7 +354,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               }
             }
           }
-          if (PacketBuffer.currentProtocolStage == v.field_l) {
+          if (PacketBuffer.currentProtocolStage == CanvasResizeController.field_l) {
             var9 = 2;
             if (UiWidget.b(30000, var9)) {
               var10 = eh.field_d.readUnsignedShortBE(true);
@@ -757,7 +757,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
             ((LoginPanel) (this)).alternateButton = new ButtonWidget(stackIn_19_3, (WidgetListener) null);
             if (this.showCreateAccount) {
-              this.createAccountButton = new ButtonWidget(se.createAnAccountText, (WidgetListener) (this));
+              this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) (this));
             }
           } else {
             this.loginOrRetryButton = new ButtonWidget(a.retryText, (WidgetListener) null);
@@ -779,7 +779,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             this.createAccountButton.hoverText = ic.loginCreateTooltipText;
           }
           if (this.retryMode) {
-            this.alternateButton.hoverText = j.quitWarningText;
+            this.alternateButton.hoverText = SocialListEntry.quitWarningText;
           } else {
             if (!this.allowJustPlay) {
               this.alternateButton.renderer = (WidgetRenderer) ((Object) new UnderlinedButtonRenderer());

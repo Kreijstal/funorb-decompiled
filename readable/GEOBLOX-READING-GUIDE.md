@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 114)
+## Current readability (pass 115)
 
-The export has 9,380 guarded names and 75,701 identifier edits. Class coverage is
-212 semantic renames, one already meaningful `Geoblox` name and 90 opaque names.
+The export has 9,536 guarded names and 76,813 identifier edits. Class coverage is
+223 semantic renames, one already meaningful `Geoblox` name and 79 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -19,6 +19,20 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass115 adds 11 class roles, 53 fields, 23 methods and 69 parameters. Follow
+`GameplaySession.submitScore` through `ContentTransitionDialog.createAndSubmitScore`,
+`ScoreSubmission`, `ArchiveIndex.writeScoreSubmission` and the ranking
+acknowledgement. Query records have named writers, resend paths and response
+handlers; undocumented integer values retain neutral names. `SocialListEntry`
+serves both social collections with normalized display names, interned location
+labels and insertion indices. `CanvasResizeController` exposes requested and
+restored sizes, constraints, timer and callback. Its heap gate uses a maximum-heap
+capacity estimate, preserving the original rounding and fallback.
+`VisualPropertyOverrides` names its nondefault property merge, optional text and
+font; unknown unused slots remain opaque. All 9,380 prior complete rules, raw
+bodies and tool/probe pins remain. This source naming pass adds no live social,
+query, resize, network or device coverage.
 
 Pass114 adds 23 record/helper class roles, 77 fields, 31 methods and 97 parameters.
 Read `RasterTargetSnapshot` and the named `pushRasterTarget`/`restoreRasterTarget`
@@ -79,6 +93,8 @@ These are useful entry points for the newly named families:
 | Login payloads | [LoginPayload](geoblox/src/LoginPayload.java), [LongAndTextLoginPayload](geoblox/src/LongAndTextLoginPayload.java), [TextPairLoginPayload](geoblox/src/TextPairLoginPayload.java), [AlternateLongAndTextLoginPayload](geoblox/src/AlternateLongAndTextLoginPayload.java), [LoginMethod](geoblox/src/LoginMethod.java) |
 | Archive, collections and raster records | [ArchiveLoadStep](geoblox/src/ArchiveLoadStep.java), [ArchiveLoadSequence](geoblox/src/ArchiveLoadSequence.java), [SecondaryNodeHashTable](geoblox/src/SecondaryNodeHashTable.java), [RasterTargetSnapshot](geoblox/src/RasterTargetSnapshot.java), [DisplayModeInfo](geoblox/src/DisplayModeInfo.java), [TrackedPcmStream](geoblox/src/TrackedPcmStream.java) |
 | Ranking and protocol records | [HighscoreQuery](geoblox/src/HighscoreQuery.java), [HighscoreNameEntry](geoblox/src/HighscoreNameEntry.java), [ReflectionCheckRequest](geoblox/src/ReflectionCheckRequest.java), [DelayedIncomingPacket](geoblox/src/DelayedIncomingPacket.java), [CrcAcknowledgedPacket](geoblox/src/CrcAcknowledgedPacket.java), [LoginTextValue](geoblox/src/LoginTextValue.java), [ClientProtocolStage](geoblox/src/ClientProtocolStage.java) |
+| Score and typed query records | [ScoreSubmission](geoblox/src/ScoreSubmission.java), [IntArrayQuery](geoblox/src/IntArrayQuery.java), [KeyedIntRecordSubmission](geoblox/src/KeyedIntRecordSubmission.java), [ByteShortQuery](geoblox/src/ByteShortQuery.java), [RankedListQuery](geoblox/src/RankedListQuery.java), [FifoResponseToken](geoblox/src/FifoResponseToken.java) |
+| Social entries, resize and property overrides | [SocialListEntry](geoblox/src/SocialListEntry.java), [CanvasResizeController](geoblox/src/CanvasResizeController.java), [CanvasResizeListener](geoblox/src/CanvasResizeListener.java), [VisualPropertyOverrides](geoblox/src/VisualPropertyOverrides.java), [VisualPropertyNode](geoblox/src/VisualPropertyNode.java) |
 | Templates and theme | [TextTemplateDefinition](geoblox/src/TextTemplateDefinition.java), [TextTemplateDefinitionLoader](geoblox/src/TextTemplateDefinitionLoader.java), [TextTemplateArgumentType](geoblox/src/TextTemplateArgumentType.java), [WidgetTheme](geoblox/src/WidgetTheme.java) |
 | Platform controls and markers | [DirectDrawFullscreenController](geoblox/src/DirectDrawFullscreenController.java), [WindowsCursorController](geoblox/src/WindowsCursorController.java), [FullscreenFailureReason](geoblox/src/FullscreenFailureReason.java), [DirectSoundCompatibility](geoblox/src/DirectSoundCompatibility.java), [TextValidationFailure](geoblox/src/TextValidationFailure.java), [ChildWidgetOwner](geoblox/src/ChildWidgetOwner.java) |
 | Network and storage | [SocketConnector](geoblox/src/SocketConnector.java), [ProxySocketConnector](geoblox/src/ProxySocketConnector.java), [AsyncResourceDownloader](geoblox/src/AsyncResourceDownloader.java), [ByteStorage](geoblox/src/ByteStorage.java), [DirectByteStorage](geoblox/src/DirectByteStorage.java) |

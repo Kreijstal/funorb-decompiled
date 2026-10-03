@@ -171,36 +171,36 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final static ai a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
-        ai var9 = null;
+    final static ScoreSubmission createAndSubmitScore(int firstContextValue, int firstShortValue, int thirdContextValue, int methodGuard, int[] scores, int secondContextValue, int secondShortValue, int packetOpcode, int fourthContextValue) {
+        ScoreSubmission var9 = null;
         RuntimeException var9_ref = null;
-        ai stackIn_2_0 = null;
-        ai stackIn_4_0 = null;
+        ScoreSubmission stackIn_2_0 = null;
+        ScoreSubmission stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new ai(param1, param6, param0, param5, param2, param8, param4);
-          TriangleMesh.field_j.addLast(param3 ^ -25202, var9);
-          ArchiveIndex.a(var9, param7, param3 ^ -25169);
-          if (param3 == 25134) {
+          var9 = new ScoreSubmission(firstShortValue, secondShortValue, firstContextValue, secondContextValue, thirdContextValue, fourthContextValue, scores);
+          TriangleMesh.pendingScoreSubmissions.addLast(methodGuard ^ -25202, var9);
+          ArchiveIndex.writeScoreSubmission(var9, packetOpcode, methodGuard ^ -25169);
+          if (methodGuard == 25134) {
             stackIn_4_0 = var9;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ai) null;
+          stackIn_2_0 = (ScoreSubmission) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9_ref = decompiledCaughtException;
           stackIn_7_0 = var9_ref;
-          stackIn_7_1 = new StringBuilder().append("qf.UB(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_7_1 = new StringBuilder().append("qf.UB(").append(firstContextValue).append(',').append(firstShortValue).append(',').append(thirdContextValue).append(',').append(methodGuard).append(',');
+          if (scores == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(secondContextValue).append(',').append(secondShortValue).append(',').append(packetOpcode).append(',').append(fourthContextValue).append(')').toString());
         }
     }
 

@@ -33,7 +33,7 @@ final class hh {
             return false;
           }
           ki.currentKeyboardEventCode = MidiPcmStream.queuedKeyboardEventCodes[ClientSessionSnapshot.keyboardEventReadIndex];
-          te.currentKeyboardEventCharacter = ai.queuedKeyboardEventCharacters[ClientSessionSnapshot.keyboardEventReadIndex];
+          te.currentKeyboardEventCharacter = ScoreSubmission.queuedKeyboardEventCharacters[ClientSessionSnapshot.keyboardEventReadIndex];
           ClientSessionSnapshot.keyboardEventReadIndex = 1 + ClientSessionSnapshot.keyboardEventReadIndex & 127;
           eventAvailable = true;
         }

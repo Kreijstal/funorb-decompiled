@@ -13,7 +13,7 @@ final class bl {
     final static boolean b(int param0) {
         if (param0 != 255) {
             bl.a(-112, (byte) -119);
-            if (mi.field_C < 20) {
+            if (VisualPropertyOverrides.field_C < 20) {
                 return true;
             }
             if (!CacheReference.f(-31456)) {
@@ -27,7 +27,7 @@ final class bl {
             }
             return false;
         }
-        if (mi.field_C < 20) {
+        if (VisualPropertyOverrides.field_C < 20) {
             return true;
         }
         if (!CacheReference.f(-31456)) {

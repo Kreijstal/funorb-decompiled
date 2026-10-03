@@ -149,7 +149,7 @@ final class w {
                 return false;
             }
             long dupTemp$0 = oa.a(param1 ^ -12500);
-            v.field_r = dupTemp$0;
+            CanvasResizeController.field_r = dupTemp$0;
             AudioService.field_e = dupTemp$0;
             if (1 != NetworkArchiveRequest.field_B.status) {
                 PacketBuffer.currentProtocolStage = AchievementQuery.field_h;
@@ -162,7 +162,7 @@ final class w {
                     var5.position = 0;
                     MidiNoteMixer.field_o = param0 ? -2 : -1;
                     dc.field_b = param0 ? -2 : -1;
-                    kg.field_n = param0 ? -2 : -1;
+                    VisualPropertyNode.field_n = param0 ? -2 : -1;
                     PacketBuffer.currentProtocolStage = IterableNodeHashTable.field_d;
                     ke.writeConnectionHeader(qe.field_b, true, ok.field_f, EmailAvailabilityValidator.field_l, CacheReference.field_q);
                     NanoFrameTimer.a(param1 ^ -53, -1);

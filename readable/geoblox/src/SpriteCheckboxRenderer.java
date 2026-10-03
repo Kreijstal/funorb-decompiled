@@ -154,7 +154,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                li.field_c = 1 + (int)(var3.longValue() / 1048576L);
+                li.heapCapacityEstimateMiB = 1 + (int)(var3.longValue() / 1048576L);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

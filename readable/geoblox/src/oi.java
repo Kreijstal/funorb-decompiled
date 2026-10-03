@@ -66,32 +66,32 @@ final class oi {
         return new byte[param1];
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendIntRecordRequests(int packetOpcode, int methodGuard) {
         int var3 = 0;
-        se var4 = null;
-        ea var5 = null;
+        KeyedIntRecordSubmission var4 = null;
+        IntArrayQuery var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (se) ((Object) GrowableIntList.field_g.firstForIteration(0));
+          var4 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
           while (var4 != null) {
-            tj.a(param0, 86, var4);
-            var4 = (se) ((Object) GrowableIntList.field_g.nextForIteration(1));
+            tj.writeIntRecordSubmission(packetOpcode, 86, var4);
+            var4 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
           }
-          if (param1 < 115) {
+          if (methodGuard < 115) {
             field_b = (Sprite) null;
           }
-          var5 = (ea) ((Object) ea.field_g.firstForIteration(0));
+          var5 = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
           while (var5 != null) {
-            StrongCacheReference.a((byte) -88, param0, var5);
-            var5 = (ea) ((Object) ea.field_g.nextForIteration(1));
+            StrongCacheReference.writeIntArrayQuery((byte) -88, packetOpcode, var5);
+            var5 = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "oi.B(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "oi.B(" + packetOpcode + ',' + methodGuard + ')');
         }
     }
 

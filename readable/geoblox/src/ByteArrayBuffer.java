@@ -209,7 +209,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.bytes[highByteIndex] = (byte)(value >> 8);
         if (methodGuard != 28695) {
-            ByteArrayBuffer.a(true, 22);
+            ByteArrayBuffer.resendByteShortQueries(true, 22);
         }
         int lowByteIndex = this.position;
         this.position = this.position + 1;
@@ -300,24 +300,24 @@ class ByteArrayBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        ph var3 = null;
+    final static void resendByteShortQueries(boolean methodGuard, int packetOpcode) {
+        ByteShortQuery var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var3 = (ph) ((Object) UiWidget.field_p.firstForIteration(0));
+          var3 = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(0));
           while (var3 != null) {
-            ProgressDialog.a(param1, 534, var3);
-            var3 = (ph) ((Object) UiWidget.field_p.nextForIteration(1));
+            ProgressDialog.writeByteShortQuery(packetOpcode, 534, var3);
+            var3 = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.nextForIteration(1));
           }
-          if (!param0) {
+          if (!methodGuard) {
             field_i = -54;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "qc.PA(" + param0 + ',' + param1 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "qc.PA(" + methodGuard + ',' + packetOpcode + ')');
         }
     }
 

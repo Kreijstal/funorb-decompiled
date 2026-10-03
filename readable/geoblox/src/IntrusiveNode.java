@@ -28,7 +28,7 @@ class IntrusiveNode {
                     IntrusiveNodeHashTable.a(0, NodeHashTableIterator.field_f);
                   } else {
                     if (var2 == 2) {
-                      IntrusiveNodeHashTable.a(0, j.field_ib);
+                      IntrusiveNodeHashTable.a(0, SocialListEntry.field_ib);
                     }
                   }
                 } else {

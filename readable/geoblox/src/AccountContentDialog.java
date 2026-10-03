@@ -16,13 +16,13 @@ final class AccountContentDialog extends ContentTransitionDialog {
         java.awt.Canvas var5 = null;
         var4 = Geoblox.clientControlFlowFlag;
         try {
-          if (mi.field_C < 10) {
+          if (VisualPropertyOverrides.field_C < 10) {
             var3_int = 0;
             if (dl.field_c) {
               var3_int = 1;
               dl.field_c = false;
             }
-            ArchiveRequest.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, AudioService.a((byte) -85));
+            ArchiveRequest.a(tj.a((byte) 73), CanvasResizeController.field_q, var3_int != 0, false, AudioService.a((byte) -85));
           } else {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (hj.field_a == 0) {

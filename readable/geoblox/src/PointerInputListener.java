@@ -23,7 +23,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         w.avatarShockPending = false;
         wb.newAttachmentCount = 0;
         LoginPanel.endingEntityScanClear = false;
-        re.connectivityDirty = false;
+        RankedListQuery.connectivityDirty = false;
         if (param0 != -39) {
             PointerInputListener.a((byte) 97);
         }

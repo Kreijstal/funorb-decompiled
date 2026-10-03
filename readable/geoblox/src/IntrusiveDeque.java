@@ -58,8 +58,8 @@ final class IntrusiveDeque {
                     PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, NodeHashTableIterator.field_f, UsernameAvailabilityQuery.field_l);
                   } else {
                     if (2 == var2) {
-                      j.field_ib = MusicScore.loadNamedScore(kf.field_c, "", "sweets");
-                      PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, j.field_ib, UsernameAvailabilityQuery.field_l);
+                      SocialListEntry.field_ib = MusicScore.loadNamedScore(kf.field_c, "", "sweets");
+                      PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, SocialListEntry.field_ib, UsernameAvailabilityQuery.field_l);
                     }
                   }
                 } else {

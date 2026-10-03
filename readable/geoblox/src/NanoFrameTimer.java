@@ -26,7 +26,7 @@ final class NanoFrameTimer extends FrameTimer {
         int var2 = 0;
         int var3 = 0;
         HighscoreQuery var4 = null;
-        ai var4_ref = null;
+        ScoreSubmission var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -73,16 +73,16 @@ final class NanoFrameTimer extends FrameTimer {
             if (var5 != 0) {
               var6 = var4.entryLimit;
               var7 = var4.valuesPerEntry;
-              id.field_b[0].usedInUniqueView = false;
-              id.field_b[0].primaryName = SecondaryDeque.field_f;
-              id.field_b[0].alternateName = null;
+              id.highscoreNameTable[0].usedInUniqueView = false;
+              id.highscoreNameTable[0].primaryName = SecondaryDeque.field_f;
+              id.highscoreNameTable[0].alternateName = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                id.field_b[var8_int].primaryName = var27.readNullTerminatedText((byte) 104);
-                id.field_b[var8_int].usedInUniqueView = false;
+                id.highscoreNameTable[var8_int].primaryName = var27.readNullTerminatedText((byte) 104);
+                id.highscoreNameTable[var8_int].usedInUniqueView = false;
                 if (var27.readUnsignedByte((byte) 34) == 1) {
-                  id.field_b[var8_int].alternateName = var27.readNullTerminatedText((byte) 122);
+                  id.highscoreNameTable[var8_int].alternateName = var27.readNullTerminatedText((byte) 122);
                 } else {
-                  id.field_b[var8_int].alternateName = null;
+                  id.highscoreNameTable[var8_int].alternateName = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -103,12 +103,12 @@ final class NanoFrameTimer extends FrameTimer {
               if (!(0 >= var18)) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte((byte) 34);
-                  var21 = id.field_b[var20].primaryName;
+                  var21 = id.highscoreNameTable[var20].primaryName;
                   var22 = var27.readLongBE(2901);
                   var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = id.field_b[var20].alternateName;
+                    var9[0][var12] = id.highscoreNameTable[var20].alternateName;
                     var31[0][var12] = var22;
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$2 = var15;
@@ -131,10 +131,10 @@ final class NanoFrameTimer extends FrameTimer {
                     }
                   }
                   if ((var14 < var6) &&
-                      (!id.field_b[var20].usedInUniqueView)) {
-                    id.field_b[var20].usedInUniqueView = true;
+                      (!id.highscoreNameTable[var20].usedInUniqueView)) {
+                    id.highscoreNameTable[var20].usedInUniqueView = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = id.field_b[var20].alternateName;
+                    var9[2][var14] = id.highscoreNameTable[var20].alternateName;
                     var31[2][var14] = var22;
                     var14++;
                     var27.position = var24;
@@ -154,10 +154,10 @@ final class NanoFrameTimer extends FrameTimer {
           if (1 == var2) {
             var3 = var27.readUnsignedShortBE(true);
             var27.readLongBE(methodGuard + 27740);
-            var4_ref = (ai) ((Object) TriangleMesh.field_j.firstForIteration(0));
+            var4_ref = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
             while (var4_ref != null) {
-              if (var3 != var4_ref.field_q) {
-                var4_ref = (ai) ((Object) TriangleMesh.field_j.nextForIteration(1));
+              if (var3 != var4_ref.submissionId) {
+                var4_ref = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
                 continue;
               }
               break;
@@ -195,13 +195,13 @@ final class NanoFrameTimer extends FrameTimer {
               if (!((param1 >= 0) &&
                   (PacketBuffer.currentProtocolStage != eh.field_b))) {
                 if ((0 == CacheReference.field_q.position) &&
-                    (~oa.a(-12520) < ~(10000L + v.field_r))) {
+                    (~oa.a(-12520) < ~(10000L + CanvasResizeController.field_r))) {
                   CacheReference.field_q.writeCipherByte(param1, (byte) -76);
                 }
                 if (param0 > ~CacheReference.field_q.position) {
                   try {
                     SpriteCheckboxRenderer.field_e.enqueueWrite(100, 0, CacheReference.field_q.position, CacheReference.field_q.bytes);
-                    v.field_r = oa.a(-12520);
+                    CanvasResizeController.field_r = oa.a(-12520);
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     iOException = (IOException) (Object) decompiledCaughtException;

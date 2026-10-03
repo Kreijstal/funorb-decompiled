@@ -3,12 +3,12 @@
  */
 final class id {
     static String resumeGameText;
-    static HighscoreNameEntry[] field_b;
+    static HighscoreNameEntry[] highscoreNameTable;
     static Sprite[] field_c;
 
     public static void b(boolean param0) {
         field_c = null;
-        field_b = null;
+        highscoreNameTable = null;
         resumeGameText = null;
         if (!param0) {
             resumeGameText = (String) null;
@@ -32,9 +32,9 @@ final class id {
     static {
         int var0 = 0;
         resumeGameText = "Resume Game";
-        field_b = new HighscoreNameEntry[255];
-        for (var0 = 0; var0 < field_b.length; var0++) {
-            field_b[var0] = new HighscoreNameEntry();
+        highscoreNameTable = new HighscoreNameEntry[255];
+        for (var0 = 0; var0 < highscoreNameTable.length; var0++) {
+            highscoreNameTable[var0] = new HighscoreNameEntry();
         }
     }
 }

@@ -250,7 +250,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(125, "skipText");
           if (var2 != null) {
-            v.tutorialSkipMessage = EmailValidator.decodeTextBytes(1, var2);
+            CanvasResizeController.tutorialSkipMessage = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "tutorial1");
           if (null != var2) {
@@ -274,7 +274,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(123, "cont");
           if (null != var2) {
-            mi.field_y = EmailValidator.decodeTextBytes(1, var2);
+            VisualPropertyOverrides.field_y = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "restartTutorial");
           if (var2 != null) {

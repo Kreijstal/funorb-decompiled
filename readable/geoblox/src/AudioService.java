@@ -6,7 +6,7 @@ final class AudioService implements Runnable {
     static Sprite[] screenTitleSprites;
     volatile AudioOutput[] field_g;
     static String field_a;
-    static int field_d;
+    static int canvasWidth;
     volatile boolean field_c;
     volatile boolean field_f;
     static long field_e;
@@ -20,8 +20,8 @@ final class AudioService implements Runnable {
     }
 
     final static String a(byte param0) {
-        if (mi.field_C < 2) {
-            return j.field_lb;
+        if (VisualPropertyOverrides.field_C < 2) {
+            return SocialListEntry.field_lb;
         }
         if (!(FadingDialog.field_J == null)) {
             if (!FadingDialog.field_J.ensureIndexLoaded(0)) {
@@ -45,7 +45,7 @@ final class AudioService implements Runnable {
             return nb.loadingFontsText + " - " + dc.field_c.getGroupProgressByName(0, "commonui") + "%";
         }
         if (!DialRenderer.field_n.ensureIndexLoaded(0)) {
-            return ph.waitingForExtraDataText;
+            return ByteShortQuery.waitingForExtraDataText;
         }
         if (!DialRenderer.field_n.loadAllGroups(true)) {
             return ByteStorage.loadingExtraDataText + " - " + DialRenderer.field_n.getLoadProgress((byte) 101) + "%";

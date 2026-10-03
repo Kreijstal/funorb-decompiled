@@ -130,7 +130,7 @@ final class kc {
                     activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                     continue;
                   }
-                  if (!re.connectivityDirty) {
+                  if (!RankedListQuery.connectivityDirty) {
                     break L2;
                   }
                   entityQueueThenAttachedQueue = a.attachedEntities;
@@ -243,7 +243,7 @@ final class kc {
                       activeEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
                       continue;
                     }
-                    re.connectivityDirty = false;
+                    RankedListQuery.connectivityDirty = false;
                     UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
                     visitedFlagThenResetIndex = 0;
                   }
@@ -270,7 +270,7 @@ final class kc {
                     !(!routedAttachedEntity.touchesAvatar)))) {
                 L39: {
                   L40: {
-                    re.connectivityDirty = true;
+                    RankedListQuery.connectivityDirty = true;
                     routedAttachedEntity.unlinkNode(false);
                     routedAttachedEntity.unlinkSecondaryNode((byte) 100);
                     UiWidget.gameplaySession.boardRasterDirty = true;

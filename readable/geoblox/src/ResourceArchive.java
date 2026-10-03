@@ -432,7 +432,7 @@ final class ResourceArchive {
             return false;
           }
           try {
-            unpackedBytes = v.decompressArchive(packedBytes, -1);
+            unpackedBytes = CanvasResizeController.decompressArchive(packedBytes, -1);
             unpackedBytesAfterDecompression = unpackedBytes;
             unpackedBytesForChunkCount = unpackedBytesAfterDecompression;
             unpackedBytesForChunkCopies = unpackedBytesForChunkCount;

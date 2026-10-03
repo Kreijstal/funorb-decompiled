@@ -25,8 +25,8 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static java.applet.Applet c(int param0) {
-        if (!(kg.field_m == null)) {
-            return kg.field_m;
+        if (!(VisualPropertyNode.field_m == null)) {
+            return VisualPropertyNode.field_m;
         }
         if (param0 <= 104) {
             NodeHashTableIterator.a(83, 4, -82, 86, 115);

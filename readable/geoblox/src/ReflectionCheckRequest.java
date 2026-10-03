@@ -13,18 +13,18 @@ final class ReflectionCheckRequest extends IntrusiveNode {
     byte[][][] serializedArguments;
     PlatformTask[] fieldLookupTasks;
     int operationCount;
-    static String field_l;
+    static String currentSocialLocationLabel;
 
     public static void b(boolean param0) {
         pointsPanelGlowFrames = null;
         if (param0) {
-            field_l = (String) null;
+            currentSocialLocationLabel = (String) null;
             field_p = null;
-            field_l = null;
+            currentSocialLocationLabel = null;
             return;
         }
         field_p = null;
-        field_l = null;
+        currentSocialLocationLabel = null;
     }
 
     final static int a(CharSequence param0, byte param1, int param2, boolean param3) {

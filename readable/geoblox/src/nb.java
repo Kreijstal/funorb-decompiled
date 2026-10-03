@@ -136,7 +136,7 @@ final class nb {
             if (rb.field_d == null) {
                 return false;
             }
-            if (rb.field_d.a(-119)) {
+            if (rb.field_d.isResizeAllowed(-119)) {
                 return true;
             }
             return false;
@@ -144,7 +144,7 @@ final class nb {
         if (rb.field_d == null) {
             return false;
         }
-        if (rb.field_d.a(-119)) {
+        if (rb.field_d.isResizeAllowed(-119)) {
             return true;
         }
         return false;

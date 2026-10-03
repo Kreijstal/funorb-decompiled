@@ -74,7 +74,7 @@ final class ArchiveIndex {
         byte[] newGroupDigest = null;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          indexBuffer = new ByteArrayBuffer(v.decompressArchive(packedIndexBytes, -1));
+          indexBuffer = new ByteArrayBuffer(CanvasResizeController.decompressArchive(packedIndexBytes, -1));
           formatVersion = indexBuffer.readUnsignedByte((byte) 34);
           if ((5 <= formatVersion) &&
               (formatVersion <= 7)) {
@@ -247,7 +247,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(ai param0, int param1, int param2) {
+    final static void writeScoreSubmission(ScoreSubmission submission, int packetOpcode, int methodGuard) {
         PacketBuffer var7 = null;
         PacketBuffer var8 = null;
         int var4 = 0;
@@ -256,28 +256,28 @@ final class ArchiveIndex {
         try {
             var7 = CacheReference.field_q;
             var8 = var7;
-            var8.writeCipherByte(param1, (byte) -125);
+            var8.writeCipherByte(packetOpcode, (byte) -125);
             var8.position = var8.position + 1;
             var4 = var8.position;
             var8.writeByte((byte) 122, 1);
-            var8.writeShortBE(param0.field_q, 28695);
-            var8.writeShortBE(param0.field_f, 28695);
-            var8.writeShortBE(param0.field_k, 28695);
-            var8.writeIntBE((byte) 95, param0.field_m);
-            var8.writeIntBE((byte) 95, param0.field_g);
-            var8.writeIntBE((byte) 95, param0.field_j);
-            if (param2 > -126) {
+            var8.writeShortBE(submission.submissionId, 28695);
+            var8.writeShortBE(submission.firstShortValue, 28695);
+            var8.writeShortBE(submission.secondShortValue, 28695);
+            var8.writeIntBE((byte) 95, submission.firstContextValue);
+            var8.writeIntBE((byte) 95, submission.secondContextValue);
+            var8.writeIntBE((byte) 95, submission.thirdContextValue);
+            if (methodGuard > -126) {
                 field_j = 61;
             }
-            var8.writeIntBE((byte) 95, param0.field_i);
-            var8.writeByte((byte) 126, param0.field_o.length);
-            for (var5 = 0; var5 < param0.field_o.length; var5++) {
-                var7.writeIntBE((byte) 95, param0.field_o[var5]);
+            var8.writeIntBE((byte) 95, submission.fourthContextValue);
+            var8.writeByte((byte) 126, submission.scores.length);
+            for (var5 = 0; var5 < submission.scores.length; var5++) {
+                var7.writeIntBE((byte) 95, submission.scores[var5]);
             }
             var8.appendCrc32(78, var4);
             var8.backpatchLengthByte(11700, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bm.C(" + (submission != null ? "{...}" : "null") + ',' + packetOpcode + ',' + methodGuard + ')');
         }
     }
 

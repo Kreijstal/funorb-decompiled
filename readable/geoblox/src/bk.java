@@ -81,14 +81,14 @@ final class bk {
           }
         }
         if (!param0) {
-          re.field_f = PrefixCodeDecoder.readCompressedText(var8, 0, 80);
+          RankedListQuery.field_f = PrefixCodeDecoder.readCompressedText(var8, 0, 80);
           vj.field_c = null;
           return new ClientSessionSnapshot(param0);
         }
         var5 = var8.readUnsignedShortBE(true);
         try {
           var9 = StatefulWidgetRenderer.field_r.getDefinition((byte) -14, var5);
-          re.field_f = var9.summarizeLiteralSegments((byte) -69);
+          RankedListQuery.field_f = var9.summarizeLiteralSegments((byte) -69);
           if (!jc.field_b.equals(SecondaryDeque.field_f)) {
             stackIn_22_0 = var9.referencedTemplateIds;
           } else {
@@ -100,7 +100,7 @@ final class bk {
           var6 = (Exception) (Object) decompiledCaughtException;
           IterableNodeHashTable.a((Throwable) ((Object) var6), "CC1", (byte) 125);
           vj.field_c = null;
-          re.field_f = null;
+          RankedListQuery.field_f = null;
           return new ClientSessionSnapshot(param0);
         }
         return new ClientSessionSnapshot(param0);
