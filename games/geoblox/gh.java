@@ -1243,60 +1243,58 @@ final class gh {
             stackIn_464_0 = ~bi.field_g;
             stackIn_464_1 = -1;
           }
-          L98: {
-            if (stackIn_464_0 != stackIn_464_1) {
-              if (this.field_j) {
-                if (oc.field_f >= 2) {
-                  nb.a(-28195, mc.field_a, this.field_G, he.field_d, this.field_r, this.field_Q);
-                }
+          if (stackIn_464_0 != stackIn_464_1) {
+            if (this.field_j) {
+              if (oc.field_f >= 2) {
+                nb.a(-28195, mc.field_a, this.field_G, he.field_d, this.field_r, this.field_Q);
               }
-              L100: {
-                if (this.field_Y) {
-                  if (this.field_t == 0) {
-                    if (this.field_p != 5) {
-                      this.field_C = false;
-                      this.field_t = 1;
-                      if (this.field_p == 0) {
-                        this.field_U = 0;
-                        if (var5 == 0) {
-                          break L100;
-                        }
-                      }
-                      if (this.field_p == 1) {
-                        this.field_U = dd.field_D;
-                        if (var5 == 0) {
-                          break L100;
-                        }
-                      }
-                      if (this.field_p != 2) {
-                        break L98;
-                      }
-                      this.field_U = dk.field_b;
+            }
+            L100: {
+              if (this.field_Y) {
+                if (this.field_t == 0) {
+                  if (this.field_p != 5) {
+                    this.field_C = false;
+                    this.field_t = 1;
+                    if (this.field_p == 0) {
+                      this.field_U = 0;
                       if (var5 == 0) {
                         break L100;
                       }
                     }
-                    if (mc.field_a > 100) {
-                      if (340 > mc.field_a) {
-                        if (he.field_d > 440) {
-                          if (476 > he.field_d) {
-                            this.c(param0 ^ -1578897511);
-                            this.field_p = 0;
-                            this.field_Y = true;
-                            this.field_C = true;
-                          }
+                    if (this.field_p == 1) {
+                      this.field_U = dd.field_D;
+                      if (var5 == 0) {
+                        break L100;
+                      }
+                    }
+                    if (this.field_p != 2) {
+                      return;
+                    }
+                    this.field_U = dk.field_b;
+                    if (var5 == 0) {
+                      break L100;
+                    }
+                  }
+                  if (mc.field_a > 100) {
+                    if (340 > mc.field_a) {
+                      if (he.field_d > 440) {
+                        if (476 > he.field_d) {
+                          this.c(param0 ^ -1578897511);
+                          this.field_p = 0;
+                          this.field_Y = true;
+                          this.field_C = true;
                         }
                       }
                     }
-                    if (mc.field_a > 380) {
-                      if (540 > mc.field_a) {
-                        if (he.field_d > 440) {
-                          if (he.field_d >= 476) {
-                            break L98;
-                          }
-                          this.field_C = false;
-                          this.field_t = 1;
+                  }
+                  if (mc.field_a > 380) {
+                    if (540 > mc.field_a) {
+                      if (he.field_d > 440) {
+                        if (he.field_d >= 476) {
+                          return;
                         }
+                        this.field_C = false;
+                        this.field_t = 1;
                       }
                     }
                   }

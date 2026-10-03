@@ -729,21 +729,19 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         try {
           if (qa.field_d == this) {
             if (!ad.field_p) {
-              L1: {
-                dl.field_c = true;
-                if (oe.field_S) {
-                  if (-Geoblox.field_D + oa.a(-12520) > 1000L) {
-                    var2 = param0.getClipBounds();
-                    if (null != var2) {
-                      if (~var2.width > ~qb.field_G) {
-                        break L1;
-                      }
-                      if (sd.field_w > var2.height) {
-                        break L1;
-                      }
+              dl.field_c = true;
+              if (oe.field_S) {
+                if (-Geoblox.field_D + oa.a(-12520) > 1000L) {
+                  var2 = param0.getClipBounds();
+                  if (null != var2) {
+                    if (~var2.width > ~qb.field_G) {
+                      return;
                     }
-                    ab.field_a = true;
+                    if (sd.field_w > var2.height) {
+                      return;
+                    }
                   }
+                  ab.field_a = true;
                 }
               }
               return;

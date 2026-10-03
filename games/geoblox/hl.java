@@ -118,18 +118,16 @@ final class hl extends el {
             id.a(true);
             this.field_z.b(param2, param1);
           }
-          L3: {
-            if (vb.field_k >= var5_int - this.field_M.field_r) {
-              Geoblox.a(param3 ^ -12275, this.field_z);
-              for (var7 = this.field_I + (this.field_r - this.field_M.field_r); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
-              }
-              param0.b(-var7, 0);
-              param0.b(-var7 + this.field_H * 2, 0);
-              this.field_M.e(0, 0);
-              id.a(true);
-              this.field_z.b(-this.field_M.field_r + var5_int, param1);
-              break L3;
+          if (vb.field_k >= var5_int - this.field_M.field_r) {
+            Geoblox.a(param3 ^ -12275, this.field_z);
+            for (var7 = this.field_I + (this.field_r - this.field_M.field_r); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
             }
+            param0.b(-var7, 0);
+            param0.b(-var7 + this.field_H * 2, 0);
+            this.field_M.e(0, 0);
+            id.a(true);
+            this.field_z.b(-this.field_M.field_r + var5_int, param1);
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

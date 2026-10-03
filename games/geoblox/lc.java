@@ -165,76 +165,74 @@ final class lc {
           var17 = var14 & 255;
           var18 = -param1;
           L1: while (true) {
-            L2: {
-              L3: {
-                if (var18 < 0) {
-                  var19 = param5 * (param6 >> 16);
-                  if (var37 != 0) {
-                    break L2;
-                  }
-                  var20 = -param9;
-                  while (true) {
-                    L5: {
-                      if (var20 < 0) {
-                        param12 = param11[var19 + (param0 >> 16)];
-                        param0 = param0 + param3;
-                        stackIn_23_0 = param12;
-                        if (var37 != 0) {
-                          break L5;
-                        }
-                        L7: {
-                          if (stackIn_23_0 == 0) {
-                            param8++;
-                            if (var37 == 0) {
-                              break L7;
-                            }
-                          }
-                          var21 = param2[param8];
-                          if (var21 == 0) {
-                            param8++;
-                            if (var37 == 0) {
-                              break L7;
-                            }
-                          }
-                          var22 = 510 & var21 >> 15;
-                          var23 = (var21 & 65429) >> 8;
-                          var24 = 255 & var21;
-                          var25 = (var24 + var22) / 3 + var23 >> 1;
-                          var26 = -(((255 & param12) + (param12 >> 8 & 255) + (param12 >> 16 & 255)) / 3) + 256;
-                          var27 = var15 * (var25 << 16 >>> 16) >>> 8;
-                          var28 = (var25 << 8) * var16 >>> 24;
-                          var29 = var17 * var25 >>> 8;
-                          var25 = (var28 << 8) + (var27 << 16) + var29;
-                          var30 = var26 * ((16711680 & var25) >> 16);
-                          var31 = (255 & var25 >> 8) * var26;
-                          var32 = (var25 & 255) * var26;
-                          var33 = ((16711680 & var21) >>> 16) * ((param12 & 16711680) >>> 16) >>> 8;
-                          var34 = (var21 & 65280) * (param12 & 65280) >>> 24;
-                          var35 = (255 & var21) * (255 & param12) >>> 8;
-                          var36 = 256 - var26;
-                          var33 = var33 * var36;
-                          var34 = var34 * var36;
-                          var35 = var35 * var36;
-                          incrementValue$0 = param8;
-                          param8++;
-                          param2[incrementValue$0] = (var32 + var35 >> 8) + ((var34 + var31 >> 8 << 8) + (var30 + var33 >> 8 << 16));
-                        }
-                        var20++;
-                        if (var37 == 0) {
-                          continue;
-                        }
+            L3: {
+              if (var18 < 0) {
+                var19 = param5 * (param6 >> 16);
+                if (var37 != 0) {
+                  return;
+                }
+                var20 = -param9;
+                while (true) {
+                  L5: {
+                    if (var20 < 0) {
+                      param12 = param11[var19 + (param0 >> 16)];
+                      param0 = param0 + param3;
+                      stackIn_23_0 = param12;
+                      if (var37 != 0) {
+                        break L5;
                       }
-                      param6 = param6 + param4;
-                      param8 = param8 + param7;
-                      stackIn_23_0 = var13_int;
+                      L7: {
+                        if (stackIn_23_0 == 0) {
+                          param8++;
+                          if (var37 == 0) {
+                            break L7;
+                          }
+                        }
+                        var21 = param2[param8];
+                        if (var21 == 0) {
+                          param8++;
+                          if (var37 == 0) {
+                            break L7;
+                          }
+                        }
+                        var22 = 510 & var21 >> 15;
+                        var23 = (var21 & 65429) >> 8;
+                        var24 = 255 & var21;
+                        var25 = (var24 + var22) / 3 + var23 >> 1;
+                        var26 = -(((255 & param12) + (param12 >> 8 & 255) + (param12 >> 16 & 255)) / 3) + 256;
+                        var27 = var15 * (var25 << 16 >>> 16) >>> 8;
+                        var28 = (var25 << 8) * var16 >>> 24;
+                        var29 = var17 * var25 >>> 8;
+                        var25 = (var28 << 8) + (var27 << 16) + var29;
+                        var30 = var26 * ((16711680 & var25) >> 16);
+                        var31 = (255 & var25 >> 8) * var26;
+                        var32 = (var25 & 255) * var26;
+                        var33 = ((16711680 & var21) >>> 16) * ((param12 & 16711680) >>> 16) >>> 8;
+                        var34 = (var21 & 65280) * (param12 & 65280) >>> 24;
+                        var35 = (255 & var21) * (255 & param12) >>> 8;
+                        var36 = 256 - var26;
+                        var33 = var33 * var36;
+                        var34 = var34 * var36;
+                        var35 = var35 * var36;
+                        incrementValue$0 = param8;
+                        param8++;
+                        param2[incrementValue$0] = (var32 + var35 >> 8) + ((var34 + var31 >> 8 << 8) + (var30 + var33 >> 8 << 16));
+                      }
+                      var20++;
+                      if (var37 == 0) {
+                        continue;
+                      }
                     }
-                    param0 = stackIn_23_0;
-                    var18++;
-                    if (var37 == 0) {
-                      continue L1;
-                    }
-                    break L3;
+                    param6 = param6 + param4;
+                    param8 = param8 + param7;
+                    stackIn_23_0 = var13_int;
                   }
+                  param0 = stackIn_23_0;
+                  var18++;
+                  if (var37 == 0) {
+                    continue L1;
+                  }
+                  break L3;
                 }
               }
             }
@@ -429,15 +427,13 @@ final class lc {
               }
               stackIn_61_0 = (j) (var7_ref);
             }
-            L17: {
-              if (stackIn_61_0 == null) {
-                hl.field_B.a(-39, var6_ref);
-                if (var8 == 0) {
-                  break L17;
-                }
+            if (stackIn_61_0 == null) {
+              hl.field_B.a(-39, var6_ref);
+              if (var8 == 0) {
+                return;
               }
-              le.a(var7_ref, 121, var6_ref);
             }
+            le.a(var7_ref, 121, var6_ref);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

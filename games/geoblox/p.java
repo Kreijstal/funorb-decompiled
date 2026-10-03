@@ -84,89 +84,87 @@ final class p extends hf {
           var22 = mh.field_i;
           var23 = 0;
           while (true) {
-            L2: {
-              L3: {
-                if (param2.field_o > var23) {
-                  var24 = param2.field_O[var23];
-                  var25 = param2.field_q[var23];
-                  var26 = param2.field_K[var23];
-                  var27 = (var24 * var12 + var25 * var15 + var18 * var26 >> -ok.field_g + 16) + var9;
-                  var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
-                  var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
-                  stackIn_66_0 = -51;
-                  stackIn_66_1 = ~var29;
-                  if (var30 != 0) {
-                    break L3;
-                  }
-                  L5: {
-                    if (stackIn_66_0 >= stackIn_66_1) {
-                      sh.field_x[var23] = var27 / var29 + var21;
-                      dj.field_N[var23] = var22 + var28 / var29;
-                      if (~var29 > ~var7_int) {
-                        var7_int = var29;
-                      }
-                      if (var8 < var29) {
-                        var8 = var29;
-                      }
-                      bj.field_j[var23] = var29;
-                      if (var30 == 0) {
-                        break L5;
-                      }
-                    }
-                    bj.field_j[var23] = -2147483648;
-                  }
-                  if (param4) {
-                    a.field_c[var23] = var27 >> ok.field_g;
-                    uk.field_i[var23] = var28 >> ok.field_g;
-                    gf.field_b[var23] = var29;
-                  }
-                  var23++;
-                  if (var30 == 0) {
-                    continue;
-                  }
+            L3: {
+              if (param2.field_o > var23) {
+                var24 = param2.field_O[var23];
+                var25 = param2.field_q[var23];
+                var26 = param2.field_K[var23];
+                var27 = (var24 * var12 + var25 * var15 + var18 * var26 >> -ok.field_g + 16) + var9;
+                var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
+                var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
+                stackIn_66_0 = -51;
+                stackIn_66_1 = ~var29;
+                if (var30 != 0) {
+                  break L3;
                 }
-                L10: {
-                  if (null != param2.field_L) {
-                    if (param2.field_d != null) {
-                      if (param2.field_C != null) {
-                        if (param2.field_x != null) {
-                          if (null != param2.field_a) {
-                            if (param2.field_y != null) {
-                              if (param2.field_l != null) {
-                                if (null != param2.field_p) {
-                                  if (param2.field_b != null) {
-                                    var23 = 0;
-                                    while (true) {
-                                      if (~var23 <= ~param2.field_f) {
-                                        break L10;
-                                      }
-                                      var24 = param2.field_L[var23];
-                                      var25 = param2.field_d[var23];
-                                      var26 = param2.field_C[var23];
-                                      ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
-                                      pg.field_d[var23] = var10 + (var26 * var19 + var16 * var25 + var24 * var13 >> 16);
-                                      kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
-                                      var24 = param2.field_x[var23];
-                                      var25 = param2.field_a[var23];
-                                      var26 = param2.field_y[var23];
-                                      qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 16) + var9;
-                                      ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16);
-                                      vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 16) + var11;
-                                      var24 = param2.field_l[var23];
-                                      var25 = param2.field_p[var23];
-                                      var26 = param2.field_b[var23];
-                                      qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
-                                      ba.field_h[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
-                                      hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
-                                      var23++;
-                                      if (var30 != 0) {
-                                        break L2;
-                                      }
-                                      if (var30 == 0) {
-                                        continue;
-                                      }
+                L5: {
+                  if (stackIn_66_0 >= stackIn_66_1) {
+                    sh.field_x[var23] = var27 / var29 + var21;
+                    dj.field_N[var23] = var22 + var28 / var29;
+                    if (~var29 > ~var7_int) {
+                      var7_int = var29;
+                    }
+                    if (var8 < var29) {
+                      var8 = var29;
+                    }
+                    bj.field_j[var23] = var29;
+                    if (var30 == 0) {
+                      break L5;
+                    }
+                  }
+                  bj.field_j[var23] = -2147483648;
+                }
+                if (param4) {
+                  a.field_c[var23] = var27 >> ok.field_g;
+                  uk.field_i[var23] = var28 >> ok.field_g;
+                  gf.field_b[var23] = var29;
+                }
+                var23++;
+                if (var30 == 0) {
+                  continue;
+                }
+              }
+              L10: {
+                if (null != param2.field_L) {
+                  if (param2.field_d != null) {
+                    if (param2.field_C != null) {
+                      if (param2.field_x != null) {
+                        if (null != param2.field_a) {
+                          if (param2.field_y != null) {
+                            if (param2.field_l != null) {
+                              if (null != param2.field_p) {
+                                if (param2.field_b != null) {
+                                  var23 = 0;
+                                  while (true) {
+                                    if (~var23 <= ~param2.field_f) {
                                       break L10;
                                     }
+                                    var24 = param2.field_L[var23];
+                                    var25 = param2.field_d[var23];
+                                    var26 = param2.field_C[var23];
+                                    ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
+                                    pg.field_d[var23] = var10 + (var26 * var19 + var16 * var25 + var24 * var13 >> 16);
+                                    kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
+                                    var24 = param2.field_x[var23];
+                                    var25 = param2.field_a[var23];
+                                    var26 = param2.field_y[var23];
+                                    qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 16) + var9;
+                                    ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16);
+                                    vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 16) + var11;
+                                    var24 = param2.field_l[var23];
+                                    var25 = param2.field_p[var23];
+                                    var26 = param2.field_b[var23];
+                                    qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
+                                    ba.field_h[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
+                                    hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
+                                    var23++;
+                                    if (var30 != 0) {
+                                      return;
+                                    }
+                                    if (var30 == 0) {
+                                      continue;
+                                    }
+                                    break L10;
                                   }
                                 }
                               }
@@ -177,49 +175,49 @@ final class p extends hf {
                     }
                   }
                 }
-                L12: {
-                  if (param6) {
-                    var9 = param1[3];
-                    var10 = param1[4];
-                    var11 = param1[5];
-                    var12 = param1[6];
-                    var13 = param1[7];
-                    var14 = param1[8];
-                    var15 = param1[9];
-                    var16 = param1[10];
-                    var17 = param1[11];
-                    var18 = 0;
-                    while (true) {
-                      if (~param2.field_m >= ~var18) {
-                        break L12;
-                      }
-                      stackIn_66_0 = ok.field_h.length;
-                      stackIn_66_1 = var18;
-                      if (var30 != 0) {
-                        break L3;
-                      }
-                      if (stackIn_66_0 <= stackIn_66_1) {
-                        break L12;
-                      }
-                      var19 = param2.field_M[var18];
-                      var20 = param2.field_t[var18];
-                      var21 = param2.field_i[var18];
-                      ok.field_h[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
-                      oa.field_f[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
-                      gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
-                      var18++;
-                      if (var30 == 0) {
-                        continue;
-                      }
+              }
+              L12: {
+                if (param6) {
+                  var9 = param1[3];
+                  var10 = param1[4];
+                  var11 = param1[5];
+                  var12 = param1[6];
+                  var13 = param1[7];
+                  var14 = param1[8];
+                  var15 = param1[9];
+                  var16 = param1[10];
+                  var17 = param1[11];
+                  var18 = 0;
+                  while (true) {
+                    if (~param2.field_m >= ~var18) {
                       break L12;
                     }
+                    stackIn_66_0 = ok.field_h.length;
+                    stackIn_66_1 = var18;
+                    if (var30 != 0) {
+                      break L3;
+                    }
+                    if (stackIn_66_0 <= stackIn_66_1) {
+                      break L12;
+                    }
+                    var19 = param2.field_M[var18];
+                    var20 = param2.field_t[var18];
+                    var21 = param2.field_i[var18];
+                    ok.field_h[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
+                    oa.field_f[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
+                    gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
+                    var18++;
+                    if (var30 == 0) {
+                      continue;
+                    }
+                    break L12;
                   }
                 }
-                stackIn_66_0 = var7_int;
-                stackIn_66_1 = 22;
               }
-              i.a(stackIn_66_0, (byte) stackIn_66_1, param2, var8, param5);
+              stackIn_66_0 = var7_int;
+              stackIn_66_1 = 22;
             }
+            i.a(stackIn_66_0, (byte) stackIn_66_1, param2, var8, param5);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -76,31 +76,29 @@ final class rd extends ff {
         int var7 = 0;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            super.a(param1, param0);
-            if (param2) {
-              for (var4_int = 0; 6 > var4_int; var4_int++) {
-                var5 = this.field_x[var4_int];
-                if (var5 == null) {
-                  param1.field_x[var4_int] = null;
+          super.a(param1, param0);
+          if (param2) {
+            for (var4_int = 0; 6 > var4_int; var4_int++) {
+              var5 = this.field_x[var4_int];
+              if (var5 == null) {
+                param1.field_x[var4_int] = null;
+              } else {
+                var6 = param1.field_x[var4_int];
+                stackIn_8_0 = (si) (var5);
+                stackIn_8_1 = 2;
+                if (var6 == null) {
+                  dupTemp$0 = new si();
+                  param1.field_x[var4_int] = dupTemp$0;
+                  stackIn_9_2 = (si) (dupTemp$0);
                 } else {
-                  var6 = param1.field_x[var4_int];
-                  stackIn_8_0 = (si) (var5);
-                  stackIn_8_1 = 2;
-                  if (var6 == null) {
-                    dupTemp$0 = new si();
-                    param1.field_x[var4_int] = dupTemp$0;
-                    stackIn_9_2 = (si) (dupTemp$0);
-                  } else {
-                    stackIn_9_2 = (si) (var6);
-                  }
-                  ((si) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
+                  stackIn_9_2 = (si) (var6);
                 }
+                ((si) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
               }
-              break L0;
             }
-            sf.a(this.field_x, 0, param1.field_x, 0, 6);
+            return;
           }
+          sf.a(this.field_x, 0, param1.field_x, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

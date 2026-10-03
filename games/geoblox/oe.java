@@ -332,82 +332,24 @@ abstract class oe extends dd {
           if (param2 != 160) {
             return;
           }
-          L2: {
-            L3: {
-              var7 = 0;
-              var8 = 0;
-              if (!param0) {
-                if (var8 >= 8) {
-                  var3_int = var3_int + (-160 + var7);
-                }
-                for (var9 = 0; pg.field_a.length > var9; var9++) {
-                  L15: {
-                    if ((1 << var9 & var5) == 0) {
-                      if (param0) {
-                        break L15;
-                      }
-                    }
-                    if (!da.a(0, 88)) {
-                      if (var9 == 16) {
-                        if (!qi.d(109)) {
-                          break L15;
-                        }
-                      }
-                    }
-                    if (mc.field_a >= var3_int) {
-                      if (mc.field_a <= var3_int + 32) {
-                        if (var4 <= he.field_d) {
-                          if (he.field_d <= var4 + 32) {
-                            if (a.field_e == var9) {
-                              a.field_e = -1;
-                              break L2;
-                            }
-                            a.field_e = var9;
-                            break L2;
-                          }
-                        }
-                      }
-                    }
-                    incrementValue$1 = var6;
-                    var6++;
-                    if (7 != incrementValue$1) {
-                      var3_int += 40;
-                    } else {
-                      var3_int = 160;
-                      var4 += 40;
-                      if (!param1) {
-                        var4 += 5;
-                      }
-                      if (param0) {
-                        if (var8 < 8) {
-                          var3_int = var3_int + var7;
-                        }
-                      }
-                    }
-                  }
-                }
-                break L3;
-              }
-              for (var9 = 15; var9 >= 0; var9--) {
-                if ((var5 & 1 << var9) == 0) {
-                  var7 += 20;
-                  var8++;
-                }
-              }
+          L3: {
+            var7 = 0;
+            var8 = 0;
+            if (!param0) {
               if (var8 >= 8) {
                 var3_int = var3_int + (-160 + var7);
               }
               for (var9 = 0; pg.field_a.length > var9; var9++) {
-                L7: {
+                L15: {
                   if ((1 << var9 & var5) == 0) {
                     if (param0) {
-                      break L7;
+                      break L15;
                     }
                   }
                   if (!da.a(0, 88)) {
                     if (var9 == 16) {
                       if (!qi.d(109)) {
-                        break L7;
+                        break L15;
                       }
                     }
                   }
@@ -417,17 +359,17 @@ abstract class oe extends dd {
                         if (he.field_d <= var4 + 32) {
                           if (a.field_e == var9) {
                             a.field_e = -1;
-                            break L2;
+                            return;
                           }
                           a.field_e = var9;
-                          break L2;
+                          return;
                         }
                       }
                     }
                   }
-                  incrementValue$0 = var6;
+                  incrementValue$1 = var6;
                   var6++;
-                  if (7 != incrementValue$0) {
+                  if (7 != incrementValue$1) {
                     var3_int += 40;
                   } else {
                     var3_int = 160;
@@ -445,6 +387,62 @@ abstract class oe extends dd {
               }
               break L3;
             }
+            for (var9 = 15; var9 >= 0; var9--) {
+              if ((var5 & 1 << var9) == 0) {
+                var7 += 20;
+                var8++;
+              }
+            }
+            if (var8 >= 8) {
+              var3_int = var3_int + (-160 + var7);
+            }
+            for (var9 = 0; pg.field_a.length > var9; var9++) {
+              L7: {
+                if ((1 << var9 & var5) == 0) {
+                  if (param0) {
+                    break L7;
+                  }
+                }
+                if (!da.a(0, 88)) {
+                  if (var9 == 16) {
+                    if (!qi.d(109)) {
+                      break L7;
+                    }
+                  }
+                }
+                if (mc.field_a >= var3_int) {
+                  if (mc.field_a <= var3_int + 32) {
+                    if (var4 <= he.field_d) {
+                      if (he.field_d <= var4 + 32) {
+                        if (a.field_e == var9) {
+                          a.field_e = -1;
+                          return;
+                        }
+                        a.field_e = var9;
+                        return;
+                      }
+                    }
+                  }
+                }
+                incrementValue$0 = var6;
+                var6++;
+                if (7 != incrementValue$0) {
+                  var3_int += 40;
+                } else {
+                  var3_int = 160;
+                  var4 += 40;
+                  if (!param1) {
+                    var4 += 5;
+                  }
+                  if (param0) {
+                    if (var8 < 8) {
+                      var3_int = var3_int + var7;
+                    }
+                  }
+                }
+              }
+            }
+            break L3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -256,19 +256,17 @@ final class ma extends hf {
                   }
                 }
               }
-              L19: {
-                if (param5[4] != null) {
-                  if (param5[4].field_s != 0) {
-                    if (0 != param5[4].field_o) {
-                      vb.b(var16, var18, var17, var19);
-                      for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
-                        for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
-                          param5[4].b(var21, var20);
-                        }
+              if (param5[4] != null) {
+                if (param5[4].field_s != 0) {
+                  if (0 != param5[4].field_o) {
+                    vb.b(var16, var18, var17, var19);
+                    for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
+                      for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
+                        param5[4].b(var21, var20);
                       }
-                      vb.b(hd.field_I);
-                      break L19;
                     }
+                    vb.b(hd.field_I);
+                    return;
                   }
                 }
               }

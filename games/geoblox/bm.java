@@ -219,30 +219,28 @@ final class bm {
                 }
                 break L19;
               }
-              L29: {
-                if (var6 != 0) {
-                  this.field_e = new int[var9 + 1][];
-                  this.field_f = new am[1 + var9];
-                  for (var10 = 0; var10 < this.field_h; var10++) {
-                    var11 = this.field_i[var10];
-                    var12 = this.field_a[var11];
-                    array$8 = new int[this.field_k[var11]];
-                    this.field_e[var11] = array$8;
-                    for (var13 = 0; this.field_k[var11] > var13; var13++) {
-                      this.field_e[var11][var13] = -1;
-                    }
-                    for (var13 = 0; var13 < var12; var13++) {
-                      if (this.field_o[var11] != null) {
-                        var14 = this.field_o[var11][var13];
-                      } else {
-                        var14 = var13;
-                      }
-                      this.field_e[var11][var14] = var18.a((byte) -78);
-                    }
-                    this.field_f[var11] = new am(this.field_e[var11]);
+              if (var6 != 0) {
+                this.field_e = new int[var9 + 1][];
+                this.field_f = new am[1 + var9];
+                for (var10 = 0; var10 < this.field_h; var10++) {
+                  var11 = this.field_i[var10];
+                  var12 = this.field_a[var11];
+                  array$8 = new int[this.field_k[var11]];
+                  this.field_e[var11] = array$8;
+                  for (var13 = 0; this.field_k[var11] > var13; var13++) {
+                    this.field_e[var11][var13] = -1;
                   }
-                  break L29;
+                  for (var13 = 0; var13 < var12; var13++) {
+                    if (this.field_o[var11] != null) {
+                      var14 = this.field_o[var11][var13];
+                    } else {
+                      var14 = var13;
+                    }
+                    this.field_e[var11][var14] = var18.a((byte) -78);
+                  }
+                  this.field_f[var11] = new am(this.field_e[var11]);
                 }
+                return;
               }
               return;
             }

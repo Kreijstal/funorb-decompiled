@@ -360,16 +360,14 @@ final class u {
             this.field_c[incrementValue$0] = ua.b(var4);
           }
         }
-        L4: {
-          if (field_a != null) {
-            if (field_a.length >= var5) {
-              break L4;
-            }
+        if (field_a != null) {
+          if (field_a.length >= var5) {
+            return;
           }
-          field_a = new int[var5];
-          field_g = new int[var5];
-          field_e = new boolean[var5];
         }
+        field_a = new int[var5];
+        field_g = new int[var5];
+        field_e = new boolean[var5];
         return;
     }
 

@@ -19,49 +19,47 @@ final class al {
           if (param0 != 26146) {
             return;
           }
-          L0: {
-            var9 = eh.field_d;
-            var2 = var9.c((byte) 34);
-            if (var2 == 0) {
-              var8 = (ca) ((Object) qa.field_e.g(0));
-              if (var8 == null) {
-                jl.a((byte) -124);
-                return;
-              }
-              var4 = var9.c((byte) 34);
-              if (0 != var4) {
-                var13 = new byte[var4];
-                var9.b(29915, var4, var13, 0);
-              } else {
-                var5 = null;
-              }
-              var9.field_f = var9.field_f + 4;
-              if (!var9.h((byte) 20)) {
-                jl.a((byte) -121);
-                return;
-              }
-              var8.a(false);
-            } else {
-              if (1 == var2) {
-                var3 = var9.a((byte) -101);
-                var4_ref_wc = (wc) ((Object) l.field_g.g(0));
-                while (var4_ref_wc != null) {
-                  if (var3 != var4_ref_wc.field_h) {
-                    var4_ref_wc = (wc) ((Object) l.field_g.d(1));
-                    continue;
-                  }
-                  break;
-                }
-                if (var4_ref_wc != null) {
-                  var4_ref_wc.a(false);
-                  break L0;
-                }
-                jl.a((byte) -124);
-                return;
-              }
-              gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
-              jl.a((byte) -120);
+          var9 = eh.field_d;
+          var2 = var9.c((byte) 34);
+          if (var2 == 0) {
+            var8 = (ca) ((Object) qa.field_e.g(0));
+            if (var8 == null) {
+              jl.a((byte) -124);
+              return;
             }
+            var4 = var9.c((byte) 34);
+            if (0 != var4) {
+              var13 = new byte[var4];
+              var9.b(29915, var4, var13, 0);
+            } else {
+              var5 = null;
+            }
+            var9.field_f = var9.field_f + 4;
+            if (!var9.h((byte) 20)) {
+              jl.a((byte) -121);
+              return;
+            }
+            var8.a(false);
+          } else {
+            if (1 == var2) {
+              var3 = var9.a((byte) -101);
+              var4_ref_wc = (wc) ((Object) l.field_g.g(0));
+              while (var4_ref_wc != null) {
+                if (var3 != var4_ref_wc.field_h) {
+                  var4_ref_wc = (wc) ((Object) l.field_g.d(1));
+                  continue;
+                }
+                break;
+              }
+              if (var4_ref_wc != null) {
+                var4_ref_wc.a(false);
+                return;
+              }
+              jl.a((byte) -124);
+              return;
+            }
+            gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+            jl.a((byte) -120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -231,20 +231,18 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               }
             }
           }
-          L10: {
-            if (vb.field_i <= param0) {
-              if (vb.field_d > var6) {
-                var11 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
-                var12 = 1 - (-var9 + var7) >> 1;
-                while (true) {
-                  var12--;
-                  if (var12 < 0) {
-                    break L10;
-                  }
-                  vb.field_c[var11] = 16777215;
-                  var11 += 2;
-                  continue;
+          if (vb.field_i <= param0) {
+            if (vb.field_d > var6) {
+              var11 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
+              var12 = 1 - (-var9 + var7) >> 1;
+              while (true) {
+                var12--;
+                if (var12 < 0) {
+                  return;
                 }
+                vb.field_c[var11] = 16777215;
+                var11 += 2;
+                continue;
               }
             }
           }

@@ -104,22 +104,20 @@ final class wi extends ee implements pl {
           if (param1 != -20) {
             this.field_E = (hk) null;
           }
-          L1: {
-            if (this.field_C == param4) {
-              ib.d(param1 ^ -24121);
-              if (var7 == 0) {
-                break L1;
-              }
+          if (this.field_C == param4) {
+            ib.d(param1 ^ -24121);
+            if (var7 == 0) {
+              return;
             }
-            if (this.field_G == param4) {
-              jf.a((byte) 101);
-              if (var7 == 0) {
-                break L1;
-              }
+          }
+          if (this.field_G == param4) {
+            jf.a((byte) 101);
+            if (var7 == 0) {
+              return;
             }
-            if (this.field_E == param4) {
-              hk.e(param1 + 103);
-            }
+          }
+          if (this.field_E == param4) {
+            hk.e(param1 + 103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

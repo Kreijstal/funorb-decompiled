@@ -71,69 +71,67 @@ final class bh extends java.awt.Canvas {
             jl.a((byte) -122);
             return;
           }
-          L2: {
-            var4 = var14.c((byte) 34);
-            if (var4 != 0) {
-              oi.field_a[0] = wd.field_f;
-              var5 = var3.field_g;
-              for (var6_int = 1; var4 > var6_int; var6_int++) {
-                oi.field_a[var6_int] = var14.e((byte) 120);
+          var4 = var14.c((byte) 34);
+          if (var4 != 0) {
+            oi.field_a[0] = wd.field_f;
+            var5 = var3.field_g;
+            for (var6_int = 1; var4 > var6_int; var6_int++) {
+              oi.field_a[var6_int] = var14.e((byte) 120);
+            }
+            nf.a(2147483647, var5, var4);
+            for (var6_int = 0; var4 > var6_int; var6_int++) {
+              me.a(116, var14);
+              if (var6_int != 0) {
+                nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
+              } else {
+                nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
               }
-              nf.a(2147483647, var5, var4);
-              for (var6_int = 0; var4 > var6_int; var6_int++) {
-                me.a(116, var14);
-                if (var6_int != 0) {
-                  nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
-                } else {
-                  nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
+            }
+            kc.a(var5, (byte) -98);
+            var6 = new String[2][var5];
+            var18 = new int[2][4 * var5];
+            var8 = md.field_c;
+            var9 = 0;
+            var10 = 0;
+            while (var9 < var8) {
+              var11 = qi.field_i[var9];
+              var6[0][var10] = oi.field_a[var11];
+              var18[0][4 * var10] = hg.field_a[var11];
+              var18[0][4 * var10 + 1] = fb.field_m[var11];
+              var18[0][4 * var10 + 2] = k.field_i[var11];
+              var18[0][4 * var10 + 3] = cj.field_b[var11];
+              if (ge.a(oi.field_a[var11], (byte) 12)) {
+                if (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
+                  var6[0][var10] = null;
+                  var10--;
                 }
               }
-              kc.a(var5, (byte) -98);
-              var6 = new String[2][var5];
-              var18 = new int[2][4 * var5];
-              var8 = md.field_c;
-              var9 = 0;
-              var10 = 0;
-              while (var9 < var8) {
-                var11 = qi.field_i[var9];
-                var6[0][var10] = oi.field_a[var11];
-                var18[0][4 * var10] = hg.field_a[var11];
-                var18[0][4 * var10 + 1] = fb.field_m[var11];
-                var18[0][4 * var10 + 2] = k.field_i[var11];
-                var18[0][4 * var10 + 3] = cj.field_b[var11];
-                if (ge.a(oi.field_a[var11], (byte) 12)) {
-                  if (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
-                    var6[0][var10] = null;
-                    var10--;
-                  }
+              var9++;
+              var10++;
+            }
+            var9 = 0;
+            var13 = 0;
+            var10 = var13;
+            while (var9 < var8) {
+              var11 = qi.field_i[var9 + var5];
+              var6[1][var13] = oi.field_a[var11];
+              var18[1][4 * var13] = hg.field_a[var11];
+              var18[1][1 + 4 * var13] = fb.field_m[var11];
+              var18[1][var13 * 4 + 2] = k.field_i[var11];
+              var18[1][var13 * 4 + 3] = cj.field_b[var11];
+              if (ge.a(oi.field_a[var11], (byte) 12)) {
+                if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] == 0) {
+                  var6[1][var13] = null;
+                  var13--;
                 }
-                var9++;
-                var10++;
               }
-              var9 = 0;
-              var13 = 0;
-              var10 = var13;
-              while (var9 < var8) {
-                var11 = qi.field_i[var9 + var5];
-                var6[1][var13] = oi.field_a[var11];
-                var18[1][4 * var13] = hg.field_a[var11];
-                var18[1][1 + 4 * var13] = fb.field_m[var11];
-                var18[1][var13 * 4 + 2] = k.field_i[var11];
-                var18[1][var13 * 4 + 3] = cj.field_b[var11];
-                if (ge.a(oi.field_a[var11], (byte) 12)) {
-                  if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] == 0) {
-                    var6[1][var13] = null;
-                    var13--;
-                  }
-                }
-                var13++;
-                var9++;
-              }
-              var3.a(false);
-              break L2;
+              var13++;
+              var9++;
             }
             var3.a(false);
+            return;
           }
+          var3.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
