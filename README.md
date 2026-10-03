@@ -19,21 +19,25 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 122 guarded identities for `LimitedRandomAccessFile`
-and `BufferedRandomAccessFile`. Every instance declaration, constructor contract
-and local has a name. Virtual/underlying positions, physical/logical lengths,
-pending writes, cached reads and overlap updates expose their roles. Original
-partial effects remain, including the over-limit marker write, zero-filled read
-gaps, guard effects and EOF behavior. Static UI/gameplay helpers retain their owners.
+The current naming pass adds 87 guarded identities for `DiskArchiveCache` and
+the shared sector scratch buffer. Every instance declaration, constructor
+contract and local has a name, including the two retained header-EOF states.
+Index rows, sector headers, chain reuse/allocation and partial effects expose
+their roles. A new 138-case native fixture confirms controlled sector chains,
+malformed reads, the original header-EOF success exits and large-ID boundary behavior.
 
-The 5,820 rules apply 47,558 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,698 previous complete rules
+The 5,907 rules apply 48,058 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,820 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
-byte-exact reversal support the names. Existing native helper/socket/cache/input
-fixtures retain their prior scope without comprehensive buffered-file or archive
-sector-chain execution coverage. Disk archive/compression helpers, static names,
+byte-exact reversal support the names. Existing six native helper/socket/cache/input
+traces remain unchanged; the sector fixture matches native/raw/readable file bytes
+and results in its controlled cases. Comprehensive buffering/concurrency, compression, static names,
 large labeled bodies, full assets/gameplay and device performance remain
 unfinished or unverified. One manifest holds current evidence, with Git for history.
+
+Pass 72 named `LimitedRandomAccessFile` and `BufferedRandomAccessFile` instance
+state/APIs/constructors/locals. Virtual/underlying positions, physical/logical
+lengths, pending writes, cached reads and overlap updates retain original behavior.
 
 Pass 71 named `ArchiveCatalog`, service initialization, connection headers,
 handshake stages/retries and archive creation. The archive client identifier is

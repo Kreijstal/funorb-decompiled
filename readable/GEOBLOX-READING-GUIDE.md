@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,820 explicit guarded rules: 55 classes, 725 fields, 532 method
-declarations, 1,573 parameters and 2,935 locals. This is not full deobfuscation.
+There are 5,907 explicit guarded rules: 56 classes, 730 fields, 536 method
+declarations, 1,588 parameters and 2,997 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -2390,3 +2390,96 @@ their scopes. Comprehensive buffered read/write/flush combinations, disk archive
 sector chains, real storage/server/assets, full gameplay and phone/FPS/heap
 behavior remain unverified. Compression, unknown static helpers and large
 labeled bodies remain unfinished.
+
+## Disk archive sector chains (pass 73)
+
+`DiskArchiveCache` names `jh`. Every instance declaration, constructor contract
+and local has a guarded name. `toString` retains its Java override and returns
+the full archive ID. The unrelated static audio initialization helper remains
+on this owner. `dj.diskSectorBuffer` is the existing shared 520-byte scratch
+array; its static initialization and guard/cleanup clearing remain unchanged.
+
+| Member | Role |
+| --- | --- |
+| dataFile | Shared buffered sector file and monitor for cache operations |
+| indexFile | Buffered file containing six-byte index records |
+| archiveId | Identifier stored as a byte in sector headers, compared as an unsigned byte on read |
+| maximumEntryLength | Stored/read length limit; constructor overrides the default 65000 |
+| diskSectorBuffer | Shared scratch for index records, sector headers and read payloads |
+
+Index record `entryId * 6` contains a big-endian 24-bit entry length followed
+by a big-endian 24-bit initial sector. Data sectors occupy 520 bytes, starting
+at `sectorNumber * 520`. These multiplications occur as int before conversion
+to long; the names do not normalize overflow or add ID/range checks.
+
+| Sector header component | Entry ID <=65535 | Entry ID >65535 |
+| --- | --- | --- |
+| Entry ID | 2 bytes | 4 bytes |
+| Chunk number | 2 bytes | 2 bytes |
+| Next sector | 3 bytes | 3 bytes |
+| Archive ID | 1 byte | 1 byte |
+| Header/payload capacity | 8 / 512 bytes | 10 / 510 bytes |
+
+`read(entryId, methodGuard)` captures and locks dataFile before reading the
+index. It requires the complete index row, an allowed entry length and a
+positive initial sector no greater than `dataFile.length() / 520`. It then
+reads each header and payload, validates the entry ID, chunk sequence, archive
+ID and next-sector bound, and copies payload bytes into the result. A zero
+next sector is allowed in a header but fails if further payload remains.
+IOException returns null; unchecked outer exceptions retain their rethrow path.
+The wrong guard can clear dataFile after the initial index-size check, while
+the captured original monitor stays held.
+
+`write(bytes, methodGuard, entryId, length)` acquires the data-file monitor
+before checking the length. It attempts `writeEntryChain` with reuse enabled,
+then retries with reuse disabled only after a false return. The private
+routine takes the same monitor again. Reuse requires a valid initial sector
+from the index; allocation uses the ceiling of data length divided by 520 and
+avoids sector zero. It publishes the six-byte index record before reading
+reused headers or writing any payload. Failed later work can retain that index
+record and partially changed sectors.
+
+During reuse, header entry/chunk/archive fields and next-sector bounds must
+match. A missing next link disables further reuse and allocates at the data
+file end, avoiding the current sector. `headerEntryIdOrPayloadLength` names the
+original reused int slot: it holds the header entry ID during validation and
+the payload count during writes. Original byte narrowing, numeric guards,
+scratch assignment order, aliasing and exception scopes remain.
+
+`smallHeaderEofState` and `largeHeaderEofState` are still int continuations
+with original values 0 and 1. EOF sets state 1 and exits the inner labeled
+region to a true return. The index record is already published and no remaining
+sector payload is written. Public write therefore reports success and skips
+its allocation retry. The native fixture verifies this partial-success path
+for both header formats, including unchanged sector bytes and the new index length.
+
+The original termination test sets nextSectorNumber to zero when remaining
+payload is <=512 for both header formats. For large IDs, actual sector payload
+capacity is 510. Controlled lengths 511/512 and 1021/1022 therefore retain
+successful writes followed by null reads: the chain terminates before the final
+one/two payload bytes can be reached. This is verified in native bytecode as
+well as both Java exports; the naming pass preserves the behavior.
+
+Fresh zero-length writes also report success, but reading still requires a
+valid positive initial sector. A fresh empty data file fails that check;
+overwriting an existing valid chain with an empty entry can return an empty
+array. Wrong guards, malformed write arguments and unchecked failures retain
+their original behavior without broader verification claims.
+
+The existing result-helper probe adds 138 controlled sector cases: 120
+fresh/reused entry/length combinations, sixteen valid/malformed seeded reads
+and two reused-header EOF exits. Independent payload checks and explicit
+partial-effect assertions support the names; data/index file digests and
+results match native/raw/readable traces. The pinned trace is
+`77dc4b47188f20793aaecb76f198e59850d0fc3d8af0ca07b2d0a111719a869b`.
+Fixtures close the limited-file wrappers, clearing their handles before the
+finalizer can print nondeterministic blank lines. Previous six native traces
+remain unchanged.
+
+All 5,820 previous complete rules and raw source/generator pins remain.
+Compilation, 138,558 binding checks, 388 override relationships, byte-exact
+reproduction and reversal support the export. The new controlled sector cases
+do not establish complete buffering/concurrency, malformed-write/guard or live
+cache/server/asset behavior. Compression, unknown static helpers and large
+labeled bodies remain unfinished; full gameplay and phone/FPS/heap behavior
+remain unverified.

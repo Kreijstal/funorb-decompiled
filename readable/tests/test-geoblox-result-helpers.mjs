@@ -17,6 +17,7 @@ const expectedShutdownSha256 = '2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94
 const expectedSocketIoSha256 = 'ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b';
 const expectedDispatcherShutdownSha256 = '86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29';
 const expectedInputSha256 = 'f8fe8768fbba9c94298f8e9a9193605681295cdd49d1eeba47929c208634844e';
+const expectedArchiveSectorSha256 = '77dc4b47188f20793aaecb76f198e59850d0fc3d8af0ca07b2d0a111719a869b';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -41,7 +42,7 @@ try {
     assert.equal(files.length, pin.files);
     assert.equal(hash.digest('hex'), pin.sha256);
   }
-  let expected;
+  let expected, expectedArchiveSectorSha256Baseline;
   for (const variant of [...(nativeInput ? ['native'] : []), 'original', 'renamed']) {
     const native = variant === 'native', renamed = variant === 'renamed';
     const name = (symbol, original) => renamed ? aliases.get(symbol) ?? original : original;
@@ -246,6 +247,96 @@ try {
             }
           } finally {java.nio.file.Files.deleteIfExists(path);}
           check(cases==140,"cache case count");System.out.println("cache-complete:"+cases);
+        }
+      }
+      class ArchiveSectorBehavior extends ResultHelperBehavior {
+        static final int archiveId=7;
+        static void put(byte[] bytes,int offset,int value,int width) {
+          for(int i=width-1;i>=0;i--) { bytes[offset+i]=(byte)value;value>>>=8; }
+        }
+        static byte[] payload(int length) {
+          byte[] bytes=new byte[length];for(int i=0;i<length;i++)bytes[i]=(byte)(i*37+11);return bytes;
+        }
+        static String digest(byte[] bytes) throws Exception {
+          byte[] hash=java.security.MessageDigest.getInstance("SHA-256").digest(bytes);
+          StringBuilder result=new StringBuilder();for(byte b:hash)result.append(String.format("%02x",b&255));return result.toString();
+        }
+        static class Fixture implements AutoCloseable {
+          final java.nio.file.Path directory,dataPath,indexPath;
+          final Object cache,dataFile,indexFile;
+          Fixture(byte[] data,byte[] index,int maximumLength) throws Exception {
+            directory=java.nio.file.Files.createTempDirectory("geoblox-sectors-");
+            dataPath=directory.resolve("data.bin");indexPath=directory.resolve("index.bin");
+            java.nio.file.Files.write(dataPath,data);java.nio.file.Files.write(indexPath,index);
+            dataFile=construct("${type('pa')}",new Class<?>[]{java.io.File.class,String.class,long.class},dataPath.toFile(),"rw",2097152L);
+            indexFile=construct("${type('pa')}",new Class<?>[]{java.io.File.class,String.class,long.class},indexPath.toFile(),"rw",2097152L);
+            Object dataBuffer=construct("${type('sk')}",new Class<?>[]{Class.forName("${type('pa')}"),int.class,int.class},dataFile,64,0);
+            Object indexBuffer=construct("${type('sk')}",new Class<?>[]{Class.forName("${type('pa')}"),int.class,int.class},indexFile,64,0);
+            cache=construct("${type('jh')}",new Class<?>[]{int.class,Class.forName("${type('sk')}"),Class.forName("${type('sk')}"),int.class},archiveId,dataBuffer,indexBuffer,maximumLength);
+          }
+          public void close() throws Exception {
+            Method close=method("${type('pa')}","${method('pa','a(B)V')}",byte.class);
+            try {close.invoke(dataFile,(byte)-5);} finally {
+              try {close.invoke(indexFile,(byte)-5);} finally {
+                java.nio.file.Files.deleteIfExists(dataPath);java.nio.file.Files.deleteIfExists(indexPath);java.nio.file.Files.deleteIfExists(directory);
+              }
+            }
+          }
+        }
+        static void trace(String tag,int id,int length,boolean written,byte[] read,Fixture f) throws Exception {
+          check(!Thread.holdsLock(${get('jh','field_d','Lsk;','f.cache')}),"archive data monitor released");
+          System.out.println("sector:"+tag+":"+id+":"+length+":"+written+":"+(read==null?"null":digest(read))+":"+
+            digest(java.nio.file.Files.readAllBytes(f.dataPath))+":"+digest(java.nio.file.Files.readAllBytes(f.indexPath)));
+        }
+        public static void main(String[] args) throws Exception {
+          ${set('Geoblox','field_C','I','null','0')}
+          Method write=method("${type('jh')}","${method('jh','a([BBII)Z')}",byte[].class,byte.class,int.class,int.class);
+          Method read=method("${type('jh')}","${method('jh','a(IB)[B')}",int.class,byte.class);
+          int cases=0;
+          for(int id:new int[]{0,1,65535,65536,70000})for(int length:new int[]{0,1,509,510,511,512,513,1020,1021,1022,1024,1600})for(boolean reuse:new boolean[]{false,true}) {
+            try(Fixture f=new Fixture(new byte[0],new byte[0],20000)) {
+              if(reuse)check((Boolean)write.invoke(f.cache,payload(1600),(byte)-53,id,1600),"seed archive write");
+              byte[] expected=payload(length);
+              boolean written=(Boolean)write.invoke(f.cache,expected,(byte)-53,id,length);
+              check(written,"archive write status");
+              byte[] actual=(byte[])read.invoke(f.cache,id,(byte)-78);
+              boolean losesChain=id>65535 && length>510 && (length%510==1 || length%510==2);
+              boolean missingEmptyEntry=!reuse && length==0;
+              if(losesChain||missingEmptyEntry)check(actual==null,"retained chain/empty behavior");
+              else check(Arrays.equals(actual,expected),"archive payload roundtrip");
+              trace(reuse?"reuse":"new",id,length,written,actual,f);cases++;
+            }
+          }
+          for(int id:new int[]{1,65536})for(int mode=0;mode<8;mode++) {
+            int header=id>65535?10:8;
+            byte[] expected=payload(500),data=new byte[1040],index=new byte[id*6+6];
+            put(index,id*6,500,3);put(index,id*6+3,mode==7?0:1,3);
+            put(data,520,mode==1?id+1:id,id>65535?4:2);
+            put(data,520+(id>65535?4:2),mode==2?1:0,2);
+            put(data,520+(id>65535?6:4),mode==4?3:0,3);
+            data[520+header-1]=(byte)(mode==3?archiveId+1:archiveId);
+            System.arraycopy(expected,0,data,520+header,expected.length);
+            if(mode==5)data=Arrays.copyOf(data,520+header+499);
+            try(Fixture f=new Fixture(data,index,mode==6?100:20000)) {
+              byte[] actual=(byte[])read.invoke(f.cache,id,(byte)-78);
+              if(mode==0)check(Arrays.equals(actual,expected),"seed sector decode");
+              else check(actual==null,"malformed sector rejected");
+              trace("malformed"+mode,id,500,false,actual,f);cases++;
+            }
+          }
+          for(int id:new int[]{1,65536}) {
+            byte[] data=new byte[520],index=new byte[id*6+6];put(index,id*6,1,3);put(index,id*6+3,1,3);
+            try(Fixture f=new Fixture(data,index,20000)) {
+              boolean written=(Boolean)write.invoke(f.cache,payload(4),(byte)-53,id,4);
+              check(written,"header EOF retains success exit");
+              byte[] actual=(byte[])read.invoke(f.cache,id,(byte)-78);
+              check(actual==null,"EOF chain remains unreadable");
+              check(Arrays.equals(data,java.nio.file.Files.readAllBytes(f.dataPath)),"EOF exit writes no sector");
+              put(index,id*6,4,3);check(Arrays.equals(index,java.nio.file.Files.readAllBytes(f.indexPath)),"index published before header EOF");
+              trace("header-eof",id,4,written,actual,f);cases++;
+            }
+          }
+          check(cases==138,"sector archive case count");System.out.println("archive-sector-complete:"+cases);
         }
       }
       class ShutdownBehavior extends ResultHelperBehavior {
@@ -648,6 +739,17 @@ try {
     const cacheSha256 = crypto.createHash('sha256').update(cacheOutput).digest('hex');
     console.log(JSON.stringify({variant, cacheSha256, completion: cacheOutput.toString().trim().split('\n').at(-1)}));
     assert.equal(cacheSha256, expectedCacheWriteSha256, variant);
+    const archiveOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'ArchiveSectorBehavior']).stdout;
+    const archiveSectorSha256 = crypto.createHash('sha256').update(archiveOutput).digest('hex');
+    console.log(JSON.stringify({variant, archiveSectorSha256, completion: archiveOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(archiveSectorSha256, expectedArchiveSectorSha256, variant);
+    if (variant === 'native') expectedArchiveSectorSha256Baseline = archiveOutput;
+    if (nativeInput && variant !== 'native') {
+      const actualLines = archiveOutput.toString().split('\n'), nativeLines = expectedArchiveSectorSha256Baseline.toString().split('\n');
+      const mismatch = actualLines.findIndex((line, index) => line !== nativeLines[index]);
+      assert.equal(mismatch, -1, `${variant}: ${nativeLines[mismatch]} versus ${actualLines[mismatch]}`);
+    }
     const shutdownOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
       'ShutdownBehavior']).stdout;
     const shutdownSha256 = crypto.createHash('sha256').update(shutdownOutput).digest('hex');

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class dj extends hk {
-    static byte[] field_F;
+    static byte[] diskSectorBuffer;
     private int field_H;
     private int field_L;
     private int field_J;
@@ -109,7 +109,7 @@ class dj extends hk {
 
     final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 != -70) {
-            field_F = (byte[]) null;
+            diskSectorBuffer = (byte[]) null;
         }
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
@@ -204,7 +204,7 @@ class dj extends hk {
     }
 
     public static void l(byte param0) {
-        field_F = null;
+        diskSectorBuffer = null;
         if (param0 != -15) {
             return;
         }
@@ -604,7 +604,7 @@ class dj extends hk {
     }
 
     static {
-        field_F = new byte[520];
+        diskSectorBuffer = new byte[520];
         field_I = new byte[1000][];
         field_N = new int[8192];
     }

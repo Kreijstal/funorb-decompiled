@@ -60,7 +60,7 @@ final class ArchiveCatalog {
         this(networkClient, diskWorker, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final CachedArchiveSource getArchiveSource(int archiveId, byte methodGuard, boolean sweepCompletedRequests, jh indexDiskCache, jh groupDiskCache) {
+    final CachedArchiveSource getArchiveSource(int archiveId, byte methodGuard, boolean sweepCompletedRequests, DiskArchiveCache indexDiskCache, DiskArchiveCache groupDiskCache) {
         CachedArchiveSource cachedSourceBeforeReturn = null;
         CachedArchiveSource createdSourceBeforeReturn = null;
         RuntimeException sourceFailureBeforeContext = null;

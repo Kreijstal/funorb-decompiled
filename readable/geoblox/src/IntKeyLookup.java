@@ -57,7 +57,7 @@ final class IntKeyLookup {
               if (ph.archiveTaskDispatcher.cacheDataFile != null) {
                 af.field_d = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheDataFile, 5200, 0);
                 ph.archiveTaskDispatcher.cacheDataFile = null;
-                indexDiskCacheOrIoFailure = new jh(255, af.field_d, new BufferedRandomAccessFile(ph.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
+                indexDiskCacheOrIoFailure = new DiskArchiveCache(255, af.field_d, new BufferedRandomAccessFile(ph.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
               }
               groupDiskCache = null;
               if (af.field_d != null) {
@@ -68,9 +68,9 @@ final class IntKeyLookup {
                   je.field_h[archiveId] = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
                   ph.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
                 }
-                groupDiskCache = new jh(archiveId, af.field_d, je.field_h[archiveId], 2097152);
+                groupDiskCache = new DiskArchiveCache(archiveId, af.field_d, je.field_h[archiveId], 2097152);
               }
-              archiveSource = gb.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (jh) (indexDiskCacheOrIoFailure), (jh) (groupDiskCache));
+              archiveSource = gb.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
               if (downloadAllGroups) {
                 archiveSource.requestAllGroups(92);
               }

@@ -32,7 +32,7 @@ final class DiskCacheWorker implements Runnable {
         field_l = null;
     }
 
-    final DiskArchiveRequest queueWrite(byte methodGuard, int groupId, jh diskCache, byte[] bytes) {
+    final DiskArchiveRequest queueWrite(byte methodGuard, int groupId, DiskArchiveCache diskCache, byte[] bytes) {
         DiskArchiveRequest request = null;
         RuntimeException writeFailureForContext = null;
         DiskArchiveRequest guardResultBeforeReturn = null;
@@ -77,7 +77,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskArchiveRequest readSynchronously(jh diskCache, int groupId, int methodGuard) {
+    final DiskArchiveRequest readSynchronously(DiskArchiveCache diskCache, int groupId, int methodGuard) {
         DiskArchiveRequest request = null;
         RuntimeException readFailureForContext = null;
         Object queueMonitor = null;
@@ -116,7 +116,7 @@ final class DiskCacheWorker implements Runnable {
               break L1;
             }
           }
-          request.bytes = diskCache.a(groupId, (byte) -78);
+          request.bytes = diskCache.read(groupId, (byte) -78);
           request.priority = true;
           request.pending = false;
           readRequestBeforeReturn = (DiskArchiveRequest) (request);
@@ -242,7 +242,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskArchiveRequest queueRead(int methodGuard, jh diskCache, int groupId) {
+    final DiskArchiveRequest queueRead(int methodGuard, DiskArchiveCache diskCache, int groupId) {
         DiskArchiveRequest request = null;
         RuntimeException readFailureForContext = null;
         DiskArchiveRequest readRequestBeforeReturn = null;
@@ -312,13 +312,13 @@ final class DiskCacheWorker implements Runnable {
                 L4: {
                   if (request.operationType != 2) {
                     if (3 == request.operationType) {
-                      request.bytes = request.diskCache.a((int)request.secondaryKey, (byte) -76);
+                      request.bytes = request.diskCache.read((int)request.secondaryKey, (byte) -76);
                       completeRequestAfterOperation = 1;
                       break L4;
                     }
                     request.pending = false;
                   } else {
-                    request.diskCache.a(request.bytes, (byte) -53, (int)request.secondaryKey, request.bytes.length);
+                    request.diskCache.write(request.bytes, (byte) -53, (int)request.secondaryKey, request.bytes.length);
                     request.pending = false;
                   }
                   completeRequestAfterOperation = 0;

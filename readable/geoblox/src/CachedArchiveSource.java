@@ -11,12 +11,12 @@ final class CachedArchiveSource extends ArchiveSource {
     private int archiveId;
     private DiskCacheWorker diskWorker;
     private int expectedIndexCrc32;
-    private jh indexDiskCache;
+    private DiskArchiveCache indexDiskCache;
     static IndexedSprite jewelsBackgroundSprite;
     private byte[] groupDiskStatus;
     private byte[] expectedIndexWhirlpoolDigest;
     private ArchiveIndex index;
-    private jh groupDiskCache;
+    private DiskArchiveCache groupDiskCache;
     private int backgroundGroupIndex;
     private boolean downloadAllPending;
     private IntrusiveDeque requestedGroups;
@@ -606,7 +606,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    CachedArchiveSource(int archiveId, jh groupDiskCache, jh indexDiskCache, ArchiveNetworkClient networkClient, DiskCacheWorker diskWorker, int expectedIndexCrc32, byte[] expectedIndexWhirlpoolDigest, int expectedIndexRevision, boolean sweepCompletedRequests) {
+    CachedArchiveSource(int archiveId, DiskArchiveCache groupDiskCache, DiskArchiveCache indexDiskCache, ArchiveNetworkClient networkClient, DiskCacheWorker diskWorker, int expectedIndexCrc32, byte[] expectedIndexWhirlpoolDigest, int expectedIndexRevision, boolean sweepCompletedRequests) {
         boolean sweepOptionSnapshot = false;
         RuntimeException constructionFailureBeforeContext = null;
         StringBuilder constructionMessagePrefix = null;

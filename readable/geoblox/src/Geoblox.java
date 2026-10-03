@@ -1108,7 +1108,7 @@ public final class Geoblox extends wf {
         this.a((byte) -70, 9, 8, 10, 0, false, 7, 1);
         kj var2 = new kj();
         var2.e(-1636, 9, 128);
-        jh.a((java.awt.Component) ((Object) f.field_kb), MenuScreen.field_i, false, var2, true, 22050);
+        DiskArchiveCache.a((java.awt.Component) ((Object) f.field_kb), MenuScreen.field_i, false, var2, true, 22050);
         this.a(false, false, true, true, -95);
     }
 

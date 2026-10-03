@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskArchiveRequest extends ArchiveRequest {
-    jh diskCache;
+    DiskArchiveCache diskCache;
     int operationType;
     byte[] bytes;
 
     final int getProgress(int methodGuard) {
         if (methodGuard != 0) {
-            this.diskCache = (jh) null;
+            this.diskCache = (DiskArchiveCache) null;
             if (!this.pending) {
                 return 100;
             }

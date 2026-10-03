@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 5,820 guarded naming rules: 55 classes, 725 fields,
-532 methods, 1,573 parameters and 2,935 local declarations. Both 303-file corpora
+The current export has 5,907 guarded naming rules: 56 classes, 730 fields,
+536 methods, 1,588 parameters and 2,997 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,49 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current limited and buffered file names
+## Current disk archive sector names
+
+Pass 73 adds 87 guarded identities: one class, five fields, four methods,
+fifteen parameters and 62 locals. `DiskArchiveCache` names every instance
+declaration, constructor contract and local. `dj.diskSectorBuffer` names the
+shared 520-byte scratch array; unrelated UI/audio helpers retain their owners.
+`toString` keeps its Java override spelling and returns the full archive ID.
+
+The format exposes six-byte index rows and 520-byte data sectors. Entries
+through ID 65535 use an eight-byte header and up to 512 payload bytes; larger
+IDs use a ten-byte header and up to 510 payload bytes. Read validates entry,
+chunk, archive and next-sector fields under the data-file monitor. Write
+attempts chain reuse before allocation, publishing the index row before
+verifying reused headers or writing sectors. Int-before-long offsets, shared
+scratch ownership, partial writes, wrong guards and exception paths remain.
+
+`smallHeaderEofState` and `largeHeaderEofState` name the retained int 0/1
+continuations. Header EOF exits to success after the index was published, with
+no new retry. The original end-of-chain test compares remaining bytes to 512
+even for large-ID payloads of 510. Controlled large-ID lengths 511/512 and
+1021/1022 retain successful writes followed by unreadable chains. Fresh empty
+entries retain their null read result; reused valid empty entries read as empty.
+
+The existing result-helper probe now also checks 138 controlled sector cases:
+120 fresh/reused entry/length combinations, sixteen seeded valid/malformed
+reads and both header-EOF exits. It checks payloads and explicit partial effects
+and compares data/index file digests with native bytecode, raw Java and readable
+Java. The new trace SHA-256 is
+`77dc4b47188f20793aaecb76f198e59850d0fc3d8af0ca07b2d0a111719a869b`.
+Its source hash and trace live in the existing manifest; no new report JSON exists.
+Fixture cleanup closes limited-file wrappers to prevent finalizer output from
+making the trace nondeterministic.
+
+All 5,820 previous complete rules and raw source/generator pins stay unchanged.
+The 5,907 rules apply 48,058 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. The existing six native helper/cache/shutdown/socket/
+dispatcher/input traces remain unchanged. Full buffering/concurrency, malformed
+writes/guards, real cache/server/assets, complete gameplay and phone/FPS/heap
+behavior remain unverified. Compression, unknown static names and large labeled
+bodies remain unfinished.
+
+## Previous limited and buffered file names
 
 Pass 72 adds 122 guarded identities: two classes, fourteen fields, fourteen
 methods, 34 parameters and 58 locals. `LimitedRandomAccessFile` and
@@ -1230,7 +1272,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 122 additions in
+naming-only pass retains those source pins and records its 87 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1255,6 +1297,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `b3d57b35162af262bffe4f3a7e7456d3bc064eccbeec7666e5f913b7e995263d` |
+| Readable | `2e82485bc63e89bad5e82aa59c81ccb485f2cadb1a266519174ba4011b1f60f0` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.
