@@ -84,7 +84,7 @@ final class ek {
         } catch (java.lang.RuntimeException scaledOverviewFailure) {
           caughtCompositeFailure = scaledOverviewFailure;
           compositeFailureForContext = caughtCompositeFailure;
-          compositeFailureBeforeSpriteDescription = (RuntimeException) (compositeFailureForContext);
+          compositeFailureBeforeSpriteDescription = compositeFailureForContext;
           compositeMessagePrefix = new StringBuilder().append("ek.A(").append(destinationHeight).append(',').append(enabled).append(',');
           if (overviewSprite == null) {
             overviewSpriteArgumentDescription = "null";

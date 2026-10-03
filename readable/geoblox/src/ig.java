@@ -69,12 +69,12 @@ final class ig {
           var3 = new sl(param2);
           var3.field_j = param1;
           var3.field_e = param0;
-          stackIn_1_0 = (sl) (var3);
+          stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var3_ref);
+          stackIn_4_0 = var3_ref;
           stackIn_4_1 = new StringBuilder().append("ig.B(");
           if (param0 == null) {
             stackIn_5_2 = "null";

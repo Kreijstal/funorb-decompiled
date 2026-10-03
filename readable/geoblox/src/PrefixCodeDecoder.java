@@ -30,7 +30,7 @@ final class PrefixCodeDecoder {
             decodedBytes = new byte[decodedLength];
             buffer.position = buffer.position + vj.compressedTextDecoder.decodePrefixBytes(decodedBytes, buffer.position, buffer.bytes, guardAndDestinationOffset, -127, decodedLength);
             decodedText = bc.decodeTextSlice(guardAndDestinationOffset ^ -103, decodedBytes, 0, decodedLength);
-            decodedTextBeforeReturn = (String) (decodedText);
+            decodedTextBeforeReturn = decodedText;
             return decodedTextBeforeReturn;
           } catch (java.lang.Exception decodeFailure) {
             caughtTextFailure = decodeFailure;
@@ -41,7 +41,7 @@ final class PrefixCodeDecoder {
         } catch (java.lang.RuntimeException textFailure) {
           caughtTextFailure = textFailure;
           textFailureForContext = (RuntimeException) (Object) caughtTextFailure;
-          textFailureBeforeDescription = (RuntimeException) (textFailureForContext);
+          textFailureBeforeDescription = textFailureForContext;
           textMessagePrefix = new StringBuilder().append("qa.A(");
           if (buffer == null) {
             bufferDescription = "null";
@@ -71,12 +71,12 @@ final class PrefixCodeDecoder {
           }
           font = new CoverageBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, cm.decodedSpritePalette, mj.decodedSpriteIndices);
           kj.clearDecodedSpriteWorkingArrays(true);
-          fontBeforeReturn = (CoverageBitmapFont) (font);
+          fontBeforeReturn = font;
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeMetricsDescription = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeMetricsDescription = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("qa.D(");
           if (metrics == null) {
             metricsDescription = "null";
@@ -270,7 +270,7 @@ final class PrefixCodeDecoder {
         } catch (java.lang.RuntimeException decodingFailure) {
           caughtDecodingFailure = decodingFailure;
           decodingFailureForContext = caughtDecodingFailure;
-          decodingFailureBeforeDestination = (RuntimeException) (decodingFailureForContext);
+          decodingFailureBeforeDestination = decodingFailureForContext;
           decodingMessagePrefix = new StringBuilder().append("qa.E(");
           if (destination == null) {
             destinationDescription = "null";

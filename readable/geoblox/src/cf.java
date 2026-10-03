@@ -46,7 +46,7 @@ final class cf extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var3);
+          stackIn_14_0 = var3;
           stackIn_14_1 = new StringBuilder().append("cf.D(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_15_2 = "null";
@@ -85,7 +85,7 @@ final class cf extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3);
+          stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("cf.A(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_11_2 = "null";

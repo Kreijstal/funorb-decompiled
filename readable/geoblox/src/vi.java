@@ -85,12 +85,12 @@ final class vi extends ButtonWidget {
             var6.field_h = var3[2 + (var5 << 2)];
             var6.field_a = var3[(var5 << 2) + 3];
           }
-          stackIn_16_0 = (rj[]) (var4);
+          stackIn_16_0 = var4;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var2);
+          stackIn_19_0 = var2;
           stackIn_19_1 = new StringBuilder().append("vi.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";

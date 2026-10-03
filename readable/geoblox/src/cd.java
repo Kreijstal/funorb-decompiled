@@ -104,7 +104,7 @@ final class cd extends jg {
             var5 = new java.net.Socket(param0);
             ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_e, this.field_b)));
             stackIn_12_0 = var5;
-            return (java.net.Socket) ((Object) stackIn_12_0);
+            return (java.net.Socket) (stackIn_12_0);
           }
           var5 = null;
           try {
@@ -135,7 +135,7 @@ final class cd extends jg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var3_ref);
+          stackIn_25_0 = var3_ref;
           stackIn_25_1 = new StringBuilder().append("cd.L(");
           if (param0 == null) {
             stackIn_26_2 = "null";
@@ -230,7 +230,7 @@ final class cd extends jg {
               if (false) throw (bd) null;
             var12 = this.a(var11, (byte) -18);
             if (var12 != null) {
-              stackIn_21_0 = (java.net.Socket) (var12);
+              stackIn_21_0 = var12;
               return stackIn_21_0;
             }
             var9++;
@@ -319,7 +319,7 @@ final class cd extends jg {
                 }
                 throw new bd("");
               }
-              stackIn_10_0 = (java.net.Socket) (var14);
+              stackIn_10_0 = var14;
               return stackIn_10_0;
             }
           }
@@ -327,11 +327,11 @@ final class cd extends jg {
           var7.close();
           var14.close();
           stackIn_24_0 = null;
-          return (java.net.Socket) ((Object) stackIn_24_0);
+          return (java.net.Socket) (stackIn_24_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_27_0 = (RuntimeException) (var5);
+          stackIn_27_0 = var5;
           stackIn_27_1 = new StringBuilder().append("cd.J(").append(param0).append(',');
           if (param1 == null) {
             stackIn_28_2 = "null";

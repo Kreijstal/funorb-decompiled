@@ -199,8 +199,8 @@ final class kc {
                                         L20: {
                                           L21: {
                                             if (componentSearchThenVariantResetEntity != null) {
-                                              comparedThenUnlinkTarget = (GameplayEntity) (componentSearchThenVariantResetEntity);
-                                              neighborThenUnlinkArgument = (GameplayEntity) (neighborThenCountResetEntity);
+                                              comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
+                                              neighborThenUnlinkArgument = neighborThenCountResetEntity;
                                               if (clientControlSnapshot != 0) {
                                                 break L21;
                                               }
@@ -215,8 +215,8 @@ final class kc {
                                             }
                                             componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
                                             while (componentSearchThenVariantResetEntity != null) {
-                                              comparedThenUnlinkTarget = (GameplayEntity) (componentSearchThenVariantResetEntity);
-                                              neighborThenUnlinkArgument = (GameplayEntity) (neighborThenCountResetEntity);
+                                              comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
+                                              neighborThenUnlinkArgument = neighborThenCountResetEntity;
                                               if (clientControlSnapshot != 0) {
                                                 break L21;
                                               }
@@ -320,7 +320,7 @@ final class kc {
                                               }
                                             }
                                             comparedThenUnlinkTarget = connectivityAliasThenDetachingEntity.relatedEntities[componentNeighborIndex];
-                                            neighborThenUnlinkArgument = (GameplayEntity) (connectivityAliasThenDetachingEntity);
+                                            neighborThenUnlinkArgument = connectivityAliasThenDetachingEntity;
                                             continue;
                                           }
                                         }
@@ -359,7 +359,7 @@ final class kc {
                               componentNeighborIndex = visitedFlagThenResetIndex;
                               while (componentNeighborIndex < connectivityAliasThenDetachingEntity.relatedEntityCount) {
                                 comparedThenUnlinkTarget = connectivityAliasThenDetachingEntity.relatedEntities[componentNeighborIndex];
-                                neighborThenUnlinkArgument = (GameplayEntity) (connectivityAliasThenDetachingEntity);
+                                neighborThenUnlinkArgument = connectivityAliasThenDetachingEntity;
                                 ((GameplayEntity) (Object) comparedThenUnlinkTarget).removeRelatedEntity(neighborThenUnlinkArgument, 0);
                                 componentNeighborIndex++;
                                 if (clientControlSnapshot != 0) {

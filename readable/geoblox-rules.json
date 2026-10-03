@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "e9a083a49cbc1abedc9878510144e29350283258",
+    "commit": "f52271abff84ff66ef9d73d8fd3d7a38cbf919e5",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "9b9a14f0d5063ad8801b7cc7593865a2b093947780937310ed913195a8397a61",
+  "inputTreeSha256": "2e4f5a2dec59816c3cdc3897291d55002e7ff596d367de5a33bab1392dbac23c",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -50645,19 +50645,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 33,
-  "version": 104,
+  "revision": 34,
+  "version": 105,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "6a6275c84203e94667cfc8add2a5763d44f08f0f",
+      "commit": "28c78aa9333f9958868c8359ca0d8b77d9c62cf8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "7b39ce315376ef968a17850878eca26ddeb06662032b8acac840418062c7aa09",
-        "reproduce": "git archive --format=tar 6a6275c84203e94667cfc8add2a5763d44f08f0f | sha256sum",
+        "sha256": "c6294dd3b9ae8f81da915bb49946f6a30643a681f46c48865afcf4aae564e9d3",
+        "reproduce": "git archive --format=tar 28c78aa9333f9958868c8359ca0d8b77d9c62cf8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -50666,9 +50666,9 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "0b24a8f82782a52136f30687dec6a1d064b01fac",
+      "commit": "359031ec02539da9d21aff1403a69307ef06434c",
       "path": "readable/geoblox-rules.json",
-      "sha256": "c4d4bbfc53ecc6f6dba2aeb7315f136ca40381e2eb3bf9b9539bde38cbf4c271"
+      "sha256": "390569c82ad2bed6c58a089e5d32053c6fb4875d835f220e75c0f1aa4a838603"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
@@ -50687,15 +50687,15 @@
       },
       {
         "file": "ab.java",
-        "sha256": "281177959090ae2f5713cc8b92a86ed65b90adf57dbe4c306296b889c88b77a6"
+        "sha256": "6278e422a97c8b7c8fd0d8a24d5a5b49ec62800e6ac191e5370fc0ecc23b7c46"
       },
       {
         "file": "ac.java",
-        "sha256": "da2bb7393df1fc6ce99fc9f05106622e9d3c024882dd0fc41cb368de4de83801"
+        "sha256": "88f3adfa7cf08c97ce20372311df8d2cc2fa0a3d55bb536f6ff9d323d7664827"
       },
       {
         "file": "ad.java",
-        "sha256": "2a59ff78492a8e1cf26c2ad7197e587516af983449c13c1731380f0942bb262f"
+        "sha256": "babb791bc8da6d08940b58e0fa4c9e5aa218ae64377f07c45227eac6a9b03c23"
       },
       {
         "file": "ae.java",
@@ -50707,7 +50707,7 @@
       },
       {
         "file": "ag.java",
-        "sha256": "8588aa8e0d8b95712952cd1ce953cbcd7f37dceb1d656ee1fe2aa07a47b15821"
+        "sha256": "0ed32fdfe623f9b7f36d859df2be45c46c013fba958332d10d1f64e3dea2f7d9"
       },
       {
         "file": "ah.java",
@@ -50715,19 +50715,27 @@
       },
       {
         "file": "ai.java",
-        "sha256": "d8127b4767d2e4601c6ae2fca3bff72495bda88334c93ef32175f503f992da91"
+        "sha256": "2b275c2adc9192ed11acfcb3344e6f9a8db07703543c1b556db07fead70b4981"
       },
       {
         "file": "aj.java",
         "sha256": "eccbd8f4d576afaa941247c9145374f6ac06338d5b6ad4bc80e03c67e3316805"
       },
       {
+        "file": "ak.java",
+        "sha256": "7f8d67ff3bebb2801568e0a0ce142cdc6fffd0fb07e4dc1a958a50a5cda34708"
+      },
+      {
+        "file": "al.java",
+        "sha256": "f5f7ed33ee4544b994c63a4a049780f3ad20ae826b49ebc8713db7a9253a0037"
+      },
+      {
         "file": "am.java",
-        "sha256": "0169089ee6a7a0120fa7500e4bbec52181c35b69f3cf6843f08360aa003ae0bf"
+        "sha256": "82eb28b078809a8b021764aa647baf66c037c0ef1d62395e906c59c25521ac6c"
       },
       {
         "file": "ba.java",
-        "sha256": "cc81078bbfccaca93825db668a4706e15f501fd024930b18f00139075ac9ae9f"
+        "sha256": "5c0020012ae01855e13d7e0a4799fd1816f5e5becae012630723d7a29c3a5ab7"
       },
       {
         "file": "bb.java",
@@ -50735,11 +50743,11 @@
       },
       {
         "file": "bc.java",
-        "sha256": "18d04485265b34a49bc4907b6b8e2b58cdca8c1d4f7052a34f1791ba4ad971e9"
+        "sha256": "436c66536cd9ac74e92d9735c4268cfd2fedf5ccc09d2332b207bd0dfa6fc786"
       },
       {
         "file": "bf.java",
-        "sha256": "807698fcd7fde8ea370c94ee5db389e69ef31659c856ce420a982409658c30cd"
+        "sha256": "a8f8a34eb416fbc5a09933c16db3a2a7807e3f79dbb11d63357aa6dd7028b650"
       },
       {
         "file": "bg.java",
@@ -50747,15 +50755,15 @@
       },
       {
         "file": "bh.java",
-        "sha256": "f45c44247a56667e815d642d130cb784183e72e009225eedb09ae622c14ae139"
+        "sha256": "fb70c3dc9e691ffcd8c26accd3298c133209c1a2951634538d21e806c4b65c90"
       },
       {
         "file": "bi.java",
-        "sha256": "f3698868ca11920c072ac6b10536f0e07009068b2135bfd4d714283bcf449abb"
+        "sha256": "0dff8fa3099caa716696fb999b62baaa3dbffc35d9f1f5cb58ed4f591e6df18b"
       },
       {
         "file": "bj.java",
-        "sha256": "5fc749420e7d67e71de46afce0f3e5f79188af572b739df810874b301d8f7935"
+        "sha256": "fb2961036b716816485fcf9485031778ccd95db2ee0739b4f3342a4f89938e84"
       },
       {
         "file": "bk.java",
@@ -50763,15 +50771,15 @@
       },
       {
         "file": "bm.java",
-        "sha256": "b72d0e35f89b8e4a5c1f70a4bbe00380381799c9cc0c62768b629ddb0673240c"
+        "sha256": "9856945ff95f4804208caa77c2ffc300fe3463355820d08ba5da13056d68ed88"
       },
       {
         "file": "c.java",
-        "sha256": "ac62a4cdda37e4c042576336bb5d9040a04b125a4fba2409cba5b590d35135bd"
+        "sha256": "acbbb7446f69b226a9d95536108714e3766b785364497f15eb5a4b7accb04007"
       },
       {
         "file": "ca.java",
-        "sha256": "bd472d293dcc3544337eb664229c1ea401d875acfcbb615e480e6525b5a16263"
+        "sha256": "ae7dc5ac39bd498f7fae93bf5d1c0c21b1a643de21c6c4ef3478e95289772615"
       },
       {
         "file": "cb.java",
@@ -50779,7 +50787,7 @@
       },
       {
         "file": "cd.java",
-        "sha256": "02c392d13986a8581be510964a15241f1fdc0d0cbce6dd97e6490908a6597b90"
+        "sha256": "0c50acb487c334f55d5e177ead0bc9adec66daecefef722f41c49b848eff0790"
       },
       {
         "file": "ce.java",
@@ -50787,15 +50795,19 @@
       },
       {
         "file": "cf.java",
-        "sha256": "d2c1198adc34fdd8785ed7bf079d4e5be1f7c88f3b464a36d512575108668ef0"
+        "sha256": "b6cac8dcb5b145de2adbefd18f55c2c1d46efad7d2737b8936ecb1e67307a32a"
+      },
+      {
+        "file": "cg.java",
+        "sha256": "2cc76adc93c4ebcdb8347279a071b27cbaade2d455fe156061de22da17fa4cfb"
       },
       {
         "file": "ch.java",
-        "sha256": "ef96d5bb1508ac070e4898247a18d9dfb46e13fb457464367e6254df219a3fec"
+        "sha256": "1b046afceaad522b8d75ad3fb0254752bc873ec276fba6c4d7d167cb3a0e9cb6"
       },
       {
         "file": "ci.java",
-        "sha256": "7d3430e87f5b889a2706b3a9eb4f3f73f7527dd4dcfb97f54f3369b3606f5ee1"
+        "sha256": "b8b937323e67b62250d4ca9a535e154b5f6c9466495ab14a5cf0224f877f2374"
       },
       {
         "file": "cj.java",
@@ -50807,7 +50819,7 @@
       },
       {
         "file": "cl.java",
-        "sha256": "698d50d24d4a52abd1696f7001864b20aef6cb819801dc1181d08c26c8223d81"
+        "sha256": "6a99c86ec8d92a51c1afc1910dd2c7c53932fa6ad555eece95cf0cb137800df9"
       },
       {
         "file": "cm.java",
@@ -50815,7 +50827,7 @@
       },
       {
         "file": "d.java",
-        "sha256": "ec11a40b358142c71dd9ddd80bf2f597e62558a0216dae4654122388ae946f26"
+        "sha256": "9fab5a65f364fec243a647a75e5f08370792b2cf88ef825c1ae716bade6089cb"
       },
       {
         "file": "da.java",
@@ -50823,7 +50835,7 @@
       },
       {
         "file": "dd.java",
-        "sha256": "0e59a3d26ef8857abac4d02e167ade6d8ed8c5da2a7bf645f3ca6dce10796508"
+        "sha256": "e8beb105ee206cba50ec2f527d66c9c9ffb8f4517626b4d76936f4f02581dc8b"
       },
       {
         "file": "de.java",
@@ -50839,11 +50851,11 @@
       },
       {
         "file": "dj.java",
-        "sha256": "f3bb797409df55179f427e306d79678b640ff05d05569faddc4a107a85a4abfe"
+        "sha256": "8f705d765f3439e0ebadcd1cb3958f8b48ca19191da91b7f74c59e11531f5336"
       },
       {
         "file": "dk.java",
-        "sha256": "31dc323c1dd101224bc7b2c55e0b0e74cec84516649c35f0ef15ecb3c30a6516"
+        "sha256": "3955eac321284073702513f96a948ab006c6c3833d8f11c5234a4cba40f929f4"
       },
       {
         "file": "dm.java",
@@ -50851,11 +50863,11 @@
       },
       {
         "file": "ea.java",
-        "sha256": "4de5091fbfe91617b12c9f5f5d7c2e285c74e02258100b218098101298221ec3"
+        "sha256": "4c323ae6c50cf12eb69cf5ee75a8fedc0c59aad75ce4f8e2216da59f8129a61b"
       },
       {
         "file": "eb.java",
-        "sha256": "bb72f56c7df33e0edc578fe4bfebbce32010eee5c00d4da35f977a214cbd86d6"
+        "sha256": "14b41dcb7d09df22f82a76f2e9099cd7d4addf905ddb6f692ec9c71d70974a3e"
       },
       {
         "file": "ec.java",
@@ -50867,11 +50879,11 @@
       },
       {
         "file": "ee.java",
-        "sha256": "6c31c0e428c719e78593bcfdd2817d23fdd9ea98129327859fb379d46c490d11"
+        "sha256": "35f98e36fc561f29c9fbc43b9a705a34d82e7c8f7db0a28f7aa1ba53c1eeace5"
       },
       {
         "file": "eg.java",
-        "sha256": "9a78d37d5197a628e3dac1f3648544878913e858c3b8a9b5b7496c34f24a3520"
+        "sha256": "ff010d3d1a0e7557e85a682355105a615d64e0e5cdafc764a9b953f9f40ed37c"
       },
       {
         "file": "eh.java",
@@ -50879,7 +50891,7 @@
       },
       {
         "file": "ei.java",
-        "sha256": "29768ee70f73dd7de24aa83281c9800fbb0693c3ae14a39adcf983678512cfa9"
+        "sha256": "00dd8ca5ac19609dc796353b0245e2cd4413e5d8edf8f6b60fa067539d5ddd43"
       },
       {
         "file": "ej.java",
@@ -50887,19 +50899,19 @@
       },
       {
         "file": "ek.java",
-        "sha256": "3f00e1633e76a5fcadd7fa9a14cf9c888c8275e52cb8072559af56d611e59a19"
+        "sha256": "61a1dffcc195947a6e217db47b0a5a80be74caa7a57f236ace6dda5cdfbb8ddd"
       },
       {
         "file": "el.java",
-        "sha256": "87927427ea33bcda15de54adde89137906bee6ce2d0cc516089961e671f2be64"
+        "sha256": "deeb19a546398b63e3b7a8b9a0415ae37684e1a4359a85d2b79cd22222eb1fa6"
       },
       {
         "file": "em.java",
-        "sha256": "d8dba1885fffe96e71af958ce972b2ae1ce12e94f800d87069524227831ddeff"
+        "sha256": "3a6c7e0dd5216ffe96138cc62eba45852db0aafea118ca46bf6859551a8841f8"
       },
       {
         "file": "f.java",
-        "sha256": "89db7b67304ecbed08331565cc4fd3486d8412b6e4329fa51e27270fd5f8a727"
+        "sha256": "58b6d731275c007b18d7a8494664f87c6ab25d743e63d3c1a6c6ec58ace2eb26"
       },
       {
         "file": "fa.java",
@@ -50911,23 +50923,23 @@
       },
       {
         "file": "fd.java",
-        "sha256": "2064a09ab9f56eae3d3170dc0ef6f2dca36548222ba36e1d67ec09d1b1c8508b"
+        "sha256": "4fb9e89af5c7c19dbb6431cf03de47c9695157831ba7b37637e7b9b6fa7ebdbf"
       },
       {
         "file": "fe.java",
-        "sha256": "89cbea64d4712aa0bf8985d3511857df0398a9fdb45be04c64aac029085420b6"
+        "sha256": "df806280257e99b3e8e13f88f5646ebd0bb5b0d9c959d177c7dc7c89cdfb45ad"
       },
       {
         "file": "ff.java",
-        "sha256": "c43a1a3c43ac70a4b9dfa0cc7be089bcc8be5555c8feb3bc9882ce8f72291ed5"
+        "sha256": "31e9db77cee2852b5a241378d0ed1a61d78d5c3190ac11806a85e92932ffc88e"
       },
       {
         "file": "fh.java",
-        "sha256": "624f27d3cc4ffa888b63867067eea510aecf774390f7ce78cf8e604947b65b7c"
+        "sha256": "f26c5498ba212ec539ae382b075cecb1f530c10b5a8df5eef9c1e30d9f8653f5"
       },
       {
         "file": "fi.java",
-        "sha256": "fef103c309a7df00e53af7b856be1f734ba0331a9b5eeb91e6b90d7b69b24ede"
+        "sha256": "8280e69dc12e46cb7c0b1d0ecd2f224c39816126ace3da85f1fadb62e9a2a8fc"
       },
       {
         "file": "fj.java",
@@ -50935,7 +50947,7 @@
       },
       {
         "file": "fk.java",
-        "sha256": "fb27302800a2cf04bc0b8cc4984f061058e4338bf1e68bd323f34aef805d5694"
+        "sha256": "fbaa01659698376aa0afd637db34329ece11db3104950952ae7fa159dc75694e"
       },
       {
         "file": "fl.java",
@@ -50943,11 +50955,11 @@
       },
       {
         "file": "g.java",
-        "sha256": "935de2a3a20028a8882b70a9e4e769e3ccab9fd34ae55dfe195175821f78d901"
+        "sha256": "988d5c3f7cda2b16c25aca0b279b9d27101a5b49f5c1cddafdde3a8e864efe97"
       },
       {
         "file": "gb.java",
-        "sha256": "29451d90351fa16fe1b2f9b99b2ece296beb8942ca6f07427f069323ba6422c9"
+        "sha256": "2972b29a0d006c0b214afa712e296e842cb41f38b570de359e96c499d36558e7"
       },
       {
         "file": "gd.java",
@@ -50955,27 +50967,27 @@
       },
       {
         "file": "ge.java",
-        "sha256": "e10df48a0350331e1823cad3201c18015a9d5569695feeb8e3bf4355bd64dab1"
+        "sha256": "ccf94abb2ea65eeea0b8a3b625dfa4fbf484786c5f9ad2459b423a91557966ae"
       },
       {
         "file": "gf.java",
-        "sha256": "bc026c8ef0d01375f6e50b47d419bad9cbf5571c8ec72abeae34251d25628550"
+        "sha256": "a8226b0307d431fadd15114e04c9e7a0d60c15bb08fb7a5a6d6a565876afe578"
       },
       {
         "file": "gg.java",
-        "sha256": "08af97544a524ba780d4fdbe97442b8a60ef1c3575c3e1ae7aee3c19909f5694"
+        "sha256": "7eab2e4e14cbec36e931c726bd21cd2ee7354ab3a56d0efd70da185c7b44b82a"
       },
       {
         "file": "gh.java",
-        "sha256": "20335c6eb61a8296aa38581a4e774fcf9a4929a09aa55a4537b3cc519691cedd"
+        "sha256": "eb646bd0491fbcb2351dd72c16ee4fcb7fd943658cae3a086702a0e68eb96107"
       },
       {
         "file": "gi.java",
-        "sha256": "71b9330f3ec60828470684ea48177209774d06e3e3d9f8928391a1e72fd7c5ad"
+        "sha256": "793ad3c40cff2dde747d0cf91fe5a6c66d6db36fe4bb83dd011c1c131d3f1866"
       },
       {
         "file": "gj.java",
-        "sha256": "9b8565be95b9043177da2264d33d88629e8d42d2e67e058b01fa31adbf21ead7"
+        "sha256": "e708ab6b9dda901e347bc6dc708d77e5bfe79da487a6651d19ec6dac630249ab"
       },
       {
         "file": "gk.java",
@@ -50987,11 +50999,11 @@
       },
       {
         "file": "h.java",
-        "sha256": "f1318f614c44c5113cc95260239e5edefea4f9f5f4c2ee5264bcab6fbb73ba2f"
+        "sha256": "103463b1b1f3375939901de956dd25a33b91df900ea30af1be2a1ab060df43e6"
       },
       {
         "file": "ha.java",
-        "sha256": "4e820501bd5d3262da217b79de461033ffc6d4d327b590bf5b790846a2eee3b0"
+        "sha256": "ee32158dad9aeaf5eb739c3ad0ebd8feeb174714cc3cb9c55dbecf7c4afbac6b"
       },
       {
         "file": "hb.java",
@@ -50999,11 +51011,11 @@
       },
       {
         "file": "hc.java",
-        "sha256": "bf802b8e17a0a4cd9f54b75cacf05e5f5852d8c79ddb04942643e54a27a0c251"
+        "sha256": "52daca7cad0d68a7c20baa38f225ea02bb3565b9831a5c6449931cdcb888362a"
       },
       {
         "file": "hd.java",
-        "sha256": "870fecb6108c4b765f26738417628689f3f5cabc191bba45c332891e16b6242d"
+        "sha256": "f2030be2a6edca1c732cead897af257b0958c346d89a471d51d908bf8f634e5e"
       },
       {
         "file": "he.java",
@@ -51011,7 +51023,7 @@
       },
       {
         "file": "hf.java",
-        "sha256": "188db8bdb83d67f01024c667bff7f87bff0c197b0bb7202cef7cb8e272640206"
+        "sha256": "e837644882081d87d4aad3f1e1454d916e3af6019e6552c0dc678beffc618f22"
       },
       {
         "file": "hg.java",
@@ -51023,7 +51035,7 @@
       },
       {
         "file": "hi.java",
-        "sha256": "1de27b3d4ece3b04e530e5e14f41cfbb22ccd66f3850028c7b5725701ff8f996"
+        "sha256": "f678d2cec9489a229b585a03062a18910795ba34efe19da85991a93bbd0d48b5"
       },
       {
         "file": "hj.java",
@@ -51031,15 +51043,15 @@
       },
       {
         "file": "hk.java",
-        "sha256": "188ca1df39d99e2f8b6df7ab778cca7023c00046e54031e07d55bd8a5aecdae6"
+        "sha256": "c50e10cb21ca1d4f6278aae5f6d9e2805b07c5f5396749781d1e73fc3895ded4"
       },
       {
         "file": "hl.java",
-        "sha256": "3da692221f6f35c4f64da2f01dbea26234b1348a7c3d080e7b306b22763b769d"
+        "sha256": "a74edf9b6ff29bd3ecb321cc4f72bc6348e26a65a70001136f421f664f1b8d59"
       },
       {
         "file": "i.java",
-        "sha256": "28208c1515585eaa7349e8b1ba4cdaaad754d61ca322feb5c6772ca91a92cbe1"
+        "sha256": "c936c824c4f46d3b01868dd4e26e7dd642d7088e886ed2ca8b0a1a78fe1e48a4"
       },
       {
         "file": "ib.java",
@@ -51047,7 +51059,7 @@
       },
       {
         "file": "ic.java",
-        "sha256": "73662f1ad19689db455ca0737ee695af80b464dbee48e24f342d079e2ea098b3"
+        "sha256": "a3cefe2ac7b81575141e8ab0c9d1ed91f195a7d3a4dca2dd7c2cd421010a2f4c"
       },
       {
         "file": "id.java",
@@ -51058,8 +51070,12 @@
         "sha256": "5f4610630413f16f7c3709d87feac67bfd0c3f66479c19d232046d4fb4eaa7c6"
       },
       {
+        "file": "ig.java",
+        "sha256": "1b1d4178396848f6096b69f682f252feaff489fdc5391921cd1d85bc8e2158e9"
+      },
+      {
         "file": "ih.java",
-        "sha256": "7c437844dc831f1955e81cd2ae3e7bc08ca37c801e77d5f2435a2a6f63ae8ac7"
+        "sha256": "a8cff6cc60a6fe8cf0697b3e9197f9fa24987b500a50ccd5abce9b7ec023dd10"
       },
       {
         "file": "ii.java",
@@ -51067,11 +51083,11 @@
       },
       {
         "file": "ij.java",
-        "sha256": "db8625a468cfd944ed74a2d818e8ef6466886b91aeccfd209d81f4f3fef513aa"
+        "sha256": "45aed34267c1f4b9eb694114ba6cec5810bd6d8340a1d0eff18d6c4a8c8d4d96"
       },
       {
         "file": "ik.java",
-        "sha256": "37a4b4ee3bda3a9957ed8e2b831d0b5d19cb3cdecc1b2aaa5af75f5ec7e36035"
+        "sha256": "bed3544b675a9c7c771ca9ca8205a12a2bf7e6fe67cb175362f0913d463fa3c5"
       },
       {
         "file": "il.java",
@@ -51079,7 +51095,7 @@
       },
       {
         "file": "ja.java",
-        "sha256": "24cfbd6975f049709e8576985825feedcda1a80c0903f9c038fa2d22abc1b3c6"
+        "sha256": "a2258fb4eb19a87881418c487204ac2c8cbe665b6538db8664193beef4287ccf"
       },
       {
         "file": "jb.java",
@@ -51087,39 +51103,39 @@
       },
       {
         "file": "jc.java",
-        "sha256": "7be71b18e324467536c836324ef153dbf814133ac88e4ffa417c519cb1caa09e"
+        "sha256": "0932196ad3d062941345e33a39254543376466710e429afa390a8fe8eca24fd2"
       },
       {
         "file": "je.java",
-        "sha256": "3a440bca829ac0bf45393018a193ce17ad6d3762a3c75032a8acd13db920e2a1"
+        "sha256": "0bf6b7519e6bd5f32d57ab1d176457bafcf6dcf27bd17a10c009557374f5ac6b"
       },
       {
         "file": "jf.java",
-        "sha256": "737fb5966edf59dc06334369db831a649663da634f42ea05c9403ee42b1e57b0"
+        "sha256": "1d170b58e91ff294aa4051f16158e5e58ec3470547da40986cc8ca359acb76f7"
       },
       {
         "file": "jg.java",
-        "sha256": "1639d75506c7a53e03c83b7964bdf1642d9eddc96eb5fc96af46f21db434af1b"
+        "sha256": "c29ef2de822868c17dfb82546cb390e1d1e71d005531dcb681f24dadbeb4296f"
       },
       {
         "file": "jh.java",
-        "sha256": "074192f6ff86a23ac9f5e27afe80ccb0655400008998da66d67878dff5a52b57"
+        "sha256": "bed5ae3b0ea8c7f1ecd29de7e8688dd6ea0029cb9d6759f28b853489a0fa2ff7"
       },
       {
         "file": "ji.java",
-        "sha256": "681a7e2b1e02c5fe18491de6b297b5149ac33c72823d7169c876e764d2723098"
+        "sha256": "7adc82f78fd96eaf2076a1e12edf12734d6b20fb52f10551682348bb24557573"
       },
       {
         "file": "jj.java",
-        "sha256": "cdf4a126e6120ef9b9e8b9f27435178c93b014a47dbe5a0febd636b0c46a2b0c"
+        "sha256": "0c2945ec3fe8ff59a492ce9cfc4104ce18094b7f293f08c0db61f206384a0bc3"
       },
       {
         "file": "jk.java",
-        "sha256": "774d685304299dc2b8aa9f4048e2e4c60b048fb01cbb4325357d4e92a6bbfb84"
+        "sha256": "8b135d0765f3a94ec1b8924a9e104f3342164c59637472d2dfecbd61af8a44ed"
       },
       {
         "file": "jl.java",
-        "sha256": "53fa20885ca5b5f7b5041f71f65a8819534e0cf6142e4f1d85ca1e71b329be39"
+        "sha256": "ba68797859348af37a78991d3657407d27722543793d97482688c9e5bb5fbbd7"
       },
       {
         "file": "k.java",
@@ -51127,15 +51143,15 @@
       },
       {
         "file": "ka.java",
-        "sha256": "39349ca51b23e45f845b0e16a9c6b3217ec0303c33382e980483ab2e5c83721e"
+        "sha256": "3f8e267b756b58b14d13ea44f55009c4678075c18da481958b2e699cf3baab07"
       },
       {
         "file": "kb.java",
-        "sha256": "5423697cfedcc063d52d9b1619ae999ecf83a304989074742edf6ad247b7667e"
+        "sha256": "819012b850ed66ff86a6fcaa90cbe3b5adf4eb1a08b75e5572c38abaac20f2ce"
       },
       {
         "file": "kc.java",
-        "sha256": "15b8f21b3c32d385cf7a2e1d1010f7a69b08ad920e819dbbd520a908619db352"
+        "sha256": "a7deb1f4e611dbf42b0582d5236d144ba6d9fc8a0c62edc446da6c83eafa53c3"
       },
       {
         "file": "kd.java",
@@ -51155,15 +51171,15 @@
       },
       {
         "file": "ki.java",
-        "sha256": "baaaec61a8561bcbee3eab54e63792f02c11e6827124e4e17d9ba0681f8169dd"
+        "sha256": "bc8016479ae0ef8ec209d05d01827dc3172e7f14b5cbf9685bf0a55b324d7acb"
       },
       {
         "file": "kj.java",
-        "sha256": "ccb4b33f27b75c8fcb66e3c84ed3dcb99a479ccb15847b66805daf2c72fcd65b"
+        "sha256": "78425693636fbddf25d7f35a4409bfbfddcba4dd38cb8546ac226afdf8591cd5"
       },
       {
         "file": "kk.java",
-        "sha256": "53c5b66e3f8ad8e459c4d1b846b30f8a00b09423ac62990643e14328cd52c6bc"
+        "sha256": "afa499a53679780dee45baf3448ee1282c1e6ceae2b0e4bc556e928c9abd783e"
       },
       {
         "file": "kl.java",
@@ -51175,7 +51191,7 @@
       },
       {
         "file": "la.java",
-        "sha256": "ccb70a33e2edf26d60d3238a528ad654879f6e7418ceb76942d8da992478481a"
+        "sha256": "d7afef755af43d485ad30107bc47181e39822f2e2f7fd2371d4246959f8a6770"
       },
       {
         "file": "lb.java",
@@ -51183,7 +51199,7 @@
       },
       {
         "file": "lc.java",
-        "sha256": "f8d698624fa2478be053084e09be40d0fd7b95a09b73db46c4782ff493a0af84"
+        "sha256": "7ffe5d7671ec897181624c1837087bcc9bacf398a7a676a7fef2d9c0d898264d"
       },
       {
         "file": "ld.java",
@@ -51191,7 +51207,7 @@
       },
       {
         "file": "le.java",
-        "sha256": "421c6bc55637e7dc9af2c197edab5b70ce7063f01754a13dcc0b3419d83bb2f1"
+        "sha256": "162ed84cec04d77bf0ed96e61d557fbacd410836dd34ccfd784f9894ddb9ef85"
       },
       {
         "file": "lf.java",
@@ -51219,7 +51235,7 @@
       },
       {
         "file": "ll.java",
-        "sha256": "a51df2fcf8367d319746eb4ba5627feca08bc786a5acc4b381f123c332429781"
+        "sha256": "215e05bb37f6c953928180f0dbbe9313e84d8b67f0a5f1c37398cce16a6d3dea"
       },
       {
         "file": "m.java",
@@ -51227,11 +51243,15 @@
       },
       {
         "file": "ma.java",
-        "sha256": "68acb3c46ccacb5fba9d1e1e3ec2dd8df5e784e67ed839bde659ed0f56823a9a"
+        "sha256": "bfeaa35184a1af32733b623d4dcf5247e190968cf2dd512102de764395273387"
+      },
+      {
+        "file": "mb.java",
+        "sha256": "adfb200df74bbaf383494a29e8e4fe7a20697bf99910b25ab72729c2bb88e076"
       },
       {
         "file": "mc.java",
-        "sha256": "ff4484d26a26e5b5415d5577a39168e0a195853e34ac688139809f0e7507b68f"
+        "sha256": "a1f22722f2e7cd0f389cca765c28f6ccc201a6d89a32114ba3cb8db841c2d3af"
       },
       {
         "file": "md.java",
@@ -51243,7 +51263,7 @@
       },
       {
         "file": "mf.java",
-        "sha256": "64e3a6be620cf237506c1f38c62bdc22ad9e96407a47459d402211cba113fd87"
+        "sha256": "364b493d695500b3d822fc35d9fa1a980cb4913f3c02c644e0852ddc7bd8053e"
       },
       {
         "file": "mh.java",
@@ -51251,19 +51271,23 @@
       },
       {
         "file": "mi.java",
-        "sha256": "84cce1672cfaa43c1d0670023fd3c286283e43b9df75db33091857b77ec2a030"
+        "sha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0"
       },
       {
         "file": "mj.java",
-        "sha256": "0118d63237e7a493baa3f1e331c94b71f56316a9bd86c27157c0bf1668e4a683"
+        "sha256": "5689c88c8170ba980a6d551f2472a0f319746522d5d18b39411dcdaa3f794624"
+      },
+      {
+        "file": "mk.java",
+        "sha256": "d20b8ca598d4c71ac8da9871cf3b80894d0f798d08a41aaa50c1d2b1771fcef5"
       },
       {
         "file": "ml.java",
-        "sha256": "6f4dacec2b1278c5ebc2264fc082479226a112eae097229527a5512914e813df"
+        "sha256": "1b3b3b5058f2a96f9f1a53d3a895b82c9d7cd7661a3b080ef0cec3263c5db941"
       },
       {
         "file": "n.java",
-        "sha256": "c7108850385a345f7cf94afc8e7e58b189d50e4d50711296180e71805811d642"
+        "sha256": "d94f40d4c394693cb74a129daef75d9acd27957366a9ffe65a0f0255d75e2848"
       },
       {
         "file": "na.java",
@@ -51271,7 +51295,7 @@
       },
       {
         "file": "nb.java",
-        "sha256": "b0860e9f2982d67e758fb5dd50f79ffdda81922fe22b15db4de7d54782c8bfe4"
+        "sha256": "1d36b578e9eb81e88cfb7c4865ef1509229378e32f0be444967531b8c32ed8a6"
       },
       {
         "file": "nc.java",
@@ -51295,15 +51319,15 @@
       },
       {
         "file": "nh.java",
-        "sha256": "8e8e7571bc78abd763859c6c295ffb0d55fca6a645400c5598bae30760bc9e9c"
+        "sha256": "d190c984943ebd586cb39be771ff416ae20e4b2c065174a528d0e5d4dd6fd161"
       },
       {
         "file": "ni.java",
-        "sha256": "fd0760e9ecfbecb195e25ef468d30fe5ae28dc866a87a6e19d62fbabc2b84c9e"
+        "sha256": "44776ff0015c0428cd1a88dbfae3595dcdef80e39293d7172c3b83eda359fe8d"
       },
       {
         "file": "nk.java",
-        "sha256": "5eb58fdcbc706a410cddd6122f1307a02a2815b4f8a0d8d680a4d3c0cdaade87"
+        "sha256": "d1ecbc0a945d37b223cad6fc258490b7882c95963ab9da3c519c0919f45f6d17"
       },
       {
         "file": "o.java",
@@ -51311,27 +51335,31 @@
       },
       {
         "file": "oa.java",
-        "sha256": "1410dcd73daf926bc16f62ae5f670535b63a51eed8bc48155e3c82742894cdcc"
+        "sha256": "dacd97de563dfa691f69b5f2db9992cf48bac7cb8bb589c08ee0060f8c1cd6a2"
       },
       {
         "file": "oc.java",
-        "sha256": "0fcb4211fe2300ccdab791714a706256acb3fbbfeffe526e0574c8617a48915f"
+        "sha256": "da25dac614c8a0526f2832b91b780163096dba2c9b622926f79a4b33eb90261f"
       },
       {
         "file": "od.java",
-        "sha256": "a20215af1c0247db7109bef14b62925abf5d3afd7f7eec8b2e454a026d5933a6"
+        "sha256": "9a15cd2e9d438949e38a85224131947720092e47943d6b58f51a154242567aad"
       },
       {
         "file": "oe.java",
-        "sha256": "d65a785d976100161be8e946389ddda6ab306b1fa895829d1d5b36dea58eb9af"
+        "sha256": "384f74507bdf6a5401de6a3d0a0eae6ac86ec7b0c79f9c4dc284f7e45f90f6c9"
       },
       {
         "file": "og.java",
-        "sha256": "278629dcd6d871221cc6a4b2a6e92cbfae7058b7fafd3fc10b0c5fad0d5e9f32"
+        "sha256": "980efa13cf93c6d18c8db15c242431e99ec923be44fe7f7cfcedd0258214a73a"
       },
       {
         "file": "oi.java",
-        "sha256": "23003f04f6532b85802c6b1ddf0173eeda3b0317c11a4af962d9f7f4cb9b2bcc"
+        "sha256": "01b04f1fa78e85bebd9420a3c53618510ee0f1ebf1864b2ebe003f9d3fbcf375"
+      },
+      {
+        "file": "oj.java",
+        "sha256": "fd09977de772831bc52ebaff0fc24f21428bb4f16327e734d6e6d2af761b1fe1"
       },
       {
         "file": "ok.java",
@@ -51339,19 +51367,19 @@
       },
       {
         "file": "ol.java",
-        "sha256": "a71b1f2225cf88ade41750da46510d164f2e2affa8feaff4b910ce9aacab7efb"
+        "sha256": "a49393b9c6e461514c656f978e6674de955f58d3a72bb1571d02a2270b31a0ce"
       },
       {
         "file": "p.java",
-        "sha256": "fc2481deb6f8f46c09c3c68552ae5c00de8d1e21bb1596bc4717568ea945fc71"
+        "sha256": "fd40238b74acc0d55b903cb50b3a6c49100878374b74c597d6b85973254bf267"
       },
       {
         "file": "pa.java",
-        "sha256": "f43e16ba477c7ec8bb7cceab428a7e3b6d5d027b7ee437a78ecb249fb92e4612"
+        "sha256": "3f0771f4aac79f6dda3d1759e05ee0358df1e6b2ae2aea52ea9c89b8928ae0f2"
       },
       {
         "file": "pb.java",
-        "sha256": "8adfa6bd39909f1d6bb94aaa7489035a65f1db0bdeb15e2c11f1bde5c163e7fd"
+        "sha256": "3d006835b3e824fae5094b318835e2b0c29683981445434fb888b8307929a1c2"
       },
       {
         "file": "pc.java",
@@ -51363,11 +51391,11 @@
       },
       {
         "file": "pf.java",
-        "sha256": "35f9a280730821e957d55f7ffc927a7bc34dd8304f708ba6770bc03edda63047"
+        "sha256": "a906718b7f6f434e129f7690ae1aa8118cf9b6bb7ce268eed5a696c5a7be2fec"
       },
       {
         "file": "pg.java",
-        "sha256": "7f1d099f9f55b97d904098891986a04b17bc969356871855f6078575aa57563c"
+        "sha256": "42a9d60fe64a240a99c300cb8ac18769294053b3db49cc096b8162d99b5b6694"
       },
       {
         "file": "ph.java",
@@ -51375,7 +51403,7 @@
       },
       {
         "file": "pi.java",
-        "sha256": "bc958218841396087b7336be1289a3d30fc1965eaed7f5bc6f51977c5eb9a911"
+        "sha256": "838368f41203b3738da596b1e3f7d0e8c8fd6a6269c786b5b127eda1cfe4d93f"
       },
       {
         "file": "pj.java",
@@ -51383,7 +51411,7 @@
       },
       {
         "file": "pk.java",
-        "sha256": "4797242683ac4e4cdc2674e9a4cc726070dac1c13ed4afb42a6ca97e6601b03e"
+        "sha256": "d253c09d46b7a5555a933736034bab4b3d3f888f23f1704a7280c15a4b34bd39"
       },
       {
         "file": "pl.java",
@@ -51391,19 +51419,19 @@
       },
       {
         "file": "q.java",
-        "sha256": "5395a1601cd226ab6f69d5f0dc6d04ff1a30d3c327c9958365c33d70149e89e7"
+        "sha256": "512906a03c422d9d2ef07ce3a87d91472366cf5951352f0b8b4bcda25b893ed9"
       },
       {
         "file": "qa.java",
-        "sha256": "9501673d99169ebcfc02cf508fcc7954a24224f082ff9eb2910c0e01090e1174"
+        "sha256": "ddaa26c9252503ddbe9ab244f4cfb9bce9afceebbcdfe739dd9485c55960d094"
       },
       {
         "file": "qb.java",
-        "sha256": "18e656d8efe58d88d8b2d85703f7f19c9424087e4e53bbe59774618368985933"
+        "sha256": "6fd5a7676fcef79e2dd6b6f4e134be8868215a00641613766f849202952a3c66"
       },
       {
         "file": "qc.java",
-        "sha256": "ad503c85f610859092e45f505c7e7df216ec5bb31358f36673ebc1d2e2b92d4b"
+        "sha256": "32f39b50fd25ccdd218bd7f69ab035c891cbc46f0ca982f4e3de7907a54200ec"
       },
       {
         "file": "qd.java",
@@ -51411,11 +51439,11 @@
       },
       {
         "file": "qe.java",
-        "sha256": "da2a060dcf24770fefea85455d1b370aeb055b8feb8f6737b0c11e19e315cf18"
+        "sha256": "c142aee7e22e73a609af3b94523f60377fa5b4ef030d86662cbade6dc3470725"
       },
       {
         "file": "qf.java",
-        "sha256": "4b0586ecadd9bd288d79f1ca0f7d9eeddef6da16135be62423bd56a50d6c820f"
+        "sha256": "329fb8ea6b1a482bb985268225dfa1ee651474d310b2672e397d8af2e9175169"
       },
       {
         "file": "qg.java",
@@ -51423,19 +51451,19 @@
       },
       {
         "file": "qh.java",
-        "sha256": "892db8c1ad1e25ced08ec8c85c00f52a9fff5cfe21e3e82d100b3ed12f75b153"
+        "sha256": "64edd628ad59fb0b566144288565293b5055b122795774ec77fee540f786ea9d"
       },
       {
         "file": "qi.java",
-        "sha256": "ff59231e7a6208d9763e175749400933fd38a9295c840a2dc5c4f9558a2d8144"
+        "sha256": "6b21e15d4796682ba8e69c779041f73e5598eb37ba46b411b861a87195f54f0c"
       },
       {
         "file": "qj.java",
-        "sha256": "1184d62893b2851ee36968299bbb32dcc98acb4ef0b30f630bf755e8cd5da3a7"
+        "sha256": "2a5ad5588d7fce67e4d5dfe195072cb16d61d9771b142ea8843231658e8e8bda"
       },
       {
         "file": "qk.java",
-        "sha256": "cc495c2e9428eaf4a28ae8ad6812cdabb66001edfad8bffb9d8c5f272cc0cb75"
+        "sha256": "21e6dcdca632ed7ab53a8e08ab157bad08c834d209e217fc1cc2a7801bc5fc58"
       },
       {
         "file": "ql.java",
@@ -51443,15 +51471,15 @@
       },
       {
         "file": "r.java",
-        "sha256": "114222b60b285dba413147665e9a322859cc389d7f752fda1712040cc8e2429f"
+        "sha256": "2b1f41d2d4781d8b09d603b0762e56cd400ef0a393ad0f5413f3af0b5fca5b5c"
       },
       {
         "file": "ra.java",
-        "sha256": "c718cb68f2f30a78ad17daa39451dc3db19556e99e593eff4268ab36f7a808d9"
+        "sha256": "9e7212bf9126e39ce0f13caa797493e62a652aba2ef3fede1370861584ee2a24"
       },
       {
         "file": "rb.java",
-        "sha256": "befc4b6d5f0334ea2b9f8ca12be6676910814e19495e635807f1631e399c6dc4"
+        "sha256": "06ec56fb091f19e1943e6de53d4c04a65fea5d074c61f04e52e7ec841bc584bf"
       },
       {
         "file": "rc.java",
@@ -51459,7 +51487,7 @@
       },
       {
         "file": "rd.java",
-        "sha256": "519647f4c0752796f6888de57898233e5f8674dfa708fc574340b71228f6812d"
+        "sha256": "84e03f4ea907eb219916784003921a5f9abfac49def7d7ef2d79fd2a80682b66"
       },
       {
         "file": "re.java",
@@ -51467,7 +51495,7 @@
       },
       {
         "file": "rf.java",
-        "sha256": "cbe01dd3b1ff1c85af315d6f8f0479045965b8fa92d17cec8ea739595a199c71"
+        "sha256": "28564df9fd825488091326c8b2e0463a57539db8dbae49bfa5780823de9dc7a3"
       },
       {
         "file": "rg.java",
@@ -51475,15 +51503,15 @@
       },
       {
         "file": "rh.java",
-        "sha256": "f6b9c62c1c13902e7cebbb3ad5d02baab18e8645e6c6612d5ba49afb23ede038"
+        "sha256": "92ff60bac8ca28888dfe19b9fd269242241d2e8e7df40328862cca53c21c0e0a"
       },
       {
         "file": "ri.java",
-        "sha256": "f7195d0f3a826d2413cd8d5fae155f97c76c0a825e28505b326051ed2a0df84a"
+        "sha256": "be0d23df73713dded63caf9bf5348a0ff48d68abf42fa7361e9705bbf8be057b"
       },
       {
         "file": "rj.java",
-        "sha256": "e1d242502b98fbe955c7ca269a97a9755e971947a67ec13e4cb757c82b66bf54"
+        "sha256": "606f51c9a235386865cc7bb4c23c58f2473a1dd4c35db921e38d958cf7662cfc"
       },
       {
         "file": "rk.java",
@@ -51491,15 +51519,15 @@
       },
       {
         "file": "rl.java",
-        "sha256": "ec73e01aa7ef9ff09481f4242593622f30ceeabc57e4f773a8101a6903a7140b"
+        "sha256": "565200ae60ea5aa6be86f0c69972428fffc76304b177c0abbdde3077f80caf98"
       },
       {
         "file": "s.java",
-        "sha256": "3a941e866894a67057c140b41216cec45d69af78dcb8d15360fcb91e1c2e2a2b"
+        "sha256": "c2fe27decf68663c4b78c1468dc6078724853ebaac63d9a7f691be0b4074e6e5"
       },
       {
         "file": "sa.java",
-        "sha256": "ce7e5c980ff5b3c0d28692647541f6ae9c8450ed053552b62464314e0a516278"
+        "sha256": "08c016e129c7dd4e4c15ea90a5b51405199f8d6ca4236fd95d38d5a0ef0aa355"
       },
       {
         "file": "sb.java",
@@ -51507,11 +51535,11 @@
       },
       {
         "file": "sc.java",
-        "sha256": "a434f6d88033201bf31ce1d1eb641544b5a51e7ec0f6a6c57e0f2cca3af36b9b"
+        "sha256": "838440667db051e60ba9e5ca191d416264033c77cbe0c561530503e7aae223e6"
       },
       {
         "file": "sd.java",
-        "sha256": "b16e324256c0dde2ae316688320abb544e91ba82ebffb11642f317d025618adf"
+        "sha256": "665f3d39dc5a8c3bb4eeade7a6ef6869e4ddc83367b1c31059f296e226ff9d3e"
       },
       {
         "file": "sg.java",
@@ -51519,19 +51547,19 @@
       },
       {
         "file": "sh.java",
-        "sha256": "ad548807a76fb4d7e4be2f62dca9d0676499b5aec45a55b28f655a2ed09b4c18"
+        "sha256": "3da91fe7cea22555b052becea9bcc83054a92e02e4605c94c5dfc9ee0b6d338f"
       },
       {
         "file": "si.java",
-        "sha256": "bdbe81ac66141639ce1cdd22301f58421acb45ccec0dfce670eb6b8a3faa0eca"
+        "sha256": "cb83b3c98d71c1496607fa8f4397b4f19c33d69ed3ff9e464da101817a4d9990"
       },
       {
         "file": "sk.java",
-        "sha256": "ee62c03887c5bd32374f11da2888e6b679109c95cb31a5486a297e77f325df15"
+        "sha256": "b2d7ff88c2acb4698f1ff1d7c0f018014d5f5943aa058339a9e87af15ab14705"
       },
       {
         "file": "sl.java",
-        "sha256": "ba0e4739be4ea9be862ac200eab2176f5976dbf4f1eb1424d481780d3eec056f"
+        "sha256": "c0b75e035107fe27a2b48a836fd8edeeadc218b662bc0de58b367a716fda1487"
       },
       {
         "file": "t.java",
@@ -51547,7 +51575,7 @@
       },
       {
         "file": "td.java",
-        "sha256": "a22b0fcccede5af3123809db71e0531518eb89298da3968df6ebf33d87e1bc79"
+        "sha256": "4c30a6f2352596091274f99b2653d502d6d4b83abe5a6657ad5d1a68cea1aa80"
       },
       {
         "file": "te.java",
@@ -51555,7 +51583,7 @@
       },
       {
         "file": "tf.java",
-        "sha256": "b4765c24b6d9357babd5c4b24b84d5550abcf9bbead066bea8a33f573e486821"
+        "sha256": "ecb3ec631492d529ffef1bcbcadd014e59ba334f71f59322bf463760652f3d12"
       },
       {
         "file": "tg.java",
@@ -51563,7 +51591,7 @@
       },
       {
         "file": "th.java",
-        "sha256": "159b8ef7a477ca0c33fdd0262366cc157841147dcf68446e63c6722c053f6cc7"
+        "sha256": "99da03c625b0f0b74b809be97898bc0cdc8bc4c4a53208cd0e9d6c36825fc028"
       },
       {
         "file": "ti.java",
@@ -51579,7 +51607,7 @@
       },
       {
         "file": "tl.java",
-        "sha256": "8ce2f89f9dedae24b05ef2e1c68083dcc185bed7a43ba3f1963795b0d0d99e22"
+        "sha256": "93b06a3c5a330b4791ebf4cc6f5237316cb69a1b29f9e73ba66a400a9f490569"
       },
       {
         "file": "u.java",
@@ -51590,20 +51618,24 @@
         "sha256": "dd1e8293db70e7863b5aa6fd71e185ee770b0fdbbed1319f0839ca6456bdecc5"
       },
       {
+        "file": "ud.java",
+        "sha256": "38560cf9dd62f009fcc7aba8626b77dd7ff7048ff181cd53ad633ee50e829daf"
+      },
+      {
         "file": "ue.java",
-        "sha256": "8e66b7c4595e8f2d2edbfc365ac178d7a8fa1606377c2397a9bb914c5a279031"
+        "sha256": "ebde76b1ddb08d8bd4bc3564efb540915218c5a4a13c512b7b83a2a9eef0d8d4"
       },
       {
         "file": "uf.java",
-        "sha256": "977f647aab106301e8d38d7105a4e325ad9a25030f919e22aaa92fb9a4e64333"
+        "sha256": "a45bb39f124f6f4a25fcc8c617b1afbba1fc1750e810762337da7014261c61db"
       },
       {
         "file": "ug.java",
-        "sha256": "c743b7153d56aa2f49b85057acba907eb973350bf81c1dbdc077bed57bcf0497"
+        "sha256": "aebc8c95be6af8833b2ac6e1d8fc51222c0f6225de16d45d86c12169778e638d"
       },
       {
         "file": "uh.java",
-        "sha256": "a6aec4b61f7cb7549a6cdb163f41247775478c34b849877bb4d2674f1412f5db"
+        "sha256": "2721f77f4d087f6af02e8a1f39e966bac53e7c34ed3703e647bb0c90d5e69189"
       },
       {
         "file": "ui.java",
@@ -51611,35 +51643,35 @@
       },
       {
         "file": "uj.java",
-        "sha256": "bd09eb3cb5a7971bb44819f5e243ef859129a8f8648b8aec5c68ea4c1ce9222e"
+        "sha256": "180fbdd9fd348697530acd1fe6c70bb8cad51457f7b6cc5ff5729f6a8fb141dc"
       },
       {
         "file": "uk.java",
-        "sha256": "d82bba6be29dfcd34e8f0b469be666099497a58a72d505df47636cbdcb8de12c"
+        "sha256": "1a17073cefd28be08eec626c0371a2470280d61a067fc7d91ff1e9295c6821ee"
       },
       {
         "file": "ul.java",
-        "sha256": "f119bd161b7b449c1319b0e7d482b1392a14a540d3da31694fce69f082a11d66"
+        "sha256": "9d7ed0c20161e648ec2a7623fa33edb2d2be26aa5d646d63cb82f924c09039fd"
       },
       {
         "file": "v.java",
-        "sha256": "9bfd36184d4b499e79131ad8cdc2ca6d537c4168ac8e260b31b46b7ab591c3a8"
+        "sha256": "45d496623637effaba2d73d92b900566443224e6232717b5d9c05e415555f0ee"
       },
       {
         "file": "va.java",
-        "sha256": "81678cbcae8e162a4950dfcaceea631273cfb6cd0328b1b7b5c872559dfa7cb4"
+        "sha256": "66327fff909bdfbd3d3ed822457d3fe25fc73f5235355a8605e5d936cb990061"
       },
       {
         "file": "vb.java",
-        "sha256": "48e104d1f5505d6c9131c2810cebff2cfb75eaf78851632d99d291de20e15e74"
+        "sha256": "756d1e0ebbd6b83d32ca71473ef5872d72dcea3d840130ab5bed357465de5f66"
       },
       {
         "file": "vc.java",
-        "sha256": "f19ec4b36c261bb3d934da686b87a5716b58c55d190d999f78fa9f9e77cd6b7a"
+        "sha256": "79999f9364fc55bc9a96f018a77293422f188a0aa138f59bb2e8532132761b27"
       },
       {
         "file": "vd.java",
-        "sha256": "f4896dcbfaed064bb726ce0d1a3a3180fc5b2a8f34a0e0f84e5a055ab1d776df"
+        "sha256": "a9557062882ce00edf34e0bb73facb091ea9c8f5a60abe4705e32c00ac4bfd2f"
       },
       {
         "file": "ve.java",
@@ -51647,7 +51679,7 @@
       },
       {
         "file": "vf.java",
-        "sha256": "ad3f5307eefcc80787bde245a8e92840deae67efeb5c80247db366f676b6a16f"
+        "sha256": "d0def1a9ea492817460a2738e4c212e309b51fff929eb4ddd19d8338891ce510"
       },
       {
         "file": "vg.java",
@@ -51655,11 +51687,11 @@
       },
       {
         "file": "vh.java",
-        "sha256": "e130a9f9a19110355d22a8f5a7fd432a3fd49a35e69c223f85f16439acdb51de"
+        "sha256": "52e82cfffb42c0b7ea7e960f3a272e5c8eef609b4df9e16d18ff00f027d8e4fb"
       },
       {
         "file": "vi.java",
-        "sha256": "53c1e9778194f8e5902c5582292aa41c4abf8eb1f5a2a74641b76f6e7fdc1c9c"
+        "sha256": "9199a311b8f8bd8cd583e5875cbb0d78fe35ce0263f69ca73b201140afb32b91"
       },
       {
         "file": "vj.java",
@@ -51667,19 +51699,19 @@
       },
       {
         "file": "vk.java",
-        "sha256": "f0adac50df39c1c9bde72f07700ea6e10b8e5b532b20bc45d6f11c6ebe494cdb"
+        "sha256": "c74cb8f783acfbebcaeb645d692a52a968501ac158d92b1c67faa8da7e0bd10c"
       },
       {
         "file": "vl.java",
-        "sha256": "0a0119cab6659957519b862386e7d0957c7873aa3edac4667e439dcf54370486"
+        "sha256": "6a6267fb4c9485cbacd85e71f9f763ef3aca45e87a9d3ad18844804e74ca739b"
       },
       {
         "file": "w.java",
-        "sha256": "28a297c2bfde0546757e446fb0479f91cd44f7c40e82d8ba334a2f01dd75ad4f"
+        "sha256": "80e2297dc1a0d1ead007d36b940254cba2e23df4e94ed258b14c19c95414c9e9"
       },
       {
         "file": "wa.java",
-        "sha256": "673a90c6c6747904444a188e2a32a116c5c2ed75b8c4134b92d7b551ca43be9a"
+        "sha256": "7a15785bff6759e09a5e433119b0e31efdecab8a71a6f498e3a40aeb37240aed"
       },
       {
         "file": "wb.java",
@@ -51687,15 +51719,15 @@
       },
       {
         "file": "wc.java",
-        "sha256": "c65a9cee91bb9be6a9f0e2dfdbeffc07ee873bb8d51cecb80eeeddfb746161af"
+        "sha256": "6ef2e9dd8b8bc6e91bb2de6bf88ea53d8eb064e053e2c8327a8a4097bf42fffb"
       },
       {
         "file": "wd.java",
-        "sha256": "e94e3f1613a0f717181443253eb24628f21ae14e00ea062ab53fcc9cdc5ced72"
+        "sha256": "34edb3dc026f2815430f256bdf5f7e699f47b1663efe8da831d773167b27c636"
       },
       {
         "file": "wf.java",
-        "sha256": "8060660aa9b2db05b9c5b1eca40f95485bf706d825e7b7b8f2b4e13b5c53055f"
+        "sha256": "4696dcf5779a54c9c97c828fb5e4e9539766d426c73d7d69e07780cd9ecf0da3"
       },
       {
         "file": "wg.java",
@@ -51703,19 +51735,19 @@
       },
       {
         "file": "wh.java",
-        "sha256": "223a03d38afbbe8ee86cd76075d5d65bf833bc7db8e43c4423480cb864693413"
+        "sha256": "c6bf50793608e5391419c8aa32d1436a2cd55c51522863c0c1e4e724a07b011f"
       },
       {
         "file": "wi.java",
-        "sha256": "dd73d35ce8413eef7d786588957e8bec2d010ed246b631bde3b3b75920c6e648"
+        "sha256": "67168f18f24324ce13bda339474cb44659e218bd63ec9c718e193c0ebd647c23"
       },
       {
         "file": "wj.java",
-        "sha256": "9458a05dc02aa434002575a3d0b4addd5689da65bdce97e9f2c6cdf5c84ef949"
+        "sha256": "d97cf19ba0ae3b5e726baead4808f908eff55b0bbfc2db63419d3ab9bb931510"
       },
       {
         "file": "wl.java",
-        "sha256": "2d96ed3d9a816701f0518b92270059c232ffa944064b6234a347a395b12ff3b5"
+        "sha256": "95c2b70046b9a4b5d58bb5624548d316d9b0f82a71cad474650c0cc203700c11"
       }
     ],
     "nativeEvidence": [
@@ -51877,7 +51909,7 @@
       }
     ],
     "textResources": {
-      "loaderSourceSha256": "dd73d35ce8413eef7d786588957e8bec2d010ed246b631bde3b3b75920c6e648",
+      "loaderSourceSha256": "67168f18f24324ce13bda339474cb44659e218bd63ec9c718e193c0ebd647c23",
       "review": {
         "allResourceReads": 744,
         "storedResourceReads": 218,
@@ -54042,9 +54074,9 @@
     },
     "verification": {
       "sourceDeclarations": 19591,
-      "bindingsCompared": 138772,
+      "bindingsCompared": 138257,
       "overrideRelationships": 388,
-      "identifierEdits": 66223,
+      "identifierEdits": 66191,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -54122,7 +54154,8 @@
         "Pass102 proves only terminal plain-block exits whose nearest breakable frame is a loop and whose completed-loop path to the label has no intermediate work/loop/switch/protected region. Inner finally/catch/monitor bodies stay on the same abrupt loop exit; ordinary breaks retain update/condition bypass, enclosing cleanup and monitor release.11520 generic native comparisons plus five loop/update/iteration oracles cover the reconstructed forms. All303 expected rewrite token streams and19591/119181/388 ordered declarations/references/override identities remain; all8439 complete naming rules and local ordinals are unchanged. Sprite nearest rotation loses its final label; gameplay render/update/reconciliation each lose one.267 generated plain block labels and21 overlapping large method spans remain, nine large spans labeled. This does not establish every state-machine/continuation reconstruction or full asset/game/browser/phone acceptance.",
         "Historical pass102: a complete-body AST scan of raw92 and raw102 found0 then14 while(true) loops whose first statement was an if without else containing exactly one ordinary break. One incomplete/nested executable body refused scanning. These were candidates at that pass, not yet proved transformations. The prior zero-candidate loop-entry prototype was superseded by the newly localized breaks. Pass103 now reconstructs all14 under its separately recorded nonconstant/scope/transfer proof and native/compilation/corpus checks.",
         "Pass103 reconstructs all14 direct leading ordinary-break loop candidates exposed by pass102. Predicates stay verbatim under logical negation; no relational inverse is guessed, preserving NaNs, nullable unboxing, short circuits and mutation order. Nonconstant proof uses scoped nonfinal declarations, emitted formal/catch/enhanced-for parameters, null literals or runtime expression forms; final/unknown/qualified-field constants refuse proof. Prefix work/declarations and protected entry guards remain in the loop. Body scopes, checked/unchecked predicate exceptions, own/ancestor continues, finally overrides, nested loops and monitors are covered by96768 generic native comparisons plus six independent oracles. Compiler probes demonstrate constant if/while reachability differences; unknown/nested syntax and invalid transfer namespaces refuse. All303 expected token streams and19591/119181/388 ordered identities remain, with no naming or local ordinal migration.267 generated plain block labels and21 overlapping large spans, nine labeled, remain; larger joins/dispatch/state reconstruction and whole-game/assets/browser/phone acceptance remain unfinished or unverified.",
-        "Pass104 reconstructs25 effectful plain-block exits across17 files, saving30 lines and15 labels.24192 generic native comparisons and six independent oracles cover effects, skipped/executed cleanup, monitor ownership, failure identity, nullable inputs, NaNs, short circuits, assignments, scopes, checked failures, own/ancestor transfers and finally overrides. Direct remainder declarations and crossed continuations/protected boundaries refuse reconstruction. All303 expected token streams and19591/119181/388 ordered identities remain. Avatar animation and music decoding lose their final labels, leaving252 generated plain block labels and21 overlapping large spans, seven labeled. Ending/crying lifecycle, mixed-effect/multiple destinations, unknown shared names and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
+        "Pass104 reconstructs25 effectful plain-block exits across17 files, saving30 lines and15 labels.24192 generic native comparisons and six independent oracles cover effects, skipped/executed cleanup, monitor ownership, failure identity, nullable inputs, NaNs, short circuits, assignments, scopes, checked failures, own/ancestor transfers and finally overrides. Direct remainder declarations and crossed continuations/protected boundaries refuse reconstruction. All303 expected token streams and19591/119181/388 ordered identities remain. Avatar animation and music decoding lose their final labels, leaving252 generated plain block labels and21 overlapping large spans, seven labeled. Ending/crying lifecycle, mixed-effect/multiple destinations, unknown shared names and whole-game/assets/browser/phone acceptance remain unfinished or unverified.",
+        "Pass105 removes525 exact-type local reference casts across170 files/423 bodies. Unique ordinary-block declarations and a complete declaration-to-block-end scope are required. Primitive scalars, different/qualified-alias/generic/annotated types, fields/formals/for/catch/switch declarations, duplicate names, Object round trips, member/index/call/postfix operands, malformed/nested syntax, comments/Unicode and excessive grouping refuse proof. Optional diagnostics identify original removed type spans.2880 native comparisons, seven independent overload/boxing/check/monitor/cleanup oracles and24 identical javac instruction/exception-table pairs pass. All303 expected token streams match; JDK audit removes only515 cast-type class refs, retaining19591 declarations/118666 references/388 overrides in order. All8439 complete rules/local ordinals survive; edits fall by32 to66191. A catch-only loop-boundary prototype found zero candidates, so protected-exit rules were not relaxed.252 plain block labels and21 overlapping large spans, seven labeled, remain; larger joins/unknown names and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -54164,7 +54197,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 30,
+      "rawSourceLinesRemoved": 0,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -54179,7 +54212,7 @@
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
       "nativeEmitterComparisons": 54549,
-      "sourceReferenceOccurrencesRemoved": 0,
+      "sourceReferenceOccurrencesRemoved": 515,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -54189,7 +54222,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 66,
+      "genericEmitterTestGroups": 71,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -54197,7 +54230,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass104 replaces25 effectful conditional plain-block breaks with ordinary if/else arms and removes15 unused labels/blocks. Prefix/predicate/effects and scopes remain in their original order. No declaration/reference is removed or reordered; all8439 complete naming objects and66223 identifier edits remain without local ordinal migration.",
+      "referenceRemovalAttribution": "Pass105 removes525 exact local-reference identity casts, including515 class-type reference occurrences and32 previously renamed class references. Every removed class reference is independently attributed to its original removed cast-type token span. No declaration, method/field/parameter/local reference or override is removed or reordered; all surviving references keep their ordered identities. All8439 complete naming objects and local ordinals remain. Identifier edits decrease by32 to66191; binding comparisons decrease by515 to138257.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -54234,7 +54267,7 @@
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
       "identifierEditsAddedInCurrentPass": 0,
-      "lastStructuralPassVersion": 104,
+      "lastStructuralPassVersion": 105,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -54274,7 +54307,7 @@
       "nativePlainBlockTailComparisons": 432,
       "plainBlockTailChangedJavaFiles": 7,
       "retainedNewTailLabelPrefixTokenBudget": 512,
-      "identifierEditsRemovedInCurrentPass": 0,
+      "identifierEditsRemovedInCurrentPass": 32,
       "namedSocketAndTaskRulesAdded": {
         "C": 3,
         "F": 24,
@@ -54619,7 +54652,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 67,
+      "genericEmitterTestsRegistered": 72,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -54710,7 +54743,7 @@
       "nestedBracedGuardMaximumConditions": 16,
       "nestedBracedGuardMaximumPredicateTokens": 512,
       "nestedBracedGuardExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
-      "allOrderedNamingBindingsUnchanged": true,
+      "allOrderedNamingBindingsUnchanged": false,
       "allPreviousDeclarationsAndOrdinalsPreserved": true,
       "allPreviousGuardedRuleObjectsPreserved": true,
       "namedLogoRulesAdded": {
@@ -55073,33 +55106,27 @@
       "effectfulPlainBlockAvatarLabelsAfter": 0,
       "effectfulPlainBlockMusicDecoderLinesBefore": 323,
       "effectfulPlainBlockMusicDecoderLinesAfter": 321,
-      "effectfulPlainBlockMusicDecoderLabelsAfter": 0
+      "effectfulPlainBlockMusicDecoderLabelsAfter": 0,
+      "allOrderedSurvivingNamingBindingsUnchanged": true,
+      "identityReferenceCastsHistoricalPassVersion": 105,
+      "identityReferenceCastsRemoved": 525,
+      "identityReferenceCastTypeReferencesRemoved": 515,
+      "identityReferenceCastNamedClassReferencesRemoved": 32,
+      "identityReferenceCastChangedJavaFiles": 170,
+      "identityReferenceCastChangedMethodBodies": 423,
+      "identityReferenceCastSourceLinesBefore": 77803,
+      "identityReferenceCastSourceLinesAfter": 77803,
+      "identityReferenceCastExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "identityReferenceCastGenericTestGroups": 5,
+      "identityReferenceCastNativeComparisons": 2880,
+      "identityReferenceCastIndependentNativeOracles": 7,
+      "identityReferenceCastCompiledInstructionAndExceptionTablePairs": 24,
+      "identityReferenceCastDiagnosticsRetainedByDefault": false,
+      "protectedCatchOnlyLoopPrototypeCandidates": 0,
+      "protectedCatchOnlyLoopPrototypeHistoricalPassVersion": 105
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "66eb34efef67a46c3c2913687b16d7c4d020f415",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "faf744e8439fd84dcc90336dbb6f1bc489eab14c",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "dc190d740966d401d60800003140aacfbea8dd71680d7637c50c2fedca4001e0",
-              "reproduce": "git archive --format=tar faf744e8439fd84dcc90336dbb6f1bc489eab14c | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "e9a083a49cbc1abedc9878510144e29350283258",
@@ -55122,7 +55149,30 @@
         },
         "inputTreeSha256": "9b9a14f0d5063ad8801b7cc7593865a2b093947780937310ed913195a8397a61"
       },
-      "reason": "Pass104 recovers25 effectful exits across17 files as ordinary if/else arms, removes15 unused plain-block labels and saves30 lines. The original arm retains its prefix/effects/scope; the skipped remainder becomes its else. An empty normal continuation to the same plain block is proven through final blocks/if arms/plain labels only. Direct remainder declarations, intervening work, crossed protected/loop/switch boundaries, other prefix jumps to that destination and incomplete/ambiguous syntax refuse proof. All303 expected token streams and ordered declarations/references/overrides match; all8439 complete naming objects and local ordinals remain."
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "f52271abff84ff66ef9d73d8fd3d7a38cbf919e5",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "28c78aa9333f9958868c8359ca0d8b77d9c62cf8",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "c6294dd3b9ae8f81da915bb49946f6a30643a681f46c48865afcf4aae564e9d3",
+              "reproduce": "git archive --format=tar 28c78aa9333f9958868c8359ca0d8b77d9c62cf8 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "2e4f5a2dec59816c3cdc3897291d55002e7ff596d367de5a33bab1392dbac23c"
+      },
+      "reason": "Pass105 removes525 proven identity casts from423 bodies across170 files. Unique ordinary-block local references retain their exact static type, lexical scope and evaluation. All303 expected token streams match. JDK binding audit loses exactly515 class-type references inside removed cast-type spans; every declaration, surviving reference and override keeps its ordered identity.32 removed cast references had class naming rules, reducing identifier edits from66223 to66191 and compared bindings from138772 to138257. All8439 complete naming objects and local ordinals remain; no new names, primitive conversions, field/formal type assumptions or Object-round-trip simplification."
     }
   }
 }

@@ -34,7 +34,7 @@ abstract class MouseWheelInput {
           var4_int = param1.readBits((byte) -17, param2);
           if (var4_int == 0) {
             stackIn_3_0 = null;
-            return (byte[]) ((Object) stackIn_3_0);
+            return (byte[]) (stackIn_3_0);
           }
           if (!((param0 != null) &&
                 (param0.length == var4_int))) {
@@ -56,7 +56,7 @@ abstract class MouseWheelInput {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var4);
+          stackIn_19_0 = var4;
           stackIn_19_1 = new StringBuilder().append("vk.E(");
           if (param0 == null) {
             stackIn_20_2 = "null";

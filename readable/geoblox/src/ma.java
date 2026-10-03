@@ -81,7 +81,7 @@ final class ma extends IntrusiveNode {
         } catch (java.lang.RuntimeException contactOverlapFailure) {
           caughtContactOverlapFailure = contactOverlapFailure;
           contactOverlapFailureForContext = caughtContactOverlapFailure;
-          contactOverlapFailureBeforeEntityDescription = (RuntimeException) (contactOverlapFailureForContext);
+          contactOverlapFailureBeforeEntityDescription = contactOverlapFailureForContext;
           contactOverlapMessagePrefix = new StringBuilder().append("ma.A(").append(methodGuard).append(',').append(diagnosticBoardAngleRadians).append(',');
           if (diagnosticEntity == null) {
             entityArgumentDescription = "null";
@@ -258,7 +258,7 @@ final class ma extends IntrusiveNode {
         } catch (java.lang.RuntimeException panelDrawingFailure) {
           caughtPanelFailure = panelDrawingFailure;
           panelFailureForContext = caughtPanelFailure;
-          panelFailureBeforeSpriteDescription = (RuntimeException) (panelFailureForContext);
+          panelFailureBeforeSpriteDescription = panelFailureForContext;
           panelMessagePrefix = new StringBuilder().append("ma.B(").append(panelTop).append(',').append(panelLeft).append(',').append(panelHeight).append(',').append(methodGuard).append(',').append(panelWidth).append(',');
           if (nineSliceSprites == null) {
             spriteArrayArgumentDescription = "null";
@@ -299,7 +299,7 @@ final class ma extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_20_0 = (RuntimeException) (var4);
+          stackIn_20_0 = var4;
           stackIn_20_1 = new StringBuilder().append("ma.D(");
           if (param0 == null) {
             stackIn_21_2 = "null";

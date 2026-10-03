@@ -90,7 +90,7 @@ final class fi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (runtimeException);
+          stackIn_10_0 = runtimeException;
           stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";

@@ -129,7 +129,7 @@ final class fh implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_22_0 = (RuntimeException) (var6);
+          stackIn_22_0 = var6;
           stackIn_22_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_23_2 = "null";

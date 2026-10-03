@@ -54,7 +54,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           spriteLoadFailure = caughtFailure;
-          failureContextCause = (RuntimeException) (spriteLoadFailure);
+          failureContextCause = spriteLoadFailure;
           failureContextBuilder = new StringBuilder().append("sd.H(").append(methodGuard).append(',');
           if (graphicsArchive == null) {
             archiveContextDescription = "null";
@@ -239,7 +239,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         } catch (java.lang.RuntimeException caughtTriangleParameter) {
           caughtTriangleFailure = caughtTriangleParameter;
           triangleFailure = caughtTriangleFailure;
-          triangleFailureBeforeContext = (RuntimeException) (triangleFailure);
+          triangleFailureBeforeContext = triangleFailure;
           triangleMessagePrefix = new StringBuilder().append("sd.E(").append(middleX).append(',').append(topX).append(',').append(halfRgb).append(',').append(guard).append(',');
           if (destinationPixels == null) {
             destinationDescription = "null";

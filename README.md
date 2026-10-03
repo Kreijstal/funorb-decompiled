@@ -16,8 +16,21 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,772 bindings,
+identities. Both 303-file Java corpora compile and compare 138,257 bindings,
 preserving 388 override relationships.
+
+Pass 105 removes 525 proven local-reference identity casts from 423 bodies
+across 170 files. For example, assigning a RuntimeException local no longer
+casts it back to RuntimeException. Exact static types and local scopes are
+preserved; necessary casts and primitive conversions remain. All 8,439 naming
+objects remain. The 515 removed cast-type class references reduce binding
+comparisons to 138,257 and naming edits by 32 to 66,191. All surviving bindings
+retain their ordered identities. Five new test groups include 2,880 native
+comparisons, seven independent checks, and 24 identical compiled instruction/
+exception-table pairs. Clean decompiler-source reproduction, all six game
+probes, publication checks and dictionary reversal pass. The seven large
+labeled bodies remain; this pass reduces cast noise without changing their
+control flow or claiming whole-game/browser/phone equivalence.
 
 Pass 104 reconstructs 25 effectful plain-block exits as ordinary `if/else`
 arms across 17 files. The original predicate and effects remain in order, and

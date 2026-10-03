@@ -93,7 +93,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var3);
+          stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("lc.A(");
           if (param0 == null) {
             stackIn_9_2 = "null";
@@ -225,7 +225,7 @@ final class lc {
         } catch (java.lang.RuntimeException debugOverviewBlendFailure) {
           caughtBlendFailure = debugOverviewBlendFailure;
           blendFailureForContext = caughtBlendFailure;
-          blendFailureBeforeArrayDescriptions = (RuntimeException) (blendFailureForContext);
+          blendFailureBeforeArrayDescriptions = blendFailureForContext;
           blendMessagePrefix = new StringBuilder().append("lc.C(").append(sampleXQ16).append(',').append(destinationHeight).append(',');
           if (destinationPixels == null) {
             destinationArrayArgumentDescription = "null";
@@ -254,19 +254,19 @@ final class lc {
         try {
           if (null == metrics) {
             nullFontBeforeReturn = null;
-            return (MonochromeBitmapFont) ((Object) nullFontBeforeReturn);
+            return (MonochromeBitmapFont) (nullFontBeforeReturn);
           }
           if (methodGuard != 4520) {
             lc.blendScaledDebugOverviewPixels(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
           font = new MonochromeBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, mj.decodedSpriteIndices);
           kj.clearDecodedSpriteWorkingArrays(true);
-          fontBeforeReturn = (MonochromeBitmapFont) (font);
+          fontBeforeReturn = font;
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeMetricsDescription = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeMetricsDescription = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("lc.B(").append(methodGuard).append(',');
           if (metrics == null) {
             metricsDescription = "null";
@@ -398,7 +398,7 @@ final class lc {
           while (true) {
             L15: {
               if (null != var7_ref) {
-                stackIn_61_0 = (j) (var6_ref);
+                stackIn_61_0 = var6_ref;
                 if (var8 != 0) {
                   break L15;
                 }
@@ -409,7 +409,7 @@ final class lc {
                   }
                 }
               }
-              stackIn_61_0 = (j) (var7_ref);
+              stackIn_61_0 = var7_ref;
             }
             if (stackIn_61_0 == null) {
               hl.field_B.addLast(-39, var6_ref);

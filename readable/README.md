@@ -2,7 +2,7 @@
 
 The current export has 8,439 guarded naming rules: 90 classes, 976 fields,
 787 methods, 2,344 parameters and 4,242 local declarations. Both 303-file corpora
-compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
+compile, comparing 138,257 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`e9a083a49cbc1abedc9878510144e29350283258`. It comes from java-tools
-`6a6275c84203e94667cfc8add2a5763d44f08f0f` and Deko
+`f52271abff84ff66ef9d73d8fd3d7a38cbf919e5`. It comes from java-tools
+`28c78aa9333f9958868c8359ca0d8b77d9c62cf8` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`7b39ce315376ef968a17850878eca26ddeb06662032b8acac840418062c7aa09`:
+`c6294dd3b9ae8f81da915bb49946f6a30643a681f46c48865afcf4aae564e9d3`:
 
 ```sh
-git archive --format=tar 6a6275c84203e94667cfc8add2a5763d44f08f0f | sha256sum
+git archive --format=tar 28c78aa9333f9958868c8359ca0d8b77d9c62cf8 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,70 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Exact local-reference casts (pass 105)
+
+The decompiler now removes a cast when its operand is a unique ordinary-block
+local reference and the cast spells its exact declared type. For example,
+`failureContextCause = (RuntimeException) (urlLaunchFailure)` becomes
+`failureContextCause = urlLaunchFailure`, since `urlLaunchFailure` is already
+RuntimeException. Grouped operands and chains of the same identity cast can be
+removed together. The reference is read once, with the same static type, so
+neither runtime checks nor overload choices change. This removes 525 casts
+from 423 bodies across 170 files; source lines remain 77,803.
+
+The declaration must be complete and the use inside its lexical block. A name
+with more than one declaration is refused rather than guessing shadowing.
+Fields, formal/for/catch/switch declarations, qualified-name aliases, generic or
+annotated types, primitive scalar conversions and casts to different types
+remain. Postfix member/index/call/increment operands are also refused: the
+operand may be an operation's result, rather than its receiver local. In
+particular `(Integer) value++` still boxes the old primitive value and selects
+the Integer overload. Object round trips remain: an unqualified Object could
+be an interface rather than java.lang.Object. A native case verifies the
+resulting ClassCastException, without assuming that source spelling is a safe
+widening conversion. Nested executables, malformed/missing-semicolon syntax,
+comments/Unicode and grouping beyond 128 levels refuse proof. Token boundaries
+remain valid even in `return(Type)(local)` and adjacent `instanceof` syntax.
+
+Five new test groups pass. Their 2,880 native comparisons cover 24 variants,
+five failure modes, nullable booleans, absent references, different concrete
+subtypes and nullable monitors. Seven independent checks establish Child/Base/
+array overload selection, postfix boxing, a retained custom Object cast failure,
+monitor ownership and initializer/finally failure effects. All 24 original and
+reconstructed variants have identical javac instruction lists and exception
+tables. The existing emitter file passes 66 tests with one historical optional
+skip; eight exception-exit and two integer-argument groups also pass. These
+checks cover the generic cleanup family rather than whole-game behavior.
+
+Every one of 303 token streams matches the expected identity-cast rewrite.
+The JDK audit attributes exactly 515 removed class references to the original
+removed cast-type token ranges. All 19,591 declarations, 118,666 surviving
+references and 388 overrides retain their ordered identities; no method/field/
+parameter/local reference disappears. All 8,439 complete naming objects remain
+with no local ordinal migration. Thirty-two removed casts referenced named
+classes, so identifier edits fall from 66,223 to 66,191 and original/renamed
+binding comparisons from 138,772 to 138,257. Both corpora compile. Optional
+emitter diagnostics report removed type spans; normal compilation retains none.
+
+A clean tracked decompiler-source archive regenerates all sources and diagnostics
+byte-for-byte. All six existing game probes retain their fixed traces, within
+their documented scopes. Native sources, stub JAR and naming-tool pins remain.
+Reproduction, exact 303-file dictionary reversal and the nine/eight/six
+rule-builder/source-refusal/text-resource tests pass. Raw tree SHA-256:
+`2e4f5a2dec59816c3cdc3897291d55002e7ff596d367de5a33bab1392dbac23c`.
+Readable tree SHA-256:
+`081d37807bbef14187d8a0ad7013919cb0f4a0080aad2dcf35a7ceaf9c13ba82`.
+The tracked decompiler source archive SHA-256 is recorded above, independently
+of either tree and the fixed gamepack input.
+
+A separate diagnostic prototype allowed empty loop continuations through
+catch-only regions, with complete lexical block ranges. It found zero candidates
+in this corpus. No exception-region reconstruction rule was relaxed. The seven
+large labeled spans, 21 overlapping large spans and 252 generated plain block
+labels remain. Larger/mixed-effect joins, unknown shared names and ending/
+assets/whole-game/browser/phone acceptance remain unfinished or unverified.
+Sections below describe historical passes.
 
 ## Effectful plain-block exits (pass 104)
 
@@ -2780,9 +2844,10 @@ terminal-break, single-alternative and ordered multi-exit source migrations.
 Pass 92 recorded the predicate-only guard-tree migration with no naming changes.
 Passes 93 through 101 retained that source and expanded guarded semantic names.
 Pass 102 recorded terminal-loop exit reconstruction. Pass103 recorded
-leading nonconstant while guards. Current pass104 records effectful plain-block
-exits in `sourceChange`, with an empty `ruleChanges` list preserving all 8,439
-complete naming objects.
+leading nonconstant while guards. Pass104 recorded effectful plain-block
+exits. Current pass105 records exact local-reference cast cleanup in
+`sourceChange`, with an empty `ruleChanges` list preserving all 8,439 complete
+naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 

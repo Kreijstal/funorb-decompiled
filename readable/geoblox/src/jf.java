@@ -67,7 +67,7 @@ final class jf implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var6);
+          stackIn_15_0 = var6;
           stackIn_15_1 = new StringBuilder().append("jf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_16_2 = "null";
@@ -131,7 +131,7 @@ final class jf implements WidgetRenderer {
         } catch (java.lang.RuntimeException caughtSpanParameter) {
           caughtSpanFailure = caughtSpanParameter;
           spanFailure = caughtSpanFailure;
-          spanFailureBeforeContext = (RuntimeException) (spanFailure);
+          spanFailureBeforeContext = spanFailure;
           spanMessagePrefix = new StringBuilder().append("jf.F(").append(destinationIndex).append(',').append(redStepQ16).append(',').append(guard).append(',').append(redQ16).append(',').append(blueStepQ16).append(',').append(greenQ16).append(',').append(greenStepQ16).append(',').append(pixelCount).append(',').append(blueQ16).append(',');
           if (destinationPixels == null) {
             destinationDescription = "null";
@@ -189,7 +189,7 @@ final class jf implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var6);
+          stackIn_13_0 = var6;
           stackIn_13_1 = new StringBuilder().append("jf.G(");
           if (param0 == null) {
             stackIn_14_2 = "null";
@@ -343,12 +343,12 @@ final class jf implements WidgetRenderer {
               encodedBytes[characterIndex] = (byte)characterCode;
             }
           }
-          encodedBytesBeforeReturn = (byte[]) (encodedBytes);
+          encodedBytesBeforeReturn = encodedBytes;
           return encodedBytesBeforeReturn;
         } catch (java.lang.RuntimeException encodingFailure) {
           caughtEncodingFailure = encodingFailure;
           encodingFailureForContext = caughtEncodingFailure;
-          encodingFailureBeforeDescription = (RuntimeException) (encodingFailureForContext);
+          encodingFailureBeforeDescription = encodingFailureForContext;
           encodingMessagePrefix = new StringBuilder().append("jf.C(");
           if (text == null) {
             textDescription = "null";

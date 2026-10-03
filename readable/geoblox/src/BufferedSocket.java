@@ -122,7 +122,7 @@ final class BufferedSocket implements Runnable {
         } catch (java.lang.RuntimeException readRuntimeFailure) {
           caughtReadFailure = readRuntimeFailure;
           readFailure = caughtReadFailure;
-          readFailureForMessage = (RuntimeException) (readFailure);
+          readFailureForMessage = readFailure;
           readMessagePrefix = new StringBuilder().append("ba.B(");
           if (destination == null) {
             destinationDescription = "null";
@@ -173,7 +173,7 @@ final class BufferedSocket implements Runnable {
         } catch (java.lang.RuntimeException enqueueRuntimeFailure) {
           caughtEnqueueFailure = enqueueRuntimeFailure;
           enqueueFailure = (RuntimeException) (Object) caughtEnqueueFailure;
-          enqueueFailureForMessage = (RuntimeException) (enqueueFailure);
+          enqueueFailureForMessage = enqueueFailure;
           enqueueMessagePrefix = new StringBuilder().append("ba.G(").append(guard).append(',').append(sourceOffset).append(',').append(length).append(',');
           if (source == null) {
             sourceDescription = "null";

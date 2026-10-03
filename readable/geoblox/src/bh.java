@@ -227,8 +227,8 @@ final class bh extends java.awt.Canvas {
                 if (propagateVariant) {
                   currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
                   neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
-                  neighborVariantWriteTarget = (GameplayEntity) (neighborForVariantIncrement);
-                  neighborVariantReadSource = (GameplayEntity) (neighborForVariantIncrement);
+                  neighborVariantWriteTarget = neighborForVariantIncrement;
+                  neighborVariantReadSource = neighborForVariantIncrement;
                   neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
                 }
                 if (propagateCategoryAndKind) {
@@ -246,7 +246,7 @@ final class bh extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_41_0 = (RuntimeException) (var5);
+          stackIn_41_0 = var5;
           stackIn_41_1 = new StringBuilder().append("bh.D(").append(propagateCategoryAndKind).append(',');
           if (templateEntity == null) {
             stackIn_42_2 = "null";

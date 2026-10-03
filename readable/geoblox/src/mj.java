@@ -71,7 +71,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_30_0 = (RuntimeException) (var4_ref);
+          stackIn_30_0 = var4_ref;
           stackIn_30_1 = new StringBuilder().append("mj.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_31_2 = "null";
@@ -113,7 +113,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var2);
+          stackIn_15_0 = var2;
           stackIn_15_1 = new StringBuilder().append("mj.C(");
           if (param0 == null) {
             stackIn_16_2 = "null";

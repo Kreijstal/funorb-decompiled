@@ -113,7 +113,7 @@ abstract class TextInputValidator extends ib implements ga {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var3);
+          stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("q.J(");
           if (param0 == null) {
             stackIn_8_2 = "null";
@@ -175,7 +175,7 @@ abstract class TextInputValidator extends ib implements ga {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_29_0 = (RuntimeException) (var3);
+          stackIn_29_0 = var3;
           stackIn_29_1 = new StringBuilder().append("q.O(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_30_2 = "null";
@@ -214,7 +214,7 @@ abstract class TextInputValidator extends ib implements ga {
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeDescriptions = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeDescriptions = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("q.R(");
           if (fontMetricsArchive == null) {
             metricsArchiveDescription = "null";

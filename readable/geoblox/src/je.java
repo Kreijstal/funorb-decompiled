@@ -65,7 +65,7 @@ final class je extends IntrusiveNode {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_7_0 = (RuntimeException) (var2_ref2);
+              stackIn_7_0 = var2_ref2;
               stackIn_7_1 = new StringBuilder().append("je.D(").append(param0).append(',');
               if (param1 == null) {
                 stackIn_8_2 = "null";

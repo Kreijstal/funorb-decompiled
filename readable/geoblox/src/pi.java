@@ -35,11 +35,11 @@ final class pi extends vf {
             return fontBeforeReturn;
           }
           nullFontBeforeReturn = null;
-          return (PaletteBitmapFont) ((Object) nullFontBeforeReturn);
+          return (PaletteBitmapFont) (nullFontBeforeReturn);
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeArchiveDescriptions = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeArchiveDescriptions = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("pi.O(");
           if (fontMetricsArchive == null) {
             metricsArchiveDescription = "null";
@@ -104,7 +104,7 @@ final class pi extends vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("pi.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
             stackIn_7_2 = "null";

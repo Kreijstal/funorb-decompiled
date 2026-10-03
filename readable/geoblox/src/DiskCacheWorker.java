@@ -55,12 +55,12 @@ final class DiskCacheWorker implements Runnable {
             return guardResultBeforeReturn;
           }
           this.enqueueRequest(request, 15079962);
-          writeRequestBeforeReturn = (DiskArchiveRequest) (request);
+          writeRequestBeforeReturn = request;
           return writeRequestBeforeReturn;
         } catch (java.lang.RuntimeException writeFailure) {
           caughtWriteFailure = writeFailure;
           writeFailureForContext = caughtWriteFailure;
-          writeFailureBeforeContext = (RuntimeException) (writeFailureForContext);
+          writeFailureBeforeContext = writeFailureForContext;
           writeMessagePrefix = new StringBuilder().append("uf.G(").append(methodGuard).append(',').append(groupId).append(',');
           if (diskCache == null) {
             diskCacheDescription = "null";
@@ -105,7 +105,7 @@ final class DiskCacheWorker implements Runnable {
                   (2 == queuedRequest.operationType)) {
                 request.bytes = queuedRequest.bytes;
                 request.pending = false;
-                reusedWriteRequestBeforeReturn = (DiskArchiveRequest) (request);
+                reusedWriteRequestBeforeReturn = request;
                 return reusedWriteRequestBeforeReturn;
               }
               queuedRequest = (DiskArchiveRequest) ((Object) this.requestQueue.nextForIteration(-20));
@@ -114,12 +114,12 @@ final class DiskCacheWorker implements Runnable {
           request.bytes = diskCache.read(groupId, (byte) -78);
           request.priority = true;
           request.pending = false;
-          readRequestBeforeReturn = (DiskArchiveRequest) (request);
+          readRequestBeforeReturn = request;
           return readRequestBeforeReturn;
         } catch (java.lang.RuntimeException readFailure) {
           caughtReadFailure = readFailure;
           readFailureForContext = (RuntimeException) (Object) caughtReadFailure;
-          readFailureBeforeContext = (RuntimeException) (readFailureForContext);
+          readFailureBeforeContext = readFailureForContext;
           readMessagePrefix = new StringBuilder().append("uf.F(");
           if (diskCache == null) {
             diskCacheDescription = "null";
@@ -158,7 +158,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             requestDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) enqueueFailureBeforeContext), ((StringBuilder) (Object) enqueueMessagePrefix).append(requestDescription).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) (enqueueFailureBeforeContext), ((StringBuilder) (Object) enqueueMessagePrefix).append(requestDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class DiskCacheWorker implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var7_ref);
+          stackIn_6_0 = var7_ref;
           stackIn_6_1 = new StringBuilder().append("uf.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -255,12 +255,12 @@ final class DiskCacheWorker implements Runnable {
             DiskCacheWorker.a(70);
           }
           this.enqueueRequest(request, 15079962);
-          readRequestBeforeReturn = (DiskArchiveRequest) (request);
+          readRequestBeforeReturn = request;
           return readRequestBeforeReturn;
         } catch (java.lang.RuntimeException readFailure) {
           caughtReadFailure = readFailure;
           readFailureForContext = caughtReadFailure;
-          readFailureBeforeContext = (RuntimeException) (readFailureForContext);
+          readFailureBeforeContext = readFailureForContext;
           readMessagePrefix = new StringBuilder().append("uf.D(").append(methodGuard).append(',');
           if (diskCache == null) {
             diskCacheDescription = "null";

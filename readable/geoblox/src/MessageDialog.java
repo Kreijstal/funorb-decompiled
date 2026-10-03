@@ -41,7 +41,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         } catch (java.lang.RuntimeException caughtButtonFailure) {
           caughtButtonException = caughtButtonFailure;
           buttonFailure = caughtButtonException;
-          buttonFailureBeforeContext = (RuntimeException) (buttonFailure);
+          buttonFailureBeforeContext = buttonFailure;
           buttonFailureContextBuilder = new StringBuilder().append("f.Q(").append(buttonX).append(',').append(methodGuard).append(',').append(buttonY).append(',').append(pointerButton).append(',');
           if (button == null) {
             buttonContextDescription = "null";
@@ -147,7 +147,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         } catch (java.lang.RuntimeException caughtKeyInputFailure) {
           caughtKeyInputException = caughtKeyInputFailure;
           keyInputFailure = caughtKeyInputException;
-          keyFailureBeforeContext = (RuntimeException) (keyInputFailure);
+          keyFailureBeforeContext = keyInputFailure;
           keyFailureContextBuilder = new StringBuilder().append("f.I(").append(keyCode).append(',').append(methodGuardOrDismissKeyCode).append(',').append(typedCharacter).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -655,7 +655,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             errorTextContent.a(rj.quitToWebsiteText, 1, 17);
           } else {
             if (errorKind != 256) {
-              buttonTextContentSnapshot = (ni) (errorTextContent);
+              buttonTextContentSnapshot = errorTextContent;
               if (this.showRetryLoginOnDismiss) {
                 retryOrBackButtonText = a.retryText;
               } else {
@@ -688,7 +688,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         } catch (java.lang.RuntimeException caughtErrorContentFailure) {
           caughtErrorContentException = caughtErrorContentFailure;
           errorContentFailure = caughtErrorContentException;
-          errorContentFailureBeforeContext = (RuntimeException) (errorContentFailure);
+          errorContentFailureBeforeContext = errorContentFailure;
           errorContentFailureContextBuilder = new StringBuilder().append("f.KA(").append(errorKind).append(',').append(methodGuard).append(',');
           if (messageText == null) {
             messageContextDescription = "null";
@@ -715,7 +715,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         } catch (java.lang.RuntimeException caughtDecimalValidationFailure) {
           caughtDecimalValidationException = caughtDecimalValidationFailure;
           decimalValidationFailure = caughtDecimalValidationException;
-          decimalFailureBeforeContext = (RuntimeException) (decimalValidationFailure);
+          decimalFailureBeforeContext = decimalValidationFailure;
           decimalFailureContextBuilder = new StringBuilder().append("f.JA(").append(methodGuard).append(',');
           if (text == null) {
             textContextDescription = "null";

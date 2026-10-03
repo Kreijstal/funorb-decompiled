@@ -45,7 +45,7 @@ final class mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+          stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("mb.<init>(");
           if (param0 == null) {
             stackIn_13_2 = "null";

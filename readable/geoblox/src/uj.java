@@ -31,7 +31,7 @@ final class uj {
         } catch (java.lang.RuntimeException boardOverlapFailure) {
           caughtBoardOverlapFailure = boardOverlapFailure;
           boardOverlapFailureForContext = caughtBoardOverlapFailure;
-          boardOverlapFailureBeforeEntityDescription = (RuntimeException) (boardOverlapFailureForContext);
+          boardOverlapFailureBeforeEntityDescription = boardOverlapFailureForContext;
           boardOverlapMessagePrefix = new StringBuilder().append("uj.C(");
           if (diagnosticEntity == null) {
             entityArgumentDescription = "null";
@@ -82,12 +82,12 @@ final class uj {
             var6 = var8 + 1;
           }
           var4[var3_int] = param2.substring(var6);
-          stackIn_7_0 = (String[]) (var4);
+          stackIn_7_0 = var4;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3);
+          stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("uj.D(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_11_2 = "null";

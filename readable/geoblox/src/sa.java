@@ -90,7 +90,7 @@ final class sa extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_41_0 = (RuntimeException) (var2);
+          stackIn_41_0 = var2;
           stackIn_41_1 = new StringBuilder().append("sa.B(");
           if (param0 == null) {
             stackIn_42_2 = "null";
@@ -136,7 +136,7 @@ final class sa extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("sa.D(");
           if (param0 == null) {
             stackIn_7_2 = "null";

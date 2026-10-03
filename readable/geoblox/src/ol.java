@@ -62,7 +62,7 @@ final class ol extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ol.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -125,7 +125,7 @@ final class ol extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var8);
+          stackIn_26_0 = var8;
           stackIn_26_1 = new StringBuilder().append("ol.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             stackIn_27_2 = "null";

@@ -56,7 +56,7 @@ final class h {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_11_0 = (RuntimeException) (var2_ref2);
+              stackIn_11_0 = var2_ref2;
               stackIn_11_1 = new StringBuilder().append("h.A(");
               if (param0 == null) {
                 stackIn_12_2 = "null";

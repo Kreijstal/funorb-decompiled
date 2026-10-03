@@ -408,7 +408,7 @@ final class MusicScore extends IntrusiveNode {
           midiOutput = new ByteArrayBuffer(this.midiBytes);
           midiOutput.writeIntBE((byte) 95, 1297377380);
           midiOutput.writeIntBE((byte) 95, 6);
-          midiHeaderOutput = (ByteArrayBuffer) (midiOutput);
+          midiHeaderOutput = midiOutput;
           if (trackCount <= 1) {
             midiFormat = 0;
           } else {

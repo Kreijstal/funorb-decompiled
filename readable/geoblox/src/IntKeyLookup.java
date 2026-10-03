@@ -116,7 +116,7 @@ final class IntKeyLookup {
         } catch (java.lang.RuntimeException constructionFailure) {
           caughtConstructionFailure = constructionFailure;
           constructionFailureForContext = caughtConstructionFailure;
-          constructionFailureBeforeContext = (RuntimeException) (constructionFailureForContext);
+          constructionFailureBeforeContext = constructionFailureForContext;
           constructionMessagePrefix = new StringBuilder().append("am.<init>(");
           if (keys == null) {
             keysDescription = "null";

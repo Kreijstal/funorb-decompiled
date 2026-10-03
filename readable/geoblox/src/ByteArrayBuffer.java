@@ -47,7 +47,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var4);
+          stackIn_9_0 = var4;
           stackIn_9_1 = new StringBuilder().append("qc.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_10_2 = "null";
@@ -124,7 +124,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException textWriteFailure) {
           caughtTextWriteFailure = textWriteFailure;
           textWriteFailureForContext = caughtTextWriteFailure;
-          textWriteFailureBeforeDescription = (RuntimeException) (textWriteFailureForContext);
+          textWriteFailureBeforeDescription = textWriteFailureForContext;
           textWriteMessagePrefix = new StringBuilder().append("qc.IA(");
           if (text == null) {
             textDescription = "null";
@@ -346,7 +346,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException copyFailure) {
           caughtCopyFailure = copyFailure;
           copyFailureForContext = caughtCopyFailure;
-          copyFailureBeforeDescription = (RuntimeException) (copyFailureForContext);
+          copyFailureBeforeDescription = copyFailureForContext;
           copyMessagePrefix = new StringBuilder().append("qc.JA(").append(length).append(',').append(methodGuard).append(',');
           if (source == null) {
             arrayDescription = "null";
@@ -517,7 +517,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException copyFailure) {
           caughtCopyFailure = copyFailure;
           copyFailureForContext = caughtCopyFailure;
-          copyFailureBeforeDescription = (RuntimeException) (copyFailureForContext);
+          copyFailureBeforeDescription = copyFailureForContext;
           copyMessagePrefix = new StringBuilder().append("qc.LA(").append(methodGuard).append(',').append(length).append(',');
           if (destination == null) {
             arrayDescription = "null";
@@ -586,7 +586,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;
           cryptoFailureForContext = caughtCryptoFailure;
-          cryptoFailureBeforeDescription = (RuntimeException) (cryptoFailureForContext);
+          cryptoFailureBeforeDescription = cryptoFailureForContext;
           cryptoMessagePrefix = new StringBuilder().append("qc.GA(");
           if (key == null) {
             keyDescription = "null";
@@ -667,7 +667,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;
           cryptoFailureForContext = caughtCryptoFailure;
-          cryptoFailureBeforeDescription = (RuntimeException) (cryptoFailureForContext);
+          cryptoFailureBeforeDescription = cryptoFailureForContext;
           cryptoMessagePrefix = new StringBuilder().append("qc.G(").append(methodGuard).append(',');
           if (key == null) {
             keyDescription = "null";
@@ -920,7 +920,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var3);
+          stackIn_4_0 = var3;
           stackIn_4_1 = new StringBuilder().append("qc.N(");
           if (param0 == null) {
             stackIn_5_2 = "null";

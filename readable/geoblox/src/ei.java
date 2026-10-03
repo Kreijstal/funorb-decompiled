@@ -45,7 +45,7 @@ final class ei extends ContentTransitionDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var3);
+          stackIn_16_0 = var3;
           stackIn_16_1 = new StringBuilder().append("ei.OB(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
@@ -72,7 +72,7 @@ final class ei extends ContentTransitionDialog {
         try {
           var3 = ab.a(param0, 2, param2);
           if (var3 != null) {
-            stackIn_4_0 = (String) (var3);
+            stackIn_4_0 = var3;
             return stackIn_4_0;
           }
           if (param1) {
@@ -94,7 +94,7 @@ final class ei extends ContentTransitionDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_18_0 = (RuntimeException) (var3_ref);
+          stackIn_18_0 = var3_ref;
           stackIn_18_1 = new StringBuilder().append("ei.QB(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_19_2 = "null";

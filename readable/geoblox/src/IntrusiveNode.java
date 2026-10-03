@@ -72,7 +72,7 @@ class IntrusiveNode {
           if (param1.length > 136) {
             var3 = new l();
             ((oj) ((Object) var3)).a(param1, true);
-            stackIn_8_0 = (l) (var3);
+            stackIn_8_0 = var3;
             return stackIn_8_0;
           }
           if (param2) {
@@ -84,7 +84,7 @@ class IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var3_ref);
+          stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("hf.BA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";
@@ -236,7 +236,7 @@ class IntrusiveNode {
         } catch (java.lang.RuntimeException decodeFailure) {
           caughtDecodeFailure = decodeFailure;
           decodeFailureForContext = caughtDecodeFailure;
-          decodeFailureBeforeDescription = (RuntimeException) (decodeFailureForContext);
+          decodeFailureBeforeDescription = decodeFailureForContext;
           decodeMessagePrefix = new StringBuilder().append("hf.W(").append(readGuard).append(',');
           if (spriteBytes == null) {
             spriteBytesDescription = "null";

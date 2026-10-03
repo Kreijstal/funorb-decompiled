@@ -62,7 +62,7 @@ final class bc {
         } catch (java.lang.RuntimeException decodingFailure) {
           caughtDecodingFailure = decodingFailure;
           decodingFailureForContext = caughtDecodingFailure;
-          decodingFailureBeforeDescription = (RuntimeException) (decodingFailureForContext);
+          decodingFailureBeforeDescription = decodingFailureForContext;
           decodingMessagePrefix = new StringBuilder().append("bc.B(").append(decodeGuard).append(',');
           if (textBytes == null) {
             textBytesDescription = "null";

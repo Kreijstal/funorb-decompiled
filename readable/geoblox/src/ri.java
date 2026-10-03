@@ -209,7 +209,7 @@ final class ri {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_105_0 = (RuntimeException) (var6_ref);
+              stackIn_105_0 = var6_ref;
               stackIn_105_1 = new StringBuilder().append("ri.B(").append(param0).append(',');
               if (param1 == null) {
                 stackIn_106_2 = "null";

@@ -42,7 +42,7 @@ final class DiskArchiveCache {
         } catch (java.lang.RuntimeException writeFailure) {
           caughtWriteFailure = writeFailure;
           writeFailureForContext = (RuntimeException) (Object) caughtWriteFailure;
-          writeFailureBeforeContext = (RuntimeException) (writeFailureForContext);
+          writeFailureBeforeContext = writeFailureForContext;
           writeMessagePrefix = new StringBuilder().append("jh.A(");
           if (bytes == null) {
             bytesDescription = "null";
@@ -84,7 +84,7 @@ final class DiskArchiveCache {
               try {
                 if (~this.indexFile.length((byte) 46) > ~(long)(entryId * 6 + 6)) {
                   nullForMissingIndex = null;
-                  return (byte[]) ((Object) nullForMissingIndex);
+                  return (byte[]) (nullForMissingIndex);
                 }
                 if (methodGuard > -14) {
                   this.dataFile = (BufferedRandomAccessFile) null;
@@ -98,7 +98,7 @@ final class DiskArchiveCache {
                 }
                 if (this.maximumEntryLength < entryLength) {
                   nullForOversizedEntry = null;
-                  return (byte[]) ((Object) nullForOversizedEntry);
+                  return (byte[]) (nullForOversizedEntry);
                 }
                 if (sectorNumber <= 0) {
                   return null;
@@ -111,12 +111,12 @@ final class DiskArchiveCache {
                 chunkNumber = 0;
                 while (true) {
                   if (bytesCopied >= entryLength) {
-                    bytesBeforeReturn = (byte[]) (bytes);
+                    bytesBeforeReturn = bytes;
                     return bytesBeforeReturn;
                   }
                   if (sectorNumber == 0) {
                     nullForMissingSector = null;
-                    return (byte[]) ((Object) nullForMissingSector);
+                    return (byte[]) (nullForMissingSector);
                   }
                   this.dataFile.seek(0, (long)(520 * sectorNumber));
                   payloadLength = -bytesCopied + entryLength;
@@ -170,7 +170,7 @@ final class DiskArchiveCache {
                 caughtReadFailure = readIOException;
                 readIoFailure = (IOException) (Object) caughtReadFailure;
                 nullAfterIoFailure = null;
-                return (byte[]) ((Object) nullAfterIoFailure);
+                return (byte[]) (nullAfterIoFailure);
               }
             }
         } catch (RuntimeException | Error uncheckedReadFailure) {
@@ -355,7 +355,7 @@ final class DiskArchiveCache {
             } catch (java.lang.RuntimeException writeFailure) {
               caughtWriteFailure = writeFailure;
               writeFailureForContext = (RuntimeException) (Object) caughtWriteFailure;
-              writeFailureBeforeContext = (RuntimeException) (writeFailureForContext);
+              writeFailureBeforeContext = writeFailureForContext;
               writeMessagePrefix = new StringBuilder().append("jh.C(").append(methodGuard).append(',').append(length).append(',').append(entryId).append(',');
               if (bytes == null) {
                 bytesDescription = "null";

@@ -65,7 +65,7 @@ abstract class ResizableDialog extends FadingDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2);
+          stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("oe.V(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -181,7 +181,7 @@ abstract class ResizableDialog extends FadingDialog {
         } catch (java.lang.RuntimeException checksumFailure) {
           caughtChecksumFailure = checksumFailure;
           checksumFailureForContext = caughtChecksumFailure;
-          checksumFailureBeforeDescription = (RuntimeException) (checksumFailureForContext);
+          checksumFailureBeforeDescription = checksumFailureForContext;
           checksumMessagePrefix = new StringBuilder().append("oe.P(").append(endPosition).append(',');
           if (bytes == null) {
             bytesDescription = "null";
@@ -286,11 +286,11 @@ abstract class ResizableDialog extends FadingDialog {
             return stackIn_28_0;
           }
           stackIn_26_0 = null;
-          return (String) ((Object) stackIn_26_0);
+          return (String) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_31_0 = (RuntimeException) (var2);
+          stackIn_31_0 = var2;
           stackIn_31_1 = new StringBuilder().append("oe.L(");
           if (param0 == null) {
             stackIn_32_2 = "null";

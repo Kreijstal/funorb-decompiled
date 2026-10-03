@@ -103,7 +103,7 @@ final class va {
         } catch (java.lang.RuntimeException caughtGroupingParameter) {
           caughtGroupingFailure = caughtGroupingParameter;
           groupingFailure = caughtGroupingFailure;
-          groupingFailureBeforeContext = (RuntimeException) (groupingFailure);
+          groupingFailureBeforeContext = groupingFailure;
           groupingMessagePrefix = new StringBuilder().append("va.B(").append(faceIndexScratch).append(',');
           if (facePriorities == null) {
             prioritiesDescription = "null";

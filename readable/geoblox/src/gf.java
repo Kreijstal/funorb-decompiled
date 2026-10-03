@@ -87,7 +87,7 @@ final class gf {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = (RuntimeException) (var2_ref2);
+              stackIn_8_0 = var2_ref2;
               stackIn_8_1 = new StringBuilder().append("gf.D(");
               if (param0 == null) {
                 stackIn_9_2 = "null";
@@ -146,7 +146,7 @@ final class gf {
         } catch (java.lang.RuntimeException archiveProgressFailure) {
           caughtProgressFailure = archiveProgressFailure;
           progressFailureForContext = caughtProgressFailure;
-          progressFailureBeforeArgumentDescriptions = (RuntimeException) (progressFailureForContext);
+          progressFailureBeforeArgumentDescriptions = progressFailureForContext;
           progressMessagePrefix = new StringBuilder().append("gf.E(");
           if (fallbackMessage == null) {
             fallbackArgumentDescription = "null";

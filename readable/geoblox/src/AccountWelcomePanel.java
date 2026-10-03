@@ -67,7 +67,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var5);
+          stackIn_19_0 = var5;
           stackIn_19_1 = new StringBuilder().append("wi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
@@ -123,7 +123,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var6);
+          stackIn_23_0 = var6;
           stackIn_23_1 = new StringBuilder().append("wi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_24_2 = "null";

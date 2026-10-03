@@ -25,7 +25,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("bf.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -100,7 +100,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var7);
+          stackIn_4_0 = var7;
           stackIn_4_1 = new StringBuilder().append("bf.imageUpdate(");
           if (observedImage == null) {
             stackIn_5_2 = "null";

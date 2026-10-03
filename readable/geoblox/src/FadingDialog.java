@@ -109,7 +109,7 @@ abstract class FadingDialog extends WidgetContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_29_0 = (RuntimeException) (var3);
+          stackIn_29_0 = var3;
           stackIn_29_1 = new StringBuilder().append("dd.MB(");
           if (param0 == null) {
             stackIn_30_2 = "null";

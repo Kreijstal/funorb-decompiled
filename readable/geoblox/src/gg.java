@@ -42,7 +42,7 @@ final class gg {
         } catch (java.lang.RuntimeException checksumFailure) {
           caughtChecksumFailure = checksumFailure;
           checksumFailureForContext = caughtChecksumFailure;
-          checksumFailureBeforeContext = (RuntimeException) (checksumFailureForContext);
+          checksumFailureBeforeContext = checksumFailureForContext;
           checksumMessagePrefix = new StringBuilder().append("gg.C(");
           if (bytes == null) {
             bytesDescription = "null";
@@ -85,7 +85,7 @@ final class gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2);
+          stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("gg.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";

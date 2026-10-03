@@ -35,7 +35,7 @@ final class sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var2);
+          stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("sl.D(");
           if (param0 == null) {
             stackIn_9_2 = "null";
@@ -93,7 +93,7 @@ final class sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var2);
+          stackIn_23_0 = var2;
           stackIn_23_1 = new StringBuilder().append("sl.A(");
           if (param0 == null) {
             stackIn_24_2 = "null";
@@ -135,7 +135,7 @@ final class sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("sl.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";

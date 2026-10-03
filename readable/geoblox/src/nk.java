@@ -36,12 +36,12 @@ final class nk extends df {
           var2_int = param0.length;
           var3 = new byte[var2_int];
           sf.a(param0, 0, var3, param1, var2_int);
-          stackIn_1_0 = (byte[]) (var3);
+          stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var2);
+          stackIn_4_0 = var2;
           stackIn_4_1 = new StringBuilder().append("nk.A(");
           if (param0 == null) {
             stackIn_5_2 = "null";

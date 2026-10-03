@@ -372,7 +372,7 @@ abstract class SpriteState extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_310_0 = (RuntimeException) (var2_ref);
+          stackIn_310_0 = var2_ref;
           stackIn_310_1 = new StringBuilder().append("wh.JA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_311_2 = "null";
@@ -427,12 +427,12 @@ abstract class SpriteState extends DualLinkNode {
           hash.updateBits(digestInput, (long)(bitsPerByte * length), 0);
           digest = new byte[64];
           hash.finishDigest(digest, 0, true);
-          digestBeforeReturn = (byte[]) (digest);
+          digestBeforeReturn = digest;
           return digestBeforeReturn;
         } catch (java.lang.RuntimeException digestFailure) {
           caughtDigestFailure = digestFailure;
           digestFailureForContext = caughtDigestFailure;
-          digestFailureBeforeContext = (RuntimeException) (digestFailureForContext);
+          digestFailureBeforeContext = digestFailureForContext;
           digestMessagePrefix = new StringBuilder().append("wh.MA(").append(length).append(',').append(sourceOffset).append(',');
           if (source == null) {
             sourceDescription = "null";
@@ -818,7 +818,7 @@ abstract class SpriteState extends DualLinkNode {
         } catch (java.lang.RuntimeException caughtRasterParameter) {
           caughtRasterFailure = caughtRasterParameter;
           rasterFailure = caughtRasterFailure;
-          rasterFailureBeforeContext = (RuntimeException) (rasterFailure);
+          rasterFailureBeforeContext = rasterFailure;
           rasterMessagePrefix = new StringBuilder().append("wh.KA(").append(bottomGreen).append(',').append(topRed).append(',').append(topX).append(',').append(middleGreen).append(',').append(bottomY).append(',').append(bottomBlue).append(',').append(bottomRed).append(',').append(middleBlue).append(',').append(topY).append(',').append(middleX).append(',').append(middleRed).append(',');
           if (destinationPixels == null) {
             destinationDescription = "null";
@@ -911,7 +911,7 @@ abstract class SpriteState extends DualLinkNode {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_35_0 = (RuntimeException) (runtimeException);
+              stackIn_35_0 = runtimeException;
               stackIn_35_1 = new StringBuilder().append("wh.IA(");
               if (param0 == null) {
                 stackIn_36_2 = "null";

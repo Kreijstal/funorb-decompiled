@@ -106,7 +106,7 @@ final class w {
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeDescriptions = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeDescriptions = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("w.A(");
           if (groupName == null) {
             groupNameDescription = "null";

@@ -50,7 +50,7 @@ final class mf {
         } catch (java.lang.RuntimeException decodeFailure) {
           caughtDecodeFailure = decodeFailure;
           decodeFailureForContext = caughtDecodeFailure;
-          decodeFailureBeforeArchiveDescription = (RuntimeException) (decodeFailureForContext);
+          decodeFailureBeforeArchiveDescription = decodeFailureForContext;
           decodeMessagePrefix = new StringBuilder().append("mf.A(").append(fileId).append(',').append(groupId).append(',').append(methodGuard).append(',');
           if (graphicsArchive == null) {
             graphicsArchiveDescription = "null";

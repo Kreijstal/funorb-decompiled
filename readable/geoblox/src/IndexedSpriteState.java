@@ -39,12 +39,12 @@ abstract class IndexedSpriteState {
           var3.indices = param2.indices;
           var3.trimY = param2.trimY;
           var3.trimX = param2.trimX;
-          stackIn_4_0 = (IndexedSprite) (var3);
+          stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var3_ref);
+          stackIn_7_0 = var3_ref;
           stackIn_7_1 = new StringBuilder().append("ha.I(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";

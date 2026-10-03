@@ -82,7 +82,7 @@ abstract class ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var7);
+          stackIn_23_0 = var7;
           stackIn_23_1 = new StringBuilder().append("nh.K(");
           if (param0 == null) {
             stackIn_24_2 = "null";

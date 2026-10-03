@@ -42,7 +42,7 @@ abstract class MenuScreen {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           spriteLoadFailure = caughtFailure;
-          failureContextCause = (RuntimeException) (spriteLoadFailure);
+          failureContextCause = spriteLoadFailure;
           failureContextBuilder = new StringBuilder().append("ka.W(");
           if (groupName == null) {
             groupContextDescription = "null";

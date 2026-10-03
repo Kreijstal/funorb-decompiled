@@ -128,7 +128,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException lookupFailure) {
           caughtLookupFailure = lookupFailure;
           lookupFailureForContext = caughtLookupFailure;
-          lookupFailureBeforeDescription = (RuntimeException) (lookupFailureForContext);
+          lookupFailureBeforeDescription = lookupFailureForContext;
           lookupMessagePrefix = new StringBuilder().append("rh.O(").append(methodGuard).append(',');
           if (groupName == null) {
             groupNameDescription = "null";
@@ -210,7 +210,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException lookupFailure) {
           caughtLookupFailure = lookupFailure;
           lookupFailureForContext = caughtLookupFailure;
-          lookupFailureBeforeDescription = (RuntimeException) (lookupFailureForContext);
+          lookupFailureBeforeDescription = lookupFailureForContext;
           lookupMessagePrefix = new StringBuilder().append("rh.W(");
           if (fileName == null) {
             fileNameDescription = "null";
@@ -260,7 +260,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException progressFailure) {
           caughtProgressFailure = progressFailure;
           progressFailureForContext = caughtProgressFailure;
-          progressFailureBeforeDescription = (RuntimeException) (progressFailureForContext);
+          progressFailureBeforeDescription = progressFailureForContext;
           progressMessagePrefix = new StringBuilder().append("rh.G(").append(methodGuard).append(',');
           if (groupName == null) {
             groupNameDescription = "null";
@@ -439,7 +439,7 @@ final class ResourceArchive {
           } catch (java.lang.RuntimeException decompressionFailure) {
             caughtUnpackFailure = decompressionFailure;
             decompressionFailureForContext = caughtUnpackFailure;
-            decompressionFailureBeforeContext = (RuntimeException) (decompressionFailureForContext);
+            decompressionFailureBeforeContext = decompressionFailureForContext;
             decompressionMessagePrefix = new StringBuilder();
             if (decryptionKey == null) {
               keySuppliedForDiagnostic = false;
@@ -565,7 +565,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException unpackFailure) {
           caughtUnpackFailure = unpackFailure;
           unpackFailureForContext = caughtUnpackFailure;
-          unpackFailureBeforeContext = (RuntimeException) (unpackFailureForContext);
+          unpackFailureBeforeContext = unpackFailureForContext;
           unpackMessagePrefix = new StringBuilder().append("rh.J(").append(requestedFileId).append(',').append(methodGuard).append(',');
           if (decryptionKey == null) {
             decryptionKeyDescription = "null";
@@ -613,7 +613,7 @@ final class ResourceArchive {
           }
           if (!this.isValidFileId(fileId, -1, groupId)) {
             invalidFileBeforeReturn = null;
-            return (byte[]) ((Object) invalidFileBeforeReturn);
+            return (byte[]) (invalidFileBeforeReturn);
           }
           fileBytesOrFailureForContext = null;
           if (!((this.decodedFiles[groupId] != null) &&
@@ -622,7 +622,7 @@ final class ResourceArchive {
               this.loadPackedGroup(groupId, -118);
               if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
                 unavailableFileBeforeReturn = null;
-                return (byte[]) ((Object) unavailableFileBeforeReturn);
+                return (byte[]) (unavailableFileBeforeReturn);
               }
             }
           }
@@ -649,7 +649,7 @@ final class ResourceArchive {
             }
           }
           fileBytesBeforeReturn = fileBytesOrFailureForContext;
-          return (byte[]) ((Object) fileBytesBeforeReturn);
+          return (byte[]) (fileBytesBeforeReturn);
         } catch (java.lang.RuntimeException fileFailure) {
           caughtFileFailure = fileFailure;
           fileBytesOrFailureForContext = caughtFileFailure;
@@ -660,7 +660,7 @@ final class ResourceArchive {
           } else {
             decryptionKeyDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fileFailureBeforeContext), ((StringBuilder) (Object) fileMessagePrefix).append(decryptionKeyDescription).append(',').append(fileId).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) (fileFailureBeforeContext), ((StringBuilder) (Object) fileMessagePrefix).append(decryptionKeyDescription).append(',').append(fileId).append(')').toString());
         }
     }
 
@@ -695,7 +695,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException lookupFailure) {
           caughtLookupFailure = lookupFailure;
           lookupFailureForContext = caughtLookupFailure;
-          lookupFailureBeforeDescription = (RuntimeException) (lookupFailureForContext);
+          lookupFailureBeforeDescription = lookupFailureForContext;
           lookupMessagePrefix = new StringBuilder().append("rh.P(").append(methodGuard).append(',');
           if (groupName == null) {
             groupNameDescription = "null";
@@ -730,7 +730,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException groupFailure) {
           caughtGroupFailure = groupFailure;
           groupFailureForContext = caughtGroupFailure;
-          groupFailureBeforeContext = (RuntimeException) (groupFailureForContext);
+          groupFailureBeforeContext = groupFailureForContext;
           groupMessagePrefix = new StringBuilder().append("rh.F(");
           if (groupName == null) {
             groupNameDescription = "null";
@@ -805,7 +805,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException availabilityFailure) {
           caughtAvailabilityFailure = availabilityFailure;
           availabilityFailureForContext = caughtAvailabilityFailure;
-          availabilityFailureBeforeContext = (RuntimeException) (availabilityFailureForContext);
+          availabilityFailureBeforeContext = availabilityFailureForContext;
           availabilityMessagePrefix = new StringBuilder().append("rh.H(").append(methodGuard).append(',');
           if (fileName == null) {
             fileNameDescription = "null";
@@ -853,7 +853,7 @@ final class ResourceArchive {
         try {
           if (!this.ensureIndexLoaded(methodGuard)) {
             unavailableIndexFileBeforeReturn = null;
-            return (byte[]) ((Object) unavailableIndexFileBeforeReturn);
+            return (byte[]) (unavailableIndexFileBeforeReturn);
           }
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
@@ -869,7 +869,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException fileFailure) {
           caughtFileFailure = fileFailure;
           fileFailureForContext = caughtFileFailure;
-          fileFailureBeforeContext = (RuntimeException) (fileFailureForContext);
+          fileFailureBeforeContext = fileFailureForContext;
           fileMessagePrefix = new StringBuilder().append("rh.Q(").append(methodGuard).append(',');
           if (fileName == null) {
             fileNameDescription = "null";
@@ -953,7 +953,7 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var2);
+          stackIn_25_0 = var2;
           stackIn_25_1 = new StringBuilder().append("rh.N(");
           if (param0 == null) {
             stackIn_26_2 = "null";

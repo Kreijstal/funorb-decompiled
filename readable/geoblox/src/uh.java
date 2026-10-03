@@ -34,7 +34,7 @@ final class uh extends ac {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("uh.L(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -138,12 +138,12 @@ final class uh extends ac {
               var5.facePriorities = null;
             }
           }
-          stackIn_28_0 = (TriangleMesh) (var5);
+          stackIn_28_0 = var5;
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_31_0 = (RuntimeException) (var2);
+          stackIn_31_0 = var2;
           stackIn_31_1 = new StringBuilder().append("uh.BA(");
           if (param0 == null) {
             stackIn_32_2 = "null";

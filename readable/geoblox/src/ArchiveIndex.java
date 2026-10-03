@@ -236,7 +236,7 @@ final class ArchiveIndex {
         } catch (java.lang.RuntimeException indexFailure) {
           caughtIndexFailure = indexFailure;
           indexFailureForContext = caughtIndexFailure;
-          indexFailureBeforeContext = (RuntimeException) (indexFailureForContext);
+          indexFailureBeforeContext = indexFailureForContext;
           indexMessagePrefix = new StringBuilder().append("bm.A(").append(methodGuard).append(',');
           if (packedIndexBytes == null) {
             packedBytesDescription = "null";

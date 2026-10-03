@@ -45,7 +45,7 @@ final class i {
             break;
           }
           stackIn_11_0 = farthestEntity;
-          return (GameplayEntity) ((Object) stackIn_11_0);
+          return (GameplayEntity) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -77,7 +77,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var4_ref2);
+          stackIn_7_0 = var4_ref2;
           stackIn_7_1 = new StringBuilder().append("i.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";
@@ -238,7 +238,7 @@ final class i {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
-          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextCause = contextFailure;
           failureContextBuilder = new StringBuilder().append("i.B(").append(minimumVisibleDepth).append(',').append(methodGuard).append(',');
           if (mesh == null) {
             meshContextDescription = "null";
@@ -403,7 +403,7 @@ final class i {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
-          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextCause = contextFailure;
           failureContextBuilder = new StringBuilder().append("i.B(").append(minimumVisibleDepth).append(',').append(integerMethodGuard).append(',');
           if (mesh == null) {
             meshContextDescription = "null";

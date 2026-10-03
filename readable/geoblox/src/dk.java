@@ -110,7 +110,7 @@ abstract class dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var5);
+          stackIn_19_0 = var5;
           stackIn_19_1 = new StringBuilder().append("dk.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";

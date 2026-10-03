@@ -22,7 +22,7 @@ final class DropTargetWidget extends SingleChildWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2);
+          stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("fk.F(").append(readGuard).append(',');
           if (resourceKey == null) {
             stackIn_8_2 = "null";
@@ -107,20 +107,20 @@ final class DropTargetWidget extends SingleChildWidget {
                 }
                 preferredRasterBuffer = (AwtRasterBuffer) (bufferImplementationClass.newInstance());
                 preferredRasterBuffer.initialize(height, component, width, (byte) 127);
-                initializedPreferredBuffer = (AwtRasterBuffer) (preferredRasterBuffer);
+                initializedPreferredBuffer = preferredRasterBuffer;
                 return initializedPreferredBuffer;
               } catch (java.lang.Throwable preferredImplementationThrowable) {
                 caughtFactoryThrowable = preferredImplementationThrowable;
                 preferredImplementationFailure = caughtFactoryThrowable;
                 fallbackRasterBuffer = new ImageProducerRasterBuffer();
                 ((AwtRasterBuffer) ((Object) fallbackRasterBuffer)).initialize(height, component, width, (byte) 117);
-                initializedFallbackBuffer = (ImageProducerRasterBuffer) (fallbackRasterBuffer);
+                initializedFallbackBuffer = fallbackRasterBuffer;
                 return (AwtRasterBuffer) ((Object) initializedFallbackBuffer);
               }
             } catch (java.lang.RuntimeException caughtBufferFactoryFailure) {
               caughtFactoryThrowable = caughtBufferFactoryFailure;
               bufferFactoryFailure = (RuntimeException) (Object) caughtFactoryThrowable;
-              factoryFailureBeforeComponentDescription = (RuntimeException) (bufferFactoryFailure);
+              factoryFailureBeforeComponentDescription = bufferFactoryFailure;
               factoryMessagePrefix = new StringBuilder().append("fk.E(").append(returnNullGuard).append(',');
               if (component == null) {
                 componentArgumentDescription = "null";

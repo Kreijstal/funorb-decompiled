@@ -29,7 +29,7 @@ final class ag extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3);
+          stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("ag.A(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_10_2 = "null";
@@ -96,7 +96,7 @@ final class ag extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_34_0 = (RuntimeException) (var2);
+          stackIn_34_0 = var2;
           stackIn_34_1 = new StringBuilder().append("ag.E(");
           if (param0 == null) {
             stackIn_35_2 = "null";
@@ -123,7 +123,7 @@ final class ag extends TextInputValidator {
         } catch (java.lang.RuntimeException decodingFailure) {
           caughtDecodingFailure = decodingFailure;
           decodingFailureForContext = caughtDecodingFailure;
-          decodingFailureBeforeDescription = (RuntimeException) (decodingFailureForContext);
+          decodingFailureBeforeDescription = decodingFailureForContext;
           decodingMessagePrefix = new StringBuilder().append("ag.B(").append(decodeGuard).append(',');
           if (textBytes == null) {
             textBytesDescription = "null";
@@ -161,7 +161,7 @@ final class ag extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+          stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("ag.D(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_13_2 = "null";

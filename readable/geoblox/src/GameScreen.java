@@ -1854,7 +1854,7 @@ final class GameScreen extends MenuScreen {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           constructionFailure = caughtFailure;
-          failureContextCause = (RuntimeException) (constructionFailure);
+          failureContextCause = constructionFailure;
           failureContextBuilder = new StringBuilder().append("c.<init>(");
           if (gameApplet == null) {
             appletContextDescription = "null";

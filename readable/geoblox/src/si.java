@@ -39,7 +39,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var4);
+          stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("si.A(");
           if (param0 == null) {
             stackIn_8_2 = "null";
@@ -140,7 +140,7 @@ final class si {
               return;
             }
             stackIn_20_0 = param0.field_n;
-            stackIn_20_1 = (String) (var6);
+            stackIn_20_1 = var6;
             if (this.field_b != -2147483648) {
               stackIn_21_2 = this.field_b;
             } else {
@@ -170,7 +170,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          stackIn_31_0 = (RuntimeException) (var6_ref);
+          stackIn_31_0 = var6_ref;
           stackIn_31_1 = new StringBuilder().append("si.B(");
           if (param0 == null) {
             stackIn_32_2 = "null";
@@ -260,7 +260,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var7);
+          stackIn_23_0 = var7;
           stackIn_23_1 = new StringBuilder().append("si.F(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_24_2 = "null";
@@ -317,7 +317,7 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("si.L(");
           if (param0 == null) {
             stackIn_7_2 = "null";

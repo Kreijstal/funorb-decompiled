@@ -74,7 +74,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_21_0 = (RuntimeException) (var2);
+          stackIn_21_0 = var2;
           stackIn_21_1 = new StringBuilder().append("s.C(");
           if (param0 == null) {
             stackIn_22_2 = "null";
@@ -147,7 +147,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("s.A(");
           if (param0 == null) {
             stackIn_14_2 = "null";
@@ -191,7 +191,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("s.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_14_2 = "null";
@@ -242,7 +242,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var6);
+          stackIn_7_0 = var6;
           stackIn_7_1 = new StringBuilder().append("s.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_8_2 = "null";
@@ -300,7 +300,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_18_0 = (RuntimeException) (var2_ref);
+              stackIn_18_0 = var2_ref;
               stackIn_18_1 = new StringBuilder().append("s.B(").append(param0).append(',');
               if (param1 == null) {
                 stackIn_19_2 = "null";

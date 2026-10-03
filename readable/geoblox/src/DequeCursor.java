@@ -176,16 +176,16 @@ final class DequeCursor {
           if (this.deque.sentinel == startNode) {
             this.pendingNode = null;
             emptyResult = null;
-            return (IntrusiveNode) ((Object) emptyResult);
+            return (IntrusiveNode) (emptyResult);
           }
           guardResidue = 59 / ((methodGuard - 85) / 38);
           this.pendingNode = startNode.previousNode;
-          returnedNode = (IntrusiveNode) (startNode);
+          returnedNode = startNode;
           return returnedNode;
         } catch (java.lang.RuntimeException caughtReverseCursorFailure) {
           caughtReverseCursorException = caughtReverseCursorFailure;
           reverseCursorFailure = caughtReverseCursorException;
-          reverseFailureBeforeContext = (RuntimeException) (reverseCursorFailure);
+          reverseFailureBeforeContext = reverseCursorFailure;
           reverseFailureContextBuilder = new StringBuilder().append("gb.F(");
           if (node == null) {
             nodeContextDescription = "null";
@@ -248,15 +248,15 @@ final class DequeCursor {
           if (this.deque.sentinel == startNode) {
             this.pendingNode = null;
             emptyResult = null;
-            return (IntrusiveNode) ((Object) emptyResult);
+            return (IntrusiveNode) (emptyResult);
           }
           this.pendingNode = startNode.nextNode;
-          returnedNode = (IntrusiveNode) (startNode);
+          returnedNode = startNode;
           return returnedNode;
         } catch (java.lang.RuntimeException caughtForwardCursorFailure) {
           caughtForwardCursorException = caughtForwardCursorFailure;
           forwardCursorFailure = caughtForwardCursorException;
-          forwardFailureBeforeContext = (RuntimeException) (forwardCursorFailure);
+          forwardFailureBeforeContext = forwardCursorFailure;
           forwardFailureContextBuilder = new StringBuilder().append("gb.J(").append(methodGuard).append(',');
           if (node == null) {
             nodeContextDescription = "null";

@@ -29,7 +29,7 @@ final class ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_18_0 = (RuntimeException) (var3_ref);
+          stackIn_18_0 = var3_ref;
           stackIn_18_1 = new StringBuilder().append("ak.A(");
           if (param0 == null) {
             stackIn_19_2 = "null";
@@ -79,7 +79,7 @@ final class ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var2);
+          stackIn_15_0 = var2;
           stackIn_15_1 = new StringBuilder().append("ak.B(");
           if (param0 == null) {
             stackIn_16_2 = "null";

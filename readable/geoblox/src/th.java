@@ -38,7 +38,7 @@ final class th extends lf {
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.a(115, var2)) {
-              stackIn_11_0 = (od) (var5);
+              stackIn_11_0 = var5;
               return stackIn_11_0;
             }
           }
@@ -47,7 +47,7 @@ final class th extends lf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var2_ref);
+          stackIn_17_0 = var2_ref;
           stackIn_17_1 = new StringBuilder().append("th.H(");
           if (param0 == null) {
             stackIn_18_2 = "null";

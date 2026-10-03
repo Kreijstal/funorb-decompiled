@@ -27,7 +27,7 @@ final class wc extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3_ref);
+          stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("wc.B(");
           if (param0 == null) {
             stackIn_11_2 = "null";

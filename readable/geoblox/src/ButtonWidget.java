@@ -37,7 +37,7 @@ class ButtonWidget extends UiWidget {
         } catch (java.lang.RuntimeException caughtPointerPressFailure) {
           caughtPointerPressException = caughtPointerPressFailure;
           pointerPressFailure = caughtPointerPressException;
-          pressFailureBeforeContext = (RuntimeException) (pointerPressFailure);
+          pressFailureBeforeContext = pointerPressFailure;
           pressFailureContextBuilder = new StringBuilder().append("hk.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -122,7 +122,7 @@ class ButtonWidget extends UiWidget {
         } catch (java.lang.RuntimeException caughtKeyInputFailure) {
           caughtKeyInputException = caughtKeyInputFailure;
           keyInputFailure = caughtKeyInputException;
-          keyFailureBeforeContext = (RuntimeException) (keyInputFailure);
+          keyFailureBeforeContext = keyInputFailure;
           keyFailureContextBuilder = new StringBuilder().append("hk.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -203,7 +203,7 @@ class ButtonWidget extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var3);
+          stackIn_15_0 = var3;
           stackIn_15_1 = new StringBuilder().append("hk.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
             stackIn_16_2 = "null";
@@ -243,7 +243,7 @@ class ButtonWidget extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("hk.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";

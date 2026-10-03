@@ -81,7 +81,7 @@ final class qb extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var8);
+          stackIn_19_0 = var8;
           stackIn_19_1 = new StringBuilder().append("qb.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             stackIn_20_2 = "null";
@@ -138,7 +138,7 @@ final class qb extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var5);
+          stackIn_19_0 = var5;
           stackIn_19_1 = new StringBuilder().append("qb.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";

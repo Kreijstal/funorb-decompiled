@@ -160,7 +160,7 @@ final class WhirlpoolHash {
         } catch (java.lang.RuntimeException hashUpdateFailure) {
           caughtHashUpdateFailure = hashUpdateFailure;
           hashUpdateFailureForContext = caughtHashUpdateFailure;
-          hashUpdateFailureBeforeDescription = (RuntimeException) (hashUpdateFailureForContext);
+          hashUpdateFailureBeforeDescription = hashUpdateFailureForContext;
           hashUpdateMessagePrefix = new StringBuilder().append("ge.G(");
           if (source == null) {
             sourceDescription = "null";
@@ -189,7 +189,7 @@ final class WhirlpoolHash {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ge.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -254,7 +254,7 @@ final class WhirlpoolHash {
         } catch (java.lang.RuntimeException digestFailure) {
           caughtDigestFailure = digestFailure;
           digestFailureForContext = caughtDigestFailure;
-          digestFailureBeforeDescription = (RuntimeException) (digestFailureForContext);
+          digestFailureBeforeDescription = digestFailureForContext;
           digestMessagePrefix = new StringBuilder().append("ge.C(");
           if (destination == null) {
             destinationDescription = "null";

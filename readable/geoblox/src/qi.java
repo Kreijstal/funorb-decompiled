@@ -73,11 +73,11 @@ final class qi extends IntrusiveNode {
                 var4_ref = decompiledCaughtException;
               }
               stackIn_12_0 = null;
-              return (String) ((Object) stackIn_12_0);
+              return (String) (stackIn_12_0);
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_15_0 = (RuntimeException) (var3);
+              stackIn_15_0 = var3;
               stackIn_15_1 = new StringBuilder().append("qi.B(");
               if (param0 == null) {
                 stackIn_16_2 = "null";

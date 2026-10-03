@@ -55,7 +55,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         } catch (java.lang.RuntimeException callbackFailure) {
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
-          callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
+          callbackFailureBeforeEventDescription = callbackFailureForContext;
           callbackMessagePrefix = new StringBuilder().append("wl.keyPressed(");
           if (event == null) {
             eventArgumentDescription = "null";
@@ -129,7 +129,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         } catch (java.lang.RuntimeException callbackFailure) {
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
-          callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
+          callbackFailureBeforeEventDescription = callbackFailureForContext;
           callbackMessagePrefix = new StringBuilder().append("wl.keyReleased(");
           if (event == null) {
             eventArgumentDescription = "null";
@@ -163,7 +163,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         } catch (java.lang.RuntimeException callbackFailure) {
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
-          callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
+          callbackFailureBeforeEventDescription = callbackFailureForContext;
           callbackMessagePrefix = new StringBuilder().append("wl.focusLost(");
           if (event == null) {
             eventArgumentDescription = "null";

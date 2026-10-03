@@ -291,7 +291,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_39_0 = (RuntimeException) (var3);
+          stackIn_39_0 = var3;
           stackIn_39_1 = new StringBuilder().append("kk.O(").append(param0).append(',');
           if (param1 == null) {
             stackIn_40_2 = "null";
@@ -384,7 +384,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             } catch (java.lang.RuntimeException attachmentRuntimeException) {
               caughtAttachmentFailure = attachmentRuntimeException;
               attachmentFailureForContext = (RuntimeException) (Object) caughtAttachmentFailure;
-              attachmentFailureBeforeContext = (RuntimeException) (attachmentFailureForContext);
+              attachmentFailureBeforeContext = attachmentFailureForContext;
               attachmentMessagePrefix = new StringBuilder().append("kk.C(");
               if (socketObject == null) {
                 socketDescription = "null";

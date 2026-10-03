@@ -58,7 +58,7 @@ final class ad extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var4);
+          stackIn_14_0 = var4;
           stackIn_14_1 = new StringBuilder().append("ad.C(");
           if (param0 == null) {
             stackIn_15_2 = "null";
@@ -116,7 +116,7 @@ final class ad extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_18_0 = (RuntimeException) (var4);
+          stackIn_18_0 = var4;
           stackIn_18_1 = new StringBuilder().append("ad.I(").append(param0).append(',');
           if (param1 == null) {
             stackIn_19_2 = "null";
@@ -278,7 +278,7 @@ final class ad extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var7);
+          stackIn_26_0 = var7;
           stackIn_26_1 = new StringBuilder().append("ad.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_27_2 = "null";

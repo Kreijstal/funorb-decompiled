@@ -47,12 +47,12 @@ class ac extends ff {
           }
           var2 = new sl(false);
           var2.field_a = param1;
-          stackIn_4_0 = (sl) (var2);
+          stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2_ref);
+          stackIn_7_0 = var2_ref;
           stackIn_7_1 = new StringBuilder().append("ac.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -79,7 +79,7 @@ class ac extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var2);
+          stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("ac.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";

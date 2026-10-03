@@ -167,7 +167,7 @@ final class ue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var3);
+          stackIn_19_0 = var3;
           stackIn_19_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";

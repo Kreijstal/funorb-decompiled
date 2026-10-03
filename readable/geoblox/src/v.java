@@ -81,7 +81,7 @@ final class v {
                 uncompressedBytesAlias = allocatedUncompressedBytes;
                 uncompressedBytes = uncompressedBytesAlias;
                 buffer.readBytes(29915, packedLength, allocatedUncompressedBytes, 0);
-                uncompressedBytesBeforeReturn = (byte[]) (uncompressedBytes);
+                uncompressedBytesBeforeReturn = uncompressedBytes;
                 return uncompressedBytesBeforeReturn;
               }
               unpackedLength = buffer.readIntBE((byte) -49);
@@ -99,7 +99,7 @@ final class v {
                       AwtRasterBuffer.archiveGzipInflater.inflateInto(uncompressedTypeComplement + 0, buffer, allocatedDecompressedBytes);
                     }
                   }
-                  decompressedBytesBeforeReturn = (byte[]) (decompressedBytes);
+                  decompressedBytesBeforeReturn = decompressedBytes;
                   return decompressedBytesBeforeReturn;
                 }
               }
@@ -110,7 +110,7 @@ final class v {
         } catch (java.lang.RuntimeException unpackFailure) {
           caughtUnpackFailure = unpackFailure;
           unpackFailureForContext = (RuntimeException) (Object) caughtUnpackFailure;
-          unpackFailureBeforeContext = (RuntimeException) (unpackFailureForContext);
+          unpackFailureBeforeContext = unpackFailureForContext;
           unpackMessagePrefix = new StringBuilder().append("v.C(");
           if (packedBytes == null) {
             packedBytesDescription = "null";
@@ -434,7 +434,7 @@ final class v {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var2);
+          stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("v.B(");
           if (param0 == null) {
             stackIn_9_2 = "null";

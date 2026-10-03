@@ -89,7 +89,7 @@ final class DraggableWidget extends SingleChildWidget {
         } catch (java.lang.RuntimeException caughtDragUpdateFailure) {
           caughtDragUpdateException = caughtDragUpdateFailure;
           dragUpdateFailure = caughtDragUpdateException;
-          dragFailureBeforeContext = (RuntimeException) (dragUpdateFailure);
+          dragFailureBeforeContext = dragUpdateFailure;
           dragFailureContextBuilder = new StringBuilder().append("la.H(").append(hoverGuard).append(',').append(parentY).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -142,7 +142,7 @@ final class DraggableWidget extends SingleChildWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var5);
+          stackIn_11_0 = var5;
           stackIn_11_1 = new StringBuilder().append("la.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
@@ -190,7 +190,7 @@ final class DraggableWidget extends SingleChildWidget {
         } catch (java.lang.RuntimeException caughtDragPressFailure) {
           caughtDragPressException = caughtDragPressFailure;
           dragPressFailure = caughtDragPressException;
-          dragPressFailureBeforeContext = (RuntimeException) (dragPressFailure);
+          dragPressFailureBeforeContext = dragPressFailure;
           dragPressFailureContextBuilder = new StringBuilder().append("la.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";

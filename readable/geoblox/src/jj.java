@@ -111,7 +111,7 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_5_0 = (RuntimeException) (var3);
+          stackIn_5_0 = var3;
           stackIn_5_1 = new StringBuilder().append("jj.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_6_2 = "null";

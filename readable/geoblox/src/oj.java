@@ -40,7 +40,7 @@ abstract class oj {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = (RuntimeException) (var2_ref);
+              stackIn_8_0 = var2_ref;
               stackIn_8_1 = new StringBuilder().append("oj.F(");
               if (param0 == null) {
                 stackIn_9_2 = "null";

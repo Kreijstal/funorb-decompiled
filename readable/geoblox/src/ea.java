@@ -57,7 +57,7 @@ final class ea extends IntrusiveNode {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_9_0 = (RuntimeException) (var6_ref);
+              stackIn_9_0 = var6_ref;
               stackIn_9_1 = new StringBuilder().append("ea.A(").append(param0).append(',').append(param1).append(',');
               if (param2 == null) {
                 stackIn_10_2 = "null";
@@ -105,7 +105,7 @@ final class ea extends IntrusiveNode {
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeArchiveDescriptions = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeArchiveDescriptions = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("ea.C(");
           if (glyphGraphicsArchive == null) {
             glyphArchiveDescription = "null";

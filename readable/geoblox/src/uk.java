@@ -39,7 +39,7 @@ final class uk extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3_ref);
+          stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("uk.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
@@ -114,7 +114,7 @@ final class uk extends TextInputValidator {
         try {
           if (param2 == null) {
             stackIn_2_0 = null;
-            return (byte[]) ((Object) stackIn_2_0);
+            return (byte[]) (stackIn_2_0);
           }
           var3_int = -35 % ((44 - param1) / 57);
           if (!(param2 instanceof byte[])) {
@@ -127,7 +127,7 @@ final class uk extends TextInputValidator {
           }
           var4 = (byte[]) (param2);
           if (!param0) {
-            stackIn_9_0 = (byte[]) (var4);
+            stackIn_9_0 = var4;
             return stackIn_9_0;
           }
           stackIn_7_0 = nk.a(var4, 0);
@@ -135,7 +135,7 @@ final class uk extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var3);
+          stackIn_16_0 = var3;
           stackIn_16_1 = new StringBuilder().append("uk.G(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
@@ -210,7 +210,7 @@ final class uk extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var5);
+          stackIn_25_0 = var5;
           stackIn_25_1 = new StringBuilder().append("uk.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_26_2 = "null";
@@ -238,7 +238,7 @@ final class uk extends TextInputValidator {
           var5 = (CharSequence) ((Object) candidateText);
           var3 = ResizableDialog.a((byte) 44, var5);
           if (var3 != null) {
-            stackIn_2_0 = (String) (var3);
+            stackIn_2_0 = var3;
             return stackIn_2_0;
           }
           if (!candidateText.equals(this.field_k)) {
@@ -248,7 +248,7 @@ final class uk extends TextInputValidator {
             }
             if (null != var4.field_e) {
               stackIn_8_0 = null;
-              return (String) ((Object) stackIn_8_0);
+              return (String) (stackIn_8_0);
             }
             this.field_k = candidateText;
             this.field_n = var4.field_g;
@@ -265,7 +265,7 @@ final class uk extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var3_ref);
+          stackIn_19_0 = var3_ref;
           stackIn_19_1 = new StringBuilder().append("uk.A(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_20_2 = "null";
@@ -323,7 +323,7 @@ final class uk extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_18_0 = (RuntimeException) (var3_ref);
+          stackIn_18_0 = var3_ref;
           stackIn_18_1 = new StringBuilder().append("uk.D(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_19_2 = "null";

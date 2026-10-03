@@ -27,7 +27,7 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_5_0 = (RuntimeException) (var2_ref);
+          stackIn_5_0 = var2_ref;
           stackIn_5_1 = new StringBuilder().append("ab.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_6_2 = "null";
@@ -104,7 +104,7 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_39_0 = (RuntimeException) (var3);
+          stackIn_39_0 = var3;
           stackIn_39_1 = new StringBuilder().append("ab.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_40_2 = "null";
@@ -148,7 +148,7 @@ final class ab {
         } catch (java.lang.RuntimeException hashFailure) {
           caughtHashFailure = hashFailure;
           hashFailureForContext = caughtHashFailure;
-          hashFailureBeforeDescription = (RuntimeException) (hashFailureForContext);
+          hashFailureBeforeDescription = hashFailureForContext;
           hashMessagePrefix = new StringBuilder().append("ab.B(").append(methodGuard).append(',');
           if (text == null) {
             textDescription = "null";

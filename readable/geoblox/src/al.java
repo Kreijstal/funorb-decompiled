@@ -151,7 +151,7 @@ final class al {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_24_0 = (RuntimeException) (var2);
+              stackIn_24_0 = var2;
               stackIn_24_1 = new StringBuilder().append("al.A(").append(param0).append(',');
               if (param1 == null) {
                 stackIn_25_2 = "null";

@@ -62,7 +62,7 @@ final class mk extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var3_ref);
+          stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("mk.D(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_17_2 = "null";
@@ -97,7 +97,7 @@ final class mk extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+          stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("mk.A(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_13_2 = "null";
@@ -130,12 +130,12 @@ final class mk extends TextInputValidator {
           var4 = new cd();
           ((jg) ((Object) var4)).field_b = param2;
           ((jg) ((Object) var4)).field_e = param1;
-          stackIn_1_0 = (cd) (var4);
+          stackIn_1_0 = var4;
           return (jg) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var3);
+          stackIn_4_0 = var3;
           stackIn_4_1 = new StringBuilder().append("mk.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_5_2 = "null";

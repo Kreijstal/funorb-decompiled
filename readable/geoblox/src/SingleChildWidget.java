@@ -24,7 +24,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var8);
+          stackIn_7_0 = var8;
           stackIn_7_1 = new StringBuilder().append("sh.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             stackIn_8_2 = "null";
@@ -128,7 +128,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3);
+          stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("sh.S(");
           if (param0 == null) {
             stackIn_11_2 = "null";
@@ -217,7 +217,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_35_0 = (RuntimeException) (var2);
+          stackIn_35_0 = var2;
           stackIn_35_1 = new StringBuilder().append("sh.HA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_36_2 = "null";
@@ -250,7 +250,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var5);
+          stackIn_8_0 = var5;
           stackIn_8_1 = new StringBuilder().append("sh.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
@@ -341,7 +341,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var5);
+          stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("sh.V(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
@@ -385,7 +385,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var3);
+          stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("sh.U(");
           if (param0 == null) {
             stackIn_9_2 = "null";
@@ -412,7 +412,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3);
+          stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("sh.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
             stackIn_10_2 = "null";
@@ -447,7 +447,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var8);
+          stackIn_11_0 = var8;
           stackIn_11_1 = new StringBuilder().append("sh.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
           if (eventContext == null) {
             stackIn_12_2 = "null";
@@ -526,7 +526,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var5);
+          stackIn_16_0 = var5;
           stackIn_16_1 = new StringBuilder().append("sh.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";

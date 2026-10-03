@@ -47,7 +47,7 @@ final class hc extends dj implements nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("hc.IA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";

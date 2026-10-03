@@ -130,7 +130,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var2);
+          stackIn_26_0 = var2;
           stackIn_26_1 = new StringBuilder().append("jk.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_27_2 = "null";
@@ -172,7 +172,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var3_ref);
+          stackIn_13_0 = var3_ref;
           stackIn_13_1 = new StringBuilder().append("jk.C(");
           if (param0 == null) {
             stackIn_14_2 = "null";

@@ -7,9 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 104)
+## Current readability (pass 105)
 
-The export has 8,439 guarded names. All 303 sources compile, reproduce and
+The export has 8,439 guarded names and 66,191 identifier edits. All 303 sources
+compile and compare 138,257 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -37,7 +38,7 @@ ordered binding identity. Its 96,768 generic native comparisons and six
 independent entry/NaN/cleanup oracles pass along with all six game probes.
 Other mixed-effect and multi-destination continuations still need reconstruction.
 
-The latest reconstruction replaces 25 effectful conditional plain-block exits
+Pass104 replaces 25 effectful conditional plain-block exits
 with ordinary `if/else`, removes 15 unused labels/braces and saves 30 lines across
 17 files. Original predicates/effects and nested scopes remain; the skipped
 remainder becomes the else arm. Empty normal continuations are proven without
@@ -48,7 +49,19 @@ apparently stable field is assumed constant. The 24,192 new generic native
 comparisons and six independent effect/cleanup/monitor/failure checks pass.
 Ending/crying lifecycle and whole-game equivalence remain unverified.
 
-There remain 252 generated plain block labels. There are 21 method/constructor
+The current pass removes 525 identity reference casts across 170 files/423
+bodies. A unique ordinary-block local cast back to its exact declared type now
+appears directly, with its static type, scope and evaluation preserved. Necessary
+casts, primitive conversions, postfix operations, field/formal assumptions and
+Object round trips remain. All 8,439 complete naming objects survive. Only 515
+cast-type class references disappear, including 32 formerly renamed occurrences;
+all remaining bindings preserve their ordered identities. The 2,880 generic
+native comparisons, seven independent checks and 24 identical compiled
+instruction/exception-table pairs verify the supported cleanup family.
+
+A catch-only loop-boundary prototype found no candidates, so exception-region
+exit rules were not relaxed. This cleanup leaves the remaining control flow
+unchanged. There remain 252 generated plain block labels. There are 21 method/constructor
 spans of at least 300 lines, seven with generated
 block labels. The 3,042-line interface text-loader span includes three nested
 helpers, so this inventory does not count unique state machines. The labeled

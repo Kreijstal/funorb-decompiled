@@ -39,7 +39,7 @@ final class oa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var3);
+          stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("oa.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";

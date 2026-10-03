@@ -50,7 +50,7 @@ final class LimitedRandomAccessFile {
         } catch (java.lang.RuntimeException readFailure) {
           caughtReadFailure = readFailure;
           readFailureForContext = caughtReadFailure;
-          readFailureBeforeContext = (RuntimeException) (readFailureForContext);
+          readFailureBeforeContext = readFailureForContext;
           readMessagePrefix = new StringBuilder().append("pa.D(").append(length).append(',');
           if (destination == null) {
             destinationDescription = "null";
@@ -147,7 +147,7 @@ final class LimitedRandomAccessFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_44_0 = (RuntimeException) (var4);
+          stackIn_44_0 = var4;
           stackIn_44_1 = new StringBuilder().append("pa.B(");
           if (param0 == null) {
             stackIn_45_2 = "null";
@@ -193,7 +193,7 @@ final class LimitedRandomAccessFile {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_10_0 = (RuntimeException) (var4_ref);
+              stackIn_10_0 = var4_ref;
               stackIn_10_1 = new StringBuilder().append("pa.F(");
               if (param0 == null) {
                 stackIn_11_2 = "null";

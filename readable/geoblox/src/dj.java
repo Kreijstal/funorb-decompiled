@@ -63,7 +63,7 @@ class dj extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var5);
+          stackIn_16_0 = var5;
           stackIn_16_1 = new StringBuilder().append("dj.H(").append(hoverGuard).append(',').append(parentY).append(',');
           if (eventContext == null) {
             stackIn_17_2 = "null";
@@ -180,7 +180,7 @@ class dj extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+          stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("dj.B(");
           if (param0 == null) {
             stackIn_13_2 = "null";
@@ -254,7 +254,7 @@ class dj extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_20_0 = (RuntimeException) (var8);
+          stackIn_20_0 = var8;
           stackIn_20_1 = new StringBuilder().append("dj.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             stackIn_21_2 = "null";
@@ -478,7 +478,7 @@ class dj extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_81_0 = (RuntimeException) (var5);
+          stackIn_81_0 = var5;
           stackIn_81_1 = new StringBuilder().append("dj.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_82_2 = "null";
@@ -566,7 +566,7 @@ class dj extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var4);
+          stackIn_11_0 = var4;
           stackIn_11_1 = new StringBuilder().append("dj.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";

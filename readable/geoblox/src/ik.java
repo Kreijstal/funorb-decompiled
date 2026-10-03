@@ -216,7 +216,7 @@ final class ik {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_80_0 = (RuntimeException) (var3);
+          stackIn_80_0 = var3;
           stackIn_80_1 = new StringBuilder().append("ik.D(");
           if (firstEntity == null) {
             stackIn_81_2 = "null";

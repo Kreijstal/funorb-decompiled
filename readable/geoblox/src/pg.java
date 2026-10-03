@@ -173,7 +173,7 @@ final class pg {
             } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
               decompiledCaughtException = decompiledCaughtParameter5;
               var4 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_41_0 = (RuntimeException) (var4);
+              stackIn_41_0 = var4;
               stackIn_41_1 = new StringBuilder().append("pg.C(").append(param0).append(',');
               if (param1 == null) {
                 stackIn_42_2 = "null";

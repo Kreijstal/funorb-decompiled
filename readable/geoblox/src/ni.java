@@ -74,7 +74,7 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
-          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextCause = contextFailure;
           failureContextBuilder = new StringBuilder().append("ni.KA(");
           if (archive == null) {
             archiveContextDescription = "null";
@@ -103,12 +103,12 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
           this.setWidgetBounds(34 + this.widgetHeight, this.widgetWidth, (byte) -53, 0, 0);
           var4.setWidgetBounds(30, this.widgetWidth - 14, (byte) -33, var5, 7);
           this.addChild((byte) -73, var4);
-          stackIn_1_0 = (ButtonWidget) (var4);
+          stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var4_ref);
+          stackIn_4_0 = var4_ref;
           stackIn_4_1 = new StringBuilder().append("ni.GA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_5_2 = "null";
@@ -199,7 +199,7 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var6);
+          stackIn_14_0 = var6;
           stackIn_14_1 = new StringBuilder().append("ni.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_15_2 = "null";
@@ -246,12 +246,12 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
           if (methodGuard >= -107) {
             createToUseText = (String) null;
           }
-          fontBeforeReturn = (PaletteBitmapFont) (font);
+          fontBeforeReturn = font;
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeMetricsDescription = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeMetricsDescription = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("ni.MA(");
           if (metrics == null) {
             metricsDescription = "null";

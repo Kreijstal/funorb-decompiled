@@ -88,7 +88,7 @@ final class gi implements Iterable {
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeDescriptions = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeDescriptions = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("gi.E(");
           if (fontMetricsArchive == null) {
             metricsArchiveDescription = "null";

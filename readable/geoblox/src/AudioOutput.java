@@ -48,7 +48,7 @@ class AudioOutput {
               try {
                 var5 = new ce();
                 var4 = var5;
-                stackIn_10_0 = (ce) (var4);
+                stackIn_10_0 = var4;
                 stackIn_10_1 = 256;
                 if (!field_q) {
                   stackIn_11_2 = 1;
@@ -75,7 +75,7 @@ class AudioOutput {
                   }
                   field_r.field_g[param2] = (AudioOutput) ((Object) var5);
                 }
-                stackIn_21_0 = (ce) (var4);
+                stackIn_21_0 = var4;
                 return (AudioOutput) ((Object) stackIn_21_0);
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

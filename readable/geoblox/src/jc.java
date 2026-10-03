@@ -149,7 +149,7 @@ final class jc {
           }
           if (0 < formatVersion) {
             unsupportedVersionResult = null;
-            return (MeshMaterial[]) ((Object) unsupportedVersionResult);
+            return (MeshMaterial[]) (unsupportedVersionResult);
           }
           materialCount = input.readBits((byte) -17, 12);
           materials = new MeshMaterial[materialCount];
@@ -169,12 +169,12 @@ final class jc {
               materials[materialIndex] = newMaterial;
             }
           }
-          decodedMaterialsResult = (MeshMaterial[]) (materials);
+          decodedMaterialsResult = materials;
           return decodedMaterialsResult;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
-          failureContextCause = (RuntimeException) (contextFailure);
+          failureContextCause = contextFailure;
           failureContextBuilder = new StringBuilder().append("jc.D(");
           if (input == null) {
             inputContextDescription = "null";

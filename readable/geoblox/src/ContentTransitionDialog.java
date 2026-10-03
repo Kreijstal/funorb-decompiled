@@ -121,7 +121,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         } catch (java.lang.RuntimeException caughtKeyInputFailure) {
           caughtKeyInputException = caughtKeyInputFailure;
           keyInputFailure = caughtKeyInputException;
-          keyFailureBeforeContext = (RuntimeException) (keyInputFailure);
+          keyFailureBeforeContext = keyInputFailure;
           keyFailureContextBuilder = new StringBuilder().append("qf.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -160,7 +160,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         } catch (java.lang.RuntimeException caughtContentInstallationFailure) {
           caughtContentInstallationException = caughtContentInstallationFailure;
           contentInstallationFailure = caughtContentInstallationException;
-          contentFailureBeforeContext = (RuntimeException) (contentInstallationFailure);
+          contentFailureBeforeContext = contentInstallationFailure;
           contentFailureContextBuilder = new StringBuilder().append("qf.SB(").append(methodGuard).append(',');
           if (content == null) {
             contentContextDescription = "null";
@@ -185,7 +185,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           TriangleMesh.field_j.addLast(param3 ^ -25202, var9);
           ArchiveIndex.a(var9, param7, param3 ^ -25169);
           if (param3 == 25134) {
-            stackIn_4_0 = (ai) (var9);
+            stackIn_4_0 = var9;
             return stackIn_4_0;
           }
           stackIn_2_0 = (ai) null;
@@ -193,7 +193,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9_ref = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var9_ref);
+          stackIn_7_0 = var9_ref;
           stackIn_7_1 = new StringBuilder().append("qf.UB(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_8_2 = "null";
@@ -229,7 +229,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         } catch (java.lang.RuntimeException caughtContentReplacementFailure) {
           caughtContentReplacementException = caughtContentReplacementFailure;
           contentReplacementFailure = caughtContentReplacementException;
-          replacementFailureBeforeContext = (RuntimeException) (contentReplacementFailure);
+          replacementFailureBeforeContext = contentReplacementFailure;
           replacementFailureContextBuilder = new StringBuilder().append("qf.PB(");
           if (content == null) {
             contentContextDescription = "null";

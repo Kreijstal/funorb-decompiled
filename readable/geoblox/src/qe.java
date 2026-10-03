@@ -32,7 +32,7 @@ final class qe {
             var6 = var10;
             if (var6 == null) {
               stackIn_7_0 = null;
-              return (java.awt.Frame) ((Object) stackIn_7_0);
+              return (java.awt.Frame) (stackIn_7_0);
             }
             var7_int = 0;
             for (var8 = 0; var8 < var10.length; var8++) {
@@ -65,16 +65,16 @@ final class qe {
             return null;
           }
           if (var11.status != 2) {
-            stackIn_37_0 = (java.awt.Frame) (var7);
+            stackIn_37_0 = var7;
             return stackIn_37_0;
           }
           jk.a(var7, 10, param4);
           stackIn_35_0 = null;
-          return (java.awt.Frame) ((Object) stackIn_35_0);
+          return (java.awt.Frame) (stackIn_35_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          stackIn_40_0 = (RuntimeException) (var6_ref);
+          stackIn_40_0 = var6_ref;
           stackIn_40_1 = new StringBuilder().append("qe.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_41_2 = "null";

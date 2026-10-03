@@ -192,7 +192,7 @@ final class GameplaySession {
         } catch (java.lang.RuntimeException caughtFailure) {
           caughtThrowable = caughtFailure;
           urlLaunchFailure = (RuntimeException) (Object) caughtThrowable;
-          failureContextCause = (RuntimeException) (urlLaunchFailure);
+          failureContextCause = urlLaunchFailure;
           failureContextBuilder = new StringBuilder().append("gh.U(");
           if (url == null) {
             urlContextDescription = "null";
@@ -1964,7 +1964,7 @@ final class GameplaySession {
         } catch (java.lang.RuntimeException sessionConstructorException) {
           caughtConstructorFailure = sessionConstructorException;
           constructorFailure = caughtConstructorFailure;
-          constructorFailureForContext = (RuntimeException) (constructorFailure);
+          constructorFailureForContext = constructorFailure;
           constructorMessagePrefix = new StringBuilder().append("gh.<init>(");
           if (ownerApplet == null) {
             appletArgumentDescription = "null";

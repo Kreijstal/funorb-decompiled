@@ -357,7 +357,7 @@ final class PlatformTaskDispatcher implements Runnable {
               }
               try {
                 preferencesFile = new LimitedRandomAccessFile(new File(searchDirectory, preferencesFilename), "rw", 10000L);
-                preferencesFileAtReturn = (LimitedRandomAccessFile) (preferencesFile);
+                preferencesFileAtReturn = preferencesFile;
                 return preferencesFileAtReturn;
               } catch (java.lang.Exception openFailure) {
                 caughtPreferencesThrowable = openFailure;

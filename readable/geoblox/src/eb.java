@@ -252,7 +252,7 @@ final class eb {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = (RuntimeException) (var3_ref2);
+              stackIn_8_0 = var3_ref2;
               stackIn_8_1 = new StringBuilder().append("eb.C(");
               if (param0 == null) {
                 stackIn_9_2 = "null";

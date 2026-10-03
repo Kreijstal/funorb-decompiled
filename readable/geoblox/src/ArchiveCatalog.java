@@ -85,14 +85,14 @@ final class ArchiveCatalog {
             this.catalogBuffer.readBytes(29915, 64, expectedIndexWhirlpoolDigest, 0);
             source = new CachedArchiveSource(archiveId, groupDiskCache, indexDiskCache, this.networkClient, this.diskWorker, expectedIndexCrc32, expectedIndexWhirlpoolDigest, expectedIndexRevision, sweepCompletedRequests);
             this.archiveSources[archiveId] = source;
-            createdSourceBeforeReturn = (CachedArchiveSource) (source);
+            createdSourceBeforeReturn = source;
             return createdSourceBeforeReturn;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException sourceFailure) {
           caughtSourceFailure = sourceFailure;
           sourceFailureForContext = caughtSourceFailure;
-          sourceFailureBeforeContext = (RuntimeException) (sourceFailureForContext);
+          sourceFailureBeforeContext = sourceFailureForContext;
           sourceMessagePrefix = new StringBuilder().append("em.E(").append(archiveId).append(',').append(methodGuard).append(',').append(sweepCompletedRequests).append(',');
           if (indexDiskCache == null) {
             indexDiskCacheDescription = "null";
@@ -217,7 +217,7 @@ final class ArchiveCatalog {
         } catch (java.lang.RuntimeException constructionFailure) {
           caughtConstructionFailure = constructionFailure;
           constructionFailureForContext = caughtConstructionFailure;
-          constructionFailureBeforeContext = (RuntimeException) (constructionFailureForContext);
+          constructionFailureBeforeContext = constructionFailureForContext;
           constructionMessagePrefix = new StringBuilder().append("em.<init>(");
           if (networkClient == null) {
             networkClientDescription = "null";
@@ -267,7 +267,7 @@ final class ArchiveCatalog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var2);
+          stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("em.D(");
           if (param0 == null) {
             stackIn_13_2 = "null";

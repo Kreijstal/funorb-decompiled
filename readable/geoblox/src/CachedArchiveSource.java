@@ -214,7 +214,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 ((ArchiveRequest) (request)).unlinkNode(false);
               }
               validatedDiskRequestBeforeReturn = request;
-              return (ArchiveRequest) ((Object) validatedDiskRequestBeforeReturn);
+              return (ArchiveRequest) (validatedDiskRequestBeforeReturn);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception diskFailure) {
@@ -316,7 +316,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var2);
+          stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("bj.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
@@ -625,7 +625,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException constructionFailure) {
           caughtConstructionFailure = constructionFailure;
           constructionFailureForContext = caughtConstructionFailure;
-          constructionFailureBeforeContext = (RuntimeException) (constructionFailureForContext);
+          constructionFailureBeforeContext = constructionFailureForContext;
           constructionMessagePrefix = new StringBuilder().append("bj.<init>(").append(archiveId).append(',');
           if (groupDiskCache == null) {
             groupDiskCacheDescription = "null";

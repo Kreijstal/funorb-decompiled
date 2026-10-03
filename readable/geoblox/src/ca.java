@@ -36,7 +36,7 @@ final class ca extends IntrusiveNode {
               stackIn_12_0 = GzipInflater.a(var4, false);
               return stackIn_12_0;
             }
-            stackIn_10_0 = (nd) (var5);
+            stackIn_10_0 = var5;
             return stackIn_10_0;
           }
           stackIn_4_0 = fb.field_j;
@@ -44,7 +44,7 @@ final class ca extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var2);
+          stackIn_15_0 = var2;
           stackIn_15_1 = new StringBuilder().append("ca.B(");
           if (param0 == null) {
             stackIn_16_2 = "null";

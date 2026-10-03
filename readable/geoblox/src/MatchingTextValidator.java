@@ -268,7 +268,7 @@ final class MatchingTextValidator extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var3_ref);
+          stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("n.D(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_17_2 = "null";
@@ -313,7 +313,7 @@ final class MatchingTextValidator extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_18_0 = (RuntimeException) (var3_ref);
+          stackIn_18_0 = var3_ref;
           stackIn_18_1 = new StringBuilder().append("n.A(").append(guard).append(',');
           if (candidateText == null) {
             stackIn_19_2 = "null";

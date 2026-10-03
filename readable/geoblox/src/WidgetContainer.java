@@ -39,7 +39,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var8_ref);
+          stackIn_13_0 = var8_ref;
           stackIn_13_1 = new StringBuilder().append("ee.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             stackIn_14_2 = "null";
@@ -74,7 +74,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var5);
+          stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("ee.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
@@ -158,7 +158,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_20_0 = (RuntimeException) (var3);
+          stackIn_20_0 = var3;
           stackIn_20_1 = new StringBuilder().append("ee.AB(").append(param0).append(',');
           if (param1 == null) {
             stackIn_21_2 = "null";
@@ -195,7 +195,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (runtimeException);
+          stackIn_8_0 = runtimeException;
           stackIn_8_1 = new StringBuilder().append("ee.H(").append(hoverGuard).append(',').append(parentY).append(',');
           if (eventContext == null) {
             stackIn_9_2 = "null";
@@ -300,7 +300,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_22_0 = (RuntimeException) (var3_ref);
+          stackIn_22_0 = var3_ref;
           stackIn_22_1 = new StringBuilder().append("ee.RA(");
           if (param0 == null) {
             stackIn_23_2 = "null";
@@ -358,7 +358,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var3_ref);
+          stackIn_14_0 = var3_ref;
           stackIn_14_1 = new StringBuilder().append("ee.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
             stackIn_15_2 = "null";
@@ -405,7 +405,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var7_ref);
+          stackIn_10_0 = var7_ref;
           stackIn_10_1 = new StringBuilder().append("ee.TA(").append(parentX).append(',').append(pointerX).append(',').append(releaseGuard).append(',');
           if (eventContext == null) {
             stackIn_11_2 = "null";
@@ -458,7 +458,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_20_0 = (RuntimeException) (var5);
+          stackIn_20_0 = var5;
           stackIn_20_1 = new StringBuilder().append("ee.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_21_2 = "null";
@@ -504,7 +504,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var5);
+          stackIn_11_0 = var5;
           stackIn_11_1 = new StringBuilder().append("ee.FB(");
           if (param0 == null) {
             stackIn_12_2 = "null";
@@ -582,7 +582,7 @@ class WidgetContainer extends UiWidget implements ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var8);
+          stackIn_15_0 = var8;
           stackIn_15_1 = new StringBuilder().append("ee.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
           if (eventContext == null) {
             stackIn_16_2 = "null";

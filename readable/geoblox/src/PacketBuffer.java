@@ -34,7 +34,7 @@ final class PacketBuffer extends ByteArrayBuffer {
         } catch (java.lang.RuntimeException readFailure) {
           caughtReadFailure = readFailure;
           readFailureForContext = caughtReadFailure;
-          readFailureBeforeDescription = (RuntimeException) (readFailureForContext);
+          readFailureBeforeDescription = readFailureForContext;
           readMessagePrefix = new StringBuilder().append("pk.FB(").append(methodGuard).append(',').append(destinationOffset).append(',');
           if (destination == null) {
             destinationDescription = "null";

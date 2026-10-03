@@ -112,7 +112,7 @@ final class oc implements WidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var6);
+          stackIn_11_0 = var6;
           stackIn_11_1 = new StringBuilder().append("oc.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_12_2 = "null";

@@ -95,7 +95,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
+          stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("el.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_7_2 = "null";
@@ -145,7 +145,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException caughtPointerUpdateFailure) {
           caughtPointerUpdateException = caughtPointerUpdateFailure;
           pointerUpdateFailure = caughtPointerUpdateException;
-          pointerFailureBeforeContext = (RuntimeException) (pointerUpdateFailure);
+          pointerFailureBeforeContext = pointerUpdateFailure;
           pointerFailureContextBuilder = new StringBuilder().append("el.H(").append(hoverGuard).append(',').append(parentY).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -194,7 +194,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("el.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
             stackIn_7_2 = "null";
@@ -516,7 +516,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var5);
+          stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("el.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
@@ -585,7 +585,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException caughtPointerPressFailure) {
           caughtPointerPressException = caughtPointerPressFailure;
           pointerPressFailure = caughtPointerPressException;
-          pressFailureBeforeContext = (RuntimeException) (pointerPressFailure);
+          pressFailureBeforeContext = pointerPressFailure;
           pressFailureContextBuilder = new StringBuilder().append("el.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -610,7 +610,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException caughtPointerWheelFailure) {
           caughtPointerWheelException = caughtPointerWheelFailure;
           pointerWheelFailure = caughtPointerWheelException;
-          wheelFailureBeforeContext = (RuntimeException) (pointerWheelFailure);
+          wheelFailureBeforeContext = pointerWheelFailure;
           wheelFailureContextBuilder = new StringBuilder().append("el.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
           if (eventContext == null) {
             eventContextDescription = "null";
@@ -689,7 +689,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_24_0 = (RuntimeException) (var5);
+          stackIn_24_0 = var5;
           stackIn_24_1 = new StringBuilder().append("el.DC(").append(param0).append(',');
           if (param1 == null) {
             stackIn_25_2 = "null";
@@ -803,7 +803,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var5);
+          stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("el.CC(");
           if (param0 == null) {
             stackIn_10_2 = "null";

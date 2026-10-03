@@ -96,7 +96,7 @@ abstract class wf extends ch {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -703,7 +703,7 @@ abstract class wf extends ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var6_ref2);
+          stackIn_23_0 = var6_ref2;
           stackIn_23_1 = new StringBuilder().append("wf.UA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_24_2 = "null";

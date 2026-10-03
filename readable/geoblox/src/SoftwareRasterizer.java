@@ -1543,7 +1543,7 @@ final class SoftwareRasterizer {
             leavingPixelIndex++;
             scratchPixel = pixels[fullWindowLeavingIndexBeforeIncrement];
             channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndex] - (scratchPixel >> 16 & 255);
-            redSumsForClampedStore = (int[]) (redSumsForUpdates);
+            redSumsForClampedStore = redSumsForUpdates;
             redColumnForClampedStore = columnIndex;
             if (channelSumAfterRemovalOrOutputRed >= 0) {
               nonnegativeRedSum = channelSumAfterRemovalOrOutputRed;
@@ -1552,7 +1552,7 @@ final class SoftwareRasterizer {
             }
             redSumsForClampedStore[redColumnForClampedStore] = nonnegativeRedSum;
             channelSumAfterRemovalOrOutputRed = greenSumsSnapshot[columnIndex] - (scratchPixel >> 8 & 255);
-            greenSumsForClampedStore = (int[]) (greenSumsForUpdates);
+            greenSumsForClampedStore = greenSumsForUpdates;
             greenColumnForClampedStore = columnIndex;
             if (channelSumAfterRemovalOrOutputRed >= 0) {
               nonnegativeGreenSum = channelSumAfterRemovalOrOutputRed;
@@ -1561,7 +1561,7 @@ final class SoftwareRasterizer {
             }
             greenSumsForClampedStore[greenColumnForClampedStore] = nonnegativeGreenSum;
             channelSumAfterRemovalOrOutputRed = blueSumsSnapshot[columnIndex] - (scratchPixel & 255);
-            blueSumsForClampedStore = (int[]) (blueSumsForUpdates);
+            blueSumsForClampedStore = blueSumsForUpdates;
             blueColumnForClampedStore = columnIndex;
             if (channelSumAfterRemovalOrOutputRed >= 0) {
               nonnegativeBlueSum = channelSumAfterRemovalOrOutputRed;

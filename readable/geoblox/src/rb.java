@@ -28,7 +28,7 @@ final class rb {
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
           fontFailureForContext = caughtFontFailure;
-          fontFailureBeforeArchiveDescriptions = (RuntimeException) (fontFailureForContext);
+          fontFailureBeforeArchiveDescriptions = fontFailureForContext;
           fontMessagePrefix = new StringBuilder().append("rb.B(").append(fileId).append(',').append(methodGuard).append(',');
           if (glyphGraphicsArchive == null) {
             glyphArchiveDescription = "null";

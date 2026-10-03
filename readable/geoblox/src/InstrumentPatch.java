@@ -69,7 +69,7 @@ final class InstrumentPatch extends IntrusiveNode {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           failure = caughtFailure;
-          failureContextCause = (RuntimeException) (failure);
+          failureContextCause = failure;
           failureContextBuilder = new StringBuilder().append("vl.C(");
           if (sampleBudget == null) {
             budgetContextDescription = "null";
@@ -121,11 +121,11 @@ final class InstrumentPatch extends IntrusiveNode {
             return decodedPatchResult;
           }
           missingPatchResult = null;
-          return (InstrumentPatch) ((Object) missingPatchResult);
+          return (InstrumentPatch) (missingPatchResult);
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           failure = caughtFailure;
-          failureContextCause = (RuntimeException) (failure);
+          failureContextCause = failure;
           failureContextBuilder = new StringBuilder().append("vl.D(").append(patchId).append(',').append(methodGuard).append(',');
           if (archive == null) {
             archiveContextDescription = "null";
@@ -181,7 +181,7 @@ final class InstrumentPatch extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("vl.B(");
           if (param0 == null) {
             stackIn_14_2 = "null";
@@ -648,7 +648,7 @@ final class InstrumentPatch extends IntrusiveNode {
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           failure = caughtFailure;
-          failureContextCause = (RuntimeException) (failure);
+          failureContextCause = failure;
           failureContextBuilder = new StringBuilder().append("vl.<init>(");
           if (packedPatch == null) {
             inputContextDescription = "null";

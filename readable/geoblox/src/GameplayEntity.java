@@ -457,7 +457,7 @@ final class GameplayEntity extends DualLinkNode {
         } catch (java.lang.RuntimeException neighborRemovalException) {
           caughtNeighborRemovalException = neighborRemovalException;
           caughtNeighborRemovalFailure = caughtNeighborRemovalException;
-          neighborRemovalFailureForContext = (RuntimeException) (caughtNeighborRemovalFailure);
+          neighborRemovalFailureForContext = caughtNeighborRemovalFailure;
           neighborRemovalMessagePrefix = new StringBuilder().append("ja.HA(");
           if (relatedEntity == null) {
             relatedEntityArgumentDescription = "null";

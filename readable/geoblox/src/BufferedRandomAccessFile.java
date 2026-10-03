@@ -217,7 +217,7 @@ final class BufferedRandomAccessFile {
         } catch (java.lang.RuntimeException readFailure) {
           caughtReadFailure = readFailure;
           readFailureForContext = (RuntimeException) (Object) caughtReadFailure;
-          readFailureBeforeContext = (RuntimeException) (readFailureForContext);
+          readFailureBeforeContext = readFailureForContext;
           readMessagePrefix = new StringBuilder().append("sk.B(");
           if (destination == null) {
             destinationDescription = "null";
@@ -337,7 +337,7 @@ final class BufferedRandomAccessFile {
         } catch (java.lang.RuntimeException writeFailure) {
           caughtWriteFailure = writeFailure;
           writeFailureForContext = (RuntimeException) (Object) caughtWriteFailure;
-          writeFailureBeforeContext = (RuntimeException) (writeFailureForContext);
+          writeFailureBeforeContext = writeFailureForContext;
           writeMessagePrefix = new StringBuilder().append("sk.C(").append(remainingLength).append(',').append(sourceOffset).append(',');
           if (source == null) {
             sourceDescription = "null";
