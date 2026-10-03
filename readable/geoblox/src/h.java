@@ -88,7 +88,7 @@ final class h {
         clientControlFlowGuardSnapshot = Geoblox.field_C;
         try {
           movingEntityToDraw = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-          L0: while (movingEntityToDraw != null) {
+          while (movingEntityToDraw != null) {
             movingEntityToDraw.drawBoardRotatedEntity(-16096);
             movingEntityToDraw = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }

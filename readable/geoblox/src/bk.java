@@ -85,27 +85,25 @@ final class bk {
           vj.field_c = null;
           return new vd(param0);
         }
-        {
-          var5 = var8.readUnsignedShortBE(true);
-          try {
-            var9 = rd.field_r.a((byte) -14, var5);
-            re.field_f = var9.e((byte) -69);
-            if (!jc.field_b.equals(SecondaryDeque.field_f)) {
-              stackIn_22_0 = var9.field_m;
-            } else {
-              stackIn_22_0 = null;
-            }
-            vj.field_c = stackIn_22_0;
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var6 = (Exception) (Object) decompiledCaughtException;
-            gi.a((Throwable) ((Object) var6), "CC1", (byte) 125);
-            vj.field_c = null;
-            re.field_f = null;
-            return new vd(param0);
+        var5 = var8.readUnsignedShortBE(true);
+        try {
+          var9 = rd.field_r.a((byte) -14, var5);
+          re.field_f = var9.e((byte) -69);
+          if (!jc.field_b.equals(SecondaryDeque.field_f)) {
+            stackIn_22_0 = var9.field_m;
+          } else {
+            stackIn_22_0 = null;
           }
+          vj.field_c = stackIn_22_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = (Exception) (Object) decompiledCaughtException;
+          gi.a((Throwable) ((Object) var6), "CC1", (byte) 125);
+          vj.field_c = null;
+          re.field_f = null;
           return new vd(param0);
         }
+        return new vd(param0);
     }
 
     static {

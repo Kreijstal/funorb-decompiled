@@ -198,29 +198,25 @@ final class GameplayEntity extends DualLinkNode {
         if (methodGuard < 78) {
           return;
         }
-        {
-          framebufferIndex = clipLeftX + bk.boardOwnershipRaster.width * clipTopY;
-          rowSkip = -clippedWidth + bk.boardOwnershipRaster.width;
-          framebufferPixels = bk.boardOwnershipRaster.pixels;
-          L4: while (true) {
-            rowHeightBeforeDecrement = clippedHeight;
-            clippedHeight--;
-            if (rowHeightBeforeDecrement <= 0) {
-              return;
-            }
-            {
-              L5: for (negativeColumnCounter = -clippedWidth; negativeColumnCounter < 0; negativeColumnCounter++) {
-                if (~framebufferPixels[framebufferIndex] != ~(this.entityId + 1)) {
-                  framebufferIndex++;
-                  continue L5;
-                }
-                framebufferPixels[framebufferIndex] = 0;
-                framebufferIndex++;
-              }
-              framebufferIndex = framebufferIndex + rowSkip;
-              continue L4;
-            }
+        framebufferIndex = clipLeftX + bk.boardOwnershipRaster.width * clipTopY;
+        rowSkip = -clippedWidth + bk.boardOwnershipRaster.width;
+        framebufferPixels = bk.boardOwnershipRaster.pixels;
+        while (true) {
+          rowHeightBeforeDecrement = clippedHeight;
+          clippedHeight--;
+          if (rowHeightBeforeDecrement <= 0) {
+            return;
           }
+          for (negativeColumnCounter = -clippedWidth; negativeColumnCounter < 0; negativeColumnCounter++) {
+            if (~framebufferPixels[framebufferIndex] != ~(this.entityId + 1)) {
+              framebufferIndex++;
+              continue;
+            }
+            framebufferPixels[framebufferIndex] = 0;
+            framebufferIndex++;
+          }
+          framebufferIndex = framebufferIndex + rowSkip;
+          continue;
         }
     }
 
@@ -444,9 +440,9 @@ final class GameplayEntity extends DualLinkNode {
         RuntimeException caughtNeighborRemovalException = null;
         clientControlFlowGuard = Geoblox.field_C;
         try {
-          L0: for (relatedEntitySearchIndex = startingChildIndex; relatedEntitySearchIndex < this.relatedEntityCount; relatedEntitySearchIndex++) {
+          for (relatedEntitySearchIndex = startingChildIndex; relatedEntitySearchIndex < this.relatedEntityCount; relatedEntitySearchIndex++) {
             if (this.relatedEntities[relatedEntitySearchIndex] != relatedEntity) {
-              continue L0;
+              continue;
             }
             this.relatedEntities[relatedEntitySearchIndex] = null;
             if (this.spriteVariantIndex == relatedEntity.spriteVariantIndex) {
@@ -526,24 +522,22 @@ final class GameplayEntity extends DualLinkNode {
         }
         framebufferRowSkip = -clippedSpriteWidth + SecondaryDeque.contactProbeRaster.width;
         backgroundPixels = SecondaryDeque.contactProbeRaster.pixels;
-        L5: while (true) {
+        while (true) {
           rowHeightBeforeDecrement = clippedSpriteHeight;
           clippedSpriteHeight--;
           if (0 >= rowHeightBeforeDecrement) {
             return;
           }
-          {
-            L6: for (negativeColumnCounter = -clippedSpriteWidth; 0 > negativeColumnCounter; negativeColumnCounter++) {
-              if (~(this.entityId + 1) != ~backgroundPixels[framebufferIndex]) {
-                framebufferIndex++;
-                continue L6;
-              }
-              backgroundPixels[framebufferIndex] = 0;
+          for (negativeColumnCounter = -clippedSpriteWidth; 0 > negativeColumnCounter; negativeColumnCounter++) {
+            if (~(this.entityId + 1) != ~backgroundPixels[framebufferIndex]) {
               framebufferIndex++;
+              continue;
             }
-            framebufferIndex = framebufferIndex + framebufferRowSkip;
-            continue L5;
+            backgroundPixels[framebufferIndex] = 0;
+            framebufferIndex++;
           }
+          framebufferIndex = framebufferIndex + framebufferRowSkip;
+          continue;
         }
     }
 

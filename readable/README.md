@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`f31e2a033e8b343453d3a717ac15f104435ab2df`. It comes from java-tools
-`73b2571fd252aaef9c8552d5d72416be9632d5ab` and Deko
+`215c4e410a9c313870fe2dc67bc338e5f82b5b8e`. It comes from java-tools
+`f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`8c8d1fd40c52f3f831bdc78cb7295df688c7b544722030f93bde71638c3cd31a`:
+`8779a07e30e5ae402ec7b8f8c7d6a723437b825378bd57064d7bd15f81524569`:
 
 ```sh
-git archive --format=tar 73b2571fd252aaef9c8552d5d72416be9632d5ab | sha256sum
+git archive --format=tar f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,50 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current shared cleanup through an existing exit block
+## Current redundant control-frame cleanup
+
+Pass 77 simplifies existing Java control destinations after scope normalization.
+A labeled break/continue becomes ordinary only when both reach exactly the same
+nearest loop or switch. Labels needed for outer exits remain. Unused labels and
+plain blocks with no direct declarations can disappear; variable scope, loop/
+conditional bodies, try/catch/finally and monitor boundaries remain. No statement,
+operator, literal, call or exception destination is moved or reconstructed.
+
+This regenerates 153 files, removing 588 lines (80,457 to 79,869). The session
+update and board-reconciliation methods lose unnecessary loop labels/continues,
+but their large nested control structures remain. A token-based comparison of
+the pinned raw inputs counts 1,188 to 680 generated labels (508 removed) and
+518 to 68 labeled continues (450 simplified); all 1,190 labeled breaks remain.
+Complete parsing and exact token ranges are required; comments, Unicode escapes, text blocks, unknown syntax,
+unbound labels and nested executable bodies refuse cleanup.
+
+The emitter suite passes 41 groups with the optional independent JDK AST corpus
+check enabled, including 2,048 new native comparisons of loop/switch effects,
+shadows, protected/monitor transfers, failures, throwable identity and lock release.
+The corpus checker compares all 303 inventories and ordered Java AST events plus
+1,129 loop/switch destinations and 1,762 jump statements. Its before input is
+`games/geoblox` at `f31e2a033e8b343453d3a717ac15f104435ab2df`, and its after input
+is the current raw source commit above. Run it in the pinned java-tools checkout:
+
+```sh
+CFR_CONTROL_FRAMES_BEFORE=PREVIOUS_JAVA CFR_CONTROL_FRAMES_AFTER=FRESH_JAVA \
+  node test/javaAstEmitterLoopExits.test.js
+node test/cfrExceptionLoopExits.test.js
+```
+
+Exception-exit tests pass eight groups. The wider CFR fixture suite passes 33/36;
+its three try-with-resources failures also occur on the pinned pass76 baseline,
+using the same fixture inputs. A clean Git source archive regenerates all 303
+files and diagnostics byte-for-byte. All declaration/reference identities,
+spellings, order and 388 override rows match the previous corpus. All 6,081
+complete rules remain unchanged without ordinal migrations, applying 49,580 edits
+and preserving 138,519 bindings. Reproduction and dictionary reversal are exact.
+The existing native/raw/readable gameplay, drawing, scoring, result-sequence,
+text and nine helper traces retain their pins within their documented scopes.
+Large labeled bodies, opaque helpers, comprehensive concurrency, real assets/
+server traffic, full gameplay and phone/FPS/heap targets remain unverified.
+
+## Previous shared cleanup through an existing exit block
 
 Pass 76 regenerates the raw source using the generic java-tools renderer.
 `Bzip2Decoder.emitBlockRuns` replaces one duplicate state-publication-and-return
@@ -1406,7 +1449,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638` |
-| Readable | `08bae78e263190ad7ca2b50c2f8eae36226f8e284b97a736a735c66e5aafa5c4` |
+| Raw | `a9338d980323b4418a6ee1dfed8970f48cffd57bbe752927da8c8ec7817481ed` |
+| Readable | `135c754142fa722e93614687f87318f9e350a407e0912dc8f09b86fd01681a2a` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

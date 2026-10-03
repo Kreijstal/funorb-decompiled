@@ -71,10 +71,10 @@ final class qb extends hk {
                 var10 = var10 - 3.141592653589793 / (double)this.field_H;
               }
               this.field_I = (int)(var10 * (double)this.field_H / 6.283185307179586);
-              L2: while (this.field_I >= this.field_H) {
+              while (this.field_I >= this.field_H) {
                 this.field_I = this.field_I - this.field_H;
               }
-              L3: while (this.field_I < 0) {
+              while (this.field_I < 0) {
                 this.field_I = this.field_I + this.field_H;
               }
               break L0;
@@ -119,7 +119,7 @@ final class qb extends hk {
             qb.a(-58, (lk) null, (String) null, -15, (BitmapFont) null);
           }
           var6 = -1;
-          L1: for (var7 = 1; var7 < param2.length(); var7++) {
+          for (var7 = 1; var7 < param2.length(); var7++) {
             var8 = param2.charAt(var7);
             if (60 == var8) {
               var6 = param1.field_c[0] + (var5_int >> 8) + param4.measureTextWidth(param2.substring(0, var7));
@@ -133,7 +133,7 @@ final class qb extends hk {
               param1.field_c[var7] = var6;
             }
             if (var8 != 62) {
-              continue L1;
+              continue;
             }
             var6 = -1;
           }

@@ -247,46 +247,44 @@ class vf extends hk {
         var3 = 0;
         var4 = (cc) ((Object) this.field_q);
         var5 = var4.a((byte) 116, (el) (this));
-        L0: while (true) {
+        while (true) {
           var6 = this.field_s.indexOf("<hotspot=", var3);
           if (-1 == var6) {
             return;
           }
-          {
-            var8 = this.field_s.indexOf(">", var6);
-            var7 = this.field_s.substring(var6 + 9, var8);
-            var8 = Integer.parseInt(var7);
-            var3 = this.field_s.indexOf("</hotspot>", var6);
-            var9 = var5.a((byte) 24, var6);
-            var10 = var5.a((byte) 24, var3);
-            var11 = null;
-            for (var12 = var9; var10 >= var12; var12++) {
-              var13 = var5.field_a[var12];
-              if (var9 == var12) {
-                stackIn_7_0 = var5.a(var6, 124);
-              } else {
-                stackIn_7_0 = var13.field_c[0];
-              }
-              var14 = stackIn_7_0;
-              if (var12 == var10) {
-                stackIn_12_0 = var5.a(var3, 116);
-              } else {
-                if (var13 == null) {
-                  stackIn_12_0 = 0;
-                } else {
-                  stackIn_12_0 = var13.field_c[-1 + var13.field_c.length];
-                }
-              }
-              var15 = stackIn_12_0;
-              var16 = new fb(var8, var14, var13.field_d, var15 - var14, Math.max(var4.a(1), -var13.field_d + var13.field_a));
-              if (var11 != null) {
-                ((fb) (var11)).field_h = var16;
-              }
-              this.field_F.addLast(-44, var16);
-              var11 = var16;
+          var8 = this.field_s.indexOf(">", var6);
+          var7 = this.field_s.substring(var6 + 9, var8);
+          var8 = Integer.parseInt(var7);
+          var3 = this.field_s.indexOf("</hotspot>", var6);
+          var9 = var5.a((byte) 24, var6);
+          var10 = var5.a((byte) 24, var3);
+          var11 = null;
+          for (var12 = var9; var10 >= var12; var12++) {
+            var13 = var5.field_a[var12];
+            if (var9 == var12) {
+              stackIn_7_0 = var5.a(var6, 124);
+            } else {
+              stackIn_7_0 = var13.field_c[0];
             }
-            continue L0;
+            var14 = stackIn_7_0;
+            if (var12 == var10) {
+              stackIn_12_0 = var5.a(var3, 116);
+            } else {
+              if (var13 == null) {
+                stackIn_12_0 = 0;
+              } else {
+                stackIn_12_0 = var13.field_c[-1 + var13.field_c.length];
+              }
+            }
+            var15 = stackIn_12_0;
+            var16 = new fb(var8, var14, var13.field_d, var15 - var14, Math.max(var4.a(1), -var13.field_d + var13.field_a));
+            if (var11 != null) {
+              ((fb) (var11)).field_h = var16;
+            }
+            this.field_F.addLast(-44, var16);
+            var11 = var16;
           }
+          continue;
         }
     }
 
@@ -359,9 +357,9 @@ class vf extends hk {
         var7 = Geoblox.field_C;
         var5 = 3 / ((param0 + 46) / 58);
         var4 = (fb) ((Object) this.field_F.firstForIteration(0));
-        L0: while (var4 != null) {
+        while (var4 != null) {
           var6 = var4;
-          L1: while (var6 != null) {
+          while (var6 != null) {
             if (var6.field_k <= param2) {
               if (param1 >= var6.field_i) {
                 if (param2 < var6.field_f + var6.field_k) {

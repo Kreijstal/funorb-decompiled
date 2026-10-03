@@ -157,7 +157,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                     param8 = 0;
                   }
                   var16 = mh.field_b[param8];
-                  L8: while (param8 < param7) {
+                  while (param8 < param7) {
                     var17 = var9_int >> 16;
                     if (mh.field_c > var17) {
                       var18 = (var10 >> 16) - (var9_int >> 16);
@@ -211,7 +211,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               }
               var16 = -91 % ((param3 - 74) / 33);
               var15 = mh.field_b[param8];
-              L13: while (param5 > param8) {
+              while (param5 > param8) {
                 var17 = var9_int >> 16;
                 if (mh.field_c > var17) {
                   var18 = (var10 >> 16) - (var9_int >> 16);

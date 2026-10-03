@@ -69,62 +69,56 @@ final class MonochromeBitmapFont extends BitmapFont {
           if (maskRow >= glyphTopRelativeToClip + height) {
             return;
           }
-          {
-            maskStartRelativeToClip = maskStarts[maskRow];
-            maskWidth = maskWidths[maskRow];
-            availableGlyphWidth = width;
-            if (glyphLeftRelativeToClip <= maskStartRelativeToClip) {
-              leadingClipOrTrailingSkip = maskStartRelativeToClip - glyphLeftRelativeToClip;
-              if (leadingClipOrTrailingSkip >= width) {
-                sourceIndex = sourceIndex + (width + sourceRowSkip);
-                destinationIndex = destinationIndex + (width + destinationRowSkip);
-                maskRow++;
-                continue L0;
-              }
-              sourceIndex = sourceIndex + leadingClipOrTrailingSkip;
-              availableGlyphWidth = availableGlyphWidth - leadingClipOrTrailingSkip;
-              destinationIndex = destinationIndex + leadingClipOrTrailingSkip;
-            } else {
-              leadingClipOrTrailingSkip = glyphLeftRelativeToClip - maskStartRelativeToClip;
-              if (leadingClipOrTrailingSkip >= maskWidth) {
-                sourceIndex = sourceIndex + (width + sourceRowSkip);
-                destinationIndex = destinationIndex + (width + destinationRowSkip);
-                maskRow++;
-                continue L0;
-              }
-              maskWidth = maskWidth - leadingClipOrTrailingSkip;
+          maskStartRelativeToClip = maskStarts[maskRow];
+          maskWidth = maskWidths[maskRow];
+          availableGlyphWidth = width;
+          if (glyphLeftRelativeToClip <= maskStartRelativeToClip) {
+            leadingClipOrTrailingSkip = maskStartRelativeToClip - glyphLeftRelativeToClip;
+            if (leadingClipOrTrailingSkip >= width) {
+              sourceIndex = sourceIndex + (width + sourceRowSkip);
+              destinationIndex = destinationIndex + (width + destinationRowSkip);
+              maskRow++;
+              continue;
             }
-            leadingClipOrTrailingSkip = 0;
-            if (availableGlyphWidth >= maskWidth) {
-              leadingClipOrTrailingSkip = availableGlyphWidth - maskWidth;
-            } else {
-              maskWidth = availableGlyphWidth;
+            sourceIndex = sourceIndex + leadingClipOrTrailingSkip;
+            availableGlyphWidth = availableGlyphWidth - leadingClipOrTrailingSkip;
+            destinationIndex = destinationIndex + leadingClipOrTrailingSkip;
+          } else {
+            leadingClipOrTrailingSkip = glyphLeftRelativeToClip - maskStartRelativeToClip;
+            if (leadingClipOrTrailingSkip >= maskWidth) {
+              sourceIndex = sourceIndex + (width + sourceRowSkip);
+              destinationIndex = destinationIndex + (width + destinationRowSkip);
+              maskRow++;
+              continue;
             }
-            negativePixelCounter = -maskWidth;
-            L3: while (true) {
-              if (negativePixelCounter >= 0) {
-                sourceIndex = sourceIndex + (leadingClipOrTrailingSkip + sourceRowSkip);
-                destinationIndex = destinationIndex + (leadingClipOrTrailingSkip + destinationRowSkip);
-                maskRow++;
-                continue L0;
-              }
-              {
-                sourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                if (glyphMask[sourceIndexBeforeIncrement] == 0) {
-                  destinationIndex++;
-                  negativePixelCounter++;
-                  continue L3;
-                }
-                {
-                  destinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  SoftwareRasterizer.framebuffer[destinationIndexBeforeIncrement] = color;
-                  negativePixelCounter++;
-                  continue L3;
-                }
-              }
+            maskWidth = maskWidth - leadingClipOrTrailingSkip;
+          }
+          leadingClipOrTrailingSkip = 0;
+          if (availableGlyphWidth >= maskWidth) {
+            leadingClipOrTrailingSkip = availableGlyphWidth - maskWidth;
+          } else {
+            maskWidth = availableGlyphWidth;
+          }
+          negativePixelCounter = -maskWidth;
+          while (true) {
+            if (negativePixelCounter >= 0) {
+              sourceIndex = sourceIndex + (leadingClipOrTrailingSkip + sourceRowSkip);
+              destinationIndex = destinationIndex + (leadingClipOrTrailingSkip + destinationRowSkip);
+              maskRow++;
+              continue L0;
             }
+            sourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            if (glyphMask[sourceIndexBeforeIncrement] == 0) {
+              destinationIndex++;
+              negativePixelCounter++;
+              continue;
+            }
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            SoftwareRasterizer.framebuffer[destinationIndexBeforeIncrement] = color;
+            negativePixelCounter++;
+            continue;
           }
         }
     }
@@ -193,80 +187,70 @@ final class MonochromeBitmapFont extends BitmapFont {
           if (negativeRowCounter >= 0) {
             return;
           }
-          {
-            negativeGroupOrTailCounter = negativeFourPixelGroupCount;
-            L1: while (true) {
-              if (negativeGroupOrTailCounter >= 0) {
-                negativeGroupOrTailCounter = widthOrNegativeTailCount;
-                L2: while (true) {
-                  if (negativeGroupOrTailCounter >= 0) {
-                    destinationIndex = destinationIndex + destinationRowSkip;
-                    sourceIndex = sourceIndex + sourceRowSkip;
-                    negativeRowCounter++;
-                    continue L0;
-                  }
-                  {
-                    tailSourceIndexBeforeIncrement = sourceIndex;
-                    sourceIndex++;
-                    if (glyphMask[tailSourceIndexBeforeIncrement] == 0) {
-                      destinationIndex++;
-                      negativeGroupOrTailCounter++;
-                      continue L2;
-                    }
-                    {
-                      tailDestinationIndexBeforeIncrement = destinationIndex;
-                      destinationIndex++;
-                      destinationPixels[tailDestinationIndexBeforeIncrement] = color;
-                      negativeGroupOrTailCounter++;
-                      continue L2;
-                    }
-                  }
+          negativeGroupOrTailCounter = negativeFourPixelGroupCount;
+          while (true) {
+            if (negativeGroupOrTailCounter >= 0) {
+              negativeGroupOrTailCounter = widthOrNegativeTailCount;
+              while (true) {
+                if (negativeGroupOrTailCounter >= 0) {
+                  destinationIndex = destinationIndex + destinationRowSkip;
+                  sourceIndex = sourceIndex + sourceRowSkip;
+                  negativeRowCounter++;
+                  continue L0;
                 }
-              }
-              {
-                firstSourceIndexBeforeIncrement = sourceIndex;
+                tailSourceIndexBeforeIncrement = sourceIndex;
                 sourceIndex++;
-                if (glyphMask[firstSourceIndexBeforeIncrement] == 0) {
-                  destinationIndex++;
-                } else {
-                  firstDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[firstDestinationIndexBeforeIncrement] = color;
-                }
-                secondSourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                if (glyphMask[secondSourceIndexBeforeIncrement] == 0) {
-                  destinationIndex++;
-                } else {
-                  secondDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[secondDestinationIndexBeforeIncrement] = color;
-                }
-                thirdSourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                if (glyphMask[thirdSourceIndexBeforeIncrement] == 0) {
-                  destinationIndex++;
-                } else {
-                  thirdDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[thirdDestinationIndexBeforeIncrement] = color;
-                }
-                fourthSourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                if (glyphMask[fourthSourceIndexBeforeIncrement] == 0) {
+                if (glyphMask[tailSourceIndexBeforeIncrement] == 0) {
                   destinationIndex++;
                   negativeGroupOrTailCounter++;
-                  continue L1;
+                  continue;
                 }
-                {
-                  fourthDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[fourthDestinationIndexBeforeIncrement] = color;
-                  negativeGroupOrTailCounter++;
-                  continue L1;
-                }
+                tailDestinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                destinationPixels[tailDestinationIndexBeforeIncrement] = color;
+                negativeGroupOrTailCounter++;
+                continue;
               }
             }
+            firstSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            if (glyphMask[firstSourceIndexBeforeIncrement] == 0) {
+              destinationIndex++;
+            } else {
+              firstDestinationIndexBeforeIncrement = destinationIndex;
+              destinationIndex++;
+              destinationPixels[firstDestinationIndexBeforeIncrement] = color;
+            }
+            secondSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            if (glyphMask[secondSourceIndexBeforeIncrement] == 0) {
+              destinationIndex++;
+            } else {
+              secondDestinationIndexBeforeIncrement = destinationIndex;
+              destinationIndex++;
+              destinationPixels[secondDestinationIndexBeforeIncrement] = color;
+            }
+            thirdSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            if (glyphMask[thirdSourceIndexBeforeIncrement] == 0) {
+              destinationIndex++;
+            } else {
+              thirdDestinationIndexBeforeIncrement = destinationIndex;
+              destinationIndex++;
+              destinationPixels[thirdDestinationIndexBeforeIncrement] = color;
+            }
+            fourthSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            if (glyphMask[fourthSourceIndexBeforeIncrement] == 0) {
+              destinationIndex++;
+              negativeGroupOrTailCounter++;
+              continue;
+            }
+            fourthDestinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            destinationPixels[fourthDestinationIndexBeforeIncrement] = color;
+            negativeGroupOrTailCounter++;
+            continue;
           }
         }
     }
@@ -285,30 +269,26 @@ final class MonochromeBitmapFont extends BitmapFont {
             return;
           }
           negativeColumnCounter = -width;
-          L1: while (true) {
+          while (true) {
             if (negativeColumnCounter >= 0) {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
               continue L0;
             }
-            {
-              sourceIndexBeforeIncrement = sourceIndex;
-              sourceIndex++;
-              if (glyphMask[sourceIndexBeforeIncrement] == 0) {
-                destinationIndex++;
-                negativeColumnCounter++;
-                continue L1;
-              }
-              {
-                destinationColor = destinationPixels[destinationIndex];
-                destinationIndexBeforeIncrement = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * alphaOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * alphaOrDestinationWeight256 & 16711680) >> 8) + colorOrWeightedColor;
-                negativeColumnCounter++;
-                continue L1;
-              }
+            sourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            if (glyphMask[sourceIndexBeforeIncrement] == 0) {
+              destinationIndex++;
+              negativeColumnCounter++;
+              continue;
             }
+            destinationColor = destinationPixels[destinationIndex];
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * alphaOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * alphaOrDestinationWeight256 & 16711680) >> 8) + colorOrWeightedColor;
+            negativeColumnCounter++;
+            continue;
           }
         }
     }

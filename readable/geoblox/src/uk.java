@@ -190,33 +190,31 @@ final class uk extends TextInputValidator {
           if (param0 <= 20) {
             return;
           }
-          {
-            if (rb.field_c) {
-              var6 = var6 | 1;
-            }
-            if (ll.field_e) {
-              var6 = var6 | 4;
-            }
-            if (param4) {
-              var6 = var6 | 8;
-            }
-            if (null != fl.field_b) {
-              var6 = var6 | 16;
-            }
-            fj.field_q.writeByte((byte) 127, var6);
-            var7 = s.a(-1, k.c(111));
-            if (var7 == null) {
-              var7 = "";
-            }
-            fj.field_q.writeNullTerminatedText(var7, 0);
-            if (null != fl.field_b) {
-              fj.field_q.writeZeroPrefixedNullTerminatedText(fl.field_b, (byte) -126);
-            }
-            el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
-            fj.field_q.backpatchLengthShortBE(-var5_int + fj.field_q.position, true);
-            cm.a(-1, -1);
-            return;
+          if (rb.field_c) {
+            var6 = var6 | 1;
           }
+          if (ll.field_e) {
+            var6 = var6 | 4;
+          }
+          if (param4) {
+            var6 = var6 | 8;
+          }
+          if (null != fl.field_b) {
+            var6 = var6 | 16;
+          }
+          fj.field_q.writeByte((byte) 127, var6);
+          var7 = s.a(-1, k.c(111));
+          if (var7 == null) {
+            var7 = "";
+          }
+          fj.field_q.writeNullTerminatedText(var7, 0);
+          if (null != fl.field_b) {
+            fj.field_q.writeZeroPrefixedNullTerminatedText(fl.field_b, (byte) -126);
+          }
+          el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
+          fj.field_q.backpatchLengthShortBE(-var5_int + fj.field_q.position, true);
+          cm.a(-1, -1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

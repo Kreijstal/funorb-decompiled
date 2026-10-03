@@ -62,51 +62,49 @@ final class ab {
             stackIn_4_0 = gg.createNameLengthAlertText;
             return stackIn_4_0;
           }
-          {
-            var3_int = param2.length();
-            if (var3_int >= 1) {
-              if (var3_int <= 12) {
-                var4 = oe.a(param2, 12);
-                if (param1 != 2) {
-                  ab.a((byte) 112);
-                }
-                if (var4 != null) {
-                  if (var4.length() >= 1) {
-                    if (!gg.a((byte) -32, var4.charAt(0))) {
-                      if (!gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
-                        var5 = 0;
-                        for (var6 = 0; var6 < param2.length(); var6++) {
-                          var7 = param2.charAt(var6);
-                          if (gg.a((byte) -96, (char) var7)) {
-                            var5++;
-                          } else {
-                            var5 = 0;
-                          }
-                          if (2 <= var5) {
-                            if (!param0) {
-                              stackIn_31_0 = fa.createDoubleSpaceAlertText;
-                              return stackIn_31_0;
-                            }
-                          }
-                        }
-                        if (var5 <= 0) {
-                          return null;
-                        }
-                        stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
-                        return stackIn_36_0;
-                      }
-                    }
-                    stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
-                    return stackIn_21_0;
-                  }
-                }
-                stackIn_16_0 = gg.createNameLengthAlertText;
-                return stackIn_16_0;
+          var3_int = param2.length();
+          if (var3_int >= 1) {
+            if (var3_int <= 12) {
+              var4 = oe.a(param2, 12);
+              if (param1 != 2) {
+                ab.a((byte) 112);
               }
+              if (var4 != null) {
+                if (var4.length() >= 1) {
+                  if (!gg.a((byte) -32, var4.charAt(0))) {
+                    if (!gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
+                      var5 = 0;
+                      for (var6 = 0; var6 < param2.length(); var6++) {
+                        var7 = param2.charAt(var6);
+                        if (gg.a((byte) -96, (char) var7)) {
+                          var5++;
+                        } else {
+                          var5 = 0;
+                        }
+                        if (2 <= var5) {
+                          if (!param0) {
+                            stackIn_31_0 = fa.createDoubleSpaceAlertText;
+                            return stackIn_31_0;
+                          }
+                        }
+                      }
+                      if (var5 <= 0) {
+                        return null;
+                      }
+                      stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
+                      return stackIn_36_0;
+                    }
+                  }
+                  stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
+                  return stackIn_21_0;
+                }
+              }
+              stackIn_16_0 = gg.createNameLengthAlertText;
+              return stackIn_16_0;
             }
-            stackIn_9_0 = gg.createNameLengthAlertText;
-            return stackIn_9_0;
           }
+          stackIn_9_0 = gg.createNameLengthAlertText;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -196,7 +194,7 @@ final class ab {
           wb.newAttachmentCount = 0;
           sh.mainRasterBuffer.setAsRasterTarget(255);
           movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-          L0: while (movingEntity != null) {
+          while (movingEntity != null) {
             L2: {
               if (a.attachedEntities != movingEntity.entityQueue) {
                 if (!el.gameplaySession.tutorialPromptActive) {
@@ -236,7 +234,7 @@ final class ab {
                     break L2;
                   }
                   movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
-                  continue L0;
+                  continue;
                 }
                 if (ma.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
                   neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
@@ -244,46 +242,44 @@ final class ab {
                   if (a.attachedEntities == contactedEntity.entityQueue) {
                     break L2;
                   }
-                  {
-                    sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
-                    sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;
-                    velocityMagnitudeSquaredThenSpeedScale = sharedVelocityYOrDirectionScale * sharedVelocityYOrDirectionScale + sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct;
-                    velocityMagnitudeSquaredThenSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
-                    sharedVelocityYOrDirectionScale = sharedVelocityYOrDirectionScale * velocityMagnitudeSquaredThenSpeedScale;
-                    sharedVelocityXOrCrossProduct = sharedVelocityXOrCrossProduct * velocityMagnitudeSquaredThenSpeedScale;
-                    centerOffsetX = -contactedEntity.positionX + 320.0f;
-                    centerOffsetY = 240.0f - contactedEntity.positionY;
-                    nextCenterOffsetXThenSquared = -sharedVelocityXOrCrossProduct - contactedEntity.positionX + 320.0f;
-                    nextCenterOffsetYThenSquared = 240.0f - (contactedEntity.positionY + sharedVelocityYOrDirectionScale);
-                    nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
-                    nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
-                    contactedEntityMovesOutwardIntSnapshot = (!(nextCenterOffsetXThenSquared + nextCenterOffsetYThenSquared > centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX)) ? 0 : 1;
-                    contactedEntityMovesOutwardInt = contactedEntityMovesOutwardIntSnapshot;
-                    centerOffsetX = 320.0f - movingEntity.positionX;
-                    nextCenterOffsetYThenSquared = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
-                    nextCenterOffsetXThenSquared = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
-                    centerOffsetY = -movingEntity.positionY + 240.0f;
-                    nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
-                    nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
-                    movingEntityMovesOutwardIntSnapshot = (!(centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX < nextCenterOffsetYThenSquared + nextCenterOffsetXThenSquared)) ? 0 : 1;
-                    movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
-                    if (contactedEntityMovesOutwardInt != 0) {
-                      if (movingEntityMovesOutwardInt != 0) {
-                        centerOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
-                        centerOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
-                        midpointInwardSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
-                        sharedVelocityXOrCrossProduct = centerOffsetX * midpointInwardSpeedScale;
-                        sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetY;
-                      }
+                  sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
+                  sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;
+                  velocityMagnitudeSquaredThenSpeedScale = sharedVelocityYOrDirectionScale * sharedVelocityYOrDirectionScale + sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct;
+                  velocityMagnitudeSquaredThenSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
+                  sharedVelocityYOrDirectionScale = sharedVelocityYOrDirectionScale * velocityMagnitudeSquaredThenSpeedScale;
+                  sharedVelocityXOrCrossProduct = sharedVelocityXOrCrossProduct * velocityMagnitudeSquaredThenSpeedScale;
+                  centerOffsetX = -contactedEntity.positionX + 320.0f;
+                  centerOffsetY = 240.0f - contactedEntity.positionY;
+                  nextCenterOffsetXThenSquared = -sharedVelocityXOrCrossProduct - contactedEntity.positionX + 320.0f;
+                  nextCenterOffsetYThenSquared = 240.0f - (contactedEntity.positionY + sharedVelocityYOrDirectionScale);
+                  nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
+                  nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
+                  contactedEntityMovesOutwardIntSnapshot = (!(nextCenterOffsetXThenSquared + nextCenterOffsetYThenSquared > centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX)) ? 0 : 1;
+                  contactedEntityMovesOutwardInt = contactedEntityMovesOutwardIntSnapshot;
+                  centerOffsetX = 320.0f - movingEntity.positionX;
+                  nextCenterOffsetYThenSquared = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
+                  nextCenterOffsetXThenSquared = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
+                  centerOffsetY = -movingEntity.positionY + 240.0f;
+                  nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
+                  nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
+                  movingEntityMovesOutwardIntSnapshot = (!(centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX < nextCenterOffsetYThenSquared + nextCenterOffsetXThenSquared)) ? 0 : 1;
+                  movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
+                  if (contactedEntityMovesOutwardInt != 0) {
+                    if (movingEntityMovesOutwardInt != 0) {
+                      centerOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
+                      centerOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
+                      midpointInwardSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
+                      sharedVelocityXOrCrossProduct = centerOffsetX * midpointInwardSpeedScale;
+                      sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetY;
                     }
-                    movingEntity.velocityY = movingEntity.velocityY * -1.0f;
-                    movingEntity.velocityX = movingEntity.velocityX * -1.0f;
-                    movingEntity.integrateEntityVelocity((byte) -59);
-                    contactedEntity.velocityX = sharedVelocityXOrCrossProduct;
-                    movingEntity.velocityX = sharedVelocityXOrCrossProduct;
-                    contactedEntity.velocityY = sharedVelocityYOrDirectionScale;
-                    movingEntity.velocityY = sharedVelocityYOrDirectionScale;
                   }
+                  movingEntity.velocityY = movingEntity.velocityY * -1.0f;
+                  movingEntity.velocityX = movingEntity.velocityX * -1.0f;
+                  movingEntity.integrateEntityVelocity((byte) -59);
+                  contactedEntity.velocityX = sharedVelocityXOrCrossProduct;
+                  movingEntity.velocityX = sharedVelocityXOrCrossProduct;
+                  contactedEntity.velocityY = sharedVelocityYOrDirectionScale;
+                  movingEntity.velocityY = sharedVelocityYOrDirectionScale;
                 } else {
                   inwardOffsetX = 320.0f - movingEntity.positionX;
                   inwardOffsetY = 240.0f - movingEntity.positionY;
@@ -305,7 +301,7 @@ final class ab {
           }
           neighborIndexOrKindFlagOrContactIdOrDivisionGuard = -125 % ((methodGuard - 35) / 49);
           trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-          L1: while (trailEntity != null) {
+          while (trailEntity != null) {
             trailEntity.eraseEntityTrail(30383);
             trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }

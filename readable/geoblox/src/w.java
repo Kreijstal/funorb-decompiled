@@ -14,11 +14,11 @@ final class w {
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         param7--;
-        L0: while (param7 >= 0) {
-          L1: for (var9 = param6 - 1; var9 >= 0; var9--) {
+        while (param7 >= 0) {
+          for (var9 = param6 - 1; var9 >= 0; var9--) {
             if (param0[param1] <= 1) {
               param1++;
-              continue L1;
+              continue;
             }
             param2 = param1 - 1;
             param3 = param1 + 1;
@@ -59,7 +59,7 @@ final class w {
             }
             if (param0[param5 + SoftwareRasterizer.stride] != 0) {
               param1++;
-              continue L1;
+              continue;
             }
             param0[param5 + SoftwareRasterizer.stride] = 1;
             param1++;
@@ -184,7 +184,7 @@ final class w {
         int var9;
         for (var8 = -param5; var8 < 0; var8++) {
           var9 = param3 + param4 - 3;
-          L1: while (param3 < var9) {
+          while (param3 < var9) {
             if (param0[param3] == 0) {
               param0[param3] = param1[param2];
             }
@@ -203,18 +203,18 @@ final class w {
             if (param0[param3] != 0) {
               param3++;
               param2++;
-              continue L1;
+              continue;
             }
             param0[param3] = param1[param2];
             param3++;
             param2++;
           }
           var9 += 3;
-          L2: while (param3 < var9) {
+          while (param3 < var9) {
             if (param0[param3] != 0) {
               param3++;
               param2++;
-              continue L2;
+              continue;
             }
             param0[param3] = param1[param2];
             param3++;

@@ -28,29 +28,27 @@ final class al {
                 Bzip2DecoderState.a((byte) -124);
                 return;
               }
-              {
-                var4 = var9.readUnsignedByte((byte) 34);
-                if (0 != var4) {
-                  var13 = new byte[var4];
-                  var9.readBytes(29915, var4, var13, 0);
-                } else {
-                  var5 = null;
-                }
-                var9.position = var9.position + 4;
-                if (!var9.verifyTrailingCrc32((byte) 20)) {
-                  Bzip2DecoderState.a((byte) -121);
-                  return;
-                }
-                var8.unlinkNode(false);
+              var4 = var9.readUnsignedByte((byte) 34);
+              if (0 != var4) {
+                var13 = new byte[var4];
+                var9.readBytes(29915, var4, var13, 0);
+              } else {
+                var5 = null;
               }
+              var9.position = var9.position + 4;
+              if (!var9.verifyTrailingCrc32((byte) 20)) {
+                Bzip2DecoderState.a((byte) -121);
+                return;
+              }
+              var8.unlinkNode(false);
             } else {
               if (1 == var2) {
                 var3 = var9.readIntBE((byte) -101);
                 var4_ref_wc = (wc) ((Object) l.field_g.firstForIteration(0));
-                L2: while (var4_ref_wc != null) {
+                while (var4_ref_wc != null) {
                   if (var3 != var4_ref_wc.field_h) {
                     var4_ref_wc = (wc) ((Object) l.field_g.nextForIteration(1));
-                    continue L2;
+                    continue;
                   }
                   break;
                 }

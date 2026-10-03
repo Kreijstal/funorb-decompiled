@@ -33,28 +33,26 @@ final class BufferedSocket implements Runnable {
             if (this.closeRequested) {
               return;
             }
-            {
-              closeMonitor = this;
-              synchronized (closeMonitor) {
-                this.closeRequested = true;
-                this.notifyAll();
-              }
-              if (this.writerTask != null) {
-                L2: while (0 == this.writerTask.status) {
-                  bc.sleepMillis(0, 1L);
-                }
-                if (1 == this.writerTask.status) {
-                  try {
-                    ((Thread) (this.writerTask.result)).join();
-                  } catch (java.lang.InterruptedException joinInterruption) {
-                    caughtThrowable = joinInterruption;
-                    ignoredJoinInterruption = (InterruptedException) (Object) caughtThrowable;
-                  }
-                }
-              }
-              this.writerTask = null;
-              return;
+            closeMonitor = this;
+            synchronized (closeMonitor) {
+              this.closeRequested = true;
+              this.notifyAll();
             }
+            if (this.writerTask != null) {
+              while (0 == this.writerTask.status) {
+                bc.sleepMillis(0, 1L);
+              }
+              if (1 == this.writerTask.status) {
+                try {
+                  ((Thread) (this.writerTask.result)).join();
+                } catch (java.lang.InterruptedException joinInterruption) {
+                  caughtThrowable = joinInterruption;
+                  ignoredJoinInterruption = (InterruptedException) (Object) caughtThrowable;
+                }
+              }
+            }
+            this.writerTask = null;
+            return;
         } catch (RuntimeException | Error uncheckedFailure) {
             throw uncheckedFailure;
         } catch (Throwable checkedFailure) {
@@ -112,7 +110,7 @@ final class BufferedSocket implements Runnable {
           if (this.closeRequested) {
             return;
           }
-          L0: while (remainingLength > 0) {
+          while (remainingLength > 0) {
             bytesRead = this.inputStream.read(destination, destinationOffset, remainingLength);
             if (0 >= bytesRead) {
               throw new EOFException();
@@ -151,32 +149,30 @@ final class BufferedSocket implements Runnable {
             this.writeFailurePending = false;
             throw new IOException();
           }
-          {
-            if (null == this.writeBuffer) {
-              this.writeBuffer = new byte[this.bufferCapacity];
-            }
-            enqueueMonitor = this;
-            synchronized (enqueueMonitor) {
-              L1: {
-                for (sourceIndex = 0; length > sourceIndex; sourceIndex++) {
-                  this.writeBuffer[this.writeInsertIndex] = source[sourceOffset + sourceIndex];
-                  this.writeInsertIndex = (this.writeInsertIndex + 1) % this.bufferCapacity;
-                  if (this.writeInsertIndex == (this.bufferCapacity + (this.writeReadIndex - 100)) % this.bufferCapacity) {
-                    throw new IOException();
-                  }
-                }
-                if (guard != 100) {
-                  this.outputStream = (OutputStream) null;
-                }
-                if (null == this.writerTask) {
-                  this.writerTask = this.taskDispatcher.startThread((Runnable) (this), 0, 3);
-                }
-                this.notifyAll();
-                break L1;
-              }
-            }
-            return;
+          if (null == this.writeBuffer) {
+            this.writeBuffer = new byte[this.bufferCapacity];
           }
+          enqueueMonitor = this;
+          synchronized (enqueueMonitor) {
+            L1: {
+              for (sourceIndex = 0; length > sourceIndex; sourceIndex++) {
+                this.writeBuffer[this.writeInsertIndex] = source[sourceOffset + sourceIndex];
+                this.writeInsertIndex = (this.writeInsertIndex + 1) % this.bufferCapacity;
+                if (this.writeInsertIndex == (this.bufferCapacity + (this.writeReadIndex - 100)) % this.bufferCapacity) {
+                  throw new IOException();
+                }
+              }
+              if (guard != 100) {
+                this.outputStream = (OutputStream) null;
+              }
+              if (null == this.writerTask) {
+                this.writerTask = this.taskDispatcher.startThread((Runnable) (this), 0, 3);
+              }
+              this.notifyAll();
+              break L1;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException enqueueRuntimeFailure) {
           caughtEnqueueFailure = enqueueRuntimeFailure;
           enqueueFailure = (RuntimeException) (Object) caughtEnqueueFailure;
@@ -226,7 +222,7 @@ final class BufferedSocket implements Runnable {
             String unusedReportMessage = null;
             try {
               L0: {
-                L1: while (true) {
+                while (true) {
                   writerMonitor = this;
                   synchronized (writerMonitor) {
                     L2: {
@@ -270,7 +266,7 @@ final class BufferedSocket implements Runnable {
                     break L0;
                   }
                   if (contiguousWriteLength <= 0) {
-                    continue L1;
+                    continue;
                   }
                   try {
                     this.outputStream.write(this.writeBuffer, contiguousWriteOffset, contiguousWriteLength);
@@ -289,7 +285,7 @@ final class BufferedSocket implements Runnable {
                     ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
                     this.writeFailurePending = true;
                   }
-                  continue L1;
+                  continue;
                 }
               }
             } catch (java.lang.Exception unexpectedWorkerFailure) {

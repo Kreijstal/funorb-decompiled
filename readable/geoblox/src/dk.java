@@ -43,25 +43,23 @@ abstract class dk {
           if (null != this.field_a) {
             var3 = this.field_a;
             var4 = 0;
-            L1: while (true) {
+            while (true) {
               if (var3.length <= var4) {
                 break L0;
               }
               var5 = var3[var4];
               if (var5 == null) {
                 var4++;
-                continue L1;
+                continue;
               }
-              {
-                var6 = var5.a(0);
-                if (var6 <= var2) {
-                  var4++;
-                  continue L1;
-                }
-                var2 = var6;
+              var6 = var5.a(0);
+              if (var6 <= var2) {
                 var4++;
-                continue L1;
+                continue;
               }
+              var2 = var6;
+              var4++;
+              continue;
             }
           }
         }
@@ -158,9 +156,9 @@ abstract class dk {
               }
               L6: {
                 if (null != je.field_h) {
-                  L7: for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
+                  for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
                     if (null == je.field_h[var1_int]) {
-                      continue L7;
+                      continue;
                     }
                     try {
                       je.field_h[var1_int].close(27034);

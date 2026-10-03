@@ -143,14 +143,14 @@ final class vd {
         pendingPointerPressButton = 0;
         highscoreModeNames = new String[]{"All scores", "My scores", "Best each"};
         field_p = 6;
-        L0: for (var0 = 0; field_b.length > var0; var0++) {
+        for (var0 = 0; field_b.length > var0; var0++) {
           if (var0 != 0) {
             field_b[var0] = (1 + var0) * 51 << 16;
           } else {
             field_b[var0] = (var0 + 1) * 20 << 16;
           }
           if (var0 <= 2) {
-            continue L0;
+            continue;
           }
           field_b[var0] = lb.orInt(field_b[var0], (var0 - 2) * 22 << 8);
         }

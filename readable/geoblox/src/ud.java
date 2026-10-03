@@ -14,7 +14,7 @@ final class ud {
         var3 = Geoblox.field_C;
         try {
           var4 = (p) ((Object) ResourceArchive.field_a.firstForIteration(0));
-          L0: while (var4 != null) {
+          while (var4 != null) {
             ol.a(param1, var4, 30175);
             var4 = (p) ((Object) ResourceArchive.field_a.nextForIteration(1));
           }
@@ -22,7 +22,7 @@ final class ud {
           if (param0 > -123) {
             createDisplayNameTooltipText = (String) null;
           }
-          L2: while (var2 != null) {
+          while (var2 != null) {
             re.b(-101, param1);
             var2 = k.field_e.nextForIteration(1);
           }
@@ -63,7 +63,7 @@ final class ud {
             var6 = (String) null;
             ud.a(55, (String) null);
           }
-          L2: while (var3 != null) {
+          while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_hb);
             var4 = oe.a(var8, 12);
             if (var4 == null) {

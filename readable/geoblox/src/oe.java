@@ -110,7 +110,7 @@ abstract class oe extends dd {
           var1 = var5;
           var2 = param0;
           var3 = var5.length;
-          L0: while (var2 < var3) {
+          while (var2 < var3) {
             incrementValue$16 = var2;
             var2++;
             var5[incrementValue$16] = 0;
@@ -245,52 +245,48 @@ abstract class oe extends dd {
           if (param0 == null) {
             return null;
           }
-          {
-            var2_int = 0;
-            var3 = param0.length();
-            L0: while (var3 > var2_int) {
-              if (gg.a((byte) 125, param0.charAt(var2_int))) {
-                var2_int++;
-                continue L0;
-              }
-              break;
+          var2_int = 0;
+          var3 = param0.length();
+          while (var3 > var2_int) {
+            if (gg.a((byte) 125, param0.charAt(var2_int))) {
+              var2_int++;
+              continue;
             }
-            L2: while (var2_int < var3) {
-              if (gg.a((byte) -47, param0.charAt(var3 - 1))) {
-                var3--;
-                continue L2;
-              }
-              break;
+            break;
+          }
+          while (var2_int < var3) {
+            if (gg.a((byte) -47, param0.charAt(var3 - 1))) {
+              var3--;
+              continue;
             }
-            var4 = -var2_int + var3;
-            if (1 > var4) {
-              return null;
-            }
-            if (12 < var4) {
-              return null;
-            }
-            {
-              if (param1 != 12) {
-                connectionRestoredText = (String) null;
+            break;
+          }
+          var4 = -var2_int + var3;
+          if (1 > var4) {
+            return null;
+          }
+          if (12 < var4) {
+            return null;
+          }
+          if (param1 != 12) {
+            connectionRestoredText = (String) null;
+          }
+          var5 = new StringBuilder(var4);
+          for (var6 = var2_int; var6 < var3; var6++) {
+            var7 = param0.charAt(var6);
+            if (fb.a((char) var7, -47)) {
+              var8 = hc.a((char) var7, param1 - 239);
+              if (var8 != 0) {
+                discarded$0 = var5.append((char) var8);
               }
-              var5 = new StringBuilder(var4);
-              for (var6 = var2_int; var6 < var3; var6++) {
-                var7 = param0.charAt(var6);
-                if (fb.a((char) var7, -47)) {
-                  var8 = hc.a((char) var7, param1 - 239);
-                  if (var8 != 0) {
-                    discarded$0 = var5.append((char) var8);
-                  }
-                }
-              }
-              if (var5.length() != 0) {
-                stackIn_28_0 = var5.toString();
-                return stackIn_28_0;
-              }
-              stackIn_26_0 = null;
-              return (String) ((Object) stackIn_26_0);
             }
           }
+          if (var5.length() != 0) {
+            stackIn_28_0 = var5.toString();
+            return stackIn_28_0;
+          }
+          stackIn_26_0 = null;
+          return (String) ((Object) stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -392,64 +388,62 @@ abstract class oe extends dd {
                 }
                 break L3;
               }
-              {
-                for (var9 = 15; var9 >= 0; var9--) {
-                  if ((var5 & 1 << var9) == 0) {
-                    var7 += 20;
-                    var8++;
+              for (var9 = 15; var9 >= 0; var9--) {
+                if ((var5 & 1 << var9) == 0) {
+                  var7 += 20;
+                  var8++;
+                }
+              }
+              if (var8 >= 8) {
+                var3_int = var3_int + (-160 + var7);
+              }
+              for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
+                L7: {
+                  if ((1 << var9 & var5) == 0) {
+                    if (param0) {
+                      break L7;
+                    }
                   }
-                }
-                if (var8 >= 8) {
-                  var3_int = var3_int + (-160 + var7);
-                }
-                for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
-                  L7: {
-                    if ((1 << var9 & var5) == 0) {
-                      if (param0) {
+                  if (!da.a(0, 88)) {
+                    if (var9 == 16) {
+                      if (!qi.d(109)) {
                         break L7;
                       }
                     }
-                    if (!da.a(0, 88)) {
-                      if (var9 == 16) {
-                        if (!qi.d(109)) {
-                          break L7;
-                        }
-                      }
-                    }
-                    if (mc.pointerPressXSnapshot >= var3_int) {
-                      if (mc.pointerPressXSnapshot <= var3_int + 32) {
-                        if (var4 <= he.pointerPressYSnapshot) {
-                          if (he.pointerPressYSnapshot <= var4 + 32) {
-                            if (a.field_e == var9) {
-                              a.field_e = -1;
-                              break L2;
-                            }
-                            a.field_e = var9;
+                  }
+                  if (mc.pointerPressXSnapshot >= var3_int) {
+                    if (mc.pointerPressXSnapshot <= var3_int + 32) {
+                      if (var4 <= he.pointerPressYSnapshot) {
+                        if (he.pointerPressYSnapshot <= var4 + 32) {
+                          if (a.field_e == var9) {
+                            a.field_e = -1;
                             break L2;
                           }
-                        }
-                      }
-                    }
-                    incrementValue$0 = var6;
-                    var6++;
-                    if (7 != incrementValue$0) {
-                      var3_int += 40;
-                    } else {
-                      var3_int = 160;
-                      var4 += 40;
-                      if (!param1) {
-                        var4 += 5;
-                      }
-                      if (param0) {
-                        if (var8 < 8) {
-                          var3_int = var3_int + var7;
+                          a.field_e = var9;
+                          break L2;
                         }
                       }
                     }
                   }
+                  incrementValue$0 = var6;
+                  var6++;
+                  if (7 != incrementValue$0) {
+                    var3_int += 40;
+                  } else {
+                    var3_int = 160;
+                    var4 += 40;
+                    if (!param1) {
+                      var4 += 5;
+                    }
+                    if (param0) {
+                      if (var8 < 8) {
+                        var3_int = var3_int + var7;
+                      }
+                    }
+                  }
                 }
-                break L3;
               }
+              break L3;
             }
           }
           return;
@@ -481,43 +475,39 @@ abstract class oe extends dd {
         var6 = 194;
         var7 = 0;
         var8 = param2;
-        L0: while (var4 > var7) {
+        while (var4 > var7) {
           if (~var8 > ~SoftwareRasterizer.clipTop) {
             var8++;
             var7++;
-            continue L0;
+            continue;
           }
           if (SoftwareRasterizer.clipBottom <= var8) {
             var8++;
             var7++;
-            continue L0;
+            continue;
           }
           L4: {
             var9 = (-var5 + var6) * var7 / var4 + var5;
             var10 = 0;
             var11 = this.field_r;
             if (var7 <= 20) {
-              L5: while (true) {
+              while (true) {
                 if (var10 > 20) {
                   break L4;
                 }
-                {
-                  var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
-                  if (var12 > 462) {
-                    var10++;
-                    continue L5;
-                  }
-                  if (var12 < 420) {
-                    break L4;
-                  }
-                  {
-                    var13 = (-var12 + 462) * var9 / 42;
-                    var13 = var13 | (var13 << 8 | var13 << 16);
-                    SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param0 + var10] = var13;
-                    var10++;
-                    continue L5;
-                  }
+                var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
+                if (var12 > 462) {
+                  var10++;
+                  continue;
                 }
+                if (var12 < 420) {
+                  break L4;
+                }
+                var13 = (-var12 + 462) * var9 / 42;
+                var13 = var13 | (var13 << 8 | var13 << 16);
+                SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param0 + var10] = var13;
+                var10++;
+                continue;
               }
             }
           }
@@ -525,21 +515,19 @@ abstract class oe extends dd {
             if (20 >= var7) {
               var12 = var11;
               var11 -= 21;
-              L7: for (var13 = 0; var13 <= 20; var13++) {
+              for (var13 = 0; var13 <= 20; var13++) {
                 var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
                 if (var14 <= 462) {
                   if (var14 < 420) {
                     var12 = var11 + 1;
                     var11++;
-                    continue L7;
+                    continue;
                   }
-                  {
-                    var15 = var9 * (462 - var14) / 42;
-                    var15 = var15 | (var15 << 8 | var15 << 16);
-                    SoftwareRasterizer.framebuffer[var11 + param0 + SoftwareRasterizer.stride * var8] = var15;
-                    var11++;
-                    continue L7;
-                  }
+                  var15 = var9 * (462 - var14) / 42;
+                  var15 = var15 | (var15 << 8 | var15 << 16);
+                  SoftwareRasterizer.framebuffer[var11 + param0 + SoftwareRasterizer.stride * var8] = var15;
+                  var11++;
+                  continue;
                 }
                 break;
               }
@@ -557,7 +545,7 @@ abstract class oe extends dd {
         var6 = 169;
         var7 = 0;
         var8 = 35 + param2;
-        L1: while (var7 < var4) {
+        while (var7 < var4) {
           var9 = var5 + (-var5 + var6) * var7 / var4;
           var9 = var9 | (var9 << 8 | var9 << 16);
           SoftwareRasterizer.drawHorizontalLine(param0, var8, 6, var9);
@@ -576,7 +564,7 @@ abstract class oe extends dd {
         var6 = 127;
         var7 = 0;
         var8 = param2 + 57;
-        L3: while (var7 < var4) {
+        while (var7 < var4) {
           var9 = var7 * (var6 - var5) / var4 + var5;
           var9 = var9 | (var9 << 16 | var9 << 8);
           SoftwareRasterizer.drawHorizontalLine(param0, var8, 6, var9);

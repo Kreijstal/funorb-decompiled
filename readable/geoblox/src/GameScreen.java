@@ -307,27 +307,25 @@ final class GameScreen extends MenuScreen {
                   if (var4 != 0) {
                     break L2;
                   }
-                  {
-                    var3 = stackIn_16_0;
-                    L4: while (true) {
-                      L5: {
-                        if (~-ee.menuBackgroundSprite.fullHeight >= ~var3) {
-                          ee.menuBackgroundSprite.drawUnmasked(var2_int, var3);
-                          var3 = var3 - ee.menuBackgroundSprite.fullHeight;
-                          if (var4 != 0) {
-                            break L5;
-                          }
-                          if (var4 == 0) {
-                            continue L4;
-                          }
+                  var3 = stackIn_16_0;
+                  while (true) {
+                    L5: {
+                      if (~-ee.menuBackgroundSprite.fullHeight >= ~var3) {
+                        ee.menuBackgroundSprite.drawUnmasked(var2_int, var3);
+                        var3 = var3 - ee.menuBackgroundSprite.fullHeight;
+                        if (var4 != 0) {
+                          break L5;
                         }
-                        var2_int = var2_int + ee.menuBackgroundSprite.fullWidth;
+                        if (var4 == 0) {
+                          continue;
+                        }
                       }
-                      if (var4 == 0) {
-                        continue L1;
-                      }
-                      break L3;
+                      var2_int = var2_int + ee.menuBackgroundSprite.fullWidth;
                     }
+                    if (var4 == 0) {
+                      continue L1;
+                    }
+                    break L3;
                   }
                 }
               }
@@ -344,7 +342,7 @@ final class GameScreen extends MenuScreen {
                       break L8;
                     }
                     var3 = this.field_I + vc.menuForegroundSprite.fullHeight + 480;
-                    L10: while (true) {
+                    while (true) {
                       L11: {
                         if (~var3 <= ~-vc.menuForegroundSprite.fullHeight) {
                           vc.menuForegroundSprite.draw(var2_int, var3);
@@ -353,7 +351,7 @@ final class GameScreen extends MenuScreen {
                             break L11;
                           }
                           if (var4 == 0) {
-                            continue L10;
+                            continue;
                           }
                         }
                         var2_int = var2_int - vc.menuForegroundSprite.fullWidth;
@@ -436,360 +434,358 @@ final class GameScreen extends MenuScreen {
           if (param0 != -28750) {
             return;
           }
-          {
-            this.b(false);
-            var2_int = 270;
-            var3 = 140;
-            var4 = 400;
-            if (this.screenId != 0) {
-              if (this.screenId != 1) {
-                if (this.screenId != 4) {
-                  L1: {
-                    if (2 == this.screenId) {
-                      var2_int = 235;
-                      if (var12 == 0) {
-                        break L1;
-                      }
+          this.b(false);
+          var2_int = 270;
+          var3 = 140;
+          var4 = 400;
+          if (this.screenId != 0) {
+            if (this.screenId != 1) {
+              if (this.screenId != 4) {
+                L1: {
+                  if (2 == this.screenId) {
+                    var2_int = 235;
+                    if (var12 == 0) {
+                      break L1;
                     }
-                    var2_int = 285;
                   }
-                  L3: {
-                    var5 = 120;
-                    if (this.screenId == 3) {
-                      var5 += 10;
-                      if (var12 == 0) {
-                        break L3;
-                      }
-                    }
-                    if (this.screenId != 8) {
-                      if (this.screenId != 7) {
-                        break L3;
-                      }
-                    }
-                    var4 += 20;
-                    var5 -= 10;
-                  }
-                  ma.drawNineSlicePanel(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
+                  var2_int = 285;
                 }
+                L3: {
+                  var5 = 120;
+                  if (this.screenId == 3) {
+                    var5 += 10;
+                    if (var12 == 0) {
+                      break L3;
+                    }
+                  }
+                  if (this.screenId != 8) {
+                    if (this.screenId != 7) {
+                      break L3;
+                    }
+                  }
+                  var4 += 20;
+                  var5 -= 10;
+                }
+                ma.drawNineSlicePanel(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
               }
             }
-            if (!this.field_E) {
-              super.renderScreen(param0 + 0);
-            }
-            L7: {
-              if (this.screenId != 2) {
-                if (this.screenId != 8) {
-                  L9: {
-                    if (5 != this.screenId) {
-                      if (7 != this.screenId) {
-                        break L9;
-                      }
+          }
+          if (!this.field_E) {
+            super.renderScreen(param0 + 0);
+          }
+          L7: {
+            if (this.screenId != 2) {
+              if (this.screenId != 8) {
+                L9: {
+                  if (5 != this.screenId) {
+                    if (7 != this.screenId) {
+                      break L9;
                     }
-                    kh.screenTitleSprites[4].draw(0, 20);
-                    ac.a(false, false, (byte) -93);
+                  }
+                  kh.screenTitleSprites[4].draw(0, 20);
+                  ac.a(false, false, (byte) -93);
+                  if (var12 == 0) {
+                    break L7;
+                  }
+                }
+                if (this.screenId != 6) {
+                  if (this.screenId == 4) {
+                    kh.screenTitleSprites[8].draw(0, 20);
+                    ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
+                    var5 = 184;
+                    dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
+                    var5 = 185;
+                    fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
+                    ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
+                    fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                     if (var12 == 0) {
                       break L7;
                     }
                   }
-                  if (this.screenId != 6) {
-                    if (this.screenId == 4) {
-                      kh.screenTitleSprites[8].draw(0, 20);
-                      ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
-                      var5 = 184;
-                      dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
-                      var5 = 185;
-                      fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
-                      ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
-                      fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
-                      if (var12 == 0) {
+                  if (this.screenId != 3) {
+                    kh.screenTitleSprites[0].draw(0, 20);
+                    if (this.screenId != 0) {
+                      if (this.screenId != 1) {
                         break L7;
                       }
                     }
-                    if (this.screenId != 3) {
-                      kh.screenTitleSprites[0].draw(0, 20);
-                      if (this.screenId != 0) {
-                        if (this.screenId != 1) {
-                          break L7;
-                        }
-                      }
-                      if (!this.field_C) {
-                        break L7;
-                      }
-                      if (fh.c(-93)) {
-                        if (this.activeTicks <= 200) {
-                          stackIn_73_0 = this.activeTicks;
-                        } else {
-                          stackIn_73_0 = 200;
-                        }
-                        L17: {
-                          var5 = stackIn_73_0;
-                          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                          ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
-                          var6 = 170;
-                          fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
-                          var7 = 100;
-                          var8 = -(20 + var7 >> 1) + 410;
-                          var6 = 265;
-                          var9 = var8 - (-(var7 >> 1) - 10);
-                          ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                          if (1 != this.field_o) {
-                            if (this.field_o >= 0) {
-                              break L17;
-                            }
-                            if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
-                              break L17;
-                            }
-                            if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                              break L17;
-                            }
-                            if (ue.pointerYSnapshot <= 265) {
-                              break L17;
-                            }
-                            if (ue.pointerYSnapshot >= 299) {
-                              break L17;
-                            }
-                          }
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                        }
-                        L19: {
-                          dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                          var8 = 320 - (20 + var7 >> 1) - 90;
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                          var6 = 265;
-                          var9 = 10 + (var7 >> 1) + var8;
-                          ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                          if (this.field_o != 0) {
-                            if (0 <= this.field_o) {
-                              break L19;
-                            }
-                            if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
-                              break L19;
-                            }
-                            if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                              break L19;
-                            }
-                            if (ue.pointerYSnapshot <= 265) {
-                              break L19;
-                            }
-                            if (ue.pointerYSnapshot >= 299) {
-                              break L19;
-                            }
-                          }
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                        }
-                        dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                        if (var12 == 0) {
-                          break L7;
-                        }
-                      }
-                      if (og.field_n > 0) {
-                        if (vl.field_n == null) {
-                          if (this.activeTicks > 200) {
-                            stackIn_122_0 = 200;
-                          } else {
-                            stackIn_122_0 = this.activeTicks;
-                          }
-                          L24: {
-                            var5 = stackIn_122_0;
-                            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                            ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
-                            var6 = 170;
-                            var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                            var6 += 40;
-                            var7 = 100;
-                            var8 = 320 - (var7 + 20 >> 1);
-                            var9 = (var7 >> 1) + (var8 + 10);
-                            ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                            if (0 != this.field_o) {
-                              if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
-                                break L24;
-                              }
-                              if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
-                                break L24;
-                              }
-                              if (ue.pointerYSnapshot <= 274) {
-                                break L24;
-                              }
-                              if (ue.pointerYSnapshot >= 309) {
-                                break L24;
-                              }
-                            }
-                            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                          }
-                          dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                          if (var12 == 0) {
-                            break L7;
-                          }
-                        }
-                        if (this.activeTicks <= 200) {
-                          stackIn_144_0 = this.activeTicks;
-                        } else {
-                          stackIn_144_0 = 200;
-                        }
-                        L27: {
-                          var5 = stackIn_144_0;
-                          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                          ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
-                          var6 = 170;
-                          var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
-                          var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                          var6 += 10;
-                          var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
-                          if ((1500 - this.activeTicks) / 150 <= 0) {
-                            var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                            if (var12 == 0) {
-                              break L27;
-                            }
-                          }
-                          var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                        }
-                        L29: {
-                          var6 += 40;
-                          var9 = 100;
-                          var10 = -(20 + var9 >> 1) + 320 + 90;
-                          ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
-                          var11 = 10 + ((var9 >> 1) + var10);
-                          if (this.field_o != 1) {
-                            if (0 <= this.field_o) {
-                              break L29;
-                            }
-                            if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
-                              break L29;
-                            }
-                            if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                              break L29;
-                            }
-                            if (ue.pointerYSnapshot <= 317) {
-                              break L29;
-                            }
-                            if (ue.pointerYSnapshot >= 352) {
-                              break L29;
-                            }
-                          }
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                        }
-                        L31: {
-                          dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                          var10 = 320 - (20 + var9 >> 1) - 90;
-                          var11 = 10 + (var9 >> 1) + var10;
-                          ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
-                          if (this.field_o != 0) {
-                            if (this.field_o >= 0) {
-                              break L31;
-                            }
-                            if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
-                              break L31;
-                            }
-                            if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                              break L31;
-                            }
-                            if (ue.pointerYSnapshot <= 317) {
-                              break L31;
-                            }
-                            if (ue.pointerYSnapshot >= 352) {
-                              break L31;
-                            }
-                          }
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                        }
-                        dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                        if (var12 == 0) {
-                          break L7;
-                        }
-                      }
-                      if (this.activeTicks > 200) {
-                        stackIn_191_0 = 200;
+                    if (!this.field_C) {
+                      break L7;
+                    }
+                    if (fh.c(-93)) {
+                      if (this.activeTicks <= 200) {
+                        stackIn_73_0 = this.activeTicks;
                       } else {
-                        stackIn_191_0 = this.activeTicks;
+                        stackIn_73_0 = 200;
                       }
-                      L34: {
-                        var5 = stackIn_191_0;
+                      L17: {
+                        var5 = stackIn_73_0;
                         SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                        ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
-                        var6 = 180;
-                        fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                        var7 = 242;
-                        var8 = 320 - (var7 + 20 >> 1);
-                        var9 = 10 + (var8 + (var7 >> 1));
+                        ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
+                        var6 = 170;
+                        fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                        var7 = 100;
+                        var8 = -(20 + var7 >> 1) + 410;
                         var6 = 265;
-                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                        if (this.field_o != 0) {
-                          if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
-                            break L34;
+                        var9 = var8 - (-(var7 >> 1) - 10);
+                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                        if (1 != this.field_o) {
+                          if (this.field_o >= 0) {
+                            break L17;
                           }
-                          if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
-                            break L34;
+                          if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
+                            break L17;
+                          }
+                          if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
+                            break L17;
                           }
                           if (ue.pointerYSnapshot <= 265) {
-                            break L34;
+                            break L17;
                           }
-                          if (299 <= ue.pointerYSnapshot) {
-                            break L34;
+                          if (ue.pointerYSnapshot >= 299) {
+                            break L17;
                           }
                         }
                         dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                       }
-                      dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                      L19: {
+                        dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                        var8 = 320 - (20 + var7 >> 1) - 90;
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                        var6 = 265;
+                        var9 = 10 + (var7 >> 1) + var8;
+                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                        if (this.field_o != 0) {
+                          if (0 <= this.field_o) {
+                            break L19;
+                          }
+                          if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
+                            break L19;
+                          }
+                          if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
+                            break L19;
+                          }
+                          if (ue.pointerYSnapshot <= 265) {
+                            break L19;
+                          }
+                          if (ue.pointerYSnapshot >= 299) {
+                            break L19;
+                          }
+                        }
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                      }
+                      dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
                       dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                       if (var12 == 0) {
                         break L7;
                       }
                     }
-                    kh.screenTitleSprites[5].draw(0, 20);
-                    if (!this.field_E) {
-                      this.b(-97, this.field_q);
+                    if (og.field_n > 0) {
+                      if (vl.field_n == null) {
+                        if (this.activeTicks > 200) {
+                          stackIn_122_0 = 200;
+                        } else {
+                          stackIn_122_0 = this.activeTicks;
+                        }
+                        L24: {
+                          var5 = stackIn_122_0;
+                          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                          ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
+                          var6 = 170;
+                          var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                          var6 += 40;
+                          var7 = 100;
+                          var8 = 320 - (var7 + 20 >> 1);
+                          var9 = (var7 >> 1) + (var8 + 10);
+                          ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                          if (0 != this.field_o) {
+                            if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
+                              break L24;
+                            }
+                            if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
+                              break L24;
+                            }
+                            if (ue.pointerYSnapshot <= 274) {
+                              break L24;
+                            }
+                            if (ue.pointerYSnapshot >= 309) {
+                              break L24;
+                            }
+                          }
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                        }
+                        dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                        if (var12 == 0) {
+                          break L7;
+                        }
+                      }
+                      if (this.activeTicks <= 200) {
+                        stackIn_144_0 = this.activeTicks;
+                      } else {
+                        stackIn_144_0 = 200;
+                      }
+                      L27: {
+                        var5 = stackIn_144_0;
+                        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                        ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
+                        var6 = 170;
+                        var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
+                        var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                        var6 += 10;
+                        var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
+                        if ((1500 - this.activeTicks) / 150 <= 0) {
+                          var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                          if (var12 == 0) {
+                            break L27;
+                          }
+                        }
+                        var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                      }
+                      L29: {
+                        var6 += 40;
+                        var9 = 100;
+                        var10 = -(20 + var9 >> 1) + 320 + 90;
+                        ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
+                        var11 = 10 + ((var9 >> 1) + var10);
+                        if (this.field_o != 1) {
+                          if (0 <= this.field_o) {
+                            break L29;
+                          }
+                          if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
+                            break L29;
+                          }
+                          if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
+                            break L29;
+                          }
+                          if (ue.pointerYSnapshot <= 317) {
+                            break L29;
+                          }
+                          if (ue.pointerYSnapshot >= 352) {
+                            break L29;
+                          }
+                        }
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                      }
+                      L31: {
+                        dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                        var10 = 320 - (20 + var9 >> 1) - 90;
+                        var11 = 10 + (var9 >> 1) + var10;
+                        ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
+                        if (this.field_o != 0) {
+                          if (this.field_o >= 0) {
+                            break L31;
+                          }
+                          if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
+                            break L31;
+                          }
+                          if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
+                            break L31;
+                          }
+                          if (ue.pointerYSnapshot <= 317) {
+                            break L31;
+                          }
+                          if (ue.pointerYSnapshot >= 352) {
+                            break L31;
+                          }
+                        }
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                      }
+                      dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                       if (var12 == 0) {
                         break L7;
                       }
                     }
-                    L37: {
-                      var5 = this.field_F;
-                      if (!this.field_v) {
-                        var5 = 640 - var5;
-                        SoftwareRasterizer.setClip(0, 0, var5, 480);
-                        this.b(-85, this.field_n);
-                        this.field_S = true;
-                        super.renderScreen(-28750);
-                        this.field_S = false;
-                        SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                        this.b(param0 ^ 28757, this.field_q);
-                        super.renderScreen(-28750);
-                        SoftwareRasterizer.setClip(0, 0, 640, 480);
-                        qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + var5, 240, -49150, 4096);
-                        if (var12 == 0) {
-                          break L37;
+                    if (this.activeTicks > 200) {
+                      stackIn_191_0 = 200;
+                    } else {
+                      stackIn_191_0 = this.activeTicks;
+                    }
+                    L34: {
+                      var5 = stackIn_191_0;
+                      SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                      ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
+                      var6 = 180;
+                      fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                      var7 = 242;
+                      var8 = 320 - (var7 + 20 >> 1);
+                      var9 = 10 + (var8 + (var7 >> 1));
+                      var6 = 265;
+                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                      if (this.field_o != 0) {
+                        if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
+                          break L34;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
+                          break L34;
+                        }
+                        if (ue.pointerYSnapshot <= 265) {
+                          break L34;
+                        }
+                        if (299 <= ue.pointerYSnapshot) {
+                          break L34;
                         }
                       }
-                      SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                      this.b(-17, this.field_n);
-                      this.field_S = true;
-                      super.renderScreen(-28750);
-                      this.field_S = false;
-                      SoftwareRasterizer.setClip(0, 0, var5, 480);
-                      this.b(-48, this.field_q);
-                      super.renderScreen(-28750);
-                      SoftwareRasterizer.setClip(0, 0, 640, 480);
-                      qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + var5, 240, -16383, 4096);
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                     }
+                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                     if (var12 == 0) {
                       break L7;
                     }
                   }
-                  kh.screenTitleSprites[7].draw(0, 20);
-                  ac.a(false, true, (byte) -122);
+                  kh.screenTitleSprites[5].draw(0, 20);
+                  if (!this.field_E) {
+                    this.b(-97, this.field_q);
+                    if (var12 == 0) {
+                      break L7;
+                    }
+                  }
+                  L37: {
+                    var5 = this.field_F;
+                    if (!this.field_v) {
+                      var5 = 640 - var5;
+                      SoftwareRasterizer.setClip(0, 0, var5, 480);
+                      this.b(-85, this.field_n);
+                      this.field_S = true;
+                      super.renderScreen(-28750);
+                      this.field_S = false;
+                      SoftwareRasterizer.setClip(var5, 0, 640, 480);
+                      this.b(param0 ^ 28757, this.field_q);
+                      super.renderScreen(-28750);
+                      SoftwareRasterizer.setClip(0, 0, 640, 480);
+                      qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + var5, 240, -49150, 4096);
+                      if (var12 == 0) {
+                        break L37;
+                      }
+                    }
+                    SoftwareRasterizer.setClip(var5, 0, 640, 480);
+                    this.b(-17, this.field_n);
+                    this.field_S = true;
+                    super.renderScreen(-28750);
+                    this.field_S = false;
+                    SoftwareRasterizer.setClip(0, 0, var5, 480);
+                    this.b(-48, this.field_q);
+                    super.renderScreen(-28750);
+                    SoftwareRasterizer.setClip(0, 0, 640, 480);
+                    qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + var5, 240, -16383, 4096);
+                  }
                   if (var12 == 0) {
                     break L7;
                   }
                 }
+                kh.screenTitleSprites[7].draw(0, 20);
+                ac.a(false, true, (byte) -122);
+                if (var12 == 0) {
+                  break L7;
+                }
               }
-              this.b(30);
             }
-            return;
+            this.b(30);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -1185,7 +1181,7 @@ final class GameScreen extends MenuScreen {
                     var6 = var4.maxAscent + 150;
                     var7 = 0;
                     var8_int = 0;
-                    L9: while (true) {
+                    while (true) {
                       L10: {
                         if (var8_int < 10) {
                           stackIn_59_0 = null;
@@ -1219,7 +1215,7 @@ final class GameScreen extends MenuScreen {
                           var6 += 15;
                           var8_int++;
                           if (var10 == 0) {
-                            continue L9;
+                            continue;
                           }
                         }
                         if (var7 != 0) {
@@ -1236,12 +1232,10 @@ final class GameScreen extends MenuScreen {
                       if (el.gameplaySession.score == -2147483648) {
                         break L8;
                       }
-                      {
-                        var8 = SecondaryDeque.field_f;
-                        var4.drawText(var8, 165, var6, 16724225, -1);
-                        var4.drawRightAlignedText(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
-                        break L8;
-                      }
+                      var8 = SecondaryDeque.field_f;
+                      var4.drawText(var8, 165, var6, 16724225, -1);
+                      var4.drawRightAlignedText(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
+                      break L8;
                     }
                   }
                 }
@@ -1318,7 +1312,7 @@ final class GameScreen extends MenuScreen {
               }
             }
           }
-          L3: while (true) {
+          while (true) {
             L4: {
               if (hh.pollKeyboardEvent(108)) {
                 this.handleScreenKey((byte) 62);
@@ -1326,7 +1320,7 @@ final class GameScreen extends MenuScreen {
                   break L4;
                 }
                 if (var3 == 0) {
-                  continue L3;
+                  continue;
                 }
               }
               if (this.screenId == 3) {

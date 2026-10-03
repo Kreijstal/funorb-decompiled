@@ -55,7 +55,7 @@ final class ld {
           if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
             return true;
           }
-          L0: while (true) {
+          while (true) {
             previousCircleVerticalOffset = circleVerticalOffset;
             circleVerticalOffset++;
             circleError = circleError + (previousCircleVerticalOffset + circleVerticalOffset);
@@ -92,7 +92,7 @@ final class ld {
               return true;
             }
             if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] == 0) {
-              continue L0;
+              continue;
             }
             return true;
           }

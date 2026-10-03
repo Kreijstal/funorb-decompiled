@@ -89,93 +89,85 @@ final class DiskArchiveCache {
                   nullForMissingIndex = null;
                   return (byte[]) ((Object) nullForMissingIndex);
                 }
-                {
-                  if (methodGuard > -14) {
-                    this.dataFile = (BufferedRandomAccessFile) null;
+                if (methodGuard > -14) {
+                  this.dataFile = (BufferedRandomAccessFile) null;
+                }
+                this.indexFile.seek(-128, (long)(6 * entryId));
+                this.indexFile.readFully(dj.diskSectorBuffer, 6, 0, 9868);
+                entryLength = (dj.diskSectorBuffer[2] & 255) + (((255 & dj.diskSectorBuffer[0]) << 16) + (dj.diskSectorBuffer[1] << 8 & 65280));
+                sectorNumber = (dj.diskSectorBuffer[3] << 16 & 16711680) + (65280 & dj.diskSectorBuffer[4] << 8) + (255 & dj.diskSectorBuffer[5]);
+                if (entryLength < 0) {
+                  return null;
+                }
+                if (this.maximumEntryLength < entryLength) {
+                  nullForOversizedEntry = null;
+                  return (byte[]) ((Object) nullForOversizedEntry);
+                }
+                if (sectorNumber <= 0) {
+                  return null;
+                }
+                if ((long)sectorNumber > this.dataFile.length((byte) 46) / 520L) {
+                  return null;
+                }
+                bytes = new byte[entryLength];
+                bytesCopied = 0;
+                chunkNumber = 0;
+                while (true) {
+                  if (bytesCopied >= entryLength) {
+                    bytesBeforeReturn = (byte[]) (bytes);
+                    return bytesBeforeReturn;
                   }
-                  this.indexFile.seek(-128, (long)(6 * entryId));
-                  this.indexFile.readFully(dj.diskSectorBuffer, 6, 0, 9868);
-                  entryLength = (dj.diskSectorBuffer[2] & 255) + (((255 & dj.diskSectorBuffer[0]) << 16) + (dj.diskSectorBuffer[1] << 8 & 65280));
-                  sectorNumber = (dj.diskSectorBuffer[3] << 16 & 16711680) + (65280 & dj.diskSectorBuffer[4] << 8) + (255 & dj.diskSectorBuffer[5]);
-                  if (entryLength < 0) {
-                    return null;
+                  if (sectorNumber == 0) {
+                    nullForMissingSector = null;
+                    return (byte[]) ((Object) nullForMissingSector);
                   }
-                  if (this.maximumEntryLength < entryLength) {
-                    nullForOversizedEntry = null;
-                    return (byte[]) ((Object) nullForOversizedEntry);
-                  }
-                  if (sectorNumber <= 0) {
-                    return null;
-                  }
-                  if ((long)sectorNumber > this.dataFile.length((byte) 46) / 520L) {
-                    return null;
-                  }
-                  {
-                    bytes = new byte[entryLength];
-                    bytesCopied = 0;
-                    chunkNumber = 0;
-                    L1: while (true) {
-                      if (bytesCopied >= entryLength) {
-                        bytesBeforeReturn = (byte[]) (bytes);
-                        return bytesBeforeReturn;
-                      }
-                      if (sectorNumber == 0) {
-                        nullForMissingSector = null;
-                        return (byte[]) ((Object) nullForMissingSector);
-                      }
-                      {
-                        this.dataFile.seek(0, (long)(520 * sectorNumber));
-                        payloadLength = -bytesCopied + entryLength;
-                        if (65535 < entryId) {
-                          if (510 < payloadLength) {
-                            payloadLength = 510;
-                          }
-                          headerLength = 10;
-                          this.dataFile.readFully(dj.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
-                          headerEntryId = (255 & dj.diskSectorBuffer[3]) + ((65280 & dj.diskSectorBuffer[2] << 8) + (-16777216 & dj.diskSectorBuffer[0] << 24) + (16711680 & dj.diskSectorBuffer[1] << 16));
-                          headerChunkNumber = (255 & dj.diskSectorBuffer[5]) + (65280 & dj.diskSectorBuffer[4] << 8);
-                          headerArchiveId = dj.diskSectorBuffer[9] & 255;
-                          nextSectorNumber = ((dj.diskSectorBuffer[7] & 255) << 8) + ((16711680 & dj.diskSectorBuffer[6] << 16) + (dj.diskSectorBuffer[8] & 255));
-                        } else {
-                          headerLength = 8;
-                          if (payloadLength > 512) {
-                            payloadLength = 512;
-                          }
-                          this.dataFile.readFully(dj.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
-                          nextSectorNumber = (255 & dj.diskSectorBuffer[6]) + (((dj.diskSectorBuffer[4] & 255) << 16) + ((255 & dj.diskSectorBuffer[5]) << 8));
-                          headerChunkNumber = (255 & dj.diskSectorBuffer[3]) + (dj.diskSectorBuffer[2] << 8 & 65280);
-                          headerArchiveId = 255 & dj.diskSectorBuffer[7];
-                          headerEntryId = (dj.diskSectorBuffer[1] & 255) + ((dj.diskSectorBuffer[0] & 255) << 8);
-                        }
-                        if (headerEntryId != entryId) {
-                          return null;
-                        }
-                        if (headerChunkNumber != chunkNumber) {
-                          return null;
-                        }
-                        if (this.archiveId != headerArchiveId) {
-                          return null;
-                        }
-                        if (nextSectorNumber < 0) {
-                          return null;
-                        }
-                        if (this.dataFile.length((byte) 46) / 520L < (long)nextSectorNumber) {
-                          return null;
-                        }
-                        {
-                          sectorReadLength = payloadLength + headerLength;
-                          chunkNumber++;
-                          for (sectorByteIndex = headerLength; sectorByteIndex < sectorReadLength; sectorByteIndex++) {
-                            destinationIndexBeforeIncrement = bytesCopied;
-                            bytesCopied++;
-                            bytes[destinationIndexBeforeIncrement] = dj.diskSectorBuffer[sectorByteIndex];
-                          }
-                          sectorNumber = nextSectorNumber;
-                          continue L1;
-                        }
-                      }
+                  this.dataFile.seek(0, (long)(520 * sectorNumber));
+                  payloadLength = -bytesCopied + entryLength;
+                  if (65535 < entryId) {
+                    if (510 < payloadLength) {
+                      payloadLength = 510;
                     }
+                    headerLength = 10;
+                    this.dataFile.readFully(dj.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
+                    headerEntryId = (255 & dj.diskSectorBuffer[3]) + ((65280 & dj.diskSectorBuffer[2] << 8) + (-16777216 & dj.diskSectorBuffer[0] << 24) + (16711680 & dj.diskSectorBuffer[1] << 16));
+                    headerChunkNumber = (255 & dj.diskSectorBuffer[5]) + (65280 & dj.diskSectorBuffer[4] << 8);
+                    headerArchiveId = dj.diskSectorBuffer[9] & 255;
+                    nextSectorNumber = ((dj.diskSectorBuffer[7] & 255) << 8) + ((16711680 & dj.diskSectorBuffer[6] << 16) + (dj.diskSectorBuffer[8] & 255));
+                  } else {
+                    headerLength = 8;
+                    if (payloadLength > 512) {
+                      payloadLength = 512;
+                    }
+                    this.dataFile.readFully(dj.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
+                    nextSectorNumber = (255 & dj.diskSectorBuffer[6]) + (((dj.diskSectorBuffer[4] & 255) << 16) + ((255 & dj.diskSectorBuffer[5]) << 8));
+                    headerChunkNumber = (255 & dj.diskSectorBuffer[3]) + (dj.diskSectorBuffer[2] << 8 & 65280);
+                    headerArchiveId = 255 & dj.diskSectorBuffer[7];
+                    headerEntryId = (dj.diskSectorBuffer[1] & 255) + ((dj.diskSectorBuffer[0] & 255) << 8);
                   }
+                  if (headerEntryId != entryId) {
+                    return null;
+                  }
+                  if (headerChunkNumber != chunkNumber) {
+                    return null;
+                  }
+                  if (this.archiveId != headerArchiveId) {
+                    return null;
+                  }
+                  if (nextSectorNumber < 0) {
+                    return null;
+                  }
+                  if (this.dataFile.length((byte) 46) / 520L < (long)nextSectorNumber) {
+                    return null;
+                  }
+                  sectorReadLength = payloadLength + headerLength;
+                  chunkNumber++;
+                  for (sectorByteIndex = headerLength; sectorByteIndex < sectorReadLength; sectorByteIndex++) {
+                    destinationIndexBeforeIncrement = bytesCopied;
+                    bytesCopied++;
+                    bytes[destinationIndexBeforeIncrement] = dj.diskSectorBuffer[sectorByteIndex];
+                  }
+                  sectorNumber = nextSectorNumber;
+                  continue;
                 }
               } catch (java.io.IOException readIOException) {
                 caughtReadFailure = readIOException;
@@ -231,11 +223,9 @@ final class DiskArchiveCache {
                       }
                       return false;
                     }
-                    {
-                      sectorNumber = (int)((this.dataFile.length((byte) 46) + 519L) / 520L);
-                      if (sectorNumber == 0) {
-                        sectorNumber = 1;
-                      }
+                    sectorNumber = (int)((this.dataFile.length((byte) 46) + 519L) / 520L);
+                    if (sectorNumber == 0) {
+                      sectorNumber = 1;
                     }
                   }
                   dj.diskSectorBuffer[3] = (byte)(sectorNumber >> 16);
@@ -251,7 +241,7 @@ final class DiskArchiveCache {
                   this.indexFile.write(6, 0, dj.diskSectorBuffer, false);
                   bytesWritten = 0;
                   chunkNumber = 0;
-                  L3: while (true) {
+                  while (true) {
                     L4: {
                       if (length > bytesWritten) {
                         L5: {
@@ -270,12 +260,10 @@ final class DiskArchiveCache {
                               if (!(smallHeaderEofState == 0)) {
                                 break L4;
                               }
-                              {
-                                headerEntryIdOrPayloadLength = ((255 & dj.diskSectorBuffer[0]) << 8) + (255 & dj.diskSectorBuffer[1]);
-                                headerChunkNumber = (dj.diskSectorBuffer[3] & 255) + ((255 & dj.diskSectorBuffer[2]) << 8);
-                                headerArchiveId = 255 & dj.diskSectorBuffer[7];
-                                nextSectorNumber = (dj.diskSectorBuffer[6] & 255) + ((65280 & dj.diskSectorBuffer[5] << 8) + (16711680 & dj.diskSectorBuffer[4] << 16));
-                              }
+                              headerEntryIdOrPayloadLength = ((255 & dj.diskSectorBuffer[0]) << 8) + (255 & dj.diskSectorBuffer[1]);
+                              headerChunkNumber = (dj.diskSectorBuffer[3] & 255) + ((255 & dj.diskSectorBuffer[2]) << 8);
+                              headerArchiveId = 255 & dj.diskSectorBuffer[7];
+                              nextSectorNumber = (dj.diskSectorBuffer[6] & 255) + ((65280 & dj.diskSectorBuffer[5] << 8) + (16711680 & dj.diskSectorBuffer[4] << 16));
                             } else {
                               try {
                                 this.dataFile.readFully(dj.diskSectorBuffer, 10, 0, 9868);
@@ -360,7 +348,7 @@ final class DiskArchiveCache {
                         }
                         sectorNumber = nextSectorNumber;
                         chunkNumber++;
-                        continue L3;
+                        continue;
                       }
                     }
                     return true;

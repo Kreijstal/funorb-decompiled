@@ -27,7 +27,7 @@ final class IntKeyLookup {
         }
         bucketMask = (this.keyIndexPairs.length >> 1) - 1;
         bucket = bucketMask & key;
-        L1: while (true) {
+        while (true) {
           storedIndex = this.keyIndexPairs[1 + bucket + bucket];
           if (-1 == storedIndex) {
             return -1;
@@ -36,7 +36,7 @@ final class IntKeyLookup {
             return storedIndex;
           }
           bucket = bucket + 1 & bucketMask;
-          continue L1;
+          continue;
         }
     }
 
@@ -99,7 +99,7 @@ final class IntKeyLookup {
         RuntimeException constructionFailureForContext = null;
         try {
           bucketCount = 1;
-          L0: while (keys.length + (keys.length >> 1) >= bucketCount) {
+          while (keys.length + (keys.length >> 1) >= bucketCount) {
             bucketCount = bucketCount << 1;
           }
           this.keyIndexPairs = new int[bucketCount + bucketCount];

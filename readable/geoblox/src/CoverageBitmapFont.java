@@ -67,10 +67,10 @@ final class CoverageBitmapFont extends BitmapFont {
         glyphsSnapshot = glyphs;
         for (paletteColorOrGlyphIndex = 0; paletteColorOrGlyphIndex < glyphsSnapshot.length; paletteColorOrGlyphIndex++) {
           glyphPixels = glyphsSnapshot[paletteColorOrGlyphIndex];
-          L2: for (glyphPixelIndex = 0; glyphPixelIndex < glyphPixels.length; glyphPixelIndex++) {
+          for (glyphPixelIndex = 0; glyphPixelIndex < glyphPixels.length; glyphPixelIndex++) {
             signedPaletteIndex = glyphPixels[glyphPixelIndex];
             if (signedPaletteIndex == 0) {
-              continue L2;
+              continue;
             }
             glyphPixels[glyphPixelIndex] = (byte)palette[signedPaletteIndex];
           }
@@ -145,33 +145,29 @@ final class CoverageBitmapFont extends BitmapFont {
             return;
           }
           negativeColumnCounter = -width;
-          L1: while (true) {
+          while (true) {
             if (negativeColumnCounter >= 0) {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
               continue L0;
             }
-            {
-              sourceIndexBeforeIncrement = sourceIndex;
-              sourceIndex++;
-              effectiveAlphaOrDestinationWeight256 = (255 & glyphCoverage[sourceIndexBeforeIncrement]) * alpha256 >> 8;
-              if (effectiveAlphaOrDestinationWeight256 == 0) {
-                destinationIndex++;
-                negativeColumnCounter++;
-                continue L1;
-              }
-              {
-                weightedSourceColor = ((color & 16711935) * effectiveAlphaOrDestinationWeight256 & -16711936) + ((color & 65280) * effectiveAlphaOrDestinationWeight256 & 16711680) >> 8;
-                effectiveAlphaOrDestinationWeight256 = 256 - effectiveAlphaOrDestinationWeight256;
-                destinationColor = destinationPixels[destinationIndex];
-                destinationIndexBeforeIncrement = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * effectiveAlphaOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * effectiveAlphaOrDestinationWeight256 & 16711680) >> 8) + weightedSourceColor;
-                negativeColumnCounter++;
-                continue L1;
-              }
+            sourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            effectiveAlphaOrDestinationWeight256 = (255 & glyphCoverage[sourceIndexBeforeIncrement]) * alpha256 >> 8;
+            if (effectiveAlphaOrDestinationWeight256 == 0) {
+              destinationIndex++;
+              negativeColumnCounter++;
+              continue;
             }
+            weightedSourceColor = ((color & 16711935) * effectiveAlphaOrDestinationWeight256 & -16711936) + ((color & 65280) * effectiveAlphaOrDestinationWeight256 & 16711680) >> 8;
+            effectiveAlphaOrDestinationWeight256 = 256 - effectiveAlphaOrDestinationWeight256;
+            destinationColor = destinationPixels[destinationIndex];
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * effectiveAlphaOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * effectiveAlphaOrDestinationWeight256 & 16711680) >> 8) + weightedSourceColor;
+            negativeColumnCounter++;
+            continue;
           }
         }
     }
@@ -190,33 +186,29 @@ final class CoverageBitmapFont extends BitmapFont {
             return;
           }
           negativeColumnCounter = -width;
-          L1: while (true) {
+          while (true) {
             if (negativeColumnCounter >= 0) {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
               continue L0;
             }
-            {
-              sourceIndexBeforeIncrement = sourceIndex;
-              sourceIndex++;
-              coverageOrDestinationWeight256 = 255 & glyphCoverage[sourceIndexBeforeIncrement];
-              if (coverageOrDestinationWeight256 == 0) {
-                destinationIndex++;
-                negativeColumnCounter++;
-                continue L1;
-              }
-              {
-                weightedSourceColor = ((color & 16711935) * coverageOrDestinationWeight256 & -16711936) + ((color & 65280) * coverageOrDestinationWeight256 & 16711680) >> 8;
-                coverageOrDestinationWeight256 = 256 - coverageOrDestinationWeight256;
-                destinationColor = destinationPixels[destinationIndex];
-                destinationIndexBeforeIncrement = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * coverageOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * coverageOrDestinationWeight256 & 16711680) >> 8) + weightedSourceColor;
-                negativeColumnCounter++;
-                continue L1;
-              }
+            sourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            coverageOrDestinationWeight256 = 255 & glyphCoverage[sourceIndexBeforeIncrement];
+            if (coverageOrDestinationWeight256 == 0) {
+              destinationIndex++;
+              negativeColumnCounter++;
+              continue;
             }
+            weightedSourceColor = ((color & 16711935) * coverageOrDestinationWeight256 & -16711936) + ((color & 65280) * coverageOrDestinationWeight256 & 16711680) >> 8;
+            coverageOrDestinationWeight256 = 256 - coverageOrDestinationWeight256;
+            destinationColor = destinationPixels[destinationIndex];
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * coverageOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * coverageOrDestinationWeight256 & 16711680) >> 8) + weightedSourceColor;
+            negativeColumnCounter++;
+            continue;
           }
         }
     }

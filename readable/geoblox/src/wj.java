@@ -59,72 +59,66 @@ final class wj extends sh {
           var3_int = param0.length();
           var4 = var3_int;
           var5 = 0;
-          L0: while (true) {
+          while (true) {
             var6_int = param0.indexOf("<%", var5);
             if (0 <= var6_int) {
-              L4: for (var5 = var6_int + 2; var3_int > var5; var5++) {
+              for (var5 = var6_int + 2; var3_int > var5; var5++) {
                 if (DualLinkNode.a(-58, param0.charAt(var5))) {
-                  continue L4;
+                  continue;
                 }
                 break;
               }
               var7_ref_String = param0.substring(var6_int + 2, var5);
               if (!f.b((byte) -123, (CharSequence) ((Object) var7_ref_String))) {
-                continue L0;
+                continue;
               }
               if (var5 >= var3_int) {
-                continue L0;
+                continue;
               }
               if (param0.charAt(var5) != 62) {
-                continue L0;
+                continue;
               }
               var5++;
               var8 = ol.a(false, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
-              continue L0;
+              continue;
             }
-            {
-              var6 = new StringBuilder(var4);
-              var7 = 0;
-              var5 = 0;
-              if (param2 >= -12) {
-                stackIn_12_0 = (String) null;
-                return stackIn_12_0;
+            var6 = new StringBuilder(var4);
+            var7 = 0;
+            var5 = 0;
+            if (param2 >= -12) {
+              stackIn_12_0 = (String) null;
+              return stackIn_12_0;
+            }
+            while (true) {
+              var8 = param0.indexOf("<%", var5);
+              if (0 > var8) {
+                discarded$2 = var6.append(param0.substring(var7));
+                stackIn_25_0 = var6.toString();
+                return stackIn_25_0;
               }
-              L1: while (true) {
-                var8 = param0.indexOf("<%", var5);
-                if (0 > var8) {
-                  discarded$2 = var6.append(param0.substring(var7));
-                  stackIn_25_0 = var6.toString();
-                  return stackIn_25_0;
+              for (var5 = var8 + 2; var5 < var3_int; var5++) {
+                if (DualLinkNode.a(-58, param0.charAt(var5))) {
+                  continue;
                 }
-                {
-                  L2: for (var5 = var8 + 2; var5 < var3_int; var5++) {
-                    if (DualLinkNode.a(-58, param0.charAt(var5))) {
-                      continue L2;
-                    }
-                    break;
-                  }
-                  var9 = param0.substring(2 + var8, var5);
-                  if (!f.b((byte) -125, (CharSequence) ((Object) var9))) {
-                    continue L1;
-                  }
-                  if (var3_int <= var5) {
-                    continue L1;
-                  }
-                  if (param0.charAt(var5) != 62) {
-                    continue L1;
-                  }
-                  {
-                    var5++;
-                    var10 = ol.a(false, (CharSequence) ((Object) var9));
-                    discarded$0 = var6.append(param0.substring(var7, var8));
-                    var7 = var5;
-                    discarded$1 = var6.append(param1[var10]);
-                    continue L1;
-                  }
-                }
+                break;
               }
+              var9 = param0.substring(2 + var8, var5);
+              if (!f.b((byte) -125, (CharSequence) ((Object) var9))) {
+                continue;
+              }
+              if (var3_int <= var5) {
+                continue;
+              }
+              if (param0.charAt(var5) != 62) {
+                continue;
+              }
+              var5++;
+              var10 = ol.a(false, (CharSequence) ((Object) var9));
+              discarded$0 = var6.append(param0.substring(var7, var8));
+              var7 = var5;
+              discarded$1 = var6.append(param1[var10]);
+              continue;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,25 +191,23 @@ final class wj extends sh {
           if (param0.systemEventQueue == null) {
             return;
           }
-          {
-            L0: for (var3_int = 0; var3_int < 50; var3_int++) {
-              if (null != param0.systemEventQueue.peekEvent()) {
-                bc.sleepMillis(0, 1L);
-                continue L0;
-              }
-              break;
+          for (var3_int = 0; var3_int < 50; var3_int++) {
+            if (null != param0.systemEventQueue.peekEvent()) {
+              bc.sleepMillis(0, 1L);
+              continue;
             }
-            var4 = 11 / ((param1 - 2) / 48);
-            try {
-              if (param2 != null) {
-                param0.systemEventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-            }
-            return;
+            break;
           }
+          var4 = 11 / ((param1 - 2) / 48);
+          try {
+            if (param2 != null) {
+              param0.systemEventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;

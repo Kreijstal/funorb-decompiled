@@ -125,151 +125,147 @@ final class PrefixCodeDecoder {
             zeroConsumedBytesBeforeReturn = 0;
             return zeroConsumedBytesBeforeReturn;
           }
-          {
-            unusedArithmeticGuardResult = 121 / ((-63 - methodGuard) / 59);
-            treeIndex = 0;
-            outputLengthThenEnd = outputLengthThenEnd + destinationPosition;
-            sourceIndex = sourceOffset;
-            L0: while (true) {
-              signedSourceByte = source[sourceIndex];
-              if (signedSourceByte < 0) {
+          unusedArithmeticGuardResult = 121 / ((-63 - methodGuard) / 59);
+          treeIndex = 0;
+          outputLengthThenEnd = outputLengthThenEnd + destinationPosition;
+          sourceIndex = sourceOffset;
+          while (true) {
+            signedSourceByte = source[sourceIndex];
+            if (signedSourceByte < 0) {
+              treeIndex = this.decodeTree[treeIndex];
+            } else {
+              treeIndex++;
+            }
+            L2: {
+              nodeAfterBit7 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit7;
+              if (nodeAfterBit7 < 0) {
+                writeIndexAfterBit7 = destinationPosition;
+                destinationPosition++;
+                destination[writeIndexAfterBit7] = (byte)(~nodeValue);
+                if (destinationPosition >= outputLengthThenEnd) {
+                  break L2;
+                }
+                treeIndex = 0;
+              }
+              if (0 == (64 & signedSourceByte)) {
+                treeIndex++;
+              } else {
+                treeIndex = this.decodeTree[treeIndex];
+              }
+              nodeAfterBit6 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit6;
+              if (nodeAfterBit6 < 0) {
+                writeIndexAfterBit6 = destinationPosition;
+                destinationPosition++;
+                destination[writeIndexAfterBit6] = (byte)(~nodeValue);
+                if (destinationPosition >= outputLengthThenEnd) {
+                  break L2;
+                }
+                treeIndex = 0;
+              }
+              if ((signedSourceByte & 32) != 0) {
                 treeIndex = this.decodeTree[treeIndex];
               } else {
                 treeIndex++;
               }
-              L2: {
-                nodeAfterBit7 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit7;
-                if (nodeAfterBit7 < 0) {
-                  writeIndexAfterBit7 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit7] = (byte)(~nodeValue);
-                  if (destinationPosition >= outputLengthThenEnd) {
-                    break L2;
-                  }
-                  treeIndex = 0;
+              nodeAfterBit5 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit5;
+              if (nodeAfterBit5 < 0) {
+                writeIndexAfterBit5 = destinationPosition;
+                destinationPosition++;
+                destination[writeIndexAfterBit5] = (byte)(~nodeValue);
+                if (outputLengthThenEnd <= destinationPosition) {
+                  break L2;
                 }
-                if (0 == (64 & signedSourceByte)) {
-                  treeIndex++;
-                } else {
-                  treeIndex = this.decodeTree[treeIndex];
-                }
-                nodeAfterBit6 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit6;
-                if (nodeAfterBit6 < 0) {
-                  writeIndexAfterBit6 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit6] = (byte)(~nodeValue);
-                  if (destinationPosition >= outputLengthThenEnd) {
-                    break L2;
-                  }
-                  treeIndex = 0;
-                }
-                if ((signedSourceByte & 32) != 0) {
-                  treeIndex = this.decodeTree[treeIndex];
-                } else {
-                  treeIndex++;
-                }
-                nodeAfterBit5 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit5;
-                if (nodeAfterBit5 < 0) {
-                  writeIndexAfterBit5 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit5] = (byte)(~nodeValue);
-                  if (outputLengthThenEnd <= destinationPosition) {
-                    break L2;
-                  }
-                  treeIndex = 0;
-                }
-                if ((signedSourceByte & 16) == 0) {
-                  treeIndex++;
-                } else {
-                  treeIndex = this.decodeTree[treeIndex];
-                }
-                nodeAfterBit4 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit4;
-                if (nodeAfterBit4 < 0) {
-                  writeIndexAfterBit4 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit4] = (byte)(~nodeValue);
-                  if (outputLengthThenEnd <= destinationPosition) {
-                    break L2;
-                  }
-                  treeIndex = 0;
-                }
-                if ((8 & signedSourceByte) == 0) {
-                  treeIndex++;
-                } else {
-                  treeIndex = this.decodeTree[treeIndex];
-                }
-                nodeAfterBit3 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit3;
-                if (nodeAfterBit3 < 0) {
-                  writeIndexAfterBit3 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit3] = (byte)(~nodeValue);
-                  if (outputLengthThenEnd <= destinationPosition) {
-                    break L2;
-                  }
-                  treeIndex = 0;
-                }
-                if ((signedSourceByte & 4) != 0) {
-                  treeIndex = this.decodeTree[treeIndex];
-                } else {
-                  treeIndex++;
-                }
-                nodeAfterBit2 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit2;
-                if (nodeAfterBit2 < 0) {
-                  writeIndexAfterBit2 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit2] = (byte)(~nodeValue);
-                  if (outputLengthThenEnd <= destinationPosition) {
-                    return sourceIndex + 1 - sourceOffset;
-                  }
-                  treeIndex = 0;
-                }
-                if ((signedSourceByte & 2) != 0) {
-                  treeIndex = this.decodeTree[treeIndex];
-                } else {
-                  treeIndex++;
-                }
-                nodeAfterBit1 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit1;
-                if (nodeAfterBit1 < 0) {
-                  writeIndexAfterBit1 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit1] = (byte)(~nodeValue);
-                  if (destinationPosition >= outputLengthThenEnd) {
-                    break L2;
-                  }
-                  treeIndex = 0;
-                }
-                if (0 == (1 & signedSourceByte)) {
-                  treeIndex++;
-                } else {
-                  treeIndex = this.decodeTree[treeIndex];
-                }
-                nodeAfterBit0 = this.decodeTree[treeIndex];
-                nodeValue = nodeAfterBit0;
-                if (nodeAfterBit0 >= 0) {
-                  sourceIndex++;
-                  continue L0;
-                }
-                {
-                  writeIndexAfterBit0 = destinationPosition;
-                  destinationPosition++;
-                  destination[writeIndexAfterBit0] = (byte)(~nodeValue);
-                  if (destinationPosition < outputLengthThenEnd) {
-                    treeIndex = 0;
-                    sourceIndex++;
-                    continue L0;
-                  }
-                }
+                treeIndex = 0;
               }
-              consumedBytesBeforeReturn = sourceIndex + 1 - sourceOffset;
-              return consumedBytesBeforeReturn;
+              if ((signedSourceByte & 16) == 0) {
+                treeIndex++;
+              } else {
+                treeIndex = this.decodeTree[treeIndex];
+              }
+              nodeAfterBit4 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit4;
+              if (nodeAfterBit4 < 0) {
+                writeIndexAfterBit4 = destinationPosition;
+                destinationPosition++;
+                destination[writeIndexAfterBit4] = (byte)(~nodeValue);
+                if (outputLengthThenEnd <= destinationPosition) {
+                  break L2;
+                }
+                treeIndex = 0;
+              }
+              if ((8 & signedSourceByte) == 0) {
+                treeIndex++;
+              } else {
+                treeIndex = this.decodeTree[treeIndex];
+              }
+              nodeAfterBit3 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit3;
+              if (nodeAfterBit3 < 0) {
+                writeIndexAfterBit3 = destinationPosition;
+                destinationPosition++;
+                destination[writeIndexAfterBit3] = (byte)(~nodeValue);
+                if (outputLengthThenEnd <= destinationPosition) {
+                  break L2;
+                }
+                treeIndex = 0;
+              }
+              if ((signedSourceByte & 4) != 0) {
+                treeIndex = this.decodeTree[treeIndex];
+              } else {
+                treeIndex++;
+              }
+              nodeAfterBit2 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit2;
+              if (nodeAfterBit2 < 0) {
+                writeIndexAfterBit2 = destinationPosition;
+                destinationPosition++;
+                destination[writeIndexAfterBit2] = (byte)(~nodeValue);
+                if (outputLengthThenEnd <= destinationPosition) {
+                  return sourceIndex + 1 - sourceOffset;
+                }
+                treeIndex = 0;
+              }
+              if ((signedSourceByte & 2) != 0) {
+                treeIndex = this.decodeTree[treeIndex];
+              } else {
+                treeIndex++;
+              }
+              nodeAfterBit1 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit1;
+              if (nodeAfterBit1 < 0) {
+                writeIndexAfterBit1 = destinationPosition;
+                destinationPosition++;
+                destination[writeIndexAfterBit1] = (byte)(~nodeValue);
+                if (destinationPosition >= outputLengthThenEnd) {
+                  break L2;
+                }
+                treeIndex = 0;
+              }
+              if (0 == (1 & signedSourceByte)) {
+                treeIndex++;
+              } else {
+                treeIndex = this.decodeTree[treeIndex];
+              }
+              nodeAfterBit0 = this.decodeTree[treeIndex];
+              nodeValue = nodeAfterBit0;
+              if (nodeAfterBit0 >= 0) {
+                sourceIndex++;
+                continue;
+              }
+              writeIndexAfterBit0 = destinationPosition;
+              destinationPosition++;
+              destination[writeIndexAfterBit0] = (byte)(~nodeValue);
+              if (destinationPosition < outputLengthThenEnd) {
+                treeIndex = 0;
+                sourceIndex++;
+                continue;
+              }
             }
+            consumedBytesBeforeReturn = sourceIndex + 1 - sourceOffset;
+            return consumedBytesBeforeReturn;
           }
         } catch (java.lang.RuntimeException decodingFailure) {
           caughtDecodingFailure = decodingFailure;
@@ -340,40 +336,113 @@ final class PrefixCodeDecoder {
         if (methodGuard < 72) {
           return;
         }
-        {
-          frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
-          af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
-          if (0 <= frameStepTicksBeforeDecrement) {
-            LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-            gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-            if (gi.avatarBlinkClockTicks % 600 < 30) {
-              DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-            }
-            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-            fieldTemp$27 = wa.avatarShockEffectTicks;
-            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-            if (fieldTemp$27 <= 0) {
-              fieldTemp$28 = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$28 <= 0) {
-                return;
-              }
-              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+        frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
+        af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
+        if (0 <= frameStepTicksBeforeDecrement) {
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (gi.avatarBlinkClockTicks % 600 < 30) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+          }
+          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          fieldTemp$27 = wa.avatarShockEffectTicks;
+          wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+          if (fieldTemp$27 <= 0) {
+            fieldTemp$28 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$28 <= 0) {
               return;
             }
-            {
-              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-              fieldTemp$29 = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$29 <= 0) {
-                return;
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+            return;
+          }
+          IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          fieldTemp$29 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$29 <= 0) {
+            return;
+          }
+          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+          return;
+        }
+        if (DiskCacheWorker.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
+          DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
+          af.avatarFrameStepTicks = 20;
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (gi.avatarBlinkClockTicks % 600 < 30) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+          }
+          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          fieldTemp$1 = wa.avatarShockEffectTicks;
+          wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+          if (fieldTemp$1 <= 0) {
+            fieldTemp$2 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$2 <= 0) {
+              return;
+            }
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+            return;
+          }
+          IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          fieldTemp$3 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$3 <= 0) {
+            return;
+          }
+          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+          return;
+        }
+        avatarFrameOffsetInSegment = DiskCacheWorker.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
+        if (jk.avatarSteeringDirectionId != 1) {
+          if (jk.avatarSteeringDirectionId == 2) {
+            if (avatarFrameOffsetInSegment < 5) {
+              DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
+              af.avatarFrameStepTicks = 20;
+              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+              if (gi.avatarBlinkClockTicks % 600 < 30) {
+                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
               }
-              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$17 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$17 > 0) {
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              }
+              fieldTemp$18 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$18 > 0) {
+                rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              }
               return;
             }
           }
-          if (DiskCacheWorker.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
-            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
+          if (jk.avatarSteeringDirectionId == 0) {
+            if (avatarFrameOffsetInSegment < 3) {
+              DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
+              af.avatarFrameStepTicks = 20;
+              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+              if (gi.avatarBlinkClockTicks % 600 < 30) {
+                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+              }
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$19 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$19 > 0) {
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              }
+              fieldTemp$20 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$20 > 0) {
+                rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              }
+              return;
+            }
+          }
+          if (jk.avatarSteeringDirectionId != 0) {
             af.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
             gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
@@ -381,278 +450,191 @@ final class PrefixCodeDecoder {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-            fieldTemp$1 = wa.avatarShockEffectTicks;
+            fieldTemp$25 = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-            if (fieldTemp$1 <= 0) {
-              fieldTemp$2 = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$2 <= 0) {
-                return;
-              }
-              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-              return;
-            }
-            {
+            if (fieldTemp$25 > 0) {
               IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-              fieldTemp$3 = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$3 <= 0) {
-                return;
-              }
+            }
+            fieldTemp$26 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$26 > 0) {
               rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-              return;
             }
+            return;
           }
-          {
-            avatarFrameOffsetInSegment = DiskCacheWorker.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
-            if (jk.avatarSteeringDirectionId != 1) {
-              if (jk.avatarSteeringDirectionId == 2) {
-                if (avatarFrameOffsetInSegment < 5) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-                  af.avatarFrameStepTicks = 20;
-                  LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                  if (gi.avatarBlinkClockTicks % 600 < 30) {
-                    DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                  }
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                  fieldTemp$17 = wa.avatarShockEffectTicks;
-                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                  if (fieldTemp$17 > 0) {
-                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                  }
-                  fieldTemp$18 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$18 > 0) {
-                    rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                  }
-                  return;
-                }
-              }
-              if (jk.avatarSteeringDirectionId == 0) {
-                if (avatarFrameOffsetInSegment < 3) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-                  af.avatarFrameStepTicks = 20;
-                  LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                  if (gi.avatarBlinkClockTicks % 600 < 30) {
-                    DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                  }
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                  fieldTemp$19 = wa.avatarShockEffectTicks;
-                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                  if (fieldTemp$19 > 0) {
-                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                  }
-                  fieldTemp$20 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$20 > 0) {
-                    rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                  }
-                  return;
-                }
-              }
-              if (jk.avatarSteeringDirectionId != 0) {
-                af.avatarFrameStepTicks = 20;
-                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                }
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$25 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$25 > 0) {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                }
-                fieldTemp$26 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$26 > 0) {
-                  rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                }
-                return;
-              }
-              if (avatarFrameOffsetInSegment <= 3) {
-                af.avatarFrameStepTicks = 20;
-                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                }
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$21 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$21 > 0) {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                }
-                fieldTemp$22 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$22 > 0) {
-                  rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                }
-                return;
-              }
-              {
-                DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
-                af.avatarFrameStepTicks = 20;
-                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                }
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$23 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$23 > 0) {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                }
-                fieldTemp$24 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$24 > 0) {
-                  rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                }
-                return;
-              }
+          if (avatarFrameOffsetInSegment <= 3) {
+            af.avatarFrameStepTicks = 20;
+            LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+            gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+            if (gi.avatarBlinkClockTicks % 600 < 30) {
+              DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
-            if (avatarFrameOffsetInSegment > 1) {
-              DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
-              af.avatarFrameStepTicks = 20;
-              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-              if (gi.avatarBlinkClockTicks % 600 < 30) {
-                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-              }
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-              fieldTemp$4 = wa.avatarShockEffectTicks;
-              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-              if (fieldTemp$4 <= 0) {
-                fieldTemp$5 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$5 <= 0) {
-                  return;
-                }
-                rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                return;
-              }
-              {
-                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                fieldTemp$6 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$6 > 0) {
-                  rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                }
-                return;
-              }
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            fieldTemp$21 = wa.avatarShockEffectTicks;
+            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+            if (fieldTemp$21 > 0) {
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             }
-            if (jk.avatarSteeringDirectionId == 2) {
-              if (avatarFrameOffsetInSegment < 5) {
-                DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-                af.avatarFrameStepTicks = 20;
-                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                }
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$7 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$7 > 0) {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                }
-                fieldTemp$8 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$8 > 0) {
-                  rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                }
-                return;
-              }
+            fieldTemp$22 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$22 > 0) {
+              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             }
-            if (jk.avatarSteeringDirectionId == 0) {
-              if (avatarFrameOffsetInSegment < 3) {
-                DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-                af.avatarFrameStepTicks = 20;
-                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                }
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$9 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$9 > 0) {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                }
-                fieldTemp$10 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$10 > 0) {
-                  rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                }
-                return;
-              }
-            }
-            if (jk.avatarSteeringDirectionId != 0) {
-              af.avatarFrameStepTicks = 20;
-              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-              if (gi.avatarBlinkClockTicks % 600 < 30) {
-                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-              }
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-              fieldTemp$15 = wa.avatarShockEffectTicks;
-              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-              if (fieldTemp$15 > 0) {
-                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-              }
-              fieldTemp$16 = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$16 > 0) {
-                rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-              }
+            return;
+          }
+          DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
+          af.avatarFrameStepTicks = 20;
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (gi.avatarBlinkClockTicks % 600 < 30) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+          }
+          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          fieldTemp$23 = wa.avatarShockEffectTicks;
+          wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+          if (fieldTemp$23 > 0) {
+            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          }
+          fieldTemp$24 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$24 > 0) {
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+          }
+          return;
+        }
+        if (avatarFrameOffsetInSegment > 1) {
+          DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
+          af.avatarFrameStepTicks = 20;
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (gi.avatarBlinkClockTicks % 600 < 30) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+          }
+          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          fieldTemp$4 = wa.avatarShockEffectTicks;
+          wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+          if (fieldTemp$4 <= 0) {
+            fieldTemp$5 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$5 <= 0) {
               return;
             }
-            if (avatarFrameOffsetInSegment <= 3) {
-              af.avatarFrameStepTicks = 20;
-              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-              if (gi.avatarBlinkClockTicks % 600 < 30) {
-                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-              }
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-              fieldTemp$11 = wa.avatarShockEffectTicks;
-              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-              if (fieldTemp$11 > 0) {
-                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-              }
-              fieldTemp$12 = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$12 > 0) {
-                rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-              }
-              return;
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+            return;
+          }
+          IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          fieldTemp$6 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$6 > 0) {
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+          }
+          return;
+        }
+        if (jk.avatarSteeringDirectionId == 2) {
+          if (avatarFrameOffsetInSegment < 5) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
+            af.avatarFrameStepTicks = 20;
+            LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+            gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+            if (gi.avatarBlinkClockTicks % 600 < 30) {
+              DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
-            {
-              DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
-              af.avatarFrameStepTicks = 20;
-              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
-              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-              if (gi.avatarBlinkClockTicks % 600 < 30) {
-                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-              }
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-              fieldTemp$13 = wa.avatarShockEffectTicks;
-              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-              if (fieldTemp$13 > 0) {
-                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-              }
-              fieldTemp$14 = jf.avatarTintFadeTicks;
-              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$14 > 0) {
-                rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-              }
-              return;
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            fieldTemp$7 = wa.avatarShockEffectTicks;
+            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+            if (fieldTemp$7 > 0) {
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             }
+            fieldTemp$8 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$8 > 0) {
+              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+            }
+            return;
           }
         }
+        if (jk.avatarSteeringDirectionId == 0) {
+          if (avatarFrameOffsetInSegment < 3) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
+            af.avatarFrameStepTicks = 20;
+            LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+            gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+            if (gi.avatarBlinkClockTicks % 600 < 30) {
+              DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+            }
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            fieldTemp$9 = wa.avatarShockEffectTicks;
+            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+            if (fieldTemp$9 > 0) {
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+            }
+            fieldTemp$10 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$10 > 0) {
+              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+            }
+            return;
+          }
+        }
+        if (jk.avatarSteeringDirectionId != 0) {
+          af.avatarFrameStepTicks = 20;
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (gi.avatarBlinkClockTicks % 600 < 30) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+          }
+          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          fieldTemp$15 = wa.avatarShockEffectTicks;
+          wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+          if (fieldTemp$15 > 0) {
+            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          }
+          fieldTemp$16 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$16 > 0) {
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+          }
+          return;
+        }
+        if (avatarFrameOffsetInSegment <= 3) {
+          af.avatarFrameStepTicks = 20;
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (gi.avatarBlinkClockTicks % 600 < 30) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+          }
+          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+          fieldTemp$11 = wa.avatarShockEffectTicks;
+          wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+          if (fieldTemp$11 > 0) {
+            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          }
+          fieldTemp$12 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$12 > 0) {
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+          }
+          return;
+        }
+        DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
+        af.avatarFrameStepTicks = 20;
+        LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
+        gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+        if (gi.avatarBlinkClockTicks % 600 < 30) {
+          DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+        }
+        avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+        fieldTemp$13 = wa.avatarShockEffectTicks;
+        wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+        if (fieldTemp$13 > 0) {
+          IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+        }
+        fieldTemp$14 = jf.avatarTintFadeTicks;
+        jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+        if (fieldTemp$14 > 0) {
+          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+        }
+        return;
     }
 
     private PrefixCodeDecoder() throws Throwable {

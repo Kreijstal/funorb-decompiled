@@ -211,31 +211,29 @@ class IntrusiveNode {
                 }
                 break L6;
               }
-              {
-                for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
-                  for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
-                    paletteIndicesForUpdates[alphaByteOrRow * spriteWidth + pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
-                  }
+              for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
+                for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
+                  paletteIndicesForUpdates[alphaByteOrRow * spriteWidth + pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
                 }
-                if (0 == (2 & storageFlags)) {
-                  break L6;
-                }
-                for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
-                  for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
-                    columnMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 78);
-                    alphaPlaneForUpdates[pixelIndexOrColumn + spriteWidth * alphaByteOrRow] = columnMajorAlphaByte;
-                    columnAlphaValue = columnMajorAlphaByte;
-                    columnMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;
-                    if (columnAlphaValue == -1) {
-                      columnMajorNonOpaqueFlag = 0;
-                    } else {
-                      columnMajorNonOpaqueFlag = 1;
-                    }
-                    hasNonOpaqueAlphaFlag = columnMajorOpacityFlagBeforeMerge | columnMajorNonOpaqueFlag;
-                  }
-                }
+              }
+              if (0 == (2 & storageFlags)) {
                 break L6;
               }
+              for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
+                for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
+                  columnMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 78);
+                  alphaPlaneForUpdates[pixelIndexOrColumn + spriteWidth * alphaByteOrRow] = columnMajorAlphaByte;
+                  columnAlphaValue = columnMajorAlphaByte;
+                  columnMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;
+                  if (columnAlphaValue == -1) {
+                    columnMajorNonOpaqueFlag = 0;
+                  } else {
+                    columnMajorNonOpaqueFlag = 1;
+                  }
+                  hasNonOpaqueAlphaFlag = columnMajorOpacityFlagBeforeMerge | columnMajorNonOpaqueFlag;
+                }
+              }
+              break L6;
             }
             ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex] = hasNonOpaqueAlphaFlag != 0;
           }

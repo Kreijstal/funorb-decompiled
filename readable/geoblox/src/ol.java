@@ -93,41 +93,39 @@ final class ol extends hk {
           if (!super.a(param0, 93, param2, param3, param4, param5, param6)) {
             return false;
           }
-          {
-            var9 = -param2 + param4 - this.field_H;
-            var10 = this.field_r - 2 * this.field_H;
-            if (var10 < var9) {
-              var9 = var10;
-            }
-            if (0 > var9) {
-              var9 = 0;
-            }
-            L2: {
-              var9 = this.field_E * var9 / var10;
-              if (param3 != 1) {
-                if (param3 == 2) {
-                  var11 = 2147483647;
-                  var12 = -1;
-                  for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
-                    var14 = this.field_F.a(var13, (byte) 94) - var9;
-                    var14 = var14 * var14;
-                    if (~var11 < ~var14) {
-                      var11 = var14;
-                      var12 = var13;
-                    }
+          var9 = -param2 + param4 - this.field_H;
+          var10 = this.field_r - 2 * this.field_H;
+          if (var10 < var9) {
+            var9 = var10;
+          }
+          if (0 > var9) {
+            var9 = 0;
+          }
+          L2: {
+            var9 = this.field_E * var9 / var10;
+            if (param3 != 1) {
+              if (param3 == 2) {
+                var11 = 2147483647;
+                var12 = -1;
+                for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
+                  var14 = this.field_F.a(var13, (byte) 94) - var9;
+                  var14 = var14 * var14;
+                  if (~var11 < ~var14) {
+                    var11 = var14;
+                    var12 = var13;
                   }
-                  if (0 > var12) {
-                    break L2;
-                  }
-                  this.field_F.a(0, var12);
+                }
+                if (0 > var12) {
                   break L2;
                 }
-              } else {
-                this.field_F.b(var9, (byte) -93);
+                this.field_F.a(0, var12);
+                break L2;
               }
+            } else {
+              this.field_F.b(var9, (byte) -93);
             }
-            return true;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;

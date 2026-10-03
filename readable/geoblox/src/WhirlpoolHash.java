@@ -36,55 +36,53 @@ final class WhirlpoolHash {
         if (methodGuard < 103) {
           return;
         }
-        {
-          wordIndexOrRound = 0;
-          blockByteOffsetOrWordIndex = 0;
-          L0: while (wordIndexOrRound < 8) {
-            this.messageWords[wordIndexOrRound] = f.xorLong(cj.andLong((long)this.blockBuffer[7 + blockByteOffsetOrWordIndex], 255L), f.xorLong(f.xorLong(f.xorLong(f.xorLong(cj.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 3] << 32), f.xorLong(cj.andLong(255L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 2]) << 40, f.xorLong(cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffsetOrWordIndex] << 56))), cj.andLong((long)this.blockBuffer[4 + blockByteOffsetOrWordIndex] << 24, 4278190080L)), cj.andLong(16711680L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 5] << 16)), cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 6] << 8, 65280L)));
-            blockByteOffsetOrWordIndex += 8;
-            wordIndexOrRound++;
-          }
-          for (wordIndexOrRound = 0; wordIndexOrRound < 8; wordIndexOrRound++) {
-            hashWordSnapshot = this.hashWords[wordIndexOrRound];
-            messageWordSnapshot = this.messageWords[wordIndexOrRound];
-            this.roundKey[wordIndexOrRound] = hashWordSnapshot;
-            this.cipherState[wordIndexOrRound] = f.xorLong(messageWordSnapshot, hashWordSnapshot);
-          }
-          for (wordIndexOrRound = 1; 10 >= wordIndexOrRound; wordIndexOrRound++) {
-            for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = 0L;
-              keyByteIndexOrStateStartSnapshot = 0;
-              byteShift = 56;
-              L9: while (keyByteIndexOrStateStartSnapshot < 8) {
-                this.roundScratch[blockByteOffsetOrWordIndex] = f.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][cd.andInt(255, (int)(this.roundKey[cd.andInt(7, blockByteOffsetOrWordIndex - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
-                byteShift -= 8;
-                keyByteIndexOrStateStartSnapshot++;
-              }
-            }
-            for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
-              this.roundKey[blockByteOffsetOrWordIndex] = this.roundScratch[blockByteOffsetOrWordIndex];
-            }
-            this.roundKey[0] = f.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[wordIndexOrRound]);
-            for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = this.roundKey[blockByteOffsetOrWordIndex];
-              stateByteIndex = 0;
-              keyByteIndexOrStateStartSnapshot = stateByteIndex;
-              byteShift = 56;
-              L8: while (stateByteIndex < 8) {
-                this.roundScratch[blockByteOffsetOrWordIndex] = f.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][cd.andInt(255, (int)(this.cipherState[cd.andInt(-stateByteIndex + blockByteOffsetOrWordIndex, 7)] >>> byteShift))]);
-                stateByteIndex++;
-                byteShift -= 8;
-              }
-            }
-            for (blockByteOffsetOrWordIndex = 0; 8 > blockByteOffsetOrWordIndex; blockByteOffsetOrWordIndex++) {
-              this.cipherState[blockByteOffsetOrWordIndex] = this.roundScratch[blockByteOffsetOrWordIndex];
-            }
-          }
-          for (wordIndexOrRound = 0; wordIndexOrRound < 8; wordIndexOrRound++) {
-            this.hashWords[wordIndexOrRound] = f.xorLong(this.hashWords[wordIndexOrRound], f.xorLong(this.cipherState[wordIndexOrRound], this.messageWords[wordIndexOrRound]));
-          }
-          return;
+        wordIndexOrRound = 0;
+        blockByteOffsetOrWordIndex = 0;
+        while (wordIndexOrRound < 8) {
+          this.messageWords[wordIndexOrRound] = f.xorLong(cj.andLong((long)this.blockBuffer[7 + blockByteOffsetOrWordIndex], 255L), f.xorLong(f.xorLong(f.xorLong(f.xorLong(cj.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 3] << 32), f.xorLong(cj.andLong(255L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 2]) << 40, f.xorLong(cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffsetOrWordIndex] << 56))), cj.andLong((long)this.blockBuffer[4 + blockByteOffsetOrWordIndex] << 24, 4278190080L)), cj.andLong(16711680L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 5] << 16)), cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 6] << 8, 65280L)));
+          blockByteOffsetOrWordIndex += 8;
+          wordIndexOrRound++;
         }
+        for (wordIndexOrRound = 0; wordIndexOrRound < 8; wordIndexOrRound++) {
+          hashWordSnapshot = this.hashWords[wordIndexOrRound];
+          messageWordSnapshot = this.messageWords[wordIndexOrRound];
+          this.roundKey[wordIndexOrRound] = hashWordSnapshot;
+          this.cipherState[wordIndexOrRound] = f.xorLong(messageWordSnapshot, hashWordSnapshot);
+        }
+        for (wordIndexOrRound = 1; 10 >= wordIndexOrRound; wordIndexOrRound++) {
+          for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
+            this.roundScratch[blockByteOffsetOrWordIndex] = 0L;
+            keyByteIndexOrStateStartSnapshot = 0;
+            byteShift = 56;
+            while (keyByteIndexOrStateStartSnapshot < 8) {
+              this.roundScratch[blockByteOffsetOrWordIndex] = f.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][cd.andInt(255, (int)(this.roundKey[cd.andInt(7, blockByteOffsetOrWordIndex - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
+              byteShift -= 8;
+              keyByteIndexOrStateStartSnapshot++;
+            }
+          }
+          for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
+            this.roundKey[blockByteOffsetOrWordIndex] = this.roundScratch[blockByteOffsetOrWordIndex];
+          }
+          this.roundKey[0] = f.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[wordIndexOrRound]);
+          for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
+            this.roundScratch[blockByteOffsetOrWordIndex] = this.roundKey[blockByteOffsetOrWordIndex];
+            stateByteIndex = 0;
+            keyByteIndexOrStateStartSnapshot = stateByteIndex;
+            byteShift = 56;
+            while (stateByteIndex < 8) {
+              this.roundScratch[blockByteOffsetOrWordIndex] = f.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][cd.andInt(255, (int)(this.cipherState[cd.andInt(-stateByteIndex + blockByteOffsetOrWordIndex, 7)] >>> byteShift))]);
+              stateByteIndex++;
+              byteShift -= 8;
+            }
+          }
+          for (blockByteOffsetOrWordIndex = 0; 8 > blockByteOffsetOrWordIndex; blockByteOffsetOrWordIndex++) {
+            this.cipherState[blockByteOffsetOrWordIndex] = this.roundScratch[blockByteOffsetOrWordIndex];
+          }
+        }
+        for (wordIndexOrRound = 0; wordIndexOrRound < 8; wordIndexOrRound++) {
+          this.hashWords[wordIndexOrRound] = f.xorLong(this.hashWords[wordIndexOrRound], f.xorLong(this.cipherState[wordIndexOrRound], this.messageWords[wordIndexOrRound]));
+        }
+        return;
     }
 
     final void updateBits(byte[] source, long remainingBitCount, int methodGuard) {
@@ -109,14 +107,14 @@ final class WhirlpoolHash {
           bitLengthToAccumulate = remainingBitCount;
           lengthByteIndex = 31;
           lengthCarry = methodGuard;
-          L0: while (lengthByteIndex >= 0) {
+          while (lengthByteIndex >= 0) {
             lengthCarry = lengthCarry + ((255 & (int)bitLengthToAccumulate) + (this.messageBitLength[lengthByteIndex] & 255));
             this.messageBitLength[lengthByteIndex] = (byte)lengthCarry;
             lengthCarry = lengthCarry >>> 8;
             bitLengthToAccumulate = bitLengthToAccumulate >>> 8;
             lengthByteIndex--;
           }
-          L1: while (true) {
+          while (true) {
             if (8L < remainingBitCount) {
               shiftedSourceByte = 255 & source[sourceByteIndex] << sourceBitShift | (source[sourceByteIndex + 1] & 255) >>> -sourceBitShift + 8;
               if (shiftedSourceByte >= 0) {
@@ -133,7 +131,7 @@ final class WhirlpoolHash {
                   remainingBitCount = remainingBitCount - 8L;
                   this.bufferedBitCount = this.bufferedBitCount + bufferPartialByteBits;
                   sourceByteIndex++;
-                  continue L1;
+                  continue;
                 }
               }
               throw new RuntimeException("LOGIC ERROR");
@@ -221,7 +219,7 @@ final class WhirlpoolHash {
             this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> cd.andInt(this.bufferedBitCount, 7));
             this.bufferBytePosition = this.bufferBytePosition + 1;
             if (this.bufferBytePosition > 32) {
-              L1: while (this.bufferBytePosition < 64) {
+              while (this.bufferBytePosition < 64) {
                 extraBlockPaddingIndex = this.bufferBytePosition;
                 this.bufferBytePosition = this.bufferBytePosition + 1;
                 this.blockBuffer[extraBlockPaddingIndex] = (byte) 0;
@@ -234,7 +232,7 @@ final class WhirlpoolHash {
           if (!skipResetGuard) {
             this.reset(-38);
           }
-          L3: while (this.bufferBytePosition < 32) {
+          while (this.bufferBytePosition < 32) {
             finalBlockPaddingIndex = this.bufferBytePosition;
             this.bufferBytePosition = this.bufferBytePosition + 1;
             this.blockBuffer[finalBlockPaddingIndex] = (byte) 0;
@@ -243,7 +241,7 @@ final class WhirlpoolHash {
           this.processBlock(117);
           hashWordIndex = 0;
           destinationByteIndex = destinationOffset;
-          L4: while (hashWordIndex < 8) {
+          while (hashWordIndex < 8) {
             hashWord = this.hashWords[hashWordIndex];
             destination[destinationByteIndex] = (byte)(int)(hashWord >>> 56);
             destination[1 + destinationByteIndex] = (byte)(int)(hashWord >>> 48);

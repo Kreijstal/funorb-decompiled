@@ -74,16 +74,14 @@ final class lh {
         if (var1 != 2) {
           return;
         }
-        {
-          fieldTemp$7 = eh.pendingActionPanelTop;
-          eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
-          if (fieldTemp$7 <= 480) {
-            return;
-          }
-          ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
-          gf.preparePendingActionPanel((byte) -12);
+        fieldTemp$7 = eh.pendingActionPanelTop;
+        eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
+        if (fieldTemp$7 <= 480) {
           return;
         }
+        ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
+        gf.preparePendingActionPanel((byte) -12);
+        return;
     }
 
     public final String toString() {

@@ -21,7 +21,7 @@ final class dc {
         var2 = Geoblox.field_C;
         try {
           var3 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-          L0: while (var3 != null) {
+          while (var3 != null) {
             var3.drawEntityAtPosition(1643839728);
             var3 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }

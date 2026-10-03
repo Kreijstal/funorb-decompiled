@@ -19,21 +19,31 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,519 remaining bindings
 and 388 override relationships.
 
-The current structural pass removes a 13-line duplicate Bzip2 output-state
-publication/return tail. The generic decompiler reuses an existing plain exit
-block, preserving protected/monitor boundaries and refusing shadowed names.
-Its 2,048 native comparisons check loop effects, failure ordering, throwable
-identity and lock ownership. The other 302 Java files and diagnostics are unchanged.
+The current structural pass removes redundant control labels and plain blocks
+without widening variable scopes. Labeled transfers become ordinary break/
+continue only when they reach the exact same loop/switch. Try/catch/finally,
+monitor boundaries and outer exits remain. Regeneration changes 153 files and
+removes 588 lines, reducing the raw corpus from 80,457 to 79,869 lines.
+It removes 508 redundant labels and simplifies 450 labeled continues; all
+1,190 labeled breaks retain their destinations.
 
-All 6,081 prior complete naming rules survive with no ordinal migrations. They
-apply 49,580 edits after removing the redundant references. Both 303-file
-corpora compile, preserving 138,519 bindings and 388 overrides. A clean pinned
-decompiler source archive regenerates the raw source and diagnostics byte-for-byte;
-the readable export reproduces and reverses exactly. All nine existing native
-helper traces remain unchanged, including the 40-case Bzip2 matrix.
-The single manifest records the explicit source/decompiler migration and evidence.
+The emitter suite passes 41 groups, including 2,048 new native comparisons and
+an independent Java AST comparison of all 303 files, 1,129 loop/switch destinations
+and 1,762 jumps. Exception-exit tests pass eight groups. Three wider CFR fixture
+failures also occur on the pinned pre-cleanup baseline. Diagnostics are unchanged.
+
+All 6,081 prior complete naming rules survive without ordinal migrations, applying
+49,580 edits and preserving all declaration/reference names, identities and order,
+138,519 bindings and 388 overrides. Clean pinned decompiler source regeneration,
+readable reproduction and dictionary reversal are byte-exact. Existing native
+probe traces retain their pins. The single manifest records the explicit source/
+decompiler migration and evidence; Git stores history without new report snapshots.
 Large labeled bodies, opaque helpers, comprehensive concurrency, full assets/
 gameplay and device memory/startup/FPS targets remain unfinished or unverified.
+
+Pass 76 shared a duplicate Bzip2 output-state publication/return tail through an
+existing plain exit block, removing thirteen lines while retaining its native
+40-case block matrix and eight other helper traces.
 
 Pass 75 named Bzip2 block/table/run decoding and all decoder state fields. Its
 40-case native fixture checks varied blocks, two-block input, partial output,

@@ -322,7 +322,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           }
                           if (var2.startsWith("1.6.0_")) {
                             var3 = 6;
-                            L8: while (var2.length() > var3) {
+                            while (var2.length() > var3) {
                               stackIn_66_0 = DualLinkNode.a(-58, var2.charAt(var3));
                               if (var5 != 0) {
                                 break L3;
@@ -330,7 +330,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               if (stackIn_66_0) {
                                 var3++;
                                 if (var5 == 0) {
-                                  continue L8;
+                                  continue;
                                 }
                               }
                               break;
@@ -358,7 +358,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     if (stackIn_66_0) {
                       var1_int = 2;
                       var2_int = 0;
-                      L10: while (true) {
+                      while (true) {
                         L11: {
                           if (~PlatformTaskDispatcher.javaVersion.length() < ~var1_int) {
                             var3 = PlatformTaskDispatcher.javaVersion.charAt(var1_int);
@@ -372,7 +372,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                                 var2_int = 10 * var2_int - 48 + var3;
                                 var1_int++;
                                 if (var5 == 0) {
-                                  continue L10;
+                                  continue;
                                 }
                               }
                             }
@@ -421,7 +421,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       stackIn_99_0 = 0;
                     }
                     var3 = stackIn_99_0;
-                    L20: while (true) {
+                    while (true) {
                       L21: {
                         if (nf.field_w > var3) {
                           this.a((byte) -10);
@@ -430,7 +430,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             break L21;
                           }
                           if (var5 == 0) {
-                            continue L20;
+                            continue;
                           }
                         }
                         this.d(32000);
@@ -606,35 +606,33 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         var5 = var3_ref.toString();
         var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
         var7 = var6.readLine();
-        L2: while (true) {
+        while (true) {
           var8 = var6.readLine();
           if (null == var8) {
             var2 = var2 + "| " + var7;
             return var2;
           }
-          {
-            var9 = var8.indexOf('(');
-            var10 = var8.indexOf(')', var9 + 1);
-            if (-1 != var9) {
-              var11 = var8.substring(0, var9);
-            } else {
-              var11 = var8;
-            }
-            var11 = var11.trim();
-            var11 = var11.substring(var11.lastIndexOf(' ') + 1);
-            var11 = var11.substring(1 + var11.lastIndexOf('\t'));
-            var2 = var2 + var11;
-            if (var9 != -1) {
-              if (-1 != var10) {
-                var12 = var8.indexOf(".java:", var9);
-                if (var12 >= 0) {
-                  var2 = var2 + var8.substring(var12 + 5, var10);
-                }
+          var9 = var8.indexOf('(');
+          var10 = var8.indexOf(')', var9 + 1);
+          if (-1 != var9) {
+            var11 = var8.substring(0, var9);
+          } else {
+            var11 = var8;
+          }
+          var11 = var11.trim();
+          var11 = var11.substring(var11.lastIndexOf(' ') + 1);
+          var11 = var11.substring(1 + var11.lastIndexOf('\t'));
+          var2 = var2 + var11;
+          if (var9 != -1) {
+            if (-1 != var10) {
+              var12 = var8.indexOf(".java:", var9);
+              if (var12 >= 0) {
+                var2 = var2 + var8.substring(var12 + 5, var10);
               }
             }
-            var2 = var2 + ' ';
-            continue L2;
           }
+          var2 = var2 + ' ';
+          continue;
         }
     }
 
@@ -818,25 +816,23 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   if (param1 != -14948) {
                     return;
                   }
-                  {
-                    dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
-                    MenuScreen.field_i = dupTemp$0;
-                    ml.field_s = dupTemp$0;
-                    var8 = MenuScreen.field_i.startThread((Runnable) (this), 0, 1);
-                    L1: while (true) {
-                      L2: {
-                        if (var8.status == 0) {
-                          bc.sleepMillis(0, 10L);
-                          if (var9 != 0) {
-                            break L2;
-                          }
-                          if (var9 == 0) {
-                            continue L1;
-                          }
+                  dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
+                  MenuScreen.field_i = dupTemp$0;
+                  ml.field_s = dupTemp$0;
+                  var8 = MenuScreen.field_i.startThread((Runnable) (this), 0, 1);
+                  while (true) {
+                    L2: {
+                      if (var8.status == 0) {
+                        bc.sleepMillis(0, 10L);
+                        if (var9 != 0) {
+                          break L2;
+                        }
+                        if (var9 == 0) {
+                          continue;
                         }
                       }
-                      break L0;
                     }
+                    break L0;
                   }
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {

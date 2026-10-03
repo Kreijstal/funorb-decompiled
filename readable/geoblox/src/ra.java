@@ -71,53 +71,49 @@ final class ra implements Iterable {
         if (el.gameplaySession.tutorialMode) {
           return;
         }
-        {
-          var3 = 1 << param2;
-          if ((vl.field_p & var3) != 0) {
-            return;
+        var3 = 1 << param2;
+        if ((vl.field_p & var3) != 0) {
+          return;
+        }
+        ug.field_c = ug.field_c | var3;
+        el.gameplaySession.newActionCount = el.gameplaySession.newActionCount + 1;
+        var4 = param2;
+        stackIn_8_0 = ((1 << var4 & dc.field_a) == 0) ? 0 : 1;
+        var5 = stackIn_8_0;
+        if (param1 < -47) {
+          if (var5 != 0) {
+            vl.field_p = vl.field_p | var3;
+            stackIn_35_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            var4 = stackIn_35_0;
+          } else {
+            dc.field_a = dc.field_a | 1 << var4;
+            el.field_g = el.field_g - (1 << var4);
+            vl.field_p = vl.field_p | var3;
+            stackIn_45_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            var4 = stackIn_45_0;
           }
-          {
-            ug.field_c = ug.field_c | var3;
-            el.gameplaySession.newActionCount = el.gameplaySession.newActionCount + 1;
-            var4 = param2;
-            stackIn_8_0 = ((1 << var4 & dc.field_a) == 0) ? 0 : 1;
-            var5 = stackIn_8_0;
-            if (param1 < -47) {
-              if (var5 != 0) {
-                vl.field_p = vl.field_p | var3;
-                stackIn_35_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-                var4 = stackIn_35_0;
-              } else {
-                dc.field_a = dc.field_a | 1 << var4;
-                el.field_g = el.field_g - (1 << var4);
-                vl.field_p = vl.field_p | var3;
-                stackIn_45_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-                var4 = stackIn_45_0;
-              }
-            } else {
-              ticketingUnreadCountText = (String) null;
-              if (var5 != 0) {
-                vl.field_p = vl.field_p | var3;
-                stackIn_23_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-                var4 = stackIn_23_0;
-              } else {
-                dc.field_a = dc.field_a | 1 << var4;
-                el.field_g = el.field_g - (1 << var4);
-                vl.field_p = vl.field_p | var3;
-                stackIn_13_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-                var4 = stackIn_13_0;
-              }
-            }
-            ArchiveRequest.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
-            if (var4 != 0) {
-              gf.preparePendingActionPanel((byte) -122);
-            }
-            if (!el.gameplaySession.submissionBlocked) {
-              GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, AwtRasterBuffer.field_f, lb.field_b));
-            }
-            return;
+        } else {
+          ticketingUnreadCountText = (String) null;
+          if (var5 != 0) {
+            vl.field_p = vl.field_p | var3;
+            stackIn_23_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            var4 = stackIn_23_0;
+          } else {
+            dc.field_a = dc.field_a | 1 << var4;
+            el.field_g = el.field_g - (1 << var4);
+            vl.field_p = vl.field_p | var3;
+            stackIn_13_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            var4 = stackIn_13_0;
           }
         }
+        ArchiveRequest.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
+        if (var4 != 0) {
+          gf.preparePendingActionPanel((byte) -122);
+        }
+        if (!el.gameplaySession.submissionBlocked) {
+          GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, AwtRasterBuffer.field_f, lb.field_b));
+        }
+        return;
     }
 
     final static boolean a(int param0, String param1) {
@@ -138,13 +134,13 @@ final class ra implements Iterable {
             ra.a(20, (String) null);
           }
           var3 = 1;
-          L1: while (true) {
+          while (true) {
             if (param1.length() <= var3) {
               return true;
             }
             if (var2_int == param1.charAt(var3)) {
               var3++;
-              continue L1;
+              continue;
             }
             return false;
           }

@@ -50,26 +50,24 @@ final class oi {
         L3: {
           if (sg.field_c != null) {
             var2 = 0;
-            L4: while (true) {
+            while (true) {
               if (var2 >= nk.field_c.length) {
                 break L3;
               }
               if (nk.field_c[var2] != param1) {
                 var2++;
-                continue L4;
+                continue;
               }
               if (0 >= oa.field_b[var2]) {
                 var2++;
-                continue L4;
+                continue;
               }
-              {
-                dupTemp$6 = oa.field_b[var2] - 1;
-                arrayValue$7 = sg.field_c[var2];
-                oa.field_b[var2] = dupTemp$6;
-                var3 = arrayValue$7[dupTemp$6];
-                sg.field_c[var2][oa.field_b[var2]] = null;
-                return var3;
-              }
+              dupTemp$6 = oa.field_b[var2] - 1;
+              arrayValue$7 = sg.field_c[var2];
+              oa.field_b[var2] = dupTemp$6;
+              var3 = arrayValue$7[dupTemp$6];
+              sg.field_c[var2][oa.field_b[var2]] = null;
+              return var3;
             }
           }
         }
@@ -85,7 +83,7 @@ final class oi {
         var3 = Geoblox.field_C;
         try {
           var4 = (se) ((Object) sj.field_g.firstForIteration(0));
-          L0: while (var4 != null) {
+          while (var4 != null) {
             tj.a(param0, 86, var4);
             var4 = (se) ((Object) sj.field_g.nextForIteration(1));
           }
@@ -93,7 +91,7 @@ final class oi {
             field_b = (Sprite) null;
           }
           var5 = (ea) ((Object) ea.field_g.firstForIteration(0));
-          L2: while (var5 != null) {
+          while (var5 != null) {
             gj.a((byte) -88, param0, var5);
             var5 = (ea) ((Object) ea.field_g.nextForIteration(1));
           }

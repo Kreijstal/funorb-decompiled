@@ -163,7 +163,7 @@ final class PacketByteCipher {
         if (methodGuard >= -10) {
           PacketByteCipher.a((byte) 89);
         }
-        L1: while (wordIndex < 256) {
+        while (wordIndex < 256) {
           previousStateWord = this.stateWords[wordIndex];
           if (0 == (2 & wordIndex)) {
             if ((1 & wordIndex) != 0) {

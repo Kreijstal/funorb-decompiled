@@ -58,7 +58,7 @@ final class ul {
           if (methodGuard != -2) {
             currentAvatarCryFrame = (Sprite) null;
           }
-          L1: while (centralEntity != null) {
+          while (centralEntity != null) {
             L3: {
               if (centralEntity.sameVariantEntityCount <= 1) {
                 if (centralEntity.sameCategoryEntityCount <= 1) {
@@ -90,7 +90,7 @@ final class ul {
                       break L10;
                     }
                   }
-                  L12: for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
+                  for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
                     if (firstNeighborSharesCategory != 0) {
                       stackIn_38_0 = (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) ? 1 : 0;
                     } else {
@@ -159,7 +159,7 @@ final class ul {
                       h.matchCandidateCount = h.matchCandidateCount + 1;
                     }
                     if (tripleSharesCategory == 0) {
-                      continue L12;
+                      continue;
                     }
                     if (tripleSharesVariant != 0) {
                       dualMatchFound = 1;

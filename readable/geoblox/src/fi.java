@@ -145,21 +145,19 @@ final class fi {
         IntrusiveNode var4;
         IntrusiveNode var7;
         if (this.field_f <= 0) {
-          L1: while (true) {
+          while (true) {
             if (this.field_c <= this.field_f) {
               var2 = 47 % ((param0 - 28) / 38);
               return null;
             }
-            {
-              fieldTemp$1 = this.field_f;
-              this.field_f = this.field_f + 1;
-              var3 = this.field_e[fieldTemp$1].nextNode;
-              if (this.field_e[-1 + this.field_f] == var3) {
-                continue L1;
-              }
-              this.field_a = var3.nextNode;
-              return var3;
+            fieldTemp$1 = this.field_f;
+            this.field_f = this.field_f + 1;
+            var3 = this.field_e[fieldTemp$1].nextNode;
+            if (this.field_e[-1 + this.field_f] == var3) {
+              continue;
             }
+            this.field_a = var3.nextNode;
+            return var3;
           }
         }
         if (this.field_a != this.field_e[this.field_f - 1]) {
@@ -167,21 +165,19 @@ final class fi {
           this.field_a = var7.nextNode;
           return var7;
         }
-        L0: while (true) {
+        while (true) {
           if (this.field_c <= this.field_f) {
             var2 = 47 % ((param0 - 28) / 38);
             return null;
           }
-          {
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            var4 = this.field_e[fieldTemp$0].nextNode;
-            if (this.field_e[-1 + this.field_f] == var4) {
-              continue L0;
-            }
-            this.field_a = var4.nextNode;
-            return var4;
+          fieldTemp$0 = this.field_f;
+          this.field_f = this.field_f + 1;
+          var4 = this.field_e[fieldTemp$0].nextNode;
+          if (this.field_e[-1 + this.field_f] == var4) {
+            continue;
           }
+          this.field_a = var4.nextNode;
+          return var4;
         }
     }
 

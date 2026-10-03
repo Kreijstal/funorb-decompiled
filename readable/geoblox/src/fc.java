@@ -20,7 +20,7 @@ final class fc {
         try {
           pf.field_D = true;
           var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-          L0: while (var1 != null) {
+          while (var1 != null) {
             var1.advanceEntityAnimation(true);
             if (6 == var1.entitySpriteKindId) {
               pf.field_D = false;
@@ -32,7 +32,7 @@ final class fc {
           }
           var2 = 12 % ((-69 - param0) / 38);
           var1 = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
-          L1: while (var1 != null) {
+          while (var1 != null) {
             L2: {
               var1.advanceEntityAnimation(true);
               if (5 != var1.entitySpriteKindId) {

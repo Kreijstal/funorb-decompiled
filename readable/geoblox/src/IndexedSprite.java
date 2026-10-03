@@ -20,32 +20,28 @@ final class IndexedSprite extends IndexedSpriteState {
             return;
           }
           negativeColumn = -drawWidth;
-          L1: while (true) {
+          while (true) {
             if (negativeColumn >= 0) {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
               continue L0;
             }
-            {
-              sourceReadIndex = sourceIndex;
-              sourceIndex++;
-              indexThenPaletteColor = sourceIndices[sourceReadIndex];
-              if (indexThenPaletteColor == 0) {
-                destinationIndex++;
-                negativeColumn++;
-                continue L1;
-              }
-              {
-                indexThenPaletteColor = palette[indexThenPaletteColor & 255];
-                destinationPixel = destinationPixels[destinationIndex];
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationWriteIndex] = ((indexThenPaletteColor & 16711935) * alpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((indexThenPaletteColor & 65280) * alpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >> 8;
-                negativeColumn++;
-                continue L1;
-              }
+            sourceReadIndex = sourceIndex;
+            sourceIndex++;
+            indexThenPaletteColor = sourceIndices[sourceReadIndex];
+            if (indexThenPaletteColor == 0) {
+              destinationIndex++;
+              negativeColumn++;
+              continue;
             }
+            indexThenPaletteColor = palette[indexThenPaletteColor & 255];
+            destinationPixel = destinationPixels[destinationIndex];
+            destinationWriteIndex = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationWriteIndex] = ((indexThenPaletteColor & 16711935) * alpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((indexThenPaletteColor & 65280) * alpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >> 8;
+            negativeColumn++;
+            continue;
           }
         }
     }
@@ -155,43 +151,39 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex++;
             }
           }
-          L2: while (true) {
+          while (true) {
             if (remainingColumnsScratch <= 0) {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
               continue L0;
             }
-            {
-              sourceReadIndex = sourceIndex;
-              sourceIndex++;
-              indexThenRunLength = sourceIndices[sourceReadIndex];
-              remainingColumnsScratch--;
-              if (indexThenRunLength == 0) {
-                destinationIndex++;
-                continue L2;
-              }
-              if (indexThenRunLength != -1) {
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationWriteIndex] = palette[indexThenRunLength & 255];
-                continue L2;
-              }
-              {
-                sourceReadIndex2 = sourceIndex;
-                sourceIndex++;
-                indexThenRunLength = sourceIndices[sourceReadIndex2] & 255;
-                remainingColumnsScratch--;
-                indexThenRunLength = indexThenRunLength + indexThenRunLength;
-                if (indexThenRunLength > remainingColumnsScratch) {
-                  indexThenRunLength = remainingColumnsScratch;
-                }
-                sourceIndex = sourceIndex + indexThenRunLength;
-                remainingColumnsScratch = remainingColumnsScratch - indexThenRunLength;
-                destinationIndex = destinationIndex + (indexThenRunLength + 2);
-                continue L2;
-              }
+            sourceReadIndex = sourceIndex;
+            sourceIndex++;
+            indexThenRunLength = sourceIndices[sourceReadIndex];
+            remainingColumnsScratch--;
+            if (indexThenRunLength == 0) {
+              destinationIndex++;
+              continue;
             }
+            if (indexThenRunLength != -1) {
+              destinationWriteIndex = destinationIndex;
+              destinationIndex++;
+              destinationPixels[destinationWriteIndex] = palette[indexThenRunLength & 255];
+              continue;
+            }
+            sourceReadIndex2 = sourceIndex;
+            sourceIndex++;
+            indexThenRunLength = sourceIndices[sourceReadIndex2] & 255;
+            remainingColumnsScratch--;
+            indexThenRunLength = indexThenRunLength + indexThenRunLength;
+            if (indexThenRunLength > remainingColumnsScratch) {
+              indexThenRunLength = remainingColumnsScratch;
+            }
+            sourceIndex = sourceIndex + indexThenRunLength;
+            remainingColumnsScratch = remainingColumnsScratch - indexThenRunLength;
+            destinationIndex = destinationIndex + (indexThenRunLength + 2);
+            continue;
           }
         }
     }
@@ -261,85 +253,75 @@ final class IndexedSprite extends IndexedSpriteState {
           if (negativeRow >= 0) {
             return;
           }
-          {
-            quadOrTailCounter = negativeQuadCount;
-            L1: while (true) {
-              if (quadOrTailCounter >= 0) {
-                quadOrTailCounter = widthThenNegativeTail;
-                L2: while (true) {
-                  if (quadOrTailCounter >= 0) {
-                    destinationIndex = destinationIndex + destinationRowSkip;
-                    sourceIndex = sourceIndex + sourceRowSkip;
-                    negativeRow++;
-                    continue L0;
-                  }
-                  {
-                    sourceReadIndex = sourceIndex;
-                    sourceIndex++;
-                    paletteIndexScratch = sourceIndices[sourceReadIndex];
-                    if (paletteIndexScratch == 0) {
-                      destinationIndex++;
-                      quadOrTailCounter++;
-                      continue L2;
-                    }
-                    {
-                      destinationWriteIndex = destinationIndex;
-                      destinationIndex++;
-                      destinationPixels[destinationWriteIndex] = palette[paletteIndexScratch & 255];
-                      quadOrTailCounter++;
-                      continue L2;
-                    }
-                  }
+          quadOrTailCounter = negativeQuadCount;
+          while (true) {
+            if (quadOrTailCounter >= 0) {
+              quadOrTailCounter = widthThenNegativeTail;
+              while (true) {
+                if (quadOrTailCounter >= 0) {
+                  destinationIndex = destinationIndex + destinationRowSkip;
+                  sourceIndex = sourceIndex + sourceRowSkip;
+                  negativeRow++;
+                  continue L0;
                 }
-              }
-              {
-                sourceReadIndex2 = sourceIndex;
+                sourceReadIndex = sourceIndex;
                 sourceIndex++;
-                paletteIndexScratch = sourceIndices[sourceReadIndex2];
-                if (paletteIndexScratch == 0) {
-                  destinationIndex++;
-                } else {
-                  destinationWriteIndex2 = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[destinationWriteIndex2] = palette[paletteIndexScratch & 255];
-                }
-                sourceReadIndex3 = sourceIndex;
-                sourceIndex++;
-                paletteIndexScratch = sourceIndices[sourceReadIndex3];
-                if (paletteIndexScratch == 0) {
-                  destinationIndex++;
-                } else {
-                  destinationWriteIndex3 = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[destinationWriteIndex3] = palette[paletteIndexScratch & 255];
-                }
-                sourceReadIndex4 = sourceIndex;
-                sourceIndex++;
-                paletteIndexScratch = sourceIndices[sourceReadIndex4];
-                if (paletteIndexScratch == 0) {
-                  destinationIndex++;
-                } else {
-                  destinationWriteIndex4 = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[destinationWriteIndex4] = palette[paletteIndexScratch & 255];
-                }
-                sourceReadIndex5 = sourceIndex;
-                sourceIndex++;
-                paletteIndexScratch = sourceIndices[sourceReadIndex5];
+                paletteIndexScratch = sourceIndices[sourceReadIndex];
                 if (paletteIndexScratch == 0) {
                   destinationIndex++;
                   quadOrTailCounter++;
-                  continue L1;
+                  continue;
                 }
-                {
-                  destinationWriteIndex5 = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[destinationWriteIndex5] = palette[paletteIndexScratch & 255];
-                  quadOrTailCounter++;
-                  continue L1;
-                }
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = palette[paletteIndexScratch & 255];
+                quadOrTailCounter++;
+                continue;
               }
             }
+            sourceReadIndex2 = sourceIndex;
+            sourceIndex++;
+            paletteIndexScratch = sourceIndices[sourceReadIndex2];
+            if (paletteIndexScratch == 0) {
+              destinationIndex++;
+            } else {
+              destinationWriteIndex2 = destinationIndex;
+              destinationIndex++;
+              destinationPixels[destinationWriteIndex2] = palette[paletteIndexScratch & 255];
+            }
+            sourceReadIndex3 = sourceIndex;
+            sourceIndex++;
+            paletteIndexScratch = sourceIndices[sourceReadIndex3];
+            if (paletteIndexScratch == 0) {
+              destinationIndex++;
+            } else {
+              destinationWriteIndex3 = destinationIndex;
+              destinationIndex++;
+              destinationPixels[destinationWriteIndex3] = palette[paletteIndexScratch & 255];
+            }
+            sourceReadIndex4 = sourceIndex;
+            sourceIndex++;
+            paletteIndexScratch = sourceIndices[sourceReadIndex4];
+            if (paletteIndexScratch == 0) {
+              destinationIndex++;
+            } else {
+              destinationWriteIndex4 = destinationIndex;
+              destinationIndex++;
+              destinationPixels[destinationWriteIndex4] = palette[paletteIndexScratch & 255];
+            }
+            sourceReadIndex5 = sourceIndex;
+            sourceIndex++;
+            paletteIndexScratch = sourceIndices[sourceReadIndex5];
+            if (paletteIndexScratch == 0) {
+              destinationIndex++;
+              quadOrTailCounter++;
+              continue;
+            }
+            destinationWriteIndex5 = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationWriteIndex5] = palette[paletteIndexScratch & 255];
+            quadOrTailCounter++;
+            continue;
           }
         }
     }

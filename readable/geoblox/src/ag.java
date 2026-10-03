@@ -184,7 +184,7 @@ final class ag extends TextInputValidator {
           if (param1 != -67) {
             return;
           }
-          L0: while (var2 != null) {
+          while (var2 != null) {
             if (!var2.field_f.a(126)) {
               var2.unlinkNode(false);
             } else {
@@ -234,10 +234,10 @@ final class ag extends TextInputValidator {
         field_m = new long[256];
         for (var2 = 0; var2 < 256; var2++) {
           var0 = (long)var2;
-          L1: for (var3 = 0; var3 < 8; var3++) {
+          for (var3 = 0; var3 < 8; var3++) {
             if (1L != (1L & var0)) {
               var0 = var0 >>> 1;
-              continue L1;
+              continue;
             }
             var0 = -3932672073523589310L ^ var0 >>> 1;
           }

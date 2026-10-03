@@ -113,119 +113,117 @@ final class BufferedRandomAccessFile {
             if (remainingLength + destinationOffset > destination.length) {
               throw new ArrayIndexOutOfBoundsException(-destination.length + destinationOffset + remainingLength);
             }
-            {
-              if (-1L != this.writeBufferStart) {
-                if (this.position >= this.writeBufferStart) {
-                  if ((long)this.writeBufferLength + this.writeBufferStart >= (long)remainingLength + this.position) {
-                    sf.a(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, remainingLength);
-                    this.position = this.position + (long)remainingLength;
-                    return;
-                  }
+            if (-1L != this.writeBufferStart) {
+              if (this.position >= this.writeBufferStart) {
+                if ((long)this.writeBufferLength + this.writeBufferStart >= (long)remainingLength + this.position) {
+                  sf.a(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, remainingLength);
+                  this.position = this.position + (long)remainingLength;
+                  return;
                 }
               }
-              initialPosition = this.position;
-              initialDestinationOffset = destinationOffset;
-              requestedLength = remainingLength;
-              if (methodGuard != 9868) {
-                BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(-115);
-              }
-              if (~this.position <= ~this.readBufferStart) {
-                if (~((long)this.readBufferLength + this.readBufferStart) < ~this.position) {
-                  readCountOrZeroFillEnd = (int)((long)this.readBufferLength - this.position + this.readBufferStart);
-                  if (remainingLength < readCountOrZeroFillEnd) {
-                    readCountOrZeroFillEnd = remainingLength;
-                  }
-                  sf.a(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, readCountOrZeroFillEnd);
-                  remainingLength = remainingLength - readCountOrZeroFillEnd;
-                  this.position = this.position + (long)readCountOrZeroFillEnd;
-                  destinationOffset = destinationOffset + readCountOrZeroFillEnd;
-                }
-              }
-              L5: {
-                if (this.readBuffer.length < remainingLength) {
-                  this.file.seek(this.position, true);
-                  this.underlyingPosition = this.position;
-                  L7: while (remainingLength > 0) {
-                    readCountOrZeroFillEnd = this.file.read(remainingLength, destination, destinationOffset, false);
-                    if (-1 == readCountOrZeroFillEnd) {
-                      break L5;
-                    }
-                    this.position = this.position + (long)readCountOrZeroFillEnd;
-                    this.underlyingPosition = this.underlyingPosition + (long)readCountOrZeroFillEnd;
-                    remainingLength = remainingLength - readCountOrZeroFillEnd;
-                    destinationOffset = destinationOffset + readCountOrZeroFillEnd;
-                  }
-                  break L5;
-                }
-                if (remainingLength > 0) {
-                  this.refillReadBuffer(true);
+            }
+            initialPosition = this.position;
+            initialDestinationOffset = destinationOffset;
+            requestedLength = remainingLength;
+            if (methodGuard != 9868) {
+              BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(-115);
+            }
+            if (~this.position <= ~this.readBufferStart) {
+              if (~((long)this.readBufferLength + this.readBufferStart) < ~this.position) {
+                readCountOrZeroFillEnd = (int)((long)this.readBufferLength - this.position + this.readBufferStart);
+                if (remainingLength < readCountOrZeroFillEnd) {
                   readCountOrZeroFillEnd = remainingLength;
-                  if (this.readBufferLength < readCountOrZeroFillEnd) {
-                    readCountOrZeroFillEnd = this.readBufferLength;
+                }
+                sf.a(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, readCountOrZeroFillEnd);
+                remainingLength = remainingLength - readCountOrZeroFillEnd;
+                this.position = this.position + (long)readCountOrZeroFillEnd;
+                destinationOffset = destinationOffset + readCountOrZeroFillEnd;
+              }
+            }
+            L5: {
+              if (this.readBuffer.length < remainingLength) {
+                this.file.seek(this.position, true);
+                this.underlyingPosition = this.position;
+                while (remainingLength > 0) {
+                  readCountOrZeroFillEnd = this.file.read(remainingLength, destination, destinationOffset, false);
+                  if (-1 == readCountOrZeroFillEnd) {
+                    break L5;
                   }
-                  sf.a(this.readBuffer, 0, destination, destinationOffset, readCountOrZeroFillEnd);
+                  this.position = this.position + (long)readCountOrZeroFillEnd;
+                  this.underlyingPosition = this.underlyingPosition + (long)readCountOrZeroFillEnd;
                   remainingLength = remainingLength - readCountOrZeroFillEnd;
                   destinationOffset = destinationOffset + readCountOrZeroFillEnd;
-                  this.position = this.position + (long)readCountOrZeroFillEnd;
+                }
+                break L5;
+              }
+              if (remainingLength > 0) {
+                this.refillReadBuffer(true);
+                readCountOrZeroFillEnd = remainingLength;
+                if (this.readBufferLength < readCountOrZeroFillEnd) {
+                  readCountOrZeroFillEnd = this.readBufferLength;
+                }
+                sf.a(this.readBuffer, 0, destination, destinationOffset, readCountOrZeroFillEnd);
+                remainingLength = remainingLength - readCountOrZeroFillEnd;
+                destinationOffset = destinationOffset + readCountOrZeroFillEnd;
+                this.position = this.position + (long)readCountOrZeroFillEnd;
+              }
+            }
+            if (-1L != this.writeBufferStart) {
+              L9: {
+                if (~this.writeBufferStart < ~this.position) {
+                  zeroFillComparisonMinusOne = -1;
+                  complementedRemainingLength = ~remainingLength;
+                  if (zeroFillComparisonMinusOne > complementedRemainingLength) {
+                    readCountOrZeroFillEnd = destinationOffset + (int)(-this.position + this.writeBufferStart);
+                    if (destinationOffset + remainingLength < readCountOrZeroFillEnd) {
+                      readCountOrZeroFillEnd = destinationOffset + remainingLength;
+                    }
+                    while (readCountOrZeroFillEnd > destinationOffset) {
+                      remainingLength--;
+                      zeroFillDestinationIndex = destinationOffset;
+                      destinationOffset++;
+                      destination[zeroFillDestinationIndex] = (byte) 0;
+                      this.position = this.position + 1L;
+                    }
+                    break L9;
+                  }
                 }
               }
-              if (-1L != this.writeBufferStart) {
-                L9: {
-                  if (~this.writeBufferStart < ~this.position) {
-                    zeroFillComparisonMinusOne = -1;
-                    complementedRemainingLength = ~remainingLength;
-                    if (zeroFillComparisonMinusOne > complementedRemainingLength) {
-                      readCountOrZeroFillEnd = destinationOffset + (int)(-this.position + this.writeBufferStart);
-                      if (destinationOffset + remainingLength < readCountOrZeroFillEnd) {
-                        readCountOrZeroFillEnd = destinationOffset + remainingLength;
-                      }
-                      L11: while (readCountOrZeroFillEnd > destinationOffset) {
-                        remainingLength--;
-                        zeroFillDestinationIndex = destinationOffset;
-                        destinationOffset++;
-                        destination[zeroFillDestinationIndex] = (byte) 0;
-                        this.position = this.position + 1L;
-                      }
-                      break L9;
-                    }
+              L12: {
+                overlayStart = -1L;
+                if (~this.writeBufferStart <= ~initialPosition) {
+                  if (~this.writeBufferStart > ~((long)requestedLength + initialPosition)) {
+                    overlayStart = this.writeBufferStart;
+                    break L12;
                   }
                 }
-                L12: {
-                  overlayStart = -1L;
-                  if (~this.writeBufferStart <= ~initialPosition) {
-                    if (~this.writeBufferStart > ~((long)requestedLength + initialPosition)) {
-                      overlayStart = this.writeBufferStart;
-                      break L12;
-                    }
-                  }
-                  if (~this.writeBufferStart >= ~initialPosition) {
-                    if (initialPosition < this.writeBufferStart + (long)this.writeBufferLength) {
-                      overlayStart = initialPosition;
-                    }
+                if (~this.writeBufferStart >= ~initialPosition) {
+                  if (initialPosition < this.writeBufferStart + (long)this.writeBufferLength) {
+                    overlayStart = initialPosition;
                   }
                 }
-                L14: {
-                  overlayEnd = -1L;
-                  if (~initialPosition > ~((long)this.writeBufferLength + this.writeBufferStart)) {
-                    if ((long)requestedLength + initialPosition >= (long)this.writeBufferLength + this.writeBufferStart) {
-                      overlayEnd = this.writeBufferStart + (long)this.writeBufferLength;
-                      break L14;
-                    }
-                  }
-                  if (this.writeBufferStart < initialPosition + (long)requestedLength) {
-                    if (~(initialPosition + (long)requestedLength) >= ~(this.writeBufferStart + (long)this.writeBufferLength)) {
-                      overlayEnd = (long)requestedLength + initialPosition;
-                    }
+              }
+              L14: {
+                overlayEnd = -1L;
+                if (~initialPosition > ~((long)this.writeBufferLength + this.writeBufferStart)) {
+                  if ((long)requestedLength + initialPosition >= (long)this.writeBufferLength + this.writeBufferStart) {
+                    overlayEnd = this.writeBufferStart + (long)this.writeBufferLength;
+                    break L14;
                   }
                 }
-                if (overlayStart > -1L) {
-                  if (overlayStart < overlayEnd) {
-                    overlayLength = (int)(-overlayStart + overlayEnd);
-                    sf.a(this.writeBuffer, (int)(overlayStart - this.writeBufferStart), destination, initialDestinationOffset + (int)(-initialPosition + overlayStart), overlayLength);
-                    if (overlayEnd > this.position) {
-                      remainingLength = (int)((long)remainingLength - (overlayEnd - this.position));
-                      this.position = overlayEnd;
-                    }
+                if (this.writeBufferStart < initialPosition + (long)requestedLength) {
+                  if (~(initialPosition + (long)requestedLength) >= ~(this.writeBufferStart + (long)this.writeBufferLength)) {
+                    overlayEnd = (long)requestedLength + initialPosition;
+                  }
+                }
+              }
+              if (overlayStart > -1L) {
+                if (overlayStart < overlayEnd) {
+                  overlayLength = (int)(-overlayStart + overlayEnd);
+                  sf.a(this.writeBuffer, (int)(overlayStart - this.writeBufferStart), destination, initialDestinationOffset + (int)(-initialPosition + overlayStart), overlayLength);
+                  if (overlayEnd > this.position) {
+                    remainingLength = (int)((long)remainingLength - (overlayEnd - this.position));
+                    this.position = overlayEnd;
                   }
                 }
               }
@@ -407,7 +405,7 @@ final class BufferedRandomAccessFile {
           this.underlyingPosition = this.position;
         }
         this.readBufferStart = this.position;
-        L1: while (this.readBufferLength < this.readBuffer.length) {
+        while (this.readBufferLength < this.readBuffer.length) {
           requestedReadLength = -this.readBufferLength + this.readBuffer.length;
           if (requestedReadLength > 200000000) {
             requestedReadLength = 200000000;
@@ -416,7 +414,7 @@ final class BufferedRandomAccessFile {
           if (bytesRead != -1) {
             this.readBufferLength = this.readBufferLength + bytesRead;
             this.underlyingPosition = this.underlyingPosition + (long)bytesRead;
-            continue L1;
+            continue;
           }
           break;
         }
@@ -458,65 +456,59 @@ final class BufferedRandomAccessFile {
             sh.mainRasterBuffer.setAsRasterTarget(255);
             return false;
           }
-          {
-            el.gameplaySession.startSessionEndSequence((byte) 116);
-            sh.mainRasterBuffer.setAsRasterTarget(255);
-            seedEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
-            farthestEntity = seedEntity;
-            farthestRadiusSquared = (-320.0f + seedEntity.positionX) * (-320.0f + seedEntity.positionX) + (seedEntity.positionY - 240.0f) * (seedEntity.positionY - 240.0f);
-            candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
-            L1: while (candidateEntity != null) {
-              if (farthestRadiusSquared < (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (-240.0f + candidateEntity.positionY) * (-240.0f + candidateEntity.positionY)) {
-                farthestRadiusSquared = (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (candidateEntity.positionY - 240.0f) * (-240.0f + candidateEntity.positionY);
-                farthestEntity = candidateEntity;
-              }
-              candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
+          el.gameplaySession.startSessionEndSequence((byte) 116);
+          sh.mainRasterBuffer.setAsRasterTarget(255);
+          seedEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+          farthestEntity = seedEntity;
+          farthestRadiusSquared = (-320.0f + seedEntity.positionX) * (-320.0f + seedEntity.positionX) + (seedEntity.positionY - 240.0f) * (seedEntity.positionY - 240.0f);
+          candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+          while (candidateEntity != null) {
+            if (farthestRadiusSquared < (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (-240.0f + candidateEntity.positionY) * (-240.0f + candidateEntity.positionY)) {
+              farthestRadiusSquared = (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (candidateEntity.positionY - 240.0f) * (-240.0f + candidateEntity.positionY);
+              farthestEntity = candidateEntity;
             }
-            cascadeFrontier = new SecondaryDeque();
-            visitedCascadeEntities = new SecondaryDeque();
-            staggeredLifetime = 0;
-            cascadeFrontier.addFirst(farthestEntity, false);
-            L2: while (true) {
-              cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
-              if (cascadeEntity == null) {
-                return true;
+            candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
+          }
+          cascadeFrontier = new SecondaryDeque();
+          visitedCascadeEntities = new SecondaryDeque();
+          staggeredLifetime = 0;
+          cascadeFrontier.addFirst(farthestEntity, false);
+          L2: while (true) {
+            cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
+            if (cascadeEntity == null) {
+              return true;
+            }
+            cascadeEntity.entitySpriteKindId = 6;
+            cascadeEntity.remainingLifetimeTicks = staggeredLifetime;
+            staggeredLifetime += 50;
+            visitedCascadeEntities.addFirst(cascadeEntity, false);
+            neighborIndex = 0;
+            L3: while (true) {
+              if (neighborIndex >= cascadeEntity.relatedEntityCount) {
+                continue L2;
               }
-              {
-                cascadeEntity.entitySpriteKindId = 6;
-                cascadeEntity.remainingLifetimeTicks = staggeredLifetime;
-                staggeredLifetime += 50;
-                visitedCascadeEntities.addFirst(cascadeEntity, false);
-                neighborIndex = 0;
-                L3: while (true) {
-                  if (neighborIndex >= cascadeEntity.relatedEntityCount) {
-                    continue L2;
-                  }
-                  {
-                    neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
-                    searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
-                    L4: while (true) {
-                      L5: {
-                        if (searchedEntity == null) {
-                          searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
-                          L6: while (searchedEntity != null) {
-                            if (searchedEntity == neighborEntity) {
-                              break L5;
-                            }
-                            searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
-                          }
-                          cascadeFrontier.addLast(-82, neighborEntity);
-                          break L5;
-                        }
-                        if (searchedEntity != neighborEntity) {
-                          searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
-                          continue L4;
-                        }
+              neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
+              searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
+              while (true) {
+                L5: {
+                  if (searchedEntity == null) {
+                    searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
+                    while (searchedEntity != null) {
+                      if (searchedEntity == neighborEntity) {
+                        break L5;
                       }
-                      neighborIndex++;
-                      continue L3;
+                      searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
                     }
+                    cascadeFrontier.addLast(-82, neighborEntity);
+                    break L5;
+                  }
+                  if (searchedEntity != neighborEntity) {
+                    searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
+                    continue;
                   }
                 }
+                neighborIndex++;
+                continue L3;
               }
             }
           }

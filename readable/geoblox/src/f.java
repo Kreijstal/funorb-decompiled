@@ -237,24 +237,22 @@ class f extends qf implements pl {
                   }
                   return;
                 }
-                {
-                  gg.field_b = gg.field_b + 1;
-                  g.field_j = 0;
-                  fd.a(300, fl.field_c[22], false, j.field_gb);
-                  g.field_j = g.field_j + 1;
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                  fieldTemp$51 = wa.avatarShockEffectTicks;
-                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                  if (fieldTemp$51 > 0) {
-                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                  }
-                  fieldTemp$52 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$52 > 0) {
-                    rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                  }
-                  return;
+                gg.field_b = gg.field_b + 1;
+                g.field_j = 0;
+                fd.a(300, fl.field_c[22], false, j.field_gb);
+                g.field_j = g.field_j + 1;
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                fieldTemp$51 = wa.avatarShockEffectTicks;
+                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                if (fieldTemp$51 > 0) {
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
+                fieldTemp$52 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$52 > 0) {
+                  rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+                }
+                return;
               }
               if (gg.field_b == 1) {
                 if (ok.avatarCryMiddleFrames.length > g.field_j) {
@@ -273,23 +271,21 @@ class f extends qf implements pl {
                   }
                   return;
                 }
-                {
-                  gg.field_b = gg.field_b + 1;
-                  LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
-                  g.field_j = g.field_j + 1;
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                  fieldTemp$57 = wa.avatarShockEffectTicks;
-                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                  if (fieldTemp$57 > 0) {
-                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                  }
-                  fieldTemp$58 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$58 > 0) {
-                    rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                  }
-                  return;
+                gg.field_b = gg.field_b + 1;
+                LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
+                g.field_j = g.field_j + 1;
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                fieldTemp$57 = wa.avatarShockEffectTicks;
+                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                if (fieldTemp$57 > 0) {
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
+                fieldTemp$58 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$58 > 0) {
+                  rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+                }
+                return;
               }
               g.field_j = g.field_j % 4;
               ul.currentAvatarCryFrame = ld.avatarCryEndFrames[g.field_j];
@@ -308,15 +304,13 @@ class f extends qf implements pl {
             rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
             return;
           }
-          {
-            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-            fieldTemp$61 = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$61 > 0) {
-              rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-            }
-            return;
+          IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          fieldTemp$61 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$61 > 0) {
+            rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
           }
+          return;
         }
         L0: {
           af.avatarFrameStepTicks = 20;
@@ -375,24 +369,22 @@ class f extends qf implements pl {
                       }
                       return;
                     }
-                    {
-                      gg.field_b = gg.field_b + 1;
-                      g.field_j = 0;
-                      fd.a(300, fl.field_c[22], false, j.field_gb);
-                      g.field_j = g.field_j + 1;
-                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                      fieldTemp$24 = wa.avatarShockEffectTicks;
-                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                      if (fieldTemp$24 > 0) {
-                        IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                      }
-                      fieldTemp$25 = jf.avatarTintFadeTicks;
-                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                      if (fieldTemp$25 > 0) {
-                        rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                      }
-                      return;
+                    gg.field_b = gg.field_b + 1;
+                    g.field_j = 0;
+                    fd.a(300, fl.field_c[22], false, j.field_gb);
+                    g.field_j = g.field_j + 1;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                    fieldTemp$24 = wa.avatarShockEffectTicks;
+                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                    if (fieldTemp$24 > 0) {
+                      IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
+                    fieldTemp$25 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                    if (fieldTemp$25 > 0) {
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+                    }
+                    return;
                   }
                   if (gg.field_b == 1) {
                     if (ok.avatarCryMiddleFrames.length > g.field_j) {
@@ -411,23 +403,21 @@ class f extends qf implements pl {
                       }
                       return;
                     }
-                    {
-                      gg.field_b = gg.field_b + 1;
-                      LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
-                      g.field_j = g.field_j + 1;
-                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                      fieldTemp$30 = wa.avatarShockEffectTicks;
-                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                      if (fieldTemp$30 > 0) {
-                        IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                      }
-                      fieldTemp$31 = jf.avatarTintFadeTicks;
-                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                      if (fieldTemp$31 > 0) {
-                        rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                      }
-                      return;
+                    gg.field_b = gg.field_b + 1;
+                    LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
+                    g.field_j = g.field_j + 1;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                    fieldTemp$30 = wa.avatarShockEffectTicks;
+                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                    if (fieldTemp$30 > 0) {
+                      IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
+                    fieldTemp$31 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                    if (fieldTemp$31 > 0) {
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+                    }
+                    return;
                   }
                   g.field_j = g.field_j % 4;
                   ul.currentAvatarCryFrame = ld.avatarCryEndFrames[g.field_j];
@@ -446,15 +436,13 @@ class f extends qf implements pl {
                 rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                 return;
               }
-              {
-                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                fieldTemp$34 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$34 > 0) {
-                  rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                }
-                return;
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              fieldTemp$34 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$34 > 0) {
+                rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
               }
+              return;
             }
             if (avatarFrameOffsetInSegment <= 1) {
               if (2 == jk.avatarSteeringDirectionId) {
@@ -503,138 +491,124 @@ class f extends qf implements pl {
             rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
             return;
           }
-          {
-            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-            fieldTemp$50 = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$50 <= 0) {
-              return;
-            }
-            rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+          IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+          fieldTemp$50 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$50 <= 0) {
             return;
           }
+          rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+          return;
         }
-        {
-          if (gi.avatarBlinkClockTicks % 18 == 0) {
-            if (gg.field_b == 0) {
-              if (!pf.field_D) {
-                g.field_j = g.field_j % 4;
-                ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[g.field_j];
-                g.field_j = g.field_j + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$35 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$35 <= 0) {
-                  fieldTemp$36 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$36 <= 0) {
-                    return;
-                  }
-                  rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                  return;
-                }
-                {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                  fieldTemp$37 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$37 <= 0) {
-                    return;
-                  }
-                  rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                  return;
-                }
-              }
-              {
-                gg.field_b = gg.field_b + 1;
-                g.field_j = 0;
-                fd.a(300, fl.field_c[22], false, j.field_gb);
-                g.field_j = g.field_j + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$38 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$38 <= 0) {
-                  fieldTemp$39 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$39 <= 0) {
-                    return;
-                  }
-                  rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                  return;
-                }
-                {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                  fieldTemp$40 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$40 > 0) {
-                    rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                  }
-                  return;
-                }
-              }
-            }
-            if (gg.field_b == 1) {
-              if (ok.avatarCryMiddleFrames.length > g.field_j) {
-                ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[g.field_j];
-                g.field_j = g.field_j + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$43 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$43 > 0) {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                }
-                fieldTemp$44 = jf.avatarTintFadeTicks;
+        if (gi.avatarBlinkClockTicks % 18 == 0) {
+          if (gg.field_b == 0) {
+            if (!pf.field_D) {
+              g.field_j = g.field_j % 4;
+              ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[g.field_j];
+              g.field_j = g.field_j + 1;
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$35 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$35 <= 0) {
+                fieldTemp$36 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$44 > 0) {
-                  rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-                }
-                return;
-              }
-              {
-                gg.field_b = gg.field_b + 1;
-                LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
-                g.field_j = g.field_j + 1;
-                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                fieldTemp$41 = wa.avatarShockEffectTicks;
-                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                if (fieldTemp$41 > 0) {
-                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                }
-                fieldTemp$42 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$42 <= 0) {
+                if (fieldTemp$36 <= 0) {
                   return;
                 }
                 rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                 return;
               }
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              fieldTemp$37 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$37 <= 0) {
+                return;
+              }
+              rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+              return;
             }
-            g.field_j = g.field_j % 4;
-            ul.currentAvatarCryFrame = ld.avatarCryEndFrames[g.field_j];
+            gg.field_b = gg.field_b + 1;
+            g.field_j = 0;
+            fd.a(300, fl.field_c[22], false, j.field_gb);
             g.field_j = g.field_j + 1;
-          }
-          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$45 = wa.avatarShockEffectTicks;
-          wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$45 <= 0) {
-            fieldTemp$46 = jf.avatarTintFadeTicks;
-            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$46 <= 0) {
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            fieldTemp$38 = wa.avatarShockEffectTicks;
+            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+            if (fieldTemp$38 <= 0) {
+              fieldTemp$39 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$39 <= 0) {
+                return;
+              }
+              rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
               return;
             }
-            rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
-            return;
-          }
-          {
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-            fieldTemp$47 = jf.avatarTintFadeTicks;
+            fieldTemp$40 = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$47 <= 0) {
+            if (fieldTemp$40 > 0) {
+              rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+            }
+            return;
+          }
+          if (gg.field_b == 1) {
+            if (ok.avatarCryMiddleFrames.length > g.field_j) {
+              ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[g.field_j];
+              g.field_j = g.field_j + 1;
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$43 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$43 > 0) {
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              }
+              fieldTemp$44 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$44 > 0) {
+                rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+              }
+              return;
+            }
+            gg.field_b = gg.field_b + 1;
+            LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
+            g.field_j = g.field_j + 1;
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            fieldTemp$41 = wa.avatarShockEffectTicks;
+            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+            if (fieldTemp$41 > 0) {
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+            }
+            fieldTemp$42 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+            if (fieldTemp$42 <= 0) {
               return;
             }
             rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
             return;
           }
+          g.field_j = g.field_j % 4;
+          ul.currentAvatarCryFrame = ld.avatarCryEndFrames[g.field_j];
+          g.field_j = g.field_j + 1;
         }
+        avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+        fieldTemp$45 = wa.avatarShockEffectTicks;
+        wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+        if (fieldTemp$45 <= 0) {
+          fieldTemp$46 = jf.avatarTintFadeTicks;
+          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+          if (fieldTemp$46 <= 0) {
+            return;
+          }
+          rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+          return;
+        }
+        IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+        fieldTemp$47 = jf.avatarTintFadeTicks;
+        jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+        if (fieldTemp$47 <= 0) {
+          return;
+        }
+        rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
+        return;
     }
 
     final static wa p(int param0) {
@@ -679,52 +653,50 @@ class f extends qf implements pl {
           if (param1 != 19810) {
             return;
           }
-          {
-            if (256 != param0) {
-              stackIn_9_1 = false;
-            } else {
-              stackIn_9_1 = true;
-            }
-            ((f) (this)).field_ob = stackIn_9_1;
-            this.field_rb = true;
-            this.field_pb.a(4210752, 8405024, (byte) -103);
-            var6 = new ni((f) (this), this.field_jb, param2);
-            if (param0 == 5) {
-              var6.a(nf.reloadGameText, 1, 11);
-              var6.a(rj.quitToWebsiteText, 1, 17);
-            } else {
-              if (param0 != 256) {
-                stackIn_14_0 = (ni) (var6);
-                if (this.field_mb) {
-                  stackIn_15_1 = a.retryText;
-                } else {
-                  stackIn_15_1 = ll.backText;
-                }
-                ((ni) (Object) stackIn_14_0).a(stackIn_15_1, 1, -1);
-              } else {
-                var6.a(-2, a.retryText, (bb) (this));
-              }
-            }
-            if (param0 == 3) {
-              var6.a(ee.toServerListText, param1 ^ 19811, 7);
-            } else {
-              if (param0 != 4) {
-                if (param0 == 6) {
-                  var6.a(jc.toCustomerSupportText, 1, 9);
-                } else {
-                  if (param0 != 9) {
-                    this.b(var6, param1 ^ -19736);
-                    return;
-                  }
-                  var6.a(-2, fi.changeDisplayNameText, (bb) (this));
-                }
-              } else {
-                var6.a(hb.playFreeVersionText, 1, 8);
-              }
-            }
-            this.b(var6, param1 ^ -19736);
-            return;
+          if (256 != param0) {
+            stackIn_9_1 = false;
+          } else {
+            stackIn_9_1 = true;
           }
+          ((f) (this)).field_ob = stackIn_9_1;
+          this.field_rb = true;
+          this.field_pb.a(4210752, 8405024, (byte) -103);
+          var6 = new ni((f) (this), this.field_jb, param2);
+          if (param0 == 5) {
+            var6.a(nf.reloadGameText, 1, 11);
+            var6.a(rj.quitToWebsiteText, 1, 17);
+          } else {
+            if (param0 != 256) {
+              stackIn_14_0 = (ni) (var6);
+              if (this.field_mb) {
+                stackIn_15_1 = a.retryText;
+              } else {
+                stackIn_15_1 = ll.backText;
+              }
+              ((ni) (Object) stackIn_14_0).a(stackIn_15_1, 1, -1);
+            } else {
+              var6.a(-2, a.retryText, (bb) (this));
+            }
+          }
+          if (param0 == 3) {
+            var6.a(ee.toServerListText, param1 ^ 19811, 7);
+          } else {
+            if (param0 != 4) {
+              if (param0 == 6) {
+                var6.a(jc.toCustomerSupportText, 1, 9);
+              } else {
+                if (param0 != 9) {
+                  this.b(var6, param1 ^ -19736);
+                  return;
+                }
+                var6.a(-2, fi.changeDisplayNameText, (bb) (this));
+              }
+            } else {
+              var6.a(hb.playFreeVersionText, 1, 8);
+            }
+          }
+          this.b(var6, param1 ^ -19736);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

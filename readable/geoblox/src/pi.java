@@ -190,39 +190,35 @@ final class pi extends vf {
           if (SocketArchiveNetworkClient.field_w != var6) {
             return;
           }
-          {
-            var16 = oa.field_e[1];
-            var16.drawAdditive(var9, var10 - (var16.height >> 1), 256);
-            return;
-          }
+          var16 = oa.field_e[1];
+          var16.drawAdditive(var9, var10 - (var16.height >> 1), 256);
+          return;
         }
-        {
-          var18 = oa.field_e[0];
-          var15 = var18;
-          var12 = var18.fullWidth << 1;
-          var13 = var18.fullHeight << 1;
-          if (this.field_Q == null) {
+        var18 = oa.field_e[0];
+        var15 = var18;
+        var12 = var18.fullWidth << 1;
+        var13 = var18.fullHeight << 1;
+        if (this.field_Q == null) {
+          this.field_Q = new Sprite(var12, var13);
+          Geoblox.setRasterTarget(1, this.field_Q);
+        } else {
+          if (this.field_Q.width < var12) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
           } else {
-            if (this.field_Q.width < var12) {
+            if (this.field_Q.height < var13) {
               this.field_Q = new Sprite(var12, var13);
               Geoblox.setRasterTarget(1, this.field_Q);
             } else {
-              if (this.field_Q.height < var13) {
-                this.field_Q = new Sprite(var12, var13);
-                Geoblox.setRasterTarget(1, this.field_Q);
-              } else {
-                Geoblox.setRasterTarget(1, this.field_Q);
-                SoftwareRasterizer.clearFramebuffer();
-              }
+              Geoblox.setRasterTarget(1, this.field_Q);
+              SoftwareRasterizer.clearFramebuffer();
             }
           }
-          var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
-          id.a(true);
-          this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
-          return;
         }
+        var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
+        id.a(true);
+        this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
+        return;
     }
 
     public static void j(int param0) {

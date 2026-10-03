@@ -197,13 +197,13 @@ final class og extends DualLinkNode {
           if (param0 != 0) {
             return;
           }
-          L0: while (true) {
+          while (true) {
             var3_int = param1.readUnsignedByte((byte) 34);
             if (0 == var3_int) {
               return;
             }
             this.a(var3_int, param1, -26093);
-            continue L0;
+            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

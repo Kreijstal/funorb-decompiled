@@ -34,13 +34,13 @@ final class bi implements dh {
             return true;
           }
           var3_int = 0;
-          L0: while (true) {
+          while (true) {
             if (param1.length() <= var3_int) {
               return true;
             }
             if (TextInputValidator.a(param1.charAt(var3_int), (byte) 118)) {
               var3_int++;
-              continue L0;
+              continue;
             }
             return false;
           }

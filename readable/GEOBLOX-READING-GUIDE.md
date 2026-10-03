@@ -2684,3 +2684,42 @@ scope refusals. The actual GeoBlox native/raw/readable Bzip2 matrix retains its
 source-archive regeneration, readable reproduction and dictionary reversal are
 byte-exact. These checks do not establish full asset/gameplay, concurrency or
 phone memory/startup/FPS acceptance.
+
+
+## Redundant loop labels and plain blocks (pass 77)
+
+The generic renderer now resolves labeled breaks and continues against Java's
+actual lexical destinations. When the nearest ordinary loop/switch is exactly
+the same target, a jump can become `break;` or `continue;`. Its now-unreferenced
+label disappears. Transfers past an inner loop or switch retain their necessary
+outer labels. Plain blocks with no direct declarations can lose braces when
+nested as statements in another block; variable, loop, conditional, protected
+and monitor scopes remain. All operations, operators, literals and transfer
+routes stay in order. No guard value is assumed.
+
+`GameplaySession.updateSession` and `kc.reconcileBoardEntities` lose redundant
+loop labels and some frame nesting, along with rendering, storage, compression
+and other helpers. The large session/reconciliation bodies are still nested and
+need further reconstruction to expose their higher-level gameplay phases.
+The raw corpus changes 153 files and
+removes 588 lines (80,457 to 79,869). Across all 303 raw sources, generated labels
+fall from 1,188 to 680 and labeled continues from 518 to 68. All 1,190 labeled
+breaks remain. These token counts describe frame/transfer spelling.
+Every declaration/reference identity,
+spelling and occurrence order remains, so all 6,081 complete rules survive with
+no ordinal migration and the same 49,580 edits, 138,519 bindings and 388 overrides.
+
+An independent JDK AST checker compares the before/after file inventories and
+ordered syntax events for all 303 sources, including 1,129 loop/switch destinations
+and 1,762 jumps. The full emitter suite passes 41 groups with this check enabled;
+2,048 new native cases verify effects, lexical shadows, switch/loop destinations,
+protected and monitor exits, failure order, throwable identity and lock release.
+Exception-exit tests pass eight groups. Three wider try-with-resources fixture
+failures also occur on the pinned pre-cleanup baseline. Clean source-archive
+regeneration and diagnostics, readable reproduction and dictionary reversal are
+byte-exact. Existing GeoBlox native probes retain their documented trace pins.
+
+Opaque helpers, large labeled bodies, real assets/server traffic, complete
+gameplay and browser/phone memory/startup/FPS behavior remain unfinished or
+unverified. The current manifest and existing provenance contain the source
+migration and evidence; no extra JSON snapshots are created.

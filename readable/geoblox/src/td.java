@@ -103,11 +103,9 @@ final class td extends hk {
               if (var9 != SocketArchiveNetworkClient.field_w) {
                 break L0;
               }
-              {
-                var15 = oa.field_e[1];
-                var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
-                break L0;
-              }
+              var15 = oa.field_e[1];
+              var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
+              break L0;
             }
           }
           L2: {

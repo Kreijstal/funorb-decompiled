@@ -28,7 +28,7 @@ final class ob extends ia {
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
-        L0: while (true) {
+        while (true) {
           if (this.field_k < 0) {
             this.c(param0, param1, param2);
             return;
@@ -38,35 +38,33 @@ final class ob extends ia {
             this.c(param0, param1, param2);
             return;
           }
-          {
-            var4 = this.field_k - this.field_l;
-            this.c(param0, param1, var4);
-            param1 = param1 + var4;
-            param2 = param2 - var4;
-            this.field_l = this.field_l + var4;
-            this.e();
-            var5 = (jd) ((Object) this.field_j.firstForIteration(0));
-            var6 = var5;
-            synchronized (var6) {
-              var7 = var5.a((ob) (this));
-              if (var7 >= 0) {
-                var5.field_f = var7;
-                this.a(var5.nextNode, var5);
-              } else {
-                var5.field_f = 0;
-                this.a(var5);
-              }
+          var4 = this.field_k - this.field_l;
+          this.c(param0, param1, var4);
+          param1 = param1 + var4;
+          param2 = param2 - var4;
+          this.field_l = this.field_l + var4;
+          this.e();
+          var5 = (jd) ((Object) this.field_j.firstForIteration(0));
+          var6 = var5;
+          synchronized (var6) {
+            var7 = var5.a((ob) (this));
+            if (var7 >= 0) {
+              var5.field_f = var7;
+              this.a(var5.nextNode, var5);
+            } else {
+              var5.field_f = 0;
+              this.a(var5);
             }
-            if (param2 != 0) {
-              continue L0;
-            }
-            return;
           }
+          if (param2 != 0) {
+            continue;
+          }
+          return;
         }
     }
 
     private final void a(IntrusiveNode param0, jd param1) {
-        L0: while (true) {
+        while (true) {
           if (param0 == this.field_j.sentinel) {
             PointerInputListener.a(param0, 93, param1);
             this.field_k = ((jd) ((Object) this.field_j.sentinel.nextNode)).field_f;
@@ -74,7 +72,7 @@ final class ob extends ia {
           }
           if (((jd) ((Object) param0)).field_f <= param1.field_f) {
             param0 = param0.nextNode;
-            continue L0;
+            continue;
           }
           PointerInputListener.a(param0, 93, param1);
           this.field_k = ((jd) ((Object) this.field_j.sentinel.nextNode)).field_f;
@@ -100,7 +98,7 @@ final class ob extends ia {
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
-        L0: while (true) {
+        while (true) {
           if (this.field_k < 0) {
             this.c(param0);
             return;
@@ -110,29 +108,27 @@ final class ob extends ia {
             this.c(param0);
             return;
           }
-          {
-            var2 = this.field_k - this.field_l;
-            this.c(var2);
-            param0 = param0 - var2;
-            this.field_l = this.field_l + var2;
-            this.e();
-            var3 = (jd) ((Object) this.field_j.firstForIteration(0));
-            var4 = var3;
-            synchronized (var4) {
-              var5 = var3.a((ob) (this));
-              if (var5 >= 0) {
-                var3.field_f = var5;
-                this.a(var3.nextNode, var3);
-              } else {
-                var3.field_f = 0;
-                this.a(var3);
-              }
+          var2 = this.field_k - this.field_l;
+          this.c(var2);
+          param0 = param0 - var2;
+          this.field_l = this.field_l + var2;
+          this.e();
+          var3 = (jd) ((Object) this.field_j.firstForIteration(0));
+          var4 = var3;
+          synchronized (var4) {
+            var5 = var3.a((ob) (this));
+            if (var5 >= 0) {
+              var3.field_f = var5;
+              this.a(var3.nextNode, var3);
+            } else {
+              var3.field_f = 0;
+              this.a(var3);
             }
-            if (param0 != 0) {
-              continue L0;
-            }
-            return;
           }
+          if (param0 != 0) {
+            continue;
+          }
+          return;
         }
     }
 

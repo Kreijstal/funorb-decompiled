@@ -54,10 +54,10 @@ final class sb {
         loginNoDisplayNameText = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         for (crcTableIndex = 0; crcTableIndex < 256; crcTableIndex++) {
           crcTableEntry = crcTableIndex;
-          L1: for (crcPolynomialBit = 0; 8 > crcPolynomialBit; crcPolynomialBit++) {
+          for (crcPolynomialBit = 0; 8 > crcPolynomialBit; crcPolynomialBit++) {
             if (1 != (crcTableEntry & 1)) {
               crcTableEntry = crcTableEntry >>> 1;
-              continue L1;
+              continue;
             }
             crcTableEntry = -306674912 ^ crcTableEntry >>> 1;
           }

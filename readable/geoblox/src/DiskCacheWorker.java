@@ -100,7 +100,7 @@ final class DiskCacheWorker implements Runnable {
           synchronized (queueMonitor) {
             L1: {
               queuedRequest = (DiskArchiveRequest) ((Object) this.requestQueue.firstForIteration((byte) 121));
-              L2: while (queuedRequest != null) {
+              while (queuedRequest != null) {
                 if ((long)groupId == queuedRequest.secondaryKey) {
                   if (queuedRequest.diskCache == diskCache) {
                     if (2 == queuedRequest.operationType) {
@@ -288,7 +288,7 @@ final class DiskCacheWorker implements Runnable {
             Exception operationFailure = null;
             String unusedFailureMessageSnapshot = null;
             unusedClientGuardSnapshot = Geoblox.field_C;
-            L0: while (!this.stopRequested) {
+            while (!this.stopRequested) {
               queueMonitor = this.requestQueue;
               synchronized (queueMonitor) {
                 request = (DiskArchiveRequest) ((Object) this.requestQueue.removeFirst(true));
@@ -306,7 +306,7 @@ final class DiskCacheWorker implements Runnable {
                 }
               }
               if (requestSelected == 0) {
-                continue L0;
+                continue;
               }
               try {
                 L4: {
@@ -331,7 +331,7 @@ final class DiskCacheWorker implements Runnable {
                 completeRequestAfterOperation = 1;
               }
               if (completeRequestAfterOperation == 0) {
-                continue L0;
+                continue;
               }
               request.pending = false;
             }

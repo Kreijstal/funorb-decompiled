@@ -34,7 +34,7 @@ final class PcmSampleStream extends ia {
         }
         param5 = param5 << 1;
         param8 = param8 << 1;
-        L2: while (param5 < param8) {
+        while (param5 < param8) {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
           param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
@@ -57,7 +57,7 @@ final class PcmSampleStream extends ia {
         }
         param8 = param8 << 1;
         param1 = param13;
-        L5: while (param5 < param8) {
+        while (param5 < param8) {
           param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
           incrementValue$4 = param5;
           param5++;
@@ -173,7 +173,7 @@ final class PcmSampleStream extends ia {
 
     private final int a(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
-        L0: while (true) {
+        while (true) {
           if (this.field_l <= 0) {
             if (this.sampleStepFixed == -256) {
               if ((this.samplePositionFixed & 255) == 0) {
@@ -215,7 +215,7 @@ final class PcmSampleStream extends ia {
             return param1;
           }
           if (!this.j()) {
-            continue L0;
+            continue;
           }
           return param3;
         }
@@ -231,7 +231,7 @@ final class PcmSampleStream extends ia {
 
     private final int b(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
-        L0: while (true) {
+        while (true) {
           if (this.field_l <= 0) {
             if (this.sampleStepFixed == 256) {
               if ((this.samplePositionFixed & 255) == 0) {
@@ -273,7 +273,7 @@ final class PcmSampleStream extends ia {
             return param1;
           }
           if (!this.j()) {
-            continue L0;
+            continue;
           }
           return param3;
         }
@@ -378,7 +378,7 @@ final class PcmSampleStream extends ia {
         }
         param5 = param5 << 1;
         param8 = param8 << 1;
-        L2: while (param5 < param8) {
+        while (param5 < param8) {
           param1 = param4 >> 8;
           param0 = param2[param1];
           param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
@@ -401,7 +401,7 @@ final class PcmSampleStream extends ia {
         }
         param8 = param8 << 1;
         param1 = param13;
-        L5: while (param5 < param8) {
+        while (param5 < param8) {
           param0 = param2[param4 >> 8];
           param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
           incrementValue$4 = param5;
@@ -672,7 +672,7 @@ final class PcmSampleStream extends ia {
         }
         param5 = param5 << 1;
         param10 = param10 << 1;
-        L2: while (param5 < param10) {
+        while (param5 < param10) {
           param1 = param4 >> 8;
           param0 = param2[param1];
           param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
@@ -697,7 +697,7 @@ final class PcmSampleStream extends ia {
         }
         param10 = param10 << 1;
         param1 = param15;
-        L5: while (param5 < param10) {
+        while (param5 < param10) {
           param0 = param2[param4 >> 8];
           param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
           incrementValue$4 = param5;
@@ -730,7 +730,7 @@ final class PcmSampleStream extends ia {
           }
           param7 = param8;
         }
-        L2: while (param5 < param7) {
+        while (param5 < param7) {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
           incrementValue$1 = param5;
@@ -749,7 +749,7 @@ final class PcmSampleStream extends ia {
         }
         param0 = param12;
         param1 = param11;
-        L5: while (param5 < param7) {
+        while (param5 < param7) {
           incrementValue$0 = param5;
           param5++;
           param3[incrementValue$0] = param3[incrementValue$0] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
@@ -776,7 +776,7 @@ final class PcmSampleStream extends ia {
         }
         param5 = param5 << 1;
         param10 = param10 << 1;
-        L2: while (param5 < param10) {
+        while (param5 < param10) {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
           param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
@@ -801,7 +801,7 @@ final class PcmSampleStream extends ia {
         }
         param10 = param10 << 1;
         param1 = param15;
-        L5: while (param5 < param10) {
+        while (param5 < param10) {
           param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
           incrementValue$4 = param5;
           param5++;
@@ -928,7 +928,7 @@ final class PcmSampleStream extends ia {
             this.samplePositionFixed = var3 + var3 - 1 - this.samplePositionFixed;
             this.sampleStepFixed = -this.sampleStepFixed;
           }
-          L11: while (this.samplePositionFixed >= var4) {
+          while (this.samplePositionFixed >= var4) {
             this.samplePositionFixed = var4 + var4 - 1 - this.samplePositionFixed;
             this.sampleStepFixed = -this.sampleStepFixed;
             if (this.samplePositionFixed >= var3) {
@@ -946,16 +946,14 @@ final class PcmSampleStream extends ia {
                 if (this.samplePositionFixed < var4) {
                   return;
                 }
-                {
-                  var7 = (this.samplePositionFixed - var3) / var6;
-                  if (var7 >= this.field_v) {
-                    this.samplePositionFixed = this.samplePositionFixed - var6 * this.field_v;
-                    this.field_v = 0;
-                    break L5;
-                  }
-                  this.samplePositionFixed = this.samplePositionFixed - var6 * var7;
-                  this.field_v = this.field_v - var7;
+                var7 = (this.samplePositionFixed - var3) / var6;
+                if (var7 >= this.field_v) {
+                  this.samplePositionFixed = this.samplePositionFixed - var6 * this.field_v;
+                  this.field_v = 0;
+                  break L5;
                 }
+                this.samplePositionFixed = this.samplePositionFixed - var6 * var7;
+                this.field_v = this.field_v - var7;
               } else {
                 if (this.samplePositionFixed >= var3) {
                   return;
@@ -975,42 +973,36 @@ final class PcmSampleStream extends ia {
               if (this.samplePositionFixed >= var3) {
                 return;
               }
-              {
-                this.samplePositionFixed = var3 + var3 - 1 - this.samplePositionFixed;
-                this.sampleStepFixed = -this.sampleStepFixed;
-                fieldTemp$0 = this.field_v - 1;
-                this.field_v = this.field_v - 1;
-                if (fieldTemp$0 == 0) {
-                  break L5;
-                }
+              this.samplePositionFixed = var3 + var3 - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              fieldTemp$0 = this.field_v - 1;
+              this.field_v = this.field_v - 1;
+              if (fieldTemp$0 == 0) {
+                break L5;
               }
             }
-            L8: while (true) {
+            while (true) {
               if (this.samplePositionFixed < var4) {
                 return;
               }
-              {
-                this.samplePositionFixed = var4 + var4 - 1 - this.samplePositionFixed;
-                this.sampleStepFixed = -this.sampleStepFixed;
-                fieldTemp$1 = this.field_v - 1;
-                this.field_v = this.field_v - 1;
-                if (fieldTemp$1 == 0) {
-                  break L5;
-                }
-                if (this.samplePositionFixed >= var3) {
-                  return;
-                }
-                {
-                  this.samplePositionFixed = var3 + var3 - 1 - this.samplePositionFixed;
-                  this.sampleStepFixed = -this.sampleStepFixed;
-                  fieldTemp$2 = this.field_v - 1;
-                  this.field_v = this.field_v - 1;
-                  if (fieldTemp$2 != 0) {
-                    continue L8;
-                  }
-                  break L5;
-                }
+              this.samplePositionFixed = var4 + var4 - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              fieldTemp$1 = this.field_v - 1;
+              this.field_v = this.field_v - 1;
+              if (fieldTemp$1 == 0) {
+                break L5;
               }
+              if (this.samplePositionFixed >= var3) {
+                return;
+              }
+              this.samplePositionFixed = var3 + var3 - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              fieldTemp$2 = this.field_v - 1;
+              this.field_v = this.field_v - 1;
+              if (fieldTemp$2 != 0) {
+                continue;
+              }
+              break L5;
             }
           }
         }
@@ -1212,22 +1204,22 @@ final class PcmSampleStream extends ia {
         if (this.field_v < 0) {
           if (!this.field_r) {
             if (this.sampleStepFixed >= 0) {
-              L10: while (true) {
+              while (true) {
                 var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_q]);
                 if (this.samplePositionFixed < var6) {
                   return;
                 }
                 this.samplePositionFixed = var5 + (this.samplePositionFixed - var5) % var8;
-                continue L10;
+                continue;
               }
             }
-            L11: while (true) {
+            while (true) {
               var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_m - 1]);
               if (this.samplePositionFixed >= var5) {
                 return;
               }
               this.samplePositionFixed = var6 - 1 - (var6 - 1 - this.samplePositionFixed) % var8;
-              continue L11;
+              continue;
             }
           }
           if (this.sampleStepFixed < 0) {
@@ -1238,7 +1230,7 @@ final class PcmSampleStream extends ia {
             this.samplePositionFixed = var5 + var5 - 1 - this.samplePositionFixed;
             this.sampleStepFixed = -this.sampleStepFixed;
           }
-          L13: while (true) {
+          while (true) {
             var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_m - 1]);
             if (this.samplePositionFixed < var6) {
               return;
@@ -1251,14 +1243,14 @@ final class PcmSampleStream extends ia {
             }
             this.samplePositionFixed = var5 + var5 - 1 - this.samplePositionFixed;
             this.sampleStepFixed = -this.sampleStepFixed;
-            continue L13;
+            continue;
           }
         }
         L4: {
           if (this.field_v > 0) {
             if (!this.field_r) {
               if (this.sampleStepFixed < 0) {
-                L6: while (true) {
+                while (true) {
                   var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_m - 1]);
                   if (this.samplePositionFixed >= var5) {
                     return;
@@ -1267,29 +1259,27 @@ final class PcmSampleStream extends ia {
                   if (var10 < this.field_v) {
                     this.samplePositionFixed = this.samplePositionFixed + var8 * var10;
                     this.field_v = this.field_v - var10;
-                    continue L6;
+                    continue;
                   }
                   this.samplePositionFixed = this.samplePositionFixed + var8 * this.field_v;
                   this.field_v = 0;
                   break L4;
                 }
               }
-              L5: while (true) {
+              while (true) {
                 var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_q]);
                 if (this.samplePositionFixed < var6) {
                   return;
                 }
-                {
-                  var10 = (this.samplePositionFixed - var5) / var8;
-                  if (var10 < this.field_v) {
-                    this.samplePositionFixed = this.samplePositionFixed - var8 * var10;
-                    this.field_v = this.field_v - var10;
-                    continue L5;
-                  }
-                  this.samplePositionFixed = this.samplePositionFixed - var8 * this.field_v;
-                  this.field_v = 0;
-                  break L4;
+                var10 = (this.samplePositionFixed - var5) / var8;
+                if (var10 < this.field_v) {
+                  this.samplePositionFixed = this.samplePositionFixed - var8 * var10;
+                  this.field_v = this.field_v - var10;
+                  continue;
                 }
+                this.samplePositionFixed = this.samplePositionFixed - var8 * this.field_v;
+                this.field_v = 0;
+                break L4;
               }
             }
             if (this.sampleStepFixed < 0) {
@@ -1297,44 +1287,38 @@ final class PcmSampleStream extends ia {
               if (this.samplePositionFixed >= var5) {
                 return;
               }
-              {
-                this.samplePositionFixed = var5 + var5 - 1 - this.samplePositionFixed;
-                this.sampleStepFixed = -this.sampleStepFixed;
-                fieldTemp$0 = this.field_v - 1;
-                this.field_v = this.field_v - 1;
-                if (fieldTemp$0 == 0) {
-                  break L4;
-                }
+              this.samplePositionFixed = var5 + var5 - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              fieldTemp$0 = this.field_v - 1;
+              this.field_v = this.field_v - 1;
+              if (fieldTemp$0 == 0) {
+                break L4;
               }
             }
-            L8: while (true) {
+            while (true) {
               var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_m - 1]);
               if (this.samplePositionFixed < var6) {
                 return;
               }
-              {
-                this.samplePositionFixed = var6 + var6 - 1 - this.samplePositionFixed;
-                this.sampleStepFixed = -this.sampleStepFixed;
-                fieldTemp$1 = this.field_v - 1;
-                this.field_v = this.field_v - 1;
-                if (fieldTemp$1 == 0) {
-                  break L4;
-                }
-                var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_q]);
-                if (this.samplePositionFixed >= var5) {
-                  return;
-                }
-                {
-                  this.samplePositionFixed = var5 + var5 - 1 - this.samplePositionFixed;
-                  this.sampleStepFixed = -this.sampleStepFixed;
-                  fieldTemp$2 = this.field_v - 1;
-                  this.field_v = this.field_v - 1;
-                  if (fieldTemp$2 != 0) {
-                    continue L8;
-                  }
-                  break L4;
-                }
+              this.samplePositionFixed = var6 + var6 - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              fieldTemp$1 = this.field_v - 1;
+              this.field_v = this.field_v - 1;
+              if (fieldTemp$1 == 0) {
+                break L4;
               }
+              var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_q]);
+              if (this.samplePositionFixed >= var5) {
+                return;
+              }
+              this.samplePositionFixed = var5 + var5 - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              fieldTemp$2 = this.field_v - 1;
+              this.field_v = this.field_v - 1;
+              if (fieldTemp$2 != 0) {
+                continue;
+              }
+              break L4;
             }
           }
         }
@@ -1347,16 +1331,14 @@ final class PcmSampleStream extends ia {
           }
           return;
         }
-        {
-          discarded$3 = this.a(param0, var9, 0, param2, 0);
-          if (this.samplePositionFixed >= 0) {
-            return;
-          }
-          this.samplePositionFixed = -1;
-          this.f();
-          this.unlinkNode(false);
+        discarded$3 = this.a(param0, var9, 0, param2, 0);
+        if (this.samplePositionFixed >= 0) {
           return;
         }
+        this.samplePositionFixed = -1;
+        this.f();
+        this.unlinkNode(false);
+        return;
     }
 
     private final void e() {
@@ -1379,7 +1361,7 @@ final class PcmSampleStream extends ia {
           }
           param8 = param9;
         }
-        L2: while (param5 < param8) {
+        while (param5 < param8) {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
           incrementValue$3 = param5;
@@ -1399,7 +1381,7 @@ final class PcmSampleStream extends ia {
         }
         param0 = param13;
         param1 = param12;
-        L5: while (param5 < param8) {
+        while (param5 < param8) {
           incrementValue$2 = param5;
           param5++;
           param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
@@ -1505,7 +1487,7 @@ final class PcmSampleStream extends ia {
           }
           param8 = param9;
         }
-        L2: while (param5 < param8) {
+        while (param5 < param8) {
           param1 = param4 >> 8;
           param0 = param2[param1];
           incrementValue$3 = param5;
@@ -1524,7 +1506,7 @@ final class PcmSampleStream extends ia {
           param8 = param9;
         }
         param1 = param13;
-        L5: while (param5 < param8) {
+        while (param5 < param8) {
           param0 = param2[param4 >> 8];
           incrementValue$2 = param5;
           param5++;
@@ -1749,7 +1731,7 @@ final class PcmSampleStream extends ia {
           }
           param7 = param8;
         }
-        L2: while (param5 < param7) {
+        while (param5 < param7) {
           param1 = param4 >> 8;
           param0 = param2[param1];
           incrementValue$1 = param5;
@@ -1767,7 +1749,7 @@ final class PcmSampleStream extends ia {
           param7 = param8;
         }
         param1 = param12;
-        L5: while (param5 < param7) {
+        while (param5 < param7) {
           param0 = param2[param4 >> 8];
           incrementValue$0 = param5;
           param5++;

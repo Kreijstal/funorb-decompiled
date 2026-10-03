@@ -162,37 +162,35 @@ final class r extends f implements pl {
             }
             return null;
           }
-          {
-            var3 = 0;
-            for (var4 = 0; var4 < var2_int; var4++) {
-              L1: {
-                var5 = param0.charAt(var4);
-                if (var5 == 46) {
-                  if (0 != var4) {
-                    if (var4 != -1 + var2_int) {
-                      if (var3 == 0) {
-                        var3 = 1;
-                        break L1;
-                      }
+          var3 = 0;
+          for (var4 = 0; var4 < var2_int; var4++) {
+            L1: {
+              var5 = param0.charAt(var4);
+              if (var5 == 46) {
+                if (0 != var4) {
+                  if (var4 != -1 + var2_int) {
+                    if (var3 == 0) {
+                      var3 = 1;
+                      break L1;
                     }
                   }
-                  stackIn_41_0 = ii.field_h;
-                  return stackIn_41_0;
                 }
-                if (rd.field_w.indexOf(var5) == -1) {
-                  stackIn_46_0 = ii.field_h;
-                  return stackIn_46_0;
-                }
-                var3 = 0;
+                stackIn_41_0 = ii.field_h;
+                return stackIn_41_0;
               }
+              if (rd.field_w.indexOf(var5) == -1) {
+                stackIn_46_0 = ii.field_h;
+                return stackIn_46_0;
+              }
+              var3 = 0;
             }
-            if (param1) {
-              return null;
-            }
-            field_sb = (String) null;
-            stackIn_52_0 = null;
-            return (nd) ((Object) stackIn_52_0);
           }
+          if (param1) {
+            return null;
+          }
+          field_sb = (String) null;
+          stackIn_52_0 = null;
+          return (nd) ((Object) stackIn_52_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

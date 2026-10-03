@@ -91,7 +91,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           }
           trailingTextChunk = 0L;
           textLength = text.length();
-          L1: for (characterIndex = 19; characterIndex >= 0; characterIndex--) {
+          for (characterIndex = 19; characterIndex >= 0; characterIndex--) {
             accumulatedChunk = accumulatedChunk * 38L;
             if (textLength > characterIndex) {
               L3: {
@@ -117,11 +117,11 @@ class ByteArrayBuffer extends IntrusiveNode {
                 accumulatedChunk = accumulatedChunk + 1L;
               }
               if (characterIndex != 10) {
-                continue L1;
+                continue;
               }
             } else {
               if (characterIndex != 10) {
-                continue L1;
+                continue;
               }
             }
             trailingTextChunk = accumulatedChunk;
@@ -165,7 +165,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         currentSignedByte = this.bytes[firstByteIndex];
         accumulatedValue = 0;
-        L1: while (currentSignedByte < 0) {
+        while (currentSignedByte < 0) {
           accumulatedValue = (127 & currentSignedByte | accumulatedValue) << 7;
           continuationByteIndex = this.position;
           this.position = this.position + 1;
@@ -190,22 +190,18 @@ class ByteArrayBuffer extends IntrusiveNode {
         if (prefixByte != 0) {
           throw new IllegalStateException("");
         }
-        {
-          textStart = this.position;
-          L1: while (true) {
-            textByteIndex = this.position;
-            this.position = this.position + 1;
-            if (this.bytes[textByteIndex] != 0) {
-              continue L1;
-            }
-            {
-              textLength = -textStart + (this.position - 1);
-              if (textLength != 0) {
-                return bc.decodeTextSlice(methodGuard ^ -27439, this.bytes, textStart, textLength);
-              }
-              return "";
-            }
+        textStart = this.position;
+        while (true) {
+          textByteIndex = this.position;
+          this.position = this.position + 1;
+          if (this.bytes[textByteIndex] != 0) {
+            continue;
           }
+          textLength = -textStart + (this.position - 1);
+          if (textLength != 0) {
+            return bc.decodeTextSlice(methodGuard ^ -27439, this.bytes, textStart, textLength);
+          }
+          return "";
         }
     }
 
@@ -319,7 +315,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         RuntimeException var2 = null;
         try {
           var3 = (ph) ((Object) el.field_p.firstForIteration(0));
-          L0: while (var3 != null) {
+          while (var3 != null) {
             rl.a(param1, 534, var3);
             var3 = (ph) ((Object) el.field_p.nextForIteration(1));
           }
@@ -349,7 +345,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             unusedNullTextSnapshot = (String) null;
             this.writeNullTerminatedText((String) null, 75);
           }
-          L1: while (sourceIndex < sourceOffset + length) {
+          while (sourceIndex < sourceOffset + length) {
             bufferByteIndex = this.position;
             this.position = this.position + 1;
             this.bytes[bufferByteIndex] = source[sourceIndex];
@@ -527,7 +523,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             unusedNullTextInputSnapshot = (mb) null;
             ByteArrayBuffer.a((mb) null, (mb) null, 35);
           }
-          L1: while (destinationOffset + length > destinationIndex) {
+          while (destinationOffset + length > destinationIndex) {
             bufferByteIndex = this.position;
             this.position = this.position + 1;
             destination[destinationIndex] = this.bytes[bufferByteIndex];
@@ -582,27 +578,25 @@ class ByteArrayBuffer extends IntrusiveNode {
             if (blockCount <= blockIndex) {
               return;
             }
-            {
-              leftWord = this.readIntBE((byte) -69);
-              rightWord = this.readIntBE((byte) -34);
-              cycleSum = 0;
-              delta = -1640531527;
-              cyclesRemaining = 32;
-              L2: while (true) {
-                cyclesBeforeDecrement = cyclesRemaining;
-                cyclesRemaining--;
-                if (0 < cyclesBeforeDecrement) {
-                  leftWord = leftWord + ((rightWord >>> 5 ^ rightWord << 4) + rightWord ^ cycleSum + key[3 & cycleSum]);
-                  cycleSum = cycleSum + delta;
-                  rightWord = rightWord + (leftWord + (leftWord << 4 ^ leftWord >>> 5) ^ cycleSum + key[(cycleSum & 7480) >>> 11]);
-                  continue L2;
-                }
-                this.position = this.position - 8;
-                this.writeIntBE((byte) 95, leftWord);
-                this.writeIntBE((byte) 95, rightWord);
-                blockIndex++;
-                continue L1;
+            leftWord = this.readIntBE((byte) -69);
+            rightWord = this.readIntBE((byte) -34);
+            cycleSum = 0;
+            delta = -1640531527;
+            cyclesRemaining = 32;
+            while (true) {
+              cyclesBeforeDecrement = cyclesRemaining;
+              cyclesRemaining--;
+              if (0 < cyclesBeforeDecrement) {
+                leftWord = leftWord + ((rightWord >>> 5 ^ rightWord << 4) + rightWord ^ cycleSum + key[3 & cycleSum]);
+                cycleSum = cycleSum + delta;
+                rightWord = rightWord + (leftWord + (leftWord << 4 ^ leftWord >>> 5) ^ cycleSum + key[(cycleSum & 7480) >>> 11]);
+                continue;
               }
+              this.position = this.position - 8;
+              this.writeIntBE((byte) 95, leftWord);
+              this.writeIntBE((byte) 95, rightWord);
+              blockIndex++;
+              continue L1;
             }
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
@@ -665,27 +659,25 @@ class ByteArrayBuffer extends IntrusiveNode {
               this.position = savedPosition;
               return;
             }
-            {
-              leftWord = this.readIntBE((byte) -36);
-              rightWord = this.readIntBE((byte) -103);
-              cycleSum = -957401312;
-              delta = -1640531527;
-              cyclesRemaining = 32;
-              L2: while (true) {
-                cyclesBeforeDecrement = cyclesRemaining;
-                cyclesRemaining--;
-                if (cyclesBeforeDecrement > 0) {
-                  rightWord = rightWord - (cycleSum + key[(7701 & cycleSum) >>> 11] ^ leftWord + (leftWord << 4 ^ leftWord >>> 5));
-                  cycleSum = cycleSum - delta;
-                  leftWord = leftWord - (cycleSum + key[cycleSum & 3] ^ (rightWord >>> 5 ^ rightWord << 4) + rightWord);
-                  continue L2;
-                }
-                this.position = this.position - 8;
-                this.writeIntBE((byte) 95, leftWord);
-                this.writeIntBE((byte) 95, rightWord);
-                blockIndex++;
-                continue L1;
+            leftWord = this.readIntBE((byte) -36);
+            rightWord = this.readIntBE((byte) -103);
+            cycleSum = -957401312;
+            delta = -1640531527;
+            cyclesRemaining = 32;
+            while (true) {
+              cyclesBeforeDecrement = cyclesRemaining;
+              cyclesRemaining--;
+              if (cyclesBeforeDecrement > 0) {
+                rightWord = rightWord - (cycleSum + key[(7701 & cycleSum) >>> 11] ^ leftWord + (leftWord << 4 ^ leftWord >>> 5));
+                cycleSum = cycleSum - delta;
+                leftWord = leftWord - (cycleSum + key[cycleSum & 3] ^ (rightWord >>> 5 ^ rightWord << 4) + rightWord);
+                continue;
               }
+              this.position = this.position - 8;
+              this.writeIntBE((byte) 95, leftWord);
+              this.writeIntBE((byte) 95, rightWord);
+              blockIndex++;
+              continue L1;
             }
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
@@ -823,7 +815,7 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final void padZerosToPosition(byte methodGuard, int endPosition) {
         int paddingByteIndex = 0;
-        L0: while (this.position < endPosition) {
+        while (this.position < endPosition) {
           paddingByteIndex = this.position;
           this.position = this.position + 1;
           this.bytes[paddingByteIndex] = (byte) 0;
@@ -900,22 +892,20 @@ class ByteArrayBuffer extends IntrusiveNode {
         int textStart;
         int textLength;
         textStart = this.position;
-        L0: while (true) {
+        while (true) {
           textByteIndex = this.position;
           this.position = this.position + 1;
           if (0 != this.bytes[textByteIndex]) {
-            continue L0;
+            continue;
           }
-          {
-            textLength = this.position + (-textStart - 1);
-            if (textLength == 0) {
-              return "";
-            }
-            if (methodGuard < 94) {
-              field_i = 68;
-            }
-            return bc.decodeTextSlice(-45, this.bytes, textStart, textLength);
+          textLength = this.position + (-textStart - 1);
+          if (textLength == 0) {
+            return "";
           }
+          if (methodGuard < 94) {
+            field_i = 68;
+          }
+          return bc.decodeTextSlice(-45, this.bytes, textStart, textLength);
         }
     }
 

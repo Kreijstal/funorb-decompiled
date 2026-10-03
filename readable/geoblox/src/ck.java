@@ -92,9 +92,9 @@ final class ck {
           var13 = (int)((double)var13 * var10);
           for (var15 = 0; ArchiveIndex.field_l.length > var15; var15++) {
             var16 = 0;
-            L3: for (var17_int = 1; ArchiveIndex.field_l.length > var17_int; var17_int++) {
+            for (var17_int = 1; ArchiveIndex.field_l.length > var17_int; var17_int++) {
               if (var21[var17_int] <= var21[var16]) {
-                continue L3;
+                continue;
               }
               var16 = var17_int;
             }
@@ -146,7 +146,7 @@ final class ck {
           }
           oh.field_b.a(true, 127, dk.field_c, ni.field_I);
           oh.field_b.i(-50);
-          L1: while (hh.pollKeyboardEvent(125)) {
+          while (hh.pollKeyboardEvent(125)) {
             oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
           }
           return;

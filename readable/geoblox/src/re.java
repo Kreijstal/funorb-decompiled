@@ -48,19 +48,19 @@ final class re extends IntrusiveNode {
               if (ii.keyStateWriteIndexOrResetSentinel < 0) {
                 resetKeyIndex = 0;
                 keyStateChangeOrResetIndex = resetKeyIndex;
-                L3: while (resetKeyIndex < 112) {
+                while (resetKeyIndex < 112) {
                   kj.heldInternalKeys[resetKeyIndex] = false;
                   resetKeyIndex++;
                 }
                 ii.keyStateWriteIndexOrResetSentinel = gk.keyStateReadIndex;
                 break L2;
               }
-              L4: while (gk.keyStateReadIndex != ii.keyStateWriteIndexOrResetSentinel) {
+              while (gk.keyStateReadIndex != ii.keyStateWriteIndexOrResetSentinel) {
                 keyStateChangeOrResetIndex = gf.queuedKeyStateChanges[gk.keyStateReadIndex];
                 gk.keyStateReadIndex = 1 + gk.keyStateReadIndex & 127;
                 if (keyStateChangeOrResetIndex < 0) {
                   kj.heldInternalKeys[~keyStateChangeOrResetIndex] = false;
-                  continue L4;
+                  continue;
                 }
                 kj.heldInternalKeys[keyStateChangeOrResetIndex] = true;
               }

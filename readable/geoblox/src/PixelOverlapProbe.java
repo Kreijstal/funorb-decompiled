@@ -61,11 +61,11 @@ final class PixelOverlapProbe {
                 firstPixels = firstRaster.pixels;
                 secondPixels = secondRaster.pixels;
                 for (remainingOverlapRows = overlapBottomThenHeight; remainingOverlapRows > 0; remainingOverlapRows--) {
-                  L7: for (remainingOverlapColumns = overlapRightThenWidth; remainingOverlapColumns > 0; remainingOverlapColumns--) {
+                  for (remainingOverlapColumns = overlapRightThenWidth; remainingOverlapColumns > 0; remainingOverlapColumns--) {
                     if (firstPixels[firstPixelIndex] == 0) {
                       firstPixelIndex++;
                       secondPixelIndex++;
-                      continue L7;
+                      continue;
                     }
                     if (secondPixels[secondPixelIndex] != 0) {
                       firstOverlapX = firstOriginX + overlapLeftInFirst + overlapRightThenWidth - remainingOverlapColumns;

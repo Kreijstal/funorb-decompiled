@@ -29,10 +29,10 @@ final class MusicDecodeStage {
         var4 = field_a[var3];
         var5 = field_g[var3];
         var6 = field_e[var3] ? 1 : 0;
-        L0: for (var7 = param0 + 1; var7 <= param1; var7++) {
+        for (var7 = param0 + 1; var7 <= param1; var7++) {
           var8 = field_a[var7];
           if (var8 >= var4) {
-            continue L0;
+            continue;
           }
           field_a[var3] = var8;
           field_g[var3] = field_g[var7];
@@ -58,13 +58,13 @@ final class MusicDecodeStage {
         var2 = param0[param1];
         var3 = -1;
         var4 = -2147483648;
-        L0: for (var5 = 0; var5 < param1; var5++) {
+        for (var5 = 0; var5 < param1; var5++) {
           var6 = param0[var5];
           if (var6 >= var2) {
-            continue L0;
+            continue;
           }
           if (var6 <= var4) {
-            continue L0;
+            continue;
           }
           var3 = var5;
           var4 = var6;
@@ -81,13 +81,13 @@ final class MusicDecodeStage {
         var2 = param0[param1];
         var3 = -1;
         var4 = 2147483647;
-        L0: for (var5 = 0; var5 < param1; var5++) {
+        for (var5 = 0; var5 < param1; var5++) {
           var6 = param0[var5];
           if (var6 <= var2) {
-            continue L0;
+            continue;
           }
           if (var6 >= var4) {
-            continue L0;
+            continue;
           }
           var3 = var5;
           var4 = var6;
@@ -133,14 +133,14 @@ final class MusicDecodeStage {
         field_e[1] = true;
         var5[0] = true;
         var6 = 2;
-        L0: while (true) {
+        while (true) {
           if (var6 >= var3) {
             this.a(0, var3 - 1);
             var6 = 0;
             var7 = field_g[0] * this.field_d;
             var16 = 1;
             var8_int = var16;
-            L1: while (true) {
+            while (true) {
               if (var16 >= var3) {
                 var8 = field_k[var7];
                 for (var9 = var6; var9 < param1; var9++) {
@@ -150,67 +150,61 @@ final class MusicDecodeStage {
               }
               if (!field_e[var16]) {
                 var16++;
-                continue L1;
+                continue;
               }
-              {
-                var9 = field_a[var16];
-                var10 = field_g[var16] * this.field_d;
-                this.a(var6, var7, var9, var10, param0, param1);
-                if (var9 >= param1) {
-                  return;
-                }
-                var6 = var9;
-                var7 = var10;
-                var16++;
-                continue L1;
+              var9 = field_a[var16];
+              var10 = field_g[var16] * this.field_d;
+              this.a(var6, var7, var9, var10, param0, param1);
+              if (var9 >= param1) {
+                return;
               }
+              var6 = var9;
+              var7 = var10;
+              var16++;
+              continue;
             }
           }
-          {
-            var7 = MusicDecodeStage.a(field_a, var6);
-            var8_int = MusicDecodeStage.b(field_a, var6);
-            var9 = this.a(field_a[var7], field_g[var7], field_a[var8_int], field_g[var8_int], field_a[var6]);
-            var10 = field_g[var6];
-            var11 = var4 - var9;
-            var12 = var9;
-            stackIn_5_0 = (var11 >= var12) ? var12 : var11;
-            var13 = stackIn_5_0 << 1;
-            if (var10 == 0) {
-              field_e[var6] = false;
-              field_g[var6] = var9;
-              var6++;
-              continue L0;
-            }
-            {
-              var14 = field_e;
-              var15 = var7;
-              field_e[var8_int] = true;
-              var14[var15] = true;
-              field_e[var6] = true;
-              if (var10 < var13) {
-                stackIn_13_0 = (int[]) (field_g);
-                stackIn_13_1 = var6;
-                if ((var10 & 1) == 0) {
-                  stackIn_14_2 = var9 + var10 / 2;
-                } else {
-                  stackIn_14_2 = var9 - (var10 + 1) / 2;
-                }
-                stackIn_13_0[stackIn_13_1] = stackIn_14_2;
-                var6++;
-                continue L0;
-              }
-              stackIn_9_0 = (int[]) (field_g);
-              stackIn_9_1 = var6;
-              if (var11 <= var12) {
-                stackIn_10_2 = var9 - var10 + var11 - 1;
-              } else {
-                stackIn_10_2 = var10 - var12 + var9;
-              }
-              stackIn_9_0[stackIn_9_1] = stackIn_10_2;
-              var6++;
-              continue L0;
-            }
+          var7 = MusicDecodeStage.a(field_a, var6);
+          var8_int = MusicDecodeStage.b(field_a, var6);
+          var9 = this.a(field_a[var7], field_g[var7], field_a[var8_int], field_g[var8_int], field_a[var6]);
+          var10 = field_g[var6];
+          var11 = var4 - var9;
+          var12 = var9;
+          stackIn_5_0 = (var11 >= var12) ? var12 : var11;
+          var13 = stackIn_5_0 << 1;
+          if (var10 == 0) {
+            field_e[var6] = false;
+            field_g[var6] = var9;
+            var6++;
+            continue;
           }
+          var14 = field_e;
+          var15 = var7;
+          field_e[var8_int] = true;
+          var14[var15] = true;
+          field_e[var6] = true;
+          if (var10 < var13) {
+            stackIn_13_0 = (int[]) (field_g);
+            stackIn_13_1 = var6;
+            if ((var10 & 1) == 0) {
+              stackIn_14_2 = var9 + var10 / 2;
+            } else {
+              stackIn_14_2 = var9 - (var10 + 1) / 2;
+            }
+            stackIn_13_0[stackIn_13_1] = stackIn_14_2;
+            var6++;
+            continue;
+          }
+          stackIn_9_0 = (int[]) (field_g);
+          stackIn_9_1 = var6;
+          if (var11 <= var12) {
+            stackIn_10_2 = var9 - var10 + var11 - 1;
+          } else {
+            stackIn_10_2 = var10 - var12 + var9;
+          }
+          stackIn_9_0[stackIn_9_1] = stackIn_10_2;
+          var6++;
+          continue;
         }
     }
 
@@ -238,40 +232,38 @@ final class MusicDecodeStage {
         if (var1 == 0) {
           return false;
         }
-        {
-          var2 = this.field_c.length;
-          System.arraycopy(this.field_c, 0, field_a, 0, var2);
-          var3 = field_b[this.field_d - 1];
-          var4 = hj.a((byte) 58, var3 - 1);
-          field_g[0] = MusicDecoder.readBits(var4);
-          field_g[1] = MusicDecoder.readBits(var4);
-          var5 = 2;
-          for (var6 = 0; var6 < this.field_l.length; var6++) {
-            var7 = this.field_l[var6];
-            var8 = this.field_i[var7];
-            var9 = this.field_h[var7];
-            var10 = (1 << var9) - 1;
-            var11 = 0;
-            if (var9 > 0) {
-              var11 = MusicDecoder.field_u[this.field_f[var7]].b();
-            }
-            for (var12 = 0; var12 < var8; var12++) {
-              var13 = this.field_j[var7][var11 & var10];
-              var11 = var11 >>> var9;
-              incrementValue$0 = var5;
-              var5++;
-              stackIn_13_0 = (int[]) (field_g);
-              stackIn_13_1 = incrementValue$0;
-              if (var13 < 0) {
-                stackIn_14_2 = 0;
-              } else {
-                stackIn_14_2 = MusicDecoder.field_u[var13].b();
-              }
-              stackIn_13_0[stackIn_13_1] = stackIn_14_2;
-            }
+        var2 = this.field_c.length;
+        System.arraycopy(this.field_c, 0, field_a, 0, var2);
+        var3 = field_b[this.field_d - 1];
+        var4 = hj.a((byte) 58, var3 - 1);
+        field_g[0] = MusicDecoder.readBits(var4);
+        field_g[1] = MusicDecoder.readBits(var4);
+        var5 = 2;
+        for (var6 = 0; var6 < this.field_l.length; var6++) {
+          var7 = this.field_l[var6];
+          var8 = this.field_i[var7];
+          var9 = this.field_h[var7];
+          var10 = (1 << var9) - 1;
+          var11 = 0;
+          if (var9 > 0) {
+            var11 = MusicDecoder.field_u[this.field_f[var7]].b();
           }
-          return true;
+          for (var12 = 0; var12 < var8; var12++) {
+            var13 = this.field_j[var7][var11 & var10];
+            var11 = var11 >>> var9;
+            incrementValue$0 = var5;
+            var5++;
+            stackIn_13_0 = (int[]) (field_g);
+            stackIn_13_1 = incrementValue$0;
+            if (var13 < 0) {
+              stackIn_14_2 = 0;
+            } else {
+              stackIn_14_2 = MusicDecoder.field_u[var13].b();
+            }
+            stackIn_13_0[stackIn_13_1] = stackIn_14_2;
+          }
         }
+        return true;
     }
 
     private final void a(int param0, int param1, int param2, int param3, float[] param4, int param5) {
@@ -318,69 +310,67 @@ final class MusicDecodeStage {
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        {
-          var2 = MusicDecoder.readBits(5);
-          var3 = 0;
-          this.field_l = new int[var2];
-          L0: for (var4 = 0; var4 < var2; var4++) {
-            var5 = MusicDecoder.readBits(4);
-            this.field_l[var4] = var5;
-            if (var5 < var3) {
-              continue L0;
-            }
-            var3 = var5 + 1;
+        var2 = MusicDecoder.readBits(5);
+        var3 = 0;
+        this.field_l = new int[var2];
+        for (var4 = 0; var4 < var2; var4++) {
+          var5 = MusicDecoder.readBits(4);
+          this.field_l[var4] = var5;
+          if (var5 < var3) {
+            continue;
           }
-          this.field_i = new int[var3];
-          this.field_h = new int[var3];
-          this.field_f = new int[var3];
-          this.field_j = new int[var3][];
-          for (var4 = 0; var4 < var3; var4++) {
-            this.field_i[var4] = MusicDecoder.readBits(3) + 1;
-            dupTemp$1 = MusicDecoder.readBits(2);
-            this.field_h[var4] = dupTemp$1;
-            var5 = dupTemp$1;
-            if (var5 != 0) {
-              this.field_f[var4] = MusicDecoder.readBits(8);
-            }
-            var5 = 1 << var5;
-            var10 = new int[var5];
-            var9 = var10;
-            var6_ref_int__ = var9;
-            this.field_j[var4] = var10;
-            for (var7 = 0; var7 < var5; var7++) {
-              var6_ref_int__[var7] = MusicDecoder.readBits(8) - 1;
-            }
-          }
-          this.field_d = MusicDecoder.readBits(2) + 1;
-          var4 = MusicDecoder.readBits(4);
-          var5 = 2;
-          for (var6 = 0; var6 < var2; var6++) {
-            var5 = var5 + this.field_i[this.field_l[var6]];
-          }
-          this.field_c = new int[var5];
-          this.field_c[0] = 0;
-          this.field_c[1] = 1 << var4;
-          var5 = 2;
-          for (var6 = 0; var6 < var2; var6++) {
-            var7 = this.field_l[var6];
-            for (var8 = 0; var8 < this.field_i[var7]; var8++) {
-              incrementValue$0 = var5;
-              var5++;
-              this.field_c[incrementValue$0] = MusicDecoder.readBits(var4);
-            }
-          }
-          L4: {
-            if (field_a != null) {
-              if (field_a.length >= var5) {
-                break L4;
-              }
-            }
-            field_a = new int[var5];
-            field_g = new int[var5];
-            field_e = new boolean[var5];
-          }
-          return;
+          var3 = var5 + 1;
         }
+        this.field_i = new int[var3];
+        this.field_h = new int[var3];
+        this.field_f = new int[var3];
+        this.field_j = new int[var3][];
+        for (var4 = 0; var4 < var3; var4++) {
+          this.field_i[var4] = MusicDecoder.readBits(3) + 1;
+          dupTemp$1 = MusicDecoder.readBits(2);
+          this.field_h[var4] = dupTemp$1;
+          var5 = dupTemp$1;
+          if (var5 != 0) {
+            this.field_f[var4] = MusicDecoder.readBits(8);
+          }
+          var5 = 1 << var5;
+          var10 = new int[var5];
+          var9 = var10;
+          var6_ref_int__ = var9;
+          this.field_j[var4] = var10;
+          for (var7 = 0; var7 < var5; var7++) {
+            var6_ref_int__[var7] = MusicDecoder.readBits(8) - 1;
+          }
+        }
+        this.field_d = MusicDecoder.readBits(2) + 1;
+        var4 = MusicDecoder.readBits(4);
+        var5 = 2;
+        for (var6 = 0; var6 < var2; var6++) {
+          var5 = var5 + this.field_i[this.field_l[var6]];
+        }
+        this.field_c = new int[var5];
+        this.field_c[0] = 0;
+        this.field_c[1] = 1 << var4;
+        var5 = 2;
+        for (var6 = 0; var6 < var2; var6++) {
+          var7 = this.field_l[var6];
+          for (var8 = 0; var8 < this.field_i[var7]; var8++) {
+            incrementValue$0 = var5;
+            var5++;
+            this.field_c[incrementValue$0] = MusicDecoder.readBits(var4);
+          }
+        }
+        L4: {
+          if (field_a != null) {
+            if (field_a.length >= var5) {
+              break L4;
+            }
+          }
+          field_a = new int[var5];
+          field_g = new int[var5];
+          field_e = new boolean[var5];
+        }
+        return;
     }
 
     public static void a() {

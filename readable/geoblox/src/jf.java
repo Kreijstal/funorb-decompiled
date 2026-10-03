@@ -49,23 +49,21 @@ final class jf implements dh {
           if (param1 >= -5) {
             return;
           }
-          {
-            if (var12 == null) {
-            }
-            SoftwareRasterizer.fillRectangle(param4.field_v + param0, param4.field_m + param2, param4.field_r, param4.field_h, this.field_h);
-            var7 = -(2 * var12.field_H) + param4.field_r;
-            var8 = param0 - (-param4.field_v - var12.field_H);
-            var9 = var12.field_G + param2 + param4.field_m;
-            SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_d);
-            for (var10 = var12.a((byte) 86) - 1; var10 >= 0; var10--) {
-              SoftwareRasterizer.fillCircle(var7 * var12.c(-113, var10) / var12.g(-128) + var8, var9, this.field_i, this.field_e);
-            }
-            if (null == this.field_f) {
-              return;
-            }
-            this.field_f.drawCenteredText(var12.field_s, var8 + var7 / 2, this.field_f.lineAdvance + var9 + var12.field_G, this.field_k, this.field_l);
+          if (var12 == null) {
+          }
+          SoftwareRasterizer.fillRectangle(param4.field_v + param0, param4.field_m + param2, param4.field_r, param4.field_h, this.field_h);
+          var7 = -(2 * var12.field_H) + param4.field_r;
+          var8 = param0 - (-param4.field_v - var12.field_H);
+          var9 = var12.field_G + param2 + param4.field_m;
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_d);
+          for (var10 = var12.a((byte) 86) - 1; var10 >= 0; var10--) {
+            SoftwareRasterizer.fillCircle(var7 * var12.c(-113, var10) / var12.g(-128) + var8, var9, this.field_i, this.field_e);
+          }
+          if (null == this.field_f) {
             return;
           }
+          this.field_f.drawCenteredText(var12.field_s, var8 + var7 / 2, this.field_f.lineAdvance + var9 + var12.field_G, this.field_k, this.field_l);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -107,7 +105,7 @@ final class jf implements dh {
         RuntimeException decompiledCaughtException = null;
         var16 = Geoblox.field_C;
         try {
-          L0: while (true) {
+          while (true) {
             param7--;
             if (param7 < 0) {
               if (param2 == 33423689) {
@@ -128,7 +126,7 @@ final class jf implements dh {
             param8 = param8 + param4;
             param3 = param3 + param1;
             param5 = param5 + param6;
-            continue L0;
+            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,11 +181,9 @@ final class jf implements dh {
               if (param5 == -17154) {
                 return;
               }
-              {
-                var12 = (CharSequence) null;
-                jf.encodeTextBytes((CharSequence) null, (byte) 66);
-                return;
-              }
+              var12 = (CharSequence) null;
+              jf.encodeTextBytes((CharSequence) null, (byte) 66);
+              return;
             }
           }
           return;

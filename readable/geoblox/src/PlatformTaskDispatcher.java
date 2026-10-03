@@ -85,11 +85,11 @@ final class PlatformTaskDispatcher implements Runnable {
             java.awt.datatransfer.Clipboard clipboardForRead = null;
             Object[] fieldLookupArguments = null;
             Object[] methodLookupArguments = null;
-            L0: while (true) {
+            while (true) {
               dispatcherOrTaskMonitor = this;
               synchronized (dispatcherOrTaskMonitor) {
                 L1: {
-                  L2: while (!this.shutdownRequested) {
+                  while (!this.shutdownRequested) {
                     if (this.taskQueueHead != null) {
                       task = this.taskQueueHead;
                       this.taskQueueHead = this.taskQueueHead.next;
@@ -154,10 +154,8 @@ final class PlatformTaskDispatcher implements Runnable {
                                     if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
                                       throw new IOException();
                                     }
-                                    {
-                                      reverseLookupAddress = (255 & task.firstIntArgument >> 24) + "." + ((task.firstIntArgument & 16718053) >> 16) + "." + (task.firstIntArgument >> 8 & 255) + "." + (255 & task.firstIntArgument);
-                                      task.result = java.net.InetAddress.getByName(reverseLookupAddress).getHostName();
-                                    }
+                                    reverseLookupAddress = (255 & task.firstIntArgument >> 24) + "." + ((task.firstIntArgument & 16718053) >> 16) + "." + (task.firstIntArgument >> 8 & 255) + "." + (255 & task.firstIntArgument);
+                                    task.result = java.net.InetAddress.getByName(reverseLookupAddress).getHostName();
                                   } else {
                                     if (taskType == 21) {
                                       if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
@@ -231,23 +229,21 @@ final class PlatformTaskDispatcher implements Runnable {
                                                     if (!osNameLowerCase.startsWith("win")) {
                                                       throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
-                                                    {
-                                                      urlToLaunch = (String) (task.input);
-                                                      if (!urlToLaunch.startsWith("http://")) {
-                                                        if (!urlToLaunch.startsWith("https://")) {
-                                                          throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                        }
+                                                    urlToLaunch = (String) (task.input);
+                                                    if (!urlToLaunch.startsWith("http://")) {
+                                                      if (!urlToLaunch.startsWith("https://")) {
+                                                        throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                       }
-                                                      allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                      for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
-                                                        if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
-                                                          throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                        }
-                                                      }
-                                                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
-                                                      task.result = null;
-                                                      break L14;
                                                     }
+                                                    allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                                    for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
+                                                      if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
+                                                        throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                      }
+                                                    }
+                                                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
+                                                    task.result = null;
+                                                    break L14;
                                                   }
                                                 } catch (java.lang.Exception caughtUrlLaunchFailure) {
                                                   caughtTaskThrowable = caughtUrlLaunchFailure;
@@ -315,7 +311,7 @@ final class PlatformTaskDispatcher implements Runnable {
               synchronized (dispatcherOrTaskMonitor) {
                 task.notify();
               }
-              continue L0;
+              continue;
             }
         } catch (RuntimeException | Error uncheckedWorkerFailure) {
             throw uncheckedWorkerFailure;
@@ -361,12 +357,12 @@ final class PlatformTaskDispatcher implements Runnable {
             searchDirectories = new String[]{"c:/rscache/", "/rscache/", userHomeDirectory, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             guardDivisionValue = -95 % ((-46 - guard) / 35);
             directoryIndex = 0;
-            L1: while (directoryIndex < searchDirectories.length) {
+            while (directoryIndex < searchDirectories.length) {
               searchDirectory = searchDirectories[directoryIndex];
               if (0 < searchDirectory.length()) {
                 if (!new File(searchDirectory).exists()) {
                   directoryIndex++;
-                  continue L1;
+                  continue;
                 }
               }
               try {
@@ -431,10 +427,10 @@ final class PlatformTaskDispatcher implements Runnable {
             L10: {
               if (null != this.cacheIndexFiles) {
                 cacheIndex = 0;
-                L11: while (cacheIndex < this.cacheIndexFiles.length) {
+                while (cacheIndex < this.cacheIndexFiles.length) {
                   if (this.cacheIndexFiles[cacheIndex] == null) {
                     cacheIndex++;
-                    continue L11;
+                    continue;
                   }
                   try {
                     this.cacheIndexFiles[cacheIndex].close((byte) -5);
@@ -495,21 +491,19 @@ final class PlatformTaskDispatcher implements Runnable {
         if (guard != 1) {
           return (PlatformTask) null;
         }
-        {
-          task.taskType = taskType;
-          queueMonitor = this;
-          synchronized (queueMonitor) {
-            if (this.taskQueueTail == null) {
-              this.taskQueueHead = task;
-              this.taskQueueTail = task;
-            } else {
-              this.taskQueueTail.next = task;
-              this.taskQueueTail = task;
-            }
-            this.notify();
+        task.taskType = taskType;
+        queueMonitor = this;
+        synchronized (queueMonitor) {
+          if (this.taskQueueTail == null) {
+            this.taskQueueHead = task;
+            this.taskQueueTail = task;
+          } else {
+            this.taskQueueTail.next = task;
+            this.taskQueueTail = task;
           }
-          return task;
+          this.notify();
         }
+        return task;
     }
 
     final PlatformTask requestDeclaredMethod(String methodName, int guard, Class[] parameterTypes, Class targetClass) {

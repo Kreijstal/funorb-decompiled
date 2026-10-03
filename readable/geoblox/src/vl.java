@@ -608,13 +608,13 @@ final class vl extends IntrusiveNode {
                 this.field_m[var29] = (byte)var30;
               }
               var29 = 2;
-              L38: while (var29 < var47.length) {
+              while (var29 < var47.length) {
                 var30 = var47[var29];
                 var31 = var16[var29 + 1] << 1;
                 var32 = (var30 - var27) * var28 + (-var27 + var30) / 2;
                 var37 = var27;
                 var33 = var37;
-                L42: while (var30 > var37) {
+                while (var30 > var37) {
                   var34 = PacketBuffer.a(var30 - var27, (byte) -6, var32);
                   var35 = (this.field_m[var37] & 255) + var34;
                   if (var35 < 0) {

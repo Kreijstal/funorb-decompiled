@@ -174,7 +174,7 @@ final class GameplaySession {
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             var3 = 0;
-            L1: while (true) {
+            while (true) {
               L2: {
                 if (param0.length() > var3) {
                   stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
@@ -186,7 +186,7 @@ final class GameplaySession {
                   }
                   var3++;
                   if (var4 == 0) {
-                    continue L1;
+                    continue;
                   }
                 }
                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
@@ -446,7 +446,7 @@ final class GameplaySession {
             tutorialLineHeightOrDebugEntityRadius = 20;
             debugSpawnQueueSnapshot = SecondaryDeque.spawnQueue;
             renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.lastForIteration(false));
-            L31: while (true) {
+            while (true) {
               L32: {
                 if (renderedEntity != null) {
                   entityOffsetX = -320.0f + renderedEntity.positionX;
@@ -468,13 +468,13 @@ final class GameplaySession {
                   SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
                   renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
                   if (clientControlFlowGuard == 0) {
-                    continue L31;
+                    continue;
                   }
                 }
                 debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
                 debugEntityQueue = debugMovingQueueSnapshot;
                 renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
-                L36: while (true) {
+                while (true) {
                   L37: {
                     if (null != renderedEntity) {
                       entityOffsetX = -320.0f + renderedEntity.positionX;
@@ -487,13 +487,13 @@ final class GameplaySession {
                         break L37;
                       }
                       if (clientControlFlowGuard == 0) {
-                        continue L36;
+                        continue;
                       }
                     }
                     debugEntityQueue = a.attachedEntities;
                   }
                   renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
-                  L39: while (true) {
+                  while (true) {
                     L40: {
                       if (renderedEntity != null) {
                         SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
@@ -502,13 +502,13 @@ final class GameplaySession {
                           break L40;
                         }
                         if (clientControlFlowGuard == 0) {
-                          continue L39;
+                          continue;
                         }
                       }
                       debugEntityQueue = bh.transientEntities;
                     }
                     renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
-                    L42: while (true) {
+                    while (true) {
                       L43: {
                         L44: {
                           if (renderedEntity != null) {
@@ -518,7 +518,7 @@ final class GameplaySession {
                               break L44;
                             }
                             if (clientControlFlowGuard == 0) {
-                              continue L42;
+                              continue;
                             }
                           }
                           if (this.tutorialMode) {
@@ -945,7 +945,7 @@ final class GameplaySession {
                 if (kj.heldInternalKeys[99]) {
                   if (!this.tutorialPromptActive) {
                     fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-                    L46: while (true) {
+                    while (true) {
                       if (null == fastForwardEntity) {
                         break L45;
                       }
@@ -962,7 +962,7 @@ final class GameplaySession {
                       }
                       fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                       if (clientControlFlowGuard == 0) {
-                        continue L46;
+                        continue;
                       }
                       break L45;
                     }
@@ -1044,7 +1044,7 @@ final class GameplaySession {
         if (methodGuard != -1578896191) {
           this.scoreText = (StringBuilder) null;
         }
-        L60: while (true) {
+        while (true) {
           L61: {
             if (hh.pollKeyboardEvent(111)) {
               if (te.currentKeyboardEventCharacter > 0) {
@@ -1122,7 +1122,7 @@ final class GameplaySession {
                 jc.requestAvatarFeedback(7, false);
               }
               if (2 > oc.field_f) {
-                continue L60;
+                continue;
               }
               debugKeyCodeOrPointerEventComplement = ki.currentKeyboardEventCode;
               debugKeySentinelOrPointerEventSentinel = 48;
@@ -1243,11 +1243,11 @@ final class GameplaySession {
                 cd.selectThemeRenderAssets((byte) 108);
               }
               if (ki.currentKeyboardEventCode != 39) {
-                continue L60;
+                continue;
               }
               this.showSessionCounters = true;
               if (clientControlFlowGuard == 0) {
-                continue L60;
+                continue;
               }
             }
             debugKeyCodeOrPointerEventComplement = ~bi.pointerPressButtonSnapshot;
@@ -1329,48 +1329,46 @@ final class GameplaySession {
         if (this.tutorialMode) {
           return;
         }
-        {
-          L0: {
-            this.score = this.score + points;
-            if (this.score > 9999999) {
-              cappedScoreText = (CharSequence) ((Object) Integer.toString(9999999));
-              td.writeTextAtOffset(cappedScoreText, this.scoreText, 0, 47);
-              if (controlFlowGuard == 0) {
-                break L0;
-              }
+        L0: {
+          this.score = this.score + points;
+          if (this.score > 9999999) {
+            cappedScoreText = (CharSequence) ((Object) Integer.toString(9999999));
+            td.writeTextAtOffset(cappedScoreText, this.scoreText, 0, 47);
+            if (controlFlowGuard == 0) {
+              break L0;
             }
-            scoreValueText = (CharSequence) ((Object) Integer.toString(this.score));
-            td.writeTextAtOffset(scoreValueText, this.scoreText, 0, 69);
           }
-          pointsForCounters = points;
-          if (methodGuard != 127) {
-            this.renderProgressHud(-17);
-          }
-          L3: {
-            counterSplitMode = kd.field_c % 3;
-            if (counterSplitMode != 0) {
-              if (counterSplitMode == 1) {
-                ml.field_r = ml.field_r - pointsForCounters;
-                if (controlFlowGuard == 0) {
-                  break L3;
-                }
-              }
-              oneThirdPoints = pointsForCounters / 3;
-              oa.field_a = oa.field_a + oneThirdPoints;
-              ml.field_r = ml.field_r - (pointsForCounters - oneThirdPoints);
+          scoreValueText = (CharSequence) ((Object) Integer.toString(this.score));
+          td.writeTextAtOffset(scoreValueText, this.scoreText, 0, 69);
+        }
+        pointsForCounters = points;
+        if (methodGuard != 127) {
+          this.renderProgressHud(-17);
+        }
+        L3: {
+          counterSplitMode = kd.field_c % 3;
+          if (counterSplitMode != 0) {
+            if (counterSplitMode == 1) {
+              ml.field_r = ml.field_r - pointsForCounters;
               if (controlFlowGuard == 0) {
                 break L3;
               }
             }
-            oa.field_a = oa.field_a + pointsForCounters;
-          }
-          if (da.a(0, -117)) {
-            if (this.score >= 7000) {
-              ra.a(239, -120, 16);
+            oneThirdPoints = pointsForCounters / 3;
+            oa.field_a = oa.field_a + oneThirdPoints;
+            ml.field_r = ml.field_r - (pointsForCounters - oneThirdPoints);
+            if (controlFlowGuard == 0) {
+              break L3;
             }
           }
-          return;
+          oa.field_a = oa.field_a + pointsForCounters;
         }
+        if (da.a(0, -117)) {
+          if (this.score >= 7000) {
+            ra.a(239, -120, 16);
+          }
+        }
+        return;
     }
 
     public static void i(int param0) {
@@ -1509,7 +1507,7 @@ final class GameplaySession {
             if (this.preserveScoreOnTransition) {
               precedingThemeId = 0;
               themeIndexThenId = 0;
-              L5: while (true) {
+              while (true) {
                 L6: {
                   L7: {
                     if (7 > themeIndexThenId) {
@@ -1532,7 +1530,7 @@ final class GameplaySession {
                       }
                       themeIndexThenId++;
                       if (clientControlFlowGuard == 0) {
-                        continue L5;
+                        continue;
                       }
                     }
                   }
@@ -1734,34 +1732,32 @@ final class GameplaySession {
                       if (controlFlowGuard != 0) {
                         break L1;
                       }
-                      {
-                        spriteRow = stackIn_23_0;
-                        L7: while (vf.spriteScratchRaster.height > spriteRow) {
-                          stackIn_11_0 = 0;
-                          stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
-                          if (controlFlowGuard != 0) {
-                            continue L5;
-                          }
-                          if (stackIn_11_0 != stackIn_11_1) {
-                            pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
-                            pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
-                            pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
-                            if (pixelRadiusSquared > maxRadiusSquared) {
-                              maxRadiusSquared = pixelRadiusSquared;
-                            }
-                          }
-                          spriteRow++;
-                          if (controlFlowGuard == 0) {
-                            continue L7;
-                          }
-                          break;
+                      spriteRow = stackIn_23_0;
+                      while (vf.spriteScratchRaster.height > spriteRow) {
+                        stackIn_11_0 = 0;
+                        stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
+                        if (controlFlowGuard != 0) {
+                          continue L5;
                         }
-                        spriteColumn++;
+                        if (stackIn_11_0 != stackIn_11_1) {
+                          pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
+                          pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
+                          pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
+                          if (pixelRadiusSquared > maxRadiusSquared) {
+                            maxRadiusSquared = pixelRadiusSquared;
+                          }
+                        }
+                        spriteRow++;
                         if (controlFlowGuard == 0) {
-                          continue L4;
+                          continue;
                         }
-                        break L6;
+                        break;
                       }
+                      spriteColumn++;
+                      if (controlFlowGuard == 0) {
+                        continue L4;
+                      }
+                      break L6;
                     }
                   }
                   this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));

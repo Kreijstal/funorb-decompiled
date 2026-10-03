@@ -42,21 +42,19 @@ final class ig {
         if (gk.field_a[param3] > gk.field_a[param1]) {
           return false;
         }
-        {
-          var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
-          var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
-          var6 = 76 % ((-38 - param2) / 45);
-          if (var4 < var5) {
-            return true;
-          }
-          if (var4 > var5) {
-            return false;
-          }
-          if (param3 >= param1) {
-            return false;
-          }
+        var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
+        var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
+        var6 = 76 % ((-38 - param2) / 45);
+        if (var4 < var5) {
           return true;
         }
+        if (var4 > var5) {
+          return false;
+        }
+        if (param3 >= param1) {
+          return false;
+        }
+        return true;
     }
 
     final static sl a(String param0, int param1, boolean param2) {

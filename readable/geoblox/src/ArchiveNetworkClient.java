@@ -35,18 +35,16 @@ abstract class ArchiveNetworkClient {
           if (param0 > -99) {
             return;
           }
-          {
-            var1 = fj.field_q;
-            L0: while (cf.c((byte) -114)) {
-              var1.writeCipherByte(8, (byte) -71);
-              fieldTemp$0 = var1.position + 1;
-              var1.position = var1.position + 1;
-              var2 = fieldTemp$0;
-              pf.a(46, var1);
-              fj.field_q.backpatchLengthByte(11700, var1.position - var2);
-            }
-            return;
+          var1 = fj.field_q;
+          while (cf.c((byte) -114)) {
+            var1.writeCipherByte(8, (byte) -71);
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
+            var2 = fieldTemp$0;
+            pf.a(46, var1);
+            fj.field_q.backpatchLengthByte(11700, var1.position - var2);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

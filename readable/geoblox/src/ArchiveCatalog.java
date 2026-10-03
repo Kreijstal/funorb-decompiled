@@ -84,20 +84,18 @@ final class ArchiveCatalog {
                 cachedSourceBeforeReturn = this.archiveSources[archiveId];
                 return cachedSourceBeforeReturn;
               }
-              {
-                this.catalogBuffer.position = 6 + 72 * archiveId;
-                expectedIndexCrc32 = this.catalogBuffer.readIntBE((byte) -108);
-                expectedIndexRevision = this.catalogBuffer.readIntBE((byte) -55);
-                expectedIndexWhirlpoolDigest = new byte[64];
-                if (methodGuard != -9) {
-                  this.catalogRequest = (NetworkArchiveRequest) null;
-                }
-                this.catalogBuffer.readBytes(29915, 64, expectedIndexWhirlpoolDigest, 0);
-                source = new CachedArchiveSource(archiveId, groupDiskCache, indexDiskCache, this.networkClient, this.diskWorker, expectedIndexCrc32, expectedIndexWhirlpoolDigest, expectedIndexRevision, sweepCompletedRequests);
-                this.archiveSources[archiveId] = source;
-                createdSourceBeforeReturn = (CachedArchiveSource) (source);
-                return createdSourceBeforeReturn;
+              this.catalogBuffer.position = 6 + 72 * archiveId;
+              expectedIndexCrc32 = this.catalogBuffer.readIntBE((byte) -108);
+              expectedIndexRevision = this.catalogBuffer.readIntBE((byte) -55);
+              expectedIndexWhirlpoolDigest = new byte[64];
+              if (methodGuard != -9) {
+                this.catalogRequest = (NetworkArchiveRequest) null;
               }
+              this.catalogBuffer.readBytes(29915, 64, expectedIndexWhirlpoolDigest, 0);
+              source = new CachedArchiveSource(archiveId, groupDiskCache, indexDiskCache, this.networkClient, this.diskWorker, expectedIndexCrc32, expectedIndexWhirlpoolDigest, expectedIndexRevision, sweepCompletedRequests);
+              this.archiveSources[archiveId] = source;
+              createdSourceBeforeReturn = (CachedArchiveSource) (source);
+              return createdSourceBeforeReturn;
             }
           }
           throw new RuntimeException();
@@ -129,18 +127,18 @@ final class ArchiveCatalog {
         if (null == this.archiveSources) {
           return;
         }
-        L0: for (archiveId = 0; this.archiveSources.length > archiveId; archiveId++) {
+        for (archiveId = 0; this.archiveSources.length > archiveId; archiveId++) {
           if (this.archiveSources[archiveId] == null) {
-            continue L0;
+            continue;
           }
           this.archiveSources[archiveId].processRequestedGroups(6924);
         }
         if (methodGuard != -65) {
           ArchiveCatalog.a('', 15);
         }
-        L2: for (archiveId = 0; archiveId < this.archiveSources.length; archiveId++) {
+        for (archiveId = 0; archiveId < this.archiveSources.length; archiveId++) {
           if (null == this.archiveSources[archiveId]) {
-            continue L2;
+            continue;
           }
           sourceBeforeBackgroundTick = this.archiveSources[archiveId];
           ((CachedArchiveSource) (Object) sourceBeforeBackgroundTick).advanceBackgroundLoading((byte) -38);
@@ -197,17 +195,15 @@ final class ArchiveCatalog {
         if (verificationBytes.length != 65) {
           throw new RuntimeException();
         }
-        {
-          computedDigest = SpriteState.computeWhirlpoolDigest(-encodedVerificationBytes.length + catalogBuffer.position - 5, 5, catalogBuffer.bytes, 8);
-          for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
-            if (computedDigest[digestByteIndex] != verificationBytes[1 + digestByteIndex]) {
-              throw new RuntimeException();
-            }
+        computedDigest = SpriteState.computeWhirlpoolDigest(-encodedVerificationBytes.length + catalogBuffer.position - 5, 5, catalogBuffer.bytes, 8);
+        for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
+          if (computedDigest[digestByteIndex] != verificationBytes[1 + digestByteIndex]) {
+            throw new RuntimeException();
           }
-          this.catalogBuffer = catalogBuffer;
-          this.archiveSources = new CachedArchiveSource[archiveCount];
-          return true;
         }
+        this.catalogBuffer = catalogBuffer;
+        this.archiveSources = new CachedArchiveSource[archiveCount];
+        return true;
     }
 
     private ArchiveCatalog(ArchiveNetworkClient networkClient, DiskCacheWorker diskWorker, java.math.BigInteger verificationExponent, java.math.BigInteger verificationModulus) {

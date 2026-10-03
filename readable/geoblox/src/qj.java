@@ -55,32 +55,30 @@ final class qj {
             var7 = var5 - 1;
             if (0 != var7) {
               var8_int = 0;
-              L2: while (true) {
+              while (true) {
                 var8_int = param0.indexOf((int) param2, var8_int);
                 if (var8_int < 0) {
                   break L1;
                 }
                 var6 = var6 + var7;
                 var8_int++;
-                continue L2;
+                continue;
               }
             }
           }
           var8 = new StringBuilder(var6);
           var9 = 0;
-          L3: while (true) {
+          while (true) {
             var10 = param0.indexOf((int) param2, var9);
             if (var10 < 0) {
               discarded$2 = var8.append(param0.substring(var9));
               stackIn_13_0 = var8.toString();
               return stackIn_13_0;
             }
-            {
-              discarded$0 = var8.append(param0.substring(var9, var10));
-              var9 = 1 + var10;
-              discarded$1 = var8.append(param1);
-              continue L3;
-            }
+            discarded$0 = var8.append(param0.substring(var9, var10));
+            var9 = 1 + var10;
+            discarded$1 = var8.append(param1);
+            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

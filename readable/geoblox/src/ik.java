@@ -44,7 +44,7 @@ final class ik {
           if (param4 != -1540604944) {
             waitingForFontsText = (String) null;
           }
-          L3: while (var7 < var6) {
+          while (var7 < var6) {
             var8 = 152 + 48 * var7 / param1;
             var9 = var8 << 8 | var8 << 16 | var8;
             SoftwareRasterizer.framebuffer[param0 + SoftwareRasterizer.stride * (var7 + param2)] = var9;

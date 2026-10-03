@@ -52,7 +52,7 @@ final class kj extends ia {
           L0: {
             if (this.field_C.f()) {
               var4_int = this.field_C.field_d * this.field_T / AudioOutput.sampleRateHz;
-              L1: while (true) {
+              while (true) {
                 var5 = (long)param2 * (long)var4_int + this.field_x;
                 if (this.field_A - var5 >= 0L) {
                   this.field_x = var5;
@@ -67,7 +67,7 @@ final class kj extends ia {
                 if (!this.field_C.f()) {
                   break L0;
                 }
-                continue L1;
+                continue;
               }
             }
           }
@@ -313,10 +313,10 @@ final class kj extends ia {
               } else {
                 param3.field_o = param3.field_o + 128;
               }
-              L9: while (param3.field_k < -2 + var7.field_f.length) {
+              while (param3.field_k < -2 + var7.field_f.length) {
                 if ((65280 & var7.field_f[param3.field_k + 2] << 8) < param3.field_o) {
                   param3.field_k = param3.field_k + 2;
-                  continue L9;
+                  continue;
                 }
                 break;
               }
@@ -344,10 +344,10 @@ final class kj extends ia {
                   } else {
                     param3.field_y = param3.field_y + 128;
                   }
-                  L14: while (-2 + var7.field_e.length > param3.field_q) {
+                  while (-2 + var7.field_e.length > param3.field_q) {
                     if (param3.field_y > (var7.field_e[param3.field_q + 2] & 255) << 8) {
                       param3.field_q = param3.field_q + 2;
-                      continue L14;
+                      continue;
                     }
                     break;
                   }
@@ -445,7 +445,7 @@ final class kj extends ia {
             var7 = new int[]{param1};
           }
           var8 = (pj) ((Object) param3.field_g.a((byte) 125));
-          L1: while (var8 != null) {
+          while (var8 != null) {
             var9 = (int)var8.field_a;
             var10 = (vl) ((Object) this.field_q.a((long)var9, (byte) -91));
             if (var10 == null) {
@@ -637,168 +637,166 @@ final class kj extends ia {
         if (param1 != 38) {
           return;
         }
-        {
-          var3 = 240 & param0;
-          if (var3 == 128) {
-            var4 = param0 & 15;
-            var5 = (32542 & param0) >> 8;
-            var6 = (param0 & 8361066) >> 16;
-            this.b(23327, var5, var6, var4);
-            return;
-          }
-          if (var3 == 144) {
-            var4 = param0 & 15;
-            var5 = (32525 & param0) >> 8;
-            var6 = 127 & param0 >> 16;
-            if (var6 > 0) {
-              this.c(-1, var4, var6, var5);
-            } else {
-              this.b(23327, var5, 64, var4);
-            }
-            return;
-          }
-          if (var3 == 160) {
-            var4 = 15 & param0;
-            var5 = param0 >> 8 & 127;
-            var6 = (8370933 & param0) >> 16;
-            this.a(-40, var6, var5, var4);
-            return;
-          }
-          if (var3 != 176) {
-            if (192 == var3) {
-              var4 = param0 & 15;
-              var5 = (32632 & param0) >> 8;
-              this.b(var4, param1 - 167, var5 + this.field_K[var4]);
-              return;
-            }
-            if (var3 == 208) {
-              var4 = param0 & 15;
-              var5 = (32669 & param0) >> 8;
-              this.d(var5, param1 ^ -2858, var4);
-              return;
-            }
-            if (var3 == 224) {
-              var4 = param0 & 15;
-              var5 = (param0 >> 9 & 16256) + ((32673 & param0) >> 8);
-              this.c(-108, var5, var4);
-              return;
-            }
-            var3 = 255 & param0;
-            if (255 != var3) {
-              return;
-            }
-            this.a(true, param1 ^ 2097113);
-            return;
-          }
-          var4 = 15 & param0;
-          var5 = (param0 & 32577) >> 8;
-          var6 = param0 >> 16 & 127;
-          if (0 == var5) {
-            this.field_K[var4] = (var6 << 14) + cd.andInt(this.field_K[var4], -2080769);
-          }
-          if (var5 == 32) {
-            this.field_K[var4] = (var6 << 7) + cd.andInt(this.field_K[var4], -16257);
-          }
-          if (var5 == 1) {
-            this.field_s[var4] = (var6 << 7) + cd.andInt(this.field_s[var4], -16257);
-          }
-          if (33 == var5) {
-            this.field_s[var4] = var6 + cd.andInt(-128, this.field_s[var4]);
-          }
-          if (var5 == 5) {
-            this.field_M[var4] = cd.andInt(-16257, this.field_M[var4]) + (var6 << 7);
-          }
-          if (var5 == 37) {
-            this.field_M[var4] = cd.andInt(-128, this.field_M[var4]) + var6;
-          }
-          if (var5 == 7) {
-            this.field_p[var4] = cd.andInt(this.field_p[var4], -16257) + (var6 << 7);
-          }
-          if (var5 == 39) {
-            this.field_p[var4] = cd.andInt(-128, this.field_p[var4]) + var6;
-          }
-          if (var5 == 10) {
-            this.field_z[var4] = cd.andInt(-16257, this.field_z[var4]) + (var6 << 7);
-          }
-          if (var5 == 42) {
-            this.field_z[var4] = var6 + cd.andInt(-128, this.field_z[var4]);
-          }
-          if (var5 == 11) {
-            this.field_r[var4] = (var6 << 7) + cd.andInt(-16257, this.field_r[var4]);
-          }
-          if (var5 == 43) {
-            this.field_r[var4] = cd.andInt(-128, this.field_r[var4]) + var6;
-          }
-          if (var5 == 64) {
-            if (var6 < 64) {
-              this.field_m[var4] = cd.andInt(this.field_m[var4], -2);
-            } else {
-              this.field_m[var4] = lb.orInt(this.field_m[var4], 1);
-            }
-          }
-          if (var5 == 65) {
-            if (64 <= var6) {
-              this.field_m[var4] = lb.orInt(this.field_m[var4], 2);
-            } else {
-              this.a((byte) 39, var4);
-              this.field_m[var4] = cd.andInt(this.field_m[var4], -3);
-            }
-          }
-          if (var5 == 99) {
-            this.field_w[var4] = cd.andInt(this.field_w[var4], 127) + (var6 << 7);
-          }
-          if (var5 == 98) {
-            this.field_w[var4] = var6 + cd.andInt(16256, this.field_w[var4]);
-          }
-          if (101 == var5) {
-            this.field_w[var4] = (var6 << 7) + (cd.andInt(this.field_w[var4], 127) + 16384);
-          }
-          if (var5 == 100) {
-            this.field_w[var4] = 16384 + (cd.andInt(16256, this.field_w[var4]) + var6);
-          }
-          if (120 == var5) {
-            this.b(100, var4);
-          }
-          if (var5 == 121) {
-            this.b((byte) -72, var4);
-          }
-          if (var5 == 123) {
-            this.c(var4, param1 ^ 15421);
-          }
-          if (var5 == 6) {
-            var7 = this.field_w[var4];
-            if (16384 == var7) {
-              this.field_v[var4] = cd.andInt(this.field_v[var4], -16257) + (var6 << 7);
-            }
-          }
-          if (var5 == 38) {
-            var7 = this.field_w[var4];
-            if (var7 == 16384) {
-              this.field_v[var4] = cd.andInt(this.field_v[var4], -128) + var6;
-            }
-          }
-          if (16 == var5) {
-            this.field_u[var4] = cd.andInt(-16257, this.field_u[var4]) + (var6 << 7);
-          }
-          if (48 == var5) {
-            this.field_u[var4] = var6 + cd.andInt(this.field_u[var4], -128);
-          }
-          if (var5 == 81) {
-            if (var6 >= 64) {
-              this.field_m[var4] = lb.orInt(this.field_m[var4], 4);
-            } else {
-              this.a(var4, (byte) 67);
-              this.field_m[var4] = cd.andInt(this.field_m[var4], -5);
-            }
-          }
-          if (var5 == 17) {
-            this.f(-118, (var6 << 7) + (this.field_Q[var4] & -16257), var4);
-          }
-          if (var5 == 49) {
-            this.f(-102, (-128 & this.field_Q[var4]) + var6, var4);
+        var3 = 240 & param0;
+        if (var3 == 128) {
+          var4 = param0 & 15;
+          var5 = (32542 & param0) >> 8;
+          var6 = (param0 & 8361066) >> 16;
+          this.b(23327, var5, var6, var4);
+          return;
+        }
+        if (var3 == 144) {
+          var4 = param0 & 15;
+          var5 = (32525 & param0) >> 8;
+          var6 = 127 & param0 >> 16;
+          if (var6 > 0) {
+            this.c(-1, var4, var6, var5);
+          } else {
+            this.b(23327, var5, 64, var4);
           }
           return;
         }
+        if (var3 == 160) {
+          var4 = 15 & param0;
+          var5 = param0 >> 8 & 127;
+          var6 = (8370933 & param0) >> 16;
+          this.a(-40, var6, var5, var4);
+          return;
+        }
+        if (var3 != 176) {
+          if (192 == var3) {
+            var4 = param0 & 15;
+            var5 = (32632 & param0) >> 8;
+            this.b(var4, param1 - 167, var5 + this.field_K[var4]);
+            return;
+          }
+          if (var3 == 208) {
+            var4 = param0 & 15;
+            var5 = (32669 & param0) >> 8;
+            this.d(var5, param1 ^ -2858, var4);
+            return;
+          }
+          if (var3 == 224) {
+            var4 = param0 & 15;
+            var5 = (param0 >> 9 & 16256) + ((32673 & param0) >> 8);
+            this.c(-108, var5, var4);
+            return;
+          }
+          var3 = 255 & param0;
+          if (255 != var3) {
+            return;
+          }
+          this.a(true, param1 ^ 2097113);
+          return;
+        }
+        var4 = 15 & param0;
+        var5 = (param0 & 32577) >> 8;
+        var6 = param0 >> 16 & 127;
+        if (0 == var5) {
+          this.field_K[var4] = (var6 << 14) + cd.andInt(this.field_K[var4], -2080769);
+        }
+        if (var5 == 32) {
+          this.field_K[var4] = (var6 << 7) + cd.andInt(this.field_K[var4], -16257);
+        }
+        if (var5 == 1) {
+          this.field_s[var4] = (var6 << 7) + cd.andInt(this.field_s[var4], -16257);
+        }
+        if (33 == var5) {
+          this.field_s[var4] = var6 + cd.andInt(-128, this.field_s[var4]);
+        }
+        if (var5 == 5) {
+          this.field_M[var4] = cd.andInt(-16257, this.field_M[var4]) + (var6 << 7);
+        }
+        if (var5 == 37) {
+          this.field_M[var4] = cd.andInt(-128, this.field_M[var4]) + var6;
+        }
+        if (var5 == 7) {
+          this.field_p[var4] = cd.andInt(this.field_p[var4], -16257) + (var6 << 7);
+        }
+        if (var5 == 39) {
+          this.field_p[var4] = cd.andInt(-128, this.field_p[var4]) + var6;
+        }
+        if (var5 == 10) {
+          this.field_z[var4] = cd.andInt(-16257, this.field_z[var4]) + (var6 << 7);
+        }
+        if (var5 == 42) {
+          this.field_z[var4] = var6 + cd.andInt(-128, this.field_z[var4]);
+        }
+        if (var5 == 11) {
+          this.field_r[var4] = (var6 << 7) + cd.andInt(-16257, this.field_r[var4]);
+        }
+        if (var5 == 43) {
+          this.field_r[var4] = cd.andInt(-128, this.field_r[var4]) + var6;
+        }
+        if (var5 == 64) {
+          if (var6 < 64) {
+            this.field_m[var4] = cd.andInt(this.field_m[var4], -2);
+          } else {
+            this.field_m[var4] = lb.orInt(this.field_m[var4], 1);
+          }
+        }
+        if (var5 == 65) {
+          if (64 <= var6) {
+            this.field_m[var4] = lb.orInt(this.field_m[var4], 2);
+          } else {
+            this.a((byte) 39, var4);
+            this.field_m[var4] = cd.andInt(this.field_m[var4], -3);
+          }
+        }
+        if (var5 == 99) {
+          this.field_w[var4] = cd.andInt(this.field_w[var4], 127) + (var6 << 7);
+        }
+        if (var5 == 98) {
+          this.field_w[var4] = var6 + cd.andInt(16256, this.field_w[var4]);
+        }
+        if (101 == var5) {
+          this.field_w[var4] = (var6 << 7) + (cd.andInt(this.field_w[var4], 127) + 16384);
+        }
+        if (var5 == 100) {
+          this.field_w[var4] = 16384 + (cd.andInt(16256, this.field_w[var4]) + var6);
+        }
+        if (120 == var5) {
+          this.b(100, var4);
+        }
+        if (var5 == 121) {
+          this.b((byte) -72, var4);
+        }
+        if (var5 == 123) {
+          this.c(var4, param1 ^ 15421);
+        }
+        if (var5 == 6) {
+          var7 = this.field_w[var4];
+          if (16384 == var7) {
+            this.field_v[var4] = cd.andInt(this.field_v[var4], -16257) + (var6 << 7);
+          }
+        }
+        if (var5 == 38) {
+          var7 = this.field_w[var4];
+          if (var7 == 16384) {
+            this.field_v[var4] = cd.andInt(this.field_v[var4], -128) + var6;
+          }
+        }
+        if (16 == var5) {
+          this.field_u[var4] = cd.andInt(-16257, this.field_u[var4]) + (var6 << 7);
+        }
+        if (48 == var5) {
+          this.field_u[var4] = var6 + cd.andInt(this.field_u[var4], -128);
+        }
+        if (var5 == 81) {
+          if (var6 >= 64) {
+            this.field_m[var4] = lb.orInt(this.field_m[var4], 4);
+          } else {
+            this.a(var4, (byte) 67);
+            this.field_m[var4] = cd.andInt(this.field_m[var4], -5);
+          }
+        }
+        if (var5 == 17) {
+          this.f(-118, (var6 << 7) + (this.field_Q[var4] & -16257), var4);
+        }
+        if (var5 == 49) {
+          this.f(-102, (-128 & this.field_Q[var4]) + var6, var4);
+        }
+        return;
     }
 
     private final synchronized void a(byte param0, int param1, int param2) {
@@ -854,7 +852,7 @@ final class kj extends ia {
             }
             return;
           }
-          L3: while (true) {
+          while (true) {
             L4: {
               if (this.field_C.field_a[var2] == var4) {
                 this.field_C.a(var2);
@@ -865,7 +863,7 @@ final class kj extends ia {
                   }
                   this.field_C.f(var2);
                   this.field_C.b(var2);
-                  continue L3;
+                  continue;
                 }
                 this.field_C.d();
                 this.field_C.b(var2);
@@ -920,7 +918,7 @@ final class kj extends ia {
         L1: {
           if ((this.field_m[param3] & 2) != 0) {
             var6 = (pc) ((Object) this.field_I.field_l.firstForIteration(param0 ^ 23327));
-            L2: while (var6 != null) {
+            while (var6 != null) {
               if (var7.field_t == var6.field_t) {
                 if (0 > var6.field_y) {
                   if (var7 != var6) {
@@ -940,7 +938,7 @@ final class kj extends ia {
     private final void b(int param0, int param1) {
         pc var3;
         var3 = (pc) ((Object) this.field_I.field_l.firstForIteration(param0 - 100));
-        L0: while (var3 != null) {
+        while (var3 != null) {
           L2: {
             if (param1 >= 0) {
               if (param1 != var3.field_t) {
@@ -1042,7 +1040,7 @@ final class kj extends ia {
         L0: {
           if (this.field_C.f()) {
             var2 = this.field_T * this.field_C.field_d / AudioOutput.sampleRateHz;
-            L1: while (true) {
+            while (true) {
               var3 = this.field_x + (long)param0 * (long)var2;
               if (-var3 + this.field_A >= 0L) {
                 this.field_x = var3;
@@ -1054,7 +1052,7 @@ final class kj extends ia {
               this.field_I.b(var5);
               this.a((byte) -42);
               if (this.field_C.f()) {
-                continue L1;
+                continue;
               }
               break L0;
             }
@@ -1125,7 +1123,7 @@ final class kj extends ia {
           this.b(23327, param3, 64, param1);
           if (0 != (2 & this.field_m[param1])) {
             var5 = (pc) ((Object) this.field_I.field_l.lastForIteration(false));
-            L1: while (var5 != null) {
+            while (var5 != null) {
               if (param1 == var5.field_t) {
                 if (var5.field_y < 0) {
                   this.field_j[param1][var5.field_D] = null;
@@ -1148,60 +1146,56 @@ final class kj extends ia {
         if (var10 == null) {
           return;
         }
-        {
-          var6 = var9.field_k[param3];
-          if (var6 == null) {
-            return;
-          }
-          {
-            var7 = new pc();
-            var7.field_t = param1;
-            var7.field_z = var10;
-            var7.field_i = var6;
-            var7.field_x = var9.field_f[param3];
-            var7.field_r = var9.field_i[param3];
-            var7.field_D = param3;
-            var7.field_w = var9.field_o[param3] * var10.field_g * (param2 * param2) + 1024 >> 11;
-            var7.field_h = 255 & var9.field_m[param3];
-            var7.field_E = (param3 << 8) - (var9.field_j[param3] & 32767);
-            var7.field_q = 0;
-            var7.field_l = 0;
-            var7.field_o = 0;
-            var7.field_k = 0;
-            var7.field_y = -1;
-            if (param0 == ~this.field_u[param1]) {
-              var7.field_u = PcmSampleStream.a(var6, this.a(92, var7), this.a((byte) 117, var7), this.a(var7, 761736646));
-            } else {
-              var7.field_u = PcmSampleStream.a(var6, this.a(83, var7), 0, this.a(var7, 761736646));
-              stackIn_15_1 = (pc) (var7);
-              stackIn_15_2 = -70;
-              if (0 <= var9.field_j[param3]) {
-                stackIn_16_0 = this;
-                stackIn_16_3 = false;
-              } else {
-                stackIn_16_0 = this;
-                stackIn_16_3 = true;
-              }
-              this.a(stackIn_15_1, (byte) stackIn_15_2, stackIn_16_3);
-            }
-            if (var9.field_j[param3] < 0) {
-              var7.field_u.g(-1);
-            }
-            if (0 <= var7.field_r) {
-              var8 = this.field_D[param1][var7.field_r];
-              if (var8 != null) {
-                if (var8.field_y < 0) {
-                  this.field_j[param1][var8.field_D] = null;
-                  var8.field_y = 0;
-                }
-              }
-              this.field_D[param1][var7.field_r] = var7;
-            }
-            this.field_I.field_l.addLast(-70, var7);
-            this.field_j[param1][param3] = var7;
-            return;
-          }
+        var6 = var9.field_k[param3];
+        if (var6 == null) {
+          return;
         }
+        var7 = new pc();
+        var7.field_t = param1;
+        var7.field_z = var10;
+        var7.field_i = var6;
+        var7.field_x = var9.field_f[param3];
+        var7.field_r = var9.field_i[param3];
+        var7.field_D = param3;
+        var7.field_w = var9.field_o[param3] * var10.field_g * (param2 * param2) + 1024 >> 11;
+        var7.field_h = 255 & var9.field_m[param3];
+        var7.field_E = (param3 << 8) - (var9.field_j[param3] & 32767);
+        var7.field_q = 0;
+        var7.field_l = 0;
+        var7.field_o = 0;
+        var7.field_k = 0;
+        var7.field_y = -1;
+        if (param0 == ~this.field_u[param1]) {
+          var7.field_u = PcmSampleStream.a(var6, this.a(92, var7), this.a((byte) 117, var7), this.a(var7, 761736646));
+        } else {
+          var7.field_u = PcmSampleStream.a(var6, this.a(83, var7), 0, this.a(var7, 761736646));
+          stackIn_15_1 = (pc) (var7);
+          stackIn_15_2 = -70;
+          if (0 <= var9.field_j[param3]) {
+            stackIn_16_0 = this;
+            stackIn_16_3 = false;
+          } else {
+            stackIn_16_0 = this;
+            stackIn_16_3 = true;
+          }
+          this.a(stackIn_15_1, (byte) stackIn_15_2, stackIn_16_3);
+        }
+        if (var9.field_j[param3] < 0) {
+          var7.field_u.g(-1);
+        }
+        if (0 <= var7.field_r) {
+          var8 = this.field_D[param1][var7.field_r];
+          if (var8 != null) {
+            if (var8.field_y < 0) {
+              this.field_j[param1][var8.field_D] = null;
+              var8.field_y = 0;
+            }
+          }
+          this.field_D[param1][var7.field_r] = var7;
+        }
+        this.field_I.field_l.addLast(-70, var7);
+        this.field_j[param1][param3] = var7;
+        return;
     }
 
     private final void c(int param0, int param1, int param2) {

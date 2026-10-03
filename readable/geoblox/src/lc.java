@@ -21,7 +21,7 @@ final class lc {
         clientControlFlowGuard = Geoblox.field_C;
         try {
           queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-          L0: while (true) {
+          while (true) {
             L1: {
               if (queuedEntityThenPooledEntity != null) {
                 queuedEntityThenPooledEntity.advanceEntityAnimation(true);
@@ -30,7 +30,7 @@ final class lc {
                   break L1;
                 }
                 if (clientControlFlowGuard == 0) {
-                  continue L0;
+                  continue;
                 }
               }
               if (methodGuard != 255) {
@@ -172,70 +172,68 @@ final class lc {
                   if (clientControlFlowGuard != 0) {
                     break L2;
                   }
-                  {
-                    negativeColumnCounter = -destinationWidth;
-                    L4: while (true) {
-                      L5: {
-                        if (negativeColumnCounter < 0) {
-                          sampleColor = overviewPixels[sourceRowOffset + (sampleXQ16 >> 16)];
-                          sampleXQ16 = sampleXQ16 + sampleXStepQ16;
-                          sampleColorOrRowStartXQ16 = sampleColor;
-                          if (clientControlFlowGuard != 0) {
-                            break L5;
-                          }
-                          L7: {
-                            if (sampleColorOrRowStartXQ16 == 0) {
-                              destinationIndex++;
-                              if (clientControlFlowGuard == 0) {
-                                break L7;
-                              }
-                            }
-                            destinationRgb = destinationPixels[destinationIndex];
-                            if (destinationRgb == 0) {
-                              destinationIndex++;
-                              if (clientControlFlowGuard == 0) {
-                                break L7;
-                              }
-                            }
-                            doubledDestinationRed = 510 & destinationRgb >> 15;
-                            destinationGreen = (destinationRgb & 65429) >> 8;
-                            destinationBlue = 255 & destinationRgb;
-                            weightedDestinationGrayOrTintedRgb = (destinationBlue + doubledDestinationRed) / 3 + destinationGreen >> 1;
-                            inverseSourceGrayWeight = -(((255 & sampleColor) + (sampleColor >> 8 & 255) + (sampleColor >> 16 & 255)) / 3) + 256;
-                            tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
-                            tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
-                            tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
-                            weightedDestinationGrayOrTintedRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
-                            weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgb) >> 16);
-                            weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgb >> 8) * inverseSourceGrayWeight;
-                            weightedTintBlue = (weightedDestinationGrayOrTintedRgb & 255) * inverseSourceGrayWeight;
-                            modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
-                            modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
-                            modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
-                            sourceGrayWeight = 256 - inverseSourceGrayWeight;
-                            modulatedRedThenWeighted = modulatedRedThenWeighted * sourceGrayWeight;
-                            modulatedGreenThenWeighted = modulatedGreenThenWeighted * sourceGrayWeight;
-                            modulatedBlueThenWeighted = modulatedBlueThenWeighted * sourceGrayWeight;
-                            destinationIndexBeforeIncrement = destinationIndex;
-                            destinationIndex++;
-                            destinationPixels[destinationIndexBeforeIncrement] = (weightedTintBlue + modulatedBlueThenWeighted >> 8) + ((modulatedGreenThenWeighted + weightedTintGreen >> 8 << 8) + (weightedTintRed + modulatedRedThenWeighted >> 8 << 16));
-                          }
-                          negativeColumnCounter++;
-                          if (clientControlFlowGuard == 0) {
-                            continue L4;
-                          }
+                  negativeColumnCounter = -destinationWidth;
+                  while (true) {
+                    L5: {
+                      if (negativeColumnCounter < 0) {
+                        sampleColor = overviewPixels[sourceRowOffset + (sampleXQ16 >> 16)];
+                        sampleXQ16 = sampleXQ16 + sampleXStepQ16;
+                        sampleColorOrRowStartXQ16 = sampleColor;
+                        if (clientControlFlowGuard != 0) {
+                          break L5;
                         }
-                        sampleYQ16 = sampleYQ16 + sampleYStepQ16;
-                        destinationIndex = destinationIndex + destinationRowSkip;
-                        sampleColorOrRowStartXQ16 = rowStartXQ16;
+                        L7: {
+                          if (sampleColorOrRowStartXQ16 == 0) {
+                            destinationIndex++;
+                            if (clientControlFlowGuard == 0) {
+                              break L7;
+                            }
+                          }
+                          destinationRgb = destinationPixels[destinationIndex];
+                          if (destinationRgb == 0) {
+                            destinationIndex++;
+                            if (clientControlFlowGuard == 0) {
+                              break L7;
+                            }
+                          }
+                          doubledDestinationRed = 510 & destinationRgb >> 15;
+                          destinationGreen = (destinationRgb & 65429) >> 8;
+                          destinationBlue = 255 & destinationRgb;
+                          weightedDestinationGrayOrTintedRgb = (destinationBlue + doubledDestinationRed) / 3 + destinationGreen >> 1;
+                          inverseSourceGrayWeight = -(((255 & sampleColor) + (sampleColor >> 8 & 255) + (sampleColor >> 16 & 255)) / 3) + 256;
+                          tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
+                          tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
+                          tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
+                          weightedDestinationGrayOrTintedRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
+                          weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgb) >> 16);
+                          weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgb >> 8) * inverseSourceGrayWeight;
+                          weightedTintBlue = (weightedDestinationGrayOrTintedRgb & 255) * inverseSourceGrayWeight;
+                          modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
+                          modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
+                          modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
+                          sourceGrayWeight = 256 - inverseSourceGrayWeight;
+                          modulatedRedThenWeighted = modulatedRedThenWeighted * sourceGrayWeight;
+                          modulatedGreenThenWeighted = modulatedGreenThenWeighted * sourceGrayWeight;
+                          modulatedBlueThenWeighted = modulatedBlueThenWeighted * sourceGrayWeight;
+                          destinationIndexBeforeIncrement = destinationIndex;
+                          destinationIndex++;
+                          destinationPixels[destinationIndexBeforeIncrement] = (weightedTintBlue + modulatedBlueThenWeighted >> 8) + ((modulatedGreenThenWeighted + weightedTintGreen >> 8 << 8) + (weightedTintRed + modulatedRedThenWeighted >> 8 << 16));
+                        }
+                        negativeColumnCounter++;
+                        if (clientControlFlowGuard == 0) {
+                          continue;
+                        }
                       }
-                      sampleXQ16 = sampleColorOrRowStartXQ16;
-                      negativeRowCounter++;
-                      if (clientControlFlowGuard == 0) {
-                        continue L1;
-                      }
-                      break L3;
+                      sampleYQ16 = sampleYQ16 + sampleYStepQ16;
+                      destinationIndex = destinationIndex + destinationRowSkip;
+                      sampleColorOrRowStartXQ16 = rowStartXQ16;
                     }
+                    sampleXQ16 = sampleColorOrRowStartXQ16;
+                    negativeRowCounter++;
+                    if (clientControlFlowGuard == 0) {
+                      continue L1;
+                    }
+                    break L3;
                   }
                 }
               }
@@ -376,75 +374,71 @@ final class lc {
               Bzip2DecoderState.a((byte) -119);
               return;
             }
-            {
-              vk.field_a = 1;
-              var3 = var1.readNullTerminatedText((byte) 122);
-              eg.field_l = ((String) (var3)).intern();
-              var4 = var1.readUnsignedByte((byte) 34);
-              pi.c(var4, param0 ^ -12742);
-              return;
+            vk.field_a = 1;
+            var3 = var1.readNullTerminatedText((byte) 122);
+            eg.field_l = ((String) (var3)).intern();
+            var4 = var1.readUnsignedByte((byte) 34);
+            pi.c(var4, param0 ^ -12742);
+            return;
+          }
+          if (ArchiveSource.field_a == null) {
+            ArchiveSource.field_a = new vg(128);
+            mg.field_g = 0;
+          }
+          var3 = var1.readNullTerminatedText((byte) 108);
+          if (((String) (var3)).equals("")) {
+            var3 = null;
+          }
+          var4_ref_String = var1.readNullTerminatedText((byte) 102);
+          var5_ref = var1.readNullTerminatedText((byte) 110);
+          var6_ref = jg.a((byte) -62, var4_ref_String);
+          if (null == var6_ref) {
+            var6_ref = jg.a((byte) -62, var5_ref);
+            if (null != var6_ref) {
+              ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
             }
           }
-          {
-            if (ArchiveSource.field_a == null) {
-              ArchiveSource.field_a = new vg(128);
-              mg.field_g = 0;
-            }
-            var3 = var1.readNullTerminatedText((byte) 108);
-            if (((String) (var3)).equals("")) {
-              var3 = null;
-            }
-            var4_ref_String = var1.readNullTerminatedText((byte) 102);
-            var5_ref = var1.readNullTerminatedText((byte) 110);
-            var6_ref = jg.a((byte) -62, var4_ref_String);
-            if (null == var6_ref) {
-              var6_ref = jg.a((byte) -62, var5_ref);
-              if (null != var6_ref) {
-                ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
-              }
-            }
-            if (null == var6_ref) {
-              var6_ref = new j();
-              ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
-              fieldTemp$1 = mg.field_g;
-              mg.field_g = mg.field_g + 1;
-              var6_ref.field_kb = fieldTemp$1;
-              hl.field_B.addLast(-59, var6_ref);
-            }
-            if (var3 != null) {
-              var3 = ((String) (var3)).intern();
-            }
-            var6_ref.field_hb = var4_ref_String;
-            var6_ref.field_mb = (String) (var3);
-            var6_ref.unlinkNode(false);
-            var7_ref = (j) ((Object) hl.field_B.firstForIteration(0));
-            L14: while (true) {
-              L15: {
-                if (null != var7_ref) {
-                  stackIn_61_0 = (j) (var6_ref);
-                  if (var8 != 0) {
-                    break L15;
-                  }
-                  if (ul.a(stackIn_61_0, var7_ref, (byte) 127)) {
-                    var7_ref = (j) ((Object) hl.field_B.nextForIteration(1));
-                    if (var8 == 0) {
-                      continue L14;
-                    }
-                  }
+          if (null == var6_ref) {
+            var6_ref = new j();
+            ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
+            fieldTemp$1 = mg.field_g;
+            mg.field_g = mg.field_g + 1;
+            var6_ref.field_kb = fieldTemp$1;
+            hl.field_B.addLast(-59, var6_ref);
+          }
+          if (var3 != null) {
+            var3 = ((String) (var3)).intern();
+          }
+          var6_ref.field_hb = var4_ref_String;
+          var6_ref.field_mb = (String) (var3);
+          var6_ref.unlinkNode(false);
+          var7_ref = (j) ((Object) hl.field_B.firstForIteration(0));
+          while (true) {
+            L15: {
+              if (null != var7_ref) {
+                stackIn_61_0 = (j) (var6_ref);
+                if (var8 != 0) {
+                  break L15;
                 }
-                stackIn_61_0 = (j) (var7_ref);
-              }
-              L17: {
-                if (stackIn_61_0 == null) {
-                  hl.field_B.addLast(-39, var6_ref);
+                if (ul.a(stackIn_61_0, var7_ref, (byte) 127)) {
+                  var7_ref = (j) ((Object) hl.field_B.nextForIteration(1));
                   if (var8 == 0) {
-                    break L17;
+                    continue;
                   }
                 }
-                PointerInputListener.a(var7_ref, 121, var6_ref);
               }
-              return;
+              stackIn_61_0 = (j) (var7_ref);
             }
+            L17: {
+              if (stackIn_61_0 == null) {
+                hl.field_B.addLast(-39, var6_ref);
+                if (var8 == 0) {
+                  break L17;
+                }
+              }
+              PointerInputListener.a(var7_ref, 121, var6_ref);
+            }
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -299,14 +299,14 @@ final class IntrusiveDeque {
         field_d = new al();
         field_e = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_b = new int[5];
-        L0: for (var0 = 0; var0 < field_b.length; var0++) {
+        for (var0 = 0; var0 < field_b.length; var0++) {
           if (var0 == 0) {
             field_b[var0] = (1 + var0) * 20 << 8;
           } else {
             field_b[var0] = (1 + var0) * 51 << 8;
           }
           if (var0 <= 2) {
-            continue L0;
+            continue;
           }
           field_b[var0] = lb.orInt(field_b[var0], (-2 + var0) * 22 << 16);
         }

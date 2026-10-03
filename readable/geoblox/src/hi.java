@@ -172,131 +172,129 @@ final class hi extends ee implements ta, pl {
           if (param3 != 6562) {
             return;
           }
-          {
-            var54 = new int[param5.field_m];
-            var49 = var54;
-            var41 = var49;
-            var8 = var41;
-            var64 = new int[param5.field_m];
-            var62 = ok.field_h;
-            var61 = oa.field_f;
-            var63 = gi.field_b;
-            for (var13 = 0; param5.field_m > var13; var13++) {
-              var14 = var61[var13] * param7 + param4 * var62[var13] + var63[var13] * param1 >> 8;
-              if (0 > var14) {
-                var14 = -var14;
-              }
-              if (var14 >= 0) {
-                if (128 <= var14) {
-                  stackIn_18_0 = 256;
-                } else {
-                  stackIn_18_0 = 128 + var14;
-                }
-              } else {
-                stackIn_18_0 = 128;
-              }
-              var14 = stackIn_18_0;
-              var15 = param0 * var63[var13] + (param2 * var62[var13] + param6 * var61[var13]) >> 8;
-              stackIn_20_0 = jf.field_b;
-              if (var15 < 0) {
-                stackIn_21_1 = -var15;
-              } else {
-                stackIn_21_1 = var15;
-              }
-              var15 = stackIn_20_0[stackIn_21_1];
-              var14 = var14 * (256 - var15) >>> 8;
-              var54[var13] = var14;
-              var64[var13] = var15;
+          var54 = new int[param5.field_m];
+          var49 = var54;
+          var41 = var49;
+          var8 = var41;
+          var64 = new int[param5.field_m];
+          var62 = ok.field_h;
+          var61 = oa.field_f;
+          var63 = gi.field_b;
+          for (var13 = 0; param5.field_m > var13; var13++) {
+            var14 = var61[var13] * param7 + param4 * var62[var13] + var63[var13] * param1 >> 8;
+            if (0 > var14) {
+              var14 = -var14;
             }
-            for (var13 = 0; var13 < ch.field_b; var13++) {
-              var14 = pj.field_i[var13];
-              var15 = param5.field_r[var14];
-              var16 = param5.field_B[var14];
-              var17 = param5.field_c[var14];
-              if (param5.field_P[var14] >= ok.field_h.length) {
-                stackIn_27_0 = -1;
+            if (var14 >= 0) {
+              if (128 <= var14) {
+                stackIn_18_0 = 256;
               } else {
-                stackIn_27_0 = param5.field_P[var14];
+                stackIn_18_0 = 128 + var14;
               }
-              var18 = stackIn_27_0;
-              if (ok.field_h.length > param5.field_u[var14]) {
-                stackIn_30_0 = param5.field_u[var14];
-              } else {
-                stackIn_30_0 = -1;
-              }
-              var19 = stackIn_30_0;
-              if (ok.field_h.length > param5.field_e[var14]) {
-                stackIn_33_0 = param5.field_e[var14];
-              } else {
-                stackIn_33_0 = -1;
-              }
-              L7: {
-                var20 = stackIn_33_0;
-                if (l.field_i != null) {
-                  if (param5.field_G != null) {
-                    if (param5.field_G.length > var14) {
-                      if (param5.field_G[var14] != -1) {
-                        if (l.field_i.length > param5.field_G[var14]) {
-                          stackIn_40_0 = l.field_i[param5.field_G[var14]];
-                          break L7;
-                        }
+            } else {
+              stackIn_18_0 = 128;
+            }
+            var14 = stackIn_18_0;
+            var15 = param0 * var63[var13] + (param2 * var62[var13] + param6 * var61[var13]) >> 8;
+            stackIn_20_0 = jf.field_b;
+            if (var15 < 0) {
+              stackIn_21_1 = -var15;
+            } else {
+              stackIn_21_1 = var15;
+            }
+            var15 = stackIn_20_0[stackIn_21_1];
+            var14 = var14 * (256 - var15) >>> 8;
+            var54[var13] = var14;
+            var64[var13] = var15;
+          }
+          for (var13 = 0; var13 < ch.field_b; var13++) {
+            var14 = pj.field_i[var13];
+            var15 = param5.field_r[var14];
+            var16 = param5.field_B[var14];
+            var17 = param5.field_c[var14];
+            if (param5.field_P[var14] >= ok.field_h.length) {
+              stackIn_27_0 = -1;
+            } else {
+              stackIn_27_0 = param5.field_P[var14];
+            }
+            var18 = stackIn_27_0;
+            if (ok.field_h.length > param5.field_u[var14]) {
+              stackIn_30_0 = param5.field_u[var14];
+            } else {
+              stackIn_30_0 = -1;
+            }
+            var19 = stackIn_30_0;
+            if (ok.field_h.length > param5.field_e[var14]) {
+              stackIn_33_0 = param5.field_e[var14];
+            } else {
+              stackIn_33_0 = -1;
+            }
+            L7: {
+              var20 = stackIn_33_0;
+              if (l.field_i != null) {
+                if (param5.field_G != null) {
+                  if (param5.field_G.length > var14) {
+                    if (param5.field_G[var14] != -1) {
+                      if (l.field_i.length > param5.field_G[var14]) {
+                        stackIn_40_0 = l.field_i[param5.field_G[var14]];
+                        break L7;
                       }
                     }
                   }
                 }
-                stackIn_40_0 = null;
               }
-              L9: {
-                var21 = stackIn_40_0;
-                var22 = sh.field_x[var15];
-                var23 = dj.field_N[var15];
-                var24 = sh.field_x[var16];
-                var25 = dj.field_N[var16];
-                var26 = sh.field_x[var17];
-                var27 = dj.field_N[var17];
-                if (var18 == var19) {
-                  if (var20 == var19) {
-                    var28 = var54[var18];
-                    var29 = var64[var18];
-                    if (var21 != null) {
-                      stackIn_45_0 = var21.field_a;
-                    } else {
-                      stackIn_45_0 = 8355711;
-                    }
-                    var30 = stackIn_45_0;
-                    var31 = var30 & 16711935;
-                    var32 = 65280 & var30;
-                    var33 = (-16711703 & var31 * var28) >>> 8 | -285147392 & var32 * var28 >>> 8;
-                    var33 = var33 + var29 * 65793;
-                    gi.a(var26, -122, var27, var25, var24, var22, var23, 8355711 & var33 >> 1);
-                    break L9;
-                  }
-                }
-                var28 = var54[var18];
-                var29 = var54[var19];
-                var30 = var54[var20];
-                var31 = var64[var18];
-                var32 = var64[var19];
-                var33 = var64[var20];
-                if (var21 != null) {
-                  stackIn_49_0 = var21.field_a;
-                } else {
-                  stackIn_49_0 = 8355711;
-                }
-                var34 = stackIn_49_0;
-                var35 = var34 & 16711935;
-                var36 = 65280 & var34;
-                var37 = (var28 * var36 & 16711921) >>> 8 | -822148865 & var28 * var35 >>> 8;
-                var38 = (var36 * var29 & 16711688) >>> 8 | (var29 * var35 & -16711783) >>> 8;
-                var38 = var38 + 65793 * var32;
-                var37 = var37 + 65793 * var31;
-                var39 = var30 * var36 >>> 8 & 1543569152 | var30 * var35 >>> 8 & -536936193;
-                var39 = var39 + var33 * 65793;
-                nb.a(255 & var37, 255 & var37 >> 8, var39 >> 16, var39 >> 8 & 255, var25, 255 & var38, var37 >> 16, var23, var26, 255 & var39, -2, var38 >> 16, 255 & var38 >> 8, var24, var22, var27);
-              }
+              stackIn_40_0 = null;
             }
-            return;
+            L9: {
+              var21 = stackIn_40_0;
+              var22 = sh.field_x[var15];
+              var23 = dj.field_N[var15];
+              var24 = sh.field_x[var16];
+              var25 = dj.field_N[var16];
+              var26 = sh.field_x[var17];
+              var27 = dj.field_N[var17];
+              if (var18 == var19) {
+                if (var20 == var19) {
+                  var28 = var54[var18];
+                  var29 = var64[var18];
+                  if (var21 != null) {
+                    stackIn_45_0 = var21.field_a;
+                  } else {
+                    stackIn_45_0 = 8355711;
+                  }
+                  var30 = stackIn_45_0;
+                  var31 = var30 & 16711935;
+                  var32 = 65280 & var30;
+                  var33 = (-16711703 & var31 * var28) >>> 8 | -285147392 & var32 * var28 >>> 8;
+                  var33 = var33 + var29 * 65793;
+                  gi.a(var26, -122, var27, var25, var24, var22, var23, 8355711 & var33 >> 1);
+                  break L9;
+                }
+              }
+              var28 = var54[var18];
+              var29 = var54[var19];
+              var30 = var54[var20];
+              var31 = var64[var18];
+              var32 = var64[var19];
+              var33 = var64[var20];
+              if (var21 != null) {
+                stackIn_49_0 = var21.field_a;
+              } else {
+                stackIn_49_0 = 8355711;
+              }
+              var34 = stackIn_49_0;
+              var35 = var34 & 16711935;
+              var36 = 65280 & var34;
+              var37 = (var28 * var36 & 16711921) >>> 8 | -822148865 & var28 * var35 >>> 8;
+              var38 = (var36 * var29 & 16711688) >>> 8 | (var29 * var35 & -16711783) >>> 8;
+              var38 = var38 + 65793 * var32;
+              var37 = var37 + 65793 * var31;
+              var39 = var30 * var36 >>> 8 & 1543569152 | var30 * var35 >>> 8 & -536936193;
+              var39 = var39 + var33 * 65793;
+              nb.a(255 & var37, 255 & var37 >> 8, var39 >> 16, var39 >> 8 & 255, var25, 255 & var38, var37 >> 16, var23, var26, 255 & var39, -2, var38 >> 16, 255 & var38 >> 8, var24, var22, var27);
+            }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
@@ -330,138 +328,136 @@ final class hi extends ee implements ta, pl {
             guardResultBeforeReturn = 52;
             return guardResultBeforeReturn;
           }
-          {
-            for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
-              L1: {
-                L2: {
-                  characterCode = text.charAt(characterStart + characterIndex);
-                  if (0 < characterCode) {
-                    if (characterCode < 128) {
-                      break L2;
-                    }
+          for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
+            L1: {
+              L2: {
+                characterCode = text.charAt(characterStart + characterIndex);
+                if (0 < characterCode) {
+                  if (characterCode < 128) {
+                    break L2;
                   }
-                  if (characterCode >= 160) {
-                    if (characterCode <= 255) {
-                      break L2;
-                    }
+                }
+                if (characterCode >= 160) {
+                  if (characterCode <= 255) {
+                    break L2;
                   }
-                  if (characterCode == 8364) {
-                    destination[characterIndex + destinationOffset] = (byte)-128;
-                    break L1;
-                  }
-                  if (characterCode == 8218) {
-                    destination[destinationOffset + characterIndex] = (byte)-126;
-                    break L1;
-                  }
-                  if (characterCode == 402) {
-                    destination[destinationOffset + characterIndex] = (byte)-125;
-                    break L1;
-                  }
-                  if (8222 == characterCode) {
-                    destination[characterIndex + destinationOffset] = (byte)-124;
-                    break L1;
-                  }
-                  if (8230 == characterCode) {
-                    destination[characterIndex + destinationOffset] = (byte)-123;
-                    break L1;
-                  }
-                  if (characterCode == 8224) {
-                    destination[destinationOffset + characterIndex] = (byte)-122;
-                    break L1;
-                  }
-                  if (characterCode == 8225) {
-                    destination[characterIndex + destinationOffset] = (byte)-121;
-                    break L1;
-                  }
-                  if (characterCode == 710) {
-                    destination[characterIndex + destinationOffset] = (byte)-120;
-                    break L1;
-                  }
-                  if (8240 == characterCode) {
-                    destination[characterIndex + destinationOffset] = (byte)-119;
-                    break L1;
-                  }
-                  if (characterCode == 352) {
-                    destination[destinationOffset + characterIndex] = (byte)-118;
-                    break L1;
-                  }
-                  if (characterCode == 8249) {
-                    destination[destinationOffset + characterIndex] = (byte)-117;
-                    break L1;
-                  }
-                  if (characterCode == 338) {
-                    destination[characterIndex + destinationOffset] = (byte)-116;
-                    break L1;
-                  }
-                  if (381 == characterCode) {
-                    destination[characterIndex + destinationOffset] = (byte)-114;
-                    break L1;
-                  }
-                  if (characterCode == 8216) {
-                    destination[destinationOffset + characterIndex] = (byte)-111;
-                    break L1;
-                  }
-                  if (characterCode == 8217) {
-                    destination[destinationOffset + characterIndex] = (byte)-110;
-                    break L1;
-                  }
-                  if (characterCode == 8220) {
-                    destination[characterIndex + destinationOffset] = (byte)-109;
-                    break L1;
-                  }
-                  if (characterCode == 8221) {
-                    destination[destinationOffset + characterIndex] = (byte)-108;
-                    break L1;
-                  }
-                  if (8226 == characterCode) {
-                    destination[destinationOffset + characterIndex] = (byte)-107;
-                    break L1;
-                  }
-                  if (8211 == characterCode) {
-                    destination[characterIndex + destinationOffset] = (byte)-106;
-                    break L1;
-                  }
-                  if (characterCode == 8212) {
-                    destination[destinationOffset + characterIndex] = (byte)-105;
-                    break L1;
-                  }
-                  if (characterCode == 732) {
-                    destination[characterIndex + destinationOffset] = (byte)-104;
-                    break L1;
-                  }
-                  if (characterCode == 8482) {
-                    destination[destinationOffset + characterIndex] = (byte)-103;
-                    break L1;
-                  }
-                  if (characterCode == 353) {
-                    destination[destinationOffset + characterIndex] = (byte)-102;
-                    break L1;
-                  }
-                  if (characterCode == 8250) {
-                    destination[characterIndex + destinationOffset] = (byte)-101;
-                    break L1;
-                  }
-                  if (339 == characterCode) {
-                    destination[characterIndex + destinationOffset] = (byte)-100;
-                    break L1;
-                  }
-                  if (characterCode == 382) {
-                    destination[characterIndex + destinationOffset] = (byte)-98;
-                    break L1;
-                  }
-                  if (characterCode != 376) {
-                    destination[characterIndex + destinationOffset] = (byte)63;
-                    break L1;
-                  }
-                  destination[characterIndex + destinationOffset] = (byte)-97;
+                }
+                if (characterCode == 8364) {
+                  destination[characterIndex + destinationOffset] = (byte)-128;
                   break L1;
                 }
-                destination[destinationOffset + characterIndex] = (byte)characterCode;
+                if (characterCode == 8218) {
+                  destination[destinationOffset + characterIndex] = (byte)-126;
+                  break L1;
+                }
+                if (characterCode == 402) {
+                  destination[destinationOffset + characterIndex] = (byte)-125;
+                  break L1;
+                }
+                if (8222 == characterCode) {
+                  destination[characterIndex + destinationOffset] = (byte)-124;
+                  break L1;
+                }
+                if (8230 == characterCode) {
+                  destination[characterIndex + destinationOffset] = (byte)-123;
+                  break L1;
+                }
+                if (characterCode == 8224) {
+                  destination[destinationOffset + characterIndex] = (byte)-122;
+                  break L1;
+                }
+                if (characterCode == 8225) {
+                  destination[characterIndex + destinationOffset] = (byte)-121;
+                  break L1;
+                }
+                if (characterCode == 710) {
+                  destination[characterIndex + destinationOffset] = (byte)-120;
+                  break L1;
+                }
+                if (8240 == characterCode) {
+                  destination[characterIndex + destinationOffset] = (byte)-119;
+                  break L1;
+                }
+                if (characterCode == 352) {
+                  destination[destinationOffset + characterIndex] = (byte)-118;
+                  break L1;
+                }
+                if (characterCode == 8249) {
+                  destination[destinationOffset + characterIndex] = (byte)-117;
+                  break L1;
+                }
+                if (characterCode == 338) {
+                  destination[characterIndex + destinationOffset] = (byte)-116;
+                  break L1;
+                }
+                if (381 == characterCode) {
+                  destination[characterIndex + destinationOffset] = (byte)-114;
+                  break L1;
+                }
+                if (characterCode == 8216) {
+                  destination[destinationOffset + characterIndex] = (byte)-111;
+                  break L1;
+                }
+                if (characterCode == 8217) {
+                  destination[destinationOffset + characterIndex] = (byte)-110;
+                  break L1;
+                }
+                if (characterCode == 8220) {
+                  destination[characterIndex + destinationOffset] = (byte)-109;
+                  break L1;
+                }
+                if (characterCode == 8221) {
+                  destination[destinationOffset + characterIndex] = (byte)-108;
+                  break L1;
+                }
+                if (8226 == characterCode) {
+                  destination[destinationOffset + characterIndex] = (byte)-107;
+                  break L1;
+                }
+                if (8211 == characterCode) {
+                  destination[characterIndex + destinationOffset] = (byte)-106;
+                  break L1;
+                }
+                if (characterCode == 8212) {
+                  destination[destinationOffset + characterIndex] = (byte)-105;
+                  break L1;
+                }
+                if (characterCode == 732) {
+                  destination[characterIndex + destinationOffset] = (byte)-104;
+                  break L1;
+                }
+                if (characterCode == 8482) {
+                  destination[destinationOffset + characterIndex] = (byte)-103;
+                  break L1;
+                }
+                if (characterCode == 353) {
+                  destination[destinationOffset + characterIndex] = (byte)-102;
+                  break L1;
+                }
+                if (characterCode == 8250) {
+                  destination[characterIndex + destinationOffset] = (byte)-101;
+                  break L1;
+                }
+                if (339 == characterCode) {
+                  destination[characterIndex + destinationOffset] = (byte)-100;
+                  break L1;
+                }
+                if (characterCode == 382) {
+                  destination[characterIndex + destinationOffset] = (byte)-98;
+                  break L1;
+                }
+                if (characterCode != 376) {
+                  destination[characterIndex + destinationOffset] = (byte)63;
+                  break L1;
+                }
+                destination[characterIndex + destinationOffset] = (byte)-97;
+                break L1;
               }
+              destination[destinationOffset + characterIndex] = (byte)characterCode;
             }
-            encodedLengthBeforeReturn = encodedLength;
-            return encodedLengthBeforeReturn;
           }
+          encodedLengthBeforeReturn = encodedLength;
+          return encodedLengthBeforeReturn;
         } catch (java.lang.RuntimeException encodingFailure) {
           caughtEncodingFailure = encodingFailure;
           encodingFailureForContext = caughtEncodingFailure;

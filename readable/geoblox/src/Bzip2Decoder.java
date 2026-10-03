@@ -80,149 +80,254 @@ final class Bzip2Decoder {
           if (continueDecodingBlocks == 0) {
             return;
           }
-          {
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            if (byteOrBitValue == 23) {
-              return;
-            }
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          if (byteOrBitValue == 23) {
+            return;
+          }
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          byteOrBitValue = Bzip2Decoder.readBit(state);
+          if (byteOrBitValue == 0) {
+          }
+          state.originalPointer = 0;
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
+          byteOrBitValue = Bzip2Decoder.readByte(state);
+          state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
+          for (index = 0; index < 16; index++) {
             byteOrBitValue = Bzip2Decoder.readBit(state);
-            if (byteOrBitValue == 0) {
+            if (byteOrBitValue != 1) {
+              state.usedByteGroups[index] = false;
+              continue;
             }
-            state.originalPointer = 0;
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
-            byteOrBitValue = Bzip2Decoder.readByte(state);
-            state.originalPointer = state.originalPointer << 8 | byteOrBitValue & 255;
-            L3: for (index = 0; index < 16; index++) {
+            state.usedByteGroups[index] = true;
+          }
+          for (index = 0; index < 256; index++) {
+            state.usedBytes[index] = false;
+          }
+          for (index = 0; index < 16; index++) {
+            if (!state.usedByteGroups[index]) {
+              continue;
+            }
+            for (byteInGroupOrSelectorRank = 0; byteInGroupOrSelectorRank < 16; byteInGroupOrSelectorRank++) {
               byteOrBitValue = Bzip2Decoder.readBit(state);
               if (byteOrBitValue != 1) {
-                state.usedByteGroups[index] = false;
-                continue L3;
+                continue;
               }
-              state.usedByteGroups[index] = true;
+              state.usedBytes[index * 16 + byteInGroupOrSelectorRank] = true;
             }
-            for (index = 0; index < 256; index++) {
-              state.usedBytes[index] = false;
-            }
-            L5: for (index = 0; index < 16; index++) {
-              if (!state.usedByteGroups[index]) {
-                continue L5;
-              }
-              L42: for (byteInGroupOrSelectorRank = 0; byteInGroupOrSelectorRank < 16; byteInGroupOrSelectorRank++) {
+          }
+          Bzip2Decoder.buildByteAlphabet(state);
+          huffmanAlphabetSize = state.alphabetSize + 2;
+          huffmanTableCount = Bzip2Decoder.readBits(3, state);
+          selectorCount = Bzip2Decoder.readBits(15, state);
+          index = 0;
+          L6: while (true) {
+            if (index < selectorCount) {
+              byteInGroupOrSelectorRank = 0;
+              while (true) {
                 byteOrBitValue = Bzip2Decoder.readBit(state);
-                if (byteOrBitValue != 1) {
-                  continue L42;
+                if (byteOrBitValue != 0) {
+                  byteInGroupOrSelectorRank++;
+                  continue;
                 }
-                state.usedBytes[index * 16 + byteInGroupOrSelectorRank] = true;
+                state.selectorMoveToFrontValues[index] = (byte)byteInGroupOrSelectorRank;
+                index++;
+                continue L6;
               }
             }
-            Bzip2Decoder.buildByteAlphabet(state);
-            huffmanAlphabetSize = state.alphabetSize + 2;
-            huffmanTableCount = Bzip2Decoder.readBits(3, state);
-            selectorCount = Bzip2Decoder.readBits(15, state);
-            index = 0;
-            L6: while (true) {
-              if (index < selectorCount) {
-                byteInGroupOrSelectorRank = 0;
-                L41: while (true) {
-                  byteOrBitValue = Bzip2Decoder.readBit(state);
-                  if (byteOrBitValue != 0) {
-                    byteInGroupOrSelectorRank++;
-                    continue L41;
+            allocatedSelectorOrder = new byte[6];
+            selectorOrder = allocatedSelectorOrder;
+            selectorOrderAlias = selectorOrder;
+            selectorRankOrMtfWritePosition = 0;
+            while (selectorRankOrMtfWritePosition < huffmanTableCount) {
+              selectorOrderAlias[selectorRankOrMtfWritePosition] = (byte)selectorRankOrMtfWritePosition;
+              selectorRankOrMtfWritePosition = (byte)(selectorRankOrMtfWritePosition + 1);
+            }
+            for (index = 0; index < selectorCount; index++) {
+              selectorRankOrMtfWritePosition = state.selectorMoveToFrontValues[index];
+              selectorTableOrMtfByteIndex = allocatedSelectorOrder[selectorRankOrMtfWritePosition];
+              while (selectorRankOrMtfWritePosition > 0) {
+                selectorOrderAlias[selectorRankOrMtfWritePosition] = selectorOrderAlias[selectorRankOrMtfWritePosition - 1];
+                selectorRankOrMtfWritePosition = (byte)(selectorRankOrMtfWritePosition - 1);
+              }
+              selectorOrderAlias[0] = (byte)selectorTableOrMtfByteIndex;
+              state.huffmanSelectors[index] = (byte)selectorTableOrMtfByteIndex;
+            }
+            huffmanTableIndex = 0;
+            L9: while (true) {
+              if (huffmanTableIndex < huffmanTableCount) {
+                codeLength = Bzip2Decoder.readBits(5, state);
+                index = 0;
+                L38: while (true) {
+                  if (index >= huffmanAlphabetSize) {
+                    huffmanTableIndex++;
+                    continue L9;
                   }
-                  state.selectorMoveToFrontValues[index] = (byte)byteInGroupOrSelectorRank;
-                  index++;
-                  continue L6;
+                  while (true) {
+                    byteOrBitValue = Bzip2Decoder.readBit(state);
+                    if (byteOrBitValue == 0) {
+                      state.huffmanCodeLengths[huffmanTableIndex][index] = (byte)codeLength;
+                      index++;
+                      continue L38;
+                    }
+                    byteOrBitValue = Bzip2Decoder.readBit(state);
+                    if (byteOrBitValue != 0) {
+                      codeLength--;
+                      continue;
+                    }
+                    codeLength++;
+                    continue;
+                  }
                 }
               }
-              {
-                allocatedSelectorOrder = new byte[6];
-                selectorOrder = allocatedSelectorOrder;
-                selectorOrderAlias = selectorOrder;
-                selectorRankOrMtfWritePosition = 0;
-                L7: while (selectorRankOrMtfWritePosition < huffmanTableCount) {
-                  selectorOrderAlias[selectorRankOrMtfWritePosition] = (byte)selectorRankOrMtfWritePosition;
-                  selectorRankOrMtfWritePosition = (byte)(selectorRankOrMtfWritePosition + 1);
-                }
-                for (index = 0; index < selectorCount; index++) {
-                  selectorRankOrMtfWritePosition = state.selectorMoveToFrontValues[index];
-                  selectorTableOrMtfByteIndex = allocatedSelectorOrder[selectorRankOrMtfWritePosition];
-                  L40: while (selectorRankOrMtfWritePosition > 0) {
-                    selectorOrderAlias[selectorRankOrMtfWritePosition] = selectorOrderAlias[selectorRankOrMtfWritePosition - 1];
-                    selectorRankOrMtfWritePosition = (byte)(selectorRankOrMtfWritePosition - 1);
+              for (huffmanTableIndex = 0; huffmanTableIndex < huffmanTableCount; huffmanTableIndex++) {
+                minimumCodeLength = 32;
+                maximumCodeLength = 0;
+                for (index = 0; index < huffmanAlphabetSize; index++) {
+                  if (state.huffmanCodeLengths[huffmanTableIndex][index] > maximumCodeLength) {
+                    maximumCodeLength = state.huffmanCodeLengths[huffmanTableIndex][index];
                   }
-                  selectorOrderAlias[0] = (byte)selectorTableOrMtfByteIndex;
-                  state.huffmanSelectors[index] = (byte)selectorTableOrMtfByteIndex;
+                  if (state.huffmanCodeLengths[huffmanTableIndex][index] >= minimumCodeLength) {
+                    continue;
+                  }
+                  minimumCodeLength = state.huffmanCodeLengths[huffmanTableIndex][index];
                 }
-                huffmanTableIndex = 0;
-                L9: while (true) {
-                  if (huffmanTableIndex < huffmanTableCount) {
-                    codeLength = Bzip2Decoder.readBits(5, state);
-                    index = 0;
-                    L38: while (true) {
-                      if (index >= huffmanAlphabetSize) {
-                        huffmanTableIndex++;
-                        continue L9;
-                      }
-                      L39: while (true) {
-                        byteOrBitValue = Bzip2Decoder.readBit(state);
-                        if (byteOrBitValue == 0) {
-                          state.huffmanCodeLengths[huffmanTableIndex][index] = (byte)codeLength;
-                          index++;
-                          continue L38;
-                        }
-                        byteOrBitValue = Bzip2Decoder.readBit(state);
-                        if (byteOrBitValue != 0) {
-                          codeLength--;
-                          continue L39;
-                        }
-                        codeLength++;
-                        continue L39;
-                      }
+                Bzip2Decoder.buildHuffmanTables(state.huffmanLimits[huffmanTableIndex], state.huffmanBases[huffmanTableIndex], state.huffmanSymbols[huffmanTableIndex], state.huffmanCodeLengths[huffmanTableIndex], minimumCodeLength, maximumCodeLength, huffmanAlphabetSize);
+                state.minimumCodeLengths[huffmanTableIndex] = minimumCodeLength;
+              }
+              endOfBlockSymbol = state.alphabetSize + 1;
+              selectorIndex = -1;
+              symbolsRemainingInGroup = 0;
+              for (index = 0; index <= 255; index++) {
+                state.byteFrequencies[index] = 0;
+              }
+              selectorRankOrMtfWritePosition = 4095;
+              for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
+                for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
+                  state.moveToFrontBytes[selectorRankOrMtfWritePosition] = (byte)(mtfBlockIndex * 16 + selectorTableOrMtfByteIndex);
+                  selectorRankOrMtfWritePosition--;
+                }
+                state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
+              }
+              blockLength = 0;
+              if (symbolsRemainingInGroup == 0) {
+                selectorIndex++;
+                symbolsRemainingInGroup = 50;
+                selectedTableIndex = state.huffmanSelectors[selectorIndex];
+                selectedMinimumCodeLength = state.minimumCodeLengths[selectedTableIndex];
+                selectedLimits = state.huffmanLimits[selectedTableIndex];
+                selectedSymbols = state.huffmanSymbols[selectedTableIndex];
+                selectedBases = state.huffmanBases[selectedTableIndex];
+              }
+              symbolsRemainingInGroup--;
+              currentCodeLength = selectedMinimumCodeLength;
+              codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
+              while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
+                currentCodeLength++;
+                nextCodeBit = Bzip2Decoder.readBit(state);
+                codeBits = codeBits << 1 | nextCodeBit;
+              }
+              symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
+              L15: while (true) {
+                if (symbol == endOfBlockSymbol) {
+                  state.pendingRunLength = 0;
+                  state.pendingRunByte = (byte) 0;
+                  state.byteBucketPositions[0] = 0;
+                  for (index = 1; index <= 256; index++) {
+                    state.byteBucketPositions[index] = state.byteFrequencies[index - 1];
+                  }
+                  for (index = 1; index <= 256; index++) {
+                    state.byteBucketPositions[index] = state.byteBucketPositions[index] + state.byteBucketPositions[index - 1];
+                  }
+                  for (index = 0; index < blockLength; index++) {
+                    byteOrBitValue = (byte)(kb.bzip2TransformTable[index] & 255);
+                    transformBucketPosition = state.byteBucketPositions[byteOrBitValue & 255];
+                    kb.bzip2TransformTable[transformBucketPosition] = kb.bzip2TransformTable[transformBucketPosition] | index << 8;
+                    state.byteBucketPositions[byteOrBitValue & 255] = state.byteBucketPositions[byteOrBitValue & 255] + 1;
+                  }
+                  state.transformPositionOrEntry = kb.bzip2TransformTable[state.originalPointer] >> 8;
+                  state.blockBytesConsumed = 0;
+                  state.transformPositionOrEntry = kb.bzip2TransformTable[state.transformPositionOrEntry];
+                  state.currentByte = (byte)(state.transformPositionOrEntry & 255);
+                  state.transformPositionOrEntry = state.transformPositionOrEntry >> 8;
+                  state.blockBytesConsumed = state.blockBytesConsumed + 1;
+                  state.blockLength = blockLength;
+                  Bzip2Decoder.emitBlockRuns(state);
+                  if (state.blockBytesConsumed == state.blockLength + 1) {
+                    if (state.pendingRunLength == 0) {
+                      continueDecodingBlocks = 1;
+                      continue L1;
                     }
                   }
-                  {
-                    for (huffmanTableIndex = 0; huffmanTableIndex < huffmanTableCount; huffmanTableIndex++) {
-                      minimumCodeLength = 32;
-                      maximumCodeLength = 0;
-                      L36: for (index = 0; index < huffmanAlphabetSize; index++) {
-                        if (state.huffmanCodeLengths[huffmanTableIndex][index] > maximumCodeLength) {
-                          maximumCodeLength = state.huffmanCodeLengths[huffmanTableIndex][index];
+                  continueDecodingBlocks = 0;
+                  continue L1;
+                }
+                if (symbol != 0) {
+                  if (symbol != 1) {
+                    L17: {
+                      mtfRank = symbol - 1;
+                      if (mtfRank < 16) {
+                        mtfPosition = state.moveToFrontBlockStarts[0];
+                        byteOrBitValue = state.moveToFrontBytes[mtfPosition + mtfRank];
+                        while (mtfRank > 3) {
+                          mtfShiftPosition = mtfPosition + mtfRank;
+                          state.moveToFrontBytes[mtfShiftPosition] = state.moveToFrontBytes[mtfShiftPosition - 1];
+                          state.moveToFrontBytes[mtfShiftPosition - 1] = state.moveToFrontBytes[mtfShiftPosition - 2];
+                          state.moveToFrontBytes[mtfShiftPosition - 2] = state.moveToFrontBytes[mtfShiftPosition - 3];
+                          state.moveToFrontBytes[mtfShiftPosition - 3] = state.moveToFrontBytes[mtfShiftPosition - 4];
+                          mtfRank -= 4;
                         }
-                        if (state.huffmanCodeLengths[huffmanTableIndex][index] >= minimumCodeLength) {
-                          continue L36;
+                        while (mtfRank > 0) {
+                          state.moveToFrontBytes[mtfPosition + mtfRank] = state.moveToFrontBytes[mtfPosition + mtfRank - 1];
+                          mtfRank--;
                         }
-                        minimumCodeLength = state.huffmanCodeLengths[huffmanTableIndex][index];
+                        state.moveToFrontBytes[mtfPosition] = (byte)byteOrBitValue;
+                        break L17;
                       }
-                      Bzip2Decoder.buildHuffmanTables(state.huffmanLimits[huffmanTableIndex], state.huffmanBases[huffmanTableIndex], state.huffmanSymbols[huffmanTableIndex], state.huffmanCodeLengths[huffmanTableIndex], minimumCodeLength, maximumCodeLength, huffmanAlphabetSize);
-                      state.minimumCodeLengths[huffmanTableIndex] = minimumCodeLength;
-                    }
-                    endOfBlockSymbol = state.alphabetSize + 1;
-                    selectorIndex = -1;
-                    symbolsRemainingInGroup = 0;
-                    for (index = 0; index <= 255; index++) {
-                      state.byteFrequencies[index] = 0;
-                    }
-                    selectorRankOrMtfWritePosition = 4095;
-                    for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
-                      for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
-                        state.moveToFrontBytes[selectorRankOrMtfWritePosition] = (byte)(mtfBlockIndex * 16 + selectorTableOrMtfByteIndex);
-                        selectorRankOrMtfWritePosition--;
+                      mtfBlockIndexForMove = mtfRank / 16;
+                      mtfOffsetInBlock = mtfRank % 16;
+                      mtfCursor = state.moveToFrontBlockStarts[mtfBlockIndexForMove] + mtfOffsetInBlock;
+                      mtfPosition = mtfCursor;
+                      byteOrBitValue = state.moveToFrontBytes[mtfCursor];
+                      while (mtfCursor > state.moveToFrontBlockStarts[mtfBlockIndexForMove]) {
+                        state.moveToFrontBytes[mtfCursor] = state.moveToFrontBytes[mtfCursor - 1];
+                        mtfCursor--;
                       }
-                      state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
+                      state.moveToFrontBlockStarts[mtfBlockIndexForMove] = state.moveToFrontBlockStarts[mtfBlockIndexForMove] + 1;
+                      while (mtfBlockIndexForMove > 0) {
+                        state.moveToFrontBlockStarts[mtfBlockIndexForMove] = state.moveToFrontBlockStarts[mtfBlockIndexForMove] - 1;
+                        state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndexForMove]] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndexForMove - 1] + 16 - 1];
+                        mtfBlockIndexForMove--;
+                      }
+                      state.moveToFrontBlockStarts[0] = state.moveToFrontBlockStarts[0] - 1;
+                      state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] = (byte)byteOrBitValue;
+                      if (state.moveToFrontBlockStarts[0] != 0) {
+                        break L17;
+                      }
+                      selectorRankOrMtfWritePosition = 4095;
+                      for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
+                        for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
+                          state.moveToFrontBytes[selectorRankOrMtfWritePosition] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndex] + selectorTableOrMtfByteIndex];
+                          selectorRankOrMtfWritePosition--;
+                        }
+                        state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
+                      }
+                      break L17;
                     }
-                    blockLength = 0;
+                    frequencyByteValue = state.alphabetBytes[byteOrBitValue & 255] & 255;
+                    state.byteFrequencies[frequencyByteValue] = state.byteFrequencies[frequencyByteValue] + 1;
+                    kb.bzip2TransformTable[blockLength] = state.alphabetBytes[byteOrBitValue & 255] & 255;
+                    blockLength++;
                     if (symbolsRemainingInGroup == 0) {
                       selectorIndex++;
                       symbolsRemainingInGroup = 50;
@@ -235,172 +340,59 @@ final class Bzip2Decoder {
                     symbolsRemainingInGroup--;
                     currentCodeLength = selectedMinimumCodeLength;
                     codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
-                    L14: while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
+                    while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
                       currentCodeLength++;
                       nextCodeBit = Bzip2Decoder.readBit(state);
                       codeBits = codeBits << 1 | nextCodeBit;
                     }
                     symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-                    L15: while (true) {
-                      if (symbol == endOfBlockSymbol) {
-                        state.pendingRunLength = 0;
-                        state.pendingRunByte = (byte) 0;
-                        state.byteBucketPositions[0] = 0;
-                        for (index = 1; index <= 256; index++) {
-                          state.byteBucketPositions[index] = state.byteFrequencies[index - 1];
-                        }
-                        for (index = 1; index <= 256; index++) {
-                          state.byteBucketPositions[index] = state.byteBucketPositions[index] + state.byteBucketPositions[index - 1];
-                        }
-                        for (index = 0; index < blockLength; index++) {
-                          byteOrBitValue = (byte)(kb.bzip2TransformTable[index] & 255);
-                          transformBucketPosition = state.byteBucketPositions[byteOrBitValue & 255];
-                          kb.bzip2TransformTable[transformBucketPosition] = kb.bzip2TransformTable[transformBucketPosition] | index << 8;
-                          state.byteBucketPositions[byteOrBitValue & 255] = state.byteBucketPositions[byteOrBitValue & 255] + 1;
-                        }
-                        state.transformPositionOrEntry = kb.bzip2TransformTable[state.originalPointer] >> 8;
-                        state.blockBytesConsumed = 0;
-                        state.transformPositionOrEntry = kb.bzip2TransformTable[state.transformPositionOrEntry];
-                        state.currentByte = (byte)(state.transformPositionOrEntry & 255);
-                        state.transformPositionOrEntry = state.transformPositionOrEntry >> 8;
-                        state.blockBytesConsumed = state.blockBytesConsumed + 1;
-                        state.blockLength = blockLength;
-                        Bzip2Decoder.emitBlockRuns(state);
-                        if (state.blockBytesConsumed == state.blockLength + 1) {
-                          if (state.pendingRunLength == 0) {
-                            continueDecodingBlocks = 1;
-                            continue L1;
-                          }
-                        }
-                        continueDecodingBlocks = 0;
-                        continue L1;
-                      }
-                      if (symbol != 0) {
-                        if (symbol != 1) {
-                          L17: {
-                            mtfRank = symbol - 1;
-                            if (mtfRank < 16) {
-                              mtfPosition = state.moveToFrontBlockStarts[0];
-                              byteOrBitValue = state.moveToFrontBytes[mtfPosition + mtfRank];
-                              L22: while (mtfRank > 3) {
-                                mtfShiftPosition = mtfPosition + mtfRank;
-                                state.moveToFrontBytes[mtfShiftPosition] = state.moveToFrontBytes[mtfShiftPosition - 1];
-                                state.moveToFrontBytes[mtfShiftPosition - 1] = state.moveToFrontBytes[mtfShiftPosition - 2];
-                                state.moveToFrontBytes[mtfShiftPosition - 2] = state.moveToFrontBytes[mtfShiftPosition - 3];
-                                state.moveToFrontBytes[mtfShiftPosition - 3] = state.moveToFrontBytes[mtfShiftPosition - 4];
-                                mtfRank -= 4;
-                              }
-                              L23: while (mtfRank > 0) {
-                                state.moveToFrontBytes[mtfPosition + mtfRank] = state.moveToFrontBytes[mtfPosition + mtfRank - 1];
-                                mtfRank--;
-                              }
-                              state.moveToFrontBytes[mtfPosition] = (byte)byteOrBitValue;
-                              break L17;
-                            }
-                            {
-                              mtfBlockIndexForMove = mtfRank / 16;
-                              mtfOffsetInBlock = mtfRank % 16;
-                              mtfCursor = state.moveToFrontBlockStarts[mtfBlockIndexForMove] + mtfOffsetInBlock;
-                              mtfPosition = mtfCursor;
-                              byteOrBitValue = state.moveToFrontBytes[mtfCursor];
-                              L18: while (mtfCursor > state.moveToFrontBlockStarts[mtfBlockIndexForMove]) {
-                                state.moveToFrontBytes[mtfCursor] = state.moveToFrontBytes[mtfCursor - 1];
-                                mtfCursor--;
-                              }
-                              state.moveToFrontBlockStarts[mtfBlockIndexForMove] = state.moveToFrontBlockStarts[mtfBlockIndexForMove] + 1;
-                              L19: while (mtfBlockIndexForMove > 0) {
-                                state.moveToFrontBlockStarts[mtfBlockIndexForMove] = state.moveToFrontBlockStarts[mtfBlockIndexForMove] - 1;
-                                state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndexForMove]] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndexForMove - 1] + 16 - 1];
-                                mtfBlockIndexForMove--;
-                              }
-                              state.moveToFrontBlockStarts[0] = state.moveToFrontBlockStarts[0] - 1;
-                              state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] = (byte)byteOrBitValue;
-                              if (state.moveToFrontBlockStarts[0] != 0) {
-                                break L17;
-                              }
-                              selectorRankOrMtfWritePosition = 4095;
-                              for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
-                                for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
-                                  state.moveToFrontBytes[selectorRankOrMtfWritePosition] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndex] + selectorTableOrMtfByteIndex];
-                                  selectorRankOrMtfWritePosition--;
-                                }
-                                state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
-                              }
-                              break L17;
-                            }
-                          }
-                          frequencyByteValue = state.alphabetBytes[byteOrBitValue & 255] & 255;
-                          state.byteFrequencies[frequencyByteValue] = state.byteFrequencies[frequencyByteValue] + 1;
-                          kb.bzip2TransformTable[blockLength] = state.alphabetBytes[byteOrBitValue & 255] & 255;
-                          blockLength++;
-                          if (symbolsRemainingInGroup == 0) {
-                            selectorIndex++;
-                            symbolsRemainingInGroup = 50;
-                            selectedTableIndex = state.huffmanSelectors[selectorIndex];
-                            selectedMinimumCodeLength = state.minimumCodeLengths[selectedTableIndex];
-                            selectedLimits = state.huffmanLimits[selectedTableIndex];
-                            selectedSymbols = state.huffmanSymbols[selectedTableIndex];
-                            selectedBases = state.huffmanBases[selectedTableIndex];
-                          }
-                          symbolsRemainingInGroup--;
-                          currentCodeLength = selectedMinimumCodeLength;
-                          codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
-                          L25: while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
-                            currentCodeLength++;
-                            nextCodeBit = Bzip2Decoder.readBit(state);
-                            codeBits = codeBits << 1 | nextCodeBit;
-                          }
-                          symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-                          continue L15;
-                        }
-                      }
-                      runLength = -1;
-                      runWeight = 1;
-                      L26: while (true) {
-                        if (symbol != 0) {
-                          if (symbol == 1) {
-                            runLength = runLength + 2 * runWeight;
-                          }
-                        } else {
-                          runLength = runLength + 1 * runWeight;
-                        }
-                        runWeight = runWeight * 2;
-                        if (symbolsRemainingInGroup == 0) {
-                          selectorIndex++;
-                          symbolsRemainingInGroup = 50;
-                          selectedTableIndex = state.huffmanSelectors[selectorIndex];
-                          selectedMinimumCodeLength = state.minimumCodeLengths[selectedTableIndex];
-                          selectedLimits = state.huffmanLimits[selectedTableIndex];
-                          selectedSymbols = state.huffmanSymbols[selectedTableIndex];
-                          selectedBases = state.huffmanBases[selectedTableIndex];
-                        }
-                        symbolsRemainingInGroup--;
-                        currentCodeLength = selectedMinimumCodeLength;
-                        codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
-                        L29: while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
-                          currentCodeLength++;
-                          nextCodeBit = Bzip2Decoder.readBit(state);
-                          codeBits = codeBits << 1 | nextCodeBit;
-                        }
-                        symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-                        if (symbol == 0) {
-                          continue L26;
-                        }
-                        if (symbol == 1) {
-                          continue L26;
-                        }
-                        runLength++;
-                        byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
-                        state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;
-                        L30: while (runLength > 0) {
-                          kb.bzip2TransformTable[blockLength] = byteOrBitValue & 255;
-                          blockLength++;
-                          runLength--;
-                        }
-                        continue L15;
-                      }
-                    }
+                    continue;
                   }
+                }
+                runLength = -1;
+                runWeight = 1;
+                while (true) {
+                  if (symbol != 0) {
+                    if (symbol == 1) {
+                      runLength = runLength + 2 * runWeight;
+                    }
+                  } else {
+                    runLength = runLength + 1 * runWeight;
+                  }
+                  runWeight = runWeight * 2;
+                  if (symbolsRemainingInGroup == 0) {
+                    selectorIndex++;
+                    symbolsRemainingInGroup = 50;
+                    selectedTableIndex = state.huffmanSelectors[selectorIndex];
+                    selectedMinimumCodeLength = state.minimumCodeLengths[selectedTableIndex];
+                    selectedLimits = state.huffmanLimits[selectedTableIndex];
+                    selectedSymbols = state.huffmanSymbols[selectedTableIndex];
+                    selectedBases = state.huffmanBases[selectedTableIndex];
+                  }
+                  symbolsRemainingInGroup--;
+                  currentCodeLength = selectedMinimumCodeLength;
+                  codeBits = Bzip2Decoder.readBits(currentCodeLength, state);
+                  while (codeBits > ((int[]) (selectedLimits))[currentCodeLength]) {
+                    currentCodeLength++;
+                    nextCodeBit = Bzip2Decoder.readBit(state);
+                    codeBits = codeBits << 1 | nextCodeBit;
+                  }
+                  symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
+                  if (symbol == 0) {
+                    continue;
+                  }
+                  if (symbol == 1) {
+                    continue;
+                  }
+                  runLength++;
+                  byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
+                  state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;
+                  while (runLength > 0) {
+                    kb.bzip2TransformTable[blockLength] = byteOrBitValue & 255;
+                    blockLength++;
+                    runLength--;
+                  }
+                  continue L15;
                 }
               }
             }
@@ -416,9 +408,9 @@ final class Bzip2Decoder {
         int nextCode;
         symbolWritePosition = 0;
         for (tableIndexOrCodeLength = minimumLength; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
-          L7: for (symbolIndex = 0; symbolIndex < alphabetSize; symbolIndex++) {
+          for (symbolIndex = 0; symbolIndex < alphabetSize; symbolIndex++) {
             if (codeLengths[symbolIndex] != tableIndexOrCodeLength) {
-              continue L7;
+              continue;
             }
             symbols[symbolWritePosition] = symbolIndex;
             symbolWritePosition++;
@@ -450,13 +442,13 @@ final class Bzip2Decoder {
 
     private final static int readBits(int bitCount, Bzip2DecoderState state) {
         int bitsBeforeReturn;
-        L0: while (state.bufferedBitCount < bitCount) {
+        while (state.bufferedBitCount < bitCount) {
           state.bitBuffer = state.bitBuffer << 8 | state.inputBytes[state.inputPosition] & 255;
           state.bufferedBitCount = state.bufferedBitCount + 8;
           state.inputPosition = state.inputPosition + 1;
           state.inputBytesRead = state.inputBytesRead + 1;
           if (state.inputBytesRead != 0) {
-            continue L0;
+            continue;
           }
         }
         bitsBeforeReturn = state.bitBuffer >> state.bufferedBitCount - bitCount & (1 << bitCount) - 1;
@@ -475,9 +467,9 @@ final class Bzip2Decoder {
     private final static void buildByteAlphabet(Bzip2DecoderState state) {
         int byteValue = 0;
         state.alphabetSize = 0;
-        L0: for (byteValue = 0; byteValue < 256; byteValue++) {
+        for (byteValue = 0; byteValue < 256; byteValue++) {
           if (!state.usedBytes[byteValue]) {
-            continue L0;
+            continue;
           }
           state.alphabetBytes[state.alphabetSize] = (byte)byteValue;
           state.alphabetSize = state.alphabetSize + 1;
@@ -541,7 +533,7 @@ final class Bzip2Decoder {
           L1: {
             L2: {
               if (remainingRunLength > 0) {
-                L3: while (true) {
+                while (true) {
                   if (remainingOutputBytes == 0) {
                     break L1;
                   }
@@ -550,7 +542,7 @@ final class Bzip2Decoder {
                     remainingRunLength--;
                     outputPosition++;
                     remainingOutputBytes--;
-                    continue L3;
+                    continue;
                   }
                   if (remainingOutputBytes == 0) {
                     remainingRunLength = 1;
@@ -563,7 +555,7 @@ final class Bzip2Decoder {
                 }
               }
             }
-            L5: while (blockBytesConsumed != blockEndPosition) {
+            while (blockBytesConsumed != blockEndPosition) {
               sharedTransformTableSnapshot = transformTableAlias;
               runByte = (byte)currentByte;
               transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];

@@ -51,61 +51,59 @@ final class CachedArchiveSource extends ArchiveSource {
         if (this.indexRequest.pending) {
           return null;
         }
-        {
-          indexBytesAfterRequest = this.indexRequest.getBytes(397);
-          indexBytesFromRequest = indexBytesAfterRequest;
-          indexBytesForNullCheck = indexBytesFromRequest;
-          indexBytesForDiskValidation = indexBytesForNullCheck;
-          indexBytesBeforeValidation = indexBytesForDiskValidation;
-          indexBytesForValidation = indexBytesBeforeValidation;
-          if (this.indexRequest instanceof DiskArchiveRequest) {
-            try {
-              if (indexBytesForValidation == null) {
-                throw new RuntimeException();
-              }
-              this.index = new ArchiveIndex(indexBytesForDiskValidation, this.expectedIndexCrc32, this.expectedIndexWhirlpoolDigest);
-              if (this.index.indexRevision != this.expectedIndexRevision) {
-                throw new RuntimeException();
-              }
-            } catch (java.lang.RuntimeException diskIndexFailure) {
-              caughtIndexFailure = diskIndexFailure;
-              indexFailureForRetry = caughtIndexFailure;
-              this.index = null;
-              if (!this.networkClient.isPriorityQueueFull(20)) {
-                this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.queueRequest((byte) 0, 255, -21, this.archiveId, true));
-              } else {
-                this.indexRequest = null;
-              }
-              return null;
+        indexBytesAfterRequest = this.indexRequest.getBytes(397);
+        indexBytesFromRequest = indexBytesAfterRequest;
+        indexBytesForNullCheck = indexBytesFromRequest;
+        indexBytesForDiskValidation = indexBytesForNullCheck;
+        indexBytesBeforeValidation = indexBytesForDiskValidation;
+        indexBytesForValidation = indexBytesBeforeValidation;
+        if (this.indexRequest instanceof DiskArchiveRequest) {
+          try {
+            if (indexBytesForValidation == null) {
+              throw new RuntimeException();
             }
-          } else {
-            try {
-              if (indexBytesForNullCheck == null) {
-                throw new RuntimeException();
-              }
-              this.index = new ArchiveIndex(indexBytesAfterRequest, this.expectedIndexCrc32, this.expectedIndexWhirlpoolDigest);
-            } catch (java.lang.RuntimeException networkIndexFailure) {
-              caughtIndexFailure = networkIndexFailure;
-              indexFailureForRetry = caughtIndexFailure;
-              this.networkClient.resetAfterValidationFailure(20);
-              this.index = null;
-              if (this.networkClient.isPriorityQueueFull(20)) {
-                this.indexRequest = null;
-              } else {
-                this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.queueRequest((byte) 0, 255, -21, this.archiveId, true));
-              }
-              return null;
+            this.index = new ArchiveIndex(indexBytesForDiskValidation, this.expectedIndexCrc32, this.expectedIndexWhirlpoolDigest);
+            if (this.index.indexRevision != this.expectedIndexRevision) {
+              throw new RuntimeException();
             }
-            if (null != this.indexDiskCache) {
-              this.diskWorker.queueWrite((byte) 88, this.archiveId, this.indexDiskCache, indexBytesAfterRequest);
+          } catch (java.lang.RuntimeException diskIndexFailure) {
+            caughtIndexFailure = diskIndexFailure;
+            indexFailureForRetry = caughtIndexFailure;
+            this.index = null;
+            if (!this.networkClient.isPriorityQueueFull(20)) {
+              this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.queueRequest((byte) 0, 255, -21, this.archiveId, true));
+            } else {
+              this.indexRequest = null;
             }
+            return null;
           }
-          this.indexRequest = null;
-          if (this.groupDiskCache != null) {
-            this.groupDiskStatus = new byte[this.index.groupSlotCount];
+        } else {
+          try {
+            if (indexBytesForNullCheck == null) {
+              throw new RuntimeException();
+            }
+            this.index = new ArchiveIndex(indexBytesAfterRequest, this.expectedIndexCrc32, this.expectedIndexWhirlpoolDigest);
+          } catch (java.lang.RuntimeException networkIndexFailure) {
+            caughtIndexFailure = networkIndexFailure;
+            indexFailureForRetry = caughtIndexFailure;
+            this.networkClient.resetAfterValidationFailure(20);
+            this.index = null;
+            if (this.networkClient.isPriorityQueueFull(20)) {
+              this.indexRequest = null;
+            } else {
+              this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.queueRequest((byte) 0, 255, -21, this.archiveId, true));
+            }
+            return null;
           }
-          return this.index;
+          if (null != this.indexDiskCache) {
+            this.diskWorker.queueWrite((byte) 88, this.archiveId, this.indexDiskCache, indexBytesAfterRequest);
+          }
         }
+        this.indexRequest = null;
+        if (this.groupDiskCache != null) {
+          this.groupDiskStatus = new byte[this.index.groupSlotCount];
+        }
+        return this.index;
     }
 
     private final ArchiveRequest getGroupRequest(byte methodGuard, int requestMode, int groupId) {
@@ -183,134 +181,130 @@ final class CachedArchiveSource extends ArchiveSource {
         if (((ArchiveRequest) (request)).pending) {
           return null;
         }
-        {
-          groupBytesForPayloadChecks = ((ArchiveRequest) (request)).getBytes(397);
-          groupBytesFromRequest = groupBytesForPayloadChecks;
-          groupBytes = groupBytesFromRequest;
-          if (methodGuard != -71) {
-            return (ArchiveRequest) null;
-          }
-          if (request instanceof DiskArchiveRequest) {
-            try {
-              if (groupBytes != null) {
-                if (groupBytesForPayloadChecks.length > 2) {
-                  WhirlpoolHash.field_f.reset();
-                  WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
-                  payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
-                  if (payloadCrc32 != this.index.groupCrc32[groupId]) {
-                    throw new RuntimeException();
-                  }
-                  {
-                    L12: {
-                      if (this.index.groupWhirlpoolDigests != null) {
-                        if (null != this.index.groupWhirlpoolDigests[groupId]) {
-                          expectedDiskGroupDigest = this.index.groupWhirlpoolDigests[groupId];
-                          computedDiskGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
-                          for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
-                            if (~expectedDiskGroupDigest[digestByteIndex] != ~computedDiskGroupDigest[digestByteIndex]) {
-                              throw new RuntimeException();
-                            }
-                          }
-                          break L12;
+        groupBytesForPayloadChecks = ((ArchiveRequest) (request)).getBytes(397);
+        groupBytesFromRequest = groupBytesForPayloadChecks;
+        groupBytes = groupBytesFromRequest;
+        if (methodGuard != -71) {
+          return (ArchiveRequest) null;
+        }
+        if (request instanceof DiskArchiveRequest) {
+          try {
+            if (groupBytes != null) {
+              if (groupBytesForPayloadChecks.length > 2) {
+                WhirlpoolHash.field_f.reset();
+                WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
+                payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
+                if (payloadCrc32 != this.index.groupCrc32[groupId]) {
+                  throw new RuntimeException();
+                }
+                L12: {
+                  if (this.index.groupWhirlpoolDigests != null) {
+                    if (null != this.index.groupWhirlpoolDigests[groupId]) {
+                      expectedDiskGroupDigest = this.index.groupWhirlpoolDigests[groupId];
+                      computedDiskGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
+                      for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
+                        if (~expectedDiskGroupDigest[digestByteIndex] != ~computedDiskGroupDigest[digestByteIndex]) {
+                          throw new RuntimeException();
                         }
                       }
+                      break L12;
                     }
-                    storedGroupRevision = (groupBytes[-2 + groupBytesForPayloadChecks.length] << 8 & 65280) + (groupBytes[groupBytesForPayloadChecks.length - 1] & 255);
-                    if ((65535 & this.index.groupRevisions[groupId]) != storedGroupRevision) {
-                      throw new RuntimeException();
-                    }
-                    if (this.groupDiskStatus[groupId] != 1) {
-                      if (this.groupDiskStatus[groupId] != 0) {
-                      }
-                      this.groupDiskStatus[groupId] = (byte) 1;
-                    }
-                    if (!((ArchiveRequest) (request)).priority) {
-                      ((ArchiveRequest) (request)).unlinkNode(false);
-                    }
-                    validatedDiskRequestBeforeReturn = request;
-                    return (ArchiveRequest) ((Object) validatedDiskRequestBeforeReturn);
                   }
                 }
+                storedGroupRevision = (groupBytes[-2 + groupBytesForPayloadChecks.length] << 8 & 65280) + (groupBytes[groupBytesForPayloadChecks.length - 1] & 255);
+                if ((65535 & this.index.groupRevisions[groupId]) != storedGroupRevision) {
+                  throw new RuntimeException();
+                }
+                if (this.groupDiskStatus[groupId] != 1) {
+                  if (this.groupDiskStatus[groupId] != 0) {
+                  }
+                  this.groupDiskStatus[groupId] = (byte) 1;
+                }
+                if (!((ArchiveRequest) (request)).priority) {
+                  ((ArchiveRequest) (request)).unlinkNode(false);
+                }
+                validatedDiskRequestBeforeReturn = request;
+                return (ArchiveRequest) ((Object) validatedDiskRequestBeforeReturn);
               }
-              throw new RuntimeException();
-            } catch (java.lang.Exception diskFailure) {
-              caughtValidationFailure = diskFailure;
-              diskValidationFailure = (Exception) (Object) caughtValidationFailure;
-              this.groupDiskStatus[groupId] = (byte)-1;
-              ((ArchiveRequest) (request)).unlinkNode(false);
-              if (!((ArchiveRequest) (request)).priority) {
-                return null;
-              }
-              if (this.networkClient.isPriorityQueueFull(20)) {
-                return null;
-              }
-              request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
-              this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
+            }
+            throw new RuntimeException();
+          } catch (java.lang.Exception diskFailure) {
+            caughtValidationFailure = diskFailure;
+            diskValidationFailure = (Exception) (Object) caughtValidationFailure;
+            this.groupDiskStatus[groupId] = (byte)-1;
+            ((ArchiveRequest) (request)).unlinkNode(false);
+            if (!((ArchiveRequest) (request)).priority) {
               return null;
             }
-          }
-          try {
-            L4: {
-              if (groupBytes != null) {
-                if (groupBytesForPayloadChecks.length > 2) {
-                  WhirlpoolHash.field_f.reset();
-                  WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
-                  payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
-                  if (payloadCrc32 != this.index.groupCrc32[groupId]) {
-                    throw new RuntimeException();
-                  }
-                  L6: {
-                    if (null != this.index.groupWhirlpoolDigests) {
-                      if (null != this.index.groupWhirlpoolDigests[groupId]) {
-                        expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
-                        computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
-                        networkDigestByteIndex = 0;
-                        digestByteIndex = networkDigestByteIndex;
-                        L7: while (networkDigestByteIndex < 64) {
-                          if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
-                            throw new RuntimeException();
-                          }
-                          networkDigestByteIndex++;
-                        }
-                        break L6;
-                      }
-                    }
-                  }
-                  this.networkClient.failureCount = 0;
-                  this.networkClient.failureCode = 0;
-                  break L4;
-                }
-              }
-              throw new RuntimeException();
+            if (this.networkClient.isPriorityQueueFull(20)) {
+              return null;
             }
-          } catch (java.lang.RuntimeException networkFailure) {
-            caughtValidationFailure = networkFailure;
-            networkValidationFailure = (RuntimeException) (Object) caughtValidationFailure;
-            this.networkClient.resetAfterValidationFailure(20);
-            ((ArchiveRequest) (request)).unlinkNode(false);
-            if (((ArchiveRequest) (request)).priority) {
-              if (!this.networkClient.isPriorityQueueFull(methodGuard ^ -83)) {
-                request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
-                this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
-              }
-            }
+            request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
+            this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
             return null;
           }
-          groupBytes[groupBytesForPayloadChecks.length - 2] = (byte)(this.index.groupRevisions[groupId] >>> 8);
-          groupBytes[-1 + groupBytesForPayloadChecks.length] = (byte)this.index.groupRevisions[groupId];
-          if (null != this.groupDiskCache) {
-            this.diskWorker.queueWrite((byte) 66, groupId, this.groupDiskCache, groupBytesForPayloadChecks);
-            complementedDiskStatusBeforeWrite = ~this.groupDiskStatus[groupId];
-            complementedValidStatus = -2;
-            if (complementedDiskStatusBeforeWrite != complementedValidStatus) {
-              this.groupDiskStatus[groupId] = (byte) 1;
+        }
+        try {
+          L4: {
+            if (groupBytes != null) {
+              if (groupBytesForPayloadChecks.length > 2) {
+                WhirlpoolHash.field_f.reset();
+                WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
+                payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
+                if (payloadCrc32 != this.index.groupCrc32[groupId]) {
+                  throw new RuntimeException();
+                }
+                L6: {
+                  if (null != this.index.groupWhirlpoolDigests) {
+                    if (null != this.index.groupWhirlpoolDigests[groupId]) {
+                      expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
+                      computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
+                      networkDigestByteIndex = 0;
+                      digestByteIndex = networkDigestByteIndex;
+                      while (networkDigestByteIndex < 64) {
+                        if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
+                          throw new RuntimeException();
+                        }
+                        networkDigestByteIndex++;
+                      }
+                      break L6;
+                    }
+                  }
+                }
+                this.networkClient.failureCount = 0;
+                this.networkClient.failureCode = 0;
+                break L4;
+              }
+            }
+            throw new RuntimeException();
+          }
+        } catch (java.lang.RuntimeException networkFailure) {
+          caughtValidationFailure = networkFailure;
+          networkValidationFailure = (RuntimeException) (Object) caughtValidationFailure;
+          this.networkClient.resetAfterValidationFailure(20);
+          ((ArchiveRequest) (request)).unlinkNode(false);
+          if (((ArchiveRequest) (request)).priority) {
+            if (!this.networkClient.isPriorityQueueFull(methodGuard ^ -83)) {
+              request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
+              this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
             }
           }
-          if (!((ArchiveRequest) (request)).priority) {
-            ((ArchiveRequest) (request)).unlinkNode(false);
-          }
-          return (ArchiveRequest) (request);
+          return null;
         }
+        groupBytes[groupBytesForPayloadChecks.length - 2] = (byte)(this.index.groupRevisions[groupId] >>> 8);
+        groupBytes[-1 + groupBytesForPayloadChecks.length] = (byte)this.index.groupRevisions[groupId];
+        if (null != this.groupDiskCache) {
+          this.diskWorker.queueWrite((byte) 66, groupId, this.groupDiskCache, groupBytesForPayloadChecks);
+          complementedDiskStatusBeforeWrite = ~this.groupDiskStatus[groupId];
+          complementedValidStatus = -2;
+          if (complementedDiskStatusBeforeWrite != complementedValidStatus) {
+            this.groupDiskStatus[groupId] = (byte) 1;
+          }
+        }
+        if (!((ArchiveRequest) (request)).priority) {
+          ((ArchiveRequest) (request)).unlinkNode(false);
+        }
+        return (ArchiveRequest) (request);
     }
 
     final static String a(int param0, String param1) {
@@ -463,7 +457,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   if (this.verifyDiskCachePending) {
                     phaseComplete = 1;
                     backgroundGroup = this.backgroundGroups.firstForIteration(0);
-                    L4: while (backgroundGroup != null) {
+                    while (backgroundGroup != null) {
                       groupId = (int)backgroundGroup.field_a;
                       if (this.groupDiskStatus[groupId] == 0) {
                         unusedQueuedDiskVerificationRequest = this.getGroupRequest((byte) -71, 1, groupId);
@@ -475,10 +469,10 @@ final class CachedArchiveSource extends ArchiveSource {
                       }
                       backgroundGroup = this.backgroundGroups.nextForIteration(1);
                     }
-                    L5: while (this.backgroundGroupIndex < this.index.fileCounts.length) {
+                    while (this.backgroundGroupIndex < this.index.fileCounts.length) {
                       if (0 == this.index.fileCounts[this.backgroundGroupIndex]) {
                         this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
-                        continue L5;
+                        continue;
                       }
                       if (this.diskWorker.queuedRequestCount < 250) {
                         if (this.groupDiskStatus[this.backgroundGroupIndex] == 0) {
@@ -491,7 +485,7 @@ final class CachedArchiveSource extends ArchiveSource {
                           this.backgroundGroups.addLast(-45, newVerificationGroup);
                         }
                         this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
-                        continue L5;
+                        continue;
                       }
                       phaseComplete = 0;
                       break;
@@ -506,7 +500,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   if (this.downloadAllPending) {
                     phaseComplete = 1;
                     backgroundGroup = this.backgroundGroups.firstForIteration(0);
-                    L11: while (backgroundGroup != null) {
+                    while (backgroundGroup != null) {
                       groupId = (int)backgroundGroup.field_a;
                       if (this.groupDiskStatus[groupId] != 1) {
                         unusedQueuedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, groupId);
@@ -518,7 +512,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       }
                       backgroundGroup = this.backgroundGroups.nextForIteration(1);
                     }
-                    L12: while (true) {
+                    while (true) {
                       L13: {
                         if (this.backgroundGroupIndex < this.index.fileCounts.length) {
                           if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
@@ -537,7 +531,7 @@ final class CachedArchiveSource extends ArchiveSource {
                             }
                           }
                           this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
-                          continue L12;
+                          continue;
                         }
                       }
                       if (phaseComplete != 0) {
@@ -554,23 +548,21 @@ final class CachedArchiveSource extends ArchiveSource {
                       if (~oa.a(-12520) > ~this.nextRequestSweepMillis) {
                         break L1;
                       }
-                      {
-                        cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((byte) 125));
-                        L17: while (cleanupRequest != null) {
-                          if (!cleanupRequest.pending) {
-                            if (cleanupRequest.seenByCleanup) {
-                              if (!cleanupRequest.priority) {
-                                throw new RuntimeException();
-                              }
-                              cleanupRequest.unlinkNode(false);
-                            } else {
-                              cleanupRequest.seenByCleanup = true;
+                      cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((byte) 125));
+                      while (cleanupRequest != null) {
+                        if (!cleanupRequest.pending) {
+                          if (cleanupRequest.seenByCleanup) {
+                            if (!cleanupRequest.priority) {
+                              throw new RuntimeException();
                             }
+                            cleanupRequest.unlinkNode(false);
+                          } else {
+                            cleanupRequest.seenByCleanup = true;
                           }
-                          cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.b(74));
                         }
-                        break L2;
+                        cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.b(74));
                       }
+                      break L2;
                     }
                   }
                   this.backgroundGroups = null;
@@ -586,7 +578,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 break L1;
               }
               cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((byte) 125));
-              L22: while (cleanupRequest != null) {
+              while (cleanupRequest != null) {
                 if (!cleanupRequest.pending) {
                   if (cleanupRequest.seenByCleanup) {
                     if (!cleanupRequest.priority) {

@@ -29,33 +29,29 @@ final class PaletteBitmapFont extends BitmapFont {
             return;
           }
           negativeColumnCounter = -width;
-          L1: while (true) {
+          while (true) {
             if (negativeColumnCounter >= 0) {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
               continue L0;
             }
-            {
-              sourceIndexBeforeIncrement = sourceIndex;
-              sourceIndex++;
-              glyphIndexByte = glyphIndices[sourceIndexBeforeIncrement];
-              signedGlyphIndex = glyphIndexByte;
-              if (glyphIndexByte == 0) {
-                destinationIndex++;
-                negativeColumnCounter++;
-                continue L1;
-              }
-              {
-                destinationColor = destinationPixels[destinationIndex];
-                sourceColor = palette[signedGlyphIndex & 255];
-                destinationIndexBeforeIncrement = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationIndexBeforeIncrement] = ((sourceColor & 16711935) * alpha256 + (destinationColor & 16711935) * destinationWeight256 & -16711936) + ((sourceColor & 65280) * alpha256 + (destinationColor & 65280) * destinationWeight256 & 16711680) >> 8;
-                negativeColumnCounter++;
-                continue L1;
-              }
+            sourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            glyphIndexByte = glyphIndices[sourceIndexBeforeIncrement];
+            signedGlyphIndex = glyphIndexByte;
+            if (glyphIndexByte == 0) {
+              destinationIndex++;
+              negativeColumnCounter++;
+              continue;
             }
+            destinationColor = destinationPixels[destinationIndex];
+            sourceColor = palette[signedGlyphIndex & 255];
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationIndexBeforeIncrement] = ((sourceColor & 16711935) * alpha256 + (destinationColor & 16711935) * destinationWeight256 & -16711936) + ((sourceColor & 65280) * alpha256 + (destinationColor & 65280) * destinationWeight256 & 16711680) >> 8;
+            negativeColumnCounter++;
+            continue;
           }
         }
     }
@@ -165,14 +161,14 @@ final class PaletteBitmapFont extends BitmapFont {
         int squaredDistance;
         nearestIndex = 0;
         minimumSquaredDistance = 2147483647;
-        L0: for (candidateIndex = 1; candidateIndex < palette.length; candidateIndex++) {
+        for (candidateIndex = 1; candidateIndex < palette.length; candidateIndex++) {
           candidateColor = palette[candidateIndex];
           redDifference = (candidateColor >> 16) - (targetColor >> 16);
           greenDifference = (candidateColor >> 8 & 255) - (targetColor >> 8 & 255);
           blueDifference = (candidateColor & 255) - (targetColor & 255);
           squaredDistance = redDifference * redDifference + greenDifference * greenDifference + blueDifference * blueDifference;
           if (squaredDistance >= minimumSquaredDistance) {
-            continue L0;
+            continue;
           }
           nearestIndex = candidateIndex;
           minimumSquaredDistance = squaredDistance;
@@ -210,90 +206,80 @@ final class PaletteBitmapFont extends BitmapFont {
           if (negativeRowCounter >= 0) {
             return;
           }
-          {
-            negativeGroupOrTailCounter = negativeFourPixelGroupCount;
-            L1: while (true) {
-              if (negativeGroupOrTailCounter >= 0) {
-                negativeGroupOrTailCounter = widthOrNegativeTailCount;
-                L2: while (true) {
-                  if (negativeGroupOrTailCounter >= 0) {
-                    destinationIndex = destinationIndex + destinationRowSkip;
-                    sourceIndex = sourceIndex + sourceRowSkip;
-                    negativeRowCounter++;
-                    continue L0;
-                  }
-                  {
-                    tailSourceIndexBeforeIncrement = sourceIndex;
-                    sourceIndex++;
-                    tailGlyphIndexByte = glyphIndices[tailSourceIndexBeforeIncrement];
-                    signedGlyphIndex = tailGlyphIndexByte;
-                    if (tailGlyphIndexByte == 0) {
-                      destinationIndex++;
-                      negativeGroupOrTailCounter++;
-                      continue L2;
-                    }
-                    {
-                      tailDestinationIndexBeforeIncrement = destinationIndex;
-                      destinationIndex++;
-                      destinationPixels[tailDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
-                      negativeGroupOrTailCounter++;
-                      continue L2;
-                    }
-                  }
+          negativeGroupOrTailCounter = negativeFourPixelGroupCount;
+          while (true) {
+            if (negativeGroupOrTailCounter >= 0) {
+              negativeGroupOrTailCounter = widthOrNegativeTailCount;
+              while (true) {
+                if (negativeGroupOrTailCounter >= 0) {
+                  destinationIndex = destinationIndex + destinationRowSkip;
+                  sourceIndex = sourceIndex + sourceRowSkip;
+                  negativeRowCounter++;
+                  continue L0;
                 }
-              }
-              {
-                firstSourceIndexBeforeIncrement = sourceIndex;
+                tailSourceIndexBeforeIncrement = sourceIndex;
                 sourceIndex++;
-                firstGlyphIndexByte = glyphIndices[firstSourceIndexBeforeIncrement];
-                signedGlyphIndex = firstGlyphIndexByte;
-                if (firstGlyphIndexByte == 0) {
-                  destinationIndex++;
-                } else {
-                  firstDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[firstDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
-                }
-                secondSourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                secondGlyphIndexByte = glyphIndices[secondSourceIndexBeforeIncrement];
-                signedGlyphIndex = secondGlyphIndexByte;
-                if (secondGlyphIndexByte == 0) {
-                  destinationIndex++;
-                } else {
-                  secondDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[secondDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
-                }
-                thirdSourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                thirdGlyphIndexByte = glyphIndices[thirdSourceIndexBeforeIncrement];
-                signedGlyphIndex = thirdGlyphIndexByte;
-                if (thirdGlyphIndexByte == 0) {
-                  destinationIndex++;
-                } else {
-                  thirdDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[thirdDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
-                }
-                fourthSourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                fourthGlyphIndexByte = glyphIndices[fourthSourceIndexBeforeIncrement];
-                signedGlyphIndex = fourthGlyphIndexByte;
-                if (fourthGlyphIndexByte == 0) {
+                tailGlyphIndexByte = glyphIndices[tailSourceIndexBeforeIncrement];
+                signedGlyphIndex = tailGlyphIndexByte;
+                if (tailGlyphIndexByte == 0) {
                   destinationIndex++;
                   negativeGroupOrTailCounter++;
-                  continue L1;
+                  continue;
                 }
-                {
-                  fourthDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  destinationPixels[fourthDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
-                  negativeGroupOrTailCounter++;
-                  continue L1;
-                }
+                tailDestinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                destinationPixels[tailDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
+                negativeGroupOrTailCounter++;
+                continue;
               }
             }
+            firstSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            firstGlyphIndexByte = glyphIndices[firstSourceIndexBeforeIncrement];
+            signedGlyphIndex = firstGlyphIndexByte;
+            if (firstGlyphIndexByte == 0) {
+              destinationIndex++;
+            } else {
+              firstDestinationIndexBeforeIncrement = destinationIndex;
+              destinationIndex++;
+              destinationPixels[firstDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
+            }
+            secondSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            secondGlyphIndexByte = glyphIndices[secondSourceIndexBeforeIncrement];
+            signedGlyphIndex = secondGlyphIndexByte;
+            if (secondGlyphIndexByte == 0) {
+              destinationIndex++;
+            } else {
+              secondDestinationIndexBeforeIncrement = destinationIndex;
+              destinationIndex++;
+              destinationPixels[secondDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
+            }
+            thirdSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            thirdGlyphIndexByte = glyphIndices[thirdSourceIndexBeforeIncrement];
+            signedGlyphIndex = thirdGlyphIndexByte;
+            if (thirdGlyphIndexByte == 0) {
+              destinationIndex++;
+            } else {
+              thirdDestinationIndexBeforeIncrement = destinationIndex;
+              destinationIndex++;
+              destinationPixels[thirdDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
+            }
+            fourthSourceIndexBeforeIncrement = sourceIndex;
+            sourceIndex++;
+            fourthGlyphIndexByte = glyphIndices[fourthSourceIndexBeforeIncrement];
+            signedGlyphIndex = fourthGlyphIndexByte;
+            if (fourthGlyphIndexByte == 0) {
+              destinationIndex++;
+              negativeGroupOrTailCounter++;
+              continue;
+            }
+            fourthDestinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            destinationPixels[fourthDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
+            negativeGroupOrTailCounter++;
+            continue;
           }
         }
     }

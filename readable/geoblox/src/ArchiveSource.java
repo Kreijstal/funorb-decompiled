@@ -75,7 +75,7 @@ abstract class ArchiveSource {
           vf.field_I.writeByte((byte) -69, 10);
           var10 = 0;
           var9 = var10;
-          L6: while (var10 < 4) {
+          while (var10 < 4) {
             vf.field_I.writeIntBE((byte) 95, var12[var10]);
             var10++;
           }

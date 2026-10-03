@@ -70,40 +70,36 @@ final class hj {
           field_a = 2;
         }
         spriteIndex = 0;
-        L1: while (true) {
+        while (true) {
           if (sb.decodedSpriteCount <= spriteIndex) {
             kj.clearDecodedSpriteWorkingArrays(true);
             return sprites;
           }
-          {
-            pixelCount = hl.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
-            paletteIndices = mj.decodedSpriteIndices[spriteIndex];
-            if (!ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex]) {
-              rgbPixelsForUpdates = new int[pixelCount];
-              rgbPixelsSnapshot = rgbPixelsForUpdates;
-              for (rgbPixelIndex = 0; pixelCount > rgbPixelIndex; rgbPixelIndex++) {
-                rgbPixelsForUpdates[rgbPixelIndex] = cm.decodedSpritePalette[cd.andInt((int) paletteIndices[rgbPixelIndex], 255)];
-              }
-              sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixelsSnapshot);
-              spriteIndex++;
-              continue L1;
+          pixelCount = hl.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
+          paletteIndices = mj.decodedSpriteIndices[spriteIndex];
+          if (!ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex]) {
+            rgbPixelsForUpdates = new int[pixelCount];
+            rgbPixelsSnapshot = rgbPixelsForUpdates;
+            for (rgbPixelIndex = 0; pixelCount > rgbPixelIndex; rgbPixelIndex++) {
+              rgbPixelsForUpdates[rgbPixelIndex] = cm.decodedSpritePalette[cd.andInt((int) paletteIndices[rgbPixelIndex], 255)];
             }
-            {
-              alphaPlaneSnapshot = vf.decodedSpriteAlpha[spriteIndex];
-              alphaPlaneForwarded = alphaPlaneSnapshot;
-              alphaPlaneAlias = alphaPlaneForwarded;
-              unusedAlphaPlaneAlias = alphaPlaneAlias;
-              argbPixelsSnapshot = new int[pixelCount];
-              argbPixelsForwarded = argbPixelsSnapshot;
-              argbPixelsForUpdates = argbPixelsForwarded;
-              for (argbPixelIndex = 0; argbPixelIndex < pixelCount; argbPixelIndex++) {
-                argbPixelsForUpdates[argbPixelIndex] = lb.orInt(cd.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), cm.decodedSpritePalette[cd.andInt((int) paletteIndices[argbPixelIndex], 255)]);
-              }
-              sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
-              spriteIndex++;
-              continue L1;
-            }
+            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixelsSnapshot);
+            spriteIndex++;
+            continue;
           }
+          alphaPlaneSnapshot = vf.decodedSpriteAlpha[spriteIndex];
+          alphaPlaneForwarded = alphaPlaneSnapshot;
+          alphaPlaneAlias = alphaPlaneForwarded;
+          unusedAlphaPlaneAlias = alphaPlaneAlias;
+          argbPixelsSnapshot = new int[pixelCount];
+          argbPixelsForwarded = argbPixelsSnapshot;
+          argbPixelsForUpdates = argbPixelsForwarded;
+          for (argbPixelIndex = 0; argbPixelIndex < pixelCount; argbPixelIndex++) {
+            argbPixelsForUpdates[argbPixelIndex] = lb.orInt(cd.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), cm.decodedSpritePalette[cd.andInt((int) paletteIndices[argbPixelIndex], 255)]);
+          }
+          sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
+          spriteIndex++;
+          continue;
         }
     }
 

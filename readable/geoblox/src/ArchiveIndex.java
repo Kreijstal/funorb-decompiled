@@ -158,7 +158,7 @@ final class ArchiveIndex {
                 unusedNullPackedBytesSnapshot = (byte[]) null;
                 this.decodeIndex((byte) -96, (byte[]) null);
               }
-              L18: while (this.groupCount > groupOrdinalOrSlotIndex) {
+              while (this.groupCount > groupOrdinalOrSlotIndex) {
                 this.groupRevisions[this.groupIds[groupOrdinalOrSlotIndex]] = indexBuffer.readIntBE((byte) -110);
                 groupOrdinalOrSlotIndex++;
               }
@@ -201,14 +201,14 @@ final class ArchiveIndex {
                   newShortFileIds = new int[actualFileCount];
                   this.fileIds[groupId] = newShortFileIds;
                   maximumFileIdOrFileSlotIndex = -1;
-                  L27: for (fileOrdinalOrFileId = 0; actualFileCount > fileOrdinalOrFileId; fileOrdinalOrFileId++) {
+                  for (fileOrdinalOrFileId = 0; actualFileCount > fileOrdinalOrFileId; fileOrdinalOrFileId++) {
                     fileIdAfterShortDelta = accumulatedId + indexBuffer.readUnsignedShortBE(true);
                     accumulatedId = fileIdAfterShortDelta;
                     shortFileIdsForStore = this.fileIds[groupId];
                     shortFileIdsForStore[fileOrdinalOrFileId] = fileIdAfterShortDelta;
                     reconstructedFileId = fileIdAfterShortDelta;
                     if (~maximumFileIdOrFileSlotIndex <= ~reconstructedFileId) {
-                      continue L27;
+                      continue;
                     }
                     maximumFileIdOrFileSlotIndex = reconstructedFileId;
                   }

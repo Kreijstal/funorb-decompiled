@@ -22,7 +22,7 @@ final class bd extends IOException {
           if (param0 > -112) {
             return;
           }
-          L0: while (popup != null) {
+          while (popup != null) {
             if (popup.chainMultiplier != 1) {
               chainAndPointsText = "X" + popup.chainMultiplier + " - " + popup.pointsText;
               var3 = dd.uiPaletteFont.colorPalettes[0][wf.field_p];
