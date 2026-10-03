@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`1b46d772b7dd2ddb026d31dd849f0ea77424cab7`. It comes from java-tools
-`d4ad201b2cc96e98089be0c4ccfe819dd7a924da` and Deko
+`4f02f56a771c27f1cf814157be4606fb4450cc9b`. It comes from java-tools
+`5420742cd2ea194a1f128fb0059e1e2bf3487e8e` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda`:
+`1cb7031c92759a6a2847c2baf87db5def26a4edbaa50a6020409fb436987ae47`:
 
 ```sh
-git archive --format=tar d4ad201b2cc96e98089be0c4ccfe819dd7a924da | sha256sum
+git archive --format=tar 5420742cd2ea194a1f128fb0059e1e2bf3487e8e | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,46 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current short-circuit boolean decisions
+## Current direct void exit paths
+
+Pass 79 converts 95 block breaks in 38 plain exit blocks across 25 files to
+ordinary `return;` statements. The destination must be an immediately following
+bare void return. Menu rendering/input, tutorial handling and sprite rotation
+now exit directly. Predicates, side effects, exception regions and declaration
+scopes remain in place. Value-return expressions or intervening work refuse it.
+
+A separate three-valued completion proof decides whether to keep the final
+return for fallthrough, remove it when unreachable, or retain the original
+candidate when completion is unknown. It resolves exact lexical loop/label
+transfers and explicit finally bodies that override break/continue. Final boolean
+constants require preceding unique declarations in scope; qualified constants
+and unsupported expressions are not guessed. Resource-header syntax is unsupported
+by the parser and remains unchanged. Explicit resource-close/finally paths are
+covered. Five unreachable trailing returns disappear. The existing control-frame
+rule then removes unused labels and nondeclaring braces, removing 81 lines
+(79,713 to 79,632).
+
+`node test/javaAstEmitterLoopExits.test.js` passes 44 tests and skips the optional
+historical pass77 frame-only corpus check. The two new groups include 46,080
+native comparisons of all loop forms, failure identity, partial state,
+catch/finally and monitor ownership/release. Finally return, throw, outer break
+and outer continue override pending transfers in the fixtures.
+`node test/cfrExceptionLoopExits.test.js` passes eight groups. The pass77 AST
+comparison remains historical evidence, not proof for the new transfer rewrite.
+
+A clean pinned decompiler archive regenerates all 303 Java files and diagnostics
+byte-for-byte. Applying only this rule and the existing control-frame cleanup
+to the previous corpus produces every regenerated token stream. Ordered
+declarations/references and override rows match, with no ordinal migrations.
+All 6,081 complete naming rules remain unchanged, applying 49,577 edits and
+preserving 138,502 bindings and 388 overrides. Text-resource assignments retain
+their fields, keys and indexes; the source pin and 218 line positions refresh.
+Readable reproduction and dictionary reversal are exact. Existing native/raw/
+readable probes retain their documented traces. Remaining opaque helpers, large
+bodies, complete assets/platform/server/gameplay and phone/FPS/heap acceptance
+remain unfinished or unverified.
+
+## Previous short-circuit boolean decisions
 
 Pass 78 folds 17 literal boolean decisions across 12 files. A primitive boolean
 local selected through nested checks and breaks to one plain exit block becomes
@@ -1490,7 +1529,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd` |
-| Readable | `288818cec73d77bae6db768b0093b2bf264310853952f2cbfb8e7afd9ba5ea9a` |
+| Raw | `16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17` |
+| Readable | `e3fc2927ff480cb3dfa2e1513e8c12951e35bec405eaa13ab1d44615336903ca` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

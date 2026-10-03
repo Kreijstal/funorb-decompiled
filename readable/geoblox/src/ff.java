@@ -167,32 +167,30 @@ class ff implements dh, cc {
           } else {
             var5 = this.field_n.maxAscent;
           }
-          L3: {
-            L4: {
-              var6 = this.field_g;
-              if (var6 != 0) {
-                if (var6 != 3) {
-                  if (var6 == 1) {
-                    if (!(param1.field_w instanceof vc)) {
-                      break L4;
-                    }
-                    ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
-                    break L3;
-                  }
-                  if (var6 != 2) {
-                    break L4;
-                  }
+          L4: {
+            var6 = this.field_g;
+            if (var6 != 0) {
+              if (var6 != 3) {
+                if (var6 == 1) {
                   if (!(param1.field_w instanceof vc)) {
                     break L4;
                   }
-                  ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
-                  break L3;
+                  ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
+                  return;
                 }
+                if (var6 != 2) {
+                  break L4;
+                }
+                if (!(param1.field_w instanceof vc)) {
+                  break L4;
+                }
+                ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+                return;
               }
-              if (param1.field_w instanceof vc) {
-                ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
-                break L3;
-              }
+            }
+            if (param1.field_w instanceof vc) {
+              ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
+              return;
             }
           }
           return;
@@ -648,43 +646,41 @@ class ff implements dh, cc {
             var17 = (el) null;
             this.a(90, -50, (el) null);
           }
-          L1: {
-            if (param5.e((byte) 54)) {
-              var18 = this.a((byte) 115, param5);
-              var19 = var18;
-              if (param4 <= param0) {
-                var9 = param0;
-                var8 = param4;
-              } else {
-                var9 = param4;
-                var8 = param0;
-              }
-              var10 = var19.a((byte) 24, var8);
-              var11 = var19.a((byte) 24, var9);
-              uh.a(param2 + param5.field_m, param3 + param5.field_v, -14045, param5.field_h + (param5.field_m + param2), param5.field_r + (param3 + param5.field_v));
-              for (var12 = var10; var12 <= var11; var12++) {
-                var13 = var18.field_a[var12];
-                if (var10 != var12) {
-                  stackIn_15_0 = var13.field_c[0];
-                } else {
-                  stackIn_15_0 = var19.a(var8, 110);
-                }
-                var14 = stackIn_15_0;
-                if (var11 != var12) {
-                  if (var13 != null) {
-                    stackIn_20_0 = var13.field_c[var13.field_c.length - 1];
-                  } else {
-                    stackIn_20_0 = 0;
-                  }
-                } else {
-                  stackIn_20_0 = var19.a(var9, 124);
-                }
-                var15 = stackIn_20_0;
-                hb.field_j.a(var13.field_d + (param2 + param5.field_m + this.field_m + param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
-              }
-              id.a(true);
-              break L1;
+          if (param5.e((byte) 54)) {
+            var18 = this.a((byte) 115, param5);
+            var19 = var18;
+            if (param4 <= param0) {
+              var9 = param0;
+              var8 = param4;
+            } else {
+              var9 = param4;
+              var8 = param0;
             }
+            var10 = var19.a((byte) 24, var8);
+            var11 = var19.a((byte) 24, var9);
+            uh.a(param2 + param5.field_m, param3 + param5.field_v, -14045, param5.field_h + (param5.field_m + param2), param5.field_r + (param3 + param5.field_v));
+            for (var12 = var10; var12 <= var11; var12++) {
+              var13 = var18.field_a[var12];
+              if (var10 != var12) {
+                stackIn_15_0 = var13.field_c[0];
+              } else {
+                stackIn_15_0 = var19.a(var8, 110);
+              }
+              var14 = stackIn_15_0;
+              if (var11 != var12) {
+                if (var13 != null) {
+                  stackIn_20_0 = var13.field_c[var13.field_c.length - 1];
+                } else {
+                  stackIn_20_0 = 0;
+                }
+              } else {
+                stackIn_20_0 = var19.a(var9, 124);
+              }
+              var15 = stackIn_20_0;
+              hb.field_j.a(var13.field_d + (param2 + param5.field_m + this.field_m + param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
+            }
+            id.a(true);
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

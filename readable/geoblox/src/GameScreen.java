@@ -335,32 +335,30 @@ final class GameScreen extends MenuScreen {
             }
             var2_int = stackIn_16_0;
             L7: while (true) {
-              L8: {
-                L9: {
-                  if (~-vc.menuForegroundSprite.fullWidth >= ~var2_int) {
-                    if (var4 != 0) {
-                      break L8;
-                    }
-                    var3 = this.field_I + vc.menuForegroundSprite.fullHeight + 480;
-                    while (true) {
-                      L11: {
-                        if (~var3 <= ~-vc.menuForegroundSprite.fullHeight) {
-                          vc.menuForegroundSprite.draw(var2_int, var3);
-                          var3 = var3 - vc.menuForegroundSprite.fullHeight;
-                          if (var4 != 0) {
-                            break L11;
-                          }
-                          if (var4 == 0) {
-                            continue;
-                          }
+              L9: {
+                if (~-vc.menuForegroundSprite.fullWidth >= ~var2_int) {
+                  if (var4 != 0) {
+                    return;
+                  }
+                  var3 = this.field_I + vc.menuForegroundSprite.fullHeight + 480;
+                  while (true) {
+                    L11: {
+                      if (~var3 <= ~-vc.menuForegroundSprite.fullHeight) {
+                        vc.menuForegroundSprite.draw(var2_int, var3);
+                        var3 = var3 - vc.menuForegroundSprite.fullHeight;
+                        if (var4 != 0) {
+                          break L11;
                         }
-                        var2_int = var2_int - vc.menuForegroundSprite.fullWidth;
+                        if (var4 == 0) {
+                          continue;
+                        }
                       }
-                      if (var4 == 0) {
-                        continue L7;
-                      }
-                      break L9;
+                      var2_int = var2_int - vc.menuForegroundSprite.fullWidth;
                     }
+                    if (var4 == 0) {
+                      continue L7;
+                    }
+                    break L9;
                   }
                 }
               }
@@ -473,318 +471,316 @@ final class GameScreen extends MenuScreen {
           if (!this.field_E) {
             super.renderScreen(param0 + 0);
           }
-          L7: {
-            if (this.screenId != 2) {
-              if (this.screenId != 8) {
-                L9: {
-                  if (5 != this.screenId) {
-                    if (7 != this.screenId) {
-                      break L9;
-                    }
-                  }
-                  kh.screenTitleSprites[4].draw(0, 20);
-                  ac.a(false, false, (byte) -93);
-                  if (var12 == 0) {
-                    break L7;
+          if (this.screenId != 2) {
+            if (this.screenId != 8) {
+              L9: {
+                if (5 != this.screenId) {
+                  if (7 != this.screenId) {
+                    break L9;
                   }
                 }
-                if (this.screenId != 6) {
-                  if (this.screenId == 4) {
-                    kh.screenTitleSprites[8].draw(0, 20);
-                    ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
-                    var5 = 184;
-                    dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
-                    var5 = 185;
-                    fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
-                    ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
-                    fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
-                    if (var12 == 0) {
-                      break L7;
+                kh.screenTitleSprites[4].draw(0, 20);
+                ac.a(false, false, (byte) -93);
+                if (var12 == 0) {
+                  return;
+                }
+              }
+              if (this.screenId != 6) {
+                if (this.screenId == 4) {
+                  kh.screenTitleSprites[8].draw(0, 20);
+                  ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
+                  var5 = 184;
+                  dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
+                  var5 = 185;
+                  fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
+                  ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
+                  fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
+                  if (var12 == 0) {
+                    return;
+                  }
+                }
+                if (this.screenId != 3) {
+                  kh.screenTitleSprites[0].draw(0, 20);
+                  if (this.screenId != 0) {
+                    if (this.screenId != 1) {
+                      return;
                     }
                   }
-                  if (this.screenId != 3) {
-                    kh.screenTitleSprites[0].draw(0, 20);
-                    if (this.screenId != 0) {
-                      if (this.screenId != 1) {
-                        break L7;
-                      }
-                    }
-                    if (!this.field_C) {
-                      break L7;
-                    }
-                    if (fh.c(-93)) {
-                      if (this.activeTicks <= 200) {
-                        stackIn_73_0 = this.activeTicks;
-                      } else {
-                        stackIn_73_0 = 200;
-                      }
-                      L17: {
-                        var5 = stackIn_73_0;
-                        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                        ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
-                        var6 = 170;
-                        fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
-                        var7 = 100;
-                        var8 = -(20 + var7 >> 1) + 410;
-                        var6 = 265;
-                        var9 = var8 - (-(var7 >> 1) - 10);
-                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                        if (1 != this.field_o) {
-                          if (this.field_o >= 0) {
-                            break L17;
-                          }
-                          if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
-                            break L17;
-                          }
-                          if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                            break L17;
-                          }
-                          if (ue.pointerYSnapshot <= 265) {
-                            break L17;
-                          }
-                          if (ue.pointerYSnapshot >= 299) {
-                            break L17;
-                          }
-                        }
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                      }
-                      L19: {
-                        dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                        var8 = 320 - (20 + var7 >> 1) - 90;
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                        var6 = 265;
-                        var9 = 10 + (var7 >> 1) + var8;
-                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                        if (this.field_o != 0) {
-                          if (0 <= this.field_o) {
-                            break L19;
-                          }
-                          if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
-                            break L19;
-                          }
-                          if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                            break L19;
-                          }
-                          if (ue.pointerYSnapshot <= 265) {
-                            break L19;
-                          }
-                          if (ue.pointerYSnapshot >= 299) {
-                            break L19;
-                          }
-                        }
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                      }
-                      dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                      if (var12 == 0) {
-                        break L7;
-                      }
-                    }
-                    if (og.field_n > 0) {
-                      if (vl.field_n == null) {
-                        if (this.activeTicks > 200) {
-                          stackIn_122_0 = 200;
-                        } else {
-                          stackIn_122_0 = this.activeTicks;
-                        }
-                        L24: {
-                          var5 = stackIn_122_0;
-                          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                          ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
-                          var6 = 170;
-                          var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                          var6 += 40;
-                          var7 = 100;
-                          var8 = 320 - (var7 + 20 >> 1);
-                          var9 = (var7 >> 1) + (var8 + 10);
-                          ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                          if (0 != this.field_o) {
-                            if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
-                              break L24;
-                            }
-                            if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
-                              break L24;
-                            }
-                            if (ue.pointerYSnapshot <= 274) {
-                              break L24;
-                            }
-                            if (ue.pointerYSnapshot >= 309) {
-                              break L24;
-                            }
-                          }
-                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                        }
-                        dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                        if (var12 == 0) {
-                          break L7;
-                        }
-                      }
-                      if (this.activeTicks <= 200) {
-                        stackIn_144_0 = this.activeTicks;
-                      } else {
-                        stackIn_144_0 = 200;
-                      }
-                      L27: {
-                        var5 = stackIn_144_0;
-                        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                        ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
-                        var6 = 170;
-                        var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
-                        var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                        var6 += 10;
-                        var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
-                        if ((1500 - this.activeTicks) / 150 <= 0) {
-                          var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                          if (var12 == 0) {
-                            break L27;
-                          }
-                        }
-                        var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                      }
-                      L29: {
-                        var6 += 40;
-                        var9 = 100;
-                        var10 = -(20 + var9 >> 1) + 320 + 90;
-                        ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
-                        var11 = 10 + ((var9 >> 1) + var10);
-                        if (this.field_o != 1) {
-                          if (0 <= this.field_o) {
-                            break L29;
-                          }
-                          if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
-                            break L29;
-                          }
-                          if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                            break L29;
-                          }
-                          if (ue.pointerYSnapshot <= 317) {
-                            break L29;
-                          }
-                          if (ue.pointerYSnapshot >= 352) {
-                            break L29;
-                          }
-                        }
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                      }
-                      L31: {
-                        dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                        var10 = 320 - (20 + var9 >> 1) - 90;
-                        var11 = 10 + (var9 >> 1) + var10;
-                        ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
-                        if (this.field_o != 0) {
-                          if (this.field_o >= 0) {
-                            break L31;
-                          }
-                          if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
-                            break L31;
-                          }
-                          if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                            break L31;
-                          }
-                          if (ue.pointerYSnapshot <= 317) {
-                            break L31;
-                          }
-                          if (ue.pointerYSnapshot >= 352) {
-                            break L31;
-                          }
-                        }
-                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                      }
-                      dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                      if (var12 == 0) {
-                        break L7;
-                      }
-                    }
-                    if (this.activeTicks > 200) {
-                      stackIn_191_0 = 200;
+                  if (!this.field_C) {
+                    return;
+                  }
+                  if (fh.c(-93)) {
+                    if (this.activeTicks <= 200) {
+                      stackIn_73_0 = this.activeTicks;
                     } else {
-                      stackIn_191_0 = this.activeTicks;
+                      stackIn_73_0 = 200;
                     }
-                    L34: {
-                      var5 = stackIn_191_0;
+                    L17: {
+                      var5 = stackIn_73_0;
                       SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                      ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
-                      var6 = 180;
-                      fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                      var7 = 242;
-                      var8 = 320 - (var7 + 20 >> 1);
-                      var9 = 10 + (var8 + (var7 >> 1));
+                      ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
+                      var6 = 170;
+                      fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                      var7 = 100;
+                      var8 = -(20 + var7 >> 1) + 410;
                       var6 = 265;
-                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                      if (this.field_o != 0) {
-                        if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
-                          break L34;
+                      var9 = var8 - (-(var7 >> 1) - 10);
+                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                      if (1 != this.field_o) {
+                        if (this.field_o >= 0) {
+                          break L17;
                         }
-                        if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
-                          break L34;
+                        if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
+                          break L17;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
+                          break L17;
                         }
                         if (ue.pointerYSnapshot <= 265) {
-                          break L34;
+                          break L17;
                         }
-                        if (299 <= ue.pointerYSnapshot) {
-                          break L34;
+                        if (ue.pointerYSnapshot >= 299) {
+                          break L17;
                         }
                       }
                       dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                     }
-                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                    L19: {
+                      dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                      var8 = 320 - (20 + var7 >> 1) - 90;
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                      var6 = 265;
+                      var9 = 10 + (var7 >> 1) + var8;
+                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                      if (this.field_o != 0) {
+                        if (0 <= this.field_o) {
+                          break L19;
+                        }
+                        if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
+                          break L19;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
+                          break L19;
+                        }
+                        if (ue.pointerYSnapshot <= 265) {
+                          break L19;
+                        }
+                        if (ue.pointerYSnapshot >= 299) {
+                          break L19;
+                        }
+                      }
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    }
+                    dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                     if (var12 == 0) {
-                      break L7;
+                      return;
                     }
                   }
-                  kh.screenTitleSprites[5].draw(0, 20);
-                  if (!this.field_E) {
-                    this.b(-97, this.field_q);
-                    if (var12 == 0) {
-                      break L7;
-                    }
-                  }
-                  L37: {
-                    var5 = this.field_F;
-                    if (!this.field_v) {
-                      var5 = 640 - var5;
-                      SoftwareRasterizer.setClip(0, 0, var5, 480);
-                      this.b(-85, this.field_n);
-                      this.field_S = true;
-                      super.renderScreen(-28750);
-                      this.field_S = false;
-                      SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                      this.b(param0 ^ 28757, this.field_q);
-                      super.renderScreen(-28750);
-                      SoftwareRasterizer.setClip(0, 0, 640, 480);
-                      qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + var5, 240, -49150, 4096);
+                  if (og.field_n > 0) {
+                    if (vl.field_n == null) {
+                      if (this.activeTicks > 200) {
+                        stackIn_122_0 = 200;
+                      } else {
+                        stackIn_122_0 = this.activeTicks;
+                      }
+                      L24: {
+                        var5 = stackIn_122_0;
+                        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                        ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
+                        var6 = 170;
+                        var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                        var6 += 40;
+                        var7 = 100;
+                        var8 = 320 - (var7 + 20 >> 1);
+                        var9 = (var7 >> 1) + (var8 + 10);
+                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                        if (0 != this.field_o) {
+                          if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
+                            break L24;
+                          }
+                          if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
+                            break L24;
+                          }
+                          if (ue.pointerYSnapshot <= 274) {
+                            break L24;
+                          }
+                          if (ue.pointerYSnapshot >= 309) {
+                            break L24;
+                          }
+                        }
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                      }
+                      dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                       if (var12 == 0) {
-                        break L37;
+                        return;
                       }
                     }
-                    SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                    this.b(-17, this.field_n);
+                    if (this.activeTicks <= 200) {
+                      stackIn_144_0 = this.activeTicks;
+                    } else {
+                      stackIn_144_0 = 200;
+                    }
+                    L27: {
+                      var5 = stackIn_144_0;
+                      SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                      ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
+                      var6 = 170;
+                      var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
+                      var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                      var6 += 10;
+                      var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
+                      if ((1500 - this.activeTicks) / 150 <= 0) {
+                        var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                        if (var12 == 0) {
+                          break L27;
+                        }
+                      }
+                      var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    }
+                    L29: {
+                      var6 += 40;
+                      var9 = 100;
+                      var10 = -(20 + var9 >> 1) + 320 + 90;
+                      ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
+                      var11 = 10 + ((var9 >> 1) + var10);
+                      if (this.field_o != 1) {
+                        if (0 <= this.field_o) {
+                          break L29;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
+                          break L29;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
+                          break L29;
+                        }
+                        if (ue.pointerYSnapshot <= 317) {
+                          break L29;
+                        }
+                        if (ue.pointerYSnapshot >= 352) {
+                          break L29;
+                        }
+                      }
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    }
+                    L31: {
+                      dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                      var10 = 320 - (20 + var9 >> 1) - 90;
+                      var11 = 10 + (var9 >> 1) + var10;
+                      ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
+                      if (this.field_o != 0) {
+                        if (this.field_o >= 0) {
+                          break L31;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
+                          break L31;
+                        }
+                        if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
+                          break L31;
+                        }
+                        if (ue.pointerYSnapshot <= 317) {
+                          break L31;
+                        }
+                        if (ue.pointerYSnapshot >= 352) {
+                          break L31;
+                        }
+                      }
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    }
+                    dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                    if (var12 == 0) {
+                      return;
+                    }
+                  }
+                  if (this.activeTicks > 200) {
+                    stackIn_191_0 = 200;
+                  } else {
+                    stackIn_191_0 = this.activeTicks;
+                  }
+                  L34: {
+                    var5 = stackIn_191_0;
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                    ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
+                    var6 = 180;
+                    fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                    var7 = 242;
+                    var8 = 320 - (var7 + 20 >> 1);
+                    var9 = 10 + (var8 + (var7 >> 1));
+                    var6 = 265;
+                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                    if (this.field_o != 0) {
+                      if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
+                        break L34;
+                      }
+                      if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
+                        break L34;
+                      }
+                      if (ue.pointerYSnapshot <= 265) {
+                        break L34;
+                      }
+                      if (299 <= ue.pointerYSnapshot) {
+                        break L34;
+                      }
+                    }
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                  }
+                  dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                  if (var12 == 0) {
+                    return;
+                  }
+                }
+                kh.screenTitleSprites[5].draw(0, 20);
+                if (!this.field_E) {
+                  this.b(-97, this.field_q);
+                  if (var12 == 0) {
+                    return;
+                  }
+                }
+                L37: {
+                  var5 = this.field_F;
+                  if (!this.field_v) {
+                    var5 = 640 - var5;
+                    SoftwareRasterizer.setClip(0, 0, var5, 480);
+                    this.b(-85, this.field_n);
                     this.field_S = true;
                     super.renderScreen(-28750);
                     this.field_S = false;
-                    SoftwareRasterizer.setClip(0, 0, var5, 480);
-                    this.b(-48, this.field_q);
+                    SoftwareRasterizer.setClip(var5, 0, 640, 480);
+                    this.b(param0 ^ 28757, this.field_q);
                     super.renderScreen(-28750);
                     SoftwareRasterizer.setClip(0, 0, 640, 480);
-                    qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + var5, 240, -16383, 4096);
+                    qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + var5, 240, -49150, 4096);
+                    if (var12 == 0) {
+                      break L37;
+                    }
                   }
-                  if (var12 == 0) {
-                    break L7;
-                  }
+                  SoftwareRasterizer.setClip(var5, 0, 640, 480);
+                  this.b(-17, this.field_n);
+                  this.field_S = true;
+                  super.renderScreen(-28750);
+                  this.field_S = false;
+                  SoftwareRasterizer.setClip(0, 0, var5, 480);
+                  this.b(-48, this.field_q);
+                  super.renderScreen(-28750);
+                  SoftwareRasterizer.setClip(0, 0, 640, 480);
+                  qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + var5, 240, -16383, 4096);
                 }
-                kh.screenTitleSprites[7].draw(0, 20);
-                ac.a(false, true, (byte) -122);
                 if (var12 == 0) {
-                  break L7;
+                  return;
                 }
               }
+              kh.screenTitleSprites[7].draw(0, 20);
+              ac.a(false, true, (byte) -122);
+              if (var12 == 0) {
+                return;
+              }
             }
-            this.b(30);
           }
+          this.b(30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -801,37 +797,35 @@ final class GameScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            L1: {
-              var3_int = 121 % ((44 - param1) / 36);
-              actionId = t.menuActionIds[this.screenId][itemIndex];
-              if (actionId == 8) {
-                if (var5 == 0) {
-                  if (j.field_gb > 10) {
-                    j.field_gb = j.field_gb - 10;
-                    if (var5 == 0) {
-                      break L0;
-                    }
-                  }
-                  j.field_gb = 0;
-                  if (var5 == 0) {
-                    break L0;
-                  }
-                  break L1;
-                }
-              }
-              if (9 != actionId) {
-                break L0;
-              }
-            }
-            if (oc.field_c > 10) {
-              wg.a(-15346, oc.field_c - 10);
+          L1: {
+            var3_int = 121 % ((44 - param1) / 36);
+            actionId = t.menuActionIds[this.screenId][itemIndex];
+            if (actionId == 8) {
               if (var5 == 0) {
-                break L0;
+                if (j.field_gb > 10) {
+                  j.field_gb = j.field_gb - 10;
+                  if (var5 == 0) {
+                    return;
+                  }
+                }
+                j.field_gb = 0;
+                if (var5 == 0) {
+                  return;
+                }
+                break L1;
               }
             }
-            wg.a(-15346, 0);
+            if (9 != actionId) {
+              return;
+            }
           }
+          if (oc.field_c > 10) {
+            wg.a(-15346, oc.field_c - 10);
+            if (var5 == 0) {
+              return;
+            }
+          }
+          wg.a(-15346, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -862,43 +856,41 @@ final class GameScreen extends MenuScreen {
           if (param0 >= -40) {
             this.b(77, -13);
           }
-          L1: {
-            if (3 == this.screenId) {
-              if (!this.field_E) {
-                L2: {
-                  if (this.field_q != 4) {
-                    if (this.selectedItemIndex == 3) {
-                      break L2;
-                    }
-                  }
-                  if (4 == this.field_q) {
-                    if (this.selectedItemIndex == 2) {
-                      this.selectedItemIndex = 3;
-                    }
-                    if (oc.previousMenuScreenId != 1) {
-                      break L1;
-                    }
-                    if (this.selectedItemIndex != 3) {
-                      break L1;
-                    }
-                    this.selectedItemIndex = 0;
-                    if (var3 == 0) {
-                      break L1;
-                    }
-                  }
-                  if (this.field_q != 0) {
-                    break L1;
-                  }
-                  if (this.selectedItemIndex != 0) {
-                    break L1;
-                  }
-                  this.selectedItemIndex = 1;
-                  if (var3 == 0) {
-                    break L1;
+          if (3 == this.screenId) {
+            if (!this.field_E) {
+              L2: {
+                if (this.field_q != 4) {
+                  if (this.selectedItemIndex == 3) {
+                    break L2;
                   }
                 }
-                this.selectedItemIndex = 0;
+                if (4 == this.field_q) {
+                  if (this.selectedItemIndex == 2) {
+                    this.selectedItemIndex = 3;
+                  }
+                  if (oc.previousMenuScreenId != 1) {
+                    return;
+                  }
+                  if (this.selectedItemIndex != 3) {
+                    return;
+                  }
+                  this.selectedItemIndex = 0;
+                  if (var3 == 0) {
+                    return;
+                  }
+                }
+                if (this.field_q != 0) {
+                  return;
+                }
+                if (this.selectedItemIndex != 0) {
+                  return;
+                }
+                this.selectedItemIndex = 1;
+                if (var3 == 0) {
+                  return;
+                }
               }
+              this.selectedItemIndex = 0;
             }
           }
           return;
@@ -1535,100 +1527,98 @@ final class GameScreen extends MenuScreen {
             if (param0 != 29) {
               this.handleMenuKey(11, 26);
             }
-            L38: {
-              this.field_s = PrefixCodeDecoder.pointerXSnapshot;
-              if (this.selectedItemIndex != 0) {
-                L39: {
-                  var2_int = (PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot - (-kd.field_c - ki.currentKeyboardEventCode)) % 8;
-                  if (var2_int != 0) {
-                    if (var2_int != 1) {
-                      if (var2_int != 2) {
-                        if (var2_int == 3) {
-                          oa.field_a = oa.field_a - gb.field_g;
-                          kb.field_d = kb.field_d + 1;
-                          if (var3 == 0) {
-                            break L39;
-                          }
-                        }
-                        if (var2_int != 4) {
-                          if (var2_int != 5) {
-                            if (6 == var2_int) {
-                              gb.field_g = gb.field_g - 1;
-                              ml.field_r = ml.field_r - kb.field_d;
-                              if (var3 == 0) {
-                                break L39;
-                              }
-                            }
-                            if (var2_int != 7) {
-                              break L39;
-                            }
-                            kb.field_d = kb.field_d - 1;
-                            ml.field_r = ml.field_r - gb.field_g;
-                            if (var3 == 0) {
-                              break L39;
-                            }
-                          }
-                          kb.field_d = kb.field_d + 1;
-                          ml.field_r = ml.field_r + gb.field_g;
-                          if (var3 == 0) {
-                            break L39;
-                          }
-                        }
-                        gb.field_g = gb.field_g + 1;
-                        ml.field_r = ml.field_r + kb.field_d;
+            this.field_s = PrefixCodeDecoder.pointerXSnapshot;
+            if (this.selectedItemIndex != 0) {
+              L39: {
+                var2_int = (PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot - (-kd.field_c - ki.currentKeyboardEventCode)) % 8;
+                if (var2_int != 0) {
+                  if (var2_int != 1) {
+                    if (var2_int != 2) {
+                      if (var2_int == 3) {
+                        oa.field_a = oa.field_a - gb.field_g;
+                        kb.field_d = kb.field_d + 1;
                         if (var3 == 0) {
                           break L39;
                         }
                       }
-                      oa.field_a = oa.field_a - kb.field_d;
+                      if (var2_int != 4) {
+                        if (var2_int != 5) {
+                          if (6 == var2_int) {
+                            gb.field_g = gb.field_g - 1;
+                            ml.field_r = ml.field_r - kb.field_d;
+                            if (var3 == 0) {
+                              break L39;
+                            }
+                          }
+                          if (var2_int != 7) {
+                            break L39;
+                          }
+                          kb.field_d = kb.field_d - 1;
+                          ml.field_r = ml.field_r - gb.field_g;
+                          if (var3 == 0) {
+                            break L39;
+                          }
+                        }
+                        kb.field_d = kb.field_d + 1;
+                        ml.field_r = ml.field_r + gb.field_g;
+                        if (var3 == 0) {
+                          break L39;
+                        }
+                      }
                       gb.field_g = gb.field_g + 1;
+                      ml.field_r = ml.field_r + kb.field_d;
                       if (var3 == 0) {
                         break L39;
                       }
                     }
-                    oa.field_a = oa.field_a + gb.field_g;
-                    kb.field_d = kb.field_d - 1;
+                    oa.field_a = oa.field_a - kb.field_d;
+                    gb.field_g = gb.field_g + 1;
                     if (var3 == 0) {
                       break L39;
                     }
                   }
-                  oa.field_a = oa.field_a + kb.field_d;
-                  gb.field_g = gb.field_g - 1;
-                }
-                var2_int = (ki.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-he.pointerPressYSnapshot - kd.field_c)) % 5;
-                if (0 != var2_int) {
-                  if (var2_int != 1) {
-                    if (var2_int == 2) {
-                      el.field_g = el.field_g - AwtRasterBuffer.field_f;
-                      lb.field_b = lb.field_b - 1;
-                      if (var3 == 0) {
-                        break L38;
-                      }
-                    }
-                    if (var2_int == 3) {
-                      AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
-                      el.field_g = el.field_g + lb.field_b;
-                      if (var3 == 0) {
-                        break L38;
-                      }
-                    }
-                    if (var2_int != 4) {
-                      break L38;
-                    }
-                    el.field_g = el.field_g - lb.field_b;
-                    AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
-                    if (var3 == 0) {
-                      break L38;
-                    }
-                  }
-                  el.field_g = el.field_g + AwtRasterBuffer.field_f;
-                  lb.field_b = lb.field_b + 1;
+                  oa.field_a = oa.field_a + gb.field_g;
+                  kb.field_d = kb.field_d - 1;
                   if (var3 == 0) {
-                    break L38;
+                    break L39;
                   }
                 }
-                dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
+                oa.field_a = oa.field_a + kb.field_d;
+                gb.field_g = gb.field_g - 1;
               }
+              var2_int = (ki.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-he.pointerPressYSnapshot - kd.field_c)) % 5;
+              if (0 != var2_int) {
+                if (var2_int != 1) {
+                  if (var2_int == 2) {
+                    el.field_g = el.field_g - AwtRasterBuffer.field_f;
+                    lb.field_b = lb.field_b - 1;
+                    if (var3 == 0) {
+                      return;
+                    }
+                  }
+                  if (var2_int == 3) {
+                    AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
+                    el.field_g = el.field_g + lb.field_b;
+                    if (var3 == 0) {
+                      return;
+                    }
+                  }
+                  if (var2_int != 4) {
+                    return;
+                  }
+                  el.field_g = el.field_g - lb.field_b;
+                  AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
+                  if (var3 == 0) {
+                    return;
+                  }
+                }
+                el.field_g = el.field_g + AwtRasterBuffer.field_f;
+                lb.field_b = lb.field_b + 1;
+                if (var3 == 0) {
+                  return;
+                }
+              }
+              dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
             }
             return;
           }
@@ -1845,57 +1835,55 @@ final class GameScreen extends MenuScreen {
           if (initialClick) {
             this.field_q = -45;
           }
-          L1: {
-            L2: {
-              actionId = t.menuActionIds[this.screenId][itemIndex];
-              var8 = actionId;
-              if (var8 == 8) {
-                L4: {
-                  pointerX -= 280;
-                  if (pointerX > 0) {
-                    if (pointerX < NetworkArchiveRequest.barSprite.fullWidth) {
-                      j.field_gb = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
-                      if (var9 == 0) {
-                        break L4;
-                      }
-                    }
-                    j.field_gb = 80;
+          L2: {
+            actionId = t.menuActionIds[this.screenId][itemIndex];
+            var8 = actionId;
+            if (var8 == 8) {
+              L4: {
+                pointerX -= 280;
+                if (pointerX > 0) {
+                  if (pointerX < NetworkArchiveRequest.barSprite.fullWidth) {
+                    j.field_gb = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
                     if (var9 == 0) {
                       break L4;
                     }
                   }
-                  j.field_gb = 0;
+                  j.field_gb = 80;
+                  if (var9 == 0) {
+                    break L4;
+                  }
                 }
-                this.previewMusicVolume(0);
-                if (var9 == 0) {
-                  break L1;
-                }
-              } else {
-                if (var8 != 9) {
-                  break L2;
-                }
+                j.field_gb = 0;
               }
-              pointerX -= 280;
-              if (pointerX <= 0) {
-                wg.a(-15346, 0);
-                if (var9 == 0) {
-                  break L1;
-                }
-              }
-              if (~NetworkArchiveRequest.barSprite.fullWidth < ~pointerX) {
-                wg.a(-15346, 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth);
-                if (var9 == 0) {
-                  break L1;
-                }
-              }
-              wg.a(-15346, 80);
+              this.previewMusicVolume(0);
               if (var9 == 0) {
-                break L1;
+                return;
+              }
+            } else {
+              if (var8 != 9) {
+                break L2;
               }
             }
-            if (!heldRepeat) {
-              super.handleMenuPointer(itemIndex, pointerX, initialClick, rowOffsetY, heldRepeat, pointerButton);
+            pointerX -= 280;
+            if (pointerX <= 0) {
+              wg.a(-15346, 0);
+              if (var9 == 0) {
+                return;
+              }
             }
+            if (~NetworkArchiveRequest.barSprite.fullWidth < ~pointerX) {
+              wg.a(-15346, 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth);
+              if (var9 == 0) {
+                return;
+              }
+            }
+            wg.a(-15346, 80);
+            if (var9 == 0) {
+              return;
+            }
+          }
+          if (!heldRepeat) {
+            super.handleMenuPointer(itemIndex, pointerX, initialClick, rowOffsetY, heldRepeat, pointerButton);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2083,18 +2071,16 @@ final class GameScreen extends MenuScreen {
           if (param0 != 0) {
             return;
           }
-          L0: {
-            if (null != this.volumePreviewStream) {
-              if (!this.volumePreviewStream.isSamplePositionOutOfRange()) {
-                if (50 >= this.volumePreviewTicks) {
-                  break L0;
-                }
+          if (null != this.volumePreviewStream) {
+            if (!this.volumePreviewStream.isSamplePositionOutOfRange()) {
+              if (50 >= this.volumePreviewTicks) {
+                return;
               }
             }
-            this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, j.field_gb);
-            GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
-            this.volumePreviewTicks = 0;
           }
+          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, j.field_gb);
+          GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
+          this.volumePreviewTicks = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2487,15 +2473,13 @@ final class GameScreen extends MenuScreen {
             this.field_H = true;
             a.field_e = -1;
           }
-          L51: {
-            if (~this.screenId != ~ai.requestedScreenId) {
-              if (this.screenId != 1) {
-                if (this.screenId != 0) {
-                  break L51;
-                }
+          if (~this.screenId != ~ai.requestedScreenId) {
+            if (this.screenId != 1) {
+              if (this.screenId != 0) {
+                return;
               }
-              oc.previousMenuScreenId = this.screenId;
             }
+            oc.previousMenuScreenId = this.screenId;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2580,18 +2564,16 @@ final class GameScreen extends MenuScreen {
           L1: {
             var5_int = stackIn_7_0;
             if (3 == this.screenId) {
-              L2: {
-                if (itemIndex == 0) {
-                  if (var5_int == 0) {
-                    break L2;
-                  }
+              if (itemIndex == 0) {
+                if (var5_int == 0) {
+                  return;
                 }
-                if (itemIndex != 2) {
-                  break L1;
-                }
-                if (var5_int != 4) {
-                  break L1;
-                }
+              }
+              if (itemIndex != 2) {
+                break L1;
+              }
+              if (var5_int != 4) {
+                break L1;
               }
               return;
             }
@@ -2971,55 +2953,53 @@ final class GameScreen extends MenuScreen {
               this.handleMenuKey(this.selectedItemIndex, -29);
             }
           }
-          L19: {
-            if (ki.currentKeyboardEventCode == 69) {
-              if (this.screenId == 3) {
-                if (this.field_q < 4) {
-                  this.field_q = this.field_q + 1;
-                  if (var3 == 0) {
-                    break L19;
-                  }
+          if (ki.currentKeyboardEventCode == 69) {
+            if (this.screenId == 3) {
+              if (this.field_q < 4) {
+                this.field_q = this.field_q + 1;
+                if (var3 == 0) {
+                  return;
                 }
               }
             }
-            if (ki.currentKeyboardEventCode == 41) {
-              if (this.screenId == 3) {
-                if (this.field_q > 0) {
-                  this.field_q = this.field_q - 1;
-                  if (var3 == 0) {
-                    break L19;
-                  }
+          }
+          if (ki.currentKeyboardEventCode == 41) {
+            if (this.screenId == 3) {
+              if (this.field_q > 0) {
+                this.field_q = this.field_q - 1;
+                if (var3 == 0) {
+                  return;
                 }
               }
             }
-            if (13 == ki.currentKeyboardEventCode) {
-              if (!this.field_C) {
-                if (4 != this.screenId) {
-                  L22: {
-                    if (this.screenId == 1) {
-                      ai.requestedScreenId = -1;
+          }
+          if (13 == ki.currentKeyboardEventCode) {
+            if (!this.field_C) {
+              if (4 != this.screenId) {
+                L22: {
+                  if (this.screenId == 1) {
+                    ai.requestedScreenId = -1;
+                    if (var3 == 0) {
+                      break L22;
+                    }
+                  }
+                  if (this.screenId != 6) {
+                    if (this.screenId != 2) {
+                      ai.requestedScreenId = oc.previousMenuScreenId;
                       if (var3 == 0) {
                         break L22;
                       }
                     }
-                    if (this.screenId != 6) {
-                      if (this.screenId != 2) {
-                        ai.requestedScreenId = oc.previousMenuScreenId;
-                        if (var3 == 0) {
-                          break L22;
-                        }
-                      }
-                    }
-                    ai.requestedScreenId = 0;
                   }
-                  if (~this.screenId != ~ai.requestedScreenId) {
-                    if (this.screenId != 1) {
-                      if (this.screenId != 0) {
-                        break L19;
-                      }
+                  ai.requestedScreenId = 0;
+                }
+                if (~this.screenId != ~ai.requestedScreenId) {
+                  if (this.screenId != 1) {
+                    if (this.screenId != 0) {
+                      return;
                     }
-                    oc.previousMenuScreenId = this.screenId;
                   }
+                  oc.previousMenuScreenId = this.screenId;
                 }
               }
             }

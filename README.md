@@ -19,19 +19,19 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,502 remaining bindings
 and 388 override relationships.
 
-The current structural pass folds 17 boolean decisions across 12 files into
-short-circuit AND/OR expressions. Board-clear eligibility, raster dirtiness,
-queue-settled and pending-transition checks now expose their conditions directly.
-Calls, nullable receivers/unboxing, predicate order, failures and partial writes
-remain, along with variable scopes and protected/monitor boundaries. The pass
-removes 156 lines, reducing the raw corpus from 79,869 to 79,713 lines.
+The current structural pass converts 95 jumps in 38 exit blocks across 25 files
+to direct void returns. Menu rendering, tutorial input and sprite rotation now
+exit without an unnecessary outer label. Predicates, effects, scopes and exception
+regions stay in place. Five unreachable trailing returns disappear; the pass
+removes 81 lines, reducing the raw corpus from 79,713 to 79,632 lines.
 
-The emitter suite passes 42 tests, including 13,824 new native comparisons; its
-optional pass77 frame-only corpus checker is skipped for this new syntax change.
+The emitter suite passes 44 tests, including 46,080 new native comparisons of
+cleanup, failures, lock ownership and all loop forms. Its optional pass77
+frame-only corpus checker is skipped for this new transfer rewrite.
 Exception-exit tests pass eight groups. All 6,081 complete naming rules survive
 without ordinal migration, applying 49,577 edits and preserving 138,502 bindings
-and 388 overrides. The only lost references are 17 duplicate boolean stores;
-all other ordered binding events match. Clean source-archive regeneration and
+and 388 overrides. Every ordered binding event matches the previous export;
+the documented rewrite produces all 303 regenerated token streams. Clean source-archive regeneration and
 diagnostics, readable reproduction and dictionary reversal are byte-exact.
 Existing native probe traces retain their pins within their documented scopes.
 The single manifest records source/decompiler migration and evidence; Git stores
@@ -41,8 +41,9 @@ browser/phone memory/startup/FPS targets remain unfinished or unverified.
 Pass 77 removed 508 redundant labels, simplified 450 labeled continues and
 removed 588 lines across 153 files. Its independent Java AST corpus comparison
 preserved all 303 files' syntax events, 1,129 loop/switch destinations and 1,762
-jumps. That proof covers its control-frame rewrite; boolean decisions use the
-separate scope/transfer and native checks described above.
+jumps. Pass 78 reconstructed 17 short-circuit boolean decisions, removing 156
+lines across 12 files. Those historical proofs and the current return-rewrite
+checks have their separate scopes recorded in the reproduction procedure.
 
 Pass 76 shared a duplicate Bzip2 output-state publication/return tail through an
 existing plain exit block, removing thirteen lines while retaining its native

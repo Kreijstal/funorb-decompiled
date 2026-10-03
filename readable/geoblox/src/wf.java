@@ -786,62 +786,60 @@ abstract class wf extends ch {
             if (var2 == 0) {
               return;
             }
-            L2: {
-              if (var2 == 1) {
-                ec.a(-1073741824);
+            if (var2 == 1) {
+              ec.a(-1073741824);
+            } else {
+              if (var2 == 2) {
+                cm.c(-24839);
               } else {
-                if (var2 == 2) {
-                  cm.c(-24839);
+                if (3 == var2) {
+                  ud.b(119);
                 } else {
-                  if (3 == var2) {
-                    ud.b(119);
-                  } else {
-                    if (var2 != 4) {
-                      if (5 == var2) {
-                        al.a(26146);
+                  if (var2 != 4) {
+                    if (5 == var2) {
+                      al.a(26146);
+                    } else {
+                      if (var2 == 6) {
+                        bh.a(2);
                       } else {
-                        if (var2 == 6) {
-                          bh.a(2);
-                        } else {
-                          if (var2 != 7) {
-                            if (8 == var2) {
-                              pg.a(-4, MenuScreen.field_i, p.field_k, eh.field_d);
-                            } else {
-                              if (var2 == 16) {
-                                DualLinkNode.b(1);
-                              } else {
-                                if (11 != var2) {
-                                  if (12 != var2) {
-                                    if (var2 == 13) {
-                                      lc.a((byte) 104);
-                                      break L2;
-                                    }
-                                    if (17 == var2) {
-                                      this.g((byte) 12);
-                                      break L2;
-                                    }
-                                    if (var2 == 18) {
-                                      dl.a(11560);
-                                      break L2;
-                                    }
-                                    gi.a((Throwable) null, "MGS1: " + og.e(55), (byte) 125);
-                                    Bzip2DecoderState.a((byte) -122);
-                                    break L2;
-                                  }
-                                }
-                                stackIn_30_0 = !(var2 != 12);
-                                var3 = bk.a(stackIn_30_0, 128);
-                                s.a(var3, 0);
-                              }
-                            }
+                        if (var2 != 7) {
+                          if (8 == var2) {
+                            pg.a(-4, MenuScreen.field_i, p.field_k, eh.field_d);
                           } else {
-                            this.f(-11);
+                            if (var2 == 16) {
+                              DualLinkNode.b(1);
+                            } else {
+                              if (11 != var2) {
+                                if (12 != var2) {
+                                  if (var2 == 13) {
+                                    lc.a((byte) 104);
+                                    return;
+                                  }
+                                  if (17 == var2) {
+                                    this.g((byte) 12);
+                                    return;
+                                  }
+                                  if (var2 == 18) {
+                                    dl.a(11560);
+                                    return;
+                                  }
+                                  gi.a((Throwable) null, "MGS1: " + og.e(55), (byte) 125);
+                                  Bzip2DecoderState.a((byte) -122);
+                                  return;
+                                }
+                              }
+                              stackIn_30_0 = !(var2 != 12);
+                              var3 = bk.a(stackIn_30_0, 128);
+                              s.a(var3, 0);
+                            }
                           }
+                        } else {
+                          this.f(-11);
                         }
                       }
-                    } else {
-                      pf.f(-103);
                     }
+                  } else {
+                    pf.f(-103);
                   }
                 }
               }

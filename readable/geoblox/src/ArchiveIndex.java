@@ -219,30 +219,28 @@ final class ArchiveIndex {
                 }
                 break L19;
               }
-              L29: {
-                if (hasNameHashes != 0) {
-                  this.fileNameHashes = new int[maximumGroupId + 1][];
-                  this.fileNameLookups = new IntKeyLookup[1 + maximumGroupId];
-                  for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
-                    groupId = this.groupIds[groupOrdinalOrSlotIndex];
-                    actualFileCount = this.fileCounts[groupId];
-                    newFileNameHashSlots = new int[this.fileSlotCounts[groupId]];
-                    this.fileNameHashes[groupId] = newFileNameHashSlots;
-                    for (maximumFileIdOrFileSlotIndex = 0; this.fileSlotCounts[groupId] > maximumFileIdOrFileSlotIndex; maximumFileIdOrFileSlotIndex++) {
-                      this.fileNameHashes[groupId][maximumFileIdOrFileSlotIndex] = -1;
-                    }
-                    for (maximumFileIdOrFileSlotIndex = 0; maximumFileIdOrFileSlotIndex < actualFileCount; maximumFileIdOrFileSlotIndex++) {
-                      if (this.fileIds[groupId] != null) {
-                        fileOrdinalOrFileId = this.fileIds[groupId][maximumFileIdOrFileSlotIndex];
-                      } else {
-                        fileOrdinalOrFileId = maximumFileIdOrFileSlotIndex;
-                      }
-                      this.fileNameHashes[groupId][fileOrdinalOrFileId] = indexBuffer.readIntBE((byte) -78);
-                    }
-                    this.fileNameLookups[groupId] = new IntKeyLookup(this.fileNameHashes[groupId]);
+              if (hasNameHashes != 0) {
+                this.fileNameHashes = new int[maximumGroupId + 1][];
+                this.fileNameLookups = new IntKeyLookup[1 + maximumGroupId];
+                for (groupOrdinalOrSlotIndex = 0; groupOrdinalOrSlotIndex < this.groupCount; groupOrdinalOrSlotIndex++) {
+                  groupId = this.groupIds[groupOrdinalOrSlotIndex];
+                  actualFileCount = this.fileCounts[groupId];
+                  newFileNameHashSlots = new int[this.fileSlotCounts[groupId]];
+                  this.fileNameHashes[groupId] = newFileNameHashSlots;
+                  for (maximumFileIdOrFileSlotIndex = 0; this.fileSlotCounts[groupId] > maximumFileIdOrFileSlotIndex; maximumFileIdOrFileSlotIndex++) {
+                    this.fileNameHashes[groupId][maximumFileIdOrFileSlotIndex] = -1;
                   }
-                  break L29;
+                  for (maximumFileIdOrFileSlotIndex = 0; maximumFileIdOrFileSlotIndex < actualFileCount; maximumFileIdOrFileSlotIndex++) {
+                    if (this.fileIds[groupId] != null) {
+                      fileOrdinalOrFileId = this.fileIds[groupId][maximumFileIdOrFileSlotIndex];
+                    } else {
+                      fileOrdinalOrFileId = maximumFileIdOrFileSlotIndex;
+                    }
+                    this.fileNameHashes[groupId][fileOrdinalOrFileId] = indexBuffer.readIntBE((byte) -78);
+                  }
+                  this.fileNameLookups[groupId] = new IntKeyLookup(this.fileNameHashes[groupId]);
                 }
+                return;
               }
               return;
             }

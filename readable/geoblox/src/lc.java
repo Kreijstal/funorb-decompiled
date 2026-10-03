@@ -165,76 +165,74 @@ final class lc {
           debugTintBlue = debugTintRgb & 255;
           negativeRowCounter = -destinationHeight;
           L1: while (true) {
-            L2: {
-              L3: {
-                if (negativeRowCounter < 0) {
-                  sourceRowOffset = sourceStride * (sampleYQ16 >> 16);
-                  if (clientControlFlowGuard != 0) {
-                    break L2;
-                  }
-                  negativeColumnCounter = -destinationWidth;
-                  while (true) {
-                    L5: {
-                      if (negativeColumnCounter < 0) {
-                        sampleColor = overviewPixels[sourceRowOffset + (sampleXQ16 >> 16)];
-                        sampleXQ16 = sampleXQ16 + sampleXStepQ16;
-                        sampleColorOrRowStartXQ16 = sampleColor;
-                        if (clientControlFlowGuard != 0) {
-                          break L5;
-                        }
-                        L7: {
-                          if (sampleColorOrRowStartXQ16 == 0) {
-                            destinationIndex++;
-                            if (clientControlFlowGuard == 0) {
-                              break L7;
-                            }
-                          }
-                          destinationRgb = destinationPixels[destinationIndex];
-                          if (destinationRgb == 0) {
-                            destinationIndex++;
-                            if (clientControlFlowGuard == 0) {
-                              break L7;
-                            }
-                          }
-                          doubledDestinationRed = 510 & destinationRgb >> 15;
-                          destinationGreen = (destinationRgb & 65429) >> 8;
-                          destinationBlue = 255 & destinationRgb;
-                          weightedDestinationGrayOrTintedRgb = (destinationBlue + doubledDestinationRed) / 3 + destinationGreen >> 1;
-                          inverseSourceGrayWeight = -(((255 & sampleColor) + (sampleColor >> 8 & 255) + (sampleColor >> 16 & 255)) / 3) + 256;
-                          tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
-                          tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
-                          tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
-                          weightedDestinationGrayOrTintedRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
-                          weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgb) >> 16);
-                          weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgb >> 8) * inverseSourceGrayWeight;
-                          weightedTintBlue = (weightedDestinationGrayOrTintedRgb & 255) * inverseSourceGrayWeight;
-                          modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
-                          modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
-                          modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
-                          sourceGrayWeight = 256 - inverseSourceGrayWeight;
-                          modulatedRedThenWeighted = modulatedRedThenWeighted * sourceGrayWeight;
-                          modulatedGreenThenWeighted = modulatedGreenThenWeighted * sourceGrayWeight;
-                          modulatedBlueThenWeighted = modulatedBlueThenWeighted * sourceGrayWeight;
-                          destinationIndexBeforeIncrement = destinationIndex;
-                          destinationIndex++;
-                          destinationPixels[destinationIndexBeforeIncrement] = (weightedTintBlue + modulatedBlueThenWeighted >> 8) + ((modulatedGreenThenWeighted + weightedTintGreen >> 8 << 8) + (weightedTintRed + modulatedRedThenWeighted >> 8 << 16));
-                        }
-                        negativeColumnCounter++;
-                        if (clientControlFlowGuard == 0) {
-                          continue;
-                        }
+            L3: {
+              if (negativeRowCounter < 0) {
+                sourceRowOffset = sourceStride * (sampleYQ16 >> 16);
+                if (clientControlFlowGuard != 0) {
+                  return;
+                }
+                negativeColumnCounter = -destinationWidth;
+                while (true) {
+                  L5: {
+                    if (negativeColumnCounter < 0) {
+                      sampleColor = overviewPixels[sourceRowOffset + (sampleXQ16 >> 16)];
+                      sampleXQ16 = sampleXQ16 + sampleXStepQ16;
+                      sampleColorOrRowStartXQ16 = sampleColor;
+                      if (clientControlFlowGuard != 0) {
+                        break L5;
                       }
-                      sampleYQ16 = sampleYQ16 + sampleYStepQ16;
-                      destinationIndex = destinationIndex + destinationRowSkip;
-                      sampleColorOrRowStartXQ16 = rowStartXQ16;
+                      L7: {
+                        if (sampleColorOrRowStartXQ16 == 0) {
+                          destinationIndex++;
+                          if (clientControlFlowGuard == 0) {
+                            break L7;
+                          }
+                        }
+                        destinationRgb = destinationPixels[destinationIndex];
+                        if (destinationRgb == 0) {
+                          destinationIndex++;
+                          if (clientControlFlowGuard == 0) {
+                            break L7;
+                          }
+                        }
+                        doubledDestinationRed = 510 & destinationRgb >> 15;
+                        destinationGreen = (destinationRgb & 65429) >> 8;
+                        destinationBlue = 255 & destinationRgb;
+                        weightedDestinationGrayOrTintedRgb = (destinationBlue + doubledDestinationRed) / 3 + destinationGreen >> 1;
+                        inverseSourceGrayWeight = -(((255 & sampleColor) + (sampleColor >> 8 & 255) + (sampleColor >> 16 & 255)) / 3) + 256;
+                        tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
+                        tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
+                        tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
+                        weightedDestinationGrayOrTintedRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
+                        weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgb) >> 16);
+                        weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgb >> 8) * inverseSourceGrayWeight;
+                        weightedTintBlue = (weightedDestinationGrayOrTintedRgb & 255) * inverseSourceGrayWeight;
+                        modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
+                        modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
+                        modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
+                        sourceGrayWeight = 256 - inverseSourceGrayWeight;
+                        modulatedRedThenWeighted = modulatedRedThenWeighted * sourceGrayWeight;
+                        modulatedGreenThenWeighted = modulatedGreenThenWeighted * sourceGrayWeight;
+                        modulatedBlueThenWeighted = modulatedBlueThenWeighted * sourceGrayWeight;
+                        destinationIndexBeforeIncrement = destinationIndex;
+                        destinationIndex++;
+                        destinationPixels[destinationIndexBeforeIncrement] = (weightedTintBlue + modulatedBlueThenWeighted >> 8) + ((modulatedGreenThenWeighted + weightedTintGreen >> 8 << 8) + (weightedTintRed + modulatedRedThenWeighted >> 8 << 16));
+                      }
+                      negativeColumnCounter++;
+                      if (clientControlFlowGuard == 0) {
+                        continue;
+                      }
                     }
-                    sampleXQ16 = sampleColorOrRowStartXQ16;
-                    negativeRowCounter++;
-                    if (clientControlFlowGuard == 0) {
-                      continue L1;
-                    }
-                    break L3;
+                    sampleYQ16 = sampleYQ16 + sampleYStepQ16;
+                    destinationIndex = destinationIndex + destinationRowSkip;
+                    sampleColorOrRowStartXQ16 = rowStartXQ16;
                   }
+                  sampleXQ16 = sampleColorOrRowStartXQ16;
+                  negativeRowCounter++;
+                  if (clientControlFlowGuard == 0) {
+                    continue L1;
+                  }
+                  break L3;
                 }
               }
             }
@@ -429,15 +427,13 @@ final class lc {
               }
               stackIn_61_0 = (j) (var7_ref);
             }
-            L17: {
-              if (stackIn_61_0 == null) {
-                hl.field_B.addLast(-39, var6_ref);
-                if (var8 == 0) {
-                  break L17;
-                }
+            if (stackIn_61_0 == null) {
+              hl.field_B.addLast(-39, var6_ref);
+              if (var8 == 0) {
+                return;
               }
-              PointerInputListener.a(var7_ref, 121, var6_ref);
             }
+            PointerInputListener.a(var7_ref, 121, var6_ref);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

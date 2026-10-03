@@ -437,108 +437,66 @@ final class ArgbSprite extends Sprite {
         if (bottomThenNegativeHeight >= 0) {
           return;
         }
-        L14: {
-          rowDestinationIndex = topBound * SoftwareRasterizer.stride + leftBound;
-          inverseScaleFactor = 16777216.0 / (double)scale;
-          inverseSinStep = (int)Math.floor(Math.sin(angleRadians) * inverseScaleFactor + 0.5);
-          inverseCosStep = (int)Math.floor(Math.cos(angleRadians) * inverseScaleFactor + 0.5);
-          destinationOffsetX = (leftBound << 4) + 8 - destinationX;
-          destinationOffsetY = (topBound << 4) + 8 - destinationY;
-          rowSourceXQ12 = (sourcePivotX << 8) - (destinationOffsetY * inverseSinStep >> 4);
-          rowSourceYQ12 = (sourcePivotY << 8) + (destinationOffsetY * inverseCosStep >> 4);
-          if (inverseCosStep == 0) {
-            if (inverseSinStep == 0) {
-              negativeRowCounter = bottomThenNegativeHeight;
-              while (negativeRowCounter < 0) {
-                L60: {
-                  destinationIndex = rowDestinationIndex;
-                  sourceXQ12 = rowSourceXQ12;
-                  sourceYQ12 = rowSourceYQ12;
-                  negativePixelCounter = rightThenNegativeWidth;
-                  if (sourceXQ12 >= 0) {
-                    if (sourceYQ12 >= 0) {
-                      if (sourceXQ12 - (this.width << 12) < 0) {
-                        if (sourceYQ12 - (this.height << 12) < 0) {
-                          while (negativePixelCounter < 0) {
-                            sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                            destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                            storedAlpha = sampledPixel >>> 24;
-                            inverseAlpha256 = 256 - storedAlpha;
-                            writeIndexFixedXFixedY = destinationIndex;
-                            destinationIndex++;
-                            SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                            negativePixelCounter++;
-                          }
-                          break L60;
-                        }
-                      }
-                    }
-                  }
-                }
-                negativeRowCounter++;
-                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
-              }
-              return;
-            }
-            if (inverseSinStep >= 0) {
-              negativeRowCounter = bottomThenNegativeHeight;
-              while (negativeRowCounter < 0) {
-                L50: {
-                  destinationIndex = rowDestinationIndex;
-                  sourceXQ12 = rowSourceXQ12;
-                  sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-                  negativePixelCounter = rightThenNegativeWidth;
-                  if (sourceXQ12 >= 0) {
-                    if (sourceXQ12 - (this.width << 12) < 0) {
-                      if (sourceYQ12 < 0) {
-                        clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
-                        negativePixelCounter = negativePixelCounter + clipPixelCount;
-                        sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                        destinationIndex = destinationIndex + clipPixelCount;
-                      }
-                      clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
-                      if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
-                        negativePixelCounter = clipPixelCount;
-                      }
-                      while (negativePixelCounter < 0) {
-                        sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                        destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                        storedAlpha = sampledPixel >>> 24;
-                        inverseAlpha256 = 256 - storedAlpha;
-                        writeIndexFixedXForwardY = destinationIndex;
-                        destinationIndex++;
-                        SoftwareRasterizer.framebuffer[writeIndexFixedXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                        sourceYQ12 = sourceYQ12 + inverseSinStep;
-                        negativePixelCounter++;
-                      }
-                      break L50;
-                    }
-                  }
-                }
-                negativeRowCounter++;
-                rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
-                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
-              }
-              break L14;
-            }
+        rowDestinationIndex = topBound * SoftwareRasterizer.stride + leftBound;
+        inverseScaleFactor = 16777216.0 / (double)scale;
+        inverseSinStep = (int)Math.floor(Math.sin(angleRadians) * inverseScaleFactor + 0.5);
+        inverseCosStep = (int)Math.floor(Math.cos(angleRadians) * inverseScaleFactor + 0.5);
+        destinationOffsetX = (leftBound << 4) + 8 - destinationX;
+        destinationOffsetY = (topBound << 4) + 8 - destinationY;
+        rowSourceXQ12 = (sourcePivotX << 8) - (destinationOffsetY * inverseSinStep >> 4);
+        rowSourceYQ12 = (sourcePivotY << 8) + (destinationOffsetY * inverseCosStep >> 4);
+        if (inverseCosStep == 0) {
+          if (inverseSinStep == 0) {
             negativeRowCounter = bottomThenNegativeHeight;
             while (negativeRowCounter < 0) {
-              L55: {
+              L60: {
+                destinationIndex = rowDestinationIndex;
+                sourceXQ12 = rowSourceXQ12;
+                sourceYQ12 = rowSourceYQ12;
+                negativePixelCounter = rightThenNegativeWidth;
+                if (sourceXQ12 >= 0) {
+                  if (sourceYQ12 >= 0) {
+                    if (sourceXQ12 - (this.width << 12) < 0) {
+                      if (sourceYQ12 - (this.height << 12) < 0) {
+                        while (negativePixelCounter < 0) {
+                          sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                          destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                          storedAlpha = sampledPixel >>> 24;
+                          inverseAlpha256 = 256 - storedAlpha;
+                          writeIndexFixedXFixedY = destinationIndex;
+                          destinationIndex++;
+                          SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                          negativePixelCounter++;
+                        }
+                        break L60;
+                      }
+                    }
+                  }
+                }
+              }
+              negativeRowCounter++;
+              rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
+            }
+            return;
+          }
+          if (inverseSinStep >= 0) {
+            negativeRowCounter = bottomThenNegativeHeight;
+            while (negativeRowCounter < 0) {
+              L50: {
                 destinationIndex = rowDestinationIndex;
                 sourceXQ12 = rowSourceXQ12;
                 sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
                 negativePixelCounter = rightThenNegativeWidth;
                 if (sourceXQ12 >= 0) {
                   if (sourceXQ12 - (this.width << 12) < 0) {
-                    clipPixelCount = sourceYQ12 - (this.height << 12);
-                    if (sourceYQ12 - (this.height << 12) >= 0) {
-                      clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
+                    if (sourceYQ12 < 0) {
+                      clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
                       negativePixelCounter = negativePixelCounter + clipPixelCount;
                       sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
                       destinationIndex = destinationIndex + clipPixelCount;
                     }
-                    clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
-                    if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                    clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+                    if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
                       negativePixelCounter = clipPixelCount;
                     }
                     while (negativePixelCounter < 0) {
@@ -546,13 +504,13 @@ final class ArgbSprite extends Sprite {
                       destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
                       storedAlpha = sampledPixel >>> 24;
                       inverseAlpha256 = 256 - storedAlpha;
-                      writeIndexFixedXReverseY = destinationIndex;
+                      writeIndexFixedXForwardY = destinationIndex;
                       destinationIndex++;
-                      SoftwareRasterizer.framebuffer[writeIndexFixedXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                      SoftwareRasterizer.framebuffer[writeIndexFixedXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
                       sourceYQ12 = sourceYQ12 + inverseSinStep;
                       negativePixelCounter++;
                     }
-                    break L55;
+                    break L50;
                   }
                 }
               }
@@ -560,98 +518,92 @@ final class ArgbSprite extends Sprite {
               rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
               rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
             }
-            break L14;
+            return;
           }
-          if (inverseCosStep >= 0) {
-            if (inverseSinStep == 0) {
-              negativeRowCounter = bottomThenNegativeHeight;
-              while (negativeRowCounter < 0) {
-                L28: {
-                  destinationIndex = rowDestinationIndex;
-                  sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-                  sourceYQ12 = rowSourceYQ12;
-                  negativePixelCounter = rightThenNegativeWidth;
-                  if (sourceYQ12 >= 0) {
-                    if (sourceYQ12 - (this.height << 12) < 0) {
-                      if (sourceXQ12 < 0) {
-                        clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
-                        negativePixelCounter = negativePixelCounter + clipPixelCount;
-                        sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                        destinationIndex = destinationIndex + clipPixelCount;
-                      }
-                      clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
-                      if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
-                        negativePixelCounter = clipPixelCount;
-                      }
-                      while (negativePixelCounter < 0) {
-                        sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                        destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                        storedAlpha = sampledPixel >>> 24;
-                        inverseAlpha256 = 256 - storedAlpha;
-                        writeIndexForwardXFixedY = destinationIndex;
-                        destinationIndex++;
-                        SoftwareRasterizer.framebuffer[writeIndexForwardXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                        sourceXQ12 = sourceXQ12 + inverseCosStep;
-                        negativePixelCounter++;
-                      }
-                      break L28;
-                    }
+          negativeRowCounter = bottomThenNegativeHeight;
+          while (negativeRowCounter < 0) {
+            L55: {
+              destinationIndex = rowDestinationIndex;
+              sourceXQ12 = rowSourceXQ12;
+              sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+              negativePixelCounter = rightThenNegativeWidth;
+              if (sourceXQ12 >= 0) {
+                if (sourceXQ12 - (this.width << 12) < 0) {
+                  clipPixelCount = sourceYQ12 - (this.height << 12);
+                  if (sourceYQ12 - (this.height << 12) >= 0) {
+                    clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
+                    negativePixelCounter = negativePixelCounter + clipPixelCount;
+                    sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                    destinationIndex = destinationIndex + clipPixelCount;
                   }
+                  clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
+                  if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                    negativePixelCounter = clipPixelCount;
+                  }
+                  while (negativePixelCounter < 0) {
+                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                    destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                    storedAlpha = sampledPixel >>> 24;
+                    inverseAlpha256 = 256 - storedAlpha;
+                    writeIndexFixedXReverseY = destinationIndex;
+                    destinationIndex++;
+                    SoftwareRasterizer.framebuffer[writeIndexFixedXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                    sourceYQ12 = sourceYQ12 + inverseSinStep;
+                    negativePixelCounter++;
+                  }
+                  break L55;
                 }
-                negativeRowCounter++;
-                rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
-                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
               }
-              break L14;
             }
-            if (inverseSinStep >= 0) {
-              negativeRowCounter = bottomThenNegativeHeight;
-              while (negativeRowCounter < 0) {
+            negativeRowCounter++;
+            rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+            rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
+          }
+          return;
+        }
+        if (inverseCosStep >= 0) {
+          if (inverseSinStep == 0) {
+            negativeRowCounter = bottomThenNegativeHeight;
+            while (negativeRowCounter < 0) {
+              L28: {
                 destinationIndex = rowDestinationIndex;
                 sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-                sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+                sourceYQ12 = rowSourceYQ12;
                 negativePixelCounter = rightThenNegativeWidth;
-                if (sourceXQ12 < 0) {
-                  clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
-                  negativePixelCounter = negativePixelCounter + clipPixelCount;
-                  sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                  sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                  destinationIndex = destinationIndex + clipPixelCount;
+                if (sourceYQ12 >= 0) {
+                  if (sourceYQ12 - (this.height << 12) < 0) {
+                    if (sourceXQ12 < 0) {
+                      clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
+                      negativePixelCounter = negativePixelCounter + clipPixelCount;
+                      sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                      destinationIndex = destinationIndex + clipPixelCount;
+                    }
+                    clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+                    if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                      negativePixelCounter = clipPixelCount;
+                    }
+                    while (negativePixelCounter < 0) {
+                      sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                      destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                      storedAlpha = sampledPixel >>> 24;
+                      inverseAlpha256 = 256 - storedAlpha;
+                      writeIndexForwardXFixedY = destinationIndex;
+                      destinationIndex++;
+                      SoftwareRasterizer.framebuffer[writeIndexForwardXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                      sourceXQ12 = sourceXQ12 + inverseCosStep;
+                      negativePixelCounter++;
+                    }
+                    break L28;
+                  }
                 }
-                clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
-                if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
-                  negativePixelCounter = clipPixelCount;
-                }
-                if (sourceYQ12 < 0) {
-                  clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
-                  negativePixelCounter = negativePixelCounter + clipPixelCount;
-                  sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                  sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                  destinationIndex = destinationIndex + clipPixelCount;
-                }
-                clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
-                if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
-                  negativePixelCounter = clipPixelCount;
-                }
-                while (negativePixelCounter < 0) {
-                  sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                  destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                  storedAlpha = sampledPixel >>> 24;
-                  inverseAlpha256 = 256 - storedAlpha;
-                  writeIndexForwardXForwardY = destinationIndex;
-                  destinationIndex++;
-                  SoftwareRasterizer.framebuffer[writeIndexForwardXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                  sourceXQ12 = sourceXQ12 + inverseCosStep;
-                  sourceYQ12 = sourceYQ12 + inverseSinStep;
-                  negativePixelCounter++;
-                }
-                negativeRowCounter++;
-                rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
-                rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
-                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
               }
-              break L14;
+              negativeRowCounter++;
+              rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+              rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
             }
+            return;
+          }
+          if (inverseSinStep >= 0) {
             negativeRowCounter = bottomThenNegativeHeight;
             while (negativeRowCounter < 0) {
               destinationIndex = rowDestinationIndex;
@@ -667,98 +619,6 @@ final class ArgbSprite extends Sprite {
               }
               clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
               if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
-                negativePixelCounter = clipPixelCount;
-              }
-              clipPixelCount = sourceYQ12 - (this.height << 12);
-              if (sourceYQ12 - (this.height << 12) >= 0) {
-                clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
-                negativePixelCounter = negativePixelCounter + clipPixelCount;
-                sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                destinationIndex = destinationIndex + clipPixelCount;
-              }
-              clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
-              if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
-                negativePixelCounter = clipPixelCount;
-              }
-              while (negativePixelCounter < 0) {
-                sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                storedAlpha = sampledPixel >>> 24;
-                inverseAlpha256 = 256 - storedAlpha;
-                writeIndexForwardXReverseY = destinationIndex;
-                destinationIndex++;
-                SoftwareRasterizer.framebuffer[writeIndexForwardXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                sourceXQ12 = sourceXQ12 + inverseCosStep;
-                sourceYQ12 = sourceYQ12 + inverseSinStep;
-                negativePixelCounter++;
-              }
-              negativeRowCounter++;
-              rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
-              rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
-              rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
-            }
-            break L14;
-          }
-          if (inverseSinStep == 0) {
-            negativeRowCounter = bottomThenNegativeHeight;
-            while (negativeRowCounter < 0) {
-              L45: {
-                destinationIndex = rowDestinationIndex;
-                sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-                sourceYQ12 = rowSourceYQ12;
-                negativePixelCounter = rightThenNegativeWidth;
-                if (sourceYQ12 >= 0) {
-                  if (sourceYQ12 - (this.height << 12) < 0) {
-                    clipPixelCount = sourceXQ12 - (this.width << 12);
-                    if (sourceXQ12 - (this.width << 12) >= 0) {
-                      clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
-                      negativePixelCounter = negativePixelCounter + clipPixelCount;
-                      sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                      destinationIndex = destinationIndex + clipPixelCount;
-                    }
-                    clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
-                    if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
-                      negativePixelCounter = clipPixelCount;
-                    }
-                    while (negativePixelCounter < 0) {
-                      sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                      destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                      storedAlpha = sampledPixel >>> 24;
-                      inverseAlpha256 = 256 - storedAlpha;
-                      writeIndexReverseXFixedY = destinationIndex;
-                      destinationIndex++;
-                      SoftwareRasterizer.framebuffer[writeIndexReverseXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                      sourceXQ12 = sourceXQ12 + inverseCosStep;
-                      negativePixelCounter++;
-                    }
-                    break L45;
-                  }
-                }
-              }
-              negativeRowCounter++;
-              rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
-              rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
-            }
-            break L14;
-          }
-          if (inverseSinStep >= 0) {
-            negativeRowCounter = bottomThenNegativeHeight;
-            while (negativeRowCounter < 0) {
-              destinationIndex = rowDestinationIndex;
-              sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-              sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-              negativePixelCounter = rightThenNegativeWidth;
-              clipPixelCount = sourceXQ12 - (this.width << 12);
-              if (sourceXQ12 - (this.width << 12) >= 0) {
-                clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
-                negativePixelCounter = negativePixelCounter + clipPixelCount;
-                sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
-                sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                destinationIndex = destinationIndex + clipPixelCount;
-              }
-              clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
-              if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
                 negativePixelCounter = clipPixelCount;
               }
               if (sourceYQ12 < 0) {
@@ -777,9 +637,9 @@ final class ArgbSprite extends Sprite {
                 destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
                 storedAlpha = sampledPixel >>> 24;
                 inverseAlpha256 = 256 - storedAlpha;
-                writeIndexReverseXForwardY = destinationIndex;
+                writeIndexForwardXForwardY = destinationIndex;
                 destinationIndex++;
-                SoftwareRasterizer.framebuffer[writeIndexReverseXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                SoftwareRasterizer.framebuffer[writeIndexForwardXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
                 sourceXQ12 = sourceXQ12 + inverseCosStep;
                 sourceYQ12 = sourceYQ12 + inverseSinStep;
                 negativePixelCounter++;
@@ -789,7 +649,7 @@ final class ArgbSprite extends Sprite {
               rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
               rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
             }
-            break L14;
+            return;
           }
           negativeRowCounter = bottomThenNegativeHeight;
           while (negativeRowCounter < 0) {
@@ -797,16 +657,15 @@ final class ArgbSprite extends Sprite {
             sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
             sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
             negativePixelCounter = rightThenNegativeWidth;
-            clipPixelCount = sourceXQ12 - (this.width << 12);
-            if (sourceXQ12 - (this.width << 12) >= 0) {
-              clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+            if (sourceXQ12 < 0) {
+              clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
               negativePixelCounter = negativePixelCounter + clipPixelCount;
               sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
               sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
               destinationIndex = destinationIndex + clipPixelCount;
             }
-            clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
-            if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+            clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+            if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
               negativePixelCounter = clipPixelCount;
             }
             clipPixelCount = sourceYQ12 - (this.height << 12);
@@ -826,9 +685,9 @@ final class ArgbSprite extends Sprite {
               destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
               storedAlpha = sampledPixel >>> 24;
               inverseAlpha256 = 256 - storedAlpha;
-              writeIndexReverseXReverseY = destinationIndex;
+              writeIndexForwardXReverseY = destinationIndex;
               destinationIndex++;
-              SoftwareRasterizer.framebuffer[writeIndexReverseXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+              SoftwareRasterizer.framebuffer[writeIndexForwardXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
               sourceXQ12 = sourceXQ12 + inverseCosStep;
               sourceYQ12 = sourceYQ12 + inverseSinStep;
               negativePixelCounter++;
@@ -838,7 +697,145 @@ final class ArgbSprite extends Sprite {
             rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
             rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
           }
-          break L14;
+          return;
+        }
+        if (inverseSinStep == 0) {
+          negativeRowCounter = bottomThenNegativeHeight;
+          while (negativeRowCounter < 0) {
+            L45: {
+              destinationIndex = rowDestinationIndex;
+              sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+              sourceYQ12 = rowSourceYQ12;
+              negativePixelCounter = rightThenNegativeWidth;
+              if (sourceYQ12 >= 0) {
+                if (sourceYQ12 - (this.height << 12) < 0) {
+                  clipPixelCount = sourceXQ12 - (this.width << 12);
+                  if (sourceXQ12 - (this.width << 12) >= 0) {
+                    clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+                    negativePixelCounter = negativePixelCounter + clipPixelCount;
+                    sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                    destinationIndex = destinationIndex + clipPixelCount;
+                  }
+                  clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
+                  if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                    negativePixelCounter = clipPixelCount;
+                  }
+                  while (negativePixelCounter < 0) {
+                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                    destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                    storedAlpha = sampledPixel >>> 24;
+                    inverseAlpha256 = 256 - storedAlpha;
+                    writeIndexReverseXFixedY = destinationIndex;
+                    destinationIndex++;
+                    SoftwareRasterizer.framebuffer[writeIndexReverseXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                    sourceXQ12 = sourceXQ12 + inverseCosStep;
+                    negativePixelCounter++;
+                  }
+                  break L45;
+                }
+              }
+            }
+            negativeRowCounter++;
+            rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+            rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
+          }
+          return;
+        }
+        if (inverseSinStep >= 0) {
+          negativeRowCounter = bottomThenNegativeHeight;
+          while (negativeRowCounter < 0) {
+            destinationIndex = rowDestinationIndex;
+            sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+            sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+            negativePixelCounter = rightThenNegativeWidth;
+            clipPixelCount = sourceXQ12 - (this.width << 12);
+            if (sourceXQ12 - (this.width << 12) >= 0) {
+              clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+              negativePixelCounter = negativePixelCounter + clipPixelCount;
+              sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+              sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+              destinationIndex = destinationIndex + clipPixelCount;
+            }
+            clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
+            if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+              negativePixelCounter = clipPixelCount;
+            }
+            if (sourceYQ12 < 0) {
+              clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
+              negativePixelCounter = negativePixelCounter + clipPixelCount;
+              sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+              sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+              destinationIndex = destinationIndex + clipPixelCount;
+            }
+            clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+            if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+              negativePixelCounter = clipPixelCount;
+            }
+            while (negativePixelCounter < 0) {
+              sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+              destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+              storedAlpha = sampledPixel >>> 24;
+              inverseAlpha256 = 256 - storedAlpha;
+              writeIndexReverseXForwardY = destinationIndex;
+              destinationIndex++;
+              SoftwareRasterizer.framebuffer[writeIndexReverseXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+              sourceXQ12 = sourceXQ12 + inverseCosStep;
+              sourceYQ12 = sourceYQ12 + inverseSinStep;
+              negativePixelCounter++;
+            }
+            negativeRowCounter++;
+            rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+            rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+            rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
+          }
+          return;
+        }
+        negativeRowCounter = bottomThenNegativeHeight;
+        while (negativeRowCounter < 0) {
+          destinationIndex = rowDestinationIndex;
+          sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+          sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+          negativePixelCounter = rightThenNegativeWidth;
+          clipPixelCount = sourceXQ12 - (this.width << 12);
+          if (sourceXQ12 - (this.width << 12) >= 0) {
+            clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+            negativePixelCounter = negativePixelCounter + clipPixelCount;
+            sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+            sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+            destinationIndex = destinationIndex + clipPixelCount;
+          }
+          clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
+          if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+            negativePixelCounter = clipPixelCount;
+          }
+          clipPixelCount = sourceYQ12 - (this.height << 12);
+          if (sourceYQ12 - (this.height << 12) >= 0) {
+            clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
+            negativePixelCounter = negativePixelCounter + clipPixelCount;
+            sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+            sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+            destinationIndex = destinationIndex + clipPixelCount;
+          }
+          clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
+          if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+            negativePixelCounter = clipPixelCount;
+          }
+          while (negativePixelCounter < 0) {
+            sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+            destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+            storedAlpha = sampledPixel >>> 24;
+            inverseAlpha256 = 256 - storedAlpha;
+            writeIndexReverseXReverseY = destinationIndex;
+            destinationIndex++;
+            SoftwareRasterizer.framebuffer[writeIndexReverseXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+            sourceXQ12 = sourceXQ12 + inverseCosStep;
+            sourceYQ12 = sourceYQ12 + inverseSinStep;
+            negativePixelCounter++;
+          }
+          negativeRowCounter++;
+          rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+          rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+          rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
         }
         return;
     }

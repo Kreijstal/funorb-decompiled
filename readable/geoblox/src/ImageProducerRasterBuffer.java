@@ -231,20 +231,18 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               }
             }
           }
-          L10: {
-            if (SoftwareRasterizer.clipTop <= param0) {
-              if (SoftwareRasterizer.clipBottom > var6) {
-                var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
-                var12 = 1 - (-var9 + var7) >> 1;
-                while (true) {
-                  var12--;
-                  if (var12 < 0) {
-                    break L10;
-                  }
-                  SoftwareRasterizer.framebuffer[var11] = 16777215;
-                  var11 += 2;
-                  continue;
+          if (SoftwareRasterizer.clipTop <= param0) {
+            if (SoftwareRasterizer.clipBottom > var6) {
+              var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
+              var12 = 1 - (-var9 + var7) >> 1;
+              while (true) {
+                var12--;
+                if (var12 < 0) {
+                  return;
                 }
+                SoftwareRasterizer.framebuffer[var11] = 16777215;
+                var11 += 2;
+                continue;
               }
             }
           }

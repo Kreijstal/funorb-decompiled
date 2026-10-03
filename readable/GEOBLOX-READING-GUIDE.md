@@ -2763,3 +2763,38 @@ diagnostics, readable reproduction and dictionary reversal are exact. Existing
 native GeoBlox traces retain their documented pins; actual host setup, model
 callbacks, real assets/server traffic, comprehensive gameplay and browser/phone
 performance remain outside the proofs. Opaque helpers and large bodies remain.
+
+## Direct early exits (pass 79)
+
+`GameScreen.renderScreen` exits directly after a selected menu rendering branch,
+and menu/input helpers return after completing their selected operation.
+`GameplaySession.updateSession` uses direct returns in its tutorial exit paths.
+`Sprite.rotateNearest` and the corresponding ARGB routine return after their
+selected geometric case, removing an outer exit frame while retaining their
+branch predicates, traversal and pixel-write order. Some large bodies remain;
+this change removes control indirection rather than splitting methods.
+
+Only a break to a plain labeled block immediately followed by a bare void return
+is eligible. No value expression or work moves across a cleanup boundary.
+Explicit finally may override the transfer by return, throw, outer break or
+outer continue. A separate completion proof keeps a reachable trailing return,
+removes an unreachable one, and refuses uncertain candidates. Unknown syntax,
+resource headers, nested executable bodies and ambiguous lexical identities
+remain unchanged. Declaration-bearing braces retain their scope.
+
+The pass consumes 95 jumps in 38 blocks across 25 files, removing five unreachable
+trailing returns and 81 lines (79,713 to 79,632). Every ordered declaration/
+reference identity and spelling plus 388 override rows matches the preceding
+corpus. Applying the documented return and control-frame rules reproduces all
+303 regenerated token streams. All 6,081 complete guarded rules remain unchanged,
+applying 49,577 edits and preserving 138,502 bindings. Text-resource source hashes
+and line positions refresh without changing fields, keys or indexes.
+
+The generic tests add 46,080 native comparisons of loops, explicit resource
+cleanup, failures, partial state, throwable identity and lock ownership/release.
+The emitter suite passes 44 tests and skips its historical pass77 frame-only
+corpus check; exception-exit tests pass eight groups. Clean decompiler archive
+regeneration, readable reproduction and dictionary reversal are exact. Existing
+native/raw/readable game probes retain their documented traces. Whole-game
+execution, actual assets/platform/server traffic, remaining opaque helpers and
+browser/phone performance remain outside these proofs.

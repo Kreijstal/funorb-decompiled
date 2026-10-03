@@ -127,20 +127,18 @@ class el extends IntrusiveNode {
           } else {
             stackIn_5_1 = 1;
           }
-          L1: {
-            if (stackIn_4_0 == stackIn_5_1) {
-              if (var5_int == 0) {
-                stackIn_10_1 = false;
-              } else {
-                stackIn_10_1 = true;
+          if (stackIn_4_0 == stackIn_5_1) {
+            if (var5_int == 0) {
+              stackIn_10_1 = false;
+            } else {
+              stackIn_10_1 = true;
+            }
+            ((el) (this)).field_l = stackIn_10_1;
+            if (this.field_u != null) {
+              if (!(this.field_u instanceof lg)) {
+                return;
               }
-              ((el) (this)).field_l = stackIn_10_1;
-              if (this.field_u != null) {
-                if (!(this.field_u instanceof lg)) {
-                  break L1;
-                }
-                ((lg) ((Object) this.field_u)).a(53, (el) (this), var5_int != 0);
-              }
+              ((lg) ((Object) this.field_u)).a(53, (el) (this), var5_int != 0);
             }
           }
           return;

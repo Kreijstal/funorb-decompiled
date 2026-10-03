@@ -118,18 +118,16 @@ final class hl extends el {
             id.a(true);
             this.field_z.draw(param2, param1);
           }
-          L3: {
-            if (SoftwareRasterizer.clipRight >= var5_int - this.field_M.width) {
-              Geoblox.setRasterTarget(param3 ^ -12275, this.field_z);
-              for (var7 = this.field_I + (this.field_r - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
-              }
-              param0.draw(-var7, 0);
-              param0.draw(-var7 + this.field_H * 2, 0);
-              this.field_M.drawMultiply(0, 0);
-              id.a(true);
-              this.field_z.draw(-this.field_M.width + var5_int, param1);
-              break L3;
+          if (SoftwareRasterizer.clipRight >= var5_int - this.field_M.width) {
+            Geoblox.setRasterTarget(param3 ^ -12275, this.field_z);
+            for (var7 = this.field_I + (this.field_r - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
             }
+            param0.draw(-var7, 0);
+            param0.draw(-var7 + this.field_H * 2, 0);
+            this.field_M.drawMultiply(0, 0);
+            id.a(true);
+            this.field_z.draw(-this.field_M.width + var5_int, param1);
+            return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -53,141 +53,139 @@ final class cm extends cj {
           if (param0 != -24839) {
             cm.a(false);
           }
-          L1: {
-            var27 = eh.field_d;
-            var2 = var27.readUnsignedByte((byte) 34);
-            if (var2 == 0) {
-              var3 = var27.readUnsignedShortBE(true);
-              var4 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
-              while (var4 != null) {
-                if (var4.field_i != var3) {
-                  var4 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
-                  continue;
-                }
-                break;
+          var27 = eh.field_d;
+          var2 = var27.readUnsignedByte((byte) 34);
+          if (var2 == 0) {
+            var3 = var27.readUnsignedShortBE(true);
+            var4 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
+            while (var4 != null) {
+              if (var4.field_i != var3) {
+                var4 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
+                continue;
               }
-              if (var4 == null) {
-                Bzip2DecoderState.a((byte) -115);
-                return;
-              }
-              L4: {
-                var5 = var27.readUnsignedByte((byte) 34);
-                if (var5 != 0) {
-                  var6 = var4.field_f;
-                  var7 = var4.field_l;
-                  id.field_b[0].field_c = false;
-                  id.field_b[0].field_d = SecondaryDeque.field_f;
-                  id.field_b[0].field_a = null;
-                  for (var8_int = 1; var5 > var8_int; var8_int++) {
-                    id.field_b[var8_int].field_d = var27.readNullTerminatedText((byte) 104);
-                    id.field_b[var8_int].field_c = false;
-                    if (var27.readUnsignedByte((byte) 34) == 1) {
-                      id.field_b[var8_int].field_a = var27.readNullTerminatedText((byte) 122);
-                    } else {
-                      id.field_b[var8_int].field_a = null;
-                    }
-                  }
-                  dupTemp$0 = new String[3][var6];
-                  var4.field_k = dupTemp$0;
-                  var8 = dupTemp$0;
-                  var9 = new String[3][var6];
-                  var31 = new long[3][var6];
-                  dupTemp$1 = new int[3][var6 * var7];
-                  var4.field_h = dupTemp$1;
-                  var11 = dupTemp$1;
-                  var12 = 0;
-                  var13 = 0;
-                  var14 = 0;
-                  var15 = 0;
-                  var16 = 0;
-                  var17 = 0;
-                  var18 = var27.readUnsignedByte((byte) 34);
-                  if (0 >= var18) {
-                    break L4;
-                  }
-                  for (var19 = 0; var19 < var18; var19++) {
-                    L7: {
-                      var20 = var27.readUnsignedByte((byte) 34);
-                      var21 = id.field_b[var20].field_d;
-                      var22 = var27.readLongBE(2901);
-                      var24 = var27.position;
-                      if (var6 > var19) {
-                        var8[0][var12] = var21;
-                        var9[0][var12] = id.field_b[var20].field_a;
-                        var31[0][var12] = var22;
-                        for (var25 = 0; var25 < var7; var25++) {
-                          incrementValue$2 = var15;
-                          var15++;
-                          var11[0][incrementValue$2] = var27.readIntBE((byte) -76);
-                        }
-                        var12++;
-                        break L7;
-                      }
-                    }
-                    L9: {
-                      if (var21 != null) {
-                        if (WhirlpoolHash.a(var21, (byte) 12)) {
-                          var8[1][var13] = SecondaryDeque.field_f;
-                          var9[1][var13] = null;
-                          var31[1][var13] = var22;
-                          var13++;
-                          var27.position = var24;
-                          for (var25 = 0; var25 < var7; var25++) {
-                            incrementValue$3 = var16;
-                            var16++;
-                            var11[1][incrementValue$3] = var27.readIntBE((byte) -122);
-                          }
-                          break L9;
-                        }
-                      }
-                    }
-                    L11: {
-                      if (var14 < var6) {
-                        if (!id.field_b[var20].field_c) {
-                          id.field_b[var20].field_c = true;
-                          var8[2][var14] = var21;
-                          var9[2][var14] = id.field_b[var20].field_a;
-                          var31[2][var14] = var22;
-                          var14++;
-                          var27.position = var24;
-                          for (var25 = 0; var7 > var25; var25++) {
-                            incrementValue$4 = var17;
-                            var17++;
-                            var11[2][incrementValue$4] = var27.readIntBE((byte) -101);
-                          }
-                          break L11;
-                        }
-                      }
-                    }
-                  }
-                  break L4;
-                }
-              }
-              var4.field_j = true;
-              var4.unlinkNode(false);
-              break L1;
+              break;
             }
-            if (1 == var2) {
-              var3 = var27.readUnsignedShortBE(true);
-              var27.readLongBE(param0 + 27740);
-              var4_ref = (ai) ((Object) nf.field_j.firstForIteration(0));
-              while (var4_ref != null) {
-                if (var3 != var4_ref.field_q) {
-                  var4_ref = (ai) ((Object) nf.field_j.nextForIteration(1));
-                  continue;
-                }
-                break;
-              }
-              if (var4_ref != null) {
-                var4_ref.unlinkNode(false);
-                break L1;
-              }
-              Bzip2DecoderState.a((byte) -117);
+            if (var4 == null) {
+              Bzip2DecoderState.a((byte) -115);
               return;
             }
-            gi.a((Throwable) null, "HS1: " + og.e(param0 + 24894), (byte) 125);
-            Bzip2DecoderState.a((byte) -117);
+            L4: {
+              var5 = var27.readUnsignedByte((byte) 34);
+              if (var5 != 0) {
+                var6 = var4.field_f;
+                var7 = var4.field_l;
+                id.field_b[0].field_c = false;
+                id.field_b[0].field_d = SecondaryDeque.field_f;
+                id.field_b[0].field_a = null;
+                for (var8_int = 1; var5 > var8_int; var8_int++) {
+                  id.field_b[var8_int].field_d = var27.readNullTerminatedText((byte) 104);
+                  id.field_b[var8_int].field_c = false;
+                  if (var27.readUnsignedByte((byte) 34) == 1) {
+                    id.field_b[var8_int].field_a = var27.readNullTerminatedText((byte) 122);
+                  } else {
+                    id.field_b[var8_int].field_a = null;
+                  }
+                }
+                dupTemp$0 = new String[3][var6];
+                var4.field_k = dupTemp$0;
+                var8 = dupTemp$0;
+                var9 = new String[3][var6];
+                var31 = new long[3][var6];
+                dupTemp$1 = new int[3][var6 * var7];
+                var4.field_h = dupTemp$1;
+                var11 = dupTemp$1;
+                var12 = 0;
+                var13 = 0;
+                var14 = 0;
+                var15 = 0;
+                var16 = 0;
+                var17 = 0;
+                var18 = var27.readUnsignedByte((byte) 34);
+                if (0 >= var18) {
+                  break L4;
+                }
+                for (var19 = 0; var19 < var18; var19++) {
+                  L7: {
+                    var20 = var27.readUnsignedByte((byte) 34);
+                    var21 = id.field_b[var20].field_d;
+                    var22 = var27.readLongBE(2901);
+                    var24 = var27.position;
+                    if (var6 > var19) {
+                      var8[0][var12] = var21;
+                      var9[0][var12] = id.field_b[var20].field_a;
+                      var31[0][var12] = var22;
+                      for (var25 = 0; var25 < var7; var25++) {
+                        incrementValue$2 = var15;
+                        var15++;
+                        var11[0][incrementValue$2] = var27.readIntBE((byte) -76);
+                      }
+                      var12++;
+                      break L7;
+                    }
+                  }
+                  L9: {
+                    if (var21 != null) {
+                      if (WhirlpoolHash.a(var21, (byte) 12)) {
+                        var8[1][var13] = SecondaryDeque.field_f;
+                        var9[1][var13] = null;
+                        var31[1][var13] = var22;
+                        var13++;
+                        var27.position = var24;
+                        for (var25 = 0; var25 < var7; var25++) {
+                          incrementValue$3 = var16;
+                          var16++;
+                          var11[1][incrementValue$3] = var27.readIntBE((byte) -122);
+                        }
+                        break L9;
+                      }
+                    }
+                  }
+                  L11: {
+                    if (var14 < var6) {
+                      if (!id.field_b[var20].field_c) {
+                        id.field_b[var20].field_c = true;
+                        var8[2][var14] = var21;
+                        var9[2][var14] = id.field_b[var20].field_a;
+                        var31[2][var14] = var22;
+                        var14++;
+                        var27.position = var24;
+                        for (var25 = 0; var7 > var25; var25++) {
+                          incrementValue$4 = var17;
+                          var17++;
+                          var11[2][incrementValue$4] = var27.readIntBE((byte) -101);
+                        }
+                        break L11;
+                      }
+                    }
+                  }
+                }
+                break L4;
+              }
+            }
+            var4.field_j = true;
+            var4.unlinkNode(false);
+            return;
           }
+          if (1 == var2) {
+            var3 = var27.readUnsignedShortBE(true);
+            var27.readLongBE(param0 + 27740);
+            var4_ref = (ai) ((Object) nf.field_j.firstForIteration(0));
+            while (var4_ref != null) {
+              if (var3 != var4_ref.field_q) {
+                var4_ref = (ai) ((Object) nf.field_j.nextForIteration(1));
+                continue;
+              }
+              break;
+            }
+            if (var4_ref != null) {
+              var4_ref.unlinkNode(false);
+              return;
+            }
+            Bzip2DecoderState.a((byte) -117);
+            return;
+          }
+          gi.a((Throwable) null, "HS1: " + og.e(param0 + 24894), (byte) 125);
+          Bzip2DecoderState.a((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1243,60 +1243,58 @@ final class GameplaySession {
             debugKeyCodeOrPointerEventComplement = ~bi.pointerPressButtonSnapshot;
             debugKeySentinelOrPointerEventSentinel = -1;
           }
-          L98: {
-            if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
-              if (this.debugPointerSpawnEnabled) {
-                if (oc.field_f >= 2) {
-                  nb.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, he.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
-                }
+          if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
+            if (this.debugPointerSpawnEnabled) {
+              if (oc.field_f >= 2) {
+                nb.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, he.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
               }
-              L100: {
-                if (this.tutorialMode) {
-                  if (this.tutorialStepPhase == 0) {
-                    if (this.tutorialStepId != 5) {
-                      this.tutorialPromptActive = false;
-                      this.tutorialStepPhase = 1;
-                      if (this.tutorialStepId == 0) {
-                        this.tutorialProgressMetric = 0;
-                        if (clientControlFlowGuard == 0) {
-                          break L100;
-                        }
-                      }
-                      if (this.tutorialStepId == 1) {
-                        this.tutorialProgressMetric = dd.variantMatchCandidateCount;
-                        if (clientControlFlowGuard == 0) {
-                          break L100;
-                        }
-                      }
-                      if (this.tutorialStepId != 2) {
-                        break L98;
-                      }
-                      this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
+            }
+            L100: {
+              if (this.tutorialMode) {
+                if (this.tutorialStepPhase == 0) {
+                  if (this.tutorialStepId != 5) {
+                    this.tutorialPromptActive = false;
+                    this.tutorialStepPhase = 1;
+                    if (this.tutorialStepId == 0) {
+                      this.tutorialProgressMetric = 0;
                       if (clientControlFlowGuard == 0) {
                         break L100;
                       }
                     }
-                    if (mc.pointerPressXSnapshot > 100) {
-                      if (340 > mc.pointerPressXSnapshot) {
-                        if (he.pointerPressYSnapshot > 440) {
-                          if (476 > he.pointerPressYSnapshot) {
-                            this.leaveTutorial(methodGuard ^ -1578897511);
-                            this.tutorialStepId = 0;
-                            this.tutorialMode = true;
-                            this.tutorialPromptActive = true;
-                          }
+                    if (this.tutorialStepId == 1) {
+                      this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                      if (clientControlFlowGuard == 0) {
+                        break L100;
+                      }
+                    }
+                    if (this.tutorialStepId != 2) {
+                      return;
+                    }
+                    this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
+                    if (clientControlFlowGuard == 0) {
+                      break L100;
+                    }
+                  }
+                  if (mc.pointerPressXSnapshot > 100) {
+                    if (340 > mc.pointerPressXSnapshot) {
+                      if (he.pointerPressYSnapshot > 440) {
+                        if (476 > he.pointerPressYSnapshot) {
+                          this.leaveTutorial(methodGuard ^ -1578897511);
+                          this.tutorialStepId = 0;
+                          this.tutorialMode = true;
+                          this.tutorialPromptActive = true;
                         }
                       }
                     }
-                    if (mc.pointerPressXSnapshot > 380) {
-                      if (540 > mc.pointerPressXSnapshot) {
-                        if (he.pointerPressYSnapshot > 440) {
-                          if (he.pointerPressYSnapshot >= 476) {
-                            break L98;
-                          }
-                          this.tutorialPromptActive = false;
-                          this.tutorialStepPhase = 1;
+                  }
+                  if (mc.pointerPressXSnapshot > 380) {
+                    if (540 > mc.pointerPressXSnapshot) {
+                      if (he.pointerPressYSnapshot > 440) {
+                        if (he.pointerPressYSnapshot >= 476) {
+                          return;
                         }
+                        this.tutorialPromptActive = false;
+                        this.tutorialStepPhase = 1;
                       }
                     }
                   }

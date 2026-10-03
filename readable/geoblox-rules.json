@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "1b46d772b7dd2ddb026d31dd849f0ea77424cab7",
+    "commit": "4f02f56a771c27f1cf814157be4606fb4450cc9b",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd",
+  "inputTreeSha256": "16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -36497,19 +36497,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 7,
-  "version": 78,
+  "revision": 8,
+  "version": 79,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "d4ad201b2cc96e98089be0c4ccfe819dd7a924da",
+      "commit": "5420742cd2ea194a1f128fb0059e1e2bf3487e8e",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda",
-        "reproduce": "git archive --format=tar d4ad201b2cc96e98089be0c4ccfe819dd7a924da | sha256sum",
+        "sha256": "1cb7031c92759a6a2847c2baf87db5def26a4edbaa50a6020409fb436987ae47",
+        "reproduce": "git archive --format=tar 5420742cd2ea194a1f128fb0059e1e2bf3487e8e | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -36518,9 +36518,9 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "4e1d4cbcfaa5c6d45687e0e0fb4d38caffeb1784",
+      "commit": "efdf5812611fe4ab91fb79e770bd8c71ecb654ab",
       "path": "readable/geoblox-rules.json",
-      "sha256": "81548f8c601a602d80d25d428763e46bc45b029ed3aa39387e2c375e35208edb"
+      "sha256": "f91e2278baf26626a255ebeb478ecc5c60b4bf26dd28132fd9fff91afa42ae66"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
@@ -36571,7 +36571,7 @@
       },
       {
         "file": "bf.java",
-        "sha256": "706ddf72ea4130d1168ca36db77ea44364ce98448f2334347e50c503fa2d3143"
+        "sha256": "cd602b588480c6b08c000bf8eaf906fd39dd48982a463a9403de238fd08243d9"
       },
       {
         "file": "bg.java",
@@ -36579,7 +36579,7 @@
       },
       {
         "file": "bh.java",
-        "sha256": "6789e803c0507e38d37ea536f4882f6764ddb48de9e4a0317e1cca6b8e4c8f94"
+        "sha256": "78fd75421c35076a69eda531b0d229e9d942a6fe4a257a8e8ad481ad75f65149"
       },
       {
         "file": "bi.java",
@@ -36595,11 +36595,11 @@
       },
       {
         "file": "bm.java",
-        "sha256": "c0a1602fd27aa4222df631166ad6c60cd8485f68c66c9f9e0731ae4b024efdcd"
+        "sha256": "895780ae82f29ef866fbb62ab27fe983864cb7da42e5fb89f1b02bd83e60b94d"
       },
       {
         "file": "c.java",
-        "sha256": "9ab5d5da65701f4472d2ccadb1e7773a38c686eba9e886c25ccdd7b743ea0b1c"
+        "sha256": "a8613425e8e1cd880be1cc1616f3e6265ee44d045c7c647d98770bdd470d9630"
       },
       {
         "file": "ca.java",
@@ -36619,7 +36619,7 @@
       },
       {
         "file": "ch.java",
-        "sha256": "0f1c15bf2c9f28ec48ff9fcee5ca78f3e72371d3551ebae4886198b542ebf95f"
+        "sha256": "cae45b2a33b0dd0d76ad5088a9be395383a566be398fbceb41d805e7f1fc5b28"
       },
       {
         "file": "cj.java",
@@ -36631,7 +36631,7 @@
       },
       {
         "file": "cm.java",
-        "sha256": "365006531bd031cdfd0aeec9578c5238f5123e2d6b1a7584174f94e3075874e4"
+        "sha256": "e3384ef65fa4829c7b3a87d977ccc9311ac1304dbf2d9b41281a73df76aad4ac"
       },
       {
         "file": "d.java",
@@ -36651,11 +36651,11 @@
       },
       {
         "file": "dk.java",
-        "sha256": "3ec7f2993c405025addebe4e5455a6685d05b94d4a8abfa56439fad5db22ba16"
+        "sha256": "7029e04c4a8e9131c5b6bc4be66219a0339e9ac0ed9061a770087f7a2857a344"
       },
       {
         "file": "dm.java",
-        "sha256": "ea5d47ae0b7d35f6a527424da305bba6308126c5b99067c97edbc409f6cc83dc"
+        "sha256": "267a3f94645e1e378d67fb6077accf4d35a8938d41cfa23b4c42762a1aa86eab"
       },
       {
         "file": "ea.java",
@@ -36691,7 +36691,7 @@
       },
       {
         "file": "el.java",
-        "sha256": "7b8ae84e5d2752ef7dde698f52298391ed6bd6cc3f29859cca3854719efaaafc"
+        "sha256": "0f5e313ffc89fa4d0969c6b67baa6ffbb17dc7b94bdea634a3978df2ea281011"
       },
       {
         "file": "em.java",
@@ -36747,7 +36747,7 @@
       },
       {
         "file": "gh.java",
-        "sha256": "bd4a71531ba0ca2193c5bdde25adf18322358a1c8e47bbd18891648054035a0c"
+        "sha256": "21e59ee1672ac632376d137c780454964b69593d2a5cd85ae43c247694ae4db8"
       },
       {
         "file": "gi.java",
@@ -36807,11 +36807,11 @@
       },
       {
         "file": "hl.java",
-        "sha256": "4907c3e3a4c0212ced789768f6af4737c9f1fb08b87a1e1717d4d9952fc842e1"
+        "sha256": "3da692221f6f35c4f64da2f01dbea26234b1348a7c3d080e7b306b22763b769d"
       },
       {
         "file": "i.java",
-        "sha256": "0592e7af2d8734b896acb60874e4005eabeae695e0ddfffb5c7176dd8a3e8d4f"
+        "sha256": "85e42d7106512f0946d8a26c44f77fec5120f97d088cb58b1f753bd1658d77c6"
       },
       {
         "file": "ib.java",
@@ -36843,7 +36843,7 @@
       },
       {
         "file": "il.java",
-        "sha256": "609c236cb498dda84ff29c8f9b6744bc4c2109b713eacaabc49e9e99ba460316"
+        "sha256": "7451dee608e21675c35409c475ac24a35c857cf7e4c6a0ca0669b3a97ecfb6d8"
       },
       {
         "file": "ja.java",
@@ -36935,7 +36935,7 @@
       },
       {
         "file": "lc.java",
-        "sha256": "dcc1a1b302745d7b37e516b9d436adbea0c917a6574de765d35db3748ce951f0"
+        "sha256": "768b49a4c705297ff5758d24d9074aed1849b5e4ed42db702fd68bc256d41eda"
       },
       {
         "file": "ld.java",
@@ -36967,7 +36967,7 @@
       },
       {
         "file": "ma.java",
-        "sha256": "72864b13c0a8460fa3783d6bb2405eed5e7e1925d58663e11f4ce69c302cf497"
+        "sha256": "27dec9bf74553fe58de3b10b96379e285accf9c6d05c84110a5011284ee0b27f"
       },
       {
         "file": "mc.java",
@@ -37043,7 +37043,7 @@
       },
       {
         "file": "oe.java",
-        "sha256": "60553d733e3f971645ef0c3c892d74a9289953d1c0b728bec21ecad6a76a6814"
+        "sha256": "bcc8caebb4942ae88f5987928cad2f1a83236e309b13167d0481a0da11b5c33c"
       },
       {
         "file": "ok.java",
@@ -37051,7 +37051,7 @@
       },
       {
         "file": "p.java",
-        "sha256": "93ea2b443912b18bab197f17089c54d85b6f16a398431ee670259d9de39faa80"
+        "sha256": "f19972540cd5c4d959c13144b0dc91c9c3e6d5d54ec0d069205e4878ac36748d"
       },
       {
         "file": "pa.java",
@@ -37143,7 +37143,7 @@
       },
       {
         "file": "rd.java",
-        "sha256": "0c74e9bce585c68d8684a3227554e0f8701daf3e74faf869ba2817a6f22a09e6"
+        "sha256": "945d04c0c9169e65f365271981fc2b1cf2b4c6e4f355255cc81785671c150a88"
       },
       {
         "file": "re.java",
@@ -37235,7 +37235,7 @@
       },
       {
         "file": "u.java",
-        "sha256": "f848b7fdb95cf4c344dde63cdcc13ce10245bd49ae7fdcf7a987c83979507e51"
+        "sha256": "c6479cc1c58bb1e09c618fbcd2b34e01ebca2a2804b12477b7ebae8f6e7e1ee0"
       },
       {
         "file": "ue.java",
@@ -37275,7 +37275,7 @@
       },
       {
         "file": "vb.java",
-        "sha256": "6ef5e177fc3b6f92496bfa5d4f4f1f2ed3f58b8d4b8ee377797dbefed2aff723"
+        "sha256": "dbc1d96f16bbafe8771a31079403a65f3f41fe89f573328c80f7017e19a67558"
       },
       {
         "file": "vc.java",
@@ -37323,7 +37323,7 @@
       },
       {
         "file": "wf.java",
-        "sha256": "3c21851367093f6d912730a7d425069a60f0933dead9654bb050ac9562d189cf"
+        "sha256": "bd8147007f08a61092130cb52a8da3d9b983d3c8531b54d5a18e8f79b0746684"
       },
       {
         "file": "wg.java",
@@ -37331,11 +37331,11 @@
       },
       {
         "file": "wh.java",
-        "sha256": "9a2de37ed7a00e0ca20f61fd44a6cabb0ae4451c06d9a97e9b5c2a05f8d26201"
+        "sha256": "5a3096cc3a471d1336925b8d2c98f296c7454bfb6efd31cc4e614719d052b4ac"
       },
       {
         "file": "wi.java",
-        "sha256": "abf9df1aaaeaa169571e112fbdad88dd3381885f1db95801b57e9458e460aeee"
+        "sha256": "dd73d35ce8413eef7d786588957e8bec2d010ed246b631bde3b3b75920c6e648"
       },
       {
         "file": "wj.java",
@@ -37470,7 +37470,7 @@
       }
     ],
     "textResources": {
-      "loaderSourceSha256": "abf9df1aaaeaa169571e112fbdad88dd3381885f1db95801b57e9458e460aeee",
+      "loaderSourceSha256": "dd73d35ce8413eef7d786588957e8bec2d010ed246b631bde3b3b75920c6e648",
       "review": {
         "allResourceReads": 744,
         "storedResourceReads": 218,
@@ -37484,22 +37484,22 @@
             {
               "key": "reconnect_lost_seq,0",
               "index": 0,
-              "line": 2720
+              "line": 2718
             },
             {
               "key": "reconnect_lost_seq,1",
               "index": 1,
-              "line": 2724
+              "line": 2722
             },
             {
               "key": "reconnect_lost_seq,2",
               "index": 2,
-              "line": 2728
+              "line": 2726
             },
             {
               "key": "reconnect_lost_seq,3",
               "index": 3,
-              "line": 2732
+              "line": 2730
             }
           ],
           "to": "reconnectMessages"
@@ -37511,7 +37511,7 @@
             {
               "key": "retry",
               "index": null,
-              "line": 1263
+              "line": 1261
             }
           ],
           "to": "retryText"
@@ -37523,7 +37523,7 @@
             {
               "key": "create_suggestions",
               "index": null,
-              "line": 1583
+              "line": 1581
             }
           ],
           "to": "createSuggestionsText"
@@ -37535,37 +37535,37 @@
             {
               "key": "mustlogin_alternate,1",
               "index": 1,
-              "line": 3076
+              "line": 3074
             },
             {
               "key": "mustlogin_alternate,2",
               "index": 2,
-              "line": 3080
+              "line": 3078
             },
             {
               "key": "mustlogin_alternate,3",
               "index": 3,
-              "line": 3084
+              "line": 3082
             },
             {
               "key": "mustlogin_alternate,4",
               "index": 4,
-              "line": 3088
+              "line": 3086
             },
             {
               "key": "mustlogin_alternate,5",
               "index": 5,
-              "line": 3092
+              "line": 3090
             },
             {
               "key": "mustlogin_alternate,6",
               "index": 6,
-              "line": 3096
+              "line": 3094
             },
             {
               "key": "mustlogin_alternate,7",
               "index": 7,
-              "line": 3100
+              "line": 3098
             }
           ],
           "to": "mustLoginAlternateTexts"
@@ -37577,7 +37577,7 @@
             {
               "key": "fs_focus_or_resolution",
               "index": null,
-              "line": 2836
+              "line": 2834
             }
           ],
           "to": "fullscreenFocusOrResolutionText"
@@ -37589,7 +37589,7 @@
             {
               "key": "connectionlost_reconnecting",
               "index": null,
-              "line": 1245
+              "line": 1243
             }
           ],
           "to": "connectionLostReconnectingText"
@@ -37601,7 +37601,7 @@
             {
               "key": "create_alert_passchars",
               "index": null,
-              "line": 1739
+              "line": 1737
             }
           ],
           "to": "createPasswordCharacterAlertText"
@@ -37613,37 +37613,37 @@
             {
               "key": "mustlogin3,1",
               "index": 1,
-              "line": 3012
+              "line": 3010
             },
             {
               "key": "mustlogin3,2",
               "index": 2,
-              "line": 3016
+              "line": 3014
             },
             {
               "key": "mustlogin3,3",
               "index": 3,
-              "line": 3020
+              "line": 3018
             },
             {
               "key": "mustlogin3,4",
               "index": 4,
-              "line": 3024
+              "line": 3022
             },
             {
               "key": "mustlogin3,5",
               "index": 5,
-              "line": 3028
+              "line": 3026
             },
             {
               "key": "mustlogin3,6",
               "index": 6,
-              "line": 3032
+              "line": 3030
             },
             {
               "key": "mustlogin3,7",
               "index": 7,
-              "line": 3036
+              "line": 3034
             }
           ],
           "to": "mustLogin3Texts"
@@ -37655,7 +37655,7 @@
             {
               "key": "login_username",
               "index": null,
-              "line": 1611
+              "line": 1609
             }
           ],
           "to": "loginUsernameText"
@@ -37667,7 +37667,7 @@
             {
               "key": "achievements",
               "index": null,
-              "line": 2054
+              "line": 2052
             }
           ],
           "to": "achievementsText"
@@ -37679,7 +37679,7 @@
             {
               "key": "create_agreeterms",
               "index": null,
-              "line": 1599
+              "line": 1597
             }
           ],
           "to": "createAgreeTermsText"
@@ -37691,32 +37691,32 @@
             {
               "key": "quickchat_shortcut_help,0",
               "index": 0,
-              "line": 2612
+              "line": 2610
             },
             {
               "key": "quickchat_shortcut_help,1",
               "index": 1,
-              "line": 2616
+              "line": 2614
             },
             {
               "key": "quickchat_shortcut_help,2",
               "index": 2,
-              "line": 2620
+              "line": 2618
             },
             {
               "key": "quickchat_shortcut_help,3",
               "index": 3,
-              "line": 2624
+              "line": 2622
             },
             {
               "key": "quickchat_shortcut_help,4",
               "index": 4,
-              "line": 2628
+              "line": 2626
             },
             {
               "key": "quickchat_shortcut_help,5",
               "index": 5,
-              "line": 2632
+              "line": 2630
             }
           ],
           "to": "quickChatShortcutHelpTexts"
@@ -37728,7 +37728,7 @@
             {
               "key": "create_alert_nameleadingspace",
               "index": null,
-              "line": 1731
+              "line": 1729
             }
           ],
           "to": "createNameLeadingSpaceAlertText"
@@ -37740,7 +37740,7 @@
             {
               "key": "unpacking_music",
               "index": null,
-              "line": 1998
+              "line": 1996
             }
           ],
           "to": "unpackingMusicText"
@@ -37752,7 +37752,7 @@
             {
               "key": "cancel",
               "index": null,
-              "line": 1141
+              "line": 1139
             }
           ],
           "to": "cancelText"
@@ -37764,7 +37764,7 @@
             {
               "key": "cont",
               "index": null,
-              "line": 2230
+              "line": 2228
             }
           ],
           "to": "continueText"
@@ -37776,7 +37776,7 @@
             {
               "key": "checking",
               "index": null,
-              "line": 1371
+              "line": 1369
             }
           ],
           "to": "checkingText"
@@ -37788,7 +37788,7 @@
             {
               "key": "create_emailvalid",
               "index": null,
-              "line": 1795
+              "line": 1793
             }
           ],
           "to": "createEmailValidText"
@@ -37800,7 +37800,7 @@
             {
               "key": "loading_music",
               "index": null,
-              "line": 1955
+              "line": 1953
             }
           ],
           "to": "loadingMusicText"
@@ -37812,7 +37812,7 @@
             {
               "key": "endgame",
               "index": null,
-              "line": 2154
+              "line": 2152
             }
           ],
           "to": "endGameText"
@@ -37824,7 +37824,7 @@
             {
               "key": "create",
               "index": null,
-              "line": 1427
+              "line": 1425
             }
           ],
           "to": "createText"
@@ -37836,7 +37836,7 @@
             {
               "key": "ok",
               "index": null,
-              "line": 2162
+              "line": 2160
             }
           ],
           "to": "okText"
@@ -37848,37 +37848,37 @@
             {
               "key": "mustlogin2,1",
               "index": 1,
-              "line": 2984
+              "line": 2982
             },
             {
               "key": "mustlogin2,2",
               "index": 2,
-              "line": 2988
+              "line": 2986
             },
             {
               "key": "mustlogin2,3",
               "index": 3,
-              "line": 2992
+              "line": 2990
             },
             {
               "key": "mustlogin2,4",
               "index": 4,
-              "line": 2996
+              "line": 2994
             },
             {
               "key": "mustlogin2,5",
               "index": 5,
-              "line": 3000
+              "line": 2998
             },
             {
               "key": "mustlogin2,6",
               "index": 6,
-              "line": 3004
+              "line": 3002
             },
             {
               "key": "mustlogin2,7",
               "index": 7,
-              "line": 3008
+              "line": 3006
             }
           ],
           "to": "mustLogin2Texts"
@@ -37890,7 +37890,7 @@
             {
               "key": "toserverlist",
               "index": null,
-              "line": 1177
+              "line": 1175
             }
           ],
           "to": "toServerListText"
@@ -37902,7 +37902,7 @@
             {
               "key": "instructions",
               "index": null,
-              "line": 2018
+              "line": 2016
             }
           ],
           "to": "instructionsText"
@@ -37914,7 +37914,7 @@
             {
               "key": "openinpopupwindow",
               "index": null,
-              "line": 1423
+              "line": 1421
             }
           ],
           "to": "openInPopupWindowText"
@@ -37926,7 +37926,7 @@
             {
               "key": "fs_unavailable_try_signed_applet",
               "index": null,
-              "line": 2828
+              "line": 2826
             }
           ],
           "to": "fullscreenUnavailableTrySignedAppletText"
@@ -37938,12 +37938,12 @@
             {
               "key": "rating_mode_name,0",
               "index": 0,
-              "line": 2908
+              "line": 2906
             },
             {
               "key": "rating_mode_name,1",
               "index": 1,
-              "line": 2912
+              "line": 2910
             }
           ],
           "to": "ratingModeNames"
@@ -37955,32 +37955,32 @@
             {
               "key": "quickchat_shortcut_keys,0",
               "index": 0,
-              "line": 2636
+              "line": 2634
             },
             {
               "key": "quickchat_shortcut_keys,1",
               "index": 1,
-              "line": 2640
+              "line": 2638
             },
             {
               "key": "quickchat_shortcut_keys,2",
               "index": 2,
-              "line": 2644
+              "line": 2642
             },
             {
               "key": "quickchat_shortcut_keys,3",
               "index": 3,
-              "line": 2648
+              "line": 2646
             },
             {
               "key": "quickchat_shortcut_keys,4",
               "index": 4,
-              "line": 2652
+              "line": 2650
             },
             {
               "key": "quickchat_shortcut_keys,5",
               "index": 5,
-              "line": 2656
+              "line": 2654
             }
           ],
           "to": "quickChatShortcutKeys"
@@ -37992,7 +37992,7 @@
             {
               "key": "fs_timeout",
               "index": null,
-              "line": 2840
+              "line": 2838
             }
           ],
           "to": "fullscreenTimeoutText"
@@ -38004,7 +38004,7 @@
             {
               "key": "idlemessage20min",
               "index": null,
-              "line": 189
+              "line": 187
             }
           ],
           "to": "idleMessage20MinText"
@@ -38016,17 +38016,17 @@
             {
               "key": "members_expansion_benefits,0",
               "index": 0,
-              "line": 2700
+              "line": 2698
             },
             {
               "key": "members_expansion_benefits,1",
               "index": 1,
-              "line": 2704
+              "line": 2702
             },
             {
               "key": "members_expansion_benefits,2",
               "index": 2,
-              "line": 2708
+              "line": 2706
             }
           ],
           "to": "membersExpansionBenefitTexts"
@@ -38038,7 +38038,7 @@
             {
               "key": "create_alert_doublespace",
               "index": null,
-              "line": 1735
+              "line": 1733
             }
           ],
           "to": "createDoubleSpaceAlertText"
@@ -38050,7 +38050,7 @@
             {
               "key": "music_colon",
               "index": null,
-              "line": 2034
+              "line": 2032
             }
           ],
           "to": "musicLabelText"
@@ -38062,7 +38062,7 @@
             {
               "key": "waitingfor_graphics",
               "index": null,
-              "line": 1895
+              "line": 1893
             }
           ],
           "to": "waitingForGraphicsText"
@@ -38074,7 +38074,7 @@
             {
               "key": "changedisplayname",
               "index": null,
-              "line": 1185
+              "line": 1183
             }
           ],
           "to": "changeDisplayNameText"
@@ -38086,7 +38086,7 @@
             {
               "key": "serviceunavailable",
               "index": null,
-              "line": 2960
+              "line": 2958
             }
           ],
           "to": "serviceUnavailableText"
@@ -38098,7 +38098,7 @@
             {
               "key": "create_alert_email_unavailable",
               "index": null,
-              "line": 1771
+              "line": 1769
             }
           ],
           "to": "createEmailUnavailableAlertText"
@@ -38110,7 +38110,7 @@
             {
               "key": "create_alert_passcontainsname",
               "index": null,
-              "line": 1751
+              "line": 1749
             }
           ],
           "to": "createPasswordContainsNameAlertText"
@@ -38122,7 +38122,7 @@
             {
               "key": "create_alert_passrepeated",
               "index": null,
-              "line": 1743
+              "line": 1741
             }
           ],
           "to": "createRepeatedPasswordAlertText"
@@ -38134,7 +38134,7 @@
             {
               "key": "create_alert_passcontainsname_partial",
               "index": null,
-              "line": 1759
+              "line": 1757
             }
           ],
           "to": "createPasswordContainsPartialNameAlertText"
@@ -38146,7 +38146,7 @@
             {
               "key": "create_alert_namelength",
               "index": null,
-              "line": 1723
+              "line": 1721
             }
           ],
           "to": "createNameLengthAlertText"
@@ -38158,7 +38158,7 @@
             {
               "key": "create_displayname_hint",
               "index": null,
-              "line": 1659
+              "line": 1657
             }
           ],
           "to": "createDisplayNameHintText"
@@ -38170,7 +38170,7 @@
             {
               "key": "playfreeversion",
               "index": null,
-              "line": 1169
+              "line": 1167
             }
           ],
           "to": "playFreeVersionText"
@@ -38182,7 +38182,7 @@
             {
               "key": "goback",
               "index": null,
-              "line": 1205
+              "line": 1203
             }
           ],
           "to": "goBackText"
@@ -38194,7 +38194,7 @@
             {
               "key": "loginm3",
               "index": null,
-              "line": 177
+              "line": 175
             }
           ],
           "to": "loginMessage3Text"
@@ -38206,7 +38206,7 @@
             {
               "key": "fs_button_close",
               "index": null,
-              "line": 2816
+              "line": 2814
             }
           ],
           "to": "fullscreenCloseButtonText"
@@ -38218,7 +38218,7 @@
             {
               "key": "create_ineligible",
               "index": null,
-              "line": 217
+              "line": 215
             }
           ],
           "to": "createIneligibleText"
@@ -38230,7 +38230,7 @@
             {
               "key": "login_create_tooltip",
               "index": null,
-              "line": 1631
+              "line": 1629
             }
           ],
           "to": "loginCreateTooltipText"
@@ -38242,7 +38242,7 @@
             {
               "key": "resumegame",
               "index": null,
-              "line": 2126
+              "line": 2124
             }
           ],
           "to": "resumeGameText"
@@ -38254,7 +38254,7 @@
             {
               "key": "ticketing_oneunread",
               "index": null,
-              "line": 241
+              "line": 239
             }
           ],
           "to": "ticketingOneUnreadText"
@@ -38266,7 +38266,7 @@
             {
               "key": "highscores",
               "index": null,
-              "line": 2046
+              "line": 2044
             }
           ],
           "to": "highscoresText"
@@ -38278,7 +38278,7 @@
             {
               "key": "create_passwordvalid",
               "index": null,
-              "line": 1791
+              "line": 1789
             }
           ],
           "to": "createPasswordValidText"
@@ -38290,7 +38290,7 @@
             {
               "key": "create_password_tooltip",
               "index": null,
-              "line": 1663
+              "line": 1661
             }
           ],
           "to": "createPasswordTooltipText"
@@ -38302,7 +38302,7 @@
             {
               "key": "menu",
               "index": null,
-              "line": 2106
+              "line": 2104
             }
           ],
           "to": "menuText"
@@ -38314,7 +38314,7 @@
             {
               "key": "waitingfor_fonts",
               "index": null,
-              "line": 1903
+              "line": 1901
             }
           ],
           "to": "waitingForFontsText"
@@ -38326,7 +38326,7 @@
             {
               "key": "warning_ifyouquit",
               "index": null,
-              "line": 1283
+              "line": 1281
             }
           ],
           "to": "quitWarningText"
@@ -38338,7 +38338,7 @@
             {
               "key": "tocustomersupport",
               "index": null,
-              "line": 1181
+              "line": 1179
             }
           ],
           "to": "toCustomerSupportText"
@@ -38350,7 +38350,7 @@
             {
               "key": "login_gameupdated",
               "index": null,
-              "line": 209
+              "line": 207
             }
           ],
           "to": "loginGameUpdatedText"
@@ -38362,7 +38362,7 @@
             {
               "key": "create_alert_passlength",
               "index": null,
-              "line": 1747
+              "line": 1745
             }
           ],
           "to": "createPasswordLengthAlertText"
@@ -38374,7 +38374,7 @@
             {
               "key": "create_welcome",
               "index": null,
-              "line": 1519
+              "line": 1517
             }
           ],
           "to": "createWelcomeText"
@@ -38386,7 +38386,7 @@
             {
               "key": "waitingfor_music",
               "index": null,
-              "line": 1911
+              "line": 1909
             }
           ],
           "to": "waitingForMusicText"
@@ -38398,12 +38398,12 @@
             {
               "key": "rating_mode_long_name,0",
               "index": 0,
-              "line": 2916
+              "line": 2914
             },
             {
               "key": "rating_mode_long_name,1",
               "index": 1,
-              "line": 2920
+              "line": 2918
             }
           ],
           "to": "ratingModeLongNames"
@@ -38415,7 +38415,7 @@
             {
               "key": "login_username_email",
               "index": null,
-              "line": 1607
+              "line": 1605
             }
           ],
           "to": "loginUsernameEmailText"
@@ -38427,7 +38427,7 @@
             {
               "key": "fs_accept_countdown_pl",
               "index": null,
-              "line": 2808
+              "line": 2806
             }
           ],
           "to": "fullscreenAcceptCountdownPluralText"
@@ -38439,7 +38439,7 @@
             {
               "key": "returntogame",
               "index": null,
-              "line": 2202
+              "line": 2200
             }
           ],
           "to": "returnToGameText"
@@ -38451,7 +38451,7 @@
             {
               "key": "fs_focus",
               "index": null,
-              "line": 2832
+              "line": 2830
             }
           ],
           "to": "fullscreenFocusText"
@@ -38463,7 +38463,7 @@
             {
               "key": "login",
               "index": null,
-              "line": 1201
+              "line": 1199
             }
           ],
           "to": "loginText"
@@ -38475,7 +38475,7 @@
             {
               "key": "create_alert_namechars",
               "index": null,
-              "line": 1727
+              "line": 1725
             }
           ],
           "to": "createNameCharacterAlertText"
@@ -38487,7 +38487,7 @@
             {
               "key": "achieved",
               "index": null,
-              "line": 2404
+              "line": 2402
             }
           ],
           "to": "achievedText"
@@ -38499,7 +38499,7 @@
             {
               "key": "pleasetryagain",
               "index": null,
-              "line": 1161
+              "line": 1159
             }
           ],
           "to": "pleaseTryAgainText"
@@ -38511,7 +38511,7 @@
             {
               "key": "fs_nonmember",
               "index": null,
-              "line": 2812
+              "line": 2810
             }
           ],
           "to": "fullscreenNonmemberText"
@@ -38523,7 +38523,7 @@
             {
               "key": "error_js5connect",
               "index": null,
-              "line": 205
+              "line": 203
             }
           ],
           "to": "js5ConnectErrorText"
@@ -38535,7 +38535,7 @@
             {
               "key": "login_username_tooltip",
               "index": null,
-              "line": 1619
+              "line": 1617
             }
           ],
           "to": "loginUsernameTooltipText"
@@ -38547,7 +38547,7 @@
             {
               "key": "next",
               "index": null,
-              "line": 2182
+              "line": 2180
             }
           ],
           "to": "nextText"
@@ -38559,7 +38559,7 @@
             {
               "key": "create_account_success",
               "index": null,
-              "line": 1799
+              "line": 1797
             }
           ],
           "to": "createAccountSuccessText"
@@ -38571,7 +38571,7 @@
             {
               "key": "create_more_suggestions",
               "index": null,
-              "line": 1587
+              "line": 1585
             }
           ],
           "to": "createMoreSuggestionsText"
@@ -38583,7 +38583,7 @@
             {
               "key": "back",
               "index": null,
-              "line": 1267
+              "line": 1265
             }
           ],
           "to": "backText"
@@ -38595,7 +38595,7 @@
             {
               "key": "create_email_tooltip",
               "index": null,
-              "line": 1675
+              "line": 1673
             }
           ],
           "to": "createEmailTooltipText"
@@ -38607,37 +38607,37 @@
             {
               "key": "mustlogin4,1",
               "index": 1,
-              "line": 3044
+              "line": 3042
             },
             {
               "key": "mustlogin4,2",
               "index": 2,
-              "line": 3048
+              "line": 3046
             },
             {
               "key": "mustlogin4,3",
               "index": 3,
-              "line": 3052
+              "line": 3050
             },
             {
               "key": "mustlogin4,4",
               "index": 4,
-              "line": 3056
+              "line": 3054
             },
             {
               "key": "mustlogin4,5",
               "index": 5,
-              "line": 3060
+              "line": 3058
             },
             {
               "key": "mustlogin4,6",
               "index": 6,
-              "line": 3064
+              "line": 3062
             },
             {
               "key": "mustlogin4,7",
               "index": 7,
-              "line": 3068
+              "line": 3066
             }
           ],
           "to": "mustLogin4Texts"
@@ -38649,7 +38649,7 @@
             {
               "key": "invaliduserorpass",
               "index": null,
-              "line": 1157
+              "line": 1155
             }
           ],
           "to": "invalidUserOrPasswordText"
@@ -38661,7 +38661,7 @@
             {
               "key": "connectionlost_withreason",
               "index": null,
-              "line": 1249
+              "line": 1247
             }
           ],
           "to": "connectionLostWithReasonText"
@@ -38673,7 +38673,7 @@
             {
               "key": "fs_accept_countdown_sing",
               "index": null,
-              "line": 2804
+              "line": 2802
             }
           ],
           "to": "fullscreenAcceptCountdownSingularText"
@@ -38685,7 +38685,7 @@
             {
               "key": "create_select_alternative",
               "index": null,
-              "line": 1591
+              "line": 1589
             }
           ],
           "to": "createSelectAlternativeText"
@@ -38697,7 +38697,7 @@
             {
               "key": "loading_fonts",
               "index": null,
-              "line": 1947
+              "line": 1945
             }
           ],
           "to": "loadingFontsText"
@@ -38709,7 +38709,7 @@
             {
               "key": "ticketing_gotowebsite",
               "index": null,
-              "line": 249
+              "line": 247
             }
           ],
           "to": "ticketingGoToWebsiteText"
@@ -38721,7 +38721,7 @@
             {
               "key": "reloadgame",
               "index": null,
-              "line": 1173
+              "line": 1171
             }
           ],
           "to": "reloadGameText"
@@ -38733,7 +38733,7 @@
             {
               "key": "loading",
               "index": null,
-              "line": 805
+              "line": 803
             }
           ],
           "to": "loadingText"
@@ -38745,7 +38745,7 @@
             {
               "key": "createtouse",
               "index": null,
-              "line": 2964
+              "line": 2962
             }
           ],
           "to": "createToUseText"
@@ -38757,7 +38757,7 @@
             {
               "key": "startgame",
               "index": null,
-              "line": 2118
+              "line": 2116
             }
           ],
           "to": "startGameText"
@@ -38769,7 +38769,7 @@
             {
               "key": "create_u13terms",
               "index": null,
-              "line": 1603
+              "line": 1601
             }
           ],
           "to": "createUnder13TermsText"
@@ -38781,67 +38781,67 @@
             {
               "key": "subscription_cost_monthly,0",
               "index": 0,
-              "line": 3104
+              "line": 3102
             },
             {
               "key": "subscription_cost_monthly,1",
               "index": 1,
-              "line": 3108
+              "line": 3106
             },
             {
               "key": "subscription_cost_monthly,2",
               "index": 2,
-              "line": 3112
+              "line": 3110
             },
             {
               "key": "subscription_cost_monthly,3",
               "index": 3,
-              "line": 3116
+              "line": 3114
             },
             {
               "key": "subscription_cost_monthly,4",
               "index": 4,
-              "line": 3120
+              "line": 3118
             },
             {
               "key": "subscription_cost_monthly,5",
               "index": 5,
-              "line": 3124
+              "line": 3122
             },
             {
               "key": "subscription_cost_monthly,6",
               "index": 6,
-              "line": 3128
+              "line": 3126
             },
             {
               "key": "subscription_cost_monthly,7",
               "index": 7,
-              "line": 3132
+              "line": 3130
             },
             {
               "key": "subscription_cost_monthly,8",
               "index": 8,
-              "line": 3136
+              "line": 3134
             },
             {
               "key": "subscription_cost_monthly,9",
               "index": 9,
-              "line": 3140
+              "line": 3138
             },
             {
               "key": "subscription_cost_monthly,10",
               "index": 10,
-              "line": 3144
+              "line": 3142
             },
             {
               "key": "subscription_cost_monthly,11",
               "index": 11,
-              "line": 3148
+              "line": 3146
             },
             {
               "key": "subscription_cost_monthly,12",
               "index": 12,
-              "line": 3152
+              "line": 3150
             }
           ],
           "to": "subscriptionMonthlyCostTexts"
@@ -38853,7 +38853,7 @@
             {
               "key": "connectionrestored",
               "index": null,
-              "line": 1279
+              "line": 1277
             }
           ],
           "to": "connectionRestoredText"
@@ -38865,7 +38865,7 @@
             {
               "key": "unpacking_graphics",
               "index": null,
-              "line": 1986
+              "line": 1984
             }
           ],
           "to": "unpackingGraphicsText"
@@ -38877,7 +38877,7 @@
             {
               "key": "create_password_confirm_tooltip",
               "index": null,
-              "line": 1671
+              "line": 1669
             }
           ],
           "to": "createPasswordConfirmationTooltipText"
@@ -38889,7 +38889,7 @@
             {
               "key": "loading_extradata",
               "index": null,
-              "line": 1970
+              "line": 1968
             }
           ],
           "to": "loadingExtraDataText"
@@ -38901,7 +38901,7 @@
             {
               "key": "justplay",
               "index": null,
-              "line": 1193
+              "line": 1191
             }
           ],
           "to": "justPlayText"
@@ -38913,7 +38913,7 @@
             {
               "key": "create_email_confirm",
               "index": null,
-              "line": 1551
+              "line": 1549
             }
           ],
           "to": "createEmailConfirmationText"
@@ -38925,7 +38925,7 @@
             {
               "key": "create_email_confirm_tooltip",
               "index": null,
-              "line": 1679
+              "line": 1677
             }
           ],
           "to": "createEmailConfirmationTooltipText"
@@ -38937,7 +38937,7 @@
             {
               "key": "waitingfor_soundeffects",
               "index": null,
-              "line": 1907
+              "line": 1905
             }
           ],
           "to": "waitingForSoundEffectsText"
@@ -38949,7 +38949,7 @@
             {
               "key": "create_age_tooltip",
               "index": null,
-              "line": 1683
+              "line": 1681
             }
           ],
           "to": "createAgeTooltipText"
@@ -38961,7 +38961,7 @@
             {
               "key": "fs_button_accept",
               "index": null,
-              "line": 2788
+              "line": 2786
             }
           ],
           "to": "fullscreenAcceptButtonText"
@@ -38973,7 +38973,7 @@
             {
               "key": "error_js5crc",
               "index": null,
-              "line": 193
+              "line": 191
             }
           ],
           "to": "js5CrcErrorText"
@@ -38985,7 +38985,7 @@
             {
               "key": "waitingfor_extradata",
               "index": null,
-              "line": 1923
+              "line": 1921
             }
           ],
           "to": "waitingForExtraDataText"
@@ -38997,7 +38997,7 @@
             {
               "key": "create_username_available",
               "index": null,
-              "line": 1719
+              "line": 1717
             }
           ],
           "to": "createUsernameAvailableText"
@@ -39009,7 +39009,7 @@
             {
               "key": "create_unable",
               "index": null,
-              "line": 213
+              "line": 211
             }
           ],
           "to": "createUnableText"
@@ -39021,7 +39021,7 @@
             {
               "key": "error_js5io",
               "index": null,
-              "line": 197
+              "line": 195
             }
           ],
           "to": "js5IoErrorText"
@@ -39033,7 +39033,7 @@
             {
               "key": "fs_button_members",
               "index": null,
-              "line": 2820
+              "line": 2818
             }
           ],
           "to": "fullscreenMembersButtonText"
@@ -39045,7 +39045,7 @@
             {
               "key": "create_password",
               "index": null,
-              "line": 1539
+              "line": 1537
             }
           ],
           "to": "createPasswordText"
@@ -39057,7 +39057,7 @@
             {
               "key": "create_password_hint",
               "index": null,
-              "line": 1667
+              "line": 1665
             }
           ],
           "to": "createPasswordHintText"
@@ -39069,7 +39069,7 @@
             {
               "key": "ticketing_xunread",
               "index": null,
-              "line": 245
+              "line": 243
             }
           ],
           "to": "ticketingUnreadCountText"
@@ -39081,7 +39081,7 @@
             {
               "key": "fs_button_cancel",
               "index": null,
-              "line": 2796
+              "line": 2794
             }
           ],
           "to": "fullscreenCancelButtonText"
@@ -39093,7 +39093,7 @@
             {
               "key": "invalidpass",
               "index": null,
-              "line": 1259
+              "line": 1257
             }
           ],
           "to": "invalidPasswordText"
@@ -39105,7 +39105,7 @@
             {
               "key": "error_js5connect_full",
               "index": null,
-              "line": 201
+              "line": 199
             }
           ],
           "to": "js5ConnectFullErrorText"
@@ -39117,7 +39117,7 @@
             {
               "key": "create_username_unavailable",
               "index": null,
-              "line": 1715
+              "line": 1713
             }
           ],
           "to": "createUsernameUnavailableText"
@@ -39129,7 +39129,7 @@
             {
               "key": "quittowebsite",
               "index": null,
-              "line": 1275
+              "line": 1273
             }
           ],
           "to": "quitToWebsiteText"
@@ -39141,7 +39141,7 @@
             {
               "key": "logging_in",
               "index": null,
-              "line": 1225
+              "line": 1223
             }
           ],
           "to": "loggingInText"
@@ -39153,7 +39153,7 @@
             {
               "key": "login_no_displayname",
               "index": null,
-              "line": 1643
+              "line": 1641
             }
           ],
           "to": "loginNoDisplayNameText"
@@ -39165,7 +39165,7 @@
             {
               "key": "no_highscores",
               "index": null,
-              "line": 2432
+              "line": 2430
             }
           ],
           "to": "noHighscoresText"
@@ -39177,7 +39177,7 @@
             {
               "key": "creatingyouraccount",
               "index": null,
-              "line": 1443
+              "line": 1441
             }
           ],
           "to": "creatingYourAccountText"
@@ -39189,7 +39189,7 @@
             {
               "key": "create_createanaccount",
               "index": null,
-              "line": 1527
+              "line": 1525
             }
           ],
           "to": "createAnAccountText"
@@ -39201,7 +39201,7 @@
             {
               "key": "create_alert_mismatch",
               "index": null,
-              "line": 1787
+              "line": 1785
             }
           ],
           "to": "createMismatchAlertText"
@@ -39213,7 +39213,7 @@
             {
               "key": "fs_unavailable",
               "index": null,
-              "line": 2824
+              "line": 2822
             }
           ],
           "to": "fullscreenUnavailableText"
@@ -39225,7 +39225,7 @@
             {
               "key": "login_email",
               "index": null,
-              "line": 1615
+              "line": 1613
             }
           ],
           "to": "loginEmailText"
@@ -39237,7 +39237,7 @@
             {
               "key": "orbpoints",
               "index": null,
-              "line": 2408
+              "line": 2406
             }
           ],
           "to": "orbPointsText"
@@ -39249,7 +39249,7 @@
             {
               "key": "create_alert_invalidage",
               "index": null,
-              "line": 1779
+              "line": 1777
             }
           ],
           "to": "createInvalidAgeAlertText"
@@ -39261,7 +39261,7 @@
             {
               "key": "quit",
               "index": null,
-              "line": 2070
+              "line": 2068
             }
           ],
           "to": "quitText"
@@ -39273,7 +39273,7 @@
             {
               "key": "DEFAULT_PLAYER_NAME",
               "index": null,
-              "line": 2976
+              "line": 2974
             }
           ],
           "to": "defaultPlayerNameText"
@@ -39285,7 +39285,7 @@
             {
               "key": "prev",
               "index": null,
-              "line": 2178
+              "line": 2176
             }
           ],
           "to": "previousText"
@@ -39297,7 +39297,7 @@
             {
               "key": "create_displayname_tooltip",
               "index": null,
-              "line": 1655
+              "line": 1653
             }
           ],
           "to": "createDisplayNameTooltipText"
@@ -39309,7 +39309,7 @@
             {
               "key": "loading_soundeffects",
               "index": null,
-              "line": 1951
+              "line": 1949
             }
           ],
           "to": "loadingSoundEffectsText"
@@ -39321,7 +39321,7 @@
             {
               "key": "hs_friend_tip",
               "index": null,
-              "line": 2888
+              "line": 2886
             }
           ],
           "to": "highscoreFriendTipText"
@@ -39333,7 +39333,7 @@
             {
               "key": "fs_accept_beforeaccept",
               "index": null,
-              "line": 2784
+              "line": 2782
             }
           ],
           "to": "fullscreenBeforeAcceptText"
@@ -39345,7 +39345,7 @@
             {
               "key": "create_optin_news",
               "index": null,
-              "line": 1595
+              "line": 1593
             }
           ],
           "to": "createNewsOptInText"
@@ -39357,7 +39357,7 @@
             {
               "key": "create_age",
               "index": null,
-              "line": 1555
+              "line": 1553
             }
           ],
           "to": "createAgeText"
@@ -39369,7 +39369,7 @@
             {
               "key": "create_alert_passcontainsemail",
               "index": null,
-              "line": 1755
+              "line": 1753
             }
           ],
           "to": "createPasswordContainsEmailAlertText"
@@ -39381,7 +39381,7 @@
             {
               "key": "create_email",
               "index": null,
-              "line": 1547
+              "line": 1545
             }
           ],
           "to": "createEmailText"
@@ -39393,7 +39393,7 @@
             {
               "key": "fs_accept_aftercancel",
               "index": null,
-              "line": 2800
+              "line": 2798
             }
           ],
           "to": "fullscreenAfterCancelText"
@@ -39405,7 +39405,7 @@
             {
               "key": "loginm2",
               "index": null,
-              "line": 181
+              "line": 179
             }
           ],
           "to": "loginMessage2Text"
@@ -39417,62 +39417,62 @@
             {
               "key": "monthnames,0",
               "index": 0,
-              "line": 1471
+              "line": 1469
             },
             {
               "key": "monthnames,1",
               "index": 1,
-              "line": 1475
+              "line": 1473
             },
             {
               "key": "monthnames,2",
               "index": 2,
-              "line": 1479
+              "line": 1477
             },
             {
               "key": "monthnames,3",
               "index": 3,
-              "line": 1483
+              "line": 1481
             },
             {
               "key": "monthnames,4",
               "index": 4,
-              "line": 1487
+              "line": 1485
             },
             {
               "key": "monthnames,5",
               "index": 5,
-              "line": 1491
+              "line": 1489
             },
             {
               "key": "monthnames,6",
               "index": 6,
-              "line": 1495
+              "line": 1493
             },
             {
               "key": "monthnames,7",
               "index": 7,
-              "line": 1499
+              "line": 1497
             },
             {
               "key": "monthnames,8",
               "index": 8,
-              "line": 1503
+              "line": 1501
             },
             {
               "key": "monthnames,9",
               "index": 9,
-              "line": 1507
+              "line": 1505
             },
             {
               "key": "monthnames,10",
               "index": 10,
-              "line": 1511
+              "line": 1509
             },
             {
               "key": "monthnames,11",
               "index": 11,
-              "line": 1515
+              "line": 1513
             }
           ],
           "to": "monthNames"
@@ -39484,7 +39484,7 @@
             {
               "key": "create_password_confirm",
               "index": null,
-              "line": 1543
+              "line": 1541
             }
           ],
           "to": "createPasswordConfirmationText"
@@ -39496,17 +39496,17 @@
             {
               "key": "hs_mode_name,0",
               "index": 0,
-              "line": 2896
+              "line": 2894
             },
             {
               "key": "hs_mode_name,1",
               "index": 1,
-              "line": 2900
+              "line": 2898
             },
             {
               "key": "hs_mode_name,2",
               "index": 2,
-              "line": 2904
+              "line": 2902
             }
           ],
           "to": "highscoreModeNames"
@@ -39518,7 +39518,7 @@
             {
               "key": "pleasewait_dotdotdot",
               "index": null,
-              "line": 2956
+              "line": 2954
             }
           ],
           "to": "pleaseWaitText"
@@ -39530,7 +39530,7 @@
             {
               "key": "login_justplay_tooltip",
               "index": null,
-              "line": 1635
+              "line": 1633
             }
           ],
           "to": "loginJustPlayTooltipText"
@@ -39542,7 +39542,7 @@
             {
               "key": "create_optin_news_tooltip",
               "index": null,
-              "line": 1687
+              "line": 1685
             }
           ],
           "to": "createNewsOptInTooltipText"
@@ -39554,7 +39554,7 @@
             {
               "key": "mouseoveranicon",
               "index": null,
-              "line": 2396
+              "line": 2394
             }
           ],
           "to": "mouseOverIconText"
@@ -39566,7 +39566,7 @@
             {
               "key": "sound_colon",
               "index": null,
-              "line": 2030
+              "line": 2028
             }
           ],
           "to": "soundLabelText"
@@ -39578,7 +39578,7 @@
             {
               "key": "fullscreen",
               "index": null,
-              "line": 2038
+              "line": 2036
             }
           ],
           "to": "fullscreenText"
@@ -39590,7 +39590,7 @@
             {
               "key": "loading_graphics",
               "index": null,
-              "line": 1939
+              "line": 1937
             }
           ],
           "to": "loadingGraphicsText"
@@ -39602,7 +39602,7 @@
             {
               "key": "create_alert_invalidemail",
               "index": null,
-              "line": 1767
+              "line": 1765
             }
           ],
           "to": "createInvalidEmailAlertText"
@@ -39614,7 +39614,7 @@
             {
               "key": "fs_accept_afteraccept",
               "index": null,
-              "line": 2792
+              "line": 2790
             }
           ],
           "to": "fullscreenAfterAcceptText"
@@ -39626,7 +39626,7 @@
             {
               "key": "create_displayname",
               "index": null,
-              "line": 1535
+              "line": 1533
             }
           ],
           "to": "createDisplayNameText"
@@ -39735,7 +39735,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 156,
+      "rawSourceLinesRemoved": 81,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -39750,7 +39750,7 @@
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
       "nativeEmitterComparisons": 54549,
-      "sourceReferenceOccurrencesRemoved": 17,
+      "sourceReferenceOccurrencesRemoved": 0,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -39760,7 +39760,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 42,
+      "genericEmitterTestGroups": 44,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -39768,7 +39768,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass78 removes one duplicate literal-store reference for each of17 primitive boolean locals in12 files. Every declaration identity/spelling/order and override row remains. After excluding those17 target-local reference keys, all other ordered binding events match. Three removed stores previously received names; all6081 complete rules remain without ordinal migration.",
+      "referenceRemovalAttribution": "Pass79 preserves every ordered declaration/reference identity and spelling, all local ordinals and override rows. All6081 complete guarded rules remain unchanged; no references are added or removed.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -39806,7 +39806,7 @@
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
       "identifierEditsAddedInCurrentPass": 0,
-      "lastStructuralPassVersion": 78,
+      "lastStructuralPassVersion": 79,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -39846,7 +39846,7 @@
       "nativePlainBlockTailComparisons": 432,
       "plainBlockTailChangedJavaFiles": 7,
       "retainedNewTailLabelPrefixTokenBudget": 512,
-      "identifierEditsRemovedInCurrentPass": 3,
+      "identifierEditsRemovedInCurrentPass": 0,
       "namedSocketAndTaskRulesAdded": {
         "C": 3,
         "F": 24,
@@ -40191,7 +40191,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 43,
+      "genericEmitterTestsRegistered": 45,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -40203,33 +40203,20 @@
       "literalBooleanDuplicateStoreReferencesRemoved": 17,
       "nativeLiteralBooleanDecisionComparisons": 13824,
       "literalBooleanDecisionMaximumLeafStores": 12,
-      "literalBooleanDecisionMaximumPredicateTokens": 256
+      "literalBooleanDecisionMaximumPredicateTokens": 256,
+      "voidReturnExitHistoricalPassVersion": 79,
+      "voidReturnExitBlocksFolded": 38,
+      "voidReturnBlockBreaksReturned": 95,
+      "voidReturnUnreachableTrailingReturnsRemoved": 5,
+      "voidReturnExitChangedJavaFiles": 25,
+      "voidReturnExitSourceLinesBefore": 79713,
+      "voidReturnExitSourceLinesAfter": 79632,
+      "nativeVoidReturnExitComparisons": 46080,
+      "voidReturnExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "voidReturnResourceHeaderSyntaxRefused": true
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "215c4e410a9c313870fe2dc67bc338e5f82b5b8e",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "8779a07e30e5ae402ec7b8f8c7d6a723437b825378bd57064d7bd15f81524569",
-              "reproduce": "git archive --format=tar f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "a9338d980323b4418a6ee1dfed8970f48cffd57bbe752927da8c8ec7817481ed"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "1b46d772b7dd2ddb026d31dd849f0ea77424cab7",
@@ -40251,6 +40238,29 @@
           }
         },
         "inputTreeSha256": "4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "4f02f56a771c27f1cf814157be4606fb4450cc9b",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "5420742cd2ea194a1f128fb0059e1e2bf3487e8e",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "1cb7031c92759a6a2847c2baf87db5def26a4edbaa50a6020409fb436987ae47",
+              "reproduce": "git archive --format=tar 5420742cd2ea194a1f128fb0059e1e2bf3487e8e | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17"
       }
     }
   }

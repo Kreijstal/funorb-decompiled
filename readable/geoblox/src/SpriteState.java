@@ -771,58 +771,56 @@ abstract class SpriteState extends DualLinkNode {
               }
               var35 = mh.field_b[param8];
               while (true) {
-                L25: {
-                  if (param4 > param8) {
-                    var36 = var17_int >> 16;
-                    if (var42 != 0) {
-                      break L25;
-                    }
-                    L27: {
-                      if (var36 < mh.field_c) {
-                        var37 = -(var17_int >> 16) + (var18 >> 16);
-                        if (var37 != 0) {
-                          var38 = (var22 - var21) / var37;
-                          var39 = (var26 - var25) / var37;
-                          var40 = (-var29 + var30) / var37;
-                          if (var37 + var36 >= mh.field_c) {
-                            var37 = mh.field_c - var36 - 1;
-                          }
-                          L30: {
-                            if (var36 < 0) {
-                              jf.a(var35, var38, 33423689, var21 - var38 * var36, var40, var25 - var36 * var39, var39, var37 + var36, -(var36 * var40) + var29, param11);
-                              if (var42 == 0) {
-                                break L30;
-                              }
-                            }
-                            jf.a(var36 + var35, var38, 33423689, var21, var40, var25, var39, var37, var29, param11);
-                          }
-                          if (var42 == 0) {
-                            break L27;
-                          }
+                if (param4 > param8) {
+                  var36 = var17_int >> 16;
+                  if (var42 != 0) {
+                    return;
+                  }
+                  L27: {
+                    if (var36 < mh.field_c) {
+                      var37 = -(var17_int >> 16) + (var18 >> 16);
+                      if (var37 != 0) {
+                        var38 = (var22 - var21) / var37;
+                        var39 = (var26 - var25) / var37;
+                        var40 = (-var29 + var30) / var37;
+                        if (var37 + var36 >= mh.field_c) {
+                          var37 = mh.field_c - var36 - 1;
                         }
-                        if (var36 >= 0) {
-                          if (mh.field_c > var36) {
-                            jf.a(var35 + var36, 0, 33423689, var21, 0, var25, 0, var37, var29, param11);
+                        L30: {
+                          if (var36 < 0) {
+                            jf.a(var35, var38, 33423689, var21 - var38 * var36, var40, var25 - var36 * var39, var39, var37 + var36, -(var36 * var40) + var29, param11);
+                            if (var42 == 0) {
+                              break L30;
+                            }
                           }
+                          jf.a(var36 + var35, var38, 33423689, var21, var40, var25, var39, var37, var29, param11);
+                        }
+                        if (var42 == 0) {
+                          break L27;
+                        }
+                      }
+                      if (var36 >= 0) {
+                        if (mh.field_c > var36) {
+                          jf.a(var35 + var36, 0, 33423689, var21, 0, var25, 0, var37, var29, param11);
                         }
                       }
                     }
-                    param8++;
-                    if (~mh.field_h >= ~param8) {
-                      return;
-                    }
-                    var18 = var18 + var20;
-                    var22 = var22 + var24;
-                    var35 = var35 + SoftwareRasterizer.stride;
-                    var25 = var25 + var27;
-                    var26 = var26 + var28;
-                    var29 = var29 + var31;
-                    var21 = var21 + var23;
-                    var17_int = var17_int + var19;
-                    var30 = var30 + var32;
-                    if (var42 == 0) {
-                      continue;
-                    }
+                  }
+                  param8++;
+                  if (~mh.field_h >= ~param8) {
+                    return;
+                  }
+                  var18 = var18 + var20;
+                  var22 = var22 + var24;
+                  var35 = var35 + SoftwareRasterizer.stride;
+                  var25 = var25 + var27;
+                  var26 = var26 + var28;
+                  var29 = var29 + var31;
+                  var21 = var21 + var23;
+                  var17_int = var17_int + var19;
+                  var30 = var30 + var32;
+                  if (var42 == 0) {
+                    continue;
                   }
                 }
                 return;

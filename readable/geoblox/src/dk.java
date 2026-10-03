@@ -154,21 +154,19 @@ abstract class dk {
                   iOException = (IOException) (Object) decompiledCaughtException;
                 }
               }
-              L6: {
-                if (null != je.field_h) {
-                  for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
-                    if (null == je.field_h[var1_int]) {
-                      continue;
-                    }
-                    try {
-                      je.field_h[var1_int].close(27034);
-                    } catch (java.io.IOException decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                    }
+              if (null != je.field_h) {
+                for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
+                  if (null == je.field_h[var1_int]) {
+                    continue;
                   }
-                  break L6;
+                  try {
+                    je.field_h[var1_int].close(27034);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                  }
                 }
+                return;
               }
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

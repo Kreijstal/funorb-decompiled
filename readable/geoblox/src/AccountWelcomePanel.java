@@ -104,22 +104,20 @@ final class AccountWelcomePanel extends ee implements pl {
           if (param1 != -20) {
             this.justPlayButton = (hk) null;
           }
-          L1: {
-            if (this.goBackButton == param4) {
-              ib.d(param1 ^ -24121);
-              if (var7 == 0) {
-                break L1;
-              }
+          if (this.goBackButton == param4) {
+            ib.d(param1 ^ -24121);
+            if (var7 == 0) {
+              return;
             }
-            if (this.createAccountButton == param4) {
-              jf.a((byte) 101);
-              if (var7 == 0) {
-                break L1;
-              }
+          }
+          if (this.createAccountButton == param4) {
+            jf.a((byte) 101);
+            if (var7 == 0) {
+              return;
             }
-            if (this.justPlayButton == param4) {
-              hk.e(param1 + 103);
-            }
+          }
+          if (this.justPlayButton == param4) {
+            hk.e(param1 + 103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
