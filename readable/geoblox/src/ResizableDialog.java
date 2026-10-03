@@ -457,29 +457,27 @@ abstract class ResizableDialog extends FadingDialog {
             var7++;
             continue;
           }
-          L4: {
-            var9 = (-var5 + var6) * var7 / var4 + var5;
-            var10 = 0;
-            var11 = this.widgetWidth;
-            if (var7 <= 20) {
-              while (true) {
-                if (var10 > 20) {
-                  break L4;
-                }
-                var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
-                if (var12 > 462) {
-                  var10++;
-                  continue;
-                }
-                if (var12 < 420) {
-                  break L4;
-                }
-                var13 = (-var12 + 462) * var9 / 42;
-                var13 = var13 | (var13 << 8 | var13 << 16);
-                SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param0 + var10] = var13;
+          var9 = (-var5 + var6) * var7 / var4 + var5;
+          var10 = 0;
+          var11 = this.widgetWidth;
+          if (var7 <= 20) {
+            while (true) {
+              if (var10 > 20) {
+                break;
+              }
+              var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
+              if (var12 > 462) {
                 var10++;
                 continue;
               }
+              if (var12 < 420) {
+                break;
+              }
+              var13 = (-var12 + 462) * var9 / 42;
+              var13 = var13 | (var13 << 8 | var13 << 16);
+              SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param0 + var10] = var13;
+              var10++;
+              continue;
             }
           }
           if (20 >= var7) {

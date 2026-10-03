@@ -218,72 +218,70 @@ final class BufferedSocket implements Runnable {
             InterruptedException ignoredWaitInterruption = null;
             String unusedReportMessage = null;
             try {
-              L0: {
-                while (true) {
-                  writerMonitor = this;
-                  synchronized (writerMonitor) {
-                    L2: {
-                      if (this.writeReadIndex == this.writeInsertIndex) {
-                        if (this.closeRequested) {
-                          decompiledRegionSelector0 = 0;
-                          break L2;
-                        }
-                        try {
-                          this.wait();
-                        } catch (java.lang.InterruptedException waitInterruption) {
-                          caughtWriterThrowable = waitInterruption;
-                          ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
-                        }
+              while (true) {
+                writerMonitor = this;
+                synchronized (writerMonitor) {
+                  L2: {
+                    if (this.writeReadIndex == this.writeInsertIndex) {
+                      if (this.closeRequested) {
+                        decompiledRegionSelector0 = 0;
+                        break L2;
                       }
-                      contiguousWriteOffset = this.writeReadIndex;
-                      if (this.writeInsertIndex < this.writeReadIndex) {
-                        contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
-                      } else {
-                        contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
+                      try {
+                        this.wait();
+                      } catch (java.lang.InterruptedException waitInterruption) {
+                        caughtWriterThrowable = waitInterruption;
+                        ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
                       }
-                      decompiledRegionSelector0 = 1;
                     }
-                  }
-                  if (decompiledRegionSelector0 == 0) {
-                    try {
-                      if (this.inputStream != null) {
-                        this.inputStream.close();
-                      }
-                      if (this.outputStream != null) {
-                        this.outputStream.close();
-                      }
-                      if (this.socket != null) {
-                        this.socket.close();
-                      }
-                    } catch (java.io.IOException closeFailure) {
-                      caughtWriterThrowable = closeFailure;
-                      ignoredCloseFailure = (IOException) (Object) caughtWriterThrowable;
+                    contiguousWriteOffset = this.writeReadIndex;
+                    if (this.writeInsertIndex < this.writeReadIndex) {
+                      contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
+                    } else {
+                      contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
                     }
-                    this.writeBuffer = null;
-                    break L0;
+                    decompiledRegionSelector0 = 1;
                   }
-                  if (contiguousWriteLength <= 0) {
-                    continue;
-                  }
+                }
+                if (decompiledRegionSelector0 == 0) {
                   try {
-                    this.outputStream.write(this.writeBuffer, contiguousWriteOffset, contiguousWriteLength);
-                  } catch (java.io.IOException writeFailure) {
-                    caughtWriterThrowable = writeFailure;
-                    ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
-                    this.writeFailurePending = true;
-                  }
-                  this.writeReadIndex = (contiguousWriteLength + this.writeReadIndex) % this.bufferCapacity;
-                  try {
-                    if (this.writeInsertIndex == this.writeReadIndex) {
-                      this.outputStream.flush();
+                    if (this.inputStream != null) {
+                      this.inputStream.close();
                     }
-                  } catch (java.io.IOException flushFailure) {
-                    caughtWriterThrowable = flushFailure;
-                    ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
-                    this.writeFailurePending = true;
+                    if (this.outputStream != null) {
+                      this.outputStream.close();
+                    }
+                    if (this.socket != null) {
+                      this.socket.close();
+                    }
+                  } catch (java.io.IOException closeFailure) {
+                    caughtWriterThrowable = closeFailure;
+                    ignoredCloseFailure = (IOException) (Object) caughtWriterThrowable;
                   }
+                  this.writeBuffer = null;
+                  break;
+                }
+                if (contiguousWriteLength <= 0) {
                   continue;
                 }
+                try {
+                  this.outputStream.write(this.writeBuffer, contiguousWriteOffset, contiguousWriteLength);
+                } catch (java.io.IOException writeFailure) {
+                  caughtWriterThrowable = writeFailure;
+                  ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
+                  this.writeFailurePending = true;
+                }
+                this.writeReadIndex = (contiguousWriteLength + this.writeReadIndex) % this.bufferCapacity;
+                try {
+                  if (this.writeInsertIndex == this.writeReadIndex) {
+                    this.outputStream.flush();
+                  }
+                } catch (java.io.IOException flushFailure) {
+                  caughtWriterThrowable = flushFailure;
+                  ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
+                  this.writeFailurePending = true;
+                }
+                continue;
               }
             } catch (java.lang.Exception unexpectedWorkerFailure) {
               caughtWriterThrowable = unexpectedWorkerFailure;

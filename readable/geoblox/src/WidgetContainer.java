@@ -140,21 +140,19 @@ class WidgetContainer extends UiWidget implements ql {
             field_B = (int[]) null;
           }
           while (var4 != null) {
-            L2: {
-              if (var4.hasKeyboardFocus((byte) 54)) {
-                var5 = new DequeCursor(this.children);
-                var5.beginReverseAt(var4, (byte) 123);
-                var6 = (UiWidget) ((Object) var5.nextReverse(26));
-                while (true) {
-                  if (var6 == null) {
-                    break L2;
-                  }
-                  if (!var6.requestKeyboardFocus((byte) -39, param1)) {
-                    var6 = (UiWidget) ((Object) var5.nextReverse(26));
-                    continue;
-                  }
-                  return true;
+            if (var4.hasKeyboardFocus((byte) 54)) {
+              var5 = new DequeCursor(this.children);
+              var5.beginReverseAt(var4, (byte) 123);
+              var6 = (UiWidget) ((Object) var5.nextReverse(26));
+              while (true) {
+                if (var6 == null) {
+                  break;
                 }
+                if (!var6.requestKeyboardFocus((byte) -39, param1)) {
+                  var6 = (UiWidget) ((Object) var5.nextReverse(26));
+                  continue;
+                }
+                return true;
               }
             }
             var4 = (UiWidget) ((Object) var8.nextReverse(26));
@@ -287,21 +285,19 @@ class WidgetContainer extends UiWidget implements ql {
           }
           var4 = (UiWidget) ((Object) var3.beginForward((byte) 88));
           while (var4 != null) {
-            L1: {
-              if (var4.hasKeyboardFocus((byte) 54)) {
-                var5 = new DequeCursor(this.children);
-                var5.beginForwardAt((byte) 56, var4);
-                var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
-                while (true) {
-                  if (var6 == null) {
-                    break L1;
-                  }
-                  if (!var6.requestKeyboardFocus((byte) -56, param0)) {
-                    var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
-                    continue;
-                  }
-                  return true;
+            if (var4.hasKeyboardFocus((byte) 54)) {
+              var5 = new DequeCursor(this.children);
+              var5.beginForwardAt((byte) 56, var4);
+              var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
+              while (true) {
+                if (var6 == null) {
+                  break;
                 }
+                if (!var6.requestKeyboardFocus((byte) -56, param0)) {
+                  var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
+                  continue;
+                }
+                return true;
               }
             }
             var4 = (UiWidget) ((Object) var3.nextForward((byte) 109));

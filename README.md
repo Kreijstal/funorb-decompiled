@@ -19,6 +19,20 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 102 reconstructs 78 terminal labeled exits as ordinary loop breaks and
+removes 38 unused plain labels/blocks across 28 files, saving 76 lines. The loop
+must reach the same block end without intervening work or protected regions;
+inner cleanup, scopes, loop-update/condition bypass and exceptions remain.
+All 8,439 complete naming rules and 66,223 edits are preserved. All 303 expected
+rewrite token streams and ordered bindings match; a clean decompiler archive
+reproduces the output byte-for-byte. The emitter passes 59 tests with one existing
+optional skip, including 11,520 new native comparisons and five loop oracles.
+All six existing game probes, full reproduction and dictionary reversal pass.
+Sprite nearest rotation loses its final label; gameplay render/update and board
+reconciliation each lose one. There remain 267 generated plain block labels and
+21 overlapping large method spans, nine labeled. Further continuation/state
+reconstruction and full game/browser/phone acceptance remain open.
+
 Pass 101 adds 409 guarded names for pointer frames, dragging/dropping, wheel input,
 button activation and complete shared event contracts. `DraggableWidget`,
 `DropTargetWidget` and readable callback interfaces expose source-traced event

@@ -179,7 +179,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                         matchedRequest = (NetworkArchiveRequest) ((Object) this.sentPriorityRequests.firstForIteration((byte) 121));
                         while (matchedRequest != null) {
                           if (~responseKey == ~matchedRequest.secondaryKey) {
-                            break L18;
+                            break;
                           }
                           matchedRequest = (NetworkArchiveRequest) ((Object) this.sentPriorityRequests.nextForIteration(72));
                         }

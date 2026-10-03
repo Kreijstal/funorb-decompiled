@@ -124,86 +124,82 @@ final class p extends IntrusiveNode {
                   continue;
                 }
               }
-              L10: {
-                if ((null != mesh.firstVertexSourceX) &&
-                    (mesh.firstVertexSourceY != null) &&
-                    (mesh.firstVertexSourceZ != null) &&
-                    (mesh.secondVertexSourceX != null) &&
-                    (null != mesh.secondVertexSourceY) &&
-                    (mesh.secondVertexSourceZ != null) &&
-                    (mesh.thirdVertexSourceX != null) &&
-                    (null != mesh.thirdVertexSourceY) &&
-                    (mesh.thirdVertexSourceZ != null)) {
-                  cameraXBasisOrDeltaZOrVertexIndex = 0;
-                  while (true) {
-                    if (~cameraXBasisOrDeltaZOrVertexIndex <= ~mesh.faceCount) {
-                      break L10;
-                    }
-                    cameraYBasisOrVertexX = mesh.firstVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
-                    cameraYBasisOrVertexY = mesh.firstVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
-                    cameraYBasisOrVertexZ = mesh.firstVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
-                    ii.firstVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX - (-(cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY) - cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
-                    pg.firstVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexZ * cameraYZQ16OrNormalX + cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 >> 16);
-                    kf.firstVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + (cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX) >> 16) + cameraTranslationZOrNormalZXQ16;
-                    cameraYBasisOrVertexX = mesh.secondVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
-                    cameraYBasisOrVertexY = mesh.secondVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
-                    cameraYBasisOrVertexZ = mesh.secondVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
-                    ContentTransitionDialog.secondVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY + cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex >> 16) + cameraTranslationXScaledOrNormalXXQ16;
-                    ac.secondVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYZQ16OrNormalX * cameraYBasisOrVertexZ + cameraYBasisOrVertexY * cameraYYOrNormalYZQ16 + cameraYXOrNormalYYQ16 * cameraYBasisOrVertexX >> 16);
-                    MouseWheelInput.secondVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexX * cameraZXOrNormalZYQ16 + cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY >> 16) + cameraTranslationZOrNormalZXQ16;
-                    cameraYBasisOrVertexX = mesh.thirdVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
-                    cameraYBasisOrVertexY = mesh.thirdVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
-                    cameraYBasisOrVertexZ = mesh.thirdVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
-                    qe.thirdVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
-                    BufferedSocket.thirdVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 + (cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYZQ16OrNormalX * cameraYBasisOrVertexZ) >> 16);
-                    hg.thirdVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexY * cameraZYOrNormalZZQ16 + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX >> 16);
-                    cameraXBasisOrDeltaZOrVertexIndex++;
-                    if (controlFlagSnapshot != 0) {
-                      return;
-                    }
-                    if (controlFlagSnapshot == 0) {
-                      continue;
-                    }
-                    break L10;
+              if ((null != mesh.firstVertexSourceX) &&
+                  (mesh.firstVertexSourceY != null) &&
+                  (mesh.firstVertexSourceZ != null) &&
+                  (mesh.secondVertexSourceX != null) &&
+                  (null != mesh.secondVertexSourceY) &&
+                  (mesh.secondVertexSourceZ != null) &&
+                  (mesh.thirdVertexSourceX != null) &&
+                  (null != mesh.thirdVertexSourceY) &&
+                  (mesh.thirdVertexSourceZ != null)) {
+                cameraXBasisOrDeltaZOrVertexIndex = 0;
+                while (true) {
+                  if (~cameraXBasisOrDeltaZOrVertexIndex <= ~mesh.faceCount) {
+                    break;
                   }
+                  cameraYBasisOrVertexX = mesh.firstVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
+                  cameraYBasisOrVertexY = mesh.firstVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
+                  cameraYBasisOrVertexZ = mesh.firstVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
+                  ii.firstVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX - (-(cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY) - cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                  pg.firstVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexZ * cameraYZQ16OrNormalX + cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 >> 16);
+                  kf.firstVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + (cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX) >> 16) + cameraTranslationZOrNormalZXQ16;
+                  cameraYBasisOrVertexX = mesh.secondVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
+                  cameraYBasisOrVertexY = mesh.secondVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
+                  cameraYBasisOrVertexZ = mesh.secondVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
+                  ContentTransitionDialog.secondVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY + cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                  ac.secondVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYZQ16OrNormalX * cameraYBasisOrVertexZ + cameraYBasisOrVertexY * cameraYYOrNormalYZQ16 + cameraYXOrNormalYYQ16 * cameraYBasisOrVertexX >> 16);
+                  MouseWheelInput.secondVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexX * cameraZXOrNormalZYQ16 + cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY >> 16) + cameraTranslationZOrNormalZXQ16;
+                  cameraYBasisOrVertexX = mesh.thirdVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
+                  cameraYBasisOrVertexY = mesh.thirdVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
+                  cameraYBasisOrVertexZ = mesh.thirdVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
+                  qe.thirdVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                  BufferedSocket.thirdVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 + (cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYZQ16OrNormalX * cameraYBasisOrVertexZ) >> 16);
+                  hg.thirdVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexY * cameraZYOrNormalZZQ16 + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX >> 16);
+                  cameraXBasisOrDeltaZOrVertexIndex++;
+                  if (controlFlagSnapshot != 0) {
+                    return;
+                  }
+                  if (controlFlagSnapshot == 0) {
+                    continue;
+                  }
+                  break;
                 }
               }
-              L12: {
-                if (transformNormals) {
-                  cameraTranslationXScaledOrNormalXXQ16 = modelTransform[3];
-                  cameraTranslationYScaledOrNormalYXQ16 = modelTransform[4];
-                  cameraTranslationZOrNormalZXQ16 = modelTransform[5];
-                  cameraXXOrNormalXYQ16 = modelTransform[6];
-                  cameraYXOrNormalYYQ16 = modelTransform[7];
-                  cameraZXOrNormalZYQ16 = modelTransform[8];
-                  cameraXYOrNormalXZQ16 = modelTransform[9];
-                  cameraYYOrNormalYZQ16 = modelTransform[10];
-                  cameraZYOrNormalZZQ16 = modelTransform[11];
-                  cameraXZQ16OrNormalIndex = 0;
-                  while (true) {
-                    if (~mesh.normalCount >= ~cameraXZQ16OrNormalIndex) {
-                      break L12;
-                    }
-                    nearPlaneOrNormalCapacityOrQueueMinDepth = ok.transformedMeshNormalX.length;
-                    invertedDepthOrNormalIndexOrQueueGuard = cameraXZQ16OrNormalIndex;
-                    if (controlFlagSnapshot != 0) {
-                      break L3;
-                    }
-                    if (nearPlaneOrNormalCapacityOrQueueMinDepth <= invertedDepthOrNormalIndexOrQueueGuard) {
-                      break L12;
-                    }
-                    cameraYZQ16OrNormalX = mesh.normalX[cameraXZQ16OrNormalIndex];
-                    cameraZZQ16OrNormalY = mesh.normalY[cameraXZQ16OrNormalIndex];
-                    cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = mesh.normalZ[cameraXZQ16OrNormalIndex];
-                    ok.transformedMeshNormalX[cameraXZQ16OrNormalIndex] = cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraZZQ16OrNormalY + cameraYZQ16OrNormalX * cameraTranslationXScaledOrNormalXXQ16) >> 16;
-                    oa.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
-                    gi.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
-                    cameraXZQ16OrNormalIndex++;
-                    if (controlFlagSnapshot == 0) {
-                      continue;
-                    }
-                    break L12;
+              if (transformNormals) {
+                cameraTranslationXScaledOrNormalXXQ16 = modelTransform[3];
+                cameraTranslationYScaledOrNormalYXQ16 = modelTransform[4];
+                cameraTranslationZOrNormalZXQ16 = modelTransform[5];
+                cameraXXOrNormalXYQ16 = modelTransform[6];
+                cameraYXOrNormalYYQ16 = modelTransform[7];
+                cameraZXOrNormalZYQ16 = modelTransform[8];
+                cameraXYOrNormalXZQ16 = modelTransform[9];
+                cameraYYOrNormalYZQ16 = modelTransform[10];
+                cameraZYOrNormalZZQ16 = modelTransform[11];
+                cameraXZQ16OrNormalIndex = 0;
+                while (true) {
+                  if (~mesh.normalCount >= ~cameraXZQ16OrNormalIndex) {
+                    break;
                   }
+                  nearPlaneOrNormalCapacityOrQueueMinDepth = ok.transformedMeshNormalX.length;
+                  invertedDepthOrNormalIndexOrQueueGuard = cameraXZQ16OrNormalIndex;
+                  if (controlFlagSnapshot != 0) {
+                    break L3;
+                  }
+                  if (nearPlaneOrNormalCapacityOrQueueMinDepth <= invertedDepthOrNormalIndexOrQueueGuard) {
+                    break;
+                  }
+                  cameraYZQ16OrNormalX = mesh.normalX[cameraXZQ16OrNormalIndex];
+                  cameraZZQ16OrNormalY = mesh.normalY[cameraXZQ16OrNormalIndex];
+                  cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = mesh.normalZ[cameraXZQ16OrNormalIndex];
+                  ok.transformedMeshNormalX[cameraXZQ16OrNormalIndex] = cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraZZQ16OrNormalY + cameraYZQ16OrNormalX * cameraTranslationXScaledOrNormalXXQ16) >> 16;
+                  oa.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
+                  gi.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
+                  cameraXZQ16OrNormalIndex++;
+                  if (controlFlagSnapshot == 0) {
+                    continue;
+                  }
+                  break;
                 }
               }
               nearPlaneOrNormalCapacityOrQueueMinDepth = minimumVisibleDepth;

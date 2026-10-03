@@ -309,26 +309,24 @@ class Sprite extends SpriteState {
                 rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
                 continue;
               }
-              L68: {
-                if ((sourceYQ12 >= 0) &&
-                    (sourceXQ12 - (this.width << 12) < 0) &&
-                    (sourceYQ12 - (this.height << 12) < 0)) {
-                  while (true) {
-                    if (negativePixelCounter >= 0) {
-                      break L68;
-                    }
-                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                    if (sampledPixel == 0) {
-                      destinationIndex++;
-                      negativePixelCounter++;
-                      continue;
-                    }
-                    writeIndexFixedXFixedY = destinationIndex;
+              if ((sourceYQ12 >= 0) &&
+                  (sourceXQ12 - (this.width << 12) < 0) &&
+                  (sourceYQ12 - (this.height << 12) < 0)) {
+                while (true) {
+                  if (negativePixelCounter >= 0) {
+                    break;
+                  }
+                  sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                  if (sampledPixel == 0) {
                     destinationIndex++;
-                    SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = sampledPixel;
                     negativePixelCounter++;
                     continue;
                   }
+                  writeIndexFixedXFixedY = destinationIndex;
+                  destinationIndex++;
+                  SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = sampledPixel;
+                  negativePixelCounter++;
+                  continue;
                 }
               }
               negativeRowCounter++;

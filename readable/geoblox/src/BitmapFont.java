@@ -148,7 +148,7 @@ abstract class BitmapFont extends DualLinkNode {
           while (true) {
             if (deltaSumOrFirstGlyphIndex >= 256) {
               this.lineAdvance = profileOffsetsSnapshot[32] + profileLengthsSnapshot[32];
-              break L0;
+              break;
             }
             if (deltaSumOrFirstGlyphIndex == 32) {
               deltaSumOrFirstGlyphIndex++;

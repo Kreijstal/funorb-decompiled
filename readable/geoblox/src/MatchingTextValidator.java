@@ -47,33 +47,31 @@ final class MatchingTextValidator extends TextInputValidator {
         scanIndex = 0;
         L0: while (true) {
           L1: {
-            L2: {
-              if (scanIndex < slicesToFill.length) {
-                sliceToFill = slicesToFill[scanIndex];
-                stackIn_11_0 = 0;
-                if (controlFlowGuard != 0) {
-                  break L1;
-                }
-                fillPixelIndex = stackIn_11_0;
-                while (true) {
-                  L4: {
-                    if (sliceToFill.pixels.length > fillPixelIndex) {
-                      sliceToFill.pixels[fillPixelIndex] = fillColor;
-                      fillPixelIndex++;
-                      if (controlFlowGuard != 0) {
-                        break L4;
-                      }
-                      if (controlFlowGuard == 0) {
-                        continue;
-                      }
+            if (scanIndex < slicesToFill.length) {
+              sliceToFill = slicesToFill[scanIndex];
+              stackIn_11_0 = 0;
+              if (controlFlowGuard != 0) {
+                break L1;
+              }
+              fillPixelIndex = stackIn_11_0;
+              while (true) {
+                L4: {
+                  if (sliceToFill.pixels.length > fillPixelIndex) {
+                    sliceToFill.pixels[fillPixelIndex] = fillColor;
+                    fillPixelIndex++;
+                    if (controlFlowGuard != 0) {
+                      break L4;
                     }
-                    scanIndex++;
+                    if (controlFlowGuard == 0) {
+                      continue;
+                    }
                   }
-                  if (controlFlowGuard == 0) {
-                    continue L0;
-                  }
-                  break L2;
+                  scanIndex++;
                 }
+                if (controlFlowGuard == 0) {
+                  continue L0;
+                }
+                break;
               }
             }
             stackIn_11_0 = 0;
@@ -81,35 +79,33 @@ final class MatchingTextValidator extends TextInputValidator {
           borderIndex = stackIn_11_0;
           L6: while (true) {
             L7: {
-              L8: {
-                if (borderIndex < outerBorderWidth) {
-                  stackIn_22_0 = 0;
-                  if (controlFlowGuard != 0) {
-                    break L7;
-                  }
-                  scanIndex = stackIn_22_0;
-                  while (true) {
-                    L10: {
-                      if (cornerSize > scanIndex) {
-                        slices[6].pixels[scanIndex + (cornerSize - borderIndex - 1) * cornerSize] = bottomRightBorderColor;
-                        slices[8].pixels[scanIndex + (-1 - borderIndex + cornerSize) * cornerSize] = bottomRightBorderColor;
-                        slices[2].pixels[scanIndex * cornerSize - borderIndex + cornerSize - 1] = bottomRightBorderColor;
-                        slices[8].pixels[-borderIndex - 1 - (-cornerSize - cornerSize * scanIndex)] = bottomRightBorderColor;
-                        scanIndex++;
-                        if (controlFlowGuard != 0) {
-                          break L10;
-                        }
-                        if (controlFlowGuard == 0) {
-                          continue;
-                        }
+              if (borderIndex < outerBorderWidth) {
+                stackIn_22_0 = 0;
+                if (controlFlowGuard != 0) {
+                  break L7;
+                }
+                scanIndex = stackIn_22_0;
+                while (true) {
+                  L10: {
+                    if (cornerSize > scanIndex) {
+                      slices[6].pixels[scanIndex + (cornerSize - borderIndex - 1) * cornerSize] = bottomRightBorderColor;
+                      slices[8].pixels[scanIndex + (-1 - borderIndex + cornerSize) * cornerSize] = bottomRightBorderColor;
+                      slices[2].pixels[scanIndex * cornerSize - borderIndex + cornerSize - 1] = bottomRightBorderColor;
+                      slices[8].pixels[-borderIndex - 1 - (-cornerSize - cornerSize * scanIndex)] = bottomRightBorderColor;
+                      scanIndex++;
+                      if (controlFlowGuard != 0) {
+                        break L10;
                       }
-                      borderIndex++;
+                      if (controlFlowGuard == 0) {
+                        continue;
+                      }
                     }
-                    if (controlFlowGuard == 0) {
-                      continue L6;
-                    }
-                    break L8;
+                    borderIndex++;
                   }
+                  if (controlFlowGuard == 0) {
+                    continue L6;
+                  }
+                  break;
                 }
               }
               stackIn_22_0 = 0;
@@ -154,23 +150,56 @@ final class MatchingTextValidator extends TextInputValidator {
                 borderIndex = stackIn_34_0;
                 L19: while (true) {
                   L20: {
-                    L21: {
-                      if (borderIndex < edgeLength) {
-                        stackIn_45_0 = 0;
-                        if (controlFlowGuard != 0) {
-                          break L20;
+                    if (borderIndex < edgeLength) {
+                      stackIn_45_0 = 0;
+                      if (controlFlowGuard != 0) {
+                        break L20;
+                      }
+                      scanIndex = stackIn_45_0;
+                      while (true) {
+                        L23: {
+                          if (outerBorderWidth > scanIndex) {
+                            slices[7].pixels[edgeLength * (cornerSize - scanIndex - 1) + borderIndex] = bottomRightBorderColor;
+                            slices[5].pixels[-1 + (cornerSize - scanIndex + borderIndex * cornerSize)] = bottomRightBorderColor;
+                            slices[1].pixels[edgeLength * scanIndex + borderIndex] = topLeftBorderColor;
+                            slices[3].pixels[scanIndex + cornerSize * borderIndex] = topLeftBorderColor;
+                            scanIndex++;
+                            if (controlFlowGuard != 0) {
+                              break L23;
+                            }
+                            if (controlFlowGuard == 0) {
+                              continue;
+                            }
+                          }
+                          borderIndex++;
                         }
-                        scanIndex = stackIn_45_0;
+                        if (controlFlowGuard == 0) {
+                          continue L19;
+                        }
+                        break;
+                      }
+                    }
+                    stackIn_45_0 = 0;
+                  }
+                  borderIndex = stackIn_45_0;
+                  L25: while (true) {
+                    L26: {
+                      if (borderIndex < edgeLength >> 1) {
+                        stackIn_56_0 = 0;
+                        if (controlFlowGuard != 0) {
+                          break L26;
+                        }
+                        scanIndex = stackIn_56_0;
                         while (true) {
-                          L23: {
-                            if (outerBorderWidth > scanIndex) {
-                              slices[7].pixels[edgeLength * (cornerSize - scanIndex - 1) + borderIndex] = bottomRightBorderColor;
-                              slices[5].pixels[-1 + (cornerSize - scanIndex + borderIndex * cornerSize)] = bottomRightBorderColor;
-                              slices[1].pixels[edgeLength * scanIndex + borderIndex] = topLeftBorderColor;
-                              slices[3].pixels[scanIndex + cornerSize * borderIndex] = topLeftBorderColor;
+                          L29: {
+                            if (innerAccentWidth > scanIndex) {
+                              slices[1].pixels[edgeLength * (-1 + (-scanIndex + cornerSize)) + borderIndex] = innerAccentColor;
+                              slices[3].pixels[-1 + cornerSize + (-scanIndex + cornerSize * borderIndex)] = innerAccentColor;
+                              slices[7].pixels[borderIndex + edgeLength * scanIndex] = innerAccentColor;
+                              slices[5].pixels[cornerSize * borderIndex + scanIndex] = innerAccentColor;
                               scanIndex++;
                               if (controlFlowGuard != 0) {
-                                break L23;
+                                break L29;
                               }
                               if (controlFlowGuard == 0) {
                                 continue;
@@ -179,46 +208,9 @@ final class MatchingTextValidator extends TextInputValidator {
                             borderIndex++;
                           }
                           if (controlFlowGuard == 0) {
-                            continue L19;
+                            continue L25;
                           }
-                          break L21;
-                        }
-                      }
-                    }
-                    stackIn_45_0 = 0;
-                  }
-                  borderIndex = stackIn_45_0;
-                  L25: while (true) {
-                    L26: {
-                      L27: {
-                        if (borderIndex < edgeLength >> 1) {
-                          stackIn_56_0 = 0;
-                          if (controlFlowGuard != 0) {
-                            break L26;
-                          }
-                          scanIndex = stackIn_56_0;
-                          while (true) {
-                            L29: {
-                              if (innerAccentWidth > scanIndex) {
-                                slices[1].pixels[edgeLength * (-1 + (-scanIndex + cornerSize)) + borderIndex] = innerAccentColor;
-                                slices[3].pixels[-1 + cornerSize + (-scanIndex + cornerSize * borderIndex)] = innerAccentColor;
-                                slices[7].pixels[borderIndex + edgeLength * scanIndex] = innerAccentColor;
-                                slices[5].pixels[cornerSize * borderIndex + scanIndex] = innerAccentColor;
-                                scanIndex++;
-                                if (controlFlowGuard != 0) {
-                                  break L29;
-                                }
-                                if (controlFlowGuard == 0) {
-                                  continue;
-                                }
-                              }
-                              borderIndex++;
-                            }
-                            if (controlFlowGuard == 0) {
-                              continue L25;
-                            }
-                            break L27;
-                          }
+                          break;
                         }
                       }
                       stackIn_56_0 = referenceRetentionGuard;

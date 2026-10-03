@@ -180,52 +180,46 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           if (param2 != 14164) {
             return;
           }
-          L4: {
-            if ((param4 >= SoftwareRasterizer.clipLeft) &&
-                (param4 < SoftwareRasterizer.clipRight)) {
-              var11 = param4 + var8 * SoftwareRasterizer.stride;
-              var12 = var10 + 1 - var8 >> 1;
-              while (true) {
-                var12--;
-                if (0 > var12) {
-                  break L4;
-                }
-                SoftwareRasterizer.framebuffer[var11] = 16777215;
-                var11 = var11 + SoftwareRasterizer.stride * 2;
-                continue;
+          if ((param4 >= SoftwareRasterizer.clipLeft) &&
+              (param4 < SoftwareRasterizer.clipRight)) {
+            var11 = param4 + var8 * SoftwareRasterizer.stride;
+            var12 = var10 + 1 - var8 >> 1;
+            while (true) {
+              var12--;
+              if (0 > var12) {
+                break;
               }
+              SoftwareRasterizer.framebuffer[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.stride * 2;
+              continue;
             }
           }
-          L6: {
-            if ((param0 >= SoftwareRasterizer.clipTop) &&
-                (SoftwareRasterizer.clipBottom > var6)) {
-              var11 = var7 + SoftwareRasterizer.stride * param0;
-              var12 = -var7 + 1 + var9 >> 1;
-              while (true) {
-                var12--;
-                if (var12 < 0) {
-                  break L6;
-                }
-                SoftwareRasterizer.framebuffer[var11] = 16777215;
-                var11 += 2;
-                continue;
+          if ((param0 >= SoftwareRasterizer.clipTop) &&
+              (SoftwareRasterizer.clipBottom > var6)) {
+            var11 = var7 + SoftwareRasterizer.stride * param0;
+            var12 = -var7 + 1 + var9 >> 1;
+            while (true) {
+              var12--;
+              if (var12 < 0) {
+                break;
               }
+              SoftwareRasterizer.framebuffer[var11] = 16777215;
+              var11 += 2;
+              continue;
             }
           }
-          L8: {
-            if ((var5_int >= SoftwareRasterizer.clipLeft) &&
-                (SoftwareRasterizer.clipRight > var5_int)) {
-              var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
-              var12 = -var8 + 1 + var10 >> 1;
-              while (true) {
-                var12--;
-                if (0 > var12) {
-                  break L8;
-                }
-                SoftwareRasterizer.framebuffer[var11] = 16777215;
-                var11 = var11 + 2 * SoftwareRasterizer.stride;
-                continue;
+          if ((var5_int >= SoftwareRasterizer.clipLeft) &&
+              (SoftwareRasterizer.clipRight > var5_int)) {
+            var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
+            var12 = -var8 + 1 + var10 >> 1;
+            while (true) {
+              var12--;
+              if (0 > var12) {
+                break;
               }
+              SoftwareRasterizer.framebuffer[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRasterizer.stride;
+              continue;
             }
           }
           if ((SoftwareRasterizer.clipTop <= param0) &&

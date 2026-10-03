@@ -525,28 +525,26 @@ final class Bzip2Decoder {
         blockEndPosition = state.blockLength + 1;
         L0: while (true) {
           L1: {
-            L2: {
-              if (remainingRunLength > 0) {
-                while (true) {
-                  if (remainingOutputBytes == 0) {
-                    break L1;
-                  }
-                  if (remainingRunLength != 1) {
-                    outputBytes[outputPosition] = (byte)runByte;
-                    remainingRunLength--;
-                    outputPosition++;
-                    remainingOutputBytes--;
-                    continue;
-                  }
-                  if (remainingOutputBytes == 0) {
-                    remainingRunLength = 1;
-                    break L1;
-                  }
+            if (remainingRunLength > 0) {
+              while (true) {
+                if (remainingOutputBytes == 0) {
+                  break L1;
+                }
+                if (remainingRunLength != 1) {
                   outputBytes[outputPosition] = (byte)runByte;
+                  remainingRunLength--;
                   outputPosition++;
                   remainingOutputBytes--;
-                  break L2;
+                  continue;
                 }
+                if (remainingOutputBytes == 0) {
+                  remainingRunLength = 1;
+                  break L1;
+                }
+                outputBytes[outputPosition] = (byte)runByte;
+                outputPosition++;
+                remainingOutputBytes--;
+                break;
               }
             }
             while (blockBytesConsumed != blockEndPosition) {

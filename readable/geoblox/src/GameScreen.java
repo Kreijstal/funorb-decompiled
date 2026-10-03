@@ -262,32 +262,30 @@ final class GameScreen extends MenuScreen {
           tileX = -WidgetContainer.menuBackgroundSprite.fullWidth + this.backgroundScrollX;
           L1: while (true) {
             L2: {
-              L3: {
-                if (640 > tileX) {
-                  tileOriginYOrForegroundStartX = WidgetContainer.menuBackgroundSprite.fullHeight + this.backgroundScrollY + 480;
-                  if (clientControlFlowGuard != 0) {
-                    break L2;
-                  }
-                  tileY = tileOriginYOrForegroundStartX;
-                  while (true) {
-                    L5: {
-                      if (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
-                        WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
-                        tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
-                        if (clientControlFlowGuard != 0) {
-                          break L5;
-                        }
-                        if (clientControlFlowGuard == 0) {
-                          continue;
-                        }
+              if (640 > tileX) {
+                tileOriginYOrForegroundStartX = WidgetContainer.menuBackgroundSprite.fullHeight + this.backgroundScrollY + 480;
+                if (clientControlFlowGuard != 0) {
+                  break L2;
+                }
+                tileY = tileOriginYOrForegroundStartX;
+                while (true) {
+                  L5: {
+                    if (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
+                      WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
+                      tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
+                      if (clientControlFlowGuard != 0) {
+                        break L5;
                       }
-                      tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
+                      if (clientControlFlowGuard == 0) {
+                        continue;
+                      }
                     }
-                    if (clientControlFlowGuard == 0) {
-                      continue L1;
-                    }
-                    break L3;
+                    tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
                   }
+                  if (clientControlFlowGuard == 0) {
+                    continue L1;
+                  }
+                  break;
                 }
               }
               this.foregroundScrollY = this.foregroundScrollY % vc.menuForegroundSprite.fullHeight;
@@ -296,31 +294,29 @@ final class GameScreen extends MenuScreen {
             }
             tileX = tileOriginYOrForegroundStartX;
             L7: while (true) {
-              L9: {
-                if (~-vc.menuForegroundSprite.fullWidth >= ~tileX) {
-                  if (clientControlFlowGuard != 0) {
-                    return;
-                  }
-                  tileY = this.foregroundScrollY + vc.menuForegroundSprite.fullHeight + 480;
-                  while (true) {
-                    L11: {
-                      if (~tileY <= ~-vc.menuForegroundSprite.fullHeight) {
-                        vc.menuForegroundSprite.draw(tileX, tileY);
-                        tileY = tileY - vc.menuForegroundSprite.fullHeight;
-                        if (clientControlFlowGuard != 0) {
-                          break L11;
-                        }
-                        if (clientControlFlowGuard == 0) {
-                          continue;
-                        }
+              if (~-vc.menuForegroundSprite.fullWidth >= ~tileX) {
+                if (clientControlFlowGuard != 0) {
+                  return;
+                }
+                tileY = this.foregroundScrollY + vc.menuForegroundSprite.fullHeight + 480;
+                while (true) {
+                  L11: {
+                    if (~tileY <= ~-vc.menuForegroundSprite.fullHeight) {
+                      vc.menuForegroundSprite.draw(tileX, tileY);
+                      tileY = tileY - vc.menuForegroundSprite.fullHeight;
+                      if (clientControlFlowGuard != 0) {
+                        break L11;
                       }
-                      tileX = tileX - vc.menuForegroundSprite.fullWidth;
+                      if (clientControlFlowGuard == 0) {
+                        continue;
+                      }
                     }
-                    if (clientControlFlowGuard == 0) {
-                      continue L7;
-                    }
-                    break L9;
+                    tileX = tileX - vc.menuForegroundSprite.fullWidth;
                   }
+                  if (clientControlFlowGuard == 0) {
+                    continue L7;
+                  }
+                  break;
                 }
               }
               return;
@@ -1016,68 +1012,66 @@ final class GameScreen extends MenuScreen {
                   break L5;
                 }
               }
-              L8: {
-                hasDisplayedEntryFlag = 0;
-                categoryNames = ca.field_f.field_k[da.field_c];
-                scoreFont = fi.smallFont;
-                if (categoryNames != null) {
-                  categoryScores = ca.field_f.field_h[da.field_c];
-                  entryTextY = scoreFont.maxAscent + 150;
-                  currentScoreHighlightedFlag = 0;
-                  entryIndex = 0;
-                  while (true) {
-                    L10: {
-                      if (entryIndex < 10) {
-                        nullEntryOrSessionSentinel = null;
-                        if (clientControlFlowGuard != 0) {
-                          break L10;
-                        }
-                        L12: {
-                          if (nullEntryOrSessionSentinel != categoryNames[entryIndex]) {
-                            hasDisplayedEntryFlag = 1;
-                            entryName = categoryNames[entryIndex];
-                            if ((currentScoreHighlightedFlag == 0) &&
-                                (null != UiWidget.gameplaySession) &&
-                                (categoryScores[entryIndex] == Math.abs(UiWidget.gameplaySession.score)) &&
-                                (WhirlpoolHash.a(entryName, (byte) 12))) {
-                              currentScoreHighlightedFlag = 1;
-                              scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 16610816, -1);
-                              scoreFont.drawText(entryName, 165, entryTextY, 16610816, -1);
-                              scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 16610816, -1);
-                              if (clientControlFlowGuard == 0) {
-                                break L12;
-                              }
-                            }
-                            scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 1, -1);
-                            scoreFont.drawText(entryName, 165, entryTextY, 1, -1);
-                            scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 1, -1);
-                          }
-                        }
-                        entryTextY += 15;
-                        entryIndex++;
-                        if (clientControlFlowGuard == 0) {
-                          continue;
-                        }
-                      }
-                      if (currentScoreHighlightedFlag != 0) {
-                        break L8;
-                      }
+              hasDisplayedEntryFlag = 0;
+              categoryNames = ca.field_f.field_k[da.field_c];
+              scoreFont = fi.smallFont;
+              if (categoryNames != null) {
+                categoryScores = ca.field_f.field_h[da.field_c];
+                entryTextY = scoreFont.maxAscent + 150;
+                currentScoreHighlightedFlag = 0;
+                entryIndex = 0;
+                while (true) {
+                  L10: {
+                    if (entryIndex < 10) {
                       nullEntryOrSessionSentinel = null;
+                      if (clientControlFlowGuard != 0) {
+                        break L10;
+                      }
+                      L12: {
+                        if (nullEntryOrSessionSentinel != categoryNames[entryIndex]) {
+                          hasDisplayedEntryFlag = 1;
+                          entryName = categoryNames[entryIndex];
+                          if ((currentScoreHighlightedFlag == 0) &&
+                              (null != UiWidget.gameplaySession) &&
+                              (categoryScores[entryIndex] == Math.abs(UiWidget.gameplaySession.score)) &&
+                              (WhirlpoolHash.a(entryName, (byte) 12))) {
+                            currentScoreHighlightedFlag = 1;
+                            scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 16610816, -1);
+                            scoreFont.drawText(entryName, 165, entryTextY, 16610816, -1);
+                            scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 16610816, -1);
+                            if (clientControlFlowGuard == 0) {
+                              break L12;
+                            }
+                          }
+                          scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 1, -1);
+                          scoreFont.drawText(entryName, 165, entryTextY, 1, -1);
+                          scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 1, -1);
+                        }
+                      }
+                      entryTextY += 15;
+                      entryIndex++;
+                      if (clientControlFlowGuard == 0) {
+                        continue;
+                      }
                     }
-                    if (nullEntryOrSessionSentinel == UiWidget.gameplaySession) {
-                      break L8;
+                    if (currentScoreHighlightedFlag != 0) {
+                      break;
                     }
-                    if (UiWidget.gameplaySession.score == 0) {
-                      break L8;
-                    }
-                    if (UiWidget.gameplaySession.score == -2147483648) {
-                      break L8;
-                    }
-                    unlistedCurrentScoreText = SecondaryDeque.field_f;
-                    scoreFont.drawText(unlistedCurrentScoreText, 165, entryTextY, 16724225, -1);
-                    scoreFont.drawRightAlignedText(Integer.toString(Math.abs(UiWidget.gameplaySession.score)), 500, entryTextY, 16724225, -1);
-                    break L8;
+                    nullEntryOrSessionSentinel = null;
                   }
+                  if (nullEntryOrSessionSentinel == UiWidget.gameplaySession) {
+                    break;
+                  }
+                  if (UiWidget.gameplaySession.score == 0) {
+                    break;
+                  }
+                  if (UiWidget.gameplaySession.score == -2147483648) {
+                    break;
+                  }
+                  unlistedCurrentScoreText = SecondaryDeque.field_f;
+                  scoreFont.drawText(unlistedCurrentScoreText, 165, entryTextY, 16724225, -1);
+                  scoreFont.drawRightAlignedText(Integer.toString(Math.abs(UiWidget.gameplaySession.score)), 500, entryTextY, 16724225, -1);
+                  break;
                 }
               }
               if (hasDisplayedEntryFlag == 0) {

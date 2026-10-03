@@ -39,28 +39,26 @@ abstract class dk {
         if (param0 < 60) {
           return 19;
         }
-        L0: {
-          if (null != this.field_a) {
-            var3 = this.field_a;
-            var4 = 0;
-            while (true) {
-              if (var3.length <= var4) {
-                break L0;
-              }
-              var5 = var3[var4];
-              if (var5 == null) {
-                var4++;
-                continue;
-              }
-              var6 = var5.a(0);
-              if (var6 <= var2) {
-                var4++;
-                continue;
-              }
-              var2 = var6;
+        if (null != this.field_a) {
+          var3 = this.field_a;
+          var4 = 0;
+          while (true) {
+            if (var3.length <= var4) {
+              break;
+            }
+            var5 = var3[var4];
+            if (var5 == null) {
               var4++;
               continue;
             }
+            var6 = var5.a(0);
+            if (var6 <= var2) {
+              var4++;
+              continue;
+            }
+            var2 = var6;
+            var4++;
+            continue;
           }
         }
         return var2;

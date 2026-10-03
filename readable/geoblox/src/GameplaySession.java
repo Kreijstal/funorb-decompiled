@@ -402,125 +402,123 @@ final class GameplaySession {
         if (!this.debugReducedRendering) {
           uh.drawSpawnQueueAndHighlight(4740);
         }
-        L30: {
-          if (this.showDebugOverview) {
-            af.debugOverviewRaster.setAsRasterTarget();
-            SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 1118481);
-            tutorialTopOrDebugColorOrTransitionClipTop = 16777215;
-            SoftwareRasterizer.drawCircle(160, 120, 115, 16711680);
-            tutorialLineHeightOrDebugEntityRadius = 20;
-            debugSpawnQueueSnapshot = SecondaryDeque.spawnQueue;
-            renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.lastForIteration(false));
-            while (true) {
-              L32: {
-                if (renderedEntity != null) {
-                  entityOffsetX = -320.0f + renderedEntity.positionX;
-                  entityOffsetY = -240.0f + renderedEntity.positionY;
-                  debugEntityXOrTutorialTextHeight = (int)(320.0 + (Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
-                  renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
-                  spawnEntityGrayLevel = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
-                  minimumGrayLevelOrCompositeHeight = 11;
-                  grayLevelForComparisonOrCompositeEnabled = spawnEntityGrayLevel;
-                  if (clientControlFlowGuard != 0) {
-                    break L32;
-                  }
-                  if (minimumGrayLevelOrCompositeHeight > grayLevelForComparisonOrCompositeEnabled) {
-                    spawnEntityGrayLevel = 11;
-                  }
-                  if (spawnEntityGrayLevel > 255) {
-                    spawnEntityGrayLevel = 255;
-                  }
-                  SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
-                  renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
-                  if (clientControlFlowGuard == 0) {
-                    continue;
-                  }
+        if (this.showDebugOverview) {
+          af.debugOverviewRaster.setAsRasterTarget();
+          SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 1118481);
+          tutorialTopOrDebugColorOrTransitionClipTop = 16777215;
+          SoftwareRasterizer.drawCircle(160, 120, 115, 16711680);
+          tutorialLineHeightOrDebugEntityRadius = 20;
+          debugSpawnQueueSnapshot = SecondaryDeque.spawnQueue;
+          renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.lastForIteration(false));
+          while (true) {
+            L32: {
+              if (renderedEntity != null) {
+                entityOffsetX = -320.0f + renderedEntity.positionX;
+                entityOffsetY = -240.0f + renderedEntity.positionY;
+                debugEntityXOrTutorialTextHeight = (int)(320.0 + (Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
+                renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
+                spawnEntityGrayLevel = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
+                minimumGrayLevelOrCompositeHeight = 11;
+                grayLevelForComparisonOrCompositeEnabled = spawnEntityGrayLevel;
+                if (clientControlFlowGuard != 0) {
+                  break L32;
                 }
-                debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
-                debugEntityQueue = debugMovingQueueSnapshot;
-                renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
+                if (minimumGrayLevelOrCompositeHeight > grayLevelForComparisonOrCompositeEnabled) {
+                  spawnEntityGrayLevel = 11;
+                }
+                if (spawnEntityGrayLevel > 255) {
+                  spawnEntityGrayLevel = 255;
+                }
+                SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
+                renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
+                if (clientControlFlowGuard == 0) {
+                  continue;
+                }
+              }
+              debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
+              debugEntityQueue = debugMovingQueueSnapshot;
+              renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
+              while (true) {
+                L37: {
+                  if (null != renderedEntity) {
+                    entityOffsetX = -320.0f + renderedEntity.positionX;
+                    entityOffsetY = -240.0f + renderedEntity.positionY;
+                    debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                    renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
+                    SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                    renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
+                    if (clientControlFlowGuard != 0) {
+                      break L37;
+                    }
+                    if (clientControlFlowGuard == 0) {
+                      continue;
+                    }
+                  }
+                  debugEntityQueue = a.attachedEntities;
+                }
+                renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                 while (true) {
-                  L37: {
-                    if (null != renderedEntity) {
-                      entityOffsetX = -320.0f + renderedEntity.positionX;
-                      entityOffsetY = -240.0f + renderedEntity.positionY;
-                      debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
-                      renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
-                      SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                      renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
+                  L40: {
+                    if (renderedEntity != null) {
+                      SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                      renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
                       if (clientControlFlowGuard != 0) {
-                        break L37;
+                        break L40;
                       }
                       if (clientControlFlowGuard == 0) {
                         continue;
                       }
                     }
-                    debugEntityQueue = a.attachedEntities;
+                    debugEntityQueue = bh.transientEntities;
                   }
                   renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                   while (true) {
-                    L40: {
-                      if (renderedEntity != null) {
-                        SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                        renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                        if (clientControlFlowGuard != 0) {
-                          break L40;
-                        }
-                        if (clientControlFlowGuard == 0) {
-                          continue;
-                        }
-                      }
-                      debugEntityQueue = bh.transientEntities;
-                    }
-                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
-                    while (true) {
-                      L43: {
-                        L44: {
-                          if (renderedEntity != null) {
-                            SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                            renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                            if (clientControlFlowGuard != 0) {
-                              break L44;
-                            }
-                            if (clientControlFlowGuard == 0) {
-                              continue;
-                            }
+                    L43: {
+                      L44: {
+                        if (renderedEntity != null) {
+                          SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                          renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                          if (clientControlFlowGuard != 0) {
+                            break L44;
                           }
-                          if (this.tutorialMode) {
-                            tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
-                            if (tutorialTextHeightOrDebugPanelTop < 10) {
-                              tutorialTextHeightOrDebugPanelTop = 10;
-                            }
-                            debugTutorialLineHeight = fi.smallFont.maxAscent - fi.smallFont.maxDescent;
-                            debugTutorialPanelWidth = fi.smallFont.measureMaximumWrappedWidth(v.tutorialSkipMessage, 640) + 40;
-                            debugEntityXOrTutorialTextHeight = fi.smallFont.countWrappedLines(v.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
-                            SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                            break L43;
-                          }
-                          lj.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                        }
-                        if ((this.sessionPhase == 0) &&
-                            (!ih.areEntityQueuesSettled(0))) {
-                          g.countBoxSprite.drawScaledSilhouette(234, 205, g.countBoxSprite.fullWidth / 2, g.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                           if (clientControlFlowGuard == 0) {
-                            break L43;
+                            continue;
                           }
                         }
-                        vh.largeBoxSprite.drawScaledSilhouette(223, 205, vh.largeBoxSprite.fullWidth / 2, vh.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                        if (this.tutorialMode) {
+                          tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
+                          if (tutorialTextHeightOrDebugPanelTop < 10) {
+                            tutorialTextHeightOrDebugPanelTop = 10;
+                          }
+                          debugTutorialLineHeight = fi.smallFont.maxAscent - fi.smallFont.maxDescent;
+                          debugTutorialPanelWidth = fi.smallFont.measureMaximumWrappedWidth(v.tutorialSkipMessage, 640) + 40;
+                          debugEntityXOrTutorialTextHeight = fi.smallFont.countWrappedLines(v.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
+                          SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                          break L43;
+                        }
+                        lj.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                       }
-                      SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
-                      SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-                      SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-                      minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
-                      grayLevelForComparisonOrCompositeEnabled = 1;
-                      break L32;
+                      if ((this.sessionPhase == 0) &&
+                          (!ih.areEntityQueuesSettled(0))) {
+                        g.countBoxSprite.drawScaledSilhouette(234, 205, g.countBoxSprite.fullWidth / 2, g.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                        if (clientControlFlowGuard == 0) {
+                          break L43;
+                        }
+                      }
+                      vh.largeBoxSprite.drawScaledSilhouette(223, 205, vh.largeBoxSprite.fullWidth / 2, vh.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                     }
+                    SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
+                    SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
+                    SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+                    minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
+                    grayLevelForComparisonOrCompositeEnabled = 1;
+                    break L32;
                   }
                 }
               }
-              ek.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, af.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
-              break L30;
             }
+            ek.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, af.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
+            break;
           }
         }
         L48: {
@@ -879,31 +877,29 @@ final class GameplaySession {
               }
             }
             L44: {
-              L45: {
-                if ((kj.heldInternalKeys[99]) &&
-                    (!this.tutorialPromptActive)) {
-                  fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-                  while (true) {
-                    if (null == fastForwardEntity) {
-                      break L45;
-                    }
-                    detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
-                    if (clientControlFlowGuard != 0) {
-                      break L44;
-                    }
-                    if (!detachedEntityOrPositiveRotationKeySnapshot) {
-                      fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
-                      fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
-                      if (clientControlFlowGuard == 0) {
-                        break L45;
-                      }
-                    }
-                    fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
-                    if (clientControlFlowGuard == 0) {
-                      continue;
-                    }
-                    break L45;
+              if ((kj.heldInternalKeys[99]) &&
+                  (!this.tutorialPromptActive)) {
+                fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
+                while (true) {
+                  if (null == fastForwardEntity) {
+                    break;
                   }
+                  detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
+                  if (clientControlFlowGuard != 0) {
+                    break L44;
+                  }
+                  if (!detachedEntityOrPositiveRotationKeySnapshot) {
+                    fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
+                    fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  }
+                  fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
+                  if (clientControlFlowGuard == 0) {
+                    continue;
+                  }
+                  break;
                 }
               }
               detachedEntityOrPositiveRotationKeySnapshot = kj.heldInternalKeys[positiveRotationKeyCode];
@@ -1394,114 +1390,112 @@ final class GameplaySession {
         int nextSceneAnimationTick = this.sceneAnimationTick + 1;
         this.sceneAnimationTick = this.sceneAnimationTick + 1;
         if (160 == nextSceneAnimationTick) {
-          L4: {
-            if (this.preserveScoreOnTransition) {
-              precedingThemeId = 0;
-              themeIndexThenId = 0;
-              while (true) {
-                L6: {
-                  L7: {
-                    if (7 > themeIndexThenId) {
-                      selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
-                      themeEntryComplementOrThemeId = ~WidgetContainer.field_B[themeIndexThenId];
-                      if (clientControlFlowGuard != 0) {
-                        break L6;
-                      }
-                      if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
-                        if (0 < themeIndexThenId) {
-                          precedingThemeId = WidgetContainer.field_B[themeIndexThenId - 1];
-                          if (clientControlFlowGuard == 0) {
-                            break L7;
-                          }
-                        }
-                        precedingThemeId = WidgetContainer.field_B[6];
+          if (this.preserveScoreOnTransition) {
+            precedingThemeId = 0;
+            themeIndexThenId = 0;
+            while (true) {
+              L6: {
+                L7: {
+                  if (7 > themeIndexThenId) {
+                    selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
+                    themeEntryComplementOrThemeId = ~WidgetContainer.field_B[themeIndexThenId];
+                    if (clientControlFlowGuard != 0) {
+                      break L6;
+                    }
+                    if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
+                      if (0 < themeIndexThenId) {
+                        precedingThemeId = WidgetContainer.field_B[themeIndexThenId - 1];
                         if (clientControlFlowGuard == 0) {
                           break L7;
                         }
                       }
-                      themeIndexThenId++;
+                      precedingThemeId = WidgetContainer.field_B[6];
                       if (clientControlFlowGuard == 0) {
-                        continue;
+                        break L7;
                       }
                     }
-                  }
-                  themeIndexThenId = precedingThemeId;
-                  selectedThemeComplementOrThemeSentinel = 4;
-                  themeEntryComplementOrThemeId = themeIndexThenId;
-                }
-                L10: {
-                  L11: {
-                    L12: {
-                      L13: {
-                        L14: {
-                          L15: {
-                            L16: {
-                              if (!((selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) &&
-                                    (clientControlFlowGuard == 0))) {
-                                if ((themeIndexThenId == 1) &&
-                                    (clientControlFlowGuard == 0)) {
-                                  break L16;
-                                }
-                                if ((themeIndexThenId == 3) &&
-                                    (clientControlFlowGuard == 0)) {
-                                  break L15;
-                                }
-                                if ((themeIndexThenId == 0) &&
-                                    (clientControlFlowGuard == 0)) {
-                                  break L14;
-                                }
-                                if (themeIndexThenId == 6) {
-                                  break L13;
-                                }
-                                if ((5 == themeIndexThenId) &&
-                                    (clientControlFlowGuard == 0)) {
-                                  break L12;
-                                }
-                                if (2 != themeIndexThenId) {
-                                  break L10;
-                                }
-                                if (clientControlFlowGuard == 0) {
-                                  break L11;
-                                }
-                              }
-                              ra.a(fa.field_f ^ 255, -61, fa.field_f);
-                              if (clientControlFlowGuard == 0) {
-                                break L4;
-                              }
-                            }
-                            ra.a(255 ^ hj.field_b, -84, hj.field_b);
-                            if (clientControlFlowGuard == 0) {
-                              break L4;
-                            }
-                          }
-                          ra.a(255 ^ ac.field_u, -50, ac.field_u);
-                          if (clientControlFlowGuard == 0) {
-                            break L4;
-                          }
-                        }
-                        ra.a(255 ^ kf.field_d, -71, kf.field_d);
-                        if (clientControlFlowGuard == 0) {
-                          break L4;
-                        }
-                      }
-                      ra.a(255 ^ vi.field_E, -115, vi.field_E);
-                      if (clientControlFlowGuard == 0) {
-                        break L4;
-                      }
-                    }
-                    ra.a(255 ^ jj.field_g, -92, jj.field_g);
+                    themeIndexThenId++;
                     if (clientControlFlowGuard == 0) {
-                      break L4;
+                      continue;
                     }
                   }
-                  ra.a(255 ^ jg.field_a, -121, jg.field_a);
+                }
+                themeIndexThenId = precedingThemeId;
+                selectedThemeComplementOrThemeSentinel = 4;
+                themeEntryComplementOrThemeId = themeIndexThenId;
+              }
+              L10: {
+                L11: {
+                  L12: {
+                    L13: {
+                      L14: {
+                        L15: {
+                          L16: {
+                            if (!((selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) &&
+                                  (clientControlFlowGuard == 0))) {
+                              if ((themeIndexThenId == 1) &&
+                                  (clientControlFlowGuard == 0)) {
+                                break L16;
+                              }
+                              if ((themeIndexThenId == 3) &&
+                                  (clientControlFlowGuard == 0)) {
+                                break L15;
+                              }
+                              if ((themeIndexThenId == 0) &&
+                                  (clientControlFlowGuard == 0)) {
+                                break L14;
+                              }
+                              if (themeIndexThenId == 6) {
+                                break L13;
+                              }
+                              if ((5 == themeIndexThenId) &&
+                                  (clientControlFlowGuard == 0)) {
+                                break L12;
+                              }
+                              if (2 != themeIndexThenId) {
+                                break L10;
+                              }
+                              if (clientControlFlowGuard == 0) {
+                                break L11;
+                              }
+                            }
+                            ra.a(fa.field_f ^ 255, -61, fa.field_f);
+                            if (clientControlFlowGuard == 0) {
+                              break;
+                            }
+                          }
+                          ra.a(255 ^ hj.field_b, -84, hj.field_b);
+                          if (clientControlFlowGuard == 0) {
+                            break;
+                          }
+                        }
+                        ra.a(255 ^ ac.field_u, -50, ac.field_u);
+                        if (clientControlFlowGuard == 0) {
+                          break;
+                        }
+                      }
+                      ra.a(255 ^ kf.field_d, -71, kf.field_d);
+                      if (clientControlFlowGuard == 0) {
+                        break;
+                      }
+                    }
+                    ra.a(255 ^ vi.field_E, -115, vi.field_E);
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  }
+                  ra.a(255 ^ jj.field_g, -92, jj.field_g);
                   if (clientControlFlowGuard == 0) {
-                    break L4;
+                    break;
                   }
                 }
-                ra.a(hj.field_b ^ 255, -95, hj.field_b);
-                break L4;
+                ra.a(255 ^ jg.field_a, -121, jg.field_a);
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
               }
+              ra.a(hj.field_b ^ 255, -95, hj.field_b);
+              break;
             }
           }
           this.connectivityRebuiltThisTick = false;

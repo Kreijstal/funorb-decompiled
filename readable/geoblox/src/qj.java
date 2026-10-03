@@ -50,20 +50,18 @@ final class qj {
           if (param3 < 79) {
             clearGameplayDuringTransition = false;
           }
-          L1: {
-            var6 = var4_int;
-            var7 = var5 - 1;
-            if (0 != var7) {
-              var8_int = 0;
-              while (true) {
-                var8_int = param0.indexOf((int) param2, var8_int);
-                if (var8_int < 0) {
-                  break L1;
-                }
-                var6 = var6 + var7;
-                var8_int++;
-                continue;
+          var6 = var4_int;
+          var7 = var5 - 1;
+          if (0 != var7) {
+            var8_int = 0;
+            while (true) {
+              var8_int = param0.indexOf((int) param2, var8_int);
+              if (var8_int < 0) {
+                break;
               }
+              var6 = var6 + var7;
+              var8_int++;
+              continue;
             }
           }
           var8 = new StringBuilder(var6);

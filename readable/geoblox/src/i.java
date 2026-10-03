@@ -182,7 +182,7 @@ final class i {
                           if (bucketIndexOrFaceOrderIndex < 0) {
                             System.err.println("Out of range!");
                             if (controlFlagSnapshot == 0) {
-                              break L4;
+                              break;
                             }
                           }
                           edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
@@ -201,7 +201,7 @@ final class i {
                         uh.meshFacePriorityWriteOffsets[facePriority] = uh.meshFacePriorityWriteOffsets[facePriority] + 1;
                       }
                       ch.queuedMeshFaceCount = ch.queuedMeshFaceCount + 1;
-                      break L4;
+                      break;
                     }
                   }
                 }
@@ -212,27 +212,25 @@ final class i {
               }
               cullFlagOrPriorityLoopSentinel = -1;
             }
-            L15: {
-              if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
-                  (null != mesh.facePriorities)) {
-                faceIndexOrPriorityPrefix = 0;
-                vertexAOrPriorityIndex = 0;
-                while (true) {
-                  if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
-                    break L15;
-                  }
-                  vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
-                  uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
-                  faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
-                  vertexAOrPriorityIndex++;
-                  if (controlFlagSnapshot != 0) {
-                    return;
-                  }
-                  if (controlFlagSnapshot == 0) {
-                    continue;
-                  }
-                  break L15;
+            if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
+                (null != mesh.facePriorities)) {
+              faceIndexOrPriorityPrefix = 0;
+              vertexAOrPriorityIndex = 0;
+              while (true) {
+                if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
+                  break;
                 }
+                vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
+                uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
+                faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
+                vertexAOrPriorityIndex++;
+                if (controlFlagSnapshot != 0) {
+                  return;
+                }
+                if (controlFlagSnapshot == 0) {
+                  continue;
+                }
+                break;
               }
             }
             if (methodGuard != 22) {
@@ -352,7 +350,7 @@ final class i {
                           if (bucketIndexOrFaceOrderIndex < 0) {
                             System.err.println("Out of range!");
                             if (controlFlagSnapshot == 0) {
-                              break L4;
+                              break;
                             }
                           }
                           edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
@@ -371,7 +369,7 @@ final class i {
                         uh.meshFacePriorityWriteOffsets[facePriority] = uh.meshFacePriorityWriteOffsets[facePriority] + 1;
                       }
                       ch.queuedMeshFaceCount = ch.queuedMeshFaceCount + 1;
-                      break L4;
+                      break;
                     }
                   }
                 }
@@ -382,27 +380,25 @@ final class i {
               }
               cullFlagOrPriorityLoopSentinel = -1;
             }
-            L15: {
-              if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
-                  (null != mesh.facePriorities)) {
-                faceIndexOrPriorityPrefix = 0;
-                vertexAOrPriorityIndex = 0;
-                while (true) {
-                  if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
-                    break L15;
-                  }
-                  vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
-                  uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
-                  faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
-                  vertexAOrPriorityIndex++;
-                  if (controlFlagSnapshot != 0) {
-                    return;
-                  }
-                  if (controlFlagSnapshot == 0) {
-                    continue;
-                  }
-                  break L15;
+            if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
+                (null != mesh.facePriorities)) {
+              faceIndexOrPriorityPrefix = 0;
+              vertexAOrPriorityIndex = 0;
+              while (true) {
+                if (uh.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex) {
+                  break;
                 }
+                vertexBOrPriorityCount = uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
+                uh.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
+                faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
+                vertexAOrPriorityIndex++;
+                if (controlFlagSnapshot != 0) {
+                  return;
+                }
+                if (controlFlagSnapshot == 0) {
+                  continue;
+                }
+                break;
               }
             }
             if (integerMethodGuard != 22) {

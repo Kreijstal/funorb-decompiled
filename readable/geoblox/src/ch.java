@@ -364,10 +364,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           stackIn_78_1 = -6;
                         }
                         if (stackIn_78_0 > stackIn_78_1) {
-                          break L2;
+                          break;
                         }
                         ResizableDialog.field_S = true;
-                        break L2;
+                        break;
                       }
                     }
                   }
@@ -768,43 +768,41 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             var9 = Geoblox.clientControlFlowFlag;
             try {
               try {
-                L0: {
-                  if (PrefixCodeDecoder.field_d != null) {
-                    wg.field_j = wg.field_j + 1;
-                    if (wg.field_j < 3) {
-                      this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
-                      return;
-                    }
-                    this.a((byte) 79, "alreadyloaded");
+                if (PrefixCodeDecoder.field_d != null) {
+                  wg.field_j = wg.field_j + 1;
+                  if (wg.field_j < 3) {
+                    this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                     return;
                   }
-                  SocketArchiveNetworkClient.field_t = param2;
-                  ok.field_c = param3;
-                  NetworkArchiveRequest.field_w = param3;
-                  PrefixCodeDecoder.field_b = 0;
-                  ButtonWidget.field_B = 0;
-                  kh.field_d = param4;
-                  qb.field_G = param4;
-                  PrefixCodeDecoder.field_d = (ch) (this);
-                  GameScreen.errorReportApplet = k.c(107);
-                  if (param1 != -14948) {
-                    return;
-                  }
-                  dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
-                  MenuScreen.platformTaskDispatcher = dupTemp$0;
-                  ml.field_s = dupTemp$0;
-                  var8 = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
-                  while (true) {
-                    if (var8.status == 0) {
-                      bc.sleepMillis(0, 10L);
-                      if (!(var9 != 0)) {
-                        if (var9 == 0) {
-                          continue;
-                        }
+                  this.a((byte) 79, "alreadyloaded");
+                  return;
+                }
+                SocketArchiveNetworkClient.field_t = param2;
+                ok.field_c = param3;
+                NetworkArchiveRequest.field_w = param3;
+                PrefixCodeDecoder.field_b = 0;
+                ButtonWidget.field_B = 0;
+                kh.field_d = param4;
+                qb.field_G = param4;
+                PrefixCodeDecoder.field_d = (ch) (this);
+                GameScreen.errorReportApplet = k.c(107);
+                if (param1 != -14948) {
+                  return;
+                }
+                dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
+                MenuScreen.platformTaskDispatcher = dupTemp$0;
+                ml.field_s = dupTemp$0;
+                var8 = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
+                while (true) {
+                  if (var8.status == 0) {
+                    bc.sleepMillis(0, 10L);
+                    if (!(var9 != 0)) {
+                      if (var9 == 0) {
+                        continue;
                       }
                     }
-                    break L0;
                   }
+                  break;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

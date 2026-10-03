@@ -34,24 +34,22 @@ final class ad extends ia {
           this.field_m.a(param0, param1, param2);
           var6 = (pc) ((Object) this.field_l.firstForIteration(0));
           while (var6 != null) {
-            L1: {
-              if (!this.field_k.b(var6, -1)) {
-                var4_int = param1;
-                var5 = param2;
-                while (true) {
-                  if (var5 <= var6.field_g) {
-                    this.a(var5, (byte) -69, var5 + var4_int, param0, var6, var4_int);
-                    var6.field_g = var6.field_g - var5;
-                    break L1;
-                  }
-                  this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
-                  var5 = var5 - var6.field_g;
-                  var4_int = var4_int + var6.field_g;
-                  if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
-                    continue;
-                  }
-                  break L1;
+            if (!this.field_k.b(var6, -1)) {
+              var4_int = param1;
+              var5 = param2;
+              while (true) {
+                if (var5 <= var6.field_g) {
+                  this.a(var5, (byte) -69, var5 + var4_int, param0, var6, var4_int);
+                  var6.field_g = var6.field_g - var5;
+                  break;
                 }
+                this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
+                var5 = var5 - var6.field_g;
+                var4_int = var4_int + var6.field_g;
+                if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
+                  continue;
+                }
+                break;
               }
             }
             var6 = (pc) ((Object) this.field_l.nextForIteration(1));
@@ -226,52 +224,50 @@ final class ad extends ia {
         int var10 = 0;
         PcmSampleStream var11 = null;
         try {
-          L0: {
-            if (((4 & this.field_k.field_m[param4.field_t]) != 0) &&
-                (param4.field_y < 0)) {
-              var7_int = this.field_k.field_n[param4.field_t] / AudioOutput.sampleRateHz;
-              while (true) {
-                var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
-                if (param0 < var8) {
-                  param4.field_B = param4.field_B + param0 * var7_int;
-                  break L0;
-                }
-                param4.field_u.a(param3, param5, var8);
-                param0 = param0 - var8;
-                param5 = param5 + var8;
-                param4.field_B = param4.field_B + (-1048576 + var7_int * var8);
-                var9 = AudioOutput.sampleRateHz / 100;
-                var10 = 262144 / var7_int;
-                if (var10 < var9) {
-                  var9 = var10;
-                }
-                var11 = param4.field_u;
-                if (this.field_k.field_u[param4.field_t] == 0) {
-                  param4.field_u = PcmSampleStream.a(param4.field_i, var11.h(), var11.i(), var11.k());
+          if (((4 & this.field_k.field_m[param4.field_t]) != 0) &&
+              (param4.field_y < 0)) {
+            var7_int = this.field_k.field_n[param4.field_t] / AudioOutput.sampleRateHz;
+            while (true) {
+              var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
+              if (param0 < var8) {
+                param4.field_B = param4.field_B + param0 * var7_int;
+                break;
+              }
+              param4.field_u.a(param3, param5, var8);
+              param0 = param0 - var8;
+              param5 = param5 + var8;
+              param4.field_B = param4.field_B + (-1048576 + var7_int * var8);
+              var9 = AudioOutput.sampleRateHz / 100;
+              var10 = 262144 / var7_int;
+              if (var10 < var9) {
+                var9 = var10;
+              }
+              var11 = param4.field_u;
+              if (this.field_k.field_u[param4.field_t] == 0) {
+                param4.field_u = PcmSampleStream.a(param4.field_i, var11.h(), var11.i(), var11.k());
+              } else {
+                param4.field_u = PcmSampleStream.a(param4.field_i, var11.h(), 0, var11.k());
+                stackIn_11_0 = this.field_k;
+                stackIn_11_1 = (pc) (param4);
+                stackIn_11_2 = -70;
+                if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] >= 0) {
+                  stackIn_12_3 = false;
                 } else {
-                  param4.field_u = PcmSampleStream.a(param4.field_i, var11.h(), 0, var11.k());
-                  stackIn_11_0 = this.field_k;
-                  stackIn_11_1 = (pc) (param4);
-                  stackIn_11_2 = -70;
-                  if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] >= 0) {
-                    stackIn_12_3 = false;
-                  } else {
-                    stackIn_12_3 = true;
-                  }
-                  ((kj) (Object) stackIn_11_0).a(stackIn_11_1, (byte) stackIn_11_2, stackIn_12_3);
-                  param4.field_u.c(var9, var11.i());
+                  stackIn_12_3 = true;
                 }
-                if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] < 0) {
-                  param4.field_u.g(-1);
-                }
-                var11.c(var9);
-                var11.a(param3, param5, param2 - param5);
-                if (!var11.g()) {
-                  continue;
-                }
-                this.field_m.a(var11);
+                ((kj) (Object) stackIn_11_0).a(stackIn_11_1, (byte) stackIn_11_2, stackIn_12_3);
+                param4.field_u.c(var9, var11.i());
+              }
+              if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] < 0) {
+                param4.field_u.g(-1);
+              }
+              var11.c(var9);
+              var11.a(param3, param5, param2 - param5);
+              if (!var11.g()) {
                 continue;
               }
+              this.field_m.a(var11);
+              continue;
             }
           }
           if (param1 >= -26) {
