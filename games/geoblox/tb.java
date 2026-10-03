@@ -525,28 +525,26 @@ final class tb {
         var12 = param0.field_q + 1;
         L0: while (true) {
           L1: {
-            L2: {
-              if (var3 > 0) {
-                while (true) {
-                  if (var10 == 0) {
-                    break L1;
-                  }
-                  if (var3 != 1) {
-                    var8[var9] = (byte)var2;
-                    var3--;
-                    var9++;
-                    var10--;
-                    continue;
-                  }
-                  if (var10 == 0) {
-                    var3 = 1;
-                    break L1;
-                  }
+            if (var3 > 0) {
+              while (true) {
+                if (var10 == 0) {
+                  break L1;
+                }
+                if (var3 != 1) {
                   var8[var9] = (byte)var2;
+                  var3--;
                   var9++;
                   var10--;
-                  break L2;
+                  continue;
                 }
+                if (var10 == 0) {
+                  var3 = 1;
+                  break L1;
+                }
+                var8[var9] = (byte)var2;
+                var9++;
+                var10--;
+                break;
               }
             }
             while (var4 != var12) {

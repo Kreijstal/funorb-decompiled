@@ -140,21 +140,19 @@ class ee extends el implements ql {
             field_B = (int[]) null;
           }
           while (var4 != null) {
-            L2: {
-              if (var4.e((byte) 54)) {
-                var5 = new gb(this.field_z);
-                var5.a(var4, (byte) 123);
-                var6 = (el) ((Object) var5.c(26));
-                while (true) {
-                  if (var6 == null) {
-                    break L2;
-                  }
-                  if (!var6.a((byte) -39, param1)) {
-                    var6 = (el) ((Object) var5.c(26));
-                    continue;
-                  }
-                  return true;
+            if (var4.e((byte) 54)) {
+              var5 = new gb(this.field_z);
+              var5.a(var4, (byte) 123);
+              var6 = (el) ((Object) var5.c(26));
+              while (true) {
+                if (var6 == null) {
+                  break;
                 }
+                if (!var6.a((byte) -39, param1)) {
+                  var6 = (el) ((Object) var5.c(26));
+                  continue;
+                }
+                return true;
               }
             }
             var4 = (el) ((Object) var8.c(26));
@@ -287,21 +285,19 @@ class ee extends el implements ql {
           }
           var4 = (el) ((Object) var3.c((byte) 88));
           while (var4 != null) {
-            L1: {
-              if (var4.e((byte) 54)) {
-                var5 = new gb(this.field_z);
-                var5.a((byte) 56, var4);
-                var6 = (el) ((Object) var5.a((byte) 114));
-                while (true) {
-                  if (var6 == null) {
-                    break L1;
-                  }
-                  if (!var6.a((byte) -56, param0)) {
-                    var6 = (el) ((Object) var5.a((byte) 114));
-                    continue;
-                  }
-                  return true;
+            if (var4.e((byte) 54)) {
+              var5 = new gb(this.field_z);
+              var5.a((byte) 56, var4);
+              var6 = (el) ((Object) var5.a((byte) 114));
+              while (true) {
+                if (var6 == null) {
+                  break;
                 }
+                if (!var6.a((byte) -56, param0)) {
+                  var6 = (el) ((Object) var5.a((byte) 114));
+                  continue;
+                }
+                return true;
               }
             }
             var4 = (el) ((Object) var3.a((byte) 109));

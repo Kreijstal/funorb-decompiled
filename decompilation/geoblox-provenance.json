@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "610045428c7686b22b38211b55db11bd11c6f641",
+      "commit": "a3a98476775c603b4c05f34196b6ba6a0c818466",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "2ed54a58ff81b1e8ed7b11a27fd5bd3821788ee90ac8012ebc87f8256c3d5956",
-        "reproduce": "git archive --format=tar 610045428c7686b22b38211b55db11bd11c6f641 | sha256sum",
+        "sha256": "6388138b5ab1a91efb6893969dd008096ce7d7012c65dcf6cdd21e9b7739986e",
+        "reproduce": "git archive --format=tar a3a98476775c603b4c05f34196b6ba6a0c818466 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "413c9b8f71549b796b21abecc415d6ebf5fb103b06e32f88ea1d2623ab6e4d62",
-  "previousSourceTreeSha256": "6499347b6e0dfc27f819fc721bf550a43d9c562b6eabddfc5a8c8c9588a07e7e",
-  "changedJavaFiles": 19,
+  "sourceTreeSha256": "ba01dcb53e4008252421ea97b14937357d4b521fee2ef0952952aa4f9c448556",
+  "previousSourceTreeSha256": "413c9b8f71549b796b21abecc415d6ebf5fb103b06e32f88ea1d2623ab6e4d62",
+  "changedJavaFiles": 28,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2574,5 +2574,56 @@
     "boardReconciliationBlockLabelsBefore": 16,
     "boardReconciliationBlockLabelsAfter": 15,
     "scope": "Predicate-only conditional skip trees become short-circuit logical-negation/AND/OR guards for the original remainder. All destination references must be consumed. A nested remainder must reach its destination through final plain blocks, if branches and plain labels; intermediate work/loop/switch/protected paths refuse proof. Prefix work and declaration scopes stay intact; no predicate/effect is duplicated or local added.16128 native comparisons plus bypass/skip/NaN oracles cover ordering, unboxing, failures, scopes, terminal branches, ancestor transfers, finally state and monitors. All303 expected token streams and ordered naming bindings remain. Larger overlapping spans and whole-game/browser/phone acceptance remain unfinished or unverified."
+  },
+  "terminalPlainBlockLoopBreaks": {
+    "historicalPassVersion": 102,
+    "javaToolsCommit": "a3a98476775c603b4c05f34196b6ba6a0c818466",
+    "sourceArchiveSha256": "6388138b5ab1a91efb6893969dd008096ce7d7012c65dcf6cdd21e9b7739986e",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 28,
+    "sourceLinesBefore": 77951,
+    "sourceLinesAfter": 77875,
+    "sourceLinesRemoved": 76,
+    "breaksLocalized": 78,
+    "unusedLabelsRemoved": 38,
+    "blocksUnwrapped": 38,
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 119181,
+    "sourceReferenceOccurrencesAfter": 119181,
+    "orderedDeclarationsReferencesAndOverridesUnchanged": true,
+    "localOrdinalMigrations": 0,
+    "overrideRelationshipsPreserved": 388,
+    "expectedRewriteTokenStreamsCheckedJavaFiles": 303,
+    "genericEmitterTestsRegistered": 60,
+    "genericEmitterTestsPassed": 59,
+    "genericEmitterTestsSkipped": 1,
+    "newNativeEmitterComparisons": 11520,
+    "genericExceptionExitGroups": 8,
+    "genericIntegerArgumentGroups": 2,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "methodBodies": 2080,
+    "largeMethodSpansAtLeast300Lines": 21,
+    "largeMethodSpansWithGeneratedBlockLabelsBefore": 10,
+    "largeMethodSpansWithGeneratedBlockLabelsAfter": 9,
+    "spriteNearestRotationLinesBefore": 531,
+    "spriteNearestRotationLinesAfter": 529,
+    "spriteNearestRotationBlockLabelsBefore": 1,
+    "spriteNearestRotationBlockLabelsAfter": 0,
+    "gameplayRendererLinesBefore": 379,
+    "gameplayRendererLinesAfter": 377,
+    "gameplayRendererBlockLabelsBefore": 18,
+    "gameplayRendererBlockLabelsAfter": 17,
+    "gameplayUpdaterLinesBefore": 643,
+    "gameplayUpdaterLinesAfter": 641,
+    "gameplayUpdaterBlockLabelsBefore": 14,
+    "gameplayUpdaterBlockLabelsAfter": 13,
+    "boardReconciliationLinesBefore": 496,
+    "boardReconciliationLinesAfter": 494,
+    "boardReconciliationBlockLabelsBefore": 15,
+    "boardReconciliationBlockLabelsAfter": 14,
+    "scope": "A labeled break to a plain block becomes an ordinary break only when its nearest breakable frame is a loop and the path from completed loop to the target is exclusively final plain blocks, if branches and plain labels. Intervening work, declarations, loops, switches, try/catch/finally and monitors refuse proof; inner cleanup remains intact on the same abrupt loop exit. Only jump spelling changes; existing safe frame cleanup then removes unused labels without enlarging declaration scopes. All303 token streams and ordered bindings match the expected rewrite;11520 native comparisons and five independent loop-update/condition/iteration oracles preserve scopes, prefix effects, unboxing/failure identity, finally overrides, ancestor transfers and monitor ownership. Larger continuation/state reconstruction and whole-game/browser/phone targets remain unfinished or unverified."
   }
 }

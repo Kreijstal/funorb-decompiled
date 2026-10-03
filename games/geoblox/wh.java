@@ -648,7 +648,7 @@ abstract class wh extends rc {
                   var36 = mh.field_b[param8];
                   while (true) {
                     if (~param15 >= ~param8) {
-                      break L11;
+                      break;
                     }
                     var37 = var17_int >> 16;
                     stackIn_73_0 = ~mh.field_c;
@@ -701,7 +701,7 @@ abstract class wh extends rc {
                     if (var42 == 0) {
                       continue;
                     }
-                    break L11;
+                    break;
                   }
                 }
                 var36 = param4 - param15;
@@ -853,35 +853,33 @@ abstract class wh extends rc {
                 var2 = new byte[24];
                 if (null != af.field_b) {
                   try {
-                    L2: {
-                      af.field_b.a(51, 0L);
-                      af.field_b.a((byte) -76, var2);
-                      var3_int = 0;
-                      while (true) {
-                        L4: {
-                          if (var3_int < 24) {
-                            stackIn_17_0 = ~var2[var3_int];
-                            stackIn_17_1 = -1;
-                            if (var5 != 0) {
-                              break L4;
-                            }
-                            if (!((stackIn_17_0 != stackIn_17_1) &&
-                                (var5 == 0))) {
-                              var3_int++;
-                              if (var5 == 0) {
-                                continue;
-                              }
+                    af.field_b.a(51, 0L);
+                    af.field_b.a((byte) -76, var2);
+                    var3_int = 0;
+                    while (true) {
+                      L4: {
+                        if (var3_int < 24) {
+                          stackIn_17_0 = ~var2[var3_int];
+                          stackIn_17_1 = -1;
+                          if (var5 != 0) {
+                            break L4;
+                          }
+                          if (!((stackIn_17_0 != stackIn_17_1) &&
+                              (var5 == 0))) {
+                            var3_int++;
+                            if (var5 == 0) {
+                              continue;
                             }
                           }
-                          stackIn_17_0 = 24;
-                          stackIn_17_1 = var3_int;
                         }
-                        if (stackIn_17_0 <= stackIn_17_1) {
-                          throw new IOException();
-                        }
-                        decompiledRegionSelector0 = 0;
-                        break L2;
+                        stackIn_17_0 = 24;
+                        stackIn_17_1 = var3_int;
                       }
+                      if (stackIn_17_0 <= stackIn_17_1) {
+                        throw new IOException();
+                      }
+                      decompiledRegionSelector0 = 0;
+                      break;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;

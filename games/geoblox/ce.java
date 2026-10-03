@@ -58,33 +58,31 @@ final class ce extends qk {
         int stackIn_15_1 = 0;
         int stackIn_16_2 = 0;
         String var6;
-        L0: {
-          var2 = javax.sound.sampled.AudioSystem.getMixerInfo();
-          if (var2 != null) {
-            var3 = var2;
-            var4 = 0;
-            while (true) {
-              if (var4 >= var3.length) {
-                break L0;
-              }
-              var5 = var3[var4];
-              if (var5 == null) {
-                var4++;
-                continue;
-              }
-              var6 = var5.getName();
-              if (var6 == null) {
-                var4++;
-                continue;
-              }
-              if (var6.toLowerCase().indexOf(field_A) < 0) {
-                var4++;
-                continue;
-              }
-              this.field_v = true;
+        var2 = javax.sound.sampled.AudioSystem.getMixerInfo();
+        if (var2 != null) {
+          var3 = var2;
+          var4 = 0;
+          while (true) {
+            if (var4 >= var3.length) {
+              break;
+            }
+            var5 = var3[var4];
+            if (var5 == null) {
               var4++;
               continue;
             }
+            var6 = var5.getName();
+            if (var6 == null) {
+              var4++;
+              continue;
+            }
+            if (var6.toLowerCase().indexOf(field_A) < 0) {
+              var4++;
+              continue;
+            }
+            this.field_v = true;
+            var4++;
+            continue;
           }
         }
         stackIn_12_0 = this;

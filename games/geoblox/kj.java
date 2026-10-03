@@ -49,26 +49,24 @@ final class kj extends ia {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          L0: {
-            if (this.field_C.f()) {
-              var4_int = this.field_C.field_d * this.field_T / qk.field_j;
-              while (true) {
-                var5 = (long)param2 * (long)var4_int + this.field_x;
-                if (this.field_A - var5 >= 0L) {
-                  this.field_x = var5;
-                  break L0;
-                }
-                var7 = (int)((-1L + this.field_A - (this.field_x - (long)var4_int)) / (long)var4_int);
-                this.field_x = this.field_x + (long)var7 * (long)var4_int;
-                this.field_I.a(param0, param1, var7);
-                param2 = param2 - var7;
-                param1 = param1 + var7;
-                this.a((byte) 65);
-                if (!this.field_C.f()) {
-                  break L0;
-                }
-                continue;
+          if (this.field_C.f()) {
+            var4_int = this.field_C.field_d * this.field_T / qk.field_j;
+            while (true) {
+              var5 = (long)param2 * (long)var4_int + this.field_x;
+              if (this.field_A - var5 >= 0L) {
+                this.field_x = var5;
+                break;
               }
+              var7 = (int)((-1L + this.field_A - (this.field_x - (long)var4_int)) / (long)var4_int);
+              this.field_x = this.field_x + (long)var7 * (long)var4_int;
+              this.field_I.a(param0, param1, var7);
+              param2 = param2 - var7;
+              param1 = param1 + var7;
+              this.a((byte) 65);
+              if (!this.field_C.f()) {
+                break;
+              }
+              continue;
             }
           }
           this.field_I.a(param0, param1, param2);
@@ -1001,25 +999,23 @@ final class kj extends ia {
         int var2;
         long var3;
         int var5;
-        L0: {
-          if (this.field_C.f()) {
-            var2 = this.field_T * this.field_C.field_d / qk.field_j;
-            while (true) {
-              var3 = this.field_x + (long)param0 * (long)var2;
-              if (-var3 + this.field_A >= 0L) {
-                this.field_x = var3;
-                break L0;
-              }
-              var5 = (int)((-1L + ((long)var2 - this.field_x + this.field_A)) / (long)var2);
-              this.field_x = this.field_x + (long)var2 * (long)var5;
-              param0 = param0 - var5;
-              this.field_I.b(var5);
-              this.a((byte) -42);
-              if (this.field_C.f()) {
-                continue;
-              }
-              break L0;
+        if (this.field_C.f()) {
+          var2 = this.field_T * this.field_C.field_d / qk.field_j;
+          while (true) {
+            var3 = this.field_x + (long)param0 * (long)var2;
+            if (-var3 + this.field_A >= 0L) {
+              this.field_x = var3;
+              break;
             }
+            var5 = (int)((-1L + ((long)var2 - this.field_x + this.field_A)) / (long)var2);
+            this.field_x = this.field_x + (long)var2 * (long)var5;
+            param0 = param0 - var5;
+            this.field_I.b(var5);
+            this.a((byte) -42);
+            if (this.field_C.f()) {
+              continue;
+            }
+            break;
           }
         }
         this.field_I.b(param0);

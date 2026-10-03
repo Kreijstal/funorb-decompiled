@@ -309,26 +309,24 @@ class dm extends wh {
                 var23 = var23 + vb.field_f;
                 continue;
               }
-              L68: {
-                if ((var36 >= 0) &&
-                    (var35 - (this.field_r << 12) < 0) &&
-                    (var36 - (this.field_m << 12) < 0)) {
-                  while (true) {
-                    if (var37 >= 0) {
-                      break L68;
-                    }
-                    var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                    if (var38 == 0) {
-                      var34++;
-                      var37++;
-                      continue;
-                    }
-                    incrementValue$8 = var34;
+              if ((var36 >= 0) &&
+                  (var35 - (this.field_r << 12) < 0) &&
+                  (var36 - (this.field_m << 12) < 0)) {
+                while (true) {
+                  if (var37 >= 0) {
+                    break;
+                  }
+                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                  if (var38 == 0) {
                     var34++;
-                    vb.field_c[incrementValue$8] = var38;
                     var37++;
                     continue;
                   }
+                  incrementValue$8 = var34;
+                  var34++;
+                  vb.field_c[incrementValue$8] = var38;
+                  var37++;
+                  continue;
                 }
               }
               var33++;

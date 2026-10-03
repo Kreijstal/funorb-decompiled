@@ -44,28 +44,26 @@ final class oi {
           sd.field_C[ag.field_i] = null;
           return var2_ref_byte__;
         }
-        L3: {
-          if (sg.field_c != null) {
-            var2 = 0;
-            while (true) {
-              if (var2 >= nk.field_c.length) {
-                break L3;
-              }
-              if (nk.field_c[var2] != param1) {
-                var2++;
-                continue;
-              }
-              if (0 >= oa.field_b[var2]) {
-                var2++;
-                continue;
-              }
-              dupTemp$6 = oa.field_b[var2] - 1;
-              arrayValue$7 = sg.field_c[var2];
-              oa.field_b[var2] = dupTemp$6;
-              var3 = arrayValue$7[dupTemp$6];
-              sg.field_c[var2][oa.field_b[var2]] = null;
-              return var3;
+        if (sg.field_c != null) {
+          var2 = 0;
+          while (true) {
+            if (var2 >= nk.field_c.length) {
+              break;
             }
+            if (nk.field_c[var2] != param1) {
+              var2++;
+              continue;
+            }
+            if (0 >= oa.field_b[var2]) {
+              var2++;
+              continue;
+            }
+            dupTemp$6 = oa.field_b[var2] - 1;
+            arrayValue$7 = sg.field_c[var2];
+            oa.field_b[var2] = dupTemp$6;
+            var3 = arrayValue$7[dupTemp$6];
+            sg.field_c[var2][oa.field_b[var2]] = null;
+            return var3;
           }
         }
         return new byte[param1];

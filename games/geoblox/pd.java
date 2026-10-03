@@ -73,46 +73,44 @@ final class pd {
         if (this.field_b == null) {
           throw new NullPointerException();
         }
-        L0: {
-          param0.setUndecorated(true);
-          param0.enableInputMethods(false);
-          this.a(-779675038, param0);
-          if (param4 == 0) {
-            var6 = this.field_b.getRefreshRate();
-            var7 = this.field_a.getDisplayModes();
-            var8 = 0;
-            var9 = 0;
-            while (true) {
-              if (var7.length <= var9) {
-                if (var8 != 0) {
-                  break L0;
-                }
-                param4 = var6;
-                break L0;
+        param0.setUndecorated(true);
+        param0.enableInputMethods(false);
+        this.a(-779675038, param0);
+        if (param4 == 0) {
+          var6 = this.field_b.getRefreshRate();
+          var7 = this.field_a.getDisplayModes();
+          var8 = 0;
+          var9 = 0;
+          while (true) {
+            if (var7.length <= var9) {
+              if (var8 != 0) {
+                break;
               }
-              if (var7[var9].getWidth() != param1) {
-                var9++;
-                continue;
-              }
-              if (param2 != var7[var9].getHeight()) {
-                var9++;
-                continue;
-              }
-              if (var7[var9].getBitDepth() != param3) {
-                var9++;
-                continue;
-              }
-              var10 = var7[var9].getRefreshRate();
-              if ((var8 != 0) &&
-                  (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4))) {
-                var9++;
-                continue;
-              }
-              param4 = var10;
-              var8 = 1;
+              param4 = var6;
+              break;
+            }
+            if (var7[var9].getWidth() != param1) {
               var9++;
               continue;
             }
+            if (param2 != var7[var9].getHeight()) {
+              var9++;
+              continue;
+            }
+            if (var7[var9].getBitDepth() != param3) {
+              var9++;
+              continue;
+            }
+            var10 = var7[var9].getRefreshRate();
+            if ((var8 != 0) &&
+                (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4))) {
+              var9++;
+              continue;
+            }
+            param4 = var10;
+            var8 = 1;
+            var9++;
+            continue;
           }
         }
         this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));

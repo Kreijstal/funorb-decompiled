@@ -676,7 +676,7 @@ final class ua extends hf {
               var27 = (float)Math.sin(((double)(var26 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
               field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
             }
-            break L11;
+            break;
           }
         }
         var17 = null;

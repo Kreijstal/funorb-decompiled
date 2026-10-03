@@ -364,10 +364,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           stackIn_78_1 = -6;
                         }
                         if (stackIn_78_0 > stackIn_78_1) {
-                          break L2;
+                          break;
                         }
                         oe.field_S = true;
-                        break L2;
+                        break;
                       }
                     }
                   }
@@ -768,43 +768,41 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             var9 = Geoblox.field_C;
             try {
               try {
-                L0: {
-                  if (qa.field_d != null) {
-                    wg.field_j = wg.field_j + 1;
-                    if (wg.field_j < 3) {
-                      this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
-                      return;
-                    }
-                    this.a((byte) 79, "alreadyloaded");
+                if (qa.field_d != null) {
+                  wg.field_j = wg.field_j + 1;
+                  if (wg.field_j < 3) {
+                    this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                     return;
                   }
-                  kk.field_t = param2;
-                  ok.field_c = param3;
-                  sd.field_w = param3;
-                  qa.field_b = 0;
-                  hk.field_B = 0;
-                  kh.field_d = param4;
-                  qb.field_G = param4;
-                  qa.field_d = (ch) (this);
-                  c.field_x = k.c(107);
-                  if (param1 != -14948) {
-                    return;
-                  }
-                  dupTemp$0 = new d(param0, param5, param6, true);
-                  ka.field_i = dupTemp$0;
-                  ml.field_s = dupTemp$0;
-                  var8 = ka.field_i.a((Runnable) (this), 0, 1);
-                  while (true) {
-                    if (var8.field_a == 0) {
-                      bc.a(0, 10L);
-                      if (!(var9 != 0)) {
-                        if (var9 == 0) {
-                          continue;
-                        }
+                  this.a((byte) 79, "alreadyloaded");
+                  return;
+                }
+                kk.field_t = param2;
+                ok.field_c = param3;
+                sd.field_w = param3;
+                qa.field_b = 0;
+                hk.field_B = 0;
+                kh.field_d = param4;
+                qb.field_G = param4;
+                qa.field_d = (ch) (this);
+                c.field_x = k.c(107);
+                if (param1 != -14948) {
+                  return;
+                }
+                dupTemp$0 = new d(param0, param5, param6, true);
+                ka.field_i = dupTemp$0;
+                ml.field_s = dupTemp$0;
+                var8 = ka.field_i.a((Runnable) (this), 0, 1);
+                while (true) {
+                  if (var8.field_a == 0) {
+                    bc.a(0, 10L);
+                    if (!(var9 != 0)) {
+                      if (var9 == 0) {
+                        continue;
                       }
                     }
-                    break L0;
                   }
+                  break;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

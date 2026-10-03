@@ -182,7 +182,7 @@ final class i {
                           if (stackIn_39_0 < 0) {
                             System.err.println("Out of range!");
                             if (var19 == 0) {
-                              break L4;
+                              break;
                             }
                           }
                           var17 = ch.field_d[var16];
@@ -201,7 +201,7 @@ final class i {
                         uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
                       }
                       ch.field_b = ch.field_b + 1;
-                      break L4;
+                      break;
                     }
                   }
                 }
@@ -212,27 +212,25 @@ final class i {
               }
               stackIn_49_0 = -1;
             }
-            L15: {
-              if ((stackIn_49_0 > ~param2.field_v) &&
-                  (null != param2.field_n)) {
-                var8 = 0;
-                var9 = 0;
-                while (true) {
-                  if (uh.field_x.length <= var9) {
-                    break L15;
-                  }
-                  var10 = uh.field_x[var9];
-                  uh.field_x[var9] = var8;
-                  var8 = var8 + var10;
-                  var9++;
-                  if (var19 != 0) {
-                    return;
-                  }
-                  if (var19 == 0) {
-                    continue;
-                  }
-                  break L15;
+            if ((stackIn_49_0 > ~param2.field_v) &&
+                (null != param2.field_n)) {
+              var8 = 0;
+              var9 = 0;
+              while (true) {
+                if (uh.field_x.length <= var9) {
+                  break;
                 }
+                var10 = uh.field_x[var9];
+                uh.field_x[var9] = var8;
+                var8 = var8 + var10;
+                var9++;
+                if (var19 != 0) {
+                  return;
+                }
+                if (var19 == 0) {
+                  continue;
+                }
+                break;
               }
             }
             if (param1 != 22) {
@@ -352,7 +350,7 @@ final class i {
                           if (stackIn_39_0 < 0) {
                             System.err.println("Out of range!");
                             if (var19 == 0) {
-                              break L4;
+                              break;
                             }
                           }
                           var17 = ch.field_d[var16];
@@ -371,7 +369,7 @@ final class i {
                         uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
                       }
                       ch.field_b = ch.field_b + 1;
-                      break L4;
+                      break;
                     }
                   }
                 }
@@ -382,27 +380,25 @@ final class i {
               }
               stackIn_49_0 = -1;
             }
-            L15: {
-              if ((stackIn_49_0 > ~param2.field_v) &&
-                  (null != param2.field_n)) {
-                var8 = 0;
-                var9 = 0;
-                while (true) {
-                  if (uh.field_x.length <= var9) {
-                    break L15;
-                  }
-                  var10 = uh.field_x[var9];
-                  uh.field_x[var9] = var8;
-                  var8 = var8 + var10;
-                  var9++;
-                  if (var19 != 0) {
-                    return;
-                  }
-                  if (var19 == 0) {
-                    continue;
-                  }
-                  break L15;
+            if ((stackIn_49_0 > ~param2.field_v) &&
+                (null != param2.field_n)) {
+              var8 = 0;
+              var9 = 0;
+              while (true) {
+                if (uh.field_x.length <= var9) {
+                  break;
                 }
+                var10 = uh.field_x[var9];
+                uh.field_x[var9] = var8;
+                var8 = var8 + var10;
+                var9++;
+                if (var19 != 0) {
+                  return;
+                }
+                if (var19 == 0) {
+                  continue;
+                }
+                break;
               }
             }
             if (param1 != 22) {

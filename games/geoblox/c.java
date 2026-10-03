@@ -262,32 +262,30 @@ final class c extends ka {
           var2_int = -ee.field_A.field_s + this.field_W;
           L1: while (true) {
             L2: {
-              L3: {
-                if (640 > var2_int) {
-                  stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
-                  if (var4 != 0) {
-                    break L2;
-                  }
-                  var3 = stackIn_16_0;
-                  while (true) {
-                    L5: {
-                      if (~-ee.field_A.field_o >= ~var3) {
-                        ee.field_A.c(var2_int, var3);
-                        var3 = var3 - ee.field_A.field_o;
-                        if (var4 != 0) {
-                          break L5;
-                        }
-                        if (var4 == 0) {
-                          continue;
-                        }
+              if (640 > var2_int) {
+                stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
+                if (var4 != 0) {
+                  break L2;
+                }
+                var3 = stackIn_16_0;
+                while (true) {
+                  L5: {
+                    if (~-ee.field_A.field_o >= ~var3) {
+                      ee.field_A.c(var2_int, var3);
+                      var3 = var3 - ee.field_A.field_o;
+                      if (var4 != 0) {
+                        break L5;
                       }
-                      var2_int = var2_int + ee.field_A.field_s;
+                      if (var4 == 0) {
+                        continue;
+                      }
                     }
-                    if (var4 == 0) {
-                      continue L1;
-                    }
-                    break L3;
+                    var2_int = var2_int + ee.field_A.field_s;
                   }
+                  if (var4 == 0) {
+                    continue L1;
+                  }
+                  break;
                 }
               }
               this.field_I = this.field_I % vc.field_j.field_o;
@@ -296,31 +294,29 @@ final class c extends ka {
             }
             var2_int = stackIn_16_0;
             L7: while (true) {
-              L9: {
-                if (~-vc.field_j.field_s >= ~var2_int) {
-                  if (var4 != 0) {
-                    return;
-                  }
-                  var3 = this.field_I + vc.field_j.field_o + 480;
-                  while (true) {
-                    L11: {
-                      if (~var3 <= ~-vc.field_j.field_o) {
-                        vc.field_j.b(var2_int, var3);
-                        var3 = var3 - vc.field_j.field_o;
-                        if (var4 != 0) {
-                          break L11;
-                        }
-                        if (var4 == 0) {
-                          continue;
-                        }
+              if (~-vc.field_j.field_s >= ~var2_int) {
+                if (var4 != 0) {
+                  return;
+                }
+                var3 = this.field_I + vc.field_j.field_o + 480;
+                while (true) {
+                  L11: {
+                    if (~var3 <= ~-vc.field_j.field_o) {
+                      vc.field_j.b(var2_int, var3);
+                      var3 = var3 - vc.field_j.field_o;
+                      if (var4 != 0) {
+                        break L11;
                       }
-                      var2_int = var2_int - vc.field_j.field_s;
+                      if (var4 == 0) {
+                        continue;
+                      }
                     }
-                    if (var4 == 0) {
-                      continue L7;
-                    }
-                    break L9;
+                    var2_int = var2_int - vc.field_j.field_s;
                   }
+                  if (var4 == 0) {
+                    continue L7;
+                  }
+                  break;
                 }
               }
               return;
@@ -1016,68 +1012,66 @@ final class c extends ka {
                   break L5;
                 }
               }
-              L8: {
-                var2_int = 0;
-                var3_ref_String__ = ca.field_f.field_k[da.field_c];
-                var4 = fi.field_d;
-                if (var3_ref_String__ != null) {
-                  var5 = ca.field_f.field_h[da.field_c];
-                  var6 = var4.field_o + 150;
-                  var7 = 0;
-                  var8_int = 0;
-                  while (true) {
-                    L10: {
-                      if (var8_int < 10) {
-                        stackIn_59_0 = null;
-                        if (var10 != 0) {
-                          break L10;
-                        }
-                        L12: {
-                          if (stackIn_59_0 != var3_ref_String__[var8_int]) {
-                            var2_int = 1;
-                            var9 = var3_ref_String__[var8_int];
-                            if ((var7 == 0) &&
-                                (null != el.field_o) &&
-                                (var5[var8_int] == Math.abs(el.field_o.field_o)) &&
-                                (ge.a(var9, (byte) 12))) {
-                              var7 = 1;
-                              var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
-                              var4.a(var9, 165, var6, 16610816, -1);
-                              var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
-                              if (var10 == 0) {
-                                break L12;
-                              }
-                            }
-                            var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
-                            var4.a(var9, 165, var6, 1, -1);
-                            var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
-                          }
-                        }
-                        var6 += 15;
-                        var8_int++;
-                        if (var10 == 0) {
-                          continue;
-                        }
-                      }
-                      if (var7 != 0) {
-                        break L8;
-                      }
+              var2_int = 0;
+              var3_ref_String__ = ca.field_f.field_k[da.field_c];
+              var4 = fi.field_d;
+              if (var3_ref_String__ != null) {
+                var5 = ca.field_f.field_h[da.field_c];
+                var6 = var4.field_o + 150;
+                var7 = 0;
+                var8_int = 0;
+                while (true) {
+                  L10: {
+                    if (var8_int < 10) {
                       stackIn_59_0 = null;
+                      if (var10 != 0) {
+                        break L10;
+                      }
+                      L12: {
+                        if (stackIn_59_0 != var3_ref_String__[var8_int]) {
+                          var2_int = 1;
+                          var9 = var3_ref_String__[var8_int];
+                          if ((var7 == 0) &&
+                              (null != el.field_o) &&
+                              (var5[var8_int] == Math.abs(el.field_o.field_o)) &&
+                              (ge.a(var9, (byte) 12))) {
+                            var7 = 1;
+                            var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
+                            var4.a(var9, 165, var6, 16610816, -1);
+                            var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
+                            if (var10 == 0) {
+                              break L12;
+                            }
+                          }
+                          var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
+                          var4.a(var9, 165, var6, 1, -1);
+                          var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
+                        }
+                      }
+                      var6 += 15;
+                      var8_int++;
+                      if (var10 == 0) {
+                        continue;
+                      }
                     }
-                    if (stackIn_59_0 == el.field_o) {
-                      break L8;
+                    if (var7 != 0) {
+                      break;
                     }
-                    if (el.field_o.field_o == 0) {
-                      break L8;
-                    }
-                    if (el.field_o.field_o == -2147483648) {
-                      break L8;
-                    }
-                    var8 = wd.field_f;
-                    var4.a(var8, 165, var6, 16724225, -1);
-                    var4.c(Integer.toString(Math.abs(el.field_o.field_o)), 500, var6, 16724225, -1);
-                    break L8;
+                    stackIn_59_0 = null;
                   }
+                  if (stackIn_59_0 == el.field_o) {
+                    break;
+                  }
+                  if (el.field_o.field_o == 0) {
+                    break;
+                  }
+                  if (el.field_o.field_o == -2147483648) {
+                    break;
+                  }
+                  var8 = wd.field_f;
+                  var4.a(var8, 165, var6, 16724225, -1);
+                  var4.c(Integer.toString(Math.abs(el.field_o.field_o)), 500, var6, 16724225, -1);
+                  break;
                 }
               }
               if (var2_int == 0) {
