@@ -123,18 +123,12 @@ final class GameScreen extends MenuScreen {
                 break L0;
               }
               if (!fh.c(-103)) {
-                L16: {
-                  if (og.field_n <= 0) {
-                    if (this.field_o == 0) {
-                      break L16;
-                    }
-                    if ((PrefixCodeDecoder.pointerXSnapshot > 190) &&
-                        (PrefixCodeDecoder.pointerXSnapshot < 449) &&
-                        (265 < ue.pointerYSnapshot) &&
-                        (ue.pointerYSnapshot < 299)) {
-                      break L16;
-                    }
-                  }
+                if ((!(og.field_n <= 0) ||
+                    (!(this.field_o == 0) &&
+                      !((PrefixCodeDecoder.pointerXSnapshot > 190) &&
+                      (PrefixCodeDecoder.pointerXSnapshot < 449) &&
+                      (265 < ue.pointerYSnapshot) &&
+                      (ue.pointerYSnapshot < 299))))) {
                   if (InstrumentPatch.field_n == null) {
                     if (0 != this.field_o) {
                       if (PrefixCodeDecoder.pointerXSnapshot <= 260) {
@@ -156,24 +150,12 @@ final class GameScreen extends MenuScreen {
                       break L0;
                     }
                   }
-                  L20: {
-                    if (1 != this.field_o) {
-                      if (this.field_o >= 0) {
-                        break L20;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
-                        break L20;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                        break L20;
-                      }
-                      if (ue.pointerYSnapshot <= 327) {
-                        break L20;
-                      }
-                      if (ue.pointerYSnapshot >= 362) {
-                        break L20;
-                      }
-                    }
+                  if ((!(1 != this.field_o) ||
+                      (!(this.field_o >= 0) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
+                        !(ue.pointerYSnapshot <= 327) &&
+                        !(ue.pointerYSnapshot >= 362)))) {
                     this.field_C = false;
                     ArchiveCatalog.b(255);
                     this.pointerInteractionActive = true;
@@ -210,24 +192,12 @@ final class GameScreen extends MenuScreen {
                   break L0;
                 }
               }
-              L23: {
-                if (this.field_o != 1) {
-                  if (this.field_o >= 0) {
-                    break L23;
-                  }
-                  if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
-                    break L23;
-                  }
-                  if (470 <= PrefixCodeDecoder.pointerXSnapshot) {
-                    break L23;
-                  }
-                  if (ue.pointerYSnapshot <= 265) {
-                    break L23;
-                  }
-                  if (ue.pointerYSnapshot >= 299) {
-                    break L23;
-                  }
-                }
+              if ((!(this.field_o != 1) ||
+                  (!(this.field_o >= 0) &&
+                    !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
+                    !(470 <= PrefixCodeDecoder.pointerXSnapshot) &&
+                    !(ue.pointerYSnapshot <= 265) &&
+                    !(ue.pointerYSnapshot >= 299)))) {
                 this.pointerInteractionActive = true;
                 this.field_C = false;
                 if (var4 == 0) {
@@ -498,60 +468,36 @@ final class GameScreen extends MenuScreen {
                   } else {
                     stackIn_73_0 = 200;
                   }
-                  L17: {
-                    var5 = stackIn_73_0;
-                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                    ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
-                    var6 = 170;
-                    fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
-                    var7 = 100;
-                    var8 = -(20 + var7 >> 1) + 410;
-                    var6 = 265;
-                    var9 = var8 - (-(var7 >> 1) - 10);
-                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                    if (1 != this.field_o) {
-                      if (this.field_o >= 0) {
-                        break L17;
-                      }
-                      if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
-                        break L17;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                        break L17;
-                      }
-                      if (ue.pointerYSnapshot <= 265) {
-                        break L17;
-                      }
-                      if (ue.pointerYSnapshot >= 299) {
-                        break L17;
-                      }
-                    }
+                  var5 = stackIn_73_0;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                  ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
+                  var6 = 170;
+                  fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                  var7 = 100;
+                  var8 = -(20 + var7 >> 1) + 410;
+                  var6 = 265;
+                  var9 = var8 - (-(var7 >> 1) - 10);
+                  ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                  if ((!(1 != this.field_o) ||
+                      (!(this.field_o >= 0) &&
+                        !(350 >= PrefixCodeDecoder.pointerXSnapshot) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
+                        !(ue.pointerYSnapshot <= 265) &&
+                        !(ue.pointerYSnapshot >= 299)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  L19: {
-                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                    var8 = 320 - (20 + var7 >> 1) - 90;
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                    var6 = 265;
-                    var9 = 10 + (var7 >> 1) + var8;
-                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                    if (this.field_o != 0) {
-                      if (0 <= this.field_o) {
-                        break L19;
-                      }
-                      if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
-                        break L19;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                        break L19;
-                      }
-                      if (ue.pointerYSnapshot <= 265) {
-                        break L19;
-                      }
-                      if (ue.pointerYSnapshot >= 299) {
-                        break L19;
-                      }
-                    }
+                  dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                  var8 = 320 - (20 + var7 >> 1) - 90;
+                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                  var6 = 265;
+                  var9 = 10 + (var7 >> 1) + var8;
+                  ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                  if ((!(this.field_o != 0) ||
+                      (!(0 <= this.field_o) &&
+                        !(170 >= PrefixCodeDecoder.pointerXSnapshot) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot >= 290) &&
+                        !(ue.pointerYSnapshot <= 265) &&
+                        !(ue.pointerYSnapshot >= 299)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
                   dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
@@ -567,31 +513,21 @@ final class GameScreen extends MenuScreen {
                     } else {
                       stackIn_122_0 = this.activeTicks;
                     }
-                    L24: {
-                      var5 = stackIn_122_0;
-                      SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                      ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
-                      var6 = 170;
-                      var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                      var6 += 40;
-                      var7 = 100;
-                      var8 = 320 - (var7 + 20 >> 1);
-                      var9 = (var7 >> 1) + (var8 + 10);
-                      ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
-                      if (0 != this.field_o) {
-                        if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
-                          break L24;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
-                          break L24;
-                        }
-                        if (ue.pointerYSnapshot <= 274) {
-                          break L24;
-                        }
-                        if (ue.pointerYSnapshot >= 309) {
-                          break L24;
-                        }
-                      }
+                    var5 = stackIn_122_0;
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                    ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
+                    var6 = 170;
+                    var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                    var6 += 40;
+                    var7 = 100;
+                    var8 = 320 - (var7 + 20 >> 1);
+                    var9 = (var7 >> 1) + (var8 + 10);
+                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                    if ((!(0 != this.field_o) ||
+                        (!(260 >= PrefixCodeDecoder.pointerXSnapshot) &&
+                          !(PrefixCodeDecoder.pointerXSnapshot >= 380) &&
+                          !(ue.pointerYSnapshot <= 274) &&
+                          !(ue.pointerYSnapshot >= 309)))) {
                       dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                     }
                     dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
@@ -622,54 +558,30 @@ final class GameScreen extends MenuScreen {
                     }
                     var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                   }
-                  L29: {
-                    var6 += 40;
-                    var9 = 100;
-                    var10 = -(20 + var9 >> 1) + 320 + 90;
-                    ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
-                    var11 = 10 + ((var9 >> 1) + var10);
-                    if (this.field_o != 1) {
-                      if (0 <= this.field_o) {
-                        break L29;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
-                        break L29;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
-                        break L29;
-                      }
-                      if (ue.pointerYSnapshot <= 317) {
-                        break L29;
-                      }
-                      if (ue.pointerYSnapshot >= 352) {
-                        break L29;
-                      }
-                    }
+                  var6 += 40;
+                  var9 = 100;
+                  var10 = -(20 + var9 >> 1) + 320 + 90;
+                  ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
+                  var11 = 10 + ((var9 >> 1) + var10);
+                  if ((!(this.field_o != 1) ||
+                      (!(0 <= this.field_o) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
+                        !(ue.pointerYSnapshot <= 317) &&
+                        !(ue.pointerYSnapshot >= 352)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  L31: {
-                    dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                    var10 = 320 - (20 + var9 >> 1) - 90;
-                    var11 = 10 + (var9 >> 1) + var10;
-                    ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
-                    if (this.field_o != 0) {
-                      if (this.field_o >= 0) {
-                        break L31;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
-                        break L31;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                        break L31;
-                      }
-                      if (ue.pointerYSnapshot <= 317) {
-                        break L31;
-                      }
-                      if (ue.pointerYSnapshot >= 352) {
-                        break L31;
-                      }
-                    }
+                  dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                  var10 = 320 - (20 + var9 >> 1) - 90;
+                  var11 = 10 + (var9 >> 1) + var10;
+                  ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
+                  if ((!(this.field_o != 0) ||
+                      (!(this.field_o >= 0) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot <= 170) &&
+                        !(PrefixCodeDecoder.pointerXSnapshot >= 290) &&
+                        !(ue.pointerYSnapshot <= 317) &&
+                        !(ue.pointerYSnapshot >= 352)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
                   dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
@@ -683,31 +595,21 @@ final class GameScreen extends MenuScreen {
                 } else {
                   stackIn_191_0 = this.activeTicks;
                 }
-                L34: {
-                  var5 = stackIn_191_0;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                  ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
-                  var6 = 180;
-                  fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                  var7 = 242;
-                  var8 = 320 - (var7 + 20 >> 1);
-                  var9 = 10 + (var8 + (var7 >> 1));
-                  var6 = 265;
-                  ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
-                  if (this.field_o != 0) {
-                    if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
-                      break L34;
-                    }
-                    if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
-                      break L34;
-                    }
-                    if (ue.pointerYSnapshot <= 265) {
-                      break L34;
-                    }
-                    if (299 <= ue.pointerYSnapshot) {
-                      break L34;
-                    }
-                  }
+                var5 = stackIn_191_0;
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
+                var6 = 180;
+                fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                var7 = 242;
+                var8 = 320 - (var7 + 20 >> 1);
+                var9 = 10 + (var8 + (var7 >> 1));
+                var6 = 265;
+                ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                if ((!(this.field_o != 0) ||
+                    (!(PrefixCodeDecoder.pointerXSnapshot <= 190) &&
+                      !(PrefixCodeDecoder.pointerXSnapshot >= 449) &&
+                      !(ue.pointerYSnapshot <= 265) &&
+                      !(299 <= ue.pointerYSnapshot)))) {
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 }
                 dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
@@ -2169,14 +2071,11 @@ final class GameScreen extends MenuScreen {
                                 el.gameplaySession.submitScore((byte) -70);
                               }
                               L30: {
-                                L31: {
-                                  ai.requestedScreenId = -1;
-                                  if (this.screenId != 8) {
-                                    if ((4 == this.screenId) &&
-                                        (null != el.gameplaySession) &&
-                                        (el.gameplaySession.newActionCount == 0)) {
-                                      break L31;
-                                    }
+                                ai.requestedScreenId = -1;
+                                if (this.screenId != 8) {
+                                  if (!((4 == this.screenId) &&
+                                      (null != el.gameplaySession) &&
+                                      (el.gameplaySession.newActionCount == 0))) {
                                     if (this.screenId != 7) {
                                       el.gameplayReturnScreenId = 6;
                                       if (var7 == 0) {
@@ -2419,30 +2318,22 @@ final class GameScreen extends MenuScreen {
           } else {
             stackIn_7_0 = this.field_q;
           }
-          L1: {
-            var5_int = stackIn_7_0;
-            if (3 == this.screenId) {
-              if ((itemIndex == 0) &&
-                  (var5_int == 0)) {
-                return;
-              }
-              if (itemIndex != 2) {
-                break L1;
-              }
-              if (var5_int != 4) {
-                break L1;
-              }
+          var5_int = stackIn_7_0;
+          if (3 == this.screenId) {
+            if ((itemIndex == 0) &&
+                (var5_int == 0)) {
+              return;
+            }
+            if ((!(itemIndex != 2) &&
+                !(var5_int != 4))) {
               return;
             }
           }
-          L4: {
-            actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
-            var7 = tl.field_f[actionId];
-            if (actionId == 15) {
-              if ((var5_int == 4) &&
-                  (oc.previousMenuScreenId != 1)) {
-                break L4;
-              }
+          actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
+          var7 = tl.field_f[actionId];
+          if (actionId == 15) {
+            if (!((var5_int == 4) &&
+                (oc.previousMenuScreenId != 1))) {
               return;
             }
           }
@@ -2660,18 +2551,10 @@ final class GameScreen extends MenuScreen {
             return;
           }
           L1: {
-            L2: {
-              if (!this.field_C) {
-                if (this.screenId == 0) {
-                  break L2;
-                }
-                if (1 == this.screenId) {
-                  break L2;
-                }
-                if (this.screenId == 4) {
-                  break L2;
-                }
-              }
+            if ((!(!this.field_C) ||
+                (!(this.screenId == 0) &&
+                  !(1 == this.screenId) &&
+                  !(this.screenId == 4)))) {
               L4: {
                 if (ki.currentKeyboardEventCode == 96) {
                   if (this.field_C) {

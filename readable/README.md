@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`46219970eded7f74e43d7616f2839cf249d1fa16`. It comes from java-tools
-`c2e73cc98972a1aad710c51cd7f72513233eab20` and Deko
+`f0b69e9d0f54e371b9ed1a99ecb06ae0dc24168b`. It comes from java-tools
+`610045428c7686b22b38211b55db11bd11c6f641` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`c7ef91b40afcfca22ed84d74226854ce9a875db30c71749078812dbbf2c679a0`:
+`2ed54a58ff81b1e8ed7b11a27fd5bd3821788ee90ac8012ebc87f8256c3d5956`:
 
 ```sh
-git archive --format=tar c2e73cc98972a1aad710c51cd7f72513233eab20 | sha256sum
+git archive --format=tar 610045428c7686b22b38211b55db11bd11c6f641 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,59 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Nested predicate-only skip trees (pass 92)
+
+The generic decompiler reconstructs 41 plain skip frames and consumes 82 breaks,
+guarding 42 remainders over 97 original predicates. Scope-safe cleanup unwraps
+41 blocks across 19 files and saves 219 lines (78,170 to 77,951). Menu rendering
+falls from 372 to 304 lines and ten to four block labels. Menu action handling
+falls from 325 to 322 lines and 18 to 17 labels. Gameplay rendering falls from
+385 to 379 lines and 19 to 18 labels; board reconciliation from 502 to 496 lines
+and 16 to 15 labels. Hit-test trees now read as short-circuit conditions over the
+same highlight update rather than repeated exits from a labeled block.
+
+A consumed guard tree contains only conditional predicates and breaks to one
+unique plain destination. Sequential guards become AND; an outer conditional
+whose nested guards may skip the remainder combines its logical negation with
+their continuation using OR. Logical negation preserves original predicate
+bytes, NaNs, nullable unboxing and effect order. Prefix work stays before the
+guard; a block retains remainder declarations. Multiline operators remain
+explicitly grouped. No predicate/effect is duplicated and no local is added.
+
+Every destination reference must be consumed. A nested remainder qualifies only
+when normal completion reaches the exact target through final plain blocks,
+conditional branches or plain labels. Work after that nested scope, intermediate
+loops/switches/protected regions, work inside guards, alternates and unknown
+extents refuse reconstruction. Comments, Unicode escapes, nested executables,
+unsupported/malformed syntax and invalid ancestor transfers also refuse it.
+Budgets are 16 predicates, 16 target references, depth 16 and 512 predicate
+tokens per frame. Prefix/remainder protected work and regions enclosing the
+whole destination stay intact. Control flags are not assumed constant.
+
+`NODE_PATH=/path/to/dependencies JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/javaAstEmitterLoopExits.test.js`
+passes 56 groups, with one optional historical corpus check skipped. Two new
+groups include 16,128 native comparisons plus bypass/skip/NaN oracles. They
+cover skipped later predicates, prefix effects, nullable unboxing, NaNs, partial
+failures, declaration scopes, separate terminal branches, ancestor jumps/returns,
+finally state after invocation and monitor ownership/release. Exception-exit
+and integer-argument regressions retain eight and two passing groups. Independent
+JDK body positions plus only the guard-tree/frame rules reproduce all 303 token
+streams. Raw sources compile; all ordered declarations/references/ordinals and
+overrides remain (19,591/119,181/388), as do diagnostics.
+
+A clean committed decompiler Git-source tar reproduces raw sources and unchanged
+diagnostics byte-for-byte. All six recorded native/raw/readable probes retain
+their sources and trace pins. Rules/migration/text checks pass all three files.
+Full reproduction compiles both 303-file corpora and compares 138,772 bindings;
+dictionary reversal recovers the pinned raw Git input byte-for-byte. All 7,015
+complete naming objects and 57,278 edits remain. The single current manifest
+records the source migration with an empty `ruleChanges` list.
+
+The survey still has 2,080 method/constructor bodies and 21 spans of at least
+300 lines, ten with generated block labels. Some spans include nested helpers.
+Many opaque menu locals, mixed-effect exits, larger gameplay reconstructions,
+real assets and whole-game/browser/phone acceptance remain unfinished or unverified.
 
 ## Ordered multi-exit decisions (pass 91)
 
@@ -2074,10 +2127,10 @@ identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 Pass 86 recorded its source migration in `sourceChange` with an empty
 `ruleChanges` list. Pass 87 retained that source identity and added 188 naming rules.
-Pass 88 retained it and added 144 naming rules. Passes 89 and 90 recorded
-terminal-break and single-alternative source migrations. Current pass 91 records
-the ordered multi-exit source migration and an empty `ruleChanges` list,
-preserving all 7,015 previous complete naming objects.
+Pass 88 retained it and added 144 naming rules. Passes 89 through 91 recorded
+terminal-break, single-alternative and ordered multi-exit source migrations.
+Current pass 92 records the predicate-only guard-tree migration and an empty
+`ruleChanges` list, preserving all 7,015 previous complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -2100,7 +2153,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `6499347b6e0dfc27f819fc721bf550a43d9c562b6eabddfc5a8c8c9588a07e7e` |
-| Readable | `fa356e3cadba39120b73daae6717b9147a39e8209cb9e52164d20c68e20a5a1f` |
+| Raw | `413c9b8f71549b796b21abecc415d6ebf5fb103b06e32f88ea1d2623ab6e4d62` |
+| Readable | `73b96c1fa6933ed82d800693ca6a0f9742f79a533a3a6a2ed43c8beeb3b57f36` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

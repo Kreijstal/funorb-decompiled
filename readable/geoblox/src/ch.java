@@ -795,12 +795,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   ml.field_s = dupTemp$0;
                   var8 = MenuScreen.field_i.startThread((Runnable) (this), 0, 1);
                   while (true) {
-                    L2: {
-                      if (var8.status == 0) {
-                        bc.sleepMillis(0, 10L);
-                        if (var9 != 0) {
-                          break L2;
-                        }
+                    if (var8.status == 0) {
+                      bc.sleepMillis(0, 10L);
+                      if (!(var9 != 0)) {
                         if (var9 == 0) {
                           continue;
                         }

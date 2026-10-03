@@ -37,17 +37,11 @@ final class lc {
                 field_b = -11;
               }
             }
-            L3: {
-              if ((!((kj.heldInternalKeys[99]) &&
-                    (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
-                  (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease)) {
-                if (ul.releasedInCurrentTheme != 0) {
-                  break L3;
-                }
-                if (el.gameplaySession.tutorialMode) {
-                  break L3;
-                }
-              }
+            if ((!((!((kj.heldInternalKeys[99]) &&
+                  (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
+                (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease)) ||
+                (!(ul.releasedInCurrentTheme != 0) &&
+                  !(el.gameplaySession.tutorialMode)))) {
               if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
                   (!el.gameplaySession.spawnReleaseDisabled)) {
                 ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));

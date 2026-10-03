@@ -120,24 +120,20 @@ final class PcmSampleStream extends ia {
           this.field_j = 1;
           this.field_l = var1 - this.field_k;
         }
-        L3: {
-          if (this.field_n >= var2) {
-            if (this.field_n <= var2) {
-              this.field_t = 0;
-            } else {
-              this.field_t = -1;
-              if ((this.field_l != 0) &&
-                  (this.field_l <= this.field_n - var2)) {
-                break L3;
-              }
+        if (this.field_n >= var2) {
+          if (this.field_n <= var2) {
+            this.field_t = 0;
+          } else {
+            this.field_t = -1;
+            if (!((this.field_l != 0) &&
+                (this.field_l <= this.field_n - var2))) {
               this.field_l = this.field_n - var2;
             }
-          } else {
-            this.field_t = 1;
-            if ((this.field_l != 0) &&
-                (this.field_l <= var2 - this.field_n)) {
-              break L3;
-            }
+          }
+        } else {
+          this.field_t = 1;
+          if (!((this.field_l != 0) &&
+              (this.field_l <= var2 - this.field_n))) {
             this.field_l = var2 - this.field_n;
           }
         }
@@ -150,15 +146,12 @@ final class PcmSampleStream extends ia {
           this.field_l = var3 - this.field_s;
           return false;
         }
-        L6: {
-          if (this.field_s <= var3) {
-            this.field_w = 0;
-          } else {
-            this.field_w = -1;
-            if ((this.field_l != 0) &&
-                (this.field_l <= this.field_s - var3)) {
-              break L6;
-            }
+        if (this.field_s <= var3) {
+          this.field_w = 0;
+        } else {
+          this.field_w = -1;
+          if (!((this.field_l != 0) &&
+              (this.field_l <= this.field_s - var3))) {
             this.field_l = this.field_s - var3;
           }
         }

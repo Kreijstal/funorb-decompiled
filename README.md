@@ -19,6 +19,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 92 reconstructs 41 nested skip frames, consuming 82 breaks and guarding
+42 remainders over 97 predicates. It saves 219 lines across 19 files. Menu
+rendering shrinks from 372 to 304 lines and ten to four block labels; gameplay
+rendering and board reconciliation also lose labels. Predicate/effect order,
+scopes, every ordered binding and all 7,015 complete naming rules remain.
+The clean committed decompiler archive reproduces all 303 raw files and unchanged
+diagnostics; all six native/raw/readable probes retain their traces. Full
+reproduction/dictionary reversal passes. There remain 21 large method spans,
+ten with block labels; opaque locals, mixed-effect exits and whole-game/browser/
+phone acceptance remain unfinished or unverified.
+
 Pass 91 reconstructs 27 multi-exit frames, consuming 75 breaks and saving 126
 lines across 24 files. Music controller decoding becomes an ordered alternative
 chain; the music-score constructor and Bzip2 block decoder now have no block

@@ -27,35 +27,32 @@ final class qe {
           if (!param4.hasFullscreenSupport(-26098)) {
             return null;
           }
-          L0: {
-            if (param1 == ~param0) {
-              var10 = vi.a(param1 ^ -112, param4);
-              var6 = var10;
-              if (var6 == null) {
-                stackIn_7_0 = null;
-                return (java.awt.Frame) ((Object) stackIn_7_0);
+          if (param1 == ~param0) {
+            var10 = vi.a(param1 ^ -112, param4);
+            var6 = var10;
+            if (var6 == null) {
+              stackIn_7_0 = null;
+              return (java.awt.Frame) ((Object) stackIn_7_0);
+            }
+            var7_int = 0;
+            for (var8 = 0; var8 < var10.length; var8++) {
+              if (param3 != var10[var8].field_d) {
+                continue;
               }
-              var7_int = 0;
-              for (var8 = 0; var8 < var10.length; var8++) {
-                if (param3 != var10[var8].field_d) {
+              if (var10[var8].field_f == param2) {
+                if ((param5 != 0) &&
+                    (param5 != var10[var8].field_a)) {
                   continue;
                 }
-                if (var10[var8].field_f == param2) {
-                  if ((param5 != 0) &&
-                      (param5 != var10[var8].field_a)) {
-                    continue;
-                  }
-                  if ((var7_int != 0) &&
-                      (param0 >= var10[var8].field_h)) {
-                    continue;
-                  }
-                  var7_int = 1;
-                  param0 = var10[var8].field_h;
+                if ((var7_int != 0) &&
+                    (param0 >= var10[var8].field_h)) {
+                  continue;
                 }
+                var7_int = 1;
+                param0 = var10[var8].field_h;
               }
-              if (var7_int != 0) {
-                break L0;
-              }
+            }
+            if (!(var7_int != 0)) {
               return null;
             }
           }

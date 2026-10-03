@@ -70,15 +70,12 @@ final class v {
         byte[] allocatedUncompressedBytes = null;
         byte[] allocatedDecompressedBytes = null;
         try {
-          L0: {
-            buffer = new ByteArrayBuffer(packedBytes);
-            compressionType = buffer.readUnsignedByte((byte) 34);
-            packedLength = buffer.readIntBE((byte) -97);
-            if (packedLength >= 0) {
-              if ((uj.maximumArchiveLength != 0) &&
-                  (packedLength > uj.maximumArchiveLength)) {
-                break L0;
-              }
+          buffer = new ByteArrayBuffer(packedBytes);
+          compressionType = buffer.readUnsignedByte((byte) 34);
+          packedLength = buffer.readIntBE((byte) -97);
+          if (packedLength >= 0) {
+            if (!((uj.maximumArchiveLength != 0) &&
+                (packedLength > uj.maximumArchiveLength))) {
               if (uncompressedTypeComplement == ~compressionType) {
                 allocatedUncompressedBytes = new byte[packedLength];
                 uncompressedBytesAlias = allocatedUncompressedBytes;
@@ -87,13 +84,10 @@ final class v {
                 uncompressedBytesBeforeReturn = (byte[]) (uncompressedBytes);
                 return uncompressedBytesBeforeReturn;
               }
-              L2: {
-                unpackedLength = buffer.readIntBE((byte) -49);
-                if (unpackedLength >= 0) {
-                  if ((uj.maximumArchiveLength != 0) &&
-                      (uj.maximumArchiveLength < unpackedLength)) {
-                    break L2;
-                  }
+              unpackedLength = buffer.readIntBE((byte) -49);
+              if (unpackedLength >= 0) {
+                if (!((uj.maximumArchiveLength != 0) &&
+                    (uj.maximumArchiveLength < unpackedLength))) {
                   allocatedDecompressedBytes = new byte[unpackedLength];
                   decompressedBytesAlias = allocatedDecompressedBytes;
                   decompressedBytes = decompressedBytesAlias;

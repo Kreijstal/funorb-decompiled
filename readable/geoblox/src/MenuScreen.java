@@ -73,20 +73,17 @@ abstract class MenuScreen {
         if (param1 >= -26) {
           this.hitLeftX = 8;
         }
-        L1: {
-          if (ki.currentKeyboardEventCode != 96) {
-            if (ki.currentKeyboardEventCode == 97) {
-              this.increaseMenuValue((byte) 90, itemIndex);
-            } else {
-              if ((ki.currentKeyboardEventCode != 84) &&
-                  (ki.currentKeyboardEventCode != 83)) {
-                break L1;
-              }
+        if (ki.currentKeyboardEventCode != 96) {
+          if (ki.currentKeyboardEventCode == 97) {
+            this.increaseMenuValue((byte) 90, itemIndex);
+          } else {
+            if (!((ki.currentKeyboardEventCode != 84) &&
+                (ki.currentKeyboardEventCode != 83))) {
               this.activateMenuItem(itemIndex, (byte) -2);
             }
-          } else {
-            this.decreaseMenuValue(itemIndex, (byte) -7);
           }
+        } else {
+          this.decreaseMenuValue(itemIndex, (byte) -7);
         }
     }
 

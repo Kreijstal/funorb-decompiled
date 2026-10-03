@@ -416,15 +416,9 @@ final class kc {
             }
             routedAttachedEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
             while (routedAttachedEntity != null) {
-              L37: {
-                if (null == routedAttachedEntity.entityQueue) {
-                  if (!w.avatarShockPending) {
-                    break L37;
-                  }
-                  if (!routedAttachedEntity.touchesAvatar) {
-                    break L37;
-                  }
-                }
+              if ((!(null == routedAttachedEntity.entityQueue) ||
+                  (!(!w.avatarShockPending) &&
+                    !(!routedAttachedEntity.touchesAvatar)))) {
                 L39: {
                   L40: {
                     re.connectivityDirty = true;

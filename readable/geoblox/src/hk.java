@@ -107,12 +107,9 @@ class hk extends el {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (this.e((byte) 54)) {
-              if ((param0 != 84) &&
-                  (param0 != 83)) {
-                break L0;
-              }
+          if (this.e((byte) 54)) {
+            if (!((param0 != 84) &&
+                (param0 != 83))) {
               this.a(-1, -28922, -1, 1);
               return true;
             }

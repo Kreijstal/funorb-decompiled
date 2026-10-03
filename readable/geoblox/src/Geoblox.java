@@ -270,12 +270,9 @@ public final class Geoblox extends wf {
                         (ll.gameGraphicsArchive.loadGroupByName("", (byte) -127))) {
                       if ((ll.gameGraphicsArchive.ensureIndexLoaded(0)) &&
                           (ll.gameGraphicsArchive.loadGroupByName("sun", (byte) -127))) {
-                        L8: {
-                          if (da.a(0, -112)) {
-                            if ((ll.gameGraphicsArchive.ensureIndexLoaded(0)) &&
-                                (ll.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127))) {
-                              break L8;
-                            }
+                        if (da.a(0, -112)) {
+                          if (!((ll.gameGraphicsArchive.ensureIndexLoaded(0)) &&
+                              (ll.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127)))) {
                             lc.a(gf.formatArchiveGroupProgress(s.field_F, ll.gameGraphicsArchive, "halloween", uj.field_c, true), -2, 45.0f);
                             return false;
                           }
@@ -641,177 +638,171 @@ public final class Geoblox extends wf {
         while (sh.a((byte) -118, ArchiveRequest.field_m)) {
           this.l(121);
         }
-        L5: {
-          if (!bl.b(255)) {
-            L6: {
-              if (!ib.gameAssetsInitialized) {
-                oj.a(vc.field_i, (byte) -98);
-                if ((this.pollArchiveLoading(false)) &&
-                    (this.prepareGameAssets(25869))) {
-                  ib.gameAssetsInitialized = true;
-                  this.initializeScreens(82);
-                  break L6;
-                }
-                cm.a(-1, 0);
-                return;
+        if (!bl.b(255)) {
+          L6: {
+            if (!ib.gameAssetsInitialized) {
+              oj.a(vc.field_i, (byte) -98);
+              if ((this.pollArchiveLoading(false)) &&
+                  (this.prepareGameAssets(25869))) {
+                ib.gameAssetsInitialized = true;
+                this.initializeScreens(82);
+                break L6;
               }
-              if (!uk.g(79)) {
-                lc.a(ph.waitingForExtraDataText, -2, 100.0f);
-              } else {
-                if ((dd.a((byte) 47)) &&
-                    (!jk.field_a)) {
-                  stackIn_91_0 = !(InstrumentPatch.field_n == null);
-                  L10: {
-                    var2 = sl.a(stackIn_91_0, (wf) (this), false);
-                    if (var2 != 2364824) {
-                      if ((var2 != 1) &&
-                          (2 != var2)) {
-                        break L10;
-                      }
-                      if (null != InstrumentPatch.field_n) {
-                        InstrumentPatch.field_n.a(0, MenuScreen.field_i);
-                        InstrumentPatch.field_n = null;
-                      }
-                      if (var2 == 2) {
-                        gf.a(k.c(109), 62);
-                      }
-                    } else {
-                      DualLinkNode.c(-8);
+              cm.a(-1, 0);
+              return;
+            }
+            if (!uk.g(79)) {
+              lc.a(ph.waitingForExtraDataText, -2, 100.0f);
+            } else {
+              if ((dd.a((byte) 47)) &&
+                  (!jk.field_a)) {
+                stackIn_91_0 = !(InstrumentPatch.field_n == null);
+                var2 = sl.a(stackIn_91_0, (wf) (this), false);
+                if (var2 != 2364824) {
+                  if (!((var2 != 1) &&
+                      (2 != var2))) {
+                    if (null != InstrumentPatch.field_n) {
+                      InstrumentPatch.field_n.a(0, MenuScreen.field_i);
+                      InstrumentPatch.field_n = null;
+                    }
+                    if (var2 == 2) {
+                      gf.a(k.c(109), 62);
                     }
                   }
-                  if (!kg.field_o) {
-                    break L6;
-                  }
-                  rj.a((byte) 121, 50);
-                  kg.field_o = false;
-                  break L6;
+                } else {
+                  DualLinkNode.c(-8);
                 }
                 if (!kg.field_o) {
-                  rj.a((byte) 121, 150);
-                  kg.field_o = true;
+                  break L6;
                 }
-                if (!ll.themesLoaded[2]) {
-                  this.loadSweetsTheme(7);
-                } else {
-                  if (ll.themesLoaded[0]) {
-                    if (ll.themesLoaded[3]) {
-                      if (ll.themesLoaded[6]) {
-                        if (!ll.themesLoaded[5]) {
-                          this.loadSportsTheme(75);
-                        } else {
-                          if (!ll.themesLoaded[4]) {
-                            this.loadBakingTheme(2);
-                          }
+                rj.a((byte) 121, 50);
+                kg.field_o = false;
+                break L6;
+              }
+              if (!kg.field_o) {
+                rj.a((byte) 121, 150);
+                kg.field_o = true;
+              }
+              if (!ll.themesLoaded[2]) {
+                this.loadSweetsTheme(7);
+              } else {
+                if (ll.themesLoaded[0]) {
+                  if (ll.themesLoaded[3]) {
+                    if (ll.themesLoaded[6]) {
+                      if (!ll.themesLoaded[5]) {
+                        this.loadSportsTheme(75);
+                      } else {
+                        if (!ll.themesLoaded[4]) {
+                          this.loadBakingTheme(2);
                         }
-                      } else {
-                        this.loadSpaceTheme(false);
                       }
                     } else {
-                      this.loadGermsTheme((byte) -117);
+                      this.loadSpaceTheme(false);
                     }
                   } else {
-                    this.loadJewelsTheme(false);
-                  }
-                }
-                if (pg.screenChangePending) {
-                  pg.screenChangePending = false;
-                  if (!fh.c(-95)) {
-                    if (0 < og.field_n) {
-                      InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
-                      og.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
-                      if (0 == el.gameplayReturnScreenId) {
-                        f.i((byte) -112);
-                        og.screens[0].activeTicks = 0;
-                      }
-                    }
-                    if ((null != el.gameplaySession) &&
-                        (el.gameplaySession.score > 0)) {
-                      el.gameplaySession.submitScore((byte) -70);
-                    }
-                    ai.requestedScreenId = el.gameplayReturnScreenId;
-                  } else {
-                    ai.requestedScreenId = cd.gameplayOriginScreenId;
-                  }
-                  tc.currentScreenId = -1;
-                  el.gameplayReturnScreenId = -1;
-                  qj.clearGameplayDuringTransition = true;
-                }
-                if (ai.requestedScreenId != tc.currentScreenId) {
-                  if ((6 == ai.requestedScreenId) &&
-                      (ug.field_c <= 0)) {
-                    ai.requestedScreenId = 2;
-                  }
-                  if (-1 < tc.currentScreenId) {
-                    og.screens[tc.currentScreenId].updateTransition(16405);
-                  }
-                  if (ai.requestedScreenId != -1) {
-                    og.screens[ai.requestedScreenId].updateTransition(16405);
-                    og.screens[ai.requestedScreenId].field_q = 0;
-                    if (ai.requestedScreenId != 3) {
-                      og.screens[ai.requestedScreenId].selectedItemIndex = 0;
-                    } else {
-                      og.screens[ai.requestedScreenId].selectedItemIndex = 1;
-                    }
-                  }
-                  if (TriangleMesh.screenTransitionTick == 0) {
-                    td.playPcmSample(-348, fl.field_c[30]);
-                  }
-                  fieldTemp$0 = TriangleMesh.screenTransitionTick + 1;
-                  TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
-                  if (fieldTemp$0 == 160) {
-                    if ((el.gameplayReturnScreenId != -1) &&
-                        (fh.c(-109))) {
-                      if (cd.gameplayOriginScreenId != 0) {
-                        kb.a(-106);
-                      } else {
-                        PendingActionMarker.a((byte) 118);
-                      }
-                      pg.screenChangePending = true;
-                    } else {
-                      if (tc.currentScreenId == 2) {
-                        ca.field_f = null;
-                      }
-                    }
-                    TriangleMesh.screenTransitionTick = 0;
-                    tc.currentScreenId = ai.requestedScreenId;
-                    qj.clearGameplayDuringTransition = false;
+                    this.loadGermsTheme((byte) -117);
                   }
                 } else {
-                  if (tc.currentScreenId == -1) {
-                    if (dl.field_b) {
-                      stackIn_63_0 = !(gb.b(1));
-                      dl.field_b = stackIn_63_0;
-                      if (!stackIn_63_0) {
-                        tc.currentScreenId = -2;
-                        ai.requestedScreenId = 0;
-                      }
+                  this.loadJewelsTheme(false);
+                }
+              }
+              if (pg.screenChangePending) {
+                pg.screenChangePending = false;
+                if (!fh.c(-95)) {
+                  if (0 < og.field_n) {
+                    InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
+                    og.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
+                    if (0 == el.gameplayReturnScreenId) {
+                      f.i((byte) -112);
+                      og.screens[0].activeTicks = 0;
+                    }
+                  }
+                  if ((null != el.gameplaySession) &&
+                      (el.gameplaySession.score > 0)) {
+                    el.gameplaySession.submitScore((byte) -70);
+                  }
+                  ai.requestedScreenId = el.gameplayReturnScreenId;
+                } else {
+                  ai.requestedScreenId = cd.gameplayOriginScreenId;
+                }
+                tc.currentScreenId = -1;
+                el.gameplayReturnScreenId = -1;
+                qj.clearGameplayDuringTransition = true;
+              }
+              if (ai.requestedScreenId != tc.currentScreenId) {
+                if ((6 == ai.requestedScreenId) &&
+                    (ug.field_c <= 0)) {
+                  ai.requestedScreenId = 2;
+                }
+                if (-1 < tc.currentScreenId) {
+                  og.screens[tc.currentScreenId].updateTransition(16405);
+                }
+                if (ai.requestedScreenId != -1) {
+                  og.screens[ai.requestedScreenId].updateTransition(16405);
+                  og.screens[ai.requestedScreenId].field_q = 0;
+                  if (ai.requestedScreenId != 3) {
+                    og.screens[ai.requestedScreenId].selectedItemIndex = 0;
+                  } else {
+                    og.screens[ai.requestedScreenId].selectedItemIndex = 1;
+                  }
+                }
+                if (TriangleMesh.screenTransitionTick == 0) {
+                  td.playPcmSample(-348, fl.field_c[30]);
+                }
+                fieldTemp$0 = TriangleMesh.screenTransitionTick + 1;
+                TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
+                if (fieldTemp$0 == 160) {
+                  if ((el.gameplayReturnScreenId != -1) &&
+                      (fh.c(-109))) {
+                    if (cd.gameplayOriginScreenId != 0) {
+                      kb.a(-106);
                     } else {
-                      el.gameplaySession.updateSession(-1578896191);
+                      PendingActionMarker.a((byte) 118);
+                    }
+                    pg.screenChangePending = true;
+                  } else {
+                    if (tc.currentScreenId == 2) {
+                      ca.field_f = null;
+                    }
+                  }
+                  TriangleMesh.screenTransitionTick = 0;
+                  tc.currentScreenId = ai.requestedScreenId;
+                  qj.clearGameplayDuringTransition = false;
+                }
+              } else {
+                if (tc.currentScreenId == -1) {
+                  if (dl.field_b) {
+                    stackIn_63_0 = !(gb.b(1));
+                    dl.field_b = stackIn_63_0;
+                    if (!stackIn_63_0) {
+                      tc.currentScreenId = -2;
+                      ai.requestedScreenId = 0;
                     }
                   } else {
-                    og.screens[tc.currentScreenId].updateScreen((byte) 29);
+                    el.gameplaySession.updateSession(-1578896191);
                   }
+                } else {
+                  og.screens[tc.currentScreenId].updateScreen((byte) 29);
                 }
               }
             }
-            je.c((byte) -122);
-            cm.a(-1, 0);
-            if (sb.a(54)) {
-              var2 = this.d((byte) -67);
-              if (var2 != 2) {
-                break L5;
-              }
+          }
+          je.c((byte) -122);
+          cm.a(-1, 0);
+          if (sb.a(54)) {
+            var2 = this.d((byte) -67);
+            if (!(var2 != 2)) {
               oh.a(320, 240, fi.smallFont, fi.smallFont.maxAscent * 3 >> 1, -128, fi.smallFont.maxAscent);
             }
-          } else {
-            if (kg.field_o) {
-              rj.a((byte) 121, 50);
-              kg.field_o = false;
-            }
-            this.h(115);
-            if (fj.f(-31456)) {
-              discarded$1 = this.pollArchiveLoading(false);
-            }
+          }
+        } else {
+          if (kg.field_o) {
+            rj.a((byte) 121, 50);
+            kg.field_o = false;
+          }
+          this.h(115);
+          if (fj.f(-31456)) {
+            discarded$1 = this.pollArchiveLoading(false);
           }
         }
     }

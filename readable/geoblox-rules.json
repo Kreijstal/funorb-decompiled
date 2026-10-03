@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "46219970eded7f74e43d7616f2839cf249d1fa16",
+    "commit": "f0b69e9d0f54e371b9ed1a99ecb06ae0dc24168b",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "6499347b6e0dfc27f819fc721bf550a43d9c562b6eabddfc5a8c8c9588a07e7e",
+  "inputTreeSha256": "413c9b8f71549b796b21abecc415d6ebf5fb103b06e32f88ea1d2623ab6e4d62",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -42101,19 +42101,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 20,
-  "version": 91,
+  "revision": 21,
+  "version": 92,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "c2e73cc98972a1aad710c51cd7f72513233eab20",
+      "commit": "610045428c7686b22b38211b55db11bd11c6f641",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "c7ef91b40afcfca22ed84d74226854ce9a875db30c71749078812dbbf2c679a0",
-        "reproduce": "git archive --format=tar c2e73cc98972a1aad710c51cd7f72513233eab20 | sha256sum",
+        "sha256": "2ed54a58ff81b1e8ed7b11a27fd5bd3821788ee90ac8012ebc87f8256c3d5956",
+        "reproduce": "git archive --format=tar 610045428c7686b22b38211b55db11bd11c6f641 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -42122,16 +42122,16 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "f9f2ee6c5b0124ba7461e70de334cd2ffe1f8e04",
+      "commit": "4a0100194055ff663b3443b3abbf109a64e2eeb1",
       "path": "readable/geoblox-rules.json",
-      "sha256": "5434a490a73ee4ee20f676c50fe0c21c9d547ae5fb9ba70195f130960cf3dafd"
+      "sha256": "8c001d93fdbb10dc661ae8e4f2c984aa1f6a0b79679827c2907ef3482127aa04"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "Geoblox.java",
-        "sha256": "ab67ae35d034c6b55ed1d66189df241a854f053570292447b373b51e380a4565"
+        "sha256": "755256b78d5597fa9ef10b3b4bbe641968152ceb420c502dc93c64d629558b62"
       },
       {
         "file": "a.java",
@@ -42215,7 +42215,7 @@
       },
       {
         "file": "c.java",
-        "sha256": "80d42ca41f3ab2e027c557d338109383e7b1cc7ff2d9a98bbfba476aea1f5e55"
+        "sha256": "1777c46c5f20130fa6f64733fcb609386682d41310cb34115a51732f0cbc5afb"
       },
       {
         "file": "ca.java",
@@ -42235,7 +42235,7 @@
       },
       {
         "file": "ch.java",
-        "sha256": "8af4b33575e8fad1a163f69f5cc27e7f1d2924a2b37f9d045cb82d83bc4221c1"
+        "sha256": "954cf0972e0ef78bf22606e3cda6e3dc4286b0aecc945745eb036296c9cc0d01"
       },
       {
         "file": "ci.java",
@@ -42255,7 +42255,7 @@
       },
       {
         "file": "cm.java",
-        "sha256": "b0782948306396fbe3709105a1048295c34df9a304fdaa14d8481e6f94c31ce4"
+        "sha256": "592d6485f3795e07a9410ab22d0444eb23478d4d4b32ffe6931ed1593164b6e3"
       },
       {
         "file": "d.java",
@@ -42375,7 +42375,7 @@
       },
       {
         "file": "gh.java",
-        "sha256": "ea9832a7daa163a015c7bda0c5291233375880e7467e1d899129261f411bf65d"
+        "sha256": "58bdcb4c9a203bc29f8ea6896cda12c3770f11b7f13803bb36d797b1ff9b4da1"
       },
       {
         "file": "gi.java",
@@ -42523,7 +42523,7 @@
       },
       {
         "file": "ka.java",
-        "sha256": "043f5d235e6a7fb3d4678ca498d5214847f2f77b96708af77f938263e3dca401"
+        "sha256": "39349ca51b23e45f845b0e16a9c6b3217ec0303c33382e980483ab2e5c83721e"
       },
       {
         "file": "kb.java",
@@ -42531,7 +42531,7 @@
       },
       {
         "file": "kc.java",
-        "sha256": "325e155c8cefb0a2c56bebc66b4a7c6858e592e947996886ed172e58657b3e94"
+        "sha256": "b75ab3322765a198e3c4cde26fef634938991c969f92b7b44e968ccea56e144c"
       },
       {
         "file": "kd.java",
@@ -42555,7 +42555,7 @@
       },
       {
         "file": "kj.java",
-        "sha256": "ebbb8105de49ee0e53b8916f5c57874868109f2c944cb15d5f5cb3c8674c2732"
+        "sha256": "407375560c7cc25f81650a6758216bd3fe35e6da4927ef24a7e1949dc1a540a1"
       },
       {
         "file": "kk.java",
@@ -42563,7 +42563,7 @@
       },
       {
         "file": "kl.java",
-        "sha256": "2d1759d411f856f6f656dada93ba8565b0d703d05730f87d93c21cdd0f10d02e"
+        "sha256": "e0aaecd0d2b843bee12e23f382a048d3316293be35a5469bf7c28194f43e975a"
       },
       {
         "file": "l.java",
@@ -42575,7 +42575,7 @@
       },
       {
         "file": "lc.java",
-        "sha256": "edddffb70e2880c75b22d40d190463de745fc769493afdc6d042b4e2187bf5b4"
+        "sha256": "84df3a0eacb4e0156b79791f8943bf48de917053ceb55f074ffb907355407c88"
       },
       {
         "file": "ld.java",
@@ -42759,7 +42759,7 @@
       },
       {
         "file": "qe.java",
-        "sha256": "17cc609d62fc599cf1078eda6f4cd1e7c0e94e3a94b97b38e58f5960aca388a9"
+        "sha256": "da2a060dcf24770fefea85455d1b370aeb055b8feb8f6737b0c11e19e315cf18"
       },
       {
         "file": "qf.java",
@@ -42775,7 +42775,7 @@
       },
       {
         "file": "qk.java",
-        "sha256": "21b3c2a3afc707bb532fa530feb1b795c17ca1064d32691e70ed5e807e0b13d6"
+        "sha256": "c675aae0c6d5733e158042e9dcf9ffa92a6a7e9e2c55114e60a3119ba0874c9a"
       },
       {
         "file": "r.java",
@@ -42807,7 +42807,7 @@
       },
       {
         "file": "rh.java",
-        "sha256": "7ef4e92e1a81c7832a4a910e484a8282391a736aa3c64d81a0f9b9b36cd3fb3b"
+        "sha256": "f6b9c62c1c13902e7cebbb3ad5d02baab18e8645e6c6612d5ba49afb23ede038"
       },
       {
         "file": "ri.java",
@@ -42931,7 +42931,7 @@
       },
       {
         "file": "v.java",
-        "sha256": "57c02fae4c9533d4b0942e2aaa224e5f3a2a6ab3fb9d8bcf9b6e74f352a9d8bc"
+        "sha256": "9bfd36184d4b499e79131ad8cdc2ca6d537c4168ac8e260b31b46b7ab591c3a8"
       },
       {
         "file": "va.java",
@@ -42995,7 +42995,7 @@
       },
       {
         "file": "wf.java",
-        "sha256": "65de1f36c8023543501d18d9ee66e3b6e695734c890f9597325702f340ab2cb0"
+        "sha256": "8060660aa9b2db05b9c5b1eca40f95485bf706d825e7b7b8f2b4e13b5c53055f"
       },
       {
         "file": "wg.java",
@@ -43003,7 +43003,7 @@
       },
       {
         "file": "wh.java",
-        "sha256": "c8d1ed68b53cdf157809018608072fd05a6dae655cad40f93abca75c205eef0a"
+        "sha256": "e1d3764765b92a0e170e859eddcf19bc57a7077f0b7340691dc391e6407fb1d9"
       },
       {
         "file": "wi.java",
@@ -45408,7 +45408,8 @@
         "Pass88 names InstrumentPatch, InstrumentEnvelope instance fields and patch decoder/sample loader/cleanup, plus the shared failure-context utility and positive-divisor floor helper. Controlled patch/sample/cache/curve/envelope oracles preserve the documented scope. Shared static UI/authentication/graphics state remains independently named or opaque. Real archive patch/sample decoding, arbitrary malformed data, actual synthesis, full-game and browser/phone acceptance remain unverified. The492-line constructor and21 large spans/15 with block labels remain; no structural/source/decompiler change is made.",
         "Pass89 removes102 terminal breaks whose plain-block destination is already reached by normal completion through final block statements, if branches and plain labels. Bare branches retain empty statements and predicates. Intermediate loops/switches/protected regions refuse cleanup; enclosing finally/monitors remain.5376 native comparisons cover scopes, failures, partial effects, ancestor transfers, finally state after invocation and lock ownership/release. All303 expected token streams and ordered naming bindings remain. The instrument patch constructor falls492 to468 lines and9 to1 labels.21 overlapping spans >=300 lines remain,13 with block labels. Recorded native probes keep their scopes/pins; whole-game/browser/phone acceptance remains unverified.",
         "Pass90 reconstructs64 unique plain-block exits as47 if/else alternatives and17 ordinary guards. The direct braced conditional must end in the destination's only break, followed by a nonempty fallback. Prefix work/scopes, branch effects and protected regions stay intact; no work/predicate is duplicated and no local added.6720 native comparisons cover branch/fallback selection, NaNs/unboxing, failures, partial effects, scopes, ancestor jumps, finally state and monitor release. All303 expected token streams and ordered naming bindings remain. Gameplay rendering falls395 to390 lines and22 to20 labels; board reconciliation504 to502 and17 to16; patch constructor468 to466 with no labels.21 overlapping spans >=300 lines remain,12 with block labels. Multi-exit decision trees, larger gameplay reconstruction and whole-game/browser/phone acceptance remain unfinished or unverified.",
-        "Pass91 reconstructs27 ordered multi-exit plain frames, consuming75 breaks and recovering75 choices including18 logical-negation guards. All selected braced arms end in direct target breaks and every destination reference is consumed; interleaved work remains in reached fallbacks and pure fallback decisions may become else-if. Predicates/scopes/protected regions stay intact; no work/predicate is duplicated or local added. Budgets are16 choices/depth16/32 target references.16128 native comparisons and first/second/fallback oracles cover ordering, unboxing, NaNs, failures, scopes, ancestor jumps/returns, finally state and monitors. All303 expected token streams and ordered naming bindings remain. MusicScore constructor541 to519 and Bzip2 decode388 to385 now have no block labels. Gameplay rendering390 to385 and20 to19 labels; menu actions335 to325 and20 to18.21 overlapping large spans remain,10 with block labels. Larger gameplay reconstructions and whole-game/browser/phone acceptance remain unfinished or unverified."
+        "Pass91 reconstructs27 ordered multi-exit plain frames, consuming75 breaks and recovering75 choices including18 logical-negation guards. All selected braced arms end in direct target breaks and every destination reference is consumed; interleaved work remains in reached fallbacks and pure fallback decisions may become else-if. Predicates/scopes/protected regions stay intact; no work/predicate is duplicated or local added. Budgets are16 choices/depth16/32 target references.16128 native comparisons and first/second/fallback oracles cover ordering, unboxing, NaNs, failures, scopes, ancestor jumps/returns, finally state and monitors. All303 expected token streams and ordered naming bindings remain. MusicScore constructor541 to519 and Bzip2 decode388 to385 now have no block labels. Gameplay rendering390 to385 and20 to19 labels; menu actions335 to325 and20 to18.21 overlapping large spans remain,10 with block labels. Larger gameplay reconstructions and whole-game/browser/phone acceptance remain unfinished or unverified.",
+        "Pass92 reconstructs41 predicate-only plain skip frames, consuming82 breaks and guarding42 remainders over97 predicates. Logical-negation/AND/OR retains original predicate bytes/order, nullable unboxing, NaNs and short circuits. All target references must be consumed. Nested remainders require final plain blocks/if branches/plain labels leading to the same target; intermediate work, loops/switches/protected wrappers refuse proof. Prefix work/declaration scopes/protected regions stay intact; no effect/predicate is duplicated or local added. Budgets are16 predicates/depth16/16 target references/512 predicate tokens.16128 native comparisons plus bypass/skip/NaN oracles cover ordering, failures, scopes, terminal branches, ancestor jumps/returns, finally state and monitors. All303 expected token streams and ordered bindings remain. Menu renderer372 to304 and10 to4 labels; gameplay renderer385 to379 and19 to18; menu actions325 to322 and18 to17; board reconciliation502 to496 and16 to15.21 overlapping large spans remain,10 with block labels. Larger gameplay reconstructions and whole-game/browser/phone acceptance remain unfinished or unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -45450,7 +45451,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 126,
+      "rawSourceLinesRemoved": 219,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -45475,7 +45476,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 54,
+      "genericEmitterTestGroups": 56,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -45483,7 +45484,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass91 reconstructs ordered multi-exit plain-block decisions and scope-safe frames. All ordered declarations/references/overrides, local ordinals and every guarded naming object remain.",
+      "referenceRemovalAttribution": "Pass92 reconstructs predicate-only plain skip trees and scope-safe frames. All ordered declarations/references/overrides, local ordinals and every guarded naming object remain.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -45521,7 +45522,7 @@
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
       "identifierEditsAddedInCurrentPass": 0,
-      "lastStructuralPassVersion": 91,
+      "lastStructuralPassVersion": 92,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -45906,7 +45907,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 55,
+      "genericEmitterTestsRegistered": 57,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -46144,33 +46145,41 @@
       "orderedPlainBlockExitTreeMenuActionLinesBefore": 335,
       "orderedPlainBlockExitTreeMenuActionLinesAfter": 325,
       "orderedPlainBlockExitTreeMenuActionLabelsBefore": 20,
-      "orderedPlainBlockExitTreeMenuActionLabelsAfter": 18
+      "orderedPlainBlockExitTreeMenuActionLabelsAfter": 18,
+      "predicateOnlyPlainBlockGuardTreesHistoricalPassVersion": 92,
+      "predicateOnlyGuardTreeFramesReconstructed": 41,
+      "predicateOnlyGuardTreeBreaksConsumed": 82,
+      "predicateOnlyGuardTreeRemaindersGuarded": 42,
+      "predicateOnlyGuardTreePredicatesRecovered": 97,
+      "predicateOnlyGuardTreeBlocksUnwrapped": 41,
+      "predicateOnlyGuardTreeChangedJavaFiles": 19,
+      "predicateOnlyGuardTreeSourceLinesBefore": 78170,
+      "predicateOnlyGuardTreeSourceLinesAfter": 77951,
+      "predicateOnlyGuardTreeExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "nativePredicateOnlyGuardTreeComparisons": 16128,
+      "predicateOnlyGuardTreeMaximumPredicates": 16,
+      "predicateOnlyGuardTreeMaximumDepth": 16,
+      "predicateOnlyGuardTreeMaximumReferences": 16,
+      "predicateOnlyGuardTreeMaximumPredicateTokens": 512,
+      "predicateOnlyGuardTreeMenuRendererLinesBefore": 372,
+      "predicateOnlyGuardTreeMenuRendererLinesAfter": 304,
+      "predicateOnlyGuardTreeMenuRendererLabelsBefore": 10,
+      "predicateOnlyGuardTreeMenuRendererLabelsAfter": 4,
+      "predicateOnlyGuardTreeGameplayRendererLinesBefore": 385,
+      "predicateOnlyGuardTreeGameplayRendererLinesAfter": 379,
+      "predicateOnlyGuardTreeGameplayRendererLabelsBefore": 19,
+      "predicateOnlyGuardTreeGameplayRendererLabelsAfter": 18,
+      "predicateOnlyGuardTreeMenuActionLinesBefore": 325,
+      "predicateOnlyGuardTreeMenuActionLinesAfter": 322,
+      "predicateOnlyGuardTreeMenuActionLabelsBefore": 18,
+      "predicateOnlyGuardTreeMenuActionLabelsAfter": 17,
+      "predicateOnlyGuardTreeReconciliationLinesBefore": 502,
+      "predicateOnlyGuardTreeReconciliationLinesAfter": 496,
+      "predicateOnlyGuardTreeReconciliationLabelsBefore": 16,
+      "predicateOnlyGuardTreeReconciliationLabelsAfter": 15
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "f36911c124271fef31024e90327379b4ec058e72",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "9e15df0c94b6052b0419e15dc09fb1e35069a45b42e1ffcffb86549fd16a2ec2",
-              "reproduce": "git archive --format=tar fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "f776980914ad1eb66192c516599a34f8afa5052ada3675be33dd5550465fb915"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "46219970eded7f74e43d7616f2839cf249d1fa16",
@@ -46193,7 +46202,30 @@
         },
         "inputTreeSha256": "6499347b6e0dfc27f819fc721bf550a43d9c562b6eabddfc5a8c8c9588a07e7e"
       },
-      "reason": "Pass91 reconstructs27 ordered multi-exit frames, consuming75 breaks and recovering75 choices (18 guards) across24 files, saving126 lines. Every selected direct braced arm must end in a direct break to the same plain destination and every target reference must be consumed. Prefix/branch scopes and protected regions stay intact; no work/predicate is duplicated or local added. All ordered bindings/ordinals and7015 complete naming objects remain."
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "f0b69e9d0f54e371b9ed1a99ecb06ae0dc24168b",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "610045428c7686b22b38211b55db11bd11c6f641",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "2ed54a58ff81b1e8ed7b11a27fd5bd3821788ee90ac8012ebc87f8256c3d5956",
+              "reproduce": "git archive --format=tar 610045428c7686b22b38211b55db11bd11c6f641 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "413c9b8f71549b796b21abecc415d6ebf5fb103b06e32f88ea1d2623ab6e4d62"
+      },
+      "reason": "Pass92 reconstructs41 predicate-only skip frames, consuming82 breaks and guarding42 remainders over97 predicates across19 files, saving219 lines. Logical-negation/AND/OR retains predicate bytes/order and short circuits. All destination references must be consumed; a nested remainder must normally reach that same destination through final plain blocks, if branches or plain labels. Prefix work/scopes and protected regions stay intact; no effect/predicate is duplicated or local added. All ordered bindings/ordinals and7015 complete naming objects remain."
     }
   }
 }

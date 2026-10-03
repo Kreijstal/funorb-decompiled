@@ -413,14 +413,11 @@ final class ResourceArchive {
             return true;
           }
           L4: {
-            L5: {
-              if (decryptionKey != null) {
-                if ((decryptionKey[0] == 0) &&
-                    (decryptionKey[1] == 0) &&
-                    (decryptionKey[2] == 0) &&
-                    (0 == decryptionKey[3])) {
-                  break L5;
-                }
+            if (decryptionKey != null) {
+              if (!((decryptionKey[0] == 0) &&
+                  (decryptionKey[1] == 0) &&
+                  (decryptionKey[2] == 0) &&
+                  (0 == decryptionKey[3]))) {
                 copiedPackedBytes = uk.a(true, methodGuard ^ -114, this.packedGroups[groupId]);
                 packedBytesForDecryption = copiedPackedBytes;
                 packedBytes = packedBytesForDecryption;

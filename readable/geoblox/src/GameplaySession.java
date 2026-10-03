@@ -375,17 +375,11 @@ final class GameplaySession {
           }
           g.countBoxSprite.draw(468, 410);
         }
-        L24: {
-          if (!this.tutorialMode) {
-            if (ih.areEntityQueuesSettled(0)) {
-              if (sceneTransitionFlag == 0) {
-                break L24;
-              }
-              if ((0 != this.sessionPhase) &&
-                  (this.sessionPhase != 1)) {
-                break L24;
-              }
-            }
+        if (!this.tutorialMode) {
+          if ((!(ih.areEntityQueuesSettled(0)) ||
+              (!(sceneTransitionFlag == 0) &&
+                !((0 != this.sessionPhase) &&
+                (this.sessionPhase != 1))))) {
             this.renderProgressHud(-46);
           }
         }

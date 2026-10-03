@@ -7,40 +7,40 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current control-flow readability (pass 91)
+## Current control-flow readability (pass 92)
 
 The export has 7,015 guarded names. All 303 sources compile, reproduce and
-reverse to the pinned raw Git input. Twenty-seven multi-exit frames now read
-as ordered alternatives, consuming 75 breaks and saving 126 lines. The music
-controller decoder becomes an `if/else if` chain. `MusicScore`'s constructor
-and `Bzip2Decoder.decodeBlocks` have no block labels, as does the instrument
-patch constructor. Prefix/branch scopes and protected regions remain intact.
+reverse to the pinned raw Git input. Forty-one nested skip frames now use
+short-circuit guards for their original remainders, consuming 82 breaks and
+saving 219 lines. Menu hit-test trees preserve every strict boundary and
+predicate order while placing the highlight update under one explicit guard.
+Menu rendering falls from 372 to 304 lines and ten to four block labels.
+Prefix/branch scopes and protected regions remain intact.
 
-There remain 21 method/constructor spans of at least 300 lines, 10 with generated
+There remain 21 method/constructor spans of at least 300 lines, ten with generated
 block labels. The 3,042-line interface text-loader span includes three nested
 helpers, so this inventory does not count unique state machines. The labeled
 large bodies are:
 
 | Method | Lines | Block labels |
 | --- | ---: | ---: |
-| `GameScreen.renderScreen` | 372 | 10 |
+| `GameScreen.renderScreen` | 304 | 4 |
 | `GameScreen.updateScreen` | 330 | 6 |
-| `GameScreen.activateMenuItem` | 325 | 18 |
-| `GameplaySession.renderSession` | 385 | 19 |
+| `GameScreen.activateMenuItem` | 322 | 17 |
+| `GameplaySession.renderSession` | 379 | 18 |
 | `GameplaySession.updateSession` | 643 | 14 |
-| `kc.reconcileBoardEntities` | 502 | 16 |
+| `kc.reconcileBoardEntities` | 496 | 15 |
 | `f.advanceGameplayAvatarAnimation` | 434 | 1 |
 | `Sprite.rotateNearest` | 531 | 1 |
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
 
-The next structural work needs a proof for exits that do not end a selected
-arm directly: intermediate loops/protected regions and branches with multiple
-continuations still refuse reconstruction. Control flags are not assumed
-constant. The 16,128-case generic comparison and six recorded native probes
-establish controlled behavior only. Complete assets/gameplay and browser/phone
-memory/startup/FPS targets remain unverified. Sections labeled with earlier
-passes below describe their historical counts and verification scope.
+Opaque menu locals and mixed-effect exits remain. Larger reconstructions need
+proofs for intermediate loops/protected regions and multiple continuations;
+control flags are not assumed constant. The 16,128-case generic comparison and
+six recorded native probes establish controlled behavior only. Complete assets/
+gameplay and browser/phone memory/startup/FPS targets remain unverified. Sections
+labeled with earlier passes below describe their historical counts and scope.
 
 ## Menu to gameplay
 
@@ -3311,3 +3311,31 @@ recorded game probes retain their traces, including music/patch/archive cases.
 The music fixture independently builds expected MIDI and repeats 19 controller
 numbers, covering every retained controller-stream route.
 Larger gameplay paths, real assets and browser/phone acceptance remain unverified.
+
+
+## Nested hit-test guards without labels (pass 92)
+
+Some menu highlight decisions first test a selected button, then reject pointer
+coordinates at successive boundaries. These predicate-only trees now read as
+an OR alternative for the selected button and an AND chain of the original
+negated rejection tests. All strict boundaries remain, and pointer tests still
+stop at the first rejection. Logical negation keeps the original comparisons;
+this proof does not replace them with guessed floating-point complements.
+
+Prefix drawing, geometry updates and palette initialization stay before the
+condition; the existing highlight update is its remainder. A nested remainder
+can qualify only when ordinary completion reaches the same plain destination
+through final plain blocks, conditional branches and plain labels. Intermediate
+work, loops/switches/protected wrappers, effects inside guards and unsupported
+syntax refuse the proof. Every target reference must be consumed, and remainder
+declaration scopes/protected work remain intact. No predicate/effect is
+repeated and no local is added.
+
+The pass removes 41 labels and 82 breaks, recovering 42 guards over 97 predicates
+across 19 files. Menu rendering shrinks to 304 lines and four block labels;
+other gameplay/menu/connectivity paths also simplify. All ordered naming
+bindings and 7,015 complete rules remain unchanged. Native 16,128-case generic
+comparisons and bypass/skip/NaN oracles cover short circuits, unboxing, failure
+effects, scopes, ancestor jumps, finally state and monitors. The six recorded
+game probes retain their traces and previous scope. Actual complete menu/gameplay
+rendering, live assets and browser/phone acceptance remain unverified.
