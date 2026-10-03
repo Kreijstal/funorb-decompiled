@@ -96,12 +96,12 @@ final class cf extends TextInputValidator {
         }
     }
 
-    final static qi a(int param0, int param1) {
-        qi var2 = new qi();
-        k.field_e.addLast(-49, var2);
-        int var3 = -104 / ((-51 - param1) / 44);
-        re.b(-78, param0);
-        return var2;
+    final static AchievementQuery requestAchievementState(int packetOpcode, int methodGuard) {
+        AchievementQuery query = new AchievementQuery();
+        k.pendingAchievementQueries.addLast(-49, query);
+        int guardDivision = -104 / ((-51 - methodGuard) / 44);
+        re.writeAchievementStateRequest(-78, packetOpcode);
+        return query;
     }
 
     final static void advanceScorePopups(byte methodGuard) {

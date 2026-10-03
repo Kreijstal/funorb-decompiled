@@ -142,7 +142,7 @@ class ac extends ff {
           for (var10 = 0; var10 < pg.achievementTitles.length; var10++) {
             if ((!da.a(0, -119)) &&
                 (var10 == 16) &&
-                (!qi.d(105))) {
+                (!AchievementQuery.hasReceivedAchievementSixteen(105))) {
               continue;
             }
             if ((!((0 == (1 << var10 & var5)) &&

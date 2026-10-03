@@ -18,13 +18,13 @@ final class re extends IntrusiveNode {
         field_i = null;
     }
 
-    final static void b(int param0, int param1) {
-        PacketBuffer var2 = fj.field_q;
-        var2.writeCipherByte(param1, (byte) -66);
-        var2.writeByte((byte) 124, 1);
-        var2.writeByte((byte) 127, 2);
-        if (param0 >= -65) {
-            re.b(116, -127);
+    final static void writeAchievementStateRequest(int methodGuard, int packetOpcode) {
+        PacketBuffer packet = fj.field_q;
+        packet.writeCipherByte(packetOpcode, (byte) -66);
+        packet.writeByte((byte) 124, 1);
+        packet.writeByte((byte) 127, 2);
+        if (methodGuard >= -65) {
+            re.writeAchievementStateRequest(116, -127);
         }
     }
 

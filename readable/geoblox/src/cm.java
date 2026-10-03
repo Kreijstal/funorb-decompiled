@@ -66,7 +66,7 @@ final class cm extends cj {
               break;
             }
             if (var4 == null) {
-              Bzip2DecoderState.a((byte) -115);
+              Bzip2DecoderState.closeSessionSocket((byte) -115);
               return;
             }
             var5 = var27.readUnsignedByte((byte) 34);
@@ -166,11 +166,11 @@ final class cm extends cj {
               var4_ref.unlinkNode(false);
               return;
             }
-            Bzip2DecoderState.a((byte) -117);
+            Bzip2DecoderState.closeSessionSocket((byte) -117);
             return;
           }
           gi.a((Throwable) null, "HS1: " + og.e(param0 + 24894), (byte) 125);
-          Bzip2DecoderState.a((byte) -117);
+          Bzip2DecoderState.closeSessionSocket((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class cm extends cj {
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     iOException = (IOException) (Object) decompiledCaughtException;
-                    Bzip2DecoderState.a((byte) -117);
+                    Bzip2DecoderState.closeSessionSocket((byte) -117);
                   }
                   fj.field_q.position = 0;
                 }

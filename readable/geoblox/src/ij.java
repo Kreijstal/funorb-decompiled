@@ -67,9 +67,9 @@ final class ij extends ResizableDialog implements ButtonActivationListener {
     final static int chooseSpawnEntityCategory(int methodGuard) {
         if (methodGuard <= 18) {
             ij.chooseSpawnEntityCategory(48);
-            return qi.b(MessageDialog.availableEntityCategoryCount, 1);
+            return AchievementQuery.b(MessageDialog.availableEntityCategoryCount, 1);
         }
-        return qi.b(MessageDialog.availableEntityCategoryCount, 1);
+        return AchievementQuery.b(MessageDialog.availableEntityCategoryCount, 1);
     }
 
     ij(DialogLayer param0, uj param1) {

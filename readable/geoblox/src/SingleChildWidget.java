@@ -66,7 +66,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
             }
             var10 = param2;
             for (var11 = param0; var11 < param5; var11++) {
-              var12 = qi.field_i[var11];
+              var12 = AchievementQuery.field_i[var11];
               if (!param6) {
                 stackIn_24_0 = gk.field_a[var12];
               } else {
@@ -74,10 +74,10 @@ abstract class SingleChildWidget extends UiWidget implements ql {
               }
               var13 = stackIn_24_0;
               if (var13 > var7_int) {
-                qi.field_i[var11] = qi.field_i[var8];
+                AchievementQuery.field_i[var11] = AchievementQuery.field_i[var8];
                 incrementValue$0 = var8;
                 var8++;
-                qi.field_i[incrementValue$0] = var12;
+                AchievementQuery.field_i[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -94,11 +94,11 @@ abstract class SingleChildWidget extends UiWidget implements ql {
           }
           for (var7_int = -1 + param5; var7_int > param0; var7_int--) {
             for (var8 = param0; var8 < var7_int; var8++) {
-              var9 = qi.field_i[var8];
-              var10 = qi.field_i[1 + var8];
+              var9 = AchievementQuery.field_i[var8];
+              var10 = AchievementQuery.field_i[1 + var8];
               if (ig.a(param6, var10, (byte) -125, var9)) {
-                qi.field_i[var8] = var10;
-                qi.field_i[var8 + 1] = var9;
+                AchievementQuery.field_i[var8] = var10;
+                AchievementQuery.field_i[var8 + 1] = var9;
               }
             }
           }

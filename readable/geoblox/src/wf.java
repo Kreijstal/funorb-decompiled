@@ -176,7 +176,7 @@ abstract class wf extends ch {
             ec.a(param0 ^ 76, 3);
           }
           if (OpacityWidget.field_G[3]) {
-            ud.a((byte) -125, 4);
+            ud.resendAchievementMessages((byte) -125, 4);
           }
           if (OpacityWidget.field_G[4]) {
             oi.a(5, 116);
@@ -262,7 +262,7 @@ abstract class wf extends ch {
               (!(~var3 <= ~IndexedSpriteState.a(-76)) &&
                 !(var3 >= jk.a(false))))) {
             this.field_t = false;
-            Bzip2DecoderState.a((byte) -115);
+            Bzip2DecoderState.closeSessionSocket((byte) -115);
             kd.b((byte) 81);
             TextInputValidator.a((byte) 124, 2, fa.idleMessage20MinText);
             bl.c(-113);
@@ -346,7 +346,7 @@ abstract class wf extends ch {
           lb.field_a = false;
         }
         if ((mi.field_C == 0) &&
-            (qi.ensureArchiveCatalogLoaded(108))) {
+            (AchievementQuery.ensureArchiveCatalogLoaded(108))) {
           mi.field_C = 1;
         }
         if (mi.field_C == 1) {
@@ -501,7 +501,7 @@ abstract class wf extends ch {
         field_o = null;
         fullscreenText = null;
         if (param0 != 30344) {
-            wf.j(-29);
+            wf.createAchievementStateValues(-29);
         }
     }
 
@@ -714,8 +714,8 @@ abstract class wf extends ch {
         }
     }
 
-    final static int[] j(int param0) {
-        if (param0 < 81) {
+    final static int[] createAchievementStateValues(int methodGuard) {
+        if (methodGuard < 81) {
             field_p = -43;
         }
         return new int[8];
@@ -743,7 +743,7 @@ abstract class wf extends ch {
               cm.c(-24839);
             } else {
               if (3 == var2) {
-                ud.b(119);
+                ud.handleAchievementResponse(119);
               } else {
                 if (var2 != 4) {
                   if (5 == var2) {
@@ -774,7 +774,7 @@ abstract class wf extends ch {
                                 return;
                               }
                               gi.a((Throwable) null, "MGS1: " + og.e(55), (byte) 125);
-                              Bzip2DecoderState.a((byte) -122);
+                              Bzip2DecoderState.closeSessionSocket((byte) -122);
                               return;
                             }
                             stackIn_30_0 = !(var2 != 12);
@@ -796,7 +796,7 @@ abstract class wf extends ch {
           return;
         }
         gi.a((Throwable) null, "MGS2: " + og.e(55), (byte) 125);
-        Bzip2DecoderState.a((byte) -118);
+        Bzip2DecoderState.closeSessionSocket((byte) -118);
     }
 
     private final void g(byte param0) {

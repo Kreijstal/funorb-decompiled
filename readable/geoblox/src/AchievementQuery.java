@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class qi extends IntrusiveNode {
-    int[] field_g;
+final class AchievementQuery extends IntrusiveNode {
+    int[] resultValues;
     static gk field_h;
-    boolean field_f;
+    boolean completed;
     static int[] field_i;
-    int field_j;
+    int achievementMask;
 
     public static void c(int param0) {
         field_h = null;
@@ -23,17 +23,17 @@ final class qi extends IntrusiveNode {
         return DequeCursor.archiveCatalog.ensureCatalogLoaded((byte) 126);
     }
 
-    final static boolean d(int param0) {
-        boolean stackIn_6_0 = false;
-        if (param0 <= 76) {
+    final static boolean hasReceivedAchievementSixteen(int methodGuard) {
+        boolean positiveMaskContainsBitSixteen = false;
+        if (methodGuard <= 76) {
           field_h = (gk) null;
         }
-        stackIn_6_0 = (ra.receivedAchievementMask > 0) && ((65536 & ra.receivedAchievementMask) != 0);
-        return stackIn_6_0;
+        positiveMaskContainsBitSixteen = (ra.receivedAchievementMask > 0) && ((65536 & ra.receivedAchievementMask) != 0);
+        return positiveMaskContainsBitSixteen;
     }
 
-    qi() {
-        this.field_f = false;
+    AchievementQuery() {
+        this.completed = false;
     }
 
     final static String a(String param0, java.applet.Applet param1, int param2) {

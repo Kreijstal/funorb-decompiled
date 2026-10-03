@@ -68,7 +68,7 @@ final class bh extends java.awt.Canvas {
             break;
           }
           if (var3 == null) {
-            Bzip2DecoderState.a((byte) -122);
+            Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;
           }
           var4 = var14.readUnsignedByte((byte) 34);
@@ -94,7 +94,7 @@ final class bh extends java.awt.Canvas {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = qi.field_i[var9];
+              var11 = AchievementQuery.field_i[var9];
               var6[0][var10] = oi.field_a[var11];
               var18[0][4 * var10] = hg.field_a[var11];
               var18[0][4 * var10 + 1] = fb.field_m[var11];
@@ -112,7 +112,7 @@ final class bh extends java.awt.Canvas {
             var13 = 0;
             var10 = var13;
             while (var9 < var8) {
-              var11 = qi.field_i[var9 + var5];
+              var11 = AchievementQuery.field_i[var9 + var5];
               var6[1][var13] = oi.field_a[var11];
               var18[1][4 * var13] = hg.field_a[var11];
               var18[1][1 + 4 * var13] = fb.field_m[var11];

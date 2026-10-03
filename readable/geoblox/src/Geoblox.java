@@ -233,7 +233,7 @@ public final class Geoblox extends wf {
         }
         lc.a(uj.field_a, -2, 100.0f);
         this.renderFrame(methodGuard ^ 496);
-        LoginPayloadKind.b(9313);
+        LoginPayloadKind.ensureAchievementStateRequested(9313);
         return true;
     }
 
@@ -533,7 +533,7 @@ public final class Geoblox extends wf {
         sl.a(102);
         gk.a(methodGuard ^ -64);
         ni.a((byte) -113);
-        qi.c(59);
+        AchievementQuery.c(59);
         AchievementSubmission.b(methodGuard ^ 25);
         od.a((byte) -92);
         lf.b(8221);

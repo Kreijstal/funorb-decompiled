@@ -24,14 +24,14 @@ final class LoginPayloadKind {
         this.wireId = wireId;
     }
 
-    final static void b(int param0) {
-        if (param0 != 9313) {
+    final static void ensureAchievementStateRequested(int methodGuard) {
+        if (methodGuard != 9313) {
             LoginPayloadKind.a(116);
             if (fh.c(-114)) {
                 return;
             }
-            if (MouseWheelInput.field_b == null) {
-                MouseWheelInput.field_b = cf.a(4, 94);
+            if (MouseWheelInput.achievementStateQuery == null) {
+                MouseWheelInput.achievementStateQuery = cf.requestAchievementState(4, 94);
                 return;
             }
             return;
@@ -39,8 +39,8 @@ final class LoginPayloadKind {
         if (fh.c(-114)) {
             return;
         }
-        if (MouseWheelInput.field_b == null) {
-            MouseWheelInput.field_b = cf.a(4, 94);
+        if (MouseWheelInput.achievementStateQuery == null) {
+            MouseWheelInput.achievementStateQuery = cf.requestAchievementState(4, 94);
             return;
         }
     }

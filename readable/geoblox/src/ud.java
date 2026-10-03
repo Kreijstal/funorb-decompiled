@@ -5,32 +5,32 @@ final class ud {
     static String loadingSoundEffectsText;
     static String createDisplayNameTooltipText;
 
-    final static void a(byte param0, int param1) {
-        IntrusiveNode var2 = null;
-        int var3 = 0;
-        AchievementSubmission var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static void resendAchievementMessages(byte methodGuard, int packetOpcode) {
+        IntrusiveNode pendingQuery = null;
+        int unusedClientControlSnapshot = 0;
+        AchievementSubmission unacknowledgedSubmission = null;
+        RuntimeException caughtRetryException = null;
+        RuntimeException retryFailure = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
-          while (var4 != null) {
-            ol.writeAchievementSubmissionPacket(param1, var4, 30175);
-            var4 = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.nextForIteration(1));
+          unacknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
+          while (unacknowledgedSubmission != null) {
+            ol.writeAchievementSubmissionPacket(packetOpcode, unacknowledgedSubmission, 30175);
+            unacknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.nextForIteration(1));
           }
-          var2 = k.field_e.firstForIteration(0);
-          if (param0 > -123) {
+          pendingQuery = k.pendingAchievementQueries.firstForIteration(0);
+          if (methodGuard > -123) {
             createDisplayNameTooltipText = (String) null;
           }
-          while (var2 != null) {
-            re.b(-101, param1);
-            var2 = k.field_e.nextForIteration(1);
+          while (pendingQuery != null) {
+            re.writeAchievementStateRequest(-101, packetOpcode);
+            pendingQuery = k.pendingAchievementQueries.nextForIteration(1);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2_ref), "ud.A(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException caughtRetryFailure) {
+          caughtRetryException = caughtRetryFailure;
+          retryFailure = caughtRetryException;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) retryFailure), "ud.A(" + methodGuard + ',' + packetOpcode + ')');
         }
     }
 
@@ -98,82 +98,82 @@ final class ud {
         }
     }
 
-    final static void b(int param0) {
-        int var7 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int[] var3 = null;
-        int[] var4 = null;
-        PacketBuffer var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
-        AchievementSubmission var11 = null;
-        PacketBuffer var12 = null;
-        int[] var13 = null;
-        qi var14 = null;
-        qi var15 = null;
-        int[] var16 = null;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static void handleAchievementResponse(int methodGuard) {
+        int responseValueIndex = 0;
+        RuntimeException caughtResponseException = null;
+        RuntimeException responseFailure = null;
+        int responseType = 0;
+        int[] resultValuesForQuery = null;
+        int[] resultValuesAlias = null;
+        PacketBuffer packetForValueReads = null;
+        int responseValueCount = 0;
+        int unusedClientControlSnapshot = 0;
+        int[] mutableResultValues = null;
+        int[] allocatedResultValues = null;
+        AchievementSubmission acknowledgedSubmission = null;
+        PacketBuffer incomingPacket = null;
+        int[] resultValuesBeforeQueryAssignment = null;
+        AchievementQuery queryReceivingValues = null;
+        AchievementQuery queryReceivingZeroValues = null;
+        int[] resultValuesForMaskRead = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var12 = eh.field_d;
-          var2 = var12.readUnsignedByte((byte) 34);
-          if (0 == var2) {
-            var10 = wf.j(89);
-            var16 = var10;
-            var13 = var16;
-            var3 = var13;
-            var9 = var10;
-            var4 = var9;
-            var5 = var12;
-            var6 = ((ByteArrayBuffer) ((Object) var5)).readUnsignedByte((byte) 34);
-            for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((ByteArrayBuffer) ((Object) var5)).readIntBE((byte) -97);
+          incomingPacket = eh.field_d;
+          responseType = incomingPacket.readUnsignedByte((byte) 34);
+          if (0 == responseType) {
+            allocatedResultValues = wf.createAchievementStateValues(89);
+            resultValuesForMaskRead = allocatedResultValues;
+            resultValuesBeforeQueryAssignment = resultValuesForMaskRead;
+            resultValuesForQuery = resultValuesBeforeQueryAssignment;
+            mutableResultValues = allocatedResultValues;
+            resultValuesAlias = mutableResultValues;
+            packetForValueReads = incomingPacket;
+            responseValueCount = ((ByteArrayBuffer) ((Object) packetForValueReads)).readUnsignedByte((byte) 34);
+            for (responseValueIndex = 0; responseValueIndex < responseValueCount; responseValueIndex++) {
+              mutableResultValues[responseValueIndex] = ((ByteArrayBuffer) ((Object) packetForValueReads)).readIntBE((byte) -97);
             }
-            var14 = (qi) ((Object) k.field_e.firstForIteration(0));
-            if (var14 == null) {
-              Bzip2DecoderState.a((byte) -117);
+            queryReceivingValues = (AchievementQuery) ((Object) k.pendingAchievementQueries.firstForIteration(0));
+            if (queryReceivingValues == null) {
+              Bzip2DecoderState.closeSessionSocket((byte) -117);
               return;
             }
-            var14.field_g = var3;
-            var14.field_f = true;
-            var14.field_j = var16[0];
-            var14.unlinkNode(false);
+            queryReceivingValues.resultValues = resultValuesForQuery;
+            queryReceivingValues.completed = true;
+            queryReceivingValues.achievementMask = resultValuesForMaskRead[0];
+            queryReceivingValues.unlinkNode(false);
           } else {
-            if (var2 == 1) {
-              var11 = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
-              if (var11 == null) {
-                Bzip2DecoderState.a((byte) -120);
+            if (responseType == 1) {
+              acknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
+              if (acknowledgedSubmission == null) {
+                Bzip2DecoderState.closeSessionSocket((byte) -120);
                 return;
               }
-              var11.unlinkNode(false);
+              acknowledgedSubmission.unlinkNode(false);
             } else {
-              if (var2 == 2) {
-                var15 = (qi) ((Object) k.field_e.firstForIteration(0));
-                if (var15 == null) {
-                  Bzip2DecoderState.a((byte) -115);
+              if (responseType == 2) {
+                queryReceivingZeroValues = (AchievementQuery) ((Object) k.pendingAchievementQueries.firstForIteration(0));
+                if (queryReceivingZeroValues == null) {
+                  Bzip2DecoderState.closeSessionSocket((byte) -115);
                   return;
                 }
-                var15.field_g = wf.j(86);
-                var15.field_j = var15.field_g[0];
-                var15.field_f = true;
-                var15.unlinkNode(false);
+                queryReceivingZeroValues.resultValues = wf.createAchievementStateValues(86);
+                queryReceivingZeroValues.achievementMask = queryReceivingZeroValues.resultValues[0];
+                queryReceivingZeroValues.completed = true;
+                queryReceivingZeroValues.unlinkNode(false);
               } else {
                 gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
-                Bzip2DecoderState.a((byte) -116);
+                Bzip2DecoderState.closeSessionSocket((byte) -116);
               }
             }
           }
-          if (param0 <= 85) {
+          if (methodGuard <= 85) {
             ud.a(-63);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ud.D(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtResponseFailure) {
+          caughtResponseException = caughtResponseFailure;
+          responseFailure = caughtResponseException;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) responseFailure), "ud.D(" + methodGuard + ')');
         }
     }
 

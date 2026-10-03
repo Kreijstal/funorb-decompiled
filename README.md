@@ -19,6 +19,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 109 names `AchievementQuery`, `cf.requestAchievementState`,
+`re.writeAchievementStateRequest`, `ud.handleAchievementResponse`,
+`ud.resendAchievementMessages` and the singleton query/queue/result fields.
+It adds 53 guarded names, bringing the total to 8,556 and 66,611 edits, while
+retaining every previous rule and the raw/decompiler pins. The existing
+achievement probe adds a separate 284-case native/raw/readable trace covering
+response types/counts, ordered acknowledgements, two-round retries, request
+failure after enqueue, and received-mask import. In-memory packets verify partial
+effects and overflow consumption; real sockets, unknown-type logging and complete
+login/reconnect/server/game/device behavior remain unverified.
+
 Pass 108 names the achievement path from gameplay to notification and submission:
 `ra.recordAchievement`, `AchievementSubmission`,
 `je.updateAchievementSubmissions`, `sj.submitAchievementRecord`,

@@ -62,7 +62,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             if (0 == var2) {
               var4_ref_ea = (ea) ((Object) ea.field_g.firstForIteration(0));
               if (var4_ref_ea == null) {
-                Bzip2DecoderState.a((byte) -116);
+                Bzip2DecoderState.closeSessionSocket((byte) -116);
                 return;
               }
               var5_int = -var9.position + AchievementSubmission.field_k;
@@ -92,12 +92,12 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                     var5.unlinkNode(false);
                     break L0;
                   }
-                  Bzip2DecoderState.a((byte) -116);
+                  Bzip2DecoderState.closeSessionSocket((byte) -116);
                   return;
                 }
               }
               gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
-              Bzip2DecoderState.a((byte) -123);
+              Bzip2DecoderState.closeSessionSocket((byte) -123);
             }
           }
           if (param0 >= -95) {
@@ -338,7 +338,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               if (var9 == 248) {
                 sj.a(k.c(124), (byte) 123);
                 kh.field_a = ph.createUnableText;
-                Bzip2DecoderState.a((byte) -124);
+                Bzip2DecoderState.closeSessionSocket((byte) -124);
                 ck.field_e = false;
                 stackIn_31_0 = var9;
                 return stackIn_31_0;
@@ -364,7 +364,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                 for (var12 = 0; var12 < var11; var12++) {
                   si.field_i[var12] = eh.field_d.readZeroPrefixedNullTerminatedText(27425);
                 }
-                Bzip2DecoderState.a((byte) -114);
+                Bzip2DecoderState.closeSessionSocket((byte) -114);
                 ck.field_e = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
@@ -381,7 +381,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                 tc.a(-128, var9_ref_String, k.c(106));
               }
             }
-            Bzip2DecoderState.a((byte) -114);
+            Bzip2DecoderState.closeSessionSocket((byte) -114);
             ck.field_e = false;
             stackIn_54_0 = ScorePopup.field_l;
             return stackIn_54_0;

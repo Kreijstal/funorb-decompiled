@@ -12,9 +12,9 @@ final class je extends IntrusiveNode {
         AchievementSubmission pendingSubmission = null;
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            if ((!hj.achievementMaskReceived && null != MouseWheelInput.field_b) &&
-                (!(!MouseWheelInput.field_b.field_f))) {
-                ra.receivedAchievementMask = MouseWheelInput.field_b.field_j;
+            if ((!hj.achievementMaskReceived && null != MouseWheelInput.achievementStateQuery) &&
+                (!(!MouseWheelInput.achievementStateQuery.completed))) {
+                ra.receivedAchievementMask = MouseWheelInput.achievementStateQuery.achievementMask;
                 hj.achievementMaskReceived = true;
                 ug.newAchievementMask = ug.newAchievementMask & ~ra.receivedAchievementMask;
                 InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | ra.receivedAchievementMask;

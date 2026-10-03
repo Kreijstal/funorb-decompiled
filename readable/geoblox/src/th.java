@@ -29,7 +29,7 @@ final class th extends lf {
           if (param1 != 200) {
             th.d((byte) 21);
           }
-          var2 = qi.a("jagex-last-login-method", param0, -114);
+          var2 = AchievementQuery.a("jagex-last-login-method", param0, -114);
           if (var2 == null) {
             stackIn_5_0 = td.field_I;
             return stackIn_5_0;

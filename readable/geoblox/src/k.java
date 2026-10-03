@@ -10,7 +10,7 @@ final class k implements Iterator {
     private IntrusiveNode field_c;
     static int field_g;
     private gi field_d;
-    static IntrusiveDeque field_e;
+    static IntrusiveDeque pendingAchievementQueries;
     static String loginText;
     static String fullscreenFocusText;
     static MusicScore field_f;
@@ -86,7 +86,7 @@ final class k implements Iterator {
 
     public static void b(int param0) {
         fullscreenFocusText = null;
-        field_e = null;
+        pendingAchievementQueries = null;
         if (param0 != 0) {
             return;
         }
@@ -137,7 +137,7 @@ final class k implements Iterator {
 
     static {
         field_g = -1;
-        field_e = new IntrusiveDeque();
+        pendingAchievementQueries = new IntrusiveDeque();
         loginText = "Log in";
         fullscreenFocusText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
     }

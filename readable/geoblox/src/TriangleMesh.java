@@ -64,7 +64,7 @@ final class TriangleMesh {
         if (methodGuard >= -55) {
             return 66;
         }
-        return qi.b(ag.availableSpriteVariantCount, 1);
+        return AchievementQuery.b(ag.availableSpriteVariantCount, 1);
     }
 
     public static void b(byte param0) {
@@ -172,9 +172,9 @@ final class TriangleMesh {
               (gk.field_a.length >= param2))) {
           gk.field_a = new int[param2 * 2];
         }
-        if (!((null != qi.field_i) &&
-              (qi.field_i.length >= param2 + param1))) {
-          qi.field_i = new int[(param2 + param1) * 2];
+        if (!((null != AchievementQuery.field_i) &&
+              (AchievementQuery.field_i.length >= param2 + param1))) {
+          AchievementQuery.field_i = new int[(param2 + param1) * 2];
         }
         if (!((null != qh.field_C) &&
               (qh.field_C.length >= param2))) {

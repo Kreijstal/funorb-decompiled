@@ -3,7 +3,7 @@
  */
 abstract class MouseWheelInput {
     static int field_a;
-    static qi field_b;
+    static AchievementQuery achievementStateQuery;
     static Sprite[] field_e;
     static hi field_d;
     static int[] secondVertexTransformedZ;
@@ -76,7 +76,7 @@ abstract class MouseWheelInput {
     public static void a(int param0) {
         secondVertexTransformedZ = null;
         field_e = null;
-        field_b = null;
+        achievementStateQuery = null;
         if (param0 >= -9) {
             return;
         }

@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 8,503 guarded naming rules: 91 classes, 994 fields,
-792 methods, 2,361 parameters and 4,265 local declarations. Both 303-file corpora
+The current export has 8,556 guarded naming rules: 92 classes, 999 fields,
+800 methods, 2,372 parameters and 4,293 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,67 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Achievement queries, responses and retries (pass 109)
+
+`AchievementQuery` names the request/result holder with `resultValues`,
+`completed` and the first-value `achievementMask`. The singleton is
+`MouseWheelInput.achievementStateQuery`; outstanding holders live in
+`k.pendingAchievementQueries`. `LoginPayloadKind.ensureAchievementStateRequested`
+initializes the singleton through `cf.requestAchievementState`, which queues an
+incomplete holder before guard arithmetic and sends version 1/subtype 2 through
+`re.writeAchievementStateRequest`. Mixed-purpose static helpers remain on the
+instance owner; no unrelated helper role is inferred from the class name.
+
+`ud.handleAchievementResponse` names the response-type and value-count flow.
+Type 0 reads the count and integers into an eight-value array before consulting
+the query queue; it stores the array, completed flag and first-value mask, then
+unlinks the first holder. Type 1 unlinks the oldest unacknowledged submission.
+Type 2 stores eight zero values and a zero mask, marks complete and unlinks the
+first query. Empty queues close the session socket; unknown types log and close.
+`ud.resendAchievementMessages` writes retained submissions in order, followed by
+one version/subtype request per pending query, without consuming either queue.
+`AchievementQuery.hasReceivedAchievementSixteen` preserves the positive-mask
+check as well as bit 16; a negative mask with that bit set still returns false.
+
+This adds 53 identities: one class, five fields, eight methods, eleven parameters
+and 28 locals. All 8,503 prior complete rule objects remain. Raw source, decompiler,
+naming-tool/stub pins and the six other native probe files/traces are unchanged.
+The seventh existing probe gains one separately pinned response trace; its original
+864 registration cases and 108 packet oracle trace stay byte-for-byte unchanged.
+There are now 66,611 edits: 252 new guarded declaration/reference occurrences and
+one constructor spelling from the new class rule. Both 303-file corpora compile
+and compare 137,964 bindings and 388 complete override pairs. No raw body, bytecode,
+control flow, declaration ordinal or numeric protocol value changes.
+
+The additional 284-case native/raw/readable trace covers 108 response cases,
+36 two-round retry cases, twelve request/guard cases and 128 controlled mask-import
+cases. It uses zero/nonzero control flags, counts 0/1/3/8/9/255, empty/single/two-
+record queues, response types 0/1/2, valid/invalid request guards, signed masks and
+both values of the existing login gate. Independent checks prove eight-value zero
+padding, first-record/query ownership, packet order/CRC, retained identity, mask
+merge/removal conditions and the positive bit-16 condition. Overlong counts read
+the ninth integer before failing with the same underlying array-bounds exception
+and packet position 38, without resolving a query. A division-by-zero guard leaves
+the newly queued query incomplete and writes no request bytes.
+
+All seven native probes, publication checks, dictionary reversal and clean-bundle
+reproduction pass. The new response-trace output SHA-256 is
+`1664da2a05a4a62e4f3a876199e7ac368e929f19e94ac726696fee6751be9e1f`.
+The raw tree remains
+`05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b`;
+the readable tree is
+`7b4c47b152fad8c23766443edb4e62e180295bd4bfbc5638e0d8c095a31330cc`.
+The decompiler-source SHA-256 above remains unchanged. The one maintained
+manifest records additions and the updated probe hash/additional trace; earlier
+rules remain in Git, with no new JSON snapshots.
+
+The probe uses in-memory packets, controlled queues/flags and a null session socket.
+Real socket closure, unknown-type logging, full login/reconnect/timing/concurrency,
+empty-panel fonts/assets and server tracking validation remain unverified. The
+220 plain labels and six large labeled spans are unchanged; shared unknown names,
+further reconstruction and whole-game/browser/phone acceptance remain unfinished.
+Sections below describe their historical counts and scopes.
 
 ## Achievement registration and submission names (pass 108)
 
@@ -3000,8 +3061,10 @@ leading nonconstant while guards. Pass104 recorded effectful plain-block
 exits. Pass105 recorded exact local-reference cast cleanup. Pass106 recorded scalar
 dispatch switches. Pass107 recorded path-implied local guards in `sourceChange`,
 with an empty `ruleChanges` list preserving all 8,439 complete naming objects.
-Current pass108 retains that raw input and generator identity, adds 64 guarded
-achievement-path names through `ruleChanges`, and pins the seventh native probe.
+Pass108 retained that raw input and generator identity, added 64 guarded
+achievement-path names and pinned the seventh native probe. Current pass109
+retains that input, adds 53 query/response/retry names through `ruleChanges`, and
+updates the existing achievement probe with a separately pinned response trace.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 

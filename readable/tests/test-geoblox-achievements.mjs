@@ -9,13 +9,15 @@ import {captureProcess} from '../tools/lib/capture-process.mjs';
 
 // Controlled registration and packet scopes, with independent mask/queue and
 // big-endian/CRC oracles. A pre-existing notification avoids asset/font loading.
-// This does not exercise an empty panel, login/retry/acknowledgement, networking,
+// Response/retry scopes use in-memory packets and controlled queues/login flags;
+// they do not exercise real sockets, unknown response types or empty-panel assets,
 // or interpret the tracking integers as a server-side validation algorithm.
 const root = fileURLToPath(new URL('../', import.meta.url));
 const nativeInput = process.argv[2] && path.resolve(process.argv[2]);
 const aliases = new Map(JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')))
   .renames.map(rule => [rule.symbol, rule.to]));
 const expectedNativeSha256 = 'd6c2a9615dc04f73a8983a99f676bb23f2e00cd87573fae3a0701ce552f2dd00';
+const expectedAchievementResponseSha256 = '1664da2a05a4a62e4f3a876199e7ac368e929f19e94ac726696fee6751be9e1f';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-achievements-'));
 try {
   if (nativeInput) {
@@ -40,7 +42,7 @@ try {
     assert.equal(files.length, pin.files);
     assert.equal(hash.digest('hex'), pin.sha256);
   }
-  let expected;
+  let expected, expectedResponse;
   for (const variant of [...(nativeInput ? ['native'] : []), 'original', 'renamed']) {
     const native = variant === 'native', renamed = variant === 'renamed';
     const name = (symbol, original) => renamed ? aliases.get(symbol) ?? original : original;
@@ -155,16 +157,170 @@ try {
           System.out.println("complete:"+scenarios+":"+packets+":"+digest);
         }
       }`;
+    const responseHarness = `import java.lang.reflect.*; import java.util.*;
+      import java.nio.*; import java.util.zip.*; import java.security.*;
+      public class AchievementResponseBehavior extends AchievementBehavior {
+        static Object packet(byte[] bytes,boolean ciphered) throws Exception {
+          Object p=alloc("${type('pk')}");
+          ${set('qc','field_j','[B','p','bytes')}
+          ${set('qc','field_f','I','p','0')}
+          if(ciphered)m("${type('pk')}","${method('pk','a([IZ)V')}",int[].class,boolean.class)
+            .invoke(p,new int[]{1,2,3,4},false);
+          return p;
+        }
+        static String failure(Method m,Object... args) throws Exception {
+          try { m.invoke(null,args); return "none"; }
+          catch(InvocationTargetException e) {
+            Throwable t=e.getCause(); if(t.getClass()==Class.forName("${type('sa')}"))
+              t=(Throwable)${get('sa','field_a','Ljava/lang/Throwable;','t')};
+            return t.getClass().getSimpleName();
+          }
+        }
+        static byte[] payload(int[] values) {
+          byte[] body=new byte[23]; ByteBuffer out=ByteBuffer.wrap(body).order(ByteOrder.BIG_ENDIAN);
+          out.put((byte)1).put((byte)values[0]).put((byte)values[1]);
+          for(int i=2;i<6;i++)out.putInt(values[i]);
+          CRC32 crc=new CRC32(); crc.update(body,0,19);out.putInt((int)crc.getValue());return body;
+        }
+        public static void main(String[] ignored) throws Exception {
+          Method add=m("${type('tf')}","${method('tf','a(ILhf;)V')}",int.class,Class.forName("${type('hf')}"));
+          Method first=m("${type('tf')}","${method('tf','g(I)Lhf;')}",int.class);
+          Method next=m("${type('tf')}","${method('tf','d(I)Lhf;')}",int.class);
+          Method response=m("${type('ud')}","${method('ud','b(I)V')}",int.class);
+          Method retry=m("${type('ud')}","${method('ud','a(BI)V')}",byte.class,int.class);
+          Method request=m("${type('cf')}","${method('cf','a(II)Lqi;')}",int.class,int.class);
+          Method update=m("${type('je')}","${method('je','c(B)V')}",byte.class);
+          Method hasSixteen=m("${type('qi')}","${method('qi','d(I)Z')}",int.class);
+          Constructor<?> queryConstructor=Class.forName("${type('qi')}").getDeclaredConstructor();
+          queryConstructor.setAccessible(true);
+          MessageDigest trace=MessageDigest.getInstance("SHA-256"); int responses=0,retries=0,requests=0,imports=0;
+          for(int control:new int[]{0,7}) for(int kind:new int[]{0,1,2})
+          for(int count:new int[]{0,1,3,8,9,255}) for(int queued=0;queued<3;queued++) {
+            Object queries=deque(),submissions=deque(); Object[] q=new Object[queued],s=new Object[queued];
+            for(int i=0;i<queued;i++) { q[i]=queryConstructor.newInstance(); s[i]=alloc("${type('p')}");
+              ${set('qi','field_j','I','q[i]','-123456')}
+              add.invoke(queries,-80,q[i]);add.invoke(submissions,-80,s[i]); }
+            ${set('Geoblox','field_C','I','null','control')}
+            ${set('k','field_e','Ltf;','null','queries')}
+            ${set('rh','field_a','Ltf;','null','submissions')}
+            ${set('oc','field_e','Lba;','null','null')}
+            byte[] bytes=new byte[kind==0?2+4*count:1];bytes[0]=(byte)kind;
+            if(kind==0) { bytes[1]=(byte)count;ByteBuffer out=ByteBuffer.wrap(bytes).order(ByteOrder.BIG_ENDIAN);
+              out.position(2);for(int i=0;i<count;i++)out.putInt(i%2==0?Integer.MIN_VALUE+i:Integer.MAX_VALUE-i); }
+            Object incoming=packet(bytes,false);
+            ${set('eh','field_d','Lpk;','null','incoming')}
+            String error=failure(response,119);boolean overflow=kind==0&&count>8;
+            check(error.equals(overflow?"ArrayIndexOutOfBoundsException":"none"),"response failure identity");
+            int position=(Integer)${get('qc','field_f','I','incoming')};
+            check(position==(kind==0?(overflow?38:2+4*count):1),"response consumption before queue checks/failure");
+            boolean resolve=kind!=1&&!overflow&&queued>0;
+            if(queued>0) {
+              check((Boolean)${get('qi','field_f','Z','q[0]')}==resolve,"only resolved query completes");
+              int[] values=(int[])${get('qi','field_g','[I','q[0]')};
+              if(resolve) { int[] wanted=new int[8];if(kind==0)for(int i=0;i<count;i++)
+                  wanted[i]=i%2==0?Integer.MIN_VALUE+i:Integer.MAX_VALUE-i;
+                check(Arrays.equals(values,wanted),"eight values and zero padding");
+                check((Integer)${get('qi','field_j','I','q[0]')}==wanted[0],"first value is mask"); }
+              else {check(values==null,"unresolved values remain null");
+                check((Integer)${get('qi','field_j','I','q[0]')}==-123456,"unresolved mask retained");}
+            }
+            Object current=first.invoke(queries,0); int start=resolve?1:0;
+            for(int i=start;i<queued;i++) {check(current==q[i],"query FIFO and identity");current=next.invoke(queries,1);}
+            check(current==null,"only first query removed");
+            current=first.invoke(submissions,0);start=kind==1&&queued>0?1:0;
+            for(int i=start;i<queued;i++) {check(current==s[i],"acknowledgement FIFO and identity");current=next.invoke(submissions,1);}
+            check(current==null,"only first acknowledged record removed");
+            String state="response:"+control+":"+kind+":"+count+":"+queued+":"+error+":"+position+":"+resolve+"\\n";
+            trace.update(state.getBytes("UTF-8"));responses++;
+          }
+          for(int control:new int[]{0,7}) for(byte guard:new byte[]{-125,-100})
+          for(int queryCount=0;queryCount<3;queryCount++) for(int recordCount=0;recordCount<3;recordCount++) {
+            Object queries=deque(),submissions=deque();Object[] q=new Object[queryCount],s=new Object[recordCount];
+            int[][] values=new int[recordCount][];
+            for(int i=0;i<queryCount;i++) {q[i]=queryConstructor.newInstance();add.invoke(queries,-80,q[i]);}
+            String[] fields=new String[]{"${field('p','field_l','I')}","${field('p','field_h','I')}",
+              "${field('p','field_f','I')}","${field('p','field_g','I')}",
+              "${field('p','field_j','I')}","${field('p','field_n','I')}"};
+            for(int i=0;i<recordCount;i++) {s[i]=alloc("${type('p')}");
+              values[i]=new int[]{16+i,239-i,Integer.MIN_VALUE+i,Integer.MAX_VALUE-i,-i-1,i+8801};
+              for(int j=0;j<6;j++)set("${type('p')}",fields[j],s[i],values[i][j]);add.invoke(submissions,-80,s[i]);}
+            ${set('Geoblox','field_C','I','null','control')}
+            ${set('k','field_e','Ltf;','null','queries')}
+            ${set('rh','field_a','Ltf;','null','submissions')}
+            ${set('ud','field_a','Ljava/lang/String;','null','"sentinel"')}
+            byte[] bytes=new byte[256];Object outgoing=packet(bytes,true);
+            ${set('fj','field_q','Lpk;','null','outgoing')}
+            int messageLength=25*recordCount+3*queryCount;
+            for(int round=0;round<2;round++) {
+              check(failure(retry,guard,4).equals("none"),"retry returns");
+              check((Integer)${get('qc','field_f','I','outgoing')}==(round+1)*messageLength,"retry packet extent");
+              int offset=round*messageLength;
+              for(int i=0;i<recordCount;i++) {check((bytes[offset+1]&255)==23,"retry length");
+                check(Arrays.equals(payload(values[i]),Arrays.copyOfRange(bytes,offset+2,offset+25)),"retry record order/payload");offset+=25;}
+              for(int i=0;i<queryCount;i++) {check(bytes[offset+1]==1&&bytes[offset+2]==2,"retry query version/subtype");offset+=3;}
+            }
+            Object current=first.invoke(queries,0);for(Object wanted:q){check(current==wanted,"retry retains query identity/order");current=next.invoke(queries,1);}check(current==null,"no extra queries");
+            current=first.invoke(submissions,0);for(Object wanted:s){check(current==wanted,"retry retains submission identity/order");current=next.invoke(submissions,1);}check(current==null,"no extra submissions");
+            check(guard>-123?${get('ud','field_a','Ljava/lang/String;')}==null:
+              "sentinel".equals(${get('ud','field_a','Ljava/lang/String;')}),"retry guard side effect");
+            trace.update(Arrays.copyOf(bytes,2*messageLength));retries++;
+          }
+          for(int control:new int[]{0,7}) for(int opcode:new int[]{4,255,32}) for(int guard:new int[]{94,-51}) {
+            Object queries=deque();byte[] bytes=new byte[16];Object outgoing=packet(bytes,true);
+            ${set('Geoblox','field_C','I','null','control')}
+            ${set('k','field_e','Ltf;','null','queries')}
+            ${set('fj','field_q','Lpk;','null','outgoing')}
+            String error="none";Object returned=null;
+            try{returned=request.invoke(null,opcode,guard);}catch(InvocationTargetException e){error=e.getCause().getClass().getSimpleName();}
+            Object queued=first.invoke(queries,0);check(queued!=null,"query queued before guard arithmetic");
+            check(!(Boolean)${get('qi','field_f','Z','queued')},"initial query incomplete");
+            check(${get('qi','field_g','[I','queued')}==null,"initial query values null");
+            check(next.invoke(queries,1)==null,"one query only");
+            check(error.equals(guard==94?"none":"ArithmeticException"),"request guard failure");
+            int position=(Integer)${get('qc','field_f','I','outgoing')};check(position==(guard==94?3:0),"guard before request bytes");
+            if(guard==94){check(returned==queued,"returned query identity");check(bytes[1]==1&&bytes[2]==2,"request version/subtype");}
+            trace.update(("request:"+control+":"+opcode+":"+guard+":"+error+"\\n").getBytes("UTF-8"));
+            trace.update(Arrays.copyOf(bytes,position));requests++;
+          }
+          for(int control:new int[]{0,7}) for(int mask:new int[]{0,65536,-1,7})
+          for(boolean present:new boolean[]{false,true})for(boolean completed:new boolean[]{false,true})
+          for(boolean received:new boolean[]{false,true})for(boolean loginGate:new boolean[]{false,true}) {
+            Object query=queryConstructor.newInstance(),pending=deque();
+            ${set('Geoblox','field_C','I','null','control')}
+            ${set('qi','field_f','Z','query','completed')}
+            ${set('qi','field_j','I','query','mask')}
+            ${set('vk','field_b','Lqi;','null','present?query:null')}
+            ${set('hj','field_c','Z','null','received')}
+            ${set('hl','field_G','Z','null','loginGate')}
+            ${set('ra','field_d','I','null','31')}
+            ${set('ug','field_c','I','null','0x1234')}
+            ${set('vl','field_p','I','null','0x202')}
+            ${set('ja','field_A','Ltf;','null','pending')}
+            check(failure(update,(byte)-123).equals("none"),"mask import returns");
+            boolean importMask=!received&&present&&completed;int wanted=importMask?mask:31;
+            check((Integer)${get('ra','field_d','I')}==wanted,"received mask");
+            check((Boolean)${get('hj','field_c','Z')}==(received||importMask),"received flag");
+            check((Integer)${get('ug','field_c','I')}==(importMask?0x1234&~mask:0x1234),"new bits exclude received bits");
+            check((Integer)${get('vl','field_p','I')}==(importMask?0x202|mask:0x202),"received bits merged into earned mask");
+            check((Boolean)hasSixteen.invoke(null,105)==(wanted>0&&(wanted&65536)!=0),"positive-mask condition for bit16");
+            trace.update(("import:"+control+":"+mask+":"+present+":"+completed+":"+received+":"+loginGate+":"+wanted+"\\n").getBytes("UTF-8"));imports++;
+          }
+          StringBuilder digest=new StringBuilder();for(byte b:trace.digest())digest.append(String.format("%02x",b&255));
+          System.out.println("response-complete:"+responses+":"+retries+":"+requests+":"+imports+":"+digest);
+        }
+      }`;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
     const harnessFile = path.join(directory, 'AchievementBehavior.java');
     fs.writeFileSync(harnessFile, harness);
+    const responseFile = path.join(directory, 'AchievementResponseBehavior.java');
+    fs.writeFileSync(responseFile, responseHarness);
     const stub = path.join(root, 'funorb-stubs.jar');
     const cp = native ? nativeInput + path.delimiter + stub : stub;
     const sourceRoot = path.join(root, renamed ? 'geoblox/src' : '../games/geoblox');
     const sources = native ? [] : sourceInventory(sourceRoot).map(file => path.join(sourceRoot, file.path));
     const list = path.join(directory, 'sources.txt');
-    fs.writeFileSync(list, [...sources, harnessFile].map(file => JSON.stringify(file)).join('\n') + '\n');
+    fs.writeFileSync(list, [...sources, harnessFile, responseFile].map(file => JSON.stringify(file)).join('\n') + '\n');
     captureProcess('javac', ['--release','8','-proc:none','-encoding','UTF-8','-classpath',cp,'-d',classes,'@'+list]);
     const output = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
       'AchievementBehavior']).stdout;
@@ -173,6 +329,13 @@ try {
     assert.equal(sha256, expectedNativeSha256, variant);
     if (expected === undefined) expected = output;
     else assert.equal(Buffer.compare(output, expected), 0, variant);
+    const responseOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'AchievementResponseBehavior']).stdout;
+    const responseSha256 = crypto.createHash('sha256').update(responseOutput).digest('hex');
+    console.log(JSON.stringify({variant, responseSha256, completion: responseOutput.toString().trim()}));
+    assert.equal(responseSha256, expectedAchievementResponseSha256, variant);
+    if (expectedResponse === undefined) expectedResponse = responseOutput;
+    else assert.equal(Buffer.compare(responseOutput, expectedResponse), 0, variant);
   }
 } catch (error) {
   if (error.stderr) process.stderr.write(error.stderr);

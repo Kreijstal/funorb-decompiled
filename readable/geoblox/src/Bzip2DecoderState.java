@@ -48,7 +48,7 @@ final class Bzip2DecoderState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            Bzip2DecoderState.a((byte) 47);
+            Bzip2DecoderState.closeSessionSocket((byte) 47);
           }
           var2_int = param0.readUnsignedByte((byte) 34);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
@@ -69,8 +69,8 @@ final class Bzip2DecoderState {
         }
     }
 
-    final static void a(byte param0) {
-        if (param0 < -113) {
+    final static void closeSessionSocket(byte methodGuard) {
+        if (methodGuard < -113) {
             if (!(oc.field_e == null)) {
                 oc.field_e.close(-122);
                 oc.field_e = null;

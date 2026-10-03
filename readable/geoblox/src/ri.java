@@ -90,7 +90,7 @@ final class ri {
                       AchievementSubmission.field_k = -1;
                       break L6;
                     }
-                    Bzip2DecoderState.a((byte) -116);
+                    Bzip2DecoderState.closeSessionSocket((byte) -116);
                     ck.field_e = false;
                     stackIn_33_0 = var6_int;
                     return stackIn_33_0;
@@ -173,7 +173,7 @@ final class ri {
               }
               if ((PacketBuffer.field_l == ac.field_v) &&
                   (TriangleMesh.a(false))) {
-                Bzip2DecoderState.a((byte) -118);
+                Bzip2DecoderState.closeSessionSocket((byte) -118);
                 if ((ScorePopup.field_l == 7) &&
                     (!ck.field_e)) {
                   ck.field_e = true;

@@ -337,7 +337,7 @@ final class lc {
             }
             if (var2 != 4) {
               gi.a((Throwable) null, "F1: " + og.e(55), (byte) 125);
-              Bzip2DecoderState.a((byte) -119);
+              Bzip2DecoderState.closeSessionSocket((byte) -119);
               return;
             }
             MouseWheelInput.field_a = 1;

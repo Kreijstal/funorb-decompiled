@@ -151,7 +151,7 @@ final class ec {
     final static void a(int param0) {
         ph var1 = (ph) ((Object) UiWidget.field_p.firstForIteration(param0 ^ param0));
         if (!(var1 != null)) {
-            Bzip2DecoderState.a((byte) -122);
+            Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;
         }
         PacketBuffer var2 = eh.field_d;

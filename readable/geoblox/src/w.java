@@ -152,7 +152,7 @@ final class w {
             v.field_r = dupTemp$0;
             kh.field_e = dupTemp$0;
             if (1 != NetworkArchiveRequest.field_B.status) {
-                PacketBuffer.field_l = qi.field_h;
+                PacketBuffer.field_l = AchievementQuery.field_h;
             } else {
                 try {
                     oc.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.field_D);
@@ -167,7 +167,7 @@ final class w {
                     ke.writeConnectionHeader(qe.field_b, true, ok.field_f, mk.field_l, fj.field_q);
                     cm.a(param1 ^ -53, -1);
                 } catch (IOException iOException) {
-                    PacketBuffer.field_l = qi.field_h;
+                    PacketBuffer.field_l = AchievementQuery.field_h;
                 }
             }
             NetworkArchiveRequest.field_B = null;

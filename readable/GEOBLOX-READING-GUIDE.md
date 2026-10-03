@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 108)
+## Current readability (pass 109)
 
-The export has 8,503 guarded names and 66,358 identifier edits. All 303 sources
+The export has 8,556 guarded names and 66,611 identifier edits. All 303 sources
 compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
@@ -111,7 +111,7 @@ Complete assets/gameplay and browser/phone memory/startup/FPS targets remain
 unverified. Sections
 labeled with earlier passes below describe their historical counts and scope.
 
-## Gameplay achievements and submission (pass 108)
+## Gameplay achievements and submission (passes 108–109)
 
 Read `ra.recordAchievement(checkByte, guard, achievementId)` first. Tutorials
 and already-earned bits return immediately. A new achievement sets the newly
@@ -145,20 +145,50 @@ calls `ol.writeAchievementSubmissionPacket`.
 | Secondary tracking counter | 4 | Big-endian snapshot from `lb` |
 | CRC32 | 4 | CRC over the preceding 19 payload bytes |
 
-`ud.a(byte,int)` resends retained records; the type-1 response arm removes the
-first retained record. Those paths are source-audited, with login/ack/retry and
-server execution still unverified. Input handling mutates the tracking accumulator
-and counters and combines tracking bits with upper bits; their names describe
-observed client operations. Do not infer a complete server validation algorithm.
+`AchievementQuery` is the pending request/result holder. Read
+`cf.requestAchievementState`, `re.writeAchievementStateRequest` and
+`LoginPayloadKind.ensureAchievementStateRequested` for request creation and the
+singleton used by mask import. A request queues its holder before guard division
+and writes ciphered opcode, version 1 and subtype 2. `ud.resendAchievementMessages`
+resends retained submissions followed by one request per pending query; neither
+queue is consumed. This order and ownership matter during retries.
 
-The pass adds 64 identities while retaining all previous complete rule objects.
-The new fixed native/raw/readable trace covers 864 registration cases and 108
-independent packet/CRC checks. It uses a preloaded notification, so font/assets
-and empty-panel preparation are outside its scope. Existing seven recorded game
-probes establish controlled behavior; live network/server, full assets/gameplay
-and browser/phone performance remain unverified. Mixed-purpose static helpers
-remain on their original owner, including mesh projection on the newly named
-submission class; class names describe its instance role.
+`ud.handleAchievementResponse` reads one subtype byte:
+
+| Subtype | Input and queue effects |
+| --- | --- |
+| 0 | Reads byte count and big-endian ints into an eight-value array before checking the queue; stores values/completion/first mask and unlinks the oldest query. |
+| 1 | Unlinks the oldest unacknowledged submission. |
+| 2 | Stores eight zero values/zero mask, completes and unlinks the oldest query. |
+
+Empty queues close the session socket; unknown types log and close. Those paths
+use `Bzip2DecoderState.closeSessionSocket`, which keeps its original guard effect
+on avatar contact state. Real socket closure and unknown-type logging remain
+unverified. Counts above eight consume the ninth int before an array-bounds
+failure, leaving packet position 38 and the query unresolved; do not silently
+clamp the count or move the queue check before reading values.
+
+`je.updateAchievementSubmissions` imports a completed singleton mask once,
+removes its bits from the new mask and merges them into the earned mask, then
+conditionally drains pending submissions using the existing login gate.
+`AchievementQuery.hasReceivedAchievementSixteen` requires a positive mask as well
+as bit 16. Keep that signed comparison even though the predicate name identifies
+the bit. Input handling mutates tracking counters/accumulator and combines
+tracking bits with upper bits; their names describe client operations, not a
+complete server validation algorithm.
+
+Pass108 added 64 identities; pass109 adds 53 query/response/retry identities.
+Both retain all prior complete objects. The original fixed native/raw/readable
+trace covers 864 registration cases and 108 packet/CRC checks. An additional
+284-case trace verifies response order/counts, two-round retries, enqueue-before-
+guard failure and controlled received-mask import. The probe uses in-memory
+packets/queues, controlled flags and a null socket; it preloads a title notification
+so fonts/assets and empty-panel preparation remain outside its scope. The seven
+recorded game probes establish controlled behavior. Full login/reconnect/timing,
+live networking/server, assets/gameplay and browser/phone performance remain
+unverified. Static helpers stay on their original owner, including mesh projection
+on the submission class and cookies on the query class; class names describe
+instance roles.
 
 ## Menu to gameplay
 

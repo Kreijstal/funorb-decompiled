@@ -1141,8 +1141,8 @@ final class GameScreen extends MenuScreen {
                 }
               }
               if (120 == this.tutorialDemoTick) {
-                this.tutorialGeometryCategory = qi.b(7, 1);
-                this.tutorialGeometryVariant = qi.b(7, 1);
+                this.tutorialGeometryCategory = AchievementQuery.b(7, 1);
+                this.tutorialGeometryVariant = AchievementQuery.b(7, 1);
                 this.tutorialDemoTick = 0;
               }
               if ((this.tutorialPageIndex < 4) &&

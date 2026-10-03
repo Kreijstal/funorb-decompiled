@@ -39,7 +39,7 @@ final class kc {
           while (true) {
             L1: {
               if (md.field_c > var2_int) {
-                qi.field_i[param0 + var2_int] = var2_int;
+                AchievementQuery.field_i[param0 + var2_int] = var2_int;
                 var2_int++;
                 if (var3 != 0) {
                   break L1;

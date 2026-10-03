@@ -337,13 +337,13 @@ final class uk extends TextInputValidator {
     final static boolean g(int param0) {
         if (param0 < 29) {
             orbCoinSprite = (Sprite) null;
-            LoginPayloadKind.b(9313);
+            LoginPayloadKind.ensureAchievementStateRequested(9313);
             if (!fh.c(-117)) {
                 return hj.achievementMaskReceived ? true : false;
             }
             return true;
         }
-        LoginPayloadKind.b(9313);
+        LoginPayloadKind.ensureAchievementStateRequested(9313);
         if (fh.c(-117)) {
             return true;
         }

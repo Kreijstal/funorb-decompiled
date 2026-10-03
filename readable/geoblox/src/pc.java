@@ -39,22 +39,22 @@ final class pc extends IntrusiveNode {
             if (vh.g(-88)) {
                 fj.field_q.writeCipherByte(1, (byte) -27);
                 cm.a(-1, 0);
-                Bzip2DecoderState.a((byte) -126);
+                Bzip2DecoderState.closeSessionSocket((byte) -126);
                 return;
             }
-            Bzip2DecoderState.a((byte) -126);
+            Bzip2DecoderState.closeSessionSocket((byte) -126);
             return;
         }
         kj.c(-11099);
         hc.b(true);
         dk.a((byte) -121);
         if (!vh.g(-88)) {
-            Bzip2DecoderState.a((byte) -126);
+            Bzip2DecoderState.closeSessionSocket((byte) -126);
             return;
         }
         fj.field_q.writeCipherByte(1, (byte) -27);
         cm.a(-1, 0);
-        Bzip2DecoderState.a((byte) -126);
+        Bzip2DecoderState.closeSessionSocket((byte) -126);
     }
 
     final static void a(int param0, boolean param1) {
