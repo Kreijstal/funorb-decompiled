@@ -106,7 +106,7 @@ abstract class oe extends dd {
         RuntimeException var1_ref = null;
         var4 = Geoblox.field_C;
         try {
-          var5 = ch.field_d;
+          var5 = ch.meshFaceCountsByDepthBucket;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;

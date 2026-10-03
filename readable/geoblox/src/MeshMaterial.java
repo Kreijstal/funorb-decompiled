@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd {
-    int field_a;
+final class MeshMaterial {
+    int baseRgb;
 
     final static void a(java.applet.Applet param0, int param1) {
         int var2_int = 0;

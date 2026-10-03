@@ -53,16 +53,16 @@ final class jk {
         try {
           TriangleRasterState.prepareTriangleClipFromRasterizer();
           ok.field_g = 11;
-          jf.field_b = new int[260];
+          jf.meshSpecularResponseByAbsDot = new int[260];
           var1_int = -29 / ((param0 + 40) / 45);
           for (var2 = 0; 256 > var2; var2++) {
             var3 = 15.0;
-            jf.field_b[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));
+            jf.meshSpecularResponseByAbsDot[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));
           }
           var6 = 256;
           var1_int = var6;
-          while (jf.field_b.length > var6) {
-            jf.field_b[var6] = 255;
+          while (jf.meshSpecularResponseByAbsDot.length > var6) {
+            jf.meshSpecularResponseByAbsDot[var6] = 255;
             var6++;
           }
           return;

@@ -17,7 +17,8 @@ const expectedNativeSha256 = '16c92de1c3230786836344a4848c7046488b9cfa4a48078ca3
 const expectedSpritePixelsSha256 = 'c986ff493508bf516e6bd33e187ee51ed478a012dfebf467a8b76e00f78a1f09';
 const expectedSpriteTransformsSha256 = 'dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1';
 const expectedTriangleRasterSha256 = '3a708f0eb4343a68f9cd859b75cc6d42db0eda690188b95deb7619a998603760';
-let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null;
+const expectedMeshLightingSha256 = '8606f3fa1d8808bbfd5e5bfafe3b67872487172f07455401ac290acf79f5fdc6';
+let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null, expectedMeshLighting=null;
 try {
   if(nativeInput) {
     const files=[];
@@ -56,7 +57,8 @@ try {
       }
       public static void main(String[]args)throws Exception {
         if(args.length!=0){
-          if(args[0].equals("triangle-raster"))TriangleRasterBehavior.main(args);
+          if(args[0].equals("mesh-lighting"))MeshLightingBehavior.main(args);
+          else if(args[0].equals("triangle-raster"))TriangleRasterBehavior.main(args);
           else if(args[0].equals("sprite-transforms"))SpriteTransformBehavior.main(args);
           else SpritePixelBehavior.main(args);
           return;
@@ -85,6 +87,86 @@ try {
           System.out.println(result);cases++;
         }
         if(cases!=2592)throw new AssertionError(cases);
+      }
+    }
+    class MeshLightingBehavior extends TriangleRasterBehavior {
+      static String meshState(${type('nf')} mesh)throws Exception {
+        return java.util.Arrays.toString(mesh.${field('nf','field_O','[S')})+":"
+          +java.util.Arrays.toString(mesh.${field('nf','field_q','[S')})+":"
+          +java.util.Arrays.toString(mesh.${field('nf','field_K','[S')})+":"
+          +f("${type('nf')}","${field('nf','field_D','Z')}").getBoolean(mesh)+":"
+          +mesh.${field('nf','field_Q','I')}+":"+mesh.${field('nf','field_I','I')}+":"
+          +mesh.${field('nf','field_s','I')}+":"+mesh.${field('nf','field_H','I')}+":"
+          +mesh.${field('nf','field_F','I')}+":"+mesh.${field('nf','field_N','I')}+":"
+          +(mesh.${field('nf','field_g','[S')}==null);
+      }
+      public static void main(String[] args)throws Exception {
+        trace=MessageDigest.getInstance("SHA-256");cases=0;int drawCases=0,transformCases=0;
+        int[][] shapes={{2,1,12,4,6,9},{-4,-3,4,2,16,14},{2,4,2,4,2,4}};
+        int[][] directions={{256,0,0,128,128,0},{0,0,256,0,0,256},{-128,128,-128,128,0,-128},
+          {Integer.MIN_VALUE,0,0,Integer.MAX_VALUE,0,0}};
+        for(int[] shape:shapes)for(int normalMode=0;normalMode<4;normalMode++)for(int materialMode=0;materialMode<4;materialMode++)
+        for(int priorityMode=0;priorityMode<3;priorityMode++)for(int[] direction:directions)
+        for(int guard:new int[]{6562,0})for(int flag:new int[]{-1,0,1})for(int fault=0;fault<3;fault++) {
+          int[] pixels=background(240);viewport(pixels,new int[]{0,0,20,12});
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);
+          ${type('nf')} mesh=new ${type('nf')}();mesh.${field('nf','field_m','S')}=3;
+          mesh.${field('nf','field_r','[S')}=new short[]{0,0,0};mesh.${field('nf','field_B','[S')}=new short[]{1,2,1};
+          mesh.${field('nf','field_c','[S')}=new short[]{2,1,2};
+          mesh.${field('nf','field_P','[S')}=new short[]{0,0,0};
+          mesh.${field('nf','field_u','[S')}=new short[]{0,1,1};mesh.${field('nf','field_e','[S')}=new short[]{0,2,2};
+          if(normalMode==0){mesh.${field('nf','field_u','[S')}=new short[]{0,0,0};mesh.${field('nf','field_e','[S')}=new short[]{0,0,0};}
+          if(normalMode==2)mesh.${field('nf','field_u','[S')}[1]=9;
+          if(normalMode==3)mesh.${field('nf','field_P','[S')}[2]=-1;
+          mesh.${field('nf','field_n','[B')}=priorityMode==0?null:new byte[]{2,0,1};mesh.${field('nf','field_v','B')}=(byte)(priorityMode==2?3:1);
+          mesh.${field('nf','field_G','[S')}=materialMode==0?null:materialMode==1?new short[]{-1,0,1}
+            :materialMode==2?new short[]{99,0,1}:new short[]{-2,0,1};
+          ${type('fd')} first=new ${type('fd')}(),second=new ${type('fd')}();
+          first.${field('fd','field_a','I')}=0xff1203;second.${field('fd','field_a','I')}=0x01ee80;
+          ${type('l')}.${field('l','field_i','[Lfd;')}=materialMode==0?null:new ${type('fd')}[]{first,second};
+          ${type('ok')}.${field('ok','field_h','[I')}=fault==2?null:new int[]{256,0,-256};
+          ${type('oa')}.${field('oa','field_f','[I')}=new int[]{0,256,0};${type('gi')}.${field('gi','field_b','[I')}=new int[]{0,0,256};
+          ${type('sh')}.${field('sh','field_x','[I')}=new int[]{shape[0],shape[2],shape[4]};
+          ${type('dj')}.${field('dj','field_N','[I')}=new int[]{shape[1],shape[3],shape[5]};
+          ${type('jf')}.${field('jf','field_b','[I')}=new int[260];
+          for(int i=0;i<256;i++)${type('jf')}.${field('jf','field_b','[I')}[i]=(int)(255.0*Math.pow((float)i/256.0f,15.0));
+          for(int i=256;i<260;i++)${type('jf')}.${field('jf','field_b','[I')}[i]=255;
+          ${type('ch')}.${field('ch','field_b','I')}=3;${type('ch')}.${field('ch','field_d','[I')}=new int[]{1,1,1,0};
+          ${type('pj')}.${field('pj','field_i','[I')}=new int[64];java.util.Arrays.fill(${type('pj')}.${field('pj','field_i','[I')},-99);
+          ${type('pj')}.${field('pj','field_i','[I')}[0]=0;${type('pj')}.${field('pj','field_i','[I')}[16]=1;${type('pj')}.${field('pj','field_i','[I')}[32]=2;
+          ${type('uh')}.${field('uh','field_x','[I')}=new int[128];${type('uh')}.${field('uh','field_x','[I')}[1]=1;${type('uh')}.${field('uh','field_x','[I')}[2]=2;
+          Throwable error=null;
+          try {${call('hi','a(IIIIILnf;II)V')}(direction[5],direction[2],direction[3],guard,direction[0],fault==1?null:mesh,direction[4],direction[1]);}
+          catch(RuntimeException caught){error=caught;}
+          record("mesh:"+failure(error)+":"+java.util.Arrays.toString(${type('pj')}.${field('pj','field_i','[I')})
+            +":"+java.util.Arrays.toString(${type('uh')}.${field('uh','field_x','[I')}),pixels);drawCases++;
+        }
+        f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,0);
+        for(int operation=0;operation<3;operation++)for(int seed=0;seed<4;seed++)for(boolean cached:new boolean[]{false,true})
+        for(int fault=0;fault<4;fault++)for(int variant=0;variant<(operation==0?3:2);variant++) {
+          ${type('nf')} mesh=new ${type('nf')}();mesh.${field('nf','field_o','S')}=3;
+          mesh.${field('nf','field_O','[S')}=new short[]{(short)(seed*17001),-32768,32767};
+          mesh.${field('nf','field_q','[S')}=new short[]{-7,(short)(seed*-11111),9};
+          mesh.${field('nf','field_K','[S')}=new short[]{300,-2,(short)(seed*22223)};
+          if(fault==1)mesh.${field('nf','field_O','[S')}=null;
+          if(fault==2)mesh.${field('nf','field_q','[S')}=new short[]{8};
+          if(fault==3)mesh.${field('nf','field_K','[S')}=null;
+          mesh.${field('nf','field_g','[S')}=new short[]{123};
+          mesh.${field('nf','field_Q','I')}=91;mesh.${field('nf','field_I','I')}=92;
+          mesh.${field('nf','field_s','I')}=93;mesh.${field('nf','field_H','I')}=94;
+          mesh.${field('nf','field_F','I')}=95;mesh.${field('nf','field_N','I')}=96;
+          f("${type('nf')}","${field('nf','field_D','Z')}").setBoolean(mesh,cached);
+          Throwable error=null;
+          try {
+            if(operation==0)mesh.${name('M:nf.a(IIBII)V','a')}(seed*-9123,new int[]{0,-3,7}[variant],(byte)100,seed*1234567,seed+3);
+            else if(operation==1)mesh.${name('M:nf.a(IIII)V','a')}(seed*-40000,seed*70000,variant==0?-9121:0,seed*90001);
+            else mesh.${name('M:nf.a(B)V','a')}((byte)(variant==0?-99:0));
+          }catch(RuntimeException caught){error=caught;}
+          record("transform:"+operation+":"+failure(error)+":"+meshState(mesh),null);transformCases++;
+        }
+        if(drawCases!=10368||transformCases!=224||cases!=10592)throw new AssertionError("mesh case inventory");
+        StringBuilder sha=new StringBuilder();for(byte value:trace.digest())sha.append(String.format("%02x",value&255));
+        System.out.println("mesh-lighting:"+cases+":"+drawCases+":"+transformCases+":"+sha);
       }
     }
     class TriangleRasterBehavior {
@@ -614,6 +696,13 @@ try {
     assert.equal(triangleSha,expectedTriangleRasterSha256,variant+': fixed native triangle-raster trace');
     if(expectedTriangleRaster===null)expectedTriangleRaster=triangleOutput;
     else assert.deepEqual(triangleOutput,expectedTriangleRaster,variant+': triangle pixels, viewport state and failure mutations');
+    const meshOutput=captureProcess('java',['-Djava.awt.headless=true','-cp',classes+path.delimiter+cp,'NineSliceBehavior','mesh-lighting']).stdout;
+    const meshSha=crypto.createHash('sha256').update(meshOutput).digest('hex');
+    console.log(JSON.stringify({variant,meshLightingTrace:meshOutput.toString().trim(),sha256:meshSha}));
+    assert.match(meshOutput.toString(),/^mesh-lighting:10592:10368:224:[a-f0-9]{64}\n$/);
+    assert.equal(meshSha,expectedMeshLightingSha256,variant+': fixed native mesh-lighting trace');
+    if(expectedMeshLighting===null)expectedMeshLighting=meshOutput;
+    else assert.deepEqual(meshOutput,expectedMeshLighting,variant+': model lighting, ordering, transforms, bounds and failure mutations');
   }
 }catch(error){if(error.stderr)process.stderr.write(error.stderr);throw error;}
 finally{fs.rmSync(temporary,{recursive:true,force:true});}

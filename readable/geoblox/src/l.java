@@ -4,15 +4,15 @@
 final class l extends oj {
     static IntrusiveDeque field_g;
     private java.nio.ByteBuffer field_f;
-    static fd[] field_i;
+    static MeshMaterial[] meshMaterials;
     static ResourceArchive field_h;
 
     public static void b(int param0) {
         field_g = null;
-        field_i = null;
+        meshMaterials = null;
         field_h = null;
         if (param0 > -1) {
-            field_i = (fd[]) null;
+            meshMaterials = (MeshMaterial[]) null;
         }
     }
 

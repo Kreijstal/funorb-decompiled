@@ -10,7 +10,7 @@ final class gi implements Iterable {
     static gk field_d;
     private IntrusiveNode field_f;
     int field_c;
-    static int[] field_b;
+    static int[] transformedMeshNormalZ;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new k((gi) (this)));
@@ -51,7 +51,7 @@ final class gi implements Iterable {
             var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
             param2.previousNode = var5.previousNode;
             if (param1 > -48) {
-                field_b = (int[]) null;
+                transformedMeshNormalZ = (int[]) null;
             }
             param2.nextNode = var5;
             param2.previousNode.nextNode = param2;
@@ -80,7 +80,7 @@ final class gi implements Iterable {
         try {
           archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 126, groupName);
           if (methodGuard != 1) {
-            field_b = (int[]) null;
+            transformedMeshNormalZ = (int[]) null;
           }
           archiveFileId = glyphGraphicsArchive.findFileId(resourceName, methodGuard ^ -82, archiveGroupId);
           fontBeforeReturn = rb.loadMonochromeFontById(archiveFileId, 0, glyphGraphicsArchive, archiveGroupId, fontMetricsArchive);
@@ -263,7 +263,7 @@ final class gi implements Iterable {
             return;
         }
         field_d = null;
-        field_b = null;
+        transformedMeshNormalZ = null;
     }
 
     private gi() throws Throwable {
@@ -297,6 +297,6 @@ final class gi implements Iterable {
     static {
         avatarBlinkClockTicks = 0;
         field_d = new gk();
-        field_b = new int[8192];
+        transformedMeshNormalZ = new int[8192];
     }
 }

@@ -22,7 +22,7 @@ final class ck {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        nf var4_ref_nf = null;
+        TriangleMesh var4_ref_nf = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -42,7 +42,7 @@ final class ck {
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        nf var17 = null;
+        TriangleMesh var17 = null;
         var19 = Geoblox.field_C;
         try {
           IntKeyLookup.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
@@ -52,11 +52,11 @@ final class ck {
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_nf = ArchiveIndex.field_l[var3];
-            var4_ref_nf.a((byte) -99);
+            var4_ref_nf.refreshBounds((byte) -99);
             Geoblox.a((byte) -112, var3);
-            var5 = var4_ref_nf.field_Q + var4_ref_nf.field_I >> 1;
-            var6 = var4_ref_nf.field_s + var4_ref_nf.field_H >> 1;
-            var7 = var4_ref_nf.field_N + var4_ref_nf.field_F >> 1;
+            var5 = var4_ref_nf.minX + var4_ref_nf.maxX >> 1;
+            var6 = var4_ref_nf.minY + var4_ref_nf.maxY >> 1;
+            var7 = var4_ref_nf.maxZ + var4_ref_nf.minZ >> 1;
             var8 = IntKeyLookup.field_a[9] >> 2;
             var9 = IntKeyLookup.field_a[10] >> 2;
             var10_int = IntKeyLookup.field_a[11] >> 2;
@@ -105,7 +105,7 @@ final class ck {
               lk.field_f[var18] = lk.field_f[var18] + pi.field_R[var15][var18];
             }
             p.a(IntKeyLookup.field_a, lk.field_f, var17, true, false, false, true);
-            hi.a(var14, var9, var12, 6562, var7, var17, var13, var8);
+            hi.renderLitQueuedMeshFaces(var14, var9, var12, 6562, var7, var17, var13, var8);
           }
           var15 = 123 / ((48 - param0) / 59);
           return;

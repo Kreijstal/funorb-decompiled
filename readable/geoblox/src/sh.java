@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class sh extends el implements ql {
     static AwtRasterBuffer mainRasterBuffer;
-    static int[] field_x;
+    static int[] projectedMeshVertexX;
     static String field_z;
     el field_A;
 
@@ -191,7 +191,7 @@ abstract class sh extends el implements ql {
               eh.field_d.position = 0;
               p.field_k = param1[pc.field_f];
             }
-            if (!nf.a(false)) {
+            if (!TriangleMesh.a(false)) {
               return false;
             }
             if (ab.field_b == 0) {
@@ -477,7 +477,7 @@ abstract class sh extends el implements ql {
             this.field_A.c(-73);
         }
         if (!param0) {
-            field_x = (int[]) null;
+            projectedMeshVertexX = (int[]) null;
         }
     }
 
@@ -487,7 +487,7 @@ abstract class sh extends el implements ql {
         }
         mainRasterBuffer = null;
         field_z = null;
-        field_x = null;
+        projectedMeshVertexX = null;
     }
 
     void a(boolean param0, int param1, el param2, int param3) {
@@ -557,7 +557,7 @@ abstract class sh extends el implements ql {
     }
 
     static {
-        field_x = new int[8192];
+        projectedMeshVertexX = new int[8192];
         field_z = "FPS: <%0>";
     }
 }

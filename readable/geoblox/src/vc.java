@@ -28,10 +28,10 @@ final class vc extends dk {
           if (param0 != 2971) {
             return;
           }
-          var1_int = ch.field_d[0];
-          for (var2 = 1; var2 < ch.field_d.length; var2++) {
-            var3 = ch.field_d[var2];
-            sf.a(pj.field_i, var2 << 4, pj.field_i, var1_int, var3);
+          var1_int = ch.meshFaceCountsByDepthBucket[0];
+          for (var2 = 1; var2 < ch.meshFaceCountsByDepthBucket.length; var2++) {
+            var3 = ch.meshFaceCountsByDepthBucket[var2];
+            sf.a(pj.meshFaceOrder, var2 << 4, pj.meshFaceOrder, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

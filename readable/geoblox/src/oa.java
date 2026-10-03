@@ -7,7 +7,7 @@ final class oa {
     static Sprite[] field_e;
     static String[] subscriptionMonthlyCostTexts;
     static int field_a;
-    static int[] field_f;
+    static int[] transformedMeshNormalY;
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
@@ -57,11 +57,11 @@ final class oa {
         field_b = null;
         subscriptionMonthlyCostTexts = null;
         field_e = null;
-        field_f = null;
+        transformedMeshNormalY = null;
     }
 
     static {
-        field_f = new int[8192];
+        transformedMeshNormalY = new int[8192];
         subscriptionMonthlyCostTexts = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
     }
 }

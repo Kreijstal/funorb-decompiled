@@ -13,7 +13,7 @@ final class p extends IntrusiveNode {
     static int field_k;
     int field_f;
 
-    final static void a(int[] param0, int[] param1, nf param2, boolean param3, boolean param4, boolean param5, boolean param6) {
+    final static void a(int[] param0, int[] param1, TriangleMesh param2, boolean param3, boolean param4, boolean param5, boolean param6) {
         int stackIn_66_0 = 0;
         int stackIn_66_1 = 0;
         RuntimeException stackIn_71_0 = null;
@@ -85,10 +85,10 @@ final class p extends IntrusiveNode {
           var23 = 0;
           while (true) {
             L3: {
-              if (param2.field_o > var23) {
-                var24 = param2.field_O[var23];
-                var25 = param2.field_q[var23];
-                var26 = param2.field_K[var23];
+              if (param2.vertexCount > var23) {
+                var24 = param2.vertexX[var23];
+                var25 = param2.vertexY[var23];
+                var26 = param2.vertexZ[var23];
                 var27 = (var24 * var12 + var25 * var15 + var18 * var26 >> -ok.field_g + 16) + var9;
                 var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
                 var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
@@ -99,8 +99,8 @@ final class p extends IntrusiveNode {
                 }
                 L5: {
                   if (stackIn_66_0 >= stackIn_66_1) {
-                    sh.field_x[var23] = var27 / var29 + var21;
-                    dj.field_N[var23] = var22 + var28 / var29;
+                    sh.projectedMeshVertexX[var23] = var27 / var29 + var21;
+                    dj.projectedMeshVertexY[var23] = var22 + var28 / var29;
                     if (~var29 > ~var7_int) {
                       var7_int = var29;
                     }
@@ -189,10 +189,10 @@ final class p extends IntrusiveNode {
                   var17 = param1[11];
                   var18 = 0;
                   while (true) {
-                    if (~param2.field_m >= ~var18) {
+                    if (~param2.normalCount >= ~var18) {
                       break L12;
                     }
-                    stackIn_66_0 = ok.field_h.length;
+                    stackIn_66_0 = ok.transformedMeshNormalX.length;
                     stackIn_66_1 = var18;
                     if (var30 != 0) {
                       break L3;
@@ -200,12 +200,12 @@ final class p extends IntrusiveNode {
                     if (stackIn_66_0 <= stackIn_66_1) {
                       break L12;
                     }
-                    var19 = param2.field_M[var18];
-                    var20 = param2.field_t[var18];
-                    var21 = param2.field_i[var18];
-                    ok.field_h[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
-                    oa.field_f[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
-                    gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
+                    var19 = param2.normalX[var18];
+                    var20 = param2.normalY[var18];
+                    var21 = param2.normalZ[var18];
+                    ok.transformedMeshNormalX[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
+                    oa.transformedMeshNormalY[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
+                    gi.transformedMeshNormalZ[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                     var18++;
                     if (var30 == 0) {
                       continue;

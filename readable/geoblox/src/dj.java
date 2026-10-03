@@ -12,7 +12,7 @@ class dj extends hk {
     static byte[][] field_I;
     private int field_M;
     private long field_O;
-    static int[] field_N;
+    static int[] projectedMeshVertexY;
 
     private final void g(int param0) {
         int var2 = 0;
@@ -208,7 +208,7 @@ class dj extends hk {
         if (param0 != -15) {
             return;
         }
-        field_N = null;
+        projectedMeshVertexY = null;
         field_I = (byte[][]) null;
     }
 
@@ -606,6 +606,6 @@ class dj extends hk {
     static {
         diskSectorBuffer = new byte[520];
         field_I = new byte[1000][];
-        field_N = new int[8192];
+        projectedMeshVertexY = new int[8192];
     }
 }

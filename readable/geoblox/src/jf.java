@@ -5,7 +5,7 @@ final class jf implements dh {
     private int field_i;
     static int field_g;
     private int field_d;
-    static int[] field_b;
+    static int[] meshSpecularResponseByAbsDot;
     private int field_e;
     static int avatarTintFadeTicks;
     static Sprite rotatedThemeForegroundRaster;
@@ -145,7 +145,7 @@ final class jf implements dh {
     public static void b(byte param0) {
         rotatedThemeForegroundRaster = null;
         int var1 = 14 % ((param0 - 27) / 47);
-        field_b = null;
+        meshSpecularResponseByAbsDot = null;
     }
 
     final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5) {

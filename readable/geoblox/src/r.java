@@ -68,7 +68,7 @@ final class r extends f implements pl {
           } else {
             if (!this.field_vb) {
               if (param1.field_j == 5) {
-                var5.a(nf.reloadGameText, 1, 11);
+                var5.a(TriangleMesh.reloadGameText, 1, 11);
                 var5.a(rj.quitToWebsiteText, 1, 17);
               } else {
                 var5.a(ll.backText, 1, -1);

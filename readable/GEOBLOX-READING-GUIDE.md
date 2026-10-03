@@ -2843,3 +2843,56 @@ including all vertex permutations, flat/clipped triangles, RGB inputs, guards
 and control flags. Complete triangle geometry has no independent oracle here;
 whole-model/real-asset rendering, remaining opaque helpers and large bodies,
 full gameplay and browser/phone performance remain unverified.
+
+## Mesh lighting and coordinate operations (pass 81)
+
+`TriangleMesh` supplies short XYZ vertex positions and normal components plus
+face vertex/normal/material indices. The selected fields now expose those roles,
+along with priorities and the cached bounding box. Other mesh arrays/static
+helpers are still opaque. `MeshMaterial.baseRgb` names the per-material color;
+unrelated static helpers retain their mixed obfuscated owner.
+
+`p` transforms the normal components into `ok.transformedMeshNormalX`,
+`oa.transformedMeshNormalY` and `gi.transformedMeshNormalZ`, and projects vertices
+into `sh.projectedMeshVertexX` and `dj.projectedMeshVertexY`. Face collection fills
+`ch.meshFaceCountsByDepthBucket` and `pj.meshFaceOrder`. Before drawing,
+`hi.renderLitQueuedMeshFaces` either compacts depth buckets or groups faces by
+priority using `uh.meshFacePriorityWriteOffsets`. `facePriorityCount` is one
+plus the largest unsigned priority, including gaps; it is not a distinct count.
+This preparation still happens before checking the method guard.
+
+`ck` supplies light and half-vector components normalized to 256. Diffuse
+response shifts the normal/light dot product right by eight before taking its
+absolute value, clamps the ambient-plus-
+diffuse value, and attenuates it by the specular response. Specular response
+indexes `jf.meshSpecularResponseByAbsDot` with the absolute value of the already
+shifted normal/half-vector dot product; `jk` builds the original power-15 table. Original overflow and
+out-of-range behavior remains. Missing materials select gray 8355711; negative
+indices other than the -1 sentinel retain their failures.
+
+Faces with identical normal indices use the existing flat triangle helper.
+Other faces compute three lit RGB values and use `nb.drawHalfBlendRgbTriangle`.
+The original masks and shifts remain, including their differing values across
+the flat and smooth branches. Combined names describe slots reused between those
+branches; the three diffuse-array aliases remain explicit.
+
+`TriangleMesh.scaleVertices` and `translateVertices` retain short narrowing and
+partial XYZ writes before invalidating bounds. `refreshBounds` returns when
+`boundsValid` is already true; otherwise it sets that flag before scanning and
+publishes min/max XYZ. A failed scan can therefore leave the flag true with
+old bounds. Bad guards preserve the original array-nulling/static-call effects.
+All parameters/locals in these operations and the lighting caller have names.
+
+The pass adds 130 guarded identities. All 6,197 previous complete rules and the
+raw/decompiler pins remain. The 6,327 rules apply 51,424 identifier edits,
+preserving 138,502 bindings and 388 override relationships. Reproduction and
+dictionary reversal match all 303 files byte-for-byte.
+
+The drawing probe adds 10,592 native/raw/readable trace comparisons: 10,368
+lighting/order/failure cases and 224 transform/bounds cases. It records pixel
+buffers, queue/priority mutations, failure contexts, coordinate arrays and cache
+state, including invalid inputs and partial stores. Existing triangle/sprite/
+nine-slice traces retain their pins. This is not an independent complete lighting
+or model oracle. Model loading/preparation, opaque fields/static helpers, flat
+raster structure, full assets/gameplay and browser/phone performance remain
+unfinished or unverified.

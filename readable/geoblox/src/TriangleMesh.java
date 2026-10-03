@@ -1,63 +1,63 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf {
+final class TriangleMesh {
     short[] field_J;
-    byte[] field_n;
+    byte[] facePriorities;
     static int field_w;
     int[] field_l;
     int[] field_d;
-    short[] field_i;
-    short[] field_B;
-    short[] field_M;
+    short[] normalZ;
+    short[] faceVertexB;
+    short[] normalX;
     int[] field_x;
     short[] field_z;
-    byte field_v;
-    int field_Q;
+    byte facePriorityCount;
+    int minX;
     int[] field_y;
-    int field_N;
+    int maxZ;
     int[] field_p;
     int[] field_a;
-    short[] field_e;
-    short[] field_u;
-    short[] field_K;
-    short[] field_O;
+    short[] faceNormalC;
+    short[] faceNormalB;
+    short[] vertexZ;
+    short[] vertexX;
     short field_f;
     static int screenTransitionTick;
     int[] field_b;
-    private boolean field_D;
+    private boolean boundsValid;
     int[] field_L;
-    short[] field_c;
-    short[] field_P;
-    short[] field_r;
+    short[] faceVertexC;
+    short[] faceNormalA;
+    short[] faceVertexA;
     int[] field_C;
     static String reloadGameText;
     short[] field_h;
-    int field_H;
-    short[] field_G;
-    short field_m;
+    int maxY;
+    short[] faceMaterialIndices;
+    short normalCount;
     short[] field_g;
-    short[] field_t;
+    short[] normalY;
     static IntrusiveDeque field_j;
-    int field_s;
+    int minY;
     short[] field_k;
-    int field_I;
-    int field_F;
-    short[] field_q;
-    short field_o;
+    int maxX;
+    int minZ;
+    short[] vertexY;
+    short vertexCount;
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = Geoblox.field_C;
-        for (var6 = 0; var6 < this.field_o; var6++) {
-            this.field_O[var6] = (short)(param3 * this.field_O[var6] / param1);
-            this.field_q[var6] = (short)(this.field_q[var6] * param0 / param1);
-            this.field_K[var6] = (short)(this.field_K[var6] * param4 / param1);
+    final void scaleVertices(int scaleY, int divisor, byte guard, int scaleX, int scaleZ) {
+        int vertexIndex = 0;
+        int controlFlagSnapshot = Geoblox.field_C;
+        for (vertexIndex = 0; vertexIndex < this.vertexCount; vertexIndex++) {
+            this.vertexX[vertexIndex] = (short)(scaleX * this.vertexX[vertexIndex] / divisor);
+            this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] * scaleY / divisor);
+            this.vertexZ[vertexIndex] = (short)(this.vertexZ[vertexIndex] * scaleZ / divisor);
         }
-        if (param2 <= 69) {
-            nf.a(-90, 1, 93);
+        if (guard <= 69) {
+            TriangleMesh.a(-90, 1, 93);
         }
-        this.a(-7008);
+        this.invalidateBounds(-7008);
     }
 
     final static int chooseSpawnSpriteVariant(byte methodGuard) {
@@ -71,80 +71,80 @@ final class nf {
         field_j = null;
         reloadGameText = null;
         if (param0 != 115) {
-            nf.a(124, -30, -53);
+            TriangleMesh.a(124, -30, -53);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = Geoblox.field_C;
-        for (var5 = 0; this.field_o > var5; var5++) {
-            this.field_O[var5] = (short)(this.field_O[var5] + param0);
-            this.field_q[var5] = (short)(this.field_q[var5] + param1);
-            this.field_K[var5] = (short)(this.field_K[var5] + param3);
+    final void translateVertices(int deltaX, int deltaY, int guard, int deltaZ) {
+        int vertexIndex = 0;
+        int controlFlagSnapshot = Geoblox.field_C;
+        for (vertexIndex = 0; this.vertexCount > vertexIndex; vertexIndex++) {
+            this.vertexX[vertexIndex] = (short)(this.vertexX[vertexIndex] + deltaX);
+            this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] + deltaY);
+            this.vertexZ[vertexIndex] = (short)(this.vertexZ[vertexIndex] + deltaZ);
         }
-        this.a(-7008);
-        if (param2 != -9121) {
+        this.invalidateBounds(-7008);
+        if (guard != -9121) {
             this.field_g = (short[]) null;
         }
     }
 
-    final void a(byte param0) {
-        int var8 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        var12 = Geoblox.field_C;
-        if (this.field_D) {
+    final void refreshBounds(byte guard) {
+        int vertexIndex = 0;
+        int minimumX;
+        int minimumY;
+        int minimumZ;
+        int maximumX;
+        int maximumY;
+        int maximumZ;
+        int vertexXValue;
+        int vertexYValue;
+        int vertexZValue;
+        int controlFlagSnapshot;
+        controlFlagSnapshot = Geoblox.field_C;
+        if (this.boundsValid) {
           return;
         }
-        this.field_D = true;
-        var2 = 32767;
-        var3 = 32767;
-        var4 = 32767;
-        var5 = -32768;
-        var6 = -32768;
-        var7 = -32768;
-        for (var8 = 0; this.field_o > var8; var8++) {
-          var9 = this.field_O[var8];
-          var10 = this.field_q[var8];
-          if (~var10 > ~var3) {
-            var3 = var10;
+        this.boundsValid = true;
+        minimumX = 32767;
+        minimumY = 32767;
+        minimumZ = 32767;
+        maximumX = -32768;
+        maximumY = -32768;
+        maximumZ = -32768;
+        for (vertexIndex = 0; this.vertexCount > vertexIndex; vertexIndex++) {
+          vertexXValue = this.vertexX[vertexIndex];
+          vertexYValue = this.vertexY[vertexIndex];
+          if (~vertexYValue > ~minimumY) {
+            minimumY = vertexYValue;
           }
-          if (var6 < var10) {
-            var6 = var10;
+          if (maximumY < vertexYValue) {
+            maximumY = vertexYValue;
           }
-          var11 = this.field_K[var8];
-          if (var9 < var2) {
-            var2 = var9;
+          vertexZValue = this.vertexZ[vertexIndex];
+          if (vertexXValue < minimumX) {
+            minimumX = vertexXValue;
           }
-          if (var9 > var5) {
-            var5 = var9;
+          if (vertexXValue > maximumX) {
+            maximumX = vertexXValue;
           }
-          if (var11 > var7) {
-            var7 = var11;
+          if (vertexZValue > maximumZ) {
+            maximumZ = vertexZValue;
           }
-          if (var4 <= var11) {
+          if (minimumZ <= vertexZValue) {
             continue;
           }
-          var4 = var11;
+          minimumZ = vertexZValue;
         }
-        this.field_H = var6;
-        this.field_s = var3;
-        this.field_F = var4;
-        this.field_I = var5;
-        if (param0 != -99) {
-          this.field_K = (short[]) null;
+        this.maxY = maximumY;
+        this.minY = minimumY;
+        this.minZ = minimumZ;
+        this.maxX = maximumX;
+        if (guard != -99) {
+          this.vertexZ = (short[]) null;
         }
-        this.field_Q = var2;
-        this.field_N = var7;
+        this.minX = minimumX;
+        this.maxZ = maximumZ;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -263,16 +263,16 @@ final class nf {
         return el.b(30000, p.field_k);
     }
 
-    private final void a(int param0) {
-        this.field_D = false;
-        if (param0 != -7008) {
-            nf.a(-110, 99, 92);
+    private final void invalidateBounds(int guard) {
+        this.boundsValid = false;
+        if (guard != -7008) {
+            TriangleMesh.a(-110, 99, 92);
         }
     }
 
-    nf() {
-        this.field_D = false;
-        this.field_v = (byte) 0;
+    TriangleMesh() {
+        this.boundsValid = false;
+        this.facePriorityCount = (byte) 0;
     }
 
     static {

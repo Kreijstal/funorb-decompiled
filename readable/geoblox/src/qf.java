@@ -182,7 +182,7 @@ abstract class qf extends oe {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new ai(param1, param6, param0, param5, param2, param8, param4);
-          nf.field_j.addLast(param3 ^ -25202, var9);
+          TriangleMesh.field_j.addLast(param3 ^ -25202, var9);
           ArchiveIndex.a(var9, param7, param3 ^ -25169);
           if (param3 == 25134) {
             stackIn_4_0 = (ai) (var9);

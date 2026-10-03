@@ -103,209 +103,209 @@ final class hi extends ee implements ta, pl {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, nf param5, int param6, int param7) {
-        int stackIn_18_0 = 0;
-        int[] stackIn_20_0 = null;
-        int stackIn_21_1 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_33_0 = 0;
-        fd stackIn_40_0 = null;
-        int stackIn_45_0 = 0;
-        int stackIn_49_0 = 0;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        String stackIn_55_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] var8 = null;
-        RuntimeException var8_ref = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        fd var21 = null;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int[] var41 = null;
-        nf var44 = null;
-        int[] var49 = null;
-        int[] var54 = null;
-        byte[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
-        int[] var63 = null;
-        int[] var64 = null;
-        var40 = Geoblox.field_C;
+    final static void renderLitQueuedMeshFaces(int halfVectorZQ8, int lightDirectionZQ8, int halfVectorXQ8, int guard, int lightDirectionXQ8, TriangleMesh mesh, int halfVectorYQ8, int lightDirectionYQ8) {
+        int diffuseResponseCandidate = 0;
+        int[] specularResponseTableSnapshot = null;
+        int absoluteHalfVectorDot = 0;
+        int faceNormalAIndexOrMissing = 0;
+        int faceNormalBIndexOrMissing = 0;
+        int faceNormalCIndexOrMissing = 0;
+        MeshMaterial faceMaterialOrNull = null;
+        int flatBaseRgbOrDefault = 0;
+        int smoothBaseRgbOrDefault = 0;
+        RuntimeException renderFailureBeforeContext = null;
+        StringBuilder renderMessagePrefix = null;
+        String meshDescription = null;
+        RuntimeException caughtRenderFailure = null;
+        int[] diffuseResponsesThirdAlias = null;
+        RuntimeException renderFailure = null;
+        int normalOrFaceQueueIndex = 0;
+        int diffuseResponseOrFaceIndex = 0;
+        int specularResponseOrVertexA = 0;
+        int faceVertexB = 0;
+        int faceVertexC = 0;
+        int faceNormalA = 0;
+        int faceNormalB = 0;
+        int faceNormalC = 0;
+        MeshMaterial faceMaterial = null;
+        int vertexAX = 0;
+        int vertexAY = 0;
+        int vertexBX = 0;
+        int vertexBY = 0;
+        int vertexCX = 0;
+        int vertexCY = 0;
+        int diffuseA = 0;
+        int flatSpecularOrDiffuseB = 0;
+        int flatBaseRgbOrDiffuseC = 0;
+        int flatRedBlueMaskOrSpecularA = 0;
+        int flatGreenMaskOrSpecularB = 0;
+        int flatLitRgbOrSpecularC = 0;
+        int smoothBaseRgb = 0;
+        int smoothRedBlueMask = 0;
+        int smoothGreenMask = 0;
+        int vertexALitRgb = 0;
+        int vertexBLitRgb = 0;
+        int vertexCLitRgb = 0;
+        int controlFlagSnapshot = 0;
+        int[] diffuseResponsesSecondAlias = null;
+        TriangleMesh meshForPriorityDecision = null;
+        int[] diffuseResponsesFirstAlias = null;
+        int[] diffuseResponses = null;
+        byte[] facePriorities = null;
+        int[] transformedNormalsY = null;
+        int[] transformedNormalsX = null;
+        int[] transformedNormalsZ = null;
+        int[] specularResponses = null;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
           L0: {
-            var44 = param5;
-            if (null != var44.field_n) {
-              if (var44.field_v > 1) {
-                var60 = var44.field_n;
-                va.a(0, var60, 0, uh.field_x, (byte) -85);
+            meshForPriorityDecision = mesh;
+            if (null != meshForPriorityDecision.facePriorities) {
+              if (meshForPriorityDecision.facePriorityCount > 1) {
+                facePriorities = meshForPriorityDecision.facePriorities;
+                va.a(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
                 break L0;
               }
             }
             vc.d(2971);
           }
-          if (param3 != 6562) {
+          if (guard != 6562) {
             return;
           }
-          var54 = new int[param5.field_m];
-          var49 = var54;
-          var41 = var49;
-          var8 = var41;
-          var64 = new int[param5.field_m];
-          var62 = ok.field_h;
-          var61 = oa.field_f;
-          var63 = gi.field_b;
-          for (var13 = 0; param5.field_m > var13; var13++) {
-            var14 = var61[var13] * param7 + param4 * var62[var13] + var63[var13] * param1 >> 8;
-            if (0 > var14) {
-              var14 = -var14;
+          diffuseResponses = new int[mesh.normalCount];
+          diffuseResponsesFirstAlias = diffuseResponses;
+          diffuseResponsesSecondAlias = diffuseResponsesFirstAlias;
+          diffuseResponsesThirdAlias = diffuseResponsesSecondAlias;
+          specularResponses = new int[mesh.normalCount];
+          transformedNormalsX = ok.transformedMeshNormalX;
+          transformedNormalsY = oa.transformedMeshNormalY;
+          transformedNormalsZ = gi.transformedMeshNormalZ;
+          for (normalOrFaceQueueIndex = 0; mesh.normalCount > normalOrFaceQueueIndex; normalOrFaceQueueIndex++) {
+            diffuseResponseOrFaceIndex = transformedNormalsY[normalOrFaceQueueIndex] * lightDirectionYQ8 + lightDirectionXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + transformedNormalsZ[normalOrFaceQueueIndex] * lightDirectionZQ8 >> 8;
+            if (0 > diffuseResponseOrFaceIndex) {
+              diffuseResponseOrFaceIndex = -diffuseResponseOrFaceIndex;
             }
-            if (var14 >= 0) {
-              if (128 <= var14) {
-                stackIn_18_0 = 256;
+            if (diffuseResponseOrFaceIndex >= 0) {
+              if (128 <= diffuseResponseOrFaceIndex) {
+                diffuseResponseCandidate = 256;
               } else {
-                stackIn_18_0 = 128 + var14;
+                diffuseResponseCandidate = 128 + diffuseResponseOrFaceIndex;
               }
             } else {
-              stackIn_18_0 = 128;
+              diffuseResponseCandidate = 128;
             }
-            var14 = stackIn_18_0;
-            var15 = param0 * var63[var13] + (param2 * var62[var13] + param6 * var61[var13]) >> 8;
-            stackIn_20_0 = jf.field_b;
-            if (var15 < 0) {
-              stackIn_21_1 = -var15;
+            diffuseResponseOrFaceIndex = diffuseResponseCandidate;
+            specularResponseOrVertexA = halfVectorZQ8 * transformedNormalsZ[normalOrFaceQueueIndex] + (halfVectorXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + halfVectorYQ8 * transformedNormalsY[normalOrFaceQueueIndex]) >> 8;
+            specularResponseTableSnapshot = jf.meshSpecularResponseByAbsDot;
+            if (specularResponseOrVertexA < 0) {
+              absoluteHalfVectorDot = -specularResponseOrVertexA;
             } else {
-              stackIn_21_1 = var15;
+              absoluteHalfVectorDot = specularResponseOrVertexA;
             }
-            var15 = stackIn_20_0[stackIn_21_1];
-            var14 = var14 * (256 - var15) >>> 8;
-            var54[var13] = var14;
-            var64[var13] = var15;
+            specularResponseOrVertexA = specularResponseTableSnapshot[absoluteHalfVectorDot];
+            diffuseResponseOrFaceIndex = diffuseResponseOrFaceIndex * (256 - specularResponseOrVertexA) >>> 8;
+            diffuseResponses[normalOrFaceQueueIndex] = diffuseResponseOrFaceIndex;
+            specularResponses[normalOrFaceQueueIndex] = specularResponseOrVertexA;
           }
-          for (var13 = 0; var13 < ch.field_b; var13++) {
-            var14 = pj.field_i[var13];
-            var15 = param5.field_r[var14];
-            var16 = param5.field_B[var14];
-            var17 = param5.field_c[var14];
-            if (param5.field_P[var14] >= ok.field_h.length) {
-              stackIn_27_0 = -1;
+          for (normalOrFaceQueueIndex = 0; normalOrFaceQueueIndex < ch.queuedMeshFaceCount; normalOrFaceQueueIndex++) {
+            diffuseResponseOrFaceIndex = pj.meshFaceOrder[normalOrFaceQueueIndex];
+            specularResponseOrVertexA = mesh.faceVertexA[diffuseResponseOrFaceIndex];
+            faceVertexB = mesh.faceVertexB[diffuseResponseOrFaceIndex];
+            faceVertexC = mesh.faceVertexC[diffuseResponseOrFaceIndex];
+            if (mesh.faceNormalA[diffuseResponseOrFaceIndex] >= ok.transformedMeshNormalX.length) {
+              faceNormalAIndexOrMissing = -1;
             } else {
-              stackIn_27_0 = param5.field_P[var14];
+              faceNormalAIndexOrMissing = mesh.faceNormalA[diffuseResponseOrFaceIndex];
             }
-            var18 = stackIn_27_0;
-            if (ok.field_h.length > param5.field_u[var14]) {
-              stackIn_30_0 = param5.field_u[var14];
+            faceNormalA = faceNormalAIndexOrMissing;
+            if (ok.transformedMeshNormalX.length > mesh.faceNormalB[diffuseResponseOrFaceIndex]) {
+              faceNormalBIndexOrMissing = mesh.faceNormalB[diffuseResponseOrFaceIndex];
             } else {
-              stackIn_30_0 = -1;
+              faceNormalBIndexOrMissing = -1;
             }
-            var19 = stackIn_30_0;
-            if (ok.field_h.length > param5.field_e[var14]) {
-              stackIn_33_0 = param5.field_e[var14];
+            faceNormalB = faceNormalBIndexOrMissing;
+            if (ok.transformedMeshNormalX.length > mesh.faceNormalC[diffuseResponseOrFaceIndex]) {
+              faceNormalCIndexOrMissing = mesh.faceNormalC[diffuseResponseOrFaceIndex];
             } else {
-              stackIn_33_0 = -1;
+              faceNormalCIndexOrMissing = -1;
             }
             L7: {
-              var20 = stackIn_33_0;
-              if (l.field_i != null) {
-                if (param5.field_G != null) {
-                  if (param5.field_G.length > var14) {
-                    if (param5.field_G[var14] != -1) {
-                      if (l.field_i.length > param5.field_G[var14]) {
-                        stackIn_40_0 = l.field_i[param5.field_G[var14]];
+              faceNormalC = faceNormalCIndexOrMissing;
+              if (l.meshMaterials != null) {
+                if (mesh.faceMaterialIndices != null) {
+                  if (mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex) {
+                    if (mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1) {
+                      if (l.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]) {
+                        faceMaterialOrNull = l.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
                         break L7;
                       }
                     }
                   }
                 }
               }
-              stackIn_40_0 = null;
+              faceMaterialOrNull = null;
             }
             L9: {
-              var21 = stackIn_40_0;
-              var22 = sh.field_x[var15];
-              var23 = dj.field_N[var15];
-              var24 = sh.field_x[var16];
-              var25 = dj.field_N[var16];
-              var26 = sh.field_x[var17];
-              var27 = dj.field_N[var17];
-              if (var18 == var19) {
-                if (var20 == var19) {
-                  var28 = var54[var18];
-                  var29 = var64[var18];
-                  if (var21 != null) {
-                    stackIn_45_0 = var21.field_a;
+              faceMaterial = faceMaterialOrNull;
+              vertexAX = sh.projectedMeshVertexX[specularResponseOrVertexA];
+              vertexAY = dj.projectedMeshVertexY[specularResponseOrVertexA];
+              vertexBX = sh.projectedMeshVertexX[faceVertexB];
+              vertexBY = dj.projectedMeshVertexY[faceVertexB];
+              vertexCX = sh.projectedMeshVertexX[faceVertexC];
+              vertexCY = dj.projectedMeshVertexY[faceVertexC];
+              if (faceNormalA == faceNormalB) {
+                if (faceNormalC == faceNormalB) {
+                  diffuseA = diffuseResponses[faceNormalA];
+                  flatSpecularOrDiffuseB = specularResponses[faceNormalA];
+                  if (faceMaterial != null) {
+                    flatBaseRgbOrDefault = faceMaterial.baseRgb;
                   } else {
-                    stackIn_45_0 = 8355711;
+                    flatBaseRgbOrDefault = 8355711;
                   }
-                  var30 = stackIn_45_0;
-                  var31 = var30 & 16711935;
-                  var32 = 65280 & var30;
-                  var33 = (-16711703 & var31 * var28) >>> 8 | -285147392 & var32 * var28 >>> 8;
-                  var33 = var33 + var29 * 65793;
-                  gi.a(var26, -122, var27, var25, var24, var22, var23, 8355711 & var33 >> 1);
+                  flatBaseRgbOrDiffuseC = flatBaseRgbOrDefault;
+                  flatRedBlueMaskOrSpecularA = flatBaseRgbOrDiffuseC & 16711935;
+                  flatGreenMaskOrSpecularB = 65280 & flatBaseRgbOrDiffuseC;
+                  flatLitRgbOrSpecularC = (-16711703 & flatRedBlueMaskOrSpecularA * diffuseA) >>> 8 | -285147392 & flatGreenMaskOrSpecularB * diffuseA >>> 8;
+                  flatLitRgbOrSpecularC = flatLitRgbOrSpecularC + flatSpecularOrDiffuseB * 65793;
+                  gi.a(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
                   break L9;
                 }
               }
-              var28 = var54[var18];
-              var29 = var54[var19];
-              var30 = var54[var20];
-              var31 = var64[var18];
-              var32 = var64[var19];
-              var33 = var64[var20];
-              if (var21 != null) {
-                stackIn_49_0 = var21.field_a;
+              diffuseA = diffuseResponses[faceNormalA];
+              flatSpecularOrDiffuseB = diffuseResponses[faceNormalB];
+              flatBaseRgbOrDiffuseC = diffuseResponses[faceNormalC];
+              flatRedBlueMaskOrSpecularA = specularResponses[faceNormalA];
+              flatGreenMaskOrSpecularB = specularResponses[faceNormalB];
+              flatLitRgbOrSpecularC = specularResponses[faceNormalC];
+              if (faceMaterial != null) {
+                smoothBaseRgbOrDefault = faceMaterial.baseRgb;
               } else {
-                stackIn_49_0 = 8355711;
+                smoothBaseRgbOrDefault = 8355711;
               }
-              var34 = stackIn_49_0;
-              var35 = var34 & 16711935;
-              var36 = 65280 & var34;
-              var37 = (var28 * var36 & 16711921) >>> 8 | -822148865 & var28 * var35 >>> 8;
-              var38 = (var36 * var29 & 16711688) >>> 8 | (var29 * var35 & -16711783) >>> 8;
-              var38 = var38 + 65793 * var32;
-              var37 = var37 + 65793 * var31;
-              var39 = var30 * var36 >>> 8 & 1543569152 | var30 * var35 >>> 8 & -536936193;
-              var39 = var39 + var33 * 65793;
-              nb.drawHalfBlendRgbTriangle(255 & var37, 255 & var37 >> 8, var39 >> 16, var39 >> 8 & 255, var25, 255 & var38, var37 >> 16, var23, var26, 255 & var39, -2, var38 >> 16, 255 & var38 >> 8, var24, var22, var27);
+              smoothBaseRgb = smoothBaseRgbOrDefault;
+              smoothRedBlueMask = smoothBaseRgb & 16711935;
+              smoothGreenMask = 65280 & smoothBaseRgb;
+              vertexALitRgb = (diffuseA * smoothGreenMask & 16711921) >>> 8 | -822148865 & diffuseA * smoothRedBlueMask >>> 8;
+              vertexBLitRgb = (smoothGreenMask * flatSpecularOrDiffuseB & 16711688) >>> 8 | (flatSpecularOrDiffuseB * smoothRedBlueMask & -16711783) >>> 8;
+              vertexBLitRgb = vertexBLitRgb + 65793 * flatGreenMaskOrSpecularB;
+              vertexALitRgb = vertexALitRgb + 65793 * flatRedBlueMaskOrSpecularA;
+              vertexCLitRgb = flatBaseRgbOrDiffuseC * smoothGreenMask >>> 8 & 1543569152 | flatBaseRgbOrDiffuseC * smoothRedBlueMask >>> 8 & -536936193;
+              vertexCLitRgb = vertexCLitRgb + flatLitRgbOrSpecularC * 65793;
+              nb.drawHalfBlendRgbTriangle(255 & vertexALitRgb, 255 & vertexALitRgb >> 8, vertexCLitRgb >> 16, vertexCLitRgb >> 8 & 255, vertexBY, 255 & vertexBLitRgb, vertexALitRgb >> 16, vertexAY, vertexCX, 255 & vertexCLitRgb, -2, vertexBLitRgb >> 16, 255 & vertexBLitRgb >> 8, vertexBX, vertexAX, vertexCY);
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref = decompiledCaughtException;
-          stackIn_54_0 = (RuntimeException) (var8_ref);
-          stackIn_54_1 = new StringBuilder().append("hi.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
-            stackIn_55_2 = "null";
+        } catch (java.lang.RuntimeException caughtRenderParameter) {
+          caughtRenderFailure = caughtRenderParameter;
+          renderFailure = caughtRenderFailure;
+          renderFailureBeforeContext = (RuntimeException) (renderFailure);
+          renderMessagePrefix = new StringBuilder().append("hi.M(").append(halfVectorZQ8).append(',').append(lightDirectionZQ8).append(',').append(halfVectorXQ8).append(',').append(guard).append(',').append(lightDirectionXQ8).append(',');
+          if (mesh == null) {
+            meshDescription = "null";
           } else {
-            stackIn_55_2 = "{...}";
+            meshDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw t.a((Throwable) ((Object) renderFailureBeforeContext), ((StringBuilder) (Object) renderMessagePrefix).append(meshDescription).append(',').append(halfVectorYQ8).append(',').append(lightDirectionYQ8).append(')').toString());
         }
     }
 

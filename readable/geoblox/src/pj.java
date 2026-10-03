@@ -4,7 +4,7 @@
 final class pj extends IntrusiveNode {
     byte[] field_h;
     static nd field_f;
-    static int[] field_i;
+    static int[] meshFaceOrder;
     static ck field_g;
 
     pj(byte[] param0) {
@@ -16,7 +16,7 @@ final class pj extends IntrusiveNode {
     }
 
     public static void b(boolean param0) {
-        field_i = null;
+        meshFaceOrder = null;
         field_g = null;
         if (param0) {
             pj.b(false);
@@ -28,7 +28,7 @@ final class pj extends IntrusiveNode {
 
     static {
         field_f = new nd();
-        field_i = new int[16384];
+        meshFaceOrder = new int[16384];
         field_g = new ck(0, 2, 2, 1);
     }
 }

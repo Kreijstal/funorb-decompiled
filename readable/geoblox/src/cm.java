@@ -169,10 +169,10 @@ final class cm extends cj {
           if (1 == var2) {
             var3 = var27.readUnsignedShortBE(true);
             var27.readLongBE(param0 + 27740);
-            var4_ref = (ai) ((Object) nf.field_j.firstForIteration(0));
+            var4_ref = (ai) ((Object) TriangleMesh.field_j.firstForIteration(0));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_q) {
-                var4_ref = (ai) ((Object) nf.field_j.nextForIteration(1));
+                var4_ref = (ai) ((Object) TriangleMesh.field_j.nextForIteration(1));
                 continue;
               }
               break;

@@ -75,7 +75,7 @@ final class lc {
                     inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
                     inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
                     inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
-                    queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, vd.chooseSpawnSpriteKind(methodGuard ^ 741924143), og.entityMotionSpeed * inwardDirectionX, nf.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * og.entityMotionSpeed, ij.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
+                    queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, vd.chooseSpawnSpriteKind(methodGuard ^ 741924143), og.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * og.entityMotionSpeed, ij.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
                     SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
                     mf.b(false);
                   }

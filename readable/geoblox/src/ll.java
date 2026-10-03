@@ -34,7 +34,7 @@ final class ll {
             return (Sprite[]) ((Object) stackIn_2_0);
           }
           if (param1 == -81) {
-            stackIn_7_0 = nf.buildRgbSpritesFromDecodedSheet(255);
+            stackIn_7_0 = TriangleMesh.buildRgbSpritesFromDecodedSheet(255);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;

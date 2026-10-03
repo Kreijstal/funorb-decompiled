@@ -35,7 +35,7 @@ final class ni extends ee implements pl {
     final static void a(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        nf var5 = null;
+        TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         PacketBuffer var8 = null;
@@ -52,8 +52,8 @@ final class ni extends ee implements pl {
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) 34);
           var10.beginBitAccess(param1 + 8);
-          l.field_i = jc.a(var10, true);
-          ArchiveIndex.field_l = new nf[var3];
+          l.meshMaterials = jc.a(var10, true);
+          ArchiveIndex.field_l = new TriangleMesh[var3];
           pi.field_R = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             ArchiveIndex.field_l[var4] = uh.a(var8, (byte) 113);
@@ -63,11 +63,11 @@ final class ni extends ee implements pl {
           var4 = var9;
           while (var3 > var9) {
             var5 = ArchiveIndex.field_l[var9];
-            var5.a(6, 1, (byte) 89, 6, 6);
-            var5.a((byte) -99);
-            var6 = new int[]{var5.field_Q + var5.field_I >> 1, var5.field_H + var5.field_s >> 1, var5.field_N + var5.field_F >> 1};
+            var5.scaleVertices(6, 1, (byte) 89, 6, 6);
+            var5.refreshBounds((byte) -99);
+            var6 = new int[]{var5.minX + var5.maxX >> 1, var5.maxY + var5.minY >> 1, var5.maxZ + var5.minZ >> 1};
             pi.field_R[var9] = var6;
-            var5.a(-var6[0], -var6[1], -9121, -var6[2]);
+            var5.translateVertices(-var6[0], -var6[1], -9121, -var6[2]);
             var9++;
           }
           return;

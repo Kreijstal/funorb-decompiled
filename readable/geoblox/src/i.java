@@ -88,7 +88,7 @@ final class i {
         }
     }
 
-    final static void a(int param0, byte param1, nf param2, int param3, boolean param4) {
+    final static void a(int param0, byte param1, TriangleMesh param2, int param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_28_0 = 0;
@@ -121,19 +121,19 @@ final class i {
           var6 = param0 * 3;
           var7 = var5_int - 10;
           oe.l(0);
-          if (param2.field_v > 0) {
-            if (null != param2.field_n) {
+          if (param2.facePriorityCount > 0) {
+            if (null != param2.facePriorities) {
               ma.a((byte) -35);
             }
           }
-          ch.field_b = 0;
+          ch.queuedMeshFaceCount = 0;
           var8 = 0;
           while (true) {
             L2: {
               if (var8 < param2.field_f) {
-                var9 = param2.field_r[var8];
-                var10 = param2.field_B[var8];
-                var11 = param2.field_c[var8];
+                var9 = param2.faceVertexA[var8];
+                var10 = param2.faceVertexB[var8];
+                var11 = param2.faceVertexC[var8];
                 stackOut_10_0 = param4;
                 stackIn_49_0 = stackOut_10_0 ? 1 : 0;
                 stackIn_11_0 = stackOut_10_0;
@@ -142,12 +142,12 @@ final class i {
                 }
                 L4: {
                   if (stackIn_11_0) {
-                    var12 = sh.field_x[var9];
-                    var13 = dj.field_N[var9];
-                    var14 = sh.field_x[var10] - var12;
-                    var15 = sh.field_x[var11] - var12;
-                    var16 = dj.field_N[var10] - var13;
-                    var17 = -var13 + dj.field_N[var11];
+                    var12 = sh.projectedMeshVertexX[var9];
+                    var13 = dj.projectedMeshVertexY[var9];
+                    var14 = sh.projectedMeshVertexX[var10] - var12;
+                    var15 = sh.projectedMeshVertexX[var11] - var12;
+                    var16 = dj.projectedMeshVertexY[var10] - var13;
+                    var17 = -var13 + dj.projectedMeshVertexY[var11];
                     if (-(var16 * var15) + var14 * var17 >= 0) {
                       break L4;
                     }
@@ -172,8 +172,8 @@ final class i {
                     } else {
                       stackIn_28_0 = var15 >> var7;
                     }
-                    var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
-                    var17 = ch.field_d[var16];
+                    var16 = -stackIn_28_0 + (-1 + ch.meshFaceCountsByDepthBucket.length);
+                    var17 = ch.meshFaceCountsByDepthBucket[var16];
                     while (true) {
                       L10: {
                         if (var17 >> 4 != 0) {
@@ -188,7 +188,7 @@ final class i {
                               break L4;
                             }
                           }
-                          var17 = ch.field_d[var16];
+                          var17 = ch.meshFaceCountsByDepthBucket[var16];
                           if (var19 == 0) {
                             continue;
                           }
@@ -196,15 +196,15 @@ final class i {
                         stackIn_39_0 = (var16 << 4) + var17;
                       }
                       var18 = stackIn_39_0;
-                      pj.field_i[var18] = var8;
-                      ch.field_d[var16] = 1 + var17;
-                      if (0 < param2.field_v) {
-                        if (null != param2.field_n) {
-                          dupTemp$0 = param2.field_n[var8];
-                          uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
+                      pj.meshFaceOrder[var18] = var8;
+                      ch.meshFaceCountsByDepthBucket[var16] = 1 + var17;
+                      if (0 < param2.facePriorityCount) {
+                        if (null != param2.facePriorities) {
+                          dupTemp$0 = param2.facePriorities[var8];
+                          uh.meshFacePriorityWriteOffsets[dupTemp$0] = uh.meshFacePriorityWriteOffsets[dupTemp$0] + 1;
                         }
                       }
-                      ch.field_b = ch.field_b + 1;
+                      ch.queuedMeshFaceCount = ch.queuedMeshFaceCount + 1;
                       break L4;
                     }
                   }
@@ -217,16 +217,16 @@ final class i {
               stackIn_49_0 = -1;
             }
             L15: {
-              if (stackIn_49_0 > ~param2.field_v) {
-                if (null != param2.field_n) {
+              if (stackIn_49_0 > ~param2.facePriorityCount) {
+                if (null != param2.facePriorities) {
                   var8 = 0;
                   var9 = 0;
                   while (true) {
-                    if (uh.field_x.length <= var9) {
+                    if (uh.meshFacePriorityWriteOffsets.length <= var9) {
                       break L15;
                     }
-                    var10 = uh.field_x[var9];
-                    uh.field_x[var9] = var8;
+                    var10 = uh.meshFacePriorityWriteOffsets[var9];
+                    uh.meshFacePriorityWriteOffsets[var9] = var8;
                     var8 = var8 + var10;
                     var9++;
                     if (var19 != 0) {

@@ -452,7 +452,7 @@ abstract class wf extends ch {
               hb.field_n = null;
               dc.field_c = null;
               l.field_h = null;
-              fd.a((java.applet.Applet) (this), -82);
+              MeshMaterial.a((java.applet.Applet) (this), -82);
               ih.b(-69);
               mi.field_C = 10;
             }

@@ -24,7 +24,7 @@ final class ma extends IntrusiveNode {
         RuntimeException var1_ref = null;
         var4 = Geoblox.field_C;
         try {
-          var5 = uh.field_x;
+          var5 = uh.meshFacePriorityWriteOffsets;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;

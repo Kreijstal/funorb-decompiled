@@ -78,7 +78,7 @@ final class bh extends java.awt.Canvas {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               oi.field_a[var6_int] = var14.readNullTerminatedText((byte) 120);
             }
-            nf.a(2147483647, var5, var4);
+            TriangleMesh.a(2147483647, var5, var4);
             for (var6_int = 0; var4 > var6_int; var6_int++) {
               ScorePopup.a(116, var14);
               if (var6_int != 0) {

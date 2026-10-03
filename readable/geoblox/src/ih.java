@@ -19,7 +19,7 @@ final class ih {
             for (var1_int = 0; var1_int < 32; var1_int++) {
                 tl.field_l[var1_int] = 0L;
             }
-            nf.field_w = 0;
+            TriangleMesh.field_w = 0;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
         }

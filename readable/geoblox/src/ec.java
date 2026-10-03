@@ -18,10 +18,10 @@ final class ec {
         var4 = Geoblox.field_C;
         try {
           var3 = 57 % ((param0 - 57) / 46);
-          var5 = (ai) ((Object) nf.field_j.firstForIteration(0));
+          var5 = (ai) ((Object) TriangleMesh.field_j.firstForIteration(0));
           while (var5 != null) {
             ArchiveIndex.a(var5, param1, -127);
-            var5 = (ai) ((Object) nf.field_j.nextForIteration(1));
+            var5 = (ai) ((Object) TriangleMesh.field_j.nextForIteration(1));
           }
           var6 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
           while (var6 != null) {

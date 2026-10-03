@@ -137,18 +137,18 @@ final class jc {
         }
     }
 
-    final static fd[] a(PacketBuffer param0, boolean param1) {
+    final static MeshMaterial[] a(PacketBuffer param0, boolean param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        fd[] var4 = null;
-        fd var6_ref_fd = null;
+        MeshMaterial[] var4 = null;
+        MeshMaterial var6_ref_fd = null;
         int var6 = 0;
         int var7 = 0;
-        fd[] stackIn_3_0 = null;
+        MeshMaterial[] stackIn_3_0 = null;
         Object stackIn_6_0 = null;
-        fd[] stackIn_14_0 = null;
+        MeshMaterial[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -157,24 +157,24 @@ final class jc {
         try {
           var2_int = param0.readBits((byte) -17, 8);
           if (!param1) {
-            stackIn_3_0 = (fd[]) null;
+            stackIn_3_0 = (MeshMaterial[]) null;
             return stackIn_3_0;
           }
           if (0 < var2_int) {
             stackIn_6_0 = null;
-            return (fd[]) ((Object) stackIn_6_0);
+            return (MeshMaterial[]) ((Object) stackIn_6_0);
           }
           var3 = param0.readBits((byte) -17, 12);
-          var4 = new fd[var3];
+          var4 = new MeshMaterial[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!ac.a((byte) 71, param0)) {
               var6 = param0.readBits((byte) -17, td.a(var5 - 1, (byte) 66));
               var4[var5] = var4[var6];
             } else {
-              var6_ref_fd = new fd();
+              var6_ref_fd = new MeshMaterial();
               param0.readBits((byte) -17, 24);
               param0.readBits((byte) -17, 24);
-              var6_ref_fd.field_a = param0.readBits((byte) -17, 24);
+              var6_ref_fd.baseRgb = param0.readBits((byte) -17, 24);
               param0.readBits((byte) -17, 9);
               param0.readBits((byte) -17, 12);
               param0.readBits((byte) -17, 12);
@@ -182,7 +182,7 @@ final class jc {
               var4[var5] = var6_ref_fd;
             }
           }
-          stackIn_14_0 = (fd[]) (var4);
+          stackIn_14_0 = (MeshMaterial[]) (var4);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

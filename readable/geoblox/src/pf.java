@@ -393,7 +393,7 @@ final class pf extends ee implements ga, pl {
             }
           }
           if (PacketBuffer.field_l == qh.field_F) {
-            if (nf.a(false)) {
+            if (TriangleMesh.a(false)) {
               if (ScorePopup.field_l != 255) {
                 kh.field_a = eh.field_d.readNullTerminatedText((byte) 98);
               } else {

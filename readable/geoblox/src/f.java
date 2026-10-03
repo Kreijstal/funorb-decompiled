@@ -239,7 +239,7 @@ class f extends qf implements pl {
                 }
                 gg.field_b = gg.field_b + 1;
                 g.field_j = 0;
-                fd.a(300, fl.field_c[22], false, j.field_gb);
+                MeshMaterial.a(300, fl.field_c[22], false, j.field_gb);
                 g.field_j = g.field_j + 1;
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$51 = wa.avatarShockEffectTicks;
@@ -371,7 +371,7 @@ class f extends qf implements pl {
                     }
                     gg.field_b = gg.field_b + 1;
                     g.field_j = 0;
-                    fd.a(300, fl.field_c[22], false, j.field_gb);
+                    MeshMaterial.a(300, fl.field_c[22], false, j.field_gb);
                     g.field_j = g.field_j + 1;
                     avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$24 = wa.avatarShockEffectTicks;
@@ -529,7 +529,7 @@ class f extends qf implements pl {
             }
             gg.field_b = gg.field_b + 1;
             g.field_j = 0;
-            fd.a(300, fl.field_c[22], false, j.field_gb);
+            MeshMaterial.a(300, fl.field_c[22], false, j.field_gb);
             g.field_j = g.field_j + 1;
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
             fieldTemp$38 = wa.avatarShockEffectTicks;
@@ -663,7 +663,7 @@ class f extends qf implements pl {
           this.field_pb.a(4210752, 8405024, (byte) -103);
           var6 = new ni((f) (this), this.field_jb, param2);
           if (param0 == 5) {
-            var6.a(nf.reloadGameText, 1, 11);
+            var6.a(TriangleMesh.reloadGameText, 1, 11);
             var6.a(rj.quitToWebsiteText, 1, 17);
           } else {
             if (param0 != 256) {

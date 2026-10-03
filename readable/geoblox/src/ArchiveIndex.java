@@ -21,7 +21,7 @@ final class ArchiveIndex {
     IntKeyLookup groupNameLookup;
     static int field_s;
     static int archiveServerNumber;
-    static nf[] field_l;
+    static TriangleMesh[] field_l;
     int[] fileCounts;
 
     final static int[] a(int param0, byte param1, int param2) {

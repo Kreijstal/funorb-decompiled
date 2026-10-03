@@ -3,17 +3,17 @@
  */
 final class uh extends ac {
     static kj field_y;
-    static int[] field_x;
+    static int[] meshFacePriorityWriteOffsets;
 
     public static void c(int param0) {
         if (param0 != 0) {
-            field_x = (int[]) null;
+            meshFacePriorityWriteOffsets = (int[]) null;
             field_y = null;
-            field_x = null;
+            meshFacePriorityWriteOffsets = null;
             return;
         }
         field_y = null;
-        field_x = null;
+        meshFacePriorityWriteOffsets = null;
     }
 
     final String c(int param0, el param1) {
@@ -53,7 +53,7 @@ final class uh extends ac {
         if (param0 == 16) {
             return ee.field_B[el.field_t % ee.field_B.length];
         }
-        field_x = (int[]) null;
+        meshFacePriorityWriteOffsets = (int[]) null;
         return ee.field_B[el.field_t % ee.field_B.length];
     }
 
@@ -70,9 +70,9 @@ final class uh extends ac {
         uh.b(-111);
     }
 
-    final static nf a(PacketBuffer param0, byte param1) {
+    final static TriangleMesh a(PacketBuffer param0, byte param1) {
         int var7 = 0;
-        nf stackIn_28_0 = null;
+        TriangleMesh stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -81,7 +81,7 @@ final class uh extends ac {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        nf var5 = null;
+        TriangleMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = Geoblox.field_C;
@@ -92,26 +92,26 @@ final class uh extends ac {
           }
           var3 = ac.a((byte) 81, param0) ? 1 : 0;
           var4 = ac.a((byte) 7, param0) ? 1 : 0;
-          var5 = new nf();
-          var5.field_o = (short)param0.readBits((byte) -17, 16);
-          var5.field_O = ArchiveNetworkClient.a(var5.field_O, 16, 0, param0);
-          var5.field_q = ArchiveNetworkClient.a(var5.field_q, 16, 0, param0);
-          var5.field_K = ArchiveNetworkClient.a(var5.field_K, 16, 0, param0);
+          var5 = new TriangleMesh();
+          var5.vertexCount = (short)param0.readBits((byte) -17, 16);
+          var5.vertexX = ArchiveNetworkClient.a(var5.vertexX, 16, 0, param0);
+          var5.vertexY = ArchiveNetworkClient.a(var5.vertexY, 16, 0, param0);
+          var5.vertexZ = ArchiveNetworkClient.a(var5.vertexZ, 16, 0, param0);
           var5.field_f = (short)param0.readBits((byte) -17, 16);
-          var5.field_r = ArchiveNetworkClient.a(var5.field_r, 16, 0, param0);
+          var5.faceVertexA = ArchiveNetworkClient.a(var5.faceVertexA, 16, 0, param0);
           if (param1 < 111) {
             field_y = (kj) null;
           }
-          var5.field_B = ArchiveNetworkClient.a(var5.field_B, 16, 0, param0);
-          var5.field_c = ArchiveNetworkClient.a(var5.field_c, 16, 0, param0);
+          var5.faceVertexB = ArchiveNetworkClient.a(var5.faceVertexB, 16, 0, param0);
+          var5.faceVertexC = ArchiveNetworkClient.a(var5.faceVertexC, 16, 0, param0);
           if (var3 != 0) {
-            var5.field_m = (short)param0.readBits((byte) -17, 16);
-            var5.field_M = ArchiveNetworkClient.a(var5.field_M, 16, 0, param0);
-            var5.field_t = ArchiveNetworkClient.a(var5.field_t, 16, 0, param0);
-            var5.field_i = ArchiveNetworkClient.a(var5.field_i, 16, 0, param0);
-            var5.field_P = ArchiveNetworkClient.a(var5.field_P, 16, 0, param0);
-            var5.field_u = ArchiveNetworkClient.a(var5.field_u, 16, 0, param0);
-            var5.field_e = ArchiveNetworkClient.a(var5.field_e, 16, 0, param0);
+            var5.normalCount = (short)param0.readBits((byte) -17, 16);
+            var5.normalX = ArchiveNetworkClient.a(var5.normalX, 16, 0, param0);
+            var5.normalY = ArchiveNetworkClient.a(var5.normalY, 16, 0, param0);
+            var5.normalZ = ArchiveNetworkClient.a(var5.normalZ, 16, 0, param0);
+            var5.faceNormalA = ArchiveNetworkClient.a(var5.faceNormalA, 16, 0, param0);
+            var5.faceNormalB = ArchiveNetworkClient.a(var5.faceNormalB, 16, 0, param0);
+            var5.faceNormalC = ArchiveNetworkClient.a(var5.faceNormalC, 16, 0, param0);
           }
           if (var4 != 0) {
             param0.readBits((byte) -17, 16);
@@ -122,26 +122,26 @@ final class uh extends ac {
             var5.field_g = ArchiveNetworkClient.a(var5.field_g, 16, 0, param0);
           }
           if (ac.a((byte) 102, param0)) {
-            var5.field_G = ArchiveNetworkClient.a(var5.field_G, 16, 0, param0);
+            var5.faceMaterialIndices = ArchiveNetworkClient.a(var5.faceMaterialIndices, 16, 0, param0);
           }
           L4: {
             if (ac.a((byte) 37, param0)) {
-              var5.field_n = vk.a(var5.field_n, param0, 16, 8);
+              var5.facePriorities = vk.a(var5.facePriorities, param0, 16, 8);
               var6 = 0;
-              for (var7 = 0; var5.field_n.length > var7; var7++) {
-                if (~(255 & var5.field_n[var7]) < ~var6) {
-                  var6 = 255 & var5.field_n[var7];
+              for (var7 = 0; var5.facePriorities.length > var7; var7++) {
+                if (~(255 & var5.facePriorities[var7]) < ~var6) {
+                  var6 = 255 & var5.facePriorities[var7];
                 }
               }
               if (var6 != 0) {
-                var5.field_v = (byte)(1 + var6);
+                var5.facePriorityCount = (byte)(1 + var6);
                 break L4;
               }
-              var5.field_n = null;
+              var5.facePriorities = null;
               break L4;
             }
           }
-          stackIn_28_0 = (nf) (var5);
+          stackIn_28_0 = (TriangleMesh) (var5);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -212,6 +212,6 @@ final class uh extends ac {
     }
 
     static {
-        field_x = new int[128];
+        meshFacePriorityWriteOffsets = new int[128];
     }
 }

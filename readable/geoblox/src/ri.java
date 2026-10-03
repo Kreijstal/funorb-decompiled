@@ -105,7 +105,7 @@ final class ri {
                 }
               }
               if (da.field_f == PacketBuffer.field_l) {
-                if (nf.a(false)) {
+                if (TriangleMesh.a(false)) {
                   oa.field_c = eh.field_d.readLongBE(2901);
                   oc.field_f = eh.field_d.readUnsignedByte((byte) 34);
                   eh.field_d.readUnsignedByte((byte) 34);
@@ -184,7 +184,7 @@ final class ri {
                 }
               }
               if (PacketBuffer.field_l == ac.field_v) {
-                if (nf.a(false)) {
+                if (TriangleMesh.a(false)) {
                   Bzip2DecoderState.a((byte) -118);
                   if (ScorePopup.field_l == 7) {
                     if (!ck.field_e) {

@@ -1170,7 +1170,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "reloadgame");
                 if (textResourceBytes != null) {
-                  nf.reloadGameText = ag.decodeTextBytes(1, textResourceBytes);
+                  TriangleMesh.reloadGameText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "toserverlist");
                 if (textResourceBytes != null) {

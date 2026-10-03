@@ -4,9 +4,9 @@
 import java.io.*;
 
 public abstract class ch extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static int field_b;
+    static int queuedMeshFaceCount;
     boolean field_a;
-    static int[] field_d;
+    static int[] meshFaceCountsByDepthBucket;
     public static boolean field_h;
     public static boolean field_e;
     public static boolean field_i;
@@ -176,7 +176,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
 
     public static void c(byte param0) {
         try {
-            field_d = null;
+            meshFaceCountsByDepthBucket = null;
             int var1_int = 30 % ((30 - param0) / 52);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ')');
@@ -417,13 +417,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           break L1;
                         }
                       }
-                      nf.field_w = eg.field_p.a((byte) -6, oj.field_c);
+                      TriangleMesh.field_w = eg.field_p.a((byte) -6, oj.field_c);
                       stackIn_99_0 = 0;
                     }
                     var3 = stackIn_99_0;
                     while (true) {
                       L21: {
-                        if (nf.field_w > var3) {
+                        if (TriangleMesh.field_w > var3) {
                           this.a((byte) -10);
                           var3++;
                           if (var5 != 0) {
@@ -598,7 +598,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         }
         var3_ref = new StringWriter();
         if (param1 != 1) {
-          field_b = 61;
+          queuedMeshFaceCount = 61;
         }
         var4 = new PrintWriter((Writer) ((Object) var3_ref));
         param0.printStackTrace(var4);
@@ -692,7 +692,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         Object var6 = null;
         try {
           if (param0 != -10) {
-            field_b = -102;
+            queuedMeshFaceCount = -102;
           }
           var2_long = oa.a(param0 ^ 12526);
           var4 = tl.field_l[ij.field_cb];
@@ -976,8 +976,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
     }
 
     static {
-        field_b = 0;
-        field_d = new int[1024];
+        queuedMeshFaceCount = 0;
+        meshFaceCountsByDepthBucket = new int[1024];
     }
 
     private static int $cfr$lcmp(long left, long right) {

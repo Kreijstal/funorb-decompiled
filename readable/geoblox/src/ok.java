@@ -6,7 +6,7 @@ final class ok {
     static String createEmailConfirmationTooltipText;
     static int field_f;
     static String justPlayText;
-    static int[] field_h;
+    static int[] transformedMeshNormalX;
     static String createEmailConfirmationText;
     static int field_g;
     static int field_c;
@@ -17,7 +17,7 @@ final class ok {
         avatarCryMiddleFrames = null;
         createEmailConfirmationTooltipText = null;
         justPlayText = null;
-        field_h = null;
+        transformedMeshNormalX = null;
         createEmailConfirmationText = null;
         if (!param0) {
             justPlayText = (String) null;
@@ -28,7 +28,7 @@ final class ok {
         field_z = "ok.A(";
         createEmailConfirmationTooltipText = "Type your email address again to make sure it's correct";
         justPlayText = "Just play";
-        field_h = new int[8192];
+        transformedMeshNormalX = new int[8192];
         field_g = 9;
         createEmailConfirmationText = "Confirm Email:";
     }

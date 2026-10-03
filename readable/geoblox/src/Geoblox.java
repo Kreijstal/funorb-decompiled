@@ -448,7 +448,7 @@ public final class Geoblox extends wf {
         TriangleRasterState.releaseTriangleTables();
         MusicDecoder.a();
         dc.b(126);
-        nf.b((byte) 115);
+        TriangleMesh.b((byte) 115);
         lb.a(31);
         rb.a((byte) -112);
         fc.a((byte) -126);
@@ -767,11 +767,11 @@ public final class Geoblox extends wf {
                       og.screens[ai.requestedScreenId].selectedItemIndex = 1;
                     }
                   }
-                  if (nf.screenTransitionTick == 0) {
+                  if (TriangleMesh.screenTransitionTick == 0) {
                     td.playPcmSample(-348, fl.field_c[30]);
                   }
-                  fieldTemp$0 = nf.screenTransitionTick + 1;
-                  nf.screenTransitionTick = nf.screenTransitionTick + 1;
+                  fieldTemp$0 = TriangleMesh.screenTransitionTick + 1;
+                  TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
                   if (fieldTemp$0 == 160) {
                     L23: {
                       if (el.gameplayReturnScreenId != -1) {
@@ -789,7 +789,7 @@ public final class Geoblox extends wf {
                         ca.field_f = null;
                       }
                     }
-                    nf.screenTransitionTick = 0;
+                    TriangleMesh.screenTransitionTick = 0;
                     tc.currentScreenId = ai.requestedScreenId;
                     qj.clearGameplayDuringTransition = false;
                   }
@@ -883,7 +883,7 @@ public final class Geoblox extends wf {
             }
           }
           L3: {
-            transitionSplitY = -480 + (nf.screenTransitionTick * 6 + 35);
+            transitionSplitY = -480 + (TriangleMesh.screenTransitionTick * 6 + 35);
             if (el.gameplayReturnScreenId == -1) {
               if (!qj.clearGameplayDuringTransition) {
                 if (ai.requestedScreenId == -1) {
@@ -911,7 +911,7 @@ public final class Geoblox extends wf {
             og.screens[tc.currentScreenId].renderScreen(-28750);
           }
           SoftwareRasterizer.setClip(0, 0, 640, 480);
-          qj.transitionCurtain.draw(0, 6 * nf.screenTransitionTick - 480);
+          qj.transitionCurtain.draw(0, 6 * TriangleMesh.screenTransitionTick - 480);
         }
         if (cg.b(true)) {
           if (null == vl.field_n) {
