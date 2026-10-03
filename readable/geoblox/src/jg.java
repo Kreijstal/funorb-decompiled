@@ -189,12 +189,10 @@ abstract class jg {
               var5_int++;
               continue;
             }
-            L3: {
-              if ((var5_int >= 10) &&
-                  (26 >= var5_int)) {
-                var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
-                break L3;
-              }
+            if ((var5_int >= 10) &&
+                (26 >= var5_int)) {
+              var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
+            } else {
               var6 = te.field_c.b(1, w.field_b[var5_int]);
             }
             fl.field_c[var5_int] = var6.a(p.field_i);

@@ -23,20 +23,18 @@ final class DiskArchiveCache {
         try {
           dataFileMonitor = this.dataFile;
           synchronized (dataFileMonitor) {
-            L0: {
-              if ((0 <= length) &&
-                  (length <= this.maximumEntryLength)) {
-                if (methodGuard != -53) {
-                  unusedAudioConfigurationSnapshot = (kj) null;
-                  DiskArchiveCache.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (kj) null, false, -103);
-                }
-                writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, true) ? 1 : 0;
-                if (writeSucceeded == 0) {
-                  writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, false) ? 1 : 0;
-                }
-                writeSucceededBeforeReturn = writeSucceeded;
-                break L0;
+            if ((0 <= length) &&
+                (length <= this.maximumEntryLength)) {
+              if (methodGuard != -53) {
+                unusedAudioConfigurationSnapshot = (kj) null;
+                DiskArchiveCache.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (kj) null, false, -103);
               }
+              writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, true) ? 1 : 0;
+              if (writeSucceeded == 0) {
+                writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, false) ? 1 : 0;
+              }
+              writeSucceededBeforeReturn = writeSucceeded;
+            } else {
               throw new IllegalArgumentException();
             }
           }

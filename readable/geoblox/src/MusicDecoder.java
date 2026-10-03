@@ -477,27 +477,23 @@ final class MusicDecoder extends IntrusiveNode {
           stackIn_10_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
-        L4: {
-          var7 = var4 >> 1;
-          if ((var3 != 0) &&
-              (var5 == 0)) {
-            var8 = (var4 >> 2) - (shortBlockSize >> 2);
-            var9 = (var4 >> 2) + (shortBlockSize >> 2);
-            var10 = shortBlockSize >> 1;
-            break L4;
-          }
+        var7 = var4 >> 1;
+        if ((var3 != 0) &&
+            (var5 == 0)) {
+          var8 = (var4 >> 2) - (shortBlockSize >> 2);
+          var9 = (var4 >> 2) + (shortBlockSize >> 2);
+          var10 = shortBlockSize >> 1;
+        } else {
           var8 = 0;
           var9 = var7;
           var10 = var4 >> 1;
         }
-        L6: {
-          if ((var3 != 0) &&
-              (var6 == 0)) {
-            var11 = var4 - (var4 >> 2) - (shortBlockSize >> 2);
-            var12 = var4 - (var4 >> 2) + (shortBlockSize >> 2);
-            var13 = shortBlockSize >> 1;
-            break L6;
-          }
+        if ((var3 != 0) &&
+            (var6 == 0)) {
+          var11 = var4 - (var4 >> 2) - (shortBlockSize >> 2);
+          var12 = var4 - (var4 >> 2) + (shortBlockSize >> 2);
+          var13 = shortBlockSize >> 1;
+        } else {
           var11 = var7;
           var12 = var4;
           var13 = var4 >> 1;

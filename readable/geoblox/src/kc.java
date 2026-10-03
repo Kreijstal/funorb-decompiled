@@ -490,15 +490,13 @@ final class kc {
                     routedAttachedEntity.animationFrameIndex = 0;
                     if ((routedAttachedEntity.touchesAvatar) &&
                         (w.avatarShockPending)) {
-                      L48: {
-                        popupOriginYInput = (int)routedAttachedEntity.positionY;
-                        popupOriginXInput = (int)routedAttachedEntity.positionX;
-                        popupGuardInput = 117;
-                        if ((routedAttachedEntity.entitySpriteKindId != 4) &&
-                            (routedAttachedEntity.entitySpriteKindId != 3)) {
-                          popupPoints = 10;
-                          break L48;
-                        }
+                      popupOriginYInput = (int)routedAttachedEntity.positionY;
+                      popupOriginXInput = (int)routedAttachedEntity.positionX;
+                      popupGuardInput = 117;
+                      if ((routedAttachedEntity.entitySpriteKindId != 4) &&
+                          (routedAttachedEntity.entitySpriteKindId != 3)) {
+                        popupPoints = 10;
+                      } else {
                         popupPoints = 100;
                       }
                       ld.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);

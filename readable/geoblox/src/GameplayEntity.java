@@ -44,18 +44,16 @@ final class GameplayEntity extends DualLinkNode {
         if (methodGuard != -16096) {
           return;
         }
-        L0: {
-          rotatedEntityY = (int)(Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
-          if ((this.entitySpriteKindId != 2) &&
-              (1 != this.entitySpriteKindId)) {
-            vf.spriteScratchRaster.setAsRasterTarget();
-            SoftwareRasterizer.clearFramebuffer();
-            this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
-            k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-            sh.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
-            vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
-            break L0;
-          }
+        rotatedEntityY = (int)(Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
+        if ((this.entitySpriteKindId != 2) &&
+            (1 != this.entitySpriteKindId)) {
+          vf.spriteScratchRaster.setAsRasterTarget();
+          SoftwareRasterizer.clearFramebuffer();
+          this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
+          k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+          sh.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
+          vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
+        } else {
           if (1 == this.entitySpriteKindId) {
             vf.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
@@ -92,20 +90,18 @@ final class GameplayEntity extends DualLinkNode {
         int entityDrawY;
         int fadeOpacity;
         int controlFlowGuard;
-        L0: {
-          controlFlowGuard = Geoblox.field_C;
-          entityOffsetX = this.positionX - 320.0f;
-          entityOffsetY = this.positionY - 240.0f;
-          boardAngle = el.gameplaySession.boardAngleRadians;
-          rotatedEntityX = (int)(320.0 + ((double)entityOffsetX * Math.cos((double)boardAngle) - Math.sin((double)boardAngle) * (double)entityOffsetY));
-          rotatedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)boardAngle) + Math.cos((double)boardAngle) * (double)entityOffsetY));
-          if ((this.entitySpriteKindId != 1) &&
-              (2 != this.entitySpriteKindId)) {
-            vf.spriteScratchRaster.setAsRasterTarget();
-            SoftwareRasterizer.clearFramebuffer();
-            this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
-            break L0;
-          }
+        controlFlowGuard = Geoblox.field_C;
+        entityOffsetX = this.positionX - 320.0f;
+        entityOffsetY = this.positionY - 240.0f;
+        boardAngle = el.gameplaySession.boardAngleRadians;
+        rotatedEntityX = (int)(320.0 + ((double)entityOffsetX * Math.cos((double)boardAngle) - Math.sin((double)boardAngle) * (double)entityOffsetY));
+        rotatedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)boardAngle) + Math.cos((double)boardAngle) * (double)entityOffsetY));
+        if ((this.entitySpriteKindId != 1) &&
+            (2 != this.entitySpriteKindId)) {
+          vf.spriteScratchRaster.setAsRasterTarget();
+          SoftwareRasterizer.clearFramebuffer();
+          this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
+        } else {
           if (this.entitySpriteKindId != 1) {
             vf.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();

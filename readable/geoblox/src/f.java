@@ -318,12 +318,10 @@ class f extends qf implements pl {
           } else {
             avatarFrameOffsetInSegment = -MenuScreen.avatarFeedbackFrameBase + DiskCacheWorker.avatarFeedbackFrameIndex;
             if (1 != jk.avatarSteeringDirectionId) {
-              L2: {
-                if ((2 == jk.avatarSteeringDirectionId) &&
-                    (5 > avatarFrameOffsetInSegment)) {
-                  DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-                  break L2;
-                }
+              if ((2 == jk.avatarSteeringDirectionId) &&
+                  (5 > avatarFrameOffsetInSegment)) {
+                DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
+              } else {
                 if (0 == jk.avatarSteeringDirectionId) {
                   if (avatarFrameOffsetInSegment < 3) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;

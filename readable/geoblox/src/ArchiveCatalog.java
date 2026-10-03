@@ -29,14 +29,12 @@ final class ArchiveCatalog {
         if (param1 != 97) {
           field_a = (String) null;
         }
-        L1: {
-          if (!((65 <= param0) &&
-                (param0 <= 90)) &&
-              !((97 <= param0) &&
-                (param0 <= 122))) {
-            stackIn_10_0 = false;
-            break L1;
-          }
+        if (!((65 <= param0) &&
+              (param0 <= 90)) &&
+            !((97 <= param0) &&
+              (param0 <= 122))) {
+          stackIn_10_0 = false;
+        } else {
           stackIn_10_0 = true;
         }
         return stackIn_10_0;
@@ -165,22 +163,20 @@ final class ArchiveCatalog {
         if (this.catalogRequest.pending) {
           return false;
         }
-        L1: {
-          catalogBuffer = new ByteArrayBuffer(this.catalogRequest.getBytes(397));
-          catalogBuffer.position = 5;
-          archiveCount = catalogBuffer.readUnsignedByte((byte) 34);
-          catalogBuffer.position = catalogBuffer.position + archiveCount * 72;
-          encodedVerificationBytes = new byte[catalogBuffer.bytes.length - catalogBuffer.position];
-          verificationBytesAlias = encodedVerificationBytes;
-          rawVerificationBytes = verificationBytesAlias;
-          catalogBuffer.readBytes(29915, encodedVerificationBytes.length, encodedVerificationBytes, 0);
-          if ((this.verificationExponent != null) &&
-              (this.verificationModulus != null)) {
-            encodedVerificationInteger = new java.math.BigInteger(encodedVerificationBytes);
-            verificationIntegerAfterModPow = encodedVerificationInteger.modPow(this.verificationExponent, this.verificationModulus);
-            verificationBytes = verificationIntegerAfterModPow.toByteArray();
-            break L1;
-          }
+        catalogBuffer = new ByteArrayBuffer(this.catalogRequest.getBytes(397));
+        catalogBuffer.position = 5;
+        archiveCount = catalogBuffer.readUnsignedByte((byte) 34);
+        catalogBuffer.position = catalogBuffer.position + archiveCount * 72;
+        encodedVerificationBytes = new byte[catalogBuffer.bytes.length - catalogBuffer.position];
+        verificationBytesAlias = encodedVerificationBytes;
+        rawVerificationBytes = verificationBytesAlias;
+        catalogBuffer.readBytes(29915, encodedVerificationBytes.length, encodedVerificationBytes, 0);
+        if ((this.verificationExponent != null) &&
+            (this.verificationModulus != null)) {
+          encodedVerificationInteger = new java.math.BigInteger(encodedVerificationBytes);
+          verificationIntegerAfterModPow = encodedVerificationInteger.modPow(this.verificationExponent, this.verificationModulus);
+          verificationBytes = verificationIntegerAfterModPow.toByteArray();
+        } else {
           verificationBytes = rawVerificationBytes;
         }
         if (verificationBytes.length != 65) {

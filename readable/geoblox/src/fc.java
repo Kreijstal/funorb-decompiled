@@ -33,13 +33,10 @@ final class fc {
           var2 = 12 % ((-69 - param0) / 38);
           var1 = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
           while (var1 != null) {
-            L2: {
-              var1.advanceEntityAnimation(true);
-              if ((5 != var1.entitySpriteKindId) &&
-                  (var1.entitySpriteKindId != 7) &&
-                  (var1.entitySpriteKindId != 8)) {
-                break L2;
-              }
+            var1.advanceEntityAnimation(true);
+            if (!((5 != var1.entitySpriteKindId) &&
+                (var1.entitySpriteKindId != 7) &&
+                (var1.entitySpriteKindId != 8))) {
               pf.field_D = false;
               if (var1.animationFrameIndex >= 3) {
                 ra.availableEntities.addLast(-115, var1);

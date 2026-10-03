@@ -19,6 +19,16 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 90 reconstructs 64 labeled exits as 47 conditional alternatives and 17
+ordinary guards, saving 145 lines across 45 files. Gameplay rendering loses two
+labels; board reconciliation loses one. The instrument-patch constructor now
+has no labels. All 7,015 complete naming objects and ordered bindings remain.
+The clean decompiler Git-source tar reproduces all 303 raw files and unchanged
+diagnostics; all six recorded native probes retain their traces. Full readable
+reproduction/dictionary reversal passes. There remain 21 large method spans,
+12 with block labels; multi-exit decision trees and whole-game/browser/phone
+acceptance remain unfinished or unverified.
+
 Pass 89 removes 102 redundant breaks and 73 labels/block frames across 50 files,
 saving 248 lines. The instrument-patch constructor shrinks from 492 to 468 lines
 and nine block labels to one. All 7,015 complete naming rules, 57,278 edits and
@@ -26,7 +36,7 @@ ordered source bindings remain. Independent JDK body positions account for all
 303 regenerated token streams; a clean decompiler Git-source tar reproduces raw
 files and unchanged diagnostics byte-for-byte. The six recorded native probes
 retain their traces, and full readable reproduction/dictionary reversal pass.
-There remain 21 large method spans, 13 with block labels. Whole-game/browser/phone
+That pass left 21 large method spans, 13 with block labels. Whole-game/browser/phone
 acceptance remains unverified.
 
 Pass 88 names `InstrumentPatch` and `InstrumentEnvelope`, including all 77

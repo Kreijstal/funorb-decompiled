@@ -50,31 +50,29 @@ final class GameScreen extends MenuScreen {
         try {
           L0: {
             L1: {
-              L2: {
-                actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
-                if ((actionId == 8) &&
-                    (var4 == 0)) {
-                  L4: {
-                    if (102 != ki.currentKeyboardEventCode) {
-                      if (ki.currentKeyboardEventCode != 103) {
-                        super.handleMenuKey(itemIndex, -53);
-                        if (var4 == 0) {
-                          break L4;
-                        }
-                      }
-                      j.field_gb = 80;
+              actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
+              if ((actionId == 8) &&
+                  (var4 == 0)) {
+                L4: {
+                  if (102 != ki.currentKeyboardEventCode) {
+                    if (ki.currentKeyboardEventCode != 103) {
+                      super.handleMenuKey(itemIndex, -53);
                       if (var4 == 0) {
                         break L4;
                       }
                     }
-                    j.field_gb = 0;
+                    j.field_gb = 80;
+                    if (var4 == 0) {
+                      break L4;
+                    }
                   }
-                  this.previewMusicVolume(0);
-                  if (var4 == 0) {
-                    break L0;
-                  }
-                  break L2;
+                  j.field_gb = 0;
                 }
+                this.previewMusicVolume(0);
+                if (var4 == 0) {
+                  break L0;
+                }
+              } else {
                 if (actionId != 9) {
                   break L1;
                 }
@@ -781,23 +779,21 @@ final class GameScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          L1: {
-            var3_int = 121 % ((44 - param1) / 36);
-            actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
-            if ((actionId == 8) &&
-                (var5 == 0)) {
-              if (j.field_gb > 10) {
-                j.field_gb = j.field_gb - 10;
-                if (var5 == 0) {
-                  return;
-                }
-              }
-              j.field_gb = 0;
+          var3_int = 121 % ((44 - param1) / 36);
+          actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
+          if ((actionId == 8) &&
+              (var5 == 0)) {
+            if (j.field_gb > 10) {
+              j.field_gb = j.field_gb - 10;
               if (var5 == 0) {
                 return;
               }
-              break L1;
             }
+            j.field_gb = 0;
+            if (var5 == 0) {
+              return;
+            }
+          } else {
             if (9 != actionId) {
               return;
             }
@@ -2485,14 +2481,11 @@ final class GameScreen extends MenuScreen {
             rowY += 295;
           }
           L11: {
-            L12: {
-              var8 = dd.uiPaletteFont;
-              var9 = 320;
-              var10 = 160;
-              if ((0 != this.screenId) &&
-                  (this.screenId != 1)) {
-                break L12;
-              }
+            var8 = dd.uiPaletteFont;
+            var9 = 320;
+            var10 = 160;
+            if (!((0 != this.screenId) &&
+                (this.screenId != 1))) {
               var11 = 322;
               if (var14 == 0) {
                 break L11;

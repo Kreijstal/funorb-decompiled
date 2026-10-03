@@ -7,17 +7,17 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current control-flow readability (pass 89)
+## Current control-flow readability (pass 90)
 
 The export has 7,015 guarded names. All 303 sources compile, reproduce and
-reverse to the pinned raw Git input. Removing terminal plain-block breaks now
-saves 248 lines and 73 labels without moving declarations or effects. The patch
-constructor has one meaningful label left; its 77 locals retain their names.
-Enclosing exception/monitor regions remain intact, and intermediate protected
-regions, loops or switches refuse this cleanup.
+reverse to the pinned raw Git input. Sixty-four single conditional exits now
+read as 47 `if/else` alternatives and 17 ordinary guards, saving 145 lines.
+The original prefix runs before the predicate, and the original remainder is
+the fallback; neither is duplicated. Prefix/branch scopes and protected regions
+stay intact. The patch constructor now has no labels and retains its 77 names.
 
-There remain 21 method/constructor spans of at least 300 lines, 13 with generated
-block labels. The 3,042-line interface text-loader span includes its three nested
+There remain 21 method/constructor spans of at least 300 lines, 12 with generated
+block labels. The 3,042-line interface text-loader span includes three nested
 helpers, so this inventory does not count unique state machines. The labeled
 large bodies are:
 
@@ -26,23 +26,25 @@ large bodies are:
 | `GameScreen.renderScreen` | 372 | 10 |
 | `GameScreen.updateScreen` | 330 | 6 |
 | `GameScreen.activateMenuItem` | 335 | 20 |
-| `GameplaySession.renderSession` | 395 | 22 |
+| `GameplaySession.renderSession` | 390 | 20 |
 | `GameplaySession.updateSession` | 643 | 14 |
-| `kc.reconcileBoardEntities` | 504 | 17 |
-| `f.advanceGameplayAvatarAnimation` | 436 | 2 |
+| `kc.reconcileBoardEntities` | 502 | 16 |
+| `f.advanceGameplayAvatarAnimation` | 434 | 1 |
 | `Sprite.rotateNearest` | 531 | 1 |
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
-| `MusicDecoder.decodePacket` | 327 | 3 |
+| `MusicDecoder.decodePacket` | 323 | 1 |
 | `Bzip2Decoder.decodeBlocks` | 388 | 1 |
 | `MusicScore` constructor | 541 | 1 |
-| `InstrumentPatch` constructor | 468 | 1 |
 
-The next structural work should start with a remaining gameplay exit and its
-actual skipped work/protected boundary. Removing further labels needs a proof
-for that continuation; terminal fallthrough alone does not justify it. The
-5,376-case generic native comparison and six recorded game probes establish
-controlled behavior only. Real assets, complete gameplay and browser/phone
-memory/startup/FPS targets remain unverified.
+The next structural work should address multiple exits to one plain destination.
+For example, `MusicScore`'s controller decoding has 12 breaks to one label;
+turning that exclusive tree into ordinary alternatives requires preserving
+predicate order and every fallback. Intermediate protected regions and loop
+continuations need separate proofs. Control flags are not assumed constant.
+The 6,720-case generic comparison and six recorded native probes establish
+controlled behavior only. Complete assets/gameplay and browser/phone
+memory/startup/FPS targets remain unverified. Sections labeled with earlier
+passes below describe their historical counts and verification scope.
 
 ## Menu to gameplay
 
@@ -3258,3 +3260,28 @@ produce all 303 regenerated token streams. Native 5,376-case generic comparisons
 cover scopes, failures, ancestor jumps, enclosing cleanup and monitors. All six
 recorded game probes retain their traces. Large bodies and whole-game/browser/
 phone acceptance remain unfinished or unverified.
+
+
+## Conditional alternatives instead of plain exits (pass 90)
+
+`InstrumentPatch` now selects the envelope-map construction or its existing
+single-envelope fallback with `if/else`. Its prefix cursor changes and allocation
+stay before the condition. The previous skip break disappears; this does not
+assume the input is valid or move the surrounding exception context. The native
+patch fixtures retain their 1,759-case trace across all three variants.
+
+Gameplay rendering similarly exposes single-exit alternatives without guessing
+that the client control flag is zero. Board reconciliation's final single-exit
+choice and two music-packet choices become ordinary conditionals. More complex
+multi-exit decisions remain intact. The generic rewrite requires a direct braced
+conditional ending in the destination's only break and a nonempty fallback;
+other label references, intermediate protected/loop/switch paths and unsupported
+syntax refuse reconstruction.
+
+This pass removes 64 labels/breaks, unwraps 64 scope-safe frames and saves 145
+lines across 45 files. All ordered naming bindings and 7,015 complete rules
+remain unchanged. Native 6,720-case comparisons and selected/fallback oracles
+cover effects/failures, scopes, ancestor jumps, finally state and monitors. All
+six recorded game probes retain their trace pins. The constructor has 466 lines
+and no labels; there are still 21 large method spans, 12 with block labels.
+Complete gameplay/assets and browser/phone acceptance remain unverified.

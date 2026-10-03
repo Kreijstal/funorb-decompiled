@@ -42,19 +42,17 @@ final class re extends IntrusiveNode {
             if (!methodGuard) {
               field_f = (String) null;
             }
-            L2: {
-              vd.keyboardEventReadIndex = pc.keyboardEventFrameEndIndex;
-              nk.keyboardIdleTicks = nk.keyboardIdleTicks + 1;
-              if (ii.keyStateWriteIndexOrResetSentinel < 0) {
-                resetKeyIndex = 0;
-                keyStateChangeOrResetIndex = resetKeyIndex;
-                while (resetKeyIndex < 112) {
-                  kj.heldInternalKeys[resetKeyIndex] = false;
-                  resetKeyIndex++;
-                }
-                ii.keyStateWriteIndexOrResetSentinel = gk.keyStateReadIndex;
-                break L2;
+            vd.keyboardEventReadIndex = pc.keyboardEventFrameEndIndex;
+            nk.keyboardIdleTicks = nk.keyboardIdleTicks + 1;
+            if (ii.keyStateWriteIndexOrResetSentinel < 0) {
+              resetKeyIndex = 0;
+              keyStateChangeOrResetIndex = resetKeyIndex;
+              while (resetKeyIndex < 112) {
+                kj.heldInternalKeys[resetKeyIndex] = false;
+                resetKeyIndex++;
               }
+              ii.keyStateWriteIndexOrResetSentinel = gk.keyStateReadIndex;
+            } else {
               while (gk.keyStateReadIndex != ii.keyStateWriteIndexOrResetSentinel) {
                 keyStateChangeOrResetIndex = gf.queuedKeyStateChanges[gk.keyStateReadIndex];
                 gk.keyStateReadIndex = 1 + gk.keyStateReadIndex & 127;

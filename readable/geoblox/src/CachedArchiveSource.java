@@ -236,32 +236,30 @@ final class CachedArchiveSource extends ArchiveSource {
           }
         }
         try {
-          L4: {
-            if ((groupBytes != null) &&
-                (groupBytesForPayloadChecks.length > 2)) {
-              WhirlpoolHash.field_f.reset();
-              WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
-              payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
-              if (payloadCrc32 != this.index.groupCrc32[groupId]) {
-                throw new RuntimeException();
-              }
-              if ((null != this.index.groupWhirlpoolDigests) &&
-                  (null != this.index.groupWhirlpoolDigests[groupId])) {
-                expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
-                computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
-                networkDigestByteIndex = 0;
-                digestByteIndex = networkDigestByteIndex;
-                while (networkDigestByteIndex < 64) {
-                  if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
-                    throw new RuntimeException();
-                  }
-                  networkDigestByteIndex++;
-                }
-              }
-              this.networkClient.failureCount = 0;
-              this.networkClient.failureCode = 0;
-              break L4;
+          if ((groupBytes != null) &&
+              (groupBytesForPayloadChecks.length > 2)) {
+            WhirlpoolHash.field_f.reset();
+            WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
+            payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
+            if (payloadCrc32 != this.index.groupCrc32[groupId]) {
+              throw new RuntimeException();
             }
+            if ((null != this.index.groupWhirlpoolDigests) &&
+                (null != this.index.groupWhirlpoolDigests[groupId])) {
+              expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
+              computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
+              networkDigestByteIndex = 0;
+              digestByteIndex = networkDigestByteIndex;
+              while (networkDigestByteIndex < 64) {
+                if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
+                  throw new RuntimeException();
+                }
+                networkDigestByteIndex++;
+              }
+            }
+            this.networkClient.failureCount = 0;
+            this.networkClient.failureCode = 0;
+          } else {
             throw new RuntimeException();
           }
         } catch (java.lang.RuntimeException networkFailure) {

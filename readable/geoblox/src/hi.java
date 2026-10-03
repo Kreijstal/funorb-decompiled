@@ -158,14 +158,12 @@ final class hi extends ee implements ta, pl {
         int[] specularResponses = null;
         controlFlagSnapshot = Geoblox.field_C;
         try {
-          L0: {
-            meshForPriorityDecision = mesh;
-            if ((null != meshForPriorityDecision.facePriorities) &&
-                (meshForPriorityDecision.facePriorityCount > 1)) {
-              facePriorities = meshForPriorityDecision.facePriorities;
-              va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
-              break L0;
-            }
+          meshForPriorityDecision = mesh;
+          if ((null != meshForPriorityDecision.facePriorities) &&
+              (meshForPriorityDecision.facePriorityCount > 1)) {
+            facePriorities = meshForPriorityDecision.facePriorities;
+            va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
+          } else {
             vc.compactDepthBucketFaceOrder(2971);
           }
           if (guard != 6562) {
@@ -228,43 +226,39 @@ final class hi extends ee implements ta, pl {
             } else {
               faceNormalCIndexOrMissing = -1;
             }
-            L7: {
-              faceNormalC = faceNormalCIndexOrMissing;
-              if ((l.meshMaterials != null) &&
-                  (mesh.faceMaterialIndices != null) &&
-                  (mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex) &&
-                  (mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1) &&
-                  (l.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex])) {
-                faceMaterialOrNull = l.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
-                break L7;
-              }
+            faceNormalC = faceNormalCIndexOrMissing;
+            if ((l.meshMaterials != null) &&
+                (mesh.faceMaterialIndices != null) &&
+                (mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex) &&
+                (mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1) &&
+                (l.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex])) {
+              faceMaterialOrNull = l.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
+            } else {
               faceMaterialOrNull = null;
             }
-            L9: {
-              faceMaterial = faceMaterialOrNull;
-              vertexAX = sh.projectedMeshVertexX[specularResponseOrVertexA];
-              vertexAY = dj.projectedMeshVertexY[specularResponseOrVertexA];
-              vertexBX = sh.projectedMeshVertexX[faceVertexB];
-              vertexBY = dj.projectedMeshVertexY[faceVertexB];
-              vertexCX = sh.projectedMeshVertexX[faceVertexC];
-              vertexCY = dj.projectedMeshVertexY[faceVertexC];
-              if ((faceNormalA == faceNormalB) &&
-                  (faceNormalC == faceNormalB)) {
-                diffuseA = diffuseResponses[faceNormalA];
-                flatSpecularOrDiffuseB = specularResponses[faceNormalA];
-                if (faceMaterial != null) {
-                  flatBaseRgbOrDefault = faceMaterial.baseRgb;
-                } else {
-                  flatBaseRgbOrDefault = 8355711;
-                }
-                flatBaseRgbOrDiffuseC = flatBaseRgbOrDefault;
-                flatRedBlueMaskOrSpecularA = flatBaseRgbOrDiffuseC & 16711935;
-                flatGreenMaskOrSpecularB = 65280 & flatBaseRgbOrDiffuseC;
-                flatLitRgbOrSpecularC = (-16711703 & flatRedBlueMaskOrSpecularA * diffuseA) >>> 8 | -285147392 & flatGreenMaskOrSpecularB * diffuseA >>> 8;
-                flatLitRgbOrSpecularC = flatLitRgbOrSpecularC + flatSpecularOrDiffuseB * 65793;
-                gi.drawHalfBlendSolidTriangle(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
-                break L9;
+            faceMaterial = faceMaterialOrNull;
+            vertexAX = sh.projectedMeshVertexX[specularResponseOrVertexA];
+            vertexAY = dj.projectedMeshVertexY[specularResponseOrVertexA];
+            vertexBX = sh.projectedMeshVertexX[faceVertexB];
+            vertexBY = dj.projectedMeshVertexY[faceVertexB];
+            vertexCX = sh.projectedMeshVertexX[faceVertexC];
+            vertexCY = dj.projectedMeshVertexY[faceVertexC];
+            if ((faceNormalA == faceNormalB) &&
+                (faceNormalC == faceNormalB)) {
+              diffuseA = diffuseResponses[faceNormalA];
+              flatSpecularOrDiffuseB = specularResponses[faceNormalA];
+              if (faceMaterial != null) {
+                flatBaseRgbOrDefault = faceMaterial.baseRgb;
+              } else {
+                flatBaseRgbOrDefault = 8355711;
               }
+              flatBaseRgbOrDiffuseC = flatBaseRgbOrDefault;
+              flatRedBlueMaskOrSpecularA = flatBaseRgbOrDiffuseC & 16711935;
+              flatGreenMaskOrSpecularB = 65280 & flatBaseRgbOrDiffuseC;
+              flatLitRgbOrSpecularC = (-16711703 & flatRedBlueMaskOrSpecularA * diffuseA) >>> 8 | -285147392 & flatGreenMaskOrSpecularB * diffuseA >>> 8;
+              flatLitRgbOrSpecularC = flatLitRgbOrSpecularC + flatSpecularOrDiffuseB * 65793;
+              gi.drawHalfBlendSolidTriangle(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
+            } else {
               diffuseA = diffuseResponses[faceNormalA];
               flatSpecularOrDiffuseB = diffuseResponses[faceNormalB];
               flatBaseRgbOrDiffuseC = diffuseResponses[faceNormalC];

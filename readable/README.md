@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`b77f32b2bb60c74dc8ab1ec52d603089965ae79c`. It comes from java-tools
-`d63d66ce9426ee8b704b348b4e8b552c2fb160a5` and Deko
+`f36911c124271fef31024e90327379b4ec058e72`. It comes from java-tools
+`fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1`:
+`9e15df0c94b6052b0419e15dc09fb1e35069a45b42e1ffcffb86549fd16a2ec2`:
 
 ```sh
-git archive --format=tar d63d66ce9426ee8b704b348b4e8b552c2fb160a5 | sha256sum
+git archive --format=tar fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,56 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Conditional alternatives from plain exits (pass 90)
+
+The generic decompiler reconstructs 64 labeled exits: 47 ordinary `if/else`
+alternatives and 17 guards over logical negation. Prefix work stays before the
+predicate; the original remainder becomes the fallback. Neither work nor
+predicates are duplicated and no local is introduced. Scope-safe cleanup unwraps
+64 blocks across 45 files, saving 145 lines (78,441 to 78,296). Gameplay rendering
+falls from 395 to 390 lines and 22 to 20 block labels; board reconciliation from
+504 to 502 lines and 17 to 16 labels. The 466-line instrument-patch constructor
+now has no labels, while retaining all 77 named locals and its fallback behavior.
+
+The conditional must be a direct braced statement of a unique plain block. Its
+final direct statement is the only break to that destination, followed by a
+nonempty fallback. Prefix scopes stay in an outer block until existing cleanup
+can prove unwrapping safe; branch/fallback scopes remain separate. A branch
+containing only the break becomes a guard rather than an empty `if` arm.
+
+An existing alternate, additional references to the destination, bare branches,
+intermediate loops/switches/protected wrappers or unknown extents refuse the
+rewrite. Duplicate/unbound labels, invalid ancestor transfers, comments,
+Unicode escapes, nested executables and unsupported/malformed syntax also refuse
+it. Protected work within the prefix, branch or fallback remains intact, as do
+regions enclosing the whole destination. Multi-exit trees remain: the music
+score controller decoder has 12 breaks to one label and needs a broader proof
+for exclusive branches. The current single-exit proof does not justify deleting
+those jumps or assuming obfuscation control flags are always zero.
+
+`NODE_PATH=/path/to/dependencies JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/javaAstEmitterLoopExits.test.js`
+passes 52 groups, with one optional historical corpus check skipped. Two new
+groups include 6,720 native comparisons plus explicit selected/fallback oracles:
+ordered effects, NaNs/unboxing, failures, partial state, branch-local scopes,
+ancestor transfers/returns, finally state after invocation and monitor release.
+Exception-exit and full-integer argument regressions retain eight and two passing
+groups. Independent JDK body positions plus only the alternative/frame transforms
+produce the exact token streams of all 303 regenerated files. Raw Java compiles;
+all ordered declarations/references/ordinals/overrides remain (19,591/119,181/388).
+
+A clean committed decompiler Git-source tar reproduces raw sources and unchanged
+diagnostics byte-for-byte. All six native/raw/readable probes retain their source
+and trace pins. Rules/migration/text checks pass all three test files. Full
+reproduction compiles both 303-file corpora and compares 138,772 bindings;
+dictionary reversal recovers the pinned raw Git input byte-for-byte. The single
+current manifest records an explicit source migration with no naming changes:
+all 7,015 complete naming objects and 57,278 edits remain.
+
+The current survey has 2,080 method/constructor bodies and 21 spans of at least
+300 lines, 12 with generated block labels. Some spans include nested helpers.
+Larger gameplay/decision-tree reconstruction, unknown names, real assets and
+whole-game/browser/phone acceptance remain unfinished or unverified.
 
 ## Terminal plain-block exits (pass 89)
 
@@ -1971,9 +2021,10 @@ identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 Pass 86 recorded its source migration in `sourceChange` with an empty
 `ruleChanges` list. Pass 87 retained that source identity and added 188 naming rules.
-Pass 88 retained it and added 144 naming rules. Current pass 89 records a
-new source migration and an empty `ruleChanges` list, preserving all 7,015
-previous complete naming objects.
+Pass 88 retained it and added 144 naming rules. Pass 89 recorded its terminal
+break source migration. Current pass 90 records the conditional-alternative
+source migration and an empty `ruleChanges` list, preserving all 7,015 previous
+complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -1996,7 +2047,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78` |
-| Readable | `194217575c62bcc9f968a8deb766b93bae6068e77c535bae7ac69978913aa0d5` |
+| Raw | `f776980914ad1eb66192c516599a34f8afa5052ada3675be33dd5550465fb915` |
+| Readable | `b5b894269717ad1f2a5cf1878015e7c66072fade8542465c11c784efafd443b1` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

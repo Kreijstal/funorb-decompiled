@@ -110,14 +110,12 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         RuntimeException caughtCallbackFailure = null;
         try {
           if (je.keyboardListener != null) {
-            L1: {
-              nk.keyboardIdleTicks = 0;
-              internalKeyCode = event.getKeyCode();
-              if ((internalKeyCode >= 0) &&
-                  (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
-                internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode] & -129;
-                break L1;
-              }
+            nk.keyboardIdleTicks = 0;
+            internalKeyCode = event.getKeyCode();
+            if ((internalKeyCode >= 0) &&
+                (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+              internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode] & -129;
+            } else {
               internalKeyCode = -1;
             }
             if ((ii.keyStateWriteIndexOrResetSentinel >= 0) &&

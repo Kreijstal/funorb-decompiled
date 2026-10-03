@@ -40,15 +40,13 @@ abstract class vk {
                 (param0.length == var4_int))) {
             param0 = new byte[var4_int];
           }
-          L2: {
-            var5 = param1.readBits((byte) -17, 3);
-            var6 = (byte)param1.readBits((byte) -17, param3);
-            if (0 >= var5) {
-              for (var7 = 0; var4_int > var7; var7++) {
-                param0[var7] = (byte)var6;
-              }
-              break L2;
+          var5 = param1.readBits((byte) -17, 3);
+          var6 = (byte)param1.readBits((byte) -17, param3);
+          if (0 >= var5) {
+            for (var7 = 0; var4_int > var7; var7++) {
+              param0[var7] = (byte)var6;
             }
+          } else {
             for (var7 = 0; var4_int > var7; var7++) {
               param0[var7] = (byte)(param1.readBits((byte) -17, var5) + var6);
             }

@@ -158,22 +158,20 @@ final class ae {
         this.field_f = MusicDecoder.readBits(24);
         this.field_a = new int[this.field_f];
         stackIn_3_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
-        L1: {
-          var1 = stackIn_3_0;
-          if (var1 != 0) {
-            var2 = 0;
-            var3_int = MusicDecoder.readBits(5) + 1;
-            while (var2 < this.field_f) {
-              var4_int = MusicDecoder.readBits(hj.unsignedBitLength((byte) 58, this.field_f - var2));
-              for (var5 = 0; var5 < var4_int; var5++) {
-                incrementValue$0 = var2;
-                var2++;
-                this.field_a[incrementValue$0] = var3_int;
-              }
-              var3_int++;
+        var1 = stackIn_3_0;
+        if (var1 != 0) {
+          var2 = 0;
+          var3_int = MusicDecoder.readBits(5) + 1;
+          while (var2 < this.field_f) {
+            var4_int = MusicDecoder.readBits(hj.unsignedBitLength((byte) 58, this.field_f - var2));
+            for (var5 = 0; var5 < var4_int; var5++) {
+              incrementValue$0 = var2;
+              var2++;
+              this.field_a[incrementValue$0] = var3_int;
             }
-            break L1;
+            var3_int++;
           }
+        } else {
           stackIn_13_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;

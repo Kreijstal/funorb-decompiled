@@ -210,13 +210,10 @@ final class ab {
                   }
                   movingEntity.relatedEntityCount = 0;
                   wasKind2IntSnapshot = (movingEntity.entitySpriteKindId != 2) ? 0 : 1;
-                  L11: {
-                    neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
-                    ih.linkEntityAtMaskContacts(-1, td.rotatedEntityScreenY, movingEntity, ng.rotatedEntityScreenX);
-                    if ((neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) &&
-                        (movingEntity.entitySpriteKindId != 2)) {
-                      break L11;
-                    }
+                  neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
+                  ih.linkEntityAtMaskContacts(-1, td.rotatedEntityScreenY, movingEntity, ng.rotatedEntityScreenX);
+                  if (!((neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) &&
+                      (movingEntity.entitySpriteKindId != 2))) {
                     if (movingEntity.entitySpriteKindId != 2) {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
                     }

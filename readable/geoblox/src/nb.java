@@ -86,16 +86,14 @@ final class nb {
           kindBeforeVariantSelection = spriteKindId;
           inwardVelocityXBeforeVariantSelection = (float)(320 - pointerX);
           selectedVariantId = (spriteKindId != 2) ? -1 : variantId;
-          L5: {
-            zeroLifetimeTicks = 0;
-            unusedMotionFloat = 0.0f;
-            boardYForCategorySelection = (float)pointerY;
-            inwardVelocityYForCategorySelection = (float)(-pointerY + 240);
-            if ((spriteKindId != 2) &&
-                (1 != spriteKindId)) {
-              initializationCategory = -1;
-              break L5;
-            }
+          zeroLifetimeTicks = 0;
+          unusedMotionFloat = 0.0f;
+          boardYForCategorySelection = (float)pointerY;
+          inwardVelocityYForCategorySelection = (float)(-pointerY + 240);
+          if ((spriteKindId != 2) &&
+              (1 != spriteKindId)) {
+            initializationCategory = -1;
+          } else {
             initializationCategory = categoryId;
           }
           ((GameplayEntity) (Object) entityBeforeVariantSelection).initializeEntityMotion(motionGuardBeforeVariantSelection, boardXBeforeVariantSelection, kindBeforeVariantSelection, inwardVelocityXBeforeVariantSelection, selectedVariantId, zeroLifetimeTicks, unusedMotionFloat, boardYForCategorySelection, inwardVelocityYForCategorySelection, initializationCategory, 0.0f);

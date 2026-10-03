@@ -55,15 +55,12 @@ abstract class ArchiveSource {
                 (fa.field_c.bytes.length >= var7_int))) {
             fa.field_c = new ByteArrayBuffer(var7_int);
           }
-          L4: {
-            fa.field_c.position = 0;
-            fa.field_c.writeBytes(param5, -97, param4, param2);
-            fa.field_c.padZerosToPosition((byte) -84, var7_int);
-            fa.field_c.encryptXteaBlocks(var12, (byte) -33);
-            if ((vf.field_I != null) &&
-                (vf.field_I.bytes.length >= 100)) {
-              break L4;
-            }
+          fa.field_c.position = 0;
+          fa.field_c.writeBytes(param5, -97, param4, param2);
+          fa.field_c.padZerosToPosition((byte) -84, var7_int);
+          fa.field_c.encryptXteaBlocks(var12, (byte) -33);
+          if (!((vf.field_I != null) &&
+              (vf.field_I.bytes.length >= 100))) {
             vf.field_I = new ByteArrayBuffer(100);
           }
           vf.field_I.position = 0;

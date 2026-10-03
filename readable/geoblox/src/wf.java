@@ -166,12 +166,9 @@ abstract class wf extends ch {
           var3 = (java.applet.Applet) null;
           wf.a((java.net.URL) null, 48, (java.applet.Applet) null);
         }
-        L1: {
-          var2 = this.k(-1);
-          if ((var2 != 0) &&
-              (1 != var2)) {
-            break L1;
-          }
+        var2 = this.k(-1);
+        if (!((var2 != 0) &&
+            (1 != var2))) {
           if (wj.field_G[1]) {
             ByteArrayBuffer.a(true, 2);
           }
@@ -389,16 +386,13 @@ abstract class wf extends ch {
         if ((3 == mi.field_C) &&
             (ma.a(hb.field_n, dc.field_c, l.field_h, -11652)) &&
             (rj.a((byte) -127, hb.field_n))) {
-          L22: {
-            tj.c((byte) -105);
-            ke.b((byte) 120);
-            oi.field_e = ArchiveSource.loadingText;
-            kf.field_e = false;
-            fj.a((byte) 114, hb.field_n, rb.field_c, dc.field_c, l.field_h);
-            if ((!ri.field_a) &&
-                (jg.field_d == null)) {
-              break L22;
-            }
+          tj.c((byte) -105);
+          ke.b((byte) 120);
+          oi.field_e = ArchiveSource.loadingText;
+          kf.field_e = false;
+          fj.a((byte) 114, hb.field_n, rb.field_c, dc.field_c, l.field_h);
+          if (!((!ri.field_a) &&
+              (jg.field_d == null))) {
             stackIn_100_0 = 2274;
             stackIn_100_1 = jg.field_d;
             if (ri.field_a) {

@@ -1508,20 +1508,18 @@ final class SoftwareRasterizer {
           leavingPixelIndex = leavingPixelIndex + (columnIndexOrWindowEndCounter - initialWindowRowOrNegativeOutputCounter) * stride;
         }
         while (initialWindowRowOrNegativeOutputCounter < columnIndexOrWindowEndCounter) {
-          L26: {
-            if (initialWindowRowOrNegativeOutputCounter + regionTop + regionHeight + radius < clipBottom) {
-              for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
-                growingEnteringIndexBeforeIncrement = enteringPixelIndex;
-                enteringPixelIndex++;
-                scratchPixel = pixels[growingEnteringIndexBeforeIncrement];
-                redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] + (scratchPixel >> 16 & 255);
-                greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] + (scratchPixel >> 8 & 255);
-                blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] + (scratchPixel & 255);
-              }
-              enteringPixelIndex = enteringPixelIndex + rowSkip;
-              windowSampleCount++;
-              break L26;
+          if (initialWindowRowOrNegativeOutputCounter + regionTop + regionHeight + radius < clipBottom) {
+            for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+              growingEnteringIndexBeforeIncrement = enteringPixelIndex;
+              enteringPixelIndex++;
+              scratchPixel = pixels[growingEnteringIndexBeforeIncrement];
+              redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] + (scratchPixel >> 16 & 255);
+              greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] + (scratchPixel >> 8 & 255);
+              blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] + (scratchPixel & 255);
             }
+            enteringPixelIndex = enteringPixelIndex + rowSkip;
+            windowSampleCount++;
+          } else {
             enteringPixelIndex = enteringPixelIndex + stride;
           }
           for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {

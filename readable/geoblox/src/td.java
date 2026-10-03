@@ -107,17 +107,15 @@ final class td extends hk {
             var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
             break L0;
           }
-          L2: {
-            var13 = oa.field_e[0];
-            var10 = var13.fullWidth << 1;
-            var11 = var13.fullHeight << 1;
-            if ((null != da.field_b) &&
-                (var10 <= da.field_b.width) &&
-                (var11 <= da.field_b.height)) {
-              Geoblox.setRasterTarget(1, da.field_b);
-              SoftwareRasterizer.clearFramebuffer();
-              break L2;
-            }
+          var13 = oa.field_e[0];
+          var10 = var13.fullWidth << 1;
+          var11 = var13.fullHeight << 1;
+          if ((null != da.field_b) &&
+              (var10 <= da.field_b.width) &&
+              (var11 <= da.field_b.height)) {
+            Geoblox.setRasterTarget(1, da.field_b);
+            SoftwareRasterizer.clearFramebuffer();
+          } else {
             da.field_b = new Sprite(var10, var11);
             Geoblox.setRasterTarget(1, da.field_b);
           }

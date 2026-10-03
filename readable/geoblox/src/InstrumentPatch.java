@@ -310,32 +310,30 @@ final class InstrumentPatch extends IntrusiveNode {
           for (envelopeRunReadIndex = 0; envelopeRunReadIndex < envelopeRunByteCountOrMapLength; envelopeRunReadIndex++) {
             envelopeRuns[envelopeRunReadIndex] = patchInput.readSignedByte((byte) 125);
           }
-          L6: {
-            patchInput.position = patchInput.position + 1;
-            envelopeRunByteCountOrMapLength++;
-            envelopeAssignmentsStorage = new byte[envelopeRunByteCountOrMapLength];
-            envelopeAssignmentsAlias = envelopeAssignmentsStorage;
-            envelopeAssignments = envelopeAssignmentsAlias;
-            if (envelopeRunByteCountOrMapLength > 1) {
-              envelopeAssignmentsStorage[1] = (byte) 1;
-              currentEnvelopeIndex = 1;
-              envelopeCount = 2;
-              for (envelopeIndexOrCurvePointCount = 2; envelopeRunByteCountOrMapLength > envelopeIndexOrCurvePointCount; envelopeIndexOrCurvePointCount++) {
-                encodedEnvelopeIndex = patchInput.readUnsignedByte((byte) 34);
-                if (0 == encodedEnvelopeIndex) {
-                  newEnvelopeIndex = envelopeCount;
-                  envelopeCount++;
-                  currentEnvelopeIndex = newEnvelopeIndex;
-                } else {
-                  if (encodedEnvelopeIndex <= currentEnvelopeIndex) {
-                    encodedEnvelopeIndex--;
-                  }
-                  currentEnvelopeIndex = encodedEnvelopeIndex;
+          patchInput.position = patchInput.position + 1;
+          envelopeRunByteCountOrMapLength++;
+          envelopeAssignmentsStorage = new byte[envelopeRunByteCountOrMapLength];
+          envelopeAssignmentsAlias = envelopeAssignmentsStorage;
+          envelopeAssignments = envelopeAssignmentsAlias;
+          if (envelopeRunByteCountOrMapLength > 1) {
+            envelopeAssignmentsStorage[1] = (byte) 1;
+            currentEnvelopeIndex = 1;
+            envelopeCount = 2;
+            for (envelopeIndexOrCurvePointCount = 2; envelopeRunByteCountOrMapLength > envelopeIndexOrCurvePointCount; envelopeIndexOrCurvePointCount++) {
+              encodedEnvelopeIndex = patchInput.readUnsignedByte((byte) 34);
+              if (0 == encodedEnvelopeIndex) {
+                newEnvelopeIndex = envelopeCount;
+                envelopeCount++;
+                currentEnvelopeIndex = newEnvelopeIndex;
+              } else {
+                if (encodedEnvelopeIndex <= currentEnvelopeIndex) {
+                  encodedEnvelopeIndex--;
                 }
-                envelopeAssignments[envelopeIndexOrCurvePointCount] = (byte)currentEnvelopeIndex;
+                currentEnvelopeIndex = encodedEnvelopeIndex;
               }
-              break L6;
+              envelopeAssignments[envelopeIndexOrCurvePointCount] = (byte)currentEnvelopeIndex;
             }
+          } else {
             envelopeCount = envelopeRunByteCountOrMapLength;
           }
           envelopes = new InstrumentEnvelope[envelopeCount];

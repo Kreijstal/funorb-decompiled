@@ -454,107 +454,105 @@ final class ResourceArchive {
           if (this.discardPackedGroups) {
             this.packedGroups[groupId] = null;
           }
-          L10: {
-            if (actualFileCount > 1) {
-              if (this.fileRetentionPolicy == 2) {
-                chunkTableOffsetOrSingleFileId = unpackedBytes.length;
-                chunkTableOffsetOrSingleFileId--;
-                chunkCount = 255 & unpackedBytesForChunkCount[chunkTableOffsetOrSingleFileId];
-                chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - actualFileCount * (chunkCount * 4);
-                requestedFileChunkTableBuffer = new ByteArrayBuffer(unpackedBytesForChunkCopies);
-                requestedLengthThenWritePosition = 0;
-                requestedStorageFileIdOrChunkIndex = 0;
-                requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
-                for (chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0; chunkIndexOrChunkLengthOrFileIndexOrDataOffset < chunkCount; chunkIndexOrChunkLengthOrFileIndexOrDataOffset++) {
-                  chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0;
-                  for (fileIndexOrChunkIndexOrChunkLengthOrFileId = 0; fileIndexOrChunkIndexOrChunkLengthOrFileId < actualFileCount; fileIndexOrChunkIndexOrChunkLengthOrFileId++) {
-                    chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex + requestedFileChunkTableBuffer.readIntBE((byte) -126);
-                    if (fileIds == null) {
-                      fileIdOrChunkLengthOrFileIndex = fileIndexOrChunkIndexOrChunkLengthOrFileId;
-                    } else {
-                      fileIdOrChunkLengthOrFileIndex = mappedFileIds[fileIndexOrChunkIndexOrChunkLengthOrFileId];
-                    }
-                    if (requestedFileId == fileIdOrChunkLengthOrFileIndex) {
-                      requestedLengthThenWritePosition = requestedLengthThenWritePosition + chunkLengthOrDataOffsetOrFileIndexOrChunkIndex;
-                      requestedStorageFileIdOrChunkIndex = fileIdOrChunkLengthOrFileIndex;
-                    }
-                  }
-                }
-                if (requestedLengthThenWritePosition == 0) {
-                  return true;
-                }
-                requestedFileBytes = new byte[requestedLengthThenWritePosition];
-                requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
-                requestedLengthThenWritePosition = 0;
-                chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0;
-                for (fileIndexOrChunkIndexOrChunkLengthOrFileId = 0; fileIndexOrChunkIndexOrChunkLengthOrFileId < chunkCount; fileIndexOrChunkIndexOrChunkLengthOrFileId++) {
-                  fileIdOrChunkLengthOrFileIndex = 0;
-                  for (copyFileOrdinal = 0; copyFileOrdinal < actualFileCount; copyFileOrdinal++) {
-                    fileIdOrChunkLengthOrFileIndex = fileIdOrChunkLengthOrFileIndex + requestedFileChunkTableBuffer.readIntBE((byte) -82);
-                    if (fileIds == null) {
-                      copiedFileId = copyFileOrdinal;
-                    } else {
-                      copiedFileId = mappedFileIds[copyFileOrdinal];
-                    }
-                    if (copiedFileId == requestedFileId) {
-                      sf.a(unpackedBytesForChunkCopies, chunkLengthOrDataOffsetOrFileIndexOrChunkIndex, requestedFileBytes, requestedLengthThenWritePosition, fileIdOrChunkLengthOrFileIndex);
-                      requestedLengthThenWritePosition = requestedLengthThenWritePosition + fileIdOrChunkLengthOrFileIndex;
-                    }
-                    chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex + fileIdOrChunkLengthOrFileIndex;
-                  }
-                }
-                groupFileSlots[requestedStorageFileIdOrChunkIndex] = requestedFileBytes;
-                return true;
-              }
+          if (actualFileCount > 1) {
+            if (this.fileRetentionPolicy == 2) {
               chunkTableOffsetOrSingleFileId = unpackedBytes.length;
               chunkTableOffsetOrSingleFileId--;
               chunkCount = 255 & unpackedBytesForChunkCount[chunkTableOffsetOrSingleFileId];
-              chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - 4 * chunkCount * actualFileCount;
-              allFilesChunkTableBuffer = new ByteArrayBuffer(unpackedBytesForChunkCopies);
-              allocatedFileLengthsThenWritePositions = new int[actualFileCount];
-              fileLengthsAlias = allocatedFileLengthsThenWritePositions;
-              fileLengthsThenWritePositions = fileLengthsAlias;
-              allFilesChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
-              for (requestedStorageFileIdOrChunkIndex = 0; requestedStorageFileIdOrChunkIndex < chunkCount; requestedStorageFileIdOrChunkIndex++) {
-                chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0;
-                for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex < actualFileCount; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex++) {
-                  chunkIndexOrChunkLengthOrFileIndexOrDataOffset = chunkIndexOrChunkLengthOrFileIndexOrDataOffset + allFilesChunkTableBuffer.readIntBE((byte) -27);
-                  fileLengthsThenWritePositions[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex] = fileLengthsThenWritePositions[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex] + chunkIndexOrChunkLengthOrFileIndexOrDataOffset;
+              chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - actualFileCount * (chunkCount * 4);
+              requestedFileChunkTableBuffer = new ByteArrayBuffer(unpackedBytesForChunkCopies);
+              requestedLengthThenWritePosition = 0;
+              requestedStorageFileIdOrChunkIndex = 0;
+              requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
+              for (chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0; chunkIndexOrChunkLengthOrFileIndexOrDataOffset < chunkCount; chunkIndexOrChunkLengthOrFileIndexOrDataOffset++) {
+                chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0;
+                for (fileIndexOrChunkIndexOrChunkLengthOrFileId = 0; fileIndexOrChunkIndexOrChunkLengthOrFileId < actualFileCount; fileIndexOrChunkIndexOrChunkLengthOrFileId++) {
+                  chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex + requestedFileChunkTableBuffer.readIntBE((byte) -126);
+                  if (fileIds == null) {
+                    fileIdOrChunkLengthOrFileIndex = fileIndexOrChunkIndexOrChunkLengthOrFileId;
+                  } else {
+                    fileIdOrChunkLengthOrFileIndex = mappedFileIds[fileIndexOrChunkIndexOrChunkLengthOrFileId];
+                  }
+                  if (requestedFileId == fileIdOrChunkLengthOrFileIndex) {
+                    requestedLengthThenWritePosition = requestedLengthThenWritePosition + chunkLengthOrDataOffsetOrFileIndexOrChunkIndex;
+                    requestedStorageFileIdOrChunkIndex = fileIdOrChunkLengthOrFileIndex;
+                  }
                 }
               }
-              allocatedSplitFileBytes = new byte[actualFileCount][];
-              splitFileBytesAlias = allocatedSplitFileBytes;
-              splitFileBytes = splitFileBytesAlias;
-              for (chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0; actualFileCount > chunkIndexOrChunkLengthOrFileIndexOrDataOffset; chunkIndexOrChunkLengthOrFileIndexOrDataOffset++) {
-                newFileBytes = new byte[allocatedFileLengthsThenWritePositions[chunkIndexOrChunkLengthOrFileIndexOrDataOffset]];
-                splitFileBytes[chunkIndexOrChunkLengthOrFileIndexOrDataOffset] = newFileBytes;
-                allocatedFileLengthsThenWritePositions[chunkIndexOrChunkLengthOrFileIndexOrDataOffset] = 0;
+              if (requestedLengthThenWritePosition == 0) {
+                return true;
               }
-              allFilesChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
-              chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0;
-              for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0; chunkCount > chunkLengthOrDataOffsetOrFileIndexOrChunkIndex; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex++) {
-                fileIndexOrChunkIndexOrChunkLengthOrFileId = 0;
-                for (fileIdOrChunkLengthOrFileIndex = 0; actualFileCount > fileIdOrChunkLengthOrFileIndex; fileIdOrChunkLengthOrFileIndex++) {
-                  fileIndexOrChunkIndexOrChunkLengthOrFileId = fileIndexOrChunkIndexOrChunkLengthOrFileId + allFilesChunkTableBuffer.readIntBE((byte) -106);
-                  sf.a(unpackedBytes, chunkIndexOrChunkLengthOrFileIndexOrDataOffset, allocatedSplitFileBytes[fileIdOrChunkLengthOrFileIndex], allocatedFileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex], fileIndexOrChunkIndexOrChunkLengthOrFileId);
-                  chunkIndexOrChunkLengthOrFileIndexOrDataOffset = chunkIndexOrChunkLengthOrFileIndexOrDataOffset + fileIndexOrChunkIndexOrChunkLengthOrFileId;
-                  fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex] = fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex] + fileIndexOrChunkIndexOrChunkLengthOrFileId;
+              requestedFileBytes = new byte[requestedLengthThenWritePosition];
+              requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
+              requestedLengthThenWritePosition = 0;
+              chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0;
+              for (fileIndexOrChunkIndexOrChunkLengthOrFileId = 0; fileIndexOrChunkIndexOrChunkLengthOrFileId < chunkCount; fileIndexOrChunkIndexOrChunkLengthOrFileId++) {
+                fileIdOrChunkLengthOrFileIndex = 0;
+                for (copyFileOrdinal = 0; copyFileOrdinal < actualFileCount; copyFileOrdinal++) {
+                  fileIdOrChunkLengthOrFileIndex = fileIdOrChunkLengthOrFileIndex + requestedFileChunkTableBuffer.readIntBE((byte) -82);
+                  if (fileIds == null) {
+                    copiedFileId = copyFileOrdinal;
+                  } else {
+                    copiedFileId = mappedFileIds[copyFileOrdinal];
+                  }
+                  if (copiedFileId == requestedFileId) {
+                    sf.a(unpackedBytesForChunkCopies, chunkLengthOrDataOffsetOrFileIndexOrChunkIndex, requestedFileBytes, requestedLengthThenWritePosition, fileIdOrChunkLengthOrFileIndex);
+                    requestedLengthThenWritePosition = requestedLengthThenWritePosition + fileIdOrChunkLengthOrFileIndex;
+                  }
+                  chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex + fileIdOrChunkLengthOrFileIndex;
                 }
               }
-              for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0; actualFileCount > chunkLengthOrDataOffsetOrFileIndexOrChunkIndex; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex++) {
-                if (fileIds == null) {
-                  fileIndexOrChunkIndexOrChunkLengthOrFileId = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex;
-                } else {
-                  fileIndexOrChunkIndexOrChunkLengthOrFileId = mappedFileIds[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex];
-                }
-                if (this.fileRetentionPolicy != 0) {
-                  groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileId] = allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex];
-                } else {
-                  groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileId] = IntrusiveNode.a(methodGuard - 126, allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex], false);
-                }
-              }
-              break L10;
+              groupFileSlots[requestedStorageFileIdOrChunkIndex] = requestedFileBytes;
+              return true;
             }
+            chunkTableOffsetOrSingleFileId = unpackedBytes.length;
+            chunkTableOffsetOrSingleFileId--;
+            chunkCount = 255 & unpackedBytesForChunkCount[chunkTableOffsetOrSingleFileId];
+            chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - 4 * chunkCount * actualFileCount;
+            allFilesChunkTableBuffer = new ByteArrayBuffer(unpackedBytesForChunkCopies);
+            allocatedFileLengthsThenWritePositions = new int[actualFileCount];
+            fileLengthsAlias = allocatedFileLengthsThenWritePositions;
+            fileLengthsThenWritePositions = fileLengthsAlias;
+            allFilesChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
+            for (requestedStorageFileIdOrChunkIndex = 0; requestedStorageFileIdOrChunkIndex < chunkCount; requestedStorageFileIdOrChunkIndex++) {
+              chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0;
+              for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex < actualFileCount; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex++) {
+                chunkIndexOrChunkLengthOrFileIndexOrDataOffset = chunkIndexOrChunkLengthOrFileIndexOrDataOffset + allFilesChunkTableBuffer.readIntBE((byte) -27);
+                fileLengthsThenWritePositions[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex] = fileLengthsThenWritePositions[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex] + chunkIndexOrChunkLengthOrFileIndexOrDataOffset;
+              }
+            }
+            allocatedSplitFileBytes = new byte[actualFileCount][];
+            splitFileBytesAlias = allocatedSplitFileBytes;
+            splitFileBytes = splitFileBytesAlias;
+            for (chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0; actualFileCount > chunkIndexOrChunkLengthOrFileIndexOrDataOffset; chunkIndexOrChunkLengthOrFileIndexOrDataOffset++) {
+              newFileBytes = new byte[allocatedFileLengthsThenWritePositions[chunkIndexOrChunkLengthOrFileIndexOrDataOffset]];
+              splitFileBytes[chunkIndexOrChunkLengthOrFileIndexOrDataOffset] = newFileBytes;
+              allocatedFileLengthsThenWritePositions[chunkIndexOrChunkLengthOrFileIndexOrDataOffset] = 0;
+            }
+            allFilesChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
+            chunkIndexOrChunkLengthOrFileIndexOrDataOffset = 0;
+            for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0; chunkCount > chunkLengthOrDataOffsetOrFileIndexOrChunkIndex; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex++) {
+              fileIndexOrChunkIndexOrChunkLengthOrFileId = 0;
+              for (fileIdOrChunkLengthOrFileIndex = 0; actualFileCount > fileIdOrChunkLengthOrFileIndex; fileIdOrChunkLengthOrFileIndex++) {
+                fileIndexOrChunkIndexOrChunkLengthOrFileId = fileIndexOrChunkIndexOrChunkLengthOrFileId + allFilesChunkTableBuffer.readIntBE((byte) -106);
+                sf.a(unpackedBytes, chunkIndexOrChunkLengthOrFileIndexOrDataOffset, allocatedSplitFileBytes[fileIdOrChunkLengthOrFileIndex], allocatedFileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex], fileIndexOrChunkIndexOrChunkLengthOrFileId);
+                chunkIndexOrChunkLengthOrFileIndexOrDataOffset = chunkIndexOrChunkLengthOrFileIndexOrDataOffset + fileIndexOrChunkIndexOrChunkLengthOrFileId;
+                fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex] = fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex] + fileIndexOrChunkIndexOrChunkLengthOrFileId;
+              }
+            }
+            for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0; actualFileCount > chunkLengthOrDataOffsetOrFileIndexOrChunkIndex; chunkLengthOrDataOffsetOrFileIndexOrChunkIndex++) {
+              if (fileIds == null) {
+                fileIndexOrChunkIndexOrChunkLengthOrFileId = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex;
+              } else {
+                fileIndexOrChunkIndexOrChunkLengthOrFileId = mappedFileIds[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex];
+              }
+              if (this.fileRetentionPolicy != 0) {
+                groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileId] = allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex];
+              } else {
+                groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileId] = IntrusiveNode.a(methodGuard - 126, allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex], false);
+              }
+            }
+          } else {
             if (fileIds != null) {
               chunkTableOffsetOrSingleFileId = mappedFileIds[0];
             } else {
@@ -620,12 +618,9 @@ final class ResourceArchive {
             invalidFileBeforeReturn = null;
             return (byte[]) ((Object) invalidFileBeforeReturn);
           }
-          L1: {
-            fileBytesOrFailureForContext = null;
-            if ((this.decodedFiles[groupId] != null) &&
-                (null != this.decodedFiles[groupId][fileId])) {
-              break L1;
-            }
+          fileBytesOrFailureForContext = null;
+          if (!((this.decodedFiles[groupId] != null) &&
+              (null != this.decodedFiles[groupId][fileId]))) {
             if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
               this.loadPackedGroup(groupId, -118);
               if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {

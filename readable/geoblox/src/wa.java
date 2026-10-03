@@ -185,15 +185,12 @@ final class wa {
           if (-1 == var7) {
             var7 = this.field_m.maxDescent + this.field_m.maxAscent;
           }
-          L1: {
-            var8 = SoftwareRasterizer.stride >> 2;
-            var9 = this.field_m.measureTextWidth(param1);
-            var10 = this.field_m.maxDescent + this.field_m.maxAscent;
-            var11 = 1;
-            if ((var8 >= var9) &&
-                (-1 == param1.indexOf("<br>"))) {
-              break L1;
-            }
+          var8 = SoftwareRasterizer.stride >> 2;
+          var9 = this.field_m.measureTextWidth(param1);
+          var10 = this.field_m.maxDescent + this.field_m.maxAscent;
+          var11 = 1;
+          if (!((var8 >= var9) &&
+              (-1 == param1.indexOf("<br>")))) {
             if (dd.field_E == null) {
               dd.field_E = new String[16];
             }

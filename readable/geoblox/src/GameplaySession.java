@@ -302,13 +302,11 @@ final class GameplaySession {
           dd.uiPaletteFont.drawCenteredText(graphicsLoadingMessage, 320, 250, 0, -1);
           return;
         }
-        L11: {
-          if ((ih.areEntityQueuesSettled(0)) &&
-              (this.sceneTransitionRequested) &&
-              (this.sceneTransitionInProgress)) {
-            selectedSceneTransitionFlag = 1;
-            break L11;
-          }
+        if ((ih.areEntityQueuesSettled(0)) &&
+            (this.sceneTransitionRequested) &&
+            (this.sceneTransitionInProgress)) {
+          selectedSceneTransitionFlag = 1;
+        } else {
           selectedSceneTransitionFlag = 0;
         }
         L13: {
@@ -372,12 +370,9 @@ final class GameplaySession {
               break L19;
             }
           }
-          L22: {
-            lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
-            if ((0 == this.sessionPhase) &&
-                (!ih.areEntityQueuesSettled(0))) {
-              break L22;
-            }
+          lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
+          if (!((0 == this.sessionPhase) &&
+              (!ih.areEntityQueuesSettled(0)))) {
             vh.largeBoxSprite.draw(446, 410);
             if (clientControlFlowGuard == 0) {
               break L19;

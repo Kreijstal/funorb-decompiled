@@ -332,49 +332,47 @@ abstract class oe extends dd {
           if (param2 != 160) {
             return;
           }
-          L3: {
-            var7 = 0;
-            var8 = 0;
-            if (!param0) {
-              if (var8 >= 8) {
-                var3_int = var3_int + (-160 + var7);
-              }
-              for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
-                if (!(((1 << var9 & var5) == 0) &&
-                      (param0)) &&
-                    !((!da.a(0, 88)) &&
-                      (var9 == 16) &&
-                      (!qi.d(109)))) {
-                  if ((mc.pointerPressXSnapshot >= var3_int) &&
-                      (mc.pointerPressXSnapshot <= var3_int + 32) &&
-                      (var4 <= he.pointerPressYSnapshot) &&
-                      (he.pointerPressYSnapshot <= var4 + 32)) {
-                    if (a.field_e == var9) {
-                      a.field_e = -1;
-                      return;
-                    }
-                    a.field_e = var9;
+          var7 = 0;
+          var8 = 0;
+          if (!param0) {
+            if (var8 >= 8) {
+              var3_int = var3_int + (-160 + var7);
+            }
+            for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
+              if (!(((1 << var9 & var5) == 0) &&
+                    (param0)) &&
+                  !((!da.a(0, 88)) &&
+                    (var9 == 16) &&
+                    (!qi.d(109)))) {
+                if ((mc.pointerPressXSnapshot >= var3_int) &&
+                    (mc.pointerPressXSnapshot <= var3_int + 32) &&
+                    (var4 <= he.pointerPressYSnapshot) &&
+                    (he.pointerPressYSnapshot <= var4 + 32)) {
+                  if (a.field_e == var9) {
+                    a.field_e = -1;
                     return;
                   }
-                  incrementValue$1 = var6;
-                  var6++;
-                  if (7 != incrementValue$1) {
-                    var3_int += 40;
-                  } else {
-                    var3_int = 160;
-                    var4 += 40;
-                    if (!param1) {
-                      var4 += 5;
-                    }
-                    if ((param0) &&
-                        (var8 < 8)) {
-                      var3_int = var3_int + var7;
-                    }
+                  a.field_e = var9;
+                  return;
+                }
+                incrementValue$1 = var6;
+                var6++;
+                if (7 != incrementValue$1) {
+                  var3_int += 40;
+                } else {
+                  var3_int = 160;
+                  var4 += 40;
+                  if (!param1) {
+                    var4 += 5;
+                  }
+                  if ((param0) &&
+                      (var8 < 8)) {
+                    var3_int = var3_int + var7;
                   }
                 }
               }
-              break L3;
             }
+          } else {
             for (var9 = 15; var9 >= 0; var9--) {
               if ((var5 & 1 << var9) == 0) {
                 var7 += 20;

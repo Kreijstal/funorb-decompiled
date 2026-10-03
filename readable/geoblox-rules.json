@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "b77f32b2bb60c74dc8ab1ec52d603089965ae79c",
+    "commit": "f36911c124271fef31024e90327379b4ec058e72",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78",
+  "inputTreeSha256": "f776980914ad1eb66192c516599a34f8afa5052ada3675be33dd5550465fb915",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -42101,19 +42101,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 18,
-  "version": 89,
+  "revision": 19,
+  "version": 90,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "d63d66ce9426ee8b704b348b4e8b552c2fb160a5",
+      "commit": "fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1",
-        "reproduce": "git archive --format=tar d63d66ce9426ee8b704b348b4e8b552c2fb160a5 | sha256sum",
+        "sha256": "9e15df0c94b6052b0419e15dc09fb1e35069a45b42e1ffcffb86549fd16a2ec2",
+        "reproduce": "git archive --format=tar fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -42122,16 +42122,16 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "aee623a3af993abe34346a9a3ccda8c06ad48ec0",
+      "commit": "e994b9e7c321bf1f3d7ca694abcbd421eaf447cc",
       "path": "readable/geoblox-rules.json",
-      "sha256": "c65e993e6bf3f79772a49b08032f1c5bc1750453d8b9cc01b59af964e4a28d1b"
+      "sha256": "f771a9e1bef74db7da2dd021bafe23b7adfb50e307232151305838b367031011"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "Geoblox.java",
-        "sha256": "48e26e98e3ef58777f63ad3305941c31c6619764994b7b4fb60cbc5bae042eb1"
+        "sha256": "2b53e76d82d6c2004fcdb2118b6e4ffdabe34f8903b35c679e27f55aee123d57"
       },
       {
         "file": "a.java",
@@ -42143,11 +42143,11 @@
       },
       {
         "file": "ab.java",
-        "sha256": "5c66abc0246af62e60cfadde9e0816d0e963ba0f82a16778975d16ac25e29f22"
+        "sha256": "281177959090ae2f5713cc8b92a86ed65b90adf57dbe4c306296b889c88b77a6"
       },
       {
         "file": "ac.java",
-        "sha256": "fdef048d9ea9bb053753630fcd686f3d589e593cfa1668a27d909740d30e46c9"
+        "sha256": "da2bb7393df1fc6ce99fc9f05106622e9d3c024882dd0fc41cb368de4de83801"
       },
       {
         "file": "ad.java",
@@ -42203,7 +42203,7 @@
       },
       {
         "file": "bj.java",
-        "sha256": "a760277855648036c22cd867bf3991ce9ea8d95174274089cf24637e660be095"
+        "sha256": "c58827c5bd461e66cdd6b1f18f3fe3bec6fa1fb2db6268c04af8b2b916dc97e0"
       },
       {
         "file": "bk.java",
@@ -42211,11 +42211,11 @@
       },
       {
         "file": "bm.java",
-        "sha256": "c2c6651568ffb39783a2df583d71485883129f3ec78fdfafac1b27dc3b97c950"
+        "sha256": "b72d0e35f89b8e4a5c1f70a4bbe00380381799c9cc0c62768b629ddb0673240c"
       },
       {
         "file": "c.java",
-        "sha256": "ffab24c8765e1cb65e2dcdc67cf38f9cd9327be4c87966eb9673f4e4b8ef8b12"
+        "sha256": "cebf8978ace9a2f963e038cef9465b3495ea925da5c13857e1624ede08a72986"
       },
       {
         "file": "ca.java",
@@ -42235,7 +42235,7 @@
       },
       {
         "file": "ch.java",
-        "sha256": "c98957f89da141454ab4a8a3d30ab7571d846eedd06cab2dab239b48056c00cf"
+        "sha256": "8af4b33575e8fad1a163f69f5cc27e7f1d2924a2b37f9d045cb82d83bc4221c1"
       },
       {
         "file": "ci.java",
@@ -42275,7 +42275,7 @@
       },
       {
         "file": "dk.java",
-        "sha256": "2eef46c0633f01872586d32952821b32e912d1b8c149f39c66d98adfb69c4b62"
+        "sha256": "36ab7fb172faf25b79c9ed04922baf86ace540b08b920c1322ac8f00e5bd5b8a"
       },
       {
         "file": "dm.java",
@@ -42319,15 +42319,15 @@
       },
       {
         "file": "em.java",
-        "sha256": "79aa41f8b19a2e49f08cbcb29c3139add6170cdfc78f69313ca77bc42f9268f9"
+        "sha256": "d8dba1885fffe96e71af958ce972b2ae1ce12e94f800d87069524227831ddeff"
       },
       {
         "file": "f.java",
-        "sha256": "b68ceeb86fd03b9b61e50663e84ad7bb84a7d81e608f77ca1a21cf0d8b9a6717"
+        "sha256": "f1d088c0b4ff2850de9370265f1526c907b2ca5f0abdfa46be36eee8e9e7e8c8"
       },
       {
         "file": "fc.java",
-        "sha256": "1b1bdd0c342eba4c98151c99266a996a0b3f52e99c2a9eabcdc7cc1adac42714"
+        "sha256": "5d995e304014474c0383702eb9e009a9c544f5c5366609af97601f90bbca4d33"
       },
       {
         "file": "fd.java",
@@ -42375,7 +42375,7 @@
       },
       {
         "file": "gh.java",
-        "sha256": "a618c699547bcc024031c39f9998d883802a404dd12a83d8aae27a04994ef901"
+        "sha256": "9947cf38435bed19ed72cbe0a6b45400997cd75f12e6e1ddcf391817d238cf03"
       },
       {
         "file": "gi.java",
@@ -42427,7 +42427,7 @@
       },
       {
         "file": "hi.java",
-        "sha256": "71ca45a00e9fe4133fdf9993d98f9d006f591cc9df70ee384beb1b856d0b0cca"
+        "sha256": "667310cf5be21683c67256849636f1cd67594c33bcbc141e630ed33bc022a507"
       },
       {
         "file": "hj.java",
@@ -42455,7 +42455,7 @@
       },
       {
         "file": "ih.java",
-        "sha256": "22e08fa72f55ac7e4d779e7546852ceb9a64ee737229c85239554f24b2f84d2f"
+        "sha256": "7c437844dc831f1955e81cd2ae3e7bc08ca37c801e77d5f2435a2a6f63ae8ac7"
       },
       {
         "file": "ii.java",
@@ -42475,7 +42475,7 @@
       },
       {
         "file": "ja.java",
-        "sha256": "b599178e381c7dbf310ae64ef01e80d8549f383b1d6f0bbe0da2ced7b8c1b28a"
+        "sha256": "24cfbd6975f049709e8576985825feedcda1a80c0903f9c038fa2d22abc1b3c6"
       },
       {
         "file": "jb.java",
@@ -42495,15 +42495,15 @@
       },
       {
         "file": "jg.java",
-        "sha256": "529ce77410c9ed09550253e88c2c063ade187bcf7224fa196dc2ea46784f4fa2"
+        "sha256": "d066cd385e0c2601e3377d45c8543e1fa6fe2adf7bd1ed4c014782926c7b8e45"
       },
       {
         "file": "jh.java",
-        "sha256": "52341bc5c2e41aa952569cf7efe77a7f95d98c19d5c8c72ef5089b1203557124"
+        "sha256": "074192f6ff86a23ac9f5e27afe80ccb0655400008998da66d67878dff5a52b57"
       },
       {
         "file": "ji.java",
-        "sha256": "d8a151d335db81b2f3ce04987c3a01fdcaa60df4ca80f9a206bac28a86cbf611"
+        "sha256": "681a7e2b1e02c5fe18491de6b297b5149ac33c72823d7169c876e764d2723098"
       },
       {
         "file": "jj.java",
@@ -42531,7 +42531,7 @@
       },
       {
         "file": "kc.java",
-        "sha256": "dca6849ac9db1452e6328160df71e2b6a3a3ea3c06d83ee8062ed30e5fe553f1"
+        "sha256": "325e155c8cefb0a2c56bebc66b4a7c6858e592e947996886ed172e58657b3e94"
       },
       {
         "file": "kd.java",
@@ -42647,7 +42647,7 @@
       },
       {
         "file": "nb.java",
-        "sha256": "c3e4aa45647b610234fad6b1b3eebe01d0121b47ab4a531105e15f6b5bd1263e"
+        "sha256": "b0860e9f2982d67e758fb5dd50f79ffdda81922fe22b15db4de7d54782c8bfe4"
       },
       {
         "file": "nc.java",
@@ -42667,7 +42667,7 @@
       },
       {
         "file": "nh.java",
-        "sha256": "3ebaa4d40a47f537e04668026645385255c4df4d7a2116396aa62cd2c5d48829"
+        "sha256": "8e8e7571bc78abd763859c6c295ffb0d55fca6a645400c5598bae30760bc9e9c"
       },
       {
         "file": "ni.java",
@@ -42691,7 +42691,7 @@
       },
       {
         "file": "oe.java",
-        "sha256": "109ec51bfbf16acbb0e00ef147aec75ca10be86c589ac21e891fd4b11b87a390"
+        "sha256": "c12bd02fed41be89a1fb8c0a9ec969fbd48d6f1641352918afa10a2aec63c81c"
       },
       {
         "file": "ok.java",
@@ -42719,7 +42719,7 @@
       },
       {
         "file": "pg.java",
-        "sha256": "3a62864edcc6528e24aee1b5e9dd2396865239e44568f27e0ad202ffee59a05b"
+        "sha256": "7f1d099f9f55b97d904098891986a04b17bc969356871855f6078575aa57563c"
       },
       {
         "file": "ph.java",
@@ -42735,7 +42735,7 @@
       },
       {
         "file": "pk.java",
-        "sha256": "5e1e5716f065c04cc6047537fe21a719e7ac824d9cd8e34402112271facde5ff"
+        "sha256": "4797242683ac4e4cdc2674e9a4cc726070dac1c13ed4afb42a6ca97e6601b03e"
       },
       {
         "file": "q.java",
@@ -42799,7 +42799,7 @@
       },
       {
         "file": "re.java",
-        "sha256": "24b1dedd99527a3b5dbece164bae6e0aa9713102074a1b18aa9dbbca65f3642d"
+        "sha256": "b2db2d0c5aad9ca35e5f534813e04500ea019e73d84684ed51b89ba0814f3db6"
       },
       {
         "file": "rf.java",
@@ -42807,11 +42807,11 @@
       },
       {
         "file": "rh.java",
-        "sha256": "7307d68ecbcf7266f4c0fb36950f651994656c8a15a68414988e00c0b71eab3c"
+        "sha256": "32749147d6fa4f998c0db1629895166dab98e71ae7f27555b601ced828cf5752"
       },
       {
         "file": "ri.java",
-        "sha256": "3bf94bdf3c102b0b632b427e37b6ff66198dc94ed3821b0745ea1eff4883b8b1"
+        "sha256": "f7195d0f3a826d2413cd8d5fae155f97c76c0a825e28505b326051ed2a0df84a"
       },
       {
         "file": "rj.java",
@@ -42819,7 +42819,7 @@
       },
       {
         "file": "s.java",
-        "sha256": "bbce88a936bef2635b46be73e09ff0b5b7a868d591af206f9bd0fbdaaa67778c"
+        "sha256": "3a941e866894a67057c140b41216cec45d69af78dcb8d15360fcb91e1c2e2a2b"
       },
       {
         "file": "sa.java",
@@ -42851,7 +42851,7 @@
       },
       {
         "file": "sk.java",
-        "sha256": "0976eebd18a8326d2ca1726cda47ebc4d33a16f8e8a5b846c4c8e44a24ffdddd"
+        "sha256": "ee62c03887c5bd32374f11da2888e6b679109c95cb31a5486a297e77f325df15"
       },
       {
         "file": "sl.java",
@@ -42871,7 +42871,7 @@
       },
       {
         "file": "td.java",
-        "sha256": "9978fec72796e45f9b78b6063f4a9024b6f935b4082fee3551e329cafad803c9"
+        "sha256": "2be838a6f57f8c4c8e71cb4f7c441c09edd04aa2d5bed37f9cf050ff8ba3f4d8"
       },
       {
         "file": "te.java",
@@ -42903,7 +42903,7 @@
       },
       {
         "file": "ue.java",
-        "sha256": "ec9503012bdd9324d7a02475ed5442270c3cc45e096af4fb7a8090ac79da1655"
+        "sha256": "8e66b7c4595e8f2d2edbfc365ac178d7a8fa1606377c2397a9bb914c5a279031"
       },
       {
         "file": "uf.java",
@@ -42927,7 +42927,7 @@
       },
       {
         "file": "ul.java",
-        "sha256": "1692f7b1d608351caa0673c456cc4488a8e1f410a20b70506225cf112310e8bf"
+        "sha256": "f119bd161b7b449c1319b0e7d482b1392a14a540d3da31694fce69f082a11d66"
       },
       {
         "file": "v.java",
@@ -42939,7 +42939,7 @@
       },
       {
         "file": "vb.java",
-        "sha256": "d303de029274d3ae5a43c1e0a93f3aba938ba8f8b6e9d6b7582ce7afd09f349f"
+        "sha256": "48e104d1f5505d6c9131c2810cebff2cfb75eaf78851632d99d291de20e15e74"
       },
       {
         "file": "vc.java",
@@ -42955,7 +42955,7 @@
       },
       {
         "file": "vf.java",
-        "sha256": "5d58355d5c5fce6eda49baeb8a97b52cb92b72503f615df6e6a1560e89a8fc9a"
+        "sha256": "ad3f5307eefcc80787bde245a8e92840deae67efeb5c80247db366f676b6a16f"
       },
       {
         "file": "vg.java",
@@ -42971,11 +42971,11 @@
       },
       {
         "file": "vk.java",
-        "sha256": "ad873fefe25f62e6a3652661071d514561a5b891fe7d26bf81c94483ebad9a1b"
+        "sha256": "f0adac50df39c1c9bde72f07700ea6e10b8e5b532b20bc45d6f11c6ebe494cdb"
       },
       {
         "file": "vl.java",
-        "sha256": "ccb3798d4b7d71f7d46dced25b7ff335230f41a9dfc287f5c3708d166a105c2b"
+        "sha256": "0a0119cab6659957519b862386e7d0957c7873aa3edac4667e439dcf54370486"
       },
       {
         "file": "w.java",
@@ -42995,7 +42995,7 @@
       },
       {
         "file": "wf.java",
-        "sha256": "a0783d6a8f867ee8f7e18b68c7107c5651e495bf322a470b67e4007b730a4c09"
+        "sha256": "65de1f36c8023543501d18d9ee66e3b6e695734c890f9597325702f340ab2cb0"
       },
       {
         "file": "wg.java",
@@ -43015,7 +43015,7 @@
       },
       {
         "file": "wl.java",
-        "sha256": "3b480c26f191de1c697025a0e190ad9680d2f07e87234a739b3bd7d002fe533e"
+        "sha256": "fe7e9f87df415e143feb29a5dbf1b7944d3b14b91d1a5a1c02555c90c138a446"
       }
     ],
     "nativeEvidence": [
@@ -45406,7 +45406,8 @@
         "Pass86 reconstructs57 plain labeled skip blocks whose only label references are66 leading bare guard breaks. Logical negation retains predicate bytes, NaNs, unboxing and left-to-right effects; remaining declaration blocks/protected boundaries stay intact.4032 native comparisons cover scopes, failures, cleanup state after invocation, ancestor transfers and monitor ownership/release. All303 token streams match only the skip/nested-guard transforms and every ordered binding/ordinal remains. Session updater falls660 to643 lines and19 to14 labels;21 overlapping method spans >=300 lines,15 with labels remain. Recorded native probes keep their prior scopes/pins; real assets/full-game/browser/phone acceptance remain unverified.",
         "Pass87 names MusicScore including its541-line compact-to-MIDI constructor, MidiTrackReader and InstrumentNoteMask.1536 controlled score fixtures verify exact MIDI bytes, scheduled positive-velocity instrument-note sets and idempotent cache rebuild; seven null/short/invalid-or-minimal scores and128 reader meta/system/running-status/time oracles retain narrow scopes. Controller streams are named by number rather than unverified musical interpretation. No structural/source change, actual archived music loading, audio synthesis, full-game or browser/phone acceptance is claimed.21 large spans and15 with labels remain.",
         "Pass88 names InstrumentPatch, InstrumentEnvelope instance fields and patch decoder/sample loader/cleanup, plus the shared failure-context utility and positive-divisor floor helper. Controlled patch/sample/cache/curve/envelope oracles preserve the documented scope. Shared static UI/authentication/graphics state remains independently named or opaque. Real archive patch/sample decoding, arbitrary malformed data, actual synthesis, full-game and browser/phone acceptance remain unverified. The492-line constructor and21 large spans/15 with block labels remain; no structural/source/decompiler change is made.",
-        "Pass89 removes102 terminal breaks whose plain-block destination is already reached by normal completion through final block statements, if branches and plain labels. Bare branches retain empty statements and predicates. Intermediate loops/switches/protected regions refuse cleanup; enclosing finally/monitors remain.5376 native comparisons cover scopes, failures, partial effects, ancestor transfers, finally state after invocation and lock ownership/release. All303 expected token streams and ordered naming bindings remain. The instrument patch constructor falls492 to468 lines and9 to1 labels.21 overlapping spans >=300 lines remain,13 with block labels. Recorded native probes keep their scopes/pins; whole-game/browser/phone acceptance remains unverified."
+        "Pass89 removes102 terminal breaks whose plain-block destination is already reached by normal completion through final block statements, if branches and plain labels. Bare branches retain empty statements and predicates. Intermediate loops/switches/protected regions refuse cleanup; enclosing finally/monitors remain.5376 native comparisons cover scopes, failures, partial effects, ancestor transfers, finally state after invocation and lock ownership/release. All303 expected token streams and ordered naming bindings remain. The instrument patch constructor falls492 to468 lines and9 to1 labels.21 overlapping spans >=300 lines remain,13 with block labels. Recorded native probes keep their scopes/pins; whole-game/browser/phone acceptance remains unverified.",
+        "Pass90 reconstructs64 unique plain-block exits as47 if/else alternatives and17 ordinary guards. The direct braced conditional must end in the destination's only break, followed by a nonempty fallback. Prefix work/scopes, branch effects and protected regions stay intact; no work/predicate is duplicated and no local added.6720 native comparisons cover branch/fallback selection, NaNs/unboxing, failures, partial effects, scopes, ancestor jumps, finally state and monitor release. All303 expected token streams and ordered naming bindings remain. Gameplay rendering falls395 to390 lines and22 to20 labels; board reconciliation504 to502 and17 to16; patch constructor468 to466 with no labels.21 overlapping spans >=300 lines remain,12 with block labels. Multi-exit decision trees, larger gameplay reconstruction and whole-game/browser/phone acceptance remain unfinished or unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -45448,7 +45449,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 248,
+      "rawSourceLinesRemoved": 145,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -45473,7 +45474,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 50,
+      "genericEmitterTestGroups": 52,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -45481,7 +45482,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass89 removes only terminal plain-block breaks and unused control frames. All ordered declarations/references/overrides, local ordinals and every guarded naming object remain.",
+      "referenceRemovalAttribution": "Pass90 reconstructs single conditional plain-block exits and unused scopes. All ordered declarations/references/overrides, local ordinals and every guarded naming object remain.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -45519,7 +45520,7 @@
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
       "identifierEditsAddedInCurrentPass": 0,
-      "lastStructuralPassVersion": 89,
+      "lastStructuralPassVersion": 90,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -45904,7 +45905,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 51,
+      "genericEmitterTestsRegistered": 53,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -46042,7 +46043,7 @@
       "sessionUpdaterLabelsAfter": 14,
       "sourceMethodBodies": 2080,
       "sourceLargeMethodSpansAtLeast300Lines": 21,
-      "sourceLargeMethodSpansWithGeneratedBlockLabels": 13,
+      "sourceLargeMethodSpansWithGeneratedBlockLabels": 12,
       "currentRecordedNativeProbeCount": 6,
       "namedMusicRulesAdded": {
         "C": 3,
@@ -46090,33 +46091,32 @@
       "instrumentPatchConstructorLinesBefore": 492,
       "instrumentPatchConstructorLinesAfter": 468,
       "instrumentPatchConstructorBlockLabelsBefore": 9,
-      "instrumentPatchConstructorBlockLabelsAfter": 1
+      "instrumentPatchConstructorBlockLabelsAfter": 1,
+      "conditionalPlainBlockAlternativesHistoricalPassVersion": 90,
+      "conditionalPlainBlockLabelsAndBreaksReconstructed": 64,
+      "conditionalPlainBlockIfElseAlternatives": 47,
+      "conditionalPlainBlockOrdinaryGuards": 17,
+      "conditionalPlainBlockFramesUnwrapped": 64,
+      "conditionalPlainBlockChangedJavaFiles": 45,
+      "conditionalPlainBlockSourceLinesBefore": 78441,
+      "conditionalPlainBlockSourceLinesAfter": 78296,
+      "conditionalPlainBlockExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "nativeConditionalPlainBlockAlternativeComparisons": 6720,
+      "conditionalPlainBlockInstrumentPatchLinesBefore": 468,
+      "conditionalPlainBlockInstrumentPatchLinesAfter": 466,
+      "conditionalPlainBlockInstrumentPatchLabelsBefore": 1,
+      "conditionalPlainBlockInstrumentPatchLabelsAfter": 0,
+      "conditionalPlainBlockGameplayRendererLinesBefore": 395,
+      "conditionalPlainBlockGameplayRendererLinesAfter": 390,
+      "conditionalPlainBlockGameplayRendererLabelsBefore": 22,
+      "conditionalPlainBlockGameplayRendererLabelsAfter": 20,
+      "conditionalPlainBlockReconciliationLinesBefore": 504,
+      "conditionalPlainBlockReconciliationLinesAfter": 502,
+      "conditionalPlainBlockReconciliationLabelsBefore": 17,
+      "conditionalPlainBlockReconciliationLabelsAfter": 16
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "d290b8609553a0785782aab7968653ae68a5ac76",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "4c1b05352b59d68fd556df1ce2072ad5d57eefbd",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4",
-              "reproduce": "git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "b77f32b2bb60c74dc8ab1ec52d603089965ae79c",
@@ -46139,7 +46139,30 @@
         },
         "inputTreeSha256": "1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78"
       },
-      "reason": "Pass89 removes102 terminal breaks to plain blocks and73 unused labels/braces across50 files, saving248 lines. Only final block statements, if branches and plain labels can lie between a break and its destination. Enclosing cleanup remains; intermediate loops/switches/protected regions refuse rewriting. No predicate, effect or scope moves. All ordered bindings/ordinals and7015 complete naming objects remain."
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "f36911c124271fef31024e90327379b4ec058e72",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "9e15df0c94b6052b0419e15dc09fb1e35069a45b42e1ffcffb86549fd16a2ec2",
+              "reproduce": "git archive --format=tar fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "f776980914ad1eb66192c516599a34f8afa5052ada3675be33dd5550465fb915"
+      },
+      "reason": "Pass90 reconstructs64 plain-block exits as47 conditional alternatives and17 ordinary guards across45 files, saving145 lines. A direct braced conditional ends in the only break to a unique plain block; its existing remainder becomes the fallback. Prefix effects/scopes and protected regions remain. No predicate/work is duplicated or local added. All ordered bindings/ordinals and7015 complete naming objects remain."
     }
   }
 }

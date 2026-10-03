@@ -759,17 +759,15 @@ public final class Geoblox extends wf {
                   fieldTemp$0 = TriangleMesh.screenTransitionTick + 1;
                   TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
                   if (fieldTemp$0 == 160) {
-                    L23: {
-                      if ((el.gameplayReturnScreenId != -1) &&
-                          (fh.c(-109))) {
-                        if (cd.gameplayOriginScreenId != 0) {
-                          kb.a(-106);
-                        } else {
-                          PendingActionMarker.a((byte) 118);
-                        }
-                        pg.screenChangePending = true;
-                        break L23;
+                    if ((el.gameplayReturnScreenId != -1) &&
+                        (fh.c(-109))) {
+                      if (cd.gameplayOriginScreenId != 0) {
+                        kb.a(-106);
+                      } else {
+                        PendingActionMarker.a((byte) 118);
                       }
+                      pg.screenChangePending = true;
+                    } else {
                       if (tc.currentScreenId == 2) {
                         ca.field_f = null;
                       }

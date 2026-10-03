@@ -77,41 +77,39 @@ final class ub {
         int var6;
         int var7;
         int[] var11;
-        L0: {
-          var3 = param0.readUnsignedByte((byte) 34);
-          this.field_b[0] = var3 >> 4;
-          this.field_b[1] = var3 & 15;
-          if (var3 != 0) {
-            this.field_e[0] = param0.readUnsignedShortBE(true);
-            this.field_e[1] = param0.readUnsignedShortBE(true);
-            var4 = param0.readUnsignedByte((byte) 34);
-            for (var5 = 0; var5 < 2; var5++) {
-              for (var6 = 0; var6 < this.field_b[var5]; var6++) {
-                this.field_c[var5][0][var6] = param0.readUnsignedShortBE(true);
-                this.field_h[var5][0][var6] = param0.readUnsignedShortBE(true);
-              }
+        var3 = param0.readUnsignedByte((byte) 34);
+        this.field_b[0] = var3 >> 4;
+        this.field_b[1] = var3 & 15;
+        if (var3 != 0) {
+          this.field_e[0] = param0.readUnsignedShortBE(true);
+          this.field_e[1] = param0.readUnsignedShortBE(true);
+          var4 = param0.readUnsignedByte((byte) 34);
+          for (var5 = 0; var5 < 2; var5++) {
+            for (var6 = 0; var6 < this.field_b[var5]; var6++) {
+              this.field_c[var5][0][var6] = param0.readUnsignedShortBE(true);
+              this.field_h[var5][0][var6] = param0.readUnsignedShortBE(true);
             }
-            for (var5 = 0; var5 < 2; var5++) {
-              var7 = 0;
-              var6 = var7;
-              while (var7 < this.field_b[var5]) {
-                if ((var4 & 1 << var5 * 4 << var7) == 0) {
-                  this.field_c[var5][1][var7] = this.field_c[var5][0][var7];
-                  this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
-                  var7++;
-                  continue;
-                }
-                this.field_c[var5][1][var7] = param0.readUnsignedShortBE(true);
-                this.field_h[var5][1][var7] = param0.readUnsignedShortBE(true);
-                var7++;
-              }
-            }
-            if (!((var4 == 0) &&
-                  (this.field_e[1] == this.field_e[0]))) {
-              param1.b(param0);
-            }
-            break L0;
           }
+          for (var5 = 0; var5 < 2; var5++) {
+            var7 = 0;
+            var6 = var7;
+            while (var7 < this.field_b[var5]) {
+              if ((var4 & 1 << var5 * 4 << var7) == 0) {
+                this.field_c[var5][1][var7] = this.field_c[var5][0][var7];
+                this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
+                var7++;
+                continue;
+              }
+              this.field_c[var5][1][var7] = param0.readUnsignedShortBE(true);
+              this.field_h[var5][1][var7] = param0.readUnsignedShortBE(true);
+              var7++;
+            }
+          }
+          if (!((var4 == 0) &&
+                (this.field_e[1] == this.field_e[0]))) {
+            param1.b(param0);
+          }
+        } else {
           var11 = this.field_e;
           this.field_e[1] = 0;
           var11[0] = 0;

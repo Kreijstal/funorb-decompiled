@@ -59,11 +59,8 @@ final class ul {
             currentAvatarCryFrame = (Sprite) null;
           }
           while (centralEntity != null) {
-            L3: {
-              if ((centralEntity.sameVariantEntityCount <= 1) &&
-                  (centralEntity.sameCategoryEntityCount <= 1)) {
-                break L3;
-              }
+            if (!((centralEntity.sameVariantEntityCount <= 1) &&
+                (centralEntity.sameCategoryEntityCount <= 1))) {
               centralEntity.entityQueue = bh.transientEntities;
               stackIn_10_0 = (centralEntity.sameVariantEntityCount <= 1) ? 0 : 1;
               variantMatchingAllowed = stackIn_10_0;
@@ -82,12 +79,9 @@ final class ul {
                 } else {
                   stackIn_27_0 = 0;
                 }
-                L10: {
-                  firstNeighborSharesCategory = stackIn_27_0;
-                  if ((firstNeighborSharesVariant == 0) &&
-                      (firstNeighborSharesCategory == 0)) {
-                    break L10;
-                  }
+                firstNeighborSharesCategory = stackIn_27_0;
+                if (!((firstNeighborSharesVariant == 0) &&
+                    (firstNeighborSharesCategory == 0))) {
                   for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
                     if (firstNeighborSharesCategory != 0) {
                       stackIn_38_0 = (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) ? 1 : 0;
@@ -100,12 +94,9 @@ final class ul {
                     } else {
                       stackIn_44_0 = 0;
                     }
-                    L15: {
-                      tripleSharesVariant = stackIn_44_0;
-                      if ((tripleSharesCategory == 0) &&
-                          (tripleSharesVariant == 0)) {
-                        break L15;
-                      }
+                    tripleSharesVariant = stackIn_44_0;
+                    if (!((tripleSharesCategory == 0) &&
+                        (tripleSharesVariant == 0))) {
                       centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.transientEntities;
                       centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.transientEntities;
                       middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
