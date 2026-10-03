@@ -56,67 +56,67 @@ final class va {
         return var2;
     }
 
-    final static void a(int param0, byte[] param1, int param2, int[] param3, byte param4) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        byte dupTemp$2 = 0;
-        int dupTemp$3 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        var7 = Geoblox.field_C;
+    final static void groupQueuedMeshFacesByPriority(int faceIndexScratch, byte[] facePriorities, int remainingFacesScratch, int[] priorityWriteOffsets, byte guard) {
+        int remainingBeforeDecrement = 0;
+        int sourceIndexBeforeIncrement = 0;
+        byte facePriority = 0;
+        int destinationIndexBeforeIncrement = 0;
+        RuntimeException groupingFailureBeforeContext = null;
+        StringBuilder groupingMessagePrefix = null;
+        String prioritiesDescription = null;
+        StringBuilder messageBeforeOffsets = null;
+        String offsetsDescription = null;
+        RuntimeException caughtGroupingFailure = null;
+        int depthBucketIndex = 0;
+        RuntimeException groupingFailure = null;
+        int depthBucketReadIndex = 0;
+        int controlFlagSnapshot = 0;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          var5_int = 0;
+          depthBucketIndex = 0;
           L0: while (true) {
-            if (var5_int >= ch.meshFaceCountsByDepthBucket.length) {
-              if (param4 != -85) {
+            if (depthBucketIndex >= ch.meshFaceCountsByDepthBucket.length) {
+              if (guard != -85) {
                 va.a(80, (byte) 55);
               }
               return;
             }
-            param2 = ch.meshFaceCountsByDepthBucket[var5_int];
-            var6 = var5_int << 4;
+            remainingFacesScratch = ch.meshFaceCountsByDepthBucket[depthBucketIndex];
+            depthBucketReadIndex = depthBucketIndex << 4;
             while (true) {
-              incrementValue$0 = param2;
-              param2--;
-              if (0 == incrementValue$0) {
-                var5_int++;
+              remainingBeforeDecrement = remainingFacesScratch;
+              remainingFacesScratch--;
+              if (0 == remainingBeforeDecrement) {
+                depthBucketIndex++;
                 continue L0;
               }
-              incrementValue$1 = var6;
-              var6++;
-              param0 = pj.meshFaceOrder[incrementValue$1];
-              dupTemp$2 = param1[param0];
-              dupTemp$3 = param3[dupTemp$2];
-              param3[dupTemp$2] = dupTemp$3 + 1;
-              pj.meshFaceOrder[dupTemp$3] = param0;
+              sourceIndexBeforeIncrement = depthBucketReadIndex;
+              depthBucketReadIndex++;
+              faceIndexScratch = pj.meshFaceOrder[sourceIndexBeforeIncrement];
+              facePriority = facePriorities[faceIndexScratch];
+              destinationIndexBeforeIncrement = priorityWriteOffsets[facePriority];
+              priorityWriteOffsets[facePriority] = destinationIndexBeforeIncrement + 1;
+              pj.meshFaceOrder[destinationIndexBeforeIncrement] = faceIndexScratch;
               continue;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var5);
-          stackIn_12_1 = new StringBuilder().append("va.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException caughtGroupingParameter) {
+          caughtGroupingFailure = caughtGroupingParameter;
+          groupingFailure = caughtGroupingFailure;
+          groupingFailureBeforeContext = (RuntimeException) (groupingFailure);
+          groupingMessagePrefix = new StringBuilder().append("va.B(").append(faceIndexScratch).append(',');
+          if (facePriorities == null) {
+            prioritiesDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            prioritiesDescription = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_16_2 = "null";
+          messageBeforeOffsets = ((StringBuilder) (Object) groupingMessagePrefix).append(prioritiesDescription).append(',').append(remainingFacesScratch).append(',');
+          if (priorityWriteOffsets == null) {
+            offsetsDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            offsetsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) groupingFailureBeforeContext), ((StringBuilder) (Object) messageBeforeOffsets).append(offsetsDescription).append(',').append(guard).append(')').toString());
         }
     }
 

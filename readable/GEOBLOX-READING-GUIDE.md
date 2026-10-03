@@ -2896,3 +2896,47 @@ nine-slice traces retain their pins. This is not an independent complete lightin
 or model oracle. Model loading/preparation, opaque fields/static helpers, flat
 raster structure, full assets/gameplay and browser/phone performance remain
 unfinished or unverified.
+
+## Flat triangle spans and face ordering (pass 82)
+
+The equal-normal lighting branch calls `gi.drawHalfBlendSolidTriangle` with an
+already halved RGB value. That wrapper sorts three vertex Y values and forwards
+matching X coordinates to `NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle`.
+The rendering helper remains on its original mixed static owner; no network
+behavior or repository ownership moves.
+
+`leftXQ16`/`rightXQ16` and their steps traverse the upper and lower triangle
+segments. `middleVertexOnRight` selects the edge changed at middle Y. Named
+`TriangleRasterState` clip dimensions and row offsets bound the pixel spans;
+the original right-edge and zero-width arithmetic stays visible. Reused slots
+such as `edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder` retain their original
+multi-phase role. The large nested source structure is unchanged in this pass.
+
+`ib.drawHalfBlendSolidSpan` adds the supplied `halfRgb` to
+`(previousPixel >> 1) & 0x7f7f7f` for each pixel. The color is not halved again.
+`pixelCount` decrements before testing, including integer overflow at its extreme
+negative value. The span guard remainder runs after writes, so a bad guard may
+fail with a modified destination. The sorted triangle's guard calculation runs
+after upper rows and before lower-row rendering. Original partial arrays,
+wrapped failure contexts and literals remain.
+
+The lighting caller now names its preparation branches directly:
+`vc.compactDepthBucketFaceOrder` compacts depth-bucket entries into the face
+prefix; `va.groupQueuedMeshFacesByPriority` consumes signed priority bytes,
+increments the chosen write offset and writes into the same face-order array.
+Names expose the original alias and mutation order; this pass does not assume
+stable grouping or change overlapping storage behavior.
+
+All parameters/locals in these five methods have guarded names, adding 80
+identities. The 6,407 rules apply 51,926 edits, preserving all 138,502 bindings
+and 388 overrides. The prior 6,327 complete rules and raw/decompiler pins remain.
+All 303 files compile, reproduce and reverse byte-for-byte.
+
+The drawing probe adds 8,775 native/raw/readable cases: 1,575 independent span
+oracle cases, 4,608 wrapper traces and 2,592 direct sorted-helper traces. Cases
+include vertex order, flat/clipped triangles, colors, control flags, extreme
+counts/indices, null/short arrays and late guard failures with partial writes.
+Prior sprite, triangle and mesh-lighting traces retain their pins. Full flat
+triangle geometry has no independent oracle here. Mesh/model loading/preparation,
+opaque helpers, large bodies, complete assets/gameplay and browser/phone behavior
+remain unfinished or unverified.

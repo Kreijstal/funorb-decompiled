@@ -65,196 +65,196 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        String stackIn_75_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var9_int = 0;
-        RuntimeException var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        var19 = Geoblox.field_C;
+    final static void drawSortedHalfBlendSolidTriangle(int middleX, int topX, int halfRgb, int guard, int[] destinationPixels, int bottomY, int bottomX, int middleY, int topY) {
+        RuntimeException triangleFailureBeforeContext = null;
+        StringBuilder triangleMessagePrefix = null;
+        String destinationDescription = null;
+        RuntimeException caughtTriangleFailure = null;
+        int leftXQ16 = 0;
+        RuntimeException triangleFailure = null;
+        int rightXQ16 = 0;
+        int leftXStepQ16 = 0;
+        int rightXStepQ16 = 0;
+        int middleVertexOnRight = 0;
+        int topToBottomRows = 0;
+        int edgeSegmentRowsThenRowBase = 0;
+        int edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = 0;
+        int spanStartOrBottomXQ16 = 0;
+        int spanWidth = 0;
+        int controlFlagSnapshot = 0;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          if (param5 >= 0) {
-            if (param8 < TriangleRasterState.clipHeight) {
-              if (0 > param1) {
-                if (param0 < 0) {
-                  if (param6 < 0) {
+          if (bottomY >= 0) {
+            if (topY < TriangleRasterState.clipHeight) {
+              if (0 > topX) {
+                if (middleX < 0) {
+                  if (bottomX < 0) {
                     return;
                   }
                 }
               }
-              if (param1 >= TriangleRasterState.clipWidth) {
-                if (param0 >= TriangleRasterState.clipWidth) {
-                  if (TriangleRasterState.clipWidth <= param6) {
+              if (topX >= TriangleRasterState.clipWidth) {
+                if (middleX >= TriangleRasterState.clipWidth) {
+                  if (TriangleRasterState.clipWidth <= bottomX) {
                     return;
                   }
                 }
               }
-              var14 = -param8 + param5;
-              if (param7 == param8) {
-                if (param8 != param5) {
-                  var15 = -param7 + param5;
-                  if (param0 > param1) {
-                    var10 = param0 << 16;
-                    var11 = (-param1 + param6 << 16) / var14;
-                    var9_int = param1 << 16;
-                    var12 = (param6 - param0 << 16) / var15;
+              topToBottomRows = -topY + bottomY;
+              if (middleY == topY) {
+                if (topY != bottomY) {
+                  edgeSegmentRowsThenRowBase = -middleY + bottomY;
+                  if (middleX > topX) {
+                    rightXQ16 = middleX << 16;
+                    leftXStepQ16 = (-topX + bottomX << 16) / topToBottomRows;
+                    leftXQ16 = topX << 16;
+                    rightXStepQ16 = (bottomX - middleX << 16) / edgeSegmentRowsThenRowBase;
                   } else {
-                    var10 = param1 << 16;
-                    var11 = (param6 - param0 << 16) / var15;
-                    var9_int = param0 << 16;
-                    var12 = (-param1 + param6 << 16) / var14;
+                    rightXQ16 = topX << 16;
+                    leftXStepQ16 = (bottomX - middleX << 16) / edgeSegmentRowsThenRowBase;
+                    leftXQ16 = middleX << 16;
+                    rightXStepQ16 = (-topX + bottomX << 16) / topToBottomRows;
                   }
                 } else {
-                  var11 = 0;
-                  var10 = param0 << 16;
-                  var9_int = param1 << 16;
-                  var12 = 0;
+                  leftXStepQ16 = 0;
+                  rightXQ16 = middleX << 16;
+                  leftXQ16 = topX << 16;
+                  rightXStepQ16 = 0;
                 }
-                var13 = 0;
-                if (param8 < 0) {
-                  param8 = Math.min(-param8, -param8 + param7);
-                  var10 = var10 + var12 * param8;
-                  var9_int = var9_int + param8 * var11;
-                  param8 = 0;
+                middleVertexOnRight = 0;
+                if (topY < 0) {
+                  topY = Math.min(-topY, -topY + middleY);
+                  rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
+                  leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                  topY = 0;
                 }
               } else {
-                var10 = param1 << 16;
-                var9_int = param1 << 16;
-                var15 = -param8 + param7;
-                var11 = (-param1 + param0 << 16) / var15;
-                var12 = (param6 - param1 << 16) / var14;
-                if (var12 > var11) {
-                  var13 = 0;
+                rightXQ16 = topX << 16;
+                leftXQ16 = topX << 16;
+                edgeSegmentRowsThenRowBase = -topY + middleY;
+                leftXStepQ16 = (-topX + middleX << 16) / edgeSegmentRowsThenRowBase;
+                rightXStepQ16 = (bottomX - topX << 16) / topToBottomRows;
+                if (rightXStepQ16 > leftXStepQ16) {
+                  middleVertexOnRight = 0;
                 } else {
-                  var13 = 1;
-                  var16 = var11;
-                  var11 = var12;
-                  var12 = var16;
+                  middleVertexOnRight = 1;
+                  edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = leftXStepQ16;
+                  leftXStepQ16 = rightXStepQ16;
+                  rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder;
                 }
                 L6: {
-                  if (0 > param8) {
-                    if (param7 < 0) {
-                      param8 = param7 - param8;
-                      var9_int = var9_int + var11 * param8;
-                      var10 = var10 + var12 * param8;
-                      param8 = param7;
+                  if (0 > topY) {
+                    if (middleY < 0) {
+                      topY = middleY - topY;
+                      leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
+                      rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
+                      topY = middleY;
                       break L6;
                     }
-                    param8 = -param8;
-                    var10 = var10 + var12 * param8;
-                    var9_int = var9_int + var11 * param8;
-                    param8 = 0;
+                    topY = -topY;
+                    rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
+                    leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
+                    topY = 0;
                   }
-                  var16 = TriangleRasterState.rowBaseOffsets[param8];
-                  while (param8 < param7) {
-                    var17 = var9_int >> 16;
-                    if (TriangleRasterState.clipWidth > var17) {
-                      var18 = (var10 >> 16) - (var9_int >> 16);
-                      if (var18 != 0) {
-                        if (var17 + var18 >= TriangleRasterState.clipWidth) {
-                          var18 = -1 + (-var17 + TriangleRasterState.clipWidth);
+                  edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = TriangleRasterState.rowBaseOffsets[topY];
+                  while (topY < middleY) {
+                    spanStartOrBottomXQ16 = leftXQ16 >> 16;
+                    if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
+                      spanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                      if (spanWidth != 0) {
+                        if (spanStartOrBottomXQ16 + spanWidth >= TriangleRasterState.clipWidth) {
+                          spanWidth = -1 + (-spanStartOrBottomXQ16 + TriangleRasterState.clipWidth);
                         }
-                        if (0 <= var17) {
-                          ib.a(47, param4, var16 + var17, param2, var18);
+                        if (0 <= spanStartOrBottomXQ16) {
+                          ib.drawHalfBlendSolidSpan(47, destinationPixels, edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder + spanStartOrBottomXQ16, halfRgb, spanWidth);
                         } else {
-                          ib.a(57, param4, var16, param2, var17 + var18);
+                          ib.drawHalfBlendSolidSpan(57, destinationPixels, edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanStartOrBottomXQ16 + spanWidth);
                         }
                       } else {
-                        if (var17 >= 0) {
-                          if (TriangleRasterState.clipWidth > var17) {
-                            ib.a(-61, param4, var17 + var16, param2, var18);
+                        if (spanStartOrBottomXQ16 >= 0) {
+                          if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
+                            ib.drawHalfBlendSolidSpan(-61, destinationPixels, spanStartOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanWidth);
                           }
                         }
                       }
                     }
-                    param8++;
-                    if (param8 >= TriangleRasterState.clipHeight) {
+                    topY++;
+                    if (topY >= TriangleRasterState.clipHeight) {
                       return;
                     }
-                    var16 = var16 + SoftwareRasterizer.stride;
-                    var9_int = var9_int + var11;
-                    var10 = var10 + var12;
+                    edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder + SoftwareRasterizer.stride;
+                    leftXQ16 = leftXQ16 + leftXStepQ16;
+                    rightXQ16 = rightXQ16 + rightXStepQ16;
                   }
                   break L6;
                 }
-                var16 = -param7 + param5;
-                if (var16 == 0) {
-                  var12 = 0;
-                  var11 = 0;
+                edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = -middleY + bottomY;
+                if (edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder == 0) {
+                  rightXStepQ16 = 0;
+                  leftXStepQ16 = 0;
                 } else {
-                  var17 = param6 << 16;
-                  if (var13 == 0) {
-                    var9_int = param0 << 16;
+                  spanStartOrBottomXQ16 = bottomX << 16;
+                  if (middleVertexOnRight == 0) {
+                    leftXQ16 = middleX << 16;
                   } else {
-                    var10 = param0 << 16;
+                    rightXQ16 = middleX << 16;
                   }
-                  var11 = (var17 - var9_int) / var16;
-                  var12 = (var17 - var10) / var16;
+                  leftXStepQ16 = (spanStartOrBottomXQ16 - leftXQ16) / edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder;
+                  rightXStepQ16 = (spanStartOrBottomXQ16 - rightXQ16) / edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder;
                 }
               }
-              if (0 > param8) {
-                param8 = -param8;
-                var10 = var10 + var12 * param8;
-                var9_int = var9_int + param8 * var11;
-                param8 = 0;
+              if (0 > topY) {
+                topY = -topY;
+                rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
+                leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                topY = 0;
               }
-              var16 = -91 % ((param3 - 74) / 33);
-              var15 = TriangleRasterState.rowBaseOffsets[param8];
-              while (param5 > param8) {
-                var17 = var9_int >> 16;
-                if (TriangleRasterState.clipWidth > var17) {
-                  var18 = (var10 >> 16) - (var9_int >> 16);
-                  if (var18 == 0) {
-                    if (var17 >= 0) {
-                      if (TriangleRasterState.clipWidth > var17) {
-                        ib.a(-67, param4, var17 + var15, param2, var18);
+              edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = -91 % ((guard - 74) / 33);
+              edgeSegmentRowsThenRowBase = TriangleRasterState.rowBaseOffsets[topY];
+              while (bottomY > topY) {
+                spanStartOrBottomXQ16 = leftXQ16 >> 16;
+                if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
+                  spanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                  if (spanWidth == 0) {
+                    if (spanStartOrBottomXQ16 >= 0) {
+                      if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
+                        ib.drawHalfBlendSolidSpan(-67, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
                       }
                     }
                   } else {
-                    if (TriangleRasterState.clipWidth <= var18 + var17) {
-                      var18 = -var17 + TriangleRasterState.clipWidth - 1;
+                    if (TriangleRasterState.clipWidth <= spanWidth + spanStartOrBottomXQ16) {
+                      spanWidth = -spanStartOrBottomXQ16 + TriangleRasterState.clipWidth - 1;
                     }
-                    if (0 > var17) {
-                      ib.a(127, param4, var15, param2, var17 + var18);
+                    if (0 > spanStartOrBottomXQ16) {
+                      ib.drawHalfBlendSolidSpan(127, destinationPixels, edgeSegmentRowsThenRowBase, halfRgb, spanStartOrBottomXQ16 + spanWidth);
                     } else {
-                      ib.a(115, param4, var17 + var15, param2, var18);
+                      ib.drawHalfBlendSolidSpan(115, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
                     }
                   }
                 }
-                param8++;
-                if (TriangleRasterState.clipHeight <= param8) {
+                topY++;
+                if (TriangleRasterState.clipHeight <= topY) {
                   return;
                 }
-                var9_int = var9_int + var11;
-                var10 = var10 + var12;
-                var15 = var15 + SoftwareRasterizer.stride;
+                leftXQ16 = leftXQ16 + leftXStepQ16;
+                rightXQ16 = rightXQ16 + rightXStepQ16;
+                edgeSegmentRowsThenRowBase = edgeSegmentRowsThenRowBase + SoftwareRasterizer.stride;
               }
               return;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9 = decompiledCaughtException;
-          stackIn_74_0 = (RuntimeException) (var9);
-          stackIn_74_1 = new StringBuilder().append("sd.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_75_2 = "null";
+        } catch (java.lang.RuntimeException caughtTriangleParameter) {
+          caughtTriangleFailure = caughtTriangleParameter;
+          triangleFailure = caughtTriangleFailure;
+          triangleFailureBeforeContext = (RuntimeException) (triangleFailure);
+          triangleMessagePrefix = new StringBuilder().append("sd.E(").append(middleX).append(',').append(topX).append(',').append(halfRgb).append(',').append(guard).append(',');
+          if (destinationPixels == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_75_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw t.a((Throwable) ((Object) triangleFailureBeforeContext), ((StringBuilder) (Object) triangleMessagePrefix).append(destinationDescription).append(',').append(bottomY).append(',').append(bottomX).append(',').append(middleY).append(',').append(topY).append(')').toString());
         }
     }
 

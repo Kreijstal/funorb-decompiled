@@ -163,11 +163,11 @@ final class hi extends ee implements ta, pl {
             if (null != meshForPriorityDecision.facePriorities) {
               if (meshForPriorityDecision.facePriorityCount > 1) {
                 facePriorities = meshForPriorityDecision.facePriorities;
-                va.a(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
+                va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
                 break L0;
               }
             }
-            vc.d(2971);
+            vc.compactDepthBucketFaceOrder(2971);
           }
           if (guard != 6562) {
             return;
@@ -267,7 +267,7 @@ final class hi extends ee implements ta, pl {
                   flatGreenMaskOrSpecularB = 65280 & flatBaseRgbOrDiffuseC;
                   flatLitRgbOrSpecularC = (-16711703 & flatRedBlueMaskOrSpecularA * diffuseA) >>> 8 | -285147392 & flatGreenMaskOrSpecularB * diffuseA >>> 8;
                   flatLitRgbOrSpecularC = flatLitRgbOrSpecularC + flatSpecularOrDiffuseB * 65793;
-                  gi.a(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
+                  gi.drawHalfBlendSolidTriangle(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
                   break L9;
                 }
               }

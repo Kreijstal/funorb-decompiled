@@ -13325,6 +13325,13 @@
       "renamedSymbol": "L:GameplaySession.prepareNextTheme(I)V#0"
     },
     {
+      "symbol": "L:gi.a(IIIIIIII)V#0",
+      "originalName": "var9",
+      "to": "controlFlagSnapshot",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#0"
+    },
+    {
       "symbol": "L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
       "originalName": "var5_int",
       "to": "archiveGroupId",
@@ -14317,6 +14324,55 @@
       "originalName": "var5",
       "evidence": "Snapshot of Geoblox.field_C; nonzero terminates the walk after its first candidate.",
       "renamedSymbol": "L:i.findOutermostAttachedEntity(B)LGameplayEntity;#5"
+    },
+    {
+      "symbol": "L:ib.a(I[IIII)V#0",
+      "originalName": "var9",
+      "to": "destinationForReadAndWrite",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#0"
+    },
+    {
+      "symbol": "L:ib.a(I[IIII)V#1",
+      "originalName": "var6",
+      "to": "destinationIndexForWrite",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#1"
+    },
+    {
+      "symbol": "L:ib.a(I[IIII)V#2",
+      "originalName": "var7",
+      "to": "halfRgbForWrite",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#2"
+    },
+    {
+      "symbol": "L:ib.a(I[IIII)V#3",
+      "originalName": "var8",
+      "to": "controlFlagSnapshot",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#3"
+    },
+    {
+      "symbol": "L:ib.a(I[IIII)V#4",
+      "originalName": "var5",
+      "to": "destinationAlias",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#4"
+    },
+    {
+      "symbol": "L:ib.a(I[IIII)V#5",
+      "originalName": "var5_int",
+      "to": "guardRemainder",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#5"
+    },
+    {
+      "symbol": "L:ib.a(I[IIII)V#6",
+      "originalName": "runtimeException",
+      "to": "caughtSpanFailure",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#6"
     },
     {
       "symbol": "L:ij.h(B)V#0",
@@ -24364,6 +24420,125 @@
       "renamedSymbol": "L:AwtRasterBuffer.setAsRasterTarget(I)V#0"
     },
     {
+      "symbol": "L:sd.a(IIII[IIIII)V#0",
+      "originalName": "stackIn_74_0",
+      "to": "triangleFailureBeforeContext",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#0"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#1",
+      "originalName": "stackIn_74_1",
+      "to": "triangleMessagePrefix",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#1"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#10",
+      "originalName": "var14",
+      "to": "topToBottomRows",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#10"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#11",
+      "originalName": "var15",
+      "to": "edgeSegmentRowsThenRowBase",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#11"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#12",
+      "originalName": "var16",
+      "to": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#12"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#13",
+      "originalName": "var17",
+      "to": "spanStartOrBottomXQ16",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#13"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#14",
+      "originalName": "var18",
+      "to": "spanWidth",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#14"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#15",
+      "originalName": "var19",
+      "to": "controlFlagSnapshot",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#15"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#16",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtTriangleParameter",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#16"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#2",
+      "originalName": "stackIn_75_2",
+      "to": "destinationDescription",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#2"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#3",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtTriangleFailure",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#3"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#4",
+      "originalName": "var9_int",
+      "to": "leftXQ16",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#4"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#5",
+      "originalName": "var9",
+      "to": "triangleFailure",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#5"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#6",
+      "originalName": "var10",
+      "to": "rightXQ16",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#6"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#7",
+      "originalName": "var11",
+      "to": "leftXStepQ16",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#7"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#8",
+      "originalName": "var12",
+      "to": "rightXStepQ16",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#8"
+    },
+    {
+      "symbol": "L:sd.a(IIII[IIIII)V#9",
+      "originalName": "var13",
+      "to": "middleVertexOnRight",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#9"
+    },
+    {
       "symbol": "L:sk.<init>(Lpa;II)V#0",
       "originalName": "dupTemp$0",
       "to": "initialFileLength",
@@ -26233,6 +26408,111 @@
       "renamedSymbol": "L:v.decompressArchive([BI)[B#9"
     },
     {
+      "symbol": "L:va.a(I[BI[IB)V#0",
+      "originalName": "incrementValue$0",
+      "to": "remainingBeforeDecrement",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#0"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#1",
+      "originalName": "incrementValue$1",
+      "to": "sourceIndexBeforeIncrement",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#1"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#10",
+      "originalName": "var5_int",
+      "to": "depthBucketIndex",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#10"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#11",
+      "originalName": "var5",
+      "to": "groupingFailure",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#11"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#12",
+      "originalName": "var6",
+      "to": "depthBucketReadIndex",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#12"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#13",
+      "originalName": "var7",
+      "to": "controlFlagSnapshot",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#13"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#14",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtGroupingParameter",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#14"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#2",
+      "originalName": "dupTemp$2",
+      "to": "facePriority",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#2"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#3",
+      "originalName": "dupTemp$3",
+      "to": "destinationIndexBeforeIncrement",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#3"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#4",
+      "originalName": "stackIn_12_0",
+      "to": "groupingFailureBeforeContext",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#4"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#5",
+      "originalName": "stackIn_12_1",
+      "to": "groupingMessagePrefix",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#5"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#6",
+      "originalName": "stackIn_13_2",
+      "to": "prioritiesDescription",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#6"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#7",
+      "originalName": "stackIn_15_1",
+      "to": "messageBeforeOffsets",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#7"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#8",
+      "originalName": "stackIn_16_2",
+      "to": "offsetsDescription",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#8"
+    },
+    {
+      "symbol": "L:va.a(I[BI[IB)V#9",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtGroupingFailure",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#9"
+    },
+    {
       "symbol": "L:vb.a(IIII)V#0",
       "originalName": "var5",
       "to": "rowIndex",
@@ -27855,6 +28135,55 @@
       "to": "pendingActionMarkerBeforeNullCheck",
       "evidence": "vc.c(I)V reads the first pendingActionMarkers entry, draws its nine-slice panel at10/panelTop, an achievement sprite by actionId and the corresponding pg title. gf sizes the same panel from the title; lh animates its top coordinate. A non--1 guard writes field_h119. Shared globals, snapshots and original layout/order remain.",
       "renamedSymbol": "L:vc.drawPendingActionPanel(I)V#2"
+    },
+    {
+      "symbol": "L:vc.d(I)V#0",
+      "originalName": "var2",
+      "to": "depthBucketIndex",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#0"
+    },
+    {
+      "symbol": "L:vc.d(I)V#1",
+      "originalName": "var1_int",
+      "to": "destinationFaceOffset",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#1"
+    },
+    {
+      "symbol": "L:vc.d(I)V#2",
+      "originalName": "var3",
+      "to": "bucketFaceCount",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#2"
+    },
+    {
+      "symbol": "L:vc.d(I)V#3",
+      "originalName": "var4",
+      "to": "controlFlagSnapshot",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#3"
+    },
+    {
+      "symbol": "L:vc.d(I)V#4",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtCompactionFailure",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#4"
+    },
+    {
+      "symbol": "L:vc.d(I)V#5",
+      "originalName": "var1",
+      "to": "compactionFailure",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#5"
+    },
+    {
+      "symbol": "L:vc.d(I)V#6",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtCompactionParameter",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Local follows its arithmetic, stores or context construction; reused roles stay explicit.",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#6"
     },
     {
       "symbol": "L:vd.a(I)I#0",
@@ -29810,6 +30139,13 @@
       "renamedSymbol": "M:GameplaySession.prepareNextTheme(I)V"
     },
     {
+      "symbol": "M:gi.a(IIIIIIII)V",
+      "originalName": "a",
+      "to": "drawHalfBlendSolidTriangle",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path.",
+      "renamedSymbol": "M:gi.drawHalfBlendSolidTriangle(IIIIIIII)V"
+    },
+    {
       "symbol": "M:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;",
       "originalName": "a",
       "to": "loadBitmapFont",
@@ -29906,6 +30242,13 @@
       "originalName": "a",
       "evidence": "Walks attachedEntities from last to previous and retains the entity with strictly greatest squared distance from (320,240). The Float.MIN_VALUE starting threshold excludes zero-distance and NaN candidates; ties retain the first encountered entity. Nonzero Geoblox.field_C stops after one candidate; guard >= -127 also clears the avatar mask.",
       "renamedSymbol": "M:i.findOutermostAttachedEntity(B)LGameplayEntity;"
+    },
+    {
+      "symbol": "M:ib.a(I[IIII)V",
+      "originalName": "a",
+      "to": "drawHalfBlendSolidSpan",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure.",
+      "renamedSymbol": "M:ib.drawHalfBlendSolidSpan(I[IIII)V"
     },
     {
       "symbol": "M:ib.b(B)Ljava/lang/String;",
@@ -31770,6 +32113,13 @@
       "renamedSymbol": "M:AwtRasterBuffer.drawImage(ILjava/awt/Graphics;II)V"
     },
     {
+      "symbol": "M:sd.a(IIII[IIIII)V",
+      "originalName": "a",
+      "to": "drawSortedHalfBlendSolidTriangle",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner.",
+      "renamedSymbol": "M:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V"
+    },
+    {
       "symbol": "M:sd.e(I)[B",
       "originalName": "e",
       "to": "getBytes",
@@ -32183,6 +32533,13 @@
       "renamedSymbol": "M:v.decompressArchive([BI)[B"
     },
     {
+      "symbol": "M:va.a(I[BI[IB)V",
+      "originalName": "a",
+      "to": "groupQueuedMeshFacesByPriority",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations.",
+      "renamedSymbol": "M:va.groupQueuedMeshFacesByPriority(I[BI[IB)V"
+    },
+    {
       "symbol": "M:vb.a()V",
       "originalName": "a",
       "to": "releaseRasterStorage",
@@ -32384,6 +32741,13 @@
       "to": "drawPendingActionPanel",
       "evidence": "vc.c(I)V reads the first pendingActionMarkers entry, draws its nine-slice panel at10/panelTop, an achievement sprite by actionId and the corresponding pg title. gf sizes the same panel from the title; lh animates its top coordinate. A non--1 guard writes field_h119. Shared globals, snapshots and original layout/order remain.",
       "renamedSymbol": "M:vc.drawPendingActionPanel(I)V"
+    },
+    {
+      "symbol": "M:vc.d(I)V",
+      "originalName": "d",
+      "to": "compactDepthBucketFaceOrder",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue.",
+      "renamedSymbol": "M:vc.compactDepthBucketFaceOrder(I)V"
     },
     {
       "symbol": "M:vd.a(I)I",
@@ -36278,6 +36642,62 @@
       "renamedSymbol": "P:GameplaySession.prepareNextTheme(I)V#0"
     },
     {
+      "symbol": "P:gi.a(IIIIIIII)V#0",
+      "originalName": "param0",
+      "to": "vertexCX",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#0"
+    },
+    {
+      "symbol": "P:gi.a(IIIIIIII)V#1",
+      "originalName": "param1",
+      "to": "guard",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#1"
+    },
+    {
+      "symbol": "P:gi.a(IIIIIIII)V#2",
+      "originalName": "param2",
+      "to": "vertexCY",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#2"
+    },
+    {
+      "symbol": "P:gi.a(IIIIIIII)V#3",
+      "originalName": "param3",
+      "to": "vertexAY",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#3"
+    },
+    {
+      "symbol": "P:gi.a(IIIIIIII)V#4",
+      "originalName": "param4",
+      "to": "vertexAX",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#4"
+    },
+    {
+      "symbol": "P:gi.a(IIIIIIII)V#5",
+      "originalName": "param5",
+      "to": "vertexBX",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#5"
+    },
+    {
+      "symbol": "P:gi.a(IIIIIIII)V#6",
+      "originalName": "param6",
+      "to": "vertexBY",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#6"
+    },
+    {
+      "symbol": "P:gi.a(IIIIIIII)V#7",
+      "originalName": "param7",
+      "to": "halfRgb",
+      "evidence": "gi orders three vertex Y values and sends matching X values, halfRgb and framebuffer to sd. hi passes (litRgb >> 1) & 0x7f7f7f for equal face-normal indices. Original sort/tie branches and guard-triggered gi.a(-38) call remain unchanged. Native flat-triangle and mesh-lighting traces cover this path. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#7"
+    },
+    {
       "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
       "originalName": "param0",
       "to": "fontMetricsArchive",
@@ -36500,6 +36920,41 @@
       "originalName": "param0",
       "evidence": "At values >= -127 calls i.a(false), which clears avatarMaskRaster. Normal result and boundary-loss callers pass -128; no guard is removed.",
       "renamedSymbol": "P:i.findOutermostAttachedEntity(B)LGameplayEntity;#0"
+    },
+    {
+      "symbol": "P:ib.a(I[IIII)V#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#0"
+    },
+    {
+      "symbol": "P:ib.a(I[IIII)V#1",
+      "originalName": "param1",
+      "to": "destinationPixels",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#1"
+    },
+    {
+      "symbol": "P:ib.a(I[IIII)V#2",
+      "originalName": "param2",
+      "to": "destinationIndex",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#2"
+    },
+    {
+      "symbol": "P:ib.a(I[IIII)V#3",
+      "originalName": "param3",
+      "to": "halfRgb",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#3"
+    },
+    {
+      "symbol": "P:ib.a(I[IIII)V#4",
+      "originalName": "param4",
+      "to": "pixelCount",
+      "evidence": "ib.AA decrements pixelCount before testing, then adds supplied halfRgb to (previousPixel >> 1) & 0x7f7f7f. Index/count overflow and sequential partial writes stay intact. Its guard remainder executes only after the span. The 1575-case independent native span oracle includes extreme counts/indices, null/short buffers, arbitrary color values and a late bad-guard failure. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#4"
     },
     {
       "symbol": "P:ib.b(B)Ljava/lang/String;#0",
@@ -42354,6 +42809,69 @@
       "renamedSymbol": "P:AwtRasterBuffer.drawImage(ILjava/awt/Graphics;II)V#3"
     },
     {
+      "symbol": "P:sd.a(IIII[IIIII)V#0",
+      "originalName": "param0",
+      "to": "middleX",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#0"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#1",
+      "originalName": "param1",
+      "to": "topX",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#1"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#2",
+      "originalName": "param2",
+      "to": "halfRgb",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#2"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#3",
+      "originalName": "param3",
+      "to": "guard",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#3"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#4",
+      "originalName": "param4",
+      "to": "destinationPixels",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#4"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#5",
+      "originalName": "param5",
+      "to": "bottomY",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#5"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#6",
+      "originalName": "param6",
+      "to": "bottomX",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#6"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#7",
+      "originalName": "param7",
+      "to": "middleY",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#7"
+    },
+    {
+      "symbol": "P:sd.a(IIII[IIIII)V#8",
+      "originalName": "param8",
+      "to": "topY",
+      "evidence": "sd.E traverses sorted triangle upper/lower segments with Q16 X edges, clips against TriangleRasterState dimensions/row offsets and calls ib.AA for each solid half-blended span. Existing clipping, zero-width handling, partial writes and guard arithmetic remain; the guard remainder is evaluated after upper rows, before lower-row rendering. This static helper stays on the original NetworkArchiveRequest owner. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#8"
+    },
+    {
       "symbol": "P:sd.e(I)[B#0",
       "originalName": "param0",
       "to": "methodGuard",
@@ -43045,6 +43563,41 @@
       "to": "uncompressedTypeComplement",
       "evidence": "Read unsigned type and signed packed length, reject negative or nonzero-bound overflow. If second argument equals bitwise complement of type, allocate/copy packed length from cursor5. Otherwise read signed unpacked length, bound/allocate it and route type1 to Bzip2 entry with input offset9/ignored packed length, all other types to shared gzip inflater under its monitor. Normal callers pass-1, so raw branch is type0. Preserve aliases, allocation order and return arrays; second argument also forwards unchanged to inflater guard, so it is not merely unused boilerplate. Source-audited archive decompression and gzip/Bzip2 entry/bit-reader state, names only. Preserve compression-type/complement branch, signed lengths and optional maximum, allocation/alias ordering, fixed gzip header/backing-array bounds, single inflate/reset and unchanged cursor, shared monitors, Bzip2 ignored packed length/partial output and success-only array release, guards, exceptions and literal diagnostics. Native74 controlled compression cases pin tested payloads, limits, routing, gzip corruption/partial/reset behavior and two Bzip2 vectors. Full Bzip2 control flow/state, arbitrary malformed inputs, real assets/gameplay and device performance remain unverified.",
       "renamedSymbol": "P:v.decompressArchive([BI)[B#1"
+    },
+    {
+      "symbol": "P:va.a(I[BI[IB)V#0",
+      "originalName": "param0",
+      "to": "faceIndexScratch",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#0"
+    },
+    {
+      "symbol": "P:va.a(I[BI[IB)V#1",
+      "originalName": "param1",
+      "to": "facePriorities",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#1"
+    },
+    {
+      "symbol": "P:va.a(I[BI[IB)V#2",
+      "originalName": "param2",
+      "to": "remainingFacesScratch",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#2"
+    },
+    {
+      "symbol": "P:va.a(I[BI[IB)V#3",
+      "originalName": "param3",
+      "to": "priorityWriteOffsets",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#3"
+    },
+    {
+      "symbol": "P:va.a(I[BI[IB)V#4",
+      "originalName": "param4",
+      "to": "guard",
+      "evidence": "va.B reads each depth bucket at index << 4, uses the signed face-priority byte to select an output offset, increments that offset and writes the face into the same meshFaceOrder array. Original in-place alias behavior, mutation order and invalid-priority/offset failures remain; no stable/nonoverlapping ordering is assumed. The native mesh-lighting probe records queue and offset mutations. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#4"
     },
     {
       "symbol": "P:vb.a(III)V#0",
@@ -43878,6 +44431,13 @@
       "to": "methodGuard",
       "evidence": "vc.c(I)V reads the first pendingActionMarkers entry, draws its nine-slice panel at10/panelTop, an achievement sprite by actionId and the corresponding pg title. gf sizes the same panel from the title; lh animates its top coordinate. A non--1 guard writes field_h119. Shared globals, snapshots and original layout/order remain.",
       "renamedSymbol": "P:vc.drawPendingActionPanel(I)V#0"
+    },
+    {
+      "symbol": "P:vc.d(I)V#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "vc.G begins after bucket zero count, then copies each later depth bucket from index << 4 into the compact prefix of the same meshFaceOrder array with sf.a. Counts, in-place copies, guard 2971, partial mutations and exception context remain. The native mesh-lighting probe records the resulting queue. Parameter follows the full positional signature and caller wiring.",
+      "renamedSymbol": "P:vc.compactDepthBucketFaceOrder(I)V#0"
     },
     {
       "symbol": "P:vd.a(I)I#0",
@@ -105907,9 +106467,9 @@
     },
     {
       "symbol": "L:gi.a(IIIIIIII)V#0",
-      "renamedSymbol": "L:gi.a(IIIIIIII)V#0",
+      "renamedSymbol": "L:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#0",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "controlFlagSnapshot",
       "declaration": {
         "file": "gi.java",
         "start": 4296,
@@ -111209,9 +111769,9 @@
     },
     {
       "symbol": "L:ib.a(I[IIII)V#0",
-      "renamedSymbol": "L:ib.a(I[IIII)V#0",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#0",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "destinationForReadAndWrite",
       "declaration": {
         "file": "ib.java",
         "start": 304,
@@ -111220,9 +111780,9 @@
     },
     {
       "symbol": "L:ib.a(I[IIII)V#1",
-      "renamedSymbol": "L:ib.a(I[IIII)V#1",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#1",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "destinationIndexForWrite",
       "declaration": {
         "file": "ib.java",
         "start": 329,
@@ -111231,9 +111791,9 @@
     },
     {
       "symbol": "L:ib.a(I[IIII)V#2",
-      "renamedSymbol": "L:ib.a(I[IIII)V#2",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#2",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "halfRgbForWrite",
       "declaration": {
         "file": "ib.java",
         "start": 351,
@@ -111242,9 +111802,9 @@
     },
     {
       "symbol": "L:ib.a(I[IIII)V#3",
-      "renamedSymbol": "L:ib.a(I[IIII)V#3",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#3",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "controlFlagSnapshot",
       "declaration": {
         "file": "ib.java",
         "start": 373,
@@ -111253,9 +111813,9 @@
     },
     {
       "symbol": "L:ib.a(I[IIII)V#4",
-      "renamedSymbol": "L:ib.a(I[IIII)V#4",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#4",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "destinationAlias",
       "declaration": {
         "file": "ib.java",
         "start": 596,
@@ -111264,9 +111824,9 @@
     },
     {
       "symbol": "L:ib.a(I[IIII)V#5",
-      "renamedSymbol": "L:ib.a(I[IIII)V#5",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#5",
       "originalName": "var5_int",
-      "renamedName": "var5_int",
+      "renamedName": "guardRemainder",
       "declaration": {
         "file": "ib.java",
         "start": 795,
@@ -111275,9 +111835,9 @@
     },
     {
       "symbol": "L:ib.a(I[IIII)V#6",
-      "renamedSymbol": "L:ib.a(I[IIII)V#6",
+      "renamedSymbol": "L:ib.drawHalfBlendSolidSpan(I[IIII)V#6",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "caughtSpanFailure",
       "declaration": {
         "file": "ib.java",
         "start": 868,
@@ -154505,9 +155065,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#0",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#0",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#0",
       "originalName": "stackIn_74_0",
-      "renamedName": "stackIn_74_0",
+      "renamedName": "triangleFailureBeforeContext",
       "declaration": {
         "file": "sd.java",
         "start": 2243,
@@ -154516,9 +155076,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#1",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#1",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#1",
       "originalName": "stackIn_74_1",
-      "renamedName": "stackIn_74_1",
+      "renamedName": "triangleMessagePrefix",
       "declaration": {
         "file": "sd.java",
         "start": 2286,
@@ -154527,9 +155087,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#10",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#10",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#10",
       "originalName": "var14",
-      "renamedName": "var14",
+      "renamedName": "topToBottomRows",
       "declaration": {
         "file": "sd.java",
         "start": 2570,
@@ -154538,9 +155098,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#11",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#11",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#11",
       "originalName": "var15",
-      "renamedName": "var15",
+      "renamedName": "edgeSegmentRowsThenRowBase",
       "declaration": {
         "file": "sd.java",
         "start": 2593,
@@ -154549,9 +155109,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#12",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#12",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#12",
       "originalName": "var16",
-      "renamedName": "var16",
+      "renamedName": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder",
       "declaration": {
         "file": "sd.java",
         "start": 2616,
@@ -154560,9 +155120,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#13",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#13",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#13",
       "originalName": "var17",
-      "renamedName": "var17",
+      "renamedName": "spanStartOrBottomXQ16",
       "declaration": {
         "file": "sd.java",
         "start": 2639,
@@ -154571,9 +155131,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#14",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#14",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#14",
       "originalName": "var18",
-      "renamedName": "var18",
+      "renamedName": "spanWidth",
       "declaration": {
         "file": "sd.java",
         "start": 2662,
@@ -154582,9 +155142,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#15",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#15",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#15",
       "originalName": "var19",
-      "renamedName": "var19",
+      "renamedName": "controlFlagSnapshot",
       "declaration": {
         "file": "sd.java",
         "start": 2685,
@@ -154593,9 +155153,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#16",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#16",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#16",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtTriangleParameter",
       "declaration": {
         "file": "sd.java",
         "start": 8737,
@@ -154604,9 +155164,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#2",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#2",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#2",
       "originalName": "stackIn_75_2",
-      "renamedName": "stackIn_75_2",
+      "renamedName": "destinationDescription",
       "declaration": {
         "file": "sd.java",
         "start": 2322,
@@ -154615,9 +155175,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#3",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#3",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#3",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtTriangleFailure",
       "declaration": {
         "file": "sd.java",
         "start": 2368,
@@ -154626,9 +155186,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#4",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#4",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#4",
       "originalName": "var9_int",
-      "renamedName": "var9_int",
+      "renamedName": "leftXQ16",
       "declaration": {
         "file": "sd.java",
         "start": 2414,
@@ -154637,9 +155197,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#5",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#5",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#5",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "triangleFailure",
       "declaration": {
         "file": "sd.java",
         "start": 2453,
@@ -154648,9 +155208,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#6",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#6",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#6",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "rightXQ16",
       "declaration": {
         "file": "sd.java",
         "start": 2478,
@@ -154659,9 +155219,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#7",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#7",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#7",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "leftXStepQ16",
       "declaration": {
         "file": "sd.java",
         "start": 2501,
@@ -154670,9 +155230,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#8",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#8",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#8",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "rightXStepQ16",
       "declaration": {
         "file": "sd.java",
         "start": 2524,
@@ -154681,9 +155241,9 @@
     },
     {
       "symbol": "L:sd.a(IIII[IIIII)V#9",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIII[IIIII)V#9",
+      "renamedSymbol": "L:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#9",
       "originalName": "var13",
-      "renamedName": "var13",
+      "renamedName": "middleVertexOnRight",
       "declaration": {
         "file": "sd.java",
         "start": 2547,
@@ -169256,9 +169816,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#0",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#0",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#0",
       "originalName": "incrementValue$0",
-      "renamedName": "incrementValue$0",
+      "renamedName": "remainingBeforeDecrement",
       "declaration": {
         "file": "va.java",
         "start": 2091,
@@ -169267,9 +169827,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#1",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#1",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#1",
       "originalName": "incrementValue$1",
-      "renamedName": "incrementValue$1",
+      "renamedName": "sourceIndexBeforeIncrement",
       "declaration": {
         "file": "va.java",
         "start": 2125,
@@ -169278,9 +169838,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#10",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#10",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#10",
       "originalName": "var5_int",
-      "renamedName": "var5_int",
+      "renamedName": "depthBucketIndex",
       "declaration": {
         "file": "va.java",
         "start": 2477,
@@ -169289,9 +169849,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#11",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#11",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#11",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "groupingFailure",
       "declaration": {
         "file": "va.java",
         "start": 2516,
@@ -169300,9 +169860,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#12",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#12",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#12",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "depthBucketReadIndex",
       "declaration": {
         "file": "va.java",
         "start": 2541,
@@ -169311,9 +169871,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#13",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#13",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#13",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "controlFlagSnapshot",
       "declaration": {
         "file": "va.java",
         "start": 2563,
@@ -169322,9 +169882,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#14",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#14",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#14",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtGroupingParameter",
       "declaration": {
         "file": "va.java",
         "start": 3520,
@@ -169333,9 +169893,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#2",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#2",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#2",
       "originalName": "dupTemp$2",
-      "renamedName": "dupTemp$2",
+      "renamedName": "facePriority",
       "declaration": {
         "file": "va.java",
         "start": 2160,
@@ -169344,9 +169904,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#3",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#3",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#3",
       "originalName": "dupTemp$3",
-      "renamedName": "dupTemp$3",
+      "renamedName": "destinationIndexBeforeIncrement",
       "declaration": {
         "file": "va.java",
         "start": 2187,
@@ -169355,9 +169915,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#4",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#4",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#4",
       "originalName": "stackIn_12_0",
-      "renamedName": "stackIn_12_0",
+      "renamedName": "groupingFailureBeforeContext",
       "declaration": {
         "file": "va.java",
         "start": 2227,
@@ -169366,9 +169926,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#5",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#5",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#5",
       "originalName": "stackIn_12_1",
-      "renamedName": "stackIn_12_1",
+      "renamedName": "groupingMessagePrefix",
       "declaration": {
         "file": "va.java",
         "start": 2270,
@@ -169377,9 +169937,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#6",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#6",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#6",
       "originalName": "stackIn_13_2",
-      "renamedName": "stackIn_13_2",
+      "renamedName": "prioritiesDescription",
       "declaration": {
         "file": "va.java",
         "start": 2306,
@@ -169388,9 +169948,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#7",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#7",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#7",
       "originalName": "stackIn_15_1",
-      "renamedName": "stackIn_15_1",
+      "renamedName": "messageBeforeOffsets",
       "declaration": {
         "file": "va.java",
         "start": 2349,
@@ -169399,9 +169959,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#8",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#8",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#8",
       "originalName": "stackIn_16_2",
-      "renamedName": "stackIn_16_2",
+      "renamedName": "offsetsDescription",
       "declaration": {
         "file": "va.java",
         "start": 2385,
@@ -169410,9 +169970,9 @@
     },
     {
       "symbol": "L:va.a(I[BI[IB)V#9",
-      "renamedSymbol": "L:va.a(I[BI[IB)V#9",
+      "renamedSymbol": "L:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#9",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtGroupingFailure",
       "declaration": {
         "file": "va.java",
         "start": 2431,
@@ -172644,9 +173204,9 @@
     },
     {
       "symbol": "L:vc.d(I)V#0",
-      "renamedSymbol": "L:vc.d(I)V#0",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "depthBucketIndex",
       "declaration": {
         "file": "vc.java",
         "start": 443,
@@ -172655,9 +173215,9 @@
     },
     {
       "symbol": "L:vc.d(I)V#1",
-      "renamedSymbol": "L:vc.d(I)V#1",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#1",
       "originalName": "var1_int",
-      "renamedName": "var1_int",
+      "renamedName": "destinationFaceOffset",
       "declaration": {
         "file": "vc.java",
         "start": 465,
@@ -172666,9 +173226,9 @@
     },
     {
       "symbol": "L:vc.d(I)V#2",
-      "renamedSymbol": "L:vc.d(I)V#2",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#2",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "bucketFaceCount",
       "declaration": {
         "file": "vc.java",
         "start": 491,
@@ -172677,9 +173237,9 @@
     },
     {
       "symbol": "L:vc.d(I)V#3",
-      "renamedSymbol": "L:vc.d(I)V#3",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#3",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "controlFlagSnapshot",
       "declaration": {
         "file": "vc.java",
         "start": 513,
@@ -172688,9 +173248,9 @@
     },
     {
       "symbol": "L:vc.d(I)V#4",
-      "renamedSymbol": "L:vc.d(I)V#4",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#4",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtCompactionFailure",
       "declaration": {
         "file": "vc.java",
         "start": 548,
@@ -172699,9 +173259,9 @@
     },
     {
       "symbol": "L:vc.d(I)V#5",
-      "renamedSymbol": "L:vc.d(I)V#5",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#5",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "compactionFailure",
       "declaration": {
         "file": "vc.java",
         "start": 607,
@@ -172710,9 +173270,9 @@
     },
     {
       "symbol": "L:vc.d(I)V#6",
-      "renamedSymbol": "L:vc.d(I)V#6",
+      "renamedSymbol": "L:vc.compactDepthBucketFaceOrder(I)V#6",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtCompactionParameter",
       "declaration": {
         "file": "vc.java",
         "start": 1047,
@@ -187879,9 +188439,9 @@
     },
     {
       "symbol": "M:gi.a(IIIIIIII)V",
-      "renamedSymbol": "M:gi.a(IIIIIIII)V",
+      "renamedSymbol": "M:gi.drawHalfBlendSolidTriangle(IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawHalfBlendSolidTriangle",
       "declaration": {
         "file": "gi.java",
         "start": 4184,
@@ -189298,9 +189858,9 @@
     },
     {
       "symbol": "M:ib.a(I[IIII)V",
-      "renamedSymbol": "M:ib.a(I[IIII)V",
+      "renamedSymbol": "M:ib.drawHalfBlendSolidSpan(I[IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawHalfBlendSolidSpan",
       "declaration": {
         "file": "ib.java",
         "start": 224,
@@ -199418,9 +199978,9 @@
     },
     {
       "symbol": "M:sd.a(IIII[IIIII)V",
-      "renamedSymbol": "M:NetworkArchiveRequest.a(IIII[IIIII)V",
+      "renamedSymbol": "M:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawSortedHalfBlendSolidTriangle",
       "declaration": {
         "file": "sd.java",
         "start": 2104,
@@ -202113,9 +202673,9 @@
     },
     {
       "symbol": "M:va.a(I[BI[IB)V",
-      "renamedSymbol": "M:va.a(I[BI[IB)V",
+      "renamedSymbol": "M:va.groupQueuedMeshFacesByPriority(I[BI[IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "groupQueuedMeshFacesByPriority",
       "declaration": {
         "file": "va.java",
         "start": 2009,
@@ -202531,9 +203091,9 @@
     },
     {
       "symbol": "M:vc.d(I)V",
-      "renamedSymbol": "M:vc.d(I)V",
+      "renamedSymbol": "M:vc.compactDepthBucketFaceOrder(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "compactDepthBucketFaceOrder",
       "declaration": {
         "file": "vc.java",
         "start": 415,
@@ -220659,9 +221219,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#0",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#0",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "vertexCX",
       "declaration": {
         "file": "gi.java",
         "start": 4190,
@@ -220670,9 +221230,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#1",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#1",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "guard",
       "declaration": {
         "file": "gi.java",
         "start": 4202,
@@ -220681,9 +221241,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#2",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#2",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "vertexCY",
       "declaration": {
         "file": "gi.java",
         "start": 4214,
@@ -220692,9 +221252,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#3",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#3",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "vertexAY",
       "declaration": {
         "file": "gi.java",
         "start": 4226,
@@ -220703,9 +221263,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#4",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#4",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "vertexAX",
       "declaration": {
         "file": "gi.java",
         "start": 4238,
@@ -220714,9 +221274,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#5",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#5",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#5",
       "originalName": "param5",
-      "renamedName": "param5",
+      "renamedName": "vertexBX",
       "declaration": {
         "file": "gi.java",
         "start": 4250,
@@ -220725,9 +221285,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#6",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#6",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#6",
       "originalName": "param6",
-      "renamedName": "param6",
+      "renamedName": "vertexBY",
       "declaration": {
         "file": "gi.java",
         "start": 4262,
@@ -220736,9 +221296,9 @@
     },
     {
       "symbol": "P:gi.a(IIIIIIII)V#7",
-      "renamedSymbol": "P:gi.a(IIIIIIII)V#7",
+      "renamedSymbol": "P:gi.drawHalfBlendSolidTriangle(IIIIIIII)V#7",
       "originalName": "param7",
-      "renamedName": "param7",
+      "renamedName": "halfRgb",
       "declaration": {
         "file": "gi.java",
         "start": 4274,
@@ -223970,9 +224530,9 @@
     },
     {
       "symbol": "P:ib.a(I[IIII)V#0",
-      "renamedSymbol": "P:ib.a(I[IIII)V#0",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "guard",
       "declaration": {
         "file": "ib.java",
         "start": 230,
@@ -223981,9 +224541,9 @@
     },
     {
       "symbol": "P:ib.a(I[IIII)V#1",
-      "renamedSymbol": "P:ib.a(I[IIII)V#1",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "destinationPixels",
       "declaration": {
         "file": "ib.java",
         "start": 244,
@@ -223992,9 +224552,9 @@
     },
     {
       "symbol": "P:ib.a(I[IIII)V#2",
-      "renamedSymbol": "P:ib.a(I[IIII)V#2",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "destinationIndex",
       "declaration": {
         "file": "ib.java",
         "start": 256,
@@ -224003,9 +224563,9 @@
     },
     {
       "symbol": "P:ib.a(I[IIII)V#3",
-      "renamedSymbol": "P:ib.a(I[IIII)V#3",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "halfRgb",
       "declaration": {
         "file": "ib.java",
         "start": 268,
@@ -224014,9 +224574,9 @@
     },
     {
       "symbol": "P:ib.a(I[IIII)V#4",
-      "renamedSymbol": "P:ib.a(I[IIII)V#4",
+      "renamedSymbol": "P:ib.drawHalfBlendSolidSpan(I[IIII)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "pixelCount",
       "declaration": {
         "file": "ib.java",
         "start": 280,
@@ -248258,9 +248818,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#0",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "middleX",
       "declaration": {
         "file": "sd.java",
         "start": 2110,
@@ -248269,9 +248829,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#1",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#1",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "topX",
       "declaration": {
         "file": "sd.java",
         "start": 2122,
@@ -248280,9 +248840,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#2",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#2",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "halfRgb",
       "declaration": {
         "file": "sd.java",
         "start": 2134,
@@ -248291,9 +248851,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#3",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#3",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "guard",
       "declaration": {
         "file": "sd.java",
         "start": 2146,
@@ -248302,9 +248862,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#4",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#4",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "destinationPixels",
       "declaration": {
         "file": "sd.java",
         "start": 2160,
@@ -248313,9 +248873,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#5",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#5",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#5",
       "originalName": "param5",
-      "renamedName": "param5",
+      "renamedName": "bottomY",
       "declaration": {
         "file": "sd.java",
         "start": 2172,
@@ -248324,9 +248884,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#6",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#6",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#6",
       "originalName": "param6",
-      "renamedName": "param6",
+      "renamedName": "bottomX",
       "declaration": {
         "file": "sd.java",
         "start": 2184,
@@ -248335,9 +248895,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#7",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#7",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#7",
       "originalName": "param7",
-      "renamedName": "param7",
+      "renamedName": "middleY",
       "declaration": {
         "file": "sd.java",
         "start": 2196,
@@ -248346,9 +248906,9 @@
     },
     {
       "symbol": "P:sd.a(IIII[IIIII)V#8",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIII[IIIII)V#8",
+      "renamedSymbol": "P:NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(IIII[IIIII)V#8",
       "originalName": "param8",
-      "renamedName": "param8",
+      "renamedName": "topY",
       "declaration": {
         "file": "sd.java",
         "start": 2208,
@@ -253846,9 +254406,9 @@
     },
     {
       "symbol": "P:va.a(I[BI[IB)V#0",
-      "renamedSymbol": "P:va.a(I[BI[IB)V#0",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "faceIndexScratch",
       "declaration": {
         "file": "va.java",
         "start": 2015,
@@ -253857,9 +254417,9 @@
     },
     {
       "symbol": "P:va.a(I[BI[IB)V#1",
-      "renamedSymbol": "P:va.a(I[BI[IB)V#1",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "facePriorities",
       "declaration": {
         "file": "va.java",
         "start": 2030,
@@ -253868,9 +254428,9 @@
     },
     {
       "symbol": "P:va.a(I[BI[IB)V#2",
-      "renamedSymbol": "P:va.a(I[BI[IB)V#2",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "remainingFacesScratch",
       "declaration": {
         "file": "va.java",
         "start": 2042,
@@ -253879,9 +254439,9 @@
     },
     {
       "symbol": "P:va.a(I[BI[IB)V#3",
-      "renamedSymbol": "P:va.a(I[BI[IB)V#3",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "priorityWriteOffsets",
       "declaration": {
         "file": "va.java",
         "start": 2056,
@@ -253890,9 +254450,9 @@
     },
     {
       "symbol": "P:va.a(I[BI[IB)V#4",
-      "renamedSymbol": "P:va.a(I[BI[IB)V#4",
+      "renamedSymbol": "P:va.groupQueuedMeshFacesByPriority(I[BI[IB)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "guard",
       "declaration": {
         "file": "va.java",
         "start": 2069,
@@ -255551,9 +256111,9 @@
     },
     {
       "symbol": "P:vc.d(I)V#0",
-      "renamedSymbol": "P:vc.d(I)V#0",
+      "renamedSymbol": "P:vc.compactDepthBucketFaceOrder(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "guard",
       "declaration": {
         "file": "vc.java",
         "start": 421,
@@ -378129,7 +378689,7 @@
       "original": "gi.java",
       "renamed": "gi.java",
       "inputSha256": "03ba5a3c3cbc98931066575473f62d123617e269ba3fe2f8aceea4a7e8b0e3f1",
-      "outputSha256": "d811ee8ef14439b0599db9d954a39847592b4c1dbacf5fff10deafb1bcb63d7d",
+      "outputSha256": "e9b692359a5de113f223ec2cab1c4025ee79be4dca87c67b9d0e83cdc769b3e2",
       "edits": [
         {
           "start": 118,
@@ -378804,11 +379364,144 @@
           "renamed": "groupNameDescription"
         },
         {
+          "start": 4184,
+          "end": 4185,
+          "symbol": "M:gi.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidTriangle"
+        },
+        {
+          "start": 4190,
+          "end": 4196,
+          "symbol": "P:gi.a(IIIIIIII)V#0",
+          "original": "param0",
+          "renamed": "vertexCX"
+        },
+        {
+          "start": 4202,
+          "end": 4208,
+          "symbol": "P:gi.a(IIIIIIII)V#1",
+          "original": "param1",
+          "renamed": "guard"
+        },
+        {
+          "start": 4214,
+          "end": 4220,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 4226,
+          "end": 4232,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 4238,
+          "end": 4244,
+          "symbol": "P:gi.a(IIIIIIII)V#4",
+          "original": "param4",
+          "renamed": "vertexAX"
+        },
+        {
+          "start": 4250,
+          "end": 4256,
+          "symbol": "P:gi.a(IIIIIIII)V#5",
+          "original": "param5",
+          "renamed": "vertexBX"
+        },
+        {
+          "start": 4262,
+          "end": 4268,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
+          "start": 4274,
+          "end": 4280,
+          "symbol": "P:gi.a(IIIIIIII)V#7",
+          "original": "param7",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 4296,
+          "end": 4300,
+          "symbol": "L:gi.a(IIIIIIII)V#0",
+          "original": "var9",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 4310,
+          "end": 4314,
+          "symbol": "L:gi.a(IIIIIIII)V#0",
+          "original": "var9",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 4346,
+          "end": 4352,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
+          "start": 4356,
+          "end": 4362,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 4380,
+          "end": 4386,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 4389,
+          "end": 4395,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
           "start": 4411,
           "end": 4413,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 4414,
+          "end": 4415,
+          "symbol": "M:sd.a(IIII[IIIII)V",
+          "original": "a",
+          "renamed": "drawSortedHalfBlendSolidTriangle"
+        },
+        {
+          "start": 4416,
+          "end": 4422,
+          "symbol": "P:gi.a(IIIIIIII)V#5",
+          "original": "param5",
+          "renamed": "vertexBX"
+        },
+        {
+          "start": 4424,
+          "end": 4430,
+          "symbol": "P:gi.a(IIIIIIII)V#4",
+          "original": "param4",
+          "renamed": "vertexAX"
+        },
+        {
+          "start": 4432,
+          "end": 4438,
+          "symbol": "P:gi.a(IIIIIIII)V#7",
+          "original": "param7",
+          "renamed": "halfRgb"
         },
         {
           "start": 4445,
@@ -378825,11 +379518,81 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 4457,
+          "end": 4463,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 4465,
+          "end": 4471,
+          "symbol": "P:gi.a(IIIIIIII)V#0",
+          "original": "param0",
+          "renamed": "vertexCX"
+        },
+        {
+          "start": 4473,
+          "end": 4479,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
+          "start": 4481,
+          "end": 4487,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 4525,
+          "end": 4531,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 4534,
+          "end": 4540,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
           "start": 4558,
           "end": 4560,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 4561,
+          "end": 4562,
+          "symbol": "M:sd.a(IIII[IIIII)V",
+          "original": "a",
+          "renamed": "drawSortedHalfBlendSolidTriangle"
+        },
+        {
+          "start": 4563,
+          "end": 4569,
+          "symbol": "P:gi.a(IIIIIIII)V#0",
+          "original": "param0",
+          "renamed": "vertexCX"
+        },
+        {
+          "start": 4571,
+          "end": 4577,
+          "symbol": "P:gi.a(IIIIIIII)V#4",
+          "original": "param4",
+          "renamed": "vertexAX"
+        },
+        {
+          "start": 4579,
+          "end": 4585,
+          "symbol": "P:gi.a(IIIIIIII)V#7",
+          "original": "param7",
+          "renamed": "halfRgb"
         },
         {
           "start": 4592,
@@ -378846,11 +379609,67 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 4604,
+          "end": 4610,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
+          "start": 4612,
+          "end": 4618,
+          "symbol": "P:gi.a(IIIIIIII)V#5",
+          "original": "param5",
+          "renamed": "vertexBX"
+        },
+        {
+          "start": 4620,
+          "end": 4626,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 4628,
+          "end": 4634,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
           "start": 4672,
           "end": 4674,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 4675,
+          "end": 4676,
+          "symbol": "M:sd.a(IIII[IIIII)V",
+          "original": "a",
+          "renamed": "drawSortedHalfBlendSolidTriangle"
+        },
+        {
+          "start": 4677,
+          "end": 4683,
+          "symbol": "P:gi.a(IIIIIIII)V#4",
+          "original": "param4",
+          "renamed": "vertexAX"
+        },
+        {
+          "start": 4685,
+          "end": 4691,
+          "symbol": "P:gi.a(IIIIIIII)V#0",
+          "original": "param0",
+          "renamed": "vertexCX"
+        },
+        {
+          "start": 4693,
+          "end": 4699,
+          "symbol": "P:gi.a(IIIIIIII)V#7",
+          "original": "param7",
+          "renamed": "halfRgb"
         },
         {
           "start": 4706,
@@ -378867,11 +379686,81 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 4718,
+          "end": 4724,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
+          "start": 4726,
+          "end": 4732,
+          "symbol": "P:gi.a(IIIIIIII)V#5",
+          "original": "param5",
+          "renamed": "vertexBX"
+        },
+        {
+          "start": 4734,
+          "end": 4740,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 4742,
+          "end": 4748,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 4808,
+          "end": 4814,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 4817,
+          "end": 4823,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
           "start": 4839,
           "end": 4841,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 4842,
+          "end": 4843,
+          "symbol": "M:sd.a(IIII[IIIII)V",
+          "original": "a",
+          "renamed": "drawSortedHalfBlendSolidTriangle"
+        },
+        {
+          "start": 4844,
+          "end": 4850,
+          "symbol": "P:gi.a(IIIIIIII)V#4",
+          "original": "param4",
+          "renamed": "vertexAX"
+        },
+        {
+          "start": 4852,
+          "end": 4858,
+          "symbol": "P:gi.a(IIIIIIII)V#5",
+          "original": "param5",
+          "renamed": "vertexBX"
+        },
+        {
+          "start": 4860,
+          "end": 4866,
+          "symbol": "P:gi.a(IIIIIIII)V#7",
+          "original": "param7",
+          "renamed": "halfRgb"
         },
         {
           "start": 4873,
@@ -378888,11 +379777,81 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 4885,
+          "end": 4891,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 4893,
+          "end": 4899,
+          "symbol": "P:gi.a(IIIIIIII)V#0",
+          "original": "param0",
+          "renamed": "vertexCX"
+        },
+        {
+          "start": 4901,
+          "end": 4907,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 4909,
+          "end": 4915,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
+          "start": 4953,
+          "end": 4959,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 4962,
+          "end": 4968,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
           "start": 4986,
           "end": 4988,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 4989,
+          "end": 4990,
+          "symbol": "M:sd.a(IIII[IIIII)V",
+          "original": "a",
+          "renamed": "drawSortedHalfBlendSolidTriangle"
+        },
+        {
+          "start": 4991,
+          "end": 4997,
+          "symbol": "P:gi.a(IIIIIIII)V#0",
+          "original": "param0",
+          "renamed": "vertexCX"
+        },
+        {
+          "start": 4999,
+          "end": 5005,
+          "symbol": "P:gi.a(IIIIIIII)V#5",
+          "original": "param5",
+          "renamed": "vertexBX"
+        },
+        {
+          "start": 5007,
+          "end": 5013,
+          "symbol": "P:gi.a(IIIIIIII)V#7",
+          "original": "param7",
+          "renamed": "halfRgb"
         },
         {
           "start": 5021,
@@ -378909,11 +379868,67 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 5033,
+          "end": 5039,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 5041,
+          "end": 5047,
+          "symbol": "P:gi.a(IIIIIIII)V#4",
+          "original": "param4",
+          "renamed": "vertexAX"
+        },
+        {
+          "start": 5049,
+          "end": 5055,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 5057,
+          "end": 5063,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
           "start": 5101,
           "end": 5103,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 5104,
+          "end": 5105,
+          "symbol": "M:sd.a(IIII[IIIII)V",
+          "original": "a",
+          "renamed": "drawSortedHalfBlendSolidTriangle"
+        },
+        {
+          "start": 5106,
+          "end": 5112,
+          "symbol": "P:gi.a(IIIIIIII)V#5",
+          "original": "param5",
+          "renamed": "vertexBX"
+        },
+        {
+          "start": 5114,
+          "end": 5120,
+          "symbol": "P:gi.a(IIIIIIII)V#0",
+          "original": "param0",
+          "renamed": "vertexCX"
+        },
+        {
+          "start": 5122,
+          "end": 5128,
+          "symbol": "P:gi.a(IIIIIIII)V#7",
+          "original": "param7",
+          "renamed": "halfRgb"
         },
         {
           "start": 5136,
@@ -378928,6 +379943,41 @@
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
+        },
+        {
+          "start": 5148,
+          "end": 5154,
+          "symbol": "P:gi.a(IIIIIIII)V#3",
+          "original": "param3",
+          "renamed": "vertexAY"
+        },
+        {
+          "start": 5156,
+          "end": 5162,
+          "symbol": "P:gi.a(IIIIIIII)V#4",
+          "original": "param4",
+          "renamed": "vertexAX"
+        },
+        {
+          "start": 5164,
+          "end": 5170,
+          "symbol": "P:gi.a(IIIIIIII)V#6",
+          "original": "param6",
+          "renamed": "vertexBY"
+        },
+        {
+          "start": 5172,
+          "end": 5178,
+          "symbol": "P:gi.a(IIIIIIII)V#2",
+          "original": "param2",
+          "renamed": "vertexCY"
+        },
+        {
+          "start": 5229,
+          "end": 5235,
+          "symbol": "P:gi.a(IIIIIIII)V#1",
+          "original": "param1",
+          "renamed": "guard"
         },
         {
           "start": 5398,
@@ -383020,7 +384070,7 @@
       "original": "hi.java",
       "renamed": "hi.java",
       "inputSha256": "1b704d94dd4340fbcfd8d72818cf3e890c10202fa90676af121c855f303617bd",
-      "outputSha256": "388c4ace77941c5dc7a29c2f93f0bdf97f29ee4905890f186210bb614fca35ab",
+      "outputSha256": "5c99880c072f22963468b09e138d0a255c936a71de5e752da972e75d1f70fd51",
       "edits": [
         {
           "start": 132,
@@ -383625,6 +384675,13 @@
           "renamed": "facePriorities"
         },
         {
+          "start": 6141,
+          "end": 6142,
+          "symbol": "M:va.a(I[BI[IB)V",
+          "original": "a",
+          "renamed": "groupQueuedMeshFacesByPriority"
+        },
+        {
           "start": 6146,
           "end": 6151,
           "symbol": "L:hi.a(IIIIILnf;II)V#47",
@@ -383637,6 +384694,13 @@
           "symbol": "F:uh.field_x:[I",
           "original": "field_x",
           "renamed": "meshFacePriorityWriteOffsets"
+        },
+        {
+          "start": 6252,
+          "end": 6253,
+          "symbol": "M:vc.d(I)V",
+          "original": "d",
+          "renamed": "compactDepthBucketFaceOrder"
         },
         {
           "start": 6287,
@@ -384995,6 +386059,13 @@
           "symbol": "L:hi.a(IIIIILnf;II)V#31",
           "original": "var29",
           "renamed": "flatSpecularOrDiffuseB"
+        },
+        {
+          "start": 9891,
+          "end": 9892,
+          "symbol": "M:gi.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidTriangle"
         },
         {
           "start": 9893,
@@ -388899,7 +389970,7 @@
       "original": "ib.java",
       "renamed": "ib.java",
       "inputSha256": "2ac626b826923cffe5d4fa2250595d97256101b8632fdeb122db4384365f7b66",
-      "outputSha256": "ac713371507c10dd605e397c658421642e29563748a6450380c58c4cf12d8137",
+      "outputSha256": "f0c7c68b6e2e9f635b6776a2771af3c51ac14e9b485798bd8bff487856074f44",
       "edits": [
         {
           "start": 144,
@@ -388916,11 +389987,256 @@
           "renamed": "archiveLoadStatus"
         },
         {
+          "start": 224,
+          "end": 225,
+          "symbol": "M:ib.a(I[IIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidSpan"
+        },
+        {
+          "start": 230,
+          "end": 236,
+          "symbol": "P:ib.a(I[IIII)V#0",
+          "original": "param0",
+          "renamed": "guard"
+        },
+        {
+          "start": 244,
+          "end": 250,
+          "symbol": "P:ib.a(I[IIII)V#1",
+          "original": "param1",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 256,
+          "end": 262,
+          "symbol": "P:ib.a(I[IIII)V#2",
+          "original": "param2",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 268,
+          "end": 274,
+          "symbol": "P:ib.a(I[IIII)V#3",
+          "original": "param3",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 280,
+          "end": 286,
+          "symbol": "P:ib.a(I[IIII)V#4",
+          "original": "param4",
+          "renamed": "pixelCount"
+        },
+        {
+          "start": 304,
+          "end": 308,
+          "symbol": "L:ib.a(I[IIII)V#0",
+          "original": "var9",
+          "renamed": "destinationForReadAndWrite"
+        },
+        {
+          "start": 329,
+          "end": 333,
+          "symbol": "L:ib.a(I[IIII)V#1",
+          "original": "var6",
+          "renamed": "destinationIndexForWrite"
+        },
+        {
+          "start": 351,
+          "end": 355,
+          "symbol": "L:ib.a(I[IIII)V#2",
+          "original": "var7",
+          "renamed": "halfRgbForWrite"
+        },
+        {
+          "start": 373,
+          "end": 377,
+          "symbol": "L:ib.a(I[IIII)V#3",
+          "original": "var8",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 454,
+          "end": 460,
+          "symbol": "P:ib.a(I[IIII)V#4",
+          "original": "param4",
+          "renamed": "pixelCount"
+        },
+        {
+          "start": 484,
+          "end": 490,
+          "symbol": "P:ib.a(I[IIII)V#4",
+          "original": "param4",
+          "renamed": "pixelCount"
+        },
+        {
+          "start": 559,
+          "end": 563,
+          "symbol": "L:ib.a(I[IIII)V#0",
+          "original": "var9",
+          "renamed": "destinationForReadAndWrite"
+        },
+        {
+          "start": 566,
+          "end": 572,
+          "symbol": "P:ib.a(I[IIII)V#1",
+          "original": "param1",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 596,
+          "end": 600,
+          "symbol": "L:ib.a(I[IIII)V#4",
+          "original": "var5",
+          "renamed": "destinationAlias"
+        },
+        {
+          "start": 603,
+          "end": 607,
+          "symbol": "L:ib.a(I[IIII)V#0",
+          "original": "var9",
+          "renamed": "destinationForReadAndWrite"
+        },
+        {
+          "start": 625,
+          "end": 629,
+          "symbol": "L:ib.a(I[IIII)V#1",
+          "original": "var6",
+          "renamed": "destinationIndexForWrite"
+        },
+        {
+          "start": 632,
+          "end": 638,
+          "symbol": "P:ib.a(I[IIII)V#2",
+          "original": "param2",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 656,
+          "end": 660,
+          "symbol": "L:ib.a(I[IIII)V#2",
+          "original": "var7",
+          "renamed": "halfRgbForWrite"
+        },
+        {
+          "start": 663,
+          "end": 669,
+          "symbol": "P:ib.a(I[IIII)V#3",
+          "original": "param3",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 687,
+          "end": 691,
+          "symbol": "L:ib.a(I[IIII)V#0",
+          "original": "var9",
+          "renamed": "destinationForReadAndWrite"
+        },
+        {
+          "start": 692,
+          "end": 696,
+          "symbol": "L:ib.a(I[IIII)V#1",
+          "original": "var6",
+          "renamed": "destinationIndexForWrite"
+        },
+        {
+          "start": 700,
+          "end": 704,
+          "symbol": "L:ib.a(I[IIII)V#2",
+          "original": "var7",
+          "renamed": "halfRgbForWrite"
+        },
+        {
           "start": 710,
           "end": 711,
           "symbol": "M:cd.a(II)I",
           "original": "a",
           "renamed": "andInt"
+        },
+        {
+          "start": 712,
+          "end": 716,
+          "symbol": "L:ib.a(I[IIII)V#0",
+          "original": "var9",
+          "renamed": "destinationForReadAndWrite"
+        },
+        {
+          "start": 717,
+          "end": 721,
+          "symbol": "L:ib.a(I[IIII)V#1",
+          "original": "var6",
+          "renamed": "destinationIndexForWrite"
+        },
+        {
+          "start": 755,
+          "end": 761,
+          "symbol": "P:ib.a(I[IIII)V#2",
+          "original": "param2",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 795,
+          "end": 803,
+          "symbol": "L:ib.a(I[IIII)V#5",
+          "original": "var5_int",
+          "renamed": "guardRemainder"
+        },
+        {
+          "start": 819,
+          "end": 825,
+          "symbol": "P:ib.a(I[IIII)V#0",
+          "original": "param0",
+          "renamed": "guard"
+        },
+        {
+          "start": 868,
+          "end": 884,
+          "symbol": "L:ib.a(I[IIII)V#6",
+          "original": "runtimeException",
+          "renamed": "caughtSpanFailure"
+        },
+        {
+          "start": 932,
+          "end": 948,
+          "symbol": "L:ib.a(I[IIII)V#6",
+          "original": "runtimeException",
+          "renamed": "caughtSpanFailure"
+        },
+        {
+          "start": 962,
+          "end": 968,
+          "symbol": "P:ib.a(I[IIII)V#0",
+          "original": "param0",
+          "renamed": "guard"
+        },
+        {
+          "start": 978,
+          "end": 984,
+          "symbol": "P:ib.a(I[IIII)V#1",
+          "original": "param1",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 1021,
+          "end": 1027,
+          "symbol": "P:ib.a(I[IIII)V#2",
+          "original": "param2",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 1036,
+          "end": 1042,
+          "symbol": "P:ib.a(I[IIII)V#3",
+          "original": "param3",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 1051,
+          "end": 1057,
+          "symbol": "P:ib.a(I[IIII)V#4",
+          "original": "param4",
+          "renamed": "pixelCount"
         },
         {
           "start": 1471,
@@ -526910,7 +528226,7 @@
       "original": "sd.java",
       "renamed": "NetworkArchiveRequest.java",
       "inputSha256": "bb557f50dc5d591ba541e939ff5a8c4876b679e8f99076fedb1009dbe3d4622e",
-      "outputSha256": "e0cd217cc03235d0ae321cb126af61b96bb5ae14988e0e32fd1819a05dd933dd",
+      "outputSha256": "4453bc6a4ddef4dcf9dbc72ed7f78e093fcf951208b09b60d6c2f77747d29d7a",
       "edits": [
         {
           "start": 50,
@@ -527116,6 +528432,209 @@
           "renamed": "buildIndexedSpritesFromDecodedSheet"
         },
         {
+          "start": 2104,
+          "end": 2105,
+          "symbol": "M:sd.a(IIII[IIIII)V",
+          "original": "a",
+          "renamed": "drawSortedHalfBlendSolidTriangle"
+        },
+        {
+          "start": 2110,
+          "end": 2116,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 2122,
+          "end": 2128,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 2134,
+          "end": 2140,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 2146,
+          "end": 2152,
+          "symbol": "P:sd.a(IIII[IIIII)V#3",
+          "original": "param3",
+          "renamed": "guard"
+        },
+        {
+          "start": 2160,
+          "end": 2166,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 2172,
+          "end": 2178,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 2184,
+          "end": 2190,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 2196,
+          "end": 2202,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 2208,
+          "end": 2214,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 2243,
+          "end": 2255,
+          "symbol": "L:sd.a(IIII[IIIII)V#0",
+          "original": "stackIn_74_0",
+          "renamed": "triangleFailureBeforeContext"
+        },
+        {
+          "start": 2286,
+          "end": 2298,
+          "symbol": "L:sd.a(IIII[IIIII)V#1",
+          "original": "stackIn_74_1",
+          "renamed": "triangleMessagePrefix"
+        },
+        {
+          "start": 2322,
+          "end": 2334,
+          "symbol": "L:sd.a(IIII[IIIII)V#2",
+          "original": "stackIn_75_2",
+          "renamed": "destinationDescription"
+        },
+        {
+          "start": 2368,
+          "end": 2393,
+          "symbol": "L:sd.a(IIII[IIIII)V#3",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtTriangleFailure"
+        },
+        {
+          "start": 2414,
+          "end": 2422,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 2453,
+          "end": 2457,
+          "symbol": "L:sd.a(IIII[IIIII)V#5",
+          "original": "var9",
+          "renamed": "triangleFailure"
+        },
+        {
+          "start": 2478,
+          "end": 2483,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 2501,
+          "end": 2506,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 2524,
+          "end": 2529,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 2547,
+          "end": 2552,
+          "symbol": "L:sd.a(IIII[IIIII)V#9",
+          "original": "var13",
+          "renamed": "middleVertexOnRight"
+        },
+        {
+          "start": 2570,
+          "end": 2575,
+          "symbol": "L:sd.a(IIII[IIIII)V#10",
+          "original": "var14",
+          "renamed": "topToBottomRows"
+        },
+        {
+          "start": 2593,
+          "end": 2598,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 2616,
+          "end": 2621,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 2639,
+          "end": 2644,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 2662,
+          "end": 2667,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 2685,
+          "end": 2690,
+          "symbol": "L:sd.a(IIII[IIIII)V#15",
+          "original": "var19",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 2704,
+          "end": 2709,
+          "symbol": "L:sd.a(IIII[IIIII)V#15",
+          "original": "var19",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 2757,
+          "end": 2763,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 2788,
+          "end": 2794,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
           "start": 2797,
           "end": 2799,
           "symbol": "C:mh",
@@ -527130,6 +528649,34 @@
           "renamed": "clipHeight"
         },
         {
+          "start": 2833,
+          "end": 2839,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 2863,
+          "end": 2869,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 2899,
+          "end": 2905,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 3013,
+          "end": 3019,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
           "start": 3023,
           "end": 3025,
           "symbol": "C:mh",
@@ -527142,6 +528689,13 @@
           "symbol": "F:mh.field_c:I",
           "original": "field_c",
           "renamed": "clipWidth"
+        },
+        {
+          "start": 3057,
+          "end": 3063,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
         },
         {
           "start": 3067,
@@ -527172,6 +528726,776 @@
           "renamed": "clipWidth"
         },
         {
+          "start": 3117,
+          "end": 3123,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 3223,
+          "end": 3228,
+          "symbol": "L:sd.a(IIII[IIIII)V#10",
+          "original": "var14",
+          "renamed": "topToBottomRows"
+        },
+        {
+          "start": 3232,
+          "end": 3238,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 3241,
+          "end": 3247,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 3267,
+          "end": 3273,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 3277,
+          "end": 3283,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 3307,
+          "end": 3313,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 3317,
+          "end": 3323,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 3345,
+          "end": 3350,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 3354,
+          "end": 3360,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 3363,
+          "end": 3369,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 3393,
+          "end": 3399,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 3402,
+          "end": 3408,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 3432,
+          "end": 3437,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 3440,
+          "end": 3446,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 3474,
+          "end": 3479,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 3484,
+          "end": 3490,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 3493,
+          "end": 3499,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 3509,
+          "end": 3514,
+          "symbol": "L:sd.a(IIII[IIIII)V#10",
+          "original": "var14",
+          "renamed": "topToBottomRows"
+        },
+        {
+          "start": 3536,
+          "end": 3544,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 3547,
+          "end": 3553,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 3581,
+          "end": 3586,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 3590,
+          "end": 3596,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 3599,
+          "end": 3605,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 3615,
+          "end": 3620,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 3669,
+          "end": 3674,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 3677,
+          "end": 3683,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 3711,
+          "end": 3716,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 3720,
+          "end": 3726,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 3729,
+          "end": 3735,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 3745,
+          "end": 3750,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 3772,
+          "end": 3780,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 3783,
+          "end": 3789,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 3817,
+          "end": 3822,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 3827,
+          "end": 3833,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 3836,
+          "end": 3842,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 3852,
+          "end": 3857,
+          "symbol": "L:sd.a(IIII[IIIII)V#10",
+          "original": "var14",
+          "renamed": "topToBottomRows"
+        },
+        {
+          "start": 3922,
+          "end": 3927,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 3951,
+          "end": 3956,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 3959,
+          "end": 3965,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 3991,
+          "end": 3999,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 4002,
+          "end": 4008,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 4034,
+          "end": 4039,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 4079,
+          "end": 4084,
+          "symbol": "L:sd.a(IIII[IIIII)V#9",
+          "original": "var13",
+          "renamed": "middleVertexOnRight"
+        },
+        {
+          "start": 4110,
+          "end": 4116,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4142,
+          "end": 4148,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4161,
+          "end": 4167,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4170,
+          "end": 4176,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4179,
+          "end": 4185,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 4206,
+          "end": 4211,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 4214,
+          "end": 4219,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 4222,
+          "end": 4227,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 4230,
+          "end": 4236,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4256,
+          "end": 4264,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 4267,
+          "end": 4275,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 4278,
+          "end": 4284,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4287,
+          "end": 4292,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 4312,
+          "end": 4318,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4381,
+          "end": 4386,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 4389,
+          "end": 4395,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 4419,
+          "end": 4427,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 4430,
+          "end": 4436,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 4460,
+          "end": 4465,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 4469,
+          "end": 4475,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4478,
+          "end": 4484,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 4502,
+          "end": 4507,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 4512,
+          "end": 4518,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 4521,
+          "end": 4527,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 4537,
+          "end": 4542,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 4560,
+          "end": 4565,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 4569,
+          "end": 4575,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 4578,
+          "end": 4584,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 4594,
+          "end": 4599,
+          "symbol": "L:sd.a(IIII[IIIII)V#10",
+          "original": "var14",
+          "renamed": "topToBottomRows"
+        },
+        {
+          "start": 4621,
+          "end": 4626,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 4629,
+          "end": 4634,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 4656,
+          "end": 4661,
+          "symbol": "L:sd.a(IIII[IIIII)V#9",
+          "original": "var13",
+          "renamed": "middleVertexOnRight"
+        },
+        {
+          "start": 4710,
+          "end": 4715,
+          "symbol": "L:sd.a(IIII[IIIII)V#9",
+          "original": "var13",
+          "renamed": "middleVertexOnRight"
+        },
+        {
+          "start": 4739,
+          "end": 4744,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 4747,
+          "end": 4752,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 4772,
+          "end": 4777,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 4780,
+          "end": 4785,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 4805,
+          "end": 4810,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 4813,
+          "end": 4818,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 4886,
+          "end": 4892,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4920,
+          "end": 4926,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 4956,
+          "end": 4962,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 4965,
+          "end": 4971,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 4974,
+          "end": 4980,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5004,
+          "end": 5012,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 5015,
+          "end": 5023,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 5026,
+          "end": 5031,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 5034,
+          "end": 5040,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5064,
+          "end": 5069,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 5072,
+          "end": 5077,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 5080,
+          "end": 5085,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 5088,
+          "end": 5094,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5118,
+          "end": 5124,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5127,
+          "end": 5133,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 5209,
+          "end": 5215,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5219,
+          "end": 5225,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5247,
+          "end": 5252,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 5255,
+          "end": 5260,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 5263,
+          "end": 5268,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 5271,
+          "end": 5277,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5299,
+          "end": 5307,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 5310,
+          "end": 5318,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 5321,
+          "end": 5326,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 5329,
+          "end": 5335,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5357,
+          "end": 5363,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5407,
+          "end": 5412,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
           "start": 5415,
           "end": 5417,
           "symbol": "C:mh",
@@ -527184,6 +529508,41 @@
           "symbol": "F:mh.field_b:[I",
           "original": "field_b",
           "renamed": "rowBaseOffsets"
+        },
+        {
+          "start": 5426,
+          "end": 5432,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5460,
+          "end": 5466,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 5469,
+          "end": 5475,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 5499,
+          "end": 5504,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 5507,
+          "end": 5515,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
         },
         {
           "start": 5547,
@@ -527200,6 +529559,55 @@
           "renamed": "clipWidth"
         },
         {
+          "start": 5560,
+          "end": 5565,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 5591,
+          "end": 5596,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 5600,
+          "end": 5605,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 5616,
+          "end": 5624,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 5659,
+          "end": 5664,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 5701,
+          "end": 5706,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 5709,
+          "end": 5714,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
           "start": 5718,
           "end": 5720,
           "symbol": "C:mh",
@@ -527212,6 +529620,20 @@
           "symbol": "F:mh.field_c:I",
           "original": "field_c",
           "renamed": "clipWidth"
+        },
+        {
+          "start": 5758,
+          "end": 5763,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 5773,
+          "end": 5778,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
         },
         {
           "start": 5781,
@@ -527228,6 +529650,104 @@
           "renamed": "clipWidth"
         },
         {
+          "start": 5853,
+          "end": 5858,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 5891,
+          "end": 5892,
+          "symbol": "M:ib.a(I[IIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidSpan"
+        },
+        {
+          "start": 5897,
+          "end": 5903,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 5905,
+          "end": 5910,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 5913,
+          "end": 5918,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 5920,
+          "end": 5926,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 5928,
+          "end": 5933,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 5998,
+          "end": 5999,
+          "symbol": "M:ib.a(I[IIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidSpan"
+        },
+        {
+          "start": 6004,
+          "end": 6010,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 6012,
+          "end": 6017,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 6019,
+          "end": 6025,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 6027,
+          "end": 6032,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 6035,
+          "end": 6040,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 6128,
+          "end": 6133,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
           "start": 6172,
           "end": 6174,
           "symbol": "C:mh",
@@ -527240,6 +529760,69 @@
           "symbol": "F:mh.field_c:I",
           "original": "field_c",
           "renamed": "clipWidth"
+        },
+        {
+          "start": 6185,
+          "end": 6190,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 6225,
+          "end": 6226,
+          "symbol": "M:ib.a(I[IIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidSpan"
+        },
+        {
+          "start": 6232,
+          "end": 6238,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 6240,
+          "end": 6245,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 6248,
+          "end": 6253,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 6255,
+          "end": 6261,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 6263,
+          "end": 6268,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 6391,
+          "end": 6397,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 6425,
+          "end": 6431,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
         },
         {
           "start": 6435,
@@ -527256,6 +529839,20 @@
           "renamed": "clipHeight"
         },
         {
+          "start": 6521,
+          "end": 6526,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 6529,
+          "end": 6534,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
           "start": 6537,
           "end": 6539,
           "symbol": "C:vb",
@@ -527268,6 +529865,300 @@
           "symbol": "F:vb.field_f:I",
           "original": "field_f",
           "renamed": "stride"
+        },
+        {
+          "start": 6569,
+          "end": 6577,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 6580,
+          "end": 6588,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 6591,
+          "end": 6596,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 6618,
+          "end": 6623,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 6626,
+          "end": 6631,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 6634,
+          "end": 6639,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 6723,
+          "end": 6728,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 6732,
+          "end": 6738,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 6741,
+          "end": 6747,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 6769,
+          "end": 6774,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 6801,
+          "end": 6806,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 6830,
+          "end": 6835,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 6884,
+          "end": 6889,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 6892,
+          "end": 6898,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 6928,
+          "end": 6933,
+          "symbol": "L:sd.a(IIII[IIIII)V#9",
+          "original": "var13",
+          "renamed": "middleVertexOnRight"
+        },
+        {
+          "start": 6962,
+          "end": 6970,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 6973,
+          "end": 6979,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 7034,
+          "end": 7039,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 7042,
+          "end": 7048,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 7094,
+          "end": 7099,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 7103,
+          "end": 7108,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 7111,
+          "end": 7119,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 7123,
+          "end": 7128,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 7148,
+          "end": 7153,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 7157,
+          "end": 7162,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 7165,
+          "end": 7170,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 7174,
+          "end": 7179,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 7237,
+          "end": 7243,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7263,
+          "end": 7269,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7273,
+          "end": 7279,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7297,
+          "end": 7302,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 7305,
+          "end": 7310,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 7313,
+          "end": 7318,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 7321,
+          "end": 7327,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7345,
+          "end": 7353,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 7356,
+          "end": 7364,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 7367,
+          "end": 7373,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7376,
+          "end": 7381,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 7399,
+          "end": 7405,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7441,
+          "end": 7446,
+          "symbol": "L:sd.a(IIII[IIIII)V#12",
+          "original": "var16",
+          "renamed": "edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder"
+        },
+        {
+          "start": 7457,
+          "end": 7463,
+          "symbol": "P:sd.a(IIII[IIIII)V#3",
+          "original": "param3",
+          "renamed": "guard"
+        },
+        {
+          "start": 7491,
+          "end": 7496,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
         },
         {
           "start": 7499,
@@ -527284,6 +530175,41 @@
           "renamed": "rowBaseOffsets"
         },
         {
+          "start": 7510,
+          "end": 7516,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7540,
+          "end": 7546,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 7549,
+          "end": 7555,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 7575,
+          "end": 7580,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 7583,
+          "end": 7591,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
           "start": 7619,
           "end": 7621,
           "symbol": "C:mh",
@@ -527296,6 +530222,48 @@
           "symbol": "F:mh.field_c:I",
           "original": "field_c",
           "renamed": "clipWidth"
+        },
+        {
+          "start": 7632,
+          "end": 7637,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 7659,
+          "end": 7664,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 7668,
+          "end": 7673,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 7684,
+          "end": 7692,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 7723,
+          "end": 7728,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 7761,
+          "end": 7766,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
         },
         {
           "start": 7801,
@@ -527312,6 +530280,55 @@
           "renamed": "clipWidth"
         },
         {
+          "start": 7814,
+          "end": 7819,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 7850,
+          "end": 7851,
+          "symbol": "M:ib.a(I[IIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidSpan"
+        },
+        {
+          "start": 7857,
+          "end": 7863,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 7865,
+          "end": 7870,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 7873,
+          "end": 7878,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 7880,
+          "end": 7886,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 7888,
+          "end": 7893,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
           "start": 7993,
           "end": 7995,
           "symbol": "C:mh",
@@ -527324,6 +530341,34 @@
           "symbol": "F:mh.field_c:I",
           "original": "field_c",
           "renamed": "clipWidth"
+        },
+        {
+          "start": 8007,
+          "end": 8012,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 8015,
+          "end": 8020,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 8046,
+          "end": 8051,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 8055,
+          "end": 8060,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
         },
         {
           "start": 8063,
@@ -527340,6 +530385,104 @@
           "renamed": "clipWidth"
         },
         {
+          "start": 8129,
+          "end": 8134,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 8163,
+          "end": 8164,
+          "symbol": "M:ib.a(I[IIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidSpan"
+        },
+        {
+          "start": 8170,
+          "end": 8176,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 8178,
+          "end": 8183,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 8185,
+          "end": 8191,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 8193,
+          "end": 8198,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 8201,
+          "end": 8206,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 8263,
+          "end": 8264,
+          "symbol": "M:ib.a(I[IIII)V",
+          "original": "a",
+          "renamed": "drawHalfBlendSolidSpan"
+        },
+        {
+          "start": 8270,
+          "end": 8276,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 8278,
+          "end": 8283,
+          "symbol": "L:sd.a(IIII[IIIII)V#13",
+          "original": "var17",
+          "renamed": "spanStartOrBottomXQ16"
+        },
+        {
+          "start": 8286,
+          "end": 8291,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 8293,
+          "end": 8299,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 8301,
+          "end": 8306,
+          "symbol": "L:sd.a(IIII[IIIII)V#14",
+          "original": "var18",
+          "renamed": "spanWidth"
+        },
+        {
+          "start": 8385,
+          "end": 8391,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
           "start": 8415,
           "end": 8417,
           "symbol": "C:mh",
@@ -527354,6 +530497,69 @@
           "renamed": "clipHeight"
         },
         {
+          "start": 8429,
+          "end": 8435,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
+        },
+        {
+          "start": 8499,
+          "end": 8507,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 8510,
+          "end": 8518,
+          "symbol": "L:sd.a(IIII[IIIII)V#4",
+          "original": "var9_int",
+          "renamed": "leftXQ16"
+        },
+        {
+          "start": 8521,
+          "end": 8526,
+          "symbol": "L:sd.a(IIII[IIIII)V#7",
+          "original": "var11",
+          "renamed": "leftXStepQ16"
+        },
+        {
+          "start": 8544,
+          "end": 8549,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 8552,
+          "end": 8557,
+          "symbol": "L:sd.a(IIII[IIIII)V#6",
+          "original": "var10",
+          "renamed": "rightXQ16"
+        },
+        {
+          "start": 8560,
+          "end": 8565,
+          "symbol": "L:sd.a(IIII[IIIII)V#8",
+          "original": "var12",
+          "renamed": "rightXStepQ16"
+        },
+        {
+          "start": 8583,
+          "end": 8588,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
+          "start": 8591,
+          "end": 8596,
+          "symbol": "L:sd.a(IIII[IIIII)V#11",
+          "original": "var15",
+          "renamed": "edgeSegmentRowsThenRowBase"
+        },
+        {
           "start": 8599,
           "end": 8601,
           "symbol": "C:vb",
@@ -527366,6 +530572,160 @@
           "symbol": "F:vb.field_f:I",
           "original": "field_f",
           "renamed": "stride"
+        },
+        {
+          "start": 8737,
+          "end": 8763,
+          "symbol": "L:sd.a(IIII[IIIII)V#16",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtTriangleParameter"
+        },
+        {
+          "start": 8777,
+          "end": 8802,
+          "symbol": "L:sd.a(IIII[IIIII)V#3",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtTriangleFailure"
+        },
+        {
+          "start": 8805,
+          "end": 8831,
+          "symbol": "L:sd.a(IIII[IIIII)V#16",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtTriangleParameter"
+        },
+        {
+          "start": 8843,
+          "end": 8847,
+          "symbol": "L:sd.a(IIII[IIIII)V#5",
+          "original": "var9",
+          "renamed": "triangleFailure"
+        },
+        {
+          "start": 8850,
+          "end": 8875,
+          "symbol": "L:sd.a(IIII[IIIII)V#3",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtTriangleFailure"
+        },
+        {
+          "start": 8887,
+          "end": 8899,
+          "symbol": "L:sd.a(IIII[IIIII)V#0",
+          "original": "stackIn_74_0",
+          "renamed": "triangleFailureBeforeContext"
+        },
+        {
+          "start": 8922,
+          "end": 8926,
+          "symbol": "L:sd.a(IIII[IIIII)V#5",
+          "original": "var9",
+          "renamed": "triangleFailure"
+        },
+        {
+          "start": 8939,
+          "end": 8951,
+          "symbol": "L:sd.a(IIII[IIIII)V#1",
+          "original": "stackIn_74_1",
+          "renamed": "triangleMessagePrefix"
+        },
+        {
+          "start": 8997,
+          "end": 9003,
+          "symbol": "P:sd.a(IIII[IIIII)V#0",
+          "original": "param0",
+          "renamed": "middleX"
+        },
+        {
+          "start": 9024,
+          "end": 9030,
+          "symbol": "P:sd.a(IIII[IIIII)V#1",
+          "original": "param1",
+          "renamed": "topX"
+        },
+        {
+          "start": 9051,
+          "end": 9057,
+          "symbol": "P:sd.a(IIII[IIIII)V#2",
+          "original": "param2",
+          "renamed": "halfRgb"
+        },
+        {
+          "start": 9078,
+          "end": 9084,
+          "symbol": "P:sd.a(IIII[IIIII)V#3",
+          "original": "param3",
+          "renamed": "guard"
+        },
+        {
+          "start": 9113,
+          "end": 9119,
+          "symbol": "P:sd.a(IIII[IIIII)V#4",
+          "original": "param4",
+          "renamed": "destinationPixels"
+        },
+        {
+          "start": 9143,
+          "end": 9155,
+          "symbol": "L:sd.a(IIII[IIIII)V#2",
+          "original": "stackIn_75_2",
+          "renamed": "destinationDescription"
+        },
+        {
+          "start": 9197,
+          "end": 9209,
+          "symbol": "L:sd.a(IIII[IIIII)V#2",
+          "original": "stackIn_75_2",
+          "renamed": "destinationDescription"
+        },
+        {
+          "start": 9275,
+          "end": 9287,
+          "symbol": "L:sd.a(IIII[IIIII)V#0",
+          "original": "stackIn_74_0",
+          "renamed": "triangleFailureBeforeContext"
+        },
+        {
+          "start": 9316,
+          "end": 9328,
+          "symbol": "L:sd.a(IIII[IIIII)V#1",
+          "original": "stackIn_74_1",
+          "renamed": "triangleMessagePrefix"
+        },
+        {
+          "start": 9337,
+          "end": 9349,
+          "symbol": "L:sd.a(IIII[IIIII)V#2",
+          "original": "stackIn_75_2",
+          "renamed": "destinationDescription"
+        },
+        {
+          "start": 9370,
+          "end": 9376,
+          "symbol": "P:sd.a(IIII[IIIII)V#5",
+          "original": "param5",
+          "renamed": "bottomY"
+        },
+        {
+          "start": 9397,
+          "end": 9403,
+          "symbol": "P:sd.a(IIII[IIIII)V#6",
+          "original": "param6",
+          "renamed": "bottomX"
+        },
+        {
+          "start": 9424,
+          "end": 9430,
+          "symbol": "P:sd.a(IIII[IIIII)V#7",
+          "original": "param7",
+          "renamed": "middleY"
+        },
+        {
+          "start": 9451,
+          "end": 9457,
+          "symbol": "P:sd.a(IIII[IIIII)V#8",
+          "original": "param8",
+          "renamed": "topY"
         },
         {
           "start": 9515,
@@ -555193,7 +558553,7 @@
       "original": "va.java",
       "renamed": "va.java",
       "inputSha256": "81678cbcae8e162a4950dfcaceea631273cfb6cd0328b1b7b5c872559dfa7cb4",
-      "outputSha256": "b29bccd1af9281d8d9eed3dcfc805cf898cf6d5b4b5f8a504bd32304bec25142",
+      "outputSha256": "529f39fbb7423e7487527ed8ddec3337d75614a022505aa4d7311cfb0f2b7cea",
       "edits": [
         {
           "start": 188,
@@ -555238,11 +558598,186 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2009,
+          "end": 2010,
+          "symbol": "M:va.a(I[BI[IB)V",
+          "original": "a",
+          "renamed": "groupQueuedMeshFacesByPriority"
+        },
+        {
+          "start": 2015,
+          "end": 2021,
+          "symbol": "P:va.a(I[BI[IB)V#0",
+          "original": "param0",
+          "renamed": "faceIndexScratch"
+        },
+        {
+          "start": 2030,
+          "end": 2036,
+          "symbol": "P:va.a(I[BI[IB)V#1",
+          "original": "param1",
+          "renamed": "facePriorities"
+        },
+        {
+          "start": 2042,
+          "end": 2048,
+          "symbol": "P:va.a(I[BI[IB)V#2",
+          "original": "param2",
+          "renamed": "remainingFacesScratch"
+        },
+        {
+          "start": 2056,
+          "end": 2062,
+          "symbol": "P:va.a(I[BI[IB)V#3",
+          "original": "param3",
+          "renamed": "priorityWriteOffsets"
+        },
+        {
+          "start": 2069,
+          "end": 2075,
+          "symbol": "P:va.a(I[BI[IB)V#4",
+          "original": "param4",
+          "renamed": "guard"
+        },
+        {
+          "start": 2091,
+          "end": 2107,
+          "symbol": "L:va.a(I[BI[IB)V#0",
+          "original": "incrementValue$0",
+          "renamed": "remainingBeforeDecrement"
+        },
+        {
+          "start": 2125,
+          "end": 2141,
+          "symbol": "L:va.a(I[BI[IB)V#1",
+          "original": "incrementValue$1",
+          "renamed": "sourceIndexBeforeIncrement"
+        },
+        {
+          "start": 2160,
+          "end": 2169,
+          "symbol": "L:va.a(I[BI[IB)V#2",
+          "original": "dupTemp$2",
+          "renamed": "facePriority"
+        },
+        {
+          "start": 2187,
+          "end": 2196,
+          "symbol": "L:va.a(I[BI[IB)V#3",
+          "original": "dupTemp$3",
+          "renamed": "destinationIndexBeforeIncrement"
+        },
+        {
+          "start": 2227,
+          "end": 2239,
+          "symbol": "L:va.a(I[BI[IB)V#4",
+          "original": "stackIn_12_0",
+          "renamed": "groupingFailureBeforeContext"
+        },
+        {
+          "start": 2270,
+          "end": 2282,
+          "symbol": "L:va.a(I[BI[IB)V#5",
+          "original": "stackIn_12_1",
+          "renamed": "groupingMessagePrefix"
+        },
+        {
+          "start": 2306,
+          "end": 2318,
+          "symbol": "L:va.a(I[BI[IB)V#6",
+          "original": "stackIn_13_2",
+          "renamed": "prioritiesDescription"
+        },
+        {
+          "start": 2349,
+          "end": 2361,
+          "symbol": "L:va.a(I[BI[IB)V#7",
+          "original": "stackIn_15_1",
+          "renamed": "messageBeforeOffsets"
+        },
+        {
+          "start": 2385,
+          "end": 2397,
+          "symbol": "L:va.a(I[BI[IB)V#8",
+          "original": "stackIn_16_2",
+          "renamed": "offsetsDescription"
+        },
+        {
+          "start": 2431,
+          "end": 2456,
+          "symbol": "L:va.a(I[BI[IB)V#9",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtGroupingFailure"
+        },
+        {
+          "start": 2477,
+          "end": 2485,
+          "symbol": "L:va.a(I[BI[IB)V#10",
+          "original": "var5_int",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 2516,
+          "end": 2520,
+          "symbol": "L:va.a(I[BI[IB)V#11",
+          "original": "var5",
+          "renamed": "groupingFailure"
+        },
+        {
+          "start": 2541,
+          "end": 2545,
+          "symbol": "L:va.a(I[BI[IB)V#12",
+          "original": "var6",
+          "renamed": "depthBucketReadIndex"
+        },
+        {
+          "start": 2563,
+          "end": 2567,
+          "symbol": "L:va.a(I[BI[IB)V#13",
+          "original": "var7",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 2581,
+          "end": 2585,
+          "symbol": "L:va.a(I[BI[IB)V#13",
+          "original": "var7",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 2629,
+          "end": 2637,
+          "symbol": "L:va.a(I[BI[IB)V#10",
+          "original": "var5_int",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 2688,
+          "end": 2696,
+          "symbol": "L:va.a(I[BI[IB)V#10",
+          "original": "var5_int",
+          "renamed": "depthBucketIndex"
+        },
+        {
           "start": 2703,
           "end": 2710,
           "symbol": "F:ch.field_d:[I",
           "original": "field_d",
           "renamed": "meshFaceCountsByDepthBucket"
+        },
+        {
+          "start": 2739,
+          "end": 2745,
+          "symbol": "P:va.a(I[BI[IB)V#4",
+          "original": "param4",
+          "renamed": "guard"
+        },
+        {
+          "start": 2857,
+          "end": 2863,
+          "symbol": "P:va.a(I[BI[IB)V#2",
+          "original": "param2",
+          "renamed": "remainingFacesScratch"
         },
         {
           "start": 2869,
@@ -555252,6 +558787,90 @@
           "renamed": "meshFaceCountsByDepthBucket"
         },
         {
+          "start": 2877,
+          "end": 2885,
+          "symbol": "L:va.a(I[BI[IB)V#10",
+          "original": "var5_int",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 2900,
+          "end": 2904,
+          "symbol": "L:va.a(I[BI[IB)V#12",
+          "original": "var6",
+          "renamed": "depthBucketReadIndex"
+        },
+        {
+          "start": 2907,
+          "end": 2915,
+          "symbol": "L:va.a(I[BI[IB)V#10",
+          "original": "var5_int",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 2963,
+          "end": 2979,
+          "symbol": "L:va.a(I[BI[IB)V#0",
+          "original": "incrementValue$0",
+          "renamed": "remainingBeforeDecrement"
+        },
+        {
+          "start": 2982,
+          "end": 2988,
+          "symbol": "P:va.a(I[BI[IB)V#2",
+          "original": "param2",
+          "renamed": "remainingFacesScratch"
+        },
+        {
+          "start": 3004,
+          "end": 3010,
+          "symbol": "P:va.a(I[BI[IB)V#2",
+          "original": "param2",
+          "renamed": "remainingFacesScratch"
+        },
+        {
+          "start": 3037,
+          "end": 3053,
+          "symbol": "L:va.a(I[BI[IB)V#0",
+          "original": "incrementValue$0",
+          "renamed": "remainingBeforeDecrement"
+        },
+        {
+          "start": 3073,
+          "end": 3081,
+          "symbol": "L:va.a(I[BI[IB)V#10",
+          "original": "var5_int",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 3144,
+          "end": 3160,
+          "symbol": "L:va.a(I[BI[IB)V#1",
+          "original": "incrementValue$1",
+          "renamed": "sourceIndexBeforeIncrement"
+        },
+        {
+          "start": 3163,
+          "end": 3167,
+          "symbol": "L:va.a(I[BI[IB)V#12",
+          "original": "var6",
+          "renamed": "depthBucketReadIndex"
+        },
+        {
+          "start": 3183,
+          "end": 3187,
+          "symbol": "L:va.a(I[BI[IB)V#12",
+          "original": "var6",
+          "renamed": "depthBucketReadIndex"
+        },
+        {
+          "start": 3205,
+          "end": 3211,
+          "symbol": "P:va.a(I[BI[IB)V#0",
+          "original": "param0",
+          "renamed": "faceIndexScratch"
+        },
+        {
           "start": 3217,
           "end": 3224,
           "symbol": "F:pj.field_i:[I",
@@ -555259,11 +558878,256 @@
           "renamed": "meshFaceOrder"
         },
         {
+          "start": 3225,
+          "end": 3241,
+          "symbol": "L:va.a(I[BI[IB)V#1",
+          "original": "incrementValue$1",
+          "renamed": "sourceIndexBeforeIncrement"
+        },
+        {
+          "start": 3258,
+          "end": 3267,
+          "symbol": "L:va.a(I[BI[IB)V#2",
+          "original": "dupTemp$2",
+          "renamed": "facePriority"
+        },
+        {
+          "start": 3270,
+          "end": 3276,
+          "symbol": "P:va.a(I[BI[IB)V#1",
+          "original": "param1",
+          "renamed": "facePriorities"
+        },
+        {
+          "start": 3277,
+          "end": 3283,
+          "symbol": "P:va.a(I[BI[IB)V#0",
+          "original": "param0",
+          "renamed": "faceIndexScratch"
+        },
+        {
+          "start": 3300,
+          "end": 3309,
+          "symbol": "L:va.a(I[BI[IB)V#3",
+          "original": "dupTemp$3",
+          "renamed": "destinationIndexBeforeIncrement"
+        },
+        {
+          "start": 3312,
+          "end": 3318,
+          "symbol": "P:va.a(I[BI[IB)V#3",
+          "original": "param3",
+          "renamed": "priorityWriteOffsets"
+        },
+        {
+          "start": 3319,
+          "end": 3328,
+          "symbol": "L:va.a(I[BI[IB)V#2",
+          "original": "dupTemp$2",
+          "renamed": "facePriority"
+        },
+        {
+          "start": 3345,
+          "end": 3351,
+          "symbol": "P:va.a(I[BI[IB)V#3",
+          "original": "param3",
+          "renamed": "priorityWriteOffsets"
+        },
+        {
+          "start": 3352,
+          "end": 3361,
+          "symbol": "L:va.a(I[BI[IB)V#2",
+          "original": "dupTemp$2",
+          "renamed": "facePriority"
+        },
+        {
+          "start": 3365,
+          "end": 3374,
+          "symbol": "L:va.a(I[BI[IB)V#3",
+          "original": "dupTemp$3",
+          "renamed": "destinationIndexBeforeIncrement"
+        },
+        {
           "start": 3397,
           "end": 3404,
           "symbol": "F:pj.field_i:[I",
           "original": "field_i",
           "renamed": "meshFaceOrder"
+        },
+        {
+          "start": 3405,
+          "end": 3414,
+          "symbol": "L:va.a(I[BI[IB)V#3",
+          "original": "dupTemp$3",
+          "renamed": "destinationIndexBeforeIncrement"
+        },
+        {
+          "start": 3418,
+          "end": 3424,
+          "symbol": "P:va.a(I[BI[IB)V#0",
+          "original": "param0",
+          "renamed": "faceIndexScratch"
+        },
+        {
+          "start": 3520,
+          "end": 3546,
+          "symbol": "L:va.a(I[BI[IB)V#14",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtGroupingParameter"
+        },
+        {
+          "start": 3560,
+          "end": 3585,
+          "symbol": "L:va.a(I[BI[IB)V#9",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtGroupingFailure"
+        },
+        {
+          "start": 3588,
+          "end": 3614,
+          "symbol": "L:va.a(I[BI[IB)V#14",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtGroupingParameter"
+        },
+        {
+          "start": 3626,
+          "end": 3630,
+          "symbol": "L:va.a(I[BI[IB)V#11",
+          "original": "var5",
+          "renamed": "groupingFailure"
+        },
+        {
+          "start": 3633,
+          "end": 3658,
+          "symbol": "L:va.a(I[BI[IB)V#9",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtGroupingFailure"
+        },
+        {
+          "start": 3670,
+          "end": 3682,
+          "symbol": "L:va.a(I[BI[IB)V#4",
+          "original": "stackIn_12_0",
+          "renamed": "groupingFailureBeforeContext"
+        },
+        {
+          "start": 3705,
+          "end": 3709,
+          "symbol": "L:va.a(I[BI[IB)V#11",
+          "original": "var5",
+          "renamed": "groupingFailure"
+        },
+        {
+          "start": 3722,
+          "end": 3734,
+          "symbol": "L:va.a(I[BI[IB)V#5",
+          "original": "stackIn_12_1",
+          "renamed": "groupingMessagePrefix"
+        },
+        {
+          "start": 3780,
+          "end": 3786,
+          "symbol": "P:va.a(I[BI[IB)V#0",
+          "original": "param0",
+          "renamed": "faceIndexScratch"
+        },
+        {
+          "start": 3815,
+          "end": 3821,
+          "symbol": "P:va.a(I[BI[IB)V#1",
+          "original": "param1",
+          "renamed": "facePriorities"
+        },
+        {
+          "start": 3845,
+          "end": 3857,
+          "symbol": "L:va.a(I[BI[IB)V#6",
+          "original": "stackIn_13_2",
+          "renamed": "prioritiesDescription"
+        },
+        {
+          "start": 3899,
+          "end": 3911,
+          "symbol": "L:va.a(I[BI[IB)V#6",
+          "original": "stackIn_13_2",
+          "renamed": "prioritiesDescription"
+        },
+        {
+          "start": 3945,
+          "end": 3957,
+          "symbol": "L:va.a(I[BI[IB)V#7",
+          "original": "stackIn_15_1",
+          "renamed": "messageBeforeOffsets"
+        },
+        {
+          "start": 3986,
+          "end": 3998,
+          "symbol": "L:va.a(I[BI[IB)V#5",
+          "original": "stackIn_12_1",
+          "renamed": "groupingMessagePrefix"
+        },
+        {
+          "start": 4007,
+          "end": 4019,
+          "symbol": "L:va.a(I[BI[IB)V#6",
+          "original": "stackIn_13_2",
+          "renamed": "prioritiesDescription"
+        },
+        {
+          "start": 4040,
+          "end": 4046,
+          "symbol": "P:va.a(I[BI[IB)V#2",
+          "original": "param2",
+          "renamed": "remainingFacesScratch"
+        },
+        {
+          "start": 4075,
+          "end": 4081,
+          "symbol": "P:va.a(I[BI[IB)V#3",
+          "original": "param3",
+          "renamed": "priorityWriteOffsets"
+        },
+        {
+          "start": 4105,
+          "end": 4117,
+          "symbol": "L:va.a(I[BI[IB)V#8",
+          "original": "stackIn_16_2",
+          "renamed": "offsetsDescription"
+        },
+        {
+          "start": 4159,
+          "end": 4171,
+          "symbol": "L:va.a(I[BI[IB)V#8",
+          "original": "stackIn_16_2",
+          "renamed": "offsetsDescription"
+        },
+        {
+          "start": 4237,
+          "end": 4249,
+          "symbol": "L:va.a(I[BI[IB)V#4",
+          "original": "stackIn_12_0",
+          "renamed": "groupingFailureBeforeContext"
+        },
+        {
+          "start": 4278,
+          "end": 4290,
+          "symbol": "L:va.a(I[BI[IB)V#7",
+          "original": "stackIn_15_1",
+          "renamed": "messageBeforeOffsets"
+        },
+        {
+          "start": 4299,
+          "end": 4311,
+          "symbol": "L:va.a(I[BI[IB)V#8",
+          "original": "stackIn_16_2",
+          "renamed": "offsetsDescription"
+        },
+        {
+          "start": 4332,
+          "end": 4338,
+          "symbol": "P:va.a(I[BI[IB)V#4",
+          "original": "param4",
+          "renamed": "guard"
         }
       ]
     },
@@ -577539,7 +581403,7 @@
       "original": "vc.java",
       "renamed": "vc.java",
       "inputSha256": "09ebfd80b1a199c5fcb619922c837228d04d065d66dcfc8ab043e738ba8f8f31",
-      "outputSha256": "233ea45d9f34483ee0e9d397383aaa3b7beef7a27fd3d5e86869de6366c24ad7",
+      "outputSha256": "5981c558e78440ab925b3a600fe57f709737adf0e8183771bd7f0ca85d5e90f6",
       "edits": [
         {
           "start": 181,
@@ -577563,11 +581427,102 @@
           "renamed": "menuForegroundSprite"
         },
         {
+          "start": 415,
+          "end": 416,
+          "symbol": "M:vc.d(I)V",
+          "original": "d",
+          "renamed": "compactDepthBucketFaceOrder"
+        },
+        {
+          "start": 421,
+          "end": 427,
+          "symbol": "P:vc.d(I)V#0",
+          "original": "param0",
+          "renamed": "guard"
+        },
+        {
+          "start": 443,
+          "end": 447,
+          "symbol": "L:vc.d(I)V#0",
+          "original": "var2",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 465,
+          "end": 473,
+          "symbol": "L:vc.d(I)V#1",
+          "original": "var1_int",
+          "renamed": "destinationFaceOffset"
+        },
+        {
+          "start": 491,
+          "end": 495,
+          "symbol": "L:vc.d(I)V#2",
+          "original": "var3",
+          "renamed": "bucketFaceCount"
+        },
+        {
+          "start": 513,
+          "end": 517,
+          "symbol": "L:vc.d(I)V#3",
+          "original": "var4",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 548,
+          "end": 573,
+          "symbol": "L:vc.d(I)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtCompactionFailure"
+        },
+        {
+          "start": 607,
+          "end": 611,
+          "symbol": "L:vc.d(I)V#5",
+          "original": "var1",
+          "renamed": "compactionFailure"
+        },
+        {
+          "start": 628,
+          "end": 632,
+          "symbol": "L:vc.d(I)V#3",
+          "original": "var4",
+          "renamed": "controlFlagSnapshot"
+        },
+        {
+          "start": 680,
+          "end": 686,
+          "symbol": "P:vc.d(I)V#0",
+          "original": "param0",
+          "renamed": "guard"
+        },
+        {
+          "start": 740,
+          "end": 748,
+          "symbol": "L:vc.d(I)V#1",
+          "original": "var1_int",
+          "renamed": "destinationFaceOffset"
+        },
+        {
           "start": 754,
           "end": 761,
           "symbol": "F:ch.field_d:[I",
           "original": "field_d",
           "renamed": "meshFaceCountsByDepthBucket"
+        },
+        {
+          "start": 781,
+          "end": 785,
+          "symbol": "L:vc.d(I)V#0",
+          "original": "var2",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 791,
+          "end": 795,
+          "symbol": "L:vc.d(I)V#0",
+          "original": "var2",
+          "renamed": "depthBucketIndex"
         },
         {
           "start": 801,
@@ -577577,11 +581532,32 @@
           "renamed": "meshFaceCountsByDepthBucket"
         },
         {
+          "start": 817,
+          "end": 821,
+          "symbol": "L:vc.d(I)V#0",
+          "original": "var2",
+          "renamed": "depthBucketIndex"
+        },
+        {
+          "start": 839,
+          "end": 843,
+          "symbol": "L:vc.d(I)V#2",
+          "original": "var3",
+          "renamed": "bucketFaceCount"
+        },
+        {
           "start": 849,
           "end": 856,
           "symbol": "F:ch.field_d:[I",
           "original": "field_d",
           "renamed": "meshFaceCountsByDepthBucket"
+        },
+        {
+          "start": 857,
+          "end": 861,
+          "symbol": "L:vc.d(I)V#0",
+          "original": "var2",
+          "renamed": "depthBucketIndex"
         },
         {
           "start": 884,
@@ -577591,11 +581567,102 @@
           "renamed": "meshFaceOrder"
         },
         {
+          "start": 893,
+          "end": 897,
+          "symbol": "L:vc.d(I)V#0",
+          "original": "var2",
+          "renamed": "depthBucketIndex"
+        },
+        {
           "start": 907,
           "end": 914,
           "symbol": "F:pj.field_i:[I",
           "original": "field_i",
           "renamed": "meshFaceOrder"
+        },
+        {
+          "start": 916,
+          "end": 924,
+          "symbol": "L:vc.d(I)V#1",
+          "original": "var1_int",
+          "renamed": "destinationFaceOffset"
+        },
+        {
+          "start": 926,
+          "end": 930,
+          "symbol": "L:vc.d(I)V#2",
+          "original": "var3",
+          "renamed": "bucketFaceCount"
+        },
+        {
+          "start": 945,
+          "end": 953,
+          "symbol": "L:vc.d(I)V#1",
+          "original": "var1_int",
+          "renamed": "destinationFaceOffset"
+        },
+        {
+          "start": 956,
+          "end": 964,
+          "symbol": "L:vc.d(I)V#1",
+          "original": "var1_int",
+          "renamed": "destinationFaceOffset"
+        },
+        {
+          "start": 967,
+          "end": 971,
+          "symbol": "L:vc.d(I)V#2",
+          "original": "var3",
+          "renamed": "bucketFaceCount"
+        },
+        {
+          "start": 1047,
+          "end": 1073,
+          "symbol": "L:vc.d(I)V#6",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtCompactionParameter"
+        },
+        {
+          "start": 1087,
+          "end": 1112,
+          "symbol": "L:vc.d(I)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtCompactionFailure"
+        },
+        {
+          "start": 1115,
+          "end": 1141,
+          "symbol": "L:vc.d(I)V#6",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtCompactionParameter"
+        },
+        {
+          "start": 1153,
+          "end": 1157,
+          "symbol": "L:vc.d(I)V#5",
+          "original": "var1",
+          "renamed": "compactionFailure"
+        },
+        {
+          "start": 1160,
+          "end": 1185,
+          "symbol": "L:vc.d(I)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtCompactionFailure"
+        },
+        {
+          "start": 1229,
+          "end": 1233,
+          "symbol": "L:vc.d(I)V#5",
+          "original": "var1",
+          "renamed": "compactionFailure"
+        },
+        {
+          "start": 1246,
+          "end": 1252,
+          "symbol": "P:vc.d(I)V#0",
+          "original": "param0",
+          "renamed": "guard"
         },
         {
           "start": 1332,
@@ -577638,6 +581705,13 @@
           "symbol": "C:m",
           "original": "m",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 3844,
+          "end": 3845,
+          "symbol": "M:vc.d(I)V",
+          "original": "d",
+          "renamed": "compactDepthBucketFaceOrder"
         },
         {
           "start": 4215,

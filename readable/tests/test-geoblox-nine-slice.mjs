@@ -18,7 +18,8 @@ const expectedSpritePixelsSha256 = 'c986ff493508bf516e6bd33e187ee51ed478a012dfeb
 const expectedSpriteTransformsSha256 = 'dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1';
 const expectedTriangleRasterSha256 = '3a708f0eb4343a68f9cd859b75cc6d42db0eda690188b95deb7619a998603760';
 const expectedMeshLightingSha256 = '8606f3fa1d8808bbfd5e5bfafe3b67872487172f07455401ac290acf79f5fdc6';
-let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null, expectedMeshLighting=null;
+const expectedFlatTriangleRasterSha256 = '60e7b9df0d8b178901617ebcd5a7b8da7745fdaf40f40beea681676733237ab7';
+let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null, expectedTriangleRaster=null, expectedMeshLighting=null, expectedFlatTriangleRaster=null;
 try {
   if(nativeInput) {
     const files=[];
@@ -57,7 +58,8 @@ try {
       }
       public static void main(String[]args)throws Exception {
         if(args.length!=0){
-          if(args[0].equals("mesh-lighting"))MeshLightingBehavior.main(args);
+          if(args[0].equals("flat-triangle"))FlatTriangleBehavior.main(args);
+          else if(args[0].equals("mesh-lighting"))MeshLightingBehavior.main(args);
           else if(args[0].equals("triangle-raster"))TriangleRasterBehavior.main(args);
           else if(args[0].equals("sprite-transforms"))SpriteTransformBehavior.main(args);
           else SpritePixelBehavior.main(args);
@@ -87,6 +89,54 @@ try {
           System.out.println(result);cases++;
         }
         if(cases!=2592)throw new AssertionError(cases);
+      }
+    }
+    class FlatTriangleBehavior extends TriangleRasterBehavior {
+      public static void main(String[] args)throws Exception {
+        trace=MessageDigest.getInstance("SHA-256");cases=0;int spanCases=0,wrapperCases=0,directCases=0;
+        f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,0);
+        for(int count:new int[]{-2,0,1,2,5,Integer.MIN_VALUE,Integer.MAX_VALUE})
+        for(int start:new int[]{-1,0,3,6,Integer.MAX_VALUE})for(int color:new int[]{0,0x7f0000,0x007f7f,-1,0x12345678})
+        for(int guard:new int[]{47,-67,0})for(int buffer=0;buffer<3;buffer++) {
+          int[] pixels=buffer==0?background(8):buffer==1?null:background(2);
+          int[] oracle=pixels==null?null:pixels.clone();int index=start,remaining=count;
+          Throwable oracleError=null,error=null;
+          try {while(--remaining>=0){oracle[index]=color+((oracle[index]>>1)&0x7f7f7f);index++;}
+            int discarded=-30%((-2-guard)/40);
+          }catch(RuntimeException caught){oracleError=caught;}
+          try {${call('ib','a(I[IIII)V')}(guard,pixels,start,color,count);}
+          catch(RuntimeException caught){error=caught;}
+          if(!java.util.Arrays.equals(pixels,oracle)||!rootFailure(error).equals(rootFailure(oracleError)))throw new AssertionError("flat span oracle");
+          record("flat-span:"+failure(error),pixels);spanCases++;
+        }
+        int[][] clips={{0,0,20,12},{3,2,17,9},{0,0,0,0},{2,1,8,5}};
+        int[][] shapes={{2,1,12,4,6,9},{-4,-3,10,4,2,14},{1,2,12,2,4,9},{2,1,2,5,2,9},
+          {2,4,6,4,9,4},{24,1,30,4,27,9},{-5,1,-3,4,-7,9},{0,-2,19,0,4,11}};
+        int[][] permutations={{0,1,2},{0,2,1},{1,0,2},{1,2,0},{2,0,1},{2,1,0}};
+        int[] colors={0,0x7f0000,0x007f7f,0x7f7f7f};
+        for(int[] clip:clips)for(int[] shape:shapes)for(int[] permutation:permutations)
+        for(int color:colors)for(int flag:new int[]{-1,0,1})for(int guard:new int[]{-122,-102}) {
+          int[] pixels=background(240);viewport(pixels,clip);
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);
+          int a=permutation[0],b=permutation[1],c=permutation[2];Throwable error=null;
+          try {${call('gi','a(IIIIIIII)V')}(shape[c*2],guard,shape[c*2+1],shape[a*2+1],shape[a*2],shape[b*2],shape[b*2+1],color);}
+          catch(RuntimeException caught){error=caught;}
+          record("flat-wrapper:"+failure(error),pixels);wrapperCases++;
+        }
+        int[][] sortedShapes={{2,1,12,4,6,9},{-4,-3,4,2,16,14},{1,2,12,2,4,9},
+          {2,1,6,9,12,9},{2,4,6,4,12,4},{24,1,30,4,27,9}};
+        for(int[] clip:clips)for(int[] shape:sortedShapes)for(int color:colors)
+        for(int flag:new int[]{-1,0,1})for(int guard:new int[]{110,74,-110})for(int buffer=0;buffer<3;buffer++) {
+          viewport(background(240),clip);
+          int[] pixels=buffer==0?background(240):buffer==1?null:background(2);Throwable error=null;
+          f("${type('Geoblox')}","${field('Geoblox','field_C','I')}").setInt(null,flag);
+          try {${call('sd','a(IIII[IIIII)V')}(shape[2],shape[0],color,guard,pixels,shape[5],shape[4],shape[3],shape[1]);}
+          catch(RuntimeException caught){error=caught;}
+          record("flat-direct:"+failure(error),pixels);directCases++;
+        }
+        if(spanCases!=1575||wrapperCases!=4608||directCases!=2592||cases!=8775)throw new AssertionError("flat case inventory");
+        StringBuilder sha=new StringBuilder();for(byte value:trace.digest())sha.append(String.format("%02x",value&255));
+        System.out.println("flat-triangle:"+cases+":"+spanCases+":"+wrapperCases+":"+directCases+":"+sha);
       }
     }
     class MeshLightingBehavior extends TriangleRasterBehavior {
@@ -703,6 +753,13 @@ try {
     assert.equal(meshSha,expectedMeshLightingSha256,variant+': fixed native mesh-lighting trace');
     if(expectedMeshLighting===null)expectedMeshLighting=meshOutput;
     else assert.deepEqual(meshOutput,expectedMeshLighting,variant+': model lighting, ordering, transforms, bounds and failure mutations');
+    const flatOutput=captureProcess('java',['-Djava.awt.headless=true','-cp',classes+path.delimiter+cp,'NineSliceBehavior','flat-triangle']).stdout;
+    const flatSha=crypto.createHash('sha256').update(flatOutput).digest('hex');
+    console.log(JSON.stringify({variant,flatTriangleTrace:flatOutput.toString().trim(),sha256:flatSha}));
+    assert.match(flatOutput.toString(),/^flat-triangle:8775:1575:4608:2592:[a-f0-9]{64}\n$/);
+    assert.equal(flatSha,expectedFlatTriangleRasterSha256,variant+': fixed native flat-triangle trace');
+    if(expectedFlatTriangleRaster===null)expectedFlatTriangleRaster=flatOutput;
+    else assert.deepEqual(flatOutput,expectedFlatTriangleRaster,variant+': flat triangle pixels, guard timing and partial writes');
   }
 }catch(error){if(error.stderr)process.stderr.write(error.stderr);throw error;}
 finally{fs.rmSync(temporary,{recursive:true,force:true});}

@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 6,327 guarded naming rules: 62 classes, 812 fields,
-559 methods, 1,681 parameters and 3,213 local declarations. Both 303-file corpora
+The current export has 6,407 guarded naming rules: 62 classes, 812 fields,
+564 methods, 1,709 parameters and 3,260 local declarations. Both 303-file corpora
 compile, preserving 138,502 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,51 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current mesh lighting, transforms and bounds
+## Current flat triangle and face-order names
+
+Pass 82 adds 80 guarded identities: five methods, 28 parameters and 47 locals.
+`gi.drawHalfBlendSolidTriangle` sorts the three vertices by Y and forwards them
+to `NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle`, a static rendering
+helper retained on its original mixed owner. Its Q16 edge positions/steps,
+upper/lower segment work, row offsets, clip spans and failure context have names.
+`ib.drawHalfBlendSolidSpan` adds supplied `halfRgb` to each pixel's masked half
+intensity. All parameters/locals in these three selected methods are named.
+
+The flat helper retains its right-edge clipping arithmetic, zero-width spans,
+short/absent destination failures and original guard timing. The span guard
+remainder executes after its pixel writes. The sorted triangle guard remainder
+executes after the upper rows and before the lower rows. Extreme decrement/index
+overflow, partial writes and diagnostic strings stay unchanged. Reused segment
+slots have explicit combined names rather than being split or reordered.
+
+`vc.compactDepthBucketFaceOrder` copies later depth buckets into the face prefix;
+`va.groupQueuedMeshFacesByPriority` reads bucket entries, increments the selected
+priority offset and writes into the same face-order array. All parameters/locals
+in these helpers are named. Original in-place alias behavior and mutation/failure
+order remain; no stable or nonoverlapping group order is assumed. The existing
+10,592-case mesh trace retains its pin, including face-order/offset mutations.
+
+The drawing probe adds 8,775 separately pinned native/raw/readable comparisons:
+1,575 independent span-oracle cases include extreme counts/indices, arbitrary
+colors, null/short buffers, partial writes and late guard failure. Another 4,608
+cases exercise wrapper vertex permutations, clips, colors and control/guard
+values; 2,592 direct sorted-helper cases include top/bottom flat edges, clipped
+geometry, null/short destinations and guard failures after upper rows. Complete
+flat triangle geometry has no independent oracle here. The trace SHA-256 is
+`60e7b9df0d8b178901617ebcd5a7b8da7745fdaf40f40beea681676733237ab7`.
+All previous drawing-probe traces retain their pins.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs VERIFIED_CLASSES`
+passes native/raw/readable variants. Rule-builder/source-migration/text-resource
+tests pass 9/8/6 groups. Both 303-file corpora compile; reproduction and dictionary
+reversal are byte-exact. Raw/decompiler pins and all 6,327 prior complete rules
+stay unchanged. The 6,407 rules apply 51,926 edits, preserving 138,502 bindings and
+388 overrides. The current manifest records names and the probe pin; Git stores
+history. Remaining mesh/model loading/preparation, opaque helpers, large control
+bodies, real assets/platform/server/gameplay and browser/phone performance remain
+unfinished or unverified.
+
+## Previous mesh lighting, transforms and bounds
 
 Pass 81 adds 130 guarded names: two classes, 36 fields, five methods,
 19 parameters and 68 locals. `TriangleMesh` exposes the selected XYZ vertices,
@@ -1615,6 +1659,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17` |
-| Readable | `310402a52d31df1c3e4953b2d34b2426ff3e43d5816a438ead76c1062db5d8cb` |
+| Readable | `3ba2f91279dffbec66e8a5e53f67b236612187cf4d6e3dff3a738adc8dc37346` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

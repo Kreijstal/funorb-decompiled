@@ -16,29 +16,29 @@ final class vc extends dk {
     static int field_i;
     static vk field_f;
 
-    final static void d(int param0) {
-        int var2 = 0;
-        int var1_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var4 = Geoblox.field_C;
+    final static void compactDepthBucketFaceOrder(int guard) {
+        int depthBucketIndex = 0;
+        int destinationFaceOffset = 0;
+        int bucketFaceCount = 0;
+        int controlFlagSnapshot = 0;
+        RuntimeException caughtCompactionFailure = null;
+        RuntimeException compactionFailure = null;
+        controlFlagSnapshot = Geoblox.field_C;
         try {
-          if (param0 != 2971) {
+          if (guard != 2971) {
             return;
           }
-          var1_int = ch.meshFaceCountsByDepthBucket[0];
-          for (var2 = 1; var2 < ch.meshFaceCountsByDepthBucket.length; var2++) {
-            var3 = ch.meshFaceCountsByDepthBucket[var2];
-            sf.a(pj.meshFaceOrder, var2 << 4, pj.meshFaceOrder, var1_int, var3);
-            var1_int = var1_int + var3;
+          destinationFaceOffset = ch.meshFaceCountsByDepthBucket[0];
+          for (depthBucketIndex = 1; depthBucketIndex < ch.meshFaceCountsByDepthBucket.length; depthBucketIndex++) {
+            bucketFaceCount = ch.meshFaceCountsByDepthBucket[depthBucketIndex];
+            sf.a(pj.meshFaceOrder, depthBucketIndex << 4, pj.meshFaceOrder, destinationFaceOffset, bucketFaceCount);
+            destinationFaceOffset = destinationFaceOffset + bucketFaceCount;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "vc.G(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtCompactionParameter) {
+          caughtCompactionFailure = caughtCompactionParameter;
+          compactionFailure = caughtCompactionFailure;
+          throw t.a((Throwable) ((Object) compactionFailure), "vc.G(" + guard + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class vc extends dk {
             return;
         }
         if (param3 != 58) {
-            vc.d(-90);
+            vc.compactDepthBucketFaceOrder(-90);
         }
         if (this.field_p == param4 && this.field_d && this.field_k == 1 && null != this.field_n && this.field_n.equals(param0)) {
             return;

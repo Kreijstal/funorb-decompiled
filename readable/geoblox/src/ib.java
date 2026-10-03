@@ -8,27 +8,27 @@ abstract class ib implements dg {
     static int field_c;
     static int archiveLoadStatus;
 
-    final static void a(int param0, int[] param1, int param2, int param3, int param4) {
-        int[] var9 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = Geoblox.field_C;
+    final static void drawHalfBlendSolidSpan(int guard, int[] destinationPixels, int destinationIndex, int halfRgb, int pixelCount) {
+        int[] destinationForReadAndWrite = null;
+        int destinationIndexForWrite = 0;
+        int halfRgbForWrite = 0;
+        int controlFlagSnapshot = Geoblox.field_C;
         try {
             while (true) {
-                param4--;
-                if (param4 < 0) {
+                pixelCount--;
+                if (pixelCount < 0) {
                     break;
                 }
-                var9 = param1;
-                int[] var5 = var9;
-                var6 = param2;
-                var7 = param3;
-                var9[var6] = var7 + cd.andInt(var9[var6] >> 1, 8355711);
-                param2++;
+                destinationForReadAndWrite = destinationPixels;
+                int[] destinationAlias = destinationForReadAndWrite;
+                destinationIndexForWrite = destinationIndex;
+                halfRgbForWrite = halfRgb;
+                destinationForReadAndWrite[destinationIndexForWrite] = halfRgbForWrite + cd.andInt(destinationForReadAndWrite[destinationIndexForWrite] >> 1, 8355711);
+                destinationIndex++;
             }
-            int var5_int = -30 % ((-2 - param0) / 40);
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ib.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            int guardRemainder = -30 % ((-2 - guard) / 40);
+        } catch (RuntimeException caughtSpanFailure) {
+            throw t.a((Throwable) ((Object) caughtSpanFailure), "ib.AA(" + guard + ',' + (destinationPixels != null ? "{...}" : "null") + ',' + destinationIndex + ',' + halfRgb + ',' + pixelCount + ')');
         }
     }
 

@@ -19,24 +19,27 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,502 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 130 guarded identities for mesh lighting and
-coordinate operations: `TriangleMesh`, `MeshMaterial`, transformed normals,
-projected vertices, face ordering/materials/priorities, lighting inputs and cached
-bounds. Every parameter/local in the selected lighting, scale, translation and
-bounds methods now has a name. Existing guards, masks, short narrowing, overflow,
-partial writes and cache-failure behavior remain. Raw/decompiler pins are unchanged.
+The current naming pass adds 80 guarded identities for flat triangle rendering
+and face ordering: vertex sorting, Q16 triangle edges, clip spans, solid pixel
+blending, depth-bucket compaction and priority grouping. Every parameter/local
+in the five selected methods now has a name. Original masks, guard timing,
+in-place aliases, mutation order, partial writes and diagnostics remain.
+Raw/decompiler pins are unchanged.
 
-The drawing probe adds 10,592 native/raw/readable traces covering lighting,
-ordering, materials, transforms, bounds, failures and partial mutations. Prior
-triangle, sprite and nine-slice traces keep their pins, as do the other six probe
-commands. The rule-builder/source-migration/text-resource tests pass 9/8/6 groups.
-All 303 sources compile, reproduce and reverse byte-for-byte. The 6,327 rules
-apply 51,424 edits, preserving 138,502 bindings and 388 overrides; all 6,197 prior
-complete rules remain. The single current manifest records additions and probe
-pins; Git stores history. These controlled traces do not provide an independent
-complete lighting/model oracle. Remaining model loading/preparation, flat raster
-helpers, opaque fields, large bodies, real assets/platform/server/gameplay and
-browser/phone memory/startup/FPS targets remain unfinished or unverified.
+The drawing probe adds 8,775 native/raw/readable cases, including an independent
+span oracle plus wrapper and sorted-triangle traces for clips, vertex order,
+extreme counts/indices, absent/short arrays and late guard failure. All previous
+drawing-probe traces retain their pins. Rule-builder/source-migration/text-resource
+tests pass 9/8/6 groups. All 303 sources compile, reproduce and reverse byte-for-byte.
+The 6,407 rules apply 51,926 edits, preserving 138,502 bindings and 388 overrides;
+all 6,327 prior complete rules remain. The single current manifest records names
+and probe pins; Git stores history. Complete flat triangle geometry has no
+independent oracle here. Remaining model loading/preparation, opaque helpers,
+large control bodies, real assets/platform/server/gameplay and browser/phone
+memory/startup/FPS targets remain unfinished or unverified.
+
+Pass 81 named mesh lighting, materials, render buffers, transforms and bounds,
+adding 130 guarded identities and 10,592 native trace comparisons.
 
 Pass 80 named the triangle clip state, vertex sorting, RGB interpolation and
 scanline blending, adding 116 guarded identities and 5,266 native comparisons.

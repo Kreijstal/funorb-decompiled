@@ -117,31 +117,31 @@ final class gi implements Iterable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9;
-        var9 = Geoblox.field_C;
-        if (param6 >= param3) {
-          if (param2 > param6) {
-            NetworkArchiveRequest.a(param5, param4, param7, 110, SoftwareRasterizer.framebuffer, param2, param0, param6, param3);
+    final static void drawHalfBlendSolidTriangle(int vertexCX, int guard, int vertexCY, int vertexAY, int vertexAX, int vertexBX, int vertexBY, int halfRgb) {
+        int controlFlagSnapshot;
+        controlFlagSnapshot = Geoblox.field_C;
+        if (vertexBY >= vertexAY) {
+          if (vertexCY > vertexBY) {
+            NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(vertexBX, vertexAX, halfRgb, 110, SoftwareRasterizer.framebuffer, vertexCY, vertexCX, vertexBY, vertexAY);
           } else {
-            if (param3 < param2) {
-              NetworkArchiveRequest.a(param0, param4, param7, 127, SoftwareRasterizer.framebuffer, param6, param5, param2, param3);
+            if (vertexAY < vertexCY) {
+              NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(vertexCX, vertexAX, halfRgb, 127, SoftwareRasterizer.framebuffer, vertexBY, vertexBX, vertexCY, vertexAY);
             } else {
-              NetworkArchiveRequest.a(param4, param0, param7, 120, SoftwareRasterizer.framebuffer, param6, param5, param3, param2);
+              NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(vertexAX, vertexCX, halfRgb, 120, SoftwareRasterizer.framebuffer, vertexBY, vertexBX, vertexAY, vertexCY);
             }
           }
         } else {
-          if (param3 < param2) {
-            NetworkArchiveRequest.a(param4, param5, param7, 116, SoftwareRasterizer.framebuffer, param2, param0, param3, param6);
+          if (vertexAY < vertexCY) {
+            NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(vertexAX, vertexBX, halfRgb, 116, SoftwareRasterizer.framebuffer, vertexCY, vertexCX, vertexAY, vertexBY);
           } else {
-            if (param2 > param6) {
-              NetworkArchiveRequest.a(param0, param5, param7, -110, SoftwareRasterizer.framebuffer, param3, param4, param2, param6);
+            if (vertexCY > vertexBY) {
+              NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(vertexCX, vertexBX, halfRgb, -110, SoftwareRasterizer.framebuffer, vertexAY, vertexAX, vertexCY, vertexBY);
             } else {
-              NetworkArchiveRequest.a(param5, param0, param7, -102, SoftwareRasterizer.framebuffer, param3, param4, param6, param2);
+              NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(vertexBX, vertexCX, halfRgb, -102, SoftwareRasterizer.framebuffer, vertexAY, vertexAX, vertexBY, vertexCY);
             }
           }
         }
-        if (param1 < -102) {
+        if (guard < -102) {
           return;
         }
         gi.a(-38);
