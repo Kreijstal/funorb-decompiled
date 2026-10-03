@@ -320,9 +320,7 @@ final class SoftwareRasterizer {
         int negativeRowCounter = 0;
         int initialDestinationIndexBeforeIncrement = 0;
         int growingDestinationIndexBeforeIncrement = 0;
-        int fullWindowLeavingIndexBeforeIncrement = 0;
         int fullWindowDestinationIndexBeforeIncrement = 0;
-        int shrinkingLeavingIndexBeforeIncrement = 0;
         int shrinkingDestinationIndexBeforeIncrement = 0;
         int reciprocalWindowScaleQ14;
         int growingWindowEndCounter;
@@ -398,9 +396,7 @@ final class SoftwareRasterizer {
             pixels[growingDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
           }
           while (windowXOrNegativeOutputCounter < fullWindowEndCounter) {
-            fullWindowLeavingIndexBeforeIncrement = leavingPixelIndex;
-            leavingPixelIndex++;
-            scratchPixel = pixels[fullWindowLeavingIndexBeforeIncrement];
+            scratchPixel = pixels[leavingPixelIndex++];
             runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
             if (runningRedSum < 0) {
               runningRedSum = 0;
@@ -436,9 +432,7 @@ final class SoftwareRasterizer {
             windowXOrNegativeOutputCounter++;
           }
           while (windowXOrNegativeOutputCounter < 0) {
-            shrinkingLeavingIndexBeforeIncrement = leavingPixelIndex;
-            leavingPixelIndex++;
-            scratchPixel = pixels[shrinkingLeavingIndexBeforeIncrement];
+            scratchPixel = pixels[leavingPixelIndex++];
             runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
             runningGreenSum = runningGreenSum - (scratchPixel >> 8 & 255);
             runningBlueSum = runningBlueSum - (scratchPixel & 255);
@@ -1409,14 +1403,9 @@ final class SoftwareRasterizer {
     }
 
     private final static void blurColumnsInPlace(int[] pixels, int scratchPixel, int destinationIndex, int radius, int regionTop, int regionHeight, int rowSkip, int regionLeft, int regionWidth) {
-        int initialEnteringIndexBeforeIncrement = 0;
         int initialDestinationIndexBeforeIncrement = 0;
-        int growingEnteringIndexBeforeIncrement = 0;
         int growingDestinationIndexBeforeIncrement = 0;
-        int fullWindowLeavingIndexBeforeIncrement = 0;
-        int fullWindowEnteringIndexBeforeIncrement = 0;
         int fullWindowDestinationIndexBeforeIncrement = 0;
-        int shrinkingLeavingIndexBeforeIncrement = 0;
         int shrinkingDestinationIndexBeforeIncrement = 0;
         int[] redSumsForClampedStore = null;
         int redColumnForClampedStore = 0;
@@ -1481,9 +1470,7 @@ final class SoftwareRasterizer {
         windowSampleCount = initialWindowBottom - initialWindowRowOrNegativeOutputCounter + 1;
         while (initialWindowRowOrNegativeOutputCounter <= initialWindowBottom) {
           for (columnIndexOrWindowEndCounter = 0; columnIndexOrWindowEndCounter < regionWidth; columnIndexOrWindowEndCounter++) {
-            initialEnteringIndexBeforeIncrement = enteringPixelIndex;
-            enteringPixelIndex++;
-            scratchPixel = pixels[initialEnteringIndexBeforeIncrement];
+            scratchPixel = pixels[enteringPixelIndex++];
             redSumsForUpdates[columnIndexOrWindowEndCounter] = redSumsForUpdates[columnIndexOrWindowEndCounter] + (scratchPixel >> 16 & 255);
             greenSumsForUpdates[columnIndexOrWindowEndCounter] = greenSumsForUpdates[columnIndexOrWindowEndCounter] + (scratchPixel >> 8 & 255);
             blueSumsForUpdates[columnIndexOrWindowEndCounter] = blueSumsForUpdates[columnIndexOrWindowEndCounter] + (scratchPixel & 255);
@@ -1510,9 +1497,7 @@ final class SoftwareRasterizer {
         while (initialWindowRowOrNegativeOutputCounter < columnIndexOrWindowEndCounter) {
           if (initialWindowRowOrNegativeOutputCounter + regionTop + regionHeight + radius < clipBottom) {
             for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
-              growingEnteringIndexBeforeIncrement = enteringPixelIndex;
-              enteringPixelIndex++;
-              scratchPixel = pixels[growingEnteringIndexBeforeIncrement];
+              scratchPixel = pixels[enteringPixelIndex++];
               redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] + (scratchPixel >> 16 & 255);
               greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] + (scratchPixel >> 8 & 255);
               blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] + (scratchPixel & 255);
@@ -1539,9 +1524,7 @@ final class SoftwareRasterizer {
         }
         while (initialWindowRowOrNegativeOutputCounter < columnIndexOrWindowEndCounter) {
           for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
-            fullWindowLeavingIndexBeforeIncrement = leavingPixelIndex;
-            leavingPixelIndex++;
-            scratchPixel = pixels[fullWindowLeavingIndexBeforeIncrement];
+            scratchPixel = pixels[leavingPixelIndex++];
             channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndex] - (scratchPixel >> 16 & 255);
             redSumsForClampedStore = redSumsForUpdates;
             redColumnForClampedStore = columnIndex;
@@ -1572,9 +1555,7 @@ final class SoftwareRasterizer {
           }
           leavingPixelIndex = leavingPixelIndex + rowSkip;
           for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
-            fullWindowEnteringIndexBeforeIncrement = enteringPixelIndex;
-            enteringPixelIndex++;
-            scratchPixel = pixels[fullWindowEnteringIndexBeforeIncrement];
+            scratchPixel = pixels[enteringPixelIndex++];
             redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] + (scratchPixel >> 16 & 255);
             greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] + (scratchPixel >> 8 & 255);
             blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] + (scratchPixel & 255);
@@ -1602,9 +1583,7 @@ final class SoftwareRasterizer {
         }
         while (initialWindowRowOrNegativeOutputCounter < 0) {
           for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
-            shrinkingLeavingIndexBeforeIncrement = leavingPixelIndex;
-            leavingPixelIndex++;
-            scratchPixel = pixels[shrinkingLeavingIndexBeforeIncrement];
+            scratchPixel = pixels[leavingPixelIndex++];
             redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] - (scratchPixel >> 16 & 255);
             greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] - (scratchPixel >> 8 & 255);
             blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] - (scratchPixel & 255);

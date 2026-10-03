@@ -7,17 +7,17 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "97a6e5e3b10426f11c59814d8fe5243ac1127a6e",
+      "commit": "98292d12a3026b1c08ce589e83feb9510746564c",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30",
-        "reproduce": "git archive --format=tar 97a6e5e3b10426f11c59814d8fe5243ac1127a6e | sha256sum",
+        "sha256": "c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3",
+        "reproduce": "git archive --format=tar 98292d12a3026b1c08ce589e83feb9510746564c | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
   },
   "contentIdentityAlgorithms": {
-    "java": "sourceIdentity(sourceInventory(root)) in readable/tools/readable-java.mjs",
+    "java": "sourceIdentity(sourceInventory(root)) in dekobloko-work/readable/tools/readable-java.mjs",
     "classes": "hashClassTree(root) in Deko scripts/pipeline-cache-provenance.js"
   },
   "originalInputClasses": {
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "7149d0071e1178e4509474b5cecb8db1cc195c937106fc3d1581aed3d9b4ff89",
-  "previousSourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
-  "changedJavaFiles": 5,
+  "sourceTreeSha256": "ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f",
+  "previousSourceTreeSha256": "7149d0071e1178e4509474b5cecb8db1cc195c937106fc3d1581aed3d9b4ff89",
+  "changedJavaFiles": 7,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3263,11 +3263,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "1f75aecb8a299ebb3c8ab06b654e044da746129b",
+    "commit": "afddd01bff7bb0dbac4b1577a96024a054ec5dd4",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "a75839d963eb42599f331e3616df5d9f7c31b08b750864b6367f35a12951f3a5"
+      "sha256": "0d1ece6a0ba41426540a89699eb9bc4b27a144aafb2c4345278491bb32439178"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "2c484739875974414ece3eee5edc52aabfcd7ce012183ea699381ff0177687fa",
@@ -3277,13 +3277,48 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "2a9b021cd43431e5245c71053fdffa11781eff1c09b95de53a6ca73313044c71",
+    "outputTreeSha256": "925dc212e43f65666ab59f2b58542a13c87f41bb1275759c681569d55e227316",
     "files": 303,
-    "rules": 9936,
-    "identifierEdits": 79048,
-    "bindingsCompared": 136880,
+    "rules": 9889,
+    "identifierEdits": 78860,
+    "bindingsCompared": 136612,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false
+  },
+  "arrayIndexReadRecovery": {
+    "historicalPassVersion": 119,
+    "previousSourceCommit": "8555bb25f732948fd3813f2afd886e16899b8c53",
+    "sourceCommit": "1ede093bd14022751b56a4736ac6fb7ae72703c5",
+    "previousRulesRepository": "Kreijstal/dekobloko-work",
+    "previousRulesCommit": "1f75aecb8a299ebb3c8ab06b654e044da746129b",
+    "previousSourceTreeSha256": "7149d0071e1178e4509474b5cecb8db1cc195c937106fc3d1581aed3d9b4ff89",
+    "sourceTreeSha256": "ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f",
+    "javaToolsCommit": "98292d12a3026b1c08ce589e83feb9510746564c",
+    "sourceArchiveSha256": "c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3",
+    "capturesFolded": 67,
+    "changedJavaFiles": 7,
+    "changedMethodBodies": 26,
+    "sourceLinesBefore": 76521,
+    "sourceLinesAfter": 76320,
+    "sourceDeclarationsBefore": 19320,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117560,
+    "sourceReferenceOccurrencesAfter": 117359,
+    "fullOverridePairsPreserved": 388,
+    "survivingLocalOrdinalMigrations": 260,
+    "guardedLocalOrdinalMigrations": 220,
+    "namedCapturesRetired": 47,
+    "nativeComparisons": 12096,
+    "independentNativeOracles": 8,
+    "genericFocusedTestGroupsPassed": 6,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-array-reads-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "ca56dedb147639199db9571d40786321275e25707ace1c886313bb0ee087b42c",
+    "scope": "One-shot array reads in direct returns, primitive declarations, bound local assignments and leading if operands. Capture/index/counter bindings and pure array references are proved from complete AST/token accounting. No repeated condition, earlier side effect, field/getter array reference, compound assignment or escaped capture is accepted. Null/bounds/unboxing failure, counter overflow, later condition effects, short-circuit selection and cleanup/monitor order remain. Generic native comparisons and full source token/binding compilation checks do not establish whole-game, asset, browser, phone, heap or FPS equivalence."
   }
 }

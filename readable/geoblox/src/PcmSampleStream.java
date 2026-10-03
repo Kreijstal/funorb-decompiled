@@ -449,19 +449,14 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
-        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param3 = param3 >> 8;
@@ -479,9 +474,7 @@ final class PcmSampleStream extends PcmStream {
         param9 = param9 << 1;
         param9 -= 6;
         while (param4 < param9) {
-            incrementValue$0 = param3;
-            param3--;
-            param0 = param1[incrementValue$0];
+            param0 = param1[param3--];
             incrementValue$1 = param4;
             param4++;
             param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
@@ -490,9 +483,7 @@ final class PcmSampleStream extends PcmStream {
             param4++;
             param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$3 = param3;
-            param3--;
-            param0 = param1[incrementValue$3];
+            param0 = param1[param3--];
             incrementValue$4 = param4;
             param4++;
             param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
@@ -501,9 +492,7 @@ final class PcmSampleStream extends PcmStream {
             param4++;
             param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$6 = param3;
-            param3--;
-            param0 = param1[incrementValue$6];
+            param0 = param1[param3--];
             incrementValue$7 = param4;
             param4++;
             param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
@@ -512,9 +501,7 @@ final class PcmSampleStream extends PcmStream {
             param4++;
             param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$9 = param3;
-            param3--;
-            param0 = param1[incrementValue$9];
+            param0 = param1[param3--];
             incrementValue$10 = param4;
             param4++;
             param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
@@ -526,9 +513,7 @@ final class PcmSampleStream extends PcmStream {
         }
         param9 += 6;
         while (param4 < param9) {
-            incrementValue$12 = param3;
-            param3--;
-            param0 = param1[incrementValue$12];
+            param0 = param1[param3--];
             incrementValue$13 = param4;
             param4++;
             param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
@@ -1002,19 +987,14 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
-        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param3 = param3 >> 8;
@@ -1029,36 +1009,28 @@ final class PcmSampleStream extends PcmStream {
         param7 = param7 << 1;
         param7 -= 6;
         while (param4 < param7) {
-            incrementValue$0 = param3;
-            param3++;
-            param0 = param1[incrementValue$0];
+            param0 = param1[param3++];
             incrementValue$1 = param4;
             param4++;
             param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
             incrementValue$2 = param4;
             param4++;
             param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
-            incrementValue$3 = param3;
-            param3++;
-            param0 = param1[incrementValue$3];
+            param0 = param1[param3++];
             incrementValue$4 = param4;
             param4++;
             param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
             incrementValue$5 = param4;
             param4++;
             param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
-            incrementValue$6 = param3;
-            param3++;
-            param0 = param1[incrementValue$6];
+            param0 = param1[param3++];
             incrementValue$7 = param4;
             param4++;
             param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
             incrementValue$8 = param4;
             param4++;
             param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
-            incrementValue$9 = param3;
-            param3++;
-            param0 = param1[incrementValue$9];
+            param0 = param1[param3++];
             incrementValue$10 = param4;
             param4++;
             param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
@@ -1068,9 +1040,7 @@ final class PcmSampleStream extends PcmStream {
         }
         param7 += 6;
         while (param4 < param7) {
-            incrementValue$12 = param3;
-            param3++;
-            param0 = param1[incrementValue$12];
+            param0 = param1[param3++];
             incrementValue$13 = param4;
             param4++;
             param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
@@ -1562,19 +1532,14 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
-        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param3 = param3 >> 8;
@@ -1592,9 +1557,7 @@ final class PcmSampleStream extends PcmStream {
         param9 = param9 << 1;
         param9 -= 6;
         while (param4 < param9) {
-            incrementValue$0 = param3;
-            param3++;
-            param0 = param1[incrementValue$0];
+            param0 = param1[param3++];
             incrementValue$1 = param4;
             param4++;
             param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
@@ -1603,9 +1566,7 @@ final class PcmSampleStream extends PcmStream {
             param4++;
             param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$3 = param3;
-            param3++;
-            param0 = param1[incrementValue$3];
+            param0 = param1[param3++];
             incrementValue$4 = param4;
             param4++;
             param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
@@ -1614,9 +1575,7 @@ final class PcmSampleStream extends PcmStream {
             param4++;
             param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$6 = param3;
-            param3++;
-            param0 = param1[incrementValue$6];
+            param0 = param1[param3++];
             incrementValue$7 = param4;
             param4++;
             param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
@@ -1625,9 +1584,7 @@ final class PcmSampleStream extends PcmStream {
             param4++;
             param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$9 = param3;
-            param3++;
-            param0 = param1[incrementValue$9];
+            param0 = param1[param3++];
             incrementValue$10 = param4;
             param4++;
             param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
@@ -1639,9 +1596,7 @@ final class PcmSampleStream extends PcmStream {
         }
         param9 += 6;
         while (param4 < param9) {
-            incrementValue$12 = param3;
-            param3++;
-            param0 = param1[incrementValue$12];
+            param0 = param1[param3++];
             incrementValue$13 = param4;
             param4++;
             param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
@@ -1739,19 +1694,14 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
-        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param3 = param3 >> 8;
@@ -1766,36 +1716,28 @@ final class PcmSampleStream extends PcmStream {
         param7 = param7 << 1;
         param7 -= 6;
         while (param4 < param7) {
-            incrementValue$0 = param3;
-            param3--;
-            param0 = param1[incrementValue$0];
+            param0 = param1[param3--];
             incrementValue$1 = param4;
             param4++;
             param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
             incrementValue$2 = param4;
             param4++;
             param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
-            incrementValue$3 = param3;
-            param3--;
-            param0 = param1[incrementValue$3];
+            param0 = param1[param3--];
             incrementValue$4 = param4;
             param4++;
             param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
             incrementValue$5 = param4;
             param4++;
             param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
-            incrementValue$6 = param3;
-            param3--;
-            param0 = param1[incrementValue$6];
+            param0 = param1[param3--];
             incrementValue$7 = param4;
             param4++;
             param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
             incrementValue$8 = param4;
             param4++;
             param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
-            incrementValue$9 = param3;
-            param3--;
-            param0 = param1[incrementValue$9];
+            param0 = param1[param3--];
             incrementValue$10 = param4;
             param4++;
             param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
@@ -1805,9 +1747,7 @@ final class PcmSampleStream extends PcmStream {
         }
         param7 += 6;
         while (param4 < param7) {
-            incrementValue$12 = param3;
-            param3--;
-            param0 = param1[incrementValue$12];
+            param0 = param1[param3--];
             incrementValue$13 = param4;
             param4++;
             param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;

@@ -166,7 +166,6 @@ final class ArgbSprite extends Sprite {
     }
 
     private final static void blitArgbGrayTinted(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip, int tintColor) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int tintRed;
         int tintGreen;
@@ -201,9 +200,7 @@ final class ArgbSprite extends Sprite {
               negativeRow++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex];
+            sourcePixel = sourcePixels[sourceIndex++];
             storedAlpha = sourcePixel >>> 24;
             if (storedAlpha == 0) {
               destinationIndex++;
@@ -235,7 +232,6 @@ final class ArgbSprite extends Sprite {
     }
 
     private final static void blitArgb(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int negativeRowPixelCount;
         int negativeRow;
@@ -257,9 +253,7 @@ final class ArgbSprite extends Sprite {
               negativeRow++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex];
+            sourcePixel = sourcePixels[sourceIndex++];
             storedAlpha = sourcePixel >>> 24;
             if (storedAlpha == 0) {
               destinationIndex++;
@@ -816,7 +810,6 @@ final class ArgbSprite extends Sprite {
     }
 
     private final static void blitArgbAdditive(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int intensity256) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int effectiveAlpha256;
         negativeRowScratch = -drawHeight;
@@ -832,9 +825,7 @@ final class ArgbSprite extends Sprite {
               negativeRowScratch++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourceColorScratch = sourcePixels[sourceReadIndex];
+            sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
               destinationIndex++;
               negativeColumnScratch++;
@@ -1078,7 +1069,6 @@ final class ArgbSprite extends Sprite {
     }
 
     private final static void blitArgbGrayModulated(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int negativeColumnScratch, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int tintColor) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int tintRedBlue;
         int tintGreen;
@@ -1101,9 +1091,7 @@ final class ArgbSprite extends Sprite {
               negativeRowScratch++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex];
+            sourcePixel = sourcePixels[sourceIndex++];
             storedAlpha = sourcePixel >>> 24;
             sourcePixel = sourcePixel & 16777215;
             if (storedAlpha == 0) {
@@ -1222,7 +1210,6 @@ final class ArgbSprite extends Sprite {
         int negativeColumn = 0;
         int effectiveAlpha256 = 0;
         int inverseAlpha256 = 0;
-        int sourceReadIndex = 0;
         int sourcePixel = 0;
         int destinationPixel = 0;
         int destinationWriteIndex = 0;
@@ -1230,9 +1217,7 @@ final class ArgbSprite extends Sprite {
             for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
                 effectiveAlpha256 = (sourcePixels[sourceIndex] >>> 24) * alpha256 >> 8;
                 inverseAlpha256 = 256 - effectiveAlpha256;
-                sourceReadIndex = sourceIndex;
-                sourceIndex++;
-                sourcePixel = sourcePixels[sourceReadIndex];
+                sourcePixel = sourcePixels[sourceIndex++];
                 destinationPixel = destinationPixels[destinationIndex];
                 destinationWriteIndex = destinationIndex;
                 destinationIndex++;

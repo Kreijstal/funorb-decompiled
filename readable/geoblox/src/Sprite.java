@@ -840,7 +840,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitColorKeyAlpha(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int alpha256) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int inverseAlpha256;
         int negativeRow;
@@ -860,9 +859,7 @@ class Sprite extends SpriteState {
               negativeRow++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
               negativeColumn++;
@@ -1067,7 +1064,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitMultiply(int destinationPixel, int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int negativeRow;
         int negativeColumn;
@@ -1087,9 +1083,7 @@ class Sprite extends SpriteState {
               negativeRow++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
               negativeColumn++;
@@ -1142,7 +1136,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitGrayTinted(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip, int tintColor) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int destinationWriteIndex2 = 0;
         int tintRed;
@@ -1174,9 +1167,7 @@ class Sprite extends SpriteState {
               negativeRow++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
               negativeColumn++;
@@ -1399,11 +1390,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitColorKey(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
-        int sourceReadIndex = 0;
-        int sourceReadIndex2 = 0;
-        int sourceReadIndex3 = 0;
-        int sourceReadIndex4 = 0;
-        int sourceReadIndex5 = 0;
         int negativeQuadCount;
         int negativeRow;
         int quadOrTailCounter;
@@ -1425,9 +1411,7 @@ class Sprite extends SpriteState {
                   negativeRow++;
                   continue L0;
                 }
-                sourceReadIndex = sourceIndex;
-                sourceIndex++;
-                sourcePixel = sourcePixels[sourceReadIndex];
+                sourcePixel = sourcePixels[sourceIndex++];
                 if (sourcePixel == 0) {
                   destinationIndex++;
                   quadOrTailCounter++;
@@ -1438,33 +1422,25 @@ class Sprite extends SpriteState {
                 continue;
               }
             }
-            sourceReadIndex2 = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex2];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = sourcePixel;
             }
-            sourceReadIndex3 = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex3];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = sourcePixel;
             }
-            sourceReadIndex4 = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex4];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = sourcePixel;
             }
-            sourceReadIndex5 = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex5];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
               quadOrTailCounter++;
@@ -1621,11 +1597,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitSilhouette(int[] destinationPixels, int[] sourcePixels, int color, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
-        int sourceReadIndex = 0;
-        int sourceReadIndex2 = 0;
-        int sourceReadIndex3 = 0;
-        int sourceReadIndex4 = 0;
-        int sourceReadIndex5 = 0;
         int negativeQuadCount;
         int negativeRow;
         int quadOrTailCounter;
@@ -1647,9 +1618,7 @@ class Sprite extends SpriteState {
                   negativeRow++;
                   continue L0;
                 }
-                sourceReadIndex = sourceIndex;
-                sourceIndex++;
-                if (sourcePixels[sourceReadIndex] == 0) {
+                if (sourcePixels[sourceIndex++] == 0) {
                   destinationIndex++;
                   quadOrTailCounter++;
                   continue;
@@ -1659,30 +1628,22 @@ class Sprite extends SpriteState {
                 continue;
               }
             }
-            sourceReadIndex2 = sourceIndex;
-            sourceIndex++;
-            if (sourcePixels[sourceReadIndex2] == 0) {
+            if (sourcePixels[sourceIndex++] == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = color;
             }
-            sourceReadIndex3 = sourceIndex;
-            sourceIndex++;
-            if (sourcePixels[sourceReadIndex3] == 0) {
+            if (sourcePixels[sourceIndex++] == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = color;
             }
-            sourceReadIndex4 = sourceIndex;
-            sourceIndex++;
-            if (sourcePixels[sourceReadIndex4] == 0) {
+            if (sourcePixels[sourceIndex++] == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = color;
             }
-            sourceReadIndex5 = sourceIndex;
-            sourceIndex++;
-            if (sourcePixels[sourceReadIndex5] == 0) {
+            if (sourcePixels[sourceIndex++] == 0) {
               destinationIndex++;
               quadOrTailCounter++;
               continue;
@@ -1767,7 +1728,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitAdditiveIntensity(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int intensity256) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         negativeRowScratch = -drawHeight;
         L0: while (true) {
@@ -1782,9 +1742,7 @@ class Sprite extends SpriteState {
               negativeRowScratch++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourceColorScratch = sourcePixels[sourceReadIndex];
+            sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
               destinationIndex++;
               negativeColumnScratch++;
@@ -1870,7 +1828,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitGrayModulated(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int negativeColumnScratch, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int tintColor) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex2 = 0;
         int tintRedBlue;
         int tintGreen;
@@ -1889,9 +1846,7 @@ class Sprite extends SpriteState {
               negativeRowScratch++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourcePixel = sourcePixels[sourceReadIndex];
+            sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
               negativeColumnScratch++;
@@ -2368,7 +2323,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void blitAdditive(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         negativeRowScratch = -drawHeight;
         L0: while (true) {
@@ -2383,9 +2337,7 @@ class Sprite extends SpriteState {
               negativeRowScratch++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            sourceColorScratch = sourcePixels[sourceReadIndex];
+            sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
               destinationIndex++;
               negativeColumnScratch++;

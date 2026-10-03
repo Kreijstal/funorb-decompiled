@@ -6,7 +6,6 @@ final class IndexedSprite extends IndexedSpriteState {
     byte[] indices;
 
     private final static void blitPaletteAlpha(int[] destinationPixels, byte[] sourceIndices, int[] palette, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int alpha256) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int inverseAlpha256;
         int negativeRow;
@@ -27,9 +26,7 @@ final class IndexedSprite extends IndexedSpriteState {
               negativeRow++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            indexThenPaletteColor = sourceIndices[sourceReadIndex];
+            indexThenPaletteColor = sourceIndices[sourceIndex++];
             if (indexThenPaletteColor == 0) {
               destinationIndex++;
               negativeColumn++;
@@ -135,7 +132,6 @@ final class IndexedSprite extends IndexedSpriteState {
     }
 
     private final static void blitPaletteRuns(int indexThenRunLength, byte[] sourceIndices, int sourceIndex, int destinationIndex, int remainingColumnsScratch, int[] destinationPixels, int[] palette, int drawWidth, int destinationRowSkip, int sourceRowSkip, int negativeRowScratch, int drawHeight) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int sourceReadIndex2 = 0;
         negativeRowScratch = -drawHeight;
@@ -157,9 +153,7 @@ final class IndexedSprite extends IndexedSpriteState {
               negativeRowScratch++;
               continue L0;
             }
-            sourceReadIndex = sourceIndex;
-            sourceIndex++;
-            indexThenRunLength = sourceIndices[sourceReadIndex];
+            indexThenRunLength = sourceIndices[sourceIndex++];
             remainingColumnsScratch--;
             if (indexThenRunLength == 0) {
               destinationIndex++;
@@ -232,15 +226,10 @@ final class IndexedSprite extends IndexedSpriteState {
     }
 
     private final static void blitPalette(int[] destinationPixels, byte[] sourceIndices, int[] palette, int paletteIndexScratch, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
-        int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
-        int sourceReadIndex2 = 0;
         int destinationWriteIndex2 = 0;
-        int sourceReadIndex3 = 0;
         int destinationWriteIndex3 = 0;
-        int sourceReadIndex4 = 0;
         int destinationWriteIndex4 = 0;
-        int sourceReadIndex5 = 0;
         int destinationWriteIndex5 = 0;
         int negativeQuadCount;
         int negativeRow;
@@ -263,9 +252,7 @@ final class IndexedSprite extends IndexedSpriteState {
                   negativeRow++;
                   continue L0;
                 }
-                sourceReadIndex = sourceIndex;
-                sourceIndex++;
-                paletteIndexScratch = sourceIndices[sourceReadIndex];
+                paletteIndexScratch = sourceIndices[sourceIndex++];
                 if (paletteIndexScratch == 0) {
                   destinationIndex++;
                   quadOrTailCounter++;
@@ -278,9 +265,7 @@ final class IndexedSprite extends IndexedSpriteState {
                 continue;
               }
             }
-            sourceReadIndex2 = sourceIndex;
-            sourceIndex++;
-            paletteIndexScratch = sourceIndices[sourceReadIndex2];
+            paletteIndexScratch = sourceIndices[sourceIndex++];
             if (paletteIndexScratch == 0) {
               destinationIndex++;
             } else {
@@ -288,9 +273,7 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex++;
               destinationPixels[destinationWriteIndex2] = palette[paletteIndexScratch & 255];
             }
-            sourceReadIndex3 = sourceIndex;
-            sourceIndex++;
-            paletteIndexScratch = sourceIndices[sourceReadIndex3];
+            paletteIndexScratch = sourceIndices[sourceIndex++];
             if (paletteIndexScratch == 0) {
               destinationIndex++;
             } else {
@@ -298,9 +281,7 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex++;
               destinationPixels[destinationWriteIndex3] = palette[paletteIndexScratch & 255];
             }
-            sourceReadIndex4 = sourceIndex;
-            sourceIndex++;
-            paletteIndexScratch = sourceIndices[sourceReadIndex4];
+            paletteIndexScratch = sourceIndices[sourceIndex++];
             if (paletteIndexScratch == 0) {
               destinationIndex++;
             } else {
@@ -308,9 +289,7 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex++;
               destinationPixels[destinationWriteIndex4] = palette[paletteIndexScratch & 255];
             }
-            sourceReadIndex5 = sourceIndex;
-            sourceIndex++;
-            paletteIndexScratch = sourceIndices[sourceReadIndex5];
+            paletteIndexScratch = sourceIndices[sourceIndex++];
             if (paletteIndexScratch == 0) {
               destinationIndex++;
               quadOrTailCounter++;

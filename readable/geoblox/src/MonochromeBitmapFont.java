@@ -51,7 +51,6 @@ final class MonochromeBitmapFont extends BitmapFont {
     }
 
     private final static void blitGlyphThroughScanlineMask(int[] unusedDestinationPixels, byte[] glyphMask, int x, int y, int width, int height, int color, int sourceIndex, int destinationIndex, int destinationRowSkip, int sourceRowSkip, int[] maskStarts, int[] maskWidths) {
-        int sourceIndexBeforeIncrement = 0;
         int destinationIndexBeforeIncrement = 0;
         int glyphLeftRelativeToClip;
         int glyphTopRelativeToClip;
@@ -106,9 +105,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               maskRow++;
               continue L0;
             }
-            sourceIndexBeforeIncrement = sourceIndex;
-            sourceIndex++;
-            if (glyphMask[sourceIndexBeforeIncrement] == 0) {
+            if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
               negativePixelCounter++;
               continue;
@@ -166,11 +163,6 @@ final class MonochromeBitmapFont extends BitmapFont {
     }
 
     final static void blitGlyphMask(int[] destinationPixels, byte[] glyphMask, int color, int sourceIndex, int destinationIndex, int widthOrNegativeTailCount, int height, int destinationRowSkip, int sourceRowSkip) {
-        int tailSourceIndexBeforeIncrement = 0;
-        int firstSourceIndexBeforeIncrement = 0;
-        int secondSourceIndexBeforeIncrement = 0;
-        int thirdSourceIndexBeforeIncrement = 0;
-        int fourthSourceIndexBeforeIncrement = 0;
         int negativeFourPixelGroupCount;
         int negativeRowCounter;
         int negativeGroupOrTailCounter;
@@ -192,9 +184,7 @@ final class MonochromeBitmapFont extends BitmapFont {
                   negativeRowCounter++;
                   continue L0;
                 }
-                tailSourceIndexBeforeIncrement = sourceIndex;
-                sourceIndex++;
-                if (glyphMask[tailSourceIndexBeforeIncrement] == 0) {
+                if (glyphMask[sourceIndex++] == 0) {
                   destinationIndex++;
                   negativeGroupOrTailCounter++;
                   continue;
@@ -204,30 +194,22 @@ final class MonochromeBitmapFont extends BitmapFont {
                 continue;
               }
             }
-            firstSourceIndexBeforeIncrement = sourceIndex;
-            sourceIndex++;
-            if (glyphMask[firstSourceIndexBeforeIncrement] == 0) {
+            if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = color;
             }
-            secondSourceIndexBeforeIncrement = sourceIndex;
-            sourceIndex++;
-            if (glyphMask[secondSourceIndexBeforeIncrement] == 0) {
+            if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = color;
             }
-            thirdSourceIndexBeforeIncrement = sourceIndex;
-            sourceIndex++;
-            if (glyphMask[thirdSourceIndexBeforeIncrement] == 0) {
+            if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
             } else {
               destinationPixels[destinationIndex++] = color;
             }
-            fourthSourceIndexBeforeIncrement = sourceIndex;
-            sourceIndex++;
-            if (glyphMask[fourthSourceIndexBeforeIncrement] == 0) {
+            if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
               negativeGroupOrTailCounter++;
               continue;
@@ -240,7 +222,6 @@ final class MonochromeBitmapFont extends BitmapFont {
     }
 
     final static void blitGlyphMaskAlpha(int[] destinationPixels, byte[] glyphMask, int colorOrWeightedColor, int sourceIndex, int destinationIndex, int width, int height, int destinationRowSkip, int sourceRowSkip, int alphaOrDestinationWeight256) {
-        int sourceIndexBeforeIncrement = 0;
         int destinationIndexBeforeIncrement = 0;
         int negativeRowCounter;
         int negativeColumnCounter;
@@ -260,9 +241,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               negativeRowCounter++;
               continue L0;
             }
-            sourceIndexBeforeIncrement = sourceIndex;
-            sourceIndex++;
-            if (glyphMask[sourceIndexBeforeIncrement] == 0) {
+            if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
               negativeColumnCounter++;
               continue;

@@ -196,14 +196,9 @@ final class InstrumentPatch extends IntrusiveNode {
         int envelopeRunReadIndex = 0;
         int newEnvelopeIndex = 0;
         InstrumentEnvelope newEnvelopeStorage = null;
-        int sampleRunReadIndexSnapshot = 0;
         int keyGroupValueReadIndexSnapshot = 0;
-        int keyGroupRunReadIndexSnapshot = 0;
         int panKeyIndex = 0;
         int panValueReadIndexSnapshot = 0;
-        int panRunReadIndexSnapshot = 0;
-        int envelopeRunReadIndexSnapshot = 0;
-        int volumeRunReadIndexSnapshot = 0;
         byte[] optionalVolumeCurve = null;
         byte[] optionalPanCurve = null;
         RuntimeException failureContextCause = null;
@@ -394,9 +389,7 @@ final class InstrumentPatch extends IntrusiveNode {
           for (keyIndexOrKeyGroup = 0; keyIndexOrKeyGroup < 128; keyIndexOrKeyGroup++) {
             if (remainingRunLength == 0) {
               if (sampleRunsStorage.length > runReadIndex) {
-                sampleRunReadIndexSnapshot = runReadIndex;
-                runReadIndex++;
-                remainingRunLength = sampleRuns[sampleRunReadIndexSnapshot];
+                remainingRunLength = sampleRuns[runReadIndex++];
               } else {
                 remainingRunLength = -1;
               }
@@ -418,9 +411,7 @@ final class InstrumentPatch extends IntrusiveNode {
                 if (runReadIndex >= keyGroupRunsStorage.length) {
                   remainingRunLength = -1;
                 } else {
-                  keyGroupRunReadIndexSnapshot = runReadIndex;
-                  runReadIndex++;
-                  remainingRunLength = keyGroupRuns[keyGroupRunReadIndexSnapshot];
+                  remainingRunLength = keyGroupRuns[runReadIndex++];
                 }
               }
               remainingRunLength--;
@@ -437,9 +428,7 @@ final class InstrumentPatch extends IntrusiveNode {
                 panReadIndexOrCursor++;
                 keyIndexOrPan = 16 + patchInput.bytes[panValueReadIndexSnapshot] << 2;
                 if (panRunsStorage.length > runReadIndex) {
-                  panRunReadIndexSnapshot = runReadIndex;
-                  runReadIndex++;
-                  remainingRunLength = panRuns[panRunReadIndexSnapshot];
+                  remainingRunLength = panRuns[runReadIndex++];
                 } else {
                   remainingRunLength = -1;
                 }
@@ -456,9 +445,7 @@ final class InstrumentPatch extends IntrusiveNode {
               if (remainingRunLength == 0) {
                 currentEnvelope = envelopes[envelopeAssignmentsStorage[runReadIndex]];
                 if (runReadIndex < envelopeRunsStorage.length) {
-                  envelopeRunReadIndexSnapshot = runReadIndex;
-                  runReadIndex++;
-                  remainingRunLength = envelopeRuns[envelopeRunReadIndexSnapshot];
+                  remainingRunLength = envelopeRuns[runReadIndex++];
                 } else {
                   remainingRunLength = -1;
                 }
@@ -473,9 +460,7 @@ final class InstrumentPatch extends IntrusiveNode {
           for (envelopeIndexOrCurveKey = 0; envelopeIndexOrCurveKey < 128; envelopeIndexOrCurveKey++) {
             if (0 == remainingRunLength) {
               if (sampleRunsStorage.length > runReadIndex) {
-                volumeRunReadIndexSnapshot = runReadIndex;
-                runReadIndex++;
-                remainingRunLength = sampleRuns[volumeRunReadIndexSnapshot];
+                remainingRunLength = sampleRuns[runReadIndex++];
               } else {
                 remainingRunLength = -1;
               }

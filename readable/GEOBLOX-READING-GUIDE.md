@@ -7,15 +7,15 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/afddd01bff7bb0dbac4b1577a96024a054ec5dd4/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 118)
+## Current readability (pass 119)
 
-The export has 9,936 guarded names and 79,048 identifier edits. Class coverage is
+The export has 9,889 guarded names and 78,860 identifier edits. Class coverage is
 226 semantic renames, one already meaningful `Geoblox` name and 76 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,880 bindings, reproduce and
+compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -23,7 +23,25 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 118 adds 120 rules for shared array/cache/JavaScript helpers and the
+Pass 119 replaces 67 capture temporaries with proven postfix array reads in
+26 methods across seven files, including font glyph-mask conditions. The raw
+source shrinks by 201 lines to 76,320. The dictionary retires 47 deleted capture
+names and migrates 220 guarded local identities among 260 surviving local ordinal
+changes; every surviving semantic name, original spelling and evidence remains.
+There are 9,889 rules and 78,860 identifier edits. All 303 raw/readable files
+compile, compare 136,612 bindings and preserve 388 override relationships.
+A source proof checks complete expected token streams, predicted bindings and
+local migrations. The six focused generic groups pass, including 12,096 new
+native read comparisons and eight independent oracles; the existing 244,944
+store comparisons also pass. Clean tracked decompiler source reproduces every
+Java and diagnostics byte. Null/bounds/unboxing failures, counter overflow,
+short-circuit and later condition effects, and cleanup/monitor order remain.
+Repeated conditions, earlier effects, field/getter arrays, compound assignments
+and escaping captures retain their statements. Bytecode is unchanged. There
+are still 76 opaque class names, six large labeled bodies and 207 block labels;
+whole-game, assets, browser/phone and memory/FPS acceptance remain unverified.
+
+Pass 118 added 120 rules for shared array/cache/JavaScript helpers and the
 archive byte-storage chain. `ArrayOperations`, `CacheFileLocator` and
 `AppletJavaScriptBridge` replace three opaque class names. The complete
 `ByteStorage`/`DirectByteStorage` override families and archive storage wrappers

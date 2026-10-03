@@ -17,14 +17,32 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/afddd01bff7bb0dbac4b1577a96024a054ec5dd4/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 136,880 bindings,
+identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 118 adds 120 rules for shared array/cache/JavaScript helpers and the
+Pass 119 replaces 67 capture temporaries with proven postfix array reads in
+26 methods across seven files, including font glyph-mask conditions. The raw
+source shrinks by 201 lines to 76,320. The dictionary retires 47 deleted capture
+names and migrates 220 guarded local identities among 260 surviving local ordinal
+changes; every surviving semantic name, original spelling and evidence remains.
+There are 9,889 rules and 78,860 identifier edits. All 303 raw/readable files
+compile, compare 136,612 bindings and preserve 388 override relationships.
+A source proof checks complete expected token streams, predicted bindings and
+local migrations. The six focused generic groups pass, including 12,096 new
+native read comparisons and eight independent oracles; the existing 244,944
+store comparisons also pass. Clean tracked decompiler source reproduces every
+Java and diagnostics byte. Null/bounds/unboxing failures, counter overflow,
+short-circuit and later condition effects, and cleanup/monitor order remain.
+Repeated conditions, earlier effects, field/getter arrays, compound assignments
+and escaping captures retain their statements. Bytecode is unchanged. There
+are still 76 opaque class names, six large labeled bodies and 207 block labels;
+whole-game, assets, browser/phone and memory/FPS acceptance remain unverified.
+
+Pass 118 added 120 rules for shared array/cache/JavaScript helpers and the
 archive byte-storage chain. `ArrayOperations`, `CacheFileLocator` and
 `AppletJavaScriptBridge` replace three opaque class names. The complete
 `ByteStorage`/`DirectByteStorage` override families and archive storage wrappers
@@ -51,7 +69,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30`.
+`c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls
