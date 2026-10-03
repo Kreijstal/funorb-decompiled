@@ -238,7 +238,7 @@ abstract class wf extends ch {
         java.awt.Dimension var4;
         int var5;
         java.awt.Container var6;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         if (null != rb.field_d) {
           if (InstrumentPatch.field_n == null) {
             var6 = jf.a(true);
@@ -470,7 +470,7 @@ abstract class wf extends ch {
         int var3;
         boolean stackIn_3_1 = false;
         boolean stackIn_4_2 = false;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         if (!fj.f(-31456)) {
           if (mi.field_C >= 10) {
             if (!wj.isLogoAnimationComplete(7426)) {
@@ -517,7 +517,7 @@ abstract class wf extends ch {
             String var10 = null;
             Boolean var11 = null;
             ByteArrayBuffer var12 = null;
-            var8 = Geoblox.field_C;
+            var8 = Geoblox.clientControlFlowFlag;
             var4 = gk.a(va.field_a, vc.field_i, param1, (byte) -117);
             if (param2 == ~var4) {
               throw new IllegalStateException();
@@ -726,7 +726,7 @@ abstract class wf extends ch {
         int var2;
         vd var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         if (param0 < 119) {
           this.field_m = true;
         }

@@ -149,7 +149,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var13 = Geoblox.field_C;
+        var13 = Geoblox.clientControlFlowFlag;
         try {
           var5_int = param1 + param4;
           var6 = param0 + param3;

@@ -49,7 +49,7 @@ final class p extends IntrusiveNode {
         int cameraZBasisOrCameraYScaled = 0;
         int cameraZBasisOrCameraDepth = 0;
         int controlFlagSnapshot = 0;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           minimumVisibleDepth = 2147483647;
           maximumVisibleDepth = -2147483648;

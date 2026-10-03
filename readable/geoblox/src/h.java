@@ -85,7 +85,7 @@ final class h {
         int clientControlFlowGuardSnapshot = 0;
         GameplayEntity movingEntityToDraw = null;
         RuntimeException caughtMovingDrawFailure = null;
-        clientControlFlowGuardSnapshot = Geoblox.field_C;
+        clientControlFlowGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           movingEntityToDraw = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntityToDraw != null) {

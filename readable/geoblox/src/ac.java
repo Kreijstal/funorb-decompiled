@@ -109,7 +109,7 @@ class ac extends ff {
         int var11 = 0;
         int var12 = 0;
         int var14 = 0;
-        var14 = Geoblox.field_C;
+        var14 = Geoblox.clientControlFlowFlag;
         try {
           var3_int = 160;
           var4 = 190;

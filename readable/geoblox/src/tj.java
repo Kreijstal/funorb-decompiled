@@ -38,8 +38,8 @@ final class tj {
         if (!cf.field_i) {
             throw new IllegalStateException();
         }
-        if (Geoblox.field_y != null) {
-            Geoblox.field_y.h((byte) -104);
+        if (Geoblox.activeMessageDialog != null) {
+            Geoblox.activeMessageDialog.h((byte) -104);
             if (param0 >= -47) {
                 field_a = (String) null;
                 var3 = ml.c(7789);

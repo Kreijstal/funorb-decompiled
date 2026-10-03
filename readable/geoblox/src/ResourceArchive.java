@@ -30,7 +30,7 @@ final class ResourceArchive {
         RuntimeException attachedUpdateFailureForContext = null;
         GameplayEntity attachedEntity = null;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard <= 93) {
             ResourceArchive.updateAttachedEntities((byte) 28);
@@ -144,7 +144,7 @@ final class ResourceArchive {
         int allGroupsLoaded;
         int groupId;
         int unusedClientGuardSnapshot;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (!this.ensureIndexLoaded(0)) {
           return false;
         }
@@ -746,7 +746,7 @@ final class ResourceArchive {
         int loadedProgress;
         int groupIndexThenPercentage;
         int unusedClientGuardSnapshot;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (!this.ensureIndexLoaded(0)) {
           return 0;
         }
@@ -913,7 +913,7 @@ final class ResourceArchive {
         int var6 = 0;
         int var7 = 0;
         CharSequence var8 = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           var2_long = 0L;
           if (param1 != -48) {

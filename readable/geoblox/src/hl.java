@@ -27,7 +27,7 @@ final class hl extends el {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = Geoblox.field_C;
+        int var13 = Geoblox.clientControlFlowFlag;
         Sprite var14 = new Sprite(this.field_H * 2, this.field_h);
         Geoblox.setRasterTarget(1, var14);
         int var5 = this.field_h >> 1;
@@ -66,7 +66,7 @@ final class hl extends el {
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        int var9 = Geoblox.field_C;
+        int var9 = Geoblox.clientControlFlowFlag;
         int var2 = this.field_h >> 1;
         Sprite var3 = new Sprite(var2, this.field_h);
         if (param0 != 255) {
@@ -99,7 +99,7 @@ final class hl extends el {
         RuntimeException var5 = null;
         int var7 = 0;
         int var8 = 0;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           var5_int = param2 + this.field_r;
           uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width);

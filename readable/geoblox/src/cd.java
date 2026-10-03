@@ -13,7 +13,7 @@ final class cd extends jg {
 
     final static void selectThemeRenderAssets(byte methodGuard) {
         int var2;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         if (methodGuard <= 75) {
           field_m = (ResourceArchive) null;
         }
@@ -178,7 +178,7 @@ final class cd extends jg {
         bd var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
-        var13 = Geoblox.field_C;
+        var13 = Geoblox.clientControlFlowFlag;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
@@ -271,7 +271,7 @@ final class cd extends jg {
         int var13 = 0;
         java.net.Socket var14 = null;
         String var15 = null;
-        var13 = Geoblox.field_C;
+        var13 = Geoblox.clientControlFlowFlag;
         try {
           var14 = new java.net.Socket(param3, param2);
           var14.setSoTimeout(10000);

@@ -69,7 +69,7 @@ abstract class MenuScreen {
 
     void handleMenuKey(int itemIndex, int methodGuard) {
         int clientControlFlowGuard;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (methodGuard >= -26) {
           this.hitLeftX = 8;
         }
@@ -88,7 +88,7 @@ abstract class MenuScreen {
     }
 
     void handleMenuPointer(int itemIndex, int pointerX, boolean initialClick, int rowOffsetY, boolean heldRepeat, int pointerButton) {
-        int clientControlFlowGuard = Geoblox.field_C;
+        int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (!heldRepeat) {
             if (1 != pointerButton) {
                 this.decreaseMenuValue(itemIndex, (byte) -121);
@@ -147,7 +147,7 @@ abstract class MenuScreen {
         Object pointerTargetSnapshot;
         boolean initialClickSnapshot;
         L0: {
-          clientControlFlowGuard = Geoblox.field_C;
+          clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           if (bi.pointerPressButtonSnapshot != 0) {
             hitItemIndex = this.hitTestMenuItem(mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (byte) 28);
             this.selectedItemIndex = hitItemIndex;
@@ -209,7 +209,7 @@ abstract class MenuScreen {
     abstract void decreaseMenuValue(int itemIndex, byte methodGuard);
 
     void renderScreen(int methodGuard) {
-        int clientControlFlowGuard = Geoblox.field_C;
+        int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         int itemIndex = 0;
         if (methodGuard != -28750) {
             this.updatePointer(false);

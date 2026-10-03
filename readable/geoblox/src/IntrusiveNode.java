@@ -11,7 +11,7 @@ class IntrusiveNode {
     final static void a(int param0, int param1) {
         int var2;
         int var3;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         IntrusiveDeque.a(111, param1);
         PacketBuffer.h(-120, param1);
         od.b((byte) -24);

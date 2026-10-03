@@ -25,7 +25,7 @@ final class b {
         ck[] var2;
         int var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         var2 = GzipInflater.a(-1);
         var3 = 0;
         if (param0) {

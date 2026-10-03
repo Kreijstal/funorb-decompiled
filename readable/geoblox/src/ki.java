@@ -22,7 +22,7 @@ final class ki {
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             p.field_o[var2_int] = 0;

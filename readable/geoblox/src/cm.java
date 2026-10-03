@@ -48,7 +48,7 @@ final class cm extends cj {
         int var26 = 0;
         PacketBuffer var27 = null;
         long[][] var31 = null;
-        var26 = Geoblox.field_C;
+        var26 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != -24839) {
             cm.a(false);
@@ -233,7 +233,7 @@ final class cm extends cj {
     final int a(boolean param0, long param1) {
         int var4;
         int var5;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         if (!param0) {
           cm.a(true);
         }
@@ -260,7 +260,7 @@ final class cm extends cj {
 
     private final long d(int param0) {
         int var8 = 0;
-        int var9 = Geoblox.field_C;
+        int var9 = Geoblox.clientControlFlowFlag;
         long var2 = System.nanoTime();
         long var4 = -this.field_i + var2;
         this.field_i = var2;

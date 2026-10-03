@@ -62,7 +62,7 @@ final class nk extends df {
         }
     }
 
-    final qg a(byte param0) {
+    final LoginPayloadKind a(byte param0) {
         if (param0 != -32) {
             field_c = (int[]) null;
             return ej.field_b;

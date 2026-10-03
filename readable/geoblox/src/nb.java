@@ -103,7 +103,7 @@ final class nb {
     }
 
     final static void drawHalfBlendRgbTriangle(int vertexBBlue, int vertexBGreen, int vertexCRed, int vertexCGreen, int vertexAY, int vertexABlue, int vertexBRed, int vertexBY, int vertexCX, int vertexCBlue, int guard, int vertexARed, int vertexAGreen, int vertexAX, int vertexBX, int vertexCY) {
-        int controlFlagSnapshot = Geoblox.field_C;
+        int controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         if (guard != -2) {
             return;
         }

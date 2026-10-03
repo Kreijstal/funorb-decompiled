@@ -73,7 +73,7 @@ final class GameplaySession {
         int promptTop;
         int clientControlFlowGuard;
         String promptText;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (0 != this.tutorialStepPhase) {
           return;
         }
@@ -138,68 +138,68 @@ final class GameplaySession {
         }
     }
 
-    final static boolean a(String param0, boolean param1) {
-        String var2 = null;
-        Exception var2_ref = null;
-        RuntimeException var2_ref2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int stackIn_20_0 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        Throwable decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+    final static boolean tryOpenUrlWithWindowsShell(String url, boolean methodGuard) {
+        String allowedUrlCharacters = null;
+        Exception urlLaunchException = null;
+        RuntimeException urlLaunchFailure = null;
+        int urlCharacterIndex = 0;
+        int clientControlFlowGuard = 0;
+        int allowedCharacterIndexOrSuccessFlag = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String urlContextDescription = null;
+        Throwable caughtThrowable = null;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           try {
             if (!PlatformTaskDispatcher.osNameLowerCase.startsWith("win")) {
               return false;
             }
-            if (param1) {
+            if (methodGuard) {
               return true;
             }
-            if ((!param0.startsWith("http://")) &&
-                (!param0.startsWith("https://"))) {
+            if ((!url.startsWith("http://")) &&
+                (!url.startsWith("https://"))) {
               return false;
             }
-            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-            var3 = 0;
+            allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+            urlCharacterIndex = 0;
             while (true) {
               L2: {
-                if (param0.length() > var3) {
-                  stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
-                  if (var4 != 0) {
+                if (url.length() > urlCharacterIndex) {
+                  allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
+                  if (clientControlFlowGuard != 0) {
                     break L2;
                   }
-                  if (stackIn_20_0 == -1) {
+                  if (allowedCharacterIndexOrSuccessFlag == -1) {
                     return false;
                   }
-                  var3++;
-                  if (var4 == 0) {
+                  urlCharacterIndex++;
+                  if (clientControlFlowGuard == 0) {
                     continue;
                   }
                 }
-                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                stackIn_20_0 = 1;
+                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
+                allowedCharacterIndexOrSuccessFlag = 1;
               }
-              return stackIn_20_0 != 0;
+              return allowedCharacterIndexOrSuccessFlag != 0;
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var2_ref = (Exception) (Object) decompiledCaughtException;
+          } catch (java.lang.Exception caughtLaunchException) {
+            caughtThrowable = caughtLaunchException;
+            urlLaunchException = (Exception) (Object) caughtThrowable;
             return false;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var2_ref2);
-          stackIn_25_1 = new StringBuilder().append("gh.U(");
-          if (param0 == null) {
-            stackIn_26_2 = "null";
+        } catch (java.lang.RuntimeException caughtFailure) {
+          caughtThrowable = caughtFailure;
+          urlLaunchFailure = (RuntimeException) (Object) caughtThrowable;
+          failureContextCause = (RuntimeException) (urlLaunchFailure);
+          failureContextBuilder = new StringBuilder().append("gh.U(");
+          if (url == null) {
+            urlContextDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            urlContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(urlContextDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class GameplaySession {
         int clientControlFlowGuard = 0;
         IntrusiveDeque debugSpawnQueueSnapshot = null;
         IntrusiveDeque debugMovingQueueSnapshot = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
           L0: {
             L1: {
@@ -536,11 +536,11 @@ final class GameplaySession {
             }
             if (this.showSessionCounters) {
               dd.uiPaletteFont.drawText(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-              dd.uiPaletteFont.drawText(wj.a(qg.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              dd.uiPaletteFont.drawText(wj.a(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             L53: {
               bd.drawScorePopups(-117);
-              this.c((byte) 64);
+              this.runGuardedStaticCleanup((byte) 64);
               if (this.showGameOverOverlay) {
                 lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
                 if (this.sceneAnimationTick < 266) {
@@ -601,7 +601,7 @@ final class GameplaySession {
         GameplayEntity fastForwardEntity = null;
         int clientControlFlowGuard = 0;
         L0: {
-          clientControlFlowGuard = Geoblox.field_C;
+          clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           lh.a(methodGuard ^ 1578896222);
           pointsPanelTickBeforeIncrement = this.updateTick;
           this.updateTick = this.updateTick + 1;
@@ -1234,7 +1234,7 @@ final class GameplaySession {
         int controlFlowGuard;
         CharSequence cappedScoreText;
         CharSequence scoreValueText;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         if (this.tutorialMode) {
           return;
         }
@@ -1279,10 +1279,10 @@ final class GameplaySession {
         return;
     }
 
-    public static void i(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         decodedSpriteXOffsets = null;
         archiveHost = null;
-        if (param0 != -17199) {
+        if (methodGuard != -17199) {
           pointerIdleTicks = 53;
         }
     }
@@ -1298,7 +1298,7 @@ final class GameplaySession {
             this.emitPointsPopup(false);
             this.addScore((byte) 127, wa.collectUnfinishedPopupPoints(-25866));
             this.submitScore((byte) -70);
-            if (Geoblox.field_C == 0) {
+            if (Geoblox.clientControlFlowFlag == 0) {
               break L1;
             }
           }
@@ -1320,7 +1320,7 @@ final class GameplaySession {
     private final void advanceTutorialStep(int methodGuard) {
         int clientControlFlowGuard;
         L0: {
-          clientControlFlowGuard = Geoblox.field_C;
+          clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           if (this.tutorialStepPhase == 2) {
             this.tutorialStepId = this.tutorialStepId + 1;
             this.tutorialPromptActive = true;
@@ -1372,7 +1372,7 @@ final class GameplaySession {
         int precedingThemeId = 0;
         int themeIndexThenId = 0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (this.sceneAnimationTick == 0) {
           L1: {
             if (!this.preserveScoreOnTransition) {
@@ -1525,7 +1525,7 @@ final class GameplaySession {
         int clientControlFlowGuard;
         String shrinkingBonusText;
         String countdownBonusText;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (methodGuard) {
           this.addScore((byte) 71, 49);
         }
@@ -1564,9 +1564,9 @@ final class GameplaySession {
 
     private final void updateResultSequence(int methodGuard) {
         int nextSceneAnimationTick = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
-        int stackIn_23_0 = 0;
+        int comparisonLeftColumnOrZero = 0;
+        int comparisonRightWidthOrPixel = 0;
+        int rowStartOrMusicGuard = 0;
         int resultProgressPercent = 0;
         int maxRadiusSquared = 0;
         int spriteOffsetFromCenterX = 0;
@@ -1578,7 +1578,7 @@ final class GameplaySession {
         int pixelRadiusSquared = 0;
         int controlFlowGuard = 0;
         GameplayEntity endingEntity = null;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         if (0 == this.sceneAnimationTick) {
           gf.matchChainLength = 0;
           if (BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard - 11)) {
@@ -1606,22 +1606,22 @@ final class GameplaySession {
               spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (vf.spriteScratchRaster.height >> 1));
               spriteColumn = 0;
               L4: while (true) {
-                stackIn_11_0 = spriteColumn;
-                stackIn_11_1 = vf.spriteScratchRaster.width;
+                comparisonLeftColumnOrZero = spriteColumn;
+                comparisonRightWidthOrPixel = vf.spriteScratchRaster.width;
                 L5: while (true) {
-                  if (stackIn_11_0 < stackIn_11_1) {
-                    stackIn_23_0 = 0;
+                  if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
+                    rowStartOrMusicGuard = 0;
                     if (controlFlowGuard != 0) {
                       break L1;
                     }
-                    spriteRow = stackIn_23_0;
+                    spriteRow = rowStartOrMusicGuard;
                     while (vf.spriteScratchRaster.height > spriteRow) {
-                      stackIn_11_0 = 0;
-                      stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
+                      comparisonLeftColumnOrZero = 0;
+                      comparisonRightWidthOrPixel = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
                       if (controlFlowGuard != 0) {
                         continue L5;
                       }
-                      if (stackIn_11_0 != stackIn_11_1) {
+                      if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
                         pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
                         pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
                         pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
@@ -1646,9 +1646,9 @@ final class GameplaySession {
               }
             }
             this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
-            stackIn_23_0 = methodGuard ^ 10;
+            rowStartOrMusicGuard = methodGuard ^ 10;
           }
-          ra.selectBackgroundMusic(stackIn_23_0, qf.resultMusicTrack);
+          ra.selectBackgroundMusic(rowStartOrMusicGuard, qf.resultMusicTrack);
         }
         L10: {
           nextSceneAnimationTick = this.sceneAnimationTick + 1;
@@ -1711,7 +1711,7 @@ final class GameplaySession {
         cf.advanceScorePopups((byte) 33);
         f.advanceGameplayAvatarAnimation(600);
         if (methodGuard != 10) {
-          GameplaySession.i(-70);
+          GameplaySession.releaseStaticReferences(-70);
         }
     }
 
@@ -1738,7 +1738,7 @@ final class GameplaySession {
           if (this.pendingPopupPoints > 99999) {
             cappedPopupPointsText = (CharSequence) ((Object) Integer.toString(99999));
             td.writeTextAtOffset(cappedPopupPointsText, this.popupPointsText, 0, 26);
-            if (Geoblox.field_C == 0) {
+            if (Geoblox.clientControlFlowFlag == 0) {
               break L0;
             }
           }
@@ -1751,7 +1751,7 @@ final class GameplaySession {
     private final void renderProgressHud(int methodGuard) {
         int remainingThemeReleases;
         int clientControlFlowGuard;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (!this.preserveScoreOnTransition) {
           return;
         }
@@ -1790,7 +1790,7 @@ final class GameplaySession {
 
     private final void requestSessionExitScreen(int methodGuard) {
         int clientControlFlowGuard;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (methodGuard != 28809) {
           this.debugPointerSpawnEnabled = true;
         }
@@ -1843,13 +1843,13 @@ final class GameplaySession {
         this.pointsPanelX = 640;
         td.a((byte) -93);
         if (methodGuard < 104) {
-          GameplaySession.i(-111);
+          GameplaySession.releaseStaticReferences(-111);
         }
     }
 
-    private final void c(byte param0) {
-        if (param0 <= 40) {
-          GameplaySession.i(100);
+    private final void runGuardedStaticCleanup(byte methodGuard) {
+        if (methodGuard <= 40) {
+          GameplaySession.releaseStaticReferences(100);
         }
     }
 

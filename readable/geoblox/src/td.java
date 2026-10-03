@@ -83,7 +83,7 @@ final class td extends hk {
         Sprite var13;
         Sprite var14;
         Sprite var15;
-        var12 = Geoblox.field_C;
+        var12 = Geoblox.clientControlFlowFlag;
         super.a(param0, param1, (byte) -86, param3);
         if (0 != param3) {
           return;
@@ -149,7 +149,7 @@ final class td extends hk {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard <= 23) {
             var9 = (PcmSample) null;

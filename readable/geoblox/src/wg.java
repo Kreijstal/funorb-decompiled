@@ -163,7 +163,7 @@ final class wg implements Runnable {
             Throwable var3 = null;
             int var4 = 0;
             Throwable decompiledCaughtException = null;
-            var4 = Geoblox.field_C;
+            var4 = Geoblox.clientControlFlowFlag;
             try {
               while (this.field_n.position < this.field_n.bytes.length) {
                 var1_int = this.field_c.read(this.field_n.bytes, this.field_n.position, -this.field_n.position + this.field_n.bytes.length);

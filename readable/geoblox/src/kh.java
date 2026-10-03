@@ -56,7 +56,7 @@ final class kh implements Runnable {
     public final void run() {
         int var1_int = 0;
         AudioOutput var2 = null;
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         this.field_c = true;
         try {
             while (!this.field_f) {

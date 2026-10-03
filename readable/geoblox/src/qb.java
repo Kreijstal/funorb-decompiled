@@ -15,7 +15,7 @@ final class qb extends hk {
     int field_K;
 
     final static mg b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = Geoblox.field_C;
+        int var6 = Geoblox.clientControlFlowFlag;
         mg var5 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(param2 ^ param2));
         while (var5 != null) {
             if (~var5.field_i == ~param0) {
@@ -52,7 +52,7 @@ final class qb extends hk {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = Geoblox.field_C;
+        var12 = Geoblox.clientControlFlowFlag;
         try {
           if (!super.a(param0, -52, param2, param3, param4, param5, param6)) {
             var8_int = 35 % ((-3 - param1) / 38);
@@ -108,7 +108,7 @@ final class qb extends hk {
         int var8 = 0;
         int var9 = 0;
         BitmapFont var10 = null;
-        var9 = Geoblox.field_C;
+        var9 = Geoblox.clientControlFlowFlag;
         try {
           var5_int = 0;
           if (param3 != 60) {

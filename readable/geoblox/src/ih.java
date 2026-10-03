@@ -9,7 +9,7 @@ final class ih {
     final static void b(int param0) {
         int var1_int = 0;
         int var2 = 0;
-        int var3 = Geoblox.field_C;
+        int var3 = Geoblox.clientControlFlowFlag;
         try {
             eg.field_p.a(111);
             var1_int = 10 / ((param0 - 68) / 57);
@@ -81,7 +81,7 @@ final class ih {
         int[] var34 = null;
         int[] var35 = null;
         var26 = null;
-        var27 = Geoblox.field_C;
+        var27 = Geoblox.clientControlFlowFlag;
         try {
           var4_int = contactX - vf.spriteScratchRaster.fullWidth / 2;
           var4_int = var4_int + vf.spriteScratchRaster.trimX;

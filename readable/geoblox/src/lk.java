@@ -32,7 +32,7 @@ final class lk {
     final int a(int param0, int param1) {
         int var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         if (null == this.field_c) {
           return 0;
         }

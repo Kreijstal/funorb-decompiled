@@ -104,7 +104,7 @@ abstract class oe extends dd {
         int[] depthBucketCounts = null;
         RuntimeException caughtFailure = null;
         RuntimeException contextFailure = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthBucketCounts = ch.meshFaceCountsByDepthBucket;
           depthBucketCountsAlias = depthBucketCounts;
@@ -315,7 +315,7 @@ abstract class oe extends dd {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = Geoblox.field_C;
+        var10 = Geoblox.clientControlFlowFlag;
         try {
           var3_int = 160;
           var4 = 190;
@@ -439,7 +439,7 @@ abstract class oe extends dd {
         int var14;
         int var15;
         int var16;
-        var16 = Geoblox.field_C;
+        var16 = Geoblox.clientControlFlowFlag;
         SoftwareRasterizer.fillVerticalGradient(param0 + 6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
         var5 = 211;
         var4 = 35;

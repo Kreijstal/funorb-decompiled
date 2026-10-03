@@ -150,7 +150,7 @@ final class qh extends ee implements pe, pl, ta {
         int var3 = 20;
         var3 = var3 + this.a(var3, ug.createEmailText, 170, this.field_I, 5);
         var3 = var3 + (5 + this.a(this.field_G, 170, ok.createEmailConfirmationText, 20, "", var3, (byte) -65));
-        var3 = var3 + this.a(var3, qg.createPasswordText, 170, this.field_M, 5);
+        var3 = var3 + this.a(var3, LoginPayloadKind.createPasswordText, 170, this.field_M, 5);
         var3 = var3 + (this.a(-99, this.field_N, v.createPasswordConfirmationText, var3, 170, createPasswordHintText) + 5);
         var3 = var3 + (this.a(-103, this.field_H, wj.createDisplayNameText, var3, 170, gk.createDisplayNameHintText) + 5);
         var3 = var3 + this.a(var3, 170, this.field_R, ue.createAgeText, (byte) -127);
@@ -260,7 +260,7 @@ final class qh extends ee implements pe, pl, ta {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           if (0 != param1) {
             if (param1 != 1) {

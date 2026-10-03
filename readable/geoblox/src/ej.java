@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ej {
-    static qg field_b;
+    static LoginPayloadKind field_b;
     static Sprite[] amorphousCrackFrames;
     static String[] ratingModeNames;
     static MusicScore field_d;
@@ -27,6 +27,6 @@ final class ej {
         field_z = "ej.A(";
         ratingModeNames = new String[]{"By rating", "By win percentage"};
         amorphousCrackFrames = new Sprite[4];
-        field_b = new qg(3);
+        field_b = new LoginPayloadKind(3);
     }
 }

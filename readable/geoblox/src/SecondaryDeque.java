@@ -76,7 +76,7 @@ final class SecondaryDeque {
 
     final int countNodes(byte methodGuard) {
         DualLinkNode nodeToCount = null;
-        int unusedClientGuardSnapshot = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         int nodeCount = 0;
         if (methodGuard == 67) {
             nodeToCount = this.sentinel.nextSecondaryNode;
@@ -122,7 +122,7 @@ final class SecondaryDeque {
         int var3 = 0;
         re var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           var4 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
           while (var4 != null) {

@@ -171,7 +171,7 @@ class vf extends hk {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != 0) {
             return;
@@ -241,7 +241,7 @@ class vf extends hk {
         int var15;
         fb var16;
         int var17;
-        var17 = Geoblox.field_C;
+        var17 = Geoblox.clientControlFlowFlag;
         this.field_F = new IntrusiveDeque();
         var2 = 83 / ((param0 - 48) / 55);
         var3 = 0;
@@ -298,7 +298,7 @@ class vf extends hk {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           var4_int = 122 % ((41 - param1) / 55);
           if (!((null != this.field_J) &&
@@ -347,7 +347,7 @@ class vf extends hk {
         int var5;
         fb var6;
         int var7;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         var5 = 3 / ((param0 + 46) / 58);
         var4 = (fb) ((Object) this.field_F.firstForIteration(0));
         while (var4 != null) {

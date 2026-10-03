@@ -64,7 +64,7 @@ final class hj {
         int[] argbPixelsSnapshot;
         byte[] paletteIndices;
         int[] rgbPixelsSnapshot;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         sprites = new Sprite[sb.decodedSpriteCount];
         if (methodGuard <= 60) {
           field_a = 2;

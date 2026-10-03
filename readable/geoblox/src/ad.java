@@ -133,7 +133,7 @@ final class ad extends ia {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         try {
             if (param0 != -32) {
                 field_p = false;
@@ -184,7 +184,7 @@ final class ad extends ia {
     final ia c() {
         pc var1;
         int var2;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         while (true) {
           var1 = (pc) ((Object) this.field_l.nextForIteration(1));
           if (var1 == null) {

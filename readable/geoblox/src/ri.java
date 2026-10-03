@@ -33,7 +33,7 @@ final class ri {
             String var10 = null;
             String var11 = null;
             CharSequence var12 = null;
-            var9 = Geoblox.field_C;
+            var9 = Geoblox.clientControlFlowFlag;
             try {
               if ((null == oc.field_e) &&
                   (!w.a(param0, 52))) {
@@ -49,7 +49,7 @@ final class ri {
                 }
                 fj.field_q.position = 0;
                 fj.field_q.writeByte((byte) -102, 14);
-                fj.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).field_c);
+                fj.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).wireId);
                 cm.a(-1, -1);
                 PacketBuffer.field_l = oe.field_T;
               }
@@ -134,7 +134,7 @@ final class ri {
                 ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
                 PacketBuffer.field_l = eh.field_b;
                 if (ih.field_a.a((byte) -32) != ej.field_b) {
-                  if (ih.field_a.a((byte) -32) == Geoblox.field_B) {
+                  if (ih.field_a.a((byte) -32) == Geoblox.longAndNameLoginType) {
                     rl.field_W.a(k.c(108), 0);
                   }
                 } else {

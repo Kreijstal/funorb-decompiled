@@ -45,7 +45,7 @@ final class eb {
         int var3;
         String var4;
         ii var5;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         if (!param0) {
           var4 = (String) null;
           eb.a((java.applet.Applet) null, (byte) -56, (String) null);
@@ -79,7 +79,7 @@ final class eb {
     }
 
     final static int handleArchiveHandshakeFailure(int replyCode, int methodGuard) {
-        int unusedClientGuardSnapshot = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         gj.archiveConnectTask = null;
         qh.archiveHandshakeStage = 0;
         li.archiveHandshakeSocket = null;

@@ -19,7 +19,7 @@ final class og extends DualLinkNode {
         String var6;
         String var7;
         String var8;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         var6 = "(" + ad.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
         var1 = var6;
         if (0 < p.field_k) {
@@ -64,7 +64,7 @@ final class og extends DualLinkNode {
         ck var7 = null;
         int var9 = 0;
         ByteArrayBuffer var10 = null;
-        var9 = Geoblox.field_C;
+        var9 = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             if (1 == param0) {
@@ -121,7 +121,7 @@ final class og extends DualLinkNode {
 
     final void f(byte param0) {
         int var2 = 0;
-        int var3 = Geoblox.field_C;
+        int var3 = Geoblox.clientControlFlowFlag;
         if (param0 != 119) {
             entityMotionSpeed = 0.380857914686203f;
         }
@@ -143,7 +143,7 @@ final class og extends DualLinkNode {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (param0 > -7) {
@@ -186,7 +186,7 @@ final class og extends DualLinkNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != 0) {
             return;

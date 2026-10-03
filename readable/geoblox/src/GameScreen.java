@@ -46,7 +46,7 @@ final class GameScreen extends MenuScreen {
         int actionId = 0;
         RuntimeException menuKeyFailure = null;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             L1: {
@@ -252,7 +252,7 @@ final class GameScreen extends MenuScreen {
         RuntimeException backgroundFailure = null;
         int tileY = 0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (setTutorialOffsetGuard) {
             this.tutorialSlideOffset = 124;
@@ -337,7 +337,7 @@ final class GameScreen extends MenuScreen {
         int clientControlFlowGuard = 0;
         RuntimeException caughtFailure = null;
         RuntimeException pressAnimationFailure = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             if (!this.menuPressAnimationActive) {
@@ -388,7 +388,7 @@ final class GameScreen extends MenuScreen {
         int confirmationButtonLeft = 0;
         int confirmationTextCenter = 0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != -28750) {
             return;
@@ -679,7 +679,7 @@ final class GameScreen extends MenuScreen {
         int actionId = 0;
         int clientControlFlowGuard = 0;
         RuntimeException caughtFailure = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           guardRemainder = 121 % ((44 - methodGuard) / 36);
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
@@ -732,7 +732,7 @@ final class GameScreen extends MenuScreen {
         RuntimeException caughtFailure = null;
         RuntimeException selectionFailure = null;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard >= -40) {
             this.renderTutorialPage(77, -13);
@@ -978,7 +978,7 @@ final class GameScreen extends MenuScreen {
         String unlistedCurrentScoreText = null;
         String entryName = null;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if ((ca.field_f == null) &&
               (!fh.c(-115))) {
@@ -1124,7 +1124,7 @@ final class GameScreen extends MenuScreen {
         int inputDerivedStateBranch = 0;
         RuntimeException screenUpdateFailure = null;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           nextAnimationTickSnapshot = this.animationTick + 1;
           this.animationTick = this.animationTick + 1;
@@ -1459,7 +1459,7 @@ final class GameScreen extends MenuScreen {
         double orbitAngleSpacing = 0.0;
         int clientControlFlowGuard = 0;
         RuntimeException caughtFailure = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             paragraphY = 180;
@@ -1645,7 +1645,7 @@ final class GameScreen extends MenuScreen {
         RuntimeException menuPointerFailure = null;
         int selectedActionSnapshot = 0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (initialClick) {
             this.tutorialPageIndex = -45;
@@ -1771,7 +1771,7 @@ final class GameScreen extends MenuScreen {
                     break L2;
                   }
                   this.selectedItemIndex = 3;
-                  if (Geoblox.field_C == 0) {
+                  if (Geoblox.clientControlFlowFlag == 0) {
                     break L2;
                   }
                 }
@@ -1806,7 +1806,7 @@ final class GameScreen extends MenuScreen {
               if ((this.tutorialPageIndex != 4) &&
                   (this.selectedItemIndex == 3)) {
                 this.selectedItemIndex = 2;
-                if (Geoblox.field_C == 0) {
+                if (Geoblox.clientControlFlowFlag == 0) {
                   break L1;
                 }
               }
@@ -1933,7 +1933,7 @@ final class GameScreen extends MenuScreen {
         int selectedActionSnapshot = 0;
         String[] scoreCategoryNames = null;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           td.playPcmSample(-348, fl.field_c[29]);
           newSessionTutorialModeFlag = 0;
@@ -2251,7 +2251,7 @@ final class GameScreen extends MenuScreen {
         int actionId = 0;
         int clientControlFlowGuard = 0;
         RuntimeException caughtFailure = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
@@ -2308,7 +2308,7 @@ final class GameScreen extends MenuScreen {
         int itemColumnOrPressOffset = 0;
         int volumeLevelOrSliderOffset = 0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard >= -74) {
             return;
@@ -2542,7 +2542,7 @@ final class GameScreen extends MenuScreen {
         RuntimeException caughtFailure = null;
         RuntimeException screenKeyFailure = null;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 62) {
             this.tutorialGeometryCategory = -26;

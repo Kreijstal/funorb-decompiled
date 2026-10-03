@@ -30,7 +30,7 @@ abstract class ArchiveNetworkClient {
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 > -99) {
             return;
@@ -139,7 +139,7 @@ abstract class ArchiveNetworkClient {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           var4_int = param3.readBits((byte) -17, param1);
           if (var4_int == param2) {
@@ -194,7 +194,7 @@ abstract class ArchiveNetworkClient {
 
     final static IndexedSprite[] buildIndexedSpritesFromDecodedSheet(int firstSpriteIndex) {
         int spriteIndex = 0;
-        int unusedClientGuardSnapshot = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         IndexedSprite[] sprites = new IndexedSprite[sb.decodedSpriteCount];
         for (spriteIndex = firstSpriteIndex; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
             sprites[spriteIndex] = new IndexedSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], cm.decodedSpritePalette);

@@ -52,7 +52,7 @@ final class bh extends java.awt.Canvas {
         int var13 = 0;
         PacketBuffer var14 = null;
         int[][] var18 = null;
-        var12 = Geoblox.field_C;
+        var12 = Geoblox.clientControlFlowFlag;
         try {
           var14 = eh.field_d;
           if (param0 != 2) {
@@ -169,7 +169,7 @@ final class bh extends java.awt.Canvas {
         int var13 = 0;
         SecondaryDeque pendingEntities = null;
         SecondaryDeque pendingEntitiesForRemoval = null;
-        var13 = Geoblox.field_C;
+        var13 = Geoblox.clientControlFlowFlag;
         try {
           pendingEntities = new SecondaryDeque();
           pendingEntitiesForRemoval = pendingEntities;

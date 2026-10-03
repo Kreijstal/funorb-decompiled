@@ -8,7 +8,7 @@ final class jc {
 
     final static void requestAvatarFeedback(int feedbackRequestId, boolean clearSpriteGuard) {
         int unusedClientControlSnapshot;
-        unusedClientControlSnapshot = Geoblox.field_C;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         if ((7 == feedbackRequestId) &&
             (MenuScreen.avatarFeedbackFrameBase != 36)) {
           MenuScreen.avatarFeedbackFrameBase = 36;
@@ -140,7 +140,7 @@ final class jc {
         StringBuilder failureContextBuilder = null;
         String inputContextDescription = null;
         RuntimeException caughtFailure = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           formatVersion = input.readBits((byte) -17, 8);
           if (!readEnabled) {

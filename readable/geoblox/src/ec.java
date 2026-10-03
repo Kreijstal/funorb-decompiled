@@ -15,7 +15,7 @@ final class ec {
         mg var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           var3 = 57 % ((param0 - 57) / 46);
           var5 = (ai) ((Object) TriangleMesh.field_j.firstForIteration(0));
@@ -53,7 +53,7 @@ final class ec {
         int popupY = 0;
         int controlFlowGuard = 0;
         int candidateIndex = 0;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if ((0 == h.matchCandidateCount) &&
               (0 < wb.newAttachmentCount)) {
@@ -74,7 +74,7 @@ final class ec {
             ra.a(jf.field_g ^ 255, -99, jf.field_g);
           }
           if (gf.matchChainLength >= 6) {
-            ra.a(qg.field_d ^ 255, -57, qg.field_d);
+            ra.a(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
           }
           if (gf.matchChainLength >= 7) {
             ra.a(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);

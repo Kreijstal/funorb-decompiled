@@ -4,17 +4,17 @@
 public final class Geoblox extends wf {
     static String[] reconnectMessages;
     static String loginMessage;
-    static volatile long field_D;
-    static f field_y;
-    static qg field_B;
-    public static int field_C;
+    static volatile long canvasCreationTimeMillis;
+    static f activeMessageDialog;
+    static LoginPayloadKind longAndNameLoginType;
+    public static int clientControlFlowFlag;
 
-    private final void loadSportsTheme(int param0) {
+    private final void loadSportsTheme(int methodGuard) {
         if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
             if (!(ll.gameGraphicsArchive.loadGroupByName("sports", (byte) -126))) {
                 return;
             }
-            if (param0 <= 37) {
+            if (methodGuard <= 37) {
                 this.initializeScreens(92);
             }
             hd.sportsForegroundSprite = ug.loadSprite("sports_foreground", ll.gameGraphicsArchive, (byte) -78, "sports");
@@ -27,8 +27,8 @@ public final class Geoblox extends wf {
     public Geoblox() {
     }
 
-    final void serviceAudio(int param0) {
-        if (param0 != 1) {
+    final void serviceAudio(int methodGuard) {
+        if (methodGuard != 1) {
             this.loadJewelsTheme(true);
         }
         ScorePopup.b(122);
@@ -56,7 +56,7 @@ public final class Geoblox extends wf {
         int categoryThenAnimationFrameIndex = 0;
         int geometryCanvasWidthThenFrameIndex = 0;
         int paletteVariantThenKeyboardIndex = 0;
-        int clientFlagSnapshot = field_C;
+        int clientFlagSnapshot = clientControlFlowFlag;
         oj.a(vc.field_i, (byte) -104);
         if (null != wj.field_F && null != GzipInflater.field_a && ah.field_c != null && null != cd.field_m) {
             lc.a(ca.unpackingMusicText, -2, 60.0f);
@@ -233,23 +233,23 @@ public final class Geoblox extends wf {
         }
         lc.a(uj.field_a, -2, 100.0f);
         this.renderFrame(methodGuard ^ 496);
-        qg.b(9313);
+        LoginPayloadKind.b(9313);
         return true;
     }
 
-    private final boolean pollArchiveLoading(boolean param0) {
-        ResourceArchive stackIn_10_0 = null;
-        boolean stackIn_11_1 = false;
-        String stackIn_27_0;
-        ResourceArchive stackIn_27_1;
-        String stackIn_27_2;
-        String stackIn_27_3;
-        boolean stackIn_28_4 = false;
-        String stackIn_47_0;
-        ResourceArchive stackIn_47_1;
-        String stackIn_47_2;
-        String stackIn_47_3;
-        boolean stackIn_48_4 = false;
+    private final boolean pollArchiveLoading(boolean archivePollGuard) {
+        ResourceArchive soundArchiveSnapshot = null;
+        boolean soundLoadGroupsGuard = false;
+        String fontWaitingTextSnapshot;
+        ResourceArchive fontArchiveSnapshot;
+        String fontGroupNameSnapshot;
+        String fontLoadingTextSnapshot;
+        boolean fontProgressGuard = false;
+        String graphicsWaitingTextSnapshot;
+        ResourceArchive graphicsArchiveSnapshot;
+        String graphicsGroupNameSnapshot;
+        String graphicsLoadingTextSnapshot;
+        boolean graphicsProgressGuard = false;
         if (ef.field_e) {
           return true;
         }
@@ -257,9 +257,9 @@ public final class Geoblox extends wf {
         if ((wj.field_F.ensureIndexLoaded(0)) &&
             (wj.field_F.loadAllGroups(true))) {
           if (ah.field_c.ensureIndexLoaded(0)) {
-            stackIn_10_0 = ah.field_c;
-            stackIn_11_1 = (param0) ? false : true;
-            if (((ResourceArchive) (Object) stackIn_10_0).loadAllGroups(stackIn_11_1)) {
+            soundArchiveSnapshot = ah.field_c;
+            soundLoadGroupsGuard = (archivePollGuard) ? false : true;
+            if (((ResourceArchive) (Object) soundArchiveSnapshot).loadAllGroups(soundLoadGroupsGuard)) {
               if ((GzipInflater.field_a.ensureIndexLoaded(0)) &&
                   (GzipInflater.field_a.loadAllGroups(true))) {
                 if ((cd.field_m.ensureIndexLoaded(0)) &&
@@ -279,7 +279,7 @@ public final class Geoblox extends wf {
                         }
                         if ((ki.basicUiGraphicsArchive.ensureIndexLoaded(0)) &&
                             (ki.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124))) {
-                          if (param0) {
+                          if (archivePollGuard) {
                             return true;
                           }
                           SecondaryDeque.c(480);
@@ -288,12 +288,12 @@ public final class Geoblox extends wf {
                           ef.field_e = true;
                           return true;
                         }
-                        stackIn_47_0 = ff.waitingForGraphicsText;
-                        stackIn_47_1 = ki.basicUiGraphicsArchive;
-                        stackIn_47_2 = "basic";
-                        stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
-                        stackIn_48_4 = (param0) ? false : true;
-                        lc.a(gf.formatArchiveGroupProgress(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4), -2, 50.0f);
+                        graphicsWaitingTextSnapshot = ff.waitingForGraphicsText;
+                        graphicsArchiveSnapshot = ki.basicUiGraphicsArchive;
+                        graphicsGroupNameSnapshot = "basic";
+                        graphicsLoadingTextSnapshot = AccountWelcomePanel.loadingGraphicsText;
+                        graphicsProgressGuard = (archivePollGuard) ? false : true;
+                        lc.a(gf.formatArchiveGroupProgress(graphicsWaitingTextSnapshot, graphicsArchiveSnapshot, graphicsGroupNameSnapshot, graphicsLoadingTextSnapshot, graphicsProgressGuard), -2, 50.0f);
                         return false;
                       }
                       lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
@@ -302,15 +302,15 @@ public final class Geoblox extends wf {
                     lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                     return false;
                   }
-                  stackIn_27_0 = ik.waitingForFontsText;
-                  stackIn_27_1 = ii.fontMetricsArchive;
-                  stackIn_27_2 = "";
-                  stackIn_27_3 = nb.loadingFontsText;
-                  stackIn_28_4 = (param0) ? false : true;
-                  lc.a(gf.formatArchiveGroupProgress(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4), -2, 35.0f);
+                  fontWaitingTextSnapshot = ik.waitingForFontsText;
+                  fontArchiveSnapshot = ii.fontMetricsArchive;
+                  fontGroupNameSnapshot = "";
+                  fontLoadingTextSnapshot = nb.loadingFontsText;
+                  fontProgressGuard = (archivePollGuard) ? false : true;
+                  lc.a(gf.formatArchiveGroupProgress(fontWaitingTextSnapshot, fontArchiveSnapshot, fontGroupNameSnapshot, fontLoadingTextSnapshot, fontProgressGuard), -2, 35.0f);
                   return false;
                 }
-                lc.a(vd.a(ud.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
+                lc.a(vd.a(ud.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, archivePollGuard, cd.field_m), -2, 25.0f);
                 return false;
               }
               lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
@@ -324,7 +324,7 @@ public final class Geoblox extends wf {
         return false;
     }
 
-    final void releaseGameResources(byte param0) {
+    final void releaseGameResources(byte methodGuard) {
         Geoblox.clearAppletStatics(0);
         ch.c((byte) 122);
         kj.b(false);
@@ -347,32 +347,32 @@ public final class Geoblox extends wf {
         ab.a((byte) -60);
         gf.a(true);
         gg.a(45);
-        jk.a(param0 ^ 10848);
+        jk.a(methodGuard ^ 10848);
         ik.a(48);
-        vd.b(param0 + 59);
+        vd.b(methodGuard + 59);
         pg.b(22059);
         lj.a(-1);
         cl.a(-9474);
         i.a(false);
-        cj.b(param0 ^ 78);
+        cj.b(methodGuard ^ 78);
         AwtRasterBuffer.b((byte) 58);
         eb.a((byte) -127);
-        he.a(param0 + 64);
+        he.a(methodGuard + 64);
         v.a(true);
         GameScreen.releaseStaticReferences((byte) 28);
-        GameplaySession.i(-17199);
+        GameplaySession.releaseStaticReferences(-17199);
         ArchiveNetworkClient.d(-50);
-        DiskCacheWorker.a(param0 ^ 74);
+        DiskCacheWorker.a(methodGuard ^ 74);
         ArchiveCatalog.a(86);
         BufferedSocket.releaseTransformedVertexScratch(21888);
         IntrusiveDeque.f(51);
         IntrusiveNode.b((byte) -128);
-        fi.a(param0 - 63);
+        fi.a(methodGuard - 63);
         MidiTrackReader.clearStatusDataByteCounts();
         ad.c(-1);
         je.a((byte) 54);
         AudioOutput.h();
-        tj.a(param0 + 154);
+        tj.a(methodGuard + 154);
         ud.a(0);
         da.a(50);
         ArchiveIndex.a(114);
@@ -381,32 +381,32 @@ public final class Geoblox extends wf {
         eh.a(-6910);
         ld.a(true);
         fa.a(30970);
-        ng.k(param0 - 33);
+        ng.k(methodGuard - 33);
         r.r(-60);
         rl.h((byte) 57);
-        ei.n(param0 ^ 69);
+        ei.n(methodGuard ^ 69);
         f.n(-107);
         qh.h(0);
         AccountWelcomePanel.f(1);
         pf.a((byte) -97);
         hi.i((byte) -85);
-        mb.a(param0 + 63);
+        mb.a(methodGuard + 63);
         ej.a(-89);
-        mj.a(param0 + 168);
+        mj.a(methodGuard + 168);
         ue.a(true);
         w.a((byte) 102);
-        bl.a(param0 ^ 9769);
+        bl.a(methodGuard ^ 9769);
         BitmapFont.releaseTextScratchStorage();
         DualLinkNode.c((byte) -110);
-        SpriteState.f(param0 ^ -5558);
+        SpriteState.f(methodGuard ^ -5558);
         PendingActionMarker.c((byte) 45);
         ke.a((byte) -80);
         af.a((byte) -103);
         te.a(-8297);
         qe.a(-8616);
-        qg.a(85);
-        df.a(param0 + 64);
-        PacketBuffer.j(param0 ^ -64);
+        LoginPayloadKind.a(85);
+        df.a(methodGuard + 64);
+        PacketBuffer.j(methodGuard ^ -64);
         ki.a((byte) -64);
         MenuScreen.releaseStaticReferences((byte) 26);
         oh.a((byte) -88);
@@ -442,8 +442,8 @@ public final class Geoblox extends wf {
         rb.a((byte) -112);
         fc.a((byte) -126);
         nb.a(-102);
-        ak.a(param0 ^ 30613);
-        kf.b(param0 - 15583);
+        ak.a(methodGuard ^ 30613);
+        kf.b(methodGuard - 15583);
         tc.a(true);
         mi.b(false);
         vg.a(true);
@@ -455,7 +455,7 @@ public final class Geoblox extends wf {
         ek.a(-128);
         bi.a(1);
         rd.a((byte) 94);
-        hb.a(param0 ^ -64);
+        hb.a(methodGuard ^ -64);
         jf.b((byte) -89);
         el.b(-5927);
         hk.f((byte) -11);
@@ -464,7 +464,7 @@ public final class Geoblox extends wf {
         dd.i(256);
         ee.e(14078);
         gb.b((byte) 79);
-        a.a(param0);
+        a.a(methodGuard);
         MusicDecodeStage.a();
         ul.a(-113);
         og.f(111);
@@ -480,7 +480,7 @@ public final class Geoblox extends wf {
         bd.b(-20152);
         cm.a(false);
         ImageProducerRasterBuffer.c((byte) -117);
-        rj.a(param0 ^ -33);
+        rj.a(methodGuard ^ -33);
         id.b(true);
         md.a((byte) 40);
         li.a(false);
@@ -491,27 +491,27 @@ public final class Geoblox extends wf {
         hd.f((byte) -52);
         hc.k(-243);
         dj.l((byte) -15);
-        qf.m(param0 ^ -320);
+        qf.m(methodGuard ^ -320);
         hl.f(407213000);
         vh.b(true);
         vf.h(0);
         td.f(-116);
         pi.j(24033);
         vi.f(-75);
-        TextInputValidator.f(param0 + 65);
+        TextInputValidator.f(methodGuard + 65);
         jc.a(-43);
         s.b(false);
         qb.f(0);
         ol.f(0);
-        ll.a(param0 + 71);
+        ll.a(methodGuard + 71);
         vc.b((byte) -87);
-        l.b(param0 ^ 47);
+        l.b(methodGuard ^ 47);
         sj.a(27);
         la.g((byte) -113);
-        fk.f(param0 + 14576);
+        fk.f(methodGuard + 14576);
         ck.a(-113);
-        gi.a(param0 ^ 63);
-        ra.a(param0 + 63);
+        gi.a(methodGuard ^ 63);
+        ra.a(methodGuard + 63);
         fj.e(-111);
         gj.h(-1);
         cd.e(1353);
@@ -531,28 +531,28 @@ public final class Geoblox extends wf {
         re.b(127);
         ii.a(122);
         sl.a(102);
-        gk.a(param0 ^ -64);
+        gk.a(methodGuard ^ -64);
         ni.a((byte) -113);
         qi.c(59);
-        p.b(param0 ^ 25);
+        p.b(methodGuard ^ 25);
         od.a((byte) -92);
         lf.b(8221);
         th.d((byte) -109);
         nk.b(-17226);
         uj.a(-53);
-        tl.b(param0 ^ -6501);
+        tl.b(methodGuard ^ -6501);
         ea.b(1000);
-        se.b(param0 ^ -65);
+        se.b(methodGuard ^ -65);
         ca.b(false);
         si.a(false);
         lk.a((byte) 0);
         ScorePopup.c((byte) -40);
         uk.d((byte) 113);
-        g.g(param0 - 51);
-        ag.g(param0 - 22);
+        g.g(methodGuard - 51);
+        ag.g(methodGuard - 22);
         mk.c((byte) -9);
         cf.g(-48);
-        MatchingTextValidator.clearStaticReferences(param0 + 64);
+        MatchingTextValidator.clearStaticReferences(methodGuard + 64);
         hh.a(false);
         fb.b(true);
         lh.b(-481);
@@ -560,14 +560,14 @@ public final class Geoblox extends wf {
         this.field_n = null;
     }
 
-    private final void loadGermsTheme(byte param0) {
+    private final void loadGermsTheme(byte methodGuard) {
         if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
             if (!(ll.gameGraphicsArchive.loadGroupByName("germs", (byte) -126))) {
                 return;
             }
             sl.germsForegroundSprite = ug.loadSprite("germs_foreground", ll.gameGraphicsArchive, (byte) -78, "germs");
             sg.germsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "germs", "germs_background");
-            int var2 = -24 / ((param0 + 13) / 61);
+            int guardQuotient = -24 / ((methodGuard + 13) / 61);
             ll.themesLoaded[3] = true;
             return;
         }
@@ -577,42 +577,42 @@ public final class Geoblox extends wf {
         this.a(11, "geoblox", 640);
     }
 
-    final static void setRasterTarget(int param0, Sprite param1) {
+    final static void setRasterTarget(int methodGuard, Sprite targetSprite) {
         try {
             oc.b(9);
-            SoftwareRasterizer.setRasterTarget(param1.pixels, param1.fullWidth, param1.fullHeight);
-            if (param0 != 1) {
-                Sprite var3 = (Sprite) null;
+            SoftwareRasterizer.setRasterTarget(targetSprite.pixels, targetSprite.fullWidth, targetSprite.fullHeight);
+            if (methodGuard != 1) {
+                Sprite guardedNullSpriteSnapshot = (Sprite) null;
                 Geoblox.setRasterTarget(-34, (Sprite) null);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "Geoblox.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException rasterTargetFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rasterTargetFailure), "Geoblox.T(" + methodGuard + ',' + (targetSprite != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void clearAppletStatics(int param0) {
-        field_B = null;
+    public static void clearAppletStatics(int methodGuard) {
+        longAndNameLoginType = null;
         reconnectMessages = null;
-        if (param0 != 0) {
-            Sprite var2 = (Sprite) null;
+        if (methodGuard != 0) {
+            Sprite guardedNullSpriteSnapshot = (Sprite) null;
             Geoblox.setRasterTarget(30, (Sprite) null);
         }
         loginMessage = null;
-        field_y = null;
+        activeMessageDialog = null;
     }
 
-    final void updateGame(boolean param0) {
-        int fieldTemp$0 = 0;
-        boolean discarded$1 = false;
-        boolean stackIn_9_1 = false;
-        boolean stackIn_14_1 = false;
-        boolean stackIn_63_0 = false;
-        boolean stackIn_91_0 = false;
-        int var2;
-        int var3;
-        var3 = field_C;
+    final void updateGame(boolean methodGuard) {
+        int nextScreenTransitionTickSnapshot = 0;
+        boolean discardedArchiveReadiness = false;
+        boolean fullscreenAvailableSnapshot = false;
+        boolean archiveRequestGuardSnapshot = false;
+        boolean introStillRunningSnapshot = false;
+        boolean fullscreenAvailableForUiSnapshot = false;
+        int uiServiceResultOrOverlayMode;
+        int clientControlFlowGuard;
+        clientControlFlowGuard = clientControlFlowFlag;
         ng.h(78);
-        if (param0) {
+        if (methodGuard) {
           return;
         }
         if ((InstrumentPatch.field_n != null) &&
@@ -621,18 +621,18 @@ public final class Geoblox extends wf {
           InstrumentPatch.field_n = null;
         }
         if (null == InstrumentPatch.field_n) {
-          stackIn_9_1 = false;
+          fullscreenAvailableSnapshot = false;
         } else {
-          stackIn_9_1 = true;
+          fullscreenAvailableSnapshot = true;
         }
-        this.b(stackIn_9_1, 19660);
+        this.b(fullscreenAvailableSnapshot, 19660);
         if (cf.field_k) {
-          if (param0) {
-            stackIn_14_1 = false;
+          if (methodGuard) {
+            archiveRequestGuardSnapshot = false;
           } else {
-            stackIn_14_1 = true;
+            archiveRequestGuardSnapshot = true;
           }
-          this.requestGameArchives(stackIn_14_1);
+          this.requestGameArchives(archiveRequestGuardSnapshot);
           cf.field_k = false;
         }
         while (sh.a((byte) -118, ArchiveRequest.field_m)) {
@@ -656,16 +656,16 @@ public final class Geoblox extends wf {
             } else {
               if ((dd.a((byte) 47)) &&
                   (!jk.field_a)) {
-                stackIn_91_0 = !(InstrumentPatch.field_n == null);
-                var2 = sl.a(stackIn_91_0, (wf) (this), false);
-                if (var2 != 2364824) {
-                  if (!((var2 != 1) &&
-                      (2 != var2))) {
+                fullscreenAvailableForUiSnapshot = !(InstrumentPatch.field_n == null);
+                uiServiceResultOrOverlayMode = sl.a(fullscreenAvailableForUiSnapshot, (wf) (this), false);
+                if (uiServiceResultOrOverlayMode != 2364824) {
+                  if (!((uiServiceResultOrOverlayMode != 1) &&
+                      (2 != uiServiceResultOrOverlayMode))) {
                     if (null != InstrumentPatch.field_n) {
                       InstrumentPatch.field_n.a(0, MenuScreen.platformTaskDispatcher);
                       InstrumentPatch.field_n = null;
                     }
-                    if (var2 == 2) {
+                    if (uiServiceResultOrOverlayMode == 2) {
                       gf.a(k.c(109), 62);
                     }
                   }
@@ -749,9 +749,9 @@ public final class Geoblox extends wf {
                 if (TriangleMesh.screenTransitionTick == 0) {
                   td.playPcmSample(-348, fl.field_c[30]);
                 }
-                fieldTemp$0 = TriangleMesh.screenTransitionTick + 1;
+                nextScreenTransitionTickSnapshot = TriangleMesh.screenTransitionTick + 1;
                 TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
-                if (fieldTemp$0 == 160) {
+                if (nextScreenTransitionTickSnapshot == 160) {
                   if ((el.gameplayReturnScreenId != -1) &&
                       (fh.c(-109))) {
                     if (cd.gameplayOriginScreenId != 0) {
@@ -772,9 +772,9 @@ public final class Geoblox extends wf {
               } else {
                 if (tc.currentScreenId == -1) {
                   if (dl.field_b) {
-                    stackIn_63_0 = !(gb.b(1));
-                    dl.field_b = stackIn_63_0;
-                    if (!stackIn_63_0) {
+                    introStillRunningSnapshot = !(gb.b(1));
+                    dl.field_b = introStillRunningSnapshot;
+                    if (!introStillRunningSnapshot) {
                       tc.currentScreenId = -2;
                       ai.requestedScreenId = 0;
                     }
@@ -790,8 +790,8 @@ public final class Geoblox extends wf {
           je.c((byte) -122);
           cm.a(-1, 0);
           if (sb.a(54)) {
-            var2 = this.d((byte) -67);
-            if (!(var2 != 2)) {
+            uiServiceResultOrOverlayMode = this.d((byte) -67);
+            if (!(uiServiceResultOrOverlayMode != 2)) {
               oh.a(320, 240, fi.smallFont, fi.smallFont.maxAscent * 3 >> 1, -128, fi.smallFont.maxAscent);
             }
           }
@@ -802,44 +802,44 @@ public final class Geoblox extends wf {
           }
           this.h(115);
           if (fj.f(-31456)) {
-            discarded$1 = this.pollArchiveLoading(false);
+            discardedArchiveReadiness = this.pollArchiveLoading(false);
           }
         }
     }
 
-    final void renderFrame(int param0) {
-        Object stackIn_3_0 = null;
-        boolean stackIn_7_0 = false;
-        boolean stackIn_42_0 = false;
-        Object var2;
+    final void renderFrame(int methodGuard) {
+        Object renderTargetCanvasSnapshot = null;
+        boolean loadingCanvasStateSnapshot = false;
+        boolean overlayCanvasStateSnapshot = false;
+        Object renderTargetCanvas;
         int transitionSplitY;
-        int var4;
-        var4 = field_C;
+        int clientControlFlowGuard;
+        clientControlFlowGuard = clientControlFlowFlag;
         if (InstrumentPatch.field_n != null) {
-          stackIn_3_0 = InstrumentPatch.field_n;
+          renderTargetCanvasSnapshot = InstrumentPatch.field_n;
         } else {
-          stackIn_3_0 = f.field_kb;
+          renderTargetCanvasSnapshot = f.field_kb;
         }
-        var2 = stackIn_3_0;
+        renderTargetCanvas = renderTargetCanvasSnapshot;
         if (bl.b(255)) {
           if (InstrumentPatch.field_n != null) {
-            stackIn_7_0 = true;
+            loadingCanvasStateSnapshot = true;
           } else {
-            stackIn_7_0 = lh.field_d;
+            loadingCanvasStateSnapshot = lh.field_d;
           }
-          ei.a(stackIn_7_0, param0 - 25853, (java.awt.Canvas) (var2));
+          ei.a(loadingCanvasStateSnapshot, methodGuard - 25853, (java.awt.Canvas) (renderTargetCanvas));
           return;
         }
         if (!ib.gameAssetsInitialized) {
-          fc.a(true, (java.awt.Canvas) (var2));
+          fc.a(true, (java.awt.Canvas) (renderTargetCanvas));
           return;
         }
         if (!uk.g(39)) {
           lc.a(ph.waitingForExtraDataText, -2, 100.0f);
-          fc.a(true, (java.awt.Canvas) (var2));
+          fc.a(true, (java.awt.Canvas) (renderTargetCanvas));
           return;
         }
-        sh.mainRasterBuffer.setAsRasterTarget(param0 - 25598);
+        sh.mainRasterBuffer.setAsRasterTarget(methodGuard - 25598);
         SoftwareRasterizer.clearFramebuffer();
         if ((tc.currentScreenId == ai.requestedScreenId) &&
             (el.gameplayReturnScreenId == -1)) {
@@ -863,7 +863,7 @@ public final class Geoblox extends wf {
             SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 1);
           }
           if (tc.currentScreenId == -2) {
-            oc.c(param0 ^ 25613);
+            oc.c(methodGuard ^ 25613);
           }
           SoftwareRasterizer.setClip(0, 0, 640, transitionSplitY);
           if (ai.requestedScreenId != -1) {
@@ -878,24 +878,24 @@ public final class Geoblox extends wf {
         }
         if (cg.b(true)) {
           if (null == InstrumentPatch.field_n) {
-            stackIn_42_0 = lh.field_d;
+            overlayCanvasStateSnapshot = lh.field_d;
           } else {
-            stackIn_42_0 = true;
+            overlayCanvasStateSnapshot = true;
           }
-          kb.a(stackIn_42_0, false);
+          kb.a(overlayCanvasStateSnapshot, false);
         }
-        i.a(0, (byte) 110, (java.awt.Canvas) (var2), 0);
-        if (param0 != 25853) {
-          field_D = -11L;
+        i.a(0, (byte) 110, (java.awt.Canvas) (renderTargetCanvas), 0);
+        if (methodGuard != 25853) {
+          canvasCreationTimeMillis = -11L;
         }
     }
 
-    private final void loadJewelsTheme(boolean param0) {
+    private final void loadJewelsTheme(boolean methodGuard) {
         if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
             if (!(ll.gameGraphicsArchive.loadGroupByName("jewels", (byte) -128))) {
                 return;
             }
-            if (param0) {
+            if (methodGuard) {
                 return;
             }
             kj.jewelsForegroundSprite = ug.loadSprite("jewls_foreground", ll.gameGraphicsArchive, (byte) -78, "jewels");
@@ -905,29 +905,29 @@ public final class Geoblox extends wf {
         }
     }
 
-    private final void loadBakingTheme(int param0) {
-        if (ll.gameGraphicsArchive.ensureIndexLoaded(param0 - 2)) {
+    private final void loadBakingTheme(int methodGuard) {
+        if (ll.gameGraphicsArchive.ensureIndexLoaded(methodGuard - 2)) {
             if (!(ll.gameGraphicsArchive.loadGroupByName("baking", (byte) -125))) {
                 return;
             }
             hi.bakingForegroundSprite = ug.loadSprite("baking_foreground", ll.gameGraphicsArchive, (byte) -78, "baking");
-            if (param0 != 2) {
+            if (methodGuard != 2) {
                 return;
             }
-            ca.bakingBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, param0 - 1, "baking", "baking_background");
+            ca.bakingBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, methodGuard - 1, "baking", "baking_background");
             ll.themesLoaded[4] = true;
             return;
         }
     }
 
-    private final void loadSpaceTheme(boolean param0) {
+    private final void loadSpaceTheme(boolean methodGuard) {
         if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
             if (!ll.gameGraphicsArchive.loadGroupByName("space", (byte) -127)) {
                 return;
             }
             fl.spaceForegroundSprite = ug.loadSprite("space_foreground", ll.gameGraphicsArchive, (byte) -78, "space");
             df.spaceBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "space", "space_background");
-            if (param0) {
+            if (methodGuard) {
                 return;
             }
             ll.themesLoaded[6] = true;
@@ -935,13 +935,13 @@ public final class Geoblox extends wf {
         }
     }
 
-    private final void requestGameArchives(boolean param0) {
+    private final void requestGameArchives(boolean graphicsArchiveGuard) {
         if (ak.field_b != null) {
             SpriteState.a(true, ak.field_b);
             ak.field_b = null;
             ih.b(-105);
         }
-        ll.gameGraphicsArchive = je.a(1, true, param0, true, (byte) -111);
+        ll.gameGraphicsArchive = je.a(1, true, graphicsArchiveGuard, true, (byte) -111);
         wj.field_F = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
         ah.field_c = SocketArchiveNetworkClient.createResourceArchive(3, (byte) -62);
         cd.field_m = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
@@ -956,7 +956,7 @@ public final class Geoblox extends wf {
         int xRotationSign;
         int yRotationSign;
         int controlFlagSnapshot;
-        controlFlagSnapshot = field_C;
+        controlFlagSnapshot = clientControlFlowFlag;
         rotationAngle8192 = 0;
         animationTickOrRemainingTicks = gb.logoAnimationTick;
         if (animationTickOrRemainingTicks >= 5) {
@@ -1018,9 +1018,9 @@ public final class Geoblox extends wf {
         lk.meshModelTransform = ArchiveIndex.buildLogoRotationTransform(rotationAngle8192 * xRotationSign, methodGuard, yRotationSign * rotationAngle8192);
     }
 
-    private final void initializeScreens(int param0) {
+    private final void initializeScreens(int methodGuard) {
         int screenIndex = 0;
-        int var3 = field_C;
+        int clientControlFlowGuard = clientControlFlowFlag;
         if (!(og.field_n > 0)) {
             InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 3, 6};
         }
@@ -1039,19 +1039,19 @@ public final class Geoblox extends wf {
         dc.field_a = 0;
         el.field_g = 8801;
         AwtRasterBuffer.field_f = 3382;
-        if (param0 <= 68) {
+        if (methodGuard <= 68) {
             this.loadJewelsTheme(true);
         }
         da.configureMenuPointerRepeat(150, 20);
     }
 
-    private final void loadSweetsTheme(int param0) {
+    private final void loadSweetsTheme(int methodGuard) {
         if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
             if (!(ll.gameGraphicsArchive.loadGroupByName("sweets", (byte) -128))) {
                 return;
             }
             lb.sweetsForegroundSprite = ug.loadSprite("sweets_foreground", ll.gameGraphicsArchive, (byte) -78, "sweets");
-            if (param0 != 7) {
+            if (methodGuard != 7) {
                 return;
             }
             pi.sweetsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sweets", "sweets_background");
@@ -1060,21 +1060,21 @@ public final class Geoblox extends wf {
         }
     }
 
-    final void initializeGame(int param0) {
-        if (param0 <= 109) {
+    final void initializeGame(int methodGuard) {
+        if (methodGuard <= 109) {
             return;
         }
         this.a((byte) -70, 9, 8, 10, 0, false, 7, 1);
-        kj var2 = new kj();
-        var2.e(-1636, 9, 128);
-        DiskArchiveCache.a((java.awt.Component) ((Object) f.field_kb), MenuScreen.platformTaskDispatcher, false, var2, true, 22050);
+        kj musicPlaybackStream = new kj();
+        musicPlaybackStream.e(-1636, 9, 128);
+        DiskArchiveCache.a((java.awt.Component) ((Object) f.field_kb), MenuScreen.platformTaskDispatcher, false, musicPlaybackStream, true, 22050);
         this.a(false, false, true, true, -95);
     }
 
     static {
         loginMessage = "Please login";
         reconnectMessages = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
-        field_D = 0L;
-        field_B = new qg(2);
+        canvasCreationTimeMillis = 0L;
+        longAndNameLoginType = new LoginPayloadKind(2);
     }
 }

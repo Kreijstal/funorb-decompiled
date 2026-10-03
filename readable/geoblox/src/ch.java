@@ -275,7 +275,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             Throwable var3_ref_Throwable = null;
             String var4 = null;
             int var5 = 0;
-            var5 = Geoblox.field_C;
+            var5 = Geoblox.clientControlFlowFlag;
             try {
               try {
                 L1: {
@@ -482,7 +482,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         java.awt.Insets var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (f.field_kb != null) {
             f.field_kb.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -531,7 +531,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           wc.field_g = true;
           dl.field_c = true;
           ab.field_a = false;
-          Geoblox.field_D = oa.a(-12520);
+          Geoblox.canvasCreationTimeMillis = oa.a(-12520);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -709,7 +709,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               (!ad.field_p)) {
             dl.field_c = true;
             if ((oe.field_S) &&
-                (-Geoblox.field_D + oa.a(-12520) > 1000L)) {
+                (-Geoblox.canvasCreationTimeMillis + oa.a(-12520) > 1000L)) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (~var2.width > ~qb.field_G) {
@@ -765,7 +765,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             Throwable var8_ref = null;
             RuntimeException var8_ref2 = null;
             int var9 = 0;
-            var9 = Geoblox.field_C;
+            var9 = Geoblox.clientControlFlowFlag;
             try {
               try {
                 L0: {
@@ -899,7 +899,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               if (!((sg.field_a != null) &&
                   (he.field_a == null))) {
                 f.field_kb.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
-                if (Geoblox.field_C == 0) {
+                if (Geoblox.clientControlFlowFlag == 0) {
                   break L2;
                 }
               }

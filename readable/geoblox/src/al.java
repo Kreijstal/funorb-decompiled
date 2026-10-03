@@ -14,7 +14,7 @@ final class al {
         Object var5 = null;
         ca var8 = null;
         byte[] var13 = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != 26146) {
             return;
@@ -73,7 +73,7 @@ final class al {
         int var2;
         int var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         var2 = qi.b(3, param0 ^ 9667);
         if (param0 != 9666) {
           return;
@@ -123,7 +123,7 @@ final class al {
             String stackIn_25_2 = null;
             Throwable decompiledCaughtException = null;
             Throwable var2_ref = null;
-            var7 = Geoblox.field_C;
+            var7 = Geoblox.clientControlFlowFlag;
             try {
               if (td.field_H) {
                 return true;

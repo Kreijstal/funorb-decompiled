@@ -11,7 +11,7 @@ abstract class dk {
     final int a(int param0, int param1) {
         int var4 = 0;
         lk var5 = null;
-        int var6 = Geoblox.field_C;
+        int var6 = Geoblox.clientControlFlowFlag;
         lk[] var7 = this.field_a;
         lk[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
@@ -34,7 +34,7 @@ abstract class dk {
         lk var5;
         int var7;
         int var6;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         var2 = -1;
         if (param0 < 60) {
           return 19;
@@ -83,7 +83,7 @@ abstract class dk {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = Geoblox.field_C;
+        var11 = Geoblox.clientControlFlowFlag;
         try {
           var5_int = 0;
           var6 = 0;
@@ -134,7 +134,7 @@ abstract class dk {
             Throwable decompiledCaughtException = null;
             RuntimeException var1 = null;
             IOException var2 = null;
-            var3 = Geoblox.field_C;
+            var3 = Geoblox.clientControlFlowFlag;
             try {
               if (null != wg.archiveNetworkClient) {
                 wg.archiveNetworkClient.closeSocket(-70);
@@ -197,7 +197,7 @@ abstract class dk {
     final int a(byte param0, int param1) {
         int var3 = 0;
         lk var4 = null;
-        int var5 = Geoblox.field_C;
+        int var5 = Geoblox.clientControlFlowFlag;
         if (param0 != 24) {
             return -10;
         }
@@ -218,7 +218,7 @@ abstract class dk {
         lk var7;
         int var8;
         int var9;
-        var9 = Geoblox.field_C;
+        var9 = Geoblox.clientControlFlowFlag;
         if ((null != this.field_a) &&
             (this.field_a.length != 0) &&
             (this.field_a[0].field_d <= param2)) {

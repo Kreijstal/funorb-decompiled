@@ -82,7 +82,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int spanStartOrBottomXQ16 = 0;
         int spanWidth = 0;
         int controlFlagSnapshot = 0;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if ((bottomY >= 0) &&
               (topY < TriangleRasterState.clipHeight)) {

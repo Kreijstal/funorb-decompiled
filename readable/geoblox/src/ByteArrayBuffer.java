@@ -83,7 +83,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         int textLength = 0;
         int characterCode = 0;
         int unusedClientGuardSnapshot = 0;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           accumulatedChunk = 0L;
           if (resetPositionGuard) {

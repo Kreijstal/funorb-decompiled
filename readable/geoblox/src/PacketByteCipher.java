@@ -14,7 +14,7 @@ final class PacketByteCipher {
 
     private final void initialize(boolean initializeState) {
         int mixRoundOrBlockOffset = 0;
-        int unusedClientGuardSnapshot = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         int mixWord5 = -1640531527;
         int mixWord2 = -1640531527;
         int mixWord3 = -1640531527;

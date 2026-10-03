@@ -177,7 +177,7 @@ final class ag extends TextInputValidator {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           j.field_gb = param0;
           var2 = (je) ((Object) PrefixCodeDecoder.field_f.firstForIteration(0));

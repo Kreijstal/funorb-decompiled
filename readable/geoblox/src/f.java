@@ -53,8 +53,8 @@ class f extends qf implements pl {
     }
 
     final static void b(String param0, String param1, int param2) {
-        if (Geoblox.field_y != null) {
-            Geoblox.field_y.h((byte) -104);
+        if (Geoblox.activeMessageDialog != null) {
+            Geoblox.activeMessageDialog.h((byte) -104);
         }
         if (param2 != 7697781) {
             return;
@@ -208,7 +208,7 @@ class f extends qf implements pl {
         float avatarTintFadeFactor;
         int avatarFrameOffsetInSegment;
         int unusedClientControlSnapshot;
-        unusedClientControlSnapshot = Geoblox.field_C;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         int frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
         af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
         if (0 <= frameStepTicksBeforeDecrement) {
@@ -635,7 +635,7 @@ class f extends qf implements pl {
         RuntimeException var4 = null;
         int var5 = 0;
         ni var6 = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           if (this.field_rb) {
             return;

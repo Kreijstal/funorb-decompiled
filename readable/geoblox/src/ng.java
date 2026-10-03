@@ -8,7 +8,7 @@ final class ng extends sh {
     static BitmapFont field_F;
 
     final void f(int param0) {
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
         dd var3 = (dd) ((Object) var2.c((byte) 88));
         while (var3 != null) {
@@ -37,7 +37,7 @@ final class ng extends sh {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var8 = Geoblox.field_C;
+        int var8 = Geoblox.clientControlFlowFlag;
         if (null != this.field_q) {
             this.field_q.a(param0, -70, param1, true, (el) (this));
         }
@@ -66,7 +66,7 @@ final class ng extends sh {
     }
 
     final void l(int param0) {
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
         if (param0 != 0) {
             return;
@@ -86,7 +86,7 @@ final class ng extends sh {
     }
 
     final el e(int param0) {
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
         dd var3 = (dd) ((Object) var2.c((byte) 88));
         while (var3 != null) {
@@ -103,7 +103,7 @@ final class ng extends sh {
     }
 
     final void i(int param0) {
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
         dd var3 = (dd) ((Object) var2.c((byte) 88));
         while (var3 != null) {
@@ -127,7 +127,7 @@ final class ng extends sh {
     }
 
     final dd j(int param0) {
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
         dd var3 = (dd) ((Object) var2.c((byte) 88));
         while (var3 != null) {

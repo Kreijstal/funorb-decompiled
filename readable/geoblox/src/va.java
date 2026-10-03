@@ -71,7 +71,7 @@ final class va {
         RuntimeException groupingFailure = null;
         int depthBucketReadIndex = 0;
         int controlFlagSnapshot = 0;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthBucketIndex = 0;
           L0: while (true) {

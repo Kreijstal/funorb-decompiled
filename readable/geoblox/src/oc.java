@@ -12,7 +12,7 @@ final class oc implements dh {
     final static void c(int param0) {
         int var2 = 0;
         int var3 = 0;
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         GzipInflater.sunBackgroundSprite.drawRunEncoded(0, 0);
         PacketByteCipher.sunForegroundSprite.draw(320 - (PacketByteCipher.sunForegroundSprite.fullWidth >> 1), param0 - (PacketByteCipher.sunForegroundSprite.fullHeight >> 1));
         kh.screenTitleSprites[0].draw(0, 20);

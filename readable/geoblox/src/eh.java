@@ -14,7 +14,7 @@ final class eh {
         int var6;
         int var7;
         int var8;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         if (gb.logoAnimationTick < 0) {
           return;
         }

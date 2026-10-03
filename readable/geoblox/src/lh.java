@@ -14,7 +14,7 @@ final class lh {
         int fieldTemp$7 = 0;
         int var1;
         int var2;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         if (param0 <= -78) {
           if (null != ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
             var1 = kj.field_J;

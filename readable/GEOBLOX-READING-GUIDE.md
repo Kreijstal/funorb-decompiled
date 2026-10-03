@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 95)
+## Current readability (pass 96)
 
-The export has 7,314 guarded names. All 303 sources compile, reproduce and
+The export has 7,391 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -35,9 +35,11 @@ large bodies are:
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
 
-Every field, method, parameter and local in GameScreen and MenuScreen now has
-a guarded name, with constructor names supplied by their class rules. Other
-shared helpers and mixed-effect exits remain. Larger reconstructions need
+Every field, method, parameter and local in GameScreen, MenuScreen and
+GameplaySession now has a guarded name, with constructor names supplied by their
+class rules. Geoblox declarations also have semantic names; its class/constructor/
+init lifecycle spellings remain original. Other shared helpers and mixed-effect
+exits remain. Larger reconstructions need
 proofs for intermediate loops/protected regions and multiple continuations;
 control flags are not assumed constant. The 16,128-case generic comparison and
 six recorded native probes establish controlled behavior only. Complete assets/
@@ -56,6 +58,53 @@ remain intact.
 
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
+
+## Client/session completion and public control flag
+
+`Geoblox` now names every own field, parameter and local; its already semantic
+class, constructor and `init` lifecycle spellings stay original. Archive polling
+and frame rendering name their copied archive/text/boolean/canvas arguments.
+`nextScreenTransitionTickSnapshot` retains the original increment result used
+to commit at tick160. Reused `uiServiceResultOrOverlayMode` holds the service
+result before the inherited overlay-mode result; discarded readiness calls and
+unused control snapshots retain their side effects.
+
+`canvasCreationTimeMillis` is the volatile adjusted-millisecond timestamp written
+after canvas creation and compared against1000 in the applet paint path. The
+initial0 and wrong-render-guard -11 sentinels remain. `activeMessageDialog` is
+the `f` UI dialog created with message/font/container data, dismissed by its
+visibility method and replaced with connection-restored content when required.
+Its remaining shared widget methods are still opaque.
+
+`longAndNameLoginType` is the `LoginPayloadKind` singleton with `wireId`2,
+returned by `lf`'s kind method. That payload writes a long then Base38 text;
+the login writer reads the chosen kind ID and the response path compares kind
+identities. The names expose this payload shape while retaining numeric IDs,
+identity, guard/null handling and the throwing `toString`. They do not infer
+the long's meaning or establish a complete login protocol/server implementation.
+
+`Geoblox.clientControlFlowFlag` maps back to original `field_C`. Its 325 bound
+occurrences across141 files control many zero/nonzero branch and loop paths.
+The only explicit bound write in the corpus is after achievement/instruction
+text loading: when `ch.field_h` is true, the loader increments its original
+snapshot and stores it. The public field's default and externally supplied
+values remain arbitrary; reconstruction/naming does not assume it is zero.
+Earlier historical sections may refer to its original spelling.
+
+All `GameplaySession` declarations are also named. Result-sequence carriers
+`comparisonLeftColumnOrZero`, `comparisonRightWidthOrPixel` and
+`rowStartOrMusicGuard` retain their comparison/row/music roles. Its static
+`releaseStaticReferences` and private `runGuardedStaticCleanup` retain their
+original offset/host/pointer-idle effects. `tryOpenUrlWithWindowsShell` is a
+colocated static utility; Windows/URL/whitelist/guard/catch behavior is unchanged
+and the shell operation is not invoked by this pass.
+
+All six existing native/raw/readable probes retain their frozen traces after
+these names, including nonzero global-flag fixture paths. Their controlled
+coverage does not newly exercise the complete client lifecycle, message/login
+flows, actual assets/servers, Windows shell or browser/phone performance.
+Compilation, binding comparison, full reproduction and dictionary reversal also
+pass; large labeled bodies and opaque shared classes remain.
 
 ## Base menu selection and pointer repeat
 

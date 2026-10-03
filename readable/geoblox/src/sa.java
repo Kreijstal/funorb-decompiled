@@ -16,7 +16,7 @@ final class sa extends RuntimeException {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           if ((-1 == k.field_g) &&
               (gb.field_e == -1)) {

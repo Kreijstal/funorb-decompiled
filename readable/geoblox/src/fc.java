@@ -16,7 +16,7 @@ final class fc {
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           pf.field_D = true;
           var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));

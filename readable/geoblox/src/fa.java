@@ -19,8 +19,8 @@ final class fa {
         }
         try {
             va.field_d = true;
-            Geoblox.field_y = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
-            kd.field_e.a(false, Geoblox.field_y);
+            Geoblox.activeMessageDialog = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
+            kd.field_e.a(false, Geoblox.activeMessageDialog);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

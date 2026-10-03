@@ -61,7 +61,7 @@ class ff implements dh, cc {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var13 = Geoblox.field_C;
+        var13 = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             uh.a(param0 + param2.field_m, param2.field_v + param7, param3 - 14045, param2.field_m + (param0 + param2.field_h), param2.field_r + (param7 + param2.field_v));
@@ -141,7 +141,7 @@ class ff implements dh, cc {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           if (null == param1.field_w) {
             param1.field_w = (dk) ((Object) new vc());
@@ -633,7 +633,7 @@ class ff implements dh, cc {
         el var17 = null;
         dk var18 = null;
         dk var19 = null;
-        var16 = Geoblox.field_C;
+        var16 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 == param4) {
             return;

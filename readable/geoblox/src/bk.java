@@ -48,7 +48,7 @@ final class bk {
         int var7 = 0;
         PacketBuffer var8 = null;
         og var9 = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         var8 = eh.field_d;
         var3 = var8.readUnsignedByte((byte) 34);
         gj.field_u = var3 & 127;

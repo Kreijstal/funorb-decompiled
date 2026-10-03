@@ -76,7 +76,7 @@ abstract class IndexedSpriteState {
         Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
-        int var13 = Geoblox.field_C;
+        int var13 = Geoblox.clientControlFlowFlag;
         try {
             id.field_c = wj.loadSpriteFrames("frame_top", "commonui", param2, 0);
             fh.field_e = wj.loadSpriteFrames("frame_bottom", "commonui", param2, 0);

@@ -56,7 +56,7 @@ final class ab {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           if (param2 == null) {
             stackIn_4_0 = gg.createNameLengthAlertText;
@@ -184,7 +184,7 @@ final class ab {
         Object unusedMotionScratch = null;
         GameplayEntity trailEntity = null;
         unusedMotionScratch = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           boardContactStateDirty = false;
           wb.newAttachmentCount = 0;

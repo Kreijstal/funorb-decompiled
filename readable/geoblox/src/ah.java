@@ -16,7 +16,7 @@ final class ah {
 
     final static String a(int param0, char param1, int param2) {
         int var4 = 0;
-        int var5 = Geoblox.field_C;
+        int var5 = Geoblox.clientControlFlowFlag;
         char[] var6 = new char[param2];
         char[] var3 = var6;
         for (var4 = param0; var4 < param2; var4++) {

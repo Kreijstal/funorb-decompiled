@@ -22,7 +22,7 @@ final class PacketBuffer extends ByteArrayBuffer {
         int sentinelRemainder = 0;
         RuntimeException readFailureForContext = null;
         int unusedClientGuardSnapshot = 0;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           sentinelRemainder = 31 % ((methodGuard + 36) / 37);
           for (copiedByteCount = 0; copiedByteCount < length; copiedByteCount++) {
@@ -137,7 +137,7 @@ final class PacketBuffer extends ByteArrayBuffer {
 
     final int readBits(byte methodGuard, int remainingBitCount) {
         int consumedByteIndex = 0;
-        int unusedClientGuardSnapshot = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         int byteIndex = this.bitPosition >> 3;
         if (methodGuard != -17) {
             return -69;

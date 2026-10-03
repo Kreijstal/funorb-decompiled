@@ -126,7 +126,7 @@ final class ra implements Iterable {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = param1.charAt(0);
           if (param0 != 18725) {

@@ -33,7 +33,7 @@ final class r extends f implements pl {
         RuntimeException var4_ref = null;
         ni var5 = null;
         int var6 = 0;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           this.field_wb = true;
           if (param2 > -21) {
@@ -128,7 +128,7 @@ final class r extends f implements pl {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = param0.length();
           if (var2_int == 0) {

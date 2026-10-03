@@ -45,7 +45,7 @@ final class sj {
     private final int b(int param0, int param1) {
         int var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         if (param1 != 1) {
           return 80;
         }

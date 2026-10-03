@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qg {
+final class LoginPayloadKind {
     static String field_e;
     static int field_a;
-    int field_c;
+    int wireId;
     static int field_d;
     static String createPasswordText;
 
@@ -20,13 +20,13 @@ final class qg {
         throw new IllegalStateException();
     }
 
-    qg(int param0) {
-        this.field_c = param0;
+    LoginPayloadKind(int wireId) {
+        this.wireId = wireId;
     }
 
     final static void b(int param0) {
         if (param0 != 9313) {
-            qg.a(116);
+            LoginPayloadKind.a(116);
             if (fh.c(-114)) {
                 return;
             }

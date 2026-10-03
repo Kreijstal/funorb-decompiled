@@ -14,7 +14,7 @@ final class ei extends qf {
         int var3_int = 0;
         RuntimeException var3 = null;
         java.awt.Canvas var5 = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (mi.field_C < 10) {
             var3_int = 0;
@@ -68,7 +68,7 @@ final class ei extends qf {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           var3 = ab.a(param0, 2, param2);
           if (var3 != null) {

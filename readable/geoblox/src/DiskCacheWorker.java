@@ -89,7 +89,7 @@ final class DiskCacheWorker implements Runnable {
         StringBuilder readMessagePrefix = null;
         String diskCacheDescription = null;
         Throwable caughtReadFailure = null;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           request = new DiskArchiveRequest();
           if (methodGuard != 15079962) {
@@ -282,7 +282,7 @@ final class DiskCacheWorker implements Runnable {
             Throwable caughtWorkerFailure = null;
             Exception operationFailure = null;
             String unusedFailureMessageSnapshot = null;
-            unusedClientGuardSnapshot = Geoblox.field_C;
+            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             while (!this.stopRequested) {
               queueMonitor = this.requestQueue;
               synchronized (queueMonitor) {

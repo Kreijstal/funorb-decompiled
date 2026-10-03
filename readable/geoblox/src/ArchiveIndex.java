@@ -72,7 +72,7 @@ final class ArchiveIndex {
         byte[] unusedNullPackedBytesSnapshot = null;
         ByteArrayBuffer indexBuffer = null;
         byte[] newGroupDigest = null;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           indexBuffer = new ByteArrayBuffer(v.decompressArchive(packedIndexBytes, -1));
           formatVersion = indexBuffer.readUnsignedByte((byte) 34);
@@ -252,7 +252,7 @@ final class ArchiveIndex {
         PacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Geoblox.field_C;
+        int var6 = Geoblox.clientControlFlowFlag;
         try {
             var7 = fj.field_q;
             var8 = var7;

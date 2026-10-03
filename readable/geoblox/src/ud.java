@@ -11,7 +11,7 @@ final class ud {
         p var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           var4 = (p) ((Object) ResourceArchive.field_a.firstForIteration(0));
           while (var4 != null) {
@@ -48,7 +48,7 @@ final class ud {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           if (null == ug.field_a) {
             return null;
@@ -116,7 +116,7 @@ final class ud {
         qi var14 = null;
         qi var15 = null;
         int[] var16 = null;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           var12 = eh.field_d;
           var2 = var12.readUnsignedByte((byte) 34);

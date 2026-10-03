@@ -44,7 +44,7 @@ abstract class jg {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           if (ArchiveSource.field_a == null) {
             return null;
@@ -163,7 +163,7 @@ abstract class jg {
         PcmSample var6 = null;
         int var7 = 0;
         String var8 = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           kf.field_c = param3;
           sl.field_l = param4;

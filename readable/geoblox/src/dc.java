@@ -18,7 +18,7 @@ final class dc {
         int var2 = 0;
         GameplayEntity var3 = null;
         RuntimeException decompiledCaughtException = null;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         try {
           var3 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
           while (var3 != null) {

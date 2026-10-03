@@ -83,7 +83,7 @@ final class wa {
         Sprite var13 = null;
         rd var14 = null;
         rd var19 = null;
-        int var15 = Geoblox.field_C;
+        int var15 = Geoblox.clientControlFlowFlag;
         try {
             var17 = new ff(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.maxAscent + param1.maxDescent));
             this.field_b = (dh) ((Object) var17);
@@ -174,7 +174,7 @@ final class wa {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        var15 = Geoblox.field_C;
+        var15 = Geoblox.clientControlFlowFlag;
         try {
           var5_int = this.field_e + this.field_d;
           var6 = this.field_p + this.field_i;
@@ -299,7 +299,7 @@ final class wa {
         int var3 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           unfinishedPoints = 0;
           if (param0 != -25866) {

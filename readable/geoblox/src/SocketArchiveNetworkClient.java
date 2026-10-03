@@ -46,7 +46,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             int archiveHeaderSize = 0;
             int unusedClientGuardSnapshot = 0;
             int bodyXorByteIndex = 0;
-            unusedClientGuardSnapshot = Geoblox.field_C;
+            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             if (this.socket != null) {
               currentTimeMillis = oa.a(-12520);
               elapsedMillisOrHeaderTargetBytes = (int)(-this.lastPollMillis + currentTimeMillis);
@@ -247,7 +247,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 == null) {
             return false;
@@ -324,7 +324,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             RuntimeException attachmentFailureForContext = null;
             Exception xorSetupCloseFailure = null;
             int unusedClientGuardSnapshot = 0;
-            unusedClientGuardSnapshot = Geoblox.field_C;
+            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             try {
               if (null != this.socket) {
                 try {

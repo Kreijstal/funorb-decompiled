@@ -58,7 +58,7 @@ final class uk extends TextInputValidator {
 
     final static String tutorialMessageForStep(int tutorialStepId, int param1) {
         int var2 = 0;
-        int var3 = Geoblox.field_C;
+        int var3 = Geoblox.clientControlFlowFlag;
         if (param1 != 24146) {
             orbCoinSprite = (Sprite) null;
             var2 = tutorialStepId;
@@ -339,13 +339,13 @@ final class uk extends TextInputValidator {
     final static boolean g(int param0) {
         if (param0 < 29) {
             orbCoinSprite = (Sprite) null;
-            qg.b(9313);
+            LoginPayloadKind.b(9313);
             if (!fh.c(-117)) {
                 return hj.field_c ? true : false;
             }
             return true;
         }
-        qg.b(9313);
+        LoginPayloadKind.b(9313);
         if (fh.c(-117)) {
             return true;
         }

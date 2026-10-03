@@ -218,7 +218,7 @@ class el extends IntrusiveNode {
         la var15;
         la var16;
         la var17;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         if (param1 <= 126) {
           return true;
         }
@@ -538,7 +538,7 @@ class el extends IntrusiveNode {
         int var5_int;
         String var5;
         int var6;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         var4 = this.d((byte) 105);
         var5_int = param2;
         while (var4 >= var5_int) {
@@ -646,7 +646,7 @@ class el extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_v).append(",").append(this.field_m).append(" ").append(this.field_r).append("x").append(this.field_h);
           if (this.field_s != null) {

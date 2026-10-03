@@ -24,7 +24,7 @@ final class i {
         int controlFlowGuard = 0;
         Object stackIn_11_0 = null;
         RuntimeException decompiledCaughtException = null;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           maxDistanceSquared = 1.401298464324817e-45f;
           farthestEntity = null;
@@ -115,7 +115,7 @@ final class i {
         int edgeCYOrBucketOccupancy = 0;
         int faceOrderWriteIndex = 0;
         int controlFlagSnapshot = 0;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
           minimumDepthTimesThree = minimumVisibleDepth * 3;
@@ -285,7 +285,7 @@ final class i {
         int edgeCYOrBucketOccupancy = 0;
         int faceOrderWriteIndex = 0;
         int controlFlagSnapshot = 0;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
           minimumDepthTimesThree = minimumVisibleDepth * 3;

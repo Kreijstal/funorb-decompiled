@@ -186,7 +186,7 @@ final class wj extends sh {
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           if (param0.systemEventQueue == null) {
             return;

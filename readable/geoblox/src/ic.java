@@ -13,7 +13,7 @@ final class ic {
         int var4 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 > param0) {
             var3_int = param0;

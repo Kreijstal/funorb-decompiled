@@ -77,7 +77,7 @@ final class oi {
         ea var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           var4 = (se) ((Object) sj.field_g.firstForIteration(0));
           while (var4 != null) {

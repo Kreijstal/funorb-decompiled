@@ -12,7 +12,7 @@ abstract class ib implements dg {
         int[] destinationForReadAndWrite = null;
         int destinationIndexForWrite = 0;
         int halfRgbForWrite = 0;
-        int controlFlagSnapshot = Geoblox.field_C;
+        int controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
             while (true) {
                 pixelCount--;

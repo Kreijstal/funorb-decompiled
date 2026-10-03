@@ -20,7 +20,7 @@ class ee extends el implements ql {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = Geoblox.field_C;
+        var10 = Geoblox.clientControlFlowFlag;
         try {
           var8 = new gb(this.field_z);
           var9_ref_el = (el) ((Object) var8.c((byte) 88));
@@ -93,7 +93,7 @@ class ee extends el implements ql {
 
     final int d(byte param0) {
         int var5 = 0;
-        int var6 = Geoblox.field_C;
+        int var6 = Geoblox.clientControlFlowFlag;
         int var2 = 0;
         gb var3 = new gb(this.field_z);
         el var4 = (el) ((Object) var3.c((byte) 88));
@@ -129,7 +129,7 @@ class ee extends el implements ql {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           if (this.field_z.isEmpty(13519)) {
             return false;
@@ -183,7 +183,7 @@ class ee extends el implements ql {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           super.a(param0, param1, param2, param3);
           var5 = new gb(this.field_z);
@@ -212,7 +212,7 @@ class ee extends el implements ql {
     }
 
     void a(int param0, int param1, byte param2, int param3) {
-        int var8 = Geoblox.field_C;
+        int var8 = Geoblox.clientControlFlowFlag;
         if ((param3 == 0) &&
             (!(this.field_q == null))) {
             this.field_q.a(param0, -9, param1, true, (el) (this));
@@ -276,7 +276,7 @@ class ee extends el implements ql {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           if (this.field_z.isEmpty(13519)) {
             return false;
@@ -322,7 +322,7 @@ class ee extends el implements ql {
     }
 
     final void d(int param0) {
-        int var4 = Geoblox.field_C;
+        int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_z);
         if (param0 > -122) {
             field_B = (int[]) null;
@@ -348,7 +348,7 @@ class ee extends el implements ql {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           var3 = new gb(this.field_z);
           if (param0 >= -30) {
@@ -396,7 +396,7 @@ class ee extends el implements ql {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
-        var9 = Geoblox.field_C;
+        var9 = Geoblox.clientControlFlowFlag;
         try {
           var7 = new gb(this.field_z);
           var8 = (el) ((Object) var7.c((byte) 88));
@@ -437,7 +437,7 @@ class ee extends el implements ql {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           var9 = new gb(this.field_z);
           if (param1 != 13) {
@@ -494,7 +494,7 @@ class ee extends el implements ql {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           var10 = new gb(this.field_z);
           var6 = (el) ((Object) var10.c((byte) 88));
@@ -535,7 +535,7 @@ class ee extends el implements ql {
         gb var2;
         el var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         if (param0 >= -60) {
           toServerListText = (String) null;
         }
@@ -570,7 +570,7 @@ class ee extends el implements ql {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = Geoblox.field_C;
+        var10 = Geoblox.clientControlFlowFlag;
         try {
           var11 = new gb(this.field_z);
           if (param3 != -1) {

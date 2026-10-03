@@ -130,7 +130,7 @@ final class pi extends vf {
         Sprite var17;
         Sprite var18;
         Sprite var19;
-        var14 = Geoblox.field_C;
+        var14 = Geoblox.clientControlFlowFlag;
         var6 = this.field_M.a((byte) -105);
         if ((var6 != ImageProducerRasterBuffer.field_g) &&
             (var6 != si.field_n)) {

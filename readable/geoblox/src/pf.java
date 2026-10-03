@@ -53,7 +53,7 @@ final class pf extends ee implements ga, pl {
         PacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             var9 = eh.field_d;
@@ -442,7 +442,7 @@ final class pf extends ee implements ga, pl {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != -20) {
             this.field_E = (hk) null;
@@ -808,7 +808,7 @@ final class pf extends ee implements ga, pl {
           var12 = dupTemp$0;
           this.b((byte) -110, dupTemp$0);
           this.field_m = this.field_m + (((el) ((Object) var12)).field_h + 5);
-          dupTemp$1 = new hd(10, this.field_m, this.field_r - 20, 25, this.field_P, false, 80, 3, var7, 16777215, qg.createPasswordText);
+          dupTemp$1 = new hd(10, this.field_m, this.field_r - 20, 25, this.field_P, false, 80, 3, var7, 16777215, LoginPayloadKind.createPasswordText);
           var13 = dupTemp$1;
           this.b((byte) -120, dupTemp$1);
           this.field_E.field_u = (bb) (this);

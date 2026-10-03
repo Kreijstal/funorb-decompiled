@@ -156,7 +156,7 @@ final class hi extends ee implements ta, pl {
         int[] transformedNormalsX = null;
         int[] transformedNormalsZ = null;
         int[] specularResponses = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           meshForPriorityDecision = mesh;
           if ((null != meshForPriorityDecision.facePriorities) &&

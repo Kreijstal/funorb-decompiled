@@ -23,7 +23,7 @@ final class vc extends dk {
         int controlFlagSnapshot = 0;
         RuntimeException caughtCompactionFailure = null;
         RuntimeException compactionFailure = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (guard != 2971) {
             return;
@@ -179,7 +179,7 @@ final class vc extends dk {
         int var15 = 0;
         String[] var16 = null;
         String[] var17 = null;
-        var15 = Geoblox.field_C;
+        var15 = Geoblox.clientControlFlowFlag;
         try {
           if (param3 == 0) {
             param3 = param4.lineAdvance;

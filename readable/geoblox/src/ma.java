@@ -22,7 +22,7 @@ final class ma extends IntrusiveNode {
         int[] priorityCounts = null;
         RuntimeException caughtFailure = null;
         RuntimeException contextFailure = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           priorityCounts = uh.meshFacePriorityWriteOffsets;
           priorityCountsAlias = priorityCounts;
@@ -135,7 +135,7 @@ final class ma extends IntrusiveNode {
         int centerClipBottom = 0;
         int edgeTileCoordinateOrCenterY = 0;
         int clientControlFlowGuardSnapshot = 0;
-        clientControlFlowGuardSnapshot = Geoblox.field_C;
+        clientControlFlowGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (nineSliceSprites == null) {
             return;

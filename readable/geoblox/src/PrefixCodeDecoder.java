@@ -119,7 +119,7 @@ final class PrefixCodeDecoder {
         int signedSourceByte = 0;
         int nodeValue = 0;
         int unusedClientGuardSnapshot = 0;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (0 == outputLengthThenEnd) {
             zeroConsumedBytesBeforeReturn = 0;
@@ -332,7 +332,7 @@ final class PrefixCodeDecoder {
         float avatarTintFadeFactor;
         int avatarFrameOffsetInSegment;
         int unusedClientControlSnapshot;
-        unusedClientControlSnapshot = Geoblox.field_C;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard < 72) {
           return;
         }

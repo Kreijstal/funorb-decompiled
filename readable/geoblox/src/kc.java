@@ -29,7 +29,7 @@ final class kc {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           sh.a(0, param0, ok.field_b, bd.field_a, (byte) 121, md.field_c, true);
           if (param1 != -98) {
@@ -48,7 +48,7 @@ final class kc {
                   continue;
                 }
               }
-              sh.a(param0, param0 + param0, qg.field_a, va.field_b, (byte) 112, md.field_c + param0, false);
+              sh.a(param0, param0 + param0, LoginPayloadKind.field_a, va.field_b, (byte) 112, md.field_c + param0, false);
             }
             if (param0 < md.field_c) {
               md.field_c = param0;
@@ -103,7 +103,7 @@ final class kc {
         SecondaryDeque pendingConnectivityEntities = null;
         GameplayEntity currentConnectivityEntityAlias = null;
         SecondaryDeque visitedNonAvatarEntities = null;
-        clientControlSnapshot = Geoblox.field_C;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           fa.entitiesDetachedThisTick = false;
           activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));

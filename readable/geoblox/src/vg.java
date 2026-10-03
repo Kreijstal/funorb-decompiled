@@ -35,7 +35,7 @@ final class vg {
         DualLinkNode var2;
         DualLinkNode var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         if (null == this.field_c) {
           return null;
         }
@@ -75,7 +75,7 @@ final class vg {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         this.field_e = param0;
         var4 = this.field_g[(int)(param0 & (long)(param1 + this.field_h))];
         this.field_c = var4.nextSecondaryNode;

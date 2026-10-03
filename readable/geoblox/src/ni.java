@@ -13,7 +13,7 @@ final class ni extends ee implements pl {
 
     private final void c(int param0, int param1) {
         int var5 = 0;
-        int var6 = Geoblox.field_C;
+        int var6 = Geoblox.clientControlFlowFlag;
         if (this.field_D >= param1) {
             return;
         }
@@ -46,7 +46,7 @@ final class ni extends ee implements pl {
         String archiveContextDescription = null;
         RuntimeException caughtFailure = null;
         RuntimeException contextFailure = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           logoInput = new PacketBuffer(archive.getNamedFile(methodGuard + methodGuard, "", "logo.fo3d"));
           logoInputAlias = logoInput;
@@ -145,7 +145,7 @@ final class ni extends ee implements pl {
         GameplayEntity transientEntityToDraw = null;
         RuntimeException caughtTransientDrawFailure = null;
         RuntimeException transientDrawFailureForContext = null;
-        clientControlFlowGuardSnapshot = Geoblox.field_C;
+        clientControlFlowGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 484842465) {
             ni.drawTransientEntities(15);
@@ -178,7 +178,7 @@ final class ni extends ee implements pl {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           for (var6_int = 0; var6_int < this.field_D; var6_int++) {
             if (param4 != this.field_F[var6_int]) {

@@ -18,7 +18,7 @@ final class gb {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (MatchingTextValidator.field_j == param0) {
             td.playPcmSample(-348, fl.field_c[25]);
@@ -119,7 +119,7 @@ final class gb {
         int stackIn_20_0 = 0;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         try {
           kd.field_e.a(true, 127, ec.field_d, mj.field_b);
           kd.field_e.i(-65);

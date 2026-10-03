@@ -39,7 +39,7 @@ final class ef implements Iterator {
         GameplayEntity var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           var1_float = el.gameplaySession.boardAngleRadians;
           ab.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
@@ -88,7 +88,7 @@ final class ef implements Iterator {
 
     final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
-        int var5 = Geoblox.field_C;
+        int var5 = Geoblox.clientControlFlowFlag;
         Sprite var6 = new Sprite(param2, param2);
         Sprite var3 = var6;
         for (var4 = param0; var3.pixels.length > var4; var4++) {

@@ -24,7 +24,7 @@ final class th extends lf {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != 200) {
             th.d((byte) 21);
@@ -67,7 +67,7 @@ final class th extends lf {
         }
     }
 
-    final qg a(byte param0) {
+    final LoginPayloadKind a(byte param0) {
         if (param0 != -32) {
             this.a((byte) 104);
             return vh.field_D;

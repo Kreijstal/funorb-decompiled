@@ -109,7 +109,7 @@ final class cf extends TextInputValidator {
         int controlFlowGuard = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard < 8) {
             cf.c((byte) 121);
@@ -144,7 +144,7 @@ final class cf extends TextInputValidator {
         int var3 = 0;
         eg var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != -114) {
             return true;

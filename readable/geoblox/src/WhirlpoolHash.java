@@ -32,7 +32,7 @@ final class WhirlpoolHash {
         int byteShift;
         int unusedClientGuardSnapshot;
         int stateByteIndex;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard < 103) {
           return;
         }
@@ -99,7 +99,7 @@ final class WhirlpoolHash {
         int lengthByteIndex = 0;
         int lengthCarry = 0;
         int unusedClientGuardSnapshot = 0;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           sourceByteIndex = 0;
           sourceBitShift = 7 & 8 - (7 & (int)remainingBitCount);
@@ -212,7 +212,7 @@ final class WhirlpoolHash {
         int destinationByteIndex = 0;
         long hashWord = 0L;
         int unusedClientGuardSnapshot = 0;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> cd.andInt(this.bufferedBitCount, 7));
           this.bufferBytePosition = this.bufferBytePosition + 1;
@@ -351,7 +351,7 @@ final class WhirlpoolHash {
 
     final void reset(int methodGuard) {
         int lengthByteIndexOrHashWordIndex = 0;
-        int unusedClientGuardSnapshot = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         for (lengthByteIndexOrHashWordIndex = 0; lengthByteIndexOrHashWordIndex < 32; lengthByteIndexOrHashWordIndex++) {
             this.messageBitLength[lengthByteIndexOrHashWordIndex] = (byte) 0;
         }

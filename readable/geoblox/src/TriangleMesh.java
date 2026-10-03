@@ -48,7 +48,7 @@ final class TriangleMesh {
 
     final void scaleVertices(int scaleY, int divisor, byte guard, int scaleX, int scaleZ) {
         int vertexIndex = 0;
-        int controlFlagSnapshot = Geoblox.field_C;
+        int controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         for (vertexIndex = 0; vertexIndex < this.vertexCount; vertexIndex++) {
             this.vertexX[vertexIndex] = (short)(scaleX * this.vertexX[vertexIndex] / divisor);
             this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] * scaleY / divisor);
@@ -77,7 +77,7 @@ final class TriangleMesh {
 
     final void translateVertices(int deltaX, int deltaY, int guard, int deltaZ) {
         int vertexIndex = 0;
-        int controlFlagSnapshot = Geoblox.field_C;
+        int controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         for (vertexIndex = 0; this.vertexCount > vertexIndex; vertexIndex++) {
             this.vertexX[vertexIndex] = (short)(this.vertexX[vertexIndex] + deltaX);
             this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] + deltaY);
@@ -101,7 +101,7 @@ final class TriangleMesh {
         int vertexYValue;
         int vertexZValue;
         int controlFlagSnapshot;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         if (this.boundsValid) {
           return;
         }
@@ -184,7 +184,7 @@ final class TriangleMesh {
         va.field_b = -2147483648;
         ok.field_b = 2147483647;
         bd.field_a = -2147483648;
-        qg.field_a = param0;
+        LoginPayloadKind.field_a = param0;
     }
 
     final static Sprite[] buildRgbSpritesFromDecodedSheet(int methodGuard) {

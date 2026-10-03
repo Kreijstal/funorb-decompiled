@@ -36,7 +36,7 @@ abstract class qf extends oe {
 
     boolean f(int param0) {
         int fieldTemp$0 = 0;
-        int var3 = Geoblox.field_C;
+        int var3 = Geoblox.clientControlFlowFlag;
         if (param0 != -1) {
             return true;
         }

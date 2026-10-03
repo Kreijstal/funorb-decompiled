@@ -40,7 +40,7 @@ final class MatchingTextValidator extends TextInputValidator {
         Sprite sliceToFill = null;
         int fillPixelIndex = 0;
         int controlFlowGuard = 0;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         cornerSize = innerAccentWidth + borderGap + outerBorderWidth;
         slices = new Sprite[]{new Sprite(cornerSize, cornerSize), new Sprite(edgeLength, cornerSize), new Sprite(cornerSize, cornerSize), new Sprite(cornerSize, edgeLength), new Sprite(64, 64), new Sprite(cornerSize, edgeLength), new Sprite(cornerSize, cornerSize), new Sprite(edgeLength, cornerSize), new Sprite(cornerSize, cornerSize)};
         slicesToFill = slices;
@@ -236,8 +236,8 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final static void c(byte param0) {
-        if (!(Geoblox.field_y == null)) {
-            Geoblox.field_y.h((byte) -104);
+        if (!(Geoblox.activeMessageDialog == null)) {
+            Geoblox.activeMessageDialog.h((byte) -104);
         }
         vk.field_d = new hi();
         int var1 = 32 / ((param0 - 43) / 47);

@@ -38,7 +38,7 @@ final class jf implements dh {
         int var9 = 0;
         int var11 = 0;
         ol var12 = null;
-        var11 = Geoblox.field_C;
+        var11 = Geoblox.clientControlFlowFlag;
         try {
           if (param4 instanceof ol) {
             stackIn_4_0 = (el) (param4);
@@ -103,7 +103,7 @@ final class jf implements dh {
         StringBuilder spanMessagePrefix = null;
         String destinationDescription = null;
         RuntimeException caughtSpanFailure = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           while (true) {
             pixelCount--;
@@ -161,7 +161,7 @@ final class jf implements dh {
         int var10 = 0;
         int var11 = 0;
         CharSequence var12 = null;
-        var11 = Geoblox.field_C;
+        var11 = Geoblox.clientControlFlowFlag;
         try {
           if ((param0 != null) &&
               (param3 > 0)) {
@@ -213,7 +213,7 @@ final class jf implements dh {
         int characterCode = 0;
         int unusedClientGuardSnapshot = 0;
         int[] unusedNullIntArraySnapshot = null;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard < 117) {
             unusedNullIntArraySnapshot = (int[]) null;

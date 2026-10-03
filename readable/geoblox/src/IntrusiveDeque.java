@@ -45,7 +45,7 @@ final class IntrusiveDeque {
     final static void a(int param0, int param1) {
         int var2;
         int var3;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         if ((null != kf.field_c) &&
             (!ag.field_j[param1])) {
           var2 = param1;
@@ -159,7 +159,7 @@ final class IntrusiveDeque {
     }
 
     final int countNodes(int param0) {
-        int var5 = Geoblox.field_C;
+        int var5 = Geoblox.clientControlFlowFlag;
         int nodeCount = 0;
         IntrusiveNode node = this.sentinel.nextNode;
         while (this.sentinel != node) {
@@ -184,7 +184,7 @@ final class IntrusiveDeque {
 
     final void clearNodes(byte param0) {
         IntrusiveNode removedNode = null;
-        int var3 = Geoblox.field_C;
+        int var3 = Geoblox.clientControlFlowFlag;
         while (true) {
             removedNode = this.sentinel.nextNode;
             if (removedNode == this.sentinel) {

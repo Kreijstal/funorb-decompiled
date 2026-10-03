@@ -32,7 +32,7 @@ final class gj extends fj {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           kd.field_b = va.field_e;
           if (param2 != 30) {
@@ -96,7 +96,7 @@ final class gj extends fj {
 
     final static void drawSpecialAttachedEntities(byte param0) {
         GameplayEntity var1 = null;
-        int var2 = Geoblox.field_C;
+        int var2 = Geoblox.clientControlFlowFlag;
         try {
             var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
             while (var1 != null) {

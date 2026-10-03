@@ -49,7 +49,7 @@ final class jk {
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           TriangleRasterState.prepareTriangleClipFromRasterizer();
           ok.meshProjectionShift = 11;
@@ -95,7 +95,7 @@ final class jk {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = param1.length();
           if (param0 != 255) {
@@ -151,7 +151,7 @@ final class jk {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           while (true) {
             var3 = param2.requestExitFullscreen(param0, 0);

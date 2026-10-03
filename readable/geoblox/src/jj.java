@@ -22,7 +22,7 @@ final class jj {
     private final void a(long param0, int param1, boolean param2, Object param3) {
         fj var6 = null;
         gj var6_ref = null;
-        int var7 = Geoblox.field_C;
+        int var7 = Geoblox.clientControlFlowFlag;
         try {
             if (!(param1 <= this.field_b)) {
                 throw new IllegalStateException();

@@ -78,7 +78,7 @@ final class DiskArchiveCache {
             int headerLength = 0;
             int sectorReadLength = 0;
             int unusedClientGuardSnapshot = 0;
-            unusedClientGuardSnapshot = Geoblox.field_C;
+            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             dataFileMonitor = this.dataFile;
             synchronized (dataFileMonitor) {
               try {
@@ -200,7 +200,7 @@ final class DiskArchiveCache {
             int headerArchiveId = 0;
             EOFException headerEofFailure = null;
             int unusedClientGuardSnapshot = 0;
-            unusedClientGuardSnapshot = Geoblox.field_C;
+            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             try {
               dataFileMonitor = this.dataFile;
               synchronized (dataFileMonitor) {

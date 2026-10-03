@@ -35,7 +35,7 @@ final class re extends IntrusiveNode {
         Throwable caughtKeyboardFrameFailure = null;
         RuntimeException keyboardFrameFailureForContext = null;
         int resetKeyIndex = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           keyboardMonitor = je.keyboardListener;
           synchronized (keyboardMonitor) {

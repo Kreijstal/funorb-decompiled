@@ -25,7 +25,7 @@ final class bi implements dh {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (!SocketArchiveNetworkClient.a(param0, param1, (byte) 118)) {
             return false;

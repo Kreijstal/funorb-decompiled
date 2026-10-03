@@ -5,7 +5,7 @@ final class vh extends ee implements pl {
     private String[] field_C;
     private hk[] field_I;
     private ta field_J;
-    static qg field_D;
+    static LoginPayloadKind field_D;
     static Sprite[] avatarMouthFrames;
     static Sprite largeBoxSprite;
     static String tutorialRotationMessage;
@@ -146,7 +146,7 @@ final class vh extends ee implements pl {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != -20) {
             return;
@@ -185,7 +185,7 @@ final class vh extends ee implements pl {
         RuntimeException var3 = null;
         fh var4 = null;
         int var6 = 0;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           this.field_z.clearNodes((byte) -98);
           if (param0 != 126) {
@@ -230,7 +230,7 @@ final class vh extends ee implements pl {
     }
 
     static {
-        field_D = new qg(0);
+        field_D = new LoginPayloadKind(0);
         tutorialRotationMessage = "Welcome to Geoblox, a game where you earn points for matching geoblox by shape or colour. Just make sure you don't allow your falling geoblox to get out of control and stack outside of the play area!<br><br>To play Geoblox, you need to rotate the play area by pressing and holding the <img=0> or <img=1> arrow keys. Press <img=2> and then experiment with left and right rotation until the next tip comes up. Press <img=2> to continue.";
     }
 }

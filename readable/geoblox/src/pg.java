@@ -65,7 +65,7 @@ final class pg {
             byte[][] var20 = null;
             String var21 = null;
             byte[][] var22 = null;
-            var14 = Geoblox.field_C;
+            var14 = Geoblox.clientControlFlowFlag;
             try {
               var19 = new eg();
               var19.field_f = param3.readUnsignedByte((byte) 34);

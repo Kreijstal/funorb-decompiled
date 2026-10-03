@@ -56,7 +56,7 @@ final class vi extends hk {
         PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           if (!param1.hasFullscreenSupport(-26098)) {
             stackIn_3_0 = new rj[]{};

@@ -45,7 +45,7 @@ final class di {
         wc var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           var4 = (wc) ((Object) l.field_g.firstForIteration(param1 ^ param1));
           while (var4 != null) {

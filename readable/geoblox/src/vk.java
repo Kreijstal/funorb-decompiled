@@ -29,7 +29,7 @@ abstract class vk {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           var4_int = param1.readBits((byte) -17, param2);
           if (var4_int == 0) {

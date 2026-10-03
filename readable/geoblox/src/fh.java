@@ -43,7 +43,7 @@ final class fh implements dh {
         int var9 = 0;
         int var10 = 0;
         StringBuilder discarded$0 = null;
-        int var11 = Geoblox.field_C;
+        int var11 = Geoblox.clientControlFlowFlag;
         if (param0 <= 0L) {
             return null;
         }
@@ -90,7 +90,7 @@ final class fh implements dh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = Geoblox.field_C;
+        var11 = Geoblox.clientControlFlowFlag;
         try {
           if ((!param4.field_l) &&
               (!param4.e((byte) 54))) {

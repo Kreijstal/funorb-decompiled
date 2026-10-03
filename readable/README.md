@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,314 guarded naming rules: 67 classes, 906 fields,
-616 methods, 1,825 parameters and 3,900 local declarations. Both 303-file corpora
+The current export has 7,391 guarded naming rules: 68 classes, 911 fields,
+619 methods, 1,847 parameters and 3,946 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,54 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Client/session declarations and shared control flag (pass 96)
+
+This naming-only pass adds 77 guarded identities: one class, five fields,
+three methods, 22 parameters and 46 locals. Every field, nonconstructor method,
+parameter and local in `GameplaySession` now has a name. Every field, parameter,
+local and nonlifecycle method in `Geoblox` also has a name. Its already readable
+class/constructor/`init` lifecycle names remain original. Both menu classes keep
+their completed declaration names.
+
+The client fields identify `canvasCreationTimeMillis`, `activeMessageDialog`,
+`longAndNameLoginType` and `clientControlFlowFlag`. The timestamp retains its
+0/-11 sentinels and original paint-age checks. The message reference points to
+the UI dialog constructed/dismissed/replaced by the existing message flows.
+`LoginPayloadKind.wireId` describes the kind token constructor and login-writer
+read; kind2 belongs to the long-plus-Base38-name payload. Numeric IDs/identity
+comparisons remain; the long's meaning and complete login protocol are not inferred.
+The class's unrelated static helpers remain independently named or opaque.
+
+The public global control-flow flag has 325 bound declaration/reference
+occurrences across 141 files. Its sole explicit bound write in this corpus is
+in the achievement/instruction text loader: after loading, `ch.field_h` permits
+incrementing the original snapshot and writing it back. Names expose the
+zero/nonzero branch role without assuming zero, restricting external writes or
+inferring its application purpose. Guard paths and snapshots remain unchanged.
+Client archive/render/transition snapshots, result pixel-comparison carriers
+and guarded static cleanup also receive names. The Windows URL launcher is
+named from source; this pass never invokes that shell helper.
+
+All 7,314 previous complete naming rules, raw/decompiler pins and six native
+probe sources/trace pins remain. The 7,391 rules apply 59,581 identifier edits,
+including the class-rule constructor spelling. Both 303-file corpora compile,
+preserving 138,772 bindings and 388 override relationships. Rule-builder/source-
+migration/text-resource checks pass all three files. Because the global flag
+name reaches every probe, all six existing native/raw/readable probes are rerun:
+matching/scoring, text writing, gameplay/difficulty/motion/spawn, result sequence,
+drawing/transforms/triangles/lighting/projection/logo and result/cache/I/O/music
+helpers retain every pinned trace. No probe fixture or expected hash is changed.
+Full reproduction and dictionary reversal recover the pinned raw Git input
+byte-for-byte. Pass96's readable source-tree SHA-256 is
+`fca983cfb3245ff6a52808f615395c86a9452393eb24eeef37a281fae47469e2`.
+
+These are existing controlled fixture scopes, not new complete client/asset/
+paint/dialog/login/shell/audio lifecycle execution or actual-server/browser/phone
+coverage. The structural inventory remains 21 overlapping large spans, ten with
+block labels. Related shared classes, larger gameplay control reconstruction and
+whole-game acceptance remain unfinished or unverified. Earlier sections describe
+historical counts and scope.
 
 ## Base menu and direct helpers (pass 95)
 

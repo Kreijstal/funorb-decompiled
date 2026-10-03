@@ -21,7 +21,7 @@ final class BufferedRandomAccessFile {
         long overlapEnd;
         int overlapLength;
         int unusedClientGuardSnapshot;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (this.writeBufferStart != -1L) {
           if (~this.underlyingPosition != ~this.writeBufferStart) {
             this.file.seek(this.writeBufferStart, true);
@@ -98,7 +98,7 @@ final class BufferedRandomAccessFile {
         long overlayEnd = 0L;
         int overlayLength = 0;
         int unusedClientGuardSnapshot = 0;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           try {
             if (remainingLength + destinationOffset > destination.length) {
@@ -243,7 +243,7 @@ final class BufferedRandomAccessFile {
         long overlapEnd = 0L;
         int overlapLength = 0;
         int unusedClientGuardSnapshot = 0;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           try {
             if (~this.logicalLength > ~((long)remainingLength + this.position)) {
@@ -361,7 +361,7 @@ final class BufferedRandomAccessFile {
         int requestedReadLength;
         int bytesRead;
         int unusedClientGuardSnapshot;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (!enabled) {
           return;
         }
@@ -409,7 +409,7 @@ final class BufferedRandomAccessFile {
         int var10 = 0;
         GameplayEntity seedEntity = null;
         SecondaryDeque cascadeFrontier = null;
-        var10 = Geoblox.field_C;
+        var10 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != -1) {
             BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(3);

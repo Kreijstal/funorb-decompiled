@@ -415,7 +415,7 @@ final class kj extends ia {
         int var9 = 0;
         InstrumentPatch var10 = null;
         int var11 = 0;
-        var11 = Geoblox.field_C;
+        var11 = Geoblox.clientControlFlowFlag;
         try {
           param3.collectInstrumentNotes();
           var6_int = 1;
@@ -774,7 +774,7 @@ final class kj extends ia {
 
     private final synchronized void a(byte param0, int param1, int param2) {
         int var4 = 0;
-        int var5 = Geoblox.field_C;
+        int var5 = Geoblox.clientControlFlowFlag;
         if (param1 >= 0) {
             this.field_L[param1] = param2;
         } else {
@@ -929,7 +929,7 @@ final class kj extends ia {
     }
 
     final synchronized void c(byte param0) {
-        int var3 = Geoblox.field_C;
+        int var3 = Geoblox.clientControlFlowFlag;
         if (param0 <= 65) {
             this.c(-76, (byte) -34);
         }

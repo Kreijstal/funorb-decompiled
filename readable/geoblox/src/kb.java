@@ -20,7 +20,7 @@ final class kb {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != 6568) {
             return;

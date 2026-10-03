@@ -14,7 +14,7 @@ final class tc {
         int var5 = 0;
         char[] var6 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           if (!((0 < param1) &&
                 (128 > param1)) &&

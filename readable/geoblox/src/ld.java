@@ -32,7 +32,7 @@ final class ld {
         int guardDivisionResult = 0;
         int circleError = 0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           upperNearRowCenterIndex = 240 * SoftwareRasterizer.stride + 320;
           lowerNearRowCenterIndex = upperNearRowCenterIndex;

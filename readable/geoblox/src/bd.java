@@ -15,7 +15,7 @@ final class bd extends IOException {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           sh.mainRasterBuffer.setAsRasterTarget(255);
           popup = (ScorePopup) ((Object) md.activeScorePopups.firstForIteration(0));

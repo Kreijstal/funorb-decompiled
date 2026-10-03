@@ -15,7 +15,7 @@ final class nd {
         qi.field_i[md.field_c] = md.field_c;
         hg.field_a[md.field_c] = param5;
         if (ok.field_b > param5) {
-          qg.field_a = param5;
+          LoginPayloadKind.field_a = param5;
         }
         if (bd.field_a >= param5) {
           fb.field_m[md.field_c] = param3;
@@ -34,10 +34,10 @@ final class nd {
             va.field_b = var7;
           }
           md.field_c = md.field_c + 1;
-          if (qg.field_a <= var7) {
+          if (LoginPayloadKind.field_a <= var7) {
             return;
           }
-          qg.field_a = var7;
+          LoginPayloadKind.field_a = var7;
           return;
         }
         va.field_b = param5;
@@ -57,10 +57,10 @@ final class nd {
           va.field_b = var7;
         }
         md.field_c = md.field_c + 1;
-        if (qg.field_a <= var7) {
+        if (LoginPayloadKind.field_a <= var7) {
           return;
         }
-        qg.field_a = var7;
+        LoginPayloadKind.field_a = var7;
     }
 
     final static vk a(int param0) {

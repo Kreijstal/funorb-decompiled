@@ -18,7 +18,7 @@ final class lc {
         float inwardDirectionY = 0.0f;
         double inverseSpawnDistance = 0.0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
           while (true) {
@@ -139,7 +139,7 @@ final class lc {
         int modulatedBlueThenWeighted = 0;
         int sourceGrayWeight = 0;
         int clientControlFlowGuard = 0;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard > -74) {
             field_b = 78;
@@ -299,7 +299,7 @@ final class lc {
         String var7 = null;
         j var7_ref = null;
         int var8 = 0;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != 104) {
             field_b = 67;

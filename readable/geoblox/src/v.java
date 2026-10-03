@@ -251,7 +251,7 @@ final class v {
         int var3;
         int var4;
         int var5;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         var2 = this.field_d;
         var3 = this.field_p;
         if (!this.a(-123)) {

@@ -119,7 +119,7 @@ final class GzipInflater {
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           if (param1) {
             stackIn_3_0 = (nd) null;

@@ -79,7 +79,7 @@ class dj extends hk {
         int var2;
         int var3;
         int var4;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         var2 = this.field_s.length();
         if (var2 == this.field_H) {
           return this.field_H;
@@ -318,7 +318,7 @@ class dj extends hk {
     private final int j(byte param0) {
         int var2;
         int var3;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         if (0 == this.field_H) {
           return this.field_H;
         }
@@ -497,7 +497,7 @@ class dj extends hk {
         int var7;
         int var8;
         cc var9;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         if (!this.field_E) {
           this.field_n = 0;
           this.field_k = 0;

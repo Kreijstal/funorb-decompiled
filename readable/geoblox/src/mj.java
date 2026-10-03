@@ -28,7 +28,7 @@ final class mj {
         CharSequence var8 = null;
         int var9 = 0;
         CharSequence var10 = null;
-        var9 = Geoblox.field_C;
+        var9 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 == 0) {
             stackIn_4_0 = "";
@@ -93,7 +93,7 @@ final class mj {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = param0.length();
           if (param1 > -34) {

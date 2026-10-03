@@ -22,7 +22,7 @@ final class qe {
         int var9 = 0;
         rj[] var10 = null;
         PlatformTask var11 = null;
-        var9 = Geoblox.field_C;
+        var9 = Geoblox.clientControlFlowFlag;
         try {
           if (!param4.hasFullscreenSupport(-26098)) {
             return null;
@@ -96,7 +96,7 @@ final class qe {
         int clientControlFlowGuard = 0;
         RuntimeException caughtQuotaUpdateFailure = null;
         RuntimeException quotaUpdateFailureForContext = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if ((ArchiveNetworkClient.difficultyStep != 0) &&
               (ArchiveNetworkClient.difficultyStep < 21)) {

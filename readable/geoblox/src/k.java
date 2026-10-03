@@ -61,7 +61,7 @@ final class k implements Iterator {
         int var2;
         IntrusiveNode var3;
         IntrusiveNode var4;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         if (this.field_d.field_a[this.field_j - 1] != this.field_h) {
           var4 = this.field_h;
           this.field_h = var4.nextNode;
@@ -109,7 +109,7 @@ final class k implements Iterator {
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         if (this.field_d.field_a[this.field_j - 1] != this.field_h) {
           return true;
         }

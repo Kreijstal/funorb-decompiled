@@ -19,6 +19,18 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 96 adds 77 guarded identities, completing GameplaySession declarations and
+Geoblox's fields/parameters/locals/nonlifecycle methods. Already semantic client
+lifecycle names remain original. Canvas timing, message dialog and login payload
+kind are traced; the shared control-flow flag is named across 325 bound occurrences
+in 141 files without assuming zero or application meaning. All 7,314 previous
+complete rules and raw/decompiler/native evidence pins remain. The 7,391 rules
+apply 59,581 edits. All six existing native/raw/readable probes retain their traces;
+compilation/binding checks, full reproduction and dictionary reversal pass.
+Related shared classes, large labeled bodies and whole-game/browser/phone
+acceptance remain; existing fixtures do not establish new full client/platform/
+asset/login/server execution.
+
 Pass 95 adds 65 guarded base-menu and direct-helper names, completing every
 MenuScreen field, nonconstructor method, parameter and local. Shared dispatcher,
 applet stop deadline and intro tint state have independently traced roles.

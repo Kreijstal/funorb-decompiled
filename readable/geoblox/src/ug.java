@@ -17,7 +17,7 @@ final class ug {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 >= -125) {
             var7 = (String) null;

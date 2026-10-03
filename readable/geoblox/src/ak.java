@@ -62,7 +62,7 @@ final class ak {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);

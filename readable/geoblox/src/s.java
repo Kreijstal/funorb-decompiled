@@ -48,7 +48,7 @@ final class s extends ee implements pe, pl {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != 0) {
             return;
@@ -126,7 +126,7 @@ final class s extends ee implements pe, pl {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           if (0 == param1) {
             uk.a(false, "terms.ws");

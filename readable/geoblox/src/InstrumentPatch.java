@@ -32,7 +32,7 @@ final class InstrumentPatch extends IntrusiveNode {
         Object resolvedSample = null;
         int encodedSampleId = 0;
         int controlFlagSnapshot = 0;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           allLoaded = 1;
           previousEncodedSampleId = 0;
@@ -155,7 +155,7 @@ final class InstrumentPatch extends IntrusiveNode {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = Geoblox.field_C;
+        var10 = Geoblox.clientControlFlowFlag;
         try {
           if ((param0 != null) &&
               (param1 > 0)) {

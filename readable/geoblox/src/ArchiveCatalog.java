@@ -113,7 +113,7 @@ final class ArchiveCatalog {
         int archiveId;
         int unusedClientGuardSnapshot;
         CachedArchiveSource sourceBeforeBackgroundTick = null;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (null == this.archiveSources) {
           return;
         }
@@ -147,7 +147,7 @@ final class ArchiveCatalog {
         java.math.BigInteger encodedVerificationInteger;
         byte[] encodedVerificationBytes;
         byte[] computedDigest;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (null != this.catalogBuffer) {
           return true;
         }

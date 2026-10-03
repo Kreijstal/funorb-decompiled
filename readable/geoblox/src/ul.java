@@ -49,7 +49,7 @@ final class ul {
         int smallestPackedEntityId = 0;
         int swappedEntityId = 0;
         int controlFlowGuard = 0;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           h.matchCandidateCount = 0;
           eligibleNeighborhoodVisited = 0;
@@ -183,7 +183,7 @@ final class ul {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+        var4 = Geoblox.clientControlFlowFlag;
         try {
           if (param2 != 127) {
             return false;

@@ -6,11 +6,11 @@ class lf extends df {
     private String field_d;
     private long field_c;
 
-    qg a(byte param0) {
+    LoginPayloadKind a(byte param0) {
         if (param0 != -32) {
-            return (qg) null;
+            return (LoginPayloadKind) null;
         }
-        return Geoblox.field_B;
+        return Geoblox.longAndNameLoginType;
     }
 
     public static void b(int param0) {

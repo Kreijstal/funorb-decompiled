@@ -19,14 +19,14 @@ final class gi implements Iterable {
     final static void b(int param0) {
         int var1;
         int var2;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         va.field_d = false;
         if (param0 != -12618) {
           return;
         }
         ff.field_d = null;
         if (cf.field_i) {
-          Geoblox.field_y.c(false);
+          Geoblox.activeMessageDialog.c(false);
         } else {
           var1 = ik.field_a;
           if (var1 > 0) {
@@ -37,7 +37,7 @@ final class gi implements Iterable {
             }
             ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }
-          Geoblox.field_y.h((byte) -104);
+          Geoblox.activeMessageDialog.h((byte) -104);
           rd.c(520);
         }
     }
@@ -119,7 +119,7 @@ final class gi implements Iterable {
 
     final static void drawHalfBlendSolidTriangle(int vertexCX, int guard, int vertexCY, int vertexAY, int vertexAX, int vertexBX, int vertexBY, int halfRgb) {
         int controlFlagSnapshot;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         if (vertexBY >= vertexAY) {
           if (vertexCY > vertexBY) {
             NetworkArchiveRequest.drawSortedHalfBlendSolidTriangle(vertexBX, vertexAX, halfRgb, 110, SoftwareRasterizer.framebuffer, vertexCY, vertexCX, vertexBY, vertexAY);
@@ -272,7 +272,7 @@ final class gi implements Iterable {
         IntrusiveNode var5;
         IntrusiveNode var6;
         int var7;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         var4 = -95 / ((param1 + 9) / 43);
         var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
         this.field_f = var5.nextNode;

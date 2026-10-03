@@ -10,7 +10,7 @@ final class je extends IntrusiveNode {
 
     final static void c(byte param0) {
         p var1 = null;
-        int var2 = Geoblox.field_C;
+        int var2 = Geoblox.clientControlFlowFlag;
         try {
             if ((!hj.field_c && null != vk.field_b) &&
                 (!(!vk.field_b.field_f))) {

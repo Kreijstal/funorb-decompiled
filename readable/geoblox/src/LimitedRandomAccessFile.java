@@ -178,7 +178,7 @@ final class LimitedRandomAccessFile {
             RuntimeException var4_ref = null;
             try {
               if ((PlatformTaskDispatcher.osNameLowerCase.startsWith("win")) &&
-                  (GameplaySession.a(param0, false))) {
+                  (GameplaySession.tryOpenUrlWithWindowsShell(param0, false))) {
                 return;
               }
               try {

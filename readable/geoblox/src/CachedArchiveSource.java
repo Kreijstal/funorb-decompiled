@@ -35,7 +35,7 @@ final class CachedArchiveSource extends ArchiveSource {
         byte[] indexBytesBeforeValidation = null;
         byte[] indexBytesAfterRequest = null;
         byte[] indexBytesForDiskValidation = null;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (null != this.index) {
           return this.index;
         }
@@ -127,7 +127,7 @@ final class CachedArchiveSource extends ArchiveSource {
         byte[] computedDiskGroupDigest = null;
         byte[] computedNetworkGroupDigest = null;
         byte[] expectedNetworkGroupDigest = null;
-        unusedClientGuardSnapshot = Geoblox.field_C;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         cachedRequest = (ArchiveRequest) ((Object) this.groupRequests.a((long)groupId, (byte) -124));
         request = cachedRequest;
         if ((cachedRequest != null) &&
@@ -302,7 +302,7 @@ final class CachedArchiveSource extends ArchiveSource {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.field_C;
+        var5 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = param1.length();
           var3 = new char[var2_int];
@@ -378,7 +378,7 @@ final class CachedArchiveSource extends ArchiveSource {
         int groupId = 0;
         ArchiveRequest unusedDiskVerificationRequest = null;
         ArchiveRequest unusedBackgroundDownloadRequest = null;
-        int unusedClientGuardSnapshot = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard != 6924) {
             this.advanceBackgroundLoading((byte) -7);
         }
@@ -432,7 +432,7 @@ final class CachedArchiveSource extends ArchiveSource {
           L1: {
             L2: {
               L3: {
-                unusedClientGuardSnapshot = Geoblox.field_C;
+                unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
                 if (this.backgroundGroups != null) {
                   if (null == this.getIndex((byte) 118)) {
                     return;

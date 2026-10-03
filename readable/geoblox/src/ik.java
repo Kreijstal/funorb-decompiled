@@ -28,7 +28,7 @@ final class ik {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = Geoblox.field_C;
+        var10 = Geoblox.clientControlFlowFlag;
         try {
           SoftwareRasterizer.drawHorizontalLine(param0, param2, param3 + 1, 10000536);
           SoftwareRasterizer.drawHorizontalLine(param0, param2 + param1, param3 + 1, 12105912);
@@ -86,7 +86,7 @@ final class ik {
         int propagateCategory = 0;
         GameplayEntity entityForVariantCountReset = null;
         int var7 = 0;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           for (neighborIndexThenDetachSecond = 0; neighborIndexThenDetachSecond < secondEntity.relatedEntityCount; neighborIndexThenDetachSecond++) {
             if (secondEntity.relatedEntities[neighborIndexThenDetachSecond] == firstEntity) {

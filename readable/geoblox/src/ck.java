@@ -43,7 +43,7 @@ final class ck {
         RuntimeException caughtFailure = null;
         RuntimeException contextFailure = null;
         TriangleMesh selectedMesh = null;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           IntKeyLookup.meshCameraTransform = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           meshCount = ArchiveIndex.logoMeshes.length;
@@ -129,7 +129,7 @@ final class ck {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = Geoblox.field_C;
+        var2 = Geoblox.clientControlFlowFlag;
         try {
           if (!IntrusiveDeque.a((byte) 124)) {
             if ((InstrumentPatch.field_n != null) &&

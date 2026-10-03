@@ -5,7 +5,7 @@ abstract class df {
     static String endGameText;
     static IndexedSprite spaceBackgroundSprite;
 
-    abstract qg a(byte param0);
+    abstract LoginPayloadKind a(byte param0);
 
     abstract void a(int param0, ByteArrayBuffer param1);
 

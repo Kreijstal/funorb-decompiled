@@ -31,7 +31,7 @@ final class rd extends ff {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != 124) {
             var7 = (el) null;
@@ -74,7 +74,7 @@ final class rd extends ff {
         si var5 = null;
         si var6 = null;
         int var7 = 0;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           super.a(param1, param0);
           if (param2) {
@@ -125,7 +125,7 @@ final class rd extends ff {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           var7 = this.field_x;
           var3 = var7;

@@ -22,7 +22,7 @@ abstract class SpriteState extends DualLinkNode {
         byte[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        var3 = Geoblox.field_C;
+        var3 = Geoblox.clientControlFlowFlag;
         try {
           pf.field_O = param1;
           var2 = ih.a(122, "achievement_names,0");
@@ -234,7 +234,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(127, "level");
           if (var2 != null) {
-            qg.field_e = ag.decodeTextBytes(1, var2);
+            LoginPayloadKind.field_e = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "score");
           if (var2 != null) {
@@ -383,7 +383,7 @@ abstract class SpriteState extends DualLinkNode {
         }
         if (ch.field_h) {
           var3++;
-          Geoblox.field_C = var3;
+          Geoblox.clientControlFlowFlag = var3;
         }
     }
 
@@ -399,7 +399,7 @@ abstract class SpriteState extends DualLinkNode {
         StringBuilder digestMessagePrefix = null;
         String sourceDescription = null;
         RuntimeException caughtDigestFailure = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           L0: {
             if (sourceOffset > 0) {
@@ -477,7 +477,7 @@ abstract class SpriteState extends DualLinkNode {
         int spanGreenStepOrBlueStepOrBottomBlueQ16 = 0;
         int spanBlueStepQ16 = 0;
         int controlFlagSnapshot = 0;
-        controlFlagSnapshot = Geoblox.field_C;
+        controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if ((bottomY >= 0) &&
               (~TriangleRasterState.clipHeight < ~topY)) {
@@ -847,7 +847,7 @@ abstract class SpriteState extends DualLinkNode {
             int var3_int = 0;
             Exception var3 = null;
             int var4 = 0;
-            var5 = Geoblox.field_C;
+            var5 = Geoblox.clientControlFlowFlag;
             try {
               L0: {
                 var2 = new byte[24];

@@ -99,7 +99,7 @@ final class AccountWelcomePanel extends ee implements pl {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = Geoblox.field_C;
+        var7 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != -20) {
             this.justPlayButton = (hk) null;
@@ -1536,7 +1536,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_password");
                 if (null != textResourceBytes) {
-                  qg.createPasswordText = ag.decodeTextBytes(1, textResourceBytes);
+                  LoginPayloadKind.createPasswordText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_password_confirm");
                 if (textResourceBytes != null) {
@@ -3158,7 +3158,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 ImageProducerRasterBuffer.activeTextArchive = null;
             }
             void run() {
-                sharedFlowFlag = Geoblox.field_C;
+                sharedFlowFlag = Geoblox.clientControlFlowFlag;
                 try {
                   loadInterfaceTextPart1();
                   if (finished) return;

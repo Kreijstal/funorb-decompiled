@@ -48,7 +48,7 @@ abstract class sh extends el implements ql {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = Geoblox.field_C;
+        var14 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 <= param0) {
             return;
@@ -153,7 +153,7 @@ abstract class sh extends el implements ql {
         int var5 = 0;
         ma var6 = null;
         int var8 = 0;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = -108 / ((-71 - param0) / 45);
           if (eh.field_b != PacketBuffer.field_l) {
@@ -326,7 +326,7 @@ abstract class sh extends el implements ql {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = Geoblox.field_C;
+        var6 = Geoblox.clientControlFlowFlag;
         try {
           discarded$10 = param1.append('\n');
           for (var5_int = param3; param0 >= var5_int; var5_int++) {

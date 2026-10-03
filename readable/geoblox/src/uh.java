@@ -84,7 +84,7 @@ final class uh extends ac {
         TriangleMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
-        var8 = Geoblox.field_C;
+        var8 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = param0.readBits((byte) -17, 8);
           if (var2_int > 0) {
@@ -172,7 +172,7 @@ final class uh extends ac {
         GameplayEntity spawnQueueHead = null;
         RuntimeException caughtSpawnDrawFailure = null;
         RuntimeException spawnDrawFailureForContext = null;
-        clientControlFlowGuardSnapshot = Geoblox.field_C;
+        clientControlFlowGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 4740) {
             return;

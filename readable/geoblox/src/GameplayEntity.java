@@ -37,7 +37,7 @@ final class GameplayEntity extends DualLinkNode {
         int rotatedEntityX;
         int rotatedEntityY;
         int clientControlFlowGuard;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         entityOffsetX = this.positionX - 320.0f;
         entityOffsetY = this.positionY - 240.0f;
         rotatedEntityX = (int)((double)entityOffsetX * Math.cos((double)el.gameplaySession.boardAngleRadians) - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
@@ -90,7 +90,7 @@ final class GameplayEntity extends DualLinkNode {
         int entityDrawY;
         int fadeOpacity;
         int controlFlowGuard;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         entityOffsetX = this.positionX - 320.0f;
         entityOffsetY = this.positionY - 240.0f;
         boardAngle = el.gameplaySession.boardAngleRadians;
@@ -170,7 +170,7 @@ final class GameplayEntity extends DualLinkNode {
         int rowSkip;
         int controlFlowGuard;
         int[] framebufferPixels;
-        controlFlowGuard = Geoblox.field_C;
+        controlFlowGuard = Geoblox.clientControlFlowFlag;
         clipLeftX = (int)this.positionX - ((vf.spriteScratchRaster.fullWidth >> 1) + 4);
         clipTopY = -4 - (vf.spriteScratchRaster.fullHeight >> 1) + (int)this.positionY;
         clippedWidth = 8 + vf.spriteScratchRaster.fullWidth;
@@ -237,7 +237,7 @@ final class GameplayEntity extends DualLinkNode {
 
     private final void selectEntitySprite(byte methodGuard) {
         int clientControlFlowGuard;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (methodGuard < 83) {
           this.drawBoardRotatedEntity(18);
         }
@@ -329,7 +329,7 @@ final class GameplayEntity extends DualLinkNode {
         int kind4AnimationFrame = 0;
         float paletteBlendFraction;
         int clientControlFlowGuard;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         this.entityUpdateTick = this.entityUpdateTick + 1;
         this.remainingLifetimeTicks = this.remainingLifetimeTicks - 1;
         if (!preservePositionY) {
@@ -429,7 +429,7 @@ final class GameplayEntity extends DualLinkNode {
         StringBuilder neighborRemovalMessagePrefix = null;
         String relatedEntityArgumentDescription = null;
         RuntimeException caughtNeighborRemovalException = null;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           for (relatedEntitySearchIndex = startingChildIndex; relatedEntitySearchIndex < this.relatedEntityCount; relatedEntitySearchIndex++) {
             if (this.relatedEntities[relatedEntitySearchIndex] != relatedEntity) {
@@ -483,7 +483,7 @@ final class GameplayEntity extends DualLinkNode {
         int framebufferRowSkip;
         int clientControlFlowGuard;
         int[] backgroundPixels;
-        clientControlFlowGuard = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         entityOffsetX = -320.0f + this.positionX;
         entityOffsetY = -240.0f + this.positionY;
         rotatedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
