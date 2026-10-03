@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "57969c34c9be16cd7dfaaa691774b95dbeaa2c5b",
+      "commit": "73b2571fd252aaef9c8552d5d72416be9632d5ab",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce",
-        "reproduce": "git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum",
+        "sha256": "8c8d1fd40c52f3f831bdc78cb7295df688c7b544722030f93bde71638c3cd31a",
+        "reproduce": "git archive --format=tar 73b2571fd252aaef9c8552d5d72416be9632d5ab | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe",
-  "previousSourceTreeSha256": "c8eb52af8caa07a9151dfca4c412f4b2fac7ef15e6e260c9413bc0708d83775a",
-  "changedJavaFiles": 8,
+  "sourceTreeSha256": "30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638",
+  "previousSourceTreeSha256": "39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1807,5 +1807,35 @@
     "typesLabelsShadowingUnicodeAndUnsupportedSyntaxRefused": true,
     "forwardedAndAliasedCarriersRetainedTogetherOnRefusal": true,
     "qualifiedGenericInvocationsStructured": true
+  },
+  "existingExitBlockReturnTails": {
+    "historicalPassVersion": 76,
+    "javaToolsCommit": "73b2571fd252aaef9c8552d5d72416be9632d5ab",
+    "sourceArchiveSha256": "8c8d1fd40c52f3f831bdc78cb7295df688c7b544722030f93bde71638c3cd31a",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": [
+      "tb.java"
+    ],
+    "sourceLinesBefore": 80470,
+    "sourceLinesAfter": 80457,
+    "duplicatedSourceLinesRemoved": 13,
+    "existingPlainExitBlockReused": true,
+    "newLabelFramesAdded": 0,
+    "protectedMonitorAndSwitchCrossingsRefused": true,
+    "inlineShadowingRefused": true,
+    "scopeNormalizationRequired": true,
+    "sourceDeclarationsBefore": 19558,
+    "sourceDeclarationsAfter": 19558,
+    "sourceReferenceOccurrencesBefore": 119000,
+    "sourceReferenceOccurrencesAfter": 118961,
+    "overrideRelationshipsPreserved": 388,
+    "declarationOrdinalMigrations": 0,
+    "genericEmitterGroups": 38,
+    "genericExceptionExitGroups": 8,
+    "newNativeEmitterComparisons": 2048,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "One exact Bzip2 output-state publication/return clone becomes break L1 to the existing cleanup tail. Native generic fixtures preserve loop effects, failures, throwable identity, shadows and monitor/protected ownership. Original class bytes and all 6081 naming identities remain. Actual game probe evidence is maintained in the single readable manifest; full assets/gameplay and browser/phone performance remain unverified."
   }
 }
