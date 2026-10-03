@@ -55,23 +55,13 @@ final class MatchingTextValidator extends TextInputValidator {
               }
               fillPixelIndex = stackIn_11_0;
               while (true) {
-                L4: {
-                  if (sliceToFill.pixels.length > fillPixelIndex) {
-                    sliceToFill.pixels[fillPixelIndex] = fillColor;
-                    fillPixelIndex++;
-                    if (controlFlowGuard != 0) {
-                      break L4;
-                    }
-                    if (controlFlowGuard == 0) {
-                      continue;
-                    }
-                  }
-                  scanIndex++;
+                if (sliceToFill.pixels.length > fillPixelIndex) {
+                  sliceToFill.pixels[fillPixelIndex] = fillColor;
+                  fillPixelIndex++;
+                  continue;
                 }
-                if (controlFlowGuard == 0) {
-                  continue L0;
-                }
-                break;
+                scanIndex++;
+                continue L0;
               }
             }
             stackIn_11_0 = 0;
@@ -86,26 +76,16 @@ final class MatchingTextValidator extends TextInputValidator {
                 }
                 scanIndex = stackIn_22_0;
                 while (true) {
-                  L10: {
-                    if (cornerSize > scanIndex) {
-                      slices[6].pixels[scanIndex + (cornerSize - borderIndex - 1) * cornerSize] = bottomRightBorderColor;
-                      slices[8].pixels[scanIndex + (-1 - borderIndex + cornerSize) * cornerSize] = bottomRightBorderColor;
-                      slices[2].pixels[scanIndex * cornerSize - borderIndex + cornerSize - 1] = bottomRightBorderColor;
-                      slices[8].pixels[-borderIndex - 1 - (-cornerSize - cornerSize * scanIndex)] = bottomRightBorderColor;
-                      scanIndex++;
-                      if (controlFlowGuard != 0) {
-                        break L10;
-                      }
-                      if (controlFlowGuard == 0) {
-                        continue;
-                      }
-                    }
-                    borderIndex++;
+                  if (cornerSize > scanIndex) {
+                    slices[6].pixels[scanIndex + (cornerSize - borderIndex - 1) * cornerSize] = bottomRightBorderColor;
+                    slices[8].pixels[scanIndex + (-1 - borderIndex + cornerSize) * cornerSize] = bottomRightBorderColor;
+                    slices[2].pixels[scanIndex * cornerSize - borderIndex + cornerSize - 1] = bottomRightBorderColor;
+                    slices[8].pixels[-borderIndex - 1 - (-cornerSize - cornerSize * scanIndex)] = bottomRightBorderColor;
+                    scanIndex++;
+                    continue;
                   }
-                  if (controlFlowGuard == 0) {
-                    continue L6;
-                  }
-                  break;
+                  borderIndex++;
+                  continue L6;
                 }
               }
               stackIn_22_0 = 0;
@@ -114,7 +94,7 @@ final class MatchingTextValidator extends TextInputValidator {
             L12: while (true) {
               stackIn_24_0 = borderIndex;
               stackIn_24_1 = outerBorderWidth;
-              L13: while (true) {
+              while (true) {
                 L14: {
                   if (stackIn_24_0 < stackIn_24_1) {
                     stackIn_34_0 = 0;
@@ -127,23 +107,15 @@ final class MatchingTextValidator extends TextInputValidator {
                       slices[0].pixels[borderIndex + scanIndex * cornerSize] = topLeftBorderColor;
                       stackIn_24_0 = ~(-borderIndex + cornerSize);
                       stackIn_24_1 = ~scanIndex;
-                      if (controlFlowGuard != 0) {
-                        continue L13;
-                      }
                       if (stackIn_24_0 < stackIn_24_1) {
                         slices[2].pixels[cornerSize * borderIndex + scanIndex] = topLeftBorderColor;
                         slices[6].pixels[borderIndex + scanIndex * cornerSize] = topLeftBorderColor;
                       }
                       scanIndex++;
-                      if (controlFlowGuard == 0) {
-                        continue;
-                      }
-                      break;
+                      continue;
                     }
                     borderIndex++;
-                    if (controlFlowGuard == 0) {
-                      continue L12;
-                    }
+                    continue L12;
                   }
                   stackIn_34_0 = 0;
                 }
@@ -157,26 +129,16 @@ final class MatchingTextValidator extends TextInputValidator {
                       }
                       scanIndex = stackIn_45_0;
                       while (true) {
-                        L23: {
-                          if (outerBorderWidth > scanIndex) {
-                            slices[7].pixels[edgeLength * (cornerSize - scanIndex - 1) + borderIndex] = bottomRightBorderColor;
-                            slices[5].pixels[-1 + (cornerSize - scanIndex + borderIndex * cornerSize)] = bottomRightBorderColor;
-                            slices[1].pixels[edgeLength * scanIndex + borderIndex] = topLeftBorderColor;
-                            slices[3].pixels[scanIndex + cornerSize * borderIndex] = topLeftBorderColor;
-                            scanIndex++;
-                            if (controlFlowGuard != 0) {
-                              break L23;
-                            }
-                            if (controlFlowGuard == 0) {
-                              continue;
-                            }
-                          }
-                          borderIndex++;
+                        if (outerBorderWidth > scanIndex) {
+                          slices[7].pixels[edgeLength * (cornerSize - scanIndex - 1) + borderIndex] = bottomRightBorderColor;
+                          slices[5].pixels[-1 + (cornerSize - scanIndex + borderIndex * cornerSize)] = bottomRightBorderColor;
+                          slices[1].pixels[edgeLength * scanIndex + borderIndex] = topLeftBorderColor;
+                          slices[3].pixels[scanIndex + cornerSize * borderIndex] = topLeftBorderColor;
+                          scanIndex++;
+                          continue;
                         }
-                        if (controlFlowGuard == 0) {
-                          continue L19;
-                        }
-                        break;
+                        borderIndex++;
+                        continue L19;
                       }
                     }
                     stackIn_45_0 = 0;
@@ -191,26 +153,16 @@ final class MatchingTextValidator extends TextInputValidator {
                         }
                         scanIndex = stackIn_56_0;
                         while (true) {
-                          L29: {
-                            if (innerAccentWidth > scanIndex) {
-                              slices[1].pixels[edgeLength * (-1 + (-scanIndex + cornerSize)) + borderIndex] = innerAccentColor;
-                              slices[3].pixels[-1 + cornerSize + (-scanIndex + cornerSize * borderIndex)] = innerAccentColor;
-                              slices[7].pixels[borderIndex + edgeLength * scanIndex] = innerAccentColor;
-                              slices[5].pixels[cornerSize * borderIndex + scanIndex] = innerAccentColor;
-                              scanIndex++;
-                              if (controlFlowGuard != 0) {
-                                break L29;
-                              }
-                              if (controlFlowGuard == 0) {
-                                continue;
-                              }
-                            }
-                            borderIndex++;
+                          if (innerAccentWidth > scanIndex) {
+                            slices[1].pixels[edgeLength * (-1 + (-scanIndex + cornerSize)) + borderIndex] = innerAccentColor;
+                            slices[3].pixels[-1 + cornerSize + (-scanIndex + cornerSize * borderIndex)] = innerAccentColor;
+                            slices[7].pixels[borderIndex + edgeLength * scanIndex] = innerAccentColor;
+                            slices[5].pixels[cornerSize * borderIndex + scanIndex] = innerAccentColor;
+                            scanIndex++;
+                            continue;
                           }
-                          if (controlFlowGuard == 0) {
-                            continue L25;
-                          }
-                          break;
+                          borderIndex++;
+                          continue L25;
                         }
                       }
                       stackIn_56_0 = referenceRetentionGuard;

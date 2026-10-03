@@ -108,9 +108,7 @@ final class p extends IntrusiveNode {
                       maximumVisibleDepth = cameraZBasisOrCameraDepth;
                     }
                     CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
-                    if (controlFlagSnapshot == 0) {
-                      break L5;
-                    }
+                    break L5;
                   }
                   CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = -2147483648;
                 }
@@ -120,9 +118,7 @@ final class p extends IntrusiveNode {
                   gf.cameraMeshVertexZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
                 }
                 cameraXBasisOrDeltaZOrVertexIndex++;
-                if (controlFlagSnapshot == 0) {
-                  continue;
-                }
+                continue;
               }
               if ((null != mesh.firstVertexSourceX) &&
                   (mesh.firstVertexSourceY != null) &&
@@ -157,10 +153,7 @@ final class p extends IntrusiveNode {
                   if (controlFlagSnapshot != 0) {
                     return;
                   }
-                  if (controlFlagSnapshot == 0) {
-                    continue;
-                  }
-                  break;
+                  continue;
                 }
               }
               if (transformNormals) {
@@ -190,10 +183,7 @@ final class p extends IntrusiveNode {
                   oa.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
                   gi.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
                   cameraXZQ16OrNormalIndex++;
-                  if (controlFlagSnapshot == 0) {
-                    continue;
-                  }
-                  break;
+                  continue;
                 }
               }
               nearPlaneOrNormalCapacityOrQueueMinDepth = minimumVisibleDepth;

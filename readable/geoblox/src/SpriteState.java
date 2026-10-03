@@ -411,10 +411,7 @@ abstract class SpriteState extends DualLinkNode {
                 if (clientControlFlowGuard != 0) {
                   break L0;
                 }
-                if (clientControlFlowGuard == 0) {
-                  continue;
-                }
-                break;
+                continue;
               }
               if (clientControlFlowGuard == 0) {
                 break L0;
@@ -666,15 +663,11 @@ abstract class SpriteState extends DualLinkNode {
                           L18: {
                             if (0 <= spanStartOrWidthOrBottomXQ16) {
                               jf.drawHalfBlendRgbGradientSpan(spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanRedStepOrGreenStepOrBottomGreenQ16, 33423689, leftRedQ16, spanBlueStepQ16, leftGreenQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, spanWidthOrRedStepOrBottomRedQ16, leftBlueQ16, destinationPixels);
-                              if (controlFlagSnapshot == 0) {
-                                break L18;
-                              }
+                              break L18;
                             }
                             jf.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanRedStepOrGreenStepOrBottomGreenQ16, 33423689, -(spanRedStepOrGreenStepOrBottomGreenQ16 * spanStartOrWidthOrBottomXQ16) + leftRedQ16, spanBlueStepQ16, leftGreenQ16 - spanStartOrWidthOrBottomXQ16 * spanGreenStepOrBlueStepOrBottomBlueQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, spanWidthOrRedStepOrBottomRedQ16 + spanStartOrWidthOrBottomXQ16, -(spanBlueStepQ16 * spanStartOrWidthOrBottomXQ16) + leftBlueQ16, destinationPixels);
                           }
-                          if (controlFlagSnapshot == 0) {
-                            break L15;
-                          }
+                          break L15;
                         }
                         if ((spanStartOrWidthOrBottomXQ16 >= 0) &&
                             (~spanStartOrWidthOrBottomXQ16 > ~TriangleRasterState.clipWidth)) {
@@ -695,10 +688,7 @@ abstract class SpriteState extends DualLinkNode {
                     leftXQ16 = leftXQ16 + leftXStepQ16;
                     leftRedQ16 = leftRedQ16 + leftRedStepQ16;
                     edgeSwapOrRowBaseOrLowerRowsThenLeftX = edgeSwapOrRowBaseOrLowerRowsThenLeftX + SoftwareRasterizer.stride;
-                    if (controlFlagSnapshot == 0) {
-                      continue;
-                    }
-                    break;
+                    continue;
                   }
                 }
                 edgeSwapOrRowBaseOrLowerRowsThenLeftX = bottomY - middleY;
@@ -778,15 +768,11 @@ abstract class SpriteState extends DualLinkNode {
                       L30: {
                         if (edgeSwapOrRowBaseOrLowerRowsThenLeftX < 0) {
                           jf.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16 - spanWidthOrRedStepOrBottomRedQ16 * edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16 - edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanRedStepOrGreenStepOrBottomGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, -(edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanGreenStepOrBlueStepOrBottomBlueQ16) + leftBlueQ16, destinationPixels);
-                          if (controlFlagSnapshot == 0) {
-                            break L30;
-                          }
+                          break L30;
                         }
                         jf.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX + edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
                       }
-                      if (controlFlagSnapshot == 0) {
-                        break L27;
-                      }
+                      break L27;
                     }
                     if ((edgeSwapOrRowBaseOrLowerRowsThenLeftX >= 0) &&
                         (TriangleRasterState.clipWidth > edgeSwapOrRowBaseOrLowerRowsThenLeftX)) {
@@ -807,9 +793,7 @@ abstract class SpriteState extends DualLinkNode {
                 leftRedQ16 = leftRedQ16 + leftRedStepQ16;
                 leftXQ16 = leftXQ16 + leftXStepQ16;
                 rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
-                if (controlFlagSnapshot == 0) {
-                  continue;
-                }
+                continue;
               }
               return;
             }
@@ -864,9 +848,7 @@ abstract class SpriteState extends DualLinkNode {
                           if (!((stackIn_17_0 != stackIn_17_1) &&
                               (var5 == 0))) {
                             var3_int++;
-                            if (var5 == 0) {
-                              continue;
-                            }
+                            continue;
                           }
                         }
                         stackIn_17_0 = 24;
@@ -890,10 +872,7 @@ abstract class SpriteState extends DualLinkNode {
                           decompiledRegionSelector0 = 1;
                           break L7;
                         }
-                        if (var5 == 0) {
-                          continue;
-                        }
-                        break;
+                        continue;
                       }
                       decompiledRegionSelector0 = 0;
                     }

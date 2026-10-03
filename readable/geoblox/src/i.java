@@ -172,26 +172,17 @@ final class i {
                     edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + ch.meshFaceCountsByDepthBucket.length);
                     edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
                     while (true) {
-                      L10: {
-                        if (edgeCYOrBucketOccupancy >> 4 != 0) {
-                          edgeBYOrDepthBucketIndex--;
-                          bucketIndexOrFaceOrderIndex = edgeBYOrDepthBucketIndex;
-                          if (controlFlagSnapshot != 0) {
-                            break L10;
-                          }
-                          if (bucketIndexOrFaceOrderIndex < 0) {
-                            System.err.println("Out of range!");
-                            if (controlFlagSnapshot == 0) {
-                              break;
-                            }
-                          }
-                          edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
-                          if (controlFlagSnapshot == 0) {
-                            continue;
-                          }
+                      if (edgeCYOrBucketOccupancy >> 4 != 0) {
+                        edgeBYOrDepthBucketIndex--;
+                        bucketIndexOrFaceOrderIndex = edgeBYOrDepthBucketIndex;
+                        if (bucketIndexOrFaceOrderIndex < 0) {
+                          System.err.println("Out of range!");
+                          break;
                         }
-                        bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
+                        edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                        continue;
                       }
+                      bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
                       faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
                       InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                       ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
@@ -206,9 +197,7 @@ final class i {
                   }
                 }
                 faceIndexOrPriorityPrefix++;
-                if (controlFlagSnapshot == 0) {
-                  continue;
-                }
+                continue;
               }
               cullFlagOrPriorityLoopSentinel = -1;
             }
@@ -224,10 +213,7 @@ final class i {
                 if (controlFlagSnapshot != 0) {
                   return;
                 }
-                if (controlFlagSnapshot == 0) {
-                  continue;
-                }
-                break;
+                continue;
               }
             }
             if (methodGuard != 22) {
@@ -337,26 +323,17 @@ final class i {
                     edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + ch.meshFaceCountsByDepthBucket.length);
                     edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
                     while (true) {
-                      L10: {
-                        if (edgeCYOrBucketOccupancy >> 4 != 0) {
-                          edgeBYOrDepthBucketIndex--;
-                          bucketIndexOrFaceOrderIndex = edgeBYOrDepthBucketIndex;
-                          if (controlFlagSnapshot != 0) {
-                            break L10;
-                          }
-                          if (bucketIndexOrFaceOrderIndex < 0) {
-                            System.err.println("Out of range!");
-                            if (controlFlagSnapshot == 0) {
-                              break;
-                            }
-                          }
-                          edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
-                          if (controlFlagSnapshot == 0) {
-                            continue;
-                          }
+                      if (edgeCYOrBucketOccupancy >> 4 != 0) {
+                        edgeBYOrDepthBucketIndex--;
+                        bucketIndexOrFaceOrderIndex = edgeBYOrDepthBucketIndex;
+                        if (bucketIndexOrFaceOrderIndex < 0) {
+                          System.err.println("Out of range!");
+                          break;
                         }
-                        bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
+                        edgeCYOrBucketOccupancy = ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                        continue;
                       }
+                      bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
                       faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
                       InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                       ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
@@ -371,9 +348,7 @@ final class i {
                   }
                 }
                 faceIndexOrPriorityPrefix++;
-                if (controlFlagSnapshot == 0) {
-                  continue;
-                }
+                continue;
               }
               cullFlagOrPriorityLoopSentinel = -1;
             }
@@ -389,10 +364,7 @@ final class i {
                 if (controlFlagSnapshot != 0) {
                   return;
                 }
-                if (controlFlagSnapshot == 0) {
-                  continue;
-                }
-                break;
+                continue;
               }
             }
             if (integerMethodGuard != 22) {

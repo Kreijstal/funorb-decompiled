@@ -57,21 +57,15 @@ final class GameScreen extends MenuScreen {
                   if (102 != ki.currentKeyboardEventCode) {
                     if (ki.currentKeyboardEventCode != 103) {
                       super.handleMenuKey(itemIndex, -53);
-                      if (clientControlFlowGuard == 0) {
-                        break L4;
-                      }
-                    }
-                    j.field_gb = 80;
-                    if (clientControlFlowGuard == 0) {
                       break L4;
                     }
+                    j.field_gb = 80;
+                    break L4;
                   }
                   j.field_gb = 0;
                 }
                 this.previewMusicVolume(0);
-                if (clientControlFlowGuard == 0) {
-                  break L0;
-                }
+                break L0;
               } else {
                 if (actionId != 9) {
                   break L1;
@@ -269,23 +263,13 @@ final class GameScreen extends MenuScreen {
                 }
                 tileY = tileOriginYOrForegroundStartX;
                 while (true) {
-                  L5: {
-                    if (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
-                      WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
-                      tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
-                      if (clientControlFlowGuard != 0) {
-                        break L5;
-                      }
-                      if (clientControlFlowGuard == 0) {
-                        continue;
-                      }
-                    }
-                    tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
+                  if (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
+                    WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
+                    tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
+                    continue;
                   }
-                  if (clientControlFlowGuard == 0) {
-                    continue L1;
-                  }
-                  break;
+                  tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
+                  continue L1;
                 }
               }
               this.foregroundScrollY = this.foregroundScrollY % vc.menuForegroundSprite.fullHeight;
@@ -300,23 +284,13 @@ final class GameScreen extends MenuScreen {
                 }
                 tileY = this.foregroundScrollY + vc.menuForegroundSprite.fullHeight + 480;
                 while (true) {
-                  L11: {
-                    if (~tileY <= ~-vc.menuForegroundSprite.fullHeight) {
-                      vc.menuForegroundSprite.draw(tileX, tileY);
-                      tileY = tileY - vc.menuForegroundSprite.fullHeight;
-                      if (clientControlFlowGuard != 0) {
-                        break L11;
-                      }
-                      if (clientControlFlowGuard == 0) {
-                        continue;
-                      }
-                    }
-                    tileX = tileX - vc.menuForegroundSprite.fullWidth;
+                  if (~tileY <= ~-vc.menuForegroundSprite.fullHeight) {
+                    vc.menuForegroundSprite.draw(tileX, tileY);
+                    tileY = tileY - vc.menuForegroundSprite.fullHeight;
+                    continue;
                   }
-                  if (clientControlFlowGuard == 0) {
-                    continue L7;
-                  }
-                  break;
+                  tileX = tileX - vc.menuForegroundSprite.fullWidth;
+                  continue L7;
                 }
               }
               return;
@@ -683,14 +657,10 @@ final class GameScreen extends MenuScreen {
               (clientControlFlowGuard == 0)) {
             if (j.field_gb > 10) {
               j.field_gb = j.field_gb - 10;
-              if (clientControlFlowGuard == 0) {
-                return;
-              }
-            }
-            j.field_gb = 0;
-            if (clientControlFlowGuard == 0) {
               return;
             }
+            j.field_gb = 0;
+            return;
           } else {
             if (9 != actionId) {
               return;
@@ -1039,9 +1009,7 @@ final class GameScreen extends MenuScreen {
                             scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 16610816, -1);
                             scoreFont.drawText(entryName, 165, entryTextY, 16610816, -1);
                             scoreFont.drawRightAlignedText(Integer.toString(categoryScores[entryIndex]), 500, entryTextY, 16610816, -1);
-                            if (clientControlFlowGuard == 0) {
-                              break L12;
-                            }
+                            break L12;
                           }
                           scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 1, -1);
                           scoreFont.drawText(entryName, 165, entryTextY, 1, -1);
@@ -1050,9 +1018,7 @@ final class GameScreen extends MenuScreen {
                       }
                       entryTextY += 15;
                       entryIndex++;
-                      if (clientControlFlowGuard == 0) {
-                        continue;
-                      }
+                      continue;
                     }
                     if (currentScoreHighlightedFlag != 0) {
                       break;
@@ -1151,9 +1117,7 @@ final class GameScreen extends MenuScreen {
                 if (clientControlFlowGuard != 0) {
                   break L4;
                 }
-                if (clientControlFlowGuard == 0) {
-                  continue;
-                }
+                continue;
               }
               if ((this.screenId == 3) &&
                   (this.selectedItemIndex == 0) &&

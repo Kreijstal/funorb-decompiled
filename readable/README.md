@@ -2,7 +2,7 @@
 
 The current export has 8,439 guarded naming rules: 90 classes, 976 fields,
 787 methods, 2,344 parameters and 4,242 local declarations. Both 303-file corpora
-compile, comparing 138,241 bindings and preserving 388 override relationships. Unknown
+compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`cadb388be7dba547885b789512581e0e40de4a39`. It comes from java-tools
-`27c5718ac886355eccee422dc45c0678b0aea62a` and Deko
+`3c17228365ac550c86439445c9e76311ba3f86d6`. It comes from java-tools
+`18c1062fc902b9d9b800155c9ccab3d868cfc98d` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`eb3e76c76d9a535ef7baf8738794e5505cf1be3f13f5c126c917136079b5d4a4`:
+`181f076a1fa60e43792a4326a36369f4b82b1a00a32424e9a539fc0107c81d41`:
 
 ```sh
-git archive --format=tar 27c5718ac886355eccee422dc45c0678b0aea62a | sha256sum
+git archive --format=tar 18c1062fc902b9d9b800155c9ccab3d868cfc98d | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,60 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Path-implied integer guards (pass 107)
+
+Repeated local guard tests now disappear when a preceding branch already
+establishes the captured value. For example, after `if (guard != 0) break frame;`,
+a following `if (guard == 0) continue;` on the same path becomes `continue;`.
+The nonzero path still takes its original exit. A global control flag is never
+assumed zero, and fields are not presumed stable. Any later or cyclic write to
+the local invalidates the fact; shadowed, field/formal/boxed/non-int operands
+are refused. Necessary facts can come from conditional arms or preceding abrupt
+exits, but only entirely pure local comparisons are replaced.
+
+Selected-arm scopes remain. Java completion tracks which loop or label consumes
+a break/continue, whether a loop can exit, and how finally overrides pending
+transfers. Newly unreachable suffixes are removed only when they contain no
+declarations; discarded-arm declarations also refuse proof. Checked/unresolved
+catch regions, switch completion, unproven possibly-constant loops, nested or
+malformed syntax, missing terminators, comments/Unicode and excessive predicate
+depth remain opaque. Normal compilation retains no recovery diagnostics.
+
+Four new groups pass 16,560 native comparisons across 23 variants, both before
+and after frame cleanup. Six guard values, six secondary values, five failure
+modes and nullable monitors cover scope, nonzero exits, nested/labeled loops,
+mutation invalidation, throws, catches, monitor ownership and finally overrides.
+Twelve independent checks establish selection, ordinary/labeled continues,
+nonzero fallthrough, mutation behavior, protected cleanup, monitor ownership and
+throw identity. The other emitter files pass 75 tests with one historical optional
+skip; eight exception-exit and two integer-argument groups also pass.
+
+All 303 expected token streams match, and a clean tracked decompiler-source
+archive regenerates Java and diagnostics byte-for-byte. A separate diagnostic
+captures the exact recovery stage before the compiler adds synthetic checked-
+exception wrappers. Unique token-subsequence matching proves each stage input
+against the pinned raw method; instrumentation changes no output or diagnostic
+bytes. Character provenance follows every selected-arm copy and deletion, then
+attributes all 277 removed references to original predicates, discarded arms or
+unreachable suffixes. All 19,591 declarations, 118,373 surviving references and
+388 complete override pairs keep ordered identities. All 8,439 complete naming
+objects and local ordinals remain; naming edits fall by 242 to 65,933, with
+137,964 binding comparisons. Both corpora compile, all six fixed game probes and
+publication checks pass, and dictionary reversal restores all 303 pinned raw
+files exactly. Native probe sources/traces, stub JAR and naming-tool pins remain.
+
+The pass removes 97 guards across 24 bodies/ten files, 13 plain labels and
+384 lines: 77,738 to 77,354. Board reconciliation is now 345 lines/eleven labels,
+session update 631/thirteen, and the half-blend triangle 372/eleven. There remain
+220 plain labels and 20 overlapping large spans, six labeled. Unknown shared
+names, other continuations and full assets/ending/game/browser/phone acceptance
+remain unfinished or unverified. Raw tree SHA-256:
+`05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b`.
+Readable tree SHA-256:
+`899c817e402ef0854062e489ddfdde3f4f87f0e85b8293ac36ec256d2bf3223b`.
+The decompiler-source archive SHA-256 above identifies the tracked tool source,
+independently of game input or output trees. Sections below are historical.
 
 ## Scalar dispatch switches (pass 106)
 
@@ -2897,8 +2951,8 @@ Pass 92 recorded the predicate-only guard-tree migration with no naming changes.
 Passes 93 through 101 retained that source and expanded guarded semantic names.
 Pass 102 recorded terminal-loop exit reconstruction. Pass103 recorded
 leading nonconstant while guards. Pass104 recorded effectful plain-block
-exits. Pass105 recorded exact local-reference cast cleanup. Current pass106
-records scalar dispatch switches in `sourceChange`, with an empty `ruleChanges` list preserving all 8,439 complete
+exits. Pass105 recorded exact local-reference cast cleanup. Pass106 recorded scalar dispatch switches. Current pass107 records
+path-implied local guards in `sourceChange`, with an empty `ruleChanges` list preserving all 8,439 complete
 naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.

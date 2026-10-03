@@ -16,8 +16,19 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,241 bindings,
+identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
+
+Pass 107 removes 97 path-implied guards in 24 bodies across ten files. Only
+comparisons of captured int locals are specialized; later/cyclic writes invalidate
+facts, and no global flag or field is assumed constant. Selected scopes and
+transfer targets remain, with loop/label completion and finally overrides proven
+before unreachable suffixes are removed. Thirteen labels and 384 lines disappear.
+Board reconciliation falls from 494 to 345 lines. All 8,439 complete names remain.
+Four new groups pass 16,560 native comparisons and twelve independent checks;
+clean-source reproduction, all six game probes, publication tests and dictionary
+reversal pass. There remain 220 block labels and six large labeled spans. Shared
+names, further reconstruction and whole-game/browser/phone acceptance remain open.
 
 Pass 106 replaces the menu-action and loading-theme label ladders with
 ordinary switches, preserving original actions, guards and fallthrough for every

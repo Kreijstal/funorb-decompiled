@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 106)
+## Current readability (pass 107)
 
-The export has 8,439 guarded names and 66,175 identifier edits. All 303 sources
-compile and compare 138,241 bindings, reproduce and
+The export has 8,439 guarded names and 65,933 identifier edits. All 303 sources
+compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -69,7 +69,16 @@ locals; no flag is assumed zero. Nineteen labels and 65 lines disappear, with
 All other ordered bindings and complete override pairs remain. Its 61,152 native
 comparisons test both the rewrite and frame cleanup, with ten independent checks.
 
-There remain 233 generated plain block labels. Twenty method/constructor spans
+Pass107 specializes 97 repeated guards whose captured int value is established
+by preceding branches. Later/cyclic writes invalidate facts. Selected scopes and
+transfer targets remain; Java completion proves unreachable suffixes with loop/
+label ownership and finally overrides. No field or global flag is assumed stable.
+Thirteen labels and 384 lines disappear. All 8,439 names/local ordinals remain;
+277 removed references are attributed to dead predicates/arms/suffixes, and all
+surviving bindings keep ordered identities. The 16,560 native comparisons and
+twelve independent checks validate the supported recovery family.
+
+There remain 220 generated plain block labels. Twenty method/constructor spans
 have at least 300 lines, six with generated block labels. The 3,042-line
 interface text-loader span includes three nested helpers, so these are overlapping
 spans, not a count of unique state machines. The six large labeled bodies are
@@ -78,12 +87,12 @@ listed below, alongside the shortened menu dispatcher for comparison.
 | Method | Lines | Block labels |
 | --- | ---: | ---: |
 | `GameScreen.renderScreen` | 304 | 4 |
-| `GameScreen.updateScreen` | 330 | 6 |
+| `GameScreen.updateScreen` | 328 | 6 |
 | `GameScreen.activateMenuItem` | 277 | 4 |
 | `GameplaySession.renderSession` | 357 | 11 |
-| `GameplaySession.updateSession` | 638 | 13 |
-| `kc.reconcileBoardEntities` | 494 | 14 |
-| `SpriteState.drawSortedHalfBlendRgbTriangle` | 385 | 11 |
+| `GameplaySession.updateSession` | 631 | 13 |
+| `kc.reconcileBoardEntities` | 345 | 11 |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | 372 | 11 |
 
 Every field, method, parameter and local in GameScreen, MenuScreen and
 GameplaySession now has a guarded name, with constructor names supplied by their
@@ -95,7 +104,8 @@ control flags are not assumed constant. The retained 16,128-case guard-tree
 comparison, 11,520-case terminal-loop comparison, new 96,768-case leading-loop
 comparison with six independent oracles, the new 24,192-case effectful-exit
 comparison with six independent oracles, the new 61,152-case scalar dispatch
-comparison with ten independent checks, and six recorded native probes
+comparison with ten independent checks, the 16,560-case path-guard comparison
+with twelve independent checks, and six recorded native probes
 establish controlled behavior only.
 Complete assets/gameplay and browser/phone memory/startup/FPS targets remain
 unverified. Sections

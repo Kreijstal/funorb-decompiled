@@ -338,28 +338,6 @@ class UiWidget extends IntrusiveNode {
           }
           L0: {
             if (!this.handlePointerPress(parentY, -109, parentX, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (UiWidget) (this))) {
-              if (focusFlag == 0) {
-                if ((gf.heldPointerButtonSnapshot == 0) &&
-                    (0 != ij.previousUiPointerButton)) {
-                  this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-                  releasedDragAfterRejectedPressWithWheel = lh.activeDragWidget;
-                  releasedDragWidgetAlias = releasedDragAfterRejectedPressWithWheel;
-                  if (releasedDragAfterRejectedPressWithWheel != null) {
-                    if (releasedDragAfterRejectedPressWithWheel.listener instanceof DropListener) {
-                      ((DropListener) ((Object) releasedDragAfterRejectedPressWithWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithWheel, 22176);
-                    }
-                    lh.activeDragWidget = null;
-                  }
-                  if ((clientControlFlowSnapshot != 0) &&
-                      (focusFlag != 0) &&
-                      (bi.pointerPressButtonSnapshot != 0)) {
-                    this.clearKeyboardFocus(-126);
-                  }
-                }
-                ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-                sa.a(this.getHoverText((byte) 69), (byte) 72);
-                return pointerEventsAvailable;
-              }
               this.clearKeyboardFocus(-127);
               if (clientControlFlowSnapshot == 0) {
                 break L0;
@@ -416,55 +394,36 @@ class UiWidget extends IntrusiveNode {
           sa.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
-        L10: {
-          if (!this.handlePointerPress(parentY, -109, parentX, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (UiWidget) (this))) {
-            if (focusFlag == 0) {
-              if (gf.heldPointerButtonSnapshot != 0) {
-                ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-                sa.a(this.getHoverText((byte) 69), (byte) 72);
-                return pointerEventsAvailable;
-              }
-              if (0 == ij.previousUiPointerButton) {
-                ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-                sa.a(this.getHoverText((byte) 69), (byte) 72);
-                return pointerEventsAvailable;
-              }
-              this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-              releasedDragAfterRejectedPressWithoutFocus = lh.activeDragWidget;
-              releasedDragWidgetAlias = releasedDragAfterRejectedPressWithoutFocus;
-              if (releasedDragAfterRejectedPressWithoutFocus != null) {
-                if (releasedDragAfterRejectedPressWithoutFocus.listener instanceof DropListener) {
-                  ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocus, 22176);
-                }
-                lh.activeDragWidget = null;
-              }
-              if (clientControlFlowSnapshot == 0) {
-                ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-                sa.a(this.getHoverText((byte) 69), (byte) 72);
-                return pointerEventsAvailable;
-              }
-              if (focusFlag == 0) {
-                ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-                sa.a(this.getHoverText((byte) 69), (byte) 72);
-                return pointerEventsAvailable;
-              }
-              if (bi.pointerPressButtonSnapshot == 0) {
-                ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-                sa.a(this.getHoverText((byte) 69), (byte) 72);
-                return pointerEventsAvailable;
-              }
-              this.clearKeyboardFocus(-126);
-              ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-              sa.a(this.getHoverText((byte) 69), (byte) 72);
-              return pointerEventsAvailable;
-            }
-            this.clearKeyboardFocus(-127);
-            if (clientControlFlowSnapshot == 0) {
-              break L10;
-            }
+        if (!this.handlePointerPress(parentY, -109, parentX, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (UiWidget) (this))) {
+          if (gf.heldPointerButtonSnapshot != 0) {
+            ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            return pointerEventsAvailable;
           }
-          pointerEventsAvailable = false;
+          if (0 == ij.previousUiPointerButton) {
+            ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            return pointerEventsAvailable;
+          }
+          this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
+          releasedDragAfterRejectedPressWithoutFocus = lh.activeDragWidget;
+          releasedDragWidgetAlias = releasedDragAfterRejectedPressWithoutFocus;
+          if (releasedDragAfterRejectedPressWithoutFocus != null) {
+            if (releasedDragAfterRejectedPressWithoutFocus.listener instanceof DropListener) {
+              ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocus, 22176);
+            }
+            lh.activeDragWidget = null;
+          }
+          if (clientControlFlowSnapshot == 0) {
+            ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            return pointerEventsAvailable;
+          }
+          ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          return pointerEventsAvailable;
         }
+        pointerEventsAvailable = false;
         if (gf.heldPointerButtonSnapshot != 0) {
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
           sa.a(this.getHoverText((byte) 69), (byte) 72);

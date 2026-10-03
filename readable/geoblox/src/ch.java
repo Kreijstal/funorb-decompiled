@@ -314,9 +314,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               }
                               if (stackIn_66_0) {
                                 var3++;
-                                if (var5 == 0) {
-                                  continue;
-                                }
+                                continue;
                               }
                               break;
                             }
@@ -355,9 +353,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                                 (var3 <= 57)) {
                               var2_int = 10 * var2_int - 48 + var3;
                               var1_int++;
-                              if (var5 == 0) {
-                                continue;
-                              }
+                              continue;
                             }
                           }
                           stackIn_78_0 = ~var2_int;
@@ -412,9 +408,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           if (var5 != 0) {
                             break L21;
                           }
-                          if (var5 == 0) {
-                            continue;
-                          }
+                          continue;
                         }
                         this.d(32000);
                         OpacityWidget.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
@@ -797,9 +791,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   if (var8.status == 0) {
                     bc.sleepMillis(0, 10L);
                     if (!(var9 != 0)) {
-                      if (var9 == 0) {
-                        continue;
-                      }
+                      continue;
                     }
                   }
                   break;

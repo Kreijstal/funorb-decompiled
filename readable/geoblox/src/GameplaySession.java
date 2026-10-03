@@ -175,9 +175,7 @@ final class GameplaySession {
                     return false;
                   }
                   urlCharacterIndex++;
-                  if (clientControlFlowGuard == 0) {
-                    continue;
-                  }
+                  continue;
                 }
                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
                 allowedCharacterIndexOrSuccessFlag = 1;
@@ -868,15 +866,10 @@ final class GameplaySession {
                   if (!detachedEntityOrPositiveRotationKeySnapshot) {
                     fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
                     fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
+                    break;
                   }
                   fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
-                  if (clientControlFlowGuard == 0) {
-                    continue;
-                  }
-                  break;
+                  continue;
                 }
               }
               detachedEntityOrPositiveRotationKeySnapshot = kj.heldInternalKeys[positiveRotationKeyCode];
@@ -1137,9 +1130,7 @@ final class GameplaySession {
                 continue;
               }
               this.showSessionCounters = true;
-              if (clientControlFlowGuard == 0) {
-                continue;
-              }
+              continue;
             }
             debugKeyCodeOrPointerEventComplement = ~bi.pointerPressButtonSnapshot;
             debugKeySentinelOrPointerEventSentinel = -1;
@@ -1382,19 +1373,13 @@ final class GameplaySession {
                     if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
                       if (0 < themeIndexThenId) {
                         precedingThemeId = WidgetContainer.field_B[themeIndexThenId - 1];
-                        if (clientControlFlowGuard == 0) {
-                          break L7;
-                        }
-                      }
-                      precedingThemeId = WidgetContainer.field_B[6];
-                      if (clientControlFlowGuard == 0) {
                         break L7;
                       }
+                      precedingThemeId = WidgetContainer.field_B[6];
+                      break L7;
                     }
                     themeIndexThenId++;
-                    if (clientControlFlowGuard == 0) {
-                      continue;
-                    }
+                    continue;
                   }
                 }
                 themeIndexThenId = precedingThemeId;
@@ -1579,7 +1564,7 @@ final class GameplaySession {
               L4: while (true) {
                 comparisonLeftColumnOrZero = spriteColumn;
                 comparisonRightWidthOrPixel = vf.spriteScratchRaster.width;
-                L5: while (true) {
+                while (true) {
                   if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
                     rowStartOrMusicGuard = 0;
                     if (controlFlowGuard != 0) {
@@ -1589,9 +1574,6 @@ final class GameplaySession {
                     while (vf.spriteScratchRaster.height > spriteRow) {
                       comparisonLeftColumnOrZero = 0;
                       comparisonRightWidthOrPixel = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
-                      if (controlFlowGuard != 0) {
-                        continue L5;
-                      }
                       if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
                         pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
                         pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
@@ -1601,15 +1583,10 @@ final class GameplaySession {
                         }
                       }
                       spriteRow++;
-                      if (controlFlowGuard == 0) {
-                        continue;
-                      }
-                      break;
+                      continue;
                     }
                     spriteColumn++;
-                    if (controlFlowGuard == 0) {
-                      continue L4;
-                    }
+                    continue L4;
                   }
                   this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
                   break L2;
