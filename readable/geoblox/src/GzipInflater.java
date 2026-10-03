@@ -8,7 +8,7 @@ final class GzipInflater {
     static ResourceArchive field_a;
     static int field_k;
     private static TextTemplateArgumentType field_h;
-    static MusicScore field_e;
+    static MusicScore currentMusicTrack;
     static IndexedSprite sunBackgroundSprite;
     static int field_f;
     private java.util.zip.Inflater inflater;
@@ -20,7 +20,7 @@ final class GzipInflater {
         field_h = null;
         int var1 = 122 % ((param0 + 22) / 63);
         sunBackgroundSprite = null;
-        field_e = null;
+        currentMusicTrack = null;
         field_a = null;
     }
 

@@ -5,7 +5,7 @@ final class ll {
     static Sprite[] frameNineSliceSprites;
     static String createMoreSuggestionsText;
     static ResourceArchive gameGraphicsArchive;
-    static MusicScore field_d;
+    static MusicScore titleMusicTrack;
     static boolean field_e;
     static String createEmailTooltipText;
     static boolean[] themesLoaded;
@@ -58,7 +58,7 @@ final class ll {
         gameGraphicsArchive = null;
         backText = null;
         createMoreSuggestionsText = null;
-        field_d = null;
+        titleMusicTrack = null;
         frameNineSliceSprites = null;
         if (param0 != 7) {
             return;

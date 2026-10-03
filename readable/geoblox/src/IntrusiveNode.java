@@ -6,45 +6,45 @@ class IntrusiveNode {
     IntrusiveNode nextNode;
     static String loginMessage3Text;
     IntrusiveNode previousNode;
-    static MusicScore field_d;
+    static MusicScore sunMusicTrack;
 
-    final static void a(int param0, int param1) {
-        int var2;
-        int var3;
-        var3 = Geoblox.clientControlFlowFlag;
-        IntrusiveDeque.a(111, param1);
-        PacketBuffer.h(-120, param1);
-        LoginMethod.b((byte) -24);
-        if (param0 > -90) {
+    final static void selectThemeAudio(int methodGuard, int themeId) {
+        int selectedThemeId;
+        int clientControlSnapshot;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
+        IntrusiveDeque.prepareThemeMusic(111, themeId);
+        PacketBuffer.prepareThemeSoundSamples(-120, themeId);
+        LoginMethod.releaseMarkedThemeMusicPreparation((byte) -24);
+        if (methodGuard > -90) {
           loginMessage3Text = (String) null;
         }
-        var2 = param1;
-        if (var2 != 4) {
-          if (var2 != 3) {
-            if (var2 != 1) {
-              if (var2 != 0) {
-                if (6 != var2) {
-                  if (var2 == 5) {
-                    IntrusiveNodeHashTable.a(0, NodeHashTableIterator.field_f);
+        selectedThemeId = themeId;
+        if (selectedThemeId != 4) {
+          if (selectedThemeId != 3) {
+            if (selectedThemeId != 1) {
+              if (selectedThemeId != 0) {
+                if (6 != selectedThemeId) {
+                  if (selectedThemeId == 5) {
+                    IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, NodeHashTableIterator.sportMusicTrack);
                   } else {
-                    if (var2 == 2) {
-                      IntrusiveNodeHashTable.a(0, SocialListEntry.field_ib);
+                    if (selectedThemeId == 2) {
+                      IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, SocialListEntry.sweetsMusicTrack);
                     }
                   }
                 } else {
-                  IntrusiveNodeHashTable.a(0, SessionGameApplet.field_o);
+                  IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, SessionGameApplet.spaceMusicTrack);
                 }
               } else {
-                IntrusiveNodeHashTable.a(0, ej.field_d);
+                IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, ej.jewelleryMusicTrack);
               }
             } else {
-              IntrusiveNodeHashTable.a(0, field_d);
+              IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, sunMusicTrack);
             }
           } else {
-            IntrusiveNodeHashTable.a(0, te.field_b);
+            IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, te.germsMusicTrack);
           }
         } else {
-          IntrusiveNodeHashTable.a(0, DialWidget.field_M);
+          IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, DialWidget.bakingMusicTrack);
         }
     }
 
@@ -250,7 +250,7 @@ class IntrusiveNode {
     public static void b(byte param0) {
         loginMessage3Text = null;
         int var1 = -121 / ((-68 - param0) / 42);
-        field_d = null;
+        sunMusicTrack = null;
     }
 
     final boolean isLinked(int methodGuard) {

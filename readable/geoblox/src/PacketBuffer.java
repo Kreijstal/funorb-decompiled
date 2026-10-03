@@ -79,48 +79,48 @@ final class PacketBuffer extends ByteArrayBuffer {
         super(bytes);
     }
 
-    final static void h(int param0, int param1) {
-        int var2_int = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        PcmSample var3 = null;
-        int var4 = 0;
+    final static void prepareThemeSoundSamples(int methodGuard, int themeId) {
+        int soundIndexThenFlagReset = 0;
+        RuntimeException caughtSamplePreparationFailure = null;
+        RuntimeException samplePreparationFailureForContext = null;
+        PcmSample sampleBeforeResampling = null;
+        int preparedFlagIndex = 0;
         try {
-          var2_int = 0;
-          if (param0 >= -117) {
+          soundIndexThenFlagReset = 0;
+          if (methodGuard >= -117) {
             return;
           }
-          while (33 > var2_int) {
-            if (param1 != TextTemplateArgumentType.field_c[var2_int]) {
-              var2_int++;
+          while (33 > soundIndexThenFlagReset) {
+            if (themeId != TextTemplateArgumentType.gameSoundThemeIds[soundIndexThenFlagReset]) {
+              soundIndexThenFlagReset++;
               continue;
             }
-            if (!SecondaryNodeHashTable.field_j[var2_int]) {
-              if ((10 <= var2_int) &&
-                  (26 >= var2_int)) {
-                var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
+            if (!SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndexThenFlagReset]) {
+              if ((10 <= soundIndexThenFlagReset) &&
+                  (26 >= soundIndexThenFlagReset)) {
+                sampleBeforeResampling = te.gameSoundSampleCache.getVorbisSampleByName(-1879044097, w.gameSoundResourceNames[soundIndexThenFlagReset]);
               } else {
-                var3 = te.field_c.b(1, w.field_b[var2_int]);
+                sampleBeforeResampling = te.gameSoundSampleCache.getSynthesizedSampleByName(1, w.gameSoundResourceNames[soundIndexThenFlagReset]);
               }
-              fl.field_c[var2_int] = var3.a(AchievementSubmission.field_i);
-              SecondaryNodeHashTable.field_j[var2_int] = true;
+              fl.gameSoundSamples[soundIndexThenFlagReset] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
+              SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndexThenFlagReset] = true;
             }
-            var2_int++;
+            soundIndexThenFlagReset++;
           }
-          var4 = 0;
-          var2_int = var4;
-          while (var4 < 33) {
-            if (!SecondaryNodeHashTable.field_j[var4]) {
+          preparedFlagIndex = 0;
+          soundIndexThenFlagReset = preparedFlagIndex;
+          while (preparedFlagIndex < 33) {
+            if (!SecondaryNodeHashTable.gameSoundPreparationFlags[preparedFlagIndex]) {
               return;
             }
-            var4++;
+            preparedFlagIndex++;
           }
-          AchievementSubmission.field_i = null;
+          AchievementSubmission.gameSoundResampler = null;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "pk.IB(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException samplePreparationFailure) {
+          caughtSamplePreparationFailure = samplePreparationFailure;
+          samplePreparationFailureForContext = caughtSamplePreparationFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) samplePreparationFailureForContext), "pk.IB(" + methodGuard + ',' + themeId + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class PacketBuffer extends ByteArrayBuffer {
         this.position = this.position + 1;
         this.bytes[packetByteIndex] = (byte)(value + this.cipher.nextInt(0));
         if (methodGuard >= -12) {
-            PacketBuffer.h(-6, -80);
+            PacketBuffer.prepareThemeSoundSamples(-6, -80);
         }
     }
 

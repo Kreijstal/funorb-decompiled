@@ -917,7 +917,7 @@ final class GameplaySession {
             }
           }
           if (this.sceneAnimationTick == 0) {
-            IntrusiveNodeHashTable.a(methodGuard ^ -1578896191, ValidationMessageWidget.field_S);
+            IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
           }
           if ((LoginPanel.endingEntityScanClear) &&
               (LoginMethod.isAvatarCryHoldExpired(-3)) &&
@@ -1080,37 +1080,37 @@ final class GameplaySession {
               }
               if (ki.currentKeyboardEventCode == 5) {
                 GameScreen.selectedThemeId = 1;
-                IntrusiveNode.a(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
+                IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 110);
               }
               if (ki.currentKeyboardEventCode == 6) {
                 GameScreen.selectedThemeId = 0;
-                IntrusiveNode.a(-126, GameScreen.selectedThemeId);
+                IntrusiveNode.selectThemeAudio(-126, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 126);
               }
               if (7 == ki.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = 6;
-                IntrusiveNode.a(-99, GameScreen.selectedThemeId);
+                IntrusiveNode.selectThemeAudio(-99, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 113);
               }
               if (ki.currentKeyboardEventCode == 8) {
                 GameScreen.selectedThemeId = 5;
-                IntrusiveNode.a(-124, GameScreen.selectedThemeId);
+                IntrusiveNode.selectThemeAudio(-124, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 115);
               }
               if (ki.currentKeyboardEventCode == 9) {
                 GameScreen.selectedThemeId = 3;
-                IntrusiveNode.a(-98, GameScreen.selectedThemeId);
+                IntrusiveNode.selectThemeAudio(-98, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 122);
               }
               if (10 == ki.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = 4;
-                IntrusiveNode.a(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
+                IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 101);
               }
               if (ki.currentKeyboardEventCode == 11) {
                 GameScreen.selectedThemeId = 2;
-                IntrusiveNode.a(-118, GameScreen.selectedThemeId);
+                IntrusiveNode.selectThemeAudio(-118, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 82);
               }
               if (ki.currentKeyboardEventCode == 12) {
@@ -1366,16 +1366,16 @@ final class GameplaySession {
                 L7: {
                   if (7 > themeIndexThenId) {
                     selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
-                    themeEntryComplementOrThemeId = ~WidgetContainer.field_B[themeIndexThenId];
+                    themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
                     if (clientControlFlowGuard != 0) {
                       break L6;
                     }
                     if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
                       if (0 < themeIndexThenId) {
-                        precedingThemeId = WidgetContainer.field_B[themeIndexThenId - 1];
+                        precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
                         break L7;
                       }
-                      precedingThemeId = WidgetContainer.field_B[6];
+                      precedingThemeId = WidgetContainer.themeCycleOrder[6];
                       break L7;
                     }
                     themeIndexThenId++;
@@ -1625,7 +1625,7 @@ final class GameplaySession {
             }
             if (this.sessionPhase != 2) {
               if (this.resultSequenceCountdown == 150) {
-                ValidationIconWidget.playPcmSample(-348, fl.field_c[28]);
+                ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[28]);
               }
               this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
               if (controlFlowGuard == 0) {
@@ -1635,7 +1635,7 @@ final class GameplaySession {
             if (!((this.resultExpansionAudioStream != null) &&
                   (!this.resultExpansionAudioStream.isSamplePositionOutOfRange()))) {
               resultProgressPercent = this.sceneAnimationTick * 100 / 460;
-              this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.field_c[28], 2 * resultProgressPercent + 200, 45);
+              this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
             if (this.resultPanelX <= 320 - (lj.smallBoxSprite.fullWidth >> 1)) {
@@ -1770,7 +1770,7 @@ final class GameplaySession {
           }
           ScoreSubmission.requestedScreenId = 0;
         }
-        IntrusiveNodeHashTable.a(0, ll.field_d);
+        IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, ll.titleMusicTrack);
     }
 
     private final void resetScoreState(int methodGuard) {
@@ -1789,7 +1789,7 @@ final class GameplaySession {
         gf.matchChainLength = 1;
         this.pointsPanelSlideDirection = 1;
         this.pointsPanelX = 640;
-        ValidationIconWidget.a((byte) -93);
+        ValidationIconWidget.recycleAllScorePopups((byte) -93);
         if (methodGuard < 104) {
           GameplaySession.releaseStaticReferences(-111);
         }
@@ -1812,10 +1812,10 @@ final class GameplaySession {
         if (ArchiveNetworkClient.difficultyStep >= 41) {
             SecondaryNodeDeque.recordAchievement(255 ^ PacketBuffer.field_m, -103, PacketBuffer.field_m);
         }
-        int nextThemeId = PasswordWidgetRenderer.b(16);
+        int nextThemeId = PasswordWidgetRenderer.getThemeForProgress(16);
         GameScreen.selectedThemeId = nextThemeId;
         ProxySocketConnector.selectThemeRenderAssets((byte) 116);
-        IntrusiveNode.a(methodGuard ^ -796, nextThemeId);
+        IntrusiveNode.selectThemeAudio(methodGuard ^ -796, nextThemeId);
     }
 
     final void emitPointsPopup(boolean markSubmissionBlocked) {
@@ -1826,7 +1826,7 @@ final class GameplaySession {
             this.submissionBlocked = true;
         }
         ld.spawnPointsPopup(34, 20 + (this.pointsPanelX + 60), 79, this.pendingPopupPoints);
-        ValidationIconWidget.playPcmSample(-348, fl.field_c[32]);
+        ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[32]);
         this.pendingPopupPoints = 0;
     }
 
@@ -1896,15 +1896,15 @@ final class GameplaySession {
             DiskCacheWorker.avatarTintPalette[0] = 14788623;
             DiskCacheWorker.avatarTintPalette[1] = 15439657;
           }
-          ValidationIconWidget.a((byte) -93);
+          ValidationIconWidget.recycleAllScorePopups((byte) -93);
           GameplayEntity.resetAvatarFeedbackState(0);
-          GameScreen.selectedThemeId = WidgetContainer.field_B[0];
+          GameScreen.selectedThemeId = WidgetContainer.themeCycleOrder[0];
           ProxySocketConnector.selectThemeRenderAssets((byte) 104);
           this.debugPointerSpawnEnabled = false;
           this.submissionBlocked = false;
           this.spawnReleaseDisabled = false;
           this.showGameOverOverlay = false;
-          IntrusiveNode.a(-116, 1);
+          IntrusiveNode.selectThemeAudio(-116, 1);
           if (MultiHandleSliderRenderer.rotatedThemeForegroundRaster == null) {
             MultiHandleSliderRenderer.rotatedThemeForegroundRaster = new Sprite(ec.selectedThemeForeground.width, ec.selectedThemeForeground.height);
           }

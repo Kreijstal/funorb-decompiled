@@ -81,30 +81,30 @@ final class al {
         var3 = param1;
         if (var3 != 4) {
           if (var3 == 3) {
-            ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 13]);
+            ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[var2 + 13]);
           } else {
             if (var3 != 1) {
               if (var3 != 0) {
                 if (var3 == 6) {
-                  ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 4]);
+                  ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[var2 + 4]);
                 } else {
                   if (5 == var3) {
-                    ValidationIconWidget.playPcmSample(-348, fl.field_c[16 + var2]);
+                    ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[16 + var2]);
                   } else {
                     if (var3 == 2) {
-                      ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 19]);
+                      ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[var2 + 19]);
                     }
                   }
                 }
               } else {
-                ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 1]);
+                ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[var2 + 1]);
               }
             } else {
-              ValidationIconWidget.playPcmSample(-348, fl.field_c[7 + var2]);
+              ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[7 + var2]);
             }
           }
         } else {
-          ValidationIconWidget.playPcmSample(-348, fl.field_c[10 + var2]);
+          ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[10 + var2]);
         }
     }
 

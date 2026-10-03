@@ -239,7 +239,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               }
               gg.avatarCryPhase = gg.avatarCryPhase + 1;
               PasswordValidator.avatarCryFrameCursor = 0;
-              MeshMaterial.a(300, fl.field_c[22], false, SocialListEntry.field_gb);
+              MeshMaterial.a(300, fl.gameSoundSamples[22], false, SocialListEntry.field_gb);
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
               avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               heldCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -364,7 +364,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 }
                 gg.avatarCryPhase = gg.avatarCryPhase + 1;
                 PasswordValidator.avatarCryFrameCursor = 0;
-                MeshMaterial.a(300, fl.field_c[22], false, SocialListEntry.field_gb);
+                MeshMaterial.a(300, fl.gameSoundSamples[22], false, SocialListEntry.field_gb);
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                 avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 steeredCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -517,7 +517,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             }
             gg.avatarCryPhase = gg.avatarCryPhase + 1;
             PasswordValidator.avatarCryFrameCursor = 0;
-            MeshMaterial.a(300, fl.field_c[22], false, SocialListEntry.field_gb);
+            MeshMaterial.a(300, fl.gameSoundSamples[22], false, SocialListEntry.field_gb);
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
             avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steppedCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;

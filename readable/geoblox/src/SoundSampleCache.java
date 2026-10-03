@@ -2,170 +2,170 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoundSampleCache {
-    private ResourceArchive field_d;
-    private IntrusiveNodeHashTable field_a;
-    private ResourceArchive field_c;
-    private IntrusiveNodeHashTable field_b;
+    private ResourceArchive vorbisArchive;
+    private IntrusiveNodeHashTable pendingVorbisDecoders;
+    private ResourceArchive synthesizedSoundArchive;
+    private IntrusiveNodeHashTable decodedSamples;
 
-    final PcmSample c(int param0, String param1) {
-        RuntimeException var3 = null;
-        PcmSample stackIn_2_0 = null;
-        PcmSample stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final PcmSample getVorbisSampleByName(int methodGuard, String resourceName) {
+        RuntimeException lookupFailureForContext = null;
+        PcmSample invalidGuardResult = null;
+        PcmSample sampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String resourceNameDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          if (param0 == -1879044097) {
-            stackIn_4_0 = this.a(param1, (int[]) null, param0 ^ -1879044098);
-            return stackIn_4_0;
+          if (methodGuard == -1879044097) {
+            sampleAtReturn = this.getVorbisSampleByNameBudgeted(resourceName, (int[]) null, methodGuard ^ -1879044098);
+            return sampleAtReturn;
           }
-          stackIn_2_0 = (PcmSample) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ci.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          invalidGuardResult = (PcmSample) null;
+          return invalidGuardResult;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.B(").append(methodGuard).append(',');
+          if (resourceName == null) {
+            resourceNameDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(resourceNameDescription).append(')').toString());
         }
     }
 
-    final PcmSample b(int param0, String param1) {
-        RuntimeException var3 = null;
-        PcmSample stackIn_2_0 = null;
-        PcmSample stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final PcmSample getSynthesizedSampleByName(int methodGuard, String resourceName) {
+        RuntimeException lookupFailureForContext = null;
+        PcmSample invalidGuardResult = null;
+        PcmSample sampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String resourceNameDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          if (param0 == 1) {
-            stackIn_4_0 = this.a((byte) -90, param1, (int[]) null);
-            return stackIn_4_0;
+          if (methodGuard == 1) {
+            sampleAtReturn = this.getSynthesizedSampleByNameBudgeted((byte) -90, resourceName, (int[]) null);
+            return sampleAtReturn;
           }
-          stackIn_2_0 = (PcmSample) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ci.A(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          invalidGuardResult = (PcmSample) null;
+          return invalidGuardResult;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.A(").append(methodGuard).append(',');
+          if (resourceName == null) {
+            resourceNameDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(resourceNameDescription).append(')').toString());
         }
     }
 
-    final PcmSample a(int param0, int param1, int[] param2) {
-        RuntimeException var4 = null;
-        PcmSample stackIn_3_0 = null;
-        PcmSample stackIn_7_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final PcmSample getVorbisSampleById(int sampleId, int expectedFileSlotCount, int[] byteBudget) {
+        RuntimeException lookupFailureForContext = null;
+        PcmSample singleGroupSampleAtReturn = null;
+        PcmSample singleFileSampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String byteBudgetDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          if (1 == this.field_d.getGroupSlotCount(false)) {
-            stackIn_3_0 = this.a(param2, 0, param0, (byte) 14);
-            return stackIn_3_0;
+          if (1 == this.vorbisArchive.getGroupSlotCount(false)) {
+            singleGroupSampleAtReturn = this.getVorbisSampleByIds(byteBudget, 0, sampleId, (byte) 14);
+            return singleGroupSampleAtReturn;
           }
-          if (param1 != this.field_d.getFileSlotCount(-9467, param0)) {
+          if (expectedFileSlotCount != this.vorbisArchive.getFileSlotCount(-9467, sampleId)) {
             throw new RuntimeException();
           }
-          stackIn_7_0 = this.a(param2, param0, 0, (byte) 14);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("ci.J(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_12_2 = "null";
+          singleFileSampleAtReturn = this.getVorbisSampleByIds(byteBudget, sampleId, 0, (byte) 14);
+          return singleFileSampleAtReturn;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.J(").append(sampleId).append(',').append(expectedFileSlotCount).append(',');
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(byteBudgetDescription).append(')').toString());
         }
     }
 
-    final PcmSample a(int param0, int[] param1, boolean param2) {
-        RuntimeException var4 = null;
-        PcmSample stackIn_3_0 = null;
-        PcmSample stackIn_7_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final PcmSample getSynthesizedSampleById(int sampleId, int[] byteBudget, boolean groupLookupGuard) {
+        RuntimeException lookupFailureForContext = null;
+        PcmSample singleGroupSampleAtReturn = null;
+        PcmSample singleFileSampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String byteBudgetDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          if (this.field_c.getGroupSlotCount(param2) == 1) {
-            stackIn_3_0 = this.a(param1, 97, 0, param0);
-            return stackIn_3_0;
+          if (this.synthesizedSoundArchive.getGroupSlotCount(groupLookupGuard) == 1) {
+            singleGroupSampleAtReturn = this.getSynthesizedSampleByIds(byteBudget, 97, 0, sampleId);
+            return singleGroupSampleAtReturn;
           }
-          if (1 != this.field_c.getFileSlotCount(-9467, param0)) {
+          if (1 != this.synthesizedSoundArchive.getFileSlotCount(-9467, sampleId)) {
             throw new RuntimeException();
           }
-          stackIn_7_0 = this.a(param1, 125, param0, 0);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("ci.E(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_12_2 = "null";
+          singleFileSampleAtReturn = this.getSynthesizedSampleByIds(byteBudget, 125, sampleId, 0);
+          return singleFileSampleAtReturn;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.E(").append(sampleId).append(',');
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(byteBudgetDescription).append(',').append(groupLookupGuard).append(')').toString());
         }
     }
 
-    private final PcmSample a(byte param0, String param1, int[] param2) {
-        RuntimeException var4 = null;
-        PcmSample stackIn_4_0 = null;
-        PcmSample stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final PcmSample getSynthesizedSampleByNameBudgeted(byte methodGuard, String resourceName, int[] byteBudget) {
+        RuntimeException lookupFailureForContext = null;
+        PcmSample namedFileSampleAtReturn = null;
+        PcmSample namedGroupSampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String resourceNameDescription = null;
+        StringBuilder messageBeforeByteBudget = null;
+        String byteBudgetDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          if (param0 != -90) {
-            this.field_d = (ResourceArchive) null;
+          if (methodGuard != -90) {
+            this.vorbisArchive = (ResourceArchive) null;
           }
-          if (!this.field_c.hasGroupName((byte) -126, "")) {
-            stackIn_6_0 = this.a(param2, "", param1, true);
-            return stackIn_6_0;
+          if (!this.synthesizedSoundArchive.hasGroupName((byte) -126, "")) {
+            namedGroupSampleAtReturn = this.getSynthesizedSample(byteBudget, "", resourceName, true);
+            return namedGroupSampleAtReturn;
           }
-          stackIn_4_0 = this.a(param2, param1, "", true);
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("ci.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_10_2 = "null";
+          namedFileSampleAtReturn = this.getSynthesizedSample(byteBudget, resourceName, "", true);
+          return namedFileSampleAtReturn;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.F(").append(methodGuard).append(',');
+          if (resourceName == null) {
+            resourceNameDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
-            stackIn_13_2 = "null";
+          messageBeforeByteBudget = ((StringBuilder) (Object) lookupMessagePrefix).append(resourceNameDescription).append(',');
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeByteBudget).append(byteBudgetDescription).append(')').toString());
         }
     }
 
@@ -202,179 +202,179 @@ final class SoundSampleCache {
         }
     }
 
-    private final PcmSample a(int[] param0, String param1, String param2, boolean param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        Object stackIn_7_0 = null;
-        PcmSample stackIn_9_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final PcmSample getSynthesizedSample(int[] byteBudget, String fileName, String groupName, boolean methodGuard) {
+        int groupId = 0;
+        RuntimeException lookupFailureForContext = null;
+        int fileId = 0;
+        Object missingFileResult = null;
+        PcmSample sampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String byteBudgetDescription = null;
+        StringBuilder messageBeforeFileName = null;
+        String fileNameDescription = null;
+        StringBuilder messageBeforeGroupName = null;
+        String groupNameDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          var5_int = this.field_c.findGroupId((byte) 127, param2);
-          if (var5_int < 0) {
+          groupId = this.synthesizedSoundArchive.findGroupId((byte) 127, groupName);
+          if (groupId < 0) {
             return null;
           }
-          if (!param3) {
-            this.field_c = (ResourceArchive) null;
+          if (!methodGuard) {
+            this.synthesizedSoundArchive = (ResourceArchive) null;
           }
-          var6 = this.field_c.findFileId(param1, -98, var5_int);
-          if (var6 >= 0) {
-            stackIn_9_0 = this.a(param0, 98, var5_int, var6);
-            return stackIn_9_0;
+          fileId = this.synthesizedSoundArchive.findFileId(fileName, -98, groupId);
+          if (fileId >= 0) {
+            sampleAtReturn = this.getSynthesizedSampleByIds(byteBudget, 98, groupId, fileId);
+            return sampleAtReturn;
           }
-          stackIn_7_0 = null;
-          return (PcmSample) (stackIn_7_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("ci.H(");
-          if (param0 == null) {
-            stackIn_13_2 = "null";
+          missingFileResult = null;
+          return (PcmSample) (missingFileResult);
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.H(");
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param1 == null) {
-            stackIn_16_2 = "null";
+          messageBeforeFileName = ((StringBuilder) (Object) lookupMessagePrefix).append(byteBudgetDescription).append(',');
+          if (fileName == null) {
+            fileNameDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            fileNameDescription = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param2 == null) {
-            stackIn_19_2 = "null";
+          messageBeforeGroupName = ((StringBuilder) (Object) messageBeforeFileName).append(fileNameDescription).append(',');
+          if (groupName == null) {
+            groupNameDescription = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            groupNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeGroupName).append(groupNameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        long var6 = 0L;
-        PcmSample var8 = null;
-        SynthesizedSoundEffect var9 = null;
-        PcmSample var10 = null;
-        PcmSample stackIn_5_0 = null;
-        PcmSample stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final PcmSample getSynthesizedSampleByIds(int[] byteBudget, int methodGuard, int groupId, int fileId) {
+        int packedCacheKey = 0;
+        RuntimeException lookupFailureForContext = null;
+        long cacheKey = 0L;
+        PcmSample cachedThenRenderedSample = null;
+        SynthesizedSoundEffect soundEffect = null;
+        PcmSample renderedSample = null;
+        PcmSample cachedSampleAtReturn = null;
+        PcmSample renderedSampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String byteBudgetDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          var5_int = param3 ^ (65533 & param2 << 4 | param2 >>> 12);
-          var5_int = var5_int | param2 << 16;
-          var6 = (long)var5_int;
-          var8 = (PcmSample) ((Object) this.field_b.a(var6, (byte) -74));
-          if (param1 <= 19) {
-            this.field_c = (ResourceArchive) null;
+          packedCacheKey = fileId ^ (65533 & groupId << 4 | groupId >>> 12);
+          packedCacheKey = packedCacheKey | groupId << 16;
+          cacheKey = (long)packedCacheKey;
+          cachedThenRenderedSample = (PcmSample) ((Object) this.decodedSamples.a(cacheKey, (byte) -74));
+          if (methodGuard <= 19) {
+            this.synthesizedSoundArchive = (ResourceArchive) null;
           }
-          if (var8 != null) {
-            stackIn_5_0 = var8;
-            return stackIn_5_0;
+          if (cachedThenRenderedSample != null) {
+            cachedSampleAtReturn = cachedThenRenderedSample;
+            return cachedSampleAtReturn;
           }
-          if ((param0 != null) &&
-              (param0[0] <= 0)) {
+          if ((byteBudget != null) &&
+              (byteBudget[0] <= 0)) {
             return null;
           }
-          var9 = SynthesizedSoundEffect.a(this.field_c, param2, param3);
-          if (var9 == null) {
+          soundEffect = SynthesizedSoundEffect.a(this.synthesizedSoundArchive, groupId, fileId);
+          if (soundEffect == null) {
             return null;
           }
-          var10 = var9.a();
-          var8 = var10;
-          this.field_b.a((byte) 102, var8, var6);
-          if (param0 != null) {
-            param0[0] = param0[0] - var10.samples.length;
+          renderedSample = soundEffect.a();
+          cachedThenRenderedSample = renderedSample;
+          this.decodedSamples.a((byte) 102, cachedThenRenderedSample, cacheKey);
+          if (byteBudget != null) {
+            byteBudget[0] = byteBudget[0] - renderedSample.samples.length;
           }
-          stackIn_16_0 = var8;
-          return stackIn_16_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("ci.C(");
-          if (param0 == null) {
-            stackIn_20_2 = "null";
+          renderedSampleAtReturn = cachedThenRenderedSample;
+          return renderedSampleAtReturn;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.C(");
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(byteBudgetDescription).append(',').append(methodGuard).append(',').append(groupId).append(',').append(fileId).append(')').toString());
         }
     }
 
-    private final PcmSample a(int[] param0, int param1, int param2, byte param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        long var6 = 0L;
-        PcmSample var8 = null;
-        MusicDecoder var9 = null;
-        PcmSample stackIn_2_0 = null;
-        PcmSample stackIn_6_0 = null;
-        Object stackIn_10_0 = null;
-        Object stackIn_14_0 = null;
-        Object stackIn_18_0 = null;
-        PcmSample stackIn_20_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final PcmSample getVorbisSampleByIds(int[] byteBudget, int groupId, int fileId, byte methodGuard) {
+        int packedCacheKey = 0;
+        RuntimeException lookupFailureForContext = null;
+        long cacheKey = 0L;
+        PcmSample cachedThenDecodedSample = null;
+        MusicDecoder decoder = null;
+        PcmSample invalidGuardResult = null;
+        PcmSample cachedSampleAtReturn = null;
+        Object exhaustedBudgetResult = null;
+        Object missingDecoderResult = null;
+        Object incompleteDecodeResult = null;
+        PcmSample decodedSampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String byteBudgetDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          var5_int = ((param1 & -1879044097) << 4 | param1 >>> 12) ^ param2;
-          var5_int = var5_int | param1 << 16;
-          var6 = (long)var5_int ^ 4294967296L;
-          var8 = (PcmSample) ((Object) this.field_b.a(var6, (byte) -115));
-          if (param3 != 14) {
-            stackIn_2_0 = (PcmSample) null;
-            return stackIn_2_0;
+          packedCacheKey = ((groupId & -1879044097) << 4 | groupId >>> 12) ^ fileId;
+          packedCacheKey = packedCacheKey | groupId << 16;
+          cacheKey = (long)packedCacheKey ^ 4294967296L;
+          cachedThenDecodedSample = (PcmSample) ((Object) this.decodedSamples.a(cacheKey, (byte) -115));
+          if (methodGuard != 14) {
+            invalidGuardResult = (PcmSample) null;
+            return invalidGuardResult;
           }
-          if (var8 != null) {
-            stackIn_6_0 = var8;
-            return stackIn_6_0;
+          if (cachedThenDecodedSample != null) {
+            cachedSampleAtReturn = cachedThenDecodedSample;
+            return cachedSampleAtReturn;
           }
-          if ((param0 != null) &&
-              (param0[0] <= 0)) {
-            stackIn_10_0 = null;
-            return (PcmSample) (stackIn_10_0);
+          if ((byteBudget != null) &&
+              (byteBudget[0] <= 0)) {
+            exhaustedBudgetResult = null;
+            return (PcmSample) (exhaustedBudgetResult);
           }
-          var9 = (MusicDecoder) ((Object) this.field_a.a(var6, (byte) -96));
-          if (var9 == null) {
-            var9 = MusicDecoder.a(this.field_d, param1, param2);
-            if (var9 == null) {
-              stackIn_14_0 = null;
-              return (PcmSample) (stackIn_14_0);
+          decoder = (MusicDecoder) ((Object) this.pendingVorbisDecoders.a(cacheKey, (byte) -96));
+          if (decoder == null) {
+            decoder = MusicDecoder.a(this.vorbisArchive, groupId, fileId);
+            if (decoder == null) {
+              missingDecoderResult = null;
+              return (PcmSample) (missingDecoderResult);
             }
-            this.field_a.a((byte) 102, var9, var6);
+            this.pendingVorbisDecoders.a((byte) 102, decoder, cacheKey);
           }
-          var8 = var9.decodePcmBudgeted(param0);
-          if (var8 == null) {
-            stackIn_18_0 = null;
-            return (PcmSample) (stackIn_18_0);
+          cachedThenDecodedSample = decoder.decodePcmBudgeted(byteBudget);
+          if (cachedThenDecodedSample == null) {
+            incompleteDecodeResult = null;
+            return (PcmSample) (incompleteDecodeResult);
           }
-          var9.unlinkNode(false);
-          this.field_b.a((byte) 102, var8, var6);
-          stackIn_20_0 = var8;
-          return stackIn_20_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_23_0 = var5;
-          stackIn_23_1 = new StringBuilder().append("ci.D(");
-          if (param0 == null) {
-            stackIn_24_2 = "null";
+          decoder.unlinkNode(false);
+          this.decodedSamples.a((byte) 102, cachedThenDecodedSample, cacheKey);
+          decodedSampleAtReturn = cachedThenDecodedSample;
+          return decodedSampleAtReturn;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.D(");
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(byteBudgetDescription).append(',').append(groupId).append(',').append(fileId).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -410,113 +410,113 @@ final class SoundSampleCache {
         }
     }
 
-    private final PcmSample a(String param0, int[] param1, int param2) {
-        RuntimeException var4 = null;
-        PcmSample stackIn_3_0 = null;
-        PcmSample stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final PcmSample getVorbisSampleByNameBudgeted(String resourceName, int[] byteBudget, int methodGuard) {
+        RuntimeException lookupFailureForContext = null;
+        PcmSample namedFileSampleAtReturn = null;
+        PcmSample namedGroupSampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String resourceNameDescription = null;
+        StringBuilder messageBeforeByteBudget = null;
+        String byteBudgetDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          if (this.field_d.hasGroupName((byte) -120, "")) {
-            stackIn_3_0 = this.a(param0, param1, 12628, "");
-            return stackIn_3_0;
+          if (this.vorbisArchive.hasGroupName((byte) -120, "")) {
+            namedFileSampleAtReturn = this.getVorbisSample(resourceName, byteBudget, 12628, "");
+            return namedFileSampleAtReturn;
           }
-          if (param2 != 1) {
-            this.field_a = (IntrusiveNodeHashTable) null;
+          if (methodGuard != 1) {
+            this.pendingVorbisDecoders = (IntrusiveNodeHashTable) null;
           }
-          stackIn_7_0 = this.a("", param1, 12628, param0);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("ci.L(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+          namedGroupSampleAtReturn = this.getVorbisSample("", byteBudget, 12628, resourceName);
+          return namedGroupSampleAtReturn;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.L(");
+          if (resourceName == null) {
+            resourceNameDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+          messageBeforeByteBudget = ((StringBuilder) (Object) lookupMessagePrefix).append(resourceNameDescription).append(',');
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeByteBudget).append(byteBudgetDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    private final PcmSample a(String param0, int[] param1, int param2, String param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        Object stackIn_2_0 = null;
-        PcmSample stackIn_5_0 = null;
-        Object stackIn_8_0 = null;
-        PcmSample stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final PcmSample getVorbisSample(String fileName, int[] byteBudget, int methodGuard, String groupName) {
+        int groupId = 0;
+        RuntimeException lookupFailureForContext = null;
+        int fileId = 0;
+        Object missingGroupResult = null;
+        PcmSample invalidGuardResult = null;
+        Object missingFileResult = null;
+        PcmSample sampleAtReturn = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String fileNameDescription = null;
+        StringBuilder messageBeforeByteBudget = null;
+        String byteBudgetDescription = null;
+        StringBuilder messageBeforeGroupName = null;
+        String groupNameDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          var5_int = this.field_d.findGroupId((byte) 127, param3);
-          if (0 > var5_int) {
-            stackIn_2_0 = null;
-            return (PcmSample) (stackIn_2_0);
+          groupId = this.vorbisArchive.findGroupId((byte) 127, groupName);
+          if (0 > groupId) {
+            missingGroupResult = null;
+            return (PcmSample) (missingGroupResult);
           }
-          if (param2 != 12628) {
-            stackIn_5_0 = (PcmSample) null;
-            return stackIn_5_0;
+          if (methodGuard != 12628) {
+            invalidGuardResult = (PcmSample) null;
+            return invalidGuardResult;
           }
-          var6 = this.field_d.findFileId(param0, -89, var5_int);
-          if (var6 >= 0) {
-            stackIn_10_0 = this.a(param1, var5_int, var6, (byte) 14);
-            return stackIn_10_0;
+          fileId = this.vorbisArchive.findFileId(fileName, -89, groupId);
+          if (fileId >= 0) {
+            sampleAtReturn = this.getVorbisSampleByIds(byteBudget, groupId, fileId, (byte) 14);
+            return sampleAtReturn;
           }
-          stackIn_8_0 = null;
-          return (PcmSample) (stackIn_8_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("ci.G(");
-          if (param0 == null) {
-            stackIn_14_2 = "null";
+          missingFileResult = null;
+          return (PcmSample) (missingFileResult);
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("ci.G(");
+          if (fileName == null) {
+            fileNameDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            fileNameDescription = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param1 == null) {
-            stackIn_17_2 = "null";
+          messageBeforeByteBudget = ((StringBuilder) (Object) lookupMessagePrefix).append(fileNameDescription).append(',');
+          if (byteBudget == null) {
+            byteBudgetDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            byteBudgetDescription = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_20_2 = "null";
+          messageBeforeGroupName = ((StringBuilder) (Object) messageBeforeByteBudget).append(byteBudgetDescription).append(',').append(methodGuard).append(',');
+          if (groupName == null) {
+            groupNameDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            groupNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeGroupName).append(groupNameDescription).append(')').toString());
         }
     }
 
-    SoundSampleCache(ResourceArchive param0, ResourceArchive param1) {
-        this.field_a = new IntrusiveNodeHashTable(256);
-        this.field_b = new IntrusiveNodeHashTable(256);
+    SoundSampleCache(ResourceArchive synthesizedSoundArchive, ResourceArchive vorbisArchive) {
+        this.pendingVorbisDecoders = new IntrusiveNodeHashTable(256);
+        this.decodedSamples = new IntrusiveNodeHashTable(256);
         try {
-            this.field_c = param0;
-            this.field_d = param1;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            this.synthesizedSoundArchive = synthesizedSoundArchive;
+            this.vorbisArchive = vorbisArchive;
+        } catch (RuntimeException cacheInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cacheInitializationFailure), "ci.<init>(" + (synthesizedSoundArchive != null ? "{...}" : "null") + ',' + (vorbisArchive != null ? "{...}" : "null") + ')');
         }
     }
 

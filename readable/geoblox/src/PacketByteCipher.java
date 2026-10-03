@@ -195,7 +195,7 @@ final class PacketByteCipher {
         MenuScreen.introTintGreenDelta = (float)(-(WidgetSkinState.field_j >> 8 & 255) + (var1 >> 8 & 255));
         TextLayoutLine.field_b = (float)(((var1 & 16735942) >> 16) - (WidgetSkinState.field_j >> 16 & 255));
         int var2 = 80 % ((5 - param0) / 52);
-        IntrusiveNodeHashTable.a(0, ll.field_d);
+        IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, ll.titleMusicTrack);
     }
 
     public static void b(byte param0) {

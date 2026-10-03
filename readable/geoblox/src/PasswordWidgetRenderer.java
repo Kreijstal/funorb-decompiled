@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PasswordWidgetRenderer extends TextInputRenderer {
-    static MidiPcmStream field_y;
+    static MidiPcmStream gameMusicStream;
     static int[] meshFacePriorityWriteOffsets;
 
     public static void c(int param0) {
         if (param0 != 0) {
             meshFacePriorityWriteOffsets = (int[]) null;
-            field_y = null;
+            gameMusicStream = null;
             meshFacePriorityWriteOffsets = null;
             return;
         }
-        field_y = null;
+        gameMusicStream = null;
         meshFacePriorityWriteOffsets = null;
     }
 
@@ -49,12 +49,12 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
         this(DialogLayer.sharedUiFont, param0);
     }
 
-    final static int b(int param0) {
-        if (param0 == 16) {
-            return WidgetContainer.field_B[UiWidget.field_t % WidgetContainer.field_B.length];
+    final static int getThemeForProgress(int methodGuard) {
+        if (methodGuard == 16) {
+            return WidgetContainer.themeCycleOrder[UiWidget.completedThemeCount % WidgetContainer.themeCycleOrder.length];
         }
         meshFacePriorityWriteOffsets = (int[]) null;
-        return WidgetContainer.field_B[UiWidget.field_t % WidgetContainer.field_B.length];
+        return WidgetContainer.themeCycleOrder[UiWidget.completedThemeCount % WidgetContainer.themeCycleOrder.length];
     }
 
     private PasswordWidgetRenderer(BitmapFont param0, int param1) {
@@ -67,7 +67,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
         if (param2 == -14045) {
             return;
         }
-        PasswordWidgetRenderer.b(-111);
+        PasswordWidgetRenderer.getThemeForProgress(-111);
     }
 
     final static TriangleMesh a(PacketBuffer param0, byte param1) {
@@ -100,7 +100,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
           var5.faceCount = (short)param0.readBits((byte) -17, 16);
           var5.faceVertexA = ArchiveNetworkClient.a(var5.faceVertexA, 16, 0, param0);
           if (param1 < 111) {
-            field_y = (MidiPcmStream) null;
+            gameMusicStream = (MidiPcmStream) null;
           }
           var5.faceVertexB = ArchiveNetworkClient.a(var5.faceVertexB, 16, 0, param0);
           var5.faceVertexC = ArchiveNetworkClient.a(var5.faceVertexC, 16, 0, param0);

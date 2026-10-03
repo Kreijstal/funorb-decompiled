@@ -8,7 +8,7 @@ final class w {
     static boolean avatarShockPending;
     static TextTemplateArgumentType field_d;
     static String mouseOverIconText;
-    static String[] field_b;
+    static String[] gameSoundResourceNames;
     static String field_e;
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -73,11 +73,11 @@ final class w {
         field_e = null;
         mouseOverIconText = null;
         if (param0 < 51) {
-            field_b = (String[]) null;
+            gameSoundResourceNames = (String[]) null;
         }
         field_d = null;
         field_c = null;
-        field_b = null;
+        gameSoundResourceNames = null;
     }
 
     final static PaletteBitmapFont loadPaletteFont(String groupName, ResourceArchive glyphGraphicsArchive, ResourceArchive fontMetricsArchive, boolean methodGuard, String resourceName) {
@@ -97,7 +97,7 @@ final class w {
         RuntimeException caughtFontFailure = null;
         try {
           if (!methodGuard) {
-            field_b = (String[]) null;
+            gameSoundResourceNames = (String[]) null;
           }
           archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 127, groupName);
           archiveFileId = glyphGraphicsArchive.findFileId(resourceName, -107, archiveGroupId);
@@ -275,6 +275,6 @@ final class w {
         mouseOverIconText = "Mouse over an icon for details";
         field_d = new TextTemplateArgumentType(1, 2, 2, 0);
         field_e = "Countdown";
-        field_b = new String[]{"menu_select", "jewel_1", "jewel_2", "jewel_3", "space_1", "space_2", "space_3", "sun_1", "sun_2", "sun_3", "baking_1", "baking_2", "baking_3", "germs_1", "germs_2", "germs_3", "sport_1", "sport_2", "sport_3", "sweets_1", "sweets_2", "sweets_3", "cry", "to_angry", "to_excited", "to_happy", "to_unhappy", "electric_shock", "bubble_swell", "button_bleep", "geom_rain", "geom_vanish", "bonus", "round_clear"};
+        gameSoundResourceNames = new String[]{"menu_select", "jewel_1", "jewel_2", "jewel_3", "space_1", "space_2", "space_3", "sun_1", "sun_2", "sun_3", "baking_1", "baking_2", "baking_3", "germs_1", "germs_2", "germs_3", "sport_1", "sport_2", "sport_3", "sweets_1", "sweets_2", "sweets_3", "cry", "to_angry", "to_excited", "to_happy", "to_unhappy", "electric_shock", "bubble_swell", "button_bleep", "geom_rain", "geom_vanish", "bonus", "round_clear"};
     }
 }

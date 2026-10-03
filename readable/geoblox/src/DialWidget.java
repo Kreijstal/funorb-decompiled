@@ -3,7 +3,7 @@
  */
 final class DialWidget extends ButtonWidget {
     static hh contentFadeInPhase;
-    static MusicScore field_M;
+    static MusicScore bakingMusicTrack;
     static String js5IoErrorText;
     int centerOffsetX;
     int stepCount;
@@ -34,9 +34,9 @@ final class DialWidget extends ButtonWidget {
 
     public static void f(int param0) {
         js5IoErrorText = null;
-        field_M = null;
+        bakingMusicTrack = null;
         if (param0 != 0) {
-            field_M = (MusicScore) null;
+            bakingMusicTrack = (MusicScore) null;
         }
         contentFadeInPhase = null;
         fullscreenMembersButtonText = null;

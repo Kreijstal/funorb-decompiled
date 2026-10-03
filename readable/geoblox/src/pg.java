@@ -25,7 +25,7 @@ final class pg {
         }
         TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
         ContextualRuntimeException.recomputeSpawnReleaseInterval(true);
-        UiWidget.field_t = 0;
+        UiWidget.completedThemeCount = 0;
         DequeCursor.field_c = 0;
     }
 

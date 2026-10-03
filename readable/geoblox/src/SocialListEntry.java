@@ -7,7 +7,7 @@ final class SocialListEntry extends VisualPropertyOverrides {
     static int field_gb;
     int insertionIndex;
     static String field_lb;
-    static MusicScore field_ib;
+    static MusicScore sweetsMusicTrack;
     static String quitWarningText;
 
     final static void e(int param0) {
@@ -27,10 +27,10 @@ final class SocialListEntry extends VisualPropertyOverrides {
         quitWarningText = null;
         if (param0 != -128) {
             SocialListEntry.f((byte) 1);
-            field_ib = null;
+            sweetsMusicTrack = null;
             return;
         }
-        field_ib = null;
+        sweetsMusicTrack = null;
     }
 
     static {

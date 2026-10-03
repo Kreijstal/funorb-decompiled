@@ -13,7 +13,7 @@ final class NodeHashTableIterator implements Iterator {
     static IntrusiveDeque pendingAchievementQueries;
     static String loginText;
     static String fullscreenFocusText;
-    static MusicScore field_f;
+    static MusicScore sportMusicTrack;
     static Sprite popSprite;
 
     public final void remove() {
@@ -91,7 +91,7 @@ final class NodeHashTableIterator implements Iterator {
             return;
         }
         popSprite = null;
-        field_f = null;
+        sportMusicTrack = null;
         field_i = null;
         loginText = null;
     }

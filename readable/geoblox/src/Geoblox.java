@@ -61,7 +61,7 @@ public final class Geoblox extends SessionGameApplet {
         if (null != OpacityWidget.field_F && null != GzipInflater.field_a && ah.field_c != null && null != ProxySocketConnector.field_m) {
             HighscoreNameEntry.a(FifoResponseToken.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
-            SocketConnector.a(OpacityWidget.field_F, (byte) 80, ah.field_c, GzipInflater.field_a, ProxySocketConnector.field_m);
+            SocketConnector.prepareInitialGameAudio(OpacityWidget.field_F, (byte) 80, ah.field_c, GzipInflater.field_a, ProxySocketConnector.field_m);
             ah.field_c = null;
             OpacityWidget.field_F = null;
             ProxySocketConnector.field_m = null;
@@ -747,7 +747,7 @@ public final class Geoblox extends SessionGameApplet {
                   }
                 }
                 if (TriangleMesh.screenTransitionTick == 0) {
-                  ValidationIconWidget.playPcmSample(-348, fl.field_c[30]);
+                  ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[30]);
                 }
                 nextScreenTransitionTickSnapshot = TriangleMesh.screenTransitionTick + 1;
                 TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;

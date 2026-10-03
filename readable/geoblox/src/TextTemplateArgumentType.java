@@ -5,12 +5,12 @@ final class TextTemplateArgumentType {
     int typeId;
     static String cancelText;
     int valueCount;
-    static int[] field_c;
+    static int[] gameSoundThemeIds;
     static boolean field_e;
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-            field_c = (int[]) null;
+            gameSoundThemeIds = (int[]) null;
             return true;
         }
         return true;
@@ -121,7 +121,7 @@ final class TextTemplateArgumentType {
 
     public static void a(int param0) {
         int var1 = -55 % ((param0 + 80) / 32);
-        field_c = null;
+        gameSoundThemeIds = null;
         cancelText = null;
     }
 
@@ -163,15 +163,15 @@ final class TextTemplateArgumentType {
     static {
         int var0 = 0;
         cancelText = "Cancel";
-        field_c = new int[33];
+        gameSoundThemeIds = new int[33];
         for (var0 = 0; var0 < 3; var0++) {
-            field_c[var0 + 10] = 4;
-            field_c[13 + var0] = 3;
-            field_c[7 + var0] = 1;
-            field_c[var0 + 1] = 0;
-            field_c[var0 + 4] = 6;
-            field_c[16 + var0] = 5;
-            field_c[19 + var0] = 2;
+            gameSoundThemeIds[var0 + 10] = 4;
+            gameSoundThemeIds[13 + var0] = 3;
+            gameSoundThemeIds[7 + var0] = 1;
+            gameSoundThemeIds[var0 + 1] = 0;
+            gameSoundThemeIds[var0 + 4] = 6;
+            gameSoundThemeIds[16 + var0] = 5;
+            gameSoundThemeIds[19 + var0] = 2;
         }
     }
 }

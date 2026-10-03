@@ -68,36 +68,36 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final static void a(int param0, MusicScore param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void selectLoopingBackgroundMusic(int methodGuard, MusicScore track) {
+        RuntimeException playbackFailureForContext = null;
+        RuntimeException playbackFailureBeforeDescription = null;
+        StringBuilder playbackMessagePrefix = null;
+        String trackDescription = null;
+        RuntimeException caughtPlaybackFailure = null;
         try {
-          if (param0 != 0) {
+          if (methodGuard != 0) {
             changeDisplayNameText = (String) null;
           }
-          if ((param1 != null) &&
-              (param1 != GzipInflater.field_e)) {
-            PasswordWidgetRenderer.field_y.d(-9268);
-            CacheReference.field_p.a();
-            GzipInflater.field_e = param1;
-            PasswordWidgetRenderer.field_y.a(true, GzipInflater.field_e, -1706);
+          if ((track != null) &&
+              (track != GzipInflater.currentMusicTrack)) {
+            PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
+            CacheReference.gameMusicOutput.a();
+            GzipInflater.currentMusicTrack = track;
+            PasswordWidgetRenderer.gameMusicStream.startMusicScore(true, GzipInflater.currentMusicTrack, -1706);
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_10_0 = runtimeException;
-          stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException playbackFailure) {
+          caughtPlaybackFailure = playbackFailure;
+          playbackFailureForContext = caughtPlaybackFailure;
+          playbackFailureBeforeDescription = playbackFailureForContext;
+          playbackMessagePrefix = new StringBuilder().append("fi.D(").append(methodGuard).append(',');
+          if (track == null) {
+            trackDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            trackDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) playbackFailureBeforeDescription), ((StringBuilder) (Object) playbackMessagePrefix).append(trackDescription).append(')').toString());
         }
     }
 

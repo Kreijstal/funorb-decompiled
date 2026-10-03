@@ -6,7 +6,7 @@ final class AchievementSubmission extends IntrusiveNode {
     int primaryTrackingCounterSnapshot;
     static boolean field_m;
     int achievementCheckByte;
-    static PcmResampler field_i;
+    static PcmResampler gameSoundResampler;
     static int[] field_o;
     int trackingAccumulatorSnapshot;
     int secondaryTrackingCounterSnapshot;
@@ -226,7 +226,7 @@ final class AchievementSubmission extends IntrusiveNode {
             field_k = 120;
           }
           field_o = null;
-          field_i = null;
+          gameSoundResampler = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class AchievementSubmission extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            field_i = (PcmResampler) null;
+            gameSoundResampler = (PcmResampler) null;
           }
           var2 = UnderlinedButtonRenderer.a(ResourceArchive.a(param0, -48), -78);
           if (null == var2) {

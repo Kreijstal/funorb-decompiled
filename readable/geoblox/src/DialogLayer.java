@@ -58,7 +58,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     final static void h(int param0) {
-        CacheReference.field_p.b();
+        CacheReference.gameMusicOutput.b();
         oh.field_a.b();
         if (param0 <= 9) {
             rotatedEntityScreenX = -2;

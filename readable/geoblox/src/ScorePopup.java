@@ -16,13 +16,13 @@ final class ScorePopup extends IntrusiveNode {
         if (param0 <= 65) {
             return;
         }
-        if (CacheReference.field_p == null) {
+        if (CacheReference.gameMusicOutput == null) {
             if (!(null == oh.field_a)) {
                 oh.field_a.c();
             }
             return;
         }
-        CacheReference.field_p.c();
+        CacheReference.gameMusicOutput.c();
         if (!(null == oh.field_a)) {
             oh.field_a.c();
         }

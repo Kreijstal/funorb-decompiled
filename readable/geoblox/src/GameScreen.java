@@ -1839,7 +1839,7 @@ final class GameScreen extends MenuScreen {
               (50 >= this.volumePreviewTicks)) {
             return;
           }
-          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, SocialListEntry.field_gb);
+          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.gameSoundSamples[8], 100, SocialListEntry.field_gb);
           GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
           this.volumePreviewTicks = 0;
           return;
@@ -1889,7 +1889,7 @@ final class GameScreen extends MenuScreen {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          ValidationIconWidget.playPcmSample(-348, fl.field_c[29]);
+          ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[29]);
           newSessionTutorialModeFlag = 0;
           suppressPressAnimationFlag = 0;
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
@@ -2044,7 +2044,7 @@ final class GameScreen extends MenuScreen {
                     }
                     ScoreSubmission.requestedScreenId = 2;
                   }
-                  IntrusiveNodeHashTable.a(methodGuard + 2, ll.field_d);
+                  IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard + 2, ll.titleMusicTrack);
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }

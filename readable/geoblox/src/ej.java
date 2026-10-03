@@ -5,7 +5,7 @@ final class ej {
     static LoginPayloadKind field_b;
     static Sprite[] amorphousCrackFrames;
     static String[] ratingModeNames;
-    static MusicScore field_d;
+    static MusicScore jewelleryMusicTrack;
     private static String field_z;
 
     public static void a(int param0) {
@@ -13,14 +13,14 @@ final class ej {
             field_b = null;
             amorphousCrackFrames = null;
             ratingModeNames = null;
-            field_d = null;
+            jewelleryMusicTrack = null;
             return;
         }
         ej.a(1);
         field_b = null;
         amorphousCrackFrames = null;
         ratingModeNames = null;
-        field_d = null;
+        jewelleryMusicTrack = null;
     }
 
     static {

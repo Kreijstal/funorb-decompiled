@@ -377,7 +377,7 @@ final class DiskArchiveCache {
 
     final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, boolean param2, MidiPcmStream param3, boolean param4, int param5) {
         AudioOutput.a(param5, param4, 10);
-        CacheReference.field_p = AudioOutput.a(param1, param0, 0, 22050);
+        CacheReference.gameMusicOutput = AudioOutput.a(param1, param0, 0, 22050);
         if (param2) {
             return;
         }
@@ -385,10 +385,10 @@ final class DiskArchiveCache {
             oh.field_a = AudioOutput.a(param1, param0, 1, 1000);
             WhirlpoolHash.field_d = new PcmStreamMixer();
             oh.field_a.b(WhirlpoolHash.field_d);
-            PasswordWidgetRenderer.field_y = param3;
+            PasswordWidgetRenderer.gameMusicStream = param3;
             AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c);
             EmailValidator.a(SocialListEntry.field_gb, (byte) -67);
-            CacheReference.field_p.b(param3);
+            CacheReference.gameMusicOutput.b(param3);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

@@ -4,7 +4,7 @@
 final class EmailValidator extends TextInputValidator {
     private static long[] field_m;
     static int archiveGameCrc;
-    static boolean[] field_j;
+    static boolean[] themeMusicPreparationFlags;
     static int availableSpriteVariantCount;
     static int field_i;
 
@@ -116,7 +116,7 @@ final class EmailValidator extends TextInputValidator {
         RuntimeException caughtDecodingFailure = null;
         try {
           if (decodeGuard != 1) {
-            field_j = (boolean[]) null;
+            themeMusicPreparationFlags = (boolean[]) null;
           }
           decodedTextBeforeReturn = bc.decodeTextSlice(-8, textBytes, 0, textBytes.length);
           return decodedTextBeforeReturn;
@@ -201,7 +201,7 @@ final class EmailValidator extends TextInputValidator {
     }
 
     public static void g(int param0) {
-        field_j = null;
+        themeMusicPreparationFlags = null;
         if (param0 > -13) {
             byte[] var2 = (byte[]) null;
             EmailValidator.decodeTextBytes(95, (byte[]) null);
@@ -243,7 +243,7 @@ final class EmailValidator extends TextInputValidator {
           }
           field_m[var2] = var0;
         }
-        field_j = new boolean[7];
+        themeMusicPreparationFlags = new boolean[7];
         field_i = 0;
     }
 }

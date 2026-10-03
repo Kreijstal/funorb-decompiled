@@ -23,6 +23,15 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
+along theme audio preparation, sample caching and PCM resampling. Session calls
+now expose `selectThemeAudio`, `getThemeForProgress` and `recycleAllScorePopups`.
+There are 9,862 guarded rules and 78,234 identifier edits, preserving every
+complete prior rule and all raw/tool/native-probe pins. Class coverage remains
+223 renames, one meaningful `Geoblox` name and 79 opaque names. Preparation flags,
+ignored instrument-preparation results, budgets and sample-slot limits retain
+their original behavior. This adds no live audio/assets/device coverage.
+
 Pass 115 names 11 classes and 145 fields, methods and parameters. The score path
 now reads through `createAndSubmitScore`, `ScoreSubmission` and
 `writeScoreSubmission`. Typed query records, shared social entries, canvas resize

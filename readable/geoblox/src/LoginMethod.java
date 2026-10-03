@@ -55,7 +55,7 @@ final class LoginMethod {
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -8) {
-            LoginMethod.b((byte) -78);
+            LoginMethod.releaseMarkedThemeMusicPreparation((byte) -78);
         }
     }
 
@@ -116,33 +116,33 @@ final class LoginMethod {
         throw new IllegalStateException();
     }
 
-    final static void b(byte param0) {
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = Geoblox.clientControlFlowFlag;
+    final static void releaseMarkedThemeMusicPreparation(byte methodGuard) {
+        int themeFlagIndex = 0;
+        RuntimeException preparationReleaseFailureForContext = null;
+        int clientControlSnapshot = 0;
+        RuntimeException caughtPreparationReleaseFailure = null;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (null != te.field_c) {
-            for (var1_int = 0; var1_int < 7; var1_int++) {
-              if (!EmailValidator.field_j[var1_int]) {
+          if (null != te.gameSoundSampleCache) {
+            for (themeFlagIndex = 0; themeFlagIndex < 7; themeFlagIndex++) {
+              if (!EmailValidator.themeMusicPreparationFlags[themeFlagIndex]) {
                 return;
               }
             }
-            kf.field_c = null;
-            UsernameAvailabilityQuery.field_l = null;
-            PasswordWidgetRenderer.field_y.c((byte) 83);
-            te.field_c = null;
+            kf.musicScoreArchive = null;
+            UsernameAvailabilityQuery.instrumentPatchArchive = null;
+            PasswordWidgetRenderer.gameMusicStream.clearInstrumentSampleIds((byte) 83);
+            te.gameSoundSampleCache = null;
           }
-          if (param0 == -24) {
+          if (methodGuard == -24) {
             return;
           }
-          LoginMethod.b((byte) -35);
+          LoginMethod.releaseMarkedThemeMusicPreparation((byte) -35);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "od.B(" + param0 + ')');
+        } catch (java.lang.RuntimeException preparationReleaseFailure) {
+          caughtPreparationReleaseFailure = preparationReleaseFailure;
+          preparationReleaseFailureForContext = caughtPreparationReleaseFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) preparationReleaseFailureForContext), "od.B(" + methodGuard + ')');
         }
     }
 

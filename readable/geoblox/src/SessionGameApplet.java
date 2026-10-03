@@ -5,7 +5,7 @@ abstract class SessionGameApplet extends GameApplet {
     private int field_x;
     private long field_k;
     private int field_r;
-    static MusicScore field_o;
+    static MusicScore spaceMusicTrack;
     private boolean field_t;
     private boolean field_v;
     String field_n;
@@ -498,7 +498,7 @@ abstract class SessionGameApplet extends GameApplet {
     }
 
     public static void g(int param0) {
-        field_o = null;
+        spaceMusicTrack = null;
         fullscreenText = null;
         if (param0 != 30344) {
             SessionGameApplet.createAchievementStateValues(-29);

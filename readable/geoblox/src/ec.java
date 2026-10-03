@@ -111,7 +111,7 @@ final class ec {
               if ((firstMatchedEntity.matchCooldownTicks <= 0) &&
                   (secondMatchedEntity.matchCooldownTicks <= 0) &&
                   (thirdMatchedEntity.matchCooldownTicks <= 0)) {
-                ValidationIconWidget.playPcmSample(-348, fl.field_c[31]);
+                ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[31]);
                 gf.matchChainLength = gf.matchChainLength + 1;
                 if (gf.matchChainLength > 1) {
                   UiWidget.gameplaySession.pointsPanelSlideDirection = -1;

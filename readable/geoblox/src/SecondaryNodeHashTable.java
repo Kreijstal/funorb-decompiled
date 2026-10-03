@@ -8,7 +8,7 @@ final class SecondaryNodeHashTable {
     private int bucketCount;
     static String pleaseWaitText;
     private long lookupKey;
-    static boolean[] field_j;
+    static boolean[] gameSoundPreparationFlags;
     private DualLinkNode[] buckets;
     private DualLinkNode lookupCursor;
     static Sprite[] silverStarShockFrames;
@@ -101,7 +101,7 @@ final class SecondaryNodeHashTable {
         }
         silverStarShockFrames = null;
         pleaseWaitText = null;
-        field_j = null;
+        gameSoundPreparationFlags = null;
         field_b = null;
     }
 
@@ -121,7 +121,7 @@ final class SecondaryNodeHashTable {
     }
 
     static {
-        field_j = new boolean[33];
+        gameSoundPreparationFlags = new boolean[33];
         pleaseWaitText = "Please wait...";
     }
 }

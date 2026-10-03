@@ -7,7 +7,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     static int[][] logoMeshCenters;
     private ValidationProvider validationProvider;
     static IndexedSprite sweetsBackgroundSprite;
-    static MusicScore field_S;
+    static MusicScore gameOverMusicTrack;
     private String fallbackMessage;
 
     final String getHoverText(byte methodGuard) {
@@ -219,7 +219,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
 
     public static void j(int param0) {
         logoMeshCenters = (int[][]) null;
-        field_S = null;
+        gameOverMusicTrack = null;
         if (param0 != 24033) {
             logoMeshCenters = (int[][]) null;
             sweetsBackgroundSprite = null;

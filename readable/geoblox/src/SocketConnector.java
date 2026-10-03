@@ -147,88 +147,88 @@ abstract class SocketConnector {
         themeCycleColors = (int[][]) null;
     }
 
-    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        PcmSample var6 = null;
-        int var7 = 0;
-        String var8 = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    final static void prepareInitialGameAudio(ResourceArchive synthesizedSoundArchive, byte methodGuard, ResourceArchive vorbisArchive, ResourceArchive musicScoreArchive, ResourceArchive instrumentPatchArchive) {
+        RuntimeException preparationFailureBeforeDescription = null;
+        StringBuilder preparationMessagePrefix = null;
+        String synthesizedArchiveDescription = null;
+        StringBuilder messageBeforeVorbisArchive = null;
+        String vorbisArchiveDescription = null;
+        StringBuilder messageBeforeScoreArchive = null;
+        String scoreArchiveDescription = null;
+        StringBuilder messageBeforePatchArchive = null;
+        String patchArchiveDescription = null;
+        RuntimeException caughtAudioPreparationFailure = null;
+        int soundIndex = 0;
+        RuntimeException audioPreparationFailureForContext = null;
+        PcmSample sampleBeforeResampling = null;
+        int clientControlSnapshot = 0;
+        String invalidGuardLookupName = null;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          kf.field_c = param3;
-          UsernameAvailabilityQuery.field_l = param4;
-          AchievementSubmission.field_i = new PcmResampler(22050, AudioOutput.sampleRateHz);
-          ll.field_d = MusicScore.loadNamedScore(kf.field_c, "", "title_music_loop");
-          ValidationMessageWidget.field_S = MusicScore.loadNamedScore(kf.field_c, "", "game_over");
-          IntrusiveNode.field_d = MusicScore.loadNamedScore(kf.field_c, "", "sun");
-          ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(kf.field_c, "", "bonus_bubble_jingle");
-          te.field_c = new SoundSampleCache(param0, param2);
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, UsernameAvailabilityQuery.field_l);
-          EmailValidator.field_j[1] = true;
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ContentTransitionDialog.resultMusicTrack, UsernameAvailabilityQuery.field_l);
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ValidationMessageWidget.field_S, UsernameAvailabilityQuery.field_l);
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ll.field_d, UsernameAvailabilityQuery.field_l);
-          var5_int = 0;
-          if (param1 < 69) {
-            var8 = (String) null;
+          kf.musicScoreArchive = musicScoreArchive;
+          UsernameAvailabilityQuery.instrumentPatchArchive = instrumentPatchArchive;
+          AchievementSubmission.gameSoundResampler = new PcmResampler(22050, AudioOutput.sampleRateHz);
+          ll.titleMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "title_music_loop");
+          ValidationMessageWidget.gameOverMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "game_over");
+          IntrusiveNode.sunMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "sun");
+          ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "bonus_bubble_jingle");
+          te.gameSoundSampleCache = new SoundSampleCache(synthesizedSoundArchive, vorbisArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, IntrusiveNode.sunMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          EmailValidator.themeMusicPreparationFlags[1] = true;
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ContentTransitionDialog.resultMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ValidationMessageWidget.gameOverMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ll.titleMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          soundIndex = 0;
+          if (methodGuard < 69) {
+            invalidGuardLookupName = (String) null;
             SocketConnector.findSocialEntry((byte) 74, (String) null);
           }
-          while (var5_int < 33) {
-            if ((TextTemplateArgumentType.field_c[var5_int] > 0) &&
-                (TextTemplateArgumentType.field_c[var5_int] != 1)) {
-              var5_int++;
+          while (soundIndex < 33) {
+            if ((TextTemplateArgumentType.gameSoundThemeIds[soundIndex] > 0) &&
+                (TextTemplateArgumentType.gameSoundThemeIds[soundIndex] != 1)) {
+              soundIndex++;
               continue;
             }
-            if ((var5_int >= 10) &&
-                (26 >= var5_int)) {
-              var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
+            if ((soundIndex >= 10) &&
+                (26 >= soundIndex)) {
+              sampleBeforeResampling = te.gameSoundSampleCache.getVorbisSampleByName(-1879044097, w.gameSoundResourceNames[soundIndex]);
             } else {
-              var6 = te.field_c.b(1, w.field_b[var5_int]);
+              sampleBeforeResampling = te.gameSoundSampleCache.getSynthesizedSampleByName(1, w.gameSoundResourceNames[soundIndex]);
             }
-            fl.field_c[var5_int] = var6.a(AchievementSubmission.field_i);
-            SecondaryNodeHashTable.field_j[var5_int] = true;
-            var5_int++;
+            fl.gameSoundSamples[soundIndex] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
+            SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndex] = true;
+            soundIndex++;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_17_0 = var5;
-          stackIn_17_1 = new StringBuilder().append("jg.E(");
-          if (param0 == null) {
-            stackIn_18_2 = "null";
+        } catch (java.lang.RuntimeException audioPreparationFailure) {
+          caughtAudioPreparationFailure = audioPreparationFailure;
+          audioPreparationFailureForContext = caughtAudioPreparationFailure;
+          preparationFailureBeforeDescription = audioPreparationFailureForContext;
+          preparationMessagePrefix = new StringBuilder().append("jg.E(");
+          if (synthesizedSoundArchive == null) {
+            synthesizedArchiveDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            synthesizedArchiveDescription = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_21_2 = "null";
+          messageBeforeVorbisArchive = ((StringBuilder) (Object) preparationMessagePrefix).append(synthesizedArchiveDescription).append(',').append(methodGuard).append(',');
+          if (vorbisArchive == null) {
+            vorbisArchiveDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            vorbisArchiveDescription = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param3 == null) {
-            stackIn_24_2 = "null";
+          messageBeforeScoreArchive = ((StringBuilder) (Object) messageBeforeVorbisArchive).append(vorbisArchiveDescription).append(',');
+          if (musicScoreArchive == null) {
+            scoreArchiveDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            scoreArchiveDescription = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param4 == null) {
-            stackIn_27_2 = "null";
+          messageBeforePatchArchive = ((StringBuilder) (Object) messageBeforeScoreArchive).append(scoreArchiveDescription).append(',');
+          if (instrumentPatchArchive == null) {
+            patchArchiveDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            patchArchiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) preparationFailureBeforeDescription), ((StringBuilder) (Object) messageBeforePatchArchive).append(patchArchiveDescription).append(')').toString());
         }
     }
 

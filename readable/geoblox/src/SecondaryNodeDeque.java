@@ -43,17 +43,17 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     final static void selectBackgroundMusic(int methodGuard, MusicScore track) {
-        if (track == null || GzipInflater.field_e == track) {
+        if (track == null || GzipInflater.currentMusicTrack == track) {
             return;
         }
         try {
             if (methodGuard != 0) {
                 receivedAchievementMask = -114;
             }
-            PasswordWidgetRenderer.field_y.d(-9268);
-            CacheReference.field_p.a();
-            GzipInflater.field_e = track;
-            PasswordWidgetRenderer.field_y.a(false, GzipInflater.field_e, -1706);
+            PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
+            CacheReference.gameMusicOutput.a();
+            GzipInflater.currentMusicTrack = track;
+            PasswordWidgetRenderer.gameMusicStream.startMusicScore(false, GzipInflater.currentMusicTrack, -1706);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
         }

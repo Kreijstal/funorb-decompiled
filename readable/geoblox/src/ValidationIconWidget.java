@@ -237,8 +237,8 @@ final class ValidationIconWidget extends ButtonWidget {
         }
     }
 
-    final static void a(byte param0) {
-        if (param0 != -93) {
+    final static void recycleAllScorePopups(byte methodGuard) {
+        if (methodGuard != -93) {
             return;
         }
         md.activeScorePopups.moveAllTo(PcmResampler.availableScorePopups, (byte) -70);

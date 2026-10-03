@@ -8,20 +8,20 @@ final class PcmSample extends AbstractAudioSample {
     boolean pingPongLoop;
     byte[] samples;
 
-    final PcmSample a(PcmResampler param0) {
-        this.samples = param0.a(99, this.samples);
-        this.sampleRateHz = param0.a(-128, this.sampleRateHz);
+    final PcmSample resampleInPlace(PcmResampler resampler) {
+        this.samples = resampler.resampleBytes(99, this.samples);
+        this.sampleRateHz = resampler.scaleSampleRate(-128, this.sampleRateHz);
         if (this.loopStart != this.loopEnd) {
-            this.loopStart = param0.b(this.loopStart, 6);
-            this.loopEnd = param0.b(this.loopEnd, 6);
+            this.loopStart = resampler.scaleSamplePosition(this.loopStart, 6);
+            this.loopEnd = resampler.scaleSamplePosition(this.loopEnd, 6);
             if (this.loopStart == this.loopEnd) {
                 this.loopStart = this.loopStart - 1;
             }
             return (PcmSample) (this);
         }
-        int dupTemp$0 = param0.b(this.loopStart, 6);
-        this.loopEnd = dupTemp$0;
-        this.loopStart = dupTemp$0;
+        int scaledSharedLoopPosition = resampler.scaleSamplePosition(this.loopStart, 6);
+        this.loopEnd = scaledSharedLoopPosition;
+        this.loopStart = scaledSharedLoopPosition;
         return (PcmSample) (this);
     }
 

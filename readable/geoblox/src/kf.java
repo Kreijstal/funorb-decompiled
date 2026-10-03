@@ -6,7 +6,7 @@ final class kf {
     static String pleaseTryAgainText;
     static boolean field_e;
     static int field_d;
-    static ResourceArchive field_c;
+    static ResourceArchive musicScoreArchive;
 
     public static void b(int param0) {
         pleaseTryAgainText = null;
@@ -14,7 +14,7 @@ final class kf {
         if (param0 != -15647) {
             return;
         }
-        field_c = null;
+        musicScoreArchive = null;
     }
 
     final static boolean a(int param0) {

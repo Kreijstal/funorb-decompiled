@@ -5,7 +5,7 @@ abstract class CacheReference extends DualLinkNode {
     static PacketBuffer field_q;
     static int field_m;
     int field_n;
-    static AudioOutput field_p;
+    static AudioOutput gameMusicOutput;
     static int menuPointerRepeatInterval;
 
     abstract boolean g(int param0);
@@ -37,7 +37,7 @@ abstract class CacheReference extends DualLinkNode {
     }
 
     public static void e(int param0) {
-        field_p = null;
+        gameMusicOutput = null;
         if (param0 > -92) {
             CacheReference.f(64);
             field_q = null;

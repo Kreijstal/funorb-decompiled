@@ -3,28 +3,28 @@
  */
 final class PcmResampler {
     static String createAgeText;
-    private int field_i;
-    private int[][] field_a;
+    private int inputRateRatio;
+    private int[][] filterCoefficients;
     static IntrusiveDeque availableScorePopups;
     static String fullscreenBeforeAcceptText;
     static String highscoreFriendTipText;
     static String createNewsOptInText;
     static int pointerYSnapshot;
-    private int field_h;
+    private int outputRateRatio;
     static int field_j;
 
     static long orLong(long left, long right) {
         return left | right;
     }
 
-    final int b(int param0, int param1) {
-        if (param1 != 6) {
+    final int scaleSamplePosition(int samplePosition, int methodGuard) {
+        if (methodGuard != 6) {
             createAgeText = (String) null;
         }
-        if (!(this.field_a == null)) {
-            param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_i) + 6;
+        if (!(this.filterCoefficients == null)) {
+            samplePosition = (int)((long)samplePosition * (long)this.outputRateRatio / (long)this.inputRateRatio) + 6;
         }
-        return param0;
+        return samplePosition;
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
@@ -39,14 +39,14 @@ final class PcmResampler {
         ValidationMessageWidget.a(param1, false);
     }
 
-    final int a(int param0, int param1) {
-        if (param0 != -128) {
-            this.b(23, -122);
+    final int scaleSampleRate(int methodGuard, int sampleRateHz) {
+        if (methodGuard != -128) {
+            this.scaleSamplePosition(23, -122);
         }
-        if (!(null == this.field_a)) {
-            param1 = (int)((long)param1 * (long)this.field_h / (long)this.field_i);
+        if (!(null == this.filterCoefficients)) {
+            sampleRateHz = (int)((long)sampleRateHz * (long)this.outputRateRatio / (long)this.inputRateRatio);
         }
-        return param1;
+        return sampleRateHz;
     }
 
     public static void a(boolean param0) {
@@ -60,121 +60,121 @@ final class PcmResampler {
         createNewsOptInText = null;
     }
 
-    PcmResampler(int param0, int param1) {
-        int var4 = 0;
-        int var3;
-        int[] var5;
-        double var6;
-        int var8;
-        int var9;
-        double var10;
-        double var12;
-        double var14;
-        if (param1 == param0) {
+    PcmResampler(int inputSampleRateHz, int outputSampleRateHz) {
+        int filterPhase = 0;
+        int rateGreatestCommonDivisor;
+        int[] phaseCoefficients;
+        double filterCenter;
+        int tapIndex;
+        int tapEndExclusive;
+        double rateScale;
+        double sincAngle;
+        double weightedCoefficient;
+        if (outputSampleRateHz == inputSampleRateHz) {
           return;
         }
-        var3 = ic.a(param0, param1, -126);
-        param0 = param0 / var3;
-        param1 = param1 / var3;
-        this.field_i = param0;
-        this.field_a = new int[param0][14];
-        this.field_h = param1;
-        for (var4 = 0; param0 > var4; var4++) {
-          var5 = this.field_a[var4];
-          var6 = 6.0 + (double)var4 / (double)param0;
-          var8 = (int)Math.floor(var6 - 7.0 + 1.0);
-          if (var8 < 0) {
-            var8 = 0;
+        rateGreatestCommonDivisor = ic.a(inputSampleRateHz, outputSampleRateHz, -126);
+        inputSampleRateHz = inputSampleRateHz / rateGreatestCommonDivisor;
+        outputSampleRateHz = outputSampleRateHz / rateGreatestCommonDivisor;
+        this.inputRateRatio = inputSampleRateHz;
+        this.filterCoefficients = new int[inputSampleRateHz][14];
+        this.outputRateRatio = outputSampleRateHz;
+        for (filterPhase = 0; inputSampleRateHz > filterPhase; filterPhase++) {
+          phaseCoefficients = this.filterCoefficients[filterPhase];
+          filterCenter = 6.0 + (double)filterPhase / (double)inputSampleRateHz;
+          tapIndex = (int)Math.floor(filterCenter - 7.0 + 1.0);
+          if (tapIndex < 0) {
+            tapIndex = 0;
           }
-          var9 = (int)Math.ceil(var6 + 7.0);
-          if (var9 > 14) {
-            var9 = 14;
+          tapEndExclusive = (int)Math.ceil(filterCenter + 7.0);
+          if (tapEndExclusive > 14) {
+            tapEndExclusive = 14;
           }
-          var10 = (double)param1 / (double)param0;
-          while (var8 < var9) {
-            var12 = ((double)var8 - var6) * 3.141592653589793;
-            var14 = var10;
-            if (!((!(var12 < -0.0001)) &&
-                (!(0.0001 < var12)))) {
-              var14 = var14 * (Math.sin(var12) / var12);
+          rateScale = (double)outputSampleRateHz / (double)inputSampleRateHz;
+          while (tapIndex < tapEndExclusive) {
+            sincAngle = ((double)tapIndex - filterCenter) * 3.141592653589793;
+            weightedCoefficient = rateScale;
+            if (!((!(sincAngle < -0.0001)) &&
+                (!(0.0001 < sincAngle)))) {
+              weightedCoefficient = weightedCoefficient * (Math.sin(sincAngle) / sincAngle);
             }
-            var14 = var14 * (Math.cos(0.2243994752564138 * (-var6 + (double)var8)) * 0.46 + 0.54);
-            var5[var8] = (int)Math.floor(0.5 + 65536.0 * var14);
-            var8++;
+            weightedCoefficient = weightedCoefficient * (Math.cos(0.2243994752564138 * (-filterCenter + (double)tapIndex)) * 0.46 + 0.54);
+            phaseCoefficients[tapIndex] = (int)Math.floor(0.5 + 65536.0 * weightedCoefficient);
+            tapIndex++;
           }
         }
         return;
     }
 
-    final byte[] a(int param0, byte[] param1) {
-        byte[] stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int[] var14 = null;
-        int[] var16 = null;
-        int[] var18 = null;
+    final byte[] resampleBytes(int methodGuard, byte[] samples) {
+        byte[] resampledBytesAtReturn = null;
+        RuntimeException resamplingFailureBeforeDescription = null;
+        StringBuilder resamplingMessagePrefix = null;
+        String samplesDescription = null;
+        RuntimeException caughtResamplingFailure = null;
+        int guardDivisionResult = 0;
+        RuntimeException resamplingFailureForContext = null;
+        int outputLength = 0;
+        int[] accumulatorForUpdates = null;
+        int outputPosition = 0;
+        int filterPhase = 0;
+        int inputIndexThenZeroOutputIndex = 0;
+        int sampleValueThenRoundedOutput = 0;
+        int tapIndexThenOutputAdvance = 0;
+        int outputIndex = 0;
+        int[] accumulatorAlias = null;
+        int[] allocatedAccumulator = null;
+        int[] phaseCoefficients = null;
         try {
-          var3_int = -6 / ((param0 + 18) / 49);
-          if (this.field_a != null) {
-            var4 = (int)((long)param1.length * (long)this.field_h / (long)this.field_i) + 14;
-            var16 = new int[var4];
-            var14 = var16;
-            var5 = var14;
-            var6 = 0;
-            var7 = 0;
-            for (var8 = 0; param1.length > var8; var8++) {
-              var9 = param1[var8];
-              var18 = this.field_a[var7];
-              for (var11 = 0; var11 < 14; var11++) {
-                var5[var6 + var11] = var5[var6 + var11] + var9 * var18[var11];
+          guardDivisionResult = -6 / ((methodGuard + 18) / 49);
+          if (this.filterCoefficients != null) {
+            outputLength = (int)((long)samples.length * (long)this.outputRateRatio / (long)this.inputRateRatio) + 14;
+            allocatedAccumulator = new int[outputLength];
+            accumulatorAlias = allocatedAccumulator;
+            accumulatorForUpdates = accumulatorAlias;
+            outputPosition = 0;
+            filterPhase = 0;
+            for (inputIndexThenZeroOutputIndex = 0; samples.length > inputIndexThenZeroOutputIndex; inputIndexThenZeroOutputIndex++) {
+              sampleValueThenRoundedOutput = samples[inputIndexThenZeroOutputIndex];
+              phaseCoefficients = this.filterCoefficients[filterPhase];
+              for (tapIndexThenOutputAdvance = 0; tapIndexThenOutputAdvance < 14; tapIndexThenOutputAdvance++) {
+                accumulatorForUpdates[outputPosition + tapIndexThenOutputAdvance] = accumulatorForUpdates[outputPosition + tapIndexThenOutputAdvance] + sampleValueThenRoundedOutput * phaseCoefficients[tapIndexThenOutputAdvance];
               }
-              var7 = var7 + this.field_h;
-              var11 = var7 / this.field_i;
-              var6 = var6 + var11;
-              var7 = var7 - this.field_i * var11;
+              filterPhase = filterPhase + this.outputRateRatio;
+              tapIndexThenOutputAdvance = filterPhase / this.inputRateRatio;
+              outputPosition = outputPosition + tapIndexThenOutputAdvance;
+              filterPhase = filterPhase - this.inputRateRatio * tapIndexThenOutputAdvance;
             }
-            param1 = new byte[var4];
-            var12 = 0;
-            var8 = var12;
-            while (var12 < var4) {
-              var9 = var16[var12] + 32768 >> 16;
-              if (-128 > var9) {
-                param1[var12] = (byte)-128;
+            samples = new byte[outputLength];
+            outputIndex = 0;
+            inputIndexThenZeroOutputIndex = outputIndex;
+            while (outputIndex < outputLength) {
+              sampleValueThenRoundedOutput = allocatedAccumulator[outputIndex] + 32768 >> 16;
+              if (-128 > sampleValueThenRoundedOutput) {
+                samples[outputIndex] = (byte)-128;
               } else {
-                if (var9 <= 127) {
-                  param1[var12] = (byte)var9;
+                if (sampleValueThenRoundedOutput <= 127) {
+                  samples[outputIndex] = (byte)sampleValueThenRoundedOutput;
                 } else {
-                  param1[var12] = (byte)127;
+                  samples[outputIndex] = (byte)127;
                 }
               }
-              var12++;
+              outputIndex++;
             }
           }
-          stackIn_16_0 = (byte[]) (param1);
-          return stackIn_16_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_19_0 = var3;
-          stackIn_19_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_20_2 = "null";
+          resampledBytesAtReturn = (byte[]) (samples);
+          return resampledBytesAtReturn;
+        } catch (java.lang.RuntimeException resamplingFailure) {
+          caughtResamplingFailure = resamplingFailure;
+          resamplingFailureForContext = caughtResamplingFailure;
+          resamplingFailureBeforeDescription = resamplingFailureForContext;
+          resamplingMessagePrefix = new StringBuilder().append("ue.E(").append(methodGuard).append(',');
+          if (samples == null) {
+            samplesDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            samplesDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) resamplingFailureBeforeDescription), ((StringBuilder) (Object) resamplingMessagePrefix).append(samplesDescription).append(')').toString());
         }
     }
 

@@ -42,44 +42,44 @@ final class IntrusiveDeque {
         return firstNode;
     }
 
-    final static void a(int param0, int param1) {
-        int var2;
-        int var3;
-        var3 = Geoblox.clientControlFlowFlag;
-        if ((null != kf.field_c) &&
-            (!EmailValidator.field_j[param1])) {
-          var2 = param1;
-          if (var2 != 4) {
-            if (3 != var2) {
-              if (var2 != 0) {
-                if (6 != var2) {
-                  if (5 == var2) {
-                    NodeHashTableIterator.field_f = MusicScore.loadNamedScore(kf.field_c, "", "sport");
-                    PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, NodeHashTableIterator.field_f, UsernameAvailabilityQuery.field_l);
+    final static void prepareThemeMusic(int methodGuard, int themeId) {
+        int selectedThemeId;
+        int clientControlSnapshot;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
+        if ((null != kf.musicScoreArchive) &&
+            (!EmailValidator.themeMusicPreparationFlags[themeId])) {
+          selectedThemeId = themeId;
+          if (selectedThemeId != 4) {
+            if (3 != selectedThemeId) {
+              if (selectedThemeId != 0) {
+                if (6 != selectedThemeId) {
+                  if (5 == selectedThemeId) {
+                    NodeHashTableIterator.sportMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "sport");
+                    PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, NodeHashTableIterator.sportMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                   } else {
-                    if (2 == var2) {
-                      SocialListEntry.field_ib = MusicScore.loadNamedScore(kf.field_c, "", "sweets");
-                      PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, SocialListEntry.field_ib, UsernameAvailabilityQuery.field_l);
+                    if (2 == selectedThemeId) {
+                      SocialListEntry.sweetsMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "sweets");
+                      PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, SocialListEntry.sweetsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                     }
                   }
                 } else {
-                  SessionGameApplet.field_o = MusicScore.loadNamedScore(kf.field_c, "", "space");
-                  PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, SessionGameApplet.field_o, UsernameAvailabilityQuery.field_l);
+                  SessionGameApplet.spaceMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "space");
+                  PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, SessionGameApplet.spaceMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                 }
               } else {
-                ej.field_d = MusicScore.loadNamedScore(kf.field_c, "", "jewellery");
-                PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ej.field_d, UsernameAvailabilityQuery.field_l);
+                ej.jewelleryMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "jewellery");
+                PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ej.jewelleryMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
               }
             } else {
-              te.field_b = MusicScore.loadNamedScore(kf.field_c, "", "germs");
-              PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, te.field_b, UsernameAvailabilityQuery.field_l);
+              te.germsMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "germs");
+              PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, te.germsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
             }
           } else {
-            DialWidget.field_M = MusicScore.loadNamedScore(kf.field_c, "", "baking");
-            PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, DialWidget.field_M, UsernameAvailabilityQuery.field_l);
+            DialWidget.bakingMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "baking");
+            PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, DialWidget.bakingMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           }
-          EmailValidator.field_j[param1] = true;
-          if (param0 <= 110) {
+          EmailValidator.themeMusicPreparationFlags[themeId] = true;
+          if (methodGuard <= 110) {
             field_f = 13;
           }
           return;

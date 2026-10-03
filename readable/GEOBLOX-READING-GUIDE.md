@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 115)
+## Current readability (pass 116)
 
-The export has 9,536 guarded names and 76,813 identifier edits. Class coverage is
+The export has 9,862 guarded names and 78,234 identifier edits. Class coverage is
 223 semantic renames, one already meaningful `Geoblox` name and 79 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 137,964 bindings, reproduce and
@@ -19,6 +19,17 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass116 adds 33 fields, 26 methods, 69 parameters and 198 local names in the
+theme audio path. `selectThemeAudio` prepares music and samples, checks the
+preparation-release gate and selects a looping track. `SoundSampleCache` names
+all ten instance lookup paths and the distinct synthesized/Vorbis archives and
+caches. `PcmSample.resampleInPlace` names the mutating sample/rate/loop conversion;
+`PcmResampler` names its coefficients, rate ratios, phase accumulation and rounded,
+clamped output. All 9,536 previous complete rules and raw/tool/native-probe pins
+remain. Music preparation flags still ignore the instrument-preparation return;
+34 resource names still feed 33 sample slots. No live audio/device coverage is
+added by these names.
 
 Pass115 adds 11 class roles, 53 fields, 23 methods and 69 parameters. Follow
 `GameplaySession.submitScore` through `ContentTransitionDialog.createAndSubmitScore`,
@@ -104,6 +115,47 @@ on the same owners because obfuscation mixed them together. `gl`, `ve`, `tk`,
 `pd` and `of` remain opaque to preserve literal reflection lookups. Historical
 sections retain their original pass counts and spellings; use the current symbol
 dictionary to resolve those spellings.
+
+## Following a theme change
+
+Start at [GameplaySession.prepareNextTheme](geoblox/src/GameplaySession.java).
+`completedThemeCount` selects an entry of `themeCycleOrder` through
+`PasswordWidgetRenderer.getThemeForProgress`; render assets keep their existing
+selector. [IntrusiveNode.selectThemeAudio](geoblox/src/IntrusiveNode.java) then
+follows these operations in order:
+
+| Operation | Definition and retained behavior |
+|---|---|
+| `prepareThemeMusic` | [IntrusiveDeque](geoblox/src/IntrusiveDeque.java): load the selected score, prepare instrument samples and mark its flag; the Boolean preparation result remains ignored |
+| `prepareThemeSoundSamples` | [PacketBuffer](geoblox/src/PacketBuffer.java): prepare matching unmarked sample slots, using Vorbis for indices 10–26 and synthesis otherwise, then resample in place; release the resampler only after all 33 flags are set |
+| `releaseMarkedThemeMusicPreparation` | [LoginMethod](geoblox/src/LoginMethod.java): once all seven music flags are marked, clear score/patch archives, encoded patch sample IDs and the temporary sample cache |
+| `selectLoopingBackgroundMusic` | [IntrusiveNodeHashTable](geoblox/src/IntrusiveNodeHashTable.java): for a new nonnull score reference, stop previous playback, flush the output, set `currentMusicTrack` and start with looping enabled |
+
+[SocketConnector.prepareInitialGameAudio](geoblox/src/SocketConnector.java)
+prepares the title, game-over, sun and result scores first, then shared/sun sound
+slots. These methods preserve their original ignored return values, guard effects
+and failure ordering. The resource-name list has 34 entries, while the preparation
+loops and sample/flag/theme arrays have 33; the final `round_clear` entry stays
+unused by those loops. A marked music flag is not proof that instrument preparation
+succeeded. This pass does not reconstruct missing assets or prove live playback.
+
+[SoundSampleCache](geoblox/src/SoundSampleCache.java) has separate synthesized and
+Vorbis acquisition paths. Named lookup resolves whether the resource is a file in
+an unnamed group or a group with an unnamed file. ID lookup retains the original
+single-group/single-file contract. Synthesized PCM is cached before the byte-budget
+deduction; Vorbis retains a resumable decoder until completion, then unlinks it
+and caches PCM under its original key. Guard checks, hash masks and partial effects
+remain in place.
+
+[PcmSample.resampleInPlace](geoblox/src/PcmSample.java) keeps the same sample object
+while replacing its bytes, rate and loop positions through
+[PcmResampler](geoblox/src/PcmResampler.java). Equal rates keep the original byte
+array. Other rates use the original 14-tap fixed-point filter, signed accumulator
+arithmetic, rounding and clipping. Position scaling keeps the six-sample delay;
+distinct endpoints that become equal still decrement `loopStart`. These names
+change no numeric operations or sample output.
+
+## Earlier reconstruction
 
 The previous reconstruction converted 78 terminal labeled exits to ordinary loop
 breaks and removes 38 unused labels/blocks across 28 files, saving 76 lines.

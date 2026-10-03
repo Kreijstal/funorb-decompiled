@@ -46,9 +46,9 @@ final class InstrumentPatch extends IntrusiveNode {
                   previousEncodedSampleId = encodedSampleId;
                   encodedSampleId--;
                   if ((encodedSampleId & 1) != 0) {
-                    resolvedSample = sampleCache.a(encodedSampleId >> 2, 1, sampleBudget);
+                    resolvedSample = sampleCache.getVorbisSampleById(encodedSampleId >> 2, 1, sampleBudget);
                   } else {
-                    resolvedSample = sampleCache.a(encodedSampleId >> 2, sampleBudget, false);
+                    resolvedSample = sampleCache.getSynthesizedSampleById(encodedSampleId >> 2, sampleBudget, false);
                   }
                   if (resolvedSample == null) {
                     allLoaded = 0;

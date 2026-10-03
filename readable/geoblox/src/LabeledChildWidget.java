@@ -57,7 +57,7 @@ final class LabeledChildWidget extends SingleChildWidget {
             ld.advanceDifficulty(false);
           }
           DequeCursor.field_c = 0;
-          UiWidget.field_t = UiWidget.field_t + 1;
+          UiWidget.completedThemeCount = UiWidget.completedThemeCount + 1;
         }
     }
 

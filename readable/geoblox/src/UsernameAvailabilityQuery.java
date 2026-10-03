@@ -12,7 +12,7 @@ final class UsernameAvailabilityQuery {
     static String orbPointsText;
     static Sprite[] achievementSprites;
     static String loginEmailText;
-    static ResourceArchive field_l;
+    static ResourceArchive instrumentPatchArchive;
     static Sprite germsForegroundSprite;
 
     final static void a(java.awt.Canvas param0, int param1) {
@@ -107,7 +107,7 @@ final class UsernameAvailabilityQuery {
     public static void a(int param0) {
         createInvalidAgeAlertText = null;
         germsForegroundSprite = null;
-        field_l = null;
+        instrumentPatchArchive = null;
         field_k = null;
         int var1 = -39 % ((48 - param0) / 43);
         loginEmailText = null;
@@ -128,7 +128,7 @@ final class UsernameAvailabilityQuery {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            field_l = (ResourceArchive) null;
+            instrumentPatchArchive = (ResourceArchive) null;
           }
           stackIn_3_0 = param1.a(param0, -17978);
           return stackIn_3_0;

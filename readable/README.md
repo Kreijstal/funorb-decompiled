@@ -1,11 +1,47 @@
 # Readable GeoBlox
 
-The current export has 9,536 guarded naming rules: 223 classes, 1,317 fields,
-927 methods, 2,776 parameters and 4,293 local declarations. Both 303-file corpora
+The current export has 9,862 guarded naming rules: 223 classes, 1,350 fields,
+953 methods, 2,845 parameters and 4,491 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current names (pass 115)
+## Current names (pass 116)
+
+This pass adds 326 rules: 33 fields, 26 methods, 69 parameters and 198 local
+declarations, producing 1,421 additional bound edits and 78,234 edits in total.
+All 9,536 previous complete naming objects, raw source, decompiler/naming-tool
+pins and seven native-probe source/trace pins remain. Class coverage stays at
+223 renames, one meaningful original `Geoblox` name and 79 opaque filenames.
+
+The session now calls `selectThemeAudio`, `getThemeForProgress` and
+`recycleAllScorePopups`. Initial audio preparation names score/patch archives,
+the sample cache, MIDI stream/output, resampler and title/game-over/theme tracks.
+`prepareThemeMusic`, `prepareThemeSoundSamples` and
+`releaseMarkedThemeMusicPreparation` expose the preparation lifecycle. Music
+flags are still set even when `prepareScoreInstruments` returns false, and the
+release gate still tests flags without checking those returns. The 34 literal
+sound names and 33 sample/flag/theme slots retain their original limits, including
+the unused trailing `round_clear` name. Playback keeps looping theme selection
+separate from the existing nonlooping background selector.
+
+All ten `SoundSampleCache` instance lookup paths now name their archive, name/ID,
+cache and budget roles. Synthesized samples cache their rendered PCM; Vorbis
+samples retain an incomplete decoder until budgeted decoding completes. Cache
+hits, guard checks, exact key masks, partial budget effects and decoder unlinking
+stay in their original order. `PcmSample.resampleInPlace` and the three
+`PcmResampler` operations name the 14-tap fixed-point filter, reduced rate ratios,
+phase accumulation, rounding/clamping and six-sample loop-position offset.
+The equal-rate path retains the input byte-array reference; distinct loop
+endpoints that collapse retain the original decrement of `loopStart`.
+
+Regeneration compiles both 303-file corpora and compares 137,964 bindings and
+388 override relationships. Dictionary reversal, publication tests and all
+seven existing native probes pass. These probes retain their previous scopes;
+this source naming pass adds no live MIDI/audio/assets/UI/network/device or
+whole-game execution coverage. Raw control flow stays unchanged, with 207 plain
+block labels and six large labeled spans still needing reconstruction.
+
+## Earlier names (pass 115)
 
 This pass adds 11 classes, 53 fields, 23 methods and 69 parameters: 156 rules.
 There are 76,813 identifier edits, including 1,101 additional bound occurrences
@@ -178,7 +214,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a`;
 the current readable tree is
-`67281399d3325d9da87f3d11d5f0aa58faa618979d717dca98ff4e8600957609`.
+`3da88a5dde1fb8565b49a2c8e5bac90bdbc834733fb29f403a400a0ab3ae65db`.
 The pinned decompiler-source SHA-256 is
 `f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5`.
 All seven existing native/raw/readable probes pass with their pinned traces.

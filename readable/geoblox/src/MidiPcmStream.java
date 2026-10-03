@@ -4,14 +4,14 @@
 final class MidiPcmStream extends PcmStream {
     private MidiNote[][] field_D;
     private int[] field_p;
-    private MidiTrackReader field_C;
+    private MidiTrackReader midiReader;
     private int[] field_z;
     int[] field_u;
     static boolean[] heldInternalKeys;
     static Sprite jewelsForegroundSprite;
     private int field_T;
     private int[] field_r;
-    private IntrusiveNodeHashTable field_q;
+    private IntrusiveNodeHashTable instrumentPatches;
     private MidiNote[][] field_j;
     private int[] field_v;
     int[] field_n;
@@ -31,7 +31,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_w;
     private int field_k;
     private MidiNoteMixer field_I;
-    private boolean field_B;
+    private boolean loopScore;
     private int field_t;
     private long field_x;
     private long field_A;
@@ -49,8 +49,8 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (this.field_C.isLoaded()) {
-            var4_int = this.field_C.tickDivision * this.field_T / AudioOutput.sampleRateHz;
+          if (this.midiReader.isLoaded()) {
+            var4_int = this.midiReader.tickDivision * this.field_T / AudioOutput.sampleRateHz;
             while (true) {
               var5 = (long)param2 * (long)var4_int + this.field_x;
               if (this.field_A - var5 >= 0L) {
@@ -63,7 +63,7 @@ final class MidiPcmStream extends PcmStream {
               param2 = param2 - var7;
               param1 = param1 + var7;
               this.a((byte) 65);
-              if (!this.field_C.isLoaded()) {
+              if (!this.midiReader.isLoaded()) {
                 break;
               }
               continue;
@@ -91,7 +91,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void d(int param0, int param1, int param2) {
         if (param1 != -2832) {
-            this.d(44);
+            this.stopMusicPlayback(44);
         }
     }
 
@@ -396,77 +396,77 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(SoundSampleCache param0, int param1, int param2, MusicScore param3, ResourceArchive param4) {
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        Object var7 = null;
-        InstrumentNoteMask var8 = null;
-        int var9 = 0;
-        InstrumentPatch var10 = null;
-        int var11 = 0;
-        var11 = Geoblox.clientControlFlowFlag;
+    final synchronized boolean prepareScoreInstruments(SoundSampleCache sampleCache, int sampleByteBudget, int methodGuard, MusicScore score, ResourceArchive patchArchive) {
+        int allInstrumentsPreparedAtReturn = 0;
+        RuntimeException preparationFailureBeforeDescription = null;
+        StringBuilder preparationMessagePrefix = null;
+        String sampleCacheDescription = null;
+        StringBuilder messageBeforeScore = null;
+        String scoreDescription = null;
+        StringBuilder messageBeforePatchArchive = null;
+        String patchArchiveDescription = null;
+        RuntimeException caughtInstrumentPreparationFailure = null;
+        int allInstrumentsPreparedFlag = 0;
+        RuntimeException instrumentPreparationFailureForContext = null;
+        Object remainingByteBudget = null;
+        InstrumentNoteMask instrumentNoteMask = null;
+        int instrumentId = 0;
+        InstrumentPatch instrumentPatch = null;
+        int clientControlSnapshot = 0;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          param3.collectInstrumentNotes();
-          var6_int = 1;
-          var7 = null;
-          if (~param1 < param2) {
-            var7 = new int[]{param1};
+          score.collectInstrumentNotes();
+          allInstrumentsPreparedFlag = 1;
+          remainingByteBudget = null;
+          if (~sampleByteBudget < methodGuard) {
+            remainingByteBudget = new int[]{sampleByteBudget};
           }
-          var8 = (InstrumentNoteMask) ((Object) param3.instrumentNoteMasks.a((byte) 125));
-          while (var8 != null) {
-            var9 = (int)var8.field_a;
-            var10 = (InstrumentPatch) ((Object) this.field_q.a((long)var9, (byte) -91));
-            if (var10 == null) {
-              var10 = InstrumentPatch.loadInstrumentPatch(var9, (byte) 121, param4);
-              if (var10 != null) {
-                this.field_q.a((byte) 102, var10, (long)var9);
+          instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.a((byte) 125));
+          while (instrumentNoteMask != null) {
+            instrumentId = (int)instrumentNoteMask.field_a;
+            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.a((long)instrumentId, (byte) -91));
+            if (instrumentPatch == null) {
+              instrumentPatch = InstrumentPatch.loadInstrumentPatch(instrumentId, (byte) 121, patchArchive);
+              if (instrumentPatch != null) {
+                this.instrumentPatches.a((byte) 102, instrumentPatch, (long)instrumentId);
               } else {
-                var6_int = 0;
+                allInstrumentsPreparedFlag = 0;
               }
             }
-            if ((var10 != null) &&
-                (!var10.loadSelectedSamples((int[]) (var7), var8.notesUsed, param2 + 36, param0))) {
-              var6_int = 0;
+            if ((instrumentPatch != null) &&
+                (!instrumentPatch.loadSelectedSamples((int[]) (remainingByteBudget), instrumentNoteMask.notesUsed, methodGuard + 36, sampleCache))) {
+              allInstrumentsPreparedFlag = 0;
             }
-            var8 = (InstrumentNoteMask) ((Object) param3.instrumentNoteMasks.b(param2 - 100));
+            instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.b(methodGuard - 100));
           }
-          if (var6_int != 0) {
-            param3.clearInstrumentNotes();
+          if (allInstrumentsPreparedFlag != 0) {
+            score.clearInstrumentNotes();
           }
-          stackIn_17_0 = var6_int;
-          return stackIn_17_0 != 0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_20_0 = var6;
-          stackIn_20_1 = new StringBuilder().append("kj.T(");
-          if (param0 == null) {
-            stackIn_21_2 = "null";
+          allInstrumentsPreparedAtReturn = allInstrumentsPreparedFlag;
+          return allInstrumentsPreparedAtReturn != 0;
+        } catch (java.lang.RuntimeException instrumentPreparationFailure) {
+          caughtInstrumentPreparationFailure = instrumentPreparationFailure;
+          instrumentPreparationFailureForContext = caughtInstrumentPreparationFailure;
+          preparationFailureBeforeDescription = instrumentPreparationFailureForContext;
+          preparationMessagePrefix = new StringBuilder().append("kj.T(");
+          if (sampleCache == null) {
+            sampleCacheDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            sampleCacheDescription = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_24_2 = "null";
+          messageBeforeScore = ((StringBuilder) (Object) preparationMessagePrefix).append(sampleCacheDescription).append(',').append(sampleByteBudget).append(',').append(methodGuard).append(',');
+          if (score == null) {
+            scoreDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            scoreDescription = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param4 == null) {
-            stackIn_27_2 = "null";
+          messageBeforePatchArchive = ((StringBuilder) (Object) messageBeforeScore).append(scoreDescription).append(',');
+          if (patchArchive == null) {
+            patchArchiveDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            patchArchiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) preparationFailureBeforeDescription), ((StringBuilder) (Object) messageBeforePatchArchive).append(patchArchiveDescription).append(')').toString());
         }
     }
 
@@ -804,7 +804,7 @@ final class MidiPcmStream extends PcmStream {
         var5 = this.field_A;
         if ((this.field_l != null) &&
             (this.field_U == var4)) {
-          this.a(121, this.field_l, this.field_B, this.field_P);
+          this.a(121, this.field_l, this.loopScore, this.field_P);
           this.a((byte) 73);
           return;
         }
@@ -817,56 +817,56 @@ final class MidiPcmStream extends PcmStream {
                 (this.field_U < var4)) {
               this.field_k = this.field_U;
               this.field_t = -1;
-              this.field_A = this.field_C.getTickTime(this.field_k);
+              this.field_A = this.midiReader.getTickTime(this.field_k);
             }
             return;
           }
           while (true) {
-            if (this.field_C.trackTicks[var2] == var4) {
-              this.field_C.seekTrack(var2);
-              var7 = this.field_C.readTrackEvent(var2);
+            if (this.midiReader.trackTicks[var2] == var4) {
+              this.midiReader.seekTrack(var2);
+              var7 = this.midiReader.readTrackEvent(var2);
               if (1 != var7) {
                 if ((128 & var7) != 0) {
                   this.c(var7, (byte) 38);
                 }
-                this.field_C.readTrackDelta(var2);
-                this.field_C.saveTrackPosition(var2);
+                this.midiReader.readTrackDelta(var2);
+                this.midiReader.saveTrackPosition(var2);
                 continue;
               }
-              this.field_C.markCurrentTrackEnded();
-              this.field_C.saveTrackPosition(var2);
-              if (this.field_C.areAllTracksEnded()) {
+              this.midiReader.markCurrentTrackEnded();
+              this.midiReader.saveTrackPosition(var2);
+              if (this.midiReader.areAllTracksEnded()) {
                 if (this.field_l != null) {
-                  this.a(this.field_B, this.field_l, -1706);
+                  this.startMusicScore(this.loopScore, this.field_l, -1706);
                   this.a((byte) -32);
                   return;
                 }
-                if ((this.field_B) &&
+                if ((this.loopScore) &&
                     (var4 != 0)) {
-                  this.field_C.restartTracks(var5);
+                  this.midiReader.restartTracks(var5);
                 } else {
                   this.a(true, 2097151);
-                  this.field_C.unload();
+                  this.midiReader.unload();
                   return;
                 }
               }
             }
-            var2 = this.field_C.selectEarliestTrack();
-            var4 = this.field_C.trackTicks[var2];
-            var5 = this.field_C.getTickTime(var4);
+            var2 = this.midiReader.selectEarliestTrack();
+            var4 = this.midiReader.trackTicks[var2];
+            var5 = this.midiReader.getTickTime(var4);
             continue L1;
           }
         }
     }
 
-    final synchronized void a(boolean param0, MusicScore param1, int param2) {
+    final synchronized void startMusicScore(boolean loopPlayback, MusicScore score, int methodGuard) {
         try {
-            if (param2 != -1706) {
+            if (methodGuard != -1706) {
                 this.field_t = -24;
             }
-            this.a(param2 + 1832, param1, param0, true);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "kj.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            this.a(methodGuard + 1832, score, loopPlayback, true);
+        } catch (RuntimeException musicStartFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) musicStartFailure), "kj.PA(" + loopPlayback + ',' + (score != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -924,15 +924,15 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(byte param0) {
-        int var3 = Geoblox.clientControlFlowFlag;
-        if (param0 <= 65) {
+    final synchronized void clearInstrumentSampleIds(byte methodGuard) {
+        int clientControlSnapshot = Geoblox.clientControlFlowFlag;
+        if (methodGuard <= 65) {
             this.c(-76, (byte) -34);
         }
-        InstrumentPatch var4 = (InstrumentPatch) ((Object) this.field_q.a((byte) 125));
-        while (var4 != null) {
-            var4.clearEncodedSampleIds((byte) -121);
-            var4 = (InstrumentPatch) ((Object) this.field_q.b(-52));
+        InstrumentPatch instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.a((byte) 125));
+        while (instrumentPatch != null) {
+            instrumentPatch.clearEncodedSampleIds((byte) -121);
+            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.b(-52));
         }
     }
 
@@ -997,8 +997,8 @@ final class MidiPcmStream extends PcmStream {
         int var2;
         long var3;
         int var5;
-        if (this.field_C.isLoaded()) {
-          var2 = this.field_T * this.field_C.tickDivision / AudioOutput.sampleRateHz;
+        if (this.midiReader.isLoaded()) {
+          var2 = this.field_T * this.midiReader.tickDivision / AudioOutput.sampleRateHz;
           while (true) {
             var3 = this.field_x + (long)param0 * (long)var2;
             if (-var3 + this.field_A >= 0L) {
@@ -1010,7 +1010,7 @@ final class MidiPcmStream extends PcmStream {
             param0 = param0 - var5;
             this.field_I.b(var5);
             this.a((byte) -42);
-            if (this.field_C.isLoaded()) {
+            if (this.midiReader.isLoaded()) {
               continue;
             }
             break;
@@ -1056,7 +1056,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void a(byte param0, boolean param1) {
-        this.field_C.unload();
+        this.midiReader.unload();
         if (param0 < 78) {
             this.field_y = (int[]) null;
         }
@@ -1094,7 +1094,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (MidiNote) ((Object) this.field_I.field_l.previousForIteration(~param0));
           }
         }
-        var9 = (InstrumentPatch) ((Object) this.field_q.a((long)this.field_S[param1], (byte) -105));
+        var9 = (InstrumentPatch) ((Object) this.instrumentPatches.a((long)this.field_S[param1], (byte) -105));
         var10 = var9;
         if (var10 == null) {
           return;
@@ -1164,9 +1164,9 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void stopMusicPlayback(int methodGuard) {
         this.a((byte) 106, true);
-        if (param0 != -9268) {
+        if (methodGuard != -9268) {
             this.field_F = (int[]) null;
         }
     }
@@ -1190,21 +1190,21 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         try {
             this.a((byte) 98, param3);
-            this.field_C.load(param1.midiBytes);
+            this.midiReader.load(param1.midiBytes);
             this.field_x = 0L;
-            this.field_B = param2 ? true : false;
-            var5_int = this.field_C.getTrackCount();
+            this.loopScore = param2 ? true : false;
+            var5_int = this.midiReader.getTrackCount();
             if (param0 <= 92) {
                 this.a(60, (byte) -45);
             }
             for (var6 = 0; var6 < var5_int; var6++) {
-                this.field_C.seekTrack(var6);
-                this.field_C.readTrackDelta(var6);
-                this.field_C.saveTrackPosition(var6);
+                this.midiReader.seekTrack(var6);
+                this.midiReader.readTrackDelta(var6);
+                this.midiReader.saveTrackPosition(var6);
             }
-            this.field_t = this.field_C.selectEarliestTrack();
-            this.field_k = this.field_C.trackTicks[this.field_t];
-            this.field_A = this.field_C.getTickTime(this.field_k);
+            this.field_t = this.midiReader.selectEarliestTrack();
+            this.field_k = this.midiReader.trackTicks[this.field_t];
+            this.field_A = this.midiReader.getTickTime(this.field_k);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "kj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -1238,9 +1238,9 @@ final class MidiPcmStream extends PcmStream {
         this.field_Q = new int[16];
         this.field_F = new int[16];
         this.field_w = new int[16];
-        this.field_C = new MidiTrackReader();
+        this.midiReader = new MidiTrackReader();
         this.field_I = new MidiNoteMixer((MidiPcmStream) (this));
-        this.field_q = new IntrusiveNodeHashTable(128);
+        this.instrumentPatches = new IntrusiveNodeHashTable(128);
         this.a((byte) 74, -1, 256);
         this.a(true, 2097151);
     }

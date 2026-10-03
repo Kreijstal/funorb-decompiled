@@ -201,7 +201,7 @@ final class AsyncResourceDownloader implements Runnable {
 
     final static void a(int param0, int param1) {
         SpriteCheckboxRenderer.field_c = param1;
-        PasswordWidgetRenderer.field_y.b((int)((float)(64 * param1 / 80) * 1.399999976158142f), (byte) 22);
+        PasswordWidgetRenderer.gameMusicStream.b((int)((float)(64 * param1 / 80) * 1.399999976158142f), (byte) 22);
         if (param0 != -15346) {
             AsyncResourceDownloader.a(-15, 68);
         }

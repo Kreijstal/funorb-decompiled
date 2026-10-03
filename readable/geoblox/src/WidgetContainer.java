@@ -8,7 +8,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     static Sprite menuBackgroundSprite;
     IntrusiveDeque children;
     static String[] mustLogin2Texts;
-    static int[] field_B;
+    static int[] themeCycleOrder;
 
     final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
         DequeCursor var8 = null;
@@ -137,7 +137,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var8 = new DequeCursor(this.children);
           var4 = (UiWidget) ((Object) var8.beginReverse(1));
           if (param0 != 7305) {
-            field_B = (int[]) null;
+            themeCycleOrder = (int[]) null;
           }
           while (var4 != null) {
             if (var4.hasKeyboardFocus((byte) 54)) {
@@ -227,7 +227,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
         mustLogin2Texts = null;
         toServerListText = null;
-        field_B = null;
+        themeCycleOrder = null;
         menuBackgroundSprite = null;
     }
 
@@ -315,7 +315,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         int var4 = Geoblox.clientControlFlowFlag;
         DequeCursor var2 = new DequeCursor(this.children);
         if (methodGuard > -122) {
-            field_B = (int[]) null;
+            themeCycleOrder = (int[]) null;
         }
         UiWidget var3 = (UiWidget) ((Object) var2.beginForward((byte) 88));
         while (var3 != null) {
@@ -596,6 +596,6 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     static {
         toServerListText = "To server list";
         mustLogin2Texts = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
-        field_B = new int[]{1, 2, 0, 3, 6, 5, 4};
+        themeCycleOrder = new int[]{1, 2, 0, 3, 6, 5, 4};
     }
 }

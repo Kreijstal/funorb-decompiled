@@ -11,7 +11,7 @@ class UiWidget extends IntrusiveNode {
     int widgetY;
     boolean pointerInside;
     String widgetText;
-    static int field_t;
+    static int completedThemeCount;
     WidgetRenderer renderer;
     int widgetX;
     int pressedPointerButton;
