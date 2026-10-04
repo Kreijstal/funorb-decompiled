@@ -6,10 +6,10 @@
     "commit": "1ede093bd14022751b56a4736ac6fb7ae72703c5",
     "subdirectory": "games/geoblox"
   },
-  "rulesSha256": "44abf9ca33381984f6767728d00e3e3bfb019065a6b7c3c4b4a0199b3c952dcf",
-  "generatorSha256": "3cf10d5250aac5eb595cae549e420b050ae987495d7ef6c3a066462f1ff61436",
+  "rulesSha256": "1001cae04e48143ca09d285fb77ff3d403c530423348b307aa6381d60e30aab1",
+  "generatorSha256": "b8e756dd9e7b53a5277f5681a02770c9d64aaa88ec4ac76f9320e18676ec04d6",
   "inputTreeSha256": "ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f",
-  "outputTreeSha256": "345d3f5442dd50ec1da9ae805763bd95dcd66880b4f30803c24e04fdee6eae28",
+  "outputTreeSha256": "612b40c998a143f4c6e7b3382bf56c27d01167e22225f85bf9978fdf524e26db",
   "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
   "classpath": [
     {
@@ -25,6 +25,8 @@
     "overrideRelationshipsPreserved": true,
     "classNameLiteralBindingsCompared": 11,
     "classNameLiteralEdits": 11,
+    "labelBindingsCompared": 854,
+    "labelEdits": 173,
     "runtimeEquivalenceVerified": false
   }
 }

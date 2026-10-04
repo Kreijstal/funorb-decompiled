@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9e4b4a183d7c7055e6bd670eae2d51c25ac11f71/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/94533af87b735bd52d26b97ed0c9679d093be829/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 126)
+## Current readability (pass 127)
 
-The export has 11,347 guarded names and 87,411 identifier edits, plus 11 recorded
-class-name literal edits. All 303 top-level names are meaningful: 302 semantic
+The export has 11,399 guarded names and 87,411 Java identifier edits, plus 11
+class-name literal edits and 173 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
@@ -24,7 +24,36 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 126 adds 153 guarded names: fourteen classes, 32 fields, 28 methods,
+Pass 127 adds 52 guarded label rules, covering every label in the six large
+bodies: menu render/update, gameplay render/update, board reconciliation and
+sorted RGB triangle rendering. Fifty describe plain-block exit scopes; two name
+component-traversal loops. The export has 11,399 rules, the same 87,411 Java
+identifier edits and eleven reflected class-name edits, plus 173 separate label
+edits. All 11,347 previous complete rules survive. Class coverage stays 302
+renamed plus `Geoblox`; the six large bodies retain their structure and length.
+There are still 213 opaque labels elsewhere and unmapped members.
+
+The frozen naming dependency now supports `B:owner.method(descriptor)#ordinal`
+identities and the explicit `labels` policy `lexical-targets`. It audits 265
+label declarations and 854 declaration/break/continue records separately from
+136,612 Java bindings. Each transfer retains its original kind and exact lexical
+AST target, even when a spelling is reused in disjoint scopes. Names describe
+existing regions; they do not infer that the client control flag is zero, replace
+numeric state or relax exception-region reconstruction. Dictionary reversal
+recovers all 303 raw sources exactly.
+
+Fifteen generic naming tests plus four subprocess tests pass, including runtime
+loop/finally/monitor traces, guard/count refusals and exact reversal. The default
+five-path audit remains byte-identical to the previous frozen helper on all303
+sources; extra label and class-literal records are opt-in. The 27 publication
+tests and all eight fixed native probes pass within their scopes. Compiling the
+previous pass126 and current exports with the same JDK and release8 options gives
+304 byte-identical class files. Clean committed checkouts reproduce the export.
+Raw source, decompiler/bytecode and all native source/trace pins remain; explicit
+source migration pins the new naming dependency, workflow and label policy.
+Full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.
+
+Pass 126 added 153 guarded names: fourteen classes, 32 fields, 28 methods,
 52 parameters and 27 locals. All 11,194 previous complete rules survive.
 The export has 11,347 rules and 87,411 identifier edits plus the same eleven
 separately recorded reflected class-name edits. All 303 top-level classes have
@@ -4687,3 +4716,46 @@ These names improve navigation without reconstructing the six large labeled
 bodies. The explicit workflow migration raises only historical manifest capture
 to 32 MiB, with a Git-history regression above 8 MiB; it does not alter Java bodies,
 bytecode, compiler limits or native fixture scope.
+
+## Named exits in the six large bodies (pass 127)
+
+Labels now describe the original scope that a transfer exits or repeats. They are
+navigation aids, not new states or extracted methods. For example, board
+reconciliation now reads `componentQueueTraversal`, `componentNeighborTraversal`
+and `enqueueUnseenNeighbor`; its continues advance the exact existing loops,
+while a duplicate neighbor exits only the enqueue scope. `componentSearchAndDetach`
+and `routingDestinationSelection` distinguish graph search from queue routing.
+
+| Body | Examples of named scopes |
+| --- | --- |
+| `GameScreen.renderScreen` | `panelHeightSelection`, `fullscreenCountdownText`, `tutorialSlideRendering` |
+| `GameScreen.updateScreen` | `keyboardDrainAndTutorialSelection`, `pointerPressDebounce`, `fullscreenPointerHandling` |
+| `GameplaySession.renderSession` | `boardRasterPreparation`, `debugOverviewPreparation`, `gameOverTitleRendering`, `settledResultRendering` |
+| `GameplaySession.updateSession` | `sessionProgressionAndEnding`, `rotationKeySelection`, `boardClearBonusHandling`, `tutorialAutoAdvance` |
+| `BoardReconciliationSupport.reconcileBoardEntities` | `componentQueueTraversal`, `enqueueUnseenNeighbor`, `attachedEntityRouting` |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | `flatTopEdgeSelection`, `upperSegmentScan`, `upperSegmentTopClip`, `lowerEdgeOriginSelection` |
+
+All 52 labels in those bodies are named: 50 blocks and two loops. They generate
+173 declaration/reference edits. The audit proves all 854 label records in the
+whole corpus, including untouched labels: declaration ordinal, exact lexical
+target, break/continue kind and shifted token position. It stops target lookup at
+method, class and lambda boundaries. Unlabeled transfers, comments, strings,
+statements and exception/monitor boundaries stay intact. `Geoblox.clientControlFlowFlag`
+remains a real mutable value; guarded fallthrough and unusual nonzero paths stay.
+
+These source bodies still have their original length and structure. There are
+157 opaque plain-block labels and 56 opaque loop labels elsewhere, plus unmapped
+members. The six large labeled bodies have not been structurally eliminated.
+Under the same JDK/release8 compiler options and frozen stub jar, all 304 compiled
+class files are byte-identical to the pass126 export at
+`9bf9d95e0b4cca8669931e034222ede771be0f19`. The compiled-class tree SHA-256 is
+`f7c9d1fef021ebb890a2740801e9fb6bafe1de27ffb0d04534a928d7e41fe205`;
+the existing provenance records the hash algorithm and exact compiler options.
+This comparison concerns the two readable Java exports, not assets, live servers,
+platform devices or the browser/phone performance gates.
+
+`B:owner.method(descriptor)#ordinal` rules and the opt-in `lexical-targets` policy
+live in Deko's single current manifest. Original spellings remain in the reverse
+dictionary, and exact restoration recovers all 303 pinned raw sources. The default
+five-path audit is byte-identical to the previous frozen naming helper; independent
+`--labels` and `--class-name-literals` flags add their own records.

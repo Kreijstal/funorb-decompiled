@@ -106,13 +106,13 @@ final class BoardReconciliationSupport {
           MessageDialogSupport.entitiesDetachedThisTick = false;
           activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (true) {
-            L1: {
-              L2: {
-                L3: {
+            movingAndConnectivityPhase: {
+              connectivityRebuild: {
+                attachedQueueSelection: {
                   if (activeEntity != null) {
                     entityQueueThenAttachedQueue = activeEntity.entityQueue;
                     if (clientControlSnapshot != 0) {
-                      break L3;
+                      break attachedQueueSelection;
                     }
                     if (entityQueueThenAttachedQueue != BoardEntityState.attachedEntities) {
                       if (!(!activeEntity.detachedFromBoard)) {
@@ -131,30 +131,30 @@ final class BoardReconciliationSupport {
                     continue;
                   }
                   if (!RankedListQuery.connectivityDirty) {
-                    break L2;
+                    break connectivityRebuild;
                   }
                   entityQueueThenAttachedQueue = BoardEntityState.attachedEntities;
                 }
                 activeEntity = (GameplayEntity) ((Object) ((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
                 while (true) {
-                  L8: {
+                  attachedEntityVisitAndFlagReset: {
                     if (activeEntity != null) {
                       visitedByEntityIdValue = PacketBuffer.connectivityVisitedByEntityId[activeEntity.entityId];
                       visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
                       alreadyVisited = visitedByEntityIdValue;
                       if (clientControlSnapshot != 0) {
-                        break L8;
+                        break attachedEntityVisitAndFlagReset;
                       }
-                      L10: {
+                      componentSearchAndDetach: {
                         if ((alreadyVisited) &&
                             (clientControlSnapshot == 0)) {
-                          break L10;
+                          break componentSearchAndDetach;
                         }
                         pendingConnectivityEntities = new SecondaryDeque();
                         visitedNonAvatarEntities = new SecondaryDeque();
                         pendingConnectivityEntities.addFirst(activeEntity, false);
                         componentCanDetach = 1;
-                        L12: while (true) {
+                        componentQueueTraversal: while (true) {
                           poppedEntityOrSearchStart = (GameplayEntity) ((Object) pendingConnectivityEntities.removeFirst(true));
                           while (true) {
                             currentConnectivityEntity = poppedEntityOrSearchStart;
@@ -170,19 +170,19 @@ final class BoardReconciliationSupport {
                               } else {
                                 visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
                                 componentNeighborIndex = 0;
-                                L17: while (true) {
+                                componentNeighborTraversal: while (true) {
                                   if (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
                                     neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
                                     poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
                                     componentSearchThenVariantResetEntity = poppedEntityOrSearchStart;
                                     while (true) {
-                                      L20: {
+                                      enqueueUnseenNeighbor: {
                                         if (componentSearchThenVariantResetEntity != null) {
                                           comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
                                           neighborThenUnlinkArgument = neighborThenCountResetEntity;
                                           if ((comparedThenUnlinkTarget == neighborThenUnlinkArgument) &&
                                               (clientControlSnapshot == 0)) {
-                                            break L20;
+                                            break enqueueUnseenNeighbor;
                                           }
                                           componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
                                           continue;
@@ -192,7 +192,7 @@ final class BoardReconciliationSupport {
                                           comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
                                           neighborThenUnlinkArgument = neighborThenCountResetEntity;
                                           if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
-                                            break L20;
+                                            break enqueueUnseenNeighbor;
                                           }
                                           componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
                                           continue;
@@ -200,21 +200,21 @@ final class BoardReconciliationSupport {
                                         pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
                                       }
                                       componentNeighborIndex++;
-                                      continue L17;
+                                      continue componentNeighborTraversal;
                                     }
                                   }
-                                  continue L12;
+                                  continue componentQueueTraversal;
                                 }
                               }
                             }
                             avatarContactThenDetachDecision = componentCanDetach;
                             if (avatarContactThenDetachDecision == 0) {
-                              break L10;
+                              break componentSearchAndDetach;
                             }
                             connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
                             while (true) {
                               if (connectivityAliasThenDetachingEntity == null) {
-                                break L10;
+                                break componentSearchAndDetach;
                               }
                               connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                               connectivityAliasThenDetachingEntity.touchesAvatar = false;
@@ -250,12 +250,12 @@ final class BoardReconciliationSupport {
                   visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
                   while (true) {
                     if (1000 <= visitedResetIndexThenKindFourCount) {
-                      break L2;
+                      break connectivityRebuild;
                     }
                     PacketBuffer.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
                     visitedResetIndexThenKindFourCount++;
                     if (clientControlSnapshot != 0) {
-                      break L1;
+                      break movingAndConnectivityPhase;
                     }
                     continue;
                   }
@@ -268,8 +268,8 @@ final class BoardReconciliationSupport {
               if ((!(null == routedAttachedEntity.entityQueue) ||
                   (!(!SessionSocketSupport.avatarShockPending) &&
                     !(!routedAttachedEntity.touchesAvatar)))) {
-                L39: {
-                  L40: {
+                attachedEntityRouting: {
+                  routingDestinationSelection: {
                     RankedListQuery.connectivityDirty = true;
                     routedAttachedEntity.unlinkNode(false);
                     routedAttachedEntity.unlinkSecondaryNode((byte) 100);
@@ -289,7 +289,7 @@ final class BoardReconciliationSupport {
                         routedAttachedEntity.relatedEntities[relatedEntityIndex].removeRelatedEntity(routedAttachedEntity, 0);
                         relatedEntityIndex++;
                         if (clientControlSnapshot != 0) {
-                          break L39;
+                          break attachedEntityRouting;
                         }
                         continue;
                       }
@@ -300,12 +300,12 @@ final class BoardReconciliationSupport {
                       componentSearchThenVariantResetEntity.sameVariantEntityCount = 0;
                       ArchiveNetworkClient.movingEntities.addLast(-36, routedAttachedEntity);
                       if (clientControlSnapshot == 0) {
-                        break L40;
+                        break routingDestinationSelection;
                       }
                     }
                     if ((routedAttachedEntity.entityQueue != DelegatingCanvas.transientEntities) &&
                         (!SessionSocketSupport.avatarShockPending)) {
-                      break L40;
+                      break routingDestinationSelection;
                     }
                     transientNeighborIndex = 0;
                     while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
@@ -313,7 +313,7 @@ final class BoardReconciliationSupport {
                       routedAttachedEntity.relatedEntities[transientNeighborIndex].drawEntityIdOnBoardMask(2);
                       transientNeighborIndex++;
                       if (clientControlSnapshot != 0) {
-                        break L39;
+                        break attachedEntityRouting;
                       }
                       continue;
                     }
@@ -341,7 +341,7 @@ final class BoardReconciliationSupport {
                     if (4 != routedAttachedEntity.entitySpriteKindId) {
                       routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
                       if (clientControlSnapshot == 0) {
-                        break L40;
+                        break routingDestinationSelection;
                       }
                     }
                     routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
@@ -361,10 +361,10 @@ final class BoardReconciliationSupport {
             methodGuardResidue = -23 / ((methodGuard - 69) / 46);
             categoryResetThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
             while (true) {
-              L52: {
+              transientRoutingAndShockFeedback: {
                 if (categoryResetThenTransientEntity != null) {
                   if (clientControlSnapshot != 0) {
-                    break L52;
+                    break transientRoutingAndShockFeedback;
                   }
                   if (SecondaryNodeDeque.availableEntities == categoryResetThenTransientEntity.entityQueue) {
                     categoryResetThenTransientEntity.unlinkNode(false);

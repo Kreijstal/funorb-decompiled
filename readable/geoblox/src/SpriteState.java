@@ -491,10 +491,10 @@ abstract class SpriteState extends DualLinkNode {
             if (guard != -1275583984) {
               return;
             }
-            L3: {
+            triangleEdgeInitialization: {
               topToBottomRows = -topY + bottomY;
               if (topY == middleY) {
-                L5: {
+                flatTopEdgeSelection: {
                   if (~bottomY == ~topY) {
                     leftBlueQ16 = topBlue;
                     leftXQ16 = topX << 16;
@@ -513,7 +513,7 @@ abstract class SpriteState extends DualLinkNode {
                     rightXQ16 = middleX << 16;
                     leftGreenQ16 = topGreen;
                     if (controlFlagSnapshot == 0) {
-                      break L5;
+                      break flatTopEdgeSelection;
                     }
                   }
                   edgeSegmentRowsThenRowBase = -middleY + bottomY;
@@ -535,7 +535,7 @@ abstract class SpriteState extends DualLinkNode {
                     rightRedQ16 = topRed << 16;
                     rightGreenQ16 = topGreen << 16;
                     if (controlFlagSnapshot == 0) {
-                      break L5;
+                      break flatTopEdgeSelection;
                     }
                   }
                   rightGreenStepQ16 = (bottomGreen - middleGreen << 16) / edgeSegmentRowsThenRowBase;
@@ -557,7 +557,7 @@ abstract class SpriteState extends DualLinkNode {
                 }
                 middleVertexOnRight = 0;
                 if (0 <= topY) {
-                  break L3;
+                  break triangleEdgeInitialization;
                 }
                 topY = Math.min(-topY, middleY - topY);
                 rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
@@ -570,10 +570,10 @@ abstract class SpriteState extends DualLinkNode {
                 rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
                 topY = 0;
                 if (controlFlagSnapshot == 0) {
-                  break L3;
+                  break triangleEdgeInitialization;
                 }
               }
-              L8: {
+              upperEdgeOrientation: {
                 rightXQ16 = topX << 16;
                 leftXQ16 = topX << 16;
                 rightBlueQ16 = topBlue << 16;
@@ -597,7 +597,7 @@ abstract class SpriteState extends DualLinkNode {
                   rightBlueStepQ16 = (-topBlue + middleBlue << 16) / edgeSegmentRowsThenRowBase;
                   rightRedStepQ16 = (-topRed + middleRed << 16) / edgeSegmentRowsThenRowBase;
                   if (controlFlagSnapshot == 0) {
-                    break L8;
+                    break upperEdgeOrientation;
                   }
                 }
                 rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
@@ -608,9 +608,9 @@ abstract class SpriteState extends DualLinkNode {
                 leftGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
                 middleVertexOnRight = 0;
               }
-              L10: {
-                L11: {
-                  L12: {
+              upperSegmentCompletion: {
+                upperSegmentScan: {
+                  upperSegmentTopClip: {
                     if (topY < 0) {
                       if (middleY >= 0) {
                         topY = -topY;
@@ -624,7 +624,7 @@ abstract class SpriteState extends DualLinkNode {
                         leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
                         topY = 0;
                         if (controlFlagSnapshot == 0) {
-                          break L12;
+                          break upperSegmentTopClip;
                         }
                       }
                       topY = middleY - topY;
@@ -638,7 +638,7 @@ abstract class SpriteState extends DualLinkNode {
                       leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
                       topY = middleY;
                       if (controlFlagSnapshot == 0) {
-                        break L11;
+                        break upperSegmentScan;
                       }
                     }
                   }
@@ -648,7 +648,7 @@ abstract class SpriteState extends DualLinkNode {
                     invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
                     invertedSpanStartOrNegativeOne = ~spanStartOrWidthOrBottomXQ16;
                     if (controlFlagSnapshot != 0) {
-                      break L10;
+                      break upperSegmentCompletion;
                     }
                     if (invertedClipWidthOrLowerRows < invertedSpanStartOrNegativeOne) {
                       spanWidthOrRedStepOrBottomRedQ16 = (rightXQ16 >> 16) - (leftXQ16 >> 16);
@@ -701,10 +701,10 @@ abstract class SpriteState extends DualLinkNode {
                 rightGreenStepQ16 = 0;
                 rightBlueStepQ16 = 0;
                 if (controlFlagSnapshot == 0) {
-                  break L3;
+                  break triangleEdgeInitialization;
                 }
               }
-              L21: {
+              lowerEdgeOriginSelection: {
                 spanStartOrWidthOrBottomXQ16 = bottomX << 16;
                 spanWidthOrRedStepOrBottomRedQ16 = bottomRed << 16;
                 spanRedStepOrGreenStepOrBottomGreenQ16 = bottomGreen << 16;
@@ -715,7 +715,7 @@ abstract class SpriteState extends DualLinkNode {
                   leftRedQ16 = middleRed << 16;
                   leftGreenQ16 = middleGreen << 16;
                   if (controlFlagSnapshot == 0) {
-                    break L21;
+                    break lowerEdgeOriginSelection;
                   }
                 }
                 rightRedQ16 = middleRed << 16;

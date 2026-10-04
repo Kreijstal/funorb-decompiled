@@ -17,14 +17,43 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e4b4a183d7c7055e6bd670eae2d51c25ac11f71/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/94533af87b735bd52d26b97ed0c9679d093be829/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 126 adds 153 guarded names: fourteen classes, 32 fields, 28 methods,
+Pass 127 adds 52 guarded label rules, covering every label in the six large
+bodies: menu render/update, gameplay render/update, board reconciliation and
+sorted RGB triangle rendering. Fifty describe plain-block exit scopes; two name
+component-traversal loops. The export has 11,399 rules, the same 87,411 Java
+identifier edits and eleven reflected class-name edits, plus 173 separate label
+edits. All 11,347 previous complete rules survive. Class coverage stays 302
+renamed plus `Geoblox`; the six large bodies retain their structure and length.
+There are still 213 opaque labels elsewhere and unmapped members.
+
+The frozen naming dependency now supports `B:owner.method(descriptor)#ordinal`
+identities and the explicit `labels` policy `lexical-targets`. It audits 265
+label declarations and 854 declaration/break/continue records separately from
+136,612 Java bindings. Each transfer retains its original kind and exact lexical
+AST target, even when a spelling is reused in disjoint scopes. Names describe
+existing regions; they do not infer that the client control flag is zero, replace
+numeric state or relax exception-region reconstruction. Dictionary reversal
+recovers all 303 raw sources exactly.
+
+Fifteen generic naming tests plus four subprocess tests pass, including runtime
+loop/finally/monitor traces, guard/count refusals and exact reversal. The default
+five-path audit remains byte-identical to the previous frozen helper on all303
+sources; extra label and class-literal records are opt-in. The 27 publication
+tests and all eight fixed native probes pass within their scopes. Compiling the
+previous pass126 and current exports with the same JDK and release8 options gives
+304 byte-identical class files. Clean committed checkouts reproduce the export.
+Raw source, decompiler/bytecode and all native source/trace pins remain; explicit
+source migration pins the new naming dependency, workflow and label policy.
+Full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.
+
+Pass 126 added 153 guarded names: fourteen classes, 32 fields, 28 methods,
 52 parameters and 27 locals. All 11,194 previous complete rules survive.
 The export has 11,347 rules and 87,411 identifier edits plus the same eleven
 separately recorded reflected class-name edits. All 303 top-level classes have
