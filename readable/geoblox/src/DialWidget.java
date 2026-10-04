@@ -16,18 +16,18 @@ final class DialWidget extends ButtonWidget {
 
     final static HighscoreQuery getOrRequestHighscores(int queryId, int valuesPerEntry, int methodGuard, int entryLimit, int packetOpcode) {
         int var6 = Geoblox.clientControlFlowFlag;
-        HighscoreQuery var5 = (HighscoreQuery) ((Object) ResourceArchive.field_d.firstForIteration(methodGuard ^ methodGuard));
+        HighscoreQuery var5 = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(methodGuard ^ methodGuard));
         while (var5 != null) {
             if (~var5.queryId == ~queryId) {
                 return var5;
             }
-            var5 = (HighscoreQuery) ((Object) ResourceArchive.field_d.nextForIteration(1));
+            var5 = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
         }
         var5 = new HighscoreQuery();
         var5.entryLimit = entryLimit;
         var5.valuesPerEntry = valuesPerEntry;
         var5.queryId = queryId;
-        ResourceArchive.field_d.addLast(-71, var5);
+        ResourceArchive.pendingHighscoreQueries.addLast(-71, var5);
         DebouncedValidationProvider.writeHighscoreRequest(packetOpcode, methodGuard + 5, var5);
         return var5;
     }

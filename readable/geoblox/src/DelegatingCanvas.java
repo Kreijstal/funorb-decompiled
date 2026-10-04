@@ -99,9 +99,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
               var18[0][4 * var10] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
               var18[0][4 * var10 + 1] = TextHotspotBounds.field_m[var11];
               var18[0][4 * var10 + 2] = NodeHashTableIterator.field_i[var11];
-              var18[0][4 * var10 + 3] = FrameTimer.field_b[var11];
+              var18[0][4 * var10 + 3] = FrameTimer.rankedEntryRatioThirdComponents[var11];
               if ((WhirlpoolHash.a(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12)) &&
-                  (FrameTimer.field_b[var11] + (TextHotspotBounds.field_m[var11] + NodeHashTableIterator.field_i[var11]) == 0)) {
+                  (FrameTimer.rankedEntryRatioThirdComponents[var11] + (TextHotspotBounds.field_m[var11] + NodeHashTableIterator.field_i[var11]) == 0)) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -117,9 +117,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
               var18[1][4 * var13] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
               var18[1][1 + 4 * var13] = TextHotspotBounds.field_m[var11];
               var18[1][var13 * 4 + 2] = NodeHashTableIterator.field_i[var11];
-              var18[1][var13 * 4 + 3] = FrameTimer.field_b[var11];
+              var18[1][var13 * 4 + 3] = FrameTimer.rankedEntryRatioThirdComponents[var11];
               if ((WhirlpoolHash.a(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12)) &&
-                  (FrameTimer.field_b[var11] + NodeHashTableIterator.field_i[var11] + TextHotspotBounds.field_m[var11] == 0)) {
+                  (FrameTimer.rankedEntryRatioThirdComponents[var11] + NodeHashTableIterator.field_i[var11] + TextHotspotBounds.field_m[var11] == 0)) {
                 var6[1][var13] = null;
                 var13--;
               }

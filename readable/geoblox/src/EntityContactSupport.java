@@ -11,7 +11,7 @@ final class EntityContactSupport {
         int updateHistoryIndex = 0;
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            ReflectionCheckRequest.field_p.a(111);
+            ReflectionCheckRequest.field_p.resetForResume(111);
             guardResidueThenRenderHistoryIndex = 10 / ((methodGuard - 68) / 57);
             for (updateHistoryIndex = 0; updateHistoryIndex < 32; updateHistoryIndex++) {
                 ArchiveRequest.field_p[updateHistoryIndex] = 0L;

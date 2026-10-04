@@ -20,7 +20,7 @@ final class TextValidationFailure {
         if (ProxyAuthenticationRequiredException.field_a >= param5) {
           TextHotspotBounds.field_m[GmtTimestampSupport.rankedEntryCount] = param3;
           NodeHashTableIterator.field_i[GmtTimestampSupport.rankedEntryCount] = param4;
-          FrameTimer.field_b[GmtTimestampSupport.rankedEntryCount] = param0;
+          FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = param0;
           var6 = param0 + (param4 + param3);
           var8 = -80 / ((30 - param2) / 42);
           if (var6 != 0) {
@@ -43,7 +43,7 @@ final class TextValidationFailure {
         MeshPrioritySupport.field_b = param5;
         TextHotspotBounds.field_m[GmtTimestampSupport.rankedEntryCount] = param3;
         NodeHashTableIterator.field_i[GmtTimestampSupport.rankedEntryCount] = param4;
-        FrameTimer.field_b[GmtTimestampSupport.rankedEntryCount] = param0;
+        FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = param0;
         var6 = param0 + (param4 + param3);
         var8 = -80 / ((30 - param2) / 42);
         if (var6 != 0) {

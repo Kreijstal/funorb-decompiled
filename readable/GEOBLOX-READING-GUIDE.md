@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/d656713f899a8c607812f3306ca2c043ca71994b/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/12946054663ab91496b55853b3e0644e4f9a6ff0/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 155)
+## Current readability (pass 156)
 
-The export has 14,988 guarded names and 103,778 Java identifier edits, plus 11
+The export has 15,070 guarded names and 104,152 Java identifier edits, plus 11
 class-name literal edits and 250 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -24,7 +24,49 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current widget theme naming (pass 155)
+## Current frame timer and ranking transport naming (pass 156)
+
+Pass 156 adds 82 guarded names: eight fields, eleven methods, fifteen parameters
+and 48 locals. All eighteen declarations owned by FrameTimer and all 72 owned by
+NanoFrameTimer now have readable names; the constructor follows its class rule.
+The applet caller exposes awaitAndCountTicks, measureSleepMillis, advanceTicks and
+resetForResume. Clock fields separate the accumulated time, scheduled deadline,
+previous sample and ten-slot interval ring. The original sample count starts at
+one and grows only when below one; no new smoothing policy is introduced.
+
+Unrelated helpers in the timer class now show flushSessionWrites and ranking
+reply locals. The pendingHighscoreQueries deque and ranked ratio component array
+have their actual transport roles. Ranking views distinguish limited first rows,
+normalized current-session rows and unique name-table indexes. Alternate-name and
+record-long arrays remain local stores. Packet cursor rewinds, flattened write
+indexes, cleanup guards, ten-tick cap and signed overflow are preserved.
+
+The existing result-helper fixture adds 6,802 native/raw/readable cases: 4,608
+BigInteger-based tick/overflow cases, 1,536 resets, 219 sampler/constructor cases,
+162 callback wrappers, 129 ranking/prefix cases, 144 fake-socket queued writes and
+four cleanups. There are 174 expected failures. Independent oracles check tick
+state, sample rings/count/average arithmetic, stored real-clock bounds, callback
+order and throwable identity, ranking views and 75 truncated prefixes, plus
+buffer/stage/guard/queue effects. Actual nano samples are normalized in the trace;
+fake sockets use existing dummy tasks and suppress idle keepalive. Negative,
+zero and positive client flags remain. All twelve previous result-helper trace
+pins retain their hashes.
+
+The export has 15,070 rules and 104,152 identifier edits, plus eleven class-name
+literal and 250 label edits: 104,413 total. All 14,988 previous complete rules
+remain. Seventeen generated Java files change; raw code, generator/workflow/stub
+pins, all 19,498 dictionary identities, 136,607 bindings, 388 overrides and 811
+label records remain. Both 303-file corpora compile, reproduce and reverse byte
+exactly. The 27 publication tests and affected native fixtures pass. No generated
+Java body is hand edited and no decompiler change is required.
+
+Eight large labeled bodies and 162 opaque labels remain, together with 283
+opaque fields and 308 single-letter methods. Real-time pacing, idle cipher
+keepalive, write-IOException closure, unmatched/unknown ranking replies, live
+server/network/assets/game/browser/phone and heap/presented-FPS acceptance remain
+unverified.
+
+## Previous widget theme naming (pass 155)
 
 Pass 155 adds 77 guarded names: eleven fields, one method, five parameters and
 sixty locals. All 119 declarations owned by WidgetTheme now have readable names;

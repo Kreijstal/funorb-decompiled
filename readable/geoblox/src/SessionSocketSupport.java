@@ -165,7 +165,7 @@ final class SessionSocketSupport {
                     VisualPropertyNode.previousPacketOpcode = useLongLoginPayload ? -2 : -1;
                     PacketBuffer.currentProtocolStage = IterableNodeHashTable.requestReadyStage;
                     ConnectionHeaderSupport.writeConnectionHeader(FullscreenEntrySupport.sessionLanguageId, true, ClientRenderingState.sessionClientId, EmailAvailabilityValidator.sessionServerNumber, CacheReference.outgoingSessionBuffer);
-                    NanoFrameTimer.a(methodGuard ^ -53, -1);
+                    NanoFrameTimer.flushSessionWrites(methodGuard ^ -53, -1);
                 } catch (IOException socketSetupFailure) {
                     PacketBuffer.currentProtocolStage = AchievementQuery.socketOpenFailedStage;
                 }

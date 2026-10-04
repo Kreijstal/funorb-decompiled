@@ -396,7 +396,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           break L1;
                         }
                       }
-                      TriangleMesh.field_w = ReflectionCheckRequest.field_p.a((byte) -6, ByteStorage.updatePeriodNanoseconds);
+                      TriangleMesh.field_w = ReflectionCheckRequest.field_p.awaitAndCountTicks((byte) -6, ByteStorage.updatePeriodNanoseconds);
                       stackIn_99_0 = 0;
                     }
                     var3 = stackIn_99_0;

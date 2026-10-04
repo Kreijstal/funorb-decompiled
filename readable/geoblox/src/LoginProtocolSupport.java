@@ -50,7 +50,7 @@ final class LoginProtocolSupport {
                 CacheReference.outgoingSessionBuffer.position = 0;
                 CacheReference.outgoingSessionBuffer.writeByte((byte) -102, 14);
                 CacheReference.outgoingSessionBuffer.writeByte((byte) -78, EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32).wireId);
-                NanoFrameTimer.a(-1, -1);
+                NanoFrameTimer.flushSessionWrites(-1, -1);
                 PacketBuffer.currentProtocolStage = ResizableDialog.awaitingInitialLoginReplyStage;
               }
               if ((ResizableDialog.awaitingInitialLoginReplyStage == PacketBuffer.currentProtocolStage) &&

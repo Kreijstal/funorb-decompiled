@@ -164,9 +164,9 @@ final class TriangleMesh {
               (param2 <= NodeHashTableIterator.field_i.length))) {
           NodeHashTableIterator.field_i = new int[param2 * 2];
         }
-        if (!((null != FrameTimer.field_b) &&
-              (FrameTimer.field_b.length >= param2))) {
-          FrameTimer.field_b = new int[2 * param2];
+        if (!((null != FrameTimer.rankedEntryRatioThirdComponents) &&
+              (FrameTimer.rankedEntryRatioThirdComponents.length >= param2))) {
+          FrameTimer.rankedEntryRatioThirdComponents = new int[2 * param2];
         }
         if (!((null != ClientProtocolStage.rankedEntryKeyOne) &&
               (ClientProtocolStage.rankedEntryKeyOne.length >= param2))) {

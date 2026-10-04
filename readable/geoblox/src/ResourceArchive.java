@@ -8,7 +8,7 @@ final class ResourceArchive {
     private ArchiveIndex index;
     private boolean discardPackedGroups;
     private Object[] packedGroups;
-    static IntrusiveDeque field_d;
+    static IntrusiveDeque pendingHighscoreQueries;
     private ArchiveSource archiveSource;
     private int fileRetentionPolicy;
     static String createUsernameUnavailableText;
@@ -196,7 +196,7 @@ final class ResourceArchive {
             return invalidGroupFileIdBeforeReturn;
           }
           if (methodGuard > -55) {
-            field_d = (IntrusiveDeque) null;
+            pendingHighscoreQueries = (IntrusiveDeque) null;
           }
           fileName = fileName.toLowerCase();
           fileNameCharacters = (CharSequence) ((Object) fileName);
@@ -289,7 +289,7 @@ final class ResourceArchive {
 
     public static void b(int param0) {
         unacknowledgedAchievementSubmissions = null;
-        field_d = null;
+        pendingHighscoreQueries = null;
         createUsernameUnavailableText = null;
         if (param0 != 30261) {
             unacknowledgedAchievementSubmissions = (IntrusiveDeque) null;
@@ -966,7 +966,7 @@ final class ResourceArchive {
 
     static {
         unacknowledgedAchievementSubmissions = new IntrusiveDeque();
-        field_d = new IntrusiveDeque();
+        pendingHighscoreQueries = new IntrusiveDeque();
         createUsernameUnavailableText = "That name is not available";
     }
 }

@@ -23,10 +23,10 @@ final class MatchScoringSupport {
             ArchiveIndex.writeScoreSubmission(pendingScoreSubmission, packetOpcode, -127);
             pendingScoreSubmission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
           }
-          pendingHighscoreQuery = (HighscoreQuery) ((Object) ResourceArchive.field_d.firstForIteration(0));
+          pendingHighscoreQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(0));
           while (pendingHighscoreQuery != null) {
             DebouncedValidationProvider.writeHighscoreRequest(packetOpcode, 5, pendingHighscoreQuery);
-            pendingHighscoreQuery = (HighscoreQuery) ((Object) ResourceArchive.field_d.nextForIteration(1));
+            pendingHighscoreQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException resendFailure) {

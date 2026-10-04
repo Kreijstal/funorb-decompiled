@@ -2,37 +2,37 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class FrameTimer {
-    static int[] field_b;
+    static int[] rankedEntryRatioThirdComponents;
     static String receivedRecordPrimaryName;
 
     static long andLong(long left, long right) {
         return left & right;
     }
 
-    public static void b(int param0) {
+    public static void releaseSharedResources(int methodGuard) {
         receivedRecordPrimaryName = null;
-        if (param0 > -59) {
+        if (methodGuard > -59) {
             return;
         }
-        field_b = null;
+        rankedEntryRatioThirdComponents = null;
     }
 
-    final int a(byte param0, long param1) {
-        long var4 = this.a((byte) -49);
-        if (!(0L >= var4)) {
-            ByteTextDecodingSupport.sleepMillis(0, var4);
+    final int awaitAndCountTicks(byte methodGuard, long tickPeriodNanos) {
+        long sleepMillis = this.measureSleepMillis((byte) -49);
+        if (!(0L >= sleepMillis)) {
+            ByteTextDecodingSupport.sleepMillis(0, sleepMillis);
         }
-        if (param0 == -6) {
-            return this.a(true, param1);
+        if (methodGuard == -6) {
+            return this.advanceTicks(true, tickPeriodNanos);
         }
         return -30;
     }
 
-    abstract void a(int param0);
+    abstract void resetForResume(int methodGuard);
 
-    abstract long a(byte param0);
+    abstract long measureSleepMillis(byte methodGuard);
 
-    abstract int a(boolean param0, long param1);
+    abstract int advanceTicks(boolean methodGuard, long tickPeriodNanos);
 
     static {
     }

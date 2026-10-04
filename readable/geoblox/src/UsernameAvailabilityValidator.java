@@ -205,7 +205,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           }
           UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
           CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-var5_int + CacheReference.outgoingSessionBuffer.position, true);
-          NanoFrameTimer.a(-1, -1);
+          NanoFrameTimer.flushSessionWrites(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

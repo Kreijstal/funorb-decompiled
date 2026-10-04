@@ -322,7 +322,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
               CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, CacheReference.outgoingSessionBuffer.position - var9);
             }
-            NanoFrameTimer.a(-1, -1);
+            NanoFrameTimer.flushSessionWrites(-1, -1);
             PacketBuffer.currentProtocolStage = field_K;
           }
           if ((field_K == PacketBuffer.currentProtocolStage) &&

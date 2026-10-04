@@ -354,7 +354,7 @@ public final class Geoblox extends SessionGameApplet {
         PointerMenuState.releasePointerMenuResources(-1);
         UsernameQuerySupport.releaseStaticReferences(-9474);
         MeshDepthSupport.releaseStaticReferences(false);
-        FrameTimer.b(methodGuard ^ 78);
+        FrameTimer.releaseSharedResources(methodGuard ^ 78);
         AwtRasterBuffer.b((byte) 58);
         ArchiveLoadSequence.a((byte) -127);
         FullscreenFocusCanvas.a(methodGuard + 64);
@@ -478,7 +478,7 @@ public final class Geoblox extends SessionGameApplet {
         SessionTextState.releaseSessionTextResources(-97);
         SocketConnector.c(16712207);
         ProxyAuthenticationRequiredException.b(-20152);
-        NanoFrameTimer.a(false);
+        NanoFrameTimer.releaseSharedResources(false);
         ImageProducerRasterBuffer.c((byte) -117);
         DisplayModeInfo.a(methodGuard ^ -33);
         RasterTargetRestoreSupport.releaseRasterRestoreResources(true);
@@ -648,7 +648,7 @@ public final class Geoblox extends SessionGameApplet {
                 this.initializeScreens(82);
                 break L6;
               }
-              NanoFrameTimer.a(-1, 0);
+              NanoFrameTimer.flushSessionWrites(-1, 0);
               return;
             }
             if (!UsernameAvailabilityValidator.g(79)) {
@@ -788,7 +788,7 @@ public final class Geoblox extends SessionGameApplet {
             }
           }
           TrackedPcmStream.updateAchievementSubmissions((byte) -122);
-          NanoFrameTimer.a(-1, 0);
+          NanoFrameTimer.flushSessionWrites(-1, 0);
           if (ClientTimingSupport.isClientReadyForSessionActions(54)) {
             uiServiceResultOrOverlayMode = this.pollReconnectAndResendRequests((byte) -67);
             if (!(uiServiceResultOrOverlayMode != 2)) {

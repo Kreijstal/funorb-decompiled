@@ -4,166 +4,166 @@
 import java.io.*;
 
 final class NanoFrameTimer extends FrameTimer {
-    private long field_e;
+    private long accumulatedTimeNanos;
     static String checkingText;
-    private long field_i;
-    private int field_g;
-    private long[] field_f;
-    private int field_d;
+    private long lastSampleTimeNanos;
+    private int intervalSampleCount;
+    private long[] intervalSamplesNanos;
+    private int nextSampleIndex;
     static int[] decodedSpritePalette;
-    private long field_c;
+    private long scheduledTickNanos;
 
     final static void handleRankingResponse(int methodGuard) {
-        int var8_int = 0;
-        String[][] dupTemp$0 = null;
-        int[][] dupTemp$1 = null;
-        int var19 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        HighscoreQuery var4 = null;
-        ScoreSubmission var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        String[][] var8 = null;
-        String[][] var9 = null;
-        int[][] var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var20 = 0;
-        String var21 = null;
-        long var22 = 0L;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        PacketBuffer var27 = null;
-        long[][] var31 = null;
-        var26 = Geoblox.clientControlFlowFlag;
+        int nameIndex = 0;
+        String[][] allocatedNamesByView = null;
+        int[][] allocatedValuesByView = null;
+        int recordIndex = 0;
+        int allValueIndexBeforeIncrement = 0;
+        int selfValueIndexBeforeIncrement = 0;
+        int uniqueValueIndexBeforeIncrement = 0;
+        RuntimeException caughtRankingFailure = null;
+        RuntimeException rankingFailure = null;
+        int responseKind = 0;
+        int queryOrSubmissionId = 0;
+        HighscoreQuery query = null;
+        ScoreSubmission submission = null;
+        int nameCount = 0;
+        int entryLimit = 0;
+        int valuesPerEntry = 0;
+        String[][] namesByView = null;
+        String[][] alternateNamesByView = null;
+        int[][] valuesByView = null;
+        int allViewCount = 0;
+        int selfViewCount = 0;
+        int uniqueViewCount = 0;
+        int allValueWriteIndex = 0;
+        int selfValueWriteIndex = 0;
+        int uniqueValueWriteIndex = 0;
+        int recordCount = 0;
+        int nameTableIndex = 0;
+        String primaryName = null;
+        long recordLongValue = 0L;
+        int valuesStartPosition = 0;
+        int valueIndex = 0;
+        int clientControlFlowSnapshot = 0;
+        PacketBuffer packet = null;
+        long[][] recordLongsByView = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != -24839) {
-            NanoFrameTimer.a(false);
+            NanoFrameTimer.releaseSharedResources(false);
           }
-          var27 = LogoCompositor.sessionPacketBuffer;
-          var2 = var27.readUnsignedByte((byte) 34);
-          if (var2 == 0) {
-            var3 = var27.readUnsignedShortBE(true);
-            var4 = (HighscoreQuery) ((Object) ResourceArchive.field_d.firstForIteration(0));
-            while (var4 != null) {
-              if (var4.queryId != var3) {
-                var4 = (HighscoreQuery) ((Object) ResourceArchive.field_d.nextForIteration(1));
+          packet = LogoCompositor.sessionPacketBuffer;
+          responseKind = packet.readUnsignedByte((byte) 34);
+          if (responseKind == 0) {
+            queryOrSubmissionId = packet.readUnsignedShortBE(true);
+            query = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(0));
+            while (query != null) {
+              if (query.queryId != queryOrSubmissionId) {
+                query = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
                 continue;
               }
               break;
             }
-            if (var4 == null) {
+            if (query == null) {
               Bzip2DecoderState.closeSessionSocket((byte) -115);
               return;
             }
-            var5 = var27.readUnsignedByte((byte) 34);
-            if (var5 != 0) {
-              var6 = var4.entryLimit;
-              var7 = var4.valuesPerEntry;
+            nameCount = packet.readUnsignedByte((byte) 34);
+            if (nameCount != 0) {
+              entryLimit = query.entryLimit;
+              valuesPerEntry = query.valuesPerEntry;
               RasterTargetRestoreSupport.highscoreNameTable[0].usedInUniqueView = false;
               RasterTargetRestoreSupport.highscoreNameTable[0].primaryName = SecondaryDeque.receivedSessionName;
               RasterTargetRestoreSupport.highscoreNameTable[0].alternateName = null;
-              for (var8_int = 1; var5 > var8_int; var8_int++) {
-                RasterTargetRestoreSupport.highscoreNameTable[var8_int].primaryName = var27.readNullTerminatedText((byte) 104);
-                RasterTargetRestoreSupport.highscoreNameTable[var8_int].usedInUniqueView = false;
-                if (var27.readUnsignedByte((byte) 34) == 1) {
-                  RasterTargetRestoreSupport.highscoreNameTable[var8_int].alternateName = var27.readNullTerminatedText((byte) 122);
+              for (nameIndex = 1; nameCount > nameIndex; nameIndex++) {
+                RasterTargetRestoreSupport.highscoreNameTable[nameIndex].primaryName = packet.readNullTerminatedText((byte) 104);
+                RasterTargetRestoreSupport.highscoreNameTable[nameIndex].usedInUniqueView = false;
+                if (packet.readUnsignedByte((byte) 34) == 1) {
+                  RasterTargetRestoreSupport.highscoreNameTable[nameIndex].alternateName = packet.readNullTerminatedText((byte) 122);
                 } else {
-                  RasterTargetRestoreSupport.highscoreNameTable[var8_int].alternateName = null;
+                  RasterTargetRestoreSupport.highscoreNameTable[nameIndex].alternateName = null;
                 }
               }
-              dupTemp$0 = new String[3][var6];
-              var4.namesByView = dupTemp$0;
-              var8 = dupTemp$0;
-              var9 = new String[3][var6];
-              var31 = new long[3][var6];
-              dupTemp$1 = new int[3][var6 * var7];
-              var4.valuesByView = dupTemp$1;
-              var11 = dupTemp$1;
-              var12 = 0;
-              var13 = 0;
-              var14 = 0;
-              var15 = 0;
-              var16 = 0;
-              var17 = 0;
-              var18 = var27.readUnsignedByte((byte) 34);
-              if (!(0 >= var18)) {
-                for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.readUnsignedByte((byte) 34);
-                  var21 = RasterTargetRestoreSupport.highscoreNameTable[var20].primaryName;
-                  var22 = var27.readLongBE(2901);
-                  var24 = var27.position;
-                  if (var6 > var19) {
-                    var8[0][var12] = var21;
-                    var9[0][var12] = RasterTargetRestoreSupport.highscoreNameTable[var20].alternateName;
-                    var31[0][var12] = var22;
-                    for (var25 = 0; var25 < var7; var25++) {
-                      incrementValue$2 = var15;
-                      var15++;
-                      var11[0][incrementValue$2] = var27.readIntBE((byte) -76);
+              allocatedNamesByView = new String[3][entryLimit];
+              query.namesByView = allocatedNamesByView;
+              namesByView = allocatedNamesByView;
+              alternateNamesByView = new String[3][entryLimit];
+              recordLongsByView = new long[3][entryLimit];
+              allocatedValuesByView = new int[3][entryLimit * valuesPerEntry];
+              query.valuesByView = allocatedValuesByView;
+              valuesByView = allocatedValuesByView;
+              allViewCount = 0;
+              selfViewCount = 0;
+              uniqueViewCount = 0;
+              allValueWriteIndex = 0;
+              selfValueWriteIndex = 0;
+              uniqueValueWriteIndex = 0;
+              recordCount = packet.readUnsignedByte((byte) 34);
+              if (!(0 >= recordCount)) {
+                for (recordIndex = 0; recordIndex < recordCount; recordIndex++) {
+                  nameTableIndex = packet.readUnsignedByte((byte) 34);
+                  primaryName = RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].primaryName;
+                  recordLongValue = packet.readLongBE(2901);
+                  valuesStartPosition = packet.position;
+                  if (entryLimit > recordIndex) {
+                    namesByView[0][allViewCount] = primaryName;
+                    alternateNamesByView[0][allViewCount] = RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].alternateName;
+                    recordLongsByView[0][allViewCount] = recordLongValue;
+                    for (valueIndex = 0; valueIndex < valuesPerEntry; valueIndex++) {
+                      allValueIndexBeforeIncrement = allValueWriteIndex;
+                      allValueWriteIndex++;
+                      valuesByView[0][allValueIndexBeforeIncrement] = packet.readIntBE((byte) -76);
                     }
-                    var12++;
+                    allViewCount++;
                   }
-                  if ((var21 != null) &&
-                      (WhirlpoolHash.a(var21, (byte) 12))) {
-                    var8[1][var13] = SecondaryDeque.receivedSessionName;
-                    var9[1][var13] = null;
-                    var31[1][var13] = var22;
-                    var13++;
-                    var27.position = var24;
-                    for (var25 = 0; var25 < var7; var25++) {
-                      incrementValue$3 = var16;
-                      var16++;
-                      var11[1][incrementValue$3] = var27.readIntBE((byte) -122);
+                  if ((primaryName != null) &&
+                      (WhirlpoolHash.a(primaryName, (byte) 12))) {
+                    namesByView[1][selfViewCount] = SecondaryDeque.receivedSessionName;
+                    alternateNamesByView[1][selfViewCount] = null;
+                    recordLongsByView[1][selfViewCount] = recordLongValue;
+                    selfViewCount++;
+                    packet.position = valuesStartPosition;
+                    for (valueIndex = 0; valueIndex < valuesPerEntry; valueIndex++) {
+                      selfValueIndexBeforeIncrement = selfValueWriteIndex;
+                      selfValueWriteIndex++;
+                      valuesByView[1][selfValueIndexBeforeIncrement] = packet.readIntBE((byte) -122);
                     }
                   }
-                  if ((var14 < var6) &&
-                      (!RasterTargetRestoreSupport.highscoreNameTable[var20].usedInUniqueView)) {
-                    RasterTargetRestoreSupport.highscoreNameTable[var20].usedInUniqueView = true;
-                    var8[2][var14] = var21;
-                    var9[2][var14] = RasterTargetRestoreSupport.highscoreNameTable[var20].alternateName;
-                    var31[2][var14] = var22;
-                    var14++;
-                    var27.position = var24;
-                    for (var25 = 0; var7 > var25; var25++) {
-                      incrementValue$4 = var17;
-                      var17++;
-                      var11[2][incrementValue$4] = var27.readIntBE((byte) -101);
+                  if ((uniqueViewCount < entryLimit) &&
+                      (!RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView)) {
+                    RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView = true;
+                    namesByView[2][uniqueViewCount] = primaryName;
+                    alternateNamesByView[2][uniqueViewCount] = RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].alternateName;
+                    recordLongsByView[2][uniqueViewCount] = recordLongValue;
+                    uniqueViewCount++;
+                    packet.position = valuesStartPosition;
+                    for (valueIndex = 0; valuesPerEntry > valueIndex; valueIndex++) {
+                      uniqueValueIndexBeforeIncrement = uniqueValueWriteIndex;
+                      uniqueValueWriteIndex++;
+                      valuesByView[2][uniqueValueIndexBeforeIncrement] = packet.readIntBE((byte) -101);
                     }
                   }
                 }
               }
             }
-            var4.completed = true;
-            var4.unlinkNode(false);
+            query.completed = true;
+            query.unlinkNode(false);
             return;
           }
-          if (1 == var2) {
-            var3 = var27.readUnsignedShortBE(true);
-            var27.readLongBE(methodGuard + 27740);
-            var4_ref = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
-            while (var4_ref != null) {
-              if (var3 != var4_ref.submissionId) {
-                var4_ref = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
+          if (1 == responseKind) {
+            queryOrSubmissionId = packet.readUnsignedShortBE(true);
+            packet.readLongBE(methodGuard + 27740);
+            submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
+            while (submission != null) {
+              if (queryOrSubmissionId != submission.submissionId) {
+                submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
                 continue;
               }
               break;
             }
-            if (var4_ref != null) {
-              var4_ref.unlinkNode(false);
+            if (submission != null) {
+              submission.unlinkNode(false);
               return;
             }
             Bzip2DecoderState.closeSessionSocket((byte) -117);
@@ -172,39 +172,39 @@ final class NanoFrameTimer extends FrameTimer {
           IterableNodeHashTable.reportClientError((Throwable) null, "HS1: " + TextTemplateDefinition.e(methodGuard + 24894), (byte) 125);
           Bzip2DecoderState.closeSessionSocket((byte) -117);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "cm.F(" + methodGuard + ')');
+        } catch (java.lang.RuntimeException rankingException) {
+          caughtRankingFailure = rankingException;
+          rankingFailure = caughtRankingFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rankingFailure), "cm.F(" + methodGuard + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseSharedResources(boolean clearAgain) {
         decodedSpritePalette = null;
-        if (param0) {
-            NanoFrameTimer.a(false);
+        if (clearAgain) {
+            NanoFrameTimer.releaseSharedResources(false);
         }
         checkingText = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void flushSessionWrites(int flushGuard, int keepaliveOpcode) {
         try {
-            IOException iOException = null;
-            Throwable decompiledCaughtException = null;
+            IOException writeFailure = null;
+            Throwable caughtWriteFailure = null;
             if (null != SpriteCheckboxRenderer.sessionSocket) {
-              if (!((param1 >= 0) &&
+              if (!((keepaliveOpcode >= 0) &&
                   (PacketBuffer.currentProtocolStage != LogoCompositor.connectedSessionStage))) {
                 if ((0 == CacheReference.outgoingSessionBuffer.position) &&
                     (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis))) {
-                  CacheReference.outgoingSessionBuffer.writeCipherByte(param1, (byte) -76);
+                  CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);
                 }
-                if (param0 > ~CacheReference.outgoingSessionBuffer.position) {
+                if (flushGuard > ~CacheReference.outgoingSessionBuffer.position) {
                   try {
                     SpriteCheckboxRenderer.sessionSocket.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
                     CanvasResizeController.lastSessionSocketWriteMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    iOException = (IOException) (Object) decompiledCaughtException;
+                  } catch (java.io.IOException writeException) {
+                    caughtWriteFailure = writeException;
+                    writeFailure = (IOException) (Object) caughtWriteFailure;
                     Bzip2DecoderState.closeSessionSocket((byte) -117);
                   }
                   CacheReference.outgoingSessionBuffer.position = 0;
@@ -213,89 +213,89 @@ final class NanoFrameTimer extends FrameTimer {
               }
             }
             CacheReference.outgoingSessionBuffer.position = 0;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFlushFailure) {
+            throw uncheckedFlushFailure;
+        } catch (Throwable checkedFlushFailure) {
+            throw new RuntimeException(checkedFlushFailure);
         }
     }
 
-    final void a(int param0) {
-        if (~this.field_e > ~this.field_c) {
-            this.field_e = this.field_e + (this.field_c - this.field_e);
+    final void resetForResume(int methodGuard) {
+        if (~this.accumulatedTimeNanos > ~this.scheduledTickNanos) {
+            this.accumulatedTimeNanos = this.accumulatedTimeNanos + (this.scheduledTickNanos - this.accumulatedTimeNanos);
         }
-        if (param0 < 60) {
+        if (methodGuard < 60) {
             return;
         }
-        this.field_i = 0L;
+        this.lastSampleTimeNanos = 0L;
     }
 
-    final int a(boolean param0, long param1) {
-        int var4;
-        int var5;
-        var5 = Geoblox.clientControlFlowFlag;
-        if (!param0) {
-          NanoFrameTimer.a(true);
+    final int advanceTicks(boolean methodGuard, long tickPeriodNanos) {
+        int tickCount;
+        int clientControlFlowSnapshot;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        if (!methodGuard) {
+          NanoFrameTimer.releaseSharedResources(true);
         }
-        if (this.field_c > this.field_e) {
-          this.field_i = this.field_i + (-this.field_e + this.field_c);
-          this.field_e = this.field_e + (-this.field_e + this.field_c);
-          this.field_c = this.field_c + param1;
+        if (this.scheduledTickNanos > this.accumulatedTimeNanos) {
+          this.lastSampleTimeNanos = this.lastSampleTimeNanos + (-this.accumulatedTimeNanos + this.scheduledTickNanos);
+          this.accumulatedTimeNanos = this.accumulatedTimeNanos + (-this.accumulatedTimeNanos + this.scheduledTickNanos);
+          this.scheduledTickNanos = this.scheduledTickNanos + tickPeriodNanos;
           return 1;
         }
-        var4 = 0;
+        tickCount = 0;
         do {
-          var4++;
-          this.field_c = this.field_c + param1;
-        } while ((var4 < 10) &&
-              (~this.field_c > ~this.field_e));
-        if (this.field_e > this.field_c) {
-          this.field_c = this.field_e;
+          tickCount++;
+          this.scheduledTickNanos = this.scheduledTickNanos + tickPeriodNanos;
+        } while ((tickCount < 10) &&
+              (~this.scheduledTickNanos > ~this.accumulatedTimeNanos));
+        if (this.accumulatedTimeNanos > this.scheduledTickNanos) {
+          this.scheduledTickNanos = this.accumulatedTimeNanos;
         }
-        return var4;
+        return tickCount;
     }
 
-    private final long d(int param0) {
-        int var8 = 0;
-        int var9 = Geoblox.clientControlFlowFlag;
-        long var2 = System.nanoTime();
-        long var4 = -this.field_i + var2;
-        this.field_i = var2;
-        if ((-5000000000L < var4) &&
-            (!(5000000000L <= var4))) {
-            this.field_f[this.field_d] = var4;
-            if (this.field_g < 1) {
-                this.field_g = this.field_g + 1;
+    private final long sampleAverageIntervalNanos(int initialSumNanos) {
+        int sampleOffset = 0;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        long sampleTimeNanos = System.nanoTime();
+        long elapsedNanos = -this.lastSampleTimeNanos + sampleTimeNanos;
+        this.lastSampleTimeNanos = sampleTimeNanos;
+        if ((-5000000000L < elapsedNanos) &&
+            (!(5000000000L <= elapsedNanos))) {
+            this.intervalSamplesNanos[this.nextSampleIndex] = elapsedNanos;
+            if (this.intervalSampleCount < 1) {
+                this.intervalSampleCount = this.intervalSampleCount + 1;
             }
-            this.field_d = (this.field_d + 1) % 10;
+            this.nextSampleIndex = (this.nextSampleIndex + 1) % 10;
         }
-        long var6 = (long)param0;
-        for (var8 = 1; var8 <= this.field_g; var8++) {
-            var6 = var6 + this.field_f[(-var8 + (this.field_d + 10)) % 10];
+        long intervalSumNanos = (long)initialSumNanos;
+        for (sampleOffset = 1; sampleOffset <= this.intervalSampleCount; sampleOffset++) {
+            intervalSumNanos = intervalSumNanos + this.intervalSamplesNanos[(-sampleOffset + (this.nextSampleIndex + 10)) % 10];
         }
-        return var6 / (long)this.field_g;
+        return intervalSumNanos / (long)this.intervalSampleCount;
     }
 
-    final long a(byte param0) {
-        this.field_e = this.field_e + this.d(0);
-        if (param0 != -49) {
-            this.a(false, 97L);
+    final long measureSleepMillis(byte methodGuard) {
+        this.accumulatedTimeNanos = this.accumulatedTimeNanos + this.sampleAverageIntervalNanos(0);
+        if (methodGuard != -49) {
+            this.advanceTicks(false, 97L);
         }
-        if (~this.field_c < ~this.field_e) {
-            return (this.field_c - this.field_e) / 1000000L;
+        if (~this.scheduledTickNanos < ~this.accumulatedTimeNanos) {
+            return (this.scheduledTickNanos - this.accumulatedTimeNanos) / 1000000L;
         }
         return 0L;
     }
 
     NanoFrameTimer() {
-        this.field_g = 1;
-        this.field_f = new long[10];
-        this.field_d = 0;
-        this.field_i = 0L;
-        this.field_e = 0L;
-        this.field_c = 0L;
-        this.field_e = System.nanoTime();
-        this.field_c = System.nanoTime();
+        this.intervalSampleCount = 1;
+        this.intervalSamplesNanos = new long[10];
+        this.nextSampleIndex = 0;
+        this.lastSampleTimeNanos = 0L;
+        this.accumulatedTimeNanos = 0L;
+        this.scheduledTickNanos = 0L;
+        this.accumulatedTimeNanos = System.nanoTime();
+        this.scheduledTickNanos = System.nanoTime();
     }
 
     static {
