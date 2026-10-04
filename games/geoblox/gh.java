@@ -1546,7 +1546,7 @@ final class gh {
               L4: while (true) {
                 stackIn_11_0 = var6;
                 stackIn_11_1 = vf.field_L.field_r;
-                while (stackIn_11_0 < stackIn_11_1) {
+                if (stackIn_11_0 < stackIn_11_1) {
                   stackIn_23_0 = 0;
                   if (var11 != 0) {
                     break L1;
