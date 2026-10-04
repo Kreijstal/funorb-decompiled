@@ -165,18 +165,18 @@ final class GameplaySession {
             allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             urlCharacterIndex = 0;
             while (true) {
-              if (url.length() > urlCharacterIndex) {
-                allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
-                if (clientControlFlowGuard == 0) {
-                  if (allowedCharacterIndexOrSuccessFlag == -1) {
-                    return false;
-                  }
-                  urlCharacterIndex++;
-                  continue;
-                }
-              } else {
+              if (!(url.length() > urlCharacterIndex)) {
                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
                 allowedCharacterIndexOrSuccessFlag = 1;
+                break;
+              }
+              allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
+              if (clientControlFlowGuard == 0) {
+                if (allowedCharacterIndexOrSuccessFlag == -1) {
+                  return false;
+                }
+                urlCharacterIndex++;
+                continue;
               }
               break;
             }
@@ -413,31 +413,31 @@ final class GameplaySession {
                 debugEntityQueue = debugMovingQueueSnapshot;
                 renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
                 while (true) {
-                  if (null != renderedEntity) {
-                    entityOffsetX = -320.0f + renderedEntity.positionX;
-                    entityOffsetY = -240.0f + renderedEntity.positionY;
-                    debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
-                    renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
-                    SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                    renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
-                    if (clientControlFlowGuard == 0) {
-                      continue;
-                    }
-                  } else {
+                  if (!(null != renderedEntity)) {
                     debugEntityQueue = BoardEntityState.attachedEntities;
+                    break;
+                  }
+                  entityOffsetX = -320.0f + renderedEntity.positionX;
+                  entityOffsetY = -240.0f + renderedEntity.positionY;
+                  debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                  renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
+                  SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                  renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
+                  if (clientControlFlowGuard == 0) {
+                    continue;
                   }
                   break;
                 }
                 renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                 while (true) {
-                  if (renderedEntity != null) {
-                    SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                    if (clientControlFlowGuard == 0) {
-                      continue;
-                    }
-                  } else {
+                  if (!(renderedEntity != null)) {
                     debugEntityQueue = DelegatingCanvas.transientEntities;
+                    break;
+                  }
+                  SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                  renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                  if (clientControlFlowGuard == 0) {
+                    continue;
                   }
                   break;
                 }
@@ -922,204 +922,204 @@ final class GameplaySession {
           this.scoreText = (StringBuilder) null;
         }
         while (true) {
-          if (UiFontResources.pollKeyboardEvent(111)) {
-            if (GameAudioState.currentKeyboardEventCharacter > 0) {
-              PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + GameAudioState.currentKeyboardEventCharacter;
-              if (PacketBuffer.field_r.equalsIgnoreCase("fog")) {
-                if (this.showDebugOverview) {
-                  toggledDebugOverview = false;
-                } else {
-                  toggledDebugOverview = true;
-                }
-                ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
+          if (!(UiFontResources.pollKeyboardEvent(111))) {
+            debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
+            debugKeySentinelOrPointerEventSentinel = -1;
+            break;
+          }
+          if (GameAudioState.currentKeyboardEventCharacter > 0) {
+            PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + GameAudioState.currentKeyboardEventCharacter;
+            if (PacketBuffer.field_r.equalsIgnoreCase("fog")) {
+              if (this.showDebugOverview) {
+                toggledDebugOverview = false;
+              } else {
+                toggledDebugOverview = true;
               }
-              if ((SpriteCheckboxRenderer.field_f >= 2) &&
-                  (PacketBuffer.field_r.equalsIgnoreCase("brk"))) {
-                this.gameApplet.requestIdleDisconnect((byte) 41);
+              ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
+            }
+            if ((SpriteCheckboxRenderer.field_f >= 2) &&
+                (PacketBuffer.field_r.equalsIgnoreCase("brk"))) {
+              this.gameApplet.requestIdleDisconnect((byte) 41);
+            }
+          }
+          if (SessionTextHistorySupport.currentKeyboardEventCode == 13) {
+            if (!this.sessionEnding) {
+              ScoreSubmission.requestedScreenId = 1;
+              if (clientControlFlowGuard == 0) {
+                return;
               }
             }
-            if (SessionTextHistorySupport.currentKeyboardEventCode == 13) {
-              if (!this.sessionEnding) {
-                ScoreSubmission.requestedScreenId = 1;
-                if (clientControlFlowGuard == 0) {
-                  return;
-                }
-              }
-              this.requestSessionExitScreen(28809);
-              return;
-            }
-            if ((SessionTextHistorySupport.currentKeyboardEventCode == 83) &&
-                (this.tutorialMode)) {
-              this.leaveTutorial(7000);
-            }
-            tutorialKeyAdvance: {
-              if ((SessionTextHistorySupport.currentKeyboardEventCode == 84) &&
-                  (this.tutorialStepPhase == 0)) {
-                this.tutorialStepPhase = 1;
-                this.tutorialPromptActive = false;
-                if (this.tutorialStepId != 0) {
-                  if (this.tutorialStepId != 1) {
-                    if (this.tutorialStepId != 2) {
-                      break tutorialKeyAdvance;
-                    }
-                    this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
-                    if (clientControlFlowGuard == 0) {
-                      break tutorialKeyAdvance;
-                    }
+            this.requestSessionExitScreen(28809);
+            return;
+          }
+          if ((SessionTextHistorySupport.currentKeyboardEventCode == 83) &&
+              (this.tutorialMode)) {
+            this.leaveTutorial(7000);
+          }
+          tutorialKeyAdvance: {
+            if ((SessionTextHistorySupport.currentKeyboardEventCode == 84) &&
+                (this.tutorialStepPhase == 0)) {
+              this.tutorialStepPhase = 1;
+              this.tutorialPromptActive = false;
+              if (this.tutorialStepId != 0) {
+                if (this.tutorialStepId != 1) {
+                  if (this.tutorialStepId != 2) {
+                    break tutorialKeyAdvance;
                   }
-                  this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                  this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
                   if (clientControlFlowGuard == 0) {
                     break tutorialKeyAdvance;
                   }
                 }
-                this.tutorialProgressMetric = 0;
+                this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                if (clientControlFlowGuard == 0) {
+                  break tutorialKeyAdvance;
+                }
+              }
+              this.tutorialProgressMetric = 0;
+            }
+          }
+          if ((SessionTextHistorySupport.currentKeyboardEventCode == 85) &&
+              (5 == this.tutorialStepId) &&
+              (this.tutorialStepPhase == 0)) {
+            this.leaveTutorial(methodGuard ^ -1578897511);
+            this.tutorialMode = true;
+            this.tutorialStepId = 0;
+            this.tutorialPromptActive = true;
+          }
+          if (SocketConnector.swapRotationControlsKeyCode == SessionTextHistorySupport.currentKeyboardEventCode) {
+            if (this.rotationControlsSwapped) {
+              toggledRotationControlsSwapped = false;
+            } else {
+              toggledRotationControlsSwapped = true;
+            }
+            ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
+            AvatarFeedbackSupport.requestAvatarFeedback(7, false);
+          }
+          if (2 > SpriteCheckboxRenderer.field_f) {
+            continue;
+          }
+          debugKeyCodeOrPointerEventComplement = SessionTextHistorySupport.currentKeyboardEventCode;
+          debugKeySentinelOrPointerEventSentinel = 48;
+          if (clientControlFlowGuard == 0) {
+            if (debugKeyCodeOrPointerEventComplement == debugKeySentinelOrPointerEventSentinel) {
+              this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
+              if (this.debugSpawnVariantId < 0) {
+                this.debugSpawnVariantId = 6;
               }
             }
-            if ((SessionTextHistorySupport.currentKeyboardEventCode == 85) &&
-                (5 == this.tutorialStepId) &&
-                (this.tutorialStepPhase == 0)) {
-              this.leaveTutorial(methodGuard ^ -1578897511);
-              this.tutorialMode = true;
-              this.tutorialStepId = 0;
-              this.tutorialPromptActive = true;
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 49) {
+              this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
+              if (this.debugSpawnVariantId == 7) {
+                this.debugSpawnVariantId = 0;
+              }
             }
-            if (SocketConnector.swapRotationControlsKeyCode == SessionTextHistorySupport.currentKeyboardEventCode) {
-              if (this.rotationControlsSwapped) {
-                toggledRotationControlsSwapped = false;
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 64) {
+              this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
+              if (this.debugSpawnCategoryId < 0) {
+                this.debugSpawnCategoryId = 6;
+              }
+            }
+            if (32 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              if (this.debugSpawnSpecialKinds) {
+                toggledSpecialKindSpawn = false;
               } else {
-                toggledRotationControlsSwapped = true;
+                toggledSpecialKindSpawn = true;
               }
-              ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
-              AvatarFeedbackSupport.requestAvatarFeedback(7, false);
+              ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
             }
-            if (2 > SpriteCheckboxRenderer.field_f) {
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 65) {
+              this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
+              if (this.debugSpawnCategoryId == 7) {
+                this.debugSpawnCategoryId = 0;
+              }
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 16) {
+              this.tutorialAdvanceRequested = true;
+            }
+            if (68 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              this.sessionPhase = 1;
+              this.submissionBlocked = true;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 1) {
+              this.submissionBlocked = true;
+              if (this.debugPointerSpawnEnabled) {
+                toggledDebugPointerSpawn = false;
+              } else {
+                toggledDebugPointerSpawn = true;
+              }
+              ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
+            }
+            if (2 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              if (this.spawnReleaseDisabled) {
+                toggledSpawnReleaseDisabled = false;
+              } else {
+                toggledSpawnReleaseDisabled = true;
+              }
+              ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
+              this.submissionBlocked = true;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 3) {
+              EmailValidator.availableSpriteVariantCount = 7;
+              MessageDialog.availableEntityCategoryCount = 7;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 4) {
+              LabeledChildWidget.recordEntityRelease(2);
+              this.submissionBlocked = true;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 5) {
+              GameScreen.selectedThemeId = 1;
+              IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 110);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 6) {
+              GameScreen.selectedThemeId = 0;
+              IntrusiveNode.selectThemeAudio(-126, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 126);
+            }
+            if (7 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              GameScreen.selectedThemeId = 6;
+              IntrusiveNode.selectThemeAudio(-99, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 113);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 8) {
+              GameScreen.selectedThemeId = 5;
+              IntrusiveNode.selectThemeAudio(-124, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 115);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 9) {
+              GameScreen.selectedThemeId = 3;
+              IntrusiveNode.selectThemeAudio(-98, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 122);
+            }
+            if (10 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              GameScreen.selectedThemeId = 4;
+              IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 101);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 11) {
+              GameScreen.selectedThemeId = 2;
+              IntrusiveNode.selectThemeAudio(-118, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 82);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 12) {
+              if (this.debugReducedRendering) {
+                toggledReducedRendering = false;
+              } else {
+                toggledReducedRendering = true;
+              }
+              ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;
+            }
+            if (36 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
+              GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
+              ProxySocketConnector.selectThemeRenderAssets((byte) 108);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode != 39) {
               continue;
             }
-            debugKeyCodeOrPointerEventComplement = SessionTextHistorySupport.currentKeyboardEventCode;
-            debugKeySentinelOrPointerEventSentinel = 48;
-            if (clientControlFlowGuard == 0) {
-              if (debugKeyCodeOrPointerEventComplement == debugKeySentinelOrPointerEventSentinel) {
-                this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
-                if (this.debugSpawnVariantId < 0) {
-                  this.debugSpawnVariantId = 6;
-                }
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 49) {
-                this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
-                if (this.debugSpawnVariantId == 7) {
-                  this.debugSpawnVariantId = 0;
-                }
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 64) {
-                this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
-                if (this.debugSpawnCategoryId < 0) {
-                  this.debugSpawnCategoryId = 6;
-                }
-              }
-              if (32 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                if (this.debugSpawnSpecialKinds) {
-                  toggledSpecialKindSpawn = false;
-                } else {
-                  toggledSpecialKindSpawn = true;
-                }
-                ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 65) {
-                this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
-                if (this.debugSpawnCategoryId == 7) {
-                  this.debugSpawnCategoryId = 0;
-                }
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 16) {
-                this.tutorialAdvanceRequested = true;
-              }
-              if (68 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                this.sessionPhase = 1;
-                this.submissionBlocked = true;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 1) {
-                this.submissionBlocked = true;
-                if (this.debugPointerSpawnEnabled) {
-                  toggledDebugPointerSpawn = false;
-                } else {
-                  toggledDebugPointerSpawn = true;
-                }
-                ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
-              }
-              if (2 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                if (this.spawnReleaseDisabled) {
-                  toggledSpawnReleaseDisabled = false;
-                } else {
-                  toggledSpawnReleaseDisabled = true;
-                }
-                ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
-                this.submissionBlocked = true;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 3) {
-                EmailValidator.availableSpriteVariantCount = 7;
-                MessageDialog.availableEntityCategoryCount = 7;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 4) {
-                LabeledChildWidget.recordEntityRelease(2);
-                this.submissionBlocked = true;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 5) {
-                GameScreen.selectedThemeId = 1;
-                IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 110);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 6) {
-                GameScreen.selectedThemeId = 0;
-                IntrusiveNode.selectThemeAudio(-126, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 126);
-              }
-              if (7 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                GameScreen.selectedThemeId = 6;
-                IntrusiveNode.selectThemeAudio(-99, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 113);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 8) {
-                GameScreen.selectedThemeId = 5;
-                IntrusiveNode.selectThemeAudio(-124, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 115);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 9) {
-                GameScreen.selectedThemeId = 3;
-                IntrusiveNode.selectThemeAudio(-98, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 122);
-              }
-              if (10 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                GameScreen.selectedThemeId = 4;
-                IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 101);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 11) {
-                GameScreen.selectedThemeId = 2;
-                IntrusiveNode.selectThemeAudio(-118, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 82);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 12) {
-                if (this.debugReducedRendering) {
-                  toggledReducedRendering = false;
-                } else {
-                  toggledReducedRendering = true;
-                }
-                ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;
-              }
-              if (36 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
-                GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
-                ProxySocketConnector.selectThemeRenderAssets((byte) 108);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode != 39) {
-                continue;
-              }
-              this.showSessionCounters = true;
-              continue;
-            }
-          } else {
-            debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
-            debugKeySentinelOrPointerEventSentinel = -1;
+            this.showSessionCounters = true;
+            continue;
           }
           break;
         }

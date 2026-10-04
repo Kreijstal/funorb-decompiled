@@ -1102,18 +1102,18 @@ final class GameScreen extends MenuScreen {
             this.fullscreenDialogActive = false;
           }
           while (true) {
-            if (UiFontResources.pollKeyboardEvent(108)) {
-              this.handleScreenKey((byte) 62);
-              if (clientControlFlowGuard == 0) {
-                continue;
-              }
-            } else {
+            if (!(UiFontResources.pollKeyboardEvent(108))) {
               if ((this.screenId == 3) &&
                   (this.selectedItemIndex == 0) &&
                   (this.tutorialPageIndex == 0) &&
                   (!this.menuPressAnimationActive)) {
                 this.selectedItemIndex = this.selectedItemIndex + 1;
               }
+              break;
+            }
+            this.handleScreenKey((byte) 62);
+            if (clientControlFlowGuard == 0) {
+              continue;
             }
             break;
           }

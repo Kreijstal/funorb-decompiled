@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "7c85c2aa4a386ab38c7e9a4af2ffdb787bf9086b",
+      "commit": "b9c1a15762d2b9c3423cecc969a066491ce4dc9b",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "87bba94fb508a8faa874b11e21b2040d298e5761be6eac074e3cb0b3a657767d",
-        "reproduce": "git archive --format=tar 7c85c2aa4a386ab38c7e9a4af2ffdb787bf9086b | sha256sum",
+        "sha256": "36dc6e1d7f686901454d91df519cfb4e43e7e73ee94fb34129c74b050edb4dad",
+        "reproduce": "git archive --format=tar b9c1a15762d2b9c3423cecc969a066491ce4dc9b | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "e83252bbc222276c86a51093884b07f5da5e846cecd7e7ddc1ceb052d2b24b4d",
-  "previousSourceTreeSha256": "b94f67e3ce485801bc06bcc445eb5d03c52847d3668502a0c0fc6d1a1dd77f3e",
-  "changedJavaFiles": 1,
+  "sourceTreeSha256": "75ea7f4c50b22d27d682750806982ae0a93f0a5ad3f8a47d602920c9a26b8451",
+  "previousSourceTreeSha256": "e83252bbc222276c86a51093884b07f5da5e846cecd7e7ddc1ceb052d2b24b4d",
+  "changedJavaFiles": 6,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "32eed9903c45f511b7789719695256d5633711aa",
+    "commit": "508465485e56617bed0ef95101ffcf0906b99251",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "eeae27eb88348421fcbe3d05cafdbed3986a8fdd2d88b8057d4ff48c7a1e2b9b"
+      "sha256": "274e348620a8e3b9818d249436423dbf664b4959d4ca0519309722becc10dc7f"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "b34b606dc344ae0aaf2d2d7b57f19e8be801933dd3d4c120d184cb81021f1e41",
+    "outputTreeSha256": "a66da137b4f605fb929926a333c5acb84f37d77ffe3864eb66b1d3821e9b38f1",
     "files": 303,
     "rules": 16766,
     "identifierEdits": 111378,
@@ -3322,7 +3322,7 @@
       "remainingOpaqueLoopLabels": 44,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 153
+    "structuralPass": 167
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -7600,5 +7600,152 @@
     "nativeProbesRunInCurrentPass": 0,
     "nativeProbeFilesChanged": false,
     "scope": "Names only. All opaque declarations in AsyncResourceDownloader54,UsernameAvailabilityQuery55,PasswordValidator64,DropTargetWidget58 and ArchiveCatalog84 are source-backed; original run/finalize and generic sneaky-throw API/helper identities remain. Downloader holds URL/dispatcher/buffer, URL-stream task,443 JAGGRAB socket task and reader task; original stage/status branches, duplicated setup continuations, request opcode17/path/line endings, zero-byte read repeats, short EOF stage3 and exact-capacity HG1 failure/increment remain. Independent finalizer closes/swallowed failures, monitors and task/result snapshots stay unchanged. Query record serves username and account-creation outcomes; accepted/under13/suggestions/response-code/candidate-or-failure roles follow factories and consumers, preserving null/pending tests and reflection request deque order. Password packet normalization takes at most20 UTF16 units, lowercases ASCII uppercase, preserves lowercase/digits and replaces other units with underscores; wrong guard still invokes null-canvas attachment after allocation. PasswordValidator references username/email widgets, performs original default-locale lowercase and last-@ substring checks, and retains message/state branch order, alias/snapshots, wrong-guard clears and cleanup. Password bounds default5/20 and alternate maximum61 write remain. Canvas keyboard/pointer/focus/wheel attachment order and fullscreen detachment preserve partial effects. Shared music volume retains integer then floating scale, wrong-renderer68 store and recursive invalid-guard path; tooltip50/250 delay/duration sums preserve overflow, duplicate applet counter and template4/11 identities follow source consumers, replay text remains resource-backed. All previous16589 complete rules, all guards/client-control/unused snapshots, aliases, overflow/evaluation/callback order, exception/finally/monitor scopes and diagnostic literals remain. Whole303-file compiler audit compares136607 bindings/388 overrides/811 label records; exact reversal restores303 raw source files. All27 existing publication tests pass; archived rule-builder source is pinned. No source-body/control-flow rewrite, control-flag-zero assumption, new native/runtime cases or native probes run. Full downloader/network/reflection/input/volume/account/password/game/server/assets/browser/phone and heap/presented-FPS acceptance remain unverified."
+  },
+  "loopElseExitGuardRecovery": {
+    "version": 167,
+    "previousSourceCommit": "72ea94eea77827b240eb9203837b63e200b3bd99",
+    "sourceCommit": "24ad5bcc4d341c95b01d84ac51aed024c270a068",
+    "previousSourceTreeSha256": "e83252bbc222276c86a51093884b07f5da5e846cecd7e7ddc1ceb052d2b24b4d",
+    "sourceTreeSha256": "75ea7f4c50b22d27d682750806982ae0a93f0a5ad3f8a47d602920c9a26b8451",
+    "javaToolsCommit": "b9c1a15762d2b9c3423cecc969a066491ce4dc9b",
+    "sourceArchiveSha256": "36dc6e1d7f686901454d91df519cfb4e43e7e73ee94fb34129c74b050edb4dad",
+    "loopElseExitGuards": true,
+    "counts": {
+      "loopElseExitGuards": 12
+    },
+    "changedJavaFiles": 6,
+    "changedMethodBodies": 10,
+    "sourceLinesBefore": 76230,
+    "sourceLinesAfter": 76230,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 245,
+    "labelDeclarationsAfter": 245,
+    "labelBindingsBefore": 811,
+    "labelBindingsAfter": 811,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "bareLoopExitsAdded": 12,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "genericFocusedTestGroupsPassed": 3,
+    "nativeComparisons": 5184,
+    "independentNativeOracleCases": 5184,
+    "nativeDifferentialVariants": 6,
+    "genericTrailingLoopTestsPassed": 20,
+    "genericEmitterTestsPassed": 66,
+    "genericEmitterTestsSkipped": 1,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "b75fd6432dc4fc307f2de9145f289c886c24406ca3370a314391090cbe8eccdf",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 327,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 346,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 630,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 331,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 376,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "scope": "Pass167 replaces twelve loop else wrappers with explicit false-arm exits inside the same loops, flattening declaration-free true arms across10 methods/six owners. Screen/session updates, debug entity drawing, applet setup, board reconciliation/ranked-index preparation, mesh depth work, URL character scanning and highscore input become one nesting level shallower. Both exit reasons remain: true-arm normal completion skips false-arm effects; own continues reevaluate the predicate. Nonzero client control remains fully supported; predicate bytes, callback/evaluation order, numeric behavior, aliases/read snapshots, partial effects, original transfers and complete protected/monitor constructs remain. Declarations/control/protected groups in moved false arms and direct true-arm declarations refuse reconstruction. Three focused groups include six native variants matching5184 independent event cases;20 trailing-loop groups and66 loop-regression groups pass, with one existing optional skip. A tracked decompiler-source archive reproduces303 raw files and unchanged diagnostics, with zero hard failures/fallbacks/panics. The source proof independently reconstructs every token stream and tracks each moved original reference to its resulting position and destination; Unicode-translated unchanged files are byte-identical and retain their compiler positions.19253 ordinary declarations,117354 references,388 overrides,245 label definitions and811 label records remain, with no ordinal migrations. All16766 complete rules/19498 dictionary identities/111674 edits remain, both corpora compile,303 dictionary reversals are byte exact and27 publication tests pass. Existing gameplay and result-helper native/raw/readable traces match, including controlled board-reconciliation and741 applet-loop cases; their original scope exclusions remain. Eight large labeled bodies,164 opaque fields,202 single-letter methods and149 opaque labels remain. No Java body is hand edited. Full game/server/assets/browser/phone and heap/presented-FPS acceptance remain unverified.",
+    "publicationTestGroupsPassed": 27,
+    "stableDictionaryIdentities": 19498,
+    "readableIdentifierEdits": 111378,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 285,
+    "readableTotalEdits": 111674,
+    "previousCompleteRulesPreserved": 16766,
+    "remainingOpaqueFields": 164,
+    "remainingSingleLetterMethods": 202,
+    "remainingOpaqueLabels": 149,
+    "sourceReferenceLexicalPermutationVerified": true,
+    "nativeScopeProbesRerun": [
+      {
+        "file": "readable/tests/test-geoblox-gameplay.mjs",
+        "sha256": "8992682ba5137d4a7f58ce5af975488add1f90dc90a982c52187d0e161ae74c9",
+        "nativeOutputSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
+        "additionalTracesPreserved": true,
+        "nativeRawReadableTracesMatch": true
+      },
+      {
+        "file": "readable/tests/test-geoblox-result-helpers.mjs",
+        "sha256": "6a4359c062c12b9caf664f4805f8f9a52c64a87997b74e5eddf9aa588f74640a",
+        "nativeOutputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
+        "additionalTracesPreserved": true,
+        "nativeRawReadableTracesMatch": true
+      }
+    ],
+    "sourceProofWorkflowCommit": "508465485e56617bed0ef95101ffcf0906b99251"
   }
 }

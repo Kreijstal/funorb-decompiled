@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/32eed9903c45f511b7789719695256d5633711aa/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/508465485e56617bed0ef95101ffcf0906b99251/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 166)
+## Current readability (pass 167)
 
 The export has 16,766 guarded names and 111,378 Java identifier edits, plus 11
 class-name literal edits and 285 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -24,7 +24,50 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current downloader, query and password naming (pass 166)
+## Current explicit loop exit guards (pass 167)
+
+Pass 167 flattens twelve loop arms across ten methods in six classes:
+GameScreen, GameApplet, GameplaySession, MeshDepthSupport,
+BoardReconciliationSupport and HighscoreNameEntry. This includes gameplay
+keyboard-event processing, board connectivity traversal and debug queue drawing.
+An original `if (predicate) { mainPath } else { exitEffects }` followed by a
+bare own-loop break becomes `if (!(predicate)) { exitEffects; break; }`, then
+the original main path and original break, all inside the same loop. The main
+path loses one nesting level; source lines and label counts stay unchanged.
+
+Keeping exit effects in the loop preserves both exit reasons. A main path that
+falls through still skips exit effects; an own continue still reevaluates the
+predicate. In particular, a nonzero client-control flag is not assumed away.
+Predicate bytes, return snapshots, callback/evaluation order, numeric behavior,
+partial effects and original own/nonlocal transfer targets remain. Nested
+scopes and complete try/catch/finally/monitor groups stay intact. Direct main-arm
+declarations and exit arms with declarations/control/protected groups refuse
+this reconstruction, as do unsupported syntax and ambiguous transfers.
+
+The generic decompiler changes live in java-tools. Its tracked source archive
+reproduces all 303 raw Java files and unchanged diagnostics: no hard failures,
+fallbacks or panics. The Deko source proof independently reconstructs all token
+streams, tags the exact arm permutation and verifies every ordinary reference
+at its resulting location. It preserves 19,253 ordinary declarations, 117,354
+reference occurrences, 388 overrides, 245 label definitions and 811 label
+records, with no local/label ordinal migration. Unchanged files remain byte
+identical. Six native variants match 5,184 independent event cases, including
+nullable guards, nonzero flags, exceptions, finally overrides and monitor release.
+The focused generic suite passes 20 groups; loop regressions pass 66 with one
+existing optional skip.
+
+All 16,766 complete naming rules and 111,674 edits remain: 111,378 identifier,
+eleven class-name literal and 285 label edits. Both 303-file corpora compile,
+and the dictionary reverses the readable export byte exactly. Eight large labeled
+bodies, 149 opaque labels, 164 opaque fields and 202 single-letter methods remain.
+The 27 publication tests pass. Existing gameplay and result-helper probes also
+match their unchanged native/raw/readable traces, including the controlled board
+reconciliation and 741 applet-loop cases. Their documented scope exclusions
+remain; no complete gameplay renderer, URL execution or live device run is added.
+Full game/server/assets/browser/phone and heap/presented-FPS acceptance remain
+unverified.
+
+## Previous downloader, query and password naming (pass 166)
 
 Pass 166 adds 177 guarded names: twenty-five fields, fifteen methods,
 thirty parameters and 107 locals. The remaining opaque declarations in
