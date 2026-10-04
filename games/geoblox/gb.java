@@ -24,40 +24,38 @@ final class gb {
             td.a(-348, fl.field_c[25]);
           }
           n.field_j = n.field_j + 1;
-          while (true) {
-            if (hh.a(93)) {
-              if (ki.field_d != 13) {
-                continue;
-              }
-              return true;
+          while (hh.a(93)) {
+            if (ki.field_d != 13) {
+              continue;
             }
-            if ((0 == n.field_j % 40) &&
-                (vc.field_h < 11)) {
-              fh.field_c = n.field_j;
-              vc.field_h = vc.field_h + 1;
-              if (10 == vc.field_h) {
-                td.a(-348, fl.field_c[26]);
-              }
-            }
-            var1_float = -((480.0f - (float)n.field_j) / 480.0f) + 1.0f;
-            if (11 > vc.field_h) {
-              si.field_j = ((int)(var1_float * ka.field_c) << 8) + (uf.field_h[0] + ((int)(var1_float * lk.field_b) << 16)) + (int)(kk.field_x * var1_float);
-            }
-            var2 = tl.field_r[vc.field_h].field_s >> 1;
-            var3 = n.field_j << 2;
-            if ((!sg.field_d) &&
-                (-var3 + 900 <= 320 + var2)) {
-              td.a(-348, fl.field_c[7]);
-              sg.field_d = true;
-            }
-            if ((!ab.field_d) &&
-                (-var2 + (320 - qh.field_O[1].field_s) <= -1200 + var3)) {
-              td.a(-348, fl.field_c[8]);
-              ab.field_d = true;
-            }
-            stackIn_25_0 = !(494 > n.field_j);
-            return stackIn_25_0;
+            return true;
           }
+          if ((0 == n.field_j % 40) &&
+              (vc.field_h < 11)) {
+            fh.field_c = n.field_j;
+            vc.field_h = vc.field_h + 1;
+            if (10 == vc.field_h) {
+              td.a(-348, fl.field_c[26]);
+            }
+          }
+          var1_float = -((480.0f - (float)n.field_j) / 480.0f) + 1.0f;
+          if (11 > vc.field_h) {
+            si.field_j = ((int)(var1_float * ka.field_c) << 8) + (uf.field_h[0] + ((int)(var1_float * lk.field_b) << 16)) + (int)(kk.field_x * var1_float);
+          }
+          var2 = tl.field_r[vc.field_h].field_s >> 1;
+          var3 = n.field_j << 2;
+          if ((!sg.field_d) &&
+              (-var3 + 900 <= 320 + var2)) {
+            td.a(-348, fl.field_c[7]);
+            sg.field_d = true;
+          }
+          if ((!ab.field_d) &&
+              (-var2 + (320 - qh.field_O[1].field_s) <= -1200 + var3)) {
+            td.a(-348, fl.field_c[8]);
+            ab.field_d = true;
+          }
+          stackIn_25_0 = !(494 > n.field_j);
+          return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

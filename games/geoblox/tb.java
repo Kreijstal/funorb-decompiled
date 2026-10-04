@@ -131,95 +131,196 @@ final class tb {
           var8 = tb.a(3, param0);
           var9 = tb.a(15, param0);
           var4 = 0;
-          L6: while (true) {
-            if (var4 < var9) {
-              var5 = 0;
+          L6: while (var4 < var9) {
+            var5 = 0;
+            while (true) {
+              var1 = tb.b(param0);
+              if (var1 != 0) {
+                var5++;
+                continue;
+              }
+              param0.field_z[var4] = (byte)var5;
+              var4++;
+              continue L6;
+            }
+          }
+          var37 = new byte[6];
+          var36 = var37;
+          var27_ref_byte__ = var36;
+          var29 = 0;
+          while (var29 < var8) {
+            var27_ref_byte__[var29] = (byte)var29;
+            var29 = (byte)(var29 + 1);
+          }
+          for (var4 = 0; var4 < var9; var4++) {
+            var29 = param0.field_z[var4];
+            var28 = var37[var29];
+            while (var29 > 0) {
+              var27_ref_byte__[var29] = var27_ref_byte__[var29 - 1];
+              var29 = (byte)(var29 - 1);
+            }
+            var27_ref_byte__[0] = (byte)var28;
+            param0.field_r[var4] = (byte)var28;
+          }
+          var6 = 0;
+          L9: while (var6 < var8) {
+            var17 = tb.a(5, param0);
+            var4 = 0;
+            L38: while (true) {
+              if (var4 >= var7) {
+                var6++;
+                continue L9;
+              }
               while (true) {
                 var1 = tb.b(param0);
+                if (var1 == 0) {
+                  param0.field_v[var6][var4] = (byte)var17;
+                  var4++;
+                  continue L38;
+                }
+                var1 = tb.b(param0);
                 if (var1 != 0) {
-                  var5++;
+                  var17--;
                   continue;
                 }
-                param0.field_z[var4] = (byte)var5;
-                var4++;
-                continue L6;
+                var17++;
+                continue;
               }
             }
-            var37 = new byte[6];
-            var36 = var37;
-            var27_ref_byte__ = var36;
-            var29 = 0;
-            while (var29 < var8) {
-              var27_ref_byte__[var29] = (byte)var29;
-              var29 = (byte)(var29 + 1);
-            }
-            for (var4 = 0; var4 < var9; var4++) {
-              var29 = param0.field_z[var4];
-              var28 = var37[var29];
-              while (var29 > 0) {
-                var27_ref_byte__[var29] = var27_ref_byte__[var29 - 1];
-                var29 = (byte)(var29 - 1);
+          }
+          for (var6 = 0; var6 < var8; var6++) {
+            var2 = 32;
+            var3 = 0;
+            for (var4 = 0; var4 < var7; var4++) {
+              if (param0.field_v[var6][var4] > var3) {
+                var3 = param0.field_v[var6][var4];
               }
-              var27_ref_byte__[0] = (byte)var28;
-              param0.field_r[var4] = (byte)var28;
+              if (param0.field_v[var6][var4] >= var2) {
+                continue;
+              }
+              var2 = param0.field_v[var6][var4];
             }
-            var6 = 0;
-            L9: while (true) {
-              if (var6 < var8) {
-                var17 = tb.a(5, param0);
-                var4 = 0;
-                L38: while (true) {
-                  if (var4 >= var7) {
-                    var6++;
-                    continue L9;
-                  }
-                  while (true) {
-                    var1 = tb.b(param0);
-                    if (var1 == 0) {
-                      param0.field_v[var6][var4] = (byte)var17;
-                      var4++;
-                      continue L38;
+            tb.a(param0.field_E[var6], param0.field_f[var6], param0.field_l[var6], param0.field_v[var6], var2, var3, var7);
+            param0.field_w[var6] = var2;
+          }
+          var10 = param0.field_a + 1;
+          var11 = -1;
+          var12 = 0;
+          for (var4 = 0; var4 <= 255; var4++) {
+            param0.field_m[var4] = 0;
+          }
+          var29 = 4095;
+          for (var27 = 15; var27 >= 0; var27--) {
+            for (var28 = 15; var28 >= 0; var28--) {
+              param0.field_e[var29] = (byte)(var27 * 16 + var28);
+              var29--;
+            }
+            param0.field_y[var27] = var29 + 1;
+          }
+          var14 = 0;
+          if (var12 == 0) {
+            var11++;
+            var12 = 50;
+            var21 = param0.field_r[var11];
+            var22 = param0.field_w[var21];
+            var23 = param0.field_E[var21];
+            var25 = param0.field_l[var21];
+            var24 = param0.field_f[var21];
+          }
+          var12--;
+          var18 = var22;
+          var19 = tb.a(var18, param0);
+          while (var19 > ((int[]) (var23))[var18]) {
+            var18++;
+            var20 = tb.b(param0);
+            var19 = var19 << 1 | var20;
+          }
+          var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
+          L15: while (true) {
+            if (var13 == var10) {
+              param0.field_k = 0;
+              param0.field_h = (byte) 0;
+              param0.field_F[0] = 0;
+              for (var4 = 1; var4 <= 256; var4++) {
+                param0.field_F[var4] = param0.field_m[var4 - 1];
+              }
+              for (var4 = 1; var4 <= 256; var4++) {
+                param0.field_F[var4] = param0.field_F[var4] + param0.field_F[var4 - 1];
+              }
+              for (var4 = 0; var4 < var14; var4++) {
+                var1 = (byte)(kb.field_a[var4] & 255);
+                dupTemp$1 = param0.field_F[var1 & 255];
+                kb.field_a[dupTemp$1] = kb.field_a[dupTemp$1] | var4 << 8;
+                param0.field_F[var1 & 255] = param0.field_F[var1 & 255] + 1;
+              }
+              param0.field_D = kb.field_a[param0.field_d] >> 8;
+              param0.field_G = 0;
+              param0.field_D = kb.field_a[param0.field_D];
+              param0.field_c = (byte)(param0.field_D & 255);
+              param0.field_D = param0.field_D >> 8;
+              param0.field_G = param0.field_G + 1;
+              param0.field_q = var14;
+              tb.d(param0);
+              if ((param0.field_G == param0.field_q + 1) &&
+                  (param0.field_k == 0)) {
+                var26 = 1;
+                continue L1;
+              }
+              var26 = 0;
+              continue L1;
+            }
+            if ((var13 != 0) &&
+                (var13 != 1)) {
+              var33 = var13 - 1;
+              if (var33 < 16) {
+                var30 = param0.field_y[0];
+                var1 = param0.field_e[var30 + var33];
+                while (var33 > 3) {
+                  var34 = var30 + var33;
+                  param0.field_e[var34] = param0.field_e[var34 - 1];
+                  param0.field_e[var34 - 1] = param0.field_e[var34 - 2];
+                  param0.field_e[var34 - 2] = param0.field_e[var34 - 3];
+                  param0.field_e[var34 - 3] = param0.field_e[var34 - 4];
+                  var33 -= 4;
+                }
+                while (var33 > 0) {
+                  param0.field_e[var30 + var33] = param0.field_e[var30 + var33 - 1];
+                  var33--;
+                }
+                param0.field_e[var30] = (byte)var1;
+              } else {
+                var31 = var33 / 16;
+                var32 = var33 % 16;
+                var35 = param0.field_y[var31] + var32;
+                var30 = var35;
+                var1 = param0.field_e[var35];
+                while (var35 > param0.field_y[var31]) {
+                  param0.field_e[var35] = param0.field_e[var35 - 1];
+                  var35--;
+                }
+                param0.field_y[var31] = param0.field_y[var31] + 1;
+                while (var31 > 0) {
+                  param0.field_y[var31] = param0.field_y[var31] - 1;
+                  param0.field_e[param0.field_y[var31]] = param0.field_e[param0.field_y[var31 - 1] + 16 - 1];
+                  var31--;
+                }
+                param0.field_y[0] = param0.field_y[0] - 1;
+                param0.field_e[param0.field_y[0]] = (byte)var1;
+                if (!(param0.field_y[0] != 0)) {
+                  var29 = 4095;
+                  for (var27 = 15; var27 >= 0; var27--) {
+                    for (var28 = 15; var28 >= 0; var28--) {
+                      param0.field_e[var29] = param0.field_e[param0.field_y[var27] + var28];
+                      var29--;
                     }
-                    var1 = tb.b(param0);
-                    if (var1 != 0) {
-                      var17--;
-                      continue;
-                    }
-                    var17++;
-                    continue;
+                    param0.field_y[var27] = var29 + 1;
                   }
                 }
               }
-              for (var6 = 0; var6 < var8; var6++) {
-                var2 = 32;
-                var3 = 0;
-                for (var4 = 0; var4 < var7; var4++) {
-                  if (param0.field_v[var6][var4] > var3) {
-                    var3 = param0.field_v[var6][var4];
-                  }
-                  if (param0.field_v[var6][var4] >= var2) {
-                    continue;
-                  }
-                  var2 = param0.field_v[var6][var4];
-                }
-                tb.a(param0.field_E[var6], param0.field_f[var6], param0.field_l[var6], param0.field_v[var6], var2, var3, var7);
-                param0.field_w[var6] = var2;
-              }
-              var10 = param0.field_a + 1;
-              var11 = -1;
-              var12 = 0;
-              for (var4 = 0; var4 <= 255; var4++) {
-                param0.field_m[var4] = 0;
-              }
-              var29 = 4095;
-              for (var27 = 15; var27 >= 0; var27--) {
-                for (var28 = 15; var28 >= 0; var28--) {
-                  param0.field_e[var29] = (byte)(var27 * 16 + var28);
-                  var29--;
-                }
-                param0.field_y[var27] = var29 + 1;
-              }
-              var14 = 0;
+              dupTemp$0 = param0.field_x[var1 & 255] & 255;
+              param0.field_m[dupTemp$0] = param0.field_m[dupTemp$0] + 1;
+              kb.field_a[var14] = param0.field_x[var1 & 255] & 255;
+              var14++;
               if (var12 == 0) {
                 var11++;
                 var12 = 50;
@@ -238,157 +339,52 @@ final class tb {
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-              L15: while (true) {
-                if (var13 == var10) {
-                  param0.field_k = 0;
-                  param0.field_h = (byte) 0;
-                  param0.field_F[0] = 0;
-                  for (var4 = 1; var4 <= 256; var4++) {
-                    param0.field_F[var4] = param0.field_m[var4 - 1];
-                  }
-                  for (var4 = 1; var4 <= 256; var4++) {
-                    param0.field_F[var4] = param0.field_F[var4] + param0.field_F[var4 - 1];
-                  }
-                  for (var4 = 0; var4 < var14; var4++) {
-                    var1 = (byte)(kb.field_a[var4] & 255);
-                    dupTemp$1 = param0.field_F[var1 & 255];
-                    kb.field_a[dupTemp$1] = kb.field_a[dupTemp$1] | var4 << 8;
-                    param0.field_F[var1 & 255] = param0.field_F[var1 & 255] + 1;
-                  }
-                  param0.field_D = kb.field_a[param0.field_d] >> 8;
-                  param0.field_G = 0;
-                  param0.field_D = kb.field_a[param0.field_D];
-                  param0.field_c = (byte)(param0.field_D & 255);
-                  param0.field_D = param0.field_D >> 8;
-                  param0.field_G = param0.field_G + 1;
-                  param0.field_q = var14;
-                  tb.d(param0);
-                  if ((param0.field_G == param0.field_q + 1) &&
-                      (param0.field_k == 0)) {
-                    var26 = 1;
-                    continue L1;
-                  }
-                  var26 = 0;
-                  continue L1;
+              continue;
+            }
+            var15 = -1;
+            var16 = 1;
+            while (true) {
+              if (var13 != 0) {
+                if (var13 == 1) {
+                  var15 = var15 + 2 * var16;
                 }
-                if ((var13 != 0) &&
-                    (var13 != 1)) {
-                  var33 = var13 - 1;
-                  if (var33 < 16) {
-                    var30 = param0.field_y[0];
-                    var1 = param0.field_e[var30 + var33];
-                    while (var33 > 3) {
-                      var34 = var30 + var33;
-                      param0.field_e[var34] = param0.field_e[var34 - 1];
-                      param0.field_e[var34 - 1] = param0.field_e[var34 - 2];
-                      param0.field_e[var34 - 2] = param0.field_e[var34 - 3];
-                      param0.field_e[var34 - 3] = param0.field_e[var34 - 4];
-                      var33 -= 4;
-                    }
-                    while (var33 > 0) {
-                      param0.field_e[var30 + var33] = param0.field_e[var30 + var33 - 1];
-                      var33--;
-                    }
-                    param0.field_e[var30] = (byte)var1;
-                  } else {
-                    var31 = var33 / 16;
-                    var32 = var33 % 16;
-                    var35 = param0.field_y[var31] + var32;
-                    var30 = var35;
-                    var1 = param0.field_e[var35];
-                    while (var35 > param0.field_y[var31]) {
-                      param0.field_e[var35] = param0.field_e[var35 - 1];
-                      var35--;
-                    }
-                    param0.field_y[var31] = param0.field_y[var31] + 1;
-                    while (var31 > 0) {
-                      param0.field_y[var31] = param0.field_y[var31] - 1;
-                      param0.field_e[param0.field_y[var31]] = param0.field_e[param0.field_y[var31 - 1] + 16 - 1];
-                      var31--;
-                    }
-                    param0.field_y[0] = param0.field_y[0] - 1;
-                    param0.field_e[param0.field_y[0]] = (byte)var1;
-                    if (!(param0.field_y[0] != 0)) {
-                      var29 = 4095;
-                      for (var27 = 15; var27 >= 0; var27--) {
-                        for (var28 = 15; var28 >= 0; var28--) {
-                          param0.field_e[var29] = param0.field_e[param0.field_y[var27] + var28];
-                          var29--;
-                        }
-                        param0.field_y[var27] = var29 + 1;
-                      }
-                    }
-                  }
-                  dupTemp$0 = param0.field_x[var1 & 255] & 255;
-                  param0.field_m[dupTemp$0] = param0.field_m[dupTemp$0] + 1;
-                  kb.field_a[var14] = param0.field_x[var1 & 255] & 255;
-                  var14++;
-                  if (var12 == 0) {
-                    var11++;
-                    var12 = 50;
-                    var21 = param0.field_r[var11];
-                    var22 = param0.field_w[var21];
-                    var23 = param0.field_E[var21];
-                    var25 = param0.field_l[var21];
-                    var24 = param0.field_f[var21];
-                  }
-                  var12--;
-                  var18 = var22;
-                  var19 = tb.a(var18, param0);
-                  while (var19 > ((int[]) (var23))[var18]) {
-                    var18++;
-                    var20 = tb.b(param0);
-                    var19 = var19 << 1 | var20;
-                  }
-                  var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-                  continue;
-                }
-                var15 = -1;
-                var16 = 1;
-                while (true) {
-                  if (var13 != 0) {
-                    if (var13 == 1) {
-                      var15 = var15 + 2 * var16;
-                    }
-                  } else {
-                    var15 = var15 + 1 * var16;
-                  }
-                  var16 = var16 * 2;
-                  if (var12 == 0) {
-                    var11++;
-                    var12 = 50;
-                    var21 = param0.field_r[var11];
-                    var22 = param0.field_w[var21];
-                    var23 = param0.field_E[var21];
-                    var25 = param0.field_l[var21];
-                    var24 = param0.field_f[var21];
-                  }
-                  var12--;
-                  var18 = var22;
-                  var19 = tb.a(var18, param0);
-                  while (var19 > ((int[]) (var23))[var18]) {
-                    var18++;
-                    var20 = tb.b(param0);
-                    var19 = var19 << 1 | var20;
-                  }
-                  var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-                  if (var13 == 0) {
-                    continue;
-                  }
-                  if (var13 == 1) {
-                    continue;
-                  }
-                  var15++;
-                  var1 = param0.field_x[param0.field_e[param0.field_y[0]] & 255];
-                  param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;
-                  while (var15 > 0) {
-                    kb.field_a[var14] = var1 & 255;
-                    var14++;
-                    var15--;
-                  }
-                  continue L15;
-                }
+              } else {
+                var15 = var15 + 1 * var16;
               }
+              var16 = var16 * 2;
+              if (var12 == 0) {
+                var11++;
+                var12 = 50;
+                var21 = param0.field_r[var11];
+                var22 = param0.field_w[var21];
+                var23 = param0.field_E[var21];
+                var25 = param0.field_l[var21];
+                var24 = param0.field_f[var21];
+              }
+              var12--;
+              var18 = var22;
+              var19 = tb.a(var18, param0);
+              while (var19 > ((int[]) (var23))[var18]) {
+                var18++;
+                var20 = tb.b(param0);
+                var19 = var19 << 1 | var20;
+              }
+              var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
+              if (var13 == 0) {
+                continue;
+              }
+              if (var13 == 1) {
+                continue;
+              }
+              var15++;
+              var1 = param0.field_x[param0.field_e[param0.field_y[0]] & 255];
+              param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;
+              while (var15 > 0) {
+                kb.field_a[var14] = var1 & 255;
+                var14++;
+                var15--;
+              }
+              continue L15;
             }
           }
         }

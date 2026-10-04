@@ -638,86 +638,84 @@ final class vb {
         if (param1 > var13) {
           param1 = var13;
         }
-        L4: while (true) {
-          if (var14 < param1) {
-            while (true) {
-              if ((var19 > var15) &&
-                  (var18 > var15)) {
-                var20 = param0 - var16 + 1;
-                if (var20 < field_e) {
-                  var20 = field_e;
-                }
-                var21 = param0 + var16;
-                if (var21 > field_k) {
-                  var21 = field_k;
-                }
-                var22 = var20 + var14 * field_f;
-                for (var23 = var20; var23 < var21; var23++) {
-                  var9 = (field_c[var22] >> 16 & 255) * var5;
-                  var10 = (field_c[var22] >> 8 & 255) * var5;
-                  var11 = (field_c[var22] & 255) * var5;
-                  var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                  incrementValue$4 = var22;
-                  var22++;
-                  field_c[incrementValue$4] = var24;
-                }
-                var14++;
-                incrementValue$3 = var17;
-                var17--;
-                var18 = var18 - (incrementValue$3 + var17);
-                var19 = var19 - (var17 + var17);
-                continue L4;
+        L4: while (var14 < param1) {
+          while (true) {
+            if ((var19 > var15) &&
+                (var18 > var15)) {
+              var20 = param0 - var16 + 1;
+              if (var20 < field_e) {
+                var20 = field_e;
               }
-              var18 = var18 + (var16 + var16);
-              incrementValue$5 = var16;
-              var16++;
-              var19 = var19 + (incrementValue$5 + var16);
+              var21 = param0 + var16;
+              if (var21 > field_k) {
+                var21 = field_k;
+              }
+              var22 = var20 + var14 * field_f;
+              for (var23 = var20; var23 < var21; var23++) {
+                var9 = (field_c[var22] >> 16 & 255) * var5;
+                var10 = (field_c[var22] >> 8 & 255) * var5;
+                var11 = (field_c[var22] & 255) * var5;
+                var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                incrementValue$4 = var22;
+                var22++;
+                field_c[incrementValue$4] = var24;
+              }
+              var14++;
+              incrementValue$3 = var17;
+              var17--;
+              var18 = var18 - (incrementValue$3 + var17);
+              var19 = var19 - (var17 + var17);
+              continue L4;
+            }
+            var18 = var18 + (var16 + var16);
+            incrementValue$5 = var16;
+            var16++;
+            var19 = var19 + (incrementValue$5 + var16);
+            continue;
+          }
+        }
+        var16 = param2;
+        var17 = -var17;
+        var19 = var17 * var17 + var15;
+        var18 = var19 - var16;
+        var19 = var19 - var17;
+        while (var14 < var13) {
+          while (var19 > var15) {
+            if (var18 > var15) {
+              incrementValue$0 = var16;
+              var16--;
+              var19 = var19 - (incrementValue$0 + var16);
+              var18 = var18 - (var16 + var16);
               continue;
             }
+            break;
           }
-          var16 = param2;
-          var17 = -var17;
-          var19 = var17 * var17 + var15;
-          var18 = var19 - var16;
-          var19 = var19 - var17;
-          while (var14 < var13) {
-            while (var19 > var15) {
-              if (var18 > var15) {
-                incrementValue$0 = var16;
-                var16--;
-                var19 = var19 - (incrementValue$0 + var16);
-                var18 = var18 - (var16 + var16);
-                continue;
-              }
-              break;
-            }
-            var20 = param0 - var16;
-            if (var20 < field_e) {
-              var20 = field_e;
-            }
-            var21 = param0 + var16;
-            if (var21 > field_k - 1) {
-              var21 = field_k - 1;
-            }
-            var25 = var20 + var14 * field_f;
-            var22 = var25;
-            for (var23 = var20; var23 <= var21; var23++) {
-              var9 = (field_c[var25] >> 16 & 255) * var5;
-              var10 = (field_c[var25] >> 8 & 255) * var5;
-              var11 = (field_c[var25] & 255) * var5;
-              var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-              incrementValue$2 = var25;
-              var25++;
-              field_c[incrementValue$2] = var24;
-            }
-            var14++;
-            var19 = var19 + (var17 + var17);
-            incrementValue$1 = var17;
-            var17++;
-            var18 = var18 + (incrementValue$1 + var17);
+          var20 = param0 - var16;
+          if (var20 < field_e) {
+            var20 = field_e;
           }
-          return;
+          var21 = param0 + var16;
+          if (var21 > field_k - 1) {
+            var21 = field_k - 1;
+          }
+          var25 = var20 + var14 * field_f;
+          var22 = var25;
+          for (var23 = var20; var23 <= var21; var23++) {
+            var9 = (field_c[var25] >> 16 & 255) * var5;
+            var10 = (field_c[var25] >> 8 & 255) * var5;
+            var11 = (field_c[var25] & 255) * var5;
+            var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+            incrementValue$2 = var25;
+            var25++;
+            field_c[incrementValue$2] = var24;
+          }
+          var14++;
+          var19 = var19 + (var17 + var17);
+          incrementValue$1 = var17;
+          var17++;
+          var18 = var18 + (incrementValue$1 + var17);
         }
+        return;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -815,77 +813,75 @@ final class vb {
         if (param1 > var5) {
           param1 = var5;
         }
-        L4: while (true) {
-          if (var6 < param1) {
-            while (true) {
-              if ((var11 > var7) &&
-                  (var10 > var7)) {
-                var12 = param0 - var8 + 1;
-                if (var12 < field_e) {
-                  var12 = field_e;
-                }
-                var13 = param0 + var8;
-                if (var13 > field_k) {
-                  var13 = field_k;
-                }
-                var14 = var12 + var6 * field_f;
-                for (var15 = var12; var15 < var13; var15++) {
-                  incrementValue$4 = var14;
-                  var14++;
-                  field_c[incrementValue$4] = param3;
-                }
-                var6++;
-                incrementValue$3 = var9;
-                var9--;
-                var10 = var10 - (incrementValue$3 + var9);
-                var11 = var11 - (var9 + var9);
-                continue L4;
+        L4: while (var6 < param1) {
+          while (true) {
+            if ((var11 > var7) &&
+                (var10 > var7)) {
+              var12 = param0 - var8 + 1;
+              if (var12 < field_e) {
+                var12 = field_e;
               }
-              var10 = var10 + (var8 + var8);
-              incrementValue$5 = var8;
-              var8++;
-              var11 = var11 + (incrementValue$5 + var8);
+              var13 = param0 + var8;
+              if (var13 > field_k) {
+                var13 = field_k;
+              }
+              var14 = var12 + var6 * field_f;
+              for (var15 = var12; var15 < var13; var15++) {
+                incrementValue$4 = var14;
+                var14++;
+                field_c[incrementValue$4] = param3;
+              }
+              var6++;
+              incrementValue$3 = var9;
+              var9--;
+              var10 = var10 - (incrementValue$3 + var9);
+              var11 = var11 - (var9 + var9);
+              continue L4;
+            }
+            var10 = var10 + (var8 + var8);
+            incrementValue$5 = var8;
+            var8++;
+            var11 = var11 + (incrementValue$5 + var8);
+            continue;
+          }
+        }
+        var8 = param2;
+        var9 = var6 - param1;
+        var11 = var9 * var9 + var7;
+        var10 = var11 - var8;
+        var11 = var11 - var9;
+        while (var6 < var5) {
+          while (var11 > var7) {
+            if (var10 > var7) {
+              incrementValue$0 = var8;
+              var8--;
+              var11 = var11 - (incrementValue$0 + var8);
+              var10 = var10 - (var8 + var8);
               continue;
             }
+            break;
           }
-          var8 = param2;
-          var9 = var6 - param1;
-          var11 = var9 * var9 + var7;
-          var10 = var11 - var8;
-          var11 = var11 - var9;
-          while (var6 < var5) {
-            while (var11 > var7) {
-              if (var10 > var7) {
-                incrementValue$0 = var8;
-                var8--;
-                var11 = var11 - (incrementValue$0 + var8);
-                var10 = var10 - (var8 + var8);
-                continue;
-              }
-              break;
-            }
-            var12 = param0 - var8;
-            if (var12 < field_e) {
-              var12 = field_e;
-            }
-            var13 = param0 + var8;
-            if (var13 > field_k - 1) {
-              var13 = field_k - 1;
-            }
-            var14 = var12 + var6 * field_f;
-            for (var15 = var12; var15 <= var13; var15++) {
-              incrementValue$2 = var14;
-              var14++;
-              field_c[incrementValue$2] = param3;
-            }
-            var6++;
-            var11 = var11 + (var9 + var9);
-            incrementValue$1 = var9;
-            var9++;
-            var10 = var10 + (incrementValue$1 + var9);
+          var12 = param0 - var8;
+          if (var12 < field_e) {
+            var12 = field_e;
           }
-          return;
+          var13 = param0 + var8;
+          if (var13 > field_k - 1) {
+            var13 = field_k - 1;
+          }
+          var14 = var12 + var6 * field_f;
+          for (var15 = var12; var15 <= var13; var15++) {
+            incrementValue$2 = var14;
+            var14++;
+            field_c[incrementValue$2] = param3;
+          }
+          var6++;
+          var11 = var11 + (var9 + var9);
+          incrementValue$1 = var9;
+          var9++;
+          var10 = var10 + (incrementValue$1 + var9);
         }
+        return;
     }
 
     final static void g(int param0, int param1, int param2, int param3, int param4) {
@@ -1285,101 +1281,99 @@ final class vb {
         if (var7 > var9) {
           var7 = var9;
         }
-        L4: while (true) {
-          if (var11 < var7) {
-            while (true) {
-              if ((var16 > var12) &&
-                  (var15 > var12)) {
-                var17 = var6 - var13 + 1;
-                if (var17 < field_e) {
-                  var17 = field_e;
-                }
-                var18 = var6 + var10 + var13;
-                if (var18 > field_k) {
-                  var18 = field_k;
-                }
-                var19 = var17 + var11 * field_f;
-                for (var20 = var17; var20 < var18; var20++) {
-                  incrementValue$5 = var19;
-                  var19++;
-                  field_c[incrementValue$5] = param5;
-                }
-                var11++;
-                incrementValue$4 = var14;
-                var14--;
-                var15 = var15 - (incrementValue$4 + var14);
-                var16 = var16 - (var14 + var14);
-                continue L4;
+        L4: while (var11 < var7) {
+          while (true) {
+            if ((var16 > var12) &&
+                (var15 > var12)) {
+              var17 = var6 - var13 + 1;
+              if (var17 < field_e) {
+                var17 = field_e;
               }
-              var15 = var15 + (var13 + var13);
-              incrementValue$6 = var13;
-              var13++;
-              var16 = var16 + (incrementValue$6 + var13);
+              var18 = var6 + var10 + var13;
+              if (var18 > field_k) {
+                var18 = field_k;
+              }
+              var19 = var17 + var11 * field_f;
+              for (var20 = var17; var20 < var18; var20++) {
+                incrementValue$5 = var19;
+                var19++;
+                field_c[incrementValue$5] = param5;
+              }
+              var11++;
+              incrementValue$4 = var14;
+              var14--;
+              var15 = var15 - (incrementValue$4 + var14);
+              var16 = var16 - (var14 + var14);
+              continue L4;
+            }
+            var15 = var15 + (var13 + var13);
+            incrementValue$6 = var13;
+            var13++;
+            var16 = var16 + (incrementValue$6 + var13);
+            continue;
+          }
+        }
+        var14 = var11 - var7;
+        var17 = param0;
+        if (var17 < field_e) {
+          var17 = field_e;
+        }
+        var18 = param0 + param2;
+        if (var18 > field_k) {
+          var18 = field_k;
+        }
+        var19 = var17 + var11 * field_f;
+        var20 = field_f + var17 - var18;
+        var21 = param1 + param3 - param4 - 1;
+        if (var21 > field_d) {
+          var21 = field_d;
+        }
+        while (var11 < var21) {
+          for (var22 = var17; var22 < var18; var22++) {
+            incrementValue$3 = var19;
+            var19++;
+            field_c[incrementValue$3] = param5;
+          }
+          var11++;
+          var19 = var19 + var20;
+        }
+        var14 = 0;
+        var13 = param4;
+        var16 = var14 * var14 + var12;
+        var15 = var16 - var13;
+        var16 = var16 - var14;
+        while (var11 < var9) {
+          while (var16 > var12) {
+            if (var15 > var12) {
+              incrementValue$0 = var13;
+              var13--;
+              var16 = var16 - (incrementValue$0 + var13);
+              var15 = var15 - (var13 + var13);
               continue;
             }
+            break;
           }
-          var14 = var11 - var7;
-          var17 = param0;
+          var17 = var6 - var13;
           if (var17 < field_e) {
             var17 = field_e;
           }
-          var18 = param0 + param2;
-          if (var18 > field_k) {
-            var18 = field_k;
+          var18 = var6 + var10 + var13;
+          if (var18 > field_k - 1) {
+            var18 = field_k - 1;
           }
           var19 = var17 + var11 * field_f;
-          var20 = field_f + var17 - var18;
-          var21 = param1 + param3 - param4 - 1;
-          if (var21 > field_d) {
-            var21 = field_d;
+          for (var20 = var17; var20 <= var18; var20++) {
+            incrementValue$2 = var19;
+            var19++;
+            field_c[incrementValue$2] = param5;
           }
-          while (var11 < var21) {
-            for (var22 = var17; var22 < var18; var22++) {
-              incrementValue$3 = var19;
-              var19++;
-              field_c[incrementValue$3] = param5;
-            }
-            var11++;
-            var19 = var19 + var20;
-          }
-          var14 = 0;
-          var13 = param4;
-          var16 = var14 * var14 + var12;
-          var15 = var16 - var13;
-          var16 = var16 - var14;
-          while (var11 < var9) {
-            while (var16 > var12) {
-              if (var15 > var12) {
-                incrementValue$0 = var13;
-                var13--;
-                var16 = var16 - (incrementValue$0 + var13);
-                var15 = var15 - (var13 + var13);
-                continue;
-              }
-              break;
-            }
-            var17 = var6 - var13;
-            if (var17 < field_e) {
-              var17 = field_e;
-            }
-            var18 = var6 + var10 + var13;
-            if (var18 > field_k - 1) {
-              var18 = field_k - 1;
-            }
-            var19 = var17 + var11 * field_f;
-            for (var20 = var17; var20 <= var18; var20++) {
-              incrementValue$2 = var19;
-              var19++;
-              field_c[incrementValue$2] = param5;
-            }
-            var11++;
-            var16 = var16 + (var14 + var14);
-            incrementValue$1 = var14;
-            var14++;
-            var15 = var15 + (incrementValue$1 + var14);
-          }
-          return;
+          var11++;
+          var16 = var16 + (var14 + var14);
+          incrementValue$1 = var14;
+          var14++;
+          var15 = var15 + (incrementValue$1 + var14);
         }
+        return;
     }
 
     final static void e(int param0, int param1, int param2, int param3) {

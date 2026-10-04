@@ -262,39 +262,33 @@ final class c extends ka {
                   break L2;
                 }
                 var3 = stackIn_16_0;
-                while (true) {
-                  if (~-ee.field_A.field_o >= ~var3) {
-                    ee.field_A.c(var2_int, var3);
-                    var3 = var3 - ee.field_A.field_o;
-                    continue;
-                  }
-                  var2_int = var2_int + ee.field_A.field_s;
-                  continue L1;
+                while (~-ee.field_A.field_o >= ~var3) {
+                  ee.field_A.c(var2_int, var3);
+                  var3 = var3 - ee.field_A.field_o;
+                  continue;
                 }
+                var2_int = var2_int + ee.field_A.field_s;
+                continue L1;
               }
               this.field_I = this.field_I % vc.field_j.field_o;
               this.field_u = this.field_u % vc.field_j.field_s;
               stackIn_16_0 = this.field_u + (vc.field_j.field_s + 640);
             }
             var2_int = stackIn_16_0;
-            L7: while (true) {
-              if (~-vc.field_j.field_s >= ~var2_int) {
-                if (var4 != 0) {
-                  return;
-                }
-                var3 = this.field_I + vc.field_j.field_o + 480;
-                while (true) {
-                  if (~var3 <= ~-vc.field_j.field_o) {
-                    vc.field_j.b(var2_int, var3);
-                    var3 = var3 - vc.field_j.field_o;
-                    continue;
-                  }
-                  var2_int = var2_int - vc.field_j.field_s;
-                  continue L7;
-                }
+            L7: while (~-vc.field_j.field_s >= ~var2_int) {
+              if (var4 != 0) {
+                return;
               }
-              return;
+              var3 = this.field_I + vc.field_j.field_o + 480;
+              while (~var3 <= ~-vc.field_j.field_o) {
+                vc.field_j.b(var2_int, var3);
+                var3 = var3 - vc.field_j.field_o;
+                continue;
+              }
+              var2_int = var2_int - vc.field_j.field_s;
+              continue L7;
             }
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

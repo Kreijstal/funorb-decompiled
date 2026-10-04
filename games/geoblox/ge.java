@@ -114,49 +114,47 @@ final class ge {
             var9 = var9 >>> 8;
             var11--;
           }
-          while (true) {
-            if (8L < param1) {
-              var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
-              if ((var8 >= 0) &&
-                  (256 > var8)) {
-                this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
-                this.field_h = this.field_h + (-var7 + 8);
-                this.field_e = this.field_e + 1;
-                if (512 == this.field_h) {
-                  this.c(param2 ^ 111);
-                  this.field_e = 0;
-                  this.field_h = 0;
-                }
-                this.field_i[this.field_e] = (byte)cd.a(255, var8 << -var7 + 8);
-                param1 = param1 - 8L;
-                this.field_h = this.field_h + var7;
-                var5_int++;
-                continue;
-              }
-              throw new RuntimeException("LOGIC ERROR");
-            }
-            if (param1 <= 0L) {
-              var8 = 0;
-            } else {
-              var8 = param0[var5_int] << var6 & 255;
+          while (8L < param1) {
+            var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
+            if ((var8 >= 0) &&
+                (256 > var8)) {
               this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
-            }
-            if (8L > param1 + (long)var7) {
-              this.field_h = (int)((long)this.field_h + param1);
-            } else {
-              param1 = param1 - (long)(8 - var7);
-              this.field_e = this.field_e + 1;
               this.field_h = this.field_h + (-var7 + 8);
-              if (this.field_h == 512) {
-                this.c(118);
-                this.field_h = 0;
+              this.field_e = this.field_e + 1;
+              if (512 == this.field_h) {
+                this.c(param2 ^ 111);
                 this.field_e = 0;
+                this.field_h = 0;
               }
-              this.field_i[this.field_e] = (byte)cd.a(var8 << -var7 + 8, 255);
-              this.field_h = this.field_h + (int)param1;
+              this.field_i[this.field_e] = (byte)cd.a(255, var8 << -var7 + 8);
+              param1 = param1 - 8L;
+              this.field_h = this.field_h + var7;
+              var5_int++;
+              continue;
             }
-            return;
+            throw new RuntimeException("LOGIC ERROR");
           }
+          if (param1 <= 0L) {
+            var8 = 0;
+          } else {
+            var8 = param0[var5_int] << var6 & 255;
+            this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
+          }
+          if (8L > param1 + (long)var7) {
+            this.field_h = (int)((long)this.field_h + param1);
+          } else {
+            param1 = param1 - (long)(8 - var7);
+            this.field_e = this.field_e + 1;
+            this.field_h = this.field_h + (-var7 + 8);
+            if (this.field_h == 512) {
+              this.c(118);
+              this.field_h = 0;
+              this.field_e = 0;
+            }
+            this.field_i[this.field_e] = (byte)cd.a(var8 << -var7 + 8, 255);
+            this.field_h = this.field_h + (int)param1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

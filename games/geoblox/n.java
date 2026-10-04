@@ -54,15 +54,13 @@ final class n extends q {
                 break L1;
               }
               var14 = stackIn_11_0;
-              while (true) {
-                if (var13.field_v.length > var14) {
-                  var13.field_v[var14] = param5;
-                  var14++;
-                  continue;
-                }
-                var12++;
-                continue L0;
+              while (var13.field_v.length > var14) {
+                var13.field_v[var14] = param5;
+                var14++;
+                continue;
               }
+              var12++;
+              continue L0;
             }
             stackIn_11_0 = 0;
           }
@@ -75,18 +73,16 @@ final class n extends q {
                   break L7;
                 }
                 var12 = stackIn_22_0;
-                while (true) {
-                  if (var9 > var12) {
-                    var10[6].field_v[var12 + (var9 - var11 - 1) * var9] = param6;
-                    var10[8].field_v[var12 + (-1 - var11 + var9) * var9] = param6;
-                    var10[2].field_v[var12 * var9 - var11 + var9 - 1] = param6;
-                    var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12)] = param6;
-                    var12++;
-                    continue;
-                  }
-                  var11++;
-                  continue L6;
+                while (var9 > var12) {
+                  var10[6].field_v[var12 + (var9 - var11 - 1) * var9] = param6;
+                  var10[8].field_v[var12 + (-1 - var11 + var9) * var9] = param6;
+                  var10[2].field_v[var12 * var9 - var11 + var9 - 1] = param6;
+                  var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12)] = param6;
+                  var12++;
+                  continue;
                 }
+                var11++;
+                continue L6;
               }
               stackIn_22_0 = 0;
             }
@@ -126,18 +122,16 @@ final class n extends q {
                         break L20;
                       }
                       var12 = stackIn_45_0;
-                      while (true) {
-                        if (param8 > var12) {
-                          var10[7].field_v[param3 * (var9 - var12 - 1) + var11] = param6;
-                          var10[5].field_v[-1 + (var9 - var12 + var11 * var9)] = param6;
-                          var10[1].field_v[param3 * var12 + var11] = param2;
-                          var10[3].field_v[var12 + var9 * var11] = param2;
-                          var12++;
-                          continue;
-                        }
-                        var11++;
-                        continue L19;
+                      while (param8 > var12) {
+                        var10[7].field_v[param3 * (var9 - var12 - 1) + var11] = param6;
+                        var10[5].field_v[-1 + (var9 - var12 + var11 * var9)] = param6;
+                        var10[1].field_v[param3 * var12 + var11] = param2;
+                        var10[3].field_v[var12 + var9 * var11] = param2;
+                        var12++;
+                        continue;
                       }
+                      var11++;
+                      continue L19;
                     }
                     stackIn_45_0 = 0;
                   }
@@ -150,18 +144,16 @@ final class n extends q {
                           break L26;
                         }
                         var12 = stackIn_56_0;
-                        while (true) {
-                          if (param1 > var12) {
-                            var10[1].field_v[param3 * (-1 + (-var12 + var9)) + var11] = param0;
-                            var10[3].field_v[-1 + var9 + (-var12 + var9 * var11)] = param0;
-                            var10[7].field_v[var11 + param3 * var12] = param0;
-                            var10[5].field_v[var9 * var11 + var12] = param0;
-                            var12++;
-                            continue;
-                          }
-                          var11++;
-                          continue L25;
+                        while (param1 > var12) {
+                          var10[1].field_v[param3 * (-1 + (-var12 + var9)) + var11] = param0;
+                          var10[3].field_v[-1 + var9 + (-var12 + var9 * var11)] = param0;
+                          var10[7].field_v[var11 + param3 * var12] = param0;
+                          var10[5].field_v[var9 * var11 + var12] = param0;
+                          var12++;
+                          continue;
                         }
+                        var11++;
+                        continue L25;
                       }
                       stackIn_56_0 = param4;
                     }

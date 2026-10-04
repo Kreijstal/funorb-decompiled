@@ -1546,33 +1546,31 @@ final class gh {
               L4: while (true) {
                 stackIn_11_0 = var6;
                 stackIn_11_1 = vf.field_L.field_r;
-                while (true) {
-                  if (stackIn_11_0 < stackIn_11_1) {
-                    stackIn_23_0 = 0;
-                    if (var11 != 0) {
-                      break L1;
-                    }
-                    var7 = stackIn_23_0;
-                    while (vf.field_L.field_m > var7) {
-                      stackIn_11_0 = 0;
-                      stackIn_11_1 = vf.field_L.field_v[vf.field_L.field_r * var7 + var6];
-                      if (stackIn_11_0 != stackIn_11_1) {
-                        var8 = var4 + var6;
-                        var9 = var7 + var5;
-                        var10 = var8 * var8 + var9 * var9;
-                        if (var10 > var3) {
-                          var3 = var10;
-                        }
-                      }
-                      var7++;
-                      continue;
-                    }
-                    var6++;
-                    continue L4;
+                while (stackIn_11_0 < stackIn_11_1) {
+                  stackIn_23_0 = 0;
+                  if (var11 != 0) {
+                    break L1;
                   }
-                  this.field_c = (int)(0.5 + Math.sqrt((double)var3));
-                  break L2;
+                  var7 = stackIn_23_0;
+                  while (vf.field_L.field_m > var7) {
+                    stackIn_11_0 = 0;
+                    stackIn_11_1 = vf.field_L.field_v[vf.field_L.field_r * var7 + var6];
+                    if (stackIn_11_0 != stackIn_11_1) {
+                      var8 = var4 + var6;
+                      var9 = var7 + var5;
+                      var10 = var8 * var8 + var9 * var9;
+                      if (var10 > var3) {
+                        var3 = var10;
+                      }
+                    }
+                    var7++;
+                    continue;
+                  }
+                  var6++;
+                  continue L4;
                 }
+                this.field_c = (int)(0.5 + Math.sqrt((double)var3));
+                break L2;
               }
             }
             this.field_W = 920 + (-(2 * this.field_c) - 58 - 1);

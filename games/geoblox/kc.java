@@ -163,41 +163,39 @@ final class kc {
                               } else {
                                 var13.a(var12, false);
                                 var6_int = 0;
-                                L17: while (true) {
-                                  if (var6_int < var12.field_L) {
-                                    var7 = var10.field_n[var6_int];
-                                    stackIn_20_0 = (ja) ((Object) var13.c((byte) 121));
-                                    var8 = stackIn_20_0;
-                                    while (true) {
-                                      L20: {
-                                        if (var8 != null) {
+                                L17: while (var6_int < var12.field_L) {
+                                  var7 = var10.field_n[var6_int];
+                                  stackIn_20_0 = (ja) ((Object) var13.c((byte) 121));
+                                  var8 = stackIn_20_0;
+                                  while (true) {
+                                    L20: {
+                                      if (var8 != null) {
+                                        stackIn_51_0 = var8;
+                                        stackIn_51_1 = var7;
+                                        if (!((stackIn_51_0 == stackIn_51_1) &&
+                                            (var9 == 0))) {
+                                          var8 = (ja) ((Object) var13.a(-45));
+                                          continue;
+                                        }
+                                      } else {
+                                        var8 = (ja) ((Object) var11.c((byte) 121));
+                                        while (var8 != null) {
                                           stackIn_51_0 = var8;
                                           stackIn_51_1 = var7;
-                                          if (!((stackIn_51_0 == stackIn_51_1) &&
-                                              (var9 == 0))) {
-                                            var8 = (ja) ((Object) var13.a(-45));
-                                            continue;
+                                          if (stackIn_51_0 == stackIn_51_1) {
+                                            break L20;
                                           }
-                                        } else {
-                                          var8 = (ja) ((Object) var11.c((byte) 121));
-                                          while (var8 != null) {
-                                            stackIn_51_0 = var8;
-                                            stackIn_51_1 = var7;
-                                            if (stackIn_51_0 == stackIn_51_1) {
-                                              break L20;
-                                            }
-                                            var8 = (ja) ((Object) var11.a(54));
-                                            continue;
-                                          }
-                                          var11.a(var7, false);
+                                          var8 = (ja) ((Object) var11.a(54));
+                                          continue;
                                         }
+                                        var11.a(var7, false);
                                       }
-                                      var6_int++;
-                                      continue L17;
                                     }
+                                    var6_int++;
+                                    continue L17;
                                   }
-                                  continue L12;
                                 }
+                                continue L12;
                               }
                             }
                             stackIn_44_0 = var4_int;

@@ -215,32 +215,30 @@ final class bh extends java.awt.Canvas {
                 }
               }
               var12 = (ja) ((Object) var6.c((byte) 121));
-              while (true) {
-                if (var12 != null) {
-                  if (var10 != var12) {
-                    var12 = (ja) ((Object) var6.a(param2 - 60));
-                    continue;
-                  }
-                  var11++;
-                  continue L5;
+              while (var12 != null) {
+                if (var10 != var12) {
+                  var12 = (ja) ((Object) var6.a(param2 - 60));
+                  continue;
                 }
-                if (param4) {
-                  var10.field_m = var10.field_m + 1;
-                  dupTemp$1 = var10.field_n[var11];
-                  stackIn_31_0 = dupTemp$1;
-                  stackIn_31_1 = dupTemp$1;
-                  stackIn_31_0.field_m = stackIn_31_1.field_m + 1;
-                }
-                if (param0) {
-                  var10.field_u = param1.field_u;
-                  var10.field_N = var10.field_N + 1;
-                  dupTemp$2 = var10.field_n[var11];
-                  dupTemp$2.field_N = dupTemp$2.field_N + 1;
-                }
-                var14.a(var10.field_n[var11], false);
                 var11++;
                 continue L5;
               }
+              if (param4) {
+                var10.field_m = var10.field_m + 1;
+                dupTemp$1 = var10.field_n[var11];
+                stackIn_31_0 = dupTemp$1;
+                stackIn_31_1 = dupTemp$1;
+                stackIn_31_0.field_m = stackIn_31_1.field_m + 1;
+              }
+              if (param0) {
+                var10.field_u = param1.field_u;
+                var10.field_N = var10.field_N + 1;
+                dupTemp$2 = var10.field_n[var11];
+                dupTemp$2.field_N = dupTemp$2.field_N + 1;
+              }
+              var14.a(var10.field_n[var11], false);
+              var11++;
+              continue L5;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
