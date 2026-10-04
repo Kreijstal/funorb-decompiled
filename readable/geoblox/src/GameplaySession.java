@@ -305,7 +305,7 @@ final class GameplaySession {
           }
         }
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-        mf.selectedThemeBackground.drawRunEncoded(0, 0);
+        SpawnQuotaSupport.selectedThemeBackground.drawRunEncoded(0, 0);
         selectedThemeIdOrScoreBoxX = 4;
         loadingPanelWidthOrScoreBoxY = 4;
         if (methodGuard >= -28) {
@@ -343,7 +343,7 @@ final class GameplaySession {
               break L19;
             }
           }
-          lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
+          PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
           if (!((0 == this.sessionPhase) &&
               (!EntityContactSupport.areEntityQueuesSettled(0)))) {
             UsernameSuggestionsPanel.largeBoxSprite.draw(446, 410);
@@ -376,7 +376,7 @@ final class GameplaySession {
         SoftwareRasterizer.clearFramebuffer();
         MatchScoringSupport.selectedThemeForeground.rotateNearest(MatchScoringSupport.selectedThemeForeground.fullWidth << 3, MatchScoringSupport.selectedThemeForeground.fullHeight << 3, MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullWidth << 3, MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullHeight << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-        w.a(MultiHandleSliderRenderer.rotatedThemeForegroundRaster, -(MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullWidth >> 1) + 320, -(MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullHeight >> 1) + 240);
+        SessionSocketSupport.drawSpriteIntoEmptyDestination(MultiHandleSliderRenderer.rotatedThemeForegroundRaster, -(MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullWidth >> 1) + 320, -(MultiHandleSliderRenderer.rotatedThemeForegroundRaster.fullHeight >> 1) + 240);
         if (!this.debugReducedRendering) {
           PasswordWidgetRenderer.drawSpawnQueueAndHighlight(4740);
         }
@@ -474,7 +474,7 @@ final class GameplaySession {
                           SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                           break L43;
                         }
-                        lj.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                        PointerMenuState.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, PointerMenuState.smallBoxSprite.fullWidth / 2, PointerMenuState.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                       }
                       if ((this.sessionPhase == 0) &&
                           (!EntityContactSupport.areEntityQueuesSettled(0))) {
@@ -502,7 +502,7 @@ final class GameplaySession {
         L48: {
           if (!this.tutorialMode) {
             if (this.delayedActionCountdown > 0) {
-              lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 60 - (lj.smallBoxSprite.fullHeight >> 1) + 240);
+              PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 60 - (PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240);
               FadingDialog.uiPaletteFont.drawCenteredText(KeyboardInputListener.field_b, 320, 310, 0, -1);
             }
             ReflectionCheckRequest.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
@@ -518,7 +518,7 @@ final class GameplaySession {
               ProxyAuthenticationRequiredException.drawScorePopups(-117);
               this.runGuardedStaticCleanup((byte) 64);
               if (this.showGameOverOverlay) {
-                lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
+                PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
                 if (this.sceneAnimationTick < 266) {
                   AudioService.screenTitleSprites[6].draw(0, (this.sceneAnimationTick >> 1) - 113);
                   if (clientControlFlowGuard == 0) {
@@ -719,7 +719,7 @@ final class GameplaySession {
               L25: {
                 inputDerivedModuloIndex = (ClientFlowState.field_c + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionSnapshotSupport.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
-                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
+                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
@@ -728,7 +728,7 @@ final class GameplaySession {
                   if (inputDerivedModuloIndex != 2) {
                     if (3 == inputDerivedModuloIndex) {
                       AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter;
+                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
                       if (clientControlFlowGuard == 0) {
                         break L25;
                       }
@@ -737,19 +737,19 @@ final class GameplaySession {
                       break L25;
                     }
                     AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - lb.secondaryAchievementTrackingCounter;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       break L25;
                     }
                   }
-                  lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter - 1;
+                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
                   UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
                 }
                 UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter + 1;
+                SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
               }
               if (this.tutorialStepId == 0) {
                 this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
@@ -825,7 +825,7 @@ final class GameplaySession {
                     if (2 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex == 3) {
                         AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                        UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter;
+                        UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
                         if (clientControlFlowGuard == 0) {
                           break L30;
                         }
@@ -833,25 +833,25 @@ final class GameplaySession {
                       if (4 != inputDerivedModuloIndex) {
                         break L30;
                       }
-                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - lb.secondaryAchievementTrackingCounter;
+                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
                       AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
                       if (clientControlFlowGuard == 0) {
                         break L30;
                       }
                     }
-                    lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter - 1;
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
                     UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       break L30;
                     }
                   }
-                  lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter + 1;
+                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
                   UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
                   if (clientControlFlowGuard == 0) {
                     break L30;
                   }
                 }
-                AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter << 17;
+                AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter << 17;
               }
             }
             L44: {
@@ -936,8 +936,8 @@ final class GameplaySession {
         while (true) {
           L61: {
             if (UiFontResources.pollKeyboardEvent(111)) {
-              if (te.currentKeyboardEventCharacter > 0) {
-                PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + te.currentKeyboardEventCharacter;
+              if (GameAudioState.currentKeyboardEventCharacter > 0) {
+                PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + GameAudioState.currentKeyboardEventCharacter;
                 if (PacketBuffer.field_r.equalsIgnoreCase("fog")) {
                   if (this.showDebugOverview) {
                     toggledDebugOverview = false;
@@ -1236,7 +1236,7 @@ final class GameplaySession {
           }
           ClientClockSupport.field_a = ClientClockSupport.field_a + pointsForCounters;
         }
-        if ((da.a(0, -117)) &&
+        if ((ClientOptionSupport.isClientOptionEnabled(0, -117)) &&
             (this.score >= 7000)) {
           SecondaryNodeDeque.recordAchievement(239, -120, 16);
         }
@@ -1488,7 +1488,7 @@ final class GameplaySession {
         L1: {
           if (2 == this.sessionPhase) {
             PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
-            lj.smallBoxSprite.draw(this.resultPanelX, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
+            PointerMenuState.smallBoxSprite.draw(this.resultPanelX, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             FadingDialog.uiPaletteFont.drawText(SharedBufferPools.bubbleBonusText, 15 + this.resultPanelX, 312, 0, -1);
             if (clientControlFlowGuard == 0) {
               break L1;
@@ -1497,7 +1497,7 @@ final class GameplaySession {
           shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
           if (this.sessionPhase == 3) {
             PacketBuffer.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
-            lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
+            PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
             FadingDialog.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
             if (this.boardEmptyAtResultStart) {
@@ -1508,7 +1508,7 @@ final class GameplaySession {
             }
           }
           NodeHashTableIterator.popSprite.drawAlpha(-(NodeHashTableIterator.popSprite.fullWidth >> 1) + 320, 240 - (NodeHashTableIterator.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
-          lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 300 - (lj.smallBoxSprite.fullHeight >> 1));
+          PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 300 - (PointerMenuState.smallBoxSprite.fullHeight >> 1));
           countdownBonusText = Integer.toString(this.resultBonusPoints);
           FadingDialog.uiPaletteFont.drawCenteredText(countdownBonusText, 320, 312, 0, -1);
           if (this.boardEmptyAtResultStart) {
@@ -1638,7 +1638,7 @@ final class GameplaySession {
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
-            if (this.resultPanelX <= 320 - (lj.smallBoxSprite.fullWidth >> 1)) {
+            if (this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1)) {
               break L10;
             }
             this.resultPanelX = this.resultPanelX - 1;
@@ -1712,7 +1712,7 @@ final class GameplaySession {
           }
           remainingThemeReleases = -MatchCandidateSupport.releasedInCurrentTheme + MessageDialogSupport.releasesPerTheme;
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
-          FadingDialog.uiPaletteFont.drawRightAlignedText(w.field_e, 621, 441, 0, -1);
+          FadingDialog.uiPaletteFont.drawRightAlignedText(SessionSocketSupport.countdownLabelText, 621, 441, 0, -1);
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
           FadingDialog.uiPaletteFont.drawRightAlignedText(LoginMethod.field_b, 621, 468, 0, -1);
           if (remainingThemeReleases <= 10) {
@@ -1783,7 +1783,7 @@ final class GameplaySession {
         ClientClockSupport.field_a = 4703;
         DequeCursor.field_g = 5997;
         UsernameResponseSupport.field_d = 275;
-        lb.secondaryAchievementTrackingCounter = 935;
+        SessionInstanceState.secondaryAchievementTrackingCounter = 935;
         this.addScore((byte) 127, 0);
         this.addPopupPoints(0, -96);
         EntityCollisionSupport.matchChainLength = 1;
@@ -1892,7 +1892,7 @@ final class GameplaySession {
           this.sessionPhase = 0;
           this.sessionEnding = false;
           this.addScore((byte) 127, 0);
-          if (da.a(0, 111)) {
+          if (ClientOptionSupport.isClientOptionEnabled(0, 111)) {
             DiskCacheWorker.avatarTintPalette[0] = 14788623;
             DiskCacheWorker.avatarTintPalette[1] = 15439657;
           }
@@ -1910,7 +1910,7 @@ final class GameplaySession {
           }
           ClientClockSupport.field_a = 4703;
           UsernameResponseSupport.field_d = 275;
-          lb.secondaryAchievementTrackingCounter = 935;
+          SessionInstanceState.secondaryAchievementTrackingCounter = 935;
           AttachedEntityRenderer.achievementTrackingBits = 0;
           SpriteButtonRenderer.field_r = 1385;
           UiWidget.achievementTrackingAccumulator = 8801;

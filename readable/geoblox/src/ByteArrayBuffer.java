@@ -36,7 +36,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mf.decodeSpritesFromArchive(param2, param0, 126, param3)) {
+          if (!SpawnQuotaSupport.decodeSpritesFromArchive(param2, param0, 126, param3)) {
             return null;
           }
           if (param1 != 19) {

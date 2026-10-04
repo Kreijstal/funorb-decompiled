@@ -13,7 +13,7 @@ final class GameplaySetupSupport {
         ContextualRuntimeException.specialSpriteKindProbability = 0.0;
         MatchCandidateSupport.releasedInCurrentTheme = 0;
         EmailValidator.availableSpriteVariantCount = 3;
-        CacheReference.field_m = 0;
+        CacheReference.generatedInCurrentTheme = 0;
         ArchiveNetworkClient.difficultyStep = 0;
         MessageDialogSupport.releasesPerTheme = 40;
         MessageDialog.availableEntityCategoryCount = 4;

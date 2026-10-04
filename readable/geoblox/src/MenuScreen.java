@@ -95,7 +95,7 @@ abstract class MenuScreen {
             } else {
                 this.activateMenuItem(itemIndex, (byte) -2);
             }
-            Under13TermsPanel.menuPointerRepeatCountdown = lj.menuPointerInitialRepeatDelay;
+            Under13TermsPanel.menuPointerRepeatCountdown = PointerMenuState.menuPointerInitialRepeatDelay;
         } else {
             Under13TermsPanel.menuPointerRepeatCountdown = Under13TermsPanel.menuPointerRepeatCountdown - 1;
             if (Under13TermsPanel.menuPointerRepeatCountdown <= 0) {
@@ -177,7 +177,7 @@ abstract class MenuScreen {
               break L0;
             }
             this.pointerInteractionActive = false;
-            if (wb.pointerActivitySnapshot) {
+            if (AttachmentPointerState.pointerActivitySnapshot) {
               hitItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 126);
               if (hitItemIndex != -1) {
                 this.selectedItemIndex = hitItemIndex;

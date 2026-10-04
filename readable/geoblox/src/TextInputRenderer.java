@@ -128,7 +128,7 @@ class TextInputRenderer extends TextWidgetRenderer {
           var9 = 0;
           if (param1) {
             for (var10 = 16; var10 >= 0; var10--) {
-              if ((!((!da.a(0, -100)) &&
+              if ((!((!ClientOptionSupport.isClientOptionEnabled(0, -100)) &&
                     (var10 == 16))) &&
                   ((1 << var10 & var5) == 0)) {
                 var9++;
@@ -140,7 +140,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             var3_int = var3_int + (-160 + var8);
           }
           for (var10 = 0; var10 < GameplaySetupSupport.achievementTitles.length; var10++) {
-            if ((!da.a(0, -119)) &&
+            if ((!ClientOptionSupport.isClientOptionEnabled(0, -119)) &&
                 (var10 == 16) &&
                 (!AchievementQuery.hasReceivedAchievementSixteen(105))) {
               continue;
@@ -217,7 +217,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             }
             var12 = var12 + var11;
           } else {
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(w.mouseOverIconText, 315, var10, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(SessionSocketSupport.mouseOverIconText, 315, var10, 0, -1);
             if (UnderlinedButtonRenderer.c(-94)) {
               FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }

@@ -91,7 +91,7 @@ final class LoginUiSupport {
         if (methodGuard != 73) {
           LoginUiSupport.clearLoginUiText(-5);
         }
-        if (VisualPropertyOverrides.field_C < 2) {
+        if (VisualPropertyOverrides.clientBootstrapStage < 2) {
           return 0;
         }
         if (MeshPrioritySupport.field_a == 0) {

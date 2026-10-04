@@ -266,8 +266,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         try {
           var13 = param2.getText(16925);
           var8 = param3.getText(16925);
-          if ((SpriteCheckboxRenderer.field_e == null) &&
-              (!w.a(false, 52))) {
+          if ((SpriteCheckboxRenderer.sessionSocket == null) &&
+              (!SessionSocketSupport.pollSessionSocketOpening(false, 52))) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
@@ -346,7 +346,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               if (99 != var9) {
                 PacketBuffer.currentProtocolStage = AccountCreationForm.field_F;
                 AchievementSubmission.field_k = -1;
-                ScorePopup.field_l = var9;
+                ScorePopup.currentPacketOpcode = var9;
               } else {
                 UiWidget.b(30000, DualLinkNode.d(112));
                 IntrusiveNodeHashTable.field_b = new Boolean(Bzip2DecoderState.a(LogoCompositor.sessionPacketBuffer, 0));
@@ -373,7 +373,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           if ((PacketBuffer.currentProtocolStage == AccountCreationForm.field_F) &&
               (TriangleMesh.a(false))) {
-            if (ScorePopup.field_l != 255) {
+            if (ScorePopup.currentPacketOpcode != 255) {
               AudioService.field_a = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 98);
             } else {
               var9_ref_String = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
@@ -383,13 +383,13 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
             Bzip2DecoderState.closeSessionSocket((byte) -114);
             TextTemplateArgumentType.field_e = false;
-            stackIn_54_0 = ScorePopup.field_l;
+            stackIn_54_0 = ScorePopup.currentPacketOpcode;
             return stackIn_54_0;
           }
           if (param6 < 56) {
             field_K = (ClientProtocolStage) null;
           }
-          if (SpriteCheckboxRenderer.field_e == null) {
+          if (SpriteCheckboxRenderer.sessionSocket == null) {
             if (TextTemplateArgumentType.field_e) {
               if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
                 AudioService.field_a = FullscreenFailureReason.loginMessage2Text;
@@ -454,7 +454,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               if (this.alternateButton == param4) {
                 if (!this.retryMode) {
                   if (!this.allowJustPlay) {
-                    hg.b(param1 - 23718);
+                    LoginPasswordSupport.requestLoginUiActionFour(param1 - 23718);
                   } else {
                     ByteArrayBuffer.g(0);
                   }
@@ -749,7 +749,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             if (this.allowJustPlay) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ok.justPlayText;
+              stackIn_19_3 = ClientRenderingState.justPlayText;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;

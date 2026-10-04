@@ -29,7 +29,7 @@ final class GameGraphicsResources {
         String graphicsArchiveDescription = null;
         RuntimeException caughtSpriteLoadFailure = null;
         try {
-          if (!mf.decodeSpritesFromArchive(fileId, groupId, 117, graphicsArchive)) {
+          if (!SpawnQuotaSupport.decodeSpritesFromArchive(fileId, groupId, 117, graphicsArchive)) {
             missingSpritesBeforeReturn = null;
             return (Sprite[]) (missingSpritesBeforeReturn);
           }

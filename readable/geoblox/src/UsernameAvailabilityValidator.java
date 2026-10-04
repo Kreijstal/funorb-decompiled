@@ -70,7 +70,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             }
             if (!(var2 == 2)) {
                 if (var2 == 3) {
-                    return li.tutorialCompleteMessage;
+                    return ArchiveHandshakeState.tutorialCompleteMessage;
                 }
                 if (var2 == 5) {
                     return AccountCreationForm.tutorialFailedMessage;
@@ -88,7 +88,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         }
         if (!(var2 == 2)) {
             if (var2 == 3) {
-                return li.tutorialCompleteMessage;
+                return ArchiveHandshakeState.tutorialCompleteMessage;
             }
             if (var2 == 5) {
                 return AccountCreationForm.tutorialFailedMessage;
@@ -177,7 +177,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
           var5_int = CacheReference.outgoingSessionBuffer.position;
           CacheReference.outgoingSessionBuffer.writeIntBE((byte) 95, MessageDialog.loginHeaderInt);
-          CacheReference.outgoingSessionBuffer.writeLongBE((byte) 116, lb.clientInstanceId);
+          CacheReference.outgoingSessionBuffer.writeLongBE((byte) 116, SessionInstanceState.clientInstanceId);
           var6 = 0;
           if (param0 <= 20) {
             return;

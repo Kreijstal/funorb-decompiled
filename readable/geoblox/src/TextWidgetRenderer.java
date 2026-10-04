@@ -102,7 +102,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           if (param3 != 0) {
             this.field_e = -98;
           }
-          id.restoreRasterTarget(true);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -561,7 +561,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             PasswordWidgetRenderer.a(param4 + param3.widgetY, param0 + param3.widgetX, -14045, param4 + param3.widgetY + param3.widgetHeight, param3.widgetWidth + param0 + param3.widgetX);
             DialRenderer.field_j.a(var12, var10, this.field_c, var11, var10, 8947848);
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
           }
           if (param2 != -2) {
             var13 = (UiWidget) null;
@@ -673,7 +673,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               var15 = stackIn_20_0;
               DialRenderer.field_j.a(var13.field_d + (param2 + param5.widgetY + this.field_m + param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
             }
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
             return;
           }
           return;

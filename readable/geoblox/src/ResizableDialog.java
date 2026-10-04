@@ -317,7 +317,7 @@ abstract class ResizableDialog extends FadingDialog {
             for (var9 = 0; GameplaySetupSupport.achievementTitles.length > var9; var9++) {
               if (!(((1 << var9 & var5) == 0) &&
                     (param0)) &&
-                  !((!da.a(0, 88)) &&
+                  !((!ClientOptionSupport.isClientOptionEnabled(0, 88)) &&
                     (var9 == 16) &&
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
                 if ((AccountCreationSupport.pointerPressXSnapshot >= var3_int) &&
@@ -361,7 +361,7 @@ abstract class ResizableDialog extends FadingDialog {
             for (var9 = 0; GameplaySetupSupport.achievementTitles.length > var9; var9++) {
               if (!(((1 << var9 & var5) == 0) &&
                     (param0)) &&
-                  !((!da.a(0, 88)) &&
+                  !((!ClientOptionSupport.isClientOptionEnabled(0, 88)) &&
                     (var9 == 16) &&
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
                 if ((AccountCreationSupport.pointerPressXSnapshot >= var3_int) &&
@@ -496,7 +496,7 @@ abstract class ResizableDialog extends FadingDialog {
         if (param1 != 20) {
           this.resizeTargetHeight = -34;
         }
-        InstrumentPatch.a(id.field_c, -10 + this.widgetWidth, 35 + param2, 5 + param0, (byte) 107);
+        InstrumentPatch.a(RasterTargetRestoreSupport.dialogTopFrameSprites, -10 + this.widgetWidth, 35 + param2, 5 + param0, (byte) 107);
         InstrumentPatch.a(UnderlinedButtonRenderer.field_e, this.widgetWidth, -22 + (this.widgetHeight + param2), param0, (byte) 107);
         var4 = this.widgetHeight - 79;
         var5 = 169;

@@ -207,7 +207,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "countdown");
           if (null != var2) {
-            w.field_e = EmailValidator.decodeTextBytes(1, var2);
+            SessionSocketSupport.countdownLabelText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(124, "levelsLastGeoblox");
           if (null != var2) {
@@ -266,7 +266,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "tutorial4");
           if (var2 != null) {
-            li.tutorialCompleteMessage = EmailValidator.decodeTextBytes(1, var2);
+            ArchiveHandshakeState.tutorialCompleteMessage = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "tutorial5");
           if (null != var2) {

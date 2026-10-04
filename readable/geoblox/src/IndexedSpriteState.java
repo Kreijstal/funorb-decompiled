@@ -78,7 +78,7 @@ abstract class IndexedSpriteState {
         int var9 = 0;
         int var13 = Geoblox.clientControlFlowFlag;
         try {
-            id.field_c = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
+            RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
             UnderlinedButtonRenderer.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
             AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
             MouseWheelInput.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
@@ -91,8 +91,8 @@ abstract class IndexedSpriteState {
             var5 = MenuScreen.loadIndexedSpriteFrames("commonui", "screen_options", true, param2);
             DebugOverviewCompositor.field_a = new IndexedSprite[4];
             ClientTimingSupport.field_e = new IndexedSprite[4];
-            lj.field_c = new IndexedSprite[4];
-            var6 = new IndexedSprite[][]{DebugOverviewCompositor.field_a, ClientTimingSupport.field_e, lj.field_c};
+            PointerMenuState.screenOptionThreeStateSprites = new IndexedSprite[4];
+            var6 = new IndexedSprite[][]{DebugOverviewCompositor.field_a, ClientTimingSupport.field_e, PointerMenuState.screenOptionThreeStateSprites};
             var20 = new int[4][];
             var17 = var20;
             var7 = var17;
@@ -129,7 +129,7 @@ abstract class IndexedSpriteState {
             var12 = new Sprite(var18.width - 2 * var9, var9);
             var12.setAsRasterTarget();
             var18.drawUnmasked(-var9, 0);
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
             MouseWheelInput.field_e = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ha.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

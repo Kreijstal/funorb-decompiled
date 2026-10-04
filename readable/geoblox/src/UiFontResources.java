@@ -33,7 +33,7 @@ final class UiFontResources {
             return false;
           }
           SessionSnapshotSupport.currentKeyboardEventCode = MidiPcmStream.queuedKeyboardEventCodes[ClientSessionSnapshot.keyboardEventReadIndex];
-          te.currentKeyboardEventCharacter = ScoreSubmission.queuedKeyboardEventCharacters[ClientSessionSnapshot.keyboardEventReadIndex];
+          GameAudioState.currentKeyboardEventCharacter = ScoreSubmission.queuedKeyboardEventCharacters[ClientSessionSnapshot.keyboardEventReadIndex];
           ClientSessionSnapshot.keyboardEventReadIndex = 1 + ClientSessionSnapshot.keyboardEventReadIndex & 127;
           eventAvailable = true;
         }

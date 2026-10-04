@@ -41,7 +41,7 @@ class IntrusiveNode {
               IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, sunMusicTrack);
             }
           } else {
-            IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, te.germsMusicTrack);
+            IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, GameAudioState.germsMusicTrack);
           }
         } else {
           IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, DialWidget.bakingMusicTrack);

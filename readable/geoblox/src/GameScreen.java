@@ -951,9 +951,9 @@ final class GameScreen extends MenuScreen {
             FifoResponseToken.activeHighscoreQuery = DialWidget.getOrRequestHighscores(22, 1, 0, 10, 3);
           }
           L1: {
-            if (0 != da.field_c) {
-              if (da.field_c != 2) {
-                if (da.field_c != 1) {
+            if (0 != ClientOptionSupport.selectedHighscoreView) {
+              if (ClientOptionSupport.selectedHighscoreView != 2) {
+                if (ClientOptionSupport.selectedHighscoreView != 1) {
                   break L1;
                 }
                 AudioService.screenTitleSprites[3].draw(0, 20);
@@ -983,10 +983,10 @@ final class GameScreen extends MenuScreen {
                 }
               }
               hasDisplayedEntryFlag = 0;
-              categoryNames = FifoResponseToken.activeHighscoreQuery.namesByView[da.field_c];
+              categoryNames = FifoResponseToken.activeHighscoreQuery.namesByView[ClientOptionSupport.selectedHighscoreView];
               scoreFont = IntrusiveNodeHashTable.smallFont;
               if (categoryNames != null) {
-                categoryScores = FifoResponseToken.activeHighscoreQuery.valuesByView[da.field_c];
+                categoryScores = FifoResponseToken.activeHighscoreQuery.valuesByView[ClientOptionSupport.selectedHighscoreView];
                 entryTextY = scoreFont.maxAscent + 150;
                 currentScoreHighlightedFlag = 0;
                 entryIndex = 0;
@@ -1365,14 +1365,14 @@ final class GameScreen extends MenuScreen {
                 if (inputDerivedStateBranch != 1) {
                   if (inputDerivedStateBranch == 2) {
                     UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
-                    lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter - 1;
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
                     if (clientControlFlowGuard == 0) {
                       return;
                     }
                   }
                   if (inputDerivedStateBranch == 3) {
                     AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       return;
                     }
@@ -1380,19 +1380,19 @@ final class GameScreen extends MenuScreen {
                   if (inputDerivedStateBranch != 4) {
                     return;
                   }
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - lb.secondaryAchievementTrackingCounter;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
                   AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
                 }
                 UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter + 1;
+                SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
                 if (clientControlFlowGuard == 0) {
                   return;
                 }
               }
-              AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
+              AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
             }
             return;
           }
@@ -2095,12 +2095,12 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 16:
-                  da.field_c = 0;
+                  ClientOptionSupport.selectedHighscoreView = 0;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
                 case 17:
-                  da.field_c = 1;
+                  ClientOptionSupport.selectedHighscoreView = 1;
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
@@ -2109,7 +2109,7 @@ final class GameScreen extends MenuScreen {
                 default:
                   break L1;
               }
-              da.field_c = 2;
+              ClientOptionSupport.selectedHighscoreView = 2;
               break L1;
             }
             L47: {

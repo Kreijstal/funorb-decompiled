@@ -20,7 +20,7 @@ final class AudioService implements Runnable {
     }
 
     final static String a(byte param0) {
-        if (VisualPropertyOverrides.field_C < 2) {
+        if (VisualPropertyOverrides.clientBootstrapStage < 2) {
             return SocialListEntry.field_lb;
         }
         if (!(FadingDialog.field_J == null)) {

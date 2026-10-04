@@ -119,7 +119,7 @@ final class WhirlpoolHash {
               shiftedSourceByte = 255 & source[sourceByteIndex] << sourceBitShift | (source[sourceByteIndex + 1] & 255) >>> -sourceBitShift + 8;
               if ((shiftedSourceByte >= 0) &&
                   (256 > shiftedSourceByte)) {
-                this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
+                this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
                 this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
                 this.bufferBytePosition = this.bufferBytePosition + 1;
                 if (512 == this.bufferedBitCount) {
@@ -139,7 +139,7 @@ final class WhirlpoolHash {
               shiftedSourceByte = 0;
             } else {
               shiftedSourceByte = source[sourceByteIndex] << sourceBitShift & 255;
-              this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
+              this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
             }
             if (8L > remainingBitCount + (long)bufferPartialByteBits) {
               this.bufferedBitCount = (int)((long)this.bufferedBitCount + remainingBitCount);
@@ -214,7 +214,7 @@ final class WhirlpoolHash {
         int unusedClientGuardSnapshot = 0;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> ProxySocketConnector.andInt(this.bufferedBitCount, 7));
+          this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> ProxySocketConnector.andInt(this.bufferedBitCount, 7));
           this.bufferBytePosition = this.bufferBytePosition + 1;
           if (this.bufferBytePosition > 32) {
             while (this.bufferBytePosition < 64) {
@@ -304,18 +304,18 @@ final class WhirlpoolHash {
                 WhirlpoolHash.a((String) null, (byte) -15);
               }
               if (2 == AccountCreationForm.archiveHandshakeStage) {
-                li.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ByteShortQuery.archiveTaskDispatcher);
+                ArchiveHandshakeState.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ByteShortQuery.archiveTaskDispatcher);
                 handshakePacket = new ByteArrayBuffer(13);
                 ConnectionHeaderSupport.writeConnectionHeader(MidiNote.archiveLanguageId, true, ValidatedTextInputWidget.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
                 handshakePacket.writeByte((byte) -54, 15);
                 handshakePacket.writeIntBE((byte) 95, EmailValidator.archiveGameCrc);
-                li.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
+                ArchiveHandshakeState.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
                 AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
                 ArchiveLoadSequence.archiveHandshakeDeadlineMillis = 30000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12446);
               }
               if (AccountCreationForm.archiveHandshakeStage == 3) {
-                if (0 < li.archiveHandshakeSocket.available((byte) 78)) {
-                  replyCode = li.archiveHandshakeSocket.readByte(-17422);
+                if (0 < ArchiveHandshakeState.archiveHandshakeSocket.available((byte) 78)) {
+                  replyCode = ArchiveHandshakeState.archiveHandshakeSocket.readByte(-17422);
                   if (replyCode != 0) {
                     replyFailureBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(replyCode, 28625);
                     return replyFailureBeforeReturn;
@@ -331,10 +331,10 @@ final class WhirlpoolHash {
               if (4 != AccountCreationForm.archiveHandshakeStage) {
                 return -1;
               }
-              AsyncResourceDownloader.archiveNetworkClient.attachSocket(li.archiveHandshakeSocket, false, WidgetSkinState.archiveUseControlOpcode2);
+              AsyncResourceDownloader.archiveNetworkClient.attachSocket(ArchiveHandshakeState.archiveHandshakeSocket, false, WidgetSkinState.archiveUseControlOpcode2);
               StrongCacheReference.archiveConnectTask = null;
               AccountCreationForm.archiveHandshakeStage = 0;
-              li.archiveHandshakeSocket = null;
+              ArchiveHandshakeState.archiveHandshakeSocket = null;
               successBeforeReturn = 0;
               return successBeforeReturn;
             } catch (java.io.IOException handshakeIOException) {

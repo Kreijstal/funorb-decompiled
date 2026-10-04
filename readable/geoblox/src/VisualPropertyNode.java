@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class VisualPropertyNode extends DualLinkNode {
-    static int field_n;
+    static int previousPacketOpcode;
     static boolean field_o;
     static java.applet.Applet field_m;
     private static String field_z;
@@ -19,7 +19,7 @@ class VisualPropertyNode extends DualLinkNode {
 
     static {
         field_z = "kg.C(";
-        field_n = -1;
+        previousPacketOpcode = -1;
         field_o = false;
     }
 }

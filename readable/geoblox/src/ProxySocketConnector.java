@@ -19,33 +19,33 @@ final class ProxySocketConnector extends SocketConnector {
         }
         if (GameScreen.selectedThemeId == 4) {
           MatchScoringSupport.selectedThemeForeground = DisplayNamePanel.bakingForegroundSprite;
-          mf.selectedThemeBackground = FifoResponseToken.bakingBackgroundSprite;
+          SpawnQuotaSupport.selectedThemeBackground = FifoResponseToken.bakingBackgroundSprite;
         } else {
           if (GameScreen.selectedThemeId == 1) {
-            mf.selectedThemeBackground = GzipInflater.sunBackgroundSprite;
+            SpawnQuotaSupport.selectedThemeBackground = GzipInflater.sunBackgroundSprite;
             MatchScoringSupport.selectedThemeForeground = PacketByteCipher.sunForegroundSprite;
           } else {
             if (GameScreen.selectedThemeId == 3) {
               MatchScoringSupport.selectedThemeForeground = UsernameAvailabilityQuery.germsForegroundSprite;
-              mf.selectedThemeBackground = SharedBufferPools.germsBackgroundSprite;
+              SpawnQuotaSupport.selectedThemeBackground = SharedBufferPools.germsBackgroundSprite;
             } else {
               if (GameScreen.selectedThemeId != 0) {
                 if (6 != GameScreen.selectedThemeId) {
                   if (GameScreen.selectedThemeId != 5) {
                     if (2 == GameScreen.selectedThemeId) {
-                      mf.selectedThemeBackground = ValidationMessageWidget.sweetsBackgroundSprite;
-                      MatchScoringSupport.selectedThemeForeground = lb.sweetsForegroundSprite;
+                      SpawnQuotaSupport.selectedThemeBackground = ValidationMessageWidget.sweetsBackgroundSprite;
+                      MatchScoringSupport.selectedThemeForeground = SessionInstanceState.sweetsForegroundSprite;
                     }
                   } else {
-                    mf.selectedThemeBackground = AlternateLongAndTextLoginPayload.sportsBackgroundSprite;
+                    SpawnQuotaSupport.selectedThemeBackground = AlternateLongAndTextLoginPayload.sportsBackgroundSprite;
                     MatchScoringSupport.selectedThemeForeground = LabeledChildWidget.sportsForegroundSprite;
                   }
                 } else {
                   MatchScoringSupport.selectedThemeForeground = GameSoundResources.spaceForegroundSprite;
-                  mf.selectedThemeBackground = LoginPayload.spaceBackgroundSprite;
+                  SpawnQuotaSupport.selectedThemeBackground = LoginPayload.spaceBackgroundSprite;
                 }
               } else {
-                mf.selectedThemeBackground = CachedArchiveSource.jewelsBackgroundSprite;
+                SpawnQuotaSupport.selectedThemeBackground = CachedArchiveSource.jewelsBackgroundSprite;
                 MatchScoringSupport.selectedThemeForeground = MidiPcmStream.jewelsForegroundSprite;
               }
             }

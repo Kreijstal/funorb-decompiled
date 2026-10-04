@@ -164,14 +164,14 @@ final class InstrumentPatch extends IntrusiveNode {
             var7 = param0[1].fullWidth;
             param0[0].draw(param3, param2);
             param0[2].draw(param3 + param1 - var6, param2);
-            SoftwareRasterizer.saveClip(da.field_d);
+            SoftwareRasterizer.saveClip(ClientOptionSupport.sharedSavedClip);
             SoftwareRasterizer.intersectClip(param3 + var5_int, param2, param3 + param1 - var6, param2 + param0[1].fullHeight);
             var8 = var5_int + param3;
             var9 = param1 + (param3 - var6);
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
               param0[1].draw(param3, param2);
             }
-            SoftwareRasterizer.restoreClip(da.field_d);
+            SoftwareRasterizer.restoreClip(ClientOptionSupport.sharedSavedClip);
             if (param4 != 107) {
               field_l = (java.math.BigInteger) null;
             }

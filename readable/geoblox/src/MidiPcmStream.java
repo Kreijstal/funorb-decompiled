@@ -703,12 +703,12 @@ final class MidiPcmStream extends PcmStream {
           if (var6 < 64) {
             this.field_m[var4] = ProxySocketConnector.andInt(this.field_m[var4], -2);
           } else {
-            this.field_m[var4] = lb.orInt(this.field_m[var4], 1);
+            this.field_m[var4] = SessionInstanceState.orInt(this.field_m[var4], 1);
           }
         }
         if (var5 == 65) {
           if (64 <= var6) {
-            this.field_m[var4] = lb.orInt(this.field_m[var4], 2);
+            this.field_m[var4] = SessionInstanceState.orInt(this.field_m[var4], 2);
           } else {
             this.a((byte) 39, var4);
             this.field_m[var4] = ProxySocketConnector.andInt(this.field_m[var4], -3);
@@ -755,7 +755,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (var5 == 81) {
           if (var6 >= 64) {
-            this.field_m[var4] = lb.orInt(this.field_m[var4], 4);
+            this.field_m[var4] = SessionInstanceState.orInt(this.field_m[var4], 4);
           } else {
             this.a(var4, (byte) 67);
             this.field_m[var4] = ProxySocketConnector.andInt(this.field_m[var4], -5);

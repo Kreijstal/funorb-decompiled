@@ -35,7 +35,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, AudioService.canvasWidth, ok.canvasHeight);
+              var9.fillRect(0, 0, AudioService.canvasWidth, ClientRenderingState.canvasHeight);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -57,12 +57,12 @@ abstract class ArchiveRequest extends DualLinkNode {
               var10.setFont(UiFontResources.awtLoadingFont);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(TextWidgetRenderer.field_a, AudioService.canvasWidth / 2 - 152, ok.canvasHeight / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(TextWidgetRenderer.field_a, AudioService.canvasWidth / 2 - 152, ClientRenderingState.canvasHeight / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = AudioService.canvasWidth / 2 - 152;
-              var8 = ok.canvasHeight / 2 - 18;
+              var8 = ClientRenderingState.canvasHeight / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, 3 * param0, 30);
@@ -78,7 +78,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             }
             var9.setFont(UiFontResources.awtLoadingFont);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(SpriteState.field_q, AudioService.canvasWidth / 2 - 6 * SpriteState.field_q.length() / 2, -26 + ok.canvasHeight / 2);
+            var9.drawString(SpriteState.field_q, AudioService.canvasWidth / 2 - 6 * SpriteState.field_q.length() / 2, -26 + ClientRenderingState.canvasHeight / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

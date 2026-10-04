@@ -187,7 +187,7 @@ final class EntityMotionSupport {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           boardContactStateDirty = false;
-          wb.newAttachmentCount = 0;
+          AttachmentPointerState.newAttachmentCount = 0;
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
           movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntity != null) {
@@ -222,7 +222,7 @@ final class EntityMotionSupport {
                     movingEntity.positionX = (float)DialogLayer.rotatedEntityScreenX;
                   }
                   if (!movingEntity.detachedFromBoard) {
-                    wb.newAttachmentCount = wb.newAttachmentCount + 1;
+                    AttachmentPointerState.newAttachmentCount = AttachmentPointerState.newAttachmentCount + 1;
                     break L2;
                   }
                   movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));

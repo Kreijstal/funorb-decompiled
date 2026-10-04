@@ -20,8 +20,8 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         FontLoadingSupport.kindFourRemovalCount = 0;
         EntityMotionSupport.boardContactStateDirty = false;
         MessageDialogSupport.entitiesDetachedThisTick = false;
-        w.avatarShockPending = false;
-        wb.newAttachmentCount = 0;
+        SessionSocketSupport.avatarShockPending = false;
+        AttachmentPointerState.newAttachmentCount = 0;
         LoginPanel.endingEntityScanClear = false;
         RankedListQuery.connectivityDirty = false;
         if (param0 != -39) {
@@ -59,7 +59,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         try {
             if (GameplaySetupSupport.pointerListener != null) {
                 GameplaySession.pointerIdleTicks = 0;
-                lj.livePointerX = event.getX();
+                PointerMenuState.livePointerX = event.getX();
                 ReflectionCheckRequest.livePointerY = event.getY();
                 EndingAnimationSupport.pointerActivityPending = true;
             }
@@ -138,7 +138,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         try {
             if (null != GameplaySetupSupport.pointerListener) {
                 GameplaySession.pointerIdleTicks = 0;
-                lj.livePointerX = event.getX();
+                PointerMenuState.livePointerX = event.getX();
                 ReflectionCheckRequest.livePointerY = event.getY();
                 EndingAnimationSupport.pointerActivityPending = true;
             }
@@ -158,7 +158,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
             return;
           }
           GameplaySession.pointerIdleTicks = 0;
-          lj.livePointerX = -1;
+          PointerMenuState.livePointerX = -1;
           ReflectionCheckRequest.livePointerY = -1;
           EndingAnimationSupport.pointerActivityPending = true;
           return;
@@ -261,7 +261,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
             return;
           }
           GameplaySession.pointerIdleTicks = 0;
-          lj.livePointerX = event.getX();
+          PointerMenuState.livePointerX = event.getX();
           ReflectionCheckRequest.livePointerY = event.getY();
           EndingAnimationSupport.pointerActivityPending = true;
           return;

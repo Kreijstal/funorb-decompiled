@@ -96,7 +96,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             while (var9 < var8) {
               var11 = AchievementQuery.field_i[var9];
               var6[0][var10] = ByteArrayPoolSupport.rankedListResponseNames[var11];
-              var18[0][4 * var10] = hg.rankedEntryKeyTwo[var11];
+              var18[0][4 * var10] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
               var18[0][4 * var10 + 1] = TextHotspotBounds.field_m[var11];
               var18[0][4 * var10 + 2] = NodeHashTableIterator.field_i[var11];
               var18[0][4 * var10 + 3] = FrameTimer.field_b[var11];
@@ -114,7 +114,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             while (var9 < var8) {
               var11 = AchievementQuery.field_i[var9 + var5];
               var6[1][var13] = ByteArrayPoolSupport.rankedListResponseNames[var11];
-              var18[1][4 * var13] = hg.rankedEntryKeyTwo[var11];
+              var18[1][4 * var13] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
               var18[1][1 + 4 * var13] = TextHotspotBounds.field_m[var11];
               var18[1][var13 * 4 + 2] = NodeHashTableIterator.field_i[var11];
               var18[1][var13 * 4 + 3] = FrameTimer.field_b[var11];

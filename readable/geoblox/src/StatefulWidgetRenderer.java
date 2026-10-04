@@ -288,7 +288,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             }
           }
           this.workingSkin.a((StatefulWidgetRenderer) (this), parentX, parentY, widget, 0);
-          id.restoreRasterTarget(true);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -334,7 +334,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
           if (param1 >= -61) {
             byteArrayPool5000 = (byte[][]) null;
           }
-          if (mf.decodeSpritesFromArchive(param2, param0, 114, param3)) {
+          if (SpawnQuotaSupport.decodeSpritesFromArchive(param2, param0, 114, param3)) {
             return SpriteConstructionSupport.buildSpritesWithDecodedAlpha(104);
           }
           return null;

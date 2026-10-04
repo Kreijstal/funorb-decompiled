@@ -23,7 +23,7 @@ final class CanvasResizeController {
     static String tutorialSkipMessage;
     private boolean resizePending;
     static ClientProtocolStage field_l;
-    static long field_r;
+    static long lastSessionSocketWriteMillis;
 
     public static void a(boolean param0) {
         tutorialSkipMessage = null;
@@ -146,7 +146,7 @@ final class CanvasResizeController {
                 return;
               }
               this.resizeCountdownTicks = this.resizeIntervalTicks;
-              if (this.minimumHeapMiB > li.heapCapacityEstimateMiB) {
+              if (this.minimumHeapMiB > ArchiveHandshakeState.heapCapacityEstimateMiB) {
                 this.resizePending = false;
               } else {
                 this.applyConstrainedSize(true);
@@ -168,7 +168,7 @@ final class CanvasResizeController {
                 return;
               }
               this.resizeCountdownTicks = this.resizeIntervalTicks;
-              if (this.minimumHeapMiB > li.heapCapacityEstimateMiB) {
+              if (this.minimumHeapMiB > ArchiveHandshakeState.heapCapacityEstimateMiB) {
                 this.resizePending = false;
               } else {
                 this.applyConstrainedSize(true);
@@ -184,7 +184,7 @@ final class CanvasResizeController {
             }
           }
           if ((AudioService.canvasWidth == this.fallbackWidth) &&
-              (ok.canvasHeight == this.fallbackHeight)) {
+              (ClientRenderingState.canvasHeight == this.fallbackHeight)) {
             return;
           }
           this.resizeListener.onCanvasResize(-2964, this.fallbackWidth, this.fallbackHeight);
@@ -199,7 +199,7 @@ final class CanvasResizeController {
               return;
             }
             this.resizeCountdownTicks = this.resizeIntervalTicks;
-            if (this.minimumHeapMiB > li.heapCapacityEstimateMiB) {
+            if (this.minimumHeapMiB > ArchiveHandshakeState.heapCapacityEstimateMiB) {
               this.resizePending = false;
             } else {
               this.applyConstrainedSize(true);
@@ -222,7 +222,7 @@ final class CanvasResizeController {
               return;
             }
             this.resizeCountdownTicks = this.resizeIntervalTicks;
-            if (this.minimumHeapMiB > li.heapCapacityEstimateMiB) {
+            if (this.minimumHeapMiB > ArchiveHandshakeState.heapCapacityEstimateMiB) {
               this.resizePending = false;
             } else {
               this.applyConstrainedSize(true);
@@ -240,7 +240,7 @@ final class CanvasResizeController {
         if (AudioService.canvasWidth != this.fallbackWidth) {
           this.resizeListener.onCanvasResize(-2964, this.fallbackWidth, this.fallbackHeight);
         } else {
-          if (ok.canvasHeight != this.fallbackHeight) {
+          if (ClientRenderingState.canvasHeight != this.fallbackHeight) {
             this.resizeListener.onCanvasResize(-2964, this.fallbackWidth, this.fallbackHeight);
           }
         }
@@ -274,7 +274,7 @@ final class CanvasResizeController {
             if (AudioService.canvasWidth != var2) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
             } else {
-              if (var3 != ok.canvasHeight) {
+              if (var3 != ClientRenderingState.canvasHeight) {
                 this.resizeListener.onCanvasResize(-2964, var2, var3);
               }
             }
@@ -294,7 +294,7 @@ final class CanvasResizeController {
               if (AudioService.canvasWidth != var2) {
                 this.resizeListener.onCanvasResize(-2964, var2, var3);
               } else {
-                if (var3 != ok.canvasHeight) {
+                if (var3 != ClientRenderingState.canvasHeight) {
                   this.resizeListener.onCanvasResize(-2964, var2, var3);
                 }
               }
@@ -311,7 +311,7 @@ final class CanvasResizeController {
           if (AudioService.canvasWidth != var2) {
             this.resizeListener.onCanvasResize(-2964, var2, var3);
           } else {
-            if (var3 != ok.canvasHeight) {
+            if (var3 != ClientRenderingState.canvasHeight) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
             }
           }
@@ -331,7 +331,7 @@ final class CanvasResizeController {
           if (AudioService.canvasWidth != var2) {
             this.resizeListener.onCanvasResize(-2964, var2, var3);
           } else {
-            if (var3 != ok.canvasHeight) {
+            if (var3 != ClientRenderingState.canvasHeight) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
             }
           }
@@ -350,7 +350,7 @@ final class CanvasResizeController {
           if (AudioService.canvasWidth != var2) {
             this.resizeListener.onCanvasResize(-2964, var2, var3);
           } else {
-            if (var3 != ok.canvasHeight) {
+            if (var3 != ClientRenderingState.canvasHeight) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
             }
           }
@@ -367,7 +367,7 @@ final class CanvasResizeController {
               }
               return;
             }
-            if (var3 != ok.canvasHeight) {
+            if (var3 != ClientRenderingState.canvasHeight) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
               if (this.requestedWidth > 0) {
                 PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
@@ -381,7 +381,7 @@ final class CanvasResizeController {
             if (AudioService.canvasWidth != var2) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
             } else {
-              if (var3 != ok.canvasHeight) {
+              if (var3 != ClientRenderingState.canvasHeight) {
                 this.resizeListener.onCanvasResize(-2964, var2, var3);
               }
             }
@@ -397,7 +397,7 @@ final class CanvasResizeController {
     final boolean isResizeAllowed(int methodGuard) {
         if (methodGuard > -91) {
             createPasswordConfirmationText = (String) null;
-            if (li.heapCapacityEstimateMiB < this.minimumHeapMiB) {
+            if (ArchiveHandshakeState.heapCapacityEstimateMiB < this.minimumHeapMiB) {
                 return false;
             }
             if (TextTemplateDefinition.field_n > 0) {
@@ -405,7 +405,7 @@ final class CanvasResizeController {
             }
             return false;
         }
-        if (li.heapCapacityEstimateMiB < this.minimumHeapMiB) {
+        if (ArchiveHandshakeState.heapCapacityEstimateMiB < this.minimumHeapMiB) {
             return false;
         }
         if (TextTemplateDefinition.field_n > 0) {

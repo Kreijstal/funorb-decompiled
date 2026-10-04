@@ -7,14 +7,14 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9e4b4a183d7c7055e6bd670eae2d51c25ac11f71/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 125)
+## Current readability (pass 126)
 
-The export has 11,194 guarded names and 86,300 identifier edits, plus 11 recorded
-class-name literal edits. Class coverage is 288 semantic renames, one already
-meaningful `Geoblox` name and 14 opaque top-level names.
+The export has 11,347 guarded names and 87,411 identifier edits, plus 11 recorded
+class-name literal edits. All 303 top-level names are meaningful: 302 semantic
+renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -24,7 +24,35 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 125 adds 292 guarded names: thirteen classes, 40 fields, 34 methods,
+Pass 126 adds 153 guarded names: fourteen classes, 32 fields, 28 methods,
+52 parameters and 27 locals. All 11,194 previous complete rules survive.
+The export has 11,347 rules and 87,411 identifier edits plus the same eleven
+separately recorded reflected class-name edits. All 303 top-level classes have
+meaningful names: 302 renamed and the original `Geoblox`. All parameters and
+locals in the fourteen audited owners have guarded names. Unmapped members,
+six large labeled bodies and 207 plain-block labels remain.
+
+The named paths cover session socket task polling, packet buffers/header and
+opcode history, bootstrap stages/localized loading text, generated-entity quota,
+validation scratch and raster restoration/copy/outline helpers. Shared statics
+stay on their original owners. The option mask has no fixed-source nonzero
+producer; a received session-access byte is not assigned undocumented server
+privileges. The power-of-two helper retains overflow and wrong-guard return,
+and outline expansion retains its signed pixel>1 and zero-neighbor conditions.
+
+The prior manifest exceeds the generic subprocess capture limit of 8 MiB.
+Only the workflow's historical-manifest read now allows a bounded 32 MiB;
+compiler and frozen generic naming limits stay unchanged. An explicit
+`sourceChange` records the builder hash, and a regression fixture commits a
+padded historical manifest above 8 MiB and verifies its exact Git-byte hash.
+Raw source, decompiler, bytecode, frozen naming tool and eight native fixture
+pins stay unchanged. The 26 publication tests and all eight native probes pass
+within their existing scopes. All 303 sources reproduce and reverse exactly;
+clean committed checkouts reproduce the export. This pass does not add live
+socket/header/login/bootstrap service, assets/server/browser/phone or performance
+coverage.
+
+Pass 125 added 292 guarded names: thirteen classes, 40 fields, 34 methods,
 78 parameters and 127 locals. All 10,902 previous complete rules and source,
 naming-tool, decompiler, bytecode and native fixture pins remain. The current
 export has 11,194 rules and 86,300 identifier edits, with the same 11 separately
@@ -4606,3 +4634,56 @@ this service and evaluates its guard. `renderDimmedAccountUi` preserves the
 the fixed callees. `LoginUiSupport.pollLoginUiArchiveProgress` performs the
 original index/group-loading calls before returning fixed progress steps; it is
 not a pure percentage getter. None of these bodies are structurally rewritten.
+
+## Shared state and socket opening (pass 126)
+
+The final opaque top-level owners now have source-supported names. These are
+shared static buckets: the name describes a helper/state family, and does not
+move unrelated members into a new subsystem.
+
+| Class | Source-supported role |
+| --- | --- |
+| `TextTemplateLookupSupport` | Type-ID lookup, login-panel wrapper and bootstrap archive-load sequence |
+| `BootstrapUiSupport` | Loading-screen predicate, achievements text and bit population count |
+| `ClientOptionSupport` | Option bit test, highscore view, saved clip and localized bootstrap text |
+| `LoginPasswordSupport` | Login password and action-four request, alongside rank/mesh/avatar arrays |
+| `RasterTargetRestoreSupport` | Snapshot pop/restore/pooling, dialog top frames and highscore names |
+| `SessionInstanceState` | Instance ID, exit request, foreground sprite and achievement counter |
+| `ArchiveHandshakeState` | Archive socket, heap estimate and tutorial completion message |
+| `PointerMenuState` | Volatile pointer X, repeat delay and screen-option resources |
+| `SpawnQuotaSupport` | Generated-entity quota accounting and sprite archive decoding |
+| `ClientRenderingState` | Canvas/mesh state, session client ID and ranked bound seed |
+| `GameAudioState` | Sample cache and germs score, with keyboard character state |
+| `SessionTextState` | Received template references and compressed-text decoder |
+| `SessionSocketSupport` | Socket task poll/header setup, font and raster helpers, base37 alphabet |
+| `AttachmentPointerState` | New attachments, pointer activity and sound label |
+
+`SessionSocketSupport.pollSessionSocketOpening` requests a socket only when
+`sessionSocketOpenTask` is null. Status zero returns false. Terminal completion
+records corrected time; success wraps the result, resets packet cursors and the
+three-entry opcode history, selects `requestReadyStage`, writes the connection
+header and calls the existing flush service. Task failure or the inner IOException
+selects `socketOpenFailedStage`. The terminal path clears the task and returns
+true even on that failure. Other unchecked/checked exceptions retain their
+original rethrow/wrapping behavior; this is not an unconditional success result.
+
+`clientBootstrapStage` retains its original numeric stages. The loading predicate
+uses stage thresholds, `clientScreenStage` and `sessionAccessLevelByte`. The last
+value is an unsigned response byte; its external privilege semantics remain
+unknown. `selectBootstrapLanguageText` indexes translated update-server,
+waiting-for-text and loading-text messages. It does not select hosts or ports.
+`clientOptionMask` is tested by bit index, with -1 meaning true, but has no nonzero
+producer in this fixed source. Java shift masking and sentinel failures remain.
+
+`recordGeneratedEntity` counts creation/enqueue outside tutorial mode; this is
+separate from released-entity counters. Theme completion and difficulty reset
+clear it. `drawSpriteIntoEmptyDestination` clips and copies only into zero
+pixels, without checking source transparency. `markZeroOutlinePixels` considers
+signed source values greater than one and marks zero neighbors with one, including
+distance-two cardinal neighbors; marked pixels do not expand further. The signed
+comparison, writes and aliased input buffers remain exact.
+
+These names improve navigation without reconstructing the six large labeled
+bodies. The explicit workflow migration raises only historical manifest capture
+to 32 MiB, with a Git-history regression above 8 MiB; it does not alter Java bodies,
+bytecode, compiler limits or native fixture scope.

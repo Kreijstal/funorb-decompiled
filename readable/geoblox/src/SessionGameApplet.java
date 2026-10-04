@@ -106,7 +106,7 @@ abstract class SessionGameApplet extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         MeshPrioritySupport.field_a = this.field_u;
-        da.a(true, MeshPrioritySupport.field_a);
+        ClientOptionSupport.selectBootstrapLanguageText(true, MeshPrioritySupport.field_a);
         if (param0 == -70) {
             SessionBootstrapSupport.initializeSessionServices(this.field_s, this.field_k, 5000, param7, this.field_m, param5, MeshPrioritySupport.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
             TextInputValidator.initializeArchiveServices(param7, MeshPrioritySupport.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
@@ -249,7 +249,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         RankedListQuery.updateKeyboardStateForFrame(true);
         AccountCreationSupport.snapshotPointerInput((byte) -128);
-        if ((!bl.b(255)) &&
+        if ((!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255)) &&
             (SpriteConstructionSupport.clientScreenStage != 11)) {
           TextTemplateArgumentType.c(1);
         }
@@ -265,7 +265,7 @@ abstract class SessionGameApplet extends GameApplet {
             Bzip2DecoderState.closeSessionSocket((byte) -115);
             ClientFlowState.requestSessionExit((byte) 81);
             TextInputValidator.a((byte) 124, 2, MessageDialogSupport.idleMessage20MinText);
-            bl.c(-113);
+            BootstrapUiSupport.clearAchievementsTextWhenGuardAllows(-113);
             ArchiveLoadStep.field_e = true;
             DisplayNamePanel.field_G = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           }
@@ -288,7 +288,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if ((DebouncedValidationProvider.archiveLoadStatus != -1) &&
             (DebouncedValidationProvider.archiveLoadStatus != 0)) {
-          if (VisualPropertyOverrides.field_C >= 10) {
+          if (VisualPropertyOverrides.clientBootstrapStage >= 10) {
             if (SpriteConstructionSupport.clientScreenStage >= 10) {
               ClientFlowState.requestSessionExit((byte) 114);
               if (DebouncedValidationProvider.archiveLoadStatus != 3) {
@@ -343,13 +343,13 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if ((DebouncedValidationProvider.archiveLoadStatus == 0) &&
             (!ClientTimingSupport.isClientReadyForSessionActions(93))) {
-          lb.sessionExitRequested = false;
+          SessionInstanceState.sessionExitRequested = false;
         }
-        if ((VisualPropertyOverrides.field_C == 0) &&
+        if ((VisualPropertyOverrides.clientBootstrapStage == 0) &&
             (AchievementQuery.ensureArchiveCatalogLoaded(108))) {
-          VisualPropertyOverrides.field_C = 1;
+          VisualPropertyOverrides.clientBootstrapStage = 1;
         }
-        if (VisualPropertyOverrides.field_C == 1) {
+        if (VisualPropertyOverrides.clientBootstrapStage == 1) {
           if (MeshPrioritySupport.field_a != 0) {
             FadingDialog.field_J = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.field_e, (byte) -62);
           }
@@ -357,10 +357,10 @@ abstract class SessionGameApplet extends GameApplet {
           AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
           DialRenderer.field_n = DisplayModeInfo.a(ClientTimingSupport.field_d, (byte) -41, true, false, 1);
           SessionSnapshotSupport.basicUiGraphicsArchive = DirectByteStorage.field_h;
-          VisualPropertyOverrides.field_C = 2;
+          VisualPropertyOverrides.clientBootstrapStage = 2;
           RankedListQuery.field_i = AttachedEntityRenderer.field_c;
         }
-        if (VisualPropertyOverrides.field_C == 2) {
+        if (VisualPropertyOverrides.clientBootstrapStage == 2) {
           if ((FadingDialog.field_J != null) &&
               (FadingDialog.field_J.ensureIndexLoaded(0))) {
             if (!FadingDialog.field_J.hasGroupName((byte) -116, "")) {
@@ -374,10 +374,10 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
           if (null == FadingDialog.field_J) {
-            VisualPropertyOverrides.field_C = 3;
+            VisualPropertyOverrides.clientBootstrapStage = 3;
           }
         }
-        if ((3 == VisualPropertyOverrides.field_C) &&
+        if ((3 == VisualPropertyOverrides.clientBootstrapStage) &&
             (DelayedIncomingPacket.a(DialRenderer.field_n, AttachedEntityRenderer.field_c, DirectByteStorage.field_h, -11652)) &&
             (DisplayModeInfo.a((byte) -127, DialRenderer.field_n))) {
           LoginUiSupport.releaseAwtLoadingFonts((byte) -105);
@@ -414,16 +414,16 @@ abstract class SessionGameApplet extends GameApplet {
           DirectByteStorage.field_h = null;
           MeshMaterial.a((java.applet.Applet) (this), -82);
           EntityContactSupport.resetFrameTimingHistory(-69);
-          VisualPropertyOverrides.field_C = 10;
+          VisualPropertyOverrides.clientBootstrapStage = 10;
         }
-        if (10 == VisualPropertyOverrides.field_C) {
+        if (10 == VisualPropertyOverrides.clientBootstrapStage) {
           if (MeshPrioritySupport.field_a != 0) {
             TextValidationSupport.field_b = SocketArchiveNetworkClient.createResourceArchive(TextWidgetSupport.field_a, (byte) -62);
           }
-          VisualPropertyOverrides.field_C = 11;
+          VisualPropertyOverrides.clientBootstrapStage = 11;
         }
         L30: {
-          if (VisualPropertyOverrides.field_C == 11) {
+          if (VisualPropertyOverrides.clientBootstrapStage == 11) {
             if (null != TextValidationSupport.field_b) {
               if (!((TextValidationSupport.field_b.ensureIndexLoaded(0)) &&
                   (TextValidationSupport.field_b.loadAllGroups(true)))) {
@@ -432,25 +432,25 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             AgeValidator.field_k = true;
-            VisualPropertyOverrides.field_C = 12;
+            VisualPropertyOverrides.clientBootstrapStage = 12;
           }
         }
         if (param1 != 19660) {
           return;
         }
-        if ((VisualPropertyOverrides.field_C == 12) &&
+        if ((VisualPropertyOverrides.clientBootstrapStage == 12) &&
             (!AgeValidator.field_k)) {
-          VisualPropertyOverrides.field_C = 13;
+          VisualPropertyOverrides.clientBootstrapStage = 13;
         }
-        if (VisualPropertyOverrides.field_C == 13) {
+        if (VisualPropertyOverrides.clientBootstrapStage == 13) {
           var3 = 1;
-          if (null != b.field_b) {
-            stackIn_135_0 = (!b.field_b.pollLoaded(true)) ? 0 : 1;
+          if (null != TextTemplateLookupSupport.bootstrapArchiveLoadSequence) {
+            stackIn_135_0 = (!TextTemplateLookupSupport.bootstrapArchiveLoadSequence.pollLoaded(true)) ? 0 : 1;
             var3 = stackIn_135_0;
-            HighscoreNameEntry.a(b.field_b.statusText, -2, b.field_b.scaledProgress);
+            HighscoreNameEntry.a(TextTemplateLookupSupport.bootstrapArchiveLoadSequence.statusText, -2, TextTemplateLookupSupport.bootstrapArchiveLoadSequence.scaledProgress);
           }
           if (var3 != 0) {
-            VisualPropertyOverrides.field_C = 20;
+            VisualPropertyOverrides.clientBootstrapStage = 20;
           }
         }
         if ((!param0) &&
@@ -472,7 +472,7 @@ abstract class SessionGameApplet extends GameApplet {
         boolean stackIn_4_2 = false;
         var3 = Geoblox.clientControlFlowFlag;
         if (!CacheReference.f(-31456)) {
-          if (VisualPropertyOverrides.field_C >= 10) {
+          if (VisualPropertyOverrides.clientBootstrapStage >= 10) {
             if (!OpacityWidget.isLogoAnimationComplete(7426)) {
               ValidationIconWidget.advanceLogoAnimationTick((byte) 88);
             } else {
@@ -730,7 +730,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (param0 < 119) {
           this.field_m = true;
         }
-        var2 = ScorePopup.field_l;
+        var2 = ScorePopup.currentPacketOpcode;
         if ((var2 < 64) &&
             (OpacityWidget.field_G[var2])) {
           if (var2 == 0) {

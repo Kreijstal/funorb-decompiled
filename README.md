@@ -17,14 +17,42 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e4b4a183d7c7055e6bd670eae2d51c25ac11f71/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 125 adds 292 guarded names: thirteen classes, 40 fields, 34 methods,
+Pass 126 adds 153 guarded names: fourteen classes, 32 fields, 28 methods,
+52 parameters and 27 locals. All 11,194 previous complete rules survive.
+The export has 11,347 rules and 87,411 identifier edits plus the same eleven
+separately recorded reflected class-name edits. All 303 top-level classes have
+meaningful names: 302 renamed and the original `Geoblox`. All parameters and
+locals in the fourteen audited owners have guarded names. Unmapped members,
+six large labeled bodies and 207 plain-block labels remain.
+
+The named paths cover session socket task polling, packet buffers/header and
+opcode history, bootstrap stages/localized loading text, generated-entity quota,
+validation scratch and raster restoration/copy/outline helpers. Shared statics
+stay on their original owners. The option mask has no fixed-source nonzero
+producer; a received session-access byte is not assigned undocumented server
+privileges. The power-of-two helper retains overflow and wrong-guard return,
+and outline expansion retains its signed pixel>1 and zero-neighbor conditions.
+
+The prior manifest exceeds the generic subprocess capture limit of 8 MiB.
+Only the workflow's historical-manifest read now allows a bounded 32 MiB;
+compiler and frozen generic naming limits stay unchanged. An explicit
+`sourceChange` records the builder hash, and a regression fixture commits a
+padded historical manifest above 8 MiB and verifies its exact Git-byte hash.
+Raw source, decompiler, bytecode, frozen naming tool and eight native fixture
+pins stay unchanged. The 26 publication tests and all eight native probes pass
+within their existing scopes. All 303 sources reproduce and reverse exactly;
+clean committed checkouts reproduce the export. This pass does not add live
+socket/header/login/bootstrap service, assets/server/browser/phone or performance
+coverage.
+
+Pass 125 added 292 guarded names: thirteen classes, 40 fields, 34 methods,
 78 parameters and 127 locals. All 10,902 previous complete rules and source,
 naming-tool, decompiler, bytecode and native fixture pins remain. The current
 export has 11,194 rules and 86,300 identifier edits, with the same 11 separately

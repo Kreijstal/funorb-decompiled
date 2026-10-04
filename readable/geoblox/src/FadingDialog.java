@@ -190,7 +190,7 @@ abstract class FadingDialog extends WidgetContainer {
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
             ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
@@ -201,7 +201,7 @@ abstract class FadingDialog extends WidgetContainer {
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
             ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
@@ -212,7 +212,7 @@ abstract class FadingDialog extends WidgetContainer {
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
             ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
@@ -221,7 +221,7 @@ abstract class FadingDialog extends WidgetContainer {
         SoftwareRasterizer.clearFramebuffer();
         this.b(0, 20, 0);
         super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-        id.restoreRasterTarget(true);
+        RasterTargetRestoreSupport.restoreRasterTarget(true);
         ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
     }
 

@@ -10,7 +10,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         if (param0 < 102) {
             return;
         }
-        b.a(false, param1, false);
+        TextTemplateLookupSupport.openLoginPanel(false, param1, false);
     }
 
     final ValidationState currentValidationState(int guard) {
@@ -144,7 +144,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               } else {
                 param2 = DualLinkNode.invalidPasswordText;
               }
-              SpriteButtonRenderer.field_t.a(b.currentLoginIdentifier, 0);
+              SpriteButtonRenderer.field_t.a(TextTemplateLookupSupport.currentLoginIdentifier, 0);
             }
             var3_int = 1;
             if (param1 == 10) {

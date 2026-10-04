@@ -105,18 +105,18 @@ final class ValidationIconWidget extends ButtonWidget {
           var13 = ClientClockSupport.validationStateSprites[0];
           var10 = var13.fullWidth << 1;
           var11 = var13.fullHeight << 1;
-          if ((null != da.field_b) &&
-              (var10 <= da.field_b.width) &&
-              (var11 <= da.field_b.height)) {
-            Geoblox.setRasterTarget(1, da.field_b);
+          if ((null != ClientOptionSupport.validationIconScratchSprite) &&
+              (var10 <= ClientOptionSupport.validationIconScratchSprite.width) &&
+              (var11 <= ClientOptionSupport.validationIconScratchSprite.height)) {
+            Geoblox.setRasterTarget(1, ClientOptionSupport.validationIconScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
           } else {
-            da.field_b = new Sprite(var10, var11);
-            Geoblox.setRasterTarget(1, da.field_b);
+            ClientOptionSupport.validationIconScratchSprite = new Sprite(var10, var11);
+            Geoblox.setRasterTarget(1, ClientOptionSupport.validationIconScratchSprite);
           }
           var13.rotateSmooth(112, 144, var13.fullWidth << 4, var13.fullHeight << 4, -this.animationTicks << 10, 4096);
-          id.restoreRasterTarget(true);
-          da.field_b.drawAdditive(-var13.fullWidth + var5, var6 - var13.fullHeight, 256);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
+          ClientOptionSupport.validationIconScratchSprite.drawAdditive(-var13.fullWidth + var5, var6 - var13.fullHeight, 256);
         }
     }
 

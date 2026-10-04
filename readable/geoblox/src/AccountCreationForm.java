@@ -123,7 +123,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.backButton = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
         this.displayNameInput.hoverText = AchievementProtocolSupport.createDisplayNameTooltipText;
         this.emailInput.hoverText = GameGraphicsResources.createEmailTooltipText;
-        this.confirmEmailInput.hoverText = ok.createEmailConfirmationTooltipText;
+        this.confirmEmailInput.hoverText = ClientRenderingState.createEmailConfirmationTooltipText;
         this.passwordInput.hoverText = FullscreenErrorDialog.createPasswordTooltipText;
         this.confirmPasswordInput.hoverText = ByteArrayPoolSupport.createPasswordConfirmationTooltipText;
         this.ageInput.hoverText = ArchiveRequest.createAgeTooltipText;
@@ -149,7 +149,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String var2 = OpacityWidget.a(ArchiveIndex.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(var3, ScorePopupSupport.createEmailText, 170, this.emailInput, 5);
-        var3 = var3 + (5 + this.a(this.confirmEmailInput, 170, ok.createEmailConfirmationText, 20, "", var3, (byte) -65));
+        var3 = var3 + (5 + this.a(this.confirmEmailInput, 170, ClientRenderingState.createEmailConfirmationText, 20, "", var3, (byte) -65));
         var3 = var3 + this.a(var3, LoginPayloadKind.createPasswordText, 170, this.passwordInput, 5);
         var3 = var3 + (this.a(-99, this.confirmPasswordInput, CanvasResizeController.createPasswordConfirmationText, var3, 170, createPasswordHintText) + 5);
         var3 = var3 + (this.a(-103, this.displayNameInput, OpacityWidget.createDisplayNameText, var3, 170, ClientProtocolStage.createDisplayNameHintText) + 5);
@@ -296,7 +296,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         DialRenderer.field_j = MessageDialog.getSharedUiStyle(125);
         int var1 = -117 / ((12 - param0) / 57);
         ClientFlowState.accountDialogLayer = new DialogLayer();
-        b.a(true, true, false);
+        TextTemplateLookupSupport.openLoginPanel(true, true, false);
     }
 
     private final String c(boolean param0) {

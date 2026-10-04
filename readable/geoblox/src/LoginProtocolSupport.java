@@ -35,8 +35,8 @@ final class LoginProtocolSupport {
             CharSequence receivedNameCharacters = null;
             unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
-              if ((null == SpriteCheckboxRenderer.field_e) &&
-                  (!w.a(useLongLoginPayload, 52))) {
+              if ((null == SpriteCheckboxRenderer.sessionSocket) &&
+                  (!SessionSocketSupport.pollSessionSocketOpening(useLongLoginPayload, 52))) {
                 connectionPendingResult = -1;
                 return connectionPendingResult;
               }
@@ -60,7 +60,7 @@ final class LoginProtocolSupport {
                 if (responseByteThenPortSwapValue != 0) {
                   AchievementSubmission.field_k = -1;
                   PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
-                  ScorePopup.field_l = responseByteThenPortSwapValue;
+                  ScorePopup.currentPacketOpcode = responseByteThenPortSwapValue;
                 } else {
                   PacketBuffer.currentProtocolStage = MessageDialog.awaitingLoginLongState;
                 }
@@ -70,19 +70,19 @@ final class LoginProtocolSupport {
                 TextValidationSupport.field_a = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 UsernameAvailabilityValidator.a(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
-                PacketBuffer.currentProtocolStage = da.awaitingLoginResultStage;
+                PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginResultStage;
               }
               if (methodGuard != 0) {
                 unusedNullPrimaryTextSnapshot = (String) null;
                 LoginProtocolSupport.advanceLoginHandshake(false, (String) null, 95, false, (String) null, 13);
               }
               L6: {
-                if ((da.awaitingLoginResultStage == PacketBuffer.currentProtocolStage) &&
+                if ((ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage) &&
                     (UiWidget.b(30000, 1))) {
                   responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.position = 0;
                   GameSoundResources.optionalLoginText = null;
-                  ScorePopup.field_l = responseByteThenPortSwapValue;
+                  ScorePopup.currentPacketOpcode = responseByteThenPortSwapValue;
                   if ((responseByteThenPortSwapValue != 0) &&
                       (responseByteThenPortSwapValue != 1)) {
                     if (responseByteThenPortSwapValue != 8) {
@@ -96,10 +96,10 @@ final class LoginProtocolSupport {
                     return closedResponseResult;
                   }
                   AchievementSubmission.field_k = -1;
-                  PacketBuffer.currentProtocolStage = da.awaitingLoginDetailsStage;
+                  PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginDetailsStage;
                 }
               }
-              if ((da.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
+              if ((ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
                   (TriangleMesh.a(false))) {
                 ClientClockSupport.field_c = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 SpriteCheckboxRenderer.field_f = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
@@ -131,7 +131,7 @@ final class LoginProtocolSupport {
                 SecondaryDeque.field_f = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 105);
                 receivedNameCharacters = (CharSequence) ((Object) SecondaryDeque.field_f);
                 SecondaryNodeHashTable.field_b = ResizableDialog.a(receivedNameCharacters, 12);
-                EntityLinkSupport.field_a = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                EntityLinkSupport.sessionAccessLevelByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 PacketBuffer.currentProtocolStage = LogoCompositor.connectedSessionStage;
                 if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) != RatingPresentationResources.loginPayloadKindThree) {
                   if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
@@ -168,27 +168,27 @@ final class LoginProtocolSupport {
                   ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] = ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] + 50;
                 }
                 LogoCompositor.sessionPacketBuffer.initializeCipher(ProgressBarWidget.field_D, false);
-                connectedResponseResult = ScorePopup.field_l;
+                connectedResponseResult = ScorePopup.currentPacketOpcode;
                 return connectedResponseResult;
               }
               if ((PacketBuffer.currentProtocolStage == TextInputRenderer.awaitingLoginFailureTextStage) &&
                   (TriangleMesh.a(false))) {
                 Bzip2DecoderState.closeSessionSocket((byte) -118);
-                if ((ScorePopup.field_l == 7) &&
+                if ((ScorePopup.currentPacketOpcode == 7) &&
                     (!TextTemplateArgumentType.field_e)) {
                   TextTemplateArgumentType.field_e = true;
                   retryPendingResult = -1;
                   return retryPendingResult;
                 }
-                if (ScorePopup.field_l == 7) {
-                  ScorePopup.field_l = 3;
+                if (ScorePopup.currentPacketOpcode == 7) {
+                  ScorePopup.currentPacketOpcode = 3;
                 }
                 AudioService.field_a = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 101);
                 TextTemplateArgumentType.field_e = false;
-                failedResponseResult = ScorePopup.field_l;
+                failedResponseResult = ScorePopup.currentPacketOpcode;
                 return failedResponseResult;
               }
-              if (null == SpriteCheckboxRenderer.field_e) {
+              if (null == SpriteCheckboxRenderer.sessionSocket) {
                 if (TextTemplateArgumentType.field_e) {
                   if (30000L >= GameGraphicsResources.elapsedSinceSessionActivity((byte) 12)) {
                     AudioService.field_a = FullscreenFailureReason.loginMessage2Text;

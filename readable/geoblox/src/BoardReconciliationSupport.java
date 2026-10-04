@@ -31,7 +31,7 @@ final class BoardReconciliationSupport {
         RuntimeException sortFailureForContext = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          SingleChildWidget.a(0, entryLimit, ok.field_b, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.rankedEntryCount, true);
+          SingleChildWidget.a(0, entryLimit, ClientRenderingState.rankedKeyTwoLowerBoundSeed, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.rankedEntryCount, true);
           if (methodGuard != -98) {
             return;
           }
@@ -266,7 +266,7 @@ final class BoardReconciliationSupport {
             routedAttachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
             while (routedAttachedEntity != null) {
               if ((!(null == routedAttachedEntity.entityQueue) ||
-                  (!(!w.avatarShockPending) &&
+                  (!(!SessionSocketSupport.avatarShockPending) &&
                     !(!routedAttachedEntity.touchesAvatar)))) {
                 L39: {
                   L40: {
@@ -304,7 +304,7 @@ final class BoardReconciliationSupport {
                       }
                     }
                     if ((routedAttachedEntity.entityQueue != DelegatingCanvas.transientEntities) &&
-                        (!w.avatarShockPending)) {
+                        (!SessionSocketSupport.avatarShockPending)) {
                       break L40;
                     }
                     transientNeighborIndex = 0;
@@ -326,7 +326,7 @@ final class BoardReconciliationSupport {
                     DelegatingCanvas.transientEntities.addLast(-100, routedAttachedEntity);
                     routedAttachedEntity.animationFrameIndex = 0;
                     if ((routedAttachedEntity.touchesAvatar) &&
-                        (w.avatarShockPending)) {
+                        (SessionSocketSupport.avatarShockPending)) {
                       popupOriginYInput = (int)routedAttachedEntity.positionY;
                       popupOriginXInput = (int)routedAttachedEntity.positionX;
                       popupGuardInput = 117;
@@ -375,15 +375,15 @@ final class BoardReconciliationSupport {
                   categoryResetThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
                   continue;
                 }
-                if (w.avatarShockPending) {
+                if (SessionSocketSupport.avatarShockPending) {
                   AvatarFeedbackSupport.requestAvatarFeedback(3, false);
                   Bzip2DecoderState.avatarShockContactPending = false;
                 }
               }
               sessionForRasterRead = UiWidget.gameplaySession;
-              rasterDirtyDecision = (UiWidget.gameplaySession.boardRasterDirty) || (EntityMotionSupport.boardContactStateDirty) || (w.avatarShockPending);
+              rasterDirtyDecision = (UiWidget.gameplaySession.boardRasterDirty) || (EntityMotionSupport.boardContactStateDirty) || (SessionSocketSupport.avatarShockPending);
               sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
-              w.avatarShockPending = false;
+              SessionSocketSupport.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {
                 SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
               }

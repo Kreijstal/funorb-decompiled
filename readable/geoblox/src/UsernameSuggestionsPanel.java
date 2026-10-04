@@ -20,7 +20,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mf.decodeSpritesFromArchive(param0, param2, 123, param1)) {
+          if (!SpawnQuotaSupport.decodeSpritesFromArchive(param0, param2, 123, param1)) {
             stackIn_2_0 = null;
             return (IndexedSprite) (stackIn_2_0);
           }
@@ -49,7 +49,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (param0 > -68) {
           largeBoxSprite = (Sprite) null;
         }
-        stackIn_6_0 = (SpriteCheckboxRenderer.field_e != null) && (PacketBuffer.currentProtocolStage.isPostRequestStage(true));
+        stackIn_6_0 = (SpriteCheckboxRenderer.sessionSocket != null) && (PacketBuffer.currentProtocolStage.isPostRequestStage(true));
         return stackIn_6_0;
     }
 
@@ -66,7 +66,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (WidgetSkinState.usernameQueryFlowState == IntrusiveDeque.pendingClientFlowToken) {
             return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491);
         }
-        return b.currentLoginIdentifier;
+        return TextTemplateLookupSupport.currentLoginIdentifier;
     }
 
     public static void b(boolean param0) {

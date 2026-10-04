@@ -20,7 +20,7 @@ final class TextTemplateDefinition extends DualLinkNode {
         String var7;
         String var8;
         var5 = Geoblox.clientControlFlowFlag;
-        var6 = "(" + MidiNoteMixer.field_o + " " + AttachedEntityRenderer.field_b + " " + VisualPropertyNode.field_n + ") " + ScorePopup.field_l;
+        var6 = "(" + MidiNoteMixer.thirdPreviousPacketOpcode + " " + AttachedEntityRenderer.secondPreviousPacketOpcode + " " + VisualPropertyNode.previousPacketOpcode + ") " + ScorePopup.currentPacketOpcode;
         var1 = var6;
         if (0 < AchievementSubmission.field_k) {
           var1 = var6 + ":";
@@ -82,7 +82,7 @@ final class TextTemplateDefinition extends DualLinkNode {
                 this.argumentTypeIds = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
                   var6 = buffer.readUnsignedShortBE(true);
-                  var7 = b.findTextTemplateArgumentType(false, var6);
+                  var7 = TextTemplateLookupSupport.findTextTemplateArgumentType(false, var6);
                   if (var7 != null) {
                     this.argumentTypeIds[var5] = var6;
                     array$0 = new int[var7.valueCount];
@@ -125,7 +125,7 @@ final class TextTemplateDefinition extends DualLinkNode {
         }
         if (!(this.referencedTemplateIds == null)) {
             for (var2 = 0; this.referencedTemplateIds.length > var2; var2++) {
-                this.referencedTemplateIds[var2] = lb.orInt(this.referencedTemplateIds[var2], 32768);
+                this.referencedTemplateIds[var2] = SessionInstanceState.orInt(this.referencedTemplateIds[var2], 32768);
             }
         }
     }
@@ -168,7 +168,7 @@ final class TextTemplateDefinition extends DualLinkNode {
             return;
         }
         try {
-            SpriteButtonRenderer.field_t = new LoginPanel(b.currentLoginIdentifier, (String) null, AgeValidator.field_i, param2, param3);
+            SpriteButtonRenderer.field_t = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.field_i, param2, param3);
             ButtonWidget.field_C = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.field_t);
             ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.field_C);
         } catch (RuntimeException runtimeException) {

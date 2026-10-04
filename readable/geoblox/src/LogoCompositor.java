@@ -33,7 +33,7 @@ final class LogoCompositor {
         TextTemplateArgumentType.renderLogoMeshes((byte) 123);
         if (sceneAlpha256 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -sceneAlpha256 + 256);
-          id.restoreRasterTarget(true);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
           if (DequeCursor.logoAnimationTick >= 150) {
             LogoPreparationSupport.logoFinalFrameTop.drawAlpha(15 + logoLeft, logoTop + 10, sceneAlpha256);
           } else {
@@ -58,7 +58,7 @@ final class LogoCompositor {
             }
           }
         } else {
-          id.restoreRasterTarget(true);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
           if (DequeCursor.logoAnimationTick >= 150) {
             LogoPreparationSupport.logoFinalFrameTop.drawAlpha(15 + logoLeft, logoTop + 10, sceneAlpha256);
             overlayTickOffset = -125 + DequeCursor.logoAnimationTick;

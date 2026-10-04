@@ -3,7 +3,7 @@
  */
 final class NetworkArchiveRequest extends ArchiveRequest {
     static int field_w;
-    static PlatformTask field_B;
+    static PlatformTask sessionSocketOpenTask;
     ByteArrayBuffer responseBuffer;
     byte reservedTailBytes;
     static byte[][] byteArrayPool30000;
@@ -18,7 +18,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
         barSprite = null;
         settingsCookieValue = null;
-        field_B = null;
+        sessionSocketOpenTask = null;
         byteArrayPool30000 = (byte[][]) null;
     }
 
@@ -47,7 +47,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             guardedNullResult = (IndexedSprite[]) null;
             return guardedNullResult;
           }
-          if (mf.decodeSpritesFromArchive(fileId, groupId, 104, graphicsArchive)) {
+          if (SpawnQuotaSupport.decodeSpritesFromArchive(fileId, groupId, 104, graphicsArchive)) {
             return ArchiveNetworkClient.buildIndexedSpritesFromDecodedSheet(0);
           }
           return null;

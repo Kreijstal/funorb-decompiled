@@ -124,10 +124,10 @@ final class DequeCursor {
           ClientFlowState.accountDialogLayer.processPointerFrame(true, 127, MatchScoringSupport.field_d, TextConcatenationSupport.field_b);
           ClientFlowState.accountDialogLayer.advanceDialogAnimations(-65);
           while (UiFontResources.pollKeyboardEvent(77)) {
-            ClientFlowState.accountDialogLayer.a((byte) 105, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
+            ClientFlowState.accountDialogLayer.a((byte) 105, GameAudioState.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
           }
-          if (GzipInflater.field_d != param0) {
-            var1_int = GzipInflater.field_d;
+          if (GzipInflater.pendingLoginUiAction != param0) {
+            var1_int = GzipInflater.pendingLoginUiAction;
             MidiNote.a(-1, false);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;

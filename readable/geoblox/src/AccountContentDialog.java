@@ -16,7 +16,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
         java.awt.Canvas var5 = null;
         var4 = Geoblox.clientControlFlowFlag;
         try {
-          if (VisualPropertyOverrides.field_C < 10) {
+          if (VisualPropertyOverrides.clientBootstrapStage < 10) {
             var3_int = 0;
             if (UsernameQueryState.canvasRedrawRequested) {
               var3_int = 1;

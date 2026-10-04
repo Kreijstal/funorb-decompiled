@@ -90,7 +90,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             return stackIn_5_0;
           }
           if (this.validationStateForText(-257, candidateText) != WidgetSkinState.field_m) {
-            return da.createEmailValidText;
+            return ClientOptionSupport.createEmailValidText;
           }
           stackIn_9_0 = PasswordValidator.createEmailUnavailableAlertText;
           return stackIn_9_0;

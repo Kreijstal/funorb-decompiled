@@ -61,7 +61,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
             while (param0 != 0L) {
                 var7_long = param0;
                 param0 = param0 / 37L;
-                var9 = w.field_c[(int)(-(37L * param0) + var7_long)];
+                var9 = SessionSocketSupport.base37NameAlphabet[(int)(-(37L * param0) + var7_long)];
                 if (95 == var9) {
                     var10 = -1 + var6.length();
                     var9 = 160;

@@ -184,7 +184,7 @@ final class ClientFlowToken {
         if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-91)) {
             return DelayedPcmStream.usernameQueryCandidate;
         }
-        return b.currentLoginIdentifier;
+        return TextTemplateLookupSupport.currentLoginIdentifier;
     }
 
     static {

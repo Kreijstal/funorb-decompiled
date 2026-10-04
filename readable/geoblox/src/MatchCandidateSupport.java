@@ -142,7 +142,7 @@ final class MatchCandidateSupport {
                       } else {
                         variantMatchFlagBits = 1073741824;
                       }
-                      candidateArrayBeforePack[candidateWriteIndexBeforePack] = lb.orInt(existingCandidateBits, lb.orInt(smallestEntityIdBeforePack, lb.orInt(lb.orInt(lb.orInt(categoryMatchFlagBits, variantMatchFlagBits), largestPackedEntityId << 20), middlePackedEntityId << 10)));
+                      candidateArrayBeforePack[candidateWriteIndexBeforePack] = SessionInstanceState.orInt(existingCandidateBits, SessionInstanceState.orInt(smallestEntityIdBeforePack, SessionInstanceState.orInt(SessionInstanceState.orInt(SessionInstanceState.orInt(categoryMatchFlagBits, variantMatchFlagBits), largestPackedEntityId << 20), middlePackedEntityId << 10)));
                       EmailAvailabilityQuery.matchCandidateCount = EmailAvailabilityQuery.matchCandidateCount + 1;
                     }
                     if (tripleSharesCategory == 0) {
@@ -243,7 +243,7 @@ final class MatchCandidateSupport {
             }
             finalFrameSprite.drawUnmasked(0, -LogoPreparationSupport.logoFinalFrameTop.height);
             UsernameQuerySupport.logoFinalFrameBottom.trimY = LogoPreparationSupport.logoFinalFrameTop.height;
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
         } catch (RuntimeException slicePreparationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) slicePreparationFailure), "ul.A(" + methodGuard + ',' + (graphicsArchive != null ? "{...}" : "null") + ')');
         }

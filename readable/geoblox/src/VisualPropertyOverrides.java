@@ -16,7 +16,7 @@ class VisualPropertyOverrides extends VisualPropertyNode {
     private int field_T;
     private boolean field_S;
     private int field_cb;
-    static int field_C;
+    static int clientBootstrapStage;
     private Sprite[] field_eb;
     private boolean field_L;
     static Sprite[] sparkleFrames;

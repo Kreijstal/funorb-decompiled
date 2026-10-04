@@ -82,7 +82,7 @@ final class LogoPreparationSupport {
         }
         if (!useTextTemplate) {
           RankedListQuery.field_f = PrefixCodeDecoder.readCompressedText(packet, 0, 80);
-          vj.field_c = null;
+          SessionTextState.receivedTextTemplateReferences = null;
           return new ClientSessionSnapshot(useTextTemplate);
         }
         textTemplateId = packet.readUnsignedShortBE(true);
@@ -94,12 +94,12 @@ final class LogoPreparationSupport {
           } else {
             referencedTemplateIdsSnapshot = null;
           }
-          vj.field_c = referencedTemplateIdsSnapshot;
+          SessionTextState.receivedTextTemplateReferences = referencedTemplateIdsSnapshot;
         } catch (java.lang.Exception templateFailure) {
           caughtTemplateFailure = templateFailure;
           templateFailureForReport = (Exception) (Object) caughtTemplateFailure;
           IterableNodeHashTable.a((Throwable) ((Object) templateFailureForReport), "CC1", (byte) 125);
-          vj.field_c = null;
+          SessionTextState.receivedTextTemplateReferences = null;
           RankedListQuery.field_f = null;
           return new ClientSessionSnapshot(useTextTemplate);
         }

@@ -3,7 +3,7 @@
  */
 abstract class CacheReference extends DualLinkNode {
     static PacketBuffer outgoingSessionBuffer;
-    static int field_m;
+    static int generatedInCurrentTheme;
     int field_n;
     static AudioOutput gameMusicOutput;
     static int menuPointerRepeatInterval;
@@ -22,7 +22,7 @@ abstract class CacheReference extends DualLinkNode {
             if (SpriteConstructionSupport.clientScreenStage < 10) {
                 return false;
             }
-            if (VisualPropertyOverrides.field_C >= 13) {
+            if (VisualPropertyOverrides.clientBootstrapStage >= 13) {
                 return true;
             }
             return false;
@@ -30,7 +30,7 @@ abstract class CacheReference extends DualLinkNode {
         if (SpriteConstructionSupport.clientScreenStage < 10) {
             return false;
         }
-        if (VisualPropertyOverrides.field_C >= 13) {
+        if (VisualPropertyOverrides.clientBootstrapStage >= 13) {
             return true;
         }
         return false;

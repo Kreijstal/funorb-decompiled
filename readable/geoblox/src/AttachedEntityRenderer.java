@@ -4,12 +4,12 @@
 final class AttachedEntityRenderer {
     static int achievementTrackingBits;
     static ResourceArchive field_c;
-    static int field_b;
+    static int secondPreviousPacketOpcode;
 
     public static void releaseStaticReferences(int methodGuard) {
         field_c = null;
         if (methodGuard < 121) {
-            field_b = 78;
+            secondPreviousPacketOpcode = 78;
         }
     }
 
@@ -38,6 +38,6 @@ final class AttachedEntityRenderer {
     }
 
     static {
-        field_b = -1;
+        secondPreviousPacketOpcode = -1;
     }
 }

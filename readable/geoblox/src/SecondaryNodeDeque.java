@@ -111,7 +111,7 @@ final class SecondaryNodeDeque implements Iterable {
           EntityCollisionSupport.preparePendingActionPanel((byte) -122);
         }
         if (!UiWidget.gameplaySession.submissionBlocked) {
-          GameplayEntity.pendingAchievementSubmissions.addLast(-44, new AchievementSubmission(achievementId, achievementCheckByte, AttachedEntityRenderer.achievementTrackingBits, UiWidget.achievementTrackingAccumulator, AwtRasterBuffer.primaryAchievementTrackingCounter, lb.secondaryAchievementTrackingCounter));
+          GameplayEntity.pendingAchievementSubmissions.addLast(-44, new AchievementSubmission(achievementId, achievementCheckByte, AttachedEntityRenderer.achievementTrackingBits, UiWidget.achievementTrackingAccumulator, AwtRasterBuffer.primaryAchievementTrackingCounter, SessionInstanceState.secondaryAchievementTrackingCounter));
         }
         return;
     }

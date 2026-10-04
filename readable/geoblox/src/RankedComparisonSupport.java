@@ -13,10 +13,10 @@ final class RankedComparisonSupport {
           if (ClientProtocolStage.rankedEntryKeyOne[rightIndex] > ClientProtocolStage.rankedEntryKeyOne[leftIndex]) {
             return false;
           }
-          if (hg.rankedEntryKeyTwo[leftIndex] > hg.rankedEntryKeyTwo[rightIndex]) {
+          if (LoginPasswordSupport.rankedEntryKeyTwo[leftIndex] > LoginPasswordSupport.rankedEntryKeyTwo[rightIndex]) {
             return true;
           }
-          if (hg.rankedEntryKeyTwo[rightIndex] > hg.rankedEntryKeyTwo[leftIndex]) {
+          if (LoginPasswordSupport.rankedEntryKeyTwo[rightIndex] > LoginPasswordSupport.rankedEntryKeyTwo[leftIndex]) {
             return false;
           }
           rightTiePartSum = FrameTimer.field_b[rightIndex] + TextHotspotBounds.field_m[rightIndex] + NodeHashTableIterator.field_i[rightIndex];
@@ -30,10 +30,10 @@ final class RankedComparisonSupport {
           }
           return !(rightIndex >= leftIndex);
         }
-        if (hg.rankedEntryKeyTwo[rightIndex] < hg.rankedEntryKeyTwo[leftIndex]) {
+        if (LoginPasswordSupport.rankedEntryKeyTwo[rightIndex] < LoginPasswordSupport.rankedEntryKeyTwo[leftIndex]) {
           return true;
         }
-        if (hg.rankedEntryKeyTwo[rightIndex] > hg.rankedEntryKeyTwo[leftIndex]) {
+        if (LoginPasswordSupport.rankedEntryKeyTwo[rightIndex] > LoginPasswordSupport.rankedEntryKeyTwo[leftIndex]) {
           return false;
         }
         if (ClientProtocolStage.rankedEntryKeyOne[rightIndex] < ClientProtocolStage.rankedEntryKeyOne[leftIndex]) {

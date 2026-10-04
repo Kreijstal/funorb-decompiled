@@ -33,10 +33,10 @@ final class ClientProtocolStage {
         if (!checkEnabled) {
             return true;
         }
-        if (this == da.awaitingLoginResultStage) {
+        if (this == ClientOptionSupport.awaitingLoginResultStage) {
             return true;
         }
-        if (da.awaitingLoginDetailsStage == this) {
+        if (ClientOptionSupport.awaitingLoginDetailsStage == this) {
             return true;
         }
         if (LogoCompositor.connectedSessionStage != this) {

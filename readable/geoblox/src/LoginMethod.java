@@ -123,7 +123,7 @@ final class LoginMethod {
         RuntimeException caughtPreparationReleaseFailure = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (null != te.gameSoundSampleCache) {
+          if (null != GameAudioState.gameSoundSampleCache) {
             for (themeFlagIndex = 0; themeFlagIndex < 7; themeFlagIndex++) {
               if (!EmailValidator.themeMusicPreparationFlags[themeFlagIndex]) {
                 return;
@@ -132,7 +132,7 @@ final class LoginMethod {
             AccountEligibilitySupport.musicScoreArchive = null;
             UsernameAvailabilityQuery.instrumentPatchArchive = null;
             PasswordWidgetRenderer.gameMusicStream.clearInstrumentSampleIds((byte) 83);
-            te.gameSoundSampleCache = null;
+            GameAudioState.gameSoundSampleCache = null;
           }
           if (methodGuard == -24) {
             return;

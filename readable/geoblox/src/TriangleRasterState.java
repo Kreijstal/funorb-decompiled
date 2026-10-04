@@ -26,7 +26,7 @@ final class TriangleRasterState {
         clipHeight = clipBottom - clipTop;
         TriangleRasterState.updateTriangleClipCenter();
         if (rowBaseOffsets.length < clipHeight) {
-            rowBaseOffsets = new int[da.a((byte) 107, clipHeight)];
+            rowBaseOffsets = new int[ClientOptionSupport.roundUpPowerOfTwo((byte) 107, clipHeight)];
         }
         int rowBaseOffset = clipTop * SoftwareRasterizer.stride + clipLeft;
         for (rowIndex = 0; rowIndex < clipHeight; rowIndex++) {

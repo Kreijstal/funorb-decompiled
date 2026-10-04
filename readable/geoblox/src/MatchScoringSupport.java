@@ -56,8 +56,8 @@ final class MatchScoringSupport {
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if ((0 == EmailAvailabilityQuery.matchCandidateCount) &&
-              (0 < wb.newAttachmentCount)) {
-            if (w.avatarShockPending) {
+              (0 < AttachmentPointerState.newAttachmentCount)) {
+            if (SessionSocketSupport.avatarShockPending) {
               return false;
             }
             EntityCollisionSupport.matchChainLength = 0;

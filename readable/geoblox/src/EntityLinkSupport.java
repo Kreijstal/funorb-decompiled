@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EntityLinkSupport {
-    static int field_a;
+    static int sessionAccessLevelByte;
     static String waitingForFontsText;
 
     final static void writeRankedListQuery(RankedListQuery query, int packetOpcode, byte methodGuard) {
@@ -61,7 +61,7 @@ final class EntityLinkSupport {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 48) {
-            field_a = -51;
+            sessionAccessLevelByte = -51;
         }
         waitingForFontsText = null;
     }

@@ -63,7 +63,7 @@ final class HighscoreNameEntry {
                 inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
                 queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ClientSessionSnapshot.chooseSpawnSpriteKind(methodGuard ^ 741924143), TextTemplateDefinition.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), BoardReconciliationSupport.ticksSinceLastEntityRelease + UsernameResponseSupport.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * TextTemplateDefinition.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
                 SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
-                mf.b(false);
+                SpawnQuotaSupport.recordGeneratedEntity(false);
               }
             }
             return;

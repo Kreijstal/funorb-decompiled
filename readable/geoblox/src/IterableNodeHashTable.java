@@ -28,7 +28,7 @@ final class IterableNodeHashTable implements Iterable {
         if (AgeValidator.field_i) {
           Geoblox.activeMessageDialog.showConnectionRestoredContent(false);
         } else {
-          var1 = EntityLinkSupport.field_a;
+          var1 = EntityLinkSupport.sessionAccessLevelByte;
           if (var1 > 0) {
             if (1 == var1) {
               TextWidgetRenderer.field_d = EntityContactSupport.ticketingOneUnreadText;

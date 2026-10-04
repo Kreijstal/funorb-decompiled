@@ -96,7 +96,7 @@ final class IntArrayQuery extends IntrusiveNode {
         String metricsArchiveDescription = null;
         RuntimeException caughtFontFailure = null;
         try {
-          if (!mf.decodeSpritesFromArchive(fileId, groupId, 117, glyphGraphicsArchive)) {
+          if (!SpawnQuotaSupport.decodeSpritesFromArchive(fileId, groupId, 117, glyphGraphicsArchive)) {
             return null;
           }
           sentinelRemainder = 8 % ((-50 - methodGuard) / 51);

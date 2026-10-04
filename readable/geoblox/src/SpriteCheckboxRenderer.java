@@ -3,7 +3,7 @@
  */
 final class SpriteCheckboxRenderer implements WidgetRenderer {
     static Sprite boardSceneRaster;
-    static BufferedSocket field_e;
+    static BufferedSocket sessionSocket;
     static int field_f;
     static String accountCreationDisplayName;
     static int field_c;
@@ -75,7 +75,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
     }
 
     public static void a(boolean param0) {
-        field_e = null;
+        sessionSocket = null;
         boardSceneRaster = null;
         if (!param0) {
             return;
@@ -154,7 +154,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                li.heapCapacityEstimateMiB = 1 + (int)(var3.longValue() / 1048576L);
+                ArchiveHandshakeState.heapCapacityEstimateMiB = 1 + (int)(var3.longValue() / 1048576L);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -69,7 +69,7 @@ final class ContextualRuntimeException extends RuntimeException {
           }
           if ((!InstrumentPatch.field_q) &&
               (AsyncResourceDownloader.field_e > ResizableDialog.field_V) &&
-              (wb.pointerActivitySnapshot)) {
+              (AttachmentPointerState.pointerActivitySnapshot)) {
             ResizableDialog.field_V = 0;
             ByteTextDecodingSupport.field_a = NodeHashTableIterator.field_g;
             PendingActionMarker.field_g = DequeCursor.field_e;
@@ -117,7 +117,7 @@ final class ContextualRuntimeException extends RuntimeException {
         if (!(ClientFlowState.accountCreationFlowState != IntrusiveDeque.pendingClientFlowToken)) {
             return ByteStorage.accountCreationPassword;
         }
-        return hg.field_d;
+        return LoginPasswordSupport.currentLoginPassword;
     }
 
     final static boolean a(PlatformTaskDispatcher param0, byte param1) {

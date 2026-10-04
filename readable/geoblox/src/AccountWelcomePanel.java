@@ -16,7 +16,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         try {
             this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) null);
             this.goBackButton = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
-            this.justPlayButton = new ButtonWidget(ok.justPlayText, (WidgetListener) null);
+            this.justPlayButton = new ButtonWidget(ClientRenderingState.justPlayText, (WidgetListener) null);
             var1 = new SpriteButtonRenderer();
             this.createAccountButton.renderer = (WidgetRenderer) ((Object) var1);
             this.goBackButton.renderer = (WidgetRenderer) ((Object) var1);
@@ -1190,7 +1190,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "justplay");
                 if (null != textResourceBytes) {
-                  ok.justPlayText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientRenderingState.justPlayText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "justplay_excl");
                 if (null != textResourceBytes) {
@@ -1548,7 +1548,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_email_confirm");
                 if (null != textResourceBytes) {
-                  ok.createEmailConfirmationText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientRenderingState.createEmailConfirmationText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_age");
                 if (textResourceBytes != null) {
@@ -1676,7 +1676,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_email_confirm_tooltip");
                 if (null != textResourceBytes) {
-                  ok.createEmailConfirmationTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientRenderingState.createEmailConfirmationTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_age_tooltip");
                 if (null != textResourceBytes) {
@@ -1792,7 +1792,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_emailvalid");
                 if (textResourceBytes != null) {
-                  da.createEmailValidText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientOptionSupport.createEmailValidText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_account_success");
                 if (null != textResourceBytes) {
@@ -2027,7 +2027,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "sound_colon");
                 if (textResourceBytes != null) {
-                  wb.soundLabelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  AttachmentPointerState.soundLabelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "music_colon");
                 if (textResourceBytes != null) {
@@ -2051,7 +2051,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "achievements");
                 if (null != textResourceBytes) {
-                  bl.achievementsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  BootstrapUiSupport.achievementsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "achievementsthisgame");
                 if (null != textResourceBytes) {
@@ -2123,7 +2123,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "resumegame");
                 if (null != textResourceBytes) {
-                  id.resumeGameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  RasterTargetRestoreSupport.resumeGameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "resumetutorial");
                 if (textResourceBytes != null) {
@@ -2393,7 +2393,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mouseoveranicon");
                 if (null != textResourceBytes) {
-                  w.mouseOverIconText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SessionSocketSupport.mouseOverIconText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "notyetachieved");
                 if (null != textResourceBytes) {

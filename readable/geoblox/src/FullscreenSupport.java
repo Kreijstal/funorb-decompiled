@@ -52,7 +52,7 @@ final class FullscreenSupport {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           TriangleRasterState.prepareTriangleClipFromRasterizer();
-          ok.meshProjectionShift = 11;
+          ClientRenderingState.meshProjectionShift = 11;
           MultiHandleSliderRenderer.meshSpecularResponseByAbsDot = new int[260];
           sentinelDivisionThenResponseIndexSnapshot = -29 / ((methodGuard + 40) / 45);
           for (responseIndex = 0; 256 > responseIndex; responseIndex++) {

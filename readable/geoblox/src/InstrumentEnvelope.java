@@ -28,7 +28,7 @@ final class InstrumentEnvelope {
     final static boolean b(int param0) {
         if (param0 != 13) {
             field_k = (String[]) null;
-            if (SpriteCheckboxRenderer.field_e == null) {
+            if (SpriteCheckboxRenderer.sessionSocket == null) {
                 return false;
             }
             if (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
@@ -36,7 +36,7 @@ final class InstrumentEnvelope {
             }
             return false;
         }
-        if (SpriteCheckboxRenderer.field_e == null) {
+        if (SpriteCheckboxRenderer.sessionSocket == null) {
             return false;
         }
         if (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {

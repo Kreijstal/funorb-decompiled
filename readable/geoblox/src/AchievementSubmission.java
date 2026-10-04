@@ -74,8 +74,8 @@ final class AchievementSubmission extends IntrusiveNode {
           cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = modelTransform[0] - cameraTransform[0];
           cameraXBasisOrDeltaYOrClipCenterY = -cameraTransform[1] + modelTransform[1];
           cameraXBasisOrDeltaZOrVertexIndex = modelTransform[2] - cameraTransform[2];
-          cameraTranslationXScaledOrNormalXXQ16 = cameraTransform[3] * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ - (-(cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[4]) - cameraTransform[5] * cameraXBasisOrDeltaZOrVertexIndex) >> -ok.meshProjectionShift + 16;
-          cameraTranslationYScaledOrNormalYXQ16 = cameraXBasisOrDeltaZOrVertexIndex * cameraTransform[8] + (cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraTransform[6] + cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[7]) >> 16 - ok.meshProjectionShift;
+          cameraTranslationXScaledOrNormalXXQ16 = cameraTransform[3] * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ - (-(cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[4]) - cameraTransform[5] * cameraXBasisOrDeltaZOrVertexIndex) >> -ClientRenderingState.meshProjectionShift + 16;
+          cameraTranslationYScaledOrNormalYXQ16 = cameraXBasisOrDeltaZOrVertexIndex * cameraTransform[8] + (cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraTransform[6] + cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[7]) >> 16 - ClientRenderingState.meshProjectionShift;
           cameraTranslationZOrNormalZXQ16 = cameraTransform[11] * cameraXBasisOrDeltaZOrVertexIndex + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraTransform[9] + cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[10] >> 16;
           if (!preserveSharedResources) {
             AchievementSubmission.b(-2);
@@ -89,8 +89,8 @@ final class AchievementSubmission extends IntrusiveNode {
                 cameraYBasisOrVertexX = mesh.vertexX[cameraXBasisOrDeltaZOrVertexIndex];
                 cameraYBasisOrVertexY = mesh.vertexY[cameraXBasisOrDeltaZOrVertexIndex];
                 cameraYBasisOrVertexZ = mesh.vertexZ[cameraXBasisOrDeltaZOrVertexIndex];
-                cameraZBasisOrCameraXScaled = (cameraYBasisOrVertexX * cameraXXOrNormalXYQ16 + cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ >> -ok.meshProjectionShift + 16) + cameraTranslationXScaledOrNormalXXQ16;
-                cameraZBasisOrCameraYScaled = cameraTranslationYScaledOrNormalYXQ16 + (cameraYXOrNormalYYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexY * cameraYYOrNormalYZQ16 + cameraYBasisOrVertexZ * cameraYZQ16OrNormalX >> 16 - ok.meshProjectionShift);
+                cameraZBasisOrCameraXScaled = (cameraYBasisOrVertexX * cameraXXOrNormalXYQ16 + cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ >> -ClientRenderingState.meshProjectionShift + 16) + cameraTranslationXScaledOrNormalXXQ16;
+                cameraZBasisOrCameraYScaled = cameraTranslationYScaledOrNormalYXQ16 + (cameraYXOrNormalYYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexY * cameraYYOrNormalYZQ16 + cameraYBasisOrVertexZ * cameraYZQ16OrNormalX >> 16 - ClientRenderingState.meshProjectionShift);
                 cameraZBasisOrCameraDepth = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX + cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY >> 16);
                 nearPlaneOrNormalCapacityOrQueueMinDepth = -51;
                 invertedDepthOrNormalIndexOrQueueGuard = ~cameraZBasisOrCameraDepth;
@@ -113,8 +113,8 @@ final class AchievementSubmission extends IntrusiveNode {
                   }
                 }
                 if (storeCameraCoordinates) {
-                  BoardEntityState.cameraMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled >> ok.meshProjectionShift;
-                  UsernameAvailabilityValidator.cameraMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraYScaled >> ok.meshProjectionShift;
+                  BoardEntityState.cameraMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled >> ClientRenderingState.meshProjectionShift;
+                  UsernameAvailabilityValidator.cameraMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraYScaled >> ClientRenderingState.meshProjectionShift;
                   EntityCollisionSupport.cameraMeshVertexZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
                 }
                 cameraXBasisOrDeltaZOrVertexIndex++;
@@ -148,7 +148,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   cameraYBasisOrVertexZ = mesh.thirdVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
                   FullscreenEntrySupport.thirdVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
                   BufferedSocket.thirdVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 + (cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYZQ16OrNormalX * cameraYBasisOrVertexZ) >> 16);
-                  hg.thirdVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexY * cameraZYOrNormalZZQ16 + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX >> 16);
+                  LoginPasswordSupport.thirdVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexY * cameraZYOrNormalZZQ16 + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX >> 16);
                   cameraXBasisOrDeltaZOrVertexIndex++;
                   if (controlFlagSnapshot != 0) {
                     return;
@@ -168,7 +168,7 @@ final class AchievementSubmission extends IntrusiveNode {
                 cameraZYOrNormalZZQ16 = modelTransform[11];
                 cameraXZQ16OrNormalIndex = 0;
                 while (!(~mesh.normalCount >= ~cameraXZQ16OrNormalIndex)) {
-                  nearPlaneOrNormalCapacityOrQueueMinDepth = ok.transformedMeshNormalX.length;
+                  nearPlaneOrNormalCapacityOrQueueMinDepth = ClientRenderingState.transformedMeshNormalX.length;
                   invertedDepthOrNormalIndexOrQueueGuard = cameraXZQ16OrNormalIndex;
                   if (controlFlagSnapshot != 0) {
                     break L3;
@@ -179,7 +179,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   cameraYZQ16OrNormalX = mesh.normalX[cameraXZQ16OrNormalIndex];
                   cameraZZQ16OrNormalY = mesh.normalY[cameraXZQ16OrNormalIndex];
                   cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = mesh.normalZ[cameraXZQ16OrNormalIndex];
-                  ok.transformedMeshNormalX[cameraXZQ16OrNormalIndex] = cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraZZQ16OrNormalY + cameraYZQ16OrNormalX * cameraTranslationXScaledOrNormalXXQ16) >> 16;
+                  ClientRenderingState.transformedMeshNormalX[cameraXZQ16OrNormalIndex] = cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraZZQ16OrNormalY + cameraYZQ16OrNormalX * cameraTranslationXScaledOrNormalXXQ16) >> 16;
                   ClientClockSupport.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
                   IterableNodeHashTable.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
                   cameraXZQ16OrNormalIndex++;

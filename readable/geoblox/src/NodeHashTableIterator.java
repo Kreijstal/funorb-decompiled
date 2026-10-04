@@ -45,7 +45,7 @@ final class NodeHashTableIterator implements Iterator {
             param2 -= 4;
             var5 = param1 + param0 * SoftwareRasterizer.stride;
             var6 = SoftwareRasterizer.stride - param2;
-            w.a(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
+            SessionSocketSupport.markZeroOutlinePixels(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
             return;
         }
         NodeHashTableIterator.b(32);
@@ -53,7 +53,7 @@ final class NodeHashTableIterator implements Iterator {
         param2 -= 4;
         var5 = param1 + param0 * SoftwareRasterizer.stride;
         var6 = SoftwareRasterizer.stride - param2;
-        w.a(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
+        SessionSocketSupport.markZeroOutlinePixels(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
     }
 
     public final Object next() {

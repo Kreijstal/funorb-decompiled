@@ -59,8 +59,8 @@ final class SessionBootstrapSupport {
               LogoCompositor.sessionPacketBuffer = new PacketBuffer(incomingBufferCapacity);
               CacheReference.outgoingSessionBuffer = new PacketBuffer(outgoingBufferCapacity);
               GameplayEntity.sessionTaskDispatcher = taskDispatcher;
-              ok.sessionClientId = clientId;
-              lb.clientInstanceId = instanceId;
+              ClientRenderingState.sessionClientId = clientId;
+              SessionInstanceState.clientInstanceId = instanceId;
               NetworkArchiveRequest.sessionServerPort = serverPort;
               TextInputRenderer.alternateSessionServerPort = alternateServerPort;
               MessageDialog.loginHeaderInt = gameCrc;

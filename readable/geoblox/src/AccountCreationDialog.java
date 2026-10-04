@@ -15,8 +15,8 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     final static void a(String param0, byte param1, boolean param2, String param3) {
         try {
-            b.currentLoginIdentifier = param0;
-            hg.field_d = param3;
+            TextTemplateLookupSupport.currentLoginIdentifier = param0;
+            LoginPasswordSupport.currentLoginPassword = param3;
             int var4_int = -62 % ((13 - param1) / 62);
             MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, param2);
         } catch (RuntimeException runtimeException) {
@@ -211,7 +211,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         if (!(!this.accountIneligible)) {
-            b.a(true, false, false);
+            TextTemplateLookupSupport.openLoginPanel(true, false, false);
             return;
         }
         if (param1 != -20) {

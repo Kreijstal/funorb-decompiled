@@ -55,28 +55,28 @@ final class IntrusiveDeque {
                 if (6 != selectedThemeId) {
                   if (5 == selectedThemeId) {
                     NodeHashTableIterator.sportMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "sport");
-                    PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, NodeHashTableIterator.sportMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+                    PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, NodeHashTableIterator.sportMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                   } else {
                     if (2 == selectedThemeId) {
                       SocialListEntry.sweetsMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "sweets");
-                      PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, SocialListEntry.sweetsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+                      PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, SocialListEntry.sweetsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                     }
                   }
                 } else {
                   SessionGameApplet.spaceMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "space");
-                  PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, SessionGameApplet.spaceMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+                  PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, SessionGameApplet.spaceMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                 }
               } else {
                 RatingPresentationResources.jewelleryMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "jewellery");
-                PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, RatingPresentationResources.jewelleryMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+                PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, RatingPresentationResources.jewelleryMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
               }
             } else {
-              te.germsMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "germs");
-              PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, te.germsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+              GameAudioState.germsMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "germs");
+              PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, GameAudioState.germsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
             }
           } else {
             DialWidget.bakingMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "baking");
-            PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, DialWidget.bakingMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+            PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, DialWidget.bakingMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           }
           EmailValidator.themeMusicPreparationFlags[themeId] = true;
           if (methodGuard <= 110) {
@@ -299,7 +299,7 @@ final class IntrusiveDeque {
           if (var0 <= 2) {
             continue;
           }
-          field_b[var0] = lb.orInt(field_b[var0], (-2 + var0) * 22 << 16);
+          field_b[var0] = SessionInstanceState.orInt(field_b[var0], (-2 + var0) * 22 << 16);
         }
         IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }

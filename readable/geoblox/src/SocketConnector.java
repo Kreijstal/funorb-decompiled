@@ -172,12 +172,12 @@ abstract class SocketConnector {
           ValidationMessageWidget.gameOverMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "game_over");
           IntrusiveNode.sunMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "sun");
           ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "bonus_bubble_jingle");
-          te.gameSoundSampleCache = new SoundSampleCache(synthesizedSoundArchive, vorbisArchive);
-          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, IntrusiveNode.sunMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          GameAudioState.gameSoundSampleCache = new SoundSampleCache(synthesizedSoundArchive, vorbisArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, IntrusiveNode.sunMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           EmailValidator.themeMusicPreparationFlags[1] = true;
-          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ContentTransitionDialog.resultMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
-          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ValidationMessageWidget.gameOverMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
-          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, GameGraphicsResources.titleMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, ContentTransitionDialog.resultMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, ValidationMessageWidget.gameOverMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(GameAudioState.gameSoundSampleCache, 0, -1, GameGraphicsResources.titleMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           soundIndex = 0;
           if (methodGuard < 69) {
             invalidGuardLookupName = (String) null;
@@ -191,9 +191,9 @@ abstract class SocketConnector {
             }
             if ((soundIndex >= 10) &&
                 (26 >= soundIndex)) {
-              sampleBeforeResampling = te.gameSoundSampleCache.getVorbisSampleByName(-1879044097, w.gameSoundResourceNames[soundIndex]);
+              sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getVorbisSampleByName(-1879044097, SessionSocketSupport.gameSoundResourceNames[soundIndex]);
             } else {
-              sampleBeforeResampling = te.gameSoundSampleCache.getSynthesizedSampleByName(1, w.gameSoundResourceNames[soundIndex]);
+              sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getSynthesizedSampleByName(1, SessionSocketSupport.gameSoundResourceNames[soundIndex]);
             }
             GameSoundResources.gameSoundSamples[soundIndex] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
             SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndex] = true;

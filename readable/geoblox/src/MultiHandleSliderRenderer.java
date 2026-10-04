@@ -170,14 +170,14 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
             var8 = param0[1].fullWidth;
             param0[0].drawGrayTinted(param2, param4, param1);
             param0[2].drawGrayTinted(-var7 + (param2 + param3), param4, param1);
-            SoftwareRasterizer.saveClip(da.field_d);
+            SoftwareRasterizer.saveClip(ClientOptionSupport.sharedSavedClip);
             SoftwareRasterizer.intersectClip(var6_int + param2, param4, -var7 + param3 + param2, param4 + param0[1].fullHeight);
             var9 = param2 + var6_int;
             var10 = -var7 + (param2 + param3);
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param0[1].drawGrayTinted(param2, param4, param1);
             }
-            SoftwareRasterizer.restoreClip(da.field_d);
+            SoftwareRasterizer.restoreClip(ClientOptionSupport.sharedSavedClip);
             if (param5 == -17154) {
               return;
             }

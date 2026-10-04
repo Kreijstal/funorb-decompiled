@@ -54,13 +54,13 @@ final class EndingAnimationSupport {
 
     final static void presentPreparedFrame(boolean drawEnabled, java.awt.Canvas canvas) {
         if (!(SpriteConstructionSupport.clientScreenStage != 11)) {
-            w.a(31);
+            SessionSocketSupport.evaluateSessionSupportGuard(31);
         }
         if (!drawEnabled) {
             return;
         }
         try {
-            ByteArrayBuffer.a(ArchiveRequest.field_s, ByteArrayPoolSupport.field_e, lb.sessionExitRequested, (byte) -40);
+            ByteArrayBuffer.a(ArchiveRequest.field_s, ByteArrayPoolSupport.field_e, SessionInstanceState.sessionExitRequested, (byte) -40);
             MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 117, canvas, 0);
         } catch (RuntimeException framePresentationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) framePresentationFailure), "fc.A(" + drawEnabled + ',' + (canvas != null ? "{...}" : "null") + ')');

@@ -5,13 +5,13 @@ import java.util.*;
 
 final class AchievementQuery extends IntrusiveNode {
     int[] resultValues;
-    static ClientProtocolStage field_h;
+    static ClientProtocolStage socketOpenFailedStage;
     boolean completed;
     static int[] field_i;
     int achievementMask;
 
     public static void c(int param0) {
-        field_h = null;
+        socketOpenFailedStage = null;
         if (param0 != 59) {
             return;
         }
@@ -26,7 +26,7 @@ final class AchievementQuery extends IntrusiveNode {
     final static boolean hasReceivedAchievementSixteen(int methodGuard) {
         boolean positiveMaskContainsBitSixteen = false;
         if (methodGuard <= 76) {
-          field_h = (ClientProtocolStage) null;
+          socketOpenFailedStage = (ClientProtocolStage) null;
         }
         positiveMaskContainsBitSixteen = (SecondaryNodeDeque.receivedAchievementMask > 0) && ((65536 & SecondaryNodeDeque.receivedAchievementMask) != 0);
         return positiveMaskContainsBitSixteen;
@@ -107,6 +107,6 @@ final class AchievementQuery extends IntrusiveNode {
     }
 
     static {
-        field_h = new ClientProtocolStage();
+        socketOpenFailedStage = new ClientProtocolStage();
     }
 }

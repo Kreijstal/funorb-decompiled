@@ -152,9 +152,9 @@ final class TriangleMesh {
               (DialRenderer.field_l.length >= param2))) {
           DialRenderer.field_l = new int[param2 * 2];
         }
-        if (!((null != hg.rankedEntryKeyTwo) &&
-              (param2 <= hg.rankedEntryKeyTwo.length))) {
-          hg.rankedEntryKeyTwo = new int[param2 * 2];
+        if (!((null != LoginPasswordSupport.rankedEntryKeyTwo) &&
+              (param2 <= LoginPasswordSupport.rankedEntryKeyTwo.length))) {
+          LoginPasswordSupport.rankedEntryKeyTwo = new int[param2 * 2];
         }
         if (!((null != TextHotspotBounds.field_m) &&
               (TextHotspotBounds.field_m.length >= param2))) {
@@ -182,7 +182,7 @@ final class TriangleMesh {
         }
         GmtTimestampSupport.rankedEntryCount = 0;
         MeshPrioritySupport.field_b = -2147483648;
-        ok.field_b = 2147483647;
+        ClientRenderingState.rankedKeyTwoLowerBoundSeed = 2147483647;
         ProxyAuthenticationRequiredException.field_a = -2147483648;
         LoginPayloadKind.field_a = param0;
     }

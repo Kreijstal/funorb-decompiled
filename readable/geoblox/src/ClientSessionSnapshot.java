@@ -126,7 +126,7 @@ final class ClientSessionSnapshot {
         this.field_k = RankedListQuery.field_f;
         this.field_j = field_l;
         if (param0) {
-            this.field_g = vj.field_c;
+            this.field_g = SessionTextState.receivedTextTemplateReferences;
         } else {
             this.field_g = null;
         }
@@ -150,7 +150,7 @@ final class ClientSessionSnapshot {
           if (var0 <= 2) {
             continue;
           }
-          field_b[var0] = lb.orInt(field_b[var0], (var0 - 2) * 22 << 8);
+          field_b[var0] = SessionInstanceState.orInt(field_b[var0], (var0 - 2) * 22 << 8);
         }
         tutorialShapeMatchMessage = "Excellent! Now try connecting three of a kind by shape.<br>Press <img=2> to continue.";
     }

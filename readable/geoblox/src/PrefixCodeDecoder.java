@@ -28,7 +28,7 @@ final class PrefixCodeDecoder {
               decodedLength = maximumDecodedLength;
             }
             decodedBytes = new byte[decodedLength];
-            buffer.position = buffer.position + vj.compressedTextDecoder.decodePrefixBytes(decodedBytes, buffer.position, buffer.bytes, guardAndDestinationOffset, -127, decodedLength);
+            buffer.position = buffer.position + SessionTextState.compressedTextDecoder.decodePrefixBytes(decodedBytes, buffer.position, buffer.bytes, guardAndDestinationOffset, -127, decodedLength);
             decodedText = ByteTextDecodingSupport.decodeTextSlice(guardAndDestinationOffset ^ -103, decodedBytes, 0, decodedLength);
             decodedTextBeforeReturn = decodedText;
             return decodedTextBeforeReturn;

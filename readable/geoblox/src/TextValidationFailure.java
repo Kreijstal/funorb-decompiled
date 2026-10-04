@@ -13,8 +13,8 @@ final class TextValidationFailure {
         int var8;
         DialRenderer.field_l[GmtTimestampSupport.rankedEntryCount] = param1;
         AchievementQuery.field_i[GmtTimestampSupport.rankedEntryCount] = GmtTimestampSupport.rankedEntryCount;
-        hg.rankedEntryKeyTwo[GmtTimestampSupport.rankedEntryCount] = param5;
-        if (ok.field_b > param5) {
+        LoginPasswordSupport.rankedEntryKeyTwo[GmtTimestampSupport.rankedEntryCount] = param5;
+        if (ClientRenderingState.rankedKeyTwoLowerBoundSeed > param5) {
           LoginPayloadKind.field_a = param5;
         }
         if (ProxyAuthenticationRequiredException.field_a >= param5) {

@@ -20,7 +20,7 @@ final class FontLoadingSupport {
           if (methodGuard != 0) {
             FontLoadingSupport.clearFontLoadingResources((byte) -35);
           }
-          if (!mf.decodeSpritesFromArchive(fileId, groupId, 107, glyphGraphicsArchive)) {
+          if (!SpawnQuotaSupport.decodeSpritesFromArchive(fileId, groupId, 107, glyphGraphicsArchive)) {
             return null;
           }
           fontBeforeReturn = HighscoreNameEntry.buildMonochromeFontFromDecodedSprites(4520, fontMetricsArchive.getFile(groupId, -28153, fileId));

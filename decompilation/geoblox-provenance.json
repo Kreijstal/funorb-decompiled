@@ -3277,29 +3277,29 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "d2dd4ce6608bd351a3d72e19a249f3d6274a3215",
+    "commit": "9e4b4a183d7c7055e6bd670eae2d51c25ac11f71",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "8b19ce9362d3748dff0f29ea58ee261f68c6571f576e4adea3ae662fcacadb33"
+      "sha256": "44abf9ca33381984f6767728d00e3e3bfb019065a6b7c3c4b4a0199b3c952dcf"
     },
     "generatorFiles": {
-      "build-geoblox-rules.mjs": "1cc93fe6ce2f5ebe827371ae7bbff4c444254ba838f6ad4749fc2b9697156e85",
+      "build-geoblox-rules.mjs": "c95d9520c44f1fc669acfaf774098883952da3bd2f700b845b8c964785551978",
       "layout.mjs": "2a9b891a257b9bf089dbf23d77ca788e7e76c8ca5f161b25df4dad0453af630f",
       "reproduce-geoblox.mjs": "b5f18f72b5ddfb008f4e9dfd52facc95b3347d06f5af83bf6e856a3f7a64c98f",
       "text-resource-evidence.mjs": "b3df24bd91653055689544164cce208e5544f7558eb4cb5c2b8512e35ccce496"
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "f2dd10749255da474215811d49eb1802187d10d97c8c461eb6cf1c90a8cdef51",
+    "outputTreeSha256": "345d3f5442dd50ec1da9ae805763bd95dcd66880b4f30803c24e04fdee6eae28",
     "files": 303,
-    "rules": 11194,
-    "identifierEdits": 86300,
+    "rules": 11347,
+    "identifierEdits": 87411,
     "bindingsCompared": 136612,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 86311,
+    "totalEdits": 87422,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11
   },
@@ -3625,5 +3625,163 @@
     "sourceToolAndBytecodePinsUnchanged": true,
     "wholeGameEquivalenceVerified": false,
     "limits": "Source-audited account/username identity flows, fixed form values, packet/bootstrap state, acknowledgement branches, seed persistence and fullscreen task wait retain original guards, flags, wire values, partial effects, exceptions and monitors. Applet gamecrc/instanceid/member parameters support names; live subscription/server semantics are not independently verified. Existing fixture scopes remain; no new live account/network acknowledgements, seed-file write, hardware fullscreen, assets/game/browser/phone or performance coverage."
+  },
+  "sharedStateSocketNaming": {
+    "passVersion": 126,
+    "workflowCommit": "9e4b4a183d7c7055e6bd670eae2d51c25ac11f71",
+    "manifestSha256": "44abf9ca33381984f6767728d00e3e3bfb019065a6b7c3c4b4a0199b3c952dcf",
+    "previousRules": {
+      "repository": "Kreijstal/dekobloko-work",
+      "commit": "d2dd4ce6608bd351a3d72e19a249f3d6274a3215",
+      "path": "readable/geoblox-rules.json",
+      "sha256": "8b19ce9362d3748dff0f29ea58ee261f68c6571f576e4adea3ae662fcacadb33"
+    },
+    "rulesAdded": 153,
+    "rulesAddedByKind": {
+      "C": 14,
+      "F": 32,
+      "L": 27,
+      "M": 28,
+      "P": 52
+    },
+    "previousCompleteRulesPreserved": 11194,
+    "classesNamed": [
+      "TextTemplateLookupSupport",
+      "BootstrapUiSupport",
+      "ClientOptionSupport",
+      "LoginPasswordSupport",
+      "RasterTargetRestoreSupport",
+      "SessionInstanceState",
+      "ArchiveHandshakeState",
+      "PointerMenuState",
+      "SpawnQuotaSupport",
+      "ClientRenderingState",
+      "GameAudioState",
+      "SessionTextState",
+      "SessionSocketSupport",
+      "AttachmentPointerState"
+    ],
+    "namedTopLevelClasses": 302,
+    "originalMeaningfulTopLevelClasses": 1,
+    "opaqueTopLevelClasses": 0,
+    "allAuditedOwnerParametersAndLocalsNamed": true,
+    "identifierEditsAdded": 1111,
+    "classConstructorSpellingEdits": 0,
+    "classNameLiteralEdits": 11,
+    "bindingsCompared": 136612,
+    "classNameLiteralBindingsCompared": 11,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 26,
+    "nativeProbeFilesPassed": 8,
+    "nativeProbeSourceAndTracePinsUnchanged": true,
+    "dictionaryRestorationFiles": 303,
+    "rawDecompilerNamingToolAndBytecodePinsUnchanged": true,
+    "workflowSourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "1ede093bd14022751b56a4736ac6fb7ae72703c5",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "98292d12a3026b1c08ce589e83feb9510746564c",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3",
+              "reproduce": "git archive --format=tar 98292d12a3026b1c08ce589e83feb9510746564c | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          },
+          "namingTool": {
+            "repository": "Kreijstal/dekobloko-work",
+            "commit": "5510687e701287f03b3217d2d2c1ad3c097b53cc",
+            "files": {
+              "readable-java.mjs": "81270d9320d8b7ccdbb9c59473823cb1b2b9c5640ff7e446169b8fb8d882fee7",
+              "lib/ReadableJava.java": "0af014714071a2fae216d1944d6db4e4e1e1f0de1efc4010e35fa71a192a5250",
+              "lib/capture-process.mjs": "8c389d508513b71012df56312ec3cfcbfedef2f16be77aeb4f32f0c60e9cfca7"
+            },
+            "sourceArchive": {
+              "sha256": "2f99a85aaffc6c3a1fff2118d86a817c5876855363b7a79557c8f06deea1bec5",
+              "reproduce": "git archive --format=tar 5510687e701287f03b3217d2d2c1ad3c097b53cc -- readable/tools/readable-java.mjs readable/tools/lib/ReadableJava.java readable/tools/lib/capture-process.mjs readable/tools/restore-original.mjs readable/tools/test-readable-java.mjs readable/tools/test-capture-process.mjs | sha256sum",
+              "format": "Git-generated tar archive of the six tracked generic naming source, reversal, capture and test files listed in reproduce; excludes old PIN, game inputs and generated exports."
+            }
+          }
+        },
+        "inputTreeSha256": "ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f",
+        "readabilityWorkflow": {
+          "repository": "Kreijstal/dekobloko-work",
+          "files": {
+            "build-geoblox-rules.mjs": "1cc93fe6ce2f5ebe827371ae7bbff4c444254ba838f6ad4749fc2b9697156e85",
+            "layout.mjs": "2a9b891a257b9bf089dbf23d77ca788e7e76c8ca5f161b25df4dad0453af630f",
+            "reproduce-geoblox.mjs": "b5f18f72b5ddfb008f4e9dfd52facc95b3347d06f5af83bf6e856a3f7a64c98f",
+            "text-resource-evidence.mjs": "b3df24bd91653055689544164cce208e5544f7558eb4cb5c2b8512e35ccce496"
+          }
+        },
+        "classNameLiterals": {
+          "policy": "direct-owned-class-for-name",
+          "expectedEdits": 11
+        }
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "1ede093bd14022751b56a4736ac6fb7ae72703c5",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "98292d12a3026b1c08ce589e83feb9510746564c",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3",
+              "reproduce": "git archive --format=tar 98292d12a3026b1c08ce589e83feb9510746564c | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          },
+          "namingTool": {
+            "repository": "Kreijstal/dekobloko-work",
+            "commit": "5510687e701287f03b3217d2d2c1ad3c097b53cc",
+            "files": {
+              "readable-java.mjs": "81270d9320d8b7ccdbb9c59473823cb1b2b9c5640ff7e446169b8fb8d882fee7",
+              "lib/ReadableJava.java": "0af014714071a2fae216d1944d6db4e4e1e1f0de1efc4010e35fa71a192a5250",
+              "lib/capture-process.mjs": "8c389d508513b71012df56312ec3cfcbfedef2f16be77aeb4f32f0c60e9cfca7"
+            },
+            "sourceArchive": {
+              "sha256": "2f99a85aaffc6c3a1fff2118d86a817c5876855363b7a79557c8f06deea1bec5",
+              "reproduce": "git archive --format=tar 5510687e701287f03b3217d2d2c1ad3c097b53cc -- readable/tools/readable-java.mjs readable/tools/lib/ReadableJava.java readable/tools/lib/capture-process.mjs readable/tools/restore-original.mjs readable/tools/test-readable-java.mjs readable/tools/test-capture-process.mjs | sha256sum",
+              "format": "Git-generated tar archive of the six tracked generic naming source, reversal, capture and test files listed in reproduce; excludes old PIN, game inputs and generated exports."
+            }
+          }
+        },
+        "inputTreeSha256": "ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f",
+        "readabilityWorkflow": {
+          "repository": "Kreijstal/dekobloko-work",
+          "files": {
+            "build-geoblox-rules.mjs": "c95d9520c44f1fc669acfaf774098883952da3bd2f700b845b8c964785551978",
+            "layout.mjs": "2a9b891a257b9bf089dbf23d77ca788e7e76c8ca5f161b25df4dad0453af630f",
+            "reproduce-geoblox.mjs": "b5f18f72b5ddfb008f4e9dfd52facc95b3347d06f5af83bf6e856a3f7a64c98f",
+            "text-resource-evidence.mjs": "b3df24bd91653055689544164cce208e5544f7558eb4cb5c2b8512e35ccce496"
+          }
+        },
+        "classNameLiterals": {
+          "policy": "direct-owned-class-for-name",
+          "expectedEdits": 11
+        }
+      },
+      "reason": "The previous reviewed manifest now exceeds the generic8MiB subprocess capture limit. Only historical rule capture gains a bounded32MiB limit; raw input, native evidence and frozen naming/decompiler tools remain unchanged."
+    },
+    "historicalManifestCaptureLimitMiB": 32,
+    "historicalManifestAbove8MiBRegressionPassed": true,
+    "wholeGameEquivalenceVerified": false,
+    "limits": "Pass126 names the final fourteen opaque top-level owners and their remaining parameters/locals, plus selected shared socket/bootstrap/packet-history state, without raw body or tool changes. Class coverage is not full readability: unmapped members and six large labeled bodies remain. Static helper families are mixed-purpose; received session access byte, option-mask flags and literal template metadata have no inferred server meaning. Existing probes do not newly execute socket task/header/ack/login/bootstrap/UI services or full assets/server/browser/phone/performance."
   }
 }

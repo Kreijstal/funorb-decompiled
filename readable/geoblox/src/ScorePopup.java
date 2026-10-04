@@ -4,7 +4,7 @@
 final class ScorePopup extends IntrusiveNode {
     float progress;
     int chainMultiplier;
-    static int field_l;
+    static int currentPacketOpcode;
     float originY;
     String pointsText;
     float originX;
@@ -73,6 +73,6 @@ final class ScorePopup extends IntrusiveNode {
     }
 
     static {
-        field_l = -1;
+        currentPacketOpcode = -1;
     }
 }

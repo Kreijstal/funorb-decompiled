@@ -81,7 +81,7 @@ final class DelayedIncomingPacket extends IntrusiveNode {
 
     final static boolean c(byte param0) {
         int var1 = 39 / ((param0 - 18) / 54);
-        return MessageDialogSupport.releasesPerTheme > CacheReference.field_m ? true : false;
+        return MessageDialogSupport.releasesPerTheme > CacheReference.generatedInCurrentTheme ? true : false;
     }
 
     final static void drawNineSlicePanel(int panelTop, int panelLeft, int panelHeight, byte methodGuard, int panelWidth, Sprite[] nineSliceSprites) {

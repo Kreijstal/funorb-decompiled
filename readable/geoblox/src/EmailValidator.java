@@ -21,7 +21,7 @@ final class EmailValidator extends TextInputValidator {
             archiveGameCrc = -21;
           }
           if (this.validationStateForText(-257, candidateText) != WidgetSkinState.field_m) {
-            stackIn_6_0 = da.createEmailValidText;
+            stackIn_6_0 = ClientOptionSupport.createEmailValidText;
             return stackIn_6_0;
           }
           stackIn_4_0 = OpacityWidget.createInvalidEmailAlertText;

@@ -50,7 +50,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         }
         if (MessageDialogSupport.releasesPerTheme == MatchCandidateSupport.releasedInCurrentTheme) {
           MatchCandidateSupport.releasedInCurrentTheme = 0;
-          CacheReference.field_m = 0;
+          CacheReference.generatedInCurrentTheme = 0;
           UiWidget.gameplaySession.sessionPhase = 1;
           TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
           if (DequeCursor.field_c < 2) {

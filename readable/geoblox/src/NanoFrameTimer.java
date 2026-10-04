@@ -73,16 +73,16 @@ final class NanoFrameTimer extends FrameTimer {
             if (var5 != 0) {
               var6 = var4.entryLimit;
               var7 = var4.valuesPerEntry;
-              id.highscoreNameTable[0].usedInUniqueView = false;
-              id.highscoreNameTable[0].primaryName = SecondaryDeque.field_f;
-              id.highscoreNameTable[0].alternateName = null;
+              RasterTargetRestoreSupport.highscoreNameTable[0].usedInUniqueView = false;
+              RasterTargetRestoreSupport.highscoreNameTable[0].primaryName = SecondaryDeque.field_f;
+              RasterTargetRestoreSupport.highscoreNameTable[0].alternateName = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                id.highscoreNameTable[var8_int].primaryName = var27.readNullTerminatedText((byte) 104);
-                id.highscoreNameTable[var8_int].usedInUniqueView = false;
+                RasterTargetRestoreSupport.highscoreNameTable[var8_int].primaryName = var27.readNullTerminatedText((byte) 104);
+                RasterTargetRestoreSupport.highscoreNameTable[var8_int].usedInUniqueView = false;
                 if (var27.readUnsignedByte((byte) 34) == 1) {
-                  id.highscoreNameTable[var8_int].alternateName = var27.readNullTerminatedText((byte) 122);
+                  RasterTargetRestoreSupport.highscoreNameTable[var8_int].alternateName = var27.readNullTerminatedText((byte) 122);
                 } else {
-                  id.highscoreNameTable[var8_int].alternateName = null;
+                  RasterTargetRestoreSupport.highscoreNameTable[var8_int].alternateName = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -103,12 +103,12 @@ final class NanoFrameTimer extends FrameTimer {
               if (!(0 >= var18)) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte((byte) 34);
-                  var21 = id.highscoreNameTable[var20].primaryName;
+                  var21 = RasterTargetRestoreSupport.highscoreNameTable[var20].primaryName;
                   var22 = var27.readLongBE(2901);
                   var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = id.highscoreNameTable[var20].alternateName;
+                    var9[0][var12] = RasterTargetRestoreSupport.highscoreNameTable[var20].alternateName;
                     var31[0][var12] = var22;
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$2 = var15;
@@ -131,10 +131,10 @@ final class NanoFrameTimer extends FrameTimer {
                     }
                   }
                   if ((var14 < var6) &&
-                      (!id.highscoreNameTable[var20].usedInUniqueView)) {
-                    id.highscoreNameTable[var20].usedInUniqueView = true;
+                      (!RasterTargetRestoreSupport.highscoreNameTable[var20].usedInUniqueView)) {
+                    RasterTargetRestoreSupport.highscoreNameTable[var20].usedInUniqueView = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = id.highscoreNameTable[var20].alternateName;
+                    var9[2][var14] = RasterTargetRestoreSupport.highscoreNameTable[var20].alternateName;
                     var31[2][var14] = var22;
                     var14++;
                     var27.position = var24;
@@ -191,17 +191,17 @@ final class NanoFrameTimer extends FrameTimer {
         try {
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
-            if (null != SpriteCheckboxRenderer.field_e) {
+            if (null != SpriteCheckboxRenderer.sessionSocket) {
               if (!((param1 >= 0) &&
                   (PacketBuffer.currentProtocolStage != LogoCompositor.connectedSessionStage))) {
                 if ((0 == CacheReference.outgoingSessionBuffer.position) &&
-                    (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.field_r))) {
+                    (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis))) {
                   CacheReference.outgoingSessionBuffer.writeCipherByte(param1, (byte) -76);
                 }
                 if (param0 > ~CacheReference.outgoingSessionBuffer.position) {
                   try {
-                    SpriteCheckboxRenderer.field_e.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
-                    CanvasResizeController.field_r = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+                    SpriteCheckboxRenderer.sessionSocket.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
+                    CanvasResizeController.lastSessionSocketWriteMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     iOException = (IOException) (Object) decompiledCaughtException;

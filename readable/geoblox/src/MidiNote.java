@@ -60,10 +60,10 @@ final class MidiNote extends IntrusiveNode {
     final static void a(int param0, boolean param1) {
         if (param1) {
             archiveLanguageId = 99;
-            GzipInflater.field_d = param0;
+            GzipInflater.pendingLoginUiAction = param0;
             return;
         }
-        GzipInflater.field_d = param0;
+        GzipInflater.pendingLoginUiAction = param0;
     }
 
     final void b(int param0) {

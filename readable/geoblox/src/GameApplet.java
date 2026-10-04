@@ -382,7 +382,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   }
                   SpriteCheckboxRenderer.a(75);
                   this.b(true);
-                  SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.canvasHeight, AudioService.canvasWidth);
+                  SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ClientRenderingState.canvasHeight, AudioService.canvasWidth);
                   this.initializeGame(117);
                   ReflectionCheckRequest.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {
@@ -508,7 +508,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
             MessageDialog.gameCanvas = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
             ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
-            MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ok.canvasHeight);
+            MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
             MessageDialog.gameCanvas.setVisible(param0);
             if (SharedBufferPools.fullscreenFrame != var2) {
               MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
@@ -772,7 +772,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
                 SocketArchiveNetworkClient.field_t = param2;
-                ok.canvasHeight = param3;
+                ClientRenderingState.canvasHeight = param3;
                 NetworkArchiveRequest.field_w = param3;
                 PrefixCodeDecoder.field_b = 0;
                 ButtonWidget.field_B = 0;
@@ -884,7 +884,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (fieldTemp$1 > 50) {
               DisplayModeInfo.field_i = DisplayModeInfo.field_i - 50;
               UsernameQueryState.canvasRedrawRequested = true;
-              MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ok.canvasHeight);
+              MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
               if (!((SharedBufferPools.fullscreenFrame != null) &&
                   (FullscreenFocusCanvas.field_a == null))) {

@@ -8,7 +8,7 @@ final class MidiNoteMixer extends PcmStream {
     IntrusiveDeque field_l;
     static int field_j;
     PcmStreamMixer field_m;
-    static int field_o;
+    static int thirdPreviousPacketOpcode;
 
     public static void c(int param0) {
         fullscreenFocusOrResolutionText = null;
@@ -149,7 +149,7 @@ final class MidiNoteMixer extends PcmStream {
             }
             ProxySocketConnector.logoGlowRaster.setAsRasterTarget();
             logoRenderRaster.drawHalfSize(0, 0);
-            id.restoreRasterTarget(true);
+            RasterTargetRestoreSupport.restoreRasterTarget(true);
         } catch (RuntimeException glowPreparationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) glowPreparationFailure), "ad.H(" + methodGuard + ')');
         }
@@ -309,6 +309,6 @@ final class MidiNoteMixer extends PcmStream {
         field_p = false;
         fullscreenFocusOrResolutionText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_j = 2;
-        field_o = -1;
+        thirdPreviousPacketOpcode = -1;
     }
 }

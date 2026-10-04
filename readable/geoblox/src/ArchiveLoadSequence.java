@@ -82,7 +82,7 @@ final class ArchiveLoadSequence {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         StrongCacheReference.archiveConnectTask = null;
         AccountCreationForm.archiveHandshakeStage = 0;
-        li.archiveHandshakeSocket = null;
+        ArchiveHandshakeState.archiveHandshakeSocket = null;
         int previousArchivePort = SecondaryNodeHashTable.archivePort;
         SecondaryNodeHashTable.archivePort = FullscreenErrorDialog.alternateArchivePort;
         FullscreenErrorDialog.alternateArchivePort = previousArchivePort;

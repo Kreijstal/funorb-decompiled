@@ -380,7 +380,7 @@ final class GameplayEntity extends DualLinkNode {
                     (4 > this.animationFrameIndex)) {
                   kind6AnimationFrame = this.animationFrameIndex;
                   this.animationFrameIndex = this.animationFrameIndex + 1;
-                  this.entitySprite = vj.bangFrames[kind6AnimationFrame];
+                  this.entitySprite = SessionTextState.bangFrames[kind6AnimationFrame];
                 }
               }
             } else {
@@ -401,7 +401,7 @@ final class GameplayEntity extends DualLinkNode {
             if (this.entityUpdateTick % 20 == 0) {
               kind7AnimationFrame = this.animationFrameIndex;
               this.animationFrameIndex = this.animationFrameIndex + 1;
-              this.entitySprite = hg.blackOrbImplosionFrames[kind7AnimationFrame];
+              this.entitySprite = LoginPasswordSupport.blackOrbImplosionFrames[kind7AnimationFrame];
               this.animationFrameIndex = this.animationFrameIndex % 4;
             }
           }

@@ -174,7 +174,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           diffuseResponsesSecondAlias = diffuseResponsesFirstAlias;
           diffuseResponsesThirdAlias = diffuseResponsesSecondAlias;
           specularResponses = new int[mesh.normalCount];
-          transformedNormalsX = ok.transformedMeshNormalX;
+          transformedNormalsX = ClientRenderingState.transformedMeshNormalX;
           transformedNormalsY = ClientClockSupport.transformedMeshNormalY;
           transformedNormalsZ = IterableNodeHashTable.transformedMeshNormalZ;
           for (normalOrFaceQueueIndex = 0; mesh.normalCount > normalOrFaceQueueIndex; normalOrFaceQueueIndex++) {
@@ -209,19 +209,19 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             specularResponseOrVertexA = mesh.faceVertexA[diffuseResponseOrFaceIndex];
             faceVertexB = mesh.faceVertexB[diffuseResponseOrFaceIndex];
             faceVertexC = mesh.faceVertexC[diffuseResponseOrFaceIndex];
-            if (mesh.faceNormalA[diffuseResponseOrFaceIndex] >= ok.transformedMeshNormalX.length) {
+            if (mesh.faceNormalA[diffuseResponseOrFaceIndex] >= ClientRenderingState.transformedMeshNormalX.length) {
               faceNormalAIndexOrMissing = -1;
             } else {
               faceNormalAIndexOrMissing = mesh.faceNormalA[diffuseResponseOrFaceIndex];
             }
             faceNormalA = faceNormalAIndexOrMissing;
-            if (ok.transformedMeshNormalX.length > mesh.faceNormalB[diffuseResponseOrFaceIndex]) {
+            if (ClientRenderingState.transformedMeshNormalX.length > mesh.faceNormalB[diffuseResponseOrFaceIndex]) {
               faceNormalBIndexOrMissing = mesh.faceNormalB[diffuseResponseOrFaceIndex];
             } else {
               faceNormalBIndexOrMissing = -1;
             }
             faceNormalB = faceNormalBIndexOrMissing;
-            if (ok.transformedMeshNormalX.length > mesh.faceNormalC[diffuseResponseOrFaceIndex]) {
+            if (ClientRenderingState.transformedMeshNormalX.length > mesh.faceNormalC[diffuseResponseOrFaceIndex]) {
               faceNormalCIndexOrMissing = mesh.faceNormalC[diffuseResponseOrFaceIndex];
             } else {
               faceNormalCIndexOrMissing = -1;

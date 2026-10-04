@@ -47,7 +47,7 @@ final class ResourceArchive {
               if ((3 == attachedEntity.entitySpriteKindId) &&
                   (attachedEntity.touchesAvatar) &&
                   (0 >= attachedEntity.matchCooldownTicks)) {
-                w.avatarShockPending = true;
+                SessionSocketSupport.avatarShockPending = true;
               }
               if (maximumEntityRadiusSquared < (attachedEntity.positionX - 320.0f) * (-320.0f + attachedEntity.positionX) + (attachedEntity.positionY - 240.0f) * (attachedEntity.positionY - 240.0f)) {
                 maximumEntityRadiusSquared = (-240.0f + attachedEntity.positionY) * (-240.0f + attachedEntity.positionY) + (-320.0f + attachedEntity.positionX) * (-320.0f + attachedEntity.positionX);

@@ -82,9 +82,9 @@ final class AccountCreationSupport {
           if (methodGuard >= -126) {
             pointerPressXSnapshot = -77;
           }
-          PrefixCodeDecoder.pointerXSnapshot = lj.livePointerX;
+          PrefixCodeDecoder.pointerXSnapshot = PointerMenuState.livePointerX;
           PcmResampler.pointerYSnapshot = ReflectionCheckRequest.livePointerY;
-          wb.pointerActivitySnapshot = EndingAnimationSupport.pointerActivityPending;
+          AttachmentPointerState.pointerActivitySnapshot = EndingAnimationSupport.pointerActivityPending;
           EndingAnimationSupport.pointerActivityPending = false;
           CheckboxRenderer.pointerPressButtonSnapshot = ClientSessionSnapshot.pendingPointerPressButton;
           pointerPressXSnapshot = TextWidgetSupport.livePointerPressX;

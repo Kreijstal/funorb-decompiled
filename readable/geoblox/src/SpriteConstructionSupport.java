@@ -95,7 +95,7 @@ final class SpriteConstructionSupport {
           argbPixelsForwarded = argbPixelsSnapshot;
           argbPixelsForUpdates = argbPixelsForwarded;
           for (argbPixelIndex = 0; argbPixelIndex < pixelCount; argbPixelIndex++) {
-            argbPixelsForUpdates[argbPixelIndex] = lb.orInt(ProxySocketConnector.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[argbPixelIndex], 255)]);
+            argbPixelsForUpdates[argbPixelIndex] = SessionInstanceState.orInt(ProxySocketConnector.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[argbPixelIndex], 255)]);
           }
           sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
           spriteIndex++;

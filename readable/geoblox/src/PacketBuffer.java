@@ -54,7 +54,7 @@ final class PacketBuffer extends ByteArrayBuffer {
     }
 
     final static void k(byte param0) {
-        da.field_a = 0;
+        ClientOptionSupport.clientOptionMask = 0;
         if (param0 != -13) {
             PacketBuffer.divideFloorWithPositiveDivisor(106, (byte) 22, 96);
         }
@@ -98,9 +98,9 @@ final class PacketBuffer extends ByteArrayBuffer {
             if (!SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndexThenFlagReset]) {
               if ((10 <= soundIndexThenFlagReset) &&
                   (26 >= soundIndexThenFlagReset)) {
-                sampleBeforeResampling = te.gameSoundSampleCache.getVorbisSampleByName(-1879044097, w.gameSoundResourceNames[soundIndexThenFlagReset]);
+                sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getVorbisSampleByName(-1879044097, SessionSocketSupport.gameSoundResourceNames[soundIndexThenFlagReset]);
               } else {
-                sampleBeforeResampling = te.gameSoundSampleCache.getSynthesizedSampleByName(1, w.gameSoundResourceNames[soundIndexThenFlagReset]);
+                sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getSynthesizedSampleByName(1, SessionSocketSupport.gameSoundResourceNames[soundIndexThenFlagReset]);
               }
               GameSoundResources.gameSoundSamples[soundIndexThenFlagReset] = sampleBeforeResampling.resampleInPlace(AchievementSubmission.gameSoundResampler);
               SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndexThenFlagReset] = true;

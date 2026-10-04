@@ -255,8 +255,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               return;
             }
             if (NameCharacterSupport.avatarCryPhase == 1) {
-              if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
-                MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
+              if (ClientRenderingState.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
+                MatchCandidateSupport.currentAvatarCryFrame = ClientRenderingState.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                 avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 heldCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -380,8 +380,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 return;
               }
               if (NameCharacterSupport.avatarCryPhase == 1) {
-                if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
-                  MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
+                if (ClientRenderingState.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
+                  MatchCandidateSupport.currentAvatarCryFrame = ClientRenderingState.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                   avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                   steeredCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -540,8 +540,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
           }
           if (NameCharacterSupport.avatarCryPhase == 1) {
-            if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
-              MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
+            if (ClientRenderingState.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
+              MatchCandidateSupport.currentAvatarCryFrame = ClientRenderingState.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
               avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               steppedCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
