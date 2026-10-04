@@ -326,7 +326,7 @@ public final class Geoblox extends SessionGameApplet {
 
     final void releaseGameResources(byte methodGuard) {
         Geoblox.clearAppletStatics(0);
-        GameApplet.c((byte) 122);
+        GameApplet.releaseMeshDepthBuckets((byte) 122);
         MidiPcmStream.clearSharedInputAndSpriteState(false);
         ScorePopupSupport.releaseStaticReferences(9144);
         SharedBufferPools.clearSharedBufferResources(-13575);
@@ -825,7 +825,7 @@ public final class Geoblox extends SessionGameApplet {
           if (InstrumentPatch.field_n != null) {
             loadingCanvasStateSnapshot = true;
           } else {
-            loadingCanvasStateSnapshot = ValidationState.field_d;
+            loadingCanvasStateSnapshot = ValidationState.updateFocusSnapshot;
           }
           AccountContentDialog.a(loadingCanvasStateSnapshot, methodGuard - 25853, (java.awt.Canvas) (renderTargetCanvas));
           return;
@@ -878,7 +878,7 @@ public final class Geoblox extends SessionGameApplet {
         }
         if (DelayedPcmStream.beginSessionRetryAndCheckStageEleven(true)) {
           if (null == InstrumentPatch.field_n) {
-            overlayCanvasStateSnapshot = ValidationState.field_d;
+            overlayCanvasStateSnapshot = ValidationState.updateFocusSnapshot;
           } else {
             overlayCanvasStateSnapshot = true;
           }

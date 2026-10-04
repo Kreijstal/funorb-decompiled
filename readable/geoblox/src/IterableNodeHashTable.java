@@ -170,7 +170,7 @@ final class IterableNodeHashTable implements Iterable {
             try {
               errorDescription = "";
               if (failure != null) {
-                errorDescription = GameApplet.a(failure, methodGuard - 124);
+                errorDescription = GameApplet.compactExceptionTrace(failure, methodGuard - 124);
               }
               if (context != null) {
                 if (failure != null) {
@@ -191,7 +191,7 @@ final class IterableNodeHashTable implements Iterable {
               unusedUrlReceiverBeforeIdentity = null;
               unusedUrlConstructorReceiverBeforeIdentity = null;
               appletCodeBase = GameScreen.errorReportApplet.getCodeBase();
-              errorUrlPrefix = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.field_t).append("&u=");
+              errorUrlPrefix = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.errorReportGameCrc).append("&u=");
               if (null == UsernameAvailabilityValidator.field_p) {
                 unusedUrlReceiverAfterIdentity = null;
                 unusedUrlConstructorReceiverAfterIdentity = null;

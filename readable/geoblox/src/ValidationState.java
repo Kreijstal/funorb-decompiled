@@ -3,7 +3,7 @@
  */
 final class ValidationState {
     static DraggableWidget activeDragWidget;
-    static boolean field_d;
+    static boolean updateFocusSnapshot;
     static String nextText;
     static String createAccountSuccessText;
 

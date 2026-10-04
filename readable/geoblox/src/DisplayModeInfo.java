@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DisplayModeInfo {
-    static int field_i;
+    static int canvasRefreshCounter;
     static String quitToWebsiteText;
     int height;
     static int avatarTintColor;
@@ -62,7 +62,7 @@ final class DisplayModeInfo {
 
     static {
         avatarTintColor = 5167632;
-        field_i = 500;
+        canvasRefreshCounter = 500;
         quitToWebsiteText = "Quit to website";
         loggingInText = "Logging in...";
     }

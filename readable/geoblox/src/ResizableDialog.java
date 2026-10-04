@@ -12,12 +12,12 @@ abstract class ResizableDialog extends FadingDialog {
     static ClientProtocolStage awaitingInitialLoginReplyStage;
     private int resizeTick;
     static int field_V;
-    static boolean field_S;
+    static boolean legacyJavaCanvasRefreshRequired;
 
     public static void j(int param0) {
         awaitingInitialLoginReplyStage = null;
         if (param0 != 89) {
-            field_S = false;
+            legacyJavaCanvasRefreshRequired = false;
         }
         awtKeyCodeToInternalCode = null;
         connectionRestoredText = null;
@@ -518,6 +518,6 @@ abstract class ResizableDialog extends FadingDialog {
         connectionRestoredText = "Connection restored.";
         awaitingInitialLoginReplyStage = new ClientProtocolStage();
         field_V = 0;
-        field_S = false;
+        legacyJavaCanvasRefreshRequired = false;
     }
 }

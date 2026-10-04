@@ -5,7 +5,7 @@ import java.io.*;
 
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static int queuedMeshFaceCount;
-    boolean field_a;
+    boolean errorPageShown;
     static int[] meshFaceCountsByDepthBucket;
     public static boolean field_h;
     public static boolean field_e;
@@ -26,9 +26,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if ((null != VisualPropertyNode.field_m) &&
-              (this != VisualPropertyNode.field_m)) {
-            stackIn_10_0 = VisualPropertyNode.field_m.getDocumentBase();
+          if ((null != VisualPropertyNode.loaderApplet) &&
+              (this != VisualPropertyNode.loaderApplet)) {
+            stackIn_10_0 = VisualPropertyNode.loaderApplet.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -47,7 +47,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          VisualPropertyNode.field_m = param0;
+          VisualPropertyNode.loaderApplet = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,64 +86,64 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void a(byte param0, boolean param1) {
-        Exception exception = null;
-        RuntimeException runtimeException = null;
-        Object var3 = null;
-        Throwable decompiledCaughtException = null;
-        Throwable var3_ref = null;
+    private final void shutdownAppletServices(byte methodGuard, boolean reportedCleanShutdown) {
+        Exception ignoredCleanupException = null;
+        RuntimeException shutdownFailureForContext = null;
+        Object shutdownMonitor = null;
+        Throwable caughtShutdownFailure = null;
+        Throwable ignoredExitFailure = null;
         try {
-          var3 = this;
-          synchronized (var3) {
+          shutdownMonitor = this;
+          synchronized (shutdownMonitor) {
             if (MidiNoteMixer.appletShutdownStarted) {
               return;
             }
             MidiNoteMixer.appletShutdownStarted = true;
           }
-          if (null != VisualPropertyNode.field_m) {
-            VisualPropertyNode.field_m.destroy();
+          if (null != VisualPropertyNode.loaderApplet) {
+            VisualPropertyNode.loaderApplet.destroy();
           }
           try {
             this.serviceAudio(1);
-            if (param0 != 14) {
+            if (methodGuard != 14) {
               this.renderFrame(-33);
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            exception = (Exception) (Object) decompiledCaughtException;
+          } catch (java.lang.Exception audioShutdownFailure) {
+            caughtShutdownFailure = audioShutdownFailure;
+            ignoredCleanupException = (Exception) (Object) caughtShutdownFailure;
           }
           if (MessageDialog.gameCanvas != null) {
             try {
               MessageDialog.gameCanvas.removeFocusListener((java.awt.event.FocusListener) (this));
               MessageDialog.gameCanvas.getParent().remove((java.awt.Component) ((Object) MessageDialog.gameCanvas));
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              exception = (Exception) (Object) decompiledCaughtException;
+            } catch (java.lang.Exception canvasRemovalFailure) {
+              caughtShutdownFailure = canvasRemovalFailure;
+              ignoredCleanupException = (Exception) (Object) caughtShutdownFailure;
             }
           }
           if (MenuScreen.platformTaskDispatcher != null) {
             try {
               MenuScreen.platformTaskDispatcher.shutdown((byte) 13);
-            } catch (java.lang.Exception decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              exception = (Exception) (Object) decompiledCaughtException;
+            } catch (java.lang.Exception dispatcherShutdownFailure) {
+              caughtShutdownFailure = dispatcherShutdownFailure;
+              ignoredCleanupException = (Exception) (Object) caughtShutdownFailure;
             }
           }
           this.releaseGameResources((byte) -64);
           if (null != SharedBufferPools.fullscreenFrame) {
             try {
               System.exit(0);
-            } catch (java.lang.Throwable decompiledCaughtParameter3) {
-              decompiledCaughtException = decompiledCaughtParameter3;
-              var3_ref = decompiledCaughtException;
+            } catch (java.lang.Throwable exitFailure) {
+              caughtShutdownFailure = exitFailure;
+              ignoredExitFailure = caughtShutdownFailure;
             }
           }
-          System.out.println("Shutdown complete - clean:" + param1);
+          System.out.println("Shutdown complete - clean:" + reportedCleanShutdown);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
-          decompiledCaughtException = decompiledCaughtParameter4;
-          runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.I(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException shutdownContextFailure) {
+          caughtShutdownFailure = shutdownContextFailure;
+          shutdownFailureForContext = (RuntimeException) (Object) caughtShutdownFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) shutdownFailureForContext), "ch.I(" + methodGuard + ',' + reportedCleanShutdown + ')');
         }
     }
 
@@ -173,12 +173,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseMeshDepthBuckets(byte methodGuard) {
         try {
             meshFaceCountsByDepthBucket = null;
-            int var1_int = 30 % ((30 - param0) / 52);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ')');
+            int guardResidue = 30 % ((30 - methodGuard) / 52);
+        } catch (RuntimeException bucketCleanupFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) bucketCleanupFailure), "ch.E(" + methodGuard + ')');
         }
     }
 
@@ -192,7 +192,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          CrcAcknowledgedPacket.field_g = true;
+          CrcAcknowledgedPacket.canvasHasFocus = true;
           UsernameQueryState.canvasRedrawRequested = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,230 +209,230 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final void a(byte param0, String param1) {
+    final void showGameError(byte methodGuard, String errorCode) {
         try {
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_16_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var3 = null;
-            Exception var3_ref = null;
-            RuntimeException var3_ref2 = null;
+            RuntimeException errorFailureBeforeContext = null;
+            StringBuilder errorMessagePrefix = null;
+            String errorCodeDescription = null;
+            Throwable caughtErrorDisplayFailure = null;
+            Throwable ignoredLogoutBridgeFailure = null;
+            Exception ignoredErrorPageFailure = null;
+            RuntimeException errorFailureForContext = null;
             try {
-              if (this.field_a) {
+              if (this.errorPageShown) {
                 return;
               }
-              this.field_a = true;
-              System.out.println("error_game_" + param1);
-              if (param0 != 79) {
-                GameApplet.c((byte) -125);
+              this.errorPageShown = true;
+              System.out.println("error_game_" + errorCode);
+              if (methodGuard != 79) {
+                GameApplet.releaseMeshDepthBuckets((byte) -125);
               }
               try {
                 AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.getActiveApplet(115), "loggedout");
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var3 = decompiledCaughtException;
+              } catch (java.lang.Throwable logoutBridgeFailure) {
+                caughtErrorDisplayFailure = logoutBridgeFailure;
+                ignoredLogoutBridgeFailure = caughtErrorDisplayFailure;
               }
               try {
-                this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + param1 + ".ws"), "_top");
-              } catch (java.lang.Exception decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                var3_ref = (Exception) (Object) decompiledCaughtException;
+                this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + errorCode + ".ws"), "_top");
+              } catch (java.lang.Exception errorPageFailure) {
+                caughtErrorDisplayFailure = errorPageFailure;
+                ignoredErrorPageFailure = (Exception) (Object) caughtErrorDisplayFailure;
               }
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_15_0 = var3_ref2;
-              stackIn_15_1 = new StringBuilder().append("ch.A(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_16_2 = "null";
+            } catch (java.lang.RuntimeException errorDisplayContextFailure) {
+              caughtErrorDisplayFailure = errorDisplayContextFailure;
+              errorFailureForContext = (RuntimeException) (Object) caughtErrorDisplayFailure;
+              errorFailureBeforeContext = errorFailureForContext;
+              errorMessagePrefix = new StringBuilder().append("ch.A(").append(methodGuard).append(',');
+              if (errorCode == null) {
+                errorCodeDescription = "null";
               } else {
-                stackIn_16_2 = "{...}";
+                errorCodeDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) errorFailureBeforeContext), ((StringBuilder) (Object) errorMessagePrefix).append(errorCodeDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedErrorDisplayFailure) {
+            throw uncheckedErrorDisplayFailure;
+        } catch (Throwable checkedErrorDisplayFailure) {
+            throw new RuntimeException(checkedErrorDisplayFailure);
         }
     }
 
     public final void run() {
         try {
-            boolean stackIn_66_0 = false;
-            int stackIn_78_0 = 0;
-            int stackIn_78_1 = 0;
-            int stackIn_99_0 = 0;
-            Throwable decompiledCaughtException = null;
-            Object var1 = null;
-            int var1_int = 0;
-            String var2 = null;
-            int var2_int = 0;
-            java.lang.reflect.Method var2_ref = null;
-            int var3 = 0;
-            Throwable var3_ref_Throwable = null;
-            String var4 = null;
-            int var5 = 0;
-            var5 = Geoblox.clientControlFlowFlag;
+            boolean digitOrLegacyVersionPredicate = false;
+            int majorVersionComparisonLeft = 0;
+            int majorVersionComparisonRight = 0;
+            int stopDeadlineComparisonOrTickIndex = 0;
+            Throwable caughtRunFailure = null;
+            Object lowercaseVendorOrFocusRootOrFailure = null;
+            int javaVersionDigitIndex = 0;
+            String javaVersionText = null;
+            int parsedJavaMajorVersion = 0;
+            java.lang.reflect.Method focusCycleRootMethod = null;
+            int updateSuffixIndexOrVersionDigitOrTickIndex = 0;
+            Throwable ignoredFocusRootFailure = null;
+            String javaUpdateSuffix = null;
+            int clientControlSnapshot = 0;
+            clientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
               try {
-                L1: {
-                  L2: {
-                    L3: {
-                      L4: {
+                appletExecutionBoundary: {
+                  legacyJavaVersionCheck: {
+                    digitOrLegacyVersionDecision: {
+                      vendorCompatibilityCheck: {
                         if (PlatformTaskDispatcher.javaVendor != null) {
-                          var1 = PlatformTaskDispatcher.javaVendor.toLowerCase();
-                          if ((-1 == ((String) (var1)).indexOf("sun")) &&
-                              (((String) (var1)).indexOf("apple") == -1)) {
-                            break L4;
+                          lowercaseVendorOrFocusRootOrFailure = PlatformTaskDispatcher.javaVendor.toLowerCase();
+                          if ((-1 == ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("sun")) &&
+                              (((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("apple") == -1)) {
+                            break vendorCompatibilityCheck;
                           }
-                          var2 = PlatformTaskDispatcher.javaVersion;
-                          if (!((!var2.equals("1.1")) &&
-                              (!var2.startsWith("1.1.")) &&
-                              (!var2.equals("1.2")) &&
-                              (!var2.startsWith("1.2.")) &&
-                              (!var2.equals("1.3")) &&
-                              (!var2.startsWith("1.3.")) &&
-                              (!var2.equals("1.4")) &&
-                              (!var2.startsWith("1.4.")) &&
-                              (!var2.equals("1.5")) &&
-                              (!var2.startsWith("1.5.")) &&
-                              (!var2.equals("1.6.0")))) {
-                            this.a((byte) 79, "wrongjava");
-                            if (var5 == 0) {
-                              break L1;
+                          javaVersionText = PlatformTaskDispatcher.javaVersion;
+                          if (!((!javaVersionText.equals("1.1")) &&
+                              (!javaVersionText.startsWith("1.1.")) &&
+                              (!javaVersionText.equals("1.2")) &&
+                              (!javaVersionText.startsWith("1.2.")) &&
+                              (!javaVersionText.equals("1.3")) &&
+                              (!javaVersionText.startsWith("1.3.")) &&
+                              (!javaVersionText.equals("1.4")) &&
+                              (!javaVersionText.startsWith("1.4.")) &&
+                              (!javaVersionText.equals("1.5")) &&
+                              (!javaVersionText.startsWith("1.5.")) &&
+                              (!javaVersionText.equals("1.6.0")))) {
+                            this.showGameError((byte) 79, "wrongjava");
+                            if (clientControlSnapshot == 0) {
+                              break appletExecutionBoundary;
                             }
                           }
-                          if (var2.startsWith("1.6.0_")) {
-                            var3 = 6;
-                            while (var2.length() > var3) {
-                              stackIn_66_0 = DualLinkNode.isAsciiDigit(-58, var2.charAt(var3));
-                              if (var5 != 0) {
-                                break L3;
+                          if (javaVersionText.startsWith("1.6.0_")) {
+                            updateSuffixIndexOrVersionDigitOrTickIndex = 6;
+                            while (javaVersionText.length() > updateSuffixIndexOrVersionDigitOrTickIndex) {
+                              digitOrLegacyVersionPredicate = DualLinkNode.isAsciiDigit(-58, javaVersionText.charAt(updateSuffixIndexOrVersionDigitOrTickIndex));
+                              if (clientControlSnapshot != 0) {
+                                break digitOrLegacyVersionDecision;
                               }
-                              if (stackIn_66_0) {
-                                var3++;
+                              if (digitOrLegacyVersionPredicate) {
+                                updateSuffixIndexOrVersionDigitOrTickIndex++;
                                 continue;
                               }
                               break;
                             }
-                            var4 = var2.substring(6, var3);
-                            if (!MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) var4))) {
-                              break L4;
+                            javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
+                            if (!MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix))) {
+                              break vendorCompatibilityCheck;
                             }
-                            if (MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var4)) >= 10) {
-                              break L4;
+                            if (MultiHandleSliderWidget.a(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10) {
+                              break vendorCompatibilityCheck;
                             }
-                            this.a((byte) 79, "wrongjava");
-                            if (var5 == 0) {
-                              break L1;
+                            this.showGameError((byte) 79, "wrongjava");
+                            if (clientControlSnapshot == 0) {
+                              break appletExecutionBoundary;
                             }
                           }
                         }
                       }
                       if (PlatformTaskDispatcher.javaVersion == null) {
-                        break L2;
+                        break legacyJavaVersionCheck;
                       }
-                      stackIn_66_0 = PlatformTaskDispatcher.javaVersion.startsWith("1.");
+                      digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
                     }
-                    if (stackIn_66_0) {
-                      var1_int = 2;
-                      var2_int = 0;
+                    if (digitOrLegacyVersionPredicate) {
+                      javaVersionDigitIndex = 2;
+                      parsedJavaMajorVersion = 0;
                       while (true) {
-                        L11: {
-                          if (~PlatformTaskDispatcher.javaVersion.length() < ~var1_int) {
-                            var3 = PlatformTaskDispatcher.javaVersion.charAt(var1_int);
-                            stackIn_78_0 = var3;
-                            stackIn_78_1 = 48;
-                            if (var5 != 0) {
-                              break L11;
+                        majorVersionComparison: {
+                          if (~PlatformTaskDispatcher.javaVersion.length() < ~javaVersionDigitIndex) {
+                            updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
+                            majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
+                            majorVersionComparisonRight = 48;
+                            if (clientControlSnapshot != 0) {
+                              break majorVersionComparison;
                             }
-                            if ((stackIn_78_0 >= stackIn_78_1) &&
-                                (var3 <= 57)) {
-                              var2_int = 10 * var2_int - 48 + var3;
-                              var1_int++;
+                            if ((majorVersionComparisonLeft >= majorVersionComparisonRight) &&
+                                (updateSuffixIndexOrVersionDigitOrTickIndex <= 57)) {
+                              parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
+                              javaVersionDigitIndex++;
                               continue;
                             }
                           }
-                          stackIn_78_0 = ~var2_int;
-                          stackIn_78_1 = -6;
+                          majorVersionComparisonLeft = ~parsedJavaMajorVersion;
+                          majorVersionComparisonRight = -6;
                         }
-                        if (stackIn_78_0 > stackIn_78_1) {
+                        if (majorVersionComparisonLeft > majorVersionComparisonRight) {
                           break;
                         }
-                        ResizableDialog.field_S = true;
+                        ResizableDialog.legacyJavaCanvasRefreshRequired = true;
                         break;
                       }
                     }
                   }
-                  var1 = PrefixCodeDecoder.field_d;
-                  if (null != VisualPropertyNode.field_m) {
-                    var1 = VisualPropertyNode.field_m;
+                  lowercaseVendorOrFocusRootOrFailure = PrefixCodeDecoder.activeGameApplet;
+                  if (null != VisualPropertyNode.loaderApplet) {
+                    lowercaseVendorOrFocusRootOrFailure = VisualPropertyNode.loaderApplet;
                   }
-                  var2_ref = PlatformTaskDispatcher.setFocusCycleRootMethod;
-                  if (null != var2_ref) {
+                  focusCycleRootMethod = PlatformTaskDispatcher.setFocusCycleRootMethod;
+                  if (null != focusCycleRootMethod) {
                     try {
-                      var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var3_ref_Throwable = decompiledCaughtException;
+                      focusCycleRootMethod.invoke(lowercaseVendorOrFocusRootOrFailure, new Object[]{Boolean.TRUE});
+                    } catch (java.lang.Throwable focusRootSetupFailure) {
+                      caughtRunFailure = focusRootSetupFailure;
+                      ignoredFocusRootFailure = caughtRunFailure;
                     }
                   }
                   SpriteCheckboxRenderer.a(75);
-                  this.b(true);
+                  this.rebuildGameCanvas(true);
                   SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ClientRenderingState.canvasHeight, AudioService.canvasWidth);
                   this.initializeGame(117);
-                  ReflectionCheckRequest.field_p = BufferedSocket.createFrameClock(5000);
+                  ReflectionCheckRequest.frameTimer = BufferedSocket.createFrameClock(5000);
                   do {
-                    L18: {
+                    stopDeadlineOrTickDecision: {
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
-                        stackIn_99_0 = $cfr$lcmp(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
-                        if (var5 != 0) {
-                          break L18;
+                        stopDeadlineComparisonOrTickIndex = $cfr$lcmp(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
+                        if (clientControlSnapshot != 0) {
+                          break stopDeadlineOrTickDecision;
                         }
-                        if (stackIn_99_0 >= 0) {
-                          break L1;
+                        if (stopDeadlineComparisonOrTickIndex >= 0) {
+                          break appletExecutionBoundary;
                         }
                       }
-                      TriangleMesh.field_w = ReflectionCheckRequest.field_p.awaitAndCountTicks((byte) -6, ByteStorage.updatePeriodNanoseconds);
-                      stackIn_99_0 = 0;
+                      TriangleMesh.pendingUpdateTicks = ReflectionCheckRequest.frameTimer.awaitAndCountTicks((byte) -6, ByteStorage.updatePeriodNanoseconds);
+                      stopDeadlineComparisonOrTickIndex = 0;
                     }
-                    var3 = stackIn_99_0;
+                    updateSuffixIndexOrVersionDigitOrTickIndex = stopDeadlineComparisonOrTickIndex;
                     while (true) {
-                      if (TriangleMesh.field_w > var3) {
-                        this.a((byte) -10);
-                        var3++;
-                        if (var5 == 0) {
+                      if (TriangleMesh.pendingUpdateTicks > updateSuffixIndexOrVersionDigitOrTickIndex) {
+                        this.updateAppletTick((byte) -10);
+                        updateSuffixIndexOrVersionDigitOrTickIndex++;
+                        if (clientControlSnapshot == 0) {
                           continue;
                         }
                       } else {
-                        this.d(32000);
+                        this.renderAppletFrame(32000);
                         OpacityWidget.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
                       }
                       break;
                     }
-                  } while (var5 == 0);
-                  break L1;
+                  } while (clientControlSnapshot == 0);
+                  break appletExecutionBoundary;
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                var1 = decompiledCaughtException;
-                IterableNodeHashTable.reportClientError((Throwable) (var1), (String) null, (byte) 125);
-                this.a((byte) 79, "crash");
+              } catch (java.lang.Throwable appletLoopFailure) {
+                caughtRunFailure = appletLoopFailure;
+                lowercaseVendorOrFocusRootOrFailure = caughtRunFailure;
+                IterableNodeHashTable.reportClientError((Throwable) (lowercaseVendorOrFocusRootOrFailure), (String) null, (byte) 125);
+                this.showGameError((byte) 79, "crash");
               }
-              this.a((byte) 14, true);
+              this.shutdownAppletServices((byte) 14, true);
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw InstrumentEnvelope.withFailureContext((Throwable) (var1), "ch.run()");
+            } catch (java.lang.RuntimeException runContextFailure) {
+              caughtRunFailure = runContextFailure;
+              lowercaseVendorOrFocusRootOrFailure = (RuntimeException) (Object) caughtRunFailure;
+              throw InstrumentEnvelope.withFailureContext((Throwable) (lowercaseVendorOrFocusRootOrFailure), "ch.run()");
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedRunFailure) {
+            throw uncheckedRunFailure;
+        } catch (Throwable checkedRunFailure) {
+            throw new RuntimeException(checkedRunFailure);
         }
     }
 
@@ -447,9 +447,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if ((VisualPropertyNode.field_m != null) &&
-              (this != VisualPropertyNode.field_m)) {
-            stackIn_8_0 = VisualPropertyNode.field_m.getAppletContext();
+          if ((VisualPropertyNode.loaderApplet != null) &&
+              (this != VisualPropertyNode.loaderApplet)) {
+            stackIn_8_0 = VisualPropertyNode.loaderApplet.getAppletContext();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getAppletContext();
@@ -467,66 +467,66 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowDeiconified(java.awt.event.WindowEvent param0) {
     }
 
-    final synchronized void b(boolean param0) {
-        Object var2 = null;
-        java.awt.Insets var3 = null;
-        int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.clientControlFlowFlag;
+    final synchronized void rebuildGameCanvas(boolean visible) {
+        Object selectedContainerOrFailure = null;
+        java.awt.Insets fullscreenInsets = null;
+        int clientControlSnapshot = 0;
+        RuntimeException caughtCanvasCreationFailure = null;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (MessageDialog.gameCanvas != null) {
             MessageDialog.gameCanvas.removeFocusListener((java.awt.event.FocusListener) (this));
             MessageDialog.gameCanvas.getParent().setBackground(java.awt.Color.black);
             MessageDialog.gameCanvas.getParent().remove((java.awt.Component) ((Object) MessageDialog.gameCanvas));
           }
-          L1: {
+          canvasContainerSelection: {
             if (FullscreenFocusCanvas.field_a == null) {
               if (null == SharedBufferPools.fullscreenFrame) {
-                if (VisualPropertyNode.field_m != null) {
-                  var2 = VisualPropertyNode.field_m;
-                  if (var4 == 0) {
-                    break L1;
+                if (VisualPropertyNode.loaderApplet != null) {
+                  selectedContainerOrFailure = VisualPropertyNode.loaderApplet;
+                  if (clientControlSnapshot == 0) {
+                    break canvasContainerSelection;
                   }
                 }
-                var2 = PrefixCodeDecoder.field_d;
-                if (var4 == 0) {
-                  break L1;
+                selectedContainerOrFailure = PrefixCodeDecoder.activeGameApplet;
+                if (clientControlSnapshot == 0) {
+                  break canvasContainerSelection;
                 }
               }
-              var2 = SharedBufferPools.fullscreenFrame;
-              if (var4 == 0) {
-                break L1;
+              selectedContainerOrFailure = SharedBufferPools.fullscreenFrame;
+              if (clientControlSnapshot == 0) {
+                break canvasContainerSelection;
               }
             }
-            var2 = FullscreenFocusCanvas.field_a;
+            selectedContainerOrFailure = FullscreenFocusCanvas.field_a;
           }
-          L5: {
-            ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
+          canvasLocationSelection: {
+            ((java.awt.Container) (selectedContainerOrFailure)).setLayout((java.awt.LayoutManager) null);
             MessageDialog.gameCanvas = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-            ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
+            ((java.awt.Container) (selectedContainerOrFailure)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
             MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
-            MessageDialog.gameCanvas.setVisible(param0);
-            if (SharedBufferPools.fullscreenFrame != var2) {
-              MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.canvasOffsetY);
-              if (var4 == 0) {
-                break L5;
+            MessageDialog.gameCanvas.setVisible(visible);
+            if (SharedBufferPools.fullscreenFrame != selectedContainerOrFailure) {
+              MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
+              if (clientControlSnapshot == 0) {
+                break canvasLocationSelection;
               }
             }
-            var3 = SharedBufferPools.fullscreenFrame.getInsets();
-            MessageDialog.gameCanvas.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + ButtonWidget.canvasOffsetY);
+            fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
+            MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, fullscreenInsets.top + ButtonWidget.canvasOffsetY);
           }
           MessageDialog.gameCanvas.addFocusListener((java.awt.event.FocusListener) (this));
           MessageDialog.gameCanvas.requestFocus();
-          ValidationState.field_d = true;
-          CrcAcknowledgedPacket.field_g = true;
+          ValidationState.updateFocusSnapshot = true;
+          CrcAcknowledgedPacket.canvasHasFocus = true;
           UsernameQueryState.canvasRedrawRequested = true;
           EntityMotionSupport.canvasReplacementRequested = false;
           Geoblox.canvasCreationTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) (var2), "ch.H(" + param0 + ')');
+        } catch (java.lang.RuntimeException canvasCreationFailure) {
+          caughtCanvasCreationFailure = canvasCreationFailure;
+          selectedContainerOrFailure = caughtCanvasCreationFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) (selectedContainerOrFailure), "ch.H(" + visible + ')');
         }
     }
 
@@ -534,7 +534,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this == PrefixCodeDecoder.field_d) &&
+          if ((this == PrefixCodeDecoder.activeGameApplet) &&
               (!MidiNoteMixer.appletShutdownStarted)) {
             MenuScreen.appletStopDeadlineMillis = 0L;
             return;
@@ -547,61 +547,61 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static String a(Throwable param0, int param1) throws IOException {
-        String var2;
-        ContextualRuntimeException var3;
-        StringWriter var3_ref;
-        PrintWriter var4;
-        String var5;
-        BufferedReader var6;
-        String var7;
-        String var8;
-        int var9;
-        int var10;
-        String var11;
-        int var12;
-        if (param0 instanceof ContextualRuntimeException) {
-          var3 = (ContextualRuntimeException) ((Object) param0);
-          param0 = var3.field_a;
-          var2 = var3.field_d + " | ";
+    final static String compactExceptionTrace(Throwable failure, int methodGuard) throws IOException {
+        String compactTrace;
+        ContextualRuntimeException contextualFailure;
+        StringWriter traceWriter;
+        PrintWriter tracePrinter;
+        String printedTrace;
+        BufferedReader traceReader;
+        String exceptionHeader;
+        String stackFrameLine;
+        int openParenthesisIndex;
+        int closeParenthesisIndex;
+        String qualifiedMethodName;
+        int javaSourceSuffixIndex;
+        if (failure instanceof ContextualRuntimeException) {
+          contextualFailure = (ContextualRuntimeException) ((Object) failure);
+          failure = contextualFailure.wrappedCause;
+          compactTrace = contextualFailure.contextPath + " | ";
         } else {
-          var2 = "";
+          compactTrace = "";
         }
-        var3_ref = new StringWriter();
-        if (param1 != 1) {
+        traceWriter = new StringWriter();
+        if (methodGuard != 1) {
           queuedMeshFaceCount = 61;
         }
-        var4 = new PrintWriter((Writer) ((Object) var3_ref));
-        param0.printStackTrace(var4);
-        var4.close();
-        var5 = var3_ref.toString();
-        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
-        var7 = var6.readLine();
+        tracePrinter = new PrintWriter((Writer) ((Object) traceWriter));
+        failure.printStackTrace(tracePrinter);
+        tracePrinter.close();
+        printedTrace = traceWriter.toString();
+        traceReader = new BufferedReader((Reader) ((Object) new StringReader(printedTrace)));
+        exceptionHeader = traceReader.readLine();
         while (true) {
-          var8 = var6.readLine();
-          if (null == var8) {
-            var2 = var2 + "| " + var7;
-            return var2;
+          stackFrameLine = traceReader.readLine();
+          if (null == stackFrameLine) {
+            compactTrace = compactTrace + "| " + exceptionHeader;
+            return compactTrace;
           }
-          var9 = var8.indexOf('(');
-          var10 = var8.indexOf(')', var9 + 1);
-          if (-1 != var9) {
-            var11 = var8.substring(0, var9);
+          openParenthesisIndex = stackFrameLine.indexOf('(');
+          closeParenthesisIndex = stackFrameLine.indexOf(')', openParenthesisIndex + 1);
+          if (-1 != openParenthesisIndex) {
+            qualifiedMethodName = stackFrameLine.substring(0, openParenthesisIndex);
           } else {
-            var11 = var8;
+            qualifiedMethodName = stackFrameLine;
           }
-          var11 = var11.trim();
-          var11 = var11.substring(var11.lastIndexOf(' ') + 1);
-          var11 = var11.substring(1 + var11.lastIndexOf('\t'));
-          var2 = var2 + var11;
-          if ((var9 != -1) &&
-              (-1 != var10)) {
-            var12 = var8.indexOf(".java:", var9);
-            if (var12 >= 0) {
-              var2 = var2 + var8.substring(var12 + 5, var10);
+          qualifiedMethodName = qualifiedMethodName.trim();
+          qualifiedMethodName = qualifiedMethodName.substring(qualifiedMethodName.lastIndexOf(' ') + 1);
+          qualifiedMethodName = qualifiedMethodName.substring(1 + qualifiedMethodName.lastIndexOf('\t'));
+          compactTrace = compactTrace + qualifiedMethodName;
+          if ((openParenthesisIndex != -1) &&
+              (-1 != closeParenthesisIndex)) {
+            javaSourceSuffixIndex = stackFrameLine.indexOf(".java:", openParenthesisIndex);
+            if (javaSourceSuffixIndex >= 0) {
+              compactTrace = compactTrace + stackFrameLine.substring(javaSourceSuffixIndex + 5, closeParenthesisIndex);
             }
           }
-          var2 = var2 + ' ';
+          compactTrace = compactTrace + ' ';
           continue;
         }
     }
@@ -621,9 +621,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != SharedBufferPools.fullscreenFrame) {
           return null;
         }
-        if ((null != VisualPropertyNode.field_m) &&
-            (VisualPropertyNode.field_m != this)) {
-          return VisualPropertyNode.field_m.getCodeBase();
+        if ((null != VisualPropertyNode.loaderApplet) &&
+            (VisualPropertyNode.loaderApplet != this)) {
+          return VisualPropertyNode.loaderApplet.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -635,7 +635,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          CrcAcknowledgedPacket.field_g = false;
+          CrcAcknowledgedPacket.canvasHasFocus = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -653,33 +653,33 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void initializeGame(int param0);
 
-    private final void a(byte param0) {
-        long var2_long = 0L;
-        long var4 = 0L;
-        Throwable decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        Object var6 = null;
+    private final void updateAppletTick(byte methodGuard) {
+        long updateTimeMillis = 0L;
+        long previousUpdateTimeMillis = 0L;
+        Throwable caughtUpdateFailure = null;
+        RuntimeException updateFailureForContext = null;
+        Object appletMonitor = null;
         try {
-          if (param0 != -10) {
+          if (methodGuard != -10) {
             queuedMeshFaceCount = -102;
           }
-          var2_long = ClientClockSupport.correctedCurrentTimeMillis(param0 ^ 12526);
-          var4 = RasterTargetSnapshot.field_l[FullscreenErrorDialog.field_cb];
-          RasterTargetSnapshot.field_l[FullscreenErrorDialog.field_cb] = var2_long;
-          FullscreenErrorDialog.field_cb = 31 & 1 + FullscreenErrorDialog.field_cb;
-          if ((var4 != 0L) &&
-              (var2_long > var4)) {
+          updateTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ 12526);
+          previousUpdateTimeMillis = RasterTargetSnapshot.updateTimeHistoryMillis[FullscreenErrorDialog.nextUpdateTimeHistoryIndex];
+          RasterTargetSnapshot.updateTimeHistoryMillis[FullscreenErrorDialog.nextUpdateTimeHistoryIndex] = updateTimeMillis;
+          FullscreenErrorDialog.nextUpdateTimeHistoryIndex = 31 & 1 + FullscreenErrorDialog.nextUpdateTimeHistoryIndex;
+          if ((previousUpdateTimeMillis != 0L) &&
+              (updateTimeMillis > previousUpdateTimeMillis)) {
           }
-          var6 = this;
-          synchronized (var6) {
-            ValidationState.field_d = CrcAcknowledgedPacket.field_g;
+          appletMonitor = this;
+          synchronized (appletMonitor) {
+            ValidationState.updateFocusSnapshot = CrcAcknowledgedPacket.canvasHasFocus;
           }
           this.updateGame(false);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "ch.L(" + param0 + ')');
+        } catch (java.lang.RuntimeException updateCallbackFailure) {
+          caughtUpdateFailure = updateCallbackFailure;
+          updateFailureForContext = (RuntimeException) (Object) caughtUpdateFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) updateFailureForContext), "ch.L(" + methodGuard + ')');
         }
     }
 
@@ -695,17 +695,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if ((PrefixCodeDecoder.field_d == this) &&
+          if ((PrefixCodeDecoder.activeGameApplet == this) &&
               (!MidiNoteMixer.appletShutdownStarted)) {
             UsernameQueryState.canvasRedrawRequested = true;
-            if ((ResizableDialog.field_S) &&
+            if ((ResizableDialog.legacyJavaCanvasRefreshRequired) &&
                 (-Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L)) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (~var2.width > ~DialWidget.field_G) {
+                if (~var2.width > ~DialWidget.initialCanvasWidth) {
                   return;
                 }
-                if (NetworkArchiveRequest.field_w > var2.height) {
+                if (NetworkArchiveRequest.initialCanvasHeight > var2.height) {
                   return;
                 }
               }
@@ -729,14 +729,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void destroy() {
-        if (PrefixCodeDecoder.field_d != this || MidiNoteMixer.appletShutdownStarted) {
+        if (PrefixCodeDecoder.activeGameApplet != this || MidiNoteMixer.appletShutdownStarted) {
             return;
         }
         try {
             MenuScreen.appletStopDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             ByteTextDecodingSupport.sleepMillis(0, 5000L);
             SpriteButtonRenderer.field_s = null;
-            this.a((byte) 14, false);
+            this.shutdownAppletServices((byte) 14, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.destroy()");
         }
@@ -744,77 +744,77 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void updateGame(boolean param0);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
+    final void startAppletServices(int initialCacheVariant, int methodGuard, int gameCrc, int initialCanvasHeight, int initialCanvasWidth, String gameName, int cacheIndexCount) {
         try {
-            PlatformTaskDispatcher dupTemp$0 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            String stackIn_24_2 = null;
-            Throwable decompiledCaughtException = null;
-            PlatformTask var8 = null;
-            Throwable var8_ref = null;
-            RuntimeException var8_ref2 = null;
-            int var9 = 0;
-            var9 = Geoblox.clientControlFlowFlag;
+            PlatformTaskDispatcher createdDispatcher = null;
+            RuntimeException startupFailureBeforeContext = null;
+            StringBuilder startupMessagePrefix = null;
+            String gameNameDescription = null;
+            Throwable caughtStartupFailure = null;
+            PlatformTask appletThreadTask = null;
+            Throwable startupFailureForReport = null;
+            RuntimeException startupFailureForContext = null;
+            int clientControlSnapshot = 0;
+            clientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
               try {
-                if (PrefixCodeDecoder.field_d != null) {
+                if (PrefixCodeDecoder.activeGameApplet != null) {
                   AsyncResourceDownloader.field_j = AsyncResourceDownloader.field_j + 1;
                   if (AsyncResourceDownloader.field_j < 3) {
                     this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                     return;
                   }
-                  this.a((byte) 79, "alreadyloaded");
+                  this.showGameError((byte) 79, "alreadyloaded");
                   return;
                 }
-                SocketArchiveNetworkClient.field_t = param2;
-                ClientRenderingState.canvasHeight = param3;
-                NetworkArchiveRequest.field_w = param3;
-                PrefixCodeDecoder.field_b = 0;
+                SocketArchiveNetworkClient.errorReportGameCrc = gameCrc;
+                ClientRenderingState.canvasHeight = initialCanvasHeight;
+                NetworkArchiveRequest.initialCanvasHeight = initialCanvasHeight;
+                PrefixCodeDecoder.canvasOffsetX = 0;
                 ButtonWidget.canvasOffsetY = 0;
-                AudioService.canvasWidth = param4;
-                DialWidget.field_G = param4;
-                PrefixCodeDecoder.field_d = (GameApplet) (this);
+                AudioService.canvasWidth = initialCanvasWidth;
+                DialWidget.initialCanvasWidth = initialCanvasWidth;
+                PrefixCodeDecoder.activeGameApplet = (GameApplet) (this);
                 GameScreen.errorReportApplet = NodeHashTableIterator.getActiveApplet(107);
-                if (param1 != -14948) {
+                if (methodGuard != -14948) {
                   return;
                 }
-                dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
-                MenuScreen.platformTaskDispatcher = dupTemp$0;
-                SpriteButtonRenderer.field_s = dupTemp$0;
-                var8 = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
+                createdDispatcher = new PlatformTaskDispatcher(initialCacheVariant, gameName, cacheIndexCount, true);
+                MenuScreen.platformTaskDispatcher = createdDispatcher;
+                SpriteButtonRenderer.field_s = createdDispatcher;
+                appletThreadTask = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
                 while (true) {
-                  if (var8.status == 0) {
+                  if (appletThreadTask.status == 0) {
                     ByteTextDecodingSupport.sleepMillis(0, 10L);
-                    if (!(var9 != 0)) {
+                    if (!(clientControlSnapshot != 0)) {
                       continue;
                     }
                   }
                   break;
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var8_ref = decompiledCaughtException;
-                IterableNodeHashTable.reportClientError(var8_ref, (String) null, (byte) 125);
-                this.a((byte) 79, "crash");
+              } catch (java.lang.Throwable appletStartupFailure) {
+                caughtStartupFailure = appletStartupFailure;
+                startupFailureForReport = caughtStartupFailure;
+                IterableNodeHashTable.reportClientError(startupFailureForReport, (String) null, (byte) 125);
+                this.showGameError((byte) 79, "crash");
               }
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var8_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_23_0 = var8_ref2;
-              stackIn_23_1 = new StringBuilder().append("ch.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-              if (param5 == null) {
-                stackIn_24_2 = "null";
+            } catch (java.lang.RuntimeException startupContextFailure) {
+              caughtStartupFailure = startupContextFailure;
+              startupFailureForContext = (RuntimeException) (Object) caughtStartupFailure;
+              startupFailureBeforeContext = startupFailureForContext;
+              startupMessagePrefix = new StringBuilder().append("ch.B(").append(initialCacheVariant).append(',').append(methodGuard).append(',').append(gameCrc).append(',').append(initialCanvasHeight).append(',').append(initialCanvasWidth).append(',');
+              if (gameName == null) {
+                gameNameDescription = "null";
               } else {
-                stackIn_24_2 = "{...}";
+                gameNameDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) startupFailureBeforeContext), ((StringBuilder) (Object) startupMessagePrefix).append(gameNameDescription).append(',').append(cacheIndexCount).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedStartupFailure) {
+            throw uncheckedStartupFailure;
+        } catch (Throwable checkedStartupFailure) {
+            throw new RuntimeException(checkedStartupFailure);
         }
     }
 
@@ -832,9 +832,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if ((VisualPropertyNode.field_m != null) &&
-              (this != VisualPropertyNode.field_m)) {
-            stackIn_10_0 = VisualPropertyNode.field_m.getParameter(param0);
+          if ((VisualPropertyNode.loaderApplet != null) &&
+              (this != VisualPropertyNode.loaderApplet)) {
+            stackIn_10_0 = VisualPropertyNode.loaderApplet.getParameter(param0);
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getParameter(param0);
@@ -853,52 +853,52 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void d(int param0) {
-        int fieldTemp$1 = 0;
-        long var2_long = 0L;
-        long var4 = 0L;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var6_int = 0;
-        java.awt.Insets var6 = null;
+    private final void renderAppletFrame(int methodGuard) {
+        int previousCanvasRefreshCounter = 0;
+        long renderTimeMillis = 0L;
+        long previousRenderTimeMillis = 0L;
+        RuntimeException caughtRenderFailure = null;
+        RuntimeException renderFailureForContext = null;
+        int elapsedHistoryMillis = 0;
+        java.awt.Insets fullscreenInsets = null;
         try {
-          if (param0 != 32000) {
+          if (methodGuard != 32000) {
             this.windowActivated((java.awt.event.WindowEvent) null);
           }
-          var2_long = ClientClockSupport.correctedCurrentTimeMillis(param0 - 44520);
-          var4 = ArchiveRequest.field_p[GzipInflater.field_k];
-          ArchiveRequest.field_p[GzipInflater.field_k] = var2_long;
-          GzipInflater.field_k = 31 & GzipInflater.field_k + 1;
-          if ((0L != var4) &&
-              (var4 < var2_long)) {
-            var6_int = (int)(-var4 + var2_long);
-            MatchScoringSupport.frameLoopRateEstimate = (32000 + (var6_int >> 1)) / var6_int;
+          renderTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 44520);
+          previousRenderTimeMillis = ArchiveRequest.renderTimeHistoryMillis[GzipInflater.nextRenderTimeHistoryIndex];
+          ArchiveRequest.renderTimeHistoryMillis[GzipInflater.nextRenderTimeHistoryIndex] = renderTimeMillis;
+          GzipInflater.nextRenderTimeHistoryIndex = 31 & GzipInflater.nextRenderTimeHistoryIndex + 1;
+          if ((0L != previousRenderTimeMillis) &&
+              (previousRenderTimeMillis < renderTimeMillis)) {
+            elapsedHistoryMillis = (int)(-previousRenderTimeMillis + renderTimeMillis);
+            MatchScoringSupport.frameLoopRateEstimate = (32000 + (elapsedHistoryMillis >> 1)) / elapsedHistoryMillis;
           }
-          L2: {
-            fieldTemp$1 = DisplayModeInfo.field_i;
-            DisplayModeInfo.field_i = DisplayModeInfo.field_i + 1;
-            if (fieldTemp$1 > 50) {
-              DisplayModeInfo.field_i = DisplayModeInfo.field_i - 50;
+          canvasRefreshLocation: {
+            previousCanvasRefreshCounter = DisplayModeInfo.canvasRefreshCounter;
+            DisplayModeInfo.canvasRefreshCounter = DisplayModeInfo.canvasRefreshCounter + 1;
+            if (previousCanvasRefreshCounter > 50) {
+              DisplayModeInfo.canvasRefreshCounter = DisplayModeInfo.canvasRefreshCounter - 50;
               UsernameQueryState.canvasRedrawRequested = true;
               MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
               if (!((SharedBufferPools.fullscreenFrame != null) &&
                   (FullscreenFocusCanvas.field_a == null))) {
-                MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.canvasOffsetY);
+                MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
                 if (Geoblox.clientControlFlowFlag == 0) {
-                  break L2;
+                  break canvasRefreshLocation;
                 }
               }
-              var6 = SharedBufferPools.fullscreenFrame.getInsets();
-              MessageDialog.gameCanvas.setLocation(var6.left + PrefixCodeDecoder.field_b, ButtonWidget.canvasOffsetY + var6.top);
+              fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
+              MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY + fullscreenInsets.top);
             }
           }
           this.renderFrame(25853);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "ch.F(" + param0 + ')');
+        } catch (java.lang.RuntimeException renderCallbackFailure) {
+          caughtRenderFailure = renderCallbackFailure;
+          renderFailureForContext = caughtRenderFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) renderFailureForContext), "ch.F(" + methodGuard + ')');
         }
     }
 
@@ -906,7 +906,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this == PrefixCodeDecoder.field_d) &&
+          if ((this == PrefixCodeDecoder.activeGameApplet) &&
               (!MidiNoteMixer.appletShutdownStarted)) {
             MenuScreen.appletStopDeadlineMillis = 4000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
             return;
@@ -924,7 +924,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     abstract void serviceAudio(int param0);
 
     protected GameApplet() {
-        this.field_a = false;
+        this.errorPageShown = false;
     }
 
     static {

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PrefixCodeDecoder {
-    static int field_b;
+    static int canvasOffsetX;
     private int[] decodeTree;
     static IntrusiveDeque pendingFifoAcknowledgements;
     static IntrusiveDeque trackedSoundEffectStreams;
     static int pointerXSnapshot;
-    static GameApplet field_d;
+    static GameApplet activeGameApplet;
 
     final static String readCompressedText(ByteArrayBuffer buffer, int guardAndDestinationOffset, int maximumDecodedLength) {
         int decodedLength = 0;
@@ -639,10 +639,10 @@ final class PrefixCodeDecoder {
     }
 
     static {
-        field_b = 0;
+        canvasOffsetX = 0;
         pendingFifoAcknowledgements = new IntrusiveDeque();
         pointerXSnapshot = 0;
         trackedSoundEffectStreams = new IntrusiveDeque();
-        field_d = null;
+        activeGameApplet = null;
     }
 }

@@ -18,7 +18,7 @@ final class InstrumentEnvelope {
         ContextualRuntimeException wrappedFailure = null;
         if (cause instanceof ContextualRuntimeException) {
             wrappedFailure = (ContextualRuntimeException) ((Object) cause);
-            wrappedFailure.field_d = wrappedFailure.field_d + ' ' + context;
+            wrappedFailure.contextPath = wrappedFailure.contextPath + ' ' + context;
         } else {
             wrappedFailure = new ContextualRuntimeException(cause, context);
         }

@@ -4,7 +4,7 @@
 final class CrcAcknowledgedPacket extends IntrusiveNode {
     int acknowledgementCrc;
     byte[] payload;
-    static volatile boolean field_g;
+    static volatile boolean canvasHasFocus;
 
     final static boolean a(String param0, String param1, byte param2) {
         String var3 = null;
@@ -20,7 +20,7 @@ final class CrcAcknowledgedPacket extends IntrusiveNode {
           param1 = CharacterReplacementSupport.replaceCharacter(param1, "", '_', (byte) 127);
           var3 = CachedArchiveSource.reverseTextCodeUnits(82, param1);
           if (param2 > -77) {
-            field_g = true;
+            canvasHasFocus = true;
           }
           stackIn_7_0 = !(param0.indexOf(param1) == -1) || !(param0.indexOf(var3) == -1);
           return stackIn_7_0;
@@ -63,6 +63,6 @@ final class CrcAcknowledgedPacket extends IntrusiveNode {
     }
 
     static {
-        field_g = true;
+        canvasHasFocus = true;
     }
 }

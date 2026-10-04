@@ -4,7 +4,7 @@
 final class RasterTargetSnapshot extends IntrusiveNode {
     static String previousText;
     int framebufferHeight;
-    static long[] field_l;
+    static long[] updateTimeHistoryMillis;
     static Sprite[] introFaceFrames;
     static String[] field_f;
     int[] pixels;
@@ -62,7 +62,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
         if (param0 == 6491) {
             previousText = null;
             entitiesById = null;
-            field_l = null;
+            updateTimeHistoryMillis = null;
             field_f = null;
             introFaceFrames = null;
             return;
@@ -70,7 +70,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
         RasterTargetSnapshot.b(-67);
         previousText = null;
         entitiesById = null;
-        field_l = null;
+        updateTimeHistoryMillis = null;
         field_f = null;
         introFaceFrames = null;
     }
@@ -97,7 +97,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
 
     static {
         previousText = "Prev";
-        field_l = new long[32];
+        updateTimeHistoryMillis = new long[32];
         entitiesById = new GameplayEntity[1000];
     }
 }

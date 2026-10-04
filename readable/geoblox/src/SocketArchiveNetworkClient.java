@@ -6,7 +6,7 @@ import java.io.*;
 final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static ValidationState validInputValidationState;
     private BufferedSocket socket;
-    static int field_t;
+    static int errorReportGameCrc;
     static float field_x;
     static String loginUsernameTooltipText;
     static int[] field_s;
@@ -349,7 +349,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 break;
               }
               if (methodGuard) {
-                field_t = 110;
+                errorReportGameCrc = 110;
               }
               while (true) {
                 requestToRequeue = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.removeFirst(true));

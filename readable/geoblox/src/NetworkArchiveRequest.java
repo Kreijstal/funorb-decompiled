@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NetworkArchiveRequest extends ArchiveRequest {
-    static int field_w;
+    static int initialCanvasHeight;
     static PlatformTask sessionSocketOpenTask;
     ByteArrayBuffer responseBuffer;
     byte reservedTailBytes;

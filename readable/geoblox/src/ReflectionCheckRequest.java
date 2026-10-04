@@ -3,7 +3,7 @@
  */
 final class ReflectionCheckRequest extends IntrusiveNode {
     int[] operationTypes;
-    static FrameTimer field_p;
+    static FrameTimer frameTimer;
     int[] operationErrors;
     int[] integerWriteValues;
     int requestId;
@@ -19,11 +19,11 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         pointsPanelGlowFrames = null;
         if (param0) {
             currentSocialLocationLabel = (String) null;
-            field_p = null;
+            frameTimer = null;
             currentSocialLocationLabel = null;
             return;
         }
-        field_p = null;
+        frameTimer = null;
         currentSocialLocationLabel = null;
     }
 

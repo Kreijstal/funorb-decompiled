@@ -6,7 +6,7 @@ import java.util.*;
 final class GzipInflater {
     static int pendingLoginUiAction;
     static ResourceArchive field_a;
-    static int field_k;
+    static int nextRenderTimeHistoryIndex;
     private static TextTemplateArgumentType field_h;
     static MusicScore currentMusicTrack;
     static IndexedSprite sunBackgroundSprite;

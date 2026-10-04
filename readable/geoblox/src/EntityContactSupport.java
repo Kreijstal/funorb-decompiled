@@ -11,15 +11,15 @@ final class EntityContactSupport {
         int updateHistoryIndex = 0;
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            ReflectionCheckRequest.field_p.resetForResume(111);
+            ReflectionCheckRequest.frameTimer.resetForResume(111);
             guardResidueThenRenderHistoryIndex = 10 / ((methodGuard - 68) / 57);
             for (updateHistoryIndex = 0; updateHistoryIndex < 32; updateHistoryIndex++) {
-                ArchiveRequest.field_p[updateHistoryIndex] = 0L;
+                ArchiveRequest.renderTimeHistoryMillis[updateHistoryIndex] = 0L;
             }
             for (guardResidueThenRenderHistoryIndex = 0; guardResidueThenRenderHistoryIndex < 32; guardResidueThenRenderHistoryIndex++) {
-                RasterTargetSnapshot.field_l[guardResidueThenRenderHistoryIndex] = 0L;
+                RasterTargetSnapshot.updateTimeHistoryMillis[guardResidueThenRenderHistoryIndex] = 0L;
             }
-            TriangleMesh.field_w = 0;
+            TriangleMesh.pendingUpdateTicks = 0;
         } catch (RuntimeException timingResetFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) timingResetFailure), "ih.C(" + methodGuard + ')');
         }

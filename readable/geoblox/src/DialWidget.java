@@ -9,7 +9,7 @@ final class DialWidget extends ButtonWidget {
     int stepCount;
     int centerOffsetY;
     static String fullscreenMembersButtonText;
-    static int field_G;
+    static int initialCanvasWidth;
     int secondaryMarkerStep;
     int selectedStep;
     int radius;

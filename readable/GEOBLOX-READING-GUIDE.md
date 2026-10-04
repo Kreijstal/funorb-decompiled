@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/12946054663ab91496b55853b3e0644e4f9a6ff0/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b1a33444dc957e0c92c0b511c46a0e42b0d0d457/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 156)
+## Current readability (pass 157)
 
-The export has 15,070 guarded names and 104,152 Java identifier edits, plus 11
-class-name literal edits and 250 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 15,210 guarded names and 104,736 Java identifier edits, plus 11
+class-name literal edits and 275 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -24,7 +24,47 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current frame timer and ranking transport naming (pass 156)
+## Current applet frame and lifecycle naming (pass 157)
+
+Pass 157 adds 140 guarded names: nineteen fields, eight methods, seventeen
+parameters, 87 locals and nine block labels. All eight remaining opaque
+GameApplet methods now expose updateAppletTick, renderAppletFrame,
+rebuildGameCanvas, startAppletServices, shutdownAppletServices, showGameError,
+compactExceptionTrace and releaseMeshDepthBuckets. Every run-loop local and
+block boundary is named. Shared fields identify the active/loader applets,
+frame timer, update count, focus snapshot, two history rings and their indexes,
+canvas offsets/refresh counter, initial clip dimensions and error-report CRC.
+
+The source retains its original order: history writes precede focus copying and
+callbacks; canvas refresh uses the old counter before increment/subtraction;
+timing reset clears render history before update history and changes the tick
+count last. Wrong guards, overflow, nonzero client flags, partial failures and
+contextual exception fields remain. Real clock values are checked against bounds
+and normalized in the trace; this is not a frame-pacing measurement.
+
+The existing result-helper fixture adds 741 native/raw/readable cases: 180
+updates, 324 renders, 225 timing resets, six cleanup guards and six focus
+callbacks. They include 611 expected failures from injected callbacks, invalid
+indexes/arrays/guards and the original nonzero-flag null-fullscreen path.
+Independent state/event oracles check history/aliases, focus/monitor release,
+refresh geometry and signed counter overflow, estimated rate arithmetic,
+throwable identity and exact partial clears. All thirteen earlier trace hashes
+remain unchanged. The 27 publication tests pass.
+
+The export has 15,210 rules and 104,736 identifier edits, plus eleven class-name
+literal and 275 label edits: 105,022 total. All 15,070 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Twenty-four generated Java files change only in their names.
+Both 303-file corpora compile, reproduce and reverse byte exactly. The expected
+label-edit count increases by 25; raw Java, decompiler, naming/workflow/stub pins,
+class-literal policy and label destinations stay fixed.
+
+Eight large labeled bodies, 153 opaque labels, 264 opaque fields and 300
+single-letter methods remain. Live AWT/fullscreen startup/shutdown/error pages,
+whole run-loop timing, assets/server/game/browser/phone and heap/presented-FPS
+acceptance remain unverified.
+
+## Previous frame timer and ranking transport naming (pass 156)
 
 Pass 156 adds 82 guarded names: eight fields, eleven methods, fifteen parameters
 and 48 locals. All eighteen declarations owned by FrameTimer and all 72 owned by

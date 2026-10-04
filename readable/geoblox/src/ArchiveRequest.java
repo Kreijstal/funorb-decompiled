@@ -7,7 +7,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     boolean priority;
     static String createAgeTooltipText;
     static int uiFontArchiveId;
-    static long[] field_p;
+    static long[] renderTimeHistoryMillis;
     static String fullscreenAcceptButtonText;
     boolean seenByCleanup;
     static int[] sessionPacketLengthByOpcode;
@@ -111,7 +111,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     public static void f(int param0) {
         createAgeTooltipText = null;
         pendingActionMarkers = null;
-        field_p = null;
+        renderTimeHistoryMillis = null;
         sessionPacketLengthByOpcode = null;
         fullscreenAcceptButtonText = null;
         if (param0 != 31735) {
@@ -131,6 +131,6 @@ abstract class ArchiveRequest extends DualLinkNode {
         createAgeTooltipText = "Type your age in years";
         sessionPacketLengthByOpcode = new int[256];
         fullscreenAcceptButtonText = "Accept";
-        field_p = new long[32];
+        renderTimeHistoryMillis = new long[32];
     }
 }

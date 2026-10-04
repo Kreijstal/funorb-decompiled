@@ -6,7 +6,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
     static float spawnIntervalScale;
     private ButtonWidget closeButton;
     static String menuText;
-    static int field_cb;
+    static int nextUpdateTimeHistoryIndex;
     static int alternateArchivePort;
     static String createPasswordTooltipText;
 

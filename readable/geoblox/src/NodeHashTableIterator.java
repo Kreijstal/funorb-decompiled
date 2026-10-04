@@ -25,14 +25,14 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static java.applet.Applet getActiveApplet(int methodGuard) {
-        if (!(VisualPropertyNode.field_m == null)) {
-            return VisualPropertyNode.field_m;
+        if (!(VisualPropertyNode.loaderApplet == null)) {
+            return VisualPropertyNode.loaderApplet;
         }
         if (methodGuard <= 104) {
             NodeHashTableIterator.markInsetZeroOutlinePixels(83, 4, -82, 86, 115);
-            return (java.applet.Applet) ((Object) PrefixCodeDecoder.field_d);
+            return (java.applet.Applet) ((Object) PrefixCodeDecoder.activeGameApplet);
         }
-        return (java.applet.Applet) ((Object) PrefixCodeDecoder.field_d);
+        return (java.applet.Applet) ((Object) PrefixCodeDecoder.activeGameApplet);
     }
 
     final static void markInsetZeroOutlinePixels(int topY, int leftX, int width, int methodGuard, int height) {

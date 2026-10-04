@@ -3,8 +3,8 @@
  */
 final class ContextualRuntimeException extends RuntimeException {
     static int releasesPerDifficultyStep;
-    Throwable field_a;
-    String field_d;
+    Throwable wrappedCause;
+    String contextPath;
     static double specialSpriteKindProbability;
 
     final static void a(String param0, byte param1) {
@@ -148,8 +148,8 @@ final class ContextualRuntimeException extends RuntimeException {
     }
 
     ContextualRuntimeException(Throwable param0, String param1) {
-        this.field_d = param1;
-        this.field_a = param0;
+        this.contextPath = param1;
+        this.wrappedCause = param0;
     }
 
     static {

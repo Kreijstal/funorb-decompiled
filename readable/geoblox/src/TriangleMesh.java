@@ -4,7 +4,7 @@
 final class TriangleMesh {
     short[] field_J;
     byte[] facePriorities;
-    static int field_w;
+    static int pendingUpdateTicks;
     int[] thirdVertexSourceX;
     int[] firstVertexSourceY;
     short[] normalZ;

@@ -4,16 +4,16 @@
 class VisualPropertyNode extends DualLinkNode {
     static int previousPacketOpcode;
     static boolean field_o;
-    static java.applet.Applet field_m;
+    static java.applet.Applet loaderApplet;
     private static String field_z;
 
     VisualPropertyNode() {
     }
 
     public static void e(byte param0) {
-        field_m = null;
+        loaderApplet = null;
         if (param0 < 54) {
-            field_m = (java.applet.Applet) null;
+            loaderApplet = (java.applet.Applet) null;
         }
     }
 

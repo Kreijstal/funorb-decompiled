@@ -19,7 +19,7 @@ abstract class SessionGameApplet extends GameApplet {
 
     private final int pollReconnectHandshake(int pendingResultCode) {
         int handshakeResult;
-        if (this.field_a) {
+        if (this.errorPageShown) {
           return -1;
         }
         if (!ClientTimingSupport.isClientReadyForSessionActions(75)) {
@@ -35,7 +35,7 @@ abstract class SessionGameApplet extends GameApplet {
         if ((handshakeResult != 0) &&
             (handshakeResult != 1)) {
           if (!TextWidgetRenderer.suppressReconnectErrorPage) {
-            this.a((byte) 79, "reconnect");
+            this.showGameError((byte) 79, "reconnect");
           }
           ClientFlowState.requestSessionExit((byte) 103);
           TextInputValidator.handleLoginUiResponse((byte) 124, handshakeResult, AudioService.sessionResponseText);
@@ -314,19 +314,19 @@ abstract class SessionGameApplet extends GameApplet {
             if (DebouncedValidationProvider.archiveLoadStatus != 3) {
               if (DebouncedValidationProvider.archiveLoadStatus != 4) {
                 if (2 == DebouncedValidationProvider.archiveLoadStatus) {
-                  this.a((byte) 79, "js5connect_full");
+                  this.showGameError((byte) 79, "js5connect_full");
                 } else {
                   if (DebouncedValidationProvider.archiveLoadStatus != 5) {
-                    this.a((byte) 79, "js5connect");
+                    this.showGameError((byte) 79, "js5connect");
                   } else {
-                    this.a((byte) 79, "outofdate");
+                    this.showGameError((byte) 79, "outofdate");
                   }
                 }
               } else {
-                this.a((byte) 79, "js5io");
+                this.showGameError((byte) 79, "js5io");
               }
             } else {
-              this.a((byte) 79, "js5crc");
+              this.showGameError((byte) 79, "js5crc");
             }
           }
         }
@@ -456,7 +456,7 @@ abstract class SessionGameApplet extends GameApplet {
         if ((!fullscreenActive) &&
             (EntityMotionSupport.canvasReplacementRequested)) {
           EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
-          this.b(true);
+          this.rebuildGameCanvas(true);
           UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
         }
         if (OpacityWidget.enabledSessionPacketOpcodes[8]) {
@@ -688,7 +688,7 @@ abstract class SessionGameApplet extends GameApplet {
               this.affiliateId = Integer.parseInt(affiliateParameter);
             }
             AchievementSubmission.simpleUiMode = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(32, -14948, this.gameCrc, canvasHeight, canvasWidth, gameName, cacheIndexCount);
+            this.startAppletServices(32, -14948, this.gameCrc, canvasHeight, canvasWidth, gameName, cacheIndexCount);
             if (methodGuard != 81) {
               this.initializeSessionAppletServices((byte) -103, -111, -55, -20, 80, false, -81, 86);
             }
@@ -697,7 +697,7 @@ abstract class SessionGameApplet extends GameApplet {
             initializationFailureForReport = (Exception) (Object) caughtInitializationFailure;
             unusedNullErrorMessage = (String) null;
             IterableNodeHashTable.reportClientError((Throwable) ((Object) initializationFailureForReport), (String) null, (byte) 125);
-            this.a((byte) 79, "crash");
+            this.showGameError((byte) 79, "crash");
           }
           return;
         } catch (java.lang.RuntimeException initializationContextFailure) {

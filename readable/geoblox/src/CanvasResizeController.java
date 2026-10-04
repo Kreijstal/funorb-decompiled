@@ -155,10 +155,10 @@ final class CanvasResizeController {
             }
             if (this.requestedWidth <= AudioService.canvasWidth) {
               if (this.requestedWidth > 0) {
-                PrefixCodeDecoder.field_b = 0;
+                PrefixCodeDecoder.canvasOffsetX = 0;
               }
             } else {
-              PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+              PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
             }
           } else {
             if (this.resizePending) {
@@ -176,10 +176,10 @@ final class CanvasResizeController {
               return;
             }
             if (this.requestedWidth > AudioService.canvasWidth) {
-              PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+              PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
             } else {
               if (this.requestedWidth > 0) {
-                PrefixCodeDecoder.field_b = 0;
+                PrefixCodeDecoder.canvasOffsetX = 0;
               }
             }
           }
@@ -208,10 +208,10 @@ final class CanvasResizeController {
           }
           if (this.requestedWidth <= AudioService.canvasWidth) {
             if (this.requestedWidth > 0) {
-              PrefixCodeDecoder.field_b = 0;
+              PrefixCodeDecoder.canvasOffsetX = 0;
             }
           } else {
-            PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+            PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
           }
         } else {
           this.resizePending = false;
@@ -230,10 +230,10 @@ final class CanvasResizeController {
             return;
           }
           if (this.requestedWidth > AudioService.canvasWidth) {
-            PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+            PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
           } else {
             if (this.requestedWidth > 0) {
-              PrefixCodeDecoder.field_b = 0;
+              PrefixCodeDecoder.canvasOffsetX = 0;
             }
           }
         }
@@ -279,7 +279,7 @@ final class CanvasResizeController {
               }
             }
             if (this.requestedWidth > 0) {
-              PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+              PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
             }
             return;
           }
@@ -299,7 +299,7 @@ final class CanvasResizeController {
                 }
               }
               if (this.requestedWidth > 0) {
-                PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+                PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
               }
               return;
             }
@@ -318,7 +318,7 @@ final class CanvasResizeController {
           if (this.requestedWidth <= 0) {
             return;
           }
-          PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+          PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
           return;
         }
         if (var3 < this.minimumHeight) {
@@ -338,7 +338,7 @@ final class CanvasResizeController {
           if (this.requestedWidth <= 0) {
             return;
           }
-          PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+          PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
           return;
         }
         var4 = (int)(0.5f + (float)var3 * this.aspectRatio);
@@ -363,14 +363,14 @@ final class CanvasResizeController {
             if (AudioService.canvasWidth != var2) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
               if (this.requestedWidth > 0) {
-                PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+                PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
               }
               return;
             }
             if (var3 != ClientRenderingState.canvasHeight) {
               this.resizeListener.onCanvasResize(-2964, var2, var3);
               if (this.requestedWidth > 0) {
-                PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+                PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
               }
               return;
             }
@@ -390,7 +390,7 @@ final class CanvasResizeController {
         if (this.requestedWidth <= 0) {
           return;
         }
-        PrefixCodeDecoder.field_b = (-AudioService.canvasWidth + this.requestedWidth) / 2;
+        PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
         return;
     }
 
