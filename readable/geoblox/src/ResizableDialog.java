@@ -57,7 +57,7 @@ abstract class ResizableDialog extends FadingDialog {
         RuntimeException caughtNameValidationFailure = null;
         try {
           if (methodGuard == 44) {
-            validationErrorBeforeReturn = AccountContentDialog.a(false, false, candidateName);
+            validationErrorBeforeReturn = AccountContentDialog.accountNameValidationMessage(false, false, candidateName);
             return validationErrorBeforeReturn;
           }
           guardedNullValidationResult = (String) null;

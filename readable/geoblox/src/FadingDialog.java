@@ -102,7 +102,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (UsernameAvailabilityValidator.usernameContainsPasswordOrReverse(8, username, password)) {
             return false;
           }
-          if (!CrcAcknowledgedPacket.a(password, username, (byte) -107)) {
+          if (!CrcAcknowledgedPacket.containsAccountNameOrReverse(password, username, (byte) -107)) {
             return true;
           }
           return false;

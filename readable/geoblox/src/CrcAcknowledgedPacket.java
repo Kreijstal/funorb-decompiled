@@ -6,41 +6,41 @@ final class CrcAcknowledgedPacket extends IntrusiveNode {
     byte[] payload;
     static volatile boolean canvasHasFocus;
 
-    final static boolean a(String param0, String param1, byte param2) {
-        String var3 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
+    final static boolean containsAccountNameOrReverse(String textToSearch, String accountNameThenWithoutUnderscores, byte methodGuard) {
+        String reversedName = null;
+        boolean containsNameBeforeReturn = false;
+        RuntimeException comparisonFailureBeforeDescription = null;
+        StringBuilder comparisonMessagePrefix = null;
+        String textDescription = null;
+        StringBuilder messageBeforeName = null;
+        String nameDescription = null;
+        RuntimeException caughtComparisonFailure = null;
+        RuntimeException comparisonFailureForContext = null;
         try {
-          param1 = CharacterReplacementSupport.replaceCharacter(param1, "", '_', (byte) 127);
-          var3 = CachedArchiveSource.reverseTextCodeUnits(82, param1);
-          if (param2 > -77) {
+          accountNameThenWithoutUnderscores = CharacterReplacementSupport.replaceCharacter(accountNameThenWithoutUnderscores, "", '_', (byte) 127);
+          reversedName = CachedArchiveSource.reverseTextCodeUnits(82, accountNameThenWithoutUnderscores);
+          if (methodGuard > -77) {
             canvasHasFocus = true;
           }
-          stackIn_7_0 = !(param0.indexOf(param1) == -1) || !(param0.indexOf(var3) == -1);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("wc.B(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+          containsNameBeforeReturn = !(textToSearch.indexOf(accountNameThenWithoutUnderscores) == -1) || !(textToSearch.indexOf(reversedName) == -1);
+          return containsNameBeforeReturn;
+        } catch (java.lang.RuntimeException comparisonFailure) {
+          caughtComparisonFailure = comparisonFailure;
+          comparisonFailureForContext = caughtComparisonFailure;
+          comparisonFailureBeforeDescription = comparisonFailureForContext;
+          comparisonMessagePrefix = new StringBuilder().append("wc.B(");
+          if (textToSearch == null) {
+            textDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            textDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+          messageBeforeName = ((StringBuilder) (Object) comparisonMessagePrefix).append(textDescription).append(',');
+          if (accountNameThenWithoutUnderscores == null) {
+            nameDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) comparisonFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeName).append(nameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

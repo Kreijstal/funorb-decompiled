@@ -45,7 +45,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             return mismatchedEmailState;
           }
           if (!candidateText.equals(this.cachedEmailCandidate)) {
-            availabilityQuery = SoundSampleCache.a(-1, candidateText);
+            availabilityQuery = SoundSampleCache.getOrRefreshEmailAvailabilityQuery(-1, candidateText);
             if (!availabilityQuery.isCompleted(-76)) {
               pendingEmailState = WidgetSkinState.pendingQueryValidationState;
               return pendingEmailState;

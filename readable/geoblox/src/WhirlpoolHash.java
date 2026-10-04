@@ -169,32 +169,32 @@ final class WhirlpoolHash {
         }
     }
 
-    final static boolean a(String param0, byte param1) {
-        RuntimeException var2 = null;
-        CharSequence var3 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean matchesNormalizedSessionName(String candidateName, byte methodGuard) {
+        RuntimeException comparisonFailureForContext = null;
+        CharSequence candidateCharacters = null;
+        boolean sessionNameMatchBeforeReturn = false;
+        RuntimeException comparisonFailureBeforeDescription = null;
+        StringBuilder comparisonMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtComparisonFailure = null;
         try {
-          if (param1 != 12) {
+          if (methodGuard != 12) {
             gameSoundMixer = (PcmStreamMixer) null;
           }
-          var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = SecondaryNodeHashTable.normalizedSessionName.equals(ResizableDialog.normalizeSessionName(var3, 12));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("ge.A(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          candidateCharacters = (CharSequence) ((Object) candidateName);
+          sessionNameMatchBeforeReturn = SecondaryNodeHashTable.normalizedSessionName.equals(ResizableDialog.normalizeSessionName(candidateCharacters, 12));
+          return sessionNameMatchBeforeReturn;
+        } catch (java.lang.RuntimeException comparisonFailure) {
+          caughtComparisonFailure = comparisonFailure;
+          comparisonFailureForContext = caughtComparisonFailure;
+          comparisonFailureBeforeDescription = comparisonFailureForContext;
+          comparisonMessagePrefix = new StringBuilder().append("ge.A(");
+          if (candidateName == null) {
+            candidateDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) comparisonFailureBeforeDescription), ((StringBuilder) (Object) comparisonMessagePrefix).append(candidateDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ final class WhirlpoolHash {
               }
               if (methodGuard != -74) {
                 unusedGuardTextSnapshot = (String) null;
-                WhirlpoolHash.a((String) null, (byte) -15);
+                WhirlpoolHash.matchesNormalizedSessionName((String) null, (byte) -15);
               }
               if (2 == AccountCreationForm.archiveHandshakeStage) {
                 ArchiveHandshakeState.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ByteShortQuery.archiveTaskDispatcher);

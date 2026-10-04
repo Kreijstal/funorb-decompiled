@@ -803,96 +803,96 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static void a(ByteArrayBuffer param0, boolean param1) {
+    final static void writeCachedRandomSeedBytes(ByteArrayBuffer outputBuffer, boolean preserveTemplateTypeNine) {
         try {
-            RuntimeException runtimeException = null;
-            byte[] var2 = null;
-            int var5 = 0;
-            int stackIn_17_0 = 0;
-            int stackIn_17_1 = 0;
-            RuntimeException stackIn_35_0 = null;
-            StringBuilder stackIn_35_1 = null;
-            String stackIn_36_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            int var3_int = 0;
-            Exception var3 = null;
-            int var4 = 0;
-            var5 = Geoblox.clientControlFlowFlag;
+            RuntimeException seedFailureForContext = null;
+            byte[] seedBytes = null;
+            int clientControlSnapshot = 0;
+            int seedScanComparisonLeft = 0;
+            int seedScanComparisonRight = 0;
+            RuntimeException seedFailureBeforeDescription = null;
+            StringBuilder seedMessagePrefix = null;
+            String bufferDescription = null;
+            int seedReadContinuation = 0;
+            Throwable caughtSeedThrowable = null;
+            int seedByteIndex = 0;
+            Exception ignoredSeedReadFailure = null;
+            int fallbackByteIndex = 0;
+            clientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
-              L0: {
-                var2 = new byte[24];
+              seedPayloadWrite: {
+                seedBytes = new byte[24];
                 if (null != CacheFileState.randomSeedFile) {
                   try {
                     CacheFileState.randomSeedFile.seek(51, 0L);
-                    CacheFileState.randomSeedFile.readAll((byte) -76, var2);
-                    var3_int = 0;
+                    CacheFileState.randomSeedFile.readAll((byte) -76, seedBytes);
+                    seedByteIndex = 0;
                     while (true) {
-                      L4: {
-                        if (var3_int < 24) {
-                          stackIn_17_0 = ~var2[var3_int];
-                          stackIn_17_1 = -1;
-                          if (var5 != 0) {
-                            break L4;
+                      seedByteComparisonOperands: {
+                        if (seedByteIndex < 24) {
+                          seedScanComparisonLeft = ~seedBytes[seedByteIndex];
+                          seedScanComparisonRight = -1;
+                          if (clientControlSnapshot != 0) {
+                            break seedByteComparisonOperands;
                           }
-                          if (!((stackIn_17_0 != stackIn_17_1) &&
-                              (var5 == 0))) {
-                            var3_int++;
+                          if (!((seedScanComparisonLeft != seedScanComparisonRight) &&
+                              (clientControlSnapshot == 0))) {
+                            seedByteIndex++;
                             continue;
                           }
                         }
-                        stackIn_17_0 = 24;
-                        stackIn_17_1 = var3_int;
+                        seedScanComparisonLeft = 24;
+                        seedScanComparisonRight = seedByteIndex;
                       }
-                      if (stackIn_17_0 <= stackIn_17_1) {
+                      if (seedScanComparisonLeft <= seedScanComparisonRight) {
                         throw new IOException();
                       }
-                      decompiledRegionSelector0 = 0;
+                      seedReadContinuation = 0;
                       break;
                     }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L7: {
-                      var3 = (Exception) (Object) decompiledCaughtException;
-                      var4 = 0;
-                      while (var4 < 24) {
-                        var2[var4] = (byte) -1;
-                        var4++;
-                        if (var5 != 0) {
-                          decompiledRegionSelector0 = 1;
-                          break L7;
+                  } catch (java.lang.Exception seedReadFailure) {
+                    caughtSeedThrowable = seedReadFailure;
+                    seedReadFailureFallback: {
+                      ignoredSeedReadFailure = (Exception) (Object) caughtSeedThrowable;
+                      fallbackByteIndex = 0;
+                      while (fallbackByteIndex < 24) {
+                        seedBytes[fallbackByteIndex] = (byte) -1;
+                        fallbackByteIndex++;
+                        if (clientControlSnapshot != 0) {
+                          seedReadContinuation = 1;
+                          break seedReadFailureFallback;
                         }
                         continue;
                       }
-                      decompiledRegionSelector0 = 0;
+                      seedReadContinuation = 0;
                     }
                   }
-                  if (!(decompiledRegionSelector0 == 0)) {
-                    break L0;
+                  if (!(seedReadContinuation == 0)) {
+                    break seedPayloadWrite;
                   }
                 }
-                param0.writeBytes(24, -97, var2, 0);
+                outputBuffer.writeBytes(24, -97, seedBytes, 0);
               }
-              if (!param1) {
+              if (!preserveTemplateTypeNine) {
                 textTemplateArgumentTypeNine = (TextTemplateArgumentType) null;
               }
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_35_0 = runtimeException;
-              stackIn_35_1 = new StringBuilder().append("wh.IA(");
-              if (param0 == null) {
-                stackIn_36_2 = "null";
+            } catch (java.lang.RuntimeException seedFailure) {
+              caughtSeedThrowable = seedFailure;
+              seedFailureForContext = (RuntimeException) (Object) caughtSeedThrowable;
+              seedFailureBeforeDescription = seedFailureForContext;
+              seedMessagePrefix = new StringBuilder().append("wh.IA(");
+              if (outputBuffer == null) {
+                bufferDescription = "null";
               } else {
-                stackIn_36_2 = "{...}";
+                bufferDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) seedFailureBeforeDescription), ((StringBuilder) (Object) seedMessagePrefix).append(bufferDescription).append(',').append(preserveTemplateTypeNine).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 
@@ -913,20 +913,20 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static boolean e(int param0) {
-        RuntimeException var1 = null;
-        boolean stackIn_4_0 = false;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean isReconnectingLoginMode(int methodGuard) {
+        RuntimeException queryFailureForContext = null;
+        boolean reconnectModeBeforeReturn = false;
+        RuntimeException caughtQueryFailure = null;
         try {
-          if (param0 == 0) {
-            stackIn_4_0 = AgeValidator.reconnectingLoginMode;
-            return stackIn_4_0;
+          if (methodGuard == 0) {
+            reconnectModeBeforeReturn = AgeValidator.reconnectingLoginMode;
+            return reconnectModeBeforeReturn;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "wh.NA(" + param0 + ')');
+        } catch (java.lang.RuntimeException queryFailure) {
+          caughtQueryFailure = queryFailure;
+          queryFailureForContext = caughtQueryFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryFailureForContext), "wh.NA(" + methodGuard + ')');
         }
     }
 

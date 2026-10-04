@@ -109,96 +109,96 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         }
     }
 
-    final static TextValidationFailure a(String param0, boolean param1) {
-        TextValidationFailure stackIn_4_0 = null;
-        TextValidationFailure stackIn_8_0 = null;
-        TextValidationFailure stackIn_13_0 = null;
-        int stackIn_22_0 = 0;
-        TextValidationFailure stackIn_27_0 = null;
-        TextValidationFailure stackIn_41_0 = null;
-        TextValidationFailure stackIn_46_0 = null;
-        Object stackIn_52_0 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        String stackIn_56_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var6 = Geoblox.clientControlFlowFlag;
+    final static TextValidationFailure validateEmailLocalPart(String localPart, boolean preserveNotLoggedInText) {
+        TextValidationFailure emptyComponentFailureBeforeReturn = null;
+        TextValidationFailure overlongComponentFailureBeforeReturn = null;
+        TextValidationFailure missingClosingQuoteFailureBeforeReturn = null;
+        int toggledEscapeState = 0;
+        TextValidationFailure unescapedQuoteFailureBeforeReturn = null;
+        TextValidationFailure invalidDotFailureBeforeReturn = null;
+        TextValidationFailure invalidCharacterFailureBeforeReturn = null;
+        Object nullSuccessBeforeReturn = null;
+        RuntimeException validationFailureBeforeDescription = null;
+        StringBuilder validationMessagePrefix = null;
+        String localPartDescription = null;
+        RuntimeException caughtValidationFailure = null;
+        int localPartLength = 0;
+        RuntimeException validationFailureForContext = null;
+        int escapeOrPreviousDotState = 0;
+        int characterIndex = 0;
+        int characterCode = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var2_int = param0.length();
-          if (var2_int == 0) {
-            stackIn_4_0 = InstrumentNoteMask.missingTextComponentFailure;
-            return stackIn_4_0;
+          localPartLength = localPart.length();
+          if (localPartLength == 0) {
+            emptyComponentFailureBeforeReturn = InstrumentNoteMask.missingTextComponentFailure;
+            return emptyComponentFailureBeforeReturn;
           }
-          if (var2_int > 64) {
-            stackIn_8_0 = ButtonWidget.overlongTextFailure;
-            return stackIn_8_0;
+          if (localPartLength > 64) {
+            overlongComponentFailureBeforeReturn = ButtonWidget.overlongTextFailure;
+            return overlongComponentFailureBeforeReturn;
           }
-          if (34 == param0.charAt(0)) {
-            if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_13_0 = ArchiveLoadStep.invalidTextFormatFailure;
-              return stackIn_13_0;
+          if (34 == localPart.charAt(0)) {
+            if (localPart.charAt(localPartLength - 1) != 34) {
+              missingClosingQuoteFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
+              return missingClosingQuoteFailureBeforeReturn;
             }
-            var3 = 0;
-            for (var4 = 1; var4 < -1 + var2_int; var4++) {
-              var5 = param0.charAt(var4);
-              if (var5 == 92) {
-                stackIn_22_0 = (var3 != 0) ? 0 : 1;
-                var3 = stackIn_22_0;
+            escapeOrPreviousDotState = 0;
+            for (characterIndex = 1; characterIndex < -1 + localPartLength; characterIndex++) {
+              characterCode = localPart.charAt(characterIndex);
+              if (characterCode == 92) {
+                toggledEscapeState = (escapeOrPreviousDotState != 0) ? 0 : 1;
+                escapeOrPreviousDotState = toggledEscapeState;
               } else {
-                if ((var5 == 34) &&
-                    (var3 == 0)) {
-                  stackIn_27_0 = ArchiveLoadStep.invalidTextFormatFailure;
-                  return stackIn_27_0;
+                if ((characterCode == 34) &&
+                    (escapeOrPreviousDotState == 0)) {
+                  unescapedQuoteFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
+                  return unescapedQuoteFailureBeforeReturn;
                 }
-                var3 = 0;
+                escapeOrPreviousDotState = 0;
               }
             }
             return null;
           }
-          var3 = 0;
-          for (var4 = 0; var4 < var2_int; var4++) {
-            L1: {
-              var5 = param0.charAt(var4);
-              if (var5 == 46) {
-                if ((0 != var4) &&
-                    (var4 != -1 + var2_int) &&
-                    (var3 == 0)) {
-                  var3 = 1;
-                  break L1;
+          escapeOrPreviousDotState = 0;
+          for (characterIndex = 0; characterIndex < localPartLength; characterIndex++) {
+            unquotedLocalPartCharacter: {
+              characterCode = localPart.charAt(characterIndex);
+              if (characterCode == 46) {
+                if ((0 != characterIndex) &&
+                    (characterIndex != -1 + localPartLength) &&
+                    (escapeOrPreviousDotState == 0)) {
+                  escapeOrPreviousDotState = 1;
+                  break unquotedLocalPartCharacter;
                 }
-                stackIn_41_0 = ArchiveLoadStep.invalidTextFormatFailure;
-                return stackIn_41_0;
+                invalidDotFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
+                return invalidDotFailureBeforeReturn;
               }
-              if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(var5) == -1) {
-                stackIn_46_0 = ArchiveLoadStep.invalidTextFormatFailure;
-                return stackIn_46_0;
+              if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(characterCode) == -1) {
+                invalidCharacterFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
+                return invalidCharacterFailureBeforeReturn;
               }
-              var3 = 0;
+              escapeOrPreviousDotState = 0;
             }
           }
-          if (param1) {
+          if (preserveNotLoggedInText) {
             return null;
           }
           notLoggedInText = (String) null;
-          stackIn_52_0 = null;
-          return (TextValidationFailure) (stackIn_52_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_55_0 = var2;
-          stackIn_55_1 = new StringBuilder().append("r.B(");
-          if (param0 == null) {
-            stackIn_56_2 = "null";
+          nullSuccessBeforeReturn = null;
+          return (TextValidationFailure) (nullSuccessBeforeReturn);
+        } catch (java.lang.RuntimeException validationFailure) {
+          caughtValidationFailure = validationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeDescription = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("r.B(");
+          if (localPart == null) {
+            localPartDescription = "null";
           } else {
-            stackIn_56_2 = "{...}";
+            localPartDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeDescription), ((StringBuilder) (Object) validationMessagePrefix).append(localPartDescription).append(',').append(preserveNotLoggedInText).append(')').toString());
         }
     }
 

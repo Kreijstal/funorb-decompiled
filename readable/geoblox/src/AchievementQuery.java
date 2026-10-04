@@ -36,66 +36,66 @@ final class AchievementQuery extends IntrusiveNode {
         this.completed = false;
     }
 
-    final static String a(String param0, java.applet.Applet param1, int param2) {
+    final static String readCookieValue(String cookieName, java.applet.Applet applet, int methodGuard) {
         try {
-            int var6 = 0;
-            int var3_int = 0;
-            String var4 = null;
-            String[] var5 = null;
-            int var7 = 0;
-            int var8 = 0;
-            String stackIn_7_0 = null;
-            Object stackIn_12_0 = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_16_2 = null;
-            StringBuilder stackIn_18_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var3 = null;
-            Throwable var4_ref = null;
-            var8 = Geoblox.clientControlFlowFlag;
+            int cookieIndex = 0;
+            int guardQuotient = 0;
+            String cookieHeader = null;
+            String[] cookieEntries = null;
+            int equalsIndex = 0;
+            int unusedClientControlSnapshot = 0;
+            String cookieValueBeforeReturn = null;
+            Object nullMissingCookieResult = null;
+            RuntimeException lookupFailureBeforeDescription = null;
+            StringBuilder lookupMessagePrefix = null;
+            String cookieNameDescription = null;
+            StringBuilder messageBeforeApplet = null;
+            String appletDescription = null;
+            Throwable caughtLookupThrowable = null;
+            RuntimeException lookupFailureForContext = null;
+            Throwable ignoredCookieLookupFailure = null;
+            unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
-              var3_int = -105 / ((param2 + 33) / 57);
+              guardQuotient = -105 / ((methodGuard + 33) / 57);
               try {
-                var4 = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, param1, "getcookies"));
-                var5 = FullscreenFailureReason.splitAtCharacter(';', true, var4);
-                for (var6 = 0; var6 < var5.length; var6++) {
-                  var7 = var5[var6].indexOf('=');
-                  if ((var7 >= 0) &&
-                      (var5[var6].substring(0, var7).trim().equals(param0))) {
-                    stackIn_7_0 = var5[var6].substring(1 + var7).trim();
-                    return stackIn_7_0;
+                cookieHeader = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, applet, "getcookies"));
+                cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieHeader);
+                for (cookieIndex = 0; cookieIndex < cookieEntries.length; cookieIndex++) {
+                  equalsIndex = cookieEntries[cookieIndex].indexOf('=');
+                  if ((equalsIndex >= 0) &&
+                      (cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(cookieName))) {
+                    cookieValueBeforeReturn = cookieEntries[cookieIndex].substring(1 + equalsIndex).trim();
+                    return cookieValueBeforeReturn;
                   }
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4_ref = decompiledCaughtException;
+              } catch (java.lang.Throwable cookieLookupThrowable) {
+                caughtLookupThrowable = cookieLookupThrowable;
+                ignoredCookieLookupFailure = caughtLookupThrowable;
               }
-              stackIn_12_0 = null;
-              return (String) (stackIn_12_0);
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var3 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_15_0 = var3;
-              stackIn_15_1 = new StringBuilder().append("qi.B(");
-              if (param0 == null) {
-                stackIn_16_2 = "null";
+              nullMissingCookieResult = null;
+              return (String) (nullMissingCookieResult);
+            } catch (java.lang.RuntimeException lookupFailure) {
+              caughtLookupThrowable = lookupFailure;
+              lookupFailureForContext = (RuntimeException) (Object) caughtLookupThrowable;
+              lookupFailureBeforeDescription = lookupFailureForContext;
+              lookupMessagePrefix = new StringBuilder().append("qi.B(");
+              if (cookieName == null) {
+                cookieNameDescription = "null";
               } else {
-                stackIn_16_2 = "{...}";
+                cookieNameDescription = "{...}";
               }
-              stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-              if (param1 == null) {
-                stackIn_19_2 = "null";
+              messageBeforeApplet = ((StringBuilder) (Object) lookupMessagePrefix).append(cookieNameDescription).append(',');
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_19_2 = "{...}";
+                appletDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeApplet).append(appletDescription).append(',').append(methodGuard).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

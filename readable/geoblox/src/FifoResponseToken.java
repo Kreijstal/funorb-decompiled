@@ -7,51 +7,51 @@ final class FifoResponseToken extends IntrusiveNode {
     static int nextSecondarySocialInsertionIndex;
     static IndexedSprite bakingBackgroundSprite;
 
-    final static TextValidationFailure a(String param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        String var3 = null;
-        String var4 = null;
-        TextValidationFailure var5 = null;
-        TextValidationFailure stackIn_4_0 = null;
-        TextValidationFailure stackIn_7_0 = null;
-        TextValidationFailure stackIn_10_0 = null;
-        TextValidationFailure stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static TextValidationFailure validateEmailSyntax(String candidateEmail, int domainStartOffsetAfterAt) {
+        int atSignIndex = 0;
+        RuntimeException validationFailureForContext = null;
+        String localPart = null;
+        String domainPart = null;
+        TextValidationFailure localPartFailure = null;
+        TextValidationFailure emptyEmailFailureBeforeReturn = null;
+        TextValidationFailure missingAtSignFailureBeforeReturn = null;
+        TextValidationFailure localPartFailureBeforeReturn = null;
+        TextValidationFailure domainFailureBeforeReturn = null;
+        RuntimeException validationFailureBeforeDescription = null;
+        StringBuilder validationMessagePrefix = null;
+        String emailDescription = null;
+        RuntimeException caughtValidationFailure = null;
         try {
-          if ((param0 != null) &&
-              (0 != param0.length())) {
-            var2_int = param0.indexOf('@');
-            if (var2_int == -1) {
-              stackIn_7_0 = InstrumentNoteMask.missingTextComponentFailure;
-              return stackIn_7_0;
+          if ((candidateEmail != null) &&
+              (0 != candidateEmail.length())) {
+            atSignIndex = candidateEmail.indexOf('@');
+            if (atSignIndex == -1) {
+              missingAtSignFailureBeforeReturn = InstrumentNoteMask.missingTextComponentFailure;
+              return missingAtSignFailureBeforeReturn;
             }
-            var3 = param0.substring(0, var2_int);
-            var4 = param0.substring(param1 + var2_int);
-            var5 = AccountCreationDialog.a(var3, true);
-            if (var5 == null) {
-              stackIn_12_0 = GzipInflater.validateDomainText(var4, false);
-              return stackIn_12_0;
+            localPart = candidateEmail.substring(0, atSignIndex);
+            domainPart = candidateEmail.substring(domainStartOffsetAfterAt + atSignIndex);
+            localPartFailure = AccountCreationDialog.validateEmailLocalPart(localPart, true);
+            if (localPartFailure == null) {
+              domainFailureBeforeReturn = GzipInflater.validateDomainText(domainPart, false);
+              return domainFailureBeforeReturn;
             }
-            stackIn_10_0 = var5;
-            return stackIn_10_0;
+            localPartFailureBeforeReturn = localPartFailure;
+            return localPartFailureBeforeReturn;
           }
-          stackIn_4_0 = TextHotspotBounds.emptyEmailFailure;
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("ca.B(");
-          if (param0 == null) {
-            stackIn_16_2 = "null";
+          emptyEmailFailureBeforeReturn = TextHotspotBounds.emptyEmailFailure;
+          return emptyEmailFailureBeforeReturn;
+        } catch (java.lang.RuntimeException validationFailure) {
+          caughtValidationFailure = validationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeDescription = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("ca.B(");
+          if (candidateEmail == null) {
+            emailDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            emailDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeDescription), ((StringBuilder) (Object) validationMessagePrefix).append(emailDescription).append(',').append(domainStartOffsetAfterAt).append(')').toString());
         }
     }
 

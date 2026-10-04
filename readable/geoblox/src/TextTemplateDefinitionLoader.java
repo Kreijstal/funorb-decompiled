@@ -39,29 +39,29 @@ final class TextTemplateDefinitionLoader {
         createText = null;
     }
 
-    final static void a(int param0, int param1) {
-        IntrusiveNode var2 = null;
-        int var3 = 0;
-        CrcAcknowledgedPacket var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static void sendPendingAcknowledgementPackets(int opcode, int methodGuard) {
+        IntrusiveNode fifoAcknowledgement = null;
+        int unusedClientControlSnapshot = 0;
+        CrcAcknowledgedPacket crcAcknowledgement = null;
+        RuntimeException caughtSendFailure = null;
+        RuntimeException sendFailureForContext = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.firstForIteration(param1 ^ param1));
-          while (var4 != null) {
-            DiskArchiveRequest.a(param0, var4, param1 - 21718);
-            var4 = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.nextForIteration(1));
+          crcAcknowledgement = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.firstForIteration(methodGuard ^ methodGuard));
+          while (crcAcknowledgement != null) {
+            DiskArchiveRequest.writeCrcAcknowledgementPacket(opcode, crcAcknowledgement, methodGuard - 21718);
+            crcAcknowledgement = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.nextForIteration(1));
           }
-          var2 = PrefixCodeDecoder.pendingFifoAcknowledgements.firstForIteration(0);
-          while (var2 != null) {
-            EntityCollisionSupport.writeOpcodeWithOneZeroPayload(param0, 125);
-            var2 = PrefixCodeDecoder.pendingFifoAcknowledgements.nextForIteration(1);
+          fifoAcknowledgement = PrefixCodeDecoder.pendingFifoAcknowledgements.firstForIteration(0);
+          while (fifoAcknowledgement != null) {
+            EntityCollisionSupport.writeOpcodeWithOneZeroPayload(opcode, 125);
+            fifoAcknowledgement = PrefixCodeDecoder.pendingFifoAcknowledgements.nextForIteration(1);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2_ref), "di.B(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException sendFailure) {
+          caughtSendFailure = sendFailure;
+          sendFailureForContext = caughtSendFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) sendFailureForContext), "di.B(" + opcode + ',' + methodGuard + ')');
         }
     }
 

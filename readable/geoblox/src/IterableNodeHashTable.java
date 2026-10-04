@@ -178,11 +178,11 @@ final class IterableNodeHashTable implements Iterable {
                 }
                 errorDescription = errorDescription + context;
               }
-              DequeCursor.a(errorDescription, (byte) -75);
-              colonEscapedDescription = TextTemplateDefinition.a(errorDescription, "%3a", true, ":");
-              atSignEscapedDescription = TextTemplateDefinition.a(colonEscapedDescription, "%40", true, "@");
-              ampersandEscapedDescription = TextTemplateDefinition.a(atSignEscapedDescription, "%26", true, "&");
-              hashEscapedDescription = TextTemplateDefinition.a(ampersandEscapedDescription, "%23", true, "#");
+              DequeCursor.printClientErrorMessage(errorDescription, (byte) -75);
+              colonEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(errorDescription, "%3a", true, ":");
+              atSignEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(colonEscapedDescription, "%40", true, "@");
+              ampersandEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(atSignEscapedDescription, "%26", true, "&");
+              hashEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(ampersandEscapedDescription, "%23", true, "#");
               if (null == GameScreen.errorReportApplet) {
                 return;
               }

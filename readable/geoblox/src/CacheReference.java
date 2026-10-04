@@ -48,7 +48,7 @@ abstract class CacheReference extends DualLinkNode {
 
     final static void initializeAccountUiResources(byte methodGuard, ResourceArchive buttonImageArchive, boolean unusedMemberAccountMode, ResourceArchive fontArchive, ResourceArchive commonUiSpriteArchive) {
         try {
-            EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.a((byte) 86, "");
+            EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.createEmailAvailabilityQuery((byte) 86, "");
             int guardResidue = 103 / ((methodGuard - 70) / 34);
             EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -126, false);
             IndexedSpriteState.a((byte) 103, buttonImageArchive, commonUiSpriteArchive, fontArchive);

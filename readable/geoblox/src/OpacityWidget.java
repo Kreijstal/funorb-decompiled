@@ -79,7 +79,7 @@ final class OpacityWidget extends SingleChildWidget {
                 continue;
               }
               scanCursor++;
-              capacityReplacementIndexOrBuildMarkerStart = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) capacityMarkerIdText));
+              capacityReplacementIndexOrBuildMarkerStart = MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) capacityMarkerIdText));
               resultCapacity = resultCapacity + (-scanCursor + (capacityMarkerStart + replacementTexts[capacityReplacementIndexOrBuildMarkerStart].length()));
               continue;
             }
@@ -116,7 +116,7 @@ final class OpacityWidget extends SingleChildWidget {
               continue;
             }
             scanCursor++;
-            buildReplacementIndex = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) buildMarkerIdText));
+            buildReplacementIndex = MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) buildMarkerIdText));
             discardedPrefixAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart, capacityReplacementIndexOrBuildMarkerStart));
             unchangedTextStart = scanCursor;
             discardedReplacementAppendResult = resultBuilder.append(replacementTexts[buildReplacementIndex]);

@@ -196,7 +196,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             suggestionCount = suggestions.length;
             this.suggestions = new String[suggestionCount];
             for (formattedSuggestionIndex = 0; suggestionCount > formattedSuggestionIndex; formattedSuggestionIndex++) {
-              this.suggestions[formattedSuggestionIndex] = AchievementSubmission.a((CharSequence) ((Object) suggestions[formattedSuggestionIndex]), methodGuard - 123).replace(' ', ' ');
+              this.suggestions[formattedSuggestionIndex] = AchievementSubmission.canonicalizeBase37DisplayNameOrEmpty((CharSequence) ((Object) suggestions[formattedSuggestionIndex]), methodGuard - 123).replace(' ', ' ');
             }
             sharedSuggestionButtonRenderer = new UnderlinedButtonRenderer(DialogLayer.sharedUiFont, 0, 1);
             this.suggestionButtons = new ButtonWidget[suggestionCount + 1];

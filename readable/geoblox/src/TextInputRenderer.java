@@ -63,173 +63,173 @@ class TextInputRenderer extends TextWidgetRenderer {
         }
     }
 
-    final static boolean a(byte param0, PacketBuffer param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean readBooleanBit(byte methodGuard, PacketBuffer packet) {
+        RuntimeException readFailureForContext = null;
+        boolean booleanValueBeforeReturn = false;
+        RuntimeException readFailureBeforeDescription = null;
+        StringBuilder readMessagePrefix = null;
+        String packetDescription = null;
+        RuntimeException caughtReadFailure = null;
         try {
-          if (param0 < 6) {
+          if (methodGuard < 6) {
             TextInputRenderer.releaseStaticReferences((byte) -125);
           }
-          stackIn_5_0 = !(1 != param1.readBits((byte) -17, 1));
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("ac.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_9_2 = "null";
+          booleanValueBeforeReturn = !(1 != packet.readBits((byte) -17, 1));
+          return booleanValueBeforeReturn;
+        } catch (java.lang.RuntimeException readFailure) {
+          caughtReadFailure = readFailure;
+          readFailureForContext = caughtReadFailure;
+          readFailureBeforeDescription = readFailureForContext;
+          readMessagePrefix = new StringBuilder().append("ac.B(").append(methodGuard).append(',');
+          if (packet == null) {
+            packetDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            packetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeDescription), ((StringBuilder) (Object) readMessagePrefix).append(packetDescription).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, boolean param1, byte param2) {
-        int incrementValue$0 = 0;
-        int var13 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_59_0 = 0;
-        int stackIn_60_1 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var14 = 0;
-        var14 = Geoblox.clientControlFlowFlag;
+    final static void renderAchievementDetails(boolean keepDefaultVerticalOffsets, boolean newAchievementsOnly, byte methodGuard) {
+        int displayedIconCountBeforeIncrement = 0;
+        int coinIconIndex = 0;
+        int achievementMaskBeforeStore = 0;
+        int titleYBase = 0;
+        int titleYOffset = 0;
+        RuntimeException caughtRenderFailure = null;
+        int gridX = 0;
+        RuntimeException renderFailureForContext = null;
+        int gridY = 0;
+        int achievementMask = 0;
+        int displayedIconCount = 0;
+        int highlightedAchievementIndex = 0;
+        int hiddenAchievementCenteringOffset = 0;
+        int hiddenAchievementCount = 0;
+        int achievementIndexOrTitleY = 0;
+        int descriptionLineStep = 0;
+        int descriptionY = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var3_int = 160;
-          var4 = 190;
-          if (!param0) {
-            var4 -= 10;
+          gridX = 160;
+          gridY = 190;
+          if (!keepDefaultVerticalOffsets) {
+            gridY -= 10;
           }
-          if (!param1) {
-            stackIn_7_0 = InstrumentPatch.earnedAchievementMask;
+          if (!newAchievementsOnly) {
+            achievementMaskBeforeStore = InstrumentPatch.earnedAchievementMask;
           } else {
-            stackIn_7_0 = ScorePopupSupport.newAchievementMask;
+            achievementMaskBeforeStore = ScorePopupSupport.newAchievementMask;
           }
-          var5 = stackIn_7_0;
-          var6 = 0;
-          var7 = BoardEntityState.selectedAchievementIndex;
-          var8 = 0;
-          var9 = 0;
-          if (param1) {
-            for (var10 = 16; var10 >= 0; var10--) {
+          achievementMask = achievementMaskBeforeStore;
+          displayedIconCount = 0;
+          highlightedAchievementIndex = BoardEntityState.selectedAchievementIndex;
+          hiddenAchievementCenteringOffset = 0;
+          hiddenAchievementCount = 0;
+          if (newAchievementsOnly) {
+            for (achievementIndexOrTitleY = 16; achievementIndexOrTitleY >= 0; achievementIndexOrTitleY--) {
               if ((!((!ClientOptionSupport.isClientOptionEnabled(0, -100)) &&
-                    (var10 == 16))) &&
-                  ((1 << var10 & var5) == 0)) {
-                var9++;
-                var8 += 20;
+                    (achievementIndexOrTitleY == 16))) &&
+                  ((1 << achievementIndexOrTitleY & achievementMask) == 0)) {
+                hiddenAchievementCount++;
+                hiddenAchievementCenteringOffset += 20;
               }
             }
           }
-          if (8 <= var9) {
-            var3_int = var3_int + (-160 + var8);
+          if (8 <= hiddenAchievementCount) {
+            gridX = gridX + (-160 + hiddenAchievementCenteringOffset);
           }
-          for (var10 = 0; var10 < GameplaySetupSupport.achievementTitles.length; var10++) {
+          for (achievementIndexOrTitleY = 0; achievementIndexOrTitleY < GameplaySetupSupport.achievementTitles.length; achievementIndexOrTitleY++) {
             if ((!ClientOptionSupport.isClientOptionEnabled(0, -119)) &&
-                (var10 == 16) &&
+                (achievementIndexOrTitleY == 16) &&
                 (!AchievementQuery.hasReceivedAchievementSixteen(105))) {
               continue;
             }
-            if ((!((0 == (1 << var10 & var5)) &&
-                  (param1))) &&
-                ((PrefixCodeDecoder.pointerXSnapshot >= var3_int) &&
-                  (32 + var3_int >= PrefixCodeDecoder.pointerXSnapshot) &&
-                  (var4 <= PcmResampler.pointerYSnapshot) &&
-                  (32 + var4 >= PcmResampler.pointerYSnapshot))) {
-              SoftwareRasterizer.fillRoundedRectangle(var3_int, var4, 32, 32, 2, 16689938);
-              if (var7 < 0) {
-                var7 = var10;
+            if ((!((0 == (1 << achievementIndexOrTitleY & achievementMask)) &&
+                  (newAchievementsOnly))) &&
+                ((PrefixCodeDecoder.pointerXSnapshot >= gridX) &&
+                  (32 + gridX >= PrefixCodeDecoder.pointerXSnapshot) &&
+                  (gridY <= PcmResampler.pointerYSnapshot) &&
+                  (32 + gridY >= PcmResampler.pointerYSnapshot))) {
+              SoftwareRasterizer.fillRoundedRectangle(gridX, gridY, 32, 32, 2, 16689938);
+              if (highlightedAchievementIndex < 0) {
+                highlightedAchievementIndex = achievementIndexOrTitleY;
               }
-              SoftwareRasterizer.drawRoundedRectangle(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
+              SoftwareRasterizer.drawRoundedRectangle(2 + gridX, gridY + 2, 28, 28, 2, 16777215);
             }
-            if (var10 == BoardEntityState.selectedAchievementIndex) {
-              SoftwareRasterizer.fillRoundedRectangle(var3_int, var4, 32, 32, 2, 15488514);
-              SoftwareRasterizer.drawRoundedRectangle(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
+            if (achievementIndexOrTitleY == BoardEntityState.selectedAchievementIndex) {
+              SoftwareRasterizer.fillRoundedRectangle(gridX, gridY, 32, 32, 2, 15488514);
+              SoftwareRasterizer.drawRoundedRectangle(gridX + 2, gridY + 2, 28, 28, 2, 16777215);
             }
-            if ((var5 & 1 << var10) == 0) {
-              if (param1) {
+            if ((achievementMask & 1 << achievementIndexOrTitleY) == 0) {
+              if (newAchievementsOnly) {
                 continue;
               }
-              IntKeyLookup.unachievedSprite.drawQuarterSize(var3_int, var4);
+              IntKeyLookup.unachievedSprite.drawQuarterSize(gridX, gridY);
             } else {
-              UsernameAvailabilityQuery.achievementSprites[var10].drawQuarterSize(var3_int, var4);
+              UsernameAvailabilityQuery.achievementSprites[achievementIndexOrTitleY].drawQuarterSize(gridX, gridY);
             }
-            incrementValue$0 = var6;
-            var6++;
-            if (incrementValue$0 == 7) {
-              var4 += 40;
-              var3_int = 160;
-              if (!param0) {
-                var4 += 5;
+            displayedIconCountBeforeIncrement = displayedIconCount;
+            displayedIconCount++;
+            if (displayedIconCountBeforeIncrement == 7) {
+              gridY += 40;
+              gridX = 160;
+              if (!keepDefaultVerticalOffsets) {
+                gridY += 5;
               }
-              if (!param1) {
+              if (!newAchievementsOnly) {
                 continue;
               }
-              if (var9 < 8) {
-                var3_int = var3_int + var8;
+              if (hiddenAchievementCount < 8) {
+                gridX = gridX + hiddenAchievementCenteringOffset;
               }
             } else {
-              var3_int += 40;
+              gridX += 40;
             }
           }
-          stackIn_59_0 = 190;
-          if (!param0) {
-            stackIn_60_1 = -20;
+          titleYBase = 190;
+          if (!keepDefaultVerticalOffsets) {
+            titleYOffset = -20;
           } else {
-            stackIn_60_1 = -2;
+            titleYOffset = -2;
           }
-          var10 = stackIn_59_0 + stackIn_60_1;
-          if (var7 != -1) {
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(GameplaySetupSupport.achievementTitles[var7], 315, var10, 0, -1);
-            var11 = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
-            var12 = 280;
-            if (0 != (1 << var7 & var5)) {
-              UsernameAvailabilityQuery.achievementSprites[var7].draw(160, var12);
-              var12 += 30;
-              FadingDialog.uiPaletteFont.drawText(ClientFlowState.achievedText, 318, var12, 0, -1);
+          achievementIndexOrTitleY = titleYBase + titleYOffset;
+          if (highlightedAchievementIndex != -1) {
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(GameplaySetupSupport.achievementTitles[highlightedAchievementIndex], 315, achievementIndexOrTitleY, 0, -1);
+            descriptionLineStep = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
+            descriptionY = 280;
+            if (0 != (1 << highlightedAchievementIndex & achievementMask)) {
+              UsernameAvailabilityQuery.achievementSprites[highlightedAchievementIndex].draw(160, descriptionY);
+              descriptionY += 30;
+              FadingDialog.uiPaletteFont.drawText(ClientFlowState.achievedText, 318, descriptionY, 0, -1);
             } else {
-              IntKeyLookup.unachievedSprite.draw(160, var12);
-              var12 += 30;
+              IntKeyLookup.unachievedSprite.draw(160, descriptionY);
+              descriptionY += 30;
               FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
-              FadingDialog.uiPaletteFont.drawText(DebouncedValidationProvider.notAchievedText, 318, var12, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(DebouncedValidationProvider.notAchievedText, 318, descriptionY, 0, -1);
               FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
             }
-            var12 = var12 + (IntrusiveNodeHashTable.smallFont.drawParagraph(LoginProtocolSupport.achievementDescriptions[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
-            var12 += 10;
-            IntrusiveNodeHashTable.smallFont.drawText(OpacityWidget.replaceIndexedTextMarkers(UsernameAvailabilityQuery.orbPointsText, new String[]{Integer.toString(AlternateLongAndTextLoginPayload.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
-            for (var13 = 0; var13 < SocketArchiveNetworkClient.field_s[var7]; var13++) {
-              UsernameAvailabilityValidator.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
+            descriptionY = descriptionY + (IntrusiveNodeHashTable.smallFont.drawParagraph(LoginProtocolSupport.achievementDescriptions[highlightedAchievementIndex], 318, descriptionY, 190, 200, 0, -1, 0, 0, 16) * descriptionLineStep + descriptionLineStep);
+            descriptionY += 10;
+            IntrusiveNodeHashTable.smallFont.drawText(OpacityWidget.replaceIndexedTextMarkers(UsernameAvailabilityQuery.orbPointsText, new String[]{Integer.toString(AlternateLongAndTextLoginPayload.achievementDisplayedOrbPoints[highlightedAchievementIndex])}, (byte) -50), 318, 360, 0, -1);
+            for (coinIconIndex = 0; coinIconIndex < SocketArchiveNetworkClient.achievementOrbCoinIconCounts[highlightedAchievementIndex]; coinIconIndex++) {
+              UsernameAvailabilityValidator.orbCoinSprite.drawQuarterSize(318 + 10 * coinIconIndex, 370);
             }
-            var12 = var12 + var11;
+            descriptionY = descriptionY + descriptionLineStep;
           } else {
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(SessionSocketSupport.mouseOverIconText, 315, var10, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(SessionSocketSupport.mouseOverIconText, 315, achievementIndexOrTitleY, 0, -1);
             if (UnderlinedButtonRenderer.isGuestSessionMode(-94)) {
               FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
-          if (param2 > -61) {
+          if (methodGuard > -61) {
             germsThemeCompletionAchievementId = 108;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "ac.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+        } catch (java.lang.RuntimeException renderFailure) {
+          caughtRenderFailure = renderFailure;
+          renderFailureForContext = caughtRenderFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) renderFailureForContext), "ac.D(" + keepDefaultVerticalOffsets + ',' + newAchievementsOnly + ',' + methodGuard + ')');
         }
     }
 

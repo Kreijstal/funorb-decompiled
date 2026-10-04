@@ -95,7 +95,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
                 return;
               }
-              IterableNodeHashTable.reportClientError((Throwable) null, "LR1: " + TextTemplateDefinition.e(55), (byte) 125);
+              IterableNodeHashTable.reportClientError((Throwable) null, "LR1: " + TextTemplateDefinition.formatSessionPacketDiagnostic(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -123);
             }
           }
@@ -291,7 +291,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               CacheReference.outgoingSessionBuffer.writeByte((byte) 127, 18);
               CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
               creationPayloadStartOrSuggestionPayloadLength = CacheReference.outgoingSessionBuffer.position;
-              rememberedLoginText = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(105));
+              rememberedLoginText = Under13TermsPanel.readSettingsCookieOrFallback(-1, NodeHashTableIterator.getActiveApplet(105));
               if (rememberedLoginText == null) {
                 rememberedLoginText = "";
               }
@@ -348,7 +348,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 ScorePopup.currentPacketOpcode = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
               } else {
                 UiWidget.readSessionBytesIfAvailable(30000, DualLinkNode.getLoginBooleanReplyLength(112));
-                IntrusiveNodeHashTable.pendingLoginBooleanReply = new Boolean(Bzip2DecoderState.a(LogoCompositor.sessionPacketBuffer, 0));
+                IntrusiveNodeHashTable.pendingLoginBooleanReply = new Boolean(Bzip2DecoderState.readByteEqualsOne(LogoCompositor.sessionPacketBuffer, 0));
                 LogoCompositor.sessionPacketBuffer.position = 0;
               }
             }
@@ -681,7 +681,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     }
 
     private final void submitLoginIfAllowed(int methodGuard) {
-        if ((!(!SpriteState.e(methodGuard)) ||
+        if ((!(!SpriteState.isReconnectingLoginMode(methodGuard)) ||
             (!(this.loginIdentifierInput.widgetText.length() <= 0) &&
               !(0 >= this.passwordInput.widgetText.length())))) {
           SecondaryNodeDequeIterator.startLogin(this.passwordInput.widgetText, (byte) 66, this.loginIdentifierInput.widgetText);

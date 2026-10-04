@@ -199,9 +199,9 @@ final class DequeCursor {
         archiveCatalog = null;
     }
 
-    final static void a(String param0, byte param1) {
-        int var2 = -10 / ((58 - param1) / 41);
-        System.out.println("Error: " + TextTemplateDefinition.a(param0, "\n", true, "%0a"));
+    final static void printClientErrorMessage(String messageText, byte methodGuard) {
+        int guardQuotient = -10 / ((58 - methodGuard) / 41);
+        System.out.println("Error: " + TextTemplateDefinition.replaceLiteralOccurrences(messageText, "\n", true, "%0a"));
     }
 
     DequeCursor(IntrusiveDeque deque) {

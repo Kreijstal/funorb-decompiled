@@ -165,7 +165,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.loginCipherSeedWords[1]);
           EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.loginCipherSeedWords[2]);
           EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.loginCipherSeedWords[3]);
-          SpriteState.a(EndingAnimationSupport.loginPayloadBuffer, true);
+          SpriteState.writeCachedRandomSeedBytes(EndingAnimationSupport.loginPayloadBuffer, true);
           EndingAnimationSupport.loginPayloadBuffer.writeShortBE(affiliateId, 28695);
           loginPayload.writePayload(124, EndingAnimationSupport.loginPayloadBuffer);
           CacheReference.outgoingSessionBuffer.position = 0;
@@ -195,7 +195,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             loginFlags = loginFlags | 16;
           }
           CacheReference.outgoingSessionBuffer.writeByte((byte) 127, loginFlags);
-          rememberedLoginText = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(111));
+          rememberedLoginText = Under13TermsPanel.readSettingsCookieOrFallback(-1, NodeHashTableIterator.getActiveApplet(111));
           if (rememberedLoginText == null) {
             rememberedLoginText = "";
           }

@@ -249,35 +249,35 @@ final class AchievementSubmission extends IntrusiveNode {
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static String canonicalizeBase37DisplayNameOrEmpty(CharSequence nameCharacters, int methodGuard) {
+        String canonicalName = null;
+        RuntimeException canonicalizationFailureForContext = null;
+        String canonicalNameBeforeReturn = null;
+        RuntimeException canonicalizationFailureBeforeDescription = null;
+        StringBuilder canonicalizationMessagePrefix = null;
+        String nameDescription = null;
+        RuntimeException caughtCanonicalizationFailure = null;
         try {
-          if (param1 != 3) {
+          if (methodGuard != 3) {
             gameSoundResampler = (PcmResampler) null;
           }
-          var2 = UnderlinedButtonRenderer.a(ResourceArchive.a(param0, -48), -78);
-          if (null == var2) {
-            var2 = "";
+          canonicalName = UnderlinedButtonRenderer.decodeBase37DisplayName(ResourceArchive.encodeBase37Name(nameCharacters, -48), -78);
+          if (null == canonicalName) {
+            canonicalName = "";
           }
-          stackIn_6_0 = var2;
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_10_0 = var2_ref;
-          stackIn_10_1 = new StringBuilder().append("p.C(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+          canonicalNameBeforeReturn = canonicalName;
+          return canonicalNameBeforeReturn;
+        } catch (java.lang.RuntimeException canonicalizationFailure) {
+          caughtCanonicalizationFailure = canonicalizationFailure;
+          canonicalizationFailureForContext = caughtCanonicalizationFailure;
+          canonicalizationFailureBeforeDescription = canonicalizationFailureForContext;
+          canonicalizationMessagePrefix = new StringBuilder().append("p.C(");
+          if (nameCharacters == null) {
+            nameDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) canonicalizationFailureBeforeDescription), ((StringBuilder) (Object) canonicalizationMessagePrefix).append(nameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

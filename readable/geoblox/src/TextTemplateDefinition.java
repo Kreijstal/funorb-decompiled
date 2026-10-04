@@ -10,42 +10,42 @@ final class TextTemplateDefinition extends DualLinkNode {
     private String[] literalSegments;
     private int[][] argumentValues;
 
-    final static String e(int param0) {
-        int var2 = 0;
-        String var1;
-        int var3;
-        int var4;
-        int var5;
-        String var6;
-        String var7;
-        String var8;
-        var5 = Geoblox.clientControlFlowFlag;
-        var6 = "(" + MidiNoteMixer.thirdPreviousPacketOpcode + " " + AttachedEntityRenderer.secondPreviousPacketOpcode + " " + VisualPropertyNode.previousPacketOpcode + ") " + ScorePopup.currentPacketOpcode;
-        var1 = var6;
+    final static String formatSessionPacketDiagnostic(int methodGuard) {
+        int payloadByteIndex = 0;
+        String diagnosticText;
+        int byteValueThenLowHexCharacter;
+        int highHexCharacter;
+        int unusedClientControlSnapshot;
+        String opcodeHistoryText;
+        String textBeforeHexByte;
+        String textBeforeLowHexCharacter;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
+        opcodeHistoryText = "(" + MidiNoteMixer.thirdPreviousPacketOpcode + " " + AttachedEntityRenderer.secondPreviousPacketOpcode + " " + VisualPropertyNode.previousPacketOpcode + ") " + ScorePopup.currentPacketOpcode;
+        diagnosticText = opcodeHistoryText;
         if (0 < AchievementSubmission.sessionPacketPayloadLength) {
-          var1 = var6 + ":";
-          for (var2 = 0; var2 < AchievementSubmission.sessionPacketPayloadLength; var2++) {
-            var7 = var1 + ' ';
-            var1 = var7;
-            var3 = 255 & LogoCompositor.sessionPacketBuffer.bytes[var2];
-            var4 = var3 >> 4;
-            var3 = var3 & 15;
-            if (var4 >= 10) {
-              var4 += 55;
+          diagnosticText = opcodeHistoryText + ":";
+          for (payloadByteIndex = 0; payloadByteIndex < AchievementSubmission.sessionPacketPayloadLength; payloadByteIndex++) {
+            textBeforeHexByte = diagnosticText + ' ';
+            diagnosticText = textBeforeHexByte;
+            byteValueThenLowHexCharacter = 255 & LogoCompositor.sessionPacketBuffer.bytes[payloadByteIndex];
+            highHexCharacter = byteValueThenLowHexCharacter >> 4;
+            byteValueThenLowHexCharacter = byteValueThenLowHexCharacter & 15;
+            if (highHexCharacter >= 10) {
+              highHexCharacter += 55;
             } else {
-              var4 += 48;
+              highHexCharacter += 48;
             }
-            if (var3 < 10) {
-              var3 += 48;
+            if (byteValueThenLowHexCharacter < 10) {
+              byteValueThenLowHexCharacter += 48;
             } else {
-              var3 += 55;
+              byteValueThenLowHexCharacter += 55;
             }
-            var8 = var7 + (char)var4;
-            var1 = var8 + (char)var3;
+            textBeforeLowHexCharacter = textBeforeHexByte + (char)highHexCharacter;
+            diagnosticText = textBeforeLowHexCharacter + (char)byteValueThenLowHexCharacter;
           }
         }
-        if (param0 == 55) {
-          return var1;
+        if (methodGuard == 55) {
+          return diagnosticText;
         }
         return (String) null;
     }
@@ -132,7 +132,7 @@ final class TextTemplateDefinition extends DualLinkNode {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard < 71) {
-            TextTemplateDefinition.e(41);
+            TextTemplateDefinition.formatSessionPacketDiagnostic(41);
         }
         screens = null;
     }
@@ -211,17 +211,17 @@ final class TextTemplateDefinition extends DualLinkNode {
         }
     }
 
-    final static String a(String param0, String param1, boolean param2, String param3) {
-        if (!param2) {
-            String var5 = (String) null;
-            TextTemplateDefinition.a((String) null, (String) null, true, (String) null);
+    final static String replaceLiteralOccurrences(String textThenReplacedText, String replacementText, boolean methodGuard, String targetText) {
+        if (!methodGuard) {
+            String unusedNullTextSnapshot = (String) null;
+            TextTemplateDefinition.replaceLiteralOccurrences((String) null, (String) null, true, (String) null);
         }
-        int var4 = param0.indexOf(param3);
-        while (var4 != -1) {
-            param0 = param0.substring(0, var4) + param1 + param0.substring(param3.length() + var4);
-            var4 = param0.indexOf(param3, param1.length() + var4);
+        int matchIndex = textThenReplacedText.indexOf(targetText);
+        while (matchIndex != -1) {
+            textThenReplacedText = textThenReplacedText.substring(0, matchIndex) + replacementText + textThenReplacedText.substring(targetText.length() + matchIndex);
+            matchIndex = textThenReplacedText.indexOf(targetText, replacementText.length() + matchIndex);
         }
-        return param0;
+        return textThenReplacedText;
     }
 
     static {

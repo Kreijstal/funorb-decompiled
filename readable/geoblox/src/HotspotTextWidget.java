@@ -43,7 +43,7 @@ class HotspotTextWidget extends ButtonWidget {
             identifierTextOrNull = loginIdentifierText;
           } else {
             identifierCharacters = (CharSequence) ((Object) loginIdentifierText);
-            encodedIdentifier = ResourceArchive.a(identifierCharacters, -48);
+            encodedIdentifier = ResourceArchive.encodeBase37Name(identifierCharacters, -48);
           }
           payloadBeforeReturn = SecondaryDeque.createLoginPayload(true, encodedIdentifier, (String) (identifierTextOrNull), base38Text, useAlternateLongPayload);
           return payloadBeforeReturn;
@@ -152,7 +152,7 @@ class HotspotTextWidget extends ButtonWidget {
             textOriginX = textRenderer.getTextOriginX(parentX, (UiWidget) (this), (byte) 46);
             textOriginY = textRenderer.getTextOriginY(parentY, -2, (UiWidget) (this));
             do {
-                ImageProducerRasterBuffer.a(-2 + textOriginY + hoveredSegment.y, 2 + hoveredSegment.width, 14164, 2 + hoveredSegment.height, hoveredSegment.x + (textOriginX - 2));
+                ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(-2 + textOriginY + hoveredSegment.y, 2 + hoveredSegment.width, 14164, 2 + hoveredSegment.height, hoveredSegment.x + (textOriginX - 2));
                 hoveredSegment = hoveredSegment.nextSegment;
             } while (hoveredSegment != null);
         }

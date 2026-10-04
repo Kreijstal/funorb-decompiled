@@ -36,36 +36,36 @@ final class Bzip2DecoderState {
     int blockBytesConsumed;
     byte[] selectorMoveToFrontValues;
 
-    final static boolean a(ByteArrayBuffer param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean readByteEqualsOne(ByteArrayBuffer buffer, int methodGuard) {
+        int unsignedByteValue = 0;
+        RuntimeException readFailureForContext = null;
+        int equalsOneFlag = 0;
+        int equalsOneFlagBeforeStore = 0;
+        int equalsOneFlagBeforeReturn = 0;
+        RuntimeException readFailureBeforeDescription = null;
+        StringBuilder readMessagePrefix = null;
+        String bufferDescription = null;
+        RuntimeException caughtReadFailure = null;
         try {
-          if (param1 != 0) {
+          if (methodGuard != 0) {
             Bzip2DecoderState.closeSessionSocket((byte) 47);
           }
-          var2_int = param0.readUnsignedByte((byte) 34);
-          stackIn_5_0 = (var2_int == 1) ? 1 : 0;
-          var3 = stackIn_5_0;
-          stackIn_6_0 = var3;
-          return stackIn_6_0 != 0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("jl.B(");
-          if (param0 == null) {
-            stackIn_10_2 = "null";
+          unsignedByteValue = buffer.readUnsignedByte((byte) 34);
+          equalsOneFlagBeforeStore = (unsignedByteValue == 1) ? 1 : 0;
+          equalsOneFlag = equalsOneFlagBeforeStore;
+          equalsOneFlagBeforeReturn = equalsOneFlag;
+          return equalsOneFlagBeforeReturn != 0;
+        } catch (java.lang.RuntimeException readFailure) {
+          caughtReadFailure = readFailure;
+          readFailureForContext = caughtReadFailure;
+          readFailureBeforeDescription = readFailureForContext;
+          readMessagePrefix = new StringBuilder().append("jl.B(");
+          if (buffer == null) {
+            bufferDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            bufferDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeDescription), ((StringBuilder) (Object) readMessagePrefix).append(bufferDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

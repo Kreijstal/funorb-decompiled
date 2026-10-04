@@ -27,16 +27,16 @@ final class PcmResampler {
         return samplePosition;
     }
 
-    final static void a(boolean param0, boolean param1, byte param2) {
-        if (param1) {
+    final static void renderAccountUiBackgroundAndDialogs(boolean unusedRenderOption, boolean dimExistingFramebuffer, byte methodGuard) {
+        if (dimExistingFramebuffer) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, 192);
         } else {
             SoftwareRasterizer.clearFramebuffer();
         }
-        if (param2 != -102) {
+        if (methodGuard != -102) {
             return;
         }
-        ValidationMessageWidget.a(param1, false);
+        ValidationMessageWidget.renderAccountDialogLayer(dimExistingFramebuffer, false);
     }
 
     final int scaleSampleRate(int methodGuard, int sampleRateHz) {

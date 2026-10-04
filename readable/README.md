@@ -5,7 +5,67 @@ The current export has 16,910 guarded naming rules: 302 classes, 1,977 fields,
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current bootstrap, tooltip and shared cleanup naming (pass 170)
+## Current shared validation, cookie, encoding and rendering naming (pass 171)
+
+Pass 171 adds 429 guarded names: two fields, 38 methods, 82 parameters,
+302 locals and five lexical labels. Email helpers expose syntax/local-part
+validation, completed-query replacement and username-suggestion publication.
+The first-at-sign split and explicit domain offset, quoted escape/dot checks,
+64-character limit, original failure identities, null behavior, pending-query
+reuse, wrong-guard recursion and partial callback effects remain. Account-name
+validation keeps display-name checks before its optional character scan.
+Password/name comparisons keep underscore removal, UTF16 reversal and existing
+case/empty-text behavior. Login identifier fallback and active password/lookup
+selection retain their original identity tests and ordering.
+
+Base-37 helpers now expose encoding, display decoding and canonicalization.
+Alphabet/range thresholds, trailing-zero removal, capitalization, nonbreaking
+spaces, invalid-value results and late guard arithmetic remain. Integer helpers
+expose signed decimal parsing, radix/sign/digit/overflow validation and the
+original packed bit-count algorithm, including its minimum-two negative path.
+Literal replacement keeps its original search-resumption and empty-target
+behavior. Error printing retains its guard division, System.out target and
+literal percent-zero-a replacement.
+
+Packet helpers expose one-bit booleans, byte-equals-one replies, CRC/FIFO
+acknowledgement emission and opcode/payload diagnostic formatting. The
+byte-equals-one reader has no inferred compression meaning. Cipher writes,
+reserved/backpatched lengths, CRC readback distance, buffer aliases, queue
+iteration without unlinking, partial writes and guard side effects remain.
+Cookie/settings readers keep raw values, semicolon/equals splitting, trimming,
+first-match selection, script/catch boundaries and cached/parameter fallbacks.
+They do not add decoding or guarantee browser/script success.
+
+The achievement details renderer exposes masks, hover/selection, grid layout,
+description spacing, displayed orb points and repeated coin-icon counts.
+These arrays are named by display consumers without assigning server reward
+semantics. Dotted focus rectangles, menu initialization, terms-link markup,
+account background/dialog rendering, fullscreen/reconnect checks and UI polling
+are named. Original palette/clip/guard effects and unused wheel/render arguments
+remain. Heap-capacity estimation still reflects Runtime.maxMemory, retains its
+cast/rounding/catches and does not alter a heap limit.
+
+The cached random-seed writer retains the absent-file zero buffer, all-zero-file
+failure, minus-one fallback bytes, exact comparison operands and partial fill.
+Its nonzero client-control catch continuation can skip the payload write; all
+three plain seed blocks and their breaks preserve those destinations. Neither
+that flag nor any other client-control value is assumed zero. No runtime RNG or
+determinism policy changes.
+
+All 17,462 previous complete rules and raw/decompiler/naming/workflow/stub/
+native/text pins remain exact. The export has 17,891 rules, 115,962 identifier
+edits, eleven class-name literal edits and 349 label edits: 116,322 total.
+Both 303-file corpora compile, reproduce and reverse byte exactly, preserving
+19,498 dictionary identities, 136,607 bindings, 388 overrides, 245 label
+definitions and 811 label records. All 27 publication tests pass. No native
+probes or new runtime cases are added or run by this naming pass.
+
+Eight large labeled bodies, 132 opaque labels (93 plain blocks and 39 loops),
+59 opaque fields and 30 single-letter methods remain. Full validation/login/
+bootstrap/cookies/UI/network/input/audio/assets/game/server/browser/phone and
+heap/presented-FPS acceptance remain unverified.
+
+## Previous bootstrap, tooltip and shared cleanup naming (pass 170)
 
 Pass 170 adds 339 guarded names: 36 fields, 95 methods, 112 parameters,
 95 locals and one lexical label. Seventy-three cleanup methods now describe
@@ -1876,7 +1936,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -2134,16 +2194,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `608cd480ffdb9c52a2548544929b5df5b36cbf48`; the
-manifest SHA-256 is `739a6a593e702587da39139856259e18ad1e4d1e4d75a21c2dd58bec11a095e5`.
+The current Deko workflow/manifest commit is `dbbfc236911601c559f475668f041ccef851398a`; the
+manifest SHA-256 is `3a976c840b6f110b8512394a8948db21578e0cbe4938dac479900f42f84884ff`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

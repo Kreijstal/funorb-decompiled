@@ -26,7 +26,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
           } else {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (SpriteConstructionSupport.clientScreenStage == 0) {
-                PcmResampler.a(param0, false, (byte) -102);
+                PcmResampler.renderAccountUiBackgroundAndDialogs(param0, false, (byte) -102);
                 MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 42, param2, 0);
               } else {
                 EndingAnimationSupport.presentPreparedFrame(true, param2);
@@ -56,53 +56,53 @@ final class AccountContentDialog extends ContentTransitionDialog {
         }
     }
 
-    final static String a(boolean param0, boolean param1, CharSequence param2) {
-        String var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        String stackIn_4_0 = null;
-        String stackIn_7_0 = null;
-        String stackIn_13_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var5 = Geoblox.clientControlFlowFlag;
+    final static String accountNameValidationMessage(boolean allowRepeatedSeparators, boolean skipAccountCharacterCheck, CharSequence candidateName) {
+        String displayNameFailureMessage = null;
+        int characterIndex = 0;
+        int unusedClientControlSnapshot = 0;
+        String displayNameFailureBeforeReturn = null;
+        String skippedCharacterCheckResult = null;
+        String invalidAccountCharacterMessageBeforeReturn = null;
+        RuntimeException validationFailureBeforeDescription = null;
+        StringBuilder validationMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtValidationFailure = null;
+        RuntimeException validationFailureForContext = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var3 = EntityMotionSupport.displayNameValidationMessage(param0, 2, param2);
-          if (var3 != null) {
-            stackIn_4_0 = var3;
-            return stackIn_4_0;
+          displayNameFailureMessage = EntityMotionSupport.displayNameValidationMessage(allowRepeatedSeparators, 2, candidateName);
+          if (displayNameFailureMessage != null) {
+            displayNameFailureBeforeReturn = displayNameFailureMessage;
+            return displayNameFailureBeforeReturn;
           }
-          if (param1) {
-            stackIn_7_0 = (String) null;
-            return stackIn_7_0;
+          if (skipAccountCharacterCheck) {
+            skippedCharacterCheckResult = (String) null;
+            return skippedCharacterCheckResult;
           }
-          var4 = 0;
+          characterIndex = 0;
           while (true) {
-            if (var4 >= param2.length()) {
+            if (characterIndex >= candidateName.length()) {
               return null;
             }
-            if (TextInputValidator.isAllowedAccountNameCharacter(param2.charAt(var4), (byte) 97)) {
-              var4++;
+            if (TextInputValidator.isAllowedAccountNameCharacter(candidateName.charAt(characterIndex), (byte) 97)) {
+              characterIndex++;
               continue;
             }
             break;
           }
-          stackIn_13_0 = BoardReconciliationSupport.createNameCharacterAlertText;
-          return stackIn_13_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("ei.QB(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_19_2 = "null";
+          invalidAccountCharacterMessageBeforeReturn = BoardReconciliationSupport.createNameCharacterAlertText;
+          return invalidAccountCharacterMessageBeforeReturn;
+        } catch (java.lang.RuntimeException validationFailure) {
+          caughtValidationFailure = validationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeDescription = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("ei.QB(").append(allowRepeatedSeparators).append(',').append(skipAccountCharacterCheck).append(',');
+          if (candidateName == null) {
+            candidateDescription = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeDescription), ((StringBuilder) (Object) validationMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 

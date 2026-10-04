@@ -35,44 +35,44 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
         return ProgressBarWidget.guestSessionMode;
     }
 
-    final static String a(long param0, int param1) {
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7_long = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        StringBuilder discarded$0 = null;
-        int var11 = Geoblox.clientControlFlowFlag;
-        if (param0 <= 0L) {
+    final static String decodeBase37DisplayName(long encodedNameThenRemainingDigits, int methodGuard) {
+        int digitCount = 0;
+        long digitsForLengthCount = 0L;
+        StringBuilder reversedNameBuilder = null;
+        long encodedValueBeforeDivision = 0L;
+        int decodedCharacterCode = 0;
+        int precedingCharacterIndex = 0;
+        StringBuilder unusedAppendResult = null;
+        int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
+        if (encodedNameThenRemainingDigits <= 0L) {
             return null;
         }
-        if (param0 >= 6582952005840035281L) {
+        if (encodedNameThenRemainingDigits >= 6582952005840035281L) {
             return null;
         }
-        if (0L != param0 % 37L) {
-            var3 = 0;
-            var4 = param0;
-            while (var4 != 0L) {
-                var4 = var4 / 37L;
-                var3++;
+        if (0L != encodedNameThenRemainingDigits % 37L) {
+            digitCount = 0;
+            digitsForLengthCount = encodedNameThenRemainingDigits;
+            while (digitsForLengthCount != 0L) {
+                digitsForLengthCount = digitsForLengthCount / 37L;
+                digitCount++;
             }
-            var6 = new StringBuilder(var3);
-            while (param0 != 0L) {
-                var7_long = param0;
-                param0 = param0 / 37L;
-                var9 = SessionSocketSupport.base37NameAlphabet[(int)(-(37L * param0) + var7_long)];
-                if (95 == var9) {
-                    var10 = -1 + var6.length();
-                    var9 = 160;
-                    var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+            reversedNameBuilder = new StringBuilder(digitCount);
+            while (encodedNameThenRemainingDigits != 0L) {
+                encodedValueBeforeDivision = encodedNameThenRemainingDigits;
+                encodedNameThenRemainingDigits = encodedNameThenRemainingDigits / 37L;
+                decodedCharacterCode = SessionSocketSupport.base37NameAlphabet[(int)(-(37L * encodedNameThenRemainingDigits) + encodedValueBeforeDivision)];
+                if (95 == decodedCharacterCode) {
+                    precedingCharacterIndex = -1 + reversedNameBuilder.length();
+                    decodedCharacterCode = 160;
+                    reversedNameBuilder.setCharAt(precedingCharacterIndex, Character.toUpperCase(reversedNameBuilder.charAt(precedingCharacterIndex)));
                 }
-                discarded$0 = var6.append((char) var9);
+                unusedAppendResult = reversedNameBuilder.append((char) decodedCharacterCode);
             }
-            var6.reverse();
-            int var7 = 49 % ((27 - param1) / 36);
-            var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-            return var6.toString();
+            reversedNameBuilder.reverse();
+            int guardRemainder = 49 % ((27 - methodGuard) / 36);
+            reversedNameBuilder.setCharAt(0, Character.toUpperCase(reversedNameBuilder.charAt(0)));
+            return reversedNameBuilder.toString();
         }
         return null;
     }
@@ -101,7 +101,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
           var6_int = stackIn_5_0;
           this.labelFont.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.widgetText + "</u>", widget.widgetX + parentX, parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.labelFont.maxAscent + this.labelFont.maxDescent);
           if (methodGuard > -5) {
-            UnderlinedButtonRenderer.a(53L, -116);
+            UnderlinedButtonRenderer.decodeBase37DisplayName(53L, -116);
           }
           if (!widget.hasKeyboardFocus((byte) 54)) {
             return;
@@ -124,7 +124,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
               var10 = var10 + (widget.widgetHeight - var8 >> 1);
             }
           }
-          ImageProducerRasterBuffer.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
+          ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

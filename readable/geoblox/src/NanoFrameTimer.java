@@ -118,7 +118,7 @@ final class NanoFrameTimer extends FrameTimer {
                     allViewCount++;
                   }
                   if ((primaryName != null) &&
-                      (WhirlpoolHash.a(primaryName, (byte) 12))) {
+                      (WhirlpoolHash.matchesNormalizedSessionName(primaryName, (byte) 12))) {
                     namesByView[1][selfViewCount] = SecondaryDeque.receivedSessionName;
                     alternateNamesByView[1][selfViewCount] = null;
                     recordLongsByView[1][selfViewCount] = recordLongValue;
@@ -169,7 +169,7 @@ final class NanoFrameTimer extends FrameTimer {
             Bzip2DecoderState.closeSessionSocket((byte) -117);
             return;
           }
-          IterableNodeHashTable.reportClientError((Throwable) null, "HS1: " + TextTemplateDefinition.e(methodGuard + 24894), (byte) 125);
+          IterableNodeHashTable.reportClientError((Throwable) null, "HS1: " + TextTemplateDefinition.formatSessionPacketDiagnostic(methodGuard + 24894), (byte) 125);
           Bzip2DecoderState.closeSessionSocket((byte) -117);
           return;
         } catch (java.lang.RuntimeException rankingException) {

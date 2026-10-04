@@ -228,8 +228,8 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         sweetsBackgroundSprite = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
-        if (param1) {
+    final static void renderAccountDialogLayer(boolean unusedRenderOption, boolean skipRendering) {
+        if (skipRendering) {
             return;
         }
         ClientFlowState.accountDialogLayer.renderWidgetPassesAndTooltip(0, 0, 0);

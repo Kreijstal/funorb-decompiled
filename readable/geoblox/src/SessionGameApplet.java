@@ -28,7 +28,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (ArchiveLoadStep.loginRetrySuspended) {
           return -1;
         }
-        handshakeResult = LoginProtocolSupport.advanceLoginHandshake(true, ContextualRuntimeException.a(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(pendingResultCode + 1), 0);
+        handshakeResult = LoginProtocolSupport.advanceLoginHandshake(true, ContextualRuntimeException.getActiveLoginPassword(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(pendingResultCode + 1), 0);
         if (handshakeResult == pendingResultCode) {
           return -1;
         }
@@ -182,7 +182,7 @@ abstract class SessionGameApplet extends GameApplet {
             ByteArrayPoolSupport.resendIntRecordRequests(5, 116);
           }
           if (OpacityWidget.enabledSessionPacketOpcodes[5]) {
-            TextTemplateDefinitionLoader.a(6, methodGuard + 21789);
+            TextTemplateDefinitionLoader.sendPendingAcknowledgementPackets(6, methodGuard + 21789);
           }
           if (OpacityWidget.enabledSessionPacketOpcodes[6]) {
             SecondaryDeque.resendRankedListQueries(true, 7);
@@ -477,7 +477,7 @@ abstract class SessionGameApplet extends GameApplet {
               ValidationIconWidget.advanceLogoAnimationTick((byte) 88);
             } else {
               if (SpriteConstructionSupport.clientScreenStage != 0) {
-                ByteStorage.a(CachedTextLayout.wheelRotationSnapshot, (byte) -96);
+                ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -96);
               } else {
                 discardedNormalUiResult = this.processAccountUiActions(false, false, -1);
               }
@@ -523,7 +523,7 @@ abstract class SessionGameApplet extends GameApplet {
               throw new IllegalStateException();
             }
             if (uiAction == 1) {
-              queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.createActiveLoginLookupValue(actionGuard ^ -26), LoginPanel.createActiveEmailLookupValue((byte) -42), -121);
+              queryOrHandshakeResult = ByteArrayBuffer.advanceAccountLookupRequest(AccountCreationForm.createActiveLoginLookupValue(actionGuard ^ -26), LoginPanel.createActiveEmailLookupValue((byte) -42), -121);
               if (queryOrHandshakeResult != -1) {
                 UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.pendingUsernameSuggestions, AudioService.sessionResponseText);
                 AudioService.sessionResponseText = null;
@@ -535,7 +535,7 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (uiAction == 2) {
-              queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
+              queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.getActiveLoginPassword(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
               if (queryOrHandshakeResult != -1) {
                 StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResult, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
                 AudioService.sessionResponseText = null;
@@ -549,7 +549,7 @@ abstract class SessionGameApplet extends GameApplet {
                 SocialListEntry.resetArchiveConnectionFailures(-21754);
               }
               if (!suppressLoginHandshake) {
-                queryOrHandshakeResult = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.a(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
+                queryOrHandshakeResult = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.getActiveLoginPassword(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
                 if (queryOrHandshakeResult != -1) {
                   if (queryOrHandshakeResult == 0) {
                     CheckboxWidget.errorReportLoginLongValue = ClientClockSupport.loginResponseLongValue;
@@ -773,7 +773,7 @@ abstract class SessionGameApplet extends GameApplet {
                                 UsernameQueryState.handleSessionFlagReset(11560);
                                 return;
                               }
-                              IterableNodeHashTable.reportClientError((Throwable) null, "MGS1: " + TextTemplateDefinition.e(55), (byte) 125);
+                              IterableNodeHashTable.reportClientError((Throwable) null, "MGS1: " + TextTemplateDefinition.formatSessionPacketDiagnostic(55), (byte) 125);
                               Bzip2DecoderState.closeSessionSocket((byte) -122);
                               return;
                             }
@@ -795,7 +795,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           return;
         }
-        IterableNodeHashTable.reportClientError((Throwable) null, "MGS2: " + TextTemplateDefinition.e(55), (byte) 125);
+        IterableNodeHashTable.reportClientError((Throwable) null, "MGS2: " + TextTemplateDefinition.formatSessionPacketDiagnostic(55), (byte) 125);
         Bzip2DecoderState.closeSessionSocket((byte) -118);
     }
 

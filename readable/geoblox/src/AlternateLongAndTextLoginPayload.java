@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
-    static int[] field_h;
+    static int[] achievementDisplayedOrbPoints;
     static String defaultPlayerNameText;
     static IndexedSprite sportsBackgroundSprite;
 
@@ -29,7 +29,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           if (methodGuard != 200) {
             AlternateLongAndTextLoginPayload.releaseStaticReferences((byte) 21);
           }
-          var2 = AchievementQuery.a("jagex-last-login-method", applet, -114);
+          var2 = AchievementQuery.readCookieValue("jagex-last-login-method", applet, -114);
           if (var2 == null) {
             stackIn_5_0 = ValidationIconWidget.emptyNameLoginMethod;
             return stackIn_5_0;
@@ -59,7 +59,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
     }
 
     public static void releaseStaticReferences(byte methodGuard) {
-        field_h = null;
+        achievementDisplayedOrbPoints = null;
         sportsBackgroundSprite = null;
         defaultPlayerNameText = null;
         if (methodGuard != -109) {
@@ -76,7 +76,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
     }
 
     static {
-        field_h = new int[]{100, 200, 500, 300, 300, 500, 500, 500, 100, 100, 100, 200, 200, 200, 300, 1000, 300};
+        achievementDisplayedOrbPoints = new int[]{100, 200, 500, 300, 300, 500, 500, 500, 100, 100, 100, 200, 200, 200, 300, 1000, 300};
         defaultPlayerNameText = "Player";
     }
 }

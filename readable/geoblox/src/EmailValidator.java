@@ -146,7 +146,7 @@ final class EmailValidator extends TextInputValidator {
         String candidateDescription = null;
         RuntimeException caughtValidationFailure = null;
         try {
-          emailSyntaxAcceptedBeforeStore = (null != FifoResponseToken.a(candidateText, 1)) ? 0 : 1;
+          emailSyntaxAcceptedBeforeStore = (null != FifoResponseToken.validateEmailSyntax(candidateText, 1)) ? 0 : 1;
           emailSyntaxAccepted = emailSyntaxAcceptedBeforeStore;
           if (emailSyntaxAccepted == 0) {
             invalidEmailState = WidgetSkinState.invalidInputValidationState;

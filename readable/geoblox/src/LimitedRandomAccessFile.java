@@ -77,84 +77,84 @@ final class LimitedRandomAccessFile {
         scoreTextTemplate = null;
     }
 
-    final static boolean a(CharSequence param0, boolean param1, int param2, int param3) {
-        int var8 = 0;
-        int stackIn_41_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_45_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
+    final static boolean isValidSignedIntText(CharSequence numberText, boolean allowLeadingPlus, int radix, int methodGuard) {
+        int characterIndex = 0;
+        int hasDigitsBeforeReturn = 0;
+        RuntimeException validationFailureBeforeDescription = null;
+        StringBuilder validationMessagePrefix = null;
+        String numberDescription = null;
+        RuntimeException caughtValidationFailure = null;
+        int negativeNumberFlag = 0;
+        RuntimeException validationFailureForContext = null;
+        int hasDigitFlag = 0;
+        int accumulatedValue = 0;
+        int textLength = 0;
+        int characterCodeThenSignedDigit = 0;
+        int nextAccumulatedValue = 0;
         try {
-          if ((2 <= param2) &&
-              (param2 <= 36)) {
-            var4_int = 0;
-            var5 = 0;
-            var6 = 0;
-            var7 = param0.length();
-            if (param3 != 87) {
+          if ((2 <= radix) &&
+              (radix <= 36)) {
+            negativeNumberFlag = 0;
+            hasDigitFlag = 0;
+            accumulatedValue = 0;
+            textLength = numberText.length();
+            if (methodGuard != 87) {
               field_b = (FullscreenFailureReason) null;
             }
-            for (var8 = 0; var8 < var7; var8++) {
-              L3: {
-                var9 = param0.charAt(var8);
-                if (var8 == 0) {
-                  if (45 == var9) {
-                    var4_int = 1;
-                    break L3;
+            for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+              signedNumberCharacter: {
+                characterCodeThenSignedDigit = numberText.charAt(characterIndex);
+                if (characterIndex == 0) {
+                  if (45 == characterCodeThenSignedDigit) {
+                    negativeNumberFlag = 1;
+                    break signedNumberCharacter;
                   }
-                  if ((var9 == 43) &&
-                      (param1)) {
-                    break L3;
+                  if ((characterCodeThenSignedDigit == 43) &&
+                      (allowLeadingPlus)) {
+                    break signedNumberCharacter;
                   }
                 }
-                if ((var9 >= 48) &&
-                    (var9 <= 57)) {
-                  var9 -= 48;
-                } else if ((var9 >= 65) &&
-                    (var9 <= 90)) {
-                  var9 -= 55;
-                } else if ((var9 >= 97) &&
-                    (var9 <= 122)) {
-                  var9 -= 87;
+                if ((characterCodeThenSignedDigit >= 48) &&
+                    (characterCodeThenSignedDigit <= 57)) {
+                  characterCodeThenSignedDigit -= 48;
+                } else if ((characterCodeThenSignedDigit >= 65) &&
+                    (characterCodeThenSignedDigit <= 90)) {
+                  characterCodeThenSignedDigit -= 55;
+                } else if ((characterCodeThenSignedDigit >= 97) &&
+                    (characterCodeThenSignedDigit <= 122)) {
+                  characterCodeThenSignedDigit -= 87;
                 } else {
                   return false;
                 }
-                if (var9 >= param2) {
+                if (characterCodeThenSignedDigit >= radix) {
                   return false;
                 }
-                if (var4_int != 0) {
-                  var9 = -var9;
+                if (negativeNumberFlag != 0) {
+                  characterCodeThenSignedDigit = -characterCodeThenSignedDigit;
                 }
-                var10 = var6 * param2 + var9;
-                if (var6 != var10 / param2) {
+                nextAccumulatedValue = accumulatedValue * radix + characterCodeThenSignedDigit;
+                if (accumulatedValue != nextAccumulatedValue / radix) {
                   return false;
                 }
-                var6 = var10;
-                var5 = 1;
+                accumulatedValue = nextAccumulatedValue;
+                hasDigitFlag = 1;
               }
             }
-            stackIn_41_0 = var5;
-            return stackIn_41_0 != 0;
+            hasDigitsBeforeReturn = hasDigitFlag;
+            return hasDigitsBeforeReturn != 0;
           }
-          throw new IllegalArgumentException("" + param2);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_44_0 = var4;
-          stackIn_44_1 = new StringBuilder().append("pa.B(");
-          if (param0 == null) {
-            stackIn_45_2 = "null";
+          throw new IllegalArgumentException("" + radix);
+        } catch (java.lang.RuntimeException validationFailure) {
+          caughtValidationFailure = validationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeDescription = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("pa.B(");
+          if (numberText == null) {
+            numberDescription = "null";
           } else {
-            stackIn_45_2 = "{...}";
+            numberDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeDescription), ((StringBuilder) (Object) validationMessagePrefix).append(numberDescription).append(',').append(allowLeadingPlus).append(',').append(radix).append(',').append(methodGuard).append(')').toString());
         }
     }
 

@@ -11,7 +11,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     static Sprite[][] geometrySpritesByThemeAndCategory;
     static String waitingForPumpkinText;
 
-    final static void g(int param0) {
+    final static void initializeMenuActionTexts(int musicActionIndex) {
         if (null == RasterTargetSnapshot.menuActionTexts) {
             FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
             TextConcatenationSupport.fullscreenAcceptCountdownSingularText = OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
@@ -24,7 +24,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             RasterTargetSnapshot.menuActionTexts[5] = FullscreenErrorDialog.menuText;
             RasterTargetSnapshot.menuActionTexts[0] = TextPairLoginPayload.startGameText;
             RasterTargetSnapshot.menuActionTexts[4] = SessionGameApplet.fullscreenText;
-            RasterTargetSnapshot.menuActionTexts[param0] = EndingAnimationSupport.musicLabelText;
+            RasterTargetSnapshot.menuActionTexts[musicActionIndex] = EndingAnimationSupport.musicLabelText;
             RasterTargetSnapshot.menuActionTexts[10] = BootstrapUiSupport.achievementsText;
             RasterTargetSnapshot.menuActionTexts[11] = RasterTargetSnapshot.previousText;
             RasterTargetSnapshot.menuActionTexts[15] = ArchiveCatalog.replayTutorialText;
@@ -96,7 +96,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             this.accountCreationDialog = accountCreationDialog;
             this.continueButton = new ButtonWidget(UsernameQuerySupport.continueText, (WidgetListener) null);
             this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
-            var7 = OpacityWidget.replaceIndexedTextMarkers(TextPairLoginPayload.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
+            var7 = OpacityWidget.replaceIndexedTextMarkers(TextPairLoginPayload.createUnder13TermsText, new String[]{this.openingTermsLinkMarkup(11501), this.closingTermsLinkMarkup(false)}, (byte) -114);
             var3 = 20;
             var4 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
             this.termsText = new HotspotTextWidget(var7, var4);
@@ -158,10 +158,10 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         }
     }
 
-    private final String f(int param0) {
-        String discarded$0 = null;
-        if (param0 != 11501) {
-            discarded$0 = this.c(true);
+    private final String openingTermsLinkMarkup(int methodGuard) {
+        String unusedClosingMarkupResult = null;
+        if (methodGuard != 11501) {
+            unusedClosingMarkupResult = this.closingTermsLinkMarkup(true);
             return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -215,8 +215,8 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         waitingForPumpkinText = null;
     }
 
-    private final String c(boolean param0) {
-        if (param0) {
+    private final String closingTermsLinkMarkup(boolean clearTemplateTypeSeven) {
+        if (clearTemplateTypeSeven) {
             textTemplateArgumentTypeSeven = (TextTemplateArgumentType) null;
             return "</col></u>";
         }
@@ -253,66 +253,66 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         }
     }
 
-    final static String a(int param0, java.applet.Applet param1) {
+    final static String readSettingsCookieOrFallback(int methodGuard, java.applet.Applet applet) {
         try {
-            int var6 = 0;
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var7 = 0;
-            String var8 = null;
-            String stackIn_5_0 = null;
-            String stackIn_13_0 = null;
-            String stackIn_15_0 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
+            int cookieIndex = 0;
+            String settingsCookieName = null;
+            String cookieHeader = null;
+            String[] cookieEntries = null;
+            int equalsIndex = 0;
+            String cookiePrefix = null;
+            String cookieValueBeforeReturn = null;
+            String cachedSettingsBeforeReturn = null;
+            String parameterSettingsBeforeReturn = null;
+            RuntimeException lookupFailureBeforeDescription = null;
+            StringBuilder lookupMessagePrefix = null;
+            String appletDescription = null;
+            Throwable caughtLookupThrowable = null;
+            Throwable ignoredCookieLookupFailure = null;
+            RuntimeException lookupFailureForContext = null;
             try {
               try {
-                var8 = param1.getParameter("cookieprefix");
-                var3 = var8 + "settings";
-                var4 = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, param1, "getcookies"));
-                var5 = FullscreenFailureReason.splitAtCharacter(';', true, var4);
-                for (var6 = 0; var5.length > var6; var6++) {
-                  var7 = var5[var6].indexOf('=');
-                  if ((var7 >= 0) &&
-                      (var5[var6].substring(0, var7).trim().equals(var3))) {
-                    stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
-                    return stackIn_5_0;
+                cookiePrefix = applet.getParameter("cookieprefix");
+                settingsCookieName = cookiePrefix + "settings";
+                cookieHeader = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, applet, "getcookies"));
+                cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieHeader);
+                for (cookieIndex = 0; cookieEntries.length > cookieIndex; cookieIndex++) {
+                  equalsIndex = cookieEntries[cookieIndex].indexOf('=');
+                  if ((equalsIndex >= 0) &&
+                      (cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(settingsCookieName))) {
+                    cookieValueBeforeReturn = cookieEntries[cookieIndex].substring(equalsIndex + 1).trim();
+                    return cookieValueBeforeReturn;
                   }
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2 = decompiledCaughtException;
+              } catch (java.lang.Throwable cookieLookupThrowable) {
+                caughtLookupThrowable = cookieLookupThrowable;
+                ignoredCookieLookupFailure = caughtLookupThrowable;
               }
-              if (param0 != -1) {
-                Under13TermsPanel.g(14);
+              if (methodGuard != -1) {
+                Under13TermsPanel.initializeMenuActionTexts(14);
               }
               if (null == NetworkArchiveRequest.settingsCookieValue) {
-                stackIn_15_0 = param1.getParameter("settings");
-                return stackIn_15_0;
+                parameterSettingsBeforeReturn = applet.getParameter("settings");
+                return parameterSettingsBeforeReturn;
               }
-              stackIn_13_0 = NetworkArchiveRequest.settingsCookieValue;
-              return stackIn_13_0;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_18_0 = var2_ref;
-              stackIn_18_1 = new StringBuilder().append("s.B(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_19_2 = "null";
+              cachedSettingsBeforeReturn = NetworkArchiveRequest.settingsCookieValue;
+              return cachedSettingsBeforeReturn;
+            } catch (java.lang.RuntimeException lookupFailure) {
+              caughtLookupThrowable = lookupFailure;
+              lookupFailureForContext = (RuntimeException) (Object) caughtLookupThrowable;
+              lookupFailureBeforeDescription = lookupFailureForContext;
+              lookupMessagePrefix = new StringBuilder().append("s.B(").append(methodGuard).append(',');
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_19_2 = "{...}";
+                appletDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(appletDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

@@ -261,7 +261,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             if (methodGuard != -40) {
                 whirlpoolTables = (long[][]) null;
             }
-            ValidationMessageWidget.a(true, false);
+            ValidationMessageWidget.renderAccountDialogLayer(true, false);
         } catch (RuntimeException progressDialogFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressDialogFailure), "qc.L(" + scaledProgress + ',' + (statusText != null ? "{...}" : "null") + ',' + sessionExitRequested + ',' + methodGuard + ')');
         }
@@ -502,7 +502,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           destinationIndex = destinationOffset;
           if (methodGuard != 29915) {
             unusedNullTextInputSnapshot = (LoginTextValue) null;
-            ByteArrayBuffer.a((LoginTextValue) null, (LoginTextValue) null, 35);
+            ByteArrayBuffer.advanceAccountLookupRequest((LoginTextValue) null, (LoginTextValue) null, 35);
           }
           while (destinationOffset + length > destinationIndex) {
             bufferByteIndex = this.position;
@@ -552,7 +552,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           this.position = 0;
           if (methodGuard != -33) {
             unusedNullTextInputSnapshot = (LoginTextValue) null;
-            ByteArrayBuffer.a((LoginTextValue) null, (LoginTextValue) null, 109);
+            ByteArrayBuffer.advanceAccountLookupRequest((LoginTextValue) null, (LoginTextValue) null, 109);
           }
           blockIndex = 0;
           L1: while (true) {
@@ -682,7 +682,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         whirlpoolTables = (long[][]) null;
         if (methodGuard != 0) {
             LoginTextValue unusedNullTextInputSnapshot = (LoginTextValue) null;
-            ByteArrayBuffer.a((LoginTextValue) null, (LoginTextValue) null, -47);
+            ByteArrayBuffer.advanceAccountLookupRequest((LoginTextValue) null, (LoginTextValue) null, -47);
         }
     }
 
@@ -897,39 +897,39 @@ class ByteArrayBuffer extends IntrusiveNode {
         return -49152 + this.readUnsignedShortBE(true);
     }
 
-    final static int a(LoginTextValue param0, LoginTextValue param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        int stackIn_1_0 = 0;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int advanceAccountLookupRequest(LoginTextValue loginIdentifierValue, LoginTextValue emailValue, int methodGuard) {
+        int guardQuotient = 0;
+        RuntimeException requestFailureForContext = null;
+        String unusedNullPasswordSnapshot = null;
+        int requestResultBeforeReturn = 0;
+        RuntimeException requestFailureBeforeDescription = null;
+        StringBuilder requestMessagePrefix = null;
+        String identifierDescription = null;
+        StringBuilder messageBeforeEmail = null;
+        String emailDescription = null;
+        RuntimeException caughtRequestFailure = null;
         try {
-          var3_int = 2 / ((param2 + 41) / 54);
-          var4 = (String) null;
-          stackIn_1_0 = LoginPanel.advanceAccountCreationOrLookupRequest(0, 0, param0, param1, (String) null, false, 94);
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("qc.N(");
-          if (param0 == null) {
-            stackIn_5_2 = "null";
+          guardQuotient = 2 / ((methodGuard + 41) / 54);
+          unusedNullPasswordSnapshot = (String) null;
+          requestResultBeforeReturn = LoginPanel.advanceAccountCreationOrLookupRequest(0, 0, loginIdentifierValue, emailValue, (String) null, false, 94);
+          return requestResultBeforeReturn;
+        } catch (java.lang.RuntimeException requestFailure) {
+          caughtRequestFailure = requestFailure;
+          requestFailureForContext = caughtRequestFailure;
+          requestFailureBeforeDescription = requestFailureForContext;
+          requestMessagePrefix = new StringBuilder().append("qc.N(");
+          if (loginIdentifierValue == null) {
+            identifierDescription = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            identifierDescription = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          messageBeforeEmail = ((StringBuilder) (Object) requestMessagePrefix).append(identifierDescription).append(',');
+          if (emailValue == null) {
+            emailDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            emailDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) requestFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeEmail).append(emailDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

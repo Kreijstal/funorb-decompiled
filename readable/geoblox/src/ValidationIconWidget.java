@@ -8,60 +8,60 @@ final class ValidationIconWidget extends ButtonWidget {
     static boolean clientCookieMarkerCreated;
     static int rotatedEntityScreenY;
 
-    final static int a(int param0, byte param1) {
-        int var2;
-        if (param0 == 0) {
+    final static int computePackedValueBitCount(int valueThenShiftedRemainder, byte methodGuard) {
+        int bitCount;
+        if (valueThenShiftedRemainder == 0) {
           return 0;
         }
-        if (param0 > 0) {
-          var2 = 1;
-          if (param0 > 65535) {
-            param0 = param0 >> 16;
-            var2 += 16;
+        if (valueThenShiftedRemainder > 0) {
+          bitCount = 1;
+          if (valueThenShiftedRemainder > 65535) {
+            valueThenShiftedRemainder = valueThenShiftedRemainder >> 16;
+            bitCount += 16;
           }
-          if (param0 > 255) {
-            var2 += 8;
-            param0 = param0 >> 8;
+          if (valueThenShiftedRemainder > 255) {
+            bitCount += 8;
+            valueThenShiftedRemainder = valueThenShiftedRemainder >> 8;
           }
-          if (param0 > 15) {
-            var2 += 4;
-            param0 = param0 >> 4;
+          if (valueThenShiftedRemainder > 15) {
+            bitCount += 4;
+            valueThenShiftedRemainder = valueThenShiftedRemainder >> 4;
           }
-          if (param0 > 3) {
-            var2 += 2;
-            param0 = param0 >> 2;
+          if (valueThenShiftedRemainder > 3) {
+            bitCount += 2;
+            valueThenShiftedRemainder = valueThenShiftedRemainder >> 2;
           }
-          if (param0 > 1) {
-            param0 = param0 >> 1;
-            var2++;
+          if (valueThenShiftedRemainder > 1) {
+            valueThenShiftedRemainder = valueThenShiftedRemainder >> 1;
+            bitCount++;
           }
-          return var2;
+          return bitCount;
         }
-        var2 = 2;
-        if (param0 < -65536) {
-          var2 += 16;
-          param0 = param0 >> 16;
+        bitCount = 2;
+        if (valueThenShiftedRemainder < -65536) {
+          bitCount += 16;
+          valueThenShiftedRemainder = valueThenShiftedRemainder >> 16;
         }
-        if (param0 < -256) {
-          param0 = param0 >> 8;
-          var2 += 8;
+        if (valueThenShiftedRemainder < -256) {
+          valueThenShiftedRemainder = valueThenShiftedRemainder >> 8;
+          bitCount += 8;
         }
-        if (param1 != 66) {
+        if (methodGuard != 66) {
           clientCookieMarkerCreated = true;
         }
-        if (-16 > param0) {
-          param0 = param0 >> 4;
-          var2 += 4;
+        if (-16 > valueThenShiftedRemainder) {
+          valueThenShiftedRemainder = valueThenShiftedRemainder >> 4;
+          bitCount += 4;
         }
-        if (param0 < -4) {
-          param0 = param0 >> 2;
-          var2 += 2;
+        if (valueThenShiftedRemainder < -4) {
+          valueThenShiftedRemainder = valueThenShiftedRemainder >> 2;
+          bitCount += 2;
         }
-        if (-2 > param0) {
-          var2++;
-          param0 = param0 >> 1;
+        if (-2 > valueThenShiftedRemainder) {
+          bitCount++;
+          valueThenShiftedRemainder = valueThenShiftedRemainder >> 1;
         }
-        return var2;
+        return bitCount;
     }
 
     public static void releaseStaticReferences(int methodGuard) {

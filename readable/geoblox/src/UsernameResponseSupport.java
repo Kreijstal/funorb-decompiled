@@ -36,7 +36,7 @@ final class UsernameResponseSupport {
               return;
             }
             unusedSuggestionsAlias = suggestions;
-            SoundSampleCache.a(unusedSuggestionsAlias, 416577356);
+            SoundSampleCache.publishUsernameSuggestions(unusedSuggestionsAlias, 416577356);
             ScorePopup.pendingUsernameResult = TextInputRenderer.createSuggestedUsernameQuery(methodGuard - 6540, suggestions);
             return;
           }
@@ -48,7 +48,7 @@ final class UsernameResponseSupport {
           }
           ScorePopup.pendingUsernameResult = UiFontResources.createAcceptedUsernameQuery(acceptedQueryGuard, under13Snapshot);
           unusedNullSuggestionsSnapshot = (String[]) null;
-          SoundSampleCache.a((String[]) null, 416577356);
+          SoundSampleCache.publishUsernameSuggestions((String[]) null, 416577356);
           return;
         } catch (java.lang.RuntimeException responseFailure) {
           caughtResponseFailure = responseFailure;
@@ -87,7 +87,7 @@ final class UsernameResponseSupport {
         if (methodGuard) {
             return;
         }
-        PcmResampler.a(unusedRenderOption, true, (byte) -102);
+        PcmResampler.renderAccountUiBackgroundAndDialogs(unusedRenderOption, true, (byte) -102);
     }
 
     final static void settleAccountDialogAnimations(int methodGuard) {

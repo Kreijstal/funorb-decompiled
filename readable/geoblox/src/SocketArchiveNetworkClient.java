@@ -9,10 +9,10 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static int errorReportGameCrc;
     static float introTintBlueDelta;
     static String loginUsernameTooltipText;
-    static int[] field_s;
+    static int[] achievementOrbCoinIconCounts;
 
     public static void releaseStaticReferences(int methodGuard) {
-        field_s = null;
+        achievementOrbCoinIconCounts = null;
         if (methodGuard > -69) {
             return;
         }
@@ -511,6 +511,6 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static {
         validInputValidationState = new ValidationState();
         loginUsernameTooltipText = "The account name you use to access RuneScape and other Jagex.com games";
-        field_s = new int[]{1, 2, 5, 3, 3, 5, 5, 5, 1, 1, 1, 2, 2, 2, 3, 10, 3};
+        achievementOrbCoinIconCounts = new int[]{1, 2, 5, 3, 3, 5, 5, 5, 1, 1, 1, 2, 2, 2, 3, 10, 3};
     }
 }

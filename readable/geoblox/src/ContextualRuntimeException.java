@@ -85,7 +85,7 @@ final class ContextualRuntimeException extends RuntimeException {
           if (methodGuard >= 69) {
             return;
           }
-          ContextualRuntimeException.a(false);
+          ContextualRuntimeException.getActiveLoginPassword(false);
           return;
         } catch (java.lang.RuntimeException tooltipFailure) {
           caughtTooltipFailure = tooltipFailure;
@@ -110,8 +110,8 @@ final class ContextualRuntimeException extends RuntimeException {
         }
     }
 
-    final static String a(boolean param0) {
-        if (!param0) {
+    final static String getActiveLoginPassword(boolean readPassword) {
+        if (!readPassword) {
             return (String) null;
         }
         if (!(ClientFlowState.accountCreationFlowState != IntrusiveDeque.pendingClientFlowToken)) {
@@ -120,30 +120,30 @@ final class ContextualRuntimeException extends RuntimeException {
         return LoginPasswordSupport.currentLoginPassword;
     }
 
-    final static boolean a(PlatformTaskDispatcher param0, byte param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean hasPlatformFullscreenSupport(PlatformTaskDispatcher dispatcher, byte methodGuard) {
+        RuntimeException queryFailureForContext = null;
+        boolean fullscreenSupportedBeforeReturn = false;
+        RuntimeException queryFailureBeforeDescription = null;
+        StringBuilder queryMessagePrefix = null;
+        String dispatcherDescription = null;
+        RuntimeException caughtQueryFailure = null;
         try {
-          if (param1 != 37) {
+          if (methodGuard != 37) {
             specialSpriteKindProbability = -0.44199917757712387;
           }
-          stackIn_3_0 = param0.hasFullscreenSupport(param1 - 26135);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("sa.D(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          fullscreenSupportedBeforeReturn = dispatcher.hasFullscreenSupport(methodGuard - 26135);
+          return fullscreenSupportedBeforeReturn;
+        } catch (java.lang.RuntimeException queryFailure) {
+          caughtQueryFailure = queryFailure;
+          queryFailureForContext = caughtQueryFailure;
+          queryFailureBeforeDescription = queryFailureForContext;
+          queryMessagePrefix = new StringBuilder().append("sa.D(");
+          if (dispatcher == null) {
+            dispatcherDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            dispatcherDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryFailureBeforeDescription), ((StringBuilder) (Object) queryMessagePrefix).append(dispatcherDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

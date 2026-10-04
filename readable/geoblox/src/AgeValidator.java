@@ -35,7 +35,7 @@ final class AgeValidator extends TextInputValidator {
             return invalidSyntaxState;
           }
           candidateForParsing = (CharSequence) ((Object) candidateText);
-          parsedAge = MultiHandleSliderWidget.a(false, candidateForParsing);
+          parsedAge = MultiHandleSliderWidget.parseSignedDecimalInt(false, candidateForParsing);
           if ((parsedAge > 0) &&
               (130 >= parsedAge)) {
             validAgeState = SocketArchiveNetworkClient.validInputValidationState;

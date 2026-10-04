@@ -154,7 +154,7 @@ final class LoginProtocolSupport {
                   }
                 } else {
                   try {
-                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(ClientClockSupport.loginResponseLongValue, methodGuard + 97)}, NodeHashTableIterator.getActiveApplet(methodGuard + 119), "zap");
+                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.decodeBase37DisplayName(ClientClockSupport.loginResponseLongValue, methodGuard + 97)}, NodeHashTableIterator.getActiveApplet(methodGuard + 119), "zap");
                   } catch (java.lang.Throwable zapScriptFailure) {
                     caughtLoginOrScriptFailure = zapScriptFailure;
                     ignoredScriptFailure = caughtLoginOrScriptFailure;

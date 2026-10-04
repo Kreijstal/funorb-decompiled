@@ -65,9 +65,9 @@ abstract class ByteStorage {
         loadingExtraDataText = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void pollAccountDialogUi(int unusedWheelRotation, byte methodGuard) {
         DequeCursor.pollAccountDialogAction(-1);
-        if (param1 >= -89) {
+        if (methodGuard >= -89) {
             ByteStorage.releaseStaticReferences(70);
         }
     }

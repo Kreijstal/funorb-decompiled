@@ -57,7 +57,7 @@ public final class Geoblox extends SessionGameApplet {
         int geometryCanvasWidthThenFrameIndex = 0;
         int paletteVariantThenKeyboardIndex = 0;
         int clientFlagSnapshot = clientControlFlowFlag;
-        ByteStorage.a(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
+        ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
         if (null != OpacityWidget.synthesizedSoundArchive && null != GzipInflater.initialMusicScoreArchive && TextWidgetSupport.initialVorbisArchive != null && null != ProxySocketConnector.instrumentPatchArchive) {
             HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
@@ -253,7 +253,7 @@ public final class Geoblox extends SessionGameApplet {
         if (SecondaryNodeDequeIterator.archiveLoadingComplete) {
           return true;
         }
-        Under13TermsPanel.g(9);
+        Under13TermsPanel.initializeMenuActionTexts(9);
         if ((OpacityWidget.synthesizedSoundArchive.ensureIndexLoaded(0)) &&
             (OpacityWidget.synthesizedSoundArchive.loadAllGroups(true))) {
           if (TextWidgetSupport.initialVorbisArchive.ensureIndexLoaded(0)) {
@@ -641,7 +641,7 @@ public final class Geoblox extends SessionGameApplet {
         if (!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255)) {
           L6: {
             if (!DebouncedValidationProvider.gameAssetsInitialized) {
-              ByteStorage.a(CachedTextLayout.wheelRotationSnapshot, (byte) -98);
+              ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -98);
               if ((this.pollArchiveLoading(false)) &&
                   (this.prepareGameAssets(25869))) {
                 DebouncedValidationProvider.gameAssetsInitialized = true;

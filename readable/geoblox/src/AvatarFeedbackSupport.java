@@ -154,8 +154,8 @@ final class AvatarFeedbackSupport {
           materialCount = input.readBits((byte) -17, 12);
           materials = new MeshMaterial[materialCount];
           for (materialIndex = 0; materialCount > materialIndex; materialIndex++) {
-            if (!TextInputRenderer.a((byte) 71, input)) {
-              referencedMaterialIndex = input.readBits((byte) -17, ValidationIconWidget.a(materialIndex - 1, (byte) 66));
+            if (!TextInputRenderer.readBooleanBit((byte) 71, input)) {
+              referencedMaterialIndex = input.readBits((byte) -17, ValidationIconWidget.computePackedValueBitCount(materialIndex - 1, (byte) 66));
               materials[materialIndex] = materials[referencedMaterialIndex];
             } else {
               newMaterial = new MeshMaterial();

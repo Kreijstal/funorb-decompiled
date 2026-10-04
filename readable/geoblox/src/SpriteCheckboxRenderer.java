@@ -102,7 +102,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
             var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + widget.widgetWidth >> 1)), (-var8.fullHeight + widget.widgetHeight >> 1) + 1 + var7, 256);
           }
           if (widget.hasKeyboardFocus((byte) 54)) {
-            ImageProducerRasterBuffer.a(var7 + 2, -4 + widget.widgetWidth, 14164, -4 + widget.widgetHeight, var6_int + 2);
+            ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(var7 + 2, -4 + widget.widgetWidth, 14164, -4 + widget.widgetHeight, var6_int + 2);
           }
           if (methodGuard < -5) {
             return;
@@ -133,49 +133,49 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
         MatchingTextValidator.rasterTargetStack.addLast(-88, var1);
     }
 
-    final static void a(int param0) {
+    final static void estimateHeapCapacityMiB(int methodGuard) {
         try {
-            java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
-            int var1 = 0;
-            Exception var1_ref_Exception = null;
-            Runtime var2 = null;
-            Throwable var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method maxMemoryMethod = null;
+            int guardQuotient = 0;
+            Exception ignoredMethodLookupFailure = null;
+            Runtime runtime = null;
+            Throwable ignoredMaxMemoryFailure = null;
+            Long maximumHeapBytes = null;
+            Object[] unusedNullArgumentsSnapshot = null;
+            int maxMemoryInvocationContinuation = 0;
+            Throwable caughtHeapQueryThrowable = null;
             try {
-              var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[]{});
-              if (var1_ref_java_lang_reflect_Method == null) {
-                var1 = -93 / ((-13 - param0) / 47);
+              maxMemoryMethod = Runtime.class.getMethod("maxMemory", new Class[]{});
+              if (maxMemoryMethod == null) {
+                guardQuotient = -93 / ((-13 - methodGuard) / 47);
                 return;
               }
               try {
-                var2 = Runtime.getRuntime();
-                var4 = (Object[]) null;
-                var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                ArchiveHandshakeState.heapCapacityEstimateMiB = 1 + (int)(var3.longValue() / 1048576L);
-                decompiledRegionSelector0 = 0;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = decompiledCaughtException;
-                decompiledRegionSelector0 = 1;
+                runtime = Runtime.getRuntime();
+                unusedNullArgumentsSnapshot = (Object[]) null;
+                maximumHeapBytes = (Long) (maxMemoryMethod.invoke((Object) (runtime), (Object[]) null));
+                ArchiveHandshakeState.heapCapacityEstimateMiB = 1 + (int)(maximumHeapBytes.longValue() / 1048576L);
+                maxMemoryInvocationContinuation = 0;
+              } catch (java.lang.Throwable maxMemoryInvocationFailure) {
+                caughtHeapQueryThrowable = maxMemoryInvocationFailure;
+                ignoredMaxMemoryFailure = caughtHeapQueryThrowable;
+                maxMemoryInvocationContinuation = 1;
               }
-              if (decompiledRegionSelector0 == 0) {
-                var1 = -93 / ((-13 - param0) / 47);
+              if (maxMemoryInvocationContinuation == 0) {
+                guardQuotient = -93 / ((-13 - methodGuard) / 47);
                 return;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var1_ref_Exception = (Exception) (Object) decompiledCaughtException;
-              var1 = -93 / ((-13 - param0) / 47);
+            } catch (java.lang.Exception methodLookupFailure) {
+              caughtHeapQueryThrowable = methodLookupFailure;
+              ignoredMethodLookupFailure = (Exception) (Object) caughtHeapQueryThrowable;
+              guardQuotient = -93 / ((-13 - methodGuard) / 47);
               return;
             }
-            var1 = -93 / ((-13 - param0) / 47);
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            guardQuotient = -93 / ((-13 - methodGuard) / 47);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

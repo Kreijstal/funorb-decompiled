@@ -322,7 +322,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                             if (!MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix))) {
                               break vendorCompatibilityCheck;
                             }
-                            if (MultiHandleSliderWidget.a(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10) {
+                            if (MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10) {
                               break vendorCompatibilityCheck;
                             }
                             this.showGameError((byte) 79, "wrongjava");
@@ -380,7 +380,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       ignoredFocusRootFailure = caughtRunFailure;
                     }
                   }
-                  SpriteCheckboxRenderer.a(75);
+                  SpriteCheckboxRenderer.estimateHeapCapacityMiB(75);
                   this.rebuildGameCanvas(true);
                   SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ClientRenderingState.canvasHeight, AudioService.canvasWidth);
                   this.initializeGame(117);

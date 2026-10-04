@@ -240,7 +240,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (tag.startsWith("img=")) {
                                 try {
                                   inlineImageIndexText = (CharSequence) ((Object) tag.substring(4));
-                                  inlineImageIndex = MultiHandleSliderWidget.a(false, inlineImageIndexText);
+                                  inlineImageIndex = MultiHandleSliderWidget.parseSignedDecimalInt(false, inlineImageIndexText);
                                   lineWidth = lineWidth + this.inlineImages[inlineImageIndex].fullWidth;
                                   previousGlyph = 0;
                                 } catch (java.lang.Exception inlineImageFailure) {
@@ -468,7 +468,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 alphaValue = (CharSequence) ((Object) tag.substring(6));
-                currentAlpha256 = MultiHandleSliderWidget.a(false, alphaValue);
+                currentAlpha256 = MultiHandleSliderWidget.parseSignedDecimalInt(false, alphaValue);
               }
             } else {
               currentTextColor = defaultTextColor;
@@ -645,7 +645,7 @@ abstract class BitmapFont extends DualLinkNode {
                             }
                             try {
                               inlineImageIndexText = (CharSequence) ((Object) tag.substring(4));
-                              inlineImageIndex = MultiHandleSliderWidget.a(false, inlineImageIndexText);
+                              inlineImageIndex = MultiHandleSliderWidget.parseSignedDecimalInt(false, inlineImageIndexText);
                               textWidth = textWidth + this.inlineImages[inlineImageIndex].fullWidth;
                               previousGlyph = 0;
                               textIndex++;
@@ -812,7 +812,7 @@ abstract class BitmapFont extends DualLinkNode {
                             }
                             try {
                               inlineImageIndexText = (CharSequence) ((Object) tag.substring(4));
-                              inlineImageIndexOrGlyphHeight = MultiHandleSliderWidget.a(false, inlineImageIndexText);
+                              inlineImageIndexOrGlyphHeight = MultiHandleSliderWidget.parseSignedDecimalInt(false, inlineImageIndexText);
                               inlineImage = this.inlineImages[inlineImageIndexOrGlyphHeight];
                               if (this.inlineImageBaselineOffsets == null) {
                                 selectedImageBaselineOffset = inlineImage.fullHeight;

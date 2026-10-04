@@ -399,7 +399,7 @@ final class GameScreen extends MenuScreen {
             if (!((5 != this.screenId) &&
                   (7 != this.screenId))) {
               AudioService.screenTitleSprites[4].draw(0, 20);
-              TextInputRenderer.a(false, false, (byte) -93);
+              TextInputRenderer.renderAchievementDetails(false, false, (byte) -93);
               if (clientControlFlowGuard == 0) {
                 return;
               }
@@ -624,7 +624,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             AudioService.screenTitleSprites[7].draw(0, 20);
-            TextInputRenderer.a(false, true, (byte) -122);
+            TextInputRenderer.renderAchievementDetails(false, true, (byte) -122);
             if (clientControlFlowGuard == 0) {
               return;
             }
@@ -995,7 +995,7 @@ final class GameScreen extends MenuScreen {
                         if ((currentScoreHighlightedFlag == 0) &&
                             (null != UiWidget.gameplaySession) &&
                             (categoryScores[entryIndex] == Math.abs(UiWidget.gameplaySession.score)) &&
-                            (WhirlpoolHash.a(entryName, (byte) 12))) {
+                            (WhirlpoolHash.matchesNormalizedSessionName(entryName, (byte) 12))) {
                           currentScoreHighlightedFlag = 1;
                           scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 16610816, -1);
                           scoreFont.drawText(entryName, 165, entryTextY, 16610816, -1);
@@ -1936,7 +1936,7 @@ final class GameScreen extends MenuScreen {
                   }
                   if ((!ArchiveCatalog.exitFullscreenIfActive(255)) &&
                       (TextTemplateDefinition.field_n > 0) &&
-                      (ContextualRuntimeException.a(MenuScreen.platformTaskDispatcher, (byte) 37))) {
+                      (ContextualRuntimeException.hasPlatformFullscreenSupport(MenuScreen.platformTaskDispatcher, (byte) 37))) {
                     MessageDialog.requestFullscreen((byte) -128);
                   }
                   this.fullscreenDialogButtonIndex = 0;

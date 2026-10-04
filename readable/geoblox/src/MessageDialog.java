@@ -710,7 +710,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           if (methodGuard >= -111) {
             quickChatShortcutKeys = (String[]) null;
           }
-          decimalValidationResult = LimitedRandomAccessFile.a(text, true, 10, 87);
+          decimalValidationResult = LimitedRandomAccessFile.isValidSignedIntText(text, true, 10, 87);
           return decimalValidationResult;
         } catch (java.lang.RuntimeException caughtDecimalValidationFailure) {
           caughtDecimalValidationException = caughtDecimalValidationFailure;

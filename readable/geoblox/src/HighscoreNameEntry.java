@@ -331,7 +331,7 @@ final class HighscoreNameEntry {
               return;
             }
             if (operation != 4) {
-              IterableNodeHashTable.reportClientError((Throwable) null, "F1: " + TextTemplateDefinition.e(55), (byte) 125);
+              IterableNodeHashTable.reportClientError((Throwable) null, "F1: " + TextTemplateDefinition.formatSessionPacketDiagnostic(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -119);
               return;
             }

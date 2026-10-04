@@ -90,8 +90,8 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = TextInputRenderer.a((byte) 81, param0) ? 1 : 0;
-          var4 = TextInputRenderer.a((byte) 7, param0) ? 1 : 0;
+          var3 = TextInputRenderer.readBooleanBit((byte) 81, param0) ? 1 : 0;
+          var4 = TextInputRenderer.readBooleanBit((byte) 7, param0) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.vertexCount = (short)param0.readBits((byte) -17, 16);
           var5.vertexX = ArchiveNetworkClient.a(var5.vertexX, 16, 0, param0);
@@ -121,10 +121,10 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
             var5.field_k = ArchiveNetworkClient.a(var5.field_k, 16, 0, param0);
             var5.field_g = ArchiveNetworkClient.a(var5.field_g, 16, 0, param0);
           }
-          if (TextInputRenderer.a((byte) 102, param0)) {
+          if (TextInputRenderer.readBooleanBit((byte) 102, param0)) {
             var5.faceMaterialIndices = ArchiveNetworkClient.a(var5.faceMaterialIndices, 16, 0, param0);
           }
-          if (TextInputRenderer.a((byte) 37, param0)) {
+          if (TextInputRenderer.readBooleanBit((byte) 37, param0)) {
             var5.facePriorities = MouseWheelInput.readPackedByteArray(var5.facePriorities, param0, 16, 8);
             var6 = 0;
             for (var7 = 0; var5.facePriorities.length > var7; var7++) {

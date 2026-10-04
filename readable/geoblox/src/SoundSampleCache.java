@@ -169,36 +169,36 @@ final class SoundSampleCache {
         }
     }
 
-    final static EmailAvailabilityQuery a(int param0, String param1) {
-        RuntimeException var2 = null;
-        String var3 = null;
-        EmailAvailabilityQuery stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static EmailAvailabilityQuery getOrRefreshEmailAvailabilityQuery(int methodGuard, String candidateEmail) {
+        RuntimeException queryFailureForContext = null;
+        String unusedNullEmailSnapshot = null;
+        EmailAvailabilityQuery activeQueryBeforeReturn = null;
+        RuntimeException queryFailureBeforeDescription = null;
+        StringBuilder queryMessagePrefix = null;
+        String emailDescription = null;
+        RuntimeException caughtQueryFailure = null;
         try {
           if ((EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-87)) &&
-              (!param1.equals(EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491)))) {
-            EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.a((byte) 86, param1);
+              (!candidateEmail.equals(EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491)))) {
+            EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.createEmailAvailabilityQuery((byte) 86, candidateEmail);
           }
-          if (param0 != -1) {
-            var3 = (String) null;
-            SoundSampleCache.a(-30, (String) null);
+          if (methodGuard != -1) {
+            unusedNullEmailSnapshot = (String) null;
+            SoundSampleCache.getOrRefreshEmailAvailabilityQuery(-30, (String) null);
           }
-          stackIn_7_0 = EntityContactSupport.activeEmailAvailabilityQuery;
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("ci.K(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          activeQueryBeforeReturn = EntityContactSupport.activeEmailAvailabilityQuery;
+          return activeQueryBeforeReturn;
+        } catch (java.lang.RuntimeException queryFailure) {
+          caughtQueryFailure = queryFailure;
+          queryFailureForContext = caughtQueryFailure;
+          queryFailureBeforeDescription = queryFailureForContext;
+          queryMessagePrefix = new StringBuilder().append("ci.K(").append(methodGuard).append(',');
+          if (candidateEmail == null) {
+            emailDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            emailDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryFailureBeforeDescription), ((StringBuilder) (Object) queryMessagePrefix).append(emailDescription).append(')').toString());
         }
     }
 
@@ -378,35 +378,35 @@ final class SoundSampleCache {
         }
     }
 
-    final static void a(String[] args, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void publishUsernameSuggestions(String[] suggestions, int methodGuard) {
+        RuntimeException publicationFailureForContext = null;
+        RuntimeException publicationFailureBeforeDescription = null;
+        StringBuilder publicationMessagePrefix = null;
+        String suggestionsDescription = null;
+        RuntimeException caughtPublicationFailure = null;
         try {
-          if (param1 != 416577356) {
+          if (methodGuard != 416577356) {
             return;
           }
           if (EntityCollisionSupport.activeAccountCreationForm != null) {
-            EntityCollisionSupport.activeAccountCreationForm.usernameSuggestions.setSuggestions((byte) 126, args);
+            EntityCollisionSupport.activeAccountCreationForm.usernameSuggestions.setSuggestions((byte) 126, suggestions);
           }
           if (null == MouseWheelInput.activeDisplayNamePanel) {
             return;
           }
-          MouseWheelInput.activeDisplayNamePanel.usernameSuggestions.setSuggestions((byte) 126, args);
+          MouseWheelInput.activeDisplayNamePanel.usernameSuggestions.setSuggestions((byte) 126, suggestions);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("ci.I(");
-          if (args == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException publicationFailure) {
+          caughtPublicationFailure = publicationFailure;
+          publicationFailureForContext = caughtPublicationFailure;
+          publicationFailureBeforeDescription = publicationFailureForContext;
+          publicationMessagePrefix = new StringBuilder().append("ci.I(");
+          if (suggestions == null) {
+            suggestionsDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            suggestionsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) publicationFailureBeforeDescription), ((StringBuilder) (Object) publicationMessagePrefix).append(suggestionsDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

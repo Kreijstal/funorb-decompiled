@@ -46,30 +46,30 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         return this.handleValues.get(index, (byte) 94);
     }
 
-    final static int a(boolean param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int parseSignedDecimalInt(boolean clearSessionServerHost, CharSequence numberText) {
+        RuntimeException parseFailureForContext = null;
+        int parsedValueBeforeReturn = 0;
+        RuntimeException parseFailureBeforeDescription = null;
+        StringBuilder parseMessagePrefix = null;
+        String numberDescription = null;
+        RuntimeException caughtParseFailure = null;
         try {
-          if (param0) {
+          if (clearSessionServerHost) {
             sessionServerHost = (String) null;
           }
-          stackIn_3_0 = ReflectionCheckRequest.parseSignedInt(param1, (byte) 39, 10, true);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("ol.G(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          parsedValueBeforeReturn = ReflectionCheckRequest.parseSignedInt(numberText, (byte) 39, 10, true);
+          return parsedValueBeforeReturn;
+        } catch (java.lang.RuntimeException parseFailure) {
+          caughtParseFailure = parseFailure;
+          parseFailureForContext = caughtParseFailure;
+          parseFailureBeforeDescription = parseFailureForContext;
+          parseMessagePrefix = new StringBuilder().append("ol.G(").append(clearSessionServerHost).append(',');
+          if (numberText == null) {
+            numberDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            numberDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) parseFailureBeforeDescription), ((StringBuilder) (Object) parseMessagePrefix).append(numberDescription).append(')').toString());
         }
     }
 

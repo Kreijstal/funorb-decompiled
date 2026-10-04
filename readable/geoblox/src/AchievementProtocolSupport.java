@@ -161,7 +161,7 @@ final class AchievementProtocolSupport {
                 queryReceivingZeroValues.completed = true;
                 queryReceivingZeroValues.unlinkNode(false);
               } else {
-                IterableNodeHashTable.reportClientError((Throwable) null, "A1: " + TextTemplateDefinition.e(55), (byte) 125);
+                IterableNodeHashTable.reportClientError((Throwable) null, "A1: " + TextTemplateDefinition.formatSessionPacketDiagnostic(55), (byte) 125);
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
               }
             }

@@ -9,30 +9,30 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     private java.awt.image.ImageConsumer imageConsumer;
     static ResourceArchive activeTextArchive;
 
-    final static EmailAvailabilityQuery a(byte param0, String param1) {
-        RuntimeException var2 = null;
-        EmailAvailabilityQuery stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static EmailAvailabilityQuery createEmailAvailabilityQuery(byte methodGuard, String candidateEmail) {
+        RuntimeException queryFailureForContext = null;
+        EmailAvailabilityQuery createdQueryBeforeReturn = null;
+        RuntimeException queryFailureBeforeDescription = null;
+        StringBuilder queryMessagePrefix = null;
+        String emailDescription = null;
+        RuntimeException caughtQueryFailure = null;
         try {
-          if (param0 != 86) {
+          if (methodGuard != 86) {
             activeTextArchive = (ResourceArchive) null;
           }
-          stackIn_3_0 = new EmailAvailabilityQuery(param1);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("bf.A(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          createdQueryBeforeReturn = new EmailAvailabilityQuery(candidateEmail);
+          return createdQueryBeforeReturn;
+        } catch (java.lang.RuntimeException queryFailure) {
+          caughtQueryFailure = queryFailure;
+          queryFailureForContext = caughtQueryFailure;
+          queryFailureBeforeDescription = queryFailureForContext;
+          queryMessagePrefix = new StringBuilder().append("bf.A(").append(methodGuard).append(',');
+          if (candidateEmail == null) {
+            emailDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            emailDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryFailureBeforeDescription), ((StringBuilder) (Object) queryMessagePrefix).append(emailDescription).append(')').toString());
         }
     }
 
@@ -133,114 +133,114 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        var13 = Geoblox.clientControlFlowFlag;
+    final static void drawDottedWhiteFocusRectangle(int rectangleTop, int rectangleWidth, int methodGuard, int rectangleHeight, int rectangleLeft) {
+        int clippedLeftBeforeStore = 0;
+        int clippedTopBeforeStore = 0;
+        int clippedRightBeforeStore = 0;
+        int clippedBottomBeforeStore = 0;
+        RuntimeException caughtDrawFailure = null;
+        int rectangleRight = 0;
+        RuntimeException drawFailureForContext = null;
+        int rectangleBottom = 0;
+        int clippedLeft = 0;
+        int clippedTop = 0;
+        int clippedRight = 0;
+        int clippedBottom = 0;
+        int framebufferIndex = 0;
+        int remainingDots = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var5_int = param1 + param4;
-          var6 = param0 + param3;
-          if (param4 <= SoftwareRasterizer.clipLeft) {
-            stackIn_4_0 = SoftwareRasterizer.clipLeft;
+          rectangleRight = rectangleWidth + rectangleLeft;
+          rectangleBottom = rectangleTop + rectangleHeight;
+          if (rectangleLeft <= SoftwareRasterizer.clipLeft) {
+            clippedLeftBeforeStore = SoftwareRasterizer.clipLeft;
           } else {
-            stackIn_4_0 = param4;
+            clippedLeftBeforeStore = rectangleLeft;
           }
-          var7 = stackIn_4_0;
-          if (param0 > SoftwareRasterizer.clipTop) {
-            stackIn_7_0 = param0;
+          clippedLeft = clippedLeftBeforeStore;
+          if (rectangleTop > SoftwareRasterizer.clipTop) {
+            clippedTopBeforeStore = rectangleTop;
           } else {
-            stackIn_7_0 = SoftwareRasterizer.clipTop;
+            clippedTopBeforeStore = SoftwareRasterizer.clipTop;
           }
-          var8 = stackIn_7_0;
-          if (SoftwareRasterizer.clipRight > var5_int) {
-            stackIn_10_0 = var5_int;
+          clippedTop = clippedTopBeforeStore;
+          if (SoftwareRasterizer.clipRight > rectangleRight) {
+            clippedRightBeforeStore = rectangleRight;
           } else {
-            stackIn_10_0 = SoftwareRasterizer.clipRight;
+            clippedRightBeforeStore = SoftwareRasterizer.clipRight;
           }
-          var9 = stackIn_10_0;
-          if (SoftwareRasterizer.clipBottom <= var6) {
-            stackIn_13_0 = SoftwareRasterizer.clipBottom;
+          clippedRight = clippedRightBeforeStore;
+          if (SoftwareRasterizer.clipBottom <= rectangleBottom) {
+            clippedBottomBeforeStore = SoftwareRasterizer.clipBottom;
           } else {
-            stackIn_13_0 = var6;
+            clippedBottomBeforeStore = rectangleBottom;
           }
-          var10 = stackIn_13_0;
-          if (param2 != 14164) {
+          clippedBottom = clippedBottomBeforeStore;
+          if (methodGuard != 14164) {
             return;
           }
-          if ((param4 >= SoftwareRasterizer.clipLeft) &&
-              (param4 < SoftwareRasterizer.clipRight)) {
-            var11 = param4 + var8 * SoftwareRasterizer.stride;
-            var12 = var10 + 1 - var8 >> 1;
+          if ((rectangleLeft >= SoftwareRasterizer.clipLeft) &&
+              (rectangleLeft < SoftwareRasterizer.clipRight)) {
+            framebufferIndex = rectangleLeft + clippedTop * SoftwareRasterizer.stride;
+            remainingDots = clippedBottom + 1 - clippedTop >> 1;
             while (true) {
-              var12--;
-              if (0 > var12) {
+              remainingDots--;
+              if (0 > remainingDots) {
                 break;
               }
-              SoftwareRasterizer.framebuffer[var11] = 16777215;
-              var11 = var11 + SoftwareRasterizer.stride * 2;
+              SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
+              framebufferIndex = framebufferIndex + SoftwareRasterizer.stride * 2;
               continue;
             }
           }
-          if ((param0 >= SoftwareRasterizer.clipTop) &&
-              (SoftwareRasterizer.clipBottom > var6)) {
-            var11 = var7 + SoftwareRasterizer.stride * param0;
-            var12 = -var7 + 1 + var9 >> 1;
+          if ((rectangleTop >= SoftwareRasterizer.clipTop) &&
+              (SoftwareRasterizer.clipBottom > rectangleBottom)) {
+            framebufferIndex = clippedLeft + SoftwareRasterizer.stride * rectangleTop;
+            remainingDots = -clippedLeft + 1 + clippedRight >> 1;
             while (true) {
-              var12--;
-              if (var12 < 0) {
+              remainingDots--;
+              if (remainingDots < 0) {
                 break;
               }
-              SoftwareRasterizer.framebuffer[var11] = 16777215;
-              var11 += 2;
+              SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
+              framebufferIndex += 2;
               continue;
             }
           }
-          if ((var5_int >= SoftwareRasterizer.clipLeft) &&
-              (SoftwareRasterizer.clipRight > var5_int)) {
-            var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
-            var12 = -var8 + 1 + var10 >> 1;
+          if ((rectangleRight >= SoftwareRasterizer.clipLeft) &&
+              (SoftwareRasterizer.clipRight > rectangleRight)) {
+            framebufferIndex = rectangleRight + ((1 & -rectangleLeft + rectangleRight) + clippedTop) * SoftwareRasterizer.stride;
+            remainingDots = -clippedTop + 1 + clippedBottom >> 1;
             while (true) {
-              var12--;
-              if (0 > var12) {
+              remainingDots--;
+              if (0 > remainingDots) {
                 break;
               }
-              SoftwareRasterizer.framebuffer[var11] = 16777215;
-              var11 = var11 + 2 * SoftwareRasterizer.stride;
+              SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
+              framebufferIndex = framebufferIndex + 2 * SoftwareRasterizer.stride;
               continue;
             }
           }
-          if ((SoftwareRasterizer.clipTop <= param0) &&
-              (SoftwareRasterizer.clipBottom > var6)) {
-            var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
-            var12 = 1 - (-var9 + var7) >> 1;
+          if ((SoftwareRasterizer.clipTop <= rectangleTop) &&
+              (SoftwareRasterizer.clipBottom > rectangleBottom)) {
+            framebufferIndex = SoftwareRasterizer.stride * rectangleBottom + (clippedLeft + (1 & -rectangleTop + rectangleBottom));
+            remainingDots = 1 - (-clippedRight + clippedLeft) >> 1;
             while (true) {
-              var12--;
-              if (var12 < 0) {
+              remainingDots--;
+              if (remainingDots < 0) {
                 return;
               }
-              SoftwareRasterizer.framebuffer[var11] = 16777215;
-              var11 += 2;
+              SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
+              framebufferIndex += 2;
               continue;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var5), "bf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        } catch (java.lang.RuntimeException drawFailure) {
+          caughtDrawFailure = drawFailure;
+          drawFailureForContext = caughtDrawFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawFailureForContext), "bf.B(" + rectangleTop + ',' + rectangleWidth + ',' + methodGuard + ',' + rectangleHeight + ',' + rectangleLeft + ')');
         }
     }
 

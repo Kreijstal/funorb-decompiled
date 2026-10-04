@@ -76,7 +76,7 @@ final class PasswordValidator extends TextInputValidator {
             partialUsernameAlertBeforeReturn = NameCharacterSupport.createPasswordContainsPartialNameAlertText;
             return partialUsernameAlertBeforeReturn;
           }
-          if (!CrcAcknowledgedPacket.a(lowercaseCandidateForChecks, lowercaseUsername, (byte) -96)) {
+          if (!CrcAcknowledgedPacket.containsAccountNameOrReverse(lowercaseCandidateForChecks, lowercaseUsername, (byte) -96)) {
             return ArchiveNetworkClient.createPasswordLengthAlertText;
           }
           finalUsernameAlertBeforeReturn = EntityCollisionSupport.createPasswordContainsNameAlertText;

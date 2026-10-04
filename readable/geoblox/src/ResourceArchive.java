@@ -900,67 +900,67 @@ final class ResourceArchive {
         return this.archiveSource.getGroupProgress(126, groupId);
     }
 
-    final static long a(CharSequence param0, int param1) {
-        int var5 = 0;
-        long stackIn_22_0 = 0L;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        long var2_long = 0L;
-        RuntimeException var2 = null;
-        int var4 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        CharSequence var8 = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    final static long encodeBase37Name(CharSequence nameCharacters, int methodGuard) {
+        int characterIndex = 0;
+        long encodedNameBeforeReturn = 0L;
+        RuntimeException encodingFailureBeforeDescription = null;
+        StringBuilder encodingMessagePrefix = null;
+        String nameDescription = null;
+        RuntimeException caughtEncodingFailure = null;
+        long encodedName = 0L;
+        RuntimeException encodingFailureForContext = null;
+        int nameLength = 0;
+        int characterCode = 0;
+        int unusedClientControlSnapshot = 0;
+        CharSequence unusedNullNameSnapshot = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var2_long = 0L;
-          if (param1 != -48) {
-            var8 = (CharSequence) null;
-            ResourceArchive.a((CharSequence) null, -67);
+          encodedName = 0L;
+          if (methodGuard != -48) {
+            unusedNullNameSnapshot = (CharSequence) null;
+            ResourceArchive.encodeBase37Name((CharSequence) null, -67);
           }
-          var4 = param0.length();
-          for (var5 = 0; var5 < var4; var5++) {
-            var2_long = var2_long * 37L;
-            var6 = param0.charAt(var5);
-            if ((var6 >= 65) &&
-                (var6 <= 90)) {
-              var2_long = var2_long + (long)(-65 + (1 + var6));
-            } else if ((var6 >= 97) &&
-                (var6 <= 122)) {
-              var2_long = var2_long + (long)(-96 + var6);
+          nameLength = nameCharacters.length();
+          for (characterIndex = 0; characterIndex < nameLength; characterIndex++) {
+            encodedName = encodedName * 37L;
+            characterCode = nameCharacters.charAt(characterIndex);
+            if ((characterCode >= 65) &&
+                (characterCode <= 90)) {
+              encodedName = encodedName + (long)(-65 + (1 + characterCode));
+            } else if ((characterCode >= 97) &&
+                (characterCode <= 122)) {
+              encodedName = encodedName + (long)(-96 + characterCode);
             } else {
-              if ((48 <= var6) &&
-                  (57 >= var6)) {
-                var2_long = var2_long + (long)(-48 + var6 + 27);
+              if ((48 <= characterCode) &&
+                  (57 >= characterCode)) {
+                encodedName = encodedName + (long)(-48 + characterCode + 27);
               }
             }
-            if (177917621779460413L > var2_long) {
+            if (177917621779460413L > encodedName) {
               continue;
             }
             break;
           }
-          while (var2_long % 37L == 0L) {
-            if (var2_long != 0L) {
-              var2_long = var2_long / 37L;
+          while (encodedName % 37L == 0L) {
+            if (encodedName != 0L) {
+              encodedName = encodedName / 37L;
               continue;
             }
             break;
           }
-          stackIn_22_0 = var2_long;
-          return stackIn_22_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_25_0 = var2;
-          stackIn_25_1 = new StringBuilder().append("rh.N(");
-          if (param0 == null) {
-            stackIn_26_2 = "null";
+          encodedNameBeforeReturn = encodedName;
+          return encodedNameBeforeReturn;
+        } catch (java.lang.RuntimeException encodingFailure) {
+          caughtEncodingFailure = encodingFailure;
+          encodingFailureForContext = caughtEncodingFailure;
+          encodingFailureBeforeDescription = encodingFailureForContext;
+          encodingMessagePrefix = new StringBuilder().append("rh.N(");
+          if (nameCharacters == null) {
+            nameDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encodingFailureBeforeDescription), ((StringBuilder) (Object) encodingMessagePrefix).append(nameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

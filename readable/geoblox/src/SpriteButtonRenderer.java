@@ -38,7 +38,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
             widgetEnabled = widgetEnabled & ((ButtonWidget) ((Object) widget)).enabled;
           }
           if (methodGuard >= -5) {
-            SpriteButtonRenderer.c(-17);
+            SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(-17);
           }
           if (widgetEnabled) {
             if (var6_int == 0) {
@@ -90,20 +90,20 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
         this.buttonSprites = MouseWheelInput.commonButtonSprites;
     }
 
-    final static String c(int param0) {
-        String var1 = null;
-        if (param0 == 7789) {
-            var1 = "";
+    final static String getLoginIdentifierWithSessionFallback(int methodGuard) {
+        String identifierText = null;
+        if (methodGuard == 7789) {
+            identifierText = "";
             if (!(null == activeLoginPanel)) {
-                var1 = activeLoginPanel.getLoginIdentifierOrEmpty(87);
+                identifierText = activeLoginPanel.getLoginIdentifierOrEmpty(87);
             }
-            if (var1.length() == 0) {
-                var1 = DualLinkNode.getSessionTextOrEmpty((byte) -53);
+            if (identifierText.length() == 0) {
+                identifierText = DualLinkNode.getSessionTextOrEmpty((byte) -53);
             }
-            if (!(var1.length() != 0)) {
-                var1 = AlternateLongAndTextLoginPayload.defaultPlayerNameText;
+            if (!(identifierText.length() != 0)) {
+                identifierText = AlternateLongAndTextLoginPayload.defaultPlayerNameText;
             }
-            return var1;
+            return identifierText;
         }
         return (String) null;
     }
