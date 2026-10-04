@@ -7,14 +7,14 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 124)
+## Current readability (pass 125)
 
-The export has 10,902 guarded names and 84,798 identifier edits, plus 11 recorded
-class-name literal edits. Class coverage is 275 semantic renames, one already
-meaningful `Geoblox` name and 27 opaque top-level names.
+The export has 11,194 guarded names and 86,300 identifier edits, plus 11 recorded
+class-name literal edits. Class coverage is 288 semantic renames, one already
+meaningful `Geoblox` name and 14 opaque top-level names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -24,7 +24,30 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 124 adds 306 guarded names: ten classes, 23 fields, 32 methods,
+Pass 125 adds 292 guarded names: thirteen classes, 40 fields, 34 methods,
+78 parameters and 127 locals. All 10,902 previous complete rules and source,
+naming-tool, decompiler, bytecode and native fixture pins remain. The current
+export has 11,194 rules and 86,300 identifier edits, with the same 11 separately
+recorded class-name literal edits. All parameters and locals in the thirteen
+audited owners have semantic names. Both 303-file corpora compile and compare
+136,612 bindings, 388 override relationships and 11 reflected class-literal
+records. Dictionary reversal recovers all 303 pinned raw files byte-for-byte.
+Class coverage is 288 renamed, one meaningful original name and 14 opaque
+top-level names; six large labeled bodies and 207 plain-block labels remain.
+
+The named paths connect session bootstrap/packet buffers, FIFO and CRC
+acknowledgements, account/username flow tokens and form values, username result
+handling, login UI/archive progress and fullscreen task completion. The three
+flow markers remain distinct identity objects with throwing `toString`; no enum,
+state numbers or wire values replace them. Mixed-purpose statics stay on their
+owners. Guards, aliasing, partial writes, recursive failure paths, byte counts,
+signed arithmetic and exception/monitor boundaries remain. The 25 publication
+checks and all eight fixed native probes pass within their existing scopes; the
+committed export reproduces from clean checkouts. No new live acknowledgement,
+account/network/server, seed-file write, hardware fullscreen, browser/phone or
+full-game/performance coverage is added by this naming pass.
+
+Pass 124 added 306 guarded names: ten classes, 23 fields, 32 methods,
 63 parameters and 178 locals. All 10,596 previous complete rules and source,
 naming-tool, decompiler, bytecode and native fixture pins remain. The export now
 has 10,902 rules and 84,798 identifier edits, with the same 11 separately recorded
@@ -4490,3 +4513,96 @@ prefixes, replacements and a tail. `buildRepeatedCharacterRange` fills only the
 selected start-to-length range; earlier characters remain zero. Guard effects,
 negative lengths/counts, alias snapshots, diagnostic literals and exception
 context all stay visible. No raw body or generic tool is rewritten in this pass.
+
+## Client flow, bootstrap and fullscreen helpers
+
+| Readable owner | Raw identity | Audited role |
+| --- | --- | --- |
+| `ClientFlowToken` | `al` | Identity markers, session acknowledgements, active login identifier, eligibility marker and theme sound helper |
+| `SessionBootstrapSupport` | `ic` | Session buffers/configuration, 24-byte seed persistence and signed Euclidean GCD |
+| `RankedComparisonSupport` | `ig` | Ranked-index ordering and username response query construction |
+| `UsernameResponseSupport` | `kb` | Username responses, dimmed account UI and animation/reset helpers |
+| `ClientFlowState` | `kd` | Account token/dialog layer and guarded session exit request |
+| `UsernameQueryState` | `dl` | Pending account username result, intro-running flag and volatile redraw request |
+| `AccountEligibilitySupport` | `kf` | Account block check and login return permission |
+| `AccountCreationSupport` | `mc` | Account form submission setup and pointer snapshot helper |
+| `FullscreenEntrySupport` | `qe` | Display-mode selection, task wait and retained archive guard placeholder |
+| `LoginUiSupport` | `tj` | Login dialog, archive progress, loading fonts and int-record packet writer |
+| `ClientScreenExitSupport` | `oh` | Session UI service result2 and fullscreen dialog/audio resources |
+| `ConnectionHeaderSupport` | `ke` | Fixed connection header and colocated entity sprite cache |
+| `FontLoadingSupport` | `rb` | Monochrome font loader and colocated login/resize/fullscreen state |
+
+`ClientFlowState.accountCreationFlowState` and
+`WidgetSkinState.usernameQueryFlowState` compare three shared `ClientFlowToken`
+instances. `idleClientFlowToken` is installed by UI setup/reset;
+`pendingClientFlowToken` is selected before account submission or a username
+lookup; response handling selects `completedClientFlowToken`. These remain
+nullable mutable references, not enum values. The token's `toString` still throws.
+The named getter `getActiveLoginIdentifier` preserves its priority: pending
+account display name, pending username candidate, username candidate while email
+availability remains incomplete, then `currentLoginIdentifier`.
+
+`AccountCreationSupport.startAccountCreation` takes the actual display-name,
+email, parsed age, news opt-in and password values from `AccountCreationForm`.
+It requires the idle account token, allocates and shows the result dialog before
+checking its method guard, then either displays an ineligible result or stores
+the form values and pending token. It does not send the server request itself.
+The source field names now connect `accountCreationDisplayName`,
+`accountCreationEmail`, `accountCreationPassword`, `accountCreationAgeYears` and
+`accountCreationNewsOptIn` to their consumers. The block check observes the
+existing override or `tuhstatbut` cookie/applet marker; external interpretation
+of that marker is not established.
+
+`handleUsernameResponse` keeps exact response-code handling: 255 constructs an
+accepted query using the under13 age check; 100..105 store suggestions; other
+codes construct a response query with candidate text and code. Account and
+standalone query result references remain separate. No wire values, suggestion
+ordering, accepted marker, error mapping or under13 behavior are replaced.
+`isRightRankedEntryBeforeLeft` states its direction: it compares ascending
+`rankedEntryKeyOne` and `rankedEntryKeyTwo` in the selected order, then the signed
+sum of three tie fields, then the smaller original index. The modulo guard is
+reached only after equal key pairs, so earlier-return exception timing remains.
+
+`SessionBootstrapSupport.initializeSessionServices` allocates the incoming
+buffer before `outgoingSessionBuffer`, stores the shared task dispatcher, host,
+active/alternate ports and language/client/server identifiers, then wraps the
+existing random seed file. Its game CRC, `clientInstanceId` and `memberAccountMode`
+trace to applet parameters `gamecrc`, `instanceid` and `member` (`yes` selects
+member mode). Member mode contributes login flagbit1; `loginResponseExtensionEnabled`
+contributes bit4 and gates extra response reads. These describe source configuration
+and wire behavior, not verified live subscription/server status.
+`ConnectionHeaderSupport.writeConnectionHeader` retains its opcode12, fixed17,
+client/server shorts and language byte. `persistSessionSeedBytes` attempts a
+24-byte write at seed-file offset0, catches `Exception`, and advances the incoming
+cursor by24 even if the file is absent or the write failed. No seed-file content,
+error object or cursor behavior is corrected by naming.
+
+`ClientFlowToken.handleSessionAcknowledgement` retains guard26146 and two kinds.
+Kind0 takes the first pending FIFO token, reads and discards a byte-length payload,
+skips four bytes, verifies the trailing CRC32 and unlinks the token. Kind1 reads
+a CRC, searches `pendingCrcAcknowledgements`, and unlinks the first match.
+Missing records, corrupt FIFO CRC or unknown kinds keep their socket-close paths
+and numeric close guards. These are source-audited branches, not a live server
+interoperability or new acknowledgement execution test.
+
+`FullscreenEntrySupport.enterFullscreenAndWait` checks platform support. When
+the method guard equals the complement of the requested bit depth, it enumerates
+matching dimensions/refresh rates and selects the largest available bit depth.
+It requests fullscreen, sleeps10 milliseconds while task status remains zero,
+then checks the frame result. A null result returns null; status2 with a frame
+exits fullscreen/disposes it before returning null. The original task polling,
+casts and failure scopes remain. The archive helper explicitly names a
+`guardArchiveInitializationPlaceholder`: in the fixed source its safe-guard body
+does nothing, and its other path calls fullscreen with a null dispatcher.
+Hardware fullscreen success is not newly tested.
+
+`ClientFlowState.requestSessionExit` keeps its guarded stage10 reconnect-dialog
+path and stage11 selection, then sets `sessionExitRequested`. The alternate
+predicate branch remains in the source even though its current fixed callee
+`TextTemplateArgumentType.b(0)` always returns true. The related UI wrapper's
+text/layout parameters are named `unused...` because its fixed body only calls
+this service and evaluates its guard. `renderDimmedAccountUi` preserves the
+192-alpha black overlay and dialog-layer draw; its first boolean is unused by
+the fixed callees. `LoginUiSupport.pollLoginUiArchiveProgress` performs the
+original index/group-loading calls before returning fixed progress steps; it is
+not a pure percentage getter. None of these bodies are structurally rewritten.

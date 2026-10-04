@@ -6,7 +6,7 @@ final class GameGraphicsResources {
     static String createMoreSuggestionsText;
     static ResourceArchive gameGraphicsArchive;
     static MusicScore titleMusicTrack;
-    static boolean field_e;
+    static boolean loginResponseExtensionEnabled;
     static String createEmailTooltipText;
     static boolean[] themesLoaded;
     static String backText;

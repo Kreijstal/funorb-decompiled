@@ -203,7 +203,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "itsTheBubbleBonus");
           if (var2 != null) {
-            kd.field_d = EmailValidator.decodeTextBytes(1, var2);
+            ClientFlowState.bubbleBonusAnnouncementText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "countdown");
           if (null != var2) {
@@ -211,7 +211,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(124, "levelsLastGeoblox");
           if (null != var2) {
-            tj.field_a = EmailValidator.decodeTextBytes(1, var2);
+            LoginUiSupport.lastGeobloxOfLevelText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "clearBonus");
           if (null != var2) {
@@ -226,7 +226,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "bonus");
           if (var2 != null) {
-            ic.field_a = EmailValidator.decodeTextBytes(1, var2);
+            SessionBootstrapSupport.bonusAmountTemplateText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(123, "fps");
           if (null != var2) {

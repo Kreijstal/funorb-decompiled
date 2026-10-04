@@ -4,7 +4,7 @@
 final class PrefixCodeDecoder {
     static int field_b;
     private int[] decodeTree;
-    static IntrusiveDeque field_e;
+    static IntrusiveDeque pendingFifoAcknowledgements;
     static IntrusiveDeque field_f;
     static int pointerXSnapshot;
     static GameApplet field_d;
@@ -290,11 +290,11 @@ final class PrefixCodeDecoder {
     public static void a(byte param0) {
         if (param0 > -1) {
             PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) -72);
-            field_e = null;
+            pendingFifoAcknowledgements = null;
             field_f = null;
             return;
         }
-        field_e = null;
+        pendingFifoAcknowledgements = null;
         field_f = null;
     }
 
@@ -639,7 +639,7 @@ final class PrefixCodeDecoder {
 
     static {
         field_b = 0;
-        field_e = new IntrusiveDeque();
+        pendingFifoAcknowledgements = new IntrusiveDeque();
         pointerXSnapshot = 0;
         field_f = new IntrusiveDeque();
         field_d = null;

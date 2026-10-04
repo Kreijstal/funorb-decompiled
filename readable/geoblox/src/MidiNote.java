@@ -37,7 +37,7 @@ final class MidiNote extends IntrusiveNode {
             ValidatedTextInputWidget.b(true);
             TextLayout.a((byte) -121);
             if (UsernameSuggestionsPanel.g(-88)) {
-                CacheReference.field_q.writeCipherByte(1, (byte) -27);
+                CacheReference.outgoingSessionBuffer.writeCipherByte(1, (byte) -27);
                 NanoFrameTimer.a(-1, 0);
                 Bzip2DecoderState.closeSessionSocket((byte) -126);
                 return;
@@ -52,7 +52,7 @@ final class MidiNote extends IntrusiveNode {
             Bzip2DecoderState.closeSessionSocket((byte) -126);
             return;
         }
-        CacheReference.field_q.writeCipherByte(1, (byte) -27);
+        CacheReference.outgoingSessionBuffer.writeCipherByte(1, (byte) -27);
         NanoFrameTimer.a(-1, 0);
         Bzip2DecoderState.closeSessionSocket((byte) -126);
     }

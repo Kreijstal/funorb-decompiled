@@ -22,11 +22,11 @@ abstract class FadingDialog extends WidgetContainer {
 
     final void resizeAndCenter(int targetHeight, int methodGuard, int targetWidth) {
         if (methodGuard > 95) {
-            this.setWidgetBounds(targetHeight, targetWidth, (byte) -87, -targetHeight + MessageDialogSupport.field_i >> 1, kb.field_b - targetWidth >> 1);
+            this.setWidgetBounds(targetHeight, targetWidth, (byte) -87, -targetHeight + MessageDialogSupport.field_i >> 1, UsernameResponseSupport.field_b - targetWidth >> 1);
             return;
         }
         uiPaletteFont = (PaletteBitmapFont) null;
-        this.setWidgetBounds(targetHeight, targetWidth, (byte) -87, -targetHeight + MessageDialogSupport.field_i >> 1, kb.field_b - targetWidth >> 1);
+        this.setWidgetBounds(targetHeight, targetWidth, (byte) -87, -targetHeight + MessageDialogSupport.field_i >> 1, UsernameResponseSupport.field_b - targetWidth >> 1);
     }
 
     private final int getTargetOpacity(int methodGuard) {
@@ -62,7 +62,7 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     FadingDialog(DialogLayer dialogLayer, int initialWidth, int initialHeight) {
-        super(kb.field_b - initialWidth >> 1, -initialHeight + MessageDialogSupport.field_i >> 1, initialWidth, initialHeight, (WidgetRenderer) null);
+        super(UsernameResponseSupport.field_b - initialWidth >> 1, -initialHeight + MessageDialogSupport.field_i >> 1, initialWidth, initialHeight, (WidgetRenderer) null);
         try {
             this.dialogLayer = dialogLayer;
             this.dialogOpacity = 0;

@@ -15,7 +15,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     final static void a(String param0, byte param1, boolean param2, String param3) {
         try {
-            b.field_a = param0;
+            b.currentLoginIdentifier = param0;
             hg.field_d = param3;
             int var4_int = -62 % ((13 - param1) / 62);
             MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, param2);
@@ -203,7 +203,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     final void showIneligibleResult(int methodGuard) {
-        this.showCreationResult(true, ig.a(DisplayNamePanel.createIneligibleText, 248, false), (byte) -57);
+        this.showCreationResult(true, RankedComparisonSupport.createUsernameResponseQuery(DisplayNamePanel.createIneligibleText, 248, false), (byte) -57);
         if (methodGuard != 12086) {
             this.resultHandled = false;
         }

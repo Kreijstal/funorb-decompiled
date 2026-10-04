@@ -149,12 +149,12 @@ abstract class MenuScreen {
         L0: {
           clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
-            hitItemIndex = this.hitTestMenuItem(mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (byte) 28);
+            hitItemIndex = this.hitTestMenuItem(AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (byte) 28);
             this.selectedItemIndex = hitItemIndex;
             if (hitItemIndex != -1) {
               this.pointerInteractionActive = true;
               pressedItemSnapshot = hitItemIndex;
-              pressedPointerXSnapshot = mc.pointerPressXSnapshot;
+              pressedPointerXSnapshot = AccountCreationSupport.pointerPressXSnapshot;
               if (pointerUpdateGuard) {
                 pointerTargetSnapshot = this;
                 initialClickSnapshot = false;

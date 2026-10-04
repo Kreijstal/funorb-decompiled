@@ -59,7 +59,7 @@ final class DialogLayer extends SingleChildWidget {
 
     final static void h(int param0) {
         CacheReference.gameMusicOutput.b();
-        oh.field_a.b();
+        ClientScreenExitSupport.gameSoundOutput.b();
         if (param0 <= 9) {
             rotatedEntityScreenX = -2;
         }
@@ -81,7 +81,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     public DialogLayer() {
-        super(0, 0, kb.field_b, MessageDialogSupport.field_i, (WidgetRenderer) null, (WidgetListener) null);
+        super(0, 0, UsernameResponseSupport.field_b, MessageDialogSupport.field_i, (WidgetRenderer) null, (WidgetListener) null);
         this.dialogs = new IntrusiveDeque();
     }
 

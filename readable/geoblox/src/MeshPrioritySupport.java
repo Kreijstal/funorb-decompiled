@@ -5,7 +5,7 @@ final class MeshPrioritySupport {
     static int field_b;
     static TextTemplateArgumentType field_f;
     static boolean field_d;
-    static al field_e;
+    static ClientFlowToken completedClientFlowToken;
     static int field_a;
     static IntrusiveDeque field_c;
 
@@ -14,7 +14,7 @@ final class MeshPrioritySupport {
         if (methodGuard != 0) {
             return;
         }
-        field_e = null;
+        completedClientFlowToken = null;
         field_c = null;
     }
 
@@ -48,7 +48,7 @@ final class MeshPrioritySupport {
 
     final static Sprite[] createSolidCenterSlices(int color, byte methodGuard) {
         if (methodGuard != -112) {
-            field_e = (al) null;
+            completedClientFlowToken = (ClientFlowToken) null;
         }
         Sprite[] allocatedSlices = new Sprite[9];
         Sprite[] slicesResultAlias = allocatedSlices;
@@ -123,6 +123,6 @@ final class MeshPrioritySupport {
     static {
         field_d = false;
         field_f = new TextTemplateArgumentType(14, 0, 4, 1);
-        field_e = new al();
+        completedClientFlowToken = new ClientFlowToken();
     }
 }

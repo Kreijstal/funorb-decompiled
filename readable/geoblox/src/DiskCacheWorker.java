@@ -5,7 +5,7 @@ final class DiskCacheWorker implements Runnable {
     static int[] avatarTintPalette;
     private SecondaryDeque requestQueue;
     static int logoStartDelayTicks;
-    static al field_l;
+    static ClientFlowToken idleClientFlowToken;
     static String createPasswordContainsEmailAlertText;
     int queuedRequestCount;
     private Thread workerThread;
@@ -21,7 +21,7 @@ final class DiskCacheWorker implements Runnable {
             avatarTintPalette = null;
             field_f = null;
             createPasswordContainsEmailAlertText = null;
-            field_l = null;
+            idleClientFlowToken = null;
             return;
         }
         field_e = (PcmStreamMixer) null;
@@ -29,7 +29,7 @@ final class DiskCacheWorker implements Runnable {
         avatarTintPalette = null;
         field_f = null;
         createPasswordContainsEmailAlertText = null;
-        field_l = null;
+        idleClientFlowToken = null;
     }
 
     final DiskArchiveRequest queueWrite(byte methodGuard, int groupId, DiskArchiveCache diskCache, byte[] bytes) {
@@ -360,6 +360,6 @@ final class DiskCacheWorker implements Runnable {
         avatarTintPalette = new int[]{5167632, 12183066, 16031008, 15087386, 15079962};
         createPasswordContainsEmailAlertText = "This password contains your email address, and would be easy to guess";
         avatarFeedbackFrameIndex = 0;
-        field_l = new al();
+        idleClientFlowToken = new ClientFlowToken();
     }
 }

@@ -106,14 +106,14 @@ final class EntityCollisionSupport {
     final static void writeOpcodeWithOneZeroPayload(int packetOpcode, int methodGuard) {
         PacketBuffer outputPacket = null;
         if (methodGuard >= 28) {
-            outputPacket = CacheReference.field_q;
+            outputPacket = CacheReference.outgoingSessionBuffer;
             outputPacket.writeCipherByte(packetOpcode, (byte) -103);
             outputPacket.writeByte((byte) 127, 1);
             outputPacket.writeByte((byte) -20, 0);
             return;
         }
         createPasswordContainsNameAlertText = (String) null;
-        outputPacket = CacheReference.field_q;
+        outputPacket = CacheReference.outgoingSessionBuffer;
         outputPacket.writeCipherByte(packetOpcode, (byte) -103);
         outputPacket.writeByte((byte) 127, 1);
         outputPacket.writeByte((byte) -20, 0);

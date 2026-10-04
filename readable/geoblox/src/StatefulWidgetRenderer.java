@@ -3,7 +3,7 @@
  */
 final class StatefulWidgetRenderer extends TextWidgetRenderer {
     static byte[][] byteArrayPool5000;
-    static int field_u;
+    static int accountCreationAgeYears;
     static TextTemplateDefinitionLoader field_r;
     static int field_v;
     static String field_w;
@@ -155,11 +155,11 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             String var2 = (String) null;
             StatefulWidgetRenderer.a(38, (String) null);
         }
-        kd.field_e.hideAllDialogs(10936);
+        ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
         if (!(null != SecondaryNodeHashTable.field_i)) {
-            SecondaryNodeHashTable.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
+            SecondaryNodeHashTable.field_i = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
         }
-        kd.field_e.showDialog(false, SecondaryNodeHashTable.field_i);
+        ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.field_i);
     }
 
     final static void b(int param0) {

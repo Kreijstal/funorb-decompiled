@@ -194,25 +194,25 @@ final class NanoFrameTimer extends FrameTimer {
             if (null != SpriteCheckboxRenderer.field_e) {
               if (!((param1 >= 0) &&
                   (PacketBuffer.currentProtocolStage != LogoCompositor.connectedSessionStage))) {
-                if ((0 == CacheReference.field_q.position) &&
+                if ((0 == CacheReference.outgoingSessionBuffer.position) &&
                     (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.field_r))) {
-                  CacheReference.field_q.writeCipherByte(param1, (byte) -76);
+                  CacheReference.outgoingSessionBuffer.writeCipherByte(param1, (byte) -76);
                 }
-                if (param0 > ~CacheReference.field_q.position) {
+                if (param0 > ~CacheReference.outgoingSessionBuffer.position) {
                   try {
-                    SpriteCheckboxRenderer.field_e.enqueueWrite(100, 0, CacheReference.field_q.position, CacheReference.field_q.bytes);
+                    SpriteCheckboxRenderer.field_e.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
                     CanvasResizeController.field_r = ClientClockSupport.correctedCurrentTimeMillis(-12520);
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     iOException = (IOException) (Object) decompiledCaughtException;
                     Bzip2DecoderState.closeSessionSocket((byte) -117);
                   }
-                  CacheReference.field_q.position = 0;
+                  CacheReference.outgoingSessionBuffer.position = 0;
                 }
                 return;
               }
             }
-            CacheReference.field_q.position = 0;
+            CacheReference.outgoingSessionBuffer.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

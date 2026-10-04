@@ -272,7 +272,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             return stackIn_4_0;
           }
           if (IterableNodeHashTable.requestReadyStage == PacketBuffer.currentProtocolStage) {
-            CacheReference.field_q.position = 0;
+            CacheReference.outgoingSessionBuffer.position = 0;
             IntrusiveNodeHashTable.field_b = null;
             if (param4 != null) {
               var9 = 0;
@@ -289,16 +289,16 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               EndingAnimationSupport.loginPayloadBuffer.writeShortBE(param0, 28695);
               EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) -94, param1);
               EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) 123, var9);
-              CacheReference.field_q.writeByte((byte) 127, 18);
-              CacheReference.field_q.position = CacheReference.field_q.position + 2;
-              var10 = CacheReference.field_q.position;
+              CacheReference.outgoingSessionBuffer.writeByte((byte) 127, 18);
+              CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
+              var10 = CacheReference.outgoingSessionBuffer.position;
               var11_ref_String = Under13TermsPanel.a(-1, NodeHashTableIterator.c(105));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              CacheReference.field_q.writeNullTerminatedText(var11_ref_String, 0);
-              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.field_q, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
-              CacheReference.field_q.backpatchLengthShortBE(-var10 + CacheReference.field_q.position, true);
+              CacheReference.outgoingSessionBuffer.writeNullTerminatedText(var11_ref_String, 0);
+              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
+              CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-var10 + CacheReference.outgoingSessionBuffer.position, true);
             } else {
               EndingAnimationSupport.loginPayloadBuffer.position = 0;
               EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
@@ -317,11 +317,11 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 stackIn_13_1 = var8;
               }
               ((ByteArrayBuffer) (Object) stackIn_12_0).writeZeroPrefixedNullTerminatedText(stackIn_13_1, (byte) -126);
-              CacheReference.field_q.writeByte((byte) 124, 16);
-              CacheReference.field_q.position = CacheReference.field_q.position + 1;
-              var9 = CacheReference.field_q.position;
-              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.field_q, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
-              CacheReference.field_q.backpatchLengthByte(11700, CacheReference.field_q.position - var9);
+              CacheReference.outgoingSessionBuffer.writeByte((byte) 124, 16);
+              CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 1;
+              var9 = CacheReference.outgoingSessionBuffer.position;
+              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
+              CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, CacheReference.outgoingSessionBuffer.position - var9);
             }
             NanoFrameTimer.a(-1, -1);
             PacketBuffer.currentProtocolStage = field_K;
@@ -400,10 +400,10 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
-            var9 = NetworkArchiveRequest.field_x;
-            NetworkArchiveRequest.field_x = TextInputRenderer.field_s;
+            var9 = NetworkArchiveRequest.sessionServerPort;
+            NetworkArchiveRequest.sessionServerPort = TextInputRenderer.alternateSessionServerPort;
             TextTemplateArgumentType.field_e = true;
-            TextInputRenderer.field_s = var9;
+            TextInputRenderer.alternateSessionServerPort = var9;
           }
           stackIn_66_0 = -1;
           return stackIn_66_0;
@@ -776,7 +776,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           this.loginIdentifierInput.hoverText = SocketArchiveNetworkClient.loginUsernameTooltipText;
           if (null != this.createAccountButton) {
-            this.createAccountButton.hoverText = ic.loginCreateTooltipText;
+            this.createAccountButton.hoverText = SessionBootstrapSupport.loginCreateTooltipText;
           }
           if (this.retryMode) {
             this.alternateButton.hoverText = SocialListEntry.quitWarningText;

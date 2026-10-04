@@ -6,10 +6,10 @@ final class MultiHandleSliderWidget extends ButtonWidget {
     int railInset;
     int railOffsetY;
     private int maximumValue;
-    static String field_I;
+    static String sessionServerHost;
 
     final static void writeAchievementSubmissionPacket(int packetOpcode, AchievementSubmission submission, int methodGuard) {
-        PacketBuffer packet = CacheReference.field_q;
+        PacketBuffer packet = CacheReference.outgoingSessionBuffer;
         packet.writeCipherByte(packetOpcode, (byte) -88);
         packet.position = packet.position + 1;
         int payloadStart = packet.position;
@@ -32,9 +32,9 @@ final class MultiHandleSliderWidget extends ButtonWidget {
     }
 
     public static void f(int param0) {
-        field_I = null;
+        sessionServerHost = null;
         if (param0 != 0) {
-            field_I = (String) null;
+            sessionServerHost = (String) null;
         }
     }
 
@@ -55,7 +55,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            field_I = (String) null;
+            sessionServerHost = (String) null;
           }
           stackIn_3_0 = ReflectionCheckRequest.parseSignedInt(param1, (byte) 39, 10, true);
           return stackIn_3_0;

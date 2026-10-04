@@ -64,7 +64,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     final static void writeHighscoreRequest(int packetOpcode, int requestType, HighscoreQuery query) {
         PacketBuffer var3 = null;
         try {
-            var3 = CacheReference.field_q;
+            var3 = CacheReference.outgoingSessionBuffer;
             var3.writeCipherByte(packetOpcode, (byte) -82);
             var3.writeByte((byte) 124, requestType);
             var3.writeByte((byte) -66, 0);

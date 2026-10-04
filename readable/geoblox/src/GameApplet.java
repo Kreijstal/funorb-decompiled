@@ -193,7 +193,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           CrcAcknowledgedPacket.field_g = true;
-          dl.field_c = true;
+          UsernameQueryState.canvasRedrawRequested = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -523,7 +523,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           MessageDialog.gameCanvas.requestFocus();
           ValidationState.field_d = true;
           CrcAcknowledgedPacket.field_g = true;
-          dl.field_c = true;
+          UsernameQueryState.canvasRedrawRequested = true;
           EntityMotionSupport.field_a = false;
           Geoblox.canvasCreationTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           return;
@@ -701,7 +701,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if ((PrefixCodeDecoder.field_d == this) &&
               (!MidiNoteMixer.field_p)) {
-            dl.field_c = true;
+            UsernameQueryState.canvasRedrawRequested = true;
             if ((ResizableDialog.field_S) &&
                 (-Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L)) {
               var2 = param0.getClipBounds();
@@ -883,7 +883,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             DisplayModeInfo.field_i = DisplayModeInfo.field_i + 1;
             if (fieldTemp$1 > 50) {
               DisplayModeInfo.field_i = DisplayModeInfo.field_i - 50;
-              dl.field_c = true;
+              UsernameQueryState.canvasRedrawRequested = true;
               MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ok.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
               if (!((SharedBufferPools.fullscreenFrame != null) &&

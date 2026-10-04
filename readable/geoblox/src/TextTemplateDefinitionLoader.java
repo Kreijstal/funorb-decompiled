@@ -47,15 +47,15 @@ final class TextTemplateDefinitionLoader {
         RuntimeException var2_ref = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.field_g.firstForIteration(param1 ^ param1));
+          var4 = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.firstForIteration(param1 ^ param1));
           while (var4 != null) {
             DiskArchiveRequest.a(param0, var4, param1 - 21718);
-            var4 = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.field_g.nextForIteration(1));
+            var4 = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.nextForIteration(1));
           }
-          var2 = PrefixCodeDecoder.field_e.firstForIteration(0);
+          var2 = PrefixCodeDecoder.pendingFifoAcknowledgements.firstForIteration(0);
           while (var2 != null) {
             EntityCollisionSupport.writeOpcodeWithOneZeroPayload(param0, 125);
-            var2 = PrefixCodeDecoder.field_e.nextForIteration(1);
+            var2 = PrefixCodeDecoder.pendingFifoAcknowledgements.nextForIteration(1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

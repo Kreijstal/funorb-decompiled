@@ -320,8 +320,8 @@ abstract class ResizableDialog extends FadingDialog {
                   !((!da.a(0, 88)) &&
                     (var9 == 16) &&
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
-                if ((mc.pointerPressXSnapshot >= var3_int) &&
-                    (mc.pointerPressXSnapshot <= var3_int + 32) &&
+                if ((AccountCreationSupport.pointerPressXSnapshot >= var3_int) &&
+                    (AccountCreationSupport.pointerPressXSnapshot <= var3_int + 32) &&
                     (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
                     (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
                   if (BoardEntityState.selectedAchievementIndex == var9) {
@@ -364,8 +364,8 @@ abstract class ResizableDialog extends FadingDialog {
                   !((!da.a(0, 88)) &&
                     (var9 == 16) &&
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
-                if ((mc.pointerPressXSnapshot >= var3_int) &&
-                    (mc.pointerPressXSnapshot <= var3_int + 32) &&
+                if ((AccountCreationSupport.pointerPressXSnapshot >= var3_int) &&
+                    (AccountCreationSupport.pointerPressXSnapshot <= var3_int + 32) &&
                     (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
                     (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
                   if (BoardEntityState.selectedAchievementIndex == var9) {

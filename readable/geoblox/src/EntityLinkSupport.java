@@ -6,7 +6,7 @@ final class EntityLinkSupport {
     static String waitingForFontsText;
 
     final static void writeRankedListQuery(RankedListQuery query, int packetOpcode, byte methodGuard) {
-        PacketBuffer outputPacket = CacheReference.field_q;
+        PacketBuffer outputPacket = CacheReference.outgoingSessionBuffer;
         outputPacket.writeCipherByte(packetOpcode, (byte) -77);
         outputPacket.writeByte((byte) 123, query.queryId);
         if (methodGuard < 80) {

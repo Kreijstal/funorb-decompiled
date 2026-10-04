@@ -68,9 +68,9 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             for (var11 = param0; var11 < param5; var11++) {
               var12 = AchievementQuery.field_i[var11];
               if (!param6) {
-                stackIn_24_0 = ClientProtocolStage.field_a[var12];
+                stackIn_24_0 = ClientProtocolStage.rankedEntryKeyOne[var12];
               } else {
-                stackIn_24_0 = hg.field_a[var12];
+                stackIn_24_0 = hg.rankedEntryKeyTwo[var12];
               }
               var13 = stackIn_24_0;
               if (var13 > var7_int) {
@@ -96,7 +96,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             for (var8 = param0; var8 < var7_int; var8++) {
               var9 = AchievementQuery.field_i[var8];
               var10 = AchievementQuery.field_i[1 + var8];
-              if (ig.a(param6, var10, (byte) -125, var9)) {
+              if (RankedComparisonSupport.isRightRankedEntryBeforeLeft(param6, var10, (byte) -125, var9)) {
                 AchievementQuery.field_i[var8] = var10;
                 AchievementQuery.field_i[var8 + 1] = var9;
               }

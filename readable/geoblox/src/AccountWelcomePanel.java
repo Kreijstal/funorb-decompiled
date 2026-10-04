@@ -29,7 +29,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             this.createAccountButton.setWidgetBounds(30, var3, (byte) -73, this.widgetHeight - (78 + 2 * var2), -var3 + this.widgetWidth >> 1);
             this.goBackButton.listener = (WidgetListener) (this);
             this.createAccountButton.listener = (WidgetListener) (this);
-            this.createAccountButton.hoverText = ic.loginCreateTooltipText;
+            this.createAccountButton.hoverText = SessionBootstrapSupport.loginCreateTooltipText;
             this.justPlayButton.listener = (WidgetListener) (this);
             this.justPlayButton.hoverText = CheckboxWidget.loginJustPlayTooltipText;
             this.addChild((byte) -88, this.goBackButton);
@@ -1158,7 +1158,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "pleasetryagain");
                 if (textResourceBytes != null) {
-                  kf.pleaseTryAgainText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  AccountEligibilitySupport.pleaseTryAgainText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "pleasereenterpass");
                 if (null != textResourceBytes) {
@@ -1628,7 +1628,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_create_tooltip");
                 if (null != textResourceBytes) {
-                  ic.loginCreateTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SessionBootstrapSupport.loginCreateTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_justplay_tooltip");
                 if (textResourceBytes != null) {
@@ -1983,7 +1983,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "unpacking_graphics");
                 if (textResourceBytes != null) {
-                  oh.unpackingGraphicsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientScreenExitSupport.unpackingGraphicsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "unpacking_models");
                 if (null != textResourceBytes) {
@@ -2401,7 +2401,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "achieved");
                 if (textResourceBytes != null) {
-                  kd.achievedText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientFlowState.achievedText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "orbpoints");
                 if (textResourceBytes != null) {
@@ -2793,7 +2793,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_button_cancel");
                 if (textResourceBytes != null) {
-                  rb.fullscreenCancelButtonText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  FontLoadingSupport.fullscreenCancelButtonText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_accept_aftercancel");
                 if (textResourceBytes != null) {

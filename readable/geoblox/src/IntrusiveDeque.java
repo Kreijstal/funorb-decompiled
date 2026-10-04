@@ -4,7 +4,7 @@
 final class IntrusiveDeque {
     static int field_f;
     IntrusiveNode sentinel;
-    static al field_d;
+    static ClientFlowToken pendingClientFlowToken;
     private IntrusiveNode iterationCursor;
     private static int[] field_b;
     static String[] field_e;
@@ -24,7 +24,7 @@ final class IntrusiveDeque {
 
     final static Sprite[] buildUnitBorderNineSliceSprites(int bottomRightBorderColor, int fillColor, int guard, int topLeftBorderColor, int innerAccentColor) {
         if (guard <= 90) {
-            field_d = (al) null;
+            pendingClientFlowToken = (ClientFlowToken) null;
         }
         return MatchingTextValidator.buildNineSliceSprites(innerAccentColor, 1, topLeftBorderColor, 3, (byte) 1, fillColor, bottomRightBorderColor, 1, 1);
     }
@@ -46,7 +46,7 @@ final class IntrusiveDeque {
         int selectedThemeId;
         int clientControlSnapshot;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
-        if ((null != kf.musicScoreArchive) &&
+        if ((null != AccountEligibilitySupport.musicScoreArchive) &&
             (!EmailValidator.themeMusicPreparationFlags[themeId])) {
           selectedThemeId = themeId;
           if (selectedThemeId != 4) {
@@ -54,28 +54,28 @@ final class IntrusiveDeque {
               if (selectedThemeId != 0) {
                 if (6 != selectedThemeId) {
                   if (5 == selectedThemeId) {
-                    NodeHashTableIterator.sportMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "sport");
+                    NodeHashTableIterator.sportMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "sport");
                     PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, NodeHashTableIterator.sportMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                   } else {
                     if (2 == selectedThemeId) {
-                      SocialListEntry.sweetsMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "sweets");
+                      SocialListEntry.sweetsMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "sweets");
                       PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, SocialListEntry.sweetsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                     }
                   }
                 } else {
-                  SessionGameApplet.spaceMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "space");
+                  SessionGameApplet.spaceMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "space");
                   PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, SessionGameApplet.spaceMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                 }
               } else {
-                RatingPresentationResources.jewelleryMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "jewellery");
+                RatingPresentationResources.jewelleryMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "jewellery");
                 PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, RatingPresentationResources.jewelleryMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
               }
             } else {
-              te.germsMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "germs");
+              te.germsMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "germs");
               PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, te.germsMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
             }
           } else {
-            DialWidget.bakingMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "baking");
+            DialWidget.bakingMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "baking");
             PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, DialWidget.bakingMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           }
           EmailValidator.themeMusicPreparationFlags[themeId] = true;
@@ -91,7 +91,7 @@ final class IntrusiveDeque {
         if (param0 <= 65) {
           return false;
         }
-        stackIn_6_0 = (oh.field_b != null) && (oh.field_b.getTopVisibleDialog(75) != null);
+        stackIn_6_0 = (ClientScreenExitSupport.fullscreenDialogLayer != null) && (ClientScreenExitSupport.fullscreenDialogLayer.getTopVisibleDialog(75) != null);
         return stackIn_6_0;
     }
 
@@ -100,7 +100,7 @@ final class IntrusiveDeque {
         if (param0 != 51) {
             IntrusiveDeque.buildUnitBorderNineSliceSprites(-67, 123, -7, 36, 22);
         }
-        field_d = null;
+        pendingClientFlowToken = null;
         field_e = null;
     }
 
@@ -287,7 +287,7 @@ final class IntrusiveDeque {
     static {
         int var0 = 0;
         field_f = 5;
-        field_d = new al();
+        pendingClientFlowToken = new ClientFlowToken();
         field_e = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_b = new int[5];
         for (var0 = 0; var0 < field_b.length; var0++) {

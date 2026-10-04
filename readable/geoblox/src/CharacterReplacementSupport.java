@@ -17,9 +17,9 @@ final class CharacterReplacementSupport {
     final static int getAccountAgeYears(byte methodGuard) {
         if (methodGuard != 81) {
             CharacterReplacementSupport.getAccountAgeYears((byte) -12);
-            return StatefulWidgetRenderer.field_u;
+            return StatefulWidgetRenderer.accountCreationAgeYears;
         }
-        return StatefulWidgetRenderer.field_u;
+        return StatefulWidgetRenderer.accountCreationAgeYears;
     }
 
     final static String replaceCharacter(String text, String replacement, char character, byte methodGuard) {

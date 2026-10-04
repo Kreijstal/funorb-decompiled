@@ -3,7 +3,7 @@
  */
 class TextInputRenderer extends TextWidgetRenderer {
     static ClientProtocolStage awaitingLoginFailureTextStage;
-    static int field_s;
+    static int alternateSessionServerPort;
     static String[] mustLoginAlternateTexts;
     static TextWidgetRenderer sharedDefaultTextWidgetRenderer;
     static int[] secondVertexTransformedY;
@@ -201,7 +201,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             if (0 != (1 << var7 & var5)) {
               UsernameAvailabilityQuery.achievementSprites[var7].draw(160, var12);
               var12 += 30;
-              FadingDialog.uiPaletteFont.drawText(kd.achievedText, 318, var12, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(ClientFlowState.achievedText, 318, var12, 0, -1);
             } else {
               IntKeyLookup.unachievedSprite.draw(160, var12);
               var12 += 30;
@@ -239,7 +239,7 @@ class TextInputRenderer extends TextWidgetRenderer {
         secondVertexTransformedY = null;
         awaitingLoginFailureTextStage = null;
         if (param0 < 62) {
-            field_s = -128;
+            alternateSessionServerPort = -128;
         }
     }
 

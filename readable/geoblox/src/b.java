@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class b {
-    static String field_a;
+    static String currentLoginIdentifier;
     static ArchiveLoadSequence field_b;
 
     final static void a(boolean param0, boolean param1, boolean param2) {
@@ -17,7 +17,7 @@ final class b {
         if (param0 != 17062) {
             return;
         }
-        field_a = null;
+        currentLoginIdentifier = null;
         field_b = null;
     }
 

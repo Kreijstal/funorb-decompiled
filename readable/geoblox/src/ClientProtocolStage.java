@@ -7,7 +7,7 @@ final class ClientProtocolStage {
     static Random field_d;
     static String createDisplayNameHintText;
     static int keyStateReadIndex;
-    static int[] field_a;
+    static int[] rankedEntryKeyOne;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -19,7 +19,7 @@ final class ClientProtocolStage {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        rankedEntryKeyOne = null;
         createDisplayNameHintText = null;
         if (param0 != 0) {
             ClientProtocolStage.a(103, 65, true, (byte) -104);

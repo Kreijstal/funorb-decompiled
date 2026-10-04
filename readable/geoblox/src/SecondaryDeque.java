@@ -51,7 +51,7 @@ final class SecondaryDeque {
     }
 
     final static void c(int param0) {
-        kb.b(-120);
+        UsernameResponseSupport.settleAccountDialogAnimations(-120);
         if (param0 != 480) {
             contactProbeOffsetY = -37;
         }

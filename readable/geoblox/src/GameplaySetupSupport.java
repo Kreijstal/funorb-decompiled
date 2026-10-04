@@ -17,7 +17,7 @@ final class GameplaySetupSupport {
         ArchiveNetworkClient.difficultyStep = 0;
         MessageDialogSupport.releasesPerTheme = 40;
         MessageDialog.availableEntityCategoryCount = 4;
-        qe.adjustThemeReleaseQuota(10);
+        FullscreenEntrySupport.adjustThemeReleaseQuota(10);
         FullscreenErrorDialog.spawnIntervalScale = 0.75f;
         DualLinkNode.rotationStepRadians = 0.01666666753590107f;
         if (methodGuard != 9408) {

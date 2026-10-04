@@ -144,7 +144,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               } else {
                 param2 = DualLinkNode.invalidPasswordText;
               }
-              SpriteButtonRenderer.field_t.a(b.field_a, 0);
+              SpriteButtonRenderer.field_t.a(b.currentLoginIdentifier, 0);
             }
             var3_int = 1;
             if (param1 == 10) {
@@ -156,7 +156,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
                 param2 = OpacityWidget.a(VisualPropertyOverrides.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
               }
               if (VisualPropertyOverrides.field_I) {
-                param2 = kf.pleaseTryAgainText;
+                param2 = AccountEligibilitySupport.pleaseTryAgainText;
               }
               Geoblox.activeMessageDialog.installErrorContent(param1, param0 + 19686, param2);
             }

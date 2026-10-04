@@ -165,13 +165,13 @@ abstract class SocketConnector {
         String invalidGuardLookupName = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          kf.musicScoreArchive = musicScoreArchive;
+          AccountEligibilitySupport.musicScoreArchive = musicScoreArchive;
           UsernameAvailabilityQuery.instrumentPatchArchive = instrumentPatchArchive;
           AchievementSubmission.gameSoundResampler = new PcmResampler(22050, AudioOutput.sampleRateHz);
-          GameGraphicsResources.titleMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "title_music_loop");
-          ValidationMessageWidget.gameOverMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "game_over");
-          IntrusiveNode.sunMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "sun");
-          ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "bonus_bubble_jingle");
+          GameGraphicsResources.titleMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "title_music_loop");
+          ValidationMessageWidget.gameOverMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "game_over");
+          IntrusiveNode.sunMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "sun");
+          ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(AccountEligibilitySupport.musicScoreArchive, "", "bonus_bubble_jingle");
           te.gameSoundSampleCache = new SoundSampleCache(synthesizedSoundArchive, vorbisArchive);
           PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, IntrusiveNode.sunMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           EmailValidator.themeMusicPreparationFlags[1] = true;

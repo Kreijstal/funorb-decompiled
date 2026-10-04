@@ -10,7 +10,7 @@ final class StrongCacheReference extends CacheReference {
     final static void writeIntArrayQuery(byte methodGuard, int packetOpcode, IntArrayQuery query) {
         PacketBuffer var3 = null;
         try {
-            var3 = CacheReference.field_q;
+            var3 = CacheReference.outgoingSessionBuffer;
             var3.writeCipherByte(packetOpcode, (byte) -80);
             int var4 = 66 % ((methodGuard - 23) / 51);
             var3.writeByte((byte) 122, 2);
@@ -34,29 +34,29 @@ final class StrongCacheReference extends CacheReference {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.clientControlFlowFlag;
         try {
-          kd.field_b = MeshPrioritySupport.field_e;
+          ClientFlowState.accountCreationFlowState = MeshPrioritySupport.completedClientFlowToken;
           if (param2 != 30) {
             return;
           }
           if (param1 != 255) {
             if (param1 < 100) {
-              dl.field_a = ig.a(param0, param1, false);
+              UsernameQueryState.pendingAccountUsernameResult = RankedComparisonSupport.createUsernameResponseQuery(param0, param1, false);
               return;
             }
             if (param1 <= 105) {
-              dl.field_a = TextInputRenderer.a(28, param3);
+              UsernameQueryState.pendingAccountUsernameResult = TextInputRenderer.a(28, param3);
               return;
             }
-            dl.field_a = ig.a(param0, param1, false);
+            UsernameQueryState.pendingAccountUsernameResult = RankedComparisonSupport.createUsernameResponseQuery(param0, param1, false);
             return;
           }
           stackIn_6_0 = -106;
-          if (StatefulWidgetRenderer.field_u >= 13) {
+          if (StatefulWidgetRenderer.accountCreationAgeYears >= 13) {
             stackIn_7_1 = false;
           } else {
             stackIn_7_1 = true;
           }
-          dl.field_a = UiFontResources.createAcceptedUsernameQuery(stackIn_6_0, stackIn_7_1);
+          UsernameQueryState.pendingAccountUsernameResult = UiFontResources.createAcceptedUsernameQuery(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

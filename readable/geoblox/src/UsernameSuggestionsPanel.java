@@ -57,16 +57,16 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (param0 != 100) {
             UsernameSuggestionsPanel.f(29);
         }
-        if (kd.field_b == IntrusiveDeque.field_d) {
-            return ResourceArchive.field_i;
+        if (ClientFlowState.accountCreationFlowState == IntrusiveDeque.pendingClientFlowToken) {
+            return ResourceArchive.accountCreationEmail;
         }
         if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-113)) {
             return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(param0 + 19391);
         }
-        if (WidgetSkinState.field_g == IntrusiveDeque.field_d) {
+        if (WidgetSkinState.usernameQueryFlowState == IntrusiveDeque.pendingClientFlowToken) {
             return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491);
         }
-        return b.field_a;
+        return b.currentLoginIdentifier;
     }
 
     public static void b(boolean param0) {

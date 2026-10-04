@@ -306,7 +306,7 @@ final class WhirlpoolHash {
               if (2 == AccountCreationForm.archiveHandshakeStage) {
                 li.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ByteShortQuery.archiveTaskDispatcher);
                 handshakePacket = new ByteArrayBuffer(13);
-                ke.writeConnectionHeader(MidiNote.archiveLanguageId, true, ValidatedTextInputWidget.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
+                ConnectionHeaderSupport.writeConnectionHeader(MidiNote.archiveLanguageId, true, ValidatedTextInputWidget.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
                 handshakePacket.writeByte((byte) -54, 15);
                 handshakePacket.writeIntBE((byte) 95, EmailValidator.archiveGameCrc);
                 li.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);

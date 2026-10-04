@@ -76,7 +76,7 @@ final class ByteArrayPoolSupport {
         try {
           submission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
           while (submission != null) {
-            tj.writeIntRecordSubmission(packetOpcode, 86, submission);
+            LoginUiSupport.writeIntRecordSubmission(packetOpcode, 86, submission);
             submission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
           }
           if (methodGuard < 115) {

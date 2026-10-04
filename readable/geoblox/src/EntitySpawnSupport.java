@@ -133,18 +133,18 @@ final class EntitySpawnSupport {
     final static boolean isCanvasResizeAllowed(boolean preserveLoadingTextGuard) {
         if (!preserveLoadingTextGuard) {
             loadingFontsText = (String) null;
-            if (rb.field_d == null) {
+            if (FontLoadingSupport.field_d == null) {
                 return false;
             }
-            if (rb.field_d.isResizeAllowed(-119)) {
+            if (FontLoadingSupport.field_d.isResizeAllowed(-119)) {
                 return true;
             }
             return false;
         }
-        if (rb.field_d == null) {
+        if (FontLoadingSupport.field_d == null) {
             return false;
         }
-        if (rb.field_d.isResizeAllowed(-119)) {
+        if (FontLoadingSupport.field_d.isResizeAllowed(-119)) {
             return true;
         }
         return false;

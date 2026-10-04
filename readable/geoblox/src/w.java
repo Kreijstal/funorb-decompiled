@@ -140,7 +140,7 @@ final class w {
             PacketBuffer var4 = null;
             PacketBuffer var5 = null;
             if (null == NetworkArchiveRequest.field_B) {
-                NetworkArchiveRequest.field_B = GameplayEntity.field_D.requestSocket(NetworkArchiveRequest.field_x, MultiHandleSliderWidget.field_I, false);
+                NetworkArchiveRequest.field_B = GameplayEntity.sessionTaskDispatcher.requestSocket(NetworkArchiveRequest.sessionServerPort, MultiHandleSliderWidget.sessionServerHost, false);
             }
             if (param1 != 52) {
                 field_d = (TextTemplateArgumentType) null;
@@ -155,16 +155,16 @@ final class w {
                 PacketBuffer.currentProtocolStage = AchievementQuery.field_h;
             } else {
                 try {
-                    SpriteCheckboxRenderer.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.field_D);
+                    SpriteCheckboxRenderer.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.sessionTaskDispatcher);
                     var4 = LogoCompositor.sessionPacketBuffer;
                     var5 = var4;
-                    CacheReference.field_q.position = 0;
+                    CacheReference.outgoingSessionBuffer.position = 0;
                     var5.position = 0;
                     MidiNoteMixer.field_o = param0 ? -2 : -1;
                     AttachedEntityRenderer.field_b = param0 ? -2 : -1;
                     VisualPropertyNode.field_n = param0 ? -2 : -1;
                     PacketBuffer.currentProtocolStage = IterableNodeHashTable.requestReadyStage;
-                    ke.writeConnectionHeader(qe.field_b, true, ok.field_f, EmailAvailabilityValidator.field_l, CacheReference.field_q);
+                    ConnectionHeaderSupport.writeConnectionHeader(FullscreenEntrySupport.sessionLanguageId, true, ok.sessionClientId, EmailAvailabilityValidator.sessionServerNumber, CacheReference.outgoingSessionBuffer);
                     NanoFrameTimer.a(param1 ^ -53, -1);
                 } catch (IOException iOException) {
                     PacketBuffer.currentProtocolStage = AchievementQuery.field_h;

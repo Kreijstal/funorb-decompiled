@@ -18,11 +18,11 @@ final class AccountContentDialog extends ContentTransitionDialog {
         try {
           if (VisualPropertyOverrides.field_C < 10) {
             var3_int = 0;
-            if (dl.field_c) {
+            if (UsernameQueryState.canvasRedrawRequested) {
               var3_int = 1;
-              dl.field_c = false;
+              UsernameQueryState.canvasRedrawRequested = false;
             }
-            ArchiveRequest.a(tj.a((byte) 73), CanvasResizeController.field_q, var3_int != 0, false, AudioService.a((byte) -85));
+            ArchiveRequest.a(LoginUiSupport.pollLoginUiArchiveProgress((byte) 73), CanvasResizeController.field_q, var3_int != 0, false, AudioService.a((byte) -85));
           } else {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (SpriteConstructionSupport.clientScreenStage == 0) {

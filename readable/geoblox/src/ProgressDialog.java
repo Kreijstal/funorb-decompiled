@@ -59,7 +59,7 @@ final class ProgressDialog extends ResizableDialog {
         if (param0 != -1071908447) {
             return false;
         }
-        return IntrusiveDeque.field_d == WidgetSkinState.field_g ? true : false;
+        return IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState ? true : false;
     }
 
     final void stopNormalAnimation(int methodGuard) {
@@ -79,7 +79,7 @@ final class ProgressDialog extends ResizableDialog {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = CacheReference.field_q;
+          var3 = CacheReference.outgoingSessionBuffer;
           var3.writeCipherByte(packetOpcode, (byte) -85);
           var3.writeByte((byte) 123, query.queryByte);
           var3.writeShortBE(query.queryShort, methodGuard + 28161);

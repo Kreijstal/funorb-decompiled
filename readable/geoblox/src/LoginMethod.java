@@ -85,7 +85,7 @@ final class LoginMethod {
           if (param3 != -3) {
             field_b = (String) null;
           }
-          var8 = qe.a(param2, -1, param0, param5, param4, param1);
+          var8 = FullscreenEntrySupport.enterFullscreenAndWait(param2, -1, param0, param5, param4, param1);
           var6 = var8;
           if (var8 == null) {
             return null;
@@ -129,7 +129,7 @@ final class LoginMethod {
                 return;
               }
             }
-            kf.musicScoreArchive = null;
+            AccountEligibilitySupport.musicScoreArchive = null;
             UsernameAvailabilityQuery.instrumentPatchArchive = null;
             PasswordWidgetRenderer.gameMusicStream.clearInstrumentSampleIds((byte) 83);
             te.gameSoundSampleCache = null;

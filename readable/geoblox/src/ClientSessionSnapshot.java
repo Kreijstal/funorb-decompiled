@@ -130,7 +130,7 @@ final class ClientSessionSnapshot {
         } else {
             this.field_g = null;
         }
-        this.field_o = tj.field_b;
+        this.field_o = LoginUiSupport.field_b;
         this.field_c = ArchiveIndex.field_s;
     }
 

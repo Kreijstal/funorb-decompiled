@@ -256,8 +256,8 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
             if (SecondaryNodeHashTable.field_i == null) {
-                SecondaryNodeHashTable.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
-                kd.field_e.showDialog(false, SecondaryNodeHashTable.field_i);
+                SecondaryNodeHashTable.field_i = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
+                ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.field_i);
             }
             SecondaryNodeHashTable.field_i.updateProgress(param2, param1, param3 ^ -92, param0);
             SoftwareRasterizer.clearFramebuffer();

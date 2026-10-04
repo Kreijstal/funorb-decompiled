@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lb {
-    static long field_c;
+    static long clientInstanceId;
     static Sprite sweetsForegroundSprite;
-    static boolean field_a;
+    static boolean sessionExitRequested;
     static int secondaryAchievementTrackingCounter;
 
     static int orInt(int left, int right) {

@@ -135,17 +135,17 @@ final class TextTemplateArgumentType {
             if ((InstrumentPatch.field_n != null) &&
                 (InstrumentPatch.field_n.focusLost)) {
               FullscreenSupport.exitActiveFullscreen((byte) -87);
-              oh.field_b.showDialog(false, new FullscreenErrorDialog(oh.field_b, AccountContentDialog.field_hb));
+              ClientScreenExitSupport.fullscreenDialogLayer.showDialog(false, new FullscreenErrorDialog(ClientScreenExitSupport.fullscreenDialogLayer, AccountContentDialog.field_hb));
             }
             return;
           }
           if (param0 != 1) {
             TextTemplateArgumentType.renderLogoMeshes((byte) 8);
           }
-          oh.field_b.processPointerFrame(true, 127, TextLayout.field_c, MessageDialogContent.field_I);
-          oh.field_b.advanceDialogAnimations(-50);
+          ClientScreenExitSupport.fullscreenDialogLayer.processPointerFrame(true, 127, TextLayout.field_c, MessageDialogContent.field_I);
+          ClientScreenExitSupport.fullscreenDialogLayer.advanceDialogAnimations(-50);
           while (UiFontResources.pollKeyboardEvent(125)) {
-            oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
+            ClientScreenExitSupport.fullscreenDialogLayer.a((byte) -126, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

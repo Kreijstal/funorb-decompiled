@@ -168,24 +168,24 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           SpriteState.a(EndingAnimationSupport.loginPayloadBuffer, true);
           EndingAnimationSupport.loginPayloadBuffer.writeShortBE(param1, 28695);
           param3.writePayload(124, EndingAnimationSupport.loginPayloadBuffer);
-          CacheReference.field_q.position = 0;
+          CacheReference.outgoingSessionBuffer.position = 0;
           if (param2) {
-            CacheReference.field_q.writeByte((byte) 121, 18);
+            CacheReference.outgoingSessionBuffer.writeByte((byte) 121, 18);
           } else {
-            CacheReference.field_q.writeByte((byte) -116, 16);
+            CacheReference.outgoingSessionBuffer.writeByte((byte) -116, 16);
           }
-          CacheReference.field_q.position = CacheReference.field_q.position + 2;
-          var5_int = CacheReference.field_q.position;
-          CacheReference.field_q.writeIntBE((byte) 95, MessageDialog.loginHeaderInt);
-          CacheReference.field_q.writeLongBE((byte) 116, lb.field_c);
+          CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
+          var5_int = CacheReference.outgoingSessionBuffer.position;
+          CacheReference.outgoingSessionBuffer.writeIntBE((byte) 95, MessageDialog.loginHeaderInt);
+          CacheReference.outgoingSessionBuffer.writeLongBE((byte) 116, lb.clientInstanceId);
           var6 = 0;
           if (param0 <= 20) {
             return;
           }
-          if (rb.field_c) {
+          if (FontLoadingSupport.memberAccountMode) {
             var6 = var6 | 1;
           }
-          if (GameGraphicsResources.field_e) {
+          if (GameGraphicsResources.loginResponseExtensionEnabled) {
             var6 = var6 | 4;
           }
           if (param4) {
@@ -194,17 +194,17 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (null != GameSoundResources.optionalLoginText) {
             var6 = var6 | 16;
           }
-          CacheReference.field_q.writeByte((byte) 127, var6);
+          CacheReference.outgoingSessionBuffer.writeByte((byte) 127, var6);
           var7 = Under13TermsPanel.a(-1, NodeHashTableIterator.c(111));
           if (var7 == null) {
             var7 = "";
           }
-          CacheReference.field_q.writeNullTerminatedText(var7, 0);
+          CacheReference.outgoingSessionBuffer.writeNullTerminatedText(var7, 0);
           if (null != GameSoundResources.optionalLoginText) {
-            CacheReference.field_q.writeZeroPrefixedNullTerminatedText(GameSoundResources.optionalLoginText, (byte) -126);
+            CacheReference.outgoingSessionBuffer.writeZeroPrefixedNullTerminatedText(GameSoundResources.optionalLoginText, (byte) -126);
           }
-          UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.field_q, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
-          CacheReference.field_q.backpatchLengthShortBE(-var5_int + CacheReference.field_q.position, true);
+          UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
+          CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-var5_int + CacheReference.outgoingSessionBuffer.position, true);
           NanoFrameTimer.a(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

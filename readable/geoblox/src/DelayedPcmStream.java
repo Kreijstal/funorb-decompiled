@@ -4,7 +4,7 @@
 final class DelayedPcmStream extends PcmStream {
     private PcmStream field_l;
     private int field_j;
-    static String field_k;
+    static String usernameQueryCandidate;
 
     final static int a(CharSequence param0, boolean param1, char param2) {
         int var5 = 0;
@@ -83,7 +83,7 @@ final class DelayedPcmStream extends PcmStream {
         if (param0 > -107) {
             DelayedPcmStream.c((byte) -13);
         }
-        field_k = null;
+        usernameQueryCandidate = null;
     }
 
     final PcmStream c() {
@@ -94,7 +94,7 @@ final class DelayedPcmStream extends PcmStream {
         if (param0 <= 18) {
             return false;
         }
-        return CachedArchiveSource.field_s;
+        return CachedArchiveSource.accountCreationNewsOptIn;
     }
 
     final void a(int[] param0, int param1, int param2) {

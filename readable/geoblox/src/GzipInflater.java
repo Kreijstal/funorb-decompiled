@@ -85,7 +85,7 @@ final class GzipInflater {
         if (param0 <= 103) {
             return 4;
         }
-        return qe.field_a;
+        return FullscreenEntrySupport.field_a;
     }
 
     final static TextTemplateArgumentType[] textTemplateArgumentTypes(int methodGuard) {

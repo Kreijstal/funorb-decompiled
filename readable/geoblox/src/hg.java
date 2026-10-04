@@ -4,7 +4,7 @@
 final class hg {
     static String field_d;
     static Sprite[] blackOrbImplosionFrames;
-    static int[] field_a;
+    static int[] rankedEntryKeyTwo;
     static int[] thirdVertexTransformedZ;
 
     final static void b(int param0) {
@@ -19,7 +19,7 @@ final class hg {
         if (param0 != -17525) {
             return;
         }
-        field_a = null;
+        rankedEntryKeyTwo = null;
         blackOrbImplosionFrames = null;
         field_d = null;
     }

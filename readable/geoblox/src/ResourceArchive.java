@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ResourceArchive {
-    static String field_i;
+    static String accountCreationEmail;
     private Object[][] decodedFiles;
     static IntrusiveDeque unacknowledgedAchievementSubmissions;
     private ArchiveIndex index;
@@ -294,7 +294,7 @@ final class ResourceArchive {
         if (param0 != 30261) {
             unacknowledgedAchievementSubmissions = (IntrusiveDeque) null;
         }
-        field_i = null;
+        accountCreationEmail = null;
     }
 
     final synchronized byte[] getSingleFile(int methodGuard, int id) {
@@ -609,7 +609,7 @@ final class ResourceArchive {
         byte[] fileBytes = null;
         try {
           if (!ordinaryAccess) {
-            field_i = (String) (this.packedGroups[0]);
+            accountCreationEmail = (String) (this.packedGroups[0]);
           }
           if (!this.isValidFileId(fileId, -1, groupId)) {
             invalidFileBeforeReturn = null;

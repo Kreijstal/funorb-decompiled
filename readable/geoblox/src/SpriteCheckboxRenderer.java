@@ -5,7 +5,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
     static Sprite boardSceneRaster;
     static BufferedSocket field_e;
     static int field_f;
-    static String field_a;
+    static String accountCreationDisplayName;
     static int field_c;
     static int previousMenuScreenId;
 
@@ -80,7 +80,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
         if (!param0) {
             return;
         }
-        field_a = null;
+        accountCreationDisplayName = null;
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {

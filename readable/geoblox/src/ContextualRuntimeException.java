@@ -103,7 +103,7 @@ final class ContextualRuntimeException extends RuntimeException {
 
     final static void recomputeSpawnReleaseInterval(boolean preserveReleaseQuota) {
         int intervalTicks = (int)(201.0f / TextTemplateDefinition.entityMotionSpeed * FullscreenErrorDialog.spawnIntervalScale + 0.5f);
-        kb.spawnReleaseIntervalTicks = intervalTicks;
+        UsernameResponseSupport.spawnReleaseIntervalTicks = intervalTicks;
         if (!preserveReleaseQuota) {
             releasesPerDifficultyStep = -10;
             return;
@@ -114,8 +114,8 @@ final class ContextualRuntimeException extends RuntimeException {
         if (!param0) {
             return (String) null;
         }
-        if (!(kd.field_b != IntrusiveDeque.field_d)) {
-            return ByteStorage.field_a;
+        if (!(ClientFlowState.accountCreationFlowState != IntrusiveDeque.pendingClientFlowToken)) {
+            return ByteStorage.accountCreationPassword;
         }
         return hg.field_d;
     }

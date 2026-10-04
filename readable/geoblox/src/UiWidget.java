@@ -256,7 +256,7 @@ class UiWidget extends IntrusiveNode {
             return pointerEventsAvailable;
           }
           L19: {
-            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
+            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               if (focusFlag == 0) {
                 if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
                     (0 != FullscreenErrorDialog.previousUiPointerButton)) {
@@ -337,7 +337,7 @@ class UiWidget extends IntrusiveNode {
             return pointerEventsAvailable;
           }
           L0: {
-            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
+            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               this.clearKeyboardFocus(-127);
               if (clientControlFlowSnapshot == 0) {
                 break L0;
@@ -394,7 +394,7 @@ class UiWidget extends IntrusiveNode {
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
-        if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
+        if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
           if (EntityCollisionSupport.heldPointerButtonSnapshot != 0) {
             FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);

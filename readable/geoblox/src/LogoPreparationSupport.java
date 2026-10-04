@@ -58,9 +58,9 @@ final class LogoPreparationSupport {
         DiskCacheWorker.field_c = packet.readLongBE(2901);
         if (StrongCacheReference.field_u != 2) {
           UsernameAvailabilityValidator.field_o = 0;
-          tj.field_b = 0;
+          LoginUiSupport.field_b = 0;
         } else {
-          tj.field_b = packet.readUnsignedShortBE(true);
+          LoginUiSupport.field_b = packet.readUnsignedShortBE(true);
           UsernameAvailabilityValidator.field_o = packet.readUnsignedMediumBE(105);
         }
         hasAlternateNameIntSnapshot = (packet.readUnsignedByte((byte) 34) != 1) ? 0 : 1;

@@ -206,7 +206,7 @@ final class DraggableWidget extends SingleChildWidget {
             UnderlinedButtonRenderer.b(-6011);
             ArchiveLoadStep.field_a = true;
             AgeValidator.field_i = true;
-            kd.field_e.hideAllDialogs(param0 + 10912);
+            ClientFlowState.accountDialogLayer.hideAllDialogs(param0 + 10912);
             MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
             return;
         }
@@ -214,7 +214,7 @@ final class DraggableWidget extends SingleChildWidget {
         UnderlinedButtonRenderer.b(-6011);
         ArchiveLoadStep.field_a = true;
         AgeValidator.field_i = true;
-        kd.field_e.hideAllDialogs(param0 + 10912);
+        ClientFlowState.accountDialogLayer.hideAllDialogs(param0 + 10912);
         MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
     }
 

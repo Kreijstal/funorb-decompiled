@@ -17,14 +17,37 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 124 adds 306 guarded names: ten classes, 23 fields, 32 methods,
+Pass 125 adds 292 guarded names: thirteen classes, 40 fields, 34 methods,
+78 parameters and 127 locals. All 10,902 previous complete rules and source,
+naming-tool, decompiler, bytecode and native fixture pins remain. The current
+export has 11,194 rules and 86,300 identifier edits, with the same 11 separately
+recorded class-name literal edits. All parameters and locals in the thirteen
+audited owners have semantic names. Both 303-file corpora compile and compare
+136,612 bindings, 388 override relationships and 11 reflected class-literal
+records. Dictionary reversal recovers all 303 pinned raw files byte-for-byte.
+Class coverage is 288 renamed, one meaningful original name and 14 opaque
+top-level names; six large labeled bodies and 207 plain-block labels remain.
+
+The named paths connect session bootstrap/packet buffers, FIFO and CRC
+acknowledgements, account/username flow tokens and form values, username result
+handling, login UI/archive progress and fullscreen task completion. The three
+flow markers remain distinct identity objects with throwing `toString`; no enum,
+state numbers or wire values replace them. Mixed-purpose statics stay on their
+owners. Guards, aliasing, partial writes, recursive failure paths, byte counts,
+signed arithmetic and exception/monitor boundaries remain. The 25 publication
+checks and all eight fixed native probes pass within their existing scopes; the
+committed export reproduces from clean checkouts. No new live acknowledgement,
+account/network/server, seed-file write, hardware fullscreen, browser/phone or
+full-game/performance coverage is added by this naming pass.
+
+Pass 124 added 306 guarded names: ten classes, 23 fields, 32 methods,
 63 parameters and 178 locals. All 10,596 previous complete rules and source,
 naming-tool, decompiler, bytecode and native fixture pins remain. The export now
 has 10,902 rules and 84,798 identifier edits, with the same 11 separately recorded

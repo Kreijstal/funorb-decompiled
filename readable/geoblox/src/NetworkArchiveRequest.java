@@ -8,7 +8,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     byte reservedTailBytes;
     static byte[][] byteArrayPool30000;
     int blockPosition;
-    static int field_x;
+    static int sessionServerPort;
     static Sprite barSprite;
     static String settingsCookieValue;
 

@@ -201,7 +201,7 @@ final class EntityMotionSupport {
                 if (FullscreenFailureReason.scratchSpriteOverlapsBoard(movingEntity, boardAngleRadians, 0)) {
                   HotspotTextWidget.spriteScratchRaster.addOutline(1);
                   if (movingEntity.matchCooldownTicks <= 0) {
-                    al.a(9666, GameScreen.selectedThemeId);
+                    ClientFlowToken.playThemeEntitySound(9666, GameScreen.selectedThemeId);
                   }
                   boardContactStateDirty = true;
                   movingEntity.entityQueue = null;

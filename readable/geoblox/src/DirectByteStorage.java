@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DirectByteStorage extends ByteStorage {
-    static IntrusiveDeque field_g;
+    static IntrusiveDeque pendingCrcAcknowledgements;
     private java.nio.ByteBuffer directBuffer;
     static MeshMaterial[] meshMaterials;
     static ResourceArchive field_h;
 
     public static void b(int param0) {
-        field_g = null;
+        pendingCrcAcknowledgements = null;
         meshMaterials = null;
         field_h = null;
         if (param0 > -1) {
@@ -42,6 +42,6 @@ final class DirectByteStorage extends ByteStorage {
     }
 
     static {
-        field_g = new IntrusiveDeque();
+        pendingCrcAcknowledgements = new IntrusiveDeque();
     }
 }

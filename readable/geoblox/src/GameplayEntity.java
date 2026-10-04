@@ -27,7 +27,7 @@ final class GameplayEntity extends DualLinkNode {
     float velocityY;
     float positionY;
     private int paletteBlueDelta;
-    static PlatformTaskDispatcher field_D;
+    static PlatformTaskDispatcher sessionTaskDispatcher;
     float velocityX;
     int sameCategoryEntityCount;
 
@@ -148,7 +148,7 @@ final class GameplayEntity extends DualLinkNode {
 
     public static void e(byte param0) {
         pendingAchievementSubmissions = null;
-        field_D = null;
+        sessionTaskDispatcher = null;
         int var1 = 106 % ((33 - param0) / 39);
     }
 
@@ -242,7 +242,7 @@ final class GameplayEntity extends DualLinkNode {
           this.drawBoardRotatedEntity(18);
         }
         if (0 == this.entitySpriteKindId) {
-          this.entitySprite = ke.entitySpritesByThemeCategoryAndVariant[GameScreen.selectedThemeId][this.entityCategoryKey][this.spriteVariantIndex];
+          this.entitySprite = ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[GameScreen.selectedThemeId][this.entityCategoryKey][this.spriteVariantIndex];
         } else {
           if (this.entitySpriteKindId == 4) {
             this.spriteVariantIndex = -1;

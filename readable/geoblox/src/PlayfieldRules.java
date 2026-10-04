@@ -105,33 +105,33 @@ final class PlayfieldRules {
 
     final static void advanceDifficulty(boolean recursiveAdvanceGuard) {
         ArchiveNetworkClient.difficultyStep = ArchiveNetworkClient.difficultyStep + 1;
-        if (ArchiveNetworkClient.difficultyStep >= kd.difficultyStepFlags.length) {
+        if (ArchiveNetworkClient.difficultyStep >= ClientFlowState.difficultyStepFlags.length) {
           if (ContextualRuntimeException.specialSpriteKindProbability > 0.15000000000000002) {
             ContextualRuntimeException.specialSpriteKindProbability = ContextualRuntimeException.specialSpriteKindProbability - 0.05;
           }
         } else {
-          if ((4 & kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep]) != 0) {
+          if ((4 & ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep]) != 0) {
             TextTemplateDefinition.entityMotionSpeed = TextTemplateDefinition.entityMotionSpeed + 0.055555559694767f;
             ContextualRuntimeException.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
-          if (((kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 1) != 0) &&
+          if (((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 1) != 0) &&
               (EmailValidator.availableSpriteVariantCount < 7)) {
             EmailValidator.availableSpriteVariantCount = EmailValidator.availableSpriteVariantCount + 1;
           }
           if (recursiveAdvanceGuard) {
             PlayfieldRules.advanceDifficulty(true);
           }
-          if (((kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 2) != 0) &&
+          if (((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 2) != 0) &&
               (MessageDialog.availableEntityCategoryCount < 7)) {
             MessageDialog.availableEntityCategoryCount = MessageDialog.availableEntityCategoryCount + 1;
           }
-          if (0 != (kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 16)) {
+          if (0 != (ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 16)) {
             ContextualRuntimeException.specialSpriteKindProbability = ContextualRuntimeException.specialSpriteKindProbability + 0.05;
           }
-          if ((8 & kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep]) != 0) {
+          if ((8 & ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep]) != 0) {
             DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
           }
-          if (0 != (kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 128)) {
+          if (0 != (ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 128)) {
             if (0.800000011920929f > FullscreenErrorDialog.spawnIntervalScale) {
               FullscreenErrorDialog.spawnIntervalScale = FullscreenErrorDialog.spawnIntervalScale + 0.02857142873108387f;
             }

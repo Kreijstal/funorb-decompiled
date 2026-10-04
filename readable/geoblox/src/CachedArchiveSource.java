@@ -3,7 +3,7 @@
  */
 final class CachedArchiveSource extends ArchiveSource {
     private IntrusiveNodeHashTable groupRequests;
-    static boolean field_s;
+    static boolean accountCreationNewsOptIn;
     private int expectedIndexRevision;
     static int[] projectedMeshVertexDepth;
     private ArchiveNetworkClient networkClient;

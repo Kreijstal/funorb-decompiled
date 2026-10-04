@@ -84,7 +84,7 @@ final class SessionSnapshotSupport {
     }
 
     final static void prepareAccountCreationUi(int methodGuard) {
-        AccountCreationDialog.a(ResourceArchive.field_i, (byte) -61, true, ByteStorage.field_a);
+        AccountCreationDialog.a(ResourceArchive.accountCreationEmail, (byte) -61, true, ByteStorage.accountCreationPassword);
         int sentinelRemainder = -30 % ((methodGuard + 30) / 36);
         VisualPropertyOverrides.field_I = true;
     }

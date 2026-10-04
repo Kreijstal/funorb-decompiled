@@ -10,26 +10,26 @@ final class ScorePopup extends IntrusiveNode {
     float originX;
     static String field_j;
     int points;
-    static UsernameAvailabilityQuery field_g;
+    static UsernameAvailabilityQuery pendingUsernameResult;
 
     final static void b(int param0) {
         if (param0 <= 65) {
             return;
         }
         if (CacheReference.gameMusicOutput == null) {
-            if (!(null == oh.field_a)) {
-                oh.field_a.c();
+            if (!(null == ClientScreenExitSupport.gameSoundOutput)) {
+                ClientScreenExitSupport.gameSoundOutput.c();
             }
             return;
         }
         CacheReference.gameMusicOutput.c();
-        if (!(null == oh.field_a)) {
-            oh.field_a.c();
+        if (!(null == ClientScreenExitSupport.gameSoundOutput)) {
+            ClientScreenExitSupport.gameSoundOutput.c();
         }
     }
 
     public static void c(byte param0) {
-        field_g = null;
+        pendingUsernameResult = null;
         if (param0 != -40) {
             return;
         }

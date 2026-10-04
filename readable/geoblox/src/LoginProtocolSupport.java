@@ -47,9 +47,9 @@ final class LoginProtocolSupport {
                   unusedNullLongPayloadTextSnapshot = (String) null;
                   EntityContactSupport.pendingLoginPayload = SecondaryDeque.a(true, ClientClockSupport.field_c, (String) null, primaryLoginText, false);
                 }
-                CacheReference.field_q.position = 0;
-                CacheReference.field_q.writeByte((byte) -102, 14);
-                CacheReference.field_q.writeByte((byte) -78, EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32).wireId);
+                CacheReference.outgoingSessionBuffer.position = 0;
+                CacheReference.outgoingSessionBuffer.writeByte((byte) -102, 14);
+                CacheReference.outgoingSessionBuffer.writeByte((byte) -78, EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32).wireId);
                 NanoFrameTimer.a(-1, -1);
                 PacketBuffer.currentProtocolStage = ResizableDialog.awaitingInitialLoginReplyStage;
               }
@@ -108,7 +108,7 @@ final class LoginProtocolSupport {
                 settingsCookieValue = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
                 loginResponseFlags = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 if ((1 & loginResponseFlags) != 0) {
-                  ic.a((byte) 65);
+                  SessionBootstrapSupport.persistSessionSeedBytes((byte) 65);
                 }
                 if (!useLongLoginPayload) {
                   responseFlagFourSet = !((loginResponseFlags & 4) == 0);
@@ -118,7 +118,7 @@ final class LoginProtocolSupport {
                   if (!TextHotspotBounds.field_l) {
                   }
                 }
-                if (GameGraphicsResources.field_e) {
+                if (GameGraphicsResources.loginResponseExtensionEnabled) {
                   LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.readIntBE((byte) -48);
@@ -161,9 +161,9 @@ final class LoginProtocolSupport {
                   }
                 }
                 if (TextTemplateDefinition.field_n > 0) {
-                  rb.field_c = true;
+                  FontLoadingSupport.memberAccountMode = true;
                 }
-                CacheReference.field_q.initializeCipher(ProgressBarWidget.field_D, false);
+                CacheReference.outgoingSessionBuffer.initializeCipher(ProgressBarWidget.field_D, false);
                 for (extensionByteIndexThenCipherSeedIndex = 0; extensionByteIndexThenCipherSeedIndex < 4; extensionByteIndexThenCipherSeedIndex++) {
                   ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] = ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] + 50;
                 }
@@ -199,9 +199,9 @@ final class LoginProtocolSupport {
                   retryFailureResult = 3;
                   return retryFailureResult;
                 }
-                responseByteThenPortSwapValue = NetworkArchiveRequest.field_x;
-                NetworkArchiveRequest.field_x = TextInputRenderer.field_s;
-                TextInputRenderer.field_s = responseByteThenPortSwapValue;
+                responseByteThenPortSwapValue = NetworkArchiveRequest.sessionServerPort;
+                NetworkArchiveRequest.sessionServerPort = TextInputRenderer.alternateSessionServerPort;
+                TextInputRenderer.alternateSessionServerPort = responseByteThenPortSwapValue;
                 TextTemplateArgumentType.field_e = true;
               }
               pendingHandshakeResult = -1;

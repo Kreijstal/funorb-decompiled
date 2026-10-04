@@ -192,22 +192,22 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             var2 = Integer.parseInt(this.ageInput.widgetText);
         } catch (NumberFormatException numberFormatException) {
         }
-        return mc.a(this.displayNameInput.widgetText, this.emailInput.widgetText, var2, (AccountCreationForm) (this), 0, this.newsOptInCheckbox.active, this.passwordInput.widgetText);
+        return AccountCreationSupport.startAccountCreation(this.displayNameInput.widgetText, this.emailInput.widgetText, var2, (AccountCreationForm) (this), 0, this.newsOptInCheckbox.active, this.passwordInput.widgetText);
     }
 
     final static LoginTextValue i(int param0) {
-        String var1 = al.b(0);
+        String var1 = ClientFlowToken.getActiveLoginIdentifier(0);
         if (param0 == 25) {
             if (var1 != null && var1.indexOf('@') >= 0) {
                 var1 = "";
             }
-            return new LoginTextValue(al.b(0), ProgressDialog.n(-1071908447));
+            return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.n(-1071908447));
         }
         archiveHandshakeStage = 84;
         if (var1 != null && var1.indexOf('@') >= 0) {
             var1 = "";
         }
-        return new LoginTextValue(al.b(0), ProgressDialog.n(-1071908447));
+        return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.n(-1071908447));
     }
 
     private final int a(int param0, int param1, UiWidget param2, String param3, byte param4) {
@@ -295,7 +295,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     final static void h(byte param0) {
         DialRenderer.field_j = MessageDialog.getSharedUiStyle(125);
         int var1 = -117 / ((12 - param0) / 57);
-        kd.field_e = new DialogLayer();
+        ClientFlowState.accountDialogLayer = new DialogLayer();
         b.a(true, true, false);
     }
 

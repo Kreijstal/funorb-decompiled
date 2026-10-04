@@ -111,7 +111,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         if (methodGuard != -104) {
             this.retryButtonAction = true;
             if (this.showRetryLoginOnDismiss) {
-                tj.b((byte) -65);
+                LoginUiSupport.showLoginPanel((byte) -65);
                 return;
             }
             if (this.showLoginOnDismiss) {
@@ -121,7 +121,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
         }
         if (this.showRetryLoginOnDismiss) {
-            tj.b((byte) -65);
+            LoginUiSupport.showLoginPanel((byte) -65);
             return;
         }
         if (!this.showLoginOnDismiss) {

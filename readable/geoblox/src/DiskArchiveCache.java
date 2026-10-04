@@ -382,9 +382,9 @@ final class DiskArchiveCache {
             return;
         }
         try {
-            oh.field_a = AudioOutput.a(param1, param0, 1, 1000);
+            ClientScreenExitSupport.gameSoundOutput = AudioOutput.a(param1, param0, 1, 1000);
             WhirlpoolHash.field_d = new PcmStreamMixer();
-            oh.field_a.b(WhirlpoolHash.field_d);
+            ClientScreenExitSupport.gameSoundOutput.b(WhirlpoolHash.field_d);
             PasswordWidgetRenderer.gameMusicStream = param3;
             AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c);
             EmailValidator.a(SocialListEntry.field_gb, (byte) -67);

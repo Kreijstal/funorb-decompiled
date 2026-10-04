@@ -4,7 +4,7 @@
 final class EmailAvailabilityValidator extends TextInputValidator {
     private String field_j;
     static AsyncResourceDownloader field_n;
-    static int field_l;
+    static int sessionServerNumber;
     private boolean field_i;
     private MatchingTextValidator field_m;
     static int[] field_k;

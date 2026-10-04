@@ -70,7 +70,7 @@ public final class Geoblox extends SessionGameApplet {
             return false;
         }
         if (null != GameGraphicsResources.gameGraphicsArchive && null != ArchiveLoadStep.fontMetricsArchive && SessionSnapshotSupport.basicUiGraphicsArchive != null) {
-            HighscoreNameEntry.a(oh.unpackingGraphicsText, methodGuard - 25871, 80.0f);
+            HighscoreNameEntry.a(ClientScreenExitSupport.unpackingGraphicsText, methodGuard - 25871, 80.0f);
             this.renderFrame(25853);
             FadingDialog.uiPaletteFont = w.loadPaletteFont("", GameGraphicsResources.gameGraphicsArchive, ArchiveLoadStep.fontMetricsArchive, true, "font");
             SessionGameApplet.field_p = FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(1);
@@ -96,8 +96,8 @@ public final class Geoblox extends SessionGameApplet {
                 geometryCanvasHeight = geometrySourceFrames[geometryFrameThenVariantIndex].fullHeight;
                 Under13TermsPanel.geometrySpritesByThemeAndCategory[themeIndex][categoryThenAnimationFrameIndex] = geometrySourceFrames[geometryFrameThenVariantIndex];
                 for (paletteVariantThenKeyboardIndex = 0; paletteVariantThenKeyboardIndex < 7; paletteVariantThenKeyboardIndex++) {
-                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex] = new Sprite(geometryCanvasWidthThenFrameIndex, geometryCanvasHeight);
-                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex].setAsRasterTarget();
+                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex] = new Sprite(geometryCanvasWidthThenFrameIndex, geometryCanvasHeight);
+                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex].setAsRasterTarget();
                     geometrySourceFrames[geometryFrameThenVariantIndex].drawGrayModulated(0, 0, SocketConnector.themeSpriteColors[themeIndex][paletteVariantThenKeyboardIndex]);
                 }
             }
@@ -331,7 +331,7 @@ public final class Geoblox extends SessionGameApplet {
         ScorePopupSupport.releaseStaticReferences(9144);
         SharedBufferPools.clearSharedBufferResources(-13575);
         hg.a(-17525);
-        ic.a(16424);
+        SessionBootstrapSupport.clearSessionBootstrapTexts(16424);
         ok.a(true);
         SessionGameApplet.g(30344);
         AsyncResourceDownloader.c((byte) 108);
@@ -341,7 +341,7 @@ public final class Geoblox extends SessionGameApplet {
         SoftwareRasterizer.releaseRasterStorage();
         ResourceArchive.b(30261);
         b.a(17062);
-        kb.c(105);
+        UsernameResponseSupport.clearUsernameAndCompressionResources(105);
         ByteArrayBuffer.clearWhirlpoolTables(0);
         ClientClockSupport.clearClockAndGraphicsResources(8192);
         EntityMotionSupport.a((byte) -60);
@@ -372,7 +372,7 @@ public final class Geoblox extends SessionGameApplet {
         MidiNoteMixer.c(-1);
         TrackedPcmStream.a((byte) 54);
         AudioOutput.h();
-        tj.a(methodGuard + 154);
+        LoginUiSupport.clearLoginUiText(methodGuard + 154);
         AchievementProtocolSupport.releaseStaticReferences(0);
         da.a(50);
         ArchiveIndex.a(114);
@@ -400,23 +400,23 @@ public final class Geoblox extends SessionGameApplet {
         DualLinkNode.c((byte) -110);
         SpriteState.f(methodGuard ^ -5558);
         PendingActionMarker.c((byte) 45);
-        ke.a((byte) -80);
+        ConnectionHeaderSupport.clearConnectionHeaderSprites((byte) -80);
         CacheFileState.releaseStaticReferences((byte) -103);
         te.a(-8297);
-        qe.a(-8616);
+        FullscreenEntrySupport.clearFullscreenEntryResources(-8616);
         LoginPayloadKind.a(85);
         LoginPayload.a(methodGuard + 64);
         PacketBuffer.j(methodGuard ^ -64);
         SessionSnapshotSupport.releaseStaticReferences((byte) -64);
         MenuScreen.releaseStaticReferences((byte) 26);
-        oh.a((byte) -88);
+        ClientScreenExitSupport.clearScreenExitResources((byte) -88);
         SecondaryDeque.b(-10943);
         GameplayEntity.e((byte) 104);
         BoardReconciliationSupport.releaseStaticReferences(126);
         mf.a(false);
         TextWidgetSupport.clearTextWidgetResources(39);
         GameSoundResources.releaseStaticReferences(33);
-        kd.a((byte) 122);
+        ClientFlowState.clearClientFlowResources((byte) 122);
         LoginProtocolSupport.releaseStaticReferences(5366);
         LimitedRandomAccessFile.b((byte) 74);
         DelegatingCanvas.a((byte) 81);
@@ -430,7 +430,7 @@ public final class Geoblox extends SessionGameApplet {
         NetworkArchiveRequest.e((byte) 118);
         CachedArchiveSource.b(true);
         ArchiveRequest.f(31735);
-        dl.a(true);
+        UsernameQueryState.clearAccountUsernameResult(true);
         FullscreenErrorDialog.i((byte) -80);
         LogoPreparationSupport.releaseStaticReferences(true);
         TextWidgetRenderer.a(true);
@@ -439,11 +439,11 @@ public final class Geoblox extends SessionGameApplet {
         AttachedEntityRenderer.releaseStaticReferences(126);
         TriangleMesh.b((byte) 115);
         lb.a(31);
-        rb.a((byte) -112);
+        FontLoadingSupport.clearFontLoadingResources((byte) -112);
         EndingAnimationSupport.releaseStaticReferences((byte) -126);
         EntitySpawnSupport.releaseStaticReferences(-102);
         TextValidationSupport.clearValidationArchive(methodGuard ^ 30613);
-        kf.b(methodGuard - 15583);
+        AccountEligibilitySupport.clearAccountEligibilityResources(methodGuard - 15583);
         SettingsCookieSupport.clearSettingsCookieTexts(true);
         VisualPropertyOverrides.b(false);
         SecondaryNodeHashTable.a(true);
@@ -755,7 +755,7 @@ public final class Geoblox extends SessionGameApplet {
                   if ((UiWidget.gameplayReturnScreenId != -1) &&
                       (UnderlinedButtonRenderer.c(-109))) {
                     if (ProxySocketConnector.gameplayOriginScreenId != 0) {
-                      kb.a(-106);
+                      UsernameResponseSupport.returnToLoginStage(-106);
                     } else {
                       PendingActionMarker.a((byte) 118);
                     }
@@ -771,9 +771,9 @@ public final class Geoblox extends SessionGameApplet {
                 }
               } else {
                 if (SettingsCookieSupport.currentScreenId == -1) {
-                  if (dl.field_b) {
+                  if (UsernameQueryState.introAnimationRunning) {
                     introStillRunningSnapshot = !(DequeCursor.b(1));
-                    dl.field_b = introStillRunningSnapshot;
+                    UsernameQueryState.introAnimationRunning = introStillRunningSnapshot;
                     if (!introStillRunningSnapshot) {
                       SettingsCookieSupport.currentScreenId = -2;
                       ScoreSubmission.requestedScreenId = 0;
@@ -792,7 +792,7 @@ public final class Geoblox extends SessionGameApplet {
           if (ClientTimingSupport.isClientReadyForSessionActions(54)) {
             uiServiceResultOrOverlayMode = this.d((byte) -67);
             if (!(uiServiceResultOrOverlayMode != 2)) {
-              oh.a(320, 240, IntrusiveNodeHashTable.smallFont, IntrusiveNodeHashTable.smallFont.maxAscent * 3 >> 1, -128, IntrusiveNodeHashTable.smallFont.maxAscent);
+              ClientScreenExitSupport.handleSessionExitServiceResult(320, 240, IntrusiveNodeHashTable.smallFont, IntrusiveNodeHashTable.smallFont.maxAscent * 3 >> 1, -128, IntrusiveNodeHashTable.smallFont.maxAscent);
             }
           }
         } else {
@@ -845,7 +845,7 @@ public final class Geoblox extends SessionGameApplet {
             (UiWidget.gameplayReturnScreenId == -1)) {
           if (SettingsCookieSupport.currentScreenId != -1) {
             TextTemplateDefinition.screens[SettingsCookieSupport.currentScreenId].renderScreen(-28750);
-          } else if (!dl.field_b) {
+          } else if (!UsernameQueryState.introAnimationRunning) {
             UiWidget.gameplaySession.renderSession((byte) -49);
           } else {
             SpriteCheckboxRenderer.c(240);
@@ -882,7 +882,7 @@ public final class Geoblox extends SessionGameApplet {
           } else {
             overlayCanvasStateSnapshot = true;
           }
-          kb.a(overlayCanvasStateSnapshot, false);
+          UsernameResponseSupport.renderDimmedAccountUi(overlayCanvasStateSnapshot, false);
         }
         MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 110, (java.awt.Canvas) (renderTargetCanvas), 0);
         if (methodGuard != 25853) {
@@ -947,7 +947,7 @@ public final class Geoblox extends SessionGameApplet {
         ProxySocketConnector.field_m = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
         GzipInflater.field_a = SocketArchiveNetworkClient.createResourceArchive(5, (byte) -62);
         ArchiveLoadStep.fontMetricsArchive = SocketArchiveNetworkClient.createResourceArchive(6, (byte) -62);
-        qe.a(SessionSnapshotSupport.basicUiGraphicsArchive, RankedListQuery.field_i, -84);
+        FullscreenEntrySupport.guardArchiveInitializationPlaceholder(SessionSnapshotSupport.basicUiGraphicsArchive, RankedListQuery.field_i, -84);
     }
 
     final static void prepareLogoMeshRotation(byte methodGuard, int meshIndex) {
@@ -1033,7 +1033,7 @@ public final class Geoblox extends SessionGameApplet {
         PacketByteCipher.a((byte) -74);
         DequeCursor.field_g = 5997;
         ClientClockSupport.field_a = 4703;
-        kb.field_d = 275;
+        UsernameResponseSupport.field_d = 275;
         SpriteButtonRenderer.field_r = 1385;
         lb.secondaryAchievementTrackingCounter = 935;
         AttachedEntityRenderer.achievementTrackingBits = 0;

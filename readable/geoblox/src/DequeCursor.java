@@ -121,10 +121,10 @@ final class DequeCursor {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.clientControlFlowFlag;
         try {
-          kd.field_e.processPointerFrame(true, 127, MatchScoringSupport.field_d, TextConcatenationSupport.field_b);
-          kd.field_e.advanceDialogAnimations(-65);
+          ClientFlowState.accountDialogLayer.processPointerFrame(true, 127, MatchScoringSupport.field_d, TextConcatenationSupport.field_b);
+          ClientFlowState.accountDialogLayer.advanceDialogAnimations(-65);
           while (UiFontResources.pollKeyboardEvent(77)) {
-            kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
+            ClientFlowState.accountDialogLayer.a((byte) 105, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
           }
           if (GzipInflater.field_d != param0) {
             var1_int = GzipInflater.field_d;
@@ -136,7 +136,7 @@ final class DequeCursor {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (WidgetSkinState.field_g == IntrusiveDeque.field_d) {
+          if (WidgetSkinState.usernameQueryFlowState == IntrusiveDeque.pendingClientFlowToken) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -144,7 +144,7 @@ final class DequeCursor {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
-          if (kd.field_b != IntrusiveDeque.field_d) {
+          if (ClientFlowState.accountCreationFlowState != IntrusiveDeque.pendingClientFlowToken) {
             stackIn_22_0 = -1;
             return stackIn_22_0;
           }

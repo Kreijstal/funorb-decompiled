@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "30b63ee42afe0d38a548029c66bd62503565e21f",
+    "commit": "d2dd4ce6608bd351a3d72e19a249f3d6274a3215",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "3e341440f1950878a3bda5f95fb778ab36015f092aefeded3e9e35f3f077026e"
+      "sha256": "8b19ce9362d3748dff0f29ea58ee261f68c6571f576e4adea3ae662fcacadb33"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "1cc93fe6ce2f5ebe827371ae7bbff4c444254ba838f6ad4749fc2b9697156e85",
@@ -3291,15 +3291,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "7db0a8b65a52e2d56daf01db71ac1ae06269a8a6216451b2a23643f8c5e2ff78",
+    "outputTreeSha256": "f2dd10749255da474215811d49eb1802187d10d97c8c461eb6cf1c90a8cdef51",
     "files": 303,
-    "rules": 10902,
-    "identifierEdits": 84798,
+    "rules": 11194,
+    "identifierEdits": 86300,
     "bindingsCompared": 136612,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 84809,
+    "totalEdits": 86311,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11
   },
@@ -3576,5 +3576,54 @@
     "sourceToolAndBytecodePinsUnchanged": true,
     "wholeGameEquivalenceVerified": false,
     "limits": "Source-audited static text/pool/clock/cookie/graphics helpers retain guard, overflow, alias, exception and monitor behavior. Shared calendar and recursion remain. Optional byte pools have no fixed-source non-null setup/refill. Existing native fixtures keep their scopes; no new live clock/cookie/archive/platform/game/server/browser/phone or performance coverage."
+  },
+  "clientFlowBootstrapNaming": {
+    "passVersion": 125,
+    "workflowCommit": "d2dd4ce6608bd351a3d72e19a249f3d6274a3215",
+    "manifestSha256": "8b19ce9362d3748dff0f29ea58ee261f68c6571f576e4adea3ae662fcacadb33",
+    "previousRules": {
+      "repository": "Kreijstal/dekobloko-work",
+      "commit": "30b63ee42afe0d38a548029c66bd62503565e21f",
+      "path": "readable/geoblox-rules.json",
+      "sha256": "3e341440f1950878a3bda5f95fb778ab36015f092aefeded3e9e35f3f077026e"
+    },
+    "rulesAdded": 292,
+    "rulesAddedByKind": {
+      "C": 13,
+      "F": 40,
+      "L": 127,
+      "M": 34,
+      "P": 78
+    },
+    "previousCompleteRulesPreserved": 10902,
+    "classesNamed": [
+      "ClientFlowToken",
+      "SessionBootstrapSupport",
+      "RankedComparisonSupport",
+      "UsernameResponseSupport",
+      "ClientFlowState",
+      "UsernameQueryState",
+      "AccountEligibilitySupport",
+      "AccountCreationSupport",
+      "FullscreenEntrySupport",
+      "LoginUiSupport",
+      "ClientScreenExitSupport",
+      "ConnectionHeaderSupport",
+      "FontLoadingSupport"
+    ],
+    "allAuditedOwnerParametersAndLocalsNamed": true,
+    "identifierEditsAdded": 1502,
+    "classConstructorSpellingEdits": 0,
+    "classNameLiteralEdits": 11,
+    "bindingsCompared": 136612,
+    "classNameLiteralBindingsCompared": 11,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 25,
+    "nativeProbeFilesPassed": 8,
+    "nativeProbeSourceAndTracePinsUnchanged": true,
+    "dictionaryRestorationFiles": 303,
+    "sourceToolAndBytecodePinsUnchanged": true,
+    "wholeGameEquivalenceVerified": false,
+    "limits": "Source-audited account/username identity flows, fixed form values, packet/bootstrap state, acknowledgement branches, seed persistence and fullscreen task wait retain original guards, flags, wire values, partial effects, exceptions and monitors. Applet gamecrc/instanceid/member parameters support names; live subscription/server semantics are not independently verified. Existing fixture scopes remain; no new live account/network acknowledgements, seed-file write, hardware fullscreen, assets/game/browser/phone or performance coverage."
   }
 }

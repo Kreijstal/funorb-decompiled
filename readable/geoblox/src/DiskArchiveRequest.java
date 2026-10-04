@@ -24,7 +24,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         PacketBuffer var5 = null;
         int var4 = 0;
         try {
-            var5 = CacheReference.field_q;
+            var5 = CacheReference.outgoingSessionBuffer;
             PacketBuffer var3 = var5;
             var5.writeCipherByte(param0, (byte) -107);
             var5.position = var5.position + 1;

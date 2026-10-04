@@ -73,7 +73,7 @@ final class PcmResampler {
         if (outputSampleRateHz == inputSampleRateHz) {
           return;
         }
-        rateGreatestCommonDivisor = ic.a(inputSampleRateHz, outputSampleRateHz, -126);
+        rateGreatestCommonDivisor = SessionBootstrapSupport.greatestCommonDivisor(inputSampleRateHz, outputSampleRateHz, -126);
         inputSampleRateHz = inputSampleRateHz / rateGreatestCommonDivisor;
         outputSampleRateHz = outputSampleRateHz / rateGreatestCommonDivisor;
         this.inputRateRatio = inputSampleRateHz;

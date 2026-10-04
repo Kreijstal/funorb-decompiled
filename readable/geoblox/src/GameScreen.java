@@ -516,7 +516,7 @@ final class GameScreen extends MenuScreen {
                     SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainX);
                     DelayedIncomingPacket.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
                     textYOrButtonTop = 170;
-                    acceptancePromptText = PcmResampler.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + OpacityWidget.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + FullscreenFailureReason.fullscreenAfterCancelText;
+                    acceptancePromptText = PcmResampler.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + OpacityWidget.fullscreenAfterAcceptText + " " + FontLoadingSupport.fullscreenCancelButtonText + " " + FullscreenFailureReason.fullscreenAfterCancelText;
                     textYOrButtonTop = textYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(acceptancePromptText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
                     textYOrButtonTop += 10;
                     acceptanceCountdownText = Integer.toString((1500 - this.activeTicks) / 150 + 1);
@@ -541,7 +541,7 @@ final class GameScreen extends MenuScreen {
                         !(PcmResampler.pointerYSnapshot >= 352)))) {
                     FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
                   }
-                  FadingDialog.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.drawCenteredText(FontLoadingSupport.fullscreenCancelButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
                   FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
                   confirmationButtonLeft = 320 - (20 + buttonTextCenterOrConfirmationWidth >> 1) - 90;
                   confirmationTextCenter = 10 + (buttonTextCenterOrConfirmationWidth >> 1) + confirmationButtonLeft;
@@ -1227,16 +1227,16 @@ final class GameScreen extends MenuScreen {
                 if (UnderlinedButtonRenderer.c(-104)) {
                   if ((265 < FullscreenFocusCanvas.pointerPressYSnapshot) &&
                       (FullscreenFocusCanvas.pointerPressYSnapshot < 299)) {
-                    if ((mc.pointerPressXSnapshot > 350) &&
-                        (mc.pointerPressXSnapshot < 470)) {
+                    if ((AccountCreationSupport.pointerPressXSnapshot > 350) &&
+                        (AccountCreationSupport.pointerPressXSnapshot < 470)) {
                       this.pointerInteractionActive = true;
                       this.fullscreenDialogActive = false;
                       if (clientControlFlowGuard == 0) {
                         break L21;
                       }
                     }
-                    if (!((mc.pointerPressXSnapshot > 170) &&
-                          (mc.pointerPressXSnapshot < 290))) {
+                    if (!((AccountCreationSupport.pointerPressXSnapshot > 170) &&
+                          (AccountCreationSupport.pointerPressXSnapshot < 290))) {
                       this.pointerInteractionActive = false;
                       if (clientControlFlowGuard == 0) {
                         break L21;
@@ -1262,10 +1262,10 @@ final class GameScreen extends MenuScreen {
                     (null != InstrumentPatch.field_n)) {
                   if ((FullscreenFocusCanvas.pointerPressYSnapshot > 317) &&
                       (352 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
-                    if (!((mc.pointerPressXSnapshot > 350) &&
-                          (mc.pointerPressXSnapshot < 470))) {
-                      if (!((mc.pointerPressXSnapshot > 170) &&
-                            (mc.pointerPressXSnapshot < 290))) {
+                    if (!((AccountCreationSupport.pointerPressXSnapshot > 350) &&
+                          (AccountCreationSupport.pointerPressXSnapshot < 470))) {
+                      if (!((AccountCreationSupport.pointerPressXSnapshot > 170) &&
+                            (AccountCreationSupport.pointerPressXSnapshot < 290))) {
                         this.pointerInteractionActive = false;
                         if (clientControlFlowGuard == 0) {
                           break L21;
@@ -1304,13 +1304,13 @@ final class GameScreen extends MenuScreen {
             this.previousPointerX = PrefixCodeDecoder.pointerXSnapshot;
             if (this.selectedItemIndex != 0) {
               L39: {
-                inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-kd.field_c - SessionSnapshotSupport.currentKeyboardEventCode)) % 8;
+                inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.field_c - SessionSnapshotSupport.currentKeyboardEventCode)) % 8;
                 if (inputDerivedStateBranch != 0) {
                   if (inputDerivedStateBranch != 1) {
                     if (inputDerivedStateBranch != 2) {
                       if (inputDerivedStateBranch == 3) {
                         ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
-                        kb.field_d = kb.field_d + 1;
+                        UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
                         if (clientControlFlowGuard == 0) {
                           break L39;
                         }
@@ -1319,7 +1319,7 @@ final class GameScreen extends MenuScreen {
                         if (inputDerivedStateBranch != 5) {
                           if (6 == inputDerivedStateBranch) {
                             DequeCursor.field_g = DequeCursor.field_g - 1;
-                            SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - kb.field_d;
+                            SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - UsernameResponseSupport.field_d;
                             if (clientControlFlowGuard == 0) {
                               break L39;
                             }
@@ -1327,40 +1327,40 @@ final class GameScreen extends MenuScreen {
                           if (inputDerivedStateBranch != 7) {
                             break L39;
                           }
-                          kb.field_d = kb.field_d - 1;
+                          UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
                           SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - DequeCursor.field_g;
                           if (clientControlFlowGuard == 0) {
                             break L39;
                           }
                         }
-                        kb.field_d = kb.field_d + 1;
+                        UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
                         SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + DequeCursor.field_g;
                         if (clientControlFlowGuard == 0) {
                           break L39;
                         }
                       }
                       DequeCursor.field_g = DequeCursor.field_g + 1;
-                      SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + kb.field_d;
+                      SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + UsernameResponseSupport.field_d;
                       if (clientControlFlowGuard == 0) {
                         break L39;
                       }
                     }
-                    ClientClockSupport.field_a = ClientClockSupport.field_a - kb.field_d;
+                    ClientClockSupport.field_a = ClientClockSupport.field_a - UsernameResponseSupport.field_d;
                     DequeCursor.field_g = DequeCursor.field_g + 1;
                     if (clientControlFlowGuard == 0) {
                       break L39;
                     }
                   }
                   ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
-                  kb.field_d = kb.field_d - 1;
+                  UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
                   if (clientControlFlowGuard == 0) {
                     break L39;
                   }
                 }
-                ClientClockSupport.field_a = ClientClockSupport.field_a + kb.field_d;
+                ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
                 DequeCursor.field_g = DequeCursor.field_g - 1;
               }
-              inputDerivedStateBranch = (SessionSnapshotSupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - kd.field_c)) % 5;
+              inputDerivedStateBranch = (SessionSnapshotSupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.field_c)) % 5;
               if (0 != inputDerivedStateBranch) {
                 if (inputDerivedStateBranch != 1) {
                   if (inputDerivedStateBranch == 2) {
@@ -1436,7 +1436,7 @@ final class GameScreen extends MenuScreen {
               LoginProtocolSupport.drawAvatarFaceLayers(70, 180, 29497);
               HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].draw((HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullHeight >> 1));
+              ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].draw((HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) - (ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullHeight >> 1));
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(50, 250, 90, 310);
@@ -1453,7 +1453,7 @@ final class GameScreen extends MenuScreen {
               if (this.tutorialOrbitRadius != 15) {
                 HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
+                ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
@@ -1464,7 +1464,7 @@ final class GameScreen extends MenuScreen {
                 orbitYOrParagraphWidth = (int)(0.5 + Math.cos(this.tutorialOrbitAngleRadians + orbitAngleSpacing) * (double)this.tutorialOrbitRadius) + orbitCenterYOrTextLeft;
                 HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
+                ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
@@ -1476,7 +1476,7 @@ final class GameScreen extends MenuScreen {
                 orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(Math.cos(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius + 0.5);
                 HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
+                ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);

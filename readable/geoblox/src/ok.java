@@ -4,7 +4,7 @@
 final class ok {
     static Sprite[] avatarCryMiddleFrames;
     static String createEmailConfirmationTooltipText;
-    static int field_f;
+    static int sessionClientId;
     static String justPlayText;
     static int[] transformedMeshNormalX;
     static String createEmailConfirmationText;

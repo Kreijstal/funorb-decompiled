@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class CacheReference extends DualLinkNode {
-    static PacketBuffer field_q;
+    static PacketBuffer outgoingSessionBuffer;
     static int field_m;
     int field_n;
     static AudioOutput gameMusicOutput;
@@ -18,7 +18,7 @@ abstract class CacheReference extends DualLinkNode {
 
     final static boolean f(int param0) {
         if (param0 != -31456) {
-            field_q = (PacketBuffer) null;
+            outgoingSessionBuffer = (PacketBuffer) null;
             if (SpriteConstructionSupport.clientScreenStage < 10) {
                 return false;
             }
@@ -40,10 +40,10 @@ abstract class CacheReference extends DualLinkNode {
         gameMusicOutput = null;
         if (param0 > -92) {
             CacheReference.f(64);
-            field_q = null;
+            outgoingSessionBuffer = null;
             return;
         }
-        field_q = null;
+        outgoingSessionBuffer = null;
     }
 
     final static void a(byte param0, ResourceArchive param1, boolean param2, ResourceArchive param3, ResourceArchive param4) {
@@ -53,8 +53,8 @@ abstract class CacheReference extends DualLinkNode {
             EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -126, false);
             IndexedSpriteState.a((byte) 103, param1, param4, param3);
             AccountCreationForm.h((byte) -121);
-            kd.field_b = DiskCacheWorker.field_l;
-            WidgetSkinState.field_g = DiskCacheWorker.field_l;
+            ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
+            WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

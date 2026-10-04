@@ -136,7 +136,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   cameraYBasisOrVertexZ = mesh.firstVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
                   ArchiveLoadStep.firstVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX - (-(cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY) - cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
                   GameplaySetupSupport.firstVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexZ * cameraYZQ16OrNormalX + cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 >> 16);
-                  kf.firstVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + (cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX) >> 16) + cameraTranslationZOrNormalZXQ16;
+                  AccountEligibilitySupport.firstVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + (cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX) >> 16) + cameraTranslationZOrNormalZXQ16;
                   cameraYBasisOrVertexX = mesh.secondVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexY = mesh.secondVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexZ = mesh.secondVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
@@ -146,7 +146,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   cameraYBasisOrVertexX = mesh.thirdVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexY = mesh.thirdVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexZ = mesh.thirdVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
-                  qe.thirdVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                  FullscreenEntrySupport.thirdVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexY * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX + cameraYBasisOrVertexZ * cameraXZQ16OrNormalIndex) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
                   BufferedSocket.thirdVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 + (cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYZQ16OrNormalX * cameraYBasisOrVertexZ) >> 16);
                   hg.thirdVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationZOrNormalZXQ16 + (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + cameraYBasisOrVertexY * cameraZYOrNormalZZQ16 + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX >> 16);
                   cameraXBasisOrDeltaZOrVertexIndex++;

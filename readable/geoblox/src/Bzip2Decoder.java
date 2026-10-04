@@ -72,8 +72,8 @@ final class Bzip2Decoder {
         selectedBases = null;
         selectedSymbols = null;
         state.blockSize100k = 1;
-        if (kb.bzip2TransformTable == null) {
-          kb.bzip2TransformTable = new int[state.blockSize100k * 100000];
+        if (UsernameResponseSupport.bzip2TransformTable == null) {
+          UsernameResponseSupport.bzip2TransformTable = new int[state.blockSize100k * 100000];
         }
         continueDecodingBlocks = 1;
         L1: while (true) {
@@ -250,14 +250,14 @@ final class Bzip2Decoder {
                     state.byteBucketPositions[index] = state.byteBucketPositions[index] + state.byteBucketPositions[index - 1];
                   }
                   for (index = 0; index < blockLength; index++) {
-                    byteOrBitValue = (byte)(kb.bzip2TransformTable[index] & 255);
+                    byteOrBitValue = (byte)(UsernameResponseSupport.bzip2TransformTable[index] & 255);
                     transformBucketPosition = state.byteBucketPositions[byteOrBitValue & 255];
-                    kb.bzip2TransformTable[transformBucketPosition] = kb.bzip2TransformTable[transformBucketPosition] | index << 8;
+                    UsernameResponseSupport.bzip2TransformTable[transformBucketPosition] = UsernameResponseSupport.bzip2TransformTable[transformBucketPosition] | index << 8;
                     state.byteBucketPositions[byteOrBitValue & 255] = state.byteBucketPositions[byteOrBitValue & 255] + 1;
                   }
-                  state.transformPositionOrEntry = kb.bzip2TransformTable[state.originalPointer] >> 8;
+                  state.transformPositionOrEntry = UsernameResponseSupport.bzip2TransformTable[state.originalPointer] >> 8;
                   state.blockBytesConsumed = 0;
-                  state.transformPositionOrEntry = kb.bzip2TransformTable[state.transformPositionOrEntry];
+                  state.transformPositionOrEntry = UsernameResponseSupport.bzip2TransformTable[state.transformPositionOrEntry];
                   state.currentByte = (byte)(state.transformPositionOrEntry & 255);
                   state.transformPositionOrEntry = state.transformPositionOrEntry >> 8;
                   state.blockBytesConsumed = state.blockBytesConsumed + 1;
@@ -321,7 +321,7 @@ final class Bzip2Decoder {
                   }
                   frequencyByteValue = state.alphabetBytes[byteOrBitValue & 255] & 255;
                   state.byteFrequencies[frequencyByteValue] = state.byteFrequencies[frequencyByteValue] + 1;
-                  kb.bzip2TransformTable[blockLength] = state.alphabetBytes[byteOrBitValue & 255] & 255;
+                  UsernameResponseSupport.bzip2TransformTable[blockLength] = state.alphabetBytes[byteOrBitValue & 255] & 255;
                   blockLength++;
                   if (symbolsRemainingInGroup == 0) {
                     selectorIndex++;
@@ -382,7 +382,7 @@ final class Bzip2Decoder {
                   byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
                   state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;
                   while (runLength > 0) {
-                    kb.bzip2TransformTable[blockLength] = byteOrBitValue & 255;
+                    UsernameResponseSupport.bzip2TransformTable[blockLength] = byteOrBitValue & 255;
                     blockLength++;
                     runLength--;
                   }
@@ -514,7 +514,7 @@ final class Bzip2Decoder {
         remainingRunLength = state.pendingRunLength;
         blockBytesConsumed = state.blockBytesConsumed;
         currentByte = state.currentByte;
-        sharedTransformTableSnapshot = kb.bzip2TransformTable;
+        sharedTransformTableSnapshot = UsernameResponseSupport.bzip2TransformTable;
         transformTableAlias = sharedTransformTableSnapshot;
         transformTable = transformTableAlias;
         transformPositionOrEntry = state.transformPositionOrEntry;
@@ -616,7 +616,7 @@ final class Bzip2Decoder {
           state.pendingRunLength = remainingRunLength;
           state.blockBytesConsumed = blockBytesConsumed;
           state.currentByte = currentByte;
-          kb.bzip2TransformTable = transformTable;
+          UsernameResponseSupport.bzip2TransformTable = transformTable;
           state.transformPositionOrEntry = transformPositionOrEntry;
           state.outputBytes = outputBytes;
           state.outputPosition = outputPosition;

@@ -277,13 +277,13 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final static UsernameAvailabilityQuery d(byte param0) {
-        if (!(DiskCacheWorker.field_l != kd.field_b)) {
+        if (!(DiskCacheWorker.idleClientFlowToken != ClientFlowState.accountCreationFlowState)) {
             throw new IllegalStateException();
         }
         int var1 = 28 % ((-79 - param0) / 44);
-        if (MeshPrioritySupport.field_e == kd.field_b) {
-            kd.field_b = DiskCacheWorker.field_l;
-            return dl.field_a;
+        if (MeshPrioritySupport.completedClientFlowToken == ClientFlowState.accountCreationFlowState) {
+            ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
+            return UsernameQueryState.pendingAccountUsernameResult;
         }
         return null;
     }

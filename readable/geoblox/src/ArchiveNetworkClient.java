@@ -35,14 +35,14 @@ abstract class ArchiveNetworkClient {
           if (param0 > -99) {
             return;
           }
-          var1 = CacheReference.field_q;
+          var1 = CacheReference.outgoingSessionBuffer;
           while (AgeValidator.c((byte) -114)) {
             var1.writeCipherByte(8, (byte) -71);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             LoginPanel.writeReflectionCheckReply(46, var1);
-            CacheReference.field_q.backpatchLengthByte(11700, var1.position - var2);
+            CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

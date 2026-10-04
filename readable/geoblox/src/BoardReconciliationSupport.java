@@ -31,14 +31,14 @@ final class BoardReconciliationSupport {
         RuntimeException sortFailureForContext = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          SingleChildWidget.a(0, entryLimit, ok.field_b, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.field_c, true);
+          SingleChildWidget.a(0, entryLimit, ok.field_b, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.rankedEntryCount, true);
           if (methodGuard != -98) {
             return;
           }
           secondaryEntryIndex = 0;
           while (true) {
             L1: {
-              if (GmtTimestampSupport.field_c > secondaryEntryIndex) {
+              if (GmtTimestampSupport.rankedEntryCount > secondaryEntryIndex) {
                 AchievementQuery.field_i[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
                 secondaryEntryIndex++;
                 if (clientControlSnapshot != 0) {
@@ -46,10 +46,10 @@ final class BoardReconciliationSupport {
                 }
                 continue;
               }
-              SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, GmtTimestampSupport.field_c + entryLimit, false);
+              SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
             }
-            if (entryLimit < GmtTimestampSupport.field_c) {
-              GmtTimestampSupport.field_c = entryLimit;
+            if (entryLimit < GmtTimestampSupport.rankedEntryCount) {
+              GmtTimestampSupport.rankedEntryCount = entryLimit;
             }
             return;
           }
@@ -346,7 +346,7 @@ final class BoardReconciliationSupport {
                     }
                     routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
                     visitedResetIndexThenKindFourCount++;
-                    rb.kindFourRemovalCount = rb.kindFourRemovalCount + 1;
+                    FontLoadingSupport.kindFourRemovalCount = FontLoadingSupport.kindFourRemovalCount + 1;
                   }
                   routedAttachedEntity.entityQueue = null;
                 }
@@ -387,7 +387,7 @@ final class BoardReconciliationSupport {
               if (visitedResetIndexThenKindFourCount >= 3) {
                 SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
               }
-              if (rb.kindFourRemovalCount >= 5) {
+              if (FontLoadingSupport.kindFourRemovalCount >= 5) {
                 SecondaryNodeDeque.recordAchievement(255 ^ ClientSessionSnapshot.field_p, -83, ClientSessionSnapshot.field_p);
               }
               return;

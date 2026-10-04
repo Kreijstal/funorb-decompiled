@@ -8,7 +8,7 @@ final class GmtTimestampSupport {
     static int[] decodedSpriteYOffsets;
     static IntrusiveDeque activeScorePopups;
     static float avatarTintRedDelta;
-    static int field_c;
+    static int rankedEntryCount;
 
     final static String formatGmtTimestamp(byte methodGuard, long timestampMillis) {
         int dayOfMonth = 0;

@@ -15,7 +15,7 @@ final class WidgetSkinState {
     static boolean archiveUseControlOpcode2;
     static ValidationState field_m;
     static int field_j;
-    static al field_g;
+    static ClientFlowToken usernameQueryFlowState;
 
     final static String a(String param0, int param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
@@ -207,7 +207,7 @@ final class WidgetSkinState {
     public static void a(boolean param0) {
         field_i = null;
         field_m = null;
-        field_g = null;
+        usernameQueryFlowState = null;
         if (param0) {
             archiveUseControlOpcode2 = true;
             field_n = null;

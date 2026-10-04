@@ -6,7 +6,7 @@ abstract class ByteStorage {
     static long updatePeriodNanoseconds;
     static String loadingExtraDataText;
     static int field_b;
-    static String field_a;
+    static String accountCreationPassword;
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
@@ -58,7 +58,7 @@ abstract class ByteStorage {
 
     public static void a(int param0) {
         field_d = null;
-        field_a = null;
+        accountCreationPassword = null;
         if (param0 > -50) {
             return;
         }

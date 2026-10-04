@@ -254,7 +254,7 @@ final class ArchiveIndex {
         int var5 = 0;
         int var6 = Geoblox.clientControlFlowFlag;
         try {
-            var7 = CacheReference.field_q;
+            var7 = CacheReference.outgoingSessionBuffer;
             var8 = var7;
             var8.writeCipherByte(packetOpcode, (byte) -125);
             var8.position = var8.position + 1;

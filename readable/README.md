@@ -1,11 +1,36 @@
 # Readable GeoBlox
 
-The current export has 10,902 guarded naming rules: 275 classes, 1,425 fields,
-1,075 methods, 3,098 parameters and 5,029 local declarations. Both 303-file corpora
+The current export has 11,194 guarded naming rules: 288 classes, 1,465 fields,
+1,109 methods, 3,176 parameters and 5,156 local declarations. Both 303-file corpora
 compile, comparing 136,612 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current text, clock and pool names (pass 124)
+## Current client flow and bootstrap names (pass 125)
+
+Pass 125 adds 292 guarded names: thirteen classes, 40 fields, 34 methods,
+78 parameters and 127 locals. All 10,902 previous complete rules and source,
+naming-tool, decompiler, bytecode and native fixture pins remain. The current
+export has 11,194 rules and 86,300 identifier edits, with the same 11 separately
+recorded class-name literal edits. All parameters and locals in the thirteen
+audited owners have semantic names. Both 303-file corpora compile and compare
+136,612 bindings, 388 override relationships and 11 reflected class-literal
+records. Dictionary reversal recovers all 303 pinned raw files byte-for-byte.
+Class coverage is 288 renamed, one meaningful original name and 14 opaque
+top-level names; six large labeled bodies and 207 plain-block labels remain.
+
+The named paths connect session bootstrap/packet buffers, FIFO and CRC
+acknowledgements, account/username flow tokens and form values, username result
+handling, login UI/archive progress and fullscreen task completion. The three
+flow markers remain distinct identity objects with throwing `toString`; no enum,
+state numbers or wire values replace them. Mixed-purpose statics stay on their
+owners. Guards, aliasing, partial writes, recursive failure paths, byte counts,
+signed arithmetic and exception/monitor boundaries remain. The 25 publication
+checks and all eight fixed native probes pass within their existing scopes; the
+committed export reproduces from clean checkouts. No new live acknowledgement,
+account/network/server, seed-file write, hardware fullscreen, browser/phone or
+full-game/performance coverage is added by this naming pass.
+
+## Previous text, clock and pool names (pass 124)
 
 Pass 124 adds 306 guarded names: ten classes, 23 fields, 32 methods,
 63 parameters and 178 locals. All 10,596 previous complete rules and source,
@@ -163,7 +188,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -407,7 +432,7 @@ Pass123 adds the guarded direct-literal policy and their readable class names.
 The current raw tree is
 `ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f`;
 the current readable tree is
-`7db0a8b65a52e2d56daf01db71ac1ae06269a8a6216451b2a23643f8c5e2ff78`.
+`f2dd10749255da474215811d49eb1802187d10d97c8c461eb6cf1c90a8cdef51`.
 The pinned decompiler-source SHA-256 is
 `c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3`.
 All eight native/raw/readable probes pass with their pinned traces.
@@ -421,16 +446,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/d2dd4ce6608bd351a3d72e19a249f3d6274a3215/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
-previous manifest's Git repository, commit and hash; pass124 refers to the
-Deko-owned pass123 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
+previous manifest's Git repository, commit and hash; pass125 refers to the
+Deko-owned pass124 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `30b63ee42afe0d38a548029c66bd62503565e21f`; the
-manifest SHA-256 is `3e341440f1950878a3bda5f95fb778ab36015f092aefeded3e9e35f3f077026e`.
+The current Deko workflow/manifest commit is `d2dd4ce6608bd351a3d72e19a249f3d6274a3215`; the
+manifest SHA-256 is `8b19ce9362d3748dff0f29ea58ee261f68c6571f576e4adea3ae662fcacadb33`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

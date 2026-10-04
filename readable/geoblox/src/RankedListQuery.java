@@ -19,7 +19,7 @@ final class RankedListQuery extends IntrusiveNode {
     }
 
     final static void writeAchievementStateRequest(int methodGuard, int packetOpcode) {
-        PacketBuffer packet = CacheReference.field_q;
+        PacketBuffer packet = CacheReference.outgoingSessionBuffer;
         packet.writeCipherByte(packetOpcode, (byte) -66);
         packet.writeByte((byte) 124, 1);
         packet.writeByte((byte) 127, 2);

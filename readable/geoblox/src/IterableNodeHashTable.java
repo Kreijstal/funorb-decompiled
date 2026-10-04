@@ -83,7 +83,7 @@ final class IterableNodeHashTable implements Iterable {
             transformedMeshNormalZ = (int[]) null;
           }
           archiveFileId = glyphGraphicsArchive.findFileId(resourceName, methodGuard ^ -82, archiveGroupId);
-          fontBeforeReturn = rb.loadMonochromeFontById(archiveFileId, 0, glyphGraphicsArchive, archiveGroupId, fontMetricsArchive);
+          fontBeforeReturn = FontLoadingSupport.loadMonochromeFontById(archiveFileId, 0, glyphGraphicsArchive, archiveGroupId, fontMetricsArchive);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;

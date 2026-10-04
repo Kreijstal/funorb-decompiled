@@ -32,18 +32,18 @@ final class UsernameQuerySupport {
           if (methodGuard <= 56) {
             field_a = -115;
           }
-          if (IntrusiveDeque.field_d == WidgetSkinState.field_g) {
+          if (IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState) {
             return null;
           }
-          if ((WidgetSkinState.field_g == MeshPrioritySupport.field_e) &&
-              (candidateText.equals(DelayedPcmStream.field_k))) {
-            WidgetSkinState.field_g = DiskCacheWorker.field_l;
-            cachedQueryBeforeReturn = ScorePopup.field_g;
+          if ((WidgetSkinState.usernameQueryFlowState == MeshPrioritySupport.completedClientFlowToken) &&
+              (candidateText.equals(DelayedPcmStream.usernameQueryCandidate))) {
+            WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
+            cachedQueryBeforeReturn = ScorePopup.pendingUsernameResult;
             return cachedQueryBeforeReturn;
           }
-          WidgetSkinState.field_g = IntrusiveDeque.field_d;
-          DelayedPcmStream.field_k = candidateText;
-          ScorePopup.field_g = null;
+          WidgetSkinState.usernameQueryFlowState = IntrusiveDeque.pendingClientFlowToken;
+          DelayedPcmStream.usernameQueryCandidate = candidateText;
+          ScorePopup.pendingUsernameResult = null;
           nullQueryBeforeReturn = null;
           return (UsernameAvailabilityQuery) (nullQueryBeforeReturn);
         } catch (java.lang.RuntimeException requestFailure) {
