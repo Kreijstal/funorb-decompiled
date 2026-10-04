@@ -409,9 +409,7 @@ final class gh {
                 }
                 vb.d(var11 / 2, var12 / 2, var6, var13 << 8 | var13 << 16 | var13);
                 var8_ref_ja = (ja) ((Object) var15.b(0));
-                if (var14 == 0) {
-                  continue;
-                }
+                continue;
               }
               var16 = ji.field_r;
               var7 = var16;
@@ -428,9 +426,7 @@ final class gh {
                     if (var14 != 0) {
                       break L37;
                     }
-                    if (var14 == 0) {
-                      continue;
-                    }
+                    continue;
                   }
                   var7 = a.field_d;
                 }
@@ -443,9 +439,7 @@ final class gh {
                       if (var14 != 0) {
                         break L40;
                       }
-                      if (var14 == 0) {
-                        continue;
-                      }
+                      continue;
                     }
                     var7 = bh.field_c;
                   }
@@ -459,9 +453,7 @@ final class gh {
                           if (var14 != 0) {
                             break L44;
                           }
-                          if (var14 == 0) {
-                            continue;
-                          }
+                          continue;
                         }
                         if (this.field_Y) {
                           var8 = -(this.field_v / 2) + 176;

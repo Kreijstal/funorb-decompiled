@@ -2112,15 +2112,11 @@ final class c extends ka {
               da.field_c = 2;
               break L1;
             }
-            L47: {
-              if (var3_int == 0) {
-                if ((fh.c(param1 ^ 107)) &&
-                    (kc.field_c == 0)) {
-                  var3_int = 1;
-                  if (var7 == 0) {
-                    break L47;
-                  }
-                }
+            if (var3_int == 0) {
+              if ((fh.c(param1 ^ 107)) &&
+                  (kc.field_c == 0)) {
+                var3_int = 1;
+              } else {
                 if ((ca.field_f != null) &&
                     (ca.field_f.field_j) &&
                     (ca.field_f.field_k != null)) {
