@@ -7,22 +7,47 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/94533af87b735bd52d26b97ed0c9679d093be829/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/08b3e75c80781a0c39bb4dfdc9cf1c875a7c07d5/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 127)
+## Current readability (pass 128)
 
-The export has 11,399 guarded names and 87,411 Java identifier edits, plus 11
+The export has 11,399 guarded names and 87,406 Java identifier edits, plus 11
 class-name literal edits and 173 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,612 bindings, reproduce and
+compile and compare 136,607 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 128 removes a whole-method refusal in the generic decompiler: an ordinary
+colon switch no longer prevents recovery of proven captured-local guards.
+`GameplaySession.renderSession` loses four redundant comparisons before loop
+continues, and `GameScreen.activateMenuItem` replaces one labeled conditional exit
+with an `if/else`. The switch selector, nonzero control-flag paths, evaluation
+order and exception/finally/monitor boundaries remain. The raw tree loses twelve
+lines and one opaque block label: 76,308 lines, 206 block labels and 58 loop
+labels remain. Six large labeled bodies and unmapped members still need work;
+all 52 labels in those six bodies retain their descriptive names.
+
+All 11,399 previous complete naming rules and guarded ordinals are preserved.
+The export has 87,406 Java identifier edits, eleven class-literal edits and
+173 label edits, comparing 136,607 Java bindings and 852 label records across
+303 compiling sources. Four new generic test groups pass, including 15,120 native
+comparisons and ten independent oracles for case entry, fallthrough, selectors,
+transfers, cleanup and monitors. The emitter suite passes 93 tests with one skip;
+ten exception-loop/integer-argument checks and 27 publication tests pass. The
+new source proof checks all 303 expected token streams, unchanged declarations
+and overrides, and ordered surviving references/label targets. A clean tracked
+decompiler archive reproduces all source and diagnostics bytes. The eight fixed
+game probes retain their documented scopes; full renderer/menu action, assets,
+servers, browser/phone and heap/FPS acceptance remain unverified.
+
+## Previous large-body label naming (pass 127)
 
 Pass 127 adds 52 guarded label rules, covering every label in the six large
 bodies: menu render/update, gameplay render/update, board reconciliation and

@@ -2112,15 +2112,11 @@ final class GameScreen extends MenuScreen {
               ClientOptionSupport.selectedHighscoreView = 2;
               break L1;
             }
-            L47: {
-              if (newSessionTutorialModeFlag == 0) {
-                if ((UnderlinedButtonRenderer.c(methodGuard ^ 107)) &&
-                    (BoardReconciliationSupport.sessionStartAttemptCount == 0)) {
-                  newSessionTutorialModeFlag = 1;
-                  if (clientControlFlowGuard == 0) {
-                    break L47;
-                  }
-                }
+            if (newSessionTutorialModeFlag == 0) {
+              if ((UnderlinedButtonRenderer.c(methodGuard ^ 107)) &&
+                  (BoardReconciliationSupport.sessionStartAttemptCount == 0)) {
+                newSessionTutorialModeFlag = 1;
+              } else {
                 if ((FifoResponseToken.activeHighscoreQuery != null) &&
                     (FifoResponseToken.activeHighscoreQuery.completed) &&
                     (FifoResponseToken.activeHighscoreQuery.namesByView != null)) {

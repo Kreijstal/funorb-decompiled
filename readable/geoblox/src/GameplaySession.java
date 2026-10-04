@@ -409,9 +409,7 @@ final class GameplaySession {
                 }
                 SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
                 renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
-                if (clientControlFlowGuard == 0) {
-                  continue;
-                }
+                continue;
               }
               debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
               debugEntityQueue = debugMovingQueueSnapshot;
@@ -428,9 +426,7 @@ final class GameplaySession {
                     if (clientControlFlowGuard != 0) {
                       break debugMovingEntityIteration;
                     }
-                    if (clientControlFlowGuard == 0) {
-                      continue;
-                    }
+                    continue;
                   }
                   debugEntityQueue = BoardEntityState.attachedEntities;
                 }
@@ -443,9 +439,7 @@ final class GameplaySession {
                       if (clientControlFlowGuard != 0) {
                         break debugAttachedEntityIteration;
                       }
-                      if (clientControlFlowGuard == 0) {
-                        continue;
-                      }
+                      continue;
                     }
                     debugEntityQueue = DelegatingCanvas.transientEntities;
                   }
@@ -459,9 +453,7 @@ final class GameplaySession {
                           if (clientControlFlowGuard != 0) {
                             break debugTransientEntityIteration;
                           }
-                          if (clientControlFlowGuard == 0) {
-                            continue;
-                          }
+                          continue;
                         }
                         if (this.tutorialMode) {
                           tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
