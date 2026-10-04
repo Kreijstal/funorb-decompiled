@@ -409,7 +409,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                         }
                       } else {
                         this.renderAppletFrame(32000);
-                        OpacityWidget.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
+                        OpacityWidget.pollEventQueueAndPostDummyEvent(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
                       }
                       break;
                     }

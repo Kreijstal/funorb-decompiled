@@ -516,12 +516,12 @@ final class GameScreen extends MenuScreen {
                     textYOrButtonTop += 10;
                     acceptanceCountdownText = Integer.toString((1500 - this.activeTicks) / 150 + 1);
                     if ((1500 - this.activeTicks) / 150 <= 0) {
-                      textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.a(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                      textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                       if (clientControlFlowGuard == 0) {
                         break fullscreenCountdownText;
                       }
                     }
-                    textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.a(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                   }
                   textYOrButtonTop += 40;
                   buttonTextCenterOrConfirmationWidth = 100;

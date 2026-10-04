@@ -17,14 +17,52 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/e277bfbf38f60fffdb66ab1d7b7badaa5e9a1e3c/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c767478f696e868cf24d32daa10560016c01baec/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
 
-Pass 163 adds 75 guarded names: one method, three parameters, 69 locals and
+Pass 164 adds 164 guarded names: five fields, nine methods, sixteen parameters
+and 134 locals. All 142 HotspotTextWidget and 84 OpacityWidget declarations now
+have readable names; constructors follow their class rules. Multiline hotspot
+construction, pointer-relative hit testing, hover text, hover borders, focus and
+button callbacks retain their exact order and boundaries. Shared helpers expose
+identifier payload selection, pending login replies, session packet text,
+1000-entity pool setup, indexed text substitution and event-queue polling/posting.
+
+The two-pass <%digits> substitution retains its capacity calculation, original
+scan progress, indexed replacement failures, wrong-guard null result and
+discarded append-return snapshots. Queue polling still peeks/sleeps up to fifty
+times before optionally posting the original dummy ActionEvent; post exceptions
+are swallowed and outer runtime failures retain their wrappers. Entity-pool
+setup still appends without clearing old entries and overwrites each ID slot.
+Hotspot X ends are exclusive and Y ends inclusive; hit testing returns the
+original segment head. All aliases, client-control/unused snapshots, arithmetic
+and guard effects, exception scopes and diagnostic literals remain.
+
+Shared fields identify synthesizedSoundArchive, encryptedPayloadKeyScratchBuffer,
+throwOnInvalidArchiveIds, continueText and showLoginOnMessageDismiss. The last
+flag also selects the generic retry message. VisualPropertyOverrides cleanup
+and exception locals are named; its private default/copy slots retain their
+original names because their rendering meanings are unsupported by the source.
+
+The export has 16,431 rules and 110,064 identifier edits, plus eleven class-name
+literal and 283 label edits: 110,358 total. All 16,267 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Twenty generated Java files change only in names. Both 303-file
+corpora compile, reproduce and reverse byte exactly. Raw source and all tool,
+workflow, stub, class-literal, label-policy and native pins stay fixed. All 27
+publication tests pass. This pass adds/runs no native probes or runtime cases
+and makes no new performance claim.
+
+Eight large labeled bodies, 150 opaque labels, 205 opaque fields and 226
+single-letter methods remain. Live UI/font/archive loading, entity-pool setup,
+login/crypto/event-queue/network behavior, full game/browser/phone and
+heap/presented-FPS acceptance remain unverified.
+
+Previous pass 163 adds 75 guarded names: one method, three parameters, 69 locals and
 two lexical labels. All 53 VorbisCodebook, 39 VorbisResidue and seven VorbisMapping
 declarations now have readable names; constructors follow their class rules.
 The seeded reverseLowBitsIntoAccumulator helper and all its parameters/locals

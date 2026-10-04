@@ -35,10 +35,10 @@ class VisualPropertyOverrides extends VisualPropertyNode {
     private Sprite field_Z;
     private int field_z;
     private boolean field_N;
-    static boolean field_I;
+    static boolean showLoginOnMessageDismiss;
     private int field_ab;
     static String connectionLostWithReasonText;
-    static String field_y;
+    static String continueText;
     private Sprite field_u;
     private int field_G;
     private int field_U;
@@ -47,11 +47,11 @@ class VisualPropertyOverrides extends VisualPropertyNode {
     private int field_w;
 
     private final void mergeDefinedProperties(int methodGuard, VisualPropertyOverrides overrides) {
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        String stackIn_101_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
+        RuntimeException mergeFailureBeforeDescription = null;
+        StringBuilder mergeMessagePrefix = null;
+        String inheritedPropertiesDescription = null;
+        RuntimeException caughtMergeFailure = null;
+        RuntimeException mergeFailureForContext = null;
         try {
           if (overrides != null) {
             if (overrides.field_K != -2147483648) {
@@ -170,17 +170,17 @@ class VisualPropertyOverrides extends VisualPropertyNode {
             sparkleFrames = (Sprite[]) null;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_100_0 = var3;
-          stackIn_100_1 = new StringBuilder().append("mi.B(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException mergeFailure) {
+          caughtMergeFailure = mergeFailure;
+          mergeFailureForContext = caughtMergeFailure;
+          mergeFailureBeforeDescription = mergeFailureForContext;
+          mergeMessagePrefix = new StringBuilder().append("mi.B(").append(methodGuard).append(',');
           if (overrides == null) {
-            stackIn_101_2 = "null";
+            inheritedPropertiesDescription = "null";
           } else {
-            stackIn_101_2 = "{...}";
+            inheritedPropertiesDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) mergeFailureBeforeDescription), ((StringBuilder) (Object) mergeMessagePrefix).append(inheritedPropertiesDescription).append(')').toString());
         }
     }
 
@@ -188,24 +188,24 @@ class VisualPropertyOverrides extends VisualPropertyNode {
         this(nodeKey, inheritedProperties, 0, 0, 0, 0, (String) null);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseVisualOverrideSharedResources(boolean preserveLoginContinueAndSparkleResources) {
         connectionLostWithReasonText = null;
-        if (param0) {
+        if (preserveLoginContinueAndSparkleResources) {
             return;
         }
         invalidUserOrPasswordText = null;
-        field_y = null;
+        continueText = null;
         sparkleFrames = null;
     }
 
     private VisualPropertyOverrides(long nodeKey, VisualPropertyOverrides inheritedProperties, int unusedFirstOption, int unusedSecondOption, int unusedThirdOption, int unusedFourthOption, String textOverride) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException overrideConstructionFailureForContext = null;
+        RuntimeException overrideConstructionFailureBeforeDescription = null;
+        StringBuilder overrideConstructionMessagePrefix = null;
+        String inheritedPropertiesDescription = null;
+        StringBuilder overrideConstructionMessageBeforeText = null;
+        String textOverrideDescription = null;
+        RuntimeException caughtOverrideConstructionFailure = null;
         this.field_bb = -1;
         this.field_t = 256;
         this.field_T = -2147483648;
@@ -226,30 +226,30 @@ class VisualPropertyOverrides extends VisualPropertyNode {
             this.textOverride = textOverride;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("mi.<init>(").append(nodeKey).append(',');
+        } catch (java.lang.RuntimeException overrideConstructionFailure) {
+          caughtOverrideConstructionFailure = overrideConstructionFailure;
+          overrideConstructionFailureForContext = caughtOverrideConstructionFailure;
+          overrideConstructionFailureBeforeDescription = overrideConstructionFailureForContext;
+          overrideConstructionMessagePrefix = new StringBuilder().append("mi.<init>(").append(nodeKey).append(',');
           if (inheritedProperties == null) {
-            stackIn_7_2 = "null";
+            inheritedPropertiesDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            inheritedPropertiesDescription = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(unusedFirstOption).append(',').append(unusedSecondOption).append(',').append(unusedThirdOption).append(',').append(unusedFourthOption).append(',');
+          overrideConstructionMessageBeforeText = ((StringBuilder) (Object) overrideConstructionMessagePrefix).append(inheritedPropertiesDescription).append(',').append(unusedFirstOption).append(',').append(unusedSecondOption).append(',').append(unusedThirdOption).append(',').append(unusedFourthOption).append(',');
           if (textOverride == null) {
-            stackIn_10_2 = "null";
+            textOverrideDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            textOverrideDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) overrideConstructionFailureBeforeDescription), ((StringBuilder) (Object) overrideConstructionMessageBeforeText).append(textOverrideDescription).append(')').toString());
         }
     }
 
     static {
         invalidUserOrPasswordText = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
-        field_y = "Continue";
-        field_I = false;
+        continueText = "Continue";
+        showLoginOnMessageDismiss = false;
         connectionLostWithReasonText = "Connection lost. <%0>";
     }
 }

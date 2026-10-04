@@ -86,7 +86,7 @@ final class SessionTextHistorySupport {
     final static void prepareAccountCreationUi(int methodGuard) {
         AccountCreationDialog.a(ResourceArchive.accountCreationEmail, (byte) -61, true, ByteStorage.accountCreationPassword);
         int sentinelRemainder = -30 % ((methodGuard + 30) / 36);
-        VisualPropertyOverrides.field_I = true;
+        VisualPropertyOverrides.showLoginOnMessageDismiss = true;
     }
 
     static {

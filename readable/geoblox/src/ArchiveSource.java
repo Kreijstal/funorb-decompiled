@@ -59,24 +59,24 @@ abstract class ArchiveSource {
           MessageDialogSupport.encryptedPayloadScratchBuffer.writeBytes(param5, -97, param4, param2);
           MessageDialogSupport.encryptedPayloadScratchBuffer.padZerosToPosition((byte) -84, var7_int);
           MessageDialogSupport.encryptedPayloadScratchBuffer.encryptXteaBlocks(var12, (byte) -33);
-          if (!((HotspotTextWidget.field_I != null) &&
-              (HotspotTextWidget.field_I.bytes.length >= 100))) {
-            HotspotTextWidget.field_I = new ByteArrayBuffer(100);
+          if (!((HotspotTextWidget.encryptedPayloadKeyScratchBuffer != null) &&
+              (HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes.length >= 100))) {
+            HotspotTextWidget.encryptedPayloadKeyScratchBuffer = new ByteArrayBuffer(100);
           }
-          HotspotTextWidget.field_I.position = 0;
-          HotspotTextWidget.field_I.writeByte((byte) -69, 10);
+          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position = 0;
+          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeByte((byte) -69, 10);
           var10 = 0;
           var9 = var10;
           while (var10 < 4) {
-            HotspotTextWidget.field_I.writeIntBE((byte) 95, var12[var10]);
+            HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeIntBE((byte) 95, var12[var10]);
             var10++;
           }
           if (!param6) {
             return;
           }
-          HotspotTextWidget.field_I.writeShortBE(param5, 28695);
-          HotspotTextWidget.field_I.replaceWithModPowResult(0, param0, param1);
-          param3.writeBytes(HotspotTextWidget.field_I.position, -97, HotspotTextWidget.field_I.bytes, 0);
+          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeShortBE(param5, 28695);
+          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.replaceWithModPowResult(0, param0, param1);
+          param3.writeBytes(HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position, -97, HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes, 0);
           param3.writeBytes(MessageDialogSupport.encryptedPayloadScratchBuffer.position, -97, MessageDialogSupport.encryptedPayloadScratchBuffer.bytes, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

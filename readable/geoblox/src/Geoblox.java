@@ -58,12 +58,12 @@ public final class Geoblox extends SessionGameApplet {
         int paletteVariantThenKeyboardIndex = 0;
         int clientFlagSnapshot = clientControlFlowFlag;
         ByteStorage.a(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
-        if (null != OpacityWidget.field_F && null != GzipInflater.field_a && TextWidgetSupport.field_c != null && null != ProxySocketConnector.field_m) {
+        if (null != OpacityWidget.synthesizedSoundArchive && null != GzipInflater.field_a && TextWidgetSupport.field_c != null && null != ProxySocketConnector.field_m) {
             HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
-            SocketConnector.prepareInitialGameAudio(OpacityWidget.field_F, (byte) 80, TextWidgetSupport.field_c, GzipInflater.field_a, ProxySocketConnector.field_m);
+            SocketConnector.prepareInitialGameAudio(OpacityWidget.synthesizedSoundArchive, (byte) 80, TextWidgetSupport.field_c, GzipInflater.field_a, ProxySocketConnector.field_m);
             TextWidgetSupport.field_c = null;
-            OpacityWidget.field_F = null;
+            OpacityWidget.synthesizedSoundArchive = null;
             ProxySocketConnector.field_m = null;
             GzipInflater.field_a = null;
             EntityContactSupport.resetFrameTimingHistory(127);
@@ -254,8 +254,8 @@ public final class Geoblox extends SessionGameApplet {
           return true;
         }
         Under13TermsPanel.g(9);
-        if ((OpacityWidget.field_F.ensureIndexLoaded(0)) &&
-            (OpacityWidget.field_F.loadAllGroups(true))) {
+        if ((OpacityWidget.synthesizedSoundArchive.ensureIndexLoaded(0)) &&
+            (OpacityWidget.synthesizedSoundArchive.loadAllGroups(true))) {
           if (TextWidgetSupport.field_c.ensureIndexLoaded(0)) {
             soundArchiveSnapshot = TextWidgetSupport.field_c;
             soundLoadGroupsGuard = (archivePollGuard) ? false : true;
@@ -320,7 +320,7 @@ public final class Geoblox extends SessionGameApplet {
           HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, TextWidgetSupport.field_c, "", AchievementProtocolSupport.loadingSoundEffectsText, true), -2, 10.0f);
           return false;
         }
-        HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, OpacityWidget.field_F, "", AchievementProtocolSupport.loadingSoundEffectsText, true), -2, 5.0f);
+        HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, OpacityWidget.synthesizedSoundArchive, "", AchievementProtocolSupport.loadingSoundEffectsText, true), -2, 5.0f);
         return false;
     }
 
@@ -445,7 +445,7 @@ public final class Geoblox extends SessionGameApplet {
         TextValidationSupport.clearValidationArchive(methodGuard ^ 30613);
         AccountEligibilitySupport.clearAccountEligibilityResources(methodGuard - 15583);
         SettingsCookieSupport.clearSettingsCookieTexts(true);
-        VisualPropertyOverrides.b(false);
+        VisualPropertyOverrides.releaseVisualOverrideSharedResources(false);
         SecondaryNodeHashTable.releaseSharedResources(true);
         IntKeyLookup.a((byte) 49);
         ByteStorage.a(-87);
@@ -494,7 +494,7 @@ public final class Geoblox extends SessionGameApplet {
         ContentTransitionDialog.releaseStaticReferences(methodGuard ^ -320);
         ProgressBarWidget.f(407213000);
         UsernameSuggestionsPanel.releaseUsernameSuggestionSharedResources(true);
-        HotspotTextWidget.h(0);
+        HotspotTextWidget.releaseHotspotSharedResources(0);
         ValidationIconWidget.f(-116);
         ValidationMessageWidget.j(24033);
         CheckboxWidget.f(-75);
@@ -526,7 +526,7 @@ public final class Geoblox extends SessionGameApplet {
         TextInputRenderer.a((byte) 68);
         PasswordWidgetRenderer.c(0);
         SpriteCheckboxRenderer.a(true);
-        OpacityWidget.f((byte) -60);
+        OpacityWidget.releaseOpacitySharedResources((byte) -60);
         SocialListEntry.releaseSocialEntryResources((byte) -128);
         RankedListQuery.b(127);
         ArchiveLoadStep.a(122);
@@ -942,7 +942,7 @@ public final class Geoblox extends SessionGameApplet {
             EntityContactSupport.resetFrameTimingHistory(-105);
         }
         GameGraphicsResources.gameGraphicsArchive = TrackedPcmStream.a(1, true, graphicsArchiveGuard, true, (byte) -111);
-        OpacityWidget.field_F = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
+        OpacityWidget.synthesizedSoundArchive = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
         TextWidgetSupport.field_c = SocketArchiveNetworkClient.createResourceArchive(3, (byte) -62);
         ProxySocketConnector.field_m = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
         GzipInflater.field_a = SocketArchiveNetworkClient.createResourceArchive(5, (byte) -62);
@@ -1029,7 +1029,7 @@ public final class Geoblox extends SessionGameApplet {
         }
         ScoreSubmission.requestedScreenId = -1;
         SettingsCookieSupport.currentScreenId = -1;
-        HotspotTextWidget.f(0);
+        HotspotTextWidget.initializeGameplayEntityPool(0);
         PacketByteCipher.a((byte) -74);
         DequeCursor.field_g = 5997;
         ClientClockSupport.field_a = 4703;

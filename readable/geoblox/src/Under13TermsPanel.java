@@ -13,8 +13,8 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     final static void g(int param0) {
         if (null == RasterTargetSnapshot.field_f) {
-            FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.a(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
-            TextConcatenationSupport.fullscreenAcceptCountdownSingularText = OpacityWidget.a(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
+            FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
+            TextConcatenationSupport.fullscreenAcceptCountdownSingularText = OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
             RasterTargetSnapshot.field_f = new String[19];
             RasterTargetSnapshot.field_f[12] = ValidationState.nextText;
             RasterTargetSnapshot.field_f[7] = SettingsCookieSupport.quitText;
@@ -96,7 +96,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             this.accountCreationDialog = accountCreationDialog;
             this.continueButton = new ButtonWidget(UsernameQuerySupport.continueText, (WidgetListener) null);
             this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
-            var7 = OpacityWidget.a(TextPairLoginPayload.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
+            var7 = OpacityWidget.replaceIndexedTextMarkers(TextPairLoginPayload.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
             var4 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
             this.termsText = new HotspotTextWidget(var7, var4);

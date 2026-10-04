@@ -5,7 +5,7 @@ final class OpacityWidget extends SingleChildWidget {
     static String fullscreenAfterAcceptText;
     static String createInvalidEmailAlertText;
     int opacity;
-    static ResourceArchive field_F;
+    static ResourceArchive synthesizedSoundArchive;
     static boolean[] enabledSessionPacketOpcodes;
     static String createDisplayNameText;
 
@@ -32,113 +32,113 @@ final class OpacityWidget extends SingleChildWidget {
         }
     }
 
-    final static String a(String param0, String[] param1, byte param2) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        String stackIn_12_0 = null;
-        String stackIn_25_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_29_2 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        StringBuilder var6 = null;
-        int var7 = 0;
-        String var7_ref_String = null;
-        int var8 = 0;
-        String var9 = null;
-        int var10 = 0;
+    final static String replaceIndexedTextMarkers(String templateText, String[] replacementTexts, byte methodGuard) {
+        StringBuilder discardedTailAppendResult = null;
+        StringBuilder discardedPrefixAppendResult = null;
+        StringBuilder discardedReplacementAppendResult = null;
+        String nullTemplateResult = null;
+        String completedTemplateResult = null;
+        RuntimeException templateFailureBeforeDescription = null;
+        StringBuilder templateMessagePrefix = null;
+        String templateDescription = null;
+        StringBuilder templateMessageBeforeReplacements = null;
+        String replacementsDescription = null;
+        RuntimeException caughtTemplateFailure = null;
+        int templateLength = 0;
+        RuntimeException templateFailureForContext = null;
+        int resultCapacity = 0;
+        int scanCursor = 0;
+        int capacityMarkerStart = 0;
+        StringBuilder resultBuilder = null;
+        int unchangedTextStart = 0;
+        String capacityMarkerIdText = null;
+        int capacityReplacementIndexOrBuildMarkerStart = 0;
+        String buildMarkerIdText = null;
+        int buildReplacementIndex = 0;
         try {
-          var3_int = param0.length();
-          var4 = var3_int;
-          var5 = 0;
+          templateLength = templateText.length();
+          resultCapacity = templateLength;
+          scanCursor = 0;
           while (true) {
-            var6_int = param0.indexOf("<%", var5);
-            if (0 <= var6_int) {
-              for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (DualLinkNode.isAsciiDigit(-58, param0.charAt(var5))) {
+            capacityMarkerStart = templateText.indexOf("<%", scanCursor);
+            if (0 <= capacityMarkerStart) {
+              for (scanCursor = capacityMarkerStart + 2; templateLength > scanCursor; scanCursor++) {
+                if (DualLinkNode.isAsciiDigit(-58, templateText.charAt(scanCursor))) {
                   continue;
                 }
                 break;
               }
-              var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!MessageDialog.isSignedDecimalInt((byte) -123, (CharSequence) ((Object) var7_ref_String))) {
+              capacityMarkerIdText = templateText.substring(capacityMarkerStart + 2, scanCursor);
+              if (!MessageDialog.isSignedDecimalInt((byte) -123, (CharSequence) ((Object) capacityMarkerIdText))) {
                 continue;
               }
-              if (var5 >= var3_int) {
+              if (scanCursor >= templateLength) {
                 continue;
               }
-              if (param0.charAt(var5) != 62) {
+              if (templateText.charAt(scanCursor) != 62) {
                 continue;
               }
-              var5++;
-              var8 = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var7_ref_String));
-              var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
+              scanCursor++;
+              capacityReplacementIndexOrBuildMarkerStart = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) capacityMarkerIdText));
+              resultCapacity = resultCapacity + (-scanCursor + (capacityMarkerStart + replacementTexts[capacityReplacementIndexOrBuildMarkerStart].length()));
               continue;
             }
             break;
           }
-          var6 = new StringBuilder(var4);
-          var7 = 0;
-          var5 = 0;
-          if (param2 >= -12) {
-            stackIn_12_0 = (String) null;
-            return stackIn_12_0;
+          resultBuilder = new StringBuilder(resultCapacity);
+          unchangedTextStart = 0;
+          scanCursor = 0;
+          if (methodGuard >= -12) {
+            nullTemplateResult = (String) null;
+            return nullTemplateResult;
           }
           while (true) {
-            var8 = param0.indexOf("<%", var5);
-            if (0 > var8) {
-              discarded$2 = var6.append(param0.substring(var7));
-              stackIn_25_0 = var6.toString();
-              return stackIn_25_0;
+            capacityReplacementIndexOrBuildMarkerStart = templateText.indexOf("<%", scanCursor);
+            if (0 > capacityReplacementIndexOrBuildMarkerStart) {
+              discardedTailAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart));
+              completedTemplateResult = resultBuilder.toString();
+              return completedTemplateResult;
             }
-            for (var5 = var8 + 2; var5 < var3_int; var5++) {
-              if (DualLinkNode.isAsciiDigit(-58, param0.charAt(var5))) {
+            for (scanCursor = capacityReplacementIndexOrBuildMarkerStart + 2; scanCursor < templateLength; scanCursor++) {
+              if (DualLinkNode.isAsciiDigit(-58, templateText.charAt(scanCursor))) {
                 continue;
               }
               break;
             }
-            var9 = param0.substring(2 + var8, var5);
-            if (!MessageDialog.isSignedDecimalInt((byte) -125, (CharSequence) ((Object) var9))) {
+            buildMarkerIdText = templateText.substring(2 + capacityReplacementIndexOrBuildMarkerStart, scanCursor);
+            if (!MessageDialog.isSignedDecimalInt((byte) -125, (CharSequence) ((Object) buildMarkerIdText))) {
               continue;
             }
-            if (var3_int <= var5) {
+            if (templateLength <= scanCursor) {
               continue;
             }
-            if (param0.charAt(var5) != 62) {
+            if (templateText.charAt(scanCursor) != 62) {
               continue;
             }
-            var5++;
-            var10 = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var9));
-            discarded$0 = var6.append(param0.substring(var7, var8));
-            var7 = var5;
-            discarded$1 = var6.append(param1[var10]);
+            scanCursor++;
+            buildReplacementIndex = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) buildMarkerIdText));
+            discardedPrefixAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart, capacityReplacementIndexOrBuildMarkerStart));
+            unchangedTextStart = scanCursor;
+            discardedReplacementAppendResult = resultBuilder.append(replacementTexts[buildReplacementIndex]);
             continue;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_28_0 = var3;
-          stackIn_28_1 = new StringBuilder().append("wj.E(");
-          if (param0 == null) {
-            stackIn_29_2 = "null";
+        } catch (java.lang.RuntimeException templateFailure) {
+          caughtTemplateFailure = templateFailure;
+          templateFailureForContext = caughtTemplateFailure;
+          templateFailureBeforeDescription = templateFailureForContext;
+          templateMessagePrefix = new StringBuilder().append("wj.E(");
+          if (templateText == null) {
+            templateDescription = "null";
           } else {
-            stackIn_29_2 = "{...}";
+            templateDescription = "{...}";
           }
-          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
-          if (param1 == null) {
-            stackIn_32_2 = "null";
+          templateMessageBeforeReplacements = ((StringBuilder) (Object) templateMessagePrefix).append(templateDescription).append(',');
+          if (replacementTexts == null) {
+            replacementsDescription = "null";
           } else {
-            stackIn_32_2 = "{...}";
+            replacementsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) templateFailureBeforeDescription), ((StringBuilder) (Object) templateMessageBeforeReplacements).append(replacementsDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -164,115 +164,115 @@ final class OpacityWidget extends SingleChildWidget {
         contentRaster.drawAlpha(this.widgetX + parentX, this.widgetY + parentY, this.opacity);
     }
 
-    public static void f(byte param0) {
+    public static void releaseOpacitySharedResources(byte methodGuard) {
         enabledSessionPacketOpcodes = null;
         createInvalidEmailAlertText = null;
         fullscreenAfterAcceptText = null;
-        if (param0 != -60) {
+        if (methodGuard != -60) {
             return;
         }
-        field_F = null;
+        synthesizedSoundArchive = null;
         createDisplayNameText = null;
     }
 
-    final static void a(PlatformTaskDispatcher param0, byte param1, Object param2) {
-        int var3_int = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        Throwable decompiledCaughtException = null;
-        Exception var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        int var5 = 0;
-        var5 = Geoblox.clientControlFlowFlag;
+    final static void pollEventQueueAndPostDummyEvent(PlatformTaskDispatcher taskDispatcher, byte methodGuard, Object eventSource) {
+        int queuePollIndex = 0;
+        RuntimeException queueFailureBeforeDescription = null;
+        StringBuilder queueMessagePrefix = null;
+        String dispatcherDescription = null;
+        StringBuilder queueMessageBeforeEventSource = null;
+        String eventSourceDescription = null;
+        Throwable caughtQueueOrPostFailure = null;
+        Exception ignoredPostFailure = null;
+        RuntimeException queueFailureForContext = null;
+        int guardQuotient = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param0.systemEventQueue == null) {
+          if (taskDispatcher.systemEventQueue == null) {
             return;
           }
-          for (var3_int = 0; var3_int < 50; var3_int++) {
-            if (null != param0.systemEventQueue.peekEvent()) {
+          for (queuePollIndex = 0; queuePollIndex < 50; queuePollIndex++) {
+            if (null != taskDispatcher.systemEventQueue.peekEvent()) {
               ByteTextDecodingSupport.sleepMillis(0, 1L);
               continue;
             }
             break;
           }
-          var4 = 11 / ((param1 - 2) / 48);
+          guardQuotient = 11 / ((methodGuard - 2) / 48);
           try {
-            if (param2 != null) {
-              param0.systemEventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+            if (eventSource != null) {
+              taskDispatcher.systemEventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(eventSource, 1001, "dummy")));
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (Exception) (Object) decompiledCaughtException;
+          } catch (java.lang.Exception postFailure) {
+            caughtQueueOrPostFailure = postFailure;
+            ignoredPostFailure = (Exception) (Object) caughtQueueOrPostFailure;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_17_0 = var3_ref;
-          stackIn_17_1 = new StringBuilder().append("wj.G(");
-          if (param0 == null) {
-            stackIn_18_2 = "null";
+        } catch (java.lang.RuntimeException queueFailure) {
+          caughtQueueOrPostFailure = queueFailure;
+          queueFailureForContext = (RuntimeException) (Object) caughtQueueOrPostFailure;
+          queueFailureBeforeDescription = queueFailureForContext;
+          queueMessagePrefix = new StringBuilder().append("wj.G(");
+          if (taskDispatcher == null) {
+            dispatcherDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            dispatcherDescription = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_21_2 = "null";
+          queueMessageBeforeEventSource = ((StringBuilder) (Object) queueMessagePrefix).append(dispatcherDescription).append(',').append(methodGuard).append(',');
+          if (eventSource == null) {
+            eventSourceDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            eventSourceDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queueFailureBeforeDescription), ((StringBuilder) (Object) queueMessageBeforeEventSource).append(eventSourceDescription).append(')').toString());
         }
     }
 
     final static Sprite[] loadSpriteFrames(String resourceName, String groupName, ResourceArchive graphicsArchive, int methodGuard) {
         int archiveGroupId = 0;
-        RuntimeException var4 = null;
+        RuntimeException spriteLoadFailureForContext = null;
         int archiveFileId = 0;
-        Sprite[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        Sprite[] spriteFramesBeforeReturn = null;
+        RuntimeException spriteLoadFailureBeforeDescription = null;
+        StringBuilder spriteLoadMessagePrefix = null;
+        String resourceNameDescription = null;
+        StringBuilder spriteLoadMessageBeforeGroupName = null;
+        String groupNameDescription = null;
+        StringBuilder spriteLoadMessageBeforeArchive = null;
+        String archiveDescription = null;
+        RuntimeException caughtSpriteLoadFailure = null;
         try {
           archiveGroupId = graphicsArchive.findGroupId((byte) 126, groupName);
           archiveFileId = graphicsArchive.findFileId(resourceName, -114, archiveGroupId);
           if (methodGuard != 0) {
             enabledSessionPacketOpcodes = (boolean[]) null;
           }
-          stackIn_3_0 = GameGraphicsResources.loadRgbSpritesById(archiveGroupId, (byte) -81, archiveFileId, graphicsArchive);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("wj.C(");
+          spriteFramesBeforeReturn = GameGraphicsResources.loadRgbSpritesById(archiveGroupId, (byte) -81, archiveFileId, graphicsArchive);
+          return spriteFramesBeforeReturn;
+        } catch (java.lang.RuntimeException spriteLoadFailure) {
+          caughtSpriteLoadFailure = spriteLoadFailure;
+          spriteLoadFailureForContext = caughtSpriteLoadFailure;
+          spriteLoadFailureBeforeDescription = spriteLoadFailureForContext;
+          spriteLoadMessagePrefix = new StringBuilder().append("wj.C(");
           if (resourceName == null) {
-            stackIn_7_2 = "null";
+            resourceNameDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          spriteLoadMessageBeforeGroupName = ((StringBuilder) (Object) spriteLoadMessagePrefix).append(resourceNameDescription).append(',');
           if (groupName == null) {
-            stackIn_10_2 = "null";
+            groupNameDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            groupNameDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          spriteLoadMessageBeforeArchive = ((StringBuilder) (Object) spriteLoadMessageBeforeGroupName).append(groupNameDescription).append(',');
           if (graphicsArchive == null) {
-            stackIn_13_2 = "null";
+            archiveDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            archiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) spriteLoadFailureBeforeDescription), ((StringBuilder) (Object) spriteLoadMessageBeforeArchive).append(archiveDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

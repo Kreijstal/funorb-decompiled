@@ -133,7 +133,7 @@ final class GameplaySession {
               (476 > PcmResampler.pointerYSnapshot)) {
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
           }
-          FadingDialog.uiPaletteFont.drawCenteredText(VisualPropertyOverrides.field_y, 320, 468, 0, -1);
+          FadingDialog.uiPaletteFont.drawCenteredText(VisualPropertyOverrides.continueText, 320, 468, 0, -1);
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
         }
     }
@@ -496,11 +496,11 @@ final class GameplaySession {
             ReflectionCheckRequest.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
             if ((640 > this.pointsPanelX) &&
                 (0 < this.pendingPopupPoints)) {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SessionBootstrapSupport.bonusAmountTemplateText, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(SessionBootstrapSupport.bonusAmountTemplateText, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
             }
             if (this.showSessionCounters) {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SingleChildWidget.fpsTextTemplate, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(SingleChildWidget.fpsTextTemplate, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             gameOverTitleRendering: {
               ProxyAuthenticationRequiredException.drawScorePopups(-117);
@@ -518,7 +518,7 @@ final class GameplaySession {
               }
             }
             settledResultRendering: {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (EntityContactSupport.areEntityQueuesSettled(0)) {
                 if (!((0 != this.sessionPhase) &&
                       (this.sessionPhase != 1))) {

@@ -128,7 +128,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (methodGuard != -11) {
             return;
         }
-        String sessionCookieValue = HotspotTextWidget.i(1000);
+        String sessionCookieValue = HotspotTextWidget.readSessionPacketText(1000);
         MeshPrioritySupport.updateSessionCookie(sessionCookieValue, NodeHashTableIterator.getActiveApplet(111), methodGuard + 10);
     }
 
@@ -529,7 +529,7 @@ abstract class SessionGameApplet extends GameApplet {
                 AudioService.sessionResponseText = null;
                 WidgetSkinState.pendingUsernameSuggestions = null;
               }
-              emailAvailabilityResult = HotspotTextWidget.a((byte) 111);
+              emailAvailabilityResult = HotspotTextWidget.takePendingLoginBooleanReply((byte) 111);
               if (emailAvailabilityResult != null) {
                 EmailAvailabilityValidator.completeActiveEmailAvailabilityQuery(actionGuard ^ 110, emailAvailabilityResult.booleanValue());
               }

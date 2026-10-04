@@ -68,7 +68,7 @@ final class AudioService implements Runnable {
                 }
                 ByteTextDecodingSupport.sleepMillis(0, 10L);
                 Object unusedNullEventSource = (Object) null;
-                OpacityWidget.a(this.taskDispatcher, (byte) 116, (Object) null);
+                OpacityWidget.pollEventQueueAndPostDummyEvent(this.taskDispatcher, (byte) 116, (Object) null);
             }
         } catch (Exception audioServiceFailure) {
             String unusedNullErrorMessage = (String) null;

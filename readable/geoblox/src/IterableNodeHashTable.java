@@ -33,7 +33,7 @@ final class IterableNodeHashTable implements Iterable {
             if (1 == ticketCountFromSessionAccessByte) {
               TextWidgetRenderer.unreadTicketMessage = EntityContactSupport.ticketingOneUnreadText;
             } else {
-              TextWidgetRenderer.unreadTicketMessage = OpacityWidget.a(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(ticketCountFromSessionAccessByte)}, (byte) -124);
+              TextWidgetRenderer.unreadTicketMessage = OpacityWidget.replaceIndexedTextMarkers(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(ticketCountFromSessionAccessByte)}, (byte) -124);
             }
             TextWidgetRenderer.unreadTicketMessage = NameCharacterSupport.joinTextParts(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.unreadTicketMessage), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }

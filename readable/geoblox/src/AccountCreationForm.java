@@ -146,7 +146,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         PasswordWidgetRenderer sharedPasswordRenderer = new PasswordWidgetRenderer(10000536);
         this.confirmPasswordInput.renderer = (WidgetRenderer) ((Object) sharedPasswordRenderer);
         this.passwordInput.renderer = (WidgetRenderer) ((Object) sharedPasswordRenderer);
-        String termsMarkup = OpacityWidget.a(ArchiveIndex.createAgreeTermsText, new String[]{this.getTermsLinkOpeningMarkup(false), this.getTermsLinkClosingMarkup(false)}, (byte) -72);
+        String termsMarkup = OpacityWidget.replaceIndexedTextMarkers(ArchiveIndex.createAgreeTermsText, new String[]{this.getTermsLinkOpeningMarkup(false), this.getTermsLinkClosingMarkup(false)}, (byte) -72);
         int nextRowY = 20;
         nextRowY = nextRowY + this.addLabeledInputRow(nextRowY, ScorePopupSupport.createEmailText, 170, this.emailInput, 5);
         nextRowY = nextRowY + (5 + this.addLabeledValidationMessageRow(this.confirmEmailInput, 170, ClientRenderingState.createEmailConfirmationText, 20, "", nextRowY, (byte) -65));

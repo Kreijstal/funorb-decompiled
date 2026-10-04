@@ -42,7 +42,7 @@ final class LoginProtocolSupport {
               }
               if (PacketBuffer.currentProtocolStage == IterableNodeHashTable.requestReadyStage) {
                 if (!useLongLoginPayload) {
-                  EntityContactSupport.pendingLoginPayload = HotspotTextWidget.a(false, primaryLoginText, secondaryLoginText, false);
+                  EntityContactSupport.pendingLoginPayload = HotspotTextWidget.createLoginPayloadForIdentifier(false, primaryLoginText, secondaryLoginText, false);
                 } else {
                   unusedNullLongPayloadTextSnapshot = (String) null;
                   EntityContactSupport.pendingLoginPayload = SecondaryDeque.createLoginPayload(true, ClientClockSupport.field_c, (String) null, primaryLoginText, false);

@@ -274,7 +274,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(123, "cont");
           if (null != var2) {
-            VisualPropertyOverrides.field_y = EmailValidator.decodeTextBytes(1, var2);
+            VisualPropertyOverrides.continueText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(124, "restartTutorial");
           if (var2 != null) {

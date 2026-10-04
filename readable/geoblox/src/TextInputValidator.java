@@ -153,9 +153,9 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             }
             if (displayResponseContent != 0) {
               if (ArchiveLoadStep.field_a) {
-                responseText = OpacityWidget.a(VisualPropertyOverrides.connectionLostWithReasonText, new String[]{responseText}, (byte) -25);
+                responseText = OpacityWidget.replaceIndexedTextMarkers(VisualPropertyOverrides.connectionLostWithReasonText, new String[]{responseText}, (byte) -25);
               }
-              if (VisualPropertyOverrides.field_I) {
+              if (VisualPropertyOverrides.showLoginOnMessageDismiss) {
                 responseText = AccountEligibilitySupport.pleaseTryAgainText;
               }
               Geoblox.activeMessageDialog.installErrorContent(responseCode, methodGuard + 19686, responseText);

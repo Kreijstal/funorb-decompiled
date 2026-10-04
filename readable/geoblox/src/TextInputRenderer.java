@@ -211,7 +211,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             }
             var12 = var12 + (IntrusiveNodeHashTable.smallFont.drawParagraph(LoginProtocolSupport.achievementDescriptions[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
             var12 += 10;
-            IntrusiveNodeHashTable.smallFont.drawText(OpacityWidget.a(UsernameAvailabilityQuery.orbPointsText, new String[]{Integer.toString(AlternateLongAndTextLoginPayload.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawText(OpacityWidget.replaceIndexedTextMarkers(UsernameAvailabilityQuery.orbPointsText, new String[]{Integer.toString(AlternateLongAndTextLoginPayload.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
             for (var13 = 0; var13 < SocketArchiveNetworkClient.field_s[var7]; var13++) {
               UsernameAvailabilityValidator.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
             }
