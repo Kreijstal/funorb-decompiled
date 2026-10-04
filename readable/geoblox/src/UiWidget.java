@@ -176,7 +176,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String text, WidgetListener listener) {
-        this(text, DialRenderer.field_j.field_b, listener);
+        this(text, DialRenderer.field_j.textRenderer, listener);
     }
 
     boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {

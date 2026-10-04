@@ -134,7 +134,7 @@ class TextInputWidget extends ButtonWidget {
         this.wordSelectionEndIndex = -1;
         try {
             this.maximumTextLength = maximumLength;
-            this.renderer = DialRenderer.field_j.field_g;
+            this.renderer = DialRenderer.field_j.textInputRenderer;
             this.setInputText(-128, initialText, true);
             this.caretScrollingEnabled = true;
             this.caretBlinkStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);

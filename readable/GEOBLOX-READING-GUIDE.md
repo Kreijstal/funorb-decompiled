@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9e8030e282b8b55b7223bd95bc5b305eae0494f9/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/d656713f899a8c607812f3306ca2c043ca71994b/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 154)
+## Current readability (pass 155)
 
-The export has 14,911 guarded names and 103,436 Java identifier edits, plus 11
+The export has 14,988 guarded names and 103,778 Java identifier edits, plus 11
 class-name literal edits and 250 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -24,7 +24,48 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current widget skin naming (pass 154)
+## Current widget theme naming (pass 155)
+
+Pass 155 adds 77 guarded names: eleven fields, one method, five parameters and
+sixty locals. All 119 declarations owned by WidgetTheme now have readable names;
+its constructor follows the existing class rule. Renderer slots show text,
+button, checkbox and text-input roles. The protected button constructor's fallback
+slot is explicitly named but remains uninitialized by theme setup. Tooltip
+padding, line spacing, wrapped border color and beveled panel construction are
+visible both here and in MessageDialog's overrides.
+
+Initialization keeps its original unused dial/slider/stripe/arrow renderer
+constructions and aliased overlay sprites. Reused locals name every role:
+wrapWidthOrBoxX and widthChunkCountOrLineIndexOrBoxY. Single-line and wrapped
+boxes keep their different edge placement and padding rules. Wrong guards retain
+recursive panel failures, partial drawing and the bottom-padding write. The
+checkbox renderer is cleared by a false tooltip guard only after successful
+drawing; glyph callback failures preserve it and the already drawn box.
+
+The existing nine-slice fixture adds 2,634 native/raw/readable cases: ten
+constructor/initialization cases and 2,624 tooltip/line-guard cases. Independent
+oracles check renderer/default/panel/color/padding aliases, raster pixels, glyph
+call geometry, explicit line breaks, quarter-raster balancing, clipping and
+exception/Error identity. Twenty-six expected failures retain original partial
+effects. Negative/positive control flags also exercise bootstrap-dependent account
+widget failures with the shared theme deliberately null; successful setup is
+checked separately. No client-control flag value is assumed. All nine previous
+raster/widget trace pins remain.
+
+The export has 14,988 rules and 103,778 identifier edits, plus eleven class-name
+literal and 250 label edits: 104,039 total. All 14,911 previous complete rules
+remain. Six generated Java files change; raw code, generator/workflow/stub pins,
+all 19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Both 303-file corpora compile, reproduce and reverse byte exactly.
+The 27 publication tests and affected native fixtures pass. No generated Java body
+is hand edited and no decompiler change is required.
+
+Eight large labeled bodies and 162 opaque labels remain, together with 291
+opaque fields and 319 single-letter methods. Real fonts/assets, arbitrary markup
+and callbacks, live account UI/network/game/server/browser/phone and heap/FPS
+acceptance remain unverified.
+
+## Previous widget skin naming (pass 154)
 
 Pass 154 adds 207 guarded names: five fields, 22 methods, 54 parameters and
 126 locals. All 113 declarations owned by WidgetSkinState and all 119 owned by

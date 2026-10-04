@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "9e8030e282b8b55b7223bd95bc5b305eae0494f9",
+    "commit": "d656713f899a8c607812f3306ca2c043ca71994b",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "bab95376122df673d2be07abb7a705954ca86ea6d1fba3d3f389b52030bc6212"
+      "sha256": "34f077255ffce419617faf92b67b44da4e5ce3fc4be9f4c22911b8fa1007ba5f"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,33 +3291,33 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "80d6057d5dd74fe84f9f9161ce494f840e531fbf6779e0de09ab8e7ff016e342",
+    "outputTreeSha256": "9567faffc99223d9d3d8688d25bf19a9021108a435710232ef24c47cd0fc9967",
     "files": 303,
-    "rules": 14911,
-    "identifierEdits": 103436,
+    "rules": 14988,
+    "identifierEdits": 103778,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 103697,
+    "totalEdits": 104039,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 250,
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 154,
-      "rulesAdded": 207,
+      "version": 155,
+      "rulesAdded": 77,
       "rulesRefined": 0,
-      "fields": 5,
-      "methods": 22,
-      "parameters": 54,
-      "locals": 126,
+      "fields": 11,
+      "methods": 1,
+      "parameters": 5,
+      "locals": 60,
       "labels": 0,
-      "previousCompleteRulesPreserved": 14704,
+      "previousCompleteRulesPreserved": 14911,
       "explicitlyCorrectedSymbols": [],
       "rawInputAndGeneratorPinsUnchanged": true,
-      "allWidgetSkinAndStatefulRendererDeclarationsNamed": true,
+      "allWidgetThemeDeclarationsNamed": true,
       "remainingOpaqueBlockLabels": 117,
       "remainingOpaqueLoopLabels": 45,
       "wholeGameEquivalenceVerified": false
@@ -6494,5 +6494,135 @@
     "nativeScenarios": 9061,
     "existingRasterTracePinsPreserved": 8,
     "scope": "Pass 154 adds 207 guarded names: five fields, 22 methods, 54 parameters and\n126 locals. All 113 declarations owned by WidgetSkinState and all 119 owned by\nStatefulWidgetRenderer have readable names; their three constructors follow\nclass rules. Callers now show replacing a state skin, setting offsets/colors,\ncopying properties, merging overlays and drawing the result. The renderer applies\nbase0, active1, pressed3 or hover2, focus5 and disabled4 in that exact order.\n\nThe names expose existing quirks without changing behavior: invalid setters can\nwrite before returning null, reset keeps the overlay flag, invalid copying clears\nthe source panel array after the first target write, and copying skin properties\nstill shares sprites/arrays. Flushing draws and resets the old target before the\nmerge guard. Rendering restores the clip only on success. Shared fields are\ntraced through their actual consumers: username suggestions, intro face RGB,\ntext-template definitions, the decoded ranked ratio numerator and email local-part\ncharacters. No client-control flag value is assumed.\n\nThe existing nine-slice fixture adds 9,061 native/raw/readable cases with\nindependent state, alias, guard-timing and pixel oracles: 769 constructor/reset,\n472 setter/cleanup, 36 copy/null-target, 1,548 merge/flush/failure, 71 renderer\nreplace/copy/panel/range/cleanup and 6,165 state-order/alignment/failure cases.\nThey include 302 expected failures and negative/zero/positive control flags.\nAll eight previous raster trace hashes remain unchanged.\n\nThe export has 14,911 rules and 103,436 identifier edits, plus eleven class-name\nliteral and 250 label edits: 103,697 total. All 14,704 previous complete rules\nremain. Seventeen generated Java files change; raw code, generator/workflow/stub\npins, all 19,498 dictionary identities, 136,607 bindings, 388 overrides and 811\nlabel records remain. Both 303-file corpora compile, reproduce and reverse byte\nexactly. The 27 publication tests and affected native fixtures pass. No generated\nJava body is hand edited and no decompiler change is required.\n\nEight large labeled bodies and 162 opaque labels remain, together with 302\nopaque fields and 320 single-letter methods. Real fonts/assets, arbitrary widget\ncallbacks, live dialogs/network, full-game/server/browser/phone and heap/FPS\nacceptance remain unverified."
+  },
+  "widgetThemeNaming": {
+    "version": 155,
+    "rulesAdded": 77,
+    "rulesRefined": 0,
+    "C": 0,
+    "F": 11,
+    "M": 1,
+    "P": 5,
+    "L": 60,
+    "B": 0,
+    "previousCompleteRulesPreserved": 14911,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "allOwnedDeclarationsNamed": {
+      "wa": 119
+    },
+    "constructorNamesFollowClassRules": true,
+    "sourceBodiesEditedByHand": false,
+    "identifierEditsAdded": 342,
+    "labelEditsAdded": 0,
+    "changedJavaFiles": 6,
+    "changedOriginalJavaFiles": [
+      "dj.java",
+      "el.java",
+      "f.java",
+      "hk.java",
+      "vi.java",
+      "wa.java"
+    ],
+    "compilerResolvedFieldOccurrences": {
+      "F:wa.field_b:Ldh;": {
+        "declarationsAndReferences": 3,
+        "files": [
+          "el.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_c:Ldh;": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "vi.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_d:I": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "f.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_e:I": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "f.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_g:Ldh;": {
+        "declarationsAndReferences": 3,
+        "files": [
+          "dj.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_h:I": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "f.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_i:I": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "f.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_j:Ldh;": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "hk.java",
+          "vi.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_l:Ldh;": {
+        "declarationsAndReferences": 2,
+        "files": [
+          "hk.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_n:I": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "f.java",
+          "wa.java"
+        ]
+      },
+      "F:wa.field_p:I": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "f.java",
+          "wa.java"
+        ]
+      }
+    },
+    "declarationIdentitiesPreserved": 19498,
+    "bindingsCompared": 136607,
+    "overrideRelationshipsPreserved": 388,
+    "labelBindingsPreserved": 811,
+    "labelInventory": {
+      "opaque_plain": 117,
+      "named_plain": 71,
+      "opaque_loop": 45,
+      "named_loop": 12
+    },
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "d656713f899a8c607812f3306ca2c043ca71994b",
+    "manifestSha256": "34f077255ffce419617faf92b67b44da4e5ce3fc4be9f4c22911b8fa1007ba5f",
+    "outputTreeSha256": "9567faffc99223d9d3d8688d25bf19a9021108a435710232ef24c47cd0fc9967",
+    "sourceProofTest": "readable/tests/test-geoblox-nine-slice.mjs",
+    "sourceProofTestSha256": "367b82a8398a93f44592ec043a16fb20334dae92e4e8205e40cefa4a8ebf84e8",
+    "nativeTraceSha256": "46f4fc30c7b757dce41d2a3297929bf5a195b7d15c03d2821809f59b06c437e8",
+    "nativeScenarios": 2634,
+    "expectedFailures": 26,
+    "existingRasterAndWidgetTracePinsPreserved": 9,
+    "scope": "Pass 155 adds 77 guarded names: eleven fields, one method, five parameters and\nsixty locals. All 119 declarations owned by WidgetTheme now have readable names;\nits constructor follows the existing class rule. Renderer slots show text,\nbutton, checkbox and text-input roles. The protected button constructor's fallback\nslot is explicitly named but remains uninitialized by theme setup. Tooltip\npadding, line spacing, wrapped border color and beveled panel construction are\nvisible both here and in MessageDialog's overrides.\n\nInitialization keeps its original unused dial/slider/stripe/arrow renderer\nconstructions and aliased overlay sprites. Reused locals name every role:\nwrapWidthOrBoxX and widthChunkCountOrLineIndexOrBoxY. Single-line and wrapped\nboxes keep their different edge placement and padding rules. Wrong guards retain\nrecursive panel failures, partial drawing and the bottom-padding write. The\ncheckbox renderer is cleared by a false tooltip guard only after successful\ndrawing; glyph callback failures preserve it and the already drawn box.\n\nThe existing nine-slice fixture adds 2,634 native/raw/readable cases: ten\nconstructor/initialization cases and 2,624 tooltip/line-guard cases. Independent\noracles check renderer/default/panel/color/padding aliases, raster pixels, glyph\ncall geometry, explicit line breaks, quarter-raster balancing, clipping and\nexception/Error identity. Twenty-six expected failures retain original partial\neffects. Negative/positive control flags also exercise bootstrap-dependent account\nwidget failures with the shared theme deliberately null; successful setup is\nchecked separately. No client-control flag value is assumed. All nine previous\nraster/widget trace pins remain.\n\nThe export has 14,988 rules and 103,778 identifier edits, plus eleven class-name\nliteral and 250 label edits: 104,039 total. All 14,911 previous complete rules\nremain. Six generated Java files change; raw code, generator/workflow/stub pins,\nall 19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label\nrecords remain. Both 303-file corpora compile, reproduce and reverse byte exactly.\nThe 27 publication tests and affected native fixtures pass. No generated Java body\nis hand edited and no decompiler change is required.\n\nEight large labeled bodies and 162 opaque labels remain, together with 291\nopaque fields and 319 single-letter methods. Real fonts/assets, arbitrary markup\nand callbacks, live account UI/network/game/server/browser/phone and heap/FPS\nacceptance remain unverified."
   }
 }

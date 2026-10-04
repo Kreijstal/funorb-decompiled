@@ -603,13 +603,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         if (null == DiskCacheWorker.field_f) {
             DiskCacheWorker.field_f = new WidgetTheme();
             DiskCacheWorker.field_f.initializeRenderers(9, DialogLayer.sharedUiFont);
-            DiskCacheWorker.field_f.field_h = 14;
+            DiskCacheWorker.field_f.tooltipLineSpacing = 14;
             DiskCacheWorker.field_f.tooltipBackgroundColor = 2763306;
-            DiskCacheWorker.field_f.field_d = 6;
-            DiskCacheWorker.field_f.field_n = 7697781;
-            DiskCacheWorker.field_f.field_e = 5;
-            DiskCacheWorker.field_f.field_i = 0;
-            DiskCacheWorker.field_f.field_p = 4;
+            DiskCacheWorker.field_f.tooltipPaddingLeft = 6;
+            DiskCacheWorker.field_f.wrappedTooltipBorderColor = 7697781;
+            DiskCacheWorker.field_f.tooltipPaddingRight = 5;
+            DiskCacheWorker.field_f.tooltipPaddingTop = 0;
+            DiskCacheWorker.field_f.tooltipPaddingBottom = 4;
             DiskCacheWorker.field_f.tooltipFont = UiFontResources.commonUiSmallFont;
             if (methodGuard >= 71) {
                 return DiskCacheWorker.field_f;

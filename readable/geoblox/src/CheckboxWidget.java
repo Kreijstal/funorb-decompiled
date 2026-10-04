@@ -17,9 +17,9 @@ final class CheckboxWidget extends ButtonWidget {
     }
 
     private CheckboxWidget(String param0, WidgetListener param1) {
-        this(param0, DialRenderer.field_j.field_j, param1);
+        this(param0, DialRenderer.field_j.buttonRenderer, param1);
         try {
-            this.renderer = DialRenderer.field_j.field_c;
+            this.renderer = DialRenderer.field_j.checkboxRenderer;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -33,7 +33,7 @@ final class CheckboxWidget extends ButtonWidget {
     private CheckboxWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-            this.renderer = DialRenderer.field_j.field_c;
+            this.renderer = DialRenderer.field_j.checkboxRenderer;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
