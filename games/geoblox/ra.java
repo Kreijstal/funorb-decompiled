@@ -142,8 +142,9 @@ final class ra implements Iterable {
               var3++;
               continue;
             }
-            return false;
+            break;
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

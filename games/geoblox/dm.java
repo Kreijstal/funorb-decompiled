@@ -735,70 +735,74 @@ class dm extends wh {
               continue;
             }
           }
-          var2 = 0;
-          while (true) {
-            L4: {
-              if (var2 < var1) {
-                var3 = var2 * this.field_r;
-                for (var4 = 0; var4 < this.field_r; var4++) {
-                  if (this.field_v[var3 + var4] != 0) {
-                    break L4;
-                  }
-                }
-                var2++;
-                continue;
-              }
-            }
-            var3 = this.field_r - 1;
-            while (true) {
-              L7: {
-                if (var3 >= 0) {
-                  for (var4 = var2; var4 <= var1; var4++) {
-                    if (this.field_v[var4 * this.field_r + var3] != 0) {
-                      break L7;
-                    }
-                  }
-                  var3--;
-                  continue;
+          break;
+        }
+        var2 = 0;
+        while (true) {
+          L4: {
+            if (var2 < var1) {
+              var3 = var2 * this.field_r;
+              for (var4 = 0; var4 < this.field_r; var4++) {
+                if (this.field_v[var3 + var4] != 0) {
+                  break L4;
                 }
               }
-              var4 = 0;
-              while (true) {
-                L10: {
-                  if (var4 < var3) {
-                    for (var5 = var2; var5 <= var1; var5++) {
-                      if (this.field_v[var5 * this.field_r + var4] != 0) {
-                        break L10;
-                      }
-                    }
-                    var4++;
-                    continue;
-                  }
-                }
-                if ((var4 == 0) &&
-                    (var3 == this.field_r - 1) &&
-                    (var2 == 0) &&
-                    (var1 == this.field_m - 1)) {
-                  return;
-                }
-                var5 = var3 + 1 - var4;
-                var6 = var1 + 1 - var2;
-                var7 = new int[var5 * var6];
-                for (var8 = 0; var8 < var6; var8++) {
-                  for (var9 = 0; var9 < var5; var9++) {
-                    var7[var8 * var5 + var9] = this.field_v[(var8 + var2) * this.field_r + (var9 + var4)];
-                  }
-                }
-                this.field_v = var7;
-                this.field_r = var5;
-                this.field_m = var6;
-                this.field_u = this.field_u + var4;
-                this.field_p = this.field_p + var2;
-                return;
-              }
+              var2++;
+              continue;
             }
           }
+          break;
         }
+        var3 = this.field_r - 1;
+        while (true) {
+          L7: {
+            if (var3 >= 0) {
+              for (var4 = var2; var4 <= var1; var4++) {
+                if (this.field_v[var4 * this.field_r + var3] != 0) {
+                  break L7;
+                }
+              }
+              var3--;
+              continue;
+            }
+          }
+          break;
+        }
+        var4 = 0;
+        while (true) {
+          L10: {
+            if (var4 < var3) {
+              for (var5 = var2; var5 <= var1; var5++) {
+                if (this.field_v[var5 * this.field_r + var4] != 0) {
+                  break L10;
+                }
+              }
+              var4++;
+              continue;
+            }
+          }
+          break;
+        }
+        if ((var4 == 0) &&
+            (var3 == this.field_r - 1) &&
+            (var2 == 0) &&
+            (var1 == this.field_m - 1)) {
+          return;
+        }
+        var5 = var3 + 1 - var4;
+        var6 = var1 + 1 - var2;
+        var7 = new int[var5 * var6];
+        for (var8 = 0; var8 < var6; var8++) {
+          for (var9 = 0; var9 < var5; var9++) {
+            var7[var8 * var5 + var9] = this.field_v[(var8 + var2) * this.field_r + (var9 + var4)];
+          }
+        }
+        this.field_v = var7;
+        this.field_r = var5;
+        this.field_m = var6;
+        this.field_u = this.field_u + var4;
+        this.field_p = this.field_p + var2;
+        return;
     }
 
     final void g(int param0) {

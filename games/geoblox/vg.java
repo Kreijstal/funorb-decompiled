@@ -50,10 +50,11 @@ final class vg {
               this.field_c = this.field_c.field_k;
               continue;
             }
-            var3 = this.field_c;
-            this.field_c = this.field_c.field_k;
-            return var3;
+            break;
           }
+          var3 = this.field_c;
+          this.field_c = this.field_c.field_k;
+          return var3;
         }
         this.field_g = (rc[]) null;
         while (true) {
@@ -65,10 +66,11 @@ final class vg {
             this.field_c = this.field_c.field_k;
             continue;
           }
-          var3 = this.field_c;
-          this.field_c = this.field_c.field_k;
-          return var3;
+          break;
         }
+        var3 = this.field_c;
+        this.field_c = this.field_c.field_k;
+        return var3;
     }
 
     final rc a(long param0, int param1) {
@@ -88,10 +90,11 @@ final class vg {
             this.field_c = this.field_c.field_k;
             continue;
           }
-          var5 = this.field_c;
-          this.field_c = this.field_c.field_k;
-          return var5;
+          break;
         }
+        var5 = this.field_c;
+        this.field_c = this.field_c.field_k;
+        return var5;
     }
 
     public static void a(boolean param0) {

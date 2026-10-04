@@ -199,26 +199,27 @@ final class i {
             } else {
               stackIn_49_0 = -1;
             }
-            if ((stackIn_49_0 > ~param2.field_v) &&
-                (null != param2.field_n)) {
-              var8 = 0;
-              var9 = 0;
-              while (!(uh.field_x.length <= var9)) {
-                var10 = uh.field_x[var9];
-                uh.field_x[var9] = var8;
-                var8 = var8 + var10;
-                var9++;
-                if (var19 != 0) {
-                  return;
-                }
-                continue;
-              }
-            }
-            if (param1 != 22) {
-              field_a = (dm) null;
-            }
-            return;
+            break;
           }
+          if ((stackIn_49_0 > ~param2.field_v) &&
+              (null != param2.field_n)) {
+            var8 = 0;
+            var9 = 0;
+            while (!(uh.field_x.length <= var9)) {
+              var10 = uh.field_x[var9];
+              uh.field_x[var9] = var8;
+              var8 = var8 + var10;
+              var9++;
+              if (var19 != 0) {
+                return;
+              }
+              continue;
+            }
+          }
+          if (param1 != 22) {
+            field_a = (dm) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -348,26 +349,27 @@ final class i {
             } else {
               stackIn_49_0 = -1;
             }
-            if ((stackIn_49_0 > ~param2.field_v) &&
-                (null != param2.field_n)) {
-              var8 = 0;
-              var9 = 0;
-              while (!(uh.field_x.length <= var9)) {
-                var10 = uh.field_x[var9];
-                uh.field_x[var9] = var8;
-                var8 = var8 + var10;
-                var9++;
-                if (var19 != 0) {
-                  return;
-                }
-                continue;
-              }
-            }
-            if (param1 != 22) {
-              field_a = (dm) null;
-            }
-            return;
+            break;
           }
+          if ((stackIn_49_0 > ~param2.field_v) &&
+              (null != param2.field_n)) {
+            var8 = 0;
+            var9 = 0;
+            while (!(uh.field_x.length <= var9)) {
+              var10 = uh.field_x[var9];
+              uh.field_x[var9] = var8;
+              var8 = var8 + var10;
+              var9++;
+              if (var19 != 0) {
+                return;
+              }
+              continue;
+            }
+          }
+          if (param1 != 22) {
+            field_a = (dm) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

@@ -353,8 +353,9 @@ class ee extends el implements ql {
               var4 = (el) ((Object) var3.a((byte) 125));
               continue;
             }
-            return true;
+            break;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

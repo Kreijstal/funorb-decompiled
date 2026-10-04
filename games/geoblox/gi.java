@@ -285,10 +285,11 @@ final class gi implements Iterable {
             this.field_f = this.field_f.field_b;
             continue;
           }
-          var6 = this.field_f;
-          this.field_f = this.field_f.field_b;
-          return var6;
+          break;
         }
+        var6 = this.field_f;
+        this.field_f = this.field_f.field_b;
+        return var6;
     }
 
     static {

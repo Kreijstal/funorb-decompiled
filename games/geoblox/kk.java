@@ -346,41 +346,43 @@ final class kk extends ji {
                   this.field_g.a(-74, var4_ref);
                   continue;
                 }
-                if (param1) {
-                  field_t = 110;
+                break;
+              }
+              if (param1) {
+                field_t = 110;
+              }
+              while (true) {
+                var4_ref = (sd) ((Object) this.field_c.a(true));
+                if (var4_ref != null) {
+                  this.field_p.a(116, var4_ref);
+                  continue;
                 }
-                while (true) {
-                  var4_ref = (sd) ((Object) this.field_c.a(true));
-                  if (var4_ref != null) {
-                    this.field_p.a(116, var4_ref);
-                    continue;
+                break;
+              }
+              if (this.field_i != 0) {
+                try {
+                  this.field_m.field_f = 0;
+                  this.field_m.d((byte) -62, 4);
+                  this.field_m.d((byte) 122, (int) this.field_i);
+                  this.field_m.c((byte) 95, 0);
+                  this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+                } catch (java.io.IOException decompiledCaughtParameter1) {
+                  decompiledCaughtException = decompiledCaughtParameter1;
+                  var4_ref2 = (IOException) (Object) decompiledCaughtException;
+                  try {
+                    this.field_u.b(-126);
+                  } catch (java.lang.Exception decompiledCaughtParameter2) {
+                    decompiledCaughtException = decompiledCaughtParameter2;
+                    var5 = (Exception) (Object) decompiledCaughtException;
                   }
-                  if (this.field_i != 0) {
-                    try {
-                      this.field_m.field_f = 0;
-                      this.field_m.d((byte) -62, 4);
-                      this.field_m.d((byte) 122, (int) this.field_i);
-                      this.field_m.c((byte) 95, 0);
-                      this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
-                    } catch (java.io.IOException decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
-                      var4_ref2 = (IOException) (Object) decompiledCaughtException;
-                      try {
-                        this.field_u.b(-126);
-                      } catch (java.lang.Exception decompiledCaughtParameter2) {
-                        decompiledCaughtException = decompiledCaughtParameter2;
-                        var5 = (Exception) (Object) decompiledCaughtException;
-                      }
-                      this.field_q = -2;
-                      this.field_b = this.field_b + 1;
-                      this.field_u = null;
-                    }
-                  }
-                  this.field_o = 0;
-                  this.field_k = oa.a(-12520);
-                  return;
+                  this.field_q = -2;
+                  this.field_b = this.field_b + 1;
+                  this.field_u = null;
                 }
               }
+              this.field_o = 0;
+              this.field_k = oa.a(-12520);
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;

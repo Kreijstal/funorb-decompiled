@@ -342,8 +342,9 @@ final class jh {
                         continue;
                       }
                     }
-                    return true;
+                    break;
                   }
+                  return true;
                 } catch (java.io.IOException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var7 = (IOException) (Object) decompiledCaughtException;

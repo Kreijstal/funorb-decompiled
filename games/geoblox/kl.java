@@ -1203,10 +1203,11 @@ final class kl extends ia {
                     this.field_v = this.field_v - var10;
                     continue;
                   }
-                  this.field_x = this.field_x + var8 * this.field_v;
-                  this.field_v = 0;
-                  break L4;
+                  break;
                 }
+                this.field_x = this.field_x + var8 * this.field_v;
+                this.field_v = 0;
+                break L4;
               }
               while (true) {
                 var9 = this.b(param0, var9, var6, param2, (int) var4.field_k[this.field_q]);
@@ -1219,10 +1220,11 @@ final class kl extends ia {
                   this.field_v = this.field_v - var10;
                   continue;
                 }
-                this.field_x = this.field_x - var8 * this.field_v;
-                this.field_v = 0;
-                break L4;
+                break;
               }
+              this.field_x = this.field_x - var8 * this.field_v;
+              this.field_v = 0;
+              break L4;
             }
             if (this.field_p < 0) {
               var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);

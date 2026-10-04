@@ -189,9 +189,10 @@ final class p extends hf {
                 stackIn_66_1 = 22;
               }
             }
-            i.$cfr$intArgs$a$77236d03e70d(stackIn_66_0, stackIn_66_1, param2, var8, param5);
-            return;
+            break;
           }
+          i.$cfr$intArgs$a$77236d03e70d(stackIn_66_0, stackIn_66_1, param2, var8, param5);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

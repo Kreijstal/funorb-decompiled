@@ -160,13 +160,14 @@ final class jk {
               bc.a(0, 100L);
               continue;
             }
-            param0.setVisible(false);
-            if (param1 != 10) {
-              field_b = (String) null;
-            }
-            param0.dispose();
-            return;
+            break;
           }
+          param0.setVisible(false);
+          if (param1 != 10) {
+            field_b = (String) null;
+          }
+          param0.dispose();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

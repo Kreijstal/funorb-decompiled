@@ -88,13 +88,14 @@ final class pf extends ee implements ga, pl {
                       continue;
                     }
                   }
-                  if (var5 != null) {
-                    var5.a(false);
-                    break L0;
-                  }
-                  jl.a((byte) -116);
-                  return;
+                  break;
                 }
+                if (var5 != null) {
+                  var5.a(false);
+                  break L0;
+                }
+                jl.a((byte) -116);
+                return;
               }
               gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
               jl.a((byte) -123);

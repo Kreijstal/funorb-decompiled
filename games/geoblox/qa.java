@@ -264,9 +264,10 @@ final class qa {
                 continue;
               }
             }
-            stackIn_66_0 = var9 + 1 - param1;
-            return stackIn_66_0;
+            break;
           }
+          stackIn_66_0 = var9 + 1 - param1;
+          return stackIn_66_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

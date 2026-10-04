@@ -473,9 +473,10 @@ final class sk {
                     continue;
                   }
                 }
-                var7++;
-                continue L3;
+                break;
               }
+              var7++;
+              continue L3;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

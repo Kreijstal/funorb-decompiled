@@ -851,11 +851,12 @@ final class kj extends ia {
                 }
               }
             }
-            var2 = this.field_C.c();
-            var4 = this.field_C.field_a[var2];
-            var5 = this.field_C.d(var4);
-            continue L1;
+            break;
           }
+          var2 = this.field_C.c();
+          var4 = this.field_C.field_a[var2];
+          var5 = this.field_C.d(var4);
+          continue L1;
         }
     }
 

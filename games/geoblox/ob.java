@@ -71,10 +71,11 @@ final class ob extends ia {
             param0 = param0.field_b;
             continue;
           }
-          le.a(param0, 93, param1);
-          this.field_k = ((jd) ((Object) this.field_j.field_a.field_b)).field_f;
-          return;
+          break;
         }
+        le.a(param0, 93, param1);
+        this.field_k = ((jd) ((Object) this.field_j.field_a.field_b)).field_f;
+        return;
     }
 
     private final void c(int[] param0, int param1, int param2) {

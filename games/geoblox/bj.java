@@ -515,36 +515,37 @@ final class bj extends nh {
                           continue;
                         }
                       }
-                      if (var2_int != 0) {
-                        this.field_v = false;
-                        this.field_o = 0;
-                        break L3;
-                      }
-                      if (param0 != -38) {
-                        this.b(25, 41);
-                      }
-                      if (!this.field_w) {
-                        break L0;
-                      }
-                      if (~oa.a(-12520) > ~this.field_n) {
-                        break L1;
-                      }
-                      var2 = (pb) ((Object) this.field_g.a((byte) 125));
-                      while (var2 != null) {
-                        if (!var2.field_u) {
-                          if (var2.field_n) {
-                            if (!var2.field_q) {
-                              throw new RuntimeException();
-                            }
-                            var2.a(false);
-                          } else {
-                            var2.field_n = true;
-                          }
-                        }
-                        var2 = (pb) ((Object) this.field_g.b(74));
-                      }
-                      break L2;
+                      break;
                     }
+                    if (var2_int != 0) {
+                      this.field_v = false;
+                      this.field_o = 0;
+                      break L3;
+                    }
+                    if (param0 != -38) {
+                      this.b(25, 41);
+                    }
+                    if (!this.field_w) {
+                      break L0;
+                    }
+                    if (~oa.a(-12520) > ~this.field_n) {
+                      break L1;
+                    }
+                    var2 = (pb) ((Object) this.field_g.a((byte) 125));
+                    while (var2 != null) {
+                      if (!var2.field_u) {
+                        if (var2.field_n) {
+                          if (!var2.field_q) {
+                            throw new RuntimeException();
+                          }
+                          var2.a(false);
+                        } else {
+                          var2.field_n = true;
+                        }
+                      }
+                      var2 = (pb) ((Object) this.field_g.b(74));
+                    }
+                    break L2;
                   }
                   this.field_d = null;
                 }

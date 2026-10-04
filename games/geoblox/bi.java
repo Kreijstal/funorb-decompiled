@@ -42,8 +42,9 @@ final class bi implements dh {
               var3_int++;
               continue;
             }
-            return false;
+            break;
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

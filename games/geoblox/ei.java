@@ -88,9 +88,10 @@ final class ei extends qf {
               var4++;
               continue;
             }
-            stackIn_13_0 = kc.field_b;
-            return stackIn_13_0;
+            break;
           }
+          stackIn_13_0 = kc.field_b;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

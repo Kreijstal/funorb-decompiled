@@ -411,12 +411,14 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         this.d(32000);
                         wj.a(ka.field_i, (byte) 83, f.field_kb);
                       }
-                      if (var5 == 0) {
-                        continue L17;
-                      }
-                      break L1;
+                      break;
                     }
+                    if (var5 == 0) {
+                      continue L17;
+                    }
+                    break;
                   }
+                  break L1;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;

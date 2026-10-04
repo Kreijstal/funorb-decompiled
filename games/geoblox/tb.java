@@ -139,10 +139,11 @@ final class tb {
                 var5++;
                 continue;
               }
-              param0.field_z[var4] = (byte)var5;
-              var4++;
-              continue L6;
+              break;
             }
+            param0.field_z[var4] = (byte)var5;
+            var4++;
+            continue L6;
           }
           var37 = new byte[6];
           var36 = var37;
@@ -598,21 +599,22 @@ final class tb {
             }
             var3 = 0;
           }
-          var13 = param0.field_i;
-          param0.field_i = param0.field_i + (var11 - var10);
-          if (param0.field_i >= var13) {
-          }
-          param0.field_h = (byte) var2;
-          param0.field_k = var3;
-          param0.field_G = var4;
-          param0.field_c = var5;
-          kb.field_a = var6;
-          param0.field_D = var7;
-          param0.field_j = var8;
-          param0.field_C = var9;
-          param0.field_A = var10;
-          return;
+          break;
         }
+        var13 = param0.field_i;
+        param0.field_i = param0.field_i + (var11 - var10);
+        if (param0.field_i >= var13) {
+        }
+        param0.field_h = (byte) var2;
+        param0.field_k = var3;
+        param0.field_G = var4;
+        param0.field_c = var5;
+        kb.field_a = var6;
+        param0.field_D = var7;
+        param0.field_j = var8;
+        param0.field_C = var9;
+        param0.field_A = var10;
+        return;
     }
 
     static {
