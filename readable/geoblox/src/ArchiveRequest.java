@@ -6,11 +6,11 @@ abstract class ArchiveRequest extends DualLinkNode {
     volatile boolean pending;
     boolean priority;
     static String createAgeTooltipText;
-    static int field_r;
+    static int uiFontArchiveId;
     static long[] field_p;
     static String fullscreenAcceptButtonText;
     boolean seenByCleanup;
-    static int[] field_m;
+    static int[] sessionPacketLengthByOpcode;
     static float field_s;
 
     final static void a(int param0, java.awt.Color param1, boolean param2, boolean param3, String param4) {
@@ -112,7 +112,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         createAgeTooltipText = null;
         pendingActionMarkers = null;
         field_p = null;
-        field_m = null;
+        sessionPacketLengthByOpcode = null;
         fullscreenAcceptButtonText = null;
         if (param0 != 31735) {
             String var2 = (String) null;
@@ -129,7 +129,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     static {
         pendingActionMarkers = new IntrusiveDeque();
         createAgeTooltipText = "Type your age in years";
-        field_m = new int[256];
+        sessionPacketLengthByOpcode = new int[256];
         fullscreenAcceptButtonText = "Accept";
         field_p = new long[32];
     }

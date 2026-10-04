@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextWidgetSupport {
-    static int field_a;
+    static int gameTextArchiveId;
     static volatile int livePointerPressX;
     static ResourceArchive field_c;
     static int byteArrayPool5000Count;

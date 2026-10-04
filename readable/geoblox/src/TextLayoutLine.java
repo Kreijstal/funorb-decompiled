@@ -3,7 +3,7 @@
  */
 final class TextLayoutLine {
     static int[] meshModelTransform;
-    static int field_e;
+    static int interfaceTextArchiveId;
     int field_d;
     static float field_b;
     int field_a;

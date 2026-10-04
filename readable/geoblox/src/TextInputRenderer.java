@@ -205,9 +205,9 @@ class TextInputRenderer extends TextWidgetRenderer {
             } else {
               IntKeyLookup.unachievedSprite.draw(160, var12);
               var12 += 30;
-              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
               FadingDialog.uiPaletteFont.drawText(DebouncedValidationProvider.field_d, 318, var12, 0, -1);
-              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
             }
             var12 = var12 + (IntrusiveNodeHashTable.smallFont.drawParagraph(LoginProtocolSupport.achievementDescriptions[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
             var12 += 10;

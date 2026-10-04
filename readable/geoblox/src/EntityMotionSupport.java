@@ -7,7 +7,7 @@ final class EntityMotionSupport {
     static boolean field_d;
     static String createSuggestionsText;
     static int field_b;
-    static volatile boolean field_a;
+    static volatile boolean canvasReplacementRequested;
 
     final static void decodeLogoAudio(int methodGuard, ResourceArchive logoArchive) {
         MusicDecoder logoAudioDecoder = null;
@@ -312,7 +312,7 @@ final class EntityMotionSupport {
     static {
         field_c = new TextTemplateArgumentType(2, 4, 4, 0);
         createSuggestionsText = "Suggested names: ";
-        field_a = false;
+        canvasReplacementRequested = false;
         field_b = 0;
     }
 }

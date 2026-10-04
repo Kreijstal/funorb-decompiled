@@ -44,144 +44,144 @@ final class ScoreSubmission extends IntrusiveNode {
         }
     }
 
-    final static java.net.URL a(String param0, String param1, java.net.URL param2, int param3, boolean param4) {
+    final static java.net.URL rewriteSessionUrlPath(String sessionValue, String settingsValue, java.net.URL url, int languageId, boolean methodGuard) {
         try {
-            StringBuilder discarded$0 = null;
-            StringBuilder discarded$1 = null;
-            StringBuilder discarded$2 = null;
-            StringBuilder discarded$3 = null;
-            StringBuilder discarded$4 = null;
-            StringBuilder discarded$5 = null;
-            StringBuilder discarded$6 = null;
-            StringBuilder discarded$7 = null;
-            StringBuilder discarded$8 = null;
-            java.net.URL stackIn_41_0 = null;
-            java.net.URL stackIn_43_0 = null;
-            RuntimeException stackIn_46_0 = null;
-            StringBuilder stackIn_46_1 = null;
-            String stackIn_47_2 = null;
-            StringBuilder stackIn_49_1 = null;
-            String stackIn_50_2 = null;
-            StringBuilder stackIn_52_1 = null;
-            String stackIn_53_2 = null;
-            Throwable decompiledCaughtException = null;
-            String var5 = null;
-            RuntimeException var5_ref = null;
-            int var6 = 0;
-            int var7_int = 0;
-            StringBuilder var7 = null;
-            Exception var8 = null;
-            java.net.URL var9 = null;
+            StringBuilder discardedPrefixAppend = null;
+            StringBuilder discardedLanguagePrefixAppend = null;
+            StringBuilder discardedLanguageValueAppend = null;
+            StringBuilder discardedSettingsPrefixAppend = null;
+            StringBuilder discardedSettingsValueAppend = null;
+            StringBuilder discardedSessionPrefixAppend = null;
+            StringBuilder discardedSessionValueAppend = null;
+            StringBuilder discardedEmptyPathSlashAppend = null;
+            StringBuilder discardedRemainingPathAppend = null;
+            java.net.URL rewrittenUrlBeforeReturn = null;
+            java.net.URL originalUrlAfterConstructionFailure = null;
+            RuntimeException urlFailureBeforeContext = null;
+            StringBuilder urlMessagePrefix = null;
+            String sessionValueDescription = null;
+            StringBuilder messageBeforeSettingsDescription = null;
+            String settingsValueDescription = null;
+            StringBuilder messageBeforeUrlDescription = null;
+            String urlDescription = null;
+            Throwable caughtUrlRewriteFailure = null;
+            String urlFile = null;
+            RuntimeException urlFailureForContext = null;
+            int prefixEnd = 0;
+            int segmentEnd = 0;
+            StringBuilder rewrittenFile = null;
+            Exception urlConstructionFailureForReport = null;
+            java.net.URL unusedNullRecursiveUrl = null;
             try {
-              var5 = param2.getFile();
-              var6 = 0;
+              urlFile = url.getFile();
+              prefixEnd = 0;
               while (true) {
                 L1: {
-                  if (var5.regionMatches(var6, "/l=", 0, 3)) {
-                    var7_int = var5.indexOf('/', var6 + 1);
-                    if (var7_int >= 0) {
-                      if (param3 < 0) {
+                  if (urlFile.regionMatches(prefixEnd, "/l=", 0, 3)) {
+                    segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
+                    if (segmentEnd >= 0) {
+                      if (languageId < 0) {
                         break L1;
                       }
-                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                      urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
                       continue;
                     }
                   }
-                  if (var5.regionMatches(var6, "/a=", 0, 3)) {
-                    var7_int = var5.indexOf('/', 1 + var6);
-                    if (var7_int >= 0) {
+                  if (urlFile.regionMatches(prefixEnd, "/a=", 0, 3)) {
+                    segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
+                    if (segmentEnd >= 0) {
                       break L1;
                     }
                   }
-                  if (var5.regionMatches(var6, "/p=", 0, 3)) {
-                    var7_int = var5.indexOf('/', 1 + var6);
-                    if (var7_int >= 0) {
-                      if (param1 == null) {
+                  if (urlFile.regionMatches(prefixEnd, "/p=", 0, 3)) {
+                    segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
+                    if (segmentEnd >= 0) {
+                      if (settingsValue == null) {
                         break L1;
                       }
-                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                      urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
                       continue;
                     }
                   }
-                  if (!((!var5.regionMatches(var6, "/s=", 0, 3)) &&
-                        (!var5.regionMatches(var6, "/c=", 0, 3)))) {
-                    var7_int = var5.indexOf('/', var6 + 1);
-                    if (0 <= var7_int) {
-                      if (param0 != null) {
-                        var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                  if (!((!urlFile.regionMatches(prefixEnd, "/s=", 0, 3)) &&
+                        (!urlFile.regionMatches(prefixEnd, "/c=", 0, 3)))) {
+                    segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
+                    if (0 <= segmentEnd) {
+                      if (sessionValue != null) {
+                        urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
                         continue;
                       }
-                      var6 = var7_int;
+                      prefixEnd = segmentEnd;
                       continue;
                     }
                   }
-                  if (!param4) {
-                    var9 = (java.net.URL) null;
-                    ScoreSubmission.a((String) null, (String) null, (java.net.URL) null, 80, true);
+                  if (!methodGuard) {
+                    unusedNullRecursiveUrl = (java.net.URL) null;
+                    ScoreSubmission.rewriteSessionUrlPath((String) null, (String) null, (java.net.URL) null, 80, true);
                   }
-                  var7 = new StringBuilder(var6);
-                  discarded$0 = var7.append(var5.substring(0, var6));
-                  if (param3 > 0) {
-                    discarded$1 = var7.append("/l=");
-                    discarded$2 = var7.append(Integer.toString(param3));
+                  rewrittenFile = new StringBuilder(prefixEnd);
+                  discardedPrefixAppend = rewrittenFile.append(urlFile.substring(0, prefixEnd));
+                  if (languageId > 0) {
+                    discardedLanguagePrefixAppend = rewrittenFile.append("/l=");
+                    discardedLanguageValueAppend = rewrittenFile.append(Integer.toString(languageId));
                   }
-                  if ((param1 != null) &&
-                      (param1.length() > 0)) {
-                    discarded$3 = var7.append("/p=");
-                    discarded$4 = var7.append(param1);
+                  if ((settingsValue != null) &&
+                      (settingsValue.length() > 0)) {
+                    discardedSettingsPrefixAppend = rewrittenFile.append("/p=");
+                    discardedSettingsValueAppend = rewrittenFile.append(settingsValue);
                   }
-                  if ((param0 != null) &&
-                      (param0.length() > 0)) {
-                    discarded$5 = var7.append("/s=");
-                    discarded$6 = var7.append(param0);
+                  if ((sessionValue != null) &&
+                      (sessionValue.length() > 0)) {
+                    discardedSessionPrefixAppend = rewrittenFile.append("/s=");
+                    discardedSessionValueAppend = rewrittenFile.append(sessionValue);
                   }
-                  if (var5.length() <= var6) {
-                    discarded$7 = var7.append('/');
+                  if (urlFile.length() <= prefixEnd) {
+                    discardedEmptyPathSlashAppend = rewrittenFile.append('/');
                   } else {
-                    discarded$8 = var7.append(var5.substring(var6, var5.length()));
+                    discardedRemainingPathAppend = rewrittenFile.append(urlFile.substring(prefixEnd, urlFile.length()));
                   }
                   try {
-                    stackIn_41_0 = new java.net.URL(param2, var7.toString());
-                    return stackIn_41_0;
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var8 = (Exception) (Object) decompiledCaughtException;
-                    var8.printStackTrace();
-                    stackIn_43_0 = (java.net.URL) (param2);
-                    return stackIn_43_0;
+                    rewrittenUrlBeforeReturn = new java.net.URL(url, rewrittenFile.toString());
+                    return rewrittenUrlBeforeReturn;
+                  } catch (java.lang.Exception urlConstructionFailure) {
+                    caughtUrlRewriteFailure = urlConstructionFailure;
+                    urlConstructionFailureForReport = (Exception) (Object) caughtUrlRewriteFailure;
+                    urlConstructionFailureForReport.printStackTrace();
+                    originalUrlAfterConstructionFailure = (java.net.URL) (url);
+                    return originalUrlAfterConstructionFailure;
                   }
                 }
-                var6 = var7_int;
+                prefixEnd = segmentEnd;
                 continue;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_46_0 = var5_ref;
-              stackIn_46_1 = new StringBuilder().append("ai.B(");
-              if (param0 == null) {
-                stackIn_47_2 = "null";
+            } catch (java.lang.RuntimeException urlContextFailure) {
+              caughtUrlRewriteFailure = urlContextFailure;
+              urlFailureForContext = (RuntimeException) (Object) caughtUrlRewriteFailure;
+              urlFailureBeforeContext = urlFailureForContext;
+              urlMessagePrefix = new StringBuilder().append("ai.B(");
+              if (sessionValue == null) {
+                sessionValueDescription = "null";
               } else {
-                stackIn_47_2 = "{...}";
+                sessionValueDescription = "{...}";
               }
-              stackIn_49_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',');
-              if (param1 == null) {
-                stackIn_50_2 = "null";
+              messageBeforeSettingsDescription = ((StringBuilder) (Object) urlMessagePrefix).append(sessionValueDescription).append(',');
+              if (settingsValue == null) {
+                settingsValueDescription = "null";
               } else {
-                stackIn_50_2 = "{...}";
+                settingsValueDescription = "{...}";
               }
-              stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',');
-              if (param2 == null) {
-                stackIn_53_2 = "null";
+              messageBeforeUrlDescription = ((StringBuilder) (Object) messageBeforeSettingsDescription).append(settingsValueDescription).append(',');
+              if (url == null) {
+                urlDescription = "null";
               } else {
-                stackIn_53_2 = "{...}";
+                urlDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) urlFailureBeforeContext), ((StringBuilder) (Object) messageBeforeUrlDescription).append(urlDescription).append(',').append(languageId).append(',').append(methodGuard).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedUrlFailure) {
+            throw uncheckedUrlFailure;
+        } catch (Throwable checkedUrlFailure) {
+            throw new RuntimeException(checkedUrlFailure);
         }
     }
 

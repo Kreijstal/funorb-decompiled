@@ -54,7 +54,7 @@ final class TrackedPcmStream extends IntrusiveNode {
             try {
               try {
                 var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                param1.getAppletContext().showDocument(SessionGameApplet.a(var2, -84, param1), "_top");
+                param1.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(var2, -84, param1), "_top");
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;

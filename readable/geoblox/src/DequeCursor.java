@@ -106,52 +106,52 @@ final class DequeCursor {
         return (IntrusiveNode) null;
     }
 
-    final static int a(int param0) {
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_22_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = Geoblox.clientControlFlowFlag;
+    final static int pollAccountDialogAction(int noPendingActionCode) {
+        int pendingAction = 0;
+        RuntimeException actionFailureForContext = null;
+        int clientControlFlowGuard = 0;
+        int pendingActionBeforeReturn = 0;
+        int loginActionBeforeReturn = 0;
+        int usernameActionBeforeReturn = 0;
+        int emailActionBeforeReturn = 0;
+        int createAccountActionBeforeReturn = 0;
+        int noActionBeforeReturn = 0;
+        RuntimeException caughtActionFailure = null;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           ClientFlowState.accountDialogLayer.processPointerFrame(true, 127, MatchScoringSupport.field_d, TextConcatenationSupport.field_b);
           ClientFlowState.accountDialogLayer.advanceDialogAnimations(-65);
           while (UiFontResources.pollKeyboardEvent(77)) {
             ClientFlowState.accountDialogLayer.a((byte) 105, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);
           }
-          if (GzipInflater.pendingLoginUiAction != param0) {
-            var1_int = GzipInflater.pendingLoginUiAction;
+          if (GzipInflater.pendingLoginUiAction != noPendingActionCode) {
+            pendingAction = GzipInflater.pendingLoginUiAction;
             MidiNote.a(-1, false);
-            stackIn_6_0 = var1_int;
-            return stackIn_6_0;
+            pendingActionBeforeReturn = pendingAction;
+            return pendingActionBeforeReturn;
           }
           if (MeshPrioritySupport.field_d) {
-            stackIn_10_0 = 3;
-            return stackIn_10_0;
+            loginActionBeforeReturn = 3;
+            return loginActionBeforeReturn;
           }
           if (WidgetSkinState.usernameQueryFlowState == IntrusiveDeque.pendingClientFlowToken) {
-            stackIn_14_0 = 1;
-            return stackIn_14_0;
+            usernameActionBeforeReturn = 1;
+            return usernameActionBeforeReturn;
           }
           if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-106)) {
-            stackIn_17_0 = 1;
-            return stackIn_17_0;
+            emailActionBeforeReturn = 1;
+            return emailActionBeforeReturn;
           }
           if (ClientFlowState.accountCreationFlowState != IntrusiveDeque.pendingClientFlowToken) {
-            stackIn_22_0 = -1;
-            return stackIn_22_0;
+            noActionBeforeReturn = -1;
+            return noActionBeforeReturn;
           }
-          stackIn_20_0 = 2;
-          return stackIn_20_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "gb.B(" + param0 + ')');
+          createAccountActionBeforeReturn = 2;
+          return createAccountActionBeforeReturn;
+        } catch (java.lang.RuntimeException actionFailure) {
+          caughtActionFailure = actionFailure;
+          actionFailureForContext = caughtActionFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) actionFailureForContext), "gb.B(" + noPendingActionCode + ')');
         }
     }
 

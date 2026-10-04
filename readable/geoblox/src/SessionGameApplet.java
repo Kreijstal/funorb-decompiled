@@ -2,250 +2,250 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SessionGameApplet extends GameApplet {
-    private int field_x;
-    private long field_k;
-    private int field_r;
+    private int serverNumber;
+    private long instanceId;
+    private int affiliateId;
     static MusicScore spaceMusicTrack;
-    private boolean field_t;
-    private boolean field_v;
-    String field_n;
-    private boolean field_m;
-    private int field_u;
+    private boolean forceIdleDisconnect;
+    private boolean isJagexCodeBase;
+    String serverHost;
+    private boolean requestedMemberMode;
+    private int languageId;
     static String fullscreenText;
-    private int field_w;
-    private int field_l;
-    private int field_s;
-    static int field_p;
+    private int alternateServerPort;
+    private int primaryServerPort;
+    private int gameCrc;
+    static int uiAccentPaletteIndex;
 
-    private final int k(int param0) {
-        int var2;
+    private final int pollReconnectHandshake(int pendingResultCode) {
+        int handshakeResult;
         if (this.field_a) {
           return -1;
         }
         if (!ClientTimingSupport.isClientReadyForSessionActions(75)) {
           return -1;
         }
-        if (ArchiveLoadStep.field_e) {
+        if (ArchiveLoadStep.loginRetrySuspended) {
           return -1;
         }
-        var2 = LoginProtocolSupport.advanceLoginHandshake(true, ContextualRuntimeException.a(true), this.field_r, this.field_v, ClientFlowToken.getActiveLoginIdentifier(param0 + 1), 0);
-        if (var2 == param0) {
+        handshakeResult = LoginProtocolSupport.advanceLoginHandshake(true, ContextualRuntimeException.a(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(pendingResultCode + 1), 0);
+        if (handshakeResult == pendingResultCode) {
           return -1;
         }
-        if ((var2 != 0) &&
-            (var2 != 1)) {
+        if ((handshakeResult != 0) &&
+            (handshakeResult != 1)) {
           if (!TextWidgetRenderer.field_k) {
             this.a((byte) 79, "reconnect");
           }
           ClientFlowState.requestSessionExit((byte) 103);
-          TextInputValidator.a((byte) 124, var2, AudioService.field_a);
-          ArchiveLoadStep.field_e = true;
-          DisplayNamePanel.field_G = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
-          return var2;
+          TextInputValidator.a((byte) 124, handshakeResult, AudioService.field_a);
+          ArchiveLoadStep.loginRetrySuspended = true;
+          DisplayNamePanel.connectionRetryDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
+          return handshakeResult;
         }
         if (SpriteConstructionSupport.clientScreenStage != 11) {
-          return var2;
+          return handshakeResult;
         }
         if (DebouncedValidationProvider.archiveLoadStatus != 0) {
-          return var2;
+          return handshakeResult;
         }
-        IterableNodeHashTable.refreshLoginTicketMessage(param0 - 12617);
-        return var2;
+        IterableNodeHashTable.refreshLoginTicketMessage(pendingResultCode - 12617);
+        return handshakeResult;
     }
 
-    final static java.net.URL a(java.net.URL param0, int param1, java.applet.Applet param2) {
-        Object var3 = null;
-        int var4 = 0;
-        Object var5 = null;
-        java.net.URL stackIn_9_0 = null;
-        Object stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static java.net.URL applySessionOverridesToUrl(java.net.URL url, int methodGuard, java.applet.Applet applet) {
+        Object settingsOverrideOrFailure = null;
+        int guardResidue = 0;
+        Object sessionOverrideOrSettingsAlias = null;
+        java.net.URL urlBeforeReturn = null;
+        Object urlFailureBeforeContext = null;
+        StringBuilder urlMessagePrefix = null;
+        String urlDescription = null;
+        StringBuilder messageBeforeAppletDescription = null;
+        String appletDescription = null;
+        RuntimeException caughtUrlFailure = null;
         try {
-          var4 = -16 / ((param1 + 4) / 62);
-          var3 = null;
-          var5 = null;
+          guardResidue = -16 / ((methodGuard + 4) / 62);
+          settingsOverrideOrFailure = null;
+          sessionOverrideOrSettingsAlias = null;
           if ((null != NetworkArchiveRequest.settingsCookieValue) &&
-              (!NetworkArchiveRequest.settingsCookieValue.equals(param2.getParameter("settings")))) {
-            var3 = NetworkArchiveRequest.settingsCookieValue;
-            var5 = var3;
-            var5 = var3;
+              (!NetworkArchiveRequest.settingsCookieValue.equals(applet.getParameter("settings")))) {
+            settingsOverrideOrFailure = NetworkArchiveRequest.settingsCookieValue;
+            sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
+            sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
           }
           if ((ScorePopup.field_j != null) &&
-              (!ScorePopup.field_j.equals(param2.getParameter("session")))) {
-            var5 = ScorePopup.field_j;
+              (!ScorePopup.field_j.equals(applet.getParameter("session")))) {
+            sessionOverrideOrSettingsAlias = ScorePopup.field_j;
           }
-          stackIn_9_0 = ScoreSubmission.a((String) (var5), (String) (var3), param0, -1, true);
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("wf.KA(");
-          if (param0 == null) {
-            stackIn_13_2 = "null";
+          urlBeforeReturn = ScoreSubmission.rewriteSessionUrlPath((String) (sessionOverrideOrSettingsAlias), (String) (settingsOverrideOrFailure), url, -1, true);
+          return urlBeforeReturn;
+        } catch (java.lang.RuntimeException urlFailure) {
+          caughtUrlFailure = urlFailure;
+          settingsOverrideOrFailure = caughtUrlFailure;
+          urlFailureBeforeContext = settingsOverrideOrFailure;
+          urlMessagePrefix = new StringBuilder().append("wf.KA(");
+          if (url == null) {
+            urlDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            urlDescription = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_16_2 = "null";
+          messageBeforeAppletDescription = ((StringBuilder) (Object) urlMessagePrefix).append(urlDescription).append(',').append(methodGuard).append(',');
+          if (applet == null) {
+            appletDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            appletDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) (urlFailureBeforeContext), ((StringBuilder) (Object) messageBeforeAppletDescription).append(appletDescription).append(')').toString());
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7) {
-        java.awt.Frame var10 = new java.awt.Frame("Jagex");
-        var10.pack();
-        var10.dispose();
+    final void initializeSessionAppletServices(byte methodGuard, int gameTextArchiveId, int interfaceTextArchiveId, int buttonAndLogoArchiveId, int commonUiSpriteArchiveId, boolean responseExtensionEnabled, int uiFontArchiveId, int clientId) {
+        java.awt.Frame awtPreparationFrame = new java.awt.Frame("Jagex");
+        awtPreparationFrame.pack();
+        awtPreparationFrame.dispose();
         this.setBackground(java.awt.Color.black);
-        MeshPrioritySupport.field_a = this.field_u;
-        ClientOptionSupport.selectBootstrapLanguageText(true, MeshPrioritySupport.field_a);
-        if (param0 == -70) {
-            SessionBootstrapSupport.initializeSessionServices(this.field_s, this.field_k, 5000, param7, this.field_m, param5, MeshPrioritySupport.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
-            TextInputValidator.initializeArchiveServices(param7, MeshPrioritySupport.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
+        MeshPrioritySupport.bootstrapLanguageId = this.languageId;
+        ClientOptionSupport.selectBootstrapLanguageText(true, MeshPrioritySupport.bootstrapLanguageId);
+        if (methodGuard == -70) {
+            SessionBootstrapSupport.initializeSessionServices(this.gameCrc, this.instanceId, 5000, clientId, this.requestedMemberMode, responseExtensionEnabled, MeshPrioritySupport.bootstrapLanguageId, this.alternateServerPort, 5000, this.serverHost, this.serverNumber, MenuScreen.platformTaskDispatcher, 64, this.primaryServerPort);
+            TextInputValidator.initializeArchiveServices(clientId, MeshPrioritySupport.bootstrapLanguageId, this.primaryServerPort, this.serverNumber, -23949, MenuScreen.platformTaskDispatcher, this.serverHost, this.gameCrc, this.alternateServerPort);
             StatefulWidgetRenderer.b(28);
-            CachedTextLayout.mouseWheelInput = TextValidationFailure.createMouseWheelInput(param0 + 113);
+            CachedTextLayout.mouseWheelInput = TextValidationFailure.createMouseWheelInput(methodGuard + 113);
             UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
-            TextLayoutLine.field_e = param2;
-            DebouncedValidationProvider.field_c = param4;
-            ArchiveRequest.field_r = param6;
-            ClientTimingSupport.field_d = param3;
-            TextWidgetSupport.field_a = param1;
-            this.e(123);
+            TextLayoutLine.interfaceTextArchiveId = interfaceTextArchiveId;
+            DebouncedValidationProvider.commonUiSpriteArchiveId = commonUiSpriteArchiveId;
+            ArchiveRequest.uiFontArchiveId = uiFontArchiveId;
+            ClientTimingSupport.buttonAndLogoArchiveId = buttonAndLogoArchiveId;
+            TextWidgetSupport.gameTextArchiveId = gameTextArchiveId;
+            this.initializeSessionPacketLengths(123);
             PacketBuffer.k((byte) -13);
             return;
         }
     }
 
-    private final void f(int param0) {
-        if (param0 != -11) {
+    private final void handleSessionCookiePacket(int methodGuard) {
+        if (methodGuard != -11) {
             return;
         }
-        String var2 = HotspotTextWidget.i(1000);
-        MeshPrioritySupport.updateSessionCookie(var2, NodeHashTableIterator.getActiveApplet(111), param0 + 10);
+        String sessionCookieValue = HotspotTextWidget.i(1000);
+        MeshPrioritySupport.updateSessionCookie(sessionCookieValue, NodeHashTableIterator.getActiveApplet(111), methodGuard + 10);
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
-        this.a(false, (byte) -91);
-        if (!(!param3)) {
-            this.f((byte) 32);
+    final void enableOptionalSessionPacketFamilies(boolean allowIntRecordReplies, boolean allowSessionAcknowledgements, boolean allowScoreReplies, boolean allowByteShortReplies, int methodGuard) {
+        this.enableBaseSessionPacketFamilies(false, (byte) -91);
+        if (!(!allowByteShortReplies)) {
+            this.enableByteShortReplies((byte) 32);
         }
-        if (param2) {
-            this.i(16072);
+        if (allowScoreReplies) {
+            this.enableScoreReplies(16072);
         }
-        if (param4 > -87) {
-            this.field_w = -34;
+        if (methodGuard > -87) {
+            this.alternateServerPort = -34;
         }
-        if (!(!param0)) {
-            this.e((byte) -19);
+        if (!(!allowIntRecordReplies)) {
+            this.enableIntRecordReplies((byte) -19);
         }
-        if (param1) {
-            this.d(true);
+        if (allowSessionAcknowledgements) {
+            this.setSessionAcknowledgementsEnabled(true);
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void initializeGameApplet(int cacheIndexCount, String gameName, int canvasWidth) {
         try {
-            this.a(480, param1, param0, (byte) 81, param2);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wf.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            this.initializeFromAppletParameters(480, gameName, cacheIndexCount, (byte) 81, canvasWidth);
+        } catch (RuntimeException initializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "wf.EA(" + cacheIndexCount + ',' + (gameName != null ? "{...}" : "null") + ',' + canvasWidth + ')');
         }
     }
 
-    final int d(byte param0) {
-        int var2;
-        java.applet.Applet var3;
-        if (param0 != -67) {
-          var3 = (java.applet.Applet) null;
-          SessionGameApplet.a((java.net.URL) null, 48, (java.applet.Applet) null);
+    final int pollReconnectAndResendRequests(byte methodGuard) {
+        int handshakeResult;
+        java.applet.Applet unusedNullApplet;
+        if (methodGuard != -67) {
+          unusedNullApplet = (java.applet.Applet) null;
+          SessionGameApplet.applySessionOverridesToUrl((java.net.URL) null, 48, (java.applet.Applet) null);
         }
-        var2 = this.k(-1);
-        if (!((var2 != 0) &&
-            (1 != var2))) {
-          if (OpacityWidget.field_G[1]) {
+        handshakeResult = this.pollReconnectHandshake(-1);
+        if (!((handshakeResult != 0) &&
+            (1 != handshakeResult))) {
+          if (OpacityWidget.enabledSessionPacketOpcodes[1]) {
             ByteArrayBuffer.resendByteShortQueries(true, 2);
           }
-          if (OpacityWidget.field_G[2]) {
-            MatchScoringSupport.resendScoreAndHighscoreRequests(param0 ^ 76, 3);
+          if (OpacityWidget.enabledSessionPacketOpcodes[2]) {
+            MatchScoringSupport.resendScoreAndHighscoreRequests(methodGuard ^ 76, 3);
           }
-          if (OpacityWidget.field_G[3]) {
+          if (OpacityWidget.enabledSessionPacketOpcodes[3]) {
             AchievementProtocolSupport.resendAchievementMessages((byte) -125, 4);
           }
-          if (OpacityWidget.field_G[4]) {
+          if (OpacityWidget.enabledSessionPacketOpcodes[4]) {
             ByteArrayPoolSupport.resendIntRecordRequests(5, 116);
           }
-          if (OpacityWidget.field_G[5]) {
-            TextTemplateDefinitionLoader.a(6, param0 + 21789);
+          if (OpacityWidget.enabledSessionPacketOpcodes[5]) {
+            TextTemplateDefinitionLoader.a(6, methodGuard + 21789);
           }
-          if (OpacityWidget.field_G[6]) {
+          if (OpacityWidget.enabledSessionPacketOpcodes[6]) {
             SecondaryDeque.resendRankedListQueries(true, 7);
           }
-          if (OpacityWidget.field_G[8]) {
+          if (OpacityWidget.enabledSessionPacketOpcodes[8]) {
             DialogLayer.g(-13912);
           }
         }
-        return var2;
+        return handshakeResult;
     }
 
-    private final void a(boolean param0, byte param1) {
-        OpacityWidget.field_G[18] = true;
-        OpacityWidget.field_G[17] = true;
-        OpacityWidget.field_G[8] = param0;
-        OpacityWidget.field_G[0] = true;
-        OpacityWidget.field_G[3] = true;
-        if (param1 != -91) {
-            this.e((byte) 55);
+    private final void enableBaseSessionPacketFamilies(boolean allowReflectionChecks, byte methodGuard) {
+        OpacityWidget.enabledSessionPacketOpcodes[18] = true;
+        OpacityWidget.enabledSessionPacketOpcodes[17] = true;
+        OpacityWidget.enabledSessionPacketOpcodes[8] = allowReflectionChecks;
+        OpacityWidget.enabledSessionPacketOpcodes[0] = true;
+        OpacityWidget.enabledSessionPacketOpcodes[3] = true;
+        if (methodGuard != -91) {
+            this.enableIntRecordReplies((byte) 55);
         }
-        OpacityWidget.field_G[7] = true;
-        OpacityWidget.field_G[16] = true;
+        OpacityWidget.enabledSessionPacketOpcodes[7] = true;
+        OpacityWidget.enabledSessionPacketOpcodes[16] = true;
     }
 
-    private final void e(int param0) {
-        ArchiveRequest.field_m[11] = -1;
-        ArchiveRequest.field_m[3] = -1;
-        ArchiveRequest.field_m[10] = -1;
-        ArchiveRequest.field_m[17] = -1;
-        ArchiveRequest.field_m[5] = -1;
-        ArchiveRequest.field_m[16] = -1;
-        ArchiveRequest.field_m[6] = -2;
-        ArchiveRequest.field_m[1] = 16;
-        ArchiveRequest.field_m[9] = -1;
-        ArchiveRequest.field_m[13] = -1;
-        int var2 = -13 / ((param0 - 56) / 60);
-        ArchiveRequest.field_m[7] = -1;
-        ArchiveRequest.field_m[2] = -2;
-        ArchiveRequest.field_m[4] = -1;
-        ArchiveRequest.field_m[8] = -2;
-        ArchiveRequest.field_m[18] = 1;
-        ArchiveRequest.field_m[12] = -1;
+    private final void initializeSessionPacketLengths(int methodGuard) {
+        ArchiveRequest.sessionPacketLengthByOpcode[11] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[3] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[10] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[17] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[5] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[16] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[6] = -2;
+        ArchiveRequest.sessionPacketLengthByOpcode[1] = 16;
+        ArchiveRequest.sessionPacketLengthByOpcode[9] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[13] = -1;
+        int guardResidue = -13 / ((methodGuard - 56) / 60);
+        ArchiveRequest.sessionPacketLengthByOpcode[7] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[2] = -2;
+        ArchiveRequest.sessionPacketLengthByOpcode[4] = -1;
+        ArchiveRequest.sessionPacketLengthByOpcode[8] = -2;
+        ArchiveRequest.sessionPacketLengthByOpcode[18] = 1;
+        ArchiveRequest.sessionPacketLengthByOpcode[12] = -1;
     }
 
-    final void b(boolean param0, int param1) {
-        int stackIn_24_0 = 0;
-        int stackIn_100_0 = 0;
-        String stackIn_100_1 = null;
-        boolean stackIn_101_2 = false;
-        boolean stackIn_104_3;
-        int stackIn_135_0 = 0;
-        int var3;
-        java.awt.Dimension var4;
-        int var5;
-        java.awt.Container var6;
-        var5 = Geoblox.clientControlFlowFlag;
-        if (null != FontLoadingSupport.field_d) {
+    final void updateSessionBootstrapAndInput(boolean fullscreenActive, int methodGuard) {
+        int archiveWasPendingSnapshot = 0;
+        int loginPanelGuardSnapshot = 0;
+        String loginPanelMessageSnapshot = null;
+        boolean allowRetrySnapshot = false;
+        boolean allowCancelSnapshot;
+        int bootstrapSequenceReadySnapshot = 0;
+        int idleThresholdOrArchivePendingOrSequenceReady;
+        java.awt.Dimension containerSize;
+        int clientControlFlowGuard;
+        java.awt.Container canvasContainer;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+        if (null != FontLoadingSupport.canvasResizeController) {
           if (InstrumentPatch.field_n == null) {
-            var6 = MultiHandleSliderRenderer.a(true);
-            var4 = var6.getSize();
-            FontLoadingSupport.field_d.setRequestedSize((byte) 126, var4.height, var4.width);
+            canvasContainer = MultiHandleSliderRenderer.a(true);
+            containerSize = canvasContainer.getSize();
+            FontLoadingSupport.canvasResizeController.setRequestedSize((byte) 126, containerSize.height, containerSize.width);
           }
-          FontLoadingSupport.field_d.updateResize((byte) -126);
+          FontLoadingSupport.canvasResizeController.updateResize((byte) -126);
         }
         RankedListQuery.updateKeyboardStateForFrame(true);
         AccountCreationSupport.snapshotPointerInput((byte) -128);
@@ -256,26 +256,26 @@ abstract class SessionGameApplet extends GameApplet {
         if (null != CachedTextLayout.mouseWheelInput) {
           CachedTextLayout.wheelRotationSnapshot = CachedTextLayout.mouseWheelInput.drainWheelRotation(true);
         }
-        if (InstrumentEnvelope.b(param1 ^ 19649)) {
-          var3 = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
-          if ((!(!this.field_t) ||
-              (!(~var3 <= ~IndexedSpriteState.a(-76)) &&
-                !(var3 >= FullscreenSupport.getPointerIdleTicks(false))))) {
-            this.field_t = false;
+        if (InstrumentEnvelope.b(methodGuard ^ 19649)) {
+          idleThresholdOrArchivePendingOrSequenceReady = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
+          if ((!(!this.forceIdleDisconnect) ||
+              (!(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.a(-76)) &&
+                !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))))) {
+            this.forceIdleDisconnect = false;
             Bzip2DecoderState.closeSessionSocket((byte) -115);
             ClientFlowState.requestSessionExit((byte) 81);
             TextInputValidator.a((byte) 124, 2, MessageDialogSupport.idleMessage20MinText);
             BootstrapUiSupport.clearAchievementsTextWhenGuardAllows(-113);
-            ArchiveLoadStep.field_e = true;
-            DisplayNamePanel.field_G = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
+            ArchiveLoadStep.loginRetrySuspended = true;
+            DisplayNamePanel.connectionRetryDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           }
         }
         if (!((DebouncedValidationProvider.archiveLoadStatus != -1) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0))) {
-          stackIn_24_0 = (-1 != DebouncedValidationProvider.archiveLoadStatus) ? 0 : 1;
-          var3 = stackIn_24_0;
+          archiveWasPendingSnapshot = (-1 != DebouncedValidationProvider.archiveLoadStatus) ? 0 : 1;
+          idleThresholdOrArchivePendingOrSequenceReady = archiveWasPendingSnapshot;
           DebouncedValidationProvider.archiveLoadStatus = DelayedIncomingPacket.tickArchiveLoading(15869);
-          if ((var3 != 0) &&
+          if ((idleThresholdOrArchivePendingOrSequenceReady != 0) &&
               (DebouncedValidationProvider.archiveLoadStatus == 0) &&
               (11 == SpriteConstructionSupport.clientScreenStage) &&
               (!ClientTimingSupport.isClientReadyForSessionActions(73))) {
@@ -283,7 +283,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0)) {
-            DisplayNamePanel.field_G = 15000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
+            DisplayNamePanel.connectionRetryDeadlineMillis = 15000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
           }
         }
         if ((DebouncedValidationProvider.archiveLoadStatus != -1) &&
@@ -308,7 +308,7 @@ abstract class SessionGameApplet extends GameApplet {
               } else {
                 TextInputValidator.a((byte) 124, 256, LoginPanel.js5CrcErrorText);
               }
-              ArchiveLoadStep.field_e = true;
+              ArchiveLoadStep.loginRetrySuspended = true;
             }
           } else {
             if (DebouncedValidationProvider.archiveLoadStatus != 3) {
@@ -332,9 +332,9 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if ((!((!((DebouncedValidationProvider.archiveLoadStatus != -1) &&
                 (DebouncedValidationProvider.archiveLoadStatus != 0))) &&
-              (!ClientTimingSupport.isClientReadyForSessionActions(param1 - 19585)))) &&
-            (~DisplayNamePanel.field_G >= ~ClientClockSupport.correctedCurrentTimeMillis(param1 - 32180))) {
-          ArchiveLoadStep.field_e = false;
+              (!ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)))) &&
+            (~DisplayNamePanel.connectionRetryDeadlineMillis >= ~ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180))) {
+          ArchiveLoadStep.loginRetrySuspended = false;
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0)) {
             DebouncedValidationProvider.archiveLoadStatus = -1;
@@ -350,12 +350,12 @@ abstract class SessionGameApplet extends GameApplet {
           VisualPropertyOverrides.clientBootstrapStage = 1;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 1) {
-          if (MeshPrioritySupport.field_a != 0) {
-            FadingDialog.field_J = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.field_e, (byte) -62);
+          if (MeshPrioritySupport.bootstrapLanguageId != 0) {
+            FadingDialog.field_J = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.interfaceTextArchiveId, (byte) -62);
           }
-          DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.field_c, (byte) -18, true, false, 1);
-          AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
-          DialRenderer.field_n = DisplayModeInfo.a(ClientTimingSupport.field_d, (byte) -41, true, false, 1);
+          DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.commonUiSpriteArchiveId, (byte) -18, true, false, 1);
+          AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.uiFontArchiveId, (byte) -124, true, false, 1);
+          DialRenderer.field_n = DisplayModeInfo.a(ClientTimingSupport.buttonAndLogoArchiveId, (byte) -41, true, false, 1);
           SessionTextHistorySupport.basicUiGraphicsArchive = DirectByteStorage.field_h;
           VisualPropertyOverrides.clientBootstrapStage = 2;
           RankedListQuery.field_i = AttachedEntityRenderer.field_c;
@@ -387,21 +387,21 @@ abstract class SessionGameApplet extends GameApplet {
           CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.field_n, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
           if (!((!LoginProtocolSupport.field_a) &&
               (SocketConnector.field_d == null))) {
-            stackIn_100_0 = 2274;
-            stackIn_100_1 = SocketConnector.field_d;
+            loginPanelGuardSnapshot = 2274;
+            loginPanelMessageSnapshot = SocketConnector.field_d;
             if (LoginProtocolSupport.field_a) {
-              stackIn_101_2 = false;
+              allowRetrySnapshot = false;
             } else {
-              stackIn_101_2 = true;
+              allowRetrySnapshot = true;
             }
             if (LoginProtocolSupport.field_a) {
-              stackIn_104_3 = false;
+              allowCancelSnapshot = false;
             } else {
-              stackIn_104_3 = true;
+              allowCancelSnapshot = true;
             }
-            TextTemplateDefinition.a(stackIn_100_0, stackIn_100_1, stackIn_101_2, stackIn_104_3);
+            TextTemplateDefinition.a(loginPanelGuardSnapshot, loginPanelMessageSnapshot, allowRetrySnapshot, allowCancelSnapshot);
           }
-          if (AchievementSubmission.field_m) {
+          if (AchievementSubmission.simpleUiMode) {
             ButtonWidget.e(83);
           }
           if (null == DelegatingCanvas.field_a) {
@@ -417,8 +417,8 @@ abstract class SessionGameApplet extends GameApplet {
           VisualPropertyOverrides.clientBootstrapStage = 10;
         }
         if (10 == VisualPropertyOverrides.clientBootstrapStage) {
-          if (MeshPrioritySupport.field_a != 0) {
-            TextValidationSupport.field_b = SocketArchiveNetworkClient.createResourceArchive(TextWidgetSupport.field_a, (byte) -62);
+          if (MeshPrioritySupport.bootstrapLanguageId != 0) {
+            TextValidationSupport.field_b = SocketArchiveNetworkClient.createResourceArchive(TextWidgetSupport.gameTextArchiveId, (byte) -62);
           }
           VisualPropertyOverrides.clientBootstrapStage = 11;
         }
@@ -435,7 +435,7 @@ abstract class SessionGameApplet extends GameApplet {
             VisualPropertyOverrides.clientBootstrapStage = 12;
           }
         }
-        if (param1 != 19660) {
+        if (methodGuard != 19660) {
           return;
         }
         if ((VisualPropertyOverrides.clientBootstrapStage == 12) &&
@@ -443,34 +443,34 @@ abstract class SessionGameApplet extends GameApplet {
           VisualPropertyOverrides.clientBootstrapStage = 13;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 13) {
-          var3 = 1;
+          idleThresholdOrArchivePendingOrSequenceReady = 1;
           if (null != TextTemplateLookupSupport.bootstrapArchiveLoadSequence) {
-            stackIn_135_0 = (!TextTemplateLookupSupport.bootstrapArchiveLoadSequence.pollLoaded(true)) ? 0 : 1;
-            var3 = stackIn_135_0;
+            bootstrapSequenceReadySnapshot = (!TextTemplateLookupSupport.bootstrapArchiveLoadSequence.pollLoaded(true)) ? 0 : 1;
+            idleThresholdOrArchivePendingOrSequenceReady = bootstrapSequenceReadySnapshot;
             HighscoreNameEntry.a(TextTemplateLookupSupport.bootstrapArchiveLoadSequence.statusText, -2, TextTemplateLookupSupport.bootstrapArchiveLoadSequence.scaledProgress);
           }
-          if (var3 != 0) {
+          if (idleThresholdOrArchivePendingOrSequenceReady != 0) {
             VisualPropertyOverrides.clientBootstrapStage = 20;
           }
         }
-        if ((!param0) &&
-            (EntityMotionSupport.field_a)) {
+        if ((!fullscreenActive) &&
+            (EntityMotionSupport.canvasReplacementRequested)) {
           EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
           this.b(true);
           UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
         }
-        if (OpacityWidget.field_G[8]) {
+        if (OpacityWidget.enabledSessionPacketOpcodes[8]) {
           ArchiveNetworkClient.f(-102);
         }
     }
 
-    final void h(int param0) {
-        int discarded$55 = 0;
-        int discarded$56 = 0;
-        int var3;
-        boolean stackIn_3_1 = false;
-        boolean stackIn_4_2 = false;
-        var3 = Geoblox.clientControlFlowFlag;
+    final void updateBootstrapUi(int methodGuard) {
+        int discardedNormalUiResult = 0;
+        int discardedFullscreenUiResult = 0;
+        int clientControlFlowGuard;
+        boolean suppressLoginHandshakeSnapshot = false;
+        boolean fullscreenActiveSnapshot = false;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (!CacheReference.haveRequiredClientStages(-31456)) {
           if (VisualPropertyOverrides.clientBootstrapStage >= 10) {
             if (!OpacityWidget.isLogoAnimationComplete(7426)) {
@@ -479,244 +479,244 @@ abstract class SessionGameApplet extends GameApplet {
               if (SpriteConstructionSupport.clientScreenStage != 0) {
                 ByteStorage.a(CachedTextLayout.wheelRotationSnapshot, (byte) -96);
               } else {
-                discarded$55 = this.a(false, false, -1);
+                discardedNormalUiResult = this.processAccountUiActions(false, false, -1);
               }
             }
           }
         } else {
-          stackIn_3_1 = false;
+          suppressLoginHandshakeSnapshot = false;
           if (InstrumentPatch.field_n == null) {
-            stackIn_4_2 = false;
+            fullscreenActiveSnapshot = false;
           } else {
-            stackIn_4_2 = true;
+            fullscreenActiveSnapshot = true;
           }
-          discarded$56 = this.a(stackIn_3_1, stackIn_4_2, -1);
+          discardedFullscreenUiResult = this.processAccountUiActions(suppressLoginHandshakeSnapshot, fullscreenActiveSnapshot, -1);
         }
-        if (param0 < 104) {
-          this.f(80);
+        if (methodGuard < 104) {
+          this.handleSessionCookiePacket(80);
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseSessionAppletResources(int methodGuard) {
         spaceMusicTrack = null;
         fullscreenText = null;
-        if (param0 != 30344) {
+        if (methodGuard != 30344) {
             SessionGameApplet.createAchievementStateValues(-29);
         }
     }
 
-    private final int a(boolean param0, boolean param1, int param2) {
+    private final int processAccountUiActions(boolean suppressLoginHandshake, boolean fullscreenActive, int actionGuard) {
         try {
-            Throwable decompiledCaughtException = null;
-            int var4 = 0;
-            int var5_int = 0;
-            Exception var5 = null;
-            String var7 = null;
-            int var8 = 0;
-            String var9 = null;
-            String var10 = null;
-            Boolean var11 = null;
-            ByteArrayBuffer var12 = null;
-            var8 = Geoblox.clientControlFlowFlag;
-            var4 = ClientProtocolStage.a(MeshPrioritySupport.field_a, CachedTextLayout.wheelRotationSnapshot, param1, (byte) -117);
-            if (param2 == ~var4) {
+            Throwable caughtUiFailure = null;
+            int uiAction = 0;
+            int queryOrHandshakeResult = 0;
+            Exception countryListFailureForReport = null;
+            String countryListText = null;
+            int clientControlFlowGuard = 0;
+            String unusedNullCountryList = null;
+            String unusedNullCountryListAfterFailure = null;
+            Boolean emailAvailabilityResult = null;
+            ByteArrayBuffer countryListBytes = null;
+            clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+            uiAction = ClientProtocolStage.pollAccountUiAction(MeshPrioritySupport.bootstrapLanguageId, CachedTextLayout.wheelRotationSnapshot, fullscreenActive, (byte) -117);
+            if (actionGuard == ~uiAction) {
               throw new IllegalStateException();
             }
-            if (var4 == 1) {
-              var5_int = ByteArrayBuffer.a(AccountCreationForm.i(param2 ^ -26), LoginPanel.h((byte) -42), -121);
-              if (var5_int != -1) {
-                UsernameResponseSupport.handleUsernameResponse(var5_int, 6568, WidgetSkinState.field_i, AudioService.field_a);
+            if (uiAction == 1) {
+              queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.i(actionGuard ^ -26), LoginPanel.h((byte) -42), -121);
+              if (queryOrHandshakeResult != -1) {
+                UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.field_i, AudioService.field_a);
                 AudioService.field_a = null;
                 WidgetSkinState.field_i = null;
               }
-              var11 = HotspotTextWidget.a((byte) 111);
-              if (var11 != null) {
-                EmailAvailabilityValidator.a(param2 ^ 110, var11.booleanValue());
+              emailAvailabilityResult = HotspotTextWidget.a((byte) 111);
+              if (emailAvailabilityResult != null) {
+                EmailAvailabilityValidator.a(actionGuard ^ 110, emailAvailabilityResult.booleanValue());
               }
             }
-            if (var4 == 2) {
-              var5_int = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.field_r, UsernameSuggestionsPanel.f(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.a((byte) 27));
-              if (var5_int != -1) {
-                StrongCacheReference.publishAccountUsernameResult(AudioService.field_a, var5_int, (byte) 30, WidgetSkinState.field_i);
+            if (uiAction == 2) {
+              queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.f(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.a((byte) 27));
+              if (queryOrHandshakeResult != -1) {
+                StrongCacheReference.publishAccountUsernameResult(AudioService.field_a, queryOrHandshakeResult, (byte) 30, WidgetSkinState.field_i);
                 AudioService.field_a = null;
                 WidgetSkinState.field_i = null;
               }
             }
-            if (var4 == 3) {
+            if (uiAction == 3) {
               if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
                   (DebouncedValidationProvider.archiveLoadStatus != 0)) {
                 DebouncedValidationProvider.archiveLoadStatus = -1;
                 SocialListEntry.e(-21754);
               }
-              if (!param0) {
-                var5_int = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.a(true), this.field_r, this.field_v, ClientFlowToken.getActiveLoginIdentifier(~param2), ~param2);
-                if (var5_int != -1) {
-                  if (var5_int == 0) {
+              if (!suppressLoginHandshake) {
+                queryOrHandshakeResult = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.a(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
+                if (queryOrHandshakeResult != -1) {
+                  if (queryOrHandshakeResult == 0) {
                     CheckboxWidget.field_H = ClientClockSupport.field_c;
                     IterableNodeHashTable.refreshLoginTicketMessage(-12618);
                     ProgressBarWidget.field_G = false;
                     SpriteConstructionSupport.clientScreenStage = 10;
                   } else {
-                    TextInputValidator.a((byte) 124, var5_int, AudioService.field_a);
+                    TextInputValidator.a((byte) 124, queryOrHandshakeResult, AudioService.field_a);
                     AudioService.field_a = null;
                   }
                 }
               } else {
-                ArchiveLoadStep.field_e = false;
+                ArchiveLoadStep.loginRetrySuspended = false;
               }
             }
-            if (var4 == 4) {
+            if (uiAction == 4) {
               if (!FontLoadingSupport.memberAccountMode) {
                 ProgressBarWidget.field_G = true;
                 SpriteConstructionSupport.clientScreenStage = 10;
               } else {
-                BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(param2 ^ -122));
+                BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(actionGuard ^ -122));
               }
             }
-            if (5 == var4) {
+            if (5 == uiAction) {
               EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(120), 62);
             }
-            if ((var4 == 6) &&
+            if ((uiAction == 6) &&
                 (AccountEligibilitySupport.loginReturnAllowed)) {
               SpriteConstructionSupport.clientScreenStage = 10;
             }
-            if (var4 == 7) {
+            if (uiAction == 7) {
               TrackedPcmStream.a((byte) 114, NodeHashTableIterator.getActiveApplet(107));
             }
-            if (var4 == 8) {
+            if (uiAction == 8) {
               BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(119));
             }
-            if (9 == var4) {
+            if (9 == uiAction) {
               RasterTargetSnapshot.a(NodeHashTableIterator.getActiveApplet(115), (byte) -91);
             }
-            if (var4 == 10) {
+            if (uiAction == 10) {
               CacheReference.outgoingSessionBuffer.writeCipherByte(17, (byte) -21);
             }
-            if (var4 == 11) {
+            if (uiAction == 11) {
               EmailAvailabilityQuery.a(NodeHashTableIterator.getActiveApplet(110), false);
             }
-            if (var4 == 12) {
-              ArchiveLoadSequence.a(NodeHashTableIterator.getActiveApplet(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(param2 ^ -241));
+            if (uiAction == 12) {
+              ArchiveLoadSequence.a(NodeHashTableIterator.getActiveApplet(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(actionGuard ^ -241));
             }
-            if (var4 == 13) {
+            if (uiAction == 13) {
               try {
                 if (null == EmailAvailabilityValidator.field_n) {
                   EmailAvailabilityValidator.field_n = new AsyncResourceDownloader(MenuScreen.platformTaskDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                 }
                 if (EmailAvailabilityValidator.field_n.a((byte) 45)) {
-                  var12 = EmailAvailabilityValidator.field_n.b((byte) 91);
-                  if (var12 == null) {
-                    var9 = (String) null;
+                  countryListBytes = EmailAvailabilityValidator.field_n.b((byte) 91);
+                  if (countryListBytes == null) {
+                    unusedNullCountryList = (String) null;
                     SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
                   } else {
-                    var7 = ByteTextDecodingSupport.decodeTextSlice(-46, var12.bytes, 0, var12.position);
-                    SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, var7);
+                    countryListText = ByteTextDecodingSupport.decodeTextSlice(-46, countryListBytes.bytes, 0, countryListBytes.position);
+                    SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, countryListText);
                   }
                   EmailAvailabilityValidator.field_n = null;
                 }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var5 = (Exception) (Object) decompiledCaughtException;
-                IterableNodeHashTable.reportClientError((Throwable) ((Object) var5), "S1", (byte) 125);
-                var10 = (String) null;
+              } catch (java.lang.Exception countryListFailure) {
+                caughtUiFailure = countryListFailure;
+                countryListFailureForReport = (Exception) (Object) caughtUiFailure;
+                IterableNodeHashTable.reportClientError((Throwable) ((Object) countryListFailureForReport), "S1", (byte) 125);
+                unusedNullCountryListAfterFailure = (String) null;
                 SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
                 EmailAvailabilityValidator.field_n = null;
               }
             }
-            if (var4 == 15) {
+            if (uiAction == 15) {
               SpriteConstructionSupport.clientScreenStage = 10;
             }
-            if (16 == var4) {
+            if (16 == uiAction) {
               return 1;
             }
-            if (var4 != 17) {
+            if (uiAction != 17) {
               return 0;
             }
             return 2;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedUiFailure) {
+            throw uncheckedUiFailure;
+        } catch (Throwable checkedUiFailure) {
+            throw new RuntimeException(checkedUiFailure);
         }
     }
 
-    private final void e(byte param0) {
-        OpacityWidget.field_G[4] = true;
-        int var2 = 10 % ((-61 - param0) / 32);
+    private final void enableIntRecordReplies(byte methodGuard) {
+        OpacityWidget.enabledSessionPacketOpcodes[4] = true;
+        int guardResidue = 10 % ((-61 - methodGuard) / 32);
     }
 
-    private final void a(int param0, String param1, int param2, byte param3, int param4) {
-        boolean stackIn_7_1 = false;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        Throwable decompiledCaughtException = null;
-        String var6 = null;
-        Exception var6_ref = null;
-        RuntimeException var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
+    private final void initializeFromAppletParameters(int canvasHeight, String gameName, int cacheIndexCount, byte methodGuard, int canvasWidth) {
+        boolean isJagexHostSnapshot = false;
+        RuntimeException initializationFailureBeforeContext = null;
+        StringBuilder initializationMessagePrefix = null;
+        String gameNameDescription = null;
+        Throwable caughtInitializationFailure = null;
+        String lowercaseServerHost = null;
+        Exception initializationFailureForReport = null;
+        RuntimeException initializationFailureForContext = null;
+        String serverNumberParameter = null;
+        String languageParameter = null;
+        String affiliateParameter = null;
+        String unusedNullErrorMessage = null;
         try {
           try {
-            if (!this.a(false)) {
+            if (!this.isAppletStartupAllowed(false)) {
               return;
             }
-            this.field_n = this.getCodeBase().getHost();
-            var6 = this.field_n.toLowerCase();
-            stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
-            ((SessionGameApplet) (this)).field_v = stackIn_7_1;
-            this.field_l = Integer.parseInt(this.getParameter("gameport1"));
-            this.field_w = Integer.parseInt(this.getParameter("gameport2"));
-            var7 = this.getParameter("servernum");
-            if (var7 != null) {
-              this.field_x = Integer.parseInt(var7);
+            this.serverHost = this.getCodeBase().getHost();
+            lowercaseServerHost = this.serverHost.toLowerCase();
+            isJagexHostSnapshot = (lowercaseServerHost.equals("jagex.com")) || (lowercaseServerHost.endsWith(".jagex.com"));
+            ((SessionGameApplet) (this)).isJagexCodeBase = isJagexHostSnapshot;
+            this.primaryServerPort = Integer.parseInt(this.getParameter("gameport1"));
+            this.alternateServerPort = Integer.parseInt(this.getParameter("gameport2"));
+            serverNumberParameter = this.getParameter("servernum");
+            if (serverNumberParameter != null) {
+              this.serverNumber = Integer.parseInt(serverNumberParameter);
             }
-            this.field_s = Integer.parseInt(this.getParameter("gamecrc"));
-            this.field_k = Long.parseLong(this.getParameter("instanceid"));
-            this.field_m = this.getParameter("member").equals("yes");
-            var8 = this.getParameter("lang");
-            if (var8 != null) {
-              this.field_u = Integer.parseInt(var8);
+            this.gameCrc = Integer.parseInt(this.getParameter("gamecrc"));
+            this.instanceId = Long.parseLong(this.getParameter("instanceid"));
+            this.requestedMemberMode = this.getParameter("member").equals("yes");
+            languageParameter = this.getParameter("lang");
+            if (languageParameter != null) {
+              this.languageId = Integer.parseInt(languageParameter);
             }
-            if (this.field_u >= 5) {
-              this.field_u = 0;
+            if (this.languageId >= 5) {
+              this.languageId = 0;
             }
-            var9 = this.getParameter("affid");
-            if (var9 != null) {
-              this.field_r = Integer.parseInt(var9);
+            affiliateParameter = this.getParameter("affid");
+            if (affiliateParameter != null) {
+              this.affiliateId = Integer.parseInt(affiliateParameter);
             }
-            AchievementSubmission.field_m = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(32, -14948, this.field_s, param0, param4, param1, param2);
-            if (param3 != 81) {
-              this.a((byte) -103, -111, -55, -20, 80, false, -81, 86);
+            AchievementSubmission.simpleUiMode = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            this.a(32, -14948, this.gameCrc, canvasHeight, canvasWidth, gameName, cacheIndexCount);
+            if (methodGuard != 81) {
+              this.initializeSessionAppletServices((byte) -103, -111, -55, -20, 80, false, -81, 86);
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var6_ref = (Exception) (Object) decompiledCaughtException;
-            var10 = (String) null;
-            IterableNodeHashTable.reportClientError((Throwable) ((Object) var6_ref), (String) null, (byte) 125);
+          } catch (java.lang.Exception parameterInitializationFailure) {
+            caughtInitializationFailure = parameterInitializationFailure;
+            initializationFailureForReport = (Exception) (Object) caughtInitializationFailure;
+            unusedNullErrorMessage = (String) null;
+            IterableNodeHashTable.reportClientError((Throwable) ((Object) initializationFailureForReport), (String) null, (byte) 125);
             this.a((byte) 79, "crash");
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_23_0 = var6_ref2;
-          stackIn_23_1 = new StringBuilder().append("wf.UA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_24_2 = "null";
+        } catch (java.lang.RuntimeException initializationContextFailure) {
+          caughtInitializationFailure = initializationContextFailure;
+          initializationFailureForContext = (RuntimeException) (Object) caughtInitializationFailure;
+          initializationFailureBeforeContext = initializationFailureForContext;
+          initializationMessagePrefix = new StringBuilder().append("wf.UA(").append(canvasHeight).append(',');
+          if (gameName == null) {
+            gameNameDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            gameNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailureBeforeContext), ((StringBuilder) (Object) initializationMessagePrefix).append(gameNameDescription).append(',').append(cacheIndexCount).append(',').append(methodGuard).append(',').append(canvasWidth).append(')').toString());
         }
     }
 
     final static int[] createAchievementStateValues(int methodGuard) {
         if (methodGuard < 81) {
-            field_p = -43;
+            uiAccentPaletteIndex = -43;
         }
         return new int[8];
     }
@@ -728,11 +728,11 @@ abstract class SessionGameApplet extends GameApplet {
         int clientControlFlowGuard;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (methodGuard < 119) {
-          this.field_m = true;
+          this.requestedMemberMode = true;
         }
         packetOpcode = ScorePopup.currentPacketOpcode;
         if ((packetOpcode < 64) &&
-            (OpacityWidget.field_G[packetOpcode])) {
+            (OpacityWidget.enabledSessionPacketOpcodes[packetOpcode])) {
           if (packetOpcode == 0) {
             return;
           }
@@ -766,7 +766,7 @@ abstract class SessionGameApplet extends GameApplet {
                                 return;
                               }
                               if (17 == packetOpcode) {
-                                this.g((byte) 12);
+                                this.handleOpenUrlPacket((byte) 12);
                                 return;
                               }
                               if (packetOpcode == 18) {
@@ -783,7 +783,7 @@ abstract class SessionGameApplet extends GameApplet {
                           }
                         }
                       } else {
-                        this.f(-11);
+                        this.handleSessionCookiePacket(-11);
                       }
                     }
                   }
@@ -799,46 +799,46 @@ abstract class SessionGameApplet extends GameApplet {
         Bzip2DecoderState.closeSessionSocket((byte) -118);
     }
 
-    private final void g(byte param0) {
-        int var2 = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
-        int var3 = (var2 & 1) != 0 ? 1 : 0;
-        if (param0 != 12) {
-            this.h(106);
+    private final void handleOpenUrlPacket(byte methodGuard) {
+        int urlHeaderByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+        int navigationFlagInt = (urlHeaderByte & 1) != 0 ? 1 : 0;
+        if (methodGuard != 12) {
+            this.updateBootstrapUi(106);
         }
-        int var4 = -1 + AchievementSubmission.field_k;
-        byte[] var5 = new byte[var4];
-        LogoCompositor.sessionPacketBuffer.readCipherBytes(96, 0, var5, var4);
-        LimitedRandomAccessFile.a(EmailValidator.decodeTextBytes(1, var5), (byte) -128, var3 != 0, NodeHashTableIterator.getActiveApplet(112));
+        int urlByteCount = -1 + AchievementSubmission.field_k;
+        byte[] cipheredUrlBytes = new byte[urlByteCount];
+        LogoCompositor.sessionPacketBuffer.readCipherBytes(96, 0, cipheredUrlBytes, urlByteCount);
+        LimitedRandomAccessFile.openUrlInNewWindow(EmailValidator.decodeTextBytes(1, cipheredUrlBytes), (byte) -128, navigationFlagInt != 0, NodeHashTableIterator.getActiveApplet(112));
     }
 
-    private final void i(int param0) {
-        OpacityWidget.field_G[2] = true;
-        if (param0 != 16072) {
-            SessionGameApplet.g(124);
+    private final void enableScoreReplies(int methodGuard) {
+        OpacityWidget.enabledSessionPacketOpcodes[2] = true;
+        if (methodGuard != 16072) {
+            SessionGameApplet.releaseSessionAppletResources(124);
         }
     }
 
-    private final void d(boolean param0) {
-        OpacityWidget.field_G[5] = param0;
+    private final void setSessionAcknowledgementsEnabled(boolean enabled) {
+        OpacityWidget.enabledSessionPacketOpcodes[5] = enabled;
     }
 
-    private final void f(byte param0) {
-        if (param0 != 32) {
-            this.field_u = 72;
+    private final void enableByteShortReplies(byte methodGuard) {
+        if (methodGuard != 32) {
+            this.languageId = 72;
         }
-        OpacityWidget.field_G[1] = true;
+        OpacityWidget.enabledSessionPacketOpcodes[1] = true;
     }
 
-    final void h(byte param0) {
-        this.field_t = true;
-        int var2 = -21 / ((-82 - param0) / 37);
+    final void requestIdleDisconnect(byte methodGuard) {
+        this.forceIdleDisconnect = true;
+        int guardResidue = -21 / ((-82 - methodGuard) / 37);
     }
 
-    final int a(boolean param0, int param1) {
-        if (param1 != -17978) {
-            this.e(-61);
+    final int processAccountUiActionsWithoutLogin(boolean fullscreenActive, int methodGuard) {
+        if (methodGuard != -17978) {
+            this.initializeSessionPacketLengths(-61);
         }
-        return this.a(true, param0, -1);
+        return this.processAccountUiActions(true, fullscreenActive, -1);
     }
 
     protected SessionGameApplet() {

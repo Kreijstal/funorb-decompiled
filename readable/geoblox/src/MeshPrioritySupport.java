@@ -6,7 +6,7 @@ final class MeshPrioritySupport {
     static TextTemplateArgumentType field_f;
     static boolean field_d;
     static ClientFlowToken completedClientFlowToken;
-    static int field_a;
+    static int bootstrapLanguageId;
     static IntrusiveDeque field_c;
 
     public static void releaseStaticReferences(int methodGuard) {

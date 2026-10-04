@@ -5,7 +5,7 @@ final class FontLoadingSupport {
     static String fullscreenCancelButtonText;
     static boolean memberAccountMode;
     static int kindFourRemovalCount;
-    static CanvasResizeController field_d;
+    static CanvasResizeController canvasResizeController;
 
     final static MonochromeBitmapFont loadMonochromeFontById(int fileId, int methodGuard, ResourceArchive glyphGraphicsArchive, int groupId, ResourceArchive fontMetricsArchive) {
         RuntimeException fontFailureForContext = null;
@@ -46,13 +46,13 @@ final class FontLoadingSupport {
     }
 
     public static void clearFontLoadingResources(byte methodGuard) {
-        field_d = null;
+        canvasResizeController = null;
         fullscreenCancelButtonText = null;
         int guardResidue = -73 % ((-60 - methodGuard) / 48);
     }
 
     static {
         fullscreenCancelButtonText = "Cancel";
-        field_d = null;
+        canvasResizeController = null;
     }
 }

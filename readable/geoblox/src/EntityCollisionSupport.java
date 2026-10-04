@@ -76,7 +76,7 @@ final class EntityCollisionSupport {
               }
               try {
                 quitPageUrl = new java.net.URL(applet.getCodeBase(), "quit.ws");
-                applet.getAppletContext().showDocument(SessionGameApplet.a(quitPageUrl, 102, applet), "_top");
+                applet.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(quitPageUrl, 102, applet), "_top");
                 return;
               } catch (java.lang.Exception printedNavigationFailure) {
                 caughtNavigationFailure = printedNavigationFailure;

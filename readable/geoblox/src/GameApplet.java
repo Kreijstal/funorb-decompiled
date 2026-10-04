@@ -522,7 +522,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ValidationState.field_d = true;
           CrcAcknowledgedPacket.field_g = true;
           UsernameQueryState.canvasRedrawRequested = true;
-          EntityMotionSupport.field_a = false;
+          EntityMotionSupport.canvasReplacementRequested = false;
           Geoblox.canvasCreationTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -614,7 +614,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowActivated(java.awt.event.WindowEvent param0) {
     }
 
-    final boolean a(boolean param0) {
+    final boolean isAppletStartupAllowed(boolean unusedMethodGuard) {
         return true;
     }
 
@@ -711,7 +711,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              EntityMotionSupport.field_a = true;
+              EntityMotionSupport.canvasReplacementRequested = true;
             }
             return;
           }

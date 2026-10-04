@@ -165,53 +165,53 @@ final class LimitedRandomAccessFile {
         }
     }
 
-    final static void a(String param0, byte param1, boolean param2, java.applet.Applet param3) {
+    final static void openUrlInNewWindow(String urlText, byte methodGuard, boolean unusedNavigationFlag, java.applet.Applet applet) {
         try {
-            int var4_int = 0;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            String stackIn_11_2 = null;
-            StringBuilder stackIn_13_1 = null;
-            String stackIn_14_2 = null;
-            Throwable decompiledCaughtException = null;
-            java.net.MalformedURLException var4 = null;
-            RuntimeException var4_ref = null;
+            int guardResidue = 0;
+            RuntimeException navigationFailureBeforeContext = null;
+            StringBuilder navigationMessagePrefix = null;
+            String urlDescription = null;
+            StringBuilder messageBeforeAppletDescription = null;
+            String appletDescription = null;
+            Throwable caughtNavigationFailure = null;
+            java.net.MalformedURLException malformedUrlFailureForReport = null;
+            RuntimeException navigationFailureForContext = null;
             try {
               if ((PlatformTaskDispatcher.osNameLowerCase.startsWith("win")) &&
-                  (GameplaySession.tryOpenUrlWithWindowsShell(param0, false))) {
+                  (GameplaySession.tryOpenUrlWithWindowsShell(urlText, false))) {
                 return;
               }
               try {
-                var4_int = -83 / ((param1 + 55) / 62);
-                param3.getAppletContext().showDocument(new java.net.URL(param0), "_blank");
-              } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-                IterableNodeHashTable.reportClientError((Throwable) null, "MGR1: " + param0, (byte) 125);
+                guardResidue = -83 / ((methodGuard + 55) / 62);
+                applet.getAppletContext().showDocument(new java.net.URL(urlText), "_blank");
+              } catch (java.net.MalformedURLException malformedUrlFailure) {
+                caughtNavigationFailure = malformedUrlFailure;
+                malformedUrlFailureForReport = (java.net.MalformedURLException) (Object) caughtNavigationFailure;
+                IterableNodeHashTable.reportClientError((Throwable) null, "MGR1: " + urlText, (byte) 125);
               }
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_10_0 = var4_ref;
-              stackIn_10_1 = new StringBuilder().append("pa.F(");
-              if (param0 == null) {
-                stackIn_11_2 = "null";
+            } catch (java.lang.RuntimeException navigationContextFailure) {
+              caughtNavigationFailure = navigationContextFailure;
+              navigationFailureForContext = (RuntimeException) (Object) caughtNavigationFailure;
+              navigationFailureBeforeContext = navigationFailureForContext;
+              navigationMessagePrefix = new StringBuilder().append("pa.F(");
+              if (urlText == null) {
+                urlDescription = "null";
               } else {
-                stackIn_11_2 = "{...}";
+                urlDescription = "{...}";
               }
-              stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
-              if (param3 == null) {
-                stackIn_14_2 = "null";
+              messageBeforeAppletDescription = ((StringBuilder) (Object) navigationMessagePrefix).append(urlDescription).append(',').append(methodGuard).append(',').append(unusedNavigationFlag).append(',');
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_14_2 = "{...}";
+                appletDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeContext), ((StringBuilder) (Object) messageBeforeAppletDescription).append(appletDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedNavigationFailure) {
+            throw uncheckedNavigationFailure;
+        } catch (Throwable checkedNavigationFailure) {
+            throw new RuntimeException(checkedNavigationFailure);
         }
     }
 

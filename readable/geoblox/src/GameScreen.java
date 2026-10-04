@@ -448,11 +448,11 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
                         !(PcmResampler.pointerYSnapshot <= 265) &&
                         !(PcmResampler.pointerYSnapshot >= 299)))) {
-                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
                   FadingDialog.uiPaletteFont.drawCenteredText(UiFontResources.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
                   dialogButtonLeft = 320 - (20 + dialogButtonWidth >> 1) - 90;
-                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                   textYOrButtonTop = 265;
                   buttonTextCenterOrConfirmationWidth = 10 + (dialogButtonWidth >> 1) + dialogButtonLeft;
                   DelayedIncomingPacket.drawNineSlicePanel(textYOrButtonTop, dialogButtonLeft, 36, (byte) -92, dialogButtonWidth + 20, ArchiveLoadSequence.mouseBoxFrames);
@@ -462,10 +462,10 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 290) &&
                         !(PcmResampler.pointerYSnapshot <= 265) &&
                         !(PcmResampler.pointerYSnapshot >= 299)))) {
-                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
                   FadingDialog.uiPaletteFont.drawCenteredText(DialWidget.fullscreenMembersButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
-                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
@@ -492,10 +492,10 @@ final class GameScreen extends MenuScreen {
                           !(PrefixCodeDecoder.pointerXSnapshot >= 380) &&
                           !(PcmResampler.pointerYSnapshot <= 274) &&
                           !(PcmResampler.pointerYSnapshot >= 309)))) {
-                      FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+                      FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                     }
                     FadingDialog.uiPaletteFont.drawCenteredText(UiFontResources.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
-                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                     if (clientControlFlowGuard == 0) {
                       return;
                     }
@@ -533,10 +533,10 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
                         !(PcmResampler.pointerYSnapshot <= 317) &&
                         !(PcmResampler.pointerYSnapshot >= 352)))) {
-                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
                   FadingDialog.uiPaletteFont.drawCenteredText(FontLoadingSupport.fullscreenCancelButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
-                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                   confirmationButtonLeft = 320 - (20 + buttonTextCenterOrConfirmationWidth >> 1) - 90;
                   confirmationTextCenter = 10 + (buttonTextCenterOrConfirmationWidth >> 1) + confirmationButtonLeft;
                   DelayedIncomingPacket.drawNineSlicePanel(textYOrButtonTop, confirmationButtonLeft, 36, (byte) -92, 20 + buttonTextCenterOrConfirmationWidth, ArchiveLoadSequence.mouseBoxFrames);
@@ -546,10 +546,10 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 290) &&
                         !(PcmResampler.pointerYSnapshot <= 317) &&
                         !(PcmResampler.pointerYSnapshot >= 352)))) {
-                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
                   FadingDialog.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
-                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
@@ -574,10 +574,10 @@ final class GameScreen extends MenuScreen {
                       !(PrefixCodeDecoder.pointerXSnapshot >= 449) &&
                       !(PcmResampler.pointerYSnapshot <= 265) &&
                       !(299 <= PcmResampler.pointerYSnapshot)))) {
-                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+                  FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                 }
                 FadingDialog.uiPaletteFont.drawCenteredText(UiFontResources.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
-                FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+                FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                 if (clientControlFlowGuard == 0) {
                   return;
                 }
@@ -2397,7 +2397,7 @@ final class GameScreen extends MenuScreen {
           }
           L33: {
             if (selected) {
-              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
               itemColumnOrPressOffset = this.menuPressOffset;
               if (clientControlFlowGuard == 0) {
                 break L33;
@@ -2424,7 +2424,7 @@ final class GameScreen extends MenuScreen {
             }
             rowFont.drawCenteredText(actionText, buttonTextCenter, rowY + 30, 0, -1);
           }
-          FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
+          FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

@@ -1,11 +1,53 @@
 # Readable GeoBlox
 
-The current export has 11,912 guarded naming rules: 302 classes, 1,556 fields,
-1,198 methods, 3,364 parameters, 5,438 local declarations and 54 labels. Both 303-file corpora
+The current export has 12,144 guarded naming rules: 302 classes, 1,581 fields,
+1,224 methods, 3,424 parameters, 5,559 local declarations and 54 labels. Both 303-file corpora
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current received-text and name helpers (pass 136)
+## Current session applet and bootstrap (pass 137)
+
+Pass 137 adds 232 guarded rules: 25 fields, 26 methods, 60 parameters and
+121 locals. Every field, method, parameter and local in `SessionGameApplet`
+is now named. Applet bootstrap fields expose server ports/host/number, game CRC,
+instance id, member mode, language and affiliate id from their original
+parameter keys. Archive ids now distinguish game/interface text, common UI
+sprites, UI fonts and the combined button/logo archive.
+
+The central paths are `initializeGameApplet`, `initializeFromAppletParameters`,
+`initializeSessionAppletServices`, `updateSessionBootstrapAndInput`,
+`updateBootstrapUi`, `pollReconnectAndResendRequests` and
+`processAccountUiActions`. The packet enable and length tables now expose
+`enabledSessionPacketOpcodes` and `sessionPacketLengthByOpcode`; variable lengths
+keep their original -1/-2 byte/short framing. Reply-family methods preserve
+original opcode values, enable order, resend order and guard effects.
+
+`requestIdleDisconnect` names the flag set by the gameplay `brk` command and
+consumed through the existing idle-disconnect branch. `canvasReplacementRequested`
+names the paint-driven canvas rebuild flag. `pollAccountDialogAction` still
+processes dialog pointer/animation/keyboard input, consumes pending actions and
+returns original request-state actions; it is not a zero-return stub.
+The adapter retains its unused language, wheel and fullscreen inputs.
+
+URL helpers expose `applySessionOverridesToUrl`, `rewriteSessionUrlPath`,
+`handleOpenUrlPacket` and `openUrlInNewWindow`. The unusual settings/session
+alias, repeated assignments, ignored navigation flag and original URL fallback
+remain. Path rewriting adds no new encoding or policy. The patched
+`isAppletStartupAllowed` still returns true; it implies no domain validation.
+Bootstrap keeps language edge cases, partial initialization and nested catches.
+
+There are 12,144 rules and 90,308 identifier edits, plus eleven class-literal
+and 184 label edits: 90,503 total. All 11,912 prior complete rules and the raw,
+decompiler, naming, workflow, stub, native and text pins remain unchanged.
+Both 303-file corpora compile, preserve 136,607 bindings, 388 override
+relationships and 813 lexical label records, and reverse byte exactly.
+The 27 publication checks and eight existing native fixtures pass within their
+recorded scopes; they do not establish live applet/session/country-list/browser
+services. No source bodies or bytecode change. Eight large labeled bodies,
+192 opaque labels and other unmapped members remain. Full-game/assets/server/
+device and heap/FPS acceptance remain unverified.
+
+## Previous received-text and name helpers (pass 136)
 
 Pass 136 adds 100 guarded rules: 25 fields, nine methods, 19 parameters and
 47 locals. Ten previous names are explicitly corrected. `ReceivedTextRecord`
@@ -561,7 +603,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/14f2e2a92eac906e222eac5c5f537c8c5554a17d/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/14f2e2a92eac906e222eac5c5f537c8c5554a17d/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -805,7 +847,7 @@ Pass123 adds the guarded direct-literal policy and their readable class names.
 The current raw tree is
 `2b3bf4664aaf082ec60395d0b40546cda545920221218af5056a6f6858bbed4a`;
 the current readable tree is
-`aa469d93690ca33fe3adf963ff4d363a30d653317518f9abaecceed5d0e8cd69`.
+`d7596cc25c97ed72e1c794b5511d5d121b2b59caeee760d36d7ce9d57a2e6303`.
 The pinned decompiler-source SHA-256 is
 `841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1`.
 All eight native/raw/readable probes pass with their pinned traces.
@@ -819,16 +861,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/14f2e2a92eac906e222eac5c5f537c8c5554a17d/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/14f2e2a92eac906e222eac5c5f537c8c5554a17d/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
-Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135. Pass118 refers to this repository's pass117 history. The export records its exact
+Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `eadeaa0d3312f76b076f3c10c2c411cea0daeafc`; the
-manifest SHA-256 is `40ea0ebc3dbfb87b91e533d2e7ae346f51875d9b8f999bc7bf0b4730bcb71892`.
+The current Deko workflow/manifest commit is `14f2e2a92eac906e222eac5c5f537c8c5554a17d`; the
+manifest SHA-256 is `eb25906380c8560c4092f122e2bda3fe3e540c081cae70ae3c60d72ca4c1a853`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

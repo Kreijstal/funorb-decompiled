@@ -7,7 +7,7 @@ final class ClientTimingSupport {
     static int decodedSpriteCount;
     static String loginNoDisplayNameText;
     static IndexedSprite[] field_e;
-    static int field_d;
+    static int buttonAndLogoArchiveId;
 
     public static void releaseStaticReferences(boolean changeDecodedSpriteCount) {
         field_e = null;

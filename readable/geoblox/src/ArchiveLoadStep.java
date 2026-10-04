@@ -3,7 +3,7 @@
  */
 final class ArchiveLoadStep {
     static int keyStateWriteIndexOrResetSentinel;
-    static boolean field_e;
+    static boolean loginRetrySuspended;
     ResourceArchive archive;
     static boolean field_a;
     static TextValidationFailure field_h;

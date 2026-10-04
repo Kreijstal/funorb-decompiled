@@ -17,12 +17,54 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/14f2e2a92eac906e222eac5c5f537c8c5554a17d/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 137 adds 232 guarded rules: 25 fields, 26 methods, 60 parameters and
+121 locals. Every field, method, parameter and local in `SessionGameApplet`
+is now named. Applet bootstrap fields expose server ports/host/number, game CRC,
+instance id, member mode, language and affiliate id from their original
+parameter keys. Archive ids now distinguish game/interface text, common UI
+sprites, UI fonts and the combined button/logo archive.
+
+The central paths are `initializeGameApplet`, `initializeFromAppletParameters`,
+`initializeSessionAppletServices`, `updateSessionBootstrapAndInput`,
+`updateBootstrapUi`, `pollReconnectAndResendRequests` and
+`processAccountUiActions`. The packet enable and length tables now expose
+`enabledSessionPacketOpcodes` and `sessionPacketLengthByOpcode`; variable lengths
+keep their original -1/-2 byte/short framing. Reply-family methods preserve
+original opcode values, enable order, resend order and guard effects.
+
+`requestIdleDisconnect` names the flag set by the gameplay `brk` command and
+consumed through the existing idle-disconnect branch. `canvasReplacementRequested`
+names the paint-driven canvas rebuild flag. `pollAccountDialogAction` still
+processes dialog pointer/animation/keyboard input, consumes pending actions and
+returns original request-state actions; it is not a zero-return stub.
+The adapter retains its unused language, wheel and fullscreen inputs.
+
+URL helpers expose `applySessionOverridesToUrl`, `rewriteSessionUrlPath`,
+`handleOpenUrlPacket` and `openUrlInNewWindow`. The unusual settings/session
+alias, repeated assignments, ignored navigation flag and original URL fallback
+remain. Path rewriting adds no new encoding or policy. The patched
+`isAppletStartupAllowed` still returns true; it implies no domain validation.
+Bootstrap keeps language edge cases, partial initialization and nested catches.
+
+There are 12,144 rules and 90,308 identifier edits, plus eleven class-literal
+and 184 label edits: 90,503 total. All 11,912 prior complete rules and the raw,
+decompiler, naming, workflow, stub, native and text pins remain unchanged.
+Both 303-file corpora compile, preserve 136,607 bindings, 388 override
+relationships and 813 lexical label records, and reverse byte exactly.
+The 27 publication checks and eight existing native fixtures pass within their
+recorded scopes; they do not establish live applet/session/country-list/browser
+services. No source bodies or bytecode change. Eight large labeled bodies,
+192 opaque labels and other unmapped members remain. Full-game/assets/server/
+device and heap/FPS acceptance remain unverified.
+
+Previous naming pass:
 
 Pass 136 adds 100 guarded rules: 25 fields, nine methods, 19 parameters and
 47 locals. Ten previous names are explicitly corrected. `ReceivedTextRecord`

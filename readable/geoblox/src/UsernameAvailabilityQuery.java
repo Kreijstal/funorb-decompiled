@@ -130,7 +130,7 @@ final class UsernameAvailabilityQuery {
           if (param2) {
             instrumentPatchArchive = (ResourceArchive) null;
           }
-          stackIn_3_0 = param1.a(param0, -17978);
+          stackIn_3_0 = param1.processAccountUiActionsWithoutLogin(param0, -17978);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

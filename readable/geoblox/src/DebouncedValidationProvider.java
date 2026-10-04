@@ -5,7 +5,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     private long field_b;
     static String field_d;
     static boolean gameAssetsInitialized;
-    static int field_c;
+    static int commonUiSpriteArchiveId;
     static int archiveLoadStatus;
 
     final static void drawHalfBlendSolidSpan(int guard, int[] destinationPixels, int destinationIndex, int halfRgb, int pixelCount) {
@@ -35,7 +35,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     public static void a(boolean param0) {
         field_d = null;
         if (!param0) {
-            field_c = -26;
+            commonUiSpriteArchiveId = -26;
         }
     }
 

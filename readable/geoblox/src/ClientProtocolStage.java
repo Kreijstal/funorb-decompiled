@@ -13,16 +13,16 @@ final class ClientProtocolStage {
         throw new IllegalStateException();
     }
 
-    final static int a(int param0, int param1, boolean param2, byte param3) {
-        int var4 = -21 / ((param3 - 8) / 34);
-        return DequeCursor.a(-1);
+    final static int pollAccountUiAction(int unusedLanguageId, int unusedWheelRotation, boolean unusedFullscreenActive, byte methodGuard) {
+        int guardResidue = -21 / ((methodGuard - 8) / 34);
+        return DequeCursor.pollAccountDialogAction(-1);
     }
 
     public static void a(int param0) {
         rankedEntryKeyOne = null;
         createDisplayNameHintText = null;
         if (param0 != 0) {
-            ClientProtocolStage.a(103, 65, true, (byte) -104);
+            ClientProtocolStage.pollAccountUiAction(103, 65, true, (byte) -104);
             field_d = null;
             return;
         }

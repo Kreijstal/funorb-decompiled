@@ -240,8 +240,8 @@ final class ArchiveLoadSequence {
                   field_f = (String) null;
                 }
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
-                var3 = SessionGameApplet.a(var3, 59, param0);
-                LimitedRandomAccessFile.a(var3.toString(), (byte) 64, true, param0);
+                var3 = SessionGameApplet.applySessionOverridesToUrl(var3, 59, param0);
+                LimitedRandomAccessFile.openUrlInNewWindow(var3.toString(), (byte) 64, true, param0);
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

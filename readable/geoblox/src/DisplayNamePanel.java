@@ -8,7 +8,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     private ButtonWidget confirmButton;
     static Sprite bakingForegroundSprite;
     static String createIneligibleText;
-    static long field_G;
+    static long connectionRetryDeadlineMillis;
     private ButtonWidget cancelButton;
 
     private final boolean h(byte param0) {
@@ -619,7 +619,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -12037) {
-            field_G = 55L;
+            connectionRetryDeadlineMillis = 55L;
           }
           stackIn_3_0 = this.a(param0, -116, param5, param4, 35, param2, param3);
           return stackIn_3_0;

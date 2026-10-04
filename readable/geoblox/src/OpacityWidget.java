@@ -6,7 +6,7 @@ final class OpacityWidget extends SingleChildWidget {
     static String createInvalidEmailAlertText;
     int opacity;
     static ResourceArchive field_F;
-    static boolean[] field_G;
+    static boolean[] enabledSessionPacketOpcodes;
     static String createDisplayNameText;
 
     public OpacityWidget() {
@@ -164,7 +164,7 @@ final class OpacityWidget extends SingleChildWidget {
     }
 
     public static void f(byte param0) {
-        field_G = null;
+        enabledSessionPacketOpcodes = null;
         createInvalidEmailAlertText = null;
         fullscreenAfterAcceptText = null;
         if (param0 != -60) {
@@ -245,7 +245,7 @@ final class OpacityWidget extends SingleChildWidget {
           archiveGroupId = graphicsArchive.findGroupId((byte) 126, groupName);
           archiveFileId = graphicsArchive.findFileId(resourceName, -114, archiveGroupId);
           if (methodGuard != 0) {
-            field_G = (boolean[]) null;
+            enabledSessionPacketOpcodes = (boolean[]) null;
           }
           stackIn_3_0 = GameGraphicsResources.loadRgbSpritesById(archiveGroupId, (byte) -81, archiveFileId, graphicsArchive);
           return stackIn_3_0;
@@ -278,7 +278,7 @@ final class OpacityWidget extends SingleChildWidget {
     static {
         createInvalidEmailAlertText = "Please check if address is correct";
         fullscreenAfterAcceptText = "to keep fullscreen or";
-        field_G = new boolean[64];
+        enabledSessionPacketOpcodes = new boolean[64];
         createDisplayNameText = "Player Name: ";
     }
 }

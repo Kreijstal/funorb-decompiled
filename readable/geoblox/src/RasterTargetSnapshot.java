@@ -31,7 +31,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
               }
               try {
                 var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                param0.getAppletContext().showDocument(SessionGameApplet.a(var2, 68, param0), "_top");
+                param0.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(var2, 68, param0), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

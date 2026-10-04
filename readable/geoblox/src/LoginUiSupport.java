@@ -94,7 +94,7 @@ final class LoginUiSupport {
         if (VisualPropertyOverrides.clientBootstrapStage < 2) {
           return 0;
         }
-        if (MeshPrioritySupport.field_a == 0) {
+        if (MeshPrioritySupport.bootstrapLanguageId == 0) {
           if (!DirectByteStorage.field_h.ensureIndexLoaded(0)) {
             return 20;
           }

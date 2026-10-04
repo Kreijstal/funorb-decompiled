@@ -15,8 +15,8 @@ final class FullscreenSupport {
         InstrumentPatch.field_n.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         if (methodGuard <= -14) {
             InstrumentPatch.field_n = null;
-            if (!(null == FontLoadingSupport.field_d)) {
-                FontLoadingSupport.field_d.restoreSize((byte) -101);
+            if (!(null == FontLoadingSupport.canvasResizeController)) {
+                FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
             }
             MessageDialog.gameCanvas.requestFocus();
             return;
@@ -24,8 +24,8 @@ final class FullscreenSupport {
         PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
         FullscreenSupport.exitFullscreenAndDisposeFrame((java.awt.Frame) null, 17, (PlatformTaskDispatcher) null);
         InstrumentPatch.field_n = null;
-        if (!(null == FontLoadingSupport.field_d)) {
-            FontLoadingSupport.field_d.restoreSize((byte) -101);
+        if (!(null == FontLoadingSupport.canvasResizeController)) {
+            FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
         }
         MessageDialog.gameCanvas.requestFocus();
     }

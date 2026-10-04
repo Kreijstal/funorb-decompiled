@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/14f2e2a92eac906e222eac5c5f537c8c5554a17d/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 136)
+## Current readability (pass 137)
 
-The export has 11,912 guarded names and 89,441 Java identifier edits, plus 11
+The export has 12,144 guarded names and 90,308 Java identifier edits, plus 11
 class-name literal edits and 184 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -23,6 +23,48 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 137 adds 232 guarded rules: 25 fields, 26 methods, 60 parameters and
+121 locals. Every field, method, parameter and local in `SessionGameApplet`
+is now named. Applet bootstrap fields expose server ports/host/number, game CRC,
+instance id, member mode, language and affiliate id from their original
+parameter keys. Archive ids now distinguish game/interface text, common UI
+sprites, UI fonts and the combined button/logo archive.
+
+The central paths are `initializeGameApplet`, `initializeFromAppletParameters`,
+`initializeSessionAppletServices`, `updateSessionBootstrapAndInput`,
+`updateBootstrapUi`, `pollReconnectAndResendRequests` and
+`processAccountUiActions`. The packet enable and length tables now expose
+`enabledSessionPacketOpcodes` and `sessionPacketLengthByOpcode`; variable lengths
+keep their original -1/-2 byte/short framing. Reply-family methods preserve
+original opcode values, enable order, resend order and guard effects.
+
+`requestIdleDisconnect` names the flag set by the gameplay `brk` command and
+consumed through the existing idle-disconnect branch. `canvasReplacementRequested`
+names the paint-driven canvas rebuild flag. `pollAccountDialogAction` still
+processes dialog pointer/animation/keyboard input, consumes pending actions and
+returns original request-state actions; it is not a zero-return stub.
+The adapter retains its unused language, wheel and fullscreen inputs.
+
+URL helpers expose `applySessionOverridesToUrl`, `rewriteSessionUrlPath`,
+`handleOpenUrlPacket` and `openUrlInNewWindow`. The unusual settings/session
+alias, repeated assignments, ignored navigation flag and original URL fallback
+remain. Path rewriting adds no new encoding or policy. The patched
+`isAppletStartupAllowed` still returns true; it implies no domain validation.
+Bootstrap keeps language edge cases, partial initialization and nested catches.
+
+There are 12,144 rules and 90,308 identifier edits, plus eleven class-literal
+and 184 label edits: 90,503 total. All 11,912 prior complete rules and the raw,
+decompiler, naming, workflow, stub, native and text pins remain unchanged.
+Both 303-file corpora compile, preserve 136,607 bindings, 388 override
+relationships and 813 lexical label records, and reverse byte exactly.
+The 27 publication checks and eight existing native fixtures pass within their
+recorded scopes; they do not establish live applet/session/country-list/browser
+services. No source bodies or bytecode change. Eight large labeled bodies,
+192 opaque labels and other unmapped members remain. Full-game/assets/server/
+device and heap/FPS acceptance remain unverified.
+
+Previous naming pass:
 
 Pass 136 adds 100 guarded rules: 25 fields, nine methods, 19 parameters and
 47 locals. Ten previous names are explicitly corrected. `ReceivedTextRecord`

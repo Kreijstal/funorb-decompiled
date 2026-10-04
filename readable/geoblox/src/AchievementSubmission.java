@@ -4,7 +4,7 @@
 final class AchievementSubmission extends IntrusiveNode {
     int achievementId;
     int primaryTrackingCounterSnapshot;
-    static boolean field_m;
+    static boolean simpleUiMode;
     int achievementCheckByte;
     static PcmResampler gameSoundResampler;
     static int[] retentionCategoryCounts;
