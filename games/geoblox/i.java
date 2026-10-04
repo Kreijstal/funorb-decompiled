@@ -128,17 +128,14 @@ final class i {
           ch.field_b = 0;
           var8 = 0;
           while (true) {
-            L2: {
-              if (var8 < param2.field_f) {
-                var9 = param2.field_r[var8];
-                var10 = param2.field_B[var8];
-                var11 = param2.field_c[var8];
-                stackOut_10_0 = param4;
-                stackIn_49_0 = stackOut_10_0 ? 1 : 0;
-                stackIn_11_0 = stackOut_10_0;
-                if (var19 != 0) {
-                  break L2;
-                }
+            if (var8 < param2.field_f) {
+              var9 = param2.field_r[var8];
+              var10 = param2.field_B[var8];
+              var11 = param2.field_c[var8];
+              stackOut_10_0 = param4;
+              stackIn_49_0 = stackOut_10_0 ? 1 : 0;
+              stackIn_11_0 = stackOut_10_0;
+              if (var19 == 0) {
                 L4: {
                   if (stackIn_11_0) {
                     var12 = sh.field_x[var9];
@@ -199,6 +196,7 @@ final class i {
                 var8++;
                 continue;
               }
+            } else {
               stackIn_49_0 = -1;
             }
             if ((stackIn_49_0 > ~param2.field_v) &&
@@ -279,17 +277,14 @@ final class i {
           ch.field_b = 0;
           var8 = 0;
           while (true) {
-            L2: {
-              if (var8 < param2.field_f) {
-                var9 = param2.field_r[var8];
-                var10 = param2.field_B[var8];
-                var11 = param2.field_c[var8];
-                stackOut_10_0 = param4;
-                stackIn_49_0 = stackOut_10_0 ? 1 : 0;
-                stackIn_11_0 = stackOut_10_0;
-                if (var19 != 0) {
-                  break L2;
-                }
+            if (var8 < param2.field_f) {
+              var9 = param2.field_r[var8];
+              var10 = param2.field_B[var8];
+              var11 = param2.field_c[var8];
+              stackOut_10_0 = param4;
+              stackIn_49_0 = stackOut_10_0 ? 1 : 0;
+              stackIn_11_0 = stackOut_10_0;
+              if (var19 == 0) {
                 L4: {
                   if (stackIn_11_0) {
                     var12 = sh.field_x[var9];
@@ -350,6 +345,7 @@ final class i {
                 var8++;
                 continue;
               }
+            } else {
               stackIn_49_0 = -1;
             }
             if ((stackIn_49_0 > ~param2.field_v) &&

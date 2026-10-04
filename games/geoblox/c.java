@@ -991,12 +991,9 @@ final class c extends ka {
                 var7 = 0;
                 var8_int = 0;
                 while (true) {
-                  L10: {
-                    if (var8_int < 10) {
-                      stackIn_59_0 = null;
-                      if (var10 != 0) {
-                        break L10;
-                      }
+                  if (var8_int < 10) {
+                    stackIn_59_0 = null;
+                    if (var10 == 0) {
                       if (stackIn_59_0 != var3_ref_String__[var8_int]) {
                         var2_int = 1;
                         var9 = var3_ref_String__[var8_int];
@@ -1018,6 +1015,7 @@ final class c extends ka {
                       var8_int++;
                       continue;
                     }
+                  } else {
                     if (var7 != 0) {
                       break;
                     }

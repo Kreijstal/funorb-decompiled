@@ -165,18 +165,16 @@ final class gh {
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             var3 = 0;
             while (true) {
-              L2: {
-                if (param0.length() > var3) {
-                  stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
-                  if (var4 != 0) {
-                    break L2;
-                  }
+              if (param0.length() > var3) {
+                stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
+                if (var4 == 0) {
                   if (stackIn_20_0 == -1) {
                     return false;
                   }
                   var3++;
                   continue;
                 }
+              } else {
                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
                 stackIn_20_0 = 1;
               }
@@ -920,85 +918,82 @@ final class gh {
           this.field_X = (StringBuilder) null;
         }
         while (true) {
-          L61: {
-            if (hh.a(111)) {
-              if (te.field_a > 0) {
-                pk.field_r = pk.field_r.substring(1) + te.field_a;
-                if (pk.field_r.equalsIgnoreCase("fog")) {
-                  if (this.field_s) {
-                    stackIn_304_1 = false;
-                  } else {
-                    stackIn_304_1 = true;
-                  }
-                  ((gh) (this)).field_s = stackIn_304_1;
+          if (hh.a(111)) {
+            if (te.field_a > 0) {
+              pk.field_r = pk.field_r.substring(1) + te.field_a;
+              if (pk.field_r.equalsIgnoreCase("fog")) {
+                if (this.field_s) {
+                  stackIn_304_1 = false;
+                } else {
+                  stackIn_304_1 = true;
                 }
-                if ((oc.field_f >= 2) &&
-                    (pk.field_r.equalsIgnoreCase("brk"))) {
-                  this.field_I.h((byte) 41);
+                ((gh) (this)).field_s = stackIn_304_1;
+              }
+              if ((oc.field_f >= 2) &&
+                  (pk.field_r.equalsIgnoreCase("brk"))) {
+                this.field_I.h((byte) 41);
+              }
+            }
+            if (ki.field_d == 13) {
+              if (!this.field_x) {
+                ai.field_p = 1;
+                if (var5 == 0) {
+                  return;
                 }
               }
-              if (ki.field_d == 13) {
-                if (!this.field_x) {
-                  ai.field_p = 1;
-                  if (var5 == 0) {
-                    return;
-                  }
-                }
-                this.d(28809);
-                return;
-              }
-              if ((ki.field_d == 83) &&
-                  (this.field_Y)) {
-                this.c(7000);
-              }
-              L67: {
-                if ((ki.field_d == 84) &&
-                    (this.field_t == 0)) {
-                  this.field_t = 1;
-                  this.field_C = false;
-                  if (this.field_p != 0) {
-                    if (this.field_p != 1) {
-                      if (this.field_p != 2) {
-                        break L67;
-                      }
-                      this.field_U = dk.field_b;
-                      if (var5 == 0) {
-                        break L67;
-                      }
+              this.d(28809);
+              return;
+            }
+            if ((ki.field_d == 83) &&
+                (this.field_Y)) {
+              this.c(7000);
+            }
+            L67: {
+              if ((ki.field_d == 84) &&
+                  (this.field_t == 0)) {
+                this.field_t = 1;
+                this.field_C = false;
+                if (this.field_p != 0) {
+                  if (this.field_p != 1) {
+                    if (this.field_p != 2) {
+                      break L67;
                     }
-                    this.field_U = dd.field_D;
+                    this.field_U = dk.field_b;
                     if (var5 == 0) {
                       break L67;
                     }
                   }
-                  this.field_U = 0;
+                  this.field_U = dd.field_D;
+                  if (var5 == 0) {
+                    break L67;
+                  }
                 }
+                this.field_U = 0;
               }
-              if ((ki.field_d == 85) &&
-                  (5 == this.field_p) &&
-                  (this.field_t == 0)) {
-                this.c(param0 ^ -1578897511);
-                this.field_Y = true;
-                this.field_p = 0;
-                this.field_C = true;
+            }
+            if ((ki.field_d == 85) &&
+                (5 == this.field_p) &&
+                (this.field_t == 0)) {
+              this.c(param0 ^ -1578897511);
+              this.field_Y = true;
+              this.field_p = 0;
+              this.field_C = true;
+            }
+            if (jg.field_g == ki.field_d) {
+              if (this.field_E) {
+                stackIn_359_1 = false;
+              } else {
+                stackIn_359_1 = true;
               }
-              if (jg.field_g == ki.field_d) {
-                if (this.field_E) {
-                  stackIn_359_1 = false;
-                } else {
-                  stackIn_359_1 = true;
-                }
-                ((gh) (this)).field_E = stackIn_359_1;
-                jc.a(7, false);
-              }
-              if (2 > oc.field_f) {
-                continue;
-              }
-              stackIn_464_0 = ki.field_d;
-              stackIn_464_1 = 48;
-              if (var5 != 0) {
-                break L61;
-              }
+              ((gh) (this)).field_E = stackIn_359_1;
+              jc.a(7, false);
+            }
+            if (2 > oc.field_f) {
+              continue;
+            }
+            stackIn_464_0 = ki.field_d;
+            stackIn_464_1 = 48;
+            if (var5 == 0) {
               if (stackIn_464_0 == stackIn_464_1) {
                 this.field_r = this.field_r - 1;
                 if (this.field_r < 0) {
@@ -1118,6 +1113,7 @@ final class gh {
               this.field_h = true;
               continue;
             }
+          } else {
             stackIn_464_0 = ~bi.field_g;
             stackIn_464_1 = -1;
           }

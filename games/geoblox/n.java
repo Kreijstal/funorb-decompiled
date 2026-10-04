@@ -95,12 +95,9 @@ final class n extends q {
               stackIn_24_0 = var11;
               stackIn_24_1 = param8;
               while (true) {
-                L14: {
-                  if (stackIn_24_0 < stackIn_24_1) {
-                    stackIn_34_0 = 0;
-                    if (var15 != 0) {
-                      break L14;
-                    }
+                if (stackIn_24_0 < stackIn_24_1) {
+                  stackIn_34_0 = 0;
+                  if (var15 == 0) {
                     var12 = stackIn_34_0;
                     while (var9 > var12) {
                       var10[0].field_v[var12 + var11 * var9] = param2;
@@ -117,6 +114,7 @@ final class n extends q {
                     var11++;
                     continue L12;
                   }
+                } else {
                   stackIn_34_0 = 0;
                 }
                 var11 = stackIn_34_0;

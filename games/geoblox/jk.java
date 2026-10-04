@@ -110,16 +110,14 @@ final class jk {
             return stackIn_9_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {
-            L2: {
-              var4 = param1.charAt(var3);
-              if (45 == var4) {
-                if ((var3 != 0) &&
-                    (var3 != -1 + var2_int)) {
-                  break L2;
-                }
+            var4 = param1.charAt(var3);
+            if (45 == var4) {
+              if (!((var3 != 0) &&
+                  (var3 != -1 + var2_int))) {
                 stackIn_18_0 = ii.field_h;
                 return stackIn_18_0;
               }
+            } else {
               if (pk.field_q.indexOf(var4) == -1) {
                 stackIn_21_0 = ii.field_h;
                 return stackIn_21_0;
