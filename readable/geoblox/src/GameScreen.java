@@ -1292,59 +1292,57 @@ final class GameScreen extends MenuScreen {
           }
           this.previousPointerX = PrefixCodeDecoder.pointerXSnapshot;
           if (this.selectedItemIndex != 0) {
-            inputDerivedStateUpdate: {
-              inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.inputAndScoreContextSelectorSeed - SessionTextHistorySupport.currentKeyboardEventCode)) % 8;
-              switch (inputDerivedStateBranch) {
-                case 3:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                  if (clientControlFlowGuard == 0) {
-                    break inputDerivedStateUpdate;
-                  }
+            inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.inputAndScoreContextSelectorSeed - SessionTextHistorySupport.currentKeyboardEventCode)) % 8;
+            switch (inputDerivedStateBranch) {
+              case 3:
+                ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                if (clientControlFlowGuard == 0) {
                   break;
-                case 6:
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break inputDerivedStateUpdate;
-                  }
-                default:
-                  break inputDerivedStateUpdate;
-                case 7:
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break inputDerivedStateUpdate;
-                  }
-                case 5:
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break inputDerivedStateUpdate;
-                  }
-                case 4:
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break inputDerivedStateUpdate;
-                  }
-                case 2:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                  if (clientControlFlowGuard == 0) {
-                    break inputDerivedStateUpdate;
-                  }
-                case 1:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  if (clientControlFlowGuard == 0) {
-                    break inputDerivedStateUpdate;
-                  }
-                case 0:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                }
+                break;
+              case 6:
+                DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                if (clientControlFlowGuard == 0) {
                   break;
-              }
+                }
+              default:
+                break;
+              case 7:
+                UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              case 5:
+                UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              case 4:
+                DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              case 2:
+                ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              case 1:
+                ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              case 0:
+                ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                break;
             }
             inputDerivedStateBranch = (SessionTextHistorySupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.inputAndScoreContextSelectorSeed)) % 5;
             if (0 != inputDerivedStateBranch) {
