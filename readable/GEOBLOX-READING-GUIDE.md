@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/08b3e75c80781a0c39bb4dfdc9cf1c875a7c07d5/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/2677205ae25fec66c48784e948b8665f556f1121/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 128)
+## Current readability (pass 129)
 
-The export has 11,399 guarded names and 87,406 Java identifier edits, plus 11
-class-name literal edits and 173 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 11,395 guarded names and 87,406 Java identifier edits, plus 11
+class-name literal edits and 165 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,51 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 129 replaces eight labeled exits with ordinary conditional alternatives
+across six bodies. Three disappear from `GameplaySession.renderSession` and one
+from `GameScreen.updateScreen`; the applet update loop, disk-cache write path,
+ranked-list helper and entity cleanup lose one each. A branch retains its work,
+then performs its existing return/throw/loop transfer under the inverse guard.
+Its complete fallback becomes an `else`. Guards still evaluate once after the
+prefix; nonzero client-control paths, exception coverage, finally effects and
+monitor ownership remain. Equality inversion preserves NaNs and unboxing;
+other predicates keep exact logical negation. Prefix locals and single-statement
+if/loop positions retain their required braces.
+
+The raw tree loses sixteen lines and eight block labels: 76,292 lines,
+198 block labels and 58 loop labels remain. All ordered 136,607 Java bindings
+and 388 override relationships remain. Eleven surviving label ordinals migrate,
+including nine named rules; four consumed label names retire. All other complete
+rules are preserved. There are 11,395 naming rules and 165 label edits; all
+48 surviving labels in the six large bodies remain named. Six large bodies,
+208 opaque labels elsewhere and unmapped members still need work.
+
+Four focused groups pass 347,760 native comparisons and fifteen independent
+oracles, including effects, transferred values, field/local shadowing, dangling
+else, NaNs, nullable unboxing, throwing cleanup and monitors. The emitter and
+exception/integer-argument suite passes 107 tests with one skip. The source proof
+checks all 303 expected token streams, complete ordered Java bindings and
+surviving label destinations; a clean tracked decompiler archive reproduces
+all source and diagnostics bytes. Publication checks and the eight fixed game
+probes retain their stated scopes. Full applet/renderer/menu execution, real disk
+cache I/O and ranked sorting, assets/server/browser/phone and heap/FPS acceptance
+remain unverified.
+
+Current large labeled bodies:
+
+| Body | Lines | Labels |
+| --- | ---: | ---: |
+| `GameScreen.renderScreen` | 304 | 4 |
+| `GameScreen.updateScreen` | 326 | 5 |
+| `GameplaySession.renderSession` | 343 | 8 |
+| `GameplaySession.updateSession` | 631 | 13 |
+| `BoardReconciliationSupport.reconcileBoardEntities` | 339 | 11 (two loops) |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | 364 | 7 |
+
+Earlier sections retain their original pass inventories and proof counts.
+
+## Previous switch-aware guard recovery (pass 128)
 
 Pass 128 removes a whole-method refusal in the generic decompiler: an ordinary
 colon switch no longer prevents recovery of proven captured-local guards.

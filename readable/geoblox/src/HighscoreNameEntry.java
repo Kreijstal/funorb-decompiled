@@ -22,15 +22,13 @@ final class HighscoreNameEntry {
         try {
           queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
           while (true) {
-            L1: {
-              if (queuedEntityThenPooledEntity != null) {
-                queuedEntityThenPooledEntity.advanceEntityAnimation(true);
-                queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
-                if (clientControlFlowGuard != 0) {
-                  break L1;
-                }
+            if (queuedEntityThenPooledEntity != null) {
+              queuedEntityThenPooledEntity.advanceEntityAnimation(true);
+              queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
+              if (clientControlFlowGuard == 0) {
                 continue;
               }
+            } else {
               if (methodGuard != 255) {
                 field_b = -11;
               }

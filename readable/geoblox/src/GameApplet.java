@@ -401,15 +401,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     var3 = stackIn_99_0;
                     while (true) {
-                      L21: {
-                        if (TriangleMesh.field_w > var3) {
-                          this.a((byte) -10);
-                          var3++;
-                          if (var5 != 0) {
-                            break L21;
-                          }
+                      if (TriangleMesh.field_w > var3) {
+                        this.a((byte) -10);
+                        var3++;
+                        if (var5 == 0) {
                           continue;
                         }
+                      } else {
                         this.d(32000);
                         OpacityWidget.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
                       }

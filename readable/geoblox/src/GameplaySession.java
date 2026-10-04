@@ -415,46 +415,40 @@ final class GameplaySession {
               debugEntityQueue = debugMovingQueueSnapshot;
               renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
               while (true) {
-                debugMovingEntityIteration: {
-                  if (null != renderedEntity) {
-                    entityOffsetX = -320.0f + renderedEntity.positionX;
-                    entityOffsetY = -240.0f + renderedEntity.positionY;
-                    debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
-                    renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
-                    SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                    renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
-                    if (clientControlFlowGuard != 0) {
-                      break debugMovingEntityIteration;
-                    }
+                if (null != renderedEntity) {
+                  entityOffsetX = -320.0f + renderedEntity.positionX;
+                  entityOffsetY = -240.0f + renderedEntity.positionY;
+                  debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                  renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
+                  SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                  renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
+                  if (clientControlFlowGuard == 0) {
                     continue;
                   }
+                } else {
                   debugEntityQueue = BoardEntityState.attachedEntities;
                 }
                 renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                 while (true) {
-                  debugAttachedEntityIteration: {
-                    if (renderedEntity != null) {
-                      SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                      renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                      if (clientControlFlowGuard != 0) {
-                        break debugAttachedEntityIteration;
-                      }
+                  if (renderedEntity != null) {
+                    SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                    if (clientControlFlowGuard == 0) {
                       continue;
                     }
+                  } else {
                     debugEntityQueue = DelegatingCanvas.transientEntities;
                   }
                   renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                   while (true) {
                     debugCounterPanelSelection: {
-                      debugTransientEntityIteration: {
-                        if (renderedEntity != null) {
-                          SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                          renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                          if (clientControlFlowGuard != 0) {
-                            break debugTransientEntityIteration;
-                          }
+                      if (renderedEntity != null) {
+                        SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                        renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                        if (clientControlFlowGuard == 0) {
                           continue;
                         }
+                      } else {
                         if (this.tutorialMode) {
                           tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
                           if (tutorialTextHeightOrDebugPanelTop < 10) {

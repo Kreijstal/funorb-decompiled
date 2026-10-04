@@ -17,12 +17,42 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/08b3e75c80781a0c39bb4dfdc9cf1c875a7c07d5/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/2677205ae25fec66c48784e948b8665f556f1121/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 129 replaces eight labeled exits with ordinary conditional alternatives
+across six bodies. Three disappear from `GameplaySession.renderSession` and one
+from `GameScreen.updateScreen`; the applet update loop, disk-cache write path,
+ranked-list helper and entity cleanup lose one each. A branch retains its work,
+then performs its existing return/throw/loop transfer under the inverse guard.
+Its complete fallback becomes an `else`. Guards still evaluate once after the
+prefix; nonzero client-control paths, exception coverage, finally effects and
+monitor ownership remain. Equality inversion preserves NaNs and unboxing;
+other predicates keep exact logical negation. Prefix locals and single-statement
+if/loop positions retain their required braces.
+
+The raw tree loses sixteen lines and eight block labels: 76,292 lines,
+198 block labels and 58 loop labels remain. All ordered 136,607 Java bindings
+and 388 override relationships remain. Eleven surviving label ordinals migrate,
+including nine named rules; four consumed label names retire. All other complete
+rules are preserved. There are 11,395 naming rules and 165 label edits; all
+48 surviving labels in the six large bodies remain named. Six large bodies,
+208 opaque labels elsewhere and unmapped members still need work.
+
+Four focused groups pass 347,760 native comparisons and fifteen independent
+oracles, including effects, transferred values, field/local shadowing, dangling
+else, NaNs, nullable unboxing, throwing cleanup and monitors. The emitter and
+exception/integer-argument suite passes 107 tests with one skip. The source proof
+checks all 303 expected token streams, complete ordered Java bindings and
+surviving label destinations; a clean tracked decompiler archive reproduces
+all source and diagnostics bytes. Publication checks and the eight fixed game
+probes retain their stated scopes. Full applet/renderer/menu execution, real disk
+cache I/O and ranked sorting, assets/server/browser/phone and heap/FPS acceptance
+remain unverified.
 
 Pass 128 removes a whole-method refusal in the generic decompiler: an ordinary
 colon switch no longer prevents recovery of proven captured-local guards.
@@ -281,7 +311,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`c73390da4f1ca5cea809d42dc82658708bc8219ae89bfe5817e1026273e41568`.
+`fb97147a54cecccd775d549ef27ac23236b57b144d185cc454953cff0bb67970`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls

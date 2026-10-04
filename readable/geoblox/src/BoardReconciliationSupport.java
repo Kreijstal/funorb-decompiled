@@ -37,15 +37,13 @@ final class BoardReconciliationSupport {
           }
           secondaryEntryIndex = 0;
           while (true) {
-            L1: {
-              if (GmtTimestampSupport.rankedEntryCount > secondaryEntryIndex) {
-                AchievementQuery.field_i[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
-                secondaryEntryIndex++;
-                if (clientControlSnapshot != 0) {
-                  break L1;
-                }
+            if (GmtTimestampSupport.rankedEntryCount > secondaryEntryIndex) {
+              AchievementQuery.field_i[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
+              secondaryEntryIndex++;
+              if (clientControlSnapshot == 0) {
                 continue;
               }
+            } else {
               SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
             }
             if (entryLimit < GmtTimestampSupport.rankedEntryCount) {

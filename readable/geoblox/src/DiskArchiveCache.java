@@ -205,20 +205,18 @@ final class DiskArchiveCache {
               dataFileMonitor = this.dataFile;
               synchronized (dataFileMonitor) {
                 try {
-                  L0: {
-                    if (reuseExistingChain) {
-                      if (this.indexFile.length((byte) 46) < (long)(6 + entryId * 6)) {
-                        return false;
-                      }
-                      this.indexFile.seek(methodGuard - 228, (long)(entryId * 6));
-                      this.indexFile.readFully(TextInputWidget.diskSectorBuffer, 6, 0, 9868);
-                      sectorNumber = (TextInputWidget.diskSectorBuffer[5] & 255) + (((255 & TextInputWidget.diskSectorBuffer[4]) << 8) + ((255 & TextInputWidget.diskSectorBuffer[3]) << 16));
-                      if ((sectorNumber > 0) &&
-                          (this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber)) {
-                        break L0;
-                      }
+                  if (reuseExistingChain) {
+                    if (this.indexFile.length((byte) 46) < (long)(6 + entryId * 6)) {
                       return false;
                     }
+                    this.indexFile.seek(methodGuard - 228, (long)(entryId * 6));
+                    this.indexFile.readFully(TextInputWidget.diskSectorBuffer, 6, 0, 9868);
+                    sectorNumber = (TextInputWidget.diskSectorBuffer[5] & 255) + (((255 & TextInputWidget.diskSectorBuffer[4]) << 8) + ((255 & TextInputWidget.diskSectorBuffer[3]) << 16));
+                    if (!((sectorNumber > 0) &&
+                        (this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber))) {
+                      return false;
+                    }
+                  } else {
                     sectorNumber = (int)((this.dataFile.length((byte) 46) + 519L) / 520L);
                     if (sectorNumber == 0) {
                       sectorNumber = 1;

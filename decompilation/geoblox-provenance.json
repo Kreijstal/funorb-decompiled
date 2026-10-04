@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "6c8dd6ef3215090329a8ac0b5a6ad2da8478676d",
+      "commit": "f72ed6ee281f45fcc61702e48b02a91b4e2e38f2",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "c73390da4f1ca5cea809d42dc82658708bc8219ae89bfe5817e1026273e41568",
-        "reproduce": "git archive --format=tar 6c8dd6ef3215090329a8ac0b5a6ad2da8478676d | sha256sum",
+        "sha256": "fb97147a54cecccd775d549ef27ac23236b57b144d185cc454953cff0bb67970",
+        "reproduce": "git archive --format=tar f72ed6ee281f45fcc61702e48b02a91b4e2e38f2 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "7eee1e03ce7681396ec9a72fb2b2d0ecbc36370ff564d45e6603a823e226bdc5",
-  "previousSourceTreeSha256": "ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f",
-  "changedJavaFiles": 2,
+  "sourceTreeSha256": "f914cfefc29f2bbe1b30853962016d3b228aeba13731882617a9d8c8e6f0a33a",
+  "previousSourceTreeSha256": "7eee1e03ce7681396ec9a72fb2b2d0ecbc36370ff564d45e6603a823e226bdc5",
+  "changedJavaFiles": 6,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "08b3e75c80781a0c39bb4dfdc9cf1c875a7c07d5",
+    "commit": "2677205ae25fec66c48784e948b8665f556f1121",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "146aff3683a278e471a6f0f0fd91a19c4b99510cd075448616fbeb127df88076"
+      "sha256": "618a96cb9f8a107809171813d794bfd15bde442cfbf2e4dc375394297f6c645b"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,20 +3291,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "c5111a4d274d3ab7553e385890ce8c03d82b57d5e6ded33b206e69f5e3d657ab",
+    "outputTreeSha256": "5ad5788d17a3188f0f9985ea2bbc6debc3c267438e32abb7ab983775703aff86",
     "files": 303,
-    "rules": 11399,
+    "rules": 11395,
     "identifierEdits": 87406,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 87590,
+    "totalEdits": 87582,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 173,
-    "labelBindingsCompared": 852,
-    "labelDeclarationsCompared": 264
+    "labelEdits": 165,
+    "labelBindingsCompared": 836,
+    "labelDeclarationsCompared": 256
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -4011,5 +4011,59 @@
     "sourceProofTestRepository": "Kreijstal/dekobloko-work",
     "sourceProofTestSha256": "03927f173357c7fda601b7d71547b86adbf1af019bd4cc82bfc6745c91d43b93",
     "scope": "Ordinary colon switches have lexically verified labels/boundaries, independent case-entry facts, exact break/continue targets, fallthrough and finally-aware normal completion. Switch selector effects are retained; arrow rules, unsupported syntax, checked-catch changes and direct case-group suffix pruning remain refused. GeoBlox loses four redundant gameplay-render guards and one menu-action guard/label. All303 expected token streams, declarations/local ordinals, surviving references and label targets compile and compare. Existing game probes do not establish full renderer/menu action, assets/server/browser/phone or heap/FPS acceptance."
+  },
+  "guardedAbruptExitRecovery": {
+    "historicalPassVersion": 129,
+    "previousSourceCommit": "d2a666ddaf4ee5a0a50c8a4fdf7741b422758a61",
+    "sourceCommit": "3dfb43f3fa9d8592c827e7e17222b68c00901b46",
+    "previousRulesRepository": "Kreijstal/dekobloko-work",
+    "previousRulesCommit": "08b3e75c80781a0c39bb4dfdc9cf1c875a7c07d5",
+    "previousSourceTreeSha256": "7eee1e03ce7681396ec9a72fb2b2d0ecbc36370ff564d45e6603a823e226bdc5",
+    "sourceTreeSha256": "f914cfefc29f2bbe1b30853962016d3b228aeba13731882617a9d8c8e6f0a33a",
+    "javaToolsCommit": "f72ed6ee281f45fcc61702e48b02a91b4e2e38f2",
+    "sourceArchiveSha256": "fb97147a54cecccd775d549ef27ac23236b57b144d185cc454953cff0bb67970",
+    "counts": {
+      "voidReturnFrames": 0,
+      "fallthroughBreaks": 0,
+      "exitTreeFrames": 0,
+      "ifElseFrames": 0,
+      "guardedAbruptFrames": 8,
+      "guardTreeFrames": 0,
+      "effectfulExits": 0,
+      "localizedLoopBreaks": 0,
+      "leadingLoopGuards": 0,
+      "labelsRemoved": 0,
+      "jumpsUnlabeled": 0,
+      "blocksUnwrapped": 0
+    },
+    "changedJavaFiles": 6,
+    "changedMethodBodies": 6,
+    "sourceLinesBefore": 76308,
+    "sourceLinesAfter": 76292,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 206,
+    "plainBlockLabelsAfter": 198,
+    "labelDeclarationsBefore": 264,
+    "labelDeclarationsAfter": 256,
+    "labelBindingsBefore": 852,
+    "labelBindingsAfter": 836,
+    "survivingLabelOrdinalMigrations": 11,
+    "guardedLabelOrdinalMigrations": 9,
+    "namedLabelsRetired": 4,
+    "genericFocusedTestGroupsPassed": 4,
+    "nativeComparisons": 347760,
+    "independentNativeOracles": 15,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "dcdbab591cfb3fa207230932909447ec8aae734590aaa083c8e1f77e3586ec4b",
+    "scope": "A direct effect arm ending in a conditional plain-frame break then a return/throw/loop or switch transfer has an existing fallback else. Unique lexical targets and exact statement boundaries prove the rewrite. Guards evaluate once after unchanged prefix effects; equality complements preserve NaNs/unboxing and all other predicates use logical negation. Prefix local scope and statement-position braces remain, effect-arm scopes remain, fallback stays complete, and no protected boundary is crossed. All303 token streams, complete ordered Java bindings/overrides and surviving label targets are checked. Existing probes do not establish full applet/renderer/menu, real disk-cache I/O, ranked sorting, assets/server/browser/phone or heap/FPS acceptance."
   }
 }
