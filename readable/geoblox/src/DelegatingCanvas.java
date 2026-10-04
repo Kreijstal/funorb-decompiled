@@ -78,13 +78,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               ByteArrayPoolSupport.rankedListResponseNames[var6_int] = var14.readNullTerminatedText((byte) 120);
             }
-            TriangleMesh.a(2147483647, var5, var4);
+            TriangleMesh.prepareRankedEntryArrays(2147483647, var5, var4);
             for (var6_int = 0; var4 > var6_int; var6_int++) {
-              ScorePopup.a(116, var14);
+              ScorePopup.decodePackedRankedEntry(116, var14);
               if (var6_int != 0) {
-                TextValidationFailure.a(GzipInflater.field_g, var6_int, (byte) 123, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.field_b, HighscoreNameEntry.unusedGuardScratch);
+                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, var6_int, (byte) 123, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
               } else {
-                TextValidationFailure.a(GzipInflater.field_g, var6_int, (byte) -97, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.field_b, HighscoreNameEntry.unusedGuardScratch);
+                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, var6_int, (byte) -97, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
               }
             }
             BoardReconciliationSupport.sortRankedListIndices(var5, (byte) -98);
@@ -97,11 +97,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
               var11 = AchievementQuery.rankedEntryIndices[var9];
               var6[0][var10] = ByteArrayPoolSupport.rankedListResponseNames[var11];
               var18[0][4 * var10] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
-              var18[0][4 * var10 + 1] = TextHotspotBounds.field_m[var11];
-              var18[0][4 * var10 + 2] = NodeHashTableIterator.field_i[var11];
+              var18[0][4 * var10 + 1] = TextHotspotBounds.rankedEntryRatioNumerators[var11];
+              var18[0][4 * var10 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[var11];
               var18[0][4 * var10 + 3] = FrameTimer.rankedEntryRatioThirdComponents[var11];
               if ((WhirlpoolHash.a(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12)) &&
-                  (FrameTimer.rankedEntryRatioThirdComponents[var11] + (TextHotspotBounds.field_m[var11] + NodeHashTableIterator.field_i[var11]) == 0)) {
+                  (FrameTimer.rankedEntryRatioThirdComponents[var11] + (TextHotspotBounds.rankedEntryRatioNumerators[var11] + NodeHashTableIterator.rankedEntryRatioSecondComponents[var11]) == 0)) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -115,11 +115,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
               var11 = AchievementQuery.rankedEntryIndices[var9 + var5];
               var6[1][var13] = ByteArrayPoolSupport.rankedListResponseNames[var11];
               var18[1][4 * var13] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
-              var18[1][1 + 4 * var13] = TextHotspotBounds.field_m[var11];
-              var18[1][var13 * 4 + 2] = NodeHashTableIterator.field_i[var11];
+              var18[1][1 + 4 * var13] = TextHotspotBounds.rankedEntryRatioNumerators[var11];
+              var18[1][var13 * 4 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[var11];
               var18[1][var13 * 4 + 3] = FrameTimer.rankedEntryRatioThirdComponents[var11];
               if ((WhirlpoolHash.a(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12)) &&
-                  (FrameTimer.rankedEntryRatioThirdComponents[var11] + NodeHashTableIterator.field_i[var11] + TextHotspotBounds.field_m[var11] == 0)) {
+                  (FrameTimer.rankedEntryRatioThirdComponents[var11] + NodeHashTableIterator.rankedEntryRatioSecondComponents[var11] + TextHotspotBounds.rankedEntryRatioNumerators[var11] == 0)) {
                 var6[1][var13] = null;
                 var13--;
               }

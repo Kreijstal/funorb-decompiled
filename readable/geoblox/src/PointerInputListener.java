@@ -5,7 +5,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
     static String[] loadingTextByLanguage;
     static int boardClearAchievementId;
 
-    final static void a(byte param0) {
+    final static void resetEntityQueuesAndContactState(byte methodGuard) {
         ArchiveNetworkClient.movingEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         BoardEntityState.attachedEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         SecondaryDeque.spawnQueue.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
@@ -24,8 +24,8 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         AttachmentPointerState.newAttachmentCount = 0;
         LoginPanel.endingEntityScanClear = false;
         RankedListQuery.connectivityDirty = false;
-        if (param0 != -39) {
-            PointerInputListener.a((byte) 97);
+        if (methodGuard != -39) {
+            PointerInputListener.resetEntityQueuesAndContactState((byte) 97);
         }
     }
 
@@ -127,8 +127,8 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -29313) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != -29313) {
             return;
         }
         loadingTextByLanguage = null;

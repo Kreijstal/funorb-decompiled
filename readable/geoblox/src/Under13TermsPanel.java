@@ -3,13 +3,13 @@
  */
 final class Under13TermsPanel extends WidgetContainer implements HotspotActivationListener, ButtonActivationListener {
     private ButtonWidget continueButton;
-    static TextTemplateArgumentType field_E;
+    static TextTemplateArgumentType textTemplateArgumentTypeSeven;
     private HotspotTextWidget termsText;
     private AccountCreationDialog accountCreationDialog;
     static int menuPointerRepeatCountdown;
     static volatile int liveHeldPointerButton;
     static Sprite[][] geometrySpritesByThemeAndCategory;
-    static String field_F;
+    static String waitingForPumpkinText;
 
     final static void g(int param0) {
         if (null == RasterTargetSnapshot.menuActionTexts) {
@@ -205,19 +205,19 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     public static void b(boolean param0) {
         if (!param0) {
             geometrySpritesByThemeAndCategory = (Sprite[][]) null;
-            field_E = null;
-            field_F = null;
+            textTemplateArgumentTypeSeven = null;
+            waitingForPumpkinText = null;
             return;
         }
         liveHeldPointerButton = 58;
         geometrySpritesByThemeAndCategory = (Sprite[][]) null;
-        field_E = null;
-        field_F = null;
+        textTemplateArgumentTypeSeven = null;
+        waitingForPumpkinText = null;
     }
 
     private final String c(boolean param0) {
         if (param0) {
-            field_E = (TextTemplateArgumentType) null;
+            textTemplateArgumentTypeSeven = (TextTemplateArgumentType) null;
             return "</col></u>";
         }
         return "</col></u>";
@@ -275,7 +275,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
                 var8 = param1.getParameter("cookieprefix");
                 var3 = var8 + "settings";
                 var4 = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, param1, "getcookies"));
-                var5 = FullscreenFailureReason.a(';', true, var4);
+                var5 = FullscreenFailureReason.splitAtCharacter(';', true, var4);
                 for (var6 = 0; var5.length > var6; var6++) {
                   var7 = var5[var6].indexOf('=');
                   if ((var7 >= 0) &&
@@ -317,9 +317,9 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     }
 
     static {
-        field_E = new TextTemplateArgumentType(7, 0, 1, 1);
+        textTemplateArgumentTypeSeven = new TextTemplateArgumentType(7, 0, 1, 1);
         geometrySpritesByThemeAndCategory = new Sprite[7][7];
         liveHeldPointerButton = 0;
-        field_F = "Growing Pumpkin";
+        waitingForPumpkinText = "Growing Pumpkin";
     }
 }

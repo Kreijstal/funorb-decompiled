@@ -108,7 +108,7 @@ final class TextConcatenationSupport {
               return null;
             }
           }
-          acceptedDigitsMarkerBeforeReturn = ArchiveLoadStep.field_h;
+          acceptedDigitsMarkerBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
           return acceptedDigitsMarkerBeforeReturn;
         } catch (java.lang.RuntimeException digitValidationFailure) {
           caughtDigitValidationFailure = digitValidationFailure;

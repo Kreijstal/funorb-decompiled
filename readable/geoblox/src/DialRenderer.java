@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DialRenderer implements WidgetRenderer {
-    static int[] field_l;
+    static int[] rankedEntryResponseIndices;
     static int byteArrayPool100Count;
     static ResourceArchive field_n;
     private int textColor;
@@ -57,13 +57,13 @@ final class DialRenderer implements WidgetRenderer {
         field_n = null;
         playFreeVersionText = null;
         if (param0 == 0) {
-            field_l = null;
+            rankedEntryResponseIndices = null;
             field_j = null;
             silverStarFrames = null;
             return;
         }
         playFreeVersionText = (String) null;
-        field_l = null;
+        rankedEntryResponseIndices = null;
         field_j = null;
         silverStarFrames = null;
     }

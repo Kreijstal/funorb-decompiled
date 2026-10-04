@@ -3,9 +3,9 @@
  */
 final class InstrumentNoteMask extends IntrusiveNode {
     byte[] notesUsed;
-    static TextValidationFailure field_f;
+    static TextValidationFailure missingTextComponentFailure;
     static int[] meshFaceOrder;
-    static TextTemplateArgumentType field_g;
+    static TextTemplateArgumentType textTemplateArgumentTypeZero;
 
     InstrumentNoteMask(byte[] notesUsed) {
         try {
@@ -15,20 +15,20 @@ final class InstrumentNoteMask extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStaticReferences(boolean recursiveCleanup) {
         meshFaceOrder = null;
-        field_g = null;
-        if (param0) {
-            InstrumentNoteMask.b(false);
-            field_f = null;
+        textTemplateArgumentTypeZero = null;
+        if (recursiveCleanup) {
+            InstrumentNoteMask.releaseStaticReferences(false);
+            missingTextComponentFailure = null;
             return;
         }
-        field_f = null;
+        missingTextComponentFailure = null;
     }
 
     static {
-        field_f = new TextValidationFailure();
+        missingTextComponentFailure = new TextValidationFailure();
         meshFaceOrder = new int[16384];
-        field_g = new TextTemplateArgumentType(0, 2, 2, 1);
+        textTemplateArgumentTypeZero = new TextTemplateArgumentType(0, 2, 2, 1);
     }
 }

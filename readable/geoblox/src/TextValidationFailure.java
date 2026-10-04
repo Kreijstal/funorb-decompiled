@@ -5,62 +5,62 @@ final class TextValidationFailure {
     static int avatarFeedbackModeId;
     static long previousWallClockMillis;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        int stackIn_7_0 = 0;
-        int stackIn_17_0 = 0;
-        int var6;
-        int var7;
-        int var8;
-        DialRenderer.field_l[GmtTimestampSupport.rankedEntryCount] = param1;
+    final static void appendRankedEntry(int thirdComponent, int responseIndex, byte methodGuard, int numerator, int secondComponent, int keyTwo) {
+        int ratioBeforeUpperKeyBranchJoin = 0;
+        int ratioBeforeNormalKeyBranchJoin = 0;
+        int componentSum;
+        int ratioKey;
+        int guardQuotient;
+        DialRenderer.rankedEntryResponseIndices[GmtTimestampSupport.rankedEntryCount] = responseIndex;
         AchievementQuery.rankedEntryIndices[GmtTimestampSupport.rankedEntryCount] = GmtTimestampSupport.rankedEntryCount;
-        LoginPasswordSupport.rankedEntryKeyTwo[GmtTimestampSupport.rankedEntryCount] = param5;
-        if (ClientRenderingState.rankedKeyTwoLowerBoundSeed > param5) {
-          LoginPayloadKind.field_a = param5;
+        LoginPasswordSupport.rankedEntryKeyTwo[GmtTimestampSupport.rankedEntryCount] = keyTwo;
+        if (ClientRenderingState.rankedKeyTwoLowerBoundSeed > keyTwo) {
+          LoginPayloadKind.rankedSortLowerBoundValue = keyTwo;
         }
-        if (ProxyAuthenticationRequiredException.rankedKeyTwoUpperBoundSeed >= param5) {
-          TextHotspotBounds.field_m[GmtTimestampSupport.rankedEntryCount] = param3;
-          NodeHashTableIterator.field_i[GmtTimestampSupport.rankedEntryCount] = param4;
-          FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = param0;
-          var6 = param0 + (param4 + param3);
-          var8 = -80 / ((30 - param2) / 42);
-          if (var6 != 0) {
-            stackIn_17_0 = param3 * 1000 / var6;
+        if (ProxyAuthenticationRequiredException.rankedKeyTwoUpperBoundSeed >= keyTwo) {
+          TextHotspotBounds.rankedEntryRatioNumerators[GmtTimestampSupport.rankedEntryCount] = numerator;
+          NodeHashTableIterator.rankedEntryRatioSecondComponents[GmtTimestampSupport.rankedEntryCount] = secondComponent;
+          FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = thirdComponent;
+          componentSum = thirdComponent + (secondComponent + numerator);
+          guardQuotient = -80 / ((30 - methodGuard) / 42);
+          if (componentSum != 0) {
+            ratioBeforeNormalKeyBranchJoin = numerator * 1000 / componentSum;
           } else {
-            stackIn_17_0 = 0;
+            ratioBeforeNormalKeyBranchJoin = 0;
           }
-          var7 = stackIn_17_0;
-          ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = var7;
-          if (MeshPrioritySupport.rankedSortUpperBoundValue < var7) {
-            MeshPrioritySupport.rankedSortUpperBoundValue = var7;
+          ratioKey = ratioBeforeNormalKeyBranchJoin;
+          ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = ratioKey;
+          if (MeshPrioritySupport.rankedSortUpperBoundValue < ratioKey) {
+            MeshPrioritySupport.rankedSortUpperBoundValue = ratioKey;
           }
           GmtTimestampSupport.rankedEntryCount = GmtTimestampSupport.rankedEntryCount + 1;
-          if (LoginPayloadKind.field_a <= var7) {
+          if (LoginPayloadKind.rankedSortLowerBoundValue <= ratioKey) {
             return;
           }
-          LoginPayloadKind.field_a = var7;
+          LoginPayloadKind.rankedSortLowerBoundValue = ratioKey;
           return;
         }
-        MeshPrioritySupport.rankedSortUpperBoundValue = param5;
-        TextHotspotBounds.field_m[GmtTimestampSupport.rankedEntryCount] = param3;
-        NodeHashTableIterator.field_i[GmtTimestampSupport.rankedEntryCount] = param4;
-        FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = param0;
-        var6 = param0 + (param4 + param3);
-        var8 = -80 / ((30 - param2) / 42);
-        if (var6 != 0) {
-          stackIn_7_0 = param3 * 1000 / var6;
+        MeshPrioritySupport.rankedSortUpperBoundValue = keyTwo;
+        TextHotspotBounds.rankedEntryRatioNumerators[GmtTimestampSupport.rankedEntryCount] = numerator;
+        NodeHashTableIterator.rankedEntryRatioSecondComponents[GmtTimestampSupport.rankedEntryCount] = secondComponent;
+        FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = thirdComponent;
+        componentSum = thirdComponent + (secondComponent + numerator);
+        guardQuotient = -80 / ((30 - methodGuard) / 42);
+        if (componentSum != 0) {
+          ratioBeforeUpperKeyBranchJoin = numerator * 1000 / componentSum;
         } else {
-          stackIn_7_0 = 0;
+          ratioBeforeUpperKeyBranchJoin = 0;
         }
-        var7 = stackIn_7_0;
-        ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = var7;
-        if (MeshPrioritySupport.rankedSortUpperBoundValue < var7) {
-          MeshPrioritySupport.rankedSortUpperBoundValue = var7;
+        ratioKey = ratioBeforeUpperKeyBranchJoin;
+        ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = ratioKey;
+        if (MeshPrioritySupport.rankedSortUpperBoundValue < ratioKey) {
+          MeshPrioritySupport.rankedSortUpperBoundValue = ratioKey;
         }
         GmtTimestampSupport.rankedEntryCount = GmtTimestampSupport.rankedEntryCount + 1;
-        if (LoginPayloadKind.field_a <= var7) {
+        if (LoginPayloadKind.rankedSortLowerBoundValue <= ratioKey) {
           return;
         }
-        LoginPayloadKind.field_a = var7;
+        LoginPayloadKind.rankedSortLowerBoundValue = ratioKey;
     }
 
     final static MouseWheelInput createMouseWheelInput(int methodGuard) {

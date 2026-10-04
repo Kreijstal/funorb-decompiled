@@ -4,11 +4,11 @@
 final class CharacterReplacementSupport {
     static boolean clearGameplayDuringTransition;
     static Sprite transitionCurtain;
-    static TextTemplateArgumentType field_a;
+    static TextTemplateArgumentType textTemplateArgumentTypeTen;
 
     public static void clearReplacementAndTransitionResources(byte methodGuard) {
         transitionCurtain = null;
-        field_a = null;
+        textTemplateArgumentTypeTen = null;
         if (methodGuard != -23) {
             CharacterReplacementSupport.getAccountAgeYears((byte) 28);
         }
@@ -99,6 +99,6 @@ final class CharacterReplacementSupport {
     }
 
     static {
-        field_a = new TextTemplateArgumentType(10, 2, 2, 0);
+        textTemplateArgumentTypeTen = new TextTemplateArgumentType(10, 2, 2, 0);
     }
 }

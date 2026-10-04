@@ -146,10 +146,10 @@ final class GameplayEntity extends DualLinkNode {
         WidgetTheme.avatarShockEffectTicks = 0;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         pendingAchievementSubmissions = null;
         sessionTaskDispatcher = null;
-        int var1 = 106 % ((33 - param0) / 39);
+        int guardRemainder = 106 % ((33 - methodGuard) / 39);
     }
 
     private final void updatePaletteChannelDeltas(int methodGuard) {

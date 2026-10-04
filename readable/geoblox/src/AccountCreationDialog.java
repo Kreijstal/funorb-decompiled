@@ -132,7 +132,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = InstrumentNoteMask.field_f;
+            stackIn_4_0 = InstrumentNoteMask.missingTextComponentFailure;
             return stackIn_4_0;
           }
           if (var2_int > 64) {
@@ -141,7 +141,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           }
           if (34 == param0.charAt(0)) {
             if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_13_0 = ArchiveLoadStep.field_h;
+              stackIn_13_0 = ArchiveLoadStep.invalidTextFormatFailure;
               return stackIn_13_0;
             }
             var3 = 0;
@@ -153,7 +153,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               } else {
                 if ((var5 == 34) &&
                     (var3 == 0)) {
-                  stackIn_27_0 = ArchiveLoadStep.field_h;
+                  stackIn_27_0 = ArchiveLoadStep.invalidTextFormatFailure;
                   return stackIn_27_0;
                 }
                 var3 = 0;
@@ -172,11 +172,11 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                   var3 = 1;
                   break L1;
                 }
-                stackIn_41_0 = ArchiveLoadStep.field_h;
+                stackIn_41_0 = ArchiveLoadStep.invalidTextFormatFailure;
                 return stackIn_41_0;
               }
               if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(var5) == -1) {
-                stackIn_46_0 = ArchiveLoadStep.field_h;
+                stackIn_46_0 = ArchiveLoadStep.invalidTextFormatFailure;
                 return stackIn_46_0;
               }
               var3 = 0;
@@ -232,7 +232,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         }
         if ((this.dialogVisible) &&
             (!(this.resultHandled))) {
-            var2 = MatchingTextValidator.d((byte) 93);
+            var2 = MatchingTextValidator.pollAccountCreationUsernameResult((byte) 93);
             if (!(var2 == null)) {
                 this.showCreationResult(false, var2, (byte) -69);
             }

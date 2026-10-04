@@ -70,7 +70,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
         RuntimeException var3_ref = null;
         var5 = Geoblox.clientControlFlowFlag;
         try {
-          var3 = EntityMotionSupport.a(param0, 2, param2);
+          var3 = EntityMotionSupport.displayNameValidationMessage(param0, 2, param2);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

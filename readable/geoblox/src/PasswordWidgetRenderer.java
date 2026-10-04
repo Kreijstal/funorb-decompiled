@@ -125,7 +125,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
             var5.faceMaterialIndices = ArchiveNetworkClient.a(var5.faceMaterialIndices, 16, 0, param0);
           }
           if (TextInputRenderer.a((byte) 37, param0)) {
-            var5.facePriorities = MouseWheelInput.a(var5.facePriorities, param0, 16, 8);
+            var5.facePriorities = MouseWheelInput.readPackedByteArray(var5.facePriorities, param0, 16, 8);
             var6 = 0;
             for (var7 = 0; var5.facePriorities.length > var7; var7++) {
               if (~(255 & var5.facePriorities[var7]) < ~var6) {

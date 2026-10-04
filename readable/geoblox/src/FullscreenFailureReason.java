@@ -4,13 +4,13 @@
 final class FullscreenFailureReason {
     static int maximumArchiveLength;
     static String loginMessage2Text;
-    static String field_c;
-    static String field_a;
+    static String loadingPumpkinText;
+    static String startingGameText;
     static String fullscreenAfterCancelText;
 
-    final static boolean a(boolean param0, int param1) {
-        if (param0) {
-            return (param1 & -param1) == param1 ? true : false;
+    final static boolean isSingleBitOrZero(boolean performCheck, int value) {
+        if (performCheck) {
+            return (value & -value) == value ? true : false;
         }
         return true;
     }
@@ -42,59 +42,59 @@ final class FullscreenFailureReason {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         fullscreenAfterCancelText = null;
         loginMessage2Text = null;
-        field_c = null;
-        field_a = null;
-        if (param0 > 0) {
-            FullscreenFailureReason.a(false, -95);
+        loadingPumpkinText = null;
+        startingGameText = null;
+        if (methodGuard > 0) {
+            FullscreenFailureReason.isSingleBitOrZero(false, -95);
         }
     }
 
-    final static String[] a(char param0, boolean param1, String param2) {
-        int var7 = 0;
-        int incrementValue$1 = 0;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        CharSequence var9 = null;
-        String[] stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static String[] splitAtCharacter(char delimiter, boolean countOccurrencesGuard, String text) {
+        int separatorIndex = 0;
+        int outputIndexBeforeIncrement = 0;
+        int separatorCount = 0;
+        RuntimeException splitFailureForContext = null;
+        String[] segments = null;
+        int outputIndex = 0;
+        int segmentStart = 0;
+        int delimiterPosition = 0;
+        CharSequence textAsCharSequence = null;
+        String[] segmentsBeforeReturn = null;
+        RuntimeException splitFailureBeforeDescription = null;
+        StringBuilder splitMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtSplitFailure = null;
         try {
-          var9 = (CharSequence) ((Object) param2);
-          var3_int = DelayedPcmStream.countCharacterOccurrences(var9, param1, param0);
-          var4 = new String[1 + var3_int];
-          var5 = 0;
-          var6 = 0;
-          for (var7 = 0; var3_int > var7; var7++) {
-            for (var8 = var6; param2.charAt(var8) != param0; var8++) {
+          textAsCharSequence = (CharSequence) ((Object) text);
+          separatorCount = DelayedPcmStream.countCharacterOccurrences(textAsCharSequence, countOccurrencesGuard, delimiter);
+          segments = new String[1 + separatorCount];
+          outputIndex = 0;
+          segmentStart = 0;
+          for (separatorIndex = 0; separatorCount > separatorIndex; separatorIndex++) {
+            for (delimiterPosition = segmentStart; text.charAt(delimiterPosition) != delimiter; delimiterPosition++) {
             }
-            incrementValue$1 = var5;
-            var5++;
-            var4[incrementValue$1] = param2.substring(var6, var8);
-            var6 = var8 + 1;
+            outputIndexBeforeIncrement = outputIndex;
+            outputIndex++;
+            segments[outputIndexBeforeIncrement] = text.substring(segmentStart, delimiterPosition);
+            segmentStart = delimiterPosition + 1;
           }
-          var4[var3_int] = param2.substring(var6);
-          stackIn_7_0 = var4;
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("uj.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_11_2 = "null";
+          segments[separatorCount] = text.substring(segmentStart);
+          segmentsBeforeReturn = segments;
+          return segmentsBeforeReturn;
+        } catch (java.lang.RuntimeException splitFailure) {
+          caughtSplitFailure = splitFailure;
+          splitFailureForContext = caughtSplitFailure;
+          splitFailureBeforeDescription = splitFailureForContext;
+          splitMessagePrefix = new StringBuilder().append("uj.D(").append(delimiter).append(',').append(countOccurrencesGuard).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) splitFailureBeforeDescription), ((StringBuilder) (Object) splitMessagePrefix).append(textDescription).append(')').toString());
         }
     }
 
@@ -105,8 +105,8 @@ final class FullscreenFailureReason {
     static {
         maximumArchiveLength = 0;
         loginMessage2Text = "Error connecting to server. Please try using a different server.";
-        field_c = "Harvesting Pumpkin";
-        field_a = "Starting Game";
+        loadingPumpkinText = "Harvesting Pumpkin";
+        startingGameText = "Starting Game";
         fullscreenAfterCancelText = "to return to the normal view.";
     }
 }

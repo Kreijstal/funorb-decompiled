@@ -161,7 +161,7 @@ final class PacketByteCipher {
         this.lastResult = this.lastResult + incrementedGenerationCounter;
         wordIndex = 0;
         if (methodGuard >= -10) {
-          PacketByteCipher.a((byte) 89);
+          PacketByteCipher.prepareIntroTintAndMusic((byte) 89);
         }
         while (wordIndex < 256) {
           previousStateWord = this.stateWords[wordIndex];
@@ -189,18 +189,18 @@ final class PacketByteCipher {
         }
     }
 
-    final static void a(byte param0) {
-        int var1 = DiskCacheWorker.avatarTintPalette[-1 + DiskCacheWorker.avatarTintPalette.length];
-        SocketArchiveNetworkClient.field_x = (float)(-(255 & WidgetSkinState.introFaceModulationRgb) + (255 & var1));
-        MenuScreen.introTintGreenDelta = (float)(-(WidgetSkinState.introFaceModulationRgb >> 8 & 255) + (var1 >> 8 & 255));
-        TextLayoutLine.introTintRedDelta = (float)(((var1 & 16735942) >> 16) - (WidgetSkinState.introFaceModulationRgb >> 16 & 255));
-        int var2 = 80 % ((5 - param0) / 52);
+    final static void prepareIntroTintAndMusic(byte methodGuard) {
+        int targetTintColor = DiskCacheWorker.avatarTintPalette[-1 + DiskCacheWorker.avatarTintPalette.length];
+        SocketArchiveNetworkClient.introTintBlueDelta = (float)(-(255 & WidgetSkinState.introFaceModulationRgb) + (255 & targetTintColor));
+        MenuScreen.introTintGreenDelta = (float)(-(WidgetSkinState.introFaceModulationRgb >> 8 & 255) + (targetTintColor >> 8 & 255));
+        TextLayoutLine.introTintRedDelta = (float)(((targetTintColor & 16735942) >> 16) - (WidgetSkinState.introFaceModulationRgb >> 16 & 255));
+        int guardRemainder = 80 % ((5 - methodGuard) / 52);
         IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, GameGraphicsResources.titleMusicTrack);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         sunForegroundSprite = null;
-        if (param0 > -92) {
+        if (methodGuard > -92) {
             ticketingGoToWebsiteText = (String) null;
             field_c = null;
             ticketingGoToWebsiteText = null;

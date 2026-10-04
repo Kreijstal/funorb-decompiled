@@ -40,10 +40,10 @@ final class LabeledChildWidget extends SingleChildWidget {
         TextTemplateDefinitionLoader.releasedInDifficultyStep = TextTemplateDefinitionLoader.releasedInDifficultyStep + 1;
         MatchCandidateSupport.releasedInCurrentTheme = MatchCandidateSupport.releasedInCurrentTheme + 1;
         if ((ContextualRuntimeException.releasesPerDifficultyStep == TextTemplateDefinitionLoader.releasedInDifficultyStep) &&
-            (DequeCursor.field_c < 2)) {
+            (DequeCursor.difficultyAdvancesInCurrentTheme < 2)) {
           TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
           PlayfieldRules.advanceDifficulty(false);
-          DequeCursor.field_c = DequeCursor.field_c + 1;
+          DequeCursor.difficultyAdvancesInCurrentTheme = DequeCursor.difficultyAdvancesInCurrentTheme + 1;
         }
         if (param0 != 2) {
           nineSliceSavedClip = (int[]) null;
@@ -53,10 +53,10 @@ final class LabeledChildWidget extends SingleChildWidget {
           CacheReference.generatedInCurrentTheme = 0;
           UiWidget.gameplaySession.sessionPhase = 1;
           TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
-          if (DequeCursor.field_c < 2) {
+          if (DequeCursor.difficultyAdvancesInCurrentTheme < 2) {
             PlayfieldRules.advanceDifficulty(false);
           }
-          DequeCursor.field_c = 0;
+          DequeCursor.difficultyAdvancesInCurrentTheme = 0;
           UiWidget.completedThemeCount = UiWidget.completedThemeCount + 1;
         }
     }

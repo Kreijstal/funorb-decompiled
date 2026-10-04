@@ -17,12 +17,12 @@ final class UsernameQueryState {
 
     final static void handleSessionFlagReset(int methodGuard) {
         if (methodGuard == 11560) {
-            TextHotspotBounds.field_l = false;
+            TextHotspotBounds.loginResponseFlagEightSet = false;
             LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
             return;
         }
         introAnimationRunning = false;
-        TextHotspotBounds.field_l = false;
+        TextHotspotBounds.loginResponseFlagEightSet = false;
         LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
     }
 

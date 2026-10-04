@@ -59,7 +59,7 @@ final class AchievementQuery extends IntrusiveNode {
               var3_int = -105 / ((param2 + 33) / 57);
               try {
                 var4 = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, param1, "getcookies"));
-                var5 = FullscreenFailureReason.a(';', true, var4);
+                var5 = FullscreenFailureReason.splitAtCharacter(';', true, var4);
                 for (var6 = 0; var6 < var5.length; var6++) {
                   var7 = var5[var6].indexOf('=');
                   if ((var7 >= 0) &&

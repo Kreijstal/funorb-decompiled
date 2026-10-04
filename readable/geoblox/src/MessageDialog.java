@@ -115,7 +115,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 return;
             }
             if (this.showLoginOnDismiss) {
-                KeyboardInputListener.b(-1);
+                KeyboardInputListener.showLoginForCreatedAccountEmail(-1);
                 return;
             }
             return;
@@ -127,7 +127,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         if (!this.showLoginOnDismiss) {
             return;
         }
-        KeyboardInputListener.b(-1);
+        KeyboardInputListener.showLoginForCreatedAccountEmail(-1);
     }
 
     final boolean handleKeyInput(int keyCode, int methodGuardOrDismissKeyCode, char typedCharacter, UiWidget eventContext) {

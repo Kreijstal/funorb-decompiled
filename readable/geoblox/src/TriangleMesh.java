@@ -55,7 +55,7 @@ final class TriangleMesh {
             this.vertexZ[vertexIndex] = (short)(this.vertexZ[vertexIndex] * scaleZ / divisor);
         }
         if (guard <= 69) {
-            TriangleMesh.a(-90, 1, 93);
+            TriangleMesh.prepareRankedEntryArrays(-90, 1, 93);
         }
         this.invalidateBounds(-7008);
     }
@@ -71,7 +71,7 @@ final class TriangleMesh {
         pendingScoreSubmissions = null;
         reloadGameText = null;
         if (param0 != 115) {
-            TriangleMesh.a(124, -30, -53);
+            TriangleMesh.prepareRankedEntryArrays(124, -30, -53);
         }
     }
 
@@ -147,44 +147,44 @@ final class TriangleMesh {
         this.maxZ = maximumZ;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (!((DialRenderer.field_l != null) &&
-              (DialRenderer.field_l.length >= param2))) {
-          DialRenderer.field_l = new int[param2 * 2];
+    final static void prepareRankedEntryArrays(int lowerBoundSeed, int entryLimit, int responseEntryCount) {
+        if (!((DialRenderer.rankedEntryResponseIndices != null) &&
+              (DialRenderer.rankedEntryResponseIndices.length >= responseEntryCount))) {
+          DialRenderer.rankedEntryResponseIndices = new int[responseEntryCount * 2];
         }
         if (!((null != LoginPasswordSupport.rankedEntryKeyTwo) &&
-              (param2 <= LoginPasswordSupport.rankedEntryKeyTwo.length))) {
-          LoginPasswordSupport.rankedEntryKeyTwo = new int[param2 * 2];
+              (responseEntryCount <= LoginPasswordSupport.rankedEntryKeyTwo.length))) {
+          LoginPasswordSupport.rankedEntryKeyTwo = new int[responseEntryCount * 2];
         }
-        if (!((null != TextHotspotBounds.field_m) &&
-              (TextHotspotBounds.field_m.length >= param2))) {
-          TextHotspotBounds.field_m = new int[param2 * 2];
+        if (!((null != TextHotspotBounds.rankedEntryRatioNumerators) &&
+              (TextHotspotBounds.rankedEntryRatioNumerators.length >= responseEntryCount))) {
+          TextHotspotBounds.rankedEntryRatioNumerators = new int[responseEntryCount * 2];
         }
-        if (!((null != NodeHashTableIterator.field_i) &&
-              (param2 <= NodeHashTableIterator.field_i.length))) {
-          NodeHashTableIterator.field_i = new int[param2 * 2];
+        if (!((null != NodeHashTableIterator.rankedEntryRatioSecondComponents) &&
+              (responseEntryCount <= NodeHashTableIterator.rankedEntryRatioSecondComponents.length))) {
+          NodeHashTableIterator.rankedEntryRatioSecondComponents = new int[responseEntryCount * 2];
         }
         if (!((null != FrameTimer.rankedEntryRatioThirdComponents) &&
-              (FrameTimer.rankedEntryRatioThirdComponents.length >= param2))) {
-          FrameTimer.rankedEntryRatioThirdComponents = new int[2 * param2];
+              (FrameTimer.rankedEntryRatioThirdComponents.length >= responseEntryCount))) {
+          FrameTimer.rankedEntryRatioThirdComponents = new int[2 * responseEntryCount];
         }
         if (!((null != ClientProtocolStage.rankedEntryKeyOne) &&
-              (ClientProtocolStage.rankedEntryKeyOne.length >= param2))) {
-          ClientProtocolStage.rankedEntryKeyOne = new int[param2 * 2];
+              (ClientProtocolStage.rankedEntryKeyOne.length >= responseEntryCount))) {
+          ClientProtocolStage.rankedEntryKeyOne = new int[responseEntryCount * 2];
         }
         if (!((null != AchievementQuery.rankedEntryIndices) &&
-              (AchievementQuery.rankedEntryIndices.length >= param2 + param1))) {
-          AchievementQuery.rankedEntryIndices = new int[(param2 + param1) * 2];
+              (AchievementQuery.rankedEntryIndices.length >= responseEntryCount + entryLimit))) {
+          AchievementQuery.rankedEntryIndices = new int[(responseEntryCount + entryLimit) * 2];
         }
         if (!((null != AccountCreationForm.unusedRankedEntryBooleans) &&
-              (AccountCreationForm.unusedRankedEntryBooleans.length >= param2))) {
-          AccountCreationForm.unusedRankedEntryBooleans = new boolean[2 * param2];
+              (AccountCreationForm.unusedRankedEntryBooleans.length >= responseEntryCount))) {
+          AccountCreationForm.unusedRankedEntryBooleans = new boolean[2 * responseEntryCount];
         }
         GmtTimestampSupport.rankedEntryCount = 0;
         MeshPrioritySupport.rankedSortUpperBoundValue = -2147483648;
         ClientRenderingState.rankedKeyTwoLowerBoundSeed = 2147483647;
         ProxyAuthenticationRequiredException.rankedKeyTwoUpperBoundSeed = -2147483648;
-        LoginPayloadKind.field_a = param0;
+        LoginPayloadKind.rankedSortLowerBoundValue = lowerBoundSeed;
     }
 
     final static Sprite[] buildRgbSpritesFromDecodedSheet(int methodGuard) {
@@ -234,7 +234,7 @@ final class TriangleMesh {
     private final void invalidateBounds(int guard) {
         this.boundsValid = false;
         if (guard != -7008) {
-            TriangleMesh.a(-110, 99, 92);
+            TriangleMesh.prepareRankedEntryArrays(-110, 99, 92);
         }
     }
 

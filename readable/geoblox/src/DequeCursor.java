@@ -4,62 +4,62 @@
 final class DequeCursor {
     static ArchiveCatalog archiveCatalog;
     static int logoAnimationTick;
-    static int field_c;
+    static int difficultyAdvancesInCurrentTheme;
     static int fourthScoreContextCounter;
     private IntrusiveDeque deque;
     private IntrusiveNode pendingNode;
     static int pendingTooltipAnchorY;
 
-    final static boolean b(int param0) {
-        boolean stackIn_25_0 = false;
-        RuntimeException decompiledCaughtException = null;
-        float var1_float = 0.0f;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        var4 = Geoblox.clientControlFlowFlag;
+    final static boolean updateIntroAnimation(int openingSoundTick) {
+        boolean introCompletedBeforeReturn = false;
+        RuntimeException caughtIntroFailure = null;
+        float introTintProgress = 0.0f;
+        RuntimeException introFailureForContext = null;
+        int faceHalfWidth = 0;
+        int geometryTravelDistance = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (MatchingTextValidator.field_j == param0) {
+          if (MatchingTextValidator.introAnimationTick == openingSoundTick) {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[25]);
           }
-          MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
+          MatchingTextValidator.introAnimationTick = MatchingTextValidator.introAnimationTick + 1;
           while (UiFontResources.pollKeyboardEvent(93)) {
             if (SessionTextHistorySupport.currentKeyboardEventCode != 13) {
               continue;
             }
             return true;
           }
-          if ((0 == MatchingTextValidator.field_j % 40) &&
+          if ((0 == MatchingTextValidator.introAnimationTick % 40) &&
               (CachedTextLayout.introFaceFrameIndex < 11)) {
-            UnderlinedButtonRenderer.field_c = MatchingTextValidator.field_j;
+            UnderlinedButtonRenderer.introFaceFrameStartTick = MatchingTextValidator.introAnimationTick;
             CachedTextLayout.introFaceFrameIndex = CachedTextLayout.introFaceFrameIndex + 1;
             if (10 == CachedTextLayout.introFaceFrameIndex) {
               ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
             }
           }
-          var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
+          introTintProgress = -((480.0f - (float)MatchingTextValidator.introAnimationTick) / 480.0f) + 1.0f;
           if (11 > CachedTextLayout.introFaceFrameIndex) {
-            WidgetSkinState.introFaceModulationRgb = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.introTintRedDelta) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
+            WidgetSkinState.introFaceModulationRgb = ((int)(introTintProgress * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(introTintProgress * TextLayoutLine.introTintRedDelta) << 16)) + (int)(SocketArchiveNetworkClient.introTintBlueDelta * introTintProgress);
           }
-          var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
-          var3 = MatchingTextValidator.field_j << 2;
+          faceHalfWidth = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
+          geometryTravelDistance = MatchingTextValidator.introAnimationTick << 2;
           if ((!SharedBufferPools.introFirstGeometrySoundPlayed) &&
-              (-var3 + 900 <= 320 + var2)) {
+              (-geometryTravelDistance + 900 <= 320 + faceHalfWidth)) {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[7]);
             SharedBufferPools.introFirstGeometrySoundPlayed = true;
           }
-          if ((!EntityMotionSupport.field_d) &&
-              (-var2 + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
+          if ((!EntityMotionSupport.introSecondGeometrySoundPlayed) &&
+              (-faceHalfWidth + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + geometryTravelDistance)) {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[8]);
-            EntityMotionSupport.field_d = true;
+            EntityMotionSupport.introSecondGeometrySoundPlayed = true;
           }
-          stackIn_25_0 = !(494 > MatchingTextValidator.field_j);
-          return stackIn_25_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "gb.A(" + param0 + ')');
+          introCompletedBeforeReturn = !(494 > MatchingTextValidator.introAnimationTick);
+          return introCompletedBeforeReturn;
+        } catch (java.lang.RuntimeException introFailure) {
+          caughtIntroFailure = introFailure;
+          introFailureForContext = caughtIntroFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) introFailureForContext), "gb.A(" + openingSoundTick + ')');
         }
     }
 
@@ -194,8 +194,8 @@ final class DequeCursor {
         }
     }
 
-    public static void b(byte param0) {
-        int var1 = -66 / ((33 - param0) / 32);
+    public static void releaseStaticReferences(byte methodGuard) {
+        int guardQuotient = -66 / ((33 - methodGuard) / 32);
         archiveCatalog = null;
     }
 

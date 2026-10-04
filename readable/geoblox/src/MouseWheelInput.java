@@ -4,7 +4,7 @@
 abstract class MouseWheelInput {
     static int primarySocialListState;
     static AchievementQuery achievementStateQuery;
-    static Sprite[] field_e;
+    static Sprite[] commonButtonSprites;
     static DisplayNamePanel activeDisplayNamePanel;
     static int[] secondVertexTransformedZ;
 
@@ -14,70 +14,70 @@ abstract class MouseWheelInput {
 
     abstract int drainWheelRotation(boolean drainGuard);
 
-    final static byte[] a(byte[] param0, PacketBuffer param1, int param2, int param3) {
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        Object stackIn_3_0 = null;
-        byte[] stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static byte[] readPackedByteArray(byte[] destination, PacketBuffer buffer, int lengthBitCount, int baseBitCount) {
+        int arrayLength = 0;
+        int deltaBitCount = 0;
+        int signedBaseValue = 0;
+        int elementIndex = 0;
+        int unusedClientControlSnapshot = 0;
+        Object nullArrayBeforeReturn = null;
+        byte[] arrayBeforeReturn = null;
+        RuntimeException readFailureBeforeDescriptions = null;
+        StringBuilder readMessagePrefix = null;
+        String destinationDescription = null;
+        StringBuilder readMessageBeforeBufferDescription = null;
+        String bufferDescription = null;
+        RuntimeException caughtReadFailure = null;
+        RuntimeException readFailureForContext = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var4_int = param1.readBits((byte) -17, param2);
-          if (var4_int == 0) {
-            stackIn_3_0 = null;
-            return (byte[]) (stackIn_3_0);
+          arrayLength = buffer.readBits((byte) -17, lengthBitCount);
+          if (arrayLength == 0) {
+            nullArrayBeforeReturn = null;
+            return (byte[]) (nullArrayBeforeReturn);
           }
-          if (!((param0 != null) &&
-                (param0.length == var4_int))) {
-            param0 = new byte[var4_int];
+          if (!((destination != null) &&
+                (destination.length == arrayLength))) {
+            destination = new byte[arrayLength];
           }
-          var5 = param1.readBits((byte) -17, 3);
-          var6 = (byte)param1.readBits((byte) -17, param3);
-          if (0 >= var5) {
-            for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (byte)var6;
+          deltaBitCount = buffer.readBits((byte) -17, 3);
+          signedBaseValue = (byte)buffer.readBits((byte) -17, baseBitCount);
+          if (0 >= deltaBitCount) {
+            for (elementIndex = 0; arrayLength > elementIndex; elementIndex++) {
+              destination[elementIndex] = (byte)signedBaseValue;
             }
           } else {
-            for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (byte)(param1.readBits((byte) -17, var5) + var6);
+            for (elementIndex = 0; arrayLength > elementIndex; elementIndex++) {
+              destination[elementIndex] = (byte)(buffer.readBits((byte) -17, deltaBitCount) + signedBaseValue);
             }
           }
-          stackIn_16_0 = (byte[]) (param0);
-          return stackIn_16_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_19_0 = var4;
-          stackIn_19_1 = new StringBuilder().append("vk.E(");
-          if (param0 == null) {
-            stackIn_20_2 = "null";
+          arrayBeforeReturn = (byte[]) (destination);
+          return arrayBeforeReturn;
+        } catch (java.lang.RuntimeException readFailure) {
+          caughtReadFailure = readFailure;
+          readFailureForContext = caughtReadFailure;
+          readFailureBeforeDescriptions = readFailureForContext;
+          readMessagePrefix = new StringBuilder().append("vk.E(");
+          if (destination == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param1 == null) {
-            stackIn_23_2 = "null";
+          readMessageBeforeBufferDescription = ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',');
+          if (buffer == null) {
+            bufferDescription = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            bufferDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeDescriptions), ((StringBuilder) (Object) readMessageBeforeBufferDescription).append(bufferDescription).append(',').append(lengthBitCount).append(',').append(baseBitCount).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         secondVertexTransformedZ = null;
-        field_e = null;
+        commonButtonSprites = null;
         achievementStateQuery = null;
-        if (param0 >= -9) {
+        if (methodGuard >= -9) {
             return;
         }
         activeDisplayNamePanel = null;

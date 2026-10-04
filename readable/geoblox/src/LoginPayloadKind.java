@@ -3,7 +3,7 @@
  */
 final class LoginPayloadKind {
     static String levelTextTemplate;
-    static int field_a;
+    static int rankedSortLowerBoundValue;
     int wireId;
     static int field_d;
     static String createPasswordText;

@@ -69,9 +69,9 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
     public final void focusGained(java.awt.event.FocusEvent unusedFocusEvent) {
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         entityAndTutorialScratchRaster = null;
-        if (param0 != 31997) {
+        if (methodGuard != 31997) {
             return;
         }
         clearBonusText = null;
@@ -140,10 +140,10 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         }
     }
 
-    final static void b(int param0) {
-        String var2 = (String) null;
+    final static void showLoginForCreatedAccountEmail(int methodGuard) {
+        String unusedNullPasswordSnapshot = (String) null;
         MessageDialog.showLoginForm(ResourceArchive.accountCreationEmail, (String) null, 7697781);
-        if (param0 != -1) {
+        if (methodGuard != -1) {
             entityAndTutorialScratchRaster = (Sprite) null;
         }
     }

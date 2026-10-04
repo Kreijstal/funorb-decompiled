@@ -2121,7 +2121,7 @@ final class GameScreen extends MenuScreen {
             BoardReconciliationSupport.sessionStartAttemptCount = BoardReconciliationSupport.sessionStartAttemptCount + 1;
             GameplaySetupSupport.resetGameplayDifficulty(methodGuard ^ -9410);
             UiWidget.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
-            PointerInputListener.a((byte) -39);
+            PointerInputListener.resetEntityQueuesAndContactState((byte) -39);
             ScoreSubmission.requestedScreenId = -1;
           }
           if (suppressPressAnimationFlag == 0) {

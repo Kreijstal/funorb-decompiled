@@ -26,7 +26,7 @@ final class GameplaySetupSupport {
         TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
         ContextualRuntimeException.recomputeSpawnReleaseInterval(true);
         UiWidget.completedThemeCount = 0;
-        DequeCursor.field_c = 0;
+        DequeCursor.difficultyAdvancesInCurrentTheme = 0;
     }
 
     final static void readReflectionCheckRequest(int methodGuard, PlatformTaskDispatcher taskDispatcher, int unusedArgument, ByteArrayBuffer buffer) {

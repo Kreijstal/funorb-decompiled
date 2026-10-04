@@ -5,15 +5,15 @@ import java.io.*;
 
 final class IntKeyLookup {
     static Sprite unachievedSprite;
-    static TextTemplateArgumentType field_d;
+    static TextTemplateArgumentType textTemplateArgumentTypeTwelve;
     private int[] keyIndexPairs;
     static int[] meshCameraTransform;
 
-    public static void a(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         unachievedSprite = null;
-        field_d = null;
-        if (param0 != 49) {
-            IntKeyLookup.a((byte) 72);
+        textTemplateArgumentTypeTwelve = null;
+        if (methodGuard != 49) {
+            IntKeyLookup.releaseStaticReferences((byte) 72);
         }
         meshCameraTransform = null;
     }
@@ -129,6 +129,6 @@ final class IntKeyLookup {
 
     static {
         meshCameraTransform = new int[12];
-        field_d = new TextTemplateArgumentType(12, 0, 1, 0);
+        textTemplateArgumentTypeTwelve = new TextTemplateArgumentType(12, 0, 1, 0);
     }
 }

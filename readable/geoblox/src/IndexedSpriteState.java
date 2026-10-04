@@ -81,7 +81,7 @@ abstract class IndexedSpriteState {
             RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
             UnderlinedButtonRenderer.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
             AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
-            MouseWheelInput.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
+            MouseWheelInput.commonButtonSprites = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
             ClientClockSupport.validationStateSprites = ByteArrayPoolSupport.loadSpritesByName((byte) -39, "validation", "commonui", param2);
             UiFontResources.commonUiSmallFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
             DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
@@ -130,7 +130,7 @@ abstract class IndexedSpriteState {
             var12.setAsRasterTarget();
             var18.drawUnmasked(-var9, 0);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
-            MouseWheelInput.field_e = new Sprite[]{var16, var12, var11};
+            MouseWheelInput.commonButtonSprites = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ha.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

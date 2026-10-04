@@ -24,7 +24,7 @@ final class MeshPrioritySupport {
             String cookieHost = null;
             String cookieText = null;
             try {
-                ScorePopup.field_j = sessionValue;
+                ScorePopup.sessionCookieOverride = sessionValue;
                 try {
                     cookiePrefix = applet.getParameter("cookieprefix");
                     cookieHost = applet.getParameter("cookiehost");

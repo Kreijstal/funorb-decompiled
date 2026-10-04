@@ -26,20 +26,20 @@ final class FifoResponseToken extends IntrusiveNode {
               (0 != param0.length())) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = InstrumentNoteMask.field_f;
+              stackIn_7_0 = InstrumentNoteMask.missingTextComponentFailure;
               return stackIn_7_0;
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(param1 + var2_int);
             var5 = AccountCreationDialog.a(var3, true);
             if (var5 == null) {
-              stackIn_12_0 = GzipInflater.a(var4, false);
+              stackIn_12_0 = GzipInflater.validateDomainText(var4, false);
               return stackIn_12_0;
             }
             stackIn_10_0 = var5;
             return stackIn_10_0;
           }
-          stackIn_4_0 = TextHotspotBounds.field_j;
+          stackIn_4_0 = TextHotspotBounds.emptyEmailFailure;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

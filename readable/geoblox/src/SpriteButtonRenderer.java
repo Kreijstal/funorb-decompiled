@@ -87,7 +87,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
         this.normalColor = param0;
         this.disabledColor = param2;
         this.highlightColor = param1;
-        this.buttonSprites = MouseWheelInput.field_e;
+        this.buttonSprites = MouseWheelInput.commonButtonSprites;
     }
 
     final static String c(int param0) {

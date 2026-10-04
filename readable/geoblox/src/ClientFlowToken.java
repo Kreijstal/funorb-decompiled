@@ -131,7 +131,7 @@ final class ClientFlowToken {
               try {
                 markerName = "tuhstatbut";
                 cookieText = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, applet, "getcookies"));
-                cookieEntries = FullscreenFailureReason.a(';', true, cookieText);
+                cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieText);
                 for (cookieIndex = 0; cookieIndex < cookieEntries.length; cookieIndex++) {
                   equalsOffset = cookieEntries[cookieIndex].indexOf('=');
                   if ((equalsOffset >= 0) &&

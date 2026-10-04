@@ -10,7 +10,7 @@ abstract class SpriteState extends DualLinkNode {
     int trimY;
     int fullHeight;
     static long field_n;
-    static TextTemplateArgumentType field_t;
+    static TextTemplateArgumentType textTemplateArgumentTypeNine;
     int trimX;
     static String field_q;
 
@@ -163,7 +163,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "starting");
           if (null != var2) {
-            FullscreenFailureReason.field_a = EmailValidator.decodeTextBytes(1, var2);
+            FullscreenFailureReason.startingGameText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "gameName");
           if (var2 != null) {
@@ -219,7 +219,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "cheat");
           if (!param0) {
-            field_t = (TextTemplateArgumentType) null;
+            textTemplateArgumentTypeNine = (TextTemplateArgumentType) null;
           }
           if (var2 != null) {
             EmailValidator.decodeTextBytes(1, var2);
@@ -242,11 +242,11 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "waitingForPumpkin");
           if (var2 != null) {
-            Under13TermsPanel.field_F = EmailValidator.decodeTextBytes(1, var2);
+            Under13TermsPanel.waitingForPumpkinText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "loadingPumpkin");
           if (var2 != null) {
-            FullscreenFailureReason.field_c = EmailValidator.decodeTextBytes(1, var2);
+            FullscreenFailureReason.loadingPumpkinText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "skipText");
           if (var2 != null) {
@@ -874,7 +874,7 @@ abstract class SpriteState extends DualLinkNode {
                 param0.writeBytes(24, -97, var2, 0);
               }
               if (!param1) {
-                field_t = (TextTemplateArgumentType) null;
+                textTemplateArgumentTypeNine = (TextTemplateArgumentType) null;
               }
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -904,7 +904,7 @@ abstract class SpriteState extends DualLinkNode {
             SpriteState.f(32);
           }
           field_q = null;
-          field_t = null;
+          textTemplateArgumentTypeNine = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -935,6 +935,6 @@ abstract class SpriteState extends DualLinkNode {
 
     static {
         field_q = null;
-        field_t = new TextTemplateArgumentType(9, 0, 4, 1);
+        textTemplateArgumentTypeNine = new TextTemplateArgumentType(9, 0, 4, 1);
     }
 }

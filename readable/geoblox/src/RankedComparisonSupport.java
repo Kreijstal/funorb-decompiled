@@ -19,8 +19,8 @@ final class RankedComparisonSupport {
           if (LoginPasswordSupport.rankedEntryKeyTwo[rightIndex] > LoginPasswordSupport.rankedEntryKeyTwo[leftIndex]) {
             return false;
           }
-          rightTiePartSum = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.field_m[rightIndex] + NodeHashTableIterator.field_i[rightIndex];
-          leftTiePartSum = TextHotspotBounds.field_m[leftIndex] + (NodeHashTableIterator.field_i[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
+          rightTiePartSum = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.rankedEntryRatioNumerators[rightIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rightIndex];
+          leftTiePartSum = TextHotspotBounds.rankedEntryRatioNumerators[leftIndex] + (NodeHashTableIterator.rankedEntryRatioSecondComponents[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
           guardResidue = 76 % ((-38 - methodGuard) / 45);
           if (rightTiePartSum < leftTiePartSum) {
             return true;
@@ -42,8 +42,8 @@ final class RankedComparisonSupport {
         if (ClientProtocolStage.rankedEntryKeyOne[rightIndex] > ClientProtocolStage.rankedEntryKeyOne[leftIndex]) {
           return false;
         }
-        rightTiePartSum = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.field_m[rightIndex] + NodeHashTableIterator.field_i[rightIndex];
-        leftTiePartSum = TextHotspotBounds.field_m[leftIndex] + (NodeHashTableIterator.field_i[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
+        rightTiePartSum = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.rankedEntryRatioNumerators[rightIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rightIndex];
+        leftTiePartSum = TextHotspotBounds.rankedEntryRatioNumerators[leftIndex] + (NodeHashTableIterator.rankedEntryRatioSecondComponents[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
         guardResidue = 76 % ((-38 - methodGuard) / 45);
         if (rightTiePartSum < leftTiePartSum) {
           return true;

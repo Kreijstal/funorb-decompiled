@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmailAvailabilityQuery {
-    static int field_b;
+    static int decodedRankedRatioSecondComponent;
     private String candidateEmail;
     private boolean available;
     static int matchCandidateCount;

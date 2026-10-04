@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EntityMotionSupport {
-    static TextTemplateArgumentType field_c;
+    static TextTemplateArgumentType textTemplateArgumentTypeTwo;
     static boolean boardContactStateDirty;
-    static boolean field_d;
+    static boolean introSecondGeometrySoundPlayed;
     static String createSuggestionsText;
     static int incomingPacketBaseDelayMillis;
     static volatile boolean canvasReplacementRequested;
@@ -38,80 +38,80 @@ final class EntityMotionSupport {
         }
     }
 
-    final static String a(boolean param0, int param1, CharSequence param2) {
-        int var6 = 0;
-        String stackIn_4_0 = null;
-        String stackIn_9_0 = null;
-        String stackIn_16_0 = null;
-        String stackIn_21_0 = null;
-        String stackIn_31_0 = null;
-        String stackIn_36_0 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_40_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static String displayNameValidationMessage(boolean allowRepeatedSeparators, int methodGuard, CharSequence candidateName) {
+        int characterIndex = 0;
+        String nullNameLengthMessageBeforeReturn = null;
+        String outOfRangeLengthMessageBeforeReturn = null;
+        String normalizedNameLengthMessageBeforeReturn = null;
+        String normalizedEdgeSeparatorMessageBeforeReturn = null;
+        String repeatedSeparatorMessageBeforeReturn = null;
+        String trailingSeparatorMessageBeforeReturn = null;
+        RuntimeException validationFailureBeforeDescription = null;
+        StringBuilder validationMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtValidationFailure = null;
+        int candidateLength = 0;
+        RuntimeException validationFailureForContext = null;
+        String normalizedName = null;
+        int consecutiveSeparators = 0;
+        int characterCode = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param2 == null) {
-            stackIn_4_0 = NameCharacterSupport.createNameLengthAlertText;
-            return stackIn_4_0;
+          if (candidateName == null) {
+            nullNameLengthMessageBeforeReturn = NameCharacterSupport.createNameLengthAlertText;
+            return nullNameLengthMessageBeforeReturn;
           }
-          var3_int = param2.length();
-          if ((var3_int >= 1) &&
-              (var3_int <= 12)) {
-            var4 = ResizableDialog.normalizeSessionName(param2, 12);
-            if (param1 != 2) {
-              EntityMotionSupport.a((byte) 112);
+          candidateLength = candidateName.length();
+          if ((candidateLength >= 1) &&
+              (candidateLength <= 12)) {
+            normalizedName = ResizableDialog.normalizeSessionName(candidateName, 12);
+            if (methodGuard != 2) {
+              EntityMotionSupport.releaseStaticReferences((byte) 112);
             }
-            if ((var4 != null) &&
-                (var4.length() >= 1)) {
-              if ((!NameCharacterSupport.isNameSeparator((byte) -32, var4.charAt(0))) &&
-                  (!NameCharacterSupport.isNameSeparator((byte) -75, var4.charAt(-1 + var4.length())))) {
-                var5 = 0;
-                for (var6 = 0; var6 < param2.length(); var6++) {
-                  var7 = param2.charAt(var6);
-                  if (NameCharacterSupport.isNameSeparator((byte) -96, (char) var7)) {
-                    var5++;
+            if ((normalizedName != null) &&
+                (normalizedName.length() >= 1)) {
+              if ((!NameCharacterSupport.isNameSeparator((byte) -32, normalizedName.charAt(0))) &&
+                  (!NameCharacterSupport.isNameSeparator((byte) -75, normalizedName.charAt(-1 + normalizedName.length())))) {
+                consecutiveSeparators = 0;
+                for (characterIndex = 0; characterIndex < candidateName.length(); characterIndex++) {
+                  characterCode = candidateName.charAt(characterIndex);
+                  if (NameCharacterSupport.isNameSeparator((byte) -96, (char) characterCode)) {
+                    consecutiveSeparators++;
                   } else {
-                    var5 = 0;
+                    consecutiveSeparators = 0;
                   }
-                  if ((2 <= var5) &&
-                      (!param0)) {
-                    stackIn_31_0 = MessageDialogSupport.createDoubleSpaceAlertText;
-                    return stackIn_31_0;
+                  if ((2 <= consecutiveSeparators) &&
+                      (!allowRepeatedSeparators)) {
+                    repeatedSeparatorMessageBeforeReturn = MessageDialogSupport.createDoubleSpaceAlertText;
+                    return repeatedSeparatorMessageBeforeReturn;
                   }
                 }
-                if (var5 <= 0) {
+                if (consecutiveSeparators <= 0) {
                   return null;
                 }
-                stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
-                return stackIn_36_0;
+                trailingSeparatorMessageBeforeReturn = GameScreen.createNameLeadingSpaceAlertText;
+                return trailingSeparatorMessageBeforeReturn;
               }
-              stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
-              return stackIn_21_0;
+              normalizedEdgeSeparatorMessageBeforeReturn = GameScreen.createNameLeadingSpaceAlertText;
+              return normalizedEdgeSeparatorMessageBeforeReturn;
             }
-            stackIn_16_0 = NameCharacterSupport.createNameLengthAlertText;
-            return stackIn_16_0;
+            normalizedNameLengthMessageBeforeReturn = NameCharacterSupport.createNameLengthAlertText;
+            return normalizedNameLengthMessageBeforeReturn;
           }
-          stackIn_9_0 = NameCharacterSupport.createNameLengthAlertText;
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_39_0 = var3;
-          stackIn_39_1 = new StringBuilder().append("ab.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_40_2 = "null";
+          outOfRangeLengthMessageBeforeReturn = NameCharacterSupport.createNameLengthAlertText;
+          return outOfRangeLengthMessageBeforeReturn;
+        } catch (java.lang.RuntimeException validationFailure) {
+          caughtValidationFailure = validationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeDescription = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("ab.A(").append(allowRepeatedSeparators).append(',').append(methodGuard).append(',');
+          if (candidateName == null) {
+            candidateDescription = "null";
           } else {
-            stackIn_40_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeDescription), ((StringBuilder) (Object) validationMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class EntityMotionSupport {
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
           movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntity != null) {
-            L2: {
+            movingEntityContactResolution: {
               if (BoardEntityState.attachedEntities != movingEntity.entityQueue) {
                 if (!UiWidget.gameplaySession.tutorialPromptActive) {
                   movingEntity.integrateEntityVelocity((byte) -59);
@@ -223,7 +223,7 @@ final class EntityMotionSupport {
                   }
                   if (!movingEntity.detachedFromBoard) {
                     AttachmentPointerState.newAttachmentCount = AttachmentPointerState.newAttachmentCount + 1;
-                    break L2;
+                    break movingEntityContactResolution;
                   }
                   movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                   continue;
@@ -232,7 +232,7 @@ final class EntityMotionSupport {
                   neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
                   contactedEntity = RasterTargetSnapshot.entitiesById[neighborIndexOrKindFlagOrContactIdOrDivisionGuard];
                   if (BoardEntityState.attachedEntities == contactedEntity.entityQueue) {
-                    break L2;
+                    break movingEntityContactResolution;
                   }
                   sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
                   sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;
@@ -303,14 +303,14 @@ final class EntityMotionSupport {
         }
     }
 
-    public static void a(byte param0) {
-        int var1 = -58 % ((param0 - 0) / 38);
+    public static void releaseStaticReferences(byte methodGuard) {
+        int guardRemainder = -58 % ((methodGuard - 0) / 38);
         createSuggestionsText = null;
-        field_c = null;
+        textTemplateArgumentTypeTwo = null;
     }
 
     static {
-        field_c = new TextTemplateArgumentType(2, 4, 4, 0);
+        textTemplateArgumentTypeTwo = new TextTemplateArgumentType(2, 4, 4, 0);
         createSuggestionsText = "Suggested names: ";
         canvasReplacementRequested = false;
         incomingPacketBaseDelayMillis = 0;

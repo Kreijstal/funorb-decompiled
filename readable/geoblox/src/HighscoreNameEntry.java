@@ -5,7 +5,7 @@ final class HighscoreNameEntry {
     String primaryName;
     String alternateName;
     boolean usedInUniqueView;
-    static int unusedGuardScratch;
+    static int decodedRankedKeyTwo;
 
     final static void updateSpawnQueue(int methodGuard) {
         RuntimeException caughtSpawnQueueFailure = null;
@@ -24,7 +24,7 @@ final class HighscoreNameEntry {
           while (true) {
             if (!(queuedEntityThenPooledEntity != null)) {
               if (methodGuard != 255) {
-                unusedGuardScratch = -11;
+                decodedRankedKeyTwo = -11;
               }
               break;
             }
@@ -139,7 +139,7 @@ final class HighscoreNameEntry {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard > -74) {
-            unusedGuardScratch = 78;
+            decodedRankedKeyTwo = 78;
           }
           rowStartXQ16 = sampleXQ16;
           debugTintRgb = 1122867;
@@ -279,7 +279,7 @@ final class HighscoreNameEntry {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 104) {
-            unusedGuardScratch = 67;
+            decodedRankedKeyTwo = 67;
           }
           packet = LogoCompositor.sessionPacketBuffer;
           operation = packet.readUnsignedByte((byte) 34);

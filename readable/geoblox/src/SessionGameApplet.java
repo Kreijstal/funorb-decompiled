@@ -74,9 +74,9 @@ abstract class SessionGameApplet extends GameApplet {
             sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
             sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
           }
-          if ((ScorePopup.field_j != null) &&
-              (!ScorePopup.field_j.equals(applet.getParameter("session")))) {
-            sessionOverrideOrSettingsAlias = ScorePopup.field_j;
+          if ((ScorePopup.sessionCookieOverride != null) &&
+              (!ScorePopup.sessionCookieOverride.equals(applet.getParameter("session")))) {
+            sessionOverrideOrSettingsAlias = ScorePopup.sessionCookieOverride;
           }
           urlBeforeReturn = ScoreSubmission.rewriteSessionUrlPath((String) (sessionOverrideOrSettingsAlias), (String) (settingsOverrideOrFailure), url, -1, true);
           return urlBeforeReturn;

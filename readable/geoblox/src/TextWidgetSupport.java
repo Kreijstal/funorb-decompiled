@@ -4,12 +4,12 @@
 final class TextWidgetSupport {
     static int gameTextArchiveId;
     static volatile int livePointerPressX;
-    static ResourceArchive field_c;
+    static ResourceArchive initialVorbisArchive;
     static int byteArrayPool5000Count;
     static String connectionLostReconnectingText;
 
     public static void clearTextWidgetResources(int methodGuard) {
-        field_c = null;
+        initialVorbisArchive = null;
         int guardResidue = -79 % ((methodGuard + 15) / 50);
         connectionLostReconnectingText = null;
     }

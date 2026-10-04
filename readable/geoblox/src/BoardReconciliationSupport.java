@@ -38,7 +38,7 @@ final class BoardReconciliationSupport {
           secondaryEntryIndex = 0;
           while (true) {
             if (!(GmtTimestampSupport.rankedEntryCount > secondaryEntryIndex)) {
-              SingleChildWidget.sortRankedEntryRange(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.rankedSortUpperBoundValue, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
+              SingleChildWidget.sortRankedEntryRange(entryLimit, entryLimit + entryLimit, LoginPayloadKind.rankedSortLowerBoundValue, MeshPrioritySupport.rankedSortUpperBoundValue, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
               break;
             }
             AchievementQuery.rankedEntryIndices[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
@@ -378,7 +378,7 @@ final class BoardReconciliationSupport {
           sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
           SessionSocketSupport.avatarShockPending = false;
           if (visitedResetIndexThenKindFourCount >= 3) {
-            SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
+            SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.threeKindFourRemovalAchievementId, -88, GzipInflater.threeKindFourRemovalAchievementId);
           }
           if (FontLoadingSupport.kindFourRemovalCount >= 5) {
             SecondaryNodeDeque.recordAchievement(255 ^ ReceivedTextRecord.field_p, -83, ReceivedTextRecord.field_p);

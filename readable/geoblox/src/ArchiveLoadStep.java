@@ -6,7 +6,7 @@ final class ArchiveLoadStep {
     static boolean loginRetrySuspended;
     ResourceArchive archive;
     static boolean field_a;
-    static TextValidationFailure field_h;
+    static TextValidationFailure invalidTextFormatFailure;
     static String highscoresText;
     static int[] firstVertexTransformedX;
     String groupName;
@@ -18,7 +18,7 @@ final class ArchiveLoadStep {
 
     public static void a(int param0) {
         if (param0 >= 121) {
-            field_h = null;
+            invalidTextFormatFailure = null;
             fontMetricsArchive = null;
             createPasswordValidText = null;
             firstVertexTransformedX = null;
@@ -26,7 +26,7 @@ final class ArchiveLoadStep {
             return;
         }
         highscoresText = (String) null;
-        field_h = null;
+        invalidTextFormatFailure = null;
         fontMetricsArchive = null;
         createPasswordValidText = null;
         firstVertexTransformedX = null;
@@ -41,7 +41,7 @@ final class ArchiveLoadStep {
         keyStateWriteIndexOrResetSentinel = 0;
         firstVertexTransformedX = new int[8192];
         highscoresText = "Highscores";
-        field_h = new TextValidationFailure();
+        invalidTextFormatFailure = new TextValidationFailure();
         createPasswordValidText = "Password is valid";
     }
 }

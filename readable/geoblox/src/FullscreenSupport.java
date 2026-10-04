@@ -102,7 +102,7 @@ final class FullscreenSupport {
             FullscreenSupport.releaseStaticReferences(118);
           }
           if (0 == labelLength) {
-            emptyLabelFailure = InstrumentNoteMask.field_f;
+            emptyLabelFailure = InstrumentNoteMask.missingTextComponentFailure;
             return emptyLabelFailure;
           }
           if (labelLength > 63) {
@@ -114,12 +114,12 @@ final class FullscreenSupport {
             if (45 == characterCode) {
               if (!((characterIndex != 0) &&
                   (characterIndex != -1 + labelLength))) {
-                edgeHyphenFailure = ArchiveLoadStep.field_h;
+                edgeHyphenFailure = ArchiveLoadStep.invalidTextFormatFailure;
                 return edgeHyphenFailure;
               }
             } else {
               if (PacketBuffer.domainLabelAlphanumericCharacters.indexOf(characterCode) == -1) {
-                invalidCharacterFailure = ArchiveLoadStep.field_h;
+                invalidCharacterFailure = ArchiveLoadStep.invalidTextFormatFailure;
                 return invalidCharacterFailure;
               }
             }

@@ -5,23 +5,23 @@ import java.util.*;
 
 final class GzipInflater {
     static int pendingLoginUiAction;
-    static ResourceArchive field_a;
+    static ResourceArchive initialMusicScoreArchive;
     static int nextRenderTimeHistoryIndex;
-    private static TextTemplateArgumentType field_h;
+    private static TextTemplateArgumentType textTemplateArgumentTypeFifteen;
     static MusicScore currentMusicTrack;
     static IndexedSprite sunBackgroundSprite;
-    static int field_f;
+    static int threeKindFourRemovalAchievementId;
     private java.util.zip.Inflater inflater;
-    static boolean field_b;
-    static int field_g;
+    static boolean loginResponseFlagFourSet;
+    static int decodedRankedRatioThirdComponent;
     static float avatarTintGreenDelta;
 
-    public static void c(int param0) {
-        field_h = null;
-        int var1 = 122 % ((param0 + 22) / 63);
+    public static void releaseStaticReferences(int methodGuard) {
+        textTemplateArgumentTypeFifteen = null;
+        int guardRemainder = 122 % ((methodGuard + 22) / 63);
         sunBackgroundSprite = null;
         currentMusicTrack = null;
-        field_a = null;
+        initialMusicScoreArchive = null;
     }
 
     final void inflateInto(int methodGuard, ByteArrayBuffer buffer, byte[] destination) {
@@ -90,77 +90,77 @@ final class GzipInflater {
 
     final static TextTemplateArgumentType[] textTemplateArgumentTypes(int methodGuard) {
         if (methodGuard == -1) {
-            return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, SessionSocketSupport.textTemplateArgumentTypeOne, EntityMotionSupport.field_c, AsyncResourceDownloader.textTemplateArgumentTypeFour, PointerMenuState.textTemplateArgumentTypeSix, Under13TermsPanel.field_E, ProxySocketConnector.textTemplateArgumentTypeEight, SpriteState.field_t, CharacterReplacementSupport.field_a, DropTargetWidget.textTemplateArgumentTypeEleven, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.textTemplateArgumentTypeThirteen, MeshPrioritySupport.textTemplateArgumentTypeFourteen, field_h};
+            return new TextTemplateArgumentType[]{InstrumentNoteMask.textTemplateArgumentTypeZero, SessionSocketSupport.textTemplateArgumentTypeOne, EntityMotionSupport.textTemplateArgumentTypeTwo, AsyncResourceDownloader.textTemplateArgumentTypeFour, PointerMenuState.textTemplateArgumentTypeSix, Under13TermsPanel.textTemplateArgumentTypeSeven, ProxySocketConnector.textTemplateArgumentTypeEight, SpriteState.textTemplateArgumentTypeNine, CharacterReplacementSupport.textTemplateArgumentTypeTen, DropTargetWidget.textTemplateArgumentTypeEleven, IntKeyLookup.textTemplateArgumentTypeTwelve, ProxyAuthenticationRequiredException.textTemplateArgumentTypeThirteen, MeshPrioritySupport.textTemplateArgumentTypeFourteen, textTemplateArgumentTypeFifteen};
         }
         avatarTintGreenDelta = -1.1302366256713867f;
-        return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, SessionSocketSupport.textTemplateArgumentTypeOne, EntityMotionSupport.field_c, AsyncResourceDownloader.textTemplateArgumentTypeFour, PointerMenuState.textTemplateArgumentTypeSix, Under13TermsPanel.field_E, ProxySocketConnector.textTemplateArgumentTypeEight, SpriteState.field_t, CharacterReplacementSupport.field_a, DropTargetWidget.textTemplateArgumentTypeEleven, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.textTemplateArgumentTypeThirteen, MeshPrioritySupport.textTemplateArgumentTypeFourteen, field_h};
+        return new TextTemplateArgumentType[]{InstrumentNoteMask.textTemplateArgumentTypeZero, SessionSocketSupport.textTemplateArgumentTypeOne, EntityMotionSupport.textTemplateArgumentTypeTwo, AsyncResourceDownloader.textTemplateArgumentTypeFour, PointerMenuState.textTemplateArgumentTypeSix, Under13TermsPanel.textTemplateArgumentTypeSeven, ProxySocketConnector.textTemplateArgumentTypeEight, SpriteState.textTemplateArgumentTypeNine, CharacterReplacementSupport.textTemplateArgumentTypeTen, DropTargetWidget.textTemplateArgumentTypeEleven, IntKeyLookup.textTemplateArgumentTypeTwelve, ProxyAuthenticationRequiredException.textTemplateArgumentTypeThirteen, MeshPrioritySupport.textTemplateArgumentTypeFourteen, textTemplateArgumentTypeFifteen};
     }
 
     public GzipInflater() {
         this(-1, 1000000, 1000000);
     }
 
-    final static TextValidationFailure a(String param0, boolean param1) {
-        int var5 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        String[] var3 = null;
-        String[] var4 = null;
-        String var6 = null;
-        TextValidationFailure var7 = null;
-        int var8 = 0;
-        TextValidationFailure stackIn_3_0 = null;
-        TextValidationFailure stackIn_6_0 = null;
-        TextValidationFailure stackIn_10_0 = null;
-        TextValidationFailure stackIn_13_0 = null;
-        TextValidationFailure stackIn_19_0 = null;
-        TextValidationFailure stackIn_22_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static TextValidationFailure validateDomainText(String domainText, boolean skipValidation) {
+        int labelIndex = 0;
+        int textLength = 0;
+        RuntimeException validationFailureForContext = null;
+        String[] domainLabels = null;
+        String[] labelsForIteration = null;
+        String domainLabel = null;
+        TextValidationFailure labelFailure = null;
+        int unusedClientControlSnapshot = 0;
+        TextValidationFailure skippedValidationResultBeforeReturn = null;
+        TextValidationFailure emptyTextFailureBeforeReturn = null;
+        TextValidationFailure overlongTextFailureBeforeReturn = null;
+        TextValidationFailure missingLabelFailureBeforeReturn = null;
+        TextValidationFailure labelFailureBeforeReturn = null;
+        TextValidationFailure numericFinalLabelFailureBeforeReturn = null;
+        RuntimeException validationFailureBeforeDescription = null;
+        StringBuilder validationMessagePrefix = null;
+        String domainDescription = null;
+        RuntimeException caughtValidationFailure = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param1) {
-            stackIn_3_0 = (TextValidationFailure) null;
-            return stackIn_3_0;
+          if (skipValidation) {
+            skippedValidationResultBeforeReturn = (TextValidationFailure) null;
+            return skippedValidationResultBeforeReturn;
           }
-          var2_int = param0.length();
-          if (var2_int == 0) {
-            stackIn_6_0 = InstrumentNoteMask.field_f;
-            return stackIn_6_0;
+          textLength = domainText.length();
+          if (textLength == 0) {
+            emptyTextFailureBeforeReturn = InstrumentNoteMask.missingTextComponentFailure;
+            return emptyTextFailureBeforeReturn;
           }
-          if (255 < var2_int) {
-            stackIn_10_0 = ButtonWidget.overlongTextFailure;
-            return stackIn_10_0;
+          if (255 < textLength) {
+            overlongTextFailureBeforeReturn = ButtonWidget.overlongTextFailure;
+            return overlongTextFailureBeforeReturn;
           }
-          var3 = FullscreenFailureReason.a('.', true, param0);
-          if (var3.length < 2) {
-            stackIn_13_0 = InstrumentNoteMask.field_f;
-            return stackIn_13_0;
+          domainLabels = FullscreenFailureReason.splitAtCharacter('.', true, domainText);
+          if (domainLabels.length < 2) {
+            missingLabelFailureBeforeReturn = InstrumentNoteMask.missingTextComponentFailure;
+            return missingLabelFailureBeforeReturn;
           }
-          var4 = var3;
-          for (var5 = 0; var4.length > var5; var5++) {
-            var6 = var4[var5];
-            var7 = FullscreenSupport.validateDomainLabel(255, var6);
-            if (var7 != null) {
-              stackIn_19_0 = var7;
-              return stackIn_19_0;
+          labelsForIteration = domainLabels;
+          for (labelIndex = 0; labelsForIteration.length > labelIndex; labelIndex++) {
+            domainLabel = labelsForIteration[labelIndex];
+            labelFailure = FullscreenSupport.validateDomainLabel(255, domainLabel);
+            if (labelFailure != null) {
+              labelFailureBeforeReturn = labelFailure;
+              return labelFailureBeforeReturn;
             }
           }
-          stackIn_22_0 = TextConcatenationSupport.validateAsciiDigits(var3[-1 + var3.length], (byte) -97);
-          return stackIn_22_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_25_0 = var2;
-          stackIn_25_1 = new StringBuilder().append("fe.B(");
-          if (param0 == null) {
-            stackIn_26_2 = "null";
+          numericFinalLabelFailureBeforeReturn = TextConcatenationSupport.validateAsciiDigits(domainLabels[-1 + domainLabels.length], (byte) -97);
+          return numericFinalLabelFailureBeforeReturn;
+        } catch (java.lang.RuntimeException validationFailure) {
+          caughtValidationFailure = validationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeDescription = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("fe.B(");
+          if (domainText == null) {
+            domainDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            domainDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeDescription), ((StringBuilder) (Object) validationMessagePrefix).append(domainDescription).append(',').append(skipValidation).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class GzipInflater {
 
     static {
         pendingLoginUiAction = -1;
-        field_f = 7;
-        field_h = new TextTemplateArgumentType(15, 0, 1, 0);
+        threeKindFourRemovalAchievementId = 7;
+        textTemplateArgumentTypeFifteen = new TextTemplateArgumentType(15, 0, 1, 0);
     }
 }

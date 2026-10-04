@@ -5,7 +5,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
     private int verticalAlignment;
     private int horizontalAlignment;
     private BitmapFont labelFont;
-    static int field_c;
+    static int introFaceFrameStartTick;
     static Sprite[] field_e;
 
     final static void resetAccountUiFlow(int methodGuard) {
@@ -15,7 +15,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
         WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
         ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
         if (methodGuard != -6011) {
-            field_c = 36;
+            introFaceFrameStartTick = 36;
         }
     }
 
@@ -157,6 +157,6 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
     }
 
     static {
-        field_c = 0;
+        introFaceFrameStartTick = 0;
     }
 }

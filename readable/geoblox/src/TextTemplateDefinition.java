@@ -67,7 +67,7 @@ final class TextTemplateDefinition extends DualLinkNode {
         var9 = Geoblox.clientControlFlowFlag;
         try {
           if (1 == opcode) {
-            this.literalSegments = FullscreenFailureReason.a('<', true, buffer.readNullTerminatedText((byte) 116));
+            this.literalSegments = FullscreenFailureReason.splitAtCharacter('<', true, buffer.readNullTerminatedText((byte) 116));
           } else {
             if (2 == opcode) {
               var4_int = buffer.readUnsignedByte((byte) 34);

@@ -7,7 +7,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static ValidationState validInputValidationState;
     private BufferedSocket socket;
     static int errorReportGameCrc;
-    static float field_x;
+    static float introTintBlueDelta;
     static String loginUsernameTooltipText;
     static int[] field_s;
 

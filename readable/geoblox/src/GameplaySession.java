@@ -1336,7 +1336,7 @@ final class GameplaySession {
           }
           this.sceneTransitionInProgress = true;
           ArrayOperations.copyInts(SingleChildWidget.mainRasterBuffer.pixels, 0, SpriteCheckboxRenderer.boardSceneRaster.pixels, 0, SingleChildWidget.mainRasterBuffer.pixels.length);
-          PointerInputListener.a((byte) -39);
+          PointerInputListener.resetEntityQueuesAndContactState((byte) -39);
           LogoPreparationSupport.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           MeshDepthSupport.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);

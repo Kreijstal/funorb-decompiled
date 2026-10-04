@@ -5,7 +5,7 @@ import java.util.*;
 
 final class NodeHashTableIterator implements Iterator {
     private IntrusiveNode nextNode;
-    static int[] field_i;
+    static int[] rankedEntryRatioSecondComponents;
     private int nextBucketIndex;
     private IntrusiveNode lastReturnedNode;
     static int pendingTooltipAnchorX;
@@ -89,7 +89,7 @@ final class NodeHashTableIterator implements Iterator {
         }
         popSprite = null;
         sportMusicTrack = null;
-        field_i = null;
+        rankedEntryRatioSecondComponents = null;
         loginText = null;
     }
 

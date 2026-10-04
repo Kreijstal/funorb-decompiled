@@ -112,10 +112,10 @@ final class LoginProtocolSupport {
                 }
                 if (!useLongLoginPayload) {
                   responseFlagFourSet = !((loginResponseFlags & 4) == 0);
-                  GzipInflater.field_b = responseFlagFourSet;
+                  GzipInflater.loginResponseFlagFourSet = responseFlagFourSet;
                   responseFlagEightSet = !((loginResponseFlags & 8) == 0);
-                  TextHotspotBounds.field_l = responseFlagEightSet;
-                  if (!TextHotspotBounds.field_l) {
+                  TextHotspotBounds.loginResponseFlagEightSet = responseFlagEightSet;
+                  if (!TextHotspotBounds.loginResponseFlagEightSet) {
                   }
                 }
                 if (GameGraphicsResources.loginResponseExtensionEnabled) {
@@ -145,7 +145,7 @@ final class LoginProtocolSupport {
                   SettingsCookieSupport.storeSettingsCookie(100, settingsCookieValue, NodeHashTableIterator.getActiveApplet(112));
                 }
                 if ((TextTemplateDefinition.field_n <= 0) &&
-                    (!GzipInflater.field_b)) {
+                    (!GzipInflater.loginResponseFlagFourSet)) {
                   try {
                     AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.getActiveApplet(107), "unzap");
                   } catch (java.lang.Throwable unzapScriptFailure) {

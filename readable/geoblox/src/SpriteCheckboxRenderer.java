@@ -9,69 +9,69 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
     static int gameMusicVolumeLevel;
     static int previousMenuScreenId;
 
-    final static void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = Geoblox.clientControlFlowFlag;
+    final static void drawIntroAnimation(int sunCenterY) {
+        int faceHalfWidth = 0;
+        int geometryTravelOrFallOffset = 0;
+        int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         GzipInflater.sunBackgroundSprite.drawRunEncoded(0, 0);
-        PacketByteCipher.sunForegroundSprite.draw(320 - (PacketByteCipher.sunForegroundSprite.fullWidth >> 1), param0 - (PacketByteCipher.sunForegroundSprite.fullHeight >> 1));
+        PacketByteCipher.sunForegroundSprite.draw(320 - (PacketByteCipher.sunForegroundSprite.fullWidth >> 1), sunCenterY - (PacketByteCipher.sunForegroundSprite.fullHeight >> 1));
         AudioService.screenTitleSprites[0].draw(0, 20);
-        int var1 = -70 + MatchingTextValidator.field_j;
-        if (var1 >= 0) {
-            if (!((double)var1 * 0.0174532925 < 1.5707963267948966)) {
-                var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
+        int titleGlowTick = -70 + MatchingTextValidator.introAnimationTick;
+        if (titleGlowTick >= 0) {
+            if (!((double)titleGlowTick * 0.0174532925 < 1.5707963267948966)) {
+                faceHalfWidth = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
                 if (CachedTextLayout.introFaceFrameIndex >= 11) {
-                    var3 = (MatchingTextValidator.field_j - UnderlinedButtonRenderer.field_c >> 1) * (MatchingTextValidator.field_j - UnderlinedButtonRenderer.field_c >> 1) >> 1;
-                    RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1) + 320, var3 + (-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1) + 240), WidgetSkinState.introFaceModulationRgb);
-                    AccountCreationForm.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1) + 240);
-                    AccountCreationForm.introGeometryFrames[1].draw(-var2 + 320 - AccountCreationForm.introGeometryFrames[1].fullWidth, -(AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
+                    geometryTravelOrFallOffset = (MatchingTextValidator.introAnimationTick - UnderlinedButtonRenderer.introFaceFrameStartTick >> 1) * (MatchingTextValidator.introAnimationTick - UnderlinedButtonRenderer.introFaceFrameStartTick >> 1) >> 1;
+                    RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1) + 320, geometryTravelOrFallOffset + (-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1) + 240), WidgetSkinState.introFaceModulationRgb);
+                    AccountCreationForm.introGeometryFrames[0].draw(faceHalfWidth + 320, -34 + geometryTravelOrFallOffset - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1) + 240);
+                    AccountCreationForm.introGeometryFrames[1].draw(-faceHalfWidth + 320 - AccountCreationForm.introGeometryFrames[1].fullWidth, -(AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + (240 + geometryTravelOrFallOffset + 22));
                     return;
                 }
-                var3 = MatchingTextValidator.field_j << 2;
-                if (var2 + 320 < 1000 - var3) {
-                    AccountCreationForm.introGeometryFrames[0].draw(1000 - var3, -34 + (240 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1)));
+                geometryTravelOrFallOffset = MatchingTextValidator.introAnimationTick << 2;
+                if (faceHalfWidth + 320 < 1000 - geometryTravelOrFallOffset) {
+                    AccountCreationForm.introGeometryFrames[0].draw(1000 - geometryTravelOrFallOffset, -34 + (240 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1)));
                 } else {
-                    AccountCreationForm.introGeometryFrames[0].draw(320 + var2, 206 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1));
+                    AccountCreationForm.introGeometryFrames[0].draw(320 + faceHalfWidth, 206 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1));
                 }
-                if (-AccountCreationForm.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
-                    AccountCreationForm.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1)));
-                    RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - var2, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
+                if (-AccountCreationForm.introGeometryFrames[1].fullWidth + (320 - faceHalfWidth) > geometryTravelOrFallOffset - 1200) {
+                    AccountCreationForm.introGeometryFrames[1].draw(geometryTravelOrFallOffset - 1200, 22 + (240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1)));
+                    RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - faceHalfWidth, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
                     return;
                 }
-                AccountCreationForm.introGeometryFrames[1].draw(-AccountCreationForm.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + 22);
-                RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - var2, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
+                AccountCreationForm.introGeometryFrames[1].draw(-AccountCreationForm.introGeometryFrames[1].fullWidth - faceHalfWidth + 320, 240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + 22);
+                RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - faceHalfWidth, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
                 return;
             }
-            AudioService.screenTitleSprites[0].drawAdditive(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
+            AudioService.screenTitleSprites[0].drawAdditive(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)titleGlowTick * 0.0174532925)) * 90.0));
         }
-        var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
+        faceHalfWidth = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
         if (CachedTextLayout.introFaceFrameIndex >= 11) {
-            var3 = (MatchingTextValidator.field_j - UnderlinedButtonRenderer.field_c >> 1) * (MatchingTextValidator.field_j - UnderlinedButtonRenderer.field_c >> 1) >> 1;
-            RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1) + 320, var3 + (-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1) + 240), WidgetSkinState.introFaceModulationRgb);
-            AccountCreationForm.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1) + 240);
-            AccountCreationForm.introGeometryFrames[1].draw(-var2 + 320 - AccountCreationForm.introGeometryFrames[1].fullWidth, -(AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
+            geometryTravelOrFallOffset = (MatchingTextValidator.introAnimationTick - UnderlinedButtonRenderer.introFaceFrameStartTick >> 1) * (MatchingTextValidator.introAnimationTick - UnderlinedButtonRenderer.introFaceFrameStartTick >> 1) >> 1;
+            RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1) + 320, geometryTravelOrFallOffset + (-(RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1) + 240), WidgetSkinState.introFaceModulationRgb);
+            AccountCreationForm.introGeometryFrames[0].draw(faceHalfWidth + 320, -34 + geometryTravelOrFallOffset - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1) + 240);
+            AccountCreationForm.introGeometryFrames[1].draw(-faceHalfWidth + 320 - AccountCreationForm.introGeometryFrames[1].fullWidth, -(AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + (240 + geometryTravelOrFallOffset + 22));
             return;
         }
-        var3 = MatchingTextValidator.field_j << 2;
-        if (var2 + 320 < 1000 - var3) {
-            AccountCreationForm.introGeometryFrames[0].draw(1000 - var3, -34 + (240 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1)));
-            if (-AccountCreationForm.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
-                AccountCreationForm.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1)));
-                RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - var2, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
+        geometryTravelOrFallOffset = MatchingTextValidator.introAnimationTick << 2;
+        if (faceHalfWidth + 320 < 1000 - geometryTravelOrFallOffset) {
+            AccountCreationForm.introGeometryFrames[0].draw(1000 - geometryTravelOrFallOffset, -34 + (240 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1)));
+            if (-AccountCreationForm.introGeometryFrames[1].fullWidth + (320 - faceHalfWidth) > geometryTravelOrFallOffset - 1200) {
+                AccountCreationForm.introGeometryFrames[1].draw(geometryTravelOrFallOffset - 1200, 22 + (240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1)));
+                RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - faceHalfWidth, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
                 return;
             }
-            AccountCreationForm.introGeometryFrames[1].draw(-AccountCreationForm.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + 22);
-            RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - var2, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
+            AccountCreationForm.introGeometryFrames[1].draw(-AccountCreationForm.introGeometryFrames[1].fullWidth - faceHalfWidth + 320, 240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + 22);
+            RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - faceHalfWidth, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
             return;
         }
-        AccountCreationForm.introGeometryFrames[0].draw(320 + var2, 206 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1));
-        if (-AccountCreationForm.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
-            AccountCreationForm.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1)));
-            RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - var2, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
+        AccountCreationForm.introGeometryFrames[0].draw(320 + faceHalfWidth, 206 - (AccountCreationForm.introGeometryFrames[0].fullHeight >> 1));
+        if (-AccountCreationForm.introGeometryFrames[1].fullWidth + (320 - faceHalfWidth) > geometryTravelOrFallOffset - 1200) {
+            AccountCreationForm.introGeometryFrames[1].draw(geometryTravelOrFallOffset - 1200, 22 + (240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1)));
+            RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - faceHalfWidth, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
             return;
         }
-        AccountCreationForm.introGeometryFrames[1].draw(-AccountCreationForm.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + 22);
-        RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - var2, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
+        AccountCreationForm.introGeometryFrames[1].draw(-AccountCreationForm.introGeometryFrames[1].fullWidth - faceHalfWidth + 320, 240 - (AccountCreationForm.introGeometryFrames[1].fullHeight >> 1) + 22);
+        RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - faceHalfWidth, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
     }
 
     public static void a(boolean param0) {
