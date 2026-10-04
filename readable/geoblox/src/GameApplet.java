@@ -759,8 +759,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             try {
               try {
                 if (PrefixCodeDecoder.activeGameApplet != null) {
-                  AsyncResourceDownloader.field_j = AsyncResourceDownloader.field_j + 1;
-                  if (AsyncResourceDownloader.field_j < 3) {
+                  AsyncResourceDownloader.duplicateAppletStartCount = AsyncResourceDownloader.duplicateAppletStartCount + 1;
+                  if (AsyncResourceDownloader.duplicateAppletStartCount < 3) {
                     this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                     return;
                   }

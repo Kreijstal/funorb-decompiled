@@ -49,10 +49,10 @@ class LongAndTextLoginPayload extends LoginPayload {
             if (InstrumentPatch.field_q) {
                 return null;
             }
-            if (AsyncResourceDownloader.field_e > ResizableDialog.tooltipAgeTicks) {
+            if (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) {
                 return null;
             }
-            if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.tooltipAgeTicks)) {
+            if (!(PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks)) {
                 return SettingsCookieSupport.field_a;
             }
             return null;
@@ -60,10 +60,10 @@ class LongAndTextLoginPayload extends LoginPayload {
         if (InstrumentPatch.field_q) {
             return null;
         }
-        if (AsyncResourceDownloader.field_e > ResizableDialog.tooltipAgeTicks) {
+        if (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) {
             return null;
         }
-        if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.tooltipAgeTicks)) {
+        if (!(PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks)) {
             return SettingsCookieSupport.field_a;
         }
         return null;

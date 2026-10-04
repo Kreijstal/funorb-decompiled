@@ -35,8 +35,8 @@ final class ContextualRuntimeException extends RuntimeException {
               }
             }
             if (!InstrumentPatch.field_q) {
-              if (AsyncResourceDownloader.field_e <= ResizableDialog.tooltipAgeTicks) {
-                stackIn_16_0 = (ResizableDialog.tooltipAgeTicks < PcmResampler.field_j + AsyncResourceDownloader.field_e) ? 1 : 0;
+              if (AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks) {
+                stackIn_16_0 = (ResizableDialog.tooltipAgeTicks < PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -48,12 +48,12 @@ final class ContextualRuntimeException extends RuntimeException {
               ResizableDialog.tooltipAgeTicks = 0;
             } else {
               if (InstrumentPatch.field_q) {
-                ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.field_e;
+                ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.tooltipShowDelayTicks;
               } else {
                 if (var2_int == 0) {
                   ResizableDialog.tooltipAgeTicks = 0;
                 } else {
-                  ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.field_e;
+                  ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.tooltipShowDelayTicks;
                 }
               }
             }
@@ -68,7 +68,7 @@ final class ContextualRuntimeException extends RuntimeException {
             }
           }
           if ((!InstrumentPatch.field_q) &&
-              (AsyncResourceDownloader.field_e > ResizableDialog.tooltipAgeTicks) &&
+              (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) &&
               (AttachmentPointerState.pointerActivitySnapshot)) {
             ResizableDialog.tooltipAgeTicks = 0;
             ByteTextDecodingSupport.field_a = NodeHashTableIterator.pendingTooltipAnchorX;

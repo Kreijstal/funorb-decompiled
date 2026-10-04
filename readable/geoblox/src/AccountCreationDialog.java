@@ -39,10 +39,10 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           if (methodGuard > -21) {
             field_sb = (String) null;
           }
-          if (!result.field_g) {
-            if (null == result.field_a) {
-              var4 = result.field_e;
-              if (result.field_j == 248) {
+          if (!result.accepted) {
+            if (null == result.suggestedUsernames) {
+              var4 = result.candidateOrFailureText;
+              if (result.responseCode == 248) {
                 if (!suppressIneligibleAction) {
                   AgeValidator.markAccountIneligibleAndMaybeRequestGameArchives(-65);
                 }
@@ -59,15 +59,15 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             var4 = ValidationState.createAccountSuccessText;
           }
           var5 = new MessageDialogContent((MessageDialog) (this), UiFontResources.commonUiBoldFont, var4);
-          if (result.field_g) {
-            if (result.field_d) {
+          if (result.accepted) {
+            if (result.underThirteenFlag) {
               this.replaceContent(new Under13TermsPanel((AccountCreationDialog) (this)), -111);
               return;
             }
             var5.appendButton(-2, UsernameQuerySupport.continueText, (WidgetListener) (this));
           } else {
             if (!this.accountIneligible) {
-              if (result.field_j == 5) {
+              if (result.responseCode == 5) {
                 var5.appendActionButton(TriangleMesh.reloadGameText, 1, 11);
                 var5.appendActionButton(DisplayModeInfo.quitToWebsiteText, 1, 17);
               } else {
@@ -76,10 +76,10 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             } else {
               var5.appendButton(-2, UsernameQuerySupport.continueText, (WidgetListener) (this));
             }
-            if (result.field_j == 3) {
+            if (result.responseCode == 3) {
               var5.appendActionButton(WidgetContainer.toServerListText, 1, 7);
             } else {
-              if (6 == result.field_j) {
+              if (6 == result.responseCode) {
                 var5.appendActionButton(AvatarFeedbackSupport.toCustomerSupportText, 1, 9);
               }
             }

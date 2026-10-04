@@ -8,11 +8,11 @@ final class ArchiveCatalog {
     private java.math.BigInteger verificationModulus;
     private java.math.BigInteger verificationExponent;
     private CachedArchiveSource[] archiveSources;
-    static String field_a;
+    static String replayTutorialText;
     private ByteArrayBuffer catalogBuffer;
 
-    final static boolean b(int param0) {
-        if (param0 != 255) {
+    final static boolean exitFullscreenIfActive(int methodGuard) {
+        if (methodGuard != 255) {
             return false;
         }
         if (null == InstrumentPatch.field_n) {
@@ -27,7 +27,7 @@ final class ArchiveCatalog {
     final static boolean isAsciiLetter(char character, int methodGuard) {
         boolean asciiLetterBeforeReturn = false;
         if (methodGuard != 97) {
-          field_a = (String) null;
+          replayTutorialText = (String) null;
         }
         if (!((65 <= character) &&
               (character <= 90)) &&
@@ -40,11 +40,11 @@ final class ArchiveCatalog {
         return asciiLetterBeforeReturn;
     }
 
-    public static void a(int param0) {
-        if (param0 < 8) {
+    public static void releaseReplayTutorialText(int methodGuard) {
+        if (methodGuard < 8) {
             return;
         }
-        field_a = null;
+        replayTutorialText = null;
     }
 
     ArchiveCatalog(ArchiveNetworkClient networkClient, DiskCacheWorker diskWorker) {
@@ -246,39 +246,39 @@ final class ArchiveCatalog {
         }
     }
 
-    final static boolean a(String param0, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean isPasswordLengthInvalid(String password, int methodGuard) {
+        RuntimeException lengthCheckFailureForContext = null;
+        RuntimeException lengthCheckFailureBeforeDescription = null;
+        StringBuilder lengthCheckMessagePrefix = null;
+        String passwordDescription = null;
+        RuntimeException caughtLengthCheckFailure = null;
         try {
-          if (param1 < 53) {
-            ArchiveCatalog.a(26);
+          if (methodGuard < 53) {
+            ArchiveCatalog.releaseReplayTutorialText(26);
           }
-          if ((param0 != null) &&
-              (param0.length() >= AsyncResourceDownloader.field_m)) {
-            if (param0.length() > ArchiveIndex.field_j) {
+          if ((password != null) &&
+              (password.length() >= AsyncResourceDownloader.minimumPasswordLength)) {
+            if (password.length() > ArchiveIndex.maximumPasswordLength) {
               return true;
             }
             return false;
           }
           return true;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("em.D(");
-          if (param0 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException lengthCheckFailure) {
+          caughtLengthCheckFailure = lengthCheckFailure;
+          lengthCheckFailureForContext = caughtLengthCheckFailure;
+          lengthCheckFailureBeforeDescription = lengthCheckFailureForContext;
+          lengthCheckMessagePrefix = new StringBuilder().append("em.D(");
+          if (password == null) {
+            passwordDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            passwordDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lengthCheckFailureBeforeDescription), ((StringBuilder) (Object) lengthCheckMessagePrefix).append(passwordDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     static {
-        field_a = "Replay tutorial";
+        replayTutorialText = "Replay tutorial";
     }
 }

@@ -4,193 +4,193 @@
 final class PasswordValidator extends TextInputValidator {
     static int avatarCryFrameCursor;
     static String createEmailUnavailableAlertText;
-    private TextInputWidget field_k;
+    private TextInputWidget usernameInput;
     static String serviceUnavailableText;
     static Sprite countBoxSprite;
-    private TextInputWidget field_n;
+    private TextInputWidget emailInput;
 
-    PasswordValidator(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
-        super(param0);
+    PasswordValidator(TextInputWidget passwordInput, TextInputWidget usernameInput, TextInputWidget emailInput) {
+        super(passwordInput);
         try {
-            this.field_n = param2;
-            this.field_k = param1;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            this.emailInput = emailInput;
+            this.usernameInput = usernameInput;
+        } catch (RuntimeException validatorConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorConstructionFailure), "g.<init>(" + (passwordInput != null ? "{...}" : "null") + ',' + (usernameInput != null ? "{...}" : "null") + ',' + (emailInput != null ? "{...}" : "null") + ')');
         }
     }
 
     final String validationMessageForText(int guard, String candidateText) {
-        RuntimeException var3 = null;
-        String var4 = null;
-        String var5 = null;
-        String var6 = null;
-        Object stackIn_2_0 = null;
-        String stackIn_6_0 = null;
-        String stackIn_10_0 = null;
-        String stackIn_13_0 = null;
-        String stackIn_19_0 = null;
-        String stackIn_22_0 = null;
-        String stackIn_26_0 = null;
-        String stackIn_30_0 = null;
-        String stackIn_34_0 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_38_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException validationFailureForContext = null;
+        String lowercaseCandidate = null;
+        String lowercaseCandidateForChecks = null;
+        String lowercaseUsername = null;
+        Object nullMessageForEmptyPassword = null;
+        String lengthAlertBeforeReturn = null;
+        String characterAlertBeforeReturn = null;
+        String repeatedCharacterAlertBeforeReturn = null;
+        String emailPartAlertBeforeReturn = null;
+        String validMessageWithoutUsername = null;
+        String usernameAlertBeforeReturn = null;
+        String partialUsernameAlertBeforeReturn = null;
+        String finalUsernameAlertBeforeReturn = null;
+        RuntimeException validationFailureBeforeDescription = null;
+        StringBuilder validationMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtValidationFailure = null;
         try {
-          var6 = this.field_k.widgetText.toLowerCase();
-          var4 = candidateText.toLowerCase();
-          if (var4.length() == 0) {
-            stackIn_2_0 = null;
-            return (String) (stackIn_2_0);
+          lowercaseUsername = this.usernameInput.widgetText.toLowerCase();
+          lowercaseCandidate = candidateText.toLowerCase();
+          if (lowercaseCandidate.length() == 0) {
+            nullMessageForEmptyPassword = null;
+            return (String) (nullMessageForEmptyPassword);
           }
-          var5 = var4;
-          if (ArchiveCatalog.a(var5, guard - 344)) {
-            stackIn_6_0 = ArchiveNetworkClient.createPasswordLengthAlertText;
-            return stackIn_6_0;
+          lowercaseCandidateForChecks = lowercaseCandidate;
+          if (ArchiveCatalog.isPasswordLengthInvalid(lowercaseCandidateForChecks, guard - 344)) {
+            lengthAlertBeforeReturn = ArchiveNetworkClient.createPasswordLengthAlertText;
+            return lengthAlertBeforeReturn;
           }
-          if (TextValidationSupport.containsNonAsciiAlphanumeric(var5, (byte) -120)) {
-            stackIn_10_0 = ScoreSubmission.createPasswordCharacterAlertText;
-            return stackIn_10_0;
+          if (TextValidationSupport.containsNonAsciiAlphanumeric(lowercaseCandidateForChecks, (byte) -120)) {
+            characterAlertBeforeReturn = ScoreSubmission.createPasswordCharacterAlertText;
+            return characterAlertBeforeReturn;
           }
-          if (SecondaryNodeDeque.hasUniformCharacters(guard + 18303, var5)) {
-            stackIn_13_0 = NameCharacterSupport.createRepeatedPasswordAlertText;
-            return stackIn_13_0;
+          if (SecondaryNodeDeque.hasUniformCharacters(guard + 18303, lowercaseCandidateForChecks)) {
+            repeatedCharacterAlertBeforeReturn = NameCharacterSupport.createRepeatedPasswordAlertText;
+            return repeatedCharacterAlertBeforeReturn;
           }
           if (guard != 422) {
-            PasswordValidator.g(119);
+            PasswordValidator.releasePasswordValidatorSharedResources(119);
           }
-          if (this.a(candidateText, -29267)) {
-            stackIn_19_0 = DiskCacheWorker.createPasswordContainsEmailAlertText;
-            return stackIn_19_0;
+          if (this.passwordContainsEmailPart(candidateText, -29267)) {
+            emailPartAlertBeforeReturn = DiskCacheWorker.createPasswordContainsEmailAlertText;
+            return emailPartAlertBeforeReturn;
           }
-          if (0 >= var6.length()) {
-            stackIn_22_0 = ArchiveLoadStep.createPasswordValidText;
-            return stackIn_22_0;
+          if (0 >= lowercaseUsername.length()) {
+            validMessageWithoutUsername = ArchiveLoadStep.createPasswordValidText;
+            return validMessageWithoutUsername;
           }
-          if (TextValidationSupport.containsTextOrReverse(var5, var6, -98)) {
-            stackIn_26_0 = EntityCollisionSupport.createPasswordContainsNameAlertText;
-            return stackIn_26_0;
+          if (TextValidationSupport.containsTextOrReverse(lowercaseCandidateForChecks, lowercaseUsername, -98)) {
+            usernameAlertBeforeReturn = EntityCollisionSupport.createPasswordContainsNameAlertText;
+            return usernameAlertBeforeReturn;
           }
-          if (UsernameAvailabilityValidator.usernameContainsPasswordOrReverse(8, var6, var5)) {
-            stackIn_30_0 = NameCharacterSupport.createPasswordContainsPartialNameAlertText;
-            return stackIn_30_0;
+          if (UsernameAvailabilityValidator.usernameContainsPasswordOrReverse(8, lowercaseUsername, lowercaseCandidateForChecks)) {
+            partialUsernameAlertBeforeReturn = NameCharacterSupport.createPasswordContainsPartialNameAlertText;
+            return partialUsernameAlertBeforeReturn;
           }
-          if (!CrcAcknowledgedPacket.a(var5, var6, (byte) -96)) {
+          if (!CrcAcknowledgedPacket.a(lowercaseCandidateForChecks, lowercaseUsername, (byte) -96)) {
             return ArchiveNetworkClient.createPasswordLengthAlertText;
           }
-          stackIn_34_0 = EntityCollisionSupport.createPasswordContainsNameAlertText;
-          return stackIn_34_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_37_0 = var3;
-          stackIn_37_1 = new StringBuilder().append("g.A(").append(guard).append(',');
+          finalUsernameAlertBeforeReturn = EntityCollisionSupport.createPasswordContainsNameAlertText;
+          return finalUsernameAlertBeforeReturn;
+        } catch (java.lang.RuntimeException validationFailure) {
+          caughtValidationFailure = validationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeDescription = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("g.A(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_38_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_38_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeDescription), ((StringBuilder) (Object) validationMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
-    private final boolean a(String param0, int param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final boolean passwordContainsEmailPart(String candidatePassword, int methodGuard) {
+        String lowercaseEmail = null;
+        RuntimeException emailCheckFailureForContext = null;
+        String lowercasePassword = null;
+        int lastAtSignIndex = 0;
+        String emailLocalPart = null;
+        String emailDomain = null;
+        RuntimeException emailCheckFailureBeforeDescription = null;
+        StringBuilder emailCheckMessagePrefix = null;
+        String passwordDescription = null;
+        RuntimeException caughtEmailCheckFailure = null;
         try {
-          var3 = this.field_n.widgetText.toLowerCase();
-          var4 = param0.toLowerCase();
-          if ((0 < var3.length()) &&
-              (var4.length() > 0)) {
-            var5 = var3.lastIndexOf("@");
-            if ((0 <= var5) &&
-                (var3.length() - 1 > var5)) {
-              var6 = var3.substring(0, var5);
-              var7 = var3.substring(var5 + 1);
-              if (var4.indexOf(var6) >= 0) {
+          lowercaseEmail = this.emailInput.widgetText.toLowerCase();
+          lowercasePassword = candidatePassword.toLowerCase();
+          if ((0 < lowercaseEmail.length()) &&
+              (lowercasePassword.length() > 0)) {
+            lastAtSignIndex = lowercaseEmail.lastIndexOf("@");
+            if ((0 <= lastAtSignIndex) &&
+                (lowercaseEmail.length() - 1 > lastAtSignIndex)) {
+              emailLocalPart = lowercaseEmail.substring(0, lastAtSignIndex);
+              emailDomain = lowercaseEmail.substring(lastAtSignIndex + 1);
+              if (lowercasePassword.indexOf(emailLocalPart) >= 0) {
                 return true;
               }
-              if (var4.indexOf(var7) >= 0) {
+              if (lowercasePassword.indexOf(emailDomain) >= 0) {
                 return true;
               }
             }
           }
-          if (param1 == -29267) {
+          if (methodGuard == -29267) {
             return false;
           }
           serviceUnavailableText = (String) null;
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("g.B(");
-          if (param0 == null) {
-            stackIn_17_2 = "null";
+        } catch (java.lang.RuntimeException emailCheckFailure) {
+          caughtEmailCheckFailure = emailCheckFailure;
+          emailCheckFailureForContext = caughtEmailCheckFailure;
+          emailCheckFailureBeforeDescription = emailCheckFailureForContext;
+          emailCheckMessagePrefix = new StringBuilder().append("g.B(");
+          if (candidatePassword == null) {
+            passwordDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            passwordDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) emailCheckFailureBeforeDescription), ((StringBuilder) (Object) emailCheckMessagePrefix).append(passwordDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        ValidationState stackIn_5_0 = null;
-        ValidationState stackIn_8_0 = null;
-        ValidationState stackIn_11_0 = null;
-        ValidationState stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        String lowercaseUsername = null;
+        RuntimeException stateFailureForContext = null;
+        String lowercaseCandidate = null;
+        ValidationState emptyPasswordStateBeforeReturn = null;
+        ValidationState rejectedPasswordStateBeforeReturn = null;
+        ValidationState emailPartStateBeforeReturn = null;
+        ValidationState acceptedPasswordStateBeforeReturn = null;
+        RuntimeException stateFailureBeforeDescription = null;
+        StringBuilder stateMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtStateFailure = null;
         try {
           if (guard != -257) {
-            this.field_k = (TextInputWidget) null;
+            this.usernameInput = (TextInputWidget) null;
           }
-          var3 = this.field_k.widgetText.toLowerCase();
-          var4 = candidateText.toLowerCase();
-          if (var4.length() == 0) {
-            stackIn_5_0 = WidgetSkinState.invalidInputValidationState;
-            return stackIn_5_0;
+          lowercaseUsername = this.usernameInput.widgetText.toLowerCase();
+          lowercaseCandidate = candidateText.toLowerCase();
+          if (lowercaseCandidate.length() == 0) {
+            emptyPasswordStateBeforeReturn = WidgetSkinState.invalidInputValidationState;
+            return emptyPasswordStateBeforeReturn;
           }
-          if (!FadingDialog.isPasswordAcceptableForUsername(var4, var3, -25321)) {
-            stackIn_8_0 = WidgetSkinState.invalidInputValidationState;
-            return stackIn_8_0;
+          if (!FadingDialog.isPasswordAcceptableForUsername(lowercaseCandidate, lowercaseUsername, -25321)) {
+            rejectedPasswordStateBeforeReturn = WidgetSkinState.invalidInputValidationState;
+            return rejectedPasswordStateBeforeReturn;
           }
-          if (!this.a(candidateText, -29267)) {
-            stackIn_13_0 = SocketArchiveNetworkClient.validInputValidationState;
-            return stackIn_13_0;
+          if (!this.passwordContainsEmailPart(candidateText, -29267)) {
+            acceptedPasswordStateBeforeReturn = SocketArchiveNetworkClient.validInputValidationState;
+            return acceptedPasswordStateBeforeReturn;
           }
-          stackIn_11_0 = WidgetSkinState.invalidInputValidationState;
-          return stackIn_11_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("g.D(").append(guard).append(',');
+          emailPartStateBeforeReturn = WidgetSkinState.invalidInputValidationState;
+          return emailPartStateBeforeReturn;
+        } catch (java.lang.RuntimeException stateFailure) {
+          caughtStateFailure = stateFailure;
+          stateFailureForContext = caughtStateFailure;
+          stateFailureBeforeDescription = stateFailureForContext;
+          stateMessagePrefix = new StringBuilder().append("g.D(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_17_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stateFailureBeforeDescription), ((StringBuilder) (Object) stateMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
-        if (param0 >= -90) {
+    public static void releasePasswordValidatorSharedResources(int methodGuard) {
+        if (methodGuard >= -90) {
             return;
         }
         countBoxSprite = null;

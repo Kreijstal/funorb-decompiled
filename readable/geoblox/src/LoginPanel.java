@@ -284,7 +284,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(loginIdentifierText, (byte) -126);
               EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(emailText, (byte) -126);
               passwordCharacters = (CharSequence) ((Object) passwordText);
-              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.a(passwordCharacters, 48), (byte) -126);
+              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.normalizePasswordForPacket(passwordCharacters, 48), (byte) -126);
               EndingAnimationSupport.loginPayloadBuffer.writeShortBE(affiliateId, 28695);
               EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) -94, ageYears);
               EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) 123, requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort);
@@ -523,7 +523,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             unusedNullReferenceB = null;
             unusedNullReferenceC = null;
             try {
-              requestFromQueue = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
+              requestFromQueue = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.reflectionCheckRequests.firstForIteration(0));
               requestAlias = requestFromQueue;
               if (requestAlias == null) {
                 return;

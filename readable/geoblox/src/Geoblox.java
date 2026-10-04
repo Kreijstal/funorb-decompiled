@@ -334,7 +334,7 @@ public final class Geoblox extends SessionGameApplet {
         SessionBootstrapSupport.clearSessionBootstrapTexts(16424);
         ClientRenderingState.releaseClientRenderingResources(true);
         SessionGameApplet.releaseSessionAppletResources(30344);
-        AsyncResourceDownloader.c((byte) 108);
+        AsyncResourceDownloader.releaseDownloaderSharedResources((byte) 108);
         KeyboardInputListener.a(31997);
         PointerInputListener.a(-29313);
         MouseWheelInput.a(-42);
@@ -363,7 +363,7 @@ public final class Geoblox extends SessionGameApplet {
         GameplaySession.releaseStaticReferences(-17199);
         ArchiveNetworkClient.d(-50);
         DiskCacheWorker.a(methodGuard ^ 74);
-        ArchiveCatalog.a(86);
+        ArchiveCatalog.releaseReplayTutorialText(86);
         BufferedSocket.releaseTransformedVertexScratch(21888);
         IntrusiveDeque.releaseSharedResources(51);
         IntrusiveNode.releaseNodeResources((byte) -128);
@@ -508,7 +508,7 @@ public final class Geoblox extends SessionGameApplet {
         DirectByteStorage.b(methodGuard ^ 47);
         GrowableIntList.a(27);
         DraggableWidget.g((byte) -113);
-        DropTargetWidget.f(methodGuard + 14576);
+        DropTargetWidget.releaseDropTargetSharedResources(methodGuard + 14576);
         TextTemplateArgumentType.a(-113);
         IterableNodeHashTable.releaseSharedResources(methodGuard ^ 63);
         SecondaryNodeDeque.releaseSharedResources(methodGuard + 63);
@@ -530,7 +530,7 @@ public final class Geoblox extends SessionGameApplet {
         SocialListEntry.releaseSocialEntryResources((byte) -128);
         RankedListQuery.b(127);
         ArchiveLoadStep.a(122);
-        UsernameAvailabilityQuery.a(102);
+        UsernameAvailabilityQuery.releaseUsernameQuerySharedResources(102);
         ClientProtocolStage.a(methodGuard ^ -64);
         MessageDialogContent.a((byte) -113);
         AchievementQuery.c(59);
@@ -548,7 +548,7 @@ public final class Geoblox extends SessionGameApplet {
         TextLayoutLine.releaseStaticReferences((byte) 0);
         ScorePopup.c((byte) -40);
         UsernameAvailabilityValidator.releaseUsernameValidatorSharedResources((byte) 113);
-        PasswordValidator.g(methodGuard - 51);
+        PasswordValidator.releasePasswordValidatorSharedResources(methodGuard - 51);
         EmailValidator.releaseEmailValidatorSharedResources(methodGuard - 22);
         EmailAvailabilityValidator.releaseEmailAvailabilitySharedResources((byte) -9);
         AgeValidator.releaseRestartTutorialText(-48);
@@ -657,7 +657,7 @@ public final class Geoblox extends SessionGameApplet {
               if ((FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47)) &&
                   (!FullscreenSupport.field_a)) {
                 fullscreenAvailableForUiSnapshot = !(InstrumentPatch.field_n == null);
-                uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.a(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
+                uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.processAccountUiActionsWithoutLogin(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
                 if (uiServiceResultOrOverlayMode != 2364824) {
                   if (!((uiServiceResultOrOverlayMode != 1) &&
                       (2 != uiServiceResultOrOverlayMode))) {

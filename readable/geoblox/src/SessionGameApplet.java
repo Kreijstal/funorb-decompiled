@@ -112,7 +112,7 @@ abstract class SessionGameApplet extends GameApplet {
             TextInputValidator.initializeArchiveServices(clientId, MeshPrioritySupport.bootstrapLanguageId, this.primaryServerPort, this.serverNumber, -23949, MenuScreen.platformTaskDispatcher, this.serverHost, this.gameCrc, this.alternateServerPort);
             StatefulWidgetRenderer.initializePunctuationKeyCodes(28);
             CachedTextLayout.mouseWheelInput = TextValidationFailure.createMouseWheelInput(methodGuard + 113);
-            UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
+            UsernameAvailabilityQuery.attachCanvasInputListeners(MessageDialog.gameCanvas, 57);
             TextLayoutLine.interfaceTextArchiveId = interfaceTextArchiveId;
             DebouncedValidationProvider.commonUiSpriteArchiveId = commonUiSpriteArchiveId;
             ArchiveRequest.uiFontArchiveId = uiFontArchiveId;
@@ -457,7 +457,7 @@ abstract class SessionGameApplet extends GameApplet {
             (EntityMotionSupport.canvasReplacementRequested)) {
           EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
           this.rebuildGameCanvas(true);
-          UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
+          UsernameAvailabilityQuery.attachCanvasInputListeners(MessageDialog.gameCanvas, 57);
         }
         if (OpacityWidget.enabledSessionPacketOpcodes[8]) {
           ArchiveNetworkClient.f(-102);
@@ -603,8 +603,8 @@ abstract class SessionGameApplet extends GameApplet {
                 if (null == EmailAvailabilityValidator.countryListDownloader) {
                   EmailAvailabilityValidator.countryListDownloader = new AsyncResourceDownloader(MenuScreen.platformTaskDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                 }
-                if (EmailAvailabilityValidator.countryListDownloader.a((byte) 45)) {
-                  countryListBytes = EmailAvailabilityValidator.countryListDownloader.b((byte) 91);
+                if (EmailAvailabilityValidator.countryListDownloader.pollDownloadAttempts((byte) 45)) {
+                  countryListBytes = EmailAvailabilityValidator.countryListDownloader.getDownloadedBuffer((byte) 91);
                   if (countryListBytes == null) {
                     unusedNullCountryList = (String) null;
                     SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);

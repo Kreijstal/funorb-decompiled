@@ -10,7 +10,7 @@ final class ArchiveIndex {
     int groupSlotCount;
     int[] fileSlotCounts;
     private byte[] indexWhirlpoolDigest;
-    static int field_j;
+    static int maximumPasswordLength;
     byte[][] groupWhirlpoolDigests;
     private int[][] fileNameHashes;
     int[] groupIds;
@@ -267,7 +267,7 @@ final class ArchiveIndex {
             var8.writeIntBE((byte) 95, submission.secondContextValue);
             var8.writeIntBE((byte) 95, submission.thirdContextValue);
             if (methodGuard > -126) {
-                field_j = 61;
+                maximumPasswordLength = 61;
             }
             var8.writeIntBE((byte) 95, submission.fourthContextValue);
             var8.writeByte((byte) 126, submission.scores.length);
@@ -313,6 +313,6 @@ final class ArchiveIndex {
 
     static {
         createAgreeTermsText = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_j = 20;
+        maximumPasswordLength = 20;
     }
 }

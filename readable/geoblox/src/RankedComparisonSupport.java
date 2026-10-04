@@ -67,8 +67,8 @@ final class RankedComparisonSupport {
         RuntimeException caughtQueryFailure = null;
         try {
           query = new UsernameAvailabilityQuery(queryFlag);
-          query.field_j = responseCode;
-          query.field_e = candidateText;
+          query.responseCode = responseCode;
+          query.candidateOrFailureText = candidateText;
           queryBeforeReturn = query;
           return queryBeforeReturn;
         } catch (java.lang.RuntimeException queryFailure) {

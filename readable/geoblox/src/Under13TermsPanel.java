@@ -27,7 +27,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             RasterTargetSnapshot.field_f[param0] = EndingAnimationSupport.musicLabelText;
             RasterTargetSnapshot.field_f[10] = BootstrapUiSupport.achievementsText;
             RasterTargetSnapshot.field_f[11] = RasterTargetSnapshot.previousText;
-            RasterTargetSnapshot.field_f[15] = ArchiveCatalog.field_a;
+            RasterTargetSnapshot.field_f[15] = ArchiveCatalog.replayTutorialText;
             RasterTargetSnapshot.field_f[1] = RasterTargetRestoreSupport.resumeGameText;
             RasterTargetSnapshot.field_f[13] = StrongCacheReference.loginRegisterText;
             RasterTargetSnapshot.field_f[3] = SecondaryNodeDequeIterator.instructionsText;

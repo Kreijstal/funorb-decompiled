@@ -9,7 +9,7 @@ final class UiFontResources {
 
     final static UsernameAvailabilityQuery createAcceptedUsernameQuery(int methodGuard, boolean underThirteenFlag) {
         UsernameAvailabilityQuery query = new UsernameAvailabilityQuery(true);
-        query.field_d = underThirteenFlag ? true : false;
+        query.underThirteenFlag = underThirteenFlag ? true : false;
         int sentinelDivision = -105 / ((-35 - methodGuard) / 37);
         return query;
     }

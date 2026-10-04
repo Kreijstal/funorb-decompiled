@@ -91,7 +91,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             availableEntityCategoryCount = -112;
             InstrumentPatch.field_n = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
             if (null != InstrumentPatch.field_n) {
-                UsernameAvailabilityQuery.a(InstrumentPatch.field_n, 57);
+                UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.field_n, 57);
                 return;
             }
             return;
@@ -100,7 +100,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         if (null == InstrumentPatch.field_n) {
             return;
         }
-        UsernameAvailabilityQuery.a(InstrumentPatch.field_n, 57);
+        UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.field_n, 57);
     }
 
     final void dismissDialog(byte methodGuard) {

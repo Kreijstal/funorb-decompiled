@@ -385,7 +385,7 @@ final class DiskArchiveCache {
             WhirlpoolHash.field_d = new PcmStreamMixer();
             ClientScreenExitSupport.gameSoundOutput.setRootStream(WhirlpoolHash.field_d);
             PasswordWidgetRenderer.gameMusicStream = param3;
-            AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c);
+            AsyncResourceDownloader.setGameMusicVolume(-15346, SpriteCheckboxRenderer.gameMusicVolumeLevel);
             EmailValidator.updateSoundEffectVolume(SocialListEntry.soundEffectVolume, (byte) -67);
             CacheReference.gameMusicOutput.setRootStream(param3);
         } catch (RuntimeException runtimeException) {

@@ -149,7 +149,7 @@ final class AgeValidator extends TextInputValidator {
           if (methodGuard != -114) {
             return true;
           }
-          requestFromQueue = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
+          requestFromQueue = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.reflectionCheckRequests.firstForIteration(0));
           requestAlias = requestFromQueue;
           if (requestAlias == null) {
             return false;

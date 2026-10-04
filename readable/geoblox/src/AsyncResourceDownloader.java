@@ -4,224 +4,224 @@
 import java.io.*;
 
 final class AsyncResourceDownloader implements Runnable {
-    private java.net.URL field_h;
-    static int field_e;
-    private PlatformTaskDispatcher field_b;
-    private int field_l;
-    static int field_j;
-    private ByteArrayBuffer field_n;
+    private java.net.URL resourceUrl;
+    static int tooltipShowDelayTicks;
+    private PlatformTaskDispatcher taskDispatcher;
+    private int downloadStage;
+    static int duplicateAppletStartCount;
+    private ByteArrayBuffer downloadBuffer;
     static ArchiveNetworkClient archiveNetworkClient;
-    static int field_m;
-    static TextTemplateArgumentType field_d;
-    private DataInputStream field_c;
-    private PlatformTask field_k;
-    private PlatformTask field_f;
-    private PlatformTask field_g;
+    static int minimumPasswordLength;
+    static TextTemplateArgumentType textTemplateArgumentTypeFour;
+    private DataInputStream downloadStream;
+    private PlatformTask jaggrabSocketTask;
+    private PlatformTask urlStreamTask;
+    private PlatformTask readerThreadTask;
     static int receivedSocialSettingHigh;
 
-    final ByteArrayBuffer b(byte param0) {
-        int var2 = 62 / ((param0 - 9) / 53);
-        if (!(this.field_l != 3)) {
-            return this.field_n;
+    final ByteArrayBuffer getDownloadedBuffer(byte methodGuard) {
+        int unusedGuardQuotient = 62 / ((methodGuard - 9) / 53);
+        if (!(this.downloadStage != 3)) {
+            return this.downloadBuffer;
         }
         return null;
     }
 
     protected final void finalize() {
-        if (null != this.field_f) {
-            if (!(this.field_f.result == null)) {
+        if (null != this.urlStreamTask) {
+            if (!(this.urlStreamTask.result == null)) {
                 try {
-                    ((DataInputStream) (this.field_f.result)).close();
-                } catch (Exception exception) {
+                    ((DataInputStream) (this.urlStreamTask.result)).close();
+                } catch (Exception ignoredUrlStreamCloseFailure) {
                 }
             }
-            this.field_f = null;
+            this.urlStreamTask = null;
         }
-        if (this.field_k != null) {
-            if (null != this.field_k.result) {
+        if (this.jaggrabSocketTask != null) {
+            if (null != this.jaggrabSocketTask.result) {
                 try {
-                    ((java.net.Socket) (this.field_k.result)).close();
-                } catch (Exception exception) {
+                    ((java.net.Socket) (this.jaggrabSocketTask.result)).close();
+                } catch (Exception ignoredSocketCloseFailure) {
                 }
             }
-            this.field_k = null;
+            this.jaggrabSocketTask = null;
         }
-        if (!(null == this.field_c)) {
+        if (!(null == this.downloadStream)) {
             try {
-                this.field_c.close();
-            } catch (Exception exception) {
+                this.downloadStream.close();
+            } catch (Exception ignoredDownloadStreamCloseFailure) {
             }
-            this.field_c = null;
+            this.downloadStream = null;
         }
-        this.field_g = null;
+        this.readerThreadTask = null;
     }
 
-    public static void c(byte param0) {
-        int var1 = 26 / ((param0 - 45) / 32);
+    public static void releaseDownloaderSharedResources(byte methodGuard) {
+        int unusedGuardQuotient = 26 / ((methodGuard - 45) / 32);
         archiveNetworkClient = null;
-        field_d = null;
+        textTemplateArgumentTypeFour = null;
     }
 
-    final synchronized boolean a(byte param0) {
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
-        IOException var2 = null;
-        OutputStream var3 = null;
-        java.net.Socket var4 = null;
-        CharSequence var5 = null;
-        if (2 <= this.field_l) {
+    final synchronized boolean pollDownloadAttempts(byte methodGuard) {
+        int streamSetupOutcome = 0;
+        Throwable caughtStreamSetupFailure = null;
+        IOException ignoredStreamSetupIoFailure = null;
+        OutputStream jaggrabOutputStream = null;
+        java.net.Socket jaggrabSocket = null;
+        CharSequence jaggrabRequestCharacters = null;
+        if (2 <= this.downloadStage) {
           return true;
         }
-        if (this.field_l == 0) {
-          if (null == this.field_f) {
-            this.field_f = this.field_b.requestUrlStream(-14, this.field_h);
+        if (this.downloadStage == 0) {
+          if (null == this.urlStreamTask) {
+            this.urlStreamTask = this.taskDispatcher.requestUrlStream(-14, this.resourceUrl);
           }
-          if (0 == this.field_f.status) {
+          if (0 == this.urlStreamTask.status) {
             return false;
           }
-          if (1 != this.field_f.status) {
-            this.field_l = this.field_l + 1;
-            this.field_f = null;
-            return false;
-          }
-        }
-        if (this.field_l == 1) {
-          if (this.field_k == null) {
-            this.field_k = this.field_b.requestSocket(443, this.field_h.getHost(), false);
-          }
-          if (this.field_k.status == 0) {
-            return false;
-          }
-          if (1 != this.field_k.status) {
-            this.field_k = null;
-            this.field_l = this.field_l + 1;
+          if (1 != this.urlStreamTask.status) {
+            this.downloadStage = this.downloadStage + 1;
+            this.urlStreamTask = null;
             return false;
           }
         }
-        if (null == this.field_c) {
+        if (this.downloadStage == 1) {
+          if (this.jaggrabSocketTask == null) {
+            this.jaggrabSocketTask = this.taskDispatcher.requestSocket(443, this.resourceUrl.getHost(), false);
+          }
+          if (this.jaggrabSocketTask.status == 0) {
+            return false;
+          }
+          if (1 != this.jaggrabSocketTask.status) {
+            this.jaggrabSocketTask = null;
+            this.downloadStage = this.downloadStage + 1;
+            return false;
+          }
+        }
+        if (null == this.downloadStream) {
           try {
-            if (this.field_l == 0) {
-              this.field_c = (DataInputStream) (this.field_f.result);
+            if (this.downloadStage == 0) {
+              this.downloadStream = (DataInputStream) (this.urlStreamTask.result);
             }
-            if (this.field_l == 1) {
-              var4 = (java.net.Socket) (this.field_k.result);
-              var4.setSoTimeout(10000);
-              var3 = var4.getOutputStream();
-              var3.write(17);
-              var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_h.getFile() + "\n\n"));
-              var3.write(MultiHandleSliderRenderer.encodeTextBytes(var5, (byte) 127));
-              this.field_c = new DataInputStream(var4.getInputStream());
+            if (this.downloadStage == 1) {
+              jaggrabSocket = (java.net.Socket) (this.jaggrabSocketTask.result);
+              jaggrabSocket.setSoTimeout(10000);
+              jaggrabOutputStream = jaggrabSocket.getOutputStream();
+              jaggrabOutputStream.write(17);
+              jaggrabRequestCharacters = (CharSequence) ((Object) ("JAGGRAB " + this.resourceUrl.getFile() + "\n\n"));
+              jaggrabOutputStream.write(MultiHandleSliderRenderer.encodeTextBytes(jaggrabRequestCharacters, (byte) 127));
+              this.downloadStream = new DataInputStream(jaggrabSocket.getInputStream());
             }
-            this.field_n.position = 0;
-            decompiledRegionSelector0 = 0;
-          } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var2 = (IOException) (Object) decompiledCaughtException;
+            this.downloadBuffer.position = 0;
+            streamSetupOutcome = 0;
+          } catch (java.io.IOException streamSetupIoFailure) {
+            caughtStreamSetupFailure = streamSetupIoFailure;
+            ignoredStreamSetupIoFailure = (IOException) (Object) caughtStreamSetupFailure;
             this.finalize();
-            this.field_l = this.field_l + 1;
-            decompiledRegionSelector0 = 1;
+            this.downloadStage = this.downloadStage + 1;
+            streamSetupOutcome = 1;
           }
-          if (decompiledRegionSelector0 == 0) {
-            if (null == this.field_g) {
-              this.field_g = this.field_b.startThread((Runnable) (this), 0, 5);
+          if (streamSetupOutcome == 0) {
+            if (null == this.readerThreadTask) {
+              this.readerThreadTask = this.taskDispatcher.startThread((Runnable) (this), 0, 5);
             }
-            if (0 == this.field_g.status) {
+            if (0 == this.readerThreadTask.status) {
               return false;
             }
-            if (param0 != 45) {
+            if (methodGuard != 45) {
               return false;
             }
-            if (this.field_g.status == 1) {
+            if (this.readerThreadTask.status == 1) {
               return false;
             }
             this.finalize();
-            this.field_l = this.field_l + 1;
+            this.downloadStage = this.downloadStage + 1;
             return false;
           }
         }
-        if (null == this.field_g) {
-          this.field_g = this.field_b.startThread((Runnable) (this), 0, 5);
+        if (null == this.readerThreadTask) {
+          this.readerThreadTask = this.taskDispatcher.startThread((Runnable) (this), 0, 5);
         }
-        if (0 == this.field_g.status) {
+        if (0 == this.readerThreadTask.status) {
           return false;
         }
-        if (param0 != 45) {
+        if (methodGuard != 45) {
           return false;
         }
-        if (this.field_g.status != 1) {
+        if (this.readerThreadTask.status != 1) {
           this.finalize();
-          this.field_l = this.field_l + 1;
+          this.downloadStage = this.downloadStage + 1;
         }
         return false;
     }
 
     public final void run() {
         try {
-            int var1_int = 0;
-            Object var1 = null;
-            Object var2 = null;
-            Throwable var3 = null;
-            int var4 = 0;
-            Throwable decompiledCaughtException = null;
-            var4 = Geoblox.clientControlFlowFlag;
+            int bytesRead = 0;
+            Object completionMonitorOrCaughtReadFailure = null;
+            Object failureMonitor = null;
+            Throwable unusedThrowableSnapshot = null;
+            int clientControlSnapshot = 0;
+            Throwable caughtReadFailure = null;
+            clientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
-              while (this.field_n.position < this.field_n.bytes.length) {
-                var1_int = this.field_c.read(this.field_n.bytes, this.field_n.position, -this.field_n.position + this.field_n.bytes.length);
-                if (0 <= var1_int) {
-                  this.field_n.position = this.field_n.position + var1_int;
+              while (this.downloadBuffer.position < this.downloadBuffer.bytes.length) {
+                bytesRead = this.downloadStream.read(this.downloadBuffer.bytes, this.downloadBuffer.position, -this.downloadBuffer.position + this.downloadBuffer.bytes.length);
+                if (0 <= bytesRead) {
+                  this.downloadBuffer.position = this.downloadBuffer.position + bytesRead;
                   continue;
                 }
                 break;
               }
-              if (this.field_n.bytes.length == this.field_n.position) {
-                throw AsyncResourceDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_n.bytes.length + " " + this.field_h));
+              if (this.downloadBuffer.bytes.length == this.downloadBuffer.position) {
+                throw AsyncResourceDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.downloadBuffer.bytes.length + " " + this.resourceUrl));
               }
-              var1 = this;
-              synchronized (var1) {
+              completionMonitorOrCaughtReadFailure = this;
+              synchronized (completionMonitorOrCaughtReadFailure) {
                 this.finalize();
-                this.field_l = 3;
+                this.downloadStage = 3;
               }
               return;
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2 = this;
-              synchronized (var2) {
+            } catch (java.lang.Exception readFailure) {
+              caughtReadFailure = readFailure;
+              completionMonitorOrCaughtReadFailure = (Exception) (Object) caughtReadFailure;
+              failureMonitor = this;
+              synchronized (failureMonitor) {
                 this.finalize();
-                this.field_l = this.field_l + 1;
+                this.downloadStage = this.downloadStage + 1;
               }
               return;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedReaderFailure) {
+            throw uncheckedReaderFailure;
+        } catch (Throwable checkedReaderFailure) {
+            throw new RuntimeException(checkedReaderFailure);
         }
     }
 
-    final static void a(int param0, int param1) {
-        SpriteCheckboxRenderer.field_c = param1;
-        PasswordWidgetRenderer.gameMusicStream.setMasterVolume((int)((float)(64 * param1 / 80) * 1.399999976158142f), (byte) 22);
-        if (param0 != -15346) {
-            AsyncResourceDownloader.a(-15, 68);
+    final static void setGameMusicVolume(int methodGuard, int volumeLevel) {
+        SpriteCheckboxRenderer.gameMusicVolumeLevel = volumeLevel;
+        PasswordWidgetRenderer.gameMusicStream.setMasterVolume((int)((float)(64 * volumeLevel / 80) * 1.399999976158142f), (byte) 22);
+        if (methodGuard != -15346) {
+            AsyncResourceDownloader.setGameMusicVolume(-15, 68);
         }
     }
 
-    AsyncResourceDownloader(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    AsyncResourceDownloader(PlatformTaskDispatcher taskDispatcher, java.net.URL resourceUrl, int bufferCapacity) {
         try {
-            this.field_b = param0;
-            this.field_h = param1;
-            this.field_n = new ByteArrayBuffer(param2);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            this.taskDispatcher = taskDispatcher;
+            this.resourceUrl = resourceUrl;
+            this.downloadBuffer = new ByteArrayBuffer(bufferCapacity);
+        } catch (RuntimeException downloaderConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) downloaderConstructionFailure), "wg.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ',' + (resourceUrl != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
         }
     }
 
     static {
-        field_m = 5;
-        field_j = 0;
-        field_e = 50;
-        field_d = new TextTemplateArgumentType(4, 1, 1, 1);
+        minimumPasswordLength = 5;
+        duplicateAppletStartCount = 0;
+        tooltipShowDelayTicks = 50;
+        textTemplateArgumentTypeFour = new TextTemplateArgumentType(4, 1, 1, 1);
     }
 
     @SuppressWarnings("unchecked")

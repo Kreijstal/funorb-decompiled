@@ -6,7 +6,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
     static BufferedSocket sessionSocket;
     static int field_f;
     static String accountCreationDisplayName;
-    static int field_c;
+    static int gameMusicVolumeLevel;
     static int previousMenuScreenId;
 
     final static void c(int param0) {
@@ -107,7 +107,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
           if (methodGuard < -5) {
             return;
           }
-          field_c = 68;
+          gameMusicVolumeLevel = 68;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
     }
 
     static {
-        field_c = 80;
+        gameMusicVolumeLevel = 80;
         boardSceneRaster = new Sprite(640, 640);
     }
 }

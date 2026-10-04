@@ -46,7 +46,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             return nullQueryResult;
           }
           query = new UsernameAvailabilityQuery(false);
-          query.field_a = suggestions;
+          query.suggestedUsernames = suggestions;
           queryResult = query;
           return queryResult;
         } catch (java.lang.RuntimeException queryFailure) {

@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b74588f78ea82e498bbc78a0d20401559194fdd5/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/32eed9903c45f511b7789719695256d5633711aa/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 165)
+## Current readability (pass 166)
 
-The export has 16,589 guarded names and 110,717 Java identifier edits, plus 11
+The export has 16,766 guarded names and 111,378 Java identifier edits, plus 11
 class-name literal edits and 285 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -24,7 +24,62 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current socket, proxy and theme achievement naming (pass 165)
+## Current downloader, query and password naming (pass 166)
+
+Pass 166 adds 177 guarded names: twenty-five fields, fifteen methods,
+thirty parameters and 107 locals. The remaining opaque declarations in
+AsyncResourceDownloader, UsernameAvailabilityQuery, PasswordValidator,
+DropTargetWidget and ArchiveCatalog are named. Original API methods `run` and
+`finalize`, and the generic sneaky-throw helper/throwable parameter, retain their
+existing meaningful names. Constructors follow their class rules.
+
+Downloader names expose URL/dispatcher/buffer, URL-stream and JAGGRAB socket
+tasks, reader thread and attempt stage. Stage zero selects URL loading, stage
+one selects the original port-443 JAGGRAB request, stage two ends the attempts,
+and stage three exposes the buffer. A short EOF sets stage three; exactly
+filling the buffer throws the original `HG1` exception and advances the stage.
+Zero-byte reads still repeat. Independent close attempts, swallowed failures,
+monitor targets, thread-start statuses and duplicated setup continuations stay
+as written. `getDownloadedBuffer` does not assert a valid country-list payload.
+
+Query names expose accepted/under-thirteen flags, suggested usernames, response
+code and candidate-or-failure text. The record also serves account-creation
+results; the text can be a localized failure, and its original null/pending
+checks remain. The shared reflection-check deque is named from its producers
+and consumers. Password-packet normalization still processes at most twenty
+UTF-16 units, lowercases ASCII capitals, retains lowercase/digits and replaces
+other units with underscores. Its wrong guard still invokes the null-canvas
+listener path after allocation.
+
+PasswordValidator exposes its username/email input references, validation
+message/state snapshots and the original last-@ local-part/domain substring
+checks. Default-locale lowercasing, empty-input behavior, original check order,
+wrong-guard reference clears and shared cleanup remain. The length helper uses
+the current minimum/maximum fields (defaults five/twenty); the unrelated guard
+write of maximum61 remains. This naming pass does not change password policy.
+
+Canvas keyboard/mouse/focus/wheel attachment order and fullscreen detachment
+are named without changing partial effects. Shared names expose game music
+volume, tooltip delay/duration, duplicate applet-start count, replay tutorial
+text and numeric template types four/eleven. Volume keeps its original integer
+then floating scale, wrong-renderer write68 and recursive invalid-guard call;
+there is no new clamping or recursion fix. Tooltip additive overflow, listener
+exceptions, archive guards, aliases and all diagnostic strings remain.
+
+The export has 16,766 rules and 111,378 identifier edits, plus eleven class-name
+literal and 285 label edits: 111,674 total. All 16,589 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Twenty-nine generated Java files change only in names. Both
+303-file corpora compile, reproduce and reverse byte exactly. All raw/tool/
+workflow/stub/class-literal/label-policy/native pins remain. All 27 publication
+tests pass; this pass adds/runs no native probes or new runtime cases.
+
+Eight large labeled bodies, 149 opaque labels, 164 opaque fields and 202
+single-letter methods remain. Full downloader/network/reflection/input/volume/
+account/password/game/server/assets/browser/phone behavior and
+heap/presented-FPS acceptance remain unverified.
+
+## Previous socket, proxy and theme achievement naming (pass 165)
 
 Pass 165 adds 158 guarded names: sixteen fields, nine methods, fifteen
 parameters, 117 locals and one lexical label. SocketConnector and

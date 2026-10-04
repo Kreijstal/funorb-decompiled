@@ -87,7 +87,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (SecondaryNodeDeque.hasUniformCharacters(18725, password)) {
             return false;
           }
-          if (ArchiveCatalog.a(password, methodGuard + 25409)) {
+          if (ArchiveCatalog.isPasswordLengthInvalid(password, methodGuard + 25409)) {
             return false;
           }
           if (username.length() == 0) {

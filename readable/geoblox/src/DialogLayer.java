@@ -54,7 +54,7 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 != -13912) {
             return;
         }
-        UsernameAvailabilityQuery.field_k = new IntrusiveDeque();
+        UsernameAvailabilityQuery.reflectionCheckRequests = new IntrusiveDeque();
     }
 
     final static void h(int param0) {

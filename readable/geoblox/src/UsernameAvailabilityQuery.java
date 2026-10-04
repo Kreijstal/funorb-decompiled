@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class UsernameAvailabilityQuery {
-    String[] field_a;
-    boolean field_d;
-    boolean field_g;
-    String field_e;
-    static IntrusiveDeque field_k;
-    int field_j;
+    String[] suggestedUsernames;
+    boolean underThirteenFlag;
+    boolean accepted;
+    String candidateOrFailureText;
+    static IntrusiveDeque reflectionCheckRequests;
+    int responseCode;
     static String createInvalidAgeAlertText;
     static String orbPointsText;
     static Sprite[] achievementSprites;
@@ -15,139 +15,139 @@ final class UsernameAvailabilityQuery {
     static ResourceArchive instrumentPatchArchive;
     static Sprite germsForegroundSprite;
 
-    final static void a(java.awt.Canvas param0, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void attachCanvasInputListeners(java.awt.Canvas canvas, int methodGuard) {
+        RuntimeException attachmentFailureForContext = null;
+        RuntimeException attachmentFailureBeforeDescription = null;
+        StringBuilder attachmentMessagePrefix = null;
+        String canvasDescription = null;
+        RuntimeException caughtAttachmentFailure = null;
         try {
-          SpriteConstructionSupport.attachKeyboardListeners((byte) -85, (java.awt.Component) ((Object) param0));
-          if (param1 != 57) {
+          SpriteConstructionSupport.attachKeyboardListeners((byte) -85, (java.awt.Component) ((Object) canvas));
+          if (methodGuard != 57) {
             return;
           }
-          DropTargetWidget.a((java.awt.Component) ((Object) param0), param1 - 56);
+          DropTargetWidget.attachPointerInputListeners((java.awt.Component) ((Object) canvas), methodGuard - 56);
           if (null == CachedTextLayout.mouseWheelInput) {
             return;
           }
-          CachedTextLayout.mouseWheelInput.attachWheelListener(124, (java.awt.Component) ((Object) param0));
+          CachedTextLayout.mouseWheelInput.attachWheelListener(124, (java.awt.Component) ((Object) canvas));
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("sl.D(");
-          if (param0 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException attachmentFailure) {
+          caughtAttachmentFailure = attachmentFailure;
+          attachmentFailureForContext = caughtAttachmentFailure;
+          attachmentFailureBeforeDescription = attachmentFailureForContext;
+          attachmentMessagePrefix = new StringBuilder().append("sl.D(");
+          if (canvas == null) {
+            canvasDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            canvasDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) attachmentFailureBeforeDescription), ((StringBuilder) (Object) attachmentMessagePrefix).append(canvasDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
-        int var2_int = 0;
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        java.awt.Canvas var6 = null;
-        char[] var7 = null;
-        char[] var8 = null;
-        String stackIn_20_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
+    final static String normalizePasswordForPacket(CharSequence passwordCharacters, int methodGuard) {
+        int clampedPasswordLength = 0;
+        char[] outputCharactersForWrites = null;
+        int characterIndex = 0;
+        int sourceCodeUnit = 0;
+        java.awt.Canvas unusedNullCanvasBeforeGuardCall = null;
+        char[] allocatedCharactersAlias = null;
+        char[] allocatedCharacters = null;
+        String normalizedPasswordBeforeReturn = null;
+        RuntimeException normalizationFailureBeforeDescription = null;
+        StringBuilder normalizationMessagePrefix = null;
+        String passwordDescription = null;
+        RuntimeException caughtNormalizationFailure = null;
+        RuntimeException normalizationFailureForContext = null;
         try {
-          var2_int = param0.length();
-          if (20 < var2_int) {
-            var2_int = 20;
+          clampedPasswordLength = passwordCharacters.length();
+          if (20 < clampedPasswordLength) {
+            clampedPasswordLength = 20;
           }
-          var8 = new char[var2_int];
-          var7 = var8;
-          var3 = var7;
-          var4 = 0;
-          if (param1 != 48) {
-            var6 = (java.awt.Canvas) null;
-            UsernameAvailabilityQuery.a((java.awt.Canvas) null, 58);
+          allocatedCharacters = new char[clampedPasswordLength];
+          allocatedCharactersAlias = allocatedCharacters;
+          outputCharactersForWrites = allocatedCharactersAlias;
+          characterIndex = 0;
+          if (methodGuard != 48) {
+            unusedNullCanvasBeforeGuardCall = (java.awt.Canvas) null;
+            UsernameAvailabilityQuery.attachCanvasInputListeners((java.awt.Canvas) null, 58);
           }
-          while (var2_int > var4) {
-            var5 = param0.charAt(var4);
-            if ((var5 >= 65) &&
-                (var5 <= 90)) {
-              var3[var4] = (char)(-65 + (var5 + 97));
-            } else if (!((var5 >= 97) &&
-                  (var5 <= 122)) &&
-                !((var5 >= 48) &&
-                  (var5 <= 57))) {
-              var3[var4] = (char)95;
+          while (clampedPasswordLength > characterIndex) {
+            sourceCodeUnit = passwordCharacters.charAt(characterIndex);
+            if ((sourceCodeUnit >= 65) &&
+                (sourceCodeUnit <= 90)) {
+              outputCharactersForWrites[characterIndex] = (char)(-65 + (sourceCodeUnit + 97));
+            } else if (!((sourceCodeUnit >= 97) &&
+                  (sourceCodeUnit <= 122)) &&
+                !((sourceCodeUnit >= 48) &&
+                  (sourceCodeUnit <= 57))) {
+              outputCharactersForWrites[characterIndex] = (char)95;
             } else {
-              var3[var4] = (char)var5;
+              outputCharactersForWrites[characterIndex] = (char)sourceCodeUnit;
             }
-            var4++;
+            characterIndex++;
           }
-          stackIn_20_0 = new String(var8);
-          return stackIn_20_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_23_0 = var2;
-          stackIn_23_1 = new StringBuilder().append("sl.A(");
-          if (param0 == null) {
-            stackIn_24_2 = "null";
+          normalizedPasswordBeforeReturn = new String(allocatedCharacters);
+          return normalizedPasswordBeforeReturn;
+        } catch (java.lang.RuntimeException normalizationFailure) {
+          caughtNormalizationFailure = normalizationFailure;
+          normalizationFailureForContext = caughtNormalizationFailure;
+          normalizationFailureBeforeDescription = normalizationFailureForContext;
+          normalizationMessagePrefix = new StringBuilder().append("sl.A(");
+          if (passwordCharacters == null) {
+            passwordDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            passwordDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) normalizationFailureBeforeDescription), ((StringBuilder) (Object) normalizationMessagePrefix).append(passwordDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseUsernameQuerySharedResources(int methodGuard) {
         createInvalidAgeAlertText = null;
         germsForegroundSprite = null;
         instrumentPatchArchive = null;
-        field_k = null;
-        int var1 = -39 % ((48 - param0) / 43);
+        reflectionCheckRequests = null;
+        int unusedGuardRemainder = -39 % ((48 - methodGuard) / 43);
         loginEmailText = null;
         orbPointsText = null;
         achievementSprites = null;
     }
 
-    UsernameAvailabilityQuery(boolean param0) {
-        this.field_g = param0 ? true : false;
+    UsernameAvailabilityQuery(boolean accepted) {
+        this.accepted = accepted ? true : false;
     }
 
-    final static int a(boolean param0, SessionGameApplet param1, boolean param2) {
-        RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int processAccountUiActionsWithoutLogin(boolean fullscreenActive, SessionGameApplet applet, boolean clearPatchArchiveGuard) {
+        RuntimeException uiActionFailureForContext = null;
+        int uiActionResultBeforeReturn = 0;
+        RuntimeException uiActionFailureBeforeDescription = null;
+        StringBuilder uiActionMessagePrefix = null;
+        String appletDescription = null;
+        RuntimeException caughtUiActionFailure = null;
         try {
-          if (param2) {
+          if (clearPatchArchiveGuard) {
             instrumentPatchArchive = (ResourceArchive) null;
           }
-          stackIn_3_0 = param1.processAccountUiActionsWithoutLogin(param0, -17978);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("sl.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          uiActionResultBeforeReturn = applet.processAccountUiActionsWithoutLogin(fullscreenActive, -17978);
+          return uiActionResultBeforeReturn;
+        } catch (java.lang.RuntimeException uiActionFailure) {
+          caughtUiActionFailure = uiActionFailure;
+          uiActionFailureForContext = caughtUiActionFailure;
+          uiActionFailureBeforeDescription = uiActionFailureForContext;
+          uiActionMessagePrefix = new StringBuilder().append("sl.B(").append(fullscreenActive).append(',');
+          if (applet == null) {
+            appletDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            appletDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) uiActionFailureBeforeDescription), ((StringBuilder) (Object) uiActionMessagePrefix).append(appletDescription).append(',').append(clearPatchArchiveGuard).append(')').toString());
         }
     }
 
     static {
-        field_k = new IntrusiveDeque();
+        reflectionCheckRequests = new IntrusiveDeque();
         createInvalidAgeAlertText = "Please enter your age in years";
         orbPointsText = "Orb points: <%0>";
         loginEmailText = "Email: ";

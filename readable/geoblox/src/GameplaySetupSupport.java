@@ -168,7 +168,7 @@ final class GameplaySetupSupport {
                 unusedNullBufferSnapshot = (ByteArrayBuffer) null;
                 GameplaySetupSupport.readReflectionCheckRequest(96, (PlatformTaskDispatcher) null, -109, (ByteArrayBuffer) null);
               }
-              UsernameAvailabilityQuery.field_k.addLast(-92, reflectionRequest);
+              UsernameAvailabilityQuery.reflectionCheckRequests.addLast(-92, reflectionRequest);
               return;
             } catch (java.lang.RuntimeException requestFailure) {
               caughtReflectionFailure = requestFailure;

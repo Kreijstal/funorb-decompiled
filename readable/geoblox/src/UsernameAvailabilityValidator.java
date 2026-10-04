@@ -246,12 +246,12 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             if (availabilityQuery == null) {
               return null;
             }
-            if (null != availabilityQuery.field_e) {
+            if (null != availabilityQuery.candidateOrFailureText) {
               pendingQueryNullMessage = null;
               return (String) (pendingQueryNullMessage);
             }
             this.cachedUsernameCandidate = candidateText;
-            this.cachedUsernameAvailable = availabilityQuery.field_g;
+            this.cachedUsernameAvailable = availabilityQuery.accepted;
           }
           if (guard != 422) {
             avatarTintBlueDelta = -0.46423107385635376f;
@@ -306,8 +306,8 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (!candidateText.equals(this.cachedUsernameCandidate)) {
             availabilityQuery = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 108, candidateText);
             if ((availabilityQuery != null) &&
-                (availabilityQuery.field_e == null)) {
-              this.cachedUsernameAvailable = availabilityQuery.field_g;
+                (availabilityQuery.candidateOrFailureText == null)) {
+              this.cachedUsernameAvailable = availabilityQuery.accepted;
               this.cachedUsernameCandidate = candidateText;
             } else {
               pendingUsernameState = WidgetSkinState.pendingQueryValidationState;

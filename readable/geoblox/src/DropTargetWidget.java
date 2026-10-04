@@ -2,47 +2,47 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DropTargetWidget extends SingleChildWidget {
-    static TextTemplateArgumentType field_B;
+    static TextTemplateArgumentType textTemplateArgumentTypeEleven;
 
     final static byte[] readTextResourceBytes(int readGuard, String resourceKey) {
-        RuntimeException var2 = null;
-        byte[] stackIn_2_0 = null;
-        byte[] stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException resourceReadFailureForContext = null;
+        byte[] nullResourceBytesForGuard = null;
+        byte[] resourceBytesBeforeReturn = null;
+        RuntimeException resourceReadFailureBeforeDescription = null;
+        StringBuilder resourceReadMessagePrefix = null;
+        String resourceKeyDescription = null;
+        RuntimeException caughtResourceReadFailure = null;
         try {
           if (readGuard == 2229) {
-            stackIn_4_0 = ImageProducerRasterBuffer.activeTextArchive.getNamedFile(0, resourceKey, "");
-            return stackIn_4_0;
+            resourceBytesBeforeReturn = ImageProducerRasterBuffer.activeTextArchive.getNamedFile(0, resourceKey, "");
+            return resourceBytesBeforeReturn;
           }
-          stackIn_2_0 = (byte[]) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("fk.F(").append(readGuard).append(',');
+          nullResourceBytesForGuard = (byte[]) null;
+          return nullResourceBytesForGuard;
+        } catch (java.lang.RuntimeException resourceReadFailure) {
+          caughtResourceReadFailure = resourceReadFailure;
+          resourceReadFailureForContext = caughtResourceReadFailure;
+          resourceReadFailureBeforeDescription = resourceReadFailureForContext;
+          resourceReadMessagePrefix = new StringBuilder().append("fk.F(").append(readGuard).append(',');
           if (resourceKey == null) {
-            stackIn_8_2 = "null";
+            resourceKeyDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            resourceKeyDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) resourceReadFailureBeforeDescription), ((StringBuilder) (Object) resourceReadMessagePrefix).append(resourceKeyDescription).append(')').toString());
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachPointerInputListeners(java.awt.Component component, int methodGuard) {
         try {
-            param0.addMouseListener(GameplaySetupSupport.pointerListener);
-            if (param1 != 1) {
-                field_B = (TextTemplateArgumentType) null;
+            component.addMouseListener(GameplaySetupSupport.pointerListener);
+            if (methodGuard != 1) {
+                textTemplateArgumentTypeEleven = (TextTemplateArgumentType) null;
             }
-            param0.addMouseMotionListener(GameplaySetupSupport.pointerListener);
-            param0.addFocusListener(GameplaySetupSupport.pointerListener);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            component.addMouseMotionListener(GameplaySetupSupport.pointerListener);
+            component.addFocusListener(GameplaySetupSupport.pointerListener);
+        } catch (RuntimeException pointerAttachmentFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerAttachmentFailure), "fk.C(" + (component != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -55,10 +55,10 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    public static void f(int param0) {
-        field_B = null;
-        if (param0 != 14512) {
-            field_B = (TextTemplateArgumentType) null;
+    public static void releaseDropTargetSharedResources(int methodGuard) {
+        textTemplateArgumentTypeEleven = null;
+        if (methodGuard != 14512) {
+            textTemplateArgumentTypeEleven = (TextTemplateArgumentType) null;
         }
     }
 
@@ -137,6 +137,6 @@ final class DropTargetWidget extends SingleChildWidget {
     }
 
     static {
-        field_B = new TextTemplateArgumentType(11, 0, 1, 2);
+        textTemplateArgumentTypeEleven = new TextTemplateArgumentType(11, 0, 1, 2);
     }
 }

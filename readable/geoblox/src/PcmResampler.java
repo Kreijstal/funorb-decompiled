@@ -11,7 +11,7 @@ final class PcmResampler {
     static String createNewsOptInText;
     static int pointerYSnapshot;
     private int outputRateRatio;
-    static int field_j;
+    static int tooltipShowDurationTicks;
 
     static long orLong(long left, long right) {
         return left | right;
@@ -189,6 +189,6 @@ final class PcmResampler {
         for (var0 = 0; var0 < 20; var0++) {
             availableScorePopups.addLast(-83, new ScorePopup());
         }
-        field_j = 250;
+        tooltipShowDurationTicks = 250;
     }
 }

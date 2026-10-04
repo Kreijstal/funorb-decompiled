@@ -78,12 +78,12 @@ final class GameScreen extends MenuScreen {
                     break L0;
                   }
                 }
-                AsyncResourceDownloader.a(-15346, 80);
+                AsyncResourceDownloader.setGameMusicVolume(-15346, 80);
                 if (clientControlFlowGuard == 0) {
                   break L0;
                 }
               }
-              AsyncResourceDownloader.a(-15346, 0);
+              AsyncResourceDownloader.setGameMusicVolume(-15346, 0);
               if (clientControlFlowGuard == 0) {
                 break L0;
               }
@@ -151,7 +151,7 @@ final class GameScreen extends MenuScreen {
                         !(PcmResampler.pointerYSnapshot <= 327) &&
                         !(PcmResampler.pointerYSnapshot >= 362)))) {
                     this.fullscreenDialogActive = false;
-                    ArchiveCatalog.b(255);
+                    ArchiveCatalog.exitFullscreenIfActive(255);
                     this.pointerInteractionActive = true;
                     if (clientControlFlowGuard == 0) {
                       break L0;
@@ -661,13 +661,13 @@ final class GameScreen extends MenuScreen {
               return;
             }
           }
-          if (SpriteCheckboxRenderer.field_c > 10) {
-            AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c - 10);
+          if (SpriteCheckboxRenderer.gameMusicVolumeLevel > 10) {
+            AsyncResourceDownloader.setGameMusicVolume(-15346, SpriteCheckboxRenderer.gameMusicVolumeLevel - 10);
             if (clientControlFlowGuard == 0) {
               return;
             }
           }
-          AsyncResourceDownloader.a(-15346, 0);
+          AsyncResourceDownloader.setGameMusicVolume(-15346, 0);
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
@@ -1098,7 +1098,7 @@ final class GameScreen extends MenuScreen {
           if ((this.fullscreenDialogActive) &&
               (InstrumentPatch.field_n != null) &&
               (this.activeTicks > 1500)) {
-            ArchiveCatalog.b(255);
+            ArchiveCatalog.exitFullscreenIfActive(255);
             this.fullscreenDialogActive = false;
           }
           while (true) {
@@ -1271,7 +1271,7 @@ final class GameScreen extends MenuScreen {
                     }
                   }
                   this.fullscreenDialogActive = false;
-                  ArchiveCatalog.b(255);
+                  ArchiveCatalog.exitFullscreenIfActive(255);
                   this.pointerInteractionActive = true;
                   if (clientControlFlowGuard == 0) {
                     break fullscreenPointerHandling;
@@ -1627,18 +1627,18 @@ final class GameScreen extends MenuScreen {
             }
             pointerX -= 280;
             if (pointerX <= 0) {
-              AsyncResourceDownloader.a(-15346, 0);
+              AsyncResourceDownloader.setGameMusicVolume(-15346, 0);
               if (clientControlFlowGuard == 0) {
                 return;
               }
             }
             if (~NetworkArchiveRequest.barSprite.fullWidth < ~pointerX) {
-              AsyncResourceDownloader.a(-15346, 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth);
+              AsyncResourceDownloader.setGameMusicVolume(-15346, 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth);
               if (clientControlFlowGuard == 0) {
                 return;
               }
             }
-            AsyncResourceDownloader.a(-15346, 80);
+            AsyncResourceDownloader.setGameMusicVolume(-15346, 80);
             if (clientControlFlowGuard == 0) {
               return;
             }
@@ -1934,7 +1934,7 @@ final class GameScreen extends MenuScreen {
                   if (InstrumentPatch.field_n == null) {
                     this.fullscreenDialogActive = true;
                   }
-                  if ((!ArchiveCatalog.b(255)) &&
+                  if ((!ArchiveCatalog.exitFullscreenIfActive(255)) &&
                       (TextTemplateDefinition.field_n > 0) &&
                       (ContextualRuntimeException.a(MenuScreen.platformTaskDispatcher, (byte) 37))) {
                     MessageDialog.requestFullscreen((byte) -128);
@@ -2168,13 +2168,13 @@ final class GameScreen extends MenuScreen {
                 break L0;
               }
             }
-            if (SpriteCheckboxRenderer.field_c >= 70) {
-              AsyncResourceDownloader.a(-15346, 80);
+            if (SpriteCheckboxRenderer.gameMusicVolumeLevel >= 70) {
+              AsyncResourceDownloader.setGameMusicVolume(-15346, 80);
               if (clientControlFlowGuard == 0) {
                 break L0;
               }
             }
-            AsyncResourceDownloader.a(-15346, 10 + SpriteCheckboxRenderer.field_c);
+            AsyncResourceDownloader.setGameMusicVolume(-15346, 10 + SpriteCheckboxRenderer.gameMusicVolumeLevel);
           }
           if (methodGuard != 90) {
             this.activeTicks = 120;
@@ -2415,7 +2415,7 @@ final class GameScreen extends MenuScreen {
               if (actionId == 8) {
                 volumeLevelSnapshot = SocialListEntry.soundEffectVolume;
               } else {
-                volumeLevelSnapshot = SpriteCheckboxRenderer.field_c;
+                volumeLevelSnapshot = SpriteCheckboxRenderer.gameMusicVolumeLevel;
               }
               volumeLevelOrSliderOffset = volumeLevelSnapshot;
               volumeLevelOrSliderOffset = volumeLevelOrSliderOffset * (-4 + NetworkArchiveRequest.barSprite.fullWidth) / 80;
