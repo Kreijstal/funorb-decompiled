@@ -90,24 +90,24 @@ final class TextValidationFailure {
         throw new IllegalStateException();
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int stackIn_4_0 = 0;
-        RuntimeException decompiledCaughtException = null;
+    final static int reverseLowBitsIntoAccumulator(int value, int initialAccumulator, int bitCount) {
+        int accumulator = 0;
+        RuntimeException failureForContext = null;
+        int resultBeforeReturn = 0;
+        RuntimeException caughtReverseFailure = null;
         try {
-          var3_int = param1;
-          while (param2 > 0) {
-            var3_int = var3_int << 1 | param0 & 1;
-            param2--;
-            param0 = param0 >>> 1;
+          accumulator = initialAccumulator;
+          while (bitCount > 0) {
+            accumulator = accumulator << 1 | value & 1;
+            bitCount--;
+            value = value >>> 1;
           }
-          stackIn_4_0 = var3_int;
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "nd.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          resultBeforeReturn = accumulator;
+          return resultBeforeReturn;
+        } catch (java.lang.RuntimeException reverseFailure) {
+          caughtReverseFailure = reverseFailure;
+          failureForContext = caughtReverseFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureForContext), "nd.B(" + value + ',' + initialAccumulator + ',' + bitCount + ')');
         }
     }
 

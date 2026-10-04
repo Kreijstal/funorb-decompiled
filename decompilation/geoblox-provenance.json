@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "bccf54d50f98a2add3163a66b4db16d818dd7db4",
+    "commit": "e277bfbf38f60fffdb66ab1d7b7badaa5e9a1e3c",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "cdb588222094e9790260acac0698a14034e789aab1f4f6839bb82c7629d1c7bc"
+      "sha256": "fdc758ce5e4aa2e397c620a52782757b31baded498279af24deac9aa9e76550a"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,35 +3291,36 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "982e4e053b519bb3373950897a6940873e565d59831e408e46c388202c53c25b",
+    "outputTreeSha256": "3c90d3b27b1eb1ae2b3876f23eee4aa97c47086b4476fadc6bd440387c263713",
     "files": 303,
-    "rules": 16192,
-    "identifierEdits": 109015,
+    "rules": 16267,
+    "identifierEdits": 109443,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 109303,
+    "totalEdits": 109737,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 277,
+    "labelEdits": 283,
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 162,
-      "rulesAdded": 277,
+      "version": 163,
+      "rulesAdded": 75,
       "rulesRefined": 0,
-      "fields": 33,
-      "methods": 14,
-      "parameters": 29,
-      "locals": 201,
-      "labels": 0,
-      "previousCompleteRulesPreserved": 15915,
+      "fields": 0,
+      "methods": 1,
+      "parameters": 3,
+      "locals": 69,
+      "labels": 2,
+      "previousCompleteRulesPreserved": 16192,
       "explicitlyCorrectedSymbols": [],
       "rawInputAndGeneratorPinsUnchanged": true,
-      "allMusicDecodeStageAndMusicDecoderDeclarationsNamed": true,
-      "remainingOpaqueBlockLabels": 107,
-      "remainingOpaqueLoopLabels": 45,
+      "allVorbisCodebookResidueAndMappingDeclarationsNamed": true,
+      "allBitReversalHelperParametersAndLocalsNamed": true,
+      "remainingOpaqueBlockLabels": 106,
+      "remainingOpaqueLoopLabels": 44,
       "wholeGameEquivalenceVerified": false
     },
     "structuralPass": 153
@@ -7225,5 +7226,66 @@
     "nativeProbesRunInCurrentPass": 0,
     "nativeProbeFilesChanged": false,
     "scope": "Names only. All123 MusicDecodeStage and195 MusicDecoder declarations are guarded; all15915 prior complete rules remain. Floor1 names are inferred by comparing source bit layouts, neighbor/interpolation helpers, residual reconstruction and inverse-dB multiplication to Xiph Vorbis I specification sections7/9 (https://xiph.org/vorbis/doc/Vorbis_I_spec.html); full codec compliance is not established. Shared floor scratch grows only through the original X-capacity check, paired sorting keeps X/Y/step flags together, and floor-line multiplication still writes the first sample before clamping its end. Custom container big-endian fields, complemented loop-end ping-pong metadata,255-byte length chunks, null/IOException loading paths, discarded time/window/transform fields, setupLoaded final write and cleanup that leaves this flag unchanged remain. MDCT A/B/C tables, butterflies, bit-reversal, floating arithmetic/evaluation order, window bounds, absent-floor path, first-packet null output, overlap-add and previous/shared work-buffer swapping remain. Budgeted PCM decoding subtracts samples after an entire packet and can overshoot its remaining budget by that packet. Reused local names retain every supported phase; unused snapshots, aliases, integer overflow, partial effects, exception/finally/monitor scopes and diagnostic strings are untouched. Whole303-file compiler audit compares136607 bindings/388 overrides/811 label records; dictionary reversal restores303 raw files byte exactly. All27 existing publication tests pass; archived rule-builder source is identified here. Raw/tool/workflow/stub/class-literal/label/native pins stay fixed. No source-body changes, control-flow reconstruction, client-control-zero assumption, native probes run or new runtime/performance cases. Live setup/archive loading, malformed setup/packet handling, music/audio playback, full codec/game/server/assets/browser/phone behavior and heap/presented-FPS acceptance remain unverified."
+  },
+  "vorbisSetupAndResidueNaming": {
+    "version": 163,
+    "rulesAdded": 75,
+    "rulesRefined": 0,
+    "C": 0,
+    "F": 0,
+    "M": 1,
+    "P": 3,
+    "L": 69,
+    "B": 2,
+    "previousCompleteRulesPreserved": 16192,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "allOwnedDeclarationsNamed": {
+      "ae": 53,
+      "ui": 39,
+      "we": 7
+    },
+    "constructorNamesFollowClassRules": true,
+    "sourceBodiesEditedByHand": false,
+    "identifierEditsAdded": 428,
+    "labelEditsAdded": 6,
+    "changedJavaFiles": 5,
+    "changedOriginalJavaFiles": [
+      "ae.java",
+      "nd.java",
+      "ua.java",
+      "ui.java",
+      "we.java"
+    ],
+    "declarationIdentitiesPreserved": 19498,
+    "bindingsCompared": 136607,
+    "overrideRelationshipsPreserved": 388,
+    "labelBindingsPreserved": 811,
+    "labelInventory": {
+      "opaque_plain": 106,
+      "named_plain": 82,
+      "opaque_loop": 44,
+      "named_loop": 13
+    },
+    "remainingOpaqueFields": 210,
+    "remainingSingleLetterMethods": 235,
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "e277bfbf38f60fffdb66ab1d7b7badaa5e9a1e3c",
+    "manifestSha256": "fdc758ce5e4aa2e397c620a52782757b31baded498279af24deac9aa9e76550a",
+    "outputTreeSha256": "3c90d3b27b1eb1ae2b3876f23eee4aa97c47086b4476fadc6bd440387c263713",
+    "sourceProofTest": "readable/tests/test-geoblox-rule-builder.mjs",
+    "sourceProofTestSha256": "b233998fb770cddc1a5bc7438482751998a67feff194bb4a7126778828d6eaa9",
+    "publicationTestsPassed": 27,
+    "newNativeCases": 0,
+    "nativeProbesRunInCurrentPass": 0,
+    "nativeProbeFilesChanged": false,
+    "scope": "Names only. All53 VorbisCodebook,39 VorbisResidue and7 VorbisMapping declarations and9 seeded bit-reversal helper declarations are guarded; all16192 prior complete rules remain. Source data flow supports ordered/sparse length runs, next-codeword carry resolution, complemented flattened-Huffman leaves, lattice/dense vector expansion,8-pass residue classification and strided-type0/contiguous-nonzero writes. Algorithm roles align with Xiph Vorbis I sections3/8 (https://xiph.org/vorbis/doc/Vorbis_I_spec.html); full codec compliance is not established. The original positive non1 lookup dense branch, mapping validation omissions/discarded fields, sample clearing before silent return, aliases, unused snapshots, shift masking/overflow, floating evaluation and partial effects remain. Reused local names retain every supported phase. shorterLengthCarryResolution and residuePartitionGroups retain three existing breaks and one continue, with exact compiler-resolved destinations; label edit accounting277->283. Seeded bit reversal keeps negative/zero-count behavior, accumulator overflow, mutated diagnostic arguments, caught aliases and original nd.B literal. Whole303-file compiler audit compares136607 bindings/388 overrides/811 label records; dictionary reversal restores303 raw files byte exactly. All27 existing publication tests pass; archived rule-builder source is identified here. Raw/tool/workflow/stub/class-literal/native pins stay fixed. No source-body changes, control-flow reconstruction, client-control-zero assumption, native probes run or new runtime/performance cases. Live setup/archive/audio playback, malformed input handling, full codec/game/server/assets/browser/phone behavior and heap/presented-FPS acceptance remain unverified.",
+    "bitReversalHelperDeclarationsNamed": 9,
+    "compilerResolvedMethodOccurrences": {
+      "M:nd.a(III)I": 2
+    },
+    "lexicalLabelOccurrences": {
+      "B:ae.c()V#0": 4,
+      "B:ui.a([FIZ)V#0": 2
+    }
   }
 }

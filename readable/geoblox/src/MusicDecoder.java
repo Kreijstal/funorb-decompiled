@@ -313,7 +313,7 @@ final class MusicDecoder extends IntrusiveNode {
           bitReverseIndices = new int[eighthBlockSizeOrMappingIndexOrModeCount];
           bitReverseWidth = SpriteConstructionSupport.unsignedBitLength((byte) 58, eighthBlockSizeOrMappingIndexOrModeCount - 1);
           for (bitReverseIndex = 0; bitReverseIndex < eighthBlockSizeOrMappingIndexOrModeCount; bitReverseIndex++) {
-            bitReverseIndices[bitReverseIndex] = TextValidationFailure.a(bitReverseIndex, 0, bitReverseWidth);
+            bitReverseIndices[bitReverseIndex] = TextValidationFailure.reverseLowBitsIntoAccumulator(bitReverseIndex, 0, bitReverseWidth);
           }
           if (blockSizeKindOrCodebookCount == 0) {
             shortMdctTrigA = mdctTrigA;
