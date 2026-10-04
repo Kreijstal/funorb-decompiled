@@ -15,9 +15,9 @@ abstract class FadingDialog extends WidgetContainer {
     final static boolean a(byte param0) {
         if (param0 != 47) {
             field_J = (ResourceArchive) null;
-            return DelayedPcmStream.b(true);
+            return DelayedPcmStream.beginSessionRetryAndCheckStageEleven(true);
         }
-        return DelayedPcmStream.b(true);
+        return DelayedPcmStream.beginSessionRetryAndCheckStageEleven(true);
     }
 
     final void resizeAndCenter(int targetHeight, int methodGuard, int targetWidth) {

@@ -2,44 +2,44 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DelayedPcmStream extends PcmStream {
-    private PcmStream field_l;
-    private int field_j;
+    private PcmStream wrappedStream;
+    private int remainingDelayFrames;
     static String usernameQueryCandidate;
 
-    final static int a(CharSequence param0, boolean param1, char param2) {
-        int var5 = 0;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int stackIn_9_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int countCharacterOccurrences(CharSequence text, boolean methodGuard, char character) {
+        int characterIndex = 0;
+        int occurrenceCount = 0;
+        RuntimeException countFailure = null;
+        int textLength = 0;
+        int returnedOccurrenceCount = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String textDescription = null;
+        RuntimeException caughtCountFailure = null;
         try {
-          var3_int = 0;
-          if (!param1) {
-            DelayedPcmStream.b(false);
+          occurrenceCount = 0;
+          if (!methodGuard) {
+            DelayedPcmStream.beginSessionRetryAndCheckStageEleven(false);
           }
-          var4 = param0.length();
-          for (var5 = 0; var5 < var4; var5++) {
-            if (param0.charAt(var5) == param2) {
-              var3_int++;
+          textLength = text.length();
+          for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+            if (text.charAt(characterIndex) == character) {
+              occurrenceCount++;
             }
           }
-          stackIn_9_0 = var3_int;
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("cg.K(");
-          if (param0 == null) {
-            stackIn_13_2 = "null";
+          returnedOccurrenceCount = occurrenceCount;
+          return returnedOccurrenceCount;
+        } catch (java.lang.RuntimeException countParameterFailure) {
+          caughtCountFailure = countParameterFailure;
+          countFailure = caughtCountFailure;
+          failureContextCause = countFailure;
+          failureContextBuilder = new StringBuilder().append("cg.K(");
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(textDescription).append(',').append(methodGuard).append(',').append(character).append(')').toString());
         }
     }
 
@@ -47,27 +47,27 @@ final class DelayedPcmStream extends PcmStream {
         return 0;
     }
 
-    final static boolean b(boolean param0) {
-        TextWidgetRenderer.field_k = param0 ? true : false;
+    final static boolean beginSessionRetryAndCheckStageEleven(boolean suppressReconnectPageNotification) {
+        TextWidgetRenderer.field_k = suppressReconnectPageNotification ? true : false;
         DisplayNamePanel.connectionRetryDeadlineMillis = 15000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
         return SpriteConstructionSupport.clientScreenStage == 11 ? true : false;
     }
 
     final void skipFrames(int frameCount) {
-        if (frameCount < this.field_j) {
-            this.field_j = this.field_j - frameCount;
+        if (frameCount < this.remainingDelayFrames) {
+            this.remainingDelayFrames = this.remainingDelayFrames - frameCount;
             return;
         }
-        frameCount = frameCount - this.field_j;
-        this.field_j = 0;
-        this.field_l.previousNode = this.previousNode;
-        this.field_l.nextNode = this.nextNode;
-        this.previousNode.nextNode = (IntrusiveNode) ((Object) this.field_l);
-        this.nextNode.previousNode = (IntrusiveNode) ((Object) this.field_l);
+        frameCount = frameCount - this.remainingDelayFrames;
+        this.remainingDelayFrames = 0;
+        this.wrappedStream.previousNode = this.previousNode;
+        this.wrappedStream.nextNode = this.nextNode;
+        this.previousNode.nextNode = (IntrusiveNode) ((Object) this.wrappedStream);
+        this.nextNode.previousNode = (IntrusiveNode) ((Object) this.wrappedStream);
         this.previousNode = null;
         this.nextNode = null;
         if (!(0 >= frameCount)) {
-            this.field_l.skipFrames(frameCount);
+            this.wrappedStream.skipFrames(frameCount);
         }
     }
 
@@ -76,12 +76,12 @@ final class DelayedPcmStream extends PcmStream {
     }
 
     final int getSchedulingPriority() {
-        return this.field_l.getSchedulingPriority();
+        return this.wrappedStream.getSchedulingPriority();
     }
 
-    public static void c(byte param0) {
-        if (param0 > -107) {
-            DelayedPcmStream.c((byte) -13);
+    public static void clearUsernameQueryCandidate(byte methodGuard) {
+        if (methodGuard > -107) {
+            DelayedPcmStream.clearUsernameQueryCandidate((byte) -13);
         }
         usernameQueryCandidate = null;
     }
@@ -90,58 +90,58 @@ final class DelayedPcmStream extends PcmStream {
         return null;
     }
 
-    final static boolean a(byte param0) {
-        if (param0 <= 18) {
+    final static boolean getAccountNewsOptIn(byte methodGuard) {
+        if (methodGuard <= 18) {
             return false;
         }
         return CachedArchiveSource.accountCreationNewsOptIn;
     }
 
     final void mixInto(int[] destination, int destinationOffset, int frameCount) {
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String destinationDescription = null;
+        RuntimeException caughtMixFailure = null;
+        RuntimeException mixFailure = null;
         try {
-          if (this.field_j > frameCount) {
-            this.field_j = this.field_j - frameCount;
+          if (this.remainingDelayFrames > frameCount) {
+            this.remainingDelayFrames = this.remainingDelayFrames - frameCount;
             return;
           }
-          destinationOffset = destinationOffset + this.field_j;
-          frameCount = frameCount - this.field_j;
-          this.field_j = 0;
-          this.field_l.nextNode = this.nextNode;
-          this.field_l.previousNode = this.previousNode;
-          this.previousNode.nextNode = (IntrusiveNode) ((Object) this.field_l);
-          this.nextNode.previousNode = (IntrusiveNode) ((Object) this.field_l);
+          destinationOffset = destinationOffset + this.remainingDelayFrames;
+          frameCount = frameCount - this.remainingDelayFrames;
+          this.remainingDelayFrames = 0;
+          this.wrappedStream.nextNode = this.nextNode;
+          this.wrappedStream.previousNode = this.previousNode;
+          this.previousNode.nextNode = (IntrusiveNode) ((Object) this.wrappedStream);
+          this.nextNode.previousNode = (IntrusiveNode) ((Object) this.wrappedStream);
           this.previousNode = null;
           this.nextNode = null;
           if (frameCount > 0) {
-            this.field_l.mixInto(destination, destinationOffset, frameCount);
+            this.wrappedStream.mixInto(destination, destinationOffset, frameCount);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("cg.C(");
+        } catch (java.lang.RuntimeException mixParameterFailure) {
+          caughtMixFailure = mixParameterFailure;
+          mixFailure = caughtMixFailure;
+          failureContextCause = mixFailure;
+          failureContextBuilder = new StringBuilder().append("cg.C(");
           if (destination == null) {
-            stackIn_10_2 = "null";
+            destinationDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(destinationDescription).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
-    DelayedPcmStream(PcmStream param0, int param1) {
+    DelayedPcmStream(PcmStream stream, int delayFrames) {
         try {
-            this.field_l = param0;
-            this.sample = this.field_l.sample;
-            this.field_j = param1;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            this.wrappedStream = stream;
+            this.sample = this.wrappedStream.sample;
+            this.remainingDelayFrames = delayFrames;
+        } catch (RuntimeException delayConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) delayConstructionFailure), "cg.<init>(" + (stream != null ? "{...}" : "null") + ',' + delayFrames + ')');
         }
     }
 

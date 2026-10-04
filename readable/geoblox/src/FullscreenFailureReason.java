@@ -69,7 +69,7 @@ final class FullscreenFailureReason {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = (CharSequence) ((Object) param2);
-          var3_int = DelayedPcmStream.a(var9, param1, param0);
+          var3_int = DelayedPcmStream.countCharacterOccurrences(var9, param1, param0);
           var4 = new String[1 + var3_int];
           var5 = 0;
           var6 = 0;

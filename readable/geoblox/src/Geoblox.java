@@ -369,7 +369,7 @@ public final class Geoblox extends SessionGameApplet {
         IntrusiveNode.releaseNodeResources((byte) -128);
         IntrusiveNodeHashTable.releaseSharedResources(methodGuard - 63);
         MidiTrackReader.clearStatusDataByteCounts();
-        MidiNoteMixer.c(-1);
+        MidiNoteMixer.clearFullscreenFailureText(-1);
         TrackedPcmStream.a((byte) 54);
         AudioOutput.releaseSharedAudioServiceReference();
         LoginUiSupport.clearLoginUiText(methodGuard + 154);
@@ -487,7 +487,7 @@ public final class Geoblox extends SessionGameApplet {
         MeshPrioritySupport.releaseStaticReferences(0);
         WhirlpoolHash.b(102);
         SynthesizedSoundInstrument.releaseSynthesisBuffers();
-        DelayedPcmStream.c((byte) -120);
+        DelayedPcmStream.clearUsernameQueryCandidate((byte) -120);
         LabeledChildWidget.f((byte) -52);
         ValidatedTextInputWidget.k(-243);
         TextInputWidget.l((byte) -15);
@@ -876,7 +876,7 @@ public final class Geoblox extends SessionGameApplet {
           SoftwareRasterizer.setClip(0, 0, 640, 480);
           CharacterReplacementSupport.transitionCurtain.draw(0, 6 * TriangleMesh.screenTransitionTick - 480);
         }
-        if (DelayedPcmStream.b(true)) {
+        if (DelayedPcmStream.beginSessionRetryAndCheckStageEleven(true)) {
           if (null == InstrumentPatch.field_n) {
             overlayCanvasStateSnapshot = ValidationState.field_d;
           } else {

@@ -2,31 +2,31 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiNote extends IntrusiveNode {
-    PcmSample field_i;
+    PcmSample pcmSample;
     static int keyboardEventFrameEndIndex;
-    int field_y;
+    int releaseEnvelopeTime;
     int field_l;
     int field_k;
     int field_w;
     int field_q;
     static int field_f;
-    int field_g;
-    InstrumentPatch field_z;
+    int framesUntilUpdate;
+    InstrumentPatch instrumentPatch;
     int field_E;
     int field_s;
-    PcmSampleStream field_u;
+    PcmSampleStream sampleStream;
     int field_m;
-    int field_t;
+    int channelIndex;
     int field_h;
     static int archiveLanguageId;
-    int field_B;
-    int field_r;
+    int retriggerPhaseFixed;
+    int keyGroup;
     int field_o;
     int field_j;
-    int field_D;
+    int keyNumber;
     int field_n;
     static int recordsPerKindAndCategoryLimit;
-    InstrumentEnvelope field_x;
+    InstrumentEnvelope envelope;
 
     final static void a(byte param0) {
         int var1 = -125 / ((param0 - 56) / 54);
@@ -67,16 +67,16 @@ final class MidiNote extends IntrusiveNode {
     }
 
     final void b(int param0) {
-        this.field_u = null;
-        this.field_x = null;
+        this.sampleStream = null;
+        this.envelope = null;
         if (param0 == -1) {
-            this.field_i = null;
-            this.field_z = null;
+            this.pcmSample = null;
+            this.instrumentPatch = null;
             return;
         }
         field_f = 41;
-        this.field_i = null;
-        this.field_z = null;
+        this.pcmSample = null;
+        this.instrumentPatch = null;
     }
 
     MidiNote() {

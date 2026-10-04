@@ -45,7 +45,7 @@ final class MeshMaterial {
             return;
         }
         try {
-            WhirlpoolHash.field_d.a(var5);
+            WhirlpoolHash.field_d.addChildStream(var5);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

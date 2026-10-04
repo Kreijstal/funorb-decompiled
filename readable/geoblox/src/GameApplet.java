@@ -95,10 +95,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3 = this;
           synchronized (var3) {
-            if (MidiNoteMixer.field_p) {
+            if (MidiNoteMixer.appletShutdownStarted) {
               return;
             }
-            MidiNoteMixer.field_p = true;
+            MidiNoteMixer.appletShutdownStarted = true;
           }
           if (null != VisualPropertyNode.field_m) {
             VisualPropertyNode.field_m.destroy();
@@ -537,7 +537,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if ((this == PrefixCodeDecoder.field_d) &&
-              (!MidiNoteMixer.field_p)) {
+              (!MidiNoteMixer.appletShutdownStarted)) {
             MenuScreen.appletStopDeadlineMillis = 0L;
             return;
           }
@@ -698,7 +698,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if ((PrefixCodeDecoder.field_d == this) &&
-              (!MidiNoteMixer.field_p)) {
+              (!MidiNoteMixer.appletShutdownStarted)) {
             UsernameQueryState.canvasRedrawRequested = true;
             if ((ResizableDialog.field_S) &&
                 (-Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L)) {
@@ -731,7 +731,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void destroy() {
-        if (PrefixCodeDecoder.field_d != this || MidiNoteMixer.field_p) {
+        if (PrefixCodeDecoder.field_d != this || MidiNoteMixer.appletShutdownStarted) {
             return;
         }
         try {
@@ -909,7 +909,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if ((this == PrefixCodeDecoder.field_d) &&
-              (!MidiNoteMixer.field_p)) {
+              (!MidiNoteMixer.appletShutdownStarted)) {
             MenuScreen.appletStopDeadlineMillis = 4000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
             return;
           }

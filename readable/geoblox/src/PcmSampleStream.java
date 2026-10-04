@@ -72,7 +72,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     final synchronized void f(int param0) {
-        this.b(param0, this.k());
+        this.b(param0, this.getPan());
     }
 
     final int getSchedulingCost() {
@@ -208,7 +208,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final synchronized int i() {
+    final synchronized int getTargetVolume() {
         return this.field_u == -2147483648 ? 0 : this.field_u;
     }
 
@@ -271,8 +271,8 @@ final class PcmSampleStream extends PcmStream {
         return var1 > 255 ? 255 : var1;
     }
 
-    final synchronized void c(int param0, int param1) {
-        this.a(param0, param1, this.k());
+    final synchronized void rampVolume(int rampFrames, int targetVolume) {
+        this.rampVolumeAndPan(rampFrames, targetVolume, this.getPan());
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
@@ -533,65 +533,65 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    final synchronized void c(int param0) {
-        int var2 = 0;
-        if (param0 == 0) {
+    final synchronized void fadeOutAndUnlink(int fadeFrames) {
+        int maxVolumeMagnitude = 0;
+        if (fadeFrames == 0) {
             this.f(0);
             this.unlinkNode(false);
             return;
         }
         if (this.field_n != 0) {
-            var2 = -this.field_k;
-            if (this.field_k > var2) {
-                var2 = this.field_k;
+            maxVolumeMagnitude = -this.field_k;
+            if (this.field_k > maxVolumeMagnitude) {
+                maxVolumeMagnitude = this.field_k;
             }
-            if (-this.field_n > var2) {
-                var2 = -this.field_n;
+            if (-this.field_n > maxVolumeMagnitude) {
+                maxVolumeMagnitude = -this.field_n;
             }
-            if (this.field_n > var2) {
-                var2 = this.field_n;
+            if (this.field_n > maxVolumeMagnitude) {
+                maxVolumeMagnitude = this.field_n;
             }
-            if (-this.field_s > var2) {
-                var2 = -this.field_s;
+            if (-this.field_s > maxVolumeMagnitude) {
+                maxVolumeMagnitude = -this.field_s;
             }
-            if (this.field_s > var2) {
-                var2 = this.field_s;
+            if (this.field_s > maxVolumeMagnitude) {
+                maxVolumeMagnitude = this.field_s;
             }
-            if (param0 > var2) {
-                param0 = var2;
+            if (fadeFrames > maxVolumeMagnitude) {
+                fadeFrames = maxVolumeMagnitude;
             }
-            this.field_l = param0;
+            this.field_l = fadeFrames;
             this.field_u = -2147483648;
-            this.field_j = -this.field_k / param0;
-            this.field_t = -this.field_n / param0;
-            this.field_w = -this.field_s / param0;
+            this.field_j = -this.field_k / fadeFrames;
+            this.field_t = -this.field_n / fadeFrames;
+            this.field_w = -this.field_s / fadeFrames;
             return;
         }
         if (this.field_s != 0) {
-            var2 = -this.field_k;
-            if (this.field_k > var2) {
-                var2 = this.field_k;
+            maxVolumeMagnitude = -this.field_k;
+            if (this.field_k > maxVolumeMagnitude) {
+                maxVolumeMagnitude = this.field_k;
             }
-            if (-this.field_n > var2) {
-                var2 = -this.field_n;
+            if (-this.field_n > maxVolumeMagnitude) {
+                maxVolumeMagnitude = -this.field_n;
             }
-            if (this.field_n > var2) {
-                var2 = this.field_n;
+            if (this.field_n > maxVolumeMagnitude) {
+                maxVolumeMagnitude = this.field_n;
             }
-            if (-this.field_s > var2) {
-                var2 = -this.field_s;
+            if (-this.field_s > maxVolumeMagnitude) {
+                maxVolumeMagnitude = -this.field_s;
             }
-            if (this.field_s > var2) {
-                var2 = this.field_s;
+            if (this.field_s > maxVolumeMagnitude) {
+                maxVolumeMagnitude = this.field_s;
             }
-            if (param0 > var2) {
-                param0 = var2;
+            if (fadeFrames > maxVolumeMagnitude) {
+                fadeFrames = maxVolumeMagnitude;
             }
-            this.field_l = param0;
+            this.field_l = fadeFrames;
             this.field_u = -2147483648;
-            this.field_j = -this.field_k / param0;
-            this.field_t = -this.field_n / param0;
-            this.field_w = -this.field_s / param0;
+            this.field_j = -this.field_k / fadeFrames;
+            this.field_t = -this.field_n / fadeFrames;
+            this.field_w = -this.field_s / fadeFrames;
             return;
         }
         this.field_l = 0;
@@ -615,8 +615,8 @@ final class PcmSampleStream extends PcmStream {
         this.sampleStepFixed = -this.sampleStepFixed;
     }
 
-    final synchronized void g(int param0) {
-        this.field_v = param0;
+    final synchronized void setLoopCount(int loopCount) {
+        this.field_v = loopCount;
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
@@ -785,7 +785,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized boolean g() {
+    final synchronized boolean hasRemainingRampFrames() {
         return this.field_l != 0;
     }
 
@@ -812,7 +812,7 @@ final class PcmSampleStream extends PcmStream {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
-    final synchronized int h() {
+    final synchronized int getSampleStepMagnitude() {
         return this.sampleStepFixed < 0 ? -this.sampleStepFixed : this.sampleStepFixed;
     }
 
@@ -1343,68 +1343,68 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
-        int var6 = 0;
-        if (param0 == 0) {
-            this.b(param1, param2);
+    final synchronized void rampVolumeAndPan(int rampFrames, int targetVolume, int targetPan) {
+        int maxVolumeDelta = 0;
+        if (rampFrames == 0) {
+            this.b(targetVolume, targetPan);
             return;
         }
-        int var4 = PcmSampleStream.e(param1, param2);
-        int var5 = PcmSampleStream.d(param1, param2);
-        if (this.field_n != var4) {
-            var6 = param1 - this.field_k;
-            if (this.field_k - param1 > var6) {
-                var6 = this.field_k - param1;
+        int targetLeftVolume = PcmSampleStream.e(targetVolume, targetPan);
+        int targetRightVolume = PcmSampleStream.d(targetVolume, targetPan);
+        if (this.field_n != targetLeftVolume) {
+            maxVolumeDelta = targetVolume - this.field_k;
+            if (this.field_k - targetVolume > maxVolumeDelta) {
+                maxVolumeDelta = this.field_k - targetVolume;
             }
-            if (var4 - this.field_n > var6) {
-                var6 = var4 - this.field_n;
+            if (targetLeftVolume - this.field_n > maxVolumeDelta) {
+                maxVolumeDelta = targetLeftVolume - this.field_n;
             }
-            if (this.field_n - var4 > var6) {
-                var6 = this.field_n - var4;
+            if (this.field_n - targetLeftVolume > maxVolumeDelta) {
+                maxVolumeDelta = this.field_n - targetLeftVolume;
             }
-            if (var5 - this.field_s > var6) {
-                var6 = var5 - this.field_s;
+            if (targetRightVolume - this.field_s > maxVolumeDelta) {
+                maxVolumeDelta = targetRightVolume - this.field_s;
             }
-            if (this.field_s - var5 > var6) {
-                var6 = this.field_s - var5;
+            if (this.field_s - targetRightVolume > maxVolumeDelta) {
+                maxVolumeDelta = this.field_s - targetRightVolume;
             }
-            if (param0 > var6) {
-                param0 = var6;
+            if (rampFrames > maxVolumeDelta) {
+                rampFrames = maxVolumeDelta;
             }
-            this.field_l = param0;
-            this.field_u = param1;
-            this.field_o = param2;
-            this.field_j = (param1 - this.field_k) / param0;
-            this.field_t = (var4 - this.field_n) / param0;
-            this.field_w = (var5 - this.field_s) / param0;
+            this.field_l = rampFrames;
+            this.field_u = targetVolume;
+            this.field_o = targetPan;
+            this.field_j = (targetVolume - this.field_k) / rampFrames;
+            this.field_t = (targetLeftVolume - this.field_n) / rampFrames;
+            this.field_w = (targetRightVolume - this.field_s) / rampFrames;
             return;
         }
-        if (this.field_s != var5) {
-            var6 = param1 - this.field_k;
-            if (this.field_k - param1 > var6) {
-                var6 = this.field_k - param1;
+        if (this.field_s != targetRightVolume) {
+            maxVolumeDelta = targetVolume - this.field_k;
+            if (this.field_k - targetVolume > maxVolumeDelta) {
+                maxVolumeDelta = this.field_k - targetVolume;
             }
-            if (var4 - this.field_n > var6) {
-                var6 = var4 - this.field_n;
+            if (targetLeftVolume - this.field_n > maxVolumeDelta) {
+                maxVolumeDelta = targetLeftVolume - this.field_n;
             }
-            if (this.field_n - var4 > var6) {
-                var6 = this.field_n - var4;
+            if (this.field_n - targetLeftVolume > maxVolumeDelta) {
+                maxVolumeDelta = this.field_n - targetLeftVolume;
             }
-            if (var5 - this.field_s > var6) {
-                var6 = var5 - this.field_s;
+            if (targetRightVolume - this.field_s > maxVolumeDelta) {
+                maxVolumeDelta = targetRightVolume - this.field_s;
             }
-            if (this.field_s - var5 > var6) {
-                var6 = this.field_s - var5;
+            if (this.field_s - targetRightVolume > maxVolumeDelta) {
+                maxVolumeDelta = this.field_s - targetRightVolume;
             }
-            if (param0 > var6) {
-                param0 = var6;
+            if (rampFrames > maxVolumeDelta) {
+                rampFrames = maxVolumeDelta;
             }
-            this.field_l = param0;
-            this.field_u = param1;
-            this.field_o = param2;
-            this.field_j = (param1 - this.field_k) / param0;
-            this.field_t = (var4 - this.field_n) / param0;
-            this.field_w = (var5 - this.field_s) / param0;
+            this.field_l = rampFrames;
+            this.field_u = targetVolume;
+            this.field_o = targetPan;
+            this.field_j = (targetVolume - this.field_k) / rampFrames;
+            this.field_t = (targetLeftVolume - this.field_n) / rampFrames;
+            this.field_w = (targetRightVolume - this.field_s) / rampFrames;
             return;
         }
         this.field_l = 0;
@@ -1612,17 +1612,17 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final static PcmSampleStream a(PcmSample param0, int param1, int param2, int param3) {
-        if (param0.samples == null) {
+    final static PcmSampleStream createForSampleStep(PcmSample sample, int sampleStepFixed, int volume, int pan) {
+        if (sample.samples == null) {
             return null;
         }
-        if (param0.samples.length != 0) {
-            return new PcmSampleStream(param0, param1, param2, param3);
+        if (sample.samples.length != 0) {
+            return new PcmSampleStream(sample, sampleStepFixed, volume, pan);
         }
         return null;
     }
 
-    final synchronized int k() {
+    final synchronized int getPan() {
         return this.field_o < 0 ? -1 : this.field_o;
     }
 

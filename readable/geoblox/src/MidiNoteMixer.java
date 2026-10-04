@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiNoteMixer extends PcmStream {
-    private MidiPcmStream field_k;
+    private MidiPcmStream midiStream;
     static String fullscreenFocusOrResolutionText;
-    static boolean field_p;
-    IntrusiveDeque field_l;
+    static boolean appletShutdownStarted;
+    IntrusiveDeque notes;
     static int receivedSocialSettingLow;
-    PcmStreamMixer field_m;
+    PcmStreamMixer fadingStreams;
     static int thirdPreviousPacketOpcode;
 
-    public static void c(int param0) {
+    public static void clearFullscreenFailureText(int methodGuard) {
         fullscreenFocusOrResolutionText = null;
-        if (param0 != -1) {
+        if (methodGuard != -1) {
             MidiNoteMixer.prepareLogoGlowRaster((byte) -81);
         }
     }
@@ -22,108 +22,108 @@ final class MidiNoteMixer extends PcmStream {
     }
 
     final void mixInto(int[] destination, int destinationOffset, int frameCount) {
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        MidiNote var6 = null;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String destinationDescription = null;
+        RuntimeException caughtMixFailure = null;
+        int noteDestinationOffset = 0;
+        RuntimeException mixFailure = null;
+        int remainingNoteFrames = 0;
+        MidiNote note = null;
         try {
-          this.field_m.mixInto(destination, destinationOffset, frameCount);
-          var6 = (MidiNote) ((Object) this.field_l.firstForIteration(0));
-          while (var6 != null) {
-            if (!this.field_k.b(var6, -1)) {
-              var4_int = destinationOffset;
-              var5 = frameCount;
+          this.fadingStreams.mixInto(destination, destinationOffset, frameCount);
+          note = (MidiNote) ((Object) this.notes.firstForIteration(0));
+          while (note != null) {
+            if (!this.midiStream.isNoteStreamAbsent(note, -1)) {
+              noteDestinationOffset = destinationOffset;
+              remainingNoteFrames = frameCount;
               while (true) {
-                if (var5 <= var6.field_g) {
-                  this.a(var5, (byte) -69, var5 + var4_int, destination, var6, var4_int);
-                  var6.field_g = var6.field_g - var5;
+                if (remainingNoteFrames <= note.framesUntilUpdate) {
+                  this.mixNoteFrames(remainingNoteFrames, (byte) -69, remainingNoteFrames + noteDestinationOffset, destination, note, noteDestinationOffset);
+                  note.framesUntilUpdate = note.framesUntilUpdate - remainingNoteFrames;
                   break;
                 }
-                this.a(var6.field_g, (byte) -37, var4_int + var5, destination, var6, var4_int);
-                var5 = var5 - var6.field_g;
-                var4_int = var4_int + var6.field_g;
-                if (!this.field_k.a(var5, var4_int, destination, var6, false)) {
+                this.mixNoteFrames(note.framesUntilUpdate, (byte) -37, noteDestinationOffset + remainingNoteFrames, destination, note, noteDestinationOffset);
+                remainingNoteFrames = remainingNoteFrames - note.framesUntilUpdate;
+                noteDestinationOffset = noteDestinationOffset + note.framesUntilUpdate;
+                if (!this.midiStream.advanceNoteAndHandleCompletion(remainingNoteFrames, noteDestinationOffset, destination, note, false)) {
                   continue;
                 }
                 break;
               }
             }
-            var6 = (MidiNote) ((Object) this.field_l.nextForIteration(1));
+            note = (MidiNote) ((Object) this.notes.nextForIteration(1));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_14_0 = var4;
-          stackIn_14_1 = new StringBuilder().append("ad.C(");
+        } catch (java.lang.RuntimeException mixParameterFailure) {
+          caughtMixFailure = mixParameterFailure;
+          mixFailure = caughtMixFailure;
+          failureContextCause = mixFailure;
+          failureContextBuilder = new StringBuilder().append("ad.C(");
           if (destination == null) {
-            stackIn_15_2 = "null";
+            destinationDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(destinationDescription).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
-    private final void a(int param0, MidiNote param1, int param2) {
-        MidiPcmStream stackIn_6_0 = null;
-        MidiNote stackIn_6_1 = null;
-        int stackIn_6_2 = 0;
-        boolean stackIn_7_3;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
+    private final void skipNoteFrames(int methodGuard, MidiNote note, int frameCount) {
+        MidiPcmStream offsetOwner = null;
+        MidiNote offsetNote = null;
+        int offsetMethodGuard = 0;
+        boolean loopEnabled;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String noteDescription = null;
+        RuntimeException caughtSkipFailure = null;
+        int phaseIncrement = 0;
+        RuntimeException skipFailure = null;
+        int framesToPhaseWrap = 0;
         try {
-          if (((this.field_k.field_m[param1.field_t] & 4) != 0) &&
-              (param1.field_y < 0)) {
-            var4_int = this.field_k.field_n[param1.field_t] / AudioOutput.sampleRateHz;
-            var5 = (-param1.field_B + (1048575 + var4_int)) / var4_int;
-            param1.field_B = 1048575 & param1.field_B + param2 * var4_int;
-            if (param2 >= var5) {
-              if (this.field_k.field_u[param1.field_t] == 0) {
-                param1.field_u = PcmSampleStream.a(param1.field_i, param1.field_u.h(), param1.field_u.i(), param1.field_u.k());
+          if (((this.midiStream.channelFlags[note.channelIndex] & 4) != 0) &&
+              (note.releaseEnvelopeTime < 0)) {
+            phaseIncrement = this.midiStream.channelRetriggerPhaseRates[note.channelIndex] / AudioOutput.sampleRateHz;
+            framesToPhaseWrap = (-note.retriggerPhaseFixed + (1048575 + phaseIncrement)) / phaseIncrement;
+            note.retriggerPhaseFixed = 1048575 & note.retriggerPhaseFixed + frameCount * phaseIncrement;
+            if (frameCount >= framesToPhaseWrap) {
+              if (this.midiStream.channelSampleOffsets[note.channelIndex] == 0) {
+                note.sampleStream = PcmSampleStream.createForSampleStep(note.pcmSample, note.sampleStream.getSampleStepMagnitude(), note.sampleStream.getTargetVolume(), note.sampleStream.getPan());
               } else {
-                param1.field_u = PcmSampleStream.a(param1.field_i, param1.field_u.h(), 0, param1.field_u.k());
-                stackIn_6_0 = this.field_k;
-                stackIn_6_1 = (MidiNote) (param1);
-                stackIn_6_2 = -70;
-                if (param1.field_z.pitchOffsetsAndLoopFlag[param1.field_D] >= 0) {
-                  stackIn_7_3 = false;
+                note.sampleStream = PcmSampleStream.createForSampleStep(note.pcmSample, note.sampleStream.getSampleStepMagnitude(), 0, note.sampleStream.getPan());
+                offsetOwner = this.midiStream;
+                offsetNote = (MidiNote) (note);
+                offsetMethodGuard = -70;
+                if (note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] >= 0) {
+                  loopEnabled = false;
                 } else {
-                  stackIn_7_3 = true;
+                  loopEnabled = true;
                 }
-                ((MidiPcmStream) (Object) stackIn_6_0).a(stackIn_6_1, (byte) stackIn_6_2, stackIn_7_3);
+                ((MidiPcmStream) (Object) offsetOwner).applyNoteSampleOffset(offsetNote, (byte) offsetMethodGuard, loopEnabled);
               }
-              if (param1.field_z.pitchOffsetsAndLoopFlag[param1.field_D] < 0) {
-                param1.field_u.g(-1);
+              if (note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] < 0) {
+                note.sampleStream.setLoopCount(-1);
               }
-              param2 = param1.field_B / var4_int;
+              frameCount = note.retriggerPhaseFixed / phaseIncrement;
             }
           }
-          if (param0 != -1) {
+          if (methodGuard != -1) {
             return;
           }
-          param1.field_u.skipFrames(param2);
+          note.sampleStream.skipFrames(frameCount);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("ad.I(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_19_2 = "null";
+        } catch (java.lang.RuntimeException skipParameterFailure) {
+          caughtSkipFailure = skipParameterFailure;
+          skipFailure = caughtSkipFailure;
+          failureContextCause = skipFailure;
+          failureContextBuilder = new StringBuilder().append("ad.I(").append(methodGuard).append(',');
+          if (note == null) {
+            noteDescription = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            noteDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(noteDescription).append(',').append(frameCount).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class MidiNoteMixer extends PcmStream {
         int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
             if (methodGuard != -32) {
-                field_p = false;
+                appletShutdownStarted = false;
             }
             logoRenderRaster = new Sprite(540, 140);
             Geoblox.setRasterTarget(1, logoRenderRaster);
@@ -156,157 +156,157 @@ final class MidiNoteMixer extends PcmStream {
     }
 
     final void skipFrames(int frameCount) {
-        int var2;
-        MidiNote var3;
-        this.field_m.skipFrames(frameCount);
-        var3 = (MidiNote) ((Object) this.field_l.firstForIteration(0));
-        while (var3 != null) {
-          L1: {
-            if (!this.field_k.b(var3, -1)) {
-              var2 = frameCount;
-              while (var2 > var3.field_g) {
-                this.a(-1, var3, var3.field_g);
-                var2 = var2 - var3.field_g;
-                if (this.field_k.a(var2, 0, (int[]) null, var3, false)) {
-                  break L1;
+        int remainingNoteFrames;
+        MidiNote note;
+        this.fadingStreams.skipFrames(frameCount);
+        note = (MidiNote) ((Object) this.notes.firstForIteration(0));
+        while (note != null) {
+          noteSkipCompletion: {
+            if (!this.midiStream.isNoteStreamAbsent(note, -1)) {
+              remainingNoteFrames = frameCount;
+              while (remainingNoteFrames > note.framesUntilUpdate) {
+                this.skipNoteFrames(-1, note, note.framesUntilUpdate);
+                remainingNoteFrames = remainingNoteFrames - note.framesUntilUpdate;
+                if (this.midiStream.advanceNoteAndHandleCompletion(remainingNoteFrames, 0, (int[]) null, note, false)) {
+                  break noteSkipCompletion;
                 }
               }
-              this.a(-1, var3, var2);
-              var3.field_g = var3.field_g - var2;
+              this.skipNoteFrames(-1, note, remainingNoteFrames);
+              note.framesUntilUpdate = note.framesUntilUpdate - remainingNoteFrames;
             }
           }
-          var3 = (MidiNote) ((Object) this.field_l.nextForIteration(1));
+          note = (MidiNote) ((Object) this.notes.nextForIteration(1));
         }
     }
 
     final PcmStream nextChildStream() {
-        MidiNote var1;
-        int var2;
-        var2 = Geoblox.clientControlFlowFlag;
+        MidiNote note;
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         while (true) {
-          var1 = (MidiNote) ((Object) this.field_l.nextForIteration(1));
-          if (var1 == null) {
+          note = (MidiNote) ((Object) this.notes.nextForIteration(1));
+          if (note == null) {
             return null;
           }
-          if (var1.field_u != null) {
-            return (PcmStream) ((Object) var1.field_u);
+          if (note.sampleStream != null) {
+            return (PcmStream) ((Object) note.sampleStream);
           }
           continue;
         }
     }
 
     final PcmStream firstChildStream() {
-        MidiNote var1 = (MidiNote) ((Object) this.field_l.firstForIteration(0));
-        if (var1 == null) {
+        MidiNote note = (MidiNote) ((Object) this.notes.firstForIteration(0));
+        if (note == null) {
             return null;
         }
-        if (!(null == var1.field_u)) {
-            return (PcmStream) ((Object) var1.field_u);
+        if (!(null == note.sampleStream)) {
+            return (PcmStream) ((Object) note.sampleStream);
         }
         return this.nextChildStream();
     }
 
-    private final void a(int param0, byte param1, int param2, int[] param3, MidiNote param4, int param5) {
-        MidiPcmStream stackIn_11_0 = null;
-        MidiNote stackIn_11_1 = null;
-        int stackIn_11_2 = 0;
-        boolean stackIn_12_3;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        PcmSampleStream var11 = null;
+    private final void mixNoteFrames(int frameCount, byte methodGuard, int destinationEnd, int[] destination, MidiNote note, int destinationOffset) {
+        MidiPcmStream offsetOwner = null;
+        MidiNote offsetNote = null;
+        int offsetMethodGuard = 0;
+        boolean loopEnabled;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String destinationDescription = null;
+        StringBuilder failureContextPrefix = null;
+        String noteDescription = null;
+        RuntimeException caughtMixFailure = null;
+        int phaseIncrement = 0;
+        RuntimeException mixFailure = null;
+        int framesToPhaseWrap = 0;
+        int fadeFrames = 0;
+        int quarterPhaseFrames = 0;
+        PcmSampleStream previousStream = null;
         try {
-          if (((4 & this.field_k.field_m[param4.field_t]) != 0) &&
-              (param4.field_y < 0)) {
-            var7_int = this.field_k.field_n[param4.field_t] / AudioOutput.sampleRateHz;
+          if (((4 & this.midiStream.channelFlags[note.channelIndex]) != 0) &&
+              (note.releaseEnvelopeTime < 0)) {
+            phaseIncrement = this.midiStream.channelRetriggerPhaseRates[note.channelIndex] / AudioOutput.sampleRateHz;
             while (true) {
-              var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
-              if (param0 < var8) {
-                param4.field_B = param4.field_B + param0 * var7_int;
+              framesToPhaseWrap = (-note.retriggerPhaseFixed + (phaseIncrement + 1048575)) / phaseIncrement;
+              if (frameCount < framesToPhaseWrap) {
+                note.retriggerPhaseFixed = note.retriggerPhaseFixed + frameCount * phaseIncrement;
                 break;
               }
-              param4.field_u.mixInto(param3, param5, var8);
-              param0 = param0 - var8;
-              param5 = param5 + var8;
-              param4.field_B = param4.field_B + (-1048576 + var7_int * var8);
-              var9 = AudioOutput.sampleRateHz / 100;
-              var10 = 262144 / var7_int;
-              if (var10 < var9) {
-                var9 = var10;
+              note.sampleStream.mixInto(destination, destinationOffset, framesToPhaseWrap);
+              frameCount = frameCount - framesToPhaseWrap;
+              destinationOffset = destinationOffset + framesToPhaseWrap;
+              note.retriggerPhaseFixed = note.retriggerPhaseFixed + (-1048576 + phaseIncrement * framesToPhaseWrap);
+              fadeFrames = AudioOutput.sampleRateHz / 100;
+              quarterPhaseFrames = 262144 / phaseIncrement;
+              if (quarterPhaseFrames < fadeFrames) {
+                fadeFrames = quarterPhaseFrames;
               }
-              var11 = param4.field_u;
-              if (this.field_k.field_u[param4.field_t] == 0) {
-                param4.field_u = PcmSampleStream.a(param4.field_i, var11.h(), var11.i(), var11.k());
+              previousStream = note.sampleStream;
+              if (this.midiStream.channelSampleOffsets[note.channelIndex] == 0) {
+                note.sampleStream = PcmSampleStream.createForSampleStep(note.pcmSample, previousStream.getSampleStepMagnitude(), previousStream.getTargetVolume(), previousStream.getPan());
               } else {
-                param4.field_u = PcmSampleStream.a(param4.field_i, var11.h(), 0, var11.k());
-                stackIn_11_0 = this.field_k;
-                stackIn_11_1 = (MidiNote) (param4);
-                stackIn_11_2 = -70;
-                if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] >= 0) {
-                  stackIn_12_3 = false;
+                note.sampleStream = PcmSampleStream.createForSampleStep(note.pcmSample, previousStream.getSampleStepMagnitude(), 0, previousStream.getPan());
+                offsetOwner = this.midiStream;
+                offsetNote = (MidiNote) (note);
+                offsetMethodGuard = -70;
+                if (note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] >= 0) {
+                  loopEnabled = false;
                 } else {
-                  stackIn_12_3 = true;
+                  loopEnabled = true;
                 }
-                ((MidiPcmStream) (Object) stackIn_11_0).a(stackIn_11_1, (byte) stackIn_11_2, stackIn_12_3);
-                param4.field_u.c(var9, var11.i());
+                ((MidiPcmStream) (Object) offsetOwner).applyNoteSampleOffset(offsetNote, (byte) offsetMethodGuard, loopEnabled);
+                note.sampleStream.rampVolume(fadeFrames, previousStream.getTargetVolume());
               }
-              if (param4.field_z.pitchOffsetsAndLoopFlag[param4.field_D] < 0) {
-                param4.field_u.g(-1);
+              if (note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] < 0) {
+                note.sampleStream.setLoopCount(-1);
               }
-              var11.c(var9);
-              var11.mixInto(param3, param5, param2 - param5);
-              if (!var11.g()) {
+              previousStream.fadeOutAndUnlink(fadeFrames);
+              previousStream.mixInto(destination, destinationOffset, destinationEnd - destinationOffset);
+              if (!previousStream.hasRemainingRampFrames()) {
                 continue;
               }
-              this.field_m.a(var11);
+              this.fadingStreams.addChildStream(previousStream);
               continue;
             }
           }
-          if (param1 >= -26) {
+          if (methodGuard >= -26) {
             return;
           }
-          param4.field_u.mixInto(param3, param5, param0);
+          note.sampleStream.mixInto(destination, destinationOffset, frameCount);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_26_0 = var7;
-          stackIn_26_1 = new StringBuilder().append("ad.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_27_2 = "null";
+        } catch (java.lang.RuntimeException mixParameterFailure) {
+          caughtMixFailure = mixParameterFailure;
+          mixFailure = caughtMixFailure;
+          failureContextCause = mixFailure;
+          failureContextBuilder = new StringBuilder().append("ad.J(").append(frameCount).append(',').append(methodGuard).append(',').append(destinationEnd).append(',');
+          if (destination == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
-          if (param4 == null) {
-            stackIn_30_2 = "null";
+          failureContextPrefix = ((StringBuilder) (Object) failureContextBuilder).append(destinationDescription).append(',');
+          if (note == null) {
+            noteDescription = "null";
           } else {
-            stackIn_30_2 = "{...}";
+            noteDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextPrefix).append(noteDescription).append(',').append(destinationOffset).append(')').toString());
         }
     }
 
-    MidiNoteMixer(MidiPcmStream param0) {
-        this.field_l = new IntrusiveDeque();
-        this.field_m = new PcmStreamMixer();
+    MidiNoteMixer(MidiPcmStream midiStream) {
+        this.notes = new IntrusiveDeque();
+        this.fadingStreams = new PcmStreamMixer();
         try {
-            this.field_k = param0;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            this.midiStream = midiStream;
+        } catch (RuntimeException noteMixerConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) noteMixerConstructionFailure), "ad.<init>(" + (midiStream != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_p = false;
+        appletShutdownStarted = false;
         fullscreenFocusOrResolutionText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         receivedSocialSettingLow = 2;
         thirdPreviousPacketOpcode = -1;
