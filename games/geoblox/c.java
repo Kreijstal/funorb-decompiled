@@ -1102,18 +1102,18 @@ final class c extends ka {
             this.field_C = false;
           }
           while (true) {
-            if (hh.a(108)) {
-              this.b((byte) 62);
-              if (var3 == 0) {
-                continue;
-              }
-            } else {
+            if (!(hh.a(108))) {
               if ((this.field_K == 3) &&
                   (this.field_b == 0) &&
                   (this.field_q == 0) &&
                   (!this.field_H)) {
                 this.field_b = this.field_b + 1;
               }
+              break;
+            }
+            this.b((byte) 62);
+            if (var3 == 0) {
+              continue;
             }
             break;
           }

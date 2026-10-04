@@ -401,15 +401,15 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     }
                     var3 = stackIn_99_0;
                     while (true) {
-                      if (nf.field_w > var3) {
-                        this.a((byte) -10);
-                        var3++;
-                        if (var5 == 0) {
-                          continue;
-                        }
-                      } else {
+                      if (!(nf.field_w > var3)) {
                         this.d(32000);
                         wj.a(ka.field_i, (byte) 83, f.field_kb);
+                        break;
+                      }
+                      this.a((byte) -10);
+                      var3++;
+                      if (var5 == 0) {
+                        continue;
                       }
                       break;
                     }
