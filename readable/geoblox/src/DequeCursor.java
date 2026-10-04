@@ -25,7 +25,7 @@ final class DequeCursor {
           }
           MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
           while (UiFontResources.pollKeyboardEvent(93)) {
-            if (SessionSnapshotSupport.currentKeyboardEventCode != 13) {
+            if (SessionTextHistorySupport.currentKeyboardEventCode != 13) {
               continue;
             }
             return true;
@@ -122,7 +122,7 @@ final class DequeCursor {
           ClientFlowState.accountDialogLayer.processPointerFrame(true, 127, MatchScoringSupport.field_d, TextConcatenationSupport.field_b);
           ClientFlowState.accountDialogLayer.advanceDialogAnimations(-65);
           while (UiFontResources.pollKeyboardEvent(77)) {
-            ClientFlowState.accountDialogLayer.a((byte) 105, GameAudioState.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
+            ClientFlowState.accountDialogLayer.a((byte) 105, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);
           }
           if (GzipInflater.pendingLoginUiAction != param0) {
             var1_int = GzipInflater.pendingLoginUiAction;

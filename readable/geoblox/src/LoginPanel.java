@@ -18,24 +18,24 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     static String js5CrcErrorText;
     private boolean retryMode;
 
-    final static boolean a(int param0, char param1) {
-        PacketBuffer var3;
-        boolean stackIn_13_0 = false;
-        if (param0 != -123) {
-          var3 = (PacketBuffer) null;
+    final static boolean isAsciiLetterOrDigit(int methodGuard, char character) {
+        PacketBuffer unusedNullReplyBuffer;
+        boolean isAsciiLetterOrDigitResult = false;
+        if (methodGuard != -123) {
+          unusedNullReplyBuffer = (PacketBuffer) null;
           LoginPanel.writeReflectionCheckReply(-108, (PacketBuffer) null);
         }
-        if (!((param1 >= 48) &&
-              (param1 <= 57)) &&
-            !((param1 >= 65) &&
-              (param1 <= 90)) &&
-            !((param1 >= 97) &&
-              (param1 <= 122))) {
-          stackIn_13_0 = false;
+        if (!((character >= 48) &&
+              (character <= 57)) &&
+            !((character >= 65) &&
+              (character <= 90)) &&
+            !((character >= 97) &&
+              (character <= 122))) {
+          isAsciiLetterOrDigitResult = false;
         } else {
-          stackIn_13_0 = true;
+          isAsciiLetterOrDigitResult = true;
         }
-        return stackIn_13_0;
+        return isAsciiLetterOrDigitResult;
     }
 
     final static void handleIntRecordReply(int methodGuard) {

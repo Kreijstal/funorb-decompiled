@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RankedListQuery extends IntrusiveNode {
-    static String field_f;
+    static String receivedRecordText;
     int entryLimit;
     static Sprite widgetSprite;
     static ResourceArchive field_i;
@@ -13,7 +13,7 @@ final class RankedListQuery extends IntrusiveNode {
         if (param0 != 127) {
             return;
         }
-        field_f = null;
+        receivedRecordText = null;
         widgetSprite = null;
         field_i = null;
     }
@@ -40,9 +40,9 @@ final class RankedListQuery extends IntrusiveNode {
           keyboardMonitor = TrackedPcmStream.keyboardListener;
           synchronized (keyboardMonitor) {
             if (!methodGuard) {
-              field_f = (String) null;
+              receivedRecordText = (String) null;
             }
-            ClientSessionSnapshot.keyboardEventReadIndex = MidiNote.keyboardEventFrameEndIndex;
+            ReceivedTextRecord.keyboardEventReadIndex = MidiNote.keyboardEventFrameEndIndex;
             TextPairLoginPayload.keyboardIdleTicks = TextPairLoginPayload.keyboardIdleTicks + 1;
             if (ArchiveLoadStep.keyStateWriteIndexOrResetSentinel < 0) {
               resetKeyIndex = 0;

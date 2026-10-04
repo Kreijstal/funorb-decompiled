@@ -418,30 +418,30 @@ final class CanvasResizeController {
         throw new Error();
     }
 
-    final static boolean a(String param0, byte param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean hasPrimarySocialEntry(String displayName, byte methodGuard) {
+        RuntimeException lookupFailureForContext = null;
+        boolean hasEntryResult = false;
+        RuntimeException lookupFailureBeforeContext = null;
+        StringBuilder lookupMessagePrefix = null;
+        String nameDescription = null;
+        RuntimeException caughtLookupFailure = null;
         try {
-          if (param1 <= 12) {
+          if (methodGuard <= 12) {
             field_e = (String) null;
           }
-          stackIn_5_0 = !(SocketConnector.findSocialEntry((byte) -62, param0) == null);
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("v.B(");
-          if (param0 == null) {
-            stackIn_9_2 = "null";
+          hasEntryResult = !(SocketConnector.findSocialEntry((byte) -62, displayName) == null);
+          return hasEntryResult;
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeContext = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("v.B(");
+          if (displayName == null) {
+            nameDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeContext), ((StringBuilder) (Object) lookupMessagePrefix).append(nameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

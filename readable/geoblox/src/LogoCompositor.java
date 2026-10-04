@@ -27,7 +27,7 @@ final class LogoCompositor {
         if (DequeCursor.logoAnimationTick > 200) {
           sceneAlpha256 = (250 - DequeCursor.logoAnimationTick << 8) / 50;
         }
-        Geoblox.setRasterTarget(1, SessionSnapshotSupport.logoSceneRaster);
+        Geoblox.setRasterTarget(1, SessionTextHistorySupport.logoSceneRaster);
         TriangleRasterState.prepareTriangleClipFromRasterizer();
         SoftwareRasterizer.clearFramebuffer();
         TextTemplateArgumentType.renderLogoMeshes((byte) 123);
@@ -37,7 +37,7 @@ final class LogoCompositor {
           if (DequeCursor.logoAnimationTick >= 150) {
             LogoPreparationSupport.logoFinalFrameTop.drawAlpha(15 + logoLeft, logoTop + 10, sceneAlpha256);
           } else {
-            SessionSnapshotSupport.logoSceneRaster.drawHalfSize(logoLeft, logoTop);
+            SessionTextHistorySupport.logoSceneRaster.drawHalfSize(logoLeft, logoTop);
           }
           overlayTickOffset = -125 + DequeCursor.logoAnimationTick;
           if (methodGuard != -51) {
@@ -147,7 +147,7 @@ final class LogoCompositor {
             }
             return;
           }
-          SessionSnapshotSupport.logoSceneRaster.drawHalfSize(logoLeft, logoTop);
+          SessionTextHistorySupport.logoSceneRaster.drawHalfSize(logoLeft, logoTop);
           overlayTickOffset = -125 + DequeCursor.logoAnimationTick;
           if (methodGuard != -51) {
             openInPopupWindowText = (String) null;

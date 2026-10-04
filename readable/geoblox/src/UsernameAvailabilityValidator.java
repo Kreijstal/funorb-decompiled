@@ -5,7 +5,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     static int[] cameraMeshVertexY;
     private boolean field_n;
     static float avatarTintBlueDelta;
-    static int field_o;
+    static int receivedRecordIdLow24;
     static String field_p;
     static Sprite orbCoinSprite;
     static String[] monthNames;
@@ -77,7 +77,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
                 }
                 return null;
             }
-            return ClientSessionSnapshot.tutorialShapeMatchMessage;
+            return ReceivedTextRecord.tutorialShapeMatchMessage;
         }
         var2 = tutorialStepId;
         if (var2 == 0) {
@@ -95,7 +95,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             }
             return null;
         }
-        return ClientSessionSnapshot.tutorialShapeMatchMessage;
+        return ReceivedTextRecord.tutorialShapeMatchMessage;
     }
 
     final static byte[] extractByteStorageBytes(boolean copyArray, int extractionGuard, Object storedBytes) {

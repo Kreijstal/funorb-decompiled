@@ -86,10 +86,10 @@ final class AccountCreationSupport {
           PcmResampler.pointerYSnapshot = ReflectionCheckRequest.livePointerY;
           AttachmentPointerState.pointerActivitySnapshot = EndingAnimationSupport.pointerActivityPending;
           EndingAnimationSupport.pointerActivityPending = false;
-          CheckboxRenderer.pointerPressButtonSnapshot = ClientSessionSnapshot.pendingPointerPressButton;
+          CheckboxRenderer.pointerPressButtonSnapshot = ReceivedTextRecord.pendingPointerPressButton;
           pointerPressXSnapshot = TextWidgetSupport.livePointerPressX;
           FullscreenFocusCanvas.pointerPressYSnapshot = DisplayNamePanel.livePointerPressY;
-          ClientSessionSnapshot.pendingPointerPressButton = 0;
+          ReceivedTextRecord.pendingPointerPressButton = 0;
         }
     }
 

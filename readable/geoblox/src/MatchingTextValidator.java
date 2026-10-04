@@ -3,7 +3,7 @@
  */
 final class MatchingTextValidator extends TextInputValidator {
     private TextInputWidget referenceInput;
-    static ClientSessionSnapshot[] field_k;
+    static ReceivedTextRecord[] retainedTextRecords;
     static IntrusiveDeque rasterTargetStack;
     static int field_j;
 
@@ -18,7 +18,7 @@ final class MatchingTextValidator extends TextInputValidator {
 
     public static void clearStaticReferences(int guard) {
         rasterTargetStack = null;
-        field_k = null;
+        retainedTextRecords = null;
         if (guard != 0) {
             MatchingTextValidator.c((byte) 89);
         }

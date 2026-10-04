@@ -38,7 +38,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           }
           if (internalKeyCode >= 0) {
             nextEventWriteIndexOrModifiers = 127 & 1 + BufferedSocket.keyEventWriteIndex;
-            if (nextEventWriteIndexOrModifiers != ClientSessionSnapshot.keyboardEventReadIndex) {
+            if (nextEventWriteIndexOrModifiers != ReceivedTextRecord.keyboardEventReadIndex) {
               MidiPcmStream.queuedKeyboardEventCodes[BufferedSocket.keyEventWriteIndex] = internalKeyCode;
               ScoreSubmission.queuedKeyboardEventCharacters[BufferedSocket.keyEventWriteIndex] = (char)0;
               BufferedSocket.keyEventWriteIndex = nextEventWriteIndexOrModifiers;
@@ -85,7 +85,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
                 typedCharacterCode = event.getKeyChar();
                 if (typedCharacterCode != 0 && typedCharacterCode != 65535 && SettingsCookieSupport.isRepresentableTextCharacter((byte) -112, (char) typedCharacterCode)) {
                     nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;
-                    if (nextEventWriteIndex != ClientSessionSnapshot.keyboardEventReadIndex) {
+                    if (nextEventWriteIndex != ReceivedTextRecord.keyboardEventReadIndex) {
                         MidiPcmStream.queuedKeyboardEventCodes[BufferedSocket.keyEventWriteIndex] = -1;
                         ScoreSubmission.queuedKeyboardEventCharacters[BufferedSocket.keyEventWriteIndex] = (char)typedCharacterCode;
                         BufferedSocket.keyEventWriteIndex = nextEventWriteIndex;

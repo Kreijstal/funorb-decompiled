@@ -644,7 +644,7 @@ final class GameplaySession {
               negativeRotationAndStateUpdate: {
                 this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
-                inputDerivedModuloIndex = (SessionSnapshotSupport.currentKeyboardEventCode + ClientFlowState.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
+                inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
                 if (inputDerivedModuloIndex == 0) {
                   ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
                   DequeCursor.field_g = DequeCursor.field_g - 1;
@@ -701,7 +701,7 @@ final class GameplaySession {
                 ClientClockSupport.field_a = ClientClockSupport.field_a - UsernameResponseSupport.field_d;
               }
               negativeRotationAchievementTracking: {
-                inputDerivedModuloIndex = (ClientFlowState.field_c + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionSnapshotSupport.currentKeyboardEventCode) % 5;
+                inputDerivedModuloIndex = (ClientFlowState.field_c + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
                   AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
                   if (clientControlFlowGuard == 0) {
@@ -747,7 +747,7 @@ final class GameplaySession {
                   this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                 }
                 positiveRotationTrackingUpdate: {
-                  inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.field_c) + SessionSnapshotSupport.currentKeyboardEventCode) % 8;
+                  inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.field_c) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
                   if (inputDerivedModuloIndex != 0) {
                     if (1 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex != 2) {
@@ -803,7 +803,7 @@ final class GameplaySession {
                   DequeCursor.field_g = DequeCursor.field_g - 1;
                   ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
                 }
-                inputDerivedModuloIndex = (ClientFlowState.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionSnapshotSupport.currentKeyboardEventCode) % 5;
+                inputDerivedModuloIndex = (ClientFlowState.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
                 if (inputDerivedModuloIndex != 0) {
                   if (1 != inputDerivedModuloIndex) {
                     if (2 != inputDerivedModuloIndex) {
@@ -934,7 +934,7 @@ final class GameplaySession {
                 this.gameApplet.h((byte) 41);
               }
             }
-            if (SessionSnapshotSupport.currentKeyboardEventCode == 13) {
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 13) {
               if (!this.sessionEnding) {
                 ScoreSubmission.requestedScreenId = 1;
                 if (clientControlFlowGuard == 0) {
@@ -944,12 +944,12 @@ final class GameplaySession {
               this.requestSessionExitScreen(28809);
               return;
             }
-            if ((SessionSnapshotSupport.currentKeyboardEventCode == 83) &&
+            if ((SessionTextHistorySupport.currentKeyboardEventCode == 83) &&
                 (this.tutorialMode)) {
               this.leaveTutorial(7000);
             }
             tutorialKeyAdvance: {
-              if ((SessionSnapshotSupport.currentKeyboardEventCode == 84) &&
+              if ((SessionTextHistorySupport.currentKeyboardEventCode == 84) &&
                   (this.tutorialStepPhase == 0)) {
                 this.tutorialStepPhase = 1;
                 this.tutorialPromptActive = false;
@@ -971,7 +971,7 @@ final class GameplaySession {
                 this.tutorialProgressMetric = 0;
               }
             }
-            if ((SessionSnapshotSupport.currentKeyboardEventCode == 85) &&
+            if ((SessionTextHistorySupport.currentKeyboardEventCode == 85) &&
                 (5 == this.tutorialStepId) &&
                 (this.tutorialStepPhase == 0)) {
               this.leaveTutorial(methodGuard ^ -1578897511);
@@ -979,7 +979,7 @@ final class GameplaySession {
               this.tutorialStepId = 0;
               this.tutorialPromptActive = true;
             }
-            if (SocketConnector.swapRotationControlsKeyCode == SessionSnapshotSupport.currentKeyboardEventCode) {
+            if (SocketConnector.swapRotationControlsKeyCode == SessionTextHistorySupport.currentKeyboardEventCode) {
               if (this.rotationControlsSwapped) {
                 toggledRotationControlsSwapped = false;
               } else {
@@ -991,7 +991,7 @@ final class GameplaySession {
             if (2 > SpriteCheckboxRenderer.field_f) {
               continue;
             }
-            debugKeyCodeOrPointerEventComplement = SessionSnapshotSupport.currentKeyboardEventCode;
+            debugKeyCodeOrPointerEventComplement = SessionTextHistorySupport.currentKeyboardEventCode;
             debugKeySentinelOrPointerEventSentinel = 48;
             if (clientControlFlowGuard == 0) {
               if (debugKeyCodeOrPointerEventComplement == debugKeySentinelOrPointerEventSentinel) {
@@ -1000,19 +1000,19 @@ final class GameplaySession {
                   this.debugSpawnVariantId = 6;
                 }
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 49) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 49) {
                 this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
                 if (this.debugSpawnVariantId == 7) {
                   this.debugSpawnVariantId = 0;
                 }
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 64) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 64) {
                 this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
                 if (this.debugSpawnCategoryId < 0) {
                   this.debugSpawnCategoryId = 6;
                 }
               }
-              if (32 == SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (32 == SessionTextHistorySupport.currentKeyboardEventCode) {
                 if (this.debugSpawnSpecialKinds) {
                   toggledSpecialKindSpawn = false;
                 } else {
@@ -1020,20 +1020,20 @@ final class GameplaySession {
                 }
                 ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 65) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 65) {
                 this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
                 if (this.debugSpawnCategoryId == 7) {
                   this.debugSpawnCategoryId = 0;
                 }
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 16) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 16) {
                 this.tutorialAdvanceRequested = true;
               }
-              if (68 == SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (68 == SessionTextHistorySupport.currentKeyboardEventCode) {
                 this.sessionPhase = 1;
                 this.submissionBlocked = true;
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 1) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 1) {
                 this.submissionBlocked = true;
                 if (this.debugPointerSpawnEnabled) {
                   toggledDebugPointerSpawn = false;
@@ -1042,7 +1042,7 @@ final class GameplaySession {
                 }
                 ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
               }
-              if (2 == SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (2 == SessionTextHistorySupport.currentKeyboardEventCode) {
                 if (this.spawnReleaseDisabled) {
                   toggledSpawnReleaseDisabled = false;
                 } else {
@@ -1051,50 +1051,50 @@ final class GameplaySession {
                 ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
                 this.submissionBlocked = true;
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 3) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 3) {
                 EmailValidator.availableSpriteVariantCount = 7;
                 MessageDialog.availableEntityCategoryCount = 7;
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 4) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 4) {
                 LabeledChildWidget.recordEntityRelease(2);
                 this.submissionBlocked = true;
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 5) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 5) {
                 GameScreen.selectedThemeId = 1;
                 IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 110);
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 6) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 6) {
                 GameScreen.selectedThemeId = 0;
                 IntrusiveNode.selectThemeAudio(-126, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 126);
               }
-              if (7 == SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (7 == SessionTextHistorySupport.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = 6;
                 IntrusiveNode.selectThemeAudio(-99, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 113);
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 8) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 8) {
                 GameScreen.selectedThemeId = 5;
                 IntrusiveNode.selectThemeAudio(-124, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 115);
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 9) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 9) {
                 GameScreen.selectedThemeId = 3;
                 IntrusiveNode.selectThemeAudio(-98, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 122);
               }
-              if (10 == SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (10 == SessionTextHistorySupport.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = 4;
                 IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 101);
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 11) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 11) {
                 GameScreen.selectedThemeId = 2;
                 IntrusiveNode.selectThemeAudio(-118, GameScreen.selectedThemeId);
                 ProxySocketConnector.selectThemeRenderAssets((byte) 82);
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 12) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 12) {
                 if (this.debugReducedRendering) {
                   toggledReducedRendering = false;
                 } else {
@@ -1102,12 +1102,12 @@ final class GameplaySession {
                 }
                 ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;
               }
-              if (36 == SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (36 == SessionTextHistorySupport.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
                 GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
                 ProxySocketConnector.selectThemeRenderAssets((byte) 108);
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode != 39) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode != 39) {
                 continue;
               }
               this.showSessionCounters = true;

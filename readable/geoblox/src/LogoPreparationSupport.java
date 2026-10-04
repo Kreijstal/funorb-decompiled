@@ -25,7 +25,7 @@ final class LogoPreparationSupport {
             EntityMotionSupport.decodeLogoAudio(99, logoArchive);
             MessageDialogContent.loadLogoMeshesAndMaterials(logoArchive, 0);
             if (methodGuard < 97) {
-                LogoPreparationSupport.readSessionSnapshot(true, -54);
+                LogoPreparationSupport.readSessionTextRecord(true, -54);
             }
             MatchCandidateSupport.prepareFinalFrameSlices(-21541, logoArchive);
             FullscreenSupport.prepareMeshSpecularResponse((byte) -91);
@@ -36,12 +36,12 @@ final class LogoPreparationSupport {
         }
     }
 
-    final static ClientSessionSnapshot readSessionSnapshot(boolean useTextTemplate, int headerFlagMask) {
+    final static ReceivedTextRecord readSessionTextRecord(boolean useTextTemplate, int headerFlagMask) {
         boolean headerFlagSetSnapshot = false;
         int hasAlternateNameIntSnapshot = 0;
         int[] referencedTemplateIdsSnapshot = null;
         Throwable caughtTemplateFailure = null;
-        int snapshotHeaderByte = 0;
+        int recordHeaderByte = 0;
         int hasAlternateNameInt = 0;
         int textTemplateId = 0;
         Exception templateFailureForReport = null;
@@ -50,46 +50,46 @@ final class LogoPreparationSupport {
         TextTemplateDefinition textTemplate = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         packet = LogoCompositor.sessionPacketBuffer;
-        snapshotHeaderByte = packet.readUnsignedByte((byte) 34);
-        StrongCacheReference.receivedSessionSnapshotKind = snapshotHeaderByte & 127;
-        headerFlagSetSnapshot = !((headerFlagMask & snapshotHeaderByte) == 0);
-        ClientSessionSnapshot.field_l = headerFlagSetSnapshot;
-        ArchiveIndex.field_s = packet.readUnsignedByte((byte) 34);
-        DiskCacheWorker.field_c = packet.readLongBE(2901);
-        if (StrongCacheReference.receivedSessionSnapshotKind != 2) {
-          UsernameAvailabilityValidator.field_o = 0;
-          LoginUiSupport.field_b = 0;
+        recordHeaderByte = packet.readUnsignedByte((byte) 34);
+        StrongCacheReference.receivedTextRecordKind = recordHeaderByte & 127;
+        headerFlagSetSnapshot = !((headerFlagMask & recordHeaderByte) == 0);
+        ReceivedTextRecord.receivedRecordHeaderFlagSet = headerFlagSetSnapshot;
+        ArchiveIndex.receivedRecordMetadataByte = packet.readUnsignedByte((byte) 34);
+        DiskCacheWorker.receivedRecordLongId = packet.readLongBE(2901);
+        if (StrongCacheReference.receivedTextRecordKind != 2) {
+          UsernameAvailabilityValidator.receivedRecordIdLow24 = 0;
+          LoginUiSupport.receivedRecordIdHigh16 = 0;
         } else {
-          LoginUiSupport.field_b = packet.readUnsignedShortBE(true);
-          UsernameAvailabilityValidator.field_o = packet.readUnsignedMediumBE(105);
+          LoginUiSupport.receivedRecordIdHigh16 = packet.readUnsignedShortBE(true);
+          UsernameAvailabilityValidator.receivedRecordIdLow24 = packet.readUnsignedMediumBE(105);
         }
         hasAlternateNameIntSnapshot = (packet.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
         hasAlternateNameInt = hasAlternateNameIntSnapshot;
-        FrameTimer.field_a = packet.readNullTerminatedText((byte) 117);
+        FrameTimer.receivedRecordPrimaryName = packet.readNullTerminatedText((byte) 117);
         if (hasAlternateNameInt == 0) {
-          AvatarFeedbackSupport.field_b = FrameTimer.field_a;
+          AvatarFeedbackSupport.receivedRecordDisplayName = FrameTimer.receivedRecordPrimaryName;
         } else {
-          AvatarFeedbackSupport.field_b = packet.readNullTerminatedText((byte) 124);
+          AvatarFeedbackSupport.receivedRecordDisplayName = packet.readNullTerminatedText((byte) 124);
         }
-        if (StrongCacheReference.receivedSessionSnapshotKind == 1) {
+        if (StrongCacheReference.receivedTextRecordKind == 1) {
           packet.readUnsignedShortBE(true);
           packet.readNullTerminatedText((byte) 112);
         } else {
-          if (StrongCacheReference.receivedSessionSnapshotKind == 4) {
+          if (StrongCacheReference.receivedTextRecordKind == 4) {
             packet.readUnsignedShortBE(true);
             packet.readNullTerminatedText((byte) 112);
           }
         }
         if (!useTextTemplate) {
-          RankedListQuery.field_f = PrefixCodeDecoder.readCompressedText(packet, 0, 80);
+          RankedListQuery.receivedRecordText = PrefixCodeDecoder.readCompressedText(packet, 0, 80);
           SessionTextState.receivedTextTemplateReferences = null;
-          return new ClientSessionSnapshot(useTextTemplate);
+          return new ReceivedTextRecord(useTextTemplate);
         }
         textTemplateId = packet.readUnsignedShortBE(true);
         try {
           textTemplate = StatefulWidgetRenderer.field_r.getDefinition((byte) -14, textTemplateId);
-          RankedListQuery.field_f = textTemplate.summarizeLiteralSegments((byte) -69);
-          if (!AvatarFeedbackSupport.field_b.equals(SecondaryDeque.receivedSessionName)) {
+          RankedListQuery.receivedRecordText = textTemplate.summarizeLiteralSegments((byte) -69);
+          if (!AvatarFeedbackSupport.receivedRecordDisplayName.equals(SecondaryDeque.receivedSessionName)) {
             referencedTemplateIdsSnapshot = textTemplate.referencedTemplateIds;
           } else {
             referencedTemplateIdsSnapshot = null;
@@ -100,10 +100,10 @@ final class LogoPreparationSupport {
           templateFailureForReport = (Exception) (Object) caughtTemplateFailure;
           IterableNodeHashTable.reportClientError((Throwable) ((Object) templateFailureForReport), "CC1", (byte) 125);
           SessionTextState.receivedTextTemplateReferences = null;
-          RankedListQuery.field_f = null;
-          return new ClientSessionSnapshot(useTextTemplate);
+          RankedListQuery.receivedRecordText = null;
+          return new ReceivedTextRecord(useTextTemplate);
         }
-        return new ClientSessionSnapshot(useTextTemplate);
+        return new ReceivedTextRecord(useTextTemplate);
     }
 
     static {

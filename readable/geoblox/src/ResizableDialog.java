@@ -250,8 +250,8 @@ abstract class ResizableDialog extends FadingDialog {
           normalizedNameBuilder = new StringBuilder(trimmedLength);
           for (characterIndex = trimmedStart; characterIndex < trimmedEnd; characterIndex++) {
             sourceCharacter = nameText.charAt(characterIndex);
-            if (TextHotspotBounds.a((char) sourceCharacter, -47)) {
-              normalizedCharacter = ValidatedTextInputWidget.a((char) sourceCharacter, methodGuard - 239);
+            if (TextHotspotBounds.isAllowedNameCharacter((char) sourceCharacter, -47)) {
+              normalizedCharacter = ValidatedTextInputWidget.normalizeNameCharacter((char) sourceCharacter, methodGuard - 239);
               if (normalizedCharacter != 0) {
                 unusedAppendResult = normalizedNameBuilder.append((char) normalizedCharacter);
               }

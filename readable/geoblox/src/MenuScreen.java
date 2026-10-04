@@ -73,12 +73,12 @@ abstract class MenuScreen {
         if (methodGuard >= -26) {
           this.hitLeftX = 8;
         }
-        if (SessionSnapshotSupport.currentKeyboardEventCode != 96) {
-          if (SessionSnapshotSupport.currentKeyboardEventCode == 97) {
+        if (SessionTextHistorySupport.currentKeyboardEventCode != 96) {
+          if (SessionTextHistorySupport.currentKeyboardEventCode == 97) {
             this.increaseMenuValue((byte) 90, itemIndex);
           } else {
-            if (!((SessionSnapshotSupport.currentKeyboardEventCode != 84) &&
-                (SessionSnapshotSupport.currentKeyboardEventCode != 83))) {
+            if (!((SessionTextHistorySupport.currentKeyboardEventCode != 84) &&
+                (SessionTextHistorySupport.currentKeyboardEventCode != 83))) {
               this.activateMenuItem(itemIndex, (byte) -2);
             }
           }

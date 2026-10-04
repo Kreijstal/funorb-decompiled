@@ -19,7 +19,7 @@ final class ArchiveIndex {
     int[] groupRevisions;
     private int[] groupNameHashes;
     IntKeyLookup groupNameLookup;
-    static int field_s;
+    static int receivedRecordMetadataByte;
     static int archiveServerNumber;
     static TriangleMesh[] logoMeshes;
     int[] fileCounts;

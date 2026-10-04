@@ -7,7 +7,7 @@ final class AchievementSubmission extends IntrusiveNode {
     static boolean field_m;
     int achievementCheckByte;
     static PcmResampler gameSoundResampler;
-    static int[] field_o;
+    static int[] retentionCategoryCounts;
     int trackingAccumulatorSnapshot;
     int secondaryTrackingCounterSnapshot;
     static int field_k;
@@ -225,7 +225,7 @@ final class AchievementSubmission extends IntrusiveNode {
           if (param0 > -21) {
             field_k = 120;
           }
-          field_o = null;
+          retentionCategoryCounts = null;
           gameSoundResampler = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

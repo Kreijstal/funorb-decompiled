@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginUiSupport {
-    static int field_b;
+    static int receivedRecordIdHigh16;
     static String lastGeobloxOfLevelText;
 
     final static void writeIntRecordSubmission(int packetOpcode, int methodGuard, KeyedIntRecordSubmission submission) {

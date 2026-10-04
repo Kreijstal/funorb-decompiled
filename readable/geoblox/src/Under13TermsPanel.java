@@ -32,56 +32,56 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             RasterTargetSnapshot.field_f[13] = StrongCacheReference.loginRegisterText;
             RasterTargetSnapshot.field_f[3] = SecondaryNodeDequeIterator.instructionsText;
             RasterTargetSnapshot.field_f[2] = ArchiveLoadStep.highscoresText;
-            RasterTargetSnapshot.field_f[18] = ClientSessionSnapshot.highscoreModeNames[2];
-            RasterTargetSnapshot.field_f[16] = ClientSessionSnapshot.highscoreModeNames[0];
-            RasterTargetSnapshot.field_f[17] = ClientSessionSnapshot.highscoreModeNames[1];
+            RasterTargetSnapshot.field_f[18] = ReceivedTextRecord.highscoreModeNames[2];
+            RasterTargetSnapshot.field_f[16] = ReceivedTextRecord.highscoreModeNames[0];
+            RasterTargetSnapshot.field_f[17] = ReceivedTextRecord.highscoreModeNames[1];
             return;
         }
     }
 
-    final static void a(ClientSessionSnapshot param0, int param1) {
-        int var2_int = 0;
-        ClientSessionSnapshot var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var4 = Geoblox.clientControlFlowFlag;
+    final static void retainReceivedTextRecordIfNew(ReceivedTextRecord record, int methodGuard) {
+        int recordIndex = 0;
+        ReceivedTextRecord existingRecord = null;
+        int clientControlFlowGuard = 0;
+        RuntimeException acceptanceFailureBeforeContext = null;
+        StringBuilder acceptanceMessagePrefix = null;
+        String recordDescription = null;
+        RuntimeException caughtAcceptanceFailure = null;
+        RuntimeException acceptanceFailureForContext = null;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          if (param1 != 0) {
+          if (methodGuard != 0) {
             return;
           }
-          if (null == param0.field_k) {
+          if (null == record.text) {
             return;
           }
-          if (!((param0.field_o == 0) &&
-              (0 == param0.field_d))) {
-            for (var2_int = 0; ByteStorage.field_b > var2_int; var2_int++) {
-              var3 = MatchingTextValidator.field_k[var2_int];
-              if ((2 == var3.field_f) &&
-                  (param0.field_o == var3.field_o) &&
-                  (param0.field_d == var3.field_d)) {
+          if (!((record.recordIdHigh16 == 0) &&
+              (0 == record.recordIdLow24))) {
+            for (recordIndex = 0; ByteStorage.retainedTextRecordCount > recordIndex; recordIndex++) {
+              existingRecord = MatchingTextValidator.retainedTextRecords[recordIndex];
+              if ((2 == existingRecord.recordKind) &&
+                  (record.recordIdHigh16 == existingRecord.recordIdHigh16) &&
+                  (record.recordIdLow24 == existingRecord.recordIdLow24)) {
                 return;
               }
             }
           }
-          if (null == param0.field_g) {
+          if (null == record.referencedTemplateIds) {
           }
-          SessionSnapshotSupport.retainSessionSnapshot(param0, 31274);
+          SessionTextHistorySupport.retainTextRecord(record, 31274);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_21_0 = var2;
-          stackIn_21_1 = new StringBuilder().append("s.C(");
-          if (param0 == null) {
-            stackIn_22_2 = "null";
+        } catch (java.lang.RuntimeException acceptanceFailure) {
+          caughtAcceptanceFailure = acceptanceFailure;
+          acceptanceFailureForContext = caughtAcceptanceFailure;
+          acceptanceFailureBeforeContext = acceptanceFailureForContext;
+          acceptanceMessagePrefix = new StringBuilder().append("s.C(");
+          if (record == null) {
+            recordDescription = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            recordDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) acceptanceFailureBeforeContext), ((StringBuilder) (Object) acceptanceMessagePrefix).append(recordDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == this.continueButton) {
-            SessionSnapshotSupport.prepareAccountCreationUi(77);
+            SessionTextHistorySupport.prepareAccountCreationUi(77);
             this.accountCreationDialog.dismissDialog((byte) -104);
           }
           if (param1 == -20) {

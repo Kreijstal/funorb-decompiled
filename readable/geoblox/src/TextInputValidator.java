@@ -54,7 +54,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         if (!(!Character.isISOControl(param0))) {
             return false;
         }
-        if (LoginPanel.a(-123, param0)) {
+        if (LoginPanel.isAsciiLetterOrDigit(-123, param0)) {
             return true;
         }
         if (param0 == 45) {

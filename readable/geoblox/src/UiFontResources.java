@@ -29,12 +29,12 @@ final class UiFontResources {
           if (methodGuard <= 41) {
             return false;
           }
-          if (ClientSessionSnapshot.keyboardEventReadIndex == MidiNote.keyboardEventFrameEndIndex) {
+          if (ReceivedTextRecord.keyboardEventReadIndex == MidiNote.keyboardEventFrameEndIndex) {
             return false;
           }
-          SessionSnapshotSupport.currentKeyboardEventCode = MidiPcmStream.queuedKeyboardEventCodes[ClientSessionSnapshot.keyboardEventReadIndex];
-          GameAudioState.currentKeyboardEventCharacter = ScoreSubmission.queuedKeyboardEventCharacters[ClientSessionSnapshot.keyboardEventReadIndex];
-          ClientSessionSnapshot.keyboardEventReadIndex = 1 + ClientSessionSnapshot.keyboardEventReadIndex & 127;
+          SessionTextHistorySupport.currentKeyboardEventCode = MidiPcmStream.queuedKeyboardEventCodes[ReceivedTextRecord.keyboardEventReadIndex];
+          GameAudioState.currentKeyboardEventCharacter = ScoreSubmission.queuedKeyboardEventCharacters[ReceivedTextRecord.keyboardEventReadIndex];
+          ReceivedTextRecord.keyboardEventReadIndex = 1 + ReceivedTextRecord.keyboardEventReadIndex & 127;
           eventAvailable = true;
         }
         return eventAvailable;

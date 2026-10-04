@@ -59,7 +59,7 @@ final class HighscoreNameEntry {
                 inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
                 inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
                 inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
-                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ClientSessionSnapshot.chooseSpawnSpriteKind(methodGuard ^ 741924143), TextTemplateDefinition.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), BoardReconciliationSupport.ticksSinceLastEntityRelease + UsernameResponseSupport.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * TextTemplateDefinition.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
+                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ReceivedTextRecord.chooseSpawnSpriteKind(methodGuard ^ 741924143), TextTemplateDefinition.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), BoardReconciliationSupport.ticksSinceLastEntityRelease + UsernameResponseSupport.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * TextTemplateDefinition.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
                 SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
                 SpawnQuotaSupport.recordGeneratedEntity(false);
               }
@@ -318,14 +318,14 @@ final class HighscoreNameEntry {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (MouseWheelInput.field_a == 1) {
-                MouseWheelInput.field_a = 2;
+              if (MouseWheelInput.primarySocialListState == 1) {
+                MouseWheelInput.primarySocialListState = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (MouseWheelInput.field_a == 2) {
-                MouseWheelInput.field_a = 1;
+              if (MouseWheelInput.primarySocialListState == 2) {
+                MouseWheelInput.primarySocialListState = 1;
               }
               return;
             }
@@ -334,7 +334,7 @@ final class HighscoreNameEntry {
               Bzip2DecoderState.closeSessionSocket((byte) -119);
               return;
             }
-            MouseWheelInput.field_a = 1;
+            MouseWheelInput.primarySocialListState = 1;
             var3 = var1.readNullTerminatedText((byte) 122);
             ReflectionCheckRequest.currentSocialLocationLabel = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) 34);

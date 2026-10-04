@@ -378,7 +378,7 @@ final class BoardReconciliationSupport {
                 SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
               }
               if (FontLoadingSupport.kindFourRemovalCount >= 5) {
-                SecondaryNodeDeque.recordAchievement(255 ^ ClientSessionSnapshot.field_p, -83, ClientSessionSnapshot.field_p);
+                SecondaryNodeDeque.recordAchievement(255 ^ ReceivedTextRecord.field_p, -83, ReceivedTextRecord.field_p);
               }
               return;
             }

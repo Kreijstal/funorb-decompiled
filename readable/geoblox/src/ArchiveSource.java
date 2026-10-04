@@ -3,7 +3,7 @@
  */
 abstract class ArchiveSource {
     static String loadingText;
-    static char[] field_b;
+    static char[] additionalNameCharacters;
     static SecondaryNodeHashTable field_a;
 
     abstract int getGroupProgress(int methodGuard, int groupId);
@@ -13,7 +13,7 @@ abstract class ArchiveSource {
             byte[] var2 = (byte[]) null;
             ArchiveSource.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
         }
-        field_b = null;
+        additionalNameCharacters = null;
         field_a = null;
         loadingText = null;
     }
@@ -113,6 +113,6 @@ abstract class ArchiveSource {
 
     static {
         loadingText = "Loading...";
-        field_b = new char[]{(char)91, (char)93, (char)35};
+        additionalNameCharacters = new char[]{(char)91, (char)93, (char)35};
     }
 }

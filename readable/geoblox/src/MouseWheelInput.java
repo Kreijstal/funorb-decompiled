@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static int field_a;
+    static int primarySocialListState;
     static AchievementQuery achievementStateQuery;
     static Sprite[] field_e;
     static DisplayNamePanel field_d;

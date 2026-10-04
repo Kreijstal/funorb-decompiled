@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/364dcb8cead1403a17f5395541c6049e9b9d75a8/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 135)
+## Current readability (pass 136)
 
-The export has 11,812 guarded names and 88,935 Java identifier edits, plus 11
+The export has 11,912 guarded names and 89,441 Java identifier edits, plus 11
 class-name literal edits and 184 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -23,6 +23,42 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 136 adds 100 guarded rules: 25 fields, nine methods, 19 parameters and
+47 locals. Ten previous names are explicitly corrected. `ReceivedTextRecord`
+replaces `ClientSessionSnapshot`: the opcode 11/12 reader creates one text
+record, rather than a complete client-state snapshot. `SessionTextHistorySupport`
+exposes `retainTextRecord`; its storage, count, category counters and limit now
+have inspected names. The reader staging fields identify the header, metadata,
+long source id, split 16/24-bit record id, primary/display names and text.
+
+`dispatchSessionPacket`, `readSessionTextRecord`,
+`retainReceivedTextRecordIfNew` and `getRetentionCategory` expose the complete
+received-record route. Duplicate rejection compares any incoming nonzero id
+against existing kind-two records; it does not require incoming kind two.
+Retention still counts and compacts in place, with its original guard position,
+array aliasing, counter writes and partial failure effects. Unknown wire kinds
+and metadata meanings are not assigned chat-channel or permission names.
+
+`isAsciiLetterOrDigit`, `isAllowedNameCharacter`, `normalizeNameCharacter`
+and their two character arrays now expose the exact name-normalization helpers.
+Separator folding, listed Latin accents, the unusual sharp-s to `b` mapping,
+lowercasing and wrong-guard cleanup remain unchanged. `hasPrimarySocialEntry`
+names the actual lookup predicate; no friend/ignore semantics are assumed.
+`formatArchiveGroupProgress` retains its waiting-text return before the guard.
+
+The export has 11,912 rules and 89,441 identifier edits, plus eleven
+class-literal and 184 label edits: 89,636 total. All 11,802 unaffected complete
+rules, raw input and decompiler/naming/workflow/stub/native/text pins remain.
+Both 303-file corpora compile and preserve 136,607 ordered bindings, 388
+override relationships and 813 lexical label records. All 303 files reverse
+byte exactly; the 27 publication checks and eight existing native probes pass
+within their documented scopes. The probes do not execute complete received-text
+or social initialization against a live server. No raw bodies or bytecode change.
+Eight large labeled bodies, 192 opaque labels and other unmapped members remain;
+full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.
+
+Previous structural pass:
 
 Pass 135 changes the ending-entity radius column test in
 `GameplaySession.updateResultSequence` from `while` to `if`.
@@ -2283,7 +2319,7 @@ A separate 128-slot queue pairs `kj.queuedKeyboardEventCodes` with
 `ai.queuedKeyboardEventCharacters`. Presses store an internal code and character
 zero; typed characters store code -1. A full queue drops new events.
 `UiFontResources.pollKeyboardEvent` reads only up to the captured frame fence, publishes
-`SessionSnapshotSupport.currentKeyboardEventCode` and `te.currentKeyboardEventCharacter`, then wraps
+`SessionTextHistorySupport.currentKeyboardEventCode` and `te.currentKeyboardEventCharacter`, then wraps
 `vd.keyboardEventReadIndex`. Empty/invalid-guard polls retain the previous payload.
 The poll holds `je.keyboardListener` as its monitor; keyTyped retains the original
 unsynchronized method. Gameplay reads held keys for rotation/fast-forward and
@@ -4702,10 +4738,10 @@ method, global, initialization or diagnostic literal moved to another class.
 
 | Readable owner | Original owner | Audited helper family |
 | --- | --- | --- |
-| `LogoPreparationSupport` | `bk` | Logo setup and source session-snapshot decoder |
+| `LogoPreparationSupport` | `bk` | Logo setup and received-text record decoder |
 | `LogoCompositor` | `eh` | Scene/final-frame/glow fades and shared packet/UI state |
 | `FullscreenSupport` | `jk` | Input detachment, fullscreen tasks, frame disposal; also specular response and domain-label checks |
-| `SessionSnapshotSupport` | `ki` | Category counting, quota compaction and append; also logo raster and account UI preparation |
+| `SessionTextHistorySupport` | `ki` | Category counting, quota compaction and append; also logo raster and account UI preparation |
 | `CacheFileState` | `af` | Random-seed/cache-data handles, debug overview and avatar timer |
 | `ByteTextDecodingSupport` | `bc` | Byte text decoder and ten-millisecond sleep splitting |
 | `UsernameQuerySupport` | `cl` | Query staging/reuse, payload-key RNG and lower final-frame slice |
@@ -4735,15 +4771,15 @@ tick 140. The bottom slice retains the top slice's height in `trimY`. Repeated
 branches and invalid-guard side effects remain visible rather than being folded
 with assumed guard or client-control-flow values.
 
-`readSessionSnapshot` reads a header whose low seven bits select source kind;
+`readSessionTextRecord` reads a header whose low seven bits select source kind;
 `headerFlagMask` controls the separate retained flag. Kind two adds unsigned
 short/medium fields. The existing alternate-name byte controls whether a second
 name is read. Plain mode reads compressed text; template mode resolves a ushort
 ID, summarizes literals and conditionally retains referenced template IDs.
 Template failures clear both text and IDs, report the same failure and still
-construct the snapshot. Unknown header fields keep neutral roles.
-`retainSessionSnapshot` counts the three classification categories only for the
-same source kind, includes the new snapshot, compacts over-quota old entries in
+construct the record. Unknown header fields keep neutral roles.
+`retainTextRecord` counts the three classification categories only for the
+same record kind, includes the new record, compacts over-quota old entries in
 place and appends it. Guard failure still occurs after the initial counting.
 
 `exitFullscreenAndDisposeFrame` polls submitted tasks every 10 milliseconds,

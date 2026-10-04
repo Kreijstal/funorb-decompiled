@@ -218,7 +218,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             return;
         }
         try {
-            SessionSnapshotSupport.prepareAccountCreationUi(-112);
+            SessionTextHistorySupport.prepareAccountCreationUi(-112);
             this.dismissDialog((byte) -104);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "r.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

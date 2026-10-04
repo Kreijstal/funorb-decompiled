@@ -4,7 +4,7 @@
 final class AvatarFeedbackSupport {
     static Sprite grayJagexLogoSprite;
     static String toCustomerSupportText;
-    static String field_b;
+    static String receivedRecordDisplayName;
 
     final static void requestAvatarFeedback(int feedbackRequestId, boolean clearSpriteGuard) {
         int unusedClientControlSnapshot;
@@ -186,7 +186,7 @@ final class AvatarFeedbackSupport {
     }
 
     public static void releaseStaticReferences(int methodGuard) {
-        field_b = null;
+        receivedRecordDisplayName = null;
         grayJagexLogoSprite = null;
         if (methodGuard > -13) {
             grayJagexLogoSprite = (Sprite) null;

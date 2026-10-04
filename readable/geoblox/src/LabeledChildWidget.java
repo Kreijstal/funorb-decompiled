@@ -9,7 +9,7 @@ final class LabeledChildWidget extends SingleChildWidget {
     static int[] nineSliceSavedClip;
     private boolean labelAfterChild;
     private int padding;
-    static char[] field_D;
+    static char[] extendedNameCharacters;
     private int labelColor;
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
@@ -29,7 +29,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         if (param0 != -52) {
             return;
         }
-        field_D = null;
+        extendedNameCharacters = null;
         nineSliceSavedClip = null;
     }
 
@@ -141,6 +141,6 @@ final class LabeledChildWidget extends SingleChildWidget {
 
     static {
         nineSliceSavedClip = new int[4];
-        field_D = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        extendedNameCharacters = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
     }
 }

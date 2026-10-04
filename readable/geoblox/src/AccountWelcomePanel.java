@@ -202,7 +202,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "error_js5connect");
                 if (null != textResourceBytes) {
-                  SessionSnapshotSupport.js5ConnectErrorText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SessionTextHistorySupport.js5ConnectErrorText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_gameupdated");
                 if (null != textResourceBytes) {
@@ -2809,7 +2809,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_nonmember");
                 if (null != textResourceBytes) {
-                  SessionSnapshotSupport.fullscreenNonmemberText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SessionTextHistorySupport.fullscreenNonmemberText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_button_close");
                 if (null != textResourceBytes) {
@@ -2893,15 +2893,15 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "hs_mode_name,0");
                 if (textResourceBytes != null) {
-                  ClientSessionSnapshot.highscoreModeNames[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ReceivedTextRecord.highscoreModeNames[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "hs_mode_name,1");
                 if (textResourceBytes != null) {
-                  ClientSessionSnapshot.highscoreModeNames[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ReceivedTextRecord.highscoreModeNames[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "hs_mode_name,2");
                 if (textResourceBytes != null) {
-                  ClientSessionSnapshot.highscoreModeNames[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ReceivedTextRecord.highscoreModeNames[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "rating_mode_name,0");
                 if (textResourceBytes != null) {

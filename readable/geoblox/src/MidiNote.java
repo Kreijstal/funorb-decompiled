@@ -25,7 +25,7 @@ final class MidiNote extends IntrusiveNode {
     int field_j;
     int field_D;
     int field_n;
-    static int field_v;
+    static int recordsPerKindAndCategoryLimit;
     InstrumentEnvelope field_x;
 
     final static void a(byte param0) {

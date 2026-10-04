@@ -17,12 +17,48 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/364dcb8cead1403a17f5395541c6049e9b9d75a8/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/eadeaa0d3312f76b076f3c10c2c411cea0daeafc/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 136 adds 100 guarded rules: 25 fields, nine methods, 19 parameters and
+47 locals. Ten previous names are explicitly corrected. `ReceivedTextRecord`
+replaces `ClientSessionSnapshot`: the opcode 11/12 reader creates one text
+record, rather than a complete client-state snapshot. `SessionTextHistorySupport`
+exposes `retainTextRecord`; its storage, count, category counters and limit now
+have inspected names. The reader staging fields identify the header, metadata,
+long source id, split 16/24-bit record id, primary/display names and text.
+
+`dispatchSessionPacket`, `readSessionTextRecord`,
+`retainReceivedTextRecordIfNew` and `getRetentionCategory` expose the complete
+received-record route. Duplicate rejection compares any incoming nonzero id
+against existing kind-two records; it does not require incoming kind two.
+Retention still counts and compacts in place, with its original guard position,
+array aliasing, counter writes and partial failure effects. Unknown wire kinds
+and metadata meanings are not assigned chat-channel or permission names.
+
+`isAsciiLetterOrDigit`, `isAllowedNameCharacter`, `normalizeNameCharacter`
+and their two character arrays now expose the exact name-normalization helpers.
+Separator folding, listed Latin accents, the unusual sharp-s to `b` mapping,
+lowercasing and wrong-guard cleanup remain unchanged. `hasPrimarySocialEntry`
+names the actual lookup predicate; no friend/ignore semantics are assumed.
+`formatArchiveGroupProgress` retains its waiting-text return before the guard.
+
+The export has 11,912 rules and 89,441 identifier edits, plus eleven
+class-literal and 184 label edits: 89,636 total. All 11,802 unaffected complete
+rules, raw input and decompiler/naming/workflow/stub/native/text pins remain.
+Both 303-file corpora compile and preserve 136,607 ordered bindings, 388
+override relationships and 813 lexical label records. All 303 files reverse
+byte exactly; the 27 publication checks and eight existing native probes pass
+within their documented scopes. The probes do not execute complete received-text
+or social initialization against a live server. No raw bodies or bytecode change.
+Eight large labeled bodies, 192 opaque labels and other unmapped members remain;
+full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.
+
+Previous structural pass:
 
 Pass 135 changes the ending-entity radius column test in
 `GameplaySession.updateResultSequence` from `while` to `if`.

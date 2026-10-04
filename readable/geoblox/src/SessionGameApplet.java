@@ -297,7 +297,7 @@ abstract class SessionGameApplet extends GameApplet {
                     TextInputValidator.a((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
                   } else {
                     if (DebouncedValidationProvider.archiveLoadStatus != 5) {
-                      TextInputValidator.a((byte) 124, 256, SessionSnapshotSupport.js5ConnectErrorText);
+                      TextInputValidator.a((byte) 124, 256, SessionTextHistorySupport.js5ConnectErrorText);
                     } else {
                       TextInputValidator.a((byte) 124, 5, SocketConnector.loginGameUpdatedText);
                     }
@@ -356,7 +356,7 @@ abstract class SessionGameApplet extends GameApplet {
           DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.field_c, (byte) -18, true, false, 1);
           AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
           DialRenderer.field_n = DisplayModeInfo.a(ClientTimingSupport.field_d, (byte) -41, true, false, 1);
-          SessionSnapshotSupport.basicUiGraphicsArchive = DirectByteStorage.field_h;
+          SessionTextHistorySupport.basicUiGraphicsArchive = DirectByteStorage.field_h;
           VisualPropertyOverrides.clientBootstrapStage = 2;
           RankedListQuery.field_i = AttachedEntityRenderer.field_c;
         }
@@ -721,55 +721,55 @@ abstract class SessionGameApplet extends GameApplet {
         return new int[8];
     }
 
-    final void l(int param0) {
-        boolean stackIn_30_0 = false;
-        int var2;
-        ClientSessionSnapshot var3;
-        int var4;
-        var4 = Geoblox.clientControlFlowFlag;
-        if (param0 < 119) {
+    final void dispatchSessionPacket(int methodGuard) {
+        boolean useTextTemplate = false;
+        int packetOpcode;
+        ReceivedTextRecord receivedRecord;
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+        if (methodGuard < 119) {
           this.field_m = true;
         }
-        var2 = ScorePopup.currentPacketOpcode;
-        if ((var2 < 64) &&
-            (OpacityWidget.field_G[var2])) {
-          if (var2 == 0) {
+        packetOpcode = ScorePopup.currentPacketOpcode;
+        if ((packetOpcode < 64) &&
+            (OpacityWidget.field_G[packetOpcode])) {
+          if (packetOpcode == 0) {
             return;
           }
-          if (var2 == 1) {
+          if (packetOpcode == 1) {
             MatchScoringSupport.handleByteShortReply(-1073741824);
           } else {
-            if (var2 == 2) {
+            if (packetOpcode == 2) {
               NanoFrameTimer.handleRankingResponse(-24839);
             } else {
-              if (3 == var2) {
+              if (3 == packetOpcode) {
                 AchievementProtocolSupport.handleAchievementResponse(119);
               } else {
-                if (var2 != 4) {
-                  if (5 == var2) {
+                if (packetOpcode != 4) {
+                  if (5 == packetOpcode) {
                     ClientFlowToken.handleSessionAcknowledgement(26146);
                   } else {
-                    if (var2 == 6) {
+                    if (packetOpcode == 6) {
                       DelegatingCanvas.handleRankedListResponse(2);
                     } else {
-                      if (var2 != 7) {
-                        if (8 == var2) {
+                      if (packetOpcode != 7) {
+                        if (8 == packetOpcode) {
                           GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, LogoCompositor.sessionPacketBuffer);
                         } else {
-                          if (var2 == 16) {
+                          if (packetOpcode == 16) {
                             DualLinkNode.readSessionNameAndNormalize(1);
                           } else {
-                            if ((11 != var2) &&
-                                (12 != var2)) {
-                              if (var2 == 13) {
+                            if ((11 != packetOpcode) &&
+                                (12 != packetOpcode)) {
+                              if (packetOpcode == 13) {
                                 HighscoreNameEntry.handleSocialListResponse((byte) 104);
                                 return;
                               }
-                              if (17 == var2) {
+                              if (17 == packetOpcode) {
                                 this.g((byte) 12);
                                 return;
                               }
-                              if (var2 == 18) {
+                              if (packetOpcode == 18) {
                                 UsernameQueryState.handleSessionFlagReset(11560);
                                 return;
                               }
@@ -777,9 +777,9 @@ abstract class SessionGameApplet extends GameApplet {
                               Bzip2DecoderState.closeSessionSocket((byte) -122);
                               return;
                             }
-                            stackIn_30_0 = !(var2 != 12);
-                            var3 = LogoPreparationSupport.readSessionSnapshot(stackIn_30_0, 128);
-                            Under13TermsPanel.a(var3, 0);
+                            useTextTemplate = !(packetOpcode != 12);
+                            receivedRecord = LogoPreparationSupport.readSessionTextRecord(useTextTemplate, 128);
+                            Under13TermsPanel.retainReceivedTextRecordIfNew(receivedRecord, 0);
                           }
                         }
                       } else {

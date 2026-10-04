@@ -3,14 +3,14 @@
  */
 abstract class FrameTimer {
     static int[] field_b;
-    static String field_a;
+    static String receivedRecordPrimaryName;
 
     static long andLong(long left, long right) {
         return left & right;
     }
 
     public static void b(int param0) {
-        field_a = null;
+        receivedRecordPrimaryName = null;
         if (param0 > -59) {
             return;
         }

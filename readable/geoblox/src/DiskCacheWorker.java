@@ -13,7 +13,7 @@ final class DiskCacheWorker implements Runnable {
     static PcmStreamMixer field_e;
     private boolean stopRequested;
     static WidgetTheme field_f;
-    static long field_c;
+    static long receivedRecordLongId;
 
     public static void a(int param0) {
         if (param0 < -35) {

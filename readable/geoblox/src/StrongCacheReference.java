@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StrongCacheReference extends CacheReference {
-    static int receivedSessionSnapshotKind;
+    static int receivedTextRecordKind;
     static String loginRegisterText;
     static PlatformTask archiveConnectTask;
     private Object referent;

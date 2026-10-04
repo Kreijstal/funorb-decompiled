@@ -82,95 +82,95 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         return this.field_Q;
     }
 
-    final static char a(char param0, int param1) {
-        int var2;
-        if (param1 == -227) {
-          var2 = param0;
-          if (32 == var2) {
+    final static char normalizeNameCharacter(char character, int methodGuard) {
+        int characterCode;
+        if (methodGuard == -227) {
+          characterCode = character;
+          if (32 == characterCode) {
             return '_';
           }
-          if (var2 == 160) {
+          if (characterCode == 160) {
             return '_';
           }
-          if (var2 == 95) {
+          if (characterCode == 95) {
             return '_';
           }
-          if (var2 == 45) {
+          if (characterCode == 45) {
             return '_';
           }
-          if (var2 == 91) {
-            return param0;
+          if (characterCode == 91) {
+            return character;
           }
-          if ((93 != var2) &&
-              (35 != var2)) {
-            if ((var2 != 224) &&
-                (var2 != 225) &&
-                (var2 != 226) &&
-                (var2 != 228) &&
-                (var2 != 227) &&
-                (var2 != 192) &&
-                (var2 != 193) &&
-                (var2 != 194) &&
-                (var2 != 196) &&
-                (var2 != 195)) {
-              if ((var2 != 232) &&
-                  (var2 != 233) &&
-                  (var2 != 234) &&
-                  (var2 != 235) &&
-                  (var2 != 200) &&
-                  (var2 != 201) &&
-                  (var2 != 202) &&
-                  (var2 != 203)) {
-                if ((var2 != 237) &&
-                    (var2 != 238) &&
-                    (239 != var2) &&
-                    (var2 != 205) &&
-                    (var2 != 206) &&
-                    (var2 != 207)) {
-                  if ((var2 != 242) &&
-                      (243 != var2) &&
-                      (var2 != 244) &&
-                      (var2 != 246) &&
-                      (var2 != 245) &&
-                      (var2 != 210) &&
-                      (var2 != 211) &&
-                      (var2 != 212) &&
-                      (var2 != 214) &&
-                      (var2 != 213)) {
-                    if ((249 != var2) &&
-                        (250 != var2) &&
-                        (var2 != 251) &&
-                        (var2 != 252) &&
-                        (var2 != 217)) {
-                      if (218 == var2) {
+          if ((93 != characterCode) &&
+              (35 != characterCode)) {
+            if ((characterCode != 224) &&
+                (characterCode != 225) &&
+                (characterCode != 226) &&
+                (characterCode != 228) &&
+                (characterCode != 227) &&
+                (characterCode != 192) &&
+                (characterCode != 193) &&
+                (characterCode != 194) &&
+                (characterCode != 196) &&
+                (characterCode != 195)) {
+              if ((characterCode != 232) &&
+                  (characterCode != 233) &&
+                  (characterCode != 234) &&
+                  (characterCode != 235) &&
+                  (characterCode != 200) &&
+                  (characterCode != 201) &&
+                  (characterCode != 202) &&
+                  (characterCode != 203)) {
+                if ((characterCode != 237) &&
+                    (characterCode != 238) &&
+                    (239 != characterCode) &&
+                    (characterCode != 205) &&
+                    (characterCode != 206) &&
+                    (characterCode != 207)) {
+                  if ((characterCode != 242) &&
+                      (243 != characterCode) &&
+                      (characterCode != 244) &&
+                      (characterCode != 246) &&
+                      (characterCode != 245) &&
+                      (characterCode != 210) &&
+                      (characterCode != 211) &&
+                      (characterCode != 212) &&
+                      (characterCode != 214) &&
+                      (characterCode != 213)) {
+                    if ((249 != characterCode) &&
+                        (250 != characterCode) &&
+                        (characterCode != 251) &&
+                        (characterCode != 252) &&
+                        (characterCode != 217)) {
+                      if (218 == characterCode) {
                         return 'u';
                       }
-                      if (var2 == 219) {
+                      if (characterCode == 219) {
                         return 'u';
                       }
-                      if (var2 != 220) {
-                        if (var2 == 231) {
+                      if (characterCode != 220) {
+                        if (characterCode == 231) {
                           return 'c';
                         }
-                        if (var2 == 199) {
+                        if (characterCode == 199) {
                           return 'c';
                         }
-                        if (var2 == 255) {
+                        if (characterCode == 255) {
                           return 'y';
                         }
-                        if (var2 == 376) {
+                        if (characterCode == 376) {
                           return 'y';
                         }
-                        if (var2 == 241) {
+                        if (characterCode == 241) {
                           return 'n';
                         }
-                        if (var2 == 209) {
+                        if (characterCode == 209) {
                           return 'n';
                         }
-                        if (var2 == 223) {
+                        if (characterCode == 223) {
                           return 'b';
                         }
-                        return Character.toLowerCase(param0);
+                        return Character.toLowerCase(character);
                       }
                     }
                     return 'u';
@@ -183,111 +183,111 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             }
             return 'a';
           }
-          return param0;
+          return character;
         }
         ValidatedTextInputWidget.k(82);
-        var2 = param0;
-        if (32 != var2) {
-          if (var2 == 160) {
+        characterCode = character;
+        if (32 != characterCode) {
+          if (characterCode == 160) {
             return '_';
           }
-          if ((var2 != 95) &&
-              (var2 != 45)) {
-            if ((var2 != 91) &&
-                (93 != var2) &&
-                (35 != var2)) {
-              if ((var2 != 224) &&
-                  (var2 != 225) &&
-                  (var2 != 226) &&
-                  (var2 != 228) &&
-                  (var2 != 227) &&
-                  (var2 != 192) &&
-                  (var2 != 193) &&
-                  (var2 != 194) &&
-                  (var2 != 196) &&
-                  (var2 != 195)) {
-                if ((var2 != 232) &&
-                    (var2 != 233) &&
-                    (var2 != 234) &&
-                    (var2 != 235) &&
-                    (var2 != 200) &&
-                    (var2 != 201) &&
-                    (var2 != 202)) {
-                  if (var2 == 203) {
+          if ((characterCode != 95) &&
+              (characterCode != 45)) {
+            if ((characterCode != 91) &&
+                (93 != characterCode) &&
+                (35 != characterCode)) {
+              if ((characterCode != 224) &&
+                  (characterCode != 225) &&
+                  (characterCode != 226) &&
+                  (characterCode != 228) &&
+                  (characterCode != 227) &&
+                  (characterCode != 192) &&
+                  (characterCode != 193) &&
+                  (characterCode != 194) &&
+                  (characterCode != 196) &&
+                  (characterCode != 195)) {
+                if ((characterCode != 232) &&
+                    (characterCode != 233) &&
+                    (characterCode != 234) &&
+                    (characterCode != 235) &&
+                    (characterCode != 200) &&
+                    (characterCode != 201) &&
+                    (characterCode != 202)) {
+                  if (characterCode == 203) {
                     return 'e';
                   }
-                  if (var2 == 237) {
+                  if (characterCode == 237) {
                     return 'i';
                   }
-                  if (var2 == 238) {
+                  if (characterCode == 238) {
                     return 'i';
                   }
-                  if (239 == var2) {
+                  if (239 == characterCode) {
                     return 'i';
                   }
-                  if ((var2 != 205) &&
-                      (var2 != 206) &&
-                      (var2 != 207)) {
-                    if (var2 != 242) {
-                      if (243 == var2) {
+                  if ((characterCode != 205) &&
+                      (characterCode != 206) &&
+                      (characterCode != 207)) {
+                    if (characterCode != 242) {
+                      if (243 == characterCode) {
                         return 'o';
                       }
-                      if (var2 == 244) {
+                      if (characterCode == 244) {
                         return 'o';
                       }
-                      if ((var2 != 246) &&
-                          (var2 != 245)) {
-                        if (var2 == 210) {
+                      if ((characterCode != 246) &&
+                          (characterCode != 245)) {
+                        if (characterCode == 210) {
                           return 'o';
                         }
-                        if (var2 == 211) {
+                        if (characterCode == 211) {
                           return 'o';
                         }
-                        if ((var2 != 212) &&
-                            (var2 != 214) &&
-                            (var2 != 213)) {
-                          if (249 != var2) {
-                            if (250 == var2) {
+                        if ((characterCode != 212) &&
+                            (characterCode != 214) &&
+                            (characterCode != 213)) {
+                          if (249 != characterCode) {
+                            if (250 == characterCode) {
                               return 'u';
                             }
-                            if (var2 == 251) {
+                            if (characterCode == 251) {
                               return 'u';
                             }
-                            if (var2 == 252) {
+                            if (characterCode == 252) {
                               return 'u';
                             }
-                            if (var2 == 217) {
+                            if (characterCode == 217) {
                               return 'u';
                             }
-                            if (218 == var2) {
+                            if (218 == characterCode) {
                               return 'u';
                             }
-                            if (var2 == 219) {
+                            if (characterCode == 219) {
                               return 'u';
                             }
-                            if (var2 != 220) {
-                              if (var2 == 231) {
+                            if (characterCode != 220) {
+                              if (characterCode == 231) {
                                 return 'c';
                               }
-                              if (var2 == 199) {
+                              if (characterCode == 199) {
                                 return 'c';
                               }
-                              if (var2 == 255) {
+                              if (characterCode == 255) {
                                 return 'y';
                               }
-                              if (var2 == 376) {
+                              if (characterCode == 376) {
                                 return 'y';
                               }
-                              if (var2 == 241) {
+                              if (characterCode == 241) {
                                 return 'n';
                               }
-                              if (var2 == 209) {
+                              if (characterCode == 209) {
                                 return 'n';
                               }
-                              if (var2 == 223) {
+                              if (characterCode == 223) {
                                 return 'b';
                               }
-                              return Character.toLowerCase(param0);
+                              return Character.toLowerCase(character);
                             }
                           }
                           return 'u';
@@ -302,7 +302,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
               }
               return 'a';
             }
-            return param0;
+            return character;
           }
         }
         return '_';

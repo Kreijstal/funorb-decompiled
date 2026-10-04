@@ -54,8 +54,8 @@ final class GameScreen extends MenuScreen {
               if ((actionId == 8) &&
                   (clientControlFlowGuard == 0)) {
                 {
-                  if (102 != SessionSnapshotSupport.currentKeyboardEventCode) {
-                    if (SessionSnapshotSupport.currentKeyboardEventCode != 103) {
+                  if (102 != SessionTextHistorySupport.currentKeyboardEventCode) {
+                    if (SessionTextHistorySupport.currentKeyboardEventCode != 103) {
                       super.handleMenuKey(itemIndex, -53);
                     } else {
                       SocialListEntry.field_gb = 80;
@@ -71,8 +71,8 @@ final class GameScreen extends MenuScreen {
                   break L1;
                 }
               }
-              if (102 != SessionSnapshotSupport.currentKeyboardEventCode) {
-                if (103 != SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (102 != SessionTextHistorySupport.currentKeyboardEventCode) {
+                if (103 != SessionTextHistorySupport.currentKeyboardEventCode) {
                   super.handleMenuKey(itemIndex, -70);
                   if (clientControlFlowGuard == 0) {
                     break L0;
@@ -88,7 +88,7 @@ final class GameScreen extends MenuScreen {
                 break L0;
               }
             }
-            if ((SessionSnapshotSupport.currentKeyboardEventCode == 13) &&
+            if ((SessionTextHistorySupport.currentKeyboardEventCode == 13) &&
                 (!this.fullscreenDialogActive)) {
               L10: {
                 if (this.screenId == 1) {
@@ -112,8 +112,8 @@ final class GameScreen extends MenuScreen {
               }
             }
             if (this.fullscreenDialogActive) {
-              if ((SessionSnapshotSupport.currentKeyboardEventCode != 84) &&
-                  (83 != SessionSnapshotSupport.currentKeyboardEventCode)) {
+              if ((SessionTextHistorySupport.currentKeyboardEventCode != 84) &&
+                  (83 != SessionTextHistorySupport.currentKeyboardEventCode)) {
                 break L0;
               }
               if (!UnderlinedButtonRenderer.c(-103)) {
@@ -436,7 +436,7 @@ final class GameScreen extends MenuScreen {
                   SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainX);
                   DelayedIncomingPacket.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, GameGraphicsResources.frameNineSliceSprites);
                   textYOrButtonTop = 170;
-                  IntrusiveNodeHashTable.smallFont.drawParagraph(SessionSnapshotSupport.fullscreenNonmemberText, 160, textYOrButtonTop, 320, 300, 0, -1, 1, 0, 16);
+                  IntrusiveNodeHashTable.smallFont.drawParagraph(SessionTextHistorySupport.fullscreenNonmemberText, 160, textYOrButtonTop, 320, 300, 0, -1, 1, 0, 16);
                   dialogButtonWidth = 100;
                   dialogButtonLeft = -(20 + dialogButtonWidth >> 1) + 410;
                   textYOrButtonTop = 265;
@@ -563,7 +563,7 @@ final class GameScreen extends MenuScreen {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainX);
                 DelayedIncomingPacket.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
                 textYOrButtonTop = 180;
-                IntrusiveNodeHashTable.smallFont.drawParagraph(SessionSnapshotSupport.fullscreenNonmemberText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                IntrusiveNodeHashTable.smallFont.drawParagraph(SessionTextHistorySupport.fullscreenNonmemberText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
                 dialogButtonWidth = 242;
                 dialogButtonLeft = 320 - (dialogButtonWidth + 20 >> 1);
                 buttonTextCenterOrConfirmationWidth = 10 + (dialogButtonLeft + (dialogButtonWidth >> 1));
@@ -1294,7 +1294,7 @@ final class GameScreen extends MenuScreen {
             this.previousPointerX = PrefixCodeDecoder.pointerXSnapshot;
             if (this.selectedItemIndex != 0) {
               inputDerivedStateUpdate: {
-                inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.field_c - SessionSnapshotSupport.currentKeyboardEventCode)) % 8;
+                inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.field_c - SessionTextHistorySupport.currentKeyboardEventCode)) % 8;
                 if (inputDerivedStateBranch != 0) {
                   if (inputDerivedStateBranch != 1) {
                     if (inputDerivedStateBranch != 2) {
@@ -1350,7 +1350,7 @@ final class GameScreen extends MenuScreen {
                 ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
                 DequeCursor.field_g = DequeCursor.field_g - 1;
               }
-              inputDerivedStateBranch = (SessionSnapshotSupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.field_c)) % 5;
+              inputDerivedStateBranch = (SessionTextHistorySupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.field_c)) % 5;
               if (0 != inputDerivedStateBranch) {
                 if (inputDerivedStateBranch != 1) {
                   if (inputDerivedStateBranch == 2) {
@@ -2451,7 +2451,7 @@ final class GameScreen extends MenuScreen {
                   !(1 == this.screenId) &&
                   !(this.screenId == 4)))) {
               L4: {
-                if (SessionSnapshotSupport.currentKeyboardEventCode == 96) {
+                if (SessionTextHistorySupport.currentKeyboardEventCode == 96) {
                   if (this.fullscreenDialogActive) {
                     if (this.fullscreenDialogButtonIndex == 0) {
                       break L4;
@@ -2471,8 +2471,8 @@ final class GameScreen extends MenuScreen {
                     break L4;
                   }
                 }
-                if (SessionSnapshotSupport.currentKeyboardEventCode != 97) {
-                  if ((SessionSnapshotSupport.currentKeyboardEventCode == 98) &&
+                if (SessionTextHistorySupport.currentKeyboardEventCode != 97) {
+                  if ((SessionTextHistorySupport.currentKeyboardEventCode == 98) &&
                       (2 == this.screenId)) {
                     if (this.selectedItemIndex < 0) {
                       this.selectedItemIndex = 3;
@@ -2488,7 +2488,7 @@ final class GameScreen extends MenuScreen {
                       break L4;
                     }
                   }
-                  if (SessionSnapshotSupport.currentKeyboardEventCode != 99) {
+                  if (SessionTextHistorySupport.currentKeyboardEventCode != 99) {
                     break L4;
                   }
                   if (this.screenId != 2) {
@@ -2536,7 +2536,7 @@ final class GameScreen extends MenuScreen {
                 break L1;
               }
             }
-            if (SessionSnapshotSupport.currentKeyboardEventCode == 98) {
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 98) {
               if (0 >= this.selectedItemIndex) {
                 this.selectedItemIndex = this.itemCount;
               }
@@ -2547,7 +2547,7 @@ final class GameScreen extends MenuScreen {
                 break L1;
               }
             }
-            if (SessionSnapshotSupport.currentKeyboardEventCode == 99) {
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 99) {
               this.selectedItemIndex = this.selectedItemIndex + 1;
               if (this.selectedItemIndex >= this.itemCount) {
                 this.selectedItemIndex = 0;
@@ -2562,7 +2562,7 @@ final class GameScreen extends MenuScreen {
               this.handleMenuKey(this.selectedItemIndex, -29);
             }
           }
-          if ((SessionSnapshotSupport.currentKeyboardEventCode == 69) &&
+          if ((SessionTextHistorySupport.currentKeyboardEventCode == 69) &&
               (this.screenId == 3) &&
               (this.tutorialPageIndex < 4)) {
             this.tutorialPageIndex = this.tutorialPageIndex + 1;
@@ -2570,7 +2570,7 @@ final class GameScreen extends MenuScreen {
               return;
             }
           }
-          if ((SessionSnapshotSupport.currentKeyboardEventCode == 41) &&
+          if ((SessionTextHistorySupport.currentKeyboardEventCode == 41) &&
               (this.screenId == 3) &&
               (this.tutorialPageIndex > 0)) {
             this.tutorialPageIndex = this.tutorialPageIndex - 1;
@@ -2578,7 +2578,7 @@ final class GameScreen extends MenuScreen {
               return;
             }
           }
-          if ((13 == SessionSnapshotSupport.currentKeyboardEventCode) &&
+          if ((13 == SessionTextHistorySupport.currentKeyboardEventCode) &&
               (!this.fullscreenDialogActive) &&
               (4 != this.screenId)) {
             L22: {

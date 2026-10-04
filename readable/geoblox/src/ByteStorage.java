@@ -5,7 +5,7 @@ abstract class ByteStorage {
     static ValidationState field_d;
     static long updatePeriodNanoseconds;
     static String loadingExtraDataText;
-    static int field_b;
+    static int retainedTextRecordCount;
     static String accountCreationPassword;
 
     final static void a(java.applet.Applet param0, int param1) {
