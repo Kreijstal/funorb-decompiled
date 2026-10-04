@@ -7,7 +7,7 @@ final class LimitedRandomAccessFile {
     static FullscreenFailureReason field_b;
     private long maximumLength;
     static String waitingForSoundEffectsText;
-    static String field_a;
+    static String scoreTextTemplate;
     private RandomAccessFile file;
     private long position;
     static int avatarFeedbackHoldTicks;
@@ -74,7 +74,7 @@ final class LimitedRandomAccessFile {
             return;
         }
         field_b = null;
-        field_a = null;
+        scoreTextTemplate = null;
     }
 
     final static boolean a(CharSequence param0, boolean param1, int param2, int param3) {
@@ -258,7 +258,7 @@ final class LimitedRandomAccessFile {
 
     static {
         field_b = new FullscreenFailureReason();
-        field_a = "Score: <%0>";
+        scoreTextTemplate = "Score: <%0>";
         waitingForSoundEffectsText = "Waiting for sound effects";
         avatarFeedbackHoldTicks = 0;
     }

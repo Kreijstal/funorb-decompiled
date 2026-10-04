@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FullscreenSupport {
-    static boolean field_a;
+    static boolean fullscreenDialogActiveSnapshot;
     static int avatarSteeringDirectionId;
     static String fullscreenAcceptCountdownPluralText;
     static String returnToGameText;
 
     final static void exitActiveFullscreen(byte methodGuard) {
-        if (InstrumentPatch.field_n == null) {
+        if (InstrumentPatch.activeFullscreenCanvas == null) {
             return;
         }
-        EntitySpawnSupport.detachCanvasInputListeners(-2, InstrumentPatch.field_n);
-        InstrumentPatch.field_n.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
+        EntitySpawnSupport.detachCanvasInputListeners(-2, InstrumentPatch.activeFullscreenCanvas);
+        InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         if (methodGuard <= -14) {
-            InstrumentPatch.field_n = null;
+            InstrumentPatch.activeFullscreenCanvas = null;
             if (!(null == FontLoadingSupport.canvasResizeController)) {
                 FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
             }
@@ -23,7 +23,7 @@ final class FullscreenSupport {
         }
         PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
         FullscreenSupport.exitFullscreenAndDisposeFrame((java.awt.Frame) null, 17, (PlatformTaskDispatcher) null);
-        InstrumentPatch.field_n = null;
+        InstrumentPatch.activeFullscreenCanvas = null;
         if (!(null == FontLoadingSupport.canvasResizeController)) {
             FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
         }
@@ -118,7 +118,7 @@ final class FullscreenSupport {
                 return edgeHyphenFailure;
               }
             } else {
-              if (PacketBuffer.field_q.indexOf(characterCode) == -1) {
+              if (PacketBuffer.domainLabelAlphanumericCharacters.indexOf(characterCode) == -1) {
                 invalidCharacterFailure = ArchiveLoadStep.field_h;
                 return invalidCharacterFailure;
               }
@@ -190,7 +190,7 @@ final class FullscreenSupport {
 
     static {
         avatarSteeringDirectionId = 0;
-        field_a = false;
+        fullscreenDialogActiveSnapshot = false;
         fullscreenAcceptCountdownPluralText = "If you do nothing the game will revert to normal view in <%0> seconds.";
         returnToGameText = "Return to game";
     }

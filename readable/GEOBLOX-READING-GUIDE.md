@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/508465485e56617bed0ef95101ffcf0906b99251/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/831536a6cedb0ac22c0af0b0383657db737a6cd6/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 167)
+## Current readability (pass 168)
 
-The export has 16,766 guarded names and 111,378 Java identifier edits, plus 11
-class-name literal edits and 285 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 16,910 guarded names and 112,136 Java identifier edits, plus 11
+class-name literal edits and 314 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -24,7 +24,48 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current explicit loop exit guards (pass 167)
+## Current display-name and shared gameplay naming (pass 168)
+
+Pass 168 adds 144 guarded names: 36 fields, twelve methods, 33 parameters,
+62 locals and one lexical label. DisplayNamePanel now exposes every remaining
+opaque declaration: validated input layout, accepted-provider checks, confirm/
+cancel callbacks, focus routing, suggestion snapshots and login submission.
+The labeled row keeps its original dimensions and validation-message height35.
+A missing provider still passes; other providers require the original valid
+state. Wrong guards still clear buttons or write retry-deadline55. Partial
+widget insertion, callback order, aliases and exception contexts remain.
+
+Shared gameplay names expose the three-character fog/brk debug window, the
+received debug-permission byte and the original score-context fields. Counter
+names follow their four submission positions; their server-side meaning is
+not inferred. Seeds4703/1385/275/5997, modulo dispatch, overflow, nonzero control
+flags and packet layout remain. HUD names follow gameName, clearBonus, level,
+score, fetchingHS and youAreNotLoggedIn resource keys. Menu action text slots,
+post-decrement pointer debounce, fullscreen dialog/canvas state, active login/
+display-name panels, applet dispatcher, mixers, payload CRC and login modulus
+are explicit. The shared mixer reference is not assumed to be initialized.
+
+The domain-label alphanumeric alphabet and achievement IDs one/two/fifteen are
+named from their exact consumers. Ranked-sort upper-bound names preserve the
+original mixed key/ratio assignments and MIN_VALUE reset. Guarded cleanup,
+client-option reset and account-flow helpers keep recursion, partial clears,
+wrong-guard calls and diagnostic strings. The encoder's per-character handled
+label names its original definition and 28 breaks; byte mapping is unchanged.
+
+All 16,766 previous complete rules, raw source and decompiler/naming/workflow/
+stub/native/text pins remain. The export has 16,910 rules and 112,136 identifier
+edits, eleven class-name literal edits and 314 label edits: 112,461 total.
+Both 303-file corpora compile, reproduce and reverse byte exactly, preserving
+19,498 dictionary identities, 136,607 bindings, 388 overrides, 245 label
+definitions and 811 label records. All 27 publication tests pass.
+This naming pass adds/runs no native probes or new runtime cases.
+
+Eight large labeled bodies, 148 opaque labels, 128 opaque fields and 190
+single-letter methods remain. Full display-name UI/network, live input/audio/
+fullscreen/assets/game/server/browser/phone and heap/presented-FPS acceptance
+remain unverified.
+
+## Previous explicit loop exit guards (pass 167)
 
 Pass 167 flattens twelve loop arms across ten methods in six classes:
 GameScreen, GameApplet, GameplaySession, MeshDepthSupport,

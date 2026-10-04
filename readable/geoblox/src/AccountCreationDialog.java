@@ -4,13 +4,13 @@
 final class AccountCreationDialog extends MessageDialog implements ButtonActivationListener {
     private AccountCreationForm accountForm;
     private boolean accountIneligible;
-    static String field_sb;
+    static String notLoggedInText;
     private boolean resultHandled;
     static int avatarTintStartColor;
 
     public static void r(int param0) {
         int var1 = -70 / ((param0 - 27) / 48);
-        field_sb = null;
+        notLoggedInText = null;
     }
 
     final static void a(String param0, byte param1, boolean param2, String param3) {
@@ -37,7 +37,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         try {
           this.resultHandled = true;
           if (methodGuard > -21) {
-            field_sb = (String) null;
+            notLoggedInText = (String) null;
           }
           if (!result.accepted) {
             if (null == result.suggestedUsernames) {
@@ -185,7 +185,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           if (param1) {
             return null;
           }
-          field_sb = (String) null;
+          notLoggedInText = (String) null;
           stackIn_52_0 = null;
           return (TextValidationFailure) (stackIn_52_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     final boolean advanceDialogAnimation(int param0) {
         UsernameAvailabilityQuery var2 = null;
         if (param0 != -1) {
-            field_sb = (String) null;
+            notLoggedInText = (String) null;
         }
         if ((this.dialogVisible) &&
             (!(this.resultHandled))) {
@@ -241,6 +241,6 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     static {
-        field_sb = "You are not currently logged in to this service. To store your score, progress and any Achievements, you must log in or create an account.";
+        notLoggedInText = "You are not currently logged in to this service. To store your score, progress and any Achievements, you must log in or create an account.";
     }
 }

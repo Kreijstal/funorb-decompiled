@@ -167,7 +167,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "gameName");
           if (var2 != null) {
-            LoginMethod.field_b = EmailValidator.decodeTextBytes(1, var2);
+            LoginMethod.gameNameText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "caption1");
           if (var2 != null) {
@@ -215,7 +215,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "clearBonus");
           if (null != var2) {
-            KeyboardInputListener.field_b = EmailValidator.decodeTextBytes(1, var2);
+            KeyboardInputListener.clearBonusText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "cheat");
           if (!param0) {
@@ -234,11 +234,11 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "level");
           if (var2 != null) {
-            LoginPayloadKind.field_e = EmailValidator.decodeTextBytes(1, var2);
+            LoginPayloadKind.levelTextTemplate = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(124, "score");
           if (var2 != null) {
-            LimitedRandomAccessFile.field_a = EmailValidator.decodeTextBytes(1, var2);
+            LimitedRandomAccessFile.scoreTextTemplate = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "waitingForPumpkin");
           if (var2 != null) {
@@ -298,7 +298,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "fetchingHS");
           if (null != var2) {
-            ArchiveLoadSequence.field_f = EmailValidator.decodeTextBytes(1, var2);
+            ArchiveLoadSequence.fetchingHighscoresText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "instructionTitles,0");
           if (var2 != null) {
@@ -350,7 +350,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "youAreNotLoggedIn");
           if (null != var2) {
-            AccountCreationDialog.field_sb = EmailValidator.decodeTextBytes(1, var2);
+            AccountCreationDialog.notLoggedInText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "alternatively");
           if (var2 != null) {

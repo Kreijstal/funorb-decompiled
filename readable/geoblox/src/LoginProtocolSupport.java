@@ -102,7 +102,7 @@ final class LoginProtocolSupport {
               if ((ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
                   (TriangleMesh.readSessionPacketPayload(false))) {
                 ClientClockSupport.field_c = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
-                SpriteCheckboxRenderer.field_f = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                SpriteCheckboxRenderer.loginDebugPermissionLevel = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 TextTemplateDefinition.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
                 settingsCookieValue = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
@@ -122,9 +122,9 @@ final class LoginProtocolSupport {
                   LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.readIntBE((byte) -48);
-                  PacketBuffer.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
-                  ValidatedTextInputWidget.loginResponseExtensionBytes = new byte[PacketBuffer.field_n];
-                  for (extensionByteIndexThenCipherSeedIndex = 0; PacketBuffer.field_n > extensionByteIndexThenCipherSeedIndex; extensionByteIndexThenCipherSeedIndex++) {
+                  PacketBuffer.loginResponseExtensionLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+                  ValidatedTextInputWidget.loginResponseExtensionBytes = new byte[PacketBuffer.loginResponseExtensionLength];
+                  for (extensionByteIndexThenCipherSeedIndex = 0; PacketBuffer.loginResponseExtensionLength > extensionByteIndexThenCipherSeedIndex; extensionByteIndexThenCipherSeedIndex++) {
                     ValidatedTextInputWidget.loginResponseExtensionBytes[extensionByteIndexThenCipherSeedIndex] = LogoCompositor.sessionPacketBuffer.readSignedByte((byte) 72);
                   }
                 }

@@ -18,7 +18,7 @@ final class MessageDialogSupport {
             return;
         }
         try {
-            MeshPrioritySupport.field_d = true;
+            MeshPrioritySupport.messageDialogUiFlowActive = true;
             Geoblox.activeMessageDialog = new MessageDialog(ClientFlowState.accountDialogLayer, UiFontResources.commonUiBoldFont, messageText, AgeValidator.reconnectingLoginMode, VisualPropertyOverrides.showLoginOnMessageDismiss);
             ClientFlowState.accountDialogLayer.showDialog(false, Geoblox.activeMessageDialog);
         } catch (RuntimeException messageDialogFailure) {

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MeshPrioritySupport {
-    static int field_b;
-    static TextTemplateArgumentType field_f;
-    static boolean field_d;
+    static int rankedSortUpperBoundValue;
+    static TextTemplateArgumentType textTemplateArgumentTypeFourteen;
+    static boolean messageDialogUiFlowActive;
     static ClientFlowToken completedClientFlowToken;
     static int bootstrapLanguageId;
     static IntrusiveDeque delayedIncomingPackets;
 
     public static void releaseStaticReferences(int methodGuard) {
-        field_f = null;
+        textTemplateArgumentTypeFourteen = null;
         if (methodGuard != 0) {
             return;
         }
@@ -121,8 +121,8 @@ final class MeshPrioritySupport {
     }
 
     static {
-        field_d = false;
-        field_f = new TextTemplateArgumentType(14, 0, 4, 1);
+        messageDialogUiFlowActive = false;
+        textTemplateArgumentTypeFourteen = new TextTemplateArgumentType(14, 0, 4, 1);
         completedClientFlowToken = new ClientFlowToken();
     }
 }

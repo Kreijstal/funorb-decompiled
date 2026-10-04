@@ -132,8 +132,8 @@ final class TextTemplateArgumentType {
         var2 = Geoblox.clientControlFlowFlag;
         try {
           if (!IntrusiveDeque.hasVisibleFullscreenDialog((byte) 124)) {
-            if ((InstrumentPatch.field_n != null) &&
-                (InstrumentPatch.field_n.focusLost)) {
+            if ((InstrumentPatch.activeFullscreenCanvas != null) &&
+                (InstrumentPatch.activeFullscreenCanvas.focusLost)) {
               FullscreenSupport.exitActiveFullscreen((byte) -87);
               ClientScreenExitSupport.fullscreenDialogLayer.showDialog(false, new FullscreenErrorDialog(ClientScreenExitSupport.fullscreenDialogLayer, AccountContentDialog.field_hb));
             }

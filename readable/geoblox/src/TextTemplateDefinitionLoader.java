@@ -4,7 +4,7 @@
 final class TextTemplateDefinitionLoader {
     static int releasedInDifficultyStep;
     static String createText;
-    static int field_a;
+    static int menuPointerPressDebounceTicks;
     private WeightedObjectCache definitionsCache;
     static IntrusiveDeque secondarySocialEntriesInOrder;
     private ResourceArchive primaryArchive;
@@ -70,7 +70,7 @@ final class TextTemplateDefinitionLoader {
     }
 
     static {
-        field_a = 0;
+        menuPointerPressDebounceTicks = 0;
         createText = "Create";
     }
 }

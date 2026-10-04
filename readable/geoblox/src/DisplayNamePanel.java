@@ -11,11 +11,11 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     static long connectionRetryDeadlineMillis;
     private ButtonWidget cancelButton;
 
-    private final boolean h(byte param0) {
-        if (!this.a(-115, (ValidationProviderSource) (this.displayNameInput))) {
+    private final boolean isDisplayNameAccepted(byte methodGuard) {
+        if (!this.isValidationSourceAccepted(-115, (ValidationProviderSource) (this.displayNameInput))) {
             return false;
         }
-        if (param0 != -118) {
+        if (methodGuard != -118) {
             this.confirmButton = (ButtonWidget) null;
             return true;
         }
@@ -25,8 +25,8 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     public DisplayNamePanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.displayNameInput = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
-        TextWidgetRenderer var1 = new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(ClientTimingSupport.loginNoDisplayNameText, var1, (WidgetListener) null);
+        TextWidgetRenderer introTextRenderer = new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+        UiWidget introTextWidget = new UiWidget(ClientTimingSupport.loginNoDisplayNameText, introTextRenderer, (WidgetListener) null);
         this.confirmButton = new ButtonWidget(MatchScoringSupport.okText, (WidgetListener) null);
         this.cancelButton = new ButtonWidget(TextTemplateArgumentType.cancelText, (WidgetListener) null);
         this.displayNameInput.hoverText = AchievementProtocolSupport.createDisplayNameTooltipText;
@@ -35,15 +35,15 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.confirmButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
         this.cancelButton.renderer = (WidgetRenderer) ((Object) new UnderlinedButtonRenderer());
         this.displayNameInput.renderer = (WidgetRenderer) ((Object) new TextInputRenderer(10000536));
-        int var3 = 20;
-        int var4 = 4;
-        var2.setWidgetBounds(50, 270, (byte) -8, var3, 20);
-        int var5 = 200;
-        this.addChild((byte) -110, var2);
-        var3 += 50;
-        var3 = var3 + (5 + this.a(var3, -12037, 170, this.displayNameInput, ClientProtocolStage.createDisplayNameHintText, OpacityWidget.createDisplayNameText));
-        this.confirmButton.setWidgetBounds(40, var5, (byte) -23, var3, -var5 + 496 >> 1);
-        this.cancelButton.setWidgetBounds(40, 60, (byte) -85, var3 + 15, 3 + var4);
+        int layoutCursorY = 20;
+        int panelPadding = 4;
+        introTextWidget.setWidgetBounds(50, 270, (byte) -8, layoutCursorY, 20);
+        int confirmButtonWidth = 200;
+        this.addChild((byte) -110, introTextWidget);
+        layoutCursorY += 50;
+        layoutCursorY = layoutCursorY + (5 + this.addDisplayNameInputRow(layoutCursorY, -12037, 170, this.displayNameInput, ClientProtocolStage.createDisplayNameHintText, OpacityWidget.createDisplayNameText));
+        this.confirmButton.setWidgetBounds(40, confirmButtonWidth, (byte) -23, layoutCursorY, -confirmButtonWidth + 496 >> 1);
+        this.cancelButton.setWidgetBounds(40, 60, (byte) -85, layoutCursorY + 15, 3 + panelPadding);
         this.cancelButton.listener = (WidgetListener) (this);
         this.confirmButton.listener = (WidgetListener) (this);
         this.addChild((byte) -102, this.confirmButton);
@@ -51,55 +51,55 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.usernameSuggestions = new UsernameSuggestionsPanel((UsernameSuggestionListener) (this));
         this.usernameSuggestions.setWidgetBounds(150, -60 + this.widgetWidth + (-this.displayNameInput.widgetX - this.displayNameInput.widgetWidth), (byte) -54, 20, 60 + this.displayNameInput.widgetX + this.displayNameInput.widgetWidth);
         this.addChild((byte) -102, this.usernameSuggestions);
-        this.setWidgetBounds(var4 + 55 + var3, 496, (byte) -55, 0, 0);
+        this.setWidgetBounds(panelPadding + 55 + layoutCursorY, 496, (byte) -55, 0, 0);
     }
 
-    private final int a(int param0, int param1, String param2, String param3, int param4, int param5, UiWidget param6) {
-        RuntimeException var8 = null;
-        ValidationMessageWidget var9 = null;
-        int var10 = 0;
-        LabeledChildWidget var11 = null;
-        int stackIn_1_0 = 0;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final int addLabeledValidatedInput(int rowY, int methodGuard, String labelText, String fallbackMessage, int validationMessageHeight, int inputWidth, UiWidget inputWidget) {
+        RuntimeException rowFailureForContext = null;
+        ValidationMessageWidget validationMessageWidget = null;
+        int guardQuotient = 0;
+        LabeledChildWidget labeledInputWidget = null;
+        int rowHeightBeforeReturn = 0;
+        RuntimeException rowFailureBeforeDescriptions = null;
+        StringBuilder rowMessagePrefix = null;
+        String labelDescription = null;
+        StringBuilder rowMessageBeforeFallback = null;
+        String fallbackDescription = null;
+        StringBuilder rowMessageBeforeInput = null;
+        String inputDescription = null;
+        RuntimeException caughtRowFailure = null;
         try {
-          var11 = new LabeledChildWidget(20, param0, param5 + 120, 25, param6, false, 120, 3, DialogLayer.sharedUiFont, 16777215, param2);
-          var10 = -110 / ((70 - param1) / 33);
-          this.addChild((byte) -108, var11);
-          var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param6)).getValidationProvider((byte) -113), param3, 126, param0 + var11.widgetHeight, 25 + param5, param4);
-          var9.listener = (WidgetListener) (this);
-          this.addChild((byte) -115, var9);
-          stackIn_1_0 = var9.widgetHeight + var11.widgetHeight;
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_4_0 = var8;
-          stackIn_4_1 = new StringBuilder().append("hi.O(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_5_2 = "null";
+          labeledInputWidget = new LabeledChildWidget(20, rowY, inputWidth + 120, 25, inputWidget, false, 120, 3, DialogLayer.sharedUiFont, 16777215, labelText);
+          guardQuotient = -110 / ((70 - methodGuard) / 33);
+          this.addChild((byte) -108, labeledInputWidget);
+          validationMessageWidget = new ValidationMessageWidget(((ValidationProviderSource) ((Object) inputWidget)).getValidationProvider((byte) -113), fallbackMessage, 126, rowY + labeledInputWidget.widgetHeight, 25 + inputWidth, validationMessageHeight);
+          validationMessageWidget.listener = (WidgetListener) (this);
+          this.addChild((byte) -115, validationMessageWidget);
+          rowHeightBeforeReturn = validationMessageWidget.widgetHeight + labeledInputWidget.widgetHeight;
+          return rowHeightBeforeReturn;
+        } catch (java.lang.RuntimeException rowFailure) {
+          caughtRowFailure = rowFailure;
+          rowFailureForContext = caughtRowFailure;
+          rowFailureBeforeDescriptions = rowFailureForContext;
+          rowMessagePrefix = new StringBuilder().append("hi.O(").append(rowY).append(',').append(methodGuard).append(',');
+          if (labelText == null) {
+            labelDescription = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            labelDescription = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param3 == null) {
-            stackIn_8_2 = "null";
+          rowMessageBeforeFallback = ((StringBuilder) (Object) rowMessagePrefix).append(labelDescription).append(',');
+          if (fallbackMessage == null) {
+            fallbackDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            fallbackDescription = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
-            stackIn_11_2 = "null";
+          rowMessageBeforeInput = ((StringBuilder) (Object) rowMessageBeforeFallback).append(fallbackDescription).append(',').append(validationMessageHeight).append(',').append(inputWidth).append(',');
+          if (inputWidget == null) {
+            inputDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            inputDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rowFailureBeforeDescriptions), ((StringBuilder) (Object) rowMessageBeforeInput).append(inputDescription).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             return guardResultBeforeReturn;
           }
           for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
-            L1: {
+            encodedCharacterHandled: {
               characterCode = text.charAt(characterStart + characterIndex);
               if (!((0 < characterCode) &&
                   (characterCode < 128))) {
@@ -325,114 +325,114 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
                     (characterCode <= 255))) {
                   if (characterCode == 8364) {
                     destination[characterIndex + destinationOffset] = (byte)-128;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8218) {
                     destination[destinationOffset + characterIndex] = (byte)-126;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 402) {
                     destination[destinationOffset + characterIndex] = (byte)-125;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (8222 == characterCode) {
                     destination[characterIndex + destinationOffset] = (byte)-124;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (8230 == characterCode) {
                     destination[characterIndex + destinationOffset] = (byte)-123;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8224) {
                     destination[destinationOffset + characterIndex] = (byte)-122;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8225) {
                     destination[characterIndex + destinationOffset] = (byte)-121;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 710) {
                     destination[characterIndex + destinationOffset] = (byte)-120;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (8240 == characterCode) {
                     destination[characterIndex + destinationOffset] = (byte)-119;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 352) {
                     destination[destinationOffset + characterIndex] = (byte)-118;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8249) {
                     destination[destinationOffset + characterIndex] = (byte)-117;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 338) {
                     destination[characterIndex + destinationOffset] = (byte)-116;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (381 == characterCode) {
                     destination[characterIndex + destinationOffset] = (byte)-114;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8216) {
                     destination[destinationOffset + characterIndex] = (byte)-111;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8217) {
                     destination[destinationOffset + characterIndex] = (byte)-110;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8220) {
                     destination[characterIndex + destinationOffset] = (byte)-109;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8221) {
                     destination[destinationOffset + characterIndex] = (byte)-108;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (8226 == characterCode) {
                     destination[destinationOffset + characterIndex] = (byte)-107;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (8211 == characterCode) {
                     destination[characterIndex + destinationOffset] = (byte)-106;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8212) {
                     destination[destinationOffset + characterIndex] = (byte)-105;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 732) {
                     destination[characterIndex + destinationOffset] = (byte)-104;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8482) {
                     destination[destinationOffset + characterIndex] = (byte)-103;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 353) {
                     destination[destinationOffset + characterIndex] = (byte)-102;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 8250) {
                     destination[characterIndex + destinationOffset] = (byte)-101;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (339 == characterCode) {
                     destination[characterIndex + destinationOffset] = (byte)-100;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode == 382) {
                     destination[characterIndex + destinationOffset] = (byte)-98;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   if (characterCode != 376) {
                     destination[characterIndex + destinationOffset] = (byte)63;
-                    break L1;
+                    break encodedCharacterHandled;
                   }
                   destination[characterIndex + destinationOffset] = (byte)-97;
-                  break L1;
+                  break encodedCharacterHandled;
                 }
               }
               destination[destinationOffset + characterIndex] = (byte)characterCode;
@@ -460,142 +460,142 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         }
     }
 
-    private final boolean a(int param0, ValidationProviderSource param1) {
-        ValidationProvider var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        ValidationState var5 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final boolean isValidationSourceAccepted(int methodGuard, ValidationProviderSource validationSource) {
+        ValidationProvider validationProvider = null;
+        RuntimeException acceptanceFailureForContext = null;
+        int guardQuotient = 0;
+        ValidationState validationState = null;
+        boolean acceptedBeforeReturn = false;
+        RuntimeException acceptanceFailureBeforeDescription = null;
+        StringBuilder acceptanceMessagePrefix = null;
+        String validationSourceDescription = null;
+        RuntimeException caughtAcceptanceFailure = null;
         try {
-          var3 = param1.getValidationProvider((byte) -98);
-          if (var3 == null) {
+          validationProvider = validationSource.getValidationProvider((byte) -98);
+          if (validationProvider == null) {
             return true;
           }
-          var4 = 37 / ((-70 - param0) / 38);
-          var5 = var3.getDebouncedValidationState((byte) -105);
-          stackIn_7_0 = !(var5 != SocketArchiveNetworkClient.validInputValidationState);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("hi.J(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          guardQuotient = 37 / ((-70 - methodGuard) / 38);
+          validationState = validationProvider.getDebouncedValidationState((byte) -105);
+          acceptedBeforeReturn = !(validationState != SocketArchiveNetworkClient.validInputValidationState);
+          return acceptedBeforeReturn;
+        } catch (java.lang.RuntimeException acceptanceFailure) {
+          caughtAcceptanceFailure = acceptanceFailure;
+          acceptanceFailureForContext = caughtAcceptanceFailure;
+          acceptanceFailureBeforeDescription = acceptanceFailureForContext;
+          acceptanceMessagePrefix = new StringBuilder().append("hi.J(").append(methodGuard).append(',');
+          if (validationSource == null) {
+            validationSourceDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            validationSourceDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) acceptanceFailureBeforeDescription), ((StringBuilder) (Object) acceptanceMessagePrefix).append(validationSourceDescription).append(')').toString());
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
-        boolean discarded$1 = false;
-        ValidationProviderSource var7 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
+    public final void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
+        boolean discardedGuardValidationResult = false;
+        ValidationProviderSource nullValidationSourceSnapshot = null;
+        RuntimeException activationFailureBeforeDescription = null;
+        StringBuilder activationMessagePrefix = null;
+        String activatedButtonDescription = null;
+        RuntimeException caughtActivationFailure = null;
+        RuntimeException activationFailureForContext = null;
         try {
-          if (this.cancelButton != param4) {
-            if (this.confirmButton == param4) {
-              this.f(-50);
+          if (this.cancelButton != button) {
+            if (this.confirmButton == button) {
+              this.submitValidatedDisplayName(-50);
             }
           } else {
             DebouncedValidationProvider.showEmptyLoginForm(24107);
           }
-          if (param1 != -20) {
-            var7 = (ValidationProviderSource) null;
-            discarded$1 = this.a(-4, (ValidationProviderSource) null);
+          if (methodGuard != -20) {
+            nullValidationSourceSnapshot = (ValidationProviderSource) null;
+            discardedGuardValidationResult = this.isValidationSourceAccepted(-4, (ValidationProviderSource) null);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_10_0 = var6;
-          stackIn_10_1 = new StringBuilder().append("hi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException activationFailure) {
+          caughtActivationFailure = activationFailure;
+          activationFailureForContext = caughtActivationFailure;
+          activationFailureBeforeDescription = activationFailureForContext;
+          activationMessagePrefix = new StringBuilder().append("hi.Q(").append(buttonX).append(',').append(methodGuard).append(',').append(buttonY).append(',').append(pointerButton).append(',');
+          if (button == null) {
+            activatedButtonDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            activatedButtonDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) activationFailureBeforeDescription), ((StringBuilder) (Object) activationMessagePrefix).append(activatedButtonDescription).append(')').toString());
         }
     }
 
     public final void onSuggestionSelected(String suggestion, int methodGuard) {
-        ValidatedTextInputWidget var3 = null;
-        String var4 = null;
+        ValidatedTextInputWidget displayNameInputSnapshot = null;
+        String selectedSuggestionSnapshot = null;
         try {
             if (methodGuard != 20) {
                 this.cancelButton = (ButtonWidget) null;
             }
-            var3 = this.displayNameInput;
-            var4 = suggestion;
-            ((TextInputWidget) ((Object) var3)).setInputText(methodGuard - 136, var4, false);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hi.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
+            displayNameInputSnapshot = this.displayNameInput;
+            selectedSuggestionSnapshot = suggestion;
+            ((TextInputWidget) ((Object) displayNameInputSnapshot)).setInputText(methodGuard - 136, selectedSuggestionSnapshot, false);
+        } catch (RuntimeException suggestionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) suggestionFailure), "hi.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
             super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-            this.confirmButton.enabled = this.h((byte) -118);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+            this.confirmButton.enabled = this.isDisplayNameAccepted((byte) -118);
+        } catch (RuntimeException pointerUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
-    public static void i(byte param0) {
-        if (param0 > -45) {
+    public static void releaseStaticReferences(byte methodGuard) {
+        if (methodGuard > -45) {
             return;
         }
         createIneligibleText = null;
         bakingForegroundSprite = null;
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        boolean discarded$1 = false;
-        RuntimeException var5 = null;
-        boolean stackIn_7_0 = false;
-        boolean stackIn_10_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        boolean discardedGuardAcceptanceResult = false;
+        RuntimeException keyFailureForContext = null;
+        boolean previousFocusResult = false;
+        boolean nextFocusResult = false;
+        RuntimeException keyFailureBeforeDescription = null;
+        StringBuilder keyMessagePrefix = null;
+        String eventContextDescription = null;
+        RuntimeException caughtKeyFailure = null;
         try {
-          if (param1 != 13) {
-            discarded$1 = this.h((byte) -45);
+          if (methodGuard != 13) {
+            discardedGuardAcceptanceResult = this.isDisplayNameAccepted((byte) -45);
           }
-          if (super.handleKeyInput(param0, param1 + 0, param2, param3)) {
+          if (super.handleKeyInput(keyCode, methodGuard + 0, typedCharacter, eventContext)) {
             return true;
           }
-          if (98 == param0) {
-            stackIn_7_0 = this.requestPreviousChildFocus(7305, param3);
-            return stackIn_7_0;
+          if (98 == keyCode) {
+            previousFocusResult = this.requestPreviousChildFocus(7305, eventContext);
+            return previousFocusResult;
           }
-          if (param0 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.requestNextChildFocus(param3, -96);
-          return stackIn_10_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("hi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_16_2 = "null";
+          nextFocusResult = this.requestNextChildFocus(eventContext, -96);
+          return nextFocusResult;
+        } catch (java.lang.RuntimeException keyFailure) {
+          caughtKeyFailure = keyFailure;
+          keyFailureForContext = caughtKeyFailure;
+          keyFailureBeforeDescription = keyFailureForContext;
+          keyMessagePrefix = new StringBuilder().append("hi.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureBeforeDescription), ((StringBuilder) (Object) keyMessagePrefix).append(eventContextDescription).append(')').toString());
         }
     }
 
@@ -606,54 +606,54 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         }
     }
 
-    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5) {
-        RuntimeException var7 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final int addDisplayNameInputRow(int rowY, int methodGuard, int inputWidth, UiWidget inputWidget, String fallbackMessage, String labelText) {
+        RuntimeException layoutFailureForContext = null;
+        int rowHeightBeforeReturn = 0;
+        RuntimeException layoutFailureBeforeDescriptions = null;
+        StringBuilder layoutMessagePrefix = null;
+        String inputDescription = null;
+        StringBuilder layoutMessageBeforeFallback = null;
+        String fallbackDescription = null;
+        StringBuilder layoutMessageBeforeLabel = null;
+        String labelDescription = null;
+        RuntimeException caughtLayoutFailure = null;
         try {
-          if (param1 != -12037) {
+          if (methodGuard != -12037) {
             connectionRetryDeadlineMillis = 55L;
           }
-          stackIn_3_0 = this.a(param0, -116, param5, param4, 35, param2, param3);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_6_0 = var7;
-          stackIn_6_1 = new StringBuilder().append("hi.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_7_2 = "null";
+          rowHeightBeforeReturn = this.addLabeledValidatedInput(rowY, -116, labelText, fallbackMessage, 35, inputWidth, inputWidget);
+          return rowHeightBeforeReturn;
+        } catch (java.lang.RuntimeException layoutFailure) {
+          caughtLayoutFailure = layoutFailure;
+          layoutFailureForContext = caughtLayoutFailure;
+          layoutFailureBeforeDescriptions = layoutFailureForContext;
+          layoutMessagePrefix = new StringBuilder().append("hi.G(").append(rowY).append(',').append(methodGuard).append(',').append(inputWidth).append(',');
+          if (inputWidget == null) {
+            inputDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            inputDescription = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param4 == null) {
-            stackIn_10_2 = "null";
+          layoutMessageBeforeFallback = ((StringBuilder) (Object) layoutMessagePrefix).append(inputDescription).append(',');
+          if (fallbackMessage == null) {
+            fallbackDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            fallbackDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param5 == null) {
-            stackIn_13_2 = "null";
+          layoutMessageBeforeLabel = ((StringBuilder) (Object) layoutMessageBeforeFallback).append(fallbackDescription).append(',');
+          if (labelText == null) {
+            labelDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            labelDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) layoutFailureBeforeDescriptions), ((StringBuilder) (Object) layoutMessageBeforeLabel).append(labelDescription).append(')').toString());
         }
     }
 
-    private final void f(int param0) {
-        if (!this.h((byte) -118)) {
+    private final void submitValidatedDisplayName(int methodGuard) {
+        if (!this.isDisplayNameAccepted((byte) -118)) {
             return;
         }
-        if (param0 >= -42) {
+        if (methodGuard >= -42) {
             return;
         }
         EmailValidator.setOptionalLoginTextAndShowLoggingIn(12607, this.displayNameInput.widgetText);

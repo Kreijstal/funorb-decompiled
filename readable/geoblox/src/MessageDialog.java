@@ -60,8 +60,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
         }
         try {
-            SpriteButtonRenderer.field_t = new LoginPanel(prefilledUsername, prefilledPassword, false, true, true);
-            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.field_t, -81);
+            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(prefilledUsername, prefilledPassword, false, true, true);
+            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -81);
         } catch (RuntimeException loginFormFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFormFailure), "f.HA(" + (prefilledUsername != null ? "{...}" : "null") + ',' + (prefilledPassword != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
@@ -84,23 +84,23 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     final static void requestFullscreen(byte methodGuard) {
-        if (!(InstrumentPatch.field_n == null)) {
+        if (!(InstrumentPatch.activeFullscreenCanvas == null)) {
             return;
         }
         if (methodGuard >= -48) {
             availableEntityCategoryCount = -112;
-            InstrumentPatch.field_n = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
-            if (null != InstrumentPatch.field_n) {
-                UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.field_n, 57);
+            InstrumentPatch.activeFullscreenCanvas = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
+            if (null != InstrumentPatch.activeFullscreenCanvas) {
+                UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.activeFullscreenCanvas, 57);
                 return;
             }
             return;
         }
-        InstrumentPatch.field_n = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
-        if (null == InstrumentPatch.field_n) {
+        InstrumentPatch.activeFullscreenCanvas = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
+        if (null == InstrumentPatch.activeFullscreenCanvas) {
             return;
         }
-        UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.field_n, 57);
+        UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.activeFullscreenCanvas, 57);
     }
 
     final void dismissDialog(byte methodGuard) {

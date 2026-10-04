@@ -391,10 +391,10 @@ final class SoundSampleCache {
           if (EntityCollisionSupport.activeAccountCreationForm != null) {
             EntityCollisionSupport.activeAccountCreationForm.usernameSuggestions.setSuggestions((byte) 126, args);
           }
-          if (null == MouseWheelInput.field_d) {
+          if (null == MouseWheelInput.activeDisplayNamePanel) {
             return;
           }
-          MouseWheelInput.field_d.usernameSuggestions.setSuggestions((byte) 126, args);
+          MouseWheelInput.activeDisplayNamePanel.usernameSuggestions.setSuggestions((byte) 126, args);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

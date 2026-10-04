@@ -162,14 +162,14 @@ final class TextTemplateDefinition extends DualLinkNode {
     }
 
     final static void a(int param0, String param1, boolean param2, boolean param3) {
-        UnderlinedButtonRenderer.b(-6011);
+        UnderlinedButtonRenderer.resetAccountUiFlow(-6011);
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
         if (param0 != 2274) {
             return;
         }
         try {
-            SpriteButtonRenderer.field_t = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.reconnectingLoginMode, param2, param3);
-            ButtonWidget.accountContentDialog = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.field_t);
+            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.reconnectingLoginMode, param2, param3);
+            ButtonWidget.accountContentDialog = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.activeLoginPanel);
             ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

@@ -7,7 +7,7 @@ final class ClientFlowState {
     static DialogLayer accountDialogLayer;
     static String achievedText;
     static int[] difficultyStepFlags;
-    static int field_c;
+    static int inputAndScoreContextSelectorSeed;
 
     public static void clearClientFlowResources(byte methodGuard) {
         int guardResidue = -73 % ((26 - methodGuard) / 53);
@@ -64,6 +64,6 @@ final class ClientFlowState {
         difficultyStepFlags[18] = SessionInstanceState.orInt(difficultyStepFlags[18], 2);
         difficultyStepFlags[19] = SessionInstanceState.orInt(difficultyStepFlags[19], 16);
         difficultyStepFlags[10] = SessionInstanceState.orInt(difficultyStepFlags[10], 4);
-        field_c = 0;
+        inputAndScoreContextSelectorSeed = 0;
     }
 }

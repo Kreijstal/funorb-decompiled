@@ -480,7 +480,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             MessageDialog.gameCanvas.getParent().remove((java.awt.Component) ((Object) MessageDialog.gameCanvas));
           }
           canvasContainerSelection: {
-            if (FullscreenFocusCanvas.field_a == null) {
+            if (FullscreenFocusCanvas.standaloneFrameReference == null) {
               if (null == SharedBufferPools.fullscreenFrame) {
                 if (VisualPropertyNode.loaderApplet != null) {
                   selectedContainerOrFailure = VisualPropertyNode.loaderApplet;
@@ -498,7 +498,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 break canvasContainerSelection;
               }
             }
-            selectedContainerOrFailure = FullscreenFocusCanvas.field_a;
+            selectedContainerOrFailure = FullscreenFocusCanvas.standaloneFrameReference;
           }
           canvasLocationSelection: {
             ((java.awt.Container) (selectedContainerOrFailure)).setLayout((java.awt.LayoutManager) null);
@@ -735,7 +735,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
             MenuScreen.appletStopDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             ByteTextDecodingSupport.sleepMillis(0, 5000L);
-            SpriteButtonRenderer.field_s = null;
+            SpriteButtonRenderer.appletTaskDispatcher = null;
             this.shutdownAppletServices((byte) 14, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.destroy()");
@@ -781,7 +781,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 createdDispatcher = new PlatformTaskDispatcher(initialCacheVariant, gameName, cacheIndexCount, true);
                 MenuScreen.platformTaskDispatcher = createdDispatcher;
-                SpriteButtonRenderer.field_s = createdDispatcher;
+                SpriteButtonRenderer.appletTaskDispatcher = createdDispatcher;
                 appletThreadTask = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
                 while (true) {
                   if (appletThreadTask.status == 0) {
@@ -883,7 +883,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
               if (!((SharedBufferPools.fullscreenFrame != null) &&
-                  (FullscreenFocusCanvas.field_a == null))) {
+                  (FullscreenFocusCanvas.standaloneFrameReference == null))) {
                 MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break canvasRefreshLocation;

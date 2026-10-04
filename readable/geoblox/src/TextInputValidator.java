@@ -133,7 +133,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         String responseDescription = null;
         RuntimeException caughtResponseFailure = null;
         try {
-          MeshPrioritySupport.field_d = false;
+          MeshPrioritySupport.messageDialogUiFlowActive = false;
           ArchiveLoadStep.field_a = false;
           if ((null != Geoblox.activeMessageDialog) &&
               (Geoblox.activeMessageDialog.dialogVisible)) {
@@ -144,7 +144,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               } else {
                 responseText = DualLinkNode.invalidPasswordText;
               }
-              SpriteButtonRenderer.field_t.setLoginIdentifierAndClearPassword(TextTemplateLookupSupport.currentLoginIdentifier, 0);
+              SpriteButtonRenderer.activeLoginPanel.setLoginIdentifierAndClearPassword(TextTemplateLookupSupport.currentLoginIdentifier, 0);
             }
             displayResponseContent = 1;
             if (responseCode == 10) {
@@ -163,7 +163,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             if ((responseCode != 256) &&
                 (responseCode != 10) &&
                 (!AgeValidator.reconnectingLoginMode)) {
-              SpriteButtonRenderer.field_t.clearLoginInputs(-119);
+              SpriteButtonRenderer.activeLoginPanel.clearLoginInputs(-119);
             }
           }
           if (methodGuard == 124) {

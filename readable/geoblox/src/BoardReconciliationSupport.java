@@ -38,7 +38,7 @@ final class BoardReconciliationSupport {
           secondaryEntryIndex = 0;
           while (true) {
             if (!(GmtTimestampSupport.rankedEntryCount > secondaryEntryIndex)) {
-              SingleChildWidget.sortRankedEntryRange(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
+              SingleChildWidget.sortRankedEntryRange(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.rankedSortUpperBoundValue, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
               break;
             }
             AchievementQuery.rankedEntryIndices[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;

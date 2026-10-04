@@ -185,9 +185,9 @@ final class CachedArchiveSource extends ArchiveSource {
           try {
             if ((groupBytes != null) &&
                 (groupBytesForPayloadChecks.length > 2)) {
-              WhirlpoolHash.field_f.reset();
-              WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
-              payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
+              WhirlpoolHash.archivePayloadCrc32.reset();
+              WhirlpoolHash.archivePayloadCrc32.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
+              payloadCrc32 = (int)WhirlpoolHash.archivePayloadCrc32.getValue();
               if (payloadCrc32 != this.index.groupCrc32[groupId]) {
                 throw new RuntimeException();
               }
@@ -236,9 +236,9 @@ final class CachedArchiveSource extends ArchiveSource {
         try {
           if ((groupBytes != null) &&
               (groupBytesForPayloadChecks.length > 2)) {
-            WhirlpoolHash.field_f.reset();
-            WhirlpoolHash.field_f.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
-            payloadCrc32 = (int)WhirlpoolHash.field_f.getValue();
+            WhirlpoolHash.archivePayloadCrc32.reset();
+            WhirlpoolHash.archivePayloadCrc32.update(groupBytes, 0, groupBytesForPayloadChecks.length - 2);
+            payloadCrc32 = (int)WhirlpoolHash.archivePayloadCrc32.getValue();
             if (payloadCrc32 != this.index.groupCrc32[groupId]) {
               throw new RuntimeException();
             }

@@ -382,8 +382,8 @@ final class DiskArchiveCache {
         }
         try {
             ClientScreenExitSupport.gameSoundOutput = AudioOutput.createOutput(param1, param0, 1, 1000);
-            WhirlpoolHash.field_d = new PcmStreamMixer();
-            ClientScreenExitSupport.gameSoundOutput.setRootStream(WhirlpoolHash.field_d);
+            WhirlpoolHash.gameSoundMixer = new PcmStreamMixer();
+            ClientScreenExitSupport.gameSoundOutput.setRootStream(WhirlpoolHash.gameSoundMixer);
             PasswordWidgetRenderer.gameMusicStream = param3;
             AsyncResourceDownloader.setGameMusicVolume(-15346, SpriteCheckboxRenderer.gameMusicVolumeLevel);
             EmailValidator.updateSoundEffectVolume(SocialListEntry.soundEffectVolume, (byte) -67);

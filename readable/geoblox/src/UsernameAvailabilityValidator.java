@@ -203,7 +203,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (null != GameSoundResources.optionalLoginText) {
             CacheReference.outgoingSessionBuffer.writeZeroPrefixedNullTerminatedText(GameSoundResources.optionalLoginText, (byte) -126);
           }
-          UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
+          UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.loginModPowModulus);
           CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-encryptedPayloadStart + CacheReference.outgoingSessionBuffer.position, true);
           NanoFrameTimer.flushSessionWrites(-1, -1);
           return;

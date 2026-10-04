@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginMethod {
-    static String field_b;
+    static String gameNameText;
     private String methodName;
 
     final static boolean isAvatarCryHoldExpired(int methodGuard) {
         if (methodGuard != -3) {
-            field_b = (String) null;
+            gameNameText = (String) null;
             if (NameCharacterSupport.avatarCryPhase != 2) {
                 return false;
             }
@@ -53,7 +53,7 @@ final class LoginMethod {
     }
 
     public static void a(byte param0) {
-        field_b = null;
+        gameNameText = null;
         if (param0 >= -8) {
             LoginMethod.releaseMarkedThemeMusicPreparation((byte) -78);
         }
@@ -83,7 +83,7 @@ final class LoginMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -3) {
-            field_b = (String) null;
+            gameNameText = (String) null;
           }
           var8 = FullscreenEntrySupport.enterFullscreenAndWait(param2, -1, param0, param5, param4, param1);
           var6 = var8;
@@ -155,6 +155,6 @@ final class LoginMethod {
     }
 
     static {
-        field_b = "Geoblox";
+        gameNameText = "Geoblox";
     }
 }

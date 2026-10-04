@@ -133,7 +133,7 @@ final class CanvasResizeController {
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
-        if (null != InstrumentPatch.field_n) {
+        if (null != InstrumentPatch.activeFullscreenCanvas) {
           return;
         }
         if (methodGuard < -108) {

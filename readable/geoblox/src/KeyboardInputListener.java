@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class KeyboardInputListener implements java.awt.event.KeyListener, java.awt.event.FocusListener {
-    static Sprite field_a;
-    static String field_b;
+    static Sprite entityAndTutorialScratchRaster;
+    static String clearBonusText;
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent event) {
         int internalKeyCode = 0;
@@ -70,11 +70,11 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
     }
 
     public static void a(int param0) {
-        field_a = null;
+        entityAndTutorialScratchRaster = null;
         if (param0 != 31997) {
             return;
         }
-        field_b = null;
+        clearBonusText = null;
     }
 
     public final void keyTyped(java.awt.event.KeyEvent event) {
@@ -144,7 +144,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         String var2 = (String) null;
         MessageDialog.showLoginForm(ResourceArchive.accountCreationEmail, (String) null, 7697781);
         if (param0 != -1) {
-            field_a = (Sprite) null;
+            entityAndTutorialScratchRaster = (Sprite) null;
         }
     }
 
@@ -175,7 +175,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
     }
 
     static {
-        field_a = new Sprite(30, 30);
-        field_b = "Clear bonus!";
+        entityAndTutorialScratchRaster = new Sprite(30, 30);
+        clearBonusText = "Clear bonus!";
     }
 }

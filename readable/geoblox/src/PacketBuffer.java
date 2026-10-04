@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PacketBuffer extends ByteArrayBuffer {
-    static String field_r;
-    static int field_n;
+    static String debugCommandCharacterWindow;
+    static int loginResponseExtensionLength;
     private PacketByteCipher cipher;
     private int bitPosition;
     static ClientProtocolStage currentProtocolStage;
-    static String field_q;
+    static String domainLabelAlphanumericCharacters;
     static Sprite resultBubbleSprite;
     static boolean[] connectivityVisitedByEntityId;
-    static int field_m;
+    static int difficultyFortyOneAchievementId;
 
     final void readCipherBytes(int methodGuard, int destinationOffset, byte[] destination, int length) {
         int copiedByteCount = 0;
@@ -48,14 +48,14 @@ final class PacketBuffer extends ByteArrayBuffer {
     final static int divideFloorWithPositiveDivisor(int divisor, byte methodGuard, int numerator) {
         int numeratorSign = numerator >>> 31;
         if (methodGuard != -6) {
-            PacketBuffer.k((byte) 101);
+            PacketBuffer.resetClientOptionMask((byte) 101);
         }
         return -numeratorSign + (numerator + numeratorSign) / divisor;
     }
 
-    final static void k(byte param0) {
+    final static void resetClientOptionMask(byte methodGuard) {
         ClientOptionSupport.clientOptionMask = 0;
-        if (param0 != -13) {
+        if (methodGuard != -13) {
             PacketBuffer.divideFloorWithPositiveDivisor(106, (byte) 22, 96);
         }
     }
@@ -124,14 +124,14 @@ final class PacketBuffer extends ByteArrayBuffer {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         connectivityVisitedByEntityId = null;
         resultBubbleSprite = null;
-        if (param0 != 0) {
-            field_r = (String) null;
+        if (methodGuard != 0) {
+            debugCommandCharacterWindow = (String) null;
         }
-        field_r = null;
-        field_q = null;
+        debugCommandCharacterWindow = null;
+        domainLabelAlphanumericCharacters = null;
         currentProtocolStage = null;
     }
 
@@ -190,9 +190,9 @@ final class PacketBuffer extends ByteArrayBuffer {
     }
 
     static {
-        field_r = "   ";
-        field_q = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        field_m = 15;
+        debugCommandCharacterWindow = "   ";
+        domainLabelAlphanumericCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        difficultyFortyOneAchievementId = 15;
         connectivityVisitedByEntityId = new boolean[1000];
     }
 }

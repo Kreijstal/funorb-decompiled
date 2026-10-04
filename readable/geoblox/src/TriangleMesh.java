@@ -181,7 +181,7 @@ final class TriangleMesh {
           AccountCreationForm.unusedRankedEntryBooleans = new boolean[2 * param2];
         }
         GmtTimestampSupport.rankedEntryCount = 0;
-        MeshPrioritySupport.field_b = -2147483648;
+        MeshPrioritySupport.rankedSortUpperBoundValue = -2147483648;
         ClientRenderingState.rankedKeyTwoLowerBoundSeed = 2147483647;
         ProxyAuthenticationRequiredException.rankedKeyTwoUpperBoundSeed = -2147483648;
         LoginPayloadKind.field_a = param0;

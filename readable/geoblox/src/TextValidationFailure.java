@@ -30,8 +30,8 @@ final class TextValidationFailure {
           }
           var7 = stackIn_17_0;
           ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = var7;
-          if (MeshPrioritySupport.field_b < var7) {
-            MeshPrioritySupport.field_b = var7;
+          if (MeshPrioritySupport.rankedSortUpperBoundValue < var7) {
+            MeshPrioritySupport.rankedSortUpperBoundValue = var7;
           }
           GmtTimestampSupport.rankedEntryCount = GmtTimestampSupport.rankedEntryCount + 1;
           if (LoginPayloadKind.field_a <= var7) {
@@ -40,7 +40,7 @@ final class TextValidationFailure {
           LoginPayloadKind.field_a = var7;
           return;
         }
-        MeshPrioritySupport.field_b = param5;
+        MeshPrioritySupport.rankedSortUpperBoundValue = param5;
         TextHotspotBounds.field_m[GmtTimestampSupport.rankedEntryCount] = param3;
         NodeHashTableIterator.field_i[GmtTimestampSupport.rankedEntryCount] = param4;
         FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = param0;
@@ -53,8 +53,8 @@ final class TextValidationFailure {
         }
         var7 = stackIn_7_0;
         ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = var7;
-        if (MeshPrioritySupport.field_b < var7) {
-          MeshPrioritySupport.field_b = var7;
+        if (MeshPrioritySupport.rankedSortUpperBoundValue < var7) {
+          MeshPrioritySupport.rankedSortUpperBoundValue = var7;
         }
         GmtTimestampSupport.rankedEntryCount = GmtTimestampSupport.rankedEntryCount + 1;
         if (LoginPayloadKind.field_a <= var7) {

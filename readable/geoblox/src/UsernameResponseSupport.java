@@ -4,7 +4,7 @@
 final class UsernameResponseSupport {
     static int spawnReleaseIntervalTicks;
     static int field_b;
-    static int field_d;
+    static int thirdScoreContextCounter;
     static int[] bzip2TransformTable;
 
     final static void handleUsernameResponse(int responseCode, int methodGuard, String[] suggestions, String candidateText) {

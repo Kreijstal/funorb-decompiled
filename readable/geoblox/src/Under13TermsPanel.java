@@ -12,29 +12,29 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     static String field_F;
 
     final static void g(int param0) {
-        if (null == RasterTargetSnapshot.field_f) {
+        if (null == RasterTargetSnapshot.menuActionTexts) {
             FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
             TextConcatenationSupport.fullscreenAcceptCountdownSingularText = OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
-            RasterTargetSnapshot.field_f = new String[19];
-            RasterTargetSnapshot.field_f[12] = ValidationState.nextText;
-            RasterTargetSnapshot.field_f[7] = SettingsCookieSupport.quitText;
-            RasterTargetSnapshot.field_f[6] = LoginPayload.endGameText;
-            RasterTargetSnapshot.field_f[8] = AttachmentPointerState.soundLabelText;
-            RasterTargetSnapshot.field_f[14] = PacketByteCipher.field_c;
-            RasterTargetSnapshot.field_f[5] = FullscreenErrorDialog.menuText;
-            RasterTargetSnapshot.field_f[0] = TextPairLoginPayload.startGameText;
-            RasterTargetSnapshot.field_f[4] = SessionGameApplet.fullscreenText;
-            RasterTargetSnapshot.field_f[param0] = EndingAnimationSupport.musicLabelText;
-            RasterTargetSnapshot.field_f[10] = BootstrapUiSupport.achievementsText;
-            RasterTargetSnapshot.field_f[11] = RasterTargetSnapshot.previousText;
-            RasterTargetSnapshot.field_f[15] = ArchiveCatalog.replayTutorialText;
-            RasterTargetSnapshot.field_f[1] = RasterTargetRestoreSupport.resumeGameText;
-            RasterTargetSnapshot.field_f[13] = StrongCacheReference.loginRegisterText;
-            RasterTargetSnapshot.field_f[3] = SecondaryNodeDequeIterator.instructionsText;
-            RasterTargetSnapshot.field_f[2] = ArchiveLoadStep.highscoresText;
-            RasterTargetSnapshot.field_f[18] = ReceivedTextRecord.highscoreModeNames[2];
-            RasterTargetSnapshot.field_f[16] = ReceivedTextRecord.highscoreModeNames[0];
-            RasterTargetSnapshot.field_f[17] = ReceivedTextRecord.highscoreModeNames[1];
+            RasterTargetSnapshot.menuActionTexts = new String[19];
+            RasterTargetSnapshot.menuActionTexts[12] = ValidationState.nextText;
+            RasterTargetSnapshot.menuActionTexts[7] = SettingsCookieSupport.quitText;
+            RasterTargetSnapshot.menuActionTexts[6] = LoginPayload.endGameText;
+            RasterTargetSnapshot.menuActionTexts[8] = AttachmentPointerState.soundLabelText;
+            RasterTargetSnapshot.menuActionTexts[14] = PacketByteCipher.field_c;
+            RasterTargetSnapshot.menuActionTexts[5] = FullscreenErrorDialog.menuText;
+            RasterTargetSnapshot.menuActionTexts[0] = TextPairLoginPayload.startGameText;
+            RasterTargetSnapshot.menuActionTexts[4] = SessionGameApplet.fullscreenText;
+            RasterTargetSnapshot.menuActionTexts[param0] = EndingAnimationSupport.musicLabelText;
+            RasterTargetSnapshot.menuActionTexts[10] = BootstrapUiSupport.achievementsText;
+            RasterTargetSnapshot.menuActionTexts[11] = RasterTargetSnapshot.previousText;
+            RasterTargetSnapshot.menuActionTexts[15] = ArchiveCatalog.replayTutorialText;
+            RasterTargetSnapshot.menuActionTexts[1] = RasterTargetRestoreSupport.resumeGameText;
+            RasterTargetSnapshot.menuActionTexts[13] = StrongCacheReference.loginRegisterText;
+            RasterTargetSnapshot.menuActionTexts[3] = SecondaryNodeDequeIterator.instructionsText;
+            RasterTargetSnapshot.menuActionTexts[2] = ArchiveLoadStep.highscoresText;
+            RasterTargetSnapshot.menuActionTexts[18] = ReceivedTextRecord.highscoreModeNames[2];
+            RasterTargetSnapshot.menuActionTexts[16] = ReceivedTextRecord.highscoreModeNames[0];
+            RasterTargetSnapshot.menuActionTexts[17] = ReceivedTextRecord.highscoreModeNames[1];
             return;
         }
     }

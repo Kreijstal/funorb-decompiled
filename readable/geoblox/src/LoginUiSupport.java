@@ -43,32 +43,32 @@ final class LoginUiSupport {
             if (methodGuard >= -47) {
                 lastGeobloxOfLevelText = (String) null;
                 loginIdentifierAfterGuardClear = SpriteButtonRenderer.c(7789);
-                SpriteButtonRenderer.field_t = new LoginPanel(loginIdentifierAfterGuardClear, (String) null, true, false, false);
+                SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierAfterGuardClear, (String) null, true, false, false);
                 ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
-                ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.field_t, -85);
+                ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
                 ButtonWidget.accountContentDialog.finishTransition(true);
                 return;
             }
             loginIdentifierAfterDismissal = SpriteButtonRenderer.c(7789);
-            SpriteButtonRenderer.field_t = new LoginPanel(loginIdentifierAfterDismissal, (String) null, true, false, false);
+            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierAfterDismissal, (String) null, true, false, false);
             ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
-            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.field_t, -85);
+            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
             ButtonWidget.accountContentDialog.finishTransition(true);
             return;
         }
         if (methodGuard < -47) {
             loginIdentifierWithoutDismissal = SpriteButtonRenderer.c(7789);
-            SpriteButtonRenderer.field_t = new LoginPanel(loginIdentifierWithoutDismissal, (String) null, true, false, false);
+            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierWithoutDismissal, (String) null, true, false, false);
             ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
-            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.field_t, -85);
+            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
             ButtonWidget.accountContentDialog.finishTransition(true);
             return;
         }
         lastGeobloxOfLevelText = (String) null;
         String loginIdentifierAfterLateClear = SpriteButtonRenderer.c(7789);
-        SpriteButtonRenderer.field_t = new LoginPanel(loginIdentifierAfterLateClear, (String) null, true, false, false);
+        SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierAfterLateClear, (String) null, true, false, false);
         ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
-        ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.field_t, -85);
+        ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
         ButtonWidget.accountContentDialog.finishTransition(true);
     }
 

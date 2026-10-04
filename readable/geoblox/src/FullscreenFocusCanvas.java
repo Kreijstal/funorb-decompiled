@@ -4,7 +4,7 @@
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean focusLost;
     static int pointerPressYSnapshot;
-    static java.awt.Frame field_a;
+    static java.awt.Frame standaloneFrameReference;
     java.awt.Frame fullscreenFrame;
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
@@ -25,7 +25,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
             FullscreenSupport.exitFullscreenAndDisposeFrame(this.fullscreenFrame, 10, taskDispatcher);
             if (methodGuard != 0) {
-                field_a = (java.awt.Frame) null;
+                standaloneFrameReference = (java.awt.Frame) null;
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "he.B(" + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ')');
@@ -35,10 +35,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public static void a(int param0) {
         if (param0 != 0) {
             FullscreenFocusCanvas.a(-79);
-            field_a = null;
+            standaloneFrameReference = null;
             return;
         }
-        field_a = null;
+        standaloneFrameReference = null;
     }
 
     FullscreenFocusCanvas() {

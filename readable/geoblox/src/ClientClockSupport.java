@@ -6,7 +6,7 @@ final class ClientClockSupport {
     static int[] additionalByteArrayPoolCounts;
     static Sprite[] validationStateSprites;
     static String[] subscriptionMonthlyCostTexts;
-    static int field_a;
+    static int firstScoreContextAccumulator;
     static int[] transformedMeshNormalY;
 
     final synchronized static long correctedCurrentTimeMillis(int methodGuard) {

@@ -10,22 +10,22 @@ final class DiskCacheWorker implements Runnable {
     int queuedRequestCount;
     private Thread workerThread;
     static int avatarFeedbackFrameIndex;
-    static PcmStreamMixer field_e;
+    static PcmStreamMixer sharedPcmMixerReference;
     private boolean stopRequested;
     static WidgetTheme field_f;
     static long receivedRecordLongId;
 
     public static void a(int param0) {
         if (param0 < -35) {
-            field_e = null;
+            sharedPcmMixerReference = null;
             avatarTintPalette = null;
             field_f = null;
             createPasswordContainsEmailAlertText = null;
             idleClientFlowToken = null;
             return;
         }
-        field_e = (PcmStreamMixer) null;
-        field_e = null;
+        sharedPcmMixerReference = (PcmStreamMixer) null;
+        sharedPcmMixerReference = null;
         avatarTintPalette = null;
         field_f = null;
         createPasswordContainsEmailAlertText = null;
@@ -179,7 +179,7 @@ final class DiskCacheWorker implements Runnable {
           var7 = new LoginTextValue(param5);
           var8 = new LoginTextValue(param4);
           if (param0 != -94) {
-            field_e = (PcmStreamMixer) null;
+            sharedPcmMixerReference = (PcmStreamMixer) null;
           }
           stackIn_3_0 = LoginPanel.advanceAccountCreationOrLookupRequest(param3, param2, var7, var8, param1, param6, 100);
           return stackIn_3_0;

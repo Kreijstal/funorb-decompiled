@@ -23,12 +23,12 @@ abstract class LoginPayload {
         }
     }
 
-    final static PcmStreamMixer b(byte param0) {
-        if (param0 <= 11) {
-            LoginPayload.b((byte) 74);
-            return DiskCacheWorker.field_e;
+    final static PcmStreamMixer getSharedPcmMixer(byte methodGuard) {
+        if (methodGuard <= 11) {
+            LoginPayload.getSharedPcmMixer((byte) 74);
+            return DiskCacheWorker.sharedPcmMixerReference;
         }
-        return DiskCacheWorker.field_e;
+        return DiskCacheWorker.sharedPcmMixerReference;
     }
 
     public static void a(int param0) {

@@ -6,8 +6,8 @@ import java.util.*;
 final class DelegatingCanvas extends java.awt.Canvas {
     static IntrusiveDeque transientEntities;
     static Random sharedClientRandom;
-    private java.awt.Component field_b;
-    static PcmStreamMixer field_a;
+    private java.awt.Component paintDelegate;
+    static PcmStreamMixer logoAudioMixerReference;
 
     final static int sineQ16(byte methodGuard, int angle8192) {
         if (methodGuard <= 7) {
@@ -20,16 +20,16 @@ final class DelegatingCanvas extends java.awt.Canvas {
         return angle8192 >= 6144 ? -ScoreSubmission.quarterSineQ16[-angle8192 + 8192] : -ScoreSubmission.quarterSineQ16[angle8192 - 4096];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         sharedClientRandom = null;
         transientEntities = null;
-        field_a = null;
-        int var1 = -120 % ((-5 - param0) / 51);
+        logoAudioMixerReference = null;
+        int guardRemainder = -120 % ((-5 - methodGuard) / 51);
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_b.update(param0);
+            this.paintDelegate.update(param0);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -140,7 +140,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_b.paint(param0);
+            this.paintDelegate.paint(param0);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -183,7 +183,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             currentEntity = poppedEntity;
             if (null == poppedEntity) {
               if (methodGuard != 1) {
-                DelegatingCanvas.a((byte) -40);
+                DelegatingCanvas.releaseStaticReferences((byte) -40);
               }
               return;
             }
@@ -263,7 +263,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     DelegatingCanvas(java.awt.Component param0) {
         try {
-            this.field_b = param0;
+            this.paintDelegate = param0;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

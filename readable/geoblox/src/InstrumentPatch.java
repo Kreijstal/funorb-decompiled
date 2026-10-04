@@ -7,12 +7,12 @@ final class InstrumentPatch extends IntrusiveNode {
     byte[] keyVolumes;
     PcmSample[] keySamples;
     static boolean field_q;
-    static java.math.BigInteger field_l;
+    static java.math.BigInteger loginModPowModulus;
     short[] pitchOffsetsAndLoopFlag;
     InstrumentEnvelope[] keyEnvelopes;
     byte[] keyGroups;
     static int earnedAchievementMask;
-    static FullscreenFocusCanvas field_n;
+    static FullscreenFocusCanvas activeFullscreenCanvas;
     int globalVolume;
 
     final boolean loadSelectedSamples(int[] sampleBudget, byte[] noteSelectionMask, int methodGuard, SoundSampleCache sampleCache) {
@@ -94,10 +94,10 @@ final class InstrumentPatch extends IntrusiveNode {
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_l = (java.math.BigInteger) null;
+            loginModPowModulus = (java.math.BigInteger) null;
         }
-        field_n = null;
-        field_l = null;
+        activeFullscreenCanvas = null;
+        loginModPowModulus = null;
     }
 
     final static InstrumentPatch loadInstrumentPatch(int patchId, byte methodGuard, ResourceArchive archive) {
@@ -173,7 +173,7 @@ final class InstrumentPatch extends IntrusiveNode {
             }
             SoftwareRasterizer.restoreClip(ClientOptionSupport.sharedSavedClip);
             if (param4 != 107) {
-              field_l = (java.math.BigInteger) null;
+              loginModPowModulus = (java.math.BigInteger) null;
             }
             return;
           }
@@ -646,6 +646,6 @@ final class InstrumentPatch extends IntrusiveNode {
 
     static {
         field_q = false;
-        field_l = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
+        loginModPowModulus = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
     }
 }

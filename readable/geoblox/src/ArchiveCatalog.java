@@ -15,12 +15,12 @@ final class ArchiveCatalog {
         if (methodGuard != 255) {
             return false;
         }
-        if (null == InstrumentPatch.field_n) {
+        if (null == InstrumentPatch.activeFullscreenCanvas) {
             return false;
         }
-        EntitySpawnSupport.detachCanvasInputListeners(-2, InstrumentPatch.field_n);
-        InstrumentPatch.field_n.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
-        InstrumentPatch.field_n = null;
+        EntitySpawnSupport.detachCanvasInputListeners(-2, InstrumentPatch.activeFullscreenCanvas);
+        InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
+        InstrumentPatch.activeFullscreenCanvas = null;
         return true;
     }
 

@@ -6,7 +6,7 @@ import java.util.*;
 
 final class WhirlpoolHash {
     private long[] hashWords;
-    static PcmStreamMixer field_d;
+    static PcmStreamMixer gameSoundMixer;
     private byte[] blockBuffer;
     private byte[] messageBitLength;
     private long[] roundScratch;
@@ -14,13 +14,13 @@ final class WhirlpoolHash {
     private long[] messageWords;
     private long[] roundKey;
     private int bufferBytePosition;
-    static java.util.zip.CRC32 field_f;
+    static java.util.zip.CRC32 archivePayloadCrc32;
     private long[] cipherState;
 
     public static void b(int param0) {
-        field_d = null;
+        gameSoundMixer = null;
         int var1 = -34 % ((param0 - 31) / 51);
-        field_f = null;
+        archivePayloadCrc32 = null;
     }
 
     private final void processBlock(int methodGuard) {
@@ -179,7 +179,7 @@ final class WhirlpoolHash {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 12) {
-            field_d = (PcmStreamMixer) null;
+            gameSoundMixer = (PcmStreamMixer) null;
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = SecondaryNodeHashTable.normalizedSessionName.equals(ResizableDialog.normalizeSessionName(var3, 12));
@@ -377,6 +377,6 @@ final class WhirlpoolHash {
     }
 
     static {
-        field_f = new java.util.zip.CRC32();
+        archivePayloadCrc32 = new java.util.zip.CRC32();
     }
 }

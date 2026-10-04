@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginPayloadKind {
-    static String field_e;
+    static String levelTextTemplate;
     static int field_a;
     int wireId;
     static int field_d;
@@ -13,7 +13,7 @@ final class LoginPayloadKind {
         if (param0 <= 55) {
             return;
         }
-        field_e = null;
+        levelTextTemplate = null;
     }
 
     public final String toString() {
@@ -46,7 +46,7 @@ final class LoginPayloadKind {
     }
 
     static {
-        field_e = "Level: <%0>";
+        levelTextTemplate = "Level: <%0>";
         field_d = 4;
         createPasswordText = "Password: ";
     }

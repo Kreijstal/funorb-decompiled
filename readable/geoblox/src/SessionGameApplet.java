@@ -119,7 +119,7 @@ abstract class SessionGameApplet extends GameApplet {
             ClientTimingSupport.buttonAndLogoArchiveId = buttonAndLogoArchiveId;
             TextWidgetSupport.gameTextArchiveId = gameTextArchiveId;
             this.initializeSessionPacketLengths(123);
-            PacketBuffer.k((byte) -13);
+            PacketBuffer.resetClientOptionMask((byte) -13);
             return;
         }
     }
@@ -240,7 +240,7 @@ abstract class SessionGameApplet extends GameApplet {
         java.awt.Container canvasContainer;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (null != FontLoadingSupport.canvasResizeController) {
-          if (InstrumentPatch.field_n == null) {
+          if (InstrumentPatch.activeFullscreenCanvas == null) {
             canvasContainer = MultiHandleSliderRenderer.a(true);
             containerSize = canvasContainer.getSize();
             FontLoadingSupport.canvasResizeController.setRequestedSize((byte) 126, containerSize.height, containerSize.width);
@@ -404,11 +404,11 @@ abstract class SessionGameApplet extends GameApplet {
           if (AchievementSubmission.simpleUiMode) {
             ButtonWidget.requestJustPlay(83);
           }
-          if (null == DelegatingCanvas.field_a) {
-            DelegatingCanvas.field_a = LoginPayload.b((byte) 72);
+          if (null == DelegatingCanvas.logoAudioMixerReference) {
+            DelegatingCanvas.logoAudioMixerReference = LoginPayload.getSharedPcmMixer((byte) 72);
             ValidatedTextInputWidget.logoStartDelayMillis = GzipInflater.getLogoStartDelayMillis(110);
           }
-          LogoPreparationSupport.prepareLogoAnimation(DialRenderer.field_n, ValidatedTextInputWidget.logoStartDelayMillis, 111, DelegatingCanvas.field_a);
+          LogoPreparationSupport.prepareLogoAnimation(DialRenderer.field_n, ValidatedTextInputWidget.logoStartDelayMillis, 111, DelegatingCanvas.logoAudioMixerReference);
           DialRenderer.field_n = null;
           AttachedEntityRenderer.field_c = null;
           DirectByteStorage.field_h = null;
@@ -485,7 +485,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
         } else {
           suppressLoginHandshakeSnapshot = false;
-          if (InstrumentPatch.field_n == null) {
+          if (InstrumentPatch.activeFullscreenCanvas == null) {
             fullscreenActiveSnapshot = false;
           } else {
             fullscreenActiveSnapshot = true;

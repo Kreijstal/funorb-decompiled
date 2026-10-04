@@ -123,7 +123,7 @@ final class GameScreen extends MenuScreen {
                       (PrefixCodeDecoder.pointerXSnapshot < 449) &&
                       (265 < PcmResampler.pointerYSnapshot) &&
                       (PcmResampler.pointerYSnapshot < 299))))) {
-                  if (InstrumentPatch.field_n == null) {
+                  if (InstrumentPatch.activeFullscreenCanvas == null) {
                     if (0 != this.fullscreenDialogButtonIndex) {
                       if (PrefixCodeDecoder.pointerXSnapshot <= 260) {
                         break L0;
@@ -411,7 +411,7 @@ final class GameScreen extends MenuScreen {
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX = 184;
                 FadingDialog.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 0, -1);
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX = 185;
-                IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.field_sb, 130, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
+                IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.notLoggedInText, 130, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
                 DelayedIncomingPacket.drawNineSlicePanel(320, 120, 60, (byte) -92, panelWidth, GameGraphicsResources.frameNineSliceSprites);
                 IntrusiveNodeHashTable.smallFont.drawParagraph(ProxyAuthenticationRequiredException.discardResultsWarningText, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                 if (clientControlFlowGuard == 0) {
@@ -472,7 +472,7 @@ final class GameScreen extends MenuScreen {
                   }
                 }
                 if (TextTemplateDefinition.field_n > 0) {
-                  if (InstrumentPatch.field_n == null) {
+                  if (InstrumentPatch.activeFullscreenCanvas == null) {
                     if (this.activeTicks > 200) {
                       unavailableOverlayAlpha = 200;
                     } else {
@@ -970,7 +970,7 @@ final class GameScreen extends MenuScreen {
             if ((null != FifoResponseToken.activeHighscoreQuery) &&
                 (null != FifoResponseToken.activeHighscoreQuery.namesByView)) {
               if (!FifoResponseToken.activeHighscoreQuery.completed) {
-                statusOrFriendTipText = ArchiveLoadSequence.field_f;
+                statusOrFriendTipText = ArchiveLoadSequence.fetchingHighscoresText;
                 statusTextY = 76 + (150 + FadingDialog.uiPaletteFont.maxAscent);
                 FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
                 if (clientControlFlowGuard == 0) {
@@ -1092,11 +1092,11 @@ final class GameScreen extends MenuScreen {
             this.advanceTutorialSlide((byte) 104);
             return;
           }
-          FullscreenSupport.field_a = this.fullscreenDialogActive;
+          FullscreenSupport.fullscreenDialogActiveSnapshot = this.fullscreenDialogActive;
           this.volumePreviewTicks = this.volumePreviewTicks + 1;
           this.activeTicks = this.activeTicks + 1;
           if ((this.fullscreenDialogActive) &&
-              (InstrumentPatch.field_n != null) &&
+              (InstrumentPatch.activeFullscreenCanvas != null) &&
               (this.activeTicks > 1500)) {
             ArchiveCatalog.exitFullscreenIfActive(255);
             this.fullscreenDialogActive = false;
@@ -1184,13 +1184,13 @@ final class GameScreen extends MenuScreen {
             PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) 127);
           }
           pointerPressDebounce: {
-            previousPointerPressCountdown = TextTemplateDefinitionLoader.field_a;
-            TextTemplateDefinitionLoader.field_a = TextTemplateDefinitionLoader.field_a - 1;
+            previousPointerPressCountdown = TextTemplateDefinitionLoader.menuPointerPressDebounceTicks;
+            TextTemplateDefinitionLoader.menuPointerPressDebounceTicks = TextTemplateDefinitionLoader.menuPointerPressDebounceTicks - 1;
             if (0 > previousPointerPressCountdown) {
               if (CheckboxRenderer.pointerPressButtonSnapshot == 0) {
                 break pointerPressDebounce;
               }
-              TextTemplateDefinitionLoader.field_a = 50;
+              TextTemplateDefinitionLoader.menuPointerPressDebounceTicks = 50;
               if (clientControlFlowGuard == 0) {
                 break pointerPressDebounce;
               }
@@ -1252,7 +1252,7 @@ final class GameScreen extends MenuScreen {
                 }
               }
               if ((TextTemplateDefinition.field_n > 0) &&
-                  (null != InstrumentPatch.field_n)) {
+                  (null != InstrumentPatch.activeFullscreenCanvas)) {
                 if ((FullscreenFocusCanvas.pointerPressYSnapshot > 317) &&
                     (352 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
                   if (!((AccountCreationSupport.pointerPressXSnapshot > 350) &&
@@ -1297,13 +1297,13 @@ final class GameScreen extends MenuScreen {
           this.previousPointerX = PrefixCodeDecoder.pointerXSnapshot;
           if (this.selectedItemIndex != 0) {
             inputDerivedStateUpdate: {
-              inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.field_c - SessionTextHistorySupport.currentKeyboardEventCode)) % 8;
+              inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.inputAndScoreContextSelectorSeed - SessionTextHistorySupport.currentKeyboardEventCode)) % 8;
               if (inputDerivedStateBranch != 0) {
                 if (inputDerivedStateBranch != 1) {
                   if (inputDerivedStateBranch != 2) {
                     if (inputDerivedStateBranch == 3) {
-                      ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
-                      UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
+                      ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                      UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                       if (clientControlFlowGuard == 0) {
                         break inputDerivedStateUpdate;
                       }
@@ -1311,8 +1311,8 @@ final class GameScreen extends MenuScreen {
                     if (inputDerivedStateBranch != 4) {
                       if (inputDerivedStateBranch != 5) {
                         if (6 == inputDerivedStateBranch) {
-                          DequeCursor.field_g = DequeCursor.field_g - 1;
-                          SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - UsernameResponseSupport.field_d;
+                          DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                          SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
                           if (clientControlFlowGuard == 0) {
                             break inputDerivedStateUpdate;
                           }
@@ -1320,40 +1320,40 @@ final class GameScreen extends MenuScreen {
                         if (inputDerivedStateBranch != 7) {
                           break inputDerivedStateUpdate;
                         }
-                        UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
-                        SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - DequeCursor.field_g;
+                        UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                        SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
                         if (clientControlFlowGuard == 0) {
                           break inputDerivedStateUpdate;
                         }
                       }
-                      UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
-                      SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + DequeCursor.field_g;
+                      UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                      SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
                       if (clientControlFlowGuard == 0) {
                         break inputDerivedStateUpdate;
                       }
                     }
-                    DequeCursor.field_g = DequeCursor.field_g + 1;
-                    SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + UsernameResponseSupport.field_d;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
                     if (clientControlFlowGuard == 0) {
                       break inputDerivedStateUpdate;
                     }
                   }
-                  ClientClockSupport.field_a = ClientClockSupport.field_a - UsernameResponseSupport.field_d;
-                  DequeCursor.field_g = DequeCursor.field_g + 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
                   if (clientControlFlowGuard == 0) {
                     break inputDerivedStateUpdate;
                   }
                 }
-                ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
-                UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
+                ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
                 if (clientControlFlowGuard == 0) {
                   break inputDerivedStateUpdate;
                 }
               }
-              ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
-              DequeCursor.field_g = DequeCursor.field_g - 1;
+              ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+              DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
             }
-            inputDerivedStateBranch = (SessionTextHistorySupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.field_c)) % 5;
+            inputDerivedStateBranch = (SessionTextHistorySupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.inputAndScoreContextSelectorSeed)) % 5;
             if (0 != inputDerivedStateBranch) {
               if (inputDerivedStateBranch != 1) {
                 if (inputDerivedStateBranch == 2) {
@@ -1478,34 +1478,34 @@ final class GameScreen extends MenuScreen {
                   break L2;
                 }
               }
-              KeyboardInputListener.field_a.setAsRasterTarget();
+              KeyboardInputListener.entityAndTutorialScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled(-10 + (KeyboardInputListener.field_a.fullWidth >> 1), (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
+              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled(-10 + (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), (KeyboardInputListener.entityAndTutorialScratchRaster.fullHeight >> 1) - 10, 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.field_a.fullWidth >> 1));
+              KeyboardInputListener.entityAndTutorialScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1));
               orbitAngle = (int)((this.tutorialOrbitAngleRadians + orbitAngleSpacing) / 6.283185307179586 * 65535.0 + 0.5);
               orbitXOrPageIndexOrLineHeight = (int)(-Math.sin(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius + 0.5) + orbitCenterX;
               orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(0.5 + Math.cos(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius);
-              KeyboardInputListener.field_a.setAsRasterTarget();
+              KeyboardInputListener.entityAndTutorialScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
+              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1) - 10, (KeyboardInputListener.entityAndTutorialScratchRaster.fullHeight >> 1) - 10, 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), -(KeyboardInputListener.field_a.fullWidth >> 1) + orbitYOrParagraphWidth);
+              KeyboardInputListener.entityAndTutorialScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), -(KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1) + orbitYOrParagraphWidth);
               orbitAngleSpacing = orbitAngleSpacing * 2.0;
               orbitAngle = (int)(0.5 + (this.tutorialOrbitAngleRadians + orbitAngleSpacing) / 6.283185307179586 * 65535.0);
               orbitXOrPageIndexOrLineHeight = (int)(0.5 + -Math.sin(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius) + orbitCenterX;
               orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(Math.cos(this.tutorialOrbitAngleRadians + orbitAngleSpacing) * (double)this.tutorialOrbitRadius + 0.5);
-              KeyboardInputListener.field_a.setAsRasterTarget();
+              KeyboardInputListener.entityAndTutorialScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.field_a.fullHeight >> 1), 20, 20);
+              VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.entityAndTutorialScratchRaster.fullHeight >> 1), 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.field_a.fullWidth >> 1));
+              KeyboardInputListener.entityAndTutorialScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1));
             }
             SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
           }
@@ -1931,7 +1931,7 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 4:
-                  if (InstrumentPatch.field_n == null) {
+                  if (InstrumentPatch.activeFullscreenCanvas == null) {
                     this.fullscreenDialogActive = true;
                   }
                   if ((!ArchiveCatalog.exitFullscreenIfActive(255)) &&
@@ -2227,7 +2227,7 @@ final class GameScreen extends MenuScreen {
             }
           }
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
-          actionText = RasterTargetSnapshot.field_f[actionId];
+          actionText = RasterTargetSnapshot.menuActionTexts[actionId];
           if (actionId == 15) {
             if (!((displayedTutorialPageIndex == 4) &&
                 (SpriteCheckboxRenderer.previousMenuScreenId != 1))) {

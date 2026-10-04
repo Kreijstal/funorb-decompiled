@@ -6,7 +6,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
     int framebufferHeight;
     static long[] updateTimeHistoryMillis;
     static Sprite[] introFaceFrames;
-    static String[] field_f;
+    static String[] menuActionTexts;
     int[] pixels;
     int clipBottom;
     static int pendingActionPanelHeight;
@@ -63,7 +63,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
             previousText = null;
             entitiesById = null;
             updateTimeHistoryMillis = null;
-            field_f = null;
+            menuActionTexts = null;
             introFaceFrames = null;
             return;
         }
@@ -71,7 +71,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
         previousText = null;
         entitiesById = null;
         updateTimeHistoryMillis = null;
-        field_f = null;
+        menuActionTexts = null;
         introFaceFrames = null;
     }
 

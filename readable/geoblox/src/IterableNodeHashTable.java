@@ -20,7 +20,7 @@ final class IterableNodeHashTable implements Iterable {
         int ticketCountFromSessionAccessByte;
         int clientControlSnapshot;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
-        MeshPrioritySupport.field_d = false;
+        MeshPrioritySupport.messageDialogUiFlowActive = false;
         if (methodGuard != -12618) {
           return;
         }
@@ -186,7 +186,7 @@ final class IterableNodeHashTable implements Iterable {
               if (null == GameScreen.errorReportApplet) {
                 return;
               }
-              dispatcherSnapshot = SpriteButtonRenderer.field_s;
+              dispatcherSnapshot = SpriteButtonRenderer.appletTaskDispatcher;
               urlRequestGuard = -14;
               unusedUrlReceiverBeforeIdentity = null;
               unusedUrlConstructorReceiverBeforeIdentity = null;

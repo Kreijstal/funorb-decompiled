@@ -7,10 +7,10 @@ final class ArchiveLoadSequence {
     private int progressScale;
     private ArchiveLoadStep[] steps;
     String statusText;
-    static String field_f;
+    static String fetchingHighscoresText;
     private int stepCount;
     static long archiveHandshakeDeadlineMillis;
-    static int field_i;
+    static int emptyBoardResultAchievementId;
     private int currentStepIndex;
 
     private final void updateStepProgress(int percentage, ArchiveLoadStep step, int methodGuard) {
@@ -32,10 +32,10 @@ final class ArchiveLoadSequence {
         }
     }
 
-    public static void a(byte param0) {
-        field_f = null;
+    public static void releaseStaticReferences(byte methodGuard) {
+        fetchingHighscoresText = null;
         mouseBoxFrames = null;
-        if (param0 <= -68) {
+        if (methodGuard <= -68) {
             return;
         }
         ArchiveLoadSequence.handleArchiveHandshakeFailure(-101, -31);
@@ -94,7 +94,7 @@ final class ArchiveLoadSequence {
                     return 5;
                 }
                 if (methodGuard != 28625) {
-                    field_i = -67;
+                    emptyBoardResultAchievementId = -67;
                     if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
@@ -110,7 +110,7 @@ final class ArchiveLoadSequence {
             }
             if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {
                 if (methodGuard != 28625) {
-                    field_i = -67;
+                    emptyBoardResultAchievementId = -67;
                     if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
@@ -125,7 +125,7 @@ final class ArchiveLoadSequence {
                 return 5;
             }
             if (methodGuard != 28625) {
-                field_i = -67;
+                emptyBoardResultAchievementId = -67;
                 if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
@@ -147,7 +147,7 @@ final class ArchiveLoadSequence {
                     return 5;
                 }
                 if (methodGuard != 28625) {
-                    field_i = -67;
+                    emptyBoardResultAchievementId = -67;
                     if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
@@ -162,7 +162,7 @@ final class ArchiveLoadSequence {
                 return 5;
             }
             if (methodGuard != 28625) {
-                field_i = -67;
+                emptyBoardResultAchievementId = -67;
                 if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
@@ -181,7 +181,7 @@ final class ArchiveLoadSequence {
             }
             if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {
                 if (methodGuard != 28625) {
-                    field_i = -67;
+                    emptyBoardResultAchievementId = -67;
                     if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
@@ -196,7 +196,7 @@ final class ArchiveLoadSequence {
                 return 5;
             }
             if (methodGuard != 28625) {
-                field_i = -67;
+                emptyBoardResultAchievementId = -67;
                 if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
@@ -211,7 +211,7 @@ final class ArchiveLoadSequence {
             return 5;
         }
         if (methodGuard != 28625) {
-            field_i = -67;
+            emptyBoardResultAchievementId = -67;
             if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
@@ -237,7 +237,7 @@ final class ArchiveLoadSequence {
             try {
               try {
                 if (param1 <= 109) {
-                  field_f = (String) null;
+                  fetchingHighscoresText = (String) null;
                 }
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
                 var3 = SessionGameApplet.applySessionOverridesToUrl(var3, 59, param0);
@@ -279,7 +279,7 @@ final class ArchiveLoadSequence {
     }
 
     static {
-        field_f = "Fetching highscores.";
-        field_i = 2;
+        fetchingHighscoresText = "Fetching highscores.";
+        emptyBoardResultAchievementId = 2;
     }
 }

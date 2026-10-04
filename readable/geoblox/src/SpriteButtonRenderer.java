@@ -3,9 +3,9 @@
  */
 final class SpriteButtonRenderer extends TextWidgetRenderer {
     static String createSelectAlternativeText;
-    static PlatformTaskDispatcher field_s;
-    static LoginPanel field_t;
-    static int field_r;
+    static PlatformTaskDispatcher appletTaskDispatcher;
+    static LoginPanel activeLoginPanel;
+    static int secondScoreContextAccumulator;
     private int normalColor;
     private int highlightColor;
     private int disabledColor;
@@ -72,14 +72,14 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
     public static void b(int param0) {
         if (param0 == 16777215) {
             createSelectAlternativeText = null;
-            field_t = null;
-            field_s = null;
+            activeLoginPanel = null;
+            appletTaskDispatcher = null;
             return;
         }
         SpriteButtonRenderer.b(11);
         createSelectAlternativeText = null;
-        field_t = null;
-        field_s = null;
+        activeLoginPanel = null;
+        appletTaskDispatcher = null;
     }
 
     private SpriteButtonRenderer(int param0, int param1, int param2) {
@@ -94,8 +94,8 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
         String var1 = null;
         if (param0 == 7789) {
             var1 = "";
-            if (!(null == field_t)) {
-                var1 = field_t.getLoginIdentifierOrEmpty(87);
+            if (!(null == activeLoginPanel)) {
+                var1 = activeLoginPanel.getLoginIdentifierOrEmpty(87);
             }
             if (var1.length() == 0) {
                 var1 = DualLinkNode.getSessionTextOrEmpty((byte) -53);

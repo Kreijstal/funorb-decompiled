@@ -107,12 +107,12 @@ final class GameplayEntity extends DualLinkNode {
             SoftwareRasterizer.clearFramebuffer();
             this.entitySprite.draw(-(this.entitySprite.fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (this.entitySprite.fullHeight >> 1));
           } else {
-            KeyboardInputListener.field_a.setAsRasterTarget();
+            KeyboardInputListener.entityAndTutorialScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + KeyboardInputListener.field_a.fullWidth >> 1, -this.entitySprite.fullHeight + KeyboardInputListener.field_a.fullHeight >> 1, this.interpolatedPaletteColor);
+            this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1, -this.entitySprite.fullHeight + KeyboardInputListener.entityAndTutorialScratchRaster.fullHeight >> 1, this.interpolatedPaletteColor);
             HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            KeyboardInputListener.field_a.rotateSmooth(KeyboardInputListener.field_a.fullWidth << 3, KeyboardInputListener.field_a.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
+            KeyboardInputListener.entityAndTutorialScratchRaster.rotateSmooth(KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth << 3, KeyboardInputListener.entityAndTutorialScratchRaster.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
           }
         }
         sentinelDivisionGuard = 2 % ((-23 - methodGuard) / 60);
@@ -568,7 +568,7 @@ final class GameplayEntity extends DualLinkNode {
     final static void registerAudioStream(boolean param0, PcmSampleStream param1) {
         try {
             PrefixCodeDecoder.trackedSoundEffectStreams.addLast(-74, new TrackedPcmStream(param1, param1));
-            WhirlpoolHash.field_d.addChildStream(param1);
+            WhirlpoolHash.gameSoundMixer.addChildStream(param1);
             if (param0) {
                 PcmSampleStream var3 = (PcmSampleStream) null;
                 GameplayEntity.registerAudioStream(false, (PcmSampleStream) null);

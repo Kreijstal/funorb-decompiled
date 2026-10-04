@@ -5,7 +5,7 @@ final class DequeCursor {
     static ArchiveCatalog archiveCatalog;
     static int logoAnimationTick;
     static int field_c;
-    static int field_g;
+    static int fourthScoreContextCounter;
     private IntrusiveDeque deque;
     private IntrusiveNode pendingNode;
     static int pendingTooltipAnchorY;
@@ -73,7 +73,7 @@ final class DequeCursor {
             this.pendingNode = firstNode.nextNode;
             return firstNode;
         }
-        field_g = -4;
+        fourthScoreContextCounter = -4;
         this.pendingNode = firstNode.nextNode;
         return firstNode;
     }
@@ -130,7 +130,7 @@ final class DequeCursor {
             pendingActionBeforeReturn = pendingAction;
             return pendingActionBeforeReturn;
           }
-          if (MeshPrioritySupport.field_d) {
+          if (MeshPrioritySupport.messageDialogUiFlowActive) {
             loginActionBeforeReturn = 3;
             return loginActionBeforeReturn;
           }

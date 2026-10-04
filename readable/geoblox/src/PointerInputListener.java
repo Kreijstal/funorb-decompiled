@@ -3,7 +3,7 @@
  */
 final class PointerInputListener implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static String[] loadingTextByLanguage;
-    static int field_a;
+    static int boardClearAchievementId;
 
     final static void a(byte param0) {
         ArchiveNetworkClient.movingEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
@@ -281,6 +281,6 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
 
     static {
         loadingTextByLanguage = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
-        field_a = 1;
+        boardClearAchievementId = 1;
     }
 }

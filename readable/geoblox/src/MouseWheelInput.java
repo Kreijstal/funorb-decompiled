@@ -5,7 +5,7 @@ abstract class MouseWheelInput {
     static int primarySocialListState;
     static AchievementQuery achievementStateQuery;
     static Sprite[] field_e;
-    static DisplayNamePanel field_d;
+    static DisplayNamePanel activeDisplayNamePanel;
     static int[] secondVertexTransformedZ;
 
     abstract void detachWheelListener(java.awt.Component component, byte methodGuard);
@@ -80,7 +80,7 @@ abstract class MouseWheelInput {
         if (param0 >= -9) {
             return;
         }
-        field_d = null;
+        activeDisplayNamePanel = null;
     }
 
     static {

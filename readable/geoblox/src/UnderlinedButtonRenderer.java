@@ -8,13 +8,13 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
     static int field_c;
     static Sprite[] field_e;
 
-    final static void b(int param0) {
+    final static void resetAccountUiFlow(int methodGuard) {
         AgeValidator.reconnectingLoginMode = false;
-        MeshPrioritySupport.field_d = false;
+        MeshPrioritySupport.messageDialogUiFlowActive = false;
         MidiNote.setPendingLoginUiAction(-1, false);
         WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
         ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
-        if (param0 != -6011) {
+        if (methodGuard != -6011) {
             field_c = 36;
         }
     }

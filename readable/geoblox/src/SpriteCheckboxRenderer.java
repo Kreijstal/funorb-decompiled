@@ -4,7 +4,7 @@
 final class SpriteCheckboxRenderer implements WidgetRenderer {
     static Sprite boardSceneRaster;
     static BufferedSocket sessionSocket;
-    static int field_f;
+    static int loginDebugPermissionLevel;
     static String accountCreationDisplayName;
     static int gameMusicVolumeLevel;
     static int previousMenuScreenId;

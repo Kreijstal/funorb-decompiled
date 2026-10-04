@@ -491,7 +491,7 @@ final class GameplaySession {
           if (!this.tutorialMode) {
             if (this.delayedActionCountdown > 0) {
               PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 60 - (PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240);
-              FadingDialog.uiPaletteFont.drawCenteredText(KeyboardInputListener.field_b, 320, 310, 0, -1);
+              FadingDialog.uiPaletteFont.drawCenteredText(KeyboardInputListener.clearBonusText, 320, 310, 0, -1);
             }
             ReflectionCheckRequest.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
             if ((640 > this.pointsPanelX) &&
@@ -500,7 +500,7 @@ final class GameplaySession {
             }
             if (this.showSessionCounters) {
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(SingleChildWidget.fpsTextTemplate, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LoginPayloadKind.levelTextTemplate, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             gameOverTitleRendering: {
               ProxyAuthenticationRequiredException.drawScorePopups(-117);
@@ -518,7 +518,7 @@ final class GameplaySession {
               }
             }
             settledResultRendering: {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.scoreTextTemplate, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (EntityContactSupport.areEntityQueuesSettled(0)) {
                 if (!((0 != this.sessionPhase) &&
                       (this.sessionPhase != 1))) {
@@ -648,46 +648,46 @@ final class GameplaySession {
               negativeRotationAndStateUpdate: {
                 this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
-                inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
+                inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
                 if (inputDerivedModuloIndex == 0) {
-                  ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
-                  DequeCursor.field_g = DequeCursor.field_g - 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
                   if (clientControlFlowGuard == 0) {
                     break negativeRotationAndStateUpdate;
                   }
                 }
                 if (inputDerivedModuloIndex == 1) {
-                  ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
-                  UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
                   if (clientControlFlowGuard == 0) {
                     break negativeRotationAndStateUpdate;
                   }
                 }
                 if (inputDerivedModuloIndex != 2) {
                   if (3 == inputDerivedModuloIndex) {
-                    ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
-                    UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
                   }
                   if (4 == inputDerivedModuloIndex) {
-                    SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + UsernameResponseSupport.field_d;
-                    DequeCursor.field_g = DequeCursor.field_g + 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
                   }
                   if (inputDerivedModuloIndex == 5) {
-                    UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
-                    SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + DequeCursor.field_g;
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
                   }
                   if (inputDerivedModuloIndex == 6) {
-                    SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - UsernameResponseSupport.field_d;
-                    DequeCursor.field_g = DequeCursor.field_g - 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
@@ -695,17 +695,17 @@ final class GameplaySession {
                   if (inputDerivedModuloIndex != 7) {
                     break negativeRotationAndStateUpdate;
                   }
-                  UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
-                  SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - DequeCursor.field_g;
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
                   if (clientControlFlowGuard == 0) {
                     break negativeRotationAndStateUpdate;
                   }
                 }
-                DequeCursor.field_g = DequeCursor.field_g + 1;
-                ClientClockSupport.field_a = ClientClockSupport.field_a - UsernameResponseSupport.field_d;
+                DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
               }
               negativeRotationAchievementTracking: {
-                inputDerivedModuloIndex = (ClientFlowState.field_c + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
+                inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
                   AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
                   if (clientControlFlowGuard == 0) {
@@ -751,34 +751,34 @@ final class GameplaySession {
                   this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                 }
                 positiveRotationTrackingUpdate: {
-                  inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.field_c) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
+                  inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.inputAndScoreContextSelectorSeed) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
                   if (inputDerivedModuloIndex != 0) {
                     if (1 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex != 2) {
                         if (inputDerivedModuloIndex == 3) {
-                          UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
-                          ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
+                          UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                          ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
                           if (clientControlFlowGuard == 0) {
                             break positiveRotationTrackingUpdate;
                           }
                         }
                         if (4 == inputDerivedModuloIndex) {
-                          DequeCursor.field_g = DequeCursor.field_g + 1;
-                          SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + UsernameResponseSupport.field_d;
+                          DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                          SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
                           if (clientControlFlowGuard == 0) {
                             break positiveRotationTrackingUpdate;
                           }
                         }
                         if (5 == inputDerivedModuloIndex) {
-                          UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
-                          SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + DequeCursor.field_g;
+                          UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                          SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
                           if (clientControlFlowGuard == 0) {
                             break positiveRotationTrackingUpdate;
                           }
                         }
                         if (inputDerivedModuloIndex == 6) {
-                          SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - UsernameResponseSupport.field_d;
-                          DequeCursor.field_g = DequeCursor.field_g - 1;
+                          SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                          DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
                           if (clientControlFlowGuard == 0) {
                             break positiveRotationTrackingUpdate;
                           }
@@ -786,28 +786,28 @@ final class GameplaySession {
                         if (inputDerivedModuloIndex != 7) {
                           break positiveRotationTrackingUpdate;
                         }
-                        UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
-                        SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - DequeCursor.field_g;
+                        UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                        SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
                         if (clientControlFlowGuard == 0) {
                           break positiveRotationTrackingUpdate;
                         }
                       }
-                      DequeCursor.field_g = DequeCursor.field_g + 1;
-                      ClientClockSupport.field_a = ClientClockSupport.field_a - UsernameResponseSupport.field_d;
+                      DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                      ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
                       if (clientControlFlowGuard == 0) {
                         break positiveRotationTrackingUpdate;
                       }
                     }
-                    ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
-                    UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
                     if (clientControlFlowGuard == 0) {
                       break positiveRotationTrackingUpdate;
                     }
                   }
-                  DequeCursor.field_g = DequeCursor.field_g - 1;
-                  ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
                 }
-                inputDerivedModuloIndex = (ClientFlowState.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
+                inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
                 if (inputDerivedModuloIndex != 0) {
                   if (1 != inputDerivedModuloIndex) {
                     if (2 != inputDerivedModuloIndex) {
@@ -878,7 +878,7 @@ final class GameplaySession {
                 this.connectivityRebuiltThisTick = false;
                 this.delayedActionCountdown = 300;
                 this.boardClearBonusEligible = false;
-                SecondaryNodeDeque.recordAchievement(PointerInputListener.field_a ^ 255, -88, PointerInputListener.field_a);
+                SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
                 if (clientControlFlowGuard == 0) {
                   break boardClearBonusHandling;
                 }
@@ -928,8 +928,8 @@ final class GameplaySession {
             break;
           }
           if (GameAudioState.currentKeyboardEventCharacter > 0) {
-            PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + GameAudioState.currentKeyboardEventCharacter;
-            if (PacketBuffer.field_r.equalsIgnoreCase("fog")) {
+            PacketBuffer.debugCommandCharacterWindow = PacketBuffer.debugCommandCharacterWindow.substring(1) + GameAudioState.currentKeyboardEventCharacter;
+            if (PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("fog")) {
               if (this.showDebugOverview) {
                 toggledDebugOverview = false;
               } else {
@@ -937,8 +937,8 @@ final class GameplaySession {
               }
               ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
             }
-            if ((SpriteCheckboxRenderer.field_f >= 2) &&
-                (PacketBuffer.field_r.equalsIgnoreCase("brk"))) {
+            if ((SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2) &&
+                (PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("brk"))) {
               this.gameApplet.requestIdleDisconnect((byte) 41);
             }
           }
@@ -996,7 +996,7 @@ final class GameplaySession {
             ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
             AvatarFeedbackSupport.requestAvatarFeedback(7, false);
           }
-          if (2 > SpriteCheckboxRenderer.field_f) {
+          if (2 > SpriteCheckboxRenderer.loginDebugPermissionLevel) {
             continue;
           }
           debugKeyCodeOrPointerEventComplement = SessionTextHistorySupport.currentKeyboardEventCode;
@@ -1125,7 +1125,7 @@ final class GameplaySession {
         }
         if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
           if ((this.debugPointerSpawnEnabled) &&
-              (SpriteCheckboxRenderer.field_f >= 2)) {
+              (SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2)) {
             EntitySpawnSupport.spawnEntityAtPointer(-28195, AccountCreationSupport.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
           }
           tutorialAutoAdvance: {
@@ -1206,22 +1206,22 @@ final class GameplaySession {
           this.renderProgressHud(-17);
         }
         L3: {
-          counterSplitMode = ClientFlowState.field_c % 3;
+          counterSplitMode = ClientFlowState.inputAndScoreContextSelectorSeed % 3;
           if (counterSplitMode != 0) {
             if (counterSplitMode == 1) {
-              SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - pointsForCounters;
+              SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - pointsForCounters;
               if (controlFlowGuard == 0) {
                 break L3;
               }
             }
             oneThirdPoints = pointsForCounters / 3;
-            ClientClockSupport.field_a = ClientClockSupport.field_a + oneThirdPoints;
-            SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - (pointsForCounters - oneThirdPoints);
+            ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + oneThirdPoints;
+            SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - (pointsForCounters - oneThirdPoints);
             if (controlFlowGuard == 0) {
               break L3;
             }
           }
-          ClientClockSupport.field_a = ClientClockSupport.field_a + pointsForCounters;
+          ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + pointsForCounters;
         }
         if ((ClientOptionSupport.isClientOptionEnabled(0, -117)) &&
             (this.score >= 7000)) {
@@ -1637,7 +1637,7 @@ final class GameplaySession {
           this.sessionPhase = 5;
           if (this.boardEmptyAtResultStart) {
             PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
-            SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.field_i ^ 255, methodGuard - 101, ArchiveLoadSequence.field_i);
+            SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
             this.connectivityRebuiltThisTick = false;
           }
           PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
@@ -1655,7 +1655,7 @@ final class GameplaySession {
         }
         if ((0 < this.score && !this.submissionBlocked) &&
             (!UnderlinedButtonRenderer.c(-102))) {
-            ContentTransitionDialog.createAndSubmitScore(ClientClockSupport.field_a, 22, UsernameResponseSupport.field_d, 25134, new int[]{this.score}, SpriteButtonRenderer.field_r, 65513, 3, DequeCursor.field_g);
+            ContentTransitionDialog.createAndSubmitScore(ClientClockSupport.firstScoreContextAccumulator, 22, UsernameResponseSupport.thirdScoreContextCounter, 25134, new int[]{this.score}, SpriteButtonRenderer.secondScoreContextAccumulator, 65513, 3, DequeCursor.fourthScoreContextCounter);
         }
         FifoResponseToken.activeHighscoreQuery = null;
     }
@@ -1700,7 +1700,7 @@ final class GameplaySession {
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
           FadingDialog.uiPaletteFont.drawRightAlignedText(SessionSocketSupport.countdownLabelText, 621, 441, 0, -1);
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-          FadingDialog.uiPaletteFont.drawRightAlignedText(LoginMethod.field_b, 621, 468, 0, -1);
+          FadingDialog.uiPaletteFont.drawRightAlignedText(LoginMethod.gameNameText, 621, 468, 0, -1);
           if (remainingThemeReleases <= 10) {
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = EmailAvailabilityValidator.remainingThemeReleaseTextColors[remainingThemeReleases % 5];
             FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
@@ -1764,11 +1764,11 @@ final class GameplaySession {
         this.pendingPopupPoints = 0;
         AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;
         UiWidget.achievementTrackingAccumulator = 8801;
-        SpriteButtonRenderer.field_r = 1385;
+        SpriteButtonRenderer.secondScoreContextAccumulator = 1385;
         AttachedEntityRenderer.achievementTrackingBits = 0;
-        ClientClockSupport.field_a = 4703;
-        DequeCursor.field_g = 5997;
-        UsernameResponseSupport.field_d = 275;
+        ClientClockSupport.firstScoreContextAccumulator = 4703;
+        DequeCursor.fourthScoreContextCounter = 5997;
+        UsernameResponseSupport.thirdScoreContextCounter = 275;
         SessionInstanceState.secondaryAchievementTrackingCounter = 935;
         this.addScore((byte) 127, 0);
         this.addPopupPoints(0, -96);
@@ -1796,7 +1796,7 @@ final class GameplaySession {
             this.renderTutorialPrompt(20);
         }
         if (ArchiveNetworkClient.difficultyStep >= 41) {
-            SecondaryNodeDeque.recordAchievement(255 ^ PacketBuffer.field_m, -103, PacketBuffer.field_m);
+            SecondaryNodeDeque.recordAchievement(255 ^ PacketBuffer.difficultyFortyOneAchievementId, -103, PacketBuffer.difficultyFortyOneAchievementId);
         }
         int nextThemeId = PasswordWidgetRenderer.getThemeForProgress(16);
         GameScreen.selectedThemeId = nextThemeId;
@@ -1894,14 +1894,14 @@ final class GameplaySession {
           if (MultiHandleSliderRenderer.rotatedThemeForegroundRaster == null) {
             MultiHandleSliderRenderer.rotatedThemeForegroundRaster = new Sprite(MatchScoringSupport.selectedThemeForeground.width, MatchScoringSupport.selectedThemeForeground.height);
           }
-          ClientClockSupport.field_a = 4703;
-          UsernameResponseSupport.field_d = 275;
+          ClientClockSupport.firstScoreContextAccumulator = 4703;
+          UsernameResponseSupport.thirdScoreContextCounter = 275;
           SessionInstanceState.secondaryAchievementTrackingCounter = 935;
           AttachedEntityRenderer.achievementTrackingBits = 0;
-          SpriteButtonRenderer.field_r = 1385;
+          SpriteButtonRenderer.secondScoreContextAccumulator = 1385;
           UiWidget.achievementTrackingAccumulator = 8801;
           AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;
-          DequeCursor.field_g = 5997;
+          DequeCursor.fourthScoreContextCounter = 5997;
           this.newActionCount = 0;
           return;
         } catch (java.lang.RuntimeException sessionConstructorException) {
