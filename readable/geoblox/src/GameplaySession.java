@@ -165,18 +165,16 @@ final class GameplaySession {
             allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             urlCharacterIndex = 0;
             while (true) {
-              L2: {
-                if (url.length() > urlCharacterIndex) {
-                  allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
-                  if (clientControlFlowGuard != 0) {
-                    break L2;
-                  }
+              if (url.length() > urlCharacterIndex) {
+                allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
+                if (clientControlFlowGuard == 0) {
                   if (allowedCharacterIndexOrSuccessFlag == -1) {
                     return false;
                   }
                   urlCharacterIndex++;
                   continue;
                 }
+              } else {
                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
                 allowedCharacterIndexOrSuccessFlag = 1;
               }
@@ -920,85 +918,82 @@ final class GameplaySession {
           this.scoreText = (StringBuilder) null;
         }
         while (true) {
-          keyboardEventsAndPointerSnapshot: {
-            if (UiFontResources.pollKeyboardEvent(111)) {
-              if (GameAudioState.currentKeyboardEventCharacter > 0) {
-                PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + GameAudioState.currentKeyboardEventCharacter;
-                if (PacketBuffer.field_r.equalsIgnoreCase("fog")) {
-                  if (this.showDebugOverview) {
-                    toggledDebugOverview = false;
-                  } else {
-                    toggledDebugOverview = true;
-                  }
-                  ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
+          if (UiFontResources.pollKeyboardEvent(111)) {
+            if (GameAudioState.currentKeyboardEventCharacter > 0) {
+              PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + GameAudioState.currentKeyboardEventCharacter;
+              if (PacketBuffer.field_r.equalsIgnoreCase("fog")) {
+                if (this.showDebugOverview) {
+                  toggledDebugOverview = false;
+                } else {
+                  toggledDebugOverview = true;
                 }
-                if ((SpriteCheckboxRenderer.field_f >= 2) &&
-                    (PacketBuffer.field_r.equalsIgnoreCase("brk"))) {
-                  this.gameApplet.h((byte) 41);
+                ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
+              }
+              if ((SpriteCheckboxRenderer.field_f >= 2) &&
+                  (PacketBuffer.field_r.equalsIgnoreCase("brk"))) {
+                this.gameApplet.h((byte) 41);
+              }
+            }
+            if (SessionSnapshotSupport.currentKeyboardEventCode == 13) {
+              if (!this.sessionEnding) {
+                ScoreSubmission.requestedScreenId = 1;
+                if (clientControlFlowGuard == 0) {
+                  return;
                 }
               }
-              if (SessionSnapshotSupport.currentKeyboardEventCode == 13) {
-                if (!this.sessionEnding) {
-                  ScoreSubmission.requestedScreenId = 1;
-                  if (clientControlFlowGuard == 0) {
-                    return;
-                  }
-                }
-                this.requestSessionExitScreen(28809);
-                return;
-              }
-              if ((SessionSnapshotSupport.currentKeyboardEventCode == 83) &&
-                  (this.tutorialMode)) {
-                this.leaveTutorial(7000);
-              }
-              tutorialKeyAdvance: {
-                if ((SessionSnapshotSupport.currentKeyboardEventCode == 84) &&
-                    (this.tutorialStepPhase == 0)) {
-                  this.tutorialStepPhase = 1;
-                  this.tutorialPromptActive = false;
-                  if (this.tutorialStepId != 0) {
-                    if (this.tutorialStepId != 1) {
-                      if (this.tutorialStepId != 2) {
-                        break tutorialKeyAdvance;
-                      }
-                      this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
-                      if (clientControlFlowGuard == 0) {
-                        break tutorialKeyAdvance;
-                      }
+              this.requestSessionExitScreen(28809);
+              return;
+            }
+            if ((SessionSnapshotSupport.currentKeyboardEventCode == 83) &&
+                (this.tutorialMode)) {
+              this.leaveTutorial(7000);
+            }
+            tutorialKeyAdvance: {
+              if ((SessionSnapshotSupport.currentKeyboardEventCode == 84) &&
+                  (this.tutorialStepPhase == 0)) {
+                this.tutorialStepPhase = 1;
+                this.tutorialPromptActive = false;
+                if (this.tutorialStepId != 0) {
+                  if (this.tutorialStepId != 1) {
+                    if (this.tutorialStepId != 2) {
+                      break tutorialKeyAdvance;
                     }
-                    this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                    this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
                     if (clientControlFlowGuard == 0) {
                       break tutorialKeyAdvance;
                     }
                   }
-                  this.tutorialProgressMetric = 0;
+                  this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                  if (clientControlFlowGuard == 0) {
+                    break tutorialKeyAdvance;
+                  }
                 }
+                this.tutorialProgressMetric = 0;
               }
-              if ((SessionSnapshotSupport.currentKeyboardEventCode == 85) &&
-                  (5 == this.tutorialStepId) &&
-                  (this.tutorialStepPhase == 0)) {
-                this.leaveTutorial(methodGuard ^ -1578897511);
-                this.tutorialMode = true;
-                this.tutorialStepId = 0;
-                this.tutorialPromptActive = true;
+            }
+            if ((SessionSnapshotSupport.currentKeyboardEventCode == 85) &&
+                (5 == this.tutorialStepId) &&
+                (this.tutorialStepPhase == 0)) {
+              this.leaveTutorial(methodGuard ^ -1578897511);
+              this.tutorialMode = true;
+              this.tutorialStepId = 0;
+              this.tutorialPromptActive = true;
+            }
+            if (SocketConnector.swapRotationControlsKeyCode == SessionSnapshotSupport.currentKeyboardEventCode) {
+              if (this.rotationControlsSwapped) {
+                toggledRotationControlsSwapped = false;
+              } else {
+                toggledRotationControlsSwapped = true;
               }
-              if (SocketConnector.swapRotationControlsKeyCode == SessionSnapshotSupport.currentKeyboardEventCode) {
-                if (this.rotationControlsSwapped) {
-                  toggledRotationControlsSwapped = false;
-                } else {
-                  toggledRotationControlsSwapped = true;
-                }
-                ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
-                AvatarFeedbackSupport.requestAvatarFeedback(7, false);
-              }
-              if (2 > SpriteCheckboxRenderer.field_f) {
-                continue;
-              }
-              debugKeyCodeOrPointerEventComplement = SessionSnapshotSupport.currentKeyboardEventCode;
-              debugKeySentinelOrPointerEventSentinel = 48;
-              if (clientControlFlowGuard != 0) {
-                break keyboardEventsAndPointerSnapshot;
-              }
+              ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
+              AvatarFeedbackSupport.requestAvatarFeedback(7, false);
+            }
+            if (2 > SpriteCheckboxRenderer.field_f) {
+              continue;
+            }
+            debugKeyCodeOrPointerEventComplement = SessionSnapshotSupport.currentKeyboardEventCode;
+            debugKeySentinelOrPointerEventSentinel = 48;
+            if (clientControlFlowGuard == 0) {
               if (debugKeyCodeOrPointerEventComplement == debugKeySentinelOrPointerEventSentinel) {
                 this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
                 if (this.debugSpawnVariantId < 0) {
@@ -1118,6 +1113,7 @@ final class GameplaySession {
               this.showSessionCounters = true;
               continue;
             }
+          } else {
             debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
             debugKeySentinelOrPointerEventSentinel = -1;
           }

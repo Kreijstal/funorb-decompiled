@@ -991,12 +991,9 @@ final class GameScreen extends MenuScreen {
                 currentScoreHighlightedFlag = 0;
                 entryIndex = 0;
                 while (true) {
-                  L10: {
-                    if (entryIndex < 10) {
-                      nullEntryOrSessionSentinel = null;
-                      if (clientControlFlowGuard != 0) {
-                        break L10;
-                      }
+                  if (entryIndex < 10) {
+                    nullEntryOrSessionSentinel = null;
+                    if (clientControlFlowGuard == 0) {
                       if (nullEntryOrSessionSentinel != categoryNames[entryIndex]) {
                         hasDisplayedEntryFlag = 1;
                         entryName = categoryNames[entryIndex];
@@ -1018,6 +1015,7 @@ final class GameScreen extends MenuScreen {
                       entryIndex++;
                       continue;
                     }
+                  } else {
                     if (currentScoreHighlightedFlag != 0) {
                       break;
                     }

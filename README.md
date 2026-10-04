@@ -17,12 +17,44 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/2677205ae25fec66c48784e948b8665f556f1121/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ae6a72a78b800823d1065e198cbb858be26a4d12/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 130 extends guarded-exit recovery to complete multi-statement suffixes.
+Ten labeled exits become ordinary conditional alternatives across eight methods:
+highscore rendering, Windows-shell URL validation, the gameplay keyboard loop,
+both mesh face-queue entry points, domain-label validation, three board
+reconciliation loops and nine-slice construction. The suffix stays together
+under the inverse guard, including nested scopes and cleanup; the complete
+fallback becomes `else`. Prefix evaluation, nonzero control-flag paths, numeric
+states, effect order, original diagnostics and exception/monitor boundaries remain.
+The debug renderer retains its frame because another fallback path also exits it.
+
+The raw tree loses twenty lines and ten block labels: 76,272 lines,
+188 block labels and 58 loop labels remain. All ordered 136,607 Java bindings
+and 388 override relationships match. Fifteen surviving label ordinals migrate,
+including eight named rules; four consumed label names retire. Every unaffected
+complete rule remains. There are 11,391 naming rules and 157 label edits;
+all 44 surviving labels in the six tracked gameplay/menu/triangle bodies are named.
+Across all 303 sources, eight bodies of at least 300 lines retain labels, including
+`Bzip2Decoder.decodeBlocks` and the `MusicScore` constructor. There are 202 opaque
+labels elsewhere and unmapped members; readability remains unfinished.
+
+Five focused groups pass 514,080 native comparisons and 31 independent oracles,
+including executed/skipped suffixes, scoped locals, throwing cleanup, monitors,
+switch fallthrough, nullable unboxing and loop transfers. The relevant decompiler
+suite passes 108 tests with one existing skip. The source proof checks all 303
+expected token streams, complete ordered bindings and surviving label targets;
+a clean tracked decompiler archive reproduces all source and diagnostics bytes.
+Publication checks and the eight fixed game probes retain their stated scopes.
+Full session/menu rendering/update, real mesh queueing and shell launch, assets,
+servers, browser/phone and heap/FPS acceptance remain unverified.
+
+Earlier guarded abrupt recovery (pass 129):
 
 Pass 129 replaces eight labeled exits with ordinary conditional alternatives
 across six bodies. Three disappear from `GameplaySession.renderSession` and one
@@ -311,7 +343,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`fb97147a54cecccd775d549ef27ac23236b57b144d185cc454953cff0bb67970`.
+`8c7b8224e9e9ed7d001a66fc4bfac1388938096de96095e5e2f5bcfc06780752`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls

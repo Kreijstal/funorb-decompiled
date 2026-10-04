@@ -106,12 +106,9 @@ final class BoardReconciliationSupport {
           while (true) {
             movingAndConnectivityPhase: {
               connectivityRebuild: {
-                attachedQueueSelection: {
-                  if (activeEntity != null) {
-                    entityQueueThenAttachedQueue = activeEntity.entityQueue;
-                    if (clientControlSnapshot != 0) {
-                      break attachedQueueSelection;
-                    }
+                if (activeEntity != null) {
+                  entityQueueThenAttachedQueue = activeEntity.entityQueue;
+                  if (clientControlSnapshot == 0) {
                     if (entityQueueThenAttachedQueue != BoardEntityState.attachedEntities) {
                       if (!(!activeEntity.detachedFromBoard)) {
                         MessageDialogSupport.entitiesDetachedThisTick = true;
@@ -128,6 +125,7 @@ final class BoardReconciliationSupport {
                     activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                     continue;
                   }
+                } else {
                   if (!RankedListQuery.connectivityDirty) {
                     break connectivityRebuild;
                   }
@@ -135,14 +133,11 @@ final class BoardReconciliationSupport {
                 }
                 activeEntity = (GameplayEntity) ((Object) ((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
                 while (true) {
-                  attachedEntityVisitAndFlagReset: {
-                    if (activeEntity != null) {
-                      visitedByEntityIdValue = PacketBuffer.connectivityVisitedByEntityId[activeEntity.entityId];
-                      visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
-                      alreadyVisited = visitedByEntityIdValue;
-                      if (clientControlSnapshot != 0) {
-                        break attachedEntityVisitAndFlagReset;
-                      }
+                  if (activeEntity != null) {
+                    visitedByEntityIdValue = PacketBuffer.connectivityVisitedByEntityId[activeEntity.entityId];
+                    visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
+                    alreadyVisited = visitedByEntityIdValue;
+                    if (clientControlSnapshot == 0) {
                       componentSearchAndDetach: {
                         if ((alreadyVisited) &&
                             (clientControlSnapshot == 0)) {
@@ -241,6 +236,7 @@ final class BoardReconciliationSupport {
                       activeEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
                       continue;
                     }
+                  } else {
                     RankedListQuery.connectivityDirty = false;
                     UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
                     visitedFlagThenResetIndex = 0;
@@ -359,11 +355,8 @@ final class BoardReconciliationSupport {
             methodGuardResidue = -23 / ((methodGuard - 69) / 46);
             categoryResetThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
             while (true) {
-              transientRoutingAndShockFeedback: {
-                if (categoryResetThenTransientEntity != null) {
-                  if (clientControlSnapshot != 0) {
-                    break transientRoutingAndShockFeedback;
-                  }
+              if (categoryResetThenTransientEntity != null) {
+                if (clientControlSnapshot == 0) {
                   if (SecondaryNodeDeque.availableEntities == categoryResetThenTransientEntity.entityQueue) {
                     categoryResetThenTransientEntity.unlinkNode(false);
                     categoryResetThenTransientEntity.unlinkSecondaryNode((byte) 51);
@@ -373,6 +366,7 @@ final class BoardReconciliationSupport {
                   categoryResetThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
                   continue;
                 }
+              } else {
                 if (SessionSocketSupport.avatarShockPending) {
                   AvatarFeedbackSupport.requestAvatarFeedback(3, false);
                   Bzip2DecoderState.avatarShockContactPending = false;

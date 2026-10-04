@@ -110,16 +110,14 @@ final class FullscreenSupport {
             return overlongLabelFailure;
           }
           for (characterIndex = 0; labelLength > characterIndex; characterIndex++) {
-            L2: {
-              characterCode = domainLabel.charAt(characterIndex);
-              if (45 == characterCode) {
-                if ((characterIndex != 0) &&
-                    (characterIndex != -1 + labelLength)) {
-                  break L2;
-                }
+            characterCode = domainLabel.charAt(characterIndex);
+            if (45 == characterCode) {
+              if (!((characterIndex != 0) &&
+                  (characterIndex != -1 + labelLength))) {
                 edgeHyphenFailure = ArchiveLoadStep.field_h;
                 return edgeHyphenFailure;
               }
+            } else {
               if (PacketBuffer.field_q.indexOf(characterCode) == -1) {
                 invalidCharacterFailure = ArchiveLoadStep.field_h;
                 return invalidCharacterFailure;

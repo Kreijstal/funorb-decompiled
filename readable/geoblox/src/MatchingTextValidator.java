@@ -95,12 +95,9 @@ final class MatchingTextValidator extends TextInputValidator {
               stackIn_24_0 = borderIndex;
               stackIn_24_1 = outerBorderWidth;
               while (true) {
-                L14: {
-                  if (stackIn_24_0 < stackIn_24_1) {
-                    stackIn_34_0 = 0;
-                    if (controlFlowGuard != 0) {
-                      break L14;
-                    }
+                if (stackIn_24_0 < stackIn_24_1) {
+                  stackIn_34_0 = 0;
+                  if (controlFlowGuard == 0) {
                     scanIndex = stackIn_34_0;
                     while (cornerSize > scanIndex) {
                       slices[0].pixels[scanIndex + borderIndex * cornerSize] = topLeftBorderColor;
@@ -117,6 +114,7 @@ final class MatchingTextValidator extends TextInputValidator {
                     borderIndex++;
                     continue L12;
                   }
+                } else {
                   stackIn_34_0 = 0;
                 }
                 borderIndex = stackIn_34_0;

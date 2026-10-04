@@ -128,17 +128,14 @@ final class MeshDepthSupport {
           GameApplet.queuedMeshFaceCount = 0;
           faceIndexOrPriorityPrefix = 0;
           while (true) {
-            L2: {
-              if (faceIndexOrPriorityPrefix < mesh.faceCount) {
-                vertexAOrPriorityIndex = mesh.faceVertexA[faceIndexOrPriorityPrefix];
-                vertexBOrPriorityCount = mesh.faceVertexB[faceIndexOrPriorityPrefix];
-                vertexC = mesh.faceVertexC[faceIndexOrPriorityPrefix];
-                cullBackfacesCarrier = cullBackfaces;
-                cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
-                cullBackfacesSnapshot = cullBackfacesCarrier;
-                if (controlFlagSnapshot != 0) {
-                  break L2;
-                }
+            if (faceIndexOrPriorityPrefix < mesh.faceCount) {
+              vertexAOrPriorityIndex = mesh.faceVertexA[faceIndexOrPriorityPrefix];
+              vertexBOrPriorityCount = mesh.faceVertexB[faceIndexOrPriorityPrefix];
+              vertexC = mesh.faceVertexC[faceIndexOrPriorityPrefix];
+              cullBackfacesCarrier = cullBackfaces;
+              cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
+              cullBackfacesSnapshot = cullBackfacesCarrier;
+              if (controlFlagSnapshot == 0) {
                 L4: {
                   if (cullBackfacesSnapshot) {
                     projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
@@ -199,6 +196,7 @@ final class MeshDepthSupport {
                 faceIndexOrPriorityPrefix++;
                 continue;
               }
+            } else {
               cullFlagOrPriorityLoopSentinel = -1;
             }
             if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
@@ -279,17 +277,14 @@ final class MeshDepthSupport {
           GameApplet.queuedMeshFaceCount = 0;
           faceIndexOrPriorityPrefix = 0;
           while (true) {
-            L2: {
-              if (faceIndexOrPriorityPrefix < mesh.faceCount) {
-                vertexAOrPriorityIndex = mesh.faceVertexA[faceIndexOrPriorityPrefix];
-                vertexBOrPriorityCount = mesh.faceVertexB[faceIndexOrPriorityPrefix];
-                vertexC = mesh.faceVertexC[faceIndexOrPriorityPrefix];
-                cullBackfacesCarrier = cullBackfaces;
-                cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
-                cullBackfacesSnapshot = cullBackfacesCarrier;
-                if (controlFlagSnapshot != 0) {
-                  break L2;
-                }
+            if (faceIndexOrPriorityPrefix < mesh.faceCount) {
+              vertexAOrPriorityIndex = mesh.faceVertexA[faceIndexOrPriorityPrefix];
+              vertexBOrPriorityCount = mesh.faceVertexB[faceIndexOrPriorityPrefix];
+              vertexC = mesh.faceVertexC[faceIndexOrPriorityPrefix];
+              cullBackfacesCarrier = cullBackfaces;
+              cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
+              cullBackfacesSnapshot = cullBackfacesCarrier;
+              if (controlFlagSnapshot == 0) {
                 L4: {
                   if (cullBackfacesSnapshot) {
                     projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
@@ -350,6 +345,7 @@ final class MeshDepthSupport {
                 faceIndexOrPriorityPrefix++;
                 continue;
               }
+            } else {
               cullFlagOrPriorityLoopSentinel = -1;
             }
             if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
