@@ -1546,7 +1546,7 @@ final class GameplaySession {
               L4: while (true) {
                 comparisonLeftColumnOrZero = spriteColumn;
                 comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
-                while (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
+                if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
                   rowStartOrMusicGuard = 0;
                   if (controlFlowGuard != 0) {
                     break L1;

@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0b4ae750818801dee72c8b3e097a930bc4687edf/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/364dcb8cead1403a17f5395541c6049e9b9d75a8/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 134)
+## Current readability (pass 135)
 
 The export has 11,812 guarded names and 88,935 Java identifier edits, plus 11
 class-name literal edits and 184 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -23,6 +23,38 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 135 changes the ending-entity radius column test in
+`GameplaySession.updateResultSequence` from `while` to `if`.
+Its body cannot fall through or continue to that test: after scanning rows and
+advancing the column it continues the enclosing column loop. Nonzero client
+control flags keep their existing exit. The generic decompiler now proves this
+single-evaluation shape using lexical transfer destinations and completion sets.
+Only the keyword changes; the exact condition, complete body, outer backedge,
+declarations, labels, guards and protected/monitor boundaries stay intact.
+
+Labeled breaks remain legal with the same label. Bare own breaks, own continues,
+normal body completion, potentially constant guards, ambiguous destinations and
+unsupported syntax refuse recovery. Inner loop/switch/label exits are consumed
+only by their own destination; catches stay conservative and finally overrides
+retain their effects. Five focused groups pass, including eight native variants
+with 512 comparisons against 512 independent event-model cases. They cover
+nullable/effectful guards, exception identity and catch order, finally return
+snapshots and overrides, labeled/enclosing exits, scopes and monitor release.
+The relevant decompiler suite passes 118 tests with one existing skip.
+
+Fresh CLI decompilation from the tracked source archive produces all 303 files
+with no hard failures or fallbacks. Only the predicted keyword changes;
+diagnostics are byte identical. The shared source proof independently replays
+all 303 complete token streams and preserves 136,607 ordered Java bindings,
+388 overrides and 813 lexical label records without ordinal migrations.
+All 11,812 complete naming rules and 89,130 edits remain; both corpora compile
+and all 303 files reverse byte exactly. The 27 publication checks and eight
+fixed native probes pass within their documented scopes. The result-sequence
+probe retains 27 controlled sequences and 26,043 ticks with minimal sprites;
+it does not establish full asset/device behavior. Eight large labeled bodies,
+192 opaque labels and other unmapped members remain. Full-game/assets/server/
+browser/phone and heap/FPS acceptance remain unverified.
 
 Pass 134 adds 177 guarded names: eleven fields, 22 methods, 48 parameters
 and 96 locals. Cache code now exposes `entryWeight`, `weightCapacity`,

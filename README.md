@@ -17,12 +17,44 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0b4ae750818801dee72c8b3e097a930bc4687edf/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/364dcb8cead1403a17f5395541c6049e9b9d75a8/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 135 changes the ending-entity radius column test in
+`GameplaySession.updateResultSequence` from `while` to `if`.
+Its body cannot fall through or continue to that test: after scanning rows and
+advancing the column it continues the enclosing column loop. Nonzero client
+control flags keep their existing exit. The generic decompiler now proves this
+single-evaluation shape using lexical transfer destinations and completion sets.
+Only the keyword changes; the exact condition, complete body, outer backedge,
+declarations, labels, guards and protected/monitor boundaries stay intact.
+
+Labeled breaks remain legal with the same label. Bare own breaks, own continues,
+normal body completion, potentially constant guards, ambiguous destinations and
+unsupported syntax refuse recovery. Inner loop/switch/label exits are consumed
+only by their own destination; catches stay conservative and finally overrides
+retain their effects. Five focused groups pass, including eight native variants
+with 512 comparisons against 512 independent event-model cases. They cover
+nullable/effectful guards, exception identity and catch order, finally return
+snapshots and overrides, labeled/enclosing exits, scopes and monitor release.
+The relevant decompiler suite passes 118 tests with one existing skip.
+
+Fresh CLI decompilation from the tracked source archive produces all 303 files
+with no hard failures or fallbacks. Only the predicted keyword changes;
+diagnostics are byte identical. The shared source proof independently replays
+all 303 complete token streams and preserves 136,607 ordered Java bindings,
+388 overrides and 813 lexical label records without ordinal migrations.
+All 11,812 complete naming rules and 89,130 edits remain; both corpora compile
+and all 303 files reverse byte exactly. The 27 publication checks and eight
+fixed native probes pass within their documented scopes. The result-sequence
+probe retains 27 controlled sequences and 26,043 ticks with minimal sprites;
+it does not establish full asset/device behavior. Eight large labeled bodies,
+192 opaque labels and other unmapped members remain. Full-game/assets/server/
+browser/phone and heap/FPS acceptance remain unverified.
 
 Pass 134 adds 177 guarded names: eleven fields, 22 methods, 48 parameters
 and 96 locals. Cache code now exposes `entryWeight`, `weightCapacity`,
@@ -490,7 +522,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`41a301061aa8015aa57f55e59599d32fe8ee923ad5af6157c959475b67cd5e68`.
+`841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls

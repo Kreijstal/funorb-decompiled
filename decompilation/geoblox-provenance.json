@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "f45f2f0b4b4e9199475310595f86eb1e48bdbed8",
+      "commit": "f46a79b6f6696993347a45ac51a3090038a841d1",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "41a301061aa8015aa57f55e59599d32fe8ee923ad5af6157c959475b67cd5e68",
-        "reproduce": "git archive --format=tar f45f2f0b4b4e9199475310595f86eb1e48bdbed8 | sha256sum",
+        "sha256": "841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1",
+        "reproduce": "git archive --format=tar f46a79b6f6696993347a45ac51a3090038a841d1 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "1488ba00b524d85eaad1691a6a8c0c825a1f4ac57456d54a3e859308b177b530",
-  "previousSourceTreeSha256": "148a13b580d7766cac813395f98c2385e566c5fe6cce249722233c9fa22bc9ae",
-  "changedJavaFiles": 12,
+  "sourceTreeSha256": "2b3bf4664aaf082ec60395d0b40546cda545920221218af5056a6f6858bbed4a",
+  "previousSourceTreeSha256": "1488ba00b524d85eaad1691a6a8c0c825a1f4ac57456d54a3e859308b177b530",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "0b4ae750818801dee72c8b3e097a930bc4687edf",
+    "commit": "364dcb8cead1403a17f5395541c6049e9b9d75a8",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "3c24a3fbe2d01f22487ddbb3e4917a03ab1ff54ae0ee55257af14f6c75022afe"
+      "sha256": "f5713bb50b6c8f09bd22d2006651a821588737261d6b435612009a9d6fb04160"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "d057ced993055e03a2c8face6a9ad0f1acbce486f7a31a538121688ff45f2332",
+    "outputTreeSha256": "66c61b639e16a0625c01fc2b07be9d8cff22714e2fc17fa83d42eb2c00875cc6",
     "files": 303,
     "rules": 11812,
     "identifierEdits": 88935,
@@ -3326,7 +3326,7 @@
       "remainingOpaqueLoopLabels": 47,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 133
+    "structuralPass": 135
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -4503,5 +4503,121 @@
     "sourceWorkflowCommit": "0b4ae750818801dee72c8b3e097a930bc4687edf",
     "manifestSha256": "3c24a3fbe2d01f22487ddbb3e4917a03ab1ff54ae0ee55257af14f6c75022afe",
     "outputTreeSha256": "d057ced993055e03a2c8face6a9ad0f1acbce486f7a31a538121688ff45f2332"
+  },
+  "nonrepeatingLoopRecovery": {
+    "version": 135,
+    "previousSourceCommit": "3544a947987b40208c58785b448eb27fb89ea65b",
+    "sourceCommit": "1e0fb69ff0bd433000694800cc55db240a0a7f05",
+    "previousSourceTreeSha256": "1488ba00b524d85eaad1691a6a8c0c825a1f4ac57456d54a3e859308b177b530",
+    "sourceTreeSha256": "2b3bf4664aaf082ec60395d0b40546cda545920221218af5056a6f6858bbed4a",
+    "javaToolsCommit": "f46a79b6f6696993347a45ac51a3090038a841d1",
+    "sourceArchiveSha256": "841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1",
+    "nonrepeatingWhileLoops": true,
+    "counts": {
+      "nonrepeatingWhileLoops": 1
+    },
+    "changedJavaFiles": 1,
+    "changedMethodBodies": 1,
+    "sourceLinesBefore": 76230,
+    "sourceLinesAfter": 76230,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 246,
+    "labelDeclarationsAfter": 246,
+    "labelBindingsBefore": 813,
+    "labelBindingsAfter": 813,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "genericFocusedTestGroupsPassed": 5,
+    "nativeComparisons": 512,
+    "independentNativeOracleCases": 512,
+    "nativeDifferentialVariants": 8,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "3332a17b793c5c1088eea57d2ede21670193c677002247410cd47b5d6db1979b",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 331,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 381,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 326,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 343,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 629,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "scope": "A braced while with no normal body completion or own continue can become if. Labeled own breaks remain legal with their original label; unlabeled own breaks refuse. Lexical destinations consume inner loop/switch/label transfers, catches remain conservative and finally overrides are retained. Only the while keyword changes; condition, body, declarations, transfers, scopes and protected/monitor regions stay byte identical. Potentially constant guards, missing/ambiguous labels, unsupported syntax and nested executables refuse. Eight native variants match512 independent event-model cases including nullable/effectful guards, exception identity/catch priority, partial effects, finally return snapshots/overrides, labeled and enclosing exits, scopes and monitor release. GeoBlox applies this once to the ending-entity radius column test in updateResultSequence, whose body continues its enclosing column loop. All303 expected token streams,136607 ordered bindings/388 overrides and813 label records stay accounted for. No client-flag assumption. Existing game probes retain their documented scopes; full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.",
+    "sourceProofWorkflowCommit": "364dcb8cead1403a17f5395541c6049e9b9d75a8"
   }
 }
