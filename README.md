@@ -17,14 +17,53 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c826e5ac76ccc081c622a3e5a014cbd622b1a9cb/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0067653daa55a452f552418d1b1a98902556a155/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,574 bindings,
 preserving 388 override relationships.
 
-## Current gameplay and protocol field naming (pass 180)
+## Current final control-frame cleanup (pass 181)
+
+The generic decompiler now finishes control-frame cleanup after loop and
+predicate recovery. Those later passes can expose breaks whose destinations
+are also reached by normal completion. Four such breaks disappear across
+four bodies in three files. Three unused labels retire, two continues keep
+their nearest loop without a label, and one declaration-free rendering frame
+unwraps. No GeoBlox-specific class/name checks are added to java-tools.
+
+The independent JDK proof checks every removed break's completion path without
+crossing loops, switches, try/catch/finally or monitor boundaries. It resolves
+both localized continues and verifies the unwrapped frame's declarations.
+All 303 exact raw source bytes/token streams are reproduced from the tracked
+decompiler archive. Both corpora compile; every surviving per-occurrence binding,
+label destination and override follows its original source position.
+
+There are 18,449 guarded rules: three obsolete label rules retire and nine
+surviving label ordinals explicitly migrate. All 18,440 unaffected complete
+rules remain exact. There are 19,253 ordinary declarations, 117,321 references,
+388 override pairs, 242 named labels and 802 lexical label records. The export
+records 117,547 identifier, eleven literal and 802 label edits: 118,360 total.
+All 19,495 surviving dictionary identities retain their names; all 303 files
+reverse byte exactly to the new raw input.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/terminalControlCleanup.test.js test/javaAstEmitterLoopExits.test.js test/javaAstEmitterTrailingLoops.test.js test/cfrBranchMergeRegressions.test.js`
+passes 94 generic tests, with one existing optional corpus check skipped.
+From Deko, `JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+passes the complete JDK/source/rule migration proof. All 27 publication tests
+pass; scoped gameplay and result-helper native/raw/readable traces remain exact.
+The four new focused groups add no native runtime cases.
+
+Rendering is now 335 lines/seven labels; board reconciliation is 328 lines/
+seven labels. Eight large labeled bodies and 41 unsupported opaque fields
+remain. All labels and single-letter methods are named. Whole game/renderer/
+assets/server/browser/phone and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`47259c4ff5afa476d4b6f5bfe605de2ef2471c2492477be4daa54d2e8c1710db`.
+
+## Previous gameplay and protocol field naming (pass 180)
 
 Sixteen formerly opaque fields now describe their verified roles. They include
 `fiveMatchChainAchievementId`, `sixMatchChainAchievementId`,

@@ -410,7 +410,6 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       updateSuffixIndexOrVersionDigitOrTickIndex++;
                     } while (clientControlSnapshot == 0);
                   } while (clientControlSnapshot == 0);
-                  break appletExecutionBoundary;
                 }
               } catch (java.lang.Throwable appletLoopFailure) {
                 caughtRunFailure = appletLoopFailure;

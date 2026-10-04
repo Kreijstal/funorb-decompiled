@@ -164,7 +164,7 @@ final class BoardReconciliationSupport {
                             } else {
                               visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
                               componentNeighborIndex = 0;
-                              componentNeighborTraversal: while (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
+                              while (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
                                 neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
                                 poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
                                 componentSearchThenVariantResetEntity = poppedEntityOrSearchStart;
@@ -194,7 +194,7 @@ final class BoardReconciliationSupport {
                                   break;
                                 }
                                 componentNeighborIndex++;
-                                continue componentNeighborTraversal;
+                                continue;
                               }
                               continue componentQueueTraversal;
                             }
@@ -244,7 +244,6 @@ final class BoardReconciliationSupport {
                   }
                   continue;
                 }
-                break connectivityRebuild;
               }
               visitedResetIndexThenKindFourCount = 0;
             }

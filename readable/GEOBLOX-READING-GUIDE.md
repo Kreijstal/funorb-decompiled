@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/c826e5ac76ccc081c622a3e5a014cbd622b1a9cb/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0067653daa55a452f552418d1b1a98902556a155/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 180)
+## Current readability (pass 181)
 
-The export has 18,452 guarded names and 117,547 Java identifier edits, plus 11
-class-name literal edits and 811 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,449 guarded names and 117,547 Java identifier edits, plus 11
+class-name literal edits and 802 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,574 bindings, reproduce and
@@ -24,7 +24,59 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current gameplay and protocol field naming (pass 180)
+## Current final control-frame cleanup (pass 181)
+
+The generic decompiler now finishes control-frame cleanup after loop and
+predicate recovery. Those later passes can expose breaks whose destinations
+are also reached by normal completion. Four such breaks disappear across
+four bodies in three files. Three unused labels retire, two continues keep
+their nearest loop without a label, and one declaration-free rendering frame
+unwraps. No GeoBlox-specific class/name checks are added to java-tools.
+
+The independent JDK proof checks every removed break's completion path without
+crossing loops, switches, try/catch/finally or monitor boundaries. It resolves
+both localized continues and verifies the unwrapped frame's declarations.
+All 303 exact raw source bytes/token streams are reproduced from the tracked
+decompiler archive. Both corpora compile; every surviving per-occurrence binding,
+label destination and override follows its original source position.
+
+There are 18,449 guarded rules: three obsolete label rules retire and nine
+surviving label ordinals explicitly migrate. All 18,440 unaffected complete
+rules remain exact. There are 19,253 ordinary declarations, 117,321 references,
+388 override pairs, 242 named labels and 802 lexical label records. The export
+records 117,547 identifier, eleven literal and 802 label edits: 118,360 total.
+All 19,495 surviving dictionary identities retain their names; all 303 files
+reverse byte exactly to the new raw input.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/terminalControlCleanup.test.js test/javaAstEmitterLoopExits.test.js test/javaAstEmitterTrailingLoops.test.js test/cfrBranchMergeRegressions.test.js`
+passes 94 generic tests, with one existing optional corpus check skipped.
+From Deko, `JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+passes the complete JDK/source/rule migration proof. All 27 publication tests
+pass; scoped gameplay and result-helper native/raw/readable traces remain exact.
+The four new focused groups add no native runtime cases.
+
+Rendering is now 335 lines/seven labels; board reconciliation is 328 lines/
+seven labels. Eight large labeled bodies and 41 unsupported opaque fields
+remain. All labels and single-letter methods are named. Whole game/renderer/
+assets/server/browser/phone and heap/presented-FPS acceptance remain unverified.
+
+The current JDK-verified inventory is:
+
+| Body | Lines | Labels |
+| --- | ---: | ---: |
+| `GameScreen.renderScreen` | 304 | 4 |
+| `GameScreen.updateScreen` | 320 | 5 |
+| `GameplaySession.renderSession` | 335 | 7 |
+| `GameplaySession.updateSession` | 630 | 12 |
+| `BoardReconciliationSupport.reconcileBoardEntities` | 328 | 7 |
+| `MusicScore.<init>` | 517 | 2 |
+| `Bzip2Decoder.decodeBlocks` | 376 | 5 |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | 362 | 7 |
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`47259c4ff5afa476d4b6f5bfe605de2ef2471c2492477be4daa54d2e8c1710db`.
+
+## Previous gameplay and protocol field naming (pass 180)
 
 Sixteen formerly opaque fields now describe their verified roles. They include
 `fiveMatchChainAchievementId`, `sixMatchChainAchievementId`,
@@ -131,7 +183,7 @@ throwing callbacks, loops, abrupt exits, finally overrides and monitors.
 Earlier Boolean/integral predicate oracles also pass. All 27 publication tests
 pass; scoped gameplay/result-helper trace pins remain exact.
 
-The independently verified current inventory is:
+Pass178’s independently verified inventory was:
 
 | Body | Lines | Labels |
 | --- | ---: | ---: |
