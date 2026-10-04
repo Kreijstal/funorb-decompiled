@@ -69,7 +69,7 @@ final class LoginProtocolSupport {
                   (UiWidget.readSessionBytesIfAvailable(30000, 8))) {
                 TextValidationSupport.field_a = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 LogoCompositor.sessionPacketBuffer.position = 0;
-                UsernameAvailabilityValidator.a(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
+                UsernameAvailabilityValidator.writeEncryptedLoginRequest(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
                 PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginResultStage;
               }
               if (methodGuard != 0) {

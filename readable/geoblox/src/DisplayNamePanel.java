@@ -600,7 +600,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     }
 
     public final void onMoreSuggestionsRequested(byte methodGuard) {
-        ((UsernameAvailabilityValidator) ((Object) this.displayNameInput.getValidationProvider((byte) -117))).c((byte) -80);
+        ((UsernameAvailabilityValidator) ((Object) this.displayNameInput.getValidationProvider((byte) -117))).invalidateCachedUsernameAvailability((byte) -80);
         if (methodGuard != 83) {
             this.confirmButton = (ButtonWidget) null;
         }
@@ -656,7 +656,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         if (param0 >= -42) {
             return;
         }
-        EmailValidator.c(12607, this.displayNameInput.widgetText);
+        EmailValidator.setOptionalLoginTextAndShowLoggingIn(12607, this.displayNameInput.widgetText);
     }
 
     static {

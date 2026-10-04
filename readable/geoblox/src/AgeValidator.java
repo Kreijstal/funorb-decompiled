@@ -2,97 +2,97 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AgeValidator extends TextInputValidator {
-    static boolean field_k;
-    static String field_j;
-    static boolean field_i;
+    static boolean gameArchiveRequestPending;
+    static String restartTutorialText;
+    static boolean reconnectingLoginMode;
 
-    final static void h(int param0) {
+    final static void markAccountIneligibleAndMaybeRequestGameArchives(int methodGuard) {
         GrowableIntList.a(NodeHashTableIterator.getActiveApplet(108), (byte) 110);
-        if (param0 >= -24) {
-            field_k = true;
+        if (methodGuard >= -24) {
+            gameArchiveRequestPending = true;
         }
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        CharSequence var4 = null;
-        CharSequence var5 = null;
-        ValidationState stackIn_4_0 = null;
-        ValidationState stackIn_9_0 = null;
-        ValidationState stackIn_11_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int parsedAge = 0;
+        RuntimeException ageFailureForContext = null;
+        CharSequence candidateForSyntaxCheck = null;
+        CharSequence candidateForParsing = null;
+        ValidationState invalidSyntaxState = null;
+        ValidationState invalidRangeState = null;
+        ValidationState validAgeState = null;
+        RuntimeException ageFailureBeforeContext = null;
+        StringBuilder ageMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtAgeFailure = null;
         try {
           if (guard != -257) {
-            field_k = false;
+            gameArchiveRequestPending = false;
           }
-          var4 = (CharSequence) ((Object) candidateText);
-          if (!MessageDialog.isSignedDecimalInt((byte) -123, var4)) {
-            stackIn_4_0 = WidgetSkinState.invalidInputValidationState;
-            return stackIn_4_0;
+          candidateForSyntaxCheck = (CharSequence) ((Object) candidateText);
+          if (!MessageDialog.isSignedDecimalInt((byte) -123, candidateForSyntaxCheck)) {
+            invalidSyntaxState = WidgetSkinState.invalidInputValidationState;
+            return invalidSyntaxState;
           }
-          var5 = (CharSequence) ((Object) candidateText);
-          var3_int = MultiHandleSliderWidget.a(false, var5);
-          if ((var3_int > 0) &&
-              (130 >= var3_int)) {
-            stackIn_11_0 = SocketArchiveNetworkClient.validInputValidationState;
-            return stackIn_11_0;
+          candidateForParsing = (CharSequence) ((Object) candidateText);
+          parsedAge = MultiHandleSliderWidget.a(false, candidateForParsing);
+          if ((parsedAge > 0) &&
+              (130 >= parsedAge)) {
+            validAgeState = SocketArchiveNetworkClient.validInputValidationState;
+            return validAgeState;
           }
-          stackIn_9_0 = WidgetSkinState.invalidInputValidationState;
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_14_0 = var3;
-          stackIn_14_1 = new StringBuilder().append("cf.D(").append(guard).append(',');
+          invalidRangeState = WidgetSkinState.invalidInputValidationState;
+          return invalidRangeState;
+        } catch (java.lang.RuntimeException ageValidationFailure) {
+          caughtAgeFailure = ageValidationFailure;
+          ageFailureForContext = caughtAgeFailure;
+          ageFailureBeforeContext = ageFailureForContext;
+          ageMessagePrefix = new StringBuilder().append("cf.D(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_15_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) ageFailureBeforeContext), ((StringBuilder) (Object) ageMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
-        field_j = null;
-        if (param0 > -11) {
-            field_j = (String) null;
+    public static void releaseRestartTutorialText(int methodGuard) {
+        restartTutorialText = null;
+        if (methodGuard > -11) {
+            restartTutorialText = (String) null;
         }
     }
 
     final String validationMessageForText(int guard, String candidateText) {
-        RuntimeException var3 = null;
-        String stackIn_2_0 = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException messageFailureForContext = null;
+        String invalidAgeMessage = null;
+        String guardedNullMessage = null;
+        RuntimeException messageFailureBeforeContext = null;
+        StringBuilder messagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtMessageFailure = null;
         try {
           if (this.validationStateForText(-257, candidateText) == WidgetSkinState.invalidInputValidationState) {
-            stackIn_2_0 = UsernameAvailabilityQuery.createInvalidAgeAlertText;
-            return stackIn_2_0;
+            invalidAgeMessage = UsernameAvailabilityQuery.createInvalidAgeAlertText;
+            return invalidAgeMessage;
           }
           if (guard == 422) {
             return null;
           }
-          stackIn_6_0 = (String) null;
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("cf.A(").append(guard).append(',');
+          guardedNullMessage = (String) null;
+          return guardedNullMessage;
+        } catch (java.lang.RuntimeException ageMessageFailure) {
+          caughtMessageFailure = ageMessageFailure;
+          messageFailureForContext = caughtMessageFailure;
+          messageFailureBeforeContext = messageFailureForContext;
+          messagePrefix = new StringBuilder().append("cf.A(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_11_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageFailureBeforeContext), ((StringBuilder) (Object) messagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
@@ -107,12 +107,12 @@ final class AgeValidator extends TextInputValidator {
     final static void advanceScorePopups(byte methodGuard) {
         ScorePopup popup = null;
         int controlFlowGuard = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
+        RuntimeException caughtPopupFailure = null;
+        RuntimeException popupFailureForContext = null;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard < 8) {
-            AgeValidator.c((byte) 121);
+            AgeValidator.isFirstReflectionCheckReady((byte) 121);
           }
           popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.firstForIteration(0));
           while (popup != null) {
@@ -130,53 +130,53 @@ final class AgeValidator extends TextInputValidator {
             popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.nextForIteration(1));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "cf.F(" + methodGuard + ')');
+        } catch (java.lang.RuntimeException popupAdvanceFailure) {
+          caughtPopupFailure = popupAdvanceFailure;
+          popupFailureForContext = caughtPopupFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) popupFailureForContext), "cf.F(" + methodGuard + ')');
         }
     }
 
-    final static boolean c(byte param0) {
-        int var2 = 0;
-        ReflectionCheckRequest var1 = null;
-        RuntimeException var1_ref = null;
-        int var3 = 0;
-        ReflectionCheckRequest var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static boolean isFirstReflectionCheckReady(byte methodGuard) {
+        int operationIndex = 0;
+        ReflectionCheckRequest requestAlias = null;
+        RuntimeException readinessFailureForContext = null;
+        int unusedClientControlSnapshot = 0;
+        ReflectionCheckRequest requestFromQueue = null;
+        RuntimeException caughtReadinessFailure = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param0 != -114) {
+          if (methodGuard != -114) {
             return true;
           }
-          var4 = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
-          var1 = var4;
-          if (var1 == null) {
+          requestFromQueue = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
+          requestAlias = requestFromQueue;
+          if (requestAlias == null) {
             return false;
           }
-          for (var2 = 0; var1.operationCount > var2; var2++) {
-            if ((null != var4.fieldLookupTasks[var2]) &&
-                (var4.fieldLookupTasks[var2].status == 0)) {
+          for (operationIndex = 0; requestAlias.operationCount > operationIndex; operationIndex++) {
+            if ((null != requestFromQueue.fieldLookupTasks[operationIndex]) &&
+                (requestFromQueue.fieldLookupTasks[operationIndex].status == 0)) {
               return false;
             }
-            if ((var4.methodLookupTasks[var2] != null) &&
-                (var4.methodLookupTasks[var2].status == 0)) {
+            if ((requestFromQueue.methodLookupTasks[operationIndex] != null) &&
+                (requestFromQueue.methodLookupTasks[operationIndex].status == 0)) {
               return false;
             }
           }
           return true;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "cf.C(" + param0 + ')');
+        } catch (java.lang.RuntimeException reflectionReadinessFailure) {
+          caughtReadinessFailure = reflectionReadinessFailure;
+          readinessFailureForContext = caughtReadinessFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readinessFailureForContext), "cf.C(" + methodGuard + ')');
         }
     }
 
-    AgeValidator(TextInputWidget param0) {
-        super(param0);
+    AgeValidator(TextInputWidget input) {
+        super(input);
     }
 
     static {
-        field_j = "Restart tutorial";
+        restartTutorialText = "Restart tutorial";
     }
 }

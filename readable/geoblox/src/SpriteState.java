@@ -278,7 +278,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(124, "restartTutorial");
           if (var2 != null) {
-            AgeValidator.field_j = EmailValidator.decodeTextBytes(1, var2);
+            AgeValidator.restartTutorialText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "discardResults");
           if (var2 != null) {
@@ -919,7 +919,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = AgeValidator.field_i;
+            stackIn_4_0 = AgeValidator.reconnectingLoginMode;
             return stackIn_4_0;
           }
           return false;

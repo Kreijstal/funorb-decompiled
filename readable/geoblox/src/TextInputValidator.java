@@ -139,7 +139,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               (Geoblox.activeMessageDialog.dialogVisible)) {
             if (8 == responseCode) {
               responseCode = 2;
-              if (!AgeValidator.field_i) {
+              if (!AgeValidator.reconnectingLoginMode) {
                 responseText = VisualPropertyOverrides.invalidUserOrPasswordText;
               } else {
                 responseText = DualLinkNode.invalidPasswordText;
@@ -162,7 +162,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             }
             if ((responseCode != 256) &&
                 (responseCode != 10) &&
-                (!AgeValidator.field_i)) {
+                (!AgeValidator.reconnectingLoginMode)) {
               SpriteButtonRenderer.field_t.clearLoginInputs(-119);
             }
           }

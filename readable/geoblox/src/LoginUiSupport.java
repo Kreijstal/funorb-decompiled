@@ -35,7 +35,7 @@ final class LoginUiSupport {
         String loginIdentifierAfterGuardClear = null;
         String loginIdentifierAfterDismissal = null;
         String loginIdentifierWithoutDismissal = null;
-        if (!AgeValidator.field_i) {
+        if (!AgeValidator.reconnectingLoginMode) {
             throw new IllegalStateException();
         }
         if (Geoblox.activeMessageDialog != null) {

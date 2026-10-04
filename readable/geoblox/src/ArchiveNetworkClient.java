@@ -36,7 +36,7 @@ abstract class ArchiveNetworkClient {
             return;
           }
           var1 = CacheReference.outgoingSessionBuffer;
-          while (AgeValidator.c((byte) -114)) {
+          while (AgeValidator.isFirstReflectionCheckReady((byte) -114)) {
             var1.writeCipherByte(8, (byte) -71);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

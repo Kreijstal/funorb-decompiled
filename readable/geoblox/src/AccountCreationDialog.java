@@ -44,7 +44,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               var4 = result.field_e;
               if (result.field_j == 248) {
                 if (!suppressIneligibleAction) {
-                  AgeValidator.h(-65);
+                  AgeValidator.markAccountIneligibleAndMaybeRequestGameArchives(-65);
                 }
                 this.accountIneligible = true;
                 var4 = DisplayNamePanel.createIneligibleText;

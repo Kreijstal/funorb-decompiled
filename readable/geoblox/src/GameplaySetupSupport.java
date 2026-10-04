@@ -113,10 +113,10 @@ final class GameplaySetupSupport {
                       argumentClassIndex = 0;
                       serializedArgumentLengthThenClassIndexSnapshot = argumentClassIndex;
                       while (argumentClassIndex < argumentCountOrIntegerWriteValue) {
-                        resolvedArgumentClasses[argumentClassIndex] = EmailValidator.a(argumentTypeNames[argumentClassIndex], false);
+                        resolvedArgumentClasses[argumentClassIndex] = EmailValidator.resolveReflectionClass(argumentTypeNames[argumentClassIndex], false);
                         argumentClassIndex++;
                       }
-                      reflectionRequest.methodLookupTasks[operationIndex] = taskDispatcher.requestDeclaredMethod(memberName, -126, resolvedArgumentClasses, EmailValidator.a(methodOwnerClassName, false));
+                      reflectionRequest.methodLookupTasks[operationIndex] = taskDispatcher.requestDeclaredMethod(memberName, -126, resolvedArgumentClasses, EmailValidator.resolveReflectionClass(methodOwnerClassName, false));
                       reflectionRequest.serializedArguments[operationIndex] = allocatedSerializedArguments;
                     } else {
                       fieldOwnerClassName = buffer.readNullTerminatedText((byte) 117);
@@ -129,7 +129,7 @@ final class GameplaySetupSupport {
                       }
                       reflectionRequest.operationTypes[operationIndex] = operationType;
                       reflectionRequest.integerWriteValues[operationIndex] = argumentCountOrIntegerWriteValue;
-                      reflectionRequest.fieldLookupTasks[operationIndex] = taskDispatcher.requestDeclaredField(EmailValidator.a(fieldOwnerClassName, false), 0, fieldName);
+                      reflectionRequest.fieldLookupTasks[operationIndex] = taskDispatcher.requestDeclaredField(EmailValidator.resolveReflectionClass(fieldOwnerClassName, false), 0, fieldName);
                     }
                     operationIncrementAlreadyApplied = 0;
                   }

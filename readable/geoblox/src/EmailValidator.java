@@ -2,108 +2,108 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmailValidator extends TextInputValidator {
-    private static long[] field_m;
+    private static long[] unusedCrc64Table;
     static int archiveGameCrc;
     static boolean[] themeMusicPreparationFlags;
     static int availableSpriteVariantCount;
     static int byteArrayPool30000Count;
 
     final String validationMessageForText(int guard, String candidateText) {
-        RuntimeException var3 = null;
-        String stackIn_4_0 = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException messageFailureForContext = null;
+        String invalidEmailMessage = null;
+        String validEmailMessage = null;
+        RuntimeException messageFailureBeforeContext = null;
+        StringBuilder messagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtMessageFailure = null;
         try {
           if (guard != 422) {
             archiveGameCrc = -21;
           }
           if (this.validationStateForText(-257, candidateText) != WidgetSkinState.invalidInputValidationState) {
-            stackIn_6_0 = ClientOptionSupport.createEmailValidText;
-            return stackIn_6_0;
+            validEmailMessage = ClientOptionSupport.createEmailValidText;
+            return validEmailMessage;
           }
-          stackIn_4_0 = OpacityWidget.createInvalidEmailAlertText;
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("ag.A(").append(guard).append(',');
+          invalidEmailMessage = OpacityWidget.createInvalidEmailAlertText;
+          return invalidEmailMessage;
+        } catch (java.lang.RuntimeException emailMessageFailure) {
+          caughtMessageFailure = emailMessageFailure;
+          messageFailureForContext = caughtMessageFailure;
+          messageFailureBeforeContext = messageFailureForContext;
+          messagePrefix = new StringBuilder().append("ag.A(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_10_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageFailureBeforeContext), ((StringBuilder) (Object) messagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
-    final static Class a(String param0, boolean param1) throws ClassNotFoundException {
-        RuntimeException var2 = null;
-        Class stackIn_2_0 = null;
-        Class stackIn_6_0 = null;
-        Class stackIn_9_0 = null;
-        Class stackIn_12_0 = null;
-        Class stackIn_15_0 = null;
-        Class stackIn_19_0 = null;
-        Class stackIn_23_0 = null;
-        Class stackIn_27_0 = null;
-        Class stackIn_31_0 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_35_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static Class resolveReflectionClass(String classNameOrPrimitiveCode, boolean methodGuard) throws ClassNotFoundException {
+        RuntimeException classFailureForContext = null;
+        Class byteClassBeforeReturn = null;
+        Class intClassBeforeReturn = null;
+        Class shortClassBeforeReturn = null;
+        Class longClassBeforeReturn = null;
+        Class booleanClassBeforeReturn = null;
+        Class floatClassBeforeReturn = null;
+        Class doubleClassBeforeReturn = null;
+        Class charClassBeforeReturn = null;
+        Class resolvedClassBeforeReturn = null;
+        RuntimeException classFailureBeforeContext = null;
+        StringBuilder classMessagePrefix = null;
+        String classNameDescription = null;
+        RuntimeException caughtClassFailure = null;
         try {
-          if (param0.equals("B")) {
-            stackIn_2_0 = Byte.TYPE;
-            return stackIn_2_0;
+          if (classNameOrPrimitiveCode.equals("B")) {
+            byteClassBeforeReturn = Byte.TYPE;
+            return byteClassBeforeReturn;
           }
-          if (param0.equals("I")) {
-            stackIn_6_0 = Integer.TYPE;
-            return stackIn_6_0;
+          if (classNameOrPrimitiveCode.equals("I")) {
+            intClassBeforeReturn = Integer.TYPE;
+            return intClassBeforeReturn;
           }
-          if (param0.equals("S")) {
-            stackIn_9_0 = Short.TYPE;
-            return stackIn_9_0;
+          if (classNameOrPrimitiveCode.equals("S")) {
+            shortClassBeforeReturn = Short.TYPE;
+            return shortClassBeforeReturn;
           }
-          if (param0.equals("J")) {
-            stackIn_12_0 = Long.TYPE;
-            return stackIn_12_0;
+          if (classNameOrPrimitiveCode.equals("J")) {
+            longClassBeforeReturn = Long.TYPE;
+            return longClassBeforeReturn;
           }
-          if (param0.equals("Z")) {
-            stackIn_15_0 = Boolean.TYPE;
-            return stackIn_15_0;
+          if (classNameOrPrimitiveCode.equals("Z")) {
+            booleanClassBeforeReturn = Boolean.TYPE;
+            return booleanClassBeforeReturn;
           }
-          if (param0.equals("F")) {
-            stackIn_19_0 = Float.TYPE;
-            return stackIn_19_0;
+          if (classNameOrPrimitiveCode.equals("F")) {
+            floatClassBeforeReturn = Float.TYPE;
+            return floatClassBeforeReturn;
           }
-          if (param0.equals("D")) {
-            stackIn_23_0 = Double.TYPE;
-            return stackIn_23_0;
+          if (classNameOrPrimitiveCode.equals("D")) {
+            doubleClassBeforeReturn = Double.TYPE;
+            return doubleClassBeforeReturn;
           }
-          if (param0.equals("C")) {
-            stackIn_27_0 = Character.TYPE;
-            return stackIn_27_0;
+          if (classNameOrPrimitiveCode.equals("C")) {
+            charClassBeforeReturn = Character.TYPE;
+            return charClassBeforeReturn;
           }
-          if (param1) {
-            EmailValidator.g(26);
+          if (methodGuard) {
+            EmailValidator.releaseEmailValidatorSharedResources(26);
           }
-          stackIn_31_0 = Class.forName(param0);
-          return stackIn_31_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_34_0 = var2;
-          stackIn_34_1 = new StringBuilder().append("ag.E(");
-          if (param0 == null) {
-            stackIn_35_2 = "null";
+          resolvedClassBeforeReturn = Class.forName(classNameOrPrimitiveCode);
+          return resolvedClassBeforeReturn;
+        } catch (java.lang.RuntimeException reflectionClassResolutionFailure) {
+          caughtClassFailure = reflectionClassResolutionFailure;
+          classFailureForContext = caughtClassFailure;
+          classFailureBeforeContext = classFailureForContext;
+          classMessagePrefix = new StringBuilder().append("ag.E(");
+          if (classNameOrPrimitiveCode == null) {
+            classNameDescription = "null";
           } else {
-            stackIn_35_2 = "{...}";
+            classNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) classFailureBeforeContext), ((StringBuilder) (Object) classMessagePrefix).append(classNameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -135,40 +135,40 @@ final class EmailValidator extends TextInputValidator {
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        int stackIn_3_0 = 0;
-        ValidationState stackIn_5_0 = null;
-        ValidationState stackIn_9_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int emailSyntaxAccepted = 0;
+        RuntimeException validationFailureForContext = null;
+        String unusedNullCandidateText = null;
+        int emailSyntaxAcceptedBeforeStore = 0;
+        ValidationState invalidEmailState = null;
+        ValidationState validEmailState = null;
+        RuntimeException validationFailureBeforeContext = null;
+        StringBuilder validationMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtValidationFailure = null;
         try {
-          stackIn_3_0 = (null != FifoResponseToken.a(candidateText, 1)) ? 0 : 1;
-          var3_int = stackIn_3_0;
-          if (var3_int == 0) {
-            stackIn_5_0 = WidgetSkinState.invalidInputValidationState;
-            return stackIn_5_0;
+          emailSyntaxAcceptedBeforeStore = (null != FifoResponseToken.a(candidateText, 1)) ? 0 : 1;
+          emailSyntaxAccepted = emailSyntaxAcceptedBeforeStore;
+          if (emailSyntaxAccepted == 0) {
+            invalidEmailState = WidgetSkinState.invalidInputValidationState;
+            return invalidEmailState;
           }
           if (guard != -257) {
-            var4 = (String) null;
+            unusedNullCandidateText = (String) null;
             this.validationMessageForText(97, (String) null);
           }
-          stackIn_9_0 = SocketArchiveNetworkClient.validInputValidationState;
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("ag.D(").append(guard).append(',');
+          validEmailState = SocketArchiveNetworkClient.validInputValidationState;
+          return validEmailState;
+        } catch (java.lang.RuntimeException emailValidationFailure) {
+          caughtValidationFailure = emailValidationFailure;
+          validationFailureForContext = caughtValidationFailure;
+          validationFailureBeforeContext = validationFailureForContext;
+          validationMessagePrefix = new StringBuilder().append("ag.D(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_13_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationFailureBeforeContext), ((StringBuilder) (Object) validationMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
@@ -200,48 +200,48 @@ final class EmailValidator extends TextInputValidator {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseEmailValidatorSharedResources(int methodGuard) {
         themeMusicPreparationFlags = null;
-        if (param0 > -13) {
-            byte[] var2 = (byte[]) null;
+        if (methodGuard > -13) {
+            byte[] unusedNullDecodeBytes = (byte[]) null;
             EmailValidator.decodeTextBytes(95, (byte[]) null);
-            field_m = null;
+            unusedCrc64Table = null;
             return;
         }
-        field_m = null;
+        unusedCrc64Table = null;
     }
 
-    EmailValidator(TextInputWidget param0) {
-        super(param0);
+    EmailValidator(TextInputWidget input) {
+        super(input);
     }
 
-    final static void c(int param0, String param1) {
+    final static void setOptionalLoginTextAndShowLoggingIn(int methodGuard, String optionalLoginText) {
         try {
-            StatefulWidgetRenderer.setOptionalLoginText(-119, param1);
-            if (param0 != 12607) {
+            StatefulWidgetRenderer.setOptionalLoginText(-119, optionalLoginText);
+            if (methodGuard != 12607) {
                 archiveGameCrc = 32;
             }
             MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, false);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException optionalLoginTextFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) optionalLoginTextFailure), "ag.G(" + methodGuard + ',' + (optionalLoginText != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        int var2 = 0;
-        int var3 = 0;
-        long var0;
-        field_m = new long[256];
-        for (var2 = 0; var2 < 256; var2++) {
-          var0 = (long)var2;
-          for (var3 = 0; var3 < 8; var3++) {
-            if (1L != (1L & var0)) {
-              var0 = var0 >>> 1;
+        int tableByteIndex = 0;
+        int polynomialBitIndex = 0;
+        long polynomialRemainder;
+        unusedCrc64Table = new long[256];
+        for (tableByteIndex = 0; tableByteIndex < 256; tableByteIndex++) {
+          polynomialRemainder = (long)tableByteIndex;
+          for (polynomialBitIndex = 0; polynomialBitIndex < 8; polynomialBitIndex++) {
+            if (1L != (1L & polynomialRemainder)) {
+              polynomialRemainder = polynomialRemainder >>> 1;
               continue;
             }
-            var0 = -3932672073523589310L ^ var0 >>> 1;
+            polynomialRemainder = -3932672073523589310L ^ polynomialRemainder >>> 1;
           }
-          field_m[var2] = var0;
+          unusedCrc64Table[tableByteIndex] = polynomialRemainder;
         }
         themeMusicPreparationFlags = new boolean[7];
         byteArrayPool30000Count = 0;

@@ -99,7 +99,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (methodGuard != -25321) {
             FadingDialog.releaseFadingDialogResources(31);
           }
-          if (UsernameAvailabilityValidator.a(8, username, password)) {
+          if (UsernameAvailabilityValidator.usernameContainsPasswordOrReverse(8, username, password)) {
             return false;
           }
           if (!CrcAcknowledgedPacket.a(password, username, (byte) -107)) {

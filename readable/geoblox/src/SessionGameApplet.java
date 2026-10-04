@@ -431,7 +431,7 @@ abstract class SessionGameApplet extends GameApplet {
                 break L30;
               }
             }
-            AgeValidator.field_k = true;
+            AgeValidator.gameArchiveRequestPending = true;
             VisualPropertyOverrides.clientBootstrapStage = 12;
           }
         }
@@ -439,7 +439,7 @@ abstract class SessionGameApplet extends GameApplet {
           return;
         }
         if ((VisualPropertyOverrides.clientBootstrapStage == 12) &&
-            (!AgeValidator.field_k)) {
+            (!AgeValidator.gameArchiveRequestPending)) {
           VisualPropertyOverrides.clientBootstrapStage = 13;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 13) {
@@ -531,7 +531,7 @@ abstract class SessionGameApplet extends GameApplet {
               }
               emailAvailabilityResult = HotspotTextWidget.a((byte) 111);
               if (emailAvailabilityResult != null) {
-                EmailAvailabilityValidator.a(actionGuard ^ 110, emailAvailabilityResult.booleanValue());
+                EmailAvailabilityValidator.completeActiveEmailAvailabilityQuery(actionGuard ^ 110, emailAvailabilityResult.booleanValue());
               }
             }
             if (uiAction == 2) {
@@ -600,11 +600,11 @@ abstract class SessionGameApplet extends GameApplet {
             }
             if (uiAction == 13) {
               try {
-                if (null == EmailAvailabilityValidator.field_n) {
-                  EmailAvailabilityValidator.field_n = new AsyncResourceDownloader(MenuScreen.platformTaskDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                if (null == EmailAvailabilityValidator.countryListDownloader) {
+                  EmailAvailabilityValidator.countryListDownloader = new AsyncResourceDownloader(MenuScreen.platformTaskDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                 }
-                if (EmailAvailabilityValidator.field_n.a((byte) 45)) {
-                  countryListBytes = EmailAvailabilityValidator.field_n.b((byte) 91);
+                if (EmailAvailabilityValidator.countryListDownloader.a((byte) 45)) {
+                  countryListBytes = EmailAvailabilityValidator.countryListDownloader.b((byte) 91);
                   if (countryListBytes == null) {
                     unusedNullCountryList = (String) null;
                     SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
@@ -612,7 +612,7 @@ abstract class SessionGameApplet extends GameApplet {
                     countryListText = ByteTextDecodingSupport.decodeTextSlice(-46, countryListBytes.bytes, 0, countryListBytes.position);
                     SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, countryListText);
                   }
-                  EmailAvailabilityValidator.field_n = null;
+                  EmailAvailabilityValidator.countryListDownloader = null;
                 }
               } catch (java.lang.Exception countryListFailure) {
                 caughtUiFailure = countryListFailure;
@@ -620,7 +620,7 @@ abstract class SessionGameApplet extends GameApplet {
                 IterableNodeHashTable.reportClientError((Throwable) ((Object) countryListFailureForReport), "S1", (byte) 125);
                 unusedNullCountryListAfterFailure = (String) null;
                 SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
-                EmailAvailabilityValidator.field_n = null;
+                EmailAvailabilityValidator.countryListDownloader = null;
               }
             }
             if (uiAction == 15) {

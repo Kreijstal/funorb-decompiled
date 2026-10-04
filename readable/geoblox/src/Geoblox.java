@@ -547,11 +547,11 @@ public final class Geoblox extends SessionGameApplet {
         WidgetSkinState.releaseSharedResources(false);
         TextLayoutLine.releaseStaticReferences((byte) 0);
         ScorePopup.c((byte) -40);
-        UsernameAvailabilityValidator.d((byte) 113);
+        UsernameAvailabilityValidator.releaseUsernameValidatorSharedResources((byte) 113);
         PasswordValidator.g(methodGuard - 51);
-        EmailValidator.g(methodGuard - 22);
-        EmailAvailabilityValidator.c((byte) -9);
-        AgeValidator.g(-48);
+        EmailValidator.releaseEmailValidatorSharedResources(methodGuard - 22);
+        EmailAvailabilityValidator.releaseEmailAvailabilitySharedResources((byte) -9);
+        AgeValidator.releaseRestartTutorialText(-48);
         MatchingTextValidator.clearStaticReferences(methodGuard + 64);
         UiFontResources.releaseStaticReferences(false);
         TextHotspotBounds.b(true);
@@ -626,14 +626,14 @@ public final class Geoblox extends SessionGameApplet {
           fullscreenAvailableSnapshot = true;
         }
         this.updateSessionBootstrapAndInput(fullscreenAvailableSnapshot, 19660);
-        if (AgeValidator.field_k) {
+        if (AgeValidator.gameArchiveRequestPending) {
           if (methodGuard) {
             archiveRequestGuardSnapshot = false;
           } else {
             archiveRequestGuardSnapshot = true;
           }
           this.requestGameArchives(archiveRequestGuardSnapshot);
-          AgeValidator.field_k = false;
+          AgeValidator.gameArchiveRequestPending = false;
         }
         while (SingleChildWidget.readNextIncomingPacket((byte) -118, ArchiveRequest.sessionPacketLengthByOpcode)) {
           this.dispatchSessionPacket(121);
@@ -651,7 +651,7 @@ public final class Geoblox extends SessionGameApplet {
               NanoFrameTimer.flushSessionWrites(-1, 0);
               return;
             }
-            if (!UsernameAvailabilityValidator.g(79)) {
+            if (!UsernameAvailabilityValidator.ensureAndCheckAchievementStateGate(79)) {
               HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
             } else {
               if ((FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47)) &&
@@ -834,7 +834,7 @@ public final class Geoblox extends SessionGameApplet {
           EndingAnimationSupport.presentPreparedFrame(true, (java.awt.Canvas) (renderTargetCanvas));
           return;
         }
-        if (!UsernameAvailabilityValidator.g(39)) {
+        if (!UsernameAvailabilityValidator.ensureAndCheckAchievementStateGate(39)) {
           HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
           EndingAnimationSupport.presentPreparedFrame(true, (java.awt.Canvas) (renderTargetCanvas));
           return;

@@ -25,7 +25,7 @@ final class IterableNodeHashTable implements Iterable {
           return;
         }
         TextWidgetRenderer.unreadTicketMessage = null;
-        if (AgeValidator.field_i) {
+        if (AgeValidator.reconnectingLoginMode) {
           Geoblox.activeMessageDialog.showConnectionRestoredContent(false);
         } else {
           ticketCountFromSessionAccessByte = EntityLinkSupport.sessionAccessLevelByte;
@@ -192,14 +192,14 @@ final class IterableNodeHashTable implements Iterable {
               unusedUrlConstructorReceiverBeforeIdentity = null;
               appletCodeBase = GameScreen.errorReportApplet.getCodeBase();
               errorUrlPrefix = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.errorReportGameCrc).append("&u=");
-              if (null == UsernameAvailabilityValidator.field_p) {
+              if (null == UsernameAvailabilityValidator.errorReportUserIdentityText) {
                 unusedUrlReceiverAfterIdentity = null;
                 unusedUrlConstructorReceiverAfterIdentity = null;
                 reportUserIdentity = "" + CheckboxWidget.field_H;
               } else {
                 unusedUrlReceiverAfterIdentity = null;
                 unusedUrlConstructorReceiverAfterIdentity = null;
-                reportUserIdentity = UsernameAvailabilityValidator.field_p;
+                reportUserIdentity = UsernameAvailabilityValidator.errorReportUserIdentityText;
               }
               urlStreamTask = ((PlatformTaskDispatcher) (Object) dispatcherSnapshot).requestUrlStream(urlRequestGuard, new java.net.URL(appletCodeBase, ((StringBuilder) (Object) errorUrlPrefix).append(reportUserIdentity).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(hashEscapedDescription).toString()));
               while (urlStreamTask.status == 0) {

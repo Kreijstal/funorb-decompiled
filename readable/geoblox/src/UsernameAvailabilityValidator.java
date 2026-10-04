@@ -3,94 +3,94 @@
  */
 final class UsernameAvailabilityValidator extends TextInputValidator {
     static int[] cameraMeshVertexY;
-    private boolean field_n;
+    private boolean cachedUsernameAvailable;
     static float avatarTintBlueDelta;
     static int receivedRecordIdLow24;
-    static String field_p;
+    static String errorReportUserIdentityText;
     static Sprite orbCoinSprite;
     static String[] monthNames;
-    private String field_k;
+    private String cachedUsernameCandidate;
 
-    final void c(byte param0) {
-        this.field_k = null;
-        if (param0 > -78) {
+    final void invalidateCachedUsernameAvailability(byte methodGuard) {
+        this.cachedUsernameCandidate = null;
+        if (methodGuard > -78) {
             avatarTintBlueDelta = -0.8683637976646423f;
         }
     }
 
-    final static boolean a(int param0, String param1, String param2) {
-        String var3 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
+    final static boolean usernameContainsPasswordOrReverse(int methodGuard, String usernameText, String passwordText) {
+        String reversedPasswordText = null;
+        boolean containsPasswordOrReverseResult = false;
+        RuntimeException comparisonFailureBeforeContext = null;
+        StringBuilder comparisonMessagePrefix = null;
+        String usernameDescription = null;
+        StringBuilder comparisonMessageBeforePassword = null;
+        String passwordDescription = null;
+        RuntimeException caughtComparisonFailure = null;
+        RuntimeException comparisonFailureForContext = null;
         try {
-          param1 = CharacterReplacementSupport.replaceCharacter(param1, "", '_', (byte) 119);
-          var3 = CachedArchiveSource.reverseTextCodeUnits(105, param2);
-          if (param0 != 8) {
+          usernameText = CharacterReplacementSupport.replaceCharacter(usernameText, "", '_', (byte) 119);
+          reversedPasswordText = CachedArchiveSource.reverseTextCodeUnits(105, passwordText);
+          if (methodGuard != 8) {
             cameraMeshVertexY = (int[]) null;
           }
-          stackIn_7_0 = !(param1.indexOf(param2) == -1) || !(param1.indexOf(var3) == -1);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("uk.E(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          containsPasswordOrReverseResult = !(usernameText.indexOf(passwordText) == -1) || !(usernameText.indexOf(reversedPasswordText) == -1);
+          return containsPasswordOrReverseResult;
+        } catch (java.lang.RuntimeException usernamePasswordComparisonFailure) {
+          caughtComparisonFailure = usernamePasswordComparisonFailure;
+          comparisonFailureForContext = caughtComparisonFailure;
+          comparisonFailureBeforeContext = comparisonFailureForContext;
+          comparisonMessagePrefix = new StringBuilder().append("uk.E(").append(methodGuard).append(',');
+          if (usernameText == null) {
+            usernameDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            usernameDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
-            stackIn_14_2 = "null";
+          comparisonMessageBeforePassword = ((StringBuilder) (Object) comparisonMessagePrefix).append(usernameDescription).append(',');
+          if (passwordText == null) {
+            passwordDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            passwordDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) comparisonFailureBeforeContext), ((StringBuilder) (Object) comparisonMessageBeforePassword).append(passwordDescription).append(')').toString());
         }
     }
 
-    final static String tutorialMessageForStep(int tutorialStepId, int param1) {
-        int var2 = 0;
-        int var3 = Geoblox.clientControlFlowFlag;
-        if (param1 != 24146) {
+    final static String tutorialMessageForStep(int tutorialStepId, int methodGuard) {
+        int stepIdForSelection = 0;
+        int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
+        if (methodGuard != 24146) {
             orbCoinSprite = (Sprite) null;
-            var2 = tutorialStepId;
-            if (var2 == 0) {
+            stepIdForSelection = tutorialStepId;
+            if (stepIdForSelection == 0) {
                 return UsernameSuggestionsPanel.tutorialRotationMessage;
             }
-            if (var2 == 1) {
+            if (stepIdForSelection == 1) {
                 return ByteArrayPoolSupport.tutorialColourMatchMessage;
             }
-            if (!(var2 == 2)) {
-                if (var2 == 3) {
+            if (!(stepIdForSelection == 2)) {
+                if (stepIdForSelection == 3) {
                     return ArchiveHandshakeState.tutorialCompleteMessage;
                 }
-                if (var2 == 5) {
+                if (stepIdForSelection == 5) {
                     return AccountCreationForm.tutorialFailedMessage;
                 }
                 return null;
             }
             return ReceivedTextRecord.tutorialShapeMatchMessage;
         }
-        var2 = tutorialStepId;
-        if (var2 == 0) {
+        stepIdForSelection = tutorialStepId;
+        if (stepIdForSelection == 0) {
             return UsernameSuggestionsPanel.tutorialRotationMessage;
         }
-        if (var2 == 1) {
+        if (stepIdForSelection == 1) {
             return ByteArrayPoolSupport.tutorialColourMatchMessage;
         }
-        if (!(var2 == 2)) {
-            if (var2 == 3) {
+        if (!(stepIdForSelection == 2)) {
+            if (stepIdForSelection == 3) {
                 return ArchiveHandshakeState.tutorialCompleteMessage;
             }
-            if (var2 == 5) {
+            if (stepIdForSelection == 5) {
                 return AccountCreationForm.tutorialFailedMessage;
             }
             return null;
@@ -146,15 +146,15 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, LoginPayload param3, boolean param4) {
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        String var7 = null;
+    final static void writeEncryptedLoginRequest(int methodGuard, int affiliateId, boolean useLongLoginPayload, LoginPayload loginPayload, boolean enableLoginFlagBitEight) {
+        RuntimeException loginFailureBeforeContext = null;
+        StringBuilder loginMessagePrefix = null;
+        String loginPayloadDescription = null;
+        RuntimeException caughtLoginFailure = null;
+        int encryptedPayloadStart = 0;
+        RuntimeException loginFailureForContext = null;
+        int loginFlags = 0;
+        String rememberedLoginText = null;
         try {
           ProgressBarWidget.field_D[0] = DelegatingCanvas.sharedClientRandom.nextInt();
           ProgressBarWidget.field_D[1] = DelegatingCanvas.sharedClientRandom.nextInt();
@@ -166,176 +166,176 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[2]);
           EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[3]);
           SpriteState.a(EndingAnimationSupport.loginPayloadBuffer, true);
-          EndingAnimationSupport.loginPayloadBuffer.writeShortBE(param1, 28695);
-          param3.writePayload(124, EndingAnimationSupport.loginPayloadBuffer);
+          EndingAnimationSupport.loginPayloadBuffer.writeShortBE(affiliateId, 28695);
+          loginPayload.writePayload(124, EndingAnimationSupport.loginPayloadBuffer);
           CacheReference.outgoingSessionBuffer.position = 0;
-          if (param2) {
+          if (useLongLoginPayload) {
             CacheReference.outgoingSessionBuffer.writeByte((byte) 121, 18);
           } else {
             CacheReference.outgoingSessionBuffer.writeByte((byte) -116, 16);
           }
           CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
-          var5_int = CacheReference.outgoingSessionBuffer.position;
+          encryptedPayloadStart = CacheReference.outgoingSessionBuffer.position;
           CacheReference.outgoingSessionBuffer.writeIntBE((byte) 95, MessageDialog.loginHeaderInt);
           CacheReference.outgoingSessionBuffer.writeLongBE((byte) 116, SessionInstanceState.clientInstanceId);
-          var6 = 0;
-          if (param0 <= 20) {
+          loginFlags = 0;
+          if (methodGuard <= 20) {
             return;
           }
           if (FontLoadingSupport.memberAccountMode) {
-            var6 = var6 | 1;
+            loginFlags = loginFlags | 1;
           }
           if (GameGraphicsResources.loginResponseExtensionEnabled) {
-            var6 = var6 | 4;
+            loginFlags = loginFlags | 4;
           }
-          if (param4) {
-            var6 = var6 | 8;
+          if (enableLoginFlagBitEight) {
+            loginFlags = loginFlags | 8;
           }
           if (null != GameSoundResources.optionalLoginText) {
-            var6 = var6 | 16;
+            loginFlags = loginFlags | 16;
           }
-          CacheReference.outgoingSessionBuffer.writeByte((byte) 127, var6);
-          var7 = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(111));
-          if (var7 == null) {
-            var7 = "";
+          CacheReference.outgoingSessionBuffer.writeByte((byte) 127, loginFlags);
+          rememberedLoginText = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(111));
+          if (rememberedLoginText == null) {
+            rememberedLoginText = "";
           }
-          CacheReference.outgoingSessionBuffer.writeNullTerminatedText(var7, 0);
+          CacheReference.outgoingSessionBuffer.writeNullTerminatedText(rememberedLoginText, 0);
           if (null != GameSoundResources.optionalLoginText) {
             CacheReference.outgoingSessionBuffer.writeZeroPrefixedNullTerminatedText(GameSoundResources.optionalLoginText, (byte) -126);
           }
           UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
-          CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-var5_int + CacheReference.outgoingSessionBuffer.position, true);
+          CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-encryptedPayloadStart + CacheReference.outgoingSessionBuffer.position, true);
           NanoFrameTimer.flushSessionWrites(-1, -1);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_25_0 = var5;
-          stackIn_25_1 = new StringBuilder().append("uk.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_26_2 = "null";
+        } catch (java.lang.RuntimeException encryptedLoginWriteFailure) {
+          caughtLoginFailure = encryptedLoginWriteFailure;
+          loginFailureForContext = caughtLoginFailure;
+          loginFailureBeforeContext = loginFailureForContext;
+          loginMessagePrefix = new StringBuilder().append("uk.I(").append(methodGuard).append(',').append(affiliateId).append(',').append(useLongLoginPayload).append(',');
+          if (loginPayload == null) {
+            loginPayloadDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            loginPayloadDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFailureBeforeContext), ((StringBuilder) (Object) loginMessagePrefix).append(loginPayloadDescription).append(',').append(enableLoginFlagBitEight).append(')').toString());
         }
     }
 
     final String validationMessageForText(int guard, String candidateText) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        UsernameAvailabilityQuery var4 = null;
-        CharSequence var5 = null;
-        String stackIn_2_0 = null;
-        Object stackIn_8_0 = null;
-        String stackIn_14_0 = null;
-        String stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        String localNameError = null;
+        RuntimeException messageFailureForContext = null;
+        UsernameAvailabilityQuery availabilityQuery = null;
+        CharSequence candidateCharacters = null;
+        String localNameErrorBeforeReturn = null;
+        Object pendingQueryNullMessage = null;
+        String unavailableUsernameMessage = null;
+        String availableUsernameMessage = null;
+        RuntimeException messageFailureBeforeContext = null;
+        StringBuilder messagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtMessageFailure = null;
         try {
-          var5 = (CharSequence) ((Object) candidateText);
-          var3 = ResizableDialog.getAccountNameValidationError((byte) 44, var5);
-          if (var3 != null) {
-            stackIn_2_0 = var3;
-            return stackIn_2_0;
+          candidateCharacters = (CharSequence) ((Object) candidateText);
+          localNameError = ResizableDialog.getAccountNameValidationError((byte) 44, candidateCharacters);
+          if (localNameError != null) {
+            localNameErrorBeforeReturn = localNameError;
+            return localNameErrorBeforeReturn;
           }
-          if (!candidateText.equals(this.field_k)) {
-            var4 = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 94, candidateText);
-            if (var4 == null) {
+          if (!candidateText.equals(this.cachedUsernameCandidate)) {
+            availabilityQuery = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 94, candidateText);
+            if (availabilityQuery == null) {
               return null;
             }
-            if (null != var4.field_e) {
-              stackIn_8_0 = null;
-              return (String) (stackIn_8_0);
+            if (null != availabilityQuery.field_e) {
+              pendingQueryNullMessage = null;
+              return (String) (pendingQueryNullMessage);
             }
-            this.field_k = candidateText;
-            this.field_n = var4.field_g;
+            this.cachedUsernameCandidate = candidateText;
+            this.cachedUsernameAvailable = availabilityQuery.field_g;
           }
           if (guard != 422) {
             avatarTintBlueDelta = -0.46423107385635376f;
           }
-          if (this.field_n) {
-            stackIn_16_0 = ByteShortQuery.createUsernameAvailableText;
-            return stackIn_16_0;
+          if (this.cachedUsernameAvailable) {
+            availableUsernameMessage = ByteShortQuery.createUsernameAvailableText;
+            return availableUsernameMessage;
           }
-          stackIn_14_0 = ResourceArchive.createUsernameUnavailableText;
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_19_0 = var3_ref;
-          stackIn_19_1 = new StringBuilder().append("uk.A(").append(guard).append(',');
+          unavailableUsernameMessage = ResourceArchive.createUsernameUnavailableText;
+          return unavailableUsernameMessage;
+        } catch (java.lang.RuntimeException usernameMessageFailure) {
+          caughtMessageFailure = usernameMessageFailure;
+          messageFailureForContext = caughtMessageFailure;
+          messageFailureBeforeContext = messageFailureForContext;
+          messagePrefix = new StringBuilder().append("uk.A(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_20_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageFailureBeforeContext), ((StringBuilder) (Object) messagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
-    UsernameAvailabilityValidator(TextInputWidget param0) {
-        super(param0);
-        this.field_n = false;
+    UsernameAvailabilityValidator(TextInputWidget input) {
+        super(input);
+        this.cachedUsernameAvailable = false;
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {
-        UsernameAvailabilityQuery var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        CharSequence var5 = null;
-        ValidationState stackIn_4_0 = null;
-        ValidationState stackIn_10_0 = null;
-        ValidationState stackIn_15_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        UsernameAvailabilityQuery availabilityQuery = null;
+        RuntimeException stateFailureForContext = null;
+        String unusedNullNavigationTarget = null;
+        CharSequence candidateCharacters = null;
+        ValidationState invalidNameState = null;
+        ValidationState pendingUsernameState = null;
+        ValidationState availabilityState = null;
+        RuntimeException stateFailureBeforeContext = null;
+        StringBuilder stateMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException caughtStateFailure = null;
         try {
           if (guard != -257) {
-            var4 = (String) null;
-            UsernameAvailabilityValidator.a(false, (String) null);
+            unusedNullNavigationTarget = (String) null;
+            UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, (String) null);
           }
-          var5 = (CharSequence) ((Object) candidateText);
-          if (!ValidatedTextInputWidget.isValidAccountName((byte) 82, var5)) {
-            stackIn_4_0 = WidgetSkinState.invalidInputValidationState;
-            return stackIn_4_0;
+          candidateCharacters = (CharSequence) ((Object) candidateText);
+          if (!ValidatedTextInputWidget.isValidAccountName((byte) 82, candidateCharacters)) {
+            invalidNameState = WidgetSkinState.invalidInputValidationState;
+            return invalidNameState;
           }
-          if (!candidateText.equals(this.field_k)) {
-            var3 = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 108, candidateText);
-            if ((var3 != null) &&
-                (var3.field_e == null)) {
-              this.field_n = var3.field_g;
-              this.field_k = candidateText;
+          if (!candidateText.equals(this.cachedUsernameCandidate)) {
+            availabilityQuery = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 108, candidateText);
+            if ((availabilityQuery != null) &&
+                (availabilityQuery.field_e == null)) {
+              this.cachedUsernameAvailable = availabilityQuery.field_g;
+              this.cachedUsernameCandidate = candidateText;
             } else {
-              stackIn_10_0 = WidgetSkinState.pendingQueryValidationState;
-              return stackIn_10_0;
+              pendingUsernameState = WidgetSkinState.pendingQueryValidationState;
+              return pendingUsernameState;
             }
           }
-          if (this.field_n) {
-            stackIn_15_0 = SocketArchiveNetworkClient.validInputValidationState;
+          if (this.cachedUsernameAvailable) {
+            availabilityState = SocketArchiveNetworkClient.validInputValidationState;
           } else {
-            stackIn_15_0 = WidgetSkinState.invalidInputValidationState;
+            availabilityState = WidgetSkinState.invalidInputValidationState;
           }
-          return stackIn_15_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("uk.D(").append(guard).append(',');
+          return availabilityState;
+        } catch (java.lang.RuntimeException usernameStateFailure) {
+          caughtStateFailure = usernameStateFailure;
+          stateFailureForContext = caughtStateFailure;
+          stateFailureBeforeContext = stateFailureForContext;
+          stateMessagePrefix = new StringBuilder().append("uk.D(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_19_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stateFailureBeforeContext), ((StringBuilder) (Object) stateMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
-    final static boolean g(int param0) {
-        if (param0 < 29) {
+    final static boolean ensureAndCheckAchievementStateGate(int methodGuard) {
+        if (methodGuard < 29) {
             orbCoinSprite = (Sprite) null;
             LoginPayloadKind.ensureAchievementStateRequested(9313);
             if (!UnderlinedButtonRenderer.c(-117)) {
@@ -353,29 +353,29 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         return true;
     }
 
-    final static void a(boolean param0, String param1) {
+    final static void requestNavigationToSharedTarget(boolean cleanupGuard, String navigationTarget) {
         try {
-            if (param0) {
-                UsernameAvailabilityValidator.d((byte) 81);
+            if (cleanupGuard) {
+                UsernameAvailabilityValidator.releaseUsernameValidatorSharedResources((byte) 81);
             }
-            CanvasResizeController.field_e = param1;
-            MidiNote.setPendingLoginUiAction(12, param0);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "uk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            CanvasResizeController.field_e = navigationTarget;
+            MidiNote.setPendingLoginUiAction(12, cleanupGuard);
+        } catch (RuntimeException navigationRequestFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationRequestFailure), "uk.H(" + cleanupGuard + ',' + (navigationTarget != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 >= 70) {
+    public static void releaseUsernameValidatorSharedResources(byte methodGuard) {
+        if (methodGuard >= 70) {
             orbCoinSprite = null;
-            field_p = null;
+            errorReportUserIdentityText = null;
             cameraMeshVertexY = null;
             monthNames = null;
             return;
         }
         orbCoinSprite = (Sprite) null;
         orbCoinSprite = null;
-        field_p = null;
+        errorReportUserIdentityText = null;
         cameraMeshVertexY = null;
         monthNames = null;
     }

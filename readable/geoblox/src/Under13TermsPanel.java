@@ -129,14 +129,14 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         var6 = Geoblox.clientControlFlowFlag;
         try {
           if (0 == hotspotId) {
-            UsernameAvailabilityValidator.a(false, "terms.ws");
+            UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, "terms.ws");
           } else {
             if (hotspotId != 1) {
               if (2 == hotspotId) {
-                UsernameAvailabilityValidator.a(false, "conduct.ws");
+                UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, "conduct.ws");
               }
             } else {
-              UsernameAvailabilityValidator.a(false, "privacy.ws");
+              UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, "privacy.ws");
             }
           }
           if (methodGuard == 2) {

@@ -111,7 +111,7 @@ final class GameplaySession {
               FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
             }
             DelayedIncomingPacket.drawNineSlicePanel(440, 100, 36, (byte) -92, 240, ArchiveLoadSequence.mouseBoxFrames);
-            FadingDialog.uiPaletteFont.drawCenteredText(AgeValidator.field_j, 220, 468, 0, -1);
+            FadingDialog.uiPaletteFont.drawCenteredText(AgeValidator.restartTutorialText, 220, 468, 0, -1);
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
             DelayedIncomingPacket.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, ArchiveLoadSequence.mouseBoxFrames);
             if ((380 < PrefixCodeDecoder.pointerXSnapshot) &&
@@ -1702,7 +1702,7 @@ final class GameplaySession {
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
           FadingDialog.uiPaletteFont.drawRightAlignedText(LoginMethod.field_b, 621, 468, 0, -1);
           if (remainingThemeReleases <= 10) {
-            FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = EmailAvailabilityValidator.field_k[remainingThemeReleases % 5];
+            FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = EmailAvailabilityValidator.remainingThemeReleaseTextColors[remainingThemeReleases % 5];
             FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
             if (clientControlFlowGuard == 0) {

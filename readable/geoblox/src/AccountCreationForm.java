@@ -265,13 +265,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           if (0 != hotspotId) {
             if (hotspotId != 1) {
               if (hotspotId == 2) {
-                UsernameAvailabilityValidator.a(false, "conduct.ws");
+                UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, "conduct.ws");
               }
             } else {
-              UsernameAvailabilityValidator.a(false, "privacy.ws");
+              UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, "privacy.ws");
             }
           } else {
-            UsernameAvailabilityValidator.a(false, "terms.ws");
+            UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, "terms.ws");
           }
           if (methodGuard == 2) {
             return;
@@ -529,7 +529,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     }
 
     public final void onMoreSuggestionsRequested(byte methodGuard) {
-        ((UsernameAvailabilityValidator) ((Object) this.displayNameInput.getValidationProvider((byte) -128))).c((byte) -89);
+        ((UsernameAvailabilityValidator) ((Object) this.displayNameInput.getValidationProvider((byte) -128))).invalidateCachedUsernameAvailability((byte) -89);
         if (methodGuard != 83) {
             this.onMoreSuggestionsRequested((byte) -25);
         }

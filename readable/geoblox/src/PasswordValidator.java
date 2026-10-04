@@ -72,7 +72,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_26_0 = EntityCollisionSupport.createPasswordContainsNameAlertText;
             return stackIn_26_0;
           }
-          if (UsernameAvailabilityValidator.a(8, var6, var5)) {
+          if (UsernameAvailabilityValidator.usernameContainsPasswordOrReverse(8, var6, var5)) {
             stackIn_30_0 = NameCharacterSupport.createPasswordContainsPartialNameAlertText;
             return stackIn_30_0;
           }
