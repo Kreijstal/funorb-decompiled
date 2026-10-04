@@ -182,7 +182,7 @@ final class WhirlpoolHash {
             field_d = (PcmStreamMixer) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = SecondaryNodeHashTable.field_b.equals(ResizableDialog.a(var3, 12));
+          stackIn_3_0 = SecondaryNodeHashTable.normalizedSessionName.equals(ResizableDialog.normalizeSessionName(var3, 12));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

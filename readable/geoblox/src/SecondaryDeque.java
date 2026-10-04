@@ -7,7 +7,7 @@ final class SecondaryDeque {
     static int contactProbeOffsetX;
     static IntrusiveDeque spawnQueue;
     private DualLinkNode sentinel;
-    static String field_f;
+    static String receivedSessionName;
     private DualLinkNode iterationCursor;
 
     final DualLinkNode nextForIteration(int methodGuard) {
@@ -21,15 +21,15 @@ final class SecondaryDeque {
         return null;
     }
 
-    public static void b(int param0) {
+    public static void releaseSharedResources(int methodGuard) {
         contactProbeRaster = null;
-        if (param0 != -10943) {
-            field_f = (String) null;
-            field_f = null;
+        if (methodGuard != -10943) {
+            receivedSessionName = (String) null;
+            receivedSessionName = null;
             spawnQueue = null;
             return;
         }
-        field_f = null;
+        receivedSessionName = null;
         spawnQueue = null;
     }
 
@@ -50,9 +50,9 @@ final class SecondaryDeque {
         }
     }
 
-    final static void c(int param0) {
+    final static void settleAccountDialogAnimations(int methodGuard) {
         UsernameResponseSupport.settleAccountDialogAnimations(-120);
-        if (param0 != 480) {
+        if (methodGuard != 480) {
             contactProbeOffsetY = -37;
         }
     }
@@ -118,36 +118,36 @@ final class SecondaryDeque {
     }
 
     final static void resendRankedListQueries(boolean methodGuard, int packetOpcode) {
-        RuntimeException var2 = null;
-        int var3 = 0;
-        RankedListQuery var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        var3 = Geoblox.clientControlFlowFlag;
+        RuntimeException queryWriteFailureForContext = null;
+        int clientControlFlowSnapshot = 0;
+        RankedListQuery pendingQuery = null;
+        RuntimeException caughtQueryWriteFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
-          while (var4 != null) {
-            EntityLinkSupport.writeRankedListQuery(var4, packetOpcode, (byte) 107);
-            var4 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
+          pendingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
+          while (pendingQuery != null) {
+            EntityLinkSupport.writeRankedListQuery(pendingQuery, packetOpcode, (byte) 107);
+            pendingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
           }
           if (methodGuard) {
             return;
           }
           contactProbeOffsetX = -80;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "wd.K(" + methodGuard + ',' + packetOpcode + ')');
+        } catch (java.lang.RuntimeException queryWriteFailure) {
+          caughtQueryWriteFailure = queryWriteFailure;
+          queryWriteFailureForContext = caughtQueryWriteFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryWriteFailureForContext), "wd.K(" + methodGuard + ',' + packetOpcode + ')');
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void applyCountryListGuardSideEffect(byte methodGuard, String unusedCountryListText) {
         try {
-            if (param0 != 69) {
+            if (methodGuard != 69) {
                 contactProbeOffsetX = 99;
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException countryListGuardFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) countryListGuardFailure), "wd.F(" + methodGuard + ',' + (unusedCountryListText != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,49 +157,49 @@ final class SecondaryDeque {
         this.sentinel.previousSecondaryNode = this.sentinel;
     }
 
-    final static LoginPayload a(boolean param0, long param1, String param2, String param3, boolean param4) {
-        RuntimeException var6 = null;
-        AlternateLongAndTextLoginPayload stackIn_7_0 = null;
-        TextPairLoginPayload stackIn_9_0 = null;
-        LongAndTextLoginPayload stackIn_11_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static LoginPayload createLoginPayload(boolean methodGuard, long longValue, String loginText, String base38Text, boolean useAlternateLongPayload) {
+        RuntimeException payloadFailureForContext = null;
+        AlternateLongAndTextLoginPayload alternateLongPayload = null;
+        TextPairLoginPayload textPairPayload = null;
+        LongAndTextLoginPayload longPayload = null;
+        RuntimeException payloadFailureBeforeContext = null;
+        StringBuilder payloadMessagePrefix = null;
+        String loginTextDescription = null;
+        StringBuilder payloadMessageBeforeBase38Text = null;
+        String base38TextDescription = null;
+        RuntimeException caughtPayloadFailure = null;
         try {
-          if (!param0) {
-            field_f = (String) null;
+          if (!methodGuard) {
+            receivedSessionName = (String) null;
           }
-          if ((param1 == 0L) &&
-              (param2 != null)) {
-            stackIn_9_0 = new TextPairLoginPayload(param2, param3);
-            return (LoginPayload) ((Object) stackIn_9_0);
+          if ((longValue == 0L) &&
+              (loginText != null)) {
+            textPairPayload = new TextPairLoginPayload(loginText, base38Text);
+            return (LoginPayload) ((Object) textPairPayload);
           }
-          if (!param4) {
-            stackIn_11_0 = new LongAndTextLoginPayload(param1, param3);
-            return (LoginPayload) ((Object) stackIn_11_0);
+          if (!useAlternateLongPayload) {
+            longPayload = new LongAndTextLoginPayload(longValue, base38Text);
+            return (LoginPayload) ((Object) longPayload);
           }
-          stackIn_7_0 = new AlternateLongAndTextLoginPayload(param1, param3);
-          return (LoginPayload) ((Object) stackIn_7_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_14_0 = var6;
-          stackIn_14_1 = new StringBuilder().append("wd.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_15_2 = "null";
+          alternateLongPayload = new AlternateLongAndTextLoginPayload(longValue, base38Text);
+          return (LoginPayload) ((Object) alternateLongPayload);
+        } catch (java.lang.RuntimeException payloadFailure) {
+          caughtPayloadFailure = payloadFailure;
+          payloadFailureForContext = caughtPayloadFailure;
+          payloadFailureBeforeContext = payloadFailureForContext;
+          payloadMessagePrefix = new StringBuilder().append("wd.G(").append(methodGuard).append(',').append(longValue).append(',');
+          if (loginText == null) {
+            loginTextDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            loginTextDescription = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param3 == null) {
-            stackIn_18_2 = "null";
+          payloadMessageBeforeBase38Text = ((StringBuilder) (Object) payloadMessagePrefix).append(loginTextDescription).append(',');
+          if (base38Text == null) {
+            base38TextDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            base38TextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadFailureBeforeContext), ((StringBuilder) (Object) payloadMessageBeforeBase38Text).append(base38TextDescription).append(',').append(useAlternateLongPayload).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class SecondaryDeque {
         if (methodGuard == 121) {
             return firstNode;
         }
-        SecondaryDeque.b(67);
+        SecondaryDeque.releaseSharedResources(67);
         return firstNode;
     }
 

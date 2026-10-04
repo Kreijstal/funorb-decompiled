@@ -16,7 +16,7 @@ final class BootstrapUiSupport {
             if (VisualPropertyOverrides.clientBootstrapStage < 20) {
                 return true;
             }
-            if (!CacheReference.f(-31456)) {
+            if (!CacheReference.haveRequiredClientStages(-31456)) {
                 return true;
             }
             if (EntityLinkSupport.sessionAccessLevelByte <= 0) {
@@ -30,7 +30,7 @@ final class BootstrapUiSupport {
         if (VisualPropertyOverrides.clientBootstrapStage < 20) {
             return true;
         }
-        if (!CacheReference.f(-31456)) {
+        if (!CacheReference.haveRequiredClientStages(-31456)) {
             return true;
         }
         if (EntityLinkSupport.sessionAccessLevelByte <= 0) {

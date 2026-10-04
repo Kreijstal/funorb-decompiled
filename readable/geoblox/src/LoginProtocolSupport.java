@@ -45,7 +45,7 @@ final class LoginProtocolSupport {
                   EntityContactSupport.pendingLoginPayload = HotspotTextWidget.a(false, primaryLoginText, secondaryLoginText, false);
                 } else {
                   unusedNullLongPayloadTextSnapshot = (String) null;
-                  EntityContactSupport.pendingLoginPayload = SecondaryDeque.a(true, ClientClockSupport.field_c, (String) null, primaryLoginText, false);
+                  EntityContactSupport.pendingLoginPayload = SecondaryDeque.createLoginPayload(true, ClientClockSupport.field_c, (String) null, primaryLoginText, false);
                 }
                 CacheReference.outgoingSessionBuffer.position = 0;
                 CacheReference.outgoingSessionBuffer.writeByte((byte) -102, 14);
@@ -128,9 +128,9 @@ final class LoginProtocolSupport {
                     ValidatedTextInputWidget.field_K[extensionByteIndexThenCipherSeedIndex] = LogoCompositor.sessionPacketBuffer.readSignedByte((byte) 72);
                   }
                 }
-                SecondaryDeque.field_f = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 105);
-                receivedNameCharacters = (CharSequence) ((Object) SecondaryDeque.field_f);
-                SecondaryNodeHashTable.field_b = ResizableDialog.a(receivedNameCharacters, 12);
+                SecondaryDeque.receivedSessionName = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 105);
+                receivedNameCharacters = (CharSequence) ((Object) SecondaryDeque.receivedSessionName);
+                SecondaryNodeHashTable.normalizedSessionName = ResizableDialog.normalizeSessionName(receivedNameCharacters, 12);
                 EntityLinkSupport.sessionAccessLevelByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 PacketBuffer.currentProtocolStage = LogoCompositor.connectedSessionStage;
                 if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) != RatingPresentationResources.loginPayloadKindThree) {

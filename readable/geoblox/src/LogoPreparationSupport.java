@@ -51,12 +51,12 @@ final class LogoPreparationSupport {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         packet = LogoCompositor.sessionPacketBuffer;
         snapshotHeaderByte = packet.readUnsignedByte((byte) 34);
-        StrongCacheReference.field_u = snapshotHeaderByte & 127;
+        StrongCacheReference.receivedSessionSnapshotKind = snapshotHeaderByte & 127;
         headerFlagSetSnapshot = !((headerFlagMask & snapshotHeaderByte) == 0);
         ClientSessionSnapshot.field_l = headerFlagSetSnapshot;
         ArchiveIndex.field_s = packet.readUnsignedByte((byte) 34);
         DiskCacheWorker.field_c = packet.readLongBE(2901);
-        if (StrongCacheReference.field_u != 2) {
+        if (StrongCacheReference.receivedSessionSnapshotKind != 2) {
           UsernameAvailabilityValidator.field_o = 0;
           LoginUiSupport.field_b = 0;
         } else {
@@ -71,11 +71,11 @@ final class LogoPreparationSupport {
         } else {
           AvatarFeedbackSupport.field_b = packet.readNullTerminatedText((byte) 124);
         }
-        if (StrongCacheReference.field_u == 1) {
+        if (StrongCacheReference.receivedSessionSnapshotKind == 1) {
           packet.readUnsignedShortBE(true);
           packet.readNullTerminatedText((byte) 112);
         } else {
-          if (StrongCacheReference.field_u == 4) {
+          if (StrongCacheReference.receivedSessionSnapshotKind == 4) {
             packet.readUnsignedShortBE(true);
             packet.readNullTerminatedText((byte) 112);
           }
@@ -89,7 +89,7 @@ final class LogoPreparationSupport {
         try {
           textTemplate = StatefulWidgetRenderer.field_r.getDefinition((byte) -14, textTemplateId);
           RankedListQuery.field_f = textTemplate.summarizeLiteralSegments((byte) -69);
-          if (!AvatarFeedbackSupport.field_b.equals(SecondaryDeque.field_f)) {
+          if (!AvatarFeedbackSupport.field_b.equals(SecondaryDeque.receivedSessionName)) {
             referencedTemplateIdsSnapshot = textTemplate.referencedTemplateIds;
           } else {
             referencedTemplateIdsSnapshot = null;

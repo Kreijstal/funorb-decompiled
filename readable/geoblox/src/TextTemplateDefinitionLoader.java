@@ -11,26 +11,26 @@ final class TextTemplateDefinitionLoader {
     private ResourceArchive alternateArchive;
 
     final TextTemplateDefinition getDefinition(byte methodGuard, int templateId) {
-        byte[] var5 = null;
-        TextTemplateDefinition var3 = (TextTemplateDefinition) (this.definitionsCache.a((byte) 106, (long)templateId));
-        if (var3 == null) {
-            int var4 = 3 % ((methodGuard - 57) / 42);
+        byte[] encodedDefinition = null;
+        TextTemplateDefinition definition = (TextTemplateDefinition) (this.definitionsCache.getByKey((byte) 106, (long)templateId));
+        if (definition == null) {
+            int guardResidue = 3 % ((methodGuard - 57) / 42);
             if (templateId < 32768) {
-                var5 = this.primaryArchive.getFile(1, -28153, templateId);
+                encodedDefinition = this.primaryArchive.getFile(1, -28153, templateId);
             } else {
-                var5 = this.alternateArchive.getFile(1, -28153, 32767 & templateId);
+                encodedDefinition = this.alternateArchive.getFile(1, -28153, 32767 & templateId);
             }
-            var3 = new TextTemplateDefinition();
-            if (!(var5 == null)) {
-                var3.decode(0, new ByteArrayBuffer(var5));
+            definition = new TextTemplateDefinition();
+            if (!(encodedDefinition == null)) {
+                definition.decode(0, new ByteArrayBuffer(encodedDefinition));
             }
             if (!(templateId < 32768)) {
-                var3.markAlternateReferences((byte) 119);
+                definition.markAlternateReferences((byte) 119);
             }
-            this.definitionsCache.a(-126, (long)templateId, var3);
-            return var3;
+            this.definitionsCache.put(-126, (long)templateId, definition);
+            return definition;
         }
-        return var3;
+        return definition;
     }
 
     public static void a(byte param0) {

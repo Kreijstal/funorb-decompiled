@@ -145,7 +145,7 @@ abstract class ResizableDialog extends FadingDialog {
         try {
           if (methodGuard > -27) {
             unusedNullTextSnapshot = (CharSequence) null;
-            ResizableDialog.a((CharSequence) null, -115);
+            ResizableDialog.normalizeSessionName((CharSequence) null, -115);
           }
           crcAccumulator = -1;
           for (byteIndex = startPosition; byteIndex < endPosition; byteIndex++) {
@@ -201,79 +201,79 @@ abstract class ResizableDialog extends FadingDialog {
         DequeCursor.field_e = param0;
     }
 
-    final static String a(CharSequence param0, int param1) {
-        int var6 = 0;
-        StringBuilder discarded$0 = null;
-        Object stackIn_26_0 = null;
-        String stackIn_28_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        StringBuilder var5 = null;
-        int var7 = 0;
-        int var8 = 0;
+    final static String normalizeSessionName(CharSequence nameText, int methodGuard) {
+        int characterIndex = 0;
+        StringBuilder unusedAppendResult = null;
+        Object nullNameResult = null;
+        String normalizedNameResult = null;
+        RuntimeException normalizationFailureBeforeContext = null;
+        StringBuilder normalizationMessagePrefix = null;
+        String nameDescription = null;
+        RuntimeException caughtNormalizationFailure = null;
+        int trimmedStart = 0;
+        RuntimeException normalizationFailureForContext = null;
+        int trimmedEnd = 0;
+        int trimmedLength = 0;
+        StringBuilder normalizedNameBuilder = null;
+        int sourceCharacter = 0;
+        int normalizedCharacter = 0;
         try {
-          if (param0 == null) {
+          if (nameText == null) {
             return null;
           }
-          var2_int = 0;
-          var3 = param0.length();
-          while (var3 > var2_int) {
-            if (NameCharacterSupport.isNameSeparator((byte) 125, param0.charAt(var2_int))) {
-              var2_int++;
+          trimmedStart = 0;
+          trimmedEnd = nameText.length();
+          while (trimmedEnd > trimmedStart) {
+            if (NameCharacterSupport.isNameSeparator((byte) 125, nameText.charAt(trimmedStart))) {
+              trimmedStart++;
               continue;
             }
             break;
           }
-          while (var2_int < var3) {
-            if (NameCharacterSupport.isNameSeparator((byte) -47, param0.charAt(var3 - 1))) {
-              var3--;
+          while (trimmedStart < trimmedEnd) {
+            if (NameCharacterSupport.isNameSeparator((byte) -47, nameText.charAt(trimmedEnd - 1))) {
+              trimmedEnd--;
               continue;
             }
             break;
           }
-          var4 = -var2_int + var3;
-          if (1 > var4) {
+          trimmedLength = -trimmedStart + trimmedEnd;
+          if (1 > trimmedLength) {
             return null;
           }
-          if (12 < var4) {
+          if (12 < trimmedLength) {
             return null;
           }
-          if (param1 != 12) {
+          if (methodGuard != 12) {
             connectionRestoredText = (String) null;
           }
-          var5 = new StringBuilder(var4);
-          for (var6 = var2_int; var6 < var3; var6++) {
-            var7 = param0.charAt(var6);
-            if (TextHotspotBounds.a((char) var7, -47)) {
-              var8 = ValidatedTextInputWidget.a((char) var7, param1 - 239);
-              if (var8 != 0) {
-                discarded$0 = var5.append((char) var8);
+          normalizedNameBuilder = new StringBuilder(trimmedLength);
+          for (characterIndex = trimmedStart; characterIndex < trimmedEnd; characterIndex++) {
+            sourceCharacter = nameText.charAt(characterIndex);
+            if (TextHotspotBounds.a((char) sourceCharacter, -47)) {
+              normalizedCharacter = ValidatedTextInputWidget.a((char) sourceCharacter, methodGuard - 239);
+              if (normalizedCharacter != 0) {
+                unusedAppendResult = normalizedNameBuilder.append((char) normalizedCharacter);
               }
             }
           }
-          if (var5.length() != 0) {
-            stackIn_28_0 = var5.toString();
-            return stackIn_28_0;
+          if (normalizedNameBuilder.length() != 0) {
+            normalizedNameResult = normalizedNameBuilder.toString();
+            return normalizedNameResult;
           }
-          stackIn_26_0 = null;
-          return (String) (stackIn_26_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_31_0 = var2;
-          stackIn_31_1 = new StringBuilder().append("oe.L(");
-          if (param0 == null) {
-            stackIn_32_2 = "null";
+          nullNameResult = null;
+          return (String) (nullNameResult);
+        } catch (java.lang.RuntimeException normalizationFailure) {
+          caughtNormalizationFailure = normalizationFailure;
+          normalizationFailureForContext = caughtNormalizationFailure;
+          normalizationFailureBeforeContext = normalizationFailureForContext;
+          normalizationMessagePrefix = new StringBuilder().append("oe.L(");
+          if (nameText == null) {
+            nameDescription = "null";
           } else {
-            stackIn_32_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) normalizationFailureBeforeContext), ((StringBuilder) (Object) normalizationMessagePrefix).append(nameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

@@ -45,7 +45,7 @@ class HotspotTextWidget extends ButtonWidget {
             var7 = (CharSequence) ((Object) param2);
             var4_long = ResourceArchive.a(var7, -48);
           }
-          stackIn_6_0 = SecondaryDeque.a(true, var4_long, (String) (var6), param1, param0);
+          stackIn_6_0 = SecondaryDeque.createLoginPayload(true, var4_long, (String) (var6), param1, param0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

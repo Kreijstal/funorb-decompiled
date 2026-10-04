@@ -25,18 +25,18 @@ class DualLinkNode extends IntrusiveNode {
         if (methodGuard > -43) {
             return (String) null;
         }
-        if (!(null != SecondaryDeque.field_f)) {
+        if (!(null != SecondaryDeque.receivedSessionName)) {
             return "";
         }
-        return SecondaryDeque.field_f;
+        return SecondaryDeque.receivedSessionName;
     }
 
-    final static void readSessionTextAndHash(int methodGuard) {
-        SecondaryDeque.field_f = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 113);
-        CharSequence textForHash = (CharSequence) ((Object) SecondaryDeque.field_f);
-        SecondaryNodeHashTable.field_b = ResizableDialog.a(textForHash, 12);
+    final static void readSessionNameAndNormalize(int methodGuard) {
+        SecondaryDeque.receivedSessionName = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 113);
+        CharSequence nameToNormalize = (CharSequence) ((Object) SecondaryDeque.receivedSessionName);
+        SecondaryNodeHashTable.normalizedSessionName = ResizableDialog.normalizeSessionName(nameToNormalize, 12);
         if (methodGuard != 1) {
-            DualLinkNode.readSessionTextAndHash(83);
+            DualLinkNode.readSessionNameAndNormalize(83);
         }
     }
 

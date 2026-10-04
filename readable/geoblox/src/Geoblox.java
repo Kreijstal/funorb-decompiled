@@ -282,7 +282,7 @@ public final class Geoblox extends SessionGameApplet {
                           if (archivePollGuard) {
                             return true;
                           }
-                          SecondaryDeque.c(480);
+                          SecondaryDeque.settleAccountDialogAnimations(480);
                           HighscoreNameEntry.a(FullscreenFailureReason.field_a, -2, 50.0f);
                           this.renderFrame(25853);
                           SecondaryNodeDequeIterator.archiveLoadingComplete = true;
@@ -410,7 +410,7 @@ public final class Geoblox extends SessionGameApplet {
         SessionSnapshotSupport.releaseStaticReferences((byte) -64);
         MenuScreen.releaseStaticReferences((byte) 26);
         ClientScreenExitSupport.clearScreenExitResources((byte) -88);
-        SecondaryDeque.b(-10943);
+        SecondaryDeque.releaseSharedResources(-10943);
         GameplayEntity.e((byte) 104);
         BoardReconciliationSupport.releaseStaticReferences(126);
         SpawnQuotaSupport.releaseSelectedThemeBackground(false);
@@ -446,7 +446,7 @@ public final class Geoblox extends SessionGameApplet {
         AccountEligibilitySupport.clearAccountEligibilityResources(methodGuard - 15583);
         SettingsCookieSupport.clearSettingsCookieTexts(true);
         VisualPropertyOverrides.b(false);
-        SecondaryNodeHashTable.a(true);
+        SecondaryNodeHashTable.releaseSharedResources(true);
         IntKeyLookup.a((byte) 49);
         ByteStorage.a(-87);
         Bzip2Decoder.releaseSharedState();
@@ -470,7 +470,7 @@ public final class Geoblox extends SessionGameApplet {
         TextTemplateDefinition.f(111);
         EntityContactSupport.releaseStaticReferences((byte) 73);
         TextTemplateDefinitionLoader.a((byte) 107);
-        WeightedObjectCache.a(126);
+        WeightedObjectCache.releaseCacheTextResources(126);
         AttachmentPointerState.releaseAttachmentPointerText((byte) 95);
         PrefixCodeDecoder.a((byte) -30);
         VisualPropertyNode.e((byte) 77);
@@ -512,8 +512,8 @@ public final class Geoblox extends SessionGameApplet {
         TextTemplateArgumentType.a(-113);
         IterableNodeHashTable.releaseSharedResources(methodGuard ^ 63);
         SecondaryNodeDeque.releaseSharedResources(methodGuard + 63);
-        CacheReference.e(-111);
-        StrongCacheReference.h(-1);
+        CacheReference.releaseCacheReferenceResources(-111);
+        StrongCacheReference.releaseStrongReferenceResources(-1);
         ProxySocketConnector.e(1353);
         SoundFilter.a();
         CharacterReplacementSupport.clearReplacementAndTransitionResources((byte) -23);
@@ -801,7 +801,7 @@ public final class Geoblox extends SessionGameApplet {
             VisualPropertyNode.field_o = false;
           }
           this.h(115);
-          if (CacheReference.f(-31456)) {
+          if (CacheReference.haveRequiredClientStages(-31456)) {
             discardedArchiveReadiness = this.pollArchiveLoading(false);
           }
         }

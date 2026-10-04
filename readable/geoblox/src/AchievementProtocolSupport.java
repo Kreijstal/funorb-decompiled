@@ -54,7 +54,7 @@ final class AchievementProtocolSupport {
             return null;
           }
           inputNameCharacters = (CharSequence) ((Object) displayName);
-          lookupName = ResizableDialog.a(inputNameCharacters, 12);
+          lookupName = ResizableDialog.normalizeSessionName(inputNameCharacters, 12);
           if (lookupName == null) {
             lookupName = displayName;
           }
@@ -65,7 +65,7 @@ final class AchievementProtocolSupport {
           }
           while (candidateEntry != null) {
             candidateNameCharacters = (CharSequence) ((Object) candidateEntry.displayName);
-            candidateName = ResizableDialog.a(candidateNameCharacters, 12);
+            candidateName = ResizableDialog.normalizeSessionName(candidateNameCharacters, 12);
             if (candidateName == null) {
               candidateName = candidateEntry.displayName;
             }

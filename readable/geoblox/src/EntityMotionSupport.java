@@ -65,7 +65,7 @@ final class EntityMotionSupport {
           var3_int = param2.length();
           if ((var3_int >= 1) &&
               (var3_int <= 12)) {
-            var4 = ResizableDialog.a(param2, 12);
+            var4 = ResizableDialog.normalizeSessionName(param2, 12);
             if (param1 != 2) {
               EntityMotionSupport.a((byte) 112);
             }

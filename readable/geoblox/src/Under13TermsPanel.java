@@ -29,7 +29,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             RasterTargetSnapshot.field_f[11] = RasterTargetSnapshot.previousText;
             RasterTargetSnapshot.field_f[15] = ArchiveCatalog.field_a;
             RasterTargetSnapshot.field_f[1] = RasterTargetRestoreSupport.resumeGameText;
-            RasterTargetSnapshot.field_f[13] = StrongCacheReference.field_t;
+            RasterTargetSnapshot.field_f[13] = StrongCacheReference.loginRegisterText;
             RasterTargetSnapshot.field_f[3] = SecondaryNodeDequeIterator.instructionsText;
             RasterTargetSnapshot.field_f[2] = ArchiveLoadStep.highscoresText;
             RasterTargetSnapshot.field_f[18] = ClientSessionSnapshot.highscoreModeNames[2];

@@ -31,35 +31,35 @@ class TextInputRenderer extends TextWidgetRenderer {
         }
     }
 
-    final static UsernameAvailabilityQuery a(int param0, String[] param1) {
-        UsernameAvailabilityQuery var2 = null;
-        RuntimeException var2_ref = null;
-        UsernameAvailabilityQuery stackIn_2_0 = null;
-        UsernameAvailabilityQuery stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static UsernameAvailabilityQuery createSuggestedUsernameQuery(int methodGuard, String[] suggestions) {
+        UsernameAvailabilityQuery query = null;
+        RuntimeException queryFailureForContext = null;
+        UsernameAvailabilityQuery nullQueryResult = null;
+        UsernameAvailabilityQuery queryResult = null;
+        RuntimeException queryFailureBeforeContext = null;
+        StringBuilder queryMessagePrefix = null;
+        String suggestionsDescription = null;
+        RuntimeException caughtQueryFailure = null;
         try {
-          if (param0 != 28) {
-            stackIn_2_0 = (UsernameAvailabilityQuery) null;
-            return stackIn_2_0;
+          if (methodGuard != 28) {
+            nullQueryResult = (UsernameAvailabilityQuery) null;
+            return nullQueryResult;
           }
-          var2 = new UsernameAvailabilityQuery(false);
-          var2.field_a = param1;
-          stackIn_4_0 = var2;
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_7_0 = var2_ref;
-          stackIn_7_1 = new StringBuilder().append("ac.A(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          query = new UsernameAvailabilityQuery(false);
+          query.field_a = suggestions;
+          queryResult = query;
+          return queryResult;
+        } catch (java.lang.RuntimeException queryFailure) {
+          caughtQueryFailure = queryFailure;
+          queryFailureForContext = caughtQueryFailure;
+          queryFailureBeforeContext = queryFailureForContext;
+          queryMessagePrefix = new StringBuilder().append("ac.A(").append(methodGuard).append(',');
+          if (suggestions == null) {
+            suggestionsDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            suggestionsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryFailureBeforeContext), ((StringBuilder) (Object) queryMessagePrefix).append(suggestionsDescription).append(')').toString());
         }
     }
 

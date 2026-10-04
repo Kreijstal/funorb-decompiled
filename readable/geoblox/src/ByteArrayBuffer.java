@@ -255,11 +255,11 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
-            if (SecondaryNodeHashTable.field_i == null) {
-                SecondaryNodeHashTable.field_i = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
-                ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.field_i);
+            if (SecondaryNodeHashTable.accountProgressDialog == null) {
+                SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
+                ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
             }
-            SecondaryNodeHashTable.field_i.updateProgress(param2, param1, param3 ^ -92, param0);
+            SecondaryNodeHashTable.accountProgressDialog.updateProgress(param2, param1, param3 ^ -92, param0);
             SoftwareRasterizer.clearFramebuffer();
             if (param3 != -40) {
                 whirlpoolTables = (long[][]) null;

@@ -73,7 +73,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           }
           var4 = var14.readUnsignedByte((byte) 34);
           if (var4 != 0) {
-            ByteArrayPoolSupport.rankedListResponseNames[0] = SecondaryDeque.field_f;
+            ByteArrayPoolSupport.rankedListResponseNames[0] = SecondaryDeque.receivedSessionName;
             var5 = var3.entryLimit;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               ByteArrayPoolSupport.rankedListResponseNames[var6_int] = var14.readNullTerminatedText((byte) 120);

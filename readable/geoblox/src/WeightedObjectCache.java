@@ -2,84 +2,84 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class WeightedObjectCache {
-    private SecondaryNodeDeque field_e;
+    private SecondaryNodeDeque recencyQueue;
     static String loginUsernameEmailText;
-    private int field_d;
-    private IterableNodeHashTable field_f;
+    private int remainingWeightCapacity;
+    private IterableNodeHashTable entriesByKey;
     static String[] ratingModeLongNames;
     static int field_g;
-    private int field_b;
+    private int weightCapacity;
 
-    private final void a(long param0, int param1) {
-        CacheReference var4 = (CacheReference) ((Object) this.field_f.findByKey(param0, (byte) -72));
-        this.a(param1 - 117, var4);
-        if (param1 == 0) {
+    private final void removeByKey(long key, int methodGuard) {
+        CacheReference entry = (CacheReference) ((Object) this.entriesByKey.findByKey(key, (byte) -72));
+        this.removeEntry(methodGuard - 117, entry);
+        if (methodGuard == 0) {
             return;
         }
         loginUsernameEmailText = (String) null;
     }
 
-    private final void a(long param0, int param1, boolean param2, Object param3) {
-        CacheReference var6 = null;
-        StrongCacheReference var6_ref = null;
-        int var7 = Geoblox.clientControlFlowFlag;
+    private final void putWeighted(long key, int entryWeight, boolean methodGuard, Object value) {
+        CacheReference entryToEvict = null;
+        StrongCacheReference strongEntry = null;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            if (!(param1 <= this.field_b)) {
+            if (!(entryWeight <= this.weightCapacity)) {
                 throw new IllegalStateException();
             }
-            this.a(param0, 0);
-            this.field_d = this.field_d - param1;
-            while (0 > this.field_d) {
-                var6 = (CacheReference) ((Object) this.field_e.removeFirst((byte) -41));
-                this.a(114, var6);
+            this.removeByKey(key, 0);
+            this.remainingWeightCapacity = this.remainingWeightCapacity - entryWeight;
+            while (0 > this.remainingWeightCapacity) {
+                entryToEvict = (CacheReference) ((Object) this.recencyQueue.removeFirst((byte) -41));
+                this.removeEntry(114, entryToEvict);
             }
-            var6_ref = new StrongCacheReference(param3, param1);
-            this.field_f.put(param0, -99, var6_ref);
-            if (param2) {
+            strongEntry = new StrongCacheReference(value, entryWeight);
+            this.entriesByKey.put(key, -99, strongEntry);
+            if (methodGuard) {
                 WeightedObjectCache.clearAvatarSteering(-85);
             }
-            this.field_e.addLast(-1, var6_ref);
-            ((CacheReference) ((Object) var6_ref)).secondaryKey = 0L;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            this.recencyQueue.addLast(-1, strongEntry);
+            ((CacheReference) ((Object) strongEntry)).secondaryKey = 0L;
+        } catch (RuntimeException cachePutFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cachePutFailure), "jj.F(" + key + ',' + entryWeight + ',' + methodGuard + ',' + (value != null ? "{...}" : "null") + ')');
         }
     }
 
-    final Object a(byte param0, long param1) {
-        CacheReference var7 = (CacheReference) ((Object) this.field_f.findByKey(param1, (byte) 61));
-        if (var7 == null) {
+    final Object getByKey(byte methodGuard, long key) {
+        CacheReference cachedReference = (CacheReference) ((Object) this.entriesByKey.findByKey(key, (byte) 61));
+        if (cachedReference == null) {
             return null;
         }
-        Object var5 = var7.e((byte) 120);
-        if (param0 < 56) {
+        Object referent = cachedReference.getReferent((byte) 120);
+        if (methodGuard < 56) {
             return (Object) null;
         }
-        if (!(var5 != null)) {
-            var7.unlinkNode(false);
-            var7.unlinkSecondaryNode((byte) 92);
-            this.field_d = this.field_d + var7.field_n;
+        if (!(referent != null)) {
+            cachedReference.unlinkNode(false);
+            cachedReference.unlinkSecondaryNode((byte) 92);
+            this.remainingWeightCapacity = this.remainingWeightCapacity + cachedReference.entryWeight;
             return null;
         }
-        if (!var7.g(13)) {
-            this.field_e.addLast(-1, var7);
-            var7.secondaryKey = 0L;
-            return var5;
+        if (!cachedReference.requiresStrongPromotion(13)) {
+            this.recencyQueue.addLast(-1, cachedReference);
+            cachedReference.secondaryKey = 0L;
+            return referent;
         }
-        StrongCacheReference var6 = new StrongCacheReference(var5, var7.field_n);
-        this.field_f.put(var7.nodeKey, -81, var6);
-        this.field_e.addLast(-1, var6);
-        ((CacheReference) ((Object) var6)).secondaryKey = 0L;
-        var7.unlinkNode(false);
-        var7.unlinkSecondaryNode((byte) 93);
-        return var5;
+        StrongCacheReference promotedReference = new StrongCacheReference(referent, cachedReference.entryWeight);
+        this.entriesByKey.put(cachedReference.nodeKey, -81, promotedReference);
+        this.recencyQueue.addLast(-1, promotedReference);
+        ((CacheReference) ((Object) promotedReference)).secondaryKey = 0L;
+        cachedReference.unlinkNode(false);
+        cachedReference.unlinkSecondaryNode((byte) 93);
+        return referent;
     }
 
-    final void a(int param0, long param1, Object param2) {
+    final void put(int methodGuard, long key, Object value) {
         try {
-            int var5_int = 4 / ((param0 - 56) / 59);
-            this.a(param1, 1, false, param2);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            int guardResidue = 4 / ((methodGuard - 56) / 59);
+            this.putWeighted(key, 1, false, value);
+        } catch (RuntimeException cachePutFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cachePutFailure), "jj.A(" + methodGuard + ',' + key + ',' + (value != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,39 +92,39 @@ final class WeightedObjectCache {
         FullscreenSupport.avatarSteeringDirectionId = 0;
     }
 
-    private final void a(int param0, CacheReference param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final void removeEntry(int methodGuard, CacheReference entry) {
+        int guardResidue = 0;
+        RuntimeException removalFailureForContext = null;
+        RuntimeException removalFailureBeforeContext = null;
+        StringBuilder removalMessagePrefix = null;
+        String entryDescription = null;
+        RuntimeException caughtRemovalFailure = null;
         try {
-          var3_int = -56 % ((61 - param0) / 42);
-          if (param1 == null) {
+          guardResidue = -56 % ((61 - methodGuard) / 42);
+          if (entry == null) {
             return;
           }
-          param1.unlinkNode(false);
-          param1.unlinkSecondaryNode((byte) 75);
-          this.field_d = this.field_d + param1.field_n;
+          entry.unlinkNode(false);
+          entry.unlinkSecondaryNode((byte) 75);
+          this.remainingWeightCapacity = this.remainingWeightCapacity + entry.entryWeight;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_5_0 = var3;
-          stackIn_5_1 = new StringBuilder().append("jj.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException removalFailure) {
+          caughtRemovalFailure = removalFailure;
+          removalFailureForContext = caughtRemovalFailure;
+          removalFailureBeforeContext = removalFailureForContext;
+          removalMessagePrefix = new StringBuilder().append("jj.B(").append(methodGuard).append(',');
+          if (entry == null) {
+            entryDescription = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            entryDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) removalFailureBeforeContext), ((StringBuilder) (Object) removalMessagePrefix).append(entryDescription).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseCacheTextResources(int methodGuard) {
         ratingModeLongNames = null;
-        int var1 = -3 / ((81 - param0) / 41);
+        int guardResidue = -3 / ((81 - methodGuard) / 41);
         loginUsernameEmailText = null;
     }
 

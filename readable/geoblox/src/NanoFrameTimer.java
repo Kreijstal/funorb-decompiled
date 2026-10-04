@@ -74,7 +74,7 @@ final class NanoFrameTimer extends FrameTimer {
               var6 = var4.entryLimit;
               var7 = var4.valuesPerEntry;
               RasterTargetRestoreSupport.highscoreNameTable[0].usedInUniqueView = false;
-              RasterTargetRestoreSupport.highscoreNameTable[0].primaryName = SecondaryDeque.field_f;
+              RasterTargetRestoreSupport.highscoreNameTable[0].primaryName = SecondaryDeque.receivedSessionName;
               RasterTargetRestoreSupport.highscoreNameTable[0].alternateName = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
                 RasterTargetRestoreSupport.highscoreNameTable[var8_int].primaryName = var27.readNullTerminatedText((byte) 104);
@@ -119,7 +119,7 @@ final class NanoFrameTimer extends FrameTimer {
                   }
                   if ((var21 != null) &&
                       (WhirlpoolHash.a(var21, (byte) 12))) {
-                    var8[1][var13] = SecondaryDeque.field_f;
+                    var8[1][var13] = SecondaryDeque.receivedSessionName;
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
                     var13++;

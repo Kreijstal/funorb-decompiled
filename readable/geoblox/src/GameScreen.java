@@ -1024,7 +1024,7 @@ final class GameScreen extends MenuScreen {
                   if (UiWidget.gameplaySession.score == -2147483648) {
                     break;
                   }
-                  unlistedCurrentScoreText = SecondaryDeque.field_f;
+                  unlistedCurrentScoreText = SecondaryDeque.receivedSessionName;
                   scoreFont.drawText(unlistedCurrentScoreText, 165, entryTextY, 16724225, -1);
                   scoreFont.drawRightAlignedText(Integer.toString(Math.abs(UiWidget.gameplaySession.score)), 500, entryTextY, 16724225, -1);
                   break;

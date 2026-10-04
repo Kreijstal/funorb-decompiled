@@ -37,7 +37,7 @@ final class UsernameResponseSupport {
             }
             unusedSuggestionsAlias = suggestions;
             SoundSampleCache.a(unusedSuggestionsAlias, 416577356);
-            ScorePopup.pendingUsernameResult = TextInputRenderer.a(methodGuard - 6540, suggestions);
+            ScorePopup.pendingUsernameResult = TextInputRenderer.createSuggestedUsernameQuery(methodGuard - 6540, suggestions);
             return;
           }
           acceptedQueryGuard = methodGuard ^ 6648;
@@ -94,8 +94,8 @@ final class UsernameResponseSupport {
         int guardResidue = 0;
         if (null != ClientFlowState.accountDialogLayer) {
             ClientFlowState.accountDialogLayer.settleDialogAnimations(0);
-            if (SecondaryNodeHashTable.field_i != null) {
-                SecondaryNodeHashTable.field_i.stopNormalAnimation(23181);
+            if (SecondaryNodeHashTable.accountProgressDialog != null) {
+                SecondaryNodeHashTable.accountProgressDialog.stopNormalAnimation(23181);
                 LogoCompositor.resetUiInteractionState((byte) -2);
                 guardResidue = -121 % ((-38 - methodGuard) / 59);
                 return;
@@ -104,12 +104,12 @@ final class UsernameResponseSupport {
             guardResidue = -121 % ((-38 - methodGuard) / 59);
             return;
         }
-        if (SecondaryNodeHashTable.field_i == null) {
+        if (SecondaryNodeHashTable.accountProgressDialog == null) {
             LogoCompositor.resetUiInteractionState((byte) -2);
             guardResidue = -121 % ((-38 - methodGuard) / 59);
             return;
         }
-        SecondaryNodeHashTable.field_i.stopNormalAnimation(23181);
+        SecondaryNodeHashTable.accountProgressDialog.stopNormalAnimation(23181);
         LogoCompositor.resetUiInteractionState((byte) -2);
         guardResidue = -121 % ((-38 - methodGuard) / 59);
     }

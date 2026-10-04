@@ -60,7 +60,7 @@ abstract class SocketConnector {
             return stackIn_10_0;
           }
           var6 = (CharSequence) ((Object) displayName);
-          var2 = ResizableDialog.a(var6, 12);
+          var2 = ResizableDialog.normalizeSessionName(var6, 12);
           if (var2 == null) {
             stackIn_13_0 = null;
             return (SocialListEntry) (stackIn_13_0);
@@ -68,7 +68,7 @@ abstract class SocketConnector {
           var3 = (SocialListEntry) ((Object) ArchiveSource.field_a.findFirst((long)var2.hashCode(), -1));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.displayName);
-            var4 = ResizableDialog.a(var7, 12);
+            var4 = ResizableDialog.normalizeSessionName(var7, 12);
             if (var4.equals(var2)) {
               stackIn_20_0 = var3;
               return stackIn_20_0;

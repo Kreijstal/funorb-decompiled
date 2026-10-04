@@ -384,7 +384,7 @@ abstract class SessionGameApplet extends GameApplet {
           ConnectionHeaderSupport.evaluateConnectionHeaderGuard((byte) 120);
           ByteArrayPoolSupport.field_e = ArchiveSource.loadingText;
           AccountEligibilitySupport.loginReturnAllowed = false;
-          CacheReference.a((byte) 114, DialRenderer.field_n, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
+          CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.field_n, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
           if (!((!LoginProtocolSupport.field_a) &&
               (SocketConnector.field_d == null))) {
             stackIn_100_0 = 2274;
@@ -471,7 +471,7 @@ abstract class SessionGameApplet extends GameApplet {
         boolean stackIn_3_1 = false;
         boolean stackIn_4_2 = false;
         var3 = Geoblox.clientControlFlowFlag;
-        if (!CacheReference.f(-31456)) {
+        if (!CacheReference.haveRequiredClientStages(-31456)) {
           if (VisualPropertyOverrides.clientBootstrapStage >= 10) {
             if (!OpacityWidget.isLogoAnimationComplete(7426)) {
               ValidationIconWidget.advanceLogoAnimationTick((byte) 88);
@@ -537,7 +537,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (var4 == 2) {
               var5_int = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.field_r, UsernameSuggestionsPanel.f(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.a((byte) 27));
               if (var5_int != -1) {
-                StrongCacheReference.a(AudioService.field_a, var5_int, (byte) 30, WidgetSkinState.field_i);
+                StrongCacheReference.publishAccountUsernameResult(AudioService.field_a, var5_int, (byte) 30, WidgetSkinState.field_i);
                 AudioService.field_a = null;
                 WidgetSkinState.field_i = null;
               }
@@ -607,10 +607,10 @@ abstract class SessionGameApplet extends GameApplet {
                   var12 = EmailAvailabilityValidator.field_n.b((byte) 91);
                   if (var12 == null) {
                     var9 = (String) null;
-                    SecondaryDeque.a((byte) 69, (String) null);
+                    SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
                   } else {
                     var7 = ByteTextDecodingSupport.decodeTextSlice(-46, var12.bytes, 0, var12.position);
-                    SecondaryDeque.a((byte) 69, var7);
+                    SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, var7);
                   }
                   EmailAvailabilityValidator.field_n = null;
                 }
@@ -619,7 +619,7 @@ abstract class SessionGameApplet extends GameApplet {
                 var5 = (Exception) (Object) decompiledCaughtException;
                 IterableNodeHashTable.reportClientError((Throwable) ((Object) var5), "S1", (byte) 125);
                 var10 = (String) null;
-                SecondaryDeque.a((byte) 69, (String) null);
+                SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
                 EmailAvailabilityValidator.field_n = null;
               }
             }
@@ -757,7 +757,7 @@ abstract class SessionGameApplet extends GameApplet {
                           GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, LogoCompositor.sessionPacketBuffer);
                         } else {
                           if (var2 == 16) {
-                            DualLinkNode.readSessionTextAndHash(1);
+                            DualLinkNode.readSessionNameAndNormalize(1);
                           } else {
                             if ((11 != var2) &&
                                 (12 != var2)) {

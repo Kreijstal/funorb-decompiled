@@ -156,10 +156,10 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             StatefulWidgetRenderer.a(38, (String) null);
         }
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
-        if (!(null != SecondaryNodeHashTable.field_i)) {
-            SecondaryNodeHashTable.field_i = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
+        if (!(null != SecondaryNodeHashTable.accountProgressDialog)) {
+            SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
         }
-        ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.field_i);
+        ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
     }
 
     final static void b(int param0) {

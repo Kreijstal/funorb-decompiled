@@ -17,12 +17,46 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c66ee0af3d13865ac6cbf482d198de689e64e450/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0b4ae750818801dee72c8b3e097a930bc4687edf/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 134 adds 177 guarded names: eleven fields, 22 methods, 48 parameters
+and 96 locals. Cache code now exposes `entryWeight`, `weightCapacity`,
+`remainingWeightCapacity`, `entriesByKey`, `recencyQueue`, `getByKey`,
+`putWeighted`, `removeByKey`, `removeEntry` and `getReferent`.
+All parameters, locals and methods in the five audited cache/reference and
+secondary collection classes are named. The template-definition cache caller,
+account resource setup/username response, progress dialog, login payload factory
+and shared name slots also use inspected roles.
+
+Two previous rules are explicitly corrected: `readSessionTextAndHash` becomes
+`readSessionNameAndNormalize`, and `textForHash` becomes `nameToNormalize`.
+The called `normalizeSessionName` trims separators, validates length and maps
+characters; it does not produce a hash. Received text and normalized name remain
+separate fields. The country-list helper still only has its original guard side
+effect; downloaded text is unused. The cache's private constructor still throws
+Error, and this corpus contains only the strong reference subclass. The promotion
+predicate is named for its lookup decision, without inventing soft-reference
+implementations. Achievement id 13 in `WeightedObjectCache.field_g` stays opaque
+because its title is not established.
+
+The export has 11,812 rules and 88,935 identifier edits, plus eleven class-literal
+and 184 label edits: 89,130 edits in total. All 11,633 unaffected complete rules
+and the raw/decompiler/naming/workflow/stub/native/text pins remain unchanged.
+Thirty generated Java files change through declarations and their callers.
+Both 303-file corpora compile, preserving 136,607 ordered bindings, 388 overrides
+and 813 lexical label records; all 303 files reverse byte exactly to raw Git.
+The existing 27 publication checks, eight fixed native probes and deque fixture
+pass within their documented scopes. The label-refusal test now creates its own
+source migration, so it also works during naming-only passes. No raw bodies,
+numeric states, guards, evaluation order, partial effects, diagnostics or
+exception/monitor boundaries change. Eight large labeled bodies, 192 opaque
+labels and other unmapped members remain. Full-game/assets/server/browser/phone
+and heap/FPS acceptance remain unverified.
 
 Pass 133 recovers 21 ordinary guarded loops across 14 methods and 12 files.
 Previously, `while (true)` put its guard in a first `if` and buried the complete

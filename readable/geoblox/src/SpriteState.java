@@ -358,7 +358,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "login");
           if (var2 != null) {
-            StrongCacheReference.field_t = EmailValidator.decodeTextBytes(1, var2);
+            StrongCacheReference.loginRegisterText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "notAcheived");
           if (null != var2) {
