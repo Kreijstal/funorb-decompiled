@@ -11,9 +11,9 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static String loginUsernameTooltipText;
     static int[] field_s;
 
-    public static void i(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         field_s = null;
-        if (param0 > -69) {
+        if (methodGuard > -69) {
             return;
         }
         loginUsernameTooltipText = null;
@@ -304,7 +304,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final static ResourceArchive createResourceArchive(int archiveId, byte methodGuard) {
         if (methodGuard != -62) {
-            SocketArchiveNetworkClient.i(118);
+            SocketArchiveNetworkClient.releaseStaticReferences(118);
         }
         return IntKeyLookup.createResourceArchive(methodGuard - 10, archiveId, false, 1, true, false);
     }

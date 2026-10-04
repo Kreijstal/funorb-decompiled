@@ -4,14 +4,14 @@
 final class PendingActionMarker extends IntrusiveNode {
     static IntrusiveDeque pendingRankedListQueries;
     int actionId;
-    static int field_g;
+    static int tooltipAnchorY;
 
-    final static void a(byte param0) {
-        if (!ProgressBarWidget.field_G) {
+    final static void returnGuestSessionToLogin(byte methodGuard) {
+        if (!ProgressBarWidget.guestSessionMode) {
             throw new IllegalStateException();
         }
         AccountEligibilitySupport.loginReturnAllowed = true;
-        if (param0 > 115) {
+        if (methodGuard > 115) {
             TextInputValidator.openAccountLoginPanel((byte) 107, false);
             SpriteConstructionSupport.clientScreenStage = 0;
             return;
@@ -21,8 +21,8 @@ final class PendingActionMarker extends IntrusiveNode {
         SpriteConstructionSupport.clientScreenStage = 0;
     }
 
-    public static void c(byte param0) {
-        int var1 = -118 / ((-11 - param0) / 40);
+    public static void releaseStaticReferences(byte methodGuard) {
+        int guardQuotient = -118 / ((-11 - methodGuard) / 40);
         pendingRankedListQueries = null;
     }
 
@@ -31,7 +31,7 @@ final class PendingActionMarker extends IntrusiveNode {
     }
 
     static {
-        field_g = -1;
+        tooltipAnchorY = -1;
         pendingRankedListQueries = new IntrusiveDeque();
     }
 }

@@ -1654,7 +1654,7 @@ final class GameplaySession {
             return;
         }
         if ((0 < this.score && !this.submissionBlocked) &&
-            (!UnderlinedButtonRenderer.c(-102))) {
+            (!UnderlinedButtonRenderer.isGuestSessionMode(-102))) {
             ContentTransitionDialog.createAndSubmitScore(ClientClockSupport.firstScoreContextAccumulator, 22, UsernameResponseSupport.thirdScoreContextCounter, 25134, new int[]{this.score}, SpriteButtonRenderer.secondScoreContextAccumulator, 65513, 3, DequeCursor.fourthScoreContextCounter);
         }
         FifoResponseToken.activeHighscoreQuery = null;
@@ -1729,7 +1729,7 @@ final class GameplaySession {
           this.debugPointerSpawnEnabled = true;
         }
         L1: {
-          if (!UnderlinedButtonRenderer.c(-93)) {
+          if (!UnderlinedButtonRenderer.isGuestSessionMode(-93)) {
             if (this.newActionCount <= 0) {
               if (this.score > 0) {
                 ScoreSubmission.requestedScreenId = 2;

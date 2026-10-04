@@ -31,8 +31,8 @@ abstract class LoginPayload {
         return DiskCacheWorker.sharedPcmMixerReference;
     }
 
-    public static void a(int param0) {
-        if (param0 != 0) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 0) {
             endGameText = (String) null;
             spaceBackgroundSprite = null;
             endGameText = null;

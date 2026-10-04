@@ -3,7 +3,7 @@
  */
 final class SettingsCookieSupport {
     static String quitText;
-    static String field_a;
+    static String currentTooltipText;
     static int currentScreenId;
 
     final static boolean isRepresentableTextCharacter(byte methodGuard, char character) {
@@ -46,7 +46,7 @@ final class SettingsCookieSupport {
 
     public static void clearSettingsCookieTexts(boolean methodGuard) {
         quitText = null;
-        field_a = null;
+        currentTooltipText = null;
         if (!methodGuard) {
             SettingsCookieSupport.clearSettingsCookieTexts(false);
         }
@@ -91,7 +91,7 @@ final class SettingsCookieSupport {
     }
 
     static {
-        field_a = null;
+        currentTooltipText = null;
         quitText = "Quit";
     }
 }

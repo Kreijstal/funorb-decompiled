@@ -10,8 +10,8 @@ final class IntArrayQuery extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void b(int param0) {
-        if (param0 != 1000) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 1000) {
             return;
         }
         pendingIntArrayQueries = null;

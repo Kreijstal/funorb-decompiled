@@ -33,8 +33,8 @@ final class TextTemplateDefinitionLoader {
         return definition;
     }
 
-    public static void a(byte param0) {
-        int var1 = 52 / ((25 - param0) / 54);
+    public static void releaseStaticReferences(byte methodGuard) {
+        int guardQuotient = 52 / ((25 - methodGuard) / 54);
         secondarySocialEntriesInOrder = null;
         createText = null;
     }

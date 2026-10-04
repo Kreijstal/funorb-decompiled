@@ -69,14 +69,14 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
         }
     }
 
-    public static void b(int param0) {
-        if (param0 == 16777215) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard == 16777215) {
             createSelectAlternativeText = null;
             activeLoginPanel = null;
             appletTaskDispatcher = null;
             return;
         }
-        SpriteButtonRenderer.b(11);
+        SpriteButtonRenderer.releaseStaticReferences(11);
         createSelectAlternativeText = null;
         activeLoginPanel = null;
         appletTaskDispatcher = null;

@@ -203,12 +203,12 @@ final class LogoCompositor {
     }
 
     final static void resetUiInteractionState(byte methodGuard) {
-        InstrumentPatch.field_q = false;
-        SettingsCookieSupport.field_a = null;
+        InstrumentPatch.tooltipSuppressed = false;
+        SettingsCookieSupport.currentTooltipText = null;
         int sentinelDivision = 46 / ((methodGuard + 64) / 39);
         ResizableDialog.tooltipAgeTicks = 0;
-        ByteTextDecodingSupport.field_a = -1;
-        PendingActionMarker.field_g = -1;
+        ByteTextDecodingSupport.tooltipAnchorX = -1;
+        PendingActionMarker.tooltipAnchorY = -1;
     }
 
     static {

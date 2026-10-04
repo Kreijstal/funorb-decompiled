@@ -50,17 +50,17 @@ final class DialogLayer extends SingleChildWidget {
         }
     }
 
-    final static void g(int param0) {
-        if (param0 != -13912) {
+    final static void initializeReflectionCheckQueue(int methodGuard) {
+        if (methodGuard != -13912) {
             return;
         }
         UsernameAvailabilityQuery.reflectionCheckRequests = new IntrusiveDeque();
     }
 
-    final static void h(int param0) {
+    final static void serviceGameAudioOutputs(int methodGuard) {
         CacheReference.gameMusicOutput.serviceOutput();
         ClientScreenExitSupport.gameSoundOutput.serviceOutput();
-        if (param0 <= 9) {
+        if (methodGuard <= 9) {
             rotatedEntityScreenX = -2;
         }
     }
@@ -81,7 +81,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     public DialogLayer() {
-        super(0, 0, UsernameResponseSupport.field_b, MessageDialogSupport.field_i, (WidgetRenderer) null, (WidgetListener) null);
+        super(0, 0, UsernameResponseSupport.accountUiViewportWidth, MessageDialogSupport.accountUiViewportHeight, (WidgetRenderer) null, (WidgetListener) null);
         this.dialogs = new IntrusiveDeque();
     }
 

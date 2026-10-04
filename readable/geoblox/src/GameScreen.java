@@ -116,7 +116,7 @@ final class GameScreen extends MenuScreen {
                   (83 != SessionTextHistorySupport.currentKeyboardEventCode)) {
                 break L0;
               }
-              if (!UnderlinedButtonRenderer.c(-103)) {
+              if (!UnderlinedButtonRenderer.isGuestSessionMode(-103)) {
                 if ((!(TextTemplateDefinition.field_n <= 0) ||
                     (!(this.fullscreenDialogButtonIndex == 0) &&
                       !((PrefixCodeDecoder.pointerXSnapshot > 190) &&
@@ -427,7 +427,7 @@ final class GameScreen extends MenuScreen {
                 if (!this.fullscreenDialogActive) {
                   return;
                 }
-                if (UnderlinedButtonRenderer.c(-93)) {
+                if (UnderlinedButtonRenderer.isGuestSessionMode(-93)) {
                   if (this.activeTicks <= 200) {
                     membershipOverlayAlpha = this.activeTicks;
                   } else {
@@ -942,7 +942,7 @@ final class GameScreen extends MenuScreen {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if ((FifoResponseToken.activeHighscoreQuery == null) &&
-              (!UnderlinedButtonRenderer.c(-115))) {
+              (!UnderlinedButtonRenderer.isGuestSessionMode(-115))) {
             FifoResponseToken.activeHighscoreQuery = DialWidget.getOrRequestHighscores(22, 1, 0, 10, 3);
           }
           L1: {
@@ -1041,7 +1041,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             L15: {
-              if (!UnderlinedButtonRenderer.c(-89)) {
+              if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
                 statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
                 if (clientControlFlowGuard == 0) {
                   break L15;
@@ -1051,11 +1051,11 @@ final class GameScreen extends MenuScreen {
             }
             statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
             FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
-            if (UnderlinedButtonRenderer.c(methodGuard - 147)) {
+            if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard - 147)) {
               FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
-          if (!UnderlinedButtonRenderer.c(methodGuard ^ -109)) {
+          if (!UnderlinedButtonRenderer.isGuestSessionMode(methodGuard ^ -109)) {
             statusOrFriendTipText = PcmResampler.highscoreFriendTipText;
             IntrusiveNodeHashTable.smallFont.drawParagraph(statusOrFriendTipText, 140, 325, 360, 300, 0, -1, 1, 0, 16);
           }
@@ -1132,8 +1132,8 @@ final class GameScreen extends MenuScreen {
               }
             }
             if (120 == this.tutorialDemoTick) {
-              this.tutorialGeometryCategory = AchievementQuery.b(7, 1);
-              this.tutorialGeometryVariant = AchievementQuery.b(7, 1);
+              this.tutorialGeometryCategory = AchievementQuery.nextSpriteVariantIndex(7, 1);
+              this.tutorialGeometryVariant = AchievementQuery.nextSpriteVariantIndex(7, 1);
               this.tutorialDemoTick = 0;
             }
             if ((this.tutorialPageIndex < 4) &&
@@ -1217,7 +1217,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
-              if (UnderlinedButtonRenderer.c(-104)) {
+              if (UnderlinedButtonRenderer.isGuestSessionMode(-104)) {
                 if ((265 < FullscreenFocusCanvas.pointerPressYSnapshot) &&
                     (FullscreenFocusCanvas.pointerPressYSnapshot < 299)) {
                   if ((AccountCreationSupport.pointerPressXSnapshot > 350) &&
@@ -1915,7 +1915,7 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 2:
-                  if (!UnderlinedButtonRenderer.c(-100)) {
+                  if (!UnderlinedButtonRenderer.isGuestSessionMode(-100)) {
                     ScoreSubmission.requestedScreenId = 2;
                     if (clientControlFlowGuard == 0) {
                       break L1;
@@ -1997,7 +1997,7 @@ final class GameScreen extends MenuScreen {
                     UiWidget.gameplaySession.addScore((byte) 127, WidgetTheme.collectUnfinishedPopupPoints(methodGuard ^ 25864));
                     UiWidget.gameplaySession.addScore((byte) 127, UiWidget.gameplaySession.resultBonusPoints);
                     UiWidget.gameplaySession.resultBonusPoints = 0;
-                    if (UnderlinedButtonRenderer.c(-114)) {
+                    if (UnderlinedButtonRenderer.isGuestSessionMode(-114)) {
                       if (!((!UiWidget.gameplaySession.tutorialMode) &&
                             (UiWidget.gameplaySession.score == 0) &&
                             (ScorePopupSupport.newAchievementMask == 0)) &&
@@ -2076,7 +2076,7 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 10:
-                  if (UnderlinedButtonRenderer.c(-112)) {
+                  if (UnderlinedButtonRenderer.isGuestSessionMode(-112)) {
                     ScoreSubmission.requestedScreenId = 7;
                     if (clientControlFlowGuard == 0) {
                       break L1;
@@ -2105,7 +2105,7 @@ final class GameScreen extends MenuScreen {
               break L1;
             }
             if (newSessionTutorialModeFlag == 0) {
-              if ((UnderlinedButtonRenderer.c(methodGuard ^ 107)) &&
+              if ((UnderlinedButtonRenderer.isGuestSessionMode(methodGuard ^ 107)) &&
                   (BoardReconciliationSupport.sessionStartAttemptCount == 0)) {
                 newSessionTutorialModeFlag = 1;
               } else {
@@ -2514,7 +2514,7 @@ final class GameScreen extends MenuScreen {
                   if (this.fullscreenDialogButtonIndex == 1) {
                     break L4;
                   }
-                  if ((!UnderlinedButtonRenderer.c(-122)) &&
+                  if ((!UnderlinedButtonRenderer.isGuestSessionMode(-122)) &&
                       (TextTemplateDefinition.field_n <= 0)) {
                     break L4;
                   }

@@ -257,10 +257,10 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     ImageProducerRasterBuffer() {
     }
 
-    public static void c(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         activeTextArchive = null;
         debouncingValidationState = null;
-        if (param0 >= -101) {
+        if (methodGuard >= -101) {
             debouncingValidationState = (ValidationState) null;
         }
     }

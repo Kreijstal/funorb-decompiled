@@ -7,7 +7,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static int queuedMeshFaceCount;
     boolean errorPageShown;
     static int[] meshFaceCountsByDepthBucket;
-    public static boolean field_h;
+    public static boolean textLoadControlIncrementEnabled;
     public static boolean field_e;
     public static boolean field_i;
     public static boolean field_c;

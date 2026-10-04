@@ -5,7 +5,63 @@ The current export has 16,910 guarded naming rules: 302 classes, 1,977 fields,
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current intro, ranked-list and input naming (pass 169)
+## Current bootstrap, tooltip and shared cleanup naming (pass 170)
+
+Pass 170 adds 339 guarded names: 36 fields, 95 methods, 112 parameters,
+95 locals and one lexical label. Seventy-three cleanup methods now describe
+their release of retained static references. Guarded partial clears, duplicated
+clears, recursive invalid calls, unrelated writes, arithmetic exceptions and
+diagnostic strings retain their original order. The names do not promise full
+cleanup or disposal for every argument.
+
+Bootstrap names distinguish initial sprite/font/button-and-logo archives from
+their retained graphics/font aliases and the game-text archive. Load helpers
+retain sprite/commonui, font/commonui and button.gif ordering, retention flags,
+short circuits and partial effects. Cache-index file aliases and shutdown
+consumers are explicit. The game-text loader preserves every original read,
+discarded string, fallback/null check and successful-tail root-archive clear.
+Its type-nine clear and conditional client-control increment remain; the
+corresponding flag toggle is not assumed absent.
+
+Login names expose the server seed and four cipher-seed words, including the
+original add-50 mutation between outgoing and incoming cipher initialization.
+The accepted response long and its successful-login error-report copy are
+named by their wire/consumer roles, without assigning account-ID/token meaning.
+Retry flag, guest mode, reconnect-message state, cookie-marker flag, singleton
+login method names and pending navigation are explicit. The cookie flag is set
+before script execution and does not prove storage succeeded.
+
+Tooltip text, anchors, suppression and reset age expose the existing delay/
+duration logic. Its null/equality joins, overflowing duration addition, pointer
+snapshots and guarded calls remain. One age-adjustment block and its two breaks
+retain their exact targets. Shared UI names expose theme aliases, viewport and
+pointer origins, progress color, frame-bottom sprites and horizontal strip
+tiling. The tiler retains zero-width behavior, parameter reuse and its existing
+non-finally clip restoration. Connected-session checks, fullscreen frame work,
+reflection queue/replies, account panels and audio servicing are named without
+adding safety checks. RNG names retain the original signed rejection threshold,
+unsigned multiply, adjusted remainder and wrong-guard results; no runtime
+randomness or determinism policy changes.
+
+The ten previously named unused fields were reviewed across the complete
+fixed-source corpus. Their references remain within initialization, cleanup,
+storage or capacity checks; no hidden element or execution consumer was found.
+These claims retain their precise scopes, rather than asserting no reads.
+
+All 17,123 previous complete rules and raw/decompiler/naming/workflow/stub/
+native/text pins remain. The export has 17,462 rules, 114,334 identifier edits,
+eleven class-name literal edits and 338 label edits: 114,683 total. Both 303-file
+corpora compile, reproduce and reverse byte exactly, preserving 19,498 dictionary
+identities, 136,607 bindings, 388 overrides, 245 label definitions and 811 records.
+All 27 publication tests pass. No native probes or new runtime cases are added
+or run by this naming pass.
+
+Eight large labeled bodies, 137 opaque labels, 61 opaque fields and 68
+single-letter methods remain. Full bootstrap/login/tooltip/UI/network/input/
+audio/assets/game/server/browser/phone and heap/presented-FPS acceptance remain
+unverified.
+
+## Previous intro, ranked-list and input naming (pass 169)
 
 Pass 169 adds 213 guarded names: 31 fields, 27 methods, 44 parameters,
 101 locals and ten lexical labels. The intro sequence now exposes its animation
@@ -1820,7 +1876,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/7cc789dadeb5bff12e31477643008c4ddb5d0516/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/7cc789dadeb5bff12e31477643008c4ddb5d0516/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -2078,16 +2134,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/7cc789dadeb5bff12e31477643008c4ddb5d0516/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/7cc789dadeb5bff12e31477643008c4ddb5d0516/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/608cd480ffdb9c52a2548544929b5df5b36cbf48/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `7cc789dadeb5bff12e31477643008c4ddb5d0516`; the
-manifest SHA-256 is `255245510fc7093ca7a9c50a423753112dfc4b2c14637b16604522e7cd55eb34`.
+The current Deko workflow/manifest commit is `608cd480ffdb9c52a2548544929b5df5b36cbf48`; the
+manifest SHA-256 is `739a6a593e702587da39139856259e18ad1e4d1e4d75a21c2dd58bec11a095e5`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

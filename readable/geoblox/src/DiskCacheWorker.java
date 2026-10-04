@@ -12,14 +12,14 @@ final class DiskCacheWorker implements Runnable {
     static int avatarFeedbackFrameIndex;
     static PcmStreamMixer sharedPcmMixerReference;
     private boolean stopRequested;
-    static WidgetTheme field_f;
+    static WidgetTheme sharedUiTheme;
     static long receivedRecordLongId;
 
-    public static void a(int param0) {
-        if (param0 < -35) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard < -35) {
             sharedPcmMixerReference = null;
             avatarTintPalette = null;
-            field_f = null;
+            sharedUiTheme = null;
             createPasswordContainsEmailAlertText = null;
             idleClientFlowToken = null;
             return;
@@ -27,7 +27,7 @@ final class DiskCacheWorker implements Runnable {
         sharedPcmMixerReference = (PcmStreamMixer) null;
         sharedPcmMixerReference = null;
         avatarTintPalette = null;
-        field_f = null;
+        sharedUiTheme = null;
         createPasswordContainsEmailAlertText = null;
         idleClientFlowToken = null;
     }
@@ -252,7 +252,7 @@ final class DiskCacheWorker implements Runnable {
           request.priority = false;
           request.secondaryKey = (long)groupId;
           if (methodGuard < 22) {
-            DiskCacheWorker.a(70);
+            DiskCacheWorker.releaseStaticReferences(70);
           }
           this.enqueueRequest(request, 15079962);
           readRequestBeforeReturn = request;

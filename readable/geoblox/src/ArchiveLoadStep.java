@@ -5,7 +5,7 @@ final class ArchiveLoadStep {
     static int keyStateWriteIndexOrResetSentinel;
     static boolean loginRetrySuspended;
     ResourceArchive archive;
-    static boolean field_a;
+    static boolean connectionLostMessagePending;
     static TextValidationFailure invalidTextFormatFailure;
     static String highscoresText;
     static int[] firstVertexTransformedX;
@@ -16,8 +16,8 @@ final class ArchiveLoadStep {
     static ResourceArchive fontMetricsArchive;
     static String createPasswordValidText;
 
-    public static void a(int param0) {
-        if (param0 >= 121) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard >= 121) {
             invalidTextFormatFailure = null;
             fontMetricsArchive = null;
             createPasswordValidText = null;

@@ -17,9 +17,9 @@ final class WhirlpoolHash {
     static java.util.zip.CRC32 archivePayloadCrc32;
     private long[] cipherState;
 
-    public static void b(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         gameSoundMixer = null;
-        int var1 = -34 % ((param0 - 31) / 51);
+        int guardRemainder = -34 % ((methodGuard - 31) / 51);
         archivePayloadCrc32 = null;
     }
 

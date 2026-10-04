@@ -5,8 +5,8 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
     static MidiPcmStream gameMusicStream;
     static int[] meshFacePriorityWriteOffsets;
 
-    public static void c(int param0) {
-        if (param0 != 0) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 0) {
             meshFacePriorityWriteOffsets = (int[]) null;
             gameMusicStream = null;
             meshFacePriorityWriteOffsets = null;

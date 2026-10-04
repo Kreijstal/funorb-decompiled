@@ -74,7 +74,7 @@ final class ClientFlowToken {
         int themeSnapshot;
         int clientControlFlowGuard;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
-        soundVariantOffset = AchievementQuery.b(3, methodGuard ^ 9667);
+        soundVariantOffset = AchievementQuery.nextSpriteVariantIndex(3, methodGuard ^ 9667);
         if (methodGuard != 9666) {
           return;
         }
@@ -125,7 +125,7 @@ final class ClientFlowToken {
             Throwable ignoredCookieLookupFailure = null;
             clientControlFlowGuard = Geoblox.clientControlFlowFlag;
             try {
-              if (ValidationIconWidget.field_H) {
+              if (ValidationIconWidget.clientCookieMarkerCreated) {
                 return true;
               }
               try {

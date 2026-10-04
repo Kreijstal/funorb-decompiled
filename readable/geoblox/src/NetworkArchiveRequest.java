@@ -12,8 +12,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static Sprite barSprite;
     static String settingsCookieValue;
 
-    public static void e(byte param0) {
-        if (param0 < 88) {
+    public static void releaseStaticReferences(byte methodGuard) {
+        if (methodGuard < 88) {
             return;
         }
         barSprite = null;
@@ -263,9 +263,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     NetworkArchiveRequest() {
     }
 
-    final static void h(int param0) {
+    final static void requestAccountUiActionSeventeen(int methodGuard) {
         MidiNote.setPendingLoginUiAction(17, false);
-        int var1 = -24 / ((param0 + 4) / 34);
+        int guardQuotient = -24 / ((methodGuard + 4) / 34);
     }
 
     static {

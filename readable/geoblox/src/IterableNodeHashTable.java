@@ -195,7 +195,7 @@ final class IterableNodeHashTable implements Iterable {
               if (null == UsernameAvailabilityValidator.errorReportUserIdentityText) {
                 unusedUrlReceiverAfterIdentity = null;
                 unusedUrlConstructorReceiverAfterIdentity = null;
-                reportUserIdentity = "" + CheckboxWidget.field_H;
+                reportUserIdentity = "" + CheckboxWidget.errorReportLoginLongValue;
               } else {
                 unusedUrlReceiverAfterIdentity = null;
                 unusedUrlConstructorReceiverAfterIdentity = null;

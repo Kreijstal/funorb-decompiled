@@ -5,7 +5,7 @@ final class UsernameQuerySupport {
     static java.security.SecureRandom payloadKeyRandom;
     static String continueText;
     static DiskCacheWorker archiveDiskWorker;
-    static int field_a;
+    static int tooltipSuppressionResetAge;
     static Sprite logoFinalFrameBottom;
 
     public static void releaseStaticReferences(int methodGuard) {
@@ -30,7 +30,7 @@ final class UsernameQuerySupport {
         RuntimeException caughtRequestFailure = null;
         try {
           if (methodGuard <= 56) {
-            field_a = -115;
+            tooltipSuppressionResetAge = -115;
           }
           if (IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState) {
             return null;
@@ -61,7 +61,7 @@ final class UsernameQuerySupport {
     }
 
     static {
-        field_a = 10;
+        tooltipSuppressionResetAge = 10;
         continueText = "Continue";
     }
 }

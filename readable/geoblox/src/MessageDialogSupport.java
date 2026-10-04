@@ -9,7 +9,7 @@ final class MessageDialogSupport {
     static int field_e;
     static boolean entitiesDetachedThisTick;
     static ByteArrayBuffer encryptedPayloadScratchBuffer;
-    static int field_i;
+    static int accountUiViewportHeight;
     static String[] membersExpansionBenefitTexts;
 
     final static void showMessageDialog(String messageText, int methodGuard, boolean showLoginOnDismiss) {
@@ -42,7 +42,7 @@ final class MessageDialogSupport {
         idleMessage20MinText = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         createDoubleSpaceAlertText = "Names cannot contain consecutive spaces";
         field_e = 0;
-        field_i = 480;
+        accountUiViewportHeight = 480;
         membersExpansionBenefitTexts = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
     }
 }

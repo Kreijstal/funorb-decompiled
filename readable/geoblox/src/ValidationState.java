@@ -48,7 +48,7 @@ final class ValidationState {
           }
           return;
         }
-        ValidationState.b(-5);
+        ValidationState.releaseStaticReferences(-5);
         if (null == ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
           return;
         }
@@ -88,9 +88,9 @@ final class ValidationState {
         throw new IllegalStateException();
     }
 
-    public static void b(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         activeDragWidget = null;
-        if (param0 != -481) {
+        if (methodGuard != -481) {
             ValidationState.updatePendingActionPanel(90);
             nextText = null;
             createAccountSuccessText = null;

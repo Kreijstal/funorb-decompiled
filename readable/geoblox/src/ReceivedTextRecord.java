@@ -104,7 +104,7 @@ final class ReceivedTextRecord {
             (this.recordMetadataByte > 0)) {
           return 2;
         }
-        if (SpriteState.field_n == this.sourceLongId) {
+        if (SpriteState.retentionCategoryOneSourceId == this.sourceLongId) {
           return 1;
         }
         if ((MouseWheelInput.primarySocialListState == 2) &&

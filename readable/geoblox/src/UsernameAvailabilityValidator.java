@@ -156,15 +156,15 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         int loginFlags = 0;
         String rememberedLoginText = null;
         try {
-          ProgressBarWidget.field_D[0] = DelegatingCanvas.sharedClientRandom.nextInt();
-          ProgressBarWidget.field_D[1] = DelegatingCanvas.sharedClientRandom.nextInt();
-          ProgressBarWidget.field_D[2] = (int)(TextValidationSupport.field_a >> 32);
-          ProgressBarWidget.field_D[3] = (int)TextValidationSupport.field_a;
+          ProgressBarWidget.loginCipherSeedWords[0] = DelegatingCanvas.sharedClientRandom.nextInt();
+          ProgressBarWidget.loginCipherSeedWords[1] = DelegatingCanvas.sharedClientRandom.nextInt();
+          ProgressBarWidget.loginCipherSeedWords[2] = (int)(TextValidationSupport.loginHandshakeServerSeed >> 32);
+          ProgressBarWidget.loginCipherSeedWords[3] = (int)TextValidationSupport.loginHandshakeServerSeed;
           EndingAnimationSupport.loginPayloadBuffer.position = 0;
-          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[0]);
-          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[1]);
-          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[2]);
-          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[3]);
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.loginCipherSeedWords[0]);
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.loginCipherSeedWords[1]);
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.loginCipherSeedWords[2]);
+          EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.loginCipherSeedWords[3]);
           SpriteState.a(EndingAnimationSupport.loginPayloadBuffer, true);
           EndingAnimationSupport.loginPayloadBuffer.writeShortBE(affiliateId, 28695);
           loginPayload.writePayload(124, EndingAnimationSupport.loginPayloadBuffer);
@@ -338,13 +338,13 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         if (methodGuard < 29) {
             orbCoinSprite = (Sprite) null;
             LoginPayloadKind.ensureAchievementStateRequested(9313);
-            if (!UnderlinedButtonRenderer.c(-117)) {
+            if (!UnderlinedButtonRenderer.isGuestSessionMode(-117)) {
                 return SpriteConstructionSupport.achievementMaskReceived ? true : false;
             }
             return true;
         }
         LoginPayloadKind.ensureAchievementStateRequested(9313);
-        if (UnderlinedButtonRenderer.c(-117)) {
+        if (UnderlinedButtonRenderer.isGuestSessionMode(-117)) {
             return true;
         }
         if (!SpriteConstructionSupport.achievementMaskReceived) {
@@ -358,7 +358,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             if (cleanupGuard) {
                 UsernameAvailabilityValidator.releaseUsernameValidatorSharedResources((byte) 81);
             }
-            CanvasResizeController.field_e = navigationTarget;
+            CanvasResizeController.pendingNavigationTarget = navigationTarget;
             MidiNote.setPendingLoginUiAction(12, cleanupGuard);
         } catch (RuntimeException navigationRequestFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationRequestFailure), "uk.H(" + cleanupGuard + ',' + (navigationTarget != null ? "{...}" : "null") + ')');

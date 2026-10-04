@@ -23,32 +23,32 @@ abstract class ArchiveNetworkClient {
 
     abstract void closeSocket(int methodGuard);
 
-    final static void f(int param0) {
-        int fieldTemp$0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        PacketBuffer var1 = null;
-        RuntimeException var1_ref = null;
-        int var2 = 0;
-        int var3 = 0;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static void sendReadyReflectionCheckReplies(int methodGuard) {
+        int replyPayloadStartSnapshot = 0;
+        RuntimeException caughtReplyFailure = null;
+        PacketBuffer packet = null;
+        RuntimeException replyFailureForContext = null;
+        int payloadStart = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param0 > -99) {
+          if (methodGuard > -99) {
             return;
           }
-          var1 = CacheReference.outgoingSessionBuffer;
+          packet = CacheReference.outgoingSessionBuffer;
           while (AgeValidator.isFirstReflectionCheckReady((byte) -114)) {
-            var1.writeCipherByte(8, (byte) -71);
-            fieldTemp$0 = var1.position + 1;
-            var1.position = var1.position + 1;
-            var2 = fieldTemp$0;
-            LoginPanel.writeReflectionCheckReply(46, var1);
-            CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, var1.position - var2);
+            packet.writeCipherByte(8, (byte) -71);
+            replyPayloadStartSnapshot = packet.position + 1;
+            packet.position = packet.position + 1;
+            payloadStart = replyPayloadStartSnapshot;
+            LoginPanel.writeReflectionCheckReply(46, packet);
+            CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, packet.position - payloadStart);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "ji.B(" + param0 + ')');
+        } catch (java.lang.RuntimeException replyFailure) {
+          caughtReplyFailure = replyFailure;
+          replyFailureForContext = caughtReplyFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) replyFailureForContext), "ji.B(" + methodGuard + ')');
         }
     }
 
@@ -203,13 +203,13 @@ abstract class ArchiveNetworkClient {
         return sprites;
     }
 
-    public static void d(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         waitingForMusicText = null;
         movingEntities = null;
         gmtWeekdayAbbreviations = null;
         createPasswordLengthAlertText = null;
         createWelcomeText = null;
-        int var1 = 78 / ((15 - param0) / 56);
+        int guardQuotient = 78 / ((15 - methodGuard) / 56);
     }
 
     ArchiveNetworkClient() {

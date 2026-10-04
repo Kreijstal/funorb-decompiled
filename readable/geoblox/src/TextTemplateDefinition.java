@@ -130,8 +130,8 @@ final class TextTemplateDefinition extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
-        if (param0 < 71) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard < 71) {
             TextTemplateDefinition.e(41);
         }
         screens = null;
@@ -145,7 +145,7 @@ final class TextTemplateDefinition extends DualLinkNode {
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (methodGuard > -7) {
-            TextTemplateDefinition.f(41);
+            TextTemplateDefinition.releaseStaticReferences(41);
         }
         if (null == this.literalSegments) {
             return "";

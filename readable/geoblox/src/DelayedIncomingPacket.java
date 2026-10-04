@@ -79,8 +79,8 @@ final class DelayedIncomingPacket extends IntrusiveNode {
         return 0;
     }
 
-    final static boolean c(byte param0) {
-        int var1 = 39 / ((param0 - 18) / 54);
+    final static boolean canGenerateMoreEntitiesInTheme(byte methodGuard) {
+        int guardQuotient = 39 / ((methodGuard - 18) / 54);
         return MessageDialogSupport.releasesPerTheme > CacheReference.generatedInCurrentTheme ? true : false;
     }
 
@@ -245,26 +245,26 @@ final class DelayedIncomingPacket extends IntrusiveNode {
         }
     }
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean loadRequiredLoginUiGroups(ResourceArchive buttonAndLogoArchive, ResourceArchive fontArchive, ResourceArchive spriteArchive, int methodGuard) {
+        RuntimeException loadFailureForContext = null;
+        RuntimeException loadFailureBeforeDescriptions = null;
+        StringBuilder loadMessagePrefix = null;
+        String buttonArchiveDescription = null;
+        StringBuilder messageBeforeFontArchive = null;
+        String fontArchiveDescription = null;
+        StringBuilder messageBeforeSpriteArchive = null;
+        String spriteArchiveDescription = null;
+        RuntimeException caughtLoadFailure = null;
         try {
-          if ((param2.ensureIndexLoaded(0)) &&
-              (param2.loadGroupByName("commonui", (byte) -127))) {
-            if ((param1.ensureIndexLoaded(param3 + 11652)) &&
-                (param1.loadGroupByName("commonui", (byte) -124))) {
-              if (param3 != -11652) {
+          if ((spriteArchive.ensureIndexLoaded(0)) &&
+              (spriteArchive.loadGroupByName("commonui", (byte) -127))) {
+            if ((fontArchive.ensureIndexLoaded(methodGuard + 11652)) &&
+                (fontArchive.loadGroupByName("commonui", (byte) -124))) {
+              if (methodGuard != -11652) {
                 return false;
               }
-              if ((param0.ensureIndexLoaded(0)) &&
-                  (param0.loadGroupByName("button.gif", (byte) -125))) {
+              if ((buttonAndLogoArchive.ensureIndexLoaded(0)) &&
+                  (buttonAndLogoArchive.loadGroupByName("button.gif", (byte) -125))) {
                 return true;
               }
               return false;
@@ -272,29 +272,29 @@ final class DelayedIncomingPacket extends IntrusiveNode {
             return false;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_20_0 = var4;
-          stackIn_20_1 = new StringBuilder().append("ma.D(");
-          if (param0 == null) {
-            stackIn_21_2 = "null";
+        } catch (java.lang.RuntimeException loadFailure) {
+          caughtLoadFailure = loadFailure;
+          loadFailureForContext = caughtLoadFailure;
+          loadFailureBeforeDescriptions = loadFailureForContext;
+          loadMessagePrefix = new StringBuilder().append("ma.D(");
+          if (buttonAndLogoArchive == null) {
+            buttonArchiveDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            buttonArchiveDescription = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param1 == null) {
-            stackIn_24_2 = "null";
+          messageBeforeFontArchive = ((StringBuilder) (Object) loadMessagePrefix).append(buttonArchiveDescription).append(',');
+          if (fontArchive == null) {
+            fontArchiveDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            fontArchiveDescription = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param2 == null) {
-            stackIn_27_2 = "null";
+          messageBeforeSpriteArchive = ((StringBuilder) (Object) messageBeforeFontArchive).append(fontArchiveDescription).append(',');
+          if (spriteArchive == null) {
+            spriteArchiveDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            spriteArchiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loadFailureBeforeDescriptions), ((StringBuilder) (Object) messageBeforeSpriteArchive).append(spriteArchiveDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

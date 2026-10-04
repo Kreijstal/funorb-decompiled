@@ -22,7 +22,7 @@ abstract class ByteStorage {
               try {
                 var4 = param0.getCodeBase();
                 if (param1 != 20000000) {
-                  ByteStorage.a(-109);
+                  ByteStorage.releaseStaticReferences(-109);
                 }
                 var3 = SessionGameApplet.applySessionOverridesToUrl(var4, param1 - 19999938, param0).getFile();
                 AppletJavaScriptBridge.callWithArguments(param1 - 20014882, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
@@ -56,10 +56,10 @@ abstract class ByteStorage {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         emptyInputValidationState = null;
         accountCreationPassword = null;
-        if (param0 > -50) {
+        if (methodGuard > -50) {
             return;
         }
         loadingExtraDataText = null;
@@ -68,7 +68,7 @@ abstract class ByteStorage {
     final static void a(int param0, byte param1) {
         DequeCursor.pollAccountDialogAction(-1);
         if (param1 >= -89) {
-            ByteStorage.a(70);
+            ByteStorage.releaseStaticReferences(70);
         }
     }
 

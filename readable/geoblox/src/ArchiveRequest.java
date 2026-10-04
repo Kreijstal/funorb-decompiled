@@ -73,12 +73,12 @@ abstract class ArchiveRequest extends DualLinkNode {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
             }
-            if (SpriteState.field_q == null) {
+            if (SpriteState.loadingOverlayText == null) {
               return;
             }
             var9.setFont(UiFontResources.awtLoadingFont);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(SpriteState.field_q, AudioService.canvasWidth / 2 - 6 * SpriteState.field_q.length() / 2, -26 + ClientRenderingState.canvasHeight / 2);
+            var9.drawString(SpriteState.loadingOverlayText, AudioService.canvasWidth / 2 - 6 * SpriteState.loadingOverlayText.length() / 2, -26 + ClientRenderingState.canvasHeight / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -108,14 +108,14 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract byte[] getBytes(int methodGuard);
 
-    public static void f(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         createAgeTooltipText = null;
         pendingActionMarkers = null;
         renderTimeHistoryMillis = null;
         sessionPacketLengthByOpcode = null;
         fullscreenAcceptButtonText = null;
-        if (param0 != 31735) {
-            String var2 = (String) null;
+        if (methodGuard != 31735) {
+            String unusedNullTextSnapshot = (String) null;
             ArchiveRequest.a(68, (java.awt.Color) null, true, true, (String) null);
         }
     }

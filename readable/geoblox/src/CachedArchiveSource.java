@@ -351,8 +351,8 @@ final class CachedArchiveSource extends ArchiveSource {
         return 0;
     }
 
-    public static void b(boolean param0) {
-        if (!param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
+        if (!methodGuard) {
             return;
         }
         jewelsBackgroundSprite = null;

@@ -6,7 +6,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
     private int horizontalAlignment;
     private BitmapFont labelFont;
     static int introFaceFrameStartTick;
-    static Sprite[] field_e;
+    static Sprite[] frameBottomSprites;
 
     final static void resetAccountUiFlow(int methodGuard) {
         AgeValidator.reconnectingLoginMode = false;
@@ -19,20 +19,20 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 1) {
-            UnderlinedButtonRenderer.a(51);
-            field_e = null;
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 1) {
+            UnderlinedButtonRenderer.releaseStaticReferences(51);
+            frameBottomSprites = null;
             return;
         }
-        field_e = null;
+        frameBottomSprites = null;
     }
 
-    final static boolean c(int param0) {
-        if (param0 > -78) {
+    final static boolean isGuestSessionMode(int methodGuard) {
+        if (methodGuard > -78) {
             return false;
         }
-        return ProgressBarWidget.field_G;
+        return ProgressBarWidget.guestSessionMode;
     }
 
     final static String a(long param0, int param1) {

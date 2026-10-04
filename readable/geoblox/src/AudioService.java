@@ -29,26 +29,26 @@ final class AudioService implements Runnable {
             }
             return CachedTextLayout.loadingBootstrapText;
         }
-        if (!DirectByteStorage.field_h.ensureIndexLoaded(0)) {
+        if (!DirectByteStorage.initialCommonUiSpriteArchive.ensureIndexLoaded(0)) {
             return TextWidgetRenderer.waitingForGraphicsText;
         }
         if (methodGuard >= -59) {
             AudioService.getBootstrapLoadingStatusText((byte) -7);
         }
-        if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -127)) {
-            return AccountWelcomePanel.loadingGraphicsText + " - " + DirectByteStorage.field_h.getGroupProgressByName(0, "commonui") + "%";
+        if (!DirectByteStorage.initialCommonUiSpriteArchive.loadGroupByName("commonui", (byte) -127)) {
+            return AccountWelcomePanel.loadingGraphicsText + " - " + DirectByteStorage.initialCommonUiSpriteArchive.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!(AttachedEntityRenderer.field_c.ensureIndexLoaded(0))) {
+        if (!(AttachedEntityRenderer.initialUiFontArchive.ensureIndexLoaded(0))) {
             return EntityLinkSupport.waitingForFontsText;
         }
-        if (!AttachedEntityRenderer.field_c.loadGroupByName("commonui", (byte) -125)) {
-            return EntitySpawnSupport.loadingFontsText + " - " + AttachedEntityRenderer.field_c.getGroupProgressByName(0, "commonui") + "%";
+        if (!AttachedEntityRenderer.initialUiFontArchive.loadGroupByName("commonui", (byte) -125)) {
+            return EntitySpawnSupport.loadingFontsText + " - " + AttachedEntityRenderer.initialUiFontArchive.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!DialRenderer.field_n.ensureIndexLoaded(0)) {
+        if (!DialRenderer.initialButtonAndLogoArchive.ensureIndexLoaded(0)) {
             return ByteShortQuery.waitingForExtraDataText;
         }
-        if (!DialRenderer.field_n.loadAllGroups(true)) {
-            return ByteStorage.loadingExtraDataText + " - " + DialRenderer.field_n.getLoadProgress((byte) 101) + "%";
+        if (!DialRenderer.initialButtonAndLogoArchive.loadAllGroups(true)) {
+            return ByteStorage.loadingExtraDataText + " - " + DialRenderer.initialButtonAndLogoArchive.getLoadProgress((byte) 101) + "%";
         }
         return SecondaryNodeHashTable.pleaseWaitText;
     }

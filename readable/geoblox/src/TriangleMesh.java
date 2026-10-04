@@ -64,13 +64,13 @@ final class TriangleMesh {
         if (methodGuard >= -55) {
             return 66;
         }
-        return AchievementQuery.b(EmailValidator.availableSpriteVariantCount, 1);
+        return AchievementQuery.nextSpriteVariantIndex(EmailValidator.availableSpriteVariantCount, 1);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         pendingScoreSubmissions = null;
         reloadGameText = null;
-        if (param0 != 115) {
+        if (methodGuard != 115) {
             TriangleMesh.prepareRankedEntryArrays(124, -30, -53);
         }
     }

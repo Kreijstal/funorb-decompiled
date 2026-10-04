@@ -4,7 +4,7 @@
 final class DialRenderer implements WidgetRenderer {
     static int[] rankedEntryResponseIndices;
     static int byteArrayPool100Count;
-    static ResourceArchive field_n;
+    static ResourceArchive initialButtonAndLogoArchive;
     private int textColor;
     static String playFreeVersionText;
     private int dialColor;
@@ -14,7 +14,7 @@ final class DialRenderer implements WidgetRenderer {
     private int padding;
     private int backgroundColor;
     private int textShadowColor;
-    static WidgetTheme field_j;
+    static WidgetTheme accountUiTheme;
     static Sprite[] silverStarFrames;
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
@@ -53,18 +53,18 @@ final class DialRenderer implements WidgetRenderer {
         }
     }
 
-    public static void a(int param0) {
-        field_n = null;
+    public static void releaseStaticReferences(int methodGuard) {
+        initialButtonAndLogoArchive = null;
         playFreeVersionText = null;
-        if (param0 == 0) {
+        if (methodGuard == 0) {
             rankedEntryResponseIndices = null;
-            field_j = null;
+            accountUiTheme = null;
             silverStarFrames = null;
             return;
         }
         playFreeVersionText = (String) null;
         rankedEntryResponseIndices = null;
-        field_j = null;
+        accountUiTheme = null;
         silverStarFrames = null;
     }
 

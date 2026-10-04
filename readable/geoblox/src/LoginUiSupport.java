@@ -95,22 +95,22 @@ final class LoginUiSupport {
           return 0;
         }
         if (MeshPrioritySupport.bootstrapLanguageId == 0) {
-          if (!DirectByteStorage.field_h.ensureIndexLoaded(0)) {
+          if (!DirectByteStorage.initialCommonUiSpriteArchive.ensureIndexLoaded(0)) {
             return 20;
           }
-          if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -127)) {
+          if (!DirectByteStorage.initialCommonUiSpriteArchive.loadGroupByName("commonui", (byte) -127)) {
             return 40;
           }
-          if (!AttachedEntityRenderer.field_c.ensureIndexLoaded(0)) {
+          if (!AttachedEntityRenderer.initialUiFontArchive.ensureIndexLoaded(0)) {
             return 50;
           }
-          if (!AttachedEntityRenderer.field_c.loadGroupByName("commonui", (byte) -127)) {
+          if (!AttachedEntityRenderer.initialUiFontArchive.loadGroupByName("commonui", (byte) -127)) {
             return 60;
           }
-          if (!DialRenderer.field_n.ensureIndexLoaded(0)) {
+          if (!DialRenderer.initialButtonAndLogoArchive.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (DialRenderer.field_n.loadAllGroups(true)) {
+          if (DialRenderer.initialButtonAndLogoArchive.loadAllGroups(true)) {
             return 100;
           }
           return 80;
@@ -126,22 +126,22 @@ final class LoginUiSupport {
             return 29;
           }
         }
-        if (!DirectByteStorage.field_h.ensureIndexLoaded(methodGuard ^ 73)) {
+        if (!DirectByteStorage.initialCommonUiSpriteArchive.ensureIndexLoaded(methodGuard ^ 73)) {
           return 43;
         }
-        if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -125)) {
+        if (!DirectByteStorage.initialCommonUiSpriteArchive.loadGroupByName("commonui", (byte) -125)) {
           return 57;
         }
-        if (!AttachedEntityRenderer.field_c.ensureIndexLoaded(0)) {
+        if (!AttachedEntityRenderer.initialUiFontArchive.ensureIndexLoaded(0)) {
           return 71;
         }
-        if (!AttachedEntityRenderer.field_c.loadGroupByName("commonui", (byte) -128)) {
+        if (!AttachedEntityRenderer.initialUiFontArchive.loadGroupByName("commonui", (byte) -128)) {
           return 80;
         }
-        if (!DialRenderer.field_n.ensureIndexLoaded(methodGuard - 73)) {
+        if (!DialRenderer.initialButtonAndLogoArchive.ensureIndexLoaded(methodGuard - 73)) {
           return 82;
         }
-        if (!DialRenderer.field_n.loadAllGroups(true)) {
+        if (!DialRenderer.initialButtonAndLogoArchive.loadAllGroups(true)) {
           return 86;
         }
         return 100;

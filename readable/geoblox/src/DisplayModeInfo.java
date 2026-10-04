@@ -21,42 +21,42 @@ final class DisplayModeInfo {
         ByteStorage.updatePeriodNanoseconds = 1000000000L / (long)ticksPerSecond;
     }
 
-    public static void a(int param0) {
-        int var1 = 12 % ((-27 - param0) / 57);
+    public static void releaseStaticReferences(int methodGuard) {
+        int guardRemainder = 12 % ((-27 - methodGuard) / 57);
         quitToWebsiteText = null;
         loggingInText = null;
     }
 
-    final static ResourceArchive a(int param0, byte param1, boolean param2, boolean param3, int param4) {
-        if (param1 >= -13) {
+    final static ResourceArchive createBootstrapResourceArchive(int archiveId, byte methodGuard, boolean discardPackedGroups, boolean downloadAllGroups, int fileRetentionPolicy) {
+        if (methodGuard >= -13) {
             return (ResourceArchive) null;
         }
-        return IntKeyLookup.createResourceArchive(-90, param0, param3, param4, param2, false);
+        return IntKeyLookup.createResourceArchive(-90, archiveId, downloadAllGroups, fileRetentionPolicy, discardPackedGroups, false);
     }
 
-    final static boolean a(byte param0, ResourceArchive param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        boolean stackIn_1_0 = false;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean loadAllArchiveGroups(byte methodGuard, ResourceArchive archive) {
+        int guardRemainder = 0;
+        RuntimeException loadFailureForContext = null;
+        boolean allGroupsLoadedBeforeReturn = false;
+        RuntimeException loadFailureBeforeDescription = null;
+        StringBuilder loadMessagePrefix = null;
+        String archiveDescription = null;
+        RuntimeException caughtLoadFailure = null;
         try {
-          var2_int = 12 % ((-57 - param0) / 57);
-          stackIn_1_0 = param1.loadAllGroups(true);
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_4_0 = var2;
-          stackIn_4_1 = new StringBuilder().append("rj.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_5_2 = "null";
+          guardRemainder = 12 % ((-57 - methodGuard) / 57);
+          allGroupsLoadedBeforeReturn = archive.loadAllGroups(true);
+          return allGroupsLoadedBeforeReturn;
+        } catch (java.lang.RuntimeException loadFailure) {
+          caughtLoadFailure = loadFailure;
+          loadFailureForContext = caughtLoadFailure;
+          loadFailureBeforeDescription = loadFailureForContext;
+          loadMessagePrefix = new StringBuilder().append("rj.C(").append(methodGuard).append(',');
+          if (archive == null) {
+            archiveDescription = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            archiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loadFailureBeforeDescription), ((StringBuilder) (Object) loadMessagePrefix).append(archiveDescription).append(')').toString());
         }
     }
 

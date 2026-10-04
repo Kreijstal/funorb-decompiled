@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ByteTextDecodingSupport {
-    static int field_a;
+    static int tooltipAnchorX;
 
     final static void sleepMillis(int splitRemainder, long durationMillis) {
         if (!(durationMillis > 0L)) {
@@ -38,7 +38,7 @@ final class ByteTextDecodingSupport {
           writeBuffer = sharedBuffer;
           decodedCharacters = writeBuffer;
           if (decodeGuard > 0) {
-            field_a = 49;
+            tooltipAnchorX = 49;
           }
           decodedLength = 0;
           for (byteIndex = 0; length > byteIndex; byteIndex++) {
@@ -74,6 +74,6 @@ final class ByteTextDecodingSupport {
     }
 
     static {
-        field_a = -1;
+        tooltipAnchorX = -1;
     }
 }

@@ -9,7 +9,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
     private BitmapFont messageFont;
     private int buttonSlotCount;
     static String createToUseText;
-    static int field_I;
+    static int fullscreenDialogPointerOriginY;
 
     private final void ensureButtonSlots(int methodGuard, int slotCount) {
         int var5 = 0;
@@ -193,7 +193,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             break;
           }
           if (param1 != -20) {
-            MessageDialogContent.a((byte) 87);
+            MessageDialogContent.releaseStaticReferences((byte) 87);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -222,9 +222,9 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         createToUseText = null;
-        if (param0 >= -19) {
+        if (methodGuard >= -19) {
             createToUseText = (String) null;
         }
     }

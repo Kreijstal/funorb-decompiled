@@ -25,8 +25,8 @@ final class InstrumentEnvelope {
         return wrappedFailure;
     }
 
-    final static boolean b(int param0) {
-        if (param0 != 13) {
+    final static boolean isSessionConnected(int methodGuard) {
+        if (methodGuard != 13) {
             connectingToUpdateServerTextByLanguage = (String[]) null;
             if (SpriteCheckboxRenderer.sessionSocket == null) {
                 return false;
@@ -45,11 +45,11 @@ final class InstrumentEnvelope {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         menuActionIds = (int[][]) null;
         connectingToUpdateServerTextByLanguage = null;
-        if (param0 != 17348) {
-            InstrumentEnvelope.b(-123);
+        if (methodGuard != 17348) {
+            InstrumentEnvelope.isSessionConnected(-123);
         }
     }
 

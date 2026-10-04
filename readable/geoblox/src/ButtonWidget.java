@@ -72,7 +72,7 @@ class ButtonWidget extends UiWidget {
     }
 
     ButtonWidget(String text, WidgetListener listener) {
-        this(text, DialRenderer.field_j.buttonRenderer, listener);
+        this(text, DialRenderer.accountUiTheme.buttonRenderer, listener);
     }
 
     void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
@@ -278,7 +278,7 @@ class ButtonWidget extends UiWidget {
         this.enabled = true;
         this.focusable = true;
         this.focused = false;
-        this.renderer = DialRenderer.field_j.fallbackButtonRenderer;
+        this.renderer = DialRenderer.accountUiTheme.fallbackButtonRenderer;
     }
 
     static {

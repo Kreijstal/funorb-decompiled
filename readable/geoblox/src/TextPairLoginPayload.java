@@ -52,12 +52,12 @@ final class TextPairLoginPayload extends LoginPayload {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         createUnder13TermsText = null;
         packedMatchCandidates = null;
         startGameText = null;
         additionalByteArrayPoolLengths = null;
-        if (param0 != -17226) {
+        if (methodGuard != -17226) {
             startGameText = (String) null;
         }
     }

@@ -78,7 +78,7 @@ final class AchievementSubmission extends IntrusiveNode {
           cameraTranslationYScaledOrNormalYXQ16 = cameraXBasisOrDeltaZOrVertexIndex * cameraTransform[8] + (cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraTransform[6] + cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[7]) >> 16 - ClientRenderingState.meshProjectionShift;
           cameraTranslationZOrNormalZXQ16 = cameraTransform[11] * cameraXBasisOrDeltaZOrVertexIndex + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraTransform[9] + cameraXBasisOrDeltaYOrClipCenterY * cameraTransform[10] >> 16;
           if (!preserveSharedResources) {
-            AchievementSubmission.b(-2);
+            AchievementSubmission.releaseStaticReferences(-2);
           }
           cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = TriangleRasterState.clipCenterX;
           cameraXBasisOrDeltaYOrClipCenterY = TriangleRasterState.clipCenterY;
@@ -219,20 +219,20 @@ final class AchievementSubmission extends IntrusiveNode {
         }
     }
 
-    public static void b(int param0) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
+    public static void releaseStaticReferences(int methodGuard) {
+        RuntimeException caughtCleanupFailure = null;
+        RuntimeException cleanupFailureForContext = null;
         try {
-          if (param0 > -21) {
+          if (methodGuard > -21) {
             sessionPacketPayloadLength = 120;
           }
           retentionCategoryCounts = null;
           gameSoundResampler = null;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "p.A(" + param0 + ')');
+        } catch (java.lang.RuntimeException cleanupFailure) {
+          caughtCleanupFailure = cleanupFailure;
+          cleanupFailureForContext = caughtCleanupFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cleanupFailureForContext), "p.A(" + methodGuard + ')');
         }
     }
 

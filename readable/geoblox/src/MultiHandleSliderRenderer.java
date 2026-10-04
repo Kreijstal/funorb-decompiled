@@ -15,9 +15,9 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
     private int textShadowColor;
     static int pendingActionPanelWidth;
 
-    final static void a(byte param0) {
+    final static void openAccountCreationForm(byte methodGuard) {
         EntityCollisionSupport.activeAccountCreationForm = new AccountCreationForm();
-        if (param0 >= 19) {
+        if (methodGuard >= 19) {
             ButtonWidget.accountContentDialog.replaceContent(EntityCollisionSupport.activeAccountCreationForm, -54);
             return;
         }
@@ -142,9 +142,9 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         rotatedThemeForegroundRaster = null;
-        int var1 = 14 % ((param0 - 27) / 47);
+        int guardRemainder = 14 % ((methodGuard - 27) / 47);
         meshSpecularResponseByAbsDot = null;
     }
 

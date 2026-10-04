@@ -4,7 +4,7 @@
 final class PacketByteCipher {
     private int lastResult;
     private int[] results;
-    static String field_c;
+    static String discardResultsText;
     private int generationCounter;
     static String ticketingGoToWebsiteText;
     private int[] stateWords;
@@ -202,11 +202,11 @@ final class PacketByteCipher {
         sunForegroundSprite = null;
         if (methodGuard > -92) {
             ticketingGoToWebsiteText = (String) null;
-            field_c = null;
+            discardResultsText = null;
             ticketingGoToWebsiteText = null;
             return;
         }
-        field_c = null;
+        discardResultsText = null;
         ticketingGoToWebsiteText = null;
     }
 
@@ -226,6 +226,6 @@ final class PacketByteCipher {
 
     static {
         ticketingGoToWebsiteText = "Visit the Account Management section on the main site to view.";
-        field_c = "Discard results";
+        discardResultsText = "Discard results";
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ProgressBarWidget extends UiWidget {
-    static int[] field_D;
+    static int[] loginCipherSeedWords;
     private Sprite[] stripeSprites;
     private int dimStripeColor;
     private int alternateStripeColor;
@@ -15,7 +15,7 @@ final class ProgressBarWidget extends UiWidget {
     private Sprite rightEndMask;
     private int stripeOffset;
     static int[] decodedSpriteHeights;
-    static boolean field_G;
+    static boolean guestSessionMode;
     boolean animationEnabled;
     static IntrusiveDeque primarySocialEntriesInOrder;
 
@@ -191,13 +191,13 @@ final class ProgressBarWidget extends UiWidget {
         this(x, y, width, height, stripeWidth, stripeColor, alternateStripeColor, stripeColor >> 1 & 8355711, alternateStripeColor >> 1 & 8355711);
     }
 
-    public static void f(int param0) {
-        if (param0 != 407213000) {
-            ProgressBarWidget.f(93);
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 407213000) {
+            ProgressBarWidget.releaseStaticReferences(93);
         }
         primarySocialEntriesInOrder = null;
         decodedSpriteHeights = null;
-        field_D = null;
+        loginCipherSeedWords = null;
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
@@ -214,7 +214,7 @@ final class ProgressBarWidget extends UiWidget {
             }
           }
           if (hoverGuard) {
-            field_G = false;
+            guestSessionMode = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,7 +232,7 @@ final class ProgressBarWidget extends UiWidget {
     }
 
     static {
-        field_D = new int[4];
-        field_G = true;
+        loginCipherSeedWords = new int[4];
+        guestSessionMode = true;
     }
 }

@@ -8,8 +8,8 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     private boolean resultHandled;
     static int avatarTintStartColor;
 
-    public static void r(int param0) {
-        int var1 = -70 / ((param0 - 27) / 48);
+    public static void releaseStaticReferences(int methodGuard) {
+        int guardQuotient = -70 / ((methodGuard - 27) / 48);
         notLoggedInText = null;
     }
 

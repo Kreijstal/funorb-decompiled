@@ -338,7 +338,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 GrowableIntList.a(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
                 AudioService.sessionResponseText = ByteShortQuery.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
-                TextTemplateArgumentType.field_e = false;
+                TextTemplateArgumentType.loginRetryAttempted = false;
                 unableResponseBeforeReturn = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
                 return unableResponseBeforeReturn;
               }
@@ -364,7 +364,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                   WidgetSkinState.pendingUsernameSuggestions[suggestionIndex] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -114);
-                TextTemplateArgumentType.field_e = false;
+                TextTemplateArgumentType.loginRetryAttempted = false;
                 suggestionResponseBeforeReturn = suggestionCount + 100;
                 return suggestionResponseBeforeReturn;
               }
@@ -381,7 +381,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               }
             }
             Bzip2DecoderState.closeSessionSocket((byte) -114);
-            TextTemplateArgumentType.field_e = false;
+            TextTemplateArgumentType.loginRetryAttempted = false;
             payloadOpcodeBeforeReturn = ScorePopup.currentPacketOpcode;
             return payloadOpcodeBeforeReturn;
           }
@@ -389,19 +389,19 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             awaitingAccountOrLookupReplyOpcodeStage = (ClientProtocolStage) null;
           }
           if (SpriteCheckboxRenderer.sessionSocket == null) {
-            if (TextTemplateArgumentType.field_e) {
+            if (TextTemplateArgumentType.loginRetryAttempted) {
               if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
                 AudioService.sessionResponseText = FullscreenFailureReason.loginMessage2Text;
               } else {
                 AudioService.sessionResponseText = IntrusiveNode.loginMessage3Text;
               }
-              TextTemplateArgumentType.field_e = false;
+              TextTemplateArgumentType.loginRetryAttempted = false;
               retryFailureBeforeReturn = 249;
               return retryFailureBeforeReturn;
             }
             requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = NetworkArchiveRequest.sessionServerPort;
             NetworkArchiveRequest.sessionServerPort = TextInputRenderer.alternateSessionServerPort;
-            TextTemplateArgumentType.field_e = true;
+            TextTemplateArgumentType.loginRetryAttempted = true;
             TextInputRenderer.alternateSessionServerPort = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
           }
           pendingResultBeforeReturn = -1;
@@ -448,17 +448,17 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             this.submitLoginIfAllowed(0);
           } else {
             if (this.createAccountButton == button) {
-              MultiHandleSliderRenderer.a((byte) 108);
+              MultiHandleSliderRenderer.openAccountCreationForm((byte) 108);
             } else {
               if (this.alternateButton == button) {
                 if (!this.retryMode) {
                   if (!this.allowJustPlay) {
                     LoginPasswordSupport.requestLoginUiActionFour(methodGuard - 23718);
                   } else {
-                    ByteArrayBuffer.g(0);
+                    ByteArrayBuffer.openAccountWelcomePanel(0);
                   }
                 } else {
-                  NetworkArchiveRequest.h(methodGuard ^ -60);
+                  NetworkArchiveRequest.requestAccountUiActionSeventeen(methodGuard ^ -60);
                 }
               }
             }
@@ -794,7 +794,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           identifierLabelText = WeightedObjectCache.loginUsernameEmailText;
           rememberedLoginMethod = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.getActiveApplet(120), 200);
-          if (rememberedLoginMethod != LoginTextValue.field_b) {
+          if (rememberedLoginMethod != LoginTextValue.emailLoginMethod) {
             if (rememberedLoginMethod == ProgressDialog.usernameLoginMethod) {
               identifierLabelText = LogoPreparationSupport.loginUsernameText;
             }

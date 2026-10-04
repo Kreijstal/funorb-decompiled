@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextValidationSupport {
-    static long field_a;
-    static ResourceArchive field_b;
+    static long loginHandshakeServerSeed;
+    static ResourceArchive bootstrapGameTextArchive;
 
     final static boolean containsTextOrReverse(String text, String needle, int methodGuard) {
         String reversedNeedle = null;
@@ -48,9 +48,9 @@ final class TextValidationSupport {
 
     public static void clearValidationArchive(int methodGuard) {
         if (methodGuard != -30635) {
-            field_b = (ResourceArchive) null;
+            bootstrapGameTextArchive = (ResourceArchive) null;
         }
-        field_b = null;
+        bootstrapGameTextArchive = null;
     }
 
     final static boolean containsNonAsciiAlphanumeric(String text, byte methodGuard) {
@@ -74,7 +74,7 @@ final class TextValidationSupport {
           if (methodGuard < -33) {
             return false;
           }
-          field_a = -33L;
+          loginHandshakeServerSeed = -33L;
           return false;
         } catch (java.lang.RuntimeException validationFailure) {
           caughtValidationFailure = validationFailure;
@@ -94,7 +94,7 @@ final class TextValidationSupport {
         if (methodGuard) {
             TextValidationSupport.listLoginMethods(false);
         }
-        return new LoginMethod[]{LoginTextValue.field_b, ProgressDialog.usernameLoginMethod, ValidationIconWidget.field_I};
+        return new LoginMethod[]{LoginTextValue.emailLoginMethod, ProgressDialog.usernameLoginMethod, ValidationIconWidget.emptyNameLoginMethod};
     }
 
     static {

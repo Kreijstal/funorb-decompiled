@@ -72,7 +72,7 @@ class TextInputRenderer extends TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 6) {
-            TextInputRenderer.a((byte) -125);
+            TextInputRenderer.releaseStaticReferences((byte) -125);
           }
           stackIn_5_0 = !(1 != param1.readBits((byte) -17, 1));
           return stackIn_5_0;
@@ -218,7 +218,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             var12 = var12 + var11;
           } else {
             IntrusiveNodeHashTable.smallFont.drawCenteredText(SessionSocketSupport.mouseOverIconText, 315, var10, 0, -1);
-            if (UnderlinedButtonRenderer.c(-94)) {
+            if (UnderlinedButtonRenderer.isGuestSessionMode(-94)) {
               FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
@@ -233,12 +233,12 @@ class TextInputRenderer extends TextWidgetRenderer {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         sharedDefaultTextWidgetRenderer = null;
         mustLoginAlternateTexts = null;
         secondVertexTransformedY = null;
         awaitingLoginFailureTextStage = null;
-        if (param0 < 62) {
+        if (methodGuard < 62) {
             alternateSessionServerPort = -128;
         }
     }

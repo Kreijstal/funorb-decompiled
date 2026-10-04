@@ -3,7 +3,7 @@
  */
 final class TextConcatenationSupport {
     static byte[][] decodedSpriteIndices;
-    static int field_b;
+    static int accountDialogPointerOriginY;
     static String fullscreenAcceptCountdownSingularText;
 
     final static String joinCharSequenceRange(int startIndex, int count, CharSequence[] parts, byte methodGuard) {
@@ -47,7 +47,7 @@ final class TextConcatenationSupport {
           endIndex = startIndex + count;
           capacityEstimate = 0;
           if (methodGuard != 96) {
-            field_b = 111;
+            accountDialogPointerOriginY = 111;
           }
           for (lengthScanIndex = startIndex; endIndex > lengthScanIndex; lengthScanIndex++) {
             lengthScanPart = parts[lengthScanIndex];
@@ -128,7 +128,7 @@ final class TextConcatenationSupport {
         fullscreenAcceptCountdownSingularText = null;
         decodedSpriteIndices = (byte[][]) null;
         if (methodGuard < 66) {
-            field_b = 91;
+            accountDialogPointerOriginY = 91;
         }
     }
 

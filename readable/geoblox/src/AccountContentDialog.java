@@ -22,7 +22,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
               var3_int = 1;
               UsernameQueryState.canvasRedrawRequested = false;
             }
-            ArchiveRequest.a(LoginUiSupport.pollLoginUiArchiveProgress((byte) 73), CanvasResizeController.field_q, var3_int != 0, false, AudioService.getBootstrapLoadingStatusText((byte) -85));
+            ArchiveRequest.a(LoginUiSupport.pollLoginUiArchiveProgress((byte) 73), CanvasResizeController.bootstrapProgressColor, var3_int != 0, false, AudioService.getBootstrapLoadingStatusText((byte) -85));
           } else {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (SpriteConstructionSupport.clientScreenStage == 0) {
@@ -106,8 +106,8 @@ final class AccountContentDialog extends ContentTransitionDialog {
         }
     }
 
-    public static void n(int param0) {
-        if (param0 > -59) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard > -59) {
             return;
         }
         field_hb = null;

@@ -52,9 +52,9 @@ final class LoginMethod {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         gameNameText = null;
-        if (param0 >= -8) {
+        if (methodGuard >= -8) {
             LoginMethod.releaseMarkedThemeMusicPreparation((byte) -78);
         }
     }

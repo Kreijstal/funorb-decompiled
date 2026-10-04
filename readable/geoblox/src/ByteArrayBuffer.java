@@ -213,11 +213,11 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.bytes[lowByteIndex] = (byte)value;
     }
 
-    final static void g(int param0) {
-        if (param0 != 0) {
+    final static void openAccountWelcomePanel(int methodGuard) {
+        if (methodGuard != 0) {
             return;
         }
-        ButtonWidget.accountContentDialog.replaceContent(new AccountWelcomePanel(), param0 - 110);
+        ButtonWidget.accountContentDialog.replaceContent(new AccountWelcomePanel(), methodGuard - 110);
     }
 
     final void writeNullTerminatedText(String text, int characterStart) {
@@ -528,7 +528,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     final void backpatchLengthByte(int methodGuard, int length) {
         this.bytes[-length + (this.position - 1)] = (byte)length;
         if (methodGuard != 11700) {
-            ByteArrayBuffer.g(-24);
+            ByteArrayBuffer.openAccountWelcomePanel(-24);
         }
     }
 

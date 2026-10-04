@@ -49,12 +49,12 @@ final class PcmResampler {
         return sampleRateHz;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
         availableScorePopups = null;
         highscoreFriendTipText = null;
         fullscreenBeforeAcceptText = null;
-        if (!param0) {
-            PcmResampler.a(false);
+        if (!methodGuard) {
+            PcmResampler.releaseStaticReferences(false);
         }
         createAgeText = null;
         createNewsOptInText = null;

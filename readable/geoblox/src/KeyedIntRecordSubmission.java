@@ -11,9 +11,9 @@ final class KeyedIntRecordSubmission extends IntrusiveNode {
     int firstValue;
     int byteKey;
 
-    public static void b(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         createAnAccountText = null;
-        if (param0 < 120) {
+        if (methodGuard < 120) {
             creatingYourAccountText = (String) null;
             creatingYourAccountText = null;
             return;

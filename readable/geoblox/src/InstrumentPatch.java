@@ -6,7 +6,7 @@ final class InstrumentPatch extends IntrusiveNode {
     private int[] encodedSampleIds;
     byte[] keyVolumes;
     PcmSample[] keySamples;
-    static boolean field_q;
+    static boolean tooltipSuppressed;
     static java.math.BigInteger loginModPowModulus;
     short[] pitchOffsetsAndLoopFlag;
     InstrumentEnvelope[] keyEnvelopes;
@@ -62,7 +62,7 @@ final class InstrumentPatch extends IntrusiveNode {
             }
           }
           if (methodGuard <= 8) {
-            field_q = true;
+            tooltipSuppressed = true;
           }
           allLoadedResult = allLoaded;
           return allLoadedResult != 0;
@@ -92,8 +92,8 @@ final class InstrumentPatch extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
-        if (!param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
+        if (!methodGuard) {
             loginModPowModulus = (java.math.BigInteger) null;
         }
         activeFullscreenCanvas = null;
@@ -143,52 +143,52 @@ final class InstrumentPatch extends IntrusiveNode {
         this.encodedSampleIds = null;
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3, byte param4) {
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = Geoblox.clientControlFlowFlag;
+    final static void drawHorizontalThreePartStrip(Sprite[] sprites, int stripWidth, int stripTop, int stripLeftThenTileX, byte methodGuard) {
+        RuntimeException drawFailureBeforeDescription = null;
+        StringBuilder drawMessagePrefix = null;
+        String spritesDescription = null;
+        RuntimeException caughtDrawFailure = null;
+        int leftWidth = 0;
+        RuntimeException drawFailureForContext = null;
+        int rightWidth = 0;
+        int tileWidth = 0;
+        int tileStartX = 0;
+        int tileEndX = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if ((param0 != null) &&
-              (param1 > 0)) {
-            var5_int = param0[0].fullWidth;
-            var6 = param0[2].fullWidth;
-            var7 = param0[1].fullWidth;
-            param0[0].draw(param3, param2);
-            param0[2].draw(param3 + param1 - var6, param2);
+          if ((sprites != null) &&
+              (stripWidth > 0)) {
+            leftWidth = sprites[0].fullWidth;
+            rightWidth = sprites[2].fullWidth;
+            tileWidth = sprites[1].fullWidth;
+            sprites[0].draw(stripLeftThenTileX, stripTop);
+            sprites[2].draw(stripLeftThenTileX + stripWidth - rightWidth, stripTop);
             SoftwareRasterizer.saveClip(ClientOptionSupport.sharedSavedClip);
-            SoftwareRasterizer.intersectClip(param3 + var5_int, param2, param3 + param1 - var6, param2 + param0[1].fullHeight);
-            var8 = var5_int + param3;
-            var9 = param1 + (param3 - var6);
-            for (param3 = var8; param3 < var9; param3 = param3 + var7) {
-              param0[1].draw(param3, param2);
+            SoftwareRasterizer.intersectClip(stripLeftThenTileX + leftWidth, stripTop, stripLeftThenTileX + stripWidth - rightWidth, stripTop + sprites[1].fullHeight);
+            tileStartX = leftWidth + stripLeftThenTileX;
+            tileEndX = stripWidth + (stripLeftThenTileX - rightWidth);
+            for (stripLeftThenTileX = tileStartX; stripLeftThenTileX < tileEndX; stripLeftThenTileX = stripLeftThenTileX + tileWidth) {
+              sprites[1].draw(stripLeftThenTileX, stripTop);
             }
             SoftwareRasterizer.restoreClip(ClientOptionSupport.sharedSavedClip);
-            if (param4 != 107) {
+            if (methodGuard != 107) {
               loginModPowModulus = (java.math.BigInteger) null;
             }
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("vl.B(");
-          if (param0 == null) {
-            stackIn_14_2 = "null";
+        } catch (java.lang.RuntimeException drawFailure) {
+          caughtDrawFailure = drawFailure;
+          drawFailureForContext = caughtDrawFailure;
+          drawFailureBeforeDescription = drawFailureForContext;
+          drawMessagePrefix = new StringBuilder().append("vl.B(");
+          if (sprites == null) {
+            spritesDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            spritesDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawFailureBeforeDescription), ((StringBuilder) (Object) drawMessagePrefix).append(spritesDescription).append(',').append(stripWidth).append(',').append(stripTop).append(',').append(stripLeftThenTileX).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -645,7 +645,7 @@ final class InstrumentPatch extends IntrusiveNode {
     }
 
     static {
-        field_q = false;
+        tooltipSuppressed = false;
         loginModPowModulus = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
     }
 }

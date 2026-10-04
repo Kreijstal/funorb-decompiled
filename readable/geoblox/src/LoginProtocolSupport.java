@@ -45,7 +45,7 @@ final class LoginProtocolSupport {
                   EntityContactSupport.pendingLoginPayload = HotspotTextWidget.createLoginPayloadForIdentifier(false, primaryLoginText, secondaryLoginText, false);
                 } else {
                   unusedNullLongPayloadTextSnapshot = (String) null;
-                  EntityContactSupport.pendingLoginPayload = SecondaryDeque.createLoginPayload(true, ClientClockSupport.field_c, (String) null, primaryLoginText, false);
+                  EntityContactSupport.pendingLoginPayload = SecondaryDeque.createLoginPayload(true, ClientClockSupport.loginResponseLongValue, (String) null, primaryLoginText, false);
                 }
                 CacheReference.outgoingSessionBuffer.position = 0;
                 CacheReference.outgoingSessionBuffer.writeByte((byte) -102, 14);
@@ -67,7 +67,7 @@ final class LoginProtocolSupport {
               }
               if ((MessageDialog.awaitingLoginLongState == PacketBuffer.currentProtocolStage) &&
                   (UiWidget.readSessionBytesIfAvailable(30000, 8))) {
-                TextValidationSupport.field_a = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
+                TextValidationSupport.loginHandshakeServerSeed = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 UsernameAvailabilityValidator.writeEncryptedLoginRequest(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
                 PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginResultStage;
@@ -91,7 +91,7 @@ final class LoginProtocolSupport {
                       break L6;
                     }
                     Bzip2DecoderState.closeSessionSocket((byte) -116);
-                    TextTemplateArgumentType.field_e = false;
+                    TextTemplateArgumentType.loginRetryAttempted = false;
                     closedResponseResult = responseByteThenPortSwapValue;
                     return closedResponseResult;
                   }
@@ -101,7 +101,7 @@ final class LoginProtocolSupport {
               }
               if ((ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
                   (TriangleMesh.readSessionPacketPayload(false))) {
-                ClientClockSupport.field_c = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
+                ClientClockSupport.loginResponseLongValue = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 SpriteCheckboxRenderer.loginDebugPermissionLevel = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 TextTemplateDefinition.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
@@ -138,9 +138,9 @@ final class LoginProtocolSupport {
                     ProgressDialog.usernameLoginMethod.rememberMethod(NodeHashTableIterator.getActiveApplet(108), 0);
                   }
                 } else {
-                  LoginTextValue.field_b.rememberMethod(NodeHashTableIterator.getActiveApplet(122), 0);
+                  LoginTextValue.emailLoginMethod.rememberMethod(NodeHashTableIterator.getActiveApplet(122), 0);
                 }
-                TextTemplateArgumentType.field_e = false;
+                TextTemplateArgumentType.loginRetryAttempted = false;
                 if (settingsCookieValue != null) {
                   SettingsCookieSupport.storeSettingsCookie(100, settingsCookieValue, NodeHashTableIterator.getActiveApplet(112));
                 }
@@ -154,7 +154,7 @@ final class LoginProtocolSupport {
                   }
                 } else {
                   try {
-                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(ClientClockSupport.field_c, methodGuard + 97)}, NodeHashTableIterator.getActiveApplet(methodGuard + 119), "zap");
+                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(ClientClockSupport.loginResponseLongValue, methodGuard + 97)}, NodeHashTableIterator.getActiveApplet(methodGuard + 119), "zap");
                   } catch (java.lang.Throwable zapScriptFailure) {
                     caughtLoginOrScriptFailure = zapScriptFailure;
                     ignoredScriptFailure = caughtLoginOrScriptFailure;
@@ -163,11 +163,11 @@ final class LoginProtocolSupport {
                 if (TextTemplateDefinition.field_n > 0) {
                   FontLoadingSupport.memberAccountMode = true;
                 }
-                CacheReference.outgoingSessionBuffer.initializeCipher(ProgressBarWidget.field_D, false);
+                CacheReference.outgoingSessionBuffer.initializeCipher(ProgressBarWidget.loginCipherSeedWords, false);
                 for (extensionByteIndexThenCipherSeedIndex = 0; extensionByteIndexThenCipherSeedIndex < 4; extensionByteIndexThenCipherSeedIndex++) {
-                  ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] = ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] + 50;
+                  ProgressBarWidget.loginCipherSeedWords[extensionByteIndexThenCipherSeedIndex] = ProgressBarWidget.loginCipherSeedWords[extensionByteIndexThenCipherSeedIndex] + 50;
                 }
-                LogoCompositor.sessionPacketBuffer.initializeCipher(ProgressBarWidget.field_D, false);
+                LogoCompositor.sessionPacketBuffer.initializeCipher(ProgressBarWidget.loginCipherSeedWords, false);
                 connectedResponseResult = ScorePopup.currentPacketOpcode;
                 return connectedResponseResult;
               }
@@ -175,8 +175,8 @@ final class LoginProtocolSupport {
                   (TriangleMesh.readSessionPacketPayload(false))) {
                 Bzip2DecoderState.closeSessionSocket((byte) -118);
                 if ((ScorePopup.currentPacketOpcode == 7) &&
-                    (!TextTemplateArgumentType.field_e)) {
-                  TextTemplateArgumentType.field_e = true;
+                    (!TextTemplateArgumentType.loginRetryAttempted)) {
+                  TextTemplateArgumentType.loginRetryAttempted = true;
                   retryPendingResult = -1;
                   return retryPendingResult;
                 }
@@ -184,25 +184,25 @@ final class LoginProtocolSupport {
                   ScorePopup.currentPacketOpcode = 3;
                 }
                 AudioService.sessionResponseText = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 101);
-                TextTemplateArgumentType.field_e = false;
+                TextTemplateArgumentType.loginRetryAttempted = false;
                 failedResponseResult = ScorePopup.currentPacketOpcode;
                 return failedResponseResult;
               }
               if (null == SpriteCheckboxRenderer.sessionSocket) {
-                if (TextTemplateArgumentType.field_e) {
+                if (TextTemplateArgumentType.loginRetryAttempted) {
                   if (30000L >= GameGraphicsResources.elapsedSinceSessionActivity((byte) 12)) {
                     AudioService.sessionResponseText = FullscreenFailureReason.loginMessage2Text;
                   } else {
                     AudioService.sessionResponseText = IntrusiveNode.loginMessage3Text;
                   }
-                  TextTemplateArgumentType.field_e = false;
+                  TextTemplateArgumentType.loginRetryAttempted = false;
                   retryFailureResult = 3;
                   return retryFailureResult;
                 }
                 responseByteThenPortSwapValue = NetworkArchiveRequest.sessionServerPort;
                 NetworkArchiveRequest.sessionServerPort = TextInputRenderer.alternateSessionServerPort;
                 TextInputRenderer.alternateSessionServerPort = responseByteThenPortSwapValue;
-                TextTemplateArgumentType.field_e = true;
+                TextTemplateArgumentType.loginRetryAttempted = true;
               }
               pendingHandshakeResult = -1;
               return pendingHandshakeResult;

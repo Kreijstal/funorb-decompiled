@@ -32,10 +32,10 @@ final class DialWidget extends ButtonWidget {
         return var5;
     }
 
-    public static void f(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         js5IoErrorText = null;
         bakingMusicTrack = null;
-        if (param0 != 0) {
+        if (methodGuard != 0) {
             bakingMusicTrack = (MusicScore) null;
         }
         contentFadeInPhase = null;

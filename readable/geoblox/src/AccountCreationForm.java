@@ -293,7 +293,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     }
 
     final static void rebuildAccountDialogLayerAndOpenLogin(byte methodGuard) {
-        DialRenderer.field_j = MessageDialog.getSharedUiStyle(125);
+        DialRenderer.accountUiTheme = MessageDialog.getSharedUiStyle(125);
         int guardResidue = -117 / ((12 - methodGuard) / 57);
         ClientFlowState.accountDialogLayer = new DialogLayer();
         TextTemplateLookupSupport.openLoginPanel(true, true, false);
@@ -316,7 +316,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         RuntimeException buttonFailureForContext = null;
         try {
           if (button == this.backButton) {
-            ByteArrayBuffer.g(0);
+            ByteArrayBuffer.openAccountWelcomePanel(0);
           } else {
             if (this.createButton == button) {
               discardedSubmissionResult = this.submitAccountCreationIfReady(-21440);

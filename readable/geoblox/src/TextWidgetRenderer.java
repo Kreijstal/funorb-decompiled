@@ -560,7 +560,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             }
             caretBottomY = originYBeforeClamp + Math.min(availableHeightForClamp, Math.min(lineBottomForClamp, nextTopOrCurrentBottom));
             PasswordWidgetRenderer.pushWidgetClip(parentY + widget.widgetY, parentX + widget.widgetX, -14045, parentY + widget.widgetY + widget.widgetHeight, widget.widgetWidth + parentX + widget.widgetX);
-            DialRenderer.field_j.drawWidgetLine(caretBottomY, screenCaretX, this.caretColor, caretTopY, screenCaretX, 8947848);
+            DialRenderer.accountUiTheme.drawWidgetLine(caretBottomY, screenCaretX, this.caretColor, caretTopY, screenCaretX, 8947848);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
           }
           if (methodGuard != -2) {
@@ -671,7 +671,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
                 selectionEndXSnapshot = layoutAlias.getCaretX(selectionEnd, 124);
               }
               selectionEndX = selectionEndXSnapshot;
-              DialRenderer.field_j.fillWidgetRectangleAlpha(selectedLine.topY + (parentY + widget.widgetY + this.paddingTop + widget.textOffsetY), selectedLine.bottomY, -selectionStartX + selectionEndX, this.selectionArgb >>> 24, methodGuard ^ 15658734, this.selectionArgb, this.getTextX(widget, parentX, 11875, selectionStartX));
+              DialRenderer.accountUiTheme.fillWidgetRectangleAlpha(selectedLine.topY + (parentY + widget.widgetY + this.paddingTop + widget.textOffsetY), selectedLine.bottomY, -selectionStartX + selectionEndX, this.selectionArgb >>> 24, methodGuard ^ 15658734, this.selectionArgb, this.getTextX(widget, parentX, 11875, selectionStartX));
             }
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             return;

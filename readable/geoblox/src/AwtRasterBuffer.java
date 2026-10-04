@@ -22,7 +22,7 @@ abstract class AwtRasterBuffer {
         int[] rgbPixels = new int[pixelCount];
         if (methodGuard != -60) {
             Random unusedNullRandomSnapshot = (Random) null;
-            AwtRasterBuffer.a((byte) 50, (Random) null, 37);
+            AwtRasterBuffer.nextBoundedRandomInt((byte) 50, (Random) null, 37);
         }
         for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
             rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt(255, (int) paletteIndices[pixelIndex])];
@@ -32,54 +32,54 @@ abstract class AwtRasterBuffer {
         return sprite;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         archiveGzipInflater = null;
-        if (param0 != 58) {
-            Random var2 = (Random) null;
-            AwtRasterBuffer.a((byte) 47, (Random) null, -73);
+        if (methodGuard != 58) {
+            Random unusedNullRandomSnapshot = (Random) null;
+            AwtRasterBuffer.nextBoundedRandomInt((byte) 47, (Random) null, -73);
         }
     }
 
-    final static int a(byte param0, Random param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int stackIn_2_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int nextBoundedRandomInt(byte methodGuard, Random random, int bound) {
+        int rejectionThreshold = 0;
+        RuntimeException randomFailureForContext = null;
+        int randomValue = 0;
+        int invalidGuardResultBeforeReturn = 0;
+        int powerOfTwoResultBeforeReturn = 0;
+        int remainderResultBeforeReturn = 0;
+        RuntimeException randomFailureBeforeDescription = null;
+        StringBuilder randomMessagePrefix = null;
+        String randomDescription = null;
+        RuntimeException caughtRandomFailure = null;
         try {
-          if (param0 != -75) {
-            stackIn_2_0 = 102;
-            return stackIn_2_0;
+          if (methodGuard != -75) {
+            invalidGuardResultBeforeReturn = 102;
+            return invalidGuardResultBeforeReturn;
           }
-          if (param2 <= 0) {
+          if (bound <= 0) {
             throw new IllegalArgumentException();
           }
-          if (FullscreenFailureReason.isSingleBitOrZero(true, param2)) {
-            stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
-            return stackIn_7_0;
+          if (FullscreenFailureReason.isSingleBitOrZero(true, bound)) {
+            powerOfTwoResultBeforeReturn = (int)((4294967295L & (long)random.nextInt()) * (long)bound >> 32);
+            return powerOfTwoResultBeforeReturn;
           }
-          var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
+          rejectionThreshold = -(int)(4294967296L % (long)bound) + -2147483648;
           do {
-            var4 = param1.nextInt();
-          } while (var3_int <= var4);
-          stackIn_12_0 = AvatarFeedbackSupport.computeAdjustedRemainder(var4, param2, param0 ^ 121);
-          return stackIn_12_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_16_2 = "null";
+            randomValue = random.nextInt();
+          } while (rejectionThreshold <= randomValue);
+          remainderResultBeforeReturn = AvatarFeedbackSupport.computeAdjustedRemainder(randomValue, bound, methodGuard ^ 121);
+          return remainderResultBeforeReturn;
+        } catch (java.lang.RuntimeException randomFailure) {
+          caughtRandomFailure = randomFailure;
+          randomFailureForContext = caughtRandomFailure;
+          randomFailureBeforeDescription = randomFailureForContext;
+          randomMessagePrefix = new StringBuilder().append("sc.J(").append(methodGuard).append(',');
+          if (random == null) {
+            randomDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            randomDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) randomFailureBeforeDescription), ((StringBuilder) (Object) randomMessagePrefix).append(randomDescription).append(',').append(bound).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ abstract class AwtRasterBuffer {
         SoftwareRasterizer.setRasterTarget(this.pixels, this.width, this.height);
         if (methodGuard != 255) {
             Random nullRandomForInvalidGuard = (Random) null;
-            AwtRasterBuffer.a((byte) -94, (Random) null, 54);
+            AwtRasterBuffer.nextBoundedRandomInt((byte) -94, (Random) null, 54);
         }
     }
 

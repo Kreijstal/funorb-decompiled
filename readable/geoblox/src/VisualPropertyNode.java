@@ -10,9 +10,9 @@ class VisualPropertyNode extends DualLinkNode {
     VisualPropertyNode() {
     }
 
-    public static void e(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         loaderApplet = null;
-        if (param0 < 54) {
+        if (methodGuard < 54) {
             loaderApplet = (java.applet.Applet) null;
         }
     }

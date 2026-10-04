@@ -3,7 +3,7 @@
  */
 final class UsernameResponseSupport {
     static int spawnReleaseIntervalTicks;
-    static int field_b;
+    static int accountUiViewportWidth;
     static int thirdScoreContextCounter;
     static int[] bzip2TransformTable;
 
@@ -71,7 +71,7 @@ final class UsernameResponseSupport {
     }
 
     final static void returnToLoginStage(int methodGuard) {
-        if (!ProgressBarWidget.field_G) {
+        if (!ProgressBarWidget.guestSessionMode) {
             throw new IllegalStateException();
         }
         AccountEligibilitySupport.loginReturnAllowed = true;
@@ -124,6 +124,6 @@ final class UsernameResponseSupport {
     }
 
     static {
-        field_b = 640;
+        accountUiViewportWidth = 640;
     }
 }

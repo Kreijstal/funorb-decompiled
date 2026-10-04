@@ -23,13 +23,13 @@ final class ClientFlowState {
             return;
         }
         if (10 == SpriteConstructionSupport.clientScreenStage) {
-            DraggableWidget.f((byte) 24);
+            DraggableWidget.showConnectionLostLogin((byte) 24);
             SpriteConstructionSupport.clientScreenStage = 11;
             SessionInstanceState.sessionExitRequested = true;
             return;
         }
-        if (!TextTemplateArgumentType.b(0)) {
-            DraggableWidget.f((byte) 24);
+        if (!TextTemplateArgumentType.returnTrueWithSoundThemeGuard(0)) {
+            DraggableWidget.showConnectionLostLogin((byte) 24);
             SpriteConstructionSupport.clientScreenStage = 11;
             SessionInstanceState.sessionExitRequested = true;
             return;

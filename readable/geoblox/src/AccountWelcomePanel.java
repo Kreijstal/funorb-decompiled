@@ -111,7 +111,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             }
           }
           if (this.createAccountButton == param4) {
-            MultiHandleSliderRenderer.a((byte) 101);
+            MultiHandleSliderRenderer.openAccountCreationForm((byte) 101);
             if (var7 == 0) {
               return;
             }
@@ -134,14 +134,14 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         try {
             loadingGraphicsText = null;
-            if (param0 != 1) {
-                AccountWelcomePanel.f(69);
+            if (methodGuard != 1) {
+                AccountWelcomePanel.releaseStaticReferences(69);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ')');
+        } catch (RuntimeException cleanupFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cleanupFailure), "wi.B(" + methodGuard + ')');
         }
     }
 
@@ -3179,8 +3179,8 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                   throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) failureContextBuilder).append(archiveContextToken).append(')').toString());
                 }
                 if (sharedFlowFlag != 0) {
-                  invertedClientFlagValue = (!GameApplet.field_h);
-                  GameApplet.field_h = invertedClientFlagValue;
+                  invertedClientFlagValue = (!GameApplet.textLoadControlIncrementEnabled);
+                  GameApplet.textLoadControlIncrementEnabled = invertedClientFlagValue;
                 }
             }
         }

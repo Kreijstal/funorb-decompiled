@@ -74,10 +74,10 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
         RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].drawGrayModulated(320 - faceHalfWidth, 240 - (RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullHeight >> 1), WidgetSkinState.introFaceModulationRgb);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
         sessionSocket = null;
         boardSceneRaster = null;
-        if (!param0) {
+        if (!methodGuard) {
             return;
         }
         accountCreationDisplayName = null;

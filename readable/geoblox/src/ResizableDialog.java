@@ -496,8 +496,8 @@ abstract class ResizableDialog extends FadingDialog {
         if (methodGuard != 20) {
           this.resizeTargetHeight = -34;
         }
-        InstrumentPatch.a(RasterTargetRestoreSupport.dialogTopFrameSprites, -10 + this.widgetWidth, 35 + y, 5 + x, (byte) 107);
-        InstrumentPatch.a(UnderlinedButtonRenderer.field_e, this.widgetWidth, -22 + (this.widgetHeight + y), x, (byte) 107);
+        InstrumentPatch.drawHorizontalThreePartStrip(RasterTargetRestoreSupport.dialogTopFrameSprites, -10 + this.widgetWidth, 35 + y, 5 + x, (byte) 107);
+        InstrumentPatch.drawHorizontalThreePartStrip(UnderlinedButtonRenderer.frameBottomSprites, this.widgetWidth, -22 + (this.widgetHeight + y), x, (byte) 107);
         bandHeight = this.widgetHeight - 79;
         bandStartGray = 169;
         bandEndGray = 127;

@@ -188,7 +188,7 @@ abstract class SessionGameApplet extends GameApplet {
             SecondaryDeque.resendRankedListQueries(true, 7);
           }
           if (OpacityWidget.enabledSessionPacketOpcodes[8]) {
-            DialogLayer.g(-13912);
+            DialogLayer.initializeReflectionCheckQueue(-13912);
           }
         }
         return handshakeResult;
@@ -251,12 +251,12 @@ abstract class SessionGameApplet extends GameApplet {
         AccountCreationSupport.snapshotPointerInput((byte) -128);
         if ((!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255)) &&
             (SpriteConstructionSupport.clientScreenStage != 11)) {
-          TextTemplateArgumentType.c(1);
+          TextTemplateArgumentType.updateFullscreenDialogFrame(1);
         }
         if (null != CachedTextLayout.mouseWheelInput) {
           CachedTextLayout.wheelRotationSnapshot = CachedTextLayout.mouseWheelInput.drainWheelRotation(true);
         }
-        if (InstrumentEnvelope.b(methodGuard ^ 19649)) {
+        if (InstrumentEnvelope.isSessionConnected(methodGuard ^ 19649)) {
           idleThresholdOrArchivePendingOrSequenceReady = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
           if ((!(!this.forceIdleDisconnect) ||
               (!(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.a(-76)) &&
@@ -353,12 +353,12 @@ abstract class SessionGameApplet extends GameApplet {
           if (MeshPrioritySupport.bootstrapLanguageId != 0) {
             FadingDialog.interfaceTextArchive = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.interfaceTextArchiveId, (byte) -62);
           }
-          DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.commonUiSpriteArchiveId, (byte) -18, true, false, 1);
-          AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.uiFontArchiveId, (byte) -124, true, false, 1);
-          DialRenderer.field_n = DisplayModeInfo.a(ClientTimingSupport.buttonAndLogoArchiveId, (byte) -41, true, false, 1);
-          SessionTextHistorySupport.basicUiGraphicsArchive = DirectByteStorage.field_h;
+          DirectByteStorage.initialCommonUiSpriteArchive = DisplayModeInfo.createBootstrapResourceArchive(DebouncedValidationProvider.commonUiSpriteArchiveId, (byte) -18, true, false, 1);
+          AttachedEntityRenderer.initialUiFontArchive = DisplayModeInfo.createBootstrapResourceArchive(ArchiveRequest.uiFontArchiveId, (byte) -124, true, false, 1);
+          DialRenderer.initialButtonAndLogoArchive = DisplayModeInfo.createBootstrapResourceArchive(ClientTimingSupport.buttonAndLogoArchiveId, (byte) -41, true, false, 1);
+          SessionTextHistorySupport.basicUiGraphicsArchive = DirectByteStorage.initialCommonUiSpriteArchive;
           VisualPropertyOverrides.clientBootstrapStage = 2;
-          RankedListQuery.field_i = AttachedEntityRenderer.field_c;
+          RankedListQuery.basicUiFontArchive = AttachedEntityRenderer.initialUiFontArchive;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 2) {
           if ((FadingDialog.interfaceTextArchive != null) &&
@@ -378,13 +378,13 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if ((3 == VisualPropertyOverrides.clientBootstrapStage) &&
-            (DelayedIncomingPacket.a(DialRenderer.field_n, AttachedEntityRenderer.field_c, DirectByteStorage.field_h, -11652)) &&
-            (DisplayModeInfo.a((byte) -127, DialRenderer.field_n))) {
+            (DelayedIncomingPacket.loadRequiredLoginUiGroups(DialRenderer.initialButtonAndLogoArchive, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive, -11652)) &&
+            (DisplayModeInfo.loadAllArchiveGroups((byte) -127, DialRenderer.initialButtonAndLogoArchive))) {
           LoginUiSupport.releaseAwtLoadingFonts((byte) -105);
           ConnectionHeaderSupport.evaluateConnectionHeaderGuard((byte) 120);
           ByteArrayPoolSupport.loadingStatusText = ArchiveSource.loadingText;
           AccountEligibilitySupport.loginReturnAllowed = false;
-          CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.field_n, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
+          CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.initialButtonAndLogoArchive, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive);
           if (!((!LoginProtocolSupport.field_a) &&
               (SocketConnector.bootstrapLoginPanelMessage == null))) {
             loginPanelGuardSnapshot = 2274;
@@ -408,26 +408,26 @@ abstract class SessionGameApplet extends GameApplet {
             DelegatingCanvas.logoAudioMixerReference = LoginPayload.getSharedPcmMixer((byte) 72);
             ValidatedTextInputWidget.logoStartDelayMillis = GzipInflater.getLogoStartDelayMillis(110);
           }
-          LogoPreparationSupport.prepareLogoAnimation(DialRenderer.field_n, ValidatedTextInputWidget.logoStartDelayMillis, 111, DelegatingCanvas.logoAudioMixerReference);
-          DialRenderer.field_n = null;
-          AttachedEntityRenderer.field_c = null;
-          DirectByteStorage.field_h = null;
+          LogoPreparationSupport.prepareLogoAnimation(DialRenderer.initialButtonAndLogoArchive, ValidatedTextInputWidget.logoStartDelayMillis, 111, DelegatingCanvas.logoAudioMixerReference);
+          DialRenderer.initialButtonAndLogoArchive = null;
+          AttachedEntityRenderer.initialUiFontArchive = null;
+          DirectByteStorage.initialCommonUiSpriteArchive = null;
           MeshMaterial.a((java.applet.Applet) (this), -82);
           EntityContactSupport.resetFrameTimingHistory(-69);
           VisualPropertyOverrides.clientBootstrapStage = 10;
         }
         if (10 == VisualPropertyOverrides.clientBootstrapStage) {
           if (MeshPrioritySupport.bootstrapLanguageId != 0) {
-            TextValidationSupport.field_b = SocketArchiveNetworkClient.createResourceArchive(TextWidgetSupport.gameTextArchiveId, (byte) -62);
+            TextValidationSupport.bootstrapGameTextArchive = SocketArchiveNetworkClient.createResourceArchive(TextWidgetSupport.gameTextArchiveId, (byte) -62);
           }
           VisualPropertyOverrides.clientBootstrapStage = 11;
         }
         L30: {
           if (VisualPropertyOverrides.clientBootstrapStage == 11) {
-            if (null != TextValidationSupport.field_b) {
-              if (!((TextValidationSupport.field_b.ensureIndexLoaded(0)) &&
-                  (TextValidationSupport.field_b.loadAllGroups(true)))) {
-                HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.field_b), -2, 0.0f);
+            if (null != TextValidationSupport.bootstrapGameTextArchive) {
+              if (!((TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0)) &&
+                  (TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true)))) {
+                HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
                 break L30;
               }
             }
@@ -460,7 +460,7 @@ abstract class SessionGameApplet extends GameApplet {
           UsernameAvailabilityQuery.attachCanvasInputListeners(MessageDialog.gameCanvas, 57);
         }
         if (OpacityWidget.enabledSessionPacketOpcodes[8]) {
-          ArchiveNetworkClient.f(-102);
+          ArchiveNetworkClient.sendReadyReflectionCheckReplies(-102);
         }
     }
 
@@ -552,9 +552,9 @@ abstract class SessionGameApplet extends GameApplet {
                 queryOrHandshakeResult = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.a(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
                 if (queryOrHandshakeResult != -1) {
                   if (queryOrHandshakeResult == 0) {
-                    CheckboxWidget.field_H = ClientClockSupport.field_c;
+                    CheckboxWidget.errorReportLoginLongValue = ClientClockSupport.loginResponseLongValue;
                     IterableNodeHashTable.refreshLoginTicketMessage(-12618);
-                    ProgressBarWidget.field_G = false;
+                    ProgressBarWidget.guestSessionMode = false;
                     SpriteConstructionSupport.clientScreenStage = 10;
                   } else {
                     TextInputValidator.handleLoginUiResponse((byte) 124, queryOrHandshakeResult, AudioService.sessionResponseText);
@@ -567,7 +567,7 @@ abstract class SessionGameApplet extends GameApplet {
             }
             if (uiAction == 4) {
               if (!FontLoadingSupport.memberAccountMode) {
-                ProgressBarWidget.field_G = true;
+                ProgressBarWidget.guestSessionMode = true;
                 SpriteConstructionSupport.clientScreenStage = 10;
               } else {
                 BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(actionGuard ^ -122));

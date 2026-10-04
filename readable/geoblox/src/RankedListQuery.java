@@ -5,17 +5,17 @@ final class RankedListQuery extends IntrusiveNode {
     static String receivedRecordText;
     int entryLimit;
     static Sprite widgetSprite;
-    static ResourceArchive field_i;
+    static ResourceArchive basicUiFontArchive;
     static boolean connectivityDirty;
     int queryId;
 
-    public static void b(int param0) {
-        if (param0 != 127) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 127) {
             return;
         }
         receivedRecordText = null;
         widgetSprite = null;
-        field_i = null;
+        basicUiFontArchive = null;
     }
 
     final static void writeAchievementStateRequest(int methodGuard, int packetOpcode) {

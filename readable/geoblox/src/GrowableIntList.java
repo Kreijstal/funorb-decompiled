@@ -20,11 +20,11 @@ final class GrowableIntList {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         pendingIntRecordSubmissions = null;
         fullscreenUnavailableText = null;
         createMismatchAlertText = null;
-        int var1 = -116 / ((param0 - 72) / 36);
+        int guardQuotient = -116 / ((methodGuard - 72) / 36);
     }
 
     final void removeAt(int minimumIndex, int index) {
@@ -118,7 +118,7 @@ final class GrowableIntList {
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
-        ValidationIconWidget.field_H = true;
+        ValidationIconWidget.clientCookieMarkerCreated = true;
         String var2 = "tuhstatbut";
         String var3 = "rvnadlm";
         long var4 = -1L;

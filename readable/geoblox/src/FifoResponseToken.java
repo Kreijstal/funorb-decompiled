@@ -55,11 +55,11 @@ final class FifoResponseToken extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
         unpackingMusicText = null;
         activeHighscoreQuery = null;
         bakingBackgroundSprite = null;
-        if (param0) {
+        if (methodGuard) {
             bakingBackgroundSprite = (IndexedSprite) null;
         }
     }

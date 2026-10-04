@@ -5,13 +5,13 @@ final class DirectByteStorage extends ByteStorage {
     static IntrusiveDeque pendingCrcAcknowledgements;
     private java.nio.ByteBuffer directBuffer;
     static MeshMaterial[] meshMaterials;
-    static ResourceArchive field_h;
+    static ResourceArchive initialCommonUiSpriteArchive;
 
-    public static void b(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         pendingCrcAcknowledgements = null;
         meshMaterials = null;
-        field_h = null;
-        if (param0 > -1) {
+        initialCommonUiSpriteArchive = null;
+        if (methodGuard > -1) {
             meshMaterials = (MeshMaterial[]) null;
         }
     }

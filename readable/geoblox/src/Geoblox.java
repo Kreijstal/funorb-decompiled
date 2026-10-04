@@ -339,7 +339,7 @@ public final class Geoblox extends SessionGameApplet {
         PointerInputListener.releaseStaticReferences(-29313);
         MouseWheelInput.releaseStaticReferences(-42);
         SoftwareRasterizer.releaseRasterStorage();
-        ResourceArchive.b(30261);
+        ResourceArchive.releaseStaticReferences(30261);
         TextTemplateLookupSupport.releaseTemplateLookupState(17062);
         UsernameResponseSupport.clearUsernameAndCompressionResources(105);
         ByteArrayBuffer.clearWhirlpoolTables(0);
@@ -355,14 +355,14 @@ public final class Geoblox extends SessionGameApplet {
         UsernameQuerySupport.releaseStaticReferences(-9474);
         MeshDepthSupport.releaseStaticReferences(false);
         FrameTimer.releaseSharedResources(methodGuard ^ 78);
-        AwtRasterBuffer.b((byte) 58);
+        AwtRasterBuffer.releaseStaticReferences((byte) 58);
         ArchiveLoadSequence.releaseStaticReferences((byte) -127);
-        FullscreenFocusCanvas.a(methodGuard + 64);
-        CanvasResizeController.a(true);
+        FullscreenFocusCanvas.releaseStaticReferences(methodGuard + 64);
+        CanvasResizeController.releaseStaticReferences(true);
         GameScreen.releaseStaticReferences((byte) 28);
         GameplaySession.releaseStaticReferences(-17199);
-        ArchiveNetworkClient.d(-50);
-        DiskCacheWorker.a(methodGuard ^ 74);
+        ArchiveNetworkClient.releaseStaticReferences(-50);
+        DiskCacheWorker.releaseStaticReferences(methodGuard ^ 74);
         ArchiveCatalog.releaseReplayTutorialText(86);
         BufferedSocket.releaseTransformedVertexScratch(21888);
         IntrusiveDeque.releaseSharedResources(51);
@@ -370,42 +370,42 @@ public final class Geoblox extends SessionGameApplet {
         IntrusiveNodeHashTable.releaseSharedResources(methodGuard - 63);
         MidiTrackReader.clearStatusDataByteCounts();
         MidiNoteMixer.clearFullscreenFailureText(-1);
-        TrackedPcmStream.a((byte) 54);
+        TrackedPcmStream.releaseStaticReferences((byte) 54);
         AudioOutput.releaseSharedAudioServiceReference();
         LoginUiSupport.clearLoginUiText(methodGuard + 154);
         AchievementProtocolSupport.releaseStaticReferences(0);
         ClientOptionSupport.releaseClientOptionResources(50);
-        ArchiveIndex.a(114);
+        ArchiveIndex.releaseStaticReferences(114);
         GzipInflater.releaseStaticReferences(-127);
-        ArchiveSource.a(true);
+        ArchiveSource.releaseStaticReferences(true);
         LogoCompositor.releaseStaticReferences(-6910);
         PlayfieldRules.releaseStaticReferences(true);
         MessageDialogSupport.releaseStaticReferences(30970);
         DialogLayer.releaseStaticReferences(methodGuard - 33);
-        AccountCreationDialog.r(-60);
+        AccountCreationDialog.releaseStaticReferences(-60);
         ProgressDialog.releaseProgressDialogLoginMethod((byte) 57);
-        AccountContentDialog.n(methodGuard ^ 69);
+        AccountContentDialog.releaseStaticReferences(methodGuard ^ 69);
         MessageDialog.releaseStaticReferences(-107);
         AccountCreationForm.releaseAccountCreationSharedResources(0);
-        AccountWelcomePanel.f(1);
+        AccountWelcomePanel.releaseStaticReferences(1);
         LoginPanel.releaseLoginPanelSharedResources((byte) -97);
         DisplayNamePanel.releaseStaticReferences((byte) -85);
-        LoginTextValue.a(methodGuard + 63);
+        LoginTextValue.releaseStaticReferences(methodGuard + 63);
         RatingPresentationResources.releaseStaticReferences(-89);
         TextConcatenationSupport.clearConcatenationResources(methodGuard + 168);
-        PcmResampler.a(true);
+        PcmResampler.releaseStaticReferences(true);
         SessionSocketSupport.releaseSessionSocketResources((byte) 102);
         BootstrapUiSupport.releaseBootstrapUiText(methodGuard ^ 9769);
         BitmapFont.releaseTextScratchStorage();
         DualLinkNode.releaseDualLinkResources((byte) -110);
-        SpriteState.f(methodGuard ^ -5558);
-        PendingActionMarker.c((byte) 45);
+        SpriteState.releaseStaticReferences(methodGuard ^ -5558);
+        PendingActionMarker.releaseStaticReferences((byte) 45);
         ConnectionHeaderSupport.clearConnectionHeaderSprites((byte) -80);
         CacheFileState.releaseStaticReferences((byte) -103);
         GameAudioState.releaseGameAudioResources(-8297);
         FullscreenEntrySupport.clearFullscreenEntryResources(-8616);
-        LoginPayloadKind.a(85);
-        LoginPayload.a(methodGuard + 64);
+        LoginPayloadKind.releaseStaticReferences(85);
+        LoginPayload.releaseStaticReferences(methodGuard + 64);
         PacketBuffer.releaseStaticReferences(methodGuard ^ -64);
         SessionTextHistorySupport.releaseStaticReferences((byte) -64);
         MenuScreen.releaseStaticReferences((byte) 26);
@@ -418,26 +418,26 @@ public final class Geoblox extends SessionGameApplet {
         GameSoundResources.releaseStaticReferences(33);
         ClientFlowState.clearClientFlowResources((byte) 122);
         LoginProtocolSupport.releaseStaticReferences(5366);
-        LimitedRandomAccessFile.b((byte) 74);
+        LimitedRandomAccessFile.releaseStaticReferences((byte) 74);
         DelegatingCanvas.releaseStaticReferences((byte) 81);
         MatchScoringSupport.releaseStaticReferences(true);
         InstrumentNoteMask.releaseStaticReferences(false);
-        InstrumentPatch.b(true);
-        InstrumentEnvelope.a(17348);
+        InstrumentPatch.releaseStaticReferences(true);
+        InstrumentEnvelope.releaseStaticReferences(17348);
         AudioService.releaseAudioServiceResources(104);
         PacketByteCipher.releaseStaticReferences((byte) -125);
-        SocketArchiveNetworkClient.i(-84);
-        NetworkArchiveRequest.e((byte) 118);
-        CachedArchiveSource.b(true);
-        ArchiveRequest.f(31735);
+        SocketArchiveNetworkClient.releaseStaticReferences(-84);
+        NetworkArchiveRequest.releaseStaticReferences((byte) 118);
+        CachedArchiveSource.releaseStaticReferences(true);
+        ArchiveRequest.releaseStaticReferences(31735);
         UsernameQueryState.clearAccountUsernameResult(true);
-        FullscreenErrorDialog.i((byte) -80);
+        FullscreenErrorDialog.releaseStaticReferences((byte) -80);
         LogoPreparationSupport.releaseStaticReferences(true);
         TextWidgetRenderer.releaseStaticReferences(true);
         TriangleRasterState.releaseTriangleTables();
         MusicDecoder.releaseSharedDecoderResources();
         AttachedEntityRenderer.releaseStaticReferences(126);
-        TriangleMesh.b((byte) 115);
+        TriangleMesh.releaseStaticReferences((byte) 115);
         SessionInstanceState.releaseSessionInstanceSprite(31);
         FontLoadingSupport.clearFontLoadingResources((byte) -112);
         EndingAnimationSupport.releaseStaticReferences((byte) -126);
@@ -448,15 +448,15 @@ public final class Geoblox extends SessionGameApplet {
         VisualPropertyOverrides.releaseVisualOverrideSharedResources(false);
         SecondaryNodeHashTable.releaseSharedResources(true);
         IntKeyLookup.releaseStaticReferences((byte) 49);
-        ByteStorage.a(-87);
+        ByteStorage.releaseStaticReferences(-87);
         Bzip2Decoder.releaseSharedState();
-        ReflectionCheckRequest.b(false);
+        ReflectionCheckRequest.releaseStaticReferences(false);
         ByteArrayPoolSupport.clearBytePoolAndUiResources((byte) -108);
         DebugOverviewCompositor.releaseStaticReferences(-128);
         CheckboxRenderer.releaseStaticReferences(1);
         StatefulWidgetRenderer.releaseSharedResources((byte) 94);
-        DialRenderer.a(methodGuard ^ -64);
-        MultiHandleSliderRenderer.b((byte) -89);
+        DialRenderer.releaseStaticReferences(methodGuard ^ -64);
+        MultiHandleSliderRenderer.releaseStaticReferences((byte) -89);
         UiWidget.releaseStaticReferences(-5927);
         ButtonWidget.releaseStaticReferences((byte) -11);
         SingleChildWidget.releaseStaticReferences((byte) -3);
@@ -467,49 +467,49 @@ public final class Geoblox extends SessionGameApplet {
         BoardEntityState.releaseStaticReferences(methodGuard);
         MusicDecodeStage.releaseSharedFloorResources();
         MatchCandidateSupport.releaseStaticReferences(-113);
-        TextTemplateDefinition.f(111);
+        TextTemplateDefinition.releaseStaticReferences(111);
         EntityContactSupport.releaseStaticReferences((byte) 73);
-        TextTemplateDefinitionLoader.a((byte) 107);
+        TextTemplateDefinitionLoader.releaseStaticReferences((byte) 107);
         WeightedObjectCache.releaseCacheTextResources(126);
         AttachmentPointerState.releaseAttachmentPointerText((byte) 95);
-        PrefixCodeDecoder.a((byte) -30);
-        VisualPropertyNode.e((byte) 77);
+        PrefixCodeDecoder.releaseStaticReferences((byte) -30);
+        VisualPropertyNode.releaseStaticReferences((byte) 77);
         ClientTimingSupport.releaseStaticReferences(false);
         SessionTextState.releaseSessionTextResources(-97);
         SocketConnector.releaseSocketConnectorSharedResources(16712207);
         ProxyAuthenticationRequiredException.releaseProxyExceptionSharedResources(-20152);
         NanoFrameTimer.releaseSharedResources(false);
-        ImageProducerRasterBuffer.c((byte) -117);
-        DisplayModeInfo.a(methodGuard ^ -33);
+        ImageProducerRasterBuffer.releaseStaticReferences((byte) -117);
+        DisplayModeInfo.releaseStaticReferences(methodGuard ^ -33);
         RasterTargetRestoreSupport.releaseRasterRestoreResources(true);
         GmtTimestampSupport.clearTimestampAndPopupResources((byte) 40);
         ArchiveHandshakeState.releaseArchiveHandshakeResources(false);
         MeshPrioritySupport.releaseStaticReferences(0);
-        WhirlpoolHash.b(102);
+        WhirlpoolHash.releaseStaticReferences(102);
         SynthesizedSoundInstrument.releaseSynthesisBuffers();
         DelayedPcmStream.clearUsernameQueryCandidate((byte) -120);
-        LabeledChildWidget.f((byte) -52);
+        LabeledChildWidget.releaseStaticReferences((byte) -52);
         ValidatedTextInputWidget.releaseStaticReferences(-243);
         TextInputWidget.releaseStaticReferences((byte) -15);
         ContentTransitionDialog.releaseStaticReferences(methodGuard ^ -320);
-        ProgressBarWidget.f(407213000);
+        ProgressBarWidget.releaseStaticReferences(407213000);
         UsernameSuggestionsPanel.releaseUsernameSuggestionSharedResources(true);
         HotspotTextWidget.releaseHotspotSharedResources(0);
-        ValidationIconWidget.f(-116);
-        ValidationMessageWidget.j(24033);
-        CheckboxWidget.f(-75);
+        ValidationIconWidget.releaseStaticReferences(-116);
+        ValidationMessageWidget.releaseStaticReferences(24033);
+        CheckboxWidget.releaseStaticReferences(-75);
         TextInputValidator.releaseStaticReferences(methodGuard + 65);
         AvatarFeedbackSupport.releaseStaticReferences(-43);
-        Under13TermsPanel.b(false);
-        DialWidget.f(0);
-        MultiHandleSliderWidget.f(0);
+        Under13TermsPanel.releaseStaticReferences(false);
+        DialWidget.releaseStaticReferences(0);
+        MultiHandleSliderWidget.releaseStaticReferences(0);
         GameGraphicsResources.clearGameGraphicsResources(methodGuard + 71);
         CachedTextLayout.releaseStaticReferences((byte) -87);
-        DirectByteStorage.b(methodGuard ^ 47);
-        GrowableIntList.a(27);
-        DraggableWidget.g((byte) -113);
+        DirectByteStorage.releaseStaticReferences(methodGuard ^ 47);
+        GrowableIntList.releaseStaticReferences(27);
+        DraggableWidget.releaseStaticReferences((byte) -113);
         DropTargetWidget.releaseDropTargetSharedResources(methodGuard + 14576);
-        TextTemplateArgumentType.a(-113);
+        TextTemplateArgumentType.releaseStaticReferences(-113);
         IterableNodeHashTable.releaseSharedResources(methodGuard ^ 63);
         SecondaryNodeDeque.releaseSharedResources(methodGuard + 63);
         CacheReference.releaseCacheReferenceResources(-111);
@@ -519,31 +519,31 @@ public final class Geoblox extends SessionGameApplet {
         CharacterReplacementSupport.clearReplacementAndTransitionResources((byte) -23);
         NodeHashTableIterator.releaseSharedResources(0);
         SecondaryNodeDequeIterator.releaseSharedResources((byte) 101);
-        ScoreSubmission.b(46695);
-        ByteShortQuery.a((byte) 112);
-        SpriteButtonRenderer.b(16777215);
-        UnderlinedButtonRenderer.a(1);
-        TextInputRenderer.a((byte) 68);
-        PasswordWidgetRenderer.c(0);
-        SpriteCheckboxRenderer.a(true);
+        ScoreSubmission.releaseStaticReferences(46695);
+        ByteShortQuery.releaseStaticReferences((byte) 112);
+        SpriteButtonRenderer.releaseStaticReferences(16777215);
+        UnderlinedButtonRenderer.releaseStaticReferences(1);
+        TextInputRenderer.releaseStaticReferences((byte) 68);
+        PasswordWidgetRenderer.releaseStaticReferences(0);
+        SpriteCheckboxRenderer.releaseStaticReferences(true);
         OpacityWidget.releaseOpacitySharedResources((byte) -60);
         SocialListEntry.releaseSocialEntryResources((byte) -128);
-        RankedListQuery.b(127);
-        ArchiveLoadStep.a(122);
+        RankedListQuery.releaseStaticReferences(127);
+        ArchiveLoadStep.releaseStaticReferences(122);
         UsernameAvailabilityQuery.releaseUsernameQuerySharedResources(102);
-        ClientProtocolStage.a(methodGuard ^ -64);
-        MessageDialogContent.a((byte) -113);
-        AchievementQuery.c(59);
-        AchievementSubmission.b(methodGuard ^ 25);
-        LoginMethod.a((byte) -92);
-        LongAndTextLoginPayload.b(8221);
-        AlternateLongAndTextLoginPayload.d((byte) -109);
-        TextPairLoginPayload.b(-17226);
+        ClientProtocolStage.releaseStaticReferences(methodGuard ^ -64);
+        MessageDialogContent.releaseStaticReferences((byte) -113);
+        AchievementQuery.releaseStaticReferences(59);
+        AchievementSubmission.releaseStaticReferences(methodGuard ^ 25);
+        LoginMethod.releaseStaticReferences((byte) -92);
+        LongAndTextLoginPayload.releaseStaticReferences(8221);
+        AlternateLongAndTextLoginPayload.releaseStaticReferences((byte) -109);
+        TextPairLoginPayload.releaseStaticReferences(-17226);
         FullscreenFailureReason.releaseStaticReferences(-53);
-        RasterTargetSnapshot.b(methodGuard ^ -6501);
-        IntArrayQuery.b(1000);
-        KeyedIntRecordSubmission.b(methodGuard ^ -65);
-        FifoResponseToken.b(false);
+        RasterTargetSnapshot.releaseStaticReferences(methodGuard ^ -6501);
+        IntArrayQuery.releaseStaticReferences(1000);
+        KeyedIntRecordSubmission.releaseStaticReferences(methodGuard ^ -65);
+        FifoResponseToken.releaseStaticReferences(false);
         WidgetSkinState.releaseSharedResources(false);
         TextLayoutLine.releaseStaticReferences((byte) 0);
         ScorePopup.releaseStaticReferences((byte) -40);
@@ -554,8 +554,8 @@ public final class Geoblox extends SessionGameApplet {
         AgeValidator.releaseRestartTutorialText(-48);
         MatchingTextValidator.clearStaticReferences(methodGuard + 64);
         UiFontResources.releaseStaticReferences(false);
-        TextHotspotBounds.b(true);
-        ValidationState.b(-481);
+        TextHotspotBounds.releaseStaticReferences(true);
+        ValidationState.releaseStaticReferences(-481);
         DebouncedValidationProvider.releaseStaticReferences(true);
         this.serverHost = null;
     }
@@ -611,7 +611,7 @@ public final class Geoblox extends SessionGameApplet {
         int uiServiceResultOrOverlayMode;
         int clientControlFlowGuard;
         clientControlFlowGuard = clientControlFlowFlag;
-        DialogLayer.h(78);
+        DialogLayer.serviceGameAudioOutputs(78);
         if (methodGuard) {
           return;
         }
@@ -708,7 +708,7 @@ public final class Geoblox extends SessionGameApplet {
               }
               if (GameplaySetupSupport.screenChangePending) {
                 GameplaySetupSupport.screenChangePending = false;
-                if (!UnderlinedButtonRenderer.c(-95)) {
+                if (!UnderlinedButtonRenderer.isGuestSessionMode(-95)) {
                   if (0 < TextTemplateDefinition.field_n) {
                     InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
                     TextTemplateDefinition.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
@@ -753,11 +753,11 @@ public final class Geoblox extends SessionGameApplet {
                 TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
                 if (nextScreenTransitionTickSnapshot == 160) {
                   if ((UiWidget.gameplayReturnScreenId != -1) &&
-                      (UnderlinedButtonRenderer.c(-109))) {
+                      (UnderlinedButtonRenderer.isGuestSessionMode(-109))) {
                     if (ProxySocketConnector.gameplayOriginScreenId != 0) {
                       UsernameResponseSupport.returnToLoginStage(-106);
                     } else {
-                      PendingActionMarker.a((byte) 118);
+                      PendingActionMarker.returnGuestSessionToLogin((byte) 118);
                     }
                     GameplaySetupSupport.screenChangePending = true;
                   } else {
@@ -936,9 +936,9 @@ public final class Geoblox extends SessionGameApplet {
     }
 
     private final void requestGameArchives(boolean graphicsArchiveGuard) {
-        if (TextValidationSupport.field_b != null) {
-            SpriteState.a(true, TextValidationSupport.field_b);
-            TextValidationSupport.field_b = null;
+        if (TextValidationSupport.bootstrapGameTextArchive != null) {
+            SpriteState.loadGameTextResources(true, TextValidationSupport.bootstrapGameTextArchive);
+            TextValidationSupport.bootstrapGameTextArchive = null;
             EntityContactSupport.resetFrameTimingHistory(-105);
         }
         GameGraphicsResources.gameGraphicsArchive = TrackedPcmStream.a(1, true, graphicsArchiveGuard, true, (byte) -111);
@@ -947,7 +947,7 @@ public final class Geoblox extends SessionGameApplet {
         ProxySocketConnector.instrumentPatchArchive = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
         GzipInflater.initialMusicScoreArchive = SocketArchiveNetworkClient.createResourceArchive(5, (byte) -62);
         ArchiveLoadStep.fontMetricsArchive = SocketArchiveNetworkClient.createResourceArchive(6, (byte) -62);
-        FullscreenEntrySupport.guardArchiveInitializationPlaceholder(SessionTextHistorySupport.basicUiGraphicsArchive, RankedListQuery.field_i, -84);
+        FullscreenEntrySupport.guardArchiveInitializationPlaceholder(SessionTextHistorySupport.basicUiGraphicsArchive, RankedListQuery.basicUiFontArchive, -84);
     }
 
     final static void prepareLogoMeshRotation(byte methodGuard, int meshIndex) {

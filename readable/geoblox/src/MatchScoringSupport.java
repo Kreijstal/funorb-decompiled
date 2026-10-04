@@ -6,7 +6,7 @@ final class MatchScoringSupport {
     static String okText;
     static Sprite selectedThemeForeground;
     static String[] instructionParagraphs;
-    static int field_d;
+    static int accountDialogPointerOriginX;
 
     final static void resendScoreAndHighscoreRequests(int methodGuard, int packetOpcode) {
         int guardResidue = 0;

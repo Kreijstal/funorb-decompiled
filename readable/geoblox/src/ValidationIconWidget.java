@@ -3,9 +3,9 @@
  */
 final class ValidationIconWidget extends ButtonWidget {
     private ValidationProvider validationProvider;
-    static LoginMethod field_I;
+    static LoginMethod emptyNameLoginMethod;
     private int animationTicks;
-    static boolean field_H;
+    static boolean clientCookieMarkerCreated;
     static int rotatedEntityScreenY;
 
     final static int a(int param0, byte param1) {
@@ -47,7 +47,7 @@ final class ValidationIconWidget extends ButtonWidget {
           var2 += 8;
         }
         if (param1 != 66) {
-          field_H = true;
+          clientCookieMarkerCreated = true;
         }
         if (-16 > param0) {
           param0 = param0 >> 4;
@@ -64,12 +64,12 @@ final class ValidationIconWidget extends ButtonWidget {
         return var2;
     }
 
-    public static void f(int param0) {
-        if (param0 > -114) {
-            StringBuilder var2 = (StringBuilder) null;
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard > -114) {
+            StringBuilder unusedNullBuilderSnapshot = (StringBuilder) null;
             ValidationIconWidget.writeTextAtOffset((CharSequence) null, (StringBuilder) null, -1, -77);
         }
-        field_I = null;
+        emptyNameLoginMethod = null;
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
@@ -263,6 +263,6 @@ final class ValidationIconWidget extends ButtonWidget {
     }
 
     static {
-        field_I = new LoginMethod("");
+        emptyNameLoginMethod = new LoginMethod("");
     }
 }

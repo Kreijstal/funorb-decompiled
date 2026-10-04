@@ -600,24 +600,24 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     final static WidgetTheme getSharedUiStyle(int methodGuard) {
-        if (null == DiskCacheWorker.field_f) {
-            DiskCacheWorker.field_f = new WidgetTheme();
-            DiskCacheWorker.field_f.initializeRenderers(9, DialogLayer.sharedUiFont);
-            DiskCacheWorker.field_f.tooltipLineSpacing = 14;
-            DiskCacheWorker.field_f.tooltipBackgroundColor = 2763306;
-            DiskCacheWorker.field_f.tooltipPaddingLeft = 6;
-            DiskCacheWorker.field_f.wrappedTooltipBorderColor = 7697781;
-            DiskCacheWorker.field_f.tooltipPaddingRight = 5;
-            DiskCacheWorker.field_f.tooltipPaddingTop = 0;
-            DiskCacheWorker.field_f.tooltipPaddingBottom = 4;
-            DiskCacheWorker.field_f.tooltipFont = UiFontResources.commonUiSmallFont;
+        if (null == DiskCacheWorker.sharedUiTheme) {
+            DiskCacheWorker.sharedUiTheme = new WidgetTheme();
+            DiskCacheWorker.sharedUiTheme.initializeRenderers(9, DialogLayer.sharedUiFont);
+            DiskCacheWorker.sharedUiTheme.tooltipLineSpacing = 14;
+            DiskCacheWorker.sharedUiTheme.tooltipBackgroundColor = 2763306;
+            DiskCacheWorker.sharedUiTheme.tooltipPaddingLeft = 6;
+            DiskCacheWorker.sharedUiTheme.wrappedTooltipBorderColor = 7697781;
+            DiskCacheWorker.sharedUiTheme.tooltipPaddingRight = 5;
+            DiskCacheWorker.sharedUiTheme.tooltipPaddingTop = 0;
+            DiskCacheWorker.sharedUiTheme.tooltipPaddingBottom = 4;
+            DiskCacheWorker.sharedUiTheme.tooltipFont = UiFontResources.commonUiSmallFont;
             if (methodGuard >= 71) {
-                return DiskCacheWorker.field_f;
+                return DiskCacheWorker.sharedUiTheme;
             }
             return (WidgetTheme) null;
         }
         if (methodGuard >= 71) {
-            return DiskCacheWorker.field_f;
+            return DiskCacheWorker.sharedUiTheme;
         }
         return (WidgetTheme) null;
     }

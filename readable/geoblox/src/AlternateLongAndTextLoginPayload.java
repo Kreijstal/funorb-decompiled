@@ -27,11 +27,11 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         var6 = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 200) {
-            AlternateLongAndTextLoginPayload.d((byte) 21);
+            AlternateLongAndTextLoginPayload.releaseStaticReferences((byte) 21);
           }
           var2 = AchievementQuery.a("jagex-last-login-method", applet, -114);
           if (var2 == null) {
-            stackIn_5_0 = ValidationIconWidget.field_I;
+            stackIn_5_0 = ValidationIconWidget.emptyNameLoginMethod;
             return stackIn_5_0;
           }
           var3 = TextValidationSupport.listLoginMethods(false);
@@ -42,7 +42,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
               return stackIn_11_0;
             }
           }
-          stackIn_14_0 = ValidationIconWidget.field_I;
+          stackIn_14_0 = ValidationIconWidget.emptyNameLoginMethod;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,11 +58,11 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         field_h = null;
         sportsBackgroundSprite = null;
         defaultPlayerNameText = null;
-        if (param0 != -109) {
+        if (methodGuard != -109) {
             sportsBackgroundSprite = (IndexedSprite) null;
         }
     }

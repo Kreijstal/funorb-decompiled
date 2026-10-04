@@ -288,8 +288,8 @@ final class PrefixCodeDecoder {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 > -1) {
+    public static void releaseStaticReferences(byte methodGuard) {
+        if (methodGuard > -1) {
             PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) -72);
             pendingFifoAcknowledgements = null;
             trackedSoundEffectStreams = null;

@@ -6,10 +6,10 @@ final class TextTemplateArgumentType {
     static String cancelText;
     int valueCount;
     static int[] gameSoundThemeIds;
-    static boolean field_e;
+    static boolean loginRetryAttempted;
 
-    final static boolean b(int param0) {
-        if (param0 != 0) {
+    final static boolean returnTrueWithSoundThemeGuard(int methodGuard) {
+        if (methodGuard != 0) {
             gameSoundThemeIds = (int[]) null;
             return true;
         }
@@ -119,17 +119,17 @@ final class TextTemplateArgumentType {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
-        int var1 = -55 % ((param0 + 80) / 32);
+    public static void releaseStaticReferences(int methodGuard) {
+        int guardRemainder = -55 % ((methodGuard + 80) / 32);
         gameSoundThemeIds = null;
         cancelText = null;
     }
 
-    final static void c(int param0) {
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var2 = Geoblox.clientControlFlowFlag;
+    final static void updateFullscreenDialogFrame(int methodGuard) {
+        int unusedClientControlSnapshot = 0;
+        RuntimeException caughtFrameFailure = null;
+        RuntimeException frameFailureForContext = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (!IntrusiveDeque.hasVisibleFullscreenDialog((byte) 124)) {
             if ((InstrumentPatch.activeFullscreenCanvas != null) &&
@@ -139,19 +139,19 @@ final class TextTemplateArgumentType {
             }
             return;
           }
-          if (param0 != 1) {
+          if (methodGuard != 1) {
             TextTemplateArgumentType.renderLogoMeshes((byte) 8);
           }
-          ClientScreenExitSupport.fullscreenDialogLayer.processPointerFrame(true, 127, TextLayout.fullscreenPointerOriginX, MessageDialogContent.field_I);
+          ClientScreenExitSupport.fullscreenDialogLayer.processPointerFrame(true, 127, TextLayout.fullscreenPointerOriginX, MessageDialogContent.fullscreenDialogPointerOriginY);
           ClientScreenExitSupport.fullscreenDialogLayer.advanceDialogAnimations(-50);
           while (UiFontResources.pollKeyboardEvent(125)) {
             ClientScreenExitSupport.fullscreenDialogLayer.dispatchKeyInputOrRequestFocus((byte) -126, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ck.B(" + param0 + ')');
+        } catch (java.lang.RuntimeException frameFailure) {
+          caughtFrameFailure = frameFailure;
+          frameFailureForContext = caughtFrameFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) frameFailureForContext), "ck.B(" + methodGuard + ')');
         }
     }
 

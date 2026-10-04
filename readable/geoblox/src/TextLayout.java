@@ -148,13 +148,13 @@ abstract class TextLayout {
                   dataFileCloseFailure = (IOException) (Object) caughtCloseFailure;
                 }
               }
-              if (null != TrackedPcmStream.field_h) {
-                for (cacheFileIndex = 0; TrackedPcmStream.field_h.length > cacheFileIndex; cacheFileIndex++) {
-                  if (null == TrackedPcmStream.field_h[cacheFileIndex]) {
+              if (null != TrackedPcmStream.openedCacheIndexFiles) {
+                for (cacheFileIndex = 0; TrackedPcmStream.openedCacheIndexFiles.length > cacheFileIndex; cacheFileIndex++) {
+                  if (null == TrackedPcmStream.openedCacheIndexFiles[cacheFileIndex]) {
                     continue;
                   }
                   try {
-                    TrackedPcmStream.field_h[cacheFileIndex].close(27034);
+                    TrackedPcmStream.openedCacheIndexFiles[cacheFileIndex].close(27034);
                   } catch (java.io.IOException caughtIndexFileCloseFailure) {
                     caughtCloseFailure = caughtIndexFileCloseFailure;
                     indexFileCloseFailure = (IOException) (Object) caughtCloseFailure;

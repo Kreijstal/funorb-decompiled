@@ -20,7 +20,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             RasterTargetSnapshot.menuActionTexts[7] = SettingsCookieSupport.quitText;
             RasterTargetSnapshot.menuActionTexts[6] = LoginPayload.endGameText;
             RasterTargetSnapshot.menuActionTexts[8] = AttachmentPointerState.soundLabelText;
-            RasterTargetSnapshot.menuActionTexts[14] = PacketByteCipher.field_c;
+            RasterTargetSnapshot.menuActionTexts[14] = PacketByteCipher.discardResultsText;
             RasterTargetSnapshot.menuActionTexts[5] = FullscreenErrorDialog.menuText;
             RasterTargetSnapshot.menuActionTexts[0] = TextPairLoginPayload.startGameText;
             RasterTargetSnapshot.menuActionTexts[4] = SessionGameApplet.fullscreenText;
@@ -202,8 +202,8 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         }
     }
 
-    public static void b(boolean param0) {
-        if (!param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
+        if (!methodGuard) {
             geometrySpritesByThemeAndCategory = (Sprite[][]) null;
             textTemplateArgumentTypeSeven = null;
             waitingForPumpkinText = null;

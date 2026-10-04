@@ -67,7 +67,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             ByteArrayBuffer.receivedSocialSettingMiddle = 2;
         }
         if (methodGuard != -12718) {
-            ValidationMessageWidget.j(-27);
+            ValidationMessageWidget.releaseStaticReferences(-27);
             if (MidiNoteMixer.receivedSocialSettingLow > 2) {
                 MidiNoteMixer.receivedSocialSettingLow = 2;
                 return;
@@ -217,10 +217,10 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         return;
     }
 
-    public static void j(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         logoMeshCenters = (int[][]) null;
         gameOverMusicTrack = null;
-        if (param0 != 24033) {
+        if (methodGuard != 24033) {
             logoMeshCenters = (int[][]) null;
             sweetsBackgroundSprite = null;
             return;

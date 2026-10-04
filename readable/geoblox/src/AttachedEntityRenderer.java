@@ -3,11 +3,11 @@
  */
 final class AttachedEntityRenderer {
     static int achievementTrackingBits;
-    static ResourceArchive field_c;
+    static ResourceArchive initialUiFontArchive;
     static int secondPreviousPacketOpcode;
 
     public static void releaseStaticReferences(int methodGuard) {
-        field_c = null;
+        initialUiFontArchive = null;
         if (methodGuard < 121) {
             secondPreviousPacketOpcode = 78;
         }

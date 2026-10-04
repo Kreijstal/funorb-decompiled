@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientClockSupport {
-    static long field_c;
+    static long loginResponseLongValue;
     static int[] additionalByteArrayPoolCounts;
     static Sprite[] validationStateSprites;
     static String[] subscriptionMonthlyCostTexts;

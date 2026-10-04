@@ -22,7 +22,7 @@ final class BootstrapUiSupport {
             if (EntityLinkSupport.sessionAccessLevelByte <= 0) {
                 return false;
             }
-            if (!TextTemplateArgumentType.b(0)) {
+            if (!TextTemplateArgumentType.returnTrueWithSoundThemeGuard(0)) {
                 return true;
             }
             return false;
@@ -36,7 +36,7 @@ final class BootstrapUiSupport {
         if (EntityLinkSupport.sessionAccessLevelByte <= 0) {
             return false;
         }
-        if (!TextTemplateArgumentType.b(0)) {
+        if (!TextTemplateArgumentType.returnTrueWithSoundThemeGuard(0)) {
             return true;
         }
         return false;

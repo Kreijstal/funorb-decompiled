@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ClientProtocolStage {
-    static Random field_d;
+    static Random spriteVariantRandom;
     static String createDisplayNameHintText;
     static int keyStateReadIndex;
     static int[] rankedEntryKeyOne;
@@ -18,15 +18,15 @@ final class ClientProtocolStage {
         return DequeCursor.pollAccountDialogAction(-1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         rankedEntryKeyOne = null;
         createDisplayNameHintText = null;
-        if (param0 != 0) {
+        if (methodGuard != 0) {
             ClientProtocolStage.pollAccountUiAction(103, 65, true, (byte) -104);
-            field_d = null;
+            spriteVariantRandom = null;
             return;
         }
-        field_d = null;
+        spriteVariantRandom = null;
     }
 
     final boolean isPostRequestStage(boolean checkEnabled) {
@@ -46,7 +46,7 @@ final class ClientProtocolStage {
     }
 
     static {
-        field_d = new Random();
+        spriteVariantRandom = new Random();
         createDisplayNameHintText = "Player names can be up to 12 letters, numbers and underscores";
         keyStateReadIndex = 0;
     }

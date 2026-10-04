@@ -20,7 +20,7 @@ final class LimitedRandomAccessFile {
                 throw new EOFException();
             }
             if (methodGuard != 90) {
-                LimitedRandomAccessFile.b((byte) 102);
+                LimitedRandomAccessFile.releaseStaticReferences((byte) 102);
             }
             this.file.write(source, sourceOffset, length);
             this.position = this.position + (long)length;
@@ -68,9 +68,9 @@ final class LimitedRandomAccessFile {
         return this.file.length();
     }
 
-    public static void b(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         waitingForSoundEffectsText = null;
-        if (param0 <= 3) {
+        if (methodGuard <= 3) {
             return;
         }
         field_b = null;

@@ -61,14 +61,14 @@ final class IntKeyLookup {
               }
               groupDiskCache = null;
               if (CacheFileState.cacheDataFile != null) {
-                if (TrackedPcmStream.field_h == null) {
-                  TrackedPcmStream.field_h = new BufferedRandomAccessFile[ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles.length];
+                if (TrackedPcmStream.openedCacheIndexFiles == null) {
+                  TrackedPcmStream.openedCacheIndexFiles = new BufferedRandomAccessFile[ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles.length];
                 }
-                if (TrackedPcmStream.field_h[archiveId] == null) {
-                  TrackedPcmStream.field_h[archiveId] = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
+                if (TrackedPcmStream.openedCacheIndexFiles[archiveId] == null) {
+                  TrackedPcmStream.openedCacheIndexFiles[archiveId] = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
                   ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
                 }
-                groupDiskCache = new DiskArchiveCache(archiveId, CacheFileState.cacheDataFile, TrackedPcmStream.field_h[archiveId], 2097152);
+                groupDiskCache = new DiskArchiveCache(archiveId, CacheFileState.cacheDataFile, TrackedPcmStream.openedCacheIndexFiles[archiveId], 2097152);
               }
               archiveSource = DequeCursor.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
               if (downloadAllGroups) {

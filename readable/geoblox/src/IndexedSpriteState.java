@@ -79,7 +79,7 @@ abstract class IndexedSpriteState {
         int var13 = Geoblox.clientControlFlowFlag;
         try {
             RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
-            UnderlinedButtonRenderer.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
+            UnderlinedButtonRenderer.frameBottomSprites = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
             AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
             MouseWheelInput.commonButtonSprites = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
             ClientClockSupport.validationStateSprites = ByteArrayPoolSupport.loadSpritesByName((byte) -39, "validation", "commonui", param2);

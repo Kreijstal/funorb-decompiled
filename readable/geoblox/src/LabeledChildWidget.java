@@ -24,9 +24,9 @@ final class LabeledChildWidget extends SingleChildWidget {
         this.labelFont.drawParagraph(this.labelText, this.padding + (var8 + var5), this.padding + var6, -this.padding + this.labelWidth, -(this.padding * 2) + this.widgetHeight, this.labelColor, -1, !this.labelAfterChild ? 2 : 0, 1, this.labelFont.maxAscent);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         sportsForegroundSprite = null;
-        if (param0 != -52) {
+        if (methodGuard != -52) {
             return;
         }
         extendedNameCharacters = null;

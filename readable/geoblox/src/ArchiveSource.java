@@ -8,9 +8,9 @@ abstract class ArchiveSource {
 
     abstract int getGroupProgress(int methodGuard, int groupId);
 
-    public static void a(boolean param0) {
-        if (!param0) {
-            byte[] var2 = (byte[]) null;
+    public static void releaseStaticReferences(boolean methodGuard) {
+        if (!methodGuard) {
+            byte[] unusedNullSignatureSnapshot = (byte[]) null;
             ArchiveSource.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
         }
         additionalNameCharacters = null;

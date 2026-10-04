@@ -7,97 +7,97 @@ final class ContextualRuntimeException extends RuntimeException {
     String contextPath;
     static double specialSpriteKindProbability;
 
-    final static void a(String param0, byte param1) {
-        int stackIn_16_0 = 0;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        String stackIn_42_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static void updateTooltipState(String tooltipText, byte methodGuard) {
+        int previousTooltipVisibleSnapshot = 0;
+        RuntimeException tooltipFailureBeforeDescription = null;
+        StringBuilder tooltipMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtTooltipFailure = null;
+        int previousTooltipVisible = 0;
+        RuntimeException tooltipFailureForContext = null;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if ((-1 == NodeHashTableIterator.pendingTooltipAnchorX) &&
               (DequeCursor.pendingTooltipAnchorY == -1)) {
             NodeHashTableIterator.pendingTooltipAnchorX = PrefixCodeDecoder.pointerXSnapshot;
             DequeCursor.pendingTooltipAnchorY = PcmResampler.pointerYSnapshot;
           }
-          L1: {
+          tooltipAgeAdjustment: {
             ResizableDialog.tooltipAgeTicks = ResizableDialog.tooltipAgeTicks + 1;
-            if (param0 != null) {
-              if (param0.equals(SettingsCookieSupport.field_a)) {
-                break L1;
+            if (tooltipText != null) {
+              if (tooltipText.equals(SettingsCookieSupport.currentTooltipText)) {
+                break tooltipAgeAdjustment;
               }
             } else {
-              if (null != SettingsCookieSupport.field_a) {
-                break L1;
+              if (null != SettingsCookieSupport.currentTooltipText) {
+                break tooltipAgeAdjustment;
               }
             }
-            if (!InstrumentPatch.field_q) {
+            if (!InstrumentPatch.tooltipSuppressed) {
               if (AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks) {
-                stackIn_16_0 = (ResizableDialog.tooltipAgeTicks < PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks) ? 1 : 0;
+                previousTooltipVisibleSnapshot = (ResizableDialog.tooltipAgeTicks < PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks) ? 1 : 0;
               } else {
-                stackIn_16_0 = 0;
+                previousTooltipVisibleSnapshot = 0;
               }
             } else {
-              stackIn_16_0 = 0;
+              previousTooltipVisibleSnapshot = 0;
             }
-            var2_int = stackIn_16_0;
-            if (param0 == null) {
+            previousTooltipVisible = previousTooltipVisibleSnapshot;
+            if (tooltipText == null) {
               ResizableDialog.tooltipAgeTicks = 0;
             } else {
-              if (InstrumentPatch.field_q) {
+              if (InstrumentPatch.tooltipSuppressed) {
                 ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.tooltipShowDelayTicks;
               } else {
-                if (var2_int == 0) {
+                if (previousTooltipVisible == 0) {
                   ResizableDialog.tooltipAgeTicks = 0;
                 } else {
                   ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.tooltipShowDelayTicks;
                 }
               }
             }
-            PendingActionMarker.field_g = DequeCursor.pendingTooltipAnchorY;
-            ByteTextDecodingSupport.field_a = NodeHashTableIterator.pendingTooltipAnchorX;
-            if (param0 == null) {
-              if (var2_int != 0) {
-                InstrumentPatch.field_q = true;
+            PendingActionMarker.tooltipAnchorY = DequeCursor.pendingTooltipAnchorY;
+            ByteTextDecodingSupport.tooltipAnchorX = NodeHashTableIterator.pendingTooltipAnchorX;
+            if (tooltipText == null) {
+              if (previousTooltipVisible != 0) {
+                InstrumentPatch.tooltipSuppressed = true;
               }
             } else {
-              InstrumentPatch.field_q = false;
+              InstrumentPatch.tooltipSuppressed = false;
             }
           }
-          if ((!InstrumentPatch.field_q) &&
+          if ((!InstrumentPatch.tooltipSuppressed) &&
               (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) &&
               (AttachmentPointerState.pointerActivitySnapshot)) {
             ResizableDialog.tooltipAgeTicks = 0;
-            ByteTextDecodingSupport.field_a = NodeHashTableIterator.pendingTooltipAnchorX;
-            PendingActionMarker.field_g = DequeCursor.pendingTooltipAnchorY;
+            ByteTextDecodingSupport.tooltipAnchorX = NodeHashTableIterator.pendingTooltipAnchorX;
+            PendingActionMarker.tooltipAnchorY = DequeCursor.pendingTooltipAnchorY;
           }
-          SettingsCookieSupport.field_a = param0;
-          if ((InstrumentPatch.field_q) &&
-              (UsernameQuerySupport.field_a == ResizableDialog.tooltipAgeTicks)) {
-            InstrumentPatch.field_q = false;
+          SettingsCookieSupport.currentTooltipText = tooltipText;
+          if ((InstrumentPatch.tooltipSuppressed) &&
+              (UsernameQuerySupport.tooltipSuppressionResetAge == ResizableDialog.tooltipAgeTicks)) {
+            InstrumentPatch.tooltipSuppressed = false;
             ResizableDialog.tooltipAgeTicks = 0;
           }
           DequeCursor.pendingTooltipAnchorY = -1;
           NodeHashTableIterator.pendingTooltipAnchorX = -1;
-          if (param1 >= 69) {
+          if (methodGuard >= 69) {
             return;
           }
           ContextualRuntimeException.a(false);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_41_0 = var2;
-          stackIn_41_1 = new StringBuilder().append("sa.B(");
-          if (param0 == null) {
-            stackIn_42_2 = "null";
+        } catch (java.lang.RuntimeException tooltipFailure) {
+          caughtTooltipFailure = tooltipFailure;
+          tooltipFailureForContext = caughtTooltipFailure;
+          tooltipFailureBeforeDescription = tooltipFailureForContext;
+          tooltipMessagePrefix = new StringBuilder().append("sa.B(");
+          if (tooltipText == null) {
+            textDescription = "null";
           } else {
-            stackIn_42_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) tooltipFailureBeforeDescription), ((StringBuilder) (Object) tooltipMessagePrefix).append(textDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

@@ -6,7 +6,7 @@ final class TrackedPcmStream extends IntrusiveNode {
     int initialVolume;
     static KeyboardInputListener keyboardListener;
     IntrusiveNode lifetimeNode;
-    static BufferedRandomAccessFile[] field_h;
+    static BufferedRandomAccessFile[] openedCacheIndexFiles;
 
     final static void updateAchievementSubmissions(byte methodGuard) {
         AchievementSubmission pendingSubmission = null;
@@ -22,7 +22,7 @@ final class TrackedPcmStream extends IntrusiveNode {
             if (methodGuard >= -119) {
                 keyboardListener = (KeyboardInputListener) null;
             }
-            if (!UnderlinedButtonRenderer.c(-91)) {
+            if (!UnderlinedButtonRenderer.isGuestSessionMode(-91)) {
                 while (true) {
                     pendingSubmission = (AchievementSubmission) ((Object) GameplayEntity.pendingAchievementSubmissions.removeFirst((byte) -118));
                     if (pendingSubmission == null) {
@@ -81,14 +81,14 @@ final class TrackedPcmStream extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         keyboardListener = null;
-        if (param0 <= 49) {
+        if (methodGuard <= 49) {
             TrackedPcmStream.updateAchievementSubmissions((byte) -123);
-            field_h = null;
+            openedCacheIndexFiles = null;
             return;
         }
-        field_h = null;
+        openedCacheIndexFiles = null;
     }
 
     TrackedPcmStream(PcmSampleStream stream, IntrusiveNode lifetimeNode) {

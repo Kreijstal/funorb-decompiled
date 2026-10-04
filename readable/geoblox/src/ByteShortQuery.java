@@ -9,11 +9,11 @@ final class ByteShortQuery extends IntrusiveNode {
     int queryByte;
     static PlatformTaskDispatcher archiveTaskDispatcher;
 
-    public static void a(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         createUsernameAvailableText = null;
         createUnableText = null;
         archiveTaskDispatcher = null;
-        if (param0 != 112) {
+        if (methodGuard != 112) {
             createUnableText = (String) null;
             waitingForExtraDataText = null;
             return;

@@ -31,7 +31,7 @@ final class ClientTimingSupport {
         if (methodGuard <= 46) {
           decodedSpriteCount = -60;
         }
-        sessionActionsReady = (SpriteConstructionSupport.clientScreenStage >= 10) && (!ProgressBarWidget.field_G) && (!InstrumentEnvelope.b(13));
+        sessionActionsReady = (SpriteConstructionSupport.clientScreenStage >= 10) && (!ProgressBarWidget.guestSessionMode) && (!InstrumentEnvelope.isSessionConnected(13));
         return sessionActionsReady;
     }
 

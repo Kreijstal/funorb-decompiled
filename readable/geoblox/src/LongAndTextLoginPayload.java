@@ -13,9 +13,9 @@ class LongAndTextLoginPayload extends LoginPayload {
         return Geoblox.longAndNameLoginType;
     }
 
-    public static void b(int param0) {
-        if (param0 != 8221) {
-            LongAndTextLoginPayload.b(91);
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 8221) {
+            LongAndTextLoginPayload.releaseStaticReferences(91);
             extendedTextCharacters = null;
             return;
         }
@@ -43,28 +43,28 @@ class LongAndTextLoginPayload extends LoginPayload {
         }
     }
 
-    final static String c(byte param0) {
-        if (param0 <= 14) {
+    final static String getVisibleTooltipText(byte methodGuard) {
+        if (methodGuard <= 14) {
             extendedTextCharacters = (char[]) null;
-            if (InstrumentPatch.field_q) {
+            if (InstrumentPatch.tooltipSuppressed) {
                 return null;
             }
             if (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) {
                 return null;
             }
             if (!(PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks)) {
-                return SettingsCookieSupport.field_a;
+                return SettingsCookieSupport.currentTooltipText;
             }
             return null;
         }
-        if (InstrumentPatch.field_q) {
+        if (InstrumentPatch.tooltipSuppressed) {
             return null;
         }
         if (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) {
             return null;
         }
         if (!(PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks)) {
-            return SettingsCookieSupport.field_a;
+            return SettingsCookieSupport.currentTooltipText;
         }
         return null;
     }

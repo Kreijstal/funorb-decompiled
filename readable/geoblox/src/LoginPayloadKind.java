@@ -8,9 +8,9 @@ final class LoginPayloadKind {
     static int field_d;
     static String createPasswordText;
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         createPasswordText = null;
-        if (param0 <= 55) {
+        if (methodGuard <= 55) {
             return;
         }
         levelTextTemplate = null;
@@ -26,8 +26,8 @@ final class LoginPayloadKind {
 
     final static void ensureAchievementStateRequested(int methodGuard) {
         if (methodGuard != 9313) {
-            LoginPayloadKind.a(116);
-            if (UnderlinedButtonRenderer.c(-114)) {
+            LoginPayloadKind.releaseStaticReferences(116);
+            if (UnderlinedButtonRenderer.isGuestSessionMode(-114)) {
                 return;
             }
             if (MouseWheelInput.achievementStateQuery == null) {
@@ -36,7 +36,7 @@ final class LoginPayloadKind {
             }
             return;
         }
-        if (UnderlinedButtonRenderer.c(-114)) {
+        if (UnderlinedButtonRenderer.isGuestSessionMode(-114)) {
             return;
         }
         if (MouseWheelInput.achievementStateQuery == null) {

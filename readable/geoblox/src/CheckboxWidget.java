@@ -3,13 +3,13 @@
  */
 final class CheckboxWidget extends ButtonWidget {
     static String loginJustPlayTooltipText;
-    static long field_H;
+    static long errorReportLoginLongValue;
     static String createNewsOptInTooltipText;
     static int spaceThemeCompletionAchievementId;
 
-    public static void f(int param0) {
-        if (param0 >= -65) {
-            PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard >= -65) {
+            PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
             CheckboxWidget.a(98, (PlatformTaskDispatcher) null);
         }
         loginJustPlayTooltipText = null;
@@ -17,9 +17,9 @@ final class CheckboxWidget extends ButtonWidget {
     }
 
     private CheckboxWidget(String param0, WidgetListener param1) {
-        this(param0, DialRenderer.field_j.buttonRenderer, param1);
+        this(param0, DialRenderer.accountUiTheme.buttonRenderer, param1);
         try {
-            this.renderer = DialRenderer.field_j.checkboxRenderer;
+            this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -33,7 +33,7 @@ final class CheckboxWidget extends ButtonWidget {
     private CheckboxWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-            this.renderer = DialRenderer.field_j.checkboxRenderer;
+            this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -75,7 +75,7 @@ final class CheckboxWidget extends ButtonWidget {
           var3 = var9;
           var4 = new DisplayModeInfo[var10.length >> 2];
           if (param0 <= 61) {
-            field_H = 120L;
+            errorReportLoginLongValue = 120L;
           }
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = new DisplayModeInfo();

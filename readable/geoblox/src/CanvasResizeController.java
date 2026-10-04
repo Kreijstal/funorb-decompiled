@@ -15,9 +15,9 @@ final class CanvasResizeController {
     private int minimumWidth;
     private int restoreWidth;
     private float aspectRatio;
-    static java.awt.Color field_q;
+    static java.awt.Color bootstrapProgressColor;
     private int minimumHeight;
-    static String field_e;
+    static String pendingNavigationTarget;
     private CanvasResizeListener resizeListener;
     private int resizeIntervalTicks;
     static String tutorialSkipMessage;
@@ -25,19 +25,19 @@ final class CanvasResizeController {
     static ClientProtocolStage field_l;
     static long lastSessionSocketWriteMillis;
 
-    public static void a(boolean param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
         tutorialSkipMessage = null;
         createPasswordConfirmationText = null;
         field_l = null;
-        if (param0) {
-            field_q = null;
-            field_e = null;
+        if (methodGuard) {
+            bootstrapProgressColor = null;
+            pendingNavigationTarget = null;
             return;
         }
-        byte[] var2 = (byte[]) null;
+        byte[] unusedNullArchiveBytesSnapshot = (byte[]) null;
         CanvasResizeController.decompressArchive((byte[]) null, -18);
-        field_q = null;
-        field_e = null;
+        bootstrapProgressColor = null;
+        pendingNavigationTarget = null;
     }
 
     final void setRequestedSize(byte methodGuard, int height, int width) {
@@ -427,7 +427,7 @@ final class CanvasResizeController {
         RuntimeException caughtLookupFailure = null;
         try {
           if (methodGuard <= 12) {
-            field_e = (String) null;
+            pendingNavigationTarget = (String) null;
           }
           hasEntryResult = !(SocketConnector.findSocialEntry((byte) -62, displayName) == null);
           return hasEntryResult;
@@ -447,9 +447,9 @@ final class CanvasResizeController {
 
     static {
         createPasswordConfirmationText = "Confirm Password: ";
-        field_e = null;
+        pendingNavigationTarget = null;
         tutorialSkipMessage = "To skip this tutorial, press <img=3> at any point.";
-        field_q = new java.awt.Color(10040319);
+        bootstrapProgressColor = new java.awt.Color(10040319);
         field_l = new ClientProtocolStage();
     }
 }

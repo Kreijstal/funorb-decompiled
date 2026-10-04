@@ -5,7 +5,7 @@ final class LoginTextValue {
     static String[] gmtMonthAbbreviations;
     private String text;
     private boolean includeInLookupRequest;
-    static LoginMethod field_b;
+    static LoginMethod emailLoginMethod;
 
     LoginTextValue(String text) {
         this(text, false);
@@ -56,12 +56,12 @@ final class LoginTextValue {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -1) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != -1) {
             return;
         }
         gmtMonthAbbreviations = null;
-        field_b = null;
+        emailLoginMethod = null;
     }
 
     final boolean isIncludedInLookupRequest(byte methodGuard) {
@@ -73,6 +73,6 @@ final class LoginTextValue {
 
     static {
         gmtMonthAbbreviations = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-        field_b = new LoginMethod("email");
+        emailLoginMethod = new LoginMethod("email");
     }
 }

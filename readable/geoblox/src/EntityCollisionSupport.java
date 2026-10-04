@@ -178,9 +178,9 @@ final class EntityCollisionSupport {
     final static String getSharedNavigationTarget(int methodGuard) {
         if (methodGuard != 240) {
             cameraMeshVertexZ = (int[]) null;
-            return CanvasResizeController.field_e;
+            return CanvasResizeController.pendingNavigationTarget;
         }
-        return CanvasResizeController.field_e;
+        return CanvasResizeController.pendingNavigationTarget;
     }
 
     static {

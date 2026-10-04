@@ -54,10 +54,10 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         menuText = null;
-        if (param0 > 0) {
-            FullscreenErrorDialog.i((byte) 25);
+        if (methodGuard > 0) {
+            FullscreenErrorDialog.releaseStaticReferences((byte) 25);
             createPasswordTooltipText = null;
             return;
         }
@@ -67,9 +67,9 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
     final static int chooseSpawnEntityCategory(int methodGuard) {
         if (methodGuard <= 18) {
             FullscreenErrorDialog.chooseSpawnEntityCategory(48);
-            return AchievementQuery.b(MessageDialog.availableEntityCategoryCount, 1);
+            return AchievementQuery.nextSpriteVariantIndex(MessageDialog.availableEntityCategoryCount, 1);
         }
-        return AchievementQuery.b(MessageDialog.availableEntityCategoryCount, 1);
+        return AchievementQuery.nextSpriteVariantIndex(MessageDialog.availableEntityCategoryCount, 1);
     }
 
     FullscreenErrorDialog(DialogLayer dialogLayer, FullscreenFailureReason failureReason) {

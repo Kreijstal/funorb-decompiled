@@ -10,9 +10,9 @@ final class AchievementQuery extends IntrusiveNode {
     static int[] rankedEntryIndices;
     int achievementMask;
 
-    public static void c(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         socketOpenFailedStage = null;
-        if (param0 != 59) {
+        if (methodGuard != 59) {
             return;
         }
         rankedEntryIndices = null;
@@ -99,11 +99,11 @@ final class AchievementQuery extends IntrusiveNode {
         }
     }
 
-    final static int b(int param0, int param1) {
-        if (param1 != 1) {
+    final static int nextSpriteVariantIndex(int variantCount, int methodGuard) {
+        if (methodGuard != 1) {
             return 99;
         }
-        return AwtRasterBuffer.a((byte) -75, ClientProtocolStage.field_d, param0);
+        return AwtRasterBuffer.nextBoundedRandomInt((byte) -75, ClientProtocolStage.spriteVariantRandom, variantCount);
     }
 
     static {

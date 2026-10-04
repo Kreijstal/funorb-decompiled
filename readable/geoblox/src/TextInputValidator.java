@@ -134,7 +134,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         RuntimeException caughtResponseFailure = null;
         try {
           MeshPrioritySupport.messageDialogUiFlowActive = false;
-          ArchiveLoadStep.field_a = false;
+          ArchiveLoadStep.connectionLostMessagePending = false;
           if ((null != Geoblox.activeMessageDialog) &&
               (Geoblox.activeMessageDialog.dialogVisible)) {
             if (8 == responseCode) {
@@ -152,7 +152,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               displayResponseContent = 0;
             }
             if (displayResponseContent != 0) {
-              if (ArchiveLoadStep.field_a) {
+              if (ArchiveLoadStep.connectionLostMessagePending) {
                 responseText = OpacityWidget.replaceIndexedTextMarkers(VisualPropertyOverrides.connectionLostWithReasonText, new String[]{responseText}, (byte) -25);
               }
               if (VisualPropertyOverrides.showLoginOnMessageDismiss) {

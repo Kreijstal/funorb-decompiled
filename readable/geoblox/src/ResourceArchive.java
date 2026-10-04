@@ -79,7 +79,7 @@ final class ResourceArchive {
             return 0;
         }
         if (methodGuard != -9467) {
-            ResourceArchive.b(91);
+            ResourceArchive.releaseStaticReferences(91);
         }
         return this.index.fileSlotCounts[groupId];
     }
@@ -287,11 +287,11 @@ final class ResourceArchive {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         unacknowledgedAchievementSubmissions = null;
         pendingHighscoreQueries = null;
         createUsernameUnavailableText = null;
-        if (param0 != 30261) {
+        if (methodGuard != 30261) {
             unacknowledgedAchievementSubmissions = (IntrusiveDeque) null;
         }
         accountCreationEmail = null;

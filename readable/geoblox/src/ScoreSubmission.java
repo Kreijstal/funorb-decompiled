@@ -15,11 +15,11 @@ final class ScoreSubmission extends IntrusiveNode {
     int thirdContextValue;
     int secondContextValue;
 
-    public static void b(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         queuedKeyboardEventCharacters = null;
         createPasswordCharacterAlertText = null;
-        if (param0 != 46695) {
-            ScoreSubmission.b(-13);
+        if (methodGuard != 46695) {
+            ScoreSubmission.releaseStaticReferences(-13);
             quarterSineQ16 = null;
             return;
         }

@@ -32,9 +32,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 0) {
-            FullscreenFocusCanvas.a(-79);
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 0) {
+            FullscreenFocusCanvas.releaseStaticReferences(-79);
             standaloneFrameReference = null;
             return;
         }

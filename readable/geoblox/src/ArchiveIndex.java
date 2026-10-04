@@ -281,10 +281,10 @@ final class ArchiveIndex {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         logoMeshes = null;
         createAgreeTermsText = null;
-        int var1 = -24 % ((param0 + 88) / 36);
+        int guardRemainder = -24 % ((methodGuard + 88) / 36);
     }
 
     ArchiveIndex(byte[] packedIndexBytes, int expectedCrc32, byte[] expectedWhirlpoolDigest) {

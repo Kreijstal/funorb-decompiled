@@ -58,8 +58,8 @@ final class RasterTargetSnapshot extends IntrusiveNode {
         }
     }
 
-    public static void b(int param0) {
-        if (param0 == 6491) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard == 6491) {
             previousText = null;
             entitiesById = null;
             updateTimeHistoryMillis = null;
@@ -67,7 +67,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
             introFaceFrames = null;
             return;
         }
-        RasterTargetSnapshot.b(-67);
+        RasterTargetSnapshot.releaseStaticReferences(-67);
         previousText = null;
         entitiesById = null;
         updateTimeHistoryMillis = null;
@@ -86,7 +86,7 @@ final class RasterTargetSnapshot extends IntrusiveNode {
             this.clipBottom = clipBottom;
             this.clipRight = clipRight;
             if (!methodGuard) {
-                RasterTargetSnapshot.b(-125);
+                RasterTargetSnapshot.releaseStaticReferences(-125);
             }
             this.framebufferHeight = framebufferHeight;
             this.stride = stride;

@@ -201,20 +201,20 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void f(byte param0) {
-        if (param0 == 24) {
+    final static void showConnectionLostLogin(byte methodGuard) {
+        if (methodGuard == 24) {
             UnderlinedButtonRenderer.resetAccountUiFlow(-6011);
-            ArchiveLoadStep.field_a = true;
+            ArchiveLoadStep.connectionLostMessagePending = true;
             AgeValidator.reconnectingLoginMode = true;
-            ClientFlowState.accountDialogLayer.hideAllDialogs(param0 + 10912);
+            ClientFlowState.accountDialogLayer.hideAllDialogs(methodGuard + 10912);
             MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
             return;
         }
-        DraggableWidget.g((byte) 86);
+        DraggableWidget.releaseStaticReferences((byte) 86);
         UnderlinedButtonRenderer.resetAccountUiFlow(-6011);
-        ArchiveLoadStep.field_a = true;
+        ArchiveLoadStep.connectionLostMessagePending = true;
         AgeValidator.reconnectingLoginMode = true;
-        ClientFlowState.accountDialogLayer.hideAllDialogs(param0 + 10912);
+        ClientFlowState.accountDialogLayer.hideAllDialogs(methodGuard + 10912);
         MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
     }
 
@@ -225,8 +225,8 @@ final class DraggableWidget extends SingleChildWidget {
         this.layoutTargetY = this.widgetY;
     }
 
-    public static void g(byte param0) {
-        int var1 = 47 % ((param0 + 51) / 55);
+    public static void releaseStaticReferences(byte methodGuard) {
+        int guardRemainder = 47 % ((methodGuard + 51) / 55);
         contentResizePhase = null;
         contentFadeOutPhase = null;
     }

@@ -49,7 +49,7 @@ final class HighscoreNameEntry {
           }
           BoardReconciliationSupport.ticksSinceLastEntityRelease = BoardReconciliationSupport.ticksSinceLastEntityRelease + 1;
           if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
-              (DelayedIncomingPacket.c((byte) -53)) &&
+              (DelayedIncomingPacket.canGenerateMoreEntitiesInTheme((byte) -53)) &&
               (!UiWidget.gameplaySession.canAdvanceSession(true))) {
             queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeFirst((byte) -101));
             if (null != queuedEntityThenPooledEntity) {

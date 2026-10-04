@@ -15,9 +15,9 @@ final class ReflectionCheckRequest extends IntrusiveNode {
     int operationCount;
     static String currentSocialLocationLabel;
 
-    public static void b(boolean param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
         pointsPanelGlowFrames = null;
-        if (param0) {
+        if (methodGuard) {
             currentSocialLocationLabel = (String) null;
             frameTimer = null;
             currentSocialLocationLabel = null;

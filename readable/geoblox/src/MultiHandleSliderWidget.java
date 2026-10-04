@@ -31,9 +31,9 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         sessionServerHost = null;
-        if (param0 != 0) {
+        if (methodGuard != 0) {
             sessionServerHost = (String) null;
         }
     }
