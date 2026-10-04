@@ -152,13 +152,11 @@ final class i {
                   }
                 }
                 var12 = bj.field_j[var9];
-                if ((-2147483648 == var12) &&
-                    (var19 == 0)) {
+                if ((-2147483648 == var12)) {
                   break L4;
                 }
                 var13 = bj.field_j[var10];
-                if ((-2147483648 == var13) &&
-                    (var19 == 0)) {
+                if ((-2147483648 == var13)) {
                   break L4;
                 }
                 var14 = bj.field_j[var11];
@@ -302,13 +300,11 @@ final class i {
                   }
                 }
                 var12 = bj.field_j[var9];
-                if ((-2147483648 == var12) &&
-                    (var19 == 0)) {
+                if ((-2147483648 == var12)) {
                   break L4;
                 }
                 var13 = bj.field_j[var10];
-                if ((-2147483648 == var13) &&
-                    (var19 == 0)) {
+                if ((-2147483648 == var13)) {
                   break L4;
                 }
                 var14 = bj.field_j[var11];

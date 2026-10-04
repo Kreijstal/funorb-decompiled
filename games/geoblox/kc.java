@@ -141,8 +141,7 @@ final class kc {
                   stackIn_15_0 = stackOut_14_0;
                   if (var9 == 0) {
                     L10: {
-                      if ((stackIn_15_0) &&
-                          (var9 == 0)) {
+                      if ((stackIn_15_0)) {
                         break L10;
                       }
                       var11 = new wd();
@@ -174,8 +173,7 @@ final class kc {
                                     if (var8 != null) {
                                       stackIn_51_0 = var8;
                                       stackIn_51_1 = var7;
-                                      if (((stackIn_51_0 != stackIn_51_1) ||
-                                          (var9 != 0))) {
+                                      if (((stackIn_51_0 != stackIn_51_1))) {
                                         var8 = (ja) ((Object) var13.a(-45));
                                         continue;
                                       }

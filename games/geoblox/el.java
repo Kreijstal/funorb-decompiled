@@ -327,7 +327,6 @@ class el extends hf {
                 lh.field_b = null;
               }
               if ((var7 != 0) &&
-                  (var5 != 0) &&
                   (bi.field_g != 0)) {
                 this.d(-126);
               }
@@ -365,7 +364,6 @@ class el extends hf {
             lh.field_b = null;
           }
           if ((var7 != 0) &&
-              (var5 != 0) &&
               (bi.field_g != 0)) {
             this.d(-126);
           }
