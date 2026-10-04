@@ -36,18 +36,14 @@ final class kc {
             return;
           }
           var2_int = 0;
-          while (true) {
+          do {
             if (!(md.field_c > var2_int)) {
               sh.a(param0, param0 + param0, qg.field_a, va.field_b, (byte) 112, md.field_c + param0, false);
               break;
             }
             qi.field_i[param0 + var2_int] = var2_int;
             var2_int++;
-            if (var3 == 0) {
-              continue;
-            }
-            break;
-          }
+          } while (var3 == 0);
           if (param0 < md.field_c) {
             md.field_c = param0;
           }

@@ -21,7 +21,7 @@ final class lc {
         var10 = Geoblox.field_C;
         try {
           var1 = (ja) ((Object) wd.field_e.g(0));
-          while (true) {
+          do {
             if (!(var1 != null)) {
               if (param0 != 255) {
                 field_b = -11;
@@ -30,11 +30,7 @@ final class lc {
             }
             var1.b(true);
             var1 = (ja) ((Object) wd.field_e.d(1));
-            if (var10 == 0) {
-              continue;
-            }
-            break;
-          }
+          } while (var10 == 0);
           if ((!((!((kj.field_o[99]) &&
                 (ji.field_r.c(13519)))) &&
               (~kb.field_c <= ~kc.field_a)) ||

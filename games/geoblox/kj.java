@@ -998,7 +998,7 @@ final class kj extends ia {
         int var5;
         if (this.field_C.f()) {
           var2 = this.field_T * this.field_C.field_d / qk.field_j;
-          while (true) {
+          do {
             var3 = this.field_x + (long)param0 * (long)var2;
             if (-var3 + this.field_A >= 0L) {
               this.field_x = var3;
@@ -1009,11 +1009,7 @@ final class kj extends ia {
             param0 = param0 - var5;
             this.field_I.b(var5);
             this.a((byte) -42);
-            if (this.field_C.f()) {
-              continue;
-            }
-            break;
-          }
+          } while (this.field_C.f());
         }
         this.field_I.b(param0);
     }

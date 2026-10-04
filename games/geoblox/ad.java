@@ -37,7 +37,7 @@ final class ad extends ia {
             if (!this.field_k.b(var6, -1)) {
               var4_int = param1;
               var5 = param2;
-              while (true) {
+              do {
                 if (var5 <= var6.field_g) {
                   this.a(var5, (byte) -69, var5 + var4_int, param0, var6, var4_int);
                   var6.field_g = var6.field_g - var5;
@@ -46,11 +46,7 @@ final class ad extends ia {
                 this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
                 var5 = var5 - var6.field_g;
                 var4_int = var4_int + var6.field_g;
-                if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
-                  continue;
-                }
-                break;
-              }
+              } while (!this.field_k.a(var5, var4_int, param0, var6, false));
             }
             var6 = (pc) ((Object) this.field_l.d(1));
           }

@@ -1101,7 +1101,7 @@ final class c extends ka {
             em.b(255);
             this.field_C = false;
           }
-          while (true) {
+          do {
             if (!(hh.a(108))) {
               if ((this.field_K == 3) &&
                   (this.field_b == 0) &&
@@ -1112,11 +1112,7 @@ final class c extends ka {
               break;
             }
             this.b((byte) 62);
-            if (var3 == 0) {
-              continue;
-            }
-            break;
-          }
+          } while (var3 == 0);
           if (this.field_K == 3) {
             L7: {
               if (0 == (1 & this.field_D)) {

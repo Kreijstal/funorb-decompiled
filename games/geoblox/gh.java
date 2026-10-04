@@ -412,7 +412,7 @@ final class gh {
                 var16 = ji.field_r;
                 var7 = var16;
                 var8_ref_ja = (ja) ((Object) var16.g(0));
-                while (true) {
+                do {
                   if (!(null != var8_ref_ja)) {
                     var7 = a.field_d;
                     break;
@@ -423,24 +423,16 @@ final class gh {
                   var12 = (int)(240.0 + ((double)var9_float * Math.sin((double)el.field_o.field_J) + (double)var10_float * Math.cos((double)el.field_o.field_J)));
                   vb.d(var11 / 2, var12 / 2, var6, var5);
                   var8_ref_ja = (ja) ((Object) var16.d(1));
-                  if (var14 == 0) {
-                    continue;
-                  }
-                  break;
-                }
+                } while (var14 == 0);
                 var8_ref_ja = (ja) ((Object) var7.g(0));
-                while (true) {
+                do {
                   if (!(var8_ref_ja != null)) {
                     var7 = bh.field_c;
                     break;
                   }
                   vb.d((int)(var8_ref_ja.field_o / 2.0f), (int)(var8_ref_ja.field_v / 2.0f), var6, var5);
                   var8_ref_ja = (ja) ((Object) var7.d(1));
-                  if (var14 == 0) {
-                    continue;
-                  }
-                  break;
-                }
+                } while (var14 == 0);
                 var8_ref_ja = (ja) ((Object) var7.g(0));
                 while (true) {
                   L43: {

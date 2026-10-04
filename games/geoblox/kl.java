@@ -939,7 +939,7 @@ final class kl extends ia {
                 break L5;
               }
             }
-            while (true) {
+            do {
               if (this.field_x < var4) {
                 return;
               }
@@ -957,11 +957,7 @@ final class kl extends ia {
               this.field_p = -this.field_p;
               fieldTemp$2 = this.field_v - 1;
               this.field_v = this.field_v - 1;
-              if (fieldTemp$2 != 0) {
-                continue;
-              }
-              break;
-            }
+            } while (fieldTemp$2 != 0);
           }
         }
         if (this.field_p >= 0) {
@@ -1239,7 +1235,7 @@ final class kl extends ia {
                 break L4;
               }
             }
-            while (true) {
+            do {
               var9 = this.b(param0, var9, var6, param2, (int) var4.field_k[this.field_m - 1]);
               if (this.field_x < var6) {
                 return;
@@ -1259,11 +1255,7 @@ final class kl extends ia {
               this.field_p = -this.field_p;
               fieldTemp$2 = this.field_v - 1;
               this.field_v = this.field_v - 1;
-              if (fieldTemp$2 != 0) {
-                continue;
-              }
-              break;
-            }
+            } while (fieldTemp$2 != 0);
           }
         }
         if (this.field_p >= 0) {
