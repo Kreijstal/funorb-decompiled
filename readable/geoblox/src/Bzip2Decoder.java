@@ -307,7 +307,7 @@ final class Bzip2Decoder {
                 }
                 state.moveToFrontBlockStarts[0] = state.moveToFrontBlockStarts[0] - 1;
                 state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] = (byte)byteOrBitValue;
-                if (!(state.moveToFrontBlockStarts[0] != 0)) {
+                if ((state.moveToFrontBlockStarts[0] == 0)) {
                   selectorRankOrMtfWritePosition = 4095;
                   for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
                     for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {

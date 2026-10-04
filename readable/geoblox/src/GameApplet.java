@@ -289,17 +289,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                             break vendorCompatibilityCheck;
                           }
                           javaVersionText = PlatformTaskDispatcher.javaVersion;
-                          if (!((!javaVersionText.equals("1.1")) &&
-                              (!javaVersionText.startsWith("1.1.")) &&
-                              (!javaVersionText.equals("1.2")) &&
-                              (!javaVersionText.startsWith("1.2.")) &&
-                              (!javaVersionText.equals("1.3")) &&
-                              (!javaVersionText.startsWith("1.3.")) &&
-                              (!javaVersionText.equals("1.4")) &&
-                              (!javaVersionText.startsWith("1.4.")) &&
-                              (!javaVersionText.equals("1.5")) &&
-                              (!javaVersionText.startsWith("1.5.")) &&
-                              (!javaVersionText.equals("1.6.0")))) {
+                          if (((javaVersionText.equals("1.1")) ||
+                              (javaVersionText.startsWith("1.1.")) ||
+                              (javaVersionText.equals("1.2")) ||
+                              (javaVersionText.startsWith("1.2.")) ||
+                              (javaVersionText.equals("1.3")) ||
+                              (javaVersionText.startsWith("1.3.")) ||
+                              (javaVersionText.equals("1.4")) ||
+                              (javaVersionText.startsWith("1.4.")) ||
+                              (javaVersionText.equals("1.5")) ||
+                              (javaVersionText.startsWith("1.5.")) ||
+                              (javaVersionText.equals("1.6.0")))) {
                             this.showGameError((byte) 79, "wrongjava");
                             if (clientControlSnapshot == 0) {
                               break appletExecutionBoundary;
@@ -782,7 +782,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 while (true) {
                   if (appletThreadTask.status == 0) {
                     ByteTextDecodingSupport.sleepMillis(0, 10L);
-                    if (!(clientControlSnapshot != 0)) {
+                    if ((clientControlSnapshot == 0)) {
                       continue;
                     }
                   }
@@ -878,8 +878,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               UsernameQueryState.canvasRedrawRequested = true;
               MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
-              if (!((SharedBufferPools.fullscreenFrame != null) &&
-                  (FullscreenFocusCanvas.standaloneFrameReference == null))) {
+              if (((SharedBufferPools.fullscreenFrame == null) ||
+                  (FullscreenFocusCanvas.standaloneFrameReference != null))) {
                 MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break canvasRefreshLocation;

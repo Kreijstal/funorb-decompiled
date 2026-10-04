@@ -144,7 +144,7 @@ final class OpacityWidget extends SingleChildWidget {
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int guardResidue = 16 % ((methodGuard - 1) / 43);
-        if (!(renderPass == 0)) {
+        if ((renderPass != 0)) {
             return;
         }
         if (null == this.child) {

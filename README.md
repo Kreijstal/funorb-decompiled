@@ -17,14 +17,51 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e051be1b1381fd65909b95e43c742ad61932efe/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/5e98186b81c96c7ad596d52fb21cea6cdff6c133/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,582 bindings,
 preserving 388 override relationships.
 
-## Current menu and session exit names (pass 175)
+## Current Boolean predicate cleanup (pass 176)
+
+A generic java-tools pass now simplifies conditions introduced by control-flow
+recovery. For example, !((5 != screenId) && (7 != screenId)) becomes
+((5 == screenId) || (7 == screenId)), preserving operand and short-circuit order.
+It cancels double negation, complements equality tests and applies De Morgan to
+Boolean control conditions. Unknown relational tests keep their logical
+negation, including NaN outcomes. Call arguments, boxed-Boolean identity
+operands and noncondition values remain opaque. Statements, scopes, labels,
+protected groups, monitors and every client-control path stay in place.
+
+This cleans 268 predicates in 167 bodies across 103 files: 56 double negations,
+255 equality complements and 132 De Morgan operators. Menu/session rendering,
+update and helpers, reconciliation, sprite/raster/text, archive/audio and client
+helpers benefit from the same language-level rule. No game names or states are
+hardcoded. All 18,363 previous complete naming rules and declaration/label
+ordinals remain exact. No callback, read/unused snapshot, diagnostic, reference,
+arithmetic operation, source line or bytecode is removed or reordered.
+
+The committed decompiler-source archive reproduces all 303 raw files and
+unchanged zero-failure/fallback/panic diagnostics. An independent operator-edit
+and source-character audit verifies every expected byte, all 19,253 ordinary
+declarations, 117,329 references, 388 overrides, 245 labels and 811 label records.
+Both 303-source corpora compile; the readable export keeps 117,478 identifier,
+eleven literal and 583 label edits: 118,072 total. Reproduction and dictionary
+reversal remain byte exact. Six focused groups match 708,750 independent native
+ordered-oracle cases for primitive/boxed/reference values, NaN/signed zeros/
+infinities, overflow, nullable/throwing callbacks, finally overrides and monitors.
+The 96 existing branch/loop/switch groups pass with one existing optional skip;
+all 27 publication tests pass. Existing gameplay/result-helper probes retain
+native/raw/readable trace pins and scoped oracle results.
+
+Eight large labeled bodies, 73 opaque labels elsewhere, 57 opaque fields and
+zero single-letter methods remain. This improves predicates without claiming
+complete large-body reconstruction. Whole renderer/game/assets/server/browser/
+phone and heap/presented-FPS acceptance remain unverified.
+
+## Previous menu and session exit names (pass 175)
 
 All labels in GameScreen and GameplaySession now have meaningful names. This
 pass adds 59 guarded lexical names: 56 plain exit regions and three loops.

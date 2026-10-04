@@ -54,7 +54,7 @@ final class WeightedObjectCache {
         if (methodGuard < 56) {
             return (Object) null;
         }
-        if (!(referent != null)) {
+        if ((referent == null)) {
             cachedReference.unlinkNode(false);
             cachedReference.unlinkSecondaryNode((byte) 92);
             this.remainingWeightCapacity = this.remainingWeightCapacity + cachedReference.entryWeight;

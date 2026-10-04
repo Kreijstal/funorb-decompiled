@@ -25,7 +25,7 @@ class DualLinkNode extends IntrusiveNode {
         if (methodGuard > -43) {
             return (String) null;
         }
-        if (!(null != SecondaryDeque.receivedSessionName)) {
+        if ((null == SecondaryDeque.receivedSessionName)) {
             return "";
         }
         return SecondaryDeque.receivedSessionName;
@@ -41,7 +41,7 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     final void unlinkSecondaryNode(byte methodGuard) {
-        if (!(this.previousSecondaryNode != null)) {
+        if ((this.previousSecondaryNode == null)) {
             return;
         }
         this.previousSecondaryNode.nextSecondaryNode = this.nextSecondaryNode;

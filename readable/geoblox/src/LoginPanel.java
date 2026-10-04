@@ -25,12 +25,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           unusedNullReplyBuffer = (PacketBuffer) null;
           LoginPanel.writeReflectionCheckReply(-108, (PacketBuffer) null);
         }
-        if (!((character >= 48) &&
-              (character <= 57)) &&
-            !((character >= 65) &&
-              (character <= 90)) &&
-            !((character >= 97) &&
-              (character <= 122))) {
+        if (((!(character >= 48)) ||
+              (!(character <= 57))) &&
+            ((!(character >= 65)) ||
+              (!(character <= 90))) &&
+            ((!(character >= 97)) ||
+              (!(character <= 122)))) {
           isAsciiLetterOrDigitResult = false;
         } else {
           isAsciiLetterOrDigitResult = true;
@@ -81,8 +81,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 signedSmartKey = replyBuffer.readSignedSmart(76);
                 matchingSubmission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
                 while (matchingSubmission != null) {
-                  if (!((matchingSubmission.byteKey == byteKey) &&
-                      (matchingSubmission.signedSmartKey == signedSmartKey))) {
+                  if (((matchingSubmission.byteKey != byteKey) ||
+                      (matchingSubmission.signedSmartKey != signedSmartKey))) {
                     matchingSubmission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
                     continue;
                   }
@@ -167,7 +167,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        if (!(this.messageText == null)) {
+        if ((this.messageText != null)) {
             DialogLayer.sharedUiFont.drawParagraph(this.messageText, this.widgetX + parentX + 20, 15 + this.widgetY + parentY, -40 + this.widgetWidth, this.widgetHeight, 16777215, -1, 1, 0, DialogLayer.sharedUiFont.maxAscent);
         }
         if (null != this.createAccountButton) {
@@ -681,7 +681,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     }
 
     private final void submitLoginIfAllowed(int methodGuard) {
-        if ((!(!SpriteState.isReconnectingLoginMode(methodGuard)) ||
+        if (((SpriteState.isReconnectingLoginMode(methodGuard)) ||
             (!(this.loginIdentifierInput.widgetText.length() <= 0) &&
               !(0 >= this.passwordInput.widgetText.length())))) {
           SecondaryNodeDequeIterator.startLogin(this.passwordInput.widgetText, (byte) 66, this.loginIdentifierInput.widgetText);
@@ -734,8 +734,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           ((LoginPanel) (this)).allowJustPlay = allowJustPlayValue;
           if (this.retryMode) {
-            if (!((!this.showCreateAccount) &&
-                (!this.allowJustPlay))) {
+            if (((this.showCreateAccount) ||
+                (this.allowJustPlay))) {
               throw new IllegalStateException();
             }
           }

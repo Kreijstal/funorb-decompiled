@@ -145,7 +145,7 @@ final class SessionSocketSupport {
             if (methodGuard != 52) {
                 textTemplateArgumentTypeOne = (TextTemplateArgumentType) null;
             }
-            if (!(NetworkArchiveRequest.sessionSocketOpenTask.status != 0)) {
+            if ((NetworkArchiveRequest.sessionSocketOpenTask.status == 0)) {
                 return false;
             }
             long socketCompletionTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ -12500);

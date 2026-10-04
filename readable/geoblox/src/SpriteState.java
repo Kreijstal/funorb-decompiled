@@ -835,8 +835,8 @@ abstract class SpriteState extends DualLinkNode {
                           if (clientControlSnapshot != 0) {
                             break seedByteComparisonOperands;
                           }
-                          if (!((seedScanComparisonLeft != seedScanComparisonRight) &&
-                              (clientControlSnapshot == 0))) {
+                          if (((seedScanComparisonLeft == seedScanComparisonRight) ||
+                              (clientControlSnapshot != 0))) {
                             seedByteIndex++;
                             continue;
                           }
@@ -867,7 +867,7 @@ abstract class SpriteState extends DualLinkNode {
                       seedReadContinuation = 0;
                     }
                   }
-                  if (!(seedReadContinuation == 0)) {
+                  if ((seedReadContinuation != 0)) {
                     break seedPayloadWrite;
                   }
                 }

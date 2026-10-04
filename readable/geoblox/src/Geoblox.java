@@ -32,7 +32,7 @@ public final class Geoblox extends SessionGameApplet {
             this.loadJewelsTheme(true);
         }
         ScorePopup.disposeGameAudioOutputs(122);
-        if (!(InstrumentPatch.activeFullscreenCanvas == null)) {
+        if ((InstrumentPatch.activeFullscreenCanvas != null)) {
             InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         }
         MidiNote.releaseSessionInputAndCloseSocket((byte) 124);
@@ -86,7 +86,7 @@ public final class Geoblox extends SessionGameApplet {
             themeIndex = -1;
             for (geometryFrameThenVariantIndex = 0; geometrySourceFrames.length > geometryFrameThenVariantIndex; geometryFrameThenVariantIndex++) {
                 categoryThenAnimationFrameIndex = geometryFrameThenVariantIndex % 7;
-                if (!(categoryThenAnimationFrameIndex != 0)) {
+                if ((categoryThenAnimationFrameIndex == 0)) {
                     themeIndex++;
                     if (themeIndex >= 7) {
                         break;
@@ -163,7 +163,7 @@ public final class Geoblox extends SessionGameApplet {
             HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "", GameGraphicsResources.gameGraphicsArchive, 0);
             ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "", GameGraphicsResources.gameGraphicsArchive, 0);
             PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            if (!(!ClientOptionSupport.isClientOptionEnabled(0, 110))) {
+            if ((ClientOptionSupport.isClientOptionEnabled(0, 110))) {
                 HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
                 ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
                 PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
@@ -271,8 +271,8 @@ public final class Geoblox extends SessionGameApplet {
                       if ((GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) &&
                           (GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sun", (byte) -127))) {
                         if (ClientOptionSupport.isClientOptionEnabled(0, -112)) {
-                          if (!((GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) &&
-                              (GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127)))) {
+                          if (((!(GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0))) ||
+                              (!(GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127))))) {
                             HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(Under13TermsPanel.waitingForPumpkinText, GameGraphicsResources.gameGraphicsArchive, "halloween", FullscreenFailureReason.loadingPumpkinText, true), -2, 45.0f);
                             return false;
                           }
@@ -659,8 +659,8 @@ public final class Geoblox extends SessionGameApplet {
                 fullscreenAvailableForUiSnapshot = !(InstrumentPatch.activeFullscreenCanvas == null);
                 uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.processAccountUiActionsWithoutLogin(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
                 if (uiServiceResultOrOverlayMode != 2364824) {
-                  if (!((uiServiceResultOrOverlayMode != 1) &&
-                      (2 != uiServiceResultOrOverlayMode))) {
+                  if (((uiServiceResultOrOverlayMode == 1) ||
+                      (2 == uiServiceResultOrOverlayMode))) {
                     if (null != InstrumentPatch.activeFullscreenCanvas) {
                       InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
                       InstrumentPatch.activeFullscreenCanvas = null;
@@ -791,7 +791,7 @@ public final class Geoblox extends SessionGameApplet {
           NanoFrameTimer.flushSessionWrites(-1, 0);
           if (ClientTimingSupport.isClientReadyForSessionActions(54)) {
             uiServiceResultOrOverlayMode = this.pollReconnectAndResendRequests((byte) -67);
-            if (!(uiServiceResultOrOverlayMode != 2)) {
+            if ((uiServiceResultOrOverlayMode == 2)) {
               ClientScreenExitSupport.handleSessionExitServiceResult(320, 240, IntrusiveNodeHashTable.smallFont, IntrusiveNodeHashTable.smallFont.maxAscent * 3 >> 1, -128, IntrusiveNodeHashTable.smallFont.maxAscent);
             }
           }
@@ -856,7 +856,7 @@ public final class Geoblox extends SessionGameApplet {
               (!CharacterReplacementSupport.clearGameplayDuringTransition)) {
             if (ScoreSubmission.requestedScreenId == -1) {
               UiWidget.gameplaySession.renderSession((byte) -68);
-            } else if (!(SettingsCookieSupport.currentScreenId != -1)) {
+            } else if ((SettingsCookieSupport.currentScreenId == -1)) {
               UiWidget.gameplaySession.renderSession((byte) -68);
             }
           } else {
@@ -991,8 +991,8 @@ public final class Geoblox extends SessionGameApplet {
           yRotationSign = -1;
           xRotationSign = 1;
         }
-        if (!((7 != meshIndex) &&
-              (8 != meshIndex))) {
+        if (((7 == meshIndex) ||
+              (8 == meshIndex))) {
           yRotationSign = -1;
           xRotationSign = -1;
         }

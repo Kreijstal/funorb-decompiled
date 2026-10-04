@@ -203,8 +203,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 processedEntities.addFirst(currentEntity, false);
                 continue L0;
               }
-              if (!((currentEntity.relatedEntities[neighborIndex].entitySpriteKindId == 1) &&
-                    (propagateVariant))) {
+              if (((currentEntity.relatedEntities[neighborIndex].entitySpriteKindId != 1) ||
+                    (!(propagateVariant)))) {
                 if (2 != currentEntity.relatedEntities[neighborIndex].entitySpriteKindId) {
                   neighborIndex++;
                   continue;

@@ -270,7 +270,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     UiWidget findFocusTarget(int methodGuard) {
         UiWidget childSnapshot = this.child;
         if ((childSnapshot != null) &&
-            (!(!childSnapshot.hasKeyboardFocus((byte) 54)))) {
+            ((childSnapshot.hasKeyboardFocus((byte) 54)))) {
             return childSnapshot;
         }
         if (methodGuard == -4863) {
@@ -283,7 +283,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         if ((0 == renderPass) &&
-            (!(this.renderer == null))) {
+            ((this.renderer != null))) {
             this.renderer.drawWidget(parentX, -50, parentY, true, (UiWidget) (this));
         }
         int guardResidue = 85 % ((methodGuard - 1) / 43);
@@ -361,9 +361,9 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     String getHoverText(byte methodGuard) {
         String childHoverText = null;
         String parentHoverText = super.getHoverText(methodGuard);
-        if (!(this.child == null)) {
+        if ((this.child != null)) {
             childHoverText = this.child.getHoverText((byte) 69);
-            if (!(childHoverText == null)) {
+            if ((childHoverText != null)) {
                 return childHoverText;
             }
         }

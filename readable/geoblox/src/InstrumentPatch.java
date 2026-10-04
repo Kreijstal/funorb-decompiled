@@ -38,8 +38,8 @@ final class InstrumentPatch extends IntrusiveNode {
           previousEncodedSampleId = 0;
           resolvedSample = null;
           for (keyIndex = 0; keyIndex < 128; keyIndex++) {
-            if (!((noteSelectionMask != null) &&
-                  (noteSelectionMask[keyIndex] == 0))) {
+            if (((noteSelectionMask == null) ||
+                  (noteSelectionMask[keyIndex] != 0))) {
               encodedSampleId = this.encodedSampleIds[keyIndex];
               if (encodedSampleId != 0) {
                 if (encodedSampleId != previousEncodedSampleId) {

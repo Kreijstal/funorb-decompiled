@@ -367,7 +367,7 @@ final class CachedArchiveSource extends ArchiveSource {
             this.nextRequestSweepMillis = -51L;
         }
         this.downloadAllPending = true;
-        if (!(this.backgroundGroups != null)) {
+        if ((this.backgroundGroups == null)) {
             this.backgroundGroups = new IntrusiveDeque();
         }
     }
@@ -380,10 +380,10 @@ final class CachedArchiveSource extends ArchiveSource {
         if (methodGuard != 6924) {
             this.advanceBackgroundLoading((byte) -7);
         }
-        if (!(this.backgroundGroups != null)) {
+        if ((this.backgroundGroups == null)) {
             return;
         }
-        if (!(null != this.getIndex((byte) 126))) {
+        if ((null == this.getIndex((byte) 126))) {
             return;
         }
         IntrusiveNode requestedGroup = this.requestedGroups.firstForIteration(0);
@@ -404,7 +404,7 @@ final class CachedArchiveSource extends ArchiveSource {
                         if (-1 == this.groupDiskStatus[groupId]) {
                             unusedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, groupId);
                         }
-                        if (!(this.groupDiskStatus[groupId] != 1)) {
+                        if ((this.groupDiskStatus[groupId] == 1)) {
                             requestedGroup.unlinkNode(false);
                         }
                     }

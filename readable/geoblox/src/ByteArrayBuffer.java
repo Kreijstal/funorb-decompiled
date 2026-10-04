@@ -366,10 +366,10 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static byte encodeTextCharacter(char character, boolean returnEncodedByte) {
         int encodedByte;
         L0: {
-          if (!((0 < character) &&
-                (character < 128)) &&
-              !((character >= 160) &&
-                (255 >= character))) {
+          if (((!(0 < character)) ||
+                (!(character < 128))) &&
+              ((!(character >= 160)) ||
+                (!(255 >= character)))) {
             if (character == 8364) {
               encodedByte = -128;
               break L0;
@@ -687,10 +687,10 @@ class ByteArrayBuffer extends IntrusiveNode {
     }
 
     final void writeVariableIntBE(byte methodGuard, int value) {
-        if (!((value & -128) == 0)) {
+        if (((value & -128) != 0)) {
             if ((-16384 & value) != 0) {
                 if (0 != (value & -2097152)) {
-                    if (!((-268435456 & value) == 0)) {
+                    if (((-268435456 & value) != 0)) {
                         this.writeByte((byte) 126, value >>> 28 | 128);
                     }
                     this.writeByte((byte) -96, 128 | value >>> 21);

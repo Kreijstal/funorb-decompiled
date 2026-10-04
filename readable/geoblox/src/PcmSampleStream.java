@@ -125,15 +125,15 @@ final class PcmSampleStream extends PcmStream {
             this.leftVolumeStepPerFrame = 0;
           } else {
             this.leftVolumeStepPerFrame = -1;
-            if (!((this.rampFramesRemaining != 0) &&
-                (this.rampFramesRemaining <= this.currentLeftVolume - targetLeftVolume))) {
+            if (((this.rampFramesRemaining == 0) ||
+                (!(this.rampFramesRemaining <= this.currentLeftVolume - targetLeftVolume)))) {
               this.rampFramesRemaining = this.currentLeftVolume - targetLeftVolume;
             }
           }
         } else {
           this.leftVolumeStepPerFrame = 1;
-          if (!((this.rampFramesRemaining != 0) &&
-              (this.rampFramesRemaining <= targetLeftVolume - this.currentLeftVolume))) {
+          if (((this.rampFramesRemaining == 0) ||
+              (!(this.rampFramesRemaining <= targetLeftVolume - this.currentLeftVolume)))) {
             this.rampFramesRemaining = targetLeftVolume - this.currentLeftVolume;
           }
         }
@@ -150,8 +150,8 @@ final class PcmSampleStream extends PcmStream {
           this.rightVolumeStepPerFrame = 0;
         } else {
           this.rightVolumeStepPerFrame = -1;
-          if (!((this.rampFramesRemaining != 0) &&
-              (this.rampFramesRemaining <= this.currentRightVolume - targetRightVolume))) {
+          if (((this.rampFramesRemaining == 0) ||
+              (!(this.rampFramesRemaining <= this.currentRightVolume - targetRightVolume)))) {
             this.rampFramesRemaining = this.currentRightVolume - targetRightVolume;
           }
         }

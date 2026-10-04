@@ -35,16 +35,16 @@ final class DraggableWidget extends SingleChildWidget {
         RuntimeException dragUpdateFailure = null;
         int dragTargetY = 0;
         try {
-          if ((!((this.child instanceof ButtonWidget) &&
-                (!((ButtonWidget) ((Object) this.child)).enabled))) &&
+          if ((((!(this.child instanceof ButtonWidget)) ||
+                (((ButtonWidget) ((Object) this.child)).enabled))) &&
               (this.pressedPointerButton == 1)) {
             dragTargetXOrLayoutDelta = PrefixCodeDecoder.pointerXSnapshot - this.grabOffsetX - parentX;
             dragTargetY = -this.grabOffsetY + (PcmResampler.pointerYSnapshot - parentY);
-            if (!((this.widgetX == dragTargetXOrLayoutDelta) &&
-                (dragTargetY == this.widgetY))) {
+            if (((this.widgetX != dragTargetXOrLayoutDelta) ||
+                (dragTargetY != this.widgetY))) {
               this.widgetY = dragTargetY;
               this.widgetX = dragTargetXOrLayoutDelta;
-              if (!(!(this.listener instanceof DragMovementListener))) {
+              if (((this.listener instanceof DragMovementListener))) {
                 ((DragMovementListener) ((Object) this.listener)).onDragMoved(parentX, -20951, (DraggableWidget) (this), parentY);
               }
             }

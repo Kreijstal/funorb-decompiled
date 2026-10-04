@@ -124,7 +124,7 @@ class AudioOutput {
             }
             allOutputsRemovedInt = 0;
           }
-          if (!(allOutputsRemovedInt == 0)) {
+          if ((allOutputsRemovedInt != 0)) {
             sharedAudioService.stopRequested = true;
             while (sharedAudioService.running) {
               ByteTextDecodingSupport.sleepMillis(0, 50L);
@@ -325,7 +325,7 @@ class AudioOutput {
                     stream = this.priorityQueueHeads[priorityBucket];
                     childStream = stream;
                     childStream = stream;
-                    while (!(stream == null)) {
+                    while ((stream != null)) {
                       sample = stream.sample;
                       if ((sample != null) &&
                           (sample.scheduledWork > sampleWorkThreshold)) {

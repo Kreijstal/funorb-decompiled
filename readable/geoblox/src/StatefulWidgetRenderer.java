@@ -156,7 +156,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             StatefulWidgetRenderer.setOptionalLoginText(38, (String) null);
         }
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
-        if (!(null != SecondaryNodeHashTable.accountProgressDialog)) {
+        if ((null == SecondaryNodeHashTable.accountProgressDialog)) {
             SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
         }
         ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);

@@ -22,7 +22,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           if ((internalKeyCode >= 0) &&
               (ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode)) {
             internalKeyCode = ResizableDialog.awtKeyCodeToInternalCode[internalKeyCode];
-            if (!((internalKeyCode & 128) == 0)) {
+            if (((internalKeyCode & 128) != 0)) {
               internalKeyCode = -1;
             }
           } else {
@@ -81,7 +81,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         int typedCharacterCode = 0;
         int nextEventWriteIndex = 0;
         try {
-            if (!(TrackedPcmStream.keyboardListener == null)) {
+            if ((TrackedPcmStream.keyboardListener != null)) {
                 typedCharacterCode = event.getKeyChar();
                 if (typedCharacterCode != 0 && typedCharacterCode != 65535 && SettingsCookieSupport.isRepresentableTextCharacter((byte) -112, (char) typedCharacterCode)) {
                     nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;

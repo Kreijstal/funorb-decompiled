@@ -174,7 +174,7 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final static void openDisplayNamePanel(byte methodGuard) {
-        if (!(Geoblox.activeMessageDialog == null)) {
+        if ((Geoblox.activeMessageDialog != null)) {
             Geoblox.activeMessageDialog.dismissDialog((byte) -104);
         }
         MouseWheelInput.activeDisplayNamePanel = new DisplayNamePanel();
@@ -271,7 +271,7 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final static UsernameAvailabilityQuery pollAccountCreationUsernameResult(byte methodGuard) {
-        if (!(DiskCacheWorker.idleClientFlowToken != ClientFlowState.accountCreationFlowState)) {
+        if ((DiskCacheWorker.idleClientFlowToken == ClientFlowState.accountCreationFlowState)) {
             throw new IllegalStateException();
         }
         int guardRemainder = 28 % ((-79 - methodGuard) / 44);

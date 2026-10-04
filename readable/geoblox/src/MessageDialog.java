@@ -84,7 +84,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     final static void requestFullscreen(byte methodGuard) {
-        if (!(InstrumentPatch.activeFullscreenCanvas == null)) {
+        if ((InstrumentPatch.activeFullscreenCanvas != null)) {
             return;
         }
         if (methodGuard >= -48) {

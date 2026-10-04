@@ -123,7 +123,7 @@ final class TextTemplateDefinition extends DualLinkNode {
         if (methodGuard != 119) {
             entityMotionSpeed = 0.380857914686203f;
         }
-        if (!(this.referencedTemplateIds == null)) {
+        if ((this.referencedTemplateIds != null)) {
             for (var2 = 0; this.referencedTemplateIds.length > var2; var2++) {
                 this.referencedTemplateIds[var2] = SessionInstanceState.orInt(this.referencedTemplateIds[var2], 32768);
             }

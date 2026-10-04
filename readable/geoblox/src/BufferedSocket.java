@@ -61,7 +61,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final void checkWriteFailure(int guard) throws IOException {
-        if (!(!this.closeRequested)) {
+        if ((this.closeRequested)) {
             return;
         }
         if (guard >= -79) {
@@ -185,7 +185,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final int readByte(int guard) throws IOException {
-        if (!(!this.closeRequested)) {
+        if ((this.closeRequested)) {
             return 0;
         }
         if (guard != -17422) {

@@ -25,7 +25,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static java.applet.Applet getActiveApplet(int methodGuard) {
-        if (!(VisualPropertyNode.loaderApplet == null)) {
+        if ((VisualPropertyNode.loaderApplet != null)) {
             return VisualPropertyNode.loaderApplet;
         }
         if (methodGuard <= 104) {

@@ -144,7 +144,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
               candidateCursor = new DequeCursor(this.children);
               candidateCursor.beginReverseAt(focusedChildCandidate, (byte) 123);
               focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
-              while (!(focusCandidate == null)) {
+              while ((focusCandidate != null)) {
                 if (!focusCandidate.requestKeyboardFocus((byte) -39, focusContext)) {
                   focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
                   continue;
@@ -209,7 +209,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if ((renderPass == 0) &&
-            (!(this.renderer == null))) {
+            ((this.renderer != null))) {
             this.renderer.drawWidget(parentX, -9, parentY, true, (UiWidget) (this));
         }
         int guardResidue = -58 % ((methodGuard - 1) / 43);
@@ -286,7 +286,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
               candidateCursor = new DequeCursor(this.children);
               candidateCursor.beginForwardAt((byte) 56, focusedChildCandidate);
               focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
-              while (!(focusCandidate == null)) {
+              while ((focusCandidate != null)) {
                 if (!focusCandidate.requestKeyboardFocus((byte) -56, focusContext)) {
                   focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
                   continue;

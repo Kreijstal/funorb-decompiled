@@ -315,11 +315,11 @@ abstract class ResizableDialog extends FadingDialog {
               iconX = iconX + (-160 + missingMaskHorizontalOffset);
             }
             for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
-              if (!(((1 << achievementIndex & selectedAchievementMask) == 0) &&
-                    (onlyNewAchievements)) &&
-                  !((!ClientOptionSupport.isClientOptionEnabled(0, 88)) &&
-                    (achievementIndex == 16) &&
-                    (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
+              if ((((1 << achievementIndex & selectedAchievementMask) != 0) ||
+                    (!(onlyNewAchievements))) &&
+                  ((ClientOptionSupport.isClientOptionEnabled(0, 88)) ||
+                    (achievementIndex != 16) ||
+                    (AchievementQuery.hasReceivedAchievementSixteen(109)))) {
                 if ((AccountCreationSupport.pointerPressXSnapshot >= iconX) &&
                     (AccountCreationSupport.pointerPressXSnapshot <= iconX + 32) &&
                     (iconY <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
@@ -359,11 +359,11 @@ abstract class ResizableDialog extends FadingDialog {
               iconX = iconX + (-160 + missingMaskHorizontalOffset);
             }
             for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
-              if (!(((1 << achievementIndex & selectedAchievementMask) == 0) &&
-                    (onlyNewAchievements)) &&
-                  !((!ClientOptionSupport.isClientOptionEnabled(0, 88)) &&
-                    (achievementIndex == 16) &&
-                    (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
+              if ((((1 << achievementIndex & selectedAchievementMask) != 0) ||
+                    (!(onlyNewAchievements))) &&
+                  ((ClientOptionSupport.isClientOptionEnabled(0, 88)) ||
+                    (achievementIndex != 16) ||
+                    (AchievementQuery.hasReceivedAchievementSixteen(109)))) {
                 if ((AccountCreationSupport.pointerPressXSnapshot >= iconX) &&
                     (AccountCreationSupport.pointerPressXSnapshot <= iconX + 32) &&
                     (iconY <= FullscreenFocusCanvas.pointerPressYSnapshot) &&

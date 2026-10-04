@@ -301,7 +301,7 @@ final class ResourceArchive {
         if (!this.ensureIndexLoaded(0)) {
             return null;
         }
-        if (!(this.index.fileSlotCounts.length != 1)) {
+        if ((this.index.fileSlotCounts.length == 1)) {
             return this.getFile(0, methodGuard - 56472, id);
         }
         if (methodGuard != 28319) {
@@ -310,7 +310,7 @@ final class ResourceArchive {
         if (!this.isValidGroupId(id, 3)) {
             return null;
         }
-        if (!(this.index.fileSlotCounts[id] != 1)) {
+        if ((this.index.fileSlotCounts[id] == 1)) {
             return this.getFile(id, methodGuard ^ -872, 0);
         }
         throw new RuntimeException();
@@ -320,7 +320,7 @@ final class ResourceArchive {
         if (!(this.isValidGroupId(groupId, 3))) {
             return false;
         }
-        if (!(this.packedGroups[groupId] == null)) {
+        if ((this.packedGroups[groupId] != null)) {
             return true;
         }
         if (methodGuard != 102) {
@@ -414,10 +414,10 @@ final class ResourceArchive {
           }
           L4: {
             if (decryptionKey != null) {
-              if (!((decryptionKey[0] == 0) &&
-                  (decryptionKey[1] == 0) &&
-                  (decryptionKey[2] == 0) &&
-                  (0 == decryptionKey[3]))) {
+              if (((decryptionKey[0] != 0) ||
+                  (decryptionKey[1] != 0) ||
+                  (decryptionKey[2] != 0) ||
+                  (0 != decryptionKey[3]))) {
                 copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
                 packedBytesForDecryption = copiedPackedBytes;
                 packedBytes = packedBytesForDecryption;
@@ -584,7 +584,7 @@ final class ResourceArchive {
             return true;
         }
         if ((null != this.decodedFiles[groupId]) &&
-            (!(this.decodedFiles[groupId][fileId] == null))) {
+            ((this.decodedFiles[groupId][fileId] != null))) {
             return true;
         }
         if (this.packedGroups[groupId] != null) {
@@ -616,8 +616,8 @@ final class ResourceArchive {
             return (byte[]) (invalidFileBeforeReturn);
           }
           fileBytesOrFailureForContext = null;
-          if (!((this.decodedFiles[groupId] != null) &&
-              (null != this.decodedFiles[groupId][fileId]))) {
+          if (((this.decodedFiles[groupId] == null) ||
+              (null == this.decodedFiles[groupId][fileId]))) {
             if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
               this.loadPackedGroup(groupId, -118);
               if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {

@@ -56,8 +56,8 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
           if (null == record.text) {
             return;
           }
-          if (!((record.recordIdHigh16 == 0) &&
-              (0 == record.recordIdLow24))) {
+          if (((record.recordIdHigh16 != 0) ||
+              (0 != record.recordIdLow24))) {
             for (recordIndex = 0; ByteStorage.retainedTextRecordCount > recordIndex; recordIndex++) {
               existingRecord = MatchingTextValidator.retainedTextRecords[recordIndex];
               if ((2 == existingRecord.recordKind) &&

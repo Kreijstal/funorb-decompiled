@@ -52,7 +52,7 @@ final class FullscreenEntrySupport {
                 bitDepth = displayModes[modeIndex].bitDepth;
               }
             }
-            if (!(matchingModeFoundInt != 0)) {
+            if ((matchingModeFoundInt == 0)) {
               return null;
             }
           }

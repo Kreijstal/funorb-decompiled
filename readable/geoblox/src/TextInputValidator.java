@@ -51,7 +51,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
     abstract String validationMessageForText(int guard, String candidateText);
 
     final static boolean isAllowedAccountNameCharacter(char character, byte methodGuard) {
-        if (!(!Character.isISOControl(character))) {
+        if ((Character.isISOControl(character))) {
             return false;
         }
         if (LoginPanel.isAsciiLetterOrDigit(-123, character)) {

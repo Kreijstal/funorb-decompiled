@@ -210,7 +210,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
-        if (!(!this.accountIneligible)) {
+        if ((this.accountIneligible)) {
             TextTemplateLookupSupport.openLoginPanel(true, false, false);
             return;
         }
@@ -233,7 +233,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         if ((this.dialogVisible) &&
             (!(this.resultHandled))) {
             var2 = MatchingTextValidator.pollAccountCreationUsernameResult((byte) 93);
-            if (!(var2 == null)) {
+            if ((var2 != null)) {
                 this.showCreationResult(false, var2, (byte) -69);
             }
         }

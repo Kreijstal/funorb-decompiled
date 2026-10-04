@@ -34,9 +34,9 @@ final class EndingAnimationSupport {
           attachedThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
           while (attachedThenTransientEntity != null) {
             attachedThenTransientEntity.advanceEntityAnimation(true);
-            if (!((5 != attachedThenTransientEntity.entitySpriteKindId) &&
-                (attachedThenTransientEntity.entitySpriteKindId != 7) &&
-                (attachedThenTransientEntity.entitySpriteKindId != 8))) {
+            if (((5 == attachedThenTransientEntity.entitySpriteKindId) ||
+                (attachedThenTransientEntity.entitySpriteKindId == 7) ||
+                (attachedThenTransientEntity.entitySpriteKindId == 8))) {
               LoginPanel.endingEntityScanClear = false;
               if (attachedThenTransientEntity.animationFrameIndex >= 3) {
                 SecondaryNodeDeque.availableEntities.addLast(-115, attachedThenTransientEntity);
@@ -53,7 +53,7 @@ final class EndingAnimationSupport {
     }
 
     final static void presentPreparedFrame(boolean drawEnabled, java.awt.Canvas canvas) {
-        if (!(SpriteConstructionSupport.clientScreenStage != 11)) {
+        if ((SpriteConstructionSupport.clientScreenStage == 11)) {
             SessionSocketSupport.evaluateSessionSupportGuard(31);
         }
         if (!drawEnabled) {

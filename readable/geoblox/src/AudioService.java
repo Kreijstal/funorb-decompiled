@@ -23,7 +23,7 @@ final class AudioService implements Runnable {
         if (VisualPropertyOverrides.clientBootstrapStage < 2) {
             return SocialListEntry.connectingToUpdateServerText;
         }
-        if (!(FadingDialog.interfaceTextArchive == null)) {
+        if ((FadingDialog.interfaceTextArchive != null)) {
             if (!FadingDialog.interfaceTextArchive.ensureIndexLoaded(0)) {
                 return LoginProtocolSupport.waitingForBootstrapText;
             }

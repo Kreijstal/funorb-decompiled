@@ -472,7 +472,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
     }
 
     public void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        if (!(null != this.font)) {
+        if ((null == this.font)) {
             return;
         }
         try {

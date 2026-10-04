@@ -14,7 +14,7 @@ final class IntrusiveDeque {
             return (IntrusiveNode) null;
         }
         IntrusiveNode node = this.iterationCursor;
-        if (!(this.sentinel != node)) {
+        if ((this.sentinel == node)) {
             this.iterationCursor = null;
             return null;
         }
@@ -203,7 +203,7 @@ final class IntrusiveDeque {
             return (IntrusiveNode) null;
         }
         IntrusiveNode lastNode = this.sentinel.previousNode;
-        if (!(this.sentinel != lastNode)) {
+        if ((this.sentinel == lastNode)) {
             this.iterationCursor = null;
             return null;
         }

@@ -221,8 +221,8 @@ final class SynthesizedSoundInstrument {
           }
         }
         {
-          if (!((this.filter.pairCounts[0] <= 0) &&
-              (this.filter.pairCounts[1] <= 0))) {
+          if (((!(this.filter.pairCounts[0] <= 0)) ||
+              (!(this.filter.pairCounts[1] <= 0)))) {
             this.filterEnvelope.reset();
             var11 = this.filterEnvelope.advance(sampleCount + 1);
             var12 = this.filter.computeCoefficients(0, (float)var11 / 65536.0f);

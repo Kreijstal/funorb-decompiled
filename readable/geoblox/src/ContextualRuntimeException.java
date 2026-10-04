@@ -114,7 +114,7 @@ final class ContextualRuntimeException extends RuntimeException {
         if (!readPassword) {
             return (String) null;
         }
-        if (!(ClientFlowState.accountCreationFlowState != IntrusiveDeque.pendingClientFlowToken)) {
+        if ((ClientFlowState.accountCreationFlowState == IntrusiveDeque.pendingClientFlowToken)) {
             return ByteStorage.accountCreationPassword;
         }
         return LoginPasswordSupport.currentLoginPassword;

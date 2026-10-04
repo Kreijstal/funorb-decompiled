@@ -17,7 +17,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         int var6 = parentY + this.widgetY;
         super.renderWidget(parentX, parentY, (byte) 105, renderPass);
         int var7 = -79 / ((methodGuard - 1) / 43);
-        if (!(renderPass == 0)) {
+        if ((renderPass != 0)) {
             return;
         }
         int var8 = !this.labelAfterChild ? 0 : -this.labelWidth + (this.widgetWidth - this.padding * 2);

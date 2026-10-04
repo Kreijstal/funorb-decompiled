@@ -196,7 +196,7 @@ final class MidiNoteMixer extends PcmStream {
         if (note == null) {
             return null;
         }
-        if (!(null == note.sampleStream)) {
+        if ((null != note.sampleStream)) {
             return (PcmStream) ((Object) note.sampleStream);
         }
         return this.nextChildStream();

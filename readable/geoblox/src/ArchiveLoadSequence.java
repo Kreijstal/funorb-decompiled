@@ -105,7 +105,7 @@ final class ArchiveLoadSequence {
                 }
                 return -1;
             }
-            if (!(replyCode != 51)) {
+            if ((replyCode == 51)) {
                 return 2;
             }
             if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {

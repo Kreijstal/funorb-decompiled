@@ -103,8 +103,8 @@ final class ScoreSubmission extends IntrusiveNode {
                       continue;
                     }
                   }
-                  if (!((!urlFile.regionMatches(prefixEnd, "/s=", 0, 3)) &&
-                        (!urlFile.regionMatches(prefixEnd, "/c=", 0, 3)))) {
+                  if (((urlFile.regionMatches(prefixEnd, "/s=", 0, 3)) ||
+                        (urlFile.regionMatches(prefixEnd, "/c=", 0, 3)))) {
                     segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
                     if (0 <= segmentEnd) {
                       if (sessionValue != null) {

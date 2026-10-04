@@ -192,8 +192,8 @@ final class NanoFrameTimer extends FrameTimer {
             IOException writeFailure = null;
             Throwable caughtWriteFailure = null;
             if (null != SpriteCheckboxRenderer.sessionSocket) {
-              if (!((keepaliveOpcode >= 0) &&
-                  (PacketBuffer.currentProtocolStage != LogoCompositor.connectedSessionStage))) {
+              if (((!(keepaliveOpcode >= 0)) ||
+                  (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage))) {
                 if ((0 == CacheReference.outgoingSessionBuffer.position) &&
                     (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis))) {
                   CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);

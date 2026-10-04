@@ -135,7 +135,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if ((var6 != ImageProducerRasterBuffer.debouncingValidationState) &&
             (var6 != WidgetSkinState.pendingQueryValidationState)) {
           var5 = this.validationProvider.getDebouncedValidationMessage(-21666);
-          if (!(var5 != null)) {
+          if ((var5 == null)) {
             var5 = this.fallbackMessage;
           }
         } else {

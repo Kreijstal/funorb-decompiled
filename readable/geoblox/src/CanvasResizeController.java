@@ -74,8 +74,8 @@ final class CanvasResizeController {
           compressionType = buffer.readUnsignedByte((byte) 34);
           packedLength = buffer.readIntBE((byte) -97);
           if (packedLength >= 0) {
-            if (!((FullscreenFailureReason.maximumArchiveLength != 0) &&
-                (packedLength > FullscreenFailureReason.maximumArchiveLength))) {
+            if (((FullscreenFailureReason.maximumArchiveLength == 0) ||
+                (!(packedLength > FullscreenFailureReason.maximumArchiveLength)))) {
               if (uncompressedTypeComplement == ~compressionType) {
                 allocatedUncompressedBytes = new byte[packedLength];
                 uncompressedBytesAlias = allocatedUncompressedBytes;
@@ -86,8 +86,8 @@ final class CanvasResizeController {
               }
               unpackedLength = buffer.readIntBE((byte) -49);
               if (unpackedLength >= 0) {
-                if (!((FullscreenFailureReason.maximumArchiveLength != 0) &&
-                    (FullscreenFailureReason.maximumArchiveLength < unpackedLength))) {
+                if (((FullscreenFailureReason.maximumArchiveLength == 0) ||
+                    (!(FullscreenFailureReason.maximumArchiveLength < unpackedLength)))) {
                   allocatedDecompressedBytes = new byte[unpackedLength];
                   decompressedBytesAlias = allocatedDecompressedBytes;
                   decompressedBytes = decompressedBytesAlias;

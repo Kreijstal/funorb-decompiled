@@ -121,7 +121,7 @@ class TextInputWidget extends ButtonWidget {
         allocatedSprites[8] = secondBorderSprite;
         sprites[7] = secondBorderSprite;
         sprites[5] = secondBorderSprite;
-        if (!(centerColor == 0)) {
+        if ((centerColor != 0)) {
             allocatedSprites[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, centerColor, 64);
         }
         return sprites;
@@ -379,8 +379,8 @@ class TextInputWidget extends ButtonWidget {
             if (this.caretIndex != this.selectionAnchorIndex) {
               this.deleteSelectedText(0);
             }
-            if (!((-1 != this.maximumTextLength) &&
-                  (this.widgetText.length() >= this.maximumTextLength))) {
+            if (((-1 == this.maximumTextLength) ||
+                  (!(this.widgetText.length() >= this.maximumTextLength)))) {
               if (this.caretIndex >= this.widgetText.length()) {
                 this.widgetText = this.widgetText + typedCharacter;
                 textEndBeforeCaretAssignment = this.widgetText.length();
@@ -581,7 +581,7 @@ class TextInputWidget extends ButtonWidget {
         if (methodGuard >= -16) {
             return;
         }
-        if (!(!(this.listener instanceof TextInputListener))) {
+        if (((this.listener instanceof TextInputListener))) {
             ((TextInputListener) ((Object) this.listener)).onTextInputChanged((TextInputWidget) (this), (byte) 74);
         }
     }

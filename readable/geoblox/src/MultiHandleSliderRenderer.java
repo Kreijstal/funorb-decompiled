@@ -224,10 +224,10 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
           for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
             L2: {
               characterCode = text.charAt(characterIndex);
-              if (!((characterCode > 0) &&
-                  (characterCode < 128))) {
-                if (!((characterCode >= 160) &&
-                    (255 >= characterCode))) {
+              if (((!(characterCode > 0)) ||
+                  (!(characterCode < 128)))) {
+                if (((!(characterCode >= 160)) ||
+                    (!(255 >= characterCode)))) {
                   if (8364 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-128;
                     break L2;

@@ -134,7 +134,7 @@ abstract class SessionGameApplet extends GameApplet {
 
     final void enableOptionalSessionPacketFamilies(boolean allowIntRecordReplies, boolean allowSessionAcknowledgements, boolean allowScoreReplies, boolean allowByteShortReplies, int methodGuard) {
         this.enableBaseSessionPacketFamilies(false, (byte) -91);
-        if (!(!allowByteShortReplies)) {
+        if ((allowByteShortReplies)) {
             this.enableByteShortReplies((byte) 32);
         }
         if (allowScoreReplies) {
@@ -143,7 +143,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (methodGuard > -87) {
             this.alternateServerPort = -34;
         }
-        if (!(!allowIntRecordReplies)) {
+        if ((allowIntRecordReplies)) {
             this.enableIntRecordReplies((byte) -19);
         }
         if (allowSessionAcknowledgements) {
@@ -167,8 +167,8 @@ abstract class SessionGameApplet extends GameApplet {
           SessionGameApplet.applySessionOverridesToUrl((java.net.URL) null, 48, (java.applet.Applet) null);
         }
         handshakeResult = this.pollReconnectHandshake(-1);
-        if (!((handshakeResult != 0) &&
-            (1 != handshakeResult))) {
+        if (((handshakeResult == 0) ||
+            (1 == handshakeResult))) {
           if (OpacityWidget.enabledSessionPacketOpcodes[1]) {
             ByteArrayBuffer.resendByteShortQueries(true, 2);
           }
@@ -258,7 +258,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (InstrumentEnvelope.isSessionConnected(methodGuard ^ 19649)) {
           idleThresholdOrArchivePendingOrSequenceReady = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
-          if ((!(!this.forceIdleDisconnect) ||
+          if (((this.forceIdleDisconnect) ||
               (!(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
                 !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))))) {
             this.forceIdleDisconnect = false;
@@ -270,8 +270,8 @@ abstract class SessionGameApplet extends GameApplet {
             DisplayNamePanel.connectionRetryDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           }
         }
-        if (!((DebouncedValidationProvider.archiveLoadStatus != -1) &&
-              (DebouncedValidationProvider.archiveLoadStatus != 0))) {
+        if (((DebouncedValidationProvider.archiveLoadStatus == -1) ||
+              (DebouncedValidationProvider.archiveLoadStatus == 0))) {
           archiveWasPendingSnapshot = (-1 != DebouncedValidationProvider.archiveLoadStatus) ? 0 : 1;
           idleThresholdOrArchivePendingOrSequenceReady = archiveWasPendingSnapshot;
           DebouncedValidationProvider.archiveLoadStatus = DelayedIncomingPacket.tickArchiveLoading(15869);
@@ -330,9 +330,9 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
         }
-        if ((!((!((DebouncedValidationProvider.archiveLoadStatus != -1) &&
-                (DebouncedValidationProvider.archiveLoadStatus != 0))) &&
-              (!ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)))) &&
+        if ((((((DebouncedValidationProvider.archiveLoadStatus != -1) &&
+                (DebouncedValidationProvider.archiveLoadStatus != 0))) ||
+              (ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)))) &&
             (~DisplayNamePanel.connectionRetryDeadlineMillis >= ~ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180))) {
           ArchiveLoadStep.loginRetrySuspended = false;
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
@@ -385,8 +385,8 @@ abstract class SessionGameApplet extends GameApplet {
           ByteArrayPoolSupport.loadingStatusText = ArchiveSource.loadingText;
           AccountEligibilitySupport.loginReturnAllowed = false;
           CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.initialButtonAndLogoArchive, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive);
-          if (!((!LoginProtocolSupport.field_a) &&
-              (SocketConnector.bootstrapLoginPanelMessage == null))) {
+          if (((LoginProtocolSupport.field_a) ||
+              (SocketConnector.bootstrapLoginPanelMessage != null))) {
             loginPanelGuardSnapshot = 2274;
             loginPanelMessageSnapshot = SocketConnector.bootstrapLoginPanelMessage;
             if (LoginProtocolSupport.field_a) {
@@ -425,8 +425,8 @@ abstract class SessionGameApplet extends GameApplet {
         L30: {
           if (VisualPropertyOverrides.clientBootstrapStage == 11) {
             if (null != TextValidationSupport.bootstrapGameTextArchive) {
-              if (!((TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0)) &&
-                  (TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true)))) {
+              if (((!(TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0))) ||
+                  (!(TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true))))) {
                 HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
                 break L30;
               }

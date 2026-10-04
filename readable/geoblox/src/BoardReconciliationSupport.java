@@ -107,7 +107,7 @@ final class BoardReconciliationSupport {
                   entityQueueThenAttachedQueue = activeEntity.entityQueue;
                   if (clientControlSnapshot == 0) {
                     if (entityQueueThenAttachedQueue != BoardEntityState.attachedEntities) {
-                      if (!(!activeEntity.detachedFromBoard)) {
+                      if ((activeEntity.detachedFromBoard)) {
                         MessageDialogSupport.entitiesDetachedThisTick = true;
                       }
                     } else {
@@ -130,7 +130,7 @@ final class BoardReconciliationSupport {
                 }
                 activeEntity = (GameplayEntity) ((Object) ((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
                 while (true) {
-                  if (!(activeEntity != null)) {
+                  if ((activeEntity == null)) {
                     RankedListQuery.connectivityDirty = false;
                     UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
                     visitedFlagThenResetIndex = 0;
@@ -174,8 +174,8 @@ final class BoardReconciliationSupport {
                                     if (componentSearchThenVariantResetEntity != null) {
                                       comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
                                       neighborThenUnlinkArgument = neighborThenCountResetEntity;
-                                      if (!((comparedThenUnlinkTarget == neighborThenUnlinkArgument) &&
-                                          (clientControlSnapshot == 0))) {
+                                      if (((comparedThenUnlinkTarget != neighborThenUnlinkArgument) ||
+                                          (clientControlSnapshot != 0))) {
                                         componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
                                         continue;
                                       }
@@ -206,7 +206,7 @@ final class BoardReconciliationSupport {
                             break componentSearchAndDetach;
                           }
                           connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
-                          while (!(connectivityAliasThenDetachingEntity == null)) {
+                          while ((connectivityAliasThenDetachingEntity != null)) {
                             connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                             connectivityAliasThenDetachingEntity.touchesAvatar = false;
                             connectivityAliasThenDetachingEntity.detachedFromBoard = true;
@@ -254,9 +254,9 @@ final class BoardReconciliationSupport {
           }
           routedAttachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
           while (routedAttachedEntity != null) {
-            if ((!(null == routedAttachedEntity.entityQueue) ||
-                (!(!SessionSocketSupport.avatarShockPending) &&
-                  !(!routedAttachedEntity.touchesAvatar)))) {
+            if (((null != routedAttachedEntity.entityQueue) ||
+                ((SessionSocketSupport.avatarShockPending) &&
+                  (routedAttachedEntity.touchesAvatar)))) {
               attachedEntityRouting: {
                 routingDestinationSelection: {
                   RankedListQuery.connectivityDirty = true;
@@ -350,7 +350,7 @@ final class BoardReconciliationSupport {
           methodGuardResidue = -23 / ((methodGuard - 69) / 46);
           categoryResetThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
           while (true) {
-            if (!(categoryResetThenTransientEntity != null)) {
+            if ((categoryResetThenTransientEntity == null)) {
               if (SessionSocketSupport.avatarShockPending) {
                 AvatarFeedbackSupport.requestAvatarFeedback(3, false);
                 Bzip2DecoderState.avatarShockContactPending = false;

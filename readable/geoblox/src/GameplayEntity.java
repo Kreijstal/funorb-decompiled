@@ -230,7 +230,7 @@ final class GameplayEntity extends DualLinkNode {
             this.velocityX = (float)((double)this.velocityX * velocityNormalizationScale);
             this.velocityY = (float)((double)this.velocityY * velocityNormalizationScale);
         }
-        if (!(this.entitySpriteKindId == 2)) {
+        if ((this.entitySpriteKindId != 2)) {
             this.spriteAngleRadians = this.spriteAngleRadians - rotationDeltaRadians;
         }
     }
@@ -309,7 +309,7 @@ final class GameplayEntity extends DualLinkNode {
 
     final static int roundUpToMultipleOfEight(int methodGuard, int valueToAlign) {
         int paddingToMultipleOfEight = 0;
-        if (!((valueToAlign & 7) == 0)) {
+        if (((valueToAlign & 7) != 0)) {
             paddingToMultipleOfEight = -(valueToAlign & 7) + 8;
         }
         if (methodGuard != 1221916132) {
@@ -535,7 +535,7 @@ final class GameplayEntity extends DualLinkNode {
         if (methodGuard != 320) {
             this.spriteAngleRadians = -1.9950387477874756f;
         }
-        if (!(this.entitySpriteKindId != 2)) {
+        if ((this.entitySpriteKindId == 2)) {
             this.matchCooldownTicks = 60;
         }
         this.spriteVariantIndex = spriteVariantIndex;

@@ -21,7 +21,7 @@ final class PcmResampler {
         if (methodGuard != 6) {
             createAgeText = (String) null;
         }
-        if (!(this.filterCoefficients == null)) {
+        if ((this.filterCoefficients != null)) {
             samplePosition = (int)((long)samplePosition * (long)this.outputRateRatio / (long)this.inputRateRatio) + 6;
         }
         return samplePosition;
@@ -43,7 +43,7 @@ final class PcmResampler {
         if (methodGuard != -128) {
             this.scaleSamplePosition(23, -122);
         }
-        if (!(null == this.filterCoefficients)) {
+        if ((null != this.filterCoefficients)) {
             sampleRateHz = (int)((long)sampleRateHz * (long)this.outputRateRatio / (long)this.inputRateRatio);
         }
         return sampleRateHz;
@@ -94,8 +94,8 @@ final class PcmResampler {
           while (tapIndex < tapEndExclusive) {
             sincAngle = ((double)tapIndex - filterCenter) * 3.141592653589793;
             weightedCoefficient = rateScale;
-            if (!((!(sincAngle < -0.0001)) &&
-                (!(0.0001 < sincAngle)))) {
+            if ((((sincAngle < -0.0001)) ||
+                ((0.0001 < sincAngle)))) {
               weightedCoefficient = weightedCoefficient * (Math.sin(sincAngle) / sincAngle);
             }
             weightedCoefficient = weightedCoefficient * (Math.cos(0.2243994752564138 * (-filterCenter + (double)tapIndex)) * 0.46 + 0.54);

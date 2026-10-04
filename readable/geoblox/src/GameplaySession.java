@@ -343,8 +343,8 @@ final class GameplaySession {
             }
           }
           PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
-          if (!((0 == this.sessionPhase) &&
-              (!EntityContactSupport.areEntityQueuesSettled(0)))) {
+          if (((0 != this.sessionPhase) ||
+              (EntityContactSupport.areEntityQueuesSettled(0)))) {
             UsernameSuggestionsPanel.largeBoxSprite.draw(446, 410);
             if (clientControlFlowGuard == 0) {
               break tutorialOrCountBoxRendering;
@@ -354,9 +354,9 @@ final class GameplaySession {
         }
         if (!this.tutorialMode) {
           if ((!(EntityContactSupport.areEntityQueuesSettled(0)) ||
-              (!(sceneTransitionFlag == 0) &&
-                !((0 != this.sessionPhase) &&
-                (this.sessionPhase != 1))))) {
+              ((sceneTransitionFlag != 0) &&
+                ((0 == this.sessionPhase) ||
+                (this.sessionPhase == 1))))) {
             this.renderProgressHud(-46);
           }
         }
@@ -413,7 +413,7 @@ final class GameplaySession {
                 debugEntityQueue = debugMovingQueueSnapshot;
                 renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
                 do {
-                  if (!(null != renderedEntity)) {
+                  if ((null == renderedEntity)) {
                     debugEntityQueue = BoardEntityState.attachedEntities;
                     break;
                   }
@@ -426,7 +426,7 @@ final class GameplaySession {
                 } while (clientControlFlowGuard == 0);
                 renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                 do {
-                  if (!(renderedEntity != null)) {
+                  if ((renderedEntity == null)) {
                     debugEntityQueue = DelegatingCanvas.transientEntities;
                     break;
                   }
@@ -512,8 +512,8 @@ final class GameplaySession {
             settledResultRendering: {
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.scoreTextTemplate, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (EntityContactSupport.areEntityQueuesSettled(0)) {
-                if (!((0 != this.sessionPhase) &&
-                      (this.sessionPhase != 1))) {
+                if (((0 == this.sessionPhase) ||
+                      (this.sessionPhase == 1))) {
                   if (sceneTransitionFlag == 0) {
                     break settledResultRendering;
                   }
@@ -577,10 +577,10 @@ final class GameplaySession {
         }
         pointsPanelSlideStep: {
           if (0 == (this.updateTick & 1)) {
-            if (!((-1 == this.pointsPanelSlideDirection) &&
-                  (463 < this.pointsPanelX))) {
-              if (!((this.pointsPanelSlideDirection == 1) &&
-                    (this.pointsPanelX < 640))) {
+            if (((-1 != this.pointsPanelSlideDirection) ||
+                  (!(463 < this.pointsPanelX)))) {
+              if (((this.pointsPanelSlideDirection != 1) ||
+                    (!(this.pointsPanelX < 640)))) {
                 if (this.pointsPanelX != 463) {
                   break pointsPanelSlideStep;
                 }
@@ -603,12 +603,12 @@ final class GameplaySession {
         }
         sessionProgressionAndEnding: {
           if (!this.sessionEnding) {
-            if ((!((!((EntityContactSupport.areEntityQueuesSettled(0)) &&
-                    (!this.matchBatchProcessedThisTick))) &&
-                  (this.preserveScoreOnTransition))) &&
+            if ((((((EntityContactSupport.areEntityQueuesSettled(0)) &&
+                    (!this.matchBatchProcessedThisTick))) ||
+                  (!(this.preserveScoreOnTransition)))) &&
                 (this.canAdvanceSession(true))) {
-              if (!((0 != this.sessionPhase) &&
-                    (this.sessionPhase != 5))) {
+              if (((0 == this.sessionPhase) ||
+                    (this.sessionPhase == 5))) {
                 if (!this.sceneTransitionRequested) {
                   break sessionProgressionAndEnding;
                 }
@@ -838,7 +838,7 @@ final class GameplaySession {
               if ((MidiPcmStream.heldInternalKeys[99]) &&
                   (!this.tutorialPromptActive)) {
                 fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
-                while (!(null == fastForwardEntity)) {
+                while ((null != fastForwardEntity)) {
                   detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
                   if (clientControlFlowGuard != 0) {
                     break fastForwardAndRotationSnapshot;
@@ -1273,8 +1273,8 @@ final class GameplaySession {
             }
           }
           if (1 == this.tutorialStepPhase) {
-            if (!((this.tutorialStepId != 3) &&
-                  (this.tutorialStepId != 5))) {
+            if (((this.tutorialStepId == 3) ||
+                  (this.tutorialStepId == 5))) {
               this.leaveTutorial(7000);
             }
             if (this.tutorialAdvanceRequested) {
@@ -1288,8 +1288,8 @@ final class GameplaySession {
                 break tutorialStepPhaseUpdate;
               }
             }
-            if (!((this.tutorialStepId == 1) &&
-                  (0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric))) {
+            if (((this.tutorialStepId != 1) ||
+                  (!(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)))) {
               if (this.tutorialStepId != 2) {
                 break tutorialStepPhaseUpdate;
               }
@@ -1372,8 +1372,8 @@ final class GameplaySession {
                       jewelsAchievementEntry: {
                         germsAchievementEntry: {
                           sunAchievementEntry: {
-                            if (!((selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) &&
-                                  (clientControlFlowGuard == 0))) {
+                            if (((selectedThemeComplementOrThemeSentinel != themeEntryComplementOrThemeId) ||
+                                  (clientControlFlowGuard != 0))) {
                               if ((themeIndexThenId == 1) &&
                                   (clientControlFlowGuard == 0)) {
                                 break sunAchievementEntry;
@@ -1610,8 +1610,8 @@ final class GameplaySession {
                 break resultSequenceTickAndCompletion;
               }
             }
-            if (!((this.resultExpansionAudioStream != null) &&
-                  (!this.resultExpansionAudioStream.isSamplePositionOutOfRange()))) {
+            if (((this.resultExpansionAudioStream == null) ||
+                  (this.resultExpansionAudioStream.isSamplePositionOutOfRange()))) {
               resultProgressPercent = this.sceneAnimationTick * 100 / 460;
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
@@ -1739,8 +1739,8 @@ final class GameplaySession {
               break sessionExitScreenSelection;
             }
           }
-          if (!((this.score <= 0) &&
-                (this.newActionCount <= 0))) {
+          if (((!(this.score <= 0)) ||
+                (!(this.newActionCount <= 0)))) {
             ScoreSubmission.requestedScreenId = 4;
             if (clientControlFlowGuard == 0) {
               break sessionExitScreenSelection;

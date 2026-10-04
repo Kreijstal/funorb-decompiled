@@ -212,8 +212,8 @@ final class EntityMotionSupport {
                   wasKind2IntSnapshot = (movingEntity.entitySpriteKindId != 2) ? 0 : 1;
                   neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
                   EntityContactSupport.linkEntityAtMaskContacts(-1, ValidationIconWidget.rotatedEntityScreenY, movingEntity, DialogLayer.rotatedEntityScreenX);
-                  if (!((neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) &&
-                      (movingEntity.entitySpriteKindId != 2))) {
+                  if (((neighborIndexOrKindFlagOrContactIdOrDivisionGuard == 0) ||
+                      (movingEntity.entitySpriteKindId == 2))) {
                     if (movingEntity.entitySpriteKindId != 2) {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
                     }

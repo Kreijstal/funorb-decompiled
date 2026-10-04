@@ -406,7 +406,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         if (methodGuard > -50) {
             validInputValidationState = (ValidationState) null;
         }
-        if (!(this.socket == null)) {
+        if ((this.socket != null)) {
             this.socket.close(-123);
         }
     }

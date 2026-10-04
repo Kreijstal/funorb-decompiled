@@ -126,7 +126,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
     final static void pushRasterTarget(int methodGuard) {
         int var2 = -117 / ((-46 - methodGuard) / 50);
         RasterTargetSnapshot var1 = (RasterTargetSnapshot) ((Object) SharedBufferPools.rasterSnapshotPool.removeLast(1));
-        if (!(var1 != null)) {
+        if ((var1 == null)) {
             var1 = new RasterTargetSnapshot();
         }
         var1.capture(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, SoftwareRasterizer.clipTop, SoftwareRasterizer.framebuffer, true);

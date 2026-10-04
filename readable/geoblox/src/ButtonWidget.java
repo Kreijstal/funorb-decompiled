@@ -83,7 +83,7 @@ class ButtonWidget extends UiWidget {
                     return;
                 }
                 if ((this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX)) &&
-                    (!(EntityCollisionSupport.heldPointerButtonSnapshot != 0))) {
+                    ((EntityCollisionSupport.heldPointerButtonSnapshot == 0))) {
                     this.activateButton(PcmResampler.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
                 }
                 this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, PcmResampler.pointerYSnapshot);
@@ -108,8 +108,8 @@ class ButtonWidget extends UiWidget {
         RuntimeException caughtKeyInputException = null;
         try {
           if (this.hasKeyboardFocus((byte) 54)) {
-            if (!((keyCode != 84) &&
-                (keyCode != 83))) {
+            if (((keyCode == 84) ||
+                (keyCode == 83))) {
               this.activateButton(-1, -28922, -1, 1);
               return true;
             }

@@ -77,8 +77,8 @@ abstract class MenuScreen {
           if (SessionTextHistorySupport.currentKeyboardEventCode == 97) {
             this.increaseMenuValue((byte) 90, itemIndex);
           } else {
-            if (!((SessionTextHistorySupport.currentKeyboardEventCode != 84) &&
-                (SessionTextHistorySupport.currentKeyboardEventCode != 83))) {
+            if (((SessionTextHistorySupport.currentKeyboardEventCode == 84) ||
+                (SessionTextHistorySupport.currentKeyboardEventCode == 83))) {
               this.activateMenuItem(itemIndex, (byte) -2);
             }
           }

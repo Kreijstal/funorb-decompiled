@@ -319,10 +319,10 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
             encodedCharacterHandled: {
               characterCode = text.charAt(characterStart + characterIndex);
-              if (!((0 < characterCode) &&
-                  (characterCode < 128))) {
-                if (!((characterCode >= 160) &&
-                    (characterCode <= 255))) {
+              if (((!(0 < characterCode)) ||
+                  (!(characterCode < 128)))) {
+                if (((!(characterCode >= 160)) ||
+                    (!(characterCode <= 255)))) {
                   if (characterCode == 8364) {
                     destination[characterIndex + destinationOffset] = (byte)-128;
                     break encodedCharacterHandled;

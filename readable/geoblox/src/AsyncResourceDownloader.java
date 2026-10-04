@@ -21,7 +21,7 @@ final class AsyncResourceDownloader implements Runnable {
 
     final ByteArrayBuffer getDownloadedBuffer(byte methodGuard) {
         int unusedGuardQuotient = 62 / ((methodGuard - 9) / 53);
-        if (!(this.downloadStage != 3)) {
+        if ((this.downloadStage == 3)) {
             return this.downloadBuffer;
         }
         return null;
@@ -29,7 +29,7 @@ final class AsyncResourceDownloader implements Runnable {
 
     protected final void finalize() {
         if (null != this.urlStreamTask) {
-            if (!(this.urlStreamTask.result == null)) {
+            if ((this.urlStreamTask.result != null)) {
                 try {
                     ((DataInputStream) (this.urlStreamTask.result)).close();
                 } catch (Exception ignoredUrlStreamCloseFailure) {
@@ -46,7 +46,7 @@ final class AsyncResourceDownloader implements Runnable {
             }
             this.jaggrabSocketTask = null;
         }
-        if (!(null == this.downloadStream)) {
+        if ((null != this.downloadStream)) {
             try {
                 this.downloadStream.close();
             } catch (Exception ignoredDownloadStreamCloseFailure) {

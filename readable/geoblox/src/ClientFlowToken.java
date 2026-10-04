@@ -172,7 +172,7 @@ final class ClientFlowToken {
     }
 
     final static String getActiveLoginIdentifier(int methodGuard) {
-        if (!(IntrusiveDeque.pendingClientFlowToken != ClientFlowState.accountCreationFlowState)) {
+        if ((IntrusiveDeque.pendingClientFlowToken == ClientFlowState.accountCreationFlowState)) {
             return SpriteCheckboxRenderer.accountCreationDisplayName;
         }
         if (IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState) {

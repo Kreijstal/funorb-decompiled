@@ -94,13 +94,13 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
         String identifierText = null;
         if (methodGuard == 7789) {
             identifierText = "";
-            if (!(null == activeLoginPanel)) {
+            if ((null != activeLoginPanel)) {
                 identifierText = activeLoginPanel.getLoginIdentifierOrEmpty(87);
             }
             if (identifierText.length() == 0) {
                 identifierText = DualLinkNode.getSessionTextOrEmpty((byte) -53);
             }
-            if (!(identifierText.length() != 0)) {
+            if ((identifierText.length() == 0)) {
                 identifierText = AlternateLongAndTextLoginPayload.defaultPlayerNameText;
             }
             return identifierText;

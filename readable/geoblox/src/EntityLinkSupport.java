@@ -101,8 +101,8 @@ final class EntityLinkSupport {
           firstNeighborInsertionIndex = firstEntity.relatedEntityCount;
           firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
           firstEntity.relatedEntities[firstNeighborInsertionIndex] = secondEntity;
-          if (!((secondEntity.entitySpriteKindId == 0) &&
-              (firstEntity.entitySpriteKindId == 0))) {
+          if (((secondEntity.entitySpriteKindId != 0) ||
+              (firstEntity.entitySpriteKindId != 0))) {
             variantPropagationThenNeighborIndex = 0;
             propagateCategory = 0;
             secondIsKindOne = (secondEntity.entitySpriteKindId != 1) ? 0 : 1;
@@ -138,8 +138,8 @@ final class EntityLinkSupport {
                   }
                 }
               } else {
-                if (!((2 != secondEntity.entitySpriteKindId) &&
-                    (firstEntity.entitySpriteKindId != 2))) {
+                if (((2 == secondEntity.entitySpriteKindId) ||
+                    (firstEntity.entitySpriteKindId == 2))) {
                   if ((secondEntity.entitySpriteKindId == 2) &&
                       (2 != firstEntity.entitySpriteKindId)) {
                     secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
@@ -156,8 +156,8 @@ final class EntityLinkSupport {
                 }
               }
             }
-            if (!((variantPropagationThenNeighborIndex == 0) &&
-                  (propagateCategory == 0))) {
+            if (((variantPropagationThenNeighborIndex != 0) ||
+                  (propagateCategory != 0))) {
               DelegatingCanvas.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
             }
             if ((secondEntity.entitySpriteKindId == 1) &&

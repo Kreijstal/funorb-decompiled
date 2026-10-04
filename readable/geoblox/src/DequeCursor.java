@@ -80,7 +80,7 @@ final class DequeCursor {
 
     final IntrusiveNode beginReverse(int methodGuard) {
         IntrusiveNode lastNode = this.deque.sentinel.previousNode;
-        if (!(this.deque.sentinel != lastNode)) {
+        if ((this.deque.sentinel == lastNode)) {
             this.pendingNode = null;
             return null;
         }
@@ -217,7 +217,7 @@ final class DequeCursor {
         if (methodGuard <= 105) {
             return (IntrusiveNode) null;
         }
-        if (!(node != this.deque.sentinel)) {
+        if ((node == this.deque.sentinel)) {
             this.pendingNode = null;
             return null;
         }

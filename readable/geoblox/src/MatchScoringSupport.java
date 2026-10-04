@@ -150,7 +150,7 @@ final class MatchScoringSupport {
 
     final static void handleByteShortReply(int methodGuard) {
         ByteShortQuery pendingByteShortQuery = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(methodGuard ^ methodGuard));
-        if (!(pendingByteShortQuery != null)) {
+        if ((pendingByteShortQuery == null)) {
             Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;
         }

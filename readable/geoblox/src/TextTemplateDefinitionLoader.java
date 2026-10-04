@@ -21,7 +21,7 @@ final class TextTemplateDefinitionLoader {
                 encodedDefinition = this.alternateArchive.getFile(1, -28153, 32767 & templateId);
             }
             definition = new TextTemplateDefinition();
-            if (!(encodedDefinition == null)) {
+            if ((encodedDefinition != null)) {
                 definition.decode(0, new ByteArrayBuffer(encodedDefinition));
             }
             if (!(templateId < 32768)) {

@@ -182,8 +182,8 @@ final class MidiPcmStream extends PcmStream {
           pitchFixed = pitchFixed + ((-8192 + this.channelPitchBend[note.channelIndex]) * this.channelPitchBendSensitivity[note.channelIndex] >> 12);
           envelope = note.envelope;
           if (0 < envelope.vibratoPhaseStep) {
-            if (!((envelope.vibratoDepth <= 0) &&
-                (this.channelModulation[note.channelIndex] <= 0))) {
+            if (((!(envelope.vibratoDepth <= 0)) ||
+                (!(this.channelModulation[note.channelIndex] <= 0)))) {
               vibratoDepthOrSampleStep = envelope.vibratoDepth << 2;
               vibratoRampUpdates = envelope.vibratoRampTicks << 1;
               if (vibratoRampUpdates > note.ageUpdates) {
@@ -232,7 +232,7 @@ final class MidiPcmStream extends PcmStream {
         if (methodGuard != 39) {
             this.resetChannelControllers((byte) -85, -70);
         }
-        if (!((this.channelFlags[channelIndex] & 2) == 0)) {
+        if (((this.channelFlags[channelIndex] & 2) != 0)) {
             note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
             while (note != null) {
                 if (channelIndex == note.channelIndex && null == this.heldNotesByKey[channelIndex][note.keyNumber] && note.releaseEnvelopeTime < 0) {
@@ -258,8 +258,8 @@ final class MidiPcmStream extends PcmStream {
         try {
           note.framesUntilUpdate = AudioOutput.sampleRateHz / 100;
           if (note.releaseEnvelopeTime >= 0) {
-            if (!((null != note.sampleStream) &&
-                (!note.sampleStream.isSamplePositionOutOfRange()))) {
+            if (((null == note.sampleStream) ||
+                (note.sampleStream.isSamplePositionOutOfRange()))) {
               note.clearAudioReferences(-1);
               note.unlinkNode(completionOrUnlinkFlag);
               if ((0 < note.keyGroup) &&
@@ -307,8 +307,8 @@ final class MidiPcmStream extends PcmStream {
               }
               break;
             }
-            if ((!(note.volumeEnvelopeIndex != -2 + envelope.volumeEnvelope.length) &&
-                !(envelope.volumeEnvelope[note.volumeEnvelopeIndex + 1] != 0))) {
+            if (((note.volumeEnvelopeIndex == -2 + envelope.volumeEnvelope.length) &&
+                (envelope.volumeEnvelope[note.volumeEnvelopeIndex + 1] == 0))) {
               finishNoteInt = 1;
             }
           }
@@ -382,10 +382,10 @@ final class MidiPcmStream extends PcmStream {
 
     private final void resetChannelRetriggerPhases(int channelIndex, byte methodGuard) {
         MidiNote note = null;
-        if (!((this.channelFlags[channelIndex] & 4) == 0)) {
+        if (((this.channelFlags[channelIndex] & 4) != 0)) {
             note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
             while (note != null) {
-                if (!(note.channelIndex != channelIndex)) {
+                if ((note.channelIndex == channelIndex)) {
                     note.retriggerPhaseFixed = 0;
                 }
                 note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
@@ -902,8 +902,8 @@ final class MidiPcmStream extends PcmStream {
         MidiNote note;
         note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard - 100));
         while (note != null) {
-          if (!((channelIndex >= 0) &&
-                (channelIndex != note.channelIndex))) {
+          if (((!(channelIndex >= 0)) ||
+                (channelIndex == note.channelIndex))) {
             if (null != note.sampleStream) {
               note.sampleStream.fadeOutAndUnlink(AudioOutput.sampleRateHz / 100);
               if (note.sampleStream.hasRemainingRampFrames()) {

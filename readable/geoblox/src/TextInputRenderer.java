@@ -128,8 +128,8 @@ class TextInputRenderer extends TextWidgetRenderer {
           hiddenAchievementCount = 0;
           if (newAchievementsOnly) {
             for (achievementIndexOrTitleY = 16; achievementIndexOrTitleY >= 0; achievementIndexOrTitleY--) {
-              if ((!((!ClientOptionSupport.isClientOptionEnabled(0, -100)) &&
-                    (achievementIndexOrTitleY == 16))) &&
+              if ((((ClientOptionSupport.isClientOptionEnabled(0, -100)) ||
+                    (achievementIndexOrTitleY != 16))) &&
                   ((1 << achievementIndexOrTitleY & achievementMask) == 0)) {
                 hiddenAchievementCount++;
                 hiddenAchievementCenteringOffset += 20;
@@ -145,8 +145,8 @@ class TextInputRenderer extends TextWidgetRenderer {
                 (!AchievementQuery.hasReceivedAchievementSixteen(105))) {
               continue;
             }
-            if ((!((0 == (1 << achievementIndexOrTitleY & achievementMask)) &&
-                  (newAchievementsOnly))) &&
+            if ((((0 != (1 << achievementIndexOrTitleY & achievementMask)) ||
+                  (!(newAchievementsOnly)))) &&
                 ((PrefixCodeDecoder.pointerXSnapshot >= gridX) &&
                   (32 + gridX >= PrefixCodeDecoder.pointerXSnapshot) &&
                   (gridY <= PcmResampler.pointerYSnapshot) &&

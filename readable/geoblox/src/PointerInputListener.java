@@ -70,7 +70,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
 
     final static void insertNodeBefore(IntrusiveNode targetNode, int methodGuard, IntrusiveNode node) {
         try {
-            if (!(null == node.previousNode)) {
+            if ((null != node.previousNode)) {
                 node.unlinkNode(false);
             }
             if (methodGuard < 80) {

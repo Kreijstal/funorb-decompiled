@@ -68,7 +68,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             if (stepIdForSelection == 1) {
                 return ByteArrayPoolSupport.tutorialColourMatchMessage;
             }
-            if (!(stepIdForSelection == 2)) {
+            if ((stepIdForSelection != 2)) {
                 if (stepIdForSelection == 3) {
                     return ArchiveHandshakeState.tutorialCompleteMessage;
                 }
@@ -86,7 +86,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         if (stepIdForSelection == 1) {
             return ByteArrayPoolSupport.tutorialColourMatchMessage;
         }
-        if (!(stepIdForSelection == 2)) {
+        if ((stepIdForSelection != 2)) {
             if (stepIdForSelection == 3) {
                 return ArchiveHandshakeState.tutorialCompleteMessage;
             }

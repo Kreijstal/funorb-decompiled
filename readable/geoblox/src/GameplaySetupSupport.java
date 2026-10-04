@@ -159,7 +159,7 @@ final class GameplaySetupSupport {
                   reflectionRequest.operationErrors[operationIndex] = -5;
                   operationIncrementAlreadyApplied = 0;
                 }
-                if (!(operationIncrementAlreadyApplied == 0)) {
+                if ((operationIncrementAlreadyApplied != 0)) {
                   continue;
                 }
                 operationIndex++;

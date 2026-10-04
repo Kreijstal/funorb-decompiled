@@ -137,7 +137,7 @@ final class CachedTextLayout extends TextLayout {
             menuForegroundSprite = (Sprite) null;
         }
         if ((this.cachedFont == font && this.singleLineMode && 0 == this.cachedHorizontalAlignment && this.cachedText != null) &&
-            (!(!this.cachedText.equals(text)))) {
+            ((this.cachedText.equals(text)))) {
             return;
         }
         try {
