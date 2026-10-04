@@ -63,7 +63,7 @@ final class AudioService implements Runnable {
                 for (outputIndex = 0; outputIndex < 2; outputIndex++) {
                     output = this.outputs[outputIndex];
                     if (output != null) {
-                        output.b();
+                        output.serviceOutput();
                     }
                 }
                 ByteTextDecodingSupport.sleepMillis(0, 10L);

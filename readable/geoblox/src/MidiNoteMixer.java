@@ -17,11 +17,11 @@ final class MidiNoteMixer extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] destination, int destinationOffset, int frameCount) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -31,22 +31,22 @@ final class MidiNoteMixer extends PcmStream {
         int var5 = 0;
         MidiNote var6 = null;
         try {
-          this.field_m.a(param0, param1, param2);
+          this.field_m.mixInto(destination, destinationOffset, frameCount);
           var6 = (MidiNote) ((Object) this.field_l.firstForIteration(0));
           while (var6 != null) {
             if (!this.field_k.b(var6, -1)) {
-              var4_int = param1;
-              var5 = param2;
+              var4_int = destinationOffset;
+              var5 = frameCount;
               while (true) {
                 if (var5 <= var6.field_g) {
-                  this.a(var5, (byte) -69, var5 + var4_int, param0, var6, var4_int);
+                  this.a(var5, (byte) -69, var5 + var4_int, destination, var6, var4_int);
                   var6.field_g = var6.field_g - var5;
                   break;
                 }
-                this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
+                this.a(var6.field_g, (byte) -37, var4_int + var5, destination, var6, var4_int);
                 var5 = var5 - var6.field_g;
                 var4_int = var4_int + var6.field_g;
-                if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
+                if (!this.field_k.a(var5, var4_int, destination, var6, false)) {
                   continue;
                 }
                 break;
@@ -60,12 +60,12 @@ final class MidiNoteMixer extends PcmStream {
           var4 = decompiledCaughtException;
           stackIn_14_0 = var4;
           stackIn_14_1 = new StringBuilder().append("ad.C(");
-          if (param0 == null) {
+          if (destination == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class MidiNoteMixer extends PcmStream {
           if (param0 != -1) {
             return;
           }
-          param1.field_u.b(param2);
+          param1.field_u.skipFrames(param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,15 +155,15 @@ final class MidiNoteMixer extends PcmStream {
         }
     }
 
-    final void b(int param0) {
+    final void skipFrames(int frameCount) {
         int var2;
         MidiNote var3;
-        this.field_m.b(param0);
+        this.field_m.skipFrames(frameCount);
         var3 = (MidiNote) ((Object) this.field_l.firstForIteration(0));
         while (var3 != null) {
           L1: {
             if (!this.field_k.b(var3, -1)) {
-              var2 = param0;
+              var2 = frameCount;
               while (var2 > var3.field_g) {
                 this.a(-1, var3, var3.field_g);
                 var2 = var2 - var3.field_g;
@@ -179,7 +179,7 @@ final class MidiNoteMixer extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         MidiNote var1;
         int var2;
         var2 = Geoblox.clientControlFlowFlag;
@@ -195,7 +195,7 @@ final class MidiNoteMixer extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         MidiNote var1 = (MidiNote) ((Object) this.field_l.firstForIteration(0));
         if (var1 == null) {
             return null;
@@ -203,7 +203,7 @@ final class MidiNoteMixer extends PcmStream {
         if (!(null == var1.field_u)) {
             return (PcmStream) ((Object) var1.field_u);
         }
-        return this.c();
+        return this.nextChildStream();
     }
 
     private final void a(int param0, byte param1, int param2, int[] param3, MidiNote param4, int param5) {
@@ -233,7 +233,7 @@ final class MidiNoteMixer extends PcmStream {
                 param4.field_B = param4.field_B + param0 * var7_int;
                 break;
               }
-              param4.field_u.a(param3, param5, var8);
+              param4.field_u.mixInto(param3, param5, var8);
               param0 = param0 - var8;
               param5 = param5 + var8;
               param4.field_B = param4.field_B + (-1048576 + var7_int * var8);
@@ -262,7 +262,7 @@ final class MidiNoteMixer extends PcmStream {
                 param4.field_u.g(-1);
               }
               var11.c(var9);
-              var11.a(param3, param5, param2 - param5);
+              var11.mixInto(param3, param5, param2 - param5);
               if (!var11.g()) {
                 continue;
               }
@@ -273,7 +273,7 @@ final class MidiNoteMixer extends PcmStream {
           if (param1 >= -26) {
             return;
           }
-          param4.field_u.a(param3, param5, param0);
+          param4.field_u.mixInto(param3, param5, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

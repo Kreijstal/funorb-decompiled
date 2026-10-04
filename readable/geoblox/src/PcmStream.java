@@ -2,34 +2,34 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class PcmStream extends IntrusiveNode {
-    AbstractAudioSample field_g;
-    PcmStream field_h;
-    int field_i;
-    volatile boolean field_f;
+    AbstractAudioSample sample;
+    PcmStream scheduledNextStream;
+    int scheduledPriority;
+    volatile boolean activeForMixing;
 
-    abstract PcmStream b();
+    abstract PcmStream firstChildStream();
 
-    abstract int d();
+    abstract int getSchedulingCost();
 
-    abstract void b(int param0);
+    abstract void skipFrames(int frameCount);
 
-    abstract PcmStream c();
+    abstract PcmStream nextChildStream();
 
-    int a() {
+    int getSchedulingPriority() {
         return 255;
     }
 
-    final void b(int[] param0, int param1, int param2) {
-        if (this.field_f) {
-            this.a(param0, param1, param2);
+    final void mixOrSkip(int[] destination, int destinationOffset, int frameCount) {
+        if (this.activeForMixing) {
+            this.mixInto(destination, destinationOffset, frameCount);
         } else {
-            this.b(param2);
+            this.skipFrames(frameCount);
         }
     }
 
-    abstract void a(int[] param0, int param1, int param2);
+    abstract void mixInto(int[] destination, int destinationOffset, int frameCount);
 
     protected PcmStream() {
-        this.field_f = true;
+        this.activeForMixing = true;
     }
 }

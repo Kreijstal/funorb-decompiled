@@ -18,11 +18,11 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return (PcmStream) ((Object) this.field_m.nextForIteration(1));
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] destination, int destinationOffset, int frameCount) {
         int var4 = 0;
         PcmMixerListener var5 = null;
         int var7 = 0;
@@ -30,18 +30,18 @@ final class PcmStreamMixer extends PcmStream {
         Object var6 = null;
         while (true) {
           if (this.field_k < 0) {
-            this.c(param0, param1, param2);
+            this.c(destination, destinationOffset, frameCount);
             return;
           }
-          if (this.field_l + param2 < this.field_k) {
-            this.field_l = this.field_l + param2;
-            this.c(param0, param1, param2);
+          if (this.field_l + frameCount < this.field_k) {
+            this.field_l = this.field_l + frameCount;
+            this.c(destination, destinationOffset, frameCount);
             return;
           }
           var4 = this.field_k - this.field_l;
-          this.c(param0, param1, var4);
-          param1 = param1 + var4;
-          param2 = param2 - var4;
+          this.c(destination, destinationOffset, var4);
+          destinationOffset = destinationOffset + var4;
+          frameCount = frameCount - var4;
           this.field_l = this.field_l + var4;
           this.e();
           var5 = (PcmMixerListener) ((Object) this.field_j.firstForIteration(0));
@@ -56,7 +56,7 @@ final class PcmStreamMixer extends PcmStream {
               this.a(var5);
             }
           }
-          if (param2 != 0) {
+          if (frameCount != 0) {
             continue;
           }
           return;
@@ -83,16 +83,16 @@ final class PcmStreamMixer extends PcmStream {
     private final void c(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) ((Object) this.field_m.firstForIteration(0));
         while (var4 != null) {
-            var4.b(param0, param1, param2);
+            var4.mixOrSkip(param0, param1, param2);
             var4 = (PcmStream) ((Object) this.field_m.nextForIteration(1));
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
-    final synchronized void b(int param0) {
+    final synchronized void skipFrames(int frameCount) {
         int var2 = 0;
         PcmMixerListener var3 = null;
         int var5 = 0;
@@ -100,17 +100,17 @@ final class PcmStreamMixer extends PcmStream {
         Object var4 = null;
         while (true) {
           if (this.field_k < 0) {
-            this.c(param0);
+            this.c(frameCount);
             return;
           }
-          if (this.field_l + param0 < this.field_k) {
-            this.field_l = this.field_l + param0;
-            this.c(param0);
+          if (this.field_l + frameCount < this.field_k) {
+            this.field_l = this.field_l + frameCount;
+            this.c(frameCount);
             return;
           }
           var2 = this.field_k - this.field_l;
           this.c(var2);
-          param0 = param0 - var2;
+          frameCount = frameCount - var2;
           this.field_l = this.field_l + var2;
           this.e();
           var3 = (PcmMixerListener) ((Object) this.field_j.firstForIteration(0));
@@ -125,7 +125,7 @@ final class PcmStreamMixer extends PcmStream {
               this.a(var3);
             }
           }
-          if (param0 != 0) {
+          if (frameCount != 0) {
             continue;
           }
           return;
@@ -145,14 +145,14 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_m.firstForIteration(0));
     }
 
     private final void c(int param0) {
         PcmStream var2 = (PcmStream) ((Object) this.field_m.firstForIteration(0));
         while (var2 != null) {
-            var2.b(param0);
+            var2.skipFrames(param0);
             var2 = (PcmStream) ((Object) this.field_m.nextForIteration(1));
         }
     }

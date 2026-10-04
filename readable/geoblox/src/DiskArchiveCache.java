@@ -374,19 +374,19 @@ final class DiskArchiveCache {
     }
 
     final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, boolean param2, MidiPcmStream param3, boolean param4, int param5) {
-        AudioOutput.a(param5, param4, 10);
-        CacheReference.gameMusicOutput = AudioOutput.a(param1, param0, 0, 22050);
+        AudioOutput.configureAudio(param5, param4, 10);
+        CacheReference.gameMusicOutput = AudioOutput.createOutput(param1, param0, 0, 22050);
         if (param2) {
             return;
         }
         try {
-            ClientScreenExitSupport.gameSoundOutput = AudioOutput.a(param1, param0, 1, 1000);
+            ClientScreenExitSupport.gameSoundOutput = AudioOutput.createOutput(param1, param0, 1, 1000);
             WhirlpoolHash.field_d = new PcmStreamMixer();
-            ClientScreenExitSupport.gameSoundOutput.b(WhirlpoolHash.field_d);
+            ClientScreenExitSupport.gameSoundOutput.setRootStream(WhirlpoolHash.field_d);
             PasswordWidgetRenderer.gameMusicStream = param3;
             AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c);
             EmailValidator.updateSoundEffectVolume(SocialListEntry.soundEffectVolume, (byte) -67);
-            CacheReference.gameMusicOutput.b(param3);
+            CacheReference.gameMusicOutput.setRootStream(param3);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

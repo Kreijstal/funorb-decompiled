@@ -43,7 +43,7 @@ final class DelayedPcmStream extends PcmStream {
         }
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 0;
     }
 
@@ -53,12 +53,12 @@ final class DelayedPcmStream extends PcmStream {
         return SpriteConstructionSupport.clientScreenStage == 11 ? true : false;
     }
 
-    final void b(int param0) {
-        if (param0 < this.field_j) {
-            this.field_j = this.field_j - param0;
+    final void skipFrames(int frameCount) {
+        if (frameCount < this.field_j) {
+            this.field_j = this.field_j - frameCount;
             return;
         }
-        param0 = param0 - this.field_j;
+        frameCount = frameCount - this.field_j;
         this.field_j = 0;
         this.field_l.previousNode = this.previousNode;
         this.field_l.nextNode = this.nextNode;
@@ -66,17 +66,17 @@ final class DelayedPcmStream extends PcmStream {
         this.nextNode.previousNode = (IntrusiveNode) ((Object) this.field_l);
         this.previousNode = null;
         this.nextNode = null;
-        if (!(0 >= param0)) {
-            this.field_l.b(param0);
+        if (!(0 >= frameCount)) {
+            this.field_l.skipFrames(frameCount);
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
-    final int a() {
-        return this.field_l.a();
+    final int getSchedulingPriority() {
+        return this.field_l.getSchedulingPriority();
     }
 
     public static void c(byte param0) {
@@ -86,7 +86,7 @@ final class DelayedPcmStream extends PcmStream {
         usernameQueryCandidate = null;
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -97,19 +97,19 @@ final class DelayedPcmStream extends PcmStream {
         return CachedArchiveSource.accountCreationNewsOptIn;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] destination, int destinationOffset, int frameCount) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (this.field_j > param2) {
-            this.field_j = this.field_j - param2;
+          if (this.field_j > frameCount) {
+            this.field_j = this.field_j - frameCount;
             return;
           }
-          param1 = param1 + this.field_j;
-          param2 = param2 - this.field_j;
+          destinationOffset = destinationOffset + this.field_j;
+          frameCount = frameCount - this.field_j;
           this.field_j = 0;
           this.field_l.nextNode = this.nextNode;
           this.field_l.previousNode = this.previousNode;
@@ -117,8 +117,8 @@ final class DelayedPcmStream extends PcmStream {
           this.nextNode.previousNode = (IntrusiveNode) ((Object) this.field_l);
           this.previousNode = null;
           this.nextNode = null;
-          if (param2 > 0) {
-            this.field_l.a(param0, param1, param2);
+          if (frameCount > 0) {
+            this.field_l.mixInto(destination, destinationOffset, frameCount);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,19 +126,19 @@ final class DelayedPcmStream extends PcmStream {
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
           stackIn_9_1 = new StringBuilder().append("cg.C(");
-          if (param0 == null) {
+          if (destination == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
     DelayedPcmStream(PcmStream param0, int param1) {
         try {
             this.field_l = param0;
-            this.field_g = this.field_l.field_g;
+            this.sample = this.field_l.sample;
             this.field_j = param1;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

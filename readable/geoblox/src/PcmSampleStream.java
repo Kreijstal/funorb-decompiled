@@ -75,7 +75,7 @@ final class PcmSampleStream extends PcmStream {
         this.b(param0, this.k());
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         if (this.field_u == 0 && this.field_l == 0) {
             return 0;
         }
@@ -164,15 +164,15 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l <= 0) {
             if ((this.sampleStepFixed == -256) &&
                 ((this.samplePositionFixed & 255) == 0)) {
-              if (AudioOutput.field_q) {
-                return PcmSampleStream.b(0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this));
+              if (AudioOutput.stereoEnabled) {
+                return PcmSampleStream.b(0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this));
               }
-              return PcmSampleStream.b(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this));
+              return PcmSampleStream.b(((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this));
             }
-            if (AudioOutput.field_q) {
-              return PcmSampleStream.d(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+            if (AudioOutput.stereoEnabled) {
+              return PcmSampleStream.d(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             }
-            return PcmSampleStream.a(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+            return PcmSampleStream.a(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -181,16 +181,16 @@ final class PcmSampleStream extends PcmStream {
           this.field_l = this.field_l + param1;
           if ((this.sampleStepFixed == -256) &&
               ((this.samplePositionFixed & 255) == 0)) {
-            if (!AudioOutput.field_q) {
-              param1 = PcmSampleStream.a(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
+            if (!AudioOutput.stereoEnabled) {
+              param1 = PcmSampleStream.a(((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
             } else {
-              param1 = PcmSampleStream.a(0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this));
+              param1 = PcmSampleStream.a(0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this));
             }
           } else {
-            if (!AudioOutput.field_q) {
-              param1 = PcmSampleStream.a(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+            if (!AudioOutput.stereoEnabled) {
+              param1 = PcmSampleStream.a(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             } else {
-              param1 = PcmSampleStream.b(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+              param1 = PcmSampleStream.b(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             }
           }
           this.field_l = this.field_l - param1;
@@ -204,7 +204,7 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstChildStream() {
         return null;
     }
 
@@ -218,15 +218,15 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l <= 0) {
             if ((this.sampleStepFixed == 256) &&
                 ((this.samplePositionFixed & 255) == 0)) {
-              if (AudioOutput.field_q) {
-                return PcmSampleStream.a(0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this));
+              if (AudioOutput.stereoEnabled) {
+                return PcmSampleStream.a(0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this));
               }
-              return PcmSampleStream.a(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this));
+              return PcmSampleStream.a(((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this));
             }
-            if (AudioOutput.field_q) {
-              return PcmSampleStream.b(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+            if (AudioOutput.stereoEnabled) {
+              return PcmSampleStream.b(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             }
-            return PcmSampleStream.b(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+            return PcmSampleStream.b(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, 0, param3, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -235,16 +235,16 @@ final class PcmSampleStream extends PcmStream {
           this.field_l = this.field_l + param1;
           if ((this.sampleStepFixed == 256) &&
               ((this.samplePositionFixed & 255) == 0)) {
-            if (!AudioOutput.field_q) {
-              param1 = PcmSampleStream.b(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
+            if (!AudioOutput.stereoEnabled) {
+              param1 = PcmSampleStream.b(((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
             } else {
-              param1 = PcmSampleStream.b(0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this));
+              param1 = PcmSampleStream.b(0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this));
             }
           } else {
-            if (!AudioOutput.field_q) {
-              param1 = PcmSampleStream.c(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+            if (!AudioOutput.stereoEnabled) {
+              param1 = PcmSampleStream.c(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             } else {
-              param1 = PcmSampleStream.a(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
+              param1 = PcmSampleStream.a(0, 0, ((PcmSample) ((Object) this.sample)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             }
           }
           this.field_l = this.field_l - param1;
@@ -258,14 +258,14 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    final int a() {
+    final int getSchedulingPriority() {
         int var1 = this.field_k * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_v == 0) {
-            var1 = var1 - var1 * this.samplePositionFixed / (((PcmSample) ((Object) this.field_g)).samples.length << 8);
+            var1 = var1 - var1 * this.samplePositionFixed / (((PcmSample) ((Object) this.sample)).samples.length << 8);
         } else {
             if (this.field_v >= 0) {
-                var1 = var1 - var1 * this.field_q / ((PcmSample) ((Object) this.field_g)).samples.length;
+                var1 = var1 - var1 * this.field_q / ((PcmSample) ((Object) this.sample)).samples.length;
             }
         }
         return var1 > 255 ? 255 : var1;
@@ -529,7 +529,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final PcmStream c() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -798,7 +798,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     final synchronized void e(int param0) {
-        int var2 = ((PcmSample) ((Object) this.field_g)).samples.length << 8;
+        int var2 = ((PcmSample) ((Object) this.sample)).samples.length << 8;
         if (param0 < -1) {
             param0 = -1;
         }
@@ -816,7 +816,7 @@ final class PcmSampleStream extends PcmStream {
         return this.sampleStepFixed < 0 ? -this.sampleStepFixed : this.sampleStepFixed;
     }
 
-    final synchronized void b(int param0) {
+    final synchronized void skipFrames(int frameCount) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -827,11 +827,11 @@ final class PcmSampleStream extends PcmStream {
         int var6;
         int var7;
         if (this.field_l > 0) {
-          if (param0 < this.field_l) {
-            this.field_k = this.field_k + this.field_j * param0;
-            this.field_n = this.field_n + this.field_t * param0;
-            this.field_s = this.field_s + this.field_w * param0;
-            this.field_l = this.field_l - param0;
+          if (frameCount < this.field_l) {
+            this.field_k = this.field_k + this.field_j * frameCount;
+            this.field_n = this.field_n + this.field_t * frameCount;
+            this.field_s = this.field_s + this.field_w * frameCount;
+            this.field_l = this.field_l - frameCount;
           } else {
             if (this.field_u == -2147483648) {
               this.field_u = 0;
@@ -839,13 +839,13 @@ final class PcmSampleStream extends PcmStream {
               this.field_n = 0;
               this.field_k = 0;
               this.unlinkNode(false);
-              param0 = this.field_l;
+              frameCount = this.field_l;
             }
             this.field_l = 0;
             this.e();
           }
         }
-        var2 = (PcmSample) ((Object) this.field_g);
+        var2 = (PcmSample) ((Object) this.sample);
         var3 = this.field_q << 8;
         var4 = this.field_m << 8;
         var5 = var2.samples.length << 8;
@@ -869,7 +869,7 @@ final class PcmSampleStream extends PcmStream {
           }
           this.samplePositionFixed = var5 - 1;
         }
-        this.samplePositionFixed = this.samplePositionFixed + this.sampleStepFixed * param0;
+        this.samplePositionFixed = this.samplePositionFixed + this.sampleStepFixed * frameCount;
         if (this.field_v < 0) {
           if (!this.field_r) {
             if (this.sampleStepFixed >= 0) {
@@ -1105,7 +1105,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] destination, int destinationOffset, int frameCount) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1120,10 +1120,10 @@ final class PcmSampleStream extends PcmStream {
         int var10;
         if ((this.field_u == 0) &&
             (this.field_l == 0)) {
-          this.b(param2);
+          this.skipFrames(frameCount);
           return;
         }
-        var4 = (PcmSample) ((Object) this.field_g);
+        var4 = (PcmSample) ((Object) this.sample);
         var5 = this.field_q << 8;
         var6 = this.field_m << 8;
         var7 = var4.samples.length << 8;
@@ -1131,8 +1131,8 @@ final class PcmSampleStream extends PcmStream {
         if (var8 <= 0) {
           this.field_v = 0;
         }
-        var9 = param1;
-        param2 = param2 + param1;
+        var9 = destinationOffset;
+        frameCount = frameCount + destinationOffset;
         if (this.samplePositionFixed < 0) {
           if (this.sampleStepFixed <= 0) {
             this.f();
@@ -1153,7 +1153,7 @@ final class PcmSampleStream extends PcmStream {
           if (!this.field_r) {
             if (this.sampleStepFixed >= 0) {
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_q]);
+                var9 = this.b(destination, var9, var6, frameCount, (int) var4.samples[this.field_q]);
                 if (this.samplePositionFixed < var6) {
                   return;
                 }
@@ -1162,7 +1162,7 @@ final class PcmSampleStream extends PcmStream {
               }
             }
             while (true) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_m - 1]);
+              var9 = this.a(destination, var9, var5, frameCount, (int) var4.samples[this.field_m - 1]);
               if (this.samplePositionFixed >= var5) {
                 return;
               }
@@ -1171,7 +1171,7 @@ final class PcmSampleStream extends PcmStream {
             }
           }
           if (this.sampleStepFixed < 0) {
-            var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_q]);
+            var9 = this.a(destination, var9, var5, frameCount, (int) var4.samples[this.field_q]);
             if (this.samplePositionFixed >= var5) {
               return;
             }
@@ -1179,13 +1179,13 @@ final class PcmSampleStream extends PcmStream {
             this.sampleStepFixed = -this.sampleStepFixed;
           }
           while (true) {
-            var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_m - 1]);
+            var9 = this.b(destination, var9, var6, frameCount, (int) var4.samples[this.field_m - 1]);
             if (this.samplePositionFixed < var6) {
               return;
             }
             this.samplePositionFixed = var6 + var6 - 1 - this.samplePositionFixed;
             this.sampleStepFixed = -this.sampleStepFixed;
-            var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_q]);
+            var9 = this.a(destination, var9, var5, frameCount, (int) var4.samples[this.field_q]);
             if (this.samplePositionFixed >= var5) {
               return;
             }
@@ -1199,7 +1199,7 @@ final class PcmSampleStream extends PcmStream {
             if (!this.field_r) {
               if (this.sampleStepFixed < 0) {
                 while (true) {
-                  var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_m - 1]);
+                  var9 = this.a(destination, var9, var5, frameCount, (int) var4.samples[this.field_m - 1]);
                   if (this.samplePositionFixed >= var5) {
                     return;
                   }
@@ -1215,7 +1215,7 @@ final class PcmSampleStream extends PcmStream {
                 }
               }
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_q]);
+                var9 = this.b(destination, var9, var6, frameCount, (int) var4.samples[this.field_q]);
                 if (this.samplePositionFixed < var6) {
                   return;
                 }
@@ -1231,7 +1231,7 @@ final class PcmSampleStream extends PcmStream {
               }
             }
             if (this.sampleStepFixed < 0) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_q]);
+              var9 = this.a(destination, var9, var5, frameCount, (int) var4.samples[this.field_q]);
               if (this.samplePositionFixed >= var5) {
                 return;
               }
@@ -1244,7 +1244,7 @@ final class PcmSampleStream extends PcmStream {
               }
             }
             while (true) {
-              var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_m - 1]);
+              var9 = this.b(destination, var9, var6, frameCount, (int) var4.samples[this.field_m - 1]);
               if (this.samplePositionFixed < var6) {
                 return;
               }
@@ -1255,7 +1255,7 @@ final class PcmSampleStream extends PcmStream {
               if (fieldTemp$1 == 0) {
                 break;
               }
-              var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_q]);
+              var9 = this.a(destination, var9, var5, frameCount, (int) var4.samples[this.field_q]);
               if (this.samplePositionFixed >= var5) {
                 return;
               }
@@ -1271,7 +1271,7 @@ final class PcmSampleStream extends PcmStream {
           }
         }
         if (this.sampleStepFixed >= 0) {
-          discarded$4 = this.b(param0, var9, var7, param2, 0);
+          discarded$4 = this.b(destination, var9, var7, frameCount, 0);
           if (this.samplePositionFixed >= var7) {
             this.samplePositionFixed = var7;
             this.f();
@@ -1279,7 +1279,7 @@ final class PcmSampleStream extends PcmStream {
           }
           return;
         }
-        discarded$3 = this.a(param0, var9, 0, param2, 0);
+        discarded$3 = this.a(destination, var9, 0, frameCount, 0);
         if (this.samplePositionFixed >= 0) {
           return;
         }
@@ -1627,7 +1627,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     final synchronized boolean isSamplePositionOutOfRange() {
-        return this.samplePositionFixed < 0 || this.samplePositionFixed >= ((PcmSample) ((Object) this.field_g)).samples.length << 8;
+        return this.samplePositionFixed < 0 || this.samplePositionFixed >= ((PcmSample) ((Object) this.sample)).samples.length << 8;
     }
 
     final static PcmSampleStream createForPlaybackRate(PcmSample sample, int ratePercent, int volume) {
@@ -1641,7 +1641,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2) {
-        this.field_g = (AbstractAudioSample) ((Object) param0);
+        this.sample = (AbstractAudioSample) ((Object) param0);
         this.field_q = param0.loopStart;
         this.field_m = param0.loopEnd;
         this.field_r = param0.pingPongLoop;
@@ -1760,7 +1760,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
-        this.field_g = (AbstractAudioSample) ((Object) param0);
+        this.sample = (AbstractAudioSample) ((Object) param0);
         this.field_q = param0.loopStart;
         this.field_m = param0.loopEnd;
         this.field_r = param0.pingPongLoop;

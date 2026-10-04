@@ -51,7 +51,7 @@ final class SecondaryNodeDeque implements Iterable {
                 receivedAchievementMask = -114;
             }
             PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
-            CacheReference.gameMusicOutput.a();
+            CacheReference.gameMusicOutput.flushAndMarkDrainCheck();
             GzipInflater.currentMusicTrack = track;
             PasswordWidgetRenderer.gameMusicStream.startMusicScore(false, GzipInflater.currentMusicTrack, -1706);
         } catch (RuntimeException playbackFailure) {

@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/39c11973f394f0e21ba62ccdcfba50389c8d596a/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/d49f1240355003b7e9ad6813fb791866977ee5cb/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 138)
+## Current readability (pass 139)
 
-The export has 12,249 guarded names and 90,785 Java identifier edits, plus 11
-class-name literal edits and 186 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 12,448 guarded names and 91,653 Java identifier edits, plus 11
+class-name literal edits and 188 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,40 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 139 adds 199 guarded rules: 31 fields, 57 methods, 45 parameters,
+65 locals and one label. Every AudioOutput and JavaSoundAudioOutput field,
+method, parameter and local is named. The PcmStream contract and all owned
+overrides now expose firstChildStream/nextChildStream, mixInto/skipFrames,
+getSchedulingPriority and getSchedulingCost; their bodies stay intact.
+
+AudioOutput exposes requested/adaptive buffering, drain checks, reopen time,
+stream-time catch-up, root stream and eight priority queues. mixBlock selects
+streams against schedulingWorkLimit, clears priority links and then mixes the
+root. streamSelection names its existing plain budget-exit block; the frame,
+exit and cleanup remain. Label accounting grows from 186 to 188 edits explicitly.
+
+Java Sound hooks expose initializeDevice, openDevice, getQueuedFrames,
+writeMixBlock, flushDevice and closeDevice. Signed 24-bit clipping and signed 16-bit
+little-endian packing remain. Any listed mixer name containing soundmax retains
+reopen-after-flush behavior; this is not a new mixer-selection policy. Capacity
+rounding and power-of-two retry, base no-op hooks, Throwable silent-output
+fallback and any partial service/device installation remain. Volatile flags,
+synchronized calls, callback order, 256-frame blocks, 16384-frame cap and
+two-second drain/reopen timing are unchanged. No runtime scheduling optimization
+or new physical-device validation is claimed.
+
+There are 12,448 rules and 91,653 identifier edits, plus eleven class-literal
+and 188 label edits: 91,852 total. All 12,249 prior complete rules and raw/tool/
+workflow/stub/native/text pins remain. Both 303-file corpora compile, preserving
+136,607 bindings, 388 overrides and 813 lexical label records, and all 303 files
+reverse byte exactly. The 27 publication checks and eight existing native
+fixtures pass within their recorded scopes. Native music fixtures control PCM
+and sample state; real devices, service timing and complete live scheduling
+remain unverified. Eight large labeled bodies and 190 opaque labels remain;
+full-game/assets/server/device and heap/FPS acceptance remain unverified.
+
+Previous naming pass:
 
 Pass 138 adds 105 guarded rules: 23 fields, nine methods, 18 parameters,
 54 locals and one label. Social packet updates and both name-hash lookups now

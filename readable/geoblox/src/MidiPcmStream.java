@@ -39,7 +39,7 @@ final class MidiPcmStream extends PcmStream {
     private MusicScore field_l;
     private int field_U;
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] destination, int destinationOffset, int frameCount) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -52,16 +52,16 @@ final class MidiPcmStream extends PcmStream {
           if (this.midiReader.isLoaded()) {
             var4_int = this.midiReader.tickDivision * this.field_T / AudioOutput.sampleRateHz;
             while (true) {
-              var5 = (long)param2 * (long)var4_int + this.field_x;
+              var5 = (long)frameCount * (long)var4_int + this.field_x;
               if (this.field_A - var5 >= 0L) {
                 this.field_x = var5;
                 break;
               }
               var7 = (int)((-1L + this.field_A - (this.field_x - (long)var4_int)) / (long)var4_int);
               this.field_x = this.field_x + (long)var7 * (long)var4_int;
-              this.field_I.a(param0, param1, var7);
-              param2 = param2 - var7;
-              param1 = param1 + var7;
+              this.field_I.mixInto(destination, destinationOffset, var7);
+              frameCount = frameCount - var7;
+              destinationOffset = destinationOffset + var7;
               this.a((byte) 65);
               if (!this.midiReader.isLoaded()) {
                 break;
@@ -69,23 +69,23 @@ final class MidiPcmStream extends PcmStream {
               continue;
             }
           }
-          this.field_I.a(param0, param1, param2);
+          this.field_I.mixInto(destination, destinationOffset, frameCount);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("kj.C(");
-          if (param0 == null) {
+          if (destination == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -344,9 +344,9 @@ final class MidiPcmStream extends PcmStream {
           }
           param3.field_u.c(param3.field_g);
           if (param2 == null) {
-            param3.field_u.b(param0);
+            param3.field_u.skipFrames(param0);
           } else {
-            param3.field_u.a(param2, param1, param0);
+            param3.field_u.mixInto(param2, param1, param0);
           }
           if (param3.field_u.g()) {
             this.field_I.field_m.a(param3.field_u);
@@ -583,7 +583,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream nextChildStream() {
         return null;
     }
 
@@ -975,7 +975,7 @@ final class MidiPcmStream extends PcmStream {
             this.b(100, -1);
         }
         if (param1 != 2097151) {
-            this.b(108);
+            this.skipFrames(108);
         }
         this.b((byte) -109, -1);
         for (var3 = 0; var3 < 16; var3++) {
@@ -989,26 +989,26 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstChildStream() {
         return (PcmStream) ((Object) this.field_I);
     }
 
-    final synchronized void b(int param0) {
+    final synchronized void skipFrames(int frameCount) {
         int var2;
         long var3;
         int var5;
         if (this.midiReader.isLoaded()) {
           var2 = this.field_T * this.midiReader.tickDivision / AudioOutput.sampleRateHz;
           while (true) {
-            var3 = this.field_x + (long)param0 * (long)var2;
+            var3 = this.field_x + (long)frameCount * (long)var2;
             if (-var3 + this.field_A >= 0L) {
               this.field_x = var3;
               break;
             }
             var5 = (int)((-1L + ((long)var2 - this.field_x + this.field_A)) / (long)var2);
             this.field_x = this.field_x + (long)var2 * (long)var5;
-            param0 = param0 - var5;
-            this.field_I.b(var5);
+            frameCount = frameCount - var5;
+            this.field_I.skipFrames(var5);
             this.a((byte) -42);
             if (this.midiReader.isLoaded()) {
               continue;
@@ -1016,7 +1016,7 @@ final class MidiPcmStream extends PcmStream {
             break;
           }
         }
-        this.field_I.b(param0);
+        this.field_I.skipFrames(frameCount);
     }
 
     final boolean b(MidiNote param0, int param1) {
@@ -1160,7 +1160,7 @@ final class MidiPcmStream extends PcmStream {
     private final void a(int param0, int param1, int param2, int param3) {
         if (param0 != -40) {
             int[] var6 = (int[]) null;
-            this.a((int[]) null, -107, 119);
+            this.mixInto((int[]) null, -107, 119);
         }
     }
 

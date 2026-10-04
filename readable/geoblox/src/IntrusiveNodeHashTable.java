@@ -81,7 +81,7 @@ final class IntrusiveNodeHashTable {
           if ((track != null) &&
               (track != GzipInflater.currentMusicTrack)) {
             PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
-            CacheReference.gameMusicOutput.a();
+            CacheReference.gameMusicOutput.flushAndMarkDrainCheck();
             GzipInflater.currentMusicTrack = track;
             PasswordWidgetRenderer.gameMusicStream.startMusicScore(true, GzipInflater.currentMusicTrack, -1706);
             return;

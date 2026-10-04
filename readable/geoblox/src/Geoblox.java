@@ -371,7 +371,7 @@ public final class Geoblox extends SessionGameApplet {
         MidiTrackReader.clearStatusDataByteCounts();
         MidiNoteMixer.c(-1);
         TrackedPcmStream.a((byte) 54);
-        AudioOutput.h();
+        AudioOutput.releaseSharedAudioServiceReference();
         LoginUiSupport.clearLoginUiText(methodGuard + 154);
         AchievementProtocolSupport.releaseStaticReferences(0);
         ClientOptionSupport.releaseClientOptionResources(50);
