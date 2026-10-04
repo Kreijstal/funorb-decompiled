@@ -78,11 +78,11 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
         }
     }
 
-    final static java.awt.Container a(boolean param0) {
+    final static java.awt.Container getActiveCanvasContainer(boolean preservePendingActionPanelWidth) {
         if (SharedBufferPools.fullscreenFrame != null) {
             return (java.awt.Container) ((Object) SharedBufferPools.fullscreenFrame);
         }
-        if (!param0) {
+        if (!preservePendingActionPanelWidth) {
             pendingActionPanelWidth = 78;
             return (java.awt.Container) ((Object) NodeHashTableIterator.getActiveApplet(122));
         }
@@ -148,55 +148,55 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
         meshSpecularResponseByAbsDot = null;
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        CharSequence var12 = null;
-        var11 = Geoblox.clientControlFlowFlag;
+    final static void drawGrayTintedHorizontalThreePartStrip(Sprite[] sprites, int grayTint, int stripLeftThenTileX, int stripWidth, int stripTop, int methodGuard) {
+        RuntimeException drawFailureBeforeDescription = null;
+        StringBuilder drawMessagePrefix = null;
+        String spritesDescription = null;
+        RuntimeException caughtDrawFailure = null;
+        int leftWidth = 0;
+        RuntimeException drawFailureForContext = null;
+        int rightWidth = 0;
+        int tileWidth = 0;
+        int tileStartX = 0;
+        int tileEndX = 0;
+        int unusedClientControlSnapshot = 0;
+        CharSequence unusedNullTextSnapshot = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if ((param0 != null) &&
-              (param3 > 0)) {
-            var6_int = param0[0].fullWidth;
-            var7 = param0[2].fullWidth;
-            var8 = param0[1].fullWidth;
-            param0[0].drawGrayTinted(param2, param4, param1);
-            param0[2].drawGrayTinted(-var7 + (param2 + param3), param4, param1);
+          if ((sprites != null) &&
+              (stripWidth > 0)) {
+            leftWidth = sprites[0].fullWidth;
+            rightWidth = sprites[2].fullWidth;
+            tileWidth = sprites[1].fullWidth;
+            sprites[0].drawGrayTinted(stripLeftThenTileX, stripTop, grayTint);
+            sprites[2].drawGrayTinted(-rightWidth + (stripLeftThenTileX + stripWidth), stripTop, grayTint);
             SoftwareRasterizer.saveClip(ClientOptionSupport.sharedSavedClip);
-            SoftwareRasterizer.intersectClip(var6_int + param2, param4, -var7 + param3 + param2, param4 + param0[1].fullHeight);
-            var9 = param2 + var6_int;
-            var10 = -var7 + (param2 + param3);
-            for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-              param0[1].drawGrayTinted(param2, param4, param1);
+            SoftwareRasterizer.intersectClip(leftWidth + stripLeftThenTileX, stripTop, -rightWidth + stripWidth + stripLeftThenTileX, stripTop + sprites[1].fullHeight);
+            tileStartX = stripLeftThenTileX + leftWidth;
+            tileEndX = -rightWidth + (stripLeftThenTileX + stripWidth);
+            for (stripLeftThenTileX = tileStartX; stripLeftThenTileX < tileEndX; stripLeftThenTileX = stripLeftThenTileX + tileWidth) {
+              sprites[1].drawGrayTinted(stripLeftThenTileX, stripTop, grayTint);
             }
             SoftwareRasterizer.restoreClip(ClientOptionSupport.sharedSavedClip);
-            if (param5 == -17154) {
+            if (methodGuard == -17154) {
               return;
             }
-            var12 = (CharSequence) null;
+            unusedNullTextSnapshot = (CharSequence) null;
             MultiHandleSliderRenderer.encodeTextBytes((CharSequence) null, (byte) 66);
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_13_0 = var6;
-          stackIn_13_1 = new StringBuilder().append("jf.G(");
-          if (param0 == null) {
-            stackIn_14_2 = "null";
+        } catch (java.lang.RuntimeException drawFailure) {
+          caughtDrawFailure = drawFailure;
+          drawFailureForContext = caughtDrawFailure;
+          drawFailureBeforeDescription = drawFailureForContext;
+          drawMessagePrefix = new StringBuilder().append("jf.G(");
+          if (sprites == null) {
+            spritesDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            spritesDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawFailureBeforeDescription), ((StringBuilder) (Object) drawMessagePrefix).append(spritesDescription).append(',').append(grayTint).append(',').append(stripLeftThenTileX).append(',').append(stripWidth).append(',').append(stripTop).append(',').append(methodGuard).append(')').toString());
         }
     }
 

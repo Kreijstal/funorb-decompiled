@@ -5,7 +5,67 @@ The current export has 16,910 guarded naming rules: 302 classes, 1,977 fields,
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current shared validation, cookie, encoding and rendering naming (pass 171)
+## Current startup, archives, audio and mesh naming (pass 172)
+
+Pass 172 adds 413 guarded names: two fields, all 30 remaining single-letter
+methods, 106 parameters and 275 locals. Four older alignment rules are explicitly
+corrected: the only fixed-corpus caller supplies a payload BYTE COUNT for XTEA,
+not a bit offset. The helper, value and locals now describe rounding to a
+multiple of eight. Its guard, return89, signed arithmetic and overflow remain.
+All 17,887 unaffected previous complete rules remain exact; full before/after
+objects for the four corrections are recorded in the manifest.
+
+Startup names expose loading/logo/account/prepared-frame selection, redraw-flag
+consumption, AWT progress drawing and pointer-listener removal. Progress image
+and font caches, partial image-fill return, direct draw/repaint fallbacks,
+unclamped percentages, recursive wrong-guard path and original catch boundaries
+remain. The applet username helper inspects/encodes its parameter without storing
+a login identity. Keyboard-idle and canvas-container helpers retain their guard
+effects. Account login/creation wrappers, logging-in dialog and button appending
+retain field writes, construction/callback order, the diagnostic-only message
+argument and unused guard-helper argument.
+
+Cookie writing, marker creation, page-link updates and reload/server-list/support/
+relative-URL navigation expose their original attempted actions. Cookiehost,
+Discard/Expires/Max-Age arithmetic, raw script text, URL session overrides,
+window targets, late guard work, printed failures and Throwable catches remain.
+Neither the marker flag nor these names guarantee browser/storage success.
+
+Common UI loading exposes sprite/font/GIF groups and palette-state preparation.
+The first two screen-options frame sets follow the existing third-frame name
+without guessing their actions. Indexed-sprite copying retains shared palette
+and index arrays, allocation before its guard and partial dimensions. Button
+splitting keeps aliases, grayscale work and successful-tail raster restoration.
+The game archive factory flag explicitly selects discarding decoded files after
+read for policy1; it does not claim retention. RGB sprite loading and gray-tinted
+strip drawing retain short circuits, guard writes, shared clip storage, reused
+X parameter, zero-center-width behavior and non-finally clip restoration.
+
+Audio setup and delayed playback retain output/rate/volume arguments, stream
+tracking before early return, mixer/root/volume ordering and partial state.
+Packed short/mesh decoding keeps exact-length reuse, null sentinel, signed base,
+delta widths, optional-section reads and unclassified array meanings, priority
+nulling/narrowing and guards. Encrypted payload writing retains SecureRandom key
+generation, buffer/key aliases, byte padding, XTEA/modPow order, optional early
+return and partial destination appends. Fullscreen construction and display-mode
+waiting retain parameters, focus/bounds order, task polling and original sleeps.
+No timeout, renderer/audio policy, encryption or runtime behavior is repaired.
+
+The export has 18,304 rules, 117,503 identifier edits, eleven class-name literal
+edits and 349 label edits: 117,863 total. Raw/decompiler/naming/workflow/stub/
+native/text and label pins remain unchanged. Both 303-file corpora compile,
+reproduce and reverse byte exactly, preserving 19,498 dictionary identities,
+136,607 bindings, 388 overrides, 245 label definitions and 811 label records.
+All 27 publication tests pass. No native probes or new runtime cases are added
+or run by this naming pass.
+
+No single-letter methods remain in the current compiler dictionary. Eight large
+labeled bodies, 132 opaque labels (93 plain blocks and 39 loops) and 57 opaque
+fields remain. Zero single-letter methods does not establish complete semantic
+readability. Full startup/login/crypto/cookies/UI/network/input/audio/assets/game/
+server/browser/phone and heap/presented-FPS acceptance remain unverified.
+
+## Previous shared validation, cookie, encoding and rendering naming (pass 171)
 
 Pass 171 adds 429 guarded names: two fields, 38 methods, 82 parameters,
 302 locals and five lexical labels. Email helpers expose syntax/local-part
@@ -1936,7 +1996,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/a4b9a2f736df2059f601f865890b87f8d7e90c84/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/a4b9a2f736df2059f601f865890b87f8d7e90c84/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -2194,16 +2254,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/a4b9a2f736df2059f601f865890b87f8d7e90c84/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/dbbfc236911601c559f475668f041ccef851398a/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/a4b9a2f736df2059f601f865890b87f8d7e90c84/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `dbbfc236911601c559f475668f041ccef851398a`; the
-manifest SHA-256 is `3a976c840b6f110b8512394a8948db21578e0cbe4938dac479900f42f84884ff`.
+The current Deko workflow/manifest commit is `a4b9a2f736df2059f601f865890b87f8d7e90c84`; the
+manifest SHA-256 is `12351b57d915ba3e1481cdfdff737524f5b1899ced5b1755c0ddb3cdc7f6a061`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

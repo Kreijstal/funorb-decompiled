@@ -32,7 +32,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             MessageDialog.isSignedDecimalInt((byte) -98, (CharSequence) null);
           }
           if (!this.retryButtonAction) {
-            ArchiveLoadSequence.a(NodeHashTableIterator.getActiveApplet(111), (byte) 112, "tochangedisplayname.ws");
+            ArchiveLoadSequence.openRelativeUrlInNewWindow(NodeHashTableIterator.getActiveApplet(111), (byte) 112, "tochangedisplayname.ws");
           } else {
             MidiNote.setPendingLoginUiAction(3, false);
             this.dismissDialog((byte) -104);
@@ -89,14 +89,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         }
         if (methodGuard >= -48) {
             availableEntityCategoryCount = -112;
-            InstrumentPatch.activeFullscreenCanvas = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
+            InstrumentPatch.activeFullscreenCanvas = LoginMethod.createFullscreenFocusCanvas(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
             if (null != InstrumentPatch.activeFullscreenCanvas) {
                 UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.activeFullscreenCanvas, 57);
                 return;
             }
             return;
         }
-        InstrumentPatch.activeFullscreenCanvas = LoginMethod.a(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
+        InstrumentPatch.activeFullscreenCanvas = LoginMethod.createFullscreenFocusCanvas(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
         if (null == InstrumentPatch.activeFullscreenCanvas) {
             return;
         }
@@ -239,7 +239,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               }
               NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
               PasswordValidator.avatarCryFrameCursor = 0;
-              MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.soundEffectVolume);
+              MeshMaterial.playDelayedSoundSample(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.soundEffectVolume);
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
               avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               heldCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -364,7 +364,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 }
                 NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
                 PasswordValidator.avatarCryFrameCursor = 0;
-                MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.soundEffectVolume);
+                MeshMaterial.playDelayedSoundSample(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.soundEffectVolume);
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                 avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 steeredCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
@@ -517,7 +517,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             }
             NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
             PasswordValidator.avatarCryFrameCursor = 0;
-            MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.soundEffectVolume);
+            MeshMaterial.playDelayedSoundSample(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.soundEffectVolume);
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
             avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steppedCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;

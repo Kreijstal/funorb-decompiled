@@ -303,7 +303,7 @@ final class BufferedSocket implements Runnable {
                 BufferedSocket.clearSessionAndReload((byte) 45, (java.applet.Applet) null);
             }
             MeshPrioritySupport.updateSessionCookie("", applet, -1);
-            EmailAvailabilityQuery.a(applet, false);
+            EmailAvailabilityQuery.navigateToReloadPage(applet, false);
         } catch (RuntimeException reloadFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reloadFailure), "ba.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }

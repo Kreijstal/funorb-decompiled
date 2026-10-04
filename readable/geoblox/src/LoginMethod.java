@@ -61,7 +61,7 @@ final class LoginMethod {
 
     final void rememberMethod(java.applet.Applet applet, int methodGuard) {
         try {
-            IntArrayQuery.a((byte) -25, 31536000L, applet, "jagex-last-login-method", this.methodName);
+            IntArrayQuery.writeCookieValue((byte) -25, 31536000L, applet, "jagex-last-login-method", this.methodName);
             if (methodGuard != 0) {
                 java.applet.Applet var4 = (java.applet.Applet) null;
                 this.rememberMethod((java.applet.Applet) null, -71);
@@ -71,44 +71,44 @@ final class LoginMethod {
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
-        java.awt.Frame var6 = null;
-        RuntimeException var6_ref = null;
-        FullscreenFocusCanvas var7 = null;
-        java.awt.Frame var8 = null;
-        FullscreenFocusCanvas stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static FullscreenFocusCanvas createFullscreenFocusCanvas(int height, int refreshRate, int bitDepth, int methodGuard, PlatformTaskDispatcher dispatcher, int width) {
+        java.awt.Frame unusedFullscreenFrameSnapshot = null;
+        RuntimeException creationFailureForContext = null;
+        FullscreenFocusCanvas canvas = null;
+        java.awt.Frame fullscreenFrame = null;
+        FullscreenFocusCanvas canvasBeforeReturn = null;
+        RuntimeException creationFailureBeforeDescription = null;
+        StringBuilder creationMessagePrefix = null;
+        String dispatcherDescription = null;
+        RuntimeException caughtCreationFailure = null;
         try {
-          if (param3 != -3) {
+          if (methodGuard != -3) {
             gameNameText = (String) null;
           }
-          var8 = FullscreenEntrySupport.enterFullscreenAndWait(param2, -1, param0, param5, param4, param1);
-          var6 = var8;
-          if (var8 == null) {
+          fullscreenFrame = FullscreenEntrySupport.enterFullscreenAndWait(bitDepth, -1, height, width, dispatcher, refreshRate);
+          unusedFullscreenFrameSnapshot = fullscreenFrame;
+          if (fullscreenFrame == null) {
             return null;
           }
-          var7 = new FullscreenFocusCanvas();
-          var7.fullscreenFrame = var8;
-          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
-          var7.setBounds(0, 0, param5, param0);
-          var7.addFocusListener(var7);
-          var7.requestFocus();
-          stackIn_6_0 = var7;
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_9_0 = var6_ref;
-          stackIn_9_1 = new StringBuilder().append("od.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_10_2 = "null";
+          canvas = new FullscreenFocusCanvas();
+          canvas.fullscreenFrame = fullscreenFrame;
+          canvas.fullscreenFrame.add((java.awt.Component) ((Object) canvas));
+          canvas.setBounds(0, 0, width, height);
+          canvas.addFocusListener(canvas);
+          canvas.requestFocus();
+          canvasBeforeReturn = canvas;
+          return canvasBeforeReturn;
+        } catch (java.lang.RuntimeException creationFailure) {
+          caughtCreationFailure = creationFailure;
+          creationFailureForContext = caughtCreationFailure;
+          creationFailureBeforeDescription = creationFailureForContext;
+          creationMessagePrefix = new StringBuilder().append("od.A(").append(height).append(',').append(refreshRate).append(',').append(bitDepth).append(',').append(methodGuard).append(',');
+          if (dispatcher == null) {
+            dispatcherDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            dispatcherDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) creationFailureBeforeDescription), ((StringBuilder) (Object) creationMessagePrefix).append(dispatcherDescription).append(',').append(width).append(')').toString());
         }
     }
 

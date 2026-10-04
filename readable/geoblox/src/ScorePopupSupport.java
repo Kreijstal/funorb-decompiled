@@ -83,7 +83,7 @@ final class ScorePopupSupport {
           archiveGroupId = graphicsArchive.findGroupId((byte) 127, groupName);
           archiveFileId = graphicsArchive.findFileId(resourceName, -57, archiveGroupId);
           if (methodGuard == -78) {
-            loadedSpriteResult = ByteArrayBuffer.a(archiveGroupId, methodGuard ^ -95, archiveFileId, graphicsArchive);
+            loadedSpriteResult = ByteArrayBuffer.loadFirstRgbSprite(archiveGroupId, methodGuard ^ -95, archiveFileId, graphicsArchive);
             return loadedSpriteResult;
           }
           disabledSpriteResult = (Sprite) null;

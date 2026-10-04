@@ -27,7 +27,7 @@ final class DiskArchiveCache {
                 (length <= this.maximumEntryLength)) {
               if (methodGuard != -53) {
                 unusedAudioConfigurationSnapshot = (MidiPcmStream) null;
-                DiskArchiveCache.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (MidiPcmStream) null, false, -103);
+                DiskArchiveCache.initializeGameAudioOutputs((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (MidiPcmStream) null, false, -103);
               }
               writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, true) ? 1 : 0;
               if (writeSucceeded == 0) {
@@ -374,22 +374,22 @@ final class DiskArchiveCache {
         return "" + this.archiveId;
     }
 
-    final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, boolean param2, MidiPcmStream param3, boolean param4, int param5) {
-        AudioOutput.configureAudio(param5, param4, 10);
-        CacheReference.gameMusicOutput = AudioOutput.createOutput(param1, param0, 0, 22050);
-        if (param2) {
+    final static void initializeGameAudioOutputs(java.awt.Component component, PlatformTaskDispatcher dispatcher, boolean stopAfterMusicOutputCreation, MidiPcmStream musicStream, boolean stereo, int sampleRate) {
+        AudioOutput.configureAudio(sampleRate, stereo, 10);
+        CacheReference.gameMusicOutput = AudioOutput.createOutput(dispatcher, component, 0, 22050);
+        if (stopAfterMusicOutputCreation) {
             return;
         }
         try {
-            ClientScreenExitSupport.gameSoundOutput = AudioOutput.createOutput(param1, param0, 1, 1000);
+            ClientScreenExitSupport.gameSoundOutput = AudioOutput.createOutput(dispatcher, component, 1, 1000);
             WhirlpoolHash.gameSoundMixer = new PcmStreamMixer();
             ClientScreenExitSupport.gameSoundOutput.setRootStream(WhirlpoolHash.gameSoundMixer);
-            PasswordWidgetRenderer.gameMusicStream = param3;
+            PasswordWidgetRenderer.gameMusicStream = musicStream;
             AsyncResourceDownloader.setGameMusicVolume(-15346, SpriteCheckboxRenderer.gameMusicVolumeLevel);
             EmailValidator.updateSoundEffectVolume(SocialListEntry.soundEffectVolume, (byte) -67);
-            CacheReference.gameMusicOutput.setRootStream(param3);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            CacheReference.gameMusicOutput.setRootStream(musicStream);
+        } catch (RuntimeException audioSetupFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) audioSetupFailure), "jh.D(" + (component != null ? "{...}" : "null") + ',' + (dispatcher != null ? "{...}" : "null") + ',' + stopAfterMusicOutputCreation + ',' + (musicStream != null ? "{...}" : "null") + ',' + stereo + ',' + sampleRate + ')');
         }
     }
 

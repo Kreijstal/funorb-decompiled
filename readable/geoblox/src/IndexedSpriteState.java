@@ -14,130 +14,130 @@ abstract class IndexedSpriteState {
 
     abstract void draw(int x, int y);
 
-    private final static IndexedSprite a(int param0, int[] param1, IndexedSprite param2) {
-        IndexedSprite var3 = null;
-        RuntimeException var3_ref = null;
-        IndexedSprite stackIn_2_0 = null;
-        IndexedSprite stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final static IndexedSprite copyIndexedSpriteWithPalette(int methodGuard, int[] palette, IndexedSprite sourceSprite) {
+        IndexedSprite copy = null;
+        RuntimeException copyFailureForContext = null;
+        IndexedSprite nullWrongGuardResult = null;
+        IndexedSprite copyBeforeReturn = null;
+        RuntimeException copyFailureBeforeDescription = null;
+        StringBuilder copyMessagePrefix = null;
+        String paletteDescription = null;
+        StringBuilder messageBeforeSource = null;
+        String sourceDescription = null;
+        RuntimeException caughtCopyFailure = null;
         try {
-          var3 = new IndexedSprite(0, 0, 0);
-          var3.width = param2.width;
-          var3.fullWidth = param2.fullWidth;
-          var3.height = param2.height;
-          if (param0 >= -62) {
-            stackIn_2_0 = (IndexedSprite) null;
-            return stackIn_2_0;
+          copy = new IndexedSprite(0, 0, 0);
+          copy.width = sourceSprite.width;
+          copy.fullWidth = sourceSprite.fullWidth;
+          copy.height = sourceSprite.height;
+          if (methodGuard >= -62) {
+            nullWrongGuardResult = (IndexedSprite) null;
+            return nullWrongGuardResult;
           }
-          var3.fullHeight = param2.fullHeight;
-          var3.palette = param1;
-          var3.indices = param2.indices;
-          var3.trimY = param2.trimY;
-          var3.trimX = param2.trimX;
-          stackIn_4_0 = var3;
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_7_0 = var3_ref;
-          stackIn_7_1 = new StringBuilder().append("ha.I(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          copy.fullHeight = sourceSprite.fullHeight;
+          copy.palette = palette;
+          copy.indices = sourceSprite.indices;
+          copy.trimY = sourceSprite.trimY;
+          copy.trimX = sourceSprite.trimX;
+          copyBeforeReturn = copy;
+          return copyBeforeReturn;
+        } catch (java.lang.RuntimeException copyFailure) {
+          caughtCopyFailure = copyFailure;
+          copyFailureForContext = caughtCopyFailure;
+          copyFailureBeforeDescription = copyFailureForContext;
+          copyMessagePrefix = new StringBuilder().append("ha.I(").append(methodGuard).append(',');
+          if (palette == null) {
+            paletteDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            paletteDescription = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
-            stackIn_11_2 = "null";
+          messageBeforeSource = ((StringBuilder) (Object) copyMessagePrefix).append(paletteDescription).append(',');
+          if (sourceSprite == null) {
+            sourceDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            sourceDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) copyFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeSource).append(sourceDescription).append(')').toString());
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
-        Sprite var18 = null;
-        IndexedSprite[] var5 = null;
-        IndexedSprite[][] var6 = null;
-        int[][] var20 = null;
-        int[][] var17 = null;
-        int[][] var7 = null;
-        IndexedSprite[] var15 = null;
-        int var11_int = 0;
-        Sprite var16 = null;
-        Sprite var19 = null;
-        Sprite var11 = null;
-        Sprite var12 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var13 = Geoblox.clientControlFlowFlag;
+    final static void loadCommonUiResources(byte methodGuard, ResourceArchive buttonImageArchive, ResourceArchive spriteArchive, ResourceArchive fontArchive) {
+        Sprite buttonImage = null;
+        IndexedSprite[] screenOptionFrames = null;
+        IndexedSprite[][] screenOptionStateSets = null;
+        int[][] statePalettes = null;
+        int[][] palettesBeforeWorkingAlias = null;
+        int[][] workingPalettes = null;
+        IndexedSprite[] currentFrameStates = null;
+        int paletteStateIndex = 0;
+        Sprite leftButtonCap = null;
+        Sprite leftButtonCapRasterAlias = null;
+        Sprite rightButtonCap = null;
+        Sprite buttonCenter = null;
+        int paletteCloneIndexThenRecoloredIndex = 0;
+        int spriteFrameIndexThenButtonHeight = 0;
+        int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
-            UnderlinedButtonRenderer.frameBottomSprites = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
-            AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
-            MouseWheelInput.commonButtonSprites = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
-            ClientClockSupport.validationStateSprites = ByteArrayPoolSupport.loadSpritesByName((byte) -39, "validation", "commonui", param2);
-            UiFontResources.commonUiSmallFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
-            DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
-            UiFontResources.commonUiBoldFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14bold", "commonui", param2));
-            var18 = new Sprite(param1.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
-            SocketConnector.loadIndexedSprite(param2, 1, "commonui", "dropdown");
-            var5 = MenuScreen.loadIndexedSpriteFrames("commonui", "screen_options", true, param2);
-            DebugOverviewCompositor.field_a = new IndexedSprite[4];
-            ClientTimingSupport.field_e = new IndexedSprite[4];
+            RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", spriteArchive, 0);
+            UnderlinedButtonRenderer.frameBottomSprites = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", spriteArchive, 0);
+            AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", spriteArchive, (byte) -78, "commonui");
+            MouseWheelInput.commonButtonSprites = OpacityWidget.loadSpriteFrames("button", "commonui", spriteArchive, 0);
+            ClientClockSupport.validationStateSprites = ByteArrayPoolSupport.loadSpritesByName((byte) -39, "validation", "commonui", spriteArchive);
+            UiFontResources.commonUiSmallFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo12", "commonui", spriteArchive));
+            DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo14", "commonui", spriteArchive));
+            UiFontResources.commonUiBoldFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo14bold", "commonui", spriteArchive));
+            buttonImage = new Sprite(buttonImageArchive.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
+            SocketConnector.loadIndexedSprite(spriteArchive, 1, "commonui", "dropdown");
+            screenOptionFrames = MenuScreen.loadIndexedSpriteFrames("commonui", "screen_options", true, spriteArchive);
+            DebugOverviewCompositor.screenOptionOneStateSprites = new IndexedSprite[4];
+            ClientTimingSupport.screenOptionTwoStateSprites = new IndexedSprite[4];
             PointerMenuState.screenOptionThreeStateSprites = new IndexedSprite[4];
-            var6 = new IndexedSprite[][]{DebugOverviewCompositor.field_a, ClientTimingSupport.field_e, PointerMenuState.screenOptionThreeStateSprites};
-            var20 = new int[4][];
-            var17 = var20;
-            var7 = var17;
-            var7[0] = var5[0].palette;
-            for (var8 = 1; var20.length > var8; var8++) {
-                var7[var8] = (int[]) ((Object) var20[0].clone());
+            screenOptionStateSets = new IndexedSprite[][]{DebugOverviewCompositor.screenOptionOneStateSprites, ClientTimingSupport.screenOptionTwoStateSprites, PointerMenuState.screenOptionThreeStateSprites};
+            statePalettes = new int[4][];
+            palettesBeforeWorkingAlias = statePalettes;
+            workingPalettes = palettesBeforeWorkingAlias;
+            workingPalettes[0] = screenOptionFrames[0].palette;
+            for (paletteCloneIndexThenRecoloredIndex = 1; statePalettes.length > paletteCloneIndexThenRecoloredIndex; paletteCloneIndexThenRecoloredIndex++) {
+                workingPalettes[paletteCloneIndexThenRecoloredIndex] = (int[]) ((Object) statePalettes[0].clone());
             }
-            var8 = var5[0].indices[0];
-            var20[2][var8] = 16777215;
-            var20[1][var8] = 2394342;
-            var20[3][var8] = 4767999;
-            for (var9 = 0; var9 < 3; var9++) {
-                var15 = var6[var9];
-                IndexedSprite[] var10 = var15;
-                for (var11_int = 0; var11_int < var15.length; var11_int++) {
-                    var15[var11_int] = IndexedSpriteState.a(-84, var20[var11_int], var5[var9]);
+            paletteCloneIndexThenRecoloredIndex = screenOptionFrames[0].indices[0];
+            statePalettes[2][paletteCloneIndexThenRecoloredIndex] = 16777215;
+            statePalettes[1][paletteCloneIndexThenRecoloredIndex] = 2394342;
+            statePalettes[3][paletteCloneIndexThenRecoloredIndex] = 4767999;
+            for (spriteFrameIndexThenButtonHeight = 0; spriteFrameIndexThenButtonHeight < 3; spriteFrameIndexThenButtonHeight++) {
+                currentFrameStates = screenOptionStateSets[spriteFrameIndexThenButtonHeight];
+                IndexedSprite[] unusedFrameStatesAlias = currentFrameStates;
+                for (paletteStateIndex = 0; paletteStateIndex < currentFrameStates.length; paletteStateIndex++) {
+                    currentFrameStates[paletteStateIndex] = IndexedSpriteState.copyIndexedSpriteWithPalette(-84, statePalettes[paletteStateIndex], screenOptionFrames[spriteFrameIndexThenButtonHeight]);
                 }
             }
-            var9 = var18.height;
+            spriteFrameIndexThenButtonHeight = buttonImage.height;
             SpriteCheckboxRenderer.pushRasterTarget(-105);
-            if (param0 <= 98) {
-                IndexedSprite var14 = (IndexedSprite) null;
-                IndexedSpriteState.a(72, (int[]) null, (IndexedSprite) null);
+            if (methodGuard <= 98) {
+                IndexedSprite unusedNullSpriteSnapshot = (IndexedSprite) null;
+                IndexedSpriteState.copyIndexedSpriteWithPalette(72, (int[]) null, (IndexedSprite) null);
             }
-            var18.setAsRasterTarget();
+            buttonImage.setAsRasterTarget();
             SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-            var16 = new Sprite(var9, var9);
-            var19 = var16;
-            var19.setAsRasterTarget();
-            var18.drawUnmasked(0, 0);
-            var11 = new Sprite(var9, var9);
-            var11.setAsRasterTarget();
-            var18.drawUnmasked(var9 - var18.width, 0);
-            var12 = new Sprite(var18.width - 2 * var9, var9);
-            var12.setAsRasterTarget();
-            var18.drawUnmasked(-var9, 0);
+            leftButtonCap = new Sprite(spriteFrameIndexThenButtonHeight, spriteFrameIndexThenButtonHeight);
+            leftButtonCapRasterAlias = leftButtonCap;
+            leftButtonCapRasterAlias.setAsRasterTarget();
+            buttonImage.drawUnmasked(0, 0);
+            rightButtonCap = new Sprite(spriteFrameIndexThenButtonHeight, spriteFrameIndexThenButtonHeight);
+            rightButtonCap.setAsRasterTarget();
+            buttonImage.drawUnmasked(spriteFrameIndexThenButtonHeight - buttonImage.width, 0);
+            buttonCenter = new Sprite(buttonImage.width - 2 * spriteFrameIndexThenButtonHeight, spriteFrameIndexThenButtonHeight);
+            buttonCenter.setAsRasterTarget();
+            buttonImage.drawUnmasked(-spriteFrameIndexThenButtonHeight, 0);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
-            MouseWheelInput.commonButtonSprites = new Sprite[]{var16, var12, var11};
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ha.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            MouseWheelInput.commonButtonSprites = new Sprite[]{leftButtonCap, buttonCenter, rightButtonCap};
+        } catch (RuntimeException loadFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loadFailure), "ha.G(" + methodGuard + ',' + (buttonImageArchive != null ? "{...}" : "null") + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontArchive != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0) {
-        int var1 = 77 / ((param0 + 17) / 52);
+    final static int getKeyboardIdleTicks(int methodGuard) {
+        int guardQuotient = 77 / ((methodGuard + 17) / 52);
         return TextPairLoginPayload.keyboardIdleTicks;
     }
 

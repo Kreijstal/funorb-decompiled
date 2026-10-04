@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DebugOverviewCompositor {
-    static IndexedSprite[] field_a;
+    static IndexedSprite[] screenOptionOneStateSprites;
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard >= -127) {
             return;
         }
-        field_a = null;
+        screenOptionOneStateSprites = null;
     }
 
     final static void compositeScaledDebugOverview(int destinationHeight, boolean enabled, Sprite overviewSprite, int destinationTop, int destinationWidth, int destinationLeft) {

@@ -51,7 +51,7 @@ abstract class CacheReference extends DualLinkNode {
             EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.createEmailAvailabilityQuery((byte) 86, "");
             int guardResidue = 103 / ((methodGuard - 70) / 34);
             EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -126, false);
-            IndexedSpriteState.a((byte) 103, buttonImageArchive, commonUiSpriteArchive, fontArchive);
+            IndexedSpriteState.loadCommonUiResources((byte) 103, buttonImageArchive, commonUiSpriteArchive, fontArchive);
             AccountCreationForm.rebuildAccountDialogLayerAndOpenLogin((byte) -121);
             ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
             WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;

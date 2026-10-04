@@ -10,7 +10,7 @@ final class CheckboxWidget extends ButtonWidget {
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard >= -65) {
             PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
-            CheckboxWidget.a(98, (PlatformTaskDispatcher) null);
+            CheckboxWidget.queryDisplayModesAndWait(98, (PlatformTaskDispatcher) null);
         }
         loginJustPlayTooltipText = null;
         createNewsOptInTooltipText = null;
@@ -39,65 +39,65 @@ final class CheckboxWidget extends ButtonWidget {
         }
     }
 
-    final static DisplayModeInfo[] a(int param0, PlatformTaskDispatcher param1) {
-        int var5 = 0;
-        DisplayModeInfo[] stackIn_3_0 = null;
-        DisplayModeInfo[] stackIn_9_0 = null;
-        DisplayModeInfo[] stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int[] var3 = null;
-        DisplayModeInfo[] var4 = null;
-        DisplayModeInfo var6 = null;
-        int var7 = 0;
-        PlatformTask var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    final static DisplayModeInfo[] queryDisplayModesAndWait(int methodGuard, PlatformTaskDispatcher dispatcher) {
+        int modeIndex = 0;
+        DisplayModeInfo[] unsupportedResult = null;
+        DisplayModeInfo[] failedTaskResult = null;
+        DisplayModeInfo[] modesBeforeReturn = null;
+        RuntimeException queryFailureBeforeDescription = null;
+        StringBuilder queryMessagePrefix = null;
+        String dispatcherDescription = null;
+        RuntimeException caughtQueryFailure = null;
+        RuntimeException queryFailureForContext = null;
+        int[] workingModeWords = null;
+        DisplayModeInfo[] displayModes = null;
+        DisplayModeInfo mode = null;
+        int unusedClientControlSnapshot = 0;
+        PlatformTask displayModeTask = null;
+        int[] modeWordsBeforeWorkingAlias = null;
+        int[] returnedModeWords = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (!param1.hasFullscreenSupport(-26098)) {
-            stackIn_3_0 = new DisplayModeInfo[]{};
-            return stackIn_3_0;
+          if (!dispatcher.hasFullscreenSupport(-26098)) {
+            unsupportedResult = new DisplayModeInfo[]{};
+            return unsupportedResult;
           }
-          var8 = param1.requestDisplayModes(34);
-          while (var8.status == 0) {
+          displayModeTask = dispatcher.requestDisplayModes(34);
+          while (displayModeTask.status == 0) {
             ByteTextDecodingSupport.sleepMillis(0, 10L);
           }
-          if (var8.status == 2) {
-            stackIn_9_0 = new DisplayModeInfo[]{};
-            return stackIn_9_0;
+          if (displayModeTask.status == 2) {
+            failedTaskResult = new DisplayModeInfo[]{};
+            return failedTaskResult;
           }
-          var10 = (int[]) (var8.result);
-          var9 = var10;
-          var3 = var9;
-          var4 = new DisplayModeInfo[var10.length >> 2];
-          if (param0 <= 61) {
+          returnedModeWords = (int[]) (displayModeTask.result);
+          modeWordsBeforeWorkingAlias = returnedModeWords;
+          workingModeWords = modeWordsBeforeWorkingAlias;
+          displayModes = new DisplayModeInfo[returnedModeWords.length >> 2];
+          if (methodGuard <= 61) {
             errorReportLoginLongValue = 120L;
           }
-          for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new DisplayModeInfo();
-            var4[var5] = var6;
-            var6.width = var3[var5 << 2];
-            var6.height = var3[1 + (var5 << 2)];
-            var6.bitDepth = var3[2 + (var5 << 2)];
-            var6.refreshRate = var3[(var5 << 2) + 3];
+          for (modeIndex = 0; modeIndex < displayModes.length; modeIndex++) {
+            mode = new DisplayModeInfo();
+            displayModes[modeIndex] = mode;
+            mode.width = workingModeWords[modeIndex << 2];
+            mode.height = workingModeWords[1 + (modeIndex << 2)];
+            mode.bitDepth = workingModeWords[2 + (modeIndex << 2)];
+            mode.refreshRate = workingModeWords[(modeIndex << 2) + 3];
           }
-          stackIn_16_0 = var4;
-          return stackIn_16_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_19_0 = var2;
-          stackIn_19_1 = new StringBuilder().append("vi.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_20_2 = "null";
+          modesBeforeReturn = displayModes;
+          return modesBeforeReturn;
+        } catch (java.lang.RuntimeException queryFailure) {
+          caughtQueryFailure = queryFailure;
+          queryFailureForContext = caughtQueryFailure;
+          queryFailureBeforeDescription = queryFailureForContext;
+          queryMessagePrefix = new StringBuilder().append("vi.F(").append(methodGuard).append(',');
+          if (dispatcher == null) {
+            dispatcherDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            dispatcherDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryFailureBeforeDescription), ((StringBuilder) (Object) queryMessagePrefix).append(dispatcherDescription).append(')').toString());
         }
     }
 

@@ -50,7 +50,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
             stackIn_16_0 = this.disabledColor;
           }
           var7 = stackIn_16_0;
-          MultiHandleSliderRenderer.a(this.buttonSprites, var7, parentX + widget.widgetX, widget.widgetWidth, (-this.buttonSprites[0].fullHeight + widget.widgetHeight >> 1) + (parentY + widget.widgetY), -17154);
+          MultiHandleSliderRenderer.drawGrayTintedHorizontalThreePartStrip(this.buttonSprites, var7, parentX + widget.widgetX, widget.widgetWidth, (-this.buttonSprites[0].fullHeight + widget.widgetHeight >> 1) + (parentY + widget.widgetY), -17154);
           stackIn_19_0 = (widgetEnabled) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.font.drawParagraph(widget.widgetText, widget.widgetX + parentX, -2 + parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, var8, -1, 1, 1, this.font.maxAscent);

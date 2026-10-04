@@ -19,7 +19,7 @@ final class ArchiveLoadSequence {
             var4_float = (float)(this.currentStepIndex + 1) + (float)percentage / 100.0f;
             if (methodGuard > -90) {
                 String var5 = (String) null;
-                ArchiveLoadSequence.a((java.applet.Applet) null, (byte) 114, (String) null);
+                ArchiveLoadSequence.openRelativeUrlInNewWindow((java.applet.Applet) null, (byte) 114, (String) null);
             }
             if (percentage == 0) {
                 this.statusText = step.waitingText;
@@ -48,7 +48,7 @@ final class ArchiveLoadSequence {
         var3 = Geoblox.clientControlFlowFlag;
         if (!methodGuard) {
           var4 = (String) null;
-          ArchiveLoadSequence.a((java.applet.Applet) null, (byte) -56, (String) null);
+          ArchiveLoadSequence.openRelativeUrlInNewWindow((java.applet.Applet) null, (byte) -56, (String) null);
         }
         while (this.currentStepIndex < this.stepCount) {
           var5 = this.steps[this.currentStepIndex];
@@ -223,54 +223,54 @@ final class ArchiveLoadSequence {
         return -1;
     }
 
-    final static void a(java.applet.Applet param0, byte param1, String param2) {
+    final static void openRelativeUrlInNewWindow(java.applet.Applet applet, byte methodGuard, String relativeUrl) {
         try {
-            java.net.URL var3 = null;
-            Exception var3_ref = null;
-            RuntimeException var3_ref2 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            String stackIn_9_2 = null;
-            StringBuilder stackIn_11_1 = null;
-            String stackIn_12_2 = null;
-            Throwable decompiledCaughtException = null;
+            java.net.URL targetUrl = null;
+            Exception printedNavigationFailure = null;
+            RuntimeException navigationFailureForContext = null;
+            RuntimeException navigationFailureBeforeDescription = null;
+            StringBuilder navigationMessagePrefix = null;
+            String appletDescription = null;
+            StringBuilder messageBeforeUrl = null;
+            String urlDescription = null;
+            Throwable caughtNavigationThrowable = null;
             try {
               try {
-                if (param1 <= 109) {
+                if (methodGuard <= 109) {
                   fetchingHighscoresText = (String) null;
                 }
-                var3 = new java.net.URL(param0.getCodeBase(), param2);
-                var3 = SessionGameApplet.applySessionOverridesToUrl(var3, 59, param0);
-                LimitedRandomAccessFile.openUrlInNewWindow(var3.toString(), (byte) 64, true, param0);
+                targetUrl = new java.net.URL(applet.getCodeBase(), relativeUrl);
+                targetUrl = SessionGameApplet.applySessionOverridesToUrl(targetUrl, 59, applet);
+                LimitedRandomAccessFile.openUrlInNewWindow(targetUrl.toString(), (byte) 64, true, applet);
                 return;
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var3_ref = (Exception) (Object) decompiledCaughtException;
-                var3_ref.printStackTrace();
+              } catch (java.lang.Exception navigationException) {
+                caughtNavigationThrowable = navigationException;
+                printedNavigationFailure = (Exception) (Object) caughtNavigationThrowable;
+                printedNavigationFailure.printStackTrace();
                 return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = var3_ref2;
-              stackIn_8_1 = new StringBuilder().append("eb.C(");
-              if (param0 == null) {
-                stackIn_9_2 = "null";
+            } catch (java.lang.RuntimeException navigationFailure) {
+              caughtNavigationThrowable = navigationFailure;
+              navigationFailureForContext = (RuntimeException) (Object) caughtNavigationThrowable;
+              navigationFailureBeforeDescription = navigationFailureForContext;
+              navigationMessagePrefix = new StringBuilder().append("eb.C(");
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_9_2 = "{...}";
+                appletDescription = "{...}";
               }
-              stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',');
-              if (param2 == null) {
-                stackIn_12_2 = "null";
+              messageBeforeUrl = ((StringBuilder) (Object) navigationMessagePrefix).append(appletDescription).append(',').append(methodGuard).append(',');
+              if (relativeUrl == null) {
+                urlDescription = "null";
               } else {
-                stackIn_12_2 = "{...}";
+                urlDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeUrl).append(urlDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

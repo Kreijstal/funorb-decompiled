@@ -117,18 +117,18 @@ final class GrowableIntList {
         int var3 = -48 % ((-39 - methodGuard) / 50);
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void createClientCookieMarker(java.applet.Applet applet, byte methodGuard) {
         ValidationIconWidget.clientCookieMarkerCreated = true;
-        String var2 = "tuhstatbut";
-        String var3 = "rvnadlm";
-        long var4 = -1L;
-        if (param1 <= 98) {
+        String markerCookieName = "tuhstatbut";
+        String markerCookieValue = "rvnadlm";
+        long discardCookieMaxAge = -1L;
+        if (methodGuard <= 98) {
             return;
         }
         try {
-            IntArrayQuery.a((byte) 115, var4, param0, var2, var3);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            IntArrayQuery.writeCookieValue((byte) 115, discardCookieMaxAge, applet, markerCookieName, markerCookieValue);
+        } catch (RuntimeException markerFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) markerFailure), "sj.E(" + (applet != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 

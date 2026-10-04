@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "dbbfc236911601c559f475668f041ccef851398a",
+    "commit": "a4b9a2f736df2059f601f865890b87f8d7e90c84",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "3a976c840b6f110b8512394a8948db21578e0cbe4938dac479900f42f84884ff"
+      "sha256": "12351b57d915ba3e1481cdfdff737524f5b1899ced5b1755c0ddb3cdc7f6a061"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,31 +3291,37 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "ad044b01ff24eee242a76c9c6b32ec57d47c560a0445186a8d4ebc033edcb6cc",
+    "outputTreeSha256": "ff195c21347e95c45233e7118d9830ef3ff00844ba21aa71729430b42ad4be57",
     "files": 303,
-    "rules": 17891,
-    "identifierEdits": 115962,
+    "rules": 18304,
+    "identifierEdits": 117503,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 116322,
+    "totalEdits": 117863,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 349,
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 171,
-      "rulesAdded": 429,
-      "rulesRefined": 0,
+      "version": 172,
+      "rulesAdded": 413,
+      "rulesRefined": 4,
       "fields": 2,
-      "methods": 38,
-      "parameters": 82,
-      "locals": 302,
-      "labels": 5,
-      "previousCompleteRulesPreserved": 17462,
-      "explicitlyCorrectedSymbols": [],
+      "methods": 30,
+      "parameters": 106,
+      "locals": 275,
+      "labels": 0,
+      "previousRules": 17891,
+      "previousCompleteRulesPreserved": 17887,
+      "explicitlyCorrectedSymbols": [
+        "L:ja.b(II)I#0",
+        "L:ja.b(II)I#1",
+        "M:ja.b(II)I",
+        "P:ja.b(II)I#1"
+      ],
       "rawInputAndGeneratorPinsUnchanged": true,
       "remainingOpaqueBlockLabels": 93,
       "remainingOpaqueLoopLabels": 39,
@@ -7971,5 +7977,124 @@
     "remainingSingleLetterMethods": 30,
     "remainingOpaqueLabels": 132,
     "scope": "Pass 171 adds 429 guarded names: two fields, 38 methods, 82 parameters,\n302 locals and five lexical labels. Email helpers expose syntax/local-part\nvalidation, completed-query replacement and username-suggestion publication.\nThe first-at-sign split and explicit domain offset, quoted escape/dot checks,\n64-character limit, original failure identities, null behavior, pending-query\nreuse, wrong-guard recursion and partial callback effects remain. Account-name\nvalidation keeps display-name checks before its optional character scan.\nPassword/name comparisons keep underscore removal, UTF16 reversal and existing\ncase/empty-text behavior. Login identifier fallback and active password/lookup\nselection retain their original identity tests and ordering.\n\nBase-37 helpers now expose encoding, display decoding and canonicalization.\nAlphabet/range thresholds, trailing-zero removal, capitalization, nonbreaking\nspaces, invalid-value results and late guard arithmetic remain. Integer helpers\nexpose signed decimal parsing, radix/sign/digit/overflow validation and the\noriginal packed bit-count algorithm, including its minimum-two negative path.\nLiteral replacement keeps its original search-resumption and empty-target\nbehavior. Error printing retains its guard division, System.out target and\nliteral percent-zero-a replacement.\n\nPacket helpers expose one-bit booleans, byte-equals-one replies, CRC/FIFO\nacknowledgement emission and opcode/payload diagnostic formatting. The\nbyte-equals-one reader has no inferred compression meaning. Cipher writes,\nreserved/backpatched lengths, CRC readback distance, buffer aliases, queue\niteration without unlinking, partial writes and guard side effects remain.\nCookie/settings readers keep raw values, semicolon/equals splitting, trimming,\nfirst-match selection, script/catch boundaries and cached/parameter fallbacks.\nThey do not add decoding or guarantee browser/script success.\n\nThe achievement details renderer exposes masks, hover/selection, grid layout,\ndescription spacing, displayed orb points and repeated coin-icon counts.\nThese arrays are named by display consumers without assigning server reward\nsemantics. Dotted focus rectangles, menu initialization, terms-link markup,\naccount background/dialog rendering, fullscreen/reconnect checks and UI polling\nare named. Original palette/clip/guard effects and unused wheel/render arguments\nremain. Heap-capacity estimation still reflects Runtime.maxMemory, retains its\ncast/rounding/catches and does not alter a heap limit.\n\nThe cached random-seed writer retains the absent-file zero buffer, all-zero-file\nfailure, minus-one fallback bytes, exact comparison operands and partial fill.\nIts nonzero client-control catch continuation can skip the payload write; all\nthree plain seed blocks and their breaks preserve those destinations. Neither\nthat flag nor any other client-control value is assumed zero. No runtime RNG or\ndeterminism policy changes.\n\nAll 17,462 previous complete rules and raw/decompiler/naming/workflow/stub/\nnative/text pins remain exact. The export has 17,891 rules, 115,962 identifier\nedits, eleven class-name literal edits and 349 label edits: 116,322 total.\nBoth 303-file corpora compile, reproduce and reverse byte exactly, preserving\n19,498 dictionary identities, 136,607 bindings, 388 overrides, 245 label\ndefinitions and 811 label records. All 27 publication tests pass. No native\nprobes or new runtime cases are added or run by this naming pass.\n\nEight large labeled bodies, 132 opaque labels (93 plain blocks and 39 loops),\n59 opaque fields and 30 single-letter methods remain. Full validation/login/\nbootstrap/cookies/UI/network/input/audio/assets/game/server/browser/phone and\nheap/presented-FPS acceptance remain unverified."
+  },
+  "startupArchiveAudioAndMeshNaming": {
+    "version": 172,
+    "rulesAdded": 413,
+    "rulesRefined": 4,
+    "fields": 2,
+    "methods": 30,
+    "parameters": 106,
+    "locals": 275,
+    "labels": 0,
+    "previousRules": 17891,
+    "previousCompleteRulesPreserved": 17887,
+    "explicitlyCorrectedSymbols": [
+      "L:ja.b(II)I#0",
+      "L:ja.b(II)I#1",
+      "M:ja.b(II)I",
+      "P:ja.b(II)I#1"
+    ],
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "remainingOpaqueBlockLabels": 93,
+    "remainingOpaqueLoopLabels": 39,
+    "wholeGameEquivalenceVerified": false,
+    "previousSourceWorkflowCommit": "dbbfc236911601c559f475668f041ccef851398a",
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "a4b9a2f736df2059f601f865890b87f8d7e90c84",
+    "sourceProofTest": "readable/tests/test-geoblox-rule-builder.mjs",
+    "sourceProofTestSha256": "b233998fb770cddc1a5bc7438482751998a67feff194bb4a7126778828d6eaa9",
+    "publicationTestGroupsPassed": 27,
+    "explicitRuleCorrections": [
+      {
+        "symbol": "L:ja.b(II)I#0",
+        "before": {
+          "symbol": "L:ja.b(II)I#0",
+          "originalName": "var2",
+          "to": "paddingToByteBoundary",
+          "evidence": "ja.java computes 8-(param1&7) when needed so the return value reaches the next multiple-of-eight bit offset."
+        },
+        "after": {
+          "symbol": "L:ja.b(II)I#0",
+          "originalName": "var2",
+          "to": "paddingToMultipleOfEight",
+          "evidence": "Correction from complete raw corpus/caller audit: ja.b(II)I is used by nh only to pad a PAYLOAD BYTE COUNT to a multiple of eight before XTEA. Previous bit-offset/byte-aligned-bit names assigned incorrect units. The helper is unit-neutral integer alignment, retains original 8-(value&7), guard1221916132/return89, signed values and addition overflow. Pass172 audited names only. Original JVM identity/spelling and declaration ordinal guard each rule. Preserve statements/constants/guards, every client-control value, aliases/read/unused snapshots, integer overflow/floating order, callbacks/partial effects, exception/finally/monitor scopes and diagnostic literals. No body/bytecode/runtime policy repair. All unaffected previous complete rules and raw/decompiler/naming/workflow/stub/native/text pins remain exact. Source compilation, bindings/overrides/lexical targets, deterministic reproduction and byte-exact dictionary reversal verify renaming. No new native runtime cases/probes; whole game/assets/server/browser/phone and heap/presented-FPS acceptance remain unverified."
+        }
+      },
+      {
+        "symbol": "L:ja.b(II)I#1",
+        "before": {
+          "symbol": "L:ja.b(II)I#1",
+          "originalName": "var3",
+          "to": "byteAlignedBitOffset",
+          "evidence": "ja.java returns param1 plus the padding amount computed in var2."
+        },
+        "after": {
+          "symbol": "L:ja.b(II)I#1",
+          "originalName": "var3",
+          "to": "alignedValue",
+          "evidence": "Correction from complete raw corpus/caller audit: ja.b(II)I is used by nh only to pad a PAYLOAD BYTE COUNT to a multiple of eight before XTEA. Previous bit-offset/byte-aligned-bit names assigned incorrect units. The helper is unit-neutral integer alignment, retains original 8-(value&7), guard1221916132/return89, signed values and addition overflow. Pass172 audited names only. Original JVM identity/spelling and declaration ordinal guard each rule. Preserve statements/constants/guards, every client-control value, aliases/read/unused snapshots, integer overflow/floating order, callbacks/partial effects, exception/finally/monitor scopes and diagnostic literals. No body/bytecode/runtime policy repair. All unaffected previous complete rules and raw/decompiler/naming/workflow/stub/native/text pins remain exact. Source compilation, bindings/overrides/lexical targets, deterministic reproduction and byte-exact dictionary reversal verify renaming. No new native runtime cases/probes; whole game/assets/server/browser/phone and heap/presented-FPS acceptance remain unverified."
+        }
+      },
+      {
+        "symbol": "M:ja.b(II)I",
+        "before": {
+          "symbol": "M:ja.b(II)I",
+          "to": "alignBitOffset",
+          "evidence": "ja.java rounds the second integer upward to the next multiple of eight using param1&7; the first integer only guards the decompiler's sentinel path.",
+          "originalName": "b"
+        },
+        "after": {
+          "symbol": "M:ja.b(II)I",
+          "to": "roundUpToMultipleOfEight",
+          "evidence": "Correction from complete raw corpus/caller audit: ja.b(II)I is used by nh only to pad a PAYLOAD BYTE COUNT to a multiple of eight before XTEA. Previous bit-offset/byte-aligned-bit names assigned incorrect units. The helper is unit-neutral integer alignment, retains original 8-(value&7), guard1221916132/return89, signed values and addition overflow. Pass172 audited names only. Original JVM identity/spelling and declaration ordinal guard each rule. Preserve statements/constants/guards, every client-control value, aliases/read/unused snapshots, integer overflow/floating order, callbacks/partial effects, exception/finally/monitor scopes and diagnostic literals. No body/bytecode/runtime policy repair. All unaffected previous complete rules and raw/decompiler/naming/workflow/stub/native/text pins remain exact. Source compilation, bindings/overrides/lexical targets, deterministic reproduction and byte-exact dictionary reversal verify renaming. No new native runtime cases/probes; whole game/assets/server/browser/phone and heap/presented-FPS acceptance remain unverified.",
+          "originalName": "b"
+        }
+      },
+      {
+        "symbol": "P:ja.b(II)I#1",
+        "before": {
+          "symbol": "P:ja.b(II)I#1",
+          "to": "bitOffset",
+          "evidence": "ja.java masks param1 with 7 to calculate padding to the next byte-aligned bit offset, then returns param1 plus that padding.",
+          "originalName": "param1"
+        },
+        "after": {
+          "symbol": "P:ja.b(II)I#1",
+          "to": "valueToAlign",
+          "evidence": "Correction from complete raw corpus/caller audit: ja.b(II)I is used by nh only to pad a PAYLOAD BYTE COUNT to a multiple of eight before XTEA. Previous bit-offset/byte-aligned-bit names assigned incorrect units. The helper is unit-neutral integer alignment, retains original 8-(value&7), guard1221916132/return89, signed values and addition overflow. Pass172 audited names only. Original JVM identity/spelling and declaration ordinal guard each rule. Preserve statements/constants/guards, every client-control value, aliases/read/unused snapshots, integer overflow/floating order, callbacks/partial effects, exception/finally/monitor scopes and diagnostic literals. No body/bytecode/runtime policy repair. All unaffected previous complete rules and raw/decompiler/naming/workflow/stub/native/text pins remain exact. Source compilation, bindings/overrides/lexical targets, deterministic reproduction and byte-exact dictionary reversal verify renaming. No new native runtime cases/probes; whole game/assets/server/browser/phone and heap/presented-FPS acceptance remain unverified.",
+          "originalName": "param1"
+        }
+      }
+    ],
+    "rawSourceAndGeneratorPinsUnchanged": true,
+    "sourceDeclarationsPreserved": 19498,
+    "orderedBindingsPreserved": 136607,
+    "fullOverridePairsPreserved": 388,
+    "lexicalLabelBindingsPreserved": 811,
+    "labelDeclarationsPreserved": 245,
+    "sourceInputCommit": "24ad5bcc4d341c95b01d84ac51aed024c270a068",
+    "sourceInputTreeSha256": "75ea7f4c50b22d27d682750806982ae0a93f0a5ad3f8a47d602920c9a26b8451",
+    "sourceOutputTreeSha256": "ff195c21347e95c45233e7118d9830ef3ff00844ba21aa71729430b42ad4be57",
+    "identifierEditsBefore": 115962,
+    "identifierEditsAfter": 117503,
+    "identifierEditsAdded": 1541,
+    "classNameLiteralEdits": 11,
+    "labelEditsBefore": 349,
+    "labelEditsAfter": 349,
+    "labelEditsAdded": 0,
+    "totalEditsAfter": 117863,
+    "changedJavaFiles": 46,
+    "nativeFixturesChanged": false,
+    "nativeProbesAdded": 0,
+    "newNativeRuntimeCases": 0,
+    "nativeProbesRun": 0,
+    "previousNativeFixtureScopesRetained": true,
+    "sourceBodyEditedByHand": false,
+    "largeLabeledBodiesAfter": 8,
+    "remainingOpaqueFields": 57,
+    "remainingSingleLetterMethods": 0,
+    "remainingOpaqueLabels": 132,
+    "scope": "Pass 172 adds 413 guarded names: two fields, all 30 remaining single-letter\nmethods, 106 parameters and 275 locals. Four older alignment rules are explicitly\ncorrected: the only fixed-corpus caller supplies a payload BYTE COUNT for XTEA,\nnot a bit offset. The helper, value and locals now describe rounding to a\nmultiple of eight. Its guard, return89, signed arithmetic and overflow remain.\nAll 17,887 unaffected previous complete rules remain exact; full before/after\nobjects for the four corrections are recorded in the manifest.\n\nStartup names expose loading/logo/account/prepared-frame selection, redraw-flag\nconsumption, AWT progress drawing and pointer-listener removal. Progress image\nand font caches, partial image-fill return, direct draw/repaint fallbacks,\nunclamped percentages, recursive wrong-guard path and original catch boundaries\nremain. The applet username helper inspects/encodes its parameter without storing\na login identity. Keyboard-idle and canvas-container helpers retain their guard\neffects. Account login/creation wrappers, logging-in dialog and button appending\nretain field writes, construction/callback order, the diagnostic-only message\nargument and unused guard-helper argument.\n\nCookie writing, marker creation, page-link updates and reload/server-list/support/\nrelative-URL navigation expose their original attempted actions. Cookiehost,\nDiscard/Expires/Max-Age arithmetic, raw script text, URL session overrides,\nwindow targets, late guard work, printed failures and Throwable catches remain.\nNeither the marker flag nor these names guarantee browser/storage success.\n\nCommon UI loading exposes sprite/font/GIF groups and palette-state preparation.\nThe first two screen-options frame sets follow the existing third-frame name\nwithout guessing their actions. Indexed-sprite copying retains shared palette\nand index arrays, allocation before its guard and partial dimensions. Button\nsplitting keeps aliases, grayscale work and successful-tail raster restoration.\nThe game archive factory flag explicitly selects discarding decoded files after\nread for policy1; it does not claim retention. RGB sprite loading and gray-tinted\nstrip drawing retain short circuits, guard writes, shared clip storage, reused\nX parameter, zero-center-width behavior and non-finally clip restoration.\n\nAudio setup and delayed playback retain output/rate/volume arguments, stream\ntracking before early return, mixer/root/volume ordering and partial state.\nPacked short/mesh decoding keeps exact-length reuse, null sentinel, signed base,\ndelta widths, optional-section reads and unclassified array meanings, priority\nnulling/narrowing and guards. Encrypted payload writing retains SecureRandom key\ngeneration, buffer/key aliases, byte padding, XTEA/modPow order, optional early\nreturn and partial destination appends. Fullscreen construction and display-mode\nwaiting retain parameters, focus/bounds order, task polling and original sleeps.\nNo timeout, renderer/audio policy, encryption or runtime behavior is repaired.\n\nThe export has 18,304 rules, 117,503 identifier edits, eleven class-name literal\nedits and 349 label edits: 117,863 total. Raw/decompiler/naming/workflow/stub/\nnative/text and label pins remain unchanged. Both 303-file corpora compile,\nreproduce and reverse byte exactly, preserving 19,498 dictionary identities,\n136,607 bindings, 388 overrides, 245 label definitions and 811 label records.\nAll 27 publication tests pass. No native probes or new runtime cases are added\nor run by this naming pass.\n\nNo single-letter methods remain in the current compiler dictionary. Eight large\nlabeled bodies, 132 opaque labels (93 plain blocks and 39 loops) and 57 opaque\nfields remain. Zero single-letter methods does not establish complete semantic\nreadability. Full startup/login/crypto/cookies/UI/network/input/audio/assets/game/\nserver/browser/phone and heap/presented-FPS acceptance remain unverified."
   }
 }

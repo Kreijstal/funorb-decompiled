@@ -79,7 +79,7 @@ final class SettingsCookieSupport {
                     AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieValueAndScratch + "\"", (byte) -92);
                 } catch (Throwable ignoredCookieWriteFailure) {
                 }
-                ByteStorage.a(applet, 20000000);
+                ByteStorage.updatePageNavigationLinks(applet, 20000000);
             } catch (RuntimeException settingsFailureForContext) {
                 throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) settingsFailureForContext), "tc.C(" + methodGuard + ',' + (settings != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ')');
             }

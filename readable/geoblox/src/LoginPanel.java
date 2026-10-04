@@ -335,7 +335,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               WidgetSkinState.pendingUsernameSuggestions = new String[requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort - 100];
             } else {
               if (requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort == 248) {
-                GrowableIntList.a(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
+                GrowableIntList.createClientCookieMarker(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
                 AudioService.sessionResponseText = ByteShortQuery.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 TextTemplateArgumentType.loginRetryAttempted = false;

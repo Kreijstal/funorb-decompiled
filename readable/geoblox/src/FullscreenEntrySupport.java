@@ -28,7 +28,7 @@ final class FullscreenEntrySupport {
             return null;
           }
           if (methodGuard == ~bitDepth) {
-            displayModes = CheckboxWidget.a(methodGuard ^ -112, taskDispatcher);
+            displayModes = CheckboxWidget.queryDisplayModesAndWait(methodGuard ^ -112, taskDispatcher);
             unusedModesAlias = displayModes;
             if (unusedModesAlias == null) {
               missingModesBeforeReturn = null;

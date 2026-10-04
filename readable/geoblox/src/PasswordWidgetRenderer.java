@@ -70,87 +70,87 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
         PasswordWidgetRenderer.getThemeForProgress(-111);
     }
 
-    final static TriangleMesh a(PacketBuffer param0, byte param1) {
-        int var7 = 0;
-        TriangleMesh stackIn_28_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        TriangleMesh var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static TriangleMesh decodePackedTriangleMesh(PacketBuffer packet, byte methodGuard) {
+        int facePriorityIndex = 0;
+        TriangleMesh meshBeforeReturn = null;
+        RuntimeException decodeFailureBeforeDescription = null;
+        StringBuilder decodeMessagePrefix = null;
+        String packetDescription = null;
+        RuntimeException caughtDecodeFailure = null;
+        int formatVersion = 0;
+        RuntimeException decodeFailureForContext = null;
+        int hasNormalsFlag = 0;
+        int hasOptionalShortSectionFlag = 0;
+        TriangleMesh mesh = null;
+        int maximumUnsignedFacePriority = 0;
+        int unusedClientControlSnapshot = 0;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var2_int = param0.readBits((byte) -17, 8);
-          if (var2_int > 0) {
-            throw new IllegalStateException("" + var2_int);
+          formatVersion = packet.readBits((byte) -17, 8);
+          if (formatVersion > 0) {
+            throw new IllegalStateException("" + formatVersion);
           }
-          var3 = TextInputRenderer.readBooleanBit((byte) 81, param0) ? 1 : 0;
-          var4 = TextInputRenderer.readBooleanBit((byte) 7, param0) ? 1 : 0;
-          var5 = new TriangleMesh();
-          var5.vertexCount = (short)param0.readBits((byte) -17, 16);
-          var5.vertexX = ArchiveNetworkClient.a(var5.vertexX, 16, 0, param0);
-          var5.vertexY = ArchiveNetworkClient.a(var5.vertexY, 16, 0, param0);
-          var5.vertexZ = ArchiveNetworkClient.a(var5.vertexZ, 16, 0, param0);
-          var5.faceCount = (short)param0.readBits((byte) -17, 16);
-          var5.faceVertexA = ArchiveNetworkClient.a(var5.faceVertexA, 16, 0, param0);
-          if (param1 < 111) {
+          hasNormalsFlag = TextInputRenderer.readBooleanBit((byte) 81, packet) ? 1 : 0;
+          hasOptionalShortSectionFlag = TextInputRenderer.readBooleanBit((byte) 7, packet) ? 1 : 0;
+          mesh = new TriangleMesh();
+          mesh.vertexCount = (short)packet.readBits((byte) -17, 16);
+          mesh.vertexX = ArchiveNetworkClient.readPackedShortArray(mesh.vertexX, 16, 0, packet);
+          mesh.vertexY = ArchiveNetworkClient.readPackedShortArray(mesh.vertexY, 16, 0, packet);
+          mesh.vertexZ = ArchiveNetworkClient.readPackedShortArray(mesh.vertexZ, 16, 0, packet);
+          mesh.faceCount = (short)packet.readBits((byte) -17, 16);
+          mesh.faceVertexA = ArchiveNetworkClient.readPackedShortArray(mesh.faceVertexA, 16, 0, packet);
+          if (methodGuard < 111) {
             gameMusicStream = (MidiPcmStream) null;
           }
-          var5.faceVertexB = ArchiveNetworkClient.a(var5.faceVertexB, 16, 0, param0);
-          var5.faceVertexC = ArchiveNetworkClient.a(var5.faceVertexC, 16, 0, param0);
-          if (var3 != 0) {
-            var5.normalCount = (short)param0.readBits((byte) -17, 16);
-            var5.normalX = ArchiveNetworkClient.a(var5.normalX, 16, 0, param0);
-            var5.normalY = ArchiveNetworkClient.a(var5.normalY, 16, 0, param0);
-            var5.normalZ = ArchiveNetworkClient.a(var5.normalZ, 16, 0, param0);
-            var5.faceNormalA = ArchiveNetworkClient.a(var5.faceNormalA, 16, 0, param0);
-            var5.faceNormalB = ArchiveNetworkClient.a(var5.faceNormalB, 16, 0, param0);
-            var5.faceNormalC = ArchiveNetworkClient.a(var5.faceNormalC, 16, 0, param0);
+          mesh.faceVertexB = ArchiveNetworkClient.readPackedShortArray(mesh.faceVertexB, 16, 0, packet);
+          mesh.faceVertexC = ArchiveNetworkClient.readPackedShortArray(mesh.faceVertexC, 16, 0, packet);
+          if (hasNormalsFlag != 0) {
+            mesh.normalCount = (short)packet.readBits((byte) -17, 16);
+            mesh.normalX = ArchiveNetworkClient.readPackedShortArray(mesh.normalX, 16, 0, packet);
+            mesh.normalY = ArchiveNetworkClient.readPackedShortArray(mesh.normalY, 16, 0, packet);
+            mesh.normalZ = ArchiveNetworkClient.readPackedShortArray(mesh.normalZ, 16, 0, packet);
+            mesh.faceNormalA = ArchiveNetworkClient.readPackedShortArray(mesh.faceNormalA, 16, 0, packet);
+            mesh.faceNormalB = ArchiveNetworkClient.readPackedShortArray(mesh.faceNormalB, 16, 0, packet);
+            mesh.faceNormalC = ArchiveNetworkClient.readPackedShortArray(mesh.faceNormalC, 16, 0, packet);
           }
-          if (var4 != 0) {
-            param0.readBits((byte) -17, 16);
-            var5.field_J = ArchiveNetworkClient.a(var5.field_J, 16, 0, param0);
-            var5.field_z = ArchiveNetworkClient.a(var5.field_z, 16, 0, param0);
-            var5.field_h = ArchiveNetworkClient.a(var5.field_h, 16, 0, param0);
-            var5.field_k = ArchiveNetworkClient.a(var5.field_k, 16, 0, param0);
-            var5.field_g = ArchiveNetworkClient.a(var5.field_g, 16, 0, param0);
+          if (hasOptionalShortSectionFlag != 0) {
+            packet.readBits((byte) -17, 16);
+            mesh.field_J = ArchiveNetworkClient.readPackedShortArray(mesh.field_J, 16, 0, packet);
+            mesh.field_z = ArchiveNetworkClient.readPackedShortArray(mesh.field_z, 16, 0, packet);
+            mesh.field_h = ArchiveNetworkClient.readPackedShortArray(mesh.field_h, 16, 0, packet);
+            mesh.field_k = ArchiveNetworkClient.readPackedShortArray(mesh.field_k, 16, 0, packet);
+            mesh.field_g = ArchiveNetworkClient.readPackedShortArray(mesh.field_g, 16, 0, packet);
           }
-          if (TextInputRenderer.readBooleanBit((byte) 102, param0)) {
-            var5.faceMaterialIndices = ArchiveNetworkClient.a(var5.faceMaterialIndices, 16, 0, param0);
+          if (TextInputRenderer.readBooleanBit((byte) 102, packet)) {
+            mesh.faceMaterialIndices = ArchiveNetworkClient.readPackedShortArray(mesh.faceMaterialIndices, 16, 0, packet);
           }
-          if (TextInputRenderer.readBooleanBit((byte) 37, param0)) {
-            var5.facePriorities = MouseWheelInput.readPackedByteArray(var5.facePriorities, param0, 16, 8);
-            var6 = 0;
-            for (var7 = 0; var5.facePriorities.length > var7; var7++) {
-              if (~(255 & var5.facePriorities[var7]) < ~var6) {
-                var6 = 255 & var5.facePriorities[var7];
+          if (TextInputRenderer.readBooleanBit((byte) 37, packet)) {
+            mesh.facePriorities = MouseWheelInput.readPackedByteArray(mesh.facePriorities, packet, 16, 8);
+            maximumUnsignedFacePriority = 0;
+            for (facePriorityIndex = 0; mesh.facePriorities.length > facePriorityIndex; facePriorityIndex++) {
+              if (~(255 & mesh.facePriorities[facePriorityIndex]) < ~maximumUnsignedFacePriority) {
+                maximumUnsignedFacePriority = 255 & mesh.facePriorities[facePriorityIndex];
               }
             }
-            if (var6 != 0) {
-              var5.facePriorityCount = (byte)(1 + var6);
+            if (maximumUnsignedFacePriority != 0) {
+              mesh.facePriorityCount = (byte)(1 + maximumUnsignedFacePriority);
             } else {
-              var5.facePriorities = null;
+              mesh.facePriorities = null;
             }
           }
-          stackIn_28_0 = var5;
-          return stackIn_28_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_31_0 = var2;
-          stackIn_31_1 = new StringBuilder().append("uh.BA(");
-          if (param0 == null) {
-            stackIn_32_2 = "null";
+          meshBeforeReturn = mesh;
+          return meshBeforeReturn;
+        } catch (java.lang.RuntimeException decodeFailure) {
+          caughtDecodeFailure = decodeFailure;
+          decodeFailureForContext = caughtDecodeFailure;
+          decodeFailureBeforeDescription = decodeFailureForContext;
+          decodeMessagePrefix = new StringBuilder().append("uh.BA(");
+          if (packet == null) {
+            packetDescription = "null";
           } else {
-            stackIn_32_2 = "{...}";
+            packetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodeFailureBeforeDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(packetDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

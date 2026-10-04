@@ -827,7 +827,7 @@ public final class Geoblox extends SessionGameApplet {
           } else {
             loadingCanvasStateSnapshot = ValidationState.updateFocusSnapshot;
           }
-          AccountContentDialog.a(loadingCanvasStateSnapshot, methodGuard - 25853, (java.awt.Canvas) (renderTargetCanvas));
+          AccountContentDialog.renderClientStartupOrPreparedFrame(loadingCanvasStateSnapshot, methodGuard - 25853, (java.awt.Canvas) (renderTargetCanvas));
           return;
         }
         if (!DebouncedValidationProvider.gameAssetsInitialized) {
@@ -941,7 +941,7 @@ public final class Geoblox extends SessionGameApplet {
             TextValidationSupport.bootstrapGameTextArchive = null;
             EntityContactSupport.resetFrameTimingHistory(-105);
         }
-        GameGraphicsResources.gameGraphicsArchive = TrackedPcmStream.a(1, true, graphicsArchiveGuard, true, (byte) -111);
+        GameGraphicsResources.gameGraphicsArchive = TrackedPcmStream.createGameResourceArchive(1, true, graphicsArchiveGuard, true, (byte) -111);
         OpacityWidget.synthesizedSoundArchive = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
         TextWidgetSupport.initialVorbisArchive = SocketArchiveNetworkClient.createResourceArchive(3, (byte) -62);
         ProxySocketConnector.instrumentPatchArchive = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
@@ -1067,7 +1067,7 @@ public final class Geoblox extends SessionGameApplet {
         this.initializeSessionAppletServices((byte) -70, 9, 8, 10, 0, false, 7, 1);
         MidiPcmStream musicPlaybackStream = new MidiPcmStream();
         musicPlaybackStream.setChannelDefaultInstrument(-1636, 9, 128);
-        DiskArchiveCache.a((java.awt.Component) ((Object) MessageDialog.gameCanvas), MenuScreen.platformTaskDispatcher, false, musicPlaybackStream, true, 22050);
+        DiskArchiveCache.initializeGameAudioOutputs((java.awt.Component) ((Object) MessageDialog.gameCanvas), MenuScreen.platformTaskDispatcher, false, musicPlaybackStream, true, 22050);
         this.enableOptionalSessionPacketFamilies(false, false, true, true, -95);
     }
 

@@ -307,16 +307,16 @@ final class GameplayEntity extends DualLinkNode {
         int sentinelDivisionGuard = 62 % ((methodGuard - 67) / 32);
     }
 
-    final static int alignBitOffset(int param0, int bitOffset) {
-        int paddingToByteBoundary = 0;
-        if (!((bitOffset & 7) == 0)) {
-            paddingToByteBoundary = -(bitOffset & 7) + 8;
+    final static int roundUpToMultipleOfEight(int methodGuard, int valueToAlign) {
+        int paddingToMultipleOfEight = 0;
+        if (!((valueToAlign & 7) == 0)) {
+            paddingToMultipleOfEight = -(valueToAlign & 7) + 8;
         }
-        if (param0 != 1221916132) {
+        if (methodGuard != 1221916132) {
             return 89;
         }
-        int byteAlignedBitOffset = paddingToByteBoundary + bitOffset;
-        return byteAlignedBitOffset;
+        int alignedValue = paddingToMultipleOfEight + valueToAlign;
+        return alignedValue;
     }
 
     final void advanceEntityAnimation(boolean preservePositionY) {

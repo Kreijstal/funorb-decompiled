@@ -17,71 +17,71 @@ final class IntArrayQuery extends IntrusiveNode {
         pendingIntArrayQueries = null;
     }
 
-    final static void a(byte param0, long param1, java.applet.Applet param2, String param3, String param4) {
+    final static void writeCookieValue(byte methodGuard, long maxAgeSeconds, java.applet.Applet applet, String cookieName, String cookieValue) {
         try {
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_10_2 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_13_2 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_16_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var6 = null;
-            RuntimeException var6_ref = null;
-            String var7 = null;
-            int var8 = 0;
-            String var9 = null;
-            String var10 = null;
+            RuntimeException cookieFailureBeforeDescription = null;
+            StringBuilder cookieMessagePrefix = null;
+            String appletDescription = null;
+            StringBuilder messageBeforeCookieName = null;
+            String cookieNameDescription = null;
+            StringBuilder messageBeforeCookieValue = null;
+            String cookieValueDescription = null;
+            Throwable caughtCookieThrowable = null;
+            Throwable ignoredCookieWriteFailure = null;
+            RuntimeException cookieFailureForContext = null;
+            String cookieHostThenAssignmentValue = null;
+            int guardQuotient = 0;
+            String cookieHost = null;
+            String baseCookieAssignment = null;
             try {
               try {
-                var9 = param2.getParameter("cookiehost");
-                var7 = var9;
-                var7 = var9;
-                var8 = -108 / ((48 - param0) / 59);
-                var10 = param3 + "=" + param4 + "; version=1; path=/; domain=" + var9;
-                var7 = var10;
-                var7 = var10;
-                if (param1 < 0L) {
-                  var7 = var10 + "; Discard;";
+                cookieHost = applet.getParameter("cookiehost");
+                cookieHostThenAssignmentValue = cookieHost;
+                cookieHostThenAssignmentValue = cookieHost;
+                guardQuotient = -108 / ((48 - methodGuard) / 59);
+                baseCookieAssignment = cookieName + "=" + cookieValue + "; version=1; path=/; domain=" + cookieHost;
+                cookieHostThenAssignmentValue = baseCookieAssignment;
+                cookieHostThenAssignmentValue = baseCookieAssignment;
+                if (maxAgeSeconds < 0L) {
+                  cookieHostThenAssignmentValue = baseCookieAssignment + "; Discard;";
                 } else {
-                  var7 = var10 + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -79, 1000L * param1 + ClientClockSupport.correctedCurrentTimeMillis(-12520)) + "; Max-Age=" + param1;
+                  cookieHostThenAssignmentValue = baseCookieAssignment + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -79, 1000L * maxAgeSeconds + ClientClockSupport.correctedCurrentTimeMillis(-12520)) + "; Max-Age=" + maxAgeSeconds;
                 }
-                AppletJavaScriptBridge.evaluateScript(param2, "document.cookie=\"" + var7 + "\"", (byte) -10);
+                AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieHostThenAssignmentValue + "\"", (byte) -10);
                 return;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var6 = decompiledCaughtException;
+              } catch (java.lang.Throwable cookieWriteThrowable) {
+                caughtCookieThrowable = cookieWriteThrowable;
+                ignoredCookieWriteFailure = caughtCookieThrowable;
                 return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_9_0 = var6_ref;
-              stackIn_9_1 = new StringBuilder().append("ea.A(").append(param0).append(',').append(param1).append(',');
-              if (param2 == null) {
-                stackIn_10_2 = "null";
+            } catch (java.lang.RuntimeException cookieFailure) {
+              caughtCookieThrowable = cookieFailure;
+              cookieFailureForContext = (RuntimeException) (Object) caughtCookieThrowable;
+              cookieFailureBeforeDescription = cookieFailureForContext;
+              cookieMessagePrefix = new StringBuilder().append("ea.A(").append(methodGuard).append(',').append(maxAgeSeconds).append(',');
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_10_2 = "{...}";
+                appletDescription = "{...}";
               }
-              stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-              if (param3 == null) {
-                stackIn_13_2 = "null";
+              messageBeforeCookieName = ((StringBuilder) (Object) cookieMessagePrefix).append(appletDescription).append(',');
+              if (cookieName == null) {
+                cookieNameDescription = "null";
               } else {
-                stackIn_13_2 = "{...}";
+                cookieNameDescription = "{...}";
               }
-              stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-              if (param4 == null) {
-                stackIn_16_2 = "null";
+              messageBeforeCookieValue = ((StringBuilder) (Object) messageBeforeCookieName).append(cookieNameDescription).append(',');
+              if (cookieValue == null) {
+                cookieValueDescription = "null";
               } else {
-                stackIn_16_2 = "{...}";
+                cookieValueDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cookieFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeCookieValue).append(cookieValueDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

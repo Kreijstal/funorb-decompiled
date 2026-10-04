@@ -161,18 +161,18 @@ final class TextTemplateDefinition extends DualLinkNode {
     TextTemplateDefinition() {
     }
 
-    final static void a(int param0, String param1, boolean param2, boolean param3) {
+    final static void showAccountLoginPanel(int methodGuard, String messageForFailureContext, boolean showCreateAccount, boolean allowJustPlay) {
         UnderlinedButtonRenderer.resetAccountUiFlow(-6011);
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
-        if (param0 != 2274) {
+        if (methodGuard != 2274) {
             return;
         }
         try {
-            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.reconnectingLoginMode, param2, param3);
+            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.reconnectingLoginMode, showCreateAccount, allowJustPlay);
             ButtonWidget.accountContentDialog = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.activeLoginPanel);
             ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException panelFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelFailure), "og.C(" + methodGuard + ',' + (messageForFailureContext != null ? "{...}" : "null") + ',' + showCreateAccount + ',' + allowJustPlay + ')');
         }
     }
 

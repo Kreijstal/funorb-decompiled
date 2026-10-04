@@ -11,7 +11,7 @@ abstract class ArchiveSource {
     public static void releaseStaticReferences(boolean methodGuard) {
         if (!methodGuard) {
             byte[] unusedNullSignatureSnapshot = (byte[]) null;
-            ArchiveSource.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
+            ArchiveSource.writeEncryptedPayload((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
         }
         additionalNameCharacters = null;
         primarySocialEntriesByNameHash = null;
@@ -22,92 +22,92 @@ abstract class ArchiveSource {
 
     abstract byte[] getPackedGroup(int methodGuard, int groupId);
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, ByteArrayBuffer param3, byte[] param4, int param5, boolean param6) {
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_30_2 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
+    final static void writeEncryptedPayload(java.math.BigInteger rsaModulus, java.math.BigInteger rsaExponent, int sourceOffset, ByteArrayBuffer destination, byte[] payloadBytes, int payloadLength, boolean appendEncryptedPayload) {
+        RuntimeException encryptionFailureBeforeDescription = null;
+        StringBuilder encryptionMessagePrefix = null;
+        String modulusDescription = null;
+        StringBuilder messageBeforeExponent = null;
+        String exponentDescription = null;
+        StringBuilder messageBeforeDestination = null;
+        String destinationDescription = null;
+        StringBuilder messageBeforePayload = null;
+        String payloadDescription = null;
+        RuntimeException caughtEncryptionFailure = null;
+        int paddedPayloadLength = 0;
+        RuntimeException encryptionFailureForContext = null;
+        int[] workingXteaKey = null;
+        int keyIndexThenUnusedZeroSnapshot = 0;
+        int writtenKeyIndex = 0;
+        int[] keyBeforeWorkingAlias = null;
+        int[] xteaKey = null;
         try {
-          var7_int = GameplayEntity.alignBitOffset(1221916132, param5);
+          paddedPayloadLength = GameplayEntity.roundUpToMultipleOfEight(1221916132, payloadLength);
           if (UsernameQuerySupport.payloadKeyRandom == null) {
             UsernameQuerySupport.payloadKeyRandom = new java.security.SecureRandom();
           }
-          var12 = new int[4];
-          var11 = var12;
-          var8 = var11;
-          for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = UsernameQuerySupport.payloadKeyRandom.nextInt();
+          xteaKey = new int[4];
+          keyBeforeWorkingAlias = xteaKey;
+          workingXteaKey = keyBeforeWorkingAlias;
+          for (keyIndexThenUnusedZeroSnapshot = 0; keyIndexThenUnusedZeroSnapshot < 4; keyIndexThenUnusedZeroSnapshot++) {
+            workingXteaKey[keyIndexThenUnusedZeroSnapshot] = UsernameQuerySupport.payloadKeyRandom.nextInt();
           }
           if (!((null != MessageDialogSupport.encryptedPayloadScratchBuffer) &&
-                (MessageDialogSupport.encryptedPayloadScratchBuffer.bytes.length >= var7_int))) {
-            MessageDialogSupport.encryptedPayloadScratchBuffer = new ByteArrayBuffer(var7_int);
+                (MessageDialogSupport.encryptedPayloadScratchBuffer.bytes.length >= paddedPayloadLength))) {
+            MessageDialogSupport.encryptedPayloadScratchBuffer = new ByteArrayBuffer(paddedPayloadLength);
           }
           MessageDialogSupport.encryptedPayloadScratchBuffer.position = 0;
-          MessageDialogSupport.encryptedPayloadScratchBuffer.writeBytes(param5, -97, param4, param2);
-          MessageDialogSupport.encryptedPayloadScratchBuffer.padZerosToPosition((byte) -84, var7_int);
-          MessageDialogSupport.encryptedPayloadScratchBuffer.encryptXteaBlocks(var12, (byte) -33);
+          MessageDialogSupport.encryptedPayloadScratchBuffer.writeBytes(payloadLength, -97, payloadBytes, sourceOffset);
+          MessageDialogSupport.encryptedPayloadScratchBuffer.padZerosToPosition((byte) -84, paddedPayloadLength);
+          MessageDialogSupport.encryptedPayloadScratchBuffer.encryptXteaBlocks(xteaKey, (byte) -33);
           if (!((HotspotTextWidget.encryptedPayloadKeyScratchBuffer != null) &&
               (HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes.length >= 100))) {
             HotspotTextWidget.encryptedPayloadKeyScratchBuffer = new ByteArrayBuffer(100);
           }
           HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position = 0;
           HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeByte((byte) -69, 10);
-          var10 = 0;
-          var9 = var10;
-          while (var10 < 4) {
-            HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeIntBE((byte) 95, var12[var10]);
-            var10++;
+          writtenKeyIndex = 0;
+          keyIndexThenUnusedZeroSnapshot = writtenKeyIndex;
+          while (writtenKeyIndex < 4) {
+            HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeIntBE((byte) 95, xteaKey[writtenKeyIndex]);
+            writtenKeyIndex++;
           }
-          if (!param6) {
+          if (!appendEncryptedPayload) {
             return;
           }
-          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeShortBE(param5, 28695);
-          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.replaceWithModPowResult(0, param0, param1);
-          param3.writeBytes(HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position, -97, HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes, 0);
-          param3.writeBytes(MessageDialogSupport.encryptedPayloadScratchBuffer.position, -97, MessageDialogSupport.encryptedPayloadScratchBuffer.bytes, 0);
+          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeShortBE(payloadLength, 28695);
+          HotspotTextWidget.encryptedPayloadKeyScratchBuffer.replaceWithModPowResult(0, rsaModulus, rsaExponent);
+          destination.writeBytes(HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position, -97, HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes, 0);
+          destination.writeBytes(MessageDialogSupport.encryptedPayloadScratchBuffer.position, -97, MessageDialogSupport.encryptedPayloadScratchBuffer.bytes, 0);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_23_0 = var7;
-          stackIn_23_1 = new StringBuilder().append("nh.K(");
-          if (param0 == null) {
-            stackIn_24_2 = "null";
+        } catch (java.lang.RuntimeException encryptionFailure) {
+          caughtEncryptionFailure = encryptionFailure;
+          encryptionFailureForContext = caughtEncryptionFailure;
+          encryptionFailureBeforeDescription = encryptionFailureForContext;
+          encryptionMessagePrefix = new StringBuilder().append("nh.K(");
+          if (rsaModulus == null) {
+            modulusDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            modulusDescription = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param1 == null) {
-            stackIn_27_2 = "null";
+          messageBeforeExponent = ((StringBuilder) (Object) encryptionMessagePrefix).append(modulusDescription).append(',');
+          if (rsaExponent == null) {
+            exponentDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            exponentDescription = "{...}";
           }
-          stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_30_2 = "null";
+          messageBeforeDestination = ((StringBuilder) (Object) messageBeforeExponent).append(exponentDescription).append(',').append(sourceOffset).append(',');
+          if (destination == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_30_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
-          if (param4 == null) {
-            stackIn_33_2 = "null";
+          messageBeforePayload = ((StringBuilder) (Object) messageBeforeDestination).append(destinationDescription).append(',');
+          if (payloadBytes == null) {
+            payloadDescription = "null";
           } else {
-            stackIn_33_2 = "{...}";
+            payloadDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encryptionFailureBeforeDescription), ((StringBuilder) (Object) messageBeforePayload).append(payloadDescription).append(',').append(payloadLength).append(',').append(appendEncryptedPayload).append(')').toString());
         }
     }
 

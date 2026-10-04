@@ -7,7 +7,7 @@ final class AgeValidator extends TextInputValidator {
     static boolean reconnectingLoginMode;
 
     final static void markAccountIneligibleAndMaybeRequestGameArchives(int methodGuard) {
-        GrowableIntList.a(NodeHashTableIterator.getActiveApplet(108), (byte) 110);
+        GrowableIntList.createClientCookieMarker(NodeHashTableIterator.getActiveApplet(108), (byte) 110);
         if (methodGuard >= -24) {
             gameArchiveRequestPending = true;
         }

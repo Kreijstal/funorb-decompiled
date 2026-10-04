@@ -15,7 +15,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             if (methodGuard != 66) {
                 instructionsText = (String) null;
             }
-            AccountCreationDialog.a(loginIdentifier, (byte) 87, false, password);
+            AccountCreationDialog.showLoggingInDialog(loginIdentifier, (byte) 87, false, password);
         } catch (RuntimeException loginFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFailure), "ef.C(" + (password != null ? "{...}" : "null") + ',' + methodGuard + ',' + (loginIdentifier != null ? "{...}" : "null") + ')');
         }

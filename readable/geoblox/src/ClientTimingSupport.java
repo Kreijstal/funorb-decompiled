@@ -6,11 +6,11 @@ final class ClientTimingSupport {
     static int[] crc32Table;
     static int decodedSpriteCount;
     static String loginNoDisplayNameText;
-    static IndexedSprite[] field_e;
+    static IndexedSprite[] screenOptionTwoStateSprites;
     static int buttonAndLogoArchiveId;
 
     public static void releaseStaticReferences(boolean changeDecodedSpriteCount) {
-        field_e = null;
+        screenOptionTwoStateSprites = null;
         loginNoDisplayNameText = null;
         if (changeDecodedSpriteCount) {
             decodedSpriteCount = 105;

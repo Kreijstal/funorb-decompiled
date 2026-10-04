@@ -241,7 +241,7 @@ abstract class SessionGameApplet extends GameApplet {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (null != FontLoadingSupport.canvasResizeController) {
           if (InstrumentPatch.activeFullscreenCanvas == null) {
-            canvasContainer = MultiHandleSliderRenderer.a(true);
+            canvasContainer = MultiHandleSliderRenderer.getActiveCanvasContainer(true);
             containerSize = canvasContainer.getSize();
             FontLoadingSupport.canvasResizeController.setRequestedSize((byte) 126, containerSize.height, containerSize.width);
           }
@@ -259,7 +259,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (InstrumentEnvelope.isSessionConnected(methodGuard ^ 19649)) {
           idleThresholdOrArchivePendingOrSequenceReady = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
           if ((!(!this.forceIdleDisconnect) ||
-              (!(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.a(-76)) &&
+              (!(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
                 !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))))) {
             this.forceIdleDisconnect = false;
             Bzip2DecoderState.closeSessionSocket((byte) -115);
@@ -399,7 +399,7 @@ abstract class SessionGameApplet extends GameApplet {
             } else {
               allowCancelSnapshot = true;
             }
-            TextTemplateDefinition.a(loginPanelGuardSnapshot, loginPanelMessageSnapshot, allowRetrySnapshot, allowCancelSnapshot);
+            TextTemplateDefinition.showAccountLoginPanel(loginPanelGuardSnapshot, loginPanelMessageSnapshot, allowRetrySnapshot, allowCancelSnapshot);
           }
           if (AchievementSubmission.simpleUiMode) {
             ButtonWidget.requestJustPlay(83);
@@ -412,7 +412,7 @@ abstract class SessionGameApplet extends GameApplet {
           DialRenderer.initialButtonAndLogoArchive = null;
           AttachedEntityRenderer.initialUiFontArchive = null;
           DirectByteStorage.initialCommonUiSpriteArchive = null;
-          MeshMaterial.a((java.applet.Applet) (this), -82);
+          MeshMaterial.inspectAppletUsernameParameter((java.applet.Applet) (this), -82);
           EntityContactSupport.resetFrameTimingHistory(-69);
           VisualPropertyOverrides.clientBootstrapStage = 10;
         }
@@ -535,7 +535,7 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (uiAction == 2) {
-              queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.getActiveLoginPassword(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
+              queryOrHandshakeResult = DiskCacheWorker.advanceAccountCreationRequest((byte) -94, ContextualRuntimeException.getActiveLoginPassword(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
               if (queryOrHandshakeResult != -1) {
                 StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResult, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
                 AudioService.sessionResponseText = null;
@@ -581,22 +581,22 @@ abstract class SessionGameApplet extends GameApplet {
               SpriteConstructionSupport.clientScreenStage = 10;
             }
             if (uiAction == 7) {
-              TrackedPcmStream.a((byte) 114, NodeHashTableIterator.getActiveApplet(107));
+              TrackedPcmStream.navigateToServerListPage((byte) 114, NodeHashTableIterator.getActiveApplet(107));
             }
             if (uiAction == 8) {
               BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(119));
             }
             if (9 == uiAction) {
-              RasterTargetSnapshot.a(NodeHashTableIterator.getActiveApplet(115), (byte) -91);
+              RasterTargetSnapshot.navigateToSupportPage(NodeHashTableIterator.getActiveApplet(115), (byte) -91);
             }
             if (uiAction == 10) {
               CacheReference.outgoingSessionBuffer.writeCipherByte(17, (byte) -21);
             }
             if (uiAction == 11) {
-              EmailAvailabilityQuery.a(NodeHashTableIterator.getActiveApplet(110), false);
+              EmailAvailabilityQuery.navigateToReloadPage(NodeHashTableIterator.getActiveApplet(110), false);
             }
             if (uiAction == 12) {
-              ArchiveLoadSequence.a(NodeHashTableIterator.getActiveApplet(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(actionGuard ^ -241));
+              ArchiveLoadSequence.openRelativeUrlInNewWindow(NodeHashTableIterator.getActiveApplet(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(actionGuard ^ -241));
             }
             if (uiAction == 13) {
               try {

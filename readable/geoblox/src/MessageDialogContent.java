@@ -56,7 +56,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           ArchiveIndex.logoMeshes = new TriangleMesh[meshCount];
           ValidationMessageWidget.logoMeshCenters = new int[meshCount][];
           for (meshIndexOrInitialCursor = 0; meshIndexOrInitialCursor < meshCount; meshIndexOrInitialCursor++) {
-            ArchiveIndex.logoMeshes[meshIndexOrInitialCursor] = PasswordWidgetRenderer.a(logoInput, (byte) 113);
+            ArchiveIndex.logoMeshes[meshIndexOrInitialCursor] = PasswordWidgetRenderer.decodePackedTriangleMesh(logoInput, (byte) 113);
           }
           logoInputAlias.endBitAccess(-16989);
           centerMeshIndex = 0;

@@ -16,45 +16,45 @@ final class RasterTargetSnapshot extends IntrusiveNode {
     int clipRight;
     int stride;
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void navigateToSupportPage(java.applet.Applet applet, byte methodGuard) {
         try {
-            java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            String stackIn_9_2 = null;
-            Throwable decompiledCaughtException = null;
+            java.net.URL supportUrl = null;
+            Exception printedNavigationFailure = null;
+            RuntimeException navigationFailureForContext = null;
+            RuntimeException navigationFailureBeforeDescription = null;
+            StringBuilder navigationMessagePrefix = null;
+            String appletDescription = null;
+            Throwable caughtNavigationThrowable = null;
             try {
-              if (param1 != -91) {
+              if (methodGuard != -91) {
                 return;
               }
               try {
-                var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                param0.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(var2, 68, param0), "_top");
+                supportUrl = new java.net.URL(applet.getCodeBase(), "tosupport.ws");
+                applet.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(supportUrl, 68, applet), "_top");
                 return;
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
+              } catch (java.lang.Exception navigationException) {
+                caughtNavigationThrowable = navigationException;
+                printedNavigationFailure = (Exception) (Object) caughtNavigationThrowable;
+                printedNavigationFailure.printStackTrace();
                 return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = var2_ref2;
-              stackIn_8_1 = new StringBuilder().append("tl.A(");
-              if (param0 == null) {
-                stackIn_9_2 = "null";
+            } catch (java.lang.RuntimeException navigationFailure) {
+              caughtNavigationThrowable = navigationFailure;
+              navigationFailureForContext = (RuntimeException) (Object) caughtNavigationThrowable;
+              navigationFailureBeforeDescription = navigationFailureForContext;
+              navigationMessagePrefix = new StringBuilder().append("tl.A(");
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_9_2 = "{...}";
+                appletDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeDescription), ((StringBuilder) (Object) navigationMessagePrefix).append(appletDescription).append(',').append(methodGuard).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

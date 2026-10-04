@@ -28,33 +28,33 @@ class ByteArrayBuffer extends IntrusiveNode {
         int sentinelQuotient = 65 / ((methodGuard - 67) / 54);
     }
 
-    final static Sprite a(int param0, int param1, int param2, ResourceArchive param3) {
-        RuntimeException var4 = null;
-        Sprite stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static Sprite loadFirstRgbSprite(int groupId, int methodGuard, int fileId, ResourceArchive archive) {
+        RuntimeException loadFailureForContext = null;
+        Sprite spriteBeforeReturn = null;
+        RuntimeException loadFailureBeforeDescription = null;
+        StringBuilder loadMessagePrefix = null;
+        String archiveDescription = null;
+        RuntimeException caughtLoadFailure = null;
         try {
-          if (!SpawnQuotaSupport.decodeSpritesFromArchive(param2, param0, 126, param3)) {
+          if (!SpawnQuotaSupport.decodeSpritesFromArchive(fileId, groupId, 126, archive)) {
             return null;
           }
-          if (param1 != 19) {
+          if (methodGuard != 19) {
             receivedSocialSettingMiddle = -57;
           }
-          stackIn_6_0 = AwtRasterBuffer.buildFirstRgbSpriteFromDecodedSheet((byte) -60);
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("qc.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_10_2 = "null";
+          spriteBeforeReturn = AwtRasterBuffer.buildFirstRgbSpriteFromDecodedSheet((byte) -60);
+          return spriteBeforeReturn;
+        } catch (java.lang.RuntimeException loadFailure) {
+          caughtLoadFailure = loadFailure;
+          loadFailureForContext = caughtLoadFailure;
+          loadFailureBeforeDescription = loadFailureForContext;
+          loadMessagePrefix = new StringBuilder().append("qc.F(").append(groupId).append(',').append(methodGuard).append(',').append(fileId).append(',');
+          if (archive == null) {
+            archiveDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            archiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loadFailureBeforeDescription), ((StringBuilder) (Object) loadMessagePrefix).append(archiveDescription).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         ResourceArchive unusedNullArchiveSnapshot;
         if (methodGuard != 27425) {
           unusedNullArchiveSnapshot = (ResourceArchive) null;
-          ByteArrayBuffer.a(-4, 95, -17, (ResourceArchive) null);
+          ByteArrayBuffer.loadFirstRgbSprite(-4, 95, -17, (ResourceArchive) null);
         }
         int prefixByteIndex = this.position;
         this.position = this.position + 1;

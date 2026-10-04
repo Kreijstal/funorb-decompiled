@@ -125,60 +125,60 @@ abstract class ArchiveNetworkClient {
         return this.pendingBackgroundRequests.countNodes((byte) 67) + this.sentBackgroundRequests.countNodes((byte) 67);
     }
 
-    final static short[] a(short[] param0, int param1, int param2, PacketBuffer param3) {
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        short[] stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static short[] readPackedShortArray(short[] destination, int lengthBitCount, int nullLengthSentinel, PacketBuffer packet) {
+        int elementCount = 0;
+        int deltaBitCount = 0;
+        int signedBaseValue = 0;
+        int elementIndex = 0;
+        int unusedClientControlSnapshot = 0;
+        short[] destinationBeforeReturn = null;
+        RuntimeException readFailureBeforeDescription = null;
+        StringBuilder readMessagePrefix = null;
+        String destinationDescription = null;
+        StringBuilder messageBeforePacket = null;
+        String packetDescription = null;
+        RuntimeException caughtReadFailure = null;
+        RuntimeException readFailureForContext = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var4_int = param3.readBits((byte) -17, param1);
-          if (var4_int == param2) {
+          elementCount = packet.readBits((byte) -17, lengthBitCount);
+          if (elementCount == nullLengthSentinel) {
             return null;
           }
-          if (!((param0 != null) &&
-                (var4_int == param0.length))) {
-            param0 = new short[var4_int];
+          if (!((destination != null) &&
+                (elementCount == destination.length))) {
+            destination = new short[elementCount];
           }
-          var5 = param3.readBits((byte) -17, 4);
-          var6 = (short)param3.readBits((byte) -17, 16);
-          if (var5 <= 0) {
-            for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (short)var6;
+          deltaBitCount = packet.readBits((byte) -17, 4);
+          signedBaseValue = (short)packet.readBits((byte) -17, 16);
+          if (deltaBitCount <= 0) {
+            for (elementIndex = 0; elementCount > elementIndex; elementIndex++) {
+              destination[elementIndex] = (short)signedBaseValue;
             }
           } else {
-            for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (short)(var6 + param3.readBits((byte) -17, var5));
+            for (elementIndex = 0; elementCount > elementIndex; elementIndex++) {
+              destination[elementIndex] = (short)(signedBaseValue + packet.readBits((byte) -17, deltaBitCount));
             }
           }
-          stackIn_16_0 = (short[]) (param0);
-          return stackIn_16_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_19_0 = var4;
-          stackIn_19_1 = new StringBuilder().append("ji.J(");
-          if (param0 == null) {
-            stackIn_20_2 = "null";
+          destinationBeforeReturn = (short[]) (destination);
+          return destinationBeforeReturn;
+        } catch (java.lang.RuntimeException readFailure) {
+          caughtReadFailure = readFailure;
+          readFailureForContext = caughtReadFailure;
+          readFailureBeforeDescription = readFailureForContext;
+          readMessagePrefix = new StringBuilder().append("ji.J(");
+          if (destination == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_23_2 = "null";
+          messageBeforePacket = ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(lengthBitCount).append(',').append(nullLengthSentinel).append(',');
+          if (packet == null) {
+            packetDescription = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            packetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) readFailureBeforeDescription), ((StringBuilder) (Object) messageBeforePacket).append(packetDescription).append(')').toString());
         }
     }
 

@@ -270,6 +270,6 @@ final class NetworkArchiveRequest extends ArchiveRequest {
 
     static {
         byteArrayPool30000 = new byte[50][];
-        DiskCacheWorker.a(116, 50);
+        DiskCacheWorker.applyAccountCreationGuard(116, 50);
     }
 }

@@ -12,7 +12,7 @@ final class EntitySpawnSupport {
         RuntimeException caughtDetachFailure = null;
         try {
           BoardReconciliationSupport.detachKeyboardListener((java.awt.Component) ((Object) canvas), 0);
-          LoginPayload.a(false, (java.awt.Component) ((Object) canvas));
+          LoginPayload.detachPointerInputListeners(false, (java.awt.Component) ((Object) canvas));
           if (methodGuard != -2) {
             loadingFontsText = (String) null;
           }

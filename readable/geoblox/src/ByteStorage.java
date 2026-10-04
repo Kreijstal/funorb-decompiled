@@ -8,51 +8,51 @@ abstract class ByteStorage {
     static int retainedTextRecordCount;
     static String accountCreationPassword;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void updatePageNavigationLinks(java.applet.Applet applet, int methodGuard) {
         try {
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            String stackIn_9_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
+            RuntimeException linkFailureBeforeDescription = null;
+            StringBuilder linkMessagePrefix = null;
+            String appletDescription = null;
+            Throwable caughtLinkThrowable = null;
+            Throwable ignoredLinkUpdateFailure = null;
+            RuntimeException linkFailureForContext = null;
+            String overriddenBasePath = null;
+            java.net.URL codeBaseUrl = null;
             try {
               try {
-                var4 = param0.getCodeBase();
-                if (param1 != 20000000) {
+                codeBaseUrl = applet.getCodeBase();
+                if (methodGuard != 20000000) {
                   ByteStorage.releaseStaticReferences(-109);
                 }
-                var3 = SessionGameApplet.applySessionOverridesToUrl(var4, param1 - 19999938, param0).getFile();
-                AppletJavaScriptBridge.callWithArguments(param1 - 20014882, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
-                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
-                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
-                AppletJavaScriptBridge.callWithArguments(param1 - 20014882, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
-                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
-                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
+                overriddenBasePath = SessionGameApplet.applySessionOverridesToUrl(codeBaseUrl, methodGuard - 19999938, applet).getFile();
+                AppletJavaScriptBridge.callWithArguments(methodGuard - 20014882, new Object[]{"home", overriddenBasePath + "home.ws"}, applet, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"gamelist", overriddenBasePath + "togamelist.ws"}, applet, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"serverlist", overriddenBasePath + "toserverlist.ws"}, applet, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(methodGuard - 20014882, new Object[]{"options", overriddenBasePath + "options.ws"}, applet, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"terms", overriddenBasePath + "terms.ws"}, applet, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"privacy", overriddenBasePath + "privacy.ws"}, applet, "updatelinks");
                 return;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2 = decompiledCaughtException;
+              } catch (java.lang.Throwable linkUpdateThrowable) {
+                caughtLinkThrowable = linkUpdateThrowable;
+                ignoredLinkUpdateFailure = caughtLinkThrowable;
                 return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = var2_ref;
-              stackIn_8_1 = new StringBuilder().append("oj.F(");
-              if (param0 == null) {
-                stackIn_9_2 = "null";
+            } catch (java.lang.RuntimeException linkFailure) {
+              caughtLinkThrowable = linkFailure;
+              linkFailureForContext = (RuntimeException) (Object) caughtLinkThrowable;
+              linkFailureBeforeDescription = linkFailureForContext;
+              linkMessagePrefix = new StringBuilder().append("oj.F(");
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_9_2 = "{...}";
+                appletDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) linkFailureBeforeDescription), ((StringBuilder) (Object) linkMessagePrefix).append(appletDescription).append(',').append(methodGuard).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

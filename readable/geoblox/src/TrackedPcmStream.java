@@ -36,48 +36,48 @@ final class TrackedPcmStream extends IntrusiveNode {
         }
     }
 
-    final static ResourceArchive a(int param0, boolean param1, boolean param2, boolean param3, byte param4) {
-        int var5 = 55 / ((param4 + 65) / 46);
-        return IntKeyLookup.createResourceArchive(-128, param0, param2, !param1 ? 0 : 1, param3, false);
+    final static ResourceArchive createGameResourceArchive(int archiveId, boolean discardDecodedFilesAfterRead, boolean downloadAllGroups, boolean discardPackedGroups, byte methodGuard) {
+        int guardQuotient = 55 / ((methodGuard + 65) / 46);
+        return IntKeyLookup.createResourceArchive(-128, archiveId, downloadAllGroups, !discardDecodedFilesAfterRead ? 0 : 1, discardPackedGroups, false);
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void navigateToServerListPage(byte methodGuard, java.applet.Applet applet) {
         try {
-            java.net.URL var2 = null;
-            int var2_int = 0;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
-            String stackIn_8_2 = null;
-            Throwable decompiledCaughtException = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
+            java.net.URL serverListUrl = null;
+            int guardRemainder = 0;
+            RuntimeException navigationFailureBeforeDescription = null;
+            StringBuilder navigationMessagePrefix = null;
+            String appletDescription = null;
+            Throwable caughtNavigationThrowable = null;
+            Exception printedNavigationFailure = null;
+            RuntimeException navigationFailureForContext = null;
             try {
               try {
-                var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                param1.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(var2, -84, param1), "_top");
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
+                serverListUrl = new java.net.URL(applet.getCodeBase(), "toserverlist.ws");
+                applet.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(serverListUrl, -84, applet), "_top");
+              } catch (java.lang.Exception navigationException) {
+                caughtNavigationThrowable = navigationException;
+                printedNavigationFailure = (Exception) (Object) caughtNavigationThrowable;
+                printedNavigationFailure.printStackTrace();
               }
-              var2_int = 91 % ((50 - param0) / 49);
+              guardRemainder = 91 % ((50 - methodGuard) / 49);
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_7_0 = var2_ref2;
-              stackIn_7_1 = new StringBuilder().append("je.D(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_8_2 = "null";
+            } catch (java.lang.RuntimeException navigationFailure) {
+              caughtNavigationThrowable = navigationFailure;
+              navigationFailureForContext = (RuntimeException) (Object) caughtNavigationThrowable;
+              navigationFailureBeforeDescription = navigationFailureForContext;
+              navigationMessagePrefix = new StringBuilder().append("je.D(").append(methodGuard).append(',');
+              if (applet == null) {
+                appletDescription = "null";
               } else {
-                stackIn_8_2 = "{...}";
+                appletDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeDescription), ((StringBuilder) (Object) navigationMessagePrefix).append(appletDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedBoundaryFailure) {
+            throw uncheckedBoundaryFailure;
+        } catch (Throwable checkedBoundaryFailure) {
+            throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

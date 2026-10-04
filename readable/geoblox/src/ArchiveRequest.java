@@ -13,96 +13,96 @@ abstract class ArchiveRequest extends DualLinkNode {
     static int[] sessionPacketLengthByOpcode;
     static float loadingScaledProgress;
 
-    final static void a(int param0, java.awt.Color param1, boolean param2, boolean param3, String param4) {
-        Exception var5 = null;
-        RuntimeException var5_ref = null;
-        java.awt.Graphics var9 = null;
-        java.awt.Graphics var10 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_25_2 = null;
-        Throwable decompiledCaughtException = null;
-        Exception var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+    final static void drawAwtLoadingProgress(int progressPercent, java.awt.Color progressColor, boolean clearCanvas, boolean returnAfterProgressImageFill, String statusText) {
+        Exception repaintFallbackFailure = null;
+        RuntimeException drawFailureForContext = null;
+        java.awt.Graphics canvasGraphics = null;
+        java.awt.Graphics progressImageGraphics = null;
+        RuntimeException drawFailureBeforeDescription = null;
+        StringBuilder drawMessagePrefix = null;
+        String colorDescription = null;
+        StringBuilder messageBeforeStatus = null;
+        String statusDescription = null;
+        Throwable caughtDrawThrowable = null;
+        Exception progressImageFailure = null;
+        int progressLeft = 0;
+        int progressTop = 0;
         try {
           try {
-            var9 = MessageDialog.gameCanvas.getGraphics();
+            canvasGraphics = MessageDialog.gameCanvas.getGraphics();
             if (null == UiFontResources.awtLoadingFont) {
               UiFontResources.awtLoadingFont = new java.awt.Font("Helvetica", 1, 13);
             }
-            if (param2) {
-              var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, AudioService.canvasWidth, ClientRenderingState.canvasHeight);
+            if (clearCanvas) {
+              canvasGraphics.setColor(java.awt.Color.black);
+              canvasGraphics.fillRect(0, 0, AudioService.canvasWidth, ClientRenderingState.canvasHeight);
             }
-            if (param1 == null) {
-              param1 = new java.awt.Color(140, 17, 17);
+            if (progressColor == null) {
+              progressColor = new java.awt.Color(140, 17, 17);
             }
             try {
               if (null == TextWidgetRenderer.loadingProgressImage) {
                 TextWidgetRenderer.loadingProgressImage = MessageDialog.gameCanvas.createImage(304, 34);
               }
-              var10 = TextWidgetRenderer.loadingProgressImage.getGraphics();
-              var10.setColor(param1);
-              var10.drawRect(0, 0, 303, 33);
-              var10.fillRect(2, 2, 3 * param0, 30);
-              var10.setColor(java.awt.Color.black);
-              if (param3) {
+              progressImageGraphics = TextWidgetRenderer.loadingProgressImage.getGraphics();
+              progressImageGraphics.setColor(progressColor);
+              progressImageGraphics.drawRect(0, 0, 303, 33);
+              progressImageGraphics.fillRect(2, 2, 3 * progressPercent, 30);
+              progressImageGraphics.setColor(java.awt.Color.black);
+              if (returnAfterProgressImageFill) {
                 return;
               }
-              var10.drawRect(1, 1, 301, 31);
-              var10.fillRect(3 * param0 + 2, 2, 300 - 3 * param0, 30);
-              var10.setFont(UiFontResources.awtLoadingFont);
-              var10.setColor(java.awt.Color.white);
-              var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(TextWidgetRenderer.loadingProgressImage, AudioService.canvasWidth / 2 - 152, ClientRenderingState.canvasHeight / 2 - 18, (java.awt.image.ImageObserver) null);
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = AudioService.canvasWidth / 2 - 152;
-              var8 = ClientRenderingState.canvasHeight / 2 - 18;
-              var9.setColor(param1);
-              var9.drawRect(var7, var8, 303, 33);
-              var9.fillRect(var7 + 2, 2 + var8, 3 * param0, 30);
-              var9.setColor(java.awt.Color.black);
-              var9.drawRect(1 + var7, 1 + var8, 301, 31);
-              var9.fillRect(param0 * 3 + (2 + var7), 2 + var8, -(param0 * 3) + 300, 30);
-              var9.setFont(UiFontResources.awtLoadingFont);
-              var9.setColor(java.awt.Color.white);
-              var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
+              progressImageGraphics.drawRect(1, 1, 301, 31);
+              progressImageGraphics.fillRect(3 * progressPercent + 2, 2, 300 - 3 * progressPercent, 30);
+              progressImageGraphics.setFont(UiFontResources.awtLoadingFont);
+              progressImageGraphics.setColor(java.awt.Color.white);
+              progressImageGraphics.drawString(statusText, (-(6 * statusText.length()) + 304) / 2, 22);
+              canvasGraphics.drawImage(TextWidgetRenderer.loadingProgressImage, AudioService.canvasWidth / 2 - 152, ClientRenderingState.canvasHeight / 2 - 18, (java.awt.image.ImageObserver) null);
+            } catch (java.lang.Exception imageDrawException) {
+              caughtDrawThrowable = imageDrawException;
+              progressImageFailure = (Exception) (Object) caughtDrawThrowable;
+              progressLeft = AudioService.canvasWidth / 2 - 152;
+              progressTop = ClientRenderingState.canvasHeight / 2 - 18;
+              canvasGraphics.setColor(progressColor);
+              canvasGraphics.drawRect(progressLeft, progressTop, 303, 33);
+              canvasGraphics.fillRect(progressLeft + 2, 2 + progressTop, 3 * progressPercent, 30);
+              canvasGraphics.setColor(java.awt.Color.black);
+              canvasGraphics.drawRect(1 + progressLeft, 1 + progressTop, 301, 31);
+              canvasGraphics.fillRect(progressPercent * 3 + (2 + progressLeft), 2 + progressTop, -(progressPercent * 3) + 300, 30);
+              canvasGraphics.setFont(UiFontResources.awtLoadingFont);
+              canvasGraphics.setColor(java.awt.Color.white);
+              canvasGraphics.drawString(statusText, (-(6 * statusText.length()) + 304) / 2 + progressLeft, 22 + progressTop);
             }
             if (SpriteState.loadingOverlayText == null) {
               return;
             }
-            var9.setFont(UiFontResources.awtLoadingFont);
-            var9.setColor(java.awt.Color.white);
-            var9.drawString(SpriteState.loadingOverlayText, AudioService.canvasWidth / 2 - 6 * SpriteState.loadingOverlayText.length() / 2, -26 + ClientRenderingState.canvasHeight / 2);
+            canvasGraphics.setFont(UiFontResources.awtLoadingFont);
+            canvasGraphics.setColor(java.awt.Color.white);
+            canvasGraphics.drawString(SpriteState.loadingOverlayText, AudioService.canvasWidth / 2 - 6 * SpriteState.loadingOverlayText.length() / 2, -26 + ClientRenderingState.canvasHeight / 2);
             return;
-          } catch (java.lang.Exception decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var5 = (Exception) (Object) decompiledCaughtException;
+          } catch (java.lang.Exception canvasDrawException) {
+            caughtDrawThrowable = canvasDrawException;
+            repaintFallbackFailure = (Exception) (Object) caughtDrawThrowable;
             MessageDialog.gameCanvas.repaint();
             return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-          decompiledCaughtException = decompiledCaughtParameter2;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_21_0 = var5_ref;
-          stackIn_21_1 = new StringBuilder().append("pb.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_22_2 = "null";
+        } catch (java.lang.RuntimeException drawFailure) {
+          caughtDrawThrowable = drawFailure;
+          drawFailureForContext = (RuntimeException) (Object) caughtDrawThrowable;
+          drawFailureBeforeDescription = drawFailureForContext;
+          drawMessagePrefix = new StringBuilder().append("pb.B(").append(progressPercent).append(',');
+          if (progressColor == null) {
+            colorDescription = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            colorDescription = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_25_2 = "null";
+          messageBeforeStatus = ((StringBuilder) (Object) drawMessagePrefix).append(colorDescription).append(',').append(clearCanvas).append(',').append(returnAfterProgressImageFill).append(',');
+          if (statusText == null) {
+            statusDescription = "null";
           } else {
-            stackIn_25_2 = "{...}";
+            statusDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeStatus).append(statusDescription).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         fullscreenAcceptButtonText = null;
         if (methodGuard != 31735) {
             String unusedNullTextSnapshot = (String) null;
-            ArchiveRequest.a(68, (java.awt.Color) null, true, true, (String) null);
+            ArchiveRequest.drawAwtLoadingProgress(68, (java.awt.Color) null, true, true, (String) null);
         }
     }
 

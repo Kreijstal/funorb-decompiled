@@ -35,7 +35,7 @@ final class MeshPrioritySupport {
                     AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieText + "\"", (byte) -92);
                 } catch (Throwable ignoredCookieScriptFailure) {
                 }
-                ByteStorage.a(applet, 20000000);
+                ByteStorage.updatePageNavigationLinks(applet, 20000000);
             } catch (RuntimeException cookieUpdateFailure) {
                 throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cookieUpdateFailure), "va.C(" + (sessionValue != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ',' + expiryLengthComplement + ')');
             }

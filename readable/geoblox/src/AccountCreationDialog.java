@@ -13,14 +13,14 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         notLoggedInText = null;
     }
 
-    final static void a(String param0, byte param1, boolean param2, String param3) {
+    final static void showLoggingInDialog(String loginIdentifier, byte methodGuard, boolean showLoginOnDismiss, String password) {
         try {
-            TextTemplateLookupSupport.currentLoginIdentifier = param0;
-            LoginPasswordSupport.currentLoginPassword = param3;
-            int var4_int = -62 % ((13 - param1) / 62);
-            MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, param2);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "r.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            TextTemplateLookupSupport.currentLoginIdentifier = loginIdentifier;
+            LoginPasswordSupport.currentLoginPassword = password;
+            int guardRemainder = -62 % ((13 - methodGuard) / 62);
+            MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, showLoginOnDismiss);
+        } catch (RuntimeException dialogFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogFailure), "r.E(" + (loginIdentifier != null ? "{...}" : "null") + ',' + methodGuard + ',' + showLoginOnDismiss + ',' + (password != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -9,17 +9,17 @@ abstract class LoginPayload {
 
     abstract void writePayload(int methodGuard, ByteArrayBuffer buffer);
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void detachPointerInputListeners(boolean clearSpaceBackgroundSprite, java.awt.Component component) {
         try {
-            param1.removeMouseListener(GameplaySetupSupport.pointerListener);
-            param1.removeMouseMotionListener(GameplaySetupSupport.pointerListener);
-            if (param0) {
+            component.removeMouseListener(GameplaySetupSupport.pointerListener);
+            component.removeMouseMotionListener(GameplaySetupSupport.pointerListener);
+            if (clearSpaceBackgroundSprite) {
                 spaceBackgroundSprite = (IndexedSprite) null;
             }
-            param1.removeFocusListener(GameplaySetupSupport.pointerListener);
+            component.removeFocusListener(GameplaySetupSupport.pointerListener);
             Under13TermsPanel.liveHeldPointerButton = 0;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException detachFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) detachFailure), "df.F(" + clearSpaceBackgroundSprite + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -162,57 +162,57 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static int a(byte param0, String param1, int param2, int param3, String param4, String param5, boolean param6) {
-        LoginTextValue var7 = null;
-        RuntimeException var7_ref = null;
-        LoginTextValue var8 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int advanceAccountCreationRequest(byte methodGuard, String password, int ageYears, int affiliateId, String email, String loginIdentifier, boolean newsOptIn) {
+        LoginTextValue loginIdentifierValue = null;
+        RuntimeException requestFailureForContext = null;
+        LoginTextValue emailValue = null;
+        int requestResultBeforeReturn = 0;
+        RuntimeException requestFailureBeforeDescription = null;
+        StringBuilder requestMessagePrefix = null;
+        String passwordDescription = null;
+        StringBuilder messageBeforeEmail = null;
+        String emailDescription = null;
+        StringBuilder messageBeforeIdentifier = null;
+        String identifierDescription = null;
+        RuntimeException caughtRequestFailure = null;
         try {
-          var7 = new LoginTextValue(param5);
-          var8 = new LoginTextValue(param4);
-          if (param0 != -94) {
+          loginIdentifierValue = new LoginTextValue(loginIdentifier);
+          emailValue = new LoginTextValue(email);
+          if (methodGuard != -94) {
             sharedPcmMixerReference = (PcmStreamMixer) null;
           }
-          stackIn_3_0 = LoginPanel.advanceAccountCreationOrLookupRequest(param3, param2, var7, var8, param1, param6, 100);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7_ref = decompiledCaughtException;
-          stackIn_6_0 = var7_ref;
-          stackIn_6_1 = new StringBuilder().append("uf.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          requestResultBeforeReturn = LoginPanel.advanceAccountCreationOrLookupRequest(affiliateId, ageYears, loginIdentifierValue, emailValue, password, newsOptIn, 100);
+          return requestResultBeforeReturn;
+        } catch (java.lang.RuntimeException requestFailure) {
+          caughtRequestFailure = requestFailure;
+          requestFailureForContext = caughtRequestFailure;
+          requestFailureBeforeDescription = requestFailureForContext;
+          requestMessagePrefix = new StringBuilder().append("uf.C(").append(methodGuard).append(',');
+          if (password == null) {
+            passwordDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            passwordDescription = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_10_2 = "null";
+          messageBeforeEmail = ((StringBuilder) (Object) requestMessagePrefix).append(passwordDescription).append(',').append(ageYears).append(',').append(affiliateId).append(',');
+          if (email == null) {
+            emailDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            emailDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param5 == null) {
-            stackIn_13_2 = "null";
+          messageBeforeIdentifier = ((StringBuilder) (Object) messageBeforeEmail).append(emailDescription).append(',');
+          if (loginIdentifier == null) {
+            identifierDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            identifierDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) requestFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeIdentifier).append(identifierDescription).append(',').append(newsOptIn).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1) {
-        if (param0 < 87) {
-            String var3 = (String) null;
-            DiskCacheWorker.a((byte) -87, (String) null, -112, 119, (String) null, (String) null, false);
+    final static void applyAccountCreationGuard(int methodGuard, int unusedArgument) {
+        if (methodGuard < 87) {
+            String unusedNullTextSnapshot = (String) null;
+            DiskCacheWorker.advanceAccountCreationRequest((byte) -87, (String) null, -112, 119, (String) null, (String) null, false);
         }
     }
 

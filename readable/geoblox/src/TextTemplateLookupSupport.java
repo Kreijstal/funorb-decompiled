@@ -7,7 +7,7 @@ final class TextTemplateLookupSupport {
 
     final static void openLoginPanel(boolean allowJustPlay, boolean showCreateAccount, boolean methodGuard) {
         String unusedLoginMessage = (String) null;
-        TextTemplateDefinition.a(2274, (String) null, showCreateAccount, allowJustPlay);
+        TextTemplateDefinition.showAccountLoginPanel(2274, (String) null, showCreateAccount, allowJustPlay);
         if (methodGuard) {
             TextTemplateLookupSupport.openLoginPanel(true, false, true);
         }

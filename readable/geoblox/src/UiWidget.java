@@ -726,7 +726,7 @@ class UiWidget extends IntrusiveNode {
             if (methodGuard) {
                 pendingByteShortQueries = (IntrusiveDeque) null;
             }
-            ArchiveSource.a(rsaModulus, rsaExponent, 0, destination, source.bytes, source.position, true);
+            ArchiveSource.writeEncryptedPayload(rsaModulus, rsaExponent, 0, destination, source.bytes, source.position, true);
         } catch (RuntimeException encryptedBufferFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encryptedBufferFailure), "el.WB(" + methodGuard + ',' + (source != null ? "{...}" : "null") + ',' + (destination != null ? "{...}" : "null") + ',' + (rsaExponent != null ? "{...}" : "null") + ',' + (rsaModulus != null ? "{...}" : "null") + ')');
         }
