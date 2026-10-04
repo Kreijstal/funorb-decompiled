@@ -180,13 +180,13 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.a(7305, param3);
+            stackIn_6_0 = this.requestPreviousChildFocus(7305, param3);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, -104);
+          stackIn_10_0 = this.requestNextChildFocus(param3, -104);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

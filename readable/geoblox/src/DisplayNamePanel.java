@@ -577,13 +577,13 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             return true;
           }
           if (98 == param0) {
-            stackIn_7_0 = this.a(7305, param3);
+            stackIn_7_0 = this.requestPreviousChildFocus(7305, param3);
             return stackIn_7_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param3, -96);
+          stackIn_10_0 = this.requestNextChildFocus(param3, -96);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

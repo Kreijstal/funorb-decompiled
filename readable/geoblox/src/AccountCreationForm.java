@@ -458,7 +458,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             return true;
           }
           if (98 == param0) {
-            stackIn_7_0 = this.a(7305, param3);
+            stackIn_7_0 = this.requestPreviousChildFocus(7305, param3);
             return stackIn_7_0;
           }
           if (param1 != 13) {
@@ -467,7 +467,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           if (99 != param0) {
             return false;
           }
-          stackIn_13_0 = this.a(param3, -125);
+          stackIn_13_0 = this.requestNextChildFocus(param3, -125);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -56,11 +56,11 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             loadingGraphicsText = (String) null;
           }
           if (param0 == 98) {
-            stackIn_8_0 = this.a(7305, param3);
+            stackIn_8_0 = this.requestPreviousChildFocus(7305, param3);
             return stackIn_8_0;
           }
           if (99 == param0) {
-            stackIn_13_0 = this.a(param3, -119);
+            stackIn_13_0 = this.requestNextChildFocus(param3, -119);
             return stackIn_13_0;
           }
           return false;

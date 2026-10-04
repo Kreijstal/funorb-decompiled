@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "ef5db29f6df89fe657f1d9efc8ca36c0e444c877",
+    "commit": "8312dc3e537ccd44c487aa80b1df134c3575ea4a",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "1d4ecae778bc4b2060f1b7464b8b4f12c53e937efb3fb2313eb21d75c1d610b8"
+      "sha256": "d4abe471f54cdaebc5f53cc2d001f3e2ed27758e312f02987b59c8a97908523f"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,38 +3291,38 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "577a46d6e10b610afe92138ea92a20a174ff8983340f2b8cc89218e65dcc22cf",
+    "outputTreeSha256": "c73f0bba6b12ec8e16435b82d2b368b9d29cbd359761261b90dd21172ba49a84",
     "files": 303,
-    "rules": 13608,
-    "identifierEdits": 98370,
+    "rules": 13730,
+    "identifierEdits": 98806,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 98623,
+    "totalEdits": 99063,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 242,
+    "labelEdits": 246,
     "labelBindingsCompared": 813,
     "labelDeclarationsCompared": 246,
     "namingPass": {
-      "version": 144,
-      "rulesAdded": 251,
+      "version": 145,
+      "rulesAdded": 122,
       "rulesRefined": 0,
-      "fields": 0,
-      "methods": 17,
-      "parameters": 58,
-      "locals": 174,
+      "fields": 3,
+      "methods": 5,
+      "parameters": 15,
+      "locals": 97,
       "labels": 2,
-      "previousCompleteRulesPreserved": 13357,
+      "previousCompleteRulesPreserved": 13608,
       "explicitlyCorrectedSymbols": [],
       "rawInputAndGeneratorPinsUnchanged": true,
       "explicitLabelAccountingMigration": true,
       "labelEditsAdded": 4,
-      "allSingleChildWidgetFieldsMethodsParametersAndLocalsNamed": true,
-      "allWidgetDiagnosticAndRenderPassOverrideFamiliesNamed": true,
+      "allUiWidgetFieldsMethodsParametersLocalsAndLabelsNamed": true,
+      "allWidgetContainerFieldsMethodsParametersAndLocalsNamed": true,
       "allEightLargeBodyLabelsNamed": true,
-      "remainingOpaqueBlockLabels": 120,
+      "remainingOpaqueBlockLabels": 118,
       "remainingOpaqueLoopLabels": 46,
       "wholeGameEquivalenceVerified": false
     },
@@ -5034,5 +5034,85 @@
     "sourceWorkflowCommit": "ef5db29f6df89fe657f1d9efc8ca36c0e444c877",
     "manifestSha256": "1d4ecae778bc4b2060f1b7464b8b4f12c53e937efb3fb2313eb21d75c1d610b8",
     "outputTreeSha256": "577a46d6e10b610afe92138ea92a20a174ff8983340f2b8cc89218e65dcc22cf"
+  },
+  "baseWidgetAndContainerNaming": {
+    "version": 145,
+    "rulesAdded": 122,
+    "rulesRefined": 0,
+    "C": 0,
+    "F": 3,
+    "M": 5,
+    "P": 15,
+    "L": 97,
+    "B": 2,
+    "previousCompleteRulesPreserved": 13608,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "explicitLabelAccountingMigration": {
+      "before": 242,
+      "after": 246,
+      "newPlainLabels": 2,
+      "newLoopLabels": 0,
+      "namedSymbols": [
+        "B:el.a(ZIII)Z#0",
+        "B:el.a(ZIII)Z#1"
+      ],
+      "existingTransfersNamed": 2,
+      "labelBindingsPreserved": 813
+    },
+    "allUiWidgetFieldsMethodsParametersLocalsAndLabelsNamed": true,
+    "allWidgetContainerFieldsMethodsParametersAndLocalsNamed": true,
+    "allOwnedDeclarationsNamed": {
+      "el": 243,
+      "ee": 219
+    },
+    "constructorNamesFollowClassRules": true,
+    "jdkOverrideSpellingPreserved": "M:el.toString()Ljava/lang/String;",
+    "compilerResolvedBaseFieldReferences": {
+      "F:el.field_k:I": {
+        "occurrences": 16,
+        "files": [
+          "dj.java",
+          "el.java",
+          "ff.java"
+        ]
+      },
+      "F:el.field_n:I": {
+        "occurrences": 7,
+        "files": [
+          "dj.java",
+          "el.java",
+          "ff.java"
+        ]
+      },
+      "F:el.field_w:Ldk;": {
+        "occurrences": 15,
+        "files": [
+          "ff.java"
+        ]
+      }
+    },
+    "sourceBodiesEditedByHand": false,
+    "scope": "Complete all UiWidget and WidgetContainer declaration names; constructors follow class rules and toString keeps the JDK spelling. Compiler-resolved references across all303 sources establish textOffsetX/textOffsetY/textLayout in text input/rendering, preserving X caret-driven adjustment, wrong-guard bounds store112, only-zero owned Y stores and lazy layout/metrics/hit-test aliases. Child reverse drawing and forward input/layout/hover traversal, linked-node early exits, directional focus scans after each focused child without wrapping, first-focus acquisition, numeric80/81 choices, cursor/coordinate/callback order and all guard/partial effects remain. The encryption wrapper exposes source/destination and actual exponent/modulus ordering, retaining signed BigInteger/random/scratch/query-cleanup behavior. Two existing pointer-press frames and their breaks receive contextual names; no frame or transfer is removed. All13608 prior complete rules and raw/tool/workflow/stub/native/text pins remain. Both303 corpora compile, preserve136607 bindings/388 overrides/813 label records and reverse byte exactly.27 publication tests and8 existing native fixtures pass in their recorded scopes, not live AWT input, arbitrary callback-driven list mutations, complete text scrolling/layout, encryption/network interoperability or full-game/server/device/heap/FPS acceptance.",
+    "identifierEditsAdded": 436,
+    "labelEditsAdded": 4,
+    "changedJavaFiles": 12,
+    "changedOriginalJavaFiles": [
+      "Geoblox.java",
+      "dj.java",
+      "ee.java",
+      "el.java",
+      "ff.java",
+      "hi.java",
+      "pf.java",
+      "qh.java",
+      "s.java",
+      "uk.java",
+      "vh.java",
+      "wi.java"
+    ],
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "8312dc3e537ccd44c487aa80b1df134c3575ea4a",
+    "manifestSha256": "d4abe471f54cdaebc5f53cc2d001f3e2ed27758e312f02987b59c8a97908523f",
+    "outputTreeSha256": "c73f0bba6b12ec8e16435b82d2b368b9d29cbd359761261b90dd21172ba49a84"
   }
 }

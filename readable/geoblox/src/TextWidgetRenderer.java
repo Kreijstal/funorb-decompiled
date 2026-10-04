@@ -34,7 +34,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             var6 = (UiWidget) null;
             discarded$1 = this.b((UiWidget) null, 96, -93, -23);
           }
-          stackIn_3_0 = this.field_e + param0.widgetX + param1 + (param0.field_k + param3);
+          stackIn_3_0 = this.field_e + param0.widgetX + param1 + (param0.textOffsetX + param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,8 +143,8 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         int var7 = 0;
         var7 = Geoblox.clientControlFlowFlag;
         try {
-          if (null == param1.field_w) {
-            param1.field_w = (TextLayout) ((Object) new CachedTextLayout());
+          if (null == param1.textLayout) {
+            param1.textLayout = (TextLayout) ((Object) new CachedTextLayout());
           }
           var3_int = this.a(param1, -1);
           var4 = this.b(289769985, param1);
@@ -168,23 +168,23 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           if ((var6 != 0) &&
               (var6 != 3)) {
             if (var6 == 1) {
-              if (!(param1.field_w instanceof CachedTextLayout)) {
+              if (!(param1.textLayout instanceof CachedTextLayout)) {
                 return;
               }
-              ((CachedTextLayout) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
+              ((CachedTextLayout) ((Object) param1.textLayout)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
               return;
             }
             if (var6 != 2) {
               return;
             }
-            if (!(param1.field_w instanceof CachedTextLayout)) {
+            if (!(param1.textLayout instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+            ((CachedTextLayout) ((Object) param1.textLayout)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
             return;
           }
-          if (param1.field_w instanceof CachedTextLayout) {
-            ((CachedTextLayout) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
+          if (param1.textLayout instanceof CachedTextLayout) {
+            ((CachedTextLayout) ((Object) param1.textLayout)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
             return;
           }
           return;
@@ -211,16 +211,16 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_w == null) {
-            param1.field_w = (TextLayout) ((Object) new CachedTextLayout());
+          if (param1.textLayout == null) {
+            param1.textLayout = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (this.field_q) {
-            ((CachedTextLayout) ((Object) param1.field_w)).a(this.field_i, 1, this.c(116, param1), this.field_f, this.field_n, this.a(param1, -1), this.field_g, this.b(289769985, param1));
+            ((CachedTextLayout) ((Object) param1.textLayout)).a(this.field_i, 1, this.c(116, param1), this.field_f, this.field_n, this.a(param1, -1), this.field_g, this.b(289769985, param1));
           } else {
             this.b((byte) 109, param1);
           }
           if (param0 > 110) {
-            stackIn_10_0 = param1.field_w;
+            stackIn_10_0 = param1.textLayout;
             return stackIn_10_0;
           }
           stackIn_8_0 = (TextLayout) null;
@@ -257,7 +257,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             var8 = (UiWidget) null;
             this.b((byte) 9, (UiWidget) null);
           }
-          stackIn_3_0 = param0.field_w.a(param1 - this.a(param5, param0, (byte) 46), -109, param4 - this.a(param3, -2, param0));
+          stackIn_3_0 = param0.textLayout.a(param1 - this.a(param5, param0, (byte) 46), -109, param4 - this.a(param3, -2, param0));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,7 +284,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         try {
           this.a((byte) 126, param0);
           var3_int = 24 / ((param1 - 30) / 57);
-          stackIn_1_0 = param0.field_w.a(90) - (-this.field_e - this.field_j);
+          stackIn_1_0 = param0.textLayout.a(90) - (-this.field_e - this.field_j);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -311,7 +311,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         try {
           var3_int = 46 / ((param0 + 58) / 61);
           this.a((byte) 127, param1);
-          stackIn_1_0 = param1.field_w.b(-3111) + this.field_m + this.field_b;
+          stackIn_1_0 = param1.textLayout.b(-3111) + this.field_m + this.field_b;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -372,7 +372,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             var6 = (UiWidget) null;
             this.c(-123, (UiWidget) null);
           }
-          stackIn_3_0 = param3 + param0.field_n + (this.field_m + (param0.widgetY + param1));
+          stackIn_3_0 = param3 + param0.textOffsetY + (this.field_m + (param0.widgetY + param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -671,7 +671,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
                 stackIn_20_0 = var19.a(var9, 124);
               }
               var15 = stackIn_20_0;
-              DialRenderer.field_j.a(var13.field_d + (param2 + param5.widgetY + this.field_m + param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
+              DialRenderer.field_j.a(var13.field_d + (param2 + param5.widgetY + this.field_m + param5.textOffsetY), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
             }
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             return;

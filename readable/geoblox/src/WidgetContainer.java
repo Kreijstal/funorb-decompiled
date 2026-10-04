@@ -11,42 +11,42 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     static int[] themeCycleOrder;
 
     final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
-        DequeCursor var8 = null;
-        RuntimeException var8_ref = null;
-        UiWidget var9_ref_el = null;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var10 = Geoblox.clientControlFlowFlag;
+        DequeCursor childCursor = null;
+        RuntimeException pointerPressFailure = null;
+        UiWidget child = null;
+        int guardQuotient = 0;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException pressFailureForContext = null;
+        StringBuilder pressContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtPressFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var8 = new DequeCursor(this.children);
-          var9_ref_el = (UiWidget) ((Object) var8.beginForward((byte) 88));
-          while (var9_ref_el != null) {
-            if (var9_ref_el.isLinked(118)) {
-              if (var9_ref_el.handlePointerPress(parentY + this.widgetY, 60, this.widgetX + parentX, pointerButton, pointerX, pointerY, eventContext)) {
+          childCursor = new DequeCursor(this.children);
+          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          while (child != null) {
+            if (child.isLinked(118)) {
+              if (child.handlePointerPress(parentY + this.widgetY, 60, this.widgetX + parentX, pointerButton, pointerX, pointerY, eventContext)) {
                 return true;
               }
-              var9_ref_el = (UiWidget) ((Object) var8.nextForward((byte) 109));
+              child = (UiWidget) ((Object) childCursor.nextForward((byte) 109));
               continue;
             }
             break;
           }
-          var9 = -13 / ((-3 - methodGuard) / 38);
+          guardQuotient = -13 / ((-3 - methodGuard) / 38);
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref = decompiledCaughtException;
-          stackIn_13_0 = var8_ref;
-          stackIn_13_1 = new StringBuilder().append("ee.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+        } catch (java.lang.RuntimeException pressFailure) {
+          caughtPressFailure = pressFailure;
+          pointerPressFailure = caughtPressFailure;
+          pressFailureForContext = pointerPressFailure;
+          pressContextBuilder = new StringBuilder().append("ee.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
-            stackIn_14_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pressFailureForContext), ((StringBuilder) (Object) pressContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
@@ -118,111 +118,111 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         return null != this.findFocusTarget((byte) -99) ? true : false;
     }
 
-    final boolean a(int param0, UiWidget param1) {
-        RuntimeException var3 = null;
-        UiWidget var4 = null;
-        DequeCursor var5 = null;
-        UiWidget var6 = null;
-        int var7 = 0;
-        DequeCursor var8 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    final boolean requestPreviousChildFocus(int methodGuard, UiWidget focusContext) {
+        RuntimeException focusSearchFailure = null;
+        UiWidget focusedChildCandidate = null;
+        DequeCursor candidateCursor = null;
+        UiWidget focusCandidate = null;
+        int clientControlFlowSnapshot = 0;
+        DequeCursor focusedChildCursor = null;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (this.children.isEmpty(13519)) {
             return false;
           }
-          var8 = new DequeCursor(this.children);
-          var4 = (UiWidget) ((Object) var8.beginReverse(1));
-          if (param0 != 7305) {
+          focusedChildCursor = new DequeCursor(this.children);
+          focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.beginReverse(1));
+          if (methodGuard != 7305) {
             themeCycleOrder = (int[]) null;
           }
-          while (var4 != null) {
-            if (var4.hasKeyboardFocus((byte) 54)) {
-              var5 = new DequeCursor(this.children);
-              var5.beginReverseAt(var4, (byte) 123);
-              var6 = (UiWidget) ((Object) var5.nextReverse(26));
-              while (!(var6 == null)) {
-                if (!var6.requestKeyboardFocus((byte) -39, param1)) {
-                  var6 = (UiWidget) ((Object) var5.nextReverse(26));
+          while (focusedChildCandidate != null) {
+            if (focusedChildCandidate.hasKeyboardFocus((byte) 54)) {
+              candidateCursor = new DequeCursor(this.children);
+              candidateCursor.beginReverseAt(focusedChildCandidate, (byte) 123);
+              focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
+              while (!(focusCandidate == null)) {
+                if (!focusCandidate.requestKeyboardFocus((byte) -39, focusContext)) {
+                  focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiWidget) ((Object) var8.nextReverse(26));
+            focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.nextReverse(26));
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_20_0 = var3;
-          stackIn_20_1 = new StringBuilder().append("ee.AB(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_21_2 = "null";
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          focusSearchFailure = caughtFocusFailure;
+          focusFailureForContext = focusSearchFailure;
+          focusContextBuilder = new StringBuilder().append("ee.AB(").append(methodGuard).append(',');
+          if (focusContext == null) {
+            focusContextDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(')').toString());
         }
     }
 
     void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
-        RuntimeException runtimeException = null;
-        DequeCursor var5 = null;
-        UiWidget var6 = null;
-        int var7 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.clientControlFlowFlag;
+        RuntimeException pointerStateFailure = null;
+        DequeCursor childCursor = null;
+        UiWidget child = null;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException pointerFailureForContext = null;
+        StringBuilder pointerContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtPointerFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-          var5 = new DequeCursor(this.children);
-          var6 = (UiWidget) ((Object) var5.beginForward((byte) 88));
-          while (var6 != null) {
-            if (var6.isLinked(122)) {
-              var6.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
-              var6 = (UiWidget) ((Object) var5.nextForward((byte) 123));
+          childCursor = new DequeCursor(this.children);
+          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          while (child != null) {
+            if (child.isLinked(122)) {
+              child.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
+              child = (UiWidget) ((Object) childCursor.nextForward((byte) 123));
               continue;
             }
             break;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_8_0 = runtimeException;
-          stackIn_8_1 = new StringBuilder().append("ee.H(").append(hoverGuard).append(',').append(parentY).append(',');
+        } catch (java.lang.RuntimeException pointerFailure) {
+          caughtPointerFailure = pointerFailure;
+          pointerStateFailure = caughtPointerFailure;
+          pointerFailureForContext = pointerStateFailure;
+          pointerContextBuilder = new StringBuilder().append("ee.H(").append(hoverGuard).append(',').append(parentY).append(',');
           if (eventContext == null) {
-            stackIn_9_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(parentX).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerFailureForContext), ((StringBuilder) (Object) pointerContextBuilder).append(eventContextDescription).append(',').append(parentX).append(')').toString());
         }
     }
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int var8 = Geoblox.clientControlFlowFlag;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if ((renderPass == 0) &&
             (!(this.renderer == null))) {
             this.renderer.drawWidget(parentX, -9, parentY, true, (UiWidget) (this));
         }
-        int var6 = -58 % ((methodGuard - 1) / 43);
-        DequeCursor var5 = new DequeCursor(this.children);
-        UiWidget var7 = (UiWidget) ((Object) var5.beginReverse(1));
-        while (var7 != null) {
-            var7.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) 93, renderPass);
-            var7 = (UiWidget) ((Object) var5.nextReverse(26));
+        int guardResidue = -58 % ((methodGuard - 1) / 43);
+        DequeCursor childCursor = new DequeCursor(this.children);
+        UiWidget child = (UiWidget) ((Object) childCursor.beginReverse(1));
+        while (child != null) {
+            child.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) 93, renderPass);
+            child = (UiWidget) ((Object) childCursor.nextReverse(26));
         }
     }
 
-    public static void e(int param0) {
-        if (param0 != 14078) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 14078) {
             return;
         }
         mustLogin2Texts = null;
@@ -232,20 +232,20 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     }
 
     final String getHoverText(byte methodGuard) {
-        DequeCursor var2;
-        UiWidget var3;
-        String var4;
-        var2 = new DequeCursor(this.children);
+        DequeCursor childCursor;
+        UiWidget child;
+        String childHoverText;
+        childCursor = new DequeCursor(this.children);
         if (methodGuard != 69) {
           menuBackgroundSprite = (Sprite) null;
         }
-        var3 = (UiWidget) ((Object) var2.beginForward((byte) 88));
-        while (var3 != null) {
-          var4 = var3.getHoverText((byte) 69);
-          if (var4 != null) {
-            return var4;
+        child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        while (child != null) {
+          childHoverText = child.getHoverText((byte) 69);
+          if (childHoverText != null) {
+            return childHoverText;
           }
-          var3 = (UiWidget) ((Object) var2.nextForward((byte) 111));
+          child = (UiWidget) ((Object) childCursor.nextForward((byte) 111));
         }
         return null;
     }
@@ -260,67 +260,67 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         int guardResidue = 71 / ((methodGuard - 57) / 51);
     }
 
-    final boolean a(UiWidget param0, int param1) {
-        DequeCursor var3 = null;
-        RuntimeException var3_ref = null;
-        UiWidget var4 = null;
-        DequeCursor var5 = null;
-        UiWidget var6 = null;
-        int var7 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    final boolean requestNextChildFocus(UiWidget focusContext, int methodGuard) {
+        DequeCursor focusedChildCursor = null;
+        RuntimeException focusSearchFailure = null;
+        UiWidget focusedChildCandidate = null;
+        DequeCursor candidateCursor = null;
+        UiWidget focusCandidate = null;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (this.children.isEmpty(13519)) {
             return false;
           }
-          var3 = new DequeCursor(this.children);
-          if (param1 > -75) {
+          focusedChildCursor = new DequeCursor(this.children);
+          if (methodGuard > -75) {
             return true;
           }
-          var4 = (UiWidget) ((Object) var3.beginForward((byte) 88));
-          while (var4 != null) {
-            if (var4.hasKeyboardFocus((byte) 54)) {
-              var5 = new DequeCursor(this.children);
-              var5.beginForwardAt((byte) 56, var4);
-              var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
-              while (!(var6 == null)) {
-                if (!var6.requestKeyboardFocus((byte) -56, param0)) {
-                  var6 = (UiWidget) ((Object) var5.nextForward((byte) 114));
+          focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.beginForward((byte) 88));
+          while (focusedChildCandidate != null) {
+            if (focusedChildCandidate.hasKeyboardFocus((byte) 54)) {
+              candidateCursor = new DequeCursor(this.children);
+              candidateCursor.beginForwardAt((byte) 56, focusedChildCandidate);
+              focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
+              while (!(focusCandidate == null)) {
+                if (!focusCandidate.requestKeyboardFocus((byte) -56, focusContext)) {
+                  focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiWidget) ((Object) var3.nextForward((byte) 109));
+            focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.nextForward((byte) 109));
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_22_0 = var3_ref;
-          stackIn_22_1 = new StringBuilder().append("ee.RA(");
-          if (param0 == null) {
-            stackIn_23_2 = "null";
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          focusSearchFailure = caughtFocusFailure;
+          focusFailureForContext = focusSearchFailure;
+          focusContextBuilder = new StringBuilder().append("ee.RA(");
+          if (focusContext == null) {
+            focusContextDescription = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     final void clearKeyboardFocus(int methodGuard) {
-        int var4 = Geoblox.clientControlFlowFlag;
-        DequeCursor var2 = new DequeCursor(this.children);
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        DequeCursor childCursor = new DequeCursor(this.children);
         if (methodGuard > -122) {
             themeCycleOrder = (int[]) null;
         }
-        UiWidget var3 = (UiWidget) ((Object) var2.beginForward((byte) 88));
-        while (var3 != null) {
-            var3.clearKeyboardFocus(-126);
-            var3 = (UiWidget) ((Object) var2.nextForward((byte) 121));
+        UiWidget child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        while (child != null) {
+            child.clearKeyboardFocus(-126);
+            child = (UiWidget) ((Object) childCursor.nextForward((byte) 121));
         }
     }
 
@@ -330,42 +330,42 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     }
 
     final boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
-        DequeCursor var3 = null;
-        RuntimeException var3_ref = null;
-        UiWidget var4 = null;
-        int var5 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.clientControlFlowFlag;
+        DequeCursor childCursor = null;
+        RuntimeException childFocusRequestFailure = null;
+        UiWidget child = null;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var3 = new DequeCursor(this.children);
+          childCursor = new DequeCursor(this.children);
           if (methodGuard >= -30) {
             return false;
           }
-          var4 = (UiWidget) ((Object) var3.beginForward((byte) 88));
+          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
           while (true) {
-            if (var4 == null) {
+            if (child == null) {
               return false;
             }
-            if (!var4.requestKeyboardFocus((byte) -123, focusContext)) {
-              var4 = (UiWidget) ((Object) var3.nextForward((byte) 125));
+            if (!child.requestKeyboardFocus((byte) -123, focusContext)) {
+              child = (UiWidget) ((Object) childCursor.nextForward((byte) 125));
               continue;
             }
             return true;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_14_0 = var3_ref;
-          stackIn_14_1 = new StringBuilder().append("ee.UA(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          childFocusRequestFailure = caughtFocusFailure;
+          focusFailureForContext = childFocusRequestFailure;
+          focusContextBuilder = new StringBuilder().append("ee.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
-            stackIn_15_2 = "null";
+            focusContextDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(')').toString());
         }
     }
 
@@ -378,22 +378,22 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     }
 
     final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
-        DequeCursor var7 = null;
-        UiWidget var8 = null;
-        int var9 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
-        var9 = Geoblox.clientControlFlowFlag;
+        DequeCursor childCursor = null;
+        UiWidget child = null;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException releaseFailureForContext = null;
+        StringBuilder releaseContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtReleaseFailure = null;
+        RuntimeException pointerReleaseFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var7 = new DequeCursor(this.children);
-          var8 = (UiWidget) ((Object) var7.beginForward((byte) 88));
-          while (var8 != null) {
-            if (var8.isLinked(122)) {
-              var8.handlePointerRelease(parentX + this.widgetX, pointerX, true, eventContext, this.widgetY + parentY, pointerY);
-              var8 = (UiWidget) ((Object) var7.nextForward((byte) 109));
+          childCursor = new DequeCursor(this.children);
+          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          while (child != null) {
+            if (child.isLinked(122)) {
+              child.handlePointerRelease(parentX + this.widgetX, pointerX, true, eventContext, this.widgetY + parentY, pointerY);
+              child = (UiWidget) ((Object) childCursor.nextForward((byte) 109));
               continue;
             }
             break;
@@ -402,70 +402,70 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             this.getHoverText((byte) -6);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7_ref = decompiledCaughtException;
-          stackIn_10_0 = var7_ref;
-          stackIn_10_1 = new StringBuilder().append("ee.TA(").append(parentX).append(',').append(pointerX).append(',').append(releaseGuard).append(',');
+        } catch (java.lang.RuntimeException releaseFailure) {
+          caughtReleaseFailure = releaseFailure;
+          pointerReleaseFailure = caughtReleaseFailure;
+          releaseFailureForContext = pointerReleaseFailure;
+          releaseContextBuilder = new StringBuilder().append("ee.TA(").append(parentX).append(',').append(pointerX).append(',').append(releaseGuard).append(',');
           if (eventContext == null) {
-            stackIn_11_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(parentY).append(',').append(pointerY).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) releaseFailureForContext), ((StringBuilder) (Object) releaseContextBuilder).append(eventContextDescription).append(',').append(parentY).append(',').append(pointerY).append(')').toString());
         }
     }
 
-    boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        UiWidget var8 = null;
-        DequeCursor var9 = null;
-        boolean stackIn_17_0 = false;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        RuntimeException keyInputFailure = null;
+        int keyCodeSnapshot = 0;
+        int clientControlFlowSnapshot = 0;
+        UiWidget child = null;
+        DequeCursor childCursor = null;
+        boolean childFocusRequested = false;
+        RuntimeException keyFailureForContext = null;
+        StringBuilder keyContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtKeyFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var9 = new DequeCursor(this.children);
-          if (param1 != 13) {
+          childCursor = new DequeCursor(this.children);
+          if (methodGuard != 13) {
             this.clearKeyboardFocus(-77);
           }
-          var8 = (UiWidget) ((Object) var9.beginForward((byte) 88));
-          while (var8 != null) {
-            if (var8.isLinked(120)) {
-              if ((var8.hasKeyboardFocus((byte) 54)) &&
-                  (var8.handleKeyInput(param0, 13, param2, param3))) {
+          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          while (child != null) {
+            if (child.isLinked(120)) {
+              if ((child.hasKeyboardFocus((byte) 54)) &&
+                  (child.handleKeyInput(keyCode, 13, typedCharacter, eventContext))) {
                 return true;
               }
-              var8 = (UiWidget) ((Object) var9.nextForward((byte) 110));
+              child = (UiWidget) ((Object) childCursor.nextForward((byte) 110));
               continue;
             }
             break;
           }
-          var6 = param0;
-          if (var6 != 80) {
+          keyCodeSnapshot = keyCode;
+          if (keyCodeSnapshot != 80) {
             return false;
           }
           if (!MidiPcmStream.heldInternalKeys[81]) {
-            stackIn_17_0 = this.a(param3, -96);
+            childFocusRequested = this.requestNextChildFocus(eventContext, -96);
           } else {
-            stackIn_17_0 = this.a(7305, param3);
+            childFocusRequested = this.requestPreviousChildFocus(7305, eventContext);
           }
-          return stackIn_17_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_20_0 = var5;
-          stackIn_20_1 = new StringBuilder().append("ee.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_21_2 = "null";
+          return childFocusRequested;
+        } catch (java.lang.RuntimeException keyFailure) {
+          caughtKeyFailure = keyFailure;
+          keyInputFailure = caughtKeyFailure;
+          keyFailureForContext = keyInputFailure;
+          keyContextBuilder = new StringBuilder().append("ee.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureForContext), ((StringBuilder) (Object) keyContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
@@ -552,44 +552,44 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     }
 
     final boolean handlePointerWheel(int parentY, int wheelRotation, int parentX, int methodGuard, int pointerX, UiWidget eventContext, int pointerY) {
-        RuntimeException var8 = null;
-        UiWidget var9 = null;
-        int var10 = 0;
-        DequeCursor var11 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var10 = Geoblox.clientControlFlowFlag;
+        RuntimeException pointerWheelFailure = null;
+        UiWidget child = null;
+        int clientControlFlowSnapshot = 0;
+        DequeCursor childCursor = null;
+        RuntimeException wheelFailureForContext = null;
+        StringBuilder wheelContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtWheelFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var11 = new DequeCursor(this.children);
+          childCursor = new DequeCursor(this.children);
           if (methodGuard != -1) {
             this.setWidgetBounds(-119, -117, (byte) 87, 105, 63);
           }
-          var9 = (UiWidget) ((Object) var11.beginForward((byte) 88));
-          while (var9 != null) {
-            if (var9.isLinked(127)) {
-              if ((var9.hasKeyboardFocus((byte) 54)) &&
-                  (var9.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY))) {
+          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          while (child != null) {
+            if (child.isLinked(127)) {
+              if ((child.hasKeyboardFocus((byte) 54)) &&
+                  (child.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY))) {
                 return true;
               }
-              var9 = (UiWidget) ((Object) var11.nextForward((byte) 124));
+              child = (UiWidget) ((Object) childCursor.nextForward((byte) 124));
               continue;
             }
             break;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_15_0 = var8;
-          stackIn_15_1 = new StringBuilder().append("ee.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
+        } catch (java.lang.RuntimeException wheelFailure) {
+          caughtWheelFailure = wheelFailure;
+          pointerWheelFailure = caughtWheelFailure;
+          wheelFailureForContext = pointerWheelFailure;
+          wheelContextBuilder = new StringBuilder().append("ee.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
           if (eventContext == null) {
-            stackIn_16_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(pointerY).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) wheelFailureForContext), ((StringBuilder) (Object) wheelContextBuilder).append(eventContextDescription).append(',').append(pointerY).append(')').toString());
         }
     }
 

@@ -201,13 +201,13 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             return true;
           }
           if (98 == param0) {
-            stackIn_5_0 = this.a(7305, param3);
+            stackIn_5_0 = this.requestPreviousChildFocus(7305, param3);
             return stackIn_5_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(param3, -109);
+          stackIn_9_0 = this.requestNextChildFocus(param3, -109);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -297,7 +297,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 var11_ref_String = "";
               }
               CacheReference.outgoingSessionBuffer.writeNullTerminatedText(var11_ref_String, 0);
-              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
+              UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
               CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-var10 + CacheReference.outgoingSessionBuffer.position, true);
             } else {
               EndingAnimationSupport.loginPayloadBuffer.position = 0;
@@ -320,7 +320,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               CacheReference.outgoingSessionBuffer.writeByte((byte) 124, 16);
               CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 1;
               var9 = CacheReference.outgoingSessionBuffer.position;
-              UiWidget.a(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
+              UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
               CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, CacheReference.outgoingSessionBuffer.position - var9);
             }
             NanoFrameTimer.a(-1, -1);

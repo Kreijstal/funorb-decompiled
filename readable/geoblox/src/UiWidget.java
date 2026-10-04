@@ -7,7 +7,7 @@ import java.util.*;
 class UiWidget extends IntrusiveNode {
     int widgetHeight;
     int widgetWidth;
-    TextLayout field_w;
+    TextLayout textLayout;
     int widgetY;
     boolean pointerInside;
     String widgetText;
@@ -15,8 +15,8 @@ class UiWidget extends IntrusiveNode {
     WidgetRenderer renderer;
     int widgetX;
     int pressedPointerButton;
-    int field_k;
-    int field_n;
+    int textOffsetX;
+    int textOffsetY;
     WidgetListener listener;
     String hoverText;
     static IntrusiveDeque pendingByteShortQueries;
@@ -46,8 +46,8 @@ class UiWidget extends IntrusiveNode {
         return this.requestKeyboardFocus((byte) -75, (UiWidget) (this));
     }
 
-    public static void b(int param0) {
-        if (param0 != -5927) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != -5927) {
             return;
         }
         gameplaySession = null;
@@ -55,17 +55,17 @@ class UiWidget extends IntrusiveNode {
     }
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int var5 = 0;
+        int guardResidue = 0;
         if (renderPass != 0) {
-            var5 = 35 % ((1 - methodGuard) / 43);
+            guardResidue = 35 % ((1 - methodGuard) / 43);
             return;
         }
         if (null != this.renderer) {
             this.renderer.drawWidget(parentX, -81, parentY, true, (UiWidget) (this));
-            var5 = 35 % ((1 - methodGuard) / 43);
+            guardResidue = 35 % ((1 - methodGuard) / 43);
             return;
         }
-        var5 = 35 % ((1 - methodGuard) / 43);
+        guardResidue = 35 % ((1 - methodGuard) / 43);
     }
 
     int getLastRenderPass(byte methodGuard) {
@@ -180,28 +180,28 @@ class UiWidget extends IntrusiveNode {
     }
 
     boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException focusRequestFailure = null;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
         try {
           if (methodGuard <= -30) {
             return false;
           }
           this.handlePointerWheel(-77, -17, -47, -88, 79, (UiWidget) null, 49);
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("el.UA(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          focusRequestFailure = caughtFocusFailure;
+          focusFailureForContext = focusRequestFailure;
+          focusContextBuilder = new StringBuilder().append("el.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
-            stackIn_7_2 = "null";
+            focusContextDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ class UiWidget extends IntrusiveNode {
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          L19: {
+          pointerPressWithoutWheel: {
             if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               if (focusFlag == 0) {
                 if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
@@ -280,7 +280,7 @@ class UiWidget extends IntrusiveNode {
               }
               this.clearKeyboardFocus(-127);
               if (clientControlFlowSnapshot == 0) {
-                break L19;
+                break pointerPressWithoutWheel;
               }
             }
             pointerEventsAvailable = false;
@@ -336,11 +336,11 @@ class UiWidget extends IntrusiveNode {
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          L0: {
+          pointerPressWithWheel: {
             if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               this.clearKeyboardFocus(-127);
               if (clientControlFlowSnapshot == 0) {
-                break L0;
+                break pointerPressWithWheel;
               }
             }
             pointerEventsAvailable = false;
@@ -522,7 +522,7 @@ class UiWidget extends IntrusiveNode {
             this.widgetY = y;
             return;
         }
-        this.field_k = 112;
+        this.textOffsetX = 112;
         this.widgetWidth = width;
         this.widgetY = y;
     }
@@ -721,14 +721,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, ByteArrayBuffer param1, ByteArrayBuffer param2, java.math.BigInteger param3, java.math.BigInteger param4) {
+    final static void appendRsaXteaEncryptedBuffer(boolean methodGuard, ByteArrayBuffer source, ByteArrayBuffer destination, java.math.BigInteger rsaExponent, java.math.BigInteger rsaModulus) {
         try {
-            if (param0) {
+            if (methodGuard) {
                 pendingByteShortQueries = (IntrusiveDeque) null;
             }
-            ArchiveSource.a(param4, param3, 0, param2, param1.bytes, param1.position, true);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "el.WB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+            ArchiveSource.a(rsaModulus, rsaExponent, 0, destination, source.bytes, source.position, true);
+        } catch (RuntimeException encryptedBufferFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encryptedBufferFailure), "el.WB(" + methodGuard + ',' + (source != null ? "{...}" : "null") + ',' + (destination != null ? "{...}" : "null") + ',' + (rsaExponent != null ? "{...}" : "null") + ',' + (rsaModulus != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -796,14 +796,14 @@ class UiWidget extends IntrusiveNode {
     }
 
     protected UiWidget() {
-        this.field_k = 0;
-        this.field_n = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
     }
 
     UiWidget(String text, WidgetRenderer renderer, WidgetListener listener) {
         TextWidgetLayout measuringRenderer = null;
-        this.field_k = 0;
-        this.field_n = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
         try {
             this.renderer = renderer;
             this.listener = listener;
@@ -819,8 +819,8 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(int x, int y, int width, int height, WidgetRenderer renderer, WidgetListener listener) {
-        this.field_k = 0;
-        this.field_n = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
         try {
             this.widgetWidth = width;
             this.widgetX = x;

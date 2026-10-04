@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ef5db29f6df89fe657f1d9efc8ca36c0e444c877/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/8312dc3e537ccd44c487aa80b1df134c3575ea4a/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 144)
+## Current readability (pass 145)
 
-The export has 13,608 guarded names and 98,370 Java identifier edits, plus 11
-class-name literal edits and 242 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 13,730 guarded names and 98,806 Java identifier edits, plus 11
+class-name literal edits and 246 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,37 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 145 adds 122 guarded rules: three fields, five methods, fifteen
+parameters, 97 locals and two labels. All 243 UiWidget and 219 WidgetContainer
+declarations now have readable names; constructors follow class rules and
+toString keeps its JDK spelling. requestPreviousChildFocus/requestNextChildFocus
+expose the actual nonwrapping scans after focused children. First-focus
+acquisition, reverse draw order, forward input/layout/hover traversal,
+linked-node early exits, cursor positions and callback order stay intact.
+
+Compiler-resolved field references establish textOffsetX/textOffsetY/textLayout
+across the text-input and renderer holders. Caret-driven X adjustment, the
+wrong-guard bounds store of 112, only-zero owned Y stores and lazy layout/cache
+aliases remain. appendRsaXteaEncryptedBuffer names the existing source/destination
+wrapper; exponent/modulus argument order, signed BigInteger transformation,
+random/scratch state and guarded query cleanup are unchanged.
+
+pointerPressWithoutWheel and pointerPressWithWheel name two existing frames
+and their breaks. Numeric keys 80/81, wheel coordinates, release-guard effects
+and all nonzero client-control paths remain. Label edit accounting grows from
+242 to 246; no frame or transfer is removed. There are 13,730 rules and 98,806
+identifier edits, plus eleven class-literal and 246 label edits: 99,063 total.
+All 13,608 previous complete rules and raw/tool/workflow/stub/native/text pins
+remain. Both 303-file corpora compile, preserve 136,607 bindings, 388 overrides
+and 813 lexical label records, and reverse byte exactly. The 27 publication
+tests and eight existing native fixtures pass within their recorded scopes.
+Live AWT input, arbitrary callback-driven list mutations, complete text
+scrolling/layout and encrypted-payload interoperability remain unverified.
+Eight large labeled bodies and 164 opaque labels remain; full-game/server/
+device and heap/FPS acceptance are still unverified.
+
+## Previous widget diagnostics and single child naming (pass 144)
 
 Pass 144 adds 251 guarded rules: 17 methods, 58 parameters, 174 locals and
 two labels. Every SingleChildWidget field, method, parameter and local is now

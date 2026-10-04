@@ -116,13 +116,13 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             return true;
           }
           if (param0 == 98) {
-            stackIn_8_0 = this.a(7305, param3);
+            stackIn_8_0 = this.requestPreviousChildFocus(7305, param3);
             return stackIn_8_0;
           }
           if (99 != param0) {
             return false;
           }
-          stackIn_11_0 = this.a(param3, -110);
+          stackIn_11_0 = this.requestNextChildFocus(param3, -110);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

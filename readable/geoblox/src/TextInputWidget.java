@@ -499,8 +499,8 @@ class TextInputWidget extends ButtonWidget {
         TextWidgetLayout var9;
         var8 = Geoblox.clientControlFlowFlag;
         if (!this.field_E) {
-          this.field_n = 0;
-          this.field_k = 0;
+          this.textOffsetY = 0;
+          this.textOffsetX = 0;
           return;
         }
         if (!(this.renderer instanceof TextWidgetLayout)) {
@@ -515,23 +515,23 @@ class TextInputWidget extends ButtonWidget {
         var5 = var9.a((UiWidget) (this), -1);
         var6 = var9.a(1) >> 1;
         if (var4 < var5 - var6) {
-          this.field_k = 0;
-          this.field_n = 0;
+          this.textOffsetX = 0;
+          this.textOffsetY = 0;
         } else {
-          var7 = this.field_k + var3.a(this.field_H, 120);
+          var7 = this.textOffsetX + var3.a(this.field_H, 120);
           if (var7 > var5 - var6) {
-            this.field_k = this.field_k - (var7 + var6 - var5);
+            this.textOffsetX = this.textOffsetX - (var7 + var6 - var5);
           } else {
             if (var7 < var6) {
-              this.field_k = this.field_k - (-var6 + var7);
+              this.textOffsetX = this.textOffsetX - (-var6 + var7);
             }
           }
-          if (this.field_k <= 0) {
-            if (var6 - var5 > this.field_k) {
-              this.field_k = var6 - var5;
+          if (this.textOffsetX <= 0) {
+            if (var6 - var5 > this.textOffsetX) {
+              this.textOffsetX = var6 - var5;
             }
           } else {
-            this.field_k = 0;
+            this.textOffsetX = 0;
           }
         }
     }
