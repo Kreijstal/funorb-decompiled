@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ae6a72a78b800823d1065e198cbb858be26a4d12/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/4de6b7f1ce230f07121d8d04cd3f1d278b244f23/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 130)
+## Current readability (pass 131)
 
 The export has 11,391 guarded names and 87,406 Java identifier edits, plus 11
-class-name literal edits and 157 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+class-name literal edits and 155 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,60 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 131 recovers three guarded jumps while retaining their shared exit labels:
+`GameplaySession.renderSession`,
+`BoardReconciliationSupport.reconcileBoardEntities` and
+`AchievementSubmission.projectMeshAndQueueFaces` now use inverse conditionals
+for their entry-arm suffixes. All other references must lie in the complete
+fallback, which becomes `else` inside the original labeled block. Its nested
+loops, scopes, finally/monitor boundaries and exit destinations stay intact.
+Prefix/arm references to the shared label still refuse this reconstruction.
+
+In debug rendering, position/gray calculations still precede the control-flag
+test. The draw/advance/continue sequence runs under the inverse condition;
+the fallback's queue traversal and final shared exit remain. Nonzero values keep
+their original partial-effect path. This does not assume the client flag is zero.
+
+All 11,391 previous complete naming rules and label ordinals remain. Two named
+break references disappear, reducing label edits to 155; all 44 labels in the
+six tracked gameplay/menu/triangle bodies retain their names. The raw tree still
+has 76,272 lines, 188 block labels and 58 loop labels. All 136,607 ordered Java
+bindings and 388 overrides match. Label records fall from 816 to 813: the source
+proof identifies exactly the first guarded break to each of the three retained
+labels and verifies every remaining destination. The complete inventory still
+has eight bodies of at least 300 lines with labels; 202 labels elsewhere and
+unmapped members remain opaque.
+
+Six focused groups pass 725,760 native comparisons and 48 independent oracles,
+covering skipped/executed suffixes and fallbacks, nested loop/switch transfers,
+finally overrides, throwing effects, local scopes, nullable guards and monitors.
+The relevant decompiler suite passes 109 tests with one existing skip. A clean
+tracked decompiler archive reproduces all 303 sources and diagnostics byte for
+byte. Full reproduction, reversible dictionaries, 27 publication checks and
+the eight fixed native game probes pass within their documented scopes.
+Full debug rendering/session update, full mesh execution, assets/servers,
+browser/phone and heap/FPS acceptance remain unverified.
+
+Current complete inventory of bodies with at least 300 lines and labels:
+
+| Body | Lines | Labels |
+| --- | ---: | ---: |
+| `GameScreen.renderScreen` | 304 | 4 |
+| `GameScreen.updateScreen` | 326 | 5 |
+| `GameplaySession.renderSession` | 343 | 8 |
+| `GameplaySession.updateSession` | 629 | 12 |
+| `BoardReconciliationSupport.reconcileBoardEntities` | 333 | 8 (two loops) |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | 364 | 7 |
+| `Bzip2Decoder.decodeBlocks` | 385 | 5 |
+| `MusicScore` constructor | 519 | 2 |
+
+The six tracked gameplay/menu/triangle bodies have 44 named labels. The two
+additional bodies have seven labels awaiting semantic names; they are included
+in the 202 opaque labels across the rest of the corpus. No generated dispatch
+state machines remain. Earlier inventories below retain their historical scope.
+
+## Previous guarded suffix recovery (pass 130)
 
 Pass 130 extends guarded-exit recovery to complete multi-statement suffixes.
 Ten labeled exits become ordinary conditional alternatives across eight methods:
@@ -53,24 +107,6 @@ a clean tracked decompiler archive reproduces all source and diagnostics bytes.
 Publication checks and the eight fixed game probes retain their stated scopes.
 Full session/menu rendering/update, real mesh queueing and shell launch, assets,
 servers, browser/phone and heap/FPS acceptance remain unverified.
-
-Current complete inventory of bodies with at least 300 lines and labels:
-
-| Body | Lines | Labels |
-| --- | ---: | ---: |
-| `GameScreen.renderScreen` | 304 | 4 |
-| `GameScreen.updateScreen` | 326 | 5 |
-| `GameplaySession.renderSession` | 343 | 8 |
-| `GameplaySession.updateSession` | 629 | 12 |
-| `BoardReconciliationSupport.reconcileBoardEntities` | 333 | 8 (two loops) |
-| `SpriteState.drawSortedHalfBlendRgbTriangle` | 364 | 7 |
-| `Bzip2Decoder.decodeBlocks` | 385 | 5 |
-| `MusicScore` constructor | 519 | 2 |
-
-The six tracked gameplay/menu/triangle bodies have 44 named labels. The two
-additional bodies have seven labels awaiting semantic names; they are included
-in the 202 opaque labels across the rest of the corpus. No generated dispatch
-state machines remain. Earlier inventories below retain their historical scope.
 
 ## Previous guarded abrupt exit recovery (pass 129)
 

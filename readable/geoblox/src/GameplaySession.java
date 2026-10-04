@@ -396,85 +396,85 @@ final class GameplaySession {
                 spawnEntityGrayLevel = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
                 minimumGrayLevelOrCompositeHeight = 11;
                 grayLevelForComparisonOrCompositeEnabled = spawnEntityGrayLevel;
-                if (clientControlFlowGuard != 0) {
-                  break debugOverviewPreparation;
-                }
-                if (minimumGrayLevelOrCompositeHeight > grayLevelForComparisonOrCompositeEnabled) {
-                  spawnEntityGrayLevel = 11;
-                }
-                if (spawnEntityGrayLevel > 255) {
-                  spawnEntityGrayLevel = 255;
-                }
-                SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
-                renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
-                continue;
-              }
-              debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
-              debugEntityQueue = debugMovingQueueSnapshot;
-              renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
-              while (true) {
-                if (null != renderedEntity) {
-                  entityOffsetX = -320.0f + renderedEntity.positionX;
-                  entityOffsetY = -240.0f + renderedEntity.positionY;
-                  debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
-                  renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
-                  SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                  renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
-                  if (clientControlFlowGuard == 0) {
-                    continue;
+                if (clientControlFlowGuard == 0) {
+                  if (minimumGrayLevelOrCompositeHeight > grayLevelForComparisonOrCompositeEnabled) {
+                    spawnEntityGrayLevel = 11;
                   }
-                } else {
-                  debugEntityQueue = BoardEntityState.attachedEntities;
+                  if (spawnEntityGrayLevel > 255) {
+                    spawnEntityGrayLevel = 255;
+                  }
+                  SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
+                  renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
+                  continue;
                 }
-                renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
+              } else {
+                debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
+                debugEntityQueue = debugMovingQueueSnapshot;
+                renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
                 while (true) {
-                  if (renderedEntity != null) {
-                    SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                  if (null != renderedEntity) {
+                    entityOffsetX = -320.0f + renderedEntity.positionX;
+                    entityOffsetY = -240.0f + renderedEntity.positionY;
+                    debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                    renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
+                    SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                    renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
                     if (clientControlFlowGuard == 0) {
                       continue;
                     }
                   } else {
-                    debugEntityQueue = DelegatingCanvas.transientEntities;
+                    debugEntityQueue = BoardEntityState.attachedEntities;
                   }
                   renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                   while (true) {
-                    debugCounterPanelSelection: {
-                      if (renderedEntity != null) {
-                        SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                        renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                        if (clientControlFlowGuard == 0) {
-                          continue;
-                        }
-                      } else {
-                        if (this.tutorialMode) {
-                          tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
-                          if (tutorialTextHeightOrDebugPanelTop < 10) {
-                            tutorialTextHeightOrDebugPanelTop = 10;
-                          }
-                          debugTutorialLineHeight = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent;
-                          debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
-                          debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
-                          SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                          break debugCounterPanelSelection;
-                        }
-                        PointerMenuState.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, PointerMenuState.smallBoxSprite.fullWidth / 2, PointerMenuState.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                    if (renderedEntity != null) {
+                      SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                      renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                      if (clientControlFlowGuard == 0) {
+                        continue;
                       }
-                      if ((this.sessionPhase == 0) &&
-                          (!EntityContactSupport.areEntityQueuesSettled(0))) {
-                        PasswordValidator.countBoxSprite.drawScaledSilhouette(234, 205, PasswordValidator.countBoxSprite.fullWidth / 2, PasswordValidator.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                        if (clientControlFlowGuard == 0) {
-                          break debugCounterPanelSelection;
-                        }
-                      }
-                      UsernameSuggestionsPanel.largeBoxSprite.drawScaledSilhouette(223, 205, UsernameSuggestionsPanel.largeBoxSprite.fullWidth / 2, UsernameSuggestionsPanel.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                    } else {
+                      debugEntityQueue = DelegatingCanvas.transientEntities;
                     }
-                    SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
-                    SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-                    SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-                    minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
-                    grayLevelForComparisonOrCompositeEnabled = 1;
-                    break debugOverviewPreparation;
+                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
+                    while (true) {
+                      debugCounterPanelSelection: {
+                        if (renderedEntity != null) {
+                          SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                          renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                          if (clientControlFlowGuard == 0) {
+                            continue;
+                          }
+                        } else {
+                          if (this.tutorialMode) {
+                            tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
+                            if (tutorialTextHeightOrDebugPanelTop < 10) {
+                              tutorialTextHeightOrDebugPanelTop = 10;
+                            }
+                            debugTutorialLineHeight = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent;
+                            debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
+                            debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
+                            SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                            break debugCounterPanelSelection;
+                          }
+                          PointerMenuState.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, PointerMenuState.smallBoxSprite.fullWidth / 2, PointerMenuState.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                        }
+                        if ((this.sessionPhase == 0) &&
+                            (!EntityContactSupport.areEntityQueuesSettled(0))) {
+                          PasswordValidator.countBoxSprite.drawScaledSilhouette(234, 205, PasswordValidator.countBoxSprite.fullWidth / 2, PasswordValidator.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                          if (clientControlFlowGuard == 0) {
+                            break debugCounterPanelSelection;
+                          }
+                        }
+                        UsernameSuggestionsPanel.largeBoxSprite.drawScaledSilhouette(223, 205, UsernameSuggestionsPanel.largeBoxSprite.fullWidth / 2, UsernameSuggestionsPanel.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                      }
+                      SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
+                      SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
+                      SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+                      minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
+                      grayLevelForComparisonOrCompositeEnabled = 1;
+                      break debugOverviewPreparation;
+                    }
                   }
                 }
               }
