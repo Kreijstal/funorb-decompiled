@@ -76,7 +76,7 @@ final class LoginProtocolSupport {
                 unusedNullPrimaryTextSnapshot = (String) null;
                 LoginProtocolSupport.advanceLoginHandshake(false, (String) null, 95, false, (String) null, 13);
               }
-              L6: {
+              loginResultDispatch: {
                 if ((ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage) &&
                     (UiWidget.readSessionBytesIfAvailable(30000, 1))) {
                   responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
@@ -88,7 +88,7 @@ final class LoginProtocolSupport {
                     if (responseByteThenPortSwapValue != 8) {
                       PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
                       AchievementSubmission.sessionPacketPayloadLength = -1;
-                      break L6;
+                      break loginResultDispatch;
                     }
                     Bzip2DecoderState.closeSessionSocket((byte) -116);
                     TextTemplateArgumentType.loginRetryAttempted = false;

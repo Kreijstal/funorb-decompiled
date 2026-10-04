@@ -136,7 +136,7 @@ final class PrefixCodeDecoder {
             } else {
               treeIndex++;
             }
-            L2: {
+            prefixByteBitDecode: {
               nodeAfterBit7 = this.decodeTree[treeIndex];
               nodeValue = nodeAfterBit7;
               if (nodeAfterBit7 < 0) {
@@ -144,7 +144,7 @@ final class PrefixCodeDecoder {
                 destinationPosition++;
                 destination[writeIndexAfterBit7] = (byte)(~nodeValue);
                 if (destinationPosition >= outputLengthThenEnd) {
-                  break L2;
+                  break prefixByteBitDecode;
                 }
                 treeIndex = 0;
               }
@@ -160,7 +160,7 @@ final class PrefixCodeDecoder {
                 destinationPosition++;
                 destination[writeIndexAfterBit6] = (byte)(~nodeValue);
                 if (destinationPosition >= outputLengthThenEnd) {
-                  break L2;
+                  break prefixByteBitDecode;
                 }
                 treeIndex = 0;
               }
@@ -176,7 +176,7 @@ final class PrefixCodeDecoder {
                 destinationPosition++;
                 destination[writeIndexAfterBit5] = (byte)(~nodeValue);
                 if (outputLengthThenEnd <= destinationPosition) {
-                  break L2;
+                  break prefixByteBitDecode;
                 }
                 treeIndex = 0;
               }
@@ -192,7 +192,7 @@ final class PrefixCodeDecoder {
                 destinationPosition++;
                 destination[writeIndexAfterBit4] = (byte)(~nodeValue);
                 if (outputLengthThenEnd <= destinationPosition) {
-                  break L2;
+                  break prefixByteBitDecode;
                 }
                 treeIndex = 0;
               }
@@ -208,7 +208,7 @@ final class PrefixCodeDecoder {
                 destinationPosition++;
                 destination[writeIndexAfterBit3] = (byte)(~nodeValue);
                 if (outputLengthThenEnd <= destinationPosition) {
-                  break L2;
+                  break prefixByteBitDecode;
                 }
                 treeIndex = 0;
               }
@@ -240,7 +240,7 @@ final class PrefixCodeDecoder {
                 destinationPosition++;
                 destination[writeIndexAfterBit1] = (byte)(~nodeValue);
                 if (destinationPosition >= outputLengthThenEnd) {
-                  break L2;
+                  break prefixByteBitDecode;
                 }
                 treeIndex = 0;
               }

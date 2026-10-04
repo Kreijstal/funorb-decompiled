@@ -79,7 +79,7 @@ final class GameplaySetupSupport {
               operationIndex = 0;
               while (operationIndex < reflectionRequest.operationCount) {
                 try {
-                  L2: {
+                  reflectionOperationDecode: {
                     operationType = buffer.readUnsignedByte((byte) 34);
                     if ((0 != operationType) &&
                         (1 != operationType) &&
@@ -88,7 +88,7 @@ final class GameplaySetupSupport {
                           (operationType != 4)) {
                         operationIndex++;
                         operationIncrementAlreadyApplied = 1;
-                        break L2;
+                        break reflectionOperationDecode;
                       }
                       methodOwnerClassName = buffer.readNullTerminatedText((byte) 103);
                       memberName = buffer.readNullTerminatedText((byte) 98);

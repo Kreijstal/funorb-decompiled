@@ -138,14 +138,14 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 leftXStepQ16 = rightXStepQ16;
                 rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder;
               }
-              L6: {
+              upperTriangleSegmentClipAndScan: {
                 if (0 > topY) {
                   if (middleY < 0) {
                     topY = middleY - topY;
                     leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
                     rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
                     topY = middleY;
-                    break L6;
+                    break upperTriangleSegmentClipAndScan;
                   }
                   topY = -topY;
                   rightXQ16 = rightXQ16 + rightXStepQ16 * topY;

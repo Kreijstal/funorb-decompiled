@@ -236,9 +236,9 @@ final class DiskArchiveCache {
                   bytesWritten = 0;
                   chunkNumber = 0;
                   while (true) {
-                    L4: {
+                    cacheSectorWriteStep: {
                       if (length > bytesWritten) {
-                        L5: {
+                        existingSectorHeaderValidation: {
                           nextSectorNumber = 0;
                           if (reuseExistingChain) {
                             this.dataFile.seek(methodGuard - 191, (long)(520 * sectorNumber));
@@ -252,7 +252,7 @@ final class DiskArchiveCache {
                                 smallHeaderEofState = 1;
                               }
                               if ((smallHeaderEofState != 0)) {
-                                break L4;
+                                break cacheSectorWriteStep;
                               }
                               headerEntryIdOrPayloadLength = ((255 & TextInputWidget.diskSectorBuffer[0]) << 8) + (255 & TextInputWidget.diskSectorBuffer[1]);
                               headerChunkNumber = (TextInputWidget.diskSectorBuffer[3] & 255) + ((255 & TextInputWidget.diskSectorBuffer[2]) << 8);
@@ -268,7 +268,7 @@ final class DiskArchiveCache {
                                 largeHeaderEofState = 1;
                               }
                               if ((largeHeaderEofState != 0)) {
-                                break L4;
+                                break cacheSectorWriteStep;
                               }
                               headerEntryIdOrPayloadLength = (65280 & TextInputWidget.diskSectorBuffer[2] << 8) + (((255 & TextInputWidget.diskSectorBuffer[0]) << 24) + (((TextInputWidget.diskSectorBuffer[1] & 255) << 16) + (255 & TextInputWidget.diskSectorBuffer[3])));
                               headerArchiveId = TextInputWidget.diskSectorBuffer[9] & 255;
@@ -280,7 +280,7 @@ final class DiskArchiveCache {
                                 (headerArchiveId == this.archiveId)) {
                               if ((nextSectorNumber >= 0) &&
                                   (~(this.dataFile.length((byte) 46) / 520L) <= ~(long)nextSectorNumber)) {
-                                break L5;
+                                break existingSectorHeaderValidation;
                               }
                               return false;
                             }

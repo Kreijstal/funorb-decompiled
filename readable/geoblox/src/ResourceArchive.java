@@ -412,7 +412,7 @@ final class ResourceArchive {
           if (allFilesPresent != 0) {
             return true;
           }
-          L4: {
+          packedGroupDecryptionSelection: {
             if (decryptionKey != null) {
               if (((decryptionKey[0] != 0) ||
                   (decryptionKey[1] != 0) ||
@@ -423,7 +423,7 @@ final class ResourceArchive {
                 packedBytes = packedBytesForDecryption;
                 encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
                 encryptedGroupBuffer.decryptXteaRange((byte) -125, decryptionKey, 5, encryptedGroupBuffer.bytes.length);
-                break L4;
+                break packedGroupDecryptionSelection;
               }
             }
             packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);

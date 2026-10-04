@@ -365,121 +365,121 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final static byte encodeTextCharacter(char character, boolean returnEncodedByte) {
         int encodedByte;
-        L0: {
+        encodedTextCharacter: {
           if ((((0 >= character)) ||
                 ((character >= 128))) &&
               (((character < 160)) ||
                 ((255 < character)))) {
             if (character == 8364) {
               encodedByte = -128;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8218) {
               encodedByte = -126;
-              break L0;
+              break encodedTextCharacter;
             }
             if (402 == character) {
               encodedByte = -125;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8222) {
               encodedByte = -124;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8230) {
               encodedByte = -123;
-              break L0;
+              break encodedTextCharacter;
             }
             if (8224 == character) {
               encodedByte = -122;
-              break L0;
+              break encodedTextCharacter;
             }
             if (8225 == character) {
               encodedByte = -121;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 710) {
               encodedByte = -120;
-              break L0;
+              break encodedTextCharacter;
             }
             if (8240 == character) {
               encodedByte = -119;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 352) {
               encodedByte = -118;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8249) {
               encodedByte = -117;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 338) {
               encodedByte = -116;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 381) {
               encodedByte = -114;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8216) {
               encodedByte = -111;
-              break L0;
+              break encodedTextCharacter;
             }
             if (8217 == character) {
               encodedByte = -110;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8220) {
               encodedByte = -109;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8221) {
               encodedByte = -108;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8226) {
               encodedByte = -107;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8211) {
               encodedByte = -106;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8212) {
               encodedByte = -105;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 732) {
               encodedByte = -104;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8482) {
               encodedByte = -103;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 353) {
               encodedByte = -102;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 8250) {
               encodedByte = -101;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 339) {
               encodedByte = -100;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character == 382) {
               encodedByte = -98;
-              break L0;
+              break encodedTextCharacter;
             }
             if (character != 376) {
               encodedByte = 63;
-              break L0;
+              break encodedTextCharacter;
             }
             encodedByte = -97;
-            break L0;
+            break encodedTextCharacter;
           }
           encodedByte = (byte)character;
         }
@@ -555,7 +555,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             ByteArrayBuffer.advanceAccountLookupRequest((LoginTextValue) null, (LoginTextValue) null, 109);
           }
           blockIndex = 0;
-          L1: while (true) {
+          xteaEncryptBlocks: while (true) {
             if (blockCount <= blockIndex) {
               return;
             }
@@ -579,7 +579,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.writeIntBE((byte) 95, leftWord);
             this.writeIntBE((byte) 95, rightWord);
             blockIndex++;
-            continue L1;
+            continue xteaEncryptBlocks;
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;
@@ -636,7 +636,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           this.position = startPosition;
           blockCount = (-startPosition + endPosition) / 8;
           blockIndex = 0;
-          L1: while (true) {
+          xteaDecryptBlocks: while (true) {
             if (blockIndex >= blockCount) {
               this.position = savedPosition;
               return;
@@ -661,7 +661,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.writeIntBE((byte) 95, leftWord);
             this.writeIntBE((byte) 95, rightWord);
             blockIndex++;
-            continue L1;
+            continue xteaDecryptBlocks;
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;
@@ -994,7 +994,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         whirlpoolTables = new long[8][256];
         whirlpoolRoundConstants = new long[11];
         substitutionIndexOrRound = 0;
-        L0: while (substitutionIndexOrRound < 256) {
+        whirlpoolTableEntries: while (substitutionIndexOrRound < 256) {
           packedSubstitutionPairOrRoundByteOffset = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(substitutionIndexOrRound / 2);
           if ((substitutionIndexOrRound & 1) != 0) {
             substitutionByteBeforeMerge = (long)(packedSubstitutionPairOrRoundByteOffset & 255);

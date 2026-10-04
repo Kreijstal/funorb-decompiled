@@ -40,12 +40,12 @@ final class SessionTextHistorySupport {
           AchievementSubmission.retentionCategoryCounts[newCategoryIndexSnapshot] = AchievementSubmission.retentionCategoryCounts[newCategoryIndexSnapshot] + 1;
           clearIndexThenWriteIndex = 0;
           for (readIndex = 0; ByteStorage.retainedTextRecordCount > readIndex; readIndex++) {
-            L3: {
+            retainedRecordSelection: {
               if (record.recordKind == MatchingTextValidator.retainedTextRecords[readIndex].recordKind) {
                 recordCategoryIndex = MatchingTextValidator.retainedTextRecords[readIndex].getRetentionCategory(124);
                 if (AchievementSubmission.retentionCategoryCounts[recordCategoryIndex] > MidiNote.recordsPerKindAndCategoryLimit) {
                   AchievementSubmission.retentionCategoryCounts[recordCategoryIndex] = AchievementSubmission.retentionCategoryCounts[recordCategoryIndex] - 1;
-                  break L3;
+                  break retainedRecordSelection;
                 }
               }
               writeIndexBeforeIncrement = clearIndexThenWriteIndex;

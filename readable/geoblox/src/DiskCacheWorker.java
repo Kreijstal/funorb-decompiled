@@ -304,12 +304,12 @@ final class DiskCacheWorker implements Runnable {
                 continue;
               }
               try {
-                L4: {
+                diskRequestOperationDispatch: {
                   if (request.operationType != 2) {
                     if (3 == request.operationType) {
                       request.bytes = request.diskCache.read((int)request.secondaryKey, (byte) -76);
                       completeRequestAfterOperation = 1;
-                      break L4;
+                      break diskRequestOperationDispatch;
                     }
                     request.pending = false;
                   } else {

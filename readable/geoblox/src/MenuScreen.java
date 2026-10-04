@@ -146,7 +146,7 @@ abstract class MenuScreen {
         int pressedPointerXSnapshot = 0;
         Object pointerTargetSnapshot;
         boolean initialClickSnapshot;
-        L0: {
+        menuPointerInteraction: {
           clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             hitItemIndex = this.hitTestMenuItem(AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (byte) 28);
@@ -171,10 +171,10 @@ abstract class MenuScreen {
                 (this.pointerInteractionActive)) {
               hitItemIndex = this.selectedItemIndex;
               if (hitItemIndex == -1) {
-                break L0;
+                break menuPointerInteraction;
               }
               this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (PcmResampler.pointerYSnapshot - this.firstItemY), true, EntityCollisionSupport.heldPointerButtonSnapshot);
-              break L0;
+              break menuPointerInteraction;
             }
             this.pointerInteractionActive = false;
             if (AttachmentPointerState.pointerActivitySnapshot) {

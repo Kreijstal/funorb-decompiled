@@ -162,7 +162,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                       packedLength = this.responseHeaderBuffer.readIntBE((byte) -61);
                       compressionType = compressionAndQueueFlags & 127;
                       backgroundFlagBeforeMatch = ((128 & compressionAndQueueFlags) == 0) ? 0 : 1;
-                      L18: {
+                      archiveResponseRequestLookup: {
                         backgroundResponseFlag = backgroundFlagBeforeMatch;
                         responseKey = (long)bodyXorStartSnapshotOrGroupId + ((long)bodyReadLengthOrHeaderXorIndexOrArchiveId << 32);
                         unusedResponseMatchSnapshot = null;
@@ -170,11 +170,11 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                           matchedRequest = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.firstForIteration((byte) 121));
                           while (matchedRequest != null) {
                             if (responseKey == matchedRequest.secondaryKey) {
-                              break L18;
+                              break archiveResponseRequestLookup;
                             }
                             matchedRequest = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.nextForIteration(-30));
                           }
-                          break L18;
+                          break archiveResponseRequestLookup;
                         }
                         matchedRequest = (NetworkArchiveRequest) ((Object) this.sentPriorityRequests.firstForIteration((byte) 121));
                         while (matchedRequest != null) {

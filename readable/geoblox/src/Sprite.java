@@ -723,12 +723,12 @@ class Sprite extends SpriteState {
         int[] croppedPixels;
         bottomEdge = this.height - 1;
         while (true) {
-          L1: {
+          bottomBorderScan: {
             if (bottomEdge >= 0) {
               rowOffsetThenTopEdge = bottomEdge * this.width;
               for (scanThenRightEdge = 0; scanThenRightEdge < this.width; scanThenRightEdge++) {
                 if (this.pixels[rowOffsetThenTopEdge + scanThenRightEdge] != 0) {
-                  break L1;
+                  break bottomBorderScan;
                 }
               }
               bottomEdge--;
@@ -739,12 +739,12 @@ class Sprite extends SpriteState {
         }
         rowOffsetThenTopEdge = 0;
         while (true) {
-          L4: {
+          topBorderScan: {
             if (rowOffsetThenTopEdge < bottomEdge) {
               scanThenRightEdge = rowOffsetThenTopEdge * this.width;
               for (scanThenLeftEdge = 0; scanThenLeftEdge < this.width; scanThenLeftEdge++) {
                 if (this.pixels[scanThenRightEdge + scanThenLeftEdge] != 0) {
-                  break L4;
+                  break topBorderScan;
                 }
               }
               rowOffsetThenTopEdge++;
@@ -755,11 +755,11 @@ class Sprite extends SpriteState {
         }
         scanThenRightEdge = this.width - 1;
         while (true) {
-          L7: {
+          rightBorderScan: {
             if (scanThenRightEdge >= 0) {
               for (scanThenLeftEdge = rowOffsetThenTopEdge; scanThenLeftEdge <= bottomEdge; scanThenLeftEdge++) {
                 if (this.pixels[scanThenLeftEdge * this.width + scanThenRightEdge] != 0) {
-                  break L7;
+                  break rightBorderScan;
                 }
               }
               scanThenRightEdge--;
@@ -770,11 +770,11 @@ class Sprite extends SpriteState {
         }
         scanThenLeftEdge = 0;
         while (true) {
-          L10: {
+          leftBorderScan: {
             if (scanThenLeftEdge < scanThenRightEdge) {
               for (scanRowThenCroppedWidth = rowOffsetThenTopEdge; scanRowThenCroppedWidth <= bottomEdge; scanRowThenCroppedWidth++) {
                 if (this.pixels[scanRowThenCroppedWidth * this.width + scanThenLeftEdge] != 0) {
-                  break L10;
+                  break leftBorderScan;
                 }
               }
               scanThenLeftEdge++;
@@ -851,7 +851,7 @@ class Sprite extends SpriteState {
         int destinationPixel;
         inverseAlpha256 = 256 - alpha256;
         negativeRow = -drawHeight;
-        L0: while (true) {
+        alphaColorKeyRows: while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -861,7 +861,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue L0;
+              continue alphaColorKeyRows;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -1075,7 +1075,7 @@ class Sprite extends SpriteState {
         int productGreen;
         int productBlue;
         negativeRow = -drawHeight;
-        L0: while (true) {
+        multiplyRows: while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -1085,7 +1085,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue L0;
+              continue multiplyRows;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -1159,7 +1159,7 @@ class Sprite extends SpriteState {
         widthThenNegativeTail = -(widthThenNegativeTail & 3);
         negativeRowPixelCount = negativeQuadCount + negativeQuadCount + negativeQuadCount + negativeQuadCount + widthThenNegativeTail;
         negativeRow = -drawHeight;
-        L0: while (true) {
+        grayTintedRows: while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -1169,7 +1169,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue L0;
+              continue grayTintedRows;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -1400,7 +1400,7 @@ class Sprite extends SpriteState {
         negativeQuadCount = -(widthThenNegativeTail >> 2);
         widthThenNegativeTail = -(widthThenNegativeTail & 3);
         negativeRow = -drawHeight;
-        L0: while (true) {
+        colorKeyRows: while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -1413,7 +1413,7 @@ class Sprite extends SpriteState {
                   destinationIndex = destinationIndex + destinationRowSkip;
                   sourceIndex = sourceIndex + sourceRowSkip;
                   negativeRow++;
-                  continue L0;
+                  continue colorKeyRows;
                 }
                 sourcePixel = sourcePixels[sourceIndex++];
                 if (sourcePixel == 0) {
@@ -1607,7 +1607,7 @@ class Sprite extends SpriteState {
         negativeQuadCount = -(widthThenNegativeTail >> 2);
         widthThenNegativeTail = -(widthThenNegativeTail & 3);
         negativeRow = -drawHeight;
-        L0: while (true) {
+        silhouetteRows: while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -1620,7 +1620,7 @@ class Sprite extends SpriteState {
                   destinationIndex = destinationIndex + destinationRowSkip;
                   sourceIndex = sourceIndex + sourceRowSkip;
                   negativeRow++;
-                  continue L0;
+                  continue silhouetteRows;
                 }
                 if (sourcePixels[sourceIndex++] == 0) {
                   destinationIndex++;
@@ -1734,7 +1734,7 @@ class Sprite extends SpriteState {
     private final static void blitAdditiveIntensity(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int intensity256) {
         int destinationWriteIndex = 0;
         negativeRowScratch = -drawHeight;
-        L0: while (true) {
+        intensityAdditiveRows: while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -1744,7 +1744,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue L0;
+              continue intensityAdditiveRows;
             }
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
@@ -1838,7 +1838,7 @@ class Sprite extends SpriteState {
         tintRedBlue = tintColor & 16711935;
         tintGreen = tintColor >> 8 & 255;
         negativeRowScratch = -drawHeight;
-        L0: while (true) {
+        grayModulatedRows: while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -1848,7 +1848,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue L0;
+              continue grayModulatedRows;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -2329,7 +2329,7 @@ class Sprite extends SpriteState {
     private final static void blitAdditive(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
         int destinationWriteIndex = 0;
         negativeRowScratch = -drawHeight;
-        L0: while (true) {
+        additiveRows: while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -2339,7 +2339,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue L0;
+              continue additiveRows;
             }
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {

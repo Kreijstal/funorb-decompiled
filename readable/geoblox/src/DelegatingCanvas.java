@@ -178,7 +178,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           templateVariantIndex = templateEntity.spriteVariantIndex;
           templateSpriteKindId = templateEntity.entitySpriteKindId;
           templateCategoryKey = templateEntity.entityCategoryKey;
-          L0: while (true) {
+          contactConversionQueue: while (true) {
             poppedEntity = (GameplayEntity) ((Object) pendingEntitiesForRemoval.removeFirst(true));
             currentEntity = poppedEntity;
             if (null == poppedEntity) {
@@ -198,10 +198,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
               currentEntity.configureEntitySprite(320, templateCategoryKey, currentEntity.spriteVariantIndex, templateSpriteKindId);
             }
             neighborIndex = 0;
-            L5: while (true) {
+            contactConversionNeighbors: while (true) {
               if (neighborIndex >= currentEntity.relatedEntityCount) {
                 processedEntities.addFirst(currentEntity, false);
-                continue L0;
+                continue contactConversionQueue;
               }
               if (((currentEntity.relatedEntities[neighborIndex].entitySpriteKindId != 1) ||
                     (!(propagateVariant)))) {
@@ -221,7 +221,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   continue;
                 }
                 neighborIndex++;
-                continue L5;
+                continue contactConversionNeighbors;
               }
               if (propagateVariant) {
                 currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
@@ -238,7 +238,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
               pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
               neighborIndex++;
-              continue L5;
+              continue contactConversionNeighbors;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

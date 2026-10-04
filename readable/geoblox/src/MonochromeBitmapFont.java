@@ -63,7 +63,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         glyphLeftRelativeToClip = x - SoftwareRasterizer.clipLeft;
         glyphTopRelativeToClip = y - SoftwareRasterizer.clipTop;
         maskRow = glyphTopRelativeToClip;
-        L0: while (true) {
+        maskedGlyphRows: while (true) {
           if (maskRow >= glyphTopRelativeToClip + height) {
             return;
           }
@@ -103,7 +103,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               sourceIndex = sourceIndex + (leadingClipOrTrailingSkip + sourceRowSkip);
               destinationIndex = destinationIndex + (leadingClipOrTrailingSkip + destinationRowSkip);
               maskRow++;
-              continue L0;
+              continue maskedGlyphRows;
             }
             if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
@@ -169,7 +169,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         negativeFourPixelGroupCount = -(widthOrNegativeTailCount >> 2);
         widthOrNegativeTailCount = -(widthOrNegativeTailCount & 3);
         negativeRowCounter = -height;
-        L0: while (true) {
+        glyphRows: while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -182,7 +182,7 @@ final class MonochromeBitmapFont extends BitmapFont {
                   destinationIndex = destinationIndex + destinationRowSkip;
                   sourceIndex = sourceIndex + sourceRowSkip;
                   negativeRowCounter++;
-                  continue L0;
+                  continue glyphRows;
                 }
                 if (glyphMask[sourceIndex++] == 0) {
                   destinationIndex++;
@@ -229,7 +229,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         colorOrWeightedColor = ((colorOrWeightedColor & 16711935) * alphaOrDestinationWeight256 & -16711936) + ((colorOrWeightedColor & 65280) * alphaOrDestinationWeight256 & 16711680) >> 8;
         alphaOrDestinationWeight256 = 256 - alphaOrDestinationWeight256;
         negativeRowCounter = -height;
-        L0: while (true) {
+        alphaGlyphRows: while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -239,7 +239,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue L0;
+              continue alphaGlyphRows;
             }
             if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;

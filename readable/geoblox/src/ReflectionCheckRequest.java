@@ -54,16 +54,16 @@ final class ReflectionCheckRequest extends IntrusiveNode {
               ReflectionCheckRequest.parseSignedInt((CharSequence) null, (byte) 58, 6, false);
             }
             for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
-              L3: {
+              signedIntegerCharacter: {
                 characterCodeOrSignedDigit = text.charAt(characterIndex);
                 if (characterIndex == 0) {
                   if (characterCodeOrSignedDigit == 45) {
                     negativeSignInt = 1;
-                    break L3;
+                    break signedIntegerCharacter;
                   }
                   if ((characterCodeOrSignedDigit == 43) &&
                       (allowLeadingPlus)) {
-                    break L3;
+                    break signedIntegerCharacter;
                   }
                 }
                 if ((48 <= characterCodeOrSignedDigit) &&

@@ -422,13 +422,13 @@ abstract class SessionGameApplet extends GameApplet {
           }
           VisualPropertyOverrides.clientBootstrapStage = 11;
         }
-        L30: {
+        bootstrapTextArchiveGate: {
           if (VisualPropertyOverrides.clientBootstrapStage == 11) {
             if (null != TextValidationSupport.bootstrapGameTextArchive) {
               if (((!(TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0))) ||
                   (!(TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true))))) {
                 HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
-                break L30;
+                break bootstrapTextArchiveGate;
               }
             }
             AgeValidator.gameArchiveRequestPending = true;

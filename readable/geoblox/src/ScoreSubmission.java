@@ -76,12 +76,12 @@ final class ScoreSubmission extends IntrusiveNode {
               urlFile = url.getFile();
               prefixEnd = 0;
               while (true) {
-                L1: {
+                sessionUrlSegmentSelection: {
                   if (urlFile.regionMatches(prefixEnd, "/l=", 0, 3)) {
                     segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
                     if (segmentEnd >= 0) {
                       if (languageId < 0) {
-                        break L1;
+                        break sessionUrlSegmentSelection;
                       }
                       urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
                       continue;
@@ -90,14 +90,14 @@ final class ScoreSubmission extends IntrusiveNode {
                   if (urlFile.regionMatches(prefixEnd, "/a=", 0, 3)) {
                     segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
                     if (segmentEnd >= 0) {
-                      break L1;
+                      break sessionUrlSegmentSelection;
                     }
                   }
                   if (urlFile.regionMatches(prefixEnd, "/p=", 0, 3)) {
                     segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
                     if (segmentEnd >= 0) {
                       if (settingsValue == null) {
-                        break L1;
+                        break sessionUrlSegmentSelection;
                       }
                       urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
                       continue;

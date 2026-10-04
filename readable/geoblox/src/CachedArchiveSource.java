@@ -426,10 +426,10 @@ final class CachedArchiveSource extends ArchiveSource {
         int unusedClientGuardSnapshot;
         IntrusiveNode newDownloadGroup;
         IntrusiveNode newVerificationGroup;
-        L0: {
-          L1: {
-            L2: {
-              L3: {
+        backgroundLoadingAndSweep: {
+          requestSweepDueCheck: {
+            completedRequestSweep: {
+              backgroundGroupLoading: {
                 unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
                 if (this.backgroundGroups != null) {
                   if (null == this.getIndex((byte) 118)) {
@@ -472,11 +472,11 @@ final class CachedArchiveSource extends ArchiveSource {
                       break;
                     }
                     if (phaseComplete == 0) {
-                      break L3;
+                      break backgroundGroupLoading;
                     }
                     this.backgroundGroupIndex = 0;
                     this.verifyDiskCachePending = false;
-                    break L3;
+                    break backgroundGroupLoading;
                   }
                   if (this.downloadAllPending) {
                     phaseComplete = 1;
@@ -494,12 +494,12 @@ final class CachedArchiveSource extends ArchiveSource {
                       backgroundGroup = this.backgroundGroups.nextForIteration(1);
                     }
                     while (true) {
-                      L13: {
+                      backgroundDownloadScanStep: {
                         if (this.backgroundGroupIndex < this.index.fileCounts.length) {
                           if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
                             if (this.networkClient.isBackgroundQueueFull(-21)) {
                               phaseComplete = 0;
-                              break L13;
+                              break backgroundDownloadScanStep;
                             }
                             if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
                               unusedScannedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, this.backgroundGroupIndex);
@@ -520,16 +520,16 @@ final class CachedArchiveSource extends ArchiveSource {
                     if (phaseComplete != 0) {
                       this.downloadAllPending = false;
                       this.backgroundGroupIndex = 0;
-                      break L3;
+                      break backgroundGroupLoading;
                     }
                     if (methodGuard != -38) {
                       this.getPackedGroup(25, 41);
                     }
                     if (!this.sweepCompletedRequests) {
-                      break L0;
+                      break backgroundLoadingAndSweep;
                     }
                     if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
-                      break L1;
+                      break requestSweepDueCheck;
                     }
                     cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
                     while (cleanupRequest != null) {
@@ -545,7 +545,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       }
                       cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
                     }
-                    break L2;
+                    break completedRequestSweep;
                   }
                   this.backgroundGroups = null;
                 }
@@ -554,10 +554,10 @@ final class CachedArchiveSource extends ArchiveSource {
                 this.getPackedGroup(25, 41);
               }
               if (!this.sweepCompletedRequests) {
-                break L0;
+                break backgroundLoadingAndSweep;
               }
               if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
-                break L1;
+                break requestSweepDueCheck;
               }
               cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
               while (cleanupRequest != null) {

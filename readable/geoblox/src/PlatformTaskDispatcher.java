@@ -88,7 +88,7 @@ final class PlatformTaskDispatcher implements Runnable {
             while (true) {
               dispatcherOrTaskMonitor = this;
               synchronized (dispatcherOrTaskMonitor) {
-                L1: {
+                taskDequeueWait: {
                   while (!this.shutdownRequested) {
                     if (this.taskQueueHead != null) {
                       task = this.taskQueueHead;
@@ -96,7 +96,7 @@ final class PlatformTaskDispatcher implements Runnable {
                       if (null == this.taskQueueHead) {
                         this.taskQueueTail = null;
                       }
-                      break L1;
+                      break taskDequeueWait;
                     }
                     try {
                       this.wait();
@@ -109,7 +109,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 }
               }
               try {
-                L7: {
+                platformTaskDispatch: {
                   taskType = task.taskType;
                   if (1 != taskType) {
                     if (taskType != 22) {
@@ -193,10 +193,10 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   cursorY = task.secondIntArgument;
                                                   if (!this.useMicrosoftVmBackend) {
                                                     Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
-                                                    break L7;
+                                                    break platformTaskDispatch;
                                                   }
                                                   this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
-                                                  break L7;
+                                                  break platformTaskDispatch;
                                                 }
                                                 if ((this.privilegedServicesEnabled) &&
                                                     (taskType == 15)) {
@@ -205,10 +205,10 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   cursorComponent = (java.awt.Component) (task.input);
                                                   if (this.useMicrosoftVmBackend) {
                                                     this.microsoftCursorBackend.setCursorVisible(12758, cursorXOrVisibleFlag != 0, cursorComponent);
-                                                    break L7;
+                                                    break platformTaskDispatch;
                                                   }
                                                   Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
-                                                  break L7;
+                                                  break platformTaskDispatch;
                                                 }
                                                 if ((!this.useMicrosoftVmBackend) &&
                                                     (taskType == 17)) {

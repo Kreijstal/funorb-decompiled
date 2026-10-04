@@ -638,7 +638,7 @@ final class SoftwareRasterizer {
         if (centerY > clippedBottomExclusive) {
           centerY = clippedBottomExclusive;
         }
-        L4: while (rowY < centerY) {
+        alphaCircleUpperRows: while (rowY < centerY) {
           while (true) {
             if ((yAdjustedSquaredDistance > radiusSquared) &&
                 (xAdjustedSquaredDistance > radiusSquared)) {
@@ -665,7 +665,7 @@ final class SoftwareRasterizer {
               yOffset--;
               xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
               yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-              continue L4;
+              continue alphaCircleUpperRows;
             }
             xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
             upperXExtentBeforeIncrement = xExtent;
@@ -813,7 +813,7 @@ final class SoftwareRasterizer {
         if (centerY > clippedBottomExclusive) {
           centerY = clippedBottomExclusive;
         }
-        L4: while (rowY < centerY) {
+        circleUpperRows: while (rowY < centerY) {
           while (true) {
             if ((yAdjustedSquaredDistance > radiusSquared) &&
                 (xAdjustedSquaredDistance > radiusSquared)) {
@@ -836,7 +836,7 @@ final class SoftwareRasterizer {
               yOffset--;
               xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
               yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-              continue L4;
+              continue circleUpperRows;
             }
             xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
             upperXExtentBeforeIncrement = xExtent;
@@ -1281,7 +1281,7 @@ final class SoftwareRasterizer {
         if (topCornerCenterYOrUpperHalfEnd > clippedBottomExclusive) {
           topCornerCenterYOrUpperHalfEnd = clippedBottomExclusive;
         }
-        L4: while (rowY < topCornerCenterYOrUpperHalfEnd) {
+        roundedRectangleUpperRows: while (rowY < topCornerCenterYOrUpperHalfEnd) {
           while (true) {
             if ((yAdjustedSquaredDistance > radiusSquared) &&
                 (xAdjustedSquaredDistance > radiusSquared)) {
@@ -1304,7 +1304,7 @@ final class SoftwareRasterizer {
               yOffset--;
               xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
               yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-              continue L4;
+              continue roundedRectangleUpperRows;
             }
             xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
             upperXExtentBeforeIncrement = xExtent;

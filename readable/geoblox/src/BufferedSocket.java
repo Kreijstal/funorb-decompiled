@@ -221,11 +221,11 @@ final class BufferedSocket implements Runnable {
               while (true) {
                 writerMonitor = this;
                 synchronized (writerMonitor) {
-                  L2: {
+                  writerChunkSelection: {
                     if (this.writeReadIndex == this.writeInsertIndex) {
                       if (this.closeRequested) {
                         decompiledRegionSelector0 = 0;
-                        break L2;
+                        break writerChunkSelection;
                       }
                       try {
                         this.wait();

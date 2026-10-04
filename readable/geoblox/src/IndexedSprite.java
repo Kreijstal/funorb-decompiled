@@ -14,7 +14,7 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationPixel;
         inverseAlpha256 = 256 - alpha256;
         negativeRow = -drawHeight;
-        L0: while (true) {
+        alphaPaletteRows: while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -24,7 +24,7 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue L0;
+              continue alphaPaletteRows;
             }
             indexThenPaletteColor = sourceIndices[sourceIndex++];
             if (indexThenPaletteColor == 0) {
@@ -135,7 +135,7 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationWriteIndex = 0;
         int sourceReadIndex2 = 0;
         negativeRowScratch = -drawHeight;
-        L0: while (true) {
+        paletteRunRows: while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -151,7 +151,7 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue L0;
+              continue paletteRunRows;
             }
             indexThenRunLength = sourceIndices[sourceIndex++];
             remainingColumnsScratch--;
@@ -237,7 +237,7 @@ final class IndexedSprite extends IndexedSpriteState {
         negativeQuadCount = -(widthThenNegativeTail >> 2);
         widthThenNegativeTail = -(widthThenNegativeTail & 3);
         negativeRow = -drawHeight;
-        L0: while (true) {
+        paletteRows: while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -250,7 +250,7 @@ final class IndexedSprite extends IndexedSpriteState {
                   destinationIndex = destinationIndex + destinationRowSkip;
                   sourceIndex = sourceIndex + sourceRowSkip;
                   negativeRow++;
-                  continue L0;
+                  continue paletteRows;
                 }
                 paletteIndexScratch = sourceIndices[sourceIndex++];
                 if (paletteIndexScratch == 0) {

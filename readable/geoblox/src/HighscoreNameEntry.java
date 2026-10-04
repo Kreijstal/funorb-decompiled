@@ -143,7 +143,7 @@ final class HighscoreNameEntry {
           debugTintGreenPacked = debugTintRgb & 65280;
           debugTintBlue = debugTintRgb & 255;
           negativeRowCounter = -destinationHeight;
-          L1: while (negativeRowCounter < 0) {
+          debugOverviewRows: while (negativeRowCounter < 0) {
             sourceRowOffset = sourceStride * (sampleYQ16 >> 16);
             if (clientControlFlowGuard != 0) {
               return;
@@ -194,7 +194,7 @@ final class HighscoreNameEntry {
             sampleColorOrRowStartXQ16 = rowStartXQ16;
             sampleXQ16 = sampleColorOrRowStartXQ16;
             negativeRowCounter++;
-            continue L1;
+            continue debugOverviewRows;
           }
           return;
         } catch (java.lang.RuntimeException debugOverviewBlendFailure) {

@@ -24,7 +24,7 @@ final class PaletteBitmapFont extends BitmapFont {
         int sourceColor;
         destinationWeight256 = 256 - alpha256;
         negativeRowCounter = -height;
-        L0: while (true) {
+        alphaPaletteGlyphRows: while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -34,7 +34,7 @@ final class PaletteBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue L0;
+              continue alphaPaletteGlyphRows;
             }
             sourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
@@ -200,7 +200,7 @@ final class PaletteBitmapFont extends BitmapFont {
         negativeFourPixelGroupCount = -(widthOrNegativeTailCount >> 2);
         widthOrNegativeTailCount = -(widthOrNegativeTailCount & 3);
         negativeRowCounter = -height;
-        L0: while (true) {
+        paletteGlyphRows: while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -213,7 +213,7 @@ final class PaletteBitmapFont extends BitmapFont {
                   destinationIndex = destinationIndex + destinationRowSkip;
                   sourceIndex = sourceIndex + sourceRowSkip;
                   negativeRowCounter++;
-                  continue L0;
+                  continue paletteGlyphRows;
                 }
                 tailSourceIndexBeforeIncrement = sourceIndex;
                 sourceIndex++;

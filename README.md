@@ -17,14 +17,44 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c4dc80ee2642e12297b3764884ec084235db2d46/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/d4205a63cef7e4040adb08d2264e14e1586e8231/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 136,582 bindings,
+identities. Both 303-file Java corpora compile and compare 136,574 bindings,
 preserving 388 override relationships.
 
-## Current dominated predicate cleanup (pass 178)
+## Current helper-label naming (pass 179)
+
+All 73 remaining opaque labels now describe their original lexical scope:
+37 plain blocks and 36 loops across 34 files. Names include
+`contactConversionQueue`, `cascadeNeighborTraversal`,
+`archiveResponseRequestLookup`, `taskDequeueWait`,
+`existingSectorHeaderValidation` and the sprite/font row scans.
+All 245 labels are named, including all 811 declarations and break/continue
+records. These names describe existing scopes; they do not invent states or
+assume the client control flag is zero.
+
+The frozen compiler-backed naming driver performs 228 additional label edits:
+73 declarations and 155 transfers. An independent whole-corpus comparison
+matches exactly those label replacements and no other source characters.
+All 18,363 previous complete naming rules survive unchanged; there are now
+18,436 rules. The raw input, tracked decompiler source archive, naming tool,
+workflow, stubs, diagnostic literals and native evidence stay fixed.
+Both 303-file corpora compile, comparing 136,574 ordinary bindings,
+388 override pairs and 811 lexical label records. The readable output has
+117,470 identifier, eleven literal and 811 label edits: 118,292 total.
+Reproduction and dictionary reversal are byte exact.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test readable/tests/test-geoblox-rule-builder.mjs readable/tests/test-geoblox-migration-source.mjs readable/tests/test-geoblox-text-rules.mjs`
+passes all 27 publication tests. No native fixture changes, runtime cases or
+probes are added or claimed by this label-only naming pass.
+
+Eight large labeled bodies and 57 opaque fields remain. Naming every exit
+does not finish structural recovery. Whole game, renderer, server, browser,
+phone and heap/presented-FPS acceptance remain unverified.
+
+## Previous dominated predicate cleanup (pass 178)
 
 Inside a branch that tests a stable local snapshot, repeated neutral comparisons
 are now omitted. For example, inside `if (flag == 0)`,

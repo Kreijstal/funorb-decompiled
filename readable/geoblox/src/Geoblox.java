@@ -639,14 +639,14 @@ public final class Geoblox extends SessionGameApplet {
           this.dispatchSessionPacket(121);
         }
         if (!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255)) {
-          L6: {
+          assetAndSessionPreparation: {
             if (!DebouncedValidationProvider.gameAssetsInitialized) {
               ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -98);
               if ((this.pollArchiveLoading(false)) &&
                   (this.prepareGameAssets(25869))) {
                 DebouncedValidationProvider.gameAssetsInitialized = true;
                 this.initializeScreens(82);
-                break L6;
+                break assetAndSessionPreparation;
               }
               NanoFrameTimer.flushSessionWrites(-1, 0);
               return;
@@ -673,11 +673,11 @@ public final class Geoblox extends SessionGameApplet {
                   DualLinkNode.evaluateGuardResidue(-8);
                 }
                 if (!VisualPropertyNode.field_o) {
-                  break L6;
+                  break assetAndSessionPreparation;
                 }
                 DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 50);
                 VisualPropertyNode.field_o = false;
-                break L6;
+                break assetAndSessionPreparation;
               }
               if (!VisualPropertyNode.field_o) {
                 DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 150);

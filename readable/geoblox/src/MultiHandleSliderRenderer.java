@@ -222,7 +222,7 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
           textLength = text.length();
           encodedBytes = new byte[textLength];
           for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
-            L2: {
+            encodedTextCharacter: {
               characterCode = text.charAt(characterIndex);
               if ((((characterCode <= 0)) ||
                   ((characterCode >= 128)))) {
@@ -230,114 +230,114 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
                     ((255 < characterCode)))) {
                   if (8364 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-128;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8218) {
                     encodedBytes[characterIndex] = (byte)-126;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (402 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-125;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (8222 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-124;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8230) {
                     encodedBytes[characterIndex] = (byte)-123;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8224) {
                     encodedBytes[characterIndex] = (byte)-122;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8225) {
                     encodedBytes[characterIndex] = (byte)-121;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 710) {
                     encodedBytes[characterIndex] = (byte)-120;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8240) {
                     encodedBytes[characterIndex] = (byte)-119;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (352 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-118;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (8249 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-117;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (338 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-116;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 381) {
                     encodedBytes[characterIndex] = (byte)-114;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (8216 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-111;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (8217 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-110;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8220) {
                     encodedBytes[characterIndex] = (byte)-109;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8221) {
                     encodedBytes[characterIndex] = (byte)-108;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8226) {
                     encodedBytes[characterIndex] = (byte)-107;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (8211 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-106;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8212) {
                     encodedBytes[characterIndex] = (byte)-105;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 732) {
                     encodedBytes[characterIndex] = (byte)-104;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8482) {
                     encodedBytes[characterIndex] = (byte)-103;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 353) {
                     encodedBytes[characterIndex] = (byte)-102;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 8250) {
                     encodedBytes[characterIndex] = (byte)-101;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 339) {
                     encodedBytes[characterIndex] = (byte)-100;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode == 382) {
                     encodedBytes[characterIndex] = (byte)-98;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   if (characterCode != 376) {
                     encodedBytes[characterIndex] = (byte)63;
-                    break L2;
+                    break encodedTextCharacter;
                   }
                   encodedBytes[characterIndex] = (byte)-97;
-                  break L2;
+                  break encodedTextCharacter;
                 }
               }
               encodedBytes[characterIndex] = (byte)characterCode;

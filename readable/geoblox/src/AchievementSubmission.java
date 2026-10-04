@@ -84,7 +84,7 @@ final class AchievementSubmission extends IntrusiveNode {
           cameraXBasisOrDeltaYOrClipCenterY = TriangleRasterState.clipCenterY;
           cameraXBasisOrDeltaZOrVertexIndex = 0;
           while (true) {
-            L3: {
+            meshProjectionAndFaceQueue: {
               if (mesh.vertexCount > cameraXBasisOrDeltaZOrVertexIndex) {
                 cameraYBasisOrVertexX = mesh.vertexX[cameraXBasisOrDeltaZOrVertexIndex];
                 cameraYBasisOrVertexY = mesh.vertexY[cameraXBasisOrDeltaZOrVertexIndex];
@@ -170,7 +170,7 @@ final class AchievementSubmission extends IntrusiveNode {
                     nearPlaneOrNormalCapacityOrQueueMinDepth = ClientRenderingState.transformedMeshNormalX.length;
                     invertedDepthOrNormalIndexOrQueueGuard = cameraXZQ16OrNormalIndex;
                     if (controlFlagSnapshot != 0) {
-                      break L3;
+                      break meshProjectionAndFaceQueue;
                     }
                     if (nearPlaneOrNormalCapacityOrQueueMinDepth <= invertedDepthOrNormalIndexOrQueueGuard) {
                       break;

@@ -401,7 +401,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException caughtDigestFailure = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          L0: {
+          whirlpoolInputSelection: {
             if (sourceOffset > 0) {
               digestInput = new byte[length];
               copiedByteIndex = 0;
@@ -409,12 +409,12 @@ abstract class SpriteState extends DualLinkNode {
                 digestInput[copiedByteIndex] = source[sourceOffset + copiedByteIndex];
                 copiedByteIndex++;
                 if (clientControlFlowGuard != 0) {
-                  break L0;
+                  break whirlpoolInputSelection;
                 }
                 continue;
               }
               if (clientControlFlowGuard == 0) {
-                break L0;
+                break whirlpoolInputSelection;
               }
             }
             digestInput = source;

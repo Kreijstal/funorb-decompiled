@@ -138,7 +138,7 @@ final class CoverageBitmapFont extends BitmapFont {
         int weightedSourceColor;
         int destinationColor;
         negativeRowCounter = -height;
-        L0: while (true) {
+        alphaCoverageGlyphRows: while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -148,7 +148,7 @@ final class CoverageBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue L0;
+              continue alphaCoverageGlyphRows;
             }
             sourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
@@ -179,7 +179,7 @@ final class CoverageBitmapFont extends BitmapFont {
         int weightedSourceColor;
         int destinationColor;
         negativeRowCounter = -height;
-        L0: while (true) {
+        coverageGlyphRows: while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -189,7 +189,7 @@ final class CoverageBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue L0;
+              continue coverageGlyphRows;
             }
             sourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;

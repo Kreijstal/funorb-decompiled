@@ -128,21 +128,21 @@ final class BufferedRandomAccessFile {
               this.position = this.position + (long)readCountOrZeroFillEnd;
               destinationOffset = destinationOffset + readCountOrZeroFillEnd;
             }
-            L5: {
+            underlyingReadSelection: {
               if (this.readBuffer.length < remainingLength) {
                 this.file.seek(this.position, true);
                 this.underlyingPosition = this.position;
                 while (remainingLength > 0) {
                   readCountOrZeroFillEnd = this.file.read(remainingLength, destination, destinationOffset, false);
                   if (-1 == readCountOrZeroFillEnd) {
-                    break L5;
+                    break underlyingReadSelection;
                   }
                   this.position = this.position + (long)readCountOrZeroFillEnd;
                   this.underlyingPosition = this.underlyingPosition + (long)readCountOrZeroFillEnd;
                   remainingLength = remainingLength - readCountOrZeroFillEnd;
                   destinationOffset = destinationOffset + readCountOrZeroFillEnd;
                 }
-                break L5;
+                break underlyingReadSelection;
               }
               if (remainingLength > 0) {
                 this.refillReadBuffer(true);
@@ -439,7 +439,7 @@ final class BufferedRandomAccessFile {
           visitedCascadeEntities = new SecondaryDeque();
           staggeredLifetime = 0;
           cascadeFrontier.addFirst(farthestEntity, false);
-          L2: while (true) {
+          cascadeFrontierTraversal: while (true) {
             cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
             if (cascadeEntity == null) {
               return true;
@@ -449,24 +449,24 @@ final class BufferedRandomAccessFile {
             staggeredLifetime += 50;
             visitedCascadeEntities.addFirst(cascadeEntity, false);
             neighborIndex = 0;
-            L3: while (true) {
+            cascadeNeighborTraversal: while (true) {
               if (neighborIndex >= cascadeEntity.relatedEntityCount) {
-                continue L2;
+                continue cascadeFrontierTraversal;
               }
               neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
               searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
               while (true) {
-                L5: {
+                unseenCascadeNeighborSelection: {
                   if (searchedEntity == null) {
                     searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
                     while (searchedEntity != null) {
                       if (searchedEntity == neighborEntity) {
-                        break L5;
+                        break unseenCascadeNeighborSelection;
                       }
                       searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
                     }
                     cascadeFrontier.addLast(-82, neighborEntity);
-                    break L5;
+                    break unseenCascadeNeighborSelection;
                   }
                   if (searchedEntity != neighborEntity) {
                     searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
@@ -476,7 +476,7 @@ final class BufferedRandomAccessFile {
                 break;
               }
               neighborIndex++;
-              continue L3;
+              continue cascadeNeighborTraversal;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

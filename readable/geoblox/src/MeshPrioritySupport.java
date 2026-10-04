@@ -74,7 +74,7 @@ final class MeshPrioritySupport {
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthBucketIndex = 0;
-          L0: while (true) {
+          depthBucketTraversal: while (true) {
             if (depthBucketIndex >= GameApplet.meshFaceCountsByDepthBucket.length) {
               if (guard != -85) {
                 MeshPrioritySupport.createSolidCenterSlices(80, (byte) 55);
@@ -88,7 +88,7 @@ final class MeshPrioritySupport {
               remainingFacesScratch--;
               if (0 == remainingBeforeDecrement) {
                 depthBucketIndex++;
-                continue L0;
+                continue depthBucketTraversal;
               }
               sourceIndexBeforeIncrement = depthBucketReadIndex;
               depthBucketReadIndex++;
