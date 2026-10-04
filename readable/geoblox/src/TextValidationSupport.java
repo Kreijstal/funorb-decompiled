@@ -94,7 +94,7 @@ final class TextValidationSupport {
         if (methodGuard) {
             TextValidationSupport.listLoginMethods(false);
         }
-        return new LoginMethod[]{LoginTextValue.field_b, ProgressDialog.field_W, ValidationIconWidget.field_I};
+        return new LoginMethod[]{LoginTextValue.field_b, ProgressDialog.usernameLoginMethod, ValidationIconWidget.field_I};
     }
 
     static {

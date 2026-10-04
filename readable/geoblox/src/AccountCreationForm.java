@@ -201,13 +201,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             if (var1 != null && var1.indexOf('@') >= 0) {
                 var1 = "";
             }
-            return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.n(-1071908447));
+            return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.isUsernameQueryFlowPending(-1071908447));
         }
         archiveHandshakeStage = 84;
         if (var1 != null && var1.indexOf('@') >= 0) {
             var1 = "";
         }
-        return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.n(-1071908447));
+        return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.isUsernameQueryFlowPending(-1071908447));
     }
 
     private final int a(int param0, int param1, UiWidget param2, String param3, byte param4) {

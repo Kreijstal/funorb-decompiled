@@ -165,7 +165,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_5_0 = WidgetSkinState.invalidInputValidationState;
             return stackIn_5_0;
           }
-          if (!FadingDialog.a(var4, var3, -25321)) {
+          if (!FadingDialog.isPasswordAcceptableForUsername(var4, var3, -25321)) {
             stackIn_8_0 = WidgetSkinState.invalidInputValidationState;
             return stackIn_8_0;
           }

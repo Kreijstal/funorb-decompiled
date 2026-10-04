@@ -135,7 +135,7 @@ final class LoginProtocolSupport {
                 PacketBuffer.currentProtocolStage = LogoCompositor.connectedSessionStage;
                 if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) != RatingPresentationResources.loginPayloadKindThree) {
                   if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
-                    ProgressDialog.field_W.rememberMethod(NodeHashTableIterator.getActiveApplet(108), 0);
+                    ProgressDialog.usernameLoginMethod.rememberMethod(NodeHashTableIterator.getActiveApplet(108), 0);
                   }
                 } else {
                   LoginTextValue.field_b.rememberMethod(NodeHashTableIterator.getActiveApplet(122), 0);

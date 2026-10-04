@@ -351,7 +351,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 1) {
           if (MeshPrioritySupport.bootstrapLanguageId != 0) {
-            FadingDialog.field_J = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.interfaceTextArchiveId, (byte) -62);
+            FadingDialog.interfaceTextArchive = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.interfaceTextArchiveId, (byte) -62);
           }
           DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.commonUiSpriteArchiveId, (byte) -18, true, false, 1);
           AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.uiFontArchiveId, (byte) -124, true, false, 1);
@@ -361,19 +361,19 @@ abstract class SessionGameApplet extends GameApplet {
           RankedListQuery.field_i = AttachedEntityRenderer.field_c;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 2) {
-          if ((FadingDialog.field_J != null) &&
-              (FadingDialog.field_J.ensureIndexLoaded(0))) {
-            if (!FadingDialog.field_J.hasGroupName((byte) -116, "")) {
-              FadingDialog.field_J = null;
+          if ((FadingDialog.interfaceTextArchive != null) &&
+              (FadingDialog.interfaceTextArchive.ensureIndexLoaded(0))) {
+            if (!FadingDialog.interfaceTextArchive.hasGroupName((byte) -116, "")) {
+              FadingDialog.interfaceTextArchive = null;
             } else {
-              if (FadingDialog.field_J.loadGroupByName("", (byte) -126)) {
-                AccountWelcomePanel.loadInterfaceText((byte) 74, FadingDialog.field_J);
-                FadingDialog.field_J = null;
+              if (FadingDialog.interfaceTextArchive.loadGroupByName("", (byte) -126)) {
+                AccountWelcomePanel.loadInterfaceText((byte) 74, FadingDialog.interfaceTextArchive);
+                FadingDialog.interfaceTextArchive = null;
                 EntityContactSupport.resetFrameTimingHistory(-50);
               }
             }
           }
-          if (null == FadingDialog.field_J) {
+          if (null == FadingDialog.interfaceTextArchive) {
             VisualPropertyOverrides.clientBootstrapStage = 3;
           }
         }

@@ -11,12 +11,12 @@ abstract class ResizableDialog extends FadingDialog {
     private int resizeStartHeight;
     static ClientProtocolStage awaitingInitialLoginReplyStage;
     private int resizeTick;
-    static int field_V;
+    static int tooltipAgeTicks;
     static boolean legacyJavaCanvasRefreshRequired;
 
-    public static void j(int param0) {
+    public static void releaseResizableDialogResources(int methodGuard) {
         awaitingInitialLoginReplyStage = null;
-        if (param0 != 89) {
+        if (methodGuard != 89) {
             legacyJavaCanvasRefreshRequired = false;
         }
         awtKeyCodeToInternalCode = null;
@@ -47,32 +47,32 @@ abstract class ResizableDialog extends FadingDialog {
         this.resizeDurationTicks = durationTicks;
     }
 
-    final static String a(byte param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        String stackIn_2_0 = null;
-        String stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static String getAccountNameValidationError(byte methodGuard, CharSequence candidateName) {
+        RuntimeException nameValidationFailureForContext = null;
+        String guardedNullValidationResult = null;
+        String validationErrorBeforeReturn = null;
+        RuntimeException nameFailureBeforeContext = null;
+        StringBuilder nameMessagePrefix = null;
+        String nameDescription = null;
+        RuntimeException caughtNameValidationFailure = null;
         try {
-          if (param0 == 44) {
-            stackIn_4_0 = AccountContentDialog.a(false, false, param1);
-            return stackIn_4_0;
+          if (methodGuard == 44) {
+            validationErrorBeforeReturn = AccountContentDialog.a(false, false, candidateName);
+            return validationErrorBeforeReturn;
           }
-          stackIn_2_0 = (String) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("oe.V(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          guardedNullValidationResult = (String) null;
+          return guardedNullValidationResult;
+        } catch (java.lang.RuntimeException nameValidationFailure) {
+          caughtNameValidationFailure = nameValidationFailure;
+          nameValidationFailureForContext = caughtNameValidationFailure;
+          nameFailureBeforeContext = nameValidationFailureForContext;
+          nameMessagePrefix = new StringBuilder().append("oe.V(").append(methodGuard).append(',');
+          if (candidateName == null) {
+            nameDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) nameFailureBeforeContext), ((StringBuilder) (Object) nameMessagePrefix).append(nameDescription).append(')').toString());
         }
     }
 
@@ -277,239 +277,239 @@ abstract class ResizableDialog extends FadingDialog {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
-        int incrementValue$1 = 0;
-        int incrementValue$0 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = Geoblox.clientControlFlowFlag;
+    final static void handleAchievementGridClick(boolean onlyNewAchievements, boolean compactAchievementRows, int methodGuard) {
+        int previousAllViewEntryCount = 0;
+        int previousNewViewEntryCount = 0;
+        int selectedMaskBeforeAssignment = 0;
+        RuntimeException caughtAchievementClickFailure = null;
+        int iconX = 0;
+        RuntimeException achievementClickFailureForContext = null;
+        int iconY = 0;
+        int selectedAchievementMask = 0;
+        int visibleIconCount = 0;
+        int missingMaskHorizontalOffset = 0;
+        int missingFirstSixteenCount = 0;
+        int achievementIndex = 0;
+        int clientControlSnapshot = 0;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var3_int = 160;
-          var4 = 190;
-          if (!param1) {
-            var4 -= 10;
+          iconX = 160;
+          iconY = 190;
+          if (!compactAchievementRows) {
+            iconY -= 10;
           }
-          if (param0) {
-            stackIn_7_0 = ScorePopupSupport.newAchievementMask;
+          if (onlyNewAchievements) {
+            selectedMaskBeforeAssignment = ScorePopupSupport.newAchievementMask;
           } else {
-            stackIn_7_0 = InstrumentPatch.earnedAchievementMask;
+            selectedMaskBeforeAssignment = InstrumentPatch.earnedAchievementMask;
           }
-          var5 = stackIn_7_0;
-          var6 = 0;
-          if (param2 != 160) {
+          selectedAchievementMask = selectedMaskBeforeAssignment;
+          visibleIconCount = 0;
+          if (methodGuard != 160) {
             return;
           }
-          var7 = 0;
-          var8 = 0;
-          if (!param0) {
-            if (var8 >= 8) {
-              var3_int = var3_int + (-160 + var7);
+          missingMaskHorizontalOffset = 0;
+          missingFirstSixteenCount = 0;
+          if (!onlyNewAchievements) {
+            if (missingFirstSixteenCount >= 8) {
+              iconX = iconX + (-160 + missingMaskHorizontalOffset);
             }
-            for (var9 = 0; GameplaySetupSupport.achievementTitles.length > var9; var9++) {
-              if (!(((1 << var9 & var5) == 0) &&
-                    (param0)) &&
+            for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
+              if (!(((1 << achievementIndex & selectedAchievementMask) == 0) &&
+                    (onlyNewAchievements)) &&
                   !((!ClientOptionSupport.isClientOptionEnabled(0, 88)) &&
-                    (var9 == 16) &&
+                    (achievementIndex == 16) &&
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
-                if ((AccountCreationSupport.pointerPressXSnapshot >= var3_int) &&
-                    (AccountCreationSupport.pointerPressXSnapshot <= var3_int + 32) &&
-                    (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
-                    (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
-                  if (BoardEntityState.selectedAchievementIndex == var9) {
+                if ((AccountCreationSupport.pointerPressXSnapshot >= iconX) &&
+                    (AccountCreationSupport.pointerPressXSnapshot <= iconX + 32) &&
+                    (iconY <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
+                    (FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32)) {
+                  if (BoardEntityState.selectedAchievementIndex == achievementIndex) {
                     BoardEntityState.selectedAchievementIndex = -1;
                     return;
                   }
-                  BoardEntityState.selectedAchievementIndex = var9;
+                  BoardEntityState.selectedAchievementIndex = achievementIndex;
                   return;
                 }
-                incrementValue$1 = var6;
-                var6++;
-                if (7 != incrementValue$1) {
-                  var3_int += 40;
+                previousAllViewEntryCount = visibleIconCount;
+                visibleIconCount++;
+                if (7 != previousAllViewEntryCount) {
+                  iconX += 40;
                 } else {
-                  var3_int = 160;
-                  var4 += 40;
-                  if (!param1) {
-                    var4 += 5;
+                  iconX = 160;
+                  iconY += 40;
+                  if (!compactAchievementRows) {
+                    iconY += 5;
                   }
-                  if ((param0) &&
-                      (var8 < 8)) {
-                    var3_int = var3_int + var7;
+                  if ((onlyNewAchievements) &&
+                      (missingFirstSixteenCount < 8)) {
+                    iconX = iconX + missingMaskHorizontalOffset;
                   }
                 }
               }
             }
           } else {
-            for (var9 = 15; var9 >= 0; var9--) {
-              if ((var5 & 1 << var9) == 0) {
-                var7 += 20;
-                var8++;
+            for (achievementIndex = 15; achievementIndex >= 0; achievementIndex--) {
+              if ((selectedAchievementMask & 1 << achievementIndex) == 0) {
+                missingMaskHorizontalOffset += 20;
+                missingFirstSixteenCount++;
               }
             }
-            if (var8 >= 8) {
-              var3_int = var3_int + (-160 + var7);
+            if (missingFirstSixteenCount >= 8) {
+              iconX = iconX + (-160 + missingMaskHorizontalOffset);
             }
-            for (var9 = 0; GameplaySetupSupport.achievementTitles.length > var9; var9++) {
-              if (!(((1 << var9 & var5) == 0) &&
-                    (param0)) &&
+            for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
+              if (!(((1 << achievementIndex & selectedAchievementMask) == 0) &&
+                    (onlyNewAchievements)) &&
                   !((!ClientOptionSupport.isClientOptionEnabled(0, 88)) &&
-                    (var9 == 16) &&
+                    (achievementIndex == 16) &&
                     (!AchievementQuery.hasReceivedAchievementSixteen(109)))) {
-                if ((AccountCreationSupport.pointerPressXSnapshot >= var3_int) &&
-                    (AccountCreationSupport.pointerPressXSnapshot <= var3_int + 32) &&
-                    (var4 <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
-                    (FullscreenFocusCanvas.pointerPressYSnapshot <= var4 + 32)) {
-                  if (BoardEntityState.selectedAchievementIndex == var9) {
+                if ((AccountCreationSupport.pointerPressXSnapshot >= iconX) &&
+                    (AccountCreationSupport.pointerPressXSnapshot <= iconX + 32) &&
+                    (iconY <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
+                    (FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32)) {
+                  if (BoardEntityState.selectedAchievementIndex == achievementIndex) {
                     BoardEntityState.selectedAchievementIndex = -1;
                     return;
                   }
-                  BoardEntityState.selectedAchievementIndex = var9;
+                  BoardEntityState.selectedAchievementIndex = achievementIndex;
                   return;
                 }
-                incrementValue$0 = var6;
-                var6++;
-                if (7 != incrementValue$0) {
-                  var3_int += 40;
+                previousNewViewEntryCount = visibleIconCount;
+                visibleIconCount++;
+                if (7 != previousNewViewEntryCount) {
+                  iconX += 40;
                 } else {
-                  var3_int = 160;
-                  var4 += 40;
-                  if (!param1) {
-                    var4 += 5;
+                  iconX = 160;
+                  iconY += 40;
+                  if (!compactAchievementRows) {
+                    iconY += 5;
                   }
-                  if ((param0) &&
-                      (var8 < 8)) {
-                    var3_int = var3_int + var7;
+                  if ((onlyNewAchievements) &&
+                      (missingFirstSixteenCount < 8)) {
+                    iconX = iconX + missingMaskHorizontalOffset;
                   }
                 }
               }
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "oe.R(" + param0 + ',' + param1 + ',' + param2 + ')');
+        } catch (java.lang.RuntimeException achievementClickFailure) {
+          caughtAchievementClickFailure = achievementClickFailure;
+          achievementClickFailureForContext = caughtAchievementClickFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) achievementClickFailureForContext), "oe.R(" + onlyNewAchievements + ',' + compactAchievementRows + ',' + methodGuard + ')');
         }
     }
 
-    void b(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        var16 = Geoblox.clientControlFlowFlag;
-        SoftwareRasterizer.fillVerticalGradient(param0 + 6, param2 + 35, -12 + this.widgetWidth, -40 + this.widgetHeight, 2105376, 0);
-        var5 = 211;
-        var4 = 35;
-        var6 = 194;
-        var7 = 0;
-        var8 = param2;
-        while (var4 > var7) {
-          if (~var8 > ~SoftwareRasterizer.clipTop) {
-            var8++;
-            var7++;
+    void drawDialogFrame(int x, int methodGuard, int y) {
+        int bandHeight;
+        int bandStartGray;
+        int bandEndGray;
+        int bandRowIndex;
+        int rasterY;
+        int rowGrayOrRgb;
+        int leftEdgeOffset;
+        int rightEdgeOffset;
+        int leftCornerDistanceSquaredOrRightEdgeLimit;
+        int leftCornerRgbOrRightCornerX;
+        int rightCornerDistanceSquared;
+        int rightCornerRgb;
+        int unusedClientControlSnapshot;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
+        SoftwareRasterizer.fillVerticalGradient(x + 6, y + 35, -12 + this.widgetWidth, -40 + this.widgetHeight, 2105376, 0);
+        bandStartGray = 211;
+        bandHeight = 35;
+        bandEndGray = 194;
+        bandRowIndex = 0;
+        rasterY = y;
+        while (bandHeight > bandRowIndex) {
+          if (~rasterY > ~SoftwareRasterizer.clipTop) {
+            rasterY++;
+            bandRowIndex++;
             continue;
           }
-          if (SoftwareRasterizer.clipBottom <= var8) {
-            var8++;
-            var7++;
+          if (SoftwareRasterizer.clipBottom <= rasterY) {
+            rasterY++;
+            bandRowIndex++;
             continue;
           }
-          var9 = (-var5 + var6) * var7 / var4 + var5;
-          var10 = 0;
-          var11 = this.widgetWidth;
-          if (var7 <= 20) {
-            while (!(var10 > 20)) {
-              var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
-              if (var12 > 462) {
-                var10++;
+          rowGrayOrRgb = (-bandStartGray + bandEndGray) * bandRowIndex / bandHeight + bandStartGray;
+          leftEdgeOffset = 0;
+          rightEdgeOffset = this.widgetWidth;
+          if (bandRowIndex <= 20) {
+            while (!(leftEdgeOffset > 20)) {
+              leftCornerDistanceSquaredOrRightEdgeLimit = (-bandRowIndex + 20) * (-bandRowIndex + 20) + (-leftEdgeOffset + 20) * (20 - leftEdgeOffset);
+              if (leftCornerDistanceSquaredOrRightEdgeLimit > 462) {
+                leftEdgeOffset++;
                 continue;
               }
-              if (var12 < 420) {
+              if (leftCornerDistanceSquaredOrRightEdgeLimit < 420) {
                 break;
               }
-              var13 = (-var12 + 462) * var9 / 42;
-              var13 = var13 | (var13 << 8 | var13 << 16);
-              SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param0 + var10] = var13;
-              var10++;
+              leftCornerRgbOrRightCornerX = (-leftCornerDistanceSquaredOrRightEdgeLimit + 462) * rowGrayOrRgb / 42;
+              leftCornerRgbOrRightCornerX = leftCornerRgbOrRightCornerX | (leftCornerRgbOrRightCornerX << 8 | leftCornerRgbOrRightCornerX << 16);
+              SoftwareRasterizer.framebuffer[rasterY * SoftwareRasterizer.stride + x + leftEdgeOffset] = leftCornerRgbOrRightCornerX;
+              leftEdgeOffset++;
               continue;
             }
           }
-          if (20 >= var7) {
-            var12 = var11;
-            var11 -= 21;
-            for (var13 = 0; var13 <= 20; var13++) {
-              var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-              if (var14 <= 462) {
-                if (var14 < 420) {
-                  var12 = var11 + 1;
-                  var11++;
+          if (20 >= bandRowIndex) {
+            leftCornerDistanceSquaredOrRightEdgeLimit = rightEdgeOffset;
+            rightEdgeOffset -= 21;
+            for (leftCornerRgbOrRightCornerX = 0; leftCornerRgbOrRightCornerX <= 20; leftCornerRgbOrRightCornerX++) {
+              rightCornerDistanceSquared = (-bandRowIndex + 20) * (-bandRowIndex + 20) + leftCornerRgbOrRightCornerX * leftCornerRgbOrRightCornerX;
+              if (rightCornerDistanceSquared <= 462) {
+                if (rightCornerDistanceSquared < 420) {
+                  leftCornerDistanceSquaredOrRightEdgeLimit = rightEdgeOffset + 1;
+                  rightEdgeOffset++;
                   continue;
                 }
-                var15 = var9 * (462 - var14) / 42;
-                var15 = var15 | (var15 << 8 | var15 << 16);
-                SoftwareRasterizer.framebuffer[var11 + param0 + SoftwareRasterizer.stride * var8] = var15;
-                var11++;
+                rightCornerRgb = rowGrayOrRgb * (462 - rightCornerDistanceSquared) / 42;
+                rightCornerRgb = rightCornerRgb | (rightCornerRgb << 8 | rightCornerRgb << 16);
+                SoftwareRasterizer.framebuffer[rightEdgeOffset + x + SoftwareRasterizer.stride * rasterY] = rightCornerRgb;
+                rightEdgeOffset++;
                 continue;
               }
               break;
             }
-            var11 = var12;
+            rightEdgeOffset = leftCornerDistanceSquaredOrRightEdgeLimit;
           }
-          var9 = var9 | (var9 << 16 | var9 << 8);
-          SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, var11 - var10, var9);
-          var8++;
-          var7++;
+          rowGrayOrRgb = rowGrayOrRgb | (rowGrayOrRgb << 16 | rowGrayOrRgb << 8);
+          SoftwareRasterizer.drawHorizontalLine(leftEdgeOffset + x, rasterY, rightEdgeOffset - leftEdgeOffset, rowGrayOrRgb);
+          rasterY++;
+          bandRowIndex++;
         }
-        var4 = 22;
-        var5 = 194;
-        var6 = 169;
-        var7 = 0;
-        var8 = 35 + param2;
-        while (var7 < var4) {
-          var9 = var5 + (-var5 + var6) * var7 / var4;
-          var9 = var9 | (var9 << 8 | var9 << 16);
-          SoftwareRasterizer.drawHorizontalLine(param0, var8, 6, var9);
-          SoftwareRasterizer.drawHorizontalLine(this.widgetWidth + param0 - 6, var8, 6, var9);
-          var7++;
-          var8++;
+        bandHeight = 22;
+        bandStartGray = 194;
+        bandEndGray = 169;
+        bandRowIndex = 0;
+        rasterY = 35 + y;
+        while (bandRowIndex < bandHeight) {
+          rowGrayOrRgb = bandStartGray + (-bandStartGray + bandEndGray) * bandRowIndex / bandHeight;
+          rowGrayOrRgb = rowGrayOrRgb | (rowGrayOrRgb << 8 | rowGrayOrRgb << 16);
+          SoftwareRasterizer.drawHorizontalLine(x, rasterY, 6, rowGrayOrRgb);
+          SoftwareRasterizer.drawHorizontalLine(this.widgetWidth + x - 6, rasterY, 6, rowGrayOrRgb);
+          bandRowIndex++;
+          rasterY++;
         }
-        AvatarFeedbackSupport.grayJagexLogoSprite.draw(-90 + this.widgetWidth + param0, 10 + param2);
-        if (param1 != 20) {
+        AvatarFeedbackSupport.grayJagexLogoSprite.draw(-90 + this.widgetWidth + x, 10 + y);
+        if (methodGuard != 20) {
           this.resizeTargetHeight = -34;
         }
-        InstrumentPatch.a(RasterTargetRestoreSupport.dialogTopFrameSprites, -10 + this.widgetWidth, 35 + param2, 5 + param0, (byte) 107);
-        InstrumentPatch.a(UnderlinedButtonRenderer.field_e, this.widgetWidth, -22 + (this.widgetHeight + param2), param0, (byte) 107);
-        var4 = this.widgetHeight - 79;
-        var5 = 169;
-        var6 = 127;
-        var7 = 0;
-        var8 = param2 + 57;
-        while (var7 < var4) {
-          var9 = var7 * (var6 - var5) / var4 + var5;
-          var9 = var9 | (var9 << 16 | var9 << 8);
-          SoftwareRasterizer.drawHorizontalLine(param0, var8, 6, var9);
-          SoftwareRasterizer.drawHorizontalLine(-6 + (this.widgetWidth + param0), var8, 6, var9);
-          var8++;
-          var7++;
+        InstrumentPatch.a(RasterTargetRestoreSupport.dialogTopFrameSprites, -10 + this.widgetWidth, 35 + y, 5 + x, (byte) 107);
+        InstrumentPatch.a(UnderlinedButtonRenderer.field_e, this.widgetWidth, -22 + (this.widgetHeight + y), x, (byte) 107);
+        bandHeight = this.widgetHeight - 79;
+        bandStartGray = 169;
+        bandEndGray = 127;
+        bandRowIndex = 0;
+        rasterY = y + 57;
+        while (bandRowIndex < bandHeight) {
+          rowGrayOrRgb = bandRowIndex * (bandEndGray - bandStartGray) / bandHeight + bandStartGray;
+          rowGrayOrRgb = rowGrayOrRgb | (rowGrayOrRgb << 16 | rowGrayOrRgb << 8);
+          SoftwareRasterizer.drawHorizontalLine(x, rasterY, 6, rowGrayOrRgb);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.widgetWidth + x), rasterY, 6, rowGrayOrRgb);
+          rasterY++;
+          bandRowIndex++;
         }
     }
 
@@ -517,7 +517,7 @@ abstract class ResizableDialog extends FadingDialog {
         awtKeyCodeToInternalCode = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1, -1, -1, -1, 13, -1, -1, -1, -1, 83, 104, 105, 103, 102, 96, 98, 97, 99, -1, -1, -1, -1, -1, -1, -1, 25, 16, 17, 18, 19, 20, 21, 22, 23, 24, -1, -1, -1, -1, -1, -1, -1, 48, 68, 66, 50, 34, 51, 52, 53, 39, 54, 55, 56, 70, 69, 40, 41, 32, 35, 49, 36, 38, 67, 33, 65, 37, 64, -1, -1, -1, -1, -1, 228, 231, 227, 233, 224, 219, 225, 230, 226, 232, 89, 87, -1, 88, 229, 90, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -1, -1, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         connectionRestoredText = "Connection restored.";
         awaitingInitialLoginReplyStage = new ClientProtocolStage();
-        field_V = 0;
+        tooltipAgeTicks = 0;
         legacyJavaCanvasRefreshRequired = false;
     }
 }

@@ -49,10 +49,10 @@ class LongAndTextLoginPayload extends LoginPayload {
             if (InstrumentPatch.field_q) {
                 return null;
             }
-            if (AsyncResourceDownloader.field_e > ResizableDialog.field_V) {
+            if (AsyncResourceDownloader.field_e > ResizableDialog.tooltipAgeTicks) {
                 return null;
             }
-            if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.field_V)) {
+            if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.tooltipAgeTicks)) {
                 return SettingsCookieSupport.field_a;
             }
             return null;
@@ -60,10 +60,10 @@ class LongAndTextLoginPayload extends LoginPayload {
         if (InstrumentPatch.field_q) {
             return null;
         }
-        if (AsyncResourceDownloader.field_e > ResizableDialog.field_V) {
+        if (AsyncResourceDownloader.field_e > ResizableDialog.tooltipAgeTicks) {
             return null;
         }
-        if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.field_V)) {
+        if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.tooltipAgeTicks)) {
             return SettingsCookieSupport.field_a;
         }
         return null;

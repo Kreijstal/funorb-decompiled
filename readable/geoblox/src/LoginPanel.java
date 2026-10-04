@@ -795,7 +795,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           var8 = WeightedObjectCache.loginUsernameEmailText;
           var9 = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.getActiveApplet(120), 200);
           if (var9 != LoginTextValue.field_b) {
-            if (var9 == ProgressDialog.field_W) {
+            if (var9 == ProgressDialog.usernameLoginMethod) {
               var8 = LogoPreparationSupport.loginUsernameText;
             }
           } else {

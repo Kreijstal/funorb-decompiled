@@ -24,7 +24,7 @@ final class ContextualRuntimeException extends RuntimeException {
             DequeCursor.pendingTooltipAnchorY = PcmResampler.pointerYSnapshot;
           }
           L1: {
-            ResizableDialog.field_V = ResizableDialog.field_V + 1;
+            ResizableDialog.tooltipAgeTicks = ResizableDialog.tooltipAgeTicks + 1;
             if (param0 != null) {
               if (param0.equals(SettingsCookieSupport.field_a)) {
                 break L1;
@@ -35,8 +35,8 @@ final class ContextualRuntimeException extends RuntimeException {
               }
             }
             if (!InstrumentPatch.field_q) {
-              if (AsyncResourceDownloader.field_e <= ResizableDialog.field_V) {
-                stackIn_16_0 = (ResizableDialog.field_V < PcmResampler.field_j + AsyncResourceDownloader.field_e) ? 1 : 0;
+              if (AsyncResourceDownloader.field_e <= ResizableDialog.tooltipAgeTicks) {
+                stackIn_16_0 = (ResizableDialog.tooltipAgeTicks < PcmResampler.field_j + AsyncResourceDownloader.field_e) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -45,15 +45,15 @@ final class ContextualRuntimeException extends RuntimeException {
             }
             var2_int = stackIn_16_0;
             if (param0 == null) {
-              ResizableDialog.field_V = 0;
+              ResizableDialog.tooltipAgeTicks = 0;
             } else {
               if (InstrumentPatch.field_q) {
-                ResizableDialog.field_V = AsyncResourceDownloader.field_e;
+                ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.field_e;
               } else {
                 if (var2_int == 0) {
-                  ResizableDialog.field_V = 0;
+                  ResizableDialog.tooltipAgeTicks = 0;
                 } else {
-                  ResizableDialog.field_V = AsyncResourceDownloader.field_e;
+                  ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.field_e;
                 }
               }
             }
@@ -68,17 +68,17 @@ final class ContextualRuntimeException extends RuntimeException {
             }
           }
           if ((!InstrumentPatch.field_q) &&
-              (AsyncResourceDownloader.field_e > ResizableDialog.field_V) &&
+              (AsyncResourceDownloader.field_e > ResizableDialog.tooltipAgeTicks) &&
               (AttachmentPointerState.pointerActivitySnapshot)) {
-            ResizableDialog.field_V = 0;
+            ResizableDialog.tooltipAgeTicks = 0;
             ByteTextDecodingSupport.field_a = NodeHashTableIterator.pendingTooltipAnchorX;
             PendingActionMarker.field_g = DequeCursor.pendingTooltipAnchorY;
           }
           SettingsCookieSupport.field_a = param0;
           if ((InstrumentPatch.field_q) &&
-              (UsernameQuerySupport.field_a == ResizableDialog.field_V)) {
+              (UsernameQuerySupport.field_a == ResizableDialog.tooltipAgeTicks)) {
             InstrumentPatch.field_q = false;
-            ResizableDialog.field_V = 0;
+            ResizableDialog.tooltipAgeTicks = 0;
           }
           DequeCursor.pendingTooltipAnchorY = -1;
           NodeHashTableIterator.pendingTooltipAnchorX = -1;

@@ -236,7 +236,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) candidateText);
-          var3 = ResizableDialog.a((byte) 44, var5);
+          var3 = ResizableDialog.getAccountNameValidationError((byte) 44, var5);
           if (var3 != null) {
             stackIn_2_0 = var3;
             return stackIn_2_0;

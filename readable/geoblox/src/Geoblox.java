@@ -383,7 +383,7 @@ public final class Geoblox extends SessionGameApplet {
         MessageDialogSupport.releaseStaticReferences(30970);
         DialogLayer.releaseStaticReferences(methodGuard - 33);
         AccountCreationDialog.r(-60);
-        ProgressDialog.h((byte) 57);
+        ProgressDialog.releaseProgressDialogLoginMethod((byte) 57);
         AccountContentDialog.n(methodGuard ^ 69);
         MessageDialog.releaseStaticReferences(-107);
         AccountCreationForm.h(0);
@@ -460,8 +460,8 @@ public final class Geoblox extends SessionGameApplet {
         UiWidget.releaseStaticReferences(-5927);
         ButtonWidget.releaseStaticReferences((byte) -11);
         SingleChildWidget.releaseStaticReferences((byte) -3);
-        ResizableDialog.j(89);
-        FadingDialog.i(256);
+        ResizableDialog.releaseResizableDialogResources(89);
+        FadingDialog.releaseFadingDialogResources(256);
         WidgetContainer.releaseStaticReferences(14078);
         DequeCursor.b((byte) 79);
         BoardEntityState.releaseStaticReferences(methodGuard);
@@ -654,7 +654,7 @@ public final class Geoblox extends SessionGameApplet {
             if (!UsernameAvailabilityValidator.g(79)) {
               HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
             } else {
-              if ((FadingDialog.a((byte) 47)) &&
+              if ((FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47)) &&
                   (!FullscreenSupport.field_a)) {
                 fullscreenAvailableForUiSnapshot = !(InstrumentPatch.field_n == null);
                 uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.a(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);

@@ -39,7 +39,7 @@ final class MeshMaterial {
 
     final static void a(int param0, PcmSample param1, boolean param2, int param3) {
         PcmSampleStream var4 = PcmSampleStream.createForPlaybackRate(param1, 100, param3);
-        DelayedPcmStream var5 = ProgressDialog.a(param0, var4, 1000);
+        DelayedPcmStream var5 = ProgressDialog.delayStreamByMillis(param0, var4, 1000);
         PrefixCodeDecoder.trackedSoundEffectStreams.addLast(-103, new TrackedPcmStream(var4, var5));
         if (param2) {
             return;

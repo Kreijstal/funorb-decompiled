@@ -206,7 +206,7 @@ final class LogoCompositor {
         InstrumentPatch.field_q = false;
         SettingsCookieSupport.field_a = null;
         int sentinelDivision = 46 / ((methodGuard + 64) / 39);
-        ResizableDialog.field_V = 0;
+        ResizableDialog.tooltipAgeTicks = 0;
         ByteTextDecodingSupport.field_a = -1;
         PendingActionMarker.field_g = -1;
     }

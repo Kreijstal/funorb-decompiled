@@ -115,14 +115,14 @@ final class LoginUiSupport {
           }
           return 80;
         }
-        if (FadingDialog.field_J != null) {
-          if (!FadingDialog.field_J.ensureIndexLoaded(0)) {
+        if (FadingDialog.interfaceTextArchive != null) {
+          if (!FadingDialog.interfaceTextArchive.ensureIndexLoaded(0)) {
             return 14;
           }
-          if (!FadingDialog.field_J.hasGroupName((byte) -115, "")) {
+          if (!FadingDialog.interfaceTextArchive.hasGroupName((byte) -115, "")) {
             return 29;
           }
-          if (!FadingDialog.field_J.loadGroupByName("", (byte) -124)) {
+          if (!FadingDialog.interfaceTextArchive.loadGroupByName("", (byte) -124)) {
             return 29;
           }
         }

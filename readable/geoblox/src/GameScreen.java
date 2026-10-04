@@ -1200,13 +1200,13 @@ final class GameScreen extends MenuScreen {
           if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             if (!((this.screenId != 5) &&
                   (7 != this.screenId))) {
-              ResizableDialog.a(false, false, methodGuard ^ 189);
+              ResizableDialog.handleAchievementGridClick(false, false, methodGuard ^ 189);
             }
             if (this.screenId == 6) {
-              ResizableDialog.a(true, false, methodGuard + 131);
+              ResizableDialog.handleAchievementGridClick(true, false, methodGuard + 131);
             }
             if (this.screenId == 4) {
-              ResizableDialog.a(true, true, 160);
+              ResizableDialog.handleAchievementGridClick(true, true, 160);
             }
           }
           fullscreenPointerHandling: {

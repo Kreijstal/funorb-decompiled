@@ -6,15 +6,15 @@ abstract class FadingDialog extends WidgetContainer {
     boolean dialogVisible;
     static PaletteBitmapFont uiPaletteFont;
     static int variantMatchCandidateCount;
-    static ResourceArchive field_J;
+    static ResourceArchive interfaceTextArchive;
     private int dialogOpacity;
     static int decodedSpriteCanvasHeight;
     static String loadingMusicText;
-    static String[] field_E;
+    static String[] wrappedTooltipLines;
 
-    final static boolean a(byte param0) {
-        if (param0 != 47) {
-            field_J = (ResourceArchive) null;
+    final static boolean beginSessionRetryAndCheckStageEleven(byte methodGuard) {
+        if (methodGuard != 47) {
+            interfaceTextArchive = (ResourceArchive) null;
             return DelayedPcmStream.beginSessionRetryAndCheckStageEleven(true);
         }
         return DelayedPcmStream.beginSessionRetryAndCheckStageEleven(true);
@@ -34,7 +34,7 @@ abstract class FadingDialog extends WidgetContainer {
         return !this.dialogVisible ? 0 : this.dialogLayer.getTopVisibleDialog(81) != this ? 0 : 256;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogFrame(int x, int methodGuard, int y);
 
     boolean advanceDialogAnimation(int methodGuard) {
         int targetOpacity = this.getTargetOpacity(-75);
@@ -72,57 +72,57 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    final static boolean a(String param0, String param1, int param2) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_30_2 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean isPasswordAcceptableForUsername(String password, String username, int methodGuard) {
+        RuntimeException passwordValidationFailureForContext = null;
+        RuntimeException passwordFailureBeforeContext = null;
+        StringBuilder passwordMessagePrefix = null;
+        String passwordDescription = null;
+        StringBuilder usernameMessagePrefix = null;
+        String usernameDescription = null;
+        RuntimeException caughtPasswordValidationFailure = null;
         try {
-          if (TextValidationSupport.containsNonAsciiAlphanumeric(param0, (byte) -67)) {
+          if (TextValidationSupport.containsNonAsciiAlphanumeric(password, (byte) -67)) {
             return false;
           }
-          if (SecondaryNodeDeque.hasUniformCharacters(18725, param0)) {
+          if (SecondaryNodeDeque.hasUniformCharacters(18725, password)) {
             return false;
           }
-          if (ArchiveCatalog.a(param0, param2 + 25409)) {
+          if (ArchiveCatalog.a(password, methodGuard + 25409)) {
             return false;
           }
-          if (param1.length() == 0) {
+          if (username.length() == 0) {
             return true;
           }
-          if (TextValidationSupport.containsTextOrReverse(param0, param1, -75)) {
+          if (TextValidationSupport.containsTextOrReverse(password, username, -75)) {
             return false;
           }
-          if (param2 != -25321) {
-            FadingDialog.i(31);
+          if (methodGuard != -25321) {
+            FadingDialog.releaseFadingDialogResources(31);
           }
-          if (UsernameAvailabilityValidator.a(8, param1, param0)) {
+          if (UsernameAvailabilityValidator.a(8, username, password)) {
             return false;
           }
-          if (!CrcAcknowledgedPacket.a(param0, param1, (byte) -107)) {
+          if (!CrcAcknowledgedPacket.a(password, username, (byte) -107)) {
             return true;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_29_0 = var3;
-          stackIn_29_1 = new StringBuilder().append("dd.MB(");
-          if (param0 == null) {
-            stackIn_30_2 = "null";
+        } catch (java.lang.RuntimeException passwordValidationFailure) {
+          caughtPasswordValidationFailure = passwordValidationFailure;
+          passwordValidationFailureForContext = caughtPasswordValidationFailure;
+          passwordFailureBeforeContext = passwordValidationFailureForContext;
+          passwordMessagePrefix = new StringBuilder().append("dd.MB(");
+          if (password == null) {
+            passwordDescription = "null";
           } else {
-            stackIn_30_2 = "{...}";
+            passwordDescription = "{...}";
           }
-          stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
-          if (param1 == null) {
-            stackIn_33_2 = "null";
+          usernameMessagePrefix = ((StringBuilder) (Object) passwordMessagePrefix).append(passwordDescription).append(',');
+          if (username == null) {
+            usernameDescription = "null";
           } else {
-            stackIn_33_2 = "{...}";
+            usernameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) passwordFailureBeforeContext), ((StringBuilder) (Object) usernameMessagePrefix).append(usernameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -140,19 +140,19 @@ abstract class FadingDialog extends WidgetContainer {
         return false;
     }
 
-    public static void i(int param0) {
-        if (param0 == 256) {
-            field_J = null;
+    public static void releaseFadingDialogResources(int methodGuard) {
+        if (methodGuard == 256) {
+            interfaceTextArchive = null;
             loadingMusicText = null;
             uiPaletteFont = null;
-            field_E = null;
+            wrappedTooltipLines = null;
             return;
         }
-        FadingDialog.a((byte) -87);
-        field_J = null;
+        FadingDialog.beginSessionRetryAndCheckStageEleven((byte) -87);
+        interfaceTextArchive = null;
         loadingMusicText = null;
         uiPaletteFont = null;
-        field_E = null;
+        wrappedTooltipLines = null;
     }
 
     final UiWidget findFocusTarget(byte methodGuard) {
@@ -179,7 +179,7 @@ abstract class FadingDialog extends WidgetContainer {
             if (!(renderPass == 0)) {
                 return;
             }
-            this.b(this.widgetX + parentX, 20, parentY + this.widgetY);
+            this.drawDialogFrame(this.widgetX + parentX, 20, parentY + this.widgetY);
             super.renderWidget(parentX, parentY, (byte) -52, renderPass);
             return;
         }
@@ -188,7 +188,7 @@ abstract class FadingDialog extends WidgetContainer {
             guardResidue = 111 / ((1 - methodGuard) / 43);
             Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
-            this.b(0, 20, 0);
+            this.drawDialogFrame(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
@@ -199,7 +199,7 @@ abstract class FadingDialog extends WidgetContainer {
             guardResidue = 111 / ((1 - methodGuard) / 43);
             Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
-            this.b(0, 20, 0);
+            this.drawDialogFrame(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
@@ -210,7 +210,7 @@ abstract class FadingDialog extends WidgetContainer {
             guardResidue = 111 / ((1 - methodGuard) / 43);
             Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
-            this.b(0, 20, 0);
+            this.drawDialogFrame(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
@@ -219,7 +219,7 @@ abstract class FadingDialog extends WidgetContainer {
         guardResidue = 111 / ((1 - methodGuard) / 43);
         Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
         SoftwareRasterizer.clearFramebuffer();
-        this.b(0, 20, 0);
+        this.drawDialogFrame(0, 20, 0);
         super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
         RasterTargetRestoreSupport.restoreRasterTarget(true);
         ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);

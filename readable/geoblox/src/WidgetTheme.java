@@ -191,8 +191,8 @@ final class WidgetTheme {
           lineCount = 1;
           if (!((quarterRasterWidth >= textWidth) &&
               (-1 == text.indexOf("<br>")))) {
-            if (FadingDialog.field_E == null) {
-              FadingDialog.field_E = new String[16];
+            if (FadingDialog.wrappedTooltipLines == null) {
+              FadingDialog.wrappedTooltipLines = new String[16];
             }
             if (quarterRasterWidth >= textWidth) {
               wrapWidthOrBoxX = quarterRasterWidth;
@@ -200,11 +200,11 @@ final class WidgetTheme {
               widthChunkCountOrLineIndexOrBoxY = textWidth / quarterRasterWidth;
               wrapWidthOrBoxX = (textWidth % quarterRasterWidth + widthChunkCountOrLineIndexOrBoxY - 1) / widthChunkCountOrLineIndexOrBoxY * 2 + quarterRasterWidth;
             }
-            lineCount = this.tooltipFont.wrapText(text, new int[]{wrapWidthOrBoxX}, FadingDialog.field_E);
+            lineCount = this.tooltipFont.wrapText(text, new int[]{wrapWidthOrBoxX}, FadingDialog.wrappedTooltipLines);
             textWidth = 0;
             textHeight = textHeight + (lineCount - 1) * lineSpacing;
             for (widthChunkCountOrLineIndexOrBoxY = 0; widthChunkCountOrLineIndexOrBoxY < lineCount; widthChunkCountOrLineIndexOrBoxY++) {
-              measuredLineWidth = this.tooltipFont.measureTextWidth(FadingDialog.field_E[widthChunkCountOrLineIndexOrBoxY]);
+              measuredLineWidth = this.tooltipFont.measureTextWidth(FadingDialog.wrappedTooltipLines[widthChunkCountOrLineIndexOrBoxY]);
               if (measuredLineWidth <= textWidth) {
                 continue;
               }

@@ -17,14 +17,46 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/b1a33444dc957e0c92c0b511c46a0e42b0d0d457/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/aa2b3a7579bea0da750b1a1ebe6092941e7e8ff5/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
 
-Pass 157 adds 140 guarded names: nineteen fields, eight methods, seventeen
+Pass 158 adds 111 guarded names: four fields, twelve methods, 25 parameters
+and seventy locals. All 57 FadingDialog, 130 ResizableDialog and sixty
+ProgressDialog declarations now have readable names; constructors follow class
+rules. The complete three-declaration drawDialogFrame override family exposes
+rounded bands, corner/edge calculations, frame sprites and progress text.
+Shared fields identify wrappedTooltipLines, interfaceTextArchive, tooltipAgeTicks
+and usernameLoginMethod.
+
+Helper names show password checks against username text and configured length
+bounds, account-name error messages, achievement-grid clicking, millisecond PCM
+delays, username-flow identity checks and resource cleanup. Progress locals show
+highlight toggles, Q16 percentages, packet writes and failures. Reused frame
+registers retain both roles, including leftCornerDistanceSquaredOrRightEdgeLimit
+and leftCornerRgbOrRightCornerX. Original guard effects, integer overflow,
+partial drawing/writes, aliases, callback order, exception scopes and diagnostic
+string literals remain; no client-control flag value is assumed.
+
+The export has 15,321 rules and 105,286 identifier edits, plus eleven class-name
+literal and 275 label edits: 105,572 total. All 15,210 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Nineteen generated Java files change only in their names. Raw
+Java, decompiler/naming/workflow/stub pins, label policy and all existing native
+probe files/hashes stay fixed. Both 303-file corpora compile, reproduce and
+reverse byte exactly. Existing raster/theme and text decoder/archive-context
+native/raw/readable traces retain their hashes; all 27 publication tests pass.
+This pass adds no new runtime probe or performance result.
+
+Eight large labeled bodies, 153 opaque labels, 260 opaque fields and 288
+single-letter methods remain. Live dialog fade/resize/frame/font rendering,
+login/achievement interactions, server/assets/game/browser/phone and
+heap/presented-FPS acceptance remain unverified.
+
+Previous pass 157 adds 140 guarded names: nineteen fields, eight methods, seventeen
 parameters, 87 locals and nine block labels. All eight remaining opaque
 GameApplet methods now expose updateAppletTick, renderAppletFrame,
 rebuildGameCanvas, startAppletServices, shutdownAppletServices, showGameError,
