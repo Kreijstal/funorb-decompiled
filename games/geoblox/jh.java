@@ -205,20 +205,18 @@ final class jh {
               var6 = this.field_d;
               synchronized (var6) {
                 try {
-                  L0: {
-                    if (param4) {
-                      if (this.field_c.a((byte) 46) < (long)(6 + param2 * 6)) {
-                        return false;
-                      }
-                      this.field_c.a(param0 - 228, (long)(param2 * 6));
-                      this.field_c.a(dj.field_F, 6, 0, 9868);
-                      var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
-                      if ((var7_int > 0) &&
-                          (this.field_d.a((byte) 46) / 520L >= (long)var7_int)) {
-                        break L0;
-                      }
+                  if (param4) {
+                    if (this.field_c.a((byte) 46) < (long)(6 + param2 * 6)) {
                       return false;
                     }
+                    this.field_c.a(param0 - 228, (long)(param2 * 6));
+                    this.field_c.a(dj.field_F, 6, 0, 9868);
+                    var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
+                    if (!((var7_int > 0) &&
+                        (this.field_d.a((byte) 46) / 520L >= (long)var7_int))) {
+                      return false;
+                    }
+                  } else {
                     var7_int = (int)((this.field_d.a((byte) 46) + 519L) / 520L);
                     if (var7_int == 0) {
                       var7_int = 1;

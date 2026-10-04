@@ -22,15 +22,13 @@ final class lc {
         try {
           var1 = (ja) ((Object) wd.field_e.g(0));
           while (true) {
-            L1: {
-              if (var1 != null) {
-                var1.b(true);
-                var1 = (ja) ((Object) wd.field_e.d(1));
-                if (var10 != 0) {
-                  break L1;
-                }
+            if (var1 != null) {
+              var1.b(true);
+              var1 = (ja) ((Object) wd.field_e.d(1));
+              if (var10 == 0) {
                 continue;
               }
+            } else {
               if (param0 != 255) {
                 field_b = -11;
               }

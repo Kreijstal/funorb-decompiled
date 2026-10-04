@@ -1109,14 +1109,12 @@ final class c extends ka {
             this.field_C = false;
           }
           while (true) {
-            L4: {
-              if (hh.a(108)) {
-                this.b((byte) 62);
-                if (var3 != 0) {
-                  break L4;
-                }
+            if (hh.a(108)) {
+              this.b((byte) 62);
+              if (var3 == 0) {
                 continue;
               }
+            } else {
               if ((this.field_K == 3) &&
                   (this.field_b == 0) &&
                   (this.field_q == 0) &&

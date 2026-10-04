@@ -415,46 +415,40 @@ final class gh {
               var7 = var16;
               var8_ref_ja = (ja) ((Object) var16.g(0));
               while (true) {
-                L37: {
-                  if (null != var8_ref_ja) {
-                    var9_float = -320.0f + var8_ref_ja.field_o;
-                    var10_float = -240.0f + var8_ref_ja.field_v;
-                    var11 = (int)(Math.cos((double)el.field_o.field_J) * (double)var9_float - Math.sin((double)el.field_o.field_J) * (double)var10_float + 320.0);
-                    var12 = (int)(240.0 + ((double)var9_float * Math.sin((double)el.field_o.field_J) + (double)var10_float * Math.cos((double)el.field_o.field_J)));
-                    vb.d(var11 / 2, var12 / 2, var6, var5);
-                    var8_ref_ja = (ja) ((Object) var16.d(1));
-                    if (var14 != 0) {
-                      break L37;
-                    }
+                if (null != var8_ref_ja) {
+                  var9_float = -320.0f + var8_ref_ja.field_o;
+                  var10_float = -240.0f + var8_ref_ja.field_v;
+                  var11 = (int)(Math.cos((double)el.field_o.field_J) * (double)var9_float - Math.sin((double)el.field_o.field_J) * (double)var10_float + 320.0);
+                  var12 = (int)(240.0 + ((double)var9_float * Math.sin((double)el.field_o.field_J) + (double)var10_float * Math.cos((double)el.field_o.field_J)));
+                  vb.d(var11 / 2, var12 / 2, var6, var5);
+                  var8_ref_ja = (ja) ((Object) var16.d(1));
+                  if (var14 == 0) {
                     continue;
                   }
+                } else {
                   var7 = a.field_d;
                 }
                 var8_ref_ja = (ja) ((Object) var7.g(0));
                 while (true) {
-                  L40: {
-                    if (var8_ref_ja != null) {
-                      vb.d((int)(var8_ref_ja.field_o / 2.0f), (int)(var8_ref_ja.field_v / 2.0f), var6, var5);
-                      var8_ref_ja = (ja) ((Object) var7.d(1));
-                      if (var14 != 0) {
-                        break L40;
-                      }
+                  if (var8_ref_ja != null) {
+                    vb.d((int)(var8_ref_ja.field_o / 2.0f), (int)(var8_ref_ja.field_v / 2.0f), var6, var5);
+                    var8_ref_ja = (ja) ((Object) var7.d(1));
+                    if (var14 == 0) {
                       continue;
                     }
+                  } else {
                     var7 = bh.field_c;
                   }
                   var8_ref_ja = (ja) ((Object) var7.g(0));
                   while (true) {
                     L43: {
-                      L44: {
-                        if (var8_ref_ja != null) {
-                          vb.d((int)(var8_ref_ja.field_o / 2.0f), (int)(var8_ref_ja.field_v / 2.0f), var6, var5);
-                          var8_ref_ja = (ja) ((Object) var7.d(1));
-                          if (var14 != 0) {
-                            break L44;
-                          }
+                      if (var8_ref_ja != null) {
+                        vb.d((int)(var8_ref_ja.field_o / 2.0f), (int)(var8_ref_ja.field_v / 2.0f), var6, var5);
+                        var8_ref_ja = (ja) ((Object) var7.d(1));
+                        if (var14 == 0) {
                           continue;
                         }
+                      } else {
                         if (this.field_Y) {
                           var8 = -(this.field_v / 2) + 176;
                           if (var8 < 10) {
