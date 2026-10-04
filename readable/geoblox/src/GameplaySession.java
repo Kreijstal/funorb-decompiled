@@ -77,7 +77,7 @@ final class GameplaySession {
         if (0 != this.tutorialStepPhase) {
           return;
         }
-        L0: {
+        tutorialPromptPlacement: {
           promptText = UsernameAvailabilityValidator.tutorialMessageForStep(this.tutorialStepId, 24146);
           lineSpacing = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent + lineSpacingOffset;
           promptWidthThenButtonX = 460;
@@ -86,21 +86,21 @@ final class GameplaySession {
           if (this.tutorialStepId == 0) {
             promptTop = 232;
             if (clientControlFlowGuard == 0) {
-              break L0;
+              break tutorialPromptPlacement;
             }
           }
           if (this.tutorialStepId != 3) {
             if (1 != this.tutorialStepId) {
-              break L0;
+              break tutorialPromptPlacement;
             }
             promptTop = 280;
             if (clientControlFlowGuard == 0) {
-              break L0;
+              break tutorialPromptPlacement;
             }
           }
           promptTop = 270;
         }
-        L3: {
+        tutorialPromptButtonRendering: {
           DelayedIncomingPacket.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, GameGraphicsResources.frameNineSliceSprites);
           IntrusiveNodeHashTable.smallFont.drawParagraph(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
@@ -123,7 +123,7 @@ final class GameplaySession {
             FadingDialog.uiPaletteFont.drawCenteredText(TextPairLoginPayload.startGameText, promptWidthThenButtonX, 468, 0, -1);
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
             if (clientControlFlowGuard == 0) {
-              break L3;
+              break tutorialPromptButtonRendering;
             }
           }
           DelayedIncomingPacket.drawNineSlicePanel(440, 240, 36, (byte) -92, 160, ArchiveLoadSequence.mouseBoxFrames);
@@ -1181,13 +1181,13 @@ final class GameplaySession {
         if (this.tutorialMode) {
           return;
         }
-        L0: {
+        scoreTextUpdate: {
           this.score = this.score + points;
           if (this.score > 9999999) {
             cappedScoreText = (CharSequence) ((Object) Integer.toString(9999999));
             ValidationIconWidget.writeTextAtOffset(cappedScoreText, this.scoreText, 0, 47);
             if (controlFlowGuard == 0) {
-              break L0;
+              break scoreTextUpdate;
             }
           }
           scoreValueText = (CharSequence) ((Object) Integer.toString(this.score));
@@ -1197,20 +1197,20 @@ final class GameplaySession {
         if (methodGuard != 127) {
           this.renderProgressHud(-17);
         }
-        L3: {
+        scoreContextCounterUpdate: {
           counterSplitMode = ClientFlowState.inputAndScoreContextSelectorSeed % 3;
           if (counterSplitMode != 0) {
             if (counterSplitMode == 1) {
               SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - pointsForCounters;
               if (controlFlowGuard == 0) {
-                break L3;
+                break scoreContextCounterUpdate;
               }
             }
             oneThirdPoints = pointsForCounters / 3;
             ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + oneThirdPoints;
             SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - (pointsForCounters - oneThirdPoints);
             if (controlFlowGuard == 0) {
-              break L3;
+              break scoreContextCounterUpdate;
             }
           }
           ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + pointsForCounters;
@@ -1234,7 +1234,7 @@ final class GameplaySession {
         if (methodGuard != 116) {
           this.score = -46;
         }
-        L1: {
+        sessionEndOrTutorialCompletion: {
           if (!this.tutorialMode) {
             this.sessionEnding = true;
             this.showGameOverOverlay = true;
@@ -1242,7 +1242,7 @@ final class GameplaySession {
             this.addScore((byte) 127, WidgetTheme.collectUnfinishedPopupPoints(-25866));
             this.submitScore((byte) -70);
             if (Geoblox.clientControlFlowFlag == 0) {
-              break L1;
+              break sessionEndOrTutorialCompletion;
             }
           }
           this.tutorialStepId = 5;
@@ -1262,14 +1262,14 @@ final class GameplaySession {
 
     private final void advanceTutorialStep(int methodGuard) {
         int clientControlFlowGuard;
-        L0: {
+        tutorialStepPhaseUpdate: {
           clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           if (this.tutorialStepPhase == 2) {
             this.tutorialStepId = this.tutorialStepId + 1;
             this.tutorialPromptActive = true;
             this.tutorialStepPhase = 0;
             if (clientControlFlowGuard == 0) {
-              break L0;
+              break tutorialStepPhaseUpdate;
             }
           }
           if (1 == this.tutorialStepPhase) {
@@ -1285,20 +1285,20 @@ final class GameplaySession {
                 (this.tutorialProgressMetric > 450)) {
               this.tutorialStepPhase = 2;
               if (clientControlFlowGuard == 0) {
-                break L0;
+                break tutorialStepPhaseUpdate;
               }
             }
             if (!((this.tutorialStepId == 1) &&
                   (0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric))) {
               if (this.tutorialStepId != 2) {
-                break L0;
+                break tutorialStepPhaseUpdate;
               }
               if (TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0) {
-                break L0;
+                break tutorialStepPhaseUpdate;
               }
               this.tutorialStepPhase = 2;
               if (clientControlFlowGuard == 0) {
-                break L0;
+                break tutorialStepPhaseUpdate;
               }
             }
             this.tutorialStepPhase = 2;
@@ -1317,11 +1317,11 @@ final class GameplaySession {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (this.sceneAnimationTick == 0) {
-          L1: {
+          transitionScoreOrThemePreparation: {
             if (!this.preserveScoreOnTransition) {
               this.resetScoreState(122);
               if (clientControlFlowGuard == 0) {
-                break L1;
+                break transitionScoreOrThemePreparation;
               }
             }
             this.prepareNextTheme(867);
@@ -1341,21 +1341,21 @@ final class GameplaySession {
             precedingThemeId = 0;
             themeIndexThenId = 0;
             while (true) {
-              L6: {
-                L7: {
+              precedingThemeDispatchPreparation: {
+                precedingThemeLookup: {
                   if (7 > themeIndexThenId) {
                     selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
                     themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
                     if (clientControlFlowGuard != 0) {
-                      break L6;
+                      break precedingThemeDispatchPreparation;
                     }
                     if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
                       if (0 < themeIndexThenId) {
                         precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
-                        break L7;
+                        break precedingThemeLookup;
                       }
                       precedingThemeId = WidgetContainer.themeCycleOrder[6];
-                      break L7;
+                      break precedingThemeLookup;
                     }
                     themeIndexThenId++;
                     continue;
@@ -1365,39 +1365,39 @@ final class GameplaySession {
                 selectedThemeComplementOrThemeSentinel = 4;
                 themeEntryComplementOrThemeId = themeIndexThenId;
               }
-              L10: {
-                L11: {
-                  L12: {
-                    L13: {
-                      L14: {
-                        L15: {
-                          L16: {
+              fallbackSunAchievementEntry: {
+                sweetsAchievementEntry: {
+                  sportsAchievementEntry: {
+                    spaceAchievementEntry: {
+                      jewelsAchievementEntry: {
+                        germsAchievementEntry: {
+                          sunAchievementEntry: {
                             if (!((selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) &&
                                   (clientControlFlowGuard == 0))) {
                               if ((themeIndexThenId == 1) &&
                                   (clientControlFlowGuard == 0)) {
-                                break L16;
+                                break sunAchievementEntry;
                               }
                               if ((themeIndexThenId == 3) &&
                                   (clientControlFlowGuard == 0)) {
-                                break L15;
+                                break germsAchievementEntry;
                               }
                               if ((themeIndexThenId == 0) &&
                                   (clientControlFlowGuard == 0)) {
-                                break L14;
+                                break jewelsAchievementEntry;
                               }
                               if (themeIndexThenId == 6) {
-                                break L13;
+                                break spaceAchievementEntry;
                               }
                               if ((5 == themeIndexThenId) &&
                                   (clientControlFlowGuard == 0)) {
-                                break L12;
+                                break sportsAchievementEntry;
                               }
                               if (2 != themeIndexThenId) {
-                                break L10;
+                                break fallbackSunAchievementEntry;
                               }
                               if (clientControlFlowGuard == 0) {
-                                break L11;
+                                break sweetsAchievementEntry;
                               }
                             }
                             SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
@@ -1464,13 +1464,13 @@ final class GameplaySession {
         if (methodGuard) {
           this.addScore((byte) 71, 49);
         }
-        L1: {
+        resultSequenceRendering: {
           if (2 == this.sessionPhase) {
             PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
             PointerMenuState.smallBoxSprite.draw(this.resultPanelX, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             FadingDialog.uiPaletteFont.drawText(SharedBufferPools.bubbleBonusText, 15 + this.resultPanelX, 312, 0, -1);
             if (clientControlFlowGuard == 0) {
-              break L1;
+              break resultSequenceRendering;
             }
           }
           shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
@@ -1483,7 +1483,7 @@ final class GameplaySession {
               FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
             }
             if (clientControlFlowGuard == 0) {
-              break L1;
+              break resultSequenceRendering;
             }
           }
           NodeHashTableIterator.popSprite.drawAlpha(-(NodeHashTableIterator.popSprite.fullWidth >> 1) + 320, 240 - (NodeHashTableIterator.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
@@ -1520,8 +1520,8 @@ final class GameplaySession {
             this.pointsPanelSlideDirection = 0;
             return;
           }
-          L1: {
-            L2: {
+          resultRadiusAndMusicPreparation: {
+            endingEntityRadiusMeasurement: {
               this.resultBonusPoints = this.resultBonusPoints + 179;
               this.boardEmptyAtResultStart = BoardEntityState.attachedEntities.isEmpty(13519);
               this.resultSequenceCountdown = 150;
@@ -1529,7 +1529,7 @@ final class GameplaySession {
               if (null == endingEntity) {
                 this.endingEntityRadius = 29;
                 if (controlFlowGuard == 0) {
-                  break L2;
+                  break endingEntityRadiusMeasurement;
                 }
               }
               HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
@@ -1540,13 +1540,13 @@ final class GameplaySession {
               spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(HotspotTextWidget.spriteScratchRaster.width >> 1) - 320);
               spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (HotspotTextWidget.spriteScratchRaster.height >> 1));
               spriteColumn = 0;
-              L4: while (true) {
+              endingSpriteColumnScan: while (true) {
                 comparisonLeftColumnOrZero = spriteColumn;
                 comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
                 if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
                   rowStartOrMusicGuard = 0;
                   if (controlFlowGuard != 0) {
-                    break L1;
+                    break resultRadiusAndMusicPreparation;
                   }
                   spriteRow = rowStartOrMusicGuard;
                   while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
@@ -1564,33 +1564,33 @@ final class GameplaySession {
                     continue;
                   }
                   spriteColumn++;
-                  continue L4;
+                  continue endingSpriteColumnScan;
                 }
                 break;
               }
               this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
-              break L2;
+              break endingEntityRadiusMeasurement;
             }
             this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
             rowStartOrMusicGuard = methodGuard ^ 10;
           }
           SecondaryNodeDeque.selectBackgroundMusic(rowStartOrMusicGuard, ContentTransitionDialog.resultMusicTrack);
         }
-        L10: {
+        resultSequenceTickAndCompletion: {
           nextSceneAnimationTick = this.sceneAnimationTick + 1;
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
           if (nextSceneAnimationTick != 150 + this.resultCompletionTickOffset) {
-            L12: {
+            resultSequencePhaseSelection: {
               if (460 > this.sceneAnimationTick) {
                 this.sessionPhase = 2;
                 if (controlFlowGuard == 0) {
-                  break L12;
+                  break resultSequencePhaseSelection;
                 }
               }
               if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
                 this.sessionPhase = 4;
                 if (controlFlowGuard == 0) {
-                  break L12;
+                  break resultSequencePhaseSelection;
                 }
               }
               this.sessionPhase = 3;
@@ -1598,7 +1598,7 @@ final class GameplaySession {
             if (3 == this.sessionPhase) {
               this.resultBonusPoints = this.resultBonusPoints + 7;
               if (controlFlowGuard == 0) {
-                break L10;
+                break resultSequenceTickAndCompletion;
               }
             }
             if (this.sessionPhase != 2) {
@@ -1607,7 +1607,7 @@ final class GameplaySession {
               }
               this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
               if (controlFlowGuard == 0) {
-                break L10;
+                break resultSequenceTickAndCompletion;
               }
             }
             if (!((this.resultExpansionAudioStream != null) &&
@@ -1617,11 +1617,11 @@ final class GameplaySession {
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
             if (this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1)) {
-              break L10;
+              break resultSequenceTickAndCompletion;
             }
             this.resultPanelX = this.resultPanelX - 1;
             if (controlFlowGuard == 0) {
-              break L10;
+              break resultSequenceTickAndCompletion;
             }
           }
           this.sceneTransitionRequested = true;
@@ -1659,13 +1659,13 @@ final class GameplaySession {
         if (this.tutorialMode) {
           return;
         }
-        L0: {
+        popupPointsTextUpdate: {
           this.pendingPopupPoints = this.pendingPopupPoints + points;
           if (this.pendingPopupPoints > 99999) {
             cappedPopupPointsText = (CharSequence) ((Object) Integer.toString(99999));
             ValidationIconWidget.writeTextAtOffset(cappedPopupPointsText, this.popupPointsText, 0, 26);
             if (Geoblox.clientControlFlowFlag == 0) {
-              break L0;
+              break popupPointsTextUpdate;
             }
           }
           popupPointsValueText = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints));
@@ -1681,11 +1681,11 @@ final class GameplaySession {
         if (!this.preserveScoreOnTransition) {
           return;
         }
-        L0: {
+        themeProgressHudRendering: {
           if (this.sessionPhase != 0) {
             FadingDialog.uiPaletteFont.drawParagraph(LoginUiSupport.lastGeobloxOfLevelText, 426, 404, 200, 100, 0, -1, 2, 0, 30);
             if (clientControlFlowGuard == 0) {
-              break L0;
+              break themeProgressHudRendering;
             }
           }
           remainingThemeReleases = -MatchCandidateSupport.releasedInCurrentTheme + MessageDialogSupport.releasesPerTheme;
@@ -1698,13 +1698,13 @@ final class GameplaySession {
             FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
             if (clientControlFlowGuard == 0) {
-              break L0;
+              break themeProgressHudRendering;
             }
           }
           if (remainingThemeReleases <= 99999) {
             FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             if (clientControlFlowGuard == 0) {
-              break L0;
+              break themeProgressHudRendering;
             }
           }
           FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
@@ -1720,30 +1720,30 @@ final class GameplaySession {
         if (methodGuard != 28809) {
           this.debugPointerSpawnEnabled = true;
         }
-        L1: {
+        sessionExitScreenSelection: {
           if (!UnderlinedButtonRenderer.isGuestSessionMode(-93)) {
             if (this.newActionCount <= 0) {
               if (this.score > 0) {
                 ScoreSubmission.requestedScreenId = 2;
                 if (clientControlFlowGuard == 0) {
-                  break L1;
+                  break sessionExitScreenSelection;
                 }
               }
               ScoreSubmission.requestedScreenId = 0;
               if (clientControlFlowGuard == 0) {
-                break L1;
+                break sessionExitScreenSelection;
               }
             }
             ScoreSubmission.requestedScreenId = 6;
             if (clientControlFlowGuard == 0) {
-              break L1;
+              break sessionExitScreenSelection;
             }
           }
           if (!((this.score <= 0) &&
                 (this.newActionCount <= 0))) {
             ScoreSubmission.requestedScreenId = 4;
             if (clientControlFlowGuard == 0) {
-              break L1;
+              break sessionExitScreenSelection;
             }
           }
           ScoreSubmission.requestedScreenId = 0;

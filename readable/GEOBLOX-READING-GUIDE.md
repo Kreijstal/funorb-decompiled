@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9e29f42ee1d555e627e50b187eae98f6e9a6cf74/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9e051be1b1381fd65909b95e43c742ad61932efe/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 174)
+## Current readability (pass 175)
 
-The export has 18,304 guarded names and 117,478 Java identifier edits, plus 11
-class-name literal edits and 349 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,363 guarded names and 117,478 Java identifier edits, plus 11
+class-name literal edits and 583 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,582 bindings, reproduce and
@@ -24,7 +24,38 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current captured-integer switches (pass 174)
+## Current menu and session exit names (pass 175)
+
+All labels in GameScreen and GameplaySession now have meaningful names. This
+pass adds 59 guarded lexical names: 56 plain exit regions and three loops.
+Menu helpers expose key/action dispatch, volume slider handling, hit tests,
+button geometry, highscore status, tutorial diagrams and slide selection.
+Session helpers expose tutorial prompt placement/buttons, score and popup text,
+score-context counters, scene-transition preparation, preceding-theme lookup,
+theme achievement entry points, result sprite scanning, result phase selection
+and exit-screen routing. Examples include tutorialPromptPlacement,
+menuActionDispatch, endingSpriteColumnScan and sessionExitScreenSelection.
+Achievement-entry names describe the destination after a labeled break; they
+do not assert exclusive execution when the client-control flag is nonzero.
+
+Exactly 59 definitions and 175 break/continue references change spelling in
+two Java files. Every other Java byte remains unchanged, including all guards,
+snapshots, partial effects, callbacks, overflow/floating order, exception scopes,
+nonzero-control fallthrough and diagnostics. All 18,304 previous complete rules
+remain exact. Raw source, decompiler, naming/workflow sources, bytecode, stubs
+and native evidence pins remain unchanged. This pass changes no state-machine
+structure and adds/runs no native runtime probes.
+
+The export has 18,363 rules, 117,478 identifier edits, eleven class-name literal
+edits and 583 label edits: 118,072 total. Both 303-source corpora compile and
+compare 136,582 bindings, 388 overrides, 245 label declarations and 811 label
+records. All 27 publication tests pass; reproduction and dictionary reversal
+recover every raw file byte exactly. Eight large labeled bodies, 73 opaque
+labels elsewhere (37 plain/36 loop), 57 opaque fields and zero single-letter
+methods remain. Whole-game/assets/server/browser/phone and heap/presented-FPS
+acceptance remain unverified.
+
+## Previous captured-integer switches (pass 174)
 
 Four deeply nested integer classifiers now read as switches: the menu's
 inputDerivedStateUpdate and gameplay's negativeRotationAndStateUpdate,

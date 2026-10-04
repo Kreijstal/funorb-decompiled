@@ -5,7 +5,38 @@ The current export has 18,304 guarded naming rules: 302 classes, 2,048 fields,
 compile, comparing 136,582 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current captured-integer switches (pass 174)
+## Current menu and session exit names (pass 175)
+
+All labels in GameScreen and GameplaySession now have meaningful names. This
+pass adds 59 guarded lexical names: 56 plain exit regions and three loops.
+Menu helpers expose key/action dispatch, volume slider handling, hit tests,
+button geometry, highscore status, tutorial diagrams and slide selection.
+Session helpers expose tutorial prompt placement/buttons, score and popup text,
+score-context counters, scene-transition preparation, preceding-theme lookup,
+theme achievement entry points, result sprite scanning, result phase selection
+and exit-screen routing. Examples include tutorialPromptPlacement,
+menuActionDispatch, endingSpriteColumnScan and sessionExitScreenSelection.
+Achievement-entry names describe the destination after a labeled break; they
+do not assert exclusive execution when the client-control flag is nonzero.
+
+Exactly 59 definitions and 175 break/continue references change spelling in
+two Java files. Every other Java byte remains unchanged, including all guards,
+snapshots, partial effects, callbacks, overflow/floating order, exception scopes,
+nonzero-control fallthrough and diagnostics. All 18,304 previous complete rules
+remain exact. Raw source, decompiler, naming/workflow sources, bytecode, stubs
+and native evidence pins remain unchanged. This pass changes no state-machine
+structure and adds/runs no native runtime probes.
+
+The export has 18,363 rules, 117,478 identifier edits, eleven class-name literal
+edits and 583 label edits: 118,072 total. Both 303-source corpora compile and
+compare 136,582 bindings, 388 overrides, 245 label declarations and 811 label
+records. All 27 publication tests pass; reproduction and dictionary reversal
+recover every raw file byte exactly. Eight large labeled bodies, 73 opaque
+labels elsewhere (37 plain/36 loop), 57 opaque fields and zero single-letter
+methods remain. Whole-game/assets/server/browser/phone and heap/presented-FPS
+acceptance remain unverified.
+
+## Previous captured-integer switches (pass 174)
 
 Four deeply nested integer classifiers now read as switches: the menu's
 inputDerivedStateUpdate and gameplay's negativeRotationAndStateUpdate,
@@ -2086,7 +2117,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9e29f42ee1d555e627e50b187eae98f6e9a6cf74/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e29f42ee1d555e627e50b187eae98f6e9a6cf74/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9e051be1b1381fd65909b95e43c742ad61932efe/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e051be1b1381fd65909b95e43c742ad61932efe/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -2344,16 +2375,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9e29f42ee1d555e627e50b187eae98f6e9a6cf74/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9e051be1b1381fd65909b95e43c742ad61932efe/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e29f42ee1d555e627e50b187eae98f6e9a6cf74/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e051be1b1381fd65909b95e43c742ad61932efe/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `9e29f42ee1d555e627e50b187eae98f6e9a6cf74`; the
-manifest SHA-256 is `3f923ec6121bfa80a95171fdfb8ba871dc84b804a85aa6cd287d2c195af0c646`.
+The current Deko workflow/manifest commit is `9e051be1b1381fd65909b95e43c742ad61932efe`; the
+manifest SHA-256 is `dc9ee2d5755b8b8dbb7ea2f1461fa016b54d75393fc1e448cbee0c6972343d8d`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
