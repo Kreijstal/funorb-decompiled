@@ -220,7 +220,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         if (param0 != 0) {
             return;
         }
-        ButtonWidget.field_C.replaceContent(new AccountWelcomePanel(), param0 - 110);
+        ButtonWidget.accountContentDialog.replaceContent(new AccountWelcomePanel(), param0 - 110);
     }
 
     final void writeNullTerminatedText(String text, int characterStart) {

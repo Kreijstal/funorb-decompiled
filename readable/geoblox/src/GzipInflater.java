@@ -131,7 +131,7 @@ final class GzipInflater {
             return stackIn_6_0;
           }
           if (255 < var2_int) {
-            stackIn_10_0 = ButtonWidget.field_x;
+            stackIn_10_0 = ButtonWidget.overlongTextFailure;
             return stackIn_10_0;
           }
           var3 = FullscreenFailureReason.a('.', true, param0);

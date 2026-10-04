@@ -106,7 +106,7 @@ final class FullscreenSupport {
             return emptyLabelFailure;
           }
           if (labelLength > 63) {
-            overlongLabelFailure = ButtonWidget.field_x;
+            overlongLabelFailure = ButtonWidget.overlongTextFailure;
             return overlongLabelFailure;
           }
           for (characterIndex = 0; labelLength > characterIndex; characterIndex++) {

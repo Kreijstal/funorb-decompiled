@@ -458,7 +458,7 @@ public final class Geoblox extends SessionGameApplet {
         DialRenderer.a(methodGuard ^ -64);
         MultiHandleSliderRenderer.b((byte) -89);
         UiWidget.releaseStaticReferences(-5927);
-        ButtonWidget.f((byte) -11);
+        ButtonWidget.releaseStaticReferences((byte) -11);
         SingleChildWidget.releaseStaticReferences((byte) -3);
         ResizableDialog.j(89);
         FadingDialog.i(256);
@@ -490,7 +490,7 @@ public final class Geoblox extends SessionGameApplet {
         DelayedPcmStream.clearUsernameQueryCandidate((byte) -120);
         LabeledChildWidget.f((byte) -52);
         ValidatedTextInputWidget.k(-243);
-        TextInputWidget.l((byte) -15);
+        TextInputWidget.releaseStaticReferences((byte) -15);
         ContentTransitionDialog.releaseStaticReferences(methodGuard ^ -320);
         ProgressBarWidget.f(407213000);
         UsernameSuggestionsPanel.b(true);

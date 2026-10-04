@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "8312dc3e537ccd44c487aa80b1df134c3575ea4a",
+    "commit": "19a434ab3c400f10e5617c4ab1e1d4986e8cba12",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "d4abe471f54cdaebc5f53cc2d001f3e2ed27758e312f02987b59c8a97908523f"
+      "sha256": "9bd352c574591c4478a08f8422886bcd976e22ab6df08f1e2e35dc16a689a796"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,36 +3291,36 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "c73f0bba6b12ec8e16435b82d2b368b9d29cbd359761261b90dd21172ba49a84",
+    "outputTreeSha256": "b1df9b65550ea6d331317388f74e17271f6c7ac65fb2530abead408555604598",
     "files": 303,
-    "rules": 13730,
-    "identifierEdits": 98806,
+    "rules": 13910,
+    "identifierEdits": 99493,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 99063,
+    "totalEdits": 99750,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 246,
     "labelBindingsCompared": 813,
     "labelDeclarationsCompared": 246,
     "namingPass": {
-      "version": 145,
-      "rulesAdded": 122,
+      "version": 146,
+      "rulesAdded": 180,
       "rulesRefined": 0,
-      "fields": 3,
-      "methods": 5,
-      "parameters": 15,
-      "locals": 97,
-      "labels": 2,
-      "previousCompleteRulesPreserved": 13608,
+      "fields": 11,
+      "methods": 25,
+      "parameters": 46,
+      "locals": 98,
+      "labels": 0,
+      "previousCompleteRulesPreserved": 13730,
       "explicitlyCorrectedSymbols": [],
       "rawInputAndGeneratorPinsUnchanged": true,
-      "explicitLabelAccountingMigration": true,
-      "labelEditsAdded": 4,
-      "allUiWidgetFieldsMethodsParametersLocalsAndLabelsNamed": true,
-      "allWidgetContainerFieldsMethodsParametersAndLocalsNamed": true,
+      "explicitLabelAccountingMigration": false,
+      "labelEditsAdded": 0,
+      "allButtonWidgetAndTextInputWidgetFieldsMethodsParametersAndLocalsNamed": true,
+      "allTextInputListenerFamiliesNamed": true,
       "allEightLargeBodyLabelsNamed": true,
       "remainingOpaqueBlockLabels": 118,
       "remainingOpaqueLoopLabels": 46,
@@ -5114,5 +5114,100 @@
     "sourceWorkflowCommit": "8312dc3e537ccd44c487aa80b1df134c3575ea4a",
     "manifestSha256": "d4abe471f54cdaebc5f53cc2d001f3e2ed27758e312f02987b59c8a97908523f",
     "outputTreeSha256": "c73f0bba6b12ec8e16435b82d2b368b9d29cbd359761261b90dd21172ba49a84"
+  },
+  "buttonAndTextInputNaming": {
+    "version": 146,
+    "rulesAdded": 180,
+    "rulesRefined": 0,
+    "C": 0,
+    "F": 11,
+    "M": 25,
+    "P": 46,
+    "L": 98,
+    "B": 0,
+    "previousCompleteRulesPreserved": 13730,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "explicitLabelAccountingMigration": false,
+    "allOwnedDeclarationsNamed": {
+      "hk": 95,
+      "dj": 156,
+      "ga": 7
+    },
+    "constructorNamesFollowClassRules": true,
+    "allTextInputListenerFamiliesNamed": true,
+    "validatedInputChangeNotificationOverrideNamed": true,
+    "compilerResolvedSharedFieldReferences": {
+      "F:hk.field_B:I": {
+        "occurrences": 8,
+        "files": [
+          "ch.java",
+          "hk.java"
+        ]
+      },
+      "F:hk.field_C:Lei;": {
+        "occurrences": 20,
+        "files": [
+          "f.java",
+          "hk.java",
+          "jf.java",
+          "n.java",
+          "og.java",
+          "qc.java",
+          "tj.java"
+        ]
+      },
+      "F:hk.field_x:Lnd;": {
+        "occurrences": 5,
+        "files": [
+          "fe.java",
+          "hk.java",
+          "jk.java",
+          "r.java"
+        ]
+      }
+    },
+    "boundedTextInsertBytecodeConfirmation": {
+      "class": "dj.class",
+      "sha256": "2822247601df3554f7bb63c3a109ed863a95dca75b4df3734fb202f04b7ebcb9",
+      "method": "a(Ljava/lang/String;I)V",
+      "offsets": [
+        37,
+        50
+      ],
+      "behavior": "Preserve remaining>=0 early return and negative substring-bound path, with original protected exception regions."
+    },
+    "sourceBodiesEditedByHand": false,
+    "identifierEditsAdded": 687,
+    "labelEditsAdded": 0,
+    "changedJavaFiles": 22,
+    "changedOriginalJavaFiles": [
+      "Geoblox.java",
+      "ch.java",
+      "dj.java",
+      "f.java",
+      "fe.java",
+      "ga.java",
+      "hc.java",
+      "hi.java",
+      "hk.java",
+      "jf.java",
+      "jk.java",
+      "n.java",
+      "og.java",
+      "pf.java",
+      "q.java",
+      "qc.java",
+      "qh.java",
+      "r.java",
+      "tj.java",
+      "wa.java",
+      "wf.java",
+      "wi.java"
+    ],
+    "scope": "Pass 146 adds 180 guarded names: eleven fields, 25 methods, 46 parameters\nand 98 locals. All 95 ButtonWidget, 156 TextInputWidget and seven\nTextInputListener declarations now have readable names; constructors follow\nclass rules. Both text-listener implementations and the validated-input\nnotification override retain complete, consistently named callback families.\n\nCaret and selection indexes, ASCII-space word boundaries, double-click drag,\nclipboard copy/cut/paste, input limits, scrolling, blink timing and submission\nnow expose their roles. Numeric keys/guards, UTF-16 indexes, the strict 250ms\npress comparison, signed blink remainder, callback order and sprite aliases\nremain unchanged. Verified transformed bytecode confirms the bounded insertion\nbranch returns when remaining capacity is nonnegative, and otherwise attempts\na negative substring bound. Naming preserves that behavior and clipboard\npartial edits; it does not repair input behavior.\n\nCompiler-resolved uses establish canvasOffsetY, accountContentDialog and\noverlongTextFailure. requestJustPlay names the actual button/simple-UI route\nthrough progress display and pending action 4; no new login/server semantics\nare inferred. There are 13,910 rules and 99,493 identifier edits, plus eleven\nclass-literal and 246 label edits: 99,750 total. All 13,730 previous complete\nrules and raw/tool/workflow/stub/native/text pins remain unchanged. Both\n303-file corpora compile, preserve 136,607 bindings, 388 overrides and 813\nlexical label records, and reverse byte exactly. The 27 publication tests and\neight existing native fixtures pass within their recorded scopes. Full live\nediting, clipboard, selection/blink and device behavior remain unverified.\nEight large labeled bodies, 164 opaque labels, 375 opaque fields and 429\nshort opaque methods remain. Whole-game/server/device and heap/FPS acceptance\nare still unverified.",
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "19a434ab3c400f10e5617c4ab1e1d4986e8cba12",
+    "manifestSha256": "9bd352c574591c4478a08f8422886bcd976e22ab6df08f1e2e35dc16a689a796",
+    "outputTreeSha256": "b1df9b65550ea6d331317388f74e17271f6c7ac65fb2530abead408555604598"
   }
 }

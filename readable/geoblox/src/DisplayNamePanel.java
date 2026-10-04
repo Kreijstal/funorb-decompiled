@@ -537,7 +537,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             }
             var3 = this.displayNameInput;
             var4 = suggestion;
-            ((TextInputWidget) ((Object) var3)).a(methodGuard - 136, var4, false);
+            ((TextInputWidget) ((Object) var3)).setInputText(methodGuard - 136, var4, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hi.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }

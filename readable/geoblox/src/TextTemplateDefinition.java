@@ -169,8 +169,8 @@ final class TextTemplateDefinition extends DualLinkNode {
         }
         try {
             SpriteButtonRenderer.field_t = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.field_i, param2, param3);
-            ButtonWidget.field_C = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.field_t);
-            ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.field_C);
+            ButtonWidget.accountContentDialog = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.field_t);
+            ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

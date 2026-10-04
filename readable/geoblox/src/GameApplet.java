@@ -509,13 +509,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
             MessageDialog.gameCanvas.setVisible(param0);
             if (SharedBufferPools.fullscreenFrame != var2) {
-              MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
+              MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.canvasOffsetY);
               if (var4 == 0) {
                 break L5;
               }
             }
             var3 = SharedBufferPools.fullscreenFrame.getInsets();
-            MessageDialog.gameCanvas.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + ButtonWidget.field_B);
+            MessageDialog.gameCanvas.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + ButtonWidget.canvasOffsetY);
           }
           MessageDialog.gameCanvas.addFocusListener((java.awt.event.FocusListener) (this));
           MessageDialog.gameCanvas.requestFocus();
@@ -773,7 +773,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 ClientRenderingState.canvasHeight = param3;
                 NetworkArchiveRequest.field_w = param3;
                 PrefixCodeDecoder.field_b = 0;
-                ButtonWidget.field_B = 0;
+                ButtonWidget.canvasOffsetY = 0;
                 AudioService.canvasWidth = param4;
                 DialWidget.field_G = param4;
                 PrefixCodeDecoder.field_d = (GameApplet) (this);
@@ -886,13 +886,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               MessageDialog.gameCanvas.setVisible(true);
               if (!((SharedBufferPools.fullscreenFrame != null) &&
                   (FullscreenFocusCanvas.field_a == null))) {
-                MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
+                MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.canvasOffsetY);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break L2;
                 }
               }
               var6 = SharedBufferPools.fullscreenFrame.getInsets();
-              MessageDialog.gameCanvas.setLocation(var6.left + PrefixCodeDecoder.field_b, ButtonWidget.field_B + var6.top);
+              MessageDialog.gameCanvas.setLocation(var6.left + PrefixCodeDecoder.field_b, ButtonWidget.canvasOffsetY + var6.top);
             }
           }
           this.renderFrame(25853);

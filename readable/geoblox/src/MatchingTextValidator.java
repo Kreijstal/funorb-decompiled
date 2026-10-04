@@ -175,7 +175,7 @@ final class MatchingTextValidator extends TextInputValidator {
         }
         MouseWheelInput.field_d = new DisplayNamePanel();
         int var1 = 32 / ((param0 - 43) / 47);
-        ButtonWidget.field_C.replaceContent(MouseWheelInput.field_d, -106);
+        ButtonWidget.accountContentDialog.replaceContent(MouseWheelInput.field_d, -106);
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {

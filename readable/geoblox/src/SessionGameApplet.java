@@ -402,7 +402,7 @@ abstract class SessionGameApplet extends GameApplet {
             TextTemplateDefinition.a(loginPanelGuardSnapshot, loginPanelMessageSnapshot, allowRetrySnapshot, allowCancelSnapshot);
           }
           if (AchievementSubmission.simpleUiMode) {
-            ButtonWidget.e(83);
+            ButtonWidget.requestJustPlay(83);
           }
           if (null == DelegatingCanvas.field_a) {
             DelegatingCanvas.field_a = LoginPayload.b((byte) 72);

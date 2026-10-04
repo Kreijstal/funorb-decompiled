@@ -271,7 +271,7 @@ final class WidgetTheme {
         if (param3 != 1) {
             WidgetTheme.a(-34, 65, 52, 47);
         }
-        return TextInputWidget.a(param0, (byte) -70, param2, param1, 1);
+        return TextInputWidget.createTwoTonePanelSprites(param0, (byte) -70, param2, param1, 1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

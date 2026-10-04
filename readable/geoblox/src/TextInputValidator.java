@@ -38,13 +38,13 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         return true;
     }
 
-    public final void a(TextInputWidget param0, int param1) {
+    public final void onTextInputSubmitted(TextInputWidget input, int methodGuard) {
         try {
-            if (param1 != -18649) {
+            if (methodGuard != -18649) {
                 this.validatedInput = (TextInputWidget) null;
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "q.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        } catch (RuntimeException submissionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailure), "q.S(" + (input != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -96,31 +96,31 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         }
     }
 
-    public final void a(TextInputWidget param0, byte param1) {
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
+    public final void onTextInputChanged(TextInputWidget input, byte methodGuard) {
+        RuntimeException changeFailureForContext = null;
+        StringBuilder changeContextBuilder = null;
+        String inputDescription = null;
+        RuntimeException caughtChangeFailure = null;
+        RuntimeException textChangeFailure = null;
         try {
-          if (param1 != 74) {
+          if (methodGuard != 74) {
             this.a(-117);
             this.b(-28133);
           } else {
             this.b(-28133);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("q.J(");
-          if (param0 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException changeFailure) {
+          caughtChangeFailure = changeFailure;
+          textChangeFailure = caughtChangeFailure;
+          changeFailureForContext = textChangeFailure;
+          changeContextBuilder = new StringBuilder().append("q.J(");
+          if (input == null) {
+            inputDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            inputDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) changeFailureForContext), ((StringBuilder) (Object) changeContextBuilder).append(inputDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

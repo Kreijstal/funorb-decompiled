@@ -117,7 +117,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             }
           }
           if (this.justPlayButton == param4) {
-            ButtonWidget.e(param1 + 103);
+            ButtonWidget.requestJustPlay(param1 + 103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

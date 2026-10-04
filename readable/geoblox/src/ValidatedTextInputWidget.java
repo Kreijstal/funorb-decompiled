@@ -333,17 +333,17 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         }
     }
 
-    final void g(byte param0) {
-        super.g((byte) -66);
+    final void notifyTextInputChanged(byte methodGuard) {
+        super.notifyTextInputChanged((byte) -66);
         if (this.field_Q != null) {
             this.field_Q.b(-28133);
-            if (param0 > -16) {
+            if (methodGuard > -16) {
                 this.field_S = -4;
                 return;
             }
             return;
         }
-        if (param0 <= -16) {
+        if (methodGuard <= -16) {
             return;
         }
         this.field_S = -4;

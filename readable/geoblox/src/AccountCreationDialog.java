@@ -136,7 +136,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_8_0 = ButtonWidget.field_x;
+            stackIn_8_0 = ButtonWidget.overlongTextFailure;
             return stackIn_8_0;
           }
           if (34 == param0.charAt(0)) {

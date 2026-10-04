@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/8312dc3e537ccd44c487aa80b1df134c3575ea4a/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/19a434ab3c400f10e5617c4ab1e1d4986e8cba12/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 145)
+## Current readability (pass 146)
 
-The export has 13,730 guarded names and 98,806 Java identifier edits, plus 11
+The export has 13,910 guarded names and 99,493 Java identifier edits, plus 11
 class-name literal edits and 246 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -23,6 +23,37 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 146 adds 180 guarded names: eleven fields, 25 methods, 46 parameters
+and 98 locals. All 95 ButtonWidget, 156 TextInputWidget and seven
+TextInputListener declarations now have readable names; constructors follow
+class rules. Both text-listener implementations and the validated-input
+notification override retain complete, consistently named callback families.
+
+Caret and selection indexes, ASCII-space word boundaries, double-click drag,
+clipboard copy/cut/paste, input limits, scrolling, blink timing and submission
+now expose their roles. Numeric keys/guards, UTF-16 indexes, the strict 250ms
+press comparison, signed blink remainder, callback order and sprite aliases
+remain unchanged. Verified transformed bytecode confirms the bounded insertion
+branch returns when remaining capacity is nonnegative, and otherwise attempts
+a negative substring bound. Naming preserves that behavior and clipboard
+partial edits; it does not repair input behavior.
+
+Compiler-resolved uses establish canvasOffsetY, accountContentDialog and
+overlongTextFailure. requestJustPlay names the actual button/simple-UI route
+through progress display and pending action 4; no new login/server semantics
+are inferred. There are 13,910 rules and 99,493 identifier edits, plus eleven
+class-literal and 246 label edits: 99,750 total. All 13,730 previous complete
+rules and raw/tool/workflow/stub/native/text pins remain unchanged. Both
+303-file corpora compile, preserve 136,607 bindings, 388 overrides and 813
+lexical label records, and reverse byte exactly. The 27 publication tests and
+eight existing native fixtures pass within their recorded scopes. Full live
+editing, clipboard, selection/blink and device behavior remain unverified.
+Eight large labeled bodies, 164 opaque labels, 375 opaque fields and 429
+short opaque methods remain. Whole-game/server/device and heap/FPS acceptance
+are still unverified.
+
+## Previous base widget and container naming (pass 145)
 
 Pass 145 adds 122 guarded rules: three fields, five methods, fifteen
 parameters, 97 locals and two labels. All 243 UiWidget and 219 WidgetContainer

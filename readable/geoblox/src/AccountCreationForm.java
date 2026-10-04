@@ -432,7 +432,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             return;
         }
         try {
-            ((TextInputWidget) ((Object) var3)).a(-121, var4, false);
+            ((TextInputWidget) ((Object) var3)).setInputText(-121, var4, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qh.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }

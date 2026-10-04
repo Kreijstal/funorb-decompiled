@@ -3,207 +3,207 @@
  */
 class TextInputWidget extends ButtonWidget {
     static byte[] diskSectorBuffer;
-    private int field_H;
-    private int field_L;
-    private int field_J;
-    private boolean field_G;
-    private boolean field_E;
-    private long field_P;
+    private int caretIndex;
+    private int selectionAnchorIndex;
+    private int wordSelectionEndIndex;
+    private boolean wordSelectionDrag;
+    private boolean caretScrollingEnabled;
+    private long lastPointerPressMillis;
     static byte[][] byteArrayPool100;
-    private int field_M;
-    private long field_O;
+    private int maximumTextLength;
+    private long caretBlinkStartMillis;
     static int[] projectedMeshVertexY;
 
-    private final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        if (param0 != 0) {
-            this.field_J = -7;
+    private final void deleteSelectedText(int methodGuard) {
+        int selectionStart = 0;
+        int selectionEnd = 0;
+        if (methodGuard != 0) {
+            this.wordSelectionEndIndex = -7;
         }
-        if (this.field_L != this.field_H) {
-            var2 = this.field_L >= this.field_H ? this.field_H : this.field_L;
-            var3 = this.field_H > this.field_L ? this.field_H : this.field_L;
-            this.field_H = var2;
-            this.field_L = var2;
-            this.widgetText = this.widgetText.substring(0, var2) + this.widgetText.substring(var3, this.widgetText.length());
-            this.g((byte) -117);
+        if (this.selectionAnchorIndex != this.caretIndex) {
+            selectionStart = this.selectionAnchorIndex >= this.caretIndex ? this.caretIndex : this.selectionAnchorIndex;
+            selectionEnd = this.caretIndex > this.selectionAnchorIndex ? this.caretIndex : this.selectionAnchorIndex;
+            this.caretIndex = selectionStart;
+            this.selectionAnchorIndex = selectionStart;
+            this.widgetText = this.widgetText.substring(0, selectionStart) + this.widgetText.substring(selectionEnd, this.widgetText.length());
+            this.notifyTextInputChanged((byte) -117);
         }
     }
 
     void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
-        int var6 = 0;
-        TextWidgetLayout var7 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
+        int hitTextIndex = 0;
+        TextWidgetLayout textRenderer = null;
+        RuntimeException pointerFailureForContext = null;
+        StringBuilder pointerContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtPointerFailure = null;
+        RuntimeException pointerUpdateFailure = null;
         try {
           super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-          this.j(-115);
+          this.updateCaretScroll(-115);
           if (this.pressedPointerButton == 1) {
             if (this.renderer instanceof TextWidgetLayout) {
-              var7 = (TextWidgetLayout) ((Object) this.renderer);
-              var6 = var7.a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
-              if (-1 != var6) {
-                if ((this.field_G) &&
-                    (this.field_J > var6) &&
-                    (this.field_L < var6)) {
-                  var6 = this.field_J;
+              textRenderer = (TextWidgetLayout) ((Object) this.renderer);
+              hitTextIndex = textRenderer.a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
+              if (-1 != hitTextIndex) {
+                if ((this.wordSelectionDrag) &&
+                    (this.wordSelectionEndIndex > hitTextIndex) &&
+                    (this.selectionAnchorIndex < hitTextIndex)) {
+                  hitTextIndex = this.wordSelectionEndIndex;
                 }
-                this.field_H = var6;
+                this.caretIndex = hitTextIndex;
               }
             }
-            this.field_O = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+            this.caretBlinkStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           }
           if (hoverGuard) {
             byteArrayPool100 = (byte[][]) null;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("dj.H(").append(hoverGuard).append(',').append(parentY).append(',');
+        } catch (java.lang.RuntimeException pointerFailure) {
+          caughtPointerFailure = pointerFailure;
+          pointerUpdateFailure = caughtPointerFailure;
+          pointerFailureForContext = pointerUpdateFailure;
+          pointerContextBuilder = new StringBuilder().append("dj.H(").append(hoverGuard).append(',').append(parentY).append(',');
           if (eventContext == null) {
-            stackIn_17_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(parentX).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerFailureForContext), ((StringBuilder) (Object) pointerContextBuilder).append(eventContextDescription).append(',').append(parentX).append(')').toString());
         }
     }
 
-    private final int h(byte param0) {
-        String discarded$1 = null;
-        int var2;
-        int var3;
-        int var4;
-        var4 = Geoblox.clientControlFlowFlag;
-        var2 = this.widgetText.length();
-        if (var2 == this.field_H) {
-          return this.field_H;
+    private final int findNextWordBoundary(byte methodGuard) {
+        String discardedSelectionSnapshot = null;
+        int textLength;
+        int boundaryIndex;
+        int clientControlFlowSnapshot;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        textLength = this.widgetText.length();
+        if (textLength == this.caretIndex) {
+          return this.caretIndex;
         }
-        var3 = 1 + this.field_H;
-        if (param0 != -57) {
-          discarded$1 = this.k((byte) -79);
+        boundaryIndex = 1 + this.caretIndex;
+        if (methodGuard != -57) {
+          discardedSelectionSnapshot = this.getSelectedText((byte) -79);
         }
-        while (var3 < var2) {
-          if (32 != this.widgetText.charAt(-1 + var3)) {
-            var3++;
+        while (boundaryIndex < textLength) {
+          if (32 != this.widgetText.charAt(-1 + boundaryIndex)) {
+            boundaryIndex++;
             continue;
           }
           break;
         }
-        return var3;
+        return boundaryIndex;
     }
 
-    private final String k(byte param0) {
-        int var2 = 33 % ((-77 - param0) / 39);
-        int var3 = this.field_L >= this.field_H ? this.field_H : this.field_L;
-        int var4 = this.field_L < this.field_H ? this.field_H : this.field_L;
-        return this.widgetText.substring(var3, var4);
+    private final String getSelectedText(byte methodGuard) {
+        int guardResidue = 33 % ((-77 - methodGuard) / 39);
+        int selectionStart = this.selectionAnchorIndex >= this.caretIndex ? this.caretIndex : this.selectionAnchorIndex;
+        int selectionEnd = this.selectionAnchorIndex < this.caretIndex ? this.caretIndex : this.selectionAnchorIndex;
+        return this.widgetText.substring(selectionStart, selectionEnd);
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
-        if (param1 != -70) {
+    final static Sprite[] createTwoTonePanelSprites(int firstBorderColor, byte methodGuard, int secondBorderColor, int centerColor, int borderSpriteSize) {
+        if (methodGuard != -70) {
             diskSectorBuffer = (byte[]) null;
         }
-        Sprite[] var6 = new Sprite[9];
-        Sprite[] var5 = var6;
-        Sprite dupTemp$0 = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, param0, param4);
-        var6[6] = dupTemp$0;
-        var5[3] = dupTemp$0;
-        var5[2] = dupTemp$0;
-        var5[1] = dupTemp$0;
-        var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, param2, param4);
-        var6[8] = dupTemp$1;
-        var5[7] = dupTemp$1;
-        var5[5] = dupTemp$1;
-        if (!(param3 == 0)) {
-            var6[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, param3, 64);
+        Sprite[] allocatedSprites = new Sprite[9];
+        Sprite[] sprites = allocatedSprites;
+        Sprite firstBorderSprite = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, firstBorderColor, borderSpriteSize);
+        allocatedSprites[6] = firstBorderSprite;
+        sprites[3] = firstBorderSprite;
+        sprites[2] = firstBorderSprite;
+        sprites[1] = firstBorderSprite;
+        sprites[0] = firstBorderSprite;
+        Sprite secondBorderSprite = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, secondBorderColor, borderSpriteSize);
+        allocatedSprites[8] = secondBorderSprite;
+        sprites[7] = secondBorderSprite;
+        sprites[5] = secondBorderSprite;
+        if (!(centerColor == 0)) {
+            allocatedSprites[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, centerColor, 64);
         }
-        return var5;
+        return sprites;
     }
 
-    TextInputWidget(String param0, WidgetListener param1, int param2) {
-        super(param0, param1);
-        this.field_G = false;
-        this.field_P = 0L;
-        this.field_J = -1;
+    TextInputWidget(String initialText, WidgetListener listener, int maximumLength) {
+        super(initialText, listener);
+        this.wordSelectionDrag = false;
+        this.lastPointerPressMillis = 0L;
+        this.wordSelectionEndIndex = -1;
         try {
-            this.field_M = param2;
+            this.maximumTextLength = maximumLength;
             this.renderer = DialRenderer.field_j.field_g;
-            this.a(-128, param0, true);
-            this.field_E = true;
-            this.field_O = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            this.setInputText(-128, initialText, true);
+            this.caretScrollingEnabled = true;
+            this.caretBlinkStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+        } catch (RuntimeException textInputConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textInputConstructionFailure), "dj.<init>(" + (initialText != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
     }
 
-    private final void h(int param0) {
-        this.i(-23161);
-        if (param0 <= 29) {
-            this.field_G = false;
+    private final void cutSelectedText(int methodGuard) {
+        this.copySelectedTextToClipboard(-23161);
+        if (methodGuard <= 29) {
+            this.wordSelectionDrag = false;
         }
-        this.g(0);
+        this.deleteSelectedText(0);
     }
 
-    private final void a(String param0, int param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
+    private final void insertTextAtCaret(String text, int methodGuard) {
+        int guardQuotient = 0;
+        int remainingCapacity = 0;
+        RuntimeException insertionFailureForContext = null;
+        StringBuilder insertionContextBuilder = null;
+        String textDescription = null;
+        RuntimeException caughtInsertionFailure = null;
+        RuntimeException textInsertionFailure = null;
         try {
-          var3_int = -6 / ((param1 - 63) / 50);
-          if (this.field_M != -1) {
-            var4 = this.field_M - this.widgetText.length();
-            if (var4 >= 0) {
+          guardQuotient = -6 / ((methodGuard - 63) / 50);
+          if (this.maximumTextLength != -1) {
+            remainingCapacity = this.maximumTextLength - this.widgetText.length();
+            if (remainingCapacity >= 0) {
               return;
             }
-            param0 = param0.substring(0, var4);
+            text = text.substring(0, remainingCapacity);
           }
-          if (this.field_H != this.widgetText.length()) {
-            this.widgetText = this.widgetText.substring(0, this.field_H) + param0 + this.widgetText.substring(this.field_H, this.widgetText.length());
+          if (this.caretIndex != this.widgetText.length()) {
+            this.widgetText = this.widgetText.substring(0, this.caretIndex) + text + this.widgetText.substring(this.caretIndex, this.widgetText.length());
           } else {
-            this.widgetText = this.widgetText + param0;
+            this.widgetText = this.widgetText + text;
           }
-          this.field_H = this.field_H + param0.length();
-          this.field_L = this.field_H;
-          this.g((byte) -36);
+          this.caretIndex = this.caretIndex + text.length();
+          this.selectionAnchorIndex = this.caretIndex;
+          this.notifyTextInputChanged((byte) -36);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("dj.B(");
-          if (param0 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException insertionFailure) {
+          caughtInsertionFailure = insertionFailure;
+          textInsertionFailure = caughtInsertionFailure;
+          insertionFailureForContext = textInsertionFailure;
+          insertionContextBuilder = new StringBuilder().append("dj.B(");
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailureForContext), ((StringBuilder) (Object) insertionContextBuilder).append(textDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    private final void a(int param0, byte param1) {
-        this.field_H = param0;
-        if (param1 >= -114) {
-            this.j(-114);
+    private final void moveCaret(int newCaretIndex, byte methodGuard) {
+        this.caretIndex = newCaretIndex;
+        if (methodGuard >= -114) {
+            this.updateCaretScroll(-114);
         }
         if (!(MidiPcmStream.heldInternalKeys[81])) {
-            this.field_L = this.field_H;
+            this.selectionAnchorIndex = this.caretIndex;
         }
     }
 
-    public static void l(byte param0) {
+    public static void releaseStaticReferences(byte methodGuard) {
         diskSectorBuffer = null;
-        if (param0 != -15) {
+        if (methodGuard != -15) {
             return;
         }
         projectedMeshVertexY = null;
@@ -211,294 +211,294 @@ class TextInputWidget extends ButtonWidget {
     }
 
     final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
-        int stackIn_5_1 = 0;
-        boolean stackIn_8_1 = false;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
-        long var8_long = 0L;
-        RuntimeException var8 = null;
+        int hitCaretIndexSnapshot = 0;
+        boolean doubleClickSnapshot = false;
+        RuntimeException pressFailureForContext = null;
+        StringBuilder pressContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtPressFailure = null;
+        int hitTextIndexOrGuardQuotient = 0;
+        long nowMillis = 0L;
+        RuntimeException pointerPressFailure = null;
         try {
           if ((super.handlePointerPress(parentY, 104, parentX, pointerButton, pointerX, pointerY, eventContext)) &&
               (this.renderer instanceof TextWidgetLayout)) {
-            var8_int = ((TextWidgetLayout) ((Object) this.renderer)).a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
-            if (var8_int != -1) {
-              stackIn_5_1 = var8_int;
+            hitTextIndexOrGuardQuotient = ((TextWidgetLayout) ((Object) this.renderer)).a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
+            if (hitTextIndexOrGuardQuotient != -1) {
+              hitCaretIndexSnapshot = hitTextIndexOrGuardQuotient;
             } else {
-              stackIn_5_1 = 0;
+              hitCaretIndexSnapshot = 0;
             }
-            this.a(stackIn_5_1, (byte) -123);
-            var8_long = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-            if (var8_long - this.field_P >= 250L) {
-              stackIn_8_1 = false;
+            this.moveCaret(hitCaretIndexSnapshot, (byte) -123);
+            nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+            if (nowMillis - this.lastPointerPressMillis >= 250L) {
+              doubleClickSnapshot = false;
             } else {
-              stackIn_8_1 = true;
+              doubleClickSnapshot = true;
             }
-            ((TextInputWidget) (this)).field_G = stackIn_8_1;
-            if (this.field_G) {
-              this.field_L = this.j((byte) 77);
-              this.field_H = this.h((byte) -57);
-              if ((0 < this.field_H) &&
-                  (this.widgetText.charAt(this.field_H - 1) == 32)) {
-                this.field_H = this.field_H - 1;
+            ((TextInputWidget) (this)).wordSelectionDrag = doubleClickSnapshot;
+            if (this.wordSelectionDrag) {
+              this.selectionAnchorIndex = this.findPreviousWordBoundary((byte) 77);
+              this.caretIndex = this.findNextWordBoundary((byte) -57);
+              if ((0 < this.caretIndex) &&
+                  (this.widgetText.charAt(this.caretIndex - 1) == 32)) {
+                this.caretIndex = this.caretIndex - 1;
               }
-              this.field_J = this.field_H;
+              this.wordSelectionEndIndex = this.caretIndex;
             }
-            this.field_P = var8_long;
+            this.lastPointerPressMillis = nowMillis;
             return true;
           }
-          var8_int = 70 / ((methodGuard + 3) / 38);
+          hitTextIndexOrGuardQuotient = 70 / ((methodGuard + 3) / 38);
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_20_0 = var8;
-          stackIn_20_1 = new StringBuilder().append("dj.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+        } catch (java.lang.RuntimeException pressFailure) {
+          caughtPressFailure = pressFailure;
+          pointerPressFailure = caughtPressFailure;
+          pressFailureForContext = pointerPressFailure;
+          pressContextBuilder = new StringBuilder().append("dj.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
-            stackIn_21_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pressFailureForContext), ((StringBuilder) (Object) pressContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
-    private final void f(int param0) {
+    private final void pasteClipboardText(int methodGuard) {
         try {
-            Throwable decompiledCaughtException = null;
-            String var2 = null;
-            Exception var2_ref = null;
+            Throwable caughtClipboardFailure = null;
+            String clipboardText = null;
+            Exception clipboardFailure = null;
             try {
-              var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-              this.g(param0 ^ param0);
-              this.a(var2, param0 ^ 43);
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
+              clipboardText = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
+              this.deleteSelectedText(methodGuard ^ methodGuard);
+              this.insertTextAtCaret(clipboardText, methodGuard ^ 43);
+            } catch (java.lang.Exception clipboardException) {
+              caughtClipboardFailure = clipboardException;
+              clipboardFailure = (Exception) (Object) caughtClipboardFailure;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedClipboardFailure) {
+            throw uncheckedClipboardFailure;
+        } catch (Throwable checkedClipboardFailure) {
+            throw new RuntimeException(checkedClipboardFailure);
         }
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int var5;
-        TextWidgetLayout var6;
-        long var7;
-        var5 = -124 % ((methodGuard - 1) / 43);
+        int guardResidue;
+        TextWidgetLayout textRenderer;
+        long nowMillis;
+        guardResidue = -124 % ((methodGuard - 1) / 43);
         if ((this.renderer != null) &&
             (renderPass == 0)) {
           this.renderer.drawWidget(parentX, -8, parentY, this.enabled, (UiWidget) (this));
           if (this.renderer instanceof TextWidgetLayout) {
-            var6 = (TextWidgetLayout) ((Object) this.renderer);
-            if (this.field_H != this.field_L) {
-              var6.a(this.field_L, 0, parentY, parentX, this.field_H, (UiWidget) (this));
+            textRenderer = (TextWidgetLayout) ((Object) this.renderer);
+            if (this.caretIndex != this.selectionAnchorIndex) {
+              textRenderer.a(this.selectionAnchorIndex, 0, parentY, parentX, this.caretIndex, (UiWidget) (this));
             }
-            var7 = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-            if ((-this.field_O + var7) % 1000L < 500L) {
-              var6.a(parentX, this.field_H, -2, (UiWidget) (this), parentY);
+            nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+            if ((-this.caretBlinkStartMillis + nowMillis) % 1000L < 500L) {
+              textRenderer.a(parentX, this.caretIndex, -2, (UiWidget) (this), parentY);
             }
           }
         }
     }
 
-    private final void m(byte param0) {
+    private final void notifyTextInputSubmitted(byte methodGuard) {
         if (this.listener instanceof TextInputListener) {
-            ((TextInputListener) ((Object) this.listener)).a((TextInputWidget) (this), -18649);
+            ((TextInputListener) ((Object) this.listener)).onTextInputSubmitted((TextInputWidget) (this), -18649);
         }
-        if (param0 < 107) {
-            this.field_G = true;
+        if (methodGuard < 107) {
+            this.wordSelectionDrag = true;
         }
     }
 
-    private final int j(byte param0) {
-        int var2;
-        int var3;
-        var3 = Geoblox.clientControlFlowFlag;
-        if (0 == this.field_H) {
-          return this.field_H;
+    private final int findPreviousWordBoundary(byte methodGuard) {
+        int boundaryIndex;
+        int clientControlFlowSnapshot;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        if (0 == this.caretIndex) {
+          return this.caretIndex;
         }
-        if (param0 != 77) {
+        if (methodGuard != 77) {
           return 108;
         }
-        for (var2 = this.field_H - 1; var2 > 0; var2--) {
-          if (this.widgetText.charAt(var2 - 1) != 32) {
+        for (boundaryIndex = this.caretIndex - 1; boundaryIndex > 0; boundaryIndex--) {
+          if (this.widgetText.charAt(boundaryIndex - 1) != 32) {
             continue;
           }
           break;
         }
-        return var2;
+        return boundaryIndex;
     }
 
-    private final void i(int param0) {
-        if (param0 != -23161) {
+    private final void copySelectedTextToClipboard(int methodGuard) {
+        if (methodGuard != -23161) {
             return;
         }
-        String var2 = this.k((byte) -128);
-        if (var2.length() > 0) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.k((byte) -117))), (java.awt.datatransfer.ClipboardOwner) null);
+        String selectedText = this.getSelectedText((byte) -128);
+        if (selectedText.length() > 0) {
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -117))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    final void i(byte param0) {
-        this.field_L = 0;
-        this.field_H = 0;
+    final void clearInputText(byte methodGuard) {
+        this.selectionAnchorIndex = 0;
+        this.caretIndex = 0;
         this.widgetText = "";
-        this.g((byte) -78);
-        if (param0 <= 20) {
-            this.field_E = true;
+        this.notifyTextInputChanged((byte) -78);
+        if (methodGuard <= 20) {
+            this.caretScrollingEnabled = true;
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        int dupTemp$0 = 0;
-        int stackIn_48_1 = 0;
-        int stackIn_55_1 = 0;
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
-        String stackIn_82_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
+    final boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        int textEndBeforeCaretAssignment = 0;
+        int forwardCaretIndex = 0;
+        int backwardCaretIndex = 0;
+        RuntimeException keyFailureForContext = null;
+        StringBuilder keyContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtKeyFailure = null;
+        RuntimeException keyInputFailure = null;
         try {
-          if (param1 != 13) {
+          if (methodGuard != 13) {
             return false;
           }
-          this.field_O = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-          if (60 == param2) {
+          this.caretBlinkStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+          if (60 == typedCharacter) {
             return false;
           }
-          if (param2 == 62) {
+          if (typedCharacter == 62) {
             return false;
           }
-          if ((32 <= param2) &&
-              (param2 <= 126)) {
-            if (this.field_H != this.field_L) {
-              this.g(0);
+          if ((32 <= typedCharacter) &&
+              (typedCharacter <= 126)) {
+            if (this.caretIndex != this.selectionAnchorIndex) {
+              this.deleteSelectedText(0);
             }
-            if (!((-1 != this.field_M) &&
-                  (this.widgetText.length() >= this.field_M))) {
-              if (this.field_H >= this.widgetText.length()) {
-                this.widgetText = this.widgetText + param2;
-                dupTemp$0 = this.widgetText.length();
-                this.field_H = dupTemp$0;
-                this.field_L = dupTemp$0;
+            if (!((-1 != this.maximumTextLength) &&
+                  (this.widgetText.length() >= this.maximumTextLength))) {
+              if (this.caretIndex >= this.widgetText.length()) {
+                this.widgetText = this.widgetText + typedCharacter;
+                textEndBeforeCaretAssignment = this.widgetText.length();
+                this.caretIndex = textEndBeforeCaretAssignment;
+                this.selectionAnchorIndex = textEndBeforeCaretAssignment;
               } else {
-                this.widgetText = this.widgetText.substring(0, this.field_H) + param2 + this.widgetText.substring(this.field_H, this.widgetText.length());
-                this.field_H = this.field_H + 1;
-                this.field_L = this.field_H;
+                this.widgetText = this.widgetText.substring(0, this.caretIndex) + typedCharacter + this.widgetText.substring(this.caretIndex, this.widgetText.length());
+                this.caretIndex = this.caretIndex + 1;
+                this.selectionAnchorIndex = this.caretIndex;
               }
-              this.g((byte) -36);
+              this.notifyTextInputChanged((byte) -36);
             }
             return true;
           }
-          if (param0 == 85) {
-            if (this.field_H != this.field_L) {
-              this.g(0);
+          if (keyCode == 85) {
+            if (this.caretIndex != this.selectionAnchorIndex) {
+              this.deleteSelectedText(0);
               return true;
             }
-            if (0 < this.field_H) {
-              this.field_L = this.field_H - 1;
-              this.g(param1 ^ 13);
+            if (0 < this.caretIndex) {
+              this.selectionAnchorIndex = this.caretIndex - 1;
+              this.deleteSelectedText(methodGuard ^ 13);
               return true;
             }
           } else {
-            if (101 != param0) {
-              if (param0 == 13) {
-                this.i((byte) 76);
+            if (101 != keyCode) {
+              if (keyCode == 13) {
+                this.clearInputText((byte) 76);
                 return true;
               }
-              if (param0 == 96) {
-                if (0 < this.field_H) {
+              if (keyCode == 96) {
+                if (0 < this.caretIndex) {
                   if (!MidiPcmStream.heldInternalKeys[82]) {
-                    stackIn_55_1 = this.field_H - 1;
+                    backwardCaretIndex = this.caretIndex - 1;
                   } else {
-                    stackIn_55_1 = this.j((byte) 77);
+                    backwardCaretIndex = this.findPreviousWordBoundary((byte) 77);
                   }
-                  this.a(stackIn_55_1, (byte) -126);
+                  this.moveCaret(backwardCaretIndex, (byte) -126);
                   return true;
                 }
               } else {
-                if (param0 == 97) {
-                  if (this.field_H < this.widgetText.length()) {
+                if (keyCode == 97) {
+                  if (this.caretIndex < this.widgetText.length()) {
                     if (!MidiPcmStream.heldInternalKeys[82]) {
-                      stackIn_48_1 = this.field_H + 1;
+                      forwardCaretIndex = this.caretIndex + 1;
                     } else {
-                      stackIn_48_1 = this.h((byte) -57);
+                      forwardCaretIndex = this.findNextWordBoundary((byte) -57);
                     }
-                    this.a(stackIn_48_1, (byte) -125);
+                    this.moveCaret(forwardCaretIndex, (byte) -125);
                     return true;
                   }
                 } else {
-                  if (102 == param0) {
-                    this.a(0, (byte) -118);
+                  if (102 == keyCode) {
+                    this.moveCaret(0, (byte) -118);
                     return true;
                   }
-                  if (param0 == 103) {
-                    this.a(this.widgetText.length(), (byte) -126);
+                  if (keyCode == 103) {
+                    this.moveCaret(this.widgetText.length(), (byte) -126);
                     return true;
                   }
-                  if (param0 == 84) {
-                    this.m((byte) 111);
-                    return true;
-                  }
-                  if ((MidiPcmStream.heldInternalKeys[82]) &&
-                      (param0 == 65)) {
-                    this.h(112);
+                  if (keyCode == 84) {
+                    this.notifyTextInputSubmitted((byte) 111);
                     return true;
                   }
                   if ((MidiPcmStream.heldInternalKeys[82]) &&
-                      (param0 == 66)) {
-                    this.i(-23161);
+                      (keyCode == 65)) {
+                    this.cutSelectedText(112);
                     return true;
                   }
                   if ((MidiPcmStream.heldInternalKeys[82]) &&
-                      (67 == param0)) {
-                    this.f(82);
+                      (keyCode == 66)) {
+                    this.copySelectedTextToClipboard(-23161);
+                    return true;
+                  }
+                  if ((MidiPcmStream.heldInternalKeys[82]) &&
+                      (67 == keyCode)) {
+                    this.pasteClipboardText(82);
                     return true;
                   }
                 }
               }
             } else {
-              if (this.field_L != this.field_H) {
-                this.g(0);
+              if (this.selectionAnchorIndex != this.caretIndex) {
+                this.deleteSelectedText(0);
                 return true;
               }
-              if (this.field_H < this.widgetText.length()) {
-                this.field_L = this.field_H + 1;
-                this.g(0);
+              if (this.caretIndex < this.widgetText.length()) {
+                this.selectionAnchorIndex = this.caretIndex + 1;
+                this.deleteSelectedText(0);
                 return true;
               }
             }
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_81_0 = var5;
-          stackIn_81_1 = new StringBuilder().append("dj.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_82_2 = "null";
+        } catch (java.lang.RuntimeException keyFailure) {
+          caughtKeyFailure = keyFailure;
+          keyInputFailure = caughtKeyFailure;
+          keyFailureForContext = keyInputFailure;
+          keyContextBuilder = new StringBuilder().append("dj.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_82_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureForContext), ((StringBuilder) (Object) keyContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
-    private final void j(int param0) {
-        TextLayout var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        TextWidgetLayout var9;
-        var8 = Geoblox.clientControlFlowFlag;
-        if (!this.field_E) {
+    private final void updateCaretScroll(int methodGuard) {
+        TextLayout layout;
+        int textWidth;
+        int availableTextWidth;
+        int halfCaretMargin;
+        int caretXWithOffset;
+        int clientControlFlowSnapshot;
+        TextWidgetLayout textRenderer;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        if (!this.caretScrollingEnabled) {
           this.textOffsetY = 0;
           this.textOffsetX = 0;
           return;
@@ -506,29 +506,29 @@ class TextInputWidget extends ButtonWidget {
         if (!(this.renderer instanceof TextWidgetLayout)) {
           return;
         }
-        var9 = (TextWidgetLayout) ((Object) this.renderer);
-        if (param0 > -66) {
+        textRenderer = (TextWidgetLayout) ((Object) this.renderer);
+        if (methodGuard > -66) {
           return;
         }
-        var3 = var9.a((byte) 119, (UiWidget) (this));
-        var4 = var3.a(96);
-        var5 = var9.a((UiWidget) (this), -1);
-        var6 = var9.a(1) >> 1;
-        if (var4 < var5 - var6) {
+        layout = textRenderer.a((byte) 119, (UiWidget) (this));
+        textWidth = layout.a(96);
+        availableTextWidth = textRenderer.a((UiWidget) (this), -1);
+        halfCaretMargin = textRenderer.a(1) >> 1;
+        if (textWidth < availableTextWidth - halfCaretMargin) {
           this.textOffsetX = 0;
           this.textOffsetY = 0;
         } else {
-          var7 = this.textOffsetX + var3.a(this.field_H, 120);
-          if (var7 > var5 - var6) {
-            this.textOffsetX = this.textOffsetX - (var7 + var6 - var5);
+          caretXWithOffset = this.textOffsetX + layout.a(this.caretIndex, 120);
+          if (caretXWithOffset > availableTextWidth - halfCaretMargin) {
+            this.textOffsetX = this.textOffsetX - (caretXWithOffset + halfCaretMargin - availableTextWidth);
           } else {
-            if (var7 < var6) {
-              this.textOffsetX = this.textOffsetX - (-var6 + var7);
+            if (caretXWithOffset < halfCaretMargin) {
+              this.textOffsetX = this.textOffsetX - (-halfCaretMargin + caretXWithOffset);
             }
           }
           if (this.textOffsetX <= 0) {
-            if (var6 - var5 > this.textOffsetX) {
-              this.textOffsetX = var6 - var5;
+            if (halfCaretMargin - availableTextWidth > this.textOffsetX) {
+              this.textOffsetX = halfCaretMargin - availableTextWidth;
             }
           } else {
             this.textOffsetX = 0;
@@ -536,53 +536,53 @@ class TextInputWidget extends ButtonWidget {
         }
     }
 
-    final void a(int param0, String param1, boolean param2) {
-        int dupTemp$1 = 0;
-        int var4_int = 0;
-        int var5 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
+    final void setInputText(int methodGuard, String text, boolean suppressChangeNotification) {
+        int textEndBeforeCaretAssignment = 0;
+        int guardQuotient = 0;
+        int inputLength = 0;
+        RuntimeException textSetFailureForContext = null;
+        StringBuilder textSetContextBuilder = null;
+        String textDescription = null;
+        RuntimeException caughtTextSetFailure = null;
+        RuntimeException textSetFailure = null;
         try {
-          var4_int = 8 / ((param0 + 65) / 44);
-          if (param1 == null) {
-            param1 = "";
+          guardQuotient = 8 / ((methodGuard + 65) / 44);
+          if (text == null) {
+            text = "";
           }
-          this.widgetText = param1;
-          var5 = param1.length();
-          if ((this.field_M != -1) &&
-              (this.field_M < var5)) {
-            this.widgetText = this.widgetText.substring(0, this.field_M);
+          this.widgetText = text;
+          inputLength = text.length();
+          if ((this.maximumTextLength != -1) &&
+              (this.maximumTextLength < inputLength)) {
+            this.widgetText = this.widgetText.substring(0, this.maximumTextLength);
           }
-          dupTemp$1 = this.widgetText.length();
-          this.field_L = dupTemp$1;
-          this.field_H = dupTemp$1;
-          if (!param2) {
-            this.g((byte) -58);
+          textEndBeforeCaretAssignment = this.widgetText.length();
+          this.selectionAnchorIndex = textEndBeforeCaretAssignment;
+          this.caretIndex = textEndBeforeCaretAssignment;
+          if (!suppressChangeNotification) {
+            this.notifyTextInputChanged((byte) -58);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("dj.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException setTextFailure) {
+          caughtTextSetFailure = setTextFailure;
+          textSetFailure = caughtTextSetFailure;
+          textSetFailureForContext = textSetFailure;
+          textSetContextBuilder = new StringBuilder().append("dj.C(").append(methodGuard).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textSetFailureForContext), ((StringBuilder) (Object) textSetContextBuilder).append(textDescription).append(',').append(suppressChangeNotification).append(')').toString());
         }
     }
 
-    void g(byte param0) {
-        if (param0 >= -16) {
+    void notifyTextInputChanged(byte methodGuard) {
+        if (methodGuard >= -16) {
             return;
         }
         if (!(!(this.listener instanceof TextInputListener))) {
-            ((TextInputListener) ((Object) this.listener)).a((TextInputWidget) (this), (byte) 74);
+            ((TextInputListener) ((Object) this.listener)).onTextInputChanged((TextInputWidget) (this), (byte) 74);
         }
     }
 

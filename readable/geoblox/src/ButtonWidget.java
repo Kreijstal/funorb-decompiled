@@ -5,11 +5,11 @@ import java.util.*;
 
 class ButtonWidget extends UiWidget {
     boolean active;
-    static AccountContentDialog field_C;
-    static int field_B;
+    static AccountContentDialog accountContentDialog;
+    static int canvasOffsetY;
     private boolean focusable;
     boolean enabled;
-    static TextValidationFailure field_x;
+    static TextValidationFailure overlongTextFailure;
     private boolean focused;
 
     boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
@@ -52,7 +52,7 @@ class ButtonWidget extends UiWidget {
         if (null != this.listener) {
             if (!(this.listener instanceof ButtonActivationListener)) {
                 if (methodGuard != -28922) {
-                    field_B = -42;
+                    canvasOffsetY = -42;
                     return;
                 }
                 return;
@@ -62,13 +62,13 @@ class ButtonWidget extends UiWidget {
         if (methodGuard == -28922) {
             return;
         }
-        field_B = -42;
+        canvasOffsetY = -42;
     }
 
-    public static void f(byte param0) {
-        field_x = null;
-        int var1 = -17 % ((param0 - 54) / 53);
-        field_C = null;
+    public static void releaseStaticReferences(byte methodGuard) {
+        overlongTextFailure = null;
+        int guardResidue = -17 % ((methodGuard - 54) / 53);
+        accountContentDialog = null;
     }
 
     ButtonWidget(String text, WidgetListener listener) {
@@ -170,20 +170,20 @@ class ButtonWidget extends UiWidget {
         ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
     }
 
-    final static void e(int param0) {
+    final static void requestJustPlay(int methodGuard) {
         StatefulWidgetRenderer.c(520);
         MidiNote.setPendingLoginUiAction(4, false);
-        if (param0 != 83) {
-            ButtonWidget.f((byte) -65);
+        if (methodGuard != 83) {
+            ButtonWidget.releaseStaticReferences((byte) -65);
         }
     }
 
     boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException focusRequestFailure = null;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
         try {
           if ((this.enabled) &&
               (this.focusable)) {
@@ -200,17 +200,17 @@ class ButtonWidget extends UiWidget {
             return true;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("hk.UA(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          focusRequestFailure = caughtFocusFailure;
+          focusFailureForContext = focusRequestFailure;
+          focusContextBuilder = new StringBuilder().append("hk.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
-            stackIn_16_2 = "null";
+            focusContextDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ class ButtonWidget extends UiWidget {
         RuntimeException caughtDiagnosticFailure = null;
         try {
           if (methodGuard != 0) {
-            ButtonWidget.e(-5);
+            ButtonWidget.requestJustPlay(-5);
           }
           if (this.beginWidgetDiagnosticVisit(output, depth, 10095, visitedWidgets)) {
             this.appendWidgetDiagnosticProperties(depth, visitedWidgets, 34, output);
@@ -282,7 +282,7 @@ class ButtonWidget extends UiWidget {
     }
 
     static {
-        field_B = 0;
-        field_x = new TextValidationFailure();
+        canvasOffsetY = 0;
+        overlongTextFailure = new TextValidationFailure();
     }
 }

@@ -61,7 +61,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         }
         try {
             SpriteButtonRenderer.field_t = new LoginPanel(prefilledUsername, prefilledPassword, false, true, true);
-            ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -81);
+            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.field_t, -81);
         } catch (RuntimeException loginFormFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFormFailure), "f.HA(" + (prefilledUsername != null ? "{...}" : "null") + ',' + (prefilledPassword != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }

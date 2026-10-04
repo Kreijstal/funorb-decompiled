@@ -120,34 +120,34 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         }
     }
 
-    public final void a(TextInputWidget param0, int param1) {
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
+    public final void onTextInputSubmitted(TextInputWidget input, int methodGuard) {
+        RuntimeException submissionFailureForContext = null;
+        StringBuilder submissionContextBuilder = null;
+        String inputDescription = null;
+        RuntimeException caughtSubmissionFailure = null;
+        RuntimeException textSubmissionFailure = null;
         try {
-          if (param0 == this.loginIdentifierInput) {
+          if (input == this.loginIdentifierInput) {
             this.passwordInput.requestKeyboardFocus((byte) -69, (UiWidget) (this));
           }
-          if (this.passwordInput == param0) {
-            this.g(param1 ^ -18649);
+          if (this.passwordInput == input) {
+            this.g(methodGuard ^ -18649);
           }
-          if (param1 != -18649) {
+          if (methodGuard != -18649) {
             field_O = (ResourceArchive) null;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("pf.S(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException submissionFailure) {
+          caughtSubmissionFailure = submissionFailure;
+          textSubmissionFailure = caughtSubmissionFailure;
+          submissionFailureForContext = textSubmissionFailure;
+          submissionContextBuilder = new StringBuilder().append("pf.S(");
+          if (input == null) {
+            inputDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            inputDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailureForContext), ((StringBuilder) (Object) submissionContextBuilder).append(inputDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -157,11 +157,11 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         try {
             var3 = this.loginIdentifierInput;
             var4 = param0;
-            var3.a(param1 ^ 2, var4, false);
+            var3.setInputText(param1 ^ 2, var4, false);
             if (param1 != 0) {
                 this.i(114);
             }
-            this.passwordInput.i((byte) 110);
+            this.passwordInput.clearInputText((byte) 110);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -178,13 +178,13 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         super.renderWidget(parentX, parentY, (byte) -48, renderPass);
     }
 
-    public final void a(TextInputWidget param0, byte param1) {
+    public final void onTextInputChanged(TextInputWidget input, byte methodGuard) {
         try {
-            if (param1 != 74) {
+            if (methodGuard != 74) {
                 js5CrcErrorText = (String) null;
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        } catch (RuntimeException textChangeFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textChangeFailure), "pf.J(" + (input != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -875,8 +875,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     }
 
     final void i(int param0) {
-        this.loginIdentifierInput.i((byte) 48);
-        this.passwordInput.i((byte) 116);
+        this.loginIdentifierInput.clearInputText((byte) 48);
+        this.passwordInput.clearInputText((byte) 116);
         int var2 = 40 % ((param0 - 17) / 38);
     }
 
