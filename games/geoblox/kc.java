@@ -205,10 +205,7 @@ final class kc {
                               break L10;
                             }
                             var5_ref_ja = (ja) ((Object) var13.a(true));
-                            while (true) {
-                              if (var5_ref_ja == null) {
-                                break L10;
-                              }
+                            while (!(var5_ref_ja == null)) {
                               var5_ref_ja.field_K = ji.field_r;
                               var5_ref_ja.field_t = false;
                               var5_ref_ja.field_B = true;
@@ -230,6 +227,7 @@ final class kc {
                               var5_ref_ja = (ja) ((Object) var13.a(true));
                               continue;
                             }
+                            break L10;
                           }
                         }
                       }
@@ -244,10 +242,7 @@ final class kc {
                   break;
                 }
                 var1_int = stackIn_56_0;
-                while (true) {
-                  if (1000 <= var1_int) {
-                    break L2;
-                  }
+                while (!(1000 <= var1_int)) {
                   pk.field_o[var1_int] = false;
                   var1_int++;
                   if (var9 != 0) {
@@ -255,6 +250,7 @@ final class kc {
                   }
                   continue;
                 }
+                break L2;
               }
               var1_int = 0;
             }
