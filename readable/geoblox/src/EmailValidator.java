@@ -188,7 +188,7 @@ final class EmailValidator extends TextInputValidator {
             if (!trackedStream.lifetimeNode.isLinked(126)) {
               trackedStream.unlinkNode(false);
             } else {
-              trackedStream.stream.f((int)((float)(SocialListEntry.soundEffectVolume * trackedStream.initialVolume / 80) * 1.399999976158142f));
+              trackedStream.stream.setVolume((int)((float)(SocialListEntry.soundEffectVolume * trackedStream.initialVolume / 80) * 1.399999976158142f));
             }
             trackedStream = (TrackedPcmStream) ((Object) PrefixCodeDecoder.trackedSoundEffectStreams.nextForIteration(1));
           }

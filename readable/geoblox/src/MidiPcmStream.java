@@ -278,7 +278,7 @@ final class MidiPcmStream extends PcmStream {
             }
             note.field_s = remainingPitchSlideScale;
           }
-          note.sampleStream.d(this.a(112, note));
+          note.sampleStream.setSampleStepMagnitude(this.a(112, note));
           envelope = note.envelope;
           note.field_m = note.field_m + envelope.vibratoPhaseStep;
           note.field_j = note.field_j + 1;
@@ -561,13 +561,13 @@ final class MidiPcmStream extends PcmStream {
             sampleLengthOrFixedEnd = sampleLengthOrFixedEnd << 8;
             sampleOffsetFixed = (int)((long)reflectedLoopLength * (long)this.channelSampleOffsets[note.channelIndex] >> 6);
             if (!(sampleLengthOrFixedEnd > sampleOffsetFixed)) {
-              note.sampleStream.b(true);
+              note.sampleStream.setReversePlayback(true);
               sampleOffsetFixed = -sampleOffsetFixed + (sampleLengthOrFixedEnd + sampleLengthOrFixedEnd) - 1;
             }
           } else {
             sampleOffsetFixed = (int)((long)sampleLengthOrFixedEnd * (long)this.channelSampleOffsets[note.channelIndex] >> 6);
           }
-          note.sampleStream.e(sampleOffsetFixed);
+          note.sampleStream.setSamplePositionFixed(sampleOffsetFixed);
           return;
         } catch (java.lang.RuntimeException offsetParameterFailure) {
           caughtOffsetFailure = offsetParameterFailure;
