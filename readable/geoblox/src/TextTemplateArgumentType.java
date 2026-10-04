@@ -135,7 +135,7 @@ final class TextTemplateArgumentType {
             if ((InstrumentPatch.activeFullscreenCanvas != null) &&
                 (InstrumentPatch.activeFullscreenCanvas.focusLost)) {
               FullscreenSupport.exitActiveFullscreen((byte) -87);
-              ClientScreenExitSupport.fullscreenDialogLayer.showDialog(false, new FullscreenErrorDialog(ClientScreenExitSupport.fullscreenDialogLayer, AccountContentDialog.field_hb));
+              ClientScreenExitSupport.fullscreenDialogLayer.showDialog(false, new FullscreenErrorDialog(ClientScreenExitSupport.fullscreenDialogLayer, AccountContentDialog.fullscreenFocusLostFailureReason));
             }
             return;
           }

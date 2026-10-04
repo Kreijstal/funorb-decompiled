@@ -4,7 +4,7 @@
 final class LoginProtocolSupport {
     static String waitingForBootstrapText;
     static String[] achievementDescriptions;
-    static boolean field_a;
+    static boolean lockBootstrapLoginPanelActions;
 
     final static int advanceLoginHandshake(boolean useLongLoginPayload, String primaryLoginText, int affiliateId, boolean enableLoginFlagBitEight, String secondaryLoginText, int methodGuard) {
         try {
@@ -104,7 +104,7 @@ final class LoginProtocolSupport {
                 ClientClockSupport.loginResponseLongValue = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 SpriteCheckboxRenderer.loginDebugPermissionLevel = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
-                TextTemplateDefinition.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+                TextTemplateDefinition.loginMembershipGateValue = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
                 settingsCookieValue = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
                 loginResponseFlags = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 if ((1 & loginResponseFlags) != 0) {
@@ -144,7 +144,7 @@ final class LoginProtocolSupport {
                 if (settingsCookieValue != null) {
                   SettingsCookieSupport.storeSettingsCookie(100, settingsCookieValue, NodeHashTableIterator.getActiveApplet(112));
                 }
-                if ((TextTemplateDefinition.field_n <= 0) &&
+                if ((TextTemplateDefinition.loginMembershipGateValue <= 0) &&
                     (!GzipInflater.loginResponseFlagFourSet)) {
                   try {
                     AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.getActiveApplet(107), "unzap");
@@ -160,7 +160,7 @@ final class LoginProtocolSupport {
                     ignoredScriptFailure = caughtLoginOrScriptFailure;
                   }
                 }
-                if (TextTemplateDefinition.field_n > 0) {
+                if (TextTemplateDefinition.loginMembershipGateValue > 0) {
                   FontLoadingSupport.memberAccountMode = true;
                 }
                 CacheReference.outgoingSessionBuffer.initializeCipher(ProgressBarWidget.loginCipherSeedWords, false);
@@ -250,7 +250,7 @@ final class LoginProtocolSupport {
     }
 
     static {
-        field_a = false;
+        lockBootstrapLoginPanelActions = false;
         achievementDescriptions = new String[]{"Clear 3 geoblox of the same colour and shape", "Clear the geoblox avatar", "Finish a stage with the avatar clear of geoblox", "Achieve a 6x bonus multiplier", "Achieve a 7x bonus multiplier", "Achieve an 8x bonus multiplier", "Destroy 5 black orbs", "Destroy 3 black orbs with one shock", "Pass the sun stage", "Pass the sweet stage", "Pass the jewellery stage", "Pass the germ stage", "Pass the space stage", "Pass the sport stage", "Pass the bakery stage", "Get past all stages twice!", "Score 7,000 points during Halloween"};
     }
 }

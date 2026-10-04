@@ -3,7 +3,7 @@
  */
 final class MultiHandleSliderRenderer implements WidgetRenderer {
     private int handleRadius;
-    static int field_g;
+    static int fiveMatchChainAchievementId;
     private int railColor;
     static int[] meshSpecularResponseByAbsDot;
     private int handleColor;
@@ -375,6 +375,6 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
 
     static {
         avatarTintFadeTicks = 0;
-        field_g = 3;
+        fiveMatchChainAchievementId = 3;
     }
 }

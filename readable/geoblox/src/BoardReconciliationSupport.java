@@ -375,7 +375,7 @@ final class BoardReconciliationSupport {
             SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.threeKindFourRemovalAchievementId, -88, GzipInflater.threeKindFourRemovalAchievementId);
           }
           if (FontLoadingSupport.kindFourRemovalCount >= 5) {
-            SecondaryNodeDeque.recordAchievement(255 ^ ReceivedTextRecord.field_p, -83, ReceivedTextRecord.field_p);
+            SecondaryNodeDeque.recordAchievement(255 ^ ReceivedTextRecord.fiveKindFourRemovalsAchievementId, -83, ReceivedTextRecord.fiveKindFourRemovalsAchievementId);
           }
           return;
         } catch (java.lang.RuntimeException caughtReconciliationFailure) {

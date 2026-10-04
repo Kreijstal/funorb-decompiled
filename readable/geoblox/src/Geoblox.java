@@ -672,16 +672,16 @@ public final class Geoblox extends SessionGameApplet {
                 } else {
                   DualLinkNode.evaluateGuardResidue(-8);
                 }
-                if (!VisualPropertyNode.field_o) {
+                if (!VisualPropertyNode.highUpdateRateModeActive) {
                   break assetAndSessionPreparation;
                 }
                 DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 50);
-                VisualPropertyNode.field_o = false;
+                VisualPropertyNode.highUpdateRateModeActive = false;
                 break assetAndSessionPreparation;
               }
-              if (!VisualPropertyNode.field_o) {
+              if (!VisualPropertyNode.highUpdateRateModeActive) {
                 DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 150);
-                VisualPropertyNode.field_o = true;
+                VisualPropertyNode.highUpdateRateModeActive = true;
               }
               if (!GameGraphicsResources.themesLoaded[2]) {
                 this.loadSweetsTheme(7);
@@ -709,7 +709,7 @@ public final class Geoblox extends SessionGameApplet {
               if (GameplaySetupSupport.screenChangePending) {
                 GameplaySetupSupport.screenChangePending = false;
                 if (!UnderlinedButtonRenderer.isGuestSessionMode(-95)) {
-                  if (0 < TextTemplateDefinition.field_n) {
+                  if (0 < TextTemplateDefinition.loginMembershipGateValue) {
                     InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
                     TextTemplateDefinition.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
                     if (0 == UiWidget.gameplayReturnScreenId) {
@@ -796,9 +796,9 @@ public final class Geoblox extends SessionGameApplet {
             }
           }
         } else {
-          if (VisualPropertyNode.field_o) {
+          if (VisualPropertyNode.highUpdateRateModeActive) {
             DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 50);
-            VisualPropertyNode.field_o = false;
+            VisualPropertyNode.highUpdateRateModeActive = false;
           }
           this.updateBootstrapUi(115);
           if (CacheReference.haveRequiredClientStages(-31456)) {
@@ -1021,7 +1021,7 @@ public final class Geoblox extends SessionGameApplet {
     private final void initializeScreens(int methodGuard) {
         int screenIndex = 0;
         int clientControlFlowGuard = clientControlFlowFlag;
-        if (!(TextTemplateDefinition.field_n > 0)) {
+        if (!(TextTemplateDefinition.loginMembershipGateValue > 0)) {
             InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 3, 6};
         }
         for (screenIndex = 0; screenIndex < 9; screenIndex++) {

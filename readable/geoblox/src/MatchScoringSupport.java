@@ -71,10 +71,10 @@ final class MatchScoringSupport {
             return false;
           }
           if (EntityCollisionSupport.matchChainLength >= 5) {
-            SecondaryNodeDeque.recordAchievement(MultiHandleSliderRenderer.field_g ^ 255, -99, MultiHandleSliderRenderer.field_g);
+            SecondaryNodeDeque.recordAchievement(MultiHandleSliderRenderer.fiveMatchChainAchievementId ^ 255, -99, MultiHandleSliderRenderer.fiveMatchChainAchievementId);
           }
           if (EntityCollisionSupport.matchChainLength >= 6) {
-            SecondaryNodeDeque.recordAchievement(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
+            SecondaryNodeDeque.recordAchievement(LoginPayloadKind.sixMatchChainAchievementId ^ 255, -57, LoginPayloadKind.sixMatchChainAchievementId);
           }
           if (EntityCollisionSupport.matchChainLength >= 7) {
             SecondaryNodeDeque.recordAchievement(255 ^ IntrusiveDeque.sharedAchievementId, -97, IntrusiveDeque.sharedAchievementId);
@@ -118,7 +118,7 @@ final class MatchScoringSupport {
                 }
                 if (-1073741824 == (-1073741824 & TextPairLoginPayload.packedMatchCandidates[candidateIndex])) {
                   awardedPoints = 90 * EntityCollisionSupport.matchChainLength;
-                  SecondaryNodeDeque.recordAchievement(MessageDialogSupport.field_e ^ 255, -100, MessageDialogSupport.field_e);
+                  SecondaryNodeDeque.recordAchievement(MessageDialogSupport.specialMatchAchievementId ^ 255, -100, MessageDialogSupport.specialMatchAchievementId);
                 } else {
                   awardedPoints = 30 * EntityCollisionSupport.matchChainLength;
                 }

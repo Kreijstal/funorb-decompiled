@@ -117,7 +117,7 @@ final class GameScreen extends MenuScreen {
                 break menuKeyDispatch;
               }
               if (!UnderlinedButtonRenderer.isGuestSessionMode(-103)) {
-                if ((!(TextTemplateDefinition.field_n <= 0) ||
+                if ((!(TextTemplateDefinition.loginMembershipGateValue <= 0) ||
                     ((this.fullscreenDialogButtonIndex != 0) &&
                       ((!(PrefixCodeDecoder.pointerXSnapshot > 190)) ||
                       (!(PrefixCodeDecoder.pointerXSnapshot < 449)) ||
@@ -471,7 +471,7 @@ final class GameScreen extends MenuScreen {
                     return;
                   }
                 }
-                if (TextTemplateDefinition.field_n > 0) {
+                if (TextTemplateDefinition.loginMembershipGateValue > 0) {
                   if (InstrumentPatch.activeFullscreenCanvas == null) {
                     if (this.activeTicks > 200) {
                       unavailableOverlayAlpha = 200;
@@ -1247,7 +1247,7 @@ final class GameScreen extends MenuScreen {
                   break fullscreenPointerHandling;
                 }
               }
-              if ((TextTemplateDefinition.field_n > 0) &&
+              if ((TextTemplateDefinition.loginMembershipGateValue > 0) &&
                   (null != InstrumentPatch.activeFullscreenCanvas)) {
                 if ((FullscreenFocusCanvas.pointerPressYSnapshot > 317) &&
                     (352 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
@@ -1928,7 +1928,7 @@ final class GameScreen extends MenuScreen {
                     this.fullscreenDialogActive = true;
                   }
                   if ((!ArchiveCatalog.exitFullscreenIfActive(255)) &&
-                      (TextTemplateDefinition.field_n > 0) &&
+                      (TextTemplateDefinition.loginMembershipGateValue > 0) &&
                       (ContextualRuntimeException.hasPlatformFullscreenSupport(MenuScreen.platformTaskDispatcher, (byte) 37))) {
                     MessageDialog.requestFullscreen((byte) -128);
                   }
@@ -2508,7 +2508,7 @@ final class GameScreen extends MenuScreen {
                     break directionalMenuSelection;
                   }
                   if ((!UnderlinedButtonRenderer.isGuestSessionMode(-122)) &&
-                      (TextTemplateDefinition.field_n <= 0)) {
+                      (TextTemplateDefinition.loginMembershipGateValue <= 0)) {
                     break directionalMenuSelection;
                   }
                   this.fullscreenDialogButtonIndex = 1;

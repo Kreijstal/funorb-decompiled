@@ -385,16 +385,16 @@ abstract class SessionGameApplet extends GameApplet {
           ByteArrayPoolSupport.loadingStatusText = ArchiveSource.loadingText;
           AccountEligibilitySupport.loginReturnAllowed = false;
           CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.initialButtonAndLogoArchive, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive);
-          if (((LoginProtocolSupport.field_a) ||
+          if (((LoginProtocolSupport.lockBootstrapLoginPanelActions) ||
               (SocketConnector.bootstrapLoginPanelMessage != null))) {
             loginPanelGuardSnapshot = 2274;
             loginPanelMessageSnapshot = SocketConnector.bootstrapLoginPanelMessage;
-            if (LoginProtocolSupport.field_a) {
+            if (LoginProtocolSupport.lockBootstrapLoginPanelActions) {
               allowRetrySnapshot = false;
             } else {
               allowRetrySnapshot = true;
             }
-            if (LoginProtocolSupport.field_a) {
+            if (LoginProtocolSupport.lockBootstrapLoginPanelActions) {
               allowCancelSnapshot = false;
             } else {
               allowCancelSnapshot = true;

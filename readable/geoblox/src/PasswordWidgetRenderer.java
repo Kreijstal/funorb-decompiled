@@ -115,11 +115,11 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
           }
           if (hasOptionalShortSectionFlag != 0) {
             packet.readBits((byte) -17, 16);
-            mesh.field_J = ArchiveNetworkClient.readPackedShortArray(mesh.field_J, 16, 0, packet);
-            mesh.field_z = ArchiveNetworkClient.readPackedShortArray(mesh.field_z, 16, 0, packet);
-            mesh.field_h = ArchiveNetworkClient.readPackedShortArray(mesh.field_h, 16, 0, packet);
-            mesh.field_k = ArchiveNetworkClient.readPackedShortArray(mesh.field_k, 16, 0, packet);
-            mesh.field_g = ArchiveNetworkClient.readPackedShortArray(mesh.field_g, 16, 0, packet);
+            mesh.optionalPackedShortStreamOne = ArchiveNetworkClient.readPackedShortArray(mesh.optionalPackedShortStreamOne, 16, 0, packet);
+            mesh.optionalPackedShortStreamTwo = ArchiveNetworkClient.readPackedShortArray(mesh.optionalPackedShortStreamTwo, 16, 0, packet);
+            mesh.optionalPackedShortStreamThree = ArchiveNetworkClient.readPackedShortArray(mesh.optionalPackedShortStreamThree, 16, 0, packet);
+            mesh.optionalPackedShortStreamFour = ArchiveNetworkClient.readPackedShortArray(mesh.optionalPackedShortStreamFour, 16, 0, packet);
+            mesh.optionalPackedShortStreamFive = ArchiveNetworkClient.readPackedShortArray(mesh.optionalPackedShortStreamFive, 16, 0, packet);
           }
           if (TextInputRenderer.readBooleanBit((byte) 102, packet)) {
             mesh.faceMaterialIndices = ArchiveNetworkClient.readPackedShortArray(mesh.faceMaterialIndices, 16, 0, packet);

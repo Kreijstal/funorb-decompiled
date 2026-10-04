@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class LimitedRandomAccessFile {
-    static FullscreenFailureReason field_b;
+    static FullscreenFailureReason fullscreenTimeoutFailureReason;
     private long maximumLength;
     static String waitingForSoundEffectsText;
     static String scoreTextTemplate;
@@ -73,7 +73,7 @@ final class LimitedRandomAccessFile {
         if (methodGuard <= 3) {
             return;
         }
-        field_b = null;
+        fullscreenTimeoutFailureReason = null;
         scoreTextTemplate = null;
     }
 
@@ -99,7 +99,7 @@ final class LimitedRandomAccessFile {
             accumulatedValue = 0;
             textLength = numberText.length();
             if (methodGuard != 87) {
-              field_b = (FullscreenFailureReason) null;
+              fullscreenTimeoutFailureReason = (FullscreenFailureReason) null;
             }
             for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
               signedNumberCharacter: {
@@ -257,7 +257,7 @@ final class LimitedRandomAccessFile {
     }
 
     static {
-        field_b = new FullscreenFailureReason();
+        fullscreenTimeoutFailureReason = new FullscreenFailureReason();
         scoreTextTemplate = "Score: <%0>";
         waitingForSoundEffectsText = "Waiting for sound effects";
         avatarFeedbackHoldTicks = 0;

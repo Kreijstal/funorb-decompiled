@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TriangleMesh {
-    short[] field_J;
+    short[] optionalPackedShortStreamOne;
     byte[] facePriorities;
     static int pendingUpdateTicks;
     int[] thirdVertexSourceX;
@@ -11,7 +11,7 @@ final class TriangleMesh {
     short[] faceVertexB;
     short[] normalX;
     int[] secondVertexSourceX;
-    short[] field_z;
+    short[] optionalPackedShortStreamTwo;
     byte facePriorityCount;
     int minX;
     int[] secondVertexSourceZ;
@@ -32,15 +32,15 @@ final class TriangleMesh {
     short[] faceVertexA;
     int[] firstVertexSourceZ;
     static String reloadGameText;
-    short[] field_h;
+    short[] optionalPackedShortStreamThree;
     int maxY;
     short[] faceMaterialIndices;
     short normalCount;
-    short[] field_g;
+    short[] optionalPackedShortStreamFive;
     short[] normalY;
     static IntrusiveDeque pendingScoreSubmissions;
     int minY;
-    short[] field_k;
+    short[] optionalPackedShortStreamFour;
     int maxX;
     int minZ;
     short[] vertexY;
@@ -85,7 +85,7 @@ final class TriangleMesh {
         }
         this.invalidateBounds(-7008);
         if (guard != -9121) {
-            this.field_g = (short[]) null;
+            this.optionalPackedShortStreamFive = (short[]) null;
         }
     }
 

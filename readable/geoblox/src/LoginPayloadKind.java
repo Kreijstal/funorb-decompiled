@@ -5,7 +5,7 @@ final class LoginPayloadKind {
     static String levelTextTemplate;
     static int rankedSortLowerBoundValue;
     int wireId;
-    static int field_d;
+    static int sixMatchChainAchievementId;
     static String createPasswordText;
 
     public static void releaseStaticReferences(int methodGuard) {
@@ -47,7 +47,7 @@ final class LoginPayloadKind {
 
     static {
         levelTextTemplate = "Level: <%0>";
-        field_d = 4;
+        sixMatchChainAchievementId = 4;
         createPasswordText = "Password: ";
     }
 }

@@ -87,7 +87,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
           if (TextInputValidator.fullscreenUnavailableFailureReason == failureReason) {
             var3 = AccountContentDialog.fullscreenUnavailableTrySignedAppletText;
           } else {
-            if (failureReason == AccountContentDialog.field_hb) {
+            if (failureReason == AccountContentDialog.fullscreenFocusLostFailureReason) {
               var3 = NodeHashTableIterator.fullscreenFocusText;
               this.widgetHeight = this.widgetHeight + 10;
               if (EntitySpawnSupport.isCanvasResizeAllowed(true)) {
@@ -95,7 +95,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
                 this.widgetHeight = this.widgetHeight + 20;
               }
             } else {
-              if (failureReason == LimitedRandomAccessFile.field_b) {
+              if (failureReason == LimitedRandomAccessFile.fullscreenTimeoutFailureReason) {
                 var3 = MessageDialog.fullscreenTimeoutText;
                 this.widgetHeight = this.widgetHeight + 30;
               }

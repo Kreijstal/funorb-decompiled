@@ -331,7 +331,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             LogoCompositor.sessionPacketBuffer.position = 0;
             if ((requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort >= 100) &&
                 (requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort <= 105)) {
-              PacketBuffer.currentProtocolStage = CanvasResizeController.field_l;
+              PacketBuffer.currentProtocolStage = CanvasResizeController.awaitingUsernameSuggestionsStage;
               WidgetSkinState.pendingUsernameSuggestions = new String[requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort - 100];
             } else {
               if (requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort == 248) {
@@ -353,7 +353,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               }
             }
           }
-          if (PacketBuffer.currentProtocolStage == CanvasResizeController.field_l) {
+          if (PacketBuffer.currentProtocolStage == CanvasResizeController.awaitingUsernameSuggestionsStage) {
             requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 2;
             if (UiWidget.readSessionBytesIfAvailable(30000, requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort)) {
               creationPayloadStartOrSuggestionPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);

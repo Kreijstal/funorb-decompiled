@@ -4,7 +4,7 @@
 final class TextTemplateDefinition extends DualLinkNode {
     static GameScreen[] screens;
     static float entityMotionSpeed;
-    static int field_n;
+    static int loginMembershipGateValue;
     int[] referencedTemplateIds;
     private int[] argumentTypeIds;
     private String[] literalSegments;

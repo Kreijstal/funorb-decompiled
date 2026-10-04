@@ -3,9 +3,9 @@
  */
 class VisualPropertyNode extends DualLinkNode {
     static int previousPacketOpcode;
-    static boolean field_o;
+    static boolean highUpdateRateModeActive;
     static java.applet.Applet loaderApplet;
-    private static String field_z;
+    private static String retainedFailureContextPrefix;
 
     VisualPropertyNode() {
     }
@@ -18,8 +18,8 @@ class VisualPropertyNode extends DualLinkNode {
     }
 
     static {
-        field_z = "kg.C(";
+        retainedFailureContextPrefix = "kg.C(";
         previousPacketOpcode = -1;
-        field_o = false;
+        highUpdateRateModeActive = false;
     }
 }

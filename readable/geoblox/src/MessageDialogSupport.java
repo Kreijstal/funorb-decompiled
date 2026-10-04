@@ -6,7 +6,7 @@ final class MessageDialogSupport {
     static String createDoubleSpaceAlertText;
     static int releasesPerTheme;
     static int bakingThemeCompletionAchievementId;
-    static int field_e;
+    static int specialMatchAchievementId;
     static boolean entitiesDetachedThisTick;
     static ByteArrayBuffer encryptedPayloadScratchBuffer;
     static int accountUiViewportHeight;
@@ -41,7 +41,7 @@ final class MessageDialogSupport {
         bakingThemeCompletionAchievementId = 14;
         idleMessage20MinText = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         createDoubleSpaceAlertText = "Names cannot contain consecutive spaces";
-        field_e = 0;
+        specialMatchAchievementId = 0;
         accountUiViewportHeight = 480;
         membersExpansionBenefitTexts = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
     }

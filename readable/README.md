@@ -1,11 +1,52 @@
 # Readable GeoBlox
 
-The current export has 18,436 guarded naming rules: 302 classes, 2,048 fields,
+The current export has 18,452 guarded naming rules: 302 classes, 2,064 fields,
 1,854 methods, 4,922 parameters, 9,065 local declarations and 245 labels. Both 303-file corpora
 compile, comparing 136,574 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current helper-label naming (pass 179)
+## Current gameplay and protocol field naming (pass 180)
+
+Sixteen formerly opaque fields now describe their verified roles. They include
+`fiveMatchChainAchievementId`, `sixMatchChainAchievementId`,
+`specialMatchAchievementId`, `fiveKindFourRemovalsAchievementId`,
+`loginMembershipGateValue`, `awaitingUsernameSuggestionsStage`,
+`lockBootstrapLoginPanelActions`, `highUpdateRateModeActive` and the
+fullscreen focus-loss/timeout reason identities. The membership value is an
+unsigned 16-bit login value used as a positive membership gate; this name does
+not assume days or expiry semantics. The update-rate flag selects the original
+150/50 update scheduling requests, without claiming a rendering frame rate.
+
+Five optional mesh short-array streams have names indicating their decoded wire
+order. Their lengths use 16 bits, their payloads retain the original signed-base/
+variable-width delta decoding, and the discarded section value stays discarded.
+The source supplies no consumer proving UV, texture or other attribute semantics.
+The stored, unconsumed `kg.C(` diagnostic prefix is also named and preserved.
+
+The compiler-backed naming driver makes exactly 77 additional identifier edits:
+16 declarations and 61 references across 20 files. An independent whole-corpus
+comparison matches those field replacements and every other source character.
+All 18,436 previous complete rules remain unchanged; there are 18,452 rules.
+All 303 raw/readable sources compile, comparing 136,574 ordinary bindings,
+388 override pairs and 811 lexical label records. All 245 labels remain named.
+The output has 117,547 identifier, eleven literal and 811 label edits: 118,369 total.
+Raw input, decompiler/naming/workflow/stub/native pins, guards, numeric IDs/rates,
+conditions, statements, diagnostics and operation order remain unchanged.
+Deterministic reproduction and dictionary reversal are byte exact.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test readable/tests/test-geoblox-rule-builder.mjs readable/tests/test-geoblox-migration-source.mjs readable/tests/test-geoblox-text-rules.mjs`
+passes all 27 publication tests. Existing scoped gameplay and nine-slice/UI/mesh
+probes also retain their native/raw/readable trace hashes. Their existing scopes
+are unchanged; this naming pass adds no native runtime cases or fixtures.
+
+Eight large labeled bodies and 41 opaque fields remain. The fields comprise
+six public GameApplet fields with no source references and 35 private
+VisualPropertyOverrides fields used only for default initialization and merge
+retention. Their source does not establish more specific UI meanings.
+Whole game/renderer/server/browser/phone and heap/presented-FPS acceptance
+remain unverified; the large bodies still need structural recovery.
+
+## Previous helper-label naming (pass 179)
 
 All 73 remaining opaque labels now describe their original lexical scope:
 37 plain blocks and 36 loops across 34 files. Names include
@@ -2255,7 +2296,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/d4205a63cef7e4040adb08d2264e14e1586e8231/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/d4205a63cef7e4040adb08d2264e14e1586e8231/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/c826e5ac76ccc081c622a3e5a014cbd622b1a9cb/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c826e5ac76ccc081c622a3e5a014cbd622b1a9cb/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -2513,16 +2554,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/d4205a63cef7e4040adb08d2264e14e1586e8231/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/c826e5ac76ccc081c622a3e5a014cbd622b1a9cb/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/d4205a63cef7e4040adb08d2264e14e1586e8231/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/c826e5ac76ccc081c622a3e5a014cbd622b1a9cb/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `d4205a63cef7e4040adb08d2264e14e1586e8231`; the
-manifest SHA-256 is `618cab910e651a9ff1497d20e21c56f61e15caa52f30205224cf17999a560ad0`.
+The current Deko workflow/manifest commit is `c826e5ac76ccc081c622a3e5a014cbd622b1a9cb`; the
+manifest SHA-256 is `db05d2c29b6282eda869dad62ddd7586127db451fcd228f814a5f93ef5c2ee95`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

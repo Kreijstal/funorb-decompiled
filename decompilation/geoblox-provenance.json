@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "d4205a63cef7e4040adb08d2264e14e1586e8231",
+    "commit": "c826e5ac76ccc081c622a3e5a014cbd622b1a9cb",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "618cab910e651a9ff1497d20e21c56f61e15caa52f30205224cf17999a560ad0"
+      "sha256": "db05d2c29b6282eda869dad62ddd7586127db451fcd228f814a5f93ef5c2ee95"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,25 +3291,25 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "09f699eb92f34751bb8e89ecbb13d9473e6ab701716b4d140dab4fc0c34cd414",
+    "outputTreeSha256": "264a5df63c52f90bb8393518799e437888889ab41b730f36b31f0af566861d82",
     "files": 303,
-    "rules": 18436,
-    "identifierEdits": 117470,
+    "rules": 18452,
+    "identifierEdits": 117547,
     "bindingsCompared": 136574,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 118292,
+    "totalEdits": 118369,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 811,
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 179,
-      "rulesAdded": 73,
+      "version": 180,
+      "rulesAdded": 16,
       "rulesRefined": 0,
-      "previousRules": 18363,
+      "previousRules": 18436,
       "previousCompleteRulesPreserved": 18363,
       "allPreviousCompleteRulesPreserved": true,
       "rawInputAndGeneratorPinsUnchanged": false,
@@ -3317,7 +3317,8 @@
       "remainingOpaqueLoopLabels": 0,
       "wholeGameEquivalenceVerified": false,
       "remainingOpaqueLabels": 0,
-      "remainingOpaquePlainBlockLabels": 0
+      "remainingOpaquePlainBlockLabels": 0,
+      "remainingOpaqueFields": 41
     },
     "structuralPass": 178
   },
@@ -8886,5 +8887,64 @@
     "remainingOpaqueLoopLabels": 0,
     "wholeGameEquivalenceVerified": false,
     "scope": "Game-specific lexical naming of all73 remaining helper labels across34 files: loading/account UI, contact conversion and cascade traversal, archive/network/cache/platform work, parsing/cryptographic helpers and sprite/font/mesh/raster scans. Only73 declaration and155 transfer spellings change. Full JVM method or initializer identity, original spelling and declaration ordinal guard each name. All18363 previous complete rules and fixed raw/decompiler/naming/workflow/stub/native pins stay unchanged. Both303-file corpora compile; ordered ordinary/override/lexical targets, exact whole-corpus label replacement, deterministic reproduction and byte-exact dictionary reversal verify naming. No new native runtime cases or probes; whole game/renderer/assets/server/browser/phone and memory/presented-FPS acceptance remain unverified."
+  },
+  "gameplayAndProtocolFieldNaming": {
+    "version": 180,
+    "rulesAdded": 16,
+    "rulesAddedByKind": {
+      "F": 16
+    },
+    "previousCompleteRulesPreserved": 18436,
+    "allPreviousCompleteRulesPreserved": true,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "previousSourceWorkflowCommit": "d4205a63cef7e4040adb08d2264e14e1586e8231",
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTest": "readable/tests/test-geoblox-rule-builder.mjs",
+    "sourceProofTestSha256": "b233998fb770cddc1a5bc7438482751998a67feff194bb4a7126778828d6eaa9",
+    "sourceWorkflowCommit": "c826e5ac76ccc081c622a3e5a014cbd622b1a9cb",
+    "sourceProofWorkflowCommit": "c826e5ac76ccc081c622a3e5a014cbd622b1a9cb",
+    "publicationTestGroupsPassed": 27,
+    "sourceDeclarationsPreserved": 19498,
+    "orderedBindingsPreserved": 136574,
+    "fullOverridePairsPreserved": 388,
+    "lexicalLabelBindingsPreserved": 811,
+    "labelDeclarationsPreserved": 245,
+    "sourceInputCommit": "4ac0051972191b6a1e19173fccef3eb205f2e35a",
+    "sourceInputTreeSha256": "1e319eec255299fb4bfbec01e6d7dd3643a73878d0d91a0c388fa88b3c8d3ad9",
+    "sourceOutputTreeSha256": "264a5df63c52f90bb8393518799e437888889ab41b730f36b31f0af566861d82",
+    "identifierEditsBefore": 117470,
+    "identifierEditsAfter": 117547,
+    "identifierEditsAdded": 77,
+    "classNameLiteralEdits": 11,
+    "labelEditsBefore": 811,
+    "labelEditsAfter": 811,
+    "labelEditsAdded": 0,
+    "totalEditsAfter": 118369,
+    "changedJavaFiles": 20,
+    "fieldDeclarationsRenamed": 16,
+    "fieldReferencesRenamed": 61,
+    "exactExpectedFieldOnlyPermutationVerified": true,
+    "nativeFixturesChanged": false,
+    "nativeProbesAdded": 0,
+    "newNativeRuntimeCases": 0,
+    "nativeProbesRun": 2,
+    "nativeProbesReverified": [
+      "readable/tests/test-geoblox-gameplay.mjs",
+      "readable/tests/test-geoblox-nine-slice.mjs"
+    ],
+    "previousNativeFixtureScopesRetained": true,
+    "sourceBodyEditedByHand": false,
+    "largeLabeledBodiesAfter": 8,
+    "remainingOpaqueFields": 41,
+    "remainingOpaqueFieldsByOwner": {
+      "GameApplet": 6,
+      "VisualPropertyOverrides": 35
+    },
+    "remainingSingleLetterMethods": 0,
+    "remainingOpaqueLabels": 0,
+    "remainingOpaquePlainBlockLabels": 0,
+    "remainingOpaqueLoopLabels": 0,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Game-specific semantic field naming: four achievement IDs, update scheduling flag, unsigned16-bit login membership gate, locked bootstrap login actions, suggestion protocol stage, fullscreen reason identities, retained diagnostic prefix and five optional mesh streams named by observed decode order rather than unproven UV/texture semantics. Exactly16 declarations and61 references across20 files change. All18436 previous complete rules and fixed raw/decompiler/naming/workflow/stub/native pins stay unchanged. Both303-file corpora compile; ordered ordinary/override/lexical bindings, exact whole-corpus field replacement, deterministic reproduction and byte-exact dictionary reversal verify naming. Existing scoped gameplay and nine-slice/UI/mesh native/raw/readable probes retain fixed trace hashes; no fixture changes or new runtime cases. Six unreferenced public applet fields and35 private default/merge-only UI properties retain original names because their source lacks semantic consumers. Whole game/renderer/assets/server/browser/phone and memory/presented-FPS acceptance remain unverified."
   }
 }

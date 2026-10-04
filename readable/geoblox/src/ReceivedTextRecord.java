@@ -16,7 +16,7 @@ final class ReceivedTextRecord {
     static String[] highscoreModeNames;
     int recordIdLow24;
     static boolean receivedRecordHeaderFlagSet;
-    static int field_p;
+    static int fiveKindFourRemovalsAchievementId;
     static String tutorialShapeMatchMessage;
 
     public static void releaseTextRecordResources(int methodGuard) {
@@ -140,7 +140,7 @@ final class ReceivedTextRecord {
         keyboardEventReadIndex = 0;
         pendingPointerPressButton = 0;
         highscoreModeNames = new String[]{"All scores", "My scores", "Best each"};
-        field_p = 6;
+        fiveKindFourRemovalsAchievementId = 6;
         for (paletteColorIndex = 0; unusedFiveStepPalette.length > paletteColorIndex; paletteColorIndex++) {
           if (paletteColorIndex != 0) {
             unusedFiveStepPalette[paletteColorIndex] = (1 + paletteColorIndex) * 51 << 16;

@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/d4205a63cef7e4040adb08d2264e14e1586e8231/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/c826e5ac76ccc081c622a3e5a014cbd622b1a9cb/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 179)
+## Current readability (pass 180)
 
-The export has 18,436 guarded names and 117,470 Java identifier edits, plus 11
+The export has 18,452 guarded names and 117,547 Java identifier edits, plus 11
 class-name literal edits and 811 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -24,7 +24,48 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current helper-label naming (pass 179)
+## Current gameplay and protocol field naming (pass 180)
+
+Sixteen formerly opaque fields now describe their verified roles. They include
+`fiveMatchChainAchievementId`, `sixMatchChainAchievementId`,
+`specialMatchAchievementId`, `fiveKindFourRemovalsAchievementId`,
+`loginMembershipGateValue`, `awaitingUsernameSuggestionsStage`,
+`lockBootstrapLoginPanelActions`, `highUpdateRateModeActive` and the
+fullscreen focus-loss/timeout reason identities. The membership value is an
+unsigned 16-bit login value used as a positive membership gate; this name does
+not assume days or expiry semantics. The update-rate flag selects the original
+150/50 update scheduling requests, without claiming a rendering frame rate.
+
+Five optional mesh short-array streams have names indicating their decoded wire
+order. Their lengths use 16 bits, their payloads retain the original signed-base/
+variable-width delta decoding, and the discarded section value stays discarded.
+The source supplies no consumer proving UV, texture or other attribute semantics.
+The stored, unconsumed `kg.C(` diagnostic prefix is also named and preserved.
+
+The compiler-backed naming driver makes exactly 77 additional identifier edits:
+16 declarations and 61 references across 20 files. An independent whole-corpus
+comparison matches those field replacements and every other source character.
+All 18,436 previous complete rules remain unchanged; there are 18,452 rules.
+All 303 raw/readable sources compile, comparing 136,574 ordinary bindings,
+388 override pairs and 811 lexical label records. All 245 labels remain named.
+The output has 117,547 identifier, eleven literal and 811 label edits: 118,369 total.
+Raw input, decompiler/naming/workflow/stub/native pins, guards, numeric IDs/rates,
+conditions, statements, diagnostics and operation order remain unchanged.
+Deterministic reproduction and dictionary reversal are byte exact.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test readable/tests/test-geoblox-rule-builder.mjs readable/tests/test-geoblox-migration-source.mjs readable/tests/test-geoblox-text-rules.mjs`
+passes all 27 publication tests. Existing scoped gameplay and nine-slice/UI/mesh
+probes also retain their native/raw/readable trace hashes. Their existing scopes
+are unchanged; this naming pass adds no native runtime cases or fixtures.
+
+Eight large labeled bodies and 41 opaque fields remain. The fields comprise
+six public GameApplet fields with no source references and 35 private
+VisualPropertyOverrides fields used only for default initialization and merge
+retention. Their source does not establish more specific UI meanings.
+Whole game/renderer/server/browser/phone and heap/presented-FPS acceptance
+remain unverified; the large bodies still need structural recovery.
+
+## Previous helper-label naming (pass 179)
 
 All 73 remaining opaque labels now describe their original lexical scope:
 37 plain blocks and 36 loops across 34 files. Names include

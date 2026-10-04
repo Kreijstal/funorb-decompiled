@@ -22,13 +22,13 @@ final class CanvasResizeController {
     private int resizeIntervalTicks;
     static String tutorialSkipMessage;
     private boolean resizePending;
-    static ClientProtocolStage field_l;
+    static ClientProtocolStage awaitingUsernameSuggestionsStage;
     static long lastSessionSocketWriteMillis;
 
     public static void releaseStaticReferences(boolean methodGuard) {
         tutorialSkipMessage = null;
         createPasswordConfirmationText = null;
-        field_l = null;
+        awaitingUsernameSuggestionsStage = null;
         if (methodGuard) {
             bootstrapProgressColor = null;
             pendingNavigationTarget = null;
@@ -137,7 +137,7 @@ final class CanvasResizeController {
           return;
         }
         if (methodGuard < -108) {
-          if (TextTemplateDefinition.field_n <= 0) {
+          if (TextTemplateDefinition.loginMembershipGateValue <= 0) {
             this.resizePending = false;
             if (this.resizePending) {
               fieldTemp$1 = this.resizeCountdownTicks - 1;
@@ -191,7 +191,7 @@ final class CanvasResizeController {
           return;
         }
         this.fallbackWidth = -79;
-        if (TextTemplateDefinition.field_n > 0) {
+        if (TextTemplateDefinition.loginMembershipGateValue > 0) {
           if (this.resizePending) {
             fieldTemp$3 = this.resizeCountdownTicks - 1;
             this.resizeCountdownTicks = this.resizeCountdownTicks - 1;
@@ -400,7 +400,7 @@ final class CanvasResizeController {
             if (ArchiveHandshakeState.heapCapacityEstimateMiB < this.minimumHeapMiB) {
                 return false;
             }
-            if (TextTemplateDefinition.field_n > 0) {
+            if (TextTemplateDefinition.loginMembershipGateValue > 0) {
                 return true;
             }
             return false;
@@ -408,7 +408,7 @@ final class CanvasResizeController {
         if (ArchiveHandshakeState.heapCapacityEstimateMiB < this.minimumHeapMiB) {
             return false;
         }
-        if (TextTemplateDefinition.field_n > 0) {
+        if (TextTemplateDefinition.loginMembershipGateValue > 0) {
             return true;
         }
         return false;
@@ -450,6 +450,6 @@ final class CanvasResizeController {
         pendingNavigationTarget = null;
         tutorialSkipMessage = "To skip this tutorial, press <img=3> at any point.";
         bootstrapProgressColor = new java.awt.Color(10040319);
-        field_l = new ClientProtocolStage();
+        awaitingUsernameSuggestionsStage = new ClientProtocolStage();
     }
 }
