@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "45cb2e35332e96f23aed0bfb464373595e9ff7a7",
+      "commit": "c00d96cb29b0778e15d25078df9830883bf143ed",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "1d6b4d1eb617d14b7b91438d708a7bbe152aa0faaa5c222f1c94d82ec2a1aad5",
-        "reproduce": "git archive --format=tar 45cb2e35332e96f23aed0bfb464373595e9ff7a7 | sha256sum",
+        "sha256": "b1da008c84763bafed6d5b73645a0fd1cda9d687933dd965e0ad431955d04e7b",
+        "reproduce": "git archive --format=tar c00d96cb29b0778e15d25078df9830883bf143ed | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "c1b73f2376fdaee1e3f7113a088f6186e39536bbd75827b69585b46dd3b6087e",
-  "previousSourceTreeSha256": "ad70fc92838933a136145972c232f2878c8f9b3583651f008c5aeed6d6abfaa0",
-  "changedJavaFiles": 25,
+  "sourceTreeSha256": "1e319eec255299fb4bfbec01e6d7dd3643a73878d0d91a0c388fa88b3c8d3ad9",
+  "previousSourceTreeSha256": "c1b73f2376fdaee1e3f7113a088f6186e39536bbd75827b69585b46dd3b6087e",
+  "changedJavaFiles": 3,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "aaa886bfc71707a5ffc129ddf09dd053c05f8f41",
+    "commit": "c4dc80ee2642e12297b3764884ec084235db2d46",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "4c991fc9f47dbed9125da810dcee45c6b6721e7ba54e0af91a0eb2bafc7506a7"
+      "sha256": "47a6b3c5c9411cabfcf32c11a1ef5bcdda9b744774919a29803f4c004d4c45b2"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,22 +3291,22 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "3bb731dfc426447a666b5b1b89383798129b91263f0852a3fb23cb6c5e607308",
+    "outputTreeSha256": "d9f06de95e81828bc6a00adac078b3a379f68dd92c1ec8a4f424b87ea5fcebcf",
     "files": 303,
     "rules": 18363,
-    "identifierEdits": 117478,
-    "bindingsCompared": 136582,
+    "identifierEdits": 117470,
+    "bindingsCompared": 136574,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 118072,
+    "totalEdits": 118064,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 583,
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 177,
+      "version": 178,
       "rulesAdded": 0,
       "rulesRefined": 0,
       "previousRules": 18363,
@@ -3317,7 +3317,7 @@
       "remainingOpaqueLoopLabels": 36,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 177
+    "structuralPass": 178
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -8693,5 +8693,142 @@
     "nativeBooleanOracleCases": 708750,
     "sourceWorkflowCommit": "aaa886bfc71707a5ffc129ddf09dd053c05f8f41",
     "sourceProofWorkflowCommit": "aaa886bfc71707a5ffc129ddf09dd053c05f8f41"
+  },
+  "dominatedPredicateRecovery": {
+    "version": 178,
+    "changedJavaFiles": 3,
+    "changedMethodBodies": 4,
+    "counts": {
+      "conditionsSimplified": 8,
+      "comparisonsRemoved": 8,
+      "conjunctionsRemoved": 7,
+      "disjunctionsRemoved": 1
+    },
+    "sourceLinesBefore": 76187,
+    "sourceLinesAfter": 76179,
+    "nativeComparisons": 262500,
+    "independentNativeOracleCases": 262500,
+    "nativeContextVariants": 10,
+    "genericFocusedTestGroupsPassed": 5,
+    "genericRegressionTestGroupsPassed": 22,
+    "genericRegressionTestGroupsSkipped": 0,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestSha256": "a14b926e7cfdaa180edd7dd9ef7ae90a2d3c2faeddf122e88d4672597597db6b",
+    "scope": "Generic Boolean identity elimination from enclosing branch, while/for-entry and short-circuit facts for unique visible stable primitive int locals. No global/initializer value is assumed; unknown atoms remain exactly once and in order. Independent JDK types, bindings, control-path facts and write analysis prove all8 removed local comparisons. Statements, labels, scopes, protected groups/monitors, all18363 complete rules and fixed bytecode/naming/workflow/stub/native pins remain. Whole renderer/game/assets/server/browser/phone and heap/presented-FPS acceptance remain unverified.",
+    "previousSourceCommit": "8bf34bd143f2903024b8b4b9037a532ddb9b52d2",
+    "sourceCommit": "4ac0051972191b6a1e19173fccef3eb205f2e35a",
+    "previousSourceTreeSha256": "c1b73f2376fdaee1e3f7113a088f6186e39536bbd75827b69585b46dd3b6087e",
+    "sourceTreeSha256": "1e319eec255299fb4bfbec01e6d7dd3643a73878d0d91a0c388fa88b3c8d3ad9",
+    "javaToolsCommit": "c00d96cb29b0778e15d25078df9830883bf143ed",
+    "sourceArchiveSha256": "b1da008c84763bafed6d5b73645a0fd1cda9d687933dd965e0ad431955d04e7b",
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117329,
+    "sourceReferenceOccurrencesAfter": 117321,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 245,
+    "labelDeclarationsAfter": 245,
+    "labelBindingsBefore": 811,
+    "labelBindingsAfter": 811,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 320,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 338,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 630,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 329,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 376,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "methodBodiesAfter": 2080,
+    "largeMethodBodiesAfter": 20,
+    "largeMethodBodiesWithPlainBlockLabelsAfter": 6,
+    "remainingOpaqueFields": 57,
+    "remainingSingleLetterMethods": 0,
+    "remainingOpaqueLabels": 73,
+    "wholeGameEquivalenceVerified": false,
+    "publicationTestGroupsPassed": 27,
+    "completeCorpusExpectedTokensVerified": true,
+    "exactExpectedSourceBytesVerified": true,
+    "previousNativeGameplayAndResultHelperPinsReverified": true,
+    "dominatedPredicates": true,
+    "primitiveReferenceOccurrencesRemoved": 8,
+    "previousPredicateOracleCasesReverified": 1162350,
+    "survivingPerOccurrenceJavaAndLabelBindingsPreserved": true,
+    "independentlyProvenGuardComparisons": 8,
+    "sourceWorkflowCommit": "c4dc80ee2642e12297b3764884ec084235db2d46",
+    "sourceProofWorkflowCommit": "c4dc80ee2642e12297b3764884ec084235db2d46"
   }
 }

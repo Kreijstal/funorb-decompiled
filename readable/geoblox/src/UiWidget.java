@@ -327,7 +327,6 @@ class UiWidget extends IntrusiveNode {
                 ValidationState.activeDragWidget = null;
               }
               if ((clientControlFlowSnapshot != 0) &&
-                  (focusFlag != 0) &&
                   (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
                 this.clearKeyboardFocus(-126);
               }
@@ -365,7 +364,6 @@ class UiWidget extends IntrusiveNode {
             ValidationState.activeDragWidget = null;
           }
           if ((clientControlFlowSnapshot != 0) &&
-              (focusFlag != 0) &&
               (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             this.clearKeyboardFocus(-126);
           }

@@ -152,13 +152,11 @@ final class MeshDepthSupport {
                   }
                 }
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if ((-2147483648 == projectedAXOrVertexADepth) &&
-                    (controlFlagSnapshot == 0)) {
+                if ((-2147483648 == projectedAXOrVertexADepth)) {
                   break L4;
                 }
                 projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                if ((-2147483648 == projectedAYOrVertexBDepth) &&
-                    (controlFlagSnapshot == 0)) {
+                if ((-2147483648 == projectedAYOrVertexBDepth)) {
                   break L4;
                 }
                 edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
@@ -302,13 +300,11 @@ final class MeshDepthSupport {
                   }
                 }
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if ((-2147483648 == projectedAXOrVertexADepth) &&
-                    (controlFlagSnapshot == 0)) {
+                if ((-2147483648 == projectedAXOrVertexADepth)) {
                   break L4;
                 }
                 projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                if ((-2147483648 == projectedAYOrVertexBDepth) &&
-                    (controlFlagSnapshot == 0)) {
+                if ((-2147483648 == projectedAYOrVertexBDepth)) {
                   break L4;
                 }
                 edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];

@@ -17,14 +17,54 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/aaa886bfc71707a5ffc129ddf09dd053c05f8f41/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c4dc80ee2642e12297b3764884ec084235db2d46/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,582 bindings,
 preserving 388 override relationships.
 
-## Current integral predicate cleanup (pass 177)
+## Current dominated predicate cleanup (pass 178)
+
+Inside a branch that tests a stable local snapshot, repeated neutral comparisons
+are now omitted. For example, inside `if (flag == 0)`,
+`if (alreadyVisited && flag == 0)` becomes `if (alreadyVisited)`.
+The generic rule also understands short-circuit and while/for-entry facts.
+It never assumes that the global client flag or an initializer is zero.
+Fields, boxed/floating values, shadowing and later/cyclic writes remain opaque.
+Every unknown operand stays exactly once and in order; absorbing expressions
+and wholly known conditions remain for separate completion-aware work.
+
+Eight comparisons disappear from eight conditions in four bodies across three
+files: UiWidget state handling, MeshDepthSupport face queuing (including its
+int-argument bridge), and BoardReconciliationSupport's component search.
+Reconciliation's large body falls from 331 to 329 lines; the raw corpus falls
+from 76,187 to 76,179 lines. No statement, declaration, scope, label, transfer,
+callback, snapshot, diagnostic or bytecode is moved or removed. All 18,363 full
+naming rules and every declaration/label ordinal remain exact.
+
+The JDK independently verifies the exact local binding, primitive int type,
+control-path fact and absence of later/cyclic writes for all eight deleted
+reads. The complete source-character audit matches all 303 expected files,
+19,253 ordinary declarations, 117,321 surviving references, 388 override pairs,
+245 labels and 811 label records. Both corpora compile, comparing 136,574
+bindings; the readable export has 117,470 identifier, eleven literal and 583
+label edits: 118,064 total. Reproduction and dictionary reversal are byte exact.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/dominatedPredicateRecovery.test.js test/javaAstEmitterPathGuards.test.js test/javaAstEmitterPathGuardSwitches.test.js test/javaAstEmitterPostGuardExits.test.js test/cfrBranchMergeRegressions.test.js test/predicateNegationRecovery.test.js`
+passes 27 tests. Five new focused groups include 262,500 independent native
+ordered-oracle cases across ten variants, including nonzero/min/max flags,
+nullable/noncached Booleans, reference identity, NaN/signed zeros/infinities,
+callbacks mutating a volatile global while the local snapshot stays stable,
+throwing callbacks, loops, abrupt exits, finally overrides and monitors.
+Earlier Boolean/integral predicate oracles also pass. All 27 publication tests
+pass; scoped gameplay/result-helper trace pins remain exact.
+
+Eight large labeled bodies, 73 opaque labels and 57 opaque fields remain.
+The remaining bodies still need structural work. Whole renderer/game/server/
+browser/phone and heap/presented-FPS acceptance remain unverified.
+
+## Previous integral predicate cleanup (pass 177)
 
 The generic decompiler can now turn `!(row < limit)` into `row >= limit`
 when both operands are proven primitive integers. Scoped unique declarations,

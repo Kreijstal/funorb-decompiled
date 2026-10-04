@@ -141,8 +141,7 @@ final class BoardReconciliationSupport {
                   alreadyVisited = visitedByEntityIdValue;
                   if (clientControlSnapshot == 0) {
                     componentSearchAndDetach: {
-                      if ((alreadyVisited) &&
-                          (clientControlSnapshot == 0)) {
+                      if ((alreadyVisited)) {
                         break componentSearchAndDetach;
                       }
                       pendingConnectivityEntities = new SecondaryDeque();
@@ -174,8 +173,7 @@ final class BoardReconciliationSupport {
                                     if (componentSearchThenVariantResetEntity != null) {
                                       comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
                                       neighborThenUnlinkArgument = neighborThenCountResetEntity;
-                                      if (((comparedThenUnlinkTarget != neighborThenUnlinkArgument) ||
-                                          (clientControlSnapshot != 0))) {
+                                      if (((comparedThenUnlinkTarget != neighborThenUnlinkArgument))) {
                                         componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
                                         continue;
                                       }
