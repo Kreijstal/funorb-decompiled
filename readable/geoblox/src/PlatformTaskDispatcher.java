@@ -273,7 +273,7 @@ final class PlatformTaskDispatcher implements Runnable {
                       }
                       try {
                           if (false) throw (ProxyAuthenticationRequiredException) null;
-                        task.result = EmailAvailabilityValidator.createProxySocketConnector(-43, (String) (task.input), task.firstIntArgument).b(0);
+                        task.result = EmailAvailabilityValidator.createProxySocketConnector(-43, (String) (task.input), task.firstIntArgument).connectUsingSystemProxies(0);
                       } catch (ProxyAuthenticationRequiredException caughtProxyConnectionFailure) {
                         caughtTaskThrowable = caughtProxyConnectionFailure;
                         proxyConnectionFailure = (ProxyAuthenticationRequiredException) (Object) caughtTaskThrowable;

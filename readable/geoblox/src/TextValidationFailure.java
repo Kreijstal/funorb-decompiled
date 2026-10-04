@@ -17,7 +17,7 @@ final class TextValidationFailure {
         if (ClientRenderingState.rankedKeyTwoLowerBoundSeed > param5) {
           LoginPayloadKind.field_a = param5;
         }
-        if (ProxyAuthenticationRequiredException.field_a >= param5) {
+        if (ProxyAuthenticationRequiredException.rankedKeyTwoUpperBoundSeed >= param5) {
           TextHotspotBounds.field_m[GmtTimestampSupport.rankedEntryCount] = param3;
           NodeHashTableIterator.field_i[GmtTimestampSupport.rankedEntryCount] = param4;
           FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = param0;

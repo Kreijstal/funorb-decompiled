@@ -5,7 +5,7 @@ final class AccountEligibilitySupport {
     static int[] firstVertexTransformedZ;
     static String pleaseTryAgainText;
     static boolean loginReturnAllowed;
-    static int field_d;
+    static int jewelsThemeCompletionAchievementId;
     static ResourceArchive musicScoreArchive;
 
     public static void clearAccountEligibilityResources(int methodGuard) {
@@ -25,6 +25,6 @@ final class AccountEligibilitySupport {
     static {
         pleaseTryAgainText = "Please try again in a few minutes.";
         firstVertexTransformedZ = new int[8192];
-        field_d = 10;
+        jewelsThemeCompletionAchievementId = 10;
     }
 }

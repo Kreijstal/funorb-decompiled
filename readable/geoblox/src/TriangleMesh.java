@@ -183,7 +183,7 @@ final class TriangleMesh {
         GmtTimestampSupport.rankedEntryCount = 0;
         MeshPrioritySupport.field_b = -2147483648;
         ClientRenderingState.rankedKeyTwoLowerBoundSeed = 2147483647;
-        ProxyAuthenticationRequiredException.field_a = -2147483648;
+        ProxyAuthenticationRequiredException.rankedKeyTwoUpperBoundSeed = -2147483648;
         LoginPayloadKind.field_a = param0;
     }
 

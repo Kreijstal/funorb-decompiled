@@ -1408,42 +1408,42 @@ final class GameplaySession {
                                 break L11;
                               }
                             }
-                            SecondaryNodeDeque.recordAchievement(MessageDialogSupport.field_f ^ 255, -61, MessageDialogSupport.field_f);
+                            SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
                             if (clientControlFlowGuard == 0) {
                               break;
                             }
                           }
-                          SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.field_b, -84, SpriteConstructionSupport.field_b);
+                          SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.sunThemeCompletionAchievementId, -84, SpriteConstructionSupport.sunThemeCompletionAchievementId);
                           if (clientControlFlowGuard == 0) {
                             break;
                           }
                         }
-                        SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.field_u, -50, TextInputRenderer.field_u);
+                        SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.germsThemeCompletionAchievementId, -50, TextInputRenderer.germsThemeCompletionAchievementId);
                         if (clientControlFlowGuard == 0) {
                           break;
                         }
                       }
-                      SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.field_d, -71, AccountEligibilitySupport.field_d);
+                      SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.jewelsThemeCompletionAchievementId, -71, AccountEligibilitySupport.jewelsThemeCompletionAchievementId);
                       if (clientControlFlowGuard == 0) {
                         break;
                       }
                     }
-                    SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.field_E, -115, CheckboxWidget.field_E);
+                    SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.spaceThemeCompletionAchievementId, -115, CheckboxWidget.spaceThemeCompletionAchievementId);
                     if (clientControlFlowGuard == 0) {
                       break;
                     }
                   }
-                  SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.field_g, -92, WeightedObjectCache.field_g);
+                  SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.sportsThemeCompletionAchievementId, -92, WeightedObjectCache.sportsThemeCompletionAchievementId);
                   if (clientControlFlowGuard == 0) {
                     break;
                   }
                 }
-                SecondaryNodeDeque.recordAchievement(255 ^ SocketConnector.field_a, -121, SocketConnector.field_a);
+                SecondaryNodeDeque.recordAchievement(255 ^ SocketConnector.sweetsThemeCompletionAchievementId, -121, SocketConnector.sweetsThemeCompletionAchievementId);
                 if (clientControlFlowGuard == 0) {
                   break;
                 }
               }
-              SecondaryNodeDeque.recordAchievement(SpriteConstructionSupport.field_b ^ 255, -95, SpriteConstructionSupport.field_b);
+              SecondaryNodeDeque.recordAchievement(SpriteConstructionSupport.sunThemeCompletionAchievementId ^ 255, -95, SpriteConstructionSupport.sunThemeCompletionAchievementId);
               break;
             }
           }

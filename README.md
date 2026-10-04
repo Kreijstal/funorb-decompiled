@@ -17,14 +17,57 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c767478f696e868cf24d32daa10560016c01baec/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/b74588f78ea82e498bbc78a0d20401559194fdd5/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
 
-Pass 164 adds 164 guarded names: five fields, nine methods, sixteen parameters
+Pass 165 adds 158 guarded names: sixteen fields, nine methods, fifteen
+parameters, 117 locals and one lexical label. SocketConnector and
+ProxySocketConnector now expose direct connection, system proxy selection,
+SOCKS connection and HTTP CONNECT response handling. Both declarations of the
+proxy-selection override use the same name. All remaining opaque fields,
+single-letter methods, generated temporaries and labels in these classes and
+ProxyAuthenticationRequiredException are named. The generic sneaky-throw helper
+retains its original name and meaningful throwable parameter.
+
+Source quirks remain: proxy lists are combined in their original order and
+iteration begins at the caller-supplied index. URI syntax failure falls back to
+a direct connection; IO failures are swallowed, authentication failures are
+retained, and a retained authentication failure is rethrown after all candidates.
+HTTP authentication reflection failures are swallowed. The CONNECT writer keeps
+its original line endings, encoding, timeout, guard arithmetic and partial
+resource cleanup. Status 200 returns the open socket; status 407 scans at most
+fifty header lines and throws the existing scheme exception. This is readable
+source, not a repaired or validated proxy implementation.
+
+Shared names expose the instrument-patch archive, bootstrap login message,
+discard-results warning, numeric template types eight/thirteen, ranked key-two
+upper-bound seed and seven theme-completion achievement fields. Theme names
+follow the existing dispatch and asset IDs; original alternate guard writes,
+sun fallback and nonzero-control fallthrough remain. The ranked seed is not a
+computed maximum: its MIN_VALUE reset and original comparison/write quirks
+remain. Theme color sorting locals describe the selected channel values and
+derived hue/lightness/saturation; original masks, ties, floating divisions,
+shift expressions, aliases and insertion order remain.
+
+The export has 16,589 rules and 110,717 identifier edits, plus eleven class-name
+literal and 285 label edits: 111,013 total. All 16,431 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Twenty-one generated Java files change only in names. Both
+303-file corpora compile, reproduce and reverse byte exactly. The label-policy
+count increases by two, with an explicit sourceChange for the existing response
+label declaration and its single break. All raw/tool/workflow/stub/native pins
+stay fixed. All 27 publication tests pass; no native probes or new runtime cases
+are added or run in this pass.
+
+Eight large labeled bodies, 149 opaque labels, 189 opaque fields and 217
+single-letter methods remain. Whole-game, live proxy/network/server/assets,
+browser/phone and heap/presented-FPS acceptance remain unverified.
+
+Previous pass 164 adds 164 guarded names: five fields, nine methods, sixteen parameters
 and 134 locals. All 142 HotspotTextWidget and 84 OpacityWidget declarations now
 have readable names; constructors follow their class rules. Multiline hotspot
 construction, pointer-relative hit testing, hover text, hover borders, focus and

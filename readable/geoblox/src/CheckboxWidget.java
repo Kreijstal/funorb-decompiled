@@ -5,7 +5,7 @@ final class CheckboxWidget extends ButtonWidget {
     static String loginJustPlayTooltipText;
     static long field_H;
     static String createNewsOptInTooltipText;
-    static int field_E;
+    static int spaceThemeCompletionAchievementId;
 
     public static void f(int param0) {
         if (param0 >= -65) {
@@ -113,6 +113,6 @@ final class CheckboxWidget extends ButtonWidget {
     static {
         loginJustPlayTooltipText = "Play the game without logging in just yet";
         createNewsOptInTooltipText = "Updates will sent to the email address you've given";
-        field_E = 12;
+        spaceThemeCompletionAchievementId = 12;
     }
 }

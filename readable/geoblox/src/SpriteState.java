@@ -354,7 +354,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "alternatively");
           if (var2 != null) {
-            ProxyAuthenticationRequiredException.field_b = EmailValidator.decodeTextBytes(1, var2);
+            ProxyAuthenticationRequiredException.discardResultsWarningText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(125, "login");
           if (var2 != null) {

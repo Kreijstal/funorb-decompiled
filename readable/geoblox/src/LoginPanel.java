@@ -870,7 +870,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         if (methodGuard != -42) {
             LoginPanel.createActiveEmailLookupValue((byte) -98);
         }
-        return new LoginTextValue(UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), SocketConnector.d(7));
+        return new LoginTextValue(UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), SocketConnector.isEmailAvailabilityPending(7));
     }
 
     final void clearLoginInputs(int methodGuard) {

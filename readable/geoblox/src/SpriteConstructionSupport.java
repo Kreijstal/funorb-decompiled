@@ -4,7 +4,7 @@
 final class SpriteConstructionSupport {
     static int clientScreenStage;
     static boolean achievementMaskReceived;
-    static int field_b;
+    static int sunThemeCompletionAchievementId;
 
     final static int unsignedBitLength(byte methodGuard, int remainingBits) {
         int shiftedBitCount = 0;
@@ -105,6 +105,6 @@ final class SpriteConstructionSupport {
 
     static {
         achievementMaskReceived = false;
-        field_b = 8;
+        sunThemeCompletionAchievementId = 8;
     }
 }

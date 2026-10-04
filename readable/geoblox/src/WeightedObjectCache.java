@@ -7,7 +7,7 @@ final class WeightedObjectCache {
     private int remainingWeightCapacity;
     private IterableNodeHashTable entriesByKey;
     static String[] ratingModeLongNames;
-    static int field_g;
+    static int sportsThemeCompletionAchievementId;
     private int weightCapacity;
 
     private final void removeByKey(long key, int methodGuard) {
@@ -135,6 +135,6 @@ final class WeightedObjectCache {
     static {
         loginUsernameEmailText = "Login: ";
         ratingModeLongNames = new String[]{"Showing by rating", "Showing by win percentage"};
-        field_g = 13;
+        sportsThemeCompletionAchievementId = 13;
     }
 }

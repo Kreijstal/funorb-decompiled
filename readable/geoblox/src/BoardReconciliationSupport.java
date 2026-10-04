@@ -31,7 +31,7 @@ final class BoardReconciliationSupport {
         RuntimeException sortFailureForContext = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          SingleChildWidget.sortRankedEntryRange(0, entryLimit, ClientRenderingState.rankedKeyTwoLowerBoundSeed, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.rankedEntryCount, true);
+          SingleChildWidget.sortRankedEntryRange(0, entryLimit, ClientRenderingState.rankedKeyTwoLowerBoundSeed, ProxyAuthenticationRequiredException.rankedKeyTwoUpperBoundSeed, (byte) 121, GmtTimestampSupport.rankedEntryCount, true);
           if (methodGuard != -98) {
             return;
           }

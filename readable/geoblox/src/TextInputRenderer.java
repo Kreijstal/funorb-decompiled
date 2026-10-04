@@ -7,7 +7,7 @@ class TextInputRenderer extends TextWidgetRenderer {
     static String[] mustLoginAlternateTexts;
     static TextWidgetRenderer sharedDefaultTextWidgetRenderer;
     static int[] secondVertexTransformedY;
-    static int field_u;
+    static int germsThemeCompletionAchievementId;
 
     TextInputRenderer(BitmapFont font, int textColor) {
         super(font, 4, 2, 2, 2, textColor, -1, 0, 1, font.maxAscent, -1, 2147483647, false);
@@ -223,7 +223,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             }
           }
           if (param2 > -61) {
-            field_u = 108;
+            germsThemeCompletionAchievementId = 108;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -247,6 +247,6 @@ class TextInputRenderer extends TextWidgetRenderer {
         awaitingLoginFailureTextStage = new ClientProtocolStage();
         mustLoginAlternateTexts = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         secondVertexTransformedY = new int[8192];
-        field_u = 11;
+        germsThemeCompletionAchievementId = 11;
     }
 }

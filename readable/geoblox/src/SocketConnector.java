@@ -5,25 +5,25 @@ import java.io.*;
 
 abstract class SocketConnector {
     static String loginGameUpdatedText;
-    String field_e;
-    static int field_a;
+    String destinationHost;
+    static int sweetsThemeCompletionAchievementId;
     static int swapRotationControlsKeyCode;
     static int[][] themeSpriteColors;
     static int[][] themeCycleColors;
-    int field_b;
-    static String field_d;
+    int destinationPort;
+    static String bootstrapLoginPanelMessage;
 
-    final java.net.Socket a(int param0) throws IOException {
-        if (param0 != 1) {
+    final java.net.Socket connectDirect(int methodGuard) throws IOException {
+        if (methodGuard != 1) {
             return (java.net.Socket) null;
         }
-        return new java.net.Socket(this.field_e, this.field_b);
+        return new java.net.Socket(this.destinationHost, this.destinationPort);
     }
 
-    abstract java.net.Socket b(int param0) throws IOException;
+    abstract java.net.Socket connectUsingSystemProxies(int firstProxyIndex) throws IOException;
 
-    final static boolean d(int param0) {
-        if (param0 != 7) {
+    final static boolean isEmailAvailabilityPending(int methodGuard) {
+        if (methodGuard != 7) {
             return true;
         }
         return !EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-95) ? true : false;
@@ -92,56 +92,56 @@ abstract class SocketConnector {
 
     final static IndexedSprite loadIndexedSprite(ResourceArchive graphicsArchive, int methodGuard, String groupName, String resourceName) {
         int archiveGroupId = 0;
-        RuntimeException var4 = null;
+        RuntimeException spriteLoadFailureForContext = null;
         int archiveFileId = 0;
-        IndexedSprite stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        IndexedSprite indexedSpriteBeforeReturn = null;
+        RuntimeException spriteLoadFailureBeforeDescription = null;
+        StringBuilder spriteLoadMessagePrefix = null;
+        String graphicsArchiveDescription = null;
+        StringBuilder messageBeforeGroupName = null;
+        String groupNameDescription = null;
+        StringBuilder messageBeforeResourceName = null;
+        String resourceNameDescription = null;
+        RuntimeException caughtSpriteLoadFailure = null;
         try {
           archiveGroupId = graphicsArchive.findGroupId((byte) 127, groupName);
           if (methodGuard != 1) {
-            field_a = 100;
+            sweetsThemeCompletionAchievementId = 100;
           }
           archiveFileId = graphicsArchive.findFileId(resourceName, -110, archiveGroupId);
-          stackIn_3_0 = UsernameSuggestionsPanel.loadFirstIndexedSprite(archiveFileId, graphicsArchive, archiveGroupId, true);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("jg.C(");
+          indexedSpriteBeforeReturn = UsernameSuggestionsPanel.loadFirstIndexedSprite(archiveFileId, graphicsArchive, archiveGroupId, true);
+          return indexedSpriteBeforeReturn;
+        } catch (java.lang.RuntimeException spriteLoadFailure) {
+          caughtSpriteLoadFailure = spriteLoadFailure;
+          spriteLoadFailureForContext = caughtSpriteLoadFailure;
+          spriteLoadFailureBeforeDescription = spriteLoadFailureForContext;
+          spriteLoadMessagePrefix = new StringBuilder().append("jg.C(");
           if (graphicsArchive == null) {
-            stackIn_7_2 = "null";
+            graphicsArchiveDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            graphicsArchiveDescription = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(methodGuard).append(',');
+          messageBeforeGroupName = ((StringBuilder) (Object) spriteLoadMessagePrefix).append(graphicsArchiveDescription).append(',').append(methodGuard).append(',');
           if (groupName == null) {
-            stackIn_10_2 = "null";
+            groupNameDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            groupNameDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          messageBeforeResourceName = ((StringBuilder) (Object) messageBeforeGroupName).append(groupNameDescription).append(',');
           if (resourceName == null) {
-            stackIn_13_2 = "null";
+            resourceNameDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) spriteLoadFailureBeforeDescription), ((StringBuilder) (Object) messageBeforeResourceName).append(resourceNameDescription).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
-        field_d = null;
+    public static void releaseSocketConnectorSharedResources(int methodGuard) {
+        bootstrapLoginPanelMessage = null;
         loginGameUpdatedText = null;
-        if (param0 != 16712207) {
-            SocketConnector.d(56);
+        if (methodGuard != 16712207) {
+            SocketConnector.isEmailAvailabilityPending(56);
         }
         themeSpriteColors = (int[][]) null;
         themeCycleColors = (int[][]) null;
@@ -233,108 +233,108 @@ abstract class SocketConnector {
     }
 
     static {
-        int var0_int = 0;
-        int var1 = 0;
-        int[] var0;
-        int var2;
-        int var3;
-        float var3_float;
-        int var4;
-        float var4_float;
-        int var5;
-        float var5_float;
-        float var6;
-        float var7;
-        float var8;
-        int var9;
-        float var10;
-        float var11;
-        float var12;
-        float var13;
-        float var14;
-        float var15;
-        float var16;
-        int[] var17;
-        int[] var18;
-        field_a = 9;
+        int copiedThemeIndex = 0;
+        int sortedThemeIndex = 0;
+        int[] themeSortKeysForWrites;
+        int colorIndex;
+        int insertionScanIndex;
+        float maskedRedFraction;
+        int insertionSortKey;
+        float maskedGreenFraction;
+        int insertionRgbColor;
+        float blueFraction;
+        float selectedLowChannel;
+        float selectedHighChannel;
+        float selectedChannelRange;
+        int dominantChannelId;
+        float derivedLightness;
+        float derivedSaturation;
+        float derivedHue;
+        float oneSixth;
+        float redHueOffset;
+        float greenHueOffset;
+        float blueHueOffset;
+        int[] allocatedSortKeysAlias;
+        int[] allocatedSortKeys;
+        sweetsThemeCompletionAchievementId = 9;
         loginGameUpdatedText = "This game has been updated! Please reload this page.";
         swapRotationControlsKeyCode = 35;
         themeCycleColors = new int[7][7];
         themeSpriteColors = new int[][]{new int[]{16646130, 4383370, 7784169, 16732531, 16569656, 16756645, 14022770}, new int[]{16099865, 16720435, 16770049, 42709, 16733161, 11078398, 3658269}, new int[]{16229425, 5957352, 16122070, 15595784, 10216240, 2706395, 11226077}, new int[]{52224, 39372, 16751631, 16751052, 16777011, 16724736, 10040217}, new int[]{16507819, 14654025, 14129125, 13953361, 14512505, 12506866, 12632256}, new int[]{15815889, 1289446, 16363563, 16116238, 9126089, 16730432, 5088306}, new int[]{16716239, 22986, 7461652, 16514820, 16712207, 16744452, 6438761}};
-        for (var0_int = 0; var0_int < 7; var0_int++) {
-          ArrayOperations.copyInts(themeSpriteColors[var0_int], 0, themeCycleColors[var0_int], 0, 7);
+        for (copiedThemeIndex = 0; copiedThemeIndex < 7; copiedThemeIndex++) {
+          ArrayOperations.copyInts(themeSpriteColors[copiedThemeIndex], 0, themeCycleColors[copiedThemeIndex], 0, 7);
         }
-        var18 = new int[7];
-        var17 = var18;
-        var0 = var17;
-        for (var1 = 0; var1 < 7; var1++) {
-          for (var2 = 0; 7 > var2; var2++) {
-            var3_float = (float)((themeSpriteColors[var1][var2] & 16776188) >> 16) / 255.0f;
-            var4_float = (float)((themeSpriteColors[var1][var2] & 65454) >> 8) / 255.0f;
-            var5_float = (float)(255 & themeSpriteColors[var1][var2]) / 255.0f;
-            var9 = 0;
-            if ((var3_float > var4_float) &&
-                (var3_float > var5_float)) {
-              var7 = var3_float;
-              if (!(var4_float > var5_float)) {
-                var6 = var4_float;
+        allocatedSortKeys = new int[7];
+        allocatedSortKeysAlias = allocatedSortKeys;
+        themeSortKeysForWrites = allocatedSortKeysAlias;
+        for (sortedThemeIndex = 0; sortedThemeIndex < 7; sortedThemeIndex++) {
+          for (colorIndex = 0; 7 > colorIndex; colorIndex++) {
+            maskedRedFraction = (float)((themeSpriteColors[sortedThemeIndex][colorIndex] & 16776188) >> 16) / 255.0f;
+            maskedGreenFraction = (float)((themeSpriteColors[sortedThemeIndex][colorIndex] & 65454) >> 8) / 255.0f;
+            blueFraction = (float)(255 & themeSpriteColors[sortedThemeIndex][colorIndex]) / 255.0f;
+            dominantChannelId = 0;
+            if ((maskedRedFraction > maskedGreenFraction) &&
+                (maskedRedFraction > blueFraction)) {
+              selectedHighChannel = maskedRedFraction;
+              if (!(maskedGreenFraction > blueFraction)) {
+                selectedLowChannel = maskedGreenFraction;
               } else {
-                var6 = var5_float;
+                selectedLowChannel = blueFraction;
               }
-            } else if ((var4_float > var3_float) &&
-                (var4_float > var5_float)) {
-              var6 = (!(var3_float > var5_float)) ? var3_float : var5_float;
-              var9 = 1;
-              var7 = var4_float;
+            } else if ((maskedGreenFraction > maskedRedFraction) &&
+                (maskedGreenFraction > blueFraction)) {
+              selectedLowChannel = (!(maskedRedFraction > blueFraction)) ? maskedRedFraction : blueFraction;
+              dominantChannelId = 1;
+              selectedHighChannel = maskedGreenFraction;
             } else {
-              var7 = var5_float;
-              var9 = 2;
-              var6 = (!(var4_float < var3_float)) ? var3_float : var4_float;
+              selectedHighChannel = blueFraction;
+              dominantChannelId = 2;
+              selectedLowChannel = (!(maskedGreenFraction < maskedRedFraction)) ? maskedRedFraction : maskedGreenFraction;
             }
-            var8 = var7 - var6;
-            var10 = (var7 + var6) / 2.0f;
-            if (!(var10 < 0.5f)) {
-              var11 = var8 / (-var6 + (-var7 + 2.0f));
+            selectedChannelRange = selectedHighChannel - selectedLowChannel;
+            derivedLightness = (selectedHighChannel + selectedLowChannel) / 2.0f;
+            if (!(derivedLightness < 0.5f)) {
+              derivedSaturation = selectedChannelRange / (-selectedLowChannel + (-selectedHighChannel + 2.0f));
             } else {
-              var11 = var8 / (var7 + var6);
+              derivedSaturation = selectedChannelRange / (selectedHighChannel + selectedLowChannel);
             }
-            var13 = 0.1666666716337204f;
-            var14 = ((-var3_float + var7) * var13 + 0.5f * var8) / var8;
-            var15 = ((-var4_float + var7) * var13 + 0.5f * var8) / var8;
-            var16 = (var13 * (var7 - var5_float) + var8 * 0.5f) / var8;
-            if (var9 == 0) {
-              var12 = -var15 + var16;
+            oneSixth = 0.1666666716337204f;
+            redHueOffset = ((-maskedRedFraction + selectedHighChannel) * oneSixth + 0.5f * selectedChannelRange) / selectedChannelRange;
+            greenHueOffset = ((-maskedGreenFraction + selectedHighChannel) * oneSixth + 0.5f * selectedChannelRange) / selectedChannelRange;
+            blueHueOffset = (oneSixth * (selectedHighChannel - blueFraction) + selectedChannelRange * 0.5f) / selectedChannelRange;
+            if (dominantChannelId == 0) {
+              derivedHue = -greenHueOffset + blueHueOffset;
             } else {
-              if (var9 == 1) {
-                var12 = -var16 + (0.3333333432674408f + var14);
+              if (dominantChannelId == 1) {
+                derivedHue = -blueHueOffset + (0.3333333432674408f + redHueOffset);
               } else {
-                var12 = -var14 + (0.6666666865348816f + var15);
+                derivedHue = -redHueOffset + (0.6666666865348816f + greenHueOffset);
               }
             }
-            if (!(var12 < 0.0f)) {
-              if (var12 > 1.0f) {
-                var12 = var12 - 1.0f;
+            if (!(derivedHue < 0.0f)) {
+              if (derivedHue > 1.0f) {
+                derivedHue = derivedHue - 1.0f;
               }
             } else {
-              var12 = var12 + 1.0f;
+              derivedHue = derivedHue + 1.0f;
             }
-            var0[var2] = (int)(var12 * 255.0f) << (int)(var11 * 255.0f) + 16 << 8 + (int)(255.0f * var10);
+            themeSortKeysForWrites[colorIndex] = (int)(derivedHue * 255.0f) << (int)(derivedSaturation * 255.0f) + 16 << 8 + (int)(255.0f * derivedLightness);
           }
-          for (var2 = 1; 7 > var2; var2++) {
-            var3 = -1 + var2;
-            var4 = var18[var2];
-            var5 = themeCycleColors[var1][var2];
-            while (var3 >= 0) {
-              if (var18[var3] > var4) {
-                var0[var3 + 1] = var18[var3];
-                themeCycleColors[var1][1 + var3] = themeCycleColors[var1][var3];
-                var3--;
+          for (colorIndex = 1; 7 > colorIndex; colorIndex++) {
+            insertionScanIndex = -1 + colorIndex;
+            insertionSortKey = allocatedSortKeys[colorIndex];
+            insertionRgbColor = themeCycleColors[sortedThemeIndex][colorIndex];
+            while (insertionScanIndex >= 0) {
+              if (allocatedSortKeys[insertionScanIndex] > insertionSortKey) {
+                themeSortKeysForWrites[insertionScanIndex + 1] = allocatedSortKeys[insertionScanIndex];
+                themeCycleColors[sortedThemeIndex][1 + insertionScanIndex] = themeCycleColors[sortedThemeIndex][insertionScanIndex];
+                insertionScanIndex--;
                 continue;
               }
               break;
             }
-            var0[var3 + 1] = var4;
-            themeCycleColors[var1][var3 + 1] = var5;
+            themeSortKeysForWrites[insertionScanIndex + 1] = insertionSortKey;
+            themeCycleColors[sortedThemeIndex][insertionScanIndex + 1] = insertionRgbColor;
           }
         }
     }

@@ -386,9 +386,9 @@ abstract class SessionGameApplet extends GameApplet {
           AccountEligibilitySupport.loginReturnAllowed = false;
           CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.field_n, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
           if (!((!LoginProtocolSupport.field_a) &&
-              (SocketConnector.field_d == null))) {
+              (SocketConnector.bootstrapLoginPanelMessage == null))) {
             loginPanelGuardSnapshot = 2274;
-            loginPanelMessageSnapshot = SocketConnector.field_d;
+            loginPanelMessageSnapshot = SocketConnector.bootstrapLoginPanelMessage;
             if (LoginProtocolSupport.field_a) {
               allowRetrySnapshot = false;
             } else {

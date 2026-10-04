@@ -5,7 +5,7 @@ final class MessageDialogSupport {
     static String idleMessage20MinText;
     static String createDoubleSpaceAlertText;
     static int releasesPerTheme;
-    static int field_f;
+    static int bakingThemeCompletionAchievementId;
     static int field_e;
     static boolean entitiesDetachedThisTick;
     static ByteArrayBuffer encryptedPayloadScratchBuffer;
@@ -38,7 +38,7 @@ final class MessageDialogSupport {
 
     static {
         releasesPerTheme = 60;
-        field_f = 14;
+        bakingThemeCompletionAchievementId = 14;
         idleMessage20MinText = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         createDoubleSpaceAlertText = "Names cannot contain consecutive spaces";
         field_e = 0;

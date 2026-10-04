@@ -128,8 +128,8 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         try {
           guardResidue = 111 % ((methodGuard - 9) / 38);
           proxyConnector = new ProxySocketConnector();
-          ((SocketConnector) ((Object) proxyConnector)).field_b = port;
-          ((SocketConnector) ((Object) proxyConnector)).field_e = host;
+          ((SocketConnector) ((Object) proxyConnector)).destinationPort = port;
+          ((SocketConnector) ((Object) proxyConnector)).destinationHost = host;
           connectorBeforeReturn = proxyConnector;
           return (SocketConnector) ((Object) connectorBeforeReturn);
         } catch (java.lang.RuntimeException proxyConnectorConstructionFailure) {

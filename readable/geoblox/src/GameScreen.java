@@ -413,7 +413,7 @@ final class GameScreen extends MenuScreen {
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX = 185;
                 IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.field_sb, 130, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
                 DelayedIncomingPacket.drawNineSlicePanel(320, 120, 60, (byte) -92, panelWidth, GameGraphicsResources.frameNineSliceSprites);
-                IntrusiveNodeHashTable.smallFont.drawParagraph(ProxyAuthenticationRequiredException.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
+                IntrusiveNodeHashTable.smallFont.drawParagraph(ProxyAuthenticationRequiredException.discardResultsWarningText, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                 if (clientControlFlowGuard == 0) {
                   return;
                 }
