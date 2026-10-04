@@ -2,86 +2,86 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SynthesizedSoundEffect {
-    private int field_c;
-    private int field_b;
-    private SynthesizedSoundInstrument[] field_a;
+    private int loopStartMillis;
+    private int loopEndMillis;
+    private SynthesizedSoundInstrument[] instruments;
 
-    final PcmSample a() {
-        byte[] var1 = this.b();
-        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
+    final PcmSample toPcmSample() {
+        byte[] samples = this.mixSamples();
+        return new PcmSample(22050, samples, 22050 * this.loopStartMillis / 1000, 22050 * this.loopEndMillis / 1000);
     }
 
-    private final byte[] b() {
-        int var8 = 0;
-        int var1;
-        int var2;
-        byte[] var3;
-        int var4;
-        int var5;
-        int var6;
-        int var9;
-        int[] var13;
-        var1 = 0;
-        for (var2 = 0; var2 < 10; var2++) {
-          if (this.field_a[var2] == null) {
+    private final byte[] mixSamples() {
+        int sampleIndex = 0;
+        int totalDurationMillis;
+        int scanIndexOrSampleCount;
+        byte[] samples;
+        int instrumentIndex;
+        int instrumentSampleCount;
+        int startSample;
+        int mixedSample;
+        int[] instrumentSamples;
+        totalDurationMillis = 0;
+        for (scanIndexOrSampleCount = 0; scanIndexOrSampleCount < 10; scanIndexOrSampleCount++) {
+          if (this.instruments[scanIndexOrSampleCount] == null) {
             continue;
           }
-          if (this.field_a[var2].durationMillis + this.field_a[var2].startDelayMillis <= var1) {
+          if (this.instruments[scanIndexOrSampleCount].durationMillis + this.instruments[scanIndexOrSampleCount].startDelayMillis <= totalDurationMillis) {
             continue;
           }
-          var1 = this.field_a[var2].durationMillis + this.field_a[var2].startDelayMillis;
+          totalDurationMillis = this.instruments[scanIndexOrSampleCount].durationMillis + this.instruments[scanIndexOrSampleCount].startDelayMillis;
         }
-        if (var1 == 0) {
+        if (totalDurationMillis == 0) {
           return new byte[]{};
         }
-        var2 = 22050 * var1 / 1000;
-        var3 = new byte[var2];
-        var4 = 0;
+        scanIndexOrSampleCount = 22050 * totalDurationMillis / 1000;
+        samples = new byte[scanIndexOrSampleCount];
+        instrumentIndex = 0;
         while (true) {
-          if (var4 >= 10) {
-            return var3;
+          if (instrumentIndex >= 10) {
+            return samples;
           }
-          if (this.field_a[var4] == null) {
-            var4++;
+          if (this.instruments[instrumentIndex] == null) {
+            instrumentIndex++;
             continue;
           }
-          var5 = this.field_a[var4].durationMillis * 22050 / 1000;
-          var6 = this.field_a[var4].startDelayMillis * 22050 / 1000;
-          var13 = this.field_a[var4].synthesize(var5, this.field_a[var4].durationMillis);
-          for (var8 = 0; var8 < var5; var8++) {
-            var9 = var3[var8 + var6] + (var13[var8] >> 8);
-            if ((var9 + 128 & -256) != 0) {
-              var9 = var9 >> 31 ^ 127;
+          instrumentSampleCount = this.instruments[instrumentIndex].durationMillis * 22050 / 1000;
+          startSample = this.instruments[instrumentIndex].startDelayMillis * 22050 / 1000;
+          instrumentSamples = this.instruments[instrumentIndex].synthesize(instrumentSampleCount, this.instruments[instrumentIndex].durationMillis);
+          for (sampleIndex = 0; sampleIndex < instrumentSampleCount; sampleIndex++) {
+            mixedSample = samples[sampleIndex + startSample] + (instrumentSamples[sampleIndex] >> 8);
+            if ((mixedSample + 128 & -256) != 0) {
+              mixedSample = mixedSample >> 31 ^ 127;
             }
-            var3[var8 + var6] = (byte)var9;
+            samples[sampleIndex + startSample] = (byte)mixedSample;
           }
-          var4++;
+          instrumentIndex++;
           continue;
         }
     }
 
-    private SynthesizedSoundEffect(ByteArrayBuffer param0) {
-        int var2 = 0;
-        int var3;
-        this.field_a = new SynthesizedSoundInstrument[10];
-        for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.readUnsignedByte((byte) 34);
-          if (var3 == 0) {
+    private SynthesizedSoundEffect(ByteArrayBuffer buffer) {
+        int instrumentIndex = 0;
+        int instrumentMarker;
+        this.instruments = new SynthesizedSoundInstrument[10];
+        for (instrumentIndex = 0; instrumentIndex < 10; instrumentIndex++) {
+          instrumentMarker = buffer.readUnsignedByte((byte) 34);
+          if (instrumentMarker == 0) {
             continue;
           }
-          param0.position = param0.position - 1;
-          this.field_a[var2] = new SynthesizedSoundInstrument();
-          this.field_a[var2].decode(param0);
+          buffer.position = buffer.position - 1;
+          this.instruments[instrumentIndex] = new SynthesizedSoundInstrument();
+          this.instruments[instrumentIndex].decode(buffer);
         }
-        this.field_c = param0.readUnsignedShortBE(true);
-        this.field_b = param0.readUnsignedShortBE(true);
+        this.loopStartMillis = buffer.readUnsignedShortBE(true);
+        this.loopEndMillis = buffer.readUnsignedShortBE(true);
     }
 
-    final static SynthesizedSoundEffect a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.getFile(param1, -28153, param2);
-        if (var3 == null) {
+    final static SynthesizedSoundEffect load(ResourceArchive archive, int groupId, int fileId) {
+        byte[] encodedEffect = archive.getFile(groupId, -28153, fileId);
+        if (encodedEffect == null) {
             return null;
         }
-        return new SynthesizedSoundEffect(new ByteArrayBuffer(var3));
+        return new SynthesizedSoundEffect(new ByteArrayBuffer(encodedEffect));
     }
 }

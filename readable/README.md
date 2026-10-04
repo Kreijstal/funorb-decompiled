@@ -1,11 +1,43 @@
 # Readable GeoBlox
 
-The current export has 14,618 guarded naming rules: 302 classes, 1,776 fields,
-1,499 methods, 4,205 parameters, 6,753 local declarations and 83 labels. Both 303-file corpora
+The current export has 14,704 guarded naming rules: 302 classes, 1,798 fields,
+1,512 methods, 4,223 parameters, 6,786 local declarations and 83 labels. Both 303-file corpora
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current terminal loop headers (pass 151)
+## Current synthesized sound names (pass 152)
+
+Pass 152 adds 86 guarded names: 22 fields, thirteen methods, eighteen
+parameters and 33 locals. Every declaration in SoundFilter (45), SoundEnvelope
+(22) and SynthesizedSoundEffect (25) has a readable name; constructors follow
+the existing class rules. Their callers now show envelope reset/advance,
+endpoint decode, pole-pair coefficient expansion, forward gain and signed PCM
+mixing with millisecond loop boundaries. Reused slots keep names that cover
+both roles, rather than implying a register has only one meaning.
+
+The same result-helper fixture adds 134 native/raw/readable cases: 48 constant
+envelope/reset trajectories, three explicit fixed-point ramps, 23 truncated/null
+envelopes with partial-state/cursor traces, forty filter cases including NaN,
+and twenty constructed square-wave mix/delay/saturation/PCM-loop cases. Flat
+and ramp values, coefficient counts/unity/zero-radius cases, and mixing/loop
+values have independent explicit oracles. Other filter coefficients and partial
+decode state compare transformed native/raw/readable traces directly. All eleven
+previous result-helper traces retain their reviewed hashes.
+
+There are 14,704 rules and 102,711 identifier edits, plus eleven class-name
+literal and 250 label edits: 102,972 total. All 14,618 previous complete rules
+remain. Six generated Java files change; all raw code, source/tool/workflow/stub
+pins, local ordinals, 136,607 bindings, 388 overrides and 811 lexical label
+records remain. Both 303-file corpora compile, reproduce and reverse byte
+exactly; the 27 publication tests and extended result-helper fixture pass.
+No Java body is hand edited and no decompiler change is required.
+
+Eight large labeled bodies and 162 opaque labels remain, together with 307
+opaque fields and 342 short opaque methods. Full packed instruments, arbitrary
+modulation/filtering, real archive assets, device playback, full-game/server/
+browser/phone and heap/FPS acceptance remain unverified.
+
+## Previous terminal loop headers (pass 151)
 
 Pass 151 gives three loops their original guard headers: the frame loop in
 GameApplet.run becomes do-while; MidiPcmStream.advanceMidiEvents and
@@ -1085,7 +1117,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/f8f107b06f284034288da1a49bedc4acde939198/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/f8f107b06f284034288da1a49bedc4acde939198/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/62901e8f8a98d3136668db754fd06a8dde81bed1/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/62901e8f8a98d3136668db754fd06a8dde81bed1/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -1329,7 +1361,7 @@ Pass123 adds the guarded direct-literal policy and their readable class names.
 The current raw tree is
 `b94f67e3ce485801bc06bcc445eb5d03c52847d3668502a0c0fc6d1a1dd77f3e`;
 the current readable tree is
-`3090c1ff0ecd1e84362cd4819ad1e0bdda19d51a7ffe2ba24109a951e8d7abc1`.
+`72e10b256db2ce973598e9f2f1635bee4946cd18a263843855924bbcfaae347a`.
 The pinned decompiler-source SHA-256 is
 `74bd2b5e113c492f08db3791204ccd99a59aaa985c04a3dfc27b9d17772941b2`.
 All eight native/raw/readable probes pass with their pinned traces.
@@ -1343,16 +1375,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/f8f107b06f284034288da1a49bedc4acde939198/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/62901e8f8a98d3136668db754fd06a8dde81bed1/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/f8f107b06f284034288da1a49bedc4acde939198/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/62901e8f8a98d3136668db754fd06a8dde81bed1/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `f8f107b06f284034288da1a49bedc4acde939198`; the
-manifest SHA-256 is `dd990cf76cb8ffd04a3f9c3c404634d06117b5894f1f401ec9225e2aed084b83`.
+The current Deko workflow/manifest commit is `62901e8f8a98d3136668db754fd06a8dde81bed1`; the
+manifest SHA-256 is `4eca5f757437140857f94d5f915d152f5bf8f81af988bd28a9e8f41b7bbe79bf`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

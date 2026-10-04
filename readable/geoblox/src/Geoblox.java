@@ -515,7 +515,7 @@ public final class Geoblox extends SessionGameApplet {
         CacheReference.releaseCacheReferenceResources(-111);
         StrongCacheReference.releaseStrongReferenceResources(-1);
         ProxySocketConnector.e(1353);
-        SoundFilter.a();
+        SoundFilter.releaseCoefficientBuffers();
         CharacterReplacementSupport.clearReplacementAndTransitionResources((byte) -23);
         NodeHashTableIterator.releaseSharedResources(0);
         SecondaryNodeDequeIterator.releaseSharedResources((byte) 101);

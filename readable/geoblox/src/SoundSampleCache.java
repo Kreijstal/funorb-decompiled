@@ -286,11 +286,11 @@ final class SoundSampleCache {
               (byteBudget[0] <= 0)) {
             return null;
           }
-          soundEffect = SynthesizedSoundEffect.a(this.synthesizedSoundArchive, groupId, fileId);
+          soundEffect = SynthesizedSoundEffect.load(this.synthesizedSoundArchive, groupId, fileId);
           if (soundEffect == null) {
             return null;
           }
-          renderedSample = soundEffect.a();
+          renderedSample = soundEffect.toPcmSample();
           cachedThenRenderedSample = renderedSample;
           this.decodedSamples.put((byte) 102, cachedThenRenderedSample, cacheKey);
           if (byteBudget != null) {

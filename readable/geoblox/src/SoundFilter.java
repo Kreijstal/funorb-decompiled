@@ -2,141 +2,141 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoundFilter {
-    int[] field_b;
-    private static float field_d;
-    private int[][][] field_c;
-    private int[] field_e;
-    private int[][][] field_h;
-    static int field_a;
-    private static float[][] field_f;
-    static int[][] field_g;
+    int[] pairCounts;
+    private static float forwardGain;
+    private int[][][] frequencyEndpoints;
+    private int[] gainEndpoints;
+    private int[][][] attenuationEndpoints;
+    static int forwardMultiplierQ16;
+    private static float[][] coefficientWorkspace;
+    static int[][] coefficientsQ16;
 
-    public static void a() {
-        field_f = (float[][]) null;
-        field_g = (int[][]) null;
+    public static void releaseCoefficientBuffers() {
+        coefficientWorkspace = (float[][]) null;
+        coefficientsQ16 = (int[][]) null;
     }
 
-    final int a(int param0, float param1) {
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        int var7 = 0;
-        float[] dupTemp$0 = null;
-        float[] dupTemp$1 = null;
-        float[] dupTemp$2 = null;
-        float[] dupTemp$3 = null;
-        float var3 = 0.0f;
-        int var4 = 0;
-        if (param0 == 0) {
-            var3 = (float)this.field_e[0] + (float)(this.field_e[1] - this.field_e[0]) * param1;
-            var3 = var3 * 0.0030517578125f;
-            field_d = (float)Math.pow(0.1, (double)(var3 / 20.0f));
-            field_a = (int)(field_d * 65536.0f);
+    final int computeCoefficients(int channel, float fraction) {
+        float firstOrderTerm = 0.0f;
+        float secondOrderTerm = 0.0f;
+        int coefficientIndex = 0;
+        float[] recurrenceCoefficients = null;
+        float[] lowOrderCoefficients = null;
+        float[] leadingCoefficients = null;
+        float[] forwardCoefficients = null;
+        float interpolatedValue = 0.0f;
+        int pairOrCoefficientIndex = 0;
+        if (channel == 0) {
+            interpolatedValue = (float)this.gainEndpoints[0] + (float)(this.gainEndpoints[1] - this.gainEndpoints[0]) * fraction;
+            interpolatedValue = interpolatedValue * 0.0030517578125f;
+            forwardGain = (float)Math.pow(0.1, (double)(interpolatedValue / 20.0f));
+            forwardMultiplierQ16 = (int)(forwardGain * 65536.0f);
         }
-        if (this.field_b[param0] == 0) {
+        if (this.pairCounts[channel] == 0) {
             return 0;
         }
-        var3 = this.a(param0, 0, param1);
-        field_f[param0][0] = -2.0f * var3 * (float)Math.cos((double)this.b(param0, 0, param1));
-        field_f[param0][1] = var3 * var3;
-        for (var4 = 1; var4 < this.field_b[param0]; var4++) {
-            var3 = this.a(param0, var4, param1);
-            var5 = -2.0f * var3 * (float)Math.cos((double)this.b(param0, var4, param1));
-            var6 = var3 * var3;
-            field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
-            field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
-            for (var7 = var4 * 2 - 1; var7 >= 2; var7--) {
-                dupTemp$0 = field_f[param0];
-                dupTemp$0[var7] = dupTemp$0[var7] + (field_f[param0][var7 - 1] * var5 + field_f[param0][var7 - 2] * var6);
+        interpolatedValue = this.interpolateRadius(channel, 0, fraction);
+        coefficientWorkspace[channel][0] = -2.0f * interpolatedValue * (float)Math.cos((double)this.interpolateAngularFrequency(channel, 0, fraction));
+        coefficientWorkspace[channel][1] = interpolatedValue * interpolatedValue;
+        for (pairOrCoefficientIndex = 1; pairOrCoefficientIndex < this.pairCounts[channel]; pairOrCoefficientIndex++) {
+            interpolatedValue = this.interpolateRadius(channel, pairOrCoefficientIndex, fraction);
+            firstOrderTerm = -2.0f * interpolatedValue * (float)Math.cos((double)this.interpolateAngularFrequency(channel, pairOrCoefficientIndex, fraction));
+            secondOrderTerm = interpolatedValue * interpolatedValue;
+            coefficientWorkspace[channel][pairOrCoefficientIndex * 2 + 1] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * secondOrderTerm;
+            coefficientWorkspace[channel][pairOrCoefficientIndex * 2] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * firstOrderTerm + coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 2] * secondOrderTerm;
+            for (coefficientIndex = pairOrCoefficientIndex * 2 - 1; coefficientIndex >= 2; coefficientIndex--) {
+                recurrenceCoefficients = coefficientWorkspace[channel];
+                recurrenceCoefficients[coefficientIndex] = recurrenceCoefficients[coefficientIndex] + (coefficientWorkspace[channel][coefficientIndex - 1] * firstOrderTerm + coefficientWorkspace[channel][coefficientIndex - 2] * secondOrderTerm);
             }
-            dupTemp$1 = field_f[param0];
-            dupTemp$1[1] = dupTemp$1[1] + (field_f[param0][0] * var5 + var6);
-            dupTemp$2 = field_f[param0];
-            dupTemp$2[0] = dupTemp$2[0] + var5;
+            lowOrderCoefficients = coefficientWorkspace[channel];
+            lowOrderCoefficients[1] = lowOrderCoefficients[1] + (coefficientWorkspace[channel][0] * firstOrderTerm + secondOrderTerm);
+            leadingCoefficients = coefficientWorkspace[channel];
+            leadingCoefficients[0] = leadingCoefficients[0] + firstOrderTerm;
         }
-        if (param0 == 0) {
-            for (var4 = 0; var4 < this.field_b[0] * 2; var4++) {
-                dupTemp$3 = field_f[0];
-                dupTemp$3[var4] = dupTemp$3[var4] * field_d;
+        if (channel == 0) {
+            for (pairOrCoefficientIndex = 0; pairOrCoefficientIndex < this.pairCounts[0] * 2; pairOrCoefficientIndex++) {
+                forwardCoefficients = coefficientWorkspace[0];
+                forwardCoefficients[pairOrCoefficientIndex] = forwardCoefficients[pairOrCoefficientIndex] * forwardGain;
             }
         }
-        for (var4 = 0; var4 < this.field_b[param0] * 2; var4++) {
-            field_g[param0][var4] = (int)(field_f[param0][var4] * 65536.0f);
+        for (pairOrCoefficientIndex = 0; pairOrCoefficientIndex < this.pairCounts[channel] * 2; pairOrCoefficientIndex++) {
+            coefficientsQ16[channel][pairOrCoefficientIndex] = (int)(coefficientWorkspace[channel][pairOrCoefficientIndex] * 65536.0f);
         }
-        return this.field_b[param0] * 2;
+        return this.pairCounts[channel] * 2;
     }
 
-    private final static float a(float param0) {
-        float var1 = 32.70319747924805f * (float)Math.pow(2.0, (double)param0);
-        return var1 * 3.1415927410125732f / 11025.0f;
+    private final static float normalizeAngularFrequency(float frequencyOctaves) {
+        float frequencyHz = 32.70319747924805f * (float)Math.pow(2.0, (double)frequencyOctaves);
+        return frequencyHz * 3.1415927410125732f / 11025.0f;
     }
 
-    final void a(ByteArrayBuffer param0, SoundEnvelope param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int[] var11;
-        var3 = param0.readUnsignedByte((byte) 34);
-        this.field_b[0] = var3 >> 4;
-        this.field_b[1] = var3 & 15;
-        if (var3 != 0) {
-          this.field_e[0] = param0.readUnsignedShortBE(true);
-          this.field_e[1] = param0.readUnsignedShortBE(true);
-          var4 = param0.readUnsignedByte((byte) 34);
-          for (var5 = 0; var5 < 2; var5++) {
-            for (var6 = 0; var6 < this.field_b[var5]; var6++) {
-              this.field_c[var5][0][var6] = param0.readUnsignedShortBE(true);
-              this.field_h[var5][0][var6] = param0.readUnsignedShortBE(true);
+    final void decode(ByteArrayBuffer buffer, SoundEnvelope envelope) {
+        int packedPairCounts;
+        int variantMask;
+        int channel;
+        int pairIndex;
+        int variantPairIndex;
+        int[] zeroedGainEndpoints;
+        packedPairCounts = buffer.readUnsignedByte((byte) 34);
+        this.pairCounts[0] = packedPairCounts >> 4;
+        this.pairCounts[1] = packedPairCounts & 15;
+        if (packedPairCounts != 0) {
+          this.gainEndpoints[0] = buffer.readUnsignedShortBE(true);
+          this.gainEndpoints[1] = buffer.readUnsignedShortBE(true);
+          variantMask = buffer.readUnsignedByte((byte) 34);
+          for (channel = 0; channel < 2; channel++) {
+            for (pairIndex = 0; pairIndex < this.pairCounts[channel]; pairIndex++) {
+              this.frequencyEndpoints[channel][0][pairIndex] = buffer.readUnsignedShortBE(true);
+              this.attenuationEndpoints[channel][0][pairIndex] = buffer.readUnsignedShortBE(true);
             }
           }
-          for (var5 = 0; var5 < 2; var5++) {
-            var7 = 0;
-            var6 = var7;
-            while (var7 < this.field_b[var5]) {
-              if ((var4 & 1 << var5 * 4 << var7) == 0) {
-                this.field_c[var5][1][var7] = this.field_c[var5][0][var7];
-                this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
-                var7++;
+          for (channel = 0; channel < 2; channel++) {
+            variantPairIndex = 0;
+            pairIndex = variantPairIndex;
+            while (variantPairIndex < this.pairCounts[channel]) {
+              if ((variantMask & 1 << channel * 4 << variantPairIndex) == 0) {
+                this.frequencyEndpoints[channel][1][variantPairIndex] = this.frequencyEndpoints[channel][0][variantPairIndex];
+                this.attenuationEndpoints[channel][1][variantPairIndex] = this.attenuationEndpoints[channel][0][variantPairIndex];
+                variantPairIndex++;
                 continue;
               }
-              this.field_c[var5][1][var7] = param0.readUnsignedShortBE(true);
-              this.field_h[var5][1][var7] = param0.readUnsignedShortBE(true);
-              var7++;
+              this.frequencyEndpoints[channel][1][variantPairIndex] = buffer.readUnsignedShortBE(true);
+              this.attenuationEndpoints[channel][1][variantPairIndex] = buffer.readUnsignedShortBE(true);
+              variantPairIndex++;
             }
           }
-          if (!((var4 == 0) &&
-                (this.field_e[1] == this.field_e[0]))) {
-            param1.b(param0);
+          if (!((variantMask == 0) &&
+                (this.gainEndpoints[1] == this.gainEndpoints[0]))) {
+            envelope.decodeSegments(buffer);
           }
         } else {
-          var11 = this.field_e;
-          this.field_e[1] = 0;
-          var11[0] = 0;
+          zeroedGainEndpoints = this.gainEndpoints;
+          this.gainEndpoints[1] = 0;
+          zeroedGainEndpoints[0] = 0;
         }
     }
 
-    private final float b(int param0, int param1, float param2) {
-        float var4 = (float)this.field_c[param0][0][param1] + param2 * (float)(this.field_c[param0][1][param1] - this.field_c[param0][0][param1]);
-        var4 = var4 * 0.0001220703125f;
-        return SoundFilter.a(var4);
+    private final float interpolateAngularFrequency(int channel, int pairIndex, float fraction) {
+        float frequencyOctaves = (float)this.frequencyEndpoints[channel][0][pairIndex] + fraction * (float)(this.frequencyEndpoints[channel][1][pairIndex] - this.frequencyEndpoints[channel][0][pairIndex]);
+        frequencyOctaves = frequencyOctaves * 0.0001220703125f;
+        return SoundFilter.normalizeAngularFrequency(frequencyOctaves);
     }
 
-    private final float a(int param0, int param1, float param2) {
-        float var4 = (float)this.field_h[param0][0][param1] + param2 * (float)(this.field_h[param0][1][param1] - this.field_h[param0][0][param1]);
-        var4 = var4 * 0.00152587890625f;
-        return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
+    private final float interpolateRadius(int channel, int pairIndex, float fraction) {
+        float attenuationDecibels = (float)this.attenuationEndpoints[channel][0][pairIndex] + fraction * (float)(this.attenuationEndpoints[channel][1][pairIndex] - this.attenuationEndpoints[channel][0][pairIndex]);
+        attenuationDecibels = attenuationDecibels * 0.00152587890625f;
+        return 1.0f - (float)Math.pow(10.0, (double)(-attenuationDecibels / 20.0f));
     }
 
     SoundFilter() {
-        this.field_b = new int[2];
-        this.field_h = new int[2][2][4];
-        this.field_c = new int[2][2][4];
-        this.field_e = new int[2];
+        this.pairCounts = new int[2];
+        this.attenuationEndpoints = new int[2][2][4];
+        this.frequencyEndpoints = new int[2][2][4];
+        this.gainEndpoints = new int[2];
     }
 
     static {
-        field_f = new float[2][8];
-        field_g = new int[2][8];
+        coefficientWorkspace = new float[2][8];
+        coefficientsQ16 = new int[2][8];
     }
 }

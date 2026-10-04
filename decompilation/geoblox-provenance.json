@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "f8f107b06f284034288da1a49bedc4acde939198",
+    "commit": "62901e8f8a98d3136668db754fd06a8dde81bed1",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "dd990cf76cb8ffd04a3f9c3c404634d06117b5894f1f401ec9225e2aed084b83"
+      "sha256": "4eca5f757437140857f94d5f915d152f5bf8f81af988bd28a9e8f41b7bbe79bf"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,39 +3291,35 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "3090c1ff0ecd1e84362cd4819ad1e0bdda19d51a7ffe2ba24109a951e8d7abc1",
+    "outputTreeSha256": "72e10b256db2ce973598e9f2f1635bee4946cd18a263843855924bbcfaae347a",
     "files": 303,
-    "rules": 14618,
-    "identifierEdits": 102174,
+    "rules": 14704,
+    "identifierEdits": 102711,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 102435,
+    "totalEdits": 102972,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 250,
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 148,
-      "rulesAdded": 560,
+      "version": 152,
+      "rulesAdded": 86,
       "rulesRefined": 0,
-      "fields": 31,
-      "methods": 50,
-      "parameters": 194,
-      "locals": 284,
-      "labels": 1,
-      "previousCompleteRulesPreserved": 14058,
+      "fields": 22,
+      "methods": 13,
+      "parameters": 18,
+      "locals": 33,
+      "labels": 0,
+      "previousCompleteRulesPreserved": 14618,
       "explicitlyCorrectedSymbols": [],
       "rawInputAndGeneratorPinsUnchanged": true,
-      "explicitLabelAccountingMigration": true,
-      "labelEditsAdded": 4,
-      "allTextWidgetLayoutRendererLineAndCachedLayoutDeclarationsNamed": true,
-      "allTextWidgetLayoutAndDisplayTextFamiliesNamed": true,
-      "allEightLargeBodyLabelsNamed": true,
+      "allSoundEnvelopeFilterAndEffectDeclarationsNamed": true,
       "remainingOpaqueBlockLabels": 117,
-      "remainingOpaqueLoopLabels": 46,
+      "remainingOpaqueLoopLabels": 45,
       "wholeGameEquivalenceVerified": false
     },
     "structuralPass": 151
@@ -6087,5 +6083,196 @@
     },
     "scope": "A literal-true loop with exactly a leading conditional arm and terminal bare own break gains the original while guard. Normal arm paths retain an explicit break inside the arm; abrupt arms need no replacement break. Earlier own continues, own breaks and finally overrides keep their original loop destination/evaluation point. Whole arm scopes/protected groups remain. Direct trailing guard continues followed only by a bare own break become do-while with ordered short-circuit guards; any other own reference, prefix-owned direct local or potentially constant guard refuses. Once all own guard continues and the bare break are consumed, only that unused loop label is removed. Five new groups include twelve native variants matching48924 independent cases for partial arms, nullable/effectful guards, negative/zero/positive flags, earlier/finally backedges, pending-exception overrides, scopes, return snapshots and monitor release. All303 expected token streams and136607 ordered Java bindings/388 overrides match.245 surviving label definitions and811 records retain original destinations; one opaque GameApplet.run loop label/continue disappears and one later opaque ordinal migrates. No guarded name changes. Three loops in GameApplet.run, MidiPcmStream.advanceMidiEvents and LoginPanel.handleIntRecordReply gain headers and lose8 lines. All14618 complete naming objects remain; eight large labeled bodies remain unchanged. No client-control-zero assumption. Existing game probes retain their documented scopes; live applet timing, full MIDI/network/assets/gameplay/server/browser/phone and heap/FPS acceptance remain unverified.",
     "sourceProofWorkflowCommit": "f8f107b06f284034288da1a49bedc4acde939198"
+  },
+  "synthesizedSoundNaming": {
+    "version": 152,
+    "rulesAdded": 86,
+    "rulesRefined": 0,
+    "C": 0,
+    "F": 22,
+    "M": 13,
+    "P": 18,
+    "L": 33,
+    "B": 0,
+    "previousCompleteRulesPreserved": 14618,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "allOwnedDeclarationsNamed": {
+      "ub": 45,
+      "uc": 22,
+      "fg": 25
+    },
+    "constructorNamesFollowClassRules": true,
+    "sourceBodiesEditedByHand": false,
+    "identifierEditsAdded": 537,
+    "labelEditsAdded": 0,
+    "changedJavaFiles": 6,
+    "changedOriginalJavaFiles": [
+      "Geoblox.java",
+      "ci.java",
+      "ed.java",
+      "fg.java",
+      "ub.java",
+      "uc.java"
+    ],
+    "compilerResolvedFieldOccurrences": {
+      "F:fg.field_a:[Led;": {
+        "declarationsAndReferences": 14,
+        "files": [
+          "fg.java"
+        ]
+      },
+      "F:fg.field_b:I": {
+        "declarationsAndReferences": 3,
+        "files": [
+          "fg.java"
+        ]
+      },
+      "F:fg.field_c:I": {
+        "declarationsAndReferences": 3,
+        "files": [
+          "fg.java"
+        ]
+      },
+      "F:ub.field_a:I": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "ed.java",
+          "ub.java"
+        ]
+      },
+      "F:ub.field_b:[I": {
+        "declarationsAndReferences": 13,
+        "files": [
+          "ed.java",
+          "ub.java"
+        ]
+      },
+      "F:ub.field_c:[[[I": {
+        "declarationsAndReferences": 9,
+        "files": [
+          "ub.java"
+        ]
+      },
+      "F:ub.field_d:F": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "ub.java"
+        ]
+      },
+      "F:ub.field_e:[I": {
+        "declarationsAndReferences": 11,
+        "files": [
+          "ub.java"
+        ]
+      },
+      "F:ub.field_f:[[F": {
+        "declarationsAndReferences": 18,
+        "files": [
+          "ub.java"
+        ]
+      },
+      "F:ub.field_g:[[I": {
+        "declarationsAndReferences": 10,
+        "files": [
+          "ed.java",
+          "ub.java"
+        ]
+      },
+      "F:ub.field_h:[[[I": {
+        "declarationsAndReferences": 9,
+        "files": [
+          "ub.java"
+        ]
+      },
+      "F:uc.field_a:I": {
+        "declarationsAndReferences": 9,
+        "files": [
+          "uc.java"
+        ]
+      },
+      "F:uc.field_b:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "uc.java"
+        ]
+      },
+      "F:uc.field_c:[I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "uc.java"
+        ]
+      },
+      "F:uc.field_d:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "uc.java"
+        ]
+      },
+      "F:uc.field_e:I": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "ed.java",
+          "uc.java"
+        ]
+      },
+      "F:uc.field_f:I": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "uc.java"
+        ]
+      },
+      "F:uc.field_g:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "ed.java",
+          "uc.java"
+        ]
+      },
+      "F:uc.field_h:I": {
+        "declarationsAndReferences": 6,
+        "files": [
+          "uc.java"
+        ]
+      },
+      "F:uc.field_i:[I": {
+        "declarationsAndReferences": 8,
+        "files": [
+          "uc.java"
+        ]
+      },
+      "F:uc.field_j:I": {
+        "declarationsAndReferences": 12,
+        "files": [
+          "ed.java",
+          "uc.java"
+        ]
+      },
+      "F:uc.field_k:I": {
+        "declarationsAndReferences": 8,
+        "files": [
+          "uc.java"
+        ]
+      }
+    },
+    "declarationIdentitiesPreserved": 19498,
+    "bindingsCompared": 136607,
+    "overrideRelationshipsPreserved": 388,
+    "labelBindingsPreserved": 811,
+    "labelInventory": {
+      "opaque_plain": 117,
+      "named_plain": 71,
+      "opaque_loop": 45,
+      "named_loop": 12
+    },
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "62901e8f8a98d3136668db754fd06a8dde81bed1",
+    "manifestSha256": "4eca5f757437140857f94d5f915d152f5bf8f81af988bd28a9e8f41b7bbe79bf",
+    "outputTreeSha256": "72e10b256db2ce973598e9f2f1635bee4946cd18a263843855924bbcfaae347a",
+    "sourceProofTest": "readable/tests/test-geoblox-result-helpers.mjs",
+    "sourceProofTestSha256": "d656a014d54eaeb259f6a89d69d6e8856ce39553ee830b80ae86bbbb33ad5bd1",
+    "nativeTraceSha256": "5940267c23617214e39dc820f851b313492cc7e3c5950144a2d34ffb1a75d62b",
+    "nativeScenarios": 134,
+    "existingResultHelperTracePinsPreserved": 11,
+    "scope": "Pass 152 adds 86 guarded names: 22 fields, thirteen methods, eighteen\nparameters and 33 locals. Every declaration in SoundFilter (45), SoundEnvelope\n(22) and SynthesizedSoundEffect (25) has a readable name; constructors follow\nthe existing class rules. Their callers now show envelope reset/advance,\nendpoint decode, pole-pair coefficient expansion, forward gain and signed PCM\nmixing with millisecond loop boundaries. Reused slots keep names that cover\nboth roles, rather than implying a register has only one meaning.\n\nThe same result-helper fixture adds 134 native/raw/readable cases: 48 constant\nenvelope/reset trajectories, three explicit fixed-point ramps, 23 truncated/null\nenvelopes with partial-state/cursor traces, forty filter cases including NaN,\nand twenty constructed square-wave mix/delay/saturation/PCM-loop cases. Flat\nand ramp values, coefficient counts/unity/zero-radius cases, and mixing/loop\nvalues have independent explicit oracles. Other filter coefficients and partial\ndecode state compare transformed native/raw/readable traces directly. All eleven\nprevious result-helper traces retain their reviewed hashes.\n\nThere are 14,704 rules and 102,711 identifier edits, plus eleven class-name\nliteral and 250 label edits: 102,972 total. All 14,618 previous complete rules\nremain. Six generated Java files change; all raw code, source/tool/workflow/stub\npins, local ordinals, 136,607 bindings, 388 overrides and 811 lexical label\nrecords remain. Both 303-file corpora compile, reproduce and reverse byte\nexactly; the 27 publication tests and extended result-helper fixture pass.\nNo Java body is hand edited and no decompiler change is required.\n\nEight large labeled bodies and 162 opaque labels remain, together with 307\nopaque fields and 342 short opaque methods. Full packed instruments, arbitrary\nmodulation/filtering, real archive assets, device playback, full-game/server/\nbrowser/phone and heap/FPS acceptance remain unverified."
   }
 }
