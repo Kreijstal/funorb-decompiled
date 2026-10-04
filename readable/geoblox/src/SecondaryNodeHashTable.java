@@ -50,10 +50,11 @@ final class SecondaryNodeHashTable {
               this.lookupCursor = this.lookupCursor.nextSecondaryNode;
               continue;
             }
-            matchingNode = this.lookupCursor;
-            this.lookupCursor = this.lookupCursor.nextSecondaryNode;
-            return matchingNode;
+            break;
           }
+          matchingNode = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.nextSecondaryNode;
+          return matchingNode;
         }
         this.buckets = (DualLinkNode[]) null;
         while (true) {
@@ -65,10 +66,11 @@ final class SecondaryNodeHashTable {
             this.lookupCursor = this.lookupCursor.nextSecondaryNode;
             continue;
           }
-          matchingNode = this.lookupCursor;
-          this.lookupCursor = this.lookupCursor.nextSecondaryNode;
-          return matchingNode;
+          break;
         }
+        matchingNode = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.nextSecondaryNode;
+        return matchingNode;
     }
 
     final DualLinkNode findFirst(long key, int bucketOffsetGuard) {
@@ -88,10 +90,11 @@ final class SecondaryNodeHashTable {
             this.lookupCursor = this.lookupCursor.nextSecondaryNode;
             continue;
           }
-          matchingNode = this.lookupCursor;
-          this.lookupCursor = this.lookupCursor.nextSecondaryNode;
-          return matchingNode;
+          break;
         }
+        matchingNode = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.nextSecondaryNode;
+        return matchingNode;
     }
 
     public static void releaseSharedResources(boolean releaseRemainingResourcesGuard) {

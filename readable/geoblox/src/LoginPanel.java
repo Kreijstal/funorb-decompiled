@@ -88,13 +88,14 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                       continue;
                     }
                   }
-                  if (var5 != null) {
-                    var5.unlinkNode(false);
-                    break L0;
-                  }
-                  Bzip2DecoderState.closeSessionSocket((byte) -116);
-                  return;
+                  break;
                 }
+                if (var5 != null) {
+                  var5.unlinkNode(false);
+                  break L0;
+                }
+                Bzip2DecoderState.closeSessionSocket((byte) -116);
+                return;
               }
               IterableNodeHashTable.reportClientError((Throwable) null, "LR1: " + TextTemplateDefinition.e(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -123);

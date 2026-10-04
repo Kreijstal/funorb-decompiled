@@ -353,8 +353,9 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
               child = (UiWidget) ((Object) childCursor.nextForward((byte) 125));
               continue;
             }
-            return true;
+            break;
           }
+          return true;
         } catch (java.lang.RuntimeException focusFailure) {
           caughtFocusFailure = focusFailure;
           childFocusRequestFailure = caughtFocusFailure;

@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "99f224bfc7e761eb0ea1b5933070ca135adbcd94",
+      "commit": "747687c8b5e46c8e23ae43149b5dfe249459be42",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "3ccf8ec3da8a72fe05b08c8f53854cdf9198f2b5a0a993153cc0ada439b1988d",
-        "reproduce": "git archive --format=tar 99f224bfc7e761eb0ea1b5933070ca135adbcd94 | sha256sum",
+        "sha256": "9310084b7058635716851772aaa0d89fae16c589a702d0e4dbd86d38246c7e28",
+        "reproduce": "git archive --format=tar 747687c8b5e46c8e23ae43149b5dfe249459be42 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "59a5e169ba0a93052304a836ab69bba224b36e26f0560c5e9ea5f4685df4a220",
-  "previousSourceTreeSha256": "2b3bf4664aaf082ec60395d0b40546cda545920221218af5056a6f6858bbed4a",
-  "changedJavaFiles": 9,
+  "sourceTreeSha256": "9447232c7194f4e51f50697933f569f1f3f4504b2471ccd3e501807f9ac9de1c",
+  "previousSourceTreeSha256": "59a5e169ba0a93052304a836ab69bba224b36e26f0560c5e9ea5f4685df4a220",
+  "changedJavaFiles": 29,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "3c7273824f655a21b14668cd12e71a2ecccac07c",
+    "commit": "ab3a92a30a599bd0f9cc6c4734fa129e09f5177e",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "cfe992891e3096b1ba10ff8f6aa2a415609fd3cfd4ea574bd22bb879edf5715c"
+      "sha256": "1d9c765630aa55a1649892be378a559d89f140de6369ae85dd09651984d00a17"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "864a49ab89a73a4f78df02e8edb162fd6008324fc1d4c4f308d0d0650784eb98",
+    "outputTreeSha256": "e8948c501b69e628a3db376b7a334a6b1e28ae5164aae2ecd7c2f6050e582348",
     "files": 303,
     "rules": 14618,
     "identifierEdits": 102174,
@@ -3326,7 +3326,7 @@
       "remainingOpaqueLoopLabels": 46,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 149
+    "structuralPass": 150
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -5835,5 +5835,124 @@
     },
     "scope": "A complete prefix followed by direct conditional own continues and a noncompleting continuation becomes do-while. Multiple guards keep their evaluation order using short-circuit OR. Every own loop reference must be one of those guards: earlier/protected backedges and own breaks refuse. Body-owned prefix locals, potentially constant guards, unsupported/ambiguous syntax and normally completing suffixes refuse. Whole protected prefix constructs, return snapshots, finally overrides, monitors, scalar-parent braces and suffix local scopes remain. Six native variants match12096 independent event-model cases with ordered nullable/effectful guards, exception identity, partial effects, nonlocal exits and cleanup. All303 regenerated token streams,136607 ordered declaration/reference bindings,388 overrides and813 lexical label records stay unchanged. Thirteen loops in twelve methods across nine owners become explicit do-while, consuming14 bare continues and saving42 lines. Bzip2 decodeBlocks falls381 to375 lines; all eight large labeled bodies and all14618 complete naming rules remain. No client-control-zero assumption. Existing game probes retain their recorded scopes; full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.",
     "sourceProofWorkflowCommit": "3c7273824f655a21b14668cd12e71a2ecccac07c"
+  },
+  "loopExitContinuationRecovery": {
+    "version": 150,
+    "previousSourceCommit": "275e0a8ea9fdeadde4f23e0734ac1356dc9e81be",
+    "sourceCommit": "9f06c6b3a0f14a6858a95ea750ecb1ca8cbc108c",
+    "previousSourceTreeSha256": "59a5e169ba0a93052304a836ab69bba224b36e26f0560c5e9ea5f4685df4a220",
+    "sourceTreeSha256": "9447232c7194f4e51f50697933f569f1f3f4504b2471ccd3e501807f9ac9de1c",
+    "javaToolsCommit": "747687c8b5e46c8e23ae43149b5dfe249459be42",
+    "sourceArchiveSha256": "9310084b7058635716851772aaa0d89fae16c589a702d0e4dbd86d38246c7e28",
+    "loopExitContinuations": true,
+    "counts": {
+      "loopExitContinuations": 54
+    },
+    "bareLoopExitsAdded": 54,
+    "changedJavaFiles": 29,
+    "changedMethodBodies": 39,
+    "sourceLinesBefore": 76188,
+    "sourceLinesAfter": 76242,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 246,
+    "labelDeclarationsAfter": 246,
+    "labelBindingsBefore": 813,
+    "labelBindingsAfter": 813,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "genericFocusedTestGroupsPassed": 4,
+    "nativeComparisons": 18432,
+    "independentNativeOracleCases": 18432,
+    "nativeDifferentialVariants": 8,
+    "genericEmitterTestsPassed": 116,
+    "genericEmitterTestsSkipped": 1,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "4a71bbcc78aed57cfebe52a0cca8ec8172e61e478f213165a0e4859c78a01a05",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 327,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 346,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 630,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 335,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 376,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "scope": "A literal-true loop with a complete repeating prefix and noncompleting continuation can place that continuation after an explicit bare loop exit. All own references must be existing continues inside the intact prefix. Any own break, including finally overrides and syntactically dead transfers, refuses. Prefix-owned direct locals, ambiguous/unsupported syntax, no normal prefix path and fallthrough suffixes refuse. Entire protected/conditional/switch/label/monitor constructs stay intact; scalar-parent braces and suffix-local scope remain. Existing prefix continues, including finally backedges that suppress pending exceptions, still repeat without executing the continuation; nonlocal transfers still skip both sections. The suffix remains at the same enclosing protection/monitor depth. Eight native variants match18432 independent event cases, covering guard callback order/unboxing, effectful else arms, partial failures, exception identity, earlier/finally backedges, return snapshots, nonlocal exits and monitor release. All303 expected token streams,136607 ordered declaration/reference bindings,388 overrides and813 label records match. Fifty-four loops in39 methods across29 owners gain explicit exits, adding54 source lines and no labels/declarations/references. Board moving/connectivity, routing, transient recycling and final raster/achievement work become sequential sections; menu/session and Bzip2 continuations similarly leave their repeating loop. All14618 complete naming objects and ordinals remain. No client-control-zero assumption. Existing native game fixtures retain their documented scopes; full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.",
+    "sourceProofWorkflowCommit": "ab3a92a30a599bd0f9cc6c4734fa129e09f5177e"
   }
 }

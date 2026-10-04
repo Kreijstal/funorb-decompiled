@@ -285,10 +285,11 @@ final class IterableNodeHashTable implements Iterable {
             this.lookupCursor = this.lookupCursor.nextNode;
             continue;
           }
-          matchingNode = this.lookupCursor;
-          this.lookupCursor = this.lookupCursor.nextNode;
-          return matchingNode;
+          break;
         }
+        matchingNode = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.nextNode;
+        return matchingNode;
     }
 
     static {

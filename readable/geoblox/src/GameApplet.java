@@ -411,12 +411,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                         this.d(32000);
                         OpacityWidget.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
                       }
-                      if (var5 == 0) {
-                        continue L17;
-                      }
-                      break L1;
+                      break;
                     }
+                    if (var5 == 0) {
+                      continue L17;
+                    }
+                    break;
                   }
+                  break L1;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;

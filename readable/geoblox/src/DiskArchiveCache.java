@@ -342,8 +342,9 @@ final class DiskArchiveCache {
                         continue;
                       }
                     }
-                    return true;
+                    break;
                   }
+                  return true;
                 } catch (java.io.IOException writeIOException) {
                   caughtWriteFailure = writeIOException;
                   writeIoFailure = (IOException) (Object) caughtWriteFailure;

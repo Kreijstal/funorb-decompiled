@@ -178,8 +178,9 @@ final class GameplaySession {
                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
                 allowedCharacterIndexOrSuccessFlag = 1;
               }
-              return allowedCharacterIndexOrSuccessFlag != 0;
+              break;
             }
+            return allowedCharacterIndexOrSuccessFlag != 0;
           } catch (java.lang.Exception caughtLaunchException) {
             caughtThrowable = caughtLaunchException;
             urlLaunchException = (Exception) (Object) caughtThrowable;
@@ -425,8 +426,24 @@ final class GameplaySession {
                   } else {
                     debugEntityQueue = BoardEntityState.attachedEntities;
                   }
-                  renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
-                  while (true) {
+                  break;
+                }
+                renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
+                while (true) {
+                  if (renderedEntity != null) {
+                    SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                    if (clientControlFlowGuard == 0) {
+                      continue;
+                    }
+                  } else {
+                    debugEntityQueue = DelegatingCanvas.transientEntities;
+                  }
+                  break;
+                }
+                renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
+                while (true) {
+                  debugCounterPanelSelection: {
                     if (renderedEntity != null) {
                       SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
                       renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
@@ -434,49 +451,36 @@ final class GameplaySession {
                         continue;
                       }
                     } else {
-                      debugEntityQueue = DelegatingCanvas.transientEntities;
-                    }
-                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
-                    while (true) {
-                      debugCounterPanelSelection: {
-                        if (renderedEntity != null) {
-                          SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                          renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                          if (clientControlFlowGuard == 0) {
-                            continue;
-                          }
-                        } else {
-                          if (this.tutorialMode) {
-                            tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
-                            if (tutorialTextHeightOrDebugPanelTop < 10) {
-                              tutorialTextHeightOrDebugPanelTop = 10;
-                            }
-                            debugTutorialLineHeight = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent;
-                            debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
-                            debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
-                            SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                            break debugCounterPanelSelection;
-                          }
-                          PointerMenuState.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, PointerMenuState.smallBoxSprite.fullWidth / 2, PointerMenuState.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                      if (this.tutorialMode) {
+                        tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
+                        if (tutorialTextHeightOrDebugPanelTop < 10) {
+                          tutorialTextHeightOrDebugPanelTop = 10;
                         }
-                        if ((this.sessionPhase == 0) &&
-                            (!EntityContactSupport.areEntityQueuesSettled(0))) {
-                          PasswordValidator.countBoxSprite.drawScaledSilhouette(234, 205, PasswordValidator.countBoxSprite.fullWidth / 2, PasswordValidator.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                          if (clientControlFlowGuard == 0) {
-                            break debugCounterPanelSelection;
-                          }
-                        }
-                        UsernameSuggestionsPanel.largeBoxSprite.drawScaledSilhouette(223, 205, UsernameSuggestionsPanel.largeBoxSprite.fullWidth / 2, UsernameSuggestionsPanel.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                        debugTutorialLineHeight = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent;
+                        debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
+                        debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
+                        SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                        break debugCounterPanelSelection;
                       }
-                      SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
-                      SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-                      SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-                      minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
-                      grayLevelForComparisonOrCompositeEnabled = 1;
-                      break debugOverviewPreparation;
+                      PointerMenuState.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, PointerMenuState.smallBoxSprite.fullWidth / 2, PointerMenuState.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                     }
+                    if ((this.sessionPhase == 0) &&
+                        (!EntityContactSupport.areEntityQueuesSettled(0))) {
+                      PasswordValidator.countBoxSprite.drawScaledSilhouette(234, 205, PasswordValidator.countBoxSprite.fullWidth / 2, PasswordValidator.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                      if (clientControlFlowGuard == 0) {
+                        break debugCounterPanelSelection;
+                      }
+                    }
+                    UsernameSuggestionsPanel.largeBoxSprite.drawScaledSilhouette(223, 205, UsernameSuggestionsPanel.largeBoxSprite.fullWidth / 2, UsernameSuggestionsPanel.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                   }
+                  break;
                 }
+                SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
+                SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
+                SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+                minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
+                grayLevelForComparisonOrCompositeEnabled = 1;
+                break debugOverviewPreparation;
               }
             }
             DebugOverviewCompositor.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, CacheFileState.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
@@ -1117,60 +1121,61 @@ final class GameplaySession {
             debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
             debugKeySentinelOrPointerEventSentinel = -1;
           }
-          if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
-            if ((this.debugPointerSpawnEnabled) &&
-                (SpriteCheckboxRenderer.field_f >= 2)) {
-              EntitySpawnSupport.spawnEntityAtPointer(-28195, AccountCreationSupport.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
-            }
-            tutorialAutoAdvance: {
-              if ((this.tutorialMode) &&
-                  (this.tutorialStepPhase == 0)) {
-                if (this.tutorialStepId != 5) {
-                  this.tutorialPromptActive = false;
-                  this.tutorialStepPhase = 1;
-                  if (this.tutorialStepId == 0) {
-                    this.tutorialProgressMetric = 0;
-                    if (clientControlFlowGuard == 0) {
-                      break tutorialAutoAdvance;
-                    }
-                  }
-                  if (this.tutorialStepId == 1) {
-                    this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                    if (clientControlFlowGuard == 0) {
-                      break tutorialAutoAdvance;
-                    }
-                  }
-                  if (this.tutorialStepId != 2) {
-                    return;
-                  }
-                  this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
+          break;
+        }
+        if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
+          if ((this.debugPointerSpawnEnabled) &&
+              (SpriteCheckboxRenderer.field_f >= 2)) {
+            EntitySpawnSupport.spawnEntityAtPointer(-28195, AccountCreationSupport.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
+          }
+          tutorialAutoAdvance: {
+            if ((this.tutorialMode) &&
+                (this.tutorialStepPhase == 0)) {
+              if (this.tutorialStepId != 5) {
+                this.tutorialPromptActive = false;
+                this.tutorialStepPhase = 1;
+                if (this.tutorialStepId == 0) {
+                  this.tutorialProgressMetric = 0;
                   if (clientControlFlowGuard == 0) {
                     break tutorialAutoAdvance;
                   }
                 }
-                if ((AccountCreationSupport.pointerPressXSnapshot > 100) &&
-                    (340 > AccountCreationSupport.pointerPressXSnapshot) &&
-                    (FullscreenFocusCanvas.pointerPressYSnapshot > 440) &&
-                    (476 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
-                  this.leaveTutorial(methodGuard ^ -1578897511);
-                  this.tutorialStepId = 0;
-                  this.tutorialMode = true;
-                  this.tutorialPromptActive = true;
-                }
-                if ((AccountCreationSupport.pointerPressXSnapshot > 380) &&
-                    (540 > AccountCreationSupport.pointerPressXSnapshot) &&
-                    (FullscreenFocusCanvas.pointerPressYSnapshot > 440)) {
-                  if (FullscreenFocusCanvas.pointerPressYSnapshot >= 476) {
-                    return;
+                if (this.tutorialStepId == 1) {
+                  this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                  if (clientControlFlowGuard == 0) {
+                    break tutorialAutoAdvance;
                   }
-                  this.tutorialPromptActive = false;
-                  this.tutorialStepPhase = 1;
                 }
+                if (this.tutorialStepId != 2) {
+                  return;
+                }
+                this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
+                if (clientControlFlowGuard == 0) {
+                  break tutorialAutoAdvance;
+                }
+              }
+              if ((AccountCreationSupport.pointerPressXSnapshot > 100) &&
+                  (340 > AccountCreationSupport.pointerPressXSnapshot) &&
+                  (FullscreenFocusCanvas.pointerPressYSnapshot > 440) &&
+                  (476 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
+                this.leaveTutorial(methodGuard ^ -1578897511);
+                this.tutorialStepId = 0;
+                this.tutorialMode = true;
+                this.tutorialPromptActive = true;
+              }
+              if ((AccountCreationSupport.pointerPressXSnapshot > 380) &&
+                  (540 > AccountCreationSupport.pointerPressXSnapshot) &&
+                  (FullscreenFocusCanvas.pointerPressYSnapshot > 440)) {
+                if (FullscreenFocusCanvas.pointerPressYSnapshot >= 476) {
+                  return;
+                }
+                this.tutorialPromptActive = false;
+                this.tutorialStepPhase = 1;
               }
             }
           }
-          return;
         }
+        return;
     }
 
     final void addScore(byte methodGuard, int points) {
@@ -1569,9 +1574,10 @@ final class GameplaySession {
                   spriteColumn++;
                   continue L4;
                 }
-                this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
-                break L2;
+                break;
               }
+              this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
+              break L2;
             }
             this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
             rowStartOrMusicGuard = methodGuard ^ 10;

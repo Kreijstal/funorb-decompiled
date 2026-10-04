@@ -139,10 +139,11 @@ final class Bzip2Decoder {
                 byteInGroupOrSelectorRank++;
                 continue;
               }
-              state.selectorMoveToFrontValues[index] = (byte)byteInGroupOrSelectorRank;
-              index++;
-              continue decodeSelectorRanks;
+              break;
             }
+            state.selectorMoveToFrontValues[index] = (byte)byteInGroupOrSelectorRank;
+            index++;
+            continue decodeSelectorRanks;
           }
           allocatedSelectorOrder = new byte[6];
           selectorOrder = allocatedSelectorOrder;
@@ -598,21 +599,22 @@ final class Bzip2Decoder {
             }
             remainingRunLength = 0;
           }
-          previousOutputBytesWritten = state.outputBytesWritten;
-          state.outputBytesWritten = state.outputBytesWritten + (initialOutputAllowance - remainingOutputBytes);
-          if (state.outputBytesWritten >= previousOutputBytesWritten) {
-          }
-          state.pendingRunByte = (byte) runByte;
-          state.pendingRunLength = remainingRunLength;
-          state.blockBytesConsumed = blockBytesConsumed;
-          state.currentByte = currentByte;
-          UsernameResponseSupport.bzip2TransformTable = transformTable;
-          state.transformPositionOrEntry = transformPositionOrEntry;
-          state.outputBytes = outputBytes;
-          state.outputPosition = outputPosition;
-          state.remainingOutputBytes = remainingOutputBytes;
-          return;
+          break;
         }
+        previousOutputBytesWritten = state.outputBytesWritten;
+        state.outputBytesWritten = state.outputBytesWritten + (initialOutputAllowance - remainingOutputBytes);
+        if (state.outputBytesWritten >= previousOutputBytesWritten) {
+        }
+        state.pendingRunByte = (byte) runByte;
+        state.pendingRunLength = remainingRunLength;
+        state.blockBytesConsumed = blockBytesConsumed;
+        state.currentByte = currentByte;
+        UsernameResponseSupport.bzip2TransformTable = transformTable;
+        state.transformPositionOrEntry = transformPositionOrEntry;
+        state.outputBytes = outputBytes;
+        state.outputPosition = outputPosition;
+        state.remainingOutputBytes = remainingOutputBytes;
+        return;
     }
 
     static {

@@ -83,43 +83,44 @@ final class OpacityWidget extends SingleChildWidget {
               var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
               continue;
             }
-            var6 = new StringBuilder(var4);
-            var7 = 0;
-            var5 = 0;
-            if (param2 >= -12) {
-              stackIn_12_0 = (String) null;
-              return stackIn_12_0;
+            break;
+          }
+          var6 = new StringBuilder(var4);
+          var7 = 0;
+          var5 = 0;
+          if (param2 >= -12) {
+            stackIn_12_0 = (String) null;
+            return stackIn_12_0;
+          }
+          while (true) {
+            var8 = param0.indexOf("<%", var5);
+            if (0 > var8) {
+              discarded$2 = var6.append(param0.substring(var7));
+              stackIn_25_0 = var6.toString();
+              return stackIn_25_0;
             }
-            while (true) {
-              var8 = param0.indexOf("<%", var5);
-              if (0 > var8) {
-                discarded$2 = var6.append(param0.substring(var7));
-                stackIn_25_0 = var6.toString();
-                return stackIn_25_0;
-              }
-              for (var5 = var8 + 2; var5 < var3_int; var5++) {
-                if (DualLinkNode.isAsciiDigit(-58, param0.charAt(var5))) {
-                  continue;
-                }
-                break;
-              }
-              var9 = param0.substring(2 + var8, var5);
-              if (!MessageDialog.isSignedDecimalInt((byte) -125, (CharSequence) ((Object) var9))) {
+            for (var5 = var8 + 2; var5 < var3_int; var5++) {
+              if (DualLinkNode.isAsciiDigit(-58, param0.charAt(var5))) {
                 continue;
               }
-              if (var3_int <= var5) {
-                continue;
-              }
-              if (param0.charAt(var5) != 62) {
-                continue;
-              }
-              var5++;
-              var10 = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var9));
-              discarded$0 = var6.append(param0.substring(var7, var8));
-              var7 = var5;
-              discarded$1 = var6.append(param1[var10]);
+              break;
+            }
+            var9 = param0.substring(2 + var8, var5);
+            if (!MessageDialog.isSignedDecimalInt((byte) -125, (CharSequence) ((Object) var9))) {
               continue;
             }
+            if (var3_int <= var5) {
+              continue;
+            }
+            if (param0.charAt(var5) != 62) {
+              continue;
+            }
+            var5++;
+            var10 = MultiHandleSliderWidget.a(false, (CharSequence) ((Object) var9));
+            discarded$0 = var6.append(param0.substring(var7, var8));
+            var7 = var5;
+            discarded$1 = var6.append(param1[var10]);
+            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

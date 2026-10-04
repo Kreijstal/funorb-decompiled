@@ -274,22 +274,23 @@ final class GameScreen extends MenuScreen {
               this.foregroundScrollX = this.foregroundScrollX % CachedTextLayout.menuForegroundSprite.fullWidth;
               tileOriginYOrForegroundStartX = this.foregroundScrollX + (CachedTextLayout.menuForegroundSprite.fullWidth + 640);
             }
-            tileX = tileOriginYOrForegroundStartX;
-            L7: while (~-CachedTextLayout.menuForegroundSprite.fullWidth >= ~tileX) {
-              if (clientControlFlowGuard != 0) {
-                return;
-              }
-              tileY = this.foregroundScrollY + CachedTextLayout.menuForegroundSprite.fullHeight + 480;
-              while (~tileY <= ~-CachedTextLayout.menuForegroundSprite.fullHeight) {
-                CachedTextLayout.menuForegroundSprite.draw(tileX, tileY);
-                tileY = tileY - CachedTextLayout.menuForegroundSprite.fullHeight;
-                continue;
-              }
-              tileX = tileX - CachedTextLayout.menuForegroundSprite.fullWidth;
-              continue L7;
-            }
-            return;
+            break;
           }
+          tileX = tileOriginYOrForegroundStartX;
+          L7: while (~-CachedTextLayout.menuForegroundSprite.fullWidth >= ~tileX) {
+            if (clientControlFlowGuard != 0) {
+              return;
+            }
+            tileY = this.foregroundScrollY + CachedTextLayout.menuForegroundSprite.fullHeight + 480;
+            while (~tileY <= ~-CachedTextLayout.menuForegroundSprite.fullHeight) {
+              CachedTextLayout.menuForegroundSprite.draw(tileX, tileY);
+              tileY = tileY - CachedTextLayout.menuForegroundSprite.fullHeight;
+              continue;
+            }
+            tileX = tileX - CachedTextLayout.menuForegroundSprite.fullWidth;
+            continue L7;
+          }
+          return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           backgroundFailure = caughtFailure;
@@ -1114,117 +1115,148 @@ final class GameScreen extends MenuScreen {
                 this.selectedItemIndex = this.selectedItemIndex + 1;
               }
             }
-            if (this.screenId == 3) {
-              tutorialOrbitUpdate: {
-                if (0 == (1 & this.animationTick)) {
-                  this.tutorialDemoTick = this.tutorialDemoTick + 1;
-                  this.tutorialOrbitRadius = -(this.tutorialDemoTick >> 1) + 60;
-                  if (this.tutorialOrbitRadius < 15) {
-                    this.tutorialOrbitRadius = 15;
-                    if (clientControlFlowGuard == 0) {
-                      break tutorialOrbitUpdate;
-                    }
+            break;
+          }
+          if (this.screenId == 3) {
+            tutorialOrbitUpdate: {
+              if (0 == (1 & this.animationTick)) {
+                this.tutorialDemoTick = this.tutorialDemoTick + 1;
+                this.tutorialOrbitRadius = -(this.tutorialDemoTick >> 1) + 60;
+                if (this.tutorialOrbitRadius < 15) {
+                  this.tutorialOrbitRadius = 15;
+                  if (clientControlFlowGuard == 0) {
+                    break tutorialOrbitUpdate;
                   }
-                  this.tutorialOrbitAngleRadians = this.tutorialOrbitAngleRadians + 0.1;
                 }
+                this.tutorialOrbitAngleRadians = this.tutorialOrbitAngleRadians + 0.1;
               }
-              if (120 == this.tutorialDemoTick) {
-                this.tutorialGeometryCategory = AchievementQuery.b(7, 1);
-                this.tutorialGeometryVariant = AchievementQuery.b(7, 1);
-                this.tutorialDemoTick = 0;
+            }
+            if (120 == this.tutorialDemoTick) {
+              this.tutorialGeometryCategory = AchievementQuery.b(7, 1);
+              this.tutorialGeometryVariant = AchievementQuery.b(7, 1);
+              this.tutorialDemoTick = 0;
+            }
+            if ((this.tutorialPageIndex < 4) &&
+                (this.animationTick % 24 == 0)) {
+              this.tutorialEffectFrame = this.tutorialEffectFrame + 1;
+              if (this.tutorialEffectFrame >= 4) {
+                this.tutorialEffectFrame = 0;
               }
-              if ((this.tutorialPageIndex < 4) &&
-                  (this.animationTick % 24 == 0)) {
-                this.tutorialEffectFrame = this.tutorialEffectFrame + 1;
-                if (this.tutorialEffectFrame >= 4) {
-                  this.tutorialEffectFrame = 0;
+            }
+            tutorialThemeAnimation: {
+              if (this.tutorialPageIndex != 3) {
+                if (4 != this.tutorialPageIndex) {
+                  break tutorialThemeAnimation;
                 }
-              }
-              tutorialThemeAnimation: {
-                if (this.tutorialPageIndex != 3) {
-                  if (4 != this.tutorialPageIndex) {
+                if (49 > (this.animationTick & 255)) {
+                  if ((15 & this.animationTick) != 0) {
                     break tutorialThemeAnimation;
                   }
-                  if (49 > (this.animationTick & 255)) {
-                    if ((15 & this.animationTick) != 0) {
-                      break tutorialThemeAnimation;
-                    }
-                    this.tutorialEffectFrame = this.tutorialEffectFrame + 1;
-                    if (this.tutorialEffectFrame >= 4) {
-                      this.tutorialEffectFrame = 0;
-                    }
-                    this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
-                    if (4 > this.tutorialStarFrameOrColorIndex) {
-                      break tutorialThemeAnimation;
-                    }
-                    this.tutorialStarFrameOrColorIndex = 0;
-                    if (clientControlFlowGuard == 0) {
-                      break tutorialThemeAnimation;
-                    }
+                  this.tutorialEffectFrame = this.tutorialEffectFrame + 1;
+                  if (this.tutorialEffectFrame >= 4) {
+                    this.tutorialEffectFrame = 0;
+                  }
+                  this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
+                  if (4 > this.tutorialStarFrameOrColorIndex) {
+                    break tutorialThemeAnimation;
                   }
                   this.tutorialStarFrameOrColorIndex = 0;
-                  this.tutorialEffectFrame = 0;
                   if (clientControlFlowGuard == 0) {
                     break tutorialThemeAnimation;
                   }
                 }
-                colorInterpolationFraction = 0.019999999552965164f * (float)(this.animationTick % 50);
-                this.tutorialTintRgb = ((int)(colorInterpolationFraction * (float)this.tutorialGreenDelta) << 8) + (SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] + ((int)(colorInterpolationFraction * (float)this.tutorialRedDelta) << 16) + (int)((float)this.tutorialBlueDelta * colorInterpolationFraction));
-                if (this.animationTick % 50 == 49) {
-                  this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
-                  this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex % 7;
-                  this.tutorialRedDelta = -((16751678 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]) >> 16) + ((SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7] & 16754682) >> 16);
-                  this.tutorialGreenDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(this.tutorialStarFrameOrColorIndex + 1) % 7] >> 8) - ((SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] & 65438) >> 8);
-                  this.tutorialBlueDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7]) - (255 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]);
-                }
-              }
-              PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) 127);
-            }
-            pointerPressDebounce: {
-              previousPointerPressCountdown = TextTemplateDefinitionLoader.field_a;
-              TextTemplateDefinitionLoader.field_a = TextTemplateDefinitionLoader.field_a - 1;
-              if (0 > previousPointerPressCountdown) {
-                if (CheckboxRenderer.pointerPressButtonSnapshot == 0) {
-                  break pointerPressDebounce;
-                }
-                TextTemplateDefinitionLoader.field_a = 50;
+                this.tutorialStarFrameOrColorIndex = 0;
+                this.tutorialEffectFrame = 0;
                 if (clientControlFlowGuard == 0) {
-                  break pointerPressDebounce;
+                  break tutorialThemeAnimation;
                 }
               }
-              CheckboxRenderer.pointerPressButtonSnapshot = 0;
+              colorInterpolationFraction = 0.019999999552965164f * (float)(this.animationTick % 50);
+              this.tutorialTintRgb = ((int)(colorInterpolationFraction * (float)this.tutorialGreenDelta) << 8) + (SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] + ((int)(colorInterpolationFraction * (float)this.tutorialRedDelta) << 16) + (int)((float)this.tutorialBlueDelta * colorInterpolationFraction));
+              if (this.animationTick % 50 == 49) {
+                this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
+                this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex % 7;
+                this.tutorialRedDelta = -((16751678 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]) >> 16) + ((SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7] & 16754682) >> 16);
+                this.tutorialGreenDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(this.tutorialStarFrameOrColorIndex + 1) % 7] >> 8) - ((SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] & 65438) >> 8);
+                this.tutorialBlueDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7]) - (255 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]);
+              }
+            }
+            PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) 127);
+          }
+          pointerPressDebounce: {
+            previousPointerPressCountdown = TextTemplateDefinitionLoader.field_a;
+            TextTemplateDefinitionLoader.field_a = TextTemplateDefinitionLoader.field_a - 1;
+            if (0 > previousPointerPressCountdown) {
+              if (CheckboxRenderer.pointerPressButtonSnapshot == 0) {
+                break pointerPressDebounce;
+              }
+              TextTemplateDefinitionLoader.field_a = 50;
+              if (clientControlFlowGuard == 0) {
+                break pointerPressDebounce;
+              }
+            }
+            CheckboxRenderer.pointerPressButtonSnapshot = 0;
+          }
+          if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+            if (!((this.screenId != 5) &&
+                  (7 != this.screenId))) {
+              ResizableDialog.a(false, false, methodGuard ^ 189);
+            }
+            if (this.screenId == 6) {
+              ResizableDialog.a(true, false, methodGuard + 131);
+            }
+            if (this.screenId == 4) {
+              ResizableDialog.a(true, true, 160);
+            }
+          }
+          fullscreenPointerHandling: {
+            if (!this.fullscreenDialogActive) {
+              this.updatePointer(true);
+              if (clientControlFlowGuard == 0) {
+                break fullscreenPointerHandling;
+              }
             }
             if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
-              if (!((this.screenId != 5) &&
-                    (7 != this.screenId))) {
-                ResizableDialog.a(false, false, methodGuard ^ 189);
-              }
-              if (this.screenId == 6) {
-                ResizableDialog.a(true, false, methodGuard + 131);
-              }
-              if (this.screenId == 4) {
-                ResizableDialog.a(true, true, 160);
-              }
-            }
-            fullscreenPointerHandling: {
-              if (!this.fullscreenDialogActive) {
-                this.updatePointer(true);
+              if (UnderlinedButtonRenderer.c(-104)) {
+                if ((265 < FullscreenFocusCanvas.pointerPressYSnapshot) &&
+                    (FullscreenFocusCanvas.pointerPressYSnapshot < 299)) {
+                  if ((AccountCreationSupport.pointerPressXSnapshot > 350) &&
+                      (AccountCreationSupport.pointerPressXSnapshot < 470)) {
+                    this.pointerInteractionActive = true;
+                    this.fullscreenDialogActive = false;
+                    if (clientControlFlowGuard == 0) {
+                      break fullscreenPointerHandling;
+                    }
+                  }
+                  if (!((AccountCreationSupport.pointerPressXSnapshot > 170) &&
+                        (AccountCreationSupport.pointerPressXSnapshot < 290))) {
+                    this.pointerInteractionActive = false;
+                    if (clientControlFlowGuard == 0) {
+                      break fullscreenPointerHandling;
+                    }
+                  }
+                  this.pointerInteractionActive = true;
+                  if (null != UiWidget.gameplaySession) {
+                    UiWidget.gameplaySession.submitScore((byte) -70);
+                  }
+                  ScoreSubmission.requestedScreenId = -1;
+                  UiWidget.gameplayReturnScreenId = 0;
+                  ProxySocketConnector.gameplayOriginScreenId = 0;
+                  if (clientControlFlowGuard == 0) {
+                    break fullscreenPointerHandling;
+                  }
+                }
+                this.pointerInteractionActive = false;
                 if (clientControlFlowGuard == 0) {
                   break fullscreenPointerHandling;
                 }
               }
-              if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
-                if (UnderlinedButtonRenderer.c(-104)) {
-                  if ((265 < FullscreenFocusCanvas.pointerPressYSnapshot) &&
-                      (FullscreenFocusCanvas.pointerPressYSnapshot < 299)) {
-                    if ((AccountCreationSupport.pointerPressXSnapshot > 350) &&
-                        (AccountCreationSupport.pointerPressXSnapshot < 470)) {
-                      this.pointerInteractionActive = true;
-                      this.fullscreenDialogActive = false;
-                      if (clientControlFlowGuard == 0) {
-                        break fullscreenPointerHandling;
-                      }
-                    }
+              if ((TextTemplateDefinition.field_n > 0) &&
+                  (null != InstrumentPatch.field_n)) {
+                if ((FullscreenFocusCanvas.pointerPressYSnapshot > 317) &&
+                    (352 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
+                  if (!((AccountCreationSupport.pointerPressXSnapshot > 350) &&
+                        (AccountCreationSupport.pointerPressXSnapshot < 470))) {
                     if (!((AccountCreationSupport.pointerPressXSnapshot > 170) &&
                           (AccountCreationSupport.pointerPressXSnapshot < 290))) {
                       this.pointerInteractionActive = false;
@@ -1232,160 +1264,130 @@ final class GameScreen extends MenuScreen {
                         break fullscreenPointerHandling;
                       }
                     }
-                    this.pointerInteractionActive = true;
-                    if (null != UiWidget.gameplaySession) {
-                      UiWidget.gameplaySession.submitScore((byte) -70);
-                    }
-                    ScoreSubmission.requestedScreenId = -1;
-                    UiWidget.gameplayReturnScreenId = 0;
-                    ProxySocketConnector.gameplayOriginScreenId = 0;
-                    if (clientControlFlowGuard == 0) {
-                      break fullscreenPointerHandling;
-                    }
-                  }
-                  this.pointerInteractionActive = false;
-                  if (clientControlFlowGuard == 0) {
-                    break fullscreenPointerHandling;
-                  }
-                }
-                if ((TextTemplateDefinition.field_n > 0) &&
-                    (null != InstrumentPatch.field_n)) {
-                  if ((FullscreenFocusCanvas.pointerPressYSnapshot > 317) &&
-                      (352 > FullscreenFocusCanvas.pointerPressYSnapshot)) {
-                    if (!((AccountCreationSupport.pointerPressXSnapshot > 350) &&
-                          (AccountCreationSupport.pointerPressXSnapshot < 470))) {
-                      if (!((AccountCreationSupport.pointerPressXSnapshot > 170) &&
-                            (AccountCreationSupport.pointerPressXSnapshot < 290))) {
-                        this.pointerInteractionActive = false;
-                        if (clientControlFlowGuard == 0) {
-                          break fullscreenPointerHandling;
-                        }
-                      }
-                      this.fullscreenDialogActive = false;
-                      this.pointerInteractionActive = true;
-                      if (clientControlFlowGuard == 0) {
-                        break fullscreenPointerHandling;
-                      }
-                    }
                     this.fullscreenDialogActive = false;
-                    ArchiveCatalog.b(255);
                     this.pointerInteractionActive = true;
                     if (clientControlFlowGuard == 0) {
                       break fullscreenPointerHandling;
                     }
                   }
-                  this.pointerInteractionActive = false;
+                  this.fullscreenDialogActive = false;
+                  ArchiveCatalog.b(255);
+                  this.pointerInteractionActive = true;
                   if (clientControlFlowGuard == 0) {
                     break fullscreenPointerHandling;
                   }
                 }
-                this.pointerInteractionActive = true;
-                this.fullscreenDialogActive = false;
+                this.pointerInteractionActive = false;
+                if (clientControlFlowGuard == 0) {
+                  break fullscreenPointerHandling;
+                }
               }
+              this.pointerInteractionActive = true;
+              this.fullscreenDialogActive = false;
             }
-            if (!((PrefixCodeDecoder.pointerXSnapshot == this.previousPointerX) &&
-                  (~PcmResampler.pointerYSnapshot == ~this.previousPointerY))) {
-              this.fullscreenDialogButtonIndex = -1;
-            }
-            this.previousPointerY = PcmResampler.pointerYSnapshot;
-            if (methodGuard != 29) {
-              this.handleMenuKey(11, 26);
-            }
-            this.previousPointerX = PrefixCodeDecoder.pointerXSnapshot;
-            if (this.selectedItemIndex != 0) {
-              inputDerivedStateUpdate: {
-                inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.field_c - SessionTextHistorySupport.currentKeyboardEventCode)) % 8;
-                if (inputDerivedStateBranch != 0) {
-                  if (inputDerivedStateBranch != 1) {
-                    if (inputDerivedStateBranch != 2) {
-                      if (inputDerivedStateBranch == 3) {
-                        ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
-                        UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
-                        if (clientControlFlowGuard == 0) {
-                          break inputDerivedStateUpdate;
-                        }
-                      }
-                      if (inputDerivedStateBranch != 4) {
-                        if (inputDerivedStateBranch != 5) {
-                          if (6 == inputDerivedStateBranch) {
-                            DequeCursor.field_g = DequeCursor.field_g - 1;
-                            SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - UsernameResponseSupport.field_d;
-                            if (clientControlFlowGuard == 0) {
-                              break inputDerivedStateUpdate;
-                            }
-                          }
-                          if (inputDerivedStateBranch != 7) {
-                            break inputDerivedStateUpdate;
-                          }
-                          UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
-                          SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - DequeCursor.field_g;
-                          if (clientControlFlowGuard == 0) {
-                            break inputDerivedStateUpdate;
-                          }
-                        }
-                        UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
-                        SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + DequeCursor.field_g;
-                        if (clientControlFlowGuard == 0) {
-                          break inputDerivedStateUpdate;
-                        }
-                      }
-                      DequeCursor.field_g = DequeCursor.field_g + 1;
-                      SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + UsernameResponseSupport.field_d;
+          }
+          if (!((PrefixCodeDecoder.pointerXSnapshot == this.previousPointerX) &&
+                (~PcmResampler.pointerYSnapshot == ~this.previousPointerY))) {
+            this.fullscreenDialogButtonIndex = -1;
+          }
+          this.previousPointerY = PcmResampler.pointerYSnapshot;
+          if (methodGuard != 29) {
+            this.handleMenuKey(11, 26);
+          }
+          this.previousPointerX = PrefixCodeDecoder.pointerXSnapshot;
+          if (this.selectedItemIndex != 0) {
+            inputDerivedStateUpdate: {
+              inputDerivedStateBranch = (PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot - (-ClientFlowState.field_c - SessionTextHistorySupport.currentKeyboardEventCode)) % 8;
+              if (inputDerivedStateBranch != 0) {
+                if (inputDerivedStateBranch != 1) {
+                  if (inputDerivedStateBranch != 2) {
+                    if (inputDerivedStateBranch == 3) {
+                      ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
+                      UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
                       if (clientControlFlowGuard == 0) {
                         break inputDerivedStateUpdate;
                       }
                     }
-                    ClientClockSupport.field_a = ClientClockSupport.field_a - UsernameResponseSupport.field_d;
+                    if (inputDerivedStateBranch != 4) {
+                      if (inputDerivedStateBranch != 5) {
+                        if (6 == inputDerivedStateBranch) {
+                          DequeCursor.field_g = DequeCursor.field_g - 1;
+                          SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - UsernameResponseSupport.field_d;
+                          if (clientControlFlowGuard == 0) {
+                            break inputDerivedStateUpdate;
+                          }
+                        }
+                        if (inputDerivedStateBranch != 7) {
+                          break inputDerivedStateUpdate;
+                        }
+                        UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
+                        SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - DequeCursor.field_g;
+                        if (clientControlFlowGuard == 0) {
+                          break inputDerivedStateUpdate;
+                        }
+                      }
+                      UsernameResponseSupport.field_d = UsernameResponseSupport.field_d + 1;
+                      SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + DequeCursor.field_g;
+                      if (clientControlFlowGuard == 0) {
+                        break inputDerivedStateUpdate;
+                      }
+                    }
                     DequeCursor.field_g = DequeCursor.field_g + 1;
+                    SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r + UsernameResponseSupport.field_d;
                     if (clientControlFlowGuard == 0) {
                       break inputDerivedStateUpdate;
                     }
                   }
-                  ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
-                  UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
+                  ClientClockSupport.field_a = ClientClockSupport.field_a - UsernameResponseSupport.field_d;
+                  DequeCursor.field_g = DequeCursor.field_g + 1;
                   if (clientControlFlowGuard == 0) {
                     break inputDerivedStateUpdate;
                   }
                 }
-                ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
-                DequeCursor.field_g = DequeCursor.field_g - 1;
+                ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
+                UsernameResponseSupport.field_d = UsernameResponseSupport.field_d - 1;
+                if (clientControlFlowGuard == 0) {
+                  break inputDerivedStateUpdate;
+                }
               }
-              inputDerivedStateBranch = (SessionTextHistorySupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.field_c)) % 5;
-              if (0 != inputDerivedStateBranch) {
-                if (inputDerivedStateBranch != 1) {
-                  if (inputDerivedStateBranch == 2) {
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
-                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
-                    if (clientControlFlowGuard == 0) {
-                      return;
-                    }
-                  }
-                  if (inputDerivedStateBranch == 3) {
-                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                    if (clientControlFlowGuard == 0) {
-                      return;
-                    }
-                  }
-                  if (inputDerivedStateBranch != 4) {
-                    return;
-                  }
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
-                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
+              ClientClockSupport.field_a = ClientClockSupport.field_a + UsernameResponseSupport.field_d;
+              DequeCursor.field_g = DequeCursor.field_g - 1;
+            }
+            inputDerivedStateBranch = (SessionTextHistorySupport.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-FullscreenFocusCanvas.pointerPressYSnapshot - ClientFlowState.field_c)) % 5;
+            if (0 != inputDerivedStateBranch) {
+              if (inputDerivedStateBranch != 1) {
+                if (inputDerivedStateBranch == 2) {
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
+                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
                 }
-                UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+                if (inputDerivedStateBranch == 3) {
+                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
+                  if (clientControlFlowGuard == 0) {
+                    return;
+                  }
+                }
+                if (inputDerivedStateBranch != 4) {
+                  return;
+                }
+                UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
+                AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
                 if (clientControlFlowGuard == 0) {
                   return;
                 }
               }
-              AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
+              UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+              SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+              if (clientControlFlowGuard == 0) {
+                return;
+              }
             }
-            return;
+            AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
           }
+          return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           screenUpdateFailure = caughtFailure;

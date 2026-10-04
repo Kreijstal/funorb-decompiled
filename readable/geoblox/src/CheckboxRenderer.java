@@ -42,8 +42,9 @@ final class CheckboxRenderer implements WidgetRenderer {
               characterIndex++;
               continue;
             }
-            return false;
+            break;
           }
+          return false;
         } catch (java.lang.RuntimeException nameFailure) {
           caughtNameFailure = nameFailure;
           nameValidationFailure = caughtNameFailure;

@@ -851,11 +851,12 @@ final class MidiPcmStream extends PcmStream {
                 }
               }
             }
-            trackIndex = this.midiReader.selectEarliestTrack();
-            eventTick = this.midiReader.trackTicks[trackIndex];
-            eventTime = this.midiReader.getTickTime(eventTick);
-            continue eventTrackSelection;
+            break;
           }
+          trackIndex = this.midiReader.selectEarliestTrack();
+          eventTick = this.midiReader.trackTicks[trackIndex];
+          eventTime = this.midiReader.getTickTime(eventTick);
+          continue eventTrackSelection;
         }
     }
 

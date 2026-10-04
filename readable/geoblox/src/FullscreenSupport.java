@@ -160,13 +160,14 @@ final class FullscreenSupport {
               ByteTextDecodingSupport.sleepMillis(0, 100L);
               continue;
             }
-            fullscreenFrame.setVisible(false);
-            if (methodGuard != 10) {
-              fullscreenAcceptCountdownPluralText = (String) null;
-            }
-            fullscreenFrame.dispose();
-            return;
+            break;
           }
+          fullscreenFrame.setVisible(false);
+          if (methodGuard != 10) {
+            fullscreenAcceptCountdownPluralText = (String) null;
+          }
+          fullscreenFrame.dispose();
+          return;
         } catch (java.lang.RuntimeException exitFailure) {
           caughtExitFailure = exitFailure;
           exitFailureForContext = caughtExitFailure;

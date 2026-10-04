@@ -573,12 +573,13 @@ class ByteArrayBuffer extends IntrusiveNode {
                 rightWord = rightWord + (leftWord + (leftWord << 4 ^ leftWord >>> 5) ^ cycleSum + key[(cycleSum & 7480) >>> 11]);
                 continue;
               }
-              this.position = this.position - 8;
-              this.writeIntBE((byte) 95, leftWord);
-              this.writeIntBE((byte) 95, rightWord);
-              blockIndex++;
-              continue L1;
+              break;
             }
+            this.position = this.position - 8;
+            this.writeIntBE((byte) 95, leftWord);
+            this.writeIntBE((byte) 95, rightWord);
+            blockIndex++;
+            continue L1;
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;
@@ -654,12 +655,13 @@ class ByteArrayBuffer extends IntrusiveNode {
                 leftWord = leftWord - (cycleSum + key[cycleSum & 3] ^ (rightWord >>> 5 ^ rightWord << 4) + rightWord);
                 continue;
               }
-              this.position = this.position - 8;
-              this.writeIntBE((byte) 95, leftWord);
-              this.writeIntBE((byte) 95, rightWord);
-              blockIndex++;
-              continue L1;
+              break;
             }
+            this.position = this.position - 8;
+            this.writeIntBE((byte) 95, leftWord);
+            this.writeIntBE((byte) 95, rightWord);
+            blockIndex++;
+            continue L1;
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;

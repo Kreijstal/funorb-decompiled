@@ -735,70 +735,74 @@ class Sprite extends SpriteState {
               continue;
             }
           }
-          rowOffsetThenTopEdge = 0;
-          while (true) {
-            L4: {
-              if (rowOffsetThenTopEdge < bottomEdge) {
-                scanThenRightEdge = rowOffsetThenTopEdge * this.width;
-                for (scanThenLeftEdge = 0; scanThenLeftEdge < this.width; scanThenLeftEdge++) {
-                  if (this.pixels[scanThenRightEdge + scanThenLeftEdge] != 0) {
-                    break L4;
-                  }
-                }
-                rowOffsetThenTopEdge++;
-                continue;
-              }
-            }
-            scanThenRightEdge = this.width - 1;
-            while (true) {
-              L7: {
-                if (scanThenRightEdge >= 0) {
-                  for (scanThenLeftEdge = rowOffsetThenTopEdge; scanThenLeftEdge <= bottomEdge; scanThenLeftEdge++) {
-                    if (this.pixels[scanThenLeftEdge * this.width + scanThenRightEdge] != 0) {
-                      break L7;
-                    }
-                  }
-                  scanThenRightEdge--;
-                  continue;
+          break;
+        }
+        rowOffsetThenTopEdge = 0;
+        while (true) {
+          L4: {
+            if (rowOffsetThenTopEdge < bottomEdge) {
+              scanThenRightEdge = rowOffsetThenTopEdge * this.width;
+              for (scanThenLeftEdge = 0; scanThenLeftEdge < this.width; scanThenLeftEdge++) {
+                if (this.pixels[scanThenRightEdge + scanThenLeftEdge] != 0) {
+                  break L4;
                 }
               }
-              scanThenLeftEdge = 0;
-              while (true) {
-                L10: {
-                  if (scanThenLeftEdge < scanThenRightEdge) {
-                    for (scanRowThenCroppedWidth = rowOffsetThenTopEdge; scanRowThenCroppedWidth <= bottomEdge; scanRowThenCroppedWidth++) {
-                      if (this.pixels[scanRowThenCroppedWidth * this.width + scanThenLeftEdge] != 0) {
-                        break L10;
-                      }
-                    }
-                    scanThenLeftEdge++;
-                    continue;
-                  }
-                }
-                if ((scanThenLeftEdge == 0) &&
-                    (scanThenRightEdge == this.width - 1) &&
-                    (rowOffsetThenTopEdge == 0) &&
-                    (bottomEdge == this.height - 1)) {
-                  return;
-                }
-                scanRowThenCroppedWidth = scanThenRightEdge + 1 - scanThenLeftEdge;
-                croppedHeight = bottomEdge + 1 - rowOffsetThenTopEdge;
-                croppedPixels = new int[scanRowThenCroppedWidth * croppedHeight];
-                for (copyRow = 0; copyRow < croppedHeight; copyRow++) {
-                  for (copyColumn = 0; copyColumn < scanRowThenCroppedWidth; copyColumn++) {
-                    croppedPixels[copyRow * scanRowThenCroppedWidth + copyColumn] = this.pixels[(copyRow + rowOffsetThenTopEdge) * this.width + (copyColumn + scanThenLeftEdge)];
-                  }
-                }
-                this.pixels = croppedPixels;
-                this.width = scanRowThenCroppedWidth;
-                this.height = croppedHeight;
-                this.trimX = this.trimX + scanThenLeftEdge;
-                this.trimY = this.trimY + rowOffsetThenTopEdge;
-                return;
-              }
+              rowOffsetThenTopEdge++;
+              continue;
             }
           }
+          break;
         }
+        scanThenRightEdge = this.width - 1;
+        while (true) {
+          L7: {
+            if (scanThenRightEdge >= 0) {
+              for (scanThenLeftEdge = rowOffsetThenTopEdge; scanThenLeftEdge <= bottomEdge; scanThenLeftEdge++) {
+                if (this.pixels[scanThenLeftEdge * this.width + scanThenRightEdge] != 0) {
+                  break L7;
+                }
+              }
+              scanThenRightEdge--;
+              continue;
+            }
+          }
+          break;
+        }
+        scanThenLeftEdge = 0;
+        while (true) {
+          L10: {
+            if (scanThenLeftEdge < scanThenRightEdge) {
+              for (scanRowThenCroppedWidth = rowOffsetThenTopEdge; scanRowThenCroppedWidth <= bottomEdge; scanRowThenCroppedWidth++) {
+                if (this.pixels[scanRowThenCroppedWidth * this.width + scanThenLeftEdge] != 0) {
+                  break L10;
+                }
+              }
+              scanThenLeftEdge++;
+              continue;
+            }
+          }
+          break;
+        }
+        if ((scanThenLeftEdge == 0) &&
+            (scanThenRightEdge == this.width - 1) &&
+            (rowOffsetThenTopEdge == 0) &&
+            (bottomEdge == this.height - 1)) {
+          return;
+        }
+        scanRowThenCroppedWidth = scanThenRightEdge + 1 - scanThenLeftEdge;
+        croppedHeight = bottomEdge + 1 - rowOffsetThenTopEdge;
+        croppedPixels = new int[scanRowThenCroppedWidth * croppedHeight];
+        for (copyRow = 0; copyRow < croppedHeight; copyRow++) {
+          for (copyColumn = 0; copyColumn < scanRowThenCroppedWidth; copyColumn++) {
+            croppedPixels[copyRow * scanRowThenCroppedWidth + copyColumn] = this.pixels[(copyRow + rowOffsetThenTopEdge) * this.width + (copyColumn + scanThenLeftEdge)];
+          }
+        }
+        this.pixels = croppedPixels;
+        this.width = scanRowThenCroppedWidth;
+        this.height = croppedHeight;
+        this.trimX = this.trimX + scanThenLeftEdge;
+        this.trimY = this.trimY + rowOffsetThenTopEdge;
+        return;
     }
 
     final void addOutline(int color) {

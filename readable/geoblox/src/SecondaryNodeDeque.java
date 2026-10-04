@@ -142,8 +142,9 @@ final class SecondaryNodeDeque implements Iterable {
               characterIndex++;
               continue;
             }
-            return false;
+            break;
           }
+          return false;
         } catch (java.lang.RuntimeException comparisonFailureAtCatch) {
           caughtComparisonFailure = comparisonFailureAtCatch;
           comparisonFailure = caughtComparisonFailure;

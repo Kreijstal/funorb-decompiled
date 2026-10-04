@@ -33,39 +33,40 @@ final class HighscoreNameEntry {
                 unusedGuardScratch = -11;
               }
             }
-            if ((!((!((MidiPcmStream.heldInternalKeys[99]) &&
-                  (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
-                (~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease)) ||
-                (!(MatchCandidateSupport.releasedInCurrentTheme != 0) &&
-                  !(UiWidget.gameplaySession.tutorialMode)))) {
-              if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
-                  (!UiWidget.gameplaySession.spawnReleaseDisabled)) {
-                ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
-                LabeledChildWidget.recordEntityRelease(2);
-                BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
-              }
-            }
-            BoardReconciliationSupport.ticksSinceLastEntityRelease = BoardReconciliationSupport.ticksSinceLastEntityRelease + 1;
-            if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
-                (DelayedIncomingPacket.c((byte) -53)) &&
-                (!UiWidget.gameplaySession.canAdvanceSession(true))) {
-              queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeFirst((byte) -101));
-              if (null != queuedEntityThenPooledEntity) {
-                spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;
-                spawnPositionX = 240.0f * (float)Math.cos(spawnAngleRadians) + 320.0f;
-                spawnPositionY = 240.0f + (float)Math.sin(spawnAngleRadians) * 240.0f;
-                inwardDirectionX = 320.0f - spawnPositionX;
-                inwardDirectionY = -spawnPositionY + 240.0f;
-                inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
-                inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
-                inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
-                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ReceivedTextRecord.chooseSpawnSpriteKind(methodGuard ^ 741924143), TextTemplateDefinition.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), BoardReconciliationSupport.ticksSinceLastEntityRelease + UsernameResponseSupport.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * TextTemplateDefinition.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
-                SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
-                SpawnQuotaSupport.recordGeneratedEntity(false);
-              }
-            }
-            return;
+            break;
           }
+          if ((!((!((MidiPcmStream.heldInternalKeys[99]) &&
+                (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
+              (~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease)) ||
+              (!(MatchCandidateSupport.releasedInCurrentTheme != 0) &&
+                !(UiWidget.gameplaySession.tutorialMode)))) {
+            if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
+                (!UiWidget.gameplaySession.spawnReleaseDisabled)) {
+              ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
+              LabeledChildWidget.recordEntityRelease(2);
+              BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
+            }
+          }
+          BoardReconciliationSupport.ticksSinceLastEntityRelease = BoardReconciliationSupport.ticksSinceLastEntityRelease + 1;
+          if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
+              (DelayedIncomingPacket.c((byte) -53)) &&
+              (!UiWidget.gameplaySession.canAdvanceSession(true))) {
+            queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeFirst((byte) -101));
+            if (null != queuedEntityThenPooledEntity) {
+              spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;
+              spawnPositionX = 240.0f * (float)Math.cos(spawnAngleRadians) + 320.0f;
+              spawnPositionY = 240.0f + (float)Math.sin(spawnAngleRadians) * 240.0f;
+              inwardDirectionX = 320.0f - spawnPositionX;
+              inwardDirectionY = -spawnPositionY + 240.0f;
+              inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
+              inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
+              inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
+              queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ReceivedTextRecord.chooseSpawnSpriteKind(methodGuard ^ 741924143), TextTemplateDefinition.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), BoardReconciliationSupport.ticksSinceLastEntityRelease + UsernameResponseSupport.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * TextTemplateDefinition.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
+              SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
+              SpawnQuotaSupport.recordGeneratedEntity(false);
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException spawnQueueFailure) {
           caughtSpawnQueueFailure = spawnQueueFailure;
           spawnQueueFailureForContext = caughtSpawnQueueFailure;
@@ -387,15 +388,16 @@ final class HighscoreNameEntry {
               }
               entryOrInsertionTargetSnapshot = insertionTarget;
             }
-            if (entryOrInsertionTargetSnapshot == null) {
-              ProgressBarWidget.primarySocialEntriesInOrder.addLast(-39, primaryEntry);
-              if (clientControlFlowGuard == 0) {
-                return;
-              }
-            }
-            PointerInputListener.insertNodeBefore(insertionTarget, 121, primaryEntry);
-            return;
+            break;
           }
+          if (entryOrInsertionTargetSnapshot == null) {
+            ProgressBarWidget.primarySocialEntriesInOrder.addLast(-39, primaryEntry);
+            if (clientControlFlowGuard == 0) {
+              return;
+            }
+          }
+          PointerInputListener.insertNodeBefore(insertionTarget, 121, primaryEntry);
+          return;
         } catch (java.lang.RuntimeException responseFailure) {
           caughtResponseFailure = responseFailure;
           responseFailureForContext = caughtResponseFailure;

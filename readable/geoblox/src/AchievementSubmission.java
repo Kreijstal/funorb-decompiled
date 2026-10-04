@@ -189,9 +189,10 @@ final class AchievementSubmission extends IntrusiveNode {
                 invertedDepthOrNormalIndexOrQueueGuard = 22;
               }
             }
-            MeshDepthSupport.queueMeshFacesByDepthWithIntegerGuard(nearPlaneOrNormalCapacityOrQueueMinDepth, invertedDepthOrNormalIndexOrQueueGuard, mesh, maximumVisibleDepth, cullBackfaces);
-            return;
+            break;
           }
+          MeshDepthSupport.queueMeshFacesByDepthWithIntegerGuard(nearPlaneOrNormalCapacityOrQueueMinDepth, invertedDepthOrNormalIndexOrQueueGuard, mesh, maximumVisibleDepth, cullBackfaces);
+          return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;

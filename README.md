@@ -17,12 +17,46 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/3c7273824f655a21b14668cd12e71a2ecccac07c/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ab3a92a30a599bd0f9cc6c4734fa129e09f5177e/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 150 separates 54 noncompleting continuations from repeating loop prefixes
+in 39 methods across 29 owners. The final section now follows an explicit loop
+exit. Board reconciliation exposes moving/connectivity work, attached-entity
+routing, transient recycling and final raster/achievement updates as sequential
+sections. Session drawing/update, menu update/render helpers, Bzip2 selector
+reading and output-state publication receive the same generic reconstruction.
+
+All existing repeats must stay inside a complete prefix, and no existing own
+break may skip the old continuation. Own exits, prefix-owned direct locals,
+ambiguous/unsupported syntax, a prefix without normal completion and a suffix
+that can fall through refuse reconstruction. Whole conditional, try/catch/finally,
+switch, label and monitor constructs remain intact. Suffix local scope and scalar
+parent braces remain. Earlier/finally continues still repeat; nonlocal transfers
+still skip both sections. No control-flag value is assumed. Explicit breaks add
+54 source lines while reducing continuation nesting; no labels are removed.
+
+Four new focused groups include eight native variants checked against 18,432
+independent event-model cases. Effectful else arms, nullable/effectful guards,
+exception identity, partial effects, earlier repeats, finally backedges that
+override pending exceptions, return snapshots and monitor release are covered.
+The emitter suite passes 116 tests with one existing skip. A clean tracked source
+tar reproduces all 303 Java files and unchanged diagnostics, without failures or
+fallbacks. The shared source proof checks every expected token stream, all 136,607
+ordered declaration/reference bindings, 388 overrides and 813 lexical label records,
+plus the 54 added bare exits. No local or label ordinal migrates.
+
+All 14,618 complete naming rules and 102,435 recorded edits remain unchanged.
+Both corpora compile, reproduce and reverse byte exactly. The 27 publication
+checks and eight existing native fixtures pass within their documented scopes.
+Five large bodies change but eight remain: board reconciliation is 335 lines,
+session render/update 346/630, menu update 327 and Bzip2 decodeBlocks 376.
+There are still 163 opaque labels, 329 opaque fields and 355 short opaque methods.
+Full assets/gameplay, servers, browser/phone and heap/FPS acceptance remain unverified.
 
 Pass 149 reconstructs thirteen guarded infinite loops as explicit `do…while`
 loops in twelve methods across nine owners. Bzip2 run decoding now repeats while
@@ -999,7 +1033,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`3ccf8ec3da8a72fe05b08c8f53854cdf9198f2b5a0a993153cc0ada439b1988d`.
+`9310084b7058635716851772aaa0d89fae16c589a702d0e4dbd86d38246c7e28`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls

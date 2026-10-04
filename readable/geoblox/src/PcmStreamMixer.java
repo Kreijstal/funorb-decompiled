@@ -71,10 +71,11 @@ final class PcmStreamMixer extends PcmStream {
             searchNode = searchNode.nextNode;
             continue;
           }
-          PointerInputListener.insertNodeBefore(searchNode, 93, listener);
-          this.nextListenerFrameOffset = ((PcmMixerListener) ((Object) this.scheduledListeners.sentinel.nextNode)).scheduledFrameOffset;
-          return;
+          break;
         }
+        PointerInputListener.insertNodeBefore(searchNode, 93, listener);
+        this.nextListenerFrameOffset = ((PcmMixerListener) ((Object) this.scheduledListeners.sentinel.nextNode)).scheduledFrameOffset;
+        return;
     }
 
     private final void mixChildStreams(int[] destination, int destinationOffset, int frameCount) {

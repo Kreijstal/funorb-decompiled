@@ -88,9 +88,10 @@ final class AccountContentDialog extends ContentTransitionDialog {
               var4++;
               continue;
             }
-            stackIn_13_0 = BoardReconciliationSupport.createNameCharacterAlertText;
-            return stackIn_13_0;
+            break;
           }
+          stackIn_13_0 = BoardReconciliationSupport.createNameCharacterAlertText;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

@@ -199,26 +199,27 @@ final class MeshDepthSupport {
             } else {
               cullFlagOrPriorityLoopSentinel = -1;
             }
-            if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
-                (null != mesh.facePriorities)) {
-              faceIndexOrPriorityPrefix = 0;
-              vertexAOrPriorityIndex = 0;
-              while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
-                vertexBOrPriorityCount = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
-                PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
-                faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
-                vertexAOrPriorityIndex++;
-                if (controlFlagSnapshot != 0) {
-                  return;
-                }
-                continue;
-              }
-            }
-            if (methodGuard != 22) {
-              avatarMaskRaster = (Sprite) null;
-            }
-            return;
+            break;
           }
+          if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
+              (null != mesh.facePriorities)) {
+            faceIndexOrPriorityPrefix = 0;
+            vertexAOrPriorityIndex = 0;
+            while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
+              vertexBOrPriorityCount = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
+              PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
+              faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
+              vertexAOrPriorityIndex++;
+              if (controlFlagSnapshot != 0) {
+                return;
+              }
+              continue;
+            }
+          }
+          if (methodGuard != 22) {
+            avatarMaskRaster = (Sprite) null;
+          }
+          return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;
@@ -348,26 +349,27 @@ final class MeshDepthSupport {
             } else {
               cullFlagOrPriorityLoopSentinel = -1;
             }
-            if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
-                (null != mesh.facePriorities)) {
-              faceIndexOrPriorityPrefix = 0;
-              vertexAOrPriorityIndex = 0;
-              while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
-                vertexBOrPriorityCount = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
-                PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
-                faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
-                vertexAOrPriorityIndex++;
-                if (controlFlagSnapshot != 0) {
-                  return;
-                }
-                continue;
-              }
-            }
-            if (integerMethodGuard != 22) {
-              avatarMaskRaster = (Sprite) null;
-            }
-            return;
+            break;
           }
+          if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
+              (null != mesh.facePriorities)) {
+            faceIndexOrPriorityPrefix = 0;
+            vertexAOrPriorityIndex = 0;
+            while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
+              vertexBOrPriorityCount = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
+              PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
+              faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
+              vertexAOrPriorityIndex++;
+              if (controlFlagSnapshot != 0) {
+                return;
+              }
+              continue;
+            }
+          }
+          if (integerMethodGuard != 22) {
+            avatarMaskRaster = (Sprite) null;
+          }
+          return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
           contextFailure = caughtFailure;

@@ -264,9 +264,10 @@ final class PrefixCodeDecoder {
                 continue;
               }
             }
-            consumedBytesBeforeReturn = sourceIndex + 1 - sourceOffset;
-            return consumedBytesBeforeReturn;
+            break;
           }
+          consumedBytesBeforeReturn = sourceIndex + 1 - sourceOffset;
+          return consumedBytesBeforeReturn;
         } catch (java.lang.RuntimeException decodingFailure) {
           caughtDecodingFailure = decodingFailure;
           decodingFailureForContext = caughtDecodingFailure;

@@ -515,36 +515,37 @@ final class CachedArchiveSource extends ArchiveSource {
                           continue;
                         }
                       }
-                      if (phaseComplete != 0) {
-                        this.downloadAllPending = false;
-                        this.backgroundGroupIndex = 0;
-                        break L3;
-                      }
-                      if (methodGuard != -38) {
-                        this.getPackedGroup(25, 41);
-                      }
-                      if (!this.sweepCompletedRequests) {
-                        break L0;
-                      }
-                      if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
-                        break L1;
-                      }
-                      cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
-                      while (cleanupRequest != null) {
-                        if (!cleanupRequest.pending) {
-                          if (cleanupRequest.seenByCleanup) {
-                            if (!cleanupRequest.priority) {
-                              throw new RuntimeException();
-                            }
-                            cleanupRequest.unlinkNode(false);
-                          } else {
-                            cleanupRequest.seenByCleanup = true;
-                          }
-                        }
-                        cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
-                      }
-                      break L2;
+                      break;
                     }
+                    if (phaseComplete != 0) {
+                      this.downloadAllPending = false;
+                      this.backgroundGroupIndex = 0;
+                      break L3;
+                    }
+                    if (methodGuard != -38) {
+                      this.getPackedGroup(25, 41);
+                    }
+                    if (!this.sweepCompletedRequests) {
+                      break L0;
+                    }
+                    if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
+                      break L1;
+                    }
+                    cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
+                    while (cleanupRequest != null) {
+                      if (!cleanupRequest.pending) {
+                        if (cleanupRequest.seenByCleanup) {
+                          if (!cleanupRequest.priority) {
+                            throw new RuntimeException();
+                          }
+                          cleanupRequest.unlinkNode(false);
+                        } else {
+                          cleanupRequest.seenByCleanup = true;
+                        }
+                      }
+                      cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
+                    }
+                    break L2;
                   }
                   this.backgroundGroups = null;
                 }

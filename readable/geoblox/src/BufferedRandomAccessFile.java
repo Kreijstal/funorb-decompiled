@@ -473,9 +473,10 @@ final class BufferedRandomAccessFile {
                     continue;
                   }
                 }
-                neighborIndex++;
-                continue L3;
+                break;
               }
+              neighborIndex++;
+              continue L3;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

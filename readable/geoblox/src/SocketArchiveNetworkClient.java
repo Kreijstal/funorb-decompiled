@@ -346,41 +346,43 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.pendingPriorityRequests.addLast(-74, requestToRequeue);
                   continue;
                 }
-                if (methodGuard) {
-                  field_t = 110;
+                break;
+              }
+              if (methodGuard) {
+                field_t = 110;
+              }
+              while (true) {
+                requestToRequeue = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.removeFirst(true));
+                if (requestToRequeue != null) {
+                  this.pendingBackgroundRequests.addLast(116, requestToRequeue);
+                  continue;
                 }
-                while (true) {
-                  requestToRequeue = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.removeFirst(true));
-                  if (requestToRequeue != null) {
-                    this.pendingBackgroundRequests.addLast(116, requestToRequeue);
-                    continue;
+                break;
+              }
+              if (this.responseXorKey != 0) {
+                try {
+                  this.outboundPacketBuffer.position = 0;
+                  this.outboundPacketBuffer.writeByte((byte) -62, 4);
+                  this.outboundPacketBuffer.writeByte((byte) 122, (int) this.responseXorKey);
+                  this.outboundPacketBuffer.writeIntBE((byte) 95, 0);
+                  this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
+                } catch (java.io.IOException xorSetupIOException) {
+                  caughtAttachmentFailure = xorSetupIOException;
+                  xorSetupIoFailure = (IOException) (Object) caughtAttachmentFailure;
+                  try {
+                    this.socket.close(-126);
+                  } catch (java.lang.Exception xorSetupCloseException) {
+                    caughtAttachmentFailure = xorSetupCloseException;
+                    xorSetupCloseFailure = (Exception) (Object) caughtAttachmentFailure;
                   }
-                  if (this.responseXorKey != 0) {
-                    try {
-                      this.outboundPacketBuffer.position = 0;
-                      this.outboundPacketBuffer.writeByte((byte) -62, 4);
-                      this.outboundPacketBuffer.writeByte((byte) 122, (int) this.responseXorKey);
-                      this.outboundPacketBuffer.writeIntBE((byte) 95, 0);
-                      this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
-                    } catch (java.io.IOException xorSetupIOException) {
-                      caughtAttachmentFailure = xorSetupIOException;
-                      xorSetupIoFailure = (IOException) (Object) caughtAttachmentFailure;
-                      try {
-                        this.socket.close(-126);
-                      } catch (java.lang.Exception xorSetupCloseException) {
-                        caughtAttachmentFailure = xorSetupCloseException;
-                        xorSetupCloseFailure = (Exception) (Object) caughtAttachmentFailure;
-                      }
-                      this.failureCode = -2;
-                      this.failureCount = this.failureCount + 1;
-                      this.socket = null;
-                    }
-                  }
-                  this.responseIdleMillis = 0;
-                  this.lastPollMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-                  return;
+                  this.failureCode = -2;
+                  this.failureCount = this.failureCount + 1;
+                  this.socket = null;
                 }
               }
+              this.responseIdleMillis = 0;
+              this.lastPollMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+              return;
             } catch (java.lang.RuntimeException attachmentRuntimeException) {
               caughtAttachmentFailure = attachmentRuntimeException;
               attachmentFailureForContext = (RuntimeException) (Object) caughtAttachmentFailure;
