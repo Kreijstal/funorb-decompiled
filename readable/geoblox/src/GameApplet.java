@@ -385,7 +385,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ClientRenderingState.canvasHeight, AudioService.canvasWidth);
                   this.initializeGame(117);
                   ReflectionCheckRequest.field_p = BufferedSocket.createFrameClock(5000);
-                  L17: while (true) {
+                  do {
                     L18: {
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
                         stackIn_99_0 = $cfr$lcmp(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
@@ -413,11 +413,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       }
                       break;
                     }
-                    if (var5 == 0) {
-                      continue L17;
-                    }
-                    break;
-                  }
+                  } while (var5 == 0);
                   break L1;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter1) {

@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ab3a92a30a599bd0f9cc6c4734fa129e09f5177e/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/f8f107b06f284034288da1a49bedc4acde939198/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 150)
+## Current readability (pass 151)
 
 The export has 14,618 guarded names and 102,174 Java identifier edits, plus 11
 class-name literal edits and 250 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -24,7 +24,46 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current loop exit continuations (pass 150)
+## Current terminal loop headers (pass 151)
+
+Pass 151 gives three loops their original guard headers: the frame loop in
+GameApplet.run becomes do-while; MidiPcmStream.advanceMidiEvents and
+LoginPanel.handleIntRecordReply use while guards. Partial true arms retain an
+explicit fallthrough break, so a nonzero control flag or matching record does
+not accidentally cause another iteration. Earlier continues and finally overrides
+keep their original guard-evaluation point. No control-flag value is assumed.
+
+The terminal trailing form permits only direct own guard continues plus a final
+bare own break. Ordered short-circuit guards preserve callbacks, mutations and
+nullable failures. Earlier/protected trailing backedges, prefix-owned direct
+locals, potentially constant guards and unsupported/ambiguous syntax refuse.
+The entry form preserves the complete arm scope/protected groups and retains
+its break whenever the arm can fall through. Every existing destination remains.
+
+The applet loop label L17 loses its only continue when the do-while condition
+represents that repeat. Only this proven unused label is removed; one later
+opaque label ordinal migrates. No guarded name changes. The corpus loses eight
+lines, one bare break and one direct continue. Label definitions fall from 246
+to 245 and lexical records from 813 to 811; all surviving targets remain.
+
+Five new focused groups include twelve native variants checked against 48,924
+independent event-model cases: 36,828 entry-header and 12,096 trailing-header
+cases. Partial arms, negative/zero/positive flags, nullable/effectful guards,
+finally backedges that override pending exceptions, return snapshots, local
+scopes and monitor release are covered. The emitter suite passes 121 tests with
+one existing skip. A clean tracked source tar reproduces all 303 files and
+unchanged diagnostics, with no failures/fallbacks. The shared proof checks every
+expected token stream, 136,607 ordered bindings, 388 overrides and every surviving
+label identity, including the sole opaque ordinal migration.
+
+All 14,618 complete naming rules and 102,435 edits remain. Both corpora compile,
+reproduce and reverse byte exactly. The 27 publication checks and eight existing
+native fixtures pass within their documented scopes. Eight large labeled bodies
+remain unchanged; 162 opaque labels, 329 opaque fields and 355 short opaque methods
+remain. Actual applet timing, full MIDI/live reply/network/assets/gameplay,
+servers, browser/phone and heap/FPS acceptance remain unverified.
+
+## Previous loop exit continuations (pass 150)
 
 Pass 150 separates 54 noncompleting continuations from repeating loop prefixes
 in 39 methods across 29 owners. The final section now follows an explicit loop

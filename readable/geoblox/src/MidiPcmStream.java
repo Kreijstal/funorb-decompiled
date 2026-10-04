@@ -821,34 +821,32 @@ final class MidiPcmStream extends PcmStream {
             }
             return;
           }
-          while (true) {
-            if (this.midiReader.trackTicks[trackIndex] == eventTick) {
-              this.midiReader.seekTrack(trackIndex);
-              event = this.midiReader.readTrackEvent(trackIndex);
-              if (1 != event) {
-                if ((128 & event) != 0) {
-                  this.dispatchMidiEvent(event, (byte) 38);
-                }
-                this.midiReader.readTrackDelta(trackIndex);
-                this.midiReader.saveTrackPosition(trackIndex);
-                continue;
+          while (this.midiReader.trackTicks[trackIndex] == eventTick) {
+            this.midiReader.seekTrack(trackIndex);
+            event = this.midiReader.readTrackEvent(trackIndex);
+            if (1 != event) {
+              if ((128 & event) != 0) {
+                this.dispatchMidiEvent(event, (byte) 38);
               }
-              this.midiReader.markCurrentTrackEnded();
+              this.midiReader.readTrackDelta(trackIndex);
               this.midiReader.saveTrackPosition(trackIndex);
-              if (this.midiReader.areAllTracksEnded()) {
-                if (this.pendingScore != null) {
-                  this.startMusicScore(this.loopScore, this.pendingScore, -1706);
-                  this.advanceMidiEvents((byte) -32);
-                  return;
-                }
-                if ((this.loopScore) &&
-                    (eventTick != 0)) {
-                  this.midiReader.restartTracks(eventTime);
-                } else {
-                  this.resetSynthesisState(true, 2097151);
-                  this.midiReader.unload();
-                  return;
-                }
+              continue;
+            }
+            this.midiReader.markCurrentTrackEnded();
+            this.midiReader.saveTrackPosition(trackIndex);
+            if (this.midiReader.areAllTracksEnded()) {
+              if (this.pendingScore != null) {
+                this.startMusicScore(this.loopScore, this.pendingScore, -1706);
+                this.advanceMidiEvents((byte) -32);
+                return;
+              }
+              if ((this.loopScore) &&
+                  (eventTick != 0)) {
+                this.midiReader.restartTracks(eventTime);
+              } else {
+                this.resetSynthesisState(true, 2097151);
+                this.midiReader.unload();
+                return;
               }
             }
             break;

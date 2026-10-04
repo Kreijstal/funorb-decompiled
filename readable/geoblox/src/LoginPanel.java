@@ -80,13 +80,11 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               if (var2 == 1) {
                 var4 = var9.readSignedSmart(76);
                 var5 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
-                while (true) {
-                  if (var5 != null) {
-                    if (!((var5.byteKey == var3) &&
-                        (var5.signedSmartKey == var4))) {
-                      var5 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
-                      continue;
-                    }
+                while (var5 != null) {
+                  if (!((var5.byteKey == var3) &&
+                      (var5.signedSmartKey == var4))) {
+                    var5 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
+                    continue;
                   }
                   break;
                 }

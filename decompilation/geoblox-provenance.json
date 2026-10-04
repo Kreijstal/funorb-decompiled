@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "747687c8b5e46c8e23ae43149b5dfe249459be42",
+      "commit": "10ef3b4223ea230d5968a6366a395cdef26add02",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "9310084b7058635716851772aaa0d89fae16c589a702d0e4dbd86d38246c7e28",
-        "reproduce": "git archive --format=tar 747687c8b5e46c8e23ae43149b5dfe249459be42 | sha256sum",
+        "sha256": "74bd2b5e113c492f08db3791204ccd99a59aaa985c04a3dfc27b9d17772941b2",
+        "reproduce": "git archive --format=tar 10ef3b4223ea230d5968a6366a395cdef26add02 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "9447232c7194f4e51f50697933f569f1f3f4504b2471ccd3e501807f9ac9de1c",
-  "previousSourceTreeSha256": "59a5e169ba0a93052304a836ab69bba224b36e26f0560c5e9ea5f4685df4a220",
-  "changedJavaFiles": 29,
+  "sourceTreeSha256": "b94f67e3ce485801bc06bcc445eb5d03c52847d3668502a0c0fc6d1a1dd77f3e",
+  "previousSourceTreeSha256": "9447232c7194f4e51f50697933f569f1f3f4504b2471ccd3e501807f9ac9de1c",
+  "changedJavaFiles": 3,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "ab3a92a30a599bd0f9cc6c4734fa129e09f5177e",
+    "commit": "f8f107b06f284034288da1a49bedc4acde939198",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "1d9c765630aa55a1649892be378a559d89f140de6369ae85dd09651984d00a17"
+      "sha256": "dd990cf76cb8ffd04a3f9c3c404634d06117b5894f1f401ec9225e2aed084b83"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "e8948c501b69e628a3db376b7a334a6b1e28ae5164aae2ecd7c2f6050e582348",
+    "outputTreeSha256": "3090c1ff0ecd1e84362cd4819ad1e0bdda19d51a7ffe2ba24109a951e8d7abc1",
     "files": 303,
     "rules": 14618,
     "identifierEdits": 102174,
@@ -3303,8 +3303,8 @@
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 250,
-    "labelBindingsCompared": 813,
-    "labelDeclarationsCompared": 246,
+    "labelBindingsCompared": 811,
+    "labelDeclarationsCompared": 245,
     "namingPass": {
       "version": 148,
       "rulesAdded": 560,
@@ -3326,7 +3326,7 @@
       "remainingOpaqueLoopLabels": 46,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 150
+    "structuralPass": 151
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -5954,5 +5954,138 @@
     },
     "scope": "A literal-true loop with a complete repeating prefix and noncompleting continuation can place that continuation after an explicit bare loop exit. All own references must be existing continues inside the intact prefix. Any own break, including finally overrides and syntactically dead transfers, refuses. Prefix-owned direct locals, ambiguous/unsupported syntax, no normal prefix path and fallthrough suffixes refuse. Entire protected/conditional/switch/label/monitor constructs stay intact; scalar-parent braces and suffix-local scope remain. Existing prefix continues, including finally backedges that suppress pending exceptions, still repeat without executing the continuation; nonlocal transfers still skip both sections. The suffix remains at the same enclosing protection/monitor depth. Eight native variants match18432 independent event cases, covering guard callback order/unboxing, effectful else arms, partial failures, exception identity, earlier/finally backedges, return snapshots, nonlocal exits and monitor release. All303 expected token streams,136607 ordered declaration/reference bindings,388 overrides and813 label records match. Fifty-four loops in39 methods across29 owners gain explicit exits, adding54 source lines and no labels/declarations/references. Board moving/connectivity, routing, transient recycling and final raster/achievement work become sequential sections; menu/session and Bzip2 continuations similarly leave their repeating loop. All14618 complete naming objects and ordinals remain. No client-control-zero assumption. Existing native game fixtures retain their documented scopes; full-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.",
     "sourceProofWorkflowCommit": "ab3a92a30a599bd0f9cc6c4734fa129e09f5177e"
+  },
+  "terminalLoopExitRecovery": {
+    "version": 151,
+    "previousSourceCommit": "9f06c6b3a0f14a6858a95ea750ecb1ca8cbc108c",
+    "sourceCommit": "4fc5dd18f65af8b9be8e9450e55f70e563829cca",
+    "previousSourceTreeSha256": "9447232c7194f4e51f50697933f569f1f3f4504b2471ccd3e501807f9ac9de1c",
+    "sourceTreeSha256": "b94f67e3ce485801bc06bcc445eb5d03c52847d3668502a0c0fc6d1a1dd77f3e",
+    "javaToolsCommit": "10ef3b4223ea230d5968a6366a395cdef26add02",
+    "sourceArchiveSha256": "74bd2b5e113c492f08db3791204ccd99a59aaa985c04a3dfc27b9d17772941b2",
+    "terminalLoopExits": true,
+    "counts": {
+      "terminalLoopExits": 3,
+      "whileHeaders": 2,
+      "doWhileHeaders": 1,
+      "bareExitsRemoved": 1,
+      "directContinuesRemoved": 1,
+      "loopLabelsRemoved": 1
+    },
+    "changedJavaFiles": 3,
+    "changedMethodBodies": 3,
+    "sourceLinesBefore": 76242,
+    "sourceLinesAfter": 76234,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 246,
+    "labelDeclarationsAfter": 245,
+    "labelBindingsBefore": 813,
+    "labelBindingsAfter": 811,
+    "survivingLabelOrdinalMigrations": 1,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "opaqueLoopLabelsRetired": 1,
+    "retiredLoopLabels": [
+      {
+        "file": "ch.java",
+        "symbol": "B:ch.run()V#5",
+        "originalName": "L17"
+      }
+    ],
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "genericFocusedTestGroupsPassed": 5,
+    "nativeComparisons": 48924,
+    "independentNativeOracleCases": 48924,
+    "nativeDifferentialVariants": 12,
+    "entryHeaderNativeComparisons": 36828,
+    "trailingHeaderNativeComparisons": 12096,
+    "genericEmitterTestsPassed": 121,
+    "genericEmitterTestsSkipped": 1,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "350ffb1cc92662cf05feefe90343126eaddfc40027851ec646f19d0e8130fc9a",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 327,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 346,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 630,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 335,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 376,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "scope": "A literal-true loop with exactly a leading conditional arm and terminal bare own break gains the original while guard. Normal arm paths retain an explicit break inside the arm; abrupt arms need no replacement break. Earlier own continues, own breaks and finally overrides keep their original loop destination/evaluation point. Whole arm scopes/protected groups remain. Direct trailing guard continues followed only by a bare own break become do-while with ordered short-circuit guards; any other own reference, prefix-owned direct local or potentially constant guard refuses. Once all own guard continues and the bare break are consumed, only that unused loop label is removed. Five new groups include twelve native variants matching48924 independent cases for partial arms, nullable/effectful guards, negative/zero/positive flags, earlier/finally backedges, pending-exception overrides, scopes, return snapshots and monitor release. All303 expected token streams and136607 ordered Java bindings/388 overrides match.245 surviving label definitions and811 records retain original destinations; one opaque GameApplet.run loop label/continue disappears and one later opaque ordinal migrates. No guarded name changes. Three loops in GameApplet.run, MidiPcmStream.advanceMidiEvents and LoginPanel.handleIntRecordReply gain headers and lose8 lines. All14618 complete naming objects remain; eight large labeled bodies remain unchanged. No client-control-zero assumption. Existing game probes retain their documented scopes; live applet timing, full MIDI/network/assets/gameplay/server/browser/phone and heap/FPS acceptance remain unverified.",
+    "sourceProofWorkflowCommit": "f8f107b06f284034288da1a49bedc4acde939198"
   }
 }
