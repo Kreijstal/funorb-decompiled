@@ -634,100 +634,96 @@ final class gh {
               var2 = 97;
             }
             if (kj.field_o[var2]) {
-              L17: {
-                this.field_J = this.field_J - rc.field_h;
-                me.a((byte) 38);
-                var4_int = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
-                switch (var4_int) {
-                  case 0:
-                    oa.field_a = oa.field_a + kb.field_d;
-                    gb.field_g = gb.field_g - 1;
-                    if (var5 == 0) {
-                      break L17;
-                    }
+              this.field_J = this.field_J - rc.field_h;
+              me.a((byte) 38);
+              var4_int = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
+              switch (var4_int) {
+                case 0:
+                  oa.field_a = oa.field_a + kb.field_d;
+                  gb.field_g = gb.field_g - 1;
+                  if (var5 == 0) {
                     break;
-                  case 1:
-                    oa.field_a = oa.field_a + gb.field_g;
-                    kb.field_d = kb.field_d - 1;
-                    if (var5 == 0) {
-                      break L17;
-                    }
+                  }
+                  break;
+                case 1:
+                  oa.field_a = oa.field_a + gb.field_g;
+                  kb.field_d = kb.field_d - 1;
+                  if (var5 == 0) {
                     break;
-                  case 3:
-                    oa.field_a = oa.field_a - gb.field_g;
-                    kb.field_d = kb.field_d + 1;
-                    if (var5 == 0) {
-                      break L17;
-                    }
+                  }
+                  break;
+                case 3:
+                  oa.field_a = oa.field_a - gb.field_g;
+                  kb.field_d = kb.field_d + 1;
+                  if (var5 == 0) {
                     break;
-                  case 4:
-                    ml.field_r = ml.field_r + kb.field_d;
-                    gb.field_g = gb.field_g + 1;
-                    if (var5 == 0) {
-                      break L17;
-                    }
+                  }
+                  break;
+                case 4:
+                  ml.field_r = ml.field_r + kb.field_d;
+                  gb.field_g = gb.field_g + 1;
+                  if (var5 == 0) {
                     break;
-                  case 5:
-                    kb.field_d = kb.field_d + 1;
-                    ml.field_r = ml.field_r + gb.field_g;
-                    if (var5 == 0) {
-                      break L17;
-                    }
+                  }
+                  break;
+                case 5:
+                  kb.field_d = kb.field_d + 1;
+                  ml.field_r = ml.field_r + gb.field_g;
+                  if (var5 == 0) {
                     break;
-                  case 6:
-                    ml.field_r = ml.field_r - kb.field_d;
-                    gb.field_g = gb.field_g - 1;
-                    if (var5 == 0) {
-                      break L17;
-                    }
-                  default:
-                    break L17;
-                  case 7:
-                    kb.field_d = kb.field_d - 1;
-                    ml.field_r = ml.field_r - gb.field_g;
-                    if (var5 == 0) {
-                      break L17;
-                    }
-                  case 2:
-                    gb.field_g = gb.field_g + 1;
-                    oa.field_a = oa.field_a - kb.field_d;
+                  }
+                  break;
+                case 6:
+                  ml.field_r = ml.field_r - kb.field_d;
+                  gb.field_g = gb.field_g - 1;
+                  if (var5 == 0) {
                     break;
-                }
+                  }
+                default:
+                  break;
+                case 7:
+                  kb.field_d = kb.field_d - 1;
+                  ml.field_r = ml.field_r - gb.field_g;
+                  if (var5 == 0) {
+                    break;
+                  }
+                case 2:
+                  gb.field_g = gb.field_g + 1;
+                  oa.field_a = oa.field_a - kb.field_d;
+                  break;
               }
-              L25: {
-                var4_int = (kd.field_c + he.field_d + qa.field_a + ki.field_d) % 5;
-                switch (var4_int) {
-                  case 0:
-                    dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
-                    if (var5 == 0) {
-                      break L25;
-                    }
+              var4_int = (kd.field_c + he.field_d + qa.field_a + ki.field_d) % 5;
+              switch (var4_int) {
+                case 0:
+                  dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
+                  if (var5 == 0) {
                     break;
-                  case 3:
-                    sc.field_f = sc.field_f + 1;
-                    el.field_g = el.field_g + lb.field_b;
-                    if (var5 == 0) {
-                      break L25;
-                    }
-                  default:
-                    break L25;
-                  case 4:
-                    sc.field_f = sc.field_f - 1;
-                    el.field_g = el.field_g - lb.field_b;
-                    if (var5 == 0) {
-                      break L25;
-                    }
-                  case 2:
-                    lb.field_b = lb.field_b - 1;
-                    el.field_g = el.field_g - sc.field_f;
-                    if (var5 == 0) {
-                      break L25;
-                    }
-                  case 1:
-                    el.field_g = el.field_g + sc.field_f;
-                    lb.field_b = lb.field_b + 1;
+                  }
+                  break;
+                case 3:
+                  sc.field_f = sc.field_f + 1;
+                  el.field_g = el.field_g + lb.field_b;
+                  if (var5 == 0) {
                     break;
-                }
+                  }
+                default:
+                  break;
+                case 4:
+                  sc.field_f = sc.field_f - 1;
+                  el.field_g = el.field_g - lb.field_b;
+                  if (var5 == 0) {
+                    break;
+                  }
+                case 2:
+                  lb.field_b = lb.field_b - 1;
+                  el.field_g = el.field_g - sc.field_f;
+                  if (var5 == 0) {
+                    break;
+                  }
+                case 1:
+                  el.field_g = el.field_g + sc.field_f;
+                  lb.field_b = lb.field_b + 1;
+                  break;
               }
               if (this.field_p == 0) {
                 this.field_U = this.field_U + 1;
@@ -740,61 +736,59 @@ final class gh {
                 if (this.field_p == 0) {
                   this.field_U = this.field_U + 1;
                 }
-                L32: {
-                  var4_int = (he.field_d + (qa.field_a + kd.field_c) + ki.field_d) % 8;
-                  switch (var4_int) {
-                    case 3:
-                      kb.field_d = kb.field_d + 1;
-                      oa.field_a = oa.field_a - gb.field_g;
-                      if (var5 == 0) {
-                        break L32;
-                      }
+                var4_int = (he.field_d + (qa.field_a + kd.field_c) + ki.field_d) % 8;
+                switch (var4_int) {
+                  case 3:
+                    kb.field_d = kb.field_d + 1;
+                    oa.field_a = oa.field_a - gb.field_g;
+                    if (var5 == 0) {
                       break;
-                    case 4:
-                      gb.field_g = gb.field_g + 1;
-                      ml.field_r = ml.field_r + kb.field_d;
-                      if (var5 == 0) {
-                        break L32;
-                      }
+                    }
+                    break;
+                  case 4:
+                    gb.field_g = gb.field_g + 1;
+                    ml.field_r = ml.field_r + kb.field_d;
+                    if (var5 == 0) {
                       break;
-                    case 5:
-                      kb.field_d = kb.field_d + 1;
-                      ml.field_r = ml.field_r + gb.field_g;
-                      if (var5 == 0) {
-                        break L32;
-                      }
+                    }
+                    break;
+                  case 5:
+                    kb.field_d = kb.field_d + 1;
+                    ml.field_r = ml.field_r + gb.field_g;
+                    if (var5 == 0) {
                       break;
-                    case 6:
-                      ml.field_r = ml.field_r - kb.field_d;
-                      gb.field_g = gb.field_g - 1;
-                      if (var5 == 0) {
-                        break L32;
-                      }
-                    default:
-                      break L32;
-                    case 7:
-                      kb.field_d = kb.field_d - 1;
-                      ml.field_r = ml.field_r - gb.field_g;
-                      if (var5 == 0) {
-                        break L32;
-                      }
-                    case 2:
-                      gb.field_g = gb.field_g + 1;
-                      oa.field_a = oa.field_a - kb.field_d;
-                      if (var5 == 0) {
-                        break L32;
-                      }
-                    case 1:
-                      oa.field_a = oa.field_a + gb.field_g;
-                      kb.field_d = kb.field_d - 1;
-                      if (var5 == 0) {
-                        break L32;
-                      }
-                    case 0:
-                      gb.field_g = gb.field_g - 1;
-                      oa.field_a = oa.field_a + kb.field_d;
+                    }
+                    break;
+                  case 6:
+                    ml.field_r = ml.field_r - kb.field_d;
+                    gb.field_g = gb.field_g - 1;
+                    if (var5 == 0) {
                       break;
-                  }
+                    }
+                  default:
+                    break;
+                  case 7:
+                    kb.field_d = kb.field_d - 1;
+                    ml.field_r = ml.field_r - gb.field_g;
+                    if (var5 == 0) {
+                      break;
+                    }
+                  case 2:
+                    gb.field_g = gb.field_g + 1;
+                    oa.field_a = oa.field_a - kb.field_d;
+                    if (var5 == 0) {
+                      break;
+                    }
+                  case 1:
+                    oa.field_a = oa.field_a + gb.field_g;
+                    kb.field_d = kb.field_d - 1;
+                    if (var5 == 0) {
+                      break;
+                    }
+                  case 0:
+                    gb.field_g = gb.field_g - 1;
+                    oa.field_a = oa.field_a + kb.field_d;
+                    break;
                 }
                 var4_int = (kd.field_c + qa.field_a + he.field_d + ki.field_d) % 5;
                 if (var4_int != 0) {

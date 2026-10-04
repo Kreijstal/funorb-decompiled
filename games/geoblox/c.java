@@ -1292,59 +1292,57 @@ final class c extends ka {
           }
           this.field_s = qa.field_a;
           if (this.field_b != 0) {
-            L39: {
-              var2_int = (qa.field_a + he.field_d - (-kd.field_c - ki.field_d)) % 8;
-              switch (var2_int) {
-                case 3:
-                  oa.field_a = oa.field_a - gb.field_g;
-                  kb.field_d = kb.field_d + 1;
-                  if (var3 == 0) {
-                    break L39;
-                  }
+            var2_int = (qa.field_a + he.field_d - (-kd.field_c - ki.field_d)) % 8;
+            switch (var2_int) {
+              case 3:
+                oa.field_a = oa.field_a - gb.field_g;
+                kb.field_d = kb.field_d + 1;
+                if (var3 == 0) {
                   break;
-                case 6:
-                  gb.field_g = gb.field_g - 1;
-                  ml.field_r = ml.field_r - kb.field_d;
-                  if (var3 == 0) {
-                    break L39;
-                  }
-                default:
-                  break L39;
-                case 7:
-                  kb.field_d = kb.field_d - 1;
-                  ml.field_r = ml.field_r - gb.field_g;
-                  if (var3 == 0) {
-                    break L39;
-                  }
-                case 5:
-                  kb.field_d = kb.field_d + 1;
-                  ml.field_r = ml.field_r + gb.field_g;
-                  if (var3 == 0) {
-                    break L39;
-                  }
-                case 4:
-                  gb.field_g = gb.field_g + 1;
-                  ml.field_r = ml.field_r + kb.field_d;
-                  if (var3 == 0) {
-                    break L39;
-                  }
-                case 2:
-                  oa.field_a = oa.field_a - kb.field_d;
-                  gb.field_g = gb.field_g + 1;
-                  if (var3 == 0) {
-                    break L39;
-                  }
-                case 1:
-                  oa.field_a = oa.field_a + gb.field_g;
-                  kb.field_d = kb.field_d - 1;
-                  if (var3 == 0) {
-                    break L39;
-                  }
-                case 0:
-                  oa.field_a = oa.field_a + kb.field_d;
-                  gb.field_g = gb.field_g - 1;
+                }
+                break;
+              case 6:
+                gb.field_g = gb.field_g - 1;
+                ml.field_r = ml.field_r - kb.field_d;
+                if (var3 == 0) {
                   break;
-              }
+                }
+              default:
+                break;
+              case 7:
+                kb.field_d = kb.field_d - 1;
+                ml.field_r = ml.field_r - gb.field_g;
+                if (var3 == 0) {
+                  break;
+                }
+              case 5:
+                kb.field_d = kb.field_d + 1;
+                ml.field_r = ml.field_r + gb.field_g;
+                if (var3 == 0) {
+                  break;
+                }
+              case 4:
+                gb.field_g = gb.field_g + 1;
+                ml.field_r = ml.field_r + kb.field_d;
+                if (var3 == 0) {
+                  break;
+                }
+              case 2:
+                oa.field_a = oa.field_a - kb.field_d;
+                gb.field_g = gb.field_g + 1;
+                if (var3 == 0) {
+                  break;
+                }
+              case 1:
+                oa.field_a = oa.field_a + gb.field_g;
+                kb.field_d = kb.field_d - 1;
+                if (var3 == 0) {
+                  break;
+                }
+              case 0:
+                oa.field_a = oa.field_a + kb.field_d;
+                gb.field_g = gb.field_g - 1;
+                break;
             }
             var2_int = (ki.field_d + qa.field_a - (-he.field_d - kd.field_c)) % 5;
             if (0 != var2_int) {
