@@ -5,7 +5,39 @@ The current export has 13,301 guarded naming rules: 302 classes, 1,709 fields,
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current packet framing and ranked range (pass 143)
+## Current widget diagnostics and single child (pass 144)
+
+Pass 144 adds 251 guarded rules: 17 methods, 58 parameters, 174 locals and
+two labels. Every SingleChildWidget field, method, parameter and local is now
+named. appendWidgetDiagnostics identifies all five owned overrides;
+appendWidgetDiagnosticProperties, beginWidgetDiagnosticVisit and the child
+helpers expose formatting and traversal. The visited Hashtable retains entries,
+so the existing circular marker includes shared revisits. Renderer/listener
+widget checks still recurse on this same widget receiver, with the original
+output aliases, callback order and nonzero client-control fallthrough.
+
+getLastRenderPass names the inclusive pass index: base zero, child delegation
+or container maximum. renderWidgetPassesAndTooltip retains the supplied start,
+integer increment/overflow, client-control exit and tooltip order. Base key
+input and child delegation now expose their actual roles. The two private
+requestUnfocusedChildFocus overloads keep identical child predicates/bodies and
+different guards; no forward/backward navigation is invented. Numeric key codes 80/81,
+child-origin additions, unchanged wheel coordinates and nullable hover fallback
+remain exact.
+
+rendererDiagnosticFormatting and listenerDiagnosticFormatting name existing
+plain frames and their two breaks. No frame or transfer is removed; label edit
+accounting grows from 238 to 242. There are 13,608 rules and 98,370 identifier
+edits, plus eleven class-literal and 242 label edits: 98,623 total. All 13,357
+previous complete rules and raw/tool/workflow/stub/native/text pins remain.
+Both 303-file corpora compile, preserve 136,607 bindings, 388 overrides and 813
+lexical label records, and reverse byte exactly. The 27 publication tests and
+eight existing native fixtures pass within their recorded scopes. Arbitrary
+diagnostic callback recursion, live AWT input and complete render-pass/device
+behavior remain unverified. Eight large labeled bodies and 166 opaque labels
+remain; full-game/server/device and heap/FPS acceptance are still unverified.
+
+## Previous packet framing and ranked range (pass 143)
 
 Pass 143 adds 56 guarded rules: seven fields, four methods, twelve parameters
 and 33 locals. The complete incoming-packet reader now exposes
@@ -815,7 +847,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/eae9af2f4dba39619af18d85c96ca78e62de04aa/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/eae9af2f4dba39619af18d85c96ca78e62de04aa/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ef5db29f6df89fe657f1d9efc8ca36c0e444c877/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ef5db29f6df89fe657f1d9efc8ca36c0e444c877/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -1059,7 +1091,7 @@ Pass123 adds the guarded direct-literal policy and their readable class names.
 The current raw tree is
 `2b3bf4664aaf082ec60395d0b40546cda545920221218af5056a6f6858bbed4a`;
 the current readable tree is
-`d325ee14226b9daf60e18901a60fdf46e49f7693b1e624f29e6fce3a99d1aca4`.
+`577a46d6e10b610afe92138ea92a20a174ff8983340f2b8cc89218e65dcc22cf`.
 The pinned decompiler-source SHA-256 is
 `841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1`.
 All eight native/raw/readable probes pass with their pinned traces.
@@ -1073,16 +1105,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/eae9af2f4dba39619af18d85c96ca78e62de04aa/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ef5db29f6df89fe657f1d9efc8ca36c0e444c877/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/eae9af2f4dba39619af18d85c96ca78e62de04aa/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/ef5db29f6df89fe657f1d9efc8ca36c0e444c877/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `eae9af2f4dba39619af18d85c96ca78e62de04aa`; the
-manifest SHA-256 is `7467f30014cdbcc66f0ceb1af369d4103929bb52f29934272b2fecdc80e0ef8a`.
+The current Deko workflow/manifest commit is `ef5db29f6df89fe657f1d9efc8ca36c0e444c877`; the
+manifest SHA-256 is `1d4ecae778bc4b2060f1b7464b8b4f12c53e937efb3fb2313eb21d75c1d610b8`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

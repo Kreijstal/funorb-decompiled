@@ -145,7 +145,7 @@ final class TextTemplateArgumentType {
           ClientScreenExitSupport.fullscreenDialogLayer.processPointerFrame(true, 127, TextLayout.field_c, MessageDialogContent.field_I);
           ClientScreenExitSupport.fullscreenDialogLayer.advanceDialogAnimations(-50);
           while (UiFontResources.pollKeyboardEvent(125)) {
-            ClientScreenExitSupport.fullscreenDialogLayer.a((byte) -126, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);
+            ClientScreenExitSupport.fullscreenDialogLayer.dispatchKeyInputOrRequestFocus((byte) -126, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

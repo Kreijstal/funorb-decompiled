@@ -122,7 +122,7 @@ final class DequeCursor {
           ClientFlowState.accountDialogLayer.processPointerFrame(true, 127, MatchScoringSupport.field_d, TextConcatenationSupport.field_b);
           ClientFlowState.accountDialogLayer.advanceDialogAnimations(-65);
           while (UiFontResources.pollKeyboardEvent(77)) {
-            ClientFlowState.accountDialogLayer.a((byte) 105, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);
+            ClientFlowState.accountDialogLayer.dispatchKeyInputOrRequestFocus((byte) 105, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);
           }
           if (GzipInflater.pendingLoginUiAction != noPendingActionCode) {
             pendingAction = GzipInflater.pendingLoginUiAction;

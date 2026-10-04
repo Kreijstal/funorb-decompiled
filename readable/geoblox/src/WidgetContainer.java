@@ -50,70 +50,70 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, Hashtable param2, int param3) {
-        RuntimeException var5 = null;
-        StringBuilder stackIn_2_0 = null;
-        StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final StringBuilder appendWidgetDiagnostics(int methodGuard, StringBuilder output, Hashtable visitedWidgets, int depth) {
+        RuntimeException widgetDiagnosticFailure = null;
+        StringBuilder guardedNullOutputSnapshot = null;
+        StringBuilder diagnosticOutputSnapshot = null;
+        RuntimeException diagnosticFailureForContext = null;
+        StringBuilder diagnosticContextBuilder = null;
+        String outputDescription = null;
+        StringBuilder diagnosticContextAfterOutput = null;
+        String visitedWidgetsDescription = null;
+        RuntimeException caughtDiagnosticFailure = null;
         try {
-          if (param0 != 0) {
-            stackIn_2_0 = (StringBuilder) null;
-            return stackIn_2_0;
+          if (methodGuard != 0) {
+            guardedNullOutputSnapshot = (StringBuilder) null;
+            return guardedNullOutputSnapshot;
           }
-          if (this.a(param1, param3, 10095, param2)) {
-            this.a(param3, param2, 34, param1);
-            this.a(param2, param1, -3188, param3);
+          if (this.beginWidgetDiagnosticVisit(output, depth, 10095, visitedWidgets)) {
+            this.appendWidgetDiagnosticProperties(depth, visitedWidgets, 34, output);
+            this.appendChildrenDiagnostics(visitedWidgets, output, -3188, depth);
           }
-          stackIn_7_0 = (StringBuilder) (param1);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("ee.PA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          diagnosticOutputSnapshot = (StringBuilder) (output);
+          return diagnosticOutputSnapshot;
+        } catch (java.lang.RuntimeException diagnosticFailure) {
+          caughtDiagnosticFailure = diagnosticFailure;
+          widgetDiagnosticFailure = caughtDiagnosticFailure;
+          diagnosticFailureForContext = widgetDiagnosticFailure;
+          diagnosticContextBuilder = new StringBuilder().append("ee.PA(").append(methodGuard).append(',');
+          if (output == null) {
+            outputDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            outputDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
-            stackIn_14_2 = "null";
+          diagnosticContextAfterOutput = ((StringBuilder) (Object) diagnosticContextBuilder).append(outputDescription).append(',');
+          if (visitedWidgets == null) {
+            visitedWidgetsDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            visitedWidgetsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) diagnosticFailureForContext), ((StringBuilder) (Object) diagnosticContextAfterOutput).append(visitedWidgetsDescription).append(',').append(depth).append(')').toString());
         }
     }
 
-    final int d(byte param0) {
-        int var5 = 0;
-        int var6 = Geoblox.clientControlFlowFlag;
-        int var2 = 0;
-        DequeCursor var3 = new DequeCursor(this.children);
-        UiWidget var4 = (UiWidget) ((Object) var3.beginForward((byte) 88));
-        if (param0 < 82) {
+    final int getLastRenderPass(byte methodGuard) {
+        int childLastRenderPass = 0;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        int lastRenderPass = 0;
+        DequeCursor childCursor = new DequeCursor(this.children);
+        UiWidget child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        if (methodGuard < 82) {
             toServerListText = (String) null;
         }
-        while (var4 != null) {
-            var5 = var4.d((byte) 91);
-            if (var2 < var5) {
-                var2 = var5;
+        while (child != null) {
+            childLastRenderPass = child.getLastRenderPass((byte) 91);
+            if (lastRenderPass < childLastRenderPass) {
+                lastRenderPass = childLastRenderPass;
             }
-            var4 = (UiWidget) ((Object) var3.nextForward((byte) 110));
+            child = (UiWidget) ((Object) childCursor.nextForward((byte) 110));
         }
-        return var2;
+        return lastRenderPass;
     }
 
     final boolean hasKeyboardFocus(byte methodGuard) {
         if (methodGuard != 54) {
             StringBuilder guardedNullBuilderSnapshot = (StringBuilder) null;
-            this.a((Hashtable) null, (StringBuilder) null, -120, -15);
+            this.appendChildrenDiagnostics((Hashtable) null, (StringBuilder) null, -120, -15);
         }
         return null != this.findFocusTarget((byte) -99) ? true : false;
     }
@@ -469,55 +469,55 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final void a(Hashtable param0, StringBuilder param1, int param2, int param3) {
-        StringBuilder discarded$3 = null;
-        int var7 = 0;
-        StringBuilder discarded$4 = null;
-        UiWidget var6 = null;
-        int var8 = 0;
-        UiWidget var9 = null;
-        DequeCursor var10 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var8 = Geoblox.clientControlFlowFlag;
+    private final void appendChildrenDiagnostics(Hashtable visitedWidgets, StringBuilder output, int methodGuard, int depth) {
+        StringBuilder discardedNewlineAppend = null;
+        int indentIndex = 0;
+        StringBuilder discardedIndentAppend = null;
+        UiWidget child = null;
+        int clientControlFlowSnapshot = 0;
+        UiWidget guardedNullChildSnapshot = null;
+        DequeCursor childCursor = null;
+        RuntimeException diagnosticFailureForContext = null;
+        StringBuilder diagnosticContextBuilder = null;
+        String visitedWidgetsDescription = null;
+        StringBuilder diagnosticContextAfterVisited = null;
+        String outputDescription = null;
+        RuntimeException caughtDiagnosticFailure = null;
+        RuntimeException childrenDiagnosticFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var10 = new DequeCursor(this.children);
-          var6 = (UiWidget) ((Object) var10.beginForward((byte) 88));
-          if (param2 != -3188) {
-            var9 = (UiWidget) null;
+          childCursor = new DequeCursor(this.children);
+          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          if (methodGuard != -3188) {
+            guardedNullChildSnapshot = (UiWidget) null;
             this.updatePointerState(true, 26, (UiWidget) null, 23);
           }
-          while (var6 != null) {
-            discarded$3 = param1.append('\n');
-            for (var7 = 0; param3 >= var7; var7++) {
-              discarded$4 = param1.append(' ');
+          while (child != null) {
+            discardedNewlineAppend = output.append('\n');
+            for (indentIndex = 0; depth >= indentIndex; indentIndex++) {
+              discardedIndentAppend = output.append(' ');
             }
-            var6.a(0, param1, param0, param3 + 1);
-            var6 = (UiWidget) ((Object) var10.nextForward((byte) 125));
+            child.appendWidgetDiagnostics(0, output, visitedWidgets, depth + 1);
+            child = (UiWidget) ((Object) childCursor.nextForward((byte) 125));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("ee.FB(");
-          if (param0 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException diagnosticFailure) {
+          caughtDiagnosticFailure = diagnosticFailure;
+          childrenDiagnosticFailure = caughtDiagnosticFailure;
+          diagnosticFailureForContext = childrenDiagnosticFailure;
+          diagnosticContextBuilder = new StringBuilder().append("ee.FB(");
+          if (visitedWidgets == null) {
+            visitedWidgetsDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            visitedWidgetsDescription = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param1 == null) {
-            stackIn_15_2 = "null";
+          diagnosticContextAfterVisited = ((StringBuilder) (Object) diagnosticContextBuilder).append(visitedWidgetsDescription).append(',');
+          if (output == null) {
+            outputDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            outputDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) diagnosticFailureForContext), ((StringBuilder) (Object) diagnosticContextAfterVisited).append(outputDescription).append(',').append(methodGuard).append(',').append(depth).append(')').toString());
         }
     }
 

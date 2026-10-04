@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/eae9af2f4dba39619af18d85c96ca78e62de04aa/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ef5db29f6df89fe657f1d9efc8ca36c0e444c877/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 143)
+## Current readability (pass 144)
 
-The export has 13,357 guarded names and 97,588 Java identifier edits, plus 11
-class-name literal edits and 238 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 13,608 guarded names and 98,370 Java identifier edits, plus 11
+class-name literal edits and 242 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,38 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 144 adds 251 guarded rules: 17 methods, 58 parameters, 174 locals and
+two labels. Every SingleChildWidget field, method, parameter and local is now
+named. appendWidgetDiagnostics identifies all five owned overrides;
+appendWidgetDiagnosticProperties, beginWidgetDiagnosticVisit and the child
+helpers expose formatting and traversal. The visited Hashtable retains entries,
+so the existing circular marker includes shared revisits. Renderer/listener
+widget checks still recurse on this same widget receiver, with the original
+output aliases, callback order and nonzero client-control fallthrough.
+
+getLastRenderPass names the inclusive pass index: base zero, child delegation
+or container maximum. renderWidgetPassesAndTooltip retains the supplied start,
+integer increment/overflow, client-control exit and tooltip order. Base key
+input and child delegation now expose their actual roles. The two private
+requestUnfocusedChildFocus overloads keep identical child predicates/bodies and
+different guards; no forward/backward navigation is invented. Numeric key codes 80/81,
+child-origin additions, unchanged wheel coordinates and nullable hover fallback
+remain exact.
+
+rendererDiagnosticFormatting and listenerDiagnosticFormatting name existing
+plain frames and their two breaks. No frame or transfer is removed; label edit
+accounting grows from 238 to 242. There are 13,608 rules and 98,370 identifier
+edits, plus eleven class-literal and 242 label edits: 98,623 total. All 13,357
+previous complete rules and raw/tool/workflow/stub/native/text pins remain.
+Both 303-file corpora compile, preserve 136,607 bindings, 388 overrides and 813
+lexical label records, and reverse byte exactly. The 27 publication tests and
+eight existing native fixtures pass within their recorded scopes. Arbitrary
+diagnostic callback recursion, live AWT input and complete render-pass/device
+behavior remain unverified. Eight large labeled bodies and 166 opaque labels
+remain; full-game/server/device and heap/FPS acceptance are still unverified.
+
+## Previous packet framing and ranked range naming (pass 143)
 
 Pass 143 adds 56 guarded rules: seven fields, four methods, twelve parameters
 and 33 locals. The complete incoming-packet reader now exposes

@@ -459,7 +459,7 @@ public final class Geoblox extends SessionGameApplet {
         MultiHandleSliderRenderer.b((byte) -89);
         UiWidget.b(-5927);
         ButtonWidget.f((byte) -11);
-        SingleChildWidget.a((byte) -3);
+        SingleChildWidget.releaseStaticReferences((byte) -3);
         ResizableDialog.j(89);
         FadingDialog.i(256);
         WidgetContainer.e(14078);

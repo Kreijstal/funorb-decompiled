@@ -232,7 +232,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (param1) {
             return;
         }
-        ClientFlowState.accountDialogLayer.a(0, 0, 0);
+        ClientFlowState.accountDialogLayer.renderWidgetPassesAndTooltip(0, 0, 0);
     }
 
     ValidationMessageWidget(ValidationProvider validationProvider, String fallbackMessage, int x, int y, int width, int height) {

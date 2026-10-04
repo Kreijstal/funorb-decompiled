@@ -214,49 +214,49 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, Hashtable param2, int param3) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        RuntimeException var5 = null;
-        StringBuilder stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final StringBuilder appendWidgetDiagnostics(int methodGuard, StringBuilder output, Hashtable visitedWidgets, int depth) {
+        StringBuilder discardedActiveAppend = null;
+        StringBuilder discardedDisabledAppend = null;
+        RuntimeException widgetDiagnosticFailure = null;
+        StringBuilder diagnosticOutputSnapshot = null;
+        RuntimeException diagnosticFailureForContext = null;
+        StringBuilder diagnosticContextBuilder = null;
+        String outputDescription = null;
+        StringBuilder diagnosticContextAfterOutput = null;
+        String visitedWidgetsDescription = null;
+        RuntimeException caughtDiagnosticFailure = null;
         try {
-          if (param0 != 0) {
+          if (methodGuard != 0) {
             ButtonWidget.e(-5);
           }
-          if (this.a(param1, param3, 10095, param2)) {
-            this.a(param3, param2, 34, param1);
+          if (this.beginWidgetDiagnosticVisit(output, depth, 10095, visitedWidgets)) {
+            this.appendWidgetDiagnosticProperties(depth, visitedWidgets, 34, output);
             if (this.active) {
-              discarded$2 = param1.append(" active");
+              discardedActiveAppend = output.append(" active");
             }
             if (!this.enabled) {
-              discarded$3 = param1.append(" disabled");
+              discardedDisabledAppend = output.append(" disabled");
             }
           }
-          stackIn_10_0 = (StringBuilder) (param1);
-          return stackIn_10_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("hk.PA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+          diagnosticOutputSnapshot = (StringBuilder) (output);
+          return diagnosticOutputSnapshot;
+        } catch (java.lang.RuntimeException diagnosticFailure) {
+          caughtDiagnosticFailure = diagnosticFailure;
+          widgetDiagnosticFailure = caughtDiagnosticFailure;
+          diagnosticFailureForContext = widgetDiagnosticFailure;
+          diagnosticContextBuilder = new StringBuilder().append("hk.PA(").append(methodGuard).append(',');
+          if (output == null) {
+            outputDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            outputDescription = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
-            stackIn_17_2 = "null";
+          diagnosticContextAfterOutput = ((StringBuilder) (Object) diagnosticContextBuilder).append(outputDescription).append(',');
+          if (visitedWidgets == null) {
+            visitedWidgetsDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            visitedWidgetsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) diagnosticFailureForContext), ((StringBuilder) (Object) diagnosticContextAfterOutput).append(visitedWidgetsDescription).append(',').append(depth).append(')').toString());
         }
     }
 

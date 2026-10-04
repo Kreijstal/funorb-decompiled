@@ -113,49 +113,49 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, Hashtable param2, int param3) {
-        StringBuilder discarded$70 = null;
-        StringBuilder discarded$71 = null;
-        RuntimeException var5 = null;
-        StringBuilder stackIn_8_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final StringBuilder appendWidgetDiagnostics(int methodGuard, StringBuilder output, Hashtable visitedWidgets, int depth) {
+        StringBuilder discardedRevertAppend = null;
+        StringBuilder discardedTargetPositionAppend = null;
+        RuntimeException widgetDiagnosticFailure = null;
+        StringBuilder diagnosticOutputSnapshot = null;
+        RuntimeException diagnosticFailureForContext = null;
+        StringBuilder diagnosticContextBuilder = null;
+        String outputDescription = null;
+        StringBuilder diagnosticContextAfterOutput = null;
+        String visitedWidgetsDescription = null;
+        RuntimeException caughtDiagnosticFailure = null;
         try {
-          if (this.a(param1, param3, 10095, param2)) {
-            this.a(param3, param2, 34, param1);
-            this.b(param3, param1, param2, param0 + 0);
-            discarded$70 = param1.append(" revert=").append(this.easeToLayoutPosition);
+          if (this.beginWidgetDiagnosticVisit(output, depth, 10095, visitedWidgets)) {
+            this.appendWidgetDiagnosticProperties(depth, visitedWidgets, 34, output);
+            this.appendChildDiagnostics(depth, output, visitedWidgets, methodGuard + 0);
+            discardedRevertAppend = output.append(" revert=").append(this.easeToLayoutPosition);
             if ((this.layoutTargetX != 2147483647) &&
                 (this.layoutTargetY != 2147483647)) {
-              discarded$71 = param1.append(" to ").append(this.layoutTargetX).append(',').append(this.layoutTargetY);
+              discardedTargetPositionAppend = output.append(" to ").append(this.layoutTargetX).append(',').append(this.layoutTargetY);
             }
           }
-          if (param0 != 0) {
+          if (methodGuard != 0) {
             contentResizePhase = (UiFontResources) null;
           }
-          stackIn_8_0 = (StringBuilder) (param1);
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("la.PA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_12_2 = "null";
+          diagnosticOutputSnapshot = (StringBuilder) (output);
+          return diagnosticOutputSnapshot;
+        } catch (java.lang.RuntimeException diagnosticFailure) {
+          caughtDiagnosticFailure = diagnosticFailure;
+          widgetDiagnosticFailure = caughtDiagnosticFailure;
+          diagnosticFailureForContext = widgetDiagnosticFailure;
+          diagnosticContextBuilder = new StringBuilder().append("la.PA(").append(methodGuard).append(',');
+          if (output == null) {
+            outputDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            outputDescription = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param2 == null) {
-            stackIn_15_2 = "null";
+          diagnosticContextAfterOutput = ((StringBuilder) (Object) diagnosticContextBuilder).append(outputDescription).append(',');
+          if (visitedWidgets == null) {
+            visitedWidgetsDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            visitedWidgetsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) diagnosticFailureForContext), ((StringBuilder) (Object) diagnosticContextAfterOutput).append(visitedWidgetsDescription).append(',').append(depth).append(')').toString());
         }
     }
 

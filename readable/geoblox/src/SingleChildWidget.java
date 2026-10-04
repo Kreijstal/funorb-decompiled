@@ -10,28 +10,28 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     UiWidget child;
 
     boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        boolean stackIn_4_0 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int guardResidue = 0;
+        RuntimeException pointerPressFailure = null;
+        boolean childHandledPress = false;
+        RuntimeException pressFailureForContext = null;
+        StringBuilder pressContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtPressFailure = null;
         try {
-          var8_int = 124 % ((-3 - methodGuard) / 38);
-          stackIn_4_0 = (this.child != null) && (this.child.handlePointerPress(this.widgetY + parentY, -96, this.widgetX + parentX, pointerButton, pointerX, pointerY, eventContext));
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_7_0 = var8;
-          stackIn_7_1 = new StringBuilder().append("sh.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+          guardResidue = 124 % ((-3 - methodGuard) / 38);
+          childHandledPress = (this.child != null) && (this.child.handlePointerPress(this.widgetY + parentY, -96, this.widgetX + parentX, pointerButton, pointerX, pointerY, eventContext));
+          return childHandledPress;
+        } catch (java.lang.RuntimeException pressFailure) {
+          caughtPressFailure = pressFailure;
+          pointerPressFailure = caughtPressFailure;
+          pressFailureForContext = pointerPressFailure;
+          pressContextBuilder = new StringBuilder().append("sh.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
-            stackIn_8_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pressFailureForContext), ((StringBuilder) (Object) pressContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
@@ -110,32 +110,32 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final boolean a(UiWidget param0, int param1) {
-        RuntimeException var3 = null;
-        UiWidget var4 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final boolean requestUnfocusedChildFocus(UiWidget focusContext, int methodGuard) {
+        RuntimeException childFocusRequestFailure = null;
+        UiWidget guardedNullWidgetSnapshot = null;
+        boolean childFocusRequested = false;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
         try {
-          if (param1 != 22439) {
-            var4 = (UiWidget) null;
+          if (methodGuard != 22439) {
+            guardedNullWidgetSnapshot = (UiWidget) null;
             this.handlePointerRelease(73, 123, false, (UiWidget) null, 48, 45);
           }
-          stackIn_7_0 = (this.child != null) && (!this.child.hasKeyboardFocus((byte) 54)) && (this.child.requestKeyboardFocus((byte) -117, param0));
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("sh.S(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+          childFocusRequested = (this.child != null) && (!this.child.hasKeyboardFocus((byte) 54)) && (this.child.requestKeyboardFocus((byte) -117, focusContext));
+          return childFocusRequested;
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          childFocusRequestFailure = caughtFocusFailure;
+          focusFailureForContext = childFocusRequestFailure;
+          focusContextBuilder = new StringBuilder().append("sh.S(");
+          if (focusContext == null) {
+            focusContextDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -228,42 +228,42 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    StringBuilder a(int param0, StringBuilder param1, Hashtable param2, int param3) {
-        RuntimeException var5 = null;
-        StringBuilder stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    StringBuilder appendWidgetDiagnostics(int methodGuard, StringBuilder output, Hashtable visitedWidgets, int depth) {
+        RuntimeException widgetDiagnosticFailure = null;
+        StringBuilder diagnosticOutputSnapshot = null;
+        RuntimeException diagnosticFailureForContext = null;
+        StringBuilder diagnosticContextBuilder = null;
+        String outputDescription = null;
+        StringBuilder diagnosticContextAfterOutput = null;
+        String visitedWidgetsDescription = null;
+        RuntimeException caughtDiagnosticFailure = null;
         try {
-          if (this.a(param1, param3, 10095, param2)) {
-            this.a(param3, param2, 34, param1);
-            this.b(param3, param1, param2, 0);
+          if (this.beginWidgetDiagnosticVisit(output, depth, 10095, visitedWidgets)) {
+            this.appendWidgetDiagnosticProperties(depth, visitedWidgets, 34, output);
+            this.appendChildDiagnostics(depth, output, visitedWidgets, 0);
           }
-          if (param0 != 0) {
+          if (methodGuard != 0) {
             mainRasterBuffer = (AwtRasterBuffer) null;
           }
-          stackIn_5_0 = (StringBuilder) (param1);
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("sh.PA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_9_2 = "null";
+          diagnosticOutputSnapshot = (StringBuilder) (output);
+          return diagnosticOutputSnapshot;
+        } catch (java.lang.RuntimeException diagnosticFailure) {
+          caughtDiagnosticFailure = diagnosticFailure;
+          widgetDiagnosticFailure = caughtDiagnosticFailure;
+          diagnosticFailureForContext = widgetDiagnosticFailure;
+          diagnosticContextBuilder = new StringBuilder().append("sh.PA(").append(methodGuard).append(',');
+          if (output == null) {
+            outputDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            outputDescription = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
-            stackIn_12_2 = "null";
+          diagnosticContextAfterOutput = ((StringBuilder) (Object) diagnosticContextBuilder).append(outputDescription).append(',');
+          if (visitedWidgets == null) {
+            visitedWidgetsDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            visitedWidgetsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) diagnosticFailureForContext), ((StringBuilder) (Object) diagnosticContextAfterOutput).append(visitedWidgetsDescription).append(',').append(depth).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             (!(this.renderer == null))) {
             this.renderer.drawWidget(parentX, -50, parentY, true, (UiWidget) (this));
         }
-        int var5 = 85 % ((methodGuard - 1) / 43);
+        int guardResidue = 85 % ((methodGuard - 1) / 43);
         if (this.child != null) {
             this.child.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) -74, renderPass);
         }
@@ -300,126 +300,126 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             if (null != this.child) {
                 this.child.handlePointerRelease(this.widgetX + parentX, pointerX, true, eventContext, parentY + this.widgetY, pointerY);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
+        } catch (RuntimeException pointerReleaseFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "sh.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
         }
     }
 
-    final int d(byte param0) {
-        if (param0 <= 82) {
-            UiWidget var3 = (UiWidget) null;
+    final int getLastRenderPass(byte methodGuard) {
+        if (methodGuard <= 82) {
+            UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
             this.handlePointerWheel(-119, 24, -30, 98, 113, (UiWidget) null, 116);
         }
-        return this.child != null ? this.child.d((byte) 123) : 0;
+        return this.child != null ? this.child.getLastRenderPass((byte) 123) : 0;
     }
 
-    final void b(int param0, StringBuilder param1, Hashtable param2, int param3) {
-        StringBuilder discarded$10 = null;
-        int var5_int = 0;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$11 = null;
-        int var6 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var6 = Geoblox.clientControlFlowFlag;
+    final void appendChildDiagnostics(int depth, StringBuilder output, Hashtable visitedWidgets, int firstIndentIndex) {
+        StringBuilder discardedNewlineAppend = null;
+        int indentIndex = 0;
+        StringBuilder discardedIndentAppend = null;
+        StringBuilder discardedNullChildAppend = null;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException diagnosticFailureForContext = null;
+        StringBuilder diagnosticContextBuilder = null;
+        String outputDescription = null;
+        StringBuilder diagnosticContextAfterOutput = null;
+        String visitedWidgetsDescription = null;
+        RuntimeException caughtDiagnosticFailure = null;
+        RuntimeException childDiagnosticFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          discarded$10 = param1.append('\n');
-          for (var5_int = param3; param0 >= var5_int; var5_int++) {
-            discarded$12 = param1.append(' ');
+          discardedNewlineAppend = output.append('\n');
+          for (indentIndex = firstIndentIndex; depth >= indentIndex; indentIndex++) {
+            discardedIndentAppend = output.append(' ');
           }
           if (this.child != null) {
-            this.child.a(0, param1, param2, param0 + 1);
+            this.child.appendWidgetDiagnostics(0, output, visitedWidgets, depth + 1);
           } else {
-            discarded$11 = param1.append("null");
+            discardedNullChildAppend = output.append("null");
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("sh.V(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException diagnosticFailure) {
+          caughtDiagnosticFailure = diagnosticFailure;
+          childDiagnosticFailure = caughtDiagnosticFailure;
+          diagnosticFailureForContext = childDiagnosticFailure;
+          diagnosticContextBuilder = new StringBuilder().append("sh.V(").append(depth).append(',');
+          if (output == null) {
+            outputDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            outputDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
-            stackIn_14_2 = "null";
+          diagnosticContextAfterOutput = ((StringBuilder) (Object) diagnosticContextBuilder).append(outputDescription).append(',');
+          if (visitedWidgets == null) {
+            visitedWidgetsDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            visitedWidgetsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) diagnosticFailureForContext), ((StringBuilder) (Object) diagnosticContextAfterOutput).append(visitedWidgetsDescription).append(',').append(firstIndentIndex).append(')').toString());
         }
     }
 
     String getHoverText(byte methodGuard) {
-        String var3 = null;
-        String var2 = super.getHoverText(methodGuard);
+        String childHoverText = null;
+        String parentHoverText = super.getHoverText(methodGuard);
         if (!(this.child == null)) {
-            var3 = this.child.getHoverText((byte) 69);
-            if (!(var3 == null)) {
-                return var3;
+            childHoverText = this.child.getHoverText((byte) 69);
+            if (!(childHoverText == null)) {
+                return childHoverText;
             }
         }
-        return var2;
+        return parentHoverText;
     }
 
-    private final boolean a(UiWidget param0, byte param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final boolean requestUnfocusedChildFocus(UiWidget focusContext, byte methodGuard) {
+        int guardResidue = 0;
+        RuntimeException childFocusRequestFailure = null;
+        boolean childFocusRequested = false;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
         try {
-          var3_int = -11 % ((param1 + 73) / 40);
-          stackIn_5_0 = (null != this.child) && (!this.child.hasKeyboardFocus((byte) 54)) && (this.child.requestKeyboardFocus((byte) -85, param0));
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("sh.U(");
-          if (param0 == null) {
-            stackIn_9_2 = "null";
+          guardResidue = -11 % ((methodGuard + 73) / 40);
+          childFocusRequested = (null != this.child) && (!this.child.hasKeyboardFocus((byte) 54)) && (this.child.requestKeyboardFocus((byte) -85, focusContext));
+          return childFocusRequested;
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          childFocusRequestFailure = caughtFocusFailure;
+          focusFailureForContext = childFocusRequestFailure;
+          focusContextBuilder = new StringBuilder().append("sh.U(");
+          if (focusContext == null) {
+            focusContextDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     final boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
-        RuntimeException var3 = null;
-        boolean stackIn_6_0 = false;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException childFocusRequestFailure = null;
+        boolean childFocusRequested = false;
+        RuntimeException focusFailureForContext = null;
+        StringBuilder focusContextBuilder = null;
+        String focusContextDescription = null;
+        RuntimeException caughtFocusFailure = null;
         try {
           if (methodGuard > -30) {
             mainRasterBuffer = (AwtRasterBuffer) null;
           }
-          stackIn_6_0 = (null != this.child) && (this.child.requestKeyboardFocus((byte) -34, focusContext));
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("sh.UA(").append(methodGuard).append(',');
+          childFocusRequested = (null != this.child) && (this.child.requestKeyboardFocus((byte) -34, focusContext));
+          return childFocusRequested;
+        } catch (java.lang.RuntimeException focusFailure) {
+          caughtFocusFailure = focusFailure;
+          childFocusRequestFailure = caughtFocusFailure;
+          focusFailureForContext = childFocusRequestFailure;
+          focusContextBuilder = new StringBuilder().append("sh.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
-            stackIn_10_2 = "null";
+            focusContextDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureForContext), ((StringBuilder) (Object) focusContextBuilder).append(focusContextDescription).append(')').toString());
         }
     }
 
@@ -432,29 +432,29 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     }
 
     final boolean handlePointerWheel(int parentY, int wheelRotation, int parentX, int methodGuard, int pointerX, UiWidget eventContext, int pointerY) {
-        RuntimeException var8 = null;
-        boolean stackIn_8_0 = false;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException pointerWheelFailure = null;
+        boolean childHandledWheel = false;
+        RuntimeException wheelFailureForContext = null;
+        StringBuilder wheelContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtWheelFailure = null;
         try {
           if (methodGuard != -1) {
             return true;
           }
-          stackIn_8_0 = (null != this.child) && (this.child.hasKeyboardFocus((byte) 54)) && (this.child.handlePointerWheel(parentY, wheelRotation, parentX, -1, pointerX, eventContext, pointerY));
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_11_0 = var8;
-          stackIn_11_1 = new StringBuilder().append("sh.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
+          childHandledWheel = (null != this.child) && (this.child.hasKeyboardFocus((byte) 54)) && (this.child.handlePointerWheel(parentY, wheelRotation, parentX, -1, pointerX, eventContext, pointerY));
+          return childHandledWheel;
+        } catch (java.lang.RuntimeException wheelFailure) {
+          caughtWheelFailure = wheelFailure;
+          pointerWheelFailure = caughtWheelFailure;
+          wheelFailureForContext = pointerWheelFailure;
+          wheelContextBuilder = new StringBuilder().append("sh.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
           if (eventContext == null) {
-            stackIn_12_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(pointerY).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) wheelFailureForContext), ((StringBuilder) (Object) wheelContextBuilder).append(eventContextDescription).append(',').append(pointerY).append(')').toString());
         }
     }
 
@@ -463,7 +463,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             this.child.clearKeyboardFocus(-123);
         }
         if (methodGuard >= -122) {
-            SingleChildWidget.a((byte) 83);
+            SingleChildWidget.releaseStaticReferences((byte) 83);
         }
     }
 
@@ -476,8 +476,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 != -3) {
+    public static void releaseStaticReferences(byte methodGuard) {
+        if (methodGuard != -3) {
             return;
         }
         mainRasterBuffer = null;
@@ -491,49 +491,49 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             if (this.child != null) {
                 this.child.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+        } catch (RuntimeException pointerStateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerStateFailure), "sh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        boolean stackIn_11_0 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        int keyCodeSnapshot = 0;
+        RuntimeException keyInputFailure = null;
+        boolean childFocusRequested = false;
+        RuntimeException keyFailureForContext = null;
+        StringBuilder keyContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtKeyFailure = null;
         try {
           if ((null != this.child) &&
               (this.child.hasKeyboardFocus((byte) 54)) &&
-              (this.child.handleKeyInput(param0, 13, param2, param3))) {
+              (this.child.handleKeyInput(keyCode, 13, typedCharacter, eventContext))) {
             return true;
           }
-          if (param1 != 13) {
+          if (methodGuard != 13) {
             mainRasterBuffer = (AwtRasterBuffer) null;
           }
-          var5_int = param0;
-          if (var5_int != 80) {
+          keyCodeSnapshot = keyCode;
+          if (keyCodeSnapshot != 80) {
             return false;
           }
           if (!MidiPcmStream.heldInternalKeys[81]) {
-            stackIn_11_0 = this.a(param3, 22439);
+            childFocusRequested = this.requestUnfocusedChildFocus(eventContext, 22439);
           } else {
-            stackIn_11_0 = this.a(param3, (byte) -119);
+            childFocusRequested = this.requestUnfocusedChildFocus(eventContext, (byte) -119);
           }
-          return stackIn_11_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("sh.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_17_2 = "null";
+          return childFocusRequested;
+        } catch (java.lang.RuntimeException keyFailure) {
+          caughtKeyFailure = keyFailure;
+          keyInputFailure = caughtKeyFailure;
+          keyFailureForContext = keyInputFailure;
+          keyContextBuilder = new StringBuilder().append("sh.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureForContext), ((StringBuilder) (Object) keyContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
