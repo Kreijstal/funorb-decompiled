@@ -635,7 +635,7 @@ public final class Geoblox extends SessionGameApplet {
           this.requestGameArchives(archiveRequestGuardSnapshot);
           AgeValidator.field_k = false;
         }
-        while (SingleChildWidget.a((byte) -118, ArchiveRequest.sessionPacketLengthByOpcode)) {
+        while (SingleChildWidget.readNextIncomingPacket((byte) -118, ArchiveRequest.sessionPacketLengthByOpcode)) {
           this.dispatchSessionPacket(121);
         }
         if (!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255)) {

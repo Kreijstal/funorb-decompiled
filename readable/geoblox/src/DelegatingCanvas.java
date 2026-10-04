@@ -5,7 +5,7 @@ import java.util.*;
 
 final class DelegatingCanvas extends java.awt.Canvas {
     static IntrusiveDeque transientEntities;
-    static Random field_d;
+    static Random sharedClientRandom;
     private java.awt.Component field_b;
     static PcmStreamMixer field_a;
 
@@ -21,7 +21,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     public static void a(byte param0) {
-        field_d = null;
+        sharedClientRandom = null;
         transientEntities = null;
         field_a = null;
         int var1 = -120 % ((-5 - param0) / 51);
@@ -94,7 +94,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = AchievementQuery.field_i[var9];
+              var11 = AchievementQuery.rankedEntryIndices[var9];
               var6[0][var10] = ByteArrayPoolSupport.rankedListResponseNames[var11];
               var18[0][4 * var10] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
               var18[0][4 * var10 + 1] = TextHotspotBounds.field_m[var11];
@@ -112,7 +112,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var13 = 0;
             var10 = var13;
             while (var9 < var8) {
-              var11 = AchievementQuery.field_i[var9 + var5];
+              var11 = AchievementQuery.rankedEntryIndices[var9 + var5];
               var6[1][var13] = ByteArrayPoolSupport.rankedListResponseNames[var11];
               var18[1][4 * var13] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
               var18[1][1 + 4 * var13] = TextHotspotBounds.field_m[var11];
@@ -271,6 +271,6 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     static {
         transientEntities = new IntrusiveDeque();
-        field_d = new Random();
+        sharedClientRandom = new Random();
     }
 }

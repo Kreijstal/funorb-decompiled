@@ -230,7 +230,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(123, "fps");
           if (null != var2) {
-            SingleChildWidget.field_z = EmailValidator.decodeTextBytes(1, var2);
+            SingleChildWidget.fpsTextTemplate = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "level");
           if (var2 != null) {

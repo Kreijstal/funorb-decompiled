@@ -495,7 +495,7 @@ final class GameplaySession {
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SessionBootstrapSupport.bonusAmountTemplateText, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
             }
             if (this.showSessionCounters) {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SingleChildWidget.field_z, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SingleChildWidget.fpsTextTemplate, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             gameOverTitleRendering: {

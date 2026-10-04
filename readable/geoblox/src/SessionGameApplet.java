@@ -754,7 +754,7 @@ abstract class SessionGameApplet extends GameApplet {
                     } else {
                       if (packetOpcode != 7) {
                         if (8 == packetOpcode) {
-                          GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, LogoCompositor.sessionPacketBuffer);
+                          GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.sessionPacketPayloadLength, LogoCompositor.sessionPacketBuffer);
                         } else {
                           if (packetOpcode == 16) {
                             DualLinkNode.readSessionNameAndNormalize(1);
@@ -805,7 +805,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (methodGuard != 12) {
             this.updateBootstrapUi(106);
         }
-        int urlByteCount = -1 + AchievementSubmission.field_k;
+        int urlByteCount = -1 + AchievementSubmission.sessionPacketPayloadLength;
         byte[] cipheredUrlBytes = new byte[urlByteCount];
         LogoCompositor.sessionPacketBuffer.readCipherBytes(96, 0, cipheredUrlBytes, urlByteCount);
         LimitedRandomAccessFile.openUrlInNewWindow(EmailValidator.decodeTextBytes(1, cipheredUrlBytes), (byte) -128, navigationFlagInt != 0, NodeHashTableIterator.getActiveApplet(112));

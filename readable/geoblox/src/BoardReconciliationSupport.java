@@ -31,20 +31,20 @@ final class BoardReconciliationSupport {
         RuntimeException sortFailureForContext = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          SingleChildWidget.a(0, entryLimit, ClientRenderingState.rankedKeyTwoLowerBoundSeed, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.rankedEntryCount, true);
+          SingleChildWidget.sortRankedEntryRange(0, entryLimit, ClientRenderingState.rankedKeyTwoLowerBoundSeed, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.rankedEntryCount, true);
           if (methodGuard != -98) {
             return;
           }
           secondaryEntryIndex = 0;
           while (true) {
             if (GmtTimestampSupport.rankedEntryCount > secondaryEntryIndex) {
-              AchievementQuery.field_i[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
+              AchievementQuery.rankedEntryIndices[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
               secondaryEntryIndex++;
               if (clientControlSnapshot == 0) {
                 continue;
               }
             } else {
-              SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
+              SingleChildWidget.sortRankedEntryRange(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
             }
             if (entryLimit < GmtTimestampSupport.rankedEntryCount) {
               GmtTimestampSupport.rankedEntryCount = entryLimit;

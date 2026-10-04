@@ -6,7 +6,7 @@ import java.util.*;
 abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     static AwtRasterBuffer mainRasterBuffer;
     static int[] projectedMeshVertexX;
-    static String field_z;
+    static String fpsTextTemplate;
     UiWidget child;
 
     boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
@@ -35,78 +35,78 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, boolean param6) {
-        int var11 = 0;
-        int incrementValue$0 = 0;
-        int stackIn_24_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        var14 = Geoblox.clientControlFlowFlag;
+    final static void sortRankedEntryRange(int startIndex, int prefixLimitIndex, int lowerKeyBound, int upperKeyBound, byte methodGuard, int endIndexExclusive, boolean useSecondKey) {
+        int entryIndex = 0;
+        int partitionIndexBeforeIncrement = 0;
+        int selectedKeySnapshot = 0;
+        RuntimeException caughtSortFailure = null;
+        int midpointOrBubbleEnd = 0;
+        RuntimeException sortFailureForContext = null;
+        int partitionOrBubbleIndex = 0;
+        int leastUpperKeyOrLeftEntry = 0;
+        int greatestLowerKeyOrRightEntry = 0;
+        int entry = 0;
+        int entryKey = 0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param1 <= param0) {
+          if (prefixLimitIndex <= startIndex) {
             return;
           }
-          if (param5 <= param0 + 1) {
+          if (endIndexExclusive <= startIndex + 1) {
             return;
           }
-          if ((param0 + 5 < param5) &&
-              (param3 != param2)) {
-            var7_int = (1 & (param3 & param2)) + (param2 >> 1) + (param3 >> 1);
-            var8 = param0;
-            var9 = param3;
-            if (param4 < 106) {
+          if ((startIndex + 5 < endIndexExclusive) &&
+              (upperKeyBound != lowerKeyBound)) {
+            midpointOrBubbleEnd = (1 & (upperKeyBound & lowerKeyBound)) + (lowerKeyBound >> 1) + (upperKeyBound >> 1);
+            partitionOrBubbleIndex = startIndex;
+            leastUpperKeyOrLeftEntry = upperKeyBound;
+            if (methodGuard < 106) {
               return;
             }
-            var10 = param2;
-            for (var11 = param0; var11 < param5; var11++) {
-              var12 = AchievementQuery.field_i[var11];
-              if (!param6) {
-                stackIn_24_0 = ClientProtocolStage.rankedEntryKeyOne[var12];
+            greatestLowerKeyOrRightEntry = lowerKeyBound;
+            for (entryIndex = startIndex; entryIndex < endIndexExclusive; entryIndex++) {
+              entry = AchievementQuery.rankedEntryIndices[entryIndex];
+              if (!useSecondKey) {
+                selectedKeySnapshot = ClientProtocolStage.rankedEntryKeyOne[entry];
               } else {
-                stackIn_24_0 = LoginPasswordSupport.rankedEntryKeyTwo[var12];
+                selectedKeySnapshot = LoginPasswordSupport.rankedEntryKeyTwo[entry];
               }
-              var13 = stackIn_24_0;
-              if (var13 > var7_int) {
-                AchievementQuery.field_i[var11] = AchievementQuery.field_i[var8];
-                incrementValue$0 = var8;
-                var8++;
-                AchievementQuery.field_i[incrementValue$0] = var12;
-                if (var9 > var13) {
-                  var9 = var13;
+              entryKey = selectedKeySnapshot;
+              if (entryKey > midpointOrBubbleEnd) {
+                AchievementQuery.rankedEntryIndices[entryIndex] = AchievementQuery.rankedEntryIndices[partitionOrBubbleIndex];
+                partitionIndexBeforeIncrement = partitionOrBubbleIndex;
+                partitionOrBubbleIndex++;
+                AchievementQuery.rankedEntryIndices[partitionIndexBeforeIncrement] = entry;
+                if (leastUpperKeyOrLeftEntry > entryKey) {
+                  leastUpperKeyOrLeftEntry = entryKey;
                 }
               } else {
-                if (var10 >= var13) {
+                if (greatestLowerKeyOrRightEntry >= entryKey) {
                   continue;
                 }
-                var10 = var13;
+                greatestLowerKeyOrRightEntry = entryKey;
               }
             }
-            SingleChildWidget.a(param0, param1, var9, param3, (byte) 118, var8, param6);
-            SingleChildWidget.a(var8, param1, param2, var10, (byte) 107, param5, param6);
+            SingleChildWidget.sortRankedEntryRange(startIndex, prefixLimitIndex, leastUpperKeyOrLeftEntry, upperKeyBound, (byte) 118, partitionOrBubbleIndex, useSecondKey);
+            SingleChildWidget.sortRankedEntryRange(partitionOrBubbleIndex, prefixLimitIndex, lowerKeyBound, greatestLowerKeyOrRightEntry, (byte) 107, endIndexExclusive, useSecondKey);
             return;
           }
-          for (var7_int = -1 + param5; var7_int > param0; var7_int--) {
-            for (var8 = param0; var8 < var7_int; var8++) {
-              var9 = AchievementQuery.field_i[var8];
-              var10 = AchievementQuery.field_i[1 + var8];
-              if (RankedComparisonSupport.isRightRankedEntryBeforeLeft(param6, var10, (byte) -125, var9)) {
-                AchievementQuery.field_i[var8] = var10;
-                AchievementQuery.field_i[var8 + 1] = var9;
+          for (midpointOrBubbleEnd = -1 + endIndexExclusive; midpointOrBubbleEnd > startIndex; midpointOrBubbleEnd--) {
+            for (partitionOrBubbleIndex = startIndex; partitionOrBubbleIndex < midpointOrBubbleEnd; partitionOrBubbleIndex++) {
+              leastUpperKeyOrLeftEntry = AchievementQuery.rankedEntryIndices[partitionOrBubbleIndex];
+              greatestLowerKeyOrRightEntry = AchievementQuery.rankedEntryIndices[1 + partitionOrBubbleIndex];
+              if (RankedComparisonSupport.isRightRankedEntryBeforeLeft(useSecondKey, greatestLowerKeyOrRightEntry, (byte) -125, leastUpperKeyOrLeftEntry)) {
+                AchievementQuery.rankedEntryIndices[partitionOrBubbleIndex] = greatestLowerKeyOrRightEntry;
+                AchievementQuery.rankedEntryIndices[partitionOrBubbleIndex + 1] = leastUpperKeyOrLeftEntry;
               }
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var7), "sh.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        } catch (java.lang.RuntimeException sortFailure) {
+          caughtSortFailure = sortFailure;
+          sortFailureForContext = caughtSortFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) sortFailureForContext), "sh.T(" + startIndex + ',' + prefixLimitIndex + ',' + lowerKeyBound + ',' + upperKeyBound + ',' + methodGuard + ',' + endIndexExclusive + ',' + useSecondKey + ')');
         }
     }
 
@@ -139,59 +139,59 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static boolean a(byte param0, int[] param1) {
-        int var6_int = 0;
-        int var7 = 0;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_36_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        long var3 = 0L;
-        DelayedIncomingPacket var5_ref_ma = null;
-        int var5 = 0;
-        DelayedIncomingPacket var6 = null;
-        int var8 = 0;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static boolean readNextIncomingPacket(byte methodGuard, int[] payloadLengthByOpcode) {
+        int queuedPayloadCopyIndex = 0;
+        int delayedPayloadCopyIndex = 0;
+        RuntimeException packetFailureForContext = null;
+        StringBuilder packetContextBuilder = null;
+        String lengthTableDescription = null;
+        RuntimeException caughtPacketFailure = null;
+        int guardResidue = 0;
+        RuntimeException packetReadFailure = null;
+        long nowMillis = 0L;
+        DelayedIncomingPacket queuedPacket = null;
+        int deliveryDelayMillis = 0;
+        DelayedIncomingPacket delayedPacket = null;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var2_int = -108 / ((-71 - param0) / 45);
+          guardResidue = -108 / ((-71 - methodGuard) / 45);
           if (LogoCompositor.connectedSessionStage != PacketBuffer.currentProtocolStage) {
             return false;
           }
-          var3 = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-          if ((EntityMotionSupport.field_b != 0) &&
+          nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+          if ((EntityMotionSupport.incomingPacketBaseDelayMillis != 0) &&
               (MidiNote.stagedIncomingPacketOpcode < 0)) {
-            var5_ref_ma = (DelayedIncomingPacket) ((Object) MeshPrioritySupport.field_c.firstForIteration(0));
-            if ((var5_ref_ma != null) &&
-                (var3 > var5_ref_ma.deliveryTimeMillis)) {
-              var5_ref_ma.unlinkNode(false);
-              AchievementSubmission.field_k = var5_ref_ma.payload.length;
+            queuedPacket = (DelayedIncomingPacket) ((Object) MeshPrioritySupport.delayedIncomingPackets.firstForIteration(0));
+            if ((queuedPacket != null) &&
+                (nowMillis > queuedPacket.deliveryTimeMillis)) {
+              queuedPacket.unlinkNode(false);
+              AchievementSubmission.sessionPacketPayloadLength = queuedPacket.payload.length;
               LogoCompositor.sessionPacketBuffer.position = 0;
-              for (var6_int = 0; var6_int < AchievementSubmission.field_k; var6_int++) {
-                LogoCompositor.sessionPacketBuffer.bytes[var6_int] = var5_ref_ma.payload[var6_int];
+              for (queuedPayloadCopyIndex = 0; queuedPayloadCopyIndex < AchievementSubmission.sessionPacketPayloadLength; queuedPayloadCopyIndex++) {
+                LogoCompositor.sessionPacketBuffer.bytes[queuedPayloadCopyIndex] = queuedPacket.payload[queuedPayloadCopyIndex];
               }
               MidiNoteMixer.thirdPreviousPacketOpcode = AttachedEntityRenderer.secondPreviousPacketOpcode;
               AttachedEntityRenderer.secondPreviousPacketOpcode = VisualPropertyNode.previousPacketOpcode;
               VisualPropertyNode.previousPacketOpcode = ScorePopup.currentPacketOpcode;
-              ScorePopup.currentPacketOpcode = var5_ref_ma.packetOpcode;
+              ScorePopup.currentPacketOpcode = queuedPacket.packetOpcode;
               return true;
             }
           }
           while (true) {
             if (MidiNote.stagedIncomingPacketOpcode < 0) {
               LogoCompositor.sessionPacketBuffer.position = 0;
-              if (!UiWidget.b(30000, 1)) {
+              if (!UiWidget.readSessionBytesIfAvailable(30000, 1)) {
                 return false;
               }
               MidiNote.stagedIncomingPacketOpcode = LogoCompositor.sessionPacketBuffer.readCipherByte((byte) 122);
               LogoCompositor.sessionPacketBuffer.position = 0;
-              AchievementSubmission.field_k = param1[MidiNote.stagedIncomingPacketOpcode];
+              AchievementSubmission.sessionPacketPayloadLength = payloadLengthByOpcode[MidiNote.stagedIncomingPacketOpcode];
             }
-            if (!TriangleMesh.a(false)) {
+            if (!TriangleMesh.readSessionPacketPayload(false)) {
               return false;
             }
-            if (EntityMotionSupport.field_b == 0) {
+            if (EntityMotionSupport.incomingPacketBaseDelayMillis == 0) {
               MidiNoteMixer.thirdPreviousPacketOpcode = AttachedEntityRenderer.secondPreviousPacketOpcode;
               AttachedEntityRenderer.secondPreviousPacketOpcode = VisualPropertyNode.previousPacketOpcode;
               VisualPropertyNode.previousPacketOpcode = ScorePopup.currentPacketOpcode;
@@ -199,32 +199,32 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
               MidiNote.stagedIncomingPacketOpcode = -1;
               return true;
             }
-            var5 = EntityMotionSupport.field_b;
-            if (0.0 != EndingAnimationSupport.field_a) {
-              var5 = (int)((double)var5 + DelegatingCanvas.field_d.nextGaussian() * EndingAnimationSupport.field_a);
-              if (var5 < 0) {
-                var5 = 0;
+            deliveryDelayMillis = EntityMotionSupport.incomingPacketBaseDelayMillis;
+            if (0.0 != EndingAnimationSupport.incomingPacketDelayJitterMillis) {
+              deliveryDelayMillis = (int)((double)deliveryDelayMillis + DelegatingCanvas.sharedClientRandom.nextGaussian() * EndingAnimationSupport.incomingPacketDelayJitterMillis);
+              if (deliveryDelayMillis < 0) {
+                deliveryDelayMillis = 0;
               }
             }
-            var6 = new DelayedIncomingPacket((long)var5 + var3, MidiNote.stagedIncomingPacketOpcode, new byte[AchievementSubmission.field_k]);
-            for (var7 = 0; AchievementSubmission.field_k > var7; var7++) {
-              var6.payload[var7] = LogoCompositor.sessionPacketBuffer.bytes[var7];
+            delayedPacket = new DelayedIncomingPacket((long)deliveryDelayMillis + nowMillis, MidiNote.stagedIncomingPacketOpcode, new byte[AchievementSubmission.sessionPacketPayloadLength]);
+            for (delayedPayloadCopyIndex = 0; AchievementSubmission.sessionPacketPayloadLength > delayedPayloadCopyIndex; delayedPayloadCopyIndex++) {
+              delayedPacket.payload[delayedPayloadCopyIndex] = LogoCompositor.sessionPacketBuffer.bytes[delayedPayloadCopyIndex];
             }
-            MeshPrioritySupport.field_c.addLast(-108, var6);
+            MeshPrioritySupport.delayedIncomingPackets.addLast(-108, delayedPacket);
             MidiNote.stagedIncomingPacketOpcode = -1;
             continue;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_35_0 = var2;
-          stackIn_35_1 = new StringBuilder().append("sh.HA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_36_2 = "null";
+        } catch (java.lang.RuntimeException packetFailure) {
+          caughtPacketFailure = packetFailure;
+          packetReadFailure = caughtPacketFailure;
+          packetFailureForContext = packetReadFailure;
+          packetContextBuilder = new StringBuilder().append("sh.HA(").append(methodGuard).append(',');
+          if (payloadLengthByOpcode == null) {
+            lengthTableDescription = "null";
           } else {
-            stackIn_36_2 = "{...}";
+            lengthTableDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) packetFailureForContext), ((StringBuilder) (Object) packetContextBuilder).append(lengthTableDescription).append(')').toString());
         }
     }
 
@@ -481,7 +481,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             return;
         }
         mainRasterBuffer = null;
-        field_z = null;
+        fpsTextTemplate = null;
         projectedMeshVertexX = null;
     }
 
@@ -544,13 +544,13 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
         super.setWidgetBounds(height, width, (byte) -40, y, x);
         if (methodGuard > -6) {
-            field_z = (String) null;
+            fpsTextTemplate = (String) null;
         }
         this.refreshChildLayout(true);
     }
 
     static {
         projectedMeshVertexX = new int[8192];
-        field_z = "FPS: <%0>";
+        fpsTextTemplate = "FPS: <%0>";
     }
 }

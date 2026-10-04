@@ -156,8 +156,8 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         int var6 = 0;
         String var7 = null;
         try {
-          ProgressBarWidget.field_D[0] = DelegatingCanvas.field_d.nextInt();
-          ProgressBarWidget.field_D[1] = DelegatingCanvas.field_d.nextInt();
+          ProgressBarWidget.field_D[0] = DelegatingCanvas.sharedClientRandom.nextInt();
+          ProgressBarWidget.field_D[1] = DelegatingCanvas.sharedClientRandom.nextInt();
           ProgressBarWidget.field_D[2] = (int)(TextValidationSupport.field_a >> 32);
           ProgressBarWidget.field_D[3] = (int)TextValidationSupport.field_a;
           EndingAnimationSupport.loginPayloadBuffer.position = 0;

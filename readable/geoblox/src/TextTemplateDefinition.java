@@ -22,9 +22,9 @@ final class TextTemplateDefinition extends DualLinkNode {
         var5 = Geoblox.clientControlFlowFlag;
         var6 = "(" + MidiNoteMixer.thirdPreviousPacketOpcode + " " + AttachedEntityRenderer.secondPreviousPacketOpcode + " " + VisualPropertyNode.previousPacketOpcode + ") " + ScorePopup.currentPacketOpcode;
         var1 = var6;
-        if (0 < AchievementSubmission.field_k) {
+        if (0 < AchievementSubmission.sessionPacketPayloadLength) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < AchievementSubmission.field_k; var2++) {
+          for (var2 = 0; var2 < AchievementSubmission.sessionPacketPayloadLength; var2++) {
             var7 = var1 + ' ';
             var1 = var7;
             var3 = 255 & LogoCompositor.sessionPacketBuffer.bytes[var2];

@@ -54,11 +54,11 @@ final class LoginProtocolSupport {
                 PacketBuffer.currentProtocolStage = ResizableDialog.awaitingInitialLoginReplyStage;
               }
               if ((ResizableDialog.awaitingInitialLoginReplyStage == PacketBuffer.currentProtocolStage) &&
-                  (UiWidget.b(30000, 1))) {
+                  (UiWidget.readSessionBytesIfAvailable(30000, 1))) {
                 responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 if (responseByteThenPortSwapValue != 0) {
-                  AchievementSubmission.field_k = -1;
+                  AchievementSubmission.sessionPacketPayloadLength = -1;
                   PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
                   ScorePopup.currentPacketOpcode = responseByteThenPortSwapValue;
                 } else {
@@ -66,7 +66,7 @@ final class LoginProtocolSupport {
                 }
               }
               if ((MessageDialog.awaitingLoginLongState == PacketBuffer.currentProtocolStage) &&
-                  (UiWidget.b(30000, 8))) {
+                  (UiWidget.readSessionBytesIfAvailable(30000, 8))) {
                 TextValidationSupport.field_a = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 UsernameAvailabilityValidator.a(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
@@ -78,7 +78,7 @@ final class LoginProtocolSupport {
               }
               L6: {
                 if ((ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage) &&
-                    (UiWidget.b(30000, 1))) {
+                    (UiWidget.readSessionBytesIfAvailable(30000, 1))) {
                   responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.position = 0;
                   GameSoundResources.optionalLoginText = null;
@@ -87,7 +87,7 @@ final class LoginProtocolSupport {
                       (responseByteThenPortSwapValue != 1)) {
                     if (responseByteThenPortSwapValue != 8) {
                       PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
-                      AchievementSubmission.field_k = -1;
+                      AchievementSubmission.sessionPacketPayloadLength = -1;
                       break L6;
                     }
                     Bzip2DecoderState.closeSessionSocket((byte) -116);
@@ -95,12 +95,12 @@ final class LoginProtocolSupport {
                     closedResponseResult = responseByteThenPortSwapValue;
                     return closedResponseResult;
                   }
-                  AchievementSubmission.field_k = -1;
+                  AchievementSubmission.sessionPacketPayloadLength = -1;
                   PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginDetailsStage;
                 }
               }
               if ((ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
-                  (TriangleMesh.a(false))) {
+                  (TriangleMesh.readSessionPacketPayload(false))) {
                 ClientClockSupport.field_c = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 SpriteCheckboxRenderer.field_f = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
@@ -172,7 +172,7 @@ final class LoginProtocolSupport {
                 return connectedResponseResult;
               }
               if ((PacketBuffer.currentProtocolStage == TextInputRenderer.awaitingLoginFailureTextStage) &&
-                  (TriangleMesh.a(false))) {
+                  (TriangleMesh.readSessionPacketPayload(false))) {
                 Bzip2DecoderState.closeSessionSocket((byte) -118);
                 if ((ScorePopup.currentPacketOpcode == 7) &&
                     (!TextTemplateArgumentType.field_e)) {

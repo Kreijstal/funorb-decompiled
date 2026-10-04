@@ -7,7 +7,7 @@ final class MeshPrioritySupport {
     static boolean field_d;
     static ClientFlowToken completedClientFlowToken;
     static int bootstrapLanguageId;
-    static IntrusiveDeque field_c;
+    static IntrusiveDeque delayedIncomingPackets;
 
     public static void releaseStaticReferences(int methodGuard) {
         field_f = null;
@@ -15,7 +15,7 @@ final class MeshPrioritySupport {
             return;
         }
         completedClientFlowToken = null;
-        field_c = null;
+        delayedIncomingPackets = null;
     }
 
     final static void updateSessionCookie(String sessionValue, java.applet.Applet applet, int expiryLengthComplement) {

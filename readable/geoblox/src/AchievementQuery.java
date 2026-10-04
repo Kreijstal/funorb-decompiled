@@ -7,7 +7,7 @@ final class AchievementQuery extends IntrusiveNode {
     int[] resultValues;
     static ClientProtocolStage socketOpenFailedStage;
     boolean completed;
-    static int[] field_i;
+    static int[] rankedEntryIndices;
     int achievementMask;
 
     public static void c(int param0) {
@@ -15,7 +15,7 @@ final class AchievementQuery extends IntrusiveNode {
         if (param0 != 59) {
             return;
         }
-        field_i = null;
+        rankedEntryIndices = null;
     }
 
     final static boolean ensureArchiveCatalogLoaded(int methodGuard) {

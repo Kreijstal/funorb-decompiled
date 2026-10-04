@@ -172,9 +172,9 @@ final class TriangleMesh {
               (ClientProtocolStage.rankedEntryKeyOne.length >= param2))) {
           ClientProtocolStage.rankedEntryKeyOne = new int[param2 * 2];
         }
-        if (!((null != AchievementQuery.field_i) &&
-              (AchievementQuery.field_i.length >= param2 + param1))) {
-          AchievementQuery.field_i = new int[(param2 + param1) * 2];
+        if (!((null != AchievementQuery.rankedEntryIndices) &&
+              (AchievementQuery.rankedEntryIndices.length >= param2 + param1))) {
+          AchievementQuery.rankedEntryIndices = new int[(param2 + param1) * 2];
         }
         if (!((null != AccountCreationForm.field_C) &&
               (AccountCreationForm.field_C.length >= param2))) {
@@ -210,25 +210,25 @@ final class TriangleMesh {
         return sprites;
     }
 
-    final static boolean a(boolean param0) {
-        if (param0) {
+    final static boolean readSessionPacketPayload(boolean methodGuard) {
+        if (methodGuard) {
             return false;
         }
-        if (!(AchievementSubmission.field_k != -1)) {
-            if (!UiWidget.b(30000, 1)) {
+        if (!(AchievementSubmission.sessionPacketPayloadLength != -1)) {
+            if (!UiWidget.readSessionBytesIfAvailable(30000, 1)) {
                 return false;
             }
-            AchievementSubmission.field_k = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+            AchievementSubmission.sessionPacketPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
             LogoCompositor.sessionPacketBuffer.position = 0;
         }
-        if (AchievementSubmission.field_k == -2) {
-            if (!(UiWidget.b(30000, 2))) {
+        if (AchievementSubmission.sessionPacketPayloadLength == -2) {
+            if (!(UiWidget.readSessionBytesIfAvailable(30000, 2))) {
                 return false;
             }
-            AchievementSubmission.field_k = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+            AchievementSubmission.sessionPacketPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
             LogoCompositor.sessionPacketBuffer.position = 0;
         }
-        return UiWidget.b(30000, AchievementSubmission.field_k);
+        return UiWidget.readSessionBytesIfAvailable(30000, AchievementSubmission.sessionPacketPayloadLength);
     }
 
     private final void invalidateBounds(int guard) {

@@ -65,7 +65,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
                 return;
               }
-              var5_int = -var9.position + AchievementSubmission.field_k;
+              var5_int = -var9.position + AchievementSubmission.sessionPacketPayloadLength;
               var11 = var4_ref_ea.responseWords;
               var10 = var11;
               var6 = var10;
@@ -280,8 +280,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               if (param5) {
                 var9 = var9 | 1;
               }
-              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
-              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
               EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(var13, (byte) -126);
               EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(var8, (byte) -126);
               var14 = (CharSequence) ((Object) param4);
@@ -301,8 +301,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-var10 + CacheReference.outgoingSessionBuffer.position, true);
             } else {
               EndingAnimationSupport.loginPayloadBuffer.position = 0;
-              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
-              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
+              EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
               stackIn_9_0 = EndingAnimationSupport.loginPayloadBuffer;
               if (!param2.isIncludedInLookupRequest((byte) 97)) {
                 stackIn_10_1 = "";
@@ -327,7 +327,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             PacketBuffer.currentProtocolStage = field_K;
           }
           if ((field_K == PacketBuffer.currentProtocolStage) &&
-              (UiWidget.b(30000, 1))) {
+              (UiWidget.readSessionBytesIfAvailable(30000, 1))) {
             var9 = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
             LogoCompositor.sessionPacketBuffer.position = 0;
             if ((var9 >= 100) &&
@@ -345,10 +345,10 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               }
               if (99 != var9) {
                 PacketBuffer.currentProtocolStage = AccountCreationForm.field_F;
-                AchievementSubmission.field_k = -1;
+                AchievementSubmission.sessionPacketPayloadLength = -1;
                 ScorePopup.currentPacketOpcode = var9;
               } else {
-                UiWidget.b(30000, DualLinkNode.getLoginBooleanReplyLength(112));
+                UiWidget.readSessionBytesIfAvailable(30000, DualLinkNode.getLoginBooleanReplyLength(112));
                 IntrusiveNodeHashTable.pendingLoginBooleanReply = new Boolean(Bzip2DecoderState.a(LogoCompositor.sessionPacketBuffer, 0));
                 LogoCompositor.sessionPacketBuffer.position = 0;
               }
@@ -356,10 +356,10 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           if (PacketBuffer.currentProtocolStage == CanvasResizeController.field_l) {
             var9 = 2;
-            if (UiWidget.b(30000, var9)) {
+            if (UiWidget.readSessionBytesIfAvailable(30000, var9)) {
               var10 = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
               LogoCompositor.sessionPacketBuffer.position = 0;
-              if (UiWidget.b(30000, var10)) {
+              if (UiWidget.readSessionBytesIfAvailable(30000, var10)) {
                 var11 = WidgetSkinState.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   WidgetSkinState.field_i[var12] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
@@ -372,7 +372,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
           }
           if ((PacketBuffer.currentProtocolStage == AccountCreationForm.field_F) &&
-              (TriangleMesh.a(false))) {
+              (TriangleMesh.readSessionPacketPayload(false))) {
             if (ScorePopup.currentPacketOpcode != 255) {
               AudioService.sessionResponseText = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 98);
             } else {

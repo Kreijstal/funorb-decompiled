@@ -10,7 +10,7 @@ final class AchievementSubmission extends IntrusiveNode {
     static int[] retentionCategoryCounts;
     int trackingAccumulatorSnapshot;
     int secondaryTrackingCounterSnapshot;
-    static int field_k;
+    static int sessionPacketPayloadLength;
     int trackingBitsSnapshot;
 
     final static void projectMeshAndQueueFaces(int[] cameraTransform, int[] modelTransform, TriangleMesh mesh, boolean preserveSharedResources, boolean storeCameraCoordinates, boolean cullBackfaces, boolean transformNormals) {
@@ -223,7 +223,7 @@ final class AchievementSubmission extends IntrusiveNode {
         RuntimeException var1 = null;
         try {
           if (param0 > -21) {
-            field_k = 120;
+            sessionPacketPayloadLength = 120;
           }
           retentionCategoryCounts = null;
           gameSoundResampler = null;

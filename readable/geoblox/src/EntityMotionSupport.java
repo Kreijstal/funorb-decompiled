@@ -6,7 +6,7 @@ final class EntityMotionSupport {
     static boolean boardContactStateDirty;
     static boolean field_d;
     static String createSuggestionsText;
-    static int field_b;
+    static int incomingPacketBaseDelayMillis;
     static volatile boolean canvasReplacementRequested;
 
     final static void decodeLogoAudio(int methodGuard, ResourceArchive logoArchive) {
@@ -313,6 +313,6 @@ final class EntityMotionSupport {
         field_c = new TextTemplateArgumentType(2, 4, 4, 0);
         createSuggestionsText = "Suggested names: ";
         canvasReplacementRequested = false;
-        field_b = 0;
+        incomingPacketBaseDelayMillis = 0;
     }
 }

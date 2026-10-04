@@ -12,7 +12,7 @@ final class TextValidationFailure {
         int var7;
         int var8;
         DialRenderer.field_l[GmtTimestampSupport.rankedEntryCount] = param1;
-        AchievementQuery.field_i[GmtTimestampSupport.rankedEntryCount] = GmtTimestampSupport.rankedEntryCount;
+        AchievementQuery.rankedEntryIndices[GmtTimestampSupport.rankedEntryCount] = GmtTimestampSupport.rankedEntryCount;
         LoginPasswordSupport.rankedEntryKeyTwo[GmtTimestampSupport.rankedEntryCount] = param5;
         if (ClientRenderingState.rankedKeyTwoLowerBoundSeed > param5) {
           LoginPayloadKind.field_a = param5;

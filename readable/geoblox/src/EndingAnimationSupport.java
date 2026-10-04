@@ -5,7 +5,7 @@ final class EndingAnimationSupport {
     static String musicLabelText;
     static ByteArrayBuffer loginPayloadBuffer;
     static Sprite[] blackOrbFrames;
-    static double field_a;
+    static double incomingPacketDelayJitterMillis;
     static Sprite[] avatarEyeFrames;
     static volatile boolean pointerActivityPending;
     static int nextScoreSubmissionId;
@@ -83,7 +83,7 @@ final class EndingAnimationSupport {
     static {
         musicLabelText = "Music: ";
         loginPayloadBuffer = new ByteArrayBuffer(256);
-        field_a = 0.0;
+        incomingPacketDelayJitterMillis = 0.0;
         pointerActivityPending = false;
     }
 }

@@ -671,36 +671,36 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean readSessionBytesIfAvailable(int methodGuard, int requiredByteCount) {
         try {
-            int var2_int = 0;
-            Throwable decompiledCaughtException = null;
-            IOException var2 = null;
-            if (LogoCompositor.sessionPacketBuffer.position >= param1) {
+            int availableOrReadByteCount = 0;
+            Throwable caughtReadFailure = null;
+            IOException socketReadFailure = null;
+            if (LogoCompositor.sessionPacketBuffer.position >= requiredByteCount) {
               return true;
             }
             if (SpriteCheckboxRenderer.sessionSocket == null) {
               return false;
             }
             try {
-              if (param0 != 30000) {
-                UiWidget.b(-45, -75);
+              if (methodGuard != 30000) {
+                UiWidget.readSessionBytesIfAvailable(-45, -75);
               }
-              var2_int = SpriteCheckboxRenderer.sessionSocket.available((byte) 110);
-              if (var2_int > 0) {
-                if (-LogoCompositor.sessionPacketBuffer.position + param1 < var2_int) {
-                  var2_int = param1 - LogoCompositor.sessionPacketBuffer.position;
+              availableOrReadByteCount = SpriteCheckboxRenderer.sessionSocket.available((byte) 110);
+              if (availableOrReadByteCount > 0) {
+                if (-LogoCompositor.sessionPacketBuffer.position + requiredByteCount < availableOrReadByteCount) {
+                  availableOrReadByteCount = requiredByteCount - LogoCompositor.sessionPacketBuffer.position;
                 }
-                SpriteCheckboxRenderer.sessionSocket.readFully(LogoCompositor.sessionPacketBuffer.bytes, (byte) -97, LogoCompositor.sessionPacketBuffer.position, var2_int);
+                SpriteCheckboxRenderer.sessionSocket.readFully(LogoCompositor.sessionPacketBuffer.bytes, (byte) -97, LogoCompositor.sessionPacketBuffer.position, availableOrReadByteCount);
                 AudioService.sessionActivityStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-                LogoCompositor.sessionPacketBuffer.position = LogoCompositor.sessionPacketBuffer.position + var2_int;
-                if (param1 > LogoCompositor.sessionPacketBuffer.position) {
+                LogoCompositor.sessionPacketBuffer.position = LogoCompositor.sessionPacketBuffer.position + availableOrReadByteCount;
+                if (requiredByteCount > LogoCompositor.sessionPacketBuffer.position) {
                   return false;
                 }
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 return true;
               }
-              if (var2_int < 0) {
+              if (availableOrReadByteCount < 0) {
                 Bzip2DecoderState.closeSessionSocket((byte) -127);
               } else {
                 if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
@@ -708,16 +708,16 @@ class UiWidget extends IntrusiveNode {
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -127);
               }
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = (IOException) (Object) decompiledCaughtException;
+            } catch (java.io.IOException readFailure) {
+              caughtReadFailure = readFailure;
+              socketReadFailure = (IOException) (Object) caughtReadFailure;
               Bzip2DecoderState.closeSessionSocket((byte) -120);
             }
             return false;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedReadFailure) {
+            throw uncheckedReadFailure;
+        } catch (Throwable checkedReadFailure) {
+            throw new RuntimeException(checkedReadFailure);
         }
     }
 
