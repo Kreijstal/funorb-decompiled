@@ -84,7 +84,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
             if (var4 >= param2.length()) {
               return null;
             }
-            if (TextInputValidator.a(param2.charAt(var4), (byte) 97)) {
+            if (TextInputValidator.isAllowedAccountNameCharacter(param2.charAt(var4), (byte) 97)) {
               var4++;
               continue;
             }

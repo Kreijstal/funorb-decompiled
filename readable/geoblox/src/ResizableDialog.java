@@ -193,12 +193,12 @@ abstract class ResizableDialog extends FadingDialog {
         return super.advanceDialogAnimation(methodGuard ^ 0);
     }
 
-    final static void a(int param0, byte param1, int param2) {
-        NodeHashTableIterator.pendingTooltipAnchorX = param2;
-        if (param1 > -20) {
+    final static void setPendingTooltipAnchor(int anchorY, byte methodGuard, int anchorX) {
+        NodeHashTableIterator.pendingTooltipAnchorX = anchorX;
+        if (methodGuard > -20) {
             return;
         }
-        DequeCursor.field_e = param0;
+        DequeCursor.pendingTooltipAnchorY = anchorY;
     }
 
     final static String normalizeSessionName(CharSequence nameText, int methodGuard) {

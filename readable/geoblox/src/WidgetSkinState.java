@@ -4,7 +4,7 @@
 final class WidgetSkinState {
     Sprite[] panelSprites;
     private int textAlpha;
-    static ValidationState field_n;
+    static ValidationState pendingQueryValidationState;
     private int textShadowColor;
     private boolean flushBeforeOverlay;
     private int textColor;
@@ -13,7 +13,7 @@ final class WidgetSkinState {
     Sprite icon;
     private int offsetX;
     static boolean archiveUseControlOpcode2;
-    static ValidationState field_m;
+    static ValidationState invalidInputValidationState;
     static int field_j;
     static ClientFlowToken usernameQueryFlowState;
 
@@ -131,7 +131,7 @@ final class WidgetSkinState {
             this.icon.draw(var6_int, var7);
           }
           if (param4 != 0) {
-            field_n = (ValidationState) null;
+            pendingQueryValidationState = (ValidationState) null;
           }
           var6 = param0.c(120, param3);
           if ((var6 != null) &&
@@ -206,14 +206,14 @@ final class WidgetSkinState {
 
     public static void a(boolean param0) {
         field_i = null;
-        field_m = null;
+        invalidInputValidationState = null;
         usernameQueryFlowState = null;
         if (param0) {
             archiveUseControlOpcode2 = true;
-            field_n = null;
+            pendingQueryValidationState = null;
             return;
         }
-        field_n = null;
+        pendingQueryValidationState = null;
     }
 
     final void a(int param0, int param1, WidgetSkinState param2, StatefulWidgetRenderer param3, int param4, UiWidget param5) {
@@ -351,8 +351,8 @@ final class WidgetSkinState {
     }
 
     static {
-        field_n = new ValidationState();
-        field_m = new ValidationState();
+        pendingQueryValidationState = new ValidationState();
+        invalidInputValidationState = new ValidationState();
         field_j = 5167632;
     }
 }

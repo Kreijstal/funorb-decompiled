@@ -131,10 +131,10 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         Sprite var18;
         Sprite var19;
         var14 = Geoblox.clientControlFlowFlag;
-        var6 = this.validationProvider.a((byte) -105);
-        if ((var6 != ImageProducerRasterBuffer.field_g) &&
-            (var6 != WidgetSkinState.field_n)) {
-          var5 = this.validationProvider.c(-21666);
+        var6 = this.validationProvider.getDebouncedValidationState((byte) -105);
+        if ((var6 != ImageProducerRasterBuffer.debouncingValidationState) &&
+            (var6 != WidgetSkinState.pendingQueryValidationState)) {
+          var5 = this.validationProvider.getDebouncedValidationMessage(-21666);
           if (!(var5 != null)) {
             var5 = this.fallbackMessage;
           }
@@ -146,12 +146,12 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.rebuildHotspotBounds(-55);
         }
         super.renderWidget(parentX, parentY, (byte) 106, renderPass);
-        var6 = this.validationProvider.a((byte) -105);
+        var6 = this.validationProvider.getDebouncedValidationState((byte) -105);
         var8 = (TextWidgetLayout) ((Object) this.renderer);
         var9 = this.widgetX + parentX;
         var10 = var8.a(parentY, -2, (UiWidget) (this)) + (var8.a((byte) 125, (UiWidget) (this)).b(-3111) >> 1);
         var11 = 7 % ((methodGuard - 1) / 43);
-        if (ImageProducerRasterBuffer.field_g == var6) {
+        if (ImageProducerRasterBuffer.debouncingValidationState == var6) {
           var19 = ClientClockSupport.validationStateSprites[0];
           var12 = var19.fullWidth << 1;
           var13 = var19.fullHeight << 1;
@@ -177,13 +177,13 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.spinnerSprite.drawAdditive(-(var19.fullWidth >> 1) + var9, var10 - var19.fullHeight, 256);
           return;
         }
-        if (var6 != WidgetSkinState.field_n) {
-          if (WidgetSkinState.field_m == var6) {
+        if (var6 != WidgetSkinState.pendingQueryValidationState) {
+          if (WidgetSkinState.invalidInputValidationState == var6) {
             var17 = ClientClockSupport.validationStateSprites[2];
             var17.drawAdditive(var9, var10 - (var17.height >> 1), 256);
             return;
           }
-          if (SocketArchiveNetworkClient.field_w != var6) {
+          if (SocketArchiveNetworkClient.validInputValidationState != var6) {
             return;
           }
           var16 = ClientClockSupport.validationStateSprites[1];

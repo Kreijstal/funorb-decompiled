@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TextInputValidator extends DebouncedValidationProvider implements TextInputListener {
-    static FullscreenFailureReason field_h;
-    static double field_f;
+    static FullscreenFailureReason fullscreenUnavailableFailureReason;
+    static double dialReferenceAngleRadians;
     private TextInputWidget validatedInput;
 
-    final static void a(byte param0, boolean param1) {
-        if (param0 < 102) {
+    final static void openAccountLoginPanel(byte methodGuard, boolean showCreateAccount) {
+        if (methodGuard < 102) {
             return;
         }
-        TextTemplateLookupSupport.openLoginPanel(false, param1, false);
+        TextTemplateLookupSupport.openLoginPanel(false, showCreateAccount, false);
     }
 
     final ValidationState currentValidationState(int guard) {
@@ -20,9 +20,9 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         return this.validationStateForText(-257, this.validatedInput.widgetText);
     }
 
-    public final boolean a(int param0) {
-        if (param0 != -26556) {
-            String var3 = (String) null;
+    public final boolean isInputEmpty(int methodGuard) {
+        if (methodGuard != -26556) {
+            String unusedNullValidationText = (String) null;
             this.validationMessageForText(-33, (String) null);
             if (this.validatedInput.widgetText != null) {
                 return this.validatedInput.widgetText.length() == 0 ? true : false;
@@ -50,26 +50,26 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
 
     abstract String validationMessageForText(int guard, String candidateText);
 
-    final static boolean a(char param0, byte param1) {
-        if (!(!Character.isISOControl(param0))) {
+    final static boolean isAllowedAccountNameCharacter(char character, byte methodGuard) {
+        if (!(!Character.isISOControl(character))) {
             return false;
         }
-        if (LoginPanel.isAsciiLetterOrDigit(-123, param0)) {
+        if (LoginPanel.isAsciiLetterOrDigit(-123, character)) {
             return true;
         }
-        if (param0 == 45) {
+        if (character == 45) {
             return true;
         }
-        if (param0 == 160) {
+        if (character == 160) {
             return true;
         }
-        if (32 == param0) {
+        if (32 == character) {
             return true;
         }
-        if (param0 == 95) {
+        if (character == 95) {
             return true;
         }
-        if (param1 > 88) {
+        if (methodGuard > 88) {
             return false;
         }
         return false;
@@ -85,7 +85,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             SecondaryNodeHashTable.archivePort = primaryPort;
             ByteShortQuery.archiveTaskDispatcher = taskDispatcher;
             if (methodGuard != -23949) {
-                field_f = -0.8279321027589008;
+                dialReferenceAngleRadians = -0.8279321027589008;
             }
             FullscreenErrorDialog.alternateArchivePort = alternatePort;
             AsyncResourceDownloader.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
@@ -104,10 +104,10 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         RuntimeException textChangeFailure = null;
         try {
           if (methodGuard != 74) {
-            this.a(-117);
-            this.b(-28133);
+            this.isInputEmpty(-117);
+            this.resetValidationDelay(-28133);
           } else {
-            this.b(-28133);
+            this.resetValidationDelay(-28133);
           }
           return;
         } catch (java.lang.RuntimeException changeFailure) {
@@ -124,65 +124,65 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         }
     }
 
-    final static void a(byte param0, int param1, String param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void handleLoginUiResponse(byte methodGuard, int responseCode, String responseText) {
+        int displayResponseContent = 0;
+        RuntimeException responseHandlingFailure = null;
+        String unusedArchiveHost = null;
+        RuntimeException responseFailureForContext = null;
+        StringBuilder responseContextBuilder = null;
+        String responseDescription = null;
+        RuntimeException caughtResponseFailure = null;
         try {
           MeshPrioritySupport.field_d = false;
           ArchiveLoadStep.field_a = false;
           if ((null != Geoblox.activeMessageDialog) &&
               (Geoblox.activeMessageDialog.dialogVisible)) {
-            if (8 == param1) {
-              param1 = 2;
+            if (8 == responseCode) {
+              responseCode = 2;
               if (!AgeValidator.field_i) {
-                param2 = VisualPropertyOverrides.invalidUserOrPasswordText;
+                responseText = VisualPropertyOverrides.invalidUserOrPasswordText;
               } else {
-                param2 = DualLinkNode.invalidPasswordText;
+                responseText = DualLinkNode.invalidPasswordText;
               }
               SpriteButtonRenderer.field_t.a(TextTemplateLookupSupport.currentLoginIdentifier, 0);
             }
-            var3_int = 1;
-            if (param1 == 10) {
-              MatchingTextValidator.c((byte) -4);
-              var3_int = 0;
+            displayResponseContent = 1;
+            if (responseCode == 10) {
+              MatchingTextValidator.openDisplayNamePanel((byte) -4);
+              displayResponseContent = 0;
             }
-            if (var3_int != 0) {
+            if (displayResponseContent != 0) {
               if (ArchiveLoadStep.field_a) {
-                param2 = OpacityWidget.a(VisualPropertyOverrides.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
+                responseText = OpacityWidget.a(VisualPropertyOverrides.connectionLostWithReasonText, new String[]{responseText}, (byte) -25);
               }
               if (VisualPropertyOverrides.field_I) {
-                param2 = AccountEligibilitySupport.pleaseTryAgainText;
+                responseText = AccountEligibilitySupport.pleaseTryAgainText;
               }
-              Geoblox.activeMessageDialog.installErrorContent(param1, param0 + 19686, param2);
+              Geoblox.activeMessageDialog.installErrorContent(responseCode, methodGuard + 19686, responseText);
             }
-            if ((param1 != 256) &&
-                (param1 != 10) &&
+            if ((responseCode != 256) &&
+                (responseCode != 10) &&
                 (!AgeValidator.field_i)) {
               SpriteButtonRenderer.field_t.i(-119);
             }
           }
-          if (param0 == 124) {
+          if (methodGuard == 124) {
             return;
           }
-          var4 = (String) null;
+          unusedArchiveHost = (String) null;
           TextInputValidator.initializeArchiveServices(-94, -21, 56, -5, 62, (PlatformTaskDispatcher) null, (String) null, -54, -101);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_29_0 = var3;
-          stackIn_29_1 = new StringBuilder().append("q.O(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_30_2 = "null";
+        } catch (java.lang.RuntimeException responseFailure) {
+          caughtResponseFailure = responseFailure;
+          responseHandlingFailure = caughtResponseFailure;
+          responseFailureForContext = responseHandlingFailure;
+          responseContextBuilder = new StringBuilder().append("q.O(").append(methodGuard).append(',').append(responseCode).append(',');
+          if (responseText == null) {
+            responseDescription = "null";
           } else {
-            stackIn_30_2 = "{...}";
+            responseDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) responseFailureForContext), ((StringBuilder) (Object) responseContextBuilder).append(responseDescription).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         try {
           if (methodGuard != 1) {
             unusedNullTextSnapshot = (String) null;
-            TextInputValidator.a((byte) 108, 111, (String) null);
+            TextInputValidator.handleLoginUiResponse((byte) 108, 111, (String) null);
           }
           archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 126, groupName);
           archiveFileId = glyphGraphicsArchive.findFileId(resourceName, methodGuard - 69, archiveGroupId);
@@ -253,23 +253,23 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         return this.validationMessageForText(422, this.validatedInput.widgetText);
     }
 
-    public static void f(int param0) {
-        field_h = null;
-        if (param0 != 1) {
-            field_h = (FullscreenFailureReason) null;
+    public static void releaseStaticReferences(int methodGuard) {
+        fullscreenUnavailableFailureReason = null;
+        if (methodGuard != 1) {
+            fullscreenUnavailableFailureReason = (FullscreenFailureReason) null;
         }
     }
 
     TextInputValidator(TextInputWidget validatedInput) {
         try {
             this.validatedInput = validatedInput;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "q.<init>(" + (validatedInput != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException validatorConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorConstructionFailure), "q.<init>(" + (validatedInput != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_h = new FullscreenFailureReason();
-        field_f = Math.atan2(1.0, 0.0);
+        fullscreenUnavailableFailureReason = new FullscreenFailureReason();
+        dialReferenceAngleRadians = Math.atan2(1.0, 0.0);
     }
 }

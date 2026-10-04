@@ -17,127 +17,127 @@ final class CheckboxRenderer implements WidgetRenderer {
     private int checkboxHeight;
     static String[] mustLogin3Texts;
 
-    final static boolean a(boolean param0, CharSequence param1, byte param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.clientControlFlowFlag;
+    final static boolean isValidAccountName(boolean allowRepeatedSeparators, CharSequence nameText, byte methodGuard) {
+        int characterIndex = 0;
+        RuntimeException nameValidationFailure = null;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException nameFailureForContext = null;
+        StringBuilder nameContextBuilder = null;
+        String nameDescription = null;
+        RuntimeException caughtNameFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (!SocketArchiveNetworkClient.a(param0, param1, (byte) 118)) {
+          if (!SocketArchiveNetworkClient.hasValidAccountNameStructure(allowRepeatedSeparators, nameText, (byte) 118)) {
             return false;
           }
-          if (param2 >= -32) {
+          if (methodGuard >= -32) {
             return true;
           }
-          var3_int = 0;
+          characterIndex = 0;
           while (true) {
-            if (param1.length() <= var3_int) {
+            if (nameText.length() <= characterIndex) {
               return true;
             }
-            if (TextInputValidator.a(param1.charAt(var3_int), (byte) 118)) {
-              var3_int++;
+            if (TextInputValidator.isAllowedAccountNameCharacter(nameText.charAt(characterIndex), (byte) 118)) {
+              characterIndex++;
               continue;
             }
             return false;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_17_0 = var3;
-          stackIn_17_1 = new StringBuilder().append("bi.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_18_2 = "null";
+        } catch (java.lang.RuntimeException nameFailure) {
+          caughtNameFailure = nameFailure;
+          nameValidationFailure = caughtNameFailure;
+          nameFailureForContext = nameValidationFailure;
+          nameContextBuilder = new StringBuilder().append("bi.B(").append(allowRepeatedSeparators).append(',');
+          if (nameText == null) {
+            nameDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) nameFailureForContext), ((StringBuilder) (Object) nameContextBuilder).append(nameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        UiWidget stackIn_3_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        CheckboxWidget var11 = null;
+        UiWidget checkboxWidgetSnapshot = null;
+        RuntimeException drawFailureForContext = null;
+        StringBuilder drawContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtDrawFailure = null;
+        RuntimeException checkboxDrawFailure = null;
+        int checkboxFillColor = 0;
+        int checkboxX = 0;
+        int checkboxY = 0;
+        int textInsetX = 0;
+        CheckboxWidget checkboxWidget = null;
         try {
           if (widget instanceof CheckboxWidget) {
-            stackIn_3_0 = (UiWidget) (widget);
+            checkboxWidgetSnapshot = (UiWidget) (widget);
           } else {
-            stackIn_3_0 = null;
+            checkboxWidgetSnapshot = null;
           }
-          var11 = (CheckboxWidget) ((Object) stackIn_3_0);
-          if (var11 != null) {
-            widgetEnabled = widgetEnabled & var11.enabled;
+          checkboxWidget = (CheckboxWidget) ((Object) checkboxWidgetSnapshot);
+          if (checkboxWidget != null) {
+            widgetEnabled = widgetEnabled & checkboxWidget.enabled;
           }
           if (methodGuard > -5) {
             this.horizontalAlignment = -3;
           }
-          var7 = 5592405;
+          checkboxFillColor = 5592405;
           SoftwareRasterizer.fillRectangle(widget.widgetX + parentX, parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, this.backgroundColor);
           if (widgetEnabled) {
-            var7 = 16777215;
+            checkboxFillColor = 16777215;
           }
-          var8 = this.checkboxOffsetX + (parentX + widget.widgetX);
-          var9 = this.checkboxOffsetY + (widget.widgetY + parentY);
-          SoftwareRasterizer.drawRectangleDropShadow(var8, var9, this.checkboxWidth, this.checkboxHeight, 5592405);
-          SoftwareRasterizer.fillRectangle(var8, var9, this.checkboxWidth, this.checkboxHeight, var7);
-          if (var11.active) {
-            SoftwareRasterizer.drawLine(var8, var9, this.checkboxWidth + var8, var9 + this.checkboxHeight, 1);
-            SoftwareRasterizer.drawLine(var8 + this.checkboxWidth, var9, var8, this.checkboxHeight + var9, 1);
+          checkboxX = this.checkboxOffsetX + (parentX + widget.widgetX);
+          checkboxY = this.checkboxOffsetY + (widget.widgetY + parentY);
+          SoftwareRasterizer.drawRectangleDropShadow(checkboxX, checkboxY, this.checkboxWidth, this.checkboxHeight, 5592405);
+          SoftwareRasterizer.fillRectangle(checkboxX, checkboxY, this.checkboxWidth, this.checkboxHeight, checkboxFillColor);
+          if (checkboxWidget.active) {
+            SoftwareRasterizer.drawLine(checkboxX, checkboxY, this.checkboxWidth + checkboxX, checkboxY + this.checkboxHeight, 1);
+            SoftwareRasterizer.drawLine(checkboxX + this.checkboxWidth, checkboxY, checkboxX, this.checkboxHeight + checkboxY, 1);
           }
           if (null != this.font) {
-            var10 = this.padding + this.checkboxWidth + this.checkboxOffsetX;
-            this.font.drawParagraph(widget.widgetText, var10 + widget.widgetX + parentX, widget.widgetY + parentY + this.textOffsetY, widget.widgetWidth + (-this.padding - var10), -(this.padding << 1) + widget.widgetHeight, this.textColor, this.textShadowColor, this.horizontalAlignment, this.verticalAlignment, 0);
+            textInsetX = this.padding + this.checkboxWidth + this.checkboxOffsetX;
+            this.font.drawParagraph(widget.widgetText, textInsetX + widget.widgetX + parentX, widget.widgetY + parentY + this.textOffsetY, widget.widgetWidth + (-this.padding - textInsetX), -(this.padding << 1) + widget.widgetHeight, this.textColor, this.textShadowColor, this.horizontalAlignment, this.verticalAlignment, 0);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_17_0 = var6;
-          stackIn_17_1 = new StringBuilder().append("bi.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+        } catch (java.lang.RuntimeException drawFailure) {
+          caughtDrawFailure = drawFailure;
+          checkboxDrawFailure = caughtDrawFailure;
+          drawFailureForContext = checkboxDrawFailure;
+          drawContextBuilder = new StringBuilder().append("bi.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
           if (widget == null) {
-            stackIn_18_2 = "null";
+            widgetDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawFailureForContext), ((StringBuilder) (Object) drawContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 1) {
+    public static void releaseStaticReferences(int methodGuard) {
+        if (methodGuard != 1) {
             return;
         }
         mustLogin3Texts = null;
     }
 
-    CheckboxRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    CheckboxRenderer(BitmapFont font, int padding, int textOffsetY, int textColor, int textShadowColor, int checkboxOffsetX, int checkboxOffsetY, int checkboxHeight, int checkboxWidth, int backgroundColor) {
         this.horizontalAlignment = 1;
         this.verticalAlignment = 1;
         try {
-            this.textShadowColor = param4;
-            this.padding = param1;
-            this.font = param0;
-            this.checkboxWidth = param8;
-            this.checkboxHeight = param7;
-            this.textColor = param3;
-            this.textOffsetY = param2;
-            this.checkboxOffsetX = param5;
-            this.backgroundColor = param9;
-            this.checkboxOffsetY = param6;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            this.textShadowColor = textShadowColor;
+            this.padding = padding;
+            this.font = font;
+            this.checkboxWidth = checkboxWidth;
+            this.checkboxHeight = checkboxHeight;
+            this.textColor = textColor;
+            this.textOffsetY = textOffsetY;
+            this.checkboxOffsetX = checkboxOffsetX;
+            this.backgroundColor = backgroundColor;
+            this.checkboxOffsetY = checkboxOffsetY;
+        } catch (RuntimeException rendererConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "bi.<init>(" + (font != null ? "{...}" : "null") + ',' + padding + ',' + textOffsetY + ',' + textColor + ',' + textShadowColor + ',' + checkboxOffsetX + ',' + checkboxOffsetY + ',' + checkboxHeight + ',' + checkboxWidth + ',' + backgroundColor + ')');
         }
     }
 

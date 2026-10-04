@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class DebouncedValidationProvider implements ValidationProvider {
-    private long field_b;
-    static String field_d;
+    private long lastInputChangeMillis;
+    static String notAchievedText;
     static boolean gameAssetsInitialized;
     static int commonUiSpriteArchiveId;
     static int archiveLoadStatus;
@@ -32,21 +32,21 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         }
     }
 
-    public static void a(boolean param0) {
-        field_d = null;
-        if (!param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
+        notAchievedText = null;
+        if (!methodGuard) {
             commonUiSpriteArchiveId = -26;
         }
     }
 
-    public final String c(int param0) {
-        if (this.a(-26556)) {
+    public final String getDebouncedValidationMessage(int methodGuard) {
+        if (this.isInputEmpty(-26556)) {
             return null;
         }
-        if (ClientClockSupport.correctedCurrentTimeMillis(param0 ^ 25670) < 350L + this.field_b) {
+        if (ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ 25670) < 350L + this.lastInputChangeMillis) {
             return null;
         }
-        if (param0 == -21666) {
+        if (methodGuard == -21666) {
             return this.currentValidationMessage((byte) -103);
         }
         return (String) null;
@@ -54,52 +54,52 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
 
     abstract String currentValidationMessage(byte guard);
 
-    public final void b(int param0) {
-        this.field_b = ClientClockSupport.correctedCurrentTimeMillis(param0 ^ 23811);
-        if (param0 != -28133) {
+    public final void resetValidationDelay(int methodGuard) {
+        this.lastInputChangeMillis = ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ 23811);
+        if (methodGuard != -28133) {
             archiveLoadStatus = 55;
         }
     }
 
     final static void writeHighscoreRequest(int packetOpcode, int requestType, HighscoreQuery query) {
-        PacketBuffer var3 = null;
+        PacketBuffer outgoingPacket = null;
         try {
-            var3 = CacheReference.outgoingSessionBuffer;
-            var3.writeCipherByte(packetOpcode, (byte) -82);
-            var3.writeByte((byte) 124, requestType);
-            var3.writeByte((byte) -66, 0);
-            var3.writeShortBE(query.queryId, 28695);
-            var3.writeByte((byte) -84, query.entryLimit);
-            var3.writeByte((byte) 125, query.valuesPerEntry);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ib.DA(" + packetOpcode + ',' + requestType + ',' + (query != null ? "{...}" : "null") + ')');
+            outgoingPacket = CacheReference.outgoingSessionBuffer;
+            outgoingPacket.writeCipherByte(packetOpcode, (byte) -82);
+            outgoingPacket.writeByte((byte) 124, requestType);
+            outgoingPacket.writeByte((byte) -66, 0);
+            outgoingPacket.writeShortBE(query.queryId, 28695);
+            outgoingPacket.writeByte((byte) -84, query.entryLimit);
+            outgoingPacket.writeByte((byte) 125, query.valuesPerEntry);
+        } catch (RuntimeException highscoreWriteFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) highscoreWriteFailure), "ib.DA(" + packetOpcode + ',' + requestType + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final ValidationState a(byte param0) {
-        if (param0 != -105) {
+    public final ValidationState getDebouncedValidationState(byte methodGuard) {
+        if (methodGuard != -105) {
             archiveLoadStatus = -117;
-            if (this.a(param0 ^ 26579)) {
-                return ByteStorage.field_d;
+            if (this.isInputEmpty(methodGuard ^ 26579)) {
+                return ByteStorage.emptyInputValidationState;
             }
-            if (~(350L + this.field_b) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
+            if (~(350L + this.lastInputChangeMillis) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
                 return this.currentValidationState(32);
             }
-            return ImageProducerRasterBuffer.field_g;
+            return ImageProducerRasterBuffer.debouncingValidationState;
         }
-        if (this.a(param0 ^ 26579)) {
-            return ByteStorage.field_d;
+        if (this.isInputEmpty(methodGuard ^ 26579)) {
+            return ByteStorage.emptyInputValidationState;
         }
-        if (~(350L + this.field_b) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
+        if (~(350L + this.lastInputChangeMillis) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
             return this.currentValidationState(32);
         }
-        return ImageProducerRasterBuffer.field_g;
+        return ImageProducerRasterBuffer.debouncingValidationState;
     }
 
-    final static void d(int param0) {
-        String var2 = (String) null;
+    final static void showEmptyLoginForm(int methodGuard) {
+        String unusedLoginText = (String) null;
         MessageDialog.showLoginForm("", (String) null, 7697781);
-        if (param0 != 24107) {
+        if (methodGuard != 24107) {
             gameAssetsInitialized = false;
         }
     }
@@ -107,6 +107,6 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     abstract ValidationState currentValidationState(int guard);
 
     static {
-        field_d = "Not achieved";
+        notAchievedText = "Not achieved";
     }
 }

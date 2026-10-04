@@ -75,7 +75,7 @@ final class UsernameResponseSupport {
             throw new IllegalStateException();
         }
         AccountEligibilitySupport.loginReturnAllowed = true;
-        TextInputValidator.a((byte) 123, true);
+        TextInputValidator.openAccountLoginPanel((byte) 123, true);
         SpriteConstructionSupport.clientScreenStage = 0;
         if (methodGuard < -90) {
             return;

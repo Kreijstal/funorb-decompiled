@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "19a434ab3c400f10e5617c4ab1e1d4986e8cba12",
+    "commit": "ab38b1d15078161ceba5bb2fe3d1161af78357b1",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "9bd352c574591c4478a08f8422886bcd976e22ab6df08f1e2e35dc16a689a796"
+      "sha256": "9b74bb6600e3052fc0acf97d556d40d5154d3879c6f65608dcd91d1366c8b825"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,36 +3291,36 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "b1df9b65550ea6d331317388f74e17271f6c7ac65fb2530abead408555604598",
+    "outputTreeSha256": "fe7921b04cd3fb5df09d25c091130ebcff17d29c9b679df7aea1438c88099f40",
     "files": 303,
-    "rules": 13910,
-    "identifierEdits": 99493,
+    "rules": 14058,
+    "identifierEdits": 100022,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 99750,
+    "totalEdits": 100279,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 246,
     "labelBindingsCompared": 813,
     "labelDeclarationsCompared": 246,
     "namingPass": {
-      "version": 146,
-      "rulesAdded": 180,
+      "version": 147,
+      "rulesAdded": 148,
       "rulesRefined": 0,
-      "fields": 11,
-      "methods": 25,
-      "parameters": 46,
-      "locals": 98,
+      "fields": 15,
+      "methods": 24,
+      "parameters": 49,
+      "locals": 60,
       "labels": 0,
-      "previousCompleteRulesPreserved": 13730,
+      "previousCompleteRulesPreserved": 13910,
       "explicitlyCorrectedSymbols": [],
       "rawInputAndGeneratorPinsUnchanged": true,
       "explicitLabelAccountingMigration": false,
       "labelEditsAdded": 0,
-      "allButtonWidgetAndTextInputWidgetFieldsMethodsParametersAndLocalsNamed": true,
-      "allTextInputListenerFamiliesNamed": true,
+      "allValidationProviderFamiliesNamed": true,
+      "allValidatedInputDebouncedProviderTextValidatorAndCheckboxRendererDeclarationsNamed": true,
       "allEightLargeBodyLabelsNamed": true,
       "remainingOpaqueBlockLabels": 118,
       "remainingOpaqueLoopLabels": 46,
@@ -5209,5 +5209,204 @@
     "sourceWorkflowCommit": "19a434ab3c400f10e5617c4ab1e1d4986e8cba12",
     "manifestSha256": "9bd352c574591c4478a08f8422886bcd976e22ab6df08f1e2e35dc16a689a796",
     "outputTreeSha256": "b1df9b65550ea6d331317388f74e17271f6c7ac65fb2530abead408555604598"
+  },
+  "validationAndAccountNameNaming": {
+    "version": 147,
+    "rulesAdded": 148,
+    "rulesRefined": 0,
+    "C": 0,
+    "F": 15,
+    "M": 24,
+    "P": 49,
+    "L": 60,
+    "B": 0,
+    "previousCompleteRulesPreserved": 13910,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "explicitLabelAccountingMigration": false,
+    "allOwnedDeclarationsNamed": {
+      "hc": 49,
+      "ib": 40,
+      "q": 86,
+      "bi": 59,
+      "dg": 9
+    },
+    "constructorNamesFollowClassRules": true,
+    "allValidationProviderFamiliesNamed": true,
+    "compilerResolvedSharedFieldOccurrences": {
+      "F:bf.field_g:Llh;": {
+        "declarationsAndReferences": 10,
+        "files": [
+          "bf.java",
+          "ib.java",
+          "pi.java",
+          "qh.java",
+          "td.java"
+        ]
+      },
+      "F:gb.field_e:I": {
+        "declarationsAndReferences": 8,
+        "files": [
+          "gb.java",
+          "oe.java",
+          "sa.java"
+        ]
+      },
+      "F:hc.field_K:[B": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "hc.java",
+          "ri.java"
+        ]
+      },
+      "F:hc.field_Q:Ldg;": {
+        "declarationsAndReferences": 6,
+        "files": [
+          "hc.java"
+        ]
+      },
+      "F:hc.field_R:I": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "hc.java",
+          "wf.java"
+        ]
+      },
+      "F:hc.field_S:I": {
+        "declarationsAndReferences": 6,
+        "files": [
+          "hc.java"
+        ]
+      },
+      "F:ib.field_b:J": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "ib.java"
+        ]
+      },
+      "F:ib.field_d:Ljava/lang/String;": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "ac.java",
+          "ib.java",
+          "wh.java"
+        ]
+      },
+      "F:kk.field_w:Llh;": {
+        "declarationsAndReferences": 15,
+        "files": [
+          "ag.java",
+          "cf.java",
+          "g.java",
+          "hi.java",
+          "kk.java",
+          "mk.java",
+          "n.java",
+          "pi.java",
+          "td.java",
+          "uk.java"
+        ]
+      },
+      "F:oj.field_d:Llh;": {
+        "declarationsAndReferences": 6,
+        "files": [
+          "ib.java",
+          "oj.java",
+          "qh.java"
+        ]
+      },
+      "F:q.field_f:D": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "q.java",
+          "qb.java"
+        ]
+      },
+      "F:q.field_h:Luj;": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "ij.java",
+          "q.java"
+        ]
+      },
+      "F:qe.field_a:I": {
+        "declarationsAndReferences": 2,
+        "files": [
+          "fe.java",
+          "qe.java"
+        ]
+      },
+      "F:si.field_m:Llh;": {
+        "declarationsAndReferences": 23,
+        "files": [
+          "ag.java",
+          "cf.java",
+          "g.java",
+          "mk.java",
+          "n.java",
+          "pi.java",
+          "qh.java",
+          "si.java",
+          "td.java",
+          "uk.java"
+        ]
+      },
+      "F:si.field_n:Llh;": {
+        "declarationsAndReferences": 10,
+        "files": [
+          "mk.java",
+          "pi.java",
+          "si.java",
+          "td.java",
+          "uk.java"
+        ]
+      }
+    },
+    "sourceBodiesEditedByHand": false,
+    "identifierEditsAdded": 529,
+    "labelEditsAdded": 0,
+    "changedJavaFiles": 36,
+    "changedOriginalJavaFiles": [
+      "Geoblox.java",
+      "ac.java",
+      "ag.java",
+      "bf.java",
+      "bi.java",
+      "cf.java",
+      "dg.java",
+      "ei.java",
+      "fe.java",
+      "g.java",
+      "gb.java",
+      "hc.java",
+      "hi.java",
+      "ib.java",
+      "ij.java",
+      "kb.java",
+      "kk.java",
+      "mk.java",
+      "n.java",
+      "nj.java",
+      "oe.java",
+      "oj.java",
+      "pc.java",
+      "pi.java",
+      "q.java",
+      "qb.java",
+      "qe.java",
+      "qh.java",
+      "ri.java",
+      "sa.java",
+      "si.java",
+      "td.java",
+      "uk.java",
+      "wf.java",
+      "wh.java",
+      "wi.java"
+    ],
+    "scope": "Pass 147 adds 148 guarded names: fifteen fields, 24 methods, 49 parameters\nand 60 locals. Every declaration in ValidatedTextInputWidget (49),\nDebouncedValidationProvider (40), TextInputValidator (86), CheckboxRenderer\n(59) and ValidationProvider (nine) now has a readable name; constructors follow\nclass rules. Complete API families expose isInputEmpty,\ngetDebouncedValidationMessage, getDebouncedValidationState and resetValidationDelay.\nEmpty, debouncing, invalid, query-pending and valid singleton states follow\nactual validators and icon/message consumers. The exact 350ms boundary, signed\nclock arithmetic, empty-input short circuit and original guards remain.\n\nThe account-name chain names length/normalization/separator structure and\nper-character checks, preserving wrong-guard early success and arbitrary\nCharSequence callbacks. Checkbox drawing/constructor roles, pointer-local X,\ntooltip anchors, validation provider assignment and pointer-listener monitor\nare explicit. Shared logo delay and optional login-response extension bytes\nfollow their consumers without inventing producers or payload semantics.\nhandleLoginUiResponse exposes existing visible-dialog processing, response\n8-to-2 remapping, response-10 name-panel routing, guarded reset and partial\nfailure order. Dial reference angle and fullscreen-unavailable token follow\ntheir actual consumers.\n\nThere are 14,058 rules and 100,022 identifier edits, plus eleven class-literal\nand 246 label edits: 100,279 total. All 13,910 previous complete rules and\nraw/tool/workflow/stub/native/text pins remain. Both 303-file corpora compile,\npreserve 136,607 bindings, 388 overrides and 813 lexical label records, and\nreverse byte exactly. The 27 publication tests and eight existing native\nfixtures pass within their recorded scopes. Live asynchronous editing, remote\navailability/login services, arbitrary CharSequence implementations and device\nbehavior remain unverified. Eight large labeled bodies, 164 opaque labels,\n360 opaque fields and 405 short opaque methods remain; whole-game/server/\ndevice and heap/FPS acceptance are still unverified.",
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "ab38b1d15078161ceba5bb2fe3d1161af78357b1",
+    "manifestSha256": "9b74bb6600e3052fc0acf97d556d40d5154d3879c6f65608dcd91d1366c8b825",
+    "outputTreeSha256": "fe7921b04cd3fb5df09d25c091130ebcff17d29c9b679df7aea1438c88099f40"
   }
 }

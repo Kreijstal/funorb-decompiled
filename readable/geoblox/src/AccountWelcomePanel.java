@@ -105,7 +105,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             this.justPlayButton = (ButtonWidget) null;
           }
           if (this.goBackButton == param4) {
-            DebouncedValidationProvider.d(param1 ^ -24121);
+            DebouncedValidationProvider.showEmptyLoginForm(param1 ^ -24121);
             if (var7 == 0) {
               return;
             }

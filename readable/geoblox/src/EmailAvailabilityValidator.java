@@ -40,23 +40,23 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_m.validationStateForText(guard, candidateText) == WidgetSkinState.field_m) {
-            stackIn_2_0 = WidgetSkinState.field_m;
+          if (this.field_m.validationStateForText(guard, candidateText) == WidgetSkinState.invalidInputValidationState) {
+            stackIn_2_0 = WidgetSkinState.invalidInputValidationState;
             return stackIn_2_0;
           }
           if (!candidateText.equals(this.field_j)) {
             var3 = SoundSampleCache.a(-1, candidateText);
             if (!var3.isCompleted(-76)) {
-              stackIn_8_0 = WidgetSkinState.field_n;
+              stackIn_8_0 = WidgetSkinState.pendingQueryValidationState;
               return stackIn_8_0;
             }
             this.field_j = candidateText;
             this.field_i = var3.isAvailable((byte) -52);
           }
           if (!this.field_i) {
-            stackIn_13_0 = WidgetSkinState.field_m;
+            stackIn_13_0 = WidgetSkinState.invalidInputValidationState;
           } else {
-            stackIn_13_0 = SocketArchiveNetworkClient.field_w;
+            stackIn_13_0 = SocketArchiveNetworkClient.validInputValidationState;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,11 +85,11 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           if (guard != 422) {
             EmailAvailabilityValidator.c((byte) -50);
           }
-          if (this.field_m.validationStateForText(-257, candidateText) == WidgetSkinState.field_m) {
+          if (this.field_m.validationStateForText(-257, candidateText) == WidgetSkinState.invalidInputValidationState) {
             stackIn_5_0 = this.field_m.validationMessageForText(422, candidateText);
             return stackIn_5_0;
           }
-          if (this.validationStateForText(-257, candidateText) != WidgetSkinState.field_m) {
+          if (this.validationStateForText(-257, candidateText) != WidgetSkinState.invalidInputValidationState) {
             return ClientOptionSupport.createEmailValidText;
           }
           stackIn_9_0 = PasswordValidator.createEmailUnavailableAlertText;

@@ -12,12 +12,12 @@ final class PendingActionMarker extends IntrusiveNode {
         }
         AccountEligibilitySupport.loginReturnAllowed = true;
         if (param0 > 115) {
-            TextInputValidator.a((byte) 107, false);
+            TextInputValidator.openAccountLoginPanel((byte) 107, false);
             SpriteConstructionSupport.clientScreenStage = 0;
             return;
         }
         pendingRankedListQueries = (IntrusiveDeque) null;
-        TextInputValidator.a((byte) 107, false);
+        TextInputValidator.openAccountLoginPanel((byte) 107, false);
         SpriteConstructionSupport.clientScreenStage = 0;
     }
 

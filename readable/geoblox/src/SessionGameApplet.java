@@ -38,7 +38,7 @@ abstract class SessionGameApplet extends GameApplet {
             this.a((byte) 79, "reconnect");
           }
           ClientFlowState.requestSessionExit((byte) 103);
-          TextInputValidator.a((byte) 124, handshakeResult, AudioService.sessionResponseText);
+          TextInputValidator.handleLoginUiResponse((byte) 124, handshakeResult, AudioService.sessionResponseText);
           ArchiveLoadStep.loginRetrySuspended = true;
           DisplayNamePanel.connectionRetryDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           return handshakeResult;
@@ -264,7 +264,7 @@ abstract class SessionGameApplet extends GameApplet {
             this.forceIdleDisconnect = false;
             Bzip2DecoderState.closeSessionSocket((byte) -115);
             ClientFlowState.requestSessionExit((byte) 81);
-            TextInputValidator.a((byte) 124, 2, MessageDialogSupport.idleMessage20MinText);
+            TextInputValidator.handleLoginUiResponse((byte) 124, 2, MessageDialogSupport.idleMessage20MinText);
             BootstrapUiSupport.clearAchievementsTextWhenGuardAllows(-113);
             ArchiveLoadStep.loginRetrySuspended = true;
             DisplayNamePanel.connectionRetryDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
@@ -294,19 +294,19 @@ abstract class SessionGameApplet extends GameApplet {
               if (DebouncedValidationProvider.archiveLoadStatus != 3) {
                 if (4 != DebouncedValidationProvider.archiveLoadStatus) {
                   if (2 == DebouncedValidationProvider.archiveLoadStatus) {
-                    TextInputValidator.a((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
+                    TextInputValidator.handleLoginUiResponse((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
                   } else {
                     if (DebouncedValidationProvider.archiveLoadStatus != 5) {
-                      TextInputValidator.a((byte) 124, 256, SessionTextHistorySupport.js5ConnectErrorText);
+                      TextInputValidator.handleLoginUiResponse((byte) 124, 256, SessionTextHistorySupport.js5ConnectErrorText);
                     } else {
-                      TextInputValidator.a((byte) 124, 5, SocketConnector.loginGameUpdatedText);
+                      TextInputValidator.handleLoginUiResponse((byte) 124, 5, SocketConnector.loginGameUpdatedText);
                     }
                   }
                 } else {
-                  TextInputValidator.a((byte) 124, 256, DialWidget.js5IoErrorText);
+                  TextInputValidator.handleLoginUiResponse((byte) 124, 256, DialWidget.js5IoErrorText);
                 }
               } else {
-                TextInputValidator.a((byte) 124, 256, LoginPanel.js5CrcErrorText);
+                TextInputValidator.handleLoginUiResponse((byte) 124, 256, LoginPanel.js5CrcErrorText);
               }
               ArchiveLoadStep.loginRetrySuspended = true;
             }
@@ -406,9 +406,9 @@ abstract class SessionGameApplet extends GameApplet {
           }
           if (null == DelegatingCanvas.field_a) {
             DelegatingCanvas.field_a = LoginPayload.b((byte) 72);
-            ValidatedTextInputWidget.field_R = GzipInflater.b(110);
+            ValidatedTextInputWidget.logoStartDelayMillis = GzipInflater.getLogoStartDelayMillis(110);
           }
-          LogoPreparationSupport.prepareLogoAnimation(DialRenderer.field_n, ValidatedTextInputWidget.field_R, 111, DelegatingCanvas.field_a);
+          LogoPreparationSupport.prepareLogoAnimation(DialRenderer.field_n, ValidatedTextInputWidget.logoStartDelayMillis, 111, DelegatingCanvas.field_a);
           DialRenderer.field_n = null;
           AttachedEntityRenderer.field_c = null;
           DirectByteStorage.field_h = null;
@@ -557,7 +557,7 @@ abstract class SessionGameApplet extends GameApplet {
                     ProgressBarWidget.field_G = false;
                     SpriteConstructionSupport.clientScreenStage = 10;
                   } else {
-                    TextInputValidator.a((byte) 124, queryOrHandshakeResult, AudioService.sessionResponseText);
+                    TextInputValidator.handleLoginUiResponse((byte) 124, queryOrHandshakeResult, AudioService.sessionResponseText);
                     AudioService.sessionResponseText = null;
                   }
                 }

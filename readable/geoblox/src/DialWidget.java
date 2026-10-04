@@ -61,7 +61,7 @@ final class DialWidget extends ButtonWidget {
           var8_int = -this.centerOffsetX - (this.widgetX + (parentX - pointerX));
           var9 = pointerY - (this.widgetY + parentY + this.centerOffsetY);
           if (var8_int * var8_int + var9 * var9 < this.radius * this.radius) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - TextInputValidator.field_f;
+            var10 = Math.atan2((double)var9, (double)var8_int) - TextInputValidator.dialReferenceAngleRadians;
             if (!(var10 < 0.0)) {
               if (0.0 < var10) {
                 var10 = var10 + 3.141592653589793 / (double)this.stepCount;

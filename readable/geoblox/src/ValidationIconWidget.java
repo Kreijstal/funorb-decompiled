@@ -91,13 +91,13 @@ final class ValidationIconWidget extends ButtonWidget {
         var5 = (this.widgetWidth >> 1) + (this.widgetX + parentX);
         var7 = -74 % ((methodGuard - 1) / 43);
         var6 = parentY - (-this.widgetY - (this.widgetHeight >> 1));
-        var9 = this.validationProvider.a((byte) -105);
-        if ((var9 != ImageProducerRasterBuffer.field_g) &&
-            (WidgetSkinState.field_n != var9)) {
-          if (WidgetSkinState.field_m == var9) {
+        var9 = this.validationProvider.getDebouncedValidationState((byte) -105);
+        if ((var9 != ImageProducerRasterBuffer.debouncingValidationState) &&
+            (WidgetSkinState.pendingQueryValidationState != var9)) {
+          if (WidgetSkinState.invalidInputValidationState == var9) {
             var14 = ClientClockSupport.validationStateSprites[2];
             var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
-          } else if (!(var9 != SocketArchiveNetworkClient.field_w)) {
+          } else if (!(var9 != SocketArchiveNetworkClient.validInputValidationState)) {
             var15 = ClientClockSupport.validationStateSprites[1];
             var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
           }
@@ -257,7 +257,7 @@ final class ValidationIconWidget extends ButtonWidget {
             return (String) null;
         }
         if (!(!this.pointerInside)) {
-            return this.validationProvider.c(-21666);
+            return this.validationProvider.getDebouncedValidationMessage(-21666);
         }
         return null;
     }

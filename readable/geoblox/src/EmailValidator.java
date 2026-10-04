@@ -20,7 +20,7 @@ final class EmailValidator extends TextInputValidator {
           if (guard != 422) {
             archiveGameCrc = -21;
           }
-          if (this.validationStateForText(-257, candidateText) != WidgetSkinState.field_m) {
+          if (this.validationStateForText(-257, candidateText) != WidgetSkinState.invalidInputValidationState) {
             stackIn_6_0 = ClientOptionSupport.createEmailValidText;
             return stackIn_6_0;
           }
@@ -149,14 +149,14 @@ final class EmailValidator extends TextInputValidator {
           stackIn_3_0 = (null != FifoResponseToken.a(candidateText, 1)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
-            stackIn_5_0 = WidgetSkinState.field_m;
+            stackIn_5_0 = WidgetSkinState.invalidInputValidationState;
             return stackIn_5_0;
           }
           if (guard != -257) {
             var4 = (String) null;
             this.validationMessageForText(97, (String) null);
           }
-          stackIn_9_0 = SocketArchiveNetworkClient.field_w;
+          stackIn_9_0 = SocketArchiveNetworkClient.validInputValidationState;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

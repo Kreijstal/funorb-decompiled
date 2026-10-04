@@ -128,12 +128,12 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.confirmPasswordInput.hoverText = ByteArrayPoolSupport.createPasswordConfirmationTooltipText;
         this.ageInput.hoverText = ArchiveRequest.createAgeTooltipText;
         this.newsOptInCheckbox.hoverText = CheckboxWidget.createNewsOptInTooltipText;
-        this.displayNameInput.a((byte) -27, new UsernameAvailabilityValidator(this.displayNameInput));
-        this.emailInput.a((byte) -111, new EmailValidator(this.emailInput));
-        this.confirmEmailInput.a((byte) 126, new EmailAvailabilityValidator(this.confirmEmailInput, this.emailInput));
-        this.passwordInput.a((byte) 83, new PasswordValidator(this.passwordInput, this.displayNameInput, this.emailInput));
-        this.confirmPasswordInput.a((byte) -71, new MatchingTextValidator(this.confirmPasswordInput, this.passwordInput));
-        this.ageInput.a((byte) -116, new AgeValidator(this.ageInput));
+        this.displayNameInput.setValidationProvider((byte) -27, new UsernameAvailabilityValidator(this.displayNameInput));
+        this.emailInput.setValidationProvider((byte) -111, new EmailValidator(this.emailInput));
+        this.confirmEmailInput.setValidationProvider((byte) 126, new EmailAvailabilityValidator(this.confirmEmailInput, this.emailInput));
+        this.passwordInput.setValidationProvider((byte) 83, new PasswordValidator(this.passwordInput, this.displayNameInput, this.emailInput));
+        this.confirmPasswordInput.setValidationProvider((byte) -71, new MatchingTextValidator(this.confirmPasswordInput, this.passwordInput));
+        this.ageInput.setValidationProvider((byte) -116, new AgeValidator(this.ageInput));
         this.createButton.enabled = false;
         this.createButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
         this.backButton.renderer = (WidgetRenderer) ((Object) new UnderlinedButtonRenderer());
@@ -356,18 +356,18 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a((byte) -105);
-          if (WidgetSkinState.field_m == var4) {
+          var4 = var3.getDebouncedValidationState((byte) -105);
+          if (WidgetSkinState.invalidInputValidationState == var4) {
             return false;
           }
           if (param0 >= -73) {
             var5 = (ValidationProviderSource) null;
             discarded$1 = this.a((byte) 82, (ValidationProviderSource) null);
           }
-          if (ImageProducerRasterBuffer.field_g == var4) {
+          if (ImageProducerRasterBuffer.debouncingValidationState == var4) {
             return false;
           }
-          if (var4 != ByteStorage.field_d) {
+          if (var4 != ByteStorage.emptyInputValidationState) {
             return true;
           }
           return false;

@@ -299,8 +299,8 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             UsernameAvailabilityValidator.a(false, (String) null);
           }
           var5 = (CharSequence) ((Object) candidateText);
-          if (!ValidatedTextInputWidget.a((byte) 82, var5)) {
-            stackIn_4_0 = WidgetSkinState.field_m;
+          if (!ValidatedTextInputWidget.isValidAccountName((byte) 82, var5)) {
+            stackIn_4_0 = WidgetSkinState.invalidInputValidationState;
             return stackIn_4_0;
           }
           if (!candidateText.equals(this.field_k)) {
@@ -310,14 +310,14 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
               this.field_n = var3.field_g;
               this.field_k = candidateText;
             } else {
-              stackIn_10_0 = WidgetSkinState.field_n;
+              stackIn_10_0 = WidgetSkinState.pendingQueryValidationState;
               return stackIn_10_0;
             }
           }
           if (this.field_n) {
-            stackIn_15_0 = SocketArchiveNetworkClient.field_w;
+            stackIn_15_0 = SocketArchiveNetworkClient.validInputValidationState;
           } else {
-            stackIn_15_0 = WidgetSkinState.field_m;
+            stackIn_15_0 = WidgetSkinState.invalidInputValidationState;
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

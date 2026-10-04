@@ -34,7 +34,7 @@ final class MidiNote extends IntrusiveNode {
         if (null != MessageDialog.gameCanvas) {
             EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
             MidiPcmStream.detachKeyboardListener(-11099);
-            ValidatedTextInputWidget.b(true);
+            ValidatedTextInputWidget.releasePointerListener(true);
             TextLayout.a((byte) -121);
             if (UsernameSuggestionsPanel.g(-88)) {
                 CacheReference.outgoingSessionBuffer.writeCipherByte(1, (byte) -27);
@@ -46,7 +46,7 @@ final class MidiNote extends IntrusiveNode {
             return;
         }
         MidiPcmStream.detachKeyboardListener(-11099);
-        ValidatedTextInputWidget.b(true);
+        ValidatedTextInputWidget.releasePointerListener(true);
         TextLayout.a((byte) -121);
         if (!UsernameSuggestionsPanel.g(-88)) {
             Bzip2DecoderState.closeSessionSocket((byte) -126);

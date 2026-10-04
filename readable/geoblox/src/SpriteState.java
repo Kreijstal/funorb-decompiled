@@ -362,7 +362,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "notAcheived");
           if (null != var2) {
-            DebouncedValidationProvider.field_d = EmailValidator.decodeTextBytes(1, var2);
+            DebouncedValidationProvider.notAchievedText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "keycode_reverseControls");
           if (null != var2) {

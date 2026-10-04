@@ -3,11 +3,11 @@
  */
 final class ValidatedTextInputWidget extends TextInputWidget implements ValidationProviderSource {
     static int archiveClientId;
-    private int field_S;
-    static int field_R;
+    private int pointerLocalX;
+    static int logoStartDelayMillis;
     static String goBackText;
-    static byte[] field_K;
-    private ValidationProvider field_Q;
+    static byte[] loginResponseExtensionBytes;
+    private ValidationProvider validationProvider;
 
     final String getHoverText(byte methodGuard) {
         if (methodGuard != 69) {
@@ -16,7 +16,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
                 return null;
             }
             if (null != this.hoverText) {
-                ResizableDialog.a(PcmResampler.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.field_S);
+                ResizableDialog.setPendingTooltipAnchor(PcmResampler.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.pointerLocalX);
                 return this.hoverText;
             }
             return null;
@@ -25,36 +25,36 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             return null;
         }
         if (null != this.hoverText) {
-            ResizableDialog.a(PcmResampler.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.field_S);
+            ResizableDialog.setPendingTooltipAnchor(PcmResampler.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.pointerLocalX);
             return this.hoverText;
         }
         return null;
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean isValidAccountName(byte methodGuard, CharSequence nameText) {
+        RuntimeException nameValidationFailure = null;
+        boolean validNameBeforeReturn = false;
+        RuntimeException nameFailureForContext = null;
+        StringBuilder nameContextBuilder = null;
+        String nameDescription = null;
+        RuntimeException caughtNameFailure = null;
         try {
-          if (param0 <= 80) {
-            field_R = -109;
+          if (methodGuard <= 80) {
+            logoStartDelayMillis = -109;
           }
-          stackIn_3_0 = CheckboxRenderer.a(false, param1, (byte) -121);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("hc.IA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          validNameBeforeReturn = CheckboxRenderer.isValidAccountName(false, nameText, (byte) -121);
+          return validNameBeforeReturn;
+        } catch (java.lang.RuntimeException nameFailure) {
+          caughtNameFailure = nameFailure;
+          nameValidationFailure = caughtNameFailure;
+          nameFailureForContext = nameValidationFailure;
+          nameContextBuilder = new StringBuilder().append("hc.IA(").append(methodGuard).append(',');
+          if (nameText == null) {
+            nameDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) nameFailureForContext), ((StringBuilder) (Object) nameContextBuilder).append(nameDescription).append(')').toString());
         }
     }
 
@@ -64,22 +64,22 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         }
         try {
             super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-            this.field_S = -this.widgetX + (PrefixCodeDecoder.pointerXSnapshot - parentX);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hc.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+            this.pointerLocalX = -this.widgetX + (PrefixCodeDecoder.pointerXSnapshot - parentX);
+        } catch (RuntimeException pointerUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hc.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
-    ValidatedTextInputWidget(String param0, WidgetListener param1, int param2) {
-        super(param0, param1, param2);
+    ValidatedTextInputWidget(String initialText, WidgetListener listener, int maximumLength) {
+        super(initialText, listener, maximumLength);
     }
 
     public final ValidationProvider getValidationProvider(byte methodGuard) {
         if (methodGuard > -97) {
             goBackText = (String) null;
-            return this.field_Q;
+            return this.validationProvider;
         }
-        return this.field_Q;
+        return this.validationProvider;
     }
 
     final static char normalizeNameCharacter(char character, int methodGuard) {
@@ -185,7 +185,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           }
           return character;
         }
-        ValidatedTextInputWidget.k(82);
+        ValidatedTextInputWidget.releaseStaticReferences(82);
         characterCode = character;
         if (32 != characterCode) {
           if (characterCode == 160) {
@@ -308,37 +308,37 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         return '_';
     }
 
-    final static void b(boolean param0) {
-        Object var1 = null;
-        Throwable var2 = null;
-        Throwable decompiledCaughtException = null;
-        if (!param0) {
+    final static void releasePointerListener(boolean methodGuard) {
+        Object pointerListenerMonitor = null;
+        Throwable unusedReleaseFailure = null;
+        Throwable unusedCaughtReleaseFailure = null;
+        if (!methodGuard) {
           archiveClientId = -8;
         }
         if (GameplaySetupSupport.pointerListener == null) {
           return;
         }
-        var1 = GameplaySetupSupport.pointerListener;
-        synchronized (var1) {
+        pointerListenerMonitor = GameplaySetupSupport.pointerListener;
+        synchronized (pointerListenerMonitor) {
           GameplaySetupSupport.pointerListener = null;
         }
     }
 
-    final void a(byte param0, ValidationProvider param1) {
+    final void setValidationProvider(byte methodGuard, ValidationProvider provider) {
         try {
-            this.field_Q = param1;
-            int var3_int = 48 % ((param0 - 34) / 39);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            this.validationProvider = provider;
+            int guardResidue = 48 % ((methodGuard - 34) / 39);
+        } catch (RuntimeException providerAssignmentFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) providerAssignmentFailure), "hc.GA(" + methodGuard + ',' + (provider != null ? "{...}" : "null") + ')');
         }
     }
 
     final void notifyTextInputChanged(byte methodGuard) {
         super.notifyTextInputChanged((byte) -66);
-        if (this.field_Q != null) {
-            this.field_Q.b(-28133);
+        if (this.validationProvider != null) {
+            this.validationProvider.resetValidationDelay(-28133);
             if (methodGuard > -16) {
-                this.field_S = -4;
+                this.pointerLocalX = -4;
                 return;
             }
             return;
@@ -346,13 +346,13 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         if (methodGuard <= -16) {
             return;
         }
-        this.field_S = -4;
+        this.pointerLocalX = -4;
     }
 
-    public static void k(int param0) {
+    public static void releaseStaticReferences(int methodGuard) {
         goBackText = null;
-        field_K = null;
-        if (param0 != -243) {
+        loginResponseExtensionBytes = null;
+        if (methodGuard != -243) {
             archiveClientId = -90;
         }
     }

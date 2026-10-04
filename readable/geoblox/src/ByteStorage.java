@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ByteStorage {
-    static ValidationState field_d;
+    static ValidationState emptyInputValidationState;
     static long updatePeriodNanoseconds;
     static String loadingExtraDataText;
     static int retainedTextRecordCount;
@@ -57,7 +57,7 @@ abstract class ByteStorage {
     }
 
     public static void a(int param0) {
-        field_d = null;
+        emptyInputValidationState = null;
         accountCreationPassword = null;
         if (param0 > -50) {
             return;
@@ -77,7 +77,7 @@ abstract class ByteStorage {
     abstract void initializeStorage(byte[] sourceBytes, boolean populateBuffer);
 
     static {
-        field_d = new ValidationState();
+        emptyInputValidationState = new ValidationState();
         loadingExtraDataText = "Loading extra data";
         updatePeriodNanoseconds = 20000000L;
     }

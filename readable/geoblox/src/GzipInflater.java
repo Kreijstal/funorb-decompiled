@@ -81,11 +81,11 @@ final class GzipInflater {
         }
     }
 
-    final static int b(int param0) {
-        if (param0 <= 103) {
+    final static int getLogoStartDelayMillis(int methodGuard) {
+        if (methodGuard <= 103) {
             return 4;
         }
-        return FullscreenEntrySupport.field_a;
+        return FullscreenEntrySupport.configuredLogoStartDelayMillis;
     }
 
     final static TextTemplateArgumentType[] textTemplateArgumentTypes(int methodGuard) {

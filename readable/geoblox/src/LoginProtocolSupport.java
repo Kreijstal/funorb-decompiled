@@ -123,9 +123,9 @@ final class LoginProtocolSupport {
                   LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.readIntBE((byte) -48);
                   PacketBuffer.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
-                  ValidatedTextInputWidget.field_K = new byte[PacketBuffer.field_n];
+                  ValidatedTextInputWidget.loginResponseExtensionBytes = new byte[PacketBuffer.field_n];
                   for (extensionByteIndexThenCipherSeedIndex = 0; PacketBuffer.field_n > extensionByteIndexThenCipherSeedIndex; extensionByteIndexThenCipherSeedIndex++) {
-                    ValidatedTextInputWidget.field_K[extensionByteIndexThenCipherSeedIndex] = LogoCompositor.sessionPacketBuffer.readSignedByte((byte) 72);
+                    ValidatedTextInputWidget.loginResponseExtensionBytes[extensionByteIndexThenCipherSeedIndex] = LogoCompositor.sessionPacketBuffer.readSignedByte((byte) 72);
                   }
                 }
                 SecondaryDeque.receivedSessionName = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 105);

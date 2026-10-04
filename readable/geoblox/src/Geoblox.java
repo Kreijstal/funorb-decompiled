@@ -453,7 +453,7 @@ public final class Geoblox extends SessionGameApplet {
         ReflectionCheckRequest.b(false);
         ByteArrayPoolSupport.clearBytePoolAndUiResources((byte) -108);
         DebugOverviewCompositor.releaseStaticReferences(-128);
-        CheckboxRenderer.a(1);
+        CheckboxRenderer.releaseStaticReferences(1);
         StatefulWidgetRenderer.a((byte) 94);
         DialRenderer.a(methodGuard ^ -64);
         MultiHandleSliderRenderer.b((byte) -89);
@@ -489,7 +489,7 @@ public final class Geoblox extends SessionGameApplet {
         SynthesizedSoundInstrument.releaseSynthesisBuffers();
         DelayedPcmStream.clearUsernameQueryCandidate((byte) -120);
         LabeledChildWidget.f((byte) -52);
-        ValidatedTextInputWidget.k(-243);
+        ValidatedTextInputWidget.releaseStaticReferences(-243);
         TextInputWidget.releaseStaticReferences((byte) -15);
         ContentTransitionDialog.releaseStaticReferences(methodGuard ^ -320);
         ProgressBarWidget.f(407213000);
@@ -498,7 +498,7 @@ public final class Geoblox extends SessionGameApplet {
         ValidationIconWidget.f(-116);
         ValidationMessageWidget.j(24033);
         CheckboxWidget.f(-75);
-        TextInputValidator.f(methodGuard + 65);
+        TextInputValidator.releaseStaticReferences(methodGuard + 65);
         AvatarFeedbackSupport.releaseStaticReferences(-43);
         Under13TermsPanel.b(false);
         DialWidget.f(0);
@@ -556,7 +556,7 @@ public final class Geoblox extends SessionGameApplet {
         UiFontResources.releaseStaticReferences(false);
         TextHotspotBounds.b(true);
         ValidationState.b(-481);
-        DebouncedValidationProvider.a(true);
+        DebouncedValidationProvider.releaseStaticReferences(true);
         this.serverHost = null;
     }
 

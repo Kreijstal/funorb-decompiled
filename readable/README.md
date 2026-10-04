@@ -5,7 +5,41 @@ The current export has 13,301 guarded naming rules: 302 classes, 1,709 fields,
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current button and text input (pass 146)
+## Current validation and account name (pass 147)
+
+Pass 147 adds 148 guarded names: fifteen fields, 24 methods, 49 parameters
+and 60 locals. Every declaration in ValidatedTextInputWidget (49),
+DebouncedValidationProvider (40), TextInputValidator (86), CheckboxRenderer
+(59) and ValidationProvider (nine) now has a readable name; constructors follow
+class rules. Complete API families expose isInputEmpty,
+getDebouncedValidationMessage, getDebouncedValidationState and resetValidationDelay.
+Empty, debouncing, invalid, query-pending and valid singleton states follow
+actual validators and icon/message consumers. The exact 350ms boundary, signed
+clock arithmetic, empty-input short circuit and original guards remain.
+
+The account-name chain names length/normalization/separator structure and
+per-character checks, preserving wrong-guard early success and arbitrary
+CharSequence callbacks. Checkbox drawing/constructor roles, pointer-local X,
+tooltip anchors, validation provider assignment and pointer-listener monitor
+are explicit. Shared logo delay and optional login-response extension bytes
+follow their consumers without inventing producers or payload semantics.
+handleLoginUiResponse exposes existing visible-dialog processing, response
+8-to-2 remapping, response-10 name-panel routing, guarded reset and partial
+failure order. Dial reference angle and fullscreen-unavailable token follow
+their actual consumers.
+
+There are 14,058 rules and 100,022 identifier edits, plus eleven class-literal
+and 246 label edits: 100,279 total. All 13,910 previous complete rules and
+raw/tool/workflow/stub/native/text pins remain. Both 303-file corpora compile,
+preserve 136,607 bindings, 388 overrides and 813 lexical label records, and
+reverse byte exactly. The 27 publication tests and eight existing native
+fixtures pass within their recorded scopes. Live asynchronous editing, remote
+availability/login services, arbitrary CharSequence implementations and device
+behavior remain unverified. Eight large labeled bodies, 164 opaque labels,
+360 opaque fields and 405 short opaque methods remain; whole-game/server/
+device and heap/FPS acceptance are still unverified.
+
+## Previous button and text input (pass 146)
 
 Pass 146 adds 180 guarded names: eleven fields, 25 methods, 46 parameters
 and 98 locals. All 95 ButtonWidget, 156 TextInputWidget and seven
@@ -909,7 +943,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/19a434ab3c400f10e5617c4ab1e1d4986e8cba12/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/19a434ab3c400f10e5617c4ab1e1d4986e8cba12/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -1153,7 +1187,7 @@ Pass123 adds the guarded direct-literal policy and their readable class names.
 The current raw tree is
 `2b3bf4664aaf082ec60395d0b40546cda545920221218af5056a6f6858bbed4a`;
 the current readable tree is
-`b1df9b65550ea6d331317388f74e17271f6c7ac65fb2530abead408555604598`.
+`fe7921b04cd3fb5df09d25c091130ebcff17d29c9b679df7aea1438c88099f40`.
 The pinned decompiler-source SHA-256 is
 `841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1`.
 All eight native/raw/readable probes pass with their pinned traces.
@@ -1167,16 +1201,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/19a434ab3c400f10e5617c4ab1e1d4986e8cba12/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/19a434ab3c400f10e5617c4ab1e1d4986e8cba12/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `19a434ab3c400f10e5617c4ab1e1d4986e8cba12`; the
-manifest SHA-256 is `9bd352c574591c4478a08f8422886bcd976e22ab6df08f1e2e35dc16a689a796`.
+The current Deko workflow/manifest commit is `ab38b1d15078161ceba5bb2fe3d1161af78357b1`; the
+manifest SHA-256 is `9b74bb6600e3052fc0acf97d556d40d5154d3879c6f65608dcd91d1366c8b825`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

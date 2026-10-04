@@ -84,7 +84,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         UiWidget var4 = null;
         try {
           var3 = null;
-          if (TextInputValidator.field_h == failureReason) {
+          if (TextInputValidator.fullscreenUnavailableFailureReason == failureReason) {
             var3 = AccountContentDialog.fullscreenUnavailableTrySignedAppletText;
           } else {
             if (failureReason == AccountContentDialog.field_hb) {

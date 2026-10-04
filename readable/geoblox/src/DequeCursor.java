@@ -8,7 +8,7 @@ final class DequeCursor {
     static int field_g;
     private IntrusiveDeque deque;
     private IntrusiveNode pendingNode;
-    static int field_e;
+    static int pendingTooltipAnchorY;
 
     final static boolean b(int param0) {
         boolean stackIn_25_0 = false;
@@ -266,6 +266,6 @@ final class DequeCursor {
     }
 
     static {
-        field_e = -1;
+        pendingTooltipAnchorY = -1;
     }
 }

@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/19a434ab3c400f10e5617c4ab1e1d4986e8cba12/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 146)
+## Current readability (pass 147)
 
-The export has 13,910 guarded names and 99,493 Java identifier edits, plus 11
+The export has 14,058 guarded names and 100,022 Java identifier edits, plus 11
 class-name literal edits and 246 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -23,6 +23,40 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 147 adds 148 guarded names: fifteen fields, 24 methods, 49 parameters
+and 60 locals. Every declaration in ValidatedTextInputWidget (49),
+DebouncedValidationProvider (40), TextInputValidator (86), CheckboxRenderer
+(59) and ValidationProvider (nine) now has a readable name; constructors follow
+class rules. Complete API families expose isInputEmpty,
+getDebouncedValidationMessage, getDebouncedValidationState and resetValidationDelay.
+Empty, debouncing, invalid, query-pending and valid singleton states follow
+actual validators and icon/message consumers. The exact 350ms boundary, signed
+clock arithmetic, empty-input short circuit and original guards remain.
+
+The account-name chain names length/normalization/separator structure and
+per-character checks, preserving wrong-guard early success and arbitrary
+CharSequence callbacks. Checkbox drawing/constructor roles, pointer-local X,
+tooltip anchors, validation provider assignment and pointer-listener monitor
+are explicit. Shared logo delay and optional login-response extension bytes
+follow their consumers without inventing producers or payload semantics.
+handleLoginUiResponse exposes existing visible-dialog processing, response
+8-to-2 remapping, response-10 name-panel routing, guarded reset and partial
+failure order. Dial reference angle and fullscreen-unavailable token follow
+their actual consumers.
+
+There are 14,058 rules and 100,022 identifier edits, plus eleven class-literal
+and 246 label edits: 100,279 total. All 13,910 previous complete rules and
+raw/tool/workflow/stub/native/text pins remain. Both 303-file corpora compile,
+preserve 136,607 bindings, 388 overrides and 813 lexical label records, and
+reverse byte exactly. The 27 publication tests and eight existing native
+fixtures pass within their recorded scopes. Live asynchronous editing, remote
+availability/login services, arbitrary CharSequence implementations and device
+behavior remain unverified. Eight large labeled bodies, 164 opaque labels,
+360 opaque fields and 405 short opaque methods remain; whole-game/server/
+device and heap/FPS acceptance are still unverified.
+
+## Previous button and text input naming (pass 146)
 
 Pass 146 adds 180 guarded names: eleven fields, 25 methods, 46 parameters
 and 98 locals. All 95 ButtonWidget, 156 TextInputWidget and seven

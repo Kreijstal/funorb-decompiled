@@ -31,17 +31,17 @@ final class AgeValidator extends TextInputValidator {
           }
           var4 = (CharSequence) ((Object) candidateText);
           if (!MessageDialog.isSignedDecimalInt((byte) -123, var4)) {
-            stackIn_4_0 = WidgetSkinState.field_m;
+            stackIn_4_0 = WidgetSkinState.invalidInputValidationState;
             return stackIn_4_0;
           }
           var5 = (CharSequence) ((Object) candidateText);
           var3_int = MultiHandleSliderWidget.a(false, var5);
           if ((var3_int > 0) &&
               (130 >= var3_int)) {
-            stackIn_11_0 = SocketArchiveNetworkClient.field_w;
+            stackIn_11_0 = SocketArchiveNetworkClient.validInputValidationState;
             return stackIn_11_0;
           }
-          stackIn_9_0 = WidgetSkinState.field_m;
+          stackIn_9_0 = WidgetSkinState.invalidInputValidationState;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class AgeValidator extends TextInputValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validationStateForText(-257, candidateText) == WidgetSkinState.field_m) {
+          if (this.validationStateForText(-257, candidateText) == WidgetSkinState.invalidInputValidationState) {
             stackIn_2_0 = UsernameAvailabilityQuery.createInvalidAgeAlertText;
             return stackIn_2_0;
           }

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
-    static ValidationState field_w;
+    static ValidationState validInputValidationState;
     private BufferedSocket socket;
     static int field_t;
     static float field_x;
@@ -17,7 +17,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             return;
         }
         loginUsernameTooltipText = null;
-        field_w = null;
+        validInputValidationState = null;
     }
 
     final boolean pollResponses(byte methodGuard) {
@@ -235,52 +235,52 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1, byte param2) {
-        int var6 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_40_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        var8 = Geoblox.clientControlFlowFlag;
+    final static boolean hasValidAccountNameStructure(boolean allowRepeatedSeparators, CharSequence nameText, byte methodGuard) {
+        int characterIndex = 0;
+        RuntimeException nameFailureForContext = null;
+        StringBuilder nameContextBuilder = null;
+        String nameDescription = null;
+        RuntimeException caughtNameFailure = null;
+        int nameLength = 0;
+        RuntimeException nameValidationFailure = null;
+        String normalizedName = null;
+        int consecutiveSeparators = 0;
+        int characterCode = 0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param1 == null) {
+          if (nameText == null) {
             return false;
           }
-          var3_int = param1.length();
-          if ((var3_int >= 1) &&
-              (12 >= var3_int)) {
-            var4 = ResizableDialog.normalizeSessionName(param1, param2 ^ 122);
-            if (var4 == null) {
+          nameLength = nameText.length();
+          if ((nameLength >= 1) &&
+              (12 >= nameLength)) {
+            normalizedName = ResizableDialog.normalizeSessionName(nameText, methodGuard ^ 122);
+            if (normalizedName == null) {
               return false;
             }
-            if (var4.length() < 1) {
+            if (normalizedName.length() < 1) {
               return false;
             }
-            if ((!NameCharacterSupport.isNameSeparator((byte) -62, var4.charAt(0))) &&
-                (!NameCharacterSupport.isNameSeparator((byte) -98, var4.charAt(-1 + var4.length())))) {
-              var5 = 0;
-              for (var6 = 0; var6 < param1.length(); var6++) {
-                var7 = param1.charAt(var6);
-                if (!NameCharacterSupport.isNameSeparator((byte) -93, (char) var7)) {
-                  var5 = 0;
+            if ((!NameCharacterSupport.isNameSeparator((byte) -62, normalizedName.charAt(0))) &&
+                (!NameCharacterSupport.isNameSeparator((byte) -98, normalizedName.charAt(-1 + normalizedName.length())))) {
+              consecutiveSeparators = 0;
+              for (characterIndex = 0; characterIndex < nameText.length(); characterIndex++) {
+                characterCode = nameText.charAt(characterIndex);
+                if (!NameCharacterSupport.isNameSeparator((byte) -93, (char) characterCode)) {
+                  consecutiveSeparators = 0;
                 } else {
-                  var5++;
+                  consecutiveSeparators++;
                 }
-                if ((var5 >= 2) &&
-                    (!param0)) {
+                if ((consecutiveSeparators >= 2) &&
+                    (!allowRepeatedSeparators)) {
                   return false;
                 }
               }
-              if (param2 != 118) {
+              if (methodGuard != 118) {
                 return false;
               }
-              if (var5 <= 0) {
+              if (consecutiveSeparators <= 0) {
                 return true;
               }
               return false;
@@ -288,17 +288,17 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             return false;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_39_0 = var3;
-          stackIn_39_1 = new StringBuilder().append("kk.O(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_40_2 = "null";
+        } catch (java.lang.RuntimeException nameFailure) {
+          caughtNameFailure = nameFailure;
+          nameValidationFailure = caughtNameFailure;
+          nameFailureForContext = nameValidationFailure;
+          nameContextBuilder = new StringBuilder().append("kk.O(").append(allowRepeatedSeparators).append(',');
+          if (nameText == null) {
+            nameDescription = "null";
           } else {
-            stackIn_40_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) nameFailureForContext), ((StringBuilder) (Object) nameContextBuilder).append(nameDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final void closeSocket(int methodGuard) {
         if (methodGuard > -50) {
-            field_w = (ValidationState) null;
+            validInputValidationState = (ValidationState) null;
         }
         if (!(this.socket == null)) {
             this.socket.close(-123);
@@ -507,7 +507,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     }
 
     static {
-        field_w = new ValidationState();
+        validInputValidationState = new ValidationState();
         loginUsernameTooltipText = "The account name you use to access RuneScape and other Jagex.com games";
         field_s = new int[]{1, 2, 5, 3, 3, 5, 5, 5, 1, 1, 1, 2, 2, 2, 3, 10, 3};
     }

@@ -4,7 +4,7 @@
 final class FullscreenEntrySupport {
     static int sessionLanguageId;
     static int[] thirdVertexTransformedX;
-    static int field_a;
+    static int configuredLogoStartDelayMillis;
 
     final static java.awt.Frame enterFullscreenAndWait(int bitDepth, int methodGuard, int height, int width, PlatformTaskDispatcher taskDispatcher, int refreshRate) {
         int modeIndex = 0;

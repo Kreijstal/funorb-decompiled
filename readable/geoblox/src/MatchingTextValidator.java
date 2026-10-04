@@ -20,7 +20,7 @@ final class MatchingTextValidator extends TextInputValidator {
         rasterTargetStack = null;
         retainedTextRecords = null;
         if (guard != 0) {
-            MatchingTextValidator.c((byte) 89);
+            MatchingTextValidator.openDisplayNamePanel((byte) 89);
         }
     }
 
@@ -169,12 +169,12 @@ final class MatchingTextValidator extends TextInputValidator {
         }
     }
 
-    final static void c(byte param0) {
+    final static void openDisplayNamePanel(byte methodGuard) {
         if (!(Geoblox.activeMessageDialog == null)) {
             Geoblox.activeMessageDialog.dismissDialog((byte) -104);
         }
         MouseWheelInput.field_d = new DisplayNamePanel();
-        int var1 = 32 / ((param0 - 43) / 47);
+        int guardQuotient = 32 / ((methodGuard - 43) / 47);
         ButtonWidget.accountContentDialog.replaceContent(MouseWheelInput.field_d, -106);
     }
 
@@ -196,15 +196,15 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.referenceInput instanceof ValidationProviderSource) {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -106);
             if ((referenceValidation != null) &&
-                (referenceValidation.a((byte) -105) != SocketArchiveNetworkClient.field_w)) {
-              stackIn_9_0 = WidgetSkinState.field_m;
+                (referenceValidation.getDebouncedValidationState((byte) -105) != SocketArchiveNetworkClient.validInputValidationState)) {
+              stackIn_9_0 = WidgetSkinState.invalidInputValidationState;
               return stackIn_9_0;
             }
           }
           if (!candidateText.equals(this.referenceInput.widgetText)) {
-            stackIn_13_0 = WidgetSkinState.field_m;
+            stackIn_13_0 = WidgetSkinState.invalidInputValidationState;
           } else {
-            stackIn_13_0 = SocketArchiveNetworkClient.field_w;
+            stackIn_13_0 = SocketArchiveNetworkClient.validInputValidationState;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -238,12 +238,12 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.referenceInput instanceof ValidationProviderSource) {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -118);
             if (referenceValidation != null) {
-              if ((referenceValidation.a((byte) -105) == SocketArchiveNetworkClient.field_w) &&
+              if ((referenceValidation.getDebouncedValidationState((byte) -105) == SocketArchiveNetworkClient.validInputValidationState) &&
                   (!candidateText.equals(this.referenceInput.widgetText))) {
                 stackIn_8_0 = GrowableIntList.createMismatchAlertText;
                 return stackIn_8_0;
               }
-              stackIn_10_0 = referenceValidation.c(-21666);
+              stackIn_10_0 = referenceValidation.getDebouncedValidationMessage(-21666);
               return stackIn_10_0;
             }
           }

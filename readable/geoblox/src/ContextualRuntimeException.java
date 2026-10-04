@@ -19,9 +19,9 @@ final class ContextualRuntimeException extends RuntimeException {
         var3 = Geoblox.clientControlFlowFlag;
         try {
           if ((-1 == NodeHashTableIterator.pendingTooltipAnchorX) &&
-              (DequeCursor.field_e == -1)) {
+              (DequeCursor.pendingTooltipAnchorY == -1)) {
             NodeHashTableIterator.pendingTooltipAnchorX = PrefixCodeDecoder.pointerXSnapshot;
-            DequeCursor.field_e = PcmResampler.pointerYSnapshot;
+            DequeCursor.pendingTooltipAnchorY = PcmResampler.pointerYSnapshot;
           }
           L1: {
             ResizableDialog.field_V = ResizableDialog.field_V + 1;
@@ -57,7 +57,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
               }
             }
-            PendingActionMarker.field_g = DequeCursor.field_e;
+            PendingActionMarker.field_g = DequeCursor.pendingTooltipAnchorY;
             ByteTextDecodingSupport.field_a = NodeHashTableIterator.pendingTooltipAnchorX;
             if (param0 == null) {
               if (var2_int != 0) {
@@ -72,7 +72,7 @@ final class ContextualRuntimeException extends RuntimeException {
               (AttachmentPointerState.pointerActivitySnapshot)) {
             ResizableDialog.field_V = 0;
             ByteTextDecodingSupport.field_a = NodeHashTableIterator.pendingTooltipAnchorX;
-            PendingActionMarker.field_g = DequeCursor.field_e;
+            PendingActionMarker.field_g = DequeCursor.pendingTooltipAnchorY;
           }
           SettingsCookieSupport.field_a = param0;
           if ((InstrumentPatch.field_q) &&
@@ -80,7 +80,7 @@ final class ContextualRuntimeException extends RuntimeException {
             InstrumentPatch.field_q = false;
             ResizableDialog.field_V = 0;
           }
-          DequeCursor.field_e = -1;
+          DequeCursor.pendingTooltipAnchorY = -1;
           NodeHashTableIterator.pendingTooltipAnchorX = -1;
           if (param1 >= 69) {
             return;
