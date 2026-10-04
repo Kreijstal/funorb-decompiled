@@ -173,24 +173,24 @@ final class kc {
                                         if (var8 != null) {
                                           stackIn_51_0 = var8;
                                           stackIn_51_1 = var7;
-                                          if ((stackIn_51_0 == stackIn_51_1) &&
-                                              (var9 == 0)) {
-                                            break L20;
+                                          if (!((stackIn_51_0 == stackIn_51_1) &&
+                                              (var9 == 0))) {
+                                            var8 = (ja) ((Object) var13.a(-45));
+                                            continue;
                                           }
-                                          var8 = (ja) ((Object) var13.a(-45));
-                                          continue;
-                                        }
-                                        var8 = (ja) ((Object) var11.c((byte) 121));
-                                        while (var8 != null) {
-                                          stackIn_51_0 = var8;
-                                          stackIn_51_1 = var7;
-                                          if (stackIn_51_0 == stackIn_51_1) {
-                                            break L20;
+                                        } else {
+                                          var8 = (ja) ((Object) var11.c((byte) 121));
+                                          while (var8 != null) {
+                                            stackIn_51_0 = var8;
+                                            stackIn_51_1 = var7;
+                                            if (stackIn_51_0 == stackIn_51_1) {
+                                              break L20;
+                                            }
+                                            var8 = (ja) ((Object) var11.a(54));
+                                            continue;
                                           }
-                                          var8 = (ja) ((Object) var11.a(54));
-                                          continue;
+                                          var11.a(var7, false);
                                         }
-                                        var11.a(var7, false);
                                       }
                                       var6_int++;
                                       continue L17;
