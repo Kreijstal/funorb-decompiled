@@ -176,9 +176,9 @@ final class TriangleMesh {
               (AchievementQuery.rankedEntryIndices.length >= param2 + param1))) {
           AchievementQuery.rankedEntryIndices = new int[(param2 + param1) * 2];
         }
-        if (!((null != AccountCreationForm.field_C) &&
-              (AccountCreationForm.field_C.length >= param2))) {
-          AccountCreationForm.field_C = new boolean[2 * param2];
+        if (!((null != AccountCreationForm.unusedRankedEntryBooleans) &&
+              (AccountCreationForm.unusedRankedEntryBooleans.length >= param2))) {
+          AccountCreationForm.unusedRankedEntryBooleans = new boolean[2 * param2];
         }
         GmtTimestampSupport.rankedEntryCount = 0;
         MeshPrioritySupport.field_b = -2147483648;

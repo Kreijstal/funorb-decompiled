@@ -386,7 +386,7 @@ public final class Geoblox extends SessionGameApplet {
         ProgressDialog.releaseProgressDialogLoginMethod((byte) 57);
         AccountContentDialog.n(methodGuard ^ 69);
         MessageDialog.releaseStaticReferences(-107);
-        AccountCreationForm.h(0);
+        AccountCreationForm.releaseAccountCreationSharedResources(0);
         AccountWelcomePanel.f(1);
         LoginPanel.a((byte) -97);
         DisplayNamePanel.i((byte) -85);

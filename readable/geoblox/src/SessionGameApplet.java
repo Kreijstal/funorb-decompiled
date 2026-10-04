@@ -523,7 +523,7 @@ abstract class SessionGameApplet extends GameApplet {
               throw new IllegalStateException();
             }
             if (uiAction == 1) {
-              queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.i(actionGuard ^ -26), LoginPanel.h((byte) -42), -121);
+              queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.createActiveLoginLookupValue(actionGuard ^ -26), LoginPanel.h((byte) -42), -121);
               if (queryOrHandshakeResult != -1) {
                 UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.pendingUsernameSuggestions, AudioService.sessionResponseText);
                 AudioService.sessionResponseText = null;

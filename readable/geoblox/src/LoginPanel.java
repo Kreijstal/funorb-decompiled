@@ -343,7 +343,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 return stackIn_31_0;
               }
               if (99 != var9) {
-                PacketBuffer.currentProtocolStage = AccountCreationForm.field_F;
+                PacketBuffer.currentProtocolStage = AccountCreationForm.awaitingLoginLookupPayloadStage;
                 AchievementSubmission.sessionPacketPayloadLength = -1;
                 ScorePopup.currentPacketOpcode = var9;
               } else {
@@ -370,7 +370,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               }
             }
           }
-          if ((PacketBuffer.currentProtocolStage == AccountCreationForm.field_F) &&
+          if ((PacketBuffer.currentProtocolStage == AccountCreationForm.awaitingLoginLookupPayloadStage) &&
               (TriangleMesh.readSessionPacketPayload(false))) {
             if (ScorePopup.currentPacketOpcode != 255) {
               AudioService.sessionResponseText = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 98);

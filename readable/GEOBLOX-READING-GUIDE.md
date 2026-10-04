@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/aa2b3a7579bea0da750b1a1ebe6092941e7e8ff5/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/7aa2dbc6771d11250cba3c3b2fd593eba382cb1c/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 158)
+## Current readability (pass 159)
 
-The export has 15,321 guarded names and 105,286 Java identifier edits, plus 11
+The export has 15,474 guarded names and 105,784 Java identifier edits, plus 11
 class-name literal edits and 275 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -24,7 +24,43 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current dialog frame and helper naming (pass 158)
+## Current account creation form naming (pass 159)
+
+Pass 159 adds 153 guarded names: two fields, twelve methods, 41 parameters
+and 98 locals. All 187 declarations owned by AccountCreationForm now have
+readable names; its constructor follows the class rule. Row builders expose
+input, validation-message, validation-icon and hint layouts. Submission gates,
+terms markup, dialog-layer rebuilding, keyboard focus, button/hotspot callbacks,
+suggestions and shared cleanup retain their original guards and effects.
+
+The constructor keeps shared email/confirmation and password/confirmation
+renderer aliases. Row builders still add children before later guard failures.
+The validation gate accepts a missing provider and every state other than the
+three explicitly rejected states, including a null state; it does not imply
+server acceptance. Login lookup still reads the active identifier twice and
+filters only the discarded first result. The shared awaitingLoginLookupPayloadStage
+follows actual packet consumers. unusedRankedEntryBooleans describes a ranked-entry
+capacity buffer with no element consumers in the source; no element meaning is
+invented. Client-control flag values, callback order, overflow, partial effects,
+exception scopes and diagnostic string literals remain.
+
+The export has 15,474 rules and 105,784 identifier edits, plus eleven class-name
+literal and 275 label edits: 106,070 total. All 15,321 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Six generated Java files change only in names. Raw source and
+all tool, workflow, stub, label-policy and native-probe pins stay fixed. Both
+303-file corpora compile, reproduce and reverse byte exactly. All 27 publication
+tests pass. The existing raster/theme fixture retains its ten native/raw/readable
+trace hashes for rasterization, shared-theme initialization and bootstrap
+failures. It does not exercise account-form construction or interaction. No
+native cases or performance results are added.
+
+Eight large labeled bodies, 153 opaque labels, 258 opaque fields and 276
+single-letter methods remain. Live account-form input, focus, submission and
+login/network behavior, server/assets/game/browser/phone and heap/presented-FPS
+acceptance remain unverified.
+
+## Previous dialog frame and helper naming (pass 158)
 
 Pass 158 adds 111 guarded names: four fields, twelve methods, 25 parameters
 and seventy locals. All 57 FadingDialog, 130 ResizableDialog and sixty

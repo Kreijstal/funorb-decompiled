@@ -52,7 +52,7 @@ abstract class CacheReference extends DualLinkNode {
             int guardResidue = 103 / ((methodGuard - 70) / 34);
             EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -126, false);
             IndexedSpriteState.a((byte) 103, buttonImageArchive, commonUiSpriteArchive, fontArchive);
-            AccountCreationForm.h((byte) -121);
+            AccountCreationForm.rebuildAccountDialogLayerAndOpenLogin((byte) -121);
             ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
             WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
         } catch (RuntimeException resourceInitializationFailure) {
