@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "10ef3b4223ea230d5968a6366a395cdef26add02",
+      "commit": "7c85c2aa4a386ab38c7e9a4af2ffdb787bf9086b",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "74bd2b5e113c492f08db3791204ccd99a59aaa985c04a3dfc27b9d17772941b2",
-        "reproduce": "git archive --format=tar 10ef3b4223ea230d5968a6366a395cdef26add02 | sha256sum",
+        "sha256": "87bba94fb508a8faa874b11e21b2040d298e5761be6eac074e3cb0b3a657767d",
+        "reproduce": "git archive --format=tar 7c85c2aa4a386ab38c7e9a4af2ffdb787bf9086b | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "b94f67e3ce485801bc06bcc445eb5d03c52847d3668502a0c0fc6d1a1dd77f3e",
-  "previousSourceTreeSha256": "9447232c7194f4e51f50697933f569f1f3f4504b2471ccd3e501807f9ac9de1c",
-  "changedJavaFiles": 3,
+  "sourceTreeSha256": "e83252bbc222276c86a51093884b07f5da5e846cecd7e7ddc1ceb052d2b24b4d",
+  "previousSourceTreeSha256": "b94f67e3ce485801bc06bcc445eb5d03c52847d3668502a0c0fc6d1a1dd77f3e",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "62901e8f8a98d3136668db754fd06a8dde81bed1",
+    "commit": "d9332bd87967ba1b559971b136b549d49ce46218",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "4eca5f757437140857f94d5f915d152f5bf8f81af988bd28a9e8f41b7bbe79bf"
+      "sha256": "68b489007407bc60d7c8c2cba8d52d6b7c666e444749b5a0684bde7007537af1"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "72e10b256db2ce973598e9f2f1635bee4946cd18a263843855924bbcfaae347a",
+    "outputTreeSha256": "1d8e3de772a5e4cd9f006788fb6f65524b1c70e837f70884d2d237bd1776d87b",
     "files": 303,
     "rules": 14704,
     "identifierEdits": 102711,
@@ -3322,7 +3322,7 @@
       "remainingOpaqueLoopLabels": 45,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 151
+    "structuralPass": 153
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -6274,5 +6274,123 @@
     "nativeScenarios": 134,
     "existingResultHelperTracePinsPreserved": 11,
     "scope": "Pass 152 adds 86 guarded names: 22 fields, thirteen methods, eighteen\nparameters and 33 locals. Every declaration in SoundFilter (45), SoundEnvelope\n(22) and SynthesizedSoundEffect (25) has a readable name; constructors follow\nthe existing class rules. Their callers now show envelope reset/advance,\nendpoint decode, pole-pair coefficient expansion, forward gain and signed PCM\nmixing with millisecond loop boundaries. Reused slots keep names that cover\nboth roles, rather than implying a register has only one meaning.\n\nThe same result-helper fixture adds 134 native/raw/readable cases: 48 constant\nenvelope/reset trajectories, three explicit fixed-point ramps, 23 truncated/null\nenvelopes with partial-state/cursor traces, forty filter cases including NaN,\nand twenty constructed square-wave mix/delay/saturation/PCM-loop cases. Flat\nand ramp values, coefficient counts/unity/zero-radius cases, and mixing/loop\nvalues have independent explicit oracles. Other filter coefficients and partial\ndecode state compare transformed native/raw/readable traces directly. All eleven\nprevious result-helper traces retain their reviewed hashes.\n\nThere are 14,704 rules and 102,711 identifier edits, plus eleven class-name\nliteral and 250 label edits: 102,972 total. All 14,618 previous complete rules\nremain. Six generated Java files change; all raw code, source/tool/workflow/stub\npins, local ordinals, 136,607 bindings, 388 overrides and 811 lexical label\nrecords remain. Both 303-file corpora compile, reproduce and reverse byte\nexactly; the 27 publication tests and extended result-helper fixture pass.\nNo Java body is hand edited and no decompiler change is required.\n\nEight large labeled bodies and 162 opaque labels remain, together with 307\nopaque fields and 342 short opaque methods. Full packed instruments, arbitrary\nmodulation/filtering, real archive assets, device playback, full-game/server/\nbrowser/phone and heap/FPS acceptance remain unverified."
+  },
+  "nonlocalLoopExitRecovery": {
+    "version": 153,
+    "previousSourceCommit": "4fc5dd18f65af8b9be8e9450e55f70e563829cca",
+    "sourceCommit": "72ea94eea77827b240eb9203837b63e200b3bd99",
+    "previousSourceTreeSha256": "b94f67e3ce485801bc06bcc445eb5d03c52847d3668502a0c0fc6d1a1dd77f3e",
+    "sourceTreeSha256": "e83252bbc222276c86a51093884b07f5da5e846cecd7e7ddc1ceb052d2b24b4d",
+    "javaToolsCommit": "7c85c2aa4a386ab38c7e9a4af2ffdb787bf9086b",
+    "sourceArchiveSha256": "87bba94fb508a8faa874b11e21b2040d298e5761be6eac074e3cb0b3a657767d",
+    "nonlocalLoopExits": true,
+    "counts": {
+      "nonlocalLoopExits": 2
+    },
+    "changedJavaFiles": 1,
+    "changedMethodBodies": 1,
+    "sourceLinesBefore": 76234,
+    "sourceLinesAfter": 76230,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 245,
+    "labelDeclarationsAfter": 245,
+    "labelBindingsBefore": 811,
+    "labelBindingsAfter": 811,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "genericFocusedTestGroupsPassed": 4,
+    "nativeComparisons": 5184,
+    "independentNativeOracleCases": 5184,
+    "nativeDifferentialVariants": 6,
+    "genericEmitterTestsPassed": 125,
+    "genericEmitterTestsSkipped": 1,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "89b2ca99e2ff95a675f2f7162dc8b5de65d4a713254f97d7a7a27e9e02aca480",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 327,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 346,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 630,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 331,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 376,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "scope": "Pass 153 makes two stopping conditions explicit in board reconciliation:\nconnected-component detachment and clearing the visited table. Each infinite\nloop's leading single labeled break becomes a negated loop header, followed by\nthe exact same break to its original enclosing frame. Board reconciliation\nfalls from 335 to 331 lines; eight large labeled bodies still remain.\n\nEvery own break, including a finally override, refuses this reconstruction.\nOwn continues still evaluate the guard at the next iteration, and every other\nnonlocal transfer retains its target. Remaining body declarations, complete\ntry/catch/finally and monitor regions, and scalar-parent braces stay intact.\nThe guard is negated as written; no control-flag value or numeric type is assumed.\n\nFour focused groups include six native variants checked against 5,184 independent\nguard/body/finally event cases. They cover effectful/nullable guards, negative/\nzero/positive flags, exception identity and partial effects, return snapshots,\nfinally backedges overriding pending exceptions, local scope and monitor release.\nThe emitter suite passes 125 tests with one existing skip. A clean tracked\ndecompiler-source tar reproduces all 303 files and unchanged diagnostics without\nhard failures or fallbacks. The source proof reconstructs every expected token\nstream and tags retained original tokens to verify the exact moved-break lexical\npermutation, all 811 label records/destinations, 136,607 ordered ordinary bindings,\nlocal ordinals and 388 overrides. No label is removed or retargeted.\n\nAll 14,704 complete naming rules and 102,972 edits remain unchanged. Both corpora\ncompile, reproduce and reverse byte exactly; 27 publication tests and the eight\nnative/raw/readable fixtures pass within their documented scopes. Only the\ngenerated BoardReconciliationSupport body changes; no Java body is hand edited.\nThere are still 307 opaque fields, 342 single-letter methods and 162 opaque labels.\nFull assets/gameplay, servers, browser/phone and heap/FPS acceptance remain unverified.",
+    "sourceProofWorkflowCommit": "d9332bd87967ba1b559971b136b549d49ce46218"
   }
 }

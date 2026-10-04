@@ -17,12 +17,44 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/62901e8f8a98d3136668db754fd06a8dde81bed1/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/d9332bd87967ba1b559971b136b549d49ce46218/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 153 makes two stopping conditions explicit in board reconciliation:
+connected-component detachment and clearing the visited table. Each infinite
+loop's leading single labeled break becomes a negated loop header, followed by
+the exact same break to its original enclosing frame. Board reconciliation
+falls from 335 to 331 lines; eight large labeled bodies still remain.
+
+Every own break, including a finally override, refuses this reconstruction.
+Own continues still evaluate the guard at the next iteration, and every other
+nonlocal transfer retains its target. Remaining body declarations, complete
+try/catch/finally and monitor regions, and scalar-parent braces stay intact.
+The guard is negated as written; no control-flag value or numeric type is assumed.
+
+Four focused groups include six native variants checked against 5,184 independent
+guard/body/finally event cases. They cover effectful/nullable guards, negative/
+zero/positive flags, exception identity and partial effects, return snapshots,
+finally backedges overriding pending exceptions, local scope and monitor release.
+The emitter suite passes 125 tests with one existing skip. A clean tracked
+decompiler-source tar reproduces all 303 files and unchanged diagnostics without
+hard failures or fallbacks. The source proof reconstructs every expected token
+stream and tags retained original tokens to verify the exact moved-break lexical
+permutation, all 811 label records/destinations, 136,607 ordered ordinary bindings,
+local ordinals and 388 overrides. No label is removed or retargeted.
+
+All 14,704 complete naming rules and 102,972 edits remain unchanged. Both corpora
+compile, reproduce and reverse byte exactly; 27 publication tests and the eight
+native/raw/readable fixtures pass within their documented scopes. Only the
+generated BoardReconciliationSupport body changes; no Java body is hand edited.
+There are still 307 opaque fields, 342 single-letter methods and 162 opaque labels.
+Full assets/gameplay, servers, browser/phone and heap/FPS acceptance remain unverified.
+
+## Previous synthesized sound names (pass 152)
 
 Pass 152 adds 86 guarded names: 22 fields, thirteen methods, eighteen
 parameters and 33 locals. Every declaration in SoundFilter (45), SoundEnvelope
@@ -1102,7 +1134,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`74bd2b5e113c492f08db3791204ccd99a59aaa985c04a3dfc27b9d17772941b2`.
+`87bba94fb508a8faa874b11e21b2040d298e5761be6eac074e3cb0b3a657767d`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls

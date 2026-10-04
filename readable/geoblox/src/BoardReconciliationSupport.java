@@ -205,10 +205,7 @@ final class BoardReconciliationSupport {
                               break componentSearchAndDetach;
                             }
                             connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
-                            while (true) {
-                              if (connectivityAliasThenDetachingEntity == null) {
-                                break componentSearchAndDetach;
-                              }
+                            while (!(connectivityAliasThenDetachingEntity == null)) {
                               connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                               connectivityAliasThenDetachingEntity.touchesAvatar = false;
                               connectivityAliasThenDetachingEntity.detachedFromBoard = true;
@@ -230,6 +227,7 @@ final class BoardReconciliationSupport {
                               connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
                               continue;
                             }
+                            break componentSearchAndDetach;
                           }
                         }
                       }
@@ -244,10 +242,7 @@ final class BoardReconciliationSupport {
                   break;
                 }
                 visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
-                while (true) {
-                  if (1000 <= visitedResetIndexThenKindFourCount) {
-                    break connectivityRebuild;
-                  }
+                while (!(1000 <= visitedResetIndexThenKindFourCount)) {
                   PacketBuffer.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
                   visitedResetIndexThenKindFourCount++;
                   if (clientControlSnapshot != 0) {
@@ -255,6 +250,7 @@ final class BoardReconciliationSupport {
                   }
                   continue;
                 }
+                break connectivityRebuild;
               }
               visitedResetIndexThenKindFourCount = 0;
             }
