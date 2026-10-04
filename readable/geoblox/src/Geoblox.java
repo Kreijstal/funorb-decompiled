@@ -454,7 +454,7 @@ public final class Geoblox extends SessionGameApplet {
         ByteArrayPoolSupport.clearBytePoolAndUiResources((byte) -108);
         DebugOverviewCompositor.releaseStaticReferences(-128);
         CheckboxRenderer.releaseStaticReferences(1);
-        StatefulWidgetRenderer.a((byte) 94);
+        StatefulWidgetRenderer.releaseSharedResources((byte) 94);
         DialRenderer.a(methodGuard ^ -64);
         MultiHandleSliderRenderer.b((byte) -89);
         UiWidget.releaseStaticReferences(-5927);
@@ -544,7 +544,7 @@ public final class Geoblox extends SessionGameApplet {
         IntArrayQuery.b(1000);
         KeyedIntRecordSubmission.b(methodGuard ^ -65);
         FifoResponseToken.b(false);
-        WidgetSkinState.a(false);
+        WidgetSkinState.releaseSharedResources(false);
         TextLayoutLine.releaseStaticReferences((byte) 0);
         ScorePopup.c((byte) -40);
         UsernameAvailabilityValidator.d((byte) 113);

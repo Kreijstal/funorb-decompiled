@@ -217,7 +217,7 @@ final class EmailValidator extends TextInputValidator {
 
     final static void c(int param0, String param1) {
         try {
-            StatefulWidgetRenderer.a(-119, param1);
+            StatefulWidgetRenderer.setOptionalLoginText(-119, param1);
             if (param0 != 12607) {
                 archiveGameCrc = 32;
             }

@@ -175,7 +175,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 stackIn_41_0 = ArchiveLoadStep.field_h;
                 return stackIn_41_0;
               }
-              if (StatefulWidgetRenderer.field_w.indexOf(var5) == -1) {
+              if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(var5) == -1) {
                 stackIn_46_0 = ArchiveLoadStep.field_h;
                 return stackIn_46_0;
               }

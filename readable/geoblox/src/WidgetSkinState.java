@@ -9,206 +9,206 @@ final class WidgetSkinState {
     private boolean flushBeforeOverlay;
     private int textColor;
     private int offsetY;
-    static String[] field_i;
+    static String[] pendingUsernameSuggestions;
     Sprite icon;
     private int offsetX;
     static boolean archiveUseControlOpcode2;
     static ValidationState invalidInputValidationState;
-    static int field_j;
+    static int introFaceModulationRgb;
     static ClientFlowToken usernameQueryFlowState;
 
-    final static String a(String param0, int param1, String param2, ResourceArchive param3) {
-        RuntimeException var4 = null;
-        String stackIn_2_0 = null;
-        String stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static String formatArchiveLoadingProgress(String fallbackText, int indexGuard, String loadingStageText, ResourceArchive archive) {
+        RuntimeException loadingProgressFailure = null;
+        String fallbackBeforeReturn = null;
+        String progressBeforeReturn = null;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String fallbackDescription = null;
+        StringBuilder contextAfterFallback = null;
+        String stageDescription = null;
+        StringBuilder contextAfterStage = null;
+        String archiveDescription = null;
+        RuntimeException caughtLoadingFailure = null;
         try {
-          if (param3.ensureIndexLoaded(param1 ^ param1)) {
-            stackIn_4_0 = param2 + " - " + param3.getLoadProgress((byte) 110) + "%";
-            return stackIn_4_0;
+          if (archive.ensureIndexLoaded(indexGuard ^ indexGuard)) {
+            progressBeforeReturn = loadingStageText + " - " + archive.getLoadProgress((byte) 110) + "%";
+            return progressBeforeReturn;
           }
-          stackIn_2_0 = (String) (param0);
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("si.A(");
-          if (param0 == null) {
-            stackIn_8_2 = "null";
+          fallbackBeforeReturn = (String) (fallbackText);
+          return fallbackBeforeReturn;
+        } catch (java.lang.RuntimeException loadingException) {
+          caughtLoadingFailure = loadingException;
+          loadingProgressFailure = caughtLoadingFailure;
+          failureBeforeContext = loadingProgressFailure;
+          failureContextBuilder = new StringBuilder().append("si.A(");
+          if (fallbackText == null) {
+            fallbackDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            fallbackDescription = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_11_2 = "null";
+          contextAfterFallback = ((StringBuilder) (Object) failureContextBuilder).append(fallbackDescription).append(',').append(indexGuard).append(',');
+          if (loadingStageText == null) {
+            stageDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            stageDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param3 == null) {
-            stackIn_14_2 = "null";
+          contextAfterStage = ((StringBuilder) (Object) contextAfterFallback).append(stageDescription).append(',');
+          if (archive == null) {
+            archiveDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            archiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) contextAfterStage).append(archiveDescription).append(')').toString());
         }
     }
 
-    final WidgetSkinState a(int param0, int param1) {
-        this.offsetY = param1;
-        if (param0 != 0) {
+    final WidgetSkinState setOffsetY(int methodGuard, int yOffset) {
+        this.offsetY = yOffset;
+        if (methodGuard != 0) {
             return (WidgetSkinState) null;
         }
         return (WidgetSkinState) (this);
     }
 
-    final WidgetSkinState b(int param0, int param1) {
-        this.textColor = param1;
-        if (param0 != 256) {
+    final WidgetSkinState setTextColor(int methodGuard, int color) {
+        this.textColor = color;
+        if (methodGuard != 256) {
             return (WidgetSkinState) null;
         }
         return (WidgetSkinState) (this);
     }
 
-    final WidgetSkinState a(boolean param0, byte param1) {
-        this.flushBeforeOverlay = param0 ? true : false;
-        if (param1 != 73) {
-            WidgetSkinState.a(false);
+    final WidgetSkinState setFlushBeforeOverlay(boolean flushEnabled, byte methodGuard) {
+        this.flushBeforeOverlay = flushEnabled ? true : false;
+        if (methodGuard != 73) {
+            WidgetSkinState.releaseSharedResources(false);
             return (WidgetSkinState) (this);
         }
         return (WidgetSkinState) (this);
     }
 
-    final void a(StatefulWidgetRenderer param0, int param1, int param2, UiWidget param3, int param4) {
-        BitmapFont stackIn_20_0 = null;
-        String stackIn_20_1 = null;
-        int stackIn_21_2 = 0;
-        int stackIn_23_2;
-        int stackIn_23_3;
-        int stackIn_23_4;
-        int stackIn_24_5 = 0;
-        int stackIn_26_3;
-        int stackIn_26_4;
-        int stackIn_26_5;
-        int stackIn_26_6;
-        int stackIn_26_7;
-        int stackIn_27_8;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_32_2 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_35_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        String var6 = null;
-        RuntimeException var6_ref = null;
-        int var7 = 0;
+    final void drawSkin(StatefulWidgetRenderer renderer, int parentX, int parentY, UiWidget widget, int methodGuard) {
+        BitmapFont fontForParagraph = null;
+        String textForParagraph = null;
+        int effectiveOffsetX = 0;
+        int textX;
+        int paddingTopSnapshot;
+        int widgetOriginY;
+        int effectiveOffsetY = 0;
+        int textY;
+        int textWidth;
+        int textHeight;
+        int paragraphColor;
+        int paragraphShadowColor;
+        int paragraphAlpha;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String rendererDescription = null;
+        StringBuilder contextAfterRenderer = null;
+        String widgetDescription = null;
+        RuntimeException caughtDrawFailure = null;
+        int iconX = 0;
+        String displayText = null;
+        RuntimeException drawFailure = null;
+        int iconY = 0;
         try {
-          DelayedIncomingPacket.drawNineSlicePanel(param3.widgetY + param2, param1 + param3.widgetX, param3.widgetHeight, (byte) -92, param3.widgetWidth, this.panelSprites);
+          DelayedIncomingPacket.drawNineSlicePanel(widget.widgetY + parentY, parentX + widget.widgetX, widget.widgetHeight, (byte) -92, widget.widgetWidth, this.panelSprites);
           if (this.icon != null) {
-            var6_int = this.offsetX + (param3.widgetX + param1);
-            var7 = this.offsetY + param2 + param3.widgetY;
-            if (param0.horizontalAlignment == 1) {
-              var6_int = var6_int + (-this.icon.fullWidth + param3.widgetWidth) / 2;
+            iconX = this.offsetX + (widget.widgetX + parentX);
+            iconY = this.offsetY + parentY + widget.widgetY;
+            if (renderer.horizontalAlignment == 1) {
+              iconX = iconX + (-this.icon.fullWidth + widget.widgetWidth) / 2;
             }
-            if (2 == param0.horizontalAlignment) {
-              var6_int = var6_int + (-this.icon.fullWidth + param3.widgetWidth);
+            if (2 == renderer.horizontalAlignment) {
+              iconX = iconX + (-this.icon.fullWidth + widget.widgetWidth);
             }
-            if (param0.verticalAlignment == 1) {
-              var7 = var7 + (param3.widgetHeight - this.icon.fullHeight) / 2;
+            if (renderer.verticalAlignment == 1) {
+              iconY = iconY + (widget.widgetHeight - this.icon.fullHeight) / 2;
             }
-            if (2 == param0.verticalAlignment) {
-              var7 = var7 + (-this.icon.fullHeight + param3.widgetHeight);
+            if (2 == renderer.verticalAlignment) {
+              iconY = iconY + (-this.icon.fullHeight + widget.widgetHeight);
             }
-            this.icon.draw(var6_int, var7);
+            this.icon.draw(iconX, iconY);
           }
-          if (param4 != 0) {
+          if (methodGuard != 0) {
             pendingQueryValidationState = (ValidationState) null;
           }
-          var6 = param0.getDisplayText(120, param3);
-          if ((var6 != null) &&
-              (null != param0.font)) {
+          displayText = renderer.getDisplayText(120, widget);
+          if ((displayText != null) &&
+              (null != renderer.font)) {
             if (this.textColor < 0) {
               return;
             }
-            stackIn_20_0 = param0.font;
-            stackIn_20_1 = var6;
+            fontForParagraph = renderer.font;
+            textForParagraph = displayText;
             if (this.offsetX != -2147483648) {
-              stackIn_21_2 = this.offsetX;
+              effectiveOffsetX = this.offsetX;
             } else {
-              stackIn_21_2 = 0;
+              effectiveOffsetX = 0;
             }
-            stackIn_23_2 = stackIn_21_2 + param0.paddingLeft + param3.widgetX + param1;
-            stackIn_23_3 = param0.paddingTop;
-            stackIn_23_4 = param3.widgetY + param2;
+            textX = effectiveOffsetX + renderer.paddingLeft + widget.widgetX + parentX;
+            paddingTopSnapshot = renderer.paddingTop;
+            widgetOriginY = widget.widgetY + parentY;
             if (this.offsetY == -2147483648) {
-              stackIn_24_5 = 0;
+              effectiveOffsetY = 0;
             } else {
-              stackIn_24_5 = this.offsetY;
+              effectiveOffsetY = this.offsetY;
             }
-            stackIn_26_3 = stackIn_23_3 + (stackIn_23_4 + stackIn_24_5);
-            stackIn_26_4 = -param0.paddingLeft + param3.widgetWidth - param0.paddingRight;
-            stackIn_26_5 = -param0.paddingBottom + (-param0.paddingTop + param3.widgetHeight);
-            stackIn_26_6 = this.textColor;
-            stackIn_26_7 = this.textShadowColor;
+            textY = paddingTopSnapshot + (widgetOriginY + effectiveOffsetY);
+            textWidth = -renderer.paddingLeft + widget.widgetWidth - renderer.paddingRight;
+            textHeight = -renderer.paddingBottom + (-renderer.paddingTop + widget.widgetHeight);
+            paragraphColor = this.textColor;
+            paragraphShadowColor = this.textShadowColor;
             if (this.textAlpha != -2147483648) {
-              stackIn_27_8 = this.textAlpha;
+              paragraphAlpha = this.textAlpha;
             } else {
-              stackIn_27_8 = 256;
+              paragraphAlpha = 256;
             }
-            ((BitmapFont) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.horizontalAlignment, param0.verticalAlignment, param0.lineSpacing);
+            ((BitmapFont) (Object) fontForParagraph).drawParagraphAlpha(textForParagraph, textX, textY, textWidth, textHeight, paragraphColor, paragraphShadowColor, paragraphAlpha, renderer.horizontalAlignment, renderer.verticalAlignment, renderer.lineSpacing);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_31_0 = var6_ref;
-          stackIn_31_1 = new StringBuilder().append("si.B(");
-          if (param0 == null) {
-            stackIn_32_2 = "null";
+        } catch (java.lang.RuntimeException drawException) {
+          caughtDrawFailure = drawException;
+          drawFailure = caughtDrawFailure;
+          failureBeforeContext = drawFailure;
+          failureContextBuilder = new StringBuilder().append("si.B(");
+          if (renderer == null) {
+            rendererDescription = "null";
           } else {
-            stackIn_32_2 = "{...}";
+            rendererDescription = "{...}";
           }
-          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_35_2 = "null";
+          contextAfterRenderer = ((StringBuilder) (Object) failureContextBuilder).append(rendererDescription).append(',').append(parentX).append(',').append(parentY).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_35_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) contextAfterRenderer).append(widgetDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    final WidgetSkinState a(byte param0, int param1) {
-        this.textShadowColor = param1;
-        if (param0 != 16) {
+    final WidgetSkinState setTextShadowColor(byte methodGuard, int shadowColor) {
+        this.textShadowColor = shadowColor;
+        if (methodGuard != 16) {
             return (WidgetSkinState) null;
         }
         return (WidgetSkinState) (this);
     }
 
-    final WidgetSkinState b(byte param0, int param1) {
-        this.offsetX = param1;
-        if (param0 != -53) {
+    final WidgetSkinState setOffsetX(byte methodGuard, int xOffset) {
+        this.offsetX = xOffset;
+        if (methodGuard != -53) {
             this.flushBeforeOverlay = true;
             return (WidgetSkinState) (this);
         }
         return (WidgetSkinState) (this);
     }
 
-    public static void a(boolean param0) {
-        field_i = null;
+    public static void releaseSharedResources(boolean enableArchiveControlOpcode) {
+        pendingUsernameSuggestions = null;
         invalidInputValidationState = null;
         usernameQueryFlowState = null;
-        if (param0) {
+        if (enableArchiveControlOpcode) {
             archiveUseControlOpcode2 = true;
             pendingQueryValidationState = null;
             return;
@@ -216,125 +216,125 @@ final class WidgetSkinState {
         pendingQueryValidationState = null;
     }
 
-    final void a(int param0, int param1, WidgetSkinState param2, StatefulWidgetRenderer param3, int param4, UiWidget param5) {
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
+    final void mergeIntoWorkingSkin(int parentX, int parentY, WidgetSkinState targetSkin, StatefulWidgetRenderer renderer, int methodGuard, UiWidget widget) {
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String targetDescription = null;
+        StringBuilder contextAfterTarget = null;
+        String rendererDescription = null;
+        StringBuilder contextAfterRenderer = null;
+        String widgetDescription = null;
+        RuntimeException caughtMergeFailure = null;
+        RuntimeException mergeFailure = null;
         try {
           if (this.flushBeforeOverlay) {
-            param2.a(param3, param0, param1, param5, 0);
-            param2.a((byte) -8);
+            targetSkin.drawSkin(renderer, parentX, parentY, widget, 0);
+            targetSkin.resetDrawingProperties((byte) -8);
           }
-          if (param4 != -16566) {
+          if (methodGuard != -16566) {
             return;
           }
           if (this.offsetY != -2147483648) {
-            param2.offsetY = this.offsetY;
+            targetSkin.offsetY = this.offsetY;
           }
           if (this.textShadowColor >= -1) {
-            param2.textShadowColor = this.textShadowColor;
+            targetSkin.textShadowColor = this.textShadowColor;
           }
           if (this.textAlpha != -2147483648) {
-            param2.textAlpha = this.textAlpha;
+            targetSkin.textAlpha = this.textAlpha;
           }
           if (null != this.panelSprites) {
-            param2.panelSprites = this.panelSprites;
+            targetSkin.panelSprites = this.panelSprites;
           }
           if (null != this.icon) {
-            param2.icon = this.icon;
+            targetSkin.icon = this.icon;
           }
           if (this.textColor >= -1) {
-            param2.textColor = this.textColor;
+            targetSkin.textColor = this.textColor;
           }
           if (this.offsetX == -2147483648) {
             return;
           }
-          param2.offsetX = this.offsetX;
+          targetSkin.offsetX = this.offsetX;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_23_0 = var7;
-          stackIn_23_1 = new StringBuilder().append("si.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_24_2 = "null";
+        } catch (java.lang.RuntimeException mergeException) {
+          caughtMergeFailure = mergeException;
+          mergeFailure = caughtMergeFailure;
+          failureBeforeContext = mergeFailure;
+          failureContextBuilder = new StringBuilder().append("si.F(").append(parentX).append(',').append(parentY).append(',');
+          if (targetSkin == null) {
+            targetDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            targetDescription = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param3 == null) {
-            stackIn_27_2 = "null";
+          contextAfterTarget = ((StringBuilder) (Object) failureContextBuilder).append(targetDescription).append(',');
+          if (renderer == null) {
+            rendererDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            rendererDescription = "{...}";
           }
-          stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',');
-          if (param5 == null) {
-            stackIn_30_2 = "null";
+          contextAfterRenderer = ((StringBuilder) (Object) contextAfterTarget).append(rendererDescription).append(',').append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_30_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) contextAfterRenderer).append(widgetDescription).append(')').toString());
         }
     }
 
-    final void a(int param0, WidgetSkinState param1) {
+    final void copyPropertiesTo(int methodGuard, WidgetSkinState targetSkin) {
         try {
-            param1.textColor = this.textColor;
-            if (param0 != 2) {
-                Sprite[] var4 = (Sprite[]) null;
-                this.a((Sprite[]) null, true);
+            targetSkin.textColor = this.textColor;
+            if (methodGuard != 2) {
+                Sprite[] unusedNullPanelSprites = (Sprite[]) null;
+                this.setPanelSprites((Sprite[]) null, true);
             }
-            param1.textAlpha = this.textAlpha;
-            param1.offsetX = this.offsetX;
-            param1.panelSprites = this.panelSprites;
-            param1.icon = this.icon;
-            param1.flushBeforeOverlay = this.flushBeforeOverlay;
-            param1.offsetY = this.offsetY;
-            param1.textShadowColor = this.textShadowColor;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "si.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            targetSkin.textAlpha = this.textAlpha;
+            targetSkin.offsetX = this.offsetX;
+            targetSkin.panelSprites = this.panelSprites;
+            targetSkin.icon = this.icon;
+            targetSkin.flushBeforeOverlay = this.flushBeforeOverlay;
+            targetSkin.offsetY = this.offsetY;
+            targetSkin.textShadowColor = this.textShadowColor;
+        } catch (RuntimeException copyFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) copyFailure), "si.G(" + methodGuard + ',' + (targetSkin != null ? "{...}" : "null") + ')');
         }
     }
 
-    final WidgetSkinState a(Sprite[] param0, boolean param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final WidgetSkinState setPanelSprites(Sprite[] sprites, boolean preserveShadowColor) {
+        RuntimeException panelFailure = null;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String spritesDescription = null;
+        RuntimeException caughtPanelFailure = null;
         try {
-          if (!param1) {
-            this.a((byte) 66, -18);
+          if (!preserveShadowColor) {
+            this.setTextShadowColor((byte) 66, -18);
           }
-          this.panelSprites = param0;
+          this.panelSprites = sprites;
           return (WidgetSkinState) (this);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("si.L(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+        } catch (java.lang.RuntimeException panelException) {
+          caughtPanelFailure = panelException;
+          panelFailure = caughtPanelFailure;
+          failureBeforeContext = panelFailure;
+          failureContextBuilder = new StringBuilder().append("si.L(");
+          if (sprites == null) {
+            spritesDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            spritesDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) failureContextBuilder).append(spritesDescription).append(',').append(preserveShadowColor).append(')').toString());
         }
     }
 
-    final void a(byte param0) {
+    final void resetDrawingProperties(byte methodGuard) {
         this.panelSprites = null;
         this.icon = null;
         this.textShadowColor = -1;
         this.offsetX = 0;
         this.textAlpha = 256;
-        int var2 = 108 / ((57 - param0) / 46);
+        int guardArithmetic = 108 / ((57 - methodGuard) / 46);
         this.offsetY = 0;
         this.textColor = 0;
     }
@@ -353,6 +353,6 @@ final class WidgetSkinState {
     static {
         pendingQueryValidationState = new ValidationState();
         invalidInputValidationState = new ValidationState();
-        field_j = 5167632;
+        introFaceModulationRgb = 5167632;
     }
 }

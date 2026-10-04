@@ -46,9 +46,9 @@ final class ScorePopup extends IntrusiveNode {
     final static void a(int param0, ByteArrayBuffer param1) {
         int var2_int = 0;
         try {
-            StatefulWidgetRenderer.field_v = param1.readUnsignedShortBE(true) << 5;
+            StatefulWidgetRenderer.decodedRankedRatioNumerator = param1.readUnsignedShortBE(true) << 5;
             var2_int = param1.readUnsignedByte((byte) 34);
-            StatefulWidgetRenderer.field_v = StatefulWidgetRenderer.field_v + (var2_int >> 3);
+            StatefulWidgetRenderer.decodedRankedRatioNumerator = StatefulWidgetRenderer.decodedRankedRatioNumerator + (var2_int >> 3);
             EmailAvailabilityQuery.field_b = var2_int << 18 & 1835008;
             EmailAvailabilityQuery.field_b = EmailAvailabilityQuery.field_b + (param1.readUnsignedShortBE(true) << 2);
             var2_int = param1.readUnsignedByte((byte) 34);

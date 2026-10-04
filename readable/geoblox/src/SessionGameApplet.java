@@ -110,7 +110,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (methodGuard == -70) {
             SessionBootstrapSupport.initializeSessionServices(this.gameCrc, this.instanceId, 5000, clientId, this.requestedMemberMode, responseExtensionEnabled, MeshPrioritySupport.bootstrapLanguageId, this.alternateServerPort, 5000, this.serverHost, this.serverNumber, MenuScreen.platformTaskDispatcher, 64, this.primaryServerPort);
             TextInputValidator.initializeArchiveServices(clientId, MeshPrioritySupport.bootstrapLanguageId, this.primaryServerPort, this.serverNumber, -23949, MenuScreen.platformTaskDispatcher, this.serverHost, this.gameCrc, this.alternateServerPort);
-            StatefulWidgetRenderer.b(28);
+            StatefulWidgetRenderer.initializePunctuationKeyCodes(28);
             CachedTextLayout.mouseWheelInput = TextValidationFailure.createMouseWheelInput(methodGuard + 113);
             UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
             TextLayoutLine.interfaceTextArchiveId = interfaceTextArchiveId;
@@ -427,7 +427,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (null != TextValidationSupport.field_b) {
               if (!((TextValidationSupport.field_b.ensureIndexLoaded(0)) &&
                   (TextValidationSupport.field_b.loadAllGroups(true)))) {
-                HighscoreNameEntry.setLoadingProgress(WidgetSkinState.a(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.field_b), -2, 0.0f);
+                HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.field_b), -2, 0.0f);
                 break L30;
               }
             }
@@ -525,9 +525,9 @@ abstract class SessionGameApplet extends GameApplet {
             if (uiAction == 1) {
               queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.i(actionGuard ^ -26), LoginPanel.h((byte) -42), -121);
               if (queryOrHandshakeResult != -1) {
-                UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.field_i, AudioService.sessionResponseText);
+                UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.pendingUsernameSuggestions, AudioService.sessionResponseText);
                 AudioService.sessionResponseText = null;
-                WidgetSkinState.field_i = null;
+                WidgetSkinState.pendingUsernameSuggestions = null;
               }
               emailAvailabilityResult = HotspotTextWidget.a((byte) 111);
               if (emailAvailabilityResult != null) {
@@ -537,9 +537,9 @@ abstract class SessionGameApplet extends GameApplet {
             if (uiAction == 2) {
               queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.f(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
               if (queryOrHandshakeResult != -1) {
-                StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResult, (byte) 30, WidgetSkinState.field_i);
+                StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResult, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
                 AudioService.sessionResponseText = null;
-                WidgetSkinState.field_i = null;
+                WidgetSkinState.pendingUsernameSuggestions = null;
               }
             }
             if (uiAction == 3) {

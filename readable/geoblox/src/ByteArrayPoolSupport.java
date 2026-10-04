@@ -113,7 +113,7 @@ final class ByteArrayPoolSupport {
           guardResidue = -59 % ((41 - methodGuard) / 39);
           groupId = graphicsArchive.findGroupId((byte) 127, groupName);
           fileId = graphicsArchive.findFileId(fileName, -101, groupId);
-          spritesBeforeReturn = StatefulWidgetRenderer.a(groupId, -122, fileId, graphicsArchive);
+          spritesBeforeReturn = StatefulWidgetRenderer.loadSpritesWithDecodedAlpha(groupId, -122, fileId, graphicsArchive);
           return spritesBeforeReturn;
         } catch (java.lang.RuntimeException spriteLoadFailure) {
           caughtSpriteLoadFailure = spriteLoadFailure;

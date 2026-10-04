@@ -332,7 +332,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             if ((var9 >= 100) &&
                 (var9 <= 105)) {
               PacketBuffer.currentProtocolStage = CanvasResizeController.field_l;
-              WidgetSkinState.field_i = new String[var9 - 100];
+              WidgetSkinState.pendingUsernameSuggestions = new String[var9 - 100];
             } else {
               if (var9 == 248) {
                 GrowableIntList.a(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
@@ -359,9 +359,9 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               var10 = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
               LogoCompositor.sessionPacketBuffer.position = 0;
               if (UiWidget.readSessionBytesIfAvailable(30000, var10)) {
-                var11 = WidgetSkinState.field_i.length;
+                var11 = WidgetSkinState.pendingUsernameSuggestions.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  WidgetSkinState.field_i[var12] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
+                  WidgetSkinState.pendingUsernameSuggestions[var12] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -114);
                 TextTemplateArgumentType.field_e = false;

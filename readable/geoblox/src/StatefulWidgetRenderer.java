@@ -4,156 +4,156 @@
 final class StatefulWidgetRenderer extends TextWidgetRenderer {
     static byte[][] byteArrayPool5000;
     static int accountCreationAgeYears;
-    static TextTemplateDefinitionLoader field_r;
-    static int field_v;
-    static String field_w;
+    static TextTemplateDefinitionLoader textTemplateDefinitions;
+    static int decodedRankedRatioNumerator;
+    static String emailLocalPartCharacters;
     private WidgetSkinState workingSkin;
     private WidgetSkinState[] stateSkins;
 
-    final WidgetSkinState a(int param0, int param1) {
-        if (param0 >= -93) {
+    final WidgetSkinState replaceStateSkin(int methodGuard, int stateIndex) {
+        if (methodGuard >= -93) {
             return (WidgetSkinState) null;
         }
-        WidgetSkinState dupTemp$0 = new WidgetSkinState();
-        this.stateSkins[param1] = dupTemp$0;
-        return dupTemp$0;
+        WidgetSkinState replacementSkin = new WidgetSkinState();
+        this.stateSkins[stateIndex] = replacementSkin;
+        return replacementSkin;
     }
 
-    final void a(byte param0, Sprite[] param1) {
-        int var4 = 0;
-        WidgetSkinState[] var3 = null;
-        WidgetSkinState var5 = null;
-        int var6 = 0;
-        UiWidget var7 = null;
-        WidgetSkinState[] var8 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var6 = Geoblox.clientControlFlowFlag;
+    final void setPanelSpritesOnExistingStates(byte methodGuard, Sprite[] sprites) {
+        int stateIndex = 0;
+        WidgetSkinState[] skinsAlias = null;
+        WidgetSkinState stateSkin = null;
+        int clientControlFlowSnapshot = 0;
+        UiWidget unusedNullWidget = null;
+        WidgetSkinState[] skinsSnapshot = null;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String spritesDescription = null;
+        RuntimeException caughtPanelFailure = null;
+        RuntimeException panelFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param0 != 124) {
-            var7 = (UiWidget) null;
+          if (methodGuard != 124) {
+            unusedNullWidget = (UiWidget) null;
             this.drawWidget(-125, -66, 53, true, (UiWidget) null);
           }
-          var8 = this.stateSkins;
-          var3 = var8;
-          for (var4 = 0; var8.length > var4; var4++) {
-            var5 = var8[var4];
-            if (var5 != null) {
-              var5.panelSprites = param1;
+          skinsSnapshot = this.stateSkins;
+          skinsAlias = skinsSnapshot;
+          for (stateIndex = 0; skinsSnapshot.length > stateIndex; stateIndex++) {
+            stateSkin = skinsSnapshot[stateIndex];
+            if (stateSkin != null) {
+              stateSkin.panelSprites = sprites;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_12_0 = var3_ref;
-          stackIn_12_1 = new StringBuilder().append("rd.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException panelException) {
+          caughtPanelFailure = panelException;
+          panelFailure = caughtPanelFailure;
+          failureBeforeContext = panelFailure;
+          failureContextBuilder = new StringBuilder().append("rd.C(").append(methodGuard).append(',');
+          if (sprites == null) {
+            spritesDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            spritesDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) failureContextBuilder).append(spritesDescription).append(')').toString());
         }
     }
 
-    private final void a(boolean param0, StatefulWidgetRenderer param1, boolean param2) {
-        int var4_int = 0;
-        WidgetSkinState dupTemp$0 = null;
-        WidgetSkinState stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        WidgetSkinState stackIn_9_2 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        WidgetSkinState var5 = null;
-        WidgetSkinState var6 = null;
-        int var7 = 0;
-        var7 = Geoblox.clientControlFlowFlag;
+    private final void copyStyleAndSkinsTo(boolean baseStyleGuard, StatefulWidgetRenderer targetRenderer, boolean copySkinProperties) {
+        int stateIndex = 0;
+        WidgetSkinState newTargetSkin = null;
+        WidgetSkinState sourceForCopy = null;
+        int copyGuard = 0;
+        WidgetSkinState targetForCopy = null;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String targetDescription = null;
+        RuntimeException caughtCopyFailure = null;
+        RuntimeException copyFailure = null;
+        WidgetSkinState sourceSkin = null;
+        WidgetSkinState existingTargetSkin = null;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          super.copyStyleTo(param1, param0);
-          if (param2) {
-            for (var4_int = 0; 6 > var4_int; var4_int++) {
-              var5 = this.stateSkins[var4_int];
-              if (var5 == null) {
-                param1.stateSkins[var4_int] = null;
+          super.copyStyleTo(targetRenderer, baseStyleGuard);
+          if (copySkinProperties) {
+            for (stateIndex = 0; 6 > stateIndex; stateIndex++) {
+              sourceSkin = this.stateSkins[stateIndex];
+              if (sourceSkin == null) {
+                targetRenderer.stateSkins[stateIndex] = null;
               } else {
-                var6 = param1.stateSkins[var4_int];
-                stackIn_8_0 = var5;
-                stackIn_8_1 = 2;
-                if (var6 == null) {
-                  dupTemp$0 = new WidgetSkinState();
-                  param1.stateSkins[var4_int] = dupTemp$0;
-                  stackIn_9_2 = dupTemp$0;
+                existingTargetSkin = targetRenderer.stateSkins[stateIndex];
+                sourceForCopy = sourceSkin;
+                copyGuard = 2;
+                if (existingTargetSkin == null) {
+                  newTargetSkin = new WidgetSkinState();
+                  targetRenderer.stateSkins[stateIndex] = newTargetSkin;
+                  targetForCopy = newTargetSkin;
                 } else {
-                  stackIn_9_2 = var6;
+                  targetForCopy = existingTargetSkin;
                 }
-                ((WidgetSkinState) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
+                ((WidgetSkinState) (Object) sourceForCopy).copyPropertiesTo(copyGuard, targetForCopy);
               }
             }
             return;
           }
-          ArrayOperations.copyReferences(this.stateSkins, 0, param1.stateSkins, 0, 6);
+          ArrayOperations.copyReferences(this.stateSkins, 0, targetRenderer.stateSkins, 0, 6);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("rd.DA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_16_2 = "null";
+        } catch (java.lang.RuntimeException copyException) {
+          caughtCopyFailure = copyException;
+          copyFailure = caughtCopyFailure;
+          failureBeforeContext = copyFailure;
+          failureContextBuilder = new StringBuilder().append("rd.DA(").append(baseStyleGuard).append(',');
+          if (targetRenderer == null) {
+            targetDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            targetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) failureContextBuilder).append(targetDescription).append(',').append(copySkinProperties).append(')').toString());
         }
     }
 
-    final void a(int param0, Sprite param1) {
-        int var4 = 0;
-        WidgetSkinState[] var3 = null;
-        WidgetSkinState var5 = null;
-        int var6 = 0;
-        WidgetSkinState[] var7 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var6 = Geoblox.clientControlFlowFlag;
+    final void setIconOnExistingStates(int firstStateIndex, Sprite icon) {
+        int stateIndex = 0;
+        WidgetSkinState[] skinsAlias = null;
+        WidgetSkinState stateSkin = null;
+        int clientControlFlowSnapshot = 0;
+        WidgetSkinState[] skinsSnapshot = null;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String iconDescription = null;
+        RuntimeException caughtIconFailure = null;
+        RuntimeException iconFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var7 = this.stateSkins;
-          var3 = var7;
-          for (var4 = param0; var4 < var7.length; var4++) {
-            var5 = var7[var4];
-            if (var5 != null) {
-              var5.icon = param1;
+          skinsSnapshot = this.stateSkins;
+          skinsAlias = skinsSnapshot;
+          for (stateIndex = firstStateIndex; stateIndex < skinsSnapshot.length; stateIndex++) {
+            stateSkin = skinsSnapshot[stateIndex];
+            if (stateSkin != null) {
+              stateSkin.icon = icon;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("rd.CA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException iconException) {
+          caughtIconFailure = iconException;
+          iconFailure = caughtIconFailure;
+          failureBeforeContext = iconFailure;
+          failureContextBuilder = new StringBuilder().append("rd.CA(").append(firstStateIndex).append(',');
+          if (icon == null) {
+            iconDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            iconDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) failureContextBuilder).append(iconDescription).append(')').toString());
         }
     }
 
-    final static void c(int param0) {
-        if (param0 != 520) {
-            String var2 = (String) null;
-            StatefulWidgetRenderer.a(38, (String) null);
+    final static void showAccountProgressDialog(int methodGuard) {
+        if (methodGuard != 520) {
+            String unusedNullLoginText = (String) null;
+            StatefulWidgetRenderer.setOptionalLoginText(38, (String) null);
         }
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
         if (!(null != SecondaryNodeHashTable.accountProgressDialog)) {
@@ -162,12 +162,12 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
     }
 
-    final static void b(int param0) {
+    final static void initializePunctuationKeyCodes(int backquoteInternalCode) {
         ResizableDialog.awtKeyCodeToInternalCode[45] = 26;
         ResizableDialog.awtKeyCodeToInternalCode[44] = 71;
         ResizableDialog.awtKeyCodeToInternalCode[520] = 59;
         ResizableDialog.awtKeyCodeToInternalCode[222] = 58;
-        ResizableDialog.awtKeyCodeToInternalCode[192] = param0;
+        ResizableDialog.awtKeyCodeToInternalCode[192] = backquoteInternalCode;
         ResizableDialog.awtKeyCodeToInternalCode[46] = 72;
         ResizableDialog.awtKeyCodeToInternalCode[47] = 73;
         ResizableDialog.awtKeyCodeToInternalCode[92] = 74;
@@ -180,180 +180,180 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
     public StatefulWidgetRenderer() {
         this.stateSkins = new WidgetSkinState[6];
         this.workingSkin = new WidgetSkinState();
-        WidgetSkinState dupTemp$0 = new WidgetSkinState();
-        this.stateSkins[0] = dupTemp$0;
-        WidgetSkinState var1 = dupTemp$0;
-        var1.a((byte) -3);
+        WidgetSkinState newBaseSkin = new WidgetSkinState();
+        this.stateSkins[0] = newBaseSkin;
+        WidgetSkinState baseSkin = newBaseSkin;
+        baseSkin.resetDrawingProperties((byte) -3);
     }
 
-    public static void a(byte param0) {
-        int var1 = -71 / ((32 - param0) / 50);
-        field_r = null;
+    public static void releaseSharedResources(byte methodGuard) {
+        int guardArithmetic = -71 / ((32 - methodGuard) / 50);
+        textTemplateDefinitions = null;
         byteArrayPool5000 = (byte[][]) null;
-        field_w = null;
+        emailLocalPartCharacters = null;
     }
 
-    final void a(Sprite[] param0, int param1, byte param2) {
-        int var4_int = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
+    final void setStatePanelSprites(Sprite[] sprites, int stateIndex, byte methodGuard) {
+        int stateIndexSnapshot = 0;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String spritesDescription = null;
+        RuntimeException caughtPanelFailure = null;
+        RuntimeException panelFailure = null;
         try {
-          var4_int = param1;
-          if (this.stateSkins[var4_int] == null) {
-            this.stateSkins[var4_int] = new WidgetSkinState();
+          stateIndexSnapshot = stateIndex;
+          if (this.stateSkins[stateIndexSnapshot] == null) {
+            this.stateSkins[stateIndexSnapshot] = new WidgetSkinState();
           }
-          this.stateSkins[param1].panelSprites = param0;
-          if (param2 <= 38) {
-            field_r = (TextTemplateDefinitionLoader) null;
+          this.stateSkins[stateIndex].panelSprites = sprites;
+          if (methodGuard <= 38) {
+            textTemplateDefinitions = (TextTemplateDefinitionLoader) null;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("rd.GA(");
-          if (param0 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException panelException) {
+          caughtPanelFailure = panelException;
+          panelFailure = caughtPanelFailure;
+          failureBeforeContext = panelFailure;
+          failureContextBuilder = new StringBuilder().append("rd.GA(");
+          if (sprites == null) {
+            spritesDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            spritesDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) failureContextBuilder).append(spritesDescription).append(',').append(stateIndex).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        UiWidget stackIn_3_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        WidgetSkinState var7 = null;
-        WidgetSkinState var9 = null;
-        ButtonWidget var10 = null;
-        WidgetSkinState var11 = null;
-        WidgetSkinState var12 = null;
-        WidgetSkinState var13 = null;
-        WidgetSkinState var14 = null;
+        UiWidget buttonWidgetBeforeCast = null;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtRenderFailure = null;
+        RuntimeException renderFailure = null;
+        WidgetSkinState baseSkin = null;
+        WidgetSkinState hoverSkin = null;
+        ButtonWidget buttonWidget = null;
+        WidgetSkinState activeSkin = null;
+        WidgetSkinState pressedSkin = null;
+        WidgetSkinState focusSkin = null;
+        WidgetSkinState disabledSkin = null;
         try {
           if (!(widget instanceof ButtonWidget)) {
-            stackIn_3_0 = null;
+            buttonWidgetBeforeCast = null;
           } else {
-            stackIn_3_0 = (UiWidget) (widget);
+            buttonWidgetBeforeCast = (UiWidget) (widget);
           }
-          var10 = (ButtonWidget) ((Object) stackIn_3_0);
+          buttonWidget = (ButtonWidget) ((Object) buttonWidgetBeforeCast);
           PasswordWidgetRenderer.pushWidgetClip(widget.widgetY + parentY, widget.widgetX + parentX, -14045, widget.widgetHeight + (parentY + widget.widgetY), widget.widgetWidth + (parentX + widget.widgetX));
-          if (var10 != null) {
-            widgetEnabled = widgetEnabled & var10.enabled;
+          if (buttonWidget != null) {
+            widgetEnabled = widgetEnabled & buttonWidget.enabled;
           }
-          var7 = this.stateSkins[0];
+          baseSkin = this.stateSkins[0];
           if (methodGuard >= -5) {
             byteArrayPool5000 = (byte[][]) null;
           }
-          this.workingSkin.a((byte) -28);
-          var7.a(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
-          if (var10 != null) {
-            if (var10.active) {
-              var11 = this.stateSkins[1];
-              if (var11 != null) {
-                var11.a(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+          this.workingSkin.resetDrawingProperties((byte) -28);
+          baseSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+          if (buttonWidget != null) {
+            if (buttonWidget.active) {
+              activeSkin = this.stateSkins[1];
+              if (activeSkin != null) {
+                activeSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
               }
             }
-            if (var10.pointerInside) {
-              var12 = this.stateSkins[3];
-              if ((var10.pressedPointerButton != 0) &&
-                  (var12 != null)) {
-                var12.a(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+            if (buttonWidget.pointerInside) {
+              pressedSkin = this.stateSkins[3];
+              if ((buttonWidget.pressedPointerButton != 0) &&
+                  (pressedSkin != null)) {
+                pressedSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
               } else {
-                var9 = this.stateSkins[2];
-                if (var9 != null) {
-                  var9.a(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+                hoverSkin = this.stateSkins[2];
+                if (hoverSkin != null) {
+                  hoverSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
                 }
               }
             }
           }
           if (widget.hasKeyboardFocus((byte) 54)) {
-            var13 = this.stateSkins[5];
-            if (var13 != null) {
-              var13.a(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+            focusSkin = this.stateSkins[5];
+            if (focusSkin != null) {
+              focusSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
             }
           }
           if (!widgetEnabled) {
-            var14 = this.stateSkins[4];
-            if (var14 != null) {
-              var14.a(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+            disabledSkin = this.stateSkins[4];
+            if (disabledSkin != null) {
+              disabledSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
             }
           }
-          this.workingSkin.a((StatefulWidgetRenderer) (this), parentX, parentY, widget, 0);
+          this.workingSkin.drawSkin((StatefulWidgetRenderer) (this), parentX, parentY, widget, 0);
           RasterTargetRestoreSupport.restoreRasterTarget(true);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_31_0 = var6;
-          stackIn_31_1 = new StringBuilder().append("rd.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+        } catch (java.lang.RuntimeException renderException) {
+          caughtRenderFailure = renderException;
+          renderFailure = caughtRenderFailure;
+          failureBeforeContext = renderFailure;
+          failureContextBuilder = new StringBuilder().append("rd.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
           if (widget == null) {
-            stackIn_32_2 = "null";
+            widgetDescription = "null";
           } else {
-            stackIn_32_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) failureContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    final static void a(int param0, String param1) {
-        if (param0 > -116) {
+    final static void setOptionalLoginText(int methodGuard, String text) {
+        if (methodGuard > -116) {
             return;
         }
         try {
-            GameSoundResources.optionalLoginText = param1;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "rd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            GameSoundResources.optionalLoginText = text;
+        } catch (RuntimeException loginTextFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginTextFailure), "rd.FA(" + methodGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
-    StatefulWidgetRenderer(StatefulWidgetRenderer param0, boolean param1) {
+    StatefulWidgetRenderer(StatefulWidgetRenderer sourceRenderer, boolean copySkinProperties) {
         this();
         try {
-            param0.a(true, (StatefulWidgetRenderer) (this), param1);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            sourceRenderer.copyStyleAndSkinsTo(true, (StatefulWidgetRenderer) (this), copySkinProperties);
+        } catch (RuntimeException rendererConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "rd.<init>(" + (sourceRenderer != null ? "{...}" : "null") + ',' + copySkinProperties + ')');
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static Sprite[] loadSpritesWithDecodedAlpha(int groupId, int methodGuard, int fileId, ResourceArchive archive) {
+        RuntimeException spriteLoadFailure = null;
+        RuntimeException failureBeforeContext = null;
+        StringBuilder failureContextBuilder = null;
+        String archiveDescription = null;
+        RuntimeException caughtLoadFailure = null;
         try {
-          if (param1 >= -61) {
+          if (methodGuard >= -61) {
             byteArrayPool5000 = (byte[][]) null;
           }
-          if (SpawnQuotaSupport.decodeSpritesFromArchive(param2, param0, 114, param3)) {
+          if (SpawnQuotaSupport.decodeSpritesFromArchive(fileId, groupId, 114, archive)) {
             return SpriteConstructionSupport.buildSpritesWithDecodedAlpha(104);
           }
           return null;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("rd.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException loadException) {
+          caughtLoadFailure = loadException;
+          spriteLoadFailure = caughtLoadFailure;
+          failureBeforeContext = spriteLoadFailure;
+          failureContextBuilder = new StringBuilder().append("rd.EA(").append(groupId).append(',').append(methodGuard).append(',').append(fileId).append(',');
+          if (archive == null) {
+            archiveDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            archiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureBeforeContext), ((StringBuilder) (Object) failureContextBuilder).append(archiveDescription).append(')').toString());
         }
     }
 
     static {
         byteArrayPool5000 = new byte[250][];
-        field_w = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
+        emailLocalPartCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

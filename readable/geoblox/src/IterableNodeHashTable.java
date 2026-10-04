@@ -38,7 +38,7 @@ final class IterableNodeHashTable implements Iterable {
             TextWidgetRenderer.unreadTicketMessage = NameCharacterSupport.joinTextParts(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.unreadTicketMessage), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }
           Geoblox.activeMessageDialog.dismissDialog((byte) -104);
-          StatefulWidgetRenderer.c(520);
+          StatefulWidgetRenderer.showAccountProgressDialog(520);
         }
     }
 

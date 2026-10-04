@@ -87,7 +87,7 @@ final class LogoPreparationSupport {
         }
         textTemplateId = packet.readUnsignedShortBE(true);
         try {
-          textTemplate = StatefulWidgetRenderer.field_r.getDefinition((byte) -14, textTemplateId);
+          textTemplate = StatefulWidgetRenderer.textTemplateDefinitions.getDefinition((byte) -14, textTemplateId);
           RankedListQuery.receivedRecordText = textTemplate.summarizeLiteralSegments((byte) -69);
           if (!AvatarFeedbackSupport.receivedRecordDisplayName.equals(SecondaryDeque.receivedSessionName)) {
             referencedTemplateIdsSnapshot = textTemplate.referencedTemplateIds;

@@ -171,7 +171,7 @@ class ButtonWidget extends UiWidget {
     }
 
     final static void requestJustPlay(int methodGuard) {
-        StatefulWidgetRenderer.c(520);
+        StatefulWidgetRenderer.showAccountProgressDialog(520);
         MidiNote.setPendingLoginUiAction(4, false);
         if (methodGuard != 83) {
             ButtonWidget.releaseStaticReferences((byte) -65);

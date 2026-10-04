@@ -40,7 +40,7 @@ final class DequeCursor {
           }
           var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
           if (11 > CachedTextLayout.introFaceFrameIndex) {
-            WidgetSkinState.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.introTintRedDelta) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
+            WidgetSkinState.introFaceModulationRgb = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.introTintRedDelta) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
           }
           var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
           var3 = MatchingTextValidator.field_j << 2;
