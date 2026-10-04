@@ -24,7 +24,7 @@ final class TextTemplateDefinitionLoader {
             if ((encodedDefinition != null)) {
                 definition.decode(0, new ByteArrayBuffer(encodedDefinition));
             }
-            if (!(templateId < 32768)) {
+            if ((templateId >= 32768)) {
                 definition.markAlternateReferences((byte) 119);
             }
             this.definitionsCache.put(-126, (long)templateId, definition);

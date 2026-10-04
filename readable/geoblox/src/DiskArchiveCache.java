@@ -212,7 +212,7 @@ final class DiskArchiveCache {
                     this.indexFile.seek(methodGuard - 228, (long)(entryId * 6));
                     this.indexFile.readFully(TextInputWidget.diskSectorBuffer, 6, 0, 9868);
                     sectorNumber = (TextInputWidget.diskSectorBuffer[5] & 255) + (((255 & TextInputWidget.diskSectorBuffer[4]) << 8) + ((255 & TextInputWidget.diskSectorBuffer[3]) << 16));
-                    if (((!(sectorNumber > 0)) ||
+                    if ((((sectorNumber <= 0)) ||
                         (!(this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber)))) {
                       return false;
                     }

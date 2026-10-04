@@ -238,7 +238,7 @@ final class BoardReconciliationSupport {
                   break;
                 }
                 visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
-                while (!(1000 <= visitedResetIndexThenKindFourCount)) {
+                while ((1000 > visitedResetIndexThenKindFourCount)) {
                   PacketBuffer.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
                   visitedResetIndexThenKindFourCount++;
                   if (clientControlSnapshot != 0) {

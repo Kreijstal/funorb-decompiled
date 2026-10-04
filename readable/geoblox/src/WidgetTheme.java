@@ -189,7 +189,7 @@ final class WidgetTheme {
           textWidth = this.tooltipFont.measureTextWidth(text);
           textHeight = this.tooltipFont.maxDescent + this.tooltipFont.maxAscent;
           lineCount = 1;
-          if (((!(quarterRasterWidth >= textWidth)) ||
+          if ((((quarterRasterWidth < textWidth)) ||
               (-1 != text.indexOf("<br>")))) {
             if (FadingDialog.wrappedTooltipLines == null) {
               FadingDialog.wrappedTooltipLines = new String[16];

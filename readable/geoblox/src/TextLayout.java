@@ -42,7 +42,7 @@ abstract class TextLayout {
         if (null != this.lines) {
           lines = this.lines;
           lineIndex = 0;
-          while (!(lines.length <= lineIndex)) {
+          while ((lines.length > lineIndex)) {
             line = lines[lineIndex];
             if (line == null) {
               lineIndex++;

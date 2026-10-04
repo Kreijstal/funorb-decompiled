@@ -387,7 +387,7 @@ final class BufferedRandomAccessFile {
     }
 
     final void seek(int methodGuard, long position) throws IOException {
-        if (!(position >= 0L)) {
+        if ((position < 0L)) {
             throw new IOException();
         }
         int unusedSeekGuardQuotient = -65 / ((-57 - methodGuard) / 37);

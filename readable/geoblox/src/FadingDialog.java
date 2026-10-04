@@ -39,7 +39,7 @@ abstract class FadingDialog extends WidgetContainer {
     boolean advanceDialogAnimation(int methodGuard) {
         int targetOpacity = this.getTargetOpacity(-75);
         int opacityDelta = -this.dialogOpacity + targetOpacity;
-        if (!(~opacityDelta >= methodGuard)) {
+        if ((~opacityDelta < methodGuard)) {
             this.dialogOpacity = this.dialogOpacity + (opacityDelta + 8 - 1) / 8;
         }
         if (opacityDelta < 0) {

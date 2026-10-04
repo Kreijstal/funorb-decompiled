@@ -471,7 +471,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void resetChannelControllers(byte methodGuard, int channelIndex) {
-        if (!(channelIndex >= 0)) {
+        if ((channelIndex < 0)) {
             for (channelIndex = 0; channelIndex < 16; channelIndex++) {
                 this.resetChannelControllers((byte) -22, channelIndex);
             }
@@ -560,7 +560,7 @@ final class MidiPcmStream extends PcmStream {
             reflectedLoopLength = -note.pcmSample.loopStart + sampleLengthOrFixedEnd + sampleLengthOrFixedEnd;
             sampleLengthOrFixedEnd = sampleLengthOrFixedEnd << 8;
             sampleOffsetFixed = (int)((long)reflectedLoopLength * (long)this.channelSampleOffsets[note.channelIndex] >> 6);
-            if (!(sampleLengthOrFixedEnd > sampleOffsetFixed)) {
+            if ((sampleLengthOrFixedEnd <= sampleOffsetFixed)) {
               note.sampleStream.setReversePlayback(true);
               sampleOffsetFixed = -sampleOffsetFixed + (sampleLengthOrFixedEnd + sampleLengthOrFixedEnd) - 1;
             }
@@ -902,7 +902,7 @@ final class MidiPcmStream extends PcmStream {
         MidiNote note;
         note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard - 100));
         while (note != null) {
-          if (((!(channelIndex >= 0)) ||
+          if ((((channelIndex < 0)) ||
                 (channelIndex == note.channelIndex))) {
             if (null != note.sampleStream) {
               note.sampleStream.fadeOutAndUnlink(AudioOutput.sampleRateHz / 100);

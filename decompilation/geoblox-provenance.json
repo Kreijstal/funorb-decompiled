@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "aceab38152f724312282be203fce730890a1355e",
+      "commit": "45cb2e35332e96f23aed0bfb464373595e9ff7a7",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "4f46df12af389a0faed2e22e01acbd4ec1c08940f347654c442aaa8d4dc1a495",
-        "reproduce": "git archive --format=tar aceab38152f724312282be203fce730890a1355e | sha256sum",
+        "sha256": "1d6b4d1eb617d14b7b91438d708a7bbe152aa0faaa5c222f1c94d82ec2a1aad5",
+        "reproduce": "git archive --format=tar 45cb2e35332e96f23aed0bfb464373595e9ff7a7 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "ad70fc92838933a136145972c232f2878c8f9b3583651f008c5aeed6d6abfaa0",
-  "previousSourceTreeSha256": "92ec78286173a772998ce79819293b7c1881f3f9a03d22e037e1442d30e709f1",
-  "changedJavaFiles": 103,
+  "sourceTreeSha256": "c1b73f2376fdaee1e3f7113a088f6186e39536bbd75827b69585b46dd3b6087e",
+  "previousSourceTreeSha256": "ad70fc92838933a136145972c232f2878c8f9b3583651f008c5aeed6d6abfaa0",
+  "changedJavaFiles": 25,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "5e98186b81c96c7ad596d52fb21cea6cdff6c133",
+    "commit": "aaa886bfc71707a5ffc129ddf09dd053c05f8f41",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "af06e9f8bad3dcac057c0250b6bfc279e3e4e53557aba5e4e23a75ca49977763"
+      "sha256": "4c991fc9f47dbed9125da810dcee45c6b6721e7ba54e0af91a0eb2bafc7506a7"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "8ed907bc8a2ba9140347c568b3abc745c7f27621531eab9fc1cb034ed6dab87f",
+    "outputTreeSha256": "3bb731dfc426447a666b5b1b89383798129b91263f0852a3fb23cb6c5e607308",
     "files": 303,
     "rules": 18363,
     "identifierEdits": 117478,
@@ -3306,7 +3306,7 @@
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 176,
+      "version": 177,
       "rulesAdded": 0,
       "rulesRefined": 0,
       "previousRules": 18363,
@@ -3317,7 +3317,7 @@
       "remainingOpaqueLoopLabels": 36,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 176
+    "structuralPass": 177
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -8553,5 +8553,145 @@
     "previousNativeGameplayAndResultHelperPinsReverified": true,
     "sourceWorkflowCommit": "5e98186b81c96c7ad596d52fb21cea6cdff6c133",
     "sourceProofWorkflowCommit": "5e98186b81c96c7ad596d52fb21cea6cdff6c133"
+  },
+  "integralPredicateNegationRecovery": {
+    "version": 177,
+    "predicateNegations": true,
+    "changedJavaFiles": 25,
+    "changedMethodBodies": 32,
+    "counts": {
+      "predicatesSimplified": 56,
+      "doubleNegations": 0,
+      "equalityComplements": 0,
+      "deMorganOperators": 0,
+      "booleanLiterals": 0,
+      "relationalComplements": 56
+    },
+    "sourceLinesBefore": 76187,
+    "sourceLinesAfter": 76187,
+    "nativeComparisons": 1162350,
+    "independentNativeOracleCases": 1162350,
+    "nativeContextVariants": 13,
+    "genericFocusedTestGroupsPassed": 9,
+    "genericRegressionTestGroupsPassed": 96,
+    "genericRegressionTestGroupsSkipped": 1,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestSha256": "8095110019c3c79c78a32a191a7b24f5fdc0edd6f8e6fbafd7680da3248f7834",
+    "scope": "Generic scoped primitive integral relational comparisons in Boolean control conditions. JDK independently attributes the exact primitive type of both operands for all56 changed operators; float/unknown/boxed operands stay negated unless explicitly cast. Operand bytes and order, scopes, guards, all declarations/references/labels, fixed bytecode and naming/workflow/stub/native pins remain. Complete303-source byte/per-occurrence compiler proof and independent generic native oracles; no whole renderer/game/assets/server/browser/phone or heap/presented-FPS acceptance claim.",
+    "previousSourceCommit": "4809b82b345e4c42008cafbf0c003c294e81bc91",
+    "sourceCommit": "8bf34bd143f2903024b8b4b9037a532ddb9b52d2",
+    "previousSourceTreeSha256": "ad70fc92838933a136145972c232f2878c8f9b3583651f008c5aeed6d6abfaa0",
+    "sourceTreeSha256": "c1b73f2376fdaee1e3f7113a088f6186e39536bbd75827b69585b46dd3b6087e",
+    "javaToolsCommit": "45cb2e35332e96f23aed0bfb464373595e9ff7a7",
+    "sourceArchiveSha256": "1d6b4d1eb617d14b7b91438d708a7bbe152aa0faaa5c222f1c94d82ec2a1aad5",
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117329,
+    "sourceReferenceOccurrencesAfter": 117329,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 245,
+    "labelDeclarationsAfter": 245,
+    "labelBindingsBefore": 811,
+    "labelBindingsAfter": 811,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 320,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 338,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 630,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 331,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 376,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "methodBodiesAfter": 2080,
+    "largeMethodBodiesAfter": 20,
+    "largeMethodBodiesWithPlainBlockLabelsAfter": 6,
+    "remainingOpaqueFields": 57,
+    "remainingSingleLetterMethods": 0,
+    "remainingOpaqueLabels": 73,
+    "wholeGameEquivalenceVerified": false,
+    "publicationTestGroupsPassed": 27,
+    "completeCorpusExpectedTokensVerified": true,
+    "exactExpectedSourceBytesVerified": true,
+    "perOccurrenceJavaAndLabelBindingsPreserved": true,
+    "previousNativeGameplayAndResultHelperPinsReverified": true,
+    "integralPredicates": true,
+    "independentlyAttributedIntegralComparisons": 56,
+    "nativeIntegralOracleCases": 453600,
+    "nativeBooleanOracleCases": 708750,
+    "sourceWorkflowCommit": "aaa886bfc71707a5ffc129ddf09dd053c05f8f41",
+    "sourceProofWorkflowCommit": "aaa886bfc71707a5ffc129ddf09dd053c05f8f41"
   }
 }

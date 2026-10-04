@@ -1,11 +1,42 @@
 # Readable GeoBlox
 
-The current export has 18,304 guarded naming rules: 302 classes, 2,048 fields,
-1,854 methods, 4,922 parameters, 9,065 local declarations and 113 labels. Both 303-file corpora
+The current export has 18,363 guarded naming rules: 302 classes, 2,048 fields,
+1,854 methods, 4,922 parameters, 9,065 local declarations and 172 labels. Both 303-file corpora
 compile, comparing 136,582 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current Boolean predicate cleanup (pass 176)
+## Current integral predicate cleanup (pass 177)
+
+The generic decompiler can now turn `!(row < limit)` into `row >= limit`
+when both operands are proven primitive integers. Scoped unique declarations,
+actual method parameter types, casts, integer/character literals, integral
+arithmetic and known array access/length supply that proof. Unknown fields,
+call results and boxed values stay opaque; mixed floating comparisons keep
+their negation and NaN behavior. Every operand remains byte exact, preserving
+reads, writes, overflow, exceptions and short-circuit order.
+
+This simplifies 56 comparisons in 32 bodies across 25 files, including board
+reconciliation, sprite/raster helpers, fonts, archives and client utilities.
+No game-specific names or states are hardcoded. An independent JDK attribution
+checks both primitive operand types of every changed relational operator.
+The source-character and compiler-binding audit verifies all 303 expected raw
+files, 19,253 ordinary declarations, 117,329 references, 388 override pairs,
+245 labels and 811 label records. All 18,363 complete naming rules survive.
+The committed source archive reproduces all sources and unchanged diagnostics;
+the readable export and dictionary reversal are byte exact.
+
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/predicateNegationRecovery.test.js test/cfrBranchMergeRegressions.test.js test/javaAstEmitterLoopExits.test.js test/javaAstEmitterTrailingLoops.test.js test/scalarIfDispatchRecovery.test.js`
+passes 105 tests with one existing optional skip. Nine focused groups include
+708,750 Boolean-context and 453,600 integral native ordered-oracle cases. They
+cover int overflow/division, long shifts, NaN/infinity casts, array null/bounds
+failures, narrowing casts, throwing callbacks, finally overrides and monitors.
+All 27 publication tests pass; scoped gameplay/result-helper trace pins remain.
+
+Eight large labeled bodies, 73 opaque labels and 57 opaque fields remain.
+This pass clarifies predicates; it does not finish their structural recovery.
+Whole-game/server/browser/phone and heap/presented-FPS acceptance are unverified.
+
+## Previous Boolean predicate cleanup (pass 176)
 
 A generic java-tools pass now simplifies conditions introduced by control-flow
 recovery. For example, !((5 != screenId) && (7 != screenId)) becomes
@@ -2154,7 +2185,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/5e98186b81c96c7ad596d52fb21cea6cdff6c133/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/5e98186b81c96c7ad596d52fb21cea6cdff6c133/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/aaa886bfc71707a5ffc129ddf09dd053c05f8f41/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/aaa886bfc71707a5ffc129ddf09dd053c05f8f41/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -2412,32 +2443,32 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/5e98186b81c96c7ad596d52fb21cea6cdff6c133/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/aaa886bfc71707a5ffc129ddf09dd053c05f8f41/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/5e98186b81c96c7ad596d52fb21cea6cdff6c133/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/aaa886bfc71707a5ffc129ddf09dd053c05f8f41/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `5e98186b81c96c7ad596d52fb21cea6cdff6c133`; the
+The current Deko workflow/manifest commit is `aaa886bfc71707a5ffc129ddf09dd053c05f8f41`; the
 manifest SHA-256 is `af06e9f8bad3dcac057c0250b6bfc279e3e4e53557aba5e4e23a75ca49977763`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`4809b82b345e4c42008cafbf0c003c294e81bc91`. It comes from java-tools
-`aceab38152f724312282be203fce730890a1355e` and Deko
+`8bf34bd143f2903024b8b4b9037a532ddb9b52d2`. It comes from java-tools
+`45cb2e35332e96f23aed0bfb464373595e9ff7a7` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `7d339941e604dd19c040490e33a8fd5de0938a0b` in Deko; its selected generic-source
 archive SHA-256 is `1d0657a4052656a747abedab1cf491ebb97140bd68ad9389e25763443ab158a9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`4f46df12af389a0faed2e22e01acbd4ec1c08940f347654c442aaa8d4dc1a495`:
+`1d6b4d1eb617d14b7b91438d708a7bbe152aa0faaa5c222f1c94d82ec2a1aad5`:
 
 ```sh
-git archive --format=tar aceab38152f724312282be203fce730890a1355e | sha256sum
+git archive --format=tar 45cb2e35332e96f23aed0bfb464373595e9ff7a7 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is

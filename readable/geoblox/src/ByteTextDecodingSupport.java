@@ -5,7 +5,7 @@ final class ByteTextDecodingSupport {
     static int tooltipAnchorX;
 
     final static void sleepMillis(int splitRemainder, long durationMillis) {
-        if (!(durationMillis > 0L)) {
+        if ((durationMillis <= 0L)) {
             return;
         }
         if (durationMillis % 10L == (long)splitRemainder) {

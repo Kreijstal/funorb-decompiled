@@ -32,7 +32,7 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final void startResizeTransition(int targetHeight, int targetWidth, int methodGuard, int durationTicks) {
-        if (!(durationTicks > 0)) {
+        if ((durationTicks <= 0)) {
             this.resizeAndCenter(targetHeight, methodGuard + 5373, targetWidth);
             return;
         }
@@ -437,7 +437,7 @@ abstract class ResizableDialog extends FadingDialog {
           leftEdgeOffset = 0;
           rightEdgeOffset = this.widgetWidth;
           if (bandRowIndex <= 20) {
-            while (!(leftEdgeOffset > 20)) {
+            while ((leftEdgeOffset <= 20)) {
               leftCornerDistanceSquaredOrRightEdgeLimit = (-bandRowIndex + 20) * (-bandRowIndex + 20) + (-leftEdgeOffset + 20) * (20 - leftEdgeOffset);
               if (leftCornerDistanceSquaredOrRightEdgeLimit > 462) {
                 leftEdgeOffset++;

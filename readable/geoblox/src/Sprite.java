@@ -312,7 +312,7 @@ class Sprite extends SpriteState {
               if ((sourceYQ12 >= 0) &&
                   (sourceXQ12 - (this.width << 12) < 0) &&
                   (sourceYQ12 - (this.height << 12) < 0)) {
-                while (!(negativePixelCounter >= 0)) {
+                while ((negativePixelCounter < 0)) {
                   sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
                   if (sampledPixel == 0) {
                     destinationIndex++;

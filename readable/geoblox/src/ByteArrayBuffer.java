@@ -366,10 +366,10 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static byte encodeTextCharacter(char character, boolean returnEncodedByte) {
         int encodedByte;
         L0: {
-          if (((!(0 < character)) ||
-                (!(character < 128))) &&
-              ((!(character >= 160)) ||
-                (!(255 >= character)))) {
+          if ((((0 >= character)) ||
+                ((character >= 128))) &&
+              (((character < 160)) ||
+                ((255 < character)))) {
             if (character == 8364) {
               encodedByte = -128;
               break L0;
@@ -780,7 +780,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             return;
         }
         try {
-            if (!(zeroCharacterIndex < 0)) {
+            if ((zeroCharacterIndex >= 0)) {
                 throw new IllegalArgumentException("");
             }
             prefixByteIndex = this.position;
@@ -814,7 +814,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             return;
         }
         if ((value < 16384) &&
-            (!(value < -16384))) {
+            ((value >= -16384))) {
             this.writeShortBE(49152 + value, 28695);
             return;
         }

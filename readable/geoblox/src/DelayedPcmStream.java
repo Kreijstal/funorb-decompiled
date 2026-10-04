@@ -66,7 +66,7 @@ final class DelayedPcmStream extends PcmStream {
         this.nextNode.previousNode = (IntrusiveNode) ((Object) this.wrappedStream);
         this.previousNode = null;
         this.nextNode = null;
-        if (!(0 >= frameCount)) {
+        if ((0 < frameCount)) {
             this.wrappedStream.skipFrames(frameCount);
         }
     }

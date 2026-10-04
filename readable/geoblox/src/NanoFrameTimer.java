@@ -100,7 +100,7 @@ final class NanoFrameTimer extends FrameTimer {
               selfValueWriteIndex = 0;
               uniqueValueWriteIndex = 0;
               recordCount = packet.readUnsignedByte((byte) 34);
-              if (!(0 >= recordCount)) {
+              if ((0 < recordCount)) {
                 for (recordIndex = 0; recordIndex < recordCount; recordIndex++) {
                   nameTableIndex = packet.readUnsignedByte((byte) 34);
                   primaryName = RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].primaryName;
@@ -192,7 +192,7 @@ final class NanoFrameTimer extends FrameTimer {
             IOException writeFailure = null;
             Throwable caughtWriteFailure = null;
             if (null != SpriteCheckboxRenderer.sessionSocket) {
-              if (((!(keepaliveOpcode >= 0)) ||
+              if ((((keepaliveOpcode < 0)) ||
                   (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage))) {
                 if ((0 == CacheReference.outgoingSessionBuffer.position) &&
                     (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis))) {
@@ -262,7 +262,7 @@ final class NanoFrameTimer extends FrameTimer {
         long elapsedNanos = -this.lastSampleTimeNanos + sampleTimeNanos;
         this.lastSampleTimeNanos = sampleTimeNanos;
         if ((-5000000000L < elapsedNanos) &&
-            (!(5000000000L <= elapsedNanos))) {
+            ((5000000000L > elapsedNanos))) {
             this.intervalSamplesNanos[this.nextSampleIndex] = elapsedNanos;
             if (this.intervalSampleCount < 1) {
                 this.intervalSampleCount = this.intervalSampleCount + 1;

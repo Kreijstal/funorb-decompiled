@@ -114,7 +114,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
                   var12 = var13;
                 }
               }
-              if (!(0 > var12)) {
+              if ((0 <= var12)) {
                 this.handleValues.removeAt(0, var12);
               }
             }
