@@ -641,95 +641,96 @@ final class GameplaySession {
                 this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
                 inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
-                if (inputDerivedModuloIndex == 0) {
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  if (clientControlFlowGuard == 0) {
-                    break negativeRotationAndStateUpdate;
-                  }
-                }
-                if (inputDerivedModuloIndex == 1) {
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  if (clientControlFlowGuard == 0) {
-                    break negativeRotationAndStateUpdate;
-                  }
-                }
-                if (inputDerivedModuloIndex != 2) {
-                  if (3 == inputDerivedModuloIndex) {
+                switch (inputDerivedModuloIndex) {
+                  case 0:
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                    if (clientControlFlowGuard == 0) {
+                      break negativeRotationAndStateUpdate;
+                    }
+                    break;
+                  case 1:
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                    if (clientControlFlowGuard == 0) {
+                      break negativeRotationAndStateUpdate;
+                    }
+                    break;
+                  case 3:
                     ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
                     UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
-                  }
-                  if (4 == inputDerivedModuloIndex) {
+                    break;
+                  case 4:
                     SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
                     DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
-                  }
-                  if (inputDerivedModuloIndex == 5) {
+                    break;
+                  case 5:
                     UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                     SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
-                  }
-                  if (inputDerivedModuloIndex == 6) {
+                    break;
+                  case 6:
                     SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
                     DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAndStateUpdate;
                     }
-                  }
-                  if (inputDerivedModuloIndex != 7) {
+                  default:
                     break negativeRotationAndStateUpdate;
-                  }
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break negativeRotationAndStateUpdate;
-                  }
+                  case 7:
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break negativeRotationAndStateUpdate;
+                    }
+                  case 2:
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                    break;
                 }
-                DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
               }
               negativeRotationAchievementTracking: {
                 inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
-                if (0 == inputDerivedModuloIndex) {
-                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
-                  if (clientControlFlowGuard == 0) {
-                    break negativeRotationAchievementTracking;
-                  }
-                }
-                if (inputDerivedModuloIndex != 1) {
-                  if (inputDerivedModuloIndex != 2) {
-                    if (3 == inputDerivedModuloIndex) {
-                      AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                      if (clientControlFlowGuard == 0) {
-                        break negativeRotationAchievementTracking;
-                      }
-                    }
-                    if (inputDerivedModuloIndex != 4) {
+                switch (inputDerivedModuloIndex) {
+                  case 0:
+                    AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
+                    if (clientControlFlowGuard == 0) {
                       break negativeRotationAchievementTracking;
                     }
+                    break;
+                  case 3:
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break negativeRotationAchievementTracking;
+                    }
+                  default:
+                    break negativeRotationAchievementTracking;
+                  case 4:
                     AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
                     UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       break negativeRotationAchievementTracking;
                     }
-                  }
-                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break negativeRotationAchievementTracking;
-                  }
+                  case 2:
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break negativeRotationAchievementTracking;
+                    }
+                  case 1:
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+                    break;
                 }
-                UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
               }
               if (this.tutorialStepId == 0) {
                 this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
@@ -744,60 +745,59 @@ final class GameplaySession {
                 }
                 positiveRotationTrackingUpdate: {
                   inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.inputAndScoreContextSelectorSeed) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
-                  if (inputDerivedModuloIndex != 0) {
-                    if (1 != inputDerivedModuloIndex) {
-                      if (inputDerivedModuloIndex != 2) {
-                        if (inputDerivedModuloIndex == 3) {
-                          UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                          ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                          if (clientControlFlowGuard == 0) {
-                            break positiveRotationTrackingUpdate;
-                          }
-                        }
-                        if (4 == inputDerivedModuloIndex) {
-                          DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                          SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                          if (clientControlFlowGuard == 0) {
-                            break positiveRotationTrackingUpdate;
-                          }
-                        }
-                        if (5 == inputDerivedModuloIndex) {
-                          UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                          SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                          if (clientControlFlowGuard == 0) {
-                            break positiveRotationTrackingUpdate;
-                          }
-                        }
-                        if (inputDerivedModuloIndex == 6) {
-                          SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                          DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                          if (clientControlFlowGuard == 0) {
-                            break positiveRotationTrackingUpdate;
-                          }
-                        }
-                        if (inputDerivedModuloIndex != 7) {
-                          break positiveRotationTrackingUpdate;
-                        }
-                        UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                        SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                        if (clientControlFlowGuard == 0) {
-                          break positiveRotationTrackingUpdate;
-                        }
+                  switch (inputDerivedModuloIndex) {
+                    case 3:
+                      UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                      ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                      if (clientControlFlowGuard == 0) {
+                        break positiveRotationTrackingUpdate;
                       }
+                      break;
+                    case 4:
+                      DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                      SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                      if (clientControlFlowGuard == 0) {
+                        break positiveRotationTrackingUpdate;
+                      }
+                      break;
+                    case 5:
+                      UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                      SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                      if (clientControlFlowGuard == 0) {
+                        break positiveRotationTrackingUpdate;
+                      }
+                      break;
+                    case 6:
+                      SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                      DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                      if (clientControlFlowGuard == 0) {
+                        break positiveRotationTrackingUpdate;
+                      }
+                    default:
+                      break positiveRotationTrackingUpdate;
+                    case 7:
+                      UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                      SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                      if (clientControlFlowGuard == 0) {
+                        break positiveRotationTrackingUpdate;
+                      }
+                    case 2:
                       DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
                       ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
                       if (clientControlFlowGuard == 0) {
                         break positiveRotationTrackingUpdate;
                       }
-                    }
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                    if (clientControlFlowGuard == 0) {
-                      break positiveRotationTrackingUpdate;
-                    }
+                    case 1:
+                      ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                      UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                      if (clientControlFlowGuard == 0) {
+                        break positiveRotationTrackingUpdate;
+                      }
+                    case 0:
+                      DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                      ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                      break;
                   }
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
                 }
                 inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
                 if (inputDerivedModuloIndex != 0) {

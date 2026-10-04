@@ -17,14 +17,61 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/aa85cc5d0fbd9e37672a5561d4dc335892195782/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9e29f42ee1d555e627e50b187eae98f6e9a6cf74/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 136,607 bindings,
+identities. Both 303-file Java corpora compile and compare 136,582 bindings,
 preserving 388 override relationships.
 
-## Current terminal early-exit loops (pass 173)
+## Current captured-integer switches (pass 174)
+
+Four deeply nested integer classifiers now read as switches: the menu's
+inputDerivedStateUpdate and gameplay's negativeRotationAndStateUpdate,
+negativeRotationAchievementTracking and positiveRotationTrackingUpdate.
+Their selector calculations remain before dispatch. Case actions appear once,
+in their original order; control-flag guards and unusual nonzero-flag fallthrough
+remain explicit. Cases are deliberately not sorted numerically: changing their
+order would change the original shared continuation. Negative/unmatched values
+keep their original default exits. No screen/session phase or server meaning is
+inferred from these tracking-counter branches.
+
+The generic java-tools pass requires a unique captured primitive integer that
+is not written during dispatch. It partitions all integers by their mentioned
+constants and an exhaustive Other class, then proves that each selected path
+is a contiguous action run or exits the existing plain frame. It refuses shared
+work that would need duplication, mutable/boxed/unknown classifiers, declarations,
+inner control frames, ambiguous transfers and oversized trees. Complete protected
+and monitor actions remain whole. There are no GeoBlox class/name branches.
+
+The committed decompiler source reproduces all 303 raw files and unchanged
+zero-failure/fallback/panic diagnostics. Exactly the two update bodies change;
+GameScreen.updateScreen is 320 lines and GameplaySession.updateSession remains
+630. Twenty-nine pure comparisons become four selector reads; their 25 redundant
+primitive reads are the only removed reference occurrences. All selector writes,
+read/unused snapshots, other actions, callbacks, arithmetic, flag reads, exception
+scopes and transfer targets remain. The independent token-origin proof verifies
+19,253 declarations, 117,329 remaining references, 388 overrides, 245 labels and
+811 label records, with no declaration/label ordinal migration.
+
+All 18,304 previous complete naming rules remain exact. The readable export has
+117,478 identifier edits, eleven class-name literal edits and 349 label edits;
+both 303-file corpora compile, reproduce and reverse byte exactly. Six focused
+groups and four existing scalar-dispatch groups pass. Eight native fixtures
+match 20,181 independent cases covering every flag class, case/default selection,
+integer extremes/overflow, nullable and throwing callbacks, return snapshots,
+finally overrides, monitors and ancestor transfers. Loop/emitter regressions
+retain 89 passes and one existing optional skip. All 27 publication tests pass;
+existing gameplay/result-helper probes retain their native/raw/readable trace
+pins within their documented scopes.
+
+Among 2,080 method/constructor bodies, twenty have at least 300 lines; eight
+contain labels and six contain plain block labels. Eight large labeled bodies,
+132 opaque labels and 57 opaque fields remain; no single-letter methods remain.
+Full screen/session update, renderer, audio playback, game/server/browser/phone
+and heap/presented-FPS acceptance remain unverified.
+
+## Previous terminal early-exit loops (pass 173)
 
 Ten loops across nine methods in eight classes now use explicit `do…while`
 conditions: menu keyboard processing, gameplay debug queue drawing, applet

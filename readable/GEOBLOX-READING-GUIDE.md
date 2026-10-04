@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/aa85cc5d0fbd9e37672a5561d4dc335892195782/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9e29f42ee1d555e627e50b187eae98f6e9a6cf74/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 173)
+## Current readability (pass 174)
 
-The export has 18,304 guarded names and 117,503 Java identifier edits, plus 11
+The export has 18,304 guarded names and 117,478 Java identifier edits, plus 11
 class-name literal edits and 349 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,607 bindings, reproduce and
+compile and compare 136,582 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -24,7 +24,54 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current terminal early-exit loops (pass 173)
+## Current captured-integer switches (pass 174)
+
+Four deeply nested integer classifiers now read as switches: the menu's
+inputDerivedStateUpdate and gameplay's negativeRotationAndStateUpdate,
+negativeRotationAchievementTracking and positiveRotationTrackingUpdate.
+Their selector calculations remain before dispatch. Case actions appear once,
+in their original order; control-flag guards and unusual nonzero-flag fallthrough
+remain explicit. Cases are deliberately not sorted numerically: changing their
+order would change the original shared continuation. Negative/unmatched values
+keep their original default exits. No screen/session phase or server meaning is
+inferred from these tracking-counter branches.
+
+The generic java-tools pass requires a unique captured primitive integer that
+is not written during dispatch. It partitions all integers by their mentioned
+constants and an exhaustive Other class, then proves that each selected path
+is a contiguous action run or exits the existing plain frame. It refuses shared
+work that would need duplication, mutable/boxed/unknown classifiers, declarations,
+inner control frames, ambiguous transfers and oversized trees. Complete protected
+and monitor actions remain whole. There are no GeoBlox class/name branches.
+
+The committed decompiler source reproduces all 303 raw files and unchanged
+zero-failure/fallback/panic diagnostics. Exactly the two update bodies change;
+GameScreen.updateScreen is 320 lines and GameplaySession.updateSession remains
+630. Twenty-nine pure comparisons become four selector reads; their 25 redundant
+primitive reads are the only removed reference occurrences. All selector writes,
+read/unused snapshots, other actions, callbacks, arithmetic, flag reads, exception
+scopes and transfer targets remain. The independent token-origin proof verifies
+19,253 declarations, 117,329 remaining references, 388 overrides, 245 labels and
+811 label records, with no declaration/label ordinal migration.
+
+All 18,304 previous complete naming rules remain exact. The readable export has
+117,478 identifier edits, eleven class-name literal edits and 349 label edits;
+both 303-file corpora compile, reproduce and reverse byte exactly. Six focused
+groups and four existing scalar-dispatch groups pass. Eight native fixtures
+match 20,181 independent cases covering every flag class, case/default selection,
+integer extremes/overflow, nullable and throwing callbacks, return snapshots,
+finally overrides, monitors and ancestor transfers. Loop/emitter regressions
+retain 89 passes and one existing optional skip. All 27 publication tests pass;
+existing gameplay/result-helper probes retain their native/raw/readable trace
+pins within their documented scopes.
+
+Among 2,080 method/constructor bodies, twenty have at least 300 lines; eight
+contain labels and six contain plain block labels. Eight large labeled bodies,
+132 opaque labels and 57 opaque fields remain; no single-letter methods remain.
+Full screen/session update, renderer, audio playback, game/server/browser/phone
+and heap/presented-FPS acceptance remain unverified.
+
+## Previous terminal early-exit loops (pass 173)
 
 Ten loops across nine methods in eight classes now use explicit `do…while`
 conditions: menu keyboard processing, gameplay debug queue drawing, applet
