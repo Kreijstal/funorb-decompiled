@@ -32,7 +32,7 @@ abstract class oe extends dd {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (!(param3 > 0)) {
+        if ((param3 <= 0)) {
             this.c(param0, param2 + 5373, param1);
             return;
         }
@@ -437,7 +437,7 @@ abstract class oe extends dd {
           var10 = 0;
           var11 = this.field_r;
           if (var7 <= 20) {
-            while (!(var10 > 20)) {
+            while ((var10 <= 20)) {
               var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
               if (var12 > 462) {
                 var10++;

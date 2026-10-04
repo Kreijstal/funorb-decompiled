@@ -100,7 +100,7 @@ final class cm extends cj {
               var16 = 0;
               var17 = 0;
               var18 = var27.c((byte) 34);
-              if (!(0 >= var18)) {
+              if ((0 < var18)) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.c((byte) 34);
                   var21 = id.field_b[var20].field_d;
@@ -192,7 +192,7 @@ final class cm extends cj {
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
             if (null != oc.field_e) {
-              if (((!(param1 >= 0)) ||
+              if ((((param1 < 0)) ||
                   (pk.field_l == eh.field_b))) {
                 if ((0 == fj.field_q.field_f) &&
                     (~oa.a(-12520) < ~(10000L + v.field_r))) {
@@ -262,7 +262,7 @@ final class cm extends cj {
         long var4 = -this.field_i + var2;
         this.field_i = var2;
         if ((-5000000000L < var4) &&
-            (!(5000000000L <= var4))) {
+            ((5000000000L > var4))) {
             this.field_f[this.field_d] = var4;
             if (this.field_g < 1) {
                 this.field_g = this.field_g + 1;

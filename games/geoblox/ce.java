@@ -62,7 +62,7 @@ final class ce extends qk {
         if (var2 != null) {
           var3 = var2;
           var4 = 0;
-          while (!(var4 >= var3.length)) {
+          while ((var4 < var3.length)) {
             var5 = var3[var4];
             if (var5 == null) {
               var4++;

@@ -212,7 +212,7 @@ final class jh {
                     this.field_c.a(param0 - 228, (long)(param2 * 6));
                     this.field_c.a(dj.field_F, 6, 0, 9868);
                     var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
-                    if (((!(var7_int > 0)) ||
+                    if ((((var7_int <= 0)) ||
                         (!(this.field_d.a((byte) 46) / 520L >= (long)var7_int)))) {
                       return false;
                     }

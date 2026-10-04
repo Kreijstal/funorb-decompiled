@@ -471,7 +471,7 @@ final class kj extends ia {
     }
 
     private final void b(byte param0, int param1) {
-        if (!(param1 >= 0)) {
+        if ((param1 < 0)) {
             for (param1 = 0; param1 < 16; param1++) {
                 this.b((byte) -22, param1);
             }
@@ -560,7 +560,7 @@ final class kj extends ia {
             var6 = -param0.field_i.field_g + var4_int + var4_int;
             var4_int = var4_int << 8;
             var5 = (int)((long)var6 * (long)this.field_u[param0.field_t] >> 6);
-            if (!(var4_int > var5)) {
+            if ((var4_int <= var5)) {
               param0.field_u.b(true);
               var5 = -var5 + (var4_int + var4_int) - 1;
             }
@@ -902,7 +902,7 @@ final class kj extends ia {
         pc var3;
         var3 = (pc) ((Object) this.field_I.field_l.g(param0 - 100));
         while (var3 != null) {
-          if (((!(param1 >= 0)) ||
+          if ((((param1 < 0)) ||
                 (param1 == var3.field_t))) {
             if (null != var3.field_u) {
               var3.field_u.c(qk.field_j / 100);

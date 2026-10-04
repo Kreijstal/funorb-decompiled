@@ -387,7 +387,7 @@ final class sk {
     }
 
     final void a(int param0, long param1) throws IOException {
-        if (!(param1 >= 0L)) {
+        if ((param1 < 0L)) {
             throw new IOException();
         }
         int var4 = -65 / ((-57 - param0) / 37);

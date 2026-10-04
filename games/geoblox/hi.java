@@ -319,10 +319,10 @@ final class hi extends ee implements ta, pl {
           for (var7 = 0; var7 < var6_int; var7++) {
             L1: {
               var8 = param0.charAt(param2 + var7);
-              if (((!(0 < var8)) ||
-                  (!(var8 < 128)))) {
-                if (((!(var8 >= 160)) ||
-                    (!(var8 <= 255)))) {
+              if ((((0 >= var8)) ||
+                  ((var8 >= 128)))) {
+                if ((((var8 < 160)) ||
+                    ((var8 > 255)))) {
                   if (var8 == 8364) {
                     param1[var7 + param4] = (byte)-128;
                     break L1;

@@ -238,7 +238,7 @@ final class kc {
                   break;
                 }
                 var1_int = stackIn_56_0;
-                while (!(1000 <= var1_int)) {
+                while ((1000 > var1_int)) {
                   pk.field_o[var1_int] = false;
                   var1_int++;
                   if (var9 != 0) {

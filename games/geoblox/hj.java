@@ -12,11 +12,11 @@ final class hj {
             param1 = param1 >>> 16;
             var2 += 16;
         }
-        if (!(param1 < 256)) {
+        if ((param1 >= 256)) {
             var2 += 8;
             param1 = param1 >>> 8;
         }
-        if (!(16 > param1)) {
+        if ((16 <= param1)) {
             var2 += 4;
             param1 = param1 >>> 4;
         }
