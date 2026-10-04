@@ -385,7 +385,7 @@ final class DiskArchiveCache {
             ClientScreenExitSupport.gameSoundOutput.b(WhirlpoolHash.field_d);
             PasswordWidgetRenderer.gameMusicStream = param3;
             AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c);
-            EmailValidator.a(SocialListEntry.field_gb, (byte) -67);
+            EmailValidator.updateSoundEffectVolume(SocialListEntry.soundEffectVolume, (byte) -67);
             CacheReference.gameMusicOutput.b(param3);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

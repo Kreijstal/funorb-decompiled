@@ -5,7 +5,7 @@ final class PrefixCodeDecoder {
     static int field_b;
     private int[] decodeTree;
     static IntrusiveDeque pendingFifoAcknowledgements;
-    static IntrusiveDeque field_f;
+    static IntrusiveDeque trackedSoundEffectStreams;
     static int pointerXSnapshot;
     static GameApplet field_d;
 
@@ -291,11 +291,11 @@ final class PrefixCodeDecoder {
         if (param0 > -1) {
             PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) -72);
             pendingFifoAcknowledgements = null;
-            field_f = null;
+            trackedSoundEffectStreams = null;
             return;
         }
         pendingFifoAcknowledgements = null;
-        field_f = null;
+        trackedSoundEffectStreams = null;
     }
 
     final static void advanceMenuAvatarAnimation(byte methodGuard) {
@@ -641,7 +641,7 @@ final class PrefixCodeDecoder {
         field_b = 0;
         pendingFifoAcknowledgements = new IntrusiveDeque();
         pointerXSnapshot = 0;
-        field_f = new IntrusiveDeque();
+        trackedSoundEffectStreams = new IntrusiveDeque();
         field_d = null;
     }
 }

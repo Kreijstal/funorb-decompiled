@@ -3,7 +3,7 @@
  */
 final class ByteArrayPoolSupport {
     static String[] rankedListResponseNames;
-    static String field_e;
+    static String loadingStatusText;
     static String tutorialColourMatchMessage;
     static Sprite fadingDialogScratchSprite;
     static String createPasswordConfirmationTooltipText;
@@ -144,7 +144,7 @@ final class ByteArrayPoolSupport {
     public static void clearBytePoolAndUiResources(byte methodGuard) {
         createPasswordConfirmationTooltipText = null;
         int guardResidue = -119 / ((methodGuard - 49) / 55);
-        field_e = null;
+        loadingStatusText = null;
         fadingDialogScratchSprite = null;
         tutorialColourMatchMessage = null;
         rankedListResponseNames = null;

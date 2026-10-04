@@ -17,7 +17,7 @@ final class AsyncResourceDownloader implements Runnable {
     private PlatformTask field_k;
     private PlatformTask field_f;
     private PlatformTask field_g;
-    static int field_a;
+    static int receivedSocialSettingHigh;
 
     final ByteArrayBuffer b(byte param0) {
         int var2 = 62 / ((param0 - 9) / 53);

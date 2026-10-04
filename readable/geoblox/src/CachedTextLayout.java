@@ -8,7 +8,7 @@ final class CachedTextLayout extends TextLayout {
     private int field_m;
     private BitmapFont field_p;
     private int field_k;
-    static String field_g;
+    static String loadingBootstrapText;
     static Sprite menuForegroundSprite;
     private int field_e;
     private boolean field_d;
@@ -341,7 +341,7 @@ final class CachedTextLayout extends TextLayout {
     }
 
     public static void b(byte param0) {
-        field_g = null;
+        loadingBootstrapText = null;
         menuForegroundSprite = null;
         mouseWheelInput = null;
         int var1 = 78 % ((-20 - param0) / 33);

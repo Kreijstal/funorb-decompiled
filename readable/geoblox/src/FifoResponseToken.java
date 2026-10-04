@@ -4,7 +4,7 @@
 final class FifoResponseToken extends IntrusiveNode {
     static String unpackingMusicText;
     static HighscoreQuery activeHighscoreQuery;
-    static int field_i;
+    static int nextSecondarySocialInsertionIndex;
     static IndexedSprite bakingBackgroundSprite;
 
     final static TextValidationFailure a(String param0, int param1) {

@@ -60,8 +60,8 @@ final class ScorePopup extends IntrusiveNode {
             GzipInflater.field_g = GzipInflater.field_g + (param1.readUnsignedByte((byte) 34) << 7);
             var2_int = param1.readUnsignedByte((byte) 34);
             GzipInflater.field_g = GzipInflater.field_g + (var2_int >> 1);
-            HighscoreNameEntry.field_b = (var2_int & 1) << 16;
-            HighscoreNameEntry.field_b = HighscoreNameEntry.field_b + param1.readUnsignedShortBE(true);
+            HighscoreNameEntry.unusedGuardScratch = (var2_int & 1) << 16;
+            HighscoreNameEntry.unusedGuardScratch = HighscoreNameEntry.unusedGuardScratch + param1.readUnsignedShortBE(true);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "me.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

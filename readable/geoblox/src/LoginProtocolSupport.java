@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginProtocolSupport {
-    static String field_c;
+    static String waitingForBootstrapText;
     static String[] achievementDescriptions;
     static boolean field_a;
 
@@ -183,7 +183,7 @@ final class LoginProtocolSupport {
                 if (ScorePopup.currentPacketOpcode == 7) {
                   ScorePopup.currentPacketOpcode = 3;
                 }
-                AudioService.field_a = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 101);
+                AudioService.sessionResponseText = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 101);
                 TextTemplateArgumentType.field_e = false;
                 failedResponseResult = ScorePopup.currentPacketOpcode;
                 return failedResponseResult;
@@ -191,9 +191,9 @@ final class LoginProtocolSupport {
               if (null == SpriteCheckboxRenderer.sessionSocket) {
                 if (TextTemplateArgumentType.field_e) {
                   if (30000L >= GameGraphicsResources.elapsedSinceSessionActivity((byte) 12)) {
-                    AudioService.field_a = FullscreenFailureReason.loginMessage2Text;
+                    AudioService.sessionResponseText = FullscreenFailureReason.loginMessage2Text;
                   } else {
-                    AudioService.field_a = IntrusiveNode.loginMessage3Text;
+                    AudioService.sessionResponseText = IntrusiveNode.loginMessage3Text;
                   }
                   TextTemplateArgumentType.field_e = false;
                   retryFailureResult = 3;
@@ -242,7 +242,7 @@ final class LoginProtocolSupport {
     }
 
     public static void releaseStaticReferences(int methodGuard) {
-        field_c = null;
+        waitingForBootstrapText = null;
         if (methodGuard != 5366) {
             achievementDescriptions = (String[]) null;
         }

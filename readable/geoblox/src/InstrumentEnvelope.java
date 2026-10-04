@@ -4,7 +4,7 @@
 final class InstrumentEnvelope {
     int vibratoPhaseStep;
     static int[][] menuActionIds;
-    static String[] field_k;
+    static String[] connectingToUpdateServerTextByLanguage;
     int vibratoDepth;
     int decayRate;
     int releaseEnvelopeKeyScaling;
@@ -27,7 +27,7 @@ final class InstrumentEnvelope {
 
     final static boolean b(int param0) {
         if (param0 != 13) {
-            field_k = (String[]) null;
+            connectingToUpdateServerTextByLanguage = (String[]) null;
             if (SpriteCheckboxRenderer.sessionSocket == null) {
                 return false;
             }
@@ -47,7 +47,7 @@ final class InstrumentEnvelope {
 
     public static void a(int param0) {
         menuActionIds = (int[][]) null;
-        field_k = null;
+        connectingToUpdateServerTextByLanguage = null;
         if (param0 != 17348) {
             InstrumentEnvelope.b(-123);
         }
@@ -64,6 +64,6 @@ final class InstrumentEnvelope {
         menuActionIds[5] = new int[]{5};
         menuActionIds[6] = new int[]{2, 5};
         menuActionIds[0] = new int[]{0, 3, 8, 9, 4, 2, 10, 7};
-        field_k = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
+        connectingToUpdateServerTextByLanguage = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }
 }

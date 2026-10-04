@@ -56,28 +56,28 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
     }
 
-    final static void c(int param0, int param1) {
-        AsyncResourceDownloader.field_a = param0 >> 4 & 3;
-        if (!(AsyncResourceDownloader.field_a <= 2)) {
-            AsyncResourceDownloader.field_a = 2;
+    final static void decodeSocialSettingBits(int packedSettings, int methodGuard) {
+        AsyncResourceDownloader.receivedSocialSettingHigh = packedSettings >> 4 & 3;
+        if (!(AsyncResourceDownloader.receivedSocialSettingHigh <= 2)) {
+            AsyncResourceDownloader.receivedSocialSettingHigh = 2;
         }
-        ByteArrayBuffer.field_i = param0 >> 2 & 3;
-        MidiNoteMixer.field_j = 3 & param0;
-        if (!(ByteArrayBuffer.field_i <= 2)) {
-            ByteArrayBuffer.field_i = 2;
+        ByteArrayBuffer.receivedSocialSettingMiddle = packedSettings >> 2 & 3;
+        MidiNoteMixer.receivedSocialSettingLow = 3 & packedSettings;
+        if (!(ByteArrayBuffer.receivedSocialSettingMiddle <= 2)) {
+            ByteArrayBuffer.receivedSocialSettingMiddle = 2;
         }
-        if (param1 != -12718) {
+        if (methodGuard != -12718) {
             ValidationMessageWidget.j(-27);
-            if (MidiNoteMixer.field_j > 2) {
-                MidiNoteMixer.field_j = 2;
+            if (MidiNoteMixer.receivedSocialSettingLow > 2) {
+                MidiNoteMixer.receivedSocialSettingLow = 2;
                 return;
             }
             return;
         }
-        if (MidiNoteMixer.field_j <= 2) {
+        if (MidiNoteMixer.receivedSocialSettingLow <= 2) {
             return;
         }
-        MidiNoteMixer.field_j = 2;
+        MidiNoteMixer.receivedSocialSettingLow = 2;
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {

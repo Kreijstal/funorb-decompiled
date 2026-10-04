@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/14f2e2a92eac906e222eac5c5f537c8c5554a17d/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/39c11973f394f0e21ba62ccdcfba50389c8d596a/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 137)
+## Current readability (pass 138)
 
-The export has 12,144 guarded names and 90,308 Java identifier edits, plus 11
-class-name literal edits and 184 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 12,249 guarded names and 90,785 Java identifier edits, plus 11
+class-name literal edits and 186 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,49 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 138 adds 105 guarded rules: 23 fields, nine methods, 18 parameters,
+54 locals and one label. Social packet updates and both name-hash lookups now
+have named parameters/locals and storage. `primarySocialEntriesByNameHash`,
+`primarySocialEntriesInOrder`, `secondarySocialEntriesInOrder` and the two
+next-insertion indexes expose the structures used by the existing response path.
+The generic intrusive operation is now `insertNodeBefore`.
+
+Primary lookup rejects invalid normalized names; secondary lookup retains its
+original-text fallback. Renaming/rekeying, hash-collision traversal, interned
+location reference equality, integer subtraction/overflow and partial queue
+updates remain. `insertionTargetSelection` names the existing plain block that
+chooses the entry/target carrier under the original client-control flag. Its
+declaration and one break account for two additional label edits; neither the
+frame nor its exit is removed. The manifest records that accounting change
+explicitly. Packed social settings retain neutral low/middle/high slot names,
+original two-bit extraction, clamp order and invalid-guard effects.
+
+`soundEffectVolume`, `trackedSoundEffectStreams` and `updateSoundEffectVolume`
+expose the shared effects gain and live-holder update path. The original divide
+by 80, floating 1.399999976158142 multiplier, overflow and guard-after-store remain.
+The loading route exposes `setLoadingProgress`, `drawLoadingProgressDialog`,
+`loadingStatusText`, `loadingScaledProgress` and `getBootstrapLoadingStatusText`.
+Fixed translations and archive-readiness order remain; this is not a new UI.
+
+Every field, method, parameter and local in `AudioService` is now named; its
+public Runnable `run` name remains. Two volatile output slots, running/stop flags,
+dispatcher pumping, ten-millisecond polling, error reporting and finally cleanup
+keep their original ordering. Unknown friend/ignore/permission semantics and
+unused private style-slot meanings are not invented.
+
+There are 12,249 rules and 90,785 identifier edits, plus eleven class-literal
+and 186 label edits: 90,982 total. All 12,144 prior complete rules and the raw,
+decompiler, naming, workflow, stub, native and text pins remain unchanged.
+Both 303-file corpora compile and preserve 136,607 bindings, 388 overrides
+and 813 lexical label records; all 303 files reverse byte exactly. The 27
+publication checks and eight existing native fixtures pass within their scopes.
+The fixtures do not establish a live social server, real audio device worker
+or complete loading-dialog execution. Eight large labeled bodies and 191
+opaque labels remain. Full-game/assets/server/device and heap/FPS acceptance
+remain unverified.
+
+Previous naming pass:
 
 Pass 137 adds 232 guarded rules: 25 fields, 26 methods, 60 parameters and
 121 locals. Every field, method, parameter and local in `SessionGameApplet`

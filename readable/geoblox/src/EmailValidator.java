@@ -172,31 +172,31 @@ final class EmailValidator extends TextInputValidator {
         }
     }
 
-    final static void a(int param0, byte param1) {
-        TrackedPcmStream var2 = null;
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static void updateSoundEffectVolume(int volume, byte methodGuard) {
+        TrackedPcmStream trackedStream = null;
+        int clientControlFlowGuard = 0;
+        RuntimeException caughtVolumeFailure = null;
+        RuntimeException volumeFailureForContext = null;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          SocialListEntry.field_gb = param0;
-          var2 = (TrackedPcmStream) ((Object) PrefixCodeDecoder.field_f.firstForIteration(0));
-          if (param1 != -67) {
+          SocialListEntry.soundEffectVolume = volume;
+          trackedStream = (TrackedPcmStream) ((Object) PrefixCodeDecoder.trackedSoundEffectStreams.firstForIteration(0));
+          if (methodGuard != -67) {
             return;
           }
-          while (var2 != null) {
-            if (!var2.lifetimeNode.isLinked(126)) {
-              var2.unlinkNode(false);
+          while (trackedStream != null) {
+            if (!trackedStream.lifetimeNode.isLinked(126)) {
+              trackedStream.unlinkNode(false);
             } else {
-              var2.stream.f((int)((float)(SocialListEntry.field_gb * var2.initialVolume / 80) * 1.399999976158142f));
+              trackedStream.stream.f((int)((float)(SocialListEntry.soundEffectVolume * trackedStream.initialVolume / 80) * 1.399999976158142f));
             }
-            var2 = (TrackedPcmStream) ((Object) PrefixCodeDecoder.field_f.nextForIteration(1));
+            trackedStream = (TrackedPcmStream) ((Object) PrefixCodeDecoder.trackedSoundEffectStreams.nextForIteration(1));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2_ref), "ag.F(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException volumeFailure) {
+          caughtVolumeFailure = volumeFailure;
+          volumeFailureForContext = caughtVolumeFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) volumeFailureForContext), "ag.F(" + volume + ',' + methodGuard + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 abstract class ArchiveSource {
     static String loadingText;
     static char[] additionalNameCharacters;
-    static SecondaryNodeHashTable field_a;
+    static SecondaryNodeHashTable primarySocialEntriesByNameHash;
 
     abstract int getGroupProgress(int methodGuard, int groupId);
 
@@ -14,7 +14,7 @@ abstract class ArchiveSource {
             ArchiveSource.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
         }
         additionalNameCharacters = null;
-        field_a = null;
+        primarySocialEntriesByNameHash = null;
         loadingText = null;
     }
 

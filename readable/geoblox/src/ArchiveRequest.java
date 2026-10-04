@@ -11,7 +11,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     static String fullscreenAcceptButtonText;
     boolean seenByCleanup;
     static int[] sessionPacketLengthByOpcode;
-    static float field_s;
+    static float loadingScaledProgress;
 
     final static void a(int param0, java.awt.Color param1, boolean param2, boolean param3, String param4) {
         Exception var5 = null;

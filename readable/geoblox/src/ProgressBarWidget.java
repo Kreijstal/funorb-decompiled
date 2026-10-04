@@ -17,7 +17,7 @@ final class ProgressBarWidget extends UiWidget {
     static int[] decodedSpriteHeights;
     static boolean field_G;
     boolean animationEnabled;
-    static IntrusiveDeque field_B;
+    static IntrusiveDeque primarySocialEntriesInOrder;
 
     private final Sprite buildStripeSprite(int alternateColor, boolean restoreGuard, int stripeColor) {
         int var6 = 0;
@@ -195,7 +195,7 @@ final class ProgressBarWidget extends UiWidget {
         if (param0 != 407213000) {
             ProgressBarWidget.f(93);
         }
-        field_B = null;
+        primarySocialEntriesInOrder = null;
         decodedSpriteHeights = null;
         field_D = null;
     }

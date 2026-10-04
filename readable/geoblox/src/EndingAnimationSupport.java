@@ -60,7 +60,7 @@ final class EndingAnimationSupport {
             return;
         }
         try {
-            ByteArrayBuffer.a(ArchiveRequest.field_s, ByteArrayPoolSupport.field_e, SessionInstanceState.sessionExitRequested, (byte) -40);
+            ByteArrayBuffer.drawLoadingProgressDialog(ArchiveRequest.loadingScaledProgress, ByteArrayPoolSupport.loadingStatusText, SessionInstanceState.sessionExitRequested, (byte) -40);
             MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 117, canvas, 0);
         } catch (RuntimeException framePresentationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) framePresentationFailure), "fc.A(" + drawEnabled + ',' + (canvas != null ? "{...}" : "null") + ')');

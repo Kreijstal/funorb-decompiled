@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PointerInputListener implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static String[] field_b;
+    static String[] loadingTextByLanguage;
     static int field_a;
 
     final static void a(byte param0) {
@@ -68,20 +68,20 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         }
     }
 
-    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
+    final static void insertNodeBefore(IntrusiveNode targetNode, int methodGuard, IntrusiveNode node) {
         try {
-            if (!(null == param2.previousNode)) {
-                param2.unlinkNode(false);
+            if (!(null == node.previousNode)) {
+                node.unlinkNode(false);
             }
-            if (param1 < 80) {
-                field_b = (String[]) null;
+            if (methodGuard < 80) {
+                loadingTextByLanguage = (String[]) null;
             }
-            param2.previousNode = param0.previousNode;
-            param2.nextNode = param0;
-            param2.previousNode.nextNode = param2;
-            param2.nextNode.previousNode = param2;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            node.previousNode = targetNode.previousNode;
+            node.nextNode = targetNode;
+            node.previousNode.nextNode = node;
+            node.nextNode.previousNode = node;
+        } catch (RuntimeException insertionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "le.A(" + (targetNode != null ? "{...}" : "null") + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         if (param0 != -29313) {
             return;
         }
-        field_b = null;
+        loadingTextByLanguage = null;
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent event) {
@@ -280,7 +280,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
     }
 
     static {
-        field_b = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
+        loadingTextByLanguage = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
         field_a = 1;
     }
 }

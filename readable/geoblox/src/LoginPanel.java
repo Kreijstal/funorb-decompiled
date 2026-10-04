@@ -337,7 +337,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             } else {
               if (var9 == 248) {
                 GrowableIntList.a(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
-                AudioService.field_a = ByteShortQuery.createUnableText;
+                AudioService.sessionResponseText = ByteShortQuery.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 TextTemplateArgumentType.field_e = false;
                 stackIn_31_0 = var9;
@@ -374,7 +374,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           if ((PacketBuffer.currentProtocolStage == AccountCreationForm.field_F) &&
               (TriangleMesh.a(false))) {
             if (ScorePopup.currentPacketOpcode != 255) {
-              AudioService.field_a = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 98);
+              AudioService.sessionResponseText = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 98);
             } else {
               var9_ref_String = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
               if (var9_ref_String != null) {
@@ -392,9 +392,9 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           if (SpriteCheckboxRenderer.sessionSocket == null) {
             if (TextTemplateArgumentType.field_e) {
               if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
-                AudioService.field_a = FullscreenFailureReason.loginMessage2Text;
+                AudioService.sessionResponseText = FullscreenFailureReason.loginMessage2Text;
               } else {
-                AudioService.field_a = IntrusiveNode.loginMessage3Text;
+                AudioService.sessionResponseText = IntrusiveNode.loginMessage3Text;
               }
               TextTemplateArgumentType.field_e = false;
               stackIn_63_0 = 249;

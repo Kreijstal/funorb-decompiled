@@ -30,23 +30,23 @@ abstract class SocketConnector {
     }
 
     final static SocialListEntry findSocialEntry(byte methodGuard, String displayName) {
-        String var2 = null;
-        SocialListEntry var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        CharSequence var6 = null;
-        CharSequence var7 = null;
-        SocialListEntry stackIn_10_0 = null;
-        Object stackIn_13_0 = null;
-        SocialListEntry stackIn_20_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var5 = Geoblox.clientControlFlowFlag;
+        String lookupName = null;
+        SocialListEntry candidateEntry = null;
+        String candidateName = null;
+        int clientControlFlowGuard = 0;
+        CharSequence inputNameCharacters = null;
+        CharSequence candidateNameCharacters = null;
+        SocialListEntry nullEntryAfterGuard = null;
+        Object nullEntryAfterInvalidName = null;
+        SocialListEntry matchedEntryBeforeReturn = null;
+        RuntimeException lookupFailureBeforeContext = null;
+        StringBuilder lookupMessagePrefix = null;
+        String displayNameDescription = null;
+        RuntimeException caughtLookupFailure = null;
+        RuntimeException lookupFailureForContext = null;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          if (ArchiveSource.field_a == null) {
+          if (ArchiveSource.primarySocialEntriesByNameHash == null) {
             return null;
           }
           if (displayName == null) {
@@ -56,37 +56,37 @@ abstract class SocketConnector {
             return null;
           }
           if (methodGuard != -62) {
-            stackIn_10_0 = (SocialListEntry) null;
-            return stackIn_10_0;
+            nullEntryAfterGuard = (SocialListEntry) null;
+            return nullEntryAfterGuard;
           }
-          var6 = (CharSequence) ((Object) displayName);
-          var2 = ResizableDialog.normalizeSessionName(var6, 12);
-          if (var2 == null) {
-            stackIn_13_0 = null;
-            return (SocialListEntry) (stackIn_13_0);
+          inputNameCharacters = (CharSequence) ((Object) displayName);
+          lookupName = ResizableDialog.normalizeSessionName(inputNameCharacters, 12);
+          if (lookupName == null) {
+            nullEntryAfterInvalidName = null;
+            return (SocialListEntry) (nullEntryAfterInvalidName);
           }
-          var3 = (SocialListEntry) ((Object) ArchiveSource.field_a.findFirst((long)var2.hashCode(), -1));
-          while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.displayName);
-            var4 = ResizableDialog.normalizeSessionName(var7, 12);
-            if (var4.equals(var2)) {
-              stackIn_20_0 = var3;
-              return stackIn_20_0;
+          candidateEntry = (SocialListEntry) ((Object) ArchiveSource.primarySocialEntriesByNameHash.findFirst((long)lookupName.hashCode(), -1));
+          while (candidateEntry != null) {
+            candidateNameCharacters = (CharSequence) ((Object) candidateEntry.displayName);
+            candidateName = ResizableDialog.normalizeSessionName(candidateNameCharacters, 12);
+            if (candidateName.equals(lookupName)) {
+              matchedEntryBeforeReturn = candidateEntry;
+              return matchedEntryBeforeReturn;
             }
-            var3 = (SocialListEntry) ((Object) ArchiveSource.field_a.findNext(-29925));
+            candidateEntry = (SocialListEntry) ((Object) ArchiveSource.primarySocialEntriesByNameHash.findNext(-29925));
           }
           return null;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_25_0 = var2_ref;
-          stackIn_25_1 = new StringBuilder().append("jg.B(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException lookupFailure) {
+          caughtLookupFailure = lookupFailure;
+          lookupFailureForContext = caughtLookupFailure;
+          lookupFailureBeforeContext = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("jg.B(").append(methodGuard).append(',');
           if (displayName == null) {
-            stackIn_26_2 = "null";
+            displayNameDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            displayNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeContext), ((StringBuilder) (Object) lookupMessagePrefix).append(displayNameDescription).append(')').toString());
         }
     }
 

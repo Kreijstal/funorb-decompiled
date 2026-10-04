@@ -6,7 +6,7 @@ final class TextTemplateDefinitionLoader {
     static String createText;
     static int field_a;
     private WeightedObjectCache definitionsCache;
-    static IntrusiveDeque field_e;
+    static IntrusiveDeque secondarySocialEntriesInOrder;
     private ResourceArchive primaryArchive;
     private ResourceArchive alternateArchive;
 
@@ -35,7 +35,7 @@ final class TextTemplateDefinitionLoader {
 
     public static void a(byte param0) {
         int var1 = 52 / ((25 - param0) / 54);
-        field_e = null;
+        secondarySocialEntriesInOrder = null;
         createText = null;
     }
 

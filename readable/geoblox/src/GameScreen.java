@@ -58,10 +58,10 @@ final class GameScreen extends MenuScreen {
                     if (SessionTextHistorySupport.currentKeyboardEventCode != 103) {
                       super.handleMenuKey(itemIndex, -53);
                     } else {
-                      SocialListEntry.field_gb = 80;
+                      SocialListEntry.soundEffectVolume = 80;
                     }
                   } else {
-                    SocialListEntry.field_gb = 0;
+                    SocialListEntry.soundEffectVolume = 0;
                   }
                 }
                 this.previewMusicVolume(0);
@@ -649,11 +649,11 @@ final class GameScreen extends MenuScreen {
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
           if ((actionId == 8) &&
               (clientControlFlowGuard == 0)) {
-            if (SocialListEntry.field_gb > 10) {
-              SocialListEntry.field_gb = SocialListEntry.field_gb - 10;
+            if (SocialListEntry.soundEffectVolume > 10) {
+              SocialListEntry.soundEffectVolume = SocialListEntry.soundEffectVolume - 10;
               return;
             }
-            SocialListEntry.field_gb = 0;
+            SocialListEntry.soundEffectVolume = 0;
             return;
           } else {
             if (9 != actionId) {
@@ -1602,17 +1602,17 @@ final class GameScreen extends MenuScreen {
                 pointerX -= 280;
                 if (pointerX > 0) {
                   if (pointerX < NetworkArchiveRequest.barSprite.fullWidth) {
-                    SocialListEntry.field_gb = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
+                    SocialListEntry.soundEffectVolume = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
                     if (clientControlFlowGuard == 0) {
                       break L4;
                     }
                   }
-                  SocialListEntry.field_gb = 80;
+                  SocialListEntry.soundEffectVolume = 80;
                   if (clientControlFlowGuard == 0) {
                     break L4;
                   }
                 }
-                SocialListEntry.field_gb = 0;
+                SocialListEntry.soundEffectVolume = 0;
               }
               this.previewMusicVolume(0);
               if (clientControlFlowGuard == 0) {
@@ -1829,7 +1829,7 @@ final class GameScreen extends MenuScreen {
               (50 >= this.volumePreviewTicks)) {
             return;
           }
-          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[8], 100, SocialListEntry.field_gb);
+          this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[8], 100, SocialListEntry.soundEffectVolume);
           GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
           this.volumePreviewTicks = 0;
           return;
@@ -2151,13 +2151,13 @@ final class GameScreen extends MenuScreen {
           L0: {
             actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
             if (actionId == 8) {
-              if (SocialListEntry.field_gb >= 70) {
-                SocialListEntry.field_gb = 80;
+              if (SocialListEntry.soundEffectVolume >= 70) {
+                SocialListEntry.soundEffectVolume = 80;
                 if (clientControlFlowGuard == 0) {
                   break L0;
                 }
               }
-              SocialListEntry.field_gb = SocialListEntry.field_gb + 10;
+              SocialListEntry.soundEffectVolume = SocialListEntry.soundEffectVolume + 10;
               if (clientControlFlowGuard == 0) {
                 break L0;
               }
@@ -2411,7 +2411,7 @@ final class GameScreen extends MenuScreen {
               rowFont.drawRightAlignedText(actionText, 285 + itemColumnOrPressOffset, 30 + rowY, 0, -1);
               NetworkArchiveRequest.barSprite.draw(itemColumnOrPressOffset + 280, rowY + 15);
               if (actionId == 8) {
-                volumeLevelSnapshot = SocialListEntry.field_gb;
+                volumeLevelSnapshot = SocialListEntry.soundEffectVolume;
               } else {
                 volumeLevelSnapshot = SpriteCheckboxRenderer.field_c;
               }

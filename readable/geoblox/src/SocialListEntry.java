@@ -4,17 +4,17 @@
 final class SocialListEntry extends VisualPropertyOverrides {
     String locationLabel;
     String displayName;
-    static int field_gb;
+    static int soundEffectVolume;
     int insertionIndex;
-    static String field_lb;
+    static String connectingToUpdateServerText;
     static MusicScore sweetsMusicTrack;
     static String quitWarningText;
 
-    final static void e(int param0) {
+    final static void resetArchiveConnectionFailures(int methodGuard) {
         AsyncResourceDownloader.archiveNetworkClient.failureCount = 0;
         AsyncResourceDownloader.archiveNetworkClient.failureCode = 0;
-        if (param0 != -21754) {
-            field_lb = (String) null;
+        if (methodGuard != -21754) {
+            connectingToUpdateServerText = (String) null;
         }
     }
 
@@ -22,11 +22,11 @@ final class SocialListEntry extends VisualPropertyOverrides {
         super(0L, (VisualPropertyOverrides) null);
     }
 
-    public static void f(byte param0) {
-        field_lb = null;
+    public static void releaseSocialEntryResources(byte methodGuard) {
+        connectingToUpdateServerText = null;
         quitWarningText = null;
-        if (param0 != -128) {
-            SocialListEntry.f((byte) 1);
+        if (methodGuard != -128) {
+            SocialListEntry.releaseSocialEntryResources((byte) 1);
             sweetsMusicTrack = null;
             return;
         }
@@ -34,7 +34,7 @@ final class SocialListEntry extends VisualPropertyOverrides {
     }
 
     static {
-        field_gb = 80;
+        soundEffectVolume = 80;
         quitWarningText = "Warning: if you quit, you will lose any game you are in the middle of!";
     }
 }

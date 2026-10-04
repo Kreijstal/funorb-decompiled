@@ -7,7 +7,7 @@ final class HighscoreQuery extends IntrusiveNode {
     boolean completed;
     int[][] valuesByView;
     int queryId;
-    static int field_g;
+    static int nextPrimarySocialInsertionIndex;
     int valuesPerEntry;
 
     HighscoreQuery() {

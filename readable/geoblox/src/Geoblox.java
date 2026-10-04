@@ -59,7 +59,7 @@ public final class Geoblox extends SessionGameApplet {
         int clientFlagSnapshot = clientControlFlowFlag;
         ByteStorage.a(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
         if (null != OpacityWidget.field_F && null != GzipInflater.field_a && TextWidgetSupport.field_c != null && null != ProxySocketConnector.field_m) {
-            HighscoreNameEntry.a(FifoResponseToken.unpackingMusicText, -2, 60.0f);
+            HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
             SocketConnector.prepareInitialGameAudio(OpacityWidget.field_F, (byte) 80, TextWidgetSupport.field_c, GzipInflater.field_a, ProxySocketConnector.field_m);
             TextWidgetSupport.field_c = null;
@@ -70,7 +70,7 @@ public final class Geoblox extends SessionGameApplet {
             return false;
         }
         if (null != GameGraphicsResources.gameGraphicsArchive && null != ArchiveLoadStep.fontMetricsArchive && SessionTextHistorySupport.basicUiGraphicsArchive != null) {
-            HighscoreNameEntry.a(ClientScreenExitSupport.unpackingGraphicsText, methodGuard - 25871, 80.0f);
+            HighscoreNameEntry.setLoadingProgress(ClientScreenExitSupport.unpackingGraphicsText, methodGuard - 25871, 80.0f);
             this.renderFrame(25853);
             FadingDialog.uiPaletteFont = SessionSocketSupport.loadPaletteFont("", GameGraphicsResources.gameGraphicsArchive, ArchiveLoadStep.fontMetricsArchive, true, "font");
             SessionGameApplet.uiAccentPaletteIndex = FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(1);
@@ -231,7 +231,7 @@ public final class Geoblox extends SessionGameApplet {
         if (methodGuard != 25869) {
             reconnectMessages = (String[]) null;
         }
-        HighscoreNameEntry.a(FullscreenFailureReason.field_a, -2, 100.0f);
+        HighscoreNameEntry.setLoadingProgress(FullscreenFailureReason.field_a, -2, 100.0f);
         this.renderFrame(methodGuard ^ 496);
         LoginPayloadKind.ensureAchievementStateRequested(9313);
         return true;
@@ -273,7 +273,7 @@ public final class Geoblox extends SessionGameApplet {
                         if (ClientOptionSupport.isClientOptionEnabled(0, -112)) {
                           if (!((GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) &&
                               (GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127)))) {
-                            HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(Under13TermsPanel.field_F, GameGraphicsResources.gameGraphicsArchive, "halloween", FullscreenFailureReason.field_c, true), -2, 45.0f);
+                            HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(Under13TermsPanel.field_F, GameGraphicsResources.gameGraphicsArchive, "halloween", FullscreenFailureReason.field_c, true), -2, 45.0f);
                             return false;
                           }
                         }
@@ -283,7 +283,7 @@ public final class Geoblox extends SessionGameApplet {
                             return true;
                           }
                           SecondaryDeque.settleAccountDialogAnimations(480);
-                          HighscoreNameEntry.a(FullscreenFailureReason.field_a, -2, 50.0f);
+                          HighscoreNameEntry.setLoadingProgress(FullscreenFailureReason.field_a, -2, 50.0f);
                           this.renderFrame(25853);
                           SecondaryNodeDequeIterator.archiveLoadingComplete = true;
                           return true;
@@ -293,13 +293,13 @@ public final class Geoblox extends SessionGameApplet {
                         graphicsGroupNameSnapshot = "basic";
                         graphicsLoadingTextSnapshot = AccountWelcomePanel.loadingGraphicsText;
                         graphicsProgressGuard = (archivePollGuard) ? false : true;
-                        HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(graphicsWaitingTextSnapshot, graphicsArchiveSnapshot, graphicsGroupNameSnapshot, graphicsLoadingTextSnapshot, graphicsProgressGuard), -2, 50.0f);
+                        HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(graphicsWaitingTextSnapshot, graphicsArchiveSnapshot, graphicsGroupNameSnapshot, graphicsLoadingTextSnapshot, graphicsProgressGuard), -2, 50.0f);
                         return false;
                       }
-                      HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, GameGraphicsResources.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                      HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, GameGraphicsResources.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                       return false;
                     }
-                    HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, GameGraphicsResources.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                    HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, GameGraphicsResources.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                     return false;
                   }
                   fontWaitingTextSnapshot = EntityLinkSupport.waitingForFontsText;
@@ -307,20 +307,20 @@ public final class Geoblox extends SessionGameApplet {
                   fontGroupNameSnapshot = "";
                   fontLoadingTextSnapshot = EntitySpawnSupport.loadingFontsText;
                   fontProgressGuard = (archivePollGuard) ? false : true;
-                  HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(fontWaitingTextSnapshot, fontArchiveSnapshot, fontGroupNameSnapshot, fontLoadingTextSnapshot, fontProgressGuard), -2, 35.0f);
+                  HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(fontWaitingTextSnapshot, fontArchiveSnapshot, fontGroupNameSnapshot, fontLoadingTextSnapshot, fontProgressGuard), -2, 35.0f);
                   return false;
                 }
-                HighscoreNameEntry.a(ReceivedTextRecord.formatArchiveGroupProgress(AchievementProtocolSupport.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, archivePollGuard, ProxySocketConnector.field_m), -2, 25.0f);
+                HighscoreNameEntry.setLoadingProgress(ReceivedTextRecord.formatArchiveGroupProgress(AchievementProtocolSupport.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, archivePollGuard, ProxySocketConnector.field_m), -2, 25.0f);
                 return false;
               }
-              HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", FadingDialog.loadingMusicText, true), -2, 15.0f);
+              HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", FadingDialog.loadingMusicText, true), -2, 15.0f);
               return false;
             }
           }
-          HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, TextWidgetSupport.field_c, "", AchievementProtocolSupport.loadingSoundEffectsText, true), -2, 10.0f);
+          HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, TextWidgetSupport.field_c, "", AchievementProtocolSupport.loadingSoundEffectsText, true), -2, 10.0f);
           return false;
         }
-        HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, OpacityWidget.field_F, "", AchievementProtocolSupport.loadingSoundEffectsText, true), -2, 5.0f);
+        HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, OpacityWidget.field_F, "", AchievementProtocolSupport.loadingSoundEffectsText, true), -2, 5.0f);
         return false;
     }
 
@@ -424,7 +424,7 @@ public final class Geoblox extends SessionGameApplet {
         InstrumentNoteMask.b(false);
         InstrumentPatch.b(true);
         InstrumentEnvelope.a(17348);
-        AudioService.a(104);
+        AudioService.releaseAudioServiceResources(104);
         PacketByteCipher.b((byte) -125);
         SocketArchiveNetworkClient.i(-84);
         NetworkArchiveRequest.e((byte) 118);
@@ -527,7 +527,7 @@ public final class Geoblox extends SessionGameApplet {
         PasswordWidgetRenderer.c(0);
         SpriteCheckboxRenderer.a(true);
         OpacityWidget.f((byte) -60);
-        SocialListEntry.f((byte) -128);
+        SocialListEntry.releaseSocialEntryResources((byte) -128);
         RankedListQuery.b(127);
         ArchiveLoadStep.a(122);
         UsernameAvailabilityQuery.a(102);
@@ -652,7 +652,7 @@ public final class Geoblox extends SessionGameApplet {
               return;
             }
             if (!UsernameAvailabilityValidator.g(79)) {
-              HighscoreNameEntry.a(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
+              HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
             } else {
               if ((FadingDialog.a((byte) 47)) &&
                   (!FullscreenSupport.field_a)) {
@@ -835,7 +835,7 @@ public final class Geoblox extends SessionGameApplet {
           return;
         }
         if (!UsernameAvailabilityValidator.g(39)) {
-          HighscoreNameEntry.a(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
+          HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
           EndingAnimationSupport.presentPreparedFrame(true, (java.awt.Canvas) (renderTargetCanvas));
           return;
         }

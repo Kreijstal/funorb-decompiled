@@ -22,7 +22,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
               var3_int = 1;
               UsernameQueryState.canvasRedrawRequested = false;
             }
-            ArchiveRequest.a(LoginUiSupport.pollLoginUiArchiveProgress((byte) 73), CanvasResizeController.field_q, var3_int != 0, false, AudioService.a((byte) -85));
+            ArchiveRequest.a(LoginUiSupport.pollLoginUiArchiveProgress((byte) 73), CanvasResizeController.field_q, var3_int != 0, false, AudioService.getBootstrapLoadingStatusText((byte) -85));
           } else {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (SpriteConstructionSupport.clientScreenStage == 0) {

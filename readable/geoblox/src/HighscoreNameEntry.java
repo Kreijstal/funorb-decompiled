@@ -5,7 +5,7 @@ final class HighscoreNameEntry {
     String primaryName;
     String alternateName;
     boolean usedInUniqueView;
-    static int field_b;
+    static int unusedGuardScratch;
 
     final static void updateSpawnQueue(int methodGuard) {
         RuntimeException caughtSpawnQueueFailure = null;
@@ -30,7 +30,7 @@ final class HighscoreNameEntry {
               }
             } else {
               if (methodGuard != 255) {
-                field_b = -11;
+                unusedGuardScratch = -11;
               }
             }
             if ((!((!((MidiPcmStream.heldInternalKeys[99]) &&
@@ -73,30 +73,30 @@ final class HighscoreNameEntry {
         }
     }
 
-    final static void a(String param0, int param1, float param2) {
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
+    final static void setLoadingProgress(String statusText, int methodGuard, float scaledProgress) {
+        RuntimeException progressFailureBeforeContext = null;
+        StringBuilder progressMessagePrefix = null;
+        String statusTextDescription = null;
+        RuntimeException caughtProgressFailure = null;
+        RuntimeException progressFailureForContext = null;
         try {
-          if (param1 != -2) {
+          if (methodGuard != -2) {
             HighscoreNameEntry.handleSocialListResponse((byte) -59);
           }
-          ByteArrayPoolSupport.field_e = param0;
-          ArchiveRequest.field_s = param2;
+          ByteArrayPoolSupport.loadingStatusText = statusText;
+          ArchiveRequest.loadingScaledProgress = scaledProgress;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("lc.A(");
-          if (param0 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException progressFailure) {
+          caughtProgressFailure = progressFailure;
+          progressFailureForContext = caughtProgressFailure;
+          progressFailureBeforeContext = progressFailureForContext;
+          progressMessagePrefix = new StringBuilder().append("lc.A(");
+          if (statusText == null) {
+            statusTextDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            statusTextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressFailureBeforeContext), ((StringBuilder) (Object) progressMessagePrefix).append(statusTextDescription).append(',').append(methodGuard).append(',').append(scaledProgress).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class HighscoreNameEntry {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard > -74) {
-            field_b = 78;
+            unusedGuardScratch = 78;
           }
           rowStartXQ16 = sampleXQ16;
           debugTintRgb = 1122867;
@@ -256,150 +256,150 @@ final class HighscoreNameEntry {
     }
 
     final static void handleSocialListResponse(byte methodGuard) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int stackIn_15_0 = 0;
-        SocialListEntry stackIn_61_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        PacketBuffer var1 = null;
-        RuntimeException var1_ref = null;
-        int var2 = 0;
-        int var3_int = 0;
-        Object var3 = null;
-        String var4_ref_String = null;
-        int var4 = 0;
-        SocialListEntry var5 = null;
-        String var5_ref = null;
-        String var6 = null;
-        SocialListEntry var6_ref = null;
-        String var7 = null;
-        SocialListEntry var7_ref = null;
-        int var8 = 0;
-        var8 = Geoblox.clientControlFlowFlag;
+        int secondaryInsertionIndexBeforeIncrement = 0;
+        int primaryInsertionIndexBeforeIncrement = 0;
+        int alternateNamePresentSnapshot = 0;
+        SocialListEntry entryOrInsertionTargetSnapshot = null;
+        RuntimeException caughtResponseFailure = null;
+        PacketBuffer packet = null;
+        RuntimeException responseFailureForContext = null;
+        int operation = 0;
+        int alternateNamePresentInt = 0;
+        Object locationLabelValue = null;
+        String displayName = null;
+        int packedSettings = 0;
+        SocialListEntry secondaryEntry = null;
+        String previousPrimaryName = null;
+        String previousSecondaryName = null;
+        SocialListEntry primaryEntry = null;
+        String normalizedSecondaryName = null;
+        SocialListEntry insertionTarget = null;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 104) {
-            field_b = 67;
+            unusedGuardScratch = 67;
           }
-          var1 = LogoCompositor.sessionPacketBuffer;
-          var2 = var1.readUnsignedByte((byte) 34);
-          if (var2 == 0) {
+          packet = LogoCompositor.sessionPacketBuffer;
+          operation = packet.readUnsignedByte((byte) 34);
+          if (operation == 0) {
             if (ScorePopupSupport.secondarySocialEntriesByNameHash == null) {
               ScorePopupSupport.secondarySocialEntriesByNameHash = new SecondaryNodeHashTable(128);
-              FifoResponseToken.field_i = 0;
+              FifoResponseToken.nextSecondarySocialInsertionIndex = 0;
             }
-            stackIn_15_0 = (var1.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
-            var3_int = stackIn_15_0;
-            var4_ref_String = var1.readNullTerminatedText((byte) 105);
-            if (var3_int != 0) {
-              var1.readNullTerminatedText((byte) 108);
+            alternateNamePresentSnapshot = (packet.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
+            alternateNamePresentInt = alternateNamePresentSnapshot;
+            displayName = packet.readNullTerminatedText((byte) 105);
+            if (alternateNamePresentInt != 0) {
+              packet.readNullTerminatedText((byte) 108);
             }
-            var5 = AchievementProtocolSupport.findSecondarySocialEntry(0, var4_ref_String);
-            var6 = var1.readNullTerminatedText((byte) 103);
-            var7 = ResizableDialog.normalizeSessionName((CharSequence) ((Object) var4_ref_String), 12);
-            if (null == var7) {
-              var7 = var4_ref_String;
+            secondaryEntry = AchievementProtocolSupport.findSecondarySocialEntry(0, displayName);
+            previousSecondaryName = packet.readNullTerminatedText((byte) 103);
+            normalizedSecondaryName = ResizableDialog.normalizeSessionName((CharSequence) ((Object) displayName), 12);
+            if (null == normalizedSecondaryName) {
+              normalizedSecondaryName = displayName;
             }
-            if (var5 == null) {
-              var5 = AchievementProtocolSupport.findSecondarySocialEntry(methodGuard ^ 104, var6);
-              if (var5 != null) {
-                ScorePopupSupport.secondarySocialEntriesByNameHash.put((long)var7.hashCode(), 113, var5);
+            if (secondaryEntry == null) {
+              secondaryEntry = AchievementProtocolSupport.findSecondarySocialEntry(methodGuard ^ 104, previousSecondaryName);
+              if (secondaryEntry != null) {
+                ScorePopupSupport.secondarySocialEntriesByNameHash.put((long)normalizedSecondaryName.hashCode(), 113, secondaryEntry);
               }
             }
-            if (null == var5) {
-              var5 = new SocialListEntry();
-              ScorePopupSupport.secondarySocialEntriesByNameHash.put((long)var7.hashCode(), 94, var5);
-              fieldTemp$0 = FifoResponseToken.field_i;
-              FifoResponseToken.field_i = FifoResponseToken.field_i + 1;
-              var5.insertionIndex = fieldTemp$0;
-              TextTemplateDefinitionLoader.field_e.addLast(methodGuard ^ -86, var5);
+            if (null == secondaryEntry) {
+              secondaryEntry = new SocialListEntry();
+              ScorePopupSupport.secondarySocialEntriesByNameHash.put((long)normalizedSecondaryName.hashCode(), 94, secondaryEntry);
+              secondaryInsertionIndexBeforeIncrement = FifoResponseToken.nextSecondarySocialInsertionIndex;
+              FifoResponseToken.nextSecondarySocialInsertionIndex = FifoResponseToken.nextSecondarySocialInsertionIndex + 1;
+              secondaryEntry.insertionIndex = secondaryInsertionIndexBeforeIncrement;
+              TextTemplateDefinitionLoader.secondarySocialEntriesInOrder.addLast(methodGuard ^ -86, secondaryEntry);
             }
-            var5.displayName = var4_ref_String;
+            secondaryEntry.displayName = displayName;
             return;
           }
-          if (var2 != 1) {
-            if (var2 == 2) {
+          if (operation != 1) {
+            if (operation == 2) {
               if (MouseWheelInput.primarySocialListState == 1) {
                 MouseWheelInput.primarySocialListState = 2;
               }
               return;
             }
-            if (var2 == 3) {
+            if (operation == 3) {
               if (MouseWheelInput.primarySocialListState == 2) {
                 MouseWheelInput.primarySocialListState = 1;
               }
               return;
             }
-            if (var2 != 4) {
+            if (operation != 4) {
               IterableNodeHashTable.reportClientError((Throwable) null, "F1: " + TextTemplateDefinition.e(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -119);
               return;
             }
             MouseWheelInput.primarySocialListState = 1;
-            var3 = var1.readNullTerminatedText((byte) 122);
-            ReflectionCheckRequest.currentSocialLocationLabel = ((String) (var3)).intern();
-            var4 = var1.readUnsignedByte((byte) 34);
-            ValidationMessageWidget.c(var4, methodGuard ^ -12742);
+            locationLabelValue = packet.readNullTerminatedText((byte) 122);
+            ReflectionCheckRequest.currentSocialLocationLabel = ((String) (locationLabelValue)).intern();
+            packedSettings = packet.readUnsignedByte((byte) 34);
+            ValidationMessageWidget.decodeSocialSettingBits(packedSettings, methodGuard ^ -12742);
             return;
           }
-          if (ArchiveSource.field_a == null) {
-            ArchiveSource.field_a = new SecondaryNodeHashTable(128);
-            HighscoreQuery.field_g = 0;
+          if (ArchiveSource.primarySocialEntriesByNameHash == null) {
+            ArchiveSource.primarySocialEntriesByNameHash = new SecondaryNodeHashTable(128);
+            HighscoreQuery.nextPrimarySocialInsertionIndex = 0;
           }
-          var3 = var1.readNullTerminatedText((byte) 108);
-          if (((String) (var3)).equals("")) {
-            var3 = null;
+          locationLabelValue = packet.readNullTerminatedText((byte) 108);
+          if (((String) (locationLabelValue)).equals("")) {
+            locationLabelValue = null;
           }
-          var4_ref_String = var1.readNullTerminatedText((byte) 102);
-          var5_ref = var1.readNullTerminatedText((byte) 110);
-          var6_ref = SocketConnector.findSocialEntry((byte) -62, var4_ref_String);
-          if (null == var6_ref) {
-            var6_ref = SocketConnector.findSocialEntry((byte) -62, var5_ref);
-            if (null != var6_ref) {
-              ArchiveSource.field_a.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
+          displayName = packet.readNullTerminatedText((byte) 102);
+          previousPrimaryName = packet.readNullTerminatedText((byte) 110);
+          primaryEntry = SocketConnector.findSocialEntry((byte) -62, displayName);
+          if (null == primaryEntry) {
+            primaryEntry = SocketConnector.findSocialEntry((byte) -62, previousPrimaryName);
+            if (null != primaryEntry) {
+              ArchiveSource.primarySocialEntriesByNameHash.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) displayName), 12).hashCode(), -63, primaryEntry);
             }
           }
-          if (null == var6_ref) {
-            var6_ref = new SocialListEntry();
-            ArchiveSource.field_a.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) var4_ref_String), methodGuard ^ 100).hashCode(), 110, var6_ref);
-            fieldTemp$1 = HighscoreQuery.field_g;
-            HighscoreQuery.field_g = HighscoreQuery.field_g + 1;
-            var6_ref.insertionIndex = fieldTemp$1;
-            ProgressBarWidget.field_B.addLast(-59, var6_ref);
+          if (null == primaryEntry) {
+            primaryEntry = new SocialListEntry();
+            ArchiveSource.primarySocialEntriesByNameHash.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) displayName), methodGuard ^ 100).hashCode(), 110, primaryEntry);
+            primaryInsertionIndexBeforeIncrement = HighscoreQuery.nextPrimarySocialInsertionIndex;
+            HighscoreQuery.nextPrimarySocialInsertionIndex = HighscoreQuery.nextPrimarySocialInsertionIndex + 1;
+            primaryEntry.insertionIndex = primaryInsertionIndexBeforeIncrement;
+            ProgressBarWidget.primarySocialEntriesInOrder.addLast(-59, primaryEntry);
           }
-          if (var3 != null) {
-            var3 = ((String) (var3)).intern();
+          if (locationLabelValue != null) {
+            locationLabelValue = ((String) (locationLabelValue)).intern();
           }
-          var6_ref.displayName = var4_ref_String;
-          var6_ref.locationLabel = (String) (var3);
-          var6_ref.unlinkNode(false);
-          var7_ref = (SocialListEntry) ((Object) ProgressBarWidget.field_B.firstForIteration(0));
+          primaryEntry.displayName = displayName;
+          primaryEntry.locationLabel = (String) (locationLabelValue);
+          primaryEntry.unlinkNode(false);
+          insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.firstForIteration(0));
           while (true) {
-            L15: {
-              if (null != var7_ref) {
-                stackIn_61_0 = var6_ref;
-                if (var8 != 0) {
-                  break L15;
+            insertionTargetSelection: {
+              if (null != insertionTarget) {
+                entryOrInsertionTargetSnapshot = primaryEntry;
+                if (clientControlFlowGuard != 0) {
+                  break insertionTargetSelection;
                 }
-                if (MatchCandidateSupport.socialEntrySortsAfter(stackIn_61_0, var7_ref, (byte) 127)) {
-                  var7_ref = (SocialListEntry) ((Object) ProgressBarWidget.field_B.nextForIteration(1));
+                if (MatchCandidateSupport.socialEntrySortsAfter(entryOrInsertionTargetSnapshot, insertionTarget, (byte) 127)) {
+                  insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.nextForIteration(1));
                   continue;
                 }
               }
-              stackIn_61_0 = var7_ref;
+              entryOrInsertionTargetSnapshot = insertionTarget;
             }
-            if (stackIn_61_0 == null) {
-              ProgressBarWidget.field_B.addLast(-39, var6_ref);
-              if (var8 == 0) {
+            if (entryOrInsertionTargetSnapshot == null) {
+              ProgressBarWidget.primarySocialEntriesInOrder.addLast(-39, primaryEntry);
+              if (clientControlFlowGuard == 0) {
                 return;
               }
             }
-            PointerInputListener.a(var7_ref, 121, var6_ref);
+            PointerInputListener.insertNodeBefore(insertionTarget, 121, primaryEntry);
             return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "lc.D(" + methodGuard + ')');
+        } catch (java.lang.RuntimeException responseFailure) {
+          caughtResponseFailure = responseFailure;
+          responseFailureForContext = caughtResponseFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) responseFailureForContext), "lc.D(" + methodGuard + ')');
         }
     }
 

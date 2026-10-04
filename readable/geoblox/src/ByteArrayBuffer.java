@@ -6,7 +6,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     static long[] whirlpoolRoundConstants;
     int position;
     byte[] bytes;
-    static int field_i;
+    static int receivedSocialSettingMiddle;
 
     final void writeMediumBE(int methodGuard, int value) {
         int highByteIndex = this.position;
@@ -40,7 +40,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             return null;
           }
           if (param1 != 19) {
-            field_i = -57;
+            receivedSocialSettingMiddle = -57;
           }
           stackIn_6_0 = AwtRasterBuffer.buildFirstRgbSpriteFromDecodedSheet((byte) -60);
           return stackIn_6_0;
@@ -253,20 +253,20 @@ class ByteArrayBuffer extends IntrusiveNode {
         return this.readNullTerminatedText((byte) 125);
     }
 
-    final static void a(float param0, String param1, boolean param2, byte param3) {
+    final static void drawLoadingProgressDialog(float scaledProgress, String statusText, boolean sessionExitRequested, byte methodGuard) {
         try {
             if (SecondaryNodeHashTable.accountProgressDialog == null) {
                 SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
                 ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
             }
-            SecondaryNodeHashTable.accountProgressDialog.updateProgress(param2, param1, param3 ^ -92, param0);
+            SecondaryNodeHashTable.accountProgressDialog.updateProgress(sessionExitRequested, statusText, methodGuard ^ -92, scaledProgress);
             SoftwareRasterizer.clearFramebuffer();
-            if (param3 != -40) {
+            if (methodGuard != -40) {
                 whirlpoolTables = (long[][]) null;
             }
             ValidationMessageWidget.a(true, false);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException progressDialogFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressDialogFailure), "qc.L(" + scaledProgress + ',' + (statusText != null ? "{...}" : "null") + ',' + sessionExitRequested + ',' + methodGuard + ')');
         }
     }
 
@@ -311,7 +311,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             var3 = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.nextForIteration(1));
           }
           if (!methodGuard) {
-            field_i = -54;
+            receivedSocialSettingMiddle = -54;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -886,7 +886,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             return "";
           }
           if (methodGuard < 94) {
-            field_i = 68;
+            receivedSocialSettingMiddle = 68;
           }
           return ByteTextDecodingSupport.decodeTextSlice(-45, this.bytes, textStart, textLength);
         }

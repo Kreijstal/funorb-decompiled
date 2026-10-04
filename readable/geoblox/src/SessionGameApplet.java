@@ -38,7 +38,7 @@ abstract class SessionGameApplet extends GameApplet {
             this.a((byte) 79, "reconnect");
           }
           ClientFlowState.requestSessionExit((byte) 103);
-          TextInputValidator.a((byte) 124, handshakeResult, AudioService.field_a);
+          TextInputValidator.a((byte) 124, handshakeResult, AudioService.sessionResponseText);
           ArchiveLoadStep.loginRetrySuspended = true;
           DisplayNamePanel.connectionRetryDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           return handshakeResult;
@@ -338,7 +338,7 @@ abstract class SessionGameApplet extends GameApplet {
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0)) {
             DebouncedValidationProvider.archiveLoadStatus = -1;
-            SocialListEntry.e(-21754);
+            SocialListEntry.resetArchiveConnectionFailures(-21754);
           }
         }
         if ((DebouncedValidationProvider.archiveLoadStatus == 0) &&
@@ -382,7 +382,7 @@ abstract class SessionGameApplet extends GameApplet {
             (DisplayModeInfo.a((byte) -127, DialRenderer.field_n))) {
           LoginUiSupport.releaseAwtLoadingFonts((byte) -105);
           ConnectionHeaderSupport.evaluateConnectionHeaderGuard((byte) 120);
-          ByteArrayPoolSupport.field_e = ArchiveSource.loadingText;
+          ByteArrayPoolSupport.loadingStatusText = ArchiveSource.loadingText;
           AccountEligibilitySupport.loginReturnAllowed = false;
           CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.field_n, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
           if (!((!LoginProtocolSupport.field_a) &&
@@ -427,7 +427,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (null != TextValidationSupport.field_b) {
               if (!((TextValidationSupport.field_b.ensureIndexLoaded(0)) &&
                   (TextValidationSupport.field_b.loadAllGroups(true)))) {
-                HighscoreNameEntry.a(WidgetSkinState.a(LoginProtocolSupport.field_c, 2147483647, CachedTextLayout.field_g, TextValidationSupport.field_b), -2, 0.0f);
+                HighscoreNameEntry.setLoadingProgress(WidgetSkinState.a(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.field_b), -2, 0.0f);
                 break L30;
               }
             }
@@ -447,7 +447,7 @@ abstract class SessionGameApplet extends GameApplet {
           if (null != TextTemplateLookupSupport.bootstrapArchiveLoadSequence) {
             bootstrapSequenceReadySnapshot = (!TextTemplateLookupSupport.bootstrapArchiveLoadSequence.pollLoaded(true)) ? 0 : 1;
             idleThresholdOrArchivePendingOrSequenceReady = bootstrapSequenceReadySnapshot;
-            HighscoreNameEntry.a(TextTemplateLookupSupport.bootstrapArchiveLoadSequence.statusText, -2, TextTemplateLookupSupport.bootstrapArchiveLoadSequence.scaledProgress);
+            HighscoreNameEntry.setLoadingProgress(TextTemplateLookupSupport.bootstrapArchiveLoadSequence.statusText, -2, TextTemplateLookupSupport.bootstrapArchiveLoadSequence.scaledProgress);
           }
           if (idleThresholdOrArchivePendingOrSequenceReady != 0) {
             VisualPropertyOverrides.clientBootstrapStage = 20;
@@ -525,8 +525,8 @@ abstract class SessionGameApplet extends GameApplet {
             if (uiAction == 1) {
               queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.i(actionGuard ^ -26), LoginPanel.h((byte) -42), -121);
               if (queryOrHandshakeResult != -1) {
-                UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.field_i, AudioService.field_a);
-                AudioService.field_a = null;
+                UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.field_i, AudioService.sessionResponseText);
+                AudioService.sessionResponseText = null;
                 WidgetSkinState.field_i = null;
               }
               emailAvailabilityResult = HotspotTextWidget.a((byte) 111);
@@ -537,8 +537,8 @@ abstract class SessionGameApplet extends GameApplet {
             if (uiAction == 2) {
               queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.f(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.a((byte) 27));
               if (queryOrHandshakeResult != -1) {
-                StrongCacheReference.publishAccountUsernameResult(AudioService.field_a, queryOrHandshakeResult, (byte) 30, WidgetSkinState.field_i);
-                AudioService.field_a = null;
+                StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResult, (byte) 30, WidgetSkinState.field_i);
+                AudioService.sessionResponseText = null;
                 WidgetSkinState.field_i = null;
               }
             }
@@ -546,7 +546,7 @@ abstract class SessionGameApplet extends GameApplet {
               if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
                   (DebouncedValidationProvider.archiveLoadStatus != 0)) {
                 DebouncedValidationProvider.archiveLoadStatus = -1;
-                SocialListEntry.e(-21754);
+                SocialListEntry.resetArchiveConnectionFailures(-21754);
               }
               if (!suppressLoginHandshake) {
                 queryOrHandshakeResult = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.a(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
@@ -557,8 +557,8 @@ abstract class SessionGameApplet extends GameApplet {
                     ProgressBarWidget.field_G = false;
                     SpriteConstructionSupport.clientScreenStage = 10;
                   } else {
-                    TextInputValidator.a((byte) 124, queryOrHandshakeResult, AudioService.field_a);
-                    AudioService.field_a = null;
+                    TextInputValidator.a((byte) 124, queryOrHandshakeResult, AudioService.sessionResponseText);
+                    AudioService.sessionResponseText = null;
                   }
                 }
               } else {

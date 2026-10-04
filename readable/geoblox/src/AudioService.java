@@ -2,38 +2,38 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AudioService implements Runnable {
-    PlatformTaskDispatcher field_b;
+    PlatformTaskDispatcher taskDispatcher;
     static Sprite[] screenTitleSprites;
-    volatile AudioOutput[] field_g;
-    static String field_a;
+    volatile AudioOutput[] outputs;
+    static String sessionResponseText;
     static int canvasWidth;
-    volatile boolean field_c;
-    volatile boolean field_f;
+    volatile boolean running;
+    volatile boolean stopRequested;
     static long sessionActivityStartMillis;
 
-    public static void a(int param0) {
-        field_a = null;
+    public static void releaseAudioServiceResources(int methodGuard) {
+        sessionResponseText = null;
         screenTitleSprites = null;
-        if (param0 < 82) {
+        if (methodGuard < 82) {
             screenTitleSprites = (Sprite[]) null;
         }
     }
 
-    final static String a(byte param0) {
+    final static String getBootstrapLoadingStatusText(byte methodGuard) {
         if (VisualPropertyOverrides.clientBootstrapStage < 2) {
-            return SocialListEntry.field_lb;
+            return SocialListEntry.connectingToUpdateServerText;
         }
         if (!(FadingDialog.field_J == null)) {
             if (!FadingDialog.field_J.ensureIndexLoaded(0)) {
-                return LoginProtocolSupport.field_c;
+                return LoginProtocolSupport.waitingForBootstrapText;
             }
-            return CachedTextLayout.field_g;
+            return CachedTextLayout.loadingBootstrapText;
         }
         if (!DirectByteStorage.field_h.ensureIndexLoaded(0)) {
             return TextWidgetRenderer.waitingForGraphicsText;
         }
-        if (param0 >= -59) {
-            AudioService.a((byte) -7);
+        if (methodGuard >= -59) {
+            AudioService.getBootstrapLoadingStatusText((byte) -7);
         }
         if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -127)) {
             return AccountWelcomePanel.loadingGraphicsText + " - " + DirectByteStorage.field_h.getGroupProgressByName(0, "commonui") + "%";
@@ -54,34 +54,34 @@ final class AudioService implements Runnable {
     }
 
     public final void run() {
-        int var1_int = 0;
-        AudioOutput var2 = null;
-        int var4 = Geoblox.clientControlFlowFlag;
-        this.field_c = true;
+        int outputIndex = 0;
+        AudioOutput output = null;
+        int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+        this.running = true;
         try {
-            while (!this.field_f) {
-                for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = this.field_g[var1_int];
-                    if (var2 != null) {
-                        var2.b();
+            while (!this.stopRequested) {
+                for (outputIndex = 0; outputIndex < 2; outputIndex++) {
+                    output = this.outputs[outputIndex];
+                    if (output != null) {
+                        output.b();
                     }
                 }
                 ByteTextDecodingSupport.sleepMillis(0, 10L);
-                Object var5 = (Object) null;
-                OpacityWidget.a(this.field_b, (byte) 116, (Object) null);
+                Object unusedNullEventSource = (Object) null;
+                OpacityWidget.a(this.taskDispatcher, (byte) 116, (Object) null);
             }
-        } catch (Exception exception) {
-            String var6 = (String) null;
-            IterableNodeHashTable.reportClientError((Throwable) ((Object) exception), (String) null, (byte) 125);
+        } catch (Exception audioServiceFailure) {
+            String unusedNullErrorMessage = (String) null;
+            IterableNodeHashTable.reportClientError((Throwable) ((Object) audioServiceFailure), (String) null, (byte) 125);
         } finally {
-            this.field_c = false;
+            this.running = false;
         }
     }
 
     AudioService() {
-        this.field_g = new AudioOutput[2];
-        this.field_f = false;
-        this.field_c = false;
+        this.outputs = new AudioOutput[2];
+        this.stopRequested = false;
+        this.running = false;
     }
 
     static {

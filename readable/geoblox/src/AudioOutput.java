@@ -66,14 +66,14 @@ class AudioOutput {
                 if ((field_d > 0) &&
                     (field_r == null)) {
                   field_r = new AudioService();
-                  field_r.field_b = param0;
+                  field_r.taskDispatcher = param0;
                   param0.startThread((Runnable) ((Object) field_r), 0, field_d);
                 }
                 if (field_r != null) {
-                  if (field_r.field_g[param2] != null) {
+                  if (field_r.outputs[param2] != null) {
                     throw new IllegalArgumentException();
                   }
-                  field_r.field_g[param2] = (AudioOutput) ((Object) var5);
+                  field_r.outputs[param2] = (AudioOutput) ((Object) var5);
                 }
                 stackIn_21_0 = var4;
                 return (AudioOutput) ((Object) stackIn_21_0);
@@ -116,17 +116,17 @@ class AudioOutput {
         if (field_r != null) {
           var1 = 1;
           for (var2 = 0; var2 < 2; var2++) {
-            if (field_r.field_g[var2] == this) {
-              field_r.field_g[var2] = null;
+            if (field_r.outputs[var2] == this) {
+              field_r.outputs[var2] = null;
             }
-            if (field_r.field_g[var2] == null) {
+            if (field_r.outputs[var2] == null) {
               continue;
             }
             var1 = 0;
           }
           if (!(var1 == 0)) {
-            field_r.field_f = true;
-            while (field_r.field_c) {
+            field_r.stopRequested = true;
+            while (field_r.running) {
               ByteTextDecodingSupport.sleepMillis(0, 50L);
             }
             field_r = null;

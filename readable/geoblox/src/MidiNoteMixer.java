@@ -6,7 +6,7 @@ final class MidiNoteMixer extends PcmStream {
     static String fullscreenFocusOrResolutionText;
     static boolean field_p;
     IntrusiveDeque field_l;
-    static int field_j;
+    static int receivedSocialSettingLow;
     PcmStreamMixer field_m;
     static int thirdPreviousPacketOpcode;
 
@@ -308,7 +308,7 @@ final class MidiNoteMixer extends PcmStream {
     static {
         field_p = false;
         fullscreenFocusOrResolutionText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
-        field_j = 2;
+        receivedSocialSettingLow = 2;
         thirdPreviousPacketOpcode = -1;
     }
 }
