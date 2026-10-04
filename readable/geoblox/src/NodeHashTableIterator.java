@@ -68,20 +68,17 @@ final class NodeHashTableIterator implements Iterator {
           this.lastReturnedNode = nextNodeInCurrentBucket;
           return nextNodeInCurrentBucket;
         }
-        while (true) {
+        do {
           if (this.nextBucketIndex >= this.table.bucketCount) {
             return null;
           }
           bucketBeforeAdvance = this.nextBucketIndex;
           this.nextBucketIndex = this.nextBucketIndex + 1;
           firstNodeInNextBucket = this.table.bucketSentinels[bucketBeforeAdvance].nextNode;
-          if (firstNodeInNextBucket == this.table.bucketSentinels[this.nextBucketIndex - 1]) {
-            continue;
-          }
-          this.nextNode = firstNodeInNextBucket.nextNode;
-          this.lastReturnedNode = firstNodeInNextBucket;
-          return firstNodeInNextBucket;
-        }
+        } while (firstNodeInNextBucket == this.table.bucketSentinels[this.nextBucketIndex - 1]);
+        this.nextNode = firstNodeInNextBucket.nextNode;
+        this.lastReturnedNode = firstNodeInNextBucket;
+        return firstNodeInNextBucket;
     }
 
     public static void releaseSharedResources(int methodGuard) {

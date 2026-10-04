@@ -28,7 +28,7 @@ final class PcmStreamMixer extends PcmStream {
         int nextFrameOffset = 0;
         Throwable unusedMonitorExceptionCarrier = null;
         Object listenerMonitor = null;
-        while (true) {
+        do {
           if (this.nextListenerFrameOffset < 0) {
             this.mixChildStreams(destination, destinationOffset, frameCount);
             return;
@@ -56,11 +56,8 @@ final class PcmStreamMixer extends PcmStream {
               this.removeListener(listener);
             }
           }
-          if (frameCount != 0) {
-            continue;
-          }
-          return;
-        }
+        } while (frameCount != 0);
+        return;
     }
 
     private final void insertListenerByFrameOffset(IntrusiveNode searchNode, PcmMixerListener listener) {
@@ -98,7 +95,7 @@ final class PcmStreamMixer extends PcmStream {
         int nextFrameOffset = 0;
         Throwable unusedMonitorExceptionCarrier = null;
         Object listenerMonitor = null;
-        while (true) {
+        do {
           if (this.nextListenerFrameOffset < 0) {
             this.skipChildStreams(frameCount);
             return;
@@ -125,11 +122,8 @@ final class PcmStreamMixer extends PcmStream {
               this.removeListener(listener);
             }
           }
-          if (frameCount != 0) {
-            continue;
-          }
-          return;
-        }
+        } while (frameCount != 0);
+        return;
     }
 
     private final void normalizeListenerFrameOffsets() {

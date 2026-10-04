@@ -182,18 +182,15 @@ class ByteArrayBuffer extends IntrusiveNode {
           throw new IllegalStateException("");
         }
         textStart = this.position;
-        while (true) {
+        do {
           textByteIndex = this.position;
           this.position = this.position + 1;
-          if (this.bytes[textByteIndex] != 0) {
-            continue;
-          }
-          textLength = -textStart + (this.position - 1);
-          if (textLength != 0) {
-            return ByteTextDecodingSupport.decodeTextSlice(methodGuard ^ -27439, this.bytes, textStart, textLength);
-          }
-          return "";
+        } while (this.bytes[textByteIndex] != 0);
+        textLength = -textStart + (this.position - 1);
+        if (textLength != 0) {
+          return ByteTextDecodingSupport.decodeTextSlice(methodGuard ^ -27439, this.bytes, textStart, textLength);
         }
+        return "";
     }
 
     final void backpatchLengthShortBE(int length, boolean preserveHashTables) {
@@ -875,21 +872,18 @@ class ByteArrayBuffer extends IntrusiveNode {
         int textStart;
         int textLength;
         textStart = this.position;
-        while (true) {
+        do {
           textByteIndex = this.position;
           this.position = this.position + 1;
-          if (0 != this.bytes[textByteIndex]) {
-            continue;
-          }
-          textLength = this.position + (-textStart - 1);
-          if (textLength == 0) {
-            return "";
-          }
-          if (methodGuard < 94) {
-            receivedSocialSettingMiddle = 68;
-          }
-          return ByteTextDecodingSupport.decodeTextSlice(-45, this.bytes, textStart, textLength);
+        } while (0 != this.bytes[textByteIndex]);
+        textLength = this.position + (-textStart - 1);
+        if (textLength == 0) {
+          return "";
         }
+        if (methodGuard < 94) {
+          receivedSocialSettingMiddle = 68;
+        }
+        return ByteTextDecodingSupport.decodeTextSlice(-45, this.bytes, textStart, textLength);
     }
 
     final int readSignedSmart(int methodGuard) {

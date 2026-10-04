@@ -144,7 +144,7 @@ final class IntrusiveNodeHashTable {
         IntrusiveNode nextNonemptyBucketNode;
         IntrusiveNode currentBucketNode;
         if (this.nextIterationBucket <= 0) {
-          while (true) {
+          do {
             if (this.bucketCount <= this.nextIterationBucket) {
               guardResidue = 47 % ((methodGuard - 28) / 38);
               return null;
@@ -152,19 +152,16 @@ final class IntrusiveNodeHashTable {
             initialBucketBeforeAdvance = this.nextIterationBucket;
             this.nextIterationBucket = this.nextIterationBucket + 1;
             firstNonemptyBucketNode = this.bucketSentinels[initialBucketBeforeAdvance].nextNode;
-            if (this.bucketSentinels[-1 + this.nextIterationBucket] == firstNonemptyBucketNode) {
-              continue;
-            }
-            this.iterationCursor = firstNonemptyBucketNode.nextNode;
-            return firstNonemptyBucketNode;
-          }
+          } while (this.bucketSentinels[-1 + this.nextIterationBucket] == firstNonemptyBucketNode);
+          this.iterationCursor = firstNonemptyBucketNode.nextNode;
+          return firstNonemptyBucketNode;
         }
         if (this.iterationCursor != this.bucketSentinels[this.nextIterationBucket - 1]) {
           currentBucketNode = this.iterationCursor;
           this.iterationCursor = currentBucketNode.nextNode;
           return currentBucketNode;
         }
-        while (true) {
+        do {
           if (this.bucketCount <= this.nextIterationBucket) {
             guardResidue = 47 % ((methodGuard - 28) / 38);
             return null;
@@ -172,12 +169,9 @@ final class IntrusiveNodeHashTable {
           nextBucketBeforeAdvance = this.nextIterationBucket;
           this.nextIterationBucket = this.nextIterationBucket + 1;
           nextNonemptyBucketNode = this.bucketSentinels[nextBucketBeforeAdvance].nextNode;
-          if (this.bucketSentinels[-1 + this.nextIterationBucket] == nextNonemptyBucketNode) {
-            continue;
-          }
-          this.iterationCursor = nextNonemptyBucketNode.nextNode;
-          return nextNonemptyBucketNode;
-        }
+        } while (this.bucketSentinels[-1 + this.nextIterationBucket] == nextNonemptyBucketNode);
+        this.iterationCursor = nextNonemptyBucketNode.nextNode;
+        return nextNonemptyBucketNode;
     }
 
     static {

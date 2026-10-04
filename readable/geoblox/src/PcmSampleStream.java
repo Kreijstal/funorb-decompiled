@@ -160,7 +160,7 @@ final class PcmSampleStream extends PcmStream {
 
     private final int mixReverseToBoundary(int[] destination, int destinationOffset, int sampleBoundaryFixed, int destinationEnd, int boundarySample) {
         int rampDestinationEnd;
-        while (true) {
+        do {
           if (this.rampFramesRemaining <= 0) {
             if ((this.sampleStepFixed == -256) &&
                 ((this.samplePositionFixed & 255) == 0)) {
@@ -197,11 +197,8 @@ final class PcmSampleStream extends PcmStream {
           if (this.rampFramesRemaining != 0) {
             return destinationOffset;
           }
-          if (!this.finishOrContinueVolumeRamp()) {
-            continue;
-          }
-          return destinationEnd;
-        }
+        } while (!this.finishOrContinueVolumeRamp());
+        return destinationEnd;
     }
 
     final PcmStream firstChildStream() {
@@ -214,7 +211,7 @@ final class PcmSampleStream extends PcmStream {
 
     private final int mixForwardToBoundary(int[] destination, int destinationOffset, int sampleBoundaryFixed, int destinationEnd, int boundarySample) {
         int rampDestinationEnd;
-        while (true) {
+        do {
           if (this.rampFramesRemaining <= 0) {
             if ((this.sampleStepFixed == 256) &&
                 ((this.samplePositionFixed & 255) == 0)) {
@@ -251,11 +248,8 @@ final class PcmSampleStream extends PcmStream {
           if (this.rampFramesRemaining != 0) {
             return destinationOffset;
           }
-          if (!this.finishOrContinueVolumeRamp()) {
-            continue;
-          }
-          return destinationEnd;
-        }
+        } while (!this.finishOrContinueVolumeRamp());
+        return destinationEnd;
     }
 
     final int getSchedulingPriority() {

@@ -343,7 +343,7 @@ final class Bzip2Decoder {
             }
             runLength = -1;
             runWeight = 1;
-            while (true) {
+            do {
               if (symbol != 0) {
                 if (symbol == 1) {
                   runLength = runLength + 2 * runWeight;
@@ -370,22 +370,16 @@ final class Bzip2Decoder {
                 codeBits = codeBits << 1 | nextCodeBit;
               }
               symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-              if (symbol == 0) {
-                continue;
-              }
-              if (symbol == 1) {
-                continue;
-              }
-              runLength++;
-              byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
-              state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;
-              while (runLength > 0) {
-                UsernameResponseSupport.bzip2TransformTable[blockLength] = byteOrBitValue & 255;
-                blockLength++;
-                runLength--;
-              }
-              continue decodeBlockSymbols;
+            } while ((symbol == 0) || (symbol == 1));
+            runLength++;
+            byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
+            state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;
+            while (runLength > 0) {
+              UsernameResponseSupport.bzip2TransformTable[blockLength] = byteOrBitValue & 255;
+              blockLength++;
+              runLength--;
             }
+            continue decodeBlockSymbols;
           }
         }
     }

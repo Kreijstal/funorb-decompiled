@@ -55,7 +55,7 @@ final class PlayfieldRules {
           if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
             return true;
           }
-          while (true) {
+          do {
             previousCircleVerticalOffset = circleVerticalOffset;
             circleVerticalOffset++;
             circleError = circleError + (previousCircleVerticalOffset + circleVerticalOffset);
@@ -91,11 +91,8 @@ final class PlayfieldRules {
             if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex - circleVerticalOffset] != 0) {
               return true;
             }
-            if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] == 0) {
-              continue;
-            }
-            return true;
-          }
+          } while (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] == 0);
+          return true;
         } catch (java.lang.RuntimeException boundaryScanFailure) {
           caughtBoundaryScanFailure = boundaryScanFailure;
           boundaryScanFailureForContext = caughtBoundaryScanFailure;

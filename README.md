@@ -17,12 +17,42 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/06d2b90e35ccc17d3fbacb42fe24678ca8901da1/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/3c7273824f655a21b14668cd12e71a2ecccac07c/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 149 reconstructs thirteen guarded infinite loops as explicit `do…while`
+loops in twelve methods across nine owners. Bzip2 run decoding now repeats while
+`symbol == 0 || symbol == 1`; its decodeBlocks body falls from 381 to 375 lines.
+PCM sample/mixer loops, hash table iterators, timer catch-up, collision scanning,
+packet string readers and bounded random rejection sampling use the same generic
+proof. The complete raw corpus loses 42 lines and fourteen bare continues.
+
+A candidate must have a complete prefix, direct conditional own backedges and
+a noncompleting continuation. Ordered short-circuit OR preserves each guard's
+callbacks, mutations, nullable unboxing and skipped later tests. Own breaks,
+earlier/protected continues, body-owned prefix locals, potentially constant
+guards, unsupported/ambiguous syntax and fallthrough continuations refuse.
+Protected prefix groups, finally overrides, monitors, scalar-parent braces and
+continuation local scopes stay intact. The client control flag may be nonzero.
+
+The emitter suite passes 112 tests with one existing skip. Four new focused
+groups include six native variants checked against 12,096 independent event-model
+cases. A clean tracked decompiler source tar reproduces all 303 Java files and
+unchanged diagnostics, with no hard failures or fallbacks. The shared source proof
+checks all complete expected token streams, 136,607 ordered bindings, 388 override
+pairs and 813 lexical label records; no local or label ordinal migrates.
+
+All 14,618 complete naming rules remain unchanged, with 102,435 recorded edits.
+Both corpora compile, reproduce and reverse byte exactly. The 27 publication
+checks and eight existing native fixtures pass within their recorded scopes,
+including forty Bzip2 payload/partial-output/malformed-input/recovery cases.
+Eight large labeled bodies remain, together with 163 opaque labels, 329 opaque
+fields and 355 short opaque methods. Full assets/gameplay, servers, browser/phone
+and heap/FPS acceptance remain unverified.
 
 Pass 148 adds 560 guarded rules: 31 fields, fifty methods, 194 parameters,
 284 locals and one label. Every declaration in TextWidgetLayout (43),
@@ -969,7 +999,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1`.
+`3ccf8ec3da8a72fe05b08c8f53854cdf9198f2b5a0a993153cc0ada439b1988d`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls
