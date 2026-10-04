@@ -385,7 +385,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   sh.field_y = fk.a(false, (java.awt.Component) ((Object) f.field_kb), ok.field_c, kh.field_d);
                   this.b(117);
                   eg.field_p = ba.a(5000);
-                  L17: while (true) {
+                  do {
                     L18: {
                       if (0L != ka.field_a) {
                         stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
@@ -413,11 +413,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       }
                       break;
                     }
-                    if (var5 == 0) {
-                      continue L17;
-                    }
-                    break;
-                  }
+                  } while (var5 == 0);
                   break L1;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter1) {

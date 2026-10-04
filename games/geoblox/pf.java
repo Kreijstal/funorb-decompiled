@@ -80,13 +80,11 @@ final class pf extends ee implements ga, pl {
               if (var2 == 1) {
                 var4 = var9.h(76);
                 var5 = (se) ((Object) sj.field_g.g(0));
-                while (true) {
-                  if (var5 != null) {
-                    if (!((var5.field_g == var3) &&
-                        (var5.field_j == var4))) {
-                      var5 = (se) ((Object) sj.field_g.d(1));
-                      continue;
-                    }
+                while (var5 != null) {
+                  if (!((var5.field_g == var3) &&
+                      (var5.field_j == var4))) {
+                    var5 = (se) ((Object) sj.field_g.d(1));
+                    continue;
                   }
                   break;
                 }

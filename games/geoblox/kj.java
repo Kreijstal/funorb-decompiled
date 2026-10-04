@@ -821,34 +821,32 @@ final class kj extends ia {
             }
             return;
           }
-          while (true) {
-            if (this.field_C.field_a[var2] == var4) {
-              this.field_C.a(var2);
-              var7 = this.field_C.e(var2);
-              if (1 != var7) {
-                if ((128 & var7) != 0) {
-                  this.c(var7, (byte) 38);
-                }
-                this.field_C.f(var2);
-                this.field_C.b(var2);
-                continue;
+          while (this.field_C.field_a[var2] == var4) {
+            this.field_C.a(var2);
+            var7 = this.field_C.e(var2);
+            if (1 != var7) {
+              if ((128 & var7) != 0) {
+                this.c(var7, (byte) 38);
               }
-              this.field_C.d();
+              this.field_C.f(var2);
               this.field_C.b(var2);
-              if (this.field_C.e()) {
-                if (this.field_l != null) {
-                  this.a(this.field_B, this.field_l, -1706);
-                  this.a((byte) -32);
-                  return;
-                }
-                if ((this.field_B) &&
-                    (var4 != 0)) {
-                  this.field_C.a(var5);
-                } else {
-                  this.a(true, 2097151);
-                  this.field_C.a();
-                  return;
-                }
+              continue;
+            }
+            this.field_C.d();
+            this.field_C.b(var2);
+            if (this.field_C.e()) {
+              if (this.field_l != null) {
+                this.a(this.field_B, this.field_l, -1706);
+                this.a((byte) -32);
+                return;
+              }
+              if ((this.field_B) &&
+                  (var4 != 0)) {
+                this.field_C.a(var5);
+              } else {
+                this.a(true, 2097151);
+                this.field_C.a();
+                return;
               }
             }
             break;
