@@ -35,7 +35,7 @@ public final class Geoblox extends SessionGameApplet {
         if (!(InstrumentPatch.field_n == null)) {
             InstrumentPatch.field_n.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         }
-        MidiNote.a((byte) 124);
+        MidiNote.releaseSessionInputAndCloseSocket((byte) 124);
     }
 
     private final boolean prepareGameAssets(int methodGuard) {
@@ -327,7 +327,7 @@ public final class Geoblox extends SessionGameApplet {
     final void releaseGameResources(byte methodGuard) {
         Geoblox.clearAppletStatics(0);
         GameApplet.c((byte) 122);
-        MidiPcmStream.b(false);
+        MidiPcmStream.clearSharedInputAndSpriteState(false);
         ScorePopupSupport.releaseStaticReferences(9144);
         SharedBufferPools.clearSharedBufferResources(-13575);
         LoginPasswordSupport.releaseLoginPasswordResources(-17525);
@@ -1066,7 +1066,7 @@ public final class Geoblox extends SessionGameApplet {
         }
         this.initializeSessionAppletServices((byte) -70, 9, 8, 10, 0, false, 7, 1);
         MidiPcmStream musicPlaybackStream = new MidiPcmStream();
-        musicPlaybackStream.e(-1636, 9, 128);
+        musicPlaybackStream.setChannelDefaultInstrument(-1636, 9, 128);
         DiskArchiveCache.a((java.awt.Component) ((Object) MessageDialog.gameCanvas), MenuScreen.platformTaskDispatcher, false, musicPlaybackStream, true, 22050);
         this.enableOptionalSessionPacketFamilies(false, false, true, true, -95);
     }

@@ -161,7 +161,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           }
           var3 = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           if ((EntityMotionSupport.field_b != 0) &&
-              (MidiNote.field_f < 0)) {
+              (MidiNote.stagedIncomingPacketOpcode < 0)) {
             var5_ref_ma = (DelayedIncomingPacket) ((Object) MeshPrioritySupport.field_c.firstForIteration(0));
             if ((var5_ref_ma != null) &&
                 (var3 > var5_ref_ma.deliveryTimeMillis)) {
@@ -179,14 +179,14 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             }
           }
           while (true) {
-            if (MidiNote.field_f < 0) {
+            if (MidiNote.stagedIncomingPacketOpcode < 0) {
               LogoCompositor.sessionPacketBuffer.position = 0;
               if (!UiWidget.b(30000, 1)) {
                 return false;
               }
-              MidiNote.field_f = LogoCompositor.sessionPacketBuffer.readCipherByte((byte) 122);
+              MidiNote.stagedIncomingPacketOpcode = LogoCompositor.sessionPacketBuffer.readCipherByte((byte) 122);
               LogoCompositor.sessionPacketBuffer.position = 0;
-              AchievementSubmission.field_k = param1[MidiNote.field_f];
+              AchievementSubmission.field_k = param1[MidiNote.stagedIncomingPacketOpcode];
             }
             if (!TriangleMesh.a(false)) {
               return false;
@@ -195,8 +195,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
               MidiNoteMixer.thirdPreviousPacketOpcode = AttachedEntityRenderer.secondPreviousPacketOpcode;
               AttachedEntityRenderer.secondPreviousPacketOpcode = VisualPropertyNode.previousPacketOpcode;
               VisualPropertyNode.previousPacketOpcode = ScorePopup.currentPacketOpcode;
-              ScorePopup.currentPacketOpcode = MidiNote.field_f;
-              MidiNote.field_f = -1;
+              ScorePopup.currentPacketOpcode = MidiNote.stagedIncomingPacketOpcode;
+              MidiNote.stagedIncomingPacketOpcode = -1;
               return true;
             }
             var5 = EntityMotionSupport.field_b;
@@ -206,12 +206,12 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
                 var5 = 0;
               }
             }
-            var6 = new DelayedIncomingPacket((long)var5 + var3, MidiNote.field_f, new byte[AchievementSubmission.field_k]);
+            var6 = new DelayedIncomingPacket((long)var5 + var3, MidiNote.stagedIncomingPacketOpcode, new byte[AchievementSubmission.field_k]);
             for (var7 = 0; AchievementSubmission.field_k > var7; var7++) {
               var6.payload[var7] = LogoCompositor.sessionPacketBuffer.bytes[var7];
             }
             MeshPrioritySupport.field_c.addLast(-108, var6);
-            MidiNote.field_f = -1;
+            MidiNote.stagedIncomingPacketOpcode = -1;
             continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

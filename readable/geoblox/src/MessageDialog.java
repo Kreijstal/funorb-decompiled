@@ -34,7 +34,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           if (!this.retryButtonAction) {
             ArchiveLoadSequence.a(NodeHashTableIterator.getActiveApplet(111), (byte) 112, "tochangedisplayname.ws");
           } else {
-            MidiNote.a(3, false);
+            MidiNote.setPendingLoginUiAction(3, false);
             this.dismissDialog((byte) -104);
           }
           return;

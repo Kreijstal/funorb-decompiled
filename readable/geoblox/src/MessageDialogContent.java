@@ -186,7 +186,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             }
             var7 = this.buttonActionIds[var6_int];
             if (var7 != -1) {
-              MidiNote.a(this.buttonActionIds[var6_int], false);
+              MidiNote.setPendingLoginUiAction(this.buttonActionIds[var6_int], false);
             } else {
               this.messageDialog.dismissDialog((byte) -104);
             }

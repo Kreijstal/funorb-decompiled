@@ -5,35 +5,35 @@ final class MidiNote extends IntrusiveNode {
     PcmSample pcmSample;
     static int keyboardEventFrameEndIndex;
     int releaseEnvelopeTime;
-    int field_l;
-    int field_k;
-    int field_w;
-    int field_q;
-    static int field_f;
+    int decayTime;
+    int volumeEnvelopeIndex;
+    int velocityVolumeScale;
+    int releaseEnvelopeIndex;
+    static int stagedIncomingPacketOpcode;
     int framesUntilUpdate;
     InstrumentPatch instrumentPatch;
-    int field_E;
-    int field_s;
+    int basePitchFixed;
+    int portamentoScale;
     PcmSampleStream sampleStream;
-    int field_m;
+    int vibratoPhase;
     int channelIndex;
-    int field_h;
+    int notePan;
     static int archiveLanguageId;
     int retriggerPhaseFixed;
     int keyGroup;
-    int field_o;
-    int field_j;
+    int volumeEnvelopeTime;
+    int ageUpdates;
     int keyNumber;
-    int field_n;
+    int portamentoPitchDelta;
     static int recordsPerKindAndCategoryLimit;
     InstrumentEnvelope envelope;
 
-    final static void a(byte param0) {
-        int var1 = -125 / ((param0 - 56) / 54);
+    final static void releaseSessionInputAndCloseSocket(byte methodGuard) {
+        int guardResidue = -125 / ((methodGuard - 56) / 54);
         FullscreenSupport.exitActiveFullscreen((byte) -90);
         if (null != MessageDialog.gameCanvas) {
             EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
-            MidiPcmStream.c(-11099);
+            MidiPcmStream.detachKeyboardListener(-11099);
             ValidatedTextInputWidget.b(true);
             TextLayout.a((byte) -121);
             if (UsernameSuggestionsPanel.g(-88)) {
@@ -45,7 +45,7 @@ final class MidiNote extends IntrusiveNode {
             Bzip2DecoderState.closeSessionSocket((byte) -126);
             return;
         }
-        MidiPcmStream.c(-11099);
+        MidiPcmStream.detachKeyboardListener(-11099);
         ValidatedTextInputWidget.b(true);
         TextLayout.a((byte) -121);
         if (!UsernameSuggestionsPanel.g(-88)) {
@@ -57,24 +57,24 @@ final class MidiNote extends IntrusiveNode {
         Bzip2DecoderState.closeSessionSocket((byte) -126);
     }
 
-    final static void a(int param0, boolean param1) {
-        if (param1) {
+    final static void setPendingLoginUiAction(int action, boolean methodGuard) {
+        if (methodGuard) {
             archiveLanguageId = 99;
-            GzipInflater.pendingLoginUiAction = param0;
+            GzipInflater.pendingLoginUiAction = action;
             return;
         }
-        GzipInflater.pendingLoginUiAction = param0;
+        GzipInflater.pendingLoginUiAction = action;
     }
 
-    final void b(int param0) {
+    final void clearAudioReferences(int methodGuard) {
         this.sampleStream = null;
         this.envelope = null;
-        if (param0 == -1) {
+        if (methodGuard == -1) {
             this.pcmSample = null;
             this.instrumentPatch = null;
             return;
         }
-        field_f = 41;
+        stagedIncomingPacketOpcode = 41;
         this.pcmSample = null;
         this.instrumentPatch = null;
     }
@@ -84,6 +84,6 @@ final class MidiNote extends IntrusiveNode {
 
     static {
         keyboardEventFrameEndIndex = 0;
-        field_f = -1;
+        stagedIncomingPacketOpcode = -1;
     }
 }

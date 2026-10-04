@@ -126,7 +126,7 @@ final class DequeCursor {
           }
           if (GzipInflater.pendingLoginUiAction != noPendingActionCode) {
             pendingAction = GzipInflater.pendingLoginUiAction;
-            MidiNote.a(-1, false);
+            MidiNote.setPendingLoginUiAction(-1, false);
             pendingActionBeforeReturn = pendingAction;
             return pendingActionBeforeReturn;
           }

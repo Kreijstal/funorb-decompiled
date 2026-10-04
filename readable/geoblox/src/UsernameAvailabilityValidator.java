@@ -359,7 +359,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
                 UsernameAvailabilityValidator.d((byte) 81);
             }
             CanvasResizeController.field_e = param1;
-            MidiNote.a(12, param0);
+            MidiNote.setPendingLoginUiAction(12, param0);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "uk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

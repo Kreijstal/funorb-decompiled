@@ -11,7 +11,7 @@ final class LoginPasswordSupport {
         if (methodGuard != -23738) {
             return;
         }
-        MidiNote.a(4, false);
+        MidiNote.setPendingLoginUiAction(4, false);
     }
 
     public static void releaseLoginPasswordResources(int methodGuard) {

@@ -264,7 +264,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     }
 
     final static void h(int param0) {
-        MidiNote.a(17, false);
+        MidiNote.setPendingLoginUiAction(17, false);
         int var1 = -24 / ((param0 + 4) / 34);
     }
 

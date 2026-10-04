@@ -11,7 +11,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
     final static void b(int param0) {
         AgeValidator.field_i = false;
         MeshPrioritySupport.field_d = false;
-        MidiNote.a(-1, false);
+        MidiNote.setPendingLoginUiAction(-1, false);
         WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
         ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
         if (param0 != -6011) {

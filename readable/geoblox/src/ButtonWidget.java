@@ -172,7 +172,7 @@ class ButtonWidget extends UiWidget {
 
     final static void e(int param0) {
         StatefulWidgetRenderer.c(520);
-        MidiNote.a(4, false);
+        MidiNote.setPendingLoginUiAction(4, false);
         if (param0 != 83) {
             ButtonWidget.f((byte) -65);
         }

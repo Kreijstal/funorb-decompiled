@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9b28f84db3508699289032444e3f67e0808ce623/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9c8e6e0fbfeb2d52ee8d46477dc712bea7dd9c89/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 141)
+## Current readability (pass 142)
 
-The export has 13,074 guarded names and 96,034 Java identifier edits, plus 11
-class-name literal edits and 230 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 13,301 guarded names and 97,288 Java identifier edits, plus 11
+class-name literal edits and 238 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,41 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 142 adds 227 guarded rules: 36 fields, 29 methods, 68 parameters,
+91 locals and three labels. Every MidiPcmStream and MidiNote field, method,
+parameter, local and label is now named. All prior complete naming rules remain.
+
+MIDI playback exposes heldNotesByKey versus notesByKeyGroup, default/current
+instrument ids and bank offsets, channel volume/expression/pan/pitch bend,
+modulation/portamento/gain/selected-parameter/retrigger state, and earliest-track
+clock values. dispatchMidiEvent, startNote/releaseNote, computeNoteVolume/Pan/
+SampleStep, resetSynthesisState and advanceMidiEvents identify the existing
+paths. Velocity-squared gain, note age/vibrato/decay/envelope indexes, held and
+release states, note reuse/group replacement and exact controller masks/numbers
+remain. Pressure handlers are still guarded stubs. Pending-score fields retain
+their branches; no owned queue producer or new playback feature is invented.
+
+Shared input/sprite/keyboard/session helpers are named in their actual roles.
+MidiNote.stagedIncomingPacketOpcode comes from SingleChildWidget's real cipher
+header reader and dispatch/delay path; it is not an audio-only status field.
+clearAudioReferences still writes 41 into that packet state on its wrong guard.
+All wrong-guard effects, diagnostics, numeric states, overflow/floating/division,
+callback/partial-effect order, synchronization and client-control reads remain.
+
+The existing eventTrackSelection loop, portamentoReleaseSelection block and
+releaseEnvelopeAdvance block keep their frames and five labeled transfers.
+Only names and label accounting change: 230 to 238 edits. There are 13,301 rules
+and 97,288 identifier edits, plus eleven class-literal and 238 label edits:
+97,537 total. All 13,074 prior complete rules and raw/tool/workflow/stub/native/
+text pins remain unchanged. Both 303-file corpora compile and preserve 136,607
+bindings, 388 overrides and 813 lexical label records; all 303 files reverse
+byte exactly. The 27 publication tests and eight existing native fixtures pass
+within their recorded scopes. Full MIDI controller/envelope/event timing,
+live input/network/audio devices and full-game/assets/server/heap/FPS behavior
+remain unverified. Eight large labeled bodies and 168 opaque labels remain.
+
+Previous naming pass:
 
 Pass 141 adds 418 guarded rules: 13 fields, 28 methods, 227 parameters,
 132 locals and 18 labels. Every PcmSampleStream field, method, parameter,

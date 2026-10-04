@@ -2,67 +2,67 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiPcmStream extends PcmStream {
-    private MidiNote[][] field_D;
-    private int[] field_p;
+    private MidiNote[][] notesByKeyGroup;
+    private int[] channelVolume;
     private MidiTrackReader midiReader;
-    private int[] field_z;
+    private int[] channelPan;
     int[] channelSampleOffsets;
     static boolean[] heldInternalKeys;
     static Sprite jewelsForegroundSprite;
-    private int field_T;
-    private int[] field_r;
+    private int timeScalePerSecond;
+    private int[] channelExpression;
     private IntrusiveNodeHashTable instrumentPatches;
-    private MidiNote[][] field_j;
-    private int[] field_v;
+    private MidiNote[][] heldNotesByKey;
+    private int[] channelPitchBendSensitivity;
     int[] channelRetriggerPhaseRates;
-    private int[] field_S;
+    private int[] channelInstrumentIds;
     int[] channelFlags;
-    private int[] field_L;
-    private int[] field_M;
+    private int[] channelVolumeScale;
+    private int[] channelPortamentoTime;
     static int pendingActionPanelPhase;
-    private int[] field_K;
-    private int field_R;
-    private int[] field_y;
-    private int[] field_s;
+    private int[] channelBankOffsets;
+    private int masterVolume;
+    private int[] channelPitchBend;
+    private int[] channelModulation;
     static int[] queuedKeyboardEventCodes;
-    private int[] field_Q;
+    private int[] channelRetriggerControl;
     static int[] lowBitMasks;
-    private int[] field_F;
-    private int[] field_w;
-    private int field_k;
+    private int[] defaultChannelInstrumentIds;
+    private int[] channelSelectedParameter;
+    private int nextEventTick;
     private MidiNoteMixer noteMixer;
     private boolean loopScore;
-    private int field_t;
-    private long field_x;
-    private long field_A;
-    private boolean field_P;
-    private MusicScore field_l;
-    private int field_U;
+    private int nextTrackIndex;
+    private long playbackTime;
+    private long nextEventTime;
+    private boolean pendingScoreFadeOutNotes;
+    private MusicScore pendingScore;
+    private int pendingScoreTick;
 
     final synchronized void mixInto(int[] destination, int destinationOffset, int frameCount) {
-        int var4_int = 0;
-        long var5 = 0L;
-        int var7 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
+        int timeUnitsPerFrame = 0;
+        long timeAfterFrames = 0L;
+        int framesToEvent = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String destinationDescription = null;
+        RuntimeException caughtMixFailure = null;
+        RuntimeException mixFailure = null;
         try {
           if (this.midiReader.isLoaded()) {
-            var4_int = this.midiReader.tickDivision * this.field_T / AudioOutput.sampleRateHz;
+            timeUnitsPerFrame = this.midiReader.tickDivision * this.timeScalePerSecond / AudioOutput.sampleRateHz;
             while (true) {
-              var5 = (long)frameCount * (long)var4_int + this.field_x;
-              if (this.field_A - var5 >= 0L) {
-                this.field_x = var5;
+              timeAfterFrames = (long)frameCount * (long)timeUnitsPerFrame + this.playbackTime;
+              if (this.nextEventTime - timeAfterFrames >= 0L) {
+                this.playbackTime = timeAfterFrames;
                 break;
               }
-              var7 = (int)((-1L + this.field_A - (this.field_x - (long)var4_int)) / (long)var4_int);
-              this.field_x = this.field_x + (long)var7 * (long)var4_int;
-              this.noteMixer.mixInto(destination, destinationOffset, var7);
-              frameCount = frameCount - var7;
-              destinationOffset = destinationOffset + var7;
-              this.a((byte) 65);
+              framesToEvent = (int)((-1L + this.nextEventTime - (this.playbackTime - (long)timeUnitsPerFrame)) / (long)timeUnitsPerFrame);
+              this.playbackTime = this.playbackTime + (long)framesToEvent * (long)timeUnitsPerFrame;
+              this.noteMixer.mixInto(destination, destinationOffset, framesToEvent);
+              frameCount = frameCount - framesToEvent;
+              destinationOffset = destinationOffset + framesToEvent;
+              this.advanceMidiEvents((byte) 65);
               if (!this.midiReader.isLoaded()) {
                 break;
               }
@@ -71,17 +71,17 @@ final class MidiPcmStream extends PcmStream {
           }
           this.noteMixer.mixInto(destination, destinationOffset, frameCount);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("kj.C(");
+        } catch (java.lang.RuntimeException mixParameterFailure) {
+          caughtMixFailure = mixParameterFailure;
+          mixFailure = caughtMixFailure;
+          failureContextCause = mixFailure;
+          failureContextBuilder = new StringBuilder().append("kj.C(");
           if (destination == null) {
-            stackIn_11_2 = "null";
+            destinationDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(destinationDescription).append(',').append(destinationOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
@@ -89,129 +89,129 @@ final class MidiPcmStream extends PcmStream {
         return 0;
     }
 
-    private final void d(int param0, int param1, int param2) {
-        if (param1 != -2832) {
+    private final void handleChannelPressureStub(int pressureValue, int methodGuard, int channelIndex) {
+        if (methodGuard != -2832) {
             this.stopMusicPlayback(44);
         }
     }
 
-    private final int a(byte param0, MidiNote param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        InstrumentEnvelope var10 = null;
-        InstrumentEnvelope var11 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final int computeNoteVolume(byte methodGuard, MidiNote note) {
+        RuntimeException volumeFailure = null;
+        int volume = 0;
+        int guardResidue = 0;
+        int envelopeTime = 0;
+        int envelopeValue = 0;
+        int segmentStartTime = 0;
+        int segmentEndTime = 0;
+        InstrumentEnvelope noteEnvelope = null;
+        InstrumentEnvelope envelope = null;
+        int zeroVolumeAtReturn = 0;
+        int volumeAtReturn = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String noteDescription = null;
+        RuntimeException caughtVolumeFailure = null;
         try {
-          if (this.field_L[param1.channelIndex] == 0) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0;
+          if (this.channelVolumeScale[note.channelIndex] == 0) {
+            zeroVolumeAtReturn = 0;
+            return zeroVolumeAtReturn;
           }
-          var10 = param1.envelope;
-          var11 = var10;
-          var4 = this.field_p[param1.channelIndex] * this.field_r[param1.channelIndex] + 4096 >> 13;
-          var4 = var4 * var4 + 16384 >> 15;
-          var5 = -83 % ((param0 - 44) / 55);
-          var4 = 16384 + var4 * param1.field_w >> 15;
-          var4 = 128 + var4 * this.field_R >> 8;
-          var4 = var4 * this.field_L[param1.channelIndex] + 128 >> 8;
-          if (var11.decayRate > 0) {
-            var4 = (int)(0.5 + Math.pow(0.5, 0.00001953125 * (double)param1.field_l * (double)var11.decayRate) * (double)var4);
+          noteEnvelope = note.envelope;
+          envelope = noteEnvelope;
+          volume = this.channelVolume[note.channelIndex] * this.channelExpression[note.channelIndex] + 4096 >> 13;
+          volume = volume * volume + 16384 >> 15;
+          guardResidue = -83 % ((methodGuard - 44) / 55);
+          volume = 16384 + volume * note.velocityVolumeScale >> 15;
+          volume = 128 + volume * this.masterVolume >> 8;
+          volume = volume * this.channelVolumeScale[note.channelIndex] + 128 >> 8;
+          if (envelope.decayRate > 0) {
+            volume = (int)(0.5 + Math.pow(0.5, 0.00001953125 * (double)note.decayTime * (double)envelope.decayRate) * (double)volume);
           }
-          if (null != var11.volumeEnvelope) {
-            var6 = param1.field_o;
-            var7 = var11.volumeEnvelope[1 + param1.field_k];
-            if (param1.field_k < var11.volumeEnvelope.length - 2) {
-              var8 = (var10.volumeEnvelope[param1.field_k] & 255) << 8;
-              var9 = (255 & var11.volumeEnvelope[param1.field_k + 2]) << 8;
-              var7 = var7 + (var11.volumeEnvelope[param1.field_k + 3] - var7) * (-var8 + var6) / (var9 - var8);
+          if (null != envelope.volumeEnvelope) {
+            envelopeTime = note.volumeEnvelopeTime;
+            envelopeValue = envelope.volumeEnvelope[1 + note.volumeEnvelopeIndex];
+            if (note.volumeEnvelopeIndex < envelope.volumeEnvelope.length - 2) {
+              segmentStartTime = (noteEnvelope.volumeEnvelope[note.volumeEnvelopeIndex] & 255) << 8;
+              segmentEndTime = (255 & envelope.volumeEnvelope[note.volumeEnvelopeIndex + 2]) << 8;
+              envelopeValue = envelopeValue + (envelope.volumeEnvelope[note.volumeEnvelopeIndex + 3] - envelopeValue) * (-segmentStartTime + envelopeTime) / (segmentEndTime - segmentStartTime);
             }
-            var4 = var4 * var7 + 32 >> 6;
+            volume = volume * envelopeValue + 32 >> 6;
           }
-          if ((param1.releaseEnvelopeTime > 0) &&
-              (var11.releaseEnvelope != null)) {
-            var6 = param1.releaseEnvelopeTime;
-            var7 = var11.releaseEnvelope[1 + param1.field_q];
-            if (-2 + var11.releaseEnvelope.length > param1.field_q) {
-              var8 = var10.releaseEnvelope[param1.field_q] << 8 & 65280;
-              var9 = var11.releaseEnvelope[param1.field_q + 2] << 8 & 65280;
-              var7 = var7 + (var11.releaseEnvelope[param1.field_q + 3] - var7) * (-var8 + var6) / (-var8 + var9);
+          if ((note.releaseEnvelopeTime > 0) &&
+              (envelope.releaseEnvelope != null)) {
+            envelopeTime = note.releaseEnvelopeTime;
+            envelopeValue = envelope.releaseEnvelope[1 + note.releaseEnvelopeIndex];
+            if (-2 + envelope.releaseEnvelope.length > note.releaseEnvelopeIndex) {
+              segmentStartTime = noteEnvelope.releaseEnvelope[note.releaseEnvelopeIndex] << 8 & 65280;
+              segmentEndTime = envelope.releaseEnvelope[note.releaseEnvelopeIndex + 2] << 8 & 65280;
+              envelopeValue = envelopeValue + (envelope.releaseEnvelope[note.releaseEnvelopeIndex + 3] - envelopeValue) * (-segmentStartTime + envelopeTime) / (-segmentStartTime + segmentEndTime);
             }
-            var4 = var7 * var4 + 32 >> 6;
+            volume = envelopeValue * volume + 32 >> 6;
           }
-          stackIn_19_0 = var4;
-          return stackIn_19_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_22_0 = var3;
-          stackIn_22_1 = new StringBuilder().append("kj.KA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_23_2 = "null";
+          volumeAtReturn = volume;
+          return volumeAtReturn;
+        } catch (java.lang.RuntimeException volumeParameterFailure) {
+          caughtVolumeFailure = volumeParameterFailure;
+          volumeFailure = caughtVolumeFailure;
+          failureContextCause = volumeFailure;
+          failureContextBuilder = new StringBuilder().append("kj.KA(").append(methodGuard).append(',');
+          if (note == null) {
+            noteDescription = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            noteDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(noteDescription).append(')').toString());
         }
     }
 
-    private final int a(int param0, MidiNote param1) {
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        InstrumentEnvelope var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        double var7 = 0.0;
+    private final int computeNoteSampleStep(int methodGuard, MidiNote note) {
+        int badGuardStepAtReturn = 0;
+        int sampleStepAtReturn = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String noteDescription = null;
+        RuntimeException caughtStepFailure = null;
+        int pitchFixed = 0;
+        RuntimeException stepFailure = null;
+        InstrumentEnvelope envelope = null;
+        int vibratoDepthOrSampleStep = 0;
+        int vibratoRampUpdates = 0;
+        double vibratoWave = 0.0;
         try {
-          var3_int = (param1.field_n * param1.field_s >> 12) + param1.field_E;
-          var3_int = var3_int + ((-8192 + this.field_y[param1.channelIndex]) * this.field_v[param1.channelIndex] >> 12);
-          var4 = param1.envelope;
-          if (0 < var4.vibratoPhaseStep) {
-            if (!((var4.vibratoDepth <= 0) &&
-                (this.field_s[param1.channelIndex] <= 0))) {
-              var5 = var4.vibratoDepth << 2;
-              var6 = var4.vibratoRampTicks << 1;
-              if (var6 > param1.field_j) {
-                var5 = var5 * param1.field_j / var6;
+          pitchFixed = (note.portamentoPitchDelta * note.portamentoScale >> 12) + note.basePitchFixed;
+          pitchFixed = pitchFixed + ((-8192 + this.channelPitchBend[note.channelIndex]) * this.channelPitchBendSensitivity[note.channelIndex] >> 12);
+          envelope = note.envelope;
+          if (0 < envelope.vibratoPhaseStep) {
+            if (!((envelope.vibratoDepth <= 0) &&
+                (this.channelModulation[note.channelIndex] <= 0))) {
+              vibratoDepthOrSampleStep = envelope.vibratoDepth << 2;
+              vibratoRampUpdates = envelope.vibratoRampTicks << 1;
+              if (vibratoRampUpdates > note.ageUpdates) {
+                vibratoDepthOrSampleStep = vibratoDepthOrSampleStep * note.ageUpdates / vibratoRampUpdates;
               }
-              var5 = var5 + (this.field_s[param1.channelIndex] >> 7);
-              var7 = Math.sin(0.01227184630308513 * (double)(param1.field_m & 511));
-              var3_int = var3_int + (int)(var7 * (double)var5);
+              vibratoDepthOrSampleStep = vibratoDepthOrSampleStep + (this.channelModulation[note.channelIndex] >> 7);
+              vibratoWave = Math.sin(0.01227184630308513 * (double)(note.vibratoPhase & 511));
+              pitchFixed = pitchFixed + (int)(vibratoWave * (double)vibratoDepthOrSampleStep);
             }
           }
-          if (param0 <= 10) {
-            stackIn_10_0 = -116;
-            return stackIn_10_0;
+          if (methodGuard <= 10) {
+            badGuardStepAtReturn = -116;
+            return badGuardStepAtReturn;
           }
-          var5 = (int)((double)(256 * param1.pcmSample.sampleRateHz) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.sampleRateHz + 0.5);
-          stackIn_14_0 = (var5 < 1) ? 1 : var5;
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_17_0 = var3;
-          stackIn_17_1 = new StringBuilder().append("kj.N(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_18_2 = "null";
+          vibratoDepthOrSampleStep = (int)((double)(256 * note.pcmSample.sampleRateHz) * Math.pow(2.0, 0.0003255208333333333 * (double)pitchFixed) / (double)AudioOutput.sampleRateHz + 0.5);
+          sampleStepAtReturn = (vibratoDepthOrSampleStep < 1) ? 1 : vibratoDepthOrSampleStep;
+          return sampleStepAtReturn;
+        } catch (java.lang.RuntimeException stepParameterFailure) {
+          caughtStepFailure = stepParameterFailure;
+          stepFailure = caughtStepFailure;
+          failureContextCause = stepFailure;
+          failureContextBuilder = new StringBuilder().append("kj.N(").append(methodGuard).append(',');
+          if (note == null) {
+            noteDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            noteDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(noteDescription).append(')').toString());
         }
     }
 
@@ -227,18 +227,18 @@ final class MidiPcmStream extends PcmStream {
         NanoFrameTimer.decodedSpritePalette = null;
     }
 
-    private final void a(byte param0, int param1) {
-        MidiNote var3 = null;
-        if (param0 != 39) {
-            this.b((byte) -85, -70);
+    private final void releaseUnmappedPortamentoNotes(byte methodGuard, int channelIndex) {
+        MidiNote note = null;
+        if (methodGuard != 39) {
+            this.resetChannelControllers((byte) -85, -70);
         }
-        if (!((this.channelFlags[param1] & 2) == 0)) {
-            var3 = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
-            while (var3 != null) {
-                if (param1 == var3.channelIndex && null == this.field_j[param1][var3.keyNumber] && var3.releaseEnvelopeTime < 0) {
-                    var3.releaseEnvelopeTime = 0;
+        if (!((this.channelFlags[channelIndex] & 2) == 0)) {
+            note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
+            while (note != null) {
+                if (channelIndex == note.channelIndex && null == this.heldNotesByKey[channelIndex][note.keyNumber] && note.releaseEnvelopeTime < 0) {
+                    note.releaseEnvelopeTime = 0;
                 }
-                var3 = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+                note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
             }
         }
     }
@@ -260,86 +260,86 @@ final class MidiPcmStream extends PcmStream {
           if (note.releaseEnvelopeTime >= 0) {
             if (!((null != note.sampleStream) &&
                 (!note.sampleStream.isSamplePositionOutOfRange()))) {
-              note.b(-1);
+              note.clearAudioReferences(-1);
               note.unlinkNode(completionOrUnlinkFlag);
               if ((0 < note.keyGroup) &&
-                  (note == this.field_D[note.channelIndex][note.keyGroup])) {
-                this.field_D[note.channelIndex][note.keyGroup] = null;
+                  (note == this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
+                this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
                 return true;
               }
               return true;
             }
           }
-          remainingPitchSlideScale = note.field_s;
+          remainingPitchSlideScale = note.portamentoScale;
           if (0 < remainingPitchSlideScale) {
-            remainingPitchSlideScale = remainingPitchSlideScale - (int)(0.5 + 16.0 * Math.pow(2.0, (double)this.field_M[note.channelIndex] * 0.0004921259842519685));
+            remainingPitchSlideScale = remainingPitchSlideScale - (int)(0.5 + 16.0 * Math.pow(2.0, (double)this.channelPortamentoTime[note.channelIndex] * 0.0004921259842519685));
             if (0 > remainingPitchSlideScale) {
               remainingPitchSlideScale = 0;
             }
-            note.field_s = remainingPitchSlideScale;
+            note.portamentoScale = remainingPitchSlideScale;
           }
-          note.sampleStream.setSampleStepMagnitude(this.a(112, note));
+          note.sampleStream.setSampleStepMagnitude(this.computeNoteSampleStep(112, note));
           envelope = note.envelope;
-          note.field_m = note.field_m + envelope.vibratoPhaseStep;
-          note.field_j = note.field_j + 1;
+          note.vibratoPhase = note.vibratoPhase + envelope.vibratoPhaseStep;
+          note.ageUpdates = note.ageUpdates + 1;
           finishNoteInt = completionOrUnlinkFlag ? 1 : 0;
-          keyScalingExponent = 0.000005086263020833333 * (double)((-60 + note.keyNumber << 8) + (note.field_n * note.field_s >> 12));
+          keyScalingExponent = 0.000005086263020833333 * (double)((-60 + note.keyNumber << 8) + (note.portamentoPitchDelta * note.portamentoScale >> 12));
           if (envelope.decayRate > 0) {
             if (envelope.decayKeyScaling > 0) {
-              note.field_l = note.field_l + (int)(128.0 * Math.pow(2.0, (double)envelope.decayKeyScaling * keyScalingExponent) + 0.5);
+              note.decayTime = note.decayTime + (int)(128.0 * Math.pow(2.0, (double)envelope.decayKeyScaling * keyScalingExponent) + 0.5);
             } else {
-              note.field_l = note.field_l + 128;
+              note.decayTime = note.decayTime + 128;
             }
-            if (envelope.decayRate * note.field_l >= 819200) {
+            if (envelope.decayRate * note.decayTime >= 819200) {
               finishNoteInt = 1;
             }
           }
           if (envelope.volumeEnvelope != null) {
             if (envelope.volumeEnvelopeKeyScaling > 0) {
-              note.field_o = note.field_o + (int)(0.5 + 128.0 * Math.pow(2.0, keyScalingExponent * (double)envelope.volumeEnvelopeKeyScaling));
+              note.volumeEnvelopeTime = note.volumeEnvelopeTime + (int)(0.5 + 128.0 * Math.pow(2.0, keyScalingExponent * (double)envelope.volumeEnvelopeKeyScaling));
             } else {
-              note.field_o = note.field_o + 128;
+              note.volumeEnvelopeTime = note.volumeEnvelopeTime + 128;
             }
-            while (note.field_k < -2 + envelope.volumeEnvelope.length) {
-              if ((65280 & envelope.volumeEnvelope[note.field_k + 2] << 8) < note.field_o) {
-                note.field_k = note.field_k + 2;
+            while (note.volumeEnvelopeIndex < -2 + envelope.volumeEnvelope.length) {
+              if ((65280 & envelope.volumeEnvelope[note.volumeEnvelopeIndex + 2] << 8) < note.volumeEnvelopeTime) {
+                note.volumeEnvelopeIndex = note.volumeEnvelopeIndex + 2;
                 continue;
               }
               break;
             }
-            if ((!(note.field_k != -2 + envelope.volumeEnvelope.length) &&
-                !(envelope.volumeEnvelope[note.field_k + 1] != 0))) {
+            if ((!(note.volumeEnvelopeIndex != -2 + envelope.volumeEnvelope.length) &&
+                !(envelope.volumeEnvelope[note.volumeEnvelopeIndex + 1] != 0))) {
               finishNoteInt = 1;
             }
           }
-          L11: {
+          releaseEnvelopeAdvance: {
             if ((note.releaseEnvelopeTime >= 0) &&
                 (envelope.releaseEnvelope != null) &&
                 ((this.channelFlags[note.channelIndex] & 1) == 0)) {
               if ((0 <= note.keyGroup) &&
-                  (note == this.field_D[note.channelIndex][note.keyGroup])) {
-                break L11;
+                  (note == this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
+                break releaseEnvelopeAdvance;
               }
               if (0 < envelope.releaseEnvelopeKeyScaling) {
                 note.releaseEnvelopeTime = note.releaseEnvelopeTime + (int)(0.5 + Math.pow(2.0, keyScalingExponent * (double)envelope.releaseEnvelopeKeyScaling) * 128.0);
               } else {
                 note.releaseEnvelopeTime = note.releaseEnvelopeTime + 128;
               }
-              while (-2 + envelope.releaseEnvelope.length > note.field_q) {
-                if (note.releaseEnvelopeTime > (envelope.releaseEnvelope[note.field_q + 2] & 255) << 8) {
-                  note.field_q = note.field_q + 2;
+              while (-2 + envelope.releaseEnvelope.length > note.releaseEnvelopeIndex) {
+                if (note.releaseEnvelopeTime > (envelope.releaseEnvelope[note.releaseEnvelopeIndex + 2] & 255) << 8) {
+                  note.releaseEnvelopeIndex = note.releaseEnvelopeIndex + 2;
                   continue;
                 }
                 break;
               }
-              if (-2 + envelope.releaseEnvelope.length != note.field_q) {
-                break L11;
+              if (-2 + envelope.releaseEnvelope.length != note.releaseEnvelopeIndex) {
+                break releaseEnvelopeAdvance;
               }
               finishNoteInt = 1;
             }
           }
           if (finishNoteInt == 0) {
-            note.sampleStream.rampVolumeAndPan(note.framesUntilUpdate, this.a((byte) -79, note), this.a(note, 761736646));
+            note.sampleStream.rampVolumeAndPan(note.framesUntilUpdate, this.computeNoteVolume((byte) -79, note), this.computeNotePan(note, 761736646));
             return false;
           }
           note.sampleStream.fadeOutAndUnlink(note.framesUntilUpdate);
@@ -351,12 +351,12 @@ final class MidiPcmStream extends PcmStream {
           if (note.sampleStream.hasRemainingRampFrames()) {
             this.noteMixer.fadingStreams.addChildStream(note.sampleStream);
           }
-          note.b(-1);
+          note.clearAudioReferences(-1);
           if (0 <= note.releaseEnvelopeTime) {
             note.unlinkNode(false);
             if ((0 < note.keyGroup) &&
-                (this.field_D[note.channelIndex][note.keyGroup] == note)) {
-              this.field_D[note.channelIndex][note.keyGroup] = null;
+                (this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note)) {
+              this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
             }
           }
           return true;
@@ -380,19 +380,19 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1) {
-        MidiNote var3 = null;
-        if (!((this.channelFlags[param0] & 4) == 0)) {
-            var3 = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
-            while (var3 != null) {
-                if (!(var3.channelIndex != param0)) {
-                    var3.retriggerPhaseFixed = 0;
+    private final void resetChannelRetriggerPhases(int channelIndex, byte methodGuard) {
+        MidiNote note = null;
+        if (!((this.channelFlags[channelIndex] & 4) == 0)) {
+            note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
+            while (note != null) {
+                if (!(note.channelIndex != channelIndex)) {
+                    note.retriggerPhaseFixed = 0;
                 }
-                var3 = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+                note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
             }
         }
-        if (param1 != 67) {
-            this.field_l = (MusicScore) null;
+        if (methodGuard != 67) {
+            this.pendingScore = (MusicScore) null;
         }
     }
 
@@ -470,74 +470,74 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void b(byte param0, int param1) {
-        if (!(param1 >= 0)) {
-            for (param1 = 0; param1 < 16; param1++) {
-                this.b((byte) -22, param1);
+    private final void resetChannelControllers(byte methodGuard, int channelIndex) {
+        if (!(channelIndex >= 0)) {
+            for (channelIndex = 0; channelIndex < 16; channelIndex++) {
+                this.resetChannelControllers((byte) -22, channelIndex);
             }
             return;
         }
-        this.field_p[param1] = 12800;
-        this.field_z[param1] = 8192;
-        this.field_r[param1] = 16383;
-        this.field_y[param1] = 8192;
-        this.field_s[param1] = 0;
-        this.field_M[param1] = 8192;
-        this.a((byte) 39, param1);
-        this.a(param1, (byte) 67);
-        this.channelFlags[param1] = 0;
-        if (param0 >= -12) {
-            this.field_k = 55;
+        this.channelVolume[channelIndex] = 12800;
+        this.channelPan[channelIndex] = 8192;
+        this.channelExpression[channelIndex] = 16383;
+        this.channelPitchBend[channelIndex] = 8192;
+        this.channelModulation[channelIndex] = 0;
+        this.channelPortamentoTime[channelIndex] = 8192;
+        this.releaseUnmappedPortamentoNotes((byte) 39, channelIndex);
+        this.resetChannelRetriggerPhases(channelIndex, (byte) 67);
+        this.channelFlags[channelIndex] = 0;
+        if (methodGuard >= -12) {
+            this.nextEventTick = 55;
         }
-        this.field_w[param1] = 32767;
-        this.field_v[param1] = 256;
-        this.channelSampleOffsets[param1] = 0;
-        this.f(-112, 8192, param1);
+        this.channelSelectedParameter[channelIndex] = 32767;
+        this.channelPitchBendSensitivity[channelIndex] = 256;
+        this.channelSampleOffsets[channelIndex] = 0;
+        this.setChannelRetriggerControl(-112, 8192, channelIndex);
     }
 
-    private final void a(int param0, int param1, int param2) {
-        this.field_F[param1] = param2;
-        this.field_K[param1] = ProxySocketConnector.andInt(param2, -128);
-        if (param0 != -8581) {
-            this.field_z = (int[]) null;
+    private final void setDefaultInstrumentAndBank(int methodGuard, int channelIndex, int instrumentId) {
+        this.defaultChannelInstrumentIds[channelIndex] = instrumentId;
+        this.channelBankOffsets[channelIndex] = ProxySocketConnector.andInt(instrumentId, -128);
+        if (methodGuard != -8581) {
+            this.channelPan = (int[]) null;
         }
-        this.b(param1, -129, param2);
+        this.selectChannelInstrument(channelIndex, -129, instrumentId);
     }
 
-    private final int a(MidiNote param0, int param1) {
-        int discarded$1 = 0;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        MidiNote var4 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final int computeNotePan(MidiNote note, int methodGuard) {
+        int discardedBadGuardPan = 0;
+        int channelPan = 0;
+        RuntimeException panFailure = null;
+        MidiNote unusedNullNoteBeforeBadGuardCall = null;
+        int upperPanAtReturn = 0;
+        int lowerPanAtReturn = 0;
+        RuntimeException failureContextCause = null;
+        StringBuilder failureContextBuilder = null;
+        String noteDescription = null;
+        RuntimeException caughtPanFailure = null;
         try {
-          var3_int = this.field_z[param0.channelIndex];
-          if (param1 != 761736646) {
-            var4 = (MidiNote) null;
-            discarded$1 = this.a((MidiNote) null, 124);
+          channelPan = this.channelPan[note.channelIndex];
+          if (methodGuard != 761736646) {
+            unusedNullNoteBeforeBadGuardCall = (MidiNote) null;
+            discardedBadGuardPan = this.computeNotePan((MidiNote) null, 124);
           }
-          if (var3_int < 8192) {
-            stackIn_6_0 = var3_int * param0.field_h + 32 >> 6;
-            return stackIn_6_0;
+          if (channelPan < 8192) {
+            lowerPanAtReturn = channelPan * note.notePan + 32 >> 6;
+            return lowerPanAtReturn;
           }
-          stackIn_4_0 = 16384 - (32 + (128 - param0.field_h) * (16384 - var3_int) >> 6);
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("kj.U(");
-          if (param0 == null) {
-            stackIn_10_2 = "null";
+          upperPanAtReturn = 16384 - (32 + (128 - note.notePan) * (16384 - channelPan) >> 6);
+          return upperPanAtReturn;
+        } catch (java.lang.RuntimeException panParameterFailure) {
+          caughtPanFailure = panParameterFailure;
+          panFailure = caughtPanFailure;
+          failureContextCause = panFailure;
+          failureContextBuilder = new StringBuilder().append("kj.U(");
+          if (note == null) {
+            noteDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            noteDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureContextCause), ((StringBuilder) (Object) failureContextBuilder).append(noteDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -587,274 +587,274 @@ final class MidiPcmStream extends PcmStream {
         return null;
     }
 
-    private final void c(int param0, int param1) {
-        MidiNote var3 = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(param1 ^ param1));
-        while (var3 != null) {
-            if ((param0 < 0 || param0 == var3.channelIndex) &&
-                (!(var3.releaseEnvelopeTime >= 0))) {
-                this.field_j[var3.channelIndex][var3.keyNumber] = null;
-                var3.releaseEnvelopeTime = 0;
+    private final void releaseChannelNotes(int channelIndex, int methodGuard) {
+        MidiNote note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard ^ methodGuard));
+        while (note != null) {
+            if ((channelIndex < 0 || channelIndex == note.channelIndex) &&
+                (!(note.releaseEnvelopeTime >= 0))) {
+                this.heldNotesByKey[note.channelIndex][note.keyNumber] = null;
+                note.releaseEnvelopeTime = 0;
             }
-            var3 = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+            note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
         }
     }
 
-    private final void c(int param0, byte param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        if (param1 != 38) {
+    private final void dispatchMidiEvent(int packedEvent, byte methodGuard) {
+        int statusKind;
+        int channelIndex;
+        int firstDataByte;
+        int secondDataByte;
+        int selectedParameter;
+        if (methodGuard != 38) {
           return;
         }
-        var3 = 240 & param0;
-        if (var3 == 128) {
-          var4 = param0 & 15;
-          var5 = (32542 & param0) >> 8;
-          var6 = (param0 & 8361066) >> 16;
-          this.b(23327, var5, var6, var4);
+        statusKind = 240 & packedEvent;
+        if (statusKind == 128) {
+          channelIndex = packedEvent & 15;
+          firstDataByte = (32542 & packedEvent) >> 8;
+          secondDataByte = (packedEvent & 8361066) >> 16;
+          this.releaseNote(23327, firstDataByte, secondDataByte, channelIndex);
           return;
         }
-        if (var3 == 144) {
-          var4 = param0 & 15;
-          var5 = (32525 & param0) >> 8;
-          var6 = 127 & param0 >> 16;
-          if (var6 > 0) {
-            this.c(-1, var4, var6, var5);
+        if (statusKind == 144) {
+          channelIndex = packedEvent & 15;
+          firstDataByte = (32525 & packedEvent) >> 8;
+          secondDataByte = 127 & packedEvent >> 16;
+          if (secondDataByte > 0) {
+            this.startNote(-1, channelIndex, secondDataByte, firstDataByte);
           } else {
-            this.b(23327, var5, 64, var4);
+            this.releaseNote(23327, firstDataByte, 64, channelIndex);
           }
           return;
         }
-        if (var3 == 160) {
-          var4 = 15 & param0;
-          var5 = param0 >> 8 & 127;
-          var6 = (8370933 & param0) >> 16;
-          this.a(-40, var6, var5, var4);
+        if (statusKind == 160) {
+          channelIndex = 15 & packedEvent;
+          firstDataByte = packedEvent >> 8 & 127;
+          secondDataByte = (8370933 & packedEvent) >> 16;
+          this.handlePolyphonicPressureStub(-40, secondDataByte, firstDataByte, channelIndex);
           return;
         }
-        if (var3 != 176) {
-          if (192 == var3) {
-            var4 = param0 & 15;
-            var5 = (32632 & param0) >> 8;
-            this.b(var4, param1 - 167, var5 + this.field_K[var4]);
+        if (statusKind != 176) {
+          if (192 == statusKind) {
+            channelIndex = packedEvent & 15;
+            firstDataByte = (32632 & packedEvent) >> 8;
+            this.selectChannelInstrument(channelIndex, methodGuard - 167, firstDataByte + this.channelBankOffsets[channelIndex]);
             return;
           }
-          if (var3 == 208) {
-            var4 = param0 & 15;
-            var5 = (32669 & param0) >> 8;
-            this.d(var5, param1 ^ -2858, var4);
+          if (statusKind == 208) {
+            channelIndex = packedEvent & 15;
+            firstDataByte = (32669 & packedEvent) >> 8;
+            this.handleChannelPressureStub(firstDataByte, methodGuard ^ -2858, channelIndex);
             return;
           }
-          if (var3 == 224) {
-            var4 = param0 & 15;
-            var5 = (param0 >> 9 & 16256) + ((32673 & param0) >> 8);
-            this.c(-108, var5, var4);
+          if (statusKind == 224) {
+            channelIndex = packedEvent & 15;
+            firstDataByte = (packedEvent >> 9 & 16256) + ((32673 & packedEvent) >> 8);
+            this.setChannelPitchBend(-108, firstDataByte, channelIndex);
             return;
           }
-          var3 = 255 & param0;
-          if (255 != var3) {
+          statusKind = 255 & packedEvent;
+          if (255 != statusKind) {
             return;
           }
-          this.a(true, param1 ^ 2097113);
+          this.resetSynthesisState(true, methodGuard ^ 2097113);
           return;
         }
-        var4 = 15 & param0;
-        var5 = (param0 & 32577) >> 8;
-        var6 = param0 >> 16 & 127;
-        if (0 == var5) {
-          this.field_K[var4] = (var6 << 14) + ProxySocketConnector.andInt(this.field_K[var4], -2080769);
+        channelIndex = 15 & packedEvent;
+        firstDataByte = (packedEvent & 32577) >> 8;
+        secondDataByte = packedEvent >> 16 & 127;
+        if (0 == firstDataByte) {
+          this.channelBankOffsets[channelIndex] = (secondDataByte << 14) + ProxySocketConnector.andInt(this.channelBankOffsets[channelIndex], -2080769);
         }
-        if (var5 == 32) {
-          this.field_K[var4] = (var6 << 7) + ProxySocketConnector.andInt(this.field_K[var4], -16257);
+        if (firstDataByte == 32) {
+          this.channelBankOffsets[channelIndex] = (secondDataByte << 7) + ProxySocketConnector.andInt(this.channelBankOffsets[channelIndex], -16257);
         }
-        if (var5 == 1) {
-          this.field_s[var4] = (var6 << 7) + ProxySocketConnector.andInt(this.field_s[var4], -16257);
+        if (firstDataByte == 1) {
+          this.channelModulation[channelIndex] = (secondDataByte << 7) + ProxySocketConnector.andInt(this.channelModulation[channelIndex], -16257);
         }
-        if (33 == var5) {
-          this.field_s[var4] = var6 + ProxySocketConnector.andInt(-128, this.field_s[var4]);
+        if (33 == firstDataByte) {
+          this.channelModulation[channelIndex] = secondDataByte + ProxySocketConnector.andInt(-128, this.channelModulation[channelIndex]);
         }
-        if (var5 == 5) {
-          this.field_M[var4] = ProxySocketConnector.andInt(-16257, this.field_M[var4]) + (var6 << 7);
+        if (firstDataByte == 5) {
+          this.channelPortamentoTime[channelIndex] = ProxySocketConnector.andInt(-16257, this.channelPortamentoTime[channelIndex]) + (secondDataByte << 7);
         }
-        if (var5 == 37) {
-          this.field_M[var4] = ProxySocketConnector.andInt(-128, this.field_M[var4]) + var6;
+        if (firstDataByte == 37) {
+          this.channelPortamentoTime[channelIndex] = ProxySocketConnector.andInt(-128, this.channelPortamentoTime[channelIndex]) + secondDataByte;
         }
-        if (var5 == 7) {
-          this.field_p[var4] = ProxySocketConnector.andInt(this.field_p[var4], -16257) + (var6 << 7);
+        if (firstDataByte == 7) {
+          this.channelVolume[channelIndex] = ProxySocketConnector.andInt(this.channelVolume[channelIndex], -16257) + (secondDataByte << 7);
         }
-        if (var5 == 39) {
-          this.field_p[var4] = ProxySocketConnector.andInt(-128, this.field_p[var4]) + var6;
+        if (firstDataByte == 39) {
+          this.channelVolume[channelIndex] = ProxySocketConnector.andInt(-128, this.channelVolume[channelIndex]) + secondDataByte;
         }
-        if (var5 == 10) {
-          this.field_z[var4] = ProxySocketConnector.andInt(-16257, this.field_z[var4]) + (var6 << 7);
+        if (firstDataByte == 10) {
+          this.channelPan[channelIndex] = ProxySocketConnector.andInt(-16257, this.channelPan[channelIndex]) + (secondDataByte << 7);
         }
-        if (var5 == 42) {
-          this.field_z[var4] = var6 + ProxySocketConnector.andInt(-128, this.field_z[var4]);
+        if (firstDataByte == 42) {
+          this.channelPan[channelIndex] = secondDataByte + ProxySocketConnector.andInt(-128, this.channelPan[channelIndex]);
         }
-        if (var5 == 11) {
-          this.field_r[var4] = (var6 << 7) + ProxySocketConnector.andInt(-16257, this.field_r[var4]);
+        if (firstDataByte == 11) {
+          this.channelExpression[channelIndex] = (secondDataByte << 7) + ProxySocketConnector.andInt(-16257, this.channelExpression[channelIndex]);
         }
-        if (var5 == 43) {
-          this.field_r[var4] = ProxySocketConnector.andInt(-128, this.field_r[var4]) + var6;
+        if (firstDataByte == 43) {
+          this.channelExpression[channelIndex] = ProxySocketConnector.andInt(-128, this.channelExpression[channelIndex]) + secondDataByte;
         }
-        if (var5 == 64) {
-          if (var6 < 64) {
-            this.channelFlags[var4] = ProxySocketConnector.andInt(this.channelFlags[var4], -2);
+        if (firstDataByte == 64) {
+          if (secondDataByte < 64) {
+            this.channelFlags[channelIndex] = ProxySocketConnector.andInt(this.channelFlags[channelIndex], -2);
           } else {
-            this.channelFlags[var4] = SessionInstanceState.orInt(this.channelFlags[var4], 1);
+            this.channelFlags[channelIndex] = SessionInstanceState.orInt(this.channelFlags[channelIndex], 1);
           }
         }
-        if (var5 == 65) {
-          if (64 <= var6) {
-            this.channelFlags[var4] = SessionInstanceState.orInt(this.channelFlags[var4], 2);
+        if (firstDataByte == 65) {
+          if (64 <= secondDataByte) {
+            this.channelFlags[channelIndex] = SessionInstanceState.orInt(this.channelFlags[channelIndex], 2);
           } else {
-            this.a((byte) 39, var4);
-            this.channelFlags[var4] = ProxySocketConnector.andInt(this.channelFlags[var4], -3);
+            this.releaseUnmappedPortamentoNotes((byte) 39, channelIndex);
+            this.channelFlags[channelIndex] = ProxySocketConnector.andInt(this.channelFlags[channelIndex], -3);
           }
         }
-        if (var5 == 99) {
-          this.field_w[var4] = ProxySocketConnector.andInt(this.field_w[var4], 127) + (var6 << 7);
+        if (firstDataByte == 99) {
+          this.channelSelectedParameter[channelIndex] = ProxySocketConnector.andInt(this.channelSelectedParameter[channelIndex], 127) + (secondDataByte << 7);
         }
-        if (var5 == 98) {
-          this.field_w[var4] = var6 + ProxySocketConnector.andInt(16256, this.field_w[var4]);
+        if (firstDataByte == 98) {
+          this.channelSelectedParameter[channelIndex] = secondDataByte + ProxySocketConnector.andInt(16256, this.channelSelectedParameter[channelIndex]);
         }
-        if (101 == var5) {
-          this.field_w[var4] = (var6 << 7) + (ProxySocketConnector.andInt(this.field_w[var4], 127) + 16384);
+        if (101 == firstDataByte) {
+          this.channelSelectedParameter[channelIndex] = (secondDataByte << 7) + (ProxySocketConnector.andInt(this.channelSelectedParameter[channelIndex], 127) + 16384);
         }
-        if (var5 == 100) {
-          this.field_w[var4] = 16384 + (ProxySocketConnector.andInt(16256, this.field_w[var4]) + var6);
+        if (firstDataByte == 100) {
+          this.channelSelectedParameter[channelIndex] = 16384 + (ProxySocketConnector.andInt(16256, this.channelSelectedParameter[channelIndex]) + secondDataByte);
         }
-        if (120 == var5) {
-          this.b(100, var4);
+        if (120 == firstDataByte) {
+          this.fadeOutChannelNotes(100, channelIndex);
         }
-        if (var5 == 121) {
-          this.b((byte) -72, var4);
+        if (firstDataByte == 121) {
+          this.resetChannelControllers((byte) -72, channelIndex);
         }
-        if (var5 == 123) {
-          this.c(var4, param1 ^ 15421);
+        if (firstDataByte == 123) {
+          this.releaseChannelNotes(channelIndex, methodGuard ^ 15421);
         }
-        if (var5 == 6) {
-          var7 = this.field_w[var4];
-          if (16384 == var7) {
-            this.field_v[var4] = ProxySocketConnector.andInt(this.field_v[var4], -16257) + (var6 << 7);
+        if (firstDataByte == 6) {
+          selectedParameter = this.channelSelectedParameter[channelIndex];
+          if (16384 == selectedParameter) {
+            this.channelPitchBendSensitivity[channelIndex] = ProxySocketConnector.andInt(this.channelPitchBendSensitivity[channelIndex], -16257) + (secondDataByte << 7);
           }
         }
-        if (var5 == 38) {
-          var7 = this.field_w[var4];
-          if (var7 == 16384) {
-            this.field_v[var4] = ProxySocketConnector.andInt(this.field_v[var4], -128) + var6;
+        if (firstDataByte == 38) {
+          selectedParameter = this.channelSelectedParameter[channelIndex];
+          if (selectedParameter == 16384) {
+            this.channelPitchBendSensitivity[channelIndex] = ProxySocketConnector.andInt(this.channelPitchBendSensitivity[channelIndex], -128) + secondDataByte;
           }
         }
-        if (16 == var5) {
-          this.channelSampleOffsets[var4] = ProxySocketConnector.andInt(-16257, this.channelSampleOffsets[var4]) + (var6 << 7);
+        if (16 == firstDataByte) {
+          this.channelSampleOffsets[channelIndex] = ProxySocketConnector.andInt(-16257, this.channelSampleOffsets[channelIndex]) + (secondDataByte << 7);
         }
-        if (48 == var5) {
-          this.channelSampleOffsets[var4] = var6 + ProxySocketConnector.andInt(this.channelSampleOffsets[var4], -128);
+        if (48 == firstDataByte) {
+          this.channelSampleOffsets[channelIndex] = secondDataByte + ProxySocketConnector.andInt(this.channelSampleOffsets[channelIndex], -128);
         }
-        if (var5 == 81) {
-          if (var6 >= 64) {
-            this.channelFlags[var4] = SessionInstanceState.orInt(this.channelFlags[var4], 4);
+        if (firstDataByte == 81) {
+          if (secondDataByte >= 64) {
+            this.channelFlags[channelIndex] = SessionInstanceState.orInt(this.channelFlags[channelIndex], 4);
           } else {
-            this.a(var4, (byte) 67);
-            this.channelFlags[var4] = ProxySocketConnector.andInt(this.channelFlags[var4], -5);
+            this.resetChannelRetriggerPhases(channelIndex, (byte) 67);
+            this.channelFlags[channelIndex] = ProxySocketConnector.andInt(this.channelFlags[channelIndex], -5);
           }
         }
-        if (var5 == 17) {
-          this.f(-118, (var6 << 7) + (this.field_Q[var4] & -16257), var4);
+        if (firstDataByte == 17) {
+          this.setChannelRetriggerControl(-118, (secondDataByte << 7) + (this.channelRetriggerControl[channelIndex] & -16257), channelIndex);
         }
-        if (var5 == 49) {
-          this.f(-102, (-128 & this.field_Q[var4]) + var6, var4);
+        if (firstDataByte == 49) {
+          this.setChannelRetriggerControl(-102, (-128 & this.channelRetriggerControl[channelIndex]) + secondDataByte, channelIndex);
         }
         return;
     }
 
-    private final synchronized void a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = Geoblox.clientControlFlowFlag;
-        if (param1 >= 0) {
-            this.field_L[param1] = param2;
+    private final synchronized void setChannelVolumeScale(byte methodGuard, int channelIndex, int volumeScale) {
+        int channel = 0;
+        int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+        if (channelIndex >= 0) {
+            this.channelVolumeScale[channelIndex] = volumeScale;
         } else {
-            for (var4 = 0; var4 < 16; var4++) {
-                this.field_L[var4] = param2;
+            for (channel = 0; channel < 16; channel++) {
+                this.channelVolumeScale[channel] = volumeScale;
             }
         }
-        if (param0 != 74) {
-            this.a((byte) 100, 93);
+        if (methodGuard != 74) {
+            this.releaseUnmappedPortamentoNotes((byte) 100, 93);
         }
     }
 
-    final synchronized void b(int param0, byte param1) {
-        this.field_R = param0;
-        if (param1 != 22) {
-            this.field_x = 84L;
+    final synchronized void setMasterVolume(int volume, byte methodGuard) {
+        this.masterVolume = volume;
+        if (methodGuard != 22) {
+            this.playbackTime = 84L;
         }
     }
 
-    private final void a(byte param0) {
-        int var2;
-        int var3;
-        int var4;
-        long var5;
-        int var7;
-        var3 = -25 % ((29 - param0) / 34);
-        var2 = this.field_t;
-        var4 = this.field_k;
-        var5 = this.field_A;
-        if ((this.field_l != null) &&
-            (this.field_U == var4)) {
-          this.a(121, this.field_l, this.loopScore, this.field_P);
-          this.a((byte) 73);
+    private final void advanceMidiEvents(byte methodGuard) {
+        int trackIndex;
+        int guardResidue;
+        int eventTick;
+        long eventTime;
+        int event;
+        guardResidue = -25 % ((29 - methodGuard) / 34);
+        trackIndex = this.nextTrackIndex;
+        eventTick = this.nextEventTick;
+        eventTime = this.nextEventTime;
+        if ((this.pendingScore != null) &&
+            (this.pendingScoreTick == eventTick)) {
+          this.loadScoreAndResetSynthesis(121, this.pendingScore, this.loopScore, this.pendingScoreFadeOutNotes);
+          this.advanceMidiEvents((byte) 73);
           return;
         }
-        L1: while (true) {
-          if (var4 != this.field_k) {
-            this.field_k = var4;
-            this.field_A = var5;
-            this.field_t = var2;
-            if ((null != this.field_l) &&
-                (this.field_U < var4)) {
-              this.field_k = this.field_U;
-              this.field_t = -1;
-              this.field_A = this.midiReader.getTickTime(this.field_k);
+        eventTrackSelection: while (true) {
+          if (eventTick != this.nextEventTick) {
+            this.nextEventTick = eventTick;
+            this.nextEventTime = eventTime;
+            this.nextTrackIndex = trackIndex;
+            if ((null != this.pendingScore) &&
+                (this.pendingScoreTick < eventTick)) {
+              this.nextEventTick = this.pendingScoreTick;
+              this.nextTrackIndex = -1;
+              this.nextEventTime = this.midiReader.getTickTime(this.nextEventTick);
             }
             return;
           }
           while (true) {
-            if (this.midiReader.trackTicks[var2] == var4) {
-              this.midiReader.seekTrack(var2);
-              var7 = this.midiReader.readTrackEvent(var2);
-              if (1 != var7) {
-                if ((128 & var7) != 0) {
-                  this.c(var7, (byte) 38);
+            if (this.midiReader.trackTicks[trackIndex] == eventTick) {
+              this.midiReader.seekTrack(trackIndex);
+              event = this.midiReader.readTrackEvent(trackIndex);
+              if (1 != event) {
+                if ((128 & event) != 0) {
+                  this.dispatchMidiEvent(event, (byte) 38);
                 }
-                this.midiReader.readTrackDelta(var2);
-                this.midiReader.saveTrackPosition(var2);
+                this.midiReader.readTrackDelta(trackIndex);
+                this.midiReader.saveTrackPosition(trackIndex);
                 continue;
               }
               this.midiReader.markCurrentTrackEnded();
-              this.midiReader.saveTrackPosition(var2);
+              this.midiReader.saveTrackPosition(trackIndex);
               if (this.midiReader.areAllTracksEnded()) {
-                if (this.field_l != null) {
-                  this.startMusicScore(this.loopScore, this.field_l, -1706);
-                  this.a((byte) -32);
+                if (this.pendingScore != null) {
+                  this.startMusicScore(this.loopScore, this.pendingScore, -1706);
+                  this.advanceMidiEvents((byte) -32);
                   return;
                 }
                 if ((this.loopScore) &&
-                    (var4 != 0)) {
-                  this.midiReader.restartTracks(var5);
+                    (eventTick != 0)) {
+                  this.midiReader.restartTracks(eventTime);
                 } else {
-                  this.a(true, 2097151);
+                  this.resetSynthesisState(true, 2097151);
                   this.midiReader.unload();
                   return;
                 }
               }
             }
-            var2 = this.midiReader.selectEarliestTrack();
-            var4 = this.midiReader.trackTicks[var2];
-            var5 = this.midiReader.getTickTime(var4);
-            continue L1;
+            trackIndex = this.midiReader.selectEarliestTrack();
+            eventTick = this.midiReader.trackTicks[trackIndex];
+            eventTime = this.midiReader.getTickTime(eventTick);
+            continue eventTrackSelection;
           }
         }
     }
@@ -862,72 +862,72 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void startMusicScore(boolean loopPlayback, MusicScore score, int methodGuard) {
         try {
             if (methodGuard != -1706) {
-                this.field_t = -24;
+                this.nextTrackIndex = -24;
             }
-            this.a(methodGuard + 1832, score, loopPlayback, true);
+            this.loadScoreAndResetSynthesis(methodGuard + 1832, score, loopPlayback, true);
         } catch (RuntimeException musicStartFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) musicStartFailure), "kj.PA(" + loopPlayback + ',' + (score != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
-        MidiNote var6;
-        MidiNote var7;
-        var7 = this.field_j[param3][param1];
-        if (var7 == null) {
+    private final void releaseNote(int methodGuard, int keyNumber, int unusedReleaseVelocity, int channelIndex) {
+        MidiNote otherHeldNote;
+        MidiNote note;
+        note = this.heldNotesByKey[channelIndex][keyNumber];
+        if (note == null) {
           return;
         }
-        this.field_j[param3][param1] = null;
-        if (param0 != 23327) {
-          this.field_U = -124;
+        this.heldNotesByKey[channelIndex][keyNumber] = null;
+        if (methodGuard != 23327) {
+          this.pendingScoreTick = -124;
         }
-        L1: {
-          if ((this.channelFlags[param3] & 2) != 0) {
-            var6 = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(param0 ^ 23327));
-            while (var6 != null) {
-              if ((var7.channelIndex == var6.channelIndex) &&
-                  (0 > var6.releaseEnvelopeTime) &&
-                  (var7 != var6)) {
-                var7.releaseEnvelopeTime = 0;
-                break L1;
+        portamentoReleaseSelection: {
+          if ((this.channelFlags[channelIndex] & 2) != 0) {
+            otherHeldNote = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard ^ 23327));
+            while (otherHeldNote != null) {
+              if ((note.channelIndex == otherHeldNote.channelIndex) &&
+                  (0 > otherHeldNote.releaseEnvelopeTime) &&
+                  (note != otherHeldNote)) {
+                note.releaseEnvelopeTime = 0;
+                break portamentoReleaseSelection;
               }
-              var6 = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+              otherHeldNote = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
             }
-            break L1;
+            break portamentoReleaseSelection;
           }
-          var7.releaseEnvelopeTime = 0;
+          note.releaseEnvelopeTime = 0;
         }
     }
 
-    private final void b(int param0, int param1) {
-        MidiNote var3;
-        var3 = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(param0 - 100));
-        while (var3 != null) {
-          if (!((param1 >= 0) &&
-                (param1 != var3.channelIndex))) {
-            if (null != var3.sampleStream) {
-              var3.sampleStream.fadeOutAndUnlink(AudioOutput.sampleRateHz / 100);
-              if (var3.sampleStream.hasRemainingRampFrames()) {
-                this.noteMixer.fadingStreams.addChildStream(var3.sampleStream);
+    private final void fadeOutChannelNotes(int methodGuard, int channelIndex) {
+        MidiNote note;
+        note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard - 100));
+        while (note != null) {
+          if (!((channelIndex >= 0) &&
+                (channelIndex != note.channelIndex))) {
+            if (null != note.sampleStream) {
+              note.sampleStream.fadeOutAndUnlink(AudioOutput.sampleRateHz / 100);
+              if (note.sampleStream.hasRemainingRampFrames()) {
+                this.noteMixer.fadingStreams.addChildStream(note.sampleStream);
               }
-              var3.b(-1);
+              note.clearAudioReferences(-1);
             }
-            if (var3.releaseEnvelopeTime < 0) {
-              this.field_j[var3.channelIndex][var3.keyNumber] = null;
+            if (note.releaseEnvelopeTime < 0) {
+              this.heldNotesByKey[note.channelIndex][note.keyNumber] = null;
             }
-            var3.unlinkNode(false);
+            note.unlinkNode(false);
           }
-          var3 = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+          note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
         }
-        if (param0 != 100) {
-          this.field_x = -48L;
+        if (methodGuard != 100) {
+          this.playbackTime = -48L;
         }
     }
 
     final synchronized void clearInstrumentSampleIds(byte methodGuard) {
         int clientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard <= 65) {
-            this.c(-76, (byte) -34);
+            this.dispatchMidiEvent(-76, (byte) -34);
         }
         InstrumentPatch instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.firstForIteration((byte) 125));
         while (instrumentPatch != null) {
@@ -936,56 +936,56 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void f(int param0, int param1, int param2) {
-        this.field_Q[param2] = param1;
-        if (param0 > -100) {
-            this.a(-75, 124, -68);
+    private final void setChannelRetriggerControl(int methodGuard, int controlValue, int channelIndex) {
+        this.channelRetriggerControl[channelIndex] = controlValue;
+        if (methodGuard > -100) {
+            this.setDefaultInstrumentAndBank(-75, 124, -68);
         }
-        this.channelRetriggerPhaseRates[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1));
+        this.channelRetriggerPhaseRates[channelIndex] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)controlValue));
     }
 
-    private final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        if (param2 != this.field_S[param0]) {
-            this.field_S[param0] = param2;
-            for (var4 = 0; var4 < 128; var4++) {
-                this.field_D[param0][var4] = null;
+    private final void selectChannelInstrument(int channelIndex, int methodGuard, int instrumentId) {
+        int keyGroup = 0;
+        if (instrumentId != this.channelInstrumentIds[channelIndex]) {
+            this.channelInstrumentIds[channelIndex] = instrumentId;
+            for (keyGroup = 0; keyGroup < 128; keyGroup++) {
+                this.notesByKeyGroup[channelIndex][keyGroup] = null;
             }
         }
-        if (param1 != -129) {
-            this.field_v = (int[]) null;
+        if (methodGuard != -129) {
+            this.channelPitchBendSensitivity = (int[]) null;
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedInputAndSpriteState(boolean detachKeyboardWithGuardSideEffect) {
         jewelsForegroundSprite = null;
         queuedKeyboardEventCodes = null;
         heldInternalKeys = null;
         lowBitMasks = null;
-        if (param0) {
-            MidiPcmStream.c(-77);
+        if (detachKeyboardWithGuardSideEffect) {
+            MidiPcmStream.detachKeyboardListener(-77);
         }
     }
 
-    private final void a(boolean param0, int param1) {
-        int var3 = 0;
-        if (!param0) {
-            this.c(-1, 15387);
+    private final void resetSynthesisState(boolean fadeOutNotes, int methodGuard) {
+        int channelIndex = 0;
+        if (!fadeOutNotes) {
+            this.releaseChannelNotes(-1, 15387);
         } else {
-            this.b(100, -1);
+            this.fadeOutChannelNotes(100, -1);
         }
-        if (param1 != 2097151) {
+        if (methodGuard != 2097151) {
             this.skipFrames(108);
         }
-        this.b((byte) -109, -1);
-        for (var3 = 0; var3 < 16; var3++) {
-            this.field_S[var3] = this.field_F[var3];
+        this.resetChannelControllers((byte) -109, -1);
+        for (channelIndex = 0; channelIndex < 16; channelIndex++) {
+            this.channelInstrumentIds[channelIndex] = this.defaultChannelInstrumentIds[channelIndex];
         }
-        int var4 = 0;
-        var3 = var4;
-        while (var4 < 16) {
-            this.field_K[var4] = ProxySocketConnector.andInt(this.field_F[var4], -128);
-            var4++;
+        int bankChannelIndex = 0;
+        channelIndex = bankChannelIndex;
+        while (bankChannelIndex < 16) {
+            this.channelBankOffsets[bankChannelIndex] = ProxySocketConnector.andInt(this.defaultChannelInstrumentIds[bankChannelIndex], -128);
+            bankChannelIndex++;
         }
     }
 
@@ -994,22 +994,22 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final synchronized void skipFrames(int frameCount) {
-        int var2;
-        long var3;
-        int var5;
+        int timeUnitsPerFrame;
+        long timeAfterFrames;
+        int framesToEvent;
         if (this.midiReader.isLoaded()) {
-          var2 = this.field_T * this.midiReader.tickDivision / AudioOutput.sampleRateHz;
+          timeUnitsPerFrame = this.timeScalePerSecond * this.midiReader.tickDivision / AudioOutput.sampleRateHz;
           while (true) {
-            var3 = this.field_x + (long)frameCount * (long)var2;
-            if (-var3 + this.field_A >= 0L) {
-              this.field_x = var3;
+            timeAfterFrames = this.playbackTime + (long)frameCount * (long)timeUnitsPerFrame;
+            if (-timeAfterFrames + this.nextEventTime >= 0L) {
+              this.playbackTime = timeAfterFrames;
               break;
             }
-            var5 = (int)((-1L + ((long)var2 - this.field_x + this.field_A)) / (long)var2);
-            this.field_x = this.field_x + (long)var2 * (long)var5;
-            frameCount = frameCount - var5;
-            this.noteMixer.skipFrames(var5);
-            this.a((byte) -42);
+            framesToEvent = (int)((-1L + ((long)timeUnitsPerFrame - this.playbackTime + this.nextEventTime)) / (long)timeUnitsPerFrame);
+            this.playbackTime = this.playbackTime + (long)timeUnitsPerFrame * (long)framesToEvent;
+            frameCount = frameCount - framesToEvent;
+            this.noteMixer.skipFrames(framesToEvent);
+            this.advanceMidiEvents((byte) -42);
             if (this.midiReader.isLoaded()) {
               continue;
             }
@@ -1035,8 +1035,8 @@ final class MidiPcmStream extends PcmStream {
           if (note.releaseEnvelopeTime >= 0) {
             note.unlinkNode(false);
             if ((0 < note.keyGroup) &&
-                (this.field_D[note.channelIndex][note.keyGroup] == note)) {
-              this.field_D[note.channelIndex][note.keyGroup] = null;
+                (this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note)) {
+              this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
               return true;
             }
           }
@@ -1055,194 +1055,194 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(byte param0, boolean param1) {
+    private final synchronized void unloadScoreAndResetSynthesis(byte methodGuard, boolean fadeOutNotes) {
         this.midiReader.unload();
-        if (param0 < 78) {
-            this.field_y = (int[]) null;
+        if (methodGuard < 78) {
+            this.channelPitchBend = (int[]) null;
         }
-        this.field_l = null;
-        this.a(param1, 2097151);
+        this.pendingScore = null;
+        this.resetSynthesisState(fadeOutNotes, 2097151);
     }
 
-    private final void c(int param0, int param1, int param2, int param3) {
-        MidiNote stackIn_15_1 = null;
-        int stackIn_15_2 = 0;
-        Object stackIn_16_0;
-        boolean stackIn_16_3;
-        MidiNote var5;
-        int var6_int;
-        PcmSample var6;
-        MidiNote var7;
-        MidiNote var8;
-        InstrumentPatch var9;
-        InstrumentPatch var10;
-        this.b(23327, param3, 64, param1);
-        if (0 != (2 & this.channelFlags[param1])) {
-          var5 = (MidiNote) ((Object) this.noteMixer.notes.lastForIteration(false));
-          while (var5 != null) {
-            if ((param1 == var5.channelIndex) &&
-                (var5.releaseEnvelopeTime < 0)) {
-              this.field_j[param1][var5.keyNumber] = null;
-              this.field_j[param1][param3] = var5;
-              var6_int = (var5.field_n * var5.field_s >> 12) + var5.field_E;
-              var5.field_E = var5.field_E + (param3 - var5.keyNumber << 8);
-              var5.keyNumber = param3;
-              var5.field_n = var6_int - var5.field_E;
-              var5.field_s = 4096;
+    private final void startNote(int methodGuard, int channelIndex, int velocity, int keyNumber) {
+        MidiNote offsetNote = null;
+        int offsetMethodGuard = 0;
+        Object unusedOffsetOwnerSnapshot;
+        boolean loopEnabled;
+        MidiNote heldNote;
+        int previousPitchFixed;
+        PcmSample sample;
+        MidiNote note;
+        MidiNote previousGroupNote;
+        InstrumentPatch patch;
+        InstrumentPatch patchAlias;
+        this.releaseNote(23327, keyNumber, 64, channelIndex);
+        if (0 != (2 & this.channelFlags[channelIndex])) {
+          heldNote = (MidiNote) ((Object) this.noteMixer.notes.lastForIteration(false));
+          while (heldNote != null) {
+            if ((channelIndex == heldNote.channelIndex) &&
+                (heldNote.releaseEnvelopeTime < 0)) {
+              this.heldNotesByKey[channelIndex][heldNote.keyNumber] = null;
+              this.heldNotesByKey[channelIndex][keyNumber] = heldNote;
+              previousPitchFixed = (heldNote.portamentoPitchDelta * heldNote.portamentoScale >> 12) + heldNote.basePitchFixed;
+              heldNote.basePitchFixed = heldNote.basePitchFixed + (keyNumber - heldNote.keyNumber << 8);
+              heldNote.keyNumber = keyNumber;
+              heldNote.portamentoPitchDelta = previousPitchFixed - heldNote.basePitchFixed;
+              heldNote.portamentoScale = 4096;
               return;
             }
-            var5 = (MidiNote) ((Object) this.noteMixer.notes.previousForIteration(~param0));
+            heldNote = (MidiNote) ((Object) this.noteMixer.notes.previousForIteration(~methodGuard));
           }
         }
-        var9 = (InstrumentPatch) ((Object) this.instrumentPatches.findByKey((long)this.field_S[param1], (byte) -105));
-        var10 = var9;
-        if (var10 == null) {
+        patch = (InstrumentPatch) ((Object) this.instrumentPatches.findByKey((long)this.channelInstrumentIds[channelIndex], (byte) -105));
+        patchAlias = patch;
+        if (patchAlias == null) {
           return;
         }
-        var6 = var9.keySamples[param3];
-        if (var6 == null) {
+        sample = patch.keySamples[keyNumber];
+        if (sample == null) {
           return;
         }
-        var7 = new MidiNote();
-        var7.channelIndex = param1;
-        var7.instrumentPatch = var10;
-        var7.pcmSample = var6;
-        var7.envelope = var9.keyEnvelopes[param3];
-        var7.keyGroup = var9.keyGroups[param3];
-        var7.keyNumber = param3;
-        var7.field_w = var9.keyVolumes[param3] * var10.globalVolume * (param2 * param2) + 1024 >> 11;
-        var7.field_h = 255 & var9.keyPans[param3];
-        var7.field_E = (param3 << 8) - (var9.pitchOffsetsAndLoopFlag[param3] & 32767);
-        var7.field_q = 0;
-        var7.field_l = 0;
-        var7.field_o = 0;
-        var7.field_k = 0;
-        var7.releaseEnvelopeTime = -1;
-        if (param0 == ~this.channelSampleOffsets[param1]) {
-          var7.sampleStream = PcmSampleStream.createForSampleStep(var6, this.a(92, var7), this.a((byte) 117, var7), this.a(var7, 761736646));
+        note = new MidiNote();
+        note.channelIndex = channelIndex;
+        note.instrumentPatch = patchAlias;
+        note.pcmSample = sample;
+        note.envelope = patch.keyEnvelopes[keyNumber];
+        note.keyGroup = patch.keyGroups[keyNumber];
+        note.keyNumber = keyNumber;
+        note.velocityVolumeScale = patch.keyVolumes[keyNumber] * patchAlias.globalVolume * (velocity * velocity) + 1024 >> 11;
+        note.notePan = 255 & patch.keyPans[keyNumber];
+        note.basePitchFixed = (keyNumber << 8) - (patch.pitchOffsetsAndLoopFlag[keyNumber] & 32767);
+        note.releaseEnvelopeIndex = 0;
+        note.decayTime = 0;
+        note.volumeEnvelopeTime = 0;
+        note.volumeEnvelopeIndex = 0;
+        note.releaseEnvelopeTime = -1;
+        if (methodGuard == ~this.channelSampleOffsets[channelIndex]) {
+          note.sampleStream = PcmSampleStream.createForSampleStep(sample, this.computeNoteSampleStep(92, note), this.computeNoteVolume((byte) 117, note), this.computeNotePan(note, 761736646));
         } else {
-          var7.sampleStream = PcmSampleStream.createForSampleStep(var6, this.a(83, var7), 0, this.a(var7, 761736646));
-          stackIn_15_1 = var7;
-          stackIn_15_2 = -70;
-          if (0 <= var9.pitchOffsetsAndLoopFlag[param3]) {
-            stackIn_16_0 = this;
-            stackIn_16_3 = false;
+          note.sampleStream = PcmSampleStream.createForSampleStep(sample, this.computeNoteSampleStep(83, note), 0, this.computeNotePan(note, 761736646));
+          offsetNote = note;
+          offsetMethodGuard = -70;
+          if (0 <= patch.pitchOffsetsAndLoopFlag[keyNumber]) {
+            unusedOffsetOwnerSnapshot = this;
+            loopEnabled = false;
           } else {
-            stackIn_16_0 = this;
-            stackIn_16_3 = true;
+            unusedOffsetOwnerSnapshot = this;
+            loopEnabled = true;
           }
-          this.applyNoteSampleOffset(stackIn_15_1, (byte) stackIn_15_2, stackIn_16_3);
+          this.applyNoteSampleOffset(offsetNote, (byte) offsetMethodGuard, loopEnabled);
         }
-        if (var9.pitchOffsetsAndLoopFlag[param3] < 0) {
-          var7.sampleStream.setLoopCount(-1);
+        if (patch.pitchOffsetsAndLoopFlag[keyNumber] < 0) {
+          note.sampleStream.setLoopCount(-1);
         }
-        if (0 <= var7.keyGroup) {
-          var8 = this.field_D[param1][var7.keyGroup];
-          if ((var8 != null) &&
-              (var8.releaseEnvelopeTime < 0)) {
-            this.field_j[param1][var8.keyNumber] = null;
-            var8.releaseEnvelopeTime = 0;
+        if (0 <= note.keyGroup) {
+          previousGroupNote = this.notesByKeyGroup[channelIndex][note.keyGroup];
+          if ((previousGroupNote != null) &&
+              (previousGroupNote.releaseEnvelopeTime < 0)) {
+            this.heldNotesByKey[channelIndex][previousGroupNote.keyNumber] = null;
+            previousGroupNote.releaseEnvelopeTime = 0;
           }
-          this.field_D[param1][var7.keyGroup] = var7;
+          this.notesByKeyGroup[channelIndex][note.keyGroup] = note;
         }
-        this.noteMixer.notes.addLast(-70, var7);
-        this.field_j[param1][param3] = var7;
+        this.noteMixer.notes.addLast(-70, note);
+        this.heldNotesByKey[channelIndex][keyNumber] = note;
         return;
     }
 
-    private final void c(int param0, int param1, int param2) {
-        if (param0 > -107) {
+    private final void setChannelPitchBend(int methodGuard, int pitchBend, int channelIndex) {
+        if (methodGuard > -107) {
             return;
         }
-        this.field_y[param2] = param1;
+        this.channelPitchBend[channelIndex] = pitchBend;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
-        if (param0 != -40) {
-            int[] var6 = (int[]) null;
+    private final void handlePolyphonicPressureStub(int methodGuard, int pressureValue, int keyNumber, int channelIndex) {
+        if (methodGuard != -40) {
+            int[] unusedNullDestinationBeforeBadGuardMix = (int[]) null;
             this.mixInto((int[]) null, -107, 119);
         }
     }
 
     final synchronized void stopMusicPlayback(int methodGuard) {
-        this.a((byte) 106, true);
+        this.unloadScoreAndResetSynthesis((byte) 106, true);
         if (methodGuard != -9268) {
-            this.field_F = (int[]) null;
+            this.defaultChannelInstrumentIds = (int[]) null;
         }
     }
 
-    final static void c(int param0) {
-        Throwable decompiledCaughtException = null;
-        Object var1 = null;
+    final static void detachKeyboardListener(int methodGuard) {
+        Throwable unusedMonitorExceptionCarrier = null;
+        Object keyboardListenerMonitor = null;
         if (null != TrackedPcmStream.keyboardListener) {
-          var1 = TrackedPcmStream.keyboardListener;
-          synchronized (var1) {
+          keyboardListenerMonitor = TrackedPcmStream.keyboardListener;
+          synchronized (keyboardListenerMonitor) {
             TrackedPcmStream.keyboardListener = null;
           }
         }
-        if (param0 != -11099) {
+        if (methodGuard != -11099) {
           pendingActionPanelPhase = 4;
         }
     }
 
-    private final synchronized void a(int param0, MusicScore param1, boolean param2, boolean param3) {
-        int var5_int = 0;
-        int var6 = 0;
+    private final synchronized void loadScoreAndResetSynthesis(int methodGuard, MusicScore score, boolean loopPlayback, boolean fadeOutNotes) {
+        int trackCount = 0;
+        int trackIndex = 0;
         try {
-            this.a((byte) 98, param3);
-            this.midiReader.load(param1.midiBytes);
-            this.field_x = 0L;
-            this.loopScore = param2 ? true : false;
-            var5_int = this.midiReader.getTrackCount();
-            if (param0 <= 92) {
-                this.a(60, (byte) -45);
+            this.unloadScoreAndResetSynthesis((byte) 98, fadeOutNotes);
+            this.midiReader.load(score.midiBytes);
+            this.playbackTime = 0L;
+            this.loopScore = loopPlayback ? true : false;
+            trackCount = this.midiReader.getTrackCount();
+            if (methodGuard <= 92) {
+                this.resetChannelRetriggerPhases(60, (byte) -45);
             }
-            for (var6 = 0; var6 < var5_int; var6++) {
-                this.midiReader.seekTrack(var6);
-                this.midiReader.readTrackDelta(var6);
-                this.midiReader.saveTrackPosition(var6);
+            for (trackIndex = 0; trackIndex < trackCount; trackIndex++) {
+                this.midiReader.seekTrack(trackIndex);
+                this.midiReader.readTrackDelta(trackIndex);
+                this.midiReader.saveTrackPosition(trackIndex);
             }
-            this.field_t = this.midiReader.selectEarliestTrack();
-            this.field_k = this.midiReader.trackTicks[this.field_t];
-            this.field_A = this.midiReader.getTickTime(this.field_k);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "kj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            this.nextTrackIndex = this.midiReader.selectEarliestTrack();
+            this.nextEventTick = this.midiReader.trackTicks[this.nextTrackIndex];
+            this.nextEventTime = this.midiReader.getTickTime(this.nextEventTick);
+        } catch (RuntimeException scoreLoadFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) scoreLoadFailure), "kj.P(" + methodGuard + ',' + (score != null ? "{...}" : "null") + ',' + loopPlayback + ',' + fadeOutNotes + ')');
         }
     }
 
-    final synchronized void e(int param0, int param1, int param2) {
-        if (param0 != -1636) {
-            this.b((byte) -86, 98);
+    final synchronized void setChannelDefaultInstrument(int methodGuard, int channelIndex, int instrumentId) {
+        if (methodGuard != -1636) {
+            this.resetChannelControllers((byte) -86, 98);
         }
-        this.a(-8581, param1, param2);
+        this.setDefaultInstrumentAndBank(-8581, channelIndex, instrumentId);
     }
 
     public MidiPcmStream() {
-        this.field_D = new MidiNote[16][128];
-        this.field_z = new int[16];
+        this.notesByKeyGroup = new MidiNote[16][128];
+        this.channelPan = new int[16];
         this.channelSampleOffsets = new int[16];
-        this.field_p = new int[16];
-        this.field_S = new int[16];
+        this.channelVolume = new int[16];
+        this.channelInstrumentIds = new int[16];
         this.channelFlags = new int[16];
-        this.field_v = new int[16];
-        this.field_L = new int[16];
-        this.field_s = new int[16];
-        this.field_M = new int[16];
-        this.field_j = new MidiNote[16][128];
-        this.field_r = new int[16];
-        this.field_T = 1000000;
-        this.field_K = new int[16];
-        this.field_R = 256;
+        this.channelPitchBendSensitivity = new int[16];
+        this.channelVolumeScale = new int[16];
+        this.channelModulation = new int[16];
+        this.channelPortamentoTime = new int[16];
+        this.heldNotesByKey = new MidiNote[16][128];
+        this.channelExpression = new int[16];
+        this.timeScalePerSecond = 1000000;
+        this.channelBankOffsets = new int[16];
+        this.masterVolume = 256;
         this.channelRetriggerPhaseRates = new int[16];
-        this.field_y = new int[16];
-        this.field_Q = new int[16];
-        this.field_F = new int[16];
-        this.field_w = new int[16];
+        this.channelPitchBend = new int[16];
+        this.channelRetriggerControl = new int[16];
+        this.defaultChannelInstrumentIds = new int[16];
+        this.channelSelectedParameter = new int[16];
         this.midiReader = new MidiTrackReader();
         this.noteMixer = new MidiNoteMixer((MidiPcmStream) (this));
         this.instrumentPatches = new IntrusiveNodeHashTable(128);
-        this.a((byte) 74, -1, 256);
-        this.a(true, 2097151);
+        this.setChannelVolumeScale((byte) 74, -1, 256);
+        this.resetSynthesisState(true, 2097151);
     }
 
     static {
