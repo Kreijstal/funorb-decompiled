@@ -195,7 +195,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             var6 = var6 | 16;
           }
           CacheReference.outgoingSessionBuffer.writeByte((byte) 127, var6);
-          var7 = Under13TermsPanel.a(-1, NodeHashTableIterator.c(111));
+          var7 = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(111));
           if (var7 == null) {
             var7 = "";
           }

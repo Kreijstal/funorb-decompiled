@@ -5,40 +5,40 @@ import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
     static String ticketingUnreadCountText;
-    DualLinkNode field_c;
+    DualLinkNode sentinel;
     static int receivedAchievementMask;
     static IntrusiveDeque availableEntities;
 
-    final void a(int param0, DualLinkNode param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final void addLast(int methodGuard, DualLinkNode node) {
+        RuntimeException appendFailure = null;
+        RuntimeException appendFailureForContext = null;
+        StringBuilder appendMessagePrefix = null;
+        String nodeDescription = null;
+        RuntimeException caughtAppendFailure = null;
         try {
-          if (param1.previousSecondaryNode != null) {
-            param1.unlinkSecondaryNode((byte) 124);
+          if (node.previousSecondaryNode != null) {
+            node.unlinkSecondaryNode((byte) 124);
           }
-          param1.previousSecondaryNode = this.field_c.previousSecondaryNode;
-          param1.nextSecondaryNode = this.field_c;
-          param1.previousSecondaryNode.nextSecondaryNode = param1;
-          param1.nextSecondaryNode.previousSecondaryNode = param1;
-          if (param0 == -1) {
+          node.previousSecondaryNode = this.sentinel.previousSecondaryNode;
+          node.nextSecondaryNode = this.sentinel;
+          node.previousSecondaryNode.nextSecondaryNode = node;
+          node.nextSecondaryNode.previousSecondaryNode = node;
+          if (methodGuard == -1) {
             return;
           }
           this.iterator();
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ra.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException appendFailureAtCatch) {
+          caughtAppendFailure = appendFailureAtCatch;
+          appendFailure = caughtAppendFailure;
+          appendFailureForContext = appendFailure;
+          appendMessagePrefix = new StringBuilder().append("ra.C(").append(methodGuard).append(',');
+          if (node == null) {
+            nodeDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            nodeDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) appendFailureForContext), ((StringBuilder) (Object) appendMessagePrefix).append(nodeDescription).append(')').toString());
         }
     }
 
@@ -54,8 +54,8 @@ final class SecondaryNodeDeque implements Iterable {
             CacheReference.gameMusicOutput.a();
             GzipInflater.currentMusicTrack = track;
             PasswordWidgetRenderer.gameMusicStream.startMusicScore(false, GzipInflater.currentMusicTrack, -1706);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException playbackFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) playbackFailure), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,45 +116,45 @@ final class SecondaryNodeDeque implements Iterable {
         return;
     }
 
-    final static boolean a(int param0, String param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var5 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.clientControlFlowFlag;
+    final static boolean hasUniformCharacters(int methodGuard, String text) {
+        int firstCharacter = 0;
+        RuntimeException comparisonFailure = null;
+        int characterIndex = 0;
+        int clientControlSnapshot = 0;
+        String discardedNullText = null;
+        RuntimeException failureForContext = null;
+        StringBuilder failureMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtComparisonFailure = null;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var2_int = param1.charAt(0);
-          if (param0 != 18725) {
-            var5 = (String) null;
-            SecondaryNodeDeque.a(20, (String) null);
+          firstCharacter = text.charAt(0);
+          if (methodGuard != 18725) {
+            discardedNullText = (String) null;
+            SecondaryNodeDeque.hasUniformCharacters(20, (String) null);
           }
-          var3 = 1;
+          characterIndex = 1;
           while (true) {
-            if (param1.length() <= var3) {
+            if (text.length() <= characterIndex) {
               return true;
             }
-            if (var2_int == param1.charAt(var3)) {
-              var3++;
+            if (firstCharacter == text.charAt(characterIndex)) {
+              characterIndex++;
               continue;
             }
             return false;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("ra.E(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+        } catch (java.lang.RuntimeException comparisonFailureAtCatch) {
+          caughtComparisonFailure = comparisonFailureAtCatch;
+          comparisonFailure = caughtComparisonFailure;
+          failureForContext = comparisonFailure;
+          failureMessagePrefix = new StringBuilder().append("ra.E(").append(methodGuard).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) failureMessagePrefix).append(textDescription).append(')').toString());
         }
     }
 
@@ -162,20 +162,20 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator((SecondaryNodeDeque) (this)));
     }
 
-    public static void a(int param0) {
+    public static void releaseSharedResources(int methodGuard) {
         availableEntities = null;
         ticketingUnreadCountText = null;
-        if (param0 != -1) {
+        if (methodGuard != -1) {
             receivedAchievementMask = -36;
         }
     }
 
-    final DualLinkNode a(byte param0) {
-        DualLinkNode var2 = this.field_c.nextSecondaryNode;
-        int var3 = -14 % ((72 - param0) / 46);
-        if (this.field_c != var2) {
-            var2.unlinkSecondaryNode((byte) 126);
-            return var2;
+    final DualLinkNode removeFirst(byte methodGuard) {
+        DualLinkNode firstNode = this.sentinel.nextSecondaryNode;
+        int guardResidue = -14 % ((72 - methodGuard) / 46);
+        if (this.sentinel != firstNode) {
+            firstNode.unlinkSecondaryNode((byte) 126);
+            return firstNode;
         }
         return null;
     }

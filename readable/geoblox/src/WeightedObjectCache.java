@@ -11,7 +11,7 @@ final class WeightedObjectCache {
     private int field_b;
 
     private final void a(long param0, int param1) {
-        CacheReference var4 = (CacheReference) ((Object) this.field_f.a(param0, (byte) -72));
+        CacheReference var4 = (CacheReference) ((Object) this.field_f.findByKey(param0, (byte) -72));
         this.a(param1 - 117, var4);
         if (param1 == 0) {
             return;
@@ -30,15 +30,15 @@ final class WeightedObjectCache {
             this.a(param0, 0);
             this.field_d = this.field_d - param1;
             while (0 > this.field_d) {
-                var6 = (CacheReference) ((Object) this.field_e.a((byte) -41));
+                var6 = (CacheReference) ((Object) this.field_e.removeFirst((byte) -41));
                 this.a(114, var6);
             }
             var6_ref = new StrongCacheReference(param3, param1);
-            this.field_f.a(param0, -99, var6_ref);
+            this.field_f.put(param0, -99, var6_ref);
             if (param2) {
                 WeightedObjectCache.clearAvatarSteering(-85);
             }
-            this.field_e.a(-1, var6_ref);
+            this.field_e.addLast(-1, var6_ref);
             ((CacheReference) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -46,7 +46,7 @@ final class WeightedObjectCache {
     }
 
     final Object a(byte param0, long param1) {
-        CacheReference var7 = (CacheReference) ((Object) this.field_f.a(param1, (byte) 61));
+        CacheReference var7 = (CacheReference) ((Object) this.field_f.findByKey(param1, (byte) 61));
         if (var7 == null) {
             return null;
         }
@@ -61,13 +61,13 @@ final class WeightedObjectCache {
             return null;
         }
         if (!var7.g(13)) {
-            this.field_e.a(-1, var7);
+            this.field_e.addLast(-1, var7);
             var7.secondaryKey = 0L;
             return var5;
         }
         StrongCacheReference var6 = new StrongCacheReference(var5, var7.field_n);
-        this.field_f.a(var7.field_a, -81, var6);
-        this.field_e.a(-1, var6);
+        this.field_f.put(var7.nodeKey, -81, var6);
+        this.field_e.addLast(-1, var6);
         ((CacheReference) ((Object) var6)).secondaryKey = 0L;
         var7.unlinkNode(false);
         var7.unlinkSecondaryNode((byte) 93);

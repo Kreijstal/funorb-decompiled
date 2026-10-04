@@ -19,7 +19,7 @@ final class AccountEligibilitySupport {
 
     final static boolean isAccountCreationBlocked(int methodGuard) {
         int guardResidue = -59 / ((methodGuard - 34) / 41);
-        return ClientFlowToken.hasAccountIneligibilityMarker((byte) -109, NodeHashTableIterator.c(118));
+        return ClientFlowToken.hasAccountIneligibilityMarker((byte) -109, NodeHashTableIterator.getActiveApplet(118));
     }
 
     static {

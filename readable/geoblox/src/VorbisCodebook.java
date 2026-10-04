@@ -122,7 +122,7 @@ final class VorbisCodebook {
 
     private final static int computeLookupValueCount(int entries, int dimensions) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; IterableNodeHashTable.a(dimensions, (byte) 21, var2) > entries; var2--) {
+        for (var2 = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; IterableNodeHashTable.powerInt(dimensions, (byte) 21, var2) > entries; var2--) {
         }
         return var2;
     }

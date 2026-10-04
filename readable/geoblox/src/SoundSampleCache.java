@@ -274,7 +274,7 @@ final class SoundSampleCache {
           packedCacheKey = fileId ^ (65533 & groupId << 4 | groupId >>> 12);
           packedCacheKey = packedCacheKey | groupId << 16;
           cacheKey = (long)packedCacheKey;
-          cachedThenRenderedSample = (PcmSample) ((Object) this.decodedSamples.a(cacheKey, (byte) -74));
+          cachedThenRenderedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -74));
           if (methodGuard <= 19) {
             this.synthesizedSoundArchive = (ResourceArchive) null;
           }
@@ -292,7 +292,7 @@ final class SoundSampleCache {
           }
           renderedSample = soundEffect.a();
           cachedThenRenderedSample = renderedSample;
-          this.decodedSamples.a((byte) 102, cachedThenRenderedSample, cacheKey);
+          this.decodedSamples.put((byte) 102, cachedThenRenderedSample, cacheKey);
           if (byteBudget != null) {
             byteBudget[0] = byteBudget[0] - renderedSample.samples.length;
           }
@@ -332,7 +332,7 @@ final class SoundSampleCache {
           packedCacheKey = ((groupId & -1879044097) << 4 | groupId >>> 12) ^ fileId;
           packedCacheKey = packedCacheKey | groupId << 16;
           cacheKey = (long)packedCacheKey ^ 4294967296L;
-          cachedThenDecodedSample = (PcmSample) ((Object) this.decodedSamples.a(cacheKey, (byte) -115));
+          cachedThenDecodedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -115));
           if (methodGuard != 14) {
             invalidGuardResult = (PcmSample) null;
             return invalidGuardResult;
@@ -346,14 +346,14 @@ final class SoundSampleCache {
             exhaustedBudgetResult = null;
             return (PcmSample) (exhaustedBudgetResult);
           }
-          decoder = (MusicDecoder) ((Object) this.pendingVorbisDecoders.a(cacheKey, (byte) -96));
+          decoder = (MusicDecoder) ((Object) this.pendingVorbisDecoders.findByKey(cacheKey, (byte) -96));
           if (decoder == null) {
             decoder = MusicDecoder.a(this.vorbisArchive, groupId, fileId);
             if (decoder == null) {
               missingDecoderResult = null;
               return (PcmSample) (missingDecoderResult);
             }
-            this.pendingVorbisDecoders.a((byte) 102, decoder, cacheKey);
+            this.pendingVorbisDecoders.put((byte) 102, decoder, cacheKey);
           }
           cachedThenDecodedSample = decoder.decodePcmBudgeted(byteBudget);
           if (cachedThenDecodedSample == null) {
@@ -361,7 +361,7 @@ final class SoundSampleCache {
             return (PcmSample) (incompleteDecodeResult);
           }
           decoder.unlinkNode(false);
-          this.decodedSamples.a((byte) 102, cachedThenDecodedSample, cacheKey);
+          this.decodedSamples.put((byte) 102, cachedThenDecodedSample, cacheKey);
           decodedSampleAtReturn = cachedThenDecodedSample;
           return decodedSampleAtReturn;
         } catch (java.lang.RuntimeException lookupFailure) {

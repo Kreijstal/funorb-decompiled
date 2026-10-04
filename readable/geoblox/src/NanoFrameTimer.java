@@ -169,7 +169,7 @@ final class NanoFrameTimer extends FrameTimer {
             Bzip2DecoderState.closeSessionSocket((byte) -117);
             return;
           }
-          IterableNodeHashTable.a((Throwable) null, "HS1: " + TextTemplateDefinition.e(methodGuard + 24894), (byte) 125);
+          IterableNodeHashTable.reportClientError((Throwable) null, "HS1: " + TextTemplateDefinition.e(methodGuard + 24894), (byte) 125);
           Bzip2DecoderState.closeSessionSocket((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

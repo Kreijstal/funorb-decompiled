@@ -287,7 +287,7 @@ final class BufferedSocket implements Runnable {
               caughtWriterThrowable = unexpectedWorkerFailure;
               workerFailure = (Exception) (Object) caughtWriterThrowable;
               unusedReportMessage = (String) null;
-              IterableNodeHashTable.a((Throwable) ((Object) workerFailure), (String) null, (byte) 125);
+              IterableNodeHashTable.reportClientError((Throwable) ((Object) workerFailure), (String) null, (byte) 125);
             }
         } catch (RuntimeException | Error uncheckedFailure) {
             throw uncheckedFailure;

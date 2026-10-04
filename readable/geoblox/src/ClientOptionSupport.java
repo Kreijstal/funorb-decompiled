@@ -38,7 +38,7 @@ final class ClientOptionSupport {
 
     final static void selectBootstrapLanguageText(boolean methodGuard, int languageIndex) {
         SocialListEntry.field_lb = InstrumentEnvelope.field_k[languageIndex];
-        LoginProtocolSupport.field_c = IntrusiveDeque.field_e[languageIndex];
+        LoginProtocolSupport.field_c = IntrusiveDeque.waitingForTextByLanguage[languageIndex];
         CachedTextLayout.field_g = PointerInputListener.field_b[languageIndex];
         if (!methodGuard) {
             sharedSavedClip = (int[]) null;

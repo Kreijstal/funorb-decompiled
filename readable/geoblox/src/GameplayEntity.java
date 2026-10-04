@@ -50,7 +50,7 @@ final class GameplayEntity extends DualLinkNode {
           HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
-          NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
+          NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
           HotspotTextWidget.spriteScratchRaster.rotateSmooth(HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
         } else {
@@ -58,7 +58,7 @@ final class GameplayEntity extends DualLinkNode {
             HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
             this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1, this.interpolatedPaletteColor);
-            NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
+            NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
             SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
             HotspotTextWidget.spriteScratchRaster.rotateSmooth(HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
           } else {

@@ -111,18 +111,18 @@ class TextInputWidget extends ButtonWidget {
         }
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = SecondaryNodeDequeIterator.a(0, param0, param4);
+        Sprite dupTemp$0 = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, param0, param4);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = SecondaryNodeDequeIterator.a(0, param2, param4);
+        Sprite dupTemp$1 = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, param2, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (!(param3 == 0)) {
-            var6[4] = SecondaryNodeDequeIterator.a(0, param3, 64);
+            var6[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, param3, 64);
         }
         return var5;
     }

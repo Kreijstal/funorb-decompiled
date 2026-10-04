@@ -58,7 +58,7 @@ final class ClientFlowToken {
               Bzip2DecoderState.closeSessionSocket((byte) -124);
               return;
             }
-            IterableNodeHashTable.a((Throwable) null, "A1: " + TextTemplateDefinition.e(55), (byte) 125);
+            IterableNodeHashTable.reportClientError((Throwable) null, "A1: " + TextTemplateDefinition.e(55), (byte) 125);
             Bzip2DecoderState.closeSessionSocket((byte) -120);
           }
           return;

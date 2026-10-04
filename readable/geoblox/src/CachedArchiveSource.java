@@ -128,7 +128,7 @@ final class CachedArchiveSource extends ArchiveSource {
         byte[] computedNetworkGroupDigest = null;
         byte[] expectedNetworkGroupDigest = null;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-        cachedRequest = (ArchiveRequest) ((Object) this.groupRequests.a((long)groupId, (byte) -124));
+        cachedRequest = (ArchiveRequest) ((Object) this.groupRequests.findByKey((long)groupId, (byte) -124));
         request = cachedRequest;
         if ((cachedRequest != null) &&
             (requestMode == 0) &&
@@ -170,7 +170,7 @@ final class CachedArchiveSource extends ArchiveSource {
               request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
             }
           }
-          this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
+          this.groupRequests.put((byte) 102, (IntrusiveNode) (request), (long)groupId);
         }
         if (((ArchiveRequest) (request)).pending) {
           return null;
@@ -229,7 +229,7 @@ final class CachedArchiveSource extends ArchiveSource {
               return null;
             }
             request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
-            this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
+            this.groupRequests.put((byte) 102, (IntrusiveNode) (request), (long)groupId);
             return null;
           }
         }
@@ -268,7 +268,7 @@ final class CachedArchiveSource extends ArchiveSource {
           if ((((ArchiveRequest) (request)).priority) &&
               (!this.networkClient.isPriorityQueueFull(methodGuard ^ -83))) {
             request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
-            this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
+            this.groupRequests.put((byte) 102, (IntrusiveNode) (request), (long)groupId);
           }
           return null;
         }
@@ -341,7 +341,7 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     final int getGroupProgress(int methodGuard, int groupId) {
-        ArchiveRequest groupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((long)groupId, (byte) -102));
+        ArchiveRequest groupRequest = (ArchiveRequest) ((Object) this.groupRequests.findByKey((long)groupId, (byte) -102));
         if (methodGuard < 125) {
             return -119;
         }
@@ -388,7 +388,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         IntrusiveNode requestedGroup = this.requestedGroups.firstForIteration(0);
         while (requestedGroup != null) {
-            groupId = (int)requestedGroup.field_a;
+            groupId = (int)requestedGroup.nodeKey;
             if (groupId < 0) {
                 requestedGroup.unlinkNode(false);
             } else {
@@ -439,7 +439,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     phaseComplete = 1;
                     backgroundGroup = this.backgroundGroups.firstForIteration(0);
                     while (backgroundGroup != null) {
-                      groupId = (int)backgroundGroup.field_a;
+                      groupId = (int)backgroundGroup.nodeKey;
                       if (this.groupDiskStatus[groupId] == 0) {
                         unusedQueuedDiskVerificationRequest = this.getGroupRequest((byte) -71, 1, groupId);
                       }
@@ -461,7 +461,7 @@ final class CachedArchiveSource extends ArchiveSource {
                         }
                         if (0 == this.groupDiskStatus[this.backgroundGroupIndex]) {
                           newVerificationGroup = new IntrusiveNode();
-                          newVerificationGroup.field_a = (long)this.backgroundGroupIndex;
+                          newVerificationGroup.nodeKey = (long)this.backgroundGroupIndex;
                           phaseComplete = 0;
                           this.backgroundGroups.addLast(-45, newVerificationGroup);
                         }
@@ -482,7 +482,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     phaseComplete = 1;
                     backgroundGroup = this.backgroundGroups.firstForIteration(0);
                     while (backgroundGroup != null) {
-                      groupId = (int)backgroundGroup.field_a;
+                      groupId = (int)backgroundGroup.nodeKey;
                       if (this.groupDiskStatus[groupId] != 1) {
                         unusedQueuedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, groupId);
                       }
@@ -506,7 +506,7 @@ final class CachedArchiveSource extends ArchiveSource {
                             }
                             if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
                               newDownloadGroup = new IntrusiveNode();
-                              newDownloadGroup.field_a = (long)this.backgroundGroupIndex;
+                              newDownloadGroup.nodeKey = (long)this.backgroundGroupIndex;
                               phaseComplete = 0;
                               this.backgroundGroups.addLast(-97, newDownloadGroup);
                             }
@@ -529,7 +529,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
                         break L1;
                       }
-                      cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((byte) 125));
+                      cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
                       while (cleanupRequest != null) {
                         if (!cleanupRequest.pending) {
                           if (cleanupRequest.seenByCleanup) {
@@ -541,7 +541,7 @@ final class CachedArchiveSource extends ArchiveSource {
                             cleanupRequest.seenByCleanup = true;
                           }
                         }
-                        cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.b(74));
+                        cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
                       }
                       break L2;
                     }
@@ -558,7 +558,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
                 break L1;
               }
-              cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((byte) 125));
+              cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
               while (cleanupRequest != null) {
                 if (!cleanupRequest.pending) {
                   if (cleanupRequest.seenByCleanup) {
@@ -570,7 +570,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     cleanupRequest.seenByCleanup = true;
                   }
                 }
-                cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.b(74));
+                cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
               }
             }
             this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);

@@ -7,7 +7,7 @@ final class AgeValidator extends TextInputValidator {
     static boolean field_i;
 
     final static void h(int param0) {
-        GrowableIntList.a(NodeHashTableIterator.c(108), (byte) 110);
+        GrowableIntList.a(NodeHashTableIterator.getActiveApplet(108), (byte) 110);
         if (param0 >= -24) {
             field_k = true;
         }

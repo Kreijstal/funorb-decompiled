@@ -4,113 +4,113 @@
 import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
-    private DualLinkNode field_b;
-    private SecondaryNodeDeque field_a;
-    private DualLinkNode field_d;
+    private DualLinkNode lastReturnedNode;
+    private SecondaryNodeDeque deque;
+    private DualLinkNode nextNode;
     static String instructionsText;
-    static boolean field_e;
+    static boolean archiveLoadingComplete;
 
-    final static void a(String param0, byte param1, String param2) {
+    final static void startLogin(String password, byte methodGuard, String loginIdentifier) {
         try {
-            if (param1 != 66) {
+            if (methodGuard != 66) {
                 instructionsText = (String) null;
             }
-            AccountCreationDialog.a(param2, (byte) 87, false, param0);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ef.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            AccountCreationDialog.a(loginIdentifier, (byte) 87, false, password);
+        } catch (RuntimeException loginFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFailure), "ef.C(" + (password != null ? "{...}" : "null") + ',' + methodGuard + ',' + (loginIdentifier != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean hasNext() {
-        return this.field_a.field_c != this.field_d;
+        return this.deque.sentinel != this.nextNode;
     }
 
     public final void remove() {
-        if (null == this.field_b) {
+        if (null == this.lastReturnedNode) {
             throw new IllegalStateException();
         }
-        this.field_b.unlinkSecondaryNode((byte) 92);
-        this.field_b = null;
+        this.lastReturnedNode.unlinkSecondaryNode((byte) 92);
+        this.lastReturnedNode = null;
     }
 
-    final static void advanceActiveEntityAnimations(byte param0) {
-        float var1_float = 0.0f;
-        RuntimeException var1 = null;
-        GameplayEntity var2 = null;
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static void advanceActiveEntityAnimations(byte methodGuard) {
+        float boardAngleRadians = 0.0f;
+        RuntimeException animationFailure = null;
+        GameplayEntity transientEntity = null;
+        int clientControlSnapshot = 0;
+        RuntimeException caughtAnimationFailure = null;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var1_float = UiWidget.gameplaySession.boardAngleRadians;
-          EntityMotionSupport.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
+          boardAngleRadians = UiWidget.gameplaySession.boardAngleRadians;
+          EntityMotionSupport.moveEntitiesAndCollectContacts(methodGuard - 22, boardAngleRadians);
           ResourceArchive.updateAttachedEntities((byte) 123);
-          if (param0 != -15) {
-            SecondaryNodeDequeIterator.a((byte) -11);
+          if (methodGuard != -15) {
+            SecondaryNodeDequeIterator.releaseSharedResources((byte) -11);
           }
-          var2 = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
-          while (var2 != null) {
-            var2.advanceEntityAnimation(true);
-            if (var2.animationFrameIndex >= 3) {
-              var2.entityQueue = SecondaryNodeDeque.availableEntities;
-              var2.animationFrameIndex = 0;
+          transientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
+          while (transientEntity != null) {
+            transientEntity.advanceEntityAnimation(true);
+            if (transientEntity.animationFrameIndex >= 3) {
+              transientEntity.entityQueue = SecondaryNodeDeque.availableEntities;
+              transientEntity.animationFrameIndex = 0;
             }
-            var2 = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
+            transientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
           }
           if (UiWidget.gameplaySession.tutorialPromptActive) {
             return;
           }
           HighscoreNameEntry.updateSpawnQueue(255);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ef.A(" + param0 + ')');
+        } catch (java.lang.RuntimeException animationFailureAtCatch) {
+          caughtAnimationFailure = animationFailureAtCatch;
+          animationFailure = caughtAnimationFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) animationFailure), "ef.A(" + methodGuard + ')');
         }
     }
 
-    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
-        this.field_b = null;
+    SecondaryNodeDequeIterator(SecondaryNodeDeque deque) {
+        this.lastReturnedNode = null;
         try {
-            this.field_a = param0;
-            this.field_d = this.field_a.field_c.nextSecondaryNode;
-            this.field_b = null;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            this.deque = deque;
+            this.nextNode = this.deque.sentinel.nextSecondaryNode;
+            this.lastReturnedNode = null;
+        } catch (RuntimeException iteratorInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) iteratorInitializationFailure), "ef.<init>(" + (deque != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseSharedResources(byte methodGuard) {
         instructionsText = null;
-        if (param0 != 101) {
-            field_e = false;
+        if (methodGuard != 101) {
+            archiveLoadingComplete = false;
         }
     }
 
-    final static Sprite a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = Geoblox.clientControlFlowFlag;
-        Sprite var6 = new Sprite(param2, param2);
-        Sprite var3 = var6;
-        for (var4 = param0; var3.pixels.length > var4; var4++) {
-            var6.pixels[var4] = param1;
+    final static Sprite createPartiallyFilledSquareSprite(int firstFilledPixelIndex, int fillColor, int sideLength) {
+        int pixelIndex = 0;
+        int clientControlSnapshot = Geoblox.clientControlFlowFlag;
+        Sprite allocatedSprite = new Sprite(sideLength, sideLength);
+        Sprite spriteAlias = allocatedSprite;
+        for (pixelIndex = firstFilledPixelIndex; spriteAlias.pixels.length > pixelIndex; pixelIndex++) {
+            allocatedSprite.pixels[pixelIndex] = fillColor;
         }
-        return var3;
+        return spriteAlias;
     }
 
     public final Object next() {
-        Object var1 = this.field_d;
-        if (var1 != this.field_a.field_c) {
-            this.field_d = ((DualLinkNode) (var1)).nextSecondaryNode;
+        Object returnedNodeOrNull = this.nextNode;
+        if (returnedNodeOrNull != this.deque.sentinel) {
+            this.nextNode = ((DualLinkNode) (returnedNodeOrNull)).nextSecondaryNode;
         } else {
-            var1 = null;
-            this.field_d = null;
+            returnedNodeOrNull = null;
+            this.nextNode = null;
         }
-        this.field_b = (DualLinkNode) (var1);
-        return var1;
+        this.lastReturnedNode = (DualLinkNode) (returnedNodeOrNull);
+        return returnedNodeOrNull;
     }
 
     static {
         instructionsText = "Instructions";
-        field_e = false;
+        archiveLoadingComplete = false;
     }
 }

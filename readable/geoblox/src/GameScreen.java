@@ -1553,7 +1553,7 @@ final class GameScreen extends MenuScreen {
                     HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                     SoftwareRasterizer.clearFramebuffer();
                     EndingAnimationSupport.blackOrbFrames[this.tutorialEffectFrame].draw(-(EndingAnimationSupport.blackOrbFrames[this.tutorialEffectFrame].fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(EndingAnimationSupport.blackOrbFrames[this.tutorialEffectFrame].fullHeight >> 1) + (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
-                    NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
+                    NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
                     SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), 180 - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
@@ -1563,7 +1563,7 @@ final class GameScreen extends MenuScreen {
                       this.tutorialStarFrameOrColorIndex = 0;
                     }
                     DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].draw(-(DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullHeight >> 1));
-                    NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
+                    NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
                     SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + 282);
@@ -2045,7 +2045,7 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 7:
-                  EntityCollisionSupport.openQuitPage(NodeHashTableIterator.c(methodGuard ^ -125), 62);
+                  EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(methodGuard ^ -125), 62);
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }

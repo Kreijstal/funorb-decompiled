@@ -322,7 +322,7 @@ final class DiskCacheWorker implements Runnable {
                 caughtWorkerFailure = requestOperationFailure;
                 operationFailure = (Exception) (Object) caughtWorkerFailure;
                 unusedFailureMessageSnapshot = (String) null;
-                IterableNodeHashTable.a((Throwable) ((Object) operationFailure), (String) null, (byte) 125);
+                IterableNodeHashTable.reportClientError((Throwable) ((Object) operationFailure), (String) null, (byte) 125);
                 completeRequestAfterOperation = 1;
               }
               if (completeRequestAfterOperation == 0) {

@@ -72,7 +72,7 @@ final class AudioService implements Runnable {
             }
         } catch (Exception exception) {
             String var6 = (String) null;
-            IterableNodeHashTable.a((Throwable) ((Object) exception), (String) null, (byte) 125);
+            IterableNodeHashTable.reportClientError((Throwable) ((Object) exception), (String) null, (byte) 125);
         } finally {
             this.field_c = false;
         }

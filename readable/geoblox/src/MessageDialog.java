@@ -32,7 +32,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             MessageDialog.isSignedDecimalInt((byte) -98, (CharSequence) null);
           }
           if (!this.retryButtonAction) {
-            ArchiveLoadSequence.a(NodeHashTableIterator.c(111), (byte) 112, "tochangedisplayname.ws");
+            ArchiveLoadSequence.a(NodeHashTableIterator.getActiveApplet(111), (byte) 112, "tochangedisplayname.ws");
           } else {
             MidiNote.a(3, false);
             this.dismissDialog((byte) -104);

@@ -194,7 +194,7 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        NodeHashTableIterator.field_g = param2;
+        NodeHashTableIterator.pendingTooltipAnchorX = param2;
         if (param1 > -20) {
             return;
         }

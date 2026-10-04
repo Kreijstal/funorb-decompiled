@@ -159,9 +159,9 @@ class HotspotTextWidget extends ButtonWidget {
     }
 
     final static Boolean a(byte param0) {
-        Boolean var1 = IntrusiveNodeHashTable.field_b;
+        Boolean var1 = IntrusiveNodeHashTable.pendingLoginBooleanReply;
         int var2 = -97 / ((param0 - 44) / 60);
-        IntrusiveNodeHashTable.field_b = null;
+        IntrusiveNodeHashTable.pendingLoginBooleanReply = null;
         return var1;
     }
 

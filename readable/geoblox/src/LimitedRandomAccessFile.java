@@ -187,7 +187,7 @@ final class LimitedRandomAccessFile {
               } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-                IterableNodeHashTable.a((Throwable) null, "MGR1: " + param0, (byte) 125);
+                IterableNodeHashTable.reportClientError((Throwable) null, "MGR1: " + param0, (byte) 125);
               }
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

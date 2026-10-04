@@ -49,7 +49,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (DebouncedValidationProvider.archiveLoadStatus != 0) {
           return var2;
         }
-        IterableNodeHashTable.b(param0 - 12617);
+        IterableNodeHashTable.refreshLoginTicketMessage(param0 - 12617);
         return var2;
     }
 
@@ -129,7 +129,7 @@ abstract class SessionGameApplet extends GameApplet {
             return;
         }
         String var2 = HotspotTextWidget.i(1000);
-        MeshPrioritySupport.updateSessionCookie(var2, NodeHashTableIterator.c(111), param0 + 10);
+        MeshPrioritySupport.updateSessionCookie(var2, NodeHashTableIterator.getActiveApplet(111), param0 + 10);
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
@@ -279,7 +279,7 @@ abstract class SessionGameApplet extends GameApplet {
               (DebouncedValidationProvider.archiveLoadStatus == 0) &&
               (11 == SpriteConstructionSupport.clientScreenStage) &&
               (!ClientTimingSupport.isClientReadyForSessionActions(73))) {
-            IterableNodeHashTable.b(-12618);
+            IterableNodeHashTable.refreshLoginTicketMessage(-12618);
           }
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0)) {
@@ -553,7 +553,7 @@ abstract class SessionGameApplet extends GameApplet {
                 if (var5_int != -1) {
                   if (var5_int == 0) {
                     CheckboxWidget.field_H = ClientClockSupport.field_c;
-                    IterableNodeHashTable.b(-12618);
+                    IterableNodeHashTable.refreshLoginTicketMessage(-12618);
                     ProgressBarWidget.field_G = false;
                     SpriteConstructionSupport.clientScreenStage = 10;
                   } else {
@@ -570,33 +570,33 @@ abstract class SessionGameApplet extends GameApplet {
                 ProgressBarWidget.field_G = true;
                 SpriteConstructionSupport.clientScreenStage = 10;
               } else {
-                BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.c(param2 ^ -122));
+                BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(param2 ^ -122));
               }
             }
             if (5 == var4) {
-              EntityCollisionSupport.openQuitPage(NodeHashTableIterator.c(120), 62);
+              EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(120), 62);
             }
             if ((var4 == 6) &&
                 (AccountEligibilitySupport.loginReturnAllowed)) {
               SpriteConstructionSupport.clientScreenStage = 10;
             }
             if (var4 == 7) {
-              TrackedPcmStream.a((byte) 114, NodeHashTableIterator.c(107));
+              TrackedPcmStream.a((byte) 114, NodeHashTableIterator.getActiveApplet(107));
             }
             if (var4 == 8) {
-              BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.c(119));
+              BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(119));
             }
             if (9 == var4) {
-              RasterTargetSnapshot.a(NodeHashTableIterator.c(115), (byte) -91);
+              RasterTargetSnapshot.a(NodeHashTableIterator.getActiveApplet(115), (byte) -91);
             }
             if (var4 == 10) {
               CacheReference.outgoingSessionBuffer.writeCipherByte(17, (byte) -21);
             }
             if (var4 == 11) {
-              EmailAvailabilityQuery.a(NodeHashTableIterator.c(110), false);
+              EmailAvailabilityQuery.a(NodeHashTableIterator.getActiveApplet(110), false);
             }
             if (var4 == 12) {
-              ArchiveLoadSequence.a(NodeHashTableIterator.c(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(param2 ^ -241));
+              ArchiveLoadSequence.a(NodeHashTableIterator.getActiveApplet(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(param2 ^ -241));
             }
             if (var4 == 13) {
               try {
@@ -617,7 +617,7 @@ abstract class SessionGameApplet extends GameApplet {
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5 = (Exception) (Object) decompiledCaughtException;
-                IterableNodeHashTable.a((Throwable) ((Object) var5), "S1", (byte) 125);
+                IterableNodeHashTable.reportClientError((Throwable) ((Object) var5), "S1", (byte) 125);
                 var10 = (String) null;
                 SecondaryDeque.a((byte) 69, (String) null);
                 EmailAvailabilityValidator.field_n = null;
@@ -696,7 +696,7 @@ abstract class SessionGameApplet extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            IterableNodeHashTable.a((Throwable) ((Object) var6_ref), (String) null, (byte) 125);
+            IterableNodeHashTable.reportClientError((Throwable) ((Object) var6_ref), (String) null, (byte) 125);
             this.a((byte) 79, "crash");
           }
           return;
@@ -757,7 +757,7 @@ abstract class SessionGameApplet extends GameApplet {
                           GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, LogoCompositor.sessionPacketBuffer);
                         } else {
                           if (var2 == 16) {
-                            DualLinkNode.b(1);
+                            DualLinkNode.readSessionTextAndHash(1);
                           } else {
                             if ((11 != var2) &&
                                 (12 != var2)) {
@@ -773,7 +773,7 @@ abstract class SessionGameApplet extends GameApplet {
                                 UsernameQueryState.handleSessionFlagReset(11560);
                                 return;
                               }
-                              IterableNodeHashTable.a((Throwable) null, "MGS1: " + TextTemplateDefinition.e(55), (byte) 125);
+                              IterableNodeHashTable.reportClientError((Throwable) null, "MGS1: " + TextTemplateDefinition.e(55), (byte) 125);
                               Bzip2DecoderState.closeSessionSocket((byte) -122);
                               return;
                             }
@@ -795,7 +795,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           return;
         }
-        IterableNodeHashTable.a((Throwable) null, "MGS2: " + TextTemplateDefinition.e(55), (byte) 125);
+        IterableNodeHashTable.reportClientError((Throwable) null, "MGS2: " + TextTemplateDefinition.e(55), (byte) 125);
         Bzip2DecoderState.closeSessionSocket((byte) -118);
     }
 
@@ -808,7 +808,7 @@ abstract class SessionGameApplet extends GameApplet {
         int var4 = -1 + AchievementSubmission.field_k;
         byte[] var5 = new byte[var4];
         LogoCompositor.sessionPacketBuffer.readCipherBytes(96, 0, var5, var4);
-        LimitedRandomAccessFile.a(EmailValidator.decodeTextBytes(1, var5), (byte) -128, var3 != 0, NodeHashTableIterator.c(112));
+        LimitedRandomAccessFile.a(EmailValidator.decodeTextBytes(1, var5), (byte) -128, var3 != 0, NodeHashTableIterator.getActiveApplet(112));
     }
 
     private final void i(int param0) {

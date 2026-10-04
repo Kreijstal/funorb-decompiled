@@ -298,7 +298,7 @@ final class GameplaySession {
             if (!this.debugReducedRendering) {
               AttachedEntityRenderer.drawAttachedEntities(7838);
             }
-            NodeHashTableIterator.a(10, 90, 460, -27085, 460);
+            NodeHashTableIterator.markInsetZeroOutlinePixels(10, 90, 460, -27085, 460);
             this.boardRasterDirty = false;
           }
         }

@@ -135,26 +135,26 @@ final class LoginProtocolSupport {
                 PacketBuffer.currentProtocolStage = LogoCompositor.connectedSessionStage;
                 if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) != RatingPresentationResources.loginPayloadKindThree) {
                   if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
-                    ProgressDialog.field_W.rememberMethod(NodeHashTableIterator.c(108), 0);
+                    ProgressDialog.field_W.rememberMethod(NodeHashTableIterator.getActiveApplet(108), 0);
                   }
                 } else {
-                  LoginTextValue.field_b.rememberMethod(NodeHashTableIterator.c(122), 0);
+                  LoginTextValue.field_b.rememberMethod(NodeHashTableIterator.getActiveApplet(122), 0);
                 }
                 TextTemplateArgumentType.field_e = false;
                 if (settingsCookieValue != null) {
-                  SettingsCookieSupport.storeSettingsCookie(100, settingsCookieValue, NodeHashTableIterator.c(112));
+                  SettingsCookieSupport.storeSettingsCookie(100, settingsCookieValue, NodeHashTableIterator.getActiveApplet(112));
                 }
                 if ((TextTemplateDefinition.field_n <= 0) &&
                     (!GzipInflater.field_b)) {
                   try {
-                    AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.c(107), "unzap");
+                    AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.getActiveApplet(107), "unzap");
                   } catch (java.lang.Throwable unzapScriptFailure) {
                     caughtLoginOrScriptFailure = unzapScriptFailure;
                     ignoredScriptFailure = caughtLoginOrScriptFailure;
                   }
                 } else {
                   try {
-                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(ClientClockSupport.field_c, methodGuard + 97)}, NodeHashTableIterator.c(methodGuard + 119), "zap");
+                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(ClientClockSupport.field_c, methodGuard + 97)}, NodeHashTableIterator.getActiveApplet(methodGuard + 119), "zap");
                   } catch (java.lang.Throwable zapScriptFailure) {
                     caughtLoginOrScriptFailure = zapScriptFailure;
                     ignoredScriptFailure = caughtLoginOrScriptFailure;

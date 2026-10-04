@@ -84,7 +84,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (TextValidationSupport.containsNonAsciiAlphanumeric(param0, (byte) -67)) {
             return false;
           }
-          if (SecondaryNodeDeque.a(18725, param0)) {
+          if (SecondaryNodeDeque.hasUniformCharacters(18725, param0)) {
             return false;
           }
           if (ArchiveCatalog.a(param0, param2 + 25409)) {

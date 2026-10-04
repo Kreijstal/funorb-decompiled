@@ -53,7 +53,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_10_0 = ScoreSubmission.createPasswordCharacterAlertText;
             return stackIn_10_0;
           }
-          if (SecondaryNodeDeque.a(guard + 18303, var5)) {
+          if (SecondaryNodeDeque.hasUniformCharacters(guard + 18303, var5)) {
             stackIn_13_0 = NameCharacterSupport.createRepeatedPasswordAlertText;
             return stackIn_13_0;
           }

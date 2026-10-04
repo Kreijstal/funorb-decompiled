@@ -421,14 +421,14 @@ final class MidiPcmStream extends PcmStream {
           if (~sampleByteBudget < methodGuard) {
             remainingByteBudget = new int[]{sampleByteBudget};
           }
-          instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.a((byte) 125));
+          instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.firstForIteration((byte) 125));
           while (instrumentNoteMask != null) {
-            instrumentId = (int)instrumentNoteMask.field_a;
-            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.a((long)instrumentId, (byte) -91));
+            instrumentId = (int)instrumentNoteMask.nodeKey;
+            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.findByKey((long)instrumentId, (byte) -91));
             if (instrumentPatch == null) {
               instrumentPatch = InstrumentPatch.loadInstrumentPatch(instrumentId, (byte) 121, patchArchive);
               if (instrumentPatch != null) {
-                this.instrumentPatches.a((byte) 102, instrumentPatch, (long)instrumentId);
+                this.instrumentPatches.put((byte) 102, instrumentPatch, (long)instrumentId);
               } else {
                 allInstrumentsPreparedFlag = 0;
               }
@@ -437,7 +437,7 @@ final class MidiPcmStream extends PcmStream {
                 (!instrumentPatch.loadSelectedSamples((int[]) (remainingByteBudget), instrumentNoteMask.notesUsed, methodGuard + 36, sampleCache))) {
               allInstrumentsPreparedFlag = 0;
             }
-            instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.b(methodGuard - 100));
+            instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.nextForIteration(methodGuard - 100));
           }
           if (allInstrumentsPreparedFlag != 0) {
             score.clearInstrumentNotes();
@@ -929,10 +929,10 @@ final class MidiPcmStream extends PcmStream {
         if (methodGuard <= 65) {
             this.c(-76, (byte) -34);
         }
-        InstrumentPatch instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.a((byte) 125));
+        InstrumentPatch instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.firstForIteration((byte) 125));
         while (instrumentPatch != null) {
             instrumentPatch.clearEncodedSampleIds((byte) -121);
-            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.b(-52));
+            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.nextForIteration(-52));
         }
     }
 
@@ -1094,7 +1094,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (MidiNote) ((Object) this.field_I.field_l.previousForIteration(~param0));
           }
         }
-        var9 = (InstrumentPatch) ((Object) this.instrumentPatches.a((long)this.field_S[param1], (byte) -105));
+        var9 = (InstrumentPatch) ((Object) this.instrumentPatches.findByKey((long)this.field_S[param1], (byte) -105));
         var10 = var9;
         if (var10 == null) {
           return;

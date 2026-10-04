@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    long field_a;
+    long nodeKey;
     IntrusiveNode nextNode;
     static String loginMessage3Text;
     IntrusiveNode previousNode;
@@ -95,8 +95,8 @@ class IntrusiveNode {
         }
     }
 
-    final void unlinkNode(boolean param0) {
-        if (param0) {
+    final void unlinkNode(boolean methodGuard) {
+        if (methodGuard) {
             return;
         }
         if (!(null != this.previousNode)) {
@@ -247,9 +247,9 @@ class IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseNodeResources(byte methodGuard) {
         loginMessage3Text = null;
-        int var1 = -121 / ((-68 - param0) / 42);
+        int guardResidue = -121 / ((-68 - methodGuard) / 42);
         sunMusicTrack = null;
     }
 
@@ -258,7 +258,7 @@ class IntrusiveNode {
             return false;
         }
         if (methodGuard < 112) {
-            IntrusiveNode.b((byte) 110);
+            IntrusiveNode.releaseNodeResources((byte) 110);
         }
         return true;
     }

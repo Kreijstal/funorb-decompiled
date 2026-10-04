@@ -98,7 +98,7 @@ final class LogoPreparationSupport {
         } catch (java.lang.Exception templateFailure) {
           caughtTemplateFailure = templateFailure;
           templateFailureForReport = (Exception) (Object) caughtTemplateFailure;
-          IterableNodeHashTable.a((Throwable) ((Object) templateFailureForReport), "CC1", (byte) 125);
+          IterableNodeHashTable.reportClientError((Throwable) ((Object) templateFailureForReport), "CC1", (byte) 125);
           SessionTextState.receivedTextTemplateReferences = null;
           RankedListQuery.field_f = null;
           return new ClientSessionSnapshot(useTextTemplate);

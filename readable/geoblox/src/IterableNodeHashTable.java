@@ -5,35 +5,35 @@ import java.io.*;
 import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
-    IntrusiveNode[] field_a;
+    IntrusiveNode[] bucketSentinels;
     static int avatarBlinkClockTicks;
     static ClientProtocolStage requestReadyStage;
-    private IntrusiveNode field_f;
-    int field_c;
+    private IntrusiveNode lookupCursor;
+    int bucketCount;
     static int[] transformedMeshNormalZ;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new NodeHashTableIterator((IterableNodeHashTable) (this)));
     }
 
-    final static void b(int param0) {
-        int var1;
-        int var2;
-        var2 = Geoblox.clientControlFlowFlag;
+    final static void refreshLoginTicketMessage(int methodGuard) {
+        int ticketCountFromSessionAccessByte;
+        int clientControlSnapshot;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
         MeshPrioritySupport.field_d = false;
-        if (param0 != -12618) {
+        if (methodGuard != -12618) {
           return;
         }
         TextWidgetRenderer.field_d = null;
         if (AgeValidator.field_i) {
           Geoblox.activeMessageDialog.showConnectionRestoredContent(false);
         } else {
-          var1 = EntityLinkSupport.sessionAccessLevelByte;
-          if (var1 > 0) {
-            if (1 == var1) {
+          ticketCountFromSessionAccessByte = EntityLinkSupport.sessionAccessLevelByte;
+          if (ticketCountFromSessionAccessByte > 0) {
+            if (1 == ticketCountFromSessionAccessByte) {
               TextWidgetRenderer.field_d = EntityContactSupport.ticketingOneUnreadText;
             } else {
-              TextWidgetRenderer.field_d = OpacityWidget.a(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
+              TextWidgetRenderer.field_d = OpacityWidget.a(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(ticketCountFromSessionAccessByte)}, (byte) -124);
             }
             TextWidgetRenderer.field_d = NameCharacterSupport.joinTextParts(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }
@@ -42,23 +42,23 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final void a(long param0, int param1, IntrusiveNode param2) {
-        IntrusiveNode var5 = null;
+    final void put(long key, int methodGuard, IntrusiveNode node) {
+        IntrusiveNode bucketSentinel = null;
         try {
-            if (!(param2.previousNode == null)) {
-                param2.unlinkNode(false);
+            if (!(node.previousNode == null)) {
+                node.unlinkNode(false);
             }
-            var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
-            param2.previousNode = var5.previousNode;
-            if (param1 > -48) {
+            bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];
+            node.previousNode = bucketSentinel.previousNode;
+            if (methodGuard > -48) {
                 transformedMeshNormalZ = (int[]) null;
             }
-            param2.nextNode = var5;
-            param2.previousNode.nextNode = param2;
-            param2.field_a = param0;
-            param2.nextNode.previousNode = param2;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "gi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            node.nextNode = bucketSentinel;
+            node.previousNode.nextNode = node;
+            node.nodeKey = key;
+            node.nextNode.previousNode = node;
+        } catch (RuntimeException insertionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "gi.H(" + key + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -144,119 +144,119 @@ final class IterableNodeHashTable implements Iterable {
         if (guard < -102) {
           return;
         }
-        IterableNodeHashTable.a(-38);
+        IterableNodeHashTable.releaseSharedResources(-38);
     }
 
-    final static void a(Throwable param0, String param1, byte param2) {
+    final static void reportClientError(Throwable failure, String context, byte methodGuard) {
         try {
-            PlatformTaskDispatcher stackIn_13_0;
-            int stackIn_13_1;
-            java.net.URL stackIn_13_2;
-            java.net.URL stackIn_13_3;
-            java.net.URL stackIn_13_4;
-            StringBuilder stackIn_13_5;
-            java.net.URL stackIn_14_2;
-            java.net.URL stackIn_14_3;
-            String stackIn_14_6;
-            Throwable decompiledCaughtException = null;
-            String var3 = null;
-            Exception var3_ref = null;
-            PlatformTask var4 = null;
-            DataInputStream var5 = null;
-            String var6 = null;
-            String var7 = null;
-            String var8 = null;
-            String var9 = null;
+            PlatformTaskDispatcher dispatcherSnapshot;
+            int urlRequestGuard;
+            java.net.URL unusedUrlReceiverBeforeIdentity;
+            java.net.URL unusedUrlConstructorReceiverBeforeIdentity;
+            java.net.URL appletCodeBase;
+            StringBuilder errorUrlPrefix;
+            java.net.URL unusedUrlReceiverAfterIdentity;
+            java.net.URL unusedUrlConstructorReceiverAfterIdentity;
+            String reportUserIdentity;
+            Throwable caughtReportFailure = null;
+            String errorDescription = null;
+            Exception ignoredReportFailure = null;
+            PlatformTask urlStreamTask = null;
+            DataInputStream responseStream = null;
+            String colonEscapedDescription = null;
+            String atSignEscapedDescription = null;
+            String ampersandEscapedDescription = null;
+            String hashEscapedDescription = null;
             try {
-              var3 = "";
-              if (param0 != null) {
-                var3 = GameApplet.a(param0, param2 - 124);
+              errorDescription = "";
+              if (failure != null) {
+                errorDescription = GameApplet.a(failure, methodGuard - 124);
               }
-              if (param1 != null) {
-                if (param0 != null) {
-                  var3 = var3 + " | ";
+              if (context != null) {
+                if (failure != null) {
+                  errorDescription = errorDescription + " | ";
                 }
-                var3 = var3 + param1;
+                errorDescription = errorDescription + context;
               }
-              DequeCursor.a(var3, (byte) -75);
-              var6 = TextTemplateDefinition.a(var3, "%3a", true, ":");
-              var7 = TextTemplateDefinition.a(var6, "%40", true, "@");
-              var8 = TextTemplateDefinition.a(var7, "%26", true, "&");
-              var9 = TextTemplateDefinition.a(var8, "%23", true, "#");
+              DequeCursor.a(errorDescription, (byte) -75);
+              colonEscapedDescription = TextTemplateDefinition.a(errorDescription, "%3a", true, ":");
+              atSignEscapedDescription = TextTemplateDefinition.a(colonEscapedDescription, "%40", true, "@");
+              ampersandEscapedDescription = TextTemplateDefinition.a(atSignEscapedDescription, "%26", true, "&");
+              hashEscapedDescription = TextTemplateDefinition.a(ampersandEscapedDescription, "%23", true, "#");
               if (null == GameScreen.errorReportApplet) {
                 return;
               }
-              stackIn_13_0 = SpriteButtonRenderer.field_s;
-              stackIn_13_1 = -14;
-              stackIn_13_2 = null;
-              stackIn_13_3 = null;
-              stackIn_13_4 = GameScreen.errorReportApplet.getCodeBase();
-              stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.field_t).append("&u=");
+              dispatcherSnapshot = SpriteButtonRenderer.field_s;
+              urlRequestGuard = -14;
+              unusedUrlReceiverBeforeIdentity = null;
+              unusedUrlConstructorReceiverBeforeIdentity = null;
+              appletCodeBase = GameScreen.errorReportApplet.getCodeBase();
+              errorUrlPrefix = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.field_t).append("&u=");
               if (null == UsernameAvailabilityValidator.field_p) {
-                stackIn_14_2 = null;
-                stackIn_14_3 = null;
-                stackIn_14_6 = "" + CheckboxWidget.field_H;
+                unusedUrlReceiverAfterIdentity = null;
+                unusedUrlConstructorReceiverAfterIdentity = null;
+                reportUserIdentity = "" + CheckboxWidget.field_H;
               } else {
-                stackIn_14_2 = null;
-                stackIn_14_3 = null;
-                stackIn_14_6 = UsernameAvailabilityValidator.field_p;
+                unusedUrlReceiverAfterIdentity = null;
+                unusedUrlConstructorReceiverAfterIdentity = null;
+                reportUserIdentity = UsernameAvailabilityValidator.field_p;
               }
-              var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(var9).toString()));
-              while (var4.status == 0) {
-                ByteTextDecodingSupport.sleepMillis(param2 - 125, 1L);
+              urlStreamTask = ((PlatformTaskDispatcher) (Object) dispatcherSnapshot).requestUrlStream(urlRequestGuard, new java.net.URL(appletCodeBase, ((StringBuilder) (Object) errorUrlPrefix).append(reportUserIdentity).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(hashEscapedDescription).toString()));
+              while (urlStreamTask.status == 0) {
+                ByteTextDecodingSupport.sleepMillis(methodGuard - 125, 1L);
               }
-              if (var4.status == 1) {
-                var5 = (DataInputStream) (var4.result);
-                var5.read();
-                var5.close();
+              if (urlStreamTask.status == 1) {
+                responseStream = (DataInputStream) (urlStreamTask.result);
+                responseStream.read();
+                responseStream.close();
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref = (Exception) (Object) decompiledCaughtException;
+            } catch (java.lang.Exception reportFailureAtCatch) {
+              caughtReportFailure = reportFailureAtCatch;
+              ignoredReportFailure = (Exception) (Object) caughtReportFailure;
             }
-            if (param2 == 125) {
+            if (methodGuard == 125) {
               return;
             }
-            IterableNodeHashTable.a(-109);
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            IterableNodeHashTable.releaseSharedResources(-109);
+        } catch (RuntimeException | Error uncheckedReportFailure) {
+            throw uncheckedReportFailure;
+        } catch (Throwable checkedReportFailure) {
+            throw new RuntimeException(checkedReportFailure);
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_10_0 = 0;
-        RuntimeException decompiledCaughtException = null;
+    final static int powerInt(int exponent, byte methodGuard, int base) {
+        int accumulatedProduct = 0;
+        RuntimeException powerFailure = null;
+        int guardResidue = 0;
+        int finalProduct = 0;
+        int completedProduct = 0;
+        RuntimeException caughtPowerFailure = null;
         try {
-          var3_int = 1;
-          while (param0 > 1) {
-            if (0 != (param0 & 1)) {
-              var3_int = var3_int * param2;
+          accumulatedProduct = 1;
+          while (exponent > 1) {
+            if (0 != (exponent & 1)) {
+              accumulatedProduct = accumulatedProduct * base;
             }
-            param0 = param0 >> 1;
-            param2 = param2 * param2;
+            exponent = exponent >> 1;
+            base = base * base;
           }
-          var4 = 28 % ((-75 - param1) / 49);
-          if (param0 != 1) {
-            stackIn_10_0 = var3_int;
-            return stackIn_10_0;
+          guardResidue = 28 % ((-75 - methodGuard) / 49);
+          if (exponent != 1) {
+            completedProduct = accumulatedProduct;
+            return completedProduct;
           }
-          stackIn_8_0 = param2 * var3_int;
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var3), "gi.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          finalProduct = base * accumulatedProduct;
+          return finalProduct;
+        } catch (java.lang.RuntimeException powerFailureAtCatch) {
+          caughtPowerFailure = powerFailureAtCatch;
+          powerFailure = caughtPowerFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) powerFailure), "gi.A(" + exponent + ',' + methodGuard + ',' + base + ')');
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -1) {
+    public static void releaseSharedResources(int methodGuard) {
+        if (methodGuard != -1) {
             return;
         }
         requestReadyStage = null;
@@ -267,27 +267,27 @@ final class IterableNodeHashTable implements Iterable {
         throw new Error();
     }
 
-    final IntrusiveNode a(long param0, byte param1) {
-        int var4;
-        IntrusiveNode var5;
-        IntrusiveNode var6;
-        int var7;
-        var7 = Geoblox.clientControlFlowFlag;
-        var4 = -95 / ((param1 + 9) / 43);
-        var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
-        this.field_f = var5.nextNode;
+    final IntrusiveNode findByKey(long key, byte methodGuard) {
+        int guardResidue;
+        IntrusiveNode bucketSentinel;
+        IntrusiveNode matchingNode;
+        int clientControlSnapshot;
+        clientControlSnapshot = Geoblox.clientControlFlowFlag;
+        guardResidue = -95 / ((methodGuard + 9) / 43);
+        bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];
+        this.lookupCursor = bucketSentinel.nextNode;
         while (true) {
-          if (this.field_f == var5) {
-            this.field_f = null;
+          if (this.lookupCursor == bucketSentinel) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~this.field_f.field_a != ~param0) {
-            this.field_f = this.field_f.nextNode;
+          if (~this.lookupCursor.nodeKey != ~key) {
+            this.lookupCursor = this.lookupCursor.nextNode;
             continue;
           }
-          var6 = this.field_f;
-          this.field_f = this.field_f.nextNode;
-          return var6;
+          matchingNode = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.nextNode;
+          return matchingNode;
         }
     }
 

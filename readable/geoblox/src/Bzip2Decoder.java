@@ -76,7 +76,7 @@ final class Bzip2Decoder {
           UsernameResponseSupport.bzip2TransformTable = new int[state.blockSize100k * 100000];
         }
         continueDecodingBlocks = 1;
-        L1: while (true) {
+        decodeNextBlock: while (true) {
           if (continueDecodingBlocks == 0) {
             return;
           }
@@ -131,7 +131,7 @@ final class Bzip2Decoder {
           huffmanTableCount = Bzip2Decoder.readBits(3, state);
           selectorCount = Bzip2Decoder.readBits(15, state);
           index = 0;
-          L6: while (true) {
+          decodeSelectorRanks: while (true) {
             if (index < selectorCount) {
               byteInGroupOrSelectorRank = 0;
               while (true) {
@@ -142,7 +142,7 @@ final class Bzip2Decoder {
                 }
                 state.selectorMoveToFrontValues[index] = (byte)byteInGroupOrSelectorRank;
                 index++;
-                continue L6;
+                continue decodeSelectorRanks;
               }
             }
             allocatedSelectorOrder = new byte[6];
@@ -164,21 +164,21 @@ final class Bzip2Decoder {
               state.huffmanSelectors[index] = (byte)selectorTableOrMtfByteIndex;
             }
             huffmanTableIndex = 0;
-            L9: while (true) {
+            decodeHuffmanTableLengths: while (true) {
               if (huffmanTableIndex < huffmanTableCount) {
                 codeLength = Bzip2Decoder.readBits(5, state);
                 index = 0;
-                L38: while (true) {
+                decodeAlphabetCodeLengths: while (true) {
                   if (index >= huffmanAlphabetSize) {
                     huffmanTableIndex++;
-                    continue L9;
+                    continue decodeHuffmanTableLengths;
                   }
                   while (true) {
                     byteOrBitValue = Bzip2Decoder.readBit(state);
                     if (byteOrBitValue == 0) {
                       state.huffmanCodeLengths[huffmanTableIndex][index] = (byte)codeLength;
                       index++;
-                      continue L38;
+                      continue decodeAlphabetCodeLengths;
                     }
                     byteOrBitValue = Bzip2Decoder.readBit(state);
                     if (byteOrBitValue != 0) {
@@ -238,7 +238,7 @@ final class Bzip2Decoder {
                 codeBits = codeBits << 1 | nextCodeBit;
               }
               symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-              L15: while (true) {
+              decodeBlockSymbols: while (true) {
                 if (symbol == endOfBlockSymbol) {
                   state.pendingRunLength = 0;
                   state.pendingRunByte = (byte) 0;
@@ -266,10 +266,10 @@ final class Bzip2Decoder {
                   if ((state.blockBytesConsumed == state.blockLength + 1) &&
                       (state.pendingRunLength == 0)) {
                     continueDecodingBlocks = 1;
-                    continue L1;
+                    continue decodeNextBlock;
                   }
                   continueDecodingBlocks = 0;
-                  continue L1;
+                  continue decodeNextBlock;
                 }
                 if ((symbol != 0) &&
                     (symbol != 1)) {
@@ -386,7 +386,7 @@ final class Bzip2Decoder {
                     blockLength++;
                     runLength--;
                   }
-                  continue L15;
+                  continue decodeBlockSymbols;
                 }
               }
             }
@@ -523,12 +523,12 @@ final class Bzip2Decoder {
         remainingOutputBytes = state.remainingOutputBytes;
         initialOutputAllowance = remainingOutputBytes;
         blockEndPosition = state.blockLength + 1;
-        L0: while (true) {
-          L1: {
+        emitTransformedRuns: while (true) {
+          runEmissionBeforeStateCommit: {
             if (remainingRunLength > 0) {
               while (true) {
                 if (remainingOutputBytes == 0) {
-                  break L1;
+                  break runEmissionBeforeStateCommit;
                 }
                 if (remainingRunLength != 1) {
                   outputBytes[outputPosition] = (byte)runByte;
@@ -539,7 +539,7 @@ final class Bzip2Decoder {
                 }
                 if (remainingOutputBytes == 0) {
                   remainingRunLength = 1;
-                  break L1;
+                  break runEmissionBeforeStateCommit;
                 }
                 outputBytes[outputPosition] = (byte)runByte;
                 outputPosition++;
@@ -562,11 +562,11 @@ final class Bzip2Decoder {
                   transformPositionOrEntry = transformPositionOrEntry >> 8;
                   blockBytesConsumed++;
                   if (blockBytesConsumed == blockEndPosition) {
-                    continue L0;
+                    continue emitTransformedRuns;
                   }
                   if (nextByteOrRunCount != currentByte) {
                     currentByte = nextByteOrRunCount;
-                    continue L0;
+                    continue emitTransformedRuns;
                   }
                   remainingRunLength = 3;
                   transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
@@ -574,11 +574,11 @@ final class Bzip2Decoder {
                   transformPositionOrEntry = transformPositionOrEntry >> 8;
                   blockBytesConsumed++;
                   if (blockBytesConsumed == blockEndPosition) {
-                    continue L0;
+                    continue emitTransformedRuns;
                   }
                   if (nextByteOrRunCount != currentByte) {
                     currentByte = nextByteOrRunCount;
-                    continue L0;
+                    continue emitTransformedRuns;
                   }
                   transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
                   nextByteOrRunCount = (byte)transformPositionOrEntry;
@@ -589,17 +589,17 @@ final class Bzip2Decoder {
                   currentByte = (byte)transformPositionOrEntry;
                   transformPositionOrEntry = transformPositionOrEntry >> 8;
                   blockBytesConsumed++;
-                  continue L0;
+                  continue emitTransformedRuns;
                 }
                 if (remainingOutputBytes == 0) {
                   remainingRunLength = 1;
-                  break L1;
+                  break runEmissionBeforeStateCommit;
                 }
               } else {
                 currentByte = nextByteOrRunCount;
                 if (remainingOutputBytes == 0) {
                   remainingRunLength = 1;
-                  break L1;
+                  break runEmissionBeforeStateCommit;
                 }
               }
               outputBytes[outputPosition] = (byte)runByte;

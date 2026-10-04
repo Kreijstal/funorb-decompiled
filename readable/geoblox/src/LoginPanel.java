@@ -96,7 +96,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                   return;
                 }
               }
-              IterableNodeHashTable.a((Throwable) null, "LR1: " + TextTemplateDefinition.e(55), (byte) 125);
+              IterableNodeHashTable.reportClientError((Throwable) null, "LR1: " + TextTemplateDefinition.e(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -123);
             }
           }
@@ -273,7 +273,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           if (IterableNodeHashTable.requestReadyStage == PacketBuffer.currentProtocolStage) {
             CacheReference.outgoingSessionBuffer.position = 0;
-            IntrusiveNodeHashTable.field_b = null;
+            IntrusiveNodeHashTable.pendingLoginBooleanReply = null;
             if (param4 != null) {
               var9 = 0;
               EndingAnimationSupport.loginPayloadBuffer.position = 0;
@@ -292,7 +292,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               CacheReference.outgoingSessionBuffer.writeByte((byte) 127, 18);
               CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
               var10 = CacheReference.outgoingSessionBuffer.position;
-              var11_ref_String = Under13TermsPanel.a(-1, NodeHashTableIterator.c(105));
+              var11_ref_String = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(105));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -336,7 +336,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               WidgetSkinState.field_i = new String[var9 - 100];
             } else {
               if (var9 == 248) {
-                GrowableIntList.a(NodeHashTableIterator.c(124), (byte) 123);
+                GrowableIntList.a(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
                 AudioService.field_a = ByteShortQuery.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 TextTemplateArgumentType.field_e = false;
@@ -348,8 +348,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 AchievementSubmission.field_k = -1;
                 ScorePopup.currentPacketOpcode = var9;
               } else {
-                UiWidget.b(30000, DualLinkNode.d(112));
-                IntrusiveNodeHashTable.field_b = new Boolean(Bzip2DecoderState.a(LogoCompositor.sessionPacketBuffer, 0));
+                UiWidget.b(30000, DualLinkNode.getLoginBooleanReplyLength(112));
+                IntrusiveNodeHashTable.pendingLoginBooleanReply = new Boolean(Bzip2DecoderState.a(LogoCompositor.sessionPacketBuffer, 0));
                 LogoCompositor.sessionPacketBuffer.position = 0;
               }
             }
@@ -378,7 +378,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             } else {
               var9_ref_String = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
               if (var9_ref_String != null) {
-                SettingsCookieSupport.storeSettingsCookie(-128, var9_ref_String, NodeHashTableIterator.c(106));
+                SettingsCookieSupport.storeSettingsCookie(-128, var9_ref_String, NodeHashTableIterator.getActiveApplet(106));
               }
             }
             Bzip2DecoderState.closeSessionSocket((byte) -114);
@@ -685,7 +685,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         if ((!(!SpriteState.e(param0)) ||
             (!(this.loginIdentifierInput.widgetText.length() <= 0) &&
               !(0 >= this.passwordInput.widgetText.length())))) {
-          SecondaryNodeDequeIterator.a(this.passwordInput.widgetText, (byte) 66, this.loginIdentifierInput.widgetText);
+          SecondaryNodeDequeIterator.startLogin(this.passwordInput.widgetText, (byte) 66, this.loginIdentifierInput.widgetText);
         }
     }
 
@@ -794,7 +794,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             this.widgetY = this.widgetY + (var7.measureWrappedHeight(this.messageText, this.widgetWidth - 40, var7.maxAscent) + 5);
           }
           var8 = WeightedObjectCache.loginUsernameEmailText;
-          var9 = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.c(120), 200);
+          var9 = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.getActiveApplet(120), 200);
           if (var9 != LoginTextValue.field_b) {
             if (var9 == ProgressDialog.field_W) {
               var8 = LogoPreparationSupport.loginUsernameText;

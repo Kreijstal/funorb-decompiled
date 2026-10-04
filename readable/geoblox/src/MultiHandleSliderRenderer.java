@@ -84,9 +84,9 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
         }
         if (!param0) {
             pendingActionPanelWidth = 78;
-            return (java.awt.Container) ((Object) NodeHashTableIterator.c(122));
+            return (java.awt.Container) ((Object) NodeHashTableIterator.getActiveApplet(122));
         }
-        return (java.awt.Container) ((Object) NodeHashTableIterator.c(122));
+        return (java.awt.Container) ((Object) NodeHashTableIterator.getActiveApplet(122));
     }
 
     final static void drawHalfBlendRgbGradientSpan(int destinationIndex, int redStepQ16, int guard, int redQ16, int blueStepQ16, int greenQ16, int greenStepQ16, int pixelCount, int blueQ16, int[] destinationPixels) {

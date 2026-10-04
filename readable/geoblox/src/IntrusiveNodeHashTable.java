@@ -3,32 +3,32 @@
  */
 final class IntrusiveNodeHashTable {
     static String changeDisplayNameText;
-    private IntrusiveNode[] field_e;
-    static Boolean field_b;
-    private IntrusiveNode field_a;
-    private int field_c;
-    private int field_f;
-    private IntrusiveNode field_g;
+    private IntrusiveNode[] bucketSentinels;
+    static Boolean pendingLoginBooleanReply;
+    private IntrusiveNode iterationCursor;
+    private int bucketCount;
+    private int nextIterationBucket;
+    private IntrusiveNode lookupCursor;
     static MonochromeBitmapFont smallFont;
 
-    final IntrusiveNode a(long param0, byte param1) {
-        IntrusiveNode var5 = null;
-        IntrusiveNode var4 = this.field_e[(int)((long)(-1 + this.field_c) & param0)];
-        this.field_g = var4.nextNode;
-        while (var4 != this.field_g) {
-            if (!(~this.field_g.field_a != ~param0)) {
-                var5 = this.field_g;
-                this.field_g = this.field_g.nextNode;
-                return var5;
+    final IntrusiveNode findByKey(long key, byte methodGuard) {
+        IntrusiveNode matchingNode = null;
+        IntrusiveNode bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];
+        this.lookupCursor = bucketSentinel.nextNode;
+        while (bucketSentinel != this.lookupCursor) {
+            if (!(~this.lookupCursor.nodeKey != ~key)) {
+                matchingNode = this.lookupCursor;
+                this.lookupCursor = this.lookupCursor.nextNode;
+                return matchingNode;
             }
-            this.field_g = this.field_g.nextNode;
+            this.lookupCursor = this.lookupCursor.nextNode;
         }
-        if (param1 >= -73) {
-            this.a((byte) -38);
-            this.field_g = null;
+        if (methodGuard >= -73) {
+            this.firstForIteration((byte) -38);
+            this.lookupCursor = null;
             return null;
         }
-        this.field_g = null;
+        this.lookupCursor = null;
         return null;
     }
 
@@ -48,23 +48,23 @@ final class IntrusiveNodeHashTable {
         return 2048 <= angle8192 ? -ScoreSubmission.quarterSineQ16[angle8192 - 2048] : ScoreSubmission.quarterSineQ16[-angle8192 + 2048];
     }
 
-    final void a(byte param0, IntrusiveNode param1, long param2) {
-        IntrusiveNode var5 = null;
+    final void put(byte methodGuard, IntrusiveNode node, long key) {
+        IntrusiveNode bucketSentinel = null;
         try {
-            if (!(null == param1.previousNode)) {
-                param1.unlinkNode(false);
+            if (!(null == node.previousNode)) {
+                node.unlinkNode(false);
             }
-            var5 = this.field_e[(int)((long)(this.field_c - 1) & param2)];
-            param1.nextNode = var5;
-            param1.previousNode = var5.previousNode;
-            param1.previousNode.nextNode = param1;
-            param1.field_a = param2;
-            if (param0 != 102) {
+            bucketSentinel = this.bucketSentinels[(int)((long)(this.bucketCount - 1) & key)];
+            node.nextNode = bucketSentinel;
+            node.previousNode = bucketSentinel.previousNode;
+            node.previousNode.nextNode = node;
+            node.nodeKey = key;
+            if (methodGuard != 102) {
                 smallFont = (MonochromeBitmapFont) null;
             }
-            param1.nextNode.previousNode = param1;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            node.nextNode.previousNode = node;
+        } catch (RuntimeException insertionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "fi.F(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
         }
     }
 
@@ -101,82 +101,82 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
-        if (param0 != 125) {
-            IntrusiveNodeHashTable.a(103);
-            this.field_f = 0;
-            return this.b(param0 - 195);
+    final IntrusiveNode firstForIteration(byte methodGuard) {
+        if (methodGuard != 125) {
+            IntrusiveNodeHashTable.releaseSharedResources(103);
+            this.nextIterationBucket = 0;
+            return this.nextForIteration(methodGuard - 195);
         }
-        this.field_f = 0;
-        return this.b(param0 - 195);
+        this.nextIterationBucket = 0;
+        return this.nextForIteration(methodGuard - 195);
     }
 
-    public static void a(int param0) {
+    public static void releaseSharedResources(int methodGuard) {
         changeDisplayNameText = null;
-        if (param0 >= -113) {
+        if (methodGuard >= -113) {
             return;
         }
-        field_b = null;
+        pendingLoginBooleanReply = null;
         smallFont = null;
     }
 
-    IntrusiveNodeHashTable(int param0) {
-        int var2 = 0;
-        IntrusiveNode dupTemp$1 = null;
-        IntrusiveNode var3;
-        this.field_f = 0;
-        this.field_c = param0;
-        this.field_e = new IntrusiveNode[param0];
-        for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new IntrusiveNode();
-          var3 = dupTemp$1;
-          this.field_e[var2] = dupTemp$1;
-          var3.nextNode = var3;
-          var3.previousNode = var3;
+    IntrusiveNodeHashTable(int bucketCount) {
+        int bucketIndex = 0;
+        IntrusiveNode allocatedSentinel = null;
+        IntrusiveNode sentinelAlias;
+        this.nextIterationBucket = 0;
+        this.bucketCount = bucketCount;
+        this.bucketSentinels = new IntrusiveNode[bucketCount];
+        for (bucketIndex = 0; bucketIndex < bucketCount; bucketIndex++) {
+          allocatedSentinel = new IntrusiveNode();
+          sentinelAlias = allocatedSentinel;
+          this.bucketSentinels[bucketIndex] = allocatedSentinel;
+          sentinelAlias.nextNode = sentinelAlias;
+          sentinelAlias.previousNode = sentinelAlias;
         }
     }
 
-    final IntrusiveNode b(int param0) {
-        int fieldTemp$1 = 0;
-        int fieldTemp$0 = 0;
-        int var2;
-        IntrusiveNode var3;
-        IntrusiveNode var4;
-        IntrusiveNode var7;
-        if (this.field_f <= 0) {
+    final IntrusiveNode nextForIteration(int methodGuard) {
+        int initialBucketBeforeAdvance = 0;
+        int nextBucketBeforeAdvance = 0;
+        int guardResidue;
+        IntrusiveNode firstNonemptyBucketNode;
+        IntrusiveNode nextNonemptyBucketNode;
+        IntrusiveNode currentBucketNode;
+        if (this.nextIterationBucket <= 0) {
           while (true) {
-            if (this.field_c <= this.field_f) {
-              var2 = 47 % ((param0 - 28) / 38);
+            if (this.bucketCount <= this.nextIterationBucket) {
+              guardResidue = 47 % ((methodGuard - 28) / 38);
               return null;
             }
-            fieldTemp$1 = this.field_f;
-            this.field_f = this.field_f + 1;
-            var3 = this.field_e[fieldTemp$1].nextNode;
-            if (this.field_e[-1 + this.field_f] == var3) {
+            initialBucketBeforeAdvance = this.nextIterationBucket;
+            this.nextIterationBucket = this.nextIterationBucket + 1;
+            firstNonemptyBucketNode = this.bucketSentinels[initialBucketBeforeAdvance].nextNode;
+            if (this.bucketSentinels[-1 + this.nextIterationBucket] == firstNonemptyBucketNode) {
               continue;
             }
-            this.field_a = var3.nextNode;
-            return var3;
+            this.iterationCursor = firstNonemptyBucketNode.nextNode;
+            return firstNonemptyBucketNode;
           }
         }
-        if (this.field_a != this.field_e[this.field_f - 1]) {
-          var7 = this.field_a;
-          this.field_a = var7.nextNode;
-          return var7;
+        if (this.iterationCursor != this.bucketSentinels[this.nextIterationBucket - 1]) {
+          currentBucketNode = this.iterationCursor;
+          this.iterationCursor = currentBucketNode.nextNode;
+          return currentBucketNode;
         }
         while (true) {
-          if (this.field_c <= this.field_f) {
-            var2 = 47 % ((param0 - 28) / 38);
+          if (this.bucketCount <= this.nextIterationBucket) {
+            guardResidue = 47 % ((methodGuard - 28) / 38);
             return null;
           }
-          fieldTemp$0 = this.field_f;
-          this.field_f = this.field_f + 1;
-          var4 = this.field_e[fieldTemp$0].nextNode;
-          if (this.field_e[-1 + this.field_f] == var4) {
+          nextBucketBeforeAdvance = this.nextIterationBucket;
+          this.nextIterationBucket = this.nextIterationBucket + 1;
+          nextNonemptyBucketNode = this.bucketSentinels[nextBucketBeforeAdvance].nextNode;
+          if (this.bucketSentinels[-1 + this.nextIterationBucket] == nextNonemptyBucketNode) {
             continue;
           }
-          this.field_a = var4.nextNode;
-          return var4;
+          this.iterationCursor = nextNonemptyBucketNode.nextNode;
+          return nextNonemptyBucketNode;
         }
     }
 

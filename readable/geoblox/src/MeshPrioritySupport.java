@@ -52,7 +52,7 @@ final class MeshPrioritySupport {
         }
         Sprite[] allocatedSlices = new Sprite[9];
         Sprite[] slicesResultAlias = allocatedSlices;
-        allocatedSlices[4] = SecondaryNodeDequeIterator.a(0, color, 64);
+        allocatedSlices[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, color, 64);
         return slicesResultAlias;
     }
 

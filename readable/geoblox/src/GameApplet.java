@@ -228,7 +228,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 GameApplet.c((byte) -125);
               }
               try {
-                AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.c(115), "loggedout");
+                AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.getActiveApplet(115), "loggedout");
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var3 = decompiledCaughtException;
@@ -421,7 +421,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               } catch (java.lang.Throwable decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var1 = decompiledCaughtException;
-                IterableNodeHashTable.a((Throwable) (var1), (String) null, (byte) 125);
+                IterableNodeHashTable.reportClientError((Throwable) (var1), (String) null, (byte) 125);
                 this.a((byte) 79, "crash");
               }
               this.a((byte) 14, true);
@@ -777,7 +777,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 AudioService.canvasWidth = param4;
                 DialWidget.field_G = param4;
                 PrefixCodeDecoder.field_d = (GameApplet) (this);
-                GameScreen.errorReportApplet = NodeHashTableIterator.c(107);
+                GameScreen.errorReportApplet = NodeHashTableIterator.getActiveApplet(107);
                 if (param1 != -14948) {
                   return;
                 }
@@ -797,7 +797,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var8_ref = decompiledCaughtException;
-                IterableNodeHashTable.a(var8_ref, (String) null, (byte) 125);
+                IterableNodeHashTable.reportClientError(var8_ref, (String) null, (byte) 125);
                 this.a((byte) 79, "crash");
               }
               return;

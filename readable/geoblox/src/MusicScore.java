@@ -52,12 +52,12 @@ final class MusicScore extends IntrusiveNode {
           midiReader.readTrackDelta(trackIndex);
           midiReader.saveTrackPosition(trackIndex);
         }
-        L1: while (true) {
+        collectNextTickGroup: while (true) {
           trackIndex = midiReader.selectEarliestTrack();
           tickGroup = midiReader.trackTicks[trackIndex];
           while (true) {
             if (midiReader.trackTicks[trackIndex] != tickGroup) {
-              continue L1;
+              continue collectNextTickGroup;
             }
             midiReader.seekTrack(trackIndex);
             packedEvent = midiReader.readTrackEvent(trackIndex);
@@ -67,7 +67,7 @@ final class MusicScore extends IntrusiveNode {
               if (midiReader.areAllTracksEnded()) {
                 return;
               }
-              continue L1;
+              continue collectNextTickGroup;
             }
             eventStatus = packedEvent & 240;
             if (eventStatus == 176) {
@@ -92,10 +92,10 @@ final class MusicScore extends IntrusiveNode {
               controllerValueOrVelocity = packedEvent >> 16 & 127;
               if (controllerValueOrVelocity > 0) {
                 instrumentId = channelProgramsStorage[channelIndex];
-                noteMask = (InstrumentNoteMask) ((Object) this.instrumentNoteMasks.a((long)instrumentId, (byte) -76));
+                noteMask = (InstrumentNoteMask) ((Object) this.instrumentNoteMasks.findByKey((long)instrumentId, (byte) -76));
                 if (noteMask == null) {
                   noteMask = new InstrumentNoteMask(new byte[128]);
-                  this.instrumentNoteMasks.a((byte) 102, noteMask, (long)instrumentId);
+                  this.instrumentNoteMasks.put((byte) 102, noteMask, (long)instrumentId);
                 }
                 noteMask.notesUsed[controllerOrProgramOrNote] = (byte) 1;
               }
@@ -218,7 +218,7 @@ final class MusicScore extends IntrusiveNode {
         polyPressureEventCount = 0;
         programAndBankValueCount = 0;
         trackIndexOrDeltaStart = 0;
-        L0: while (true) {
+        countPackedTrackEvents: while (true) {
           if (trackIndexOrDeltaStart < trackCount) {
             previousEventKindOrDeltaCount = -1;
             while (true) {
@@ -229,7 +229,7 @@ final class MusicScore extends IntrusiveNode {
               previousEventKindOrDeltaCount = eventCodeOrControllerCursor & 15;
               if (eventCodeOrControllerCursor == 7) {
                 trackIndexOrDeltaStart++;
-                continue L0;
+                continue countPackedTrackEvents;
               }
               if (eventCodeOrControllerCursor == 23) {
                 tempoEventCount++;
@@ -428,7 +428,7 @@ final class MusicScore extends IntrusiveNode {
           controllerValues = new int[128];
           controllerNumber = 0;
           outputTrackIndex = 0;
-          L4: while (true) {
+          writeMidiTracks: while (true) {
             if (outputTrackIndex >= trackCount) {
               return;
             }
@@ -453,7 +453,7 @@ final class MusicScore extends IntrusiveNode {
                 midiOutput.writeByte((byte) 125, 0);
                 midiOutput.backpatchLengthIntBE(midiOutput.position - trackBodyStart, 0);
                 outputTrackIndex++;
-                continue L4;
+                continue writeMidiTracks;
               }
               if (packedEventCode == 23) {
                 if (statusChanged != 0) {

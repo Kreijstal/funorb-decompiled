@@ -77,7 +77,7 @@ final class MatchScoringSupport {
             SecondaryNodeDeque.recordAchievement(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
           }
           if (EntityCollisionSupport.matchChainLength >= 7) {
-            SecondaryNodeDeque.recordAchievement(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
+            SecondaryNodeDeque.recordAchievement(255 ^ IntrusiveDeque.sharedAchievementId, -97, IntrusiveDeque.sharedAchievementId);
           }
           for (sortInsertionIndex = 1; sortInsertionIndex < EmailAvailabilityQuery.matchCandidateCount; sortInsertionIndex++) {
             sortCursorThenFirstEntityId = sortInsertionIndex - 1;

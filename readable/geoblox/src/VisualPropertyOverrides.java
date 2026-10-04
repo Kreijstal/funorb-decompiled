@@ -220,7 +220,7 @@ class VisualPropertyOverrides extends VisualPropertyNode {
         this.field_r = -2147483648;
         this.field_w = -2147483648;
         try {
-          this.field_a = nodeKey;
+          this.nodeKey = nodeKey;
           this.mergeDefinedProperties(-2147483648, inheritedProperties);
           if (textOverride != null) {
             this.textOverride = textOverride;

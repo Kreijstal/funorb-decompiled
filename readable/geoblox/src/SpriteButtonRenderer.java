@@ -98,7 +98,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
                 var1 = field_t.h(87);
             }
             if (var1.length() == 0) {
-                var1 = DualLinkNode.d((byte) -53);
+                var1 = DualLinkNode.getSessionTextOrEmpty((byte) -53);
             }
             if (!(var1.length() != 0)) {
                 var1 = AlternateLongAndTextLoginPayload.defaultPlayerNameText;
