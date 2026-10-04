@@ -638,86 +638,84 @@ final class SoftwareRasterizer {
         if (centerY > clippedBottomExclusive) {
           centerY = clippedBottomExclusive;
         }
-        L4: while (true) {
-          if (rowY < centerY) {
-            while (true) {
-              if ((yAdjustedSquaredDistance > radiusSquared) &&
-                  (xAdjustedSquaredDistance > radiusSquared)) {
-                spanLeft = centerX - xExtent + 1;
-                if (spanLeft < clipLeft) {
-                  spanLeft = clipLeft;
-                }
-                spanRightExclusiveOrInclusive = centerX + xExtent;
-                if (spanRightExclusiveOrInclusive > clipRight) {
-                  spanRightExclusiveOrInclusive = clipRight;
-                }
-                destinationIndex = spanLeft + rowY * stride;
-                for (spanX = spanLeft; spanX < spanRightExclusiveOrInclusive; spanX++) {
-                  destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
-                  destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
-                  destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
-                  blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
-                  upperDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  framebuffer[upperDestinationIndexBeforeIncrement] = blendedColor;
-                }
-                rowY++;
-                upperYOffsetBeforeDecrement = yOffset;
-                yOffset--;
-                xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
-                yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-                continue L4;
+        L4: while (rowY < centerY) {
+          while (true) {
+            if ((yAdjustedSquaredDistance > radiusSquared) &&
+                (xAdjustedSquaredDistance > radiusSquared)) {
+              spanLeft = centerX - xExtent + 1;
+              if (spanLeft < clipLeft) {
+                spanLeft = clipLeft;
               }
-              xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
-              upperXExtentBeforeIncrement = xExtent;
-              xExtent++;
-              yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
+              spanRightExclusiveOrInclusive = centerX + xExtent;
+              if (spanRightExclusiveOrInclusive > clipRight) {
+                spanRightExclusiveOrInclusive = clipRight;
+              }
+              destinationIndex = spanLeft + rowY * stride;
+              for (spanX = spanLeft; spanX < spanRightExclusiveOrInclusive; spanX++) {
+                destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
+                destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
+                destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
+                blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+                upperDestinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                framebuffer[upperDestinationIndexBeforeIncrement] = blendedColor;
+              }
+              rowY++;
+              upperYOffsetBeforeDecrement = yOffset;
+              yOffset--;
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
+              continue L4;
+            }
+            xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
+            upperXExtentBeforeIncrement = xExtent;
+            xExtent++;
+            yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
+            continue;
+          }
+        }
+        xExtent = radius;
+        yOffset = -yOffset;
+        yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
+        xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
+        yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
+        while (rowY < clippedBottomExclusive) {
+          while (yAdjustedSquaredDistance > radiusSquared) {
+            if (xAdjustedSquaredDistance > radiusSquared) {
+              lowerXExtentBeforeDecrement = xExtent;
+              xExtent--;
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
               continue;
             }
+            break;
           }
-          xExtent = radius;
-          yOffset = -yOffset;
-          yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
-          xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
-          yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
-          while (rowY < clippedBottomExclusive) {
-            while (yAdjustedSquaredDistance > radiusSquared) {
-              if (xAdjustedSquaredDistance > radiusSquared) {
-                lowerXExtentBeforeDecrement = xExtent;
-                xExtent--;
-                yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
-                xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
-                continue;
-              }
-              break;
-            }
-            spanLeft = centerX - xExtent;
-            if (spanLeft < clipLeft) {
-              spanLeft = clipLeft;
-            }
-            spanRightExclusiveOrInclusive = centerX + xExtent;
-            if (spanRightExclusiveOrInclusive > clipRight - 1) {
-              spanRightExclusiveOrInclusive = clipRight - 1;
-            }
-            lowerDestinationIndex = spanLeft + rowY * stride;
-            destinationIndex = lowerDestinationIndex;
-            for (spanX = spanLeft; spanX <= spanRightExclusiveOrInclusive; spanX++) {
-              destinationRedWeighted = (framebuffer[lowerDestinationIndex] >> 16 & 255) * destinationWeight256;
-              destinationGreenWeighted = (framebuffer[lowerDestinationIndex] >> 8 & 255) * destinationWeight256;
-              destinationBlueWeighted = (framebuffer[lowerDestinationIndex] & 255) * destinationWeight256;
-              blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
-              lowerDestinationIndexBeforeIncrement = lowerDestinationIndex;
-              lowerDestinationIndex++;
-              framebuffer[lowerDestinationIndexBeforeIncrement] = blendedColor;
-            }
-            rowY++;
-            yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
-            lowerYOffsetBeforeIncrement = yOffset;
-            yOffset++;
-            xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
+          spanLeft = centerX - xExtent;
+          if (spanLeft < clipLeft) {
+            spanLeft = clipLeft;
           }
-          return;
+          spanRightExclusiveOrInclusive = centerX + xExtent;
+          if (spanRightExclusiveOrInclusive > clipRight - 1) {
+            spanRightExclusiveOrInclusive = clipRight - 1;
+          }
+          lowerDestinationIndex = spanLeft + rowY * stride;
+          destinationIndex = lowerDestinationIndex;
+          for (spanX = spanLeft; spanX <= spanRightExclusiveOrInclusive; spanX++) {
+            destinationRedWeighted = (framebuffer[lowerDestinationIndex] >> 16 & 255) * destinationWeight256;
+            destinationGreenWeighted = (framebuffer[lowerDestinationIndex] >> 8 & 255) * destinationWeight256;
+            destinationBlueWeighted = (framebuffer[lowerDestinationIndex] & 255) * destinationWeight256;
+            blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+            lowerDestinationIndexBeforeIncrement = lowerDestinationIndex;
+            lowerDestinationIndex++;
+            framebuffer[lowerDestinationIndexBeforeIncrement] = blendedColor;
+          }
+          rowY++;
+          yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
+          lowerYOffsetBeforeIncrement = yOffset;
+          yOffset++;
+          xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
         }
+        return;
     }
 
     final static void fillRectangle(int x, int y, int width, int height, int color) {
@@ -815,77 +813,75 @@ final class SoftwareRasterizer {
         if (centerY > clippedBottomExclusive) {
           centerY = clippedBottomExclusive;
         }
-        L4: while (true) {
-          if (rowY < centerY) {
-            while (true) {
-              if ((yAdjustedSquaredDistance > radiusSquared) &&
-                  (xAdjustedSquaredDistance > radiusSquared)) {
-                spanLeft = centerX - xExtent + 1;
-                if (spanLeft < clipLeft) {
-                  spanLeft = clipLeft;
-                }
-                spanRightExclusiveOrInclusive = centerX + xExtent;
-                if (spanRightExclusiveOrInclusive > clipRight) {
-                  spanRightExclusiveOrInclusive = clipRight;
-                }
-                destinationIndex = spanLeft + rowY * stride;
-                for (spanX = spanLeft; spanX < spanRightExclusiveOrInclusive; spanX++) {
-                  upperDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  framebuffer[upperDestinationIndexBeforeIncrement] = color;
-                }
-                rowY++;
-                upperYOffsetBeforeDecrement = yOffset;
-                yOffset--;
-                xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
-                yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-                continue L4;
+        L4: while (rowY < centerY) {
+          while (true) {
+            if ((yAdjustedSquaredDistance > radiusSquared) &&
+                (xAdjustedSquaredDistance > radiusSquared)) {
+              spanLeft = centerX - xExtent + 1;
+              if (spanLeft < clipLeft) {
+                spanLeft = clipLeft;
               }
-              xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
-              upperXExtentBeforeIncrement = xExtent;
-              xExtent++;
-              yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
+              spanRightExclusiveOrInclusive = centerX + xExtent;
+              if (spanRightExclusiveOrInclusive > clipRight) {
+                spanRightExclusiveOrInclusive = clipRight;
+              }
+              destinationIndex = spanLeft + rowY * stride;
+              for (spanX = spanLeft; spanX < spanRightExclusiveOrInclusive; spanX++) {
+                upperDestinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                framebuffer[upperDestinationIndexBeforeIncrement] = color;
+              }
+              rowY++;
+              upperYOffsetBeforeDecrement = yOffset;
+              yOffset--;
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
+              continue L4;
+            }
+            xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
+            upperXExtentBeforeIncrement = xExtent;
+            xExtent++;
+            yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
+            continue;
+          }
+        }
+        xExtent = radius;
+        yOffset = rowY - centerY;
+        yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
+        xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
+        yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
+        while (rowY < clippedBottomExclusive) {
+          while (yAdjustedSquaredDistance > radiusSquared) {
+            if (xAdjustedSquaredDistance > radiusSquared) {
+              lowerXExtentBeforeDecrement = xExtent;
+              xExtent--;
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
               continue;
             }
+            break;
           }
-          xExtent = radius;
-          yOffset = rowY - centerY;
-          yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
-          xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
-          yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
-          while (rowY < clippedBottomExclusive) {
-            while (yAdjustedSquaredDistance > radiusSquared) {
-              if (xAdjustedSquaredDistance > radiusSquared) {
-                lowerXExtentBeforeDecrement = xExtent;
-                xExtent--;
-                yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
-                xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
-                continue;
-              }
-              break;
-            }
-            spanLeft = centerX - xExtent;
-            if (spanLeft < clipLeft) {
-              spanLeft = clipLeft;
-            }
-            spanRightExclusiveOrInclusive = centerX + xExtent;
-            if (spanRightExclusiveOrInclusive > clipRight - 1) {
-              spanRightExclusiveOrInclusive = clipRight - 1;
-            }
-            destinationIndex = spanLeft + rowY * stride;
-            for (spanX = spanLeft; spanX <= spanRightExclusiveOrInclusive; spanX++) {
-              lowerDestinationIndexBeforeIncrement = destinationIndex;
-              destinationIndex++;
-              framebuffer[lowerDestinationIndexBeforeIncrement] = color;
-            }
-            rowY++;
-            yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
-            lowerYOffsetBeforeIncrement = yOffset;
-            yOffset++;
-            xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
+          spanLeft = centerX - xExtent;
+          if (spanLeft < clipLeft) {
+            spanLeft = clipLeft;
           }
-          return;
+          spanRightExclusiveOrInclusive = centerX + xExtent;
+          if (spanRightExclusiveOrInclusive > clipRight - 1) {
+            spanRightExclusiveOrInclusive = clipRight - 1;
+          }
+          destinationIndex = spanLeft + rowY * stride;
+          for (spanX = spanLeft; spanX <= spanRightExclusiveOrInclusive; spanX++) {
+            lowerDestinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[lowerDestinationIndexBeforeIncrement] = color;
+          }
+          rowY++;
+          yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
+          lowerYOffsetBeforeIncrement = yOffset;
+          yOffset++;
+          xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
         }
+        return;
     }
 
     final static void drawLine(int startX, int startY, int endX, int endY, int color) {
@@ -1285,101 +1281,99 @@ final class SoftwareRasterizer {
         if (topCornerCenterYOrUpperHalfEnd > clippedBottomExclusive) {
           topCornerCenterYOrUpperHalfEnd = clippedBottomExclusive;
         }
-        L4: while (true) {
-          if (rowY < topCornerCenterYOrUpperHalfEnd) {
-            while (true) {
-              if ((yAdjustedSquaredDistance > radiusSquared) &&
-                  (xAdjustedSquaredDistance > radiusSquared)) {
-                spanLeft = leftCornerCenterX - xExtent + 1;
-                if (spanLeft < clipLeft) {
-                  spanLeft = clipLeft;
-                }
-                spanRightExclusiveOrInclusive = leftCornerCenterX + horizontalCenterGap + xExtent;
-                if (spanRightExclusiveOrInclusive > clipRight) {
-                  spanRightExclusiveOrInclusive = clipRight;
-                }
-                destinationIndex = spanLeft + rowY * stride;
-                for (spanXOrMiddleRowSkip = spanLeft; spanXOrMiddleRowSkip < spanRightExclusiveOrInclusive; spanXOrMiddleRowSkip++) {
-                  upperDestinationIndexBeforeIncrement = destinationIndex;
-                  destinationIndex++;
-                  framebuffer[upperDestinationIndexBeforeIncrement] = color;
-                }
-                rowY++;
-                upperYOffsetBeforeDecrement = yOffset;
-                yOffset--;
-                xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
-                yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-                continue L4;
+        L4: while (rowY < topCornerCenterYOrUpperHalfEnd) {
+          while (true) {
+            if ((yAdjustedSquaredDistance > radiusSquared) &&
+                (xAdjustedSquaredDistance > radiusSquared)) {
+              spanLeft = leftCornerCenterX - xExtent + 1;
+              if (spanLeft < clipLeft) {
+                spanLeft = clipLeft;
               }
-              xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
-              upperXExtentBeforeIncrement = xExtent;
-              xExtent++;
-              yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
+              spanRightExclusiveOrInclusive = leftCornerCenterX + horizontalCenterGap + xExtent;
+              if (spanRightExclusiveOrInclusive > clipRight) {
+                spanRightExclusiveOrInclusive = clipRight;
+              }
+              destinationIndex = spanLeft + rowY * stride;
+              for (spanXOrMiddleRowSkip = spanLeft; spanXOrMiddleRowSkip < spanRightExclusiveOrInclusive; spanXOrMiddleRowSkip++) {
+                upperDestinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                framebuffer[upperDestinationIndexBeforeIncrement] = color;
+              }
+              rowY++;
+              upperYOffsetBeforeDecrement = yOffset;
+              yOffset--;
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
+              continue L4;
+            }
+            xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
+            upperXExtentBeforeIncrement = xExtent;
+            xExtent++;
+            yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
+            continue;
+          }
+        }
+        yOffset = rowY - topCornerCenterYOrUpperHalfEnd;
+        spanLeft = x;
+        if (spanLeft < clipLeft) {
+          spanLeft = clipLeft;
+        }
+        spanRightExclusiveOrInclusive = x + width;
+        if (spanRightExclusiveOrInclusive > clipRight) {
+          spanRightExclusiveOrInclusive = clipRight;
+        }
+        destinationIndex = spanLeft + rowY * stride;
+        spanXOrMiddleRowSkip = stride + spanLeft - spanRightExclusiveOrInclusive;
+        middleBottomExclusive = y + height - cornerRadius - 1;
+        if (middleBottomExclusive > clipBottom) {
+          middleBottomExclusive = clipBottom;
+        }
+        while (rowY < middleBottomExclusive) {
+          for (middleSpanX = spanLeft; middleSpanX < spanRightExclusiveOrInclusive; middleSpanX++) {
+            middleDestinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[middleDestinationIndexBeforeIncrement] = color;
+          }
+          rowY++;
+          destinationIndex = destinationIndex + spanXOrMiddleRowSkip;
+        }
+        yOffset = 0;
+        xExtent = cornerRadius;
+        yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
+        xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
+        yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
+        while (rowY < clippedBottomExclusive) {
+          while (yAdjustedSquaredDistance > radiusSquared) {
+            if (xAdjustedSquaredDistance > radiusSquared) {
+              lowerXExtentBeforeDecrement = xExtent;
+              xExtent--;
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
               continue;
             }
+            break;
           }
-          yOffset = rowY - topCornerCenterYOrUpperHalfEnd;
-          spanLeft = x;
+          spanLeft = leftCornerCenterX - xExtent;
           if (spanLeft < clipLeft) {
             spanLeft = clipLeft;
           }
-          spanRightExclusiveOrInclusive = x + width;
-          if (spanRightExclusiveOrInclusive > clipRight) {
-            spanRightExclusiveOrInclusive = clipRight;
+          spanRightExclusiveOrInclusive = leftCornerCenterX + horizontalCenterGap + xExtent;
+          if (spanRightExclusiveOrInclusive > clipRight - 1) {
+            spanRightExclusiveOrInclusive = clipRight - 1;
           }
           destinationIndex = spanLeft + rowY * stride;
-          spanXOrMiddleRowSkip = stride + spanLeft - spanRightExclusiveOrInclusive;
-          middleBottomExclusive = y + height - cornerRadius - 1;
-          if (middleBottomExclusive > clipBottom) {
-            middleBottomExclusive = clipBottom;
+          for (spanXOrMiddleRowSkip = spanLeft; spanXOrMiddleRowSkip <= spanRightExclusiveOrInclusive; spanXOrMiddleRowSkip++) {
+            lowerDestinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[lowerDestinationIndexBeforeIncrement] = color;
           }
-          while (rowY < middleBottomExclusive) {
-            for (middleSpanX = spanLeft; middleSpanX < spanRightExclusiveOrInclusive; middleSpanX++) {
-              middleDestinationIndexBeforeIncrement = destinationIndex;
-              destinationIndex++;
-              framebuffer[middleDestinationIndexBeforeIncrement] = color;
-            }
-            rowY++;
-            destinationIndex = destinationIndex + spanXOrMiddleRowSkip;
-          }
-          yOffset = 0;
-          xExtent = cornerRadius;
-          yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
-          xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
-          yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
-          while (rowY < clippedBottomExclusive) {
-            while (yAdjustedSquaredDistance > radiusSquared) {
-              if (xAdjustedSquaredDistance > radiusSquared) {
-                lowerXExtentBeforeDecrement = xExtent;
-                xExtent--;
-                yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
-                xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
-                continue;
-              }
-              break;
-            }
-            spanLeft = leftCornerCenterX - xExtent;
-            if (spanLeft < clipLeft) {
-              spanLeft = clipLeft;
-            }
-            spanRightExclusiveOrInclusive = leftCornerCenterX + horizontalCenterGap + xExtent;
-            if (spanRightExclusiveOrInclusive > clipRight - 1) {
-              spanRightExclusiveOrInclusive = clipRight - 1;
-            }
-            destinationIndex = spanLeft + rowY * stride;
-            for (spanXOrMiddleRowSkip = spanLeft; spanXOrMiddleRowSkip <= spanRightExclusiveOrInclusive; spanXOrMiddleRowSkip++) {
-              lowerDestinationIndexBeforeIncrement = destinationIndex;
-              destinationIndex++;
-              framebuffer[lowerDestinationIndexBeforeIncrement] = color;
-            }
-            rowY++;
-            yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
-            lowerYOffsetBeforeIncrement = yOffset;
-            yOffset++;
-            xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
-          }
-          return;
+          rowY++;
+          yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
+          lowerYOffsetBeforeIncrement = yOffset;
+          yOffset++;
+          xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
         }
+        return;
     }
 
     final static void setClip(int left, int top, int right, int bottom) {

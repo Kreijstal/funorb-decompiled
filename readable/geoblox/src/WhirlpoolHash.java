@@ -114,49 +114,47 @@ final class WhirlpoolHash {
             bitLengthToAccumulate = bitLengthToAccumulate >>> 8;
             lengthByteIndex--;
           }
-          while (true) {
-            if (8L < remainingBitCount) {
-              shiftedSourceByte = 255 & source[sourceByteIndex] << sourceBitShift | (source[sourceByteIndex + 1] & 255) >>> -sourceBitShift + 8;
-              if ((shiftedSourceByte >= 0) &&
-                  (256 > shiftedSourceByte)) {
-                this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
-                this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
-                this.bufferBytePosition = this.bufferBytePosition + 1;
-                if (512 == this.bufferedBitCount) {
-                  this.processBlock(methodGuard ^ 111);
-                  this.bufferBytePosition = 0;
-                  this.bufferedBitCount = 0;
-                }
-                this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(255, shiftedSourceByte << -bufferPartialByteBits + 8);
-                remainingBitCount = remainingBitCount - 8L;
-                this.bufferedBitCount = this.bufferedBitCount + bufferPartialByteBits;
-                sourceByteIndex++;
-                continue;
-              }
-              throw new RuntimeException("LOGIC ERROR");
-            }
-            if (remainingBitCount <= 0L) {
-              shiftedSourceByte = 0;
-            } else {
-              shiftedSourceByte = source[sourceByteIndex] << sourceBitShift & 255;
+          while (8L < remainingBitCount) {
+            shiftedSourceByte = 255 & source[sourceByteIndex] << sourceBitShift | (source[sourceByteIndex + 1] & 255) >>> -sourceBitShift + 8;
+            if ((shiftedSourceByte >= 0) &&
+                (256 > shiftedSourceByte)) {
               this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
-            }
-            if (8L > remainingBitCount + (long)bufferPartialByteBits) {
-              this.bufferedBitCount = (int)((long)this.bufferedBitCount + remainingBitCount);
-            } else {
-              remainingBitCount = remainingBitCount - (long)(8 - bufferPartialByteBits);
-              this.bufferBytePosition = this.bufferBytePosition + 1;
               this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
-              if (this.bufferedBitCount == 512) {
-                this.processBlock(118);
-                this.bufferedBitCount = 0;
+              this.bufferBytePosition = this.bufferBytePosition + 1;
+              if (512 == this.bufferedBitCount) {
+                this.processBlock(methodGuard ^ 111);
                 this.bufferBytePosition = 0;
+                this.bufferedBitCount = 0;
               }
-              this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(shiftedSourceByte << -bufferPartialByteBits + 8, 255);
-              this.bufferedBitCount = this.bufferedBitCount + (int)remainingBitCount;
+              this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(255, shiftedSourceByte << -bufferPartialByteBits + 8);
+              remainingBitCount = remainingBitCount - 8L;
+              this.bufferedBitCount = this.bufferedBitCount + bufferPartialByteBits;
+              sourceByteIndex++;
+              continue;
             }
-            return;
+            throw new RuntimeException("LOGIC ERROR");
           }
+          if (remainingBitCount <= 0L) {
+            shiftedSourceByte = 0;
+          } else {
+            shiftedSourceByte = source[sourceByteIndex] << sourceBitShift & 255;
+            this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
+          }
+          if (8L > remainingBitCount + (long)bufferPartialByteBits) {
+            this.bufferedBitCount = (int)((long)this.bufferedBitCount + remainingBitCount);
+          } else {
+            remainingBitCount = remainingBitCount - (long)(8 - bufferPartialByteBits);
+            this.bufferBytePosition = this.bufferBytePosition + 1;
+            this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
+            if (this.bufferedBitCount == 512) {
+              this.processBlock(118);
+              this.bufferedBitCount = 0;
+              this.bufferBytePosition = 0;
+            }
+            this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(shiftedSourceByte << -bufferPartialByteBits + 8, 255);
+            this.bufferedBitCount = this.bufferedBitCount + (int)remainingBitCount;
+          }
+          return;
         } catch (java.lang.RuntimeException hashUpdateFailure) {
           caughtHashUpdateFailure = hashUpdateFailure;
           hashUpdateFailureForContext = caughtHashUpdateFailure;

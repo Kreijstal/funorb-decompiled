@@ -146,64 +146,60 @@ final class HighscoreNameEntry {
           debugTintGreenPacked = debugTintRgb & 65280;
           debugTintBlue = debugTintRgb & 255;
           negativeRowCounter = -destinationHeight;
-          L1: while (true) {
-            if (negativeRowCounter < 0) {
-              sourceRowOffset = sourceStride * (sampleYQ16 >> 16);
-              if (clientControlFlowGuard != 0) {
-                return;
-              }
-              negativeColumnCounter = -destinationWidth;
-              while (true) {
-                if (negativeColumnCounter < 0) {
-                  sampleColor = overviewPixels[sourceRowOffset + (sampleXQ16 >> 16)];
-                  sampleXQ16 = sampleXQ16 + sampleXStepQ16;
-                  sampleColorOrRowStartXQ16 = sampleColor;
-                  {
-                    if (sampleColorOrRowStartXQ16 == 0) {
-                      destinationIndex++;
-                    } else {
-                      destinationRgb = destinationPixels[destinationIndex];
-                      if (destinationRgb == 0) {
-                        destinationIndex++;
-                      } else {
-                        doubledDestinationRed = 510 & destinationRgb >> 15;
-                        destinationGreen = (destinationRgb & 65429) >> 8;
-                        destinationBlue = 255 & destinationRgb;
-                        weightedDestinationGrayOrTintedRgb = (destinationBlue + doubledDestinationRed) / 3 + destinationGreen >> 1;
-                        inverseSourceGrayWeight = -(((255 & sampleColor) + (sampleColor >> 8 & 255) + (sampleColor >> 16 & 255)) / 3) + 256;
-                        tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
-                        tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
-                        tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
-                        weightedDestinationGrayOrTintedRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
-                        weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgb) >> 16);
-                        weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgb >> 8) * inverseSourceGrayWeight;
-                        weightedTintBlue = (weightedDestinationGrayOrTintedRgb & 255) * inverseSourceGrayWeight;
-                        modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
-                        modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
-                        modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
-                        sourceGrayWeight = 256 - inverseSourceGrayWeight;
-                        modulatedRedThenWeighted = modulatedRedThenWeighted * sourceGrayWeight;
-                        modulatedGreenThenWeighted = modulatedGreenThenWeighted * sourceGrayWeight;
-                        modulatedBlueThenWeighted = modulatedBlueThenWeighted * sourceGrayWeight;
-                        destinationIndexBeforeIncrement = destinationIndex;
-                        destinationIndex++;
-                        destinationPixels[destinationIndexBeforeIncrement] = (weightedTintBlue + modulatedBlueThenWeighted >> 8) + ((modulatedGreenThenWeighted + weightedTintGreen >> 8 << 8) + (weightedTintRed + modulatedRedThenWeighted >> 8 << 16));
-                      }
-                    }
-                  }
-                  negativeColumnCounter++;
-                  continue;
-                }
-                sampleYQ16 = sampleYQ16 + sampleYStepQ16;
-                destinationIndex = destinationIndex + destinationRowSkip;
-                sampleColorOrRowStartXQ16 = rowStartXQ16;
-                sampleXQ16 = sampleColorOrRowStartXQ16;
-                negativeRowCounter++;
-                continue L1;
-              }
+          L1: while (negativeRowCounter < 0) {
+            sourceRowOffset = sourceStride * (sampleYQ16 >> 16);
+            if (clientControlFlowGuard != 0) {
+              return;
             }
-            return;
+            negativeColumnCounter = -destinationWidth;
+            while (negativeColumnCounter < 0) {
+              sampleColor = overviewPixels[sourceRowOffset + (sampleXQ16 >> 16)];
+              sampleXQ16 = sampleXQ16 + sampleXStepQ16;
+              sampleColorOrRowStartXQ16 = sampleColor;
+              {
+                if (sampleColorOrRowStartXQ16 == 0) {
+                  destinationIndex++;
+                } else {
+                  destinationRgb = destinationPixels[destinationIndex];
+                  if (destinationRgb == 0) {
+                    destinationIndex++;
+                  } else {
+                    doubledDestinationRed = 510 & destinationRgb >> 15;
+                    destinationGreen = (destinationRgb & 65429) >> 8;
+                    destinationBlue = 255 & destinationRgb;
+                    weightedDestinationGrayOrTintedRgb = (destinationBlue + doubledDestinationRed) / 3 + destinationGreen >> 1;
+                    inverseSourceGrayWeight = -(((255 & sampleColor) + (sampleColor >> 8 & 255) + (sampleColor >> 16 & 255)) / 3) + 256;
+                    tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
+                    tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
+                    tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
+                    weightedDestinationGrayOrTintedRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
+                    weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgb) >> 16);
+                    weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgb >> 8) * inverseSourceGrayWeight;
+                    weightedTintBlue = (weightedDestinationGrayOrTintedRgb & 255) * inverseSourceGrayWeight;
+                    modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
+                    modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
+                    modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
+                    sourceGrayWeight = 256 - inverseSourceGrayWeight;
+                    modulatedRedThenWeighted = modulatedRedThenWeighted * sourceGrayWeight;
+                    modulatedGreenThenWeighted = modulatedGreenThenWeighted * sourceGrayWeight;
+                    modulatedBlueThenWeighted = modulatedBlueThenWeighted * sourceGrayWeight;
+                    destinationIndexBeforeIncrement = destinationIndex;
+                    destinationIndex++;
+                    destinationPixels[destinationIndexBeforeIncrement] = (weightedTintBlue + modulatedBlueThenWeighted >> 8) + ((modulatedGreenThenWeighted + weightedTintGreen >> 8 << 8) + (weightedTintRed + modulatedRedThenWeighted >> 8 << 16));
+                  }
+                }
+              }
+              negativeColumnCounter++;
+              continue;
+            }
+            sampleYQ16 = sampleYQ16 + sampleYStepQ16;
+            destinationIndex = destinationIndex + destinationRowSkip;
+            sampleColorOrRowStartXQ16 = rowStartXQ16;
+            sampleXQ16 = sampleColorOrRowStartXQ16;
+            negativeRowCounter++;
+            continue L1;
           }
+          return;
         } catch (java.lang.RuntimeException debugOverviewBlendFailure) {
           caughtBlendFailure = debugOverviewBlendFailure;
           blendFailureForContext = caughtBlendFailure;

@@ -215,32 +215,30 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 }
               }
               processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.firstForIteration((byte) 121));
-              while (true) {
-                if (processedEntityToCompare != null) {
-                  if (currentEntity != processedEntityToCompare) {
-                    processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.nextForIteration(methodGuard - 60));
-                    continue;
-                  }
-                  neighborIndex++;
-                  continue L5;
+              while (processedEntityToCompare != null) {
+                if (currentEntity != processedEntityToCompare) {
+                  processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.nextForIteration(methodGuard - 60));
+                  continue;
                 }
-                if (propagateVariant) {
-                  currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
-                  neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
-                  neighborVariantWriteTarget = neighborForVariantIncrement;
-                  neighborVariantReadSource = neighborForVariantIncrement;
-                  neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
-                }
-                if (propagateCategoryAndKind) {
-                  currentEntity.spriteAngleRadians = templateEntity.spriteAngleRadians;
-                  currentEntity.sameCategoryEntityCount = currentEntity.sameCategoryEntityCount + 1;
-                  neighborForCategoryIncrement = currentEntity.relatedEntities[neighborIndex];
-                  neighborForCategoryIncrement.sameCategoryEntityCount = neighborForCategoryIncrement.sameCategoryEntityCount + 1;
-                }
-                pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
                 neighborIndex++;
                 continue L5;
               }
+              if (propagateVariant) {
+                currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
+                neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
+                neighborVariantWriteTarget = neighborForVariantIncrement;
+                neighborVariantReadSource = neighborForVariantIncrement;
+                neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
+              }
+              if (propagateCategoryAndKind) {
+                currentEntity.spriteAngleRadians = templateEntity.spriteAngleRadians;
+                currentEntity.sameCategoryEntityCount = currentEntity.sameCategoryEntityCount + 1;
+                neighborForCategoryIncrement = currentEntity.relatedEntities[neighborIndex];
+                neighborForCategoryIncrement.sameCategoryEntityCount = neighborForCategoryIncrement.sameCategoryEntityCount + 1;
+              }
+              pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
+              neighborIndex++;
+              continue L5;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

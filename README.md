@@ -17,12 +17,55 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/574881488091bb468ef01f45f3e36bceb0141ef0/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c66ee0af3d13865ac6cbf482d198de689e64e450/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 133 recovers 21 ordinary guarded loops across 14 methods and 12 files.
+Previously, `while (true)` put its guard in a first `if` and buried the complete
+continuation inside the loop. The generic decompiler now proves that neither
+arm nor continuation can fall through, that the arm cannot exit this loop,
+and that the continuation cannot transfer back to it. Transfers consumed by
+inner loops, switches and labels are distinguished from exits of the arm;
+catches are conservative and finally overrides keep their original meaning.
+The exact guard becomes the loop condition and the complete continuation follows.
+
+Bzip2 selector-rank and Huffman-table decoding now use
+`while (index < selectorCount)` and
+`while (huffmanTableIndex < huffmanTableCount)`, with their following work outside
+the loops. Music packed-event counting similarly uses its track-count guard.
+Board reconciliation, menu/input helpers and pixel/triangle routines also gain
+ordinary loop conditions. Every old break/continue target and label remains.
+Condition evaluation order, partial effects, numeric states, overflow,
+exception/finally/monitor ownership, scopes and diagnostics are unchanged.
+No client-control flag value is assumed. Potentially constant headers, consumed
+inner-loop exits, repeating continuations, ambiguous labels and unknown syntax
+refuse reconstruction. Direct continuation declarations keep separate braces.
+
+The raw tree loses 42 scaffolding lines: 76,230 lines remain, with the same
+188 block labels and 58 loop labels. Bzip2 block decoding falls from 385 to 381
+lines, the music constructor from 519 to 517, board reconciliation from 333 to
+331, and sorted RGB triangle rendering from 364 to 362. Eight bodies of at least
+300 lines still retain labels; all their 51 labels are named. Across the tree,
+192 labels and other unmapped members remain opaque. All 11,635 complete naming
+rules survive, with the same 88,331 identifier, eleven class-literal and 184
+label edits. This improves loop structure without adding or altering naming rules.
+
+Four focused groups pass, including six native variants with 13,392 comparisons
+against 13,392 independent loop-model oracle cases. Coverage includes nullable
+and effectful guards, catch priority and exception identity, enclosing transfers,
+finally overrides and return-value snapshot timing, declaration scopes and
+monitor release. The relevant suite passes 113 tests with one existing skip.
+Fresh decompilation from a clean tracked source archive reproduces all 303 Java
+files and diagnostics byte for byte. The shared source proof independently
+replays all 303 complete token streams and preserves 136,607 ordered Java
+bindings, 388 overrides and 813 lexical label records without ordinal migrations.
+Reproduction, byte-exact reversal, 27 publication checks and all eight fixed
+native game probes pass within their stated scopes. Full-game/assets/server/
+browser/phone and heap/FPS acceptance remain unverified.
 
 Pass 132 adds 244 guarded names across eight intrusive collection/node classes
 and the Bzip2/music labels: 23 fields, 30 methods, 69 parameters, 112 locals
@@ -413,7 +456,7 @@ their original statements. The six large labeled bodies remain; this does not
 establish whole-game or device/performance equivalence.
 
 The current decompiler-source SHA-256 is
-`40f073acc94e61b6fe0116e76c9dc45fa43a92e54ad4d22c9ca104905dd5ad9d`.
+`41a301061aa8015aa57f55e59599d32fe8ee923ad5af6157c959475b67cd5e68`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls

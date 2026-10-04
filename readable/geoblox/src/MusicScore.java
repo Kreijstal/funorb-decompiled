@@ -218,411 +218,409 @@ final class MusicScore extends IntrusiveNode {
         polyPressureEventCount = 0;
         programAndBankValueCount = 0;
         trackIndexOrDeltaStart = 0;
-        countPackedTrackEvents: while (true) {
-          if (trackIndexOrDeltaStart < trackCount) {
-            previousEventKindOrDeltaCount = -1;
-            while (true) {
-              eventCodeOrControllerCursor = packedInput.readUnsignedByte((byte) 34);
-              if (eventCodeOrControllerCursor != previousEventKindOrDeltaCount) {
-                midiByteCount++;
-              }
-              previousEventKindOrDeltaCount = eventCodeOrControllerCursor & 15;
-              if (eventCodeOrControllerCursor == 7) {
-                trackIndexOrDeltaStart++;
-                continue countPackedTrackEvents;
-              }
-              if (eventCodeOrControllerCursor == 23) {
-                tempoEventCount++;
-                continue;
-              }
-              if (previousEventKindOrDeltaCount == 0) {
-                noteOnEventCount++;
-                continue;
-              }
-              if (previousEventKindOrDeltaCount == 1) {
-                noteOffEventCount++;
-                continue;
-              }
-              if (previousEventKindOrDeltaCount == 2) {
-                controllerEventCount++;
-                continue;
-              }
-              if (previousEventKindOrDeltaCount == 3) {
-                pitchEventCount++;
-                continue;
-              }
-              if (previousEventKindOrDeltaCount == 4) {
-                channelPressureEventCount++;
-                continue;
-              }
-              if (previousEventKindOrDeltaCount == 5) {
-                polyPressureEventCount++;
-                continue;
-              }
-              if (previousEventKindOrDeltaCount != 6) {
-                throw new RuntimeException();
-              }
-              programAndBankValueCount++;
+        countPackedTrackEvents: while (trackIndexOrDeltaStart < trackCount) {
+          previousEventKindOrDeltaCount = -1;
+          while (true) {
+            eventCodeOrControllerCursor = packedInput.readUnsignedByte((byte) 34);
+            if (eventCodeOrControllerCursor != previousEventKindOrDeltaCount) {
+              midiByteCount++;
+            }
+            previousEventKindOrDeltaCount = eventCodeOrControllerCursor & 15;
+            if (eventCodeOrControllerCursor == 7) {
+              trackIndexOrDeltaStart++;
+              continue countPackedTrackEvents;
+            }
+            if (eventCodeOrControllerCursor == 23) {
+              tempoEventCount++;
               continue;
             }
+            if (previousEventKindOrDeltaCount == 0) {
+              noteOnEventCount++;
+              continue;
+            }
+            if (previousEventKindOrDeltaCount == 1) {
+              noteOffEventCount++;
+              continue;
+            }
+            if (previousEventKindOrDeltaCount == 2) {
+              controllerEventCount++;
+              continue;
+            }
+            if (previousEventKindOrDeltaCount == 3) {
+              pitchEventCount++;
+              continue;
+            }
+            if (previousEventKindOrDeltaCount == 4) {
+              channelPressureEventCount++;
+              continue;
+            }
+            if (previousEventKindOrDeltaCount == 5) {
+              polyPressureEventCount++;
+              continue;
+            }
+            if (previousEventKindOrDeltaCount != 6) {
+              throw new RuntimeException();
+            }
+            programAndBankValueCount++;
+            continue;
           }
-          midiByteCount = midiByteCount + 5 * tempoEventCount;
-          midiByteCount = midiByteCount + 2 * (noteOnEventCount + noteOffEventCount + controllerEventCount + pitchEventCount + polyPressureEventCount);
-          midiByteCount = midiByteCount + (channelPressureEventCount + programAndBankValueCount);
-          trackIndexOrDeltaStart = packedInput.position;
-          previousEventKindOrDeltaCount = trackCount + tempoEventCount + controllerEventCount + noteOnEventCount + noteOffEventCount + pitchEventCount + channelPressureEventCount + polyPressureEventCount + programAndBankValueCount;
-          for (eventCodeOrControllerCursor = 0; eventCodeOrControllerCursor < previousEventKindOrDeltaCount; eventCodeOrControllerCursor++) {
-            packedInput.readVariableIntBE((byte) -110);
+        }
+        midiByteCount = midiByteCount + 5 * tempoEventCount;
+        midiByteCount = midiByteCount + 2 * (noteOnEventCount + noteOffEventCount + controllerEventCount + pitchEventCount + polyPressureEventCount);
+        midiByteCount = midiByteCount + (channelPressureEventCount + programAndBankValueCount);
+        trackIndexOrDeltaStart = packedInput.position;
+        previousEventKindOrDeltaCount = trackCount + tempoEventCount + controllerEventCount + noteOnEventCount + noteOffEventCount + pitchEventCount + channelPressureEventCount + polyPressureEventCount + programAndBankValueCount;
+        for (eventCodeOrControllerCursor = 0; eventCodeOrControllerCursor < previousEventKindOrDeltaCount; eventCodeOrControllerCursor++) {
+          packedInput.readVariableIntBE((byte) -110);
+        }
+        midiByteCount = midiByteCount + (packedInput.position - trackIndexOrDeltaStart);
+        eventCodeOrControllerCursor = packedInput.position;
+        controller1Count = 0;
+        controller33Count = 0;
+        controller7Count = 0;
+        controller39Count = 0;
+        controller10Count = 0;
+        controller42Count = 0;
+        controller99Count = 0;
+        controller98Count = 0;
+        controller101Count = 0;
+        controller100Count = 0;
+        switchControllerCount = 0;
+        otherControllerCount = 0;
+        controllerNumber = 0;
+        for (controllerIndexOrEventCursor = 0; controllerIndexOrEventCursor < controllerEventCount; controllerIndexOrEventCursor++) {
+          controllerNumber = controllerNumber + packedInput.readUnsignedByte((byte) 34) & 127;
+          if (controllerNumber == 0) {
+            programAndBankValueCount++;
+            continue;
           }
-          midiByteCount = midiByteCount + (packedInput.position - trackIndexOrDeltaStart);
-          eventCodeOrControllerCursor = packedInput.position;
-          controller1Count = 0;
-          controller33Count = 0;
-          controller7Count = 0;
-          controller39Count = 0;
-          controller10Count = 0;
-          controller42Count = 0;
-          controller99Count = 0;
-          controller98Count = 0;
-          controller101Count = 0;
-          controller100Count = 0;
-          switchControllerCount = 0;
-          otherControllerCount = 0;
-          controllerNumber = 0;
-          for (controllerIndexOrEventCursor = 0; controllerIndexOrEventCursor < controllerEventCount; controllerIndexOrEventCursor++) {
-            controllerNumber = controllerNumber + packedInput.readUnsignedByte((byte) 34) & 127;
-            if (controllerNumber == 0) {
-              programAndBankValueCount++;
-              continue;
-            }
-            if (controllerNumber == 32) {
-              programAndBankValueCount++;
-              continue;
-            }
-            if (controllerNumber == 1) {
-              controller1Count++;
-              continue;
-            }
-            if (controllerNumber == 33) {
-              controller33Count++;
-              continue;
-            }
-            if (controllerNumber == 7) {
-              controller7Count++;
-              continue;
-            }
-            if (controllerNumber == 39) {
-              controller39Count++;
-              continue;
-            }
-            if (controllerNumber == 10) {
-              controller10Count++;
-              continue;
-            }
-            if (controllerNumber == 42) {
-              controller42Count++;
-              continue;
-            }
-            if (controllerNumber == 99) {
-              controller99Count++;
-              continue;
-            }
-            if (controllerNumber == 98) {
-              controller98Count++;
-              continue;
-            }
-            if (controllerNumber == 101) {
-              controller101Count++;
-              continue;
-            }
-            if (controllerNumber == 100) {
-              controller100Count++;
-              continue;
-            }
-            if (controllerNumber == 64) {
-              switchControllerCount++;
-              continue;
-            }
-            if (controllerNumber == 65) {
-              switchControllerCount++;
-              continue;
-            }
-            if (controllerNumber == 120) {
-              switchControllerCount++;
-              continue;
-            }
-            if (controllerNumber == 121) {
-              switchControllerCount++;
-              continue;
-            }
-            if (controllerNumber != 123) {
-              otherControllerCount++;
-              continue;
-            }
+          if (controllerNumber == 32) {
+            programAndBankValueCount++;
+            continue;
+          }
+          if (controllerNumber == 1) {
+            controller1Count++;
+            continue;
+          }
+          if (controllerNumber == 33) {
+            controller33Count++;
+            continue;
+          }
+          if (controllerNumber == 7) {
+            controller7Count++;
+            continue;
+          }
+          if (controllerNumber == 39) {
+            controller39Count++;
+            continue;
+          }
+          if (controllerNumber == 10) {
+            controller10Count++;
+            continue;
+          }
+          if (controllerNumber == 42) {
+            controller42Count++;
+            continue;
+          }
+          if (controllerNumber == 99) {
+            controller99Count++;
+            continue;
+          }
+          if (controllerNumber == 98) {
+            controller98Count++;
+            continue;
+          }
+          if (controllerNumber == 101) {
+            controller101Count++;
+            continue;
+          }
+          if (controllerNumber == 100) {
+            controller100Count++;
+            continue;
+          }
+          if (controllerNumber == 64) {
             switchControllerCount++;
+            continue;
           }
-          controllerIndexOrEventCursor = 0;
-          switchControllerCursor = packedInput.position;
-          packedInput.position = packedInput.position + switchControllerCount;
-          polyPressureCursor = packedInput.position;
-          packedInput.position = packedInput.position + polyPressureEventCount;
-          channelPressureCursor = packedInput.position;
-          packedInput.position = packedInput.position + channelPressureEventCount;
-          pitchHighCursor = packedInput.position;
-          packedInput.position = packedInput.position + pitchEventCount;
-          controller1Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller1Count;
-          controller7Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller7Count;
-          controller10Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller10Count;
-          noteDeltaCursor = packedInput.position;
-          packedInput.position = packedInput.position + (noteOnEventCount + noteOffEventCount + polyPressureEventCount);
-          noteOnVelocityCursor = packedInput.position;
-          packedInput.position = packedInput.position + noteOnEventCount;
-          otherControllerCursor = packedInput.position;
-          packedInput.position = packedInput.position + otherControllerCount;
-          noteOffVelocityCursor = packedInput.position;
-          packedInput.position = packedInput.position + noteOffEventCount;
-          controller33Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller33Count;
-          controller39Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller39Count;
-          controller42Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller42Count;
-          programAndBankCursor = packedInput.position;
-          packedInput.position = packedInput.position + programAndBankValueCount;
-          pitchLowCursor = packedInput.position;
-          packedInput.position = packedInput.position + pitchEventCount;
-          controller99Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller99Count;
-          controller98Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller98Count;
-          controller101Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller101Count;
-          controller100Cursor = packedInput.position;
-          packedInput.position = packedInput.position + controller100Count;
-          tempoCursor = packedInput.position;
-          packedInput.position = packedInput.position + tempoEventCount * 3;
-          this.midiBytes = new byte[midiByteCount];
-          midiOutput = new ByteArrayBuffer(this.midiBytes);
-          midiOutput.writeIntBE((byte) 95, 1297377380);
-          midiOutput.writeIntBE((byte) 95, 6);
-          midiHeaderOutput = midiOutput;
-          if (trackCount <= 1) {
-            midiFormat = 0;
-          } else {
-            midiFormat = 1;
+          if (controllerNumber == 65) {
+            switchControllerCount++;
+            continue;
           }
-          ((ByteArrayBuffer) (Object) midiHeaderOutput).writeShortBE(midiFormat, 28695);
-          midiOutput.writeShortBE(trackCount, 28695);
-          midiOutput.writeShortBE(tickDivision, 28695);
-          packedInput.position = trackIndexOrDeltaStart;
-          channelNumber = 0;
-          noteNumber = 0;
-          noteOnVelocity = 0;
-          noteOffVelocity = 0;
-          pitchValue = 0;
-          channelPressure = 0;
-          polyPressure = 0;
-          controllerValues = new int[128];
-          controllerNumber = 0;
-          outputTrackIndex = 0;
-          writeMidiTracks: while (true) {
-            if (outputTrackIndex >= trackCount) {
-              return;
+          if (controllerNumber == 120) {
+            switchControllerCount++;
+            continue;
+          }
+          if (controllerNumber == 121) {
+            switchControllerCount++;
+            continue;
+          }
+          if (controllerNumber != 123) {
+            otherControllerCount++;
+            continue;
+          }
+          switchControllerCount++;
+        }
+        controllerIndexOrEventCursor = 0;
+        switchControllerCursor = packedInput.position;
+        packedInput.position = packedInput.position + switchControllerCount;
+        polyPressureCursor = packedInput.position;
+        packedInput.position = packedInput.position + polyPressureEventCount;
+        channelPressureCursor = packedInput.position;
+        packedInput.position = packedInput.position + channelPressureEventCount;
+        pitchHighCursor = packedInput.position;
+        packedInput.position = packedInput.position + pitchEventCount;
+        controller1Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller1Count;
+        controller7Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller7Count;
+        controller10Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller10Count;
+        noteDeltaCursor = packedInput.position;
+        packedInput.position = packedInput.position + (noteOnEventCount + noteOffEventCount + polyPressureEventCount);
+        noteOnVelocityCursor = packedInput.position;
+        packedInput.position = packedInput.position + noteOnEventCount;
+        otherControllerCursor = packedInput.position;
+        packedInput.position = packedInput.position + otherControllerCount;
+        noteOffVelocityCursor = packedInput.position;
+        packedInput.position = packedInput.position + noteOffEventCount;
+        controller33Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller33Count;
+        controller39Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller39Count;
+        controller42Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller42Count;
+        programAndBankCursor = packedInput.position;
+        packedInput.position = packedInput.position + programAndBankValueCount;
+        pitchLowCursor = packedInput.position;
+        packedInput.position = packedInput.position + pitchEventCount;
+        controller99Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller99Count;
+        controller98Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller98Count;
+        controller101Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller101Count;
+        controller100Cursor = packedInput.position;
+        packedInput.position = packedInput.position + controller100Count;
+        tempoCursor = packedInput.position;
+        packedInput.position = packedInput.position + tempoEventCount * 3;
+        this.midiBytes = new byte[midiByteCount];
+        midiOutput = new ByteArrayBuffer(this.midiBytes);
+        midiOutput.writeIntBE((byte) 95, 1297377380);
+        midiOutput.writeIntBE((byte) 95, 6);
+        midiHeaderOutput = midiOutput;
+        if (trackCount <= 1) {
+          midiFormat = 0;
+        } else {
+          midiFormat = 1;
+        }
+        ((ByteArrayBuffer) (Object) midiHeaderOutput).writeShortBE(midiFormat, 28695);
+        midiOutput.writeShortBE(trackCount, 28695);
+        midiOutput.writeShortBE(tickDivision, 28695);
+        packedInput.position = trackIndexOrDeltaStart;
+        channelNumber = 0;
+        noteNumber = 0;
+        noteOnVelocity = 0;
+        noteOffVelocity = 0;
+        pitchValue = 0;
+        channelPressure = 0;
+        polyPressure = 0;
+        controllerValues = new int[128];
+        controllerNumber = 0;
+        outputTrackIndex = 0;
+        writeMidiTracks: while (true) {
+          if (outputTrackIndex >= trackCount) {
+            return;
+          }
+          midiOutput.writeIntBE((byte) 95, 1297379947);
+          midiOutput.position = midiOutput.position + 4;
+          trackBodyStart = midiOutput.position;
+          previousOutputEventKind = -1;
+          while (true) {
+            deltaTicks = packedInput.readVariableIntBE((byte) -125);
+            midiOutput.writeVariableIntBE((byte) -118, deltaTicks);
+            eventReadIndex = controllerIndexOrEventCursor;
+            controllerIndexOrEventCursor++;
+            packedEventCode = packedInput.bytes[eventReadIndex] & 255;
+            statusChangedCarrier = (packedEventCode == previousOutputEventKind) ? 0 : 1;
+            statusChanged = statusChangedCarrier;
+            previousOutputEventKind = packedEventCode & 15;
+            if (packedEventCode == 7) {
+              if (statusChanged != 0) {
+                midiOutput.writeByte((byte) 123, 255);
+              }
+              midiOutput.writeByte((byte) 124, 47);
+              midiOutput.writeByte((byte) 125, 0);
+              midiOutput.backpatchLengthIntBE(midiOutput.position - trackBodyStart, 0);
+              outputTrackIndex++;
+              continue writeMidiTracks;
             }
-            midiOutput.writeIntBE((byte) 95, 1297379947);
-            midiOutput.position = midiOutput.position + 4;
-            trackBodyStart = midiOutput.position;
-            previousOutputEventKind = -1;
-            while (true) {
-              deltaTicks = packedInput.readVariableIntBE((byte) -125);
-              midiOutput.writeVariableIntBE((byte) -118, deltaTicks);
-              eventReadIndex = controllerIndexOrEventCursor;
-              controllerIndexOrEventCursor++;
-              packedEventCode = packedInput.bytes[eventReadIndex] & 255;
-              statusChangedCarrier = (packedEventCode == previousOutputEventKind) ? 0 : 1;
-              statusChanged = statusChangedCarrier;
-              previousOutputEventKind = packedEventCode & 15;
-              if (packedEventCode == 7) {
-                if (statusChanged != 0) {
-                  midiOutput.writeByte((byte) 123, 255);
-                }
-                midiOutput.writeByte((byte) 124, 47);
-                midiOutput.writeByte((byte) 125, 0);
-                midiOutput.backpatchLengthIntBE(midiOutput.position - trackBodyStart, 0);
-                outputTrackIndex++;
-                continue writeMidiTracks;
+            if (packedEventCode == 23) {
+              if (statusChanged != 0) {
+                midiOutput.writeByte((byte) 126, 255);
               }
-              if (packedEventCode == 23) {
+              midiOutput.writeByte((byte) -22, 81);
+              midiOutput.writeByte((byte) 121, 3);
+              tempoFirstByteReadIndex = tempoCursor;
+              tempoCursor++;
+              midiOutput.writeByte((byte) -79, (int) packedInput.bytes[tempoFirstByteReadIndex]);
+              tempoSecondByteReadIndex = tempoCursor;
+              tempoCursor++;
+              midiOutput.writeByte((byte) 125, (int) packedInput.bytes[tempoSecondByteReadIndex]);
+              tempoThirdByteReadIndex = tempoCursor;
+              tempoCursor++;
+              midiOutput.writeByte((byte) -75, (int) packedInput.bytes[tempoThirdByteReadIndex]);
+              continue;
+            }
+            channelNumber = channelNumber ^ packedEventCode >> 4;
+            if (previousOutputEventKind == 0) {
+              if (statusChanged != 0) {
+                midiOutput.writeByte((byte) -100, 144 + channelNumber);
+              }
+              noteOnNoteReadIndex = noteDeltaCursor;
+              noteDeltaCursor++;
+              noteNumber = noteNumber + packedInput.bytes[noteOnNoteReadIndex];
+              noteOnVelocityReadIndex = noteOnVelocityCursor;
+              noteOnVelocityCursor++;
+              noteOnVelocity = noteOnVelocity + packedInput.bytes[noteOnVelocityReadIndex];
+              midiOutput.writeByte((byte) -97, noteNumber & 127);
+              midiOutput.writeByte((byte) -56, noteOnVelocity & 127);
+              continue;
+            }
+            if (previousOutputEventKind == 1) {
+              if (statusChanged != 0) {
+                midiOutput.writeByte((byte) 124, 128 + channelNumber);
+              }
+              noteOffNoteReadIndex = noteDeltaCursor;
+              noteDeltaCursor++;
+              noteNumber = noteNumber + packedInput.bytes[noteOffNoteReadIndex];
+              noteOffVelocityReadIndex = noteOffVelocityCursor;
+              noteOffVelocityCursor++;
+              noteOffVelocity = noteOffVelocity + packedInput.bytes[noteOffVelocityReadIndex];
+              midiOutput.writeByte((byte) -63, noteNumber & 127);
+              midiOutput.writeByte((byte) 125, noteOffVelocity & 127);
+              continue;
+            }
+            if (previousOutputEventKind != 2) {
+              if (previousOutputEventKind == 3) {
                 if (statusChanged != 0) {
-                  midiOutput.writeByte((byte) 126, 255);
+                  midiOutput.writeByte((byte) -8, 224 + channelNumber);
                 }
-                midiOutput.writeByte((byte) -22, 81);
-                midiOutput.writeByte((byte) 121, 3);
-                tempoFirstByteReadIndex = tempoCursor;
-                tempoCursor++;
-                midiOutput.writeByte((byte) -79, (int) packedInput.bytes[tempoFirstByteReadIndex]);
-                tempoSecondByteReadIndex = tempoCursor;
-                tempoCursor++;
-                midiOutput.writeByte((byte) 125, (int) packedInput.bytes[tempoSecondByteReadIndex]);
-                tempoThirdByteReadIndex = tempoCursor;
-                tempoCursor++;
-                midiOutput.writeByte((byte) -75, (int) packedInput.bytes[tempoThirdByteReadIndex]);
+                pitchLowReadIndex = pitchLowCursor;
+                pitchLowCursor++;
+                pitchValue = pitchValue + packedInput.bytes[pitchLowReadIndex];
+                pitchHighReadIndex = pitchHighCursor;
+                pitchHighCursor++;
+                pitchValue = pitchValue + (packedInput.bytes[pitchHighReadIndex] << 7);
+                midiOutput.writeByte((byte) -62, pitchValue & 127);
+                midiOutput.writeByte((byte) 122, pitchValue >> 7 & 127);
                 continue;
               }
-              channelNumber = channelNumber ^ packedEventCode >> 4;
-              if (previousOutputEventKind == 0) {
+              if (previousOutputEventKind == 4) {
                 if (statusChanged != 0) {
-                  midiOutput.writeByte((byte) -100, 144 + channelNumber);
+                  midiOutput.writeByte((byte) 7, 208 + channelNumber);
                 }
-                noteOnNoteReadIndex = noteDeltaCursor;
-                noteDeltaCursor++;
-                noteNumber = noteNumber + packedInput.bytes[noteOnNoteReadIndex];
-                noteOnVelocityReadIndex = noteOnVelocityCursor;
-                noteOnVelocityCursor++;
-                noteOnVelocity = noteOnVelocity + packedInput.bytes[noteOnVelocityReadIndex];
-                midiOutput.writeByte((byte) -97, noteNumber & 127);
-                midiOutput.writeByte((byte) -56, noteOnVelocity & 127);
+                channelPressureReadIndex = channelPressureCursor;
+                channelPressureCursor++;
+                channelPressure = channelPressure + packedInput.bytes[channelPressureReadIndex];
+                midiOutput.writeByte((byte) -44, channelPressure & 127);
                 continue;
               }
-              if (previousOutputEventKind == 1) {
-                if (statusChanged != 0) {
-                  midiOutput.writeByte((byte) 124, 128 + channelNumber);
-                }
-                noteOffNoteReadIndex = noteDeltaCursor;
-                noteDeltaCursor++;
-                noteNumber = noteNumber + packedInput.bytes[noteOffNoteReadIndex];
-                noteOffVelocityReadIndex = noteOffVelocityCursor;
-                noteOffVelocityCursor++;
-                noteOffVelocity = noteOffVelocity + packedInput.bytes[noteOffVelocityReadIndex];
-                midiOutput.writeByte((byte) -63, noteNumber & 127);
-                midiOutput.writeByte((byte) 125, noteOffVelocity & 127);
-                continue;
-              }
-              if (previousOutputEventKind != 2) {
-                if (previousOutputEventKind == 3) {
-                  if (statusChanged != 0) {
-                    midiOutput.writeByte((byte) -8, 224 + channelNumber);
-                  }
-                  pitchLowReadIndex = pitchLowCursor;
-                  pitchLowCursor++;
-                  pitchValue = pitchValue + packedInput.bytes[pitchLowReadIndex];
-                  pitchHighReadIndex = pitchHighCursor;
-                  pitchHighCursor++;
-                  pitchValue = pitchValue + (packedInput.bytes[pitchHighReadIndex] << 7);
-                  midiOutput.writeByte((byte) -62, pitchValue & 127);
-                  midiOutput.writeByte((byte) 122, pitchValue >> 7 & 127);
-                  continue;
-                }
-                if (previousOutputEventKind == 4) {
-                  if (statusChanged != 0) {
-                    midiOutput.writeByte((byte) 7, 208 + channelNumber);
-                  }
-                  channelPressureReadIndex = channelPressureCursor;
-                  channelPressureCursor++;
-                  channelPressure = channelPressure + packedInput.bytes[channelPressureReadIndex];
-                  midiOutput.writeByte((byte) -44, channelPressure & 127);
-                  continue;
-                }
-                if (previousOutputEventKind != 5) {
-                  if (previousOutputEventKind != 6) {
-                    throw new RuntimeException();
-                  }
-                  if (statusChanged != 0) {
-                    midiOutput.writeByte((byte) -54, 192 + channelNumber);
-                  }
-                  programReadIndex = programAndBankCursor;
-                  programAndBankCursor++;
-                  midiOutput.writeByte((byte) 121, (int) packedInput.bytes[programReadIndex]);
-                  continue;
+              if (previousOutputEventKind != 5) {
+                if (previousOutputEventKind != 6) {
+                  throw new RuntimeException();
                 }
                 if (statusChanged != 0) {
-                  midiOutput.writeByte((byte) 122, 160 + channelNumber);
+                  midiOutput.writeByte((byte) -54, 192 + channelNumber);
                 }
-                polyPressureNoteReadIndex = noteDeltaCursor;
-                noteDeltaCursor++;
-                noteNumber = noteNumber + packedInput.bytes[polyPressureNoteReadIndex];
-                polyPressureValueReadIndex = polyPressureCursor;
-                polyPressureCursor++;
-                polyPressure = polyPressure + packedInput.bytes[polyPressureValueReadIndex];
-                midiOutput.writeByte((byte) -18, noteNumber & 127);
-                midiOutput.writeByte((byte) 124, polyPressure & 127);
+                programReadIndex = programAndBankCursor;
+                programAndBankCursor++;
+                midiOutput.writeByte((byte) 121, (int) packedInput.bytes[programReadIndex]);
                 continue;
               }
               if (statusChanged != 0) {
-                midiOutput.writeByte((byte) -19, 176 + channelNumber);
+                midiOutput.writeByte((byte) 122, 160 + channelNumber);
               }
-              controllerReadIndex = eventCodeOrControllerCursor;
-              eventCodeOrControllerCursor++;
-              controllerNumber = controllerNumber + packedInput.bytes[controllerReadIndex] & 127;
-              midiOutput.writeByte((byte) 126, controllerNumber);
-              if ((controllerNumber != 0) &&
-                  (controllerNumber != 32)) {
-                if (controllerNumber == 1) {
-                  controller1ReadIndex = controller1Cursor;
-                  controller1Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller1ReadIndex];
-                } else if (controllerNumber == 33) {
-                  controller33ReadIndex = controller33Cursor;
-                  controller33Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller33ReadIndex];
-                } else if (controllerNumber == 7) {
-                  controller7ReadIndex = controller7Cursor;
-                  controller7Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller7ReadIndex];
-                } else if (controllerNumber == 39) {
-                  controller39ReadIndex = controller39Cursor;
-                  controller39Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller39ReadIndex];
-                } else if (controllerNumber == 10) {
-                  controller10ReadIndex = controller10Cursor;
-                  controller10Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller10ReadIndex];
-                } else if (controllerNumber == 42) {
-                  controller42ReadIndex = controller42Cursor;
-                  controller42Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller42ReadIndex];
-                } else if (controllerNumber == 99) {
-                  controller99ReadIndex = controller99Cursor;
-                  controller99Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller99ReadIndex];
-                } else if (controllerNumber == 98) {
-                  controller98ReadIndex = controller98Cursor;
-                  controller98Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller98ReadIndex];
-                } else if (controllerNumber == 101) {
-                  controller101ReadIndex = controller101Cursor;
-                  controller101Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller101ReadIndex];
-                } else if (controllerNumber == 100) {
-                  controller100ReadIndex = controller100Cursor;
-                  controller100Cursor++;
-                  controllerValueOrDelta = packedInput.bytes[controller100ReadIndex];
-                } else if ((controllerNumber != 64) &&
-                    (controllerNumber != 65) &&
-                    (controllerNumber != 120) &&
-                    (controllerNumber != 121) &&
-                    (controllerNumber != 123)) {
-                  otherControllerReadIndex = otherControllerCursor;
-                  otherControllerCursor++;
-                  controllerValueOrDelta = packedInput.bytes[otherControllerReadIndex];
-                } else {
-                  switchControllerReadIndex = switchControllerCursor;
-                  switchControllerCursor++;
-                  controllerValueOrDelta = packedInput.bytes[switchControllerReadIndex];
-                }
-              } else {
-                bankControllerReadIndex = programAndBankCursor;
-                programAndBankCursor++;
-                controllerValueOrDelta = packedInput.bytes[bankControllerReadIndex];
-              }
-              controllerValueOrDelta = controllerValueOrDelta + controllerValues[controllerNumber];
-              controllerValues[controllerNumber] = controllerValueOrDelta;
-              midiOutput.writeByte((byte) -10, controllerValueOrDelta & 127);
+              polyPressureNoteReadIndex = noteDeltaCursor;
+              noteDeltaCursor++;
+              noteNumber = noteNumber + packedInput.bytes[polyPressureNoteReadIndex];
+              polyPressureValueReadIndex = polyPressureCursor;
+              polyPressureCursor++;
+              polyPressure = polyPressure + packedInput.bytes[polyPressureValueReadIndex];
+              midiOutput.writeByte((byte) -18, noteNumber & 127);
+              midiOutput.writeByte((byte) 124, polyPressure & 127);
               continue;
             }
+            if (statusChanged != 0) {
+              midiOutput.writeByte((byte) -19, 176 + channelNumber);
+            }
+            controllerReadIndex = eventCodeOrControllerCursor;
+            eventCodeOrControllerCursor++;
+            controllerNumber = controllerNumber + packedInput.bytes[controllerReadIndex] & 127;
+            midiOutput.writeByte((byte) 126, controllerNumber);
+            if ((controllerNumber != 0) &&
+                (controllerNumber != 32)) {
+              if (controllerNumber == 1) {
+                controller1ReadIndex = controller1Cursor;
+                controller1Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller1ReadIndex];
+              } else if (controllerNumber == 33) {
+                controller33ReadIndex = controller33Cursor;
+                controller33Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller33ReadIndex];
+              } else if (controllerNumber == 7) {
+                controller7ReadIndex = controller7Cursor;
+                controller7Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller7ReadIndex];
+              } else if (controllerNumber == 39) {
+                controller39ReadIndex = controller39Cursor;
+                controller39Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller39ReadIndex];
+              } else if (controllerNumber == 10) {
+                controller10ReadIndex = controller10Cursor;
+                controller10Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller10ReadIndex];
+              } else if (controllerNumber == 42) {
+                controller42ReadIndex = controller42Cursor;
+                controller42Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller42ReadIndex];
+              } else if (controllerNumber == 99) {
+                controller99ReadIndex = controller99Cursor;
+                controller99Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller99ReadIndex];
+              } else if (controllerNumber == 98) {
+                controller98ReadIndex = controller98Cursor;
+                controller98Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller98ReadIndex];
+              } else if (controllerNumber == 101) {
+                controller101ReadIndex = controller101Cursor;
+                controller101Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller101ReadIndex];
+              } else if (controllerNumber == 100) {
+                controller100ReadIndex = controller100Cursor;
+                controller100Cursor++;
+                controllerValueOrDelta = packedInput.bytes[controller100ReadIndex];
+              } else if ((controllerNumber != 64) &&
+                  (controllerNumber != 65) &&
+                  (controllerNumber != 120) &&
+                  (controllerNumber != 121) &&
+                  (controllerNumber != 123)) {
+                otherControllerReadIndex = otherControllerCursor;
+                otherControllerCursor++;
+                controllerValueOrDelta = packedInput.bytes[otherControllerReadIndex];
+              } else {
+                switchControllerReadIndex = switchControllerCursor;
+                switchControllerCursor++;
+                controllerValueOrDelta = packedInput.bytes[switchControllerReadIndex];
+              }
+            } else {
+              bankControllerReadIndex = programAndBankCursor;
+              programAndBankCursor++;
+              controllerValueOrDelta = packedInput.bytes[bankControllerReadIndex];
+            }
+            controllerValueOrDelta = controllerValueOrDelta + controllerValues[controllerNumber];
+            controllerValues[controllerNumber] = controllerValueOrDelta;
+            midiOutput.writeByte((byte) -10, controllerValueOrDelta & 127);
+            continue;
           }
         }
     }

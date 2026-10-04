@@ -262,39 +262,33 @@ final class GameScreen extends MenuScreen {
                   break L2;
                 }
                 tileY = tileOriginYOrForegroundStartX;
-                while (true) {
-                  if (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
-                    WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
-                    tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
-                    continue;
-                  }
-                  tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
-                  continue L1;
+                while (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
+                  WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
+                  tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
+                  continue;
                 }
+                tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
+                continue L1;
               }
               this.foregroundScrollY = this.foregroundScrollY % CachedTextLayout.menuForegroundSprite.fullHeight;
               this.foregroundScrollX = this.foregroundScrollX % CachedTextLayout.menuForegroundSprite.fullWidth;
               tileOriginYOrForegroundStartX = this.foregroundScrollX + (CachedTextLayout.menuForegroundSprite.fullWidth + 640);
             }
             tileX = tileOriginYOrForegroundStartX;
-            L7: while (true) {
-              if (~-CachedTextLayout.menuForegroundSprite.fullWidth >= ~tileX) {
-                if (clientControlFlowGuard != 0) {
-                  return;
-                }
-                tileY = this.foregroundScrollY + CachedTextLayout.menuForegroundSprite.fullHeight + 480;
-                while (true) {
-                  if (~tileY <= ~-CachedTextLayout.menuForegroundSprite.fullHeight) {
-                    CachedTextLayout.menuForegroundSprite.draw(tileX, tileY);
-                    tileY = tileY - CachedTextLayout.menuForegroundSprite.fullHeight;
-                    continue;
-                  }
-                  tileX = tileX - CachedTextLayout.menuForegroundSprite.fullWidth;
-                  continue L7;
-                }
+            L7: while (~-CachedTextLayout.menuForegroundSprite.fullWidth >= ~tileX) {
+              if (clientControlFlowGuard != 0) {
+                return;
               }
-              return;
+              tileY = this.foregroundScrollY + CachedTextLayout.menuForegroundSprite.fullHeight + 480;
+              while (~tileY <= ~-CachedTextLayout.menuForegroundSprite.fullHeight) {
+                CachedTextLayout.menuForegroundSprite.draw(tileX, tileY);
+                tileY = tileY - CachedTextLayout.menuForegroundSprite.fullHeight;
+                continue;
+              }
+              tileX = tileX - CachedTextLayout.menuForegroundSprite.fullWidth;
+              continue L7;
             }
+            return;
           }
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

@@ -24,40 +24,38 @@ final class DequeCursor {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[25]);
           }
           MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
-          while (true) {
-            if (UiFontResources.pollKeyboardEvent(93)) {
-              if (SessionSnapshotSupport.currentKeyboardEventCode != 13) {
-                continue;
-              }
-              return true;
+          while (UiFontResources.pollKeyboardEvent(93)) {
+            if (SessionSnapshotSupport.currentKeyboardEventCode != 13) {
+              continue;
             }
-            if ((0 == MatchingTextValidator.field_j % 40) &&
-                (CachedTextLayout.field_h < 11)) {
-              UnderlinedButtonRenderer.field_c = MatchingTextValidator.field_j;
-              CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
-              if (10 == CachedTextLayout.field_h) {
-                ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
-              }
-            }
-            var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
-            if (11 > CachedTextLayout.field_h) {
-              WidgetSkinState.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
-            }
-            var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
-            var3 = MatchingTextValidator.field_j << 2;
-            if ((!SharedBufferPools.introFirstGeometrySoundPlayed) &&
-                (-var3 + 900 <= 320 + var2)) {
-              ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[7]);
-              SharedBufferPools.introFirstGeometrySoundPlayed = true;
-            }
-            if ((!EntityMotionSupport.field_d) &&
-                (-var2 + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
-              ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[8]);
-              EntityMotionSupport.field_d = true;
-            }
-            stackIn_25_0 = !(494 > MatchingTextValidator.field_j);
-            return stackIn_25_0;
+            return true;
           }
+          if ((0 == MatchingTextValidator.field_j % 40) &&
+              (CachedTextLayout.field_h < 11)) {
+            UnderlinedButtonRenderer.field_c = MatchingTextValidator.field_j;
+            CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
+            if (10 == CachedTextLayout.field_h) {
+              ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
+            }
+          }
+          var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
+          if (11 > CachedTextLayout.field_h) {
+            WidgetSkinState.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
+          }
+          var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
+          var3 = MatchingTextValidator.field_j << 2;
+          if ((!SharedBufferPools.introFirstGeometrySoundPlayed) &&
+              (-var3 + 900 <= 320 + var2)) {
+            ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[7]);
+            SharedBufferPools.introFirstGeometrySoundPlayed = true;
+          }
+          if ((!EntityMotionSupport.field_d) &&
+              (-var2 + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
+            ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[8]);
+            EntityMotionSupport.field_d = true;
+          }
+          stackIn_25_0 = !(494 > MatchingTextValidator.field_j);
+          return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

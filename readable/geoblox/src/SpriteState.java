@@ -745,50 +745,48 @@ abstract class SpriteState extends DualLinkNode {
               topY = 0;
             }
             edgeSegmentRowsThenRowBase = TriangleRasterState.rowBaseOffsets[topY];
-            while (true) {
-              if (bottomY > topY) {
-                edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXQ16 >> 16;
-                if (controlFlagSnapshot != 0) {
-                  return;
-                }
-                if (edgeSwapOrRowBaseOrLowerRowsThenLeftX < TriangleRasterState.clipWidth) {
-                  spanStartOrWidthOrBottomXQ16 = -(leftXQ16 >> 16) + (rightXQ16 >> 16);
-                  if (spanStartOrWidthOrBottomXQ16 != 0) {
-                    spanWidthOrRedStepOrBottomRedQ16 = (rightRedQ16 - leftRedQ16) / spanStartOrWidthOrBottomXQ16;
-                    spanRedStepOrGreenStepOrBottomGreenQ16 = (rightGreenQ16 - leftGreenQ16) / spanStartOrWidthOrBottomXQ16;
-                    spanGreenStepOrBlueStepOrBottomBlueQ16 = (-leftBlueQ16 + rightBlueQ16) / spanStartOrWidthOrBottomXQ16;
-                    if (spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX >= TriangleRasterState.clipWidth) {
-                      spanStartOrWidthOrBottomXQ16 = TriangleRasterState.clipWidth - edgeSwapOrRowBaseOrLowerRowsThenLeftX - 1;
-                    }
-                    if (edgeSwapOrRowBaseOrLowerRowsThenLeftX < 0) {
-                      MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16 - spanWidthOrRedStepOrBottomRedQ16 * edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16 - edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanRedStepOrGreenStepOrBottomGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, -(edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanGreenStepOrBlueStepOrBottomBlueQ16) + leftBlueQ16, destinationPixels);
-                    } else {
-                      MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX + edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
-                    }
+            while (bottomY > topY) {
+              edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXQ16 >> 16;
+              if (controlFlagSnapshot != 0) {
+                return;
+              }
+              if (edgeSwapOrRowBaseOrLowerRowsThenLeftX < TriangleRasterState.clipWidth) {
+                spanStartOrWidthOrBottomXQ16 = -(leftXQ16 >> 16) + (rightXQ16 >> 16);
+                if (spanStartOrWidthOrBottomXQ16 != 0) {
+                  spanWidthOrRedStepOrBottomRedQ16 = (rightRedQ16 - leftRedQ16) / spanStartOrWidthOrBottomXQ16;
+                  spanRedStepOrGreenStepOrBottomGreenQ16 = (rightGreenQ16 - leftGreenQ16) / spanStartOrWidthOrBottomXQ16;
+                  spanGreenStepOrBlueStepOrBottomBlueQ16 = (-leftBlueQ16 + rightBlueQ16) / spanStartOrWidthOrBottomXQ16;
+                  if (spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX >= TriangleRasterState.clipWidth) {
+                    spanStartOrWidthOrBottomXQ16 = TriangleRasterState.clipWidth - edgeSwapOrRowBaseOrLowerRowsThenLeftX - 1;
+                  }
+                  if (edgeSwapOrRowBaseOrLowerRowsThenLeftX < 0) {
+                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16 - spanWidthOrRedStepOrBottomRedQ16 * edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16 - edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanRedStepOrGreenStepOrBottomGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, -(edgeSwapOrRowBaseOrLowerRowsThenLeftX * spanGreenStepOrBlueStepOrBottomBlueQ16) + leftBlueQ16, destinationPixels);
                   } else {
-                    if ((edgeSwapOrRowBaseOrLowerRowsThenLeftX >= 0) &&
-                        (TriangleRasterState.clipWidth > edgeSwapOrRowBaseOrLowerRowsThenLeftX)) {
-                      MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
-                    }
+                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX + edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
+                  }
+                } else {
+                  if ((edgeSwapOrRowBaseOrLowerRowsThenLeftX >= 0) &&
+                      (TriangleRasterState.clipWidth > edgeSwapOrRowBaseOrLowerRowsThenLeftX)) {
+                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
                   }
                 }
-                topY++;
-                if (~TriangleRasterState.clipHeight >= ~topY) {
-                  return;
-                }
-                rightXQ16 = rightXQ16 + rightXStepQ16;
-                rightRedQ16 = rightRedQ16 + rightRedStepQ16;
-                edgeSegmentRowsThenRowBase = edgeSegmentRowsThenRowBase + SoftwareRasterizer.stride;
-                leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16;
-                rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16;
-                leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16;
-                leftRedQ16 = leftRedQ16 + leftRedStepQ16;
-                leftXQ16 = leftXQ16 + leftXStepQ16;
-                rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
-                continue;
               }
-              return;
+              topY++;
+              if (~TriangleRasterState.clipHeight >= ~topY) {
+                return;
+              }
+              rightXQ16 = rightXQ16 + rightXStepQ16;
+              rightRedQ16 = rightRedQ16 + rightRedStepQ16;
+              edgeSegmentRowsThenRowBase = edgeSegmentRowsThenRowBase + SoftwareRasterizer.stride;
+              leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16;
+              rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16;
+              leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16;
+              leftRedQ16 = leftRedQ16 + leftRedStepQ16;
+              leftXQ16 = leftXQ16 + leftXStepQ16;
+              rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
+              continue;
             }
+            return;
           }
           return;
         } catch (java.lang.RuntimeException caughtRasterParameter) {

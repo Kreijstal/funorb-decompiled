@@ -1546,33 +1546,31 @@ final class GameplaySession {
               L4: while (true) {
                 comparisonLeftColumnOrZero = spriteColumn;
                 comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
-                while (true) {
-                  if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
-                    rowStartOrMusicGuard = 0;
-                    if (controlFlowGuard != 0) {
-                      break L1;
-                    }
-                    spriteRow = rowStartOrMusicGuard;
-                    while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
-                      comparisonLeftColumnOrZero = 0;
-                      comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.pixels[HotspotTextWidget.spriteScratchRaster.width * spriteRow + spriteColumn];
-                      if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
-                        pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
-                        pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
-                        pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
-                        if (pixelRadiusSquared > maxRadiusSquared) {
-                          maxRadiusSquared = pixelRadiusSquared;
-                        }
-                      }
-                      spriteRow++;
-                      continue;
-                    }
-                    spriteColumn++;
-                    continue L4;
+                while (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
+                  rowStartOrMusicGuard = 0;
+                  if (controlFlowGuard != 0) {
+                    break L1;
                   }
-                  this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
-                  break L2;
+                  spriteRow = rowStartOrMusicGuard;
+                  while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
+                    comparisonLeftColumnOrZero = 0;
+                    comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.pixels[HotspotTextWidget.spriteScratchRaster.width * spriteRow + spriteColumn];
+                    if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
+                      pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
+                      pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
+                      pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
+                      if (pixelRadiusSquared > maxRadiusSquared) {
+                        maxRadiusSquared = pixelRadiusSquared;
+                      }
+                    }
+                    spriteRow++;
+                    continue;
+                  }
+                  spriteColumn++;
+                  continue L4;
                 }
+                this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
+                break L2;
               }
             }
             this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);

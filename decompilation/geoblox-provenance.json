@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "42fb5ae77ee5bb6a7cea316084d201e8908c2b28",
+      "commit": "f45f2f0b4b4e9199475310595f86eb1e48bdbed8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "40f073acc94e61b6fe0116e76c9dc45fa43a92e54ad4d22c9ca104905dd5ad9d",
-        "reproduce": "git archive --format=tar 42fb5ae77ee5bb6a7cea316084d201e8908c2b28 | sha256sum",
+        "sha256": "41a301061aa8015aa57f55e59599d32fe8ee923ad5af6157c959475b67cd5e68",
+        "reproduce": "git archive --format=tar f45f2f0b4b4e9199475310595f86eb1e48bdbed8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "148a13b580d7766cac813395f98c2385e566c5fe6cce249722233c9fa22bc9ae",
-  "previousSourceTreeSha256": "1689c85140ab5a22cba2f6baf9db34bf116e4325832beaf5b87de93b8b9f133e",
-  "changedJavaFiles": 3,
+  "sourceTreeSha256": "1488ba00b524d85eaad1691a6a8c0c825a1f4ac57456d54a3e859308b177b530",
+  "previousSourceTreeSha256": "148a13b580d7766cac813395f98c2385e566c5fe6cce249722233c9fa22bc9ae",
+  "changedJavaFiles": 12,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "574881488091bb468ef01f45f3e36bceb0141ef0",
+    "commit": "c66ee0af3d13865ac6cbf482d198de689e64e450",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "fc24454455cee69ff93ac3052e9f903e228b7e9be80619036aa1a9df6ab2c683"
+      "sha256": "8c500785a8941b68225938352b62a7d3c9ddbdf2323b9b03e69be3c0f7db8b6d"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "bfc6d640293e9e41487bb6d1071ff2517059e100c913247c3b072b7c50b22c41",
+    "outputTreeSha256": "ca8449fa050f0c6c542e74a9dfd57c30e23d922c5789d89dd303dcc6a23af956",
     "files": 303,
     "rules": 11635,
     "identifierEdits": 88331,
@@ -3319,7 +3319,8 @@
       "remainingOpaqueBlockLabels": 145,
       "remainingOpaqueLoopLabels": 47,
       "wholeGameEquivalenceVerified": false
-    }
+    },
+    "structuralPass": 133
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -4351,5 +4352,123 @@
     },
     "scope": "A selected direct guarded break in an entry arm preceding a complete suffix and final abrupt transfer can become an inverse conditional. Every other reference to that frame must lie in its complete fallback. Keep the original labeled frame and all fallback destinations, scopes and cleanup; move the intact fallback into else and remove only the selected jump. Prefix/arm references, duplicate or unresolved labels, incomplete syntax and protected guarded transfers refuse recovery. No new value facts or zero-flag assumption. Native generic fixtures verify skipped/executed fallback, nested loops/switches, local scopes, finally overrides, exception identity, nullable conditions and monitors. All303 expected token streams, complete ordered Java bindings/overrides, exact selected old jump references and every surviving label destination are checked. Existing native game fixtures retain their scope; full debug renderer/session update, full mesh execution, assets/server/browser/phone and heap/FPS acceptance remain unverified.",
     "sourceProofWorkflowCommit": "4de6b7f1ce230f07121d8d04cd3f1d278b244f23"
+  },
+  "guardedLoopContinuationRecovery": {
+    "historicalPassVersion": 133,
+    "previousSourceCommit": "2b1925c23f3f770d5447204741f6f4834e1709c2",
+    "sourceCommit": "3544a947987b40208c58785b448eb27fb89ea65b",
+    "previousRulesRepository": "Kreijstal/dekobloko-work",
+    "previousRulesCommit": "574881488091bb468ef01f45f3e36bceb0141ef0",
+    "previousSourceTreeSha256": "148a13b580d7766cac813395f98c2385e566c5fe6cce249722233c9fa22bc9ae",
+    "sourceTreeSha256": "1488ba00b524d85eaad1691a6a8c0c825a1f4ac57456d54a3e859308b177b530",
+    "javaToolsCommit": "f45f2f0b4b4e9199475310595f86eb1e48bdbed8",
+    "sourceArchiveSha256": "41a301061aa8015aa57f55e59599d32fe8ee923ad5af6157c959475b67cd5e68",
+    "guardedLoopContinuations": true,
+    "counts": {
+      "guardedLoopContinuations": 21
+    },
+    "changedJavaFiles": 12,
+    "changedMethodBodies": 14,
+    "sourceLinesBefore": 76272,
+    "sourceLinesAfter": 76230,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 246,
+    "labelDeclarationsAfter": 246,
+    "labelBindingsBefore": 813,
+    "labelBindingsAfter": 813,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "genericFocusedTestGroupsPassed": 4,
+    "nativeComparisons": 13392,
+    "independentNativeOracleCases": 13392,
+    "nativeDifferentialVariants": 6,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "bd759720553dcdb4ea939e1c464ceba6ad782c77232750bd41480b4e3af027b9",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 331,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 381,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 326,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 343,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 629,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "scope": "A first guarded braced arm in while(true) can become the loop body when lexical completion proves neither the arm nor its complete continuation falls through, the arm contains no exit of this loop, and the continuation contains no transfer to this loop. Nested loop/switch/label transfers are resolved and consumed by their own destination; catches are conservative and finally overrides are retained. Condition bytes and all existing transfers/labels stay unchanged. Whole try/finally/monitor statements stay in their original enclosing protection. Direct continuation declarations retain a separate scope; scalar parent positions retain braces. Dynamic guard proof refuses potentially constant headers, unresolved/duplicate labels, unsupported syntax and nested executable scopes. No client-flag value assumption. Six variants pass13392 native comparisons against13392 independent loop-model oracle cases, including nullable/side-effectful guards, partial results, exception identity/catch priority, finally-return snapshot timing/overrides, enclosing transfers, scopes and monitor release. Complete303 source token streams, all136607 ordered bindings/388 overrides and813 lexical label records match their predicted transformation. Existing game probes retain their stated scopes; whole-game/assets/server/browser/phone and heap/FPS acceptance remain unverified.",
+    "sourceProofWorkflowCommit": "c66ee0af3d13865ac6cbf482d198de689e64e450"
   }
 }

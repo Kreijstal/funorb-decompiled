@@ -163,41 +163,39 @@ final class BoardReconciliationSupport {
                               } else {
                                 visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
                                 componentNeighborIndex = 0;
-                                componentNeighborTraversal: while (true) {
-                                  if (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
-                                    neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
-                                    poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
-                                    componentSearchThenVariantResetEntity = poppedEntityOrSearchStart;
-                                    while (true) {
-                                      enqueueUnseenNeighbor: {
-                                        if (componentSearchThenVariantResetEntity != null) {
+                                componentNeighborTraversal: while (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
+                                  neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
+                                  poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
+                                  componentSearchThenVariantResetEntity = poppedEntityOrSearchStart;
+                                  while (true) {
+                                    enqueueUnseenNeighbor: {
+                                      if (componentSearchThenVariantResetEntity != null) {
+                                        comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
+                                        neighborThenUnlinkArgument = neighborThenCountResetEntity;
+                                        if (!((comparedThenUnlinkTarget == neighborThenUnlinkArgument) &&
+                                            (clientControlSnapshot == 0))) {
+                                          componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
+                                          continue;
+                                        }
+                                      } else {
+                                        componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
+                                        while (componentSearchThenVariantResetEntity != null) {
                                           comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
                                           neighborThenUnlinkArgument = neighborThenCountResetEntity;
-                                          if (!((comparedThenUnlinkTarget == neighborThenUnlinkArgument) &&
-                                              (clientControlSnapshot == 0))) {
-                                            componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
-                                            continue;
+                                          if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
+                                            break enqueueUnseenNeighbor;
                                           }
-                                        } else {
-                                          componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
-                                          while (componentSearchThenVariantResetEntity != null) {
-                                            comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
-                                            neighborThenUnlinkArgument = neighborThenCountResetEntity;
-                                            if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
-                                              break enqueueUnseenNeighbor;
-                                            }
-                                            componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
-                                            continue;
-                                          }
-                                          pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
+                                          componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
+                                          continue;
                                         }
+                                        pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
                                       }
-                                      componentNeighborIndex++;
-                                      continue componentNeighborTraversal;
                                     }
+                                    componentNeighborIndex++;
+                                    continue componentNeighborTraversal;
                                   }
-                                  continue componentQueueTraversal;
                                 }
+                                continue componentQueueTraversal;
                               }
                             }
                             avatarContactThenDetachDecision = componentCanDetach;

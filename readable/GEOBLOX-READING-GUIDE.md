@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/574881488091bb468ef01f45f3e36bceb0141ef0/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/c66ee0af3d13865ac6cbf482d198de689e64e450/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 132)
+## Current readability (pass 133)
 
 The export has 11,635 guarded names and 88,331 Java identifier edits, plus 11
 class-name literal edits and 184 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -23,6 +23,49 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 133 recovers 21 ordinary guarded loops across 14 methods and 12 files.
+Previously, `while (true)` put its guard in a first `if` and buried the complete
+continuation inside the loop. The generic decompiler now proves that neither
+arm nor continuation can fall through, that the arm cannot exit this loop,
+and that the continuation cannot transfer back to it. Transfers consumed by
+inner loops, switches and labels are distinguished from exits of the arm;
+catches are conservative and finally overrides keep their original meaning.
+The exact guard becomes the loop condition and the complete continuation follows.
+
+Bzip2 selector-rank and Huffman-table decoding now use
+`while (index < selectorCount)` and
+`while (huffmanTableIndex < huffmanTableCount)`, with their following work outside
+the loops. Music packed-event counting similarly uses its track-count guard.
+Board reconciliation, menu/input helpers and pixel/triangle routines also gain
+ordinary loop conditions. Every old break/continue target and label remains.
+Condition evaluation order, partial effects, numeric states, overflow,
+exception/finally/monitor ownership, scopes and diagnostics are unchanged.
+No client-control flag value is assumed. Potentially constant headers, consumed
+inner-loop exits, repeating continuations, ambiguous labels and unknown syntax
+refuse reconstruction. Direct continuation declarations keep separate braces.
+
+The raw tree loses 42 scaffolding lines: 76,230 lines remain, with the same
+188 block labels and 58 loop labels. Bzip2 block decoding falls from 385 to 381
+lines, the music constructor from 519 to 517, board reconciliation from 333 to
+331, and sorted RGB triangle rendering from 364 to 362. Eight bodies of at least
+300 lines still retain labels; all their 51 labels are named. Across the tree,
+192 labels and other unmapped members remain opaque. All 11,635 complete naming
+rules survive, with the same 88,331 identifier, eleven class-literal and 184
+label edits. This improves loop structure without adding or altering naming rules.
+
+Four focused groups pass, including six native variants with 13,392 comparisons
+against 13,392 independent loop-model oracle cases. Coverage includes nullable
+and effectful guards, catch priority and exception identity, enclosing transfers,
+finally overrides and return-value snapshot timing, declaration scopes and
+monitor release. The relevant suite passes 113 tests with one existing skip.
+Fresh decompilation from a clean tracked source archive reproduces all 303 Java
+files and diagnostics byte for byte. The shared source proof independently
+replays all 303 complete token streams and preserves 136,607 ordered Java
+bindings, 388 overrides and 813 lexical label records without ordinal migrations.
+Reproduction, byte-exact reversal, 27 publication checks and all eight fixed
+native game probes pass within their stated scopes. Full-game/assets/server/
+browser/phone and heap/FPS acceptance remain unverified.
 
 Pass 132 adds 244 guarded names across eight intrusive collection/node classes
 and the Bzip2/music labels: 23 fields, 30 methods, 69 parameters, 112 locals
