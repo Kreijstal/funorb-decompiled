@@ -400,7 +400,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       stopDeadlineComparisonOrTickIndex = 0;
                     }
                     updateSuffixIndexOrVersionDigitOrTickIndex = stopDeadlineComparisonOrTickIndex;
-                    while (true) {
+                    do {
                       if (!(TriangleMesh.pendingUpdateTicks > updateSuffixIndexOrVersionDigitOrTickIndex)) {
                         this.renderAppletFrame(32000);
                         OpacityWidget.pollEventQueueAndPostDummyEvent(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
@@ -408,11 +408,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       }
                       this.updateAppletTick((byte) -10);
                       updateSuffixIndexOrVersionDigitOrTickIndex++;
-                      if (clientControlSnapshot == 0) {
-                        continue;
-                      }
-                      break;
-                    }
+                    } while (clientControlSnapshot == 0);
                   } while (clientControlSnapshot == 0);
                   break appletExecutionBoundary;
                 }

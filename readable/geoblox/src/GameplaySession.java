@@ -412,7 +412,7 @@ final class GameplaySession {
                 debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
                 debugEntityQueue = debugMovingQueueSnapshot;
                 renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
-                while (true) {
+                do {
                   if (!(null != renderedEntity)) {
                     debugEntityQueue = BoardEntityState.attachedEntities;
                     break;
@@ -423,24 +423,16 @@ final class GameplaySession {
                   renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
                   SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
                   renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
-                  if (clientControlFlowGuard == 0) {
-                    continue;
-                  }
-                  break;
-                }
+                } while (clientControlFlowGuard == 0);
                 renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
-                while (true) {
+                do {
                   if (!(renderedEntity != null)) {
                     debugEntityQueue = DelegatingCanvas.transientEntities;
                     break;
                   }
                   SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
                   renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                  if (clientControlFlowGuard == 0) {
-                    continue;
-                  }
-                  break;
-                }
+                } while (clientControlFlowGuard == 0);
                 renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                 while (true) {
                   debugCounterPanelSelection: {

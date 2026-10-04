@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/a4b9a2f736df2059f601f865890b87f8d7e90c84/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/aa85cc5d0fbd9e37672a5561d4dc335892195782/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 172)
+## Current readability (pass 173)
 
 The export has 18,304 guarded names and 117,503 Java identifier edits, plus 11
 class-name literal edits and 349 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -24,7 +24,50 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current startup, archives, audio and mesh naming (pass 172)
+## Current terminal early-exit loops (pass 173)
+
+Ten loops across nine methods in eight classes now use explicit `do…while`
+conditions: menu keyboard processing, gameplay debug queue drawing, applet
+frame catch-up, ranked-index and spawn-queue traversal, MIDI note mixing,
+MIDI frame skipping and PCM sample mixing/skipping. Early-exit effects remain
+inside the loop and still skip the repeat test. Normal completion evaluates
+that test exactly once. Nonzero control flags retain their original exit;
+no flag value, callback order, return snapshot or arithmetic is assumed away.
+
+The generic reconstruction lives in java-tools and applies to supported control-
+flow patterns in arbitrary Java. Complete try/catch/finally, monitor, switch,
+label and local scopes stay intact. Earlier own continues refuse this trailing
+rewrite because they skipped the old test. Own breaks also remain refused for
+nonterminal continuations, which would otherwise run after an early exit.
+The ordinary cleanup path repeats terminal recovery after making else exits
+explicit; this is necessary for the menu and debug-drawing loops.
+
+The tracked decompiler source reproduces all 303 raw files and unchanged zero-
+failure/fallback/panic diagnostics. Exactly eight files and nine bodies change,
+removing 40 lines (76,230 to 76,190). The independent source proof verifies
+complete token streams and every reference destination: 19,253 declarations,
+117,354 references, 388 overrides, 245 label definitions and 811 label records.
+All 18,304 previous complete naming rules and declaration ordinals remain exact.
+The export still has 117,503 identifier, eleven literal and 349 label edits.
+Both 303-file corpora compile, reproduce and reverse byte exactly.
+
+The generic suites pass 89 tests with one existing optional skip. Three new
+focused groups include seven native variants and 8,064 independent event cases,
+covering nullable/effectful tests, short-circuit order, early exits, exceptions,
+finally overrides, monitor release, nested destinations and return snapshots.
+All 27 publication tests pass. The existing gameplay and result-helper probes
+also match their retained native/raw/readable trace pins; their scope exclusions
+remain. No whole renderer, audio playback, server, browser or device run is added.
+
+`GameScreen.updateScreen` is now 323 lines and `GameplaySession.renderSession`
+338. Among 2,080 method/constructor bodies, twenty have at least 300 lines;
+eight contain labels and six contain plain block labels. Those eight large
+labeled bodies, 132 opaque labels and 57 opaque fields remain; there are no
+single-letter methods. This pass improves control flow without
+establishing complete semantic readability or whole-game/browser/phone and
+heap/presented-FPS acceptance.
+
+## Previous startup, archives, audio and mesh naming (pass 172)
 
 Pass 172 adds 413 guarded names: two fields, all 30 remaining single-letter
 methods, 106 parameters and 275 locals. Four older alignment rules are explicitly

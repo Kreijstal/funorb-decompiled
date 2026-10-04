@@ -998,7 +998,7 @@ final class MidiPcmStream extends PcmStream {
         int framesToEvent;
         if (this.midiReader.isLoaded()) {
           timeUnitsPerFrame = this.timeScalePerSecond * this.midiReader.tickDivision / AudioOutput.sampleRateHz;
-          while (true) {
+          do {
             timeAfterFrames = this.playbackTime + (long)frameCount * (long)timeUnitsPerFrame;
             if (-timeAfterFrames + this.nextEventTime >= 0L) {
               this.playbackTime = timeAfterFrames;
@@ -1009,11 +1009,7 @@ final class MidiPcmStream extends PcmStream {
             frameCount = frameCount - framesToEvent;
             this.noteMixer.skipFrames(framesToEvent);
             this.advanceMidiEvents((byte) -42);
-            if (this.midiReader.isLoaded()) {
-              continue;
-            }
-            break;
-          }
+          } while (this.midiReader.isLoaded());
         }
         this.noteMixer.skipFrames(frameCount);
     }

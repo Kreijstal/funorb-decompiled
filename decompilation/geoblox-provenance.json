@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "b9c1a15762d2b9c3423cecc969a066491ce4dc9b",
+      "commit": "80232ac1ab38e6e884446a044a34458d30371f6c",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "36dc6e1d7f686901454d91df519cfb4e43e7e73ee94fb34129c74b050edb4dad",
-        "reproduce": "git archive --format=tar b9c1a15762d2b9c3423cecc969a066491ce4dc9b | sha256sum",
+        "sha256": "a1dfda8c088af3e7d8d18f0b29fc93868efed4ccb122f850eced75d3fb62e17f",
+        "reproduce": "git archive --format=tar 80232ac1ab38e6e884446a044a34458d30371f6c | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "75ea7f4c50b22d27d682750806982ae0a93f0a5ad3f8a47d602920c9a26b8451",
-  "previousSourceTreeSha256": "e83252bbc222276c86a51093884b07f5da5e846cecd7e7ddc1ceb052d2b24b4d",
-  "changedJavaFiles": 6,
+  "sourceTreeSha256": "ada597e883696d1ff0389ced988481dab27c2d8ae59e1e6971de289edc9fb354",
+  "previousSourceTreeSha256": "75ea7f4c50b22d27d682750806982ae0a93f0a5ad3f8a47d602920c9a26b8451",
+  "changedJavaFiles": 8,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "a4b9a2f736df2059f601f865890b87f8d7e90c84",
+    "commit": "aa85cc5d0fbd9e37672a5561d4dc335892195782",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "12351b57d915ba3e1481cdfdff737524f5b1899ced5b1755c0ddb3cdc7f6a061"
+      "sha256": "fe3456cf77dda155d6c7b643c47148eb81e59bd48211abe12950ce9541cf8370"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "ff195c21347e95c45233e7118d9830ef3ff00844ba21aa71729430b42ad4be57",
+    "outputTreeSha256": "da11d8169fcfcd89103a0fad0b42b35048c6b26e289c43f008790c2c093f5d65",
     "files": 303,
     "rules": 18304,
     "identifierEdits": 117503,
@@ -3306,28 +3306,18 @@
     "labelBindingsCompared": 811,
     "labelDeclarationsCompared": 245,
     "namingPass": {
-      "version": 172,
-      "rulesAdded": 413,
-      "rulesRefined": 4,
-      "fields": 2,
-      "methods": 30,
-      "parameters": 106,
-      "locals": 275,
-      "labels": 0,
-      "previousRules": 17891,
-      "previousCompleteRulesPreserved": 17887,
-      "explicitlyCorrectedSymbols": [
-        "L:ja.b(II)I#0",
-        "L:ja.b(II)I#1",
-        "M:ja.b(II)I",
-        "P:ja.b(II)I#1"
-      ],
-      "rawInputAndGeneratorPinsUnchanged": true,
+      "version": 173,
+      "rulesAdded": 0,
+      "rulesRefined": 0,
+      "previousRules": 18304,
+      "previousCompleteRulesPreserved": 18304,
+      "allPreviousCompleteRulesPreserved": true,
+      "rawInputAndGeneratorPinsUnchanged": false,
       "remainingOpaqueBlockLabels": 93,
       "remainingOpaqueLoopLabels": 39,
       "wholeGameEquivalenceVerified": false
     },
-    "structuralPass": 167
+    "structuralPass": 173
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -8096,5 +8086,142 @@
     "remainingSingleLetterMethods": 0,
     "remainingOpaqueLabels": 132,
     "scope": "Pass 172 adds 413 guarded names: two fields, all 30 remaining single-letter\nmethods, 106 parameters and 275 locals. Four older alignment rules are explicitly\ncorrected: the only fixed-corpus caller supplies a payload BYTE COUNT for XTEA,\nnot a bit offset. The helper, value and locals now describe rounding to a\nmultiple of eight. Its guard, return89, signed arithmetic and overflow remain.\nAll 17,887 unaffected previous complete rules remain exact; full before/after\nobjects for the four corrections are recorded in the manifest.\n\nStartup names expose loading/logo/account/prepared-frame selection, redraw-flag\nconsumption, AWT progress drawing and pointer-listener removal. Progress image\nand font caches, partial image-fill return, direct draw/repaint fallbacks,\nunclamped percentages, recursive wrong-guard path and original catch boundaries\nremain. The applet username helper inspects/encodes its parameter without storing\na login identity. Keyboard-idle and canvas-container helpers retain their guard\neffects. Account login/creation wrappers, logging-in dialog and button appending\nretain field writes, construction/callback order, the diagnostic-only message\nargument and unused guard-helper argument.\n\nCookie writing, marker creation, page-link updates and reload/server-list/support/\nrelative-URL navigation expose their original attempted actions. Cookiehost,\nDiscard/Expires/Max-Age arithmetic, raw script text, URL session overrides,\nwindow targets, late guard work, printed failures and Throwable catches remain.\nNeither the marker flag nor these names guarantee browser/storage success.\n\nCommon UI loading exposes sprite/font/GIF groups and palette-state preparation.\nThe first two screen-options frame sets follow the existing third-frame name\nwithout guessing their actions. Indexed-sprite copying retains shared palette\nand index arrays, allocation before its guard and partial dimensions. Button\nsplitting keeps aliases, grayscale work and successful-tail raster restoration.\nThe game archive factory flag explicitly selects discarding decoded files after\nread for policy1; it does not claim retention. RGB sprite loading and gray-tinted\nstrip drawing retain short circuits, guard writes, shared clip storage, reused\nX parameter, zero-center-width behavior and non-finally clip restoration.\n\nAudio setup and delayed playback retain output/rate/volume arguments, stream\ntracking before early return, mixer/root/volume ordering and partial state.\nPacked short/mesh decoding keeps exact-length reuse, null sentinel, signed base,\ndelta widths, optional-section reads and unclassified array meanings, priority\nnulling/narrowing and guards. Encrypted payload writing retains SecureRandom key\ngeneration, buffer/key aliases, byte padding, XTEA/modPow order, optional early\nreturn and partial destination appends. Fullscreen construction and display-mode\nwaiting retain parameters, focus/bounds order, task polling and original sleeps.\nNo timeout, renderer/audio policy, encryption or runtime behavior is repaired.\n\nThe export has 18,304 rules, 117,503 identifier edits, eleven class-name literal\nedits and 349 label edits: 117,863 total. Raw/decompiler/naming/workflow/stub/\nnative/text and label pins remain unchanged. Both 303-file corpora compile,\nreproduce and reverse byte exactly, preserving 19,498 dictionary identities,\n136,607 bindings, 388 overrides, 245 label definitions and 811 label records.\nAll 27 publication tests pass. No native probes or new runtime cases are added\nor run by this naming pass.\n\nNo single-letter methods remain in the current compiler dictionary. Eight large\nlabeled bodies, 132 opaque labels (93 plain blocks and 39 loops) and 57 opaque\nfields remain. Zero single-letter methods does not establish complete semantic\nreadability. Full startup/login/crypto/cookies/UI/network/input/audio/assets/game/\nserver/browser/phone and heap/presented-FPS acceptance remain unverified."
+  },
+  "terminalPrefixBreakRecovery": {
+    "version": 173,
+    "previousSourceCommit": "24ad5bcc4d341c95b01d84ac51aed024c270a068",
+    "sourceCommit": "b383715308a1db27593f78e0de77f5fb4db179d5",
+    "previousSourceTreeSha256": "75ea7f4c50b22d27d682750806982ae0a93f0a5ad3f8a47d602920c9a26b8451",
+    "sourceTreeSha256": "ada597e883696d1ff0389ced988481dab27c2d8ae59e1e6971de289edc9fb354",
+    "javaToolsCommit": "80232ac1ab38e6e884446a044a34458d30371f6c",
+    "sourceArchiveSha256": "a1dfda8c088af3e7d8d18f0b29fc93868efed4ccb122f850eced75d3fb62e17f",
+    "terminalPrefixBreaks": true,
+    "counts": {
+      "terminalPrefixBreaks": 10
+    },
+    "changedJavaFiles": 8,
+    "changedMethodBodies": 9,
+    "sourceLinesBefore": 76230,
+    "sourceLinesAfter": 76190,
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117354,
+    "sourceReferenceOccurrencesAfter": 117354,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 188,
+    "plainBlockLabelsAfter": 188,
+    "labelDeclarationsBefore": 245,
+    "labelDeclarationsAfter": 245,
+    "labelBindingsBefore": 811,
+    "labelBindingsAfter": 811,
+    "survivingLabelOrdinalMigrations": 0,
+    "guardedLabelOrdinalMigrations": 0,
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "bareLoopExitsRemoved": 10,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "genericFocusedTestGroupsPassed": 3,
+    "nativeComparisons": 8064,
+    "independentNativeOracleCases": 8064,
+    "nativeDifferentialVariants": 7,
+    "genericTrailingLoopTestsPassed": 23,
+    "genericEmitterTestsPassed": 66,
+    "genericEmitterTestsSkipped": 1,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "b5249c497177050cb8dcda76af4d879f1b4dc85ef7b3ecc16c1356b9b5a77dc5",
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 8,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "renderScreen",
+          "lines": 304,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.a(I)V"
+        },
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 323,
+          "labels": 5,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 338,
+          "labels": 8,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 630,
+          "labels": 12,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 331,
+          "labels": 8,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "MusicScore.java",
+          "method": "<init>",
+          "lines": 517,
+          "labels": 2,
+          "rawFile": "rf.java",
+          "enclosingMethod": "rf.<init>(Lqc;)V"
+        },
+        {
+          "file": "Bzip2Decoder.java",
+          "method": "decodeBlocks",
+          "lines": 376,
+          "labels": 5,
+          "rawFile": "tb.java",
+          "enclosingMethod": "tb.e(Ljl;)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 362,
+          "labels": 7,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "remainingOpaqueFields": 57,
+    "remainingSingleLetterMethods": 0,
+    "remainingOpaqueLabels": 132,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Ten fixed-corpus loops. Full game, debug renderer, audio playback, server, browser, phone and performance acceptance remain unverified.",
+    "methodBodiesAfter": 2080,
+    "largeMethodBodiesAfter": 20,
+    "largeMethodBodiesWithPlainBlockLabelsAfter": 6,
+    "publicationTestGroupsPassed": 27,
+    "existingNativeProbesRerun": [
+      "readable/tests/test-geoblox-gameplay.mjs",
+      "readable/tests/test-geoblox-result-helpers.mjs"
+    ],
+    "nativeGameplayTraceSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
+    "nativeResultHelpersTraceSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
+    "nativeAppletLoopCases": 741,
+    "nativeAppletExpectedFailures": 611,
+    "sourceWorkflowCommit": "aa85cc5d0fbd9e37672a5561d4dc335892195782",
+    "sourceProofWorkflowCommit": "aa85cc5d0fbd9e37672a5561d4dc335892195782"
   }
 }

@@ -939,7 +939,7 @@ final class PcmSampleStream extends PcmStream {
                 break finiteLoopSkipping;
               }
             }
-            while (true) {
+            do {
               if (this.samplePositionFixed < loopEndFixed) {
                 return;
               }
@@ -957,11 +957,7 @@ final class PcmSampleStream extends PcmStream {
               this.sampleStepFixed = -this.sampleStepFixed;
               remainingAfterStartBounce = this.loopsRemaining - 1;
               this.loopsRemaining = this.loopsRemaining - 1;
-              if (remainingAfterStartBounce != 0) {
-                continue;
-              }
-              break;
-            }
+            } while (remainingAfterStartBounce != 0);
           }
         }
         if (this.sampleStepFixed >= 0) {
@@ -1239,7 +1235,7 @@ final class PcmSampleStream extends PcmStream {
                 break finiteLoopMixing;
               }
             }
-            while (true) {
+            do {
               nextDestinationOffset = this.mixForwardToBoundary(destination, nextDestinationOffset, loopEndFixed, frameCount, (int) sample.samples[this.loopEnd - 1]);
               if (this.samplePositionFixed < loopEndFixed) {
                 return;
@@ -1259,11 +1255,7 @@ final class PcmSampleStream extends PcmStream {
               this.sampleStepFixed = -this.sampleStepFixed;
               remainingAfterStartBounce = this.loopsRemaining - 1;
               this.loopsRemaining = this.loopsRemaining - 1;
-              if (remainingAfterStartBounce != 0) {
-                continue;
-              }
-              break;
-            }
+            } while (remainingAfterStartBounce != 0);
           }
         }
         if (this.sampleStepFixed >= 0) {

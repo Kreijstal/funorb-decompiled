@@ -1101,7 +1101,7 @@ final class GameScreen extends MenuScreen {
             ArchiveCatalog.exitFullscreenIfActive(255);
             this.fullscreenDialogActive = false;
           }
-          while (true) {
+          do {
             if (!(UiFontResources.pollKeyboardEvent(108))) {
               if ((this.screenId == 3) &&
                   (this.selectedItemIndex == 0) &&
@@ -1112,11 +1112,7 @@ final class GameScreen extends MenuScreen {
               break;
             }
             this.handleScreenKey((byte) 62);
-            if (clientControlFlowGuard == 0) {
-              continue;
-            }
-            break;
-          }
+          } while (clientControlFlowGuard == 0);
           if (this.screenId == 3) {
             tutorialOrbitUpdate: {
               if (0 == (1 & this.animationTick)) {

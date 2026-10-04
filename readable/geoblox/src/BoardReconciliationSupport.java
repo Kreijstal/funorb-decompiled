@@ -36,18 +36,14 @@ final class BoardReconciliationSupport {
             return;
           }
           secondaryEntryIndex = 0;
-          while (true) {
+          do {
             if (!(GmtTimestampSupport.rankedEntryCount > secondaryEntryIndex)) {
               SingleChildWidget.sortRankedEntryRange(entryLimit, entryLimit + entryLimit, LoginPayloadKind.rankedSortLowerBoundValue, MeshPrioritySupport.rankedSortUpperBoundValue, (byte) 112, GmtTimestampSupport.rankedEntryCount + entryLimit, false);
               break;
             }
             AchievementQuery.rankedEntryIndices[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
             secondaryEntryIndex++;
-            if (clientControlSnapshot == 0) {
-              continue;
-            }
-            break;
-          }
+          } while (clientControlSnapshot == 0);
           if (entryLimit < GmtTimestampSupport.rankedEntryCount) {
             GmtTimestampSupport.rankedEntryCount = entryLimit;
           }

@@ -37,7 +37,7 @@ final class MidiNoteMixer extends PcmStream {
             if (!this.midiStream.isNoteStreamAbsent(note, -1)) {
               noteDestinationOffset = destinationOffset;
               remainingNoteFrames = frameCount;
-              while (true) {
+              do {
                 if (remainingNoteFrames <= note.framesUntilUpdate) {
                   this.mixNoteFrames(remainingNoteFrames, (byte) -69, remainingNoteFrames + noteDestinationOffset, destination, note, noteDestinationOffset);
                   note.framesUntilUpdate = note.framesUntilUpdate - remainingNoteFrames;
@@ -46,11 +46,7 @@ final class MidiNoteMixer extends PcmStream {
                 this.mixNoteFrames(note.framesUntilUpdate, (byte) -37, noteDestinationOffset + remainingNoteFrames, destination, note, noteDestinationOffset);
                 remainingNoteFrames = remainingNoteFrames - note.framesUntilUpdate;
                 noteDestinationOffset = noteDestinationOffset + note.framesUntilUpdate;
-                if (!this.midiStream.advanceNoteAndHandleCompletion(remainingNoteFrames, noteDestinationOffset, destination, note, false)) {
-                  continue;
-                }
-                break;
-              }
+              } while (!this.midiStream.advanceNoteAndHandleCompletion(remainingNoteFrames, noteDestinationOffset, destination, note, false));
             }
             note = (MidiNote) ((Object) this.notes.nextForIteration(1));
           }

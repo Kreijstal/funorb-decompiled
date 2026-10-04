@@ -21,7 +21,7 @@ final class HighscoreNameEntry {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-          while (true) {
+          do {
             if (!(queuedEntityThenPooledEntity != null)) {
               if (methodGuard != 255) {
                 decodedRankedKeyTwo = -11;
@@ -30,11 +30,7 @@ final class HighscoreNameEntry {
             }
             queuedEntityThenPooledEntity.advanceEntityAnimation(true);
             queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
-            if (clientControlFlowGuard == 0) {
-              continue;
-            }
-            break;
-          }
+          } while (clientControlFlowGuard == 0);
           if ((!((!((MidiPcmStream.heldInternalKeys[99]) &&
                 (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
               (~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease)) ||
