@@ -77,8 +77,8 @@ abstract class ka {
           if (ki.field_d == 97) {
             this.a((byte) 90, param0);
           } else {
-            if (!((ki.field_d != 84) &&
-                (ki.field_d != 83))) {
+            if (((ki.field_d == 84) ||
+                (ki.field_d == 83))) {
               this.b(param0, (byte) -2);
             }
           }

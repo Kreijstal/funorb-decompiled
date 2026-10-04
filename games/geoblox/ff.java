@@ -472,7 +472,7 @@ class ff implements dh, cc {
     }
 
     public void a(int param0, int param1, int param2, boolean param3, el param4) {
-        if (!(null != this.field_n)) {
+        if ((null == this.field_n)) {
             return;
         }
         try {

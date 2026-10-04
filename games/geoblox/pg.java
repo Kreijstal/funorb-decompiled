@@ -159,7 +159,7 @@ final class pg {
                   var19.field_j[var5] = -5;
                   decompiledRegionSelector0 = 0;
                 }
-                if (!(decompiledRegionSelector0 == 0)) {
+                if ((decompiledRegionSelector0 != 0)) {
                   continue;
                 }
                 var5++;

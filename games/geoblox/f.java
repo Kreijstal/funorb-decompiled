@@ -84,7 +84,7 @@ class f extends qf implements pl {
     }
 
     final static void i(byte param0) {
-        if (!(vl.field_n == null)) {
+        if ((vl.field_n != null)) {
             return;
         }
         if (param0 >= -48) {

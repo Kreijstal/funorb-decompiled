@@ -123,7 +123,7 @@ final class og extends rc {
         if (param0 != 119) {
             field_r = 0.380857914686203f;
         }
-        if (!(this.field_m == null)) {
+        if ((this.field_m != null)) {
             for (var2 = 0; this.field_m.length > var2; var2++) {
                 this.field_m[var2] = lb.a(this.field_m[var2], 32768);
             }

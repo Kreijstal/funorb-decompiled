@@ -77,7 +77,7 @@ final class hl extends el {
             for (var5 = 0; var5 < var2; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
                 var8 = 1;
-                if (!(!(var6 < 1.0))) {
+                if (((var6 < 1.0))) {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
                 }
@@ -146,7 +146,7 @@ final class hl extends el {
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = -76 % ((param2 - 1) / 43);
-        if (!(param3 == 0)) {
+        if ((param3 != 0)) {
             return;
         }
         int var6 = param0 + this.field_v;

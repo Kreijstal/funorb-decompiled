@@ -156,7 +156,7 @@ final class rd extends ff {
             rd.a(38, (String) null);
         }
         kd.field_e.f(10936);
-        if (!(null != vg.field_i)) {
+        if ((null == vg.field_i)) {
             vg.field_i = new rl(kd.field_e, ff.field_d);
         }
         kd.field_e.a(false, vg.field_i);

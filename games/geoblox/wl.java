@@ -22,7 +22,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if ((var2_int >= 0) &&
               (oe.field_P.length > var2_int)) {
             var2_int = oe.field_P[var2_int];
-            if (!((var2_int & 128) == 0)) {
+            if (((var2_int & 128) != 0)) {
               var2_int = -1;
             }
           } else {
@@ -81,7 +81,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-            if (!(je.field_j == null)) {
+            if ((je.field_j != null)) {
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0 && var2_int != 65535 && tc.a((byte) -112, (char) var2_int)) {
                     var3 = 1 + ba.field_c & 127;

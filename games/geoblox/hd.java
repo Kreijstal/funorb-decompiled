@@ -17,7 +17,7 @@ final class hd extends sh {
         int var6 = param1 + this.field_m;
         super.a(param0, param1, (byte) 105, param3);
         int var7 = -79 / ((param2 - 1) / 43);
-        if (!(param3 == 0)) {
+        if ((param3 != 0)) {
             return;
         }
         int var8 = !this.field_B ? 0 : -this.field_K + (this.field_r - this.field_C * 2);

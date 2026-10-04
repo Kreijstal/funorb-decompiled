@@ -301,7 +301,7 @@ final class rh {
         if (!this.a(0)) {
             return null;
         }
-        if (!(this.field_c.field_k.length != 1)) {
+        if ((this.field_c.field_k.length == 1)) {
             return this.a(0, param0 - 56472, param1);
         }
         if (param0 != 28319) {
@@ -310,7 +310,7 @@ final class rh {
         if (!this.b(param1, 3)) {
             return null;
         }
-        if (!(this.field_c.field_k[param1] != 1)) {
+        if ((this.field_c.field_k[param1] == 1)) {
             return this.a(param1, param0 ^ -872, 0);
         }
         throw new RuntimeException();
@@ -320,7 +320,7 @@ final class rh {
         if (!(this.b(param1, 3))) {
             return false;
         }
-        if (!(this.field_f[param1] == null)) {
+        if ((this.field_f[param1] != null)) {
             return true;
         }
         if (param0 != 102) {
@@ -414,10 +414,10 @@ final class rh {
           }
           L4: {
             if (param2 != null) {
-              if (!((param2[0] == 0) &&
-                  (param2[1] == 0) &&
-                  (param2[2] == 0) &&
-                  (0 == param2[3]))) {
+              if (((param2[0] != 0) ||
+                  (param2[1] != 0) ||
+                  (param2[2] != 0) ||
+                  (0 != param2[3]))) {
                 var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
                 var24 = var34;
                 var9 = var24;
@@ -584,7 +584,7 @@ final class rh {
             return true;
         }
         if ((null != this.field_e[param1]) &&
-            (!(this.field_e[param1][param2] == null))) {
+            ((this.field_e[param1][param2] != null))) {
             return true;
         }
         if (this.field_f[param1] != null) {
@@ -616,8 +616,8 @@ final class rh {
             return (byte[]) (stackIn_4_0);
           }
           var5 = null;
-          if (!((this.field_e[param0] != null) &&
-              (null != this.field_e[param0][param3]))) {
+          if (((this.field_e[param0] == null) ||
+              (null == this.field_e[param0][param3]))) {
             if (!this.a(param3, 4, param2, param0)) {
               this.a(param0, -118);
               if (!this.a(param3, 4, param2, param0)) {

@@ -16,7 +16,7 @@ final class fi {
         hf var4 = this.field_e[(int)((long)(-1 + this.field_c) & param0)];
         this.field_g = var4.field_b;
         while (var4 != this.field_g) {
-            if (!(~this.field_g.field_a != ~param0)) {
+            if ((~this.field_g.field_a == ~param0)) {
                 var5 = this.field_g;
                 this.field_g = this.field_g.field_b;
                 return var5;
@@ -51,7 +51,7 @@ final class fi {
     final void a(byte param0, hf param1, long param2) {
         hf var5 = null;
         try {
-            if (!(null == param1.field_c)) {
+            if ((null != param1.field_c)) {
                 param1.a(false);
             }
             var5 = this.field_e[(int)((long)(this.field_c - 1) & param2)];

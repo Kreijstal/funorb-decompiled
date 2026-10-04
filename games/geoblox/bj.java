@@ -367,7 +367,7 @@ final class bj extends nh {
             this.field_n = -51L;
         }
         this.field_v = true;
-        if (!(this.field_d != null)) {
+        if ((this.field_d == null)) {
             this.field_d = new tf();
         }
     }
@@ -380,10 +380,10 @@ final class bj extends nh {
         if (param0 != 6924) {
             this.b((byte) -7);
         }
-        if (!(this.field_d != null)) {
+        if ((this.field_d == null)) {
             return;
         }
-        if (!(null != this.a((byte) 126))) {
+        if ((null == this.a((byte) 126))) {
             return;
         }
         hf var2 = this.field_t.g(0);
@@ -404,7 +404,7 @@ final class bj extends nh {
                         if (-1 == this.field_k[var3]) {
                             discarded$1 = this.a((byte) -71, 2, var3);
                         }
-                        if (!(this.field_k[var3] != 1)) {
+                        if ((this.field_k[var3] == 1)) {
                             var2.a(false);
                         }
                     }

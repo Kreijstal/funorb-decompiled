@@ -172,7 +172,7 @@ final class al {
     }
 
     final static String b(int param0) {
-        if (!(tf.field_d != kd.field_b)) {
+        if ((tf.field_d == kd.field_b)) {
             return oc.field_a;
         }
         if (tf.field_d == si.field_g) {

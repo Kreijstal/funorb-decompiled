@@ -114,7 +114,7 @@ final class sa extends RuntimeException {
         if (!param0) {
             return (String) null;
         }
-        if (!(kd.field_b != tf.field_d)) {
+        if ((kd.field_b == tf.field_d)) {
             return oj.field_a;
         }
         return hg.field_d;

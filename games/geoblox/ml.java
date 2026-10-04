@@ -94,13 +94,13 @@ final class ml extends ff {
         String var1 = null;
         if (param0 == 7789) {
             var1 = "";
-            if (!(null == field_t)) {
+            if ((null != field_t)) {
                 var1 = field_t.h(87);
             }
             if (var1.length() == 0) {
                 var1 = rc.d((byte) -53);
             }
-            if (!(var1.length() != 0)) {
+            if ((var1.length() == 0)) {
                 var1 = th.field_g;
             }
             return var1;

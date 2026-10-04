@@ -289,17 +289,17 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             break L4;
                           }
                           var2 = d.field_t;
-                          if (!((!var2.equals("1.1")) &&
-                              (!var2.startsWith("1.1.")) &&
-                              (!var2.equals("1.2")) &&
-                              (!var2.startsWith("1.2.")) &&
-                              (!var2.equals("1.3")) &&
-                              (!var2.startsWith("1.3.")) &&
-                              (!var2.equals("1.4")) &&
-                              (!var2.startsWith("1.4.")) &&
-                              (!var2.equals("1.5")) &&
-                              (!var2.startsWith("1.5.")) &&
-                              (!var2.equals("1.6.0")))) {
+                          if (((var2.equals("1.1")) ||
+                              (var2.startsWith("1.1.")) ||
+                              (var2.equals("1.2")) ||
+                              (var2.startsWith("1.2.")) ||
+                              (var2.equals("1.3")) ||
+                              (var2.startsWith("1.3.")) ||
+                              (var2.equals("1.4")) ||
+                              (var2.startsWith("1.4.")) ||
+                              (var2.equals("1.5")) ||
+                              (var2.startsWith("1.5.")) ||
+                              (var2.equals("1.6.0")))) {
                             this.a((byte) 79, "wrongjava");
                             if (var5 == 0) {
                               break L1;
@@ -782,7 +782,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 while (true) {
                   if (var8.field_a == 0) {
                     bc.a(0, 10L);
-                    if (!(var9 != 0)) {
+                    if ((var9 == 0)) {
                       continue;
                     }
                   }
@@ -878,8 +878,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               dl.field_c = true;
               f.field_kb.setSize(kh.field_d, ok.field_c);
               f.field_kb.setVisible(true);
-              if (!((sg.field_a != null) &&
-                  (he.field_a == null))) {
+              if (((sg.field_a == null) ||
+                  (he.field_a != null))) {
                 f.field_kb.setLocation(qa.field_b, hk.field_B);
                 if (Geoblox.field_C == 0) {
                   break L2;

@@ -221,8 +221,8 @@ final class ed {
           }
         }
         {
-          if (!((this.field_e.field_b[0] <= 0) &&
-              (this.field_e.field_b[1] <= 0))) {
+          if (((!(this.field_e.field_b[0] <= 0)) ||
+              (!(this.field_e.field_b[1] <= 0)))) {
             this.field_k.a();
             var11 = this.field_k.a(param0 + 1);
             var12 = this.field_e.a(0, (float)var11 / 65536.0f);

@@ -46,7 +46,7 @@ final class ug {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         me var5 = (me) ((Object) ue.field_f.e(1));
-        if (!(var5 != null)) {
+        if ((var5 == null)) {
             el.field_o.a((byte) 127, param0);
             return;
         }

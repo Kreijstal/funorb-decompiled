@@ -230,7 +230,7 @@ final class ja extends rc {
             this.field_w = (float)((double)this.field_w * var5);
             this.field_F = (float)((double)this.field_F * var5);
         }
-        if (!(this.field_z == 2)) {
+        if ((this.field_z != 2)) {
             this.field_u = this.field_u - param0;
         }
     }
@@ -309,7 +309,7 @@ final class ja extends rc {
 
     final static int b(int param0, int param1) {
         int var2 = 0;
-        if (!((param1 & 7) == 0)) {
+        if (((param1 & 7) != 0)) {
             var2 = -(param1 & 7) + 8;
         }
         if (param0 != 1221916132) {
@@ -535,7 +535,7 @@ final class ja extends rc {
         if (param0 != 320) {
             this.field_u = -1.9950387477874756f;
         }
-        if (!(this.field_z != 2)) {
+        if ((this.field_z == 2)) {
             this.field_E = 60;
         }
         this.field_M = param2;

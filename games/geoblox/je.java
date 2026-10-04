@@ -13,7 +13,7 @@ final class je extends hf {
         int var2 = Geoblox.field_C;
         try {
             if ((!hj.field_c && null != vk.field_b) &&
-                (!(!vk.field_b.field_f))) {
+                ((vk.field_b.field_f))) {
                 ra.field_d = vk.field_b.field_j;
                 hj.field_c = true;
                 ug.field_c = ug.field_c & ~ra.field_d;

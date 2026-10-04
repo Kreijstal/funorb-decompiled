@@ -23,7 +23,7 @@ final class kh implements Runnable {
         if (mi.field_C < 2) {
             return j.field_lb;
         }
-        if (!(dd.field_J == null)) {
+        if ((dd.field_J != null)) {
             if (!dd.field_J.a(0)) {
                 return ri.field_c;
             }

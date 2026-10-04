@@ -124,7 +124,7 @@ class qk {
             }
             var1 = 0;
           }
-          if (!(var1 == 0)) {
+          if ((var1 != 0)) {
             field_r.field_f = true;
             while (field_r.field_c) {
               bc.a(0, 50L);
@@ -325,7 +325,7 @@ class qk {
                     var11 = this.field_a[var7_int];
                     var14 = var11;
                     var14 = var11;
-                    while (!(var11 == null)) {
+                    while ((var11 != null)) {
                       var12 = var11.field_g;
                       if ((var12 != null) &&
                           (var12.field_f > var8_int)) {

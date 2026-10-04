@@ -210,7 +210,7 @@ final class r extends f implements pl {
     }
 
     public final void a(int param0, byte param1, int param2, int param3, hk param4) {
-        if (!(!this.field_vb)) {
+        if ((this.field_vb)) {
             b.a(true, false, false);
             return;
         }
@@ -233,7 +233,7 @@ final class r extends f implements pl {
         if ((this.field_I) &&
             (!(this.field_wb))) {
             var2 = n.d((byte) 93);
-            if (!(var2 == null)) {
+            if ((var2 != null)) {
                 this.a(false, var2, (byte) -69);
             }
         }

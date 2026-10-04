@@ -148,36 +148,36 @@ final class nf {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (!((hb.field_l != null) &&
-              (hb.field_l.length >= param2))) {
+        if (((hb.field_l == null) ||
+              (!(hb.field_l.length >= param2)))) {
           hb.field_l = new int[param2 * 2];
         }
-        if (!((null != hg.field_a) &&
-              (param2 <= hg.field_a.length))) {
+        if (((null == hg.field_a) ||
+              (!(param2 <= hg.field_a.length)))) {
           hg.field_a = new int[param2 * 2];
         }
-        if (!((null != fb.field_m) &&
-              (fb.field_m.length >= param2))) {
+        if (((null == fb.field_m) ||
+              (!(fb.field_m.length >= param2)))) {
           fb.field_m = new int[param2 * 2];
         }
-        if (!((null != k.field_i) &&
-              (param2 <= k.field_i.length))) {
+        if (((null == k.field_i) ||
+              (!(param2 <= k.field_i.length)))) {
           k.field_i = new int[param2 * 2];
         }
-        if (!((null != cj.field_b) &&
-              (cj.field_b.length >= param2))) {
+        if (((null == cj.field_b) ||
+              (!(cj.field_b.length >= param2)))) {
           cj.field_b = new int[2 * param2];
         }
-        if (!((null != gk.field_a) &&
-              (gk.field_a.length >= param2))) {
+        if (((null == gk.field_a) ||
+              (!(gk.field_a.length >= param2)))) {
           gk.field_a = new int[param2 * 2];
         }
-        if (!((null != qi.field_i) &&
-              (qi.field_i.length >= param2 + param1))) {
+        if (((null == qi.field_i) ||
+              (!(qi.field_i.length >= param2 + param1)))) {
           qi.field_i = new int[(param2 + param1) * 2];
         }
-        if (!((null != qh.field_C) &&
-              (qh.field_C.length >= param2))) {
+        if (((null == qh.field_C) ||
+              (!(qh.field_C.length >= param2)))) {
           qh.field_C = new boolean[2 * param2];
         }
         md.field_c = 0;
@@ -214,7 +214,7 @@ final class nf {
         if (param0) {
             return false;
         }
-        if (!(p.field_k != -1)) {
+        if ((p.field_k == -1)) {
             if (!el.b(30000, 1)) {
                 return false;
             }

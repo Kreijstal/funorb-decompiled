@@ -83,7 +83,7 @@ class hk extends el {
                     return;
                 }
                 if ((this.a(qa.field_a, -1, ue.field_e, param1, param3)) &&
-                    (!(gf.field_a != 0))) {
+                    ((gf.field_a == 0))) {
                     this.a(ue.field_e - param1, -28922, qa.field_a - param3, this.field_f);
                 }
                 this.a(param3, qa.field_a, !param0 ? true : false, param2, param1, ue.field_e);
@@ -108,8 +108,8 @@ class hk extends el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.e((byte) 54)) {
-            if (!((param0 != 84) &&
-                (param0 != 83))) {
+            if (((param0 == 84) ||
+                (param0 == 83))) {
               this.a(-1, -28922, -1, 1);
               return true;
             }

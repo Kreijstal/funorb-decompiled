@@ -126,7 +126,7 @@ final class oc implements dh {
     final static void b(int param0) {
         int var2 = -117 / ((-46 - param0) / 50);
         tl var1 = (tl) ((Object) sg.field_b.e(1));
-        if (!(var1 != null)) {
+        if ((var1 == null)) {
             var1 = new tl();
         }
         var1.a(vb.field_e, vb.field_k, vb.field_d, vb.field_f, vb.field_b, vb.field_i, vb.field_c, true);

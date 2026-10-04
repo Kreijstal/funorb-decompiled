@@ -150,7 +150,7 @@ final class ec {
 
     final static void a(int param0) {
         ph var1 = (ph) ((Object) el.field_p.g(param0 ^ param0));
-        if (!(var1 != null)) {
+        if ((var1 == null)) {
             jl.a((byte) -122);
             return;
         }

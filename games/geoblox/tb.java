@@ -307,7 +307,7 @@ final class tb {
                 }
                 param0.field_y[0] = param0.field_y[0] - 1;
                 param0.field_e[param0.field_y[0]] = (byte)var1;
-                if (!(param0.field_y[0] != 0)) {
+                if ((param0.field_y[0] == 0)) {
                   var29 = 4095;
                   for (var27 = 15; var27 >= 0; var27--) {
                     for (var28 = 15; var28 >= 0; var28--) {

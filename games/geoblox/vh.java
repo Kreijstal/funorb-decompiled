@@ -81,12 +81,12 @@ final class vh extends ee implements pl {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) 88, param3);
-        if (!(param3 == 0)) {
+        if ((param3 != 0)) {
             return;
         }
         m var5 = ng.field_F;
         int var6 = -69 / ((1 - param2) / 43);
-        if (!(this.field_C == null)) {
+        if ((this.field_C != null)) {
             var5.a(ab.field_e, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_o);
         }
     }

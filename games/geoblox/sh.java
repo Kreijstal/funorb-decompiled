@@ -270,7 +270,7 @@ abstract class sh extends el implements ql {
     el e(int param0) {
         el var2 = this.field_A;
         if ((var2 != null) &&
-            (!(!var2.e((byte) 54)))) {
+            ((var2.e((byte) 54)))) {
             return var2;
         }
         if (param0 == -4863) {
@@ -283,7 +283,7 @@ abstract class sh extends el implements ql {
 
     void a(int param0, int param1, byte param2, int param3) {
         if ((0 == param3) &&
-            (!(this.field_q == null))) {
+            ((this.field_q != null))) {
             this.field_q.a(param0, -50, param1, true, (el) (this));
         }
         int var5 = 85 % ((param2 - 1) / 43);
@@ -361,9 +361,9 @@ abstract class sh extends el implements ql {
     String c(byte param0) {
         String var3 = null;
         String var2 = super.c(param0);
-        if (!(this.field_A == null)) {
+        if ((this.field_A != null)) {
             var3 = this.field_A.c((byte) 69);
-            if (!(var3 == null)) {
+            if ((var3 != null)) {
                 return var3;
             }
         }

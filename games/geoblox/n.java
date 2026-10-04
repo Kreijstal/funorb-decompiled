@@ -174,7 +174,7 @@ final class n extends q {
     }
 
     final static void c(byte param0) {
-        if (!(Geoblox.field_y == null)) {
+        if ((Geoblox.field_y != null)) {
             Geoblox.field_y.h((byte) -104);
         }
         vk.field_d = new hi();
@@ -271,7 +271,7 @@ final class n extends q {
     }
 
     final static sl d(byte param0) {
-        if (!(uf.field_l != kd.field_b)) {
+        if ((uf.field_l == kd.field_b)) {
             throw new IllegalStateException();
         }
         int var1 = 28 % ((-79 - param0) / 44);

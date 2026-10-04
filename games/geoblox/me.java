@@ -17,13 +17,13 @@ final class me extends hf {
             return;
         }
         if (fj.field_p == null) {
-            if (!(null == oh.field_a)) {
+            if ((null != oh.field_a)) {
                 oh.field_a.c();
             }
             return;
         }
         fj.field_p.c();
-        if (!(null == oh.field_a)) {
+        if ((null != oh.field_a)) {
             oh.field_a.c();
         }
     }

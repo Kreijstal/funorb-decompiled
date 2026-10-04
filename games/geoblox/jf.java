@@ -224,10 +224,10 @@ final class jf implements dh {
           for (var4 = 0; var2_int > var4; var4++) {
             L2: {
               var5 = param0.charAt(var4);
-              if (!((var5 > 0) &&
-                  (var5 < 128))) {
-                if (!((var5 >= 160) &&
-                    (255 >= var5))) {
+              if (((!(var5 > 0)) ||
+                  (!(var5 < 128)))) {
+                if (((!(var5 >= 160)) ||
+                    (!(255 >= var5)))) {
                   if (8364 == var5) {
                     var3[var4] = (byte)-128;
                     break L2;

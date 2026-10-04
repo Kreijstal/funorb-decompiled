@@ -71,14 +71,14 @@ final class jl {
 
     final static void a(byte param0) {
         if (param0 < -113) {
-            if (!(oc.field_e == null)) {
+            if ((oc.field_e != null)) {
                 oc.field_e.b(-122);
                 oc.field_e = null;
             }
             return;
         }
         field_t = true;
-        if (!(oc.field_e == null)) {
+        if ((oc.field_e != null)) {
             oc.field_e.b(-122);
             oc.field_e = null;
         }

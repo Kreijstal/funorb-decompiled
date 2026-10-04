@@ -105,7 +105,7 @@ final class eb {
                 }
                 return -1;
             }
-            if (!(param0 != 51)) {
+            if ((param0 == 51)) {
                 return 2;
             }
             if (wg.field_i.field_b < 2) {

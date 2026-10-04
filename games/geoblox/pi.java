@@ -135,7 +135,7 @@ final class pi extends vf {
         if ((var6 != bf.field_g) &&
             (var6 != si.field_n)) {
           var5 = this.field_M.c(-21666);
-          if (!(var5 != null)) {
+          if ((var5 == null)) {
             var5 = this.field_N;
           }
         } else {

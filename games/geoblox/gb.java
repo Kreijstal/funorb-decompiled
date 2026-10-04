@@ -80,7 +80,7 @@ final class gb {
 
     final hf d(int param0) {
         hf var2 = this.field_a.field_a.field_c;
-        if (!(this.field_a.field_a != var2)) {
+        if ((this.field_a.field_a == var2)) {
             this.field_d = null;
             return null;
         }
@@ -217,7 +217,7 @@ final class gb {
         if (param0 <= 105) {
             return (hf) null;
         }
-        if (!(var2 != this.field_a.field_a)) {
+        if ((var2 == this.field_a.field_a)) {
             this.field_d = null;
             return null;
         }

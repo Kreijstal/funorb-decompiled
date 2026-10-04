@@ -159,12 +159,12 @@ abstract class dd extends ee {
         el var2 = super.f((byte) -62);
         if (param0 > -60) {
             this.field_I = false;
-            if (!(var2 == null)) {
+            if ((var2 != null)) {
                 return var2;
             }
             return (el) (this);
         }
-        if (!(var2 == null)) {
+        if ((var2 != null)) {
             return var2;
         }
         return (el) (this);
@@ -176,7 +176,7 @@ abstract class dd extends ee {
             return;
         }
         if (256 <= this.field_H) {
-            if (!(param3 == 0)) {
+            if ((param3 != 0)) {
                 return;
             }
             this.b(this.field_v + param0, 20, param1 + this.field_m);

@@ -52,7 +52,7 @@ final class qe {
                 param0 = var10[var8].field_h;
               }
             }
-            if (!(var7_int != 0)) {
+            if ((var7_int == 0)) {
               return null;
             }
           }

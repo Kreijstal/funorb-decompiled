@@ -315,11 +315,11 @@ abstract class oe extends dd {
               var3_int = var3_int + (-160 + var7);
             }
             for (var9 = 0; pg.field_a.length > var9; var9++) {
-              if (!(((1 << var9 & var5) == 0) &&
-                    (param0)) &&
-                  !((!da.a(0, 88)) &&
-                    (var9 == 16) &&
-                    (!qi.d(109)))) {
+              if ((((1 << var9 & var5) != 0) ||
+                    (!(param0))) &&
+                  ((da.a(0, 88)) ||
+                    (var9 != 16) ||
+                    (qi.d(109)))) {
                 if ((mc.field_a >= var3_int) &&
                     (mc.field_a <= var3_int + 32) &&
                     (var4 <= he.field_d) &&
@@ -359,11 +359,11 @@ abstract class oe extends dd {
               var3_int = var3_int + (-160 + var7);
             }
             for (var9 = 0; pg.field_a.length > var9; var9++) {
-              if (!(((1 << var9 & var5) == 0) &&
-                    (param0)) &&
-                  !((!da.a(0, 88)) &&
-                    (var9 == 16) &&
-                    (!qi.d(109)))) {
+              if ((((1 << var9 & var5) != 0) ||
+                    (!(param0))) &&
+                  ((da.a(0, 88)) ||
+                    (var9 != 16) ||
+                    (qi.d(109)))) {
                 if ((mc.field_a >= var3_int) &&
                     (mc.field_a <= var3_int + 32) &&
                     (var4 <= he.field_d) &&

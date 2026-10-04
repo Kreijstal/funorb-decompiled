@@ -51,7 +51,7 @@ abstract class q extends ib implements ga {
     abstract String b(int param0, String param1);
 
     final static boolean a(char param0, byte param1) {
-        if (!(!Character.isISOControl(param0))) {
+        if ((Character.isISOControl(param0))) {
             return false;
         }
         if (pf.a(-123, param0)) {

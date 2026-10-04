@@ -835,8 +835,8 @@ abstract class wh extends rc {
                           if (var5 != 0) {
                             break L4;
                           }
-                          if (!((stackIn_17_0 != stackIn_17_1) &&
-                              (var5 == 0))) {
+                          if (((stackIn_17_0 == stackIn_17_1) ||
+                              (var5 != 0))) {
                             var3_int++;
                             continue;
                           }
@@ -867,7 +867,7 @@ abstract class wh extends rc {
                       decompiledRegionSelector0 = 0;
                     }
                   }
-                  if (!(decompiledRegionSelector0 == 0)) {
+                  if ((decompiledRegionSelector0 != 0)) {
                     break L0;
                   }
                 }

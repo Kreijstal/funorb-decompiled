@@ -101,8 +101,8 @@ final class ik {
           fieldTemp$1 = param0.field_L;
           param0.field_L = param0.field_L + 1;
           param0.field_n[fieldTemp$1] = param1;
-          if (!((param1.field_z == 0) &&
-              (param0.field_z == 0))) {
+          if (((param1.field_z != 0) ||
+              (param0.field_z != 0))) {
             var5_int = 0;
             var6_int = 0;
             stackIn_14_0 = (param1.field_z != 1) ? 0 : 1;
@@ -138,8 +138,8 @@ final class ik {
                   }
                 }
               } else {
-                if (!((2 != param1.field_z) &&
-                    (param0.field_z != 2))) {
+                if (((2 == param1.field_z) ||
+                    (param0.field_z == 2))) {
                   if ((param1.field_z == 2) &&
                       (2 != param0.field_z)) {
                     param1.a(320, param0.field_C, param1.field_M, param0.field_z);
@@ -156,8 +156,8 @@ final class ik {
                 }
               }
             }
-            if (!((var5_int == 0) &&
-                  (var6_int == 0))) {
+            if (((var5_int != 0) ||
+                  (var6_int != 0))) {
               bh.a(var6_int != 0, param1, 1, param0, var5_int != 0);
             }
             if ((param1.field_z == 1) &&

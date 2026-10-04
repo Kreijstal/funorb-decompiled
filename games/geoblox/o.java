@@ -49,7 +49,7 @@ final class o extends pb {
         if (param0 != 397) {
             return (byte[]) null;
         }
-        if (!(!this.field_u)) {
+        if ((this.field_u)) {
             throw new RuntimeException();
         }
         return this.field_y;

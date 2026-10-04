@@ -1431,8 +1431,8 @@ final class vb {
         int[] var27;
         int[] var28;
         int[] var29;
-        if (!((field_g != null) &&
-              (field_g.length >= param8))) {
+        if (((field_g == null) ||
+              (!(field_g.length >= param8)))) {
           field_g = new int[param8];
           field_h = new int[param8];
           field_j = new int[param8];

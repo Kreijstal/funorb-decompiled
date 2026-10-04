@@ -145,8 +145,8 @@ abstract class ji {
           if (var4_int == param2) {
             return null;
           }
-          if (!((param0 != null) &&
-                (var4_int == param0.length))) {
+          if (((param0 == null) ||
+                (var4_int != param0.length))) {
             param0 = new short[var4_int];
           }
           var5 = param3.e((byte) -17, 4);

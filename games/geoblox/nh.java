@@ -51,16 +51,16 @@ abstract class nh {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = cl.field_e.nextInt();
           }
-          if (!((null != fa.field_c) &&
-                (fa.field_c.field_j.length >= var7_int))) {
+          if (((null == fa.field_c) ||
+                (!(fa.field_c.field_j.length >= var7_int)))) {
             fa.field_c = new qc(var7_int);
           }
           fa.field_c.field_f = 0;
           fa.field_c.a(param5, -97, param4, param2);
           fa.field_c.a((byte) -84, var7_int);
           fa.field_c.a(var12, (byte) -33);
-          if (!((vf.field_I != null) &&
-              (vf.field_I.field_j.length >= 100))) {
+          if (((vf.field_I == null) ||
+              (!(vf.field_I.field_j.length >= 100)))) {
             vf.field_I = new qc(100);
           }
           vf.field_I.field_f = 0;

@@ -21,7 +21,7 @@ final class wg implements Runnable {
 
     final qc b(byte param0) {
         int var2 = 62 / ((param0 - 9) / 53);
-        if (!(this.field_l != 3)) {
+        if ((this.field_l == 3)) {
             return this.field_n;
         }
         return null;
@@ -29,7 +29,7 @@ final class wg implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_f) {
-            if (!(this.field_f.field_b == null)) {
+            if ((this.field_f.field_b != null)) {
                 try {
                     ((DataInputStream) (this.field_f.field_b)).close();
                 } catch (Exception exception) {
@@ -46,7 +46,7 @@ final class wg implements Runnable {
             }
             this.field_k = null;
         }
-        if (!(null == this.field_c)) {
+        if ((null != this.field_c)) {
             try {
                 this.field_c.close();
             } catch (Exception exception) {

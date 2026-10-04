@@ -70,7 +70,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     final static void a(hf param0, int param1, hf param2) {
         try {
-            if (!(null == param2.field_c)) {
+            if ((null != param2.field_c)) {
                 param2.a(false);
             }
             if (param1 < 80) {

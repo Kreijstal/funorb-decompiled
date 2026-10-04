@@ -212,8 +212,8 @@ final class jh {
                     this.field_c.a(param0 - 228, (long)(param2 * 6));
                     this.field_c.a(dj.field_F, 6, 0, 9868);
                     var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
-                    if (!((var7_int > 0) &&
-                        (this.field_d.a((byte) 46) / 520L >= (long)var7_int))) {
+                    if (((!(var7_int > 0)) ||
+                        (!(this.field_d.a((byte) 46) / 520L >= (long)var7_int)))) {
                       return false;
                     }
                   } else {
@@ -251,7 +251,7 @@ final class jh {
                                 var14 = (EOFException) (Object) decompiledCaughtException;
                                 decompiledRegionSelector0 = 1;
                               }
-                              if (!(decompiledRegionSelector0 == 0)) {
+                              if ((decompiledRegionSelector0 != 0)) {
                                 break L4;
                               }
                               var11 = ((255 & dj.field_F[0]) << 8) + (255 & dj.field_F[1]);
@@ -267,7 +267,7 @@ final class jh {
                                 var14 = (EOFException) (Object) decompiledCaughtException;
                                 decompiledRegionSelector1 = 1;
                               }
-                              if (!(decompiledRegionSelector1 == 0)) {
+                              if ((decompiledRegionSelector1 != 0)) {
                                 break L4;
                               }
                               var11 = (65280 & dj.field_F[2] << 8) + (((255 & dj.field_F[0]) << 24) + (((dj.field_F[1] & 255) << 16) + (255 & dj.field_F[3])));

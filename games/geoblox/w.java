@@ -145,7 +145,7 @@ final class w {
             if (param1 != 52) {
                 field_d = (ck) null;
             }
-            if (!(sd.field_B.field_a != 0)) {
+            if ((sd.field_B.field_a == 0)) {
                 return false;
             }
             long dupTemp$0 = oa.a(param1 ^ -12500);

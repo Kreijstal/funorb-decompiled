@@ -121,7 +121,7 @@ class dj extends hk {
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (!(param3 == 0)) {
+        if ((param3 != 0)) {
             var6[4] = ef.a(0, param3, 64);
         }
         return var5;
@@ -379,8 +379,8 @@ class dj extends hk {
             if (this.field_H != this.field_L) {
               this.g(0);
             }
-            if (!((-1 != this.field_M) &&
-                  (this.field_s.length() >= this.field_M))) {
+            if (((-1 == this.field_M) ||
+                  (!(this.field_s.length() >= this.field_M)))) {
               if (this.field_H >= this.field_s.length()) {
                 this.field_s = this.field_s + param2;
                 dupTemp$0 = this.field_s.length();
@@ -581,7 +581,7 @@ class dj extends hk {
         if (param0 >= -16) {
             return;
         }
-        if (!(!(this.field_u instanceof ga))) {
+        if (((this.field_u instanceof ga))) {
             ((ga) ((Object) this.field_u)).a((dj) (this), (byte) 74);
         }
     }

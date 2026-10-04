@@ -22,7 +22,7 @@ final class lc {
         try {
           var1 = (ja) ((Object) wd.field_e.g(0));
           do {
-            if (!(var1 != null)) {
+            if ((var1 == null)) {
               if (param0 != 255) {
                 field_b = -11;
               }
@@ -31,10 +31,10 @@ final class lc {
             var1.b(true);
             var1 = (ja) ((Object) wd.field_e.d(1));
           } while (var10 == 0);
-          if ((!((!((kj.field_o[99]) &&
-                (ji.field_r.c(13519)))) &&
-              (~kb.field_c <= ~kc.field_a)) ||
-              (!(ul.field_b != 0) &&
+          if ((((((kj.field_o[99]) &&
+                (ji.field_r.c(13519)))) ||
+              (!(~kb.field_c <= ~kc.field_a))) ||
+              ((ul.field_b == 0) &&
                 !(el.field_o.field_Y)))) {
             if ((0 < wd.field_e.a(param0 ^ -170)) &&
                 (!el.field_o.field_N)) {

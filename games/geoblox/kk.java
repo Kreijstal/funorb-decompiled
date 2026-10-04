@@ -406,7 +406,7 @@ final class kk extends ji {
         if (param0 > -50) {
             field_w = (lh) null;
         }
-        if (!(this.field_u == null)) {
+        if ((this.field_u != null)) {
             this.field_u.b(-123);
         }
     }

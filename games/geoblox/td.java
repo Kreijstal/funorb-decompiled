@@ -97,7 +97,7 @@ final class td extends hk {
           if (si.field_m == var9) {
             var14 = oa.field_e[2];
             var14.c(-(var14.field_r >> 1) + var5, var6 - (var14.field_m >> 1), 256);
-          } else if (!(var9 != kk.field_w)) {
+          } else if ((var9 == kk.field_w)) {
             var15 = oa.field_e[1];
             var15.c(-(var15.field_r >> 1) + var5, var6 - (var15.field_m >> 1), 256);
           }
@@ -256,7 +256,7 @@ final class td extends hk {
         if (param0 != 69) {
             return (String) null;
         }
-        if (!(!this.field_l)) {
+        if ((this.field_l)) {
             return this.field_F.c(-21666);
         }
         return null;

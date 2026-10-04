@@ -196,7 +196,7 @@ final class ad extends ia {
         if (var1 == null) {
             return null;
         }
-        if (!(null == var1.field_u)) {
+        if ((null != var1.field_u)) {
             return (ia) ((Object) var1.field_u);
         }
         return this.c();

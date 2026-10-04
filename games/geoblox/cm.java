@@ -192,8 +192,8 @@ final class cm extends cj {
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
             if (null != oc.field_e) {
-              if (!((param1 >= 0) &&
-                  (pk.field_l != eh.field_b))) {
+              if (((!(param1 >= 0)) ||
+                  (pk.field_l == eh.field_b))) {
                 if ((0 == fj.field_q.field_f) &&
                     (~oa.a(-12520) < ~(10000L + v.field_r))) {
                   fj.field_q.a(param1, (byte) -76);

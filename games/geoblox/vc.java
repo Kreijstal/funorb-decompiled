@@ -137,7 +137,7 @@ final class vc extends dk {
             field_j = (dm) null;
         }
         if ((this.field_p == param4 && this.field_d && 0 == this.field_k && this.field_n != null) &&
-            (!(!this.field_n.equals(param2)))) {
+            ((this.field_n.equals(param2)))) {
             return;
         }
         try {

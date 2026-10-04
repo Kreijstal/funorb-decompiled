@@ -68,7 +68,7 @@ final class uk extends q {
             if (var2 == 1) {
                 return oi.field_d;
             }
-            if (!(var2 == 2)) {
+            if ((var2 != 2)) {
                 if (var2 == 3) {
                     return li.field_b;
                 }
@@ -86,7 +86,7 @@ final class uk extends q {
         if (var2 == 1) {
             return oi.field_d;
         }
-        if (!(var2 == 2)) {
+        if ((var2 != 2)) {
             if (var2 == 3) {
                 return li.field_b;
             }

@@ -107,7 +107,7 @@ final class kc {
                   stackIn_12_0 = var1.field_K;
                   if (var9 == 0) {
                     if (stackIn_12_0 != a.field_d) {
-                      if (!(!var1.field_B)) {
+                      if ((var1.field_B)) {
                         fa.field_a = true;
                       }
                     } else {
@@ -130,7 +130,7 @@ final class kc {
                 }
                 var1 = (ja) ((Object) ((tf) (Object) stackIn_12_0).g(0));
                 while (true) {
-                  if (!(var1 != null)) {
+                  if ((var1 == null)) {
                     re.field_j = false;
                     el.field_o.field_B = true;
                     stackIn_56_0 = 0;
@@ -174,8 +174,8 @@ final class kc {
                                     if (var8 != null) {
                                       stackIn_51_0 = var8;
                                       stackIn_51_1 = var7;
-                                      if (!((stackIn_51_0 == stackIn_51_1) &&
-                                          (var9 == 0))) {
+                                      if (((stackIn_51_0 != stackIn_51_1) ||
+                                          (var9 != 0))) {
                                         var8 = (ja) ((Object) var13.a(-45));
                                         continue;
                                       }
@@ -206,7 +206,7 @@ final class kc {
                             break L10;
                           }
                           var5_ref_ja = (ja) ((Object) var13.a(true));
-                          while (!(var5_ref_ja == null)) {
+                          while ((var5_ref_ja != null)) {
                             var5_ref_ja.field_K = ji.field_r;
                             var5_ref_ja.field_t = false;
                             var5_ref_ja.field_B = true;
@@ -254,9 +254,9 @@ final class kc {
           }
           var2_ref_ja = (ja) ((Object) a.field_d.g(0));
           while (var2_ref_ja != null) {
-            if ((!(null == var2_ref_ja.field_K) ||
-                (!(!w.field_f) &&
-                  !(!var2_ref_ja.field_t)))) {
+            if (((null != var2_ref_ja.field_K) ||
+                ((w.field_f) &&
+                  (var2_ref_ja.field_t)))) {
               L39: {
                 L40: {
                   re.field_j = true;
@@ -350,7 +350,7 @@ final class kc {
           var2 = -23 / ((param0 - 69) / 46);
           var3 = (ja) ((Object) bh.field_c.g(0));
           while (true) {
-            if (!(var3 != null)) {
+            if ((var3 == null)) {
               if (w.field_f) {
                 jc.a(3, false);
                 jl.field_t = false;

@@ -14,7 +14,7 @@ final class tf {
             return (hf) null;
         }
         hf var2 = this.field_c;
-        if (!(this.field_a != var2)) {
+        if ((this.field_a == var2)) {
             this.field_c = null;
             return null;
         }
@@ -203,7 +203,7 @@ final class tf {
             return (hf) null;
         }
         hf var2 = this.field_a.field_c;
-        if (!(this.field_a != var2)) {
+        if ((this.field_a == var2)) {
             this.field_c = null;
             return null;
         }

@@ -103,8 +103,8 @@ final class ai extends hf {
                       continue;
                     }
                   }
-                  if (!((!var5.regionMatches(var6, "/s=", 0, 3)) &&
-                        (!var5.regionMatches(var6, "/c=", 0, 3)))) {
+                  if (((var5.regionMatches(var6, "/s=", 0, 3)) ||
+                        (var5.regionMatches(var6, "/c=", 0, 3)))) {
                     var7_int = var5.indexOf('/', var6 + 1);
                     if (0 <= var7_int) {
                       if (param0 != null) {

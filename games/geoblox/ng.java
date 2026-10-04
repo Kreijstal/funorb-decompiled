@@ -90,7 +90,7 @@ final class ng extends sh {
         gb var2 = new gb(this.field_C);
         dd var3 = (dd) ((Object) var2.c((byte) 88));
         while (var3 != null) {
-            if (!(!var3.field_I)) {
+            if ((var3.field_I)) {
                 return var3.f((byte) -79);
             }
             var3 = (dd) ((Object) var2.a((byte) 119));

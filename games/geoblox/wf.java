@@ -134,7 +134,7 @@ abstract class wf extends ch {
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
         this.a(false, (byte) -91);
-        if (!(!param3)) {
+        if ((param3)) {
             this.f((byte) 32);
         }
         if (param2) {
@@ -143,7 +143,7 @@ abstract class wf extends ch {
         if (param4 > -87) {
             this.field_w = -34;
         }
-        if (!(!param0)) {
+        if ((param0)) {
             this.e((byte) -19);
         }
         if (param1) {
@@ -167,8 +167,8 @@ abstract class wf extends ch {
           wf.a((java.net.URL) null, 48, (java.applet.Applet) null);
         }
         var2 = this.k(-1);
-        if (!((var2 != 0) &&
-            (1 != var2))) {
+        if (((var2 == 0) ||
+            (1 == var2))) {
           if (wj.field_G[1]) {
             qc.a(true, 2);
           }
@@ -258,7 +258,7 @@ abstract class wf extends ch {
         }
         if (t.b(param1 ^ 19649)) {
           var3 = 1200 * sb.a(true);
-          if ((!(!this.field_t) ||
+          if (((this.field_t) ||
               (!(~var3 <= ~ha.a(-76)) &&
                 !(var3 >= jk.a(false))))) {
             this.field_t = false;
@@ -270,8 +270,8 @@ abstract class wf extends ch {
             hi.field_G = oa.a(-12520) + 15000L;
           }
         }
-        if (!((ib.field_e != -1) &&
-              (ib.field_e != 0))) {
+        if (((ib.field_e == -1) ||
+              (ib.field_e == 0))) {
           stackIn_24_0 = (-1 != ib.field_e) ? 0 : 1;
           var3 = stackIn_24_0;
           ib.field_e = ma.b(15869);
@@ -330,9 +330,9 @@ abstract class wf extends ch {
             }
           }
         }
-        if ((!((!((ib.field_e != -1) &&
-                (ib.field_e != 0))) &&
-              (!sb.a(param1 - 19585)))) &&
+        if ((((((ib.field_e != -1) &&
+                (ib.field_e != 0))) ||
+              (sb.a(param1 - 19585)))) &&
             (~hi.field_G >= ~oa.a(param1 - 32180))) {
           ii.field_e = false;
           if ((-1 != ib.field_e) &&
@@ -385,8 +385,8 @@ abstract class wf extends ch {
           oi.field_e = nh.field_c;
           kf.field_e = false;
           fj.a((byte) 114, hb.field_n, rb.field_c, dc.field_c, l.field_h);
-          if (!((!ri.field_a) &&
-              (jg.field_d == null))) {
+          if (((ri.field_a) ||
+              (jg.field_d != null))) {
             stackIn_100_0 = 2274;
             stackIn_100_1 = jg.field_d;
             if (ri.field_a) {
@@ -425,8 +425,8 @@ abstract class wf extends ch {
         L30: {
           if (mi.field_C == 11) {
             if (null != ak.field_b) {
-              if (!((ak.field_b.a(0)) &&
-                  (ak.field_b.b(true)))) {
+              if (((!(ak.field_b.a(0))) ||
+                  (!(ak.field_b.b(true))))) {
                 lc.a(si.a(ri.field_c, 2147483647, vc.field_g, ak.field_b), -2, 0.0f);
                 break L30;
               }

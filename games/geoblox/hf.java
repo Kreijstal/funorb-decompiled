@@ -99,7 +99,7 @@ class hf {
         if (param0) {
             return;
         }
-        if (!(null != this.field_c)) {
+        if ((null == this.field_c)) {
             return;
         }
         this.field_c.field_b = this.field_b;
@@ -193,7 +193,7 @@ class hf {
               for (var12 = 0; var12 < var7; var12++) {
                 var8[var12] = var15.f((byte) 90);
               }
-              if (!((var11 & 2) == 0)) {
+              if (((var11 & 2) != 0)) {
                 for (var12 = 0; var7 > var12; var12++) {
                   dupTemp$1 = var15.f((byte) 95);
                   var9[var12] = dupTemp$1;
@@ -213,7 +213,7 @@ class hf {
                   var8[var13 * var5 + var12] = var15.f((byte) 90);
                 }
               }
-              if (!(0 == (2 & var11))) {
+              if ((0 != (2 & var11))) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
                     dupTemp$0 = var15.f((byte) 78);
@@ -254,7 +254,7 @@ class hf {
     }
 
     final boolean a(int param0) {
-        if (!(null != this.field_c)) {
+        if ((null == this.field_c)) {
             return false;
         }
         if (param0 < 112) {
