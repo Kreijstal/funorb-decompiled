@@ -160,7 +160,7 @@ final class kl extends ia {
 
     private final int a(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
-        while (true) {
+        do {
           if (this.field_l <= 0) {
             if ((this.field_p == -256) &&
                 ((this.field_x & 255) == 0)) {
@@ -197,11 +197,8 @@ final class kl extends ia {
           if (this.field_l != 0) {
             return param1;
           }
-          if (!this.j()) {
-            continue;
-          }
-          return param3;
-        }
+        } while (!this.j());
+        return param3;
     }
 
     final ia b() {
@@ -214,7 +211,7 @@ final class kl extends ia {
 
     private final int b(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
-        while (true) {
+        do {
           if (this.field_l <= 0) {
             if ((this.field_p == 256) &&
                 ((this.field_x & 255) == 0)) {
@@ -251,11 +248,8 @@ final class kl extends ia {
           if (this.field_l != 0) {
             return param1;
           }
-          if (!this.j()) {
-            continue;
-          }
-          return param3;
-        }
+        } while (!this.j());
+        return param3;
     }
 
     final int a() {

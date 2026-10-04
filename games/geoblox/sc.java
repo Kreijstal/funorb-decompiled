@@ -64,14 +64,11 @@ abstract class sc {
             return stackIn_7_0;
           }
           var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
-          while (true) {
+          do {
             var4 = param1.nextInt();
-            if (var3_int <= var4) {
-              continue;
-            }
-            stackIn_12_0 = jc.a(var4, param2, param0 ^ 121);
-            return stackIn_12_0;
-          }
+          } while (var3_int <= var4);
+          stackIn_12_0 = jc.a(var4, param2, param0 ^ 121);
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

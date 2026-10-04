@@ -144,7 +144,7 @@ final class fi {
         hf var4;
         hf var7;
         if (this.field_f <= 0) {
-          while (true) {
+          do {
             if (this.field_c <= this.field_f) {
               var2 = 47 % ((param0 - 28) / 38);
               return null;
@@ -152,19 +152,16 @@ final class fi {
             fieldTemp$1 = this.field_f;
             this.field_f = this.field_f + 1;
             var3 = this.field_e[fieldTemp$1].field_b;
-            if (this.field_e[-1 + this.field_f] == var3) {
-              continue;
-            }
-            this.field_a = var3.field_b;
-            return var3;
-          }
+          } while (this.field_e[-1 + this.field_f] == var3);
+          this.field_a = var3.field_b;
+          return var3;
         }
         if (this.field_a != this.field_e[this.field_f - 1]) {
           var7 = this.field_a;
           this.field_a = var7.field_b;
           return var7;
         }
-        while (true) {
+        do {
           if (this.field_c <= this.field_f) {
             var2 = 47 % ((param0 - 28) / 38);
             return null;
@@ -172,12 +169,9 @@ final class fi {
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
           var4 = this.field_e[fieldTemp$0].field_b;
-          if (this.field_e[-1 + this.field_f] == var4) {
-            continue;
-          }
-          this.field_a = var4.field_b;
-          return var4;
-        }
+        } while (this.field_e[-1 + this.field_f] == var4);
+        this.field_a = var4.field_b;
+        return var4;
     }
 
     static {

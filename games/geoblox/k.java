@@ -68,20 +68,17 @@ final class k implements Iterator {
           this.field_c = var4;
           return var4;
         }
-        while (true) {
+        do {
           if (this.field_j >= this.field_d.field_c) {
             return null;
           }
           fieldTemp$0 = this.field_j;
           this.field_j = this.field_j + 1;
           var3 = this.field_d.field_a[fieldTemp$0].field_b;
-          if (var3 == this.field_d.field_a[this.field_j - 1]) {
-            continue;
-          }
-          this.field_h = var3.field_b;
-          this.field_c = var3;
-          return var3;
-        }
+        } while (var3 == this.field_d.field_a[this.field_j - 1]);
+        this.field_h = var3.field_b;
+        this.field_c = var3;
+        return var3;
     }
 
     public static void b(int param0) {

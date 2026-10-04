@@ -244,18 +244,15 @@ final class cm extends cj {
           return 1;
         }
         var4 = 0;
-        while (true) {
+        do {
           var4++;
           this.field_c = this.field_c + param1;
-          if ((var4 < 10) &&
-              (~this.field_c > ~this.field_e)) {
-            continue;
-          }
-          if (this.field_e > this.field_c) {
-            this.field_c = this.field_e;
-          }
-          return var4;
+        } while ((var4 < 10) &&
+              (~this.field_c > ~this.field_e));
+        if (this.field_e > this.field_c) {
+          this.field_c = this.field_e;
         }
+        return var4;
     }
 
     private final long d(int param0) {

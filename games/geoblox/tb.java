@@ -343,7 +343,7 @@ final class tb {
             }
             var15 = -1;
             var16 = 1;
-            while (true) {
+            do {
               if (var13 != 0) {
                 if (var13 == 1) {
                   var15 = var15 + 2 * var16;
@@ -370,22 +370,16 @@ final class tb {
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-              if (var13 == 0) {
-                continue;
-              }
-              if (var13 == 1) {
-                continue;
-              }
-              var15++;
-              var1 = param0.field_x[param0.field_e[param0.field_y[0]] & 255];
-              param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;
-              while (var15 > 0) {
-                kb.field_a[var14] = var1 & 255;
-                var14++;
-                var15--;
-              }
-              continue L15;
+            } while ((var13 == 0) || (var13 == 1));
+            var15++;
+            var1 = param0.field_x[param0.field_e[param0.field_y[0]] & 255];
+            param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;
+            while (var15 > 0) {
+              kb.field_a[var14] = var1 & 255;
+              var14++;
+              var15--;
             }
+            continue L15;
           }
         }
     }

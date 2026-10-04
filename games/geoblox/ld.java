@@ -55,7 +55,7 @@ final class ld {
           if (vb.field_c[var4] != 0) {
             return true;
           }
-          while (true) {
+          do {
             incrementValue$0 = var6;
             var6++;
             var9 = var9 + (incrementValue$0 + var6);
@@ -91,11 +91,8 @@ final class ld {
             if (vb.field_c[var4 - var6] != 0) {
               return true;
             }
-            if (vb.field_c[var4 + var6] == 0) {
-              continue;
-            }
-            return true;
-          }
+          } while (vb.field_c[var4 + var6] == 0);
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

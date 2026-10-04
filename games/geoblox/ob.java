@@ -28,7 +28,7 @@ final class ob extends ia {
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
-        while (true) {
+        do {
           if (this.field_k < 0) {
             this.c(param0, param1, param2);
             return;
@@ -56,11 +56,8 @@ final class ob extends ia {
               this.a(var5);
             }
           }
-          if (param2 != 0) {
-            continue;
-          }
-          return;
-        }
+        } while (param2 != 0);
+        return;
     }
 
     private final void a(hf param0, jd param1) {
@@ -98,7 +95,7 @@ final class ob extends ia {
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
-        while (true) {
+        do {
           if (this.field_k < 0) {
             this.c(param0);
             return;
@@ -125,11 +122,8 @@ final class ob extends ia {
               this.a(var3);
             }
           }
-          if (param0 != 0) {
-            continue;
-          }
-          return;
-        }
+        } while (param0 != 0);
+        return;
     }
 
     private final void e() {
