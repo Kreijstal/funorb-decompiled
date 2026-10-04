@@ -70,9 +70,9 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
     final LoginPayloadKind payloadKind(byte methodGuard) {
         if (methodGuard != -32) {
             this.payloadKind((byte) 104);
-            return UsernameSuggestionsPanel.field_D;
+            return UsernameSuggestionsPanel.alternateLongAndTextPayloadKind;
         }
-        return UsernameSuggestionsPanel.field_D;
+        return UsernameSuggestionsPanel.alternateLongAndTextPayloadKind;
     }
 
     static {

@@ -5,11 +5,11 @@ import java.io.*;
 
 final class LoginPanel extends WidgetContainer implements TextInputListener, ButtonActivationListener {
     private String messageText;
-    static ResourceArchive field_O;
+    static ResourceArchive namedRootResourceArchive;
     private TextInputWidget passwordInput;
     private boolean showCreateAccount;
     private ButtonWidget alternateButton;
-    private static ClientProtocolStage field_K;
+    private static ClientProtocolStage awaitingAccountOrLookupReplyOpcodeStage;
     static boolean endingEntityScanClear;
     private boolean allowJustPlay;
     private ButtonWidget createAccountButton;
@@ -39,58 +39,58 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     }
 
     final static void handleIntRecordReply(int methodGuard) {
-        int var7 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        IntArrayQuery var4_ref_ea = null;
-        KeyedIntRecordSubmission var5 = null;
-        int var5_int = 0;
-        int[] var6 = null;
-        int var8 = 0;
-        PacketBuffer var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        var8 = Geoblox.clientControlFlowFlag;
+        int responseByteIndex = 0;
+        RuntimeException caughtIntRecordFailure = null;
+        RuntimeException intRecordFailureForContext = null;
+        int replyType = 0;
+        int byteKey = 0;
+        int signedSmartKey = 0;
+        IntArrayQuery headIntArrayQuery = null;
+        KeyedIntRecordSubmission matchingSubmission = null;
+        int payloadBytesToRead = 0;
+        int[] responseWordsAlias = null;
+        int unusedClientControlSnapshot = 0;
+        PacketBuffer replyBuffer = null;
+        int[] intermediateResponseWordsAlias = null;
+        int[] queryResponseWords = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          L0: {
-            var9 = LogoCompositor.sessionPacketBuffer;
-            var2 = var9.readUnsignedByte((byte) 34);
-            var3 = var9.readUnsignedByte((byte) 34);
-            if (0 == var2) {
-              var4_ref_ea = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
-              if (var4_ref_ea == null) {
+          intRecordReplyDispatch: {
+            replyBuffer = LogoCompositor.sessionPacketBuffer;
+            replyType = replyBuffer.readUnsignedByte((byte) 34);
+            byteKey = replyBuffer.readUnsignedByte((byte) 34);
+            if (0 == replyType) {
+              headIntArrayQuery = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
+              if (headIntArrayQuery == null) {
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
                 return;
               }
-              var5_int = -var9.position + AchievementSubmission.sessionPacketPayloadLength;
-              var11 = var4_ref_ea.responseWords;
-              var10 = var11;
-              var6 = var10;
-              if (var5_int > var11.length << 2) {
-                var5_int = var11.length << 2;
+              payloadBytesToRead = -replyBuffer.position + AchievementSubmission.sessionPacketPayloadLength;
+              queryResponseWords = headIntArrayQuery.responseWords;
+              intermediateResponseWordsAlias = queryResponseWords;
+              responseWordsAlias = intermediateResponseWordsAlias;
+              if (payloadBytesToRead > queryResponseWords.length << 2) {
+                payloadBytesToRead = queryResponseWords.length << 2;
               }
-              for (var7 = 0; var5_int > var7; var7++) {
-                var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 34) << ProxySocketConnector.andInt(var7 << 8, 768));
+              for (responseByteIndex = 0; payloadBytesToRead > responseByteIndex; responseByteIndex++) {
+                responseWordsAlias[responseByteIndex >> 2] = responseWordsAlias[responseByteIndex >> 2] + (replyBuffer.readUnsignedByte((byte) 34) << ProxySocketConnector.andInt(responseByteIndex << 8, 768));
               }
-              var4_ref_ea.unlinkNode(false);
+              headIntArrayQuery.unlinkNode(false);
             } else {
-              if (var2 == 1) {
-                var4 = var9.readSignedSmart(76);
-                var5 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
-                while (var5 != null) {
-                  if (!((var5.byteKey == var3) &&
-                      (var5.signedSmartKey == var4))) {
-                    var5 = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
+              if (replyType == 1) {
+                signedSmartKey = replyBuffer.readSignedSmart(76);
+                matchingSubmission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
+                while (matchingSubmission != null) {
+                  if (!((matchingSubmission.byteKey == byteKey) &&
+                      (matchingSubmission.signedSmartKey == signedSmartKey))) {
+                    matchingSubmission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
                     continue;
                   }
                   break;
                 }
-                if (var5 != null) {
-                  var5.unlinkNode(false);
-                  break L0;
+                if (matchingSubmission != null) {
+                  matchingSubmission.unlinkNode(false);
+                  break intRecordReplyDispatch;
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
                 return;
@@ -100,22 +100,22 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
           }
           if (methodGuard >= -95) {
-            field_O = (ResourceArchive) null;
+            namedRootResourceArchive = (ResourceArchive) null;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "pf.K(" + methodGuard + ')');
+        } catch (java.lang.RuntimeException intRecordReplyFailure) {
+          caughtIntRecordFailure = intRecordReplyFailure;
+          intRecordFailureForContext = caughtIntRecordFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) intRecordFailureForContext), "pf.K(" + methodGuard + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseLoginPanelSharedResources(byte methodGuard) {
         js5CrcErrorText = null;
-        field_K = null;
-        field_O = null;
-        if (param0 >= -18) {
-            LoginPanel.a((byte) -108);
+        awaitingAccountOrLookupReplyOpcodeStage = null;
+        namedRootResourceArchive = null;
+        if (methodGuard >= -18) {
+            LoginPanel.releaseLoginPanelSharedResources((byte) -108);
         }
     }
 
@@ -130,10 +130,10 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             this.passwordInput.requestKeyboardFocus((byte) -69, (UiWidget) (this));
           }
           if (this.passwordInput == input) {
-            this.g(methodGuard ^ -18649);
+            this.submitLoginIfAllowed(methodGuard ^ -18649);
           }
           if (methodGuard != -18649) {
-            field_O = (ResourceArchive) null;
+            namedRootResourceArchive = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException submissionFailure) {
@@ -150,19 +150,19 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         }
     }
 
-    final void a(String param0, int param1) {
-        TextInputWidget var3 = null;
-        String var4 = null;
+    final void setLoginIdentifierAndClearPassword(String loginIdentifier, int methodGuard) {
+        TextInputWidget targetIdentifierInput = null;
+        String identifierTextToSet = null;
         try {
-            var3 = this.loginIdentifierInput;
-            var4 = param0;
-            var3.setInputText(param1 ^ 2, var4, false);
-            if (param1 != 0) {
-                this.i(114);
+            targetIdentifierInput = this.loginIdentifierInput;
+            identifierTextToSet = loginIdentifier;
+            targetIdentifierInput.setInputText(methodGuard ^ 2, identifierTextToSet, false);
+            if (methodGuard != 0) {
+                this.clearLoginInputs(114);
             }
             this.passwordInput.clearInputText((byte) 110);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        } catch (RuntimeException identifierUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) identifierUpdateFailure), "pf.C(" + (loginIdentifier != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         if (null != this.createAccountButton) {
             SoftwareRasterizer.drawHorizontalLine(10 + parentX, 134 + parentY, -20 + this.widgetWidth, 4210752);
         }
-        int var5 = 20 / ((methodGuard - 1) / 43);
+        int guardResidue = 20 / ((methodGuard - 1) / 43);
         super.renderWidget(parentX, parentY, (byte) -48, renderPass);
     }
 
@@ -187,165 +187,165 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_5_0 = false;
-        boolean stackIn_9_0 = false;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        RuntimeException keyFailureForContext = null;
+        boolean previousFocusResult = false;
+        boolean nextFocusResult = false;
+        RuntimeException keyFailureBeforeContext = null;
+        StringBuilder keyMessagePrefix = null;
+        String eventContextDescription = null;
+        RuntimeException caughtKeyFailure = null;
         try {
-          if (super.handleKeyInput(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(keyCode, methodGuard, typedCharacter, eventContext)) {
             return true;
           }
-          if (98 == param0) {
-            stackIn_5_0 = this.requestPreviousChildFocus(7305, param3);
-            return stackIn_5_0;
+          if (98 == keyCode) {
+            previousFocusResult = this.requestPreviousChildFocus(7305, eventContext);
+            return previousFocusResult;
           }
-          if (param0 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_9_0 = this.requestNextChildFocus(param3, -109);
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("pf.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_13_2 = "null";
+          nextFocusResult = this.requestNextChildFocus(eventContext, -109);
+          return nextFocusResult;
+        } catch (java.lang.RuntimeException keyInputFailure) {
+          caughtKeyFailure = keyInputFailure;
+          keyFailureForContext = caughtKeyFailure;
+          keyFailureBeforeContext = keyFailureForContext;
+          keyMessagePrefix = new StringBuilder().append("pf.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureBeforeContext), ((StringBuilder) (Object) keyMessagePrefix).append(eventContextDescription).append(')').toString());
         }
     }
 
-    final String h(int param0) {
+    final String getLoginIdentifierOrEmpty(int methodGuard) {
         if (null == this.loginIdentifierInput.widgetText) {
             return "";
         }
-        if (param0 < 62) {
-            UiWidget var3 = (UiWidget) null;
+        if (methodGuard < 62) {
+            UiWidget unusedNullKeyEventContext = (UiWidget) null;
             this.handleKeyInput(28, 70, '"', (UiWidget) null);
         }
         return this.loginIdentifierInput.widgetText;
     }
 
-    final static int a(int param0, int param1, LoginTextValue param2, LoginTextValue param3, String param4, boolean param5, int param6) {
-        int var12 = 0;
-        int stackIn_4_0 = 0;
-        ByteArrayBuffer stackIn_9_0 = null;
-        String stackIn_10_1 = null;
-        ByteArrayBuffer stackIn_12_0 = null;
-        String stackIn_13_1 = null;
-        int stackIn_31_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_63_0 = 0;
-        int stackIn_66_0 = 0;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_70_2 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_73_2 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_76_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        String var9_ref_String = null;
-        int var10 = 0;
-        String var11_ref_String = null;
-        int var11 = 0;
-        String var13 = null;
-        CharSequence var14 = null;
+    final static int advanceAccountCreationOrLookupRequest(int affiliateId, int ageYears, LoginTextValue loginIdentifierValue, LoginTextValue emailValue, String passwordText, boolean newsOptIn, int methodGuard) {
+        int suggestionIndex = 0;
+        int socketNotReadyResult = 0;
+        ByteArrayBuffer identifierPayloadBuffer = null;
+        String includedIdentifierText = null;
+        ByteArrayBuffer emailPayloadBuffer = null;
+        String includedEmailText = null;
+        int unableResponseBeforeReturn = 0;
+        int suggestionResponseBeforeReturn = 0;
+        int payloadOpcodeBeforeReturn = 0;
+        int retryFailureBeforeReturn = 0;
+        int pendingResultBeforeReturn = 0;
+        RuntimeException requestFailureBeforeContext = null;
+        StringBuilder requestMessagePrefix = null;
+        String identifierValueDescription = null;
+        StringBuilder requestMessageBeforeEmail = null;
+        String emailValueDescription = null;
+        StringBuilder requestMessageBeforePassword = null;
+        String passwordDescription = null;
+        RuntimeException caughtRequestFailure = null;
+        RuntimeException requestFailureForContext = null;
+        String emailText = null;
+        int requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 0;
+        String settingsCookieText = null;
+        int creationPayloadStartOrSuggestionPayloadLength = 0;
+        String rememberedLoginText = null;
+        int suggestionCount = 0;
+        String loginIdentifierText = null;
+        CharSequence passwordCharacters = null;
         try {
-          var13 = param2.getText(16925);
-          var8 = param3.getText(16925);
+          loginIdentifierText = loginIdentifierValue.getText(16925);
+          emailText = emailValue.getText(16925);
           if ((SpriteCheckboxRenderer.sessionSocket == null) &&
               (!SessionSocketSupport.pollSessionSocketOpening(false, 52))) {
-            stackIn_4_0 = -1;
-            return stackIn_4_0;
+            socketNotReadyResult = -1;
+            return socketNotReadyResult;
           }
           if (IterableNodeHashTable.requestReadyStage == PacketBuffer.currentProtocolStage) {
             CacheReference.outgoingSessionBuffer.position = 0;
             IntrusiveNodeHashTable.pendingLoginBooleanReply = null;
-            if (param4 != null) {
-              var9 = 0;
+            if (passwordText != null) {
+              requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 0;
               EndingAnimationSupport.loginPayloadBuffer.position = 0;
-              if (param5) {
-                var9 = var9 | 1;
+              if (newsOptIn) {
+                requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort | 1;
               }
               EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
               EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
-              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(var13, (byte) -126);
-              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(var8, (byte) -126);
-              var14 = (CharSequence) ((Object) param4);
-              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.a(var14, 48), (byte) -126);
-              EndingAnimationSupport.loginPayloadBuffer.writeShortBE(param0, 28695);
-              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) -94, param1);
-              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) 123, var9);
+              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(loginIdentifierText, (byte) -126);
+              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(emailText, (byte) -126);
+              passwordCharacters = (CharSequence) ((Object) passwordText);
+              EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.a(passwordCharacters, 48), (byte) -126);
+              EndingAnimationSupport.loginPayloadBuffer.writeShortBE(affiliateId, 28695);
+              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) -94, ageYears);
+              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) 123, requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort);
               CacheReference.outgoingSessionBuffer.writeByte((byte) 127, 18);
               CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
-              var10 = CacheReference.outgoingSessionBuffer.position;
-              var11_ref_String = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(105));
-              if (var11_ref_String == null) {
-                var11_ref_String = "";
+              creationPayloadStartOrSuggestionPayloadLength = CacheReference.outgoingSessionBuffer.position;
+              rememberedLoginText = Under13TermsPanel.a(-1, NodeHashTableIterator.getActiveApplet(105));
+              if (rememberedLoginText == null) {
+                rememberedLoginText = "";
               }
-              CacheReference.outgoingSessionBuffer.writeNullTerminatedText(var11_ref_String, 0);
+              CacheReference.outgoingSessionBuffer.writeNullTerminatedText(rememberedLoginText, 0);
               UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
-              CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-var10 + CacheReference.outgoingSessionBuffer.position, true);
+              CacheReference.outgoingSessionBuffer.backpatchLengthShortBE(-creationPayloadStartOrSuggestionPayloadLength + CacheReference.outgoingSessionBuffer.position, true);
             } else {
               EndingAnimationSupport.loginPayloadBuffer.position = 0;
               EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
               EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
-              stackIn_9_0 = EndingAnimationSupport.loginPayloadBuffer;
-              if (!param2.isIncludedInLookupRequest((byte) 97)) {
-                stackIn_10_1 = "";
+              identifierPayloadBuffer = EndingAnimationSupport.loginPayloadBuffer;
+              if (!loginIdentifierValue.isIncludedInLookupRequest((byte) 97)) {
+                includedIdentifierText = "";
               } else {
-                stackIn_10_1 = var13;
+                includedIdentifierText = loginIdentifierText;
               }
-              ((ByteArrayBuffer) (Object) stackIn_9_0).writeZeroPrefixedNullTerminatedText(stackIn_10_1, (byte) -126);
-              stackIn_12_0 = EndingAnimationSupport.loginPayloadBuffer;
-              if (!param3.isIncludedInLookupRequest((byte) 126)) {
-                stackIn_13_1 = "";
+              ((ByteArrayBuffer) (Object) identifierPayloadBuffer).writeZeroPrefixedNullTerminatedText(includedIdentifierText, (byte) -126);
+              emailPayloadBuffer = EndingAnimationSupport.loginPayloadBuffer;
+              if (!emailValue.isIncludedInLookupRequest((byte) 126)) {
+                includedEmailText = "";
               } else {
-                stackIn_13_1 = var8;
+                includedEmailText = emailText;
               }
-              ((ByteArrayBuffer) (Object) stackIn_12_0).writeZeroPrefixedNullTerminatedText(stackIn_13_1, (byte) -126);
+              ((ByteArrayBuffer) (Object) emailPayloadBuffer).writeZeroPrefixedNullTerminatedText(includedEmailText, (byte) -126);
               CacheReference.outgoingSessionBuffer.writeByte((byte) 124, 16);
               CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 1;
-              var9 = CacheReference.outgoingSessionBuffer.position;
+              requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = CacheReference.outgoingSessionBuffer.position;
               UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.field_l);
-              CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, CacheReference.outgoingSessionBuffer.position - var9);
+              CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, CacheReference.outgoingSessionBuffer.position - requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort);
             }
             NanoFrameTimer.flushSessionWrites(-1, -1);
-            PacketBuffer.currentProtocolStage = field_K;
+            PacketBuffer.currentProtocolStage = awaitingAccountOrLookupReplyOpcodeStage;
           }
-          if ((field_K == PacketBuffer.currentProtocolStage) &&
+          if ((awaitingAccountOrLookupReplyOpcodeStage == PacketBuffer.currentProtocolStage) &&
               (UiWidget.readSessionBytesIfAvailable(30000, 1))) {
-            var9 = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+            requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
             LogoCompositor.sessionPacketBuffer.position = 0;
-            if ((var9 >= 100) &&
-                (var9 <= 105)) {
+            if ((requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort >= 100) &&
+                (requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort <= 105)) {
               PacketBuffer.currentProtocolStage = CanvasResizeController.field_l;
-              WidgetSkinState.pendingUsernameSuggestions = new String[var9 - 100];
+              WidgetSkinState.pendingUsernameSuggestions = new String[requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort - 100];
             } else {
-              if (var9 == 248) {
+              if (requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort == 248) {
                 GrowableIntList.a(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
                 AudioService.sessionResponseText = ByteShortQuery.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 TextTemplateArgumentType.field_e = false;
-                stackIn_31_0 = var9;
-                return stackIn_31_0;
+                unableResponseBeforeReturn = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
+                return unableResponseBeforeReturn;
               }
-              if (99 != var9) {
+              if (99 != requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort) {
                 PacketBuffer.currentProtocolStage = AccountCreationForm.awaitingLoginLookupPayloadStage;
                 AchievementSubmission.sessionPacketPayloadLength = -1;
-                ScorePopup.currentPacketOpcode = var9;
+                ScorePopup.currentPacketOpcode = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
               } else {
                 UiWidget.readSessionBytesIfAvailable(30000, DualLinkNode.getLoginBooleanReplyLength(112));
                 IntrusiveNodeHashTable.pendingLoginBooleanReply = new Boolean(Bzip2DecoderState.a(LogoCompositor.sessionPacketBuffer, 0));
@@ -354,19 +354,19 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
           }
           if (PacketBuffer.currentProtocolStage == CanvasResizeController.field_l) {
-            var9 = 2;
-            if (UiWidget.readSessionBytesIfAvailable(30000, var9)) {
-              var10 = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+            requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 2;
+            if (UiWidget.readSessionBytesIfAvailable(30000, requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort)) {
+              creationPayloadStartOrSuggestionPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
               LogoCompositor.sessionPacketBuffer.position = 0;
-              if (UiWidget.readSessionBytesIfAvailable(30000, var10)) {
-                var11 = WidgetSkinState.pendingUsernameSuggestions.length;
-                for (var12 = 0; var12 < var11; var12++) {
-                  WidgetSkinState.pendingUsernameSuggestions[var12] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
+              if (UiWidget.readSessionBytesIfAvailable(30000, creationPayloadStartOrSuggestionPayloadLength)) {
+                suggestionCount = WidgetSkinState.pendingUsernameSuggestions.length;
+                for (suggestionIndex = 0; suggestionIndex < suggestionCount; suggestionIndex++) {
+                  WidgetSkinState.pendingUsernameSuggestions[suggestionIndex] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -114);
                 TextTemplateArgumentType.field_e = false;
-                stackIn_45_0 = var11 + 100;
-                return stackIn_45_0;
+                suggestionResponseBeforeReturn = suggestionCount + 100;
+                return suggestionResponseBeforeReturn;
               }
             }
           }
@@ -375,18 +375,18 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             if (ScorePopup.currentPacketOpcode != 255) {
               AudioService.sessionResponseText = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 98);
             } else {
-              var9_ref_String = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
-              if (var9_ref_String != null) {
-                SettingsCookieSupport.storeSettingsCookie(-128, var9_ref_String, NodeHashTableIterator.getActiveApplet(106));
+              settingsCookieText = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
+              if (settingsCookieText != null) {
+                SettingsCookieSupport.storeSettingsCookie(-128, settingsCookieText, NodeHashTableIterator.getActiveApplet(106));
               }
             }
             Bzip2DecoderState.closeSessionSocket((byte) -114);
             TextTemplateArgumentType.field_e = false;
-            stackIn_54_0 = ScorePopup.currentPacketOpcode;
-            return stackIn_54_0;
+            payloadOpcodeBeforeReturn = ScorePopup.currentPacketOpcode;
+            return payloadOpcodeBeforeReturn;
           }
-          if (param6 < 56) {
-            field_K = (ClientProtocolStage) null;
+          if (methodGuard < 56) {
+            awaitingAccountOrLookupReplyOpcodeStage = (ClientProtocolStage) null;
           }
           if (SpriteCheckboxRenderer.sessionSocket == null) {
             if (TextTemplateArgumentType.field_e) {
@@ -396,292 +396,292 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 AudioService.sessionResponseText = IntrusiveNode.loginMessage3Text;
               }
               TextTemplateArgumentType.field_e = false;
-              stackIn_63_0 = 249;
-              return stackIn_63_0;
+              retryFailureBeforeReturn = 249;
+              return retryFailureBeforeReturn;
             }
-            var9 = NetworkArchiveRequest.sessionServerPort;
+            requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = NetworkArchiveRequest.sessionServerPort;
             NetworkArchiveRequest.sessionServerPort = TextInputRenderer.alternateSessionServerPort;
             TextTemplateArgumentType.field_e = true;
-            TextInputRenderer.alternateSessionServerPort = var9;
+            TextInputRenderer.alternateSessionServerPort = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
           }
-          stackIn_66_0 = -1;
-          return stackIn_66_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_69_0 = var7;
-          stackIn_69_1 = new StringBuilder().append("pf.N(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_70_2 = "null";
+          pendingResultBeforeReturn = -1;
+          return pendingResultBeforeReturn;
+        } catch (java.lang.RuntimeException accountOrLookupRequestFailure) {
+          caughtRequestFailure = accountOrLookupRequestFailure;
+          requestFailureForContext = caughtRequestFailure;
+          requestFailureBeforeContext = requestFailureForContext;
+          requestMessagePrefix = new StringBuilder().append("pf.N(").append(affiliateId).append(',').append(ageYears).append(',');
+          if (loginIdentifierValue == null) {
+            identifierValueDescription = "null";
           } else {
-            stackIn_70_2 = "{...}";
+            identifierValueDescription = "{...}";
           }
-          stackIn_72_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',');
-          if (param3 == null) {
-            stackIn_73_2 = "null";
+          requestMessageBeforeEmail = ((StringBuilder) (Object) requestMessagePrefix).append(identifierValueDescription).append(',');
+          if (emailValue == null) {
+            emailValueDescription = "null";
           } else {
-            stackIn_73_2 = "{...}";
+            emailValueDescription = "{...}";
           }
-          stackIn_75_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',');
-          if (param4 == null) {
-            stackIn_76_2 = "null";
+          requestMessageBeforePassword = ((StringBuilder) (Object) requestMessageBeforeEmail).append(emailValueDescription).append(',');
+          if (passwordText == null) {
+            passwordDescription = "null";
           } else {
-            stackIn_76_2 = "{...}";
+            passwordDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) requestFailureBeforeContext), ((StringBuilder) (Object) requestMessageBeforePassword).append(passwordDescription).append(',').append(newsOptIn).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
-        int var7 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    public final void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
+        int unusedClientControlSnapshot = 0;
+        RuntimeException buttonFailureBeforeContext = null;
+        StringBuilder buttonMessagePrefix = null;
+        String buttonDescription = null;
+        RuntimeException caughtButtonFailure = null;
+        RuntimeException buttonFailureForContext = null;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param1 != -20) {
+          if (methodGuard != -20) {
             this.loginOrRetryButton = (ButtonWidget) null;
           }
-          if (this.loginOrRetryButton == param4) {
-            this.g(0);
+          if (this.loginOrRetryButton == button) {
+            this.submitLoginIfAllowed(0);
           } else {
-            if (this.createAccountButton == param4) {
+            if (this.createAccountButton == button) {
               MultiHandleSliderRenderer.a((byte) 108);
             } else {
-              if (this.alternateButton == param4) {
+              if (this.alternateButton == button) {
                 if (!this.retryMode) {
                   if (!this.allowJustPlay) {
-                    LoginPasswordSupport.requestLoginUiActionFour(param1 - 23718);
+                    LoginPasswordSupport.requestLoginUiActionFour(methodGuard - 23718);
                   } else {
                     ByteArrayBuffer.g(0);
                   }
                 } else {
-                  NetworkArchiveRequest.h(param1 ^ -60);
+                  NetworkArchiveRequest.h(methodGuard ^ -60);
                 }
               }
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_17_0 = var6;
-          stackIn_17_1 = new StringBuilder().append("pf.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_18_2 = "null";
+        } catch (java.lang.RuntimeException buttonActivationFailure) {
+          caughtButtonFailure = buttonActivationFailure;
+          buttonFailureForContext = caughtButtonFailure;
+          buttonFailureBeforeContext = buttonFailureForContext;
+          buttonMessagePrefix = new StringBuilder().append("pf.Q(").append(buttonX).append(',').append(methodGuard).append(',').append(buttonY).append(',').append(pointerButton).append(',');
+          if (button == null) {
+            buttonDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            buttonDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) buttonFailureBeforeContext), ((StringBuilder) (Object) buttonMessagePrefix).append(buttonDescription).append(')').toString());
         }
     }
 
     final static void writeReflectionCheckReply(int methodGuard, PacketBuffer buffer) {
         try {
-            int var6 = 0;
-            int var11_int = 0;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            String stackIn_68_2 = null;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var2 = null;
-            int var3 = 0;
-            int var4 = 0;
-            int var5 = 0;
-            int var7_int = 0;
-            ClassNotFoundException var7 = null;
-            InvalidClassException var7_ref = null;
-            StreamCorruptedException var7_ref2 = null;
-            OptionalDataException var7_ref3 = null;
-            IllegalAccessException var7_ref4 = null;
-            IllegalArgumentException var7_ref5 = null;
-            java.lang.reflect.InvocationTargetException var7_ref6 = null;
-            SecurityException var7_ref7 = null;
-            IOException var7_ref8 = null;
-            NullPointerException var7_ref9 = null;
-            Exception var7_ref10 = null;
-            Throwable var7_ref11 = null;
-            java.lang.reflect.Field var8 = null;
-            int var9 = 0;
-            Object[] var10 = null;
-            Object var11 = null;
-            ObjectInputStream var12 = null;
-            ReflectionCheckRequest var13 = null;
-            java.lang.reflect.Field var14 = null;
-            java.lang.reflect.Field var15 = null;
-            ReflectionCheckRequest var17 = null;
-            Object var18 = null;
-            Object var19 = null;
-            Object var21 = null;
-            byte[][] var24 = null;
-            java.lang.reflect.Field var25 = null;
-            java.lang.reflect.Method var26 = null;
-            java.lang.reflect.Method var27 = null;
-            var18 = null;
-            var19 = null;
-            var21 = null;
+            int operationIndex = 0;
+            int argumentIndex = 0;
+            RuntimeException replyFailureBeforeContext = null;
+            StringBuilder replyMessagePrefix = null;
+            String bufferDescription = null;
+            Throwable caughtOperationOrReplyFailure = null;
+            RuntimeException replyFailureForContext = null;
+            int hasPendingLookupTask = 0;
+            int guardResidue = 0;
+            int readinessScanIndexOrCrcStart = 0;
+            int operationType = 0;
+            ClassNotFoundException classNotFoundFailure = null;
+            InvalidClassException invalidClassFailure = null;
+            StreamCorruptedException corruptedStreamFailure = null;
+            OptionalDataException optionalDataFailure = null;
+            IllegalAccessException illegalAccessFailure = null;
+            IllegalArgumentException illegalArgumentFailure = null;
+            java.lang.reflect.InvocationTargetException invocationTargetFailure = null;
+            SecurityException securityFailure = null;
+            IOException ioFailure = null;
+            NullPointerException nullPointerFailure = null;
+            Exception otherExceptionFailure = null;
+            Throwable otherThrowableFailure = null;
+            java.lang.reflect.Field unusedWrittenFieldAlias = null;
+            int fieldValueOrMemberModifiers = 0;
+            Object[] invocationArguments = null;
+            Object invocationResult = null;
+            ObjectInputStream argumentInputStream = null;
+            ReflectionCheckRequest requestFromQueue = null;
+            java.lang.reflect.Field fieldToWrite = null;
+            java.lang.reflect.Field fieldToRead = null;
+            ReflectionCheckRequest requestAlias = null;
+            Object unusedNullReferenceA = null;
+            Object unusedNullReferenceB = null;
+            Object unusedNullReferenceC = null;
+            byte[][] serializedArguments = null;
+            java.lang.reflect.Field fieldForModifiers = null;
+            java.lang.reflect.Method methodForModifiers = null;
+            java.lang.reflect.Method methodToInvoke = null;
+            unusedNullReferenceA = null;
+            unusedNullReferenceB = null;
+            unusedNullReferenceC = null;
             try {
-              var13 = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
-              var17 = var13;
-              if (var17 == null) {
+              requestFromQueue = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
+              requestAlias = requestFromQueue;
+              if (requestAlias == null) {
                 return;
               }
-              var4 = 2 % ((methodGuard + 26) / 62);
-              var3 = 0;
-              for (var5 = 0; var5 < var17.operationCount; var5++) {
-                if (var13.fieldLookupTasks[var5] != null) {
-                  if (var13.fieldLookupTasks[var5].status == 2) {
-                    var13.operationErrors[var5] = -5;
+              guardResidue = 2 % ((methodGuard + 26) / 62);
+              hasPendingLookupTask = 0;
+              for (readinessScanIndexOrCrcStart = 0; readinessScanIndexOrCrcStart < requestAlias.operationCount; readinessScanIndexOrCrcStart++) {
+                if (requestFromQueue.fieldLookupTasks[readinessScanIndexOrCrcStart] != null) {
+                  if (requestFromQueue.fieldLookupTasks[readinessScanIndexOrCrcStart].status == 2) {
+                    requestFromQueue.operationErrors[readinessScanIndexOrCrcStart] = -5;
                   }
-                  if (var13.fieldLookupTasks[var5].status == 0) {
-                    var3 = 1;
+                  if (requestFromQueue.fieldLookupTasks[readinessScanIndexOrCrcStart].status == 0) {
+                    hasPendingLookupTask = 1;
                   }
                 }
-                if (var13.methodLookupTasks[var5] != null) {
-                  if (2 == var13.methodLookupTasks[var5].status) {
-                    var13.operationErrors[var5] = -6;
+                if (requestFromQueue.methodLookupTasks[readinessScanIndexOrCrcStart] != null) {
+                  if (2 == requestFromQueue.methodLookupTasks[readinessScanIndexOrCrcStart].status) {
+                    requestFromQueue.operationErrors[readinessScanIndexOrCrcStart] = -6;
                   }
-                  if (var13.methodLookupTasks[var5].status == 0) {
-                    var3 = 1;
+                  if (requestFromQueue.methodLookupTasks[readinessScanIndexOrCrcStart].status == 0) {
+                    hasPendingLookupTask = 1;
                   }
                 }
               }
-              if (var3 != 0) {
+              if (hasPendingLookupTask != 0) {
                 return;
               }
-              var5 = buffer.position;
-              buffer.writeIntBE((byte) 95, var17.requestId);
-              for (var6 = 0; var6 < var17.operationCount; var6++) {
-                if (var13.operationErrors[var6] != 0) {
-                  buffer.writeByte((byte) 6, var13.operationErrors[var6]);
+              readinessScanIndexOrCrcStart = buffer.position;
+              buffer.writeIntBE((byte) 95, requestAlias.requestId);
+              for (operationIndex = 0; operationIndex < requestAlias.operationCount; operationIndex++) {
+                if (requestFromQueue.operationErrors[operationIndex] != 0) {
+                  buffer.writeByte((byte) 6, requestFromQueue.operationErrors[operationIndex]);
                 } else {
                   try {
-                    var7_int = var13.operationTypes[var6];
-                    if (var7_int == 0) {
-                      var15 = (java.lang.reflect.Field) (var13.fieldLookupTasks[var6].result);
-                      var9 = var15.getInt((Object) null);
+                    operationType = requestFromQueue.operationTypes[operationIndex];
+                    if (operationType == 0) {
+                      fieldToRead = (java.lang.reflect.Field) (requestFromQueue.fieldLookupTasks[operationIndex].result);
+                      fieldValueOrMemberModifiers = fieldToRead.getInt((Object) null);
                       buffer.writeByte((byte) 3, 0);
-                      buffer.writeIntBE((byte) 95, var9);
+                      buffer.writeIntBE((byte) 95, fieldValueOrMemberModifiers);
                     } else {
-                      if (var7_int == 1) {
-                        var14 = (java.lang.reflect.Field) (var13.fieldLookupTasks[var6].result);
-                        var8 = var14;
-                        var14.setInt((Object) null, var13.integerWriteValues[var6]);
+                      if (operationType == 1) {
+                        fieldToWrite = (java.lang.reflect.Field) (requestFromQueue.fieldLookupTasks[operationIndex].result);
+                        unusedWrittenFieldAlias = fieldToWrite;
+                        fieldToWrite.setInt((Object) null, requestFromQueue.integerWriteValues[operationIndex]);
                         buffer.writeByte((byte) 124, 0);
                       } else {
-                        if (2 == var7_int) {
-                          var25 = (java.lang.reflect.Field) (var13.fieldLookupTasks[var6].result);
-                          var9 = var25.getModifiers();
+                        if (2 == operationType) {
+                          fieldForModifiers = (java.lang.reflect.Field) (requestFromQueue.fieldLookupTasks[operationIndex].result);
+                          fieldValueOrMemberModifiers = fieldForModifiers.getModifiers();
                           buffer.writeByte((byte) 126, 0);
-                          buffer.writeIntBE((byte) 95, var9);
+                          buffer.writeIntBE((byte) 95, fieldValueOrMemberModifiers);
                         }
                       }
                     }
-                    if (var7_int == 3) {
-                      var27 = (java.lang.reflect.Method) (var13.methodLookupTasks[var6].result);
-                      var24 = var13.serializedArguments[var6];
-                      var10 = new Object[var24.length];
-                      for (var11_int = 0; var11_int < var24.length; var11_int++) {
-                        var12 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var24[var11_int])));
-                        var10[var11_int] = var12.readObject();
+                    if (operationType == 3) {
+                      methodToInvoke = (java.lang.reflect.Method) (requestFromQueue.methodLookupTasks[operationIndex].result);
+                      serializedArguments = requestFromQueue.serializedArguments[operationIndex];
+                      invocationArguments = new Object[serializedArguments.length];
+                      for (argumentIndex = 0; argumentIndex < serializedArguments.length; argumentIndex++) {
+                        argumentInputStream = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(serializedArguments[argumentIndex])));
+                        invocationArguments[argumentIndex] = argumentInputStream.readObject();
                       }
-                      var11 = var27.invoke((Object) null, var10);
-                      if (var11 == null) {
+                      invocationResult = methodToInvoke.invoke((Object) null, invocationArguments);
+                      if (invocationResult == null) {
                         buffer.writeByte((byte) -88, 0);
-                      } else if (var11 instanceof Number) {
+                      } else if (invocationResult instanceof Number) {
                         buffer.writeByte((byte) 126, 1);
-                        buffer.writeLongBE((byte) 116, ((Number) (var11)).longValue());
-                      } else if (!(var11 instanceof String)) {
+                        buffer.writeLongBE((byte) 116, ((Number) (invocationResult)).longValue());
+                      } else if (!(invocationResult instanceof String)) {
                         buffer.writeByte((byte) -86, 4);
                       } else {
                         buffer.writeByte((byte) 121, 2);
-                        buffer.writeNullTerminatedText((String) (var11), 0);
+                        buffer.writeNullTerminatedText((String) (invocationResult), 0);
                       }
                     } else {
-                      if (var7_int == 4) {
-                        var26 = (java.lang.reflect.Method) (var13.methodLookupTasks[var6].result);
-                        var9 = var26.getModifiers();
+                      if (operationType == 4) {
+                        methodForModifiers = (java.lang.reflect.Method) (requestFromQueue.methodLookupTasks[operationIndex].result);
+                        fieldValueOrMemberModifiers = methodForModifiers.getModifiers();
                         buffer.writeByte((byte) 123, 0);
-                        buffer.writeIntBE((byte) 95, var9);
+                        buffer.writeIntBE((byte) 95, fieldValueOrMemberModifiers);
                       }
                     }
-                  } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                  } catch (java.lang.ClassNotFoundException caughtClassNotFoundFailure) {
+                    caughtOperationOrReplyFailure = caughtClassNotFoundFailure;
+                    classNotFoundFailure = (ClassNotFoundException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) 122, -10);
-                  } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
-                    decompiledCaughtException = decompiledCaughtParameter1;
-                    var7_ref = (InvalidClassException) (Object) decompiledCaughtException;
+                  } catch (java.io.InvalidClassException caughtInvalidClassFailure) {
+                    caughtOperationOrReplyFailure = caughtInvalidClassFailure;
+                    invalidClassFailure = (InvalidClassException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) -101, -11);
-                  } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
-                    decompiledCaughtException = decompiledCaughtParameter2;
-                    var7_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
+                  } catch (java.io.StreamCorruptedException caughtCorruptedStreamFailure) {
+                    caughtOperationOrReplyFailure = caughtCorruptedStreamFailure;
+                    corruptedStreamFailure = (StreamCorruptedException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) 124, -12);
-                  } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
-                    decompiledCaughtException = decompiledCaughtParameter3;
-                    var7_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
+                  } catch (java.io.OptionalDataException caughtOptionalDataFailure) {
+                    caughtOperationOrReplyFailure = caughtOptionalDataFailure;
+                    optionalDataFailure = (OptionalDataException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) -78, -13);
-                  } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
-                    decompiledCaughtException = decompiledCaughtParameter4;
-                    var7_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
+                  } catch (java.lang.IllegalAccessException caughtIllegalAccessFailure) {
+                    caughtOperationOrReplyFailure = caughtIllegalAccessFailure;
+                    illegalAccessFailure = (IllegalAccessException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) 4, -14);
-                  } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
-                    decompiledCaughtException = decompiledCaughtParameter5;
-                    var7_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
+                  } catch (java.lang.IllegalArgumentException caughtIllegalArgumentFailure) {
+                    caughtOperationOrReplyFailure = caughtIllegalArgumentFailure;
+                    illegalArgumentFailure = (IllegalArgumentException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) 11, -15);
-                  } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
-                    decompiledCaughtException = decompiledCaughtParameter6;
-                    var7_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
+                  } catch (java.lang.reflect.InvocationTargetException caughtInvocationTargetFailure) {
+                    caughtOperationOrReplyFailure = caughtInvocationTargetFailure;
+                    invocationTargetFailure = (java.lang.reflect.InvocationTargetException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) -127, -16);
-                  } catch (java.lang.SecurityException decompiledCaughtParameter7) {
-                    decompiledCaughtException = decompiledCaughtParameter7;
-                    var7_ref7 = (SecurityException) (Object) decompiledCaughtException;
+                  } catch (java.lang.SecurityException caughtSecurityFailure) {
+                    caughtOperationOrReplyFailure = caughtSecurityFailure;
+                    securityFailure = (SecurityException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) 126, -17);
-                  } catch (java.io.IOException decompiledCaughtParameter8) {
-                    decompiledCaughtException = decompiledCaughtParameter8;
-                    var7_ref8 = (IOException) (Object) decompiledCaughtException;
+                  } catch (java.io.IOException caughtIoFailure) {
+                    caughtOperationOrReplyFailure = caughtIoFailure;
+                    ioFailure = (IOException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) 121, -18);
-                  } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
-                    decompiledCaughtException = decompiledCaughtParameter9;
-                    var7_ref9 = (NullPointerException) (Object) decompiledCaughtException;
+                  } catch (java.lang.NullPointerException caughtNullPointerFailure) {
+                    caughtOperationOrReplyFailure = caughtNullPointerFailure;
+                    nullPointerFailure = (NullPointerException) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) -100, -19);
-                  } catch (java.lang.Exception decompiledCaughtParameter10) {
-                    decompiledCaughtException = decompiledCaughtParameter10;
-                    var7_ref10 = (Exception) (Object) decompiledCaughtException;
+                  } catch (java.lang.Exception caughtOtherExceptionFailure) {
+                    caughtOperationOrReplyFailure = caughtOtherExceptionFailure;
+                    otherExceptionFailure = (Exception) (Object) caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) -74, -20);
-                  } catch (java.lang.Throwable decompiledCaughtParameter11) {
-                    decompiledCaughtException = decompiledCaughtParameter11;
-                    var7_ref11 = decompiledCaughtException;
+                  } catch (java.lang.Throwable caughtOtherThrowableFailure) {
+                    caughtOperationOrReplyFailure = caughtOtherThrowableFailure;
+                    otherThrowableFailure = caughtOperationOrReplyFailure;
                     buffer.writeByte((byte) -37, -21);
                   }
                 }
               }
-              buffer.appendCrc32(8, var5);
-              var17.unlinkNode(false);
+              buffer.appendCrc32(8, readinessScanIndexOrCrcStart);
+              requestAlias.unlinkNode(false);
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
-              decompiledCaughtException = decompiledCaughtParameter12;
-              var2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_67_0 = var2;
-              stackIn_67_1 = new StringBuilder().append("pf.M(").append(methodGuard).append(',');
+            } catch (java.lang.RuntimeException caughtReplyFailure) {
+              caughtOperationOrReplyFailure = caughtReplyFailure;
+              replyFailureForContext = (RuntimeException) (Object) caughtOperationOrReplyFailure;
+              replyFailureBeforeContext = replyFailureForContext;
+              replyMessagePrefix = new StringBuilder().append("pf.M(").append(methodGuard).append(',');
               if (buffer == null) {
-                stackIn_68_2 = "null";
+                bufferDescription = "null";
               } else {
-                stackIn_68_2 = "{...}";
+                bufferDescription = "{...}";
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) replyFailureBeforeContext), ((StringBuilder) (Object) replyMessagePrefix).append(bufferDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedReplyFailure) {
+            throw uncheckedReplyFailure;
+        } catch (Throwable checkedReplyFailure) {
+            throw new RuntimeException(checkedReplyFailure);
         }
     }
 
-    private final void g(int param0) {
-        if ((!(!SpriteState.e(param0)) ||
+    private final void submitLoginIfAllowed(int methodGuard) {
+        if ((!(!SpriteState.e(methodGuard)) ||
             (!(this.loginIdentifierInput.widgetText.length() <= 0) &&
               !(0 >= this.passwordInput.widgetText.length())))) {
           SecondaryNodeDequeIterator.startLogin(this.passwordInput.widgetText, (byte) 66, this.loginIdentifierInput.widgetText);
@@ -690,49 +690,49 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
 
     LoginPanel(String loginIdentifier, String message, boolean retryMode, boolean showCreateAccount, boolean allowJustPlay) {
         super(0, 0, 310, 190, (WidgetRenderer) null);
-        LabeledChildWidget dupTemp$0 = null;
-        LabeledChildWidget dupTemp$1 = null;
-        boolean stackIn_4_1 = false;
-        boolean stackIn_7_1 = false;
-        boolean stackIn_10_1 = false;
-        ButtonWidget stackIn_18_1 = null;
-        ButtonWidget stackIn_18_2 = null;
-        ButtonWidget stackIn_19_1 = null;
-        ButtonWidget stackIn_19_2 = null;
-        String stackIn_19_3 = null;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
-        String stackIn_60_2 = null;
-        StringBuilder stackIn_62_1 = null;
-        String stackIn_63_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        SpriteButtonRenderer var6 = null;
-        RuntimeException var6_ref = null;
-        BitmapFont var7 = null;
-        String var8 = null;
-        LoginMethod var9 = null;
-        LabeledChildWidget var12 = null;
-        LabeledChildWidget var13 = null;
+        LabeledChildWidget identifierRowForAddition = null;
+        LabeledChildWidget passwordRowForAddition = null;
+        boolean showCreateAccountValue = false;
+        boolean retryModeValue = false;
+        boolean allowJustPlayValue = false;
+        ButtonWidget unusedNullButtonBeforeAlternateSelectionA = null;
+        ButtonWidget unusedNullButtonBeforeAlternateSelectionB = null;
+        ButtonWidget unusedNullAlternateBranchButtonA = null;
+        ButtonWidget unusedNullAlternateBranchButtonB = null;
+        String alternateButtonText = null;
+        RuntimeException constructionFailureBeforeContext = null;
+        StringBuilder constructionMessagePrefix = null;
+        String loginIdentifierDescription = null;
+        StringBuilder constructionMessageBeforeMessage = null;
+        String messageDescription = null;
+        RuntimeException caughtConstructionFailure = null;
+        SpriteButtonRenderer sharedButtonRenderer = null;
+        RuntimeException constructionFailureForContext = null;
+        BitmapFont labelFont = null;
+        String identifierLabelText = null;
+        LoginMethod rememberedLoginMethod = null;
+        LabeledChildWidget identifierRowAlias = null;
+        LabeledChildWidget passwordRowAlias = null;
         try {
           if (!showCreateAccount) {
-            stackIn_4_1 = false;
+            showCreateAccountValue = false;
           } else {
-            stackIn_4_1 = true;
+            showCreateAccountValue = true;
           }
-          ((LoginPanel) (this)).showCreateAccount = stackIn_4_1;
+          ((LoginPanel) (this)).showCreateAccount = showCreateAccountValue;
           this.messageText = message;
           if (!retryMode) {
-            stackIn_7_1 = false;
+            retryModeValue = false;
           } else {
-            stackIn_7_1 = true;
+            retryModeValue = true;
           }
-          ((LoginPanel) (this)).retryMode = stackIn_7_1;
+          ((LoginPanel) (this)).retryMode = retryModeValue;
           if (!allowJustPlay) {
-            stackIn_10_1 = false;
+            allowJustPlayValue = false;
           } else {
-            stackIn_10_1 = true;
+            allowJustPlayValue = true;
           }
-          ((LoginPanel) (this)).allowJustPlay = stackIn_10_1;
+          ((LoginPanel) (this)).allowJustPlay = allowJustPlayValue;
           if (this.retryMode) {
             if (!((!this.showCreateAccount) &&
                 (!this.allowJustPlay))) {
@@ -743,18 +743,18 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           this.passwordInput = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) (this), 20));
           if (!this.retryMode) {
             this.loginOrRetryButton = new ButtonWidget(NodeHashTableIterator.loginText, (WidgetListener) null);
-            stackIn_18_1 = null;
-            stackIn_18_2 = null;
+            unusedNullButtonBeforeAlternateSelectionA = null;
+            unusedNullButtonBeforeAlternateSelectionB = null;
             if (this.allowJustPlay) {
-              stackIn_19_1 = null;
-              stackIn_19_2 = null;
-              stackIn_19_3 = ClientRenderingState.justPlayText;
+              unusedNullAlternateBranchButtonA = null;
+              unusedNullAlternateBranchButtonB = null;
+              alternateButtonText = ClientRenderingState.justPlayText;
             } else {
-              stackIn_19_1 = null;
-              stackIn_19_2 = null;
-              stackIn_19_3 = GameGraphicsResources.backText;
+              unusedNullAlternateBranchButtonA = null;
+              unusedNullAlternateBranchButtonB = null;
+              alternateButtonText = GameGraphicsResources.backText;
             }
-            ((LoginPanel) (this)).alternateButton = new ButtonWidget(stackIn_19_3, (WidgetListener) null);
+            ((LoginPanel) (this)).alternateButton = new ButtonWidget(alternateButtonText, (WidgetListener) null);
             if (this.showCreateAccount) {
               this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) (this));
             }
@@ -765,13 +765,13 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           this.loginIdentifierInput.renderer = (WidgetRenderer) ((Object) new TextInputRenderer(10000536));
           this.passwordInput.renderer = (WidgetRenderer) ((Object) new PasswordWidgetRenderer(10000536));
-          var6 = new SpriteButtonRenderer();
-          this.loginOrRetryButton.renderer = (WidgetRenderer) ((Object) var6);
+          sharedButtonRenderer = new SpriteButtonRenderer();
+          this.loginOrRetryButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
           if (this.alternateButton != null) {
-            this.alternateButton.renderer = (WidgetRenderer) ((Object) var6);
+            this.alternateButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
           }
           if (this.createAccountButton != null) {
-            this.createAccountButton.renderer = (WidgetRenderer) ((Object) var6);
+            this.createAccountButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
           }
           this.loginIdentifierInput.hoverText = SocketArchiveNetworkClient.loginUsernameTooltipText;
           if (null != this.createAccountButton) {
@@ -788,28 +788,28 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
           }
           this.widgetY = 15;
-          var7 = DialogLayer.sharedUiFont;
+          labelFont = DialogLayer.sharedUiFont;
           if (this.messageText != null) {
-            this.widgetY = this.widgetY + (var7.measureWrappedHeight(this.messageText, this.widgetWidth - 40, var7.maxAscent) + 5);
+            this.widgetY = this.widgetY + (labelFont.measureWrappedHeight(this.messageText, this.widgetWidth - 40, labelFont.maxAscent) + 5);
           }
-          var8 = WeightedObjectCache.loginUsernameEmailText;
-          var9 = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.getActiveApplet(120), 200);
-          if (var9 != LoginTextValue.field_b) {
-            if (var9 == ProgressDialog.usernameLoginMethod) {
-              var8 = LogoPreparationSupport.loginUsernameText;
+          identifierLabelText = WeightedObjectCache.loginUsernameEmailText;
+          rememberedLoginMethod = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.getActiveApplet(120), 200);
+          if (rememberedLoginMethod != LoginTextValue.field_b) {
+            if (rememberedLoginMethod == ProgressDialog.usernameLoginMethod) {
+              identifierLabelText = LogoPreparationSupport.loginUsernameText;
             }
           } else {
-            var8 = UsernameAvailabilityQuery.loginEmailText;
+            identifierLabelText = UsernameAvailabilityQuery.loginEmailText;
           }
-          dupTemp$0 = new LabeledChildWidget(10, this.widgetY, -20 + this.widgetWidth, 25, this.loginIdentifierInput, false, 80, 3, var7, 16777215, var8);
-          var12 = dupTemp$0;
-          this.addChild((byte) -110, dupTemp$0);
-          this.widgetY = this.widgetY + (((UiWidget) ((Object) var12)).widgetHeight + 5);
-          dupTemp$1 = new LabeledChildWidget(10, this.widgetY, this.widgetWidth - 20, 25, this.passwordInput, false, 80, 3, var7, 16777215, LoginPayloadKind.createPasswordText);
-          var13 = dupTemp$1;
-          this.addChild((byte) -120, dupTemp$1);
+          identifierRowForAddition = new LabeledChildWidget(10, this.widgetY, -20 + this.widgetWidth, 25, this.loginIdentifierInput, false, 80, 3, labelFont, 16777215, identifierLabelText);
+          identifierRowAlias = identifierRowForAddition;
+          this.addChild((byte) -110, identifierRowForAddition);
+          this.widgetY = this.widgetY + (((UiWidget) ((Object) identifierRowAlias)).widgetHeight + 5);
+          passwordRowForAddition = new LabeledChildWidget(10, this.widgetY, this.widgetWidth - 20, 25, this.passwordInput, false, 80, 3, labelFont, 16777215, LoginPayloadKind.createPasswordText);
+          passwordRowAlias = passwordRowForAddition;
+          this.addChild((byte) -120, passwordRowForAddition);
           this.loginOrRetryButton.listener = (WidgetListener) (this);
-          this.widgetY = this.widgetY + (((UiWidget) ((Object) var13)).widgetHeight + 5);
+          this.widgetY = this.widgetY + (((UiWidget) ((Object) passwordRowAlias)).widgetHeight + 5);
           if (this.createAccountButton != null) {
             this.createAccountButton.listener = (WidgetListener) (this);
           }
@@ -846,42 +846,42 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             this.addChild((byte) -127, this.alternateButton);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_59_0 = var6_ref;
-          stackIn_59_1 = new StringBuilder().append("pf.<init>(");
+        } catch (java.lang.RuntimeException loginPanelConstructionFailure) {
+          caughtConstructionFailure = loginPanelConstructionFailure;
+          constructionFailureForContext = caughtConstructionFailure;
+          constructionFailureBeforeContext = constructionFailureForContext;
+          constructionMessagePrefix = new StringBuilder().append("pf.<init>(");
           if (loginIdentifier == null) {
-            stackIn_60_2 = "null";
+            loginIdentifierDescription = "null";
           } else {
-            stackIn_60_2 = "{...}";
+            loginIdentifierDescription = "{...}";
           }
-          stackIn_62_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',');
+          constructionMessageBeforeMessage = ((StringBuilder) (Object) constructionMessagePrefix).append(loginIdentifierDescription).append(',');
           if (message == null) {
-            stackIn_63_2 = "null";
+            messageDescription = "null";
           } else {
-            stackIn_63_2 = "{...}";
+            messageDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(retryMode).append(',').append(showCreateAccount).append(',').append(allowJustPlay).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessageBeforeMessage).append(messageDescription).append(',').append(retryMode).append(',').append(showCreateAccount).append(',').append(allowJustPlay).append(')').toString());
         }
     }
 
-    final static LoginTextValue h(byte param0) {
-        if (param0 != -42) {
-            LoginPanel.h((byte) -98);
+    final static LoginTextValue createActiveEmailLookupValue(byte methodGuard) {
+        if (methodGuard != -42) {
+            LoginPanel.createActiveEmailLookupValue((byte) -98);
         }
-        return new LoginTextValue(UsernameSuggestionsPanel.f(100), SocketConnector.d(7));
+        return new LoginTextValue(UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), SocketConnector.d(7));
     }
 
-    final void i(int param0) {
+    final void clearLoginInputs(int methodGuard) {
         this.loginIdentifierInput.clearInputText((byte) 48);
         this.passwordInput.clearInputText((byte) 116);
-        int var2 = 40 % ((param0 - 17) / 38);
+        int guardResidue = 40 % ((methodGuard - 17) / 38);
     }
 
     static {
         endingEntityScanClear = false;
         js5CrcErrorText = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
-        field_K = new ClientProtocolStage();
+        awaitingAccountOrLookupReplyOpcodeStage = new ClientProtocolStage();
     }
 }

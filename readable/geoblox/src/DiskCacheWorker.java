@@ -181,7 +181,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 != -94) {
             field_e = (PcmStreamMixer) null;
           }
-          stackIn_3_0 = LoginPanel.a(param3, param2, var7, var8, param1, param6, 100);
+          stackIn_3_0 = LoginPanel.advanceAccountCreationOrLookupRequest(param3, param2, var7, var8, param1, param6, 100);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

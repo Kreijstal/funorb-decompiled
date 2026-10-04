@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/7aa2dbc6771d11250cba3c3b2fd593eba382cb1c/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/d7195033031dadc15f64a6b01a953e25c8aaf2f0/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 159)
+## Current readability (pass 160)
 
-The export has 15,474 guarded names and 105,784 Java identifier edits, plus 11
-class-name literal edits and 275 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 15,711 guarded names and 106,634 Java identifier edits, plus 11
+class-name literal edits and 277 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -24,7 +24,48 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current account creation form naming (pass 159)
+## Current login and suggestions naming (pass 160)
+
+Pass 160 adds 237 guarded names: three fields, eleven methods, 39 parameters,
+183 locals and one lexical block label. All 224 declarations owned by LoginPanel
+and all eighty owned by UsernameSuggestionsPanel now have readable names;
+constructors follow class rules. Credential updates, login gating, account/lookup
+transport, reflection replies, focus/button callbacks and suggestion construction
+retain their existing execution order and effects.
+
+advanceAccountCreationOrLookupRequest distinguishes opcode18 account creation
+from opcode16 lookup, including affiliate/age/news fields, conditional string
+inclusion, encryption, length backpatches, incremental reads, suggestion and
+boolean replies, settings cookies, timeout and alternating ports. Reused locals
+retain flags, offsets, reply codes, read lengths and port roles. Reflection names
+expose lookup readiness, field operations, deserialized arguments, invocation
+results, twelve exception reply codes and the CRC span. The plain
+intRecordReplyDispatch label preserves its original break destination.
+
+Suggestion updates still clear children before checking the guard, retain the
+old button array for null/empty suggestions, share one renderer and scan every
+button without an early callback-loop exit. Constructor renderer aliases,
+unused snapshots, duplicate clears, wrong guards, client-control flag values,
+partial effects, integer overflow and diagnostic string literals remain.
+Shared names distinguish namedRootResourceArchive, the account/lookup reply
+opcode stage and alternateLongAndTextPayloadKind without inventing server state.
+
+The export has 15,711 rules and 106,634 identifier edits, plus eleven class-name
+literal and 277 label edits: 106,922 total. All 15,474 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Thirteen generated Java files change only in names. Both
+303-file corpora compile, reproduce and reverse byte exactly. Expected label
+edits increase by two for the one declaration and its
+existing break; raw source and all tool, workflow, stub, class-literal and native
+pins stay fixed. All 27 publication tests pass. No native probes, cases or
+performance results are added or claimed by this naming pass.
+
+Eight large labeled bodies, 152 opaque labels, 255 opaque fields and 265
+single-letter methods remain. Live credential entry, suggestion interaction,
+reflection/lookup/account-creation network behavior, server/assets/game/browser/
+phone and heap/presented-FPS acceptance remain unverified.
+
+## Previous account creation form naming (pass 159)
 
 Pass 159 adds 153 guarded names: two fields, twelve methods, 41 parameters
 and 98 locals. All 187 declarations owned by AccountCreationForm now have

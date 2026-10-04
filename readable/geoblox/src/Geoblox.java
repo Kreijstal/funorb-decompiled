@@ -388,7 +388,7 @@ public final class Geoblox extends SessionGameApplet {
         MessageDialog.releaseStaticReferences(-107);
         AccountCreationForm.releaseAccountCreationSharedResources(0);
         AccountWelcomePanel.f(1);
-        LoginPanel.a((byte) -97);
+        LoginPanel.releaseLoginPanelSharedResources((byte) -97);
         DisplayNamePanel.i((byte) -85);
         LoginTextValue.a(methodGuard + 63);
         RatingPresentationResources.releaseStaticReferences(-89);
@@ -493,7 +493,7 @@ public final class Geoblox extends SessionGameApplet {
         TextInputWidget.releaseStaticReferences((byte) -15);
         ContentTransitionDialog.releaseStaticReferences(methodGuard ^ -320);
         ProgressBarWidget.f(407213000);
-        UsernameSuggestionsPanel.b(true);
+        UsernameSuggestionsPanel.releaseUsernameSuggestionSharedResources(true);
         HotspotTextWidget.h(0);
         ValidationIconWidget.f(-116);
         ValidationMessageWidget.j(24033);

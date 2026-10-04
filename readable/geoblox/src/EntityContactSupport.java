@@ -194,7 +194,7 @@ final class EntityContactSupport {
         RuntimeException caughtFileFailure = null;
         try {
           if (methodGuard > 119) {
-            fileBytesResult = LoginPanel.field_O.getNamedFile(0, fileName, "");
+            fileBytesResult = LoginPanel.namedRootResourceArchive.getNamedFile(0, fileName, "");
             return fileBytesResult;
           }
           disabledFileResult = (byte[]) null;

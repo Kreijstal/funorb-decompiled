@@ -109,7 +109,7 @@ abstract class SocketConnector {
             field_a = 100;
           }
           archiveFileId = graphicsArchive.findFileId(resourceName, -110, archiveGroupId);
-          stackIn_3_0 = UsernameSuggestionsPanel.a(archiveFileId, graphicsArchive, archiveGroupId, true);
+          stackIn_3_0 = UsernameSuggestionsPanel.loadFirstIndexedSprite(archiveFileId, graphicsArchive, archiveGroupId, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

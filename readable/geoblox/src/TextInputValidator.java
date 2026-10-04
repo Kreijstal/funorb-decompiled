@@ -144,7 +144,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               } else {
                 responseText = DualLinkNode.invalidPasswordText;
               }
-              SpriteButtonRenderer.field_t.a(TextTemplateLookupSupport.currentLoginIdentifier, 0);
+              SpriteButtonRenderer.field_t.setLoginIdentifierAndClearPassword(TextTemplateLookupSupport.currentLoginIdentifier, 0);
             }
             displayResponseContent = 1;
             if (responseCode == 10) {
@@ -163,7 +163,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             if ((responseCode != 256) &&
                 (responseCode != 10) &&
                 (!AgeValidator.field_i)) {
-              SpriteButtonRenderer.field_t.i(-119);
+              SpriteButtonRenderer.field_t.clearLoginInputs(-119);
             }
           }
           if (methodGuard == 124) {

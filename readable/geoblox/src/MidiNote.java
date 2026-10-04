@@ -36,7 +36,7 @@ final class MidiNote extends IntrusiveNode {
             MidiPcmStream.detachKeyboardListener(-11099);
             ValidatedTextInputWidget.releasePointerListener(true);
             TextLayout.closeArchiveAndCacheServices((byte) -121);
-            if (UsernameSuggestionsPanel.g(-88)) {
+            if (UsernameSuggestionsPanel.isSessionSocketInPostRequestStage(-88)) {
                 CacheReference.outgoingSessionBuffer.writeCipherByte(1, (byte) -27);
                 NanoFrameTimer.flushSessionWrites(-1, 0);
                 Bzip2DecoderState.closeSessionSocket((byte) -126);
@@ -48,7 +48,7 @@ final class MidiNote extends IntrusiveNode {
         MidiPcmStream.detachKeyboardListener(-11099);
         ValidatedTextInputWidget.releasePointerListener(true);
         TextLayout.closeArchiveAndCacheServices((byte) -121);
-        if (!UsernameSuggestionsPanel.g(-88)) {
+        if (!UsernameSuggestionsPanel.isSessionSocketInPostRequestStage(-88)) {
             Bzip2DecoderState.closeSessionSocket((byte) -126);
             return;
         }

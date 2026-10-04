@@ -523,7 +523,7 @@ abstract class SessionGameApplet extends GameApplet {
               throw new IllegalStateException();
             }
             if (uiAction == 1) {
-              queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.createActiveLoginLookupValue(actionGuard ^ -26), LoginPanel.h((byte) -42), -121);
+              queryOrHandshakeResult = ByteArrayBuffer.a(AccountCreationForm.createActiveLoginLookupValue(actionGuard ^ -26), LoginPanel.createActiveEmailLookupValue((byte) -42), -121);
               if (queryOrHandshakeResult != -1) {
                 UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.pendingUsernameSuggestions, AudioService.sessionResponseText);
                 AudioService.sessionResponseText = null;
@@ -535,7 +535,7 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (uiAction == 2) {
-              queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.f(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
+              queryOrHandshakeResult = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
               if (queryOrHandshakeResult != -1) {
                 StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResult, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
                 AudioService.sessionResponseText = null;

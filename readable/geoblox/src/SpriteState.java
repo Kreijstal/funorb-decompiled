@@ -24,7 +24,7 @@ abstract class SpriteState extends DualLinkNode {
         int var3 = 0;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          LoginPanel.field_O = param1;
+          LoginPanel.namedRootResourceArchive = param1;
           var2 = EntityContactSupport.readNamedRootArchiveFile(122, "achievement_names,0");
           if (null != var2) {
             GameplaySetupSupport.achievementTitles[0] = EmailValidator.decodeTextBytes(1, var2);
@@ -368,7 +368,7 @@ abstract class SpriteState extends DualLinkNode {
           if (null != var2) {
             SocketConnector.swapRotationControlsKeyCode = var2[0] & 255;
           }
-          LoginPanel.field_O = null;
+          LoginPanel.namedRootResourceArchive = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

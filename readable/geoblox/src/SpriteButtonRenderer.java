@@ -95,7 +95,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
         if (param0 == 7789) {
             var1 = "";
             if (!(null == field_t)) {
-                var1 = field_t.h(87);
+                var1 = field_t.getLoginIdentifierOrEmpty(87);
             }
             if (var1.length() == 0) {
                 var1 = DualLinkNode.getSessionTextOrEmpty((byte) -53);

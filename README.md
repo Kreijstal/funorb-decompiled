@@ -17,14 +17,53 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/7aa2dbc6771d11250cba3c3b2fd593eba382cb1c/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/d7195033031dadc15f64a6b01a953e25c8aaf2f0/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
 
-Pass 159 adds 153 guarded names: two fields, twelve methods, 41 parameters
+Pass 160 adds 237 guarded names: three fields, eleven methods, 39 parameters,
+183 locals and one lexical block label. All 224 declarations owned by LoginPanel
+and all eighty owned by UsernameSuggestionsPanel now have readable names;
+constructors follow class rules. Credential updates, login gating, account/lookup
+transport, reflection replies, focus/button callbacks and suggestion construction
+retain their existing execution order and effects.
+
+advanceAccountCreationOrLookupRequest distinguishes opcode18 account creation
+from opcode16 lookup, including affiliate/age/news fields, conditional string
+inclusion, encryption, length backpatches, incremental reads, suggestion and
+boolean replies, settings cookies, timeout and alternating ports. Reused locals
+retain flags, offsets, reply codes, read lengths and port roles. Reflection names
+expose lookup readiness, field operations, deserialized arguments, invocation
+results, twelve exception reply codes and the CRC span. The plain
+intRecordReplyDispatch label preserves its original break destination.
+
+Suggestion updates still clear children before checking the guard, retain the
+old button array for null/empty suggestions, share one renderer and scan every
+button without an early callback-loop exit. Constructor renderer aliases,
+unused snapshots, duplicate clears, wrong guards, client-control flag values,
+partial effects, integer overflow and diagnostic string literals remain.
+Shared names distinguish namedRootResourceArchive, the account/lookup reply
+opcode stage and alternateLongAndTextPayloadKind without inventing server state.
+
+The export has 15,711 rules and 106,634 identifier edits, plus eleven class-name
+literal and 277 label edits: 106,922 total. All 15,474 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Thirteen generated Java files change only in names. Both
+303-file corpora compile, reproduce and reverse byte exactly. Expected label
+edits increase by two for the one declaration and its
+existing break; raw source and all tool, workflow, stub, class-literal and native
+pins stay fixed. All 27 publication tests pass. No native probes, cases or
+performance results are added or claimed by this naming pass.
+
+Eight large labeled bodies, 152 opaque labels, 255 opaque fields and 265
+single-letter methods remain. Live credential entry, suggestion interaction,
+reflection/lookup/account-creation network behavior, server/assets/game/browser/
+phone and heap/presented-FPS acceptance remain unverified.
+
+Previous pass 159 adds 153 guarded names: two fields, twelve methods, 41 parameters
 and 98 locals. All 187 declarations owned by AccountCreationForm now have
 readable names; its constructor follows the class rule. Row builders expose
 input, validation-message, validation-icon and hint layouts. Submission gates,

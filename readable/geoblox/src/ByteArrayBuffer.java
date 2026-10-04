@@ -911,7 +911,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         try {
           var3_int = 2 / ((param2 + 41) / 54);
           var4 = (String) null;
-          stackIn_1_0 = LoginPanel.a(0, 0, param0, param1, (String) null, false, 94);
+          stackIn_1_0 = LoginPanel.advanceAccountCreationOrLookupRequest(0, 0, param0, param1, (String) null, false, 94);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
