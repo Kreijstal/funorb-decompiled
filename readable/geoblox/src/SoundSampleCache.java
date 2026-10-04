@@ -348,7 +348,7 @@ final class SoundSampleCache {
           }
           decoder = (MusicDecoder) ((Object) this.pendingVorbisDecoders.findByKey(cacheKey, (byte) -96));
           if (decoder == null) {
-            decoder = MusicDecoder.a(this.vorbisArchive, groupId, fileId);
+            decoder = MusicDecoder.loadById(this.vorbisArchive, groupId, fileId);
             if (decoder == null) {
               missingDecoderResult = null;
               return (PcmSample) (missingDecoderResult);

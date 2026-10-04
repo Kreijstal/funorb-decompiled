@@ -435,7 +435,7 @@ public final class Geoblox extends SessionGameApplet {
         LogoPreparationSupport.releaseStaticReferences(true);
         TextWidgetRenderer.releaseStaticReferences(true);
         TriangleRasterState.releaseTriangleTables();
-        MusicDecoder.a();
+        MusicDecoder.releaseSharedDecoderResources();
         AttachedEntityRenderer.releaseStaticReferences(126);
         TriangleMesh.b((byte) 115);
         SessionInstanceState.releaseSessionInstanceSprite(31);
@@ -465,7 +465,7 @@ public final class Geoblox extends SessionGameApplet {
         WidgetContainer.releaseStaticReferences(14078);
         DequeCursor.b((byte) 79);
         BoardEntityState.releaseStaticReferences(methodGuard);
-        MusicDecodeStage.a();
+        MusicDecodeStage.releaseSharedFloorResources();
         MatchCandidateSupport.releaseStaticReferences(-113);
         TextTemplateDefinition.f(111);
         EntityContactSupport.releaseStaticReferences((byte) 73);

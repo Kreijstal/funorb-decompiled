@@ -4,40 +4,40 @@
 import java.io.*;
 
 final class MusicDecoder extends IntrusiveNode {
-    private boolean field_A;
-    private static int[] field_l;
-    private static VorbisResidue[] field_k;
+    private boolean pingPongLoop;
+    private static int[] longBitReverseIndices;
+    private static VorbisResidue[] residues;
     private int sampleCount;
-    private static int[] field_f;
-    static VorbisCodebook[] field_u;
+    private static int[] shortBitReverseIndices;
+    static VorbisCodebook[] codebooks;
     private static int shortBlockSize;
     private static float[] workBlock;
-    private static boolean[] field_o;
-    private static float[] field_g;
-    private boolean field_i;
+    private static boolean[] modeLongBlockFlags;
+    private static float[] longMdctTrigB;
+    private boolean previousFloorAbsent;
     private static int bitCursor;
     private static int byteCursor;
-    private static VorbisMapping[] field_N;
-    private static float[] field_K;
-    private static float[] field_r;
-    private int field_m;
+    private static VorbisMapping[] mappings;
+    private static float[] shortMdctTrigB;
+    private static float[] shortMdctTrigC;
+    private int previousRightWindowLength;
     private int pcmWriteCursor;
-    private static float[] field_w;
+    private static float[] longMdctTrigA;
     private byte[] pcmBytes;
     private float[] previousBlock;
-    private static int[] field_D;
-    private static float[] field_s;
+    private static int[] modeMappingIndices;
+    private static float[] shortMdctTrigA;
     private static int longBlockSize;
-    private int field_I;
+    private int loopStart;
     private byte[][] packets;
-    private static MusicDecodeStage[] field_F;
-    private static float[] field_h;
-    private static boolean field_z;
-    private int field_q;
+    private static MusicDecodeStage[] floors;
+    private static float[] longMdctTrigC;
+    private static boolean setupLoaded;
+    private int sampleRateHz;
     private static byte[] bitstreamBytes;
     private int previousBlockSize;
     private int packetCursor;
-    private int field_n;
+    private int loopEnd;
 
     private final static void setBitInput(byte[] inputBytes, int startByte) {
         bitstreamBytes = inputBytes;
@@ -45,44 +45,44 @@ final class MusicDecoder extends IntrusiveNode {
         bitCursor = 0;
     }
 
-    final static float d(int param0) {
-        int var1 = param0 & 2097151;
-        int var2 = param0 & -2147483648;
-        int var3 = (param0 & 2145386496) >> 21;
-        if (var2 != 0) {
-            var1 = -var1;
+    final static float unpackVorbisFloat(int packedValue) {
+        int mantissa = packedValue & 2097151;
+        int signBit = packedValue & -2147483648;
+        int exponent = (packedValue & 2145386496) >> 21;
+        if (signBit != 0) {
+            mantissa = -mantissa;
         }
-        return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
+        return (float)((double)mantissa * Math.pow(2.0, (double)(exponent - 788)));
     }
 
-    final static MusicDecoder a(ResourceArchive param0, int param1, int param2) {
+    final static MusicDecoder loadById(ResourceArchive archive, int groupId, int fileId) {
         try {
-            MusicDecoder var4_ref = null;
-            if (!MusicDecoder.a(param0)) {
-                param0.isFileAvailable((byte) 37, param1, param2);
+            MusicDecoder decoderBeforeReturn = null;
+            if (!MusicDecoder.ensureSetupLoaded(archive)) {
+                archive.isFileAvailable((byte) 37, groupId, fileId);
                 return null;
             }
-            byte[] var3 = param0.getFile(param1, -28153, param2);
-            if (var3 == null) {
+            byte[] containerBytes = archive.getFile(groupId, -28153, fileId);
+            if (containerBytes == null) {
                 return null;
             }
-            Object var4 = null;
+            Object unusedNullDecoderSnapshot = null;
             try {
-                var4_ref = new MusicDecoder(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+                decoderBeforeReturn = new MusicDecoder(containerBytes);
+            } catch (IOException containerReadFailure) {
+                containerReadFailure.printStackTrace();
             }
-            return var4_ref;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            return decoderBeforeReturn;
+        } catch (RuntimeException | Error uncheckedLoadFailure) {
+            throw uncheckedLoadFailure;
+        } catch (Throwable checkedLoadFailure) {
+            throw new RuntimeException(checkedLoadFailure);
         }
     }
 
     final PcmSample decodePcmBudgeted(int[] sampleBudget) {
         int sampleIndex = 0;
-        int incrementValue$0 = 0;
+        int pcmIndexBeforeIncrement = 0;
         int writePosition;
         int samplesToWrite;
         int unsignedPcmSample;
@@ -116,9 +116,9 @@ final class MusicDecoder extends IntrusiveNode {
               if ((unsignedPcmSample & -256) != 0) {
                 unsignedPcmSample = ~unsignedPcmSample >> 31;
               }
-              incrementValue$0 = writePosition;
+              pcmIndexBeforeIncrement = writePosition;
               writePosition++;
-              this.pcmBytes[incrementValue$0] = (byte)(unsignedPcmSample - 128);
+              this.pcmBytes[pcmIndexBeforeIncrement] = (byte)(unsignedPcmSample - 128);
             }
             if (sampleBudget != null) {
               sampleBudget[0] = sampleBudget[0] - (writePosition - this.pcmWriteCursor);
@@ -130,7 +130,7 @@ final class MusicDecoder extends IntrusiveNode {
         this.previousBlock = null;
         completedPcm = this.pcmBytes;
         this.pcmBytes = null;
-        return new PcmSample(this.field_q, completedPcm, this.field_I, this.field_n, this.field_A);
+        return new PcmSample(this.sampleRateHz, completedPcm, this.loopStart, this.loopEnd, this.pingPongLoop);
     }
 
     final static int readBit() {
@@ -163,571 +163,571 @@ final class MusicDecoder extends IntrusiveNode {
         return value;
     }
 
-    final static MusicDecoder a(ResourceArchive param0, String param1, String param2) {
+    final static MusicDecoder loadByName(ResourceArchive archive, String groupName, String fileName) {
         try {
-            MusicDecoder var4_ref = null;
-            if (!MusicDecoder.a(param0)) {
-                param0.isNamedFileAvailable((byte) 113, param2, param1);
+            MusicDecoder decoderBeforeReturn = null;
+            if (!MusicDecoder.ensureSetupLoaded(archive)) {
+                archive.isNamedFileAvailable((byte) 113, fileName, groupName);
                 return null;
             }
-            byte[] var3 = param0.getNamedFile(0, param2, param1);
-            if (var3 == null) {
+            byte[] containerBytes = archive.getNamedFile(0, fileName, groupName);
+            if (containerBytes == null) {
                 return null;
             }
-            Object var4 = null;
+            Object unusedNullDecoderSnapshot = null;
             try {
-                var4_ref = new MusicDecoder(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+                decoderBeforeReturn = new MusicDecoder(containerBytes);
+            } catch (IOException containerReadFailure) {
+                containerReadFailure.printStackTrace();
             }
-            return var4_ref;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            return decoderBeforeReturn;
+        } catch (RuntimeException | Error uncheckedLoadFailure) {
+            throw uncheckedLoadFailure;
+        } catch (Throwable checkedLoadFailure) {
+            throw new RuntimeException(checkedLoadFailure);
         }
     }
 
     private final void readPacketContainer(byte[] containerBytes) throws IOException {
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        byte[] var6 = null;
-        ByteArrayBuffer var2 = new ByteArrayBuffer(containerBytes);
-        this.field_q = var2.readIntBE((byte) -53);
-        this.sampleCount = var2.readIntBE((byte) -128);
-        this.field_I = var2.readIntBE((byte) -128);
-        this.field_n = var2.readIntBE((byte) -89);
-        if (this.field_n < 0) {
-            this.field_n = ~this.field_n;
-            this.field_A = true;
+        int packetIndex = 0;
+        int packetLength = 0;
+        int lengthChunk = 0;
+        byte[] packetBytes = null;
+        ByteArrayBuffer containerBuffer = new ByteArrayBuffer(containerBytes);
+        this.sampleRateHz = containerBuffer.readIntBE((byte) -53);
+        this.sampleCount = containerBuffer.readIntBE((byte) -128);
+        this.loopStart = containerBuffer.readIntBE((byte) -128);
+        this.loopEnd = containerBuffer.readIntBE((byte) -89);
+        if (this.loopEnd < 0) {
+            this.loopEnd = ~this.loopEnd;
+            this.pingPongLoop = true;
         }
-        int var3 = var2.readIntBE((byte) -108);
-        if (var3 < 0) {
+        int packetCount = containerBuffer.readIntBE((byte) -108);
+        if (packetCount < 0) {
             throw new IOException();
         }
-        this.packets = new byte[var3][];
-        for (var4 = 0; var4 < var3; var4++) {
-            var5 = 0;
+        this.packets = new byte[packetCount][];
+        for (packetIndex = 0; packetIndex < packetCount; packetIndex++) {
+            packetLength = 0;
             do {
-                var6_int = var2.readUnsignedByte((byte) 34);
-                var5 = var5 + var6_int;
-            } while (var6_int >= 255);
-            var6 = new byte[var5];
-            var2.readBytes(29915, var5, var6, 0);
-            this.packets[var4] = var6;
+                lengthChunk = containerBuffer.readUnsignedByte((byte) 34);
+                packetLength = packetLength + lengthChunk;
+            } while (lengthChunk >= 255);
+            packetBytes = new byte[packetLength];
+            containerBuffer.readBytes(29915, packetLength, packetBytes, 0);
+            this.packets[packetIndex] = packetBytes;
         }
     }
 
     final PcmSample decodePcm() {
-        int var6 = 0;
-        int incrementValue$0 = 0;
-        byte[] var1;
-        int var2;
-        int var3;
-        float[] var4;
-        int var5;
-        int var7;
+        int sampleIndex = 0;
+        int pcmIndexBeforeIncrement = 0;
+        byte[] decodedPcmBytes;
+        int pcmWritePosition;
+        int packetIndex;
+        float[] decodedSamples;
+        int samplesToWrite;
+        int unsignedPcmSample;
         this.previousBlockSize = 0;
         this.previousBlock = new float[longBlockSize];
-        var1 = new byte[this.sampleCount];
-        var2 = 0;
-        var3 = 0;
+        decodedPcmBytes = new byte[this.sampleCount];
+        pcmWritePosition = 0;
+        packetIndex = 0;
         while (true) {
-          if (var3 >= this.packets.length) {
+          if (packetIndex >= this.packets.length) {
             this.previousBlock = null;
-            return new PcmSample(this.field_q, var1, this.field_I, this.field_n, this.field_A);
+            return new PcmSample(this.sampleRateHz, decodedPcmBytes, this.loopStart, this.loopEnd, this.pingPongLoop);
           }
-          var4 = this.decodePacket(var3);
-          if (var4 == null) {
-            var3++;
+          decodedSamples = this.decodePacket(packetIndex);
+          if (decodedSamples == null) {
+            packetIndex++;
             continue;
           }
-          var5 = var4.length;
-          if (var5 > this.sampleCount - var2) {
-            var5 = this.sampleCount - var2;
+          samplesToWrite = decodedSamples.length;
+          if (samplesToWrite > this.sampleCount - pcmWritePosition) {
+            samplesToWrite = this.sampleCount - pcmWritePosition;
           }
-          for (var6 = 0; var6 < var5; var6++) {
-            var7 = (int)(128.0f + var4[var6] * 128.0f);
-            if ((var7 & -256) != 0) {
-              var7 = ~var7 >> 31;
+          for (sampleIndex = 0; sampleIndex < samplesToWrite; sampleIndex++) {
+            unsignedPcmSample = (int)(128.0f + decodedSamples[sampleIndex] * 128.0f);
+            if ((unsignedPcmSample & -256) != 0) {
+              unsignedPcmSample = ~unsignedPcmSample >> 31;
             }
-            incrementValue$0 = var2;
-            var2++;
-            var1[incrementValue$0] = (byte)(var7 - 128);
+            pcmIndexBeforeIncrement = pcmWritePosition;
+            pcmWritePosition++;
+            decodedPcmBytes[pcmIndexBeforeIncrement] = (byte)(unsignedPcmSample - 128);
           }
-          var3++;
+          packetIndex++;
           continue;
         }
     }
 
-    final static void a(byte[] param0) {
-        int var7_int = 0;
-        int var8_int = 0;
-        int var9_int = 0;
-        int var11 = 0;
-        int var6 = 0;
-        int stackIn_5_0 = 0;
-        boolean[] stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
-        boolean stackIn_40_2 = false;
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        float[] var6_ref_float__;
-        float[] var7;
-        float[] var8;
-        int[] var9;
-        int var10;
-        MusicDecoder.setBitInput(param0, 0);
+    final static void decodeSetup(byte[] setupBytes) {
+        int trigAIndex = 0;
+        int trigBIndex = 0;
+        int trigCIndex = 0;
+        int bitReverseIndex = 0;
+        int modeIndex = 0;
+        int blockSizeBeforeStore = 0;
+        boolean[] modeFlagsArray = null;
+        int modeFlagIndex = 0;
+        boolean modeLongBlockBeforeStore = false;
+        int blockSizeKindOrCodebookCount;
+        int blockSizeOrCodebookIndexOrTimeCountOrFloorCount;
+        int halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount;
+        int quarterBlockSizeOrResidueIndexOrMappingCount;
+        int eighthBlockSizeOrMappingIndexOrModeCount;
+        float[] mdctTrigA;
+        float[] mdctTrigB;
+        float[] mdctTrigC;
+        int[] bitReverseIndices;
+        int bitReverseWidth;
+        MusicDecoder.setBitInput(setupBytes, 0);
         shortBlockSize = 1 << MusicDecoder.readBits(4);
         longBlockSize = 1 << MusicDecoder.readBits(4);
         workBlock = new float[longBlockSize];
-        for (var1 = 0; var1 < 2; var1++) {
-          if (var1 == 0) {
-            stackIn_5_0 = shortBlockSize;
+        for (blockSizeKindOrCodebookCount = 0; blockSizeKindOrCodebookCount < 2; blockSizeKindOrCodebookCount++) {
+          if (blockSizeKindOrCodebookCount == 0) {
+            blockSizeBeforeStore = shortBlockSize;
           } else {
-            stackIn_5_0 = longBlockSize;
+            blockSizeBeforeStore = longBlockSize;
           }
-          var2 = stackIn_5_0;
-          var3 = var2 >> 1;
-          var4 = var2 >> 2;
-          var5 = var2 >> 3;
-          var6_ref_float__ = new float[var3];
-          for (var7_int = 0; var7_int < var4; var7_int++) {
-            var6_ref_float__[2 * var7_int] = (float)Math.cos((double)(4 * var7_int) * 3.141592653589793 / (double)var2);
-            var6_ref_float__[2 * var7_int + 1] = -(float)Math.sin((double)(4 * var7_int) * 3.141592653589793 / (double)var2);
+          blockSizeOrCodebookIndexOrTimeCountOrFloorCount = blockSizeBeforeStore;
+          halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount = blockSizeOrCodebookIndexOrTimeCountOrFloorCount >> 1;
+          quarterBlockSizeOrResidueIndexOrMappingCount = blockSizeOrCodebookIndexOrTimeCountOrFloorCount >> 2;
+          eighthBlockSizeOrMappingIndexOrModeCount = blockSizeOrCodebookIndexOrTimeCountOrFloorCount >> 3;
+          mdctTrigA = new float[halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount];
+          for (trigAIndex = 0; trigAIndex < quarterBlockSizeOrResidueIndexOrMappingCount; trigAIndex++) {
+            mdctTrigA[2 * trigAIndex] = (float)Math.cos((double)(4 * trigAIndex) * 3.141592653589793 / (double)blockSizeOrCodebookIndexOrTimeCountOrFloorCount);
+            mdctTrigA[2 * trigAIndex + 1] = -(float)Math.sin((double)(4 * trigAIndex) * 3.141592653589793 / (double)blockSizeOrCodebookIndexOrTimeCountOrFloorCount);
           }
-          var7 = new float[var3];
-          for (var8_int = 0; var8_int < var4; var8_int++) {
-            var7[2 * var8_int] = (float)Math.cos((double)(2 * var8_int + 1) * 3.141592653589793 / (double)(2 * var2));
-            var7[2 * var8_int + 1] = (float)Math.sin((double)(2 * var8_int + 1) * 3.141592653589793 / (double)(2 * var2));
+          mdctTrigB = new float[halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount];
+          for (trigBIndex = 0; trigBIndex < quarterBlockSizeOrResidueIndexOrMappingCount; trigBIndex++) {
+            mdctTrigB[2 * trigBIndex] = (float)Math.cos((double)(2 * trigBIndex + 1) * 3.141592653589793 / (double)(2 * blockSizeOrCodebookIndexOrTimeCountOrFloorCount));
+            mdctTrigB[2 * trigBIndex + 1] = (float)Math.sin((double)(2 * trigBIndex + 1) * 3.141592653589793 / (double)(2 * blockSizeOrCodebookIndexOrTimeCountOrFloorCount));
           }
-          var8 = new float[var4];
-          for (var9_int = 0; var9_int < var5; var9_int++) {
-            var8[2 * var9_int] = (float)Math.cos((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
-            var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
+          mdctTrigC = new float[quarterBlockSizeOrResidueIndexOrMappingCount];
+          for (trigCIndex = 0; trigCIndex < eighthBlockSizeOrMappingIndexOrModeCount; trigCIndex++) {
+            mdctTrigC[2 * trigCIndex] = (float)Math.cos((double)(4 * trigCIndex + 2) * 3.141592653589793 / (double)blockSizeOrCodebookIndexOrTimeCountOrFloorCount);
+            mdctTrigC[2 * trigCIndex + 1] = -(float)Math.sin((double)(4 * trigCIndex + 2) * 3.141592653589793 / (double)blockSizeOrCodebookIndexOrTimeCountOrFloorCount);
           }
-          var9 = new int[var5];
-          var10 = SpriteConstructionSupport.unsignedBitLength((byte) 58, var5 - 1);
-          for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = TextValidationFailure.a(var11, 0, var10);
+          bitReverseIndices = new int[eighthBlockSizeOrMappingIndexOrModeCount];
+          bitReverseWidth = SpriteConstructionSupport.unsignedBitLength((byte) 58, eighthBlockSizeOrMappingIndexOrModeCount - 1);
+          for (bitReverseIndex = 0; bitReverseIndex < eighthBlockSizeOrMappingIndexOrModeCount; bitReverseIndex++) {
+            bitReverseIndices[bitReverseIndex] = TextValidationFailure.a(bitReverseIndex, 0, bitReverseWidth);
           }
-          if (var1 == 0) {
-            field_s = var6_ref_float__;
-            field_K = var7;
-            field_r = var8;
-            field_f = var9;
+          if (blockSizeKindOrCodebookCount == 0) {
+            shortMdctTrigA = mdctTrigA;
+            shortMdctTrigB = mdctTrigB;
+            shortMdctTrigC = mdctTrigC;
+            shortBitReverseIndices = bitReverseIndices;
             continue;
           }
-          field_w = var6_ref_float__;
-          field_g = var7;
-          field_h = var8;
-          field_l = var9;
+          longMdctTrigA = mdctTrigA;
+          longMdctTrigB = mdctTrigB;
+          longMdctTrigC = mdctTrigC;
+          longBitReverseIndices = bitReverseIndices;
         }
-        var1 = MusicDecoder.readBits(8) + 1;
-        field_u = new VorbisCodebook[var1];
-        for (var2 = 0; var2 < var1; var2++) {
-          field_u[var2] = new VorbisCodebook();
+        blockSizeKindOrCodebookCount = MusicDecoder.readBits(8) + 1;
+        codebooks = new VorbisCodebook[blockSizeKindOrCodebookCount];
+        for (blockSizeOrCodebookIndexOrTimeCountOrFloorCount = 0; blockSizeOrCodebookIndexOrTimeCountOrFloorCount < blockSizeKindOrCodebookCount; blockSizeOrCodebookIndexOrTimeCountOrFloorCount++) {
+          codebooks[blockSizeOrCodebookIndexOrTimeCountOrFloorCount] = new VorbisCodebook();
         }
-        var2 = MusicDecoder.readBits(6) + 1;
-        for (var3 = 0; var3 < var2; var3++) {
+        blockSizeOrCodebookIndexOrTimeCountOrFloorCount = MusicDecoder.readBits(6) + 1;
+        for (halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount = 0; halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount < blockSizeOrCodebookIndexOrTimeCountOrFloorCount; halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount++) {
           MusicDecoder.readBits(16);
         }
-        var2 = MusicDecoder.readBits(6) + 1;
-        field_F = new MusicDecodeStage[var2];
-        for (var3 = 0; var3 < var2; var3++) {
-          field_F[var3] = new MusicDecodeStage();
+        blockSizeOrCodebookIndexOrTimeCountOrFloorCount = MusicDecoder.readBits(6) + 1;
+        floors = new MusicDecodeStage[blockSizeOrCodebookIndexOrTimeCountOrFloorCount];
+        for (halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount = 0; halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount < blockSizeOrCodebookIndexOrTimeCountOrFloorCount; halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount++) {
+          floors[halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount] = new MusicDecodeStage();
         }
-        var3 = MusicDecoder.readBits(6) + 1;
-        field_k = new VorbisResidue[var3];
-        for (var4 = 0; var4 < var3; var4++) {
-          field_k[var4] = new VorbisResidue();
+        halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount = MusicDecoder.readBits(6) + 1;
+        residues = new VorbisResidue[halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount];
+        for (quarterBlockSizeOrResidueIndexOrMappingCount = 0; quarterBlockSizeOrResidueIndexOrMappingCount < halfBlockSizeOrTimeIndexOrFloorIndexOrResidueCount; quarterBlockSizeOrResidueIndexOrMappingCount++) {
+          residues[quarterBlockSizeOrResidueIndexOrMappingCount] = new VorbisResidue();
         }
-        var4 = MusicDecoder.readBits(6) + 1;
-        field_N = new VorbisMapping[var4];
-        for (var5 = 0; var5 < var4; var5++) {
-          field_N[var5] = new VorbisMapping();
+        quarterBlockSizeOrResidueIndexOrMappingCount = MusicDecoder.readBits(6) + 1;
+        mappings = new VorbisMapping[quarterBlockSizeOrResidueIndexOrMappingCount];
+        for (eighthBlockSizeOrMappingIndexOrModeCount = 0; eighthBlockSizeOrMappingIndexOrModeCount < quarterBlockSizeOrResidueIndexOrMappingCount; eighthBlockSizeOrMappingIndexOrModeCount++) {
+          mappings[eighthBlockSizeOrMappingIndexOrModeCount] = new VorbisMapping();
         }
-        var5 = MusicDecoder.readBits(6) + 1;
-        field_o = new boolean[var5];
-        field_D = new int[var5];
-        for (var6 = 0; var6 < var5; var6++) {
-          stackIn_39_0 = (boolean[]) (field_o);
-          stackIn_39_1 = var6;
+        eighthBlockSizeOrMappingIndexOrModeCount = MusicDecoder.readBits(6) + 1;
+        modeLongBlockFlags = new boolean[eighthBlockSizeOrMappingIndexOrModeCount];
+        modeMappingIndices = new int[eighthBlockSizeOrMappingIndexOrModeCount];
+        for (modeIndex = 0; modeIndex < eighthBlockSizeOrMappingIndexOrModeCount; modeIndex++) {
+          modeFlagsArray = (boolean[]) (modeLongBlockFlags);
+          modeFlagIndex = modeIndex;
           if (MusicDecoder.readBit() == 0) {
-            stackIn_40_2 = false;
+            modeLongBlockBeforeStore = false;
           } else {
-            stackIn_40_2 = true;
+            modeLongBlockBeforeStore = true;
           }
-          stackIn_39_0[stackIn_39_1] = stackIn_40_2;
+          modeFlagsArray[modeFlagIndex] = modeLongBlockBeforeStore;
           MusicDecoder.readBits(16);
           MusicDecoder.readBits(16);
-          field_D[var6] = MusicDecoder.readBits(8);
+          modeMappingIndices[modeIndex] = MusicDecoder.readBits(8);
         }
-        field_z = true;
+        setupLoaded = true;
     }
 
-    public static void a() {
+    public static void releaseSharedDecoderResources() {
         bitstreamBytes = null;
-        field_u = null;
-        field_F = null;
-        field_k = null;
-        field_N = null;
-        field_o = null;
-        field_D = null;
+        codebooks = null;
+        floors = null;
+        residues = null;
+        mappings = null;
+        modeLongBlockFlags = null;
+        modeMappingIndices = null;
         workBlock = null;
-        field_s = null;
-        field_K = null;
-        field_r = null;
-        field_w = null;
-        field_g = null;
-        field_h = null;
-        field_f = null;
-        field_l = null;
+        shortMdctTrigA = null;
+        shortMdctTrigB = null;
+        shortMdctTrigC = null;
+        longMdctTrigA = null;
+        longMdctTrigB = null;
+        longMdctTrigC = null;
+        shortBitReverseIndices = null;
+        longBitReverseIndices = null;
     }
 
     private final float[] decodePacket(int packetIndex) {
-        int var32_int = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_22_0 = 0;
-        float[] stackIn_40_0 = null;
-        float[] stackIn_43_0 = null;
-        float[] stackIn_46_0 = null;
-        int[] stackIn_49_0 = null;
-        boolean stackIn_111_1 = false;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        VorbisMapping var14;
-        int var15;
-        int var16;
-        int var17_int;
-        Object var17;
-        int var18_int;
-        float[] var18;
-        int var19;
-        float[] var20_ref_float__;
-        int var20;
-        int var21_int;
-        float[] var21;
-        float[] var22;
-        float[] var23;
-        int[] var24;
-        int var25;
-        int var26;
-        float var26_float;
-        float var27;
-        int var27_int;
-        float var28;
-        int var28_int;
-        float var29;
-        int var29_int;
-        float var30;
-        int var30_int;
-        float var31;
-        int var31_int;
-        float var32;
-        float var33;
-        int var33_int;
-        float var34;
-        float var35;
-        float var36;
-        float var37;
-        float var38;
-        float var39;
-        float[] var40;
-        int var41;
-        VorbisResidue var42;
-        int[] var44;
-        float[] var45;
-        float[] var46;
-        int[] var48;
-        float[] var49;
-        float[] var50;
-        float[] var52;
+        int butterflyIndex = 0;
+        int blockSizeBeforeStore = 0;
+        int previousWindowFlagBeforeStore = 0;
+        int nextWindowFlagBeforeStore = 0;
+        int floorAbsentBeforeStore = 0;
+        float[] trigABeforeStore = null;
+        float[] trigBBeforeStore = null;
+        float[] trigCBeforeStore = null;
+        int[] bitReverseBeforeStore = null;
+        boolean previousFloorAbsentBeforeStore = false;
+        int modeIndex;
+        int longBlockValue;
+        int blockSize;
+        int previousWindowLongValue;
+        int nextWindowLongValue;
+        int halfBlockSizeForWindow;
+        int leftWindowStart;
+        int leftWindowEnd;
+        int leftWindowLength;
+        int rightWindowStart;
+        int rightWindowEnd;
+        int rightWindowLength;
+        VorbisMapping mapping;
+        int floorAbsentValue;
+        int muxOrResidueSkipValue;
+        int floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize;
+        Object overlapResult;
+        int floorIndexOrQuarterBlockSizeOrOverlapLength;
+        float[] recycledPreviousBlock;
+        int eighthBlockSizeOrOverlapIndex;
+        float[] transformBlockAlias;
+        int overlapSourceOrDestinationIndex;
+        int scalingIndexOrUnusedMirrorCursorSnapshot;
+        float[] mdctTrigA;
+        float[] mdctTrigB;
+        float[] mdctTrigC;
+        int[] unusedBitReverseAlias;
+        int rotationIndexOrTransformBitWidth;
+        int butterflyStageOrReorderOrWindowIndex;
+        float rotationDifferenceOrButterflyUpperA;
+        float rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine;
+        int butterflySpanOrBitReversePartner;
+        float rotationCosineOrButterflyLowerAOrPostRotationNegativeSine;
+        int trigStrideOrSwapBase;
+        float rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA;
+        int butterflyGroupOrSwapPartnerBase;
+        float butterflyCosineOrSwapSampleOrPostRotationUpperB;
+        int butterflyUpperBase;
+        float butterflyNegativeSineOrPostRotationLowerA;
+        int butterflyLowerBase;
+        float postRotationLowerB;
+        float postRotationMix;
+        int butterflyOffset;
+        float butterflyUpperA;
+        float butterflyUpperB;
+        float butterflyLowerA;
+        float butterflyLowerB;
+        float butterflyCosine;
+        float butterflyNegativeSine;
+        float[] overlapSamplesAlias;
+        int mirrorFillIndex;
+        VorbisResidue residue;
+        int[] intermediateUnusedBitReverseAlias;
+        float[] intermediateTransformBlockAlias;
+        float[] intermediateOverlapSamplesAlias;
+        int[] bitReverseIndices;
+        float[] sharedWorkBlockAlias;
+        float[] allocatedOverlapSamples;
+        float[] residueWorkBlockAlias;
         MusicDecoder.setBitInput(this.packets[packetIndex], 0);
         MusicDecoder.readBit();
-        var2 = MusicDecoder.readBits(SpriteConstructionSupport.unsignedBitLength((byte) 58, field_D.length - 1));
-        var3 = field_o[var2] ? 1 : 0;
-        if (var3 == 0) {
-          stackIn_3_0 = shortBlockSize;
+        modeIndex = MusicDecoder.readBits(SpriteConstructionSupport.unsignedBitLength((byte) 58, modeMappingIndices.length - 1));
+        longBlockValue = modeLongBlockFlags[modeIndex] ? 1 : 0;
+        if (longBlockValue == 0) {
+          blockSizeBeforeStore = shortBlockSize;
         } else {
-          stackIn_3_0 = longBlockSize;
+          blockSizeBeforeStore = longBlockSize;
         }
-        var4 = stackIn_3_0;
-        var5 = 0;
-        var6 = 0;
-        if (var3 != 0) {
-          stackIn_7_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
-          var5 = stackIn_7_0;
-          stackIn_10_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
-          var6 = stackIn_10_0;
+        blockSize = blockSizeBeforeStore;
+        previousWindowLongValue = 0;
+        nextWindowLongValue = 0;
+        if (longBlockValue != 0) {
+          previousWindowFlagBeforeStore = (MusicDecoder.readBit() == 0) ? 0 : 1;
+          previousWindowLongValue = previousWindowFlagBeforeStore;
+          nextWindowFlagBeforeStore = (MusicDecoder.readBit() == 0) ? 0 : 1;
+          nextWindowLongValue = nextWindowFlagBeforeStore;
         }
-        var7 = var4 >> 1;
-        if ((var3 != 0) &&
-            (var5 == 0)) {
-          var8 = (var4 >> 2) - (shortBlockSize >> 2);
-          var9 = (var4 >> 2) + (shortBlockSize >> 2);
-          var10 = shortBlockSize >> 1;
+        halfBlockSizeForWindow = blockSize >> 1;
+        if ((longBlockValue != 0) &&
+            (previousWindowLongValue == 0)) {
+          leftWindowStart = (blockSize >> 2) - (shortBlockSize >> 2);
+          leftWindowEnd = (blockSize >> 2) + (shortBlockSize >> 2);
+          leftWindowLength = shortBlockSize >> 1;
         } else {
-          var8 = 0;
-          var9 = var7;
-          var10 = var4 >> 1;
+          leftWindowStart = 0;
+          leftWindowEnd = halfBlockSizeForWindow;
+          leftWindowLength = blockSize >> 1;
         }
-        if ((var3 != 0) &&
-            (var6 == 0)) {
-          var11 = var4 - (var4 >> 2) - (shortBlockSize >> 2);
-          var12 = var4 - (var4 >> 2) + (shortBlockSize >> 2);
-          var13 = shortBlockSize >> 1;
+        if ((longBlockValue != 0) &&
+            (nextWindowLongValue == 0)) {
+          rightWindowStart = blockSize - (blockSize >> 2) - (shortBlockSize >> 2);
+          rightWindowEnd = blockSize - (blockSize >> 2) + (shortBlockSize >> 2);
+          rightWindowLength = shortBlockSize >> 1;
         } else {
-          var11 = var7;
-          var12 = var4;
-          var13 = var4 >> 1;
+          rightWindowStart = halfBlockSizeForWindow;
+          rightWindowEnd = blockSize;
+          rightWindowLength = blockSize >> 1;
         }
-        var14 = field_N[field_D[var2]];
-        var16 = var14.mux;
-        var17_int = var14.floorIndices[var16];
-        stackIn_22_0 = (field_F[var17_int].b()) ? 0 : 1;
-        var15 = stackIn_22_0;
-        var16 = var15;
-        for (var17_int = 0; var17_int < var14.submapCount; var17_int++) {
-          var42 = field_k[var14.residueIndices[var17_int]];
-          var52 = workBlock;
-          var42.decodeResidue(var52, var4 >> 1, var16 != 0);
+        mapping = mappings[modeMappingIndices[modeIndex]];
+        muxOrResidueSkipValue = mapping.mux;
+        floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize = mapping.floorIndices[muxOrResidueSkipValue];
+        floorAbsentBeforeStore = (floors[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize].decodeFloorPacket()) ? 0 : 1;
+        floorAbsentValue = floorAbsentBeforeStore;
+        muxOrResidueSkipValue = floorAbsentValue;
+        for (floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize = 0; floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize < mapping.submapCount; floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize++) {
+          residue = residues[mapping.residueIndices[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize]];
+          residueWorkBlockAlias = workBlock;
+          residue.decodeResidue(residueWorkBlockAlias, blockSize >> 1, muxOrResidueSkipValue != 0);
         }
-        if (var15 == 0) {
-          var17_int = var14.mux;
-          var18_int = var14.floorIndices[var17_int];
-          field_F[var18_int].a(workBlock, var4 >> 1);
+        if (floorAbsentValue == 0) {
+          floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize = mapping.mux;
+          floorIndexOrQuarterBlockSizeOrOverlapLength = mapping.floorIndices[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize];
+          floors[floorIndexOrQuarterBlockSizeOrOverlapLength].applyFloorCurve(workBlock, blockSize >> 1);
         }
-        if (var15 != 0) {
-          for (var17_int = var4 >> 1; var17_int < var4; var17_int++) {
-            workBlock[var17_int] = 0.0f;
+        if (floorAbsentValue != 0) {
+          for (floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize = blockSize >> 1; floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize < blockSize; floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize++) {
+            workBlock[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize] = 0.0f;
           }
         } else {
-          var17_int = var4 >> 1;
-          var18_int = var4 >> 2;
-          var19 = var4 >> 3;
-          var49 = workBlock;
-          var45 = var49;
-          var20_ref_float__ = var45;
-          for (var21_int = 0; var21_int < var17_int; var21_int++) {
-            var20_ref_float__[var21_int] = var20_ref_float__[var21_int] * 0.5f;
+          floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize = blockSize >> 1;
+          floorIndexOrQuarterBlockSizeOrOverlapLength = blockSize >> 2;
+          eighthBlockSizeOrOverlapIndex = blockSize >> 3;
+          sharedWorkBlockAlias = workBlock;
+          intermediateTransformBlockAlias = sharedWorkBlockAlias;
+          transformBlockAlias = intermediateTransformBlockAlias;
+          for (scalingIndexOrUnusedMirrorCursorSnapshot = 0; scalingIndexOrUnusedMirrorCursorSnapshot < floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize; scalingIndexOrUnusedMirrorCursorSnapshot++) {
+            transformBlockAlias[scalingIndexOrUnusedMirrorCursorSnapshot] = transformBlockAlias[scalingIndexOrUnusedMirrorCursorSnapshot] * 0.5f;
           }
-          var41 = var17_int;
-          var21_int = var41;
-          while (var41 < var4) {
-            var20_ref_float__[var41] = -var20_ref_float__[var4 - var41 - 1];
-            var41++;
+          mirrorFillIndex = floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize;
+          scalingIndexOrUnusedMirrorCursorSnapshot = mirrorFillIndex;
+          while (mirrorFillIndex < blockSize) {
+            transformBlockAlias[mirrorFillIndex] = -transformBlockAlias[blockSize - mirrorFillIndex - 1];
+            mirrorFillIndex++;
           }
-          if (var3 == 0) {
-            stackIn_40_0 = (float[]) (field_s);
+          if (longBlockValue == 0) {
+            trigABeforeStore = (float[]) (shortMdctTrigA);
           } else {
-            stackIn_40_0 = (float[]) (field_w);
+            trigABeforeStore = (float[]) (longMdctTrigA);
           }
-          var21 = stackIn_40_0;
-          if (var3 == 0) {
-            stackIn_43_0 = (float[]) (field_K);
+          mdctTrigA = trigABeforeStore;
+          if (longBlockValue == 0) {
+            trigBBeforeStore = (float[]) (shortMdctTrigB);
           } else {
-            stackIn_43_0 = (float[]) (field_g);
+            trigBBeforeStore = (float[]) (longMdctTrigB);
           }
-          var22 = stackIn_43_0;
-          if (var3 == 0) {
-            stackIn_46_0 = (float[]) (field_r);
+          mdctTrigB = trigBBeforeStore;
+          if (longBlockValue == 0) {
+            trigCBeforeStore = (float[]) (shortMdctTrigC);
           } else {
-            stackIn_46_0 = (float[]) (field_h);
+            trigCBeforeStore = (float[]) (longMdctTrigC);
           }
-          var23 = stackIn_46_0;
-          if (var3 == 0) {
-            stackIn_49_0 = (int[]) (field_f);
+          mdctTrigC = trigCBeforeStore;
+          if (longBlockValue == 0) {
+            bitReverseBeforeStore = (int[]) (shortBitReverseIndices);
           } else {
-            stackIn_49_0 = (int[]) (field_l);
+            bitReverseBeforeStore = (int[]) (longBitReverseIndices);
           }
-          var48 = stackIn_49_0;
-          var44 = var48;
-          var24 = var44;
-          for (var25 = 0; var25 < var18_int; var25++) {
-            var26_float = var20_ref_float__[4 * var25] - var20_ref_float__[var4 - 4 * var25 - 1];
-            var27 = var20_ref_float__[4 * var25 + 2] - var20_ref_float__[var4 - 4 * var25 - 3];
-            var28 = var21[2 * var25];
-            var29 = var21[2 * var25 + 1];
-            var20_ref_float__[var4 - 4 * var25 - 1] = var26_float * var28 - var27 * var29;
-            var20_ref_float__[var4 - 4 * var25 - 3] = var26_float * var29 + var27 * var28;
+          bitReverseIndices = bitReverseBeforeStore;
+          intermediateUnusedBitReverseAlias = bitReverseIndices;
+          unusedBitReverseAlias = intermediateUnusedBitReverseAlias;
+          for (rotationIndexOrTransformBitWidth = 0; rotationIndexOrTransformBitWidth < floorIndexOrQuarterBlockSizeOrOverlapLength; rotationIndexOrTransformBitWidth++) {
+            rotationDifferenceOrButterflyUpperA = transformBlockAlias[4 * rotationIndexOrTransformBitWidth] - transformBlockAlias[blockSize - 4 * rotationIndexOrTransformBitWidth - 1];
+            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 2] - transformBlockAlias[blockSize - 4 * rotationIndexOrTransformBitWidth - 3];
+            rotationCosineOrButterflyLowerAOrPostRotationNegativeSine = mdctTrigA[2 * rotationIndexOrTransformBitWidth];
+            rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA = mdctTrigA[2 * rotationIndexOrTransformBitWidth + 1];
+            transformBlockAlias[blockSize - 4 * rotationIndexOrTransformBitWidth - 1] = rotationDifferenceOrButterflyUpperA * rotationCosineOrButterflyLowerAOrPostRotationNegativeSine - rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA;
+            transformBlockAlias[blockSize - 4 * rotationIndexOrTransformBitWidth - 3] = rotationDifferenceOrButterflyUpperA * rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA + rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * rotationCosineOrButterflyLowerAOrPostRotationNegativeSine;
           }
-          for (var25 = 0; var25 < var19; var25++) {
-            var26_float = var20_ref_float__[var17_int + 3 + 4 * var25];
-            var27 = var20_ref_float__[var17_int + 1 + 4 * var25];
-            var28 = var20_ref_float__[4 * var25 + 3];
-            var29 = var20_ref_float__[4 * var25 + 1];
-            var20_ref_float__[var17_int + 3 + 4 * var25] = var26_float + var28;
-            var20_ref_float__[var17_int + 1 + 4 * var25] = var27 + var29;
-            var30 = var21[var17_int - 4 - 4 * var25];
-            var31 = var21[var17_int - 3 - 4 * var25];
-            var20_ref_float__[4 * var25 + 3] = (var26_float - var28) * var30 - (var27 - var29) * var31;
-            var20_ref_float__[4 * var25 + 1] = (var27 - var29) * var30 + (var26_float - var28) * var31;
+          for (rotationIndexOrTransformBitWidth = 0; rotationIndexOrTransformBitWidth < eighthBlockSizeOrOverlapIndex; rotationIndexOrTransformBitWidth++) {
+            rotationDifferenceOrButterflyUpperA = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 3 + 4 * rotationIndexOrTransformBitWidth];
+            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 1 + 4 * rotationIndexOrTransformBitWidth];
+            rotationCosineOrButterflyLowerAOrPostRotationNegativeSine = transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 3];
+            rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA = transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 1];
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 3 + 4 * rotationIndexOrTransformBitWidth] = rotationDifferenceOrButterflyUpperA + rotationCosineOrButterflyLowerAOrPostRotationNegativeSine;
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 1 + 4 * rotationIndexOrTransformBitWidth] = rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine + rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA;
+            butterflyCosineOrSwapSampleOrPostRotationUpperB = mdctTrigA[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize - 4 - 4 * rotationIndexOrTransformBitWidth];
+            butterflyNegativeSineOrPostRotationLowerA = mdctTrigA[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize - 3 - 4 * rotationIndexOrTransformBitWidth];
+            transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 3] = (rotationDifferenceOrButterflyUpperA - rotationCosineOrButterflyLowerAOrPostRotationNegativeSine) * butterflyCosineOrSwapSampleOrPostRotationUpperB - (rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine - rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA) * butterflyNegativeSineOrPostRotationLowerA;
+            transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 1] = (rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine - rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA) * butterflyCosineOrSwapSampleOrPostRotationUpperB + (rotationDifferenceOrButterflyUpperA - rotationCosineOrButterflyLowerAOrPostRotationNegativeSine) * butterflyNegativeSineOrPostRotationLowerA;
           }
-          var25 = SpriteConstructionSupport.unsignedBitLength((byte) 58, var4 - 1);
-          for (var26 = 0; var26 < var25 - 3; var26++) {
-            var27_int = var4 >> var26 + 2;
-            var28_int = 8 << var26;
-            for (var29_int = 0; var29_int < 2 << var26; var29_int++) {
-              var30_int = var4 - var27_int * 2 * var29_int;
-              var31_int = var4 - var27_int * (2 * var29_int + 1);
-              for (var32_int = 0; var32_int < var4 >> var26 + 4; var32_int++) {
-                var33_int = 4 * var32_int;
-                var34 = var20_ref_float__[var30_int - 1 - var33_int];
-                var35 = var20_ref_float__[var30_int - 3 - var33_int];
-                var36 = var20_ref_float__[var31_int - 1 - var33_int];
-                var37 = var20_ref_float__[var31_int - 3 - var33_int];
-                var20_ref_float__[var30_int - 1 - var33_int] = var34 + var36;
-                var20_ref_float__[var30_int - 3 - var33_int] = var35 + var37;
-                var38 = var21[var32_int * var28_int];
-                var39 = var21[var32_int * var28_int + 1];
-                var20_ref_float__[var31_int - 1 - var33_int] = (var34 - var36) * var38 - (var35 - var37) * var39;
-                var20_ref_float__[var31_int - 3 - var33_int] = (var35 - var37) * var38 + (var34 - var36) * var39;
+          rotationIndexOrTransformBitWidth = SpriteConstructionSupport.unsignedBitLength((byte) 58, blockSize - 1);
+          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < rotationIndexOrTransformBitWidth - 3; butterflyStageOrReorderOrWindowIndex++) {
+            butterflySpanOrBitReversePartner = blockSize >> butterflyStageOrReorderOrWindowIndex + 2;
+            trigStrideOrSwapBase = 8 << butterflyStageOrReorderOrWindowIndex;
+            for (butterflyGroupOrSwapPartnerBase = 0; butterflyGroupOrSwapPartnerBase < 2 << butterflyStageOrReorderOrWindowIndex; butterflyGroupOrSwapPartnerBase++) {
+              butterflyUpperBase = blockSize - butterflySpanOrBitReversePartner * 2 * butterflyGroupOrSwapPartnerBase;
+              butterflyLowerBase = blockSize - butterflySpanOrBitReversePartner * (2 * butterflyGroupOrSwapPartnerBase + 1);
+              for (butterflyIndex = 0; butterflyIndex < blockSize >> butterflyStageOrReorderOrWindowIndex + 4; butterflyIndex++) {
+                butterflyOffset = 4 * butterflyIndex;
+                butterflyUpperA = transformBlockAlias[butterflyUpperBase - 1 - butterflyOffset];
+                butterflyUpperB = transformBlockAlias[butterflyUpperBase - 3 - butterflyOffset];
+                butterflyLowerA = transformBlockAlias[butterflyLowerBase - 1 - butterflyOffset];
+                butterflyLowerB = transformBlockAlias[butterflyLowerBase - 3 - butterflyOffset];
+                transformBlockAlias[butterflyUpperBase - 1 - butterflyOffset] = butterflyUpperA + butterflyLowerA;
+                transformBlockAlias[butterflyUpperBase - 3 - butterflyOffset] = butterflyUpperB + butterflyLowerB;
+                butterflyCosine = mdctTrigA[butterflyIndex * trigStrideOrSwapBase];
+                butterflyNegativeSine = mdctTrigA[butterflyIndex * trigStrideOrSwapBase + 1];
+                transformBlockAlias[butterflyLowerBase - 1 - butterflyOffset] = (butterflyUpperA - butterflyLowerA) * butterflyCosine - (butterflyUpperB - butterflyLowerB) * butterflyNegativeSine;
+                transformBlockAlias[butterflyLowerBase - 3 - butterflyOffset] = (butterflyUpperB - butterflyLowerB) * butterflyCosine + (butterflyUpperA - butterflyLowerA) * butterflyNegativeSine;
               }
             }
           }
-          var26 = 1;
+          butterflyStageOrReorderOrWindowIndex = 1;
           while (true) {
-            if (var26 < var19 - 1) {
-              var27_int = var48[var26];
-              if (var26 >= var27_int) {
-                var26++;
+            if (butterflyStageOrReorderOrWindowIndex < eighthBlockSizeOrOverlapIndex - 1) {
+              butterflySpanOrBitReversePartner = bitReverseIndices[butterflyStageOrReorderOrWindowIndex];
+              if (butterflyStageOrReorderOrWindowIndex >= butterflySpanOrBitReversePartner) {
+                butterflyStageOrReorderOrWindowIndex++;
                 continue;
               }
-              var28_int = 8 * var26;
-              var29_int = 8 * var27_int;
-              var30 = var20_ref_float__[var28_int + 1];
-              var20_ref_float__[var28_int + 1] = var20_ref_float__[var29_int + 1];
-              var20_ref_float__[var29_int + 1] = var30;
-              var30 = var20_ref_float__[var28_int + 3];
-              var20_ref_float__[var28_int + 3] = var20_ref_float__[var29_int + 3];
-              var20_ref_float__[var29_int + 3] = var30;
-              var30 = var20_ref_float__[var28_int + 5];
-              var20_ref_float__[var28_int + 5] = var20_ref_float__[var29_int + 5];
-              var20_ref_float__[var29_int + 5] = var30;
-              var30 = var20_ref_float__[var28_int + 7];
-              var20_ref_float__[var28_int + 7] = var20_ref_float__[var29_int + 7];
-              var20_ref_float__[var29_int + 7] = var30;
-              var26++;
+              trigStrideOrSwapBase = 8 * butterflyStageOrReorderOrWindowIndex;
+              butterflyGroupOrSwapPartnerBase = 8 * butterflySpanOrBitReversePartner;
+              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 1];
+              transformBlockAlias[trigStrideOrSwapBase + 1] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 1];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 1] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
+              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 3];
+              transformBlockAlias[trigStrideOrSwapBase + 3] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 3];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 3] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
+              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 5];
+              transformBlockAlias[trigStrideOrSwapBase + 5] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 5];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 5] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
+              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 7];
+              transformBlockAlias[trigStrideOrSwapBase + 7] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 7];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 7] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
+              butterflyStageOrReorderOrWindowIndex++;
               continue;
             }
-            for (var26 = 0; var26 < var17_int; var26++) {
-              var20_ref_float__[var26] = var20_ref_float__[2 * var26 + 1];
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize; butterflyStageOrReorderOrWindowIndex++) {
+              transformBlockAlias[butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + 1];
             }
-            for (var26 = 0; var26 < var19; var26++) {
-              var20_ref_float__[var4 - 1 - 2 * var26] = var20_ref_float__[4 * var26];
-              var20_ref_float__[var4 - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 1];
-              var20_ref_float__[var4 - var18_int - 1 - 2 * var26] = var20_ref_float__[4 * var26 + 2];
-              var20_ref_float__[var4 - var18_int - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 3];
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < eighthBlockSizeOrOverlapIndex; butterflyStageOrReorderOrWindowIndex++) {
+              transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex];
+              transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex + 1];
+              transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength - 1 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex + 2];
+              transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength - 2 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex + 3];
             }
-            for (var26 = 0; var26 < var19; var26++) {
-              var27 = var23[2 * var26];
-              var28 = var23[2 * var26 + 1];
-              var29 = var20_ref_float__[var17_int + 2 * var26];
-              var30 = var20_ref_float__[var17_int + 2 * var26 + 1];
-              var31 = var20_ref_float__[var4 - 2 - 2 * var26];
-              var32 = var20_ref_float__[var4 - 1 - 2 * var26];
-              var33 = var28 * (var29 - var31) + var27 * (var30 + var32);
-              var20_ref_float__[var17_int + 2 * var26] = (var29 + var31 + var33) * 0.5f;
-              var20_ref_float__[var4 - 2 - 2 * var26] = (var29 + var31 - var33) * 0.5f;
-              var33 = var28 * (var30 + var32) - var27 * (var29 - var31);
-              var20_ref_float__[var17_int + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
-              var20_ref_float__[var4 - 1 - 2 * var26] = (-var30 + var32 + var33) * 0.5f;
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < eighthBlockSizeOrOverlapIndex; butterflyStageOrReorderOrWindowIndex++) {
+              rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = mdctTrigC[2 * butterflyStageOrReorderOrWindowIndex];
+              rotationCosineOrButterflyLowerAOrPostRotationNegativeSine = mdctTrigC[2 * butterflyStageOrReorderOrWindowIndex + 1];
+              rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 2 * butterflyStageOrReorderOrWindowIndex];
+              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 2 * butterflyStageOrReorderOrWindowIndex + 1];
+              butterflyNegativeSineOrPostRotationLowerA = transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndex];
+              postRotationLowerB = transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndex];
+              postRotationMix = rotationCosineOrButterflyLowerAOrPostRotationNegativeSine * (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA - butterflyNegativeSineOrPostRotationLowerA) + rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (butterflyCosineOrSwapSampleOrPostRotationUpperB + postRotationLowerB);
+              transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 2 * butterflyStageOrReorderOrWindowIndex] = (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA + butterflyNegativeSineOrPostRotationLowerA + postRotationMix) * 0.5f;
+              transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndex] = (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA + butterflyNegativeSineOrPostRotationLowerA - postRotationMix) * 0.5f;
+              postRotationMix = rotationCosineOrButterflyLowerAOrPostRotationNegativeSine * (butterflyCosineOrSwapSampleOrPostRotationUpperB + postRotationLowerB) - rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA - butterflyNegativeSineOrPostRotationLowerA);
+              transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + 2 * butterflyStageOrReorderOrWindowIndex + 1] = (butterflyCosineOrSwapSampleOrPostRotationUpperB - postRotationLowerB + postRotationMix) * 0.5f;
+              transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndex] = (-butterflyCosineOrSwapSampleOrPostRotationUpperB + postRotationLowerB + postRotationMix) * 0.5f;
             }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26 + 1];
-              var20_ref_float__[var17_int - 1 - var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26];
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
+              transformBlockAlias[butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex] + transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + 1 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex + 1];
+              transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize - 1 - butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex + 1] - transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + 1 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex];
             }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
+              transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndex] = -sharedWorkBlockAlias[butterflyStageOrReorderOrWindowIndex];
             }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var26] = var20_ref_float__[var18_int + var26];
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
+              transformBlockAlias[butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndex];
             }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var18_int + var26] = -var20_ref_float__[var18_int - var26 - 1];
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
+              transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndex] = -transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength - butterflyStageOrReorderOrWindowIndex - 1];
             }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var17_int + var26] = var20_ref_float__[var4 - var26 - 1];
+            for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
+              transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSize + butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[blockSize - butterflyStageOrReorderOrWindowIndex - 1];
             }
-            for (var26 = var8; var26 < var9; var26++) {
-              var27 = (float)Math.sin(((double)(var26 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
-              workBlock[var26] = workBlock[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
+            for (butterflyStageOrReorderOrWindowIndex = leftWindowStart; butterflyStageOrReorderOrWindowIndex < leftWindowEnd; butterflyStageOrReorderOrWindowIndex++) {
+              rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = (float)Math.sin(((double)(butterflyStageOrReorderOrWindowIndex - leftWindowStart) + 0.5) / (double)leftWindowLength * 0.5 * 3.141592653589793);
+              workBlock[butterflyStageOrReorderOrWindowIndex] = workBlock[butterflyStageOrReorderOrWindowIndex] * (float)Math.sin(1.5707963267948966 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine);
             }
-            for (var26 = var11; var26 < var12; var26++) {
-              var27 = (float)Math.sin(((double)(var26 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
-              workBlock[var26] = workBlock[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
+            for (butterflyStageOrReorderOrWindowIndex = rightWindowStart; butterflyStageOrReorderOrWindowIndex < rightWindowEnd; butterflyStageOrReorderOrWindowIndex++) {
+              rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = (float)Math.sin(((double)(butterflyStageOrReorderOrWindowIndex - rightWindowStart) + 0.5) / (double)rightWindowLength * 0.5 * 3.141592653589793 + 1.5707963267948966);
+              workBlock[butterflyStageOrReorderOrWindowIndex] = workBlock[butterflyStageOrReorderOrWindowIndex] * (float)Math.sin(1.5707963267948966 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine);
             }
             break;
           }
         }
-        var17 = null;
+        overlapResult = null;
         if (this.previousBlockSize > 0) {
-          var18_int = this.previousBlockSize + var4 >> 2;
-          var50 = new float[var18_int];
-          var46 = var50;
-          var40 = var46;
-          var17 = var40;
-          if (!this.field_i) {
-            for (var19 = 0; var19 < this.field_m; var19++) {
-              var20 = (this.previousBlockSize >> 1) + var19;
-              var40[var19] = var40[var19] + this.previousBlock[var20];
+          floorIndexOrQuarterBlockSizeOrOverlapLength = this.previousBlockSize + blockSize >> 2;
+          allocatedOverlapSamples = new float[floorIndexOrQuarterBlockSizeOrOverlapLength];
+          intermediateOverlapSamplesAlias = allocatedOverlapSamples;
+          overlapSamplesAlias = intermediateOverlapSamplesAlias;
+          overlapResult = overlapSamplesAlias;
+          if (!this.previousFloorAbsent) {
+            for (eighthBlockSizeOrOverlapIndex = 0; eighthBlockSizeOrOverlapIndex < this.previousRightWindowLength; eighthBlockSizeOrOverlapIndex++) {
+              overlapSourceOrDestinationIndex = (this.previousBlockSize >> 1) + eighthBlockSizeOrOverlapIndex;
+              overlapSamplesAlias[eighthBlockSizeOrOverlapIndex] = overlapSamplesAlias[eighthBlockSizeOrOverlapIndex] + this.previousBlock[overlapSourceOrDestinationIndex];
             }
           }
-          if (var15 == 0) {
-            for (var19 = var8; var19 < var4 >> 1; var19++) {
-              var20 = var50.length - (var4 >> 1) + var19;
-              var40[var20] = var40[var20] + workBlock[var19];
+          if (floorAbsentValue == 0) {
+            for (eighthBlockSizeOrOverlapIndex = leftWindowStart; eighthBlockSizeOrOverlapIndex < blockSize >> 1; eighthBlockSizeOrOverlapIndex++) {
+              overlapSourceOrDestinationIndex = allocatedOverlapSamples.length - (blockSize >> 1) + eighthBlockSizeOrOverlapIndex;
+              overlapSamplesAlias[overlapSourceOrDestinationIndex] = overlapSamplesAlias[overlapSourceOrDestinationIndex] + workBlock[eighthBlockSizeOrOverlapIndex];
             }
           }
         }
-        var18 = this.previousBlock;
+        recycledPreviousBlock = this.previousBlock;
         this.previousBlock = workBlock;
-        workBlock = var18;
-        this.previousBlockSize = var4;
-        this.field_m = var12 - (var4 >> 1);
-        if (var15 == 0) {
-          stackIn_111_1 = false;
+        workBlock = recycledPreviousBlock;
+        this.previousBlockSize = blockSize;
+        this.previousRightWindowLength = rightWindowEnd - (blockSize >> 1);
+        if (floorAbsentValue == 0) {
+          previousFloorAbsentBeforeStore = false;
         } else {
-          stackIn_111_1 = true;
+          previousFloorAbsentBeforeStore = true;
         }
-        ((MusicDecoder) (this)).field_i = stackIn_111_1;
-        return (float[]) (var17);
+        ((MusicDecoder) (this)).previousFloorAbsent = previousFloorAbsentBeforeStore;
+        return (float[]) (overlapResult);
     }
 
-    private final static boolean a(ResourceArchive param0) {
-        byte[] var1 = null;
-        if (!field_z) {
-            var1 = param0.getFile(0, -28153, 0);
-            if (var1 == null) {
+    private final static boolean ensureSetupLoaded(ResourceArchive archive) {
+        byte[] setupBytes = null;
+        if (!setupLoaded) {
+            setupBytes = archive.getFile(0, -28153, 0);
+            if (setupBytes == null) {
                 return false;
             }
-            MusicDecoder.a(var1);
+            MusicDecoder.decodeSetup(setupBytes);
         }
         return true;
     }
 
-    private MusicDecoder(byte[] param0) throws IOException {
-        this.readPacketContainer(param0);
+    private MusicDecoder(byte[] containerBytes) throws IOException {
+        this.readPacketContainer(containerBytes);
     }
 
     static {
-        field_z = false;
+        setupLoaded = false;
     }
 }

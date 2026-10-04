@@ -17,8 +17,8 @@ final class EntityMotionSupport {
         RuntimeException caughtDecodeFailure = null;
         RuntimeException decodeFailureForContext = null;
         try {
-          MusicDecoder.a(logoArchive.getNamedFile(0, "", "headers.packvorbis"));
-          logoAudioDecoder = MusicDecoder.a(logoArchive, "jagex logo2.packvorbis", "");
+          MusicDecoder.decodeSetup(logoArchive.getNamedFile(0, "", "headers.packvorbis"));
+          logoAudioDecoder = MusicDecoder.loadByName(logoArchive, "jagex logo2.packvorbis", "");
           logoAudioDecoder.decodePcm();
           if (methodGuard < 29) {
             boardContactStateDirty = true;

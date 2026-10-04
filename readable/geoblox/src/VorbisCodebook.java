@@ -190,8 +190,8 @@ final class VorbisCodebook {
         this.buildHuffmanTree();
         var2 = MusicDecoder.readBits(4);
         if (var2 > 0) {
-          var3 = MusicDecoder.d(MusicDecoder.readBits(32));
-          var4 = MusicDecoder.d(MusicDecoder.readBits(32));
+          var3 = MusicDecoder.unpackVorbisFloat(MusicDecoder.readBits(32));
+          var4 = MusicDecoder.unpackVorbisFloat(MusicDecoder.readBits(32));
           var5 = MusicDecoder.readBits(4) + 1;
           stackIn_23_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
           var6 = stackIn_23_0;

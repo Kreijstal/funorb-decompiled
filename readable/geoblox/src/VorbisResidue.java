@@ -36,7 +36,7 @@ final class VorbisResidue {
         if (silent) {
           return;
         }
-        var4 = MusicDecoder.field_u[this.classbookIndex].dimensions;
+        var4 = MusicDecoder.codebooks[this.classbookIndex].dimensions;
         var5 = this.end - this.begin;
         var6 = var5 / this.partitionSize;
         var22 = new int[var6];
@@ -46,7 +46,7 @@ final class VorbisResidue {
           var9 = 0;
           L2: while (var9 < var6) {
             if (var8 == 0) {
-              var10 = MusicDecoder.field_u[this.classbookIndex].readScalar();
+              var10 = MusicDecoder.codebooks[this.classbookIndex].readScalar();
               for (var11 = var4 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.classificationCount;
@@ -61,7 +61,7 @@ final class VorbisResidue {
               var12 = this.passBookIndices[var11 * 8 + var8];
               if (var12 >= 0) {
                 var13 = this.begin + var9 * this.partitionSize;
-                var14 = MusicDecoder.field_u[var12];
+                var14 = MusicDecoder.codebooks[var12];
                 if (this.residueType != 0) {
                   var15 = 0;
                   while (var15 < this.partitionSize) {

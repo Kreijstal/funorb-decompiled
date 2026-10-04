@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/6e7a4d2397833f7d17750f374463e79d301ff566/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/bccf54d50f98a2add3163a66b4db16d818dd7db4/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 161)
+## Current readability (pass 162)
 
-The export has 15,915 guarded names and 107,323 Java identifier edits, plus 11
+The export has 16,192 guarded names and 109,015 Java identifier edits, plus 11
 class-name literal edits and 277 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -24,7 +24,40 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current account validator naming (pass 161)
+## Current music floor and decoder naming (pass 162)
+
+Pass 162 adds 277 guarded names: 33 fields, fourteen methods, 29 parameters
+and 201 locals. All 123 MusicDecodeStage and 195 MusicDecoder declarations now
+have readable names; constructors follow the existing class rules. Floor setup,
+neighbor prediction, residual reconstruction, paired point sorting and spectrum
+multiplication are explicit. Decoder names expose codebooks, mode mappings,
+short/long MDCT tables, window bounds, overlap buffers, loop metadata and PCM writes.
+
+The floor/helper roles are inferred from matching source layouts and formulas
+with [Xiph's Vorbis I specification](https://xiph.org/vorbis/doc/Vorbis_I_spec.html),
+sections 7 and 9. This does not establish full codec compliance. The custom
+packet container, validation omissions, shared floor scratch, first floor-line
+write before end clamping, absent-floor path and all floating arithmetic remain.
+Decoder cleanup still leaves setupLoaded unchanged. Budgeted decoding can still
+exceed its remaining sample budget by the samples produced by one packet.
+Reused locals retain every supported phase, including unused snapshots; buffer
+swaps, aliases, partial effects, exception scopes and diagnostic literals stay intact.
+
+The export has 16,192 rules and 109,015 identifier edits, plus eleven class-name
+literal and 277 label edits: 109,303 total. All 15,915 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Seven generated Java files change only in names. Both 303-file
+corpora compile, reproduce and reverse byte exactly. Raw source and all tool,
+workflow, stub, class-literal, label-policy and native pins stay fixed. All 27
+publication tests pass. This pass adds/runs no native probes or runtime cases
+and makes no new performance claim.
+
+Eight large labeled bodies, 152 opaque labels, 210 opaque fields and 236
+single-letter methods remain. Live setup/archive loading, music playback,
+malformed-packet handling, full codec/game/browser/phone behavior and
+heap/presented-FPS acceptance remain unverified.
+
+## Previous account validator naming (pass 161)
 
 Pass 161 adds 204 guarded names: twelve fields, fifteen methods, 33 parameters
 and 144 locals. All 57 AgeValidator, 79 EmailValidator, 53 EmailAvailabilityValidator

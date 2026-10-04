@@ -1,11 +1,44 @@
 # Readable GeoBlox
 
-The current export has 15,915 guarded naming rules: 302 classes, 1,862 fields,
-1,604 methods, 4,452 parameters, 7,602 local declarations and 93 labels. Both 303-file corpora
+The current export has 16,192 guarded naming rules: 302 classes, 1,895 fields,
+1,618 methods, 4,481 parameters, 7,803 local declarations and 93 labels. Both 303-file corpora
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current account validator naming (pass 161)
+## Current music floor and decoder naming (pass 162)
+
+Pass 162 adds 277 guarded names: 33 fields, fourteen methods, 29 parameters
+and 201 locals. All 123 MusicDecodeStage and 195 MusicDecoder declarations now
+have readable names; constructors follow the existing class rules. Floor setup,
+neighbor prediction, residual reconstruction, paired point sorting and spectrum
+multiplication are explicit. Decoder names expose codebooks, mode mappings,
+short/long MDCT tables, window bounds, overlap buffers, loop metadata and PCM writes.
+
+The floor/helper roles are inferred from matching source layouts and formulas
+with [Xiph's Vorbis I specification](https://xiph.org/vorbis/doc/Vorbis_I_spec.html),
+sections 7 and 9. This does not establish full codec compliance. The custom
+packet container, validation omissions, shared floor scratch, first floor-line
+write before end clamping, absent-floor path and all floating arithmetic remain.
+Decoder cleanup still leaves setupLoaded unchanged. Budgeted decoding can still
+exceed its remaining sample budget by the samples produced by one packet.
+Reused locals retain every supported phase, including unused snapshots; buffer
+swaps, aliases, partial effects, exception scopes and diagnostic literals stay intact.
+
+The export has 16,192 rules and 109,015 identifier edits, plus eleven class-name
+literal and 277 label edits: 109,303 total. All 15,915 previous complete rules,
+19,498 dictionary identities, 136,607 bindings, 388 overrides and 811 label
+records remain. Seven generated Java files change only in names. Both 303-file
+corpora compile, reproduce and reverse byte exactly. Raw source and all tool,
+workflow, stub, class-literal, label-policy and native pins stay fixed. All 27
+publication tests pass. This pass adds/runs no native probes or runtime cases
+and makes no new performance claim.
+
+Eight large labeled bodies, 152 opaque labels, 210 opaque fields and 236
+single-letter methods remain. Live setup/archive loading, music playback,
+malformed-packet handling, full codec/game/browser/phone behavior and
+heap/presented-FPS acceptance remain unverified.
+
+## Previous account validator naming (pass 161)
 
 Pass 161 adds 204 guarded names: twelve fields, fifteen methods, 33 parameters
 and 144 locals. All 57 AgeValidator, 79 EmailValidator, 53 EmailAvailabilityValidator
