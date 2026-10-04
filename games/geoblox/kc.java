@@ -164,7 +164,7 @@ final class kc {
                             } else {
                               var13.a(var12, false);
                               var6_int = 0;
-                              L17: while (var6_int < var12.field_L) {
+                              while (var6_int < var12.field_L) {
                                 var7 = var10.field_n[var6_int];
                                 stackIn_20_0 = (ja) ((Object) var13.c((byte) 121));
                                 var8 = stackIn_20_0;
@@ -194,7 +194,7 @@ final class kc {
                                   break;
                                 }
                                 var6_int++;
-                                continue L17;
+                                continue;
                               }
                               continue L12;
                             }
@@ -244,7 +244,6 @@ final class kc {
                   }
                   continue;
                 }
-                break L2;
               }
               var1_int = 0;
             }
