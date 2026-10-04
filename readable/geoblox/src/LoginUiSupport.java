@@ -82,7 +82,7 @@ final class LoginUiSupport {
     }
 
     final static void releaseAwtLoadingFonts(byte methodGuard) {
-        TextWidgetRenderer.field_a = null;
+        TextWidgetRenderer.loadingProgressImage = null;
         int guardResidue = 59 % ((methodGuard + 30) / 37);
         UiFontResources.awtLoadingFont = null;
     }

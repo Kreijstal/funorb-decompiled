@@ -9,12 +9,12 @@ class TextInputRenderer extends TextWidgetRenderer {
     static int[] secondVertexTransformedY;
     static int field_u;
 
-    TextInputRenderer(BitmapFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
+    TextInputRenderer(BitmapFont font, int textColor) {
+        super(font, 4, 2, 2, 2, textColor, -1, 0, 1, font.maxAscent, -1, 2147483647, false);
     }
 
-    TextInputRenderer(int param0) {
-        this(DialogLayer.sharedUiFont, param0);
+    TextInputRenderer(int textColor) {
+        this(DialogLayer.sharedUiFont, textColor);
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
@@ -26,8 +26,8 @@ class TextInputRenderer extends TextWidgetRenderer {
                 sharedDefaultTextWidgetRenderer = (TextWidgetRenderer) null;
             }
             super.drawWidget(parentX, -11, parentY, widgetEnabled, widget);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ac.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException widgetDrawFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetDrawFailure), "ac.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 

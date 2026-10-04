@@ -24,18 +24,18 @@ final class IterableNodeHashTable implements Iterable {
         if (methodGuard != -12618) {
           return;
         }
-        TextWidgetRenderer.field_d = null;
+        TextWidgetRenderer.unreadTicketMessage = null;
         if (AgeValidator.field_i) {
           Geoblox.activeMessageDialog.showConnectionRestoredContent(false);
         } else {
           ticketCountFromSessionAccessByte = EntityLinkSupport.sessionAccessLevelByte;
           if (ticketCountFromSessionAccessByte > 0) {
             if (1 == ticketCountFromSessionAccessByte) {
-              TextWidgetRenderer.field_d = EntityContactSupport.ticketingOneUnreadText;
+              TextWidgetRenderer.unreadTicketMessage = EntityContactSupport.ticketingOneUnreadText;
             } else {
-              TextWidgetRenderer.field_d = OpacityWidget.a(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(ticketCountFromSessionAccessByte)}, (byte) -124);
+              TextWidgetRenderer.unreadTicketMessage = OpacityWidget.a(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(ticketCountFromSessionAccessByte)}, (byte) -124);
             }
-            TextWidgetRenderer.field_d = NameCharacterSupport.joinTextParts(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
+            TextWidgetRenderer.unreadTicketMessage = NameCharacterSupport.joinTextParts(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.unreadTicketMessage), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }
           Geoblox.activeMessageDialog.dismissDialog((byte) -104);
           StatefulWidgetRenderer.c(520);

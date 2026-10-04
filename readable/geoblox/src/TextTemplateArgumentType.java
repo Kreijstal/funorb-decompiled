@@ -142,7 +142,7 @@ final class TextTemplateArgumentType {
           if (param0 != 1) {
             TextTemplateArgumentType.renderLogoMeshes((byte) 8);
           }
-          ClientScreenExitSupport.fullscreenDialogLayer.processPointerFrame(true, 127, TextLayout.field_c, MessageDialogContent.field_I);
+          ClientScreenExitSupport.fullscreenDialogLayer.processPointerFrame(true, 127, TextLayout.fullscreenPointerOriginX, MessageDialogContent.field_I);
           ClientScreenExitSupport.fullscreenDialogLayer.advanceDialogAnimations(-50);
           while (UiFontResources.pollKeyboardEvent(125)) {
             ClientScreenExitSupport.fullscreenDialogLayer.dispatchKeyInputOrRequestFocus((byte) -126, GameAudioState.currentKeyboardEventCharacter, SessionTextHistorySupport.currentKeyboardEventCode);

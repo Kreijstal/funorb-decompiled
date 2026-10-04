@@ -41,10 +41,10 @@ abstract class ArchiveRequest extends DualLinkNode {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == TextWidgetRenderer.field_a) {
-                TextWidgetRenderer.field_a = MessageDialog.gameCanvas.createImage(304, 34);
+              if (null == TextWidgetRenderer.loadingProgressImage) {
+                TextWidgetRenderer.loadingProgressImage = MessageDialog.gameCanvas.createImage(304, 34);
               }
-              var10 = TextWidgetRenderer.field_a.getGraphics();
+              var10 = TextWidgetRenderer.loadingProgressImage.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param0, 30);
@@ -57,7 +57,7 @@ abstract class ArchiveRequest extends DualLinkNode {
               var10.setFont(UiFontResources.awtLoadingFont);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(TextWidgetRenderer.field_a, AudioService.canvasWidth / 2 - 152, ClientRenderingState.canvasHeight / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(TextWidgetRenderer.loadingProgressImage, AudioService.canvasWidth / 2 - 152, ClientRenderingState.canvasHeight / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

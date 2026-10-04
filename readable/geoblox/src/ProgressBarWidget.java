@@ -102,7 +102,7 @@ final class ProgressBarWidget extends UiWidget {
         var8 = Geoblox.clientControlFlowFlag;
         try {
           var5_int = x + this.widgetWidth;
-          PasswordWidgetRenderer.a(y, this.rightEndMask.width + x, methodGuard ^ 6447, this.widgetHeight + y, var5_int - this.rightEndMask.width);
+          PasswordWidgetRenderer.pushWidgetClip(y, this.rightEndMask.width + x, methodGuard ^ 6447, this.widgetHeight + y, var5_int - this.rightEndMask.width);
           for (var6 = x - this.stripeOffset; var6 < var5_int; var6 = var6 + stripeSprite.width) {
             stripeSprite.draw(var6, y);
           }
@@ -153,7 +153,7 @@ final class ProgressBarWidget extends UiWidget {
         int var7 = parentY + this.widgetY;
         this.drawRoundedStripes(this.stripeSprites[0], var7, var6, -12276);
         if (this.fillFractionQ16 < 65536) {
-            PasswordWidgetRenderer.a(var7, var6 + (this.widgetWidth * this.fillFractionQ16 >> 16), -14045, var7 + this.widgetHeight, this.widgetWidth + var6);
+            PasswordWidgetRenderer.pushWidgetClip(var7, var6 + (this.widgetWidth * this.fillFractionQ16 >> 16), -14045, var7 + this.widgetHeight, this.widgetWidth + var6);
             this.drawRoundedStripes(this.stripeSprites[1], var7, var6, -12276);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
         }

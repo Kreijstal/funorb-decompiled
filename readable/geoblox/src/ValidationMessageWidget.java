@@ -149,7 +149,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var6 = this.validationProvider.getDebouncedValidationState((byte) -105);
         var8 = (TextWidgetLayout) ((Object) this.renderer);
         var9 = this.widgetX + parentX;
-        var10 = var8.a(parentY, -2, (UiWidget) (this)) + (var8.a((byte) 125, (UiWidget) (this)).b(-3111) >> 1);
+        var10 = var8.getTextOriginY(parentY, -2, (UiWidget) (this)) + (var8.getTextLayout((byte) 125, (UiWidget) (this)).getLayoutHeight(-3111) >> 1);
         var11 = 7 % ((methodGuard - 1) / 43);
         if (ImageProducerRasterBuffer.debouncingValidationState == var6) {
           var19 = ClientClockSupport.validationStateSprites[0];

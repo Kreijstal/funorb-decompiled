@@ -810,8 +810,8 @@ class UiWidget extends IntrusiveNode {
             this.widgetText = text;
             if (this.renderer instanceof TextWidgetLayout) {
                 measuringRenderer = (TextWidgetLayout) ((Object) this.renderer);
-                this.widgetWidth = measuringRenderer.a((UiWidget) (this), (byte) -33);
-                this.widgetHeight = measuringRenderer.a(-122, (UiWidget) (this));
+                this.widgetWidth = measuringRenderer.getMaximumLineEndXWithPadding((UiWidget) (this), (byte) -33);
+                this.widgetHeight = measuringRenderer.getLayoutHeightWithPadding(-122, (UiWidget) (this));
             }
         } catch (RuntimeException widgetConstructionFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetConstructionFailure), "el.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');

@@ -116,16 +116,16 @@ final class WidgetSkinState {
           if (this.icon != null) {
             var6_int = this.offsetX + (param3.widgetX + param1);
             var7 = this.offsetY + param2 + param3.widgetY;
-            if (param0.field_g == 1) {
+            if (param0.horizontalAlignment == 1) {
               var6_int = var6_int + (-this.icon.fullWidth + param3.widgetWidth) / 2;
             }
-            if (2 == param0.field_g) {
+            if (2 == param0.horizontalAlignment) {
               var6_int = var6_int + (-this.icon.fullWidth + param3.widgetWidth);
             }
-            if (param0.field_i == 1) {
+            if (param0.verticalAlignment == 1) {
               var7 = var7 + (param3.widgetHeight - this.icon.fullHeight) / 2;
             }
-            if (2 == param0.field_i) {
+            if (2 == param0.verticalAlignment) {
               var7 = var7 + (-this.icon.fullHeight + param3.widgetHeight);
             }
             this.icon.draw(var6_int, var7);
@@ -133,21 +133,21 @@ final class WidgetSkinState {
           if (param4 != 0) {
             pendingQueryValidationState = (ValidationState) null;
           }
-          var6 = param0.c(120, param3);
+          var6 = param0.getDisplayText(120, param3);
           if ((var6 != null) &&
-              (null != param0.field_n)) {
+              (null != param0.font)) {
             if (this.textColor < 0) {
               return;
             }
-            stackIn_20_0 = param0.field_n;
+            stackIn_20_0 = param0.font;
             stackIn_20_1 = var6;
             if (this.offsetX != -2147483648) {
               stackIn_21_2 = this.offsetX;
             } else {
               stackIn_21_2 = 0;
             }
-            stackIn_23_2 = stackIn_21_2 + param0.field_e + param3.widgetX + param1;
-            stackIn_23_3 = param0.field_m;
+            stackIn_23_2 = stackIn_21_2 + param0.paddingLeft + param3.widgetX + param1;
+            stackIn_23_3 = param0.paddingTop;
             stackIn_23_4 = param3.widgetY + param2;
             if (this.offsetY == -2147483648) {
               stackIn_24_5 = 0;
@@ -155,8 +155,8 @@ final class WidgetSkinState {
               stackIn_24_5 = this.offsetY;
             }
             stackIn_26_3 = stackIn_23_3 + (stackIn_23_4 + stackIn_24_5);
-            stackIn_26_4 = -param0.field_e + param3.widgetWidth - param0.field_j;
-            stackIn_26_5 = -param0.field_b + (-param0.field_m + param3.widgetHeight);
+            stackIn_26_4 = -param0.paddingLeft + param3.widgetWidth - param0.paddingRight;
+            stackIn_26_5 = -param0.paddingBottom + (-param0.paddingTop + param3.widgetHeight);
             stackIn_26_6 = this.textColor;
             stackIn_26_7 = this.textShadowColor;
             if (this.textAlpha != -2147483648) {
@@ -164,7 +164,7 @@ final class WidgetSkinState {
             } else {
               stackIn_27_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_g, param0.field_i, param0.field_f);
+            ((BitmapFont) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.horizontalAlignment, param0.verticalAlignment, param0.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

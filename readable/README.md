@@ -5,7 +5,42 @@ The current export has 13,301 guarded naming rules: 302 classes, 1,709 fields,
 compile, comparing 136,607 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current validation and account name (pass 147)
+## Current text layout and renderer (pass 148)
+
+Pass 148 adds 560 guarded rules: 31 fields, fifty methods, 194 parameters,
+284 locals and one label. Every declaration in TextWidgetLayout (43),
+TextWidgetRenderer (283), TextLayout (74), TextLayoutLine (20) and
+CachedTextLayout (117) has a readable name; constructors follow class rules.
+The complete layout interface and display-text/password override families now
+expose hitTestCaretIndex, drawSelection, drawCaret, getTextLayout, origins,
+available viewport dimensions and padded metrics. Maximum line end X retains
+its alignment offsets; it is not presented as plain string width.
+
+Padding, colors, selection ARGB, font/alignment/spacing, line bounds and caret
+positions follow producers and consumers. populateCaretPositions exposes the
+existing markup-anchor and fixed256 space-justification arithmetic. Cache keys
+and aliases remain exact: single-line caches omit anchor/baseline, centered
+layout never saves cachedText, null text clears lines without clearing keys,
+and paragraph alignment/spacing mutations keep their original behavior.
+Selection still passes bottomY as rectangle height. Clip restoration remains
+on successful paths, not an invented finally. Overflow, guards, partial
+failures, password masking, caller ordering and all client-control paths stay.
+
+Shared progress image, unread ticket message, reconnect-error-page suppression,
+fullscreen pointer origin and intro frame/red tint have grounded names.
+textDrawingCompletion names one existing frame and three breaks; label edits
+grow from 246 to 250 without removing control flow. There are 14,618 rules and
+102,174 identifier edits, plus eleven class-literal and 250 label edits:
+102,435 total. All 14,058 previous complete rules and raw/tool/workflow/stub/
+native/text pins remain. Both 303-file corpora compile, preserve 136,607
+bindings, 388 overrides and 813 lexical label records, and reverse byte exactly.
+The 27 publication tests and eight existing native fixtures pass within their
+recorded scopes. Full fonts/markup/cache/caret/selection, arbitrary callbacks,
+async input/assets and device behavior are not newly executed. Eight large
+labeled bodies, 163 opaque labels, 329 opaque fields and 355 short opaque
+methods remain; whole-game/server/device and heap/FPS acceptance remain unverified.
+
+## Previous validation and account name (pass 147)
 
 Pass 147 adds 148 guarded names: fifteen fields, 24 methods, 49 parameters
 and 60 locals. Every declaration in ValidatedTextInputWidget (49),
@@ -943,7 +978,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/06d2b90e35ccc17d3fbacb42fe24678ca8901da1/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/06d2b90e35ccc17d3fbacb42fe24678ca8901da1/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -1187,7 +1222,7 @@ Pass123 adds the guarded direct-literal policy and their readable class names.
 The current raw tree is
 `2b3bf4664aaf082ec60395d0b40546cda545920221218af5056a6f6858bbed4a`;
 the current readable tree is
-`fe7921b04cd3fb5df09d25c091130ebcff17d29c9b679df7aea1438c88099f40`.
+`ecc8a089a567227beca0f102dab5f3936efb20d7fb0c6b132b40e49add56f496`.
 The pinned decompiler-source SHA-256 is
 `841f43eedeec1f7261638588a61b4047a8aae54f9d193ecf777eb6eb3b59aaf1`.
 All eight native/raw/readable probes pass with their pinned traces.
@@ -1201,16 +1236,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/06d2b90e35ccc17d3fbacb42fe24678ca8901da1/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/06d2b90e35ccc17d3fbacb42fe24678ca8901da1/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `ab38b1d15078161ceba5bb2fe3d1161af78357b1`; the
-manifest SHA-256 is `9b74bb6600e3052fc0acf97d556d40d5154d3879c6f65608dcd91d1366c8b825`.
+The current Deko workflow/manifest commit is `06d2b90e35ccc17d3fbacb42fe24678ca8901da1`; the
+manifest SHA-256 is `81ce95a41428f60d8ee36fb6749d692e6204b9f8f33575a1980f7ca756f67ed5`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

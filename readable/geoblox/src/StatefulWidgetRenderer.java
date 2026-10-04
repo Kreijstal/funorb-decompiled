@@ -76,7 +76,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         int var7 = 0;
         var7 = Geoblox.clientControlFlowFlag;
         try {
-          super.a(param1, param0);
+          super.copyStyleTo(param1, param0);
           if (param2) {
             for (var4_int = 0; 6 > var4_int; var4_int++) {
               var5 = this.stateSkins[var4_int];
@@ -157,7 +157,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         }
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
         if (!(null != SecondaryNodeHashTable.accountProgressDialog)) {
-            SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
+            SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
         }
         ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
     }
@@ -245,7 +245,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             stackIn_3_0 = (UiWidget) (widget);
           }
           var10 = (ButtonWidget) ((Object) stackIn_3_0);
-          PasswordWidgetRenderer.a(widget.widgetY + parentY, widget.widgetX + parentX, -14045, widget.widgetHeight + (parentY + widget.widgetY), widget.widgetWidth + (parentX + widget.widgetX));
+          PasswordWidgetRenderer.pushWidgetClip(widget.widgetY + parentY, widget.widgetX + parentX, -14045, widget.widgetHeight + (parentY + widget.widgetY), widget.widgetWidth + (parentX + widget.widgetX));
           if (var10 != null) {
             widgetEnabled = widgetEnabled & var10.enabled;
           }

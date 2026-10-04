@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface TextWidgetLayout {
-    public abstract TextLayout a(byte param0, UiWidget param1);
+    public abstract TextLayout getTextLayout(byte methodGuard, UiWidget widget);
 
-    public abstract int a(UiWidget param0, byte param1);
+    public abstract int getMaximumLineEndXWithPadding(UiWidget widget, byte methodGuard);
 
-    public abstract int a(int param0, UiWidget param1, byte param2);
+    public abstract int getTextOriginX(int parentX, UiWidget widget, byte methodGuard);
 
-    public abstract void a(int param0, int param1, int param2, UiWidget param3, int param4);
+    public abstract void drawCaret(int parentX, int caretIndex, int methodGuard, UiWidget widget, int parentY);
 
-    public abstract int a(int param0, int param1, UiWidget param2);
+    public abstract int getTextOriginY(int parentY, int methodGuard, UiWidget widget);
 
-    public abstract int a(int param0, UiWidget param1);
+    public abstract int getLayoutHeightWithPadding(int methodGuard, UiWidget widget);
 
-    public abstract int a(UiWidget param0, int param1, int param2, int param3, int param4, int param5);
+    public abstract int hitTestCaretIndex(UiWidget widget, int pointerX, int methodGuard, int parentY, int pointerY, int parentX);
 
-    public abstract int a(UiWidget param0, int param1);
+    public abstract int getAvailableTextWidth(UiWidget widget, int methodGuard);
 
-    public abstract void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5);
+    public abstract void drawSelection(int selectionAnchorIndex, int methodGuard, int parentY, int parentX, int caretIndex, UiWidget widget);
 
-    public abstract int a(int param0);
+    public abstract int getFontHeight(int methodGuard);
 }

@@ -149,8 +149,8 @@ class HotspotTextWidget extends ButtonWidget {
         TextHotspotBounds var7 = this.hoveredHotspot;
         if (var7 == null) {
         } else {
-            var8 = var6.a(parentX, (UiWidget) (this), (byte) 46);
-            var9 = var6.a(parentY, -2, (UiWidget) (this));
+            var8 = var6.getTextOriginX(parentX, (UiWidget) (this), (byte) 46);
+            var9 = var6.getTextOriginY(parentY, -2, (UiWidget) (this));
             do {
                 ImageProducerRasterBuffer.a(-2 + var9 + var7.y, 2 + var7.width, 14164, 2 + var7.height, var7.x + (var8 - 2));
                 var7 = var7.nextSegment;
@@ -246,7 +246,7 @@ class HotspotTextWidget extends ButtonWidget {
         var2 = 83 / ((methodGuard - 48) / 55);
         var3 = 0;
         var4 = (TextWidgetLayout) ((Object) this.renderer);
-        var5 = var4.a((byte) 116, (UiWidget) (this));
+        var5 = var4.getTextLayout((byte) 116, (UiWidget) (this));
         while (true) {
           var6 = this.widgetText.indexOf("<hotspot=", var3);
           if (-1 == var6) {
@@ -256,28 +256,28 @@ class HotspotTextWidget extends ButtonWidget {
           var7 = this.widgetText.substring(var6 + 9, var8);
           var8 = Integer.parseInt(var7);
           var3 = this.widgetText.indexOf("</hotspot>", var6);
-          var9 = var5.a((byte) 24, var6);
-          var10 = var5.a((byte) 24, var3);
+          var9 = var5.getCaretLineIndex((byte) 24, var6);
+          var10 = var5.getCaretLineIndex((byte) 24, var3);
           var11 = null;
           for (var12 = var9; var10 >= var12; var12++) {
-            var13 = var5.field_a[var12];
+            var13 = var5.lines[var12];
             if (var9 == var12) {
-              stackIn_7_0 = var5.a(var6, 124);
+              stackIn_7_0 = var5.getCaretX(var6, 124);
             } else {
-              stackIn_7_0 = var13.field_c[0];
+              stackIn_7_0 = var13.caretX[0];
             }
             var14 = stackIn_7_0;
             if (var12 == var10) {
-              stackIn_12_0 = var5.a(var3, 116);
+              stackIn_12_0 = var5.getCaretX(var3, 116);
             } else {
               if (var13 == null) {
                 stackIn_12_0 = 0;
               } else {
-                stackIn_12_0 = var13.field_c[-1 + var13.field_c.length];
+                stackIn_12_0 = var13.caretX[-1 + var13.caretX.length];
               }
             }
             var15 = stackIn_12_0;
-            var16 = new TextHotspotBounds(var8, var14, var13.field_d, var15 - var14, Math.max(var4.a(1), -var13.field_d + var13.field_a));
+            var16 = new TextHotspotBounds(var8, var14, var13.topY, var15 - var14, Math.max(var4.getFontHeight(1), -var13.topY + var13.bottomY));
             if (var11 != null) {
               ((TextHotspotBounds) (var11)).nextSegment = var16;
             }
@@ -331,7 +331,7 @@ class HotspotTextWidget extends ButtonWidget {
         if (methodGuard != 0) {
             field_I = (ByteArrayBuffer) null;
         }
-        this.setWidgetBounds(((TextWidgetLayout) ((Object) this.renderer)).a(14, (UiWidget) (this)), width, (byte) -40, y, x);
+        this.setWidgetBounds(((TextWidgetLayout) ((Object) this.renderer)).getLayoutHeightWithPadding(14, (UiWidget) (this)), width, (byte) -40, y, x);
     }
 
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {

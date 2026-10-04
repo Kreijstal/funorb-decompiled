@@ -87,12 +87,12 @@ final class WidgetTheme {
         try {
             var17 = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, 2 + (font.maxAscent + font.maxDescent));
             this.field_b = (WidgetRenderer) ((Object) var17);
-            var17.field_o = 16777215;
+            var17.textColor = 16777215;
             var4 = new StatefulWidgetRenderer();
-            var17.a(var4, true);
+            var17.copyStyleTo(var4, true);
             this.field_n = 15658734;
-            var4.field_h = 11711154;
-            var4.field_c = 15658734;
+            var4.selectionArgb = 11711154;
+            var4.caretColor = 15658734;
             this.tooltipBackgroundColor = 5592405;
             this.field_e = 3;
             this.field_p = 3;
@@ -115,16 +115,16 @@ final class WidgetTheme {
             var4.a(-101, 5).a(IntrusiveDeque.buildUnitBorderNineSliceSprites(0, 0, 116, 0, 65793), true).a(true, (byte) 73).b(256, -1);
             this.field_j = (WidgetRenderer) ((Object) var4);
             var6 = new StatefulWidgetRenderer(var4, true);
-            var6.field_g = 0;
+            var6.horizontalAlignment = 0;
             var7 = new StatefulWidgetRenderer(var4, true);
-            var7.field_g = 0;
+            var7.horizontalAlignment = 0;
             var7.a((byte) 124, MeshPrioritySupport.createSolidCenterSlices(8947848, (byte) -112));
             var7.a(-116, 1).a(MeshPrioritySupport.createSolidCenterSlices(11184810, (byte) -112), true).b(256, 2236962);
             this.field_c = (WidgetRenderer) ((Object) new CheckboxRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
             discarded$0 = new DialRenderer(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
             discarded$1 = new MultiHandleSliderRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
             var8 = new StatefulWidgetRenderer();
-            var17.a(var8, true);
+            var17.copyStyleTo(var8, true);
             var8.a(-124, 0).a(WidgetTheme.a(7829367, 15658734, 10066329, 1), true).b(256, 1118481).a((byte) 16, -1);
             var8.a(-105, 4).a(true, (byte) 73).a(var5, true);
             this.field_g = (WidgetRenderer) ((Object) var8);
@@ -274,16 +274,16 @@ final class WidgetTheme {
         return TextInputWidget.createTwoTonePanelSprites(param0, (byte) -70, param2, param1, 1);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param4 != 15658734) {
+    final void fillWidgetRectangleAlpha(int y, int height, int width, int alpha, int methodGuard, int color, int x) {
+        if (methodGuard != 15658734) {
             return;
         }
-        SoftwareRasterizer.fillRectangleAlpha(param6, param0, param2, param1, param5, param3);
+        SoftwareRasterizer.fillRectangleAlpha(x, y, width, height, color, alpha);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.drawLine(param4, param3, param1, param0, param2);
-        if (param5 != 8947848) {
+    final void drawWidgetLine(int endY, int endX, int color, int startY, int startX, int methodGuard) {
+        SoftwareRasterizer.drawLine(startX, startY, endX, endY, color);
+        if (methodGuard != 8947848) {
             this.field_p = 22;
         }
     }

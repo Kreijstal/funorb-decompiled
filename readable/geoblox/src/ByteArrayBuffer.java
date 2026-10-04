@@ -256,7 +256,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static void drawLoadingProgressDialog(float scaledProgress, String statusText, boolean sessionExitRequested, byte methodGuard) {
         try {
             if (SecondaryNodeHashTable.accountProgressDialog == null) {
-                SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.field_d);
+                SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
                 ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
             }
             SecondaryNodeHashTable.accountProgressDialog.updateProgress(sessionExitRequested, statusText, methodGuard ^ -92, scaledProgress);

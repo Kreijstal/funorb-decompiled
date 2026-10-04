@@ -48,7 +48,7 @@ final class DelayedPcmStream extends PcmStream {
     }
 
     final static boolean beginSessionRetryAndCheckStageEleven(boolean suppressReconnectPageNotification) {
-        TextWidgetRenderer.field_k = suppressReconnectPageNotification ? true : false;
+        TextWidgetRenderer.suppressReconnectErrorPage = suppressReconnectPageNotification ? true : false;
         DisplayNamePanel.connectionRetryDeadlineMillis = 15000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
         return SpriteConstructionSupport.clientScreenStage == 11 ? true : false;
     }

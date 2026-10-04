@@ -433,7 +433,7 @@ public final class Geoblox extends SessionGameApplet {
         UsernameQueryState.clearAccountUsernameResult(true);
         FullscreenErrorDialog.i((byte) -80);
         LogoPreparationSupport.releaseStaticReferences(true);
-        TextWidgetRenderer.a(true);
+        TextWidgetRenderer.releaseStaticReferences(true);
         TriangleRasterState.releaseTriangleTables();
         MusicDecoder.a();
         AttachedEntityRenderer.releaseStaticReferences(126);
@@ -504,7 +504,7 @@ public final class Geoblox extends SessionGameApplet {
         DialWidget.f(0);
         MultiHandleSliderWidget.f(0);
         GameGraphicsResources.clearGameGraphicsResources(methodGuard + 71);
-        CachedTextLayout.b((byte) -87);
+        CachedTextLayout.releaseStaticReferences((byte) -87);
         DirectByteStorage.b(methodGuard ^ 47);
         GrowableIntList.a(27);
         DraggableWidget.g((byte) -113);
@@ -545,7 +545,7 @@ public final class Geoblox extends SessionGameApplet {
         KeyedIntRecordSubmission.b(methodGuard ^ -65);
         FifoResponseToken.b(false);
         WidgetSkinState.a(false);
-        TextLayoutLine.a((byte) 0);
+        TextLayoutLine.releaseStaticReferences((byte) 0);
         ScorePopup.c((byte) -40);
         UsernameAvailabilityValidator.d((byte) 113);
         PasswordValidator.g(methodGuard - 51);

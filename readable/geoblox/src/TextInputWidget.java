@@ -44,7 +44,7 @@ class TextInputWidget extends ButtonWidget {
           if (this.pressedPointerButton == 1) {
             if (this.renderer instanceof TextWidgetLayout) {
               textRenderer = (TextWidgetLayout) ((Object) this.renderer);
-              hitTextIndex = textRenderer.a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
+              hitTextIndex = textRenderer.hitTestCaretIndex((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
               if (-1 != hitTextIndex) {
                 if ((this.wordSelectionDrag) &&
                     (this.wordSelectionEndIndex > hitTextIndex) &&
@@ -223,7 +223,7 @@ class TextInputWidget extends ButtonWidget {
         try {
           if ((super.handlePointerPress(parentY, 104, parentX, pointerButton, pointerX, pointerY, eventContext)) &&
               (this.renderer instanceof TextWidgetLayout)) {
-            hitTextIndexOrGuardQuotient = ((TextWidgetLayout) ((Object) this.renderer)).a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
+            hitTextIndexOrGuardQuotient = ((TextWidgetLayout) ((Object) this.renderer)).hitTestCaretIndex((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
             if (hitTextIndexOrGuardQuotient != -1) {
               hitCaretIndexSnapshot = hitTextIndexOrGuardQuotient;
             } else {
@@ -296,11 +296,11 @@ class TextInputWidget extends ButtonWidget {
           if (this.renderer instanceof TextWidgetLayout) {
             textRenderer = (TextWidgetLayout) ((Object) this.renderer);
             if (this.caretIndex != this.selectionAnchorIndex) {
-              textRenderer.a(this.selectionAnchorIndex, 0, parentY, parentX, this.caretIndex, (UiWidget) (this));
+              textRenderer.drawSelection(this.selectionAnchorIndex, 0, parentY, parentX, this.caretIndex, (UiWidget) (this));
             }
             nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             if ((-this.caretBlinkStartMillis + nowMillis) % 1000L < 500L) {
-              textRenderer.a(parentX, this.caretIndex, -2, (UiWidget) (this), parentY);
+              textRenderer.drawCaret(parentX, this.caretIndex, -2, (UiWidget) (this), parentY);
             }
           }
         }
@@ -510,15 +510,15 @@ class TextInputWidget extends ButtonWidget {
         if (methodGuard > -66) {
           return;
         }
-        layout = textRenderer.a((byte) 119, (UiWidget) (this));
-        textWidth = layout.a(96);
-        availableTextWidth = textRenderer.a((UiWidget) (this), -1);
-        halfCaretMargin = textRenderer.a(1) >> 1;
+        layout = textRenderer.getTextLayout((byte) 119, (UiWidget) (this));
+        textWidth = layout.getMaximumLineEndX(96);
+        availableTextWidth = textRenderer.getAvailableTextWidth((UiWidget) (this), -1);
+        halfCaretMargin = textRenderer.getFontHeight(1) >> 1;
         if (textWidth < availableTextWidth - halfCaretMargin) {
           this.textOffsetX = 0;
           this.textOffsetY = 0;
         } else {
-          caretXWithOffset = this.textOffsetX + layout.a(this.caretIndex, 120);
+          caretXWithOffset = this.textOffsetX + layout.getCaretX(this.caretIndex, 120);
           if (caretXWithOffset > availableTextWidth - halfCaretMargin) {
             this.textOffsetX = this.textOffsetX - (caretXWithOffset + halfCaretMargin - availableTextWidth);
           } else {

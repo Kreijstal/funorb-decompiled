@@ -31,18 +31,18 @@ final class DequeCursor {
             return true;
           }
           if ((0 == MatchingTextValidator.field_j % 40) &&
-              (CachedTextLayout.field_h < 11)) {
+              (CachedTextLayout.introFaceFrameIndex < 11)) {
             UnderlinedButtonRenderer.field_c = MatchingTextValidator.field_j;
-            CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
-            if (10 == CachedTextLayout.field_h) {
+            CachedTextLayout.introFaceFrameIndex = CachedTextLayout.introFaceFrameIndex + 1;
+            if (10 == CachedTextLayout.introFaceFrameIndex) {
               ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
             }
           }
           var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
-          if (11 > CachedTextLayout.field_h) {
-            WidgetSkinState.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
+          if (11 > CachedTextLayout.introFaceFrameIndex) {
+            WidgetSkinState.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.introTintRedDelta) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
           }
-          var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
+          var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
           var3 = MatchingTextValidator.field_j << 2;
           if ((!SharedBufferPools.introFirstGeometrySoundPlayed) &&
               (-var3 + 900 <= 320 + var2)) {

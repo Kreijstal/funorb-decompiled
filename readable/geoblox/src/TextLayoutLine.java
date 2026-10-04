@@ -4,63 +4,63 @@
 final class TextLayoutLine {
     static int[] meshModelTransform;
     static int interfaceTextArchiveId;
-    int field_d;
-    static float field_b;
-    int field_a;
-    int[] field_c;
+    int topY;
+    static float introTintRedDelta;
+    int bottomY;
+    int[] caretX;
 
-    final int a(int param0) {
-        if (param0 != 0) {
+    final int getLineEndX(int methodGuard) {
+        if (methodGuard != 0) {
             meshModelTransform = (int[]) null;
-            if (this.field_c == null) {
+            if (this.caretX == null) {
                 return 0;
             }
-            if (0 != this.field_c.length) {
-                return this.field_c[-1 + this.field_c.length];
+            if (0 != this.caretX.length) {
+                return this.caretX[-1 + this.caretX.length];
             }
             return 0;
         }
-        if (this.field_c == null) {
+        if (this.caretX == null) {
             return 0;
         }
-        if (0 != this.field_c.length) {
-            return this.field_c[-1 + this.field_c.length];
+        if (0 != this.caretX.length) {
+            return this.caretX[-1 + this.caretX.length];
         }
         return 0;
     }
 
-    final int a(int param0, int param1) {
-        int var3;
-        int var4;
-        var4 = Geoblox.clientControlFlowFlag;
-        if (null == this.field_c) {
+    final int findNearestCaretIndex(int methodGuard, int x) {
+        int caretIndexOrGuardQuotient;
+        int clientControlFlowSnapshot;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        if (null == this.caretX) {
           return 0;
         }
-        if (this.field_c.length == 0) {
+        if (this.caretX.length == 0) {
           return 0;
         }
-        for (var3 = 1; this.field_c.length > var3; var3++) {
-          if (this.field_c[var3] + this.field_c[-1 + var3] >> 1 > param1) {
-            return var3 - 1;
+        for (caretIndexOrGuardQuotient = 1; this.caretX.length > caretIndexOrGuardQuotient; caretIndexOrGuardQuotient++) {
+          if (this.caretX[caretIndexOrGuardQuotient] + this.caretX[-1 + caretIndexOrGuardQuotient] >> 1 > x) {
+            return caretIndexOrGuardQuotient - 1;
           }
         }
-        var3 = 35 / ((param0 + 9) / 51);
-        return this.field_c.length - 1;
+        caretIndexOrGuardQuotient = 35 / ((methodGuard + 9) / 51);
+        return this.caretX.length - 1;
     }
 
-    public static void a(byte param0) {
-        if (param0 != 0) {
-            TextLayoutLine.a((byte) 43);
+    public static void releaseStaticReferences(byte methodGuard) {
+        if (methodGuard != 0) {
+            TextLayoutLine.releaseStaticReferences((byte) 43);
             meshModelTransform = null;
             return;
         }
         meshModelTransform = null;
     }
 
-    TextLayoutLine(int param0, int param1, int param2) {
-        this.field_d = param0;
-        this.field_c = new int[1 + param2];
-        this.field_a = param1;
+    TextLayoutLine(int topY, int bottomY, int characterCount) {
+        this.topY = topY;
+        this.caretX = new int[1 + characterCount];
+        this.bottomY = bottomY;
     }
 
     static {

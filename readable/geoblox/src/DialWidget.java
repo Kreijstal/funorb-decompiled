@@ -92,72 +92,72 @@ final class DialWidget extends ButtonWidget {
         }
     }
 
-    final static void a(int param0, TextLayoutLine param1, String param2, int param3, BitmapFont param4) {
-        int var7 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        BitmapFont var10 = null;
-        var9 = Geoblox.clientControlFlowFlag;
+    final static void populateCaretPositions(int spaceJustification256, TextLayoutLine line, String text, int methodGuard, BitmapFont font) {
+        int characterIndex = 0;
+        RuntimeException caretFailureForContext = null;
+        StringBuilder caretContextBuilder = null;
+        String lineDescription = null;
+        StringBuilder caretContextBeforeText = null;
+        String textDescription = null;
+        StringBuilder caretContextBeforeFont = null;
+        String fontDescription = null;
+        RuntimeException caughtCaretFailure = null;
+        int accumulatedJustification256 = 0;
+        RuntimeException caretPopulationFailure = null;
+        int markupAnchorX = 0;
+        int characterCode = 0;
+        int clientControlFlowSnapshot = 0;
+        BitmapFont unusedFont = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var5_int = 0;
-          if (param3 != 60) {
-            var10 = (BitmapFont) null;
-            DialWidget.a(-58, (TextLayoutLine) null, (String) null, -15, (BitmapFont) null);
+          accumulatedJustification256 = 0;
+          if (methodGuard != 60) {
+            unusedFont = (BitmapFont) null;
+            DialWidget.populateCaretPositions(-58, (TextLayoutLine) null, (String) null, -15, (BitmapFont) null);
           }
-          var6 = -1;
-          for (var7 = 1; var7 < param2.length(); var7++) {
-            var8 = param2.charAt(var7);
-            if (60 == var8) {
-              var6 = param1.field_c[0] + (var5_int >> 8) + param4.measureTextWidth(param2.substring(0, var7));
+          markupAnchorX = -1;
+          for (characterIndex = 1; characterIndex < text.length(); characterIndex++) {
+            characterCode = text.charAt(characterIndex);
+            if (60 == characterCode) {
+              markupAnchorX = line.caretX[0] + (accumulatedJustification256 >> 8) + font.measureTextWidth(text.substring(0, characterIndex));
             }
-            if (var6 == -1) {
-              if (var8 == 32) {
-                var5_int = var5_int + param0;
+            if (markupAnchorX == -1) {
+              if (characterCode == 32) {
+                accumulatedJustification256 = accumulatedJustification256 + spaceJustification256;
               }
-              param1.field_c[var7] = param1.field_c[0] + (var5_int >> 8) + param4.measureTextWidth(param2.substring(0, 1 + var7)) - param4.measureCharacterAdvance((char) var8);
+              line.caretX[characterIndex] = line.caretX[0] + (accumulatedJustification256 >> 8) + font.measureTextWidth(text.substring(0, 1 + characterIndex)) - font.measureCharacterAdvance((char) characterCode);
             } else {
-              param1.field_c[var7] = var6;
+              line.caretX[characterIndex] = markupAnchorX;
             }
-            if (var8 != 62) {
+            if (characterCode != 62) {
               continue;
             }
-            var6 = -1;
+            markupAnchorX = -1;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("qb.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_20_2 = "null";
+        } catch (java.lang.RuntimeException caretException) {
+          caughtCaretFailure = caretException;
+          caretPopulationFailure = caughtCaretFailure;
+          caretFailureForContext = caretPopulationFailure;
+          caretContextBuilder = new StringBuilder().append("qb.C(").append(spaceJustification256).append(',');
+          if (line == null) {
+            lineDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            lineDescription = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param2 == null) {
-            stackIn_23_2 = "null";
+          caretContextBeforeText = ((StringBuilder) (Object) caretContextBuilder).append(lineDescription).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            textDescription = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_26_2 = "null";
+          caretContextBeforeFont = ((StringBuilder) (Object) caretContextBeforeText).append(textDescription).append(',').append(methodGuard).append(',');
+          if (font == null) {
+            fontDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            fontDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caretFailureForContext), ((StringBuilder) (Object) caretContextBeforeFont).append(fontDescription).append(')').toString());
         }
     }
 

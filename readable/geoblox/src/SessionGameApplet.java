@@ -34,7 +34,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if ((handshakeResult != 0) &&
             (handshakeResult != 1)) {
-          if (!TextWidgetRenderer.field_k) {
+          if (!TextWidgetRenderer.suppressReconnectErrorPage) {
             this.a((byte) 79, "reconnect");
           }
           ClientFlowState.requestSessionExit((byte) 103);

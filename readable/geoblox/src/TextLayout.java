@@ -5,136 +5,136 @@ import java.io.*;
 
 abstract class TextLayout {
     static int categoryMatchCandidateCount;
-    static int field_c;
-    TextLayoutLine[] field_a;
+    static int fullscreenPointerOriginX;
+    TextLayoutLine[] lines;
 
-    final int a(int param0, int param1) {
-        int var4 = 0;
-        TextLayoutLine var5 = null;
-        int var6 = Geoblox.clientControlFlowFlag;
-        TextLayoutLine[] var7 = this.field_a;
-        TextLayoutLine[] var3 = var7;
-        for (var4 = 0; var7.length > var4; var4++) {
-            var5 = var7[var4];
-            if (~var5.field_c.length < ~param0) {
-                return var5.field_c[param0];
+    final int getCaretX(int caretIndex, int methodGuard) {
+        int lineIndex = 0;
+        TextLayoutLine line = null;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        TextLayoutLine[] lines = this.lines;
+        TextLayoutLine[] linesAlias = lines;
+        for (lineIndex = 0; lines.length > lineIndex; lineIndex++) {
+            line = lines[lineIndex];
+            if (~line.caretX.length < ~caretIndex) {
+                return line.caretX[caretIndex];
             }
-            param0 = param0 - (var5.field_c.length - 1);
+            caretIndex = caretIndex - (line.caretX.length - 1);
         }
-        if (param1 <= 109) {
+        if (methodGuard <= 109) {
             return 67;
         }
         return 0;
     }
 
-    final int a(int param0) {
-        int var2;
-        TextLayoutLine[] var3;
-        int var4;
-        TextLayoutLine var5;
-        int var7;
-        int var6;
-        var7 = Geoblox.clientControlFlowFlag;
-        var2 = -1;
-        if (param0 < 60) {
+    final int getMaximumLineEndX(int methodGuard) {
+        int maximumEndX;
+        TextLayoutLine[] lines;
+        int lineIndex;
+        TextLayoutLine line;
+        int clientControlFlowSnapshot;
+        int lineEndX;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        maximumEndX = -1;
+        if (methodGuard < 60) {
           return 19;
         }
-        if (null != this.field_a) {
-          var3 = this.field_a;
-          var4 = 0;
-          while (!(var3.length <= var4)) {
-            var5 = var3[var4];
-            if (var5 == null) {
-              var4++;
+        if (null != this.lines) {
+          lines = this.lines;
+          lineIndex = 0;
+          while (!(lines.length <= lineIndex)) {
+            line = lines[lineIndex];
+            if (line == null) {
+              lineIndex++;
               continue;
             }
-            var6 = var5.a(0);
-            if (var6 <= var2) {
-              var4++;
+            lineEndX = line.getLineEndX(0);
+            if (lineEndX <= maximumEndX) {
+              lineIndex++;
               continue;
             }
-            var2 = var6;
-            var4++;
+            maximumEndX = lineEndX;
+            lineIndex++;
             continue;
           }
         }
-        return var2;
+        return maximumEndX;
     }
 
-    final int a(int param0, int param1, int param2, String param3) {
-        int var9 = 0;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_16_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var11 = Geoblox.clientControlFlowFlag;
+    final int calculateSpaceJustification256(int methodGuard, int textWidth, int targetWidth, String text) {
+        int characterIndex = 0;
+        int spaceCount = 0;
+        RuntimeException justificationFailure = null;
+        int insideMarkup = 0;
+        int textLength = 0;
+        int guardQuotient = 0;
+        int characterCode = 0;
+        int clientControlFlowSnapshot = 0;
+        int remainingWidth256 = 0;
+        int spaceCountDivisor = 0;
+        int spacingBeforeReturn = 0;
+        int zeroSpacingBeforeReturn = 0;
+        RuntimeException justificationFailureForContext = null;
+        StringBuilder justificationContextBuilder = null;
+        String textDescription = null;
+        RuntimeException caughtJustificationFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var5_int = 0;
-          var6 = 0;
-          var7 = param3.length();
-          var8 = 20 / ((-30 - param0) / 56);
-          for (var9 = 0; var9 < var7; var9++) {
-            var10 = param3.charAt(var9);
-            if (var10 != 60) {
-              if (var10 != 62) {
-                if ((var6 == 0) &&
-                    (32 == var10)) {
-                  var5_int++;
+          spaceCount = 0;
+          insideMarkup = 0;
+          textLength = text.length();
+          guardQuotient = 20 / ((-30 - methodGuard) / 56);
+          for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+            characterCode = text.charAt(characterIndex);
+            if (characterCode != 60) {
+              if (characterCode != 62) {
+                if ((insideMarkup == 0) &&
+                    (32 == characterCode)) {
+                  spaceCount++;
                 }
               } else {
-                var6 = 0;
+                insideMarkup = 0;
               }
             } else {
-              var6 = 1;
+              insideMarkup = 1;
             }
           }
-          if (var5_int <= 0) {
-            stackIn_16_0 = 0;
-            return stackIn_16_0;
+          if (spaceCount <= 0) {
+            zeroSpacingBeforeReturn = 0;
+            return zeroSpacingBeforeReturn;
           }
-          stackIn_13_0 = param2 - param1 << 8;
-          stackIn_13_1 = var5_int;
-          stackIn_14_0 = stackIn_13_0 / stackIn_13_1;
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("dk.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_20_2 = "null";
+          remainingWidth256 = targetWidth - textWidth << 8;
+          spaceCountDivisor = spaceCount;
+          spacingBeforeReturn = remainingWidth256 / spaceCountDivisor;
+          return spacingBeforeReturn;
+        } catch (java.lang.RuntimeException justificationException) {
+          caughtJustificationFailure = justificationException;
+          justificationFailure = caughtJustificationFailure;
+          justificationFailureForContext = justificationFailure;
+          justificationContextBuilder = new StringBuilder().append("dk.J(").append(methodGuard).append(',').append(textWidth).append(',').append(targetWidth).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) justificationFailureForContext), ((StringBuilder) (Object) justificationContextBuilder).append(textDescription).append(')').toString());
         }
     }
 
-    final static void a(byte param0) {
+    final static void closeArchiveAndCacheServices(byte methodGuard) {
         try {
-            int var1_int = 0;
-            IOException iOException = null;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            IOException var2 = null;
-            var3 = Geoblox.clientControlFlowFlag;
+            int cacheFileIndex = 0;
+            IOException dataFileCloseFailure = null;
+            int clientControlFlowSnapshot = 0;
+            Throwable caughtCloseFailure = null;
+            RuntimeException archiveCloseFailure = null;
+            IOException indexFileCloseFailure = null;
+            clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
             try {
               if (null != AsyncResourceDownloader.archiveNetworkClient) {
                 AsyncResourceDownloader.archiveNetworkClient.closeSocket(-70);
               }
-              if (param0 >= -65) {
+              if (methodGuard >= -65) {
                 categoryMatchCandidateCount = 18;
               }
               if (UsernameQuerySupport.archiveDiskWorker != null) {
@@ -143,99 +143,99 @@ abstract class TextLayout {
               if (null != CacheFileState.cacheDataFile) {
                 try {
                   CacheFileState.cacheDataFile.close(27034);
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  iOException = (IOException) (Object) decompiledCaughtException;
+                } catch (java.io.IOException caughtDataFileCloseFailure) {
+                  caughtCloseFailure = caughtDataFileCloseFailure;
+                  dataFileCloseFailure = (IOException) (Object) caughtCloseFailure;
                 }
               }
               if (null != TrackedPcmStream.field_h) {
-                for (var1_int = 0; TrackedPcmStream.field_h.length > var1_int; var1_int++) {
-                  if (null == TrackedPcmStream.field_h[var1_int]) {
+                for (cacheFileIndex = 0; TrackedPcmStream.field_h.length > cacheFileIndex; cacheFileIndex++) {
+                  if (null == TrackedPcmStream.field_h[cacheFileIndex]) {
                     continue;
                   }
                   try {
-                    TrackedPcmStream.field_h[var1_int].close(27034);
-                  } catch (java.io.IOException decompiledCaughtParameter1) {
-                    decompiledCaughtException = decompiledCaughtParameter1;
-                    var2 = (IOException) (Object) decompiledCaughtException;
+                    TrackedPcmStream.field_h[cacheFileIndex].close(27034);
+                  } catch (java.io.IOException caughtIndexFileCloseFailure) {
+                    caughtCloseFailure = caughtIndexFileCloseFailure;
+                    indexFileCloseFailure = (IOException) (Object) caughtCloseFailure;
                   }
                 }
                 return;
               }
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "dk.O(" + param0 + ')');
+            } catch (java.lang.RuntimeException caughtArchiveCloseFailure) {
+              caughtCloseFailure = caughtArchiveCloseFailure;
+              archiveCloseFailure = (RuntimeException) (Object) caughtCloseFailure;
+              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) archiveCloseFailure), "dk.O(" + methodGuard + ')');
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedCloseFailure) {
+            throw uncheckedCloseFailure;
+        } catch (Throwable checkedCloseFailure) {
+            throw new RuntimeException(checkedCloseFailure);
         }
     }
 
-    final int b(int param0) {
-        int stackIn_7_0 = 0;
-        if (param0 != -3111) {
+    final int getLayoutHeight(int methodGuard) {
+        int heightBeforeReturn = 0;
+        if (methodGuard != -3111) {
           categoryMatchCandidateCount = 49;
         }
-        if ((null != this.field_a) &&
-            (this.field_a.length > 0)) {
-          stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
+        if ((null != this.lines) &&
+            (this.lines.length > 0)) {
+          heightBeforeReturn = this.lines[this.lines.length - 1].bottomY - this.lines[0].topY;
         } else {
-          stackIn_7_0 = 0;
+          heightBeforeReturn = 0;
         }
-        return stackIn_7_0;
+        return heightBeforeReturn;
     }
 
-    final int a(byte param0, int param1) {
-        int var3 = 0;
-        TextLayoutLine var4 = null;
-        int var5 = Geoblox.clientControlFlowFlag;
-        if (param0 != 24) {
+    final int getCaretLineIndex(byte methodGuard, int caretIndex) {
+        int lineIndex = 0;
+        TextLayoutLine line = null;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        if (methodGuard != 24) {
             return -10;
         }
-        for (var3 = 0; this.field_a.length > var3; var3++) {
-            var4 = this.field_a[var3];
-            if (!(var4.field_c.length <= param1)) {
-                return var3;
+        for (lineIndex = 0; this.lines.length > lineIndex; lineIndex++) {
+            line = this.lines[lineIndex];
+            if (!(line.caretX.length <= caretIndex)) {
+                return lineIndex;
             }
-            param1 = param1 - (var4.field_c.length - 1);
+            caretIndex = caretIndex - (line.caretX.length - 1);
         }
-        return this.field_a.length;
+        return this.lines.length;
     }
 
-    final int a(int param0, int param1, int param2) {
-        int var6 = 0;
-        int var4;
-        int var5;
-        TextLayoutLine var7;
-        int var8;
-        int var9;
-        var9 = Geoblox.clientControlFlowFlag;
-        if ((null != this.field_a) &&
-            (this.field_a.length != 0) &&
-            (this.field_a[0].field_d <= param2)) {
-          if (this.field_a[-1 + this.field_a.length].field_a < param2) {
+    final int hitTestCaretIndex(int x, int methodGuard, int y) {
+        int lineIndex = 0;
+        int precedingCharacterCount;
+        int guardResidue;
+        TextLayoutLine line;
+        int lineCaretIndex;
+        int clientControlFlowSnapshot;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        if ((null != this.lines) &&
+            (this.lines.length != 0) &&
+            (this.lines[0].topY <= y)) {
+          if (this.lines[-1 + this.lines.length].bottomY < y) {
             return -1;
           }
-          if (this.field_a.length == 1) {
-            return this.field_a[0].a(71, param0);
+          if (this.lines.length == 1) {
+            return this.lines[0].findNearestCaretIndex(71, x);
           }
-          var4 = 0;
-          var5 = -2 % ((15 - param1) / 32);
-          for (var6 = 0; var6 < this.field_a.length; var6++) {
-            var7 = this.field_a[var6];
-            if ((param2 >= var7.field_d) &&
-                (var7.field_a >= param2)) {
-              var8 = var7.a(-79, param0);
-              if (-1 != var8) {
-                return var4 + var8;
+          precedingCharacterCount = 0;
+          guardResidue = -2 % ((15 - methodGuard) / 32);
+          for (lineIndex = 0; lineIndex < this.lines.length; lineIndex++) {
+            line = this.lines[lineIndex];
+            if ((y >= line.topY) &&
+                (line.bottomY >= y)) {
+              lineCaretIndex = line.findNearestCaretIndex(-79, x);
+              if (-1 != lineCaretIndex) {
+                return precedingCharacterCount + lineCaretIndex;
               }
               return -1;
             }
-            var4 = var4 + (var7.field_c.length - 1);
+            precedingCharacterCount = precedingCharacterCount + (line.caretX.length - 1);
           }
           return -1;
         }

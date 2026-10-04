@@ -53,7 +53,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
           MultiHandleSliderRenderer.a(this.buttonSprites, var7, parentX + widget.widgetX, widget.widgetWidth, (-this.buttonSprites[0].fullHeight + widget.widgetHeight >> 1) + (parentY + widget.widgetY), -17154);
           stackIn_19_0 = (widgetEnabled) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_n.drawParagraph(widget.widgetText, widget.widgetX + parentX, -2 + parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, var8, -1, 1, 1, this.field_n.maxAscent);
+          this.font.drawParagraph(widget.widgetText, widget.widgetX + parentX, -2 + parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, var8, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
     }
 
     private SpriteButtonRenderer(int param0, int param1, int param2) {
-        this.field_n = UiFontResources.commonUiBoldFont;
+        this.font = UiFontResources.commonUiBoldFont;
         this.normalColor = param0;
         this.disabledColor = param2;
         this.highlightColor = param1;

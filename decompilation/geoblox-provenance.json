@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "ab38b1d15078161ceba5bb2fe3d1161af78357b1",
+    "commit": "06d2b90e35ccc17d3fbacb42fe24678ca8901da1",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "9b74bb6600e3052fc0acf97d556d40d5154d3879c6f65608dcd91d1366c8b825"
+      "sha256": "81ce95a41428f60d8ee36fb6749d692e6204b9f8f33575a1980f7ca756f67ed5"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,38 +3291,38 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "fe7921b04cd3fb5df09d25c091130ebcff17d29c9b679df7aea1438c88099f40",
+    "outputTreeSha256": "ecc8a089a567227beca0f102dab5f3936efb20d7fb0c6b132b40e49add56f496",
     "files": 303,
-    "rules": 14058,
-    "identifierEdits": 100022,
+    "rules": 14618,
+    "identifierEdits": 102174,
     "bindingsCompared": 136607,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 100279,
+    "totalEdits": 102435,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 246,
+    "labelEdits": 250,
     "labelBindingsCompared": 813,
     "labelDeclarationsCompared": 246,
     "namingPass": {
-      "version": 147,
-      "rulesAdded": 148,
+      "version": 148,
+      "rulesAdded": 560,
       "rulesRefined": 0,
-      "fields": 15,
-      "methods": 24,
-      "parameters": 49,
-      "locals": 60,
-      "labels": 0,
-      "previousCompleteRulesPreserved": 13910,
+      "fields": 31,
+      "methods": 50,
+      "parameters": 194,
+      "locals": 284,
+      "labels": 1,
+      "previousCompleteRulesPreserved": 14058,
       "explicitlyCorrectedSymbols": [],
       "rawInputAndGeneratorPinsUnchanged": true,
-      "explicitLabelAccountingMigration": false,
-      "labelEditsAdded": 0,
-      "allValidationProviderFamiliesNamed": true,
-      "allValidatedInputDebouncedProviderTextValidatorAndCheckboxRendererDeclarationsNamed": true,
+      "explicitLabelAccountingMigration": true,
+      "labelEditsAdded": 4,
+      "allTextWidgetLayoutRendererLineAndCachedLayoutDeclarationsNamed": true,
+      "allTextWidgetLayoutAndDisplayTextFamiliesNamed": true,
       "allEightLargeBodyLabelsNamed": true,
-      "remainingOpaqueBlockLabels": 118,
+      "remainingOpaqueBlockLabels": 117,
       "remainingOpaqueLoopLabels": 46,
       "wholeGameEquivalenceVerified": false
     },
@@ -5408,5 +5408,312 @@
     "sourceWorkflowCommit": "ab38b1d15078161ceba5bb2fe3d1161af78357b1",
     "manifestSha256": "9b74bb6600e3052fc0acf97d556d40d5154d3879c6f65608dcd91d1366c8b825",
     "outputTreeSha256": "fe7921b04cd3fb5df09d25c091130ebcff17d29c9b679df7aea1438c88099f40"
+  },
+  "textLayoutAndRendererNaming": {
+    "version": 148,
+    "rulesAdded": 560,
+    "rulesRefined": 0,
+    "C": 0,
+    "F": 31,
+    "M": 50,
+    "P": 194,
+    "L": 284,
+    "B": 1,
+    "previousCompleteRulesPreserved": 14058,
+    "rawInputAndGeneratorPinsUnchanged": true,
+    "explicitLabelAccountingMigration": {
+      "before": 246,
+      "after": 250,
+      "newPlainLabels": 1,
+      "newLoopLabels": 0,
+      "namedSymbols": [
+        "B:ff.a(IILel;IIIII)V#0"
+      ],
+      "existingTransfersNamed": 3,
+      "labelBindingsPreserved": 813
+    },
+    "allOwnedDeclarationsNamed": {
+      "cc": 43,
+      "ff": 283,
+      "dk": 74,
+      "lk": 20,
+      "vc": 117
+    },
+    "constructorNamesFollowClassRules": true,
+    "allTextWidgetLayoutAndDisplayTextFamiliesNamed": true,
+    "compilerResolvedFieldOccurrences": {
+      "F:dk.field_a:[Llk;": {
+        "declarationsAndReferences": 33,
+        "files": [
+          "dk.java",
+          "ff.java",
+          "vc.java",
+          "vf.java"
+        ]
+      },
+      "F:dk.field_c:I": {
+        "declarationsAndReferences": 2,
+        "files": [
+          "ck.java",
+          "dk.java"
+        ]
+      },
+      "F:ff.field_a:Ljava/awt/Image;": {
+        "declarationsAndReferences": 8,
+        "files": [
+          "ff.java",
+          "pb.java",
+          "tj.java"
+        ]
+      },
+      "F:ff.field_b:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "ff.java",
+          "si.java"
+        ]
+      },
+      "F:ff.field_c:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "ff.java",
+          "wa.java"
+        ]
+      },
+      "F:ff.field_d:Ljava/lang/String;": {
+        "declarationsAndReferences": 10,
+        "files": [
+          "ff.java",
+          "gi.java",
+          "qc.java",
+          "rd.java"
+        ]
+      },
+      "F:ff.field_e:I": {
+        "declarationsAndReferences": 10,
+        "files": [
+          "ff.java",
+          "si.java"
+        ]
+      },
+      "F:ff.field_f:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "ff.java",
+          "si.java"
+        ]
+      },
+      "F:ff.field_g:I": {
+        "declarationsAndReferences": 13,
+        "files": [
+          "ff.java",
+          "si.java",
+          "wa.java"
+        ]
+      },
+      "F:ff.field_h:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "ff.java",
+          "wa.java"
+        ]
+      },
+      "F:ff.field_i:I": {
+        "declarationsAndReferences": 12,
+        "files": [
+          "ff.java",
+          "si.java"
+        ]
+      },
+      "F:ff.field_j:I": {
+        "declarationsAndReferences": 7,
+        "files": [
+          "ff.java",
+          "si.java"
+        ]
+      },
+      "F:ff.field_k:Z": {
+        "declarationsAndReferences": 4,
+        "files": [
+          "cg.java",
+          "ff.java",
+          "wf.java"
+        ]
+      },
+      "F:ff.field_m:I": {
+        "declarationsAndReferences": 11,
+        "files": [
+          "ff.java",
+          "si.java"
+        ]
+      },
+      "F:ff.field_n:Lm;": {
+        "declarationsAndReferences": 30,
+        "files": [
+          "ff.java",
+          "ml.java",
+          "si.java"
+        ]
+      },
+      "F:ff.field_o:I": {
+        "declarationsAndReferences": 6,
+        "files": [
+          "ff.java",
+          "wa.java"
+        ]
+      },
+      "F:ff.field_p:I": {
+        "declarationsAndReferences": 5,
+        "files": [
+          "ff.java"
+        ]
+      },
+      "F:ff.field_q:Z": {
+        "declarationsAndReferences": 6,
+        "files": [
+          "ff.java"
+        ]
+      },
+      "F:lk.field_a:I": {
+        "declarationsAndReferences": 9,
+        "files": [
+          "dk.java",
+          "ff.java",
+          "lk.java",
+          "vf.java"
+        ]
+      },
+      "F:lk.field_b:F": {
+        "declarationsAndReferences": 3,
+        "files": [
+          "gb.java",
+          "lk.java",
+          "ne.java"
+        ]
+      },
+      "F:lk.field_c:[I": {
+        "declarationsAndReferences": 40,
+        "files": [
+          "dk.java",
+          "ff.java",
+          "lk.java",
+          "qb.java",
+          "vc.java",
+          "vf.java"
+        ]
+      },
+      "F:lk.field_d:I": {
+        "declarationsAndReferences": 10,
+        "files": [
+          "dk.java",
+          "ff.java",
+          "lk.java",
+          "vf.java"
+        ]
+      },
+      "F:vc.field_d:Z": {
+        "declarationsAndReferences": 9,
+        "files": [
+          "vc.java"
+        ]
+      },
+      "F:vc.field_e:I": {
+        "declarationsAndReferences": 8,
+        "files": [
+          "vc.java"
+        ]
+      },
+      "F:vc.field_h:I": {
+        "declarationsAndReferences": 31,
+        "files": [
+          "gb.java",
+          "oc.java",
+          "vc.java"
+        ]
+      },
+      "F:vc.field_k:I": {
+        "declarationsAndReferences": 9,
+        "files": [
+          "vc.java"
+        ]
+      },
+      "F:vc.field_l:I": {
+        "declarationsAndReferences": 3,
+        "files": [
+          "vc.java"
+        ]
+      },
+      "F:vc.field_m:I": {
+        "declarationsAndReferences": 8,
+        "files": [
+          "vc.java"
+        ]
+      },
+      "F:vc.field_n:Ljava/lang/String;": {
+        "declarationsAndReferences": 12,
+        "files": [
+          "vc.java"
+        ]
+      },
+      "F:vc.field_o:I": {
+        "declarationsAndReferences": 6,
+        "files": [
+          "vc.java"
+        ]
+      },
+      "F:vc.field_p:Lm;": {
+        "declarationsAndReferences": 9,
+        "files": [
+          "vc.java"
+        ]
+      }
+    },
+    "sourceBodiesEditedByHand": false,
+    "identifierEditsAdded": 2152,
+    "labelEditsAdded": 4,
+    "changedJavaFiles": 29,
+    "changedOriginalJavaFiles": [
+      "Geoblox.java",
+      "ac.java",
+      "cc.java",
+      "cg.java",
+      "ck.java",
+      "dj.java",
+      "dk.java",
+      "el.java",
+      "ff.java",
+      "gb.java",
+      "gi.java",
+      "hl.java",
+      "lk.java",
+      "ml.java",
+      "ne.java",
+      "oc.java",
+      "pb.java",
+      "pc.java",
+      "pi.java",
+      "qb.java",
+      "qc.java",
+      "rd.java",
+      "si.java",
+      "tj.java",
+      "uh.java",
+      "vc.java",
+      "vf.java",
+      "wa.java",
+      "wf.java"
+    ],
+    "labelInventory": {
+      "opaque_plain": 117,
+      "named_plain": 71,
+      "opaque_loop": 46,
+      "named_loop": 12
+    },
+    "cacheAndSelectionQuirksPreserved": true,
+    "scope": "Pass 148 adds 560 guarded rules: 31 fields, fifty methods, 194 parameters,\n284 locals and one label. Every declaration in TextWidgetLayout (43),\nTextWidgetRenderer (283), TextLayout (74), TextLayoutLine (20) and\nCachedTextLayout (117) has a readable name; constructors follow class rules.\nThe complete layout interface and display-text/password override families now\nexpose hitTestCaretIndex, drawSelection, drawCaret, getTextLayout, origins,\navailable viewport dimensions and padded metrics. Maximum line end X retains\nits alignment offsets; it is not presented as plain string width.\n\nPadding, colors, selection ARGB, font/alignment/spacing, line bounds and caret\npositions follow producers and consumers. populateCaretPositions exposes the\nexisting markup-anchor and fixed256 space-justification arithmetic. Cache keys\nand aliases remain exact: single-line caches omit anchor/baseline, centered\nlayout never saves cachedText, null text clears lines without clearing keys,\nand paragraph alignment/spacing mutations keep their original behavior.\nSelection still passes bottomY as rectangle height. Clip restoration remains\non successful paths, not an invented finally. Overflow, guards, partial\nfailures, password masking, caller ordering and all client-control paths stay.\n\nShared progress image, unread ticket message, reconnect-error-page suppression,\nfullscreen pointer origin and intro frame/red tint have grounded names.\ntextDrawingCompletion names one existing frame and three breaks; label edits\ngrow from 246 to 250 without removing control flow. There are 14,618 rules and\n102,174 identifier edits, plus eleven class-literal and 250 label edits:\n102,435 total. All 14,058 previous complete rules and raw/tool/workflow/stub/\nnative/text pins remain. Both 303-file corpora compile, preserve 136,607\nbindings, 388 overrides and 813 lexical label records, and reverse byte exactly.\nThe 27 publication tests and eight existing native fixtures pass within their\nrecorded scopes. Full fonts/markup/cache/caret/selection, arbitrary callbacks,\nasync input/assets and device behavior are not newly executed. Eight large\nlabeled bodies, 163 opaque labels, 329 opaque fields and 355 short opaque\nmethods remain; whole-game/server/device and heap/FPS acceptance remain unverified.",
+    "sourceWorkflowRepository": "Kreijstal/dekobloko-work",
+    "sourceWorkflowCommit": "06d2b90e35ccc17d3fbacb42fe24678ca8901da1",
+    "manifestSha256": "81ce95a41428f60d8ee36fb6749d692e6204b9f8f33575a1980f7ca756f67ed5",
+    "outputTreeSha256": "ecc8a089a567227beca0f102dab5f3936efb20d7fb0c6b132b40e49add56f496"
   }
 }

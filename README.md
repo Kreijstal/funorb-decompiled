@@ -17,12 +17,45 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/06d2b90e35ccc17d3fbacb42fe24678ca8901da1/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,607 bindings,
 preserving 388 override relationships.
+
+Pass 148 adds 560 guarded rules: 31 fields, fifty methods, 194 parameters,
+284 locals and one label. Every declaration in TextWidgetLayout (43),
+TextWidgetRenderer (283), TextLayout (74), TextLayoutLine (20) and
+CachedTextLayout (117) has a readable name; constructors follow class rules.
+The complete layout interface and display-text/password override families now
+expose hitTestCaretIndex, drawSelection, drawCaret, getTextLayout, origins,
+available viewport dimensions and padded metrics. Maximum line end X retains
+its alignment offsets; it is not presented as plain string width.
+
+Padding, colors, selection ARGB, font/alignment/spacing, line bounds and caret
+positions follow producers and consumers. populateCaretPositions exposes the
+existing markup-anchor and fixed256 space-justification arithmetic. Cache keys
+and aliases remain exact: single-line caches omit anchor/baseline, centered
+layout never saves cachedText, null text clears lines without clearing keys,
+and paragraph alignment/spacing mutations keep their original behavior.
+Selection still passes bottomY as rectangle height. Clip restoration remains
+on successful paths, not an invented finally. Overflow, guards, partial
+failures, password masking, caller ordering and all client-control paths stay.
+
+Shared progress image, unread ticket message, reconnect-error-page suppression,
+fullscreen pointer origin and intro frame/red tint have grounded names.
+textDrawingCompletion names one existing frame and three breaks; label edits
+grow from 246 to 250 without removing control flow. There are 14,618 rules and
+102,174 identifier edits, plus eleven class-literal and 250 label edits:
+102,435 total. All 14,058 previous complete rules and raw/tool/workflow/stub/
+native/text pins remain. Both 303-file corpora compile, preserve 136,607
+bindings, 388 overrides and 813 lexical label records, and reverse byte exactly.
+The 27 publication tests and eight existing native fixtures pass within their
+recorded scopes. Full fonts/markup/cache/caret/selection, arbitrary callbacks,
+async input/assets and device behavior are not newly executed. Eight large
+labeled bodies, 163 opaque labels, 329 opaque fields and 355 short opaque
+methods remain; whole-game/server/device and heap/FPS acceptance remain unverified.
 
 Pass 147 adds 148 guarded names: fifteen fields, 24 methods, 49 parameters
 and 60 locals. Every declaration in ValidatedTextInputWidget (49),

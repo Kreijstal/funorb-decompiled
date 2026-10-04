@@ -16,37 +16,37 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
         meshFacePriorityWriteOffsets = null;
     }
 
-    final String c(int param0, UiWidget param1) {
-        RuntimeException var3 = null;
-        UiWidget var4 = null;
-        String stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final String getDisplayText(int methodGuard, UiWidget widget) {
+        RuntimeException displayTextFailure = null;
+        UiWidget unusedWidget = null;
+        String maskedTextBeforeReturn = null;
+        RuntimeException maskFailureForContext = null;
+        StringBuilder maskContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtMaskFailure = null;
         try {
-          if (param0 < 109) {
-            var4 = (UiWidget) null;
-            this.c(-111, (UiWidget) null);
+          if (methodGuard < 109) {
+            unusedWidget = (UiWidget) null;
+            this.getDisplayText(-111, (UiWidget) null);
           }
-          stackIn_3_0 = TextWidgetSupport.buildRepeatedCharacterRange(0, '*', param1.widgetText.length());
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("uh.L(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          maskedTextBeforeReturn = TextWidgetSupport.buildRepeatedCharacterRange(0, '*', widget.widgetText.length());
+          return maskedTextBeforeReturn;
+        } catch (java.lang.RuntimeException maskException) {
+          caughtMaskFailure = maskException;
+          displayTextFailure = caughtMaskFailure;
+          maskFailureForContext = displayTextFailure;
+          maskContextBuilder = new StringBuilder().append("uh.L(").append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) maskFailureForContext), ((StringBuilder) (Object) maskContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    PasswordWidgetRenderer(int param0) {
-        this(DialogLayer.sharedUiFont, param0);
+    PasswordWidgetRenderer(int textColor) {
+        this(DialogLayer.sharedUiFont, textColor);
     }
 
     final static int getThemeForProgress(int methodGuard) {
@@ -57,14 +57,14 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
         return WidgetContainer.themeCycleOrder[UiWidget.completedThemeCount % WidgetContainer.themeCycleOrder.length];
     }
 
-    private PasswordWidgetRenderer(BitmapFont param0, int param1) {
-        super(param0, param1);
+    private PasswordWidgetRenderer(BitmapFont font, int textColor) {
+        super(font, textColor);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void pushWidgetClip(int topY, int leftX, int methodGuard, int bottomY, int rightX) {
         SpriteCheckboxRenderer.pushRasterTarget(-96);
-        SoftwareRasterizer.intersectClip(param1, param0, param4, param3);
-        if (param2 == -14045) {
+        SoftwareRasterizer.intersectClip(leftX, topY, rightX, bottomY);
+        if (methodGuard == -14045) {
             return;
         }
         PasswordWidgetRenderer.getThemeForProgress(-111);

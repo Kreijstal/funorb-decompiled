@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ab38b1d15078161ceba5bb2fe3d1161af78357b1/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/06d2b90e35ccc17d3fbacb42fe24678ca8901da1/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 147)
+## Current readability (pass 148)
 
-The export has 14,058 guarded names and 100,022 Java identifier edits, plus 11
-class-name literal edits and 246 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 14,618 guarded names and 102,174 Java identifier edits, plus 11
+class-name literal edits and 250 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,607 bindings, reproduce and
@@ -23,6 +23,41 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 148 adds 560 guarded rules: 31 fields, fifty methods, 194 parameters,
+284 locals and one label. Every declaration in TextWidgetLayout (43),
+TextWidgetRenderer (283), TextLayout (74), TextLayoutLine (20) and
+CachedTextLayout (117) has a readable name; constructors follow class rules.
+The complete layout interface and display-text/password override families now
+expose hitTestCaretIndex, drawSelection, drawCaret, getTextLayout, origins,
+available viewport dimensions and padded metrics. Maximum line end X retains
+its alignment offsets; it is not presented as plain string width.
+
+Padding, colors, selection ARGB, font/alignment/spacing, line bounds and caret
+positions follow producers and consumers. populateCaretPositions exposes the
+existing markup-anchor and fixed256 space-justification arithmetic. Cache keys
+and aliases remain exact: single-line caches omit anchor/baseline, centered
+layout never saves cachedText, null text clears lines without clearing keys,
+and paragraph alignment/spacing mutations keep their original behavior.
+Selection still passes bottomY as rectangle height. Clip restoration remains
+on successful paths, not an invented finally. Overflow, guards, partial
+failures, password masking, caller ordering and all client-control paths stay.
+
+Shared progress image, unread ticket message, reconnect-error-page suppression,
+fullscreen pointer origin and intro frame/red tint have grounded names.
+textDrawingCompletion names one existing frame and three breaks; label edits
+grow from 246 to 250 without removing control flow. There are 14,618 rules and
+102,174 identifier edits, plus eleven class-literal and 250 label edits:
+102,435 total. All 14,058 previous complete rules and raw/tool/workflow/stub/
+native/text pins remain. Both 303-file corpora compile, preserve 136,607
+bindings, 388 overrides and 813 lexical label records, and reverse byte exactly.
+The 27 publication tests and eight existing native fixtures pass within their
+recorded scopes. Full fonts/markup/cache/caret/selection, arbitrary callbacks,
+async input/assets and device behavior are not newly executed. Eight large
+labeled bodies, 163 opaque labels, 329 opaque fields and 355 short opaque
+methods remain; whole-game/server/device and heap/FPS acceptance remain unverified.
+
+## Previous validation and account name naming (pass 147)
 
 Pass 147 adds 148 guarded names: fifteen fields, 24 methods, 49 parameters
 and 60 locals. Every declaration in ValidatedTextInputWidget (49),

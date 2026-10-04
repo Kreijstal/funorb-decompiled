@@ -2,720 +2,720 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
-    int field_g;
-    private boolean field_q;
-    BitmapFont field_n;
-    static java.awt.Image field_a;
+    int horizontalAlignment;
+    private boolean multiline;
+    BitmapFont font;
+    static java.awt.Image loadingProgressImage;
     static String waitingForGraphicsText;
-    int field_e;
-    int field_o;
-    int field_c;
-    private int field_p;
-    int field_f;
-    int field_i;
-    int field_m;
-    static boolean field_k;
-    int field_j;
-    int field_b;
-    int field_h;
-    static String field_d;
+    int paddingLeft;
+    int textColor;
+    int caretColor;
+    private int textShadowColor;
+    int lineSpacing;
+    int verticalAlignment;
+    int paddingTop;
+    static boolean suppressReconnectErrorPage;
+    int paddingRight;
+    int paddingBottom;
+    int selectionArgb;
+    static String unreadTicketMessage;
 
-    private final int a(UiWidget param0, int param1, int param2, int param3) {
-        int discarded$1 = 0;
-        RuntimeException var5 = null;
-        UiWidget var6 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final int getTextX(UiWidget widget, int parentX, int methodGuard, int extraX) {
+        int discardedTextYResult = 0;
+        RuntimeException textXFailure = null;
+        UiWidget unusedWidget = null;
+        int textXBeforeReturn = 0;
+        RuntimeException textXFailureForContext = null;
+        StringBuilder textXContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtTextXFailure = null;
         try {
-          if (param2 != 11875) {
-            var6 = (UiWidget) null;
-            discarded$1 = this.b((UiWidget) null, 96, -93, -23);
+          if (methodGuard != 11875) {
+            unusedWidget = (UiWidget) null;
+            discardedTextYResult = this.getTextY((UiWidget) null, 96, -93, -23);
           }
-          stackIn_3_0 = this.field_e + param0.widgetX + param1 + (param0.textOffsetX + param3);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("ff.F(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          textXBeforeReturn = this.paddingLeft + widget.widgetX + parentX + (widget.textOffsetX + extraX);
+          return textXBeforeReturn;
+        } catch (java.lang.RuntimeException textXException) {
+          caughtTextXFailure = textXException;
+          textXFailure = caughtTextXFailure;
+          textXFailureForContext = textXFailure;
+          textXContextBuilder = new StringBuilder().append("ff.F(");
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textXFailureForContext), ((StringBuilder) (Object) textXContextBuilder).append(widgetDescription).append(',').append(parentX).append(',').append(methodGuard).append(',').append(extraX).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_31_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var9_int = 0;
-        RuntimeException var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        var13 = Geoblox.clientControlFlowFlag;
+    private final void drawTextWithinWidget(int parentY, int shadowColor, UiWidget widget, int methodGuard, int extraY, int color, int extraX, int parentX) {
+        RuntimeException drawFailureForContext = null;
+        StringBuilder drawContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtDrawFailure = null;
+        int availableWidth = 0;
+        RuntimeException textDrawFailure = null;
+        int availableHeight = 0;
+        int baselineOffset = 0;
+        int alignmentMode = 0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          L0: {
-            PasswordWidgetRenderer.a(param0 + param2.widgetY, param2.widgetX + param7, param3 - 14045, param2.widgetY + (param0 + param2.widgetHeight), param2.widgetWidth + (param7 + param2.widgetX));
-            var9_int = this.a(param2, param3 - 1);
-            var10 = this.b(289769985, param2);
-            if (!this.field_q) {
-              var12 = this.field_i;
-              if (var12 != 0) {
-                if (var12 != 2) {
-                  if ((var12 != 3) &&
-                      (var12 != 1)) {
+          textDrawingCompletion: {
+            PasswordWidgetRenderer.pushWidgetClip(parentY + widget.widgetY, widget.widgetX + parentX, methodGuard - 14045, widget.widgetY + (parentY + widget.widgetHeight), widget.widgetWidth + (parentX + widget.widgetX));
+            availableWidth = this.getAvailableTextWidth(widget, methodGuard - 1);
+            availableHeight = this.getAvailableTextHeight(289769985, widget);
+            if (!this.multiline) {
+              alignmentMode = this.verticalAlignment;
+              if (alignmentMode != 0) {
+                if (alignmentMode != 2) {
+                  if ((alignmentMode != 3) &&
+                      (alignmentMode != 1)) {
                   }
-                  var11 = (-this.field_n.maxAscent + (var10 - this.field_n.maxDescent) >> 1) + this.field_n.maxAscent;
+                  baselineOffset = (-this.font.maxAscent + (availableHeight - this.font.maxDescent) >> 1) + this.font.maxAscent;
                 } else {
-                  var11 = var10 - this.field_n.maxDescent;
+                  baselineOffset = availableHeight - this.font.maxDescent;
                 }
               } else {
-                var11 = this.field_n.maxAscent;
+                baselineOffset = this.font.maxAscent;
               }
-              var12 = this.field_g;
-              if ((var12 != 0) &&
-                  (var12 != 3)) {
-                if (var12 == 1) {
-                  this.field_n.drawCenteredText(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
-                  break L0;
+              alignmentMode = this.horizontalAlignment;
+              if ((alignmentMode != 0) &&
+                  (alignmentMode != 3)) {
+                if (alignmentMode == 1) {
+                  this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
+                  break textDrawingCompletion;
                 }
-                if (var12 != 2) {
-                  break L0;
+                if (alignmentMode != 2) {
+                  break textDrawingCompletion;
                 }
-                this.field_n.drawRightAlignedText(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
-                break L0;
+                this.font.drawRightAlignedText(this.getDisplayText(112, widget), availableWidth + this.getTextX(widget, parentX, methodGuard + 11875, extraX), baselineOffset + this.getTextY(widget, parentY, 1674, extraY), color, shadowColor);
+                break textDrawingCompletion;
               }
-              this.field_n.drawText(this.c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
+              this.font.drawText(this.getDisplayText(121, widget), this.getTextX(widget, parentX, 11875, extraX), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
             } else {
-              this.field_n.drawParagraph(this.c(113, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4), var9_int, var10, param5, param1, this.field_g, this.field_i, this.field_f);
+              this.font.drawParagraph(this.getDisplayText(113, widget), this.getTextX(widget, parentX, 11875, extraX), this.getTextY(widget, parentY, 1674, extraY), availableWidth, availableHeight, color, shadowColor, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
             }
           }
-          if (param3 != 0) {
-            this.field_e = -98;
+          if (methodGuard != 0) {
+            this.paddingLeft = -98;
           }
           RasterTargetRestoreSupport.restoreRasterTarget(true);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9 = decompiledCaughtException;
-          stackIn_30_0 = var9;
-          stackIn_30_1 = new StringBuilder().append("ff.N(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_31_2 = "null";
+        } catch (java.lang.RuntimeException drawFailure) {
+          caughtDrawFailure = drawFailure;
+          textDrawFailure = caughtDrawFailure;
+          drawFailureForContext = textDrawFailure;
+          drawContextBuilder = new StringBuilder().append("ff.N(").append(parentY).append(',').append(shadowColor).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_31_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawFailureForContext), ((StringBuilder) (Object) drawContextBuilder).append(widgetDescription).append(',').append(methodGuard).append(',').append(extraY).append(',').append(color).append(',').append(extraX).append(',').append(parentX).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, UiWidget param2, boolean param3) {
+    private final void drawDefaultWidgetText(int parentX, int parentY, UiWidget widget, boolean methodGuard) {
         try {
-            this.a(param1, this.field_p, param2, 0, 0, this.field_o, 0, param0);
-            if (!param3) {
-                UiWidget var6 = (UiWidget) null;
-                this.b((byte) -108, (UiWidget) null);
+            this.drawTextWithinWidget(parentY, this.textShadowColor, widget, 0, 0, this.textColor, 0, parentX);
+            if (!methodGuard) {
+                UiWidget unusedWidget = (UiWidget) null;
+                this.updateSingleLineLayout((byte) -108, (UiWidget) null);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ff.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        } catch (RuntimeException defaultDrawFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) defaultDrawFailure), "ff.P(" + parentX + ',' + parentY + ',' + (widget != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
-    private final void b(byte param0, UiWidget param1) {
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_31_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        var7 = Geoblox.clientControlFlowFlag;
+    private final void updateSingleLineLayout(byte methodGuard, UiWidget widget) {
+        RuntimeException layoutFailureForContext = null;
+        StringBuilder layoutContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtLayoutFailure = null;
+        int availableWidth = 0;
+        RuntimeException singleLineLayoutFailure = null;
+        int availableHeight = 0;
+        int baselineOffset = 0;
+        int alignmentMode = 0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (null == param1.textLayout) {
-            param1.textLayout = (TextLayout) ((Object) new CachedTextLayout());
+          if (null == widget.textLayout) {
+            widget.textLayout = (TextLayout) ((Object) new CachedTextLayout());
           }
-          var3_int = this.a(param1, -1);
-          var4 = this.b(289769985, param1);
-          if (param0 != 109) {
+          availableWidth = this.getAvailableTextWidth(widget, -1);
+          availableHeight = this.getAvailableTextHeight(289769985, widget);
+          if (methodGuard != 109) {
             return;
           }
-          var6 = this.field_i;
-          if (var6 != 0) {
-            if (var6 != 2) {
-              if ((var6 != 3) &&
-                  (var6 == 1)) {
+          alignmentMode = this.verticalAlignment;
+          if (alignmentMode != 0) {
+            if (alignmentMode != 2) {
+              if ((alignmentMode != 3) &&
+                  (alignmentMode == 1)) {
               }
-              var5 = (var4 - (this.field_n.maxAscent + this.field_n.maxDescent) >> 1) + this.field_n.maxAscent;
+              baselineOffset = (availableHeight - (this.font.maxAscent + this.font.maxDescent) >> 1) + this.font.maxAscent;
             } else {
-              var5 = var4 - this.field_n.maxDescent;
+              baselineOffset = availableHeight - this.font.maxDescent;
             }
           } else {
-            var5 = this.field_n.maxAscent;
+            baselineOffset = this.font.maxAscent;
           }
-          var6 = this.field_g;
-          if ((var6 != 0) &&
-              (var6 != 3)) {
-            if (var6 == 1) {
-              if (!(param1.textLayout instanceof CachedTextLayout)) {
+          alignmentMode = this.horizontalAlignment;
+          if ((alignmentMode != 0) &&
+              (alignmentMode != 3)) {
+            if (alignmentMode == 1) {
+              if (!(widget.textLayout instanceof CachedTextLayout)) {
                 return;
               }
-              ((CachedTextLayout) ((Object) param1.textLayout)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
+              ((CachedTextLayout) ((Object) widget.textLayout)).layoutCenteredLine(this.getDisplayText(122, widget), baselineOffset, availableWidth >> 1, (byte) 58, this.font);
               return;
             }
-            if (var6 != 2) {
+            if (alignmentMode != 2) {
               return;
             }
-            if (!(param1.textLayout instanceof CachedTextLayout)) {
+            if (!(widget.textLayout instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) ((Object) param1.textLayout)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+            ((CachedTextLayout) ((Object) widget.textLayout)).layoutRightAlignedLine(availableWidth, baselineOffset, (byte) -21, this.font, this.getDisplayText(125, widget));
             return;
           }
-          if (param1.textLayout instanceof CachedTextLayout) {
-            ((CachedTextLayout) ((Object) param1.textLayout)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
+          if (widget.textLayout instanceof CachedTextLayout) {
+            ((CachedTextLayout) ((Object) widget.textLayout)).layoutLeftAlignedLine(baselineOffset, 0, this.getDisplayText(methodGuard ^ 18, widget), -91, this.font);
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_30_0 = var3;
-          stackIn_30_1 = new StringBuilder().append("ff.H(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_31_2 = "null";
+        } catch (java.lang.RuntimeException layoutFailure) {
+          caughtLayoutFailure = layoutFailure;
+          singleLineLayoutFailure = caughtLayoutFailure;
+          layoutFailureForContext = singleLineLayoutFailure;
+          layoutContextBuilder = new StringBuilder().append("ff.H(").append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_31_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) layoutFailureForContext), ((StringBuilder) (Object) layoutContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    public final TextLayout a(byte param0, UiWidget param1) {
-        RuntimeException var3 = null;
-        TextLayout stackIn_8_0 = null;
-        TextLayout stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final TextLayout getTextLayout(byte methodGuard, UiWidget widget) {
+        RuntimeException layoutFailure = null;
+        TextLayout nullLayoutResult = null;
+        TextLayout layoutBeforeReturn = null;
+        RuntimeException layoutFailureForContext = null;
+        StringBuilder layoutContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtLayoutFailure = null;
         try {
-          if (param1.textLayout == null) {
-            param1.textLayout = (TextLayout) ((Object) new CachedTextLayout());
+          if (widget.textLayout == null) {
+            widget.textLayout = (TextLayout) ((Object) new CachedTextLayout());
           }
-          if (this.field_q) {
-            ((CachedTextLayout) ((Object) param1.textLayout)).a(this.field_i, 1, this.c(116, param1), this.field_f, this.field_n, this.a(param1, -1), this.field_g, this.b(289769985, param1));
+          if (this.multiline) {
+            ((CachedTextLayout) ((Object) widget.textLayout)).layoutParagraph(this.verticalAlignment, 1, this.getDisplayText(116, widget), this.lineSpacing, this.font, this.getAvailableTextWidth(widget, -1), this.horizontalAlignment, this.getAvailableTextHeight(289769985, widget));
           } else {
-            this.b((byte) 109, param1);
+            this.updateSingleLineLayout((byte) 109, widget);
           }
-          if (param0 > 110) {
-            stackIn_10_0 = param1.textLayout;
-            return stackIn_10_0;
+          if (methodGuard > 110) {
+            layoutBeforeReturn = widget.textLayout;
+            return layoutBeforeReturn;
           }
-          stackIn_8_0 = (TextLayout) null;
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("ff.I(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+          nullLayoutResult = (TextLayout) null;
+          return nullLayoutResult;
+        } catch (java.lang.RuntimeException layoutException) {
+          caughtLayoutFailure = layoutException;
+          layoutFailure = caughtLayoutFailure;
+          layoutFailureForContext = layoutFailure;
+          layoutContextBuilder = new StringBuilder().append("ff.I(").append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) layoutFailureForContext), ((StringBuilder) (Object) layoutContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    TextWidgetRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
+    TextWidgetRenderer(BitmapFont font, int horizontalPadding, int verticalPadding, int textColor, int textShadowColor, int horizontalAlignment, int verticalAlignment, int lineSpacing) {
+        this(font, horizontalPadding, horizontalPadding, verticalPadding, verticalPadding, textColor, textShadowColor, horizontalAlignment, verticalAlignment, lineSpacing, -1, 2147483647, false);
     }
 
-    public final int a(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        UiWidget var8 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final int hitTestCaretIndex(UiWidget widget, int pointerX, int methodGuard, int parentY, int pointerY, int parentX) {
+        RuntimeException hitTestFailure = null;
+        UiWidget unusedWidget = null;
+        int caretIndexBeforeReturn = 0;
+        RuntimeException hitFailureForContext = null;
+        StringBuilder hitContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtHitFailure = null;
         try {
-          this.a((byte) 115, param0);
-          if (param2 != -15539) {
-            var8 = (UiWidget) null;
-            this.b((byte) 9, (UiWidget) null);
+          this.getTextLayout((byte) 115, widget);
+          if (methodGuard != -15539) {
+            unusedWidget = (UiWidget) null;
+            this.updateSingleLineLayout((byte) 9, (UiWidget) null);
           }
-          stackIn_3_0 = param0.textLayout.a(param1 - this.a(param5, param0, (byte) 46), -109, param4 - this.a(param3, -2, param0));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_6_0 = var7;
-          stackIn_6_1 = new StringBuilder().append("ff.V(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          caretIndexBeforeReturn = widget.textLayout.hitTestCaretIndex(pointerX - this.getTextOriginX(parentX, widget, (byte) 46), -109, pointerY - this.getTextOriginY(parentY, -2, widget));
+          return caretIndexBeforeReturn;
+        } catch (java.lang.RuntimeException hitException) {
+          caughtHitFailure = hitException;
+          hitTestFailure = caughtHitFailure;
+          hitFailureForContext = hitTestFailure;
+          hitContextBuilder = new StringBuilder().append("ff.V(");
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) hitFailureForContext), ((StringBuilder) (Object) hitContextBuilder).append(widgetDescription).append(',').append(pointerX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(pointerY).append(',').append(parentX).append(')').toString());
         }
     }
 
-    public final int a(UiWidget param0, byte param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int stackIn_1_0 = 0;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final int getMaximumLineEndXWithPadding(UiWidget widget, byte methodGuard) {
+        int guardQuotient = 0;
+        RuntimeException widthFailure = null;
+        int maximumEndXWithPadding = 0;
+        RuntimeException widthFailureForContext = null;
+        StringBuilder widthContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtWidthFailure = null;
         try {
-          this.a((byte) 126, param0);
-          var3_int = 24 / ((param1 - 30) / 57);
-          stackIn_1_0 = param0.textLayout.a(90) - (-this.field_e - this.field_j);
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("ff.AA(");
-          if (param0 == null) {
-            stackIn_5_2 = "null";
+          this.getTextLayout((byte) 126, widget);
+          guardQuotient = 24 / ((methodGuard - 30) / 57);
+          maximumEndXWithPadding = widget.textLayout.getMaximumLineEndX(90) - (-this.paddingLeft - this.paddingRight);
+          return maximumEndXWithPadding;
+        } catch (java.lang.RuntimeException widthException) {
+          caughtWidthFailure = widthException;
+          widthFailure = caughtWidthFailure;
+          widthFailureForContext = widthFailure;
+          widthContextBuilder = new StringBuilder().append("ff.AA(");
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widthFailureForContext), ((StringBuilder) (Object) widthContextBuilder).append(widgetDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    public final int a(int param0, UiWidget param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int stackIn_1_0 = 0;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final int getLayoutHeightWithPadding(int methodGuard, UiWidget widget) {
+        int guardQuotient = 0;
+        RuntimeException heightFailure = null;
+        int heightWithPadding = 0;
+        RuntimeException heightFailureForContext = null;
+        StringBuilder heightContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtHeightFailure = null;
         try {
-          var3_int = 46 / ((param0 + 58) / 61);
-          this.a((byte) 127, param1);
-          stackIn_1_0 = param1.textLayout.b(-3111) + this.field_m + this.field_b;
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("ff.G(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_5_2 = "null";
+          guardQuotient = 46 / ((methodGuard + 58) / 61);
+          this.getTextLayout((byte) 127, widget);
+          heightWithPadding = widget.textLayout.getLayoutHeight(-3111) + this.paddingTop + this.paddingBottom;
+          return heightWithPadding;
+        } catch (java.lang.RuntimeException heightException) {
+          caughtHeightFailure = heightException;
+          heightFailure = caughtHeightFailure;
+          heightFailureForContext = heightFailure;
+          heightContextBuilder = new StringBuilder().append("ff.G(").append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) heightFailureForContext), ((StringBuilder) (Object) heightContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStaticReferences(boolean methodGuard) {
         waitingForGraphicsText = null;
-        field_d = null;
-        field_a = null;
-        if (!param0) {
-            field_a = (java.awt.Image) null;
+        unreadTicketMessage = null;
+        loadingProgressImage = null;
+        if (!methodGuard) {
+            loadingProgressImage = (java.awt.Image) null;
         }
     }
 
-    final void a(TextWidgetRenderer param0, boolean param1) {
+    final void copyStyleTo(TextWidgetRenderer destination, boolean methodGuard) {
         try {
-            param0.field_i = this.field_i;
-            param0.field_c = this.field_c;
-            param0.field_m = this.field_m;
-            param0.field_e = this.field_e;
-            param0.field_f = this.field_f;
-            param0.field_n = this.field_n;
-            if (!param1) {
-                this.field_m = 34;
+            destination.verticalAlignment = this.verticalAlignment;
+            destination.caretColor = this.caretColor;
+            destination.paddingTop = this.paddingTop;
+            destination.paddingLeft = this.paddingLeft;
+            destination.lineSpacing = this.lineSpacing;
+            destination.font = this.font;
+            if (!methodGuard) {
+                this.paddingTop = 34;
             }
-            param0.field_j = this.field_j;
-            param0.field_b = this.field_b;
-            param0.field_q = this.field_q;
-            param0.field_o = this.field_o;
-            param0.field_h = this.field_h;
-            param0.field_p = this.field_p;
-            param0.field_g = this.field_g;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ff.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            destination.paddingRight = this.paddingRight;
+            destination.paddingBottom = this.paddingBottom;
+            destination.multiline = this.multiline;
+            destination.textColor = this.textColor;
+            destination.selectionArgb = this.selectionArgb;
+            destination.textShadowColor = this.textShadowColor;
+            destination.horizontalAlignment = this.horizontalAlignment;
+        } catch (RuntimeException styleCopyFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) styleCopyFailure), "ff.O(" + (destination != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
-    private final int b(UiWidget param0, int param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        UiWidget var6 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final int getTextY(UiWidget widget, int parentY, int methodGuard, int extraY) {
+        RuntimeException textYFailure = null;
+        UiWidget unusedWidget = null;
+        int textYBeforeReturn = 0;
+        RuntimeException textYFailureForContext = null;
+        StringBuilder textYContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtTextYFailure = null;
         try {
-          if (param2 != 1674) {
-            var6 = (UiWidget) null;
-            this.c(-123, (UiWidget) null);
+          if (methodGuard != 1674) {
+            unusedWidget = (UiWidget) null;
+            this.getDisplayText(-123, (UiWidget) null);
           }
-          stackIn_3_0 = param3 + param0.textOffsetY + (this.field_m + (param0.widgetY + param1));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("ff.U(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          textYBeforeReturn = extraY + widget.textOffsetY + (this.paddingTop + (widget.widgetY + parentY));
+          return textYBeforeReturn;
+        } catch (java.lang.RuntimeException textYException) {
+          caughtTextYFailure = textYException;
+          textYFailure = caughtTextYFailure;
+          textYFailureForContext = textYFailure;
+          textYContextBuilder = new StringBuilder().append("ff.U(");
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textYFailureForContext), ((StringBuilder) (Object) textYContextBuilder).append(widgetDescription).append(',').append(parentY).append(',').append(methodGuard).append(',').append(extraY).append(')').toString());
         }
     }
 
-    String c(int param0, UiWidget param1) {
-        RuntimeException var3 = null;
-        String stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    String getDisplayText(int methodGuard, UiWidget widget) {
+        RuntimeException displayTextFailure = null;
+        String displayTextBeforeReturn = null;
+        RuntimeException textFailureForContext = null;
+        StringBuilder textContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtTextFailure = null;
         try {
-          if (param0 < 109) {
-            this.field_i = 23;
+          if (methodGuard < 109) {
+            this.verticalAlignment = 23;
           }
-          stackIn_3_0 = param1.widgetText;
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ff.L(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          displayTextBeforeReturn = widget.widgetText;
+          return displayTextBeforeReturn;
+        } catch (java.lang.RuntimeException displayTextException) {
+          caughtTextFailure = displayTextException;
+          displayTextFailure = caughtTextFailure;
+          textFailureForContext = displayTextFailure;
+          textContextBuilder = new StringBuilder().append("ff.L(").append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textFailureForContext), ((StringBuilder) (Object) textContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    public final int a(int param0, int param1, UiWidget param2) {
-        RuntimeException var4 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final int getTextOriginY(int parentY, int methodGuard, UiWidget widget) {
+        RuntimeException originYFailure = null;
+        int originYBeforeReturn = 0;
+        RuntimeException originFailureForContext = null;
+        StringBuilder originContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtOriginFailure = null;
         try {
-          if (param1 != -2) {
-            field_k = true;
+          if (methodGuard != -2) {
+            suppressReconnectErrorPage = true;
           }
-          stackIn_3_0 = this.b(param2, param0, param1 ^ -1676, 0);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("ff.Q(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_7_2 = "null";
+          originYBeforeReturn = this.getTextY(widget, parentY, methodGuard ^ -1676, 0);
+          return originYBeforeReturn;
+        } catch (java.lang.RuntimeException originException) {
+          caughtOriginFailure = originException;
+          originYFailure = caughtOriginFailure;
+          originFailureForContext = originYFailure;
+          originContextBuilder = new StringBuilder().append("ff.Q(").append(parentY).append(',').append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) originFailureForContext), ((StringBuilder) (Object) originContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    public final int a(int param0, UiWidget param1, byte param2) {
-        RuntimeException var4 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final int getTextOriginX(int parentX, UiWidget widget, byte methodGuard) {
+        RuntimeException originXFailure = null;
+        int invalidGuardResult = 0;
+        int originXBeforeReturn = 0;
+        RuntimeException originFailureForContext = null;
+        StringBuilder originContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtOriginFailure = null;
         try {
-          if (param2 == 46) {
-            stackIn_4_0 = this.a(param1, param0, param2 + 11829, 0);
-            return stackIn_4_0;
+          if (methodGuard == 46) {
+            originXBeforeReturn = this.getTextX(widget, parentX, methodGuard + 11829, 0);
+            return originXBeforeReturn;
           }
-          stackIn_2_0 = 59;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("ff.K(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          invalidGuardResult = 59;
+          return invalidGuardResult;
+        } catch (java.lang.RuntimeException originException) {
+          caughtOriginFailure = originException;
+          originXFailure = caughtOriginFailure;
+          originFailureForContext = originXFailure;
+          originContextBuilder = new StringBuilder().append("ff.K(").append(parentX).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) originFailureForContext), ((StringBuilder) (Object) originContextBuilder).append(widgetDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     public void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        if (!(null != this.field_n)) {
+        if (!(null != this.font)) {
             return;
         }
         try {
-            this.a(parentX, parentY, widget, true);
+            this.drawDefaultWidgetText(parentX, parentY, widget, true);
             if (methodGuard >= -5) {
-                this.field_c = -8;
+                this.caretColor = -8;
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ff.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException widgetDrawFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetDrawFailure), "ff.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int a(int param0) {
-        if (param0 != 1) {
-            UiWidget var3 = (UiWidget) null;
-            this.a(79, -83, (UiWidget) null, -31, 118, 54, 3, -68);
+    public final int getFontHeight(int methodGuard) {
+        if (methodGuard != 1) {
+            UiWidget unusedWidget = (UiWidget) null;
+            this.drawTextWithinWidget(79, -83, (UiWidget) null, -31, 118, 54, 3, -68);
         }
-        return this.field_n.maxAscent + this.field_n.maxDescent;
+        return this.font.maxAscent + this.font.maxDescent;
     }
 
-    private final int b(int param0, UiWidget param1) {
-        RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final int getAvailableTextHeight(int methodGuard, UiWidget widget) {
+        RuntimeException availableHeightFailure = null;
+        int invalidGuardResult = 0;
+        int availableHeightBeforeReturn = 0;
+        RuntimeException heightFailureForContext = null;
+        StringBuilder heightContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtHeightFailure = null;
         try {
-          if (param0 == 289769985) {
-            stackIn_4_0 = -this.field_m + param1.widgetHeight - this.field_b;
-            return stackIn_4_0;
+          if (methodGuard == 289769985) {
+            availableHeightBeforeReturn = -this.paddingTop + widget.widgetHeight - this.paddingBottom;
+            return availableHeightBeforeReturn;
           }
-          stackIn_2_0 = 90;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ff.T(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          invalidGuardResult = 90;
+          return invalidGuardResult;
+        } catch (java.lang.RuntimeException heightException) {
+          caughtHeightFailure = heightException;
+          availableHeightFailure = caughtHeightFailure;
+          heightFailureForContext = availableHeightFailure;
+          heightContextBuilder = new StringBuilder().append("ff.T(").append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) heightFailureForContext), ((StringBuilder) (Object) heightContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, int param2, UiWidget param3, int param4) {
-        int var7 = 0;
-        TextLayoutLine var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        UiWidget var13 = null;
-        TextLayout var14 = null;
-        TextLayout var15 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_5_3;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
+    public final void drawCaret(int parentX, int caretIndex, int methodGuard, UiWidget widget, int parentY) {
+        int caretLineIndex = 0;
+        TextLayoutLine caretLine = null;
+        int caretX = 0;
+        int screenCaretX = 0;
+        int caretTopY = 0;
+        int caretBottomY = 0;
+        UiWidget unusedWidget = null;
+        TextLayout layout = null;
+        TextLayout layoutAlias = null;
+        int originYBeforeClamp = 0;
+        int availableHeightForClamp = 0;
+        int lineBottomForClamp = 0;
+        int nextTopOrCurrentBottom;
+        RuntimeException caretFailureForContext = null;
+        StringBuilder caretContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtCaretFailure = null;
+        RuntimeException caretDrawFailure = null;
         try {
-          if (param3.hasKeyboardFocus((byte) 54)) {
-            var14 = this.a((byte) 121, param3);
-            var15 = var14;
-            var7 = var15.a((byte) 24, param1);
-            var8 = var14.field_a[var7];
-            var9 = var15.a(param1, 120);
-            var10 = this.a(param3, param0, 11875, var9);
-            var11 = this.a(param4, -2, param3) + Math.max(0, var8.field_d);
-            stackIn_4_0 = this.a(param4, -2, param3);
-            stackIn_4_1 = this.b(289769985, param3);
-            stackIn_4_2 = var8.field_a;
-            if (var7 + 1 >= var15.field_a.length) {
-              stackIn_5_3 = var8.field_a;
+          if (widget.hasKeyboardFocus((byte) 54)) {
+            layout = this.getTextLayout((byte) 121, widget);
+            layoutAlias = layout;
+            caretLineIndex = layoutAlias.getCaretLineIndex((byte) 24, caretIndex);
+            caretLine = layout.lines[caretLineIndex];
+            caretX = layoutAlias.getCaretX(caretIndex, 120);
+            screenCaretX = this.getTextX(widget, parentX, 11875, caretX);
+            caretTopY = this.getTextOriginY(parentY, -2, widget) + Math.max(0, caretLine.topY);
+            originYBeforeClamp = this.getTextOriginY(parentY, -2, widget);
+            availableHeightForClamp = this.getAvailableTextHeight(289769985, widget);
+            lineBottomForClamp = caretLine.bottomY;
+            if (caretLineIndex + 1 >= layoutAlias.lines.length) {
+              nextTopOrCurrentBottom = caretLine.bottomY;
             } else {
-              stackIn_5_3 = var14.field_a[var7 + 1].field_d;
+              nextTopOrCurrentBottom = layout.lines[caretLineIndex + 1].topY;
             }
-            var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            PasswordWidgetRenderer.a(param4 + param3.widgetY, param0 + param3.widgetX, -14045, param4 + param3.widgetY + param3.widgetHeight, param3.widgetWidth + param0 + param3.widgetX);
-            DialRenderer.field_j.a(var12, var10, this.field_c, var11, var10, 8947848);
+            caretBottomY = originYBeforeClamp + Math.min(availableHeightForClamp, Math.min(lineBottomForClamp, nextTopOrCurrentBottom));
+            PasswordWidgetRenderer.pushWidgetClip(parentY + widget.widgetY, parentX + widget.widgetX, -14045, parentY + widget.widgetY + widget.widgetHeight, widget.widgetWidth + parentX + widget.widgetX);
+            DialRenderer.field_j.drawWidgetLine(caretBottomY, screenCaretX, this.caretColor, caretTopY, screenCaretX, 8947848);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
           }
-          if (param2 != -2) {
-            var13 = (UiWidget) null;
-            this.a((UiWidget) null, (byte) 70);
+          if (methodGuard != -2) {
+            unusedWidget = (UiWidget) null;
+            this.getMaximumLineEndXWithPadding((UiWidget) null, (byte) 70);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_11_0 = var6;
-          stackIn_11_1 = new StringBuilder().append("ff.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException caretException) {
+          caughtCaretFailure = caretException;
+          caretDrawFailure = caughtCaretFailure;
+          caretFailureForContext = caretDrawFailure;
+          caretContextBuilder = new StringBuilder().append("ff.S(").append(parentX).append(',').append(caretIndex).append(',').append(methodGuard).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caretFailureForContext), ((StringBuilder) (Object) caretContextBuilder).append(widgetDescription).append(',').append(parentY).append(')').toString());
         }
     }
 
-    public final int a(UiWidget param0, int param1) {
-        RuntimeException var3 = null;
-        UiWidget var4 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final int getAvailableTextWidth(UiWidget widget, int methodGuard) {
+        RuntimeException availableWidthFailure = null;
+        UiWidget unusedWidget = null;
+        int availableWidthBeforeReturn = 0;
+        RuntimeException widthFailureForContext = null;
+        StringBuilder widthContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtWidthFailure = null;
         try {
-          if (param1 != -1) {
-            var4 = (UiWidget) null;
-            this.a(106, 101, 118, (UiWidget) null, -6);
+          if (methodGuard != -1) {
+            unusedWidget = (UiWidget) null;
+            this.drawCaret(106, 101, 118, (UiWidget) null, -6);
           }
-          stackIn_3_0 = -this.field_j - this.field_e + param0.widgetWidth;
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ff.R(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          availableWidthBeforeReturn = -this.paddingRight - this.paddingLeft + widget.widgetWidth;
+          return availableWidthBeforeReturn;
+        } catch (java.lang.RuntimeException widthException) {
+          caughtWidthFailure = widthException;
+          availableWidthFailure = caughtWidthFailure;
+          widthFailureForContext = availableWidthFailure;
+          widthContextBuilder = new StringBuilder().append("ff.R(");
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widthFailureForContext), ((StringBuilder) (Object) widthContextBuilder).append(widgetDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
-        int var12 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_20_0 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        TextLayoutLine var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        UiWidget var17 = null;
-        TextLayout var18 = null;
-        TextLayout var19 = null;
-        var16 = Geoblox.clientControlFlowFlag;
+    public final void drawSelection(int selectionAnchorIndex, int methodGuard, int parentY, int parentX, int caretIndex, UiWidget widget) {
+        int lineIndex = 0;
+        int selectionStartXSnapshot = 0;
+        int selectionEndXSnapshot = 0;
+        RuntimeException selectionFailureForContext = null;
+        StringBuilder selectionContextBuilder = null;
+        String widgetDescription = null;
+        RuntimeException caughtSelectionFailure = null;
+        RuntimeException selectionDrawFailure = null;
+        int selectionStart = 0;
+        int selectionEnd = 0;
+        int firstSelectedLine = 0;
+        int lastSelectedLine = 0;
+        TextLayoutLine selectedLine = null;
+        int selectionStartX = 0;
+        int selectionEndX = 0;
+        int clientControlFlowSnapshot = 0;
+        UiWidget unusedWidget = null;
+        TextLayout layout = null;
+        TextLayout layoutAlias = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param0 == param4) {
+          if (selectionAnchorIndex == caretIndex) {
             return;
           }
-          if (param1 != 0) {
-            var17 = (UiWidget) null;
-            this.a(90, -50, (UiWidget) null);
+          if (methodGuard != 0) {
+            unusedWidget = (UiWidget) null;
+            this.getTextOriginY(90, -50, (UiWidget) null);
           }
-          if (param5.hasKeyboardFocus((byte) 54)) {
-            var18 = this.a((byte) 115, param5);
-            var19 = var18;
-            if (param4 <= param0) {
-              var9 = param0;
-              var8 = param4;
+          if (widget.hasKeyboardFocus((byte) 54)) {
+            layout = this.getTextLayout((byte) 115, widget);
+            layoutAlias = layout;
+            if (caretIndex <= selectionAnchorIndex) {
+              selectionEnd = selectionAnchorIndex;
+              selectionStart = caretIndex;
             } else {
-              var9 = param4;
-              var8 = param0;
+              selectionEnd = caretIndex;
+              selectionStart = selectionAnchorIndex;
             }
-            var10 = var19.a((byte) 24, var8);
-            var11 = var19.a((byte) 24, var9);
-            PasswordWidgetRenderer.a(param2 + param5.widgetY, param3 + param5.widgetX, -14045, param5.widgetHeight + (param5.widgetY + param2), param5.widgetWidth + (param3 + param5.widgetX));
-            for (var12 = var10; var12 <= var11; var12++) {
-              var13 = var18.field_a[var12];
-              if (var10 != var12) {
-                stackIn_15_0 = var13.field_c[0];
+            firstSelectedLine = layoutAlias.getCaretLineIndex((byte) 24, selectionStart);
+            lastSelectedLine = layoutAlias.getCaretLineIndex((byte) 24, selectionEnd);
+            PasswordWidgetRenderer.pushWidgetClip(parentY + widget.widgetY, parentX + widget.widgetX, -14045, widget.widgetHeight + (widget.widgetY + parentY), widget.widgetWidth + (parentX + widget.widgetX));
+            for (lineIndex = firstSelectedLine; lineIndex <= lastSelectedLine; lineIndex++) {
+              selectedLine = layout.lines[lineIndex];
+              if (firstSelectedLine != lineIndex) {
+                selectionStartXSnapshot = selectedLine.caretX[0];
               } else {
-                stackIn_15_0 = var19.a(var8, 110);
+                selectionStartXSnapshot = layoutAlias.getCaretX(selectionStart, 110);
               }
-              var14 = stackIn_15_0;
-              if (var11 != var12) {
-                if (var13 != null) {
-                  stackIn_20_0 = var13.field_c[var13.field_c.length - 1];
+              selectionStartX = selectionStartXSnapshot;
+              if (lastSelectedLine != lineIndex) {
+                if (selectedLine != null) {
+                  selectionEndXSnapshot = selectedLine.caretX[selectedLine.caretX.length - 1];
                 } else {
-                  stackIn_20_0 = 0;
+                  selectionEndXSnapshot = 0;
                 }
               } else {
-                stackIn_20_0 = var19.a(var9, 124);
+                selectionEndXSnapshot = layoutAlias.getCaretX(selectionEnd, 124);
               }
-              var15 = stackIn_20_0;
-              DialRenderer.field_j.a(var13.field_d + (param2 + param5.widgetY + this.field_m + param5.textOffsetY), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
+              selectionEndX = selectionEndXSnapshot;
+              DialRenderer.field_j.fillWidgetRectangleAlpha(selectedLine.topY + (parentY + widget.widgetY + this.paddingTop + widget.textOffsetY), selectedLine.bottomY, -selectionStartX + selectionEndX, this.selectionArgb >>> 24, methodGuard ^ 15658734, this.selectionArgb, this.getTextX(widget, parentX, 11875, selectionStartX));
             }
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_25_0 = var7;
-          stackIn_25_1 = new StringBuilder().append("ff.W(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
-            stackIn_26_2 = "null";
+        } catch (java.lang.RuntimeException selectionException) {
+          caughtSelectionFailure = selectionException;
+          selectionDrawFailure = caughtSelectionFailure;
+          selectionFailureForContext = selectionDrawFailure;
+          selectionContextBuilder = new StringBuilder().append("ff.W(").append(selectionAnchorIndex).append(',').append(methodGuard).append(',').append(parentY).append(',').append(parentX).append(',').append(caretIndex).append(',');
+          if (widget == null) {
+            widgetDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) selectionFailureForContext), ((StringBuilder) (Object) selectionContextBuilder).append(widgetDescription).append(')').toString());
         }
     }
 
     protected TextWidgetRenderer() {
     }
 
-    TextWidgetRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    TextWidgetRenderer(BitmapFont font, int paddingLeft, int paddingRight, int paddingTop, int paddingBottom, int textColor, int textShadowColor, int horizontalAlignment, int verticalAlignment, int lineSpacing, int caretColor, int selectionArgb, boolean multiline) {
         try {
-            this.field_i = param8;
-            this.field_q = param12 ? true : false;
-            this.field_j = param2;
-            this.field_n = param0;
-            this.field_h = param11;
-            this.field_p = param6;
-            this.field_f = param9;
-            this.field_o = param5;
-            this.field_e = param1;
-            this.field_b = param4;
-            this.field_m = param3;
-            this.field_c = param10;
-            this.field_g = param7;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+            this.verticalAlignment = verticalAlignment;
+            this.multiline = multiline ? true : false;
+            this.paddingRight = paddingRight;
+            this.font = font;
+            this.selectionArgb = selectionArgb;
+            this.textShadowColor = textShadowColor;
+            this.lineSpacing = lineSpacing;
+            this.textColor = textColor;
+            this.paddingLeft = paddingLeft;
+            this.paddingBottom = paddingBottom;
+            this.paddingTop = paddingTop;
+            this.caretColor = caretColor;
+            this.horizontalAlignment = horizontalAlignment;
+        } catch (RuntimeException rendererConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "ff.<init>(" + (font != null ? "{...}" : "null") + ',' + paddingLeft + ',' + paddingRight + ',' + paddingTop + ',' + paddingBottom + ',' + textColor + ',' + textShadowColor + ',' + horizontalAlignment + ',' + verticalAlignment + ',' + lineSpacing + ',' + caretColor + ',' + selectionArgb + ',' + multiline + ')');
         }
     }
 
     static {
         waitingForGraphicsText = "Waiting for graphics";
-        field_d = null;
+        unreadTicketMessage = null;
     }
 }
