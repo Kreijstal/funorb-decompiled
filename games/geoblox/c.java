@@ -362,15 +362,7 @@ final class c extends ka {
           if (this.field_K != 0 &&
               this.field_K != 1 &&
               this.field_K != 4) {
-            L1: {
-              if (2 == this.field_K) {
-                var2_int = 235;
-                if (var12 == 0) {
-                  break L1;
-                }
-              }
-              var2_int = 285;
-            }
+            var2_int = (2 == this.field_K) && (var12 == 0) ? (235) : (285);
             L3: {
               var5 = 120;
               if (this.field_K == 3) {
@@ -2322,15 +2314,7 @@ final class c extends ka {
                 break L14;
               }
             }
-            L26: {
-              if (this.field_K != 3) {
-                var11 = 160;
-                if (var14 == 0) {
-                  break L26;
-                }
-              }
-              var11 = 123;
-            }
+            var11 = (this.field_K != 3) && (var14 == 0) ? (160) : (123);
             L28: {
               var12 = (param3 + (-280 - this.field_k)) / this.field_d;
               var9 = 320 + (var11 + 20) * (var12 - 1);
