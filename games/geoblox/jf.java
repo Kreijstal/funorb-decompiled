@@ -228,103 +228,92 @@ final class jf implements dh {
                   var5 >= 128) {
                 if (var5 < 160 ||
                     255 < var5) {
-                  if (8364 == var5) {
-                    var3[var4] = (byte)-128;
-                    break L2;
+                  switch (var5) {
+                    case 8364:
+                      var3[var4] = (byte)-128;
+                      break L2;
+                    case 8218:
+                      var3[var4] = (byte)-126;
+                      break L2;
+                    case 402:
+                      var3[var4] = (byte)-125;
+                      break L2;
+                    case 8222:
+                      var3[var4] = (byte)-124;
+                      break L2;
+                    case 8230:
+                      var3[var4] = (byte)-123;
+                      break L2;
+                    case 8224:
+                      var3[var4] = (byte)-122;
+                      break L2;
+                    case 8225:
+                      var3[var4] = (byte)-121;
+                      break L2;
+                    case 710:
+                      var3[var4] = (byte)-120;
+                      break L2;
+                    case 8240:
+                      var3[var4] = (byte)-119;
+                      break L2;
+                    case 352:
+                      var3[var4] = (byte)-118;
+                      break L2;
+                    case 8249:
+                      var3[var4] = (byte)-117;
+                      break L2;
+                    case 338:
+                      var3[var4] = (byte)-116;
+                      break L2;
+                    case 381:
+                      var3[var4] = (byte)-114;
+                      break L2;
+                    case 8216:
+                      var3[var4] = (byte)-111;
+                      break L2;
+                    case 8217:
+                      var3[var4] = (byte)-110;
+                      break L2;
+                    case 8220:
+                      var3[var4] = (byte)-109;
+                      break L2;
+                    case 8221:
+                      var3[var4] = (byte)-108;
+                      break L2;
+                    case 8226:
+                      var3[var4] = (byte)-107;
+                      break L2;
+                    case 8211:
+                      var3[var4] = (byte)-106;
+                      break L2;
+                    case 8212:
+                      var3[var4] = (byte)-105;
+                      break L2;
+                    case 732:
+                      var3[var4] = (byte)-104;
+                      break L2;
+                    case 8482:
+                      var3[var4] = (byte)-103;
+                      break L2;
+                    case 353:
+                      var3[var4] = (byte)-102;
+                      break L2;
+                    case 8250:
+                      var3[var4] = (byte)-101;
+                      break L2;
+                    case 339:
+                      var3[var4] = (byte)-100;
+                      break L2;
+                    case 382:
+                      var3[var4] = (byte)-98;
+                      break L2;
+                    default:
+                      var3[var4] = (byte)63;
+                      break L2;
+                    case 376:
+                      var3[var4] = (byte)-97;
+                      break L2;
                   }
-                  if (var5 == 8218) {
-                    var3[var4] = (byte)-126;
-                    break L2;
-                  }
-                  if (402 == var5) {
-                    var3[var4] = (byte)-125;
-                    break L2;
-                  }
-                  if (8222 == var5) {
-                    var3[var4] = (byte)-124;
-                    break L2;
-                  }
-                  if (var5 == 8230) {
-                    var3[var4] = (byte)-123;
-                    break L2;
-                  }
-                  if (var5 == 8224) {
-                    var3[var4] = (byte)-122;
-                    break L2;
-                  }
-                  if (var5 == 8225) {
-                    var3[var4] = (byte)-121;
-                    break L2;
-                  }
-                  if (var5 == 710) {
-                    var3[var4] = (byte)-120;
-                    break L2;
-                  }
-                  if (var5 == 8240) {
-                    var3[var4] = (byte)-119;
-                    break L2;
-                  }
-                  if (352 == var5) {
-                    var3[var4] = (byte)-118;
-                    break L2;
-                  }
-                  if (8249 == var5) {
-                    var3[var4] = (byte)-117;
-                    break L2;
-                  }
-                      switch (var5) {
-                        case 338:
-                          var3[var4] = (byte)-116;
-                          break L2;
-                        case 381:
-                          var3[var4] = (byte)-114;
-                          break L2;
-                        case 8216:
-                          var3[var4] = (byte)-111;
-                          break L2;
-                        case 8217:
-                          var3[var4] = (byte)-110;
-                          break L2;
-                        case 8220:
-                          var3[var4] = (byte)-109;
-                          break L2;
-                        case 8221:
-                          var3[var4] = (byte)-108;
-                          break L2;
-                        case 8226:
-                          var3[var4] = (byte)-107;
-                          break L2;
-                        case 8211:
-                          var3[var4] = (byte)-106;
-                          break L2;
-                        case 8212:
-                          var3[var4] = (byte)-105;
-                          break L2;
-                        case 732:
-                          var3[var4] = (byte)-104;
-                          break L2;
-                        case 8482:
-                          var3[var4] = (byte)-103;
-                          break L2;
-                        case 353:
-                          var3[var4] = (byte)-102;
-                          break L2;
-                        case 8250:
-                          var3[var4] = (byte)-101;
-                          break L2;
-                        case 339:
-                          var3[var4] = (byte)-100;
-                          break L2;
-                        case 382:
-                          var3[var4] = (byte)-98;
-                          break L2;
-                        default:
-                          var3[var4] = (byte)63;
-                          break L2;
-                        case 376:
-                          var3[var4] = (byte)-97;
-                          break L2;
-                      }
                     }
               }
               var3[var4] = (byte)var5;
