@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b38fca49a9b3d79f299ee82ed17be170ba8672bf/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0963abf3ca88ea342d65f36421a360adcc5f1d87/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 187)
+## Current readability (pass 188)
 
-The export has 18,445 guarded names and 117,499 Java identifier edits, plus 11
+The export has 18,445 guarded names and 117,477 Java identifier edits, plus 11
 class-name literal edits and 769 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,526 bindings, reproduce and
+compile and compare 136,504 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -24,7 +24,52 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current nested dispatch recovery (pass 187)
+## Current encoder switch recovery (pass 188)
+
+The two text encoders now express all 27 special character cases in one switch
+per method. The generic decompiler joins 11 terminating equality arms into each
+existing 16-case switch. The original switch body, fallback, action order,
+label targets and protected scopes remain intact. Its selector is a captured
+primitive int local; no control-flag value is assumed.
+
+| Method | Body lines before → after | Comparisons removed |
+| --- | ---: | ---: |
+| `DisplayNamePanel.encodeTextSlice` | 149 → 138 | 11 |
+| `MultiHandleSliderRenderer.encodeTextBytes` | 145 → 134 | 11 |
+
+This removes 22 repeated comparisons, 22 declaration-free outer arm blocks and
+22 corpus lines. All 18,445 complete naming rules and 19,491 dictionary identities
+remain unchanged. The export has 118,257 edits and compares 136,504 bindings.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/scalarIfDispatchRecovery.test.js`
+passes 16 focused groups. Six new independent native models check 13,824 cases,
+including overflow, nullable guards/monitors, declaration scopes and
+break/continue/return/exception/finally completion. The existing 119,325 scalar
+dispatch cases also pass. The regression command
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/scalarIfDispatchRecovery.test.js test/predicateGroupingRecovery.test.js test/predicateNegationRecovery.test.js test/javaAstEmitterLoopExits.test.js test/javaAstEmitterTrailingLoops.test.js test/cfrBranchMergeRegressions.test.js`
+passes 135 tests with one existing optional corpus skip.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+proves the exact expected bytes and tokens for all 303 raw files. Independent JDK
+attribution checks all 22 removed comparisons and the moved switch selector
+bindings. All 5,205 original transfer targets and protected scopes, 388 overrides
+and 769 lexical label records survive. Both encoders match the JDK charset
+oracle for 393,216 UTF-16-unit cases under negative, zero and positive control
+flags, including slice padding.
+
+All 303 readable files reverse byte exactly. The 27 publication tests, existing
+scoped gameplay/result-helper native traces and current/fresh sibling
+reproduction checks pass. Eight large labeled bodies and 41 unsupported opaque
+fields remain. Whole game/renderer/assets/server/browser/phone,
+heap/presented-FPS acceptance and catalog-wide effects remain unverified.
+Earlier reviewed proofs, frozen inputs and native/naming pins remain unchanged.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`1ad9bbf4a13ec874a49344bfae65af930733c38c4acb6b4594026e89a8817e24`.
+
+## Previous nested dispatch recovery (pass 187)
 
 Three nested integer ladders are now explicit ordered switches. The generic
 recovery keeps the complete preceding code outside each new switch, including
