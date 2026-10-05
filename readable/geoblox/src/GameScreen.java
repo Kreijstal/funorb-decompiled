@@ -1297,16 +1297,10 @@ final class GameScreen extends MenuScreen {
               case 3:
                 ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
                 UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                if (clientControlFlowGuard == 0) {
-                  break;
-                }
                 break;
               case 6:
                 DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
                 SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                if (clientControlFlowGuard == 0) {
-                  break;
-                }
               default:
                 break;
               case 7:

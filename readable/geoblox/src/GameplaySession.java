@@ -641,44 +641,26 @@ final class GameplaySession {
                 case 0:
                   ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
                   DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                   break;
                 case 1:
                   ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
                   UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                   break;
                 case 3:
                   ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
                   UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                   break;
                 case 4:
                   SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
                   DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                   break;
                 case 5:
                   UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                   SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                   break;
                 case 6:
                   SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
                   DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                 default:
                   break;
                 case 7:
@@ -696,16 +678,10 @@ final class GameplaySession {
               switch (inputDerivedModuloIndex) {
                 case 0:
                   AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                   break;
                 case 3:
                   AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
                   UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
                 default:
                   break;
                 case 4:
@@ -741,30 +717,18 @@ final class GameplaySession {
                   case 3:
                     UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                     ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
                     break;
                   case 4:
                     DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
                     SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
                     break;
                   case 5:
                     UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                     SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
                     break;
                   case 6:
                     SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
                     DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
                   default:
                     break;
                   case 7:
