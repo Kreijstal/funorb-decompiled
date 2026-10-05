@@ -302,7 +302,7 @@ class HotspotTextWidget extends ButtonWidget {
         try {
           guardRemainder = 122 % ((41 - methodGuard) / 55);
           if (((null == this.hotspotHoverTexts) ||
-              (!(hotspotId < this.hotspotHoverTexts.length)))) {
+              ((hotspotId >= this.hotspotHoverTexts.length)))) {
             grownHoverTexts = new String[hotspotId + 1];
             if (null != this.hotspotHoverTexts) {
               for (hoverTextCopyIndex = 0; hoverTextCopyIndex < this.hotspotHoverTexts.length; hoverTextCopyIndex++) {

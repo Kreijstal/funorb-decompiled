@@ -575,9 +575,9 @@ final class GameplaySession {
         pointsPanelSlideStep: {
           if (0 == (this.updateTick & 1)) {
             if (((-1 != this.pointsPanelSlideDirection) ||
-                  (!(463 < this.pointsPanelX)))) {
+                  ((463 >= this.pointsPanelX)))) {
               if (((this.pointsPanelSlideDirection != 1) ||
-                    (!(this.pointsPanelX < 640)))) {
+                    ((this.pointsPanelX >= 640)))) {
                 if (this.pointsPanelX != 463) {
                   break pointsPanelSlideStep;
                 }
@@ -1693,8 +1693,8 @@ final class GameplaySession {
               break sessionExitScreenSelection;
             }
           }
-          if (((!(this.score <= 0)) ||
-                (!(this.newActionCount <= 0)))) {
+          if ((((this.score > 0)) ||
+                ((this.newActionCount > 0)))) {
             ScoreSubmission.requestedScreenId = 4;
             if (clientControlFlowGuard == 0) {
               break sessionExitScreenSelection;

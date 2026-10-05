@@ -67,12 +67,12 @@ final class GrowableIntList {
     final int get(int index, byte methodGuard) {
         if (methodGuard != 94) {
             createMismatchAlertText = (String) null;
-            if (!(index <= this.lastIndex)) {
+            if ((index > this.lastIndex)) {
                 throw new ArrayIndexOutOfBoundsException(index);
             }
             return this.values[index];
         }
-        if (!(index <= this.lastIndex)) {
+        if ((index > this.lastIndex)) {
             throw new ArrayIndexOutOfBoundsException(index);
         }
         return this.values[index];
@@ -88,10 +88,10 @@ final class GrowableIntList {
 
     private final void set(int value, int methodGuard, int index) {
         if (methodGuard == 1) {
-            if (!(this.lastIndex >= index)) {
+            if ((this.lastIndex < index)) {
                 this.lastIndex = index;
             }
-            if (!(this.values.length > index)) {
+            if ((this.values.length <= index)) {
                 this.ensureCapacity(index, methodGuard ^ 25176);
             }
             this.values[index] = value;

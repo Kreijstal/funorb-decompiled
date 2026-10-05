@@ -183,7 +183,7 @@ final class MidiPcmStream extends PcmStream {
           envelope = note.envelope;
           if (0 < envelope.vibratoPhaseStep) {
             if (((!(envelope.vibratoDepth <= 0)) ||
-                (!(this.channelModulation[note.channelIndex] <= 0)))) {
+                ((this.channelModulation[note.channelIndex] > 0)))) {
               vibratoDepthOrSampleStep = envelope.vibratoDepth << 2;
               vibratoRampUpdates = envelope.vibratoRampTicks << 1;
               if (vibratoRampUpdates > note.ageUpdates) {

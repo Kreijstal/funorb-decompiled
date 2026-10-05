@@ -24,7 +24,7 @@ final class WeightedObjectCache {
         StrongCacheReference strongEntry = null;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            if (!(entryWeight <= this.weightCapacity)) {
+            if ((entryWeight > this.weightCapacity)) {
                 throw new IllegalStateException();
             }
             this.removeByKey(key, 0);
