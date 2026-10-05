@@ -178,7 +178,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           templateVariantIndex = templateEntity.spriteVariantIndex;
           templateSpriteKindId = templateEntity.entitySpriteKindId;
           templateCategoryKey = templateEntity.entityCategoryKey;
-          contactConversionQueue: while (true) {
+          while (true) {
             poppedEntity = (GameplayEntity) ((Object) pendingEntitiesForRemoval.removeFirst(true));
             currentEntity = poppedEntity;
             if (null == poppedEntity) {
@@ -201,7 +201,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             contactConversionNeighbors: while (true) {
               if (neighborIndex >= currentEntity.relatedEntityCount) {
                 processedEntities.addFirst(currentEntity, false);
-                continue contactConversionQueue;
+                break;
               }
               if (currentEntity.relatedEntities[neighborIndex].entitySpriteKindId != 1 ||
                     !propagateVariant) {
@@ -238,7 +238,6 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
               pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
               neighborIndex++;
-              continue contactConversionNeighbors;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

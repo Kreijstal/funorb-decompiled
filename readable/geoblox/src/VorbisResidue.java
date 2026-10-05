@@ -44,7 +44,7 @@ final class VorbisResidue {
         classificationsAlias = intermediateClassificationsAlias;
         for (passIndex = 0; passIndex < 8; passIndex++) {
           partitionIndex = 0;
-          residuePartitionGroups: while (partitionIndex < partitionCount) {
+          while (partitionIndex < partitionCount) {
             if (passIndex == 0) {
               classwordRemainderOrGroupPartitionIndex = MusicDecoder.codebooks[this.classbookIndex].readScalar();
               for (classwordDimensionIndexOrClassification = clearSampleIndexOrClasswordDimensions - 1; classwordDimensionIndexOrClassification >= 0; classwordDimensionIndexOrClassification--) {
@@ -83,7 +83,7 @@ final class VorbisResidue {
               }
               partitionIndex++;
               if (partitionIndex >= partitionCount) {
-                continue residuePartitionGroups;
+                break;
               }
               classwordRemainderOrGroupPartitionIndex++;
             }

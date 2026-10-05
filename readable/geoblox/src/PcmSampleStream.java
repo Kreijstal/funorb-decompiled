@@ -1148,7 +1148,6 @@ final class PcmSampleStream extends PcmStream {
                   return;
                 }
                 this.samplePositionFixed = loopStartFixed + (this.samplePositionFixed - loopStartFixed) % loopSpanFixed;
-                continue;
               }
             }
             while (true) {
@@ -1157,7 +1156,6 @@ final class PcmSampleStream extends PcmStream {
                 return;
               }
               this.samplePositionFixed = loopEndFixed - 1 - (loopEndFixed - 1 - this.samplePositionFixed) % loopSpanFixed;
-              continue;
             }
           }
           if (this.sampleStepFixed < 0) {
@@ -1181,7 +1179,6 @@ final class PcmSampleStream extends PcmStream {
             }
             this.samplePositionFixed = loopStartFixed + loopStartFixed - 1 - this.samplePositionFixed;
             this.sampleStepFixed = -this.sampleStepFixed;
-            continue;
           }
         }
         finiteLoopMixing: {

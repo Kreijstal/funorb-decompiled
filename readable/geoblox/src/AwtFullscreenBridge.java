@@ -110,7 +110,6 @@ final class AwtFullscreenBridge {
             refreshRate = candidateRefreshRate;
             matchingModeFoundInt = 1;
             modeIndex++;
-            continue;
           }
         }
         this.graphicsDevice.setDisplayMode(new java.awt.DisplayMode(width, height, bitDepth, refreshRate));

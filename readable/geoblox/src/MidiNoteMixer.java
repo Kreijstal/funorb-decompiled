@@ -183,7 +183,6 @@ final class MidiNoteMixer extends PcmStream {
           if (note.sampleStream != null) {
             return (PcmStream) ((Object) note.sampleStream);
           }
-          continue;
         }
     }
 
@@ -255,7 +254,6 @@ final class MidiNoteMixer extends PcmStream {
                 continue;
               }
               this.fadingStreams.addChildStream(previousStream);
-              continue;
             }
           }
           if (methodGuard >= -26) {

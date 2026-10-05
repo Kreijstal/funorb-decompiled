@@ -161,7 +161,6 @@ final class MusicDecodeStage {
               reconstructionIndexOrLineStartX = predictedYOrLineEndXOrTailIndex;
               lowNeighborIndexOrLineStartY = encodedResidualOrLineEndY;
               activePointIndex++;
-              continue;
             }
           }
           lowNeighborIndexOrLineStartY = MusicDecodeStage.findLowNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
@@ -204,7 +203,6 @@ final class MusicDecodeStage {
           }
           largeResidualYArray[largeResidualYIndex] = largeResidualYResult;
           reconstructionIndexOrLineStartX++;
-          continue;
         }
     }
 

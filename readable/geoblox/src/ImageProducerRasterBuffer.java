@@ -191,7 +191,6 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               }
               SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
               framebufferIndex = framebufferIndex + SoftwareRasterizer.stride * 2;
-              continue;
             }
           }
           if (rectangleTop >= SoftwareRasterizer.clipTop &&
@@ -205,7 +204,6 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               }
               SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
               framebufferIndex += 2;
-              continue;
             }
           }
           if (rectangleRight >= SoftwareRasterizer.clipLeft &&
@@ -219,7 +217,6 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               }
               SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
               framebufferIndex = framebufferIndex + 2 * SoftwareRasterizer.stride;
-              continue;
             }
           }
           if (SoftwareRasterizer.clipTop <= rectangleTop &&
@@ -233,7 +230,6 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               }
               SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
               framebufferIndex += 2;
-              continue;
             }
           }
           return;

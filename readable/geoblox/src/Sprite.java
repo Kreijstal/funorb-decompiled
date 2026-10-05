@@ -323,7 +323,6 @@ class Sprite extends SpriteState {
                   destinationIndex++;
                   SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = sampledPixel;
                   negativePixelCounter++;
-                  continue;
                 }
               }
               negativeRowCounter++;
@@ -851,7 +850,7 @@ class Sprite extends SpriteState {
         int destinationPixel;
         inverseAlpha256 = 256 - alpha256;
         negativeRow = -drawHeight;
-        alphaColorKeyRows: while (true) {
+        while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -861,7 +860,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue alphaColorKeyRows;
+              break;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -874,7 +873,6 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * alpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * alpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >> 8;
             negativeColumn++;
-            continue;
           }
         }
     }
@@ -1075,7 +1073,7 @@ class Sprite extends SpriteState {
         int productGreen;
         int productBlue;
         negativeRow = -drawHeight;
-        multiplyRows: while (true) {
+        while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -1085,7 +1083,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue multiplyRows;
+              break;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -1106,7 +1104,6 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = (productRed << 16) + (productGreen << 8) + productBlue;
             negativeColumn++;
-            continue;
           }
         }
     }
@@ -1159,7 +1156,7 @@ class Sprite extends SpriteState {
         widthThenNegativeTail = -(widthThenNegativeTail & 3);
         negativeRowPixelCount = negativeQuadCount + negativeQuadCount + negativeQuadCount + negativeQuadCount + widthThenNegativeTail;
         negativeRow = -drawHeight;
-        grayTintedRows: while (true) {
+        while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -1169,7 +1166,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue grayTintedRows;
+              break;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -1197,7 +1194,6 @@ class Sprite extends SpriteState {
             }
             destinationPixels[destinationIndex++] = sourcePixel;
             negativeColumn++;
-            continue;
           }
         }
     }
@@ -1423,7 +1419,6 @@ class Sprite extends SpriteState {
                 }
                 destinationPixels[destinationIndex++] = sourcePixel;
                 quadOrTailCounter++;
-                continue;
               }
             }
             sourcePixel = sourcePixels[sourceIndex++];
@@ -1452,7 +1447,6 @@ class Sprite extends SpriteState {
             }
             destinationPixels[destinationIndex++] = sourcePixel;
             quadOrTailCounter++;
-            continue;
           }
         }
     }
@@ -1629,7 +1623,6 @@ class Sprite extends SpriteState {
                 }
                 destinationPixels[destinationIndex++] = color;
                 quadOrTailCounter++;
-                continue;
               }
             }
             if (sourcePixels[sourceIndex++] == 0) {
@@ -1654,7 +1647,6 @@ class Sprite extends SpriteState {
             }
             destinationPixels[destinationIndex++] = color;
             quadOrTailCounter++;
-            continue;
           }
         }
     }
@@ -1734,7 +1726,7 @@ class Sprite extends SpriteState {
     private final static void blitAdditiveIntensity(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int intensity256) {
         int destinationWriteIndex = 0;
         negativeRowScratch = -drawHeight;
-        intensityAdditiveRows: while (true) {
+        while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -1744,7 +1736,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue intensityAdditiveRows;
+              break;
             }
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
@@ -1762,7 +1754,6 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
             negativeColumnScratch++;
-            continue;
           }
         }
     }
@@ -1838,7 +1829,7 @@ class Sprite extends SpriteState {
         tintRedBlue = tintColor & 16711935;
         tintGreen = tintColor >> 8 & 255;
         negativeRowScratch = -drawHeight;
-        grayModulatedRows: while (true) {
+        while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -1848,7 +1839,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue grayModulatedRows;
+              break;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
@@ -1866,7 +1857,6 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex2] = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
             negativeColumnScratch++;
-            continue;
           }
         }
     }
@@ -2329,7 +2319,7 @@ class Sprite extends SpriteState {
     private final static void blitAdditive(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
         int destinationWriteIndex = 0;
         negativeRowScratch = -drawHeight;
-        additiveRows: while (true) {
+        while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -2339,7 +2329,7 @@ class Sprite extends SpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue additiveRows;
+              break;
             }
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
@@ -2355,7 +2345,6 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
             negativeColumnScratch++;
-            continue;
           }
         }
     }

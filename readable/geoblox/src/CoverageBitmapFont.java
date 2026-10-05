@@ -138,7 +138,7 @@ final class CoverageBitmapFont extends BitmapFont {
         int weightedSourceColor;
         int destinationColor;
         negativeRowCounter = -height;
-        alphaCoverageGlyphRows: while (true) {
+        while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -148,7 +148,7 @@ final class CoverageBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue alphaCoverageGlyphRows;
+              break;
             }
             sourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
@@ -165,7 +165,6 @@ final class CoverageBitmapFont extends BitmapFont {
             destinationIndex++;
             destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * effectiveAlphaOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * effectiveAlphaOrDestinationWeight256 & 16711680) >> 8) + weightedSourceColor;
             negativeColumnCounter++;
-            continue;
           }
         }
     }
@@ -179,7 +178,7 @@ final class CoverageBitmapFont extends BitmapFont {
         int weightedSourceColor;
         int destinationColor;
         negativeRowCounter = -height;
-        coverageGlyphRows: while (true) {
+        while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -189,7 +188,7 @@ final class CoverageBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue coverageGlyphRows;
+              break;
             }
             sourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
@@ -206,7 +205,6 @@ final class CoverageBitmapFont extends BitmapFont {
             destinationIndex++;
             destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * coverageOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * coverageOrDestinationWeight256 & 16711680) >> 8) + weightedSourceColor;
             negativeColumnCounter++;
-            continue;
           }
         }
     }

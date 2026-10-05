@@ -597,7 +597,6 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           compactTrace = compactTrace + ' ';
-          continue;
         }
     }
 

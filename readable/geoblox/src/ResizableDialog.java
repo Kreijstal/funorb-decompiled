@@ -450,7 +450,6 @@ abstract class ResizableDialog extends FadingDialog {
               leftCornerRgbOrRightCornerX = leftCornerRgbOrRightCornerX | (leftCornerRgbOrRightCornerX << 8 | leftCornerRgbOrRightCornerX << 16);
               SoftwareRasterizer.framebuffer[rasterY * SoftwareRasterizer.stride + x + leftEdgeOffset] = leftCornerRgbOrRightCornerX;
               leftEdgeOffset++;
-              continue;
             }
           }
           if (20 >= bandRowIndex) {

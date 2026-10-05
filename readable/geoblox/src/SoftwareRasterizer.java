@@ -231,7 +231,6 @@ final class SoftwareRasterizer {
                   framebuffer[lowerRightInnerRowCenterIndex + arcMajorOffset] = color;
                   framebuffer[lowerLeftOuterRowCenterIndex - arcMinorOffset] = color;
                   framebuffer[lowerRightOuterRowCenterIndex + arcMinorOffset] = color;
-                  continue;
                 }
               }
               SoftwareRasterizer.drawVerticalLine(x, y + arcMajorOffset, height - arcMajorOffset - arcMajorOffset, color);
@@ -307,7 +306,6 @@ final class SoftwareRasterizer {
                   continue;
                 }
                 framebuffer[lowerRightOuterRowCenterIndex + arcMinorOffset] = color;
-                continue;
               }
             }
             return;
@@ -638,7 +636,7 @@ final class SoftwareRasterizer {
         if (centerY > clippedBottomExclusive) {
           centerY = clippedBottomExclusive;
         }
-        alphaCircleUpperRows: while (rowY < centerY) {
+        while (rowY < centerY) {
           while (true) {
             if (yAdjustedSquaredDistance > radiusSquared &&
                 xAdjustedSquaredDistance > radiusSquared) {
@@ -665,13 +663,12 @@ final class SoftwareRasterizer {
               yOffset--;
               xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
               yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-              continue alphaCircleUpperRows;
+              break;
             }
             xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
             upperXExtentBeforeIncrement = xExtent;
             xExtent++;
             yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
-            continue;
           }
         }
         xExtent = radius;
@@ -813,7 +810,7 @@ final class SoftwareRasterizer {
         if (centerY > clippedBottomExclusive) {
           centerY = clippedBottomExclusive;
         }
-        circleUpperRows: while (rowY < centerY) {
+        while (rowY < centerY) {
           while (true) {
             if (yAdjustedSquaredDistance > radiusSquared &&
                 xAdjustedSquaredDistance > radiusSquared) {
@@ -836,13 +833,12 @@ final class SoftwareRasterizer {
               yOffset--;
               xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
               yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-              continue circleUpperRows;
+              break;
             }
             xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
             upperXExtentBeforeIncrement = xExtent;
             xExtent++;
             yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
-            continue;
           }
         }
         xExtent = radius;
@@ -1022,7 +1018,6 @@ final class SoftwareRasterizer {
                   framebuffer[lowerMinorRowCenterIndex + arcMajorOffset] = color;
                   framebuffer[lowerMajorRowCenterIndex - arcMinorOffset] = color;
                   framebuffer[lowerMajorRowCenterIndex + arcMinorOffset] = color;
-                  continue;
                 }
               }
               if (centerX - arcMajorOffset >= clipLeft &&
@@ -1130,7 +1125,6 @@ final class SoftwareRasterizer {
                   continue;
                 }
                 framebuffer[lowerMajorRowCenterIndex + arcMinorOffset] = color;
-                continue;
               }
             }
             return;
@@ -1281,7 +1275,7 @@ final class SoftwareRasterizer {
         if (topCornerCenterYOrUpperHalfEnd > clippedBottomExclusive) {
           topCornerCenterYOrUpperHalfEnd = clippedBottomExclusive;
         }
-        roundedRectangleUpperRows: while (rowY < topCornerCenterYOrUpperHalfEnd) {
+        while (rowY < topCornerCenterYOrUpperHalfEnd) {
           while (true) {
             if (yAdjustedSquaredDistance > radiusSquared &&
                 xAdjustedSquaredDistance > radiusSquared) {
@@ -1304,13 +1298,12 @@ final class SoftwareRasterizer {
               yOffset--;
               xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
               yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
-              continue roundedRectangleUpperRows;
+              break;
             }
             xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
             upperXExtentBeforeIncrement = xExtent;
             xExtent++;
             yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
-            continue;
           }
         }
         yOffset = rowY - topCornerCenterYOrUpperHalfEnd;

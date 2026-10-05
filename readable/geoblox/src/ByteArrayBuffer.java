@@ -555,7 +555,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             ByteArrayBuffer.advanceAccountLookupRequest((LoginTextValue) null, (LoginTextValue) null, 109);
           }
           blockIndex = 0;
-          xteaEncryptBlocks: while (true) {
+          while (true) {
             if (blockCount <= blockIndex) {
               return;
             }
@@ -579,7 +579,6 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.writeIntBE((byte) 95, leftWord);
             this.writeIntBE((byte) 95, rightWord);
             blockIndex++;
-            continue xteaEncryptBlocks;
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;
@@ -636,7 +635,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           this.position = startPosition;
           blockCount = (-startPosition + endPosition) / 8;
           blockIndex = 0;
-          xteaDecryptBlocks: while (true) {
+          while (true) {
             if (blockIndex >= blockCount) {
               this.position = savedPosition;
               return;
@@ -661,7 +660,6 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.writeIntBE((byte) 95, leftWord);
             this.writeIntBE((byte) 95, rightWord);
             blockIndex++;
-            continue xteaDecryptBlocks;
           }
         } catch (java.lang.RuntimeException cryptoFailure) {
           caughtCryptoFailure = cryptoFailure;

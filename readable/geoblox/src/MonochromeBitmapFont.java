@@ -63,7 +63,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         glyphLeftRelativeToClip = x - SoftwareRasterizer.clipLeft;
         glyphTopRelativeToClip = y - SoftwareRasterizer.clipTop;
         maskRow = glyphTopRelativeToClip;
-        maskedGlyphRows: while (true) {
+        while (true) {
           if (maskRow >= glyphTopRelativeToClip + height) {
             return;
           }
@@ -103,7 +103,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               sourceIndex = sourceIndex + (leadingClipOrTrailingSkip + sourceRowSkip);
               destinationIndex = destinationIndex + (leadingClipOrTrailingSkip + destinationRowSkip);
               maskRow++;
-              continue maskedGlyphRows;
+              break;
             }
             if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
@@ -114,7 +114,6 @@ final class MonochromeBitmapFont extends BitmapFont {
             destinationIndex++;
             SoftwareRasterizer.framebuffer[destinationIndexBeforeIncrement] = color;
             negativePixelCounter++;
-            continue;
           }
         }
     }
@@ -191,7 +190,6 @@ final class MonochromeBitmapFont extends BitmapFont {
                 }
                 destinationPixels[destinationIndex++] = color;
                 negativeGroupOrTailCounter++;
-                continue;
               }
             }
             if (glyphMask[sourceIndex++] == 0) {
@@ -216,7 +214,6 @@ final class MonochromeBitmapFont extends BitmapFont {
             }
             destinationPixels[destinationIndex++] = color;
             negativeGroupOrTailCounter++;
-            continue;
           }
         }
     }
@@ -229,7 +226,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         colorOrWeightedColor = ((colorOrWeightedColor & 16711935) * alphaOrDestinationWeight256 & -16711936) + ((colorOrWeightedColor & 65280) * alphaOrDestinationWeight256 & 16711680) >> 8;
         alphaOrDestinationWeight256 = 256 - alphaOrDestinationWeight256;
         negativeRowCounter = -height;
-        alphaGlyphRows: while (true) {
+        while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -239,7 +236,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue alphaGlyphRows;
+              break;
             }
             if (glyphMask[sourceIndex++] == 0) {
               destinationIndex++;
@@ -251,7 +248,6 @@ final class MonochromeBitmapFont extends BitmapFont {
             destinationIndex++;
             destinationPixels[destinationIndexBeforeIncrement] = (((destinationColor & 16711935) * alphaOrDestinationWeight256 & -16711936) + ((destinationColor & 65280) * alphaOrDestinationWeight256 & 16711680) >> 8) + colorOrWeightedColor;
             negativeColumnCounter++;
-            continue;
           }
         }
     }

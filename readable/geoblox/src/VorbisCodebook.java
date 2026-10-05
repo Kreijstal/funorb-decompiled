@@ -116,7 +116,6 @@ final class VorbisCodebook {
           }
           nextFreeTreeIndex = currentCodewordOrTreeIndex + 1;
           entryIndex++;
-          continue;
         }
     }
 

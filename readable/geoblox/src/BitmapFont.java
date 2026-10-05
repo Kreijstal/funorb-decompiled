@@ -166,7 +166,6 @@ abstract class BitmapFont extends DualLinkNode {
               this.pairKerning[(deltaSumOrFirstGlyphIndex << 8) + profileRowOrDeltaSumOrSecondGlyphIndex] = (byte)BitmapFont.computePairKerning(leadingProfilesSnapshot, trailingProfilesSnapshot, profileOffsetsSnapshot, this.glyphAdvances, profileLengthsSnapshot, deltaSumOrFirstGlyphIndex, profileRowOrDeltaSumOrSecondGlyphIndex);
             }
             deltaSumOrFirstGlyphIndex++;
-            continue;
           }
         }
     }
@@ -898,7 +897,6 @@ abstract class BitmapFont extends DualLinkNode {
           }
           previousGlyph = characterOrGlyphCode;
           textIndex++;
-          continue;
         }
     }
 

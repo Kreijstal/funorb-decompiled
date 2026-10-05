@@ -803,7 +803,6 @@ final class GameplaySession {
                     break;
                   }
                   fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
-                  continue;
                 }
               }
               detachedEntityOrPositiveRotationKeySnapshot = MidiPcmStream.heldInternalKeys[positiveRotationKeyCode];
@@ -1491,7 +1490,6 @@ final class GameplaySession {
                       }
                     }
                     spriteRow++;
-                    continue;
                   }
                   spriteColumn++;
                   continue;

@@ -152,7 +152,6 @@ final class ScoreSubmission extends IntrusiveNode {
                   }
                 }
                 prefixEnd = segmentEnd;
-                continue;
               }
             } catch (java.lang.RuntimeException urlContextFailure) {
               caughtUrlRewriteFailure = urlContextFailure;

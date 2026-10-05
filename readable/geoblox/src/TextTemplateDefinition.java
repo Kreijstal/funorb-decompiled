@@ -195,7 +195,6 @@ final class TextTemplateDefinition extends DualLinkNode {
               return;
             }
             this.decodeOpcode(var3_int, buffer, -26093);
-            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

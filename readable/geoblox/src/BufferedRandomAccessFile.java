@@ -435,7 +435,7 @@ final class BufferedRandomAccessFile {
           visitedCascadeEntities = new SecondaryDeque();
           staggeredLifetime = 0;
           cascadeFrontier.addFirst(farthestEntity, false);
-          cascadeFrontierTraversal: while (true) {
+          while (true) {
             cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
             if (cascadeEntity == null) {
               return true;
@@ -445,9 +445,9 @@ final class BufferedRandomAccessFile {
             staggeredLifetime += 50;
             visitedCascadeEntities.addFirst(cascadeEntity, false);
             neighborIndex = 0;
-            cascadeNeighborTraversal: while (true) {
+            while (true) {
               if (neighborIndex >= cascadeEntity.relatedEntityCount) {
-                continue cascadeFrontierTraversal;
+                break;
               }
               neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
               searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
@@ -472,7 +472,6 @@ final class BufferedRandomAccessFile {
                 break;
               }
               neighborIndex++;
-              continue cascadeNeighborTraversal;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

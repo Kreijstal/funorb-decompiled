@@ -36,7 +36,6 @@ final class IntKeyLookup {
             return storedIndex;
           }
           bucket = bucket + 1 & bucketMask;
-          continue;
         }
     }
 

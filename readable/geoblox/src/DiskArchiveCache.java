@@ -164,7 +164,6 @@ final class DiskArchiveCache {
                     bytes[destinationIndexBeforeIncrement] = TextInputWidget.diskSectorBuffer[sectorByteIndex];
                   }
                   sectorNumber = nextSectorNumber;
-                  continue;
                 }
               } catch (java.io.IOException readIOException) {
                 caughtReadFailure = readIOException;

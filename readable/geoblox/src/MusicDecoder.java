@@ -257,7 +257,6 @@ final class MusicDecoder extends IntrusiveNode {
             decodedPcmBytes[pcmIndexBeforeIncrement] = (byte)(unsignedPcmSample - 128);
           }
           packetIndex++;
-          continue;
         }
     }
 

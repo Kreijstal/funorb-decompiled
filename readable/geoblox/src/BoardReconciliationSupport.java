@@ -148,7 +148,7 @@ final class BoardReconciliationSupport {
                       visitedNonAvatarEntities = new SecondaryDeque();
                       pendingConnectivityEntities.addFirst(activeEntity, false);
                       componentCanDetach = 1;
-                      componentQueueTraversal: while (true) {
+                      while (true) {
                         poppedEntityOrSearchStart = (GameplayEntity) ((Object) pendingConnectivityEntities.removeFirst(true));
                         while (true) {
                           currentConnectivityEntity = poppedEntityOrSearchStart;
@@ -186,7 +186,6 @@ final class BoardReconciliationSupport {
                                           break enqueueUnseenNeighbor;
                                         }
                                         componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
-                                        continue;
                                       }
                                       pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
                                     }
@@ -194,9 +193,8 @@ final class BoardReconciliationSupport {
                                   break;
                                 }
                                 componentNeighborIndex++;
-                                continue;
                               }
-                              continue componentQueueTraversal;
+                              break;
                             }
                           }
                           avatarContactThenDetachDecision = componentCanDetach;
@@ -216,7 +214,6 @@ final class BoardReconciliationSupport {
                               neighborThenUnlinkArgument = connectivityAliasThenDetachingEntity;
                               ((GameplayEntity) (Object) comparedThenUnlinkTarget).removeRelatedEntity(neighborThenUnlinkArgument, 0);
                               componentNeighborIndex++;
-                              continue;
                             }
                             entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
                             neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
@@ -224,7 +221,6 @@ final class BoardReconciliationSupport {
                             entityForComponentCategoryReset.sameCategoryEntityCount = 0;
                             neighborThenCountResetEntity.sameVariantEntityCount = 0;
                             connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
-                            continue;
                           }
                           break componentSearchAndDetach;
                         }
@@ -242,7 +238,6 @@ final class BoardReconciliationSupport {
                   if (clientControlSnapshot != 0) {
                     break movingAndConnectivityPhase;
                   }
-                  continue;
                 }
               }
               visitedResetIndexThenKindFourCount = 0;
@@ -277,7 +272,6 @@ final class BoardReconciliationSupport {
                       if (clientControlSnapshot != 0) {
                         break attachedEntityRouting;
                       }
-                      continue;
                     }
                     neighborThenCountResetEntity = routedAttachedEntity;
                     componentSearchThenVariantResetEntity = routedAttachedEntity;
@@ -301,7 +295,6 @@ final class BoardReconciliationSupport {
                     if (clientControlSnapshot != 0) {
                       break attachedEntityRouting;
                     }
-                    continue;
                   }
                   categoryResetThenTransientEntity = routedAttachedEntity;
                   routedAttachedEntity.relatedEntityCount = 0;

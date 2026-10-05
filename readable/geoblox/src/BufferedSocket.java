@@ -281,7 +281,6 @@ final class BufferedSocket implements Runnable {
                   ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
                   this.writeFailurePending = true;
                 }
-                continue;
               }
             } catch (java.lang.Exception unexpectedWorkerFailure) {
               caughtWriterThrowable = unexpectedWorkerFailure;

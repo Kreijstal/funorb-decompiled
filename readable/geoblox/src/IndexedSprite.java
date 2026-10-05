@@ -14,7 +14,7 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationPixel;
         inverseAlpha256 = 256 - alpha256;
         negativeRow = -drawHeight;
-        alphaPaletteRows: while (true) {
+        while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -24,7 +24,7 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue alphaPaletteRows;
+              break;
             }
             indexThenPaletteColor = sourceIndices[sourceIndex++];
             if (indexThenPaletteColor == 0) {
@@ -38,7 +38,6 @@ final class IndexedSprite extends IndexedSpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = ((indexThenPaletteColor & 16711935) * alpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((indexThenPaletteColor & 65280) * alpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >> 8;
             negativeColumn++;
-            continue;
           }
         }
     }
@@ -135,7 +134,7 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationWriteIndex = 0;
         int sourceReadIndex2 = 0;
         negativeRowScratch = -drawHeight;
-        paletteRunRows: while (true) {
+        while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -151,7 +150,7 @@ final class IndexedSprite extends IndexedSpriteState {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue paletteRunRows;
+              break;
             }
             indexThenRunLength = sourceIndices[sourceIndex++];
             remainingColumnsScratch--;
@@ -176,7 +175,6 @@ final class IndexedSprite extends IndexedSpriteState {
             sourceIndex = sourceIndex + indexThenRunLength;
             remainingColumnsScratch = remainingColumnsScratch - indexThenRunLength;
             destinationIndex = destinationIndex + (indexThenRunLength + 2);
-            continue;
           }
         }
     }
@@ -262,7 +260,6 @@ final class IndexedSprite extends IndexedSpriteState {
                 destinationIndex++;
                 destinationPixels[destinationWriteIndex] = palette[paletteIndexScratch & 255];
                 quadOrTailCounter++;
-                continue;
               }
             }
             paletteIndexScratch = sourceIndices[sourceIndex++];
@@ -299,7 +296,6 @@ final class IndexedSprite extends IndexedSpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex5] = palette[paletteIndexScratch & 255];
             quadOrTailCounter++;
-            continue;
           }
         }
     }

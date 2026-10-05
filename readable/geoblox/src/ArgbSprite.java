@@ -188,7 +188,7 @@ final class ArgbSprite extends Sprite {
         widthThenNegativeTail = -(widthThenNegativeTail & 3);
         negativeRowPixelCount = negativeQuadCount + negativeQuadCount + negativeQuadCount + negativeQuadCount + widthThenNegativeTail;
         negativeRow = -drawHeight;
-        argbGrayTintedRows: while (true) {
+        while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -198,7 +198,7 @@ final class ArgbSprite extends Sprite {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue argbGrayTintedRows;
+              break;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             storedAlpha = sourcePixel >>> 24;
@@ -226,7 +226,6 @@ final class ArgbSprite extends Sprite {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = ((tintedPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((tintedPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
             negativeColumn++;
-            continue;
           }
         }
     }
@@ -241,7 +240,7 @@ final class ArgbSprite extends Sprite {
         int destinationPixel;
         negativeRowPixelCount = -drawWidth;
         negativeRow = -drawHeight;
-        argbRows: while (true) {
+        while (true) {
           if (negativeRow >= 0) {
             return;
           }
@@ -251,7 +250,7 @@ final class ArgbSprite extends Sprite {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRow++;
-              continue argbRows;
+              break;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             storedAlpha = sourcePixel >>> 24;
@@ -266,7 +265,6 @@ final class ArgbSprite extends Sprite {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
             negativeColumn++;
-            continue;
           }
         }
     }
@@ -813,7 +811,7 @@ final class ArgbSprite extends Sprite {
         int destinationWriteIndex = 0;
         int effectiveAlpha256;
         negativeRowScratch = -drawHeight;
-        argbAdditiveRows: while (true) {
+        while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -823,7 +821,7 @@ final class ArgbSprite extends Sprite {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue argbAdditiveRows;
+              break;
             }
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
@@ -842,7 +840,6 @@ final class ArgbSprite extends Sprite {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
             negativeColumnScratch++;
-            continue;
           }
         }
     }
@@ -903,7 +900,7 @@ final class ArgbSprite extends Sprite {
         }
         lastBlockSourceY = lastBlockSourceYCandidate;
         sourceBlockY = firstSourceY;
-        halfSizeSampleRows: while (true) {
+        while (true) {
           if (sourceBlockY > lastBlockSourceY) {
             return;
           }
@@ -913,7 +910,7 @@ final class ArgbSprite extends Sprite {
           while (true) {
             if (sourceBlockX > lastBlockSourceX) {
               sourceBlockY += 2;
-              continue halfSizeSampleRows;
+              break;
             }
             samplePixel = 0;
             sampleAlpha = 0;
@@ -951,7 +948,6 @@ final class ArgbSprite extends Sprite {
             sourceBlockX += 2;
             destinationIndex++;
             sourceIndex += 2;
-            continue;
           }
         }
     }
@@ -1018,7 +1014,7 @@ final class ArgbSprite extends Sprite {
         sampleBlockStorage = sampleBlockAllocationThenReadAlias;
         sampleBlockAlias = sampleBlockStorage;
         sourceBlockY = firstSourceY;
-        quarterSizeSampleRows: while (true) {
+        while (true) {
           if (sourceBlockY > lastBlockSourceY) {
             return;
           }
@@ -1026,7 +1022,7 @@ final class ArgbSprite extends Sprite {
           while (true) {
             if (sourceBlockX > lastBlockSourceX) {
               sourceBlockY += 4;
-              continue quarterSizeSampleRows;
+              break;
             }
             sourceIndex = sourceBlockY * this.width + sourceBlockX;
             destinationIndex = (y + (sourceBlockY >> 2)) * SoftwareRasterizer.stride + (x + (sourceBlockX >> 2));
@@ -1059,7 +1055,6 @@ final class ArgbSprite extends Sprite {
             destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
             SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlpha * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlpha * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
             sourceBlockX += 4;
-            continue;
           }
         }
     }
@@ -1079,7 +1074,7 @@ final class ArgbSprite extends Sprite {
         tintRedBlue = tintColor & 16711935;
         tintGreen = tintColor >> 8 & 255;
         negativeRowScratch = -drawHeight;
-        argbGrayModulatedRows: while (true) {
+        while (true) {
           if (negativeRowScratch >= 0) {
             return;
           }
@@ -1089,7 +1084,7 @@ final class ArgbSprite extends Sprite {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              continue argbGrayModulatedRows;
+              break;
             }
             sourcePixel = sourcePixels[sourceIndex++];
             storedAlpha = sourcePixel >>> 24;
@@ -1112,7 +1107,6 @@ final class ArgbSprite extends Sprite {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = ((modulatedPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
             negativeColumnScratch++;
-            continue;
           }
         }
     }

@@ -24,7 +24,7 @@ final class PaletteBitmapFont extends BitmapFont {
         int sourceColor;
         destinationWeight256 = 256 - alpha256;
         negativeRowCounter = -height;
-        alphaPaletteGlyphRows: while (true) {
+        while (true) {
           if (negativeRowCounter >= 0) {
             return;
           }
@@ -34,7 +34,7 @@ final class PaletteBitmapFont extends BitmapFont {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowCounter++;
-              continue alphaPaletteGlyphRows;
+              break;
             }
             sourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
@@ -51,7 +51,6 @@ final class PaletteBitmapFont extends BitmapFont {
             destinationIndex++;
             destinationPixels[destinationIndexBeforeIncrement] = ((sourceColor & 16711935) * alpha256 + (destinationColor & 16711935) * destinationWeight256 & -16711936) + ((sourceColor & 65280) * alpha256 + (destinationColor & 65280) * destinationWeight256 & 16711680) >> 8;
             negativeColumnCounter++;
-            continue;
           }
         }
     }
@@ -228,7 +227,6 @@ final class PaletteBitmapFont extends BitmapFont {
                 destinationIndex++;
                 destinationPixels[tailDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
                 negativeGroupOrTailCounter++;
-                continue;
               }
             }
             firstSourceIndexBeforeIncrement = sourceIndex;
@@ -277,7 +275,6 @@ final class PaletteBitmapFont extends BitmapFont {
             destinationIndex++;
             destinationPixels[fourthDestinationIndexBeforeIncrement] = palette[signedGlyphIndex & 255];
             negativeGroupOrTailCounter++;
-            continue;
           }
         }
     }

@@ -126,7 +126,6 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
             blueQ16 = blueQ16 + blueStepQ16;
             redQ16 = redQ16 + redStepQ16;
             greenQ16 = greenQ16 + greenStepQ16;
-            continue;
           }
         } catch (java.lang.RuntimeException caughtSpanParameter) {
           caughtSpanFailure = caughtSpanParameter;

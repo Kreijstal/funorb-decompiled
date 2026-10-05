@@ -74,7 +74,7 @@ final class MeshPrioritySupport {
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthBucketIndex = 0;
-          depthBucketTraversal: while (true) {
+          while (true) {
             if (depthBucketIndex >= GameApplet.meshFaceCountsByDepthBucket.length) {
               if (guard != -85) {
                 MeshPrioritySupport.createSolidCenterSlices(80, (byte) 55);
@@ -88,7 +88,7 @@ final class MeshPrioritySupport {
               remainingFacesScratch--;
               if (0 == remainingBeforeDecrement) {
                 depthBucketIndex++;
-                continue depthBucketTraversal;
+                break;
               }
               sourceIndexBeforeIncrement = depthBucketReadIndex;
               depthBucketReadIndex++;
@@ -97,7 +97,6 @@ final class MeshPrioritySupport {
               destinationIndexBeforeIncrement = priorityWriteOffsets[facePriority];
               priorityWriteOffsets[facePriority] = destinationIndexBeforeIncrement + 1;
               InstrumentNoteMask.meshFaceOrder[destinationIndexBeforeIncrement] = faceIndexScratch;
-              continue;
             }
           }
         } catch (java.lang.RuntimeException caughtGroupingParameter) {

@@ -212,7 +212,6 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             }
             MeshPrioritySupport.delayedIncomingPackets.addLast(-108, delayedPacket);
             MidiNote.stagedIncomingPacketOpcode = -1;
-            continue;
           }
         } catch (java.lang.RuntimeException packetFailure) {
           caughtPacketFailure = packetFailure;

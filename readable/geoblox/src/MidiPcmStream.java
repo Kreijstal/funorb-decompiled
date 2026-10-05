@@ -66,7 +66,6 @@ final class MidiPcmStream extends PcmStream {
               if (!this.midiReader.isLoaded()) {
                 break;
               }
-              continue;
             }
           }
           this.noteMixer.mixInto(destination, destinationOffset, frameCount);
@@ -808,7 +807,7 @@ final class MidiPcmStream extends PcmStream {
           this.advanceMidiEvents((byte) 73);
           return;
         }
-        eventTrackSelection: while (true) {
+        while (true) {
           if (eventTick != this.nextEventTick) {
             this.nextEventTick = eventTick;
             this.nextEventTime = eventTime;
@@ -854,7 +853,6 @@ final class MidiPcmStream extends PcmStream {
           trackIndex = this.midiReader.selectEarliestTrack();
           eventTick = this.midiReader.trackTicks[trackIndex];
           eventTime = this.midiReader.getTickTime(eventTick);
-          continue eventTrackSelection;
         }
     }
 

@@ -57,7 +57,6 @@ final class MatchingTextValidator extends TextInputValidator {
               while (sliceToFill.pixels.length > fillPixelIndex) {
                 sliceToFill.pixels[fillPixelIndex] = fillColor;
                 fillPixelIndex++;
-                continue;
               }
               scanIndex++;
               continue sliceFillLoop;
@@ -81,7 +80,6 @@ final class MatchingTextValidator extends TextInputValidator {
                 slices[2].pixels[scanIndex * cornerSize - borderIndex + cornerSize - 1] = bottomRightBorderColor;
                 slices[8].pixels[-borderIndex - 1 - (-cornerSize - cornerSize * scanIndex)] = bottomRightBorderColor;
                 scanIndex++;
-                continue;
               }
               borderIndex++;
               continue bottomRightBorderLoop;
@@ -91,7 +89,7 @@ final class MatchingTextValidator extends TextInputValidator {
           break;
         }
         borderIndex = bottomRightScanStartSnapshot;
-        topLeftBorderLoop: while (true) {
+        while (true) {
           borderIndexOrCornerDiagonalSnapshot = borderIndex;
           outerBorderWidthOrDiagonalScanSnapshot = outerBorderWidth;
           while (true) {
@@ -109,10 +107,9 @@ final class MatchingTextValidator extends TextInputValidator {
                     slices[6].pixels[borderIndex + scanIndex * cornerSize] = topLeftBorderColor;
                   }
                   scanIndex++;
-                  continue;
                 }
                 borderIndex++;
-                continue topLeftBorderLoop;
+                break;
               }
             } else {
               topLeftScanStartSnapshot = 0;
@@ -132,7 +129,6 @@ final class MatchingTextValidator extends TextInputValidator {
                     slices[1].pixels[edgeLength * scanIndex + borderIndex] = topLeftBorderColor;
                     slices[3].pixels[scanIndex + cornerSize * borderIndex] = topLeftBorderColor;
                     scanIndex++;
-                    continue;
                   }
                   borderIndex++;
                   continue edgeBorderLoop;
@@ -156,7 +152,6 @@ final class MatchingTextValidator extends TextInputValidator {
                     slices[7].pixels[borderIndex + edgeLength * scanIndex] = innerAccentColor;
                     slices[5].pixels[cornerSize * borderIndex + scanIndex] = innerAccentColor;
                     scanIndex++;
-                    continue;
                   }
                   borderIndex++;
                   continue innerAccentLoop;

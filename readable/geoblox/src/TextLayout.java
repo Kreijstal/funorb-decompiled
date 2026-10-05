@@ -55,7 +55,6 @@ abstract class TextLayout {
             }
             maximumEndX = lineEndX;
             lineIndex++;
-            continue;
           }
         }
         return maximumEndX;

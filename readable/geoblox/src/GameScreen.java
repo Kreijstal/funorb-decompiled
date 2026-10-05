@@ -265,7 +265,6 @@ final class GameScreen extends MenuScreen {
                 while (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
                   WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
                   tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
-                  continue;
                 }
                 tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
                 continue backgroundTileColumns;
@@ -277,7 +276,7 @@ final class GameScreen extends MenuScreen {
             break;
           }
           tileX = tileOriginYOrForegroundStartX;
-          foregroundTileColumns: while (~-CachedTextLayout.menuForegroundSprite.fullWidth >= ~tileX) {
+          while (~-CachedTextLayout.menuForegroundSprite.fullWidth >= ~tileX) {
             if (clientControlFlowGuard != 0) {
               return;
             }
@@ -285,10 +284,8 @@ final class GameScreen extends MenuScreen {
             while (~tileY <= ~-CachedTextLayout.menuForegroundSprite.fullHeight) {
               CachedTextLayout.menuForegroundSprite.draw(tileX, tileY);
               tileY = tileY - CachedTextLayout.menuForegroundSprite.fullHeight;
-              continue;
             }
             tileX = tileX - CachedTextLayout.menuForegroundSprite.fullWidth;
-            continue foregroundTileColumns;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

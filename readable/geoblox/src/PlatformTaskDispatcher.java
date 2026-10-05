@@ -302,7 +302,6 @@ final class PlatformTaskDispatcher implements Runnable {
               synchronized (dispatcherOrTaskMonitor) {
                 task.notify();
               }
-              continue;
             }
         } catch (RuntimeException | Error uncheckedWorkerFailure) {
             throw uncheckedWorkerFailure;

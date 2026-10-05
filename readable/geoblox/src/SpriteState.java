@@ -411,7 +411,6 @@ abstract class SpriteState extends DualLinkNode {
                 if (clientControlFlowGuard != 0) {
                   break whirlpoolInputSelection;
                 }
-                continue;
               }
               if (clientControlFlowGuard == 0) {
                 break whirlpoolInputSelection;
@@ -684,7 +683,6 @@ abstract class SpriteState extends DualLinkNode {
                     leftXQ16 = leftXQ16 + leftXStepQ16;
                     leftRedQ16 = leftRedQ16 + leftRedStepQ16;
                     edgeSwapOrRowBaseOrLowerRowsThenLeftX = edgeSwapOrRowBaseOrLowerRowsThenLeftX + SoftwareRasterizer.stride;
-                    continue;
                   }
                 }
                 edgeSwapOrRowBaseOrLowerRowsThenLeftX = bottomY - middleY;
@@ -784,7 +782,6 @@ abstract class SpriteState extends DualLinkNode {
               leftRedQ16 = leftRedQ16 + leftRedStepQ16;
               leftXQ16 = leftXQ16 + leftXStepQ16;
               rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
-              continue;
             }
             return;
           }
@@ -862,7 +859,6 @@ abstract class SpriteState extends DualLinkNode {
                           seedReadContinuation = 1;
                           break seedReadFailureFallback;
                         }
-                        continue;
                       }
                       seedReadContinuation = 0;
                     }

@@ -284,7 +284,6 @@ class HotspotTextWidget extends ButtonWidget {
             this.hotspotBounds.addLast(-44, newSegment);
             previousSegmentOrNull = newSegment;
           }
-          continue;
         }
     }
 

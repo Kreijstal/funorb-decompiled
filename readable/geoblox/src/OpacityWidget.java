@@ -120,7 +120,6 @@ final class OpacityWidget extends SingleChildWidget {
             discardedPrefixAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart, capacityReplacementIndexOrBuildMarkerStart));
             unchangedTextStart = scanCursor;
             discardedReplacementAppendResult = resultBuilder.append(replacementTexts[buildReplacementIndex]);
-            continue;
           }
         } catch (java.lang.RuntimeException templateFailure) {
           caughtTemplateFailure = templateFailure;

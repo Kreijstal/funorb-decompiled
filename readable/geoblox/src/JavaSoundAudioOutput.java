@@ -79,7 +79,6 @@ final class JavaSoundAudioOutput extends AudioOutput {
             }
             this.reopenLineAfterFlush = true;
             mixerIndex++;
-            continue;
           }
         }
         outputSnapshot = this;

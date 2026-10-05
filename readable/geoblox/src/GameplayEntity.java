@@ -210,7 +210,6 @@ final class GameplayEntity extends DualLinkNode {
             framebufferIndex++;
           }
           framebufferIndex = framebufferIndex + rowSkip;
-          continue;
         }
     }
 
@@ -527,7 +526,6 @@ final class GameplayEntity extends DualLinkNode {
             framebufferIndex++;
           }
           framebufferIndex = framebufferIndex + framebufferRowSkip;
-          continue;
         }
     }
 

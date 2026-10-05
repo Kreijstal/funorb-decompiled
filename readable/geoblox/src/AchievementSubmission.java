@@ -152,7 +152,6 @@ final class AchievementSubmission extends IntrusiveNode {
                     if (controlFlagSnapshot != 0) {
                       return;
                     }
-                    continue;
                   }
                 }
                 if (transformNormals) {
@@ -182,7 +181,6 @@ final class AchievementSubmission extends IntrusiveNode {
                     ClientClockSupport.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
                     IterableNodeHashTable.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
                     cameraXZQ16OrNormalIndex++;
-                    continue;
                   }
                 }
                 nearPlaneOrNormalCapacityOrQueueMinDepth = minimumVisibleDepth;

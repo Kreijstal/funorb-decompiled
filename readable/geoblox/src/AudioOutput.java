@@ -362,7 +362,6 @@ class AudioOutput {
                         this.priorityQueueTails[priorityBucket] = (PcmStream) (previousStreamOrNextCleanupStream);
                       }
                       stream = nextStream;
-                      continue;
                     }
                   }
                   priorityBucket += 4;

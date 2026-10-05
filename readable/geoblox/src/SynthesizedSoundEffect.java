@@ -56,7 +56,6 @@ final class SynthesizedSoundEffect {
             samples[sampleIndex + startSample] = (byte)mixedSample;
           }
           instrumentIndex++;
-          continue;
         }
     }
 

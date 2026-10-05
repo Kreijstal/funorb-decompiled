@@ -76,7 +76,7 @@ final class Bzip2Decoder {
           UsernameResponseSupport.bzip2TransformTable = new int[state.blockSize100k * 100000];
         }
         continueDecodingBlocks = 1;
-        decodeNextBlock: while (true) {
+        while (true) {
           if (continueDecodingBlocks == 0) {
             return;
           }
@@ -131,7 +131,7 @@ final class Bzip2Decoder {
           huffmanTableCount = Bzip2Decoder.readBits(3, state);
           selectorCount = Bzip2Decoder.readBits(15, state);
           index = 0;
-          decodeSelectorRanks: while (index < selectorCount) {
+          while (index < selectorCount) {
             byteInGroupOrSelectorRank = 0;
             while (true) {
               byteOrBitValue = Bzip2Decoder.readBit(state);
@@ -143,7 +143,6 @@ final class Bzip2Decoder {
             }
             state.selectorMoveToFrontValues[index] = (byte)byteInGroupOrSelectorRank;
             index++;
-            continue decodeSelectorRanks;
           }
           allocatedSelectorOrder = new byte[6];
           selectorOrder = allocatedSelectorOrder;
@@ -164,20 +163,20 @@ final class Bzip2Decoder {
             state.huffmanSelectors[index] = (byte)selectorTableOrMtfByteIndex;
           }
           huffmanTableIndex = 0;
-          decodeHuffmanTableLengths: while (huffmanTableIndex < huffmanTableCount) {
+          while (huffmanTableIndex < huffmanTableCount) {
             codeLength = Bzip2Decoder.readBits(5, state);
             index = 0;
-            decodeAlphabetCodeLengths: while (true) {
+            while (true) {
               if (index >= huffmanAlphabetSize) {
                 huffmanTableIndex++;
-                continue decodeHuffmanTableLengths;
+                break;
               }
               while (true) {
                 byteOrBitValue = Bzip2Decoder.readBit(state);
                 if (byteOrBitValue == 0) {
                   state.huffmanCodeLengths[huffmanTableIndex][index] = (byte)codeLength;
                   index++;
-                  continue decodeAlphabetCodeLengths;
+                  break;
                 }
                 byteOrBitValue = Bzip2Decoder.readBit(state);
                 if (byteOrBitValue != 0) {
@@ -185,7 +184,6 @@ final class Bzip2Decoder {
                   continue;
                 }
                 codeLength++;
-                continue;
               }
             }
           }
@@ -237,7 +235,7 @@ final class Bzip2Decoder {
             codeBits = codeBits << 1 | nextCodeBit;
           }
           symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-          decodeBlockSymbols: while (true) {
+          while (true) {
             if (symbol == endOfBlockSymbol) {
               state.pendingRunLength = 0;
               state.pendingRunByte = (byte) 0;
@@ -265,10 +263,10 @@ final class Bzip2Decoder {
               if (state.blockBytesConsumed == state.blockLength + 1 &&
                   state.pendingRunLength == 0) {
                 continueDecodingBlocks = 1;
-                continue decodeNextBlock;
+                break;
               }
               continueDecodingBlocks = 0;
-              continue decodeNextBlock;
+              break;
             }
             if (symbol != 0 &&
                 symbol != 1) {
@@ -380,7 +378,6 @@ final class Bzip2Decoder {
               blockLength++;
               runLength--;
             }
-            continue decodeBlockSymbols;
           }
         }
     }

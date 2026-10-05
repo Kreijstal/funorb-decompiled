@@ -99,7 +99,6 @@ final class SpriteConstructionSupport {
           }
           sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
           spriteIndex++;
-          continue;
         }
     }
 

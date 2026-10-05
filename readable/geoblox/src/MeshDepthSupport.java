@@ -211,7 +211,6 @@ final class MeshDepthSupport {
               if (controlFlagSnapshot != 0) {
                 return;
               }
-              continue;
             }
           }
           if (methodGuard != 22) {
@@ -359,7 +358,6 @@ final class MeshDepthSupport {
               if (controlFlagSnapshot != 0) {
                 return;
               }
-              continue;
             }
           }
           if (integerMethodGuard != 22) {

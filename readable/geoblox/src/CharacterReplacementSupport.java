@@ -61,7 +61,6 @@ final class CharacterReplacementSupport {
               }
               capacityEstimate = capacityEstimate + lengthDeltaPerMatch;
               capacityScanOffset++;
-              continue;
             }
           }
           builder = new StringBuilder(capacityEstimate);
@@ -76,7 +75,6 @@ final class CharacterReplacementSupport {
             unusedAppendPrefixResult = builder.append(text.substring(copyStart, matchOffset));
             copyStart = 1 + matchOffset;
             unusedAppendReplacementResult = builder.append(replacement);
-            continue;
           }
         } catch (java.lang.RuntimeException replacementFailure) {
           caughtReplacementFailure = replacementFailure;
