@@ -161,7 +161,6 @@ final class u {
               var6 = var9;
               var7 = var10;
               var16++;
-              continue;
             }
           }
           var7 = u.a(field_a, var6);
@@ -204,7 +203,6 @@ final class u {
           }
           stackIn_9_0[stackIn_9_1] = stackIn_10_2;
           var6++;
-          continue;
         }
     }
 

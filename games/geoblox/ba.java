@@ -281,7 +281,6 @@ final class ba implements Runnable {
                   var3_ref = (IOException) (Object) decompiledCaughtException;
                   this.field_i = true;
                 }
-                continue;
               }
             } catch (java.lang.Exception decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;

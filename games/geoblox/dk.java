@@ -55,7 +55,6 @@ abstract class dk {
             }
             var2 = var6;
             var4++;
-            continue;
           }
         }
         return var2;

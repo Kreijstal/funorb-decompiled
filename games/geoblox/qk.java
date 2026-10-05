@@ -362,7 +362,6 @@ class qk {
                         this.field_b[var7_int] = (ia) (var10);
                       }
                       var11 = var15;
-                      continue;
                     }
                   }
                   var7_int += 4;

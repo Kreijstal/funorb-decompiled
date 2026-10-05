@@ -597,7 +597,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             }
           }
           var2 = var2 + ' ';
-          continue;
         }
     }
 

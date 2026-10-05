@@ -116,7 +116,6 @@ final class ae {
           }
           var2 = var6 + 1;
           var3++;
-          continue;
         }
     }
 

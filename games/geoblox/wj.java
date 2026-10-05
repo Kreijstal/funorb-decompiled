@@ -120,7 +120,6 @@ final class wj extends sh {
             discarded$0 = var6.append(param0.substring(var7, var8));
             var7 = var5;
             discarded$1 = var6.append(param1[var10]);
-            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

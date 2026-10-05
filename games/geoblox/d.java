@@ -302,7 +302,6 @@ final class d implements Runnable {
               synchronized (var2) {
                 var9.notify();
               }
-              continue;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

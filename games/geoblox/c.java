@@ -265,7 +265,6 @@ final class c extends ka {
                 while (~-ee.field_A.field_o >= ~var3) {
                   ee.field_A.c(var2_int, var3);
                   var3 = var3 - ee.field_A.field_o;
-                  continue;
                 }
                 var2_int = var2_int + ee.field_A.field_s;
                 continue L1;
@@ -277,7 +276,7 @@ final class c extends ka {
             break;
           }
           var2_int = stackIn_16_0;
-          L7: while (~-vc.field_j.field_s >= ~var2_int) {
+          while (~-vc.field_j.field_s >= ~var2_int) {
             if (var4 != 0) {
               return;
             }
@@ -285,10 +284,8 @@ final class c extends ka {
             while (~var3 <= ~-vc.field_j.field_o) {
               vc.field_j.b(var2_int, var3);
               var3 = var3 - vc.field_j.field_o;
-              continue;
             }
             var2_int = var2_int - vc.field_j.field_s;
-            continue L7;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

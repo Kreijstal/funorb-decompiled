@@ -183,7 +183,6 @@ final class ad extends ia {
           if (var1.field_u != null) {
             return (ia) ((Object) var1.field_u);
           }
-          continue;
         }
     }
 
@@ -255,7 +254,6 @@ final class ad extends ia {
                 continue;
               }
               this.field_m.a(var11);
-              continue;
             }
           }
           if (param1 >= -26) {

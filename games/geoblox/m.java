@@ -166,7 +166,6 @@ abstract class m extends rc {
               this.field_x[(var7 << 8) + var8] = (byte)m.a(var15, var16, var17, this.field_v, var14, var7, var8);
             }
             var7++;
-            continue;
           }
         }
     }
@@ -898,7 +897,6 @@ abstract class m extends rc {
           }
           var5 = var8;
           var7++;
-          continue;
         }
     }
 

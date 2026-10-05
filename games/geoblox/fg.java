@@ -56,7 +56,6 @@ final class fg {
             var3[var8 + var6] = (byte)var9;
           }
           var4++;
-          continue;
         }
     }
 

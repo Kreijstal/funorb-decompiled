@@ -164,7 +164,6 @@ final class jh {
                     var6[incrementValue$0] = dj.field_F[var16];
                   }
                   var5 = var12;
-                  continue;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

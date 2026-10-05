@@ -36,7 +36,6 @@ final class am {
             return var5;
           }
           var4 = var4 + 1 & var3;
-          continue;
         }
     }
 

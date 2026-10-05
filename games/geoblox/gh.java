@@ -803,7 +803,6 @@ final class gh {
                     break;
                   }
                   var4 = (ja) ((Object) ji.field_r.d(1));
-                  continue;
                 }
               }
               stackIn_233_0 = kj.field_o[var3];
@@ -1491,7 +1490,6 @@ final class gh {
                       }
                     }
                     var7++;
-                    continue;
                   }
                   var6++;
                   continue;

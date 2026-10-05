@@ -14,7 +14,7 @@ final class na extends ha {
         int var14;
         var10 = 256 - param9;
         var11 = -param6;
-        L0: while (true) {
+        while (true) {
           if (var11 >= 0) {
             return;
           }
@@ -24,7 +24,7 @@ final class na extends ha {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var11++;
-              continue L0;
+              break;
             }
             var13 = param1[param3++];
             if (var13 == 0) {
@@ -38,7 +38,6 @@ final class na extends ha {
             param4++;
             param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
             var12++;
-            continue;
           }
         }
     }
@@ -135,7 +134,7 @@ final class na extends ha {
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param10 = -param11;
-        L0: while (true) {
+        while (true) {
           if (param10 >= 0) {
             return;
           }
@@ -151,7 +150,7 @@ final class na extends ha {
               param3 = param3 + param8;
               param2 = param2 + param9;
               param10++;
-              continue L0;
+              break;
             }
             param0 = param1[param2++];
             param4--;
@@ -176,7 +175,6 @@ final class na extends ha {
             param2 = param2 + param0;
             param4 = param4 - param0;
             param3 = param3 + (param0 + 2);
-            continue;
           }
         }
     }
@@ -262,7 +260,6 @@ final class na extends ha {
                 param5++;
                 param0[incrementValue$1] = param2[param3 & 255];
                 var12++;
-                continue;
               }
             }
             param3 = param1[param4++];
@@ -299,7 +296,6 @@ final class na extends ha {
             param5++;
             param0[incrementValue$9] = param2[param3 & 255];
             var12++;
-            continue;
           }
         }
     }

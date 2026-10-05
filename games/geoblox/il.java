@@ -188,7 +188,7 @@ final class il extends dm {
         param5 = -(param5 & 3);
         var14 = var13 + var13 + var13 + var13 + param5;
         var15 = -param6;
-        L0: while (true) {
+        while (true) {
           if (var15 >= 0) {
             return;
           }
@@ -198,7 +198,7 @@ final class il extends dm {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var15++;
-              continue L0;
+              break;
             }
             param2 = param1[param3++];
             var17 = param2 >>> 24;
@@ -226,7 +226,6 @@ final class il extends dm {
             param4++;
             param0[incrementValue$6] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
             var16++;
-            continue;
           }
         }
     }
@@ -241,7 +240,7 @@ final class il extends dm {
         int var14;
         var9 = -param5;
         var10 = -param6;
-        L0: while (true) {
+        while (true) {
           if (var10 >= 0) {
             return;
           }
@@ -251,7 +250,7 @@ final class il extends dm {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var10++;
-              continue L0;
+              break;
             }
             param2 = param1[param3++];
             var12 = param2 >>> 24;
@@ -266,7 +265,6 @@ final class il extends dm {
             param4++;
             param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
             var11++;
-            continue;
           }
         }
     }
@@ -813,7 +811,7 @@ final class il extends dm {
         int incrementValue$12 = 0;
         int var14;
         param8 = -param10;
-        L0: while (true) {
+        while (true) {
           if (param8 >= 0) {
             return;
           }
@@ -823,7 +821,7 @@ final class il extends dm {
               param7 = param7 + param11;
               param5 = param5 + param12;
               param8++;
-              continue L0;
+              break;
             }
             param0 = param4[param5++];
             if (param0 == 0) {
@@ -842,7 +840,6 @@ final class il extends dm {
             param7++;
             param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
             param6++;
-            continue;
           }
         }
     }
@@ -903,7 +900,7 @@ final class il extends dm {
         }
         var8 = stackIn_12_0;
         var9 = var7;
-        L4: while (true) {
+        while (true) {
           if (var9 > var8) {
             return;
           }
@@ -913,7 +910,7 @@ final class il extends dm {
           while (true) {
             if (var12 > var6) {
               var9 += 2;
-              continue L4;
+              break;
             }
             var13 = 0;
             var14 = 0;
@@ -951,7 +948,6 @@ final class il extends dm {
             var12 += 2;
             var11++;
             var10 += 2;
-            continue;
           }
         }
     }
@@ -1018,7 +1014,7 @@ final class il extends dm {
         var22 = var23;
         var9 = var22;
         var10 = var7;
-        L4: while (true) {
+        while (true) {
           if (var10 > var8) {
             return;
           }
@@ -1026,7 +1022,7 @@ final class il extends dm {
           while (true) {
             if (var11 > var6) {
               var10 += 4;
-              continue L4;
+              break;
             }
             var12 = var10 * this.field_r + var11;
             var13 = (param1 + (var10 >> 2)) * vb.field_f + (param0 + (var11 >> 2));
@@ -1059,7 +1055,6 @@ final class il extends dm {
             var21 = vb.field_c[var13];
             vb.field_c[var13] = (var19 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
             var11 += 4;
-            continue;
           }
         }
     }
@@ -1079,7 +1074,7 @@ final class il extends dm {
         var12 = param11 & 16711935;
         var13 = param11 >> 8 & 255;
         param6 = -param8;
-        L0: while (true) {
+        while (true) {
           if (param6 >= 0) {
             return;
           }
@@ -1089,7 +1084,7 @@ final class il extends dm {
               param4 = param4 + param9;
               param3 = param3 + param10;
               param6++;
-              continue L0;
+              break;
             }
             param2 = param1[param3++];
             var14 = param2 >>> 24;
@@ -1112,7 +1107,6 @@ final class il extends dm {
             param4++;
             param0[incrementValue$1] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
             param5++;
-            continue;
           }
         }
     }

@@ -210,7 +210,6 @@ final class ja extends rc {
             var6++;
           }
           var6 = var6 + var7;
-          continue;
         }
     }
 
@@ -527,7 +526,6 @@ final class ja extends rc {
             var10++;
           }
           var10 = var10 + var11;
-          continue;
         }
     }
 

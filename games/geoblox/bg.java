@@ -63,7 +63,7 @@ final class bg extends m {
         var13 = param2 - vb.field_e;
         var14 = param3 - vb.field_i;
         var15 = var14;
-        L0: while (true) {
+        while (true) {
           if (var15 >= var14 + param5) {
             return;
           }
@@ -103,7 +103,7 @@ final class bg extends m {
               param7 = param7 + (var19 + param10);
               param8 = param8 + (var19 + param9);
               var15++;
-              continue L0;
+              break;
             }
             if (param1[param7++] == 0) {
               param8++;
@@ -114,7 +114,6 @@ final class bg extends m {
             param8++;
             vb.field_c[incrementValue$1] = param6;
             var20++;
-            continue;
           }
         }
     }
@@ -191,7 +190,6 @@ final class bg extends m {
                 }
                 param0[param4++] = param2;
                 var11++;
-                continue;
               }
             }
             if (param1[param3++] == 0) {
@@ -216,7 +214,6 @@ final class bg extends m {
             }
             param0[param4++] = param2;
             var11++;
-            continue;
           }
         }
     }
@@ -229,7 +226,7 @@ final class bg extends m {
         param2 = ((param2 & 16711935) * param9 & -16711936) + ((param2 & 65280) * param9 & 16711680) >> 8;
         param9 = 256 - param9;
         var10 = -param6;
-        L0: while (true) {
+        while (true) {
           if (var10 >= 0) {
             return;
           }
@@ -239,7 +236,7 @@ final class bg extends m {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var10++;
-              continue L0;
+              break;
             }
             if (param1[param3++] == 0) {
               param4++;
@@ -251,7 +248,6 @@ final class bg extends m {
             param4++;
             param0[incrementValue$12] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
             var11++;
-            continue;
           }
         }
     }

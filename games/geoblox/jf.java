@@ -126,7 +126,6 @@ final class jf implements dh {
             param8 = param8 + param4;
             param3 = param3 + param1;
             param5 = param5 + param6;
-            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

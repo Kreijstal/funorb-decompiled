@@ -44,7 +44,7 @@ final class ui {
         var7 = var19;
         for (var8 = 0; var8 < 8; var8++) {
           var9 = 0;
-          L2: while (var9 < var6) {
+          while (var9 < var6) {
             if (var8 == 0) {
               var10 = ua.field_u[this.field_a].b();
               for (var11 = var4 - 1; var11 >= 0; var11--) {
@@ -83,7 +83,7 @@ final class ui {
               }
               var9++;
               if (var9 >= var6) {
-                continue L2;
+                break;
               }
               var10++;
             }

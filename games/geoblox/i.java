@@ -211,7 +211,6 @@ final class i {
               if (var19 != 0) {
                 return;
               }
-              continue;
             }
           }
           if (param1 != 22) {
@@ -359,7 +358,6 @@ final class i {
               if (var19 != 0) {
                 return;
               }
-              continue;
             }
           }
           if (param1 != 22) {

@@ -76,7 +76,7 @@ final class tb {
           kb.field_a = new int[param0.field_o * 100000];
         }
         var26 = 1;
-        L1: while (true) {
+        while (true) {
           if (var26 == 0) {
             return;
           }
@@ -131,7 +131,7 @@ final class tb {
           var8 = tb.a(3, param0);
           var9 = tb.a(15, param0);
           var4 = 0;
-          L6: while (var4 < var9) {
+          while (var4 < var9) {
             var5 = 0;
             while (true) {
               var1 = tb.b(param0);
@@ -143,7 +143,6 @@ final class tb {
             }
             param0.field_z[var4] = (byte)var5;
             var4++;
-            continue L6;
           }
           var37 = new byte[6];
           var36 = var37;
@@ -164,20 +163,20 @@ final class tb {
             param0.field_r[var4] = (byte)var28;
           }
           var6 = 0;
-          L9: while (var6 < var8) {
+          while (var6 < var8) {
             var17 = tb.a(5, param0);
             var4 = 0;
-            L38: while (true) {
+            while (true) {
               if (var4 >= var7) {
                 var6++;
-                continue L9;
+                break;
               }
               while (true) {
                 var1 = tb.b(param0);
                 if (var1 == 0) {
                   param0.field_v[var6][var4] = (byte)var17;
                   var4++;
-                  continue L38;
+                  break;
                 }
                 var1 = tb.b(param0);
                 if (var1 != 0) {
@@ -185,7 +184,6 @@ final class tb {
                   continue;
                 }
                 var17++;
-                continue;
               }
             }
           }
@@ -237,7 +235,7 @@ final class tb {
             var19 = var19 << 1 | var20;
           }
           var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-          L15: while (true) {
+          while (true) {
             if (var13 == var10) {
               param0.field_k = 0;
               param0.field_h = (byte) 0;
@@ -265,10 +263,10 @@ final class tb {
               if (param0.field_G == param0.field_q + 1 &&
                   param0.field_k == 0) {
                 var26 = 1;
-                continue L1;
+                break;
               }
               var26 = 0;
-              continue L1;
+              break;
             }
             if (var13 != 0 &&
                 var13 != 1) {
@@ -380,7 +378,6 @@ final class tb {
               var14++;
               var15--;
             }
-            continue L15;
           }
         }
     }

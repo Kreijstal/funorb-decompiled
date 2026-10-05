@@ -61,7 +61,6 @@ final class qj {
               }
               var6 = var6 + var7;
               var8_int++;
-              continue;
             }
           }
           var8 = new StringBuilder(var6);
@@ -76,7 +75,6 @@ final class qj {
             discarded$0 = var8.append(param0.substring(var9, var10));
             var9 = 1 + var10;
             discarded$1 = var8.append(param1);
-            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

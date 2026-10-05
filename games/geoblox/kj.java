@@ -66,7 +66,6 @@ final class kj extends ia {
               if (!this.field_C.f()) {
                 break;
               }
-              continue;
             }
           }
           this.field_I.a(param0, param1, param2);
@@ -808,7 +807,7 @@ final class kj extends ia {
           this.a((byte) 73);
           return;
         }
-        L1: while (true) {
+        while (true) {
           if (var4 != this.field_k) {
             this.field_k = var4;
             this.field_A = var5;
@@ -854,7 +853,6 @@ final class kj extends ia {
           var2 = this.field_C.c();
           var4 = this.field_C.field_a[var2];
           var5 = this.field_C.d(var4);
-          continue L1;
         }
     }
 

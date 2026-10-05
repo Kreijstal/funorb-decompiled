@@ -99,7 +99,6 @@ final class hj {
           }
           var1[var2] = (dm) ((Object) new il(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var17));
           var2++;
-          continue;
         }
     }
 

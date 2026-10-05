@@ -212,7 +212,6 @@ abstract class sh extends el implements ql {
             }
             va.field_c.a(-108, var6);
             pc.field_f = -1;
-            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

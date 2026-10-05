@@ -79,7 +79,6 @@ final class ce extends qk {
             }
             this.field_v = true;
             var4++;
-            continue;
           }
         }
         stackIn_12_0 = this;

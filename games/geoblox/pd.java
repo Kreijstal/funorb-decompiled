@@ -110,7 +110,6 @@ final class pd {
             param4 = var10;
             var8 = 1;
             var9++;
-            continue;
           }
         }
         this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));

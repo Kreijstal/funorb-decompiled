@@ -450,7 +450,6 @@ abstract class oe extends dd {
               var13 = var13 | (var13 << 8 | var13 << 16);
               vb.field_c[var8 * vb.field_f + param0 + var10] = var13;
               var10++;
-              continue;
             }
           }
           if (20 >= var7) {

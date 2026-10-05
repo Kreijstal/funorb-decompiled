@@ -143,7 +143,7 @@ final class lc {
           var16 = var14 & 65280;
           var17 = var14 & 255;
           var18 = -param1;
-          L1: while (var18 < 0) {
+          while (var18 < 0) {
             var19 = param5 * (param6 >> 16);
             if (var37 != 0) {
               return;
@@ -187,14 +187,12 @@ final class lc {
                 }
               }
               var20++;
-              continue;
             }
             param6 = param6 + param4;
             param8 = param8 + param7;
             stackIn_23_0 = var13_int;
             param0 = stackIn_23_0;
             var18++;
-            continue L1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

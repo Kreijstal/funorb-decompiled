@@ -1148,7 +1148,6 @@ final class kl extends ia {
                   return;
                 }
                 this.field_x = var5 + (this.field_x - var5) % var8;
-                continue;
               }
             }
             while (true) {
@@ -1157,7 +1156,6 @@ final class kl extends ia {
                 return;
               }
               this.field_x = var6 - 1 - (var6 - 1 - this.field_x) % var8;
-              continue;
             }
           }
           if (this.field_p < 0) {
@@ -1181,7 +1179,6 @@ final class kl extends ia {
             }
             this.field_x = var5 + var5 - 1 - this.field_x;
             this.field_p = -this.field_p;
-            continue;
           }
         }
         L4: {

@@ -231,7 +231,6 @@ final class vb {
                   field_c[var15 + var18] = param5;
                   field_c[var16 - var19] = param5;
                   field_c[var17 + var19] = param5;
-                  continue;
                 }
               }
               vb.g(param0, param1 + var18, param3 - var18 - var18, param5);
@@ -307,7 +306,6 @@ final class vb {
                   continue;
                 }
                 field_c[var17 + var19] = param5;
-                continue;
               }
             }
             return;
@@ -638,7 +636,7 @@ final class vb {
         if (param1 > var13) {
           param1 = var13;
         }
-        L4: while (var14 < param1) {
+        while (var14 < param1) {
           while (true) {
             if (var19 > var15 &&
                 var18 > var15) {
@@ -665,13 +663,12 @@ final class vb {
               var17--;
               var18 = var18 - (incrementValue$3 + var17);
               var19 = var19 - (var17 + var17);
-              continue L4;
+              break;
             }
             var18 = var18 + (var16 + var16);
             incrementValue$5 = var16;
             var16++;
             var19 = var19 + (incrementValue$5 + var16);
-            continue;
           }
         }
         var16 = param2;
@@ -813,7 +810,7 @@ final class vb {
         if (param1 > var5) {
           param1 = var5;
         }
-        L4: while (var6 < param1) {
+        while (var6 < param1) {
           while (true) {
             if (var11 > var7 &&
                 var10 > var7) {
@@ -836,13 +833,12 @@ final class vb {
               var9--;
               var10 = var10 - (incrementValue$3 + var9);
               var11 = var11 - (var9 + var9);
-              continue L4;
+              break;
             }
             var10 = var10 + (var8 + var8);
             incrementValue$5 = var8;
             var8++;
             var11 = var11 + (incrementValue$5 + var8);
-            continue;
           }
         }
         var8 = param2;
@@ -1022,7 +1018,6 @@ final class vb {
                   field_c[var5 + var8] = param3;
                   field_c[var7 - var9] = param3;
                   field_c[var7 + var9] = param3;
-                  continue;
                 }
               }
               if (param0 - var8 >= field_e &&
@@ -1130,7 +1125,6 @@ final class vb {
                   continue;
                 }
                 field_c[var7 + var9] = param3;
-                continue;
               }
             }
             return;
@@ -1281,7 +1275,7 @@ final class vb {
         if (var7 > var9) {
           var7 = var9;
         }
-        L4: while (var11 < var7) {
+        while (var11 < var7) {
           while (true) {
             if (var16 > var12 &&
                 var15 > var12) {
@@ -1304,13 +1298,12 @@ final class vb {
               var14--;
               var15 = var15 - (incrementValue$4 + var14);
               var16 = var16 - (var14 + var14);
-              continue L4;
+              break;
             }
             var15 = var15 + (var13 + var13);
             incrementValue$6 = var13;
             var13++;
             var16 = var16 + (incrementValue$6 + var13);
-            continue;
           }
         }
         var14 = var11 - var7;

@@ -195,7 +195,6 @@ final class og extends rc {
               return;
             }
             this.a(var3_int, param1, -26093);
-            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

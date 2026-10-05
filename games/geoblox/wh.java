@@ -411,7 +411,6 @@ abstract class wh extends rc {
                 if (var7 != 0) {
                   break L0;
                 }
-                continue;
               }
               if (var7 == 0) {
                 break L0;
@@ -684,7 +683,6 @@ abstract class wh extends rc {
                     var17_int = var17_int + var19;
                     var21 = var21 + var23;
                     var36 = var36 + vb.field_f;
-                    continue;
                   }
                 }
                 var36 = param4 - param15;
@@ -784,7 +782,6 @@ abstract class wh extends rc {
               var21 = var21 + var23;
               var17_int = var17_int + var19;
               var30 = var30 + var32;
-              continue;
             }
             return;
           }
@@ -862,7 +859,6 @@ abstract class wh extends rc {
                           decompiledRegionSelector0 = 1;
                           break L7;
                         }
-                        continue;
                       }
                       decompiledRegionSelector0 = 0;
                     }

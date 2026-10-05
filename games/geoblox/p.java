@@ -152,7 +152,6 @@ final class p extends hf {
                     if (var30 != 0) {
                       return;
                     }
-                    continue;
                   }
                 }
                 if (param6) {
@@ -182,7 +181,6 @@ final class p extends hf {
                     oa.field_f[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
                     gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                     var18++;
-                    continue;
                   }
                 }
                 stackIn_66_0 = var7_int;

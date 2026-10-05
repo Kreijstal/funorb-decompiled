@@ -24,7 +24,7 @@ final class nc extends m {
         int var15;
         var11 = 256 - param10;
         var12 = -param7;
-        L0: while (true) {
+        while (true) {
           if (var12 >= 0) {
             return;
           }
@@ -34,7 +34,7 @@ final class nc extends m {
               param5 = param5 + param8;
               param4 = param4 + param9;
               var12++;
-              continue L0;
+              break;
             }
             incrementValue$16 = param4;
             param4++;
@@ -51,7 +51,6 @@ final class nc extends m {
             param5++;
             param1[incrementValue$18] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
             var13++;
-            continue;
           }
         }
     }
@@ -228,7 +227,6 @@ final class nc extends m {
                 param5++;
                 param1[incrementValue$2] = param3[param0 & 255];
                 var12++;
-                continue;
               }
             }
             incrementValue$3 = param4;
@@ -277,7 +275,6 @@ final class nc extends m {
             param5++;
             param1[incrementValue$14] = param3[param0 & 255];
             var12++;
-            continue;
           }
         }
     }

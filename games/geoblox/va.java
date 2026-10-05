@@ -74,7 +74,7 @@ final class va {
         var7 = Geoblox.field_C;
         try {
           var5_int = 0;
-          L0: while (true) {
+          while (true) {
             if (var5_int >= ch.field_d.length) {
               if (param4 != -85) {
                 va.a(80, (byte) 55);
@@ -88,7 +88,7 @@ final class va {
               param2--;
               if (0 == incrementValue$0) {
                 var5_int++;
-                continue L0;
+                break;
               }
               incrementValue$1 = var6;
               var6++;
@@ -97,7 +97,6 @@ final class va {
               dupTemp$3 = param3[dupTemp$2];
               param3[dupTemp$2] = dupTemp$3 + 1;
               pj.field_i[dupTemp$3] = param0;
-              continue;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

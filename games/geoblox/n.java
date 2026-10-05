@@ -57,7 +57,6 @@ final class n extends q {
               while (var13.field_v.length > var14) {
                 var13.field_v[var14] = param5;
                 var14++;
-                continue;
               }
               var12++;
               continue L0;
@@ -81,7 +80,6 @@ final class n extends q {
                 var10[2].field_v[var12 * var9 - var11 + var9 - 1] = param6;
                 var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12)] = param6;
                 var12++;
-                continue;
               }
               var11++;
               continue L6;
@@ -91,7 +89,7 @@ final class n extends q {
           break;
         }
         var11 = stackIn_22_0;
-        L12: while (true) {
+        while (true) {
           stackIn_24_0 = var11;
           stackIn_24_1 = param8;
           while (true) {
@@ -109,10 +107,9 @@ final class n extends q {
                     var10[6].field_v[var11 + var12 * var9] = param2;
                   }
                   var12++;
-                  continue;
                 }
                 var11++;
-                continue L12;
+                break;
               }
             } else {
               stackIn_34_0 = 0;
@@ -132,7 +129,6 @@ final class n extends q {
                     var10[1].field_v[param3 * var12 + var11] = param2;
                     var10[3].field_v[var12 + var9 * var11] = param2;
                     var12++;
-                    continue;
                   }
                   var11++;
                   continue L19;
@@ -156,7 +152,6 @@ final class n extends q {
                     var10[7].field_v[var11 + param3 * var12] = param0;
                     var10[5].field_v[var9 * var11 + var12] = param0;
                     var12++;
-                    continue;
                   }
                   var11++;
                   continue L25;

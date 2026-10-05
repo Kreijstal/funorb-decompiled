@@ -52,12 +52,12 @@ final class rf extends hf {
           var4.f(var6);
           var4.b(var6);
         }
-        L1: while (true) {
+        while (true) {
           var6 = var4.c();
           var7 = var4.field_a[var6];
           while (true) {
             if (var4.field_a[var6] != var7) {
-              continue L1;
+              break;
             }
             var4.a(var6);
             var8 = var4.e(var6);
@@ -67,7 +67,7 @@ final class rf extends hf {
               if (var4.e()) {
                 return;
               }
-              continue L1;
+              break;
             }
             var9 = var8 & 240;
             if (var9 == 176) {
@@ -102,7 +102,6 @@ final class rf extends hf {
             }
             var4.f(var6);
             var4.b(var6);
-            continue;
           }
         }
     }
@@ -218,7 +217,7 @@ final class rf extends hf {
         var11 = 0;
         var12 = 0;
         var13 = 0;
-        L0: while (var13 < var2) {
+        while (var13 < var2) {
           var14 = -1;
           while (true) {
             var15 = param0.c((byte) 34);
@@ -228,7 +227,7 @@ final class rf extends hf {
             var14 = var15 & 15;
             if (var15 == 7) {
               var13++;
-              continue L0;
+              break;
             }
             if (var15 == 23) {
               var5++;
@@ -262,7 +261,6 @@ final class rf extends hf {
               throw new RuntimeException();
             }
             var12++;
-            continue;
           }
         }
         var4 = var4 + 5 * var5;
@@ -427,7 +425,7 @@ final class rf extends hf {
         var70 = new int[128];
         var28 = 0;
         var60 = 0;
-        L4: while (true) {
+        while (true) {
           if (var60 >= var2) {
             return;
           }
@@ -452,7 +450,7 @@ final class rf extends hf {
               var51.d((byte) 125, 0);
               var51.g(var51.field_f - var61, 0);
               var60++;
-              continue L4;
+              break;
             }
             if (var64 == 23) {
               if (var65 != 0) {
@@ -620,7 +618,6 @@ final class rf extends hf {
             var66 = var66 + var70[var28];
             var70[var28] = var66;
             var51.d((byte) -10, var66 & 127);
-            continue;
           }
         }
     }

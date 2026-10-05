@@ -257,7 +257,6 @@ final class ua extends hf {
             var1[incrementValue$0] = (byte)(var7 - 128);
           }
           var3++;
-          continue;
         }
     }
 

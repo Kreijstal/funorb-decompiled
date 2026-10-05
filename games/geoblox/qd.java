@@ -138,7 +138,7 @@ final class qd extends m {
         int var13;
         int var14;
         var10 = -param6;
-        L0: while (true) {
+        while (true) {
           if (var10 >= 0) {
             return;
           }
@@ -148,7 +148,7 @@ final class qd extends m {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var10++;
-              continue L0;
+              break;
             }
             incrementValue$11 = param3;
             param3++;
@@ -165,7 +165,6 @@ final class qd extends m {
             param4++;
             param0[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
             var11++;
-            continue;
           }
         }
     }
@@ -179,7 +178,7 @@ final class qd extends m {
         int var12;
         int var13;
         var9 = -param6;
-        L0: while (true) {
+        while (true) {
           if (var9 >= 0) {
             return;
           }
@@ -189,7 +188,7 @@ final class qd extends m {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var9++;
-              continue L0;
+              break;
             }
             incrementValue$11 = param3;
             param3++;
@@ -206,7 +205,6 @@ final class qd extends m {
             param4++;
             param0[incrementValue$12] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
             var10++;
-            continue;
           }
         }
     }

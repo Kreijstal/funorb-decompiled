@@ -148,7 +148,7 @@ final class kc {
                       var13 = new wd();
                       var11.a(var1, false);
                       var4_int = 1;
-                      L12: while (true) {
+                      while (true) {
                         stackIn_20_0 = (ja) ((Object) var11.a(true));
                         while (true) {
                           var10 = stackIn_20_0;
@@ -186,7 +186,6 @@ final class kc {
                                           break L20;
                                         }
                                         var8 = (ja) ((Object) var11.a(54));
-                                        continue;
                                       }
                                       var11.a(var7, false);
                                     }
@@ -194,9 +193,8 @@ final class kc {
                                   break;
                                 }
                                 var6_int++;
-                                continue;
                               }
-                              continue L12;
+                              break;
                             }
                           }
                           stackIn_44_0 = var4_int;
@@ -216,7 +214,6 @@ final class kc {
                               stackIn_51_1 = var5_ref_ja;
                               ((ja) (Object) stackIn_51_0).a(stackIn_51_1, 0);
                               var6_int++;
-                              continue;
                             }
                             var6 = var5_ref_ja;
                             var7 = var5_ref_ja;
@@ -224,7 +221,6 @@ final class kc {
                             var6.field_N = 0;
                             var7.field_m = 0;
                             var5_ref_ja = (ja) ((Object) var13.a(true));
-                            continue;
                           }
                           break L10;
                         }
@@ -242,7 +238,6 @@ final class kc {
                   if (var9 != 0) {
                     break L1;
                   }
-                  continue;
                 }
               }
               var1_int = 0;
@@ -277,7 +272,6 @@ final class kc {
                       if (var9 != 0) {
                         break L39;
                       }
-                      continue;
                     }
                     var7 = var2_ref_ja;
                     var8 = var2_ref_ja;
@@ -301,7 +295,6 @@ final class kc {
                     if (var9 != 0) {
                       break L39;
                     }
-                    continue;
                   }
                   var3 = var2_ref_ja;
                   var2_ref_ja.field_L = 0;

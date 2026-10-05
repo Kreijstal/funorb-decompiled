@@ -152,7 +152,6 @@ final class ai extends hf {
                   }
                 }
                 var6 = var7_int;
-                continue;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

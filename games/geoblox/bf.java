@@ -191,7 +191,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               }
               vb.field_c[var11] = 16777215;
               var11 = var11 + vb.field_f * 2;
-              continue;
             }
           }
           if (param0 >= vb.field_i &&
@@ -205,7 +204,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               }
               vb.field_c[var11] = 16777215;
               var11 += 2;
-              continue;
             }
           }
           if (var5_int >= vb.field_e &&
@@ -219,7 +217,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               }
               vb.field_c[var11] = 16777215;
               var11 = var11 + 2 * vb.field_f;
-              continue;
             }
           }
           if (vb.field_i <= param0 &&
@@ -233,7 +230,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               }
               vb.field_c[var11] = 16777215;
               var11 += 2;
-              continue;
             }
           }
           return;

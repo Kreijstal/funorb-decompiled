@@ -284,7 +284,6 @@ class vf extends hk {
             this.field_F.a(-44, var16);
             var11 = var16;
           }
-          continue;
         }
     }
 
