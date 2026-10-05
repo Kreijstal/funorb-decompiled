@@ -114,7 +114,7 @@ final class ol extends hk {
                   var12 = var13;
                 }
               }
-              if ((0 <= var12)) {
+              if (0 <= var12) {
                 this.field_F.a(0, var12);
               }
             }

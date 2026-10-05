@@ -92,8 +92,8 @@ final class fh implements dh {
         int var11 = 0;
         var11 = Geoblox.field_C;
         try {
-          if ((!param4.field_l) &&
-              (!param4.e((byte) 54))) {
+          if (!param4.field_l &&
+              !param4.e((byte) 54)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;

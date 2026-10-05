@@ -81,11 +81,11 @@ final class pg {
                 try {
                   L2: {
                     var6_int = param3.c((byte) 34);
-                    if ((0 != var6_int) &&
-                        (1 != var6_int) &&
-                        (var6_int != 2)) {
-                      if ((var6_int != 3) &&
-                          (var6_int != 4)) {
+                    if (0 != var6_int &&
+                        1 != var6_int &&
+                        var6_int != 2) {
+                      if (var6_int != 3 &&
+                          var6_int != 4) {
                         var5++;
                         decompiledRegionSelector0 = 1;
                         break L2;
@@ -159,7 +159,7 @@ final class pg {
                   var19.field_j[var5] = -5;
                   decompiledRegionSelector0 = 0;
                 }
-                if ((decompiledRegionSelector0 != 0)) {
+                if (decompiledRegionSelector0 != 0) {
                   continue;
                 }
                 var5++;

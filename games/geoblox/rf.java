@@ -557,8 +557,8 @@ final class rf extends hf {
             var15++;
             var28 = var28 + param0.field_j[incrementValue$7] & 127;
             var51.d((byte) 126, var28);
-            if ((var28 != 0) &&
-                (var28 != 32)) {
+            if (var28 != 0 &&
+                var28 != 32) {
               if (var28 == 1) {
                 incrementValue$19 = var34;
                 var34++;
@@ -599,11 +599,11 @@ final class rf extends hf {
                 incrementValue$10 = var49;
                 var49++;
                 var66 = param0.field_j[incrementValue$10];
-              } else if ((var28 != 64) &&
-                  (var28 != 65) &&
-                  (var28 != 120) &&
-                  (var28 != 121) &&
-                  (var28 != 123)) {
+              } else if (var28 != 64 &&
+                  var28 != 65 &&
+                  var28 != 120 &&
+                  var28 != 121 &&
+                  var28 != 123) {
                 incrementValue$8 = var39;
                 var39++;
                 var66 = param0.field_j[incrementValue$8];

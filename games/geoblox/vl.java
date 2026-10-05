@@ -38,8 +38,8 @@ final class vl extends hf {
           var6 = 0;
           var7 = null;
           for (var8 = 0; var8 < 128; var8++) {
-            if (((param1 == null) ||
-                  (param1[var8] != 0))) {
+            if (param1 == null ||
+                  param1[var8] != 0) {
               var9 = this.field_h[var8];
               if (var9 != 0) {
                 if (var9 != var6) {
@@ -157,8 +157,8 @@ final class vl extends hf {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          if ((param0 != null) &&
-              (param1 > 0)) {
+          if (param0 != null &&
+              param1 > 0) {
             var5_int = param0[0].field_s;
             var6 = param0[2].field_s;
             var7 = param0[1].field_s;

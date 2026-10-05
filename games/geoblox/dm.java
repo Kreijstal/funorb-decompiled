@@ -309,10 +309,10 @@ class dm extends wh {
                 var23 = var23 + vb.field_f;
                 continue;
               }
-              if ((var36 >= 0) &&
-                  (var35 - (this.field_r << 12) < 0) &&
-                  (var36 - (this.field_m << 12) < 0)) {
-                while ((var37 < 0)) {
+              if (var36 >= 0 &&
+                  var35 - (this.field_r << 12) < 0 &&
+                  var36 - (this.field_m << 12) < 0) {
+                while (var37 < 0) {
                   var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
                   if (var38 == 0) {
                     var34++;
@@ -338,8 +338,8 @@ class dm extends wh {
               var35 = var30;
               var36 = var31 + (var28 * var26 >> 4);
               var37 = var20;
-              if ((var35 >= 0) &&
-                  (var35 - (this.field_r << 12) < 0)) {
+              if (var35 >= 0 &&
+                  var35 - (this.field_r << 12) < 0) {
                 if (var36 < 0) {
                   var32 = (var26 - 1 - var36) / var26;
                   var37 = var37 + var32;
@@ -420,8 +420,8 @@ class dm extends wh {
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31;
               var37 = var20;
-              if ((var36 >= 0) &&
-                  (var36 - (this.field_m << 12) < 0)) {
+              if (var36 >= 0 &&
+                  var36 - (this.field_m << 12) < 0) {
                 if (var35 < 0) {
                   var32 = (var27 - 1 - var35) / var27;
                   var37 = var37 + var32;
@@ -556,8 +556,8 @@ class dm extends wh {
             var35 = var30 + (var28 * var27 >> 4);
             var36 = var31;
             var37 = var20;
-            if ((var36 >= 0) &&
-                (var36 - (this.field_m << 12) < 0)) {
+            if (var36 >= 0 &&
+                var36 - (this.field_m << 12) < 0) {
               var32 = var35 - (this.field_r << 12);
               if (var35 - (this.field_r << 12) >= 0) {
                 var32 = (var27 - var32) / var27;
@@ -783,10 +783,10 @@ class dm extends wh {
           }
           break;
         }
-        if ((var4 == 0) &&
-            (var3 == this.field_r - 1) &&
-            (var2 == 0) &&
-            (var1 == this.field_m - 1)) {
+        if (var4 == 0 &&
+            var3 == this.field_r - 1 &&
+            var2 == 0 &&
+            var1 == this.field_m - 1) {
           return;
         }
         var5 = var3 + 1 - var4;
@@ -817,20 +817,20 @@ class dm extends wh {
           for (var5 = 0; var5 < this.field_r; var5++) {
             var6 = this.field_v[var3];
             if (var6 == 0) {
-              if ((var5 > 0) &&
-                  (this.field_v[var3 - 1] != 0)) {
+              if (var5 > 0 &&
+                  this.field_v[var3 - 1] != 0) {
                 var6 = param0;
               } else {
-                if ((var4 > 0) &&
-                    (this.field_v[var3 - this.field_r] != 0)) {
+                if (var4 > 0 &&
+                    this.field_v[var3 - this.field_r] != 0) {
                   var6 = param0;
                 } else {
-                  if ((var5 < this.field_r - 1) &&
-                      (this.field_v[var3 + 1] != 0)) {
+                  if (var5 < this.field_r - 1 &&
+                      this.field_v[var3 + 1] != 0) {
                     var6 = param0;
                   } else {
-                    if ((var4 < this.field_m - 1) &&
-                        (this.field_v[var3 + this.field_r] != 0)) {
+                    if (var4 < this.field_m - 1 &&
+                        this.field_v[var3 + this.field_r] != 0) {
                       var6 = param0;
                     }
                   }
@@ -1180,8 +1180,8 @@ class dm extends wh {
             var17 = param2 >> 16 & 255;
             var18 = param2 >> 8 & 255;
             var19 = param2 & 255;
-            if ((var17 == var18) &&
-                (var18 == var19)) {
+            if (var17 == var18 &&
+                var18 == var19) {
               if (var17 > 128) {
                 incrementValue$1 = param4;
                 param4++;
@@ -2234,8 +2234,8 @@ class dm extends wh {
             }
             if (var40 != 0) {
               while (var39 < 0) {
-                if ((var37 >= -4096) &&
-                    (var38 >= -4096)) {
+                if (var37 >= -4096 &&
+                    var38 >= -4096) {
                   var33 = var37 >> 12;
                   var34 = var38 >> 12;
                   this.c(var23, var33, var34, var37, var38);

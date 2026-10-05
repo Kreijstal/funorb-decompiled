@@ -287,10 +287,10 @@ final class cd extends jg {
             var9 = -22 % ((3 - param0) / 53);
             var8 = var7.readLine();
             if (var8 != null) {
-              if ((!var8.startsWith("HTTP/1.0 200")) &&
-                  (!var8.startsWith("HTTP/1.1 200"))) {
-                if ((!var8.startsWith("HTTP/1.0 407")) &&
-                    (!var8.startsWith("HTTP/1.1 407"))) {
+              if (!var8.startsWith("HTTP/1.0 200") &&
+                  !var8.startsWith("HTTP/1.1 200")) {
+                if (!var8.startsWith("HTTP/1.0 407") &&
+                    !var8.startsWith("HTTP/1.1 407")) {
                   break L1;
                 }
                 var10 = 0;

@@ -156,7 +156,7 @@ final class rd extends ff {
             rd.a(38, (String) null);
         }
         kd.field_e.f(10936);
-        if ((null == vg.field_i)) {
+        if (null == vg.field_i) {
             vg.field_i = new rl(kd.field_e, ff.field_d);
         }
         kd.field_e.a(false, vg.field_i);
@@ -264,8 +264,8 @@ final class rd extends ff {
             }
             if (var10.field_l) {
               var12 = this.field_x[3];
-              if ((var10.field_f != 0) &&
-                  (var12 != null)) {
+              if (var10.field_f != 0 &&
+                  var12 != null) {
                 var12.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
               } else {
                 var9 = this.field_x[2];

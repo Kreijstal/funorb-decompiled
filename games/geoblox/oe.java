@@ -32,7 +32,7 @@ abstract class oe extends dd {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if ((param3 <= 0)) {
+        if (param3 <= 0) {
             this.c(param0, param2 + 5373, param1);
             return;
         }
@@ -315,15 +315,15 @@ abstract class oe extends dd {
               var3_int = var3_int + (-160 + var7);
             }
             for (var9 = 0; pg.field_a.length > var9; var9++) {
-              if ((((1 << var9 & var5) != 0) ||
-                    (!(param0))) &&
-                  ((da.a(0, 88)) ||
-                    (var9 != 16) ||
-                    (qi.d(109)))) {
-                if ((mc.field_a >= var3_int) &&
-                    (mc.field_a <= var3_int + 32) &&
-                    (var4 <= he.field_d) &&
-                    (he.field_d <= var4 + 32)) {
+              if (((1 << var9 & var5) != 0 ||
+                    !param0) &&
+                  (da.a(0, 88) ||
+                    var9 != 16 ||
+                    qi.d(109))) {
+                if (mc.field_a >= var3_int &&
+                    mc.field_a <= var3_int + 32 &&
+                    var4 <= he.field_d &&
+                    he.field_d <= var4 + 32) {
                   if (a.field_e == var9) {
                     a.field_e = -1;
                     return;
@@ -341,8 +341,8 @@ abstract class oe extends dd {
                   if (!param1) {
                     var4 += 5;
                   }
-                  if ((param0) &&
-                      (var8 < 8)) {
+                  if (param0 &&
+                      var8 < 8) {
                     var3_int = var3_int + var7;
                   }
                 }
@@ -359,15 +359,15 @@ abstract class oe extends dd {
               var3_int = var3_int + (-160 + var7);
             }
             for (var9 = 0; pg.field_a.length > var9; var9++) {
-              if ((((1 << var9 & var5) != 0) ||
-                    (!(param0))) &&
-                  ((da.a(0, 88)) ||
-                    (var9 != 16) ||
-                    (qi.d(109)))) {
-                if ((mc.field_a >= var3_int) &&
-                    (mc.field_a <= var3_int + 32) &&
-                    (var4 <= he.field_d) &&
-                    (he.field_d <= var4 + 32)) {
+              if (((1 << var9 & var5) != 0 ||
+                    !param0) &&
+                  (da.a(0, 88) ||
+                    var9 != 16 ||
+                    qi.d(109))) {
+                if (mc.field_a >= var3_int &&
+                    mc.field_a <= var3_int + 32 &&
+                    var4 <= he.field_d &&
+                    he.field_d <= var4 + 32) {
                   if (a.field_e == var9) {
                     a.field_e = -1;
                     return;
@@ -385,8 +385,8 @@ abstract class oe extends dd {
                   if (!param1) {
                     var4 += 5;
                   }
-                  if ((param0) &&
-                      (var8 < 8)) {
+                  if (param0 &&
+                      var8 < 8) {
                     var3_int = var3_int + var7;
                   }
                 }
@@ -437,7 +437,7 @@ abstract class oe extends dd {
           var10 = 0;
           var11 = this.field_r;
           if (var7 <= 20) {
-            while ((var10 <= 20)) {
+            while (var10 <= 20) {
               var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
               if (var12 > 462) {
                 var10++;

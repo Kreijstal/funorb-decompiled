@@ -74,8 +74,8 @@ final class v {
           var3 = var9.c((byte) 34);
           var4 = var9.a((byte) -97);
           if (var4 >= 0) {
-            if (((uj.field_b == 0) ||
-                (!(var4 > uj.field_b)))) {
+            if (uj.field_b == 0 ||
+                !(var4 > uj.field_b)) {
               if (param1 == ~var3) {
                 var12 = new byte[var4];
                 var10 = var12;
@@ -86,8 +86,8 @@ final class v {
               }
               var5 = var9.a((byte) -49);
               if (var5 >= 0) {
-                if (((uj.field_b == 0) ||
-                    (!(uj.field_b < var5)))) {
+                if (uj.field_b == 0 ||
+                    !(uj.field_b < var5)) {
                   var13 = new byte[var5];
                   var11 = var13;
                   var6 = var11;
@@ -183,8 +183,8 @@ final class v {
               }
             }
           }
-          if ((kh.field_d == this.field_a) &&
-              (ok.field_c == this.field_h)) {
+          if (kh.field_d == this.field_a &&
+              ok.field_c == this.field_h) {
             return;
           }
           this.field_u.a(-2964, this.field_a, this.field_h);

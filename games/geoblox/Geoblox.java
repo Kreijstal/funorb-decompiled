@@ -11,7 +11,7 @@ public final class Geoblox extends wf {
 
     private final void n(int param0) {
         if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("sports", (byte) -126))) {
+            if (!ll.field_f.a("sports", (byte) -126)) {
                 return;
             }
             if (param0 <= 37) {
@@ -32,7 +32,7 @@ public final class Geoblox extends wf {
             this.h(true);
         }
         me.b(122);
-        if ((vl.field_n != null)) {
+        if (vl.field_n != null) {
             vl.field_n.a(0, ka.field_i);
         }
         pc.a((byte) 124);
@@ -86,7 +86,7 @@ public final class Geoblox extends wf {
             var4 = -1;
             for (var5_int = 0; var12.length > var5_int; var5_int++) {
                 var6_int = var5_int % 7;
-                if ((var6_int == 0)) {
+                if (var6_int == 0) {
                     var4++;
                     if (var4 >= 7) {
                         break;
@@ -163,7 +163,7 @@ public final class Geoblox extends wf {
             vf.field_H = wj.a("cry_begin", "", ll.field_f, 0);
             ok.field_a = wj.a("cry_middle", "", ll.field_f, 0);
             ld.field_b = wj.a("cry_end", "", ll.field_f, 0);
-            if ((da.a(0, 110))) {
+            if (da.a(0, 110)) {
                 vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0);
                 ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0);
                 ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0);
@@ -254,31 +254,31 @@ public final class Geoblox extends wf {
           return true;
         }
         s.g(9);
-        if ((wj.field_F.a(0)) &&
-            (wj.field_F.b(true))) {
+        if (wj.field_F.a(0) &&
+            wj.field_F.b(true)) {
           if (ah.field_c.a(0)) {
             stackIn_10_0 = ah.field_c;
             stackIn_11_1 = (param0) ? false : true;
             if (((rh) (Object) stackIn_10_0).b(stackIn_11_1)) {
-              if ((fe.field_a.a(0)) &&
-                  (fe.field_a.b(true))) {
-                if ((cd.field_m.a(0)) &&
-                    (cd.field_m.b(true))) {
-                  if ((ii.field_k.a(0)) &&
-                      (ii.field_k.b(true))) {
-                    if ((ll.field_f.a(0)) &&
-                        (ll.field_f.a("", (byte) -127))) {
-                      if ((ll.field_f.a(0)) &&
-                          (ll.field_f.a("sun", (byte) -127))) {
+              if (fe.field_a.a(0) &&
+                  fe.field_a.b(true)) {
+                if (cd.field_m.a(0) &&
+                    cd.field_m.b(true)) {
+                  if (ii.field_k.a(0) &&
+                      ii.field_k.b(true)) {
+                    if (ll.field_f.a(0) &&
+                        ll.field_f.a("", (byte) -127)) {
+                      if (ll.field_f.a(0) &&
+                          ll.field_f.a("sun", (byte) -127)) {
                         if (da.a(0, -112)) {
-                          if (((!(ll.field_f.a(0))) ||
-                              (!(ll.field_f.a("halloween", (byte) -127))))) {
+                          if (!ll.field_f.a(0) ||
+                              !ll.field_f.a("halloween", (byte) -127)) {
                             lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c, true), -2, 45.0f);
                             return false;
                           }
                         }
-                        if ((ki.field_b.a(0)) &&
-                            (ki.field_b.a("basic", (byte) -124))) {
+                        if (ki.field_b.a(0) &&
+                            ki.field_b.a("basic", (byte) -124)) {
                           if (param0) {
                             return true;
                           }
@@ -562,7 +562,7 @@ public final class Geoblox extends wf {
 
     private final void i(byte param0) {
         if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("germs", (byte) -126))) {
+            if (!ll.field_f.a("germs", (byte) -126)) {
                 return;
             }
             sl.field_c = ug.a("germs_foreground", ll.field_f, (byte) -78, "germs");
@@ -615,8 +615,8 @@ public final class Geoblox extends wf {
         if (param0) {
           return;
         }
-        if ((vl.field_n != null) &&
-            (vl.field_n.field_c)) {
+        if (vl.field_n != null &&
+            vl.field_n.field_c) {
           vl.field_n.a(0, ka.field_i);
           vl.field_n = null;
         }
@@ -642,8 +642,8 @@ public final class Geoblox extends wf {
           L6: {
             if (!ib.field_a) {
               oj.a(vc.field_i, (byte) -98);
-              if ((this.g(false)) &&
-                  (this.o(25869))) {
+              if (this.g(false) &&
+                  this.o(25869)) {
                 ib.field_a = true;
                 this.m(82);
                 break L6;
@@ -654,13 +654,13 @@ public final class Geoblox extends wf {
             if (!uk.g(79)) {
               lc.a(ph.field_g, -2, 100.0f);
             } else {
-              if ((dd.a((byte) 47)) &&
-                  (!jk.field_a)) {
+              if (dd.a((byte) 47) &&
+                  !jk.field_a) {
                 stackIn_91_0 = !(vl.field_n == null);
                 var2 = sl.a(stackIn_91_0, (wf) (this), false);
                 if (var2 != 2364824) {
-                  if (((var2 == 1) ||
-                      (2 == var2))) {
+                  if (var2 == 1 ||
+                      2 == var2) {
                     if (null != vl.field_n) {
                       vl.field_n.a(0, ka.field_i);
                       vl.field_n = null;
@@ -717,8 +717,8 @@ public final class Geoblox extends wf {
                       og.field_q[0].field_y = 0;
                     }
                   }
-                  if ((null != el.field_o) &&
-                      (el.field_o.field_o > 0)) {
+                  if (null != el.field_o &&
+                      el.field_o.field_o > 0) {
                     el.field_o.e((byte) -70);
                   }
                   ai.field_p = el.field_i;
@@ -730,8 +730,8 @@ public final class Geoblox extends wf {
                 qj.field_b = true;
               }
               if (ai.field_p != tc.field_c) {
-                if ((6 == ai.field_p) &&
-                    (ug.field_c <= 0)) {
+                if (6 == ai.field_p &&
+                    ug.field_c <= 0) {
                   ai.field_p = 2;
                 }
                 if (-1 < tc.field_c) {
@@ -752,8 +752,8 @@ public final class Geoblox extends wf {
                 fieldTemp$0 = nf.field_A + 1;
                 nf.field_A = nf.field_A + 1;
                 if (fieldTemp$0 == 160) {
-                  if ((el.field_i != -1) &&
-                      (fh.c(-109))) {
+                  if (el.field_i != -1 &&
+                      fh.c(-109)) {
                     if (cd.field_j != 0) {
                       kb.a(-106);
                     } else {
@@ -791,7 +791,7 @@ public final class Geoblox extends wf {
           cm.a(-1, 0);
           if (sb.a(54)) {
             var2 = this.d((byte) -67);
-            if ((var2 == 2)) {
+            if (var2 == 2) {
               oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1, -128, fi.field_d.field_o);
             }
           }
@@ -841,8 +841,8 @@ public final class Geoblox extends wf {
         }
         sh.field_y.a(param0 - 25598);
         vb.c();
-        if ((tc.field_c == ai.field_p) &&
-            (el.field_i == -1)) {
+        if (tc.field_c == ai.field_p &&
+            el.field_i == -1) {
           if (tc.field_c != -1) {
             og.field_q[tc.field_c].a(-28750);
           } else if (!dl.field_b) {
@@ -852,11 +852,11 @@ public final class Geoblox extends wf {
           }
         } else {
           var3 = -480 + (nf.field_A * 6 + 35);
-          if ((el.field_i == -1) &&
-              (!qj.field_b)) {
+          if (el.field_i == -1 &&
+              !qj.field_b) {
             if (ai.field_p == -1) {
               el.field_o.a((byte) -68);
-            } else if ((tc.field_c == -1)) {
+            } else if (tc.field_c == -1) {
               el.field_o.a((byte) -68);
             }
           } else {
@@ -892,7 +892,7 @@ public final class Geoblox extends wf {
 
     private final void h(boolean param0) {
         if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("jewels", (byte) -128))) {
+            if (!ll.field_f.a("jewels", (byte) -128)) {
                 return;
             }
             if (param0) {
@@ -907,7 +907,7 @@ public final class Geoblox extends wf {
 
     private final void q(int param0) {
         if (ll.field_f.a(param0 - 2)) {
-            if (!(ll.field_f.a("baking", (byte) -125))) {
+            if (!ll.field_f.a("baking", (byte) -125)) {
                 return;
             }
             hi.field_F = ug.a("baking_foreground", ll.field_f, (byte) -78, "baking");
@@ -991,8 +991,8 @@ public final class Geoblox extends wf {
           var5 = -1;
           var4 = 1;
         }
-        if (((7 == param1) ||
-              (8 == param1))) {
+        if (7 == param1 ||
+              8 == param1) {
           var5 = -1;
           var4 = -1;
         }
@@ -1047,7 +1047,7 @@ public final class Geoblox extends wf {
 
     private final void p(int param0) {
         if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("sweets", (byte) -128))) {
+            if (!ll.field_f.a("sweets", (byte) -128)) {
                 return;
             }
             lb.field_d = ug.a("sweets_foreground", ll.field_f, (byte) -78, "sweets");

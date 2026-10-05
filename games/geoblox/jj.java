@@ -24,7 +24,7 @@ final class jj {
         gj var6_ref = null;
         int var7 = Geoblox.field_C;
         try {
-            if ((param1 > this.field_b)) {
+            if (param1 > this.field_b) {
                 throw new IllegalStateException();
             }
             this.a(param0, 0);
@@ -54,7 +54,7 @@ final class jj {
         if (param0 < 56) {
             return (Object) null;
         }
-        if ((var5 == null)) {
+        if (var5 == null) {
             var7.a(false);
             var7.a((byte) 92);
             this.field_d = this.field_d + var7.field_n;

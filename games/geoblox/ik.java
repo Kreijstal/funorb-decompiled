@@ -101,8 +101,8 @@ final class ik {
           fieldTemp$1 = param0.field_L;
           param0.field_L = param0.field_L + 1;
           param0.field_n[fieldTemp$1] = param1;
-          if (((param1.field_z != 0) ||
-              (param0.field_z != 0))) {
+          if (param1.field_z != 0 ||
+              param0.field_z != 0) {
             var5_int = 0;
             var6_int = 0;
             stackIn_14_0 = (param1.field_z != 1) ? 0 : 1;
@@ -113,23 +113,23 @@ final class ik {
             }
             {
               if ((stackIn_14_0 ^ stackIn_17_1) != 0) {
-                if ((param1.field_z == 1) &&
-                    (param0.field_z == 0)) {
+                if (param1.field_z == 1 &&
+                    param0.field_z == 0) {
                   param1.a(320, param1.field_C, param0.field_M, 0);
                 } else {
-                  if ((param1.field_z == 0) &&
-                      (param0.field_z == 1)) {
+                  if (param1.field_z == 0 &&
+                      param0.field_z == 1) {
                     var5_int = 1;
                   } else {
-                    if ((param0.field_z == 2) &&
-                        (param1.field_z == 1)) {
+                    if (param0.field_z == 2 &&
+                        param1.field_z == 1) {
                       var3_int = 1;
                       var4 = 1;
                       var6_int = 1;
                       param1.a(320, param1.field_C, param0.field_M, 0);
                     } else {
-                      if ((1 == param0.field_z) &&
-                          (param1.field_z == 2)) {
+                      if (1 == param0.field_z &&
+                          param1.field_z == 2) {
                         param1.a(320, param0.field_C, param1.field_M, 0);
                         var5_int = 1;
                         var3_int = 1;
@@ -138,15 +138,15 @@ final class ik {
                   }
                 }
               } else {
-                if (((2 == param1.field_z) ||
-                    (param0.field_z == 2))) {
-                  if ((param1.field_z == 2) &&
-                      (2 != param0.field_z)) {
+                if (2 == param1.field_z ||
+                    param0.field_z == 2) {
+                  if (param1.field_z == 2 &&
+                      2 != param0.field_z) {
                     param1.a(320, param0.field_C, param1.field_M, param0.field_z);
                     var3_int = 1;
                   } else {
-                    if ((param0.field_z == 2) &&
-                        (2 != param1.field_z)) {
+                    if (param0.field_z == 2 &&
+                        2 != param1.field_z) {
                       var4 = 1;
                       var6_int = 1;
                       var3_int = 1;
@@ -156,26 +156,26 @@ final class ik {
                 }
               }
             }
-            if (((var5_int != 0) ||
-                  (var6_int != 0))) {
+            if (var5_int != 0 ||
+                  var6_int != 0) {
               bh.a(var6_int != 0, param1, 1, param0, var5_int != 0);
             }
-            if ((param1.field_z == 1) &&
-                (param0.field_z == 1) &&
-                (param0.field_C == param1.field_C)) {
+            if (param1.field_z == 1 &&
+                param0.field_z == 1 &&
+                param0.field_C == param1.field_C) {
               param1.field_N = param1.field_N + 1;
               param0.field_N = param0.field_N + 1;
             } else {
-              if ((param1.field_z == 2) &&
-                  (param0.field_z == 2) &&
-                  (param0.field_M == param1.field_M)) {
+              if (param1.field_z == 2 &&
+                  param0.field_z == 2 &&
+                  param0.field_M == param1.field_M) {
                 param1.field_m = param1.field_m + 1;
                 param0.field_m = param0.field_m + 1;
               }
             }
           }
-          if ((param1.field_z == 0) &&
-              (param0.field_z == 0)) {
+          if (param1.field_z == 0 &&
+              param0.field_z == 0) {
             if (param1.field_C == param0.field_C) {
               param1.field_N = param1.field_N + 1;
               param0.field_N = param0.field_N + 1;

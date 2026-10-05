@@ -116,8 +116,8 @@ final class ma extends hf {
           if (param5 == null) {
             return;
           }
-          if ((param4 > 0) &&
-              (0 < param2)) {
+          if (param4 > 0 &&
+              0 < param2) {
             if (param5[3] == null) {
               stackIn_10_0 = 0;
             } else {
@@ -184,41 +184,41 @@ final class ma extends hf {
               param5[8].b(var13, var15);
               vb.b(hd.field_I);
             }
-            if ((null != param5[1]) &&
-                (param5[1].field_s != 0)) {
+            if (null != param5[1] &&
+                param5[1].field_s != 0) {
               vb.b(var16, param0, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_s) {
                 param5[1].b(var20, param0);
               }
               vb.b(hd.field_I);
             }
-            if ((param5[7] != null) &&
-                (0 != param5[7].field_s)) {
+            if (param5[7] != null &&
+                0 != param5[7].field_s) {
               vb.b(var16, var19, var17, var11);
               for (var20 = var12; var20 < var13; var20 = var20 + param5[7].field_s) {
                 param5[7].b(var20, var15);
               }
               vb.b(hd.field_I);
             }
-            if ((param5[3] != null) &&
-                (0 != param5[3].field_o)) {
+            if (param5[3] != null &&
+                0 != param5[3].field_o) {
               vb.b(param1, var18, var16, var19);
               for (var20 = var14; var15 > var20; var20 = var20 + param5[3].field_o) {
                 param5[3].b(param1, var20);
               }
               vb.b(hd.field_I);
             }
-            if ((param5[5] != null) &&
-                (param5[5].field_o != 0)) {
+            if (param5[5] != null &&
+                param5[5].field_o != 0) {
               vb.b(var17, var18, var10, var19);
               for (var20 = var14; var20 < var15; var20 = var20 + param5[5].field_o) {
                 param5[5].b(var13, var20);
               }
               vb.b(hd.field_I);
             }
-            if ((param5[4] != null) &&
-                (param5[4].field_s != 0) &&
-                (0 != param5[4].field_o)) {
+            if (param5[4] != null &&
+                param5[4].field_s != 0 &&
+                0 != param5[4].field_o) {
               vb.b(var16, var18, var17, var19);
               for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
@@ -256,15 +256,15 @@ final class ma extends hf {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((param2.a(0)) &&
-              (param2.a("commonui", (byte) -127))) {
-            if ((param1.a(param3 + 11652)) &&
-                (param1.a("commonui", (byte) -124))) {
+          if (param2.a(0) &&
+              param2.a("commonui", (byte) -127)) {
+            if (param1.a(param3 + 11652) &&
+                param1.a("commonui", (byte) -124)) {
               if (param3 != -11652) {
                 return false;
               }
-              if ((param0.a(0)) &&
-                  (param0.a("button.gif", (byte) -125))) {
+              if (param0.a(0) &&
+                  param0.a("button.gif", (byte) -125)) {
                 return true;
               }
               return false;

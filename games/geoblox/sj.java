@@ -67,12 +67,12 @@ final class sj {
     final int a(int param0, byte param1) {
         if (param1 != 94) {
             field_b = (String) null;
-            if ((param0 > this.field_d)) {
+            if (param0 > this.field_d) {
                 throw new ArrayIndexOutOfBoundsException(param0);
             }
             return this.field_f[param0];
         }
-        if ((param0 > this.field_d)) {
+        if (param0 > this.field_d) {
             throw new ArrayIndexOutOfBoundsException(param0);
         }
         return this.field_f[param0];
@@ -88,10 +88,10 @@ final class sj {
 
     private final void a(int param0, int param1, int param2) {
         if (param1 == 1) {
-            if ((this.field_d < param2)) {
+            if (this.field_d < param2) {
                 this.field_d = param2;
             }
-            if ((this.field_f.length <= param2)) {
+            if (this.field_f.length <= param2) {
                 this.c(param2, param1 ^ 25176);
             }
             this.field_f[param2] = param0;

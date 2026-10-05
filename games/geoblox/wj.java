@@ -144,7 +144,7 @@ final class wj extends sh {
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = 16 % ((param2 - 1) / 43);
-        if ((param3 != 0)) {
+        if (param3 != 0) {
             return;
         }
         if (null == this.field_A) {

@@ -103,8 +103,8 @@ final class ai extends hf {
                       continue;
                     }
                   }
-                  if (((var5.regionMatches(var6, "/s=", 0, 3)) ||
-                        (var5.regionMatches(var6, "/c=", 0, 3)))) {
+                  if (var5.regionMatches(var6, "/s=", 0, 3) ||
+                        var5.regionMatches(var6, "/c=", 0, 3)) {
                     var7_int = var5.indexOf('/', var6 + 1);
                     if (0 <= var7_int) {
                       if (param0 != null) {
@@ -125,13 +125,13 @@ final class ai extends hf {
                     discarded$1 = var7.append("/l=");
                     discarded$2 = var7.append(Integer.toString(param3));
                   }
-                  if ((param1 != null) &&
-                      (param1.length() > 0)) {
+                  if (param1 != null &&
+                      param1.length() > 0) {
                     discarded$3 = var7.append("/p=");
                     discarded$4 = var7.append(param1);
                   }
-                  if ((param0 != null) &&
-                      (param0.length() > 0)) {
+                  if (param0 != null &&
+                      param0.length() > 0) {
                     discarded$5 = var7.append("/s=");
                     discarded$6 = var7.append(param0);
                   }

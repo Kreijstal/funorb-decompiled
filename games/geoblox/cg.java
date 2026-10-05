@@ -66,7 +66,7 @@ final class cg extends ia {
         this.field_b.field_c = (hf) ((Object) this.field_l);
         this.field_c = null;
         this.field_b = null;
-        if ((0 < param0)) {
+        if (0 < param0) {
             this.field_l.b(param0);
         }
     }

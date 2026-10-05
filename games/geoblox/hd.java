@@ -17,7 +17,7 @@ final class hd extends sh {
         int var6 = param1 + this.field_m;
         super.a(param0, param1, (byte) 105, param3);
         int var7 = -79 / ((param2 - 1) / 43);
-        if ((param3 != 0)) {
+        if (param3 != 0) {
             return;
         }
         int var8 = !this.field_B ? 0 : -this.field_K + (this.field_r - this.field_C * 2);
@@ -39,8 +39,8 @@ final class hd extends sh {
         }
         di.field_g = di.field_g + 1;
         ul.field_b = ul.field_b + 1;
-        if ((sa.field_b == di.field_g) &&
-            (gb.field_c < 2)) {
+        if (sa.field_b == di.field_g &&
+            gb.field_c < 2) {
           di.field_g = 0;
           ld.b(false);
           gb.field_c = gb.field_c + 1;

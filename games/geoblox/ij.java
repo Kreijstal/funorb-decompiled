@@ -131,7 +131,7 @@ final class ij extends oe implements pl {
     }
 
     private final void j(byte param0) {
-        if (!(this.field_I)) {
+        if (!this.field_I) {
             return;
         }
         int var2 = 102 / ((param0 - 6) / 43);

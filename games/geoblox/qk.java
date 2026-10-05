@@ -40,8 +40,8 @@ class qk {
             if (field_j == 0) {
               throw new IllegalStateException();
             }
-            if ((param2 >= 0) &&
-                (param2 < 2)) {
+            if (param2 >= 0 &&
+                param2 < 2) {
               if (param3 < 256) {
                 param3 = 256;
               }
@@ -63,8 +63,8 @@ class qk {
                   ((qk) ((Object) var4)).field_g = 16384;
                 }
                 ((qk) ((Object) var4)).a(((qk) ((Object) var4)).field_g);
-                if ((field_d > 0) &&
-                    (field_r == null)) {
+                if (field_d > 0 &&
+                    field_r == null) {
                   field_r = new kh();
                   field_r.field_b = param0;
                   param0.a((Runnable) ((Object) field_r), 0, field_d);
@@ -124,7 +124,7 @@ class qk {
             }
             var1 = 0;
           }
-          if ((var1 != 0)) {
+          if (var1 != 0) {
             field_r.field_f = true;
             while (field_r.field_c) {
               bc.a(0, 50L);
@@ -237,8 +237,8 @@ class qk {
                 if (this.field_o) {
                   this.field_o = false;
                 } else {
-                  if ((this.field_s == 0) &&
-                      (this.field_f == 0)) {
+                  if (this.field_s == 0 &&
+                      this.field_f == 0) {
                     this.f();
                     this.field_m = var1 + 2000L;
                     return;
@@ -299,8 +299,8 @@ class qk {
         }
         sf.a(param0, 0, var3);
         this.field_u = this.field_u - param1;
-        if ((this.field_k != null) &&
-            (this.field_u <= 0)) {
+        if (this.field_k != null &&
+            this.field_u <= 0) {
           this.field_u = this.field_u + (field_j >> 4);
           qk.a(this.field_k);
           this.a(this.field_k, this.field_k.a());
@@ -325,10 +325,10 @@ class qk {
                     var11 = this.field_a[var7_int];
                     var14 = var11;
                     var14 = var11;
-                    while ((var11 != null)) {
+                    while (var11 != null) {
                       var12 = var11.field_g;
-                      if ((var12 != null) &&
-                          (var12.field_f > var8_int)) {
+                      if (var12 != null &&
+                          var12.field_f > var8_int) {
                         var5 = var5 | 1 << var7_int;
                         var10 = var11;
                         var11 = var11.field_h;

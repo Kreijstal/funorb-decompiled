@@ -95,9 +95,9 @@ final class kl extends ia {
           var2 = 0;
           var1 = 0;
         }
-        if ((this.field_k == var1) &&
-            (this.field_n == var2) &&
-            (this.field_s == var3)) {
+        if (this.field_k == var1 &&
+            this.field_n == var2 &&
+            this.field_s == var3) {
           if (this.field_u != -2147483648) {
             this.e();
             return false;
@@ -125,22 +125,22 @@ final class kl extends ia {
             this.field_t = 0;
           } else {
             this.field_t = -1;
-            if (((this.field_l == 0) ||
-                ((this.field_l > this.field_n - var2)))) {
+            if (this.field_l == 0 ||
+                this.field_l > this.field_n - var2) {
               this.field_l = this.field_n - var2;
             }
           }
         } else {
           this.field_t = 1;
-          if (((this.field_l == 0) ||
-              ((this.field_l > var2 - this.field_n)))) {
+          if (this.field_l == 0 ||
+              this.field_l > var2 - this.field_n) {
             this.field_l = var2 - this.field_n;
           }
         }
         if (this.field_s < var3) {
           this.field_w = 1;
-          if ((this.field_l != 0) &&
-              (this.field_l <= var3 - this.field_s)) {
+          if (this.field_l != 0 &&
+              this.field_l <= var3 - this.field_s) {
             return false;
           }
           this.field_l = var3 - this.field_s;
@@ -150,8 +150,8 @@ final class kl extends ia {
           this.field_w = 0;
         } else {
           this.field_w = -1;
-          if (((this.field_l == 0) ||
-              ((this.field_l > this.field_s - var3)))) {
+          if (this.field_l == 0 ||
+              this.field_l > this.field_s - var3) {
             this.field_l = this.field_s - var3;
           }
         }
@@ -162,8 +162,8 @@ final class kl extends ia {
         int var6;
         do {
           if (this.field_l <= 0) {
-            if ((this.field_p == -256) &&
-                ((this.field_x & 255) == 0)) {
+            if (this.field_p == -256 &&
+                (this.field_x & 255) == 0) {
               if (qk.field_q) {
                 return kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
               }
@@ -179,8 +179,8 @@ final class kl extends ia {
             var6 = param3;
           }
           this.field_l = this.field_l + param1;
-          if ((this.field_p == -256) &&
-              ((this.field_x & 255) == 0)) {
+          if (this.field_p == -256 &&
+              (this.field_x & 255) == 0) {
             if (!qk.field_q) {
               param1 = kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
             } else {
@@ -213,8 +213,8 @@ final class kl extends ia {
         int var6;
         do {
           if (this.field_l <= 0) {
-            if ((this.field_p == 256) &&
-                ((this.field_x & 255) == 0)) {
+            if (this.field_p == 256 &&
+                (this.field_x & 255) == 0) {
               if (qk.field_q) {
                 return kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
               }
@@ -230,8 +230,8 @@ final class kl extends ia {
             var6 = param3;
           }
           this.field_l = this.field_l + param1;
-          if ((this.field_p == 256) &&
-              ((this.field_x & 255) == 0)) {
+          if (this.field_p == 256 &&
+              (this.field_x & 255) == 0) {
             if (!qk.field_q) {
               param1 = kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
             } else {
@@ -1108,8 +1108,8 @@ final class kl extends ia {
         int var8;
         int var9;
         int var10;
-        if ((this.field_u == 0) &&
-            (this.field_l == 0)) {
+        if (this.field_u == 0 &&
+            this.field_l == 0) {
           this.b(param2);
           return;
         }

@@ -68,7 +68,7 @@ final class uk extends q {
             if (var2 == 1) {
                 return oi.field_d;
             }
-            if ((var2 != 2)) {
+            if (var2 != 2) {
                 if (var2 == 3) {
                     return li.field_b;
                 }
@@ -86,7 +86,7 @@ final class uk extends q {
         if (var2 == 1) {
             return oi.field_d;
         }
-        if ((var2 != 2)) {
+        if (var2 != 2) {
             if (var2 == 3) {
                 return li.field_b;
             }
@@ -305,8 +305,8 @@ final class uk extends q {
           }
           if (!param1.equals(this.field_k)) {
             var3 = cl.a((byte) 108, param1);
-            if ((var3 != null) &&
-                (var3.field_e == null)) {
+            if (var3 != null &&
+                var3.field_e == null) {
               this.field_n = var3.field_g;
               this.field_k = param1;
             } else {

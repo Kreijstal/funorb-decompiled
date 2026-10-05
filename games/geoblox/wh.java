@@ -476,16 +476,16 @@ abstract class wh extends rc {
         int var42 = 0;
         var42 = Geoblox.field_C;
         try {
-          if ((param4 >= 0) &&
-              (~mh.field_h < ~param8)) {
-            if ((param2 < 0) &&
-                (param9 < 0) &&
-                (param13 < 0)) {
+          if (param4 >= 0 &&
+              ~mh.field_h < ~param8) {
+            if (param2 < 0 &&
+                param9 < 0 &&
+                param13 < 0) {
               return;
             }
-            if ((~mh.field_c >= ~param2) &&
-                (~mh.field_c >= ~param9) &&
-                (param13 >= mh.field_c)) {
+            if (~mh.field_c >= ~param2 &&
+                ~mh.field_c >= ~param9 &&
+                param13 >= mh.field_c) {
               return;
             }
             if (param16 != -1275583984) {
@@ -643,7 +643,7 @@ abstract class wh extends rc {
                     }
                   }
                   var36 = mh.field_b[param8];
-                  while ((~param15 < ~param8)) {
+                  while (~param15 < ~param8) {
                     var37 = var17_int >> 16;
                     stackIn_73_0 = ~mh.field_c;
                     stackIn_73_1 = ~var37;
@@ -665,8 +665,8 @@ abstract class wh extends rc {
                           jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
                         }
                       } else {
-                        if ((var37 >= 0) &&
-                            (~var37 > ~mh.field_c)) {
+                        if (var37 >= 0 &&
+                            ~var37 > ~mh.field_c) {
                           jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
                         }
                       }
@@ -765,8 +765,8 @@ abstract class wh extends rc {
                     jf.a(var36 + var35, var38, 33423689, var21, var40, var25, var39, var37, var29, param11);
                   }
                 } else {
-                  if ((var36 >= 0) &&
-                      (mh.field_c > var36)) {
+                  if (var36 >= 0 &&
+                      mh.field_c > var36) {
                     jf.a(var35 + var36, 0, 33423689, var21, 0, var25, 0, var37, var29, param11);
                   }
                 }
@@ -835,8 +835,8 @@ abstract class wh extends rc {
                           if (var5 != 0) {
                             break L4;
                           }
-                          if (((stackIn_17_0 == stackIn_17_1) ||
-                              (var5 != 0))) {
+                          if (stackIn_17_0 == stackIn_17_1 ||
+                              var5 != 0) {
                             var3_int++;
                             continue;
                           }
@@ -867,7 +867,7 @@ abstract class wh extends rc {
                       decompiledRegionSelector0 = 0;
                     }
                   }
-                  if ((decompiledRegionSelector0 != 0)) {
+                  if (decompiledRegionSelector0 != 0) {
                     break L0;
                   }
                 }

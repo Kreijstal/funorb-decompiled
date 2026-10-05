@@ -51,7 +51,7 @@ abstract class q extends ib implements ga {
     abstract String b(int param0, String param1);
 
     final static boolean a(char param0, byte param1) {
-        if ((Character.isISOControl(param0))) {
+        if (Character.isISOControl(param0)) {
             return false;
         }
         if (pf.a(-123, param0)) {
@@ -135,8 +135,8 @@ abstract class q extends ib implements ga {
         try {
           va.field_d = false;
           ii.field_a = false;
-          if ((null != Geoblox.field_y) &&
-              (Geoblox.field_y.field_I)) {
+          if (null != Geoblox.field_y &&
+              Geoblox.field_y.field_I) {
             if (8 == param1) {
               param1 = 2;
               if (!cf.field_i) {
@@ -160,9 +160,9 @@ abstract class q extends ib implements ga {
               }
               Geoblox.field_y.a(param1, param0 + 19686, param2);
             }
-            if ((param1 != 256) &&
-                (param1 != 10) &&
-                (!cf.field_i)) {
+            if (param1 != 256 &&
+                param1 != 10 &&
+                !cf.field_i) {
               ml.field_t.i(-119);
             }
           }

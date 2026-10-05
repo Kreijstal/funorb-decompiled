@@ -51,8 +51,8 @@ final class c extends ka {
           L0: {
             L1: {
               var3_int = t.field_i[this.field_K][param0];
-              if ((var3_int == 8) &&
-                  (var4 == 0)) {
+              if (var3_int == 8 &&
+                  var4 == 0) {
                 {
                   if (102 != ki.field_d) {
                     if (ki.field_d != 103) {
@@ -88,8 +88,8 @@ final class c extends ka {
                 break L0;
               }
             }
-            if ((ki.field_d == 13) &&
-                (!this.field_C)) {
+            if (ki.field_d == 13 &&
+                !this.field_C) {
               L10: {
                 if (this.field_K == 1) {
                   ai.field_p = -1;
@@ -102,8 +102,8 @@ final class c extends ka {
               if (~ai.field_p == ~this.field_K) {
                 break L0;
               }
-              if ((this.field_K != 1) &&
-                  (this.field_K != 0)) {
+              if (this.field_K != 1 &&
+                  this.field_K != 0) {
                 break L0;
               }
               oc.field_b = this.field_K;
@@ -112,17 +112,17 @@ final class c extends ka {
               }
             }
             if (this.field_C) {
-              if ((ki.field_d != 84) &&
-                  (83 != ki.field_d)) {
+              if (ki.field_d != 84 &&
+                  83 != ki.field_d) {
                 break L0;
               }
               if (!fh.c(-103)) {
-                if ((!(og.field_n <= 0) ||
-                    ((this.field_o != 0) &&
-                      ((!(qa.field_a > 190)) ||
-                      (!(qa.field_a < 449)) ||
-                      (!(265 < ue.field_e)) ||
-                      (!(ue.field_e < 299)))))) {
+                if (!(og.field_n <= 0) ||
+                    this.field_o != 0 &&
+                      (!(qa.field_a > 190) ||
+                      !(qa.field_a < 449) ||
+                      !(265 < ue.field_e) ||
+                      !(ue.field_e < 299))) {
                   if (vl.field_n == null) {
                     if (0 != this.field_o) {
                       if (qa.field_a <= 260) {
@@ -144,12 +144,12 @@ final class c extends ka {
                       break L0;
                     }
                   }
-                  if (((1 == this.field_o) ||
-                      ((this.field_o < 0) &&
+                  if (1 == this.field_o ||
+                      this.field_o < 0 &&
                         !(qa.field_a <= 350) &&
                         !(qa.field_a >= 470) &&
                         !(ue.field_e <= 327) &&
-                        !(ue.field_e >= 362)))) {
+                        !(ue.field_e >= 362)) {
                     this.field_C = false;
                     em.b(255);
                     this.field_g = true;
@@ -186,12 +186,12 @@ final class c extends ka {
                   break L0;
                 }
               }
-              if (((this.field_o == 1) ||
-                  ((this.field_o < 0) &&
+              if (this.field_o == 1 ||
+                  this.field_o < 0 &&
                     !(qa.field_a <= 350) &&
                     !(470 <= qa.field_a) &&
                     !(ue.field_e <= 265) &&
-                    !(ue.field_e >= 299)))) {
+                    !(ue.field_e >= 299)) {
                 this.field_g = true;
                 this.field_C = false;
                 if (var4 == 0) {
@@ -362,9 +362,9 @@ final class c extends ka {
           var2_int = 270;
           var3 = 140;
           var4 = 400;
-          if ((this.field_K != 0) &&
-              (this.field_K != 1) &&
-              (this.field_K != 4)) {
+          if (this.field_K != 0 &&
+              this.field_K != 1 &&
+              this.field_K != 4) {
             L1: {
               if (2 == this.field_K) {
                 var2_int = 235;
@@ -382,8 +382,8 @@ final class c extends ka {
                   break L3;
                 }
               }
-              if ((this.field_K != 8) &&
-                  (this.field_K != 7)) {
+              if (this.field_K != 8 &&
+                  this.field_K != 7) {
                 break L3;
               }
               var4 += 20;
@@ -394,10 +394,10 @@ final class c extends ka {
           if (!this.field_E) {
             super.a(param0 + 0);
           }
-          if ((this.field_K != 2) &&
-              (this.field_K != 8)) {
-            if (((5 == this.field_K) ||
-                  (7 == this.field_K))) {
+          if (this.field_K != 2 &&
+              this.field_K != 8) {
+            if (5 == this.field_K ||
+                  7 == this.field_K) {
               kh.field_h[4].b(0, 20);
               ac.a(false, false, (byte) -93);
               if (var12 == 0) {
@@ -420,8 +420,8 @@ final class c extends ka {
               }
               if (this.field_K != 3) {
                 kh.field_h[0].b(0, 20);
-                if ((this.field_K != 0) &&
-                    (this.field_K != 1)) {
+                if (this.field_K != 0 &&
+                    this.field_K != 1) {
                   return;
                 }
                 if (!this.field_C) {
@@ -443,12 +443,12 @@ final class c extends ka {
                   var6 = 265;
                   var9 = var8 - (-(var7 >> 1) - 10);
                   ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
-                  if (((1 == this.field_o) ||
-                      ((this.field_o < 0) &&
+                  if (1 == this.field_o ||
+                      this.field_o < 0 &&
                         !(350 >= qa.field_a) &&
                         !(qa.field_a >= 470) &&
                         !(ue.field_e <= 265) &&
-                        !(ue.field_e >= 299)))) {
+                        !(ue.field_e >= 299)) {
                     dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
                   dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
@@ -457,12 +457,12 @@ final class c extends ka {
                   var6 = 265;
                   var9 = 10 + (var7 >> 1) + var8;
                   ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
-                  if (((this.field_o == 0) ||
-                      ((0 > this.field_o) &&
+                  if (this.field_o == 0 ||
+                      0 > this.field_o &&
                         !(170 >= qa.field_a) &&
                         !(qa.field_a >= 290) &&
                         !(ue.field_e <= 265) &&
-                        !(ue.field_e >= 299)))) {
+                        !(ue.field_e >= 299)) {
                     dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
                   dd.field_G.b(qb.field_L, var9, 30 + var6, 0, -1);
@@ -488,11 +488,11 @@ final class c extends ka {
                     var8 = 320 - (var7 + 20 >> 1);
                     var9 = (var7 >> 1) + (var8 + 10);
                     ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
-                    if (((0 == this.field_o) ||
-                        (!(260 >= qa.field_a) &&
+                    if (0 == this.field_o ||
+                        !(260 >= qa.field_a) &&
                           !(qa.field_a >= 380) &&
                           !(ue.field_e <= 274) &&
-                          !(ue.field_e >= 309)))) {
+                          !(ue.field_e >= 309)) {
                       dd.field_G.field_K[0][wf.field_p] = 15488514;
                     }
                     dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
@@ -528,12 +528,12 @@ final class c extends ka {
                   var10 = -(20 + var9 >> 1) + 320 + 90;
                   ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.field_g);
                   var11 = 10 + ((var9 >> 1) + var10);
-                  if (((this.field_o == 1) ||
-                      ((0 > this.field_o) &&
+                  if (this.field_o == 1 ||
+                      0 > this.field_o &&
                         !(qa.field_a <= 350) &&
                         !(qa.field_a >= 470) &&
                         !(ue.field_e <= 317) &&
-                        !(ue.field_e >= 352)))) {
+                        !(ue.field_e >= 352)) {
                     dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
                   dd.field_G.b(rb.field_a, var11, 30 + var6, 0, -1);
@@ -541,12 +541,12 @@ final class c extends ka {
                   var10 = 320 - (20 + var9 >> 1) - 90;
                   var11 = 10 + (var9 >> 1) + var10;
                   ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.field_g);
-                  if (((this.field_o == 0) ||
-                      ((this.field_o < 0) &&
+                  if (this.field_o == 0 ||
+                      this.field_o < 0 &&
                         !(qa.field_a <= 170) &&
                         !(qa.field_a >= 290) &&
                         !(ue.field_e <= 317) &&
-                        !(ue.field_e >= 352)))) {
+                        !(ue.field_e >= 352)) {
                     dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
                   dd.field_G.b(pb.field_v, var11, 30 + var6, 0, -1);
@@ -570,11 +570,11 @@ final class c extends ka {
                 var9 = 10 + (var8 + (var7 >> 1));
                 var6 = 265;
                 ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
-                if (((this.field_o == 0) ||
-                    (!(qa.field_a <= 190) &&
+                if (this.field_o == 0 ||
+                    !(qa.field_a <= 190) &&
                       !(qa.field_a >= 449) &&
                       !(ue.field_e <= 265) &&
-                      !(299 <= ue.field_e)))) {
+                      !(299 <= ue.field_e)) {
                   dd.field_G.field_K[0][wf.field_p] = 15488514;
                 }
                 dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
@@ -648,8 +648,8 @@ final class c extends ka {
         try {
           var3_int = 121 % ((44 - param1) / 36);
           var4 = t.field_i[this.field_K][param0];
-          if ((var4 == 8) &&
-              (var5 == 0)) {
+          if (var4 == 8 &&
+              var5 == 0) {
             if (j.field_gb > 10) {
               j.field_gb = j.field_gb - 10;
               return;
@@ -698,10 +698,10 @@ final class c extends ka {
           if (param0 >= -40) {
             this.b(77, -13);
           }
-          if ((3 == this.field_K) &&
-              (!this.field_E)) {
-            if (((this.field_q == 4) ||
-                  (this.field_b != 3))) {
+          if (3 == this.field_K &&
+              !this.field_E) {
+            if (this.field_q == 4 ||
+                  this.field_b != 3) {
               if (4 == this.field_q) {
                 if (this.field_b == 2) {
                   this.field_b = 3;
@@ -765,51 +765,51 @@ final class c extends ka {
             stackIn_2_0 = -109;
             return stackIn_2_0;
           }
-          if ((0 != this.field_K) &&
-              (this.field_K != 1)) {
+          if (0 != this.field_K &&
+              this.field_K != 1) {
             L1: {
               if (this.field_K == 3) {
-                if ((param1 > 430) &&
-                    (param1 < 470)) {
-                  if ((this.field_q != 0) &&
-                      (param0 > 130) &&
-                      (param0 < 253)) {
+                if (param1 > 430 &&
+                    param1 < 470) {
+                  if (this.field_q != 0 &&
+                      param0 > 130 &&
+                      param0 < 253) {
                     stackIn_162_0 = 0;
                     return stackIn_162_0;
                   }
-                  if ((param0 > 268) &&
-                      (391 > param0)) {
+                  if (param0 > 268 &&
+                      391 > param0) {
                     stackIn_168_0 = 1;
                     return stackIn_168_0;
                   }
-                  if ((this.field_q != 4) &&
-                      (param0 > 406) &&
-                      (param0 < 529)) {
+                  if (this.field_q != 4 &&
+                      param0 > 406 &&
+                      param0 < 529) {
                     stackIn_179_0 = 2;
                     return stackIn_179_0;
                   }
-                  if ((this.field_q == 4) &&
-                      (oc.field_b != 1) &&
-                      (param0 > 406) &&
-                      (param0 < 635)) {
+                  if (this.field_q == 4 &&
+                      oc.field_b != 1 &&
+                      param0 > 406 &&
+                      param0 < 635) {
                     stackIn_193_0 = 3;
                     return stackIn_193_0;
                   }
                 }
               } else {
                 if (this.field_K != 5) {
-                  if ((this.field_K != 7) &&
-                      (this.field_K != 8)) {
+                  if (this.field_K != 7 &&
+                      this.field_K != 8) {
                     if (2 == this.field_K) {
-                      if ((param1 > 380) &&
-                          (param1 < 420)) {
-                        if ((param0 > 61) &&
-                            (220 > param0)) {
+                      if (param1 > 380 &&
+                          param1 < 420) {
+                        if (param0 > 61 &&
+                            220 > param0) {
                           stackIn_133_0 = 0;
                           return stackIn_133_0;
                         }
-                        if ((241 < param0) &&
-                            (param0 < 400)) {
+                        if (241 < param0 &&
+                            param0 < 400) {
                           stackIn_125_0 = 1;
                           return stackIn_125_0;
                         }
@@ -844,8 +844,8 @@ final class c extends ka {
                       if (param0 >= 469) {
                         break L1;
                       }
-                      if ((265 < param1) &&
-                          (param1 < 301)) {
+                      if (265 < param1 &&
+                          param1 < 301) {
                         stackIn_78_0 = 0;
                         return stackIn_78_0;
                       }
@@ -867,8 +867,8 @@ final class c extends ka {
                     if (470 <= param1) {
                       break L1;
                     }
-                    if ((param0 > 146) &&
-                        (param0 < 306)) {
+                    if (param0 > 146 &&
+                        param0 < 306) {
                       stackIn_99_0 = 0;
                       return stackIn_99_0;
                     }
@@ -881,24 +881,24 @@ final class c extends ka {
                     stackIn_107_0 = 1;
                     return stackIn_107_0;
                   }
-                  if ((param1 > 437) &&
-                      (param1 < 473)) {
-                    if ((param0 > 121) &&
-                        (356 > param0)) {
+                  if (param1 > 437 &&
+                      param1 < 473) {
+                    if (param0 > 121 &&
+                        356 > param0) {
                       stackIn_54_0 = 0;
                       return stackIn_54_0;
                     }
-                    if ((436 < param0) &&
-                        (param1 < 518)) {
+                    if (436 < param0 &&
+                        param1 < 518) {
                       stackIn_60_0 = 1;
                       return stackIn_60_0;
                     }
                   }
                 } else {
-                  if ((param1 > 435) &&
-                      (470 > param1) &&
-                      (param0 > 279) &&
-                      (361 > param0)) {
+                  if (param1 > 435 &&
+                      470 > param1 &&
+                      param0 > 279 &&
+                      361 > param0) {
                     stackIn_36_0 = 0;
                     return stackIn_36_0;
                   }
@@ -908,8 +908,8 @@ final class c extends ka {
             stackIn_195_0 = -1;
             return stackIn_195_0;
           }
-          if ((param0 >= 149) &&
-              (490 >= param0)) {
+          if (param0 >= 149 &&
+              490 >= param0) {
             stackIn_18_0 = super.a(param0, param1, (byte) 127);
             return stackIn_18_0;
           }
@@ -941,8 +941,8 @@ final class c extends ka {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          if ((ca.field_f == null) &&
-              (!fh.c(-115))) {
+          if (ca.field_f == null &&
+              !fh.c(-115)) {
             ca.field_f = qb.b(22, 1, 0, 10, 3);
           }
           L1: {
@@ -967,8 +967,8 @@ final class c extends ka {
             this.c(-78);
           }
           L5: {
-            if ((null != ca.field_f) &&
-                (null != ca.field_f.field_k)) {
+            if (null != ca.field_f &&
+                null != ca.field_f.field_k) {
               if (!ca.field_f.field_j) {
                 var2 = eb.field_f;
                 var3 = 76 + (150 + dd.field_G.field_o);
@@ -992,10 +992,10 @@ final class c extends ka {
                       if (stackIn_59_0 != var3_ref_String__[var8_int]) {
                         var2_int = 1;
                         var9 = var3_ref_String__[var8_int];
-                        if ((var7 == 0) &&
-                            (null != el.field_o) &&
-                            (var5[var8_int] == Math.abs(el.field_o.field_o)) &&
-                            (ge.a(var9, (byte) 12))) {
+                        if (var7 == 0 &&
+                            null != el.field_o &&
+                            var5[var8_int] == Math.abs(el.field_o.field_o) &&
+                            ge.a(var9, (byte) 12)) {
                           var7 = 1;
                           var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
                           var4.a(var9, 165, var6, 16610816, -1);
@@ -1095,18 +1095,18 @@ final class c extends ka {
           jk.field_a = this.field_C;
           this.field_U = this.field_U + 1;
           this.field_y = this.field_y + 1;
-          if ((this.field_C) &&
-              (vl.field_n != null) &&
-              (this.field_y > 1500)) {
+          if (this.field_C &&
+              vl.field_n != null &&
+              this.field_y > 1500) {
             em.b(255);
             this.field_C = false;
           }
           do {
-            if (!(hh.a(108))) {
-              if ((this.field_K == 3) &&
-                  (this.field_b == 0) &&
-                  (this.field_q == 0) &&
-                  (!this.field_H)) {
+            if (!hh.a(108)) {
+              if (this.field_K == 3 &&
+                  this.field_b == 0 &&
+                  this.field_q == 0 &&
+                  !this.field_H) {
                 this.field_b = this.field_b + 1;
               }
               break;
@@ -1132,8 +1132,8 @@ final class c extends ka {
               this.field_L = qi.b(7, 1);
               this.field_z = 0;
             }
-            if ((this.field_q < 4) &&
-                (this.field_D % 24 == 0)) {
+            if (this.field_q < 4 &&
+                this.field_D % 24 == 0) {
               this.field_w = this.field_w + 1;
               if (this.field_w >= 4) {
                 this.field_w = 0;
@@ -1194,8 +1194,8 @@ final class c extends ka {
             bi.field_g = 0;
           }
           if (bi.field_g != 0) {
-            if (((this.field_K == 5) ||
-                  (7 == this.field_K))) {
+            if (this.field_K == 5 ||
+                  7 == this.field_K) {
               oe.a(false, false, param0 ^ 189);
             }
             if (this.field_K == 6) {
@@ -1214,18 +1214,18 @@ final class c extends ka {
             }
             if (bi.field_g != 0) {
               if (fh.c(-104)) {
-                if ((265 < he.field_d) &&
-                    (he.field_d < 299)) {
-                  if ((mc.field_a > 350) &&
-                      (mc.field_a < 470)) {
+                if (265 < he.field_d &&
+                    he.field_d < 299) {
+                  if (mc.field_a > 350 &&
+                      mc.field_a < 470) {
                     this.field_g = true;
                     this.field_C = false;
                     if (var3 == 0) {
                       break L21;
                     }
                   }
-                  if (((!(mc.field_a > 170)) ||
-                        (!(mc.field_a < 290)))) {
+                  if (!(mc.field_a > 170) ||
+                        !(mc.field_a < 290)) {
                     this.field_g = false;
                     if (var3 == 0) {
                       break L21;
@@ -1247,14 +1247,14 @@ final class c extends ka {
                   break L21;
                 }
               }
-              if ((og.field_n > 0) &&
-                  (null != vl.field_n)) {
-                if ((he.field_d > 317) &&
-                    (352 > he.field_d)) {
-                  if (((!(mc.field_a > 350)) ||
-                        (!(mc.field_a < 470)))) {
-                    if (((!(mc.field_a > 170)) ||
-                          (!(mc.field_a < 290)))) {
+              if (og.field_n > 0 &&
+                  null != vl.field_n) {
+                if (he.field_d > 317 &&
+                    352 > he.field_d) {
+                  if (!(mc.field_a > 350) ||
+                        !(mc.field_a < 470)) {
+                    if (!(mc.field_a > 170) ||
+                          !(mc.field_a < 290)) {
                       this.field_g = false;
                       if (var3 == 0) {
                         break L21;
@@ -1282,8 +1282,8 @@ final class c extends ka {
               this.field_C = false;
             }
           }
-          if (((qa.field_a != this.field_s) ||
-                (~ue.field_e != ~this.field_Y))) {
+          if (qa.field_a != this.field_s ||
+                ~ue.field_e != ~this.field_Y) {
             this.field_o = -1;
           }
           this.field_Y = ue.field_e;
@@ -1397,9 +1397,9 @@ final class c extends ka {
           L0: {
             var3_int = 180;
             vb.a(this.field_P);
-            if ((param1 != 0) &&
-                (1 != param1) &&
-                (param1 != 2)) {
+            if (param1 != 0 &&
+                1 != param1 &&
+                param1 != 2) {
               ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
               ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
               if (var11 == 0) {
@@ -1504,8 +1504,8 @@ final class c extends ka {
             var4 = ec.field_e[0];
             dd.field_G.a(a.field_a[1], var5, var3_int + 110, 0, -1);
           } else {
-            if ((1 == var6) &&
-                (var11 == 0)) {
+            if (1 == var6 &&
+                var11 == 0) {
               dd.field_G.a(a.field_a[2], var5, var3_int, 0, -1);
               var4 = ec.field_e[1];
             } else {
@@ -1650,8 +1650,8 @@ final class c extends ka {
           if (var2_int == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2_int, 16));
           }
-          if ((var2_int >= 128) &&
-              (160 > var2_int)) {
+          if (var2_int >= 128 &&
+              160 > var2_int) {
             var3 = lf.field_e[-128 + var2_int];
             if (0 == var3) {
               var3 = 63;
@@ -1693,8 +1693,8 @@ final class c extends ka {
           if (param0 < 73) {
             this.field_V = 15;
           }
-          if ((0 == this.field_T) &&
-              (!this.field_H)) {
+          if (0 == this.field_T &&
+              !this.field_H) {
             L2: {
               if (0 == this.field_F) {
                 if (this.field_l) {
@@ -1731,11 +1731,11 @@ final class c extends ka {
           if (param0 != 89) {
             return;
           }
-          if ((3 == this.field_K) &&
-              (!this.field_E)) {
+          if (3 == this.field_K &&
+              !this.field_E) {
             L1: {
-              if ((this.field_q != 4) &&
-                  (this.field_b == 3)) {
+              if (this.field_q != 4 &&
+                  this.field_b == 3) {
                 this.field_b = 2;
                 if (Geoblox.field_C == 0) {
                   break L1;
@@ -1745,14 +1745,14 @@ final class c extends ka {
                 if (this.field_b == 2) {
                   this.field_b = 1;
                 }
-                if ((oc.field_b == 1) &&
-                    (this.field_b == 3)) {
+                if (oc.field_b == 1 &&
+                    this.field_b == 3) {
                   this.field_b = 1;
                 }
               }
             }
-            if ((this.field_q == 0) &&
-                (this.field_b == 0)) {
+            if (this.field_q == 0 &&
+                this.field_b == 0) {
               this.field_b = 2;
             }
           }
@@ -1811,9 +1811,9 @@ final class c extends ka {
           if (param0 != 0) {
             return;
           }
-          if ((null != this.field_R) &&
-              (!this.field_R.l()) &&
-              (50 >= this.field_U)) {
+          if (null != this.field_R &&
+              !this.field_R.l() &&
+              50 >= this.field_U) {
             return;
           }
           this.field_R = kl.a(fl.field_c[8], 100, j.field_gb);
@@ -1875,14 +1875,14 @@ final class c extends ka {
           }
           L1: {
             var6_int = var5;
-            if ((var6_int == 15) &&
-                (var7 == 0)) {
+            if (var6_int == 15 &&
+                var7 == 0) {
               if (1 == oc.field_b) {
                 return;
               }
               var3_int = 1;
-            } else if (((var6_int != 0) ||
-                (var7 != 0))) {
+            } else if (var6_int != 0 ||
+                var7 != 0) {
               switch ((var7 == 0
                   || var6_int == 3
                   || var6_int == 5
@@ -1919,9 +1919,9 @@ final class c extends ka {
                   if (vl.field_n == null) {
                     this.field_C = true;
                   }
-                  if ((!em.b(255)) &&
-                      (og.field_n > 0) &&
-                      (sa.a(ka.field_i, (byte) 37))) {
+                  if (!em.b(255) &&
+                      og.field_n > 0 &&
+                      sa.a(ka.field_i, (byte) 37)) {
                     f.i((byte) -128);
                   }
                   this.field_o = 0;
@@ -1935,10 +1935,10 @@ final class c extends ka {
                   ug.field_c = 0;
                   ra.field_d = -2147483648;
                 case 5:
-                  if ((2 != this.field_K) &&
-                      (this.field_K != 4) &&
-                      (6 != this.field_K) &&
-                      (oc.field_b == 1)) {
+                  if (2 != this.field_K &&
+                      this.field_K != 4 &&
+                      6 != this.field_K &&
+                      oc.field_b == 1) {
                     ai.field_p = 1;
                     if (var7 == 0) {
                       break L1;
@@ -1955,9 +1955,9 @@ final class c extends ka {
                   L30: {
                     ai.field_p = -1;
                     if (this.field_K != 8) {
-                      if (((4 != this.field_K) ||
-                          (null == el.field_o) ||
-                          (el.field_o.field_e != 0))) {
+                      if (4 != this.field_K ||
+                          null == el.field_o ||
+                          el.field_o.field_e != 0) {
                         if (this.field_K != 7) {
                           el.field_i = 6;
                           if (var7 == 0) {
@@ -1983,13 +1983,13 @@ final class c extends ka {
                     el.field_o.a((byte) 127, el.field_o.field_q);
                     el.field_o.field_q = 0;
                     if (fh.c(-114)) {
-                      if (((el.field_o.field_Y) ||
-                            (el.field_o.field_o != 0) ||
-                            (ug.field_c != 0)) &&
-                          ((!(el.field_o.field_Y)) ||
-                            (!(el.field_o.field_v < 750)))) {
-                        if ((0 == el.field_o.field_o) &&
-                            (0 == ug.field_c)) {
+                      if ((el.field_o.field_Y ||
+                            el.field_o.field_o != 0 ||
+                            ug.field_c != 0) &&
+                          (!el.field_o.field_Y ||
+                            !(el.field_o.field_v < 750))) {
+                        if (0 == el.field_o.field_o &&
+                            0 == ug.field_c) {
                           ai.field_p = 0;
                           if (var7 == 0) {
                             break L34;
@@ -2005,8 +2005,8 @@ final class c extends ka {
                         break L34;
                       }
                     }
-                    if ((el.field_o.field_o == 0) &&
-                        (ug.field_c == 0)) {
+                    if (el.field_o.field_o == 0 &&
+                        ug.field_c == 0) {
                       ai.field_p = 0;
                       if (var7 == 0) {
                         break L34;
@@ -2031,8 +2031,8 @@ final class c extends ka {
                     break L1;
                   }
                 case 12:
-                  if ((((this.field_q >= 4)) ||
-                        (this.field_E))) {
+                  if (this.field_q >= 4 ||
+                        this.field_E) {
                     var4 = 1;
                     if (var7 == 0) {
                       break L1;
@@ -2046,8 +2046,8 @@ final class c extends ka {
                     break L1;
                   }
                 case 11:
-                  if ((((this.field_q <= 0)) ||
-                        (this.field_E))) {
+                  if (this.field_q <= 0 ||
+                        this.field_E) {
                     var4 = 1;
                     if (var7 == 0) {
                       break L1;
@@ -2090,13 +2090,13 @@ final class c extends ka {
               break L1;
             }
             if (var3_int == 0) {
-              if ((fh.c(param1 ^ 107)) &&
-                  (kc.field_c == 0)) {
+              if (fh.c(param1 ^ 107) &&
+                  kc.field_c == 0) {
                 var3_int = 1;
               } else {
-                if ((ca.field_f != null) &&
-                    (ca.field_f.field_j) &&
-                    (ca.field_f.field_k != null)) {
+                if (ca.field_f != null &&
+                    ca.field_f.field_j &&
+                    ca.field_f.field_k != null) {
                   var6 = ca.field_f.field_k[1];
                   stackIn_105_0 = (var6[0] != null) ? 0 : 1;
                   var3_int = stackIn_105_0;
@@ -2114,8 +2114,8 @@ final class c extends ka {
             a.field_e = -1;
           }
           if (~this.field_K != ~ai.field_p) {
-            if ((this.field_K != 1) &&
-                (this.field_K != 0)) {
+            if (this.field_K != 1 &&
+                this.field_K != 0) {
               return;
             }
             oc.field_b = this.field_K;
@@ -2202,43 +2202,43 @@ final class c extends ka {
           }
           var5_int = stackIn_7_0;
           if (3 == this.field_K) {
-            if ((param2 == 0) &&
-                (var5_int == 0)) {
+            if (param2 == 0 &&
+                var5_int == 0) {
               return;
             }
-            if (((param2 == 2) &&
-                (var5_int == 4))) {
+            if (param2 == 2 &&
+                var5_int == 4) {
               return;
             }
           }
           var6 = t.field_i[this.field_K][param2];
           var7 = tl.field_f[var6];
           if (var6 == 15) {
-            if (((var5_int != 4) ||
-                (oc.field_b == 1))) {
+            if (var5_int != 4 ||
+                oc.field_b == 1) {
               return;
             }
           }
-          if ((3 == this.field_K) &&
-              (this.field_E) &&
-              (this.field_q == 4) &&
-              (oc.field_b != 1) &&
-              (param2 == 2) &&
-              (this.field_b == 3)) {
+          if (3 == this.field_K &&
+              this.field_E &&
+              this.field_q == 4 &&
+              oc.field_b != 1 &&
+              param2 == 2 &&
+              this.field_b == 3) {
             param0 = true;
           }
           L7: {
-            if (((this.field_K == 3) ||
-                  (this.field_K == 2))) {
+            if (this.field_K == 3 ||
+                  this.field_K == 2) {
               param3 += 280;
               if (var14 == 0) {
                 break L7;
               }
             }
-            if ((this.field_K != 5) &&
-                (this.field_K != 7) &&
-                (this.field_K != 6) &&
-                (this.field_K != 4)) {
+            if (this.field_K != 5 &&
+                this.field_K != 7 &&
+                this.field_K != 6 &&
+                this.field_K != 4) {
               break L7;
             }
             param3 += 295;
@@ -2247,8 +2247,8 @@ final class c extends ka {
             var8 = dd.field_G;
             var9 = 320;
             var10 = 160;
-            if (((0 == this.field_K) ||
-                (this.field_K == 1))) {
+            if (0 == this.field_K ||
+                this.field_K == 1) {
               var11 = 322;
               if (var14 == 0) {
                 break L11;
@@ -2257,11 +2257,11 @@ final class c extends ka {
             var11 = var8.c(var7, 400);
           }
           L14: {
-            if ((this.field_K != 3) &&
-                (this.field_K != 2) &&
-                (this.field_K != 6)) {
-              if ((this.field_K != 7) &&
-                  (this.field_K != 8)) {
+            if (this.field_K != 3 &&
+                this.field_K != 2 &&
+                this.field_K != 6) {
+              if (this.field_K != 7 &&
+                  this.field_K != 8) {
                 if (this.field_K != 4) {
                   if (param0) {
                     var9 = var9 + this.field_T;
@@ -2393,8 +2393,8 @@ final class c extends ka {
             var12 = 0;
           }
           L35: {
-            if (((var6 == 8) ||
-                  (9 == var6))) {
+            if (var6 == 8 ||
+                  9 == var6) {
               var8.c(var7, 285 + var12, 30 + param3, 0, -1);
               sd.field_y.b(var12 + 280, param3 + 15);
               if (var6 == 8) {
@@ -2433,10 +2433,10 @@ final class c extends ka {
             return;
           }
           L1: {
-            if (((this.field_C) ||
-                ((this.field_K != 0) &&
-                  (1 != this.field_K) &&
-                  (this.field_K != 4)))) {
+            if (this.field_C ||
+                this.field_K != 0 &&
+                  1 != this.field_K &&
+                  this.field_K != 4) {
               L4: {
                 if (ki.field_d == 96) {
                   if (this.field_C) {
@@ -2459,8 +2459,8 @@ final class c extends ka {
                   }
                 }
                 if (ki.field_d != 97) {
-                  if ((ki.field_d == 98) &&
-                      (2 == this.field_K)) {
+                  if (ki.field_d == 98 &&
+                      2 == this.field_K) {
                     if (this.field_b < 0) {
                       this.field_b = 3;
                       if (var3 == 0) {
@@ -2499,8 +2499,8 @@ final class c extends ka {
                   if (this.field_o == 1) {
                     break L4;
                   }
-                  if ((!fh.c(-122)) &&
-                      (og.field_n <= 0)) {
+                  if (!fh.c(-122) &&
+                      og.field_n <= 0) {
                     break L4;
                   }
                   this.field_o = 1;
@@ -2549,25 +2549,25 @@ final class c extends ka {
               this.a(this.field_b, -29);
             }
           }
-          if ((ki.field_d == 69) &&
-              (this.field_K == 3) &&
-              (this.field_q < 4)) {
+          if (ki.field_d == 69 &&
+              this.field_K == 3 &&
+              this.field_q < 4) {
             this.field_q = this.field_q + 1;
             if (var3 == 0) {
               return;
             }
           }
-          if ((ki.field_d == 41) &&
-              (this.field_K == 3) &&
-              (this.field_q > 0)) {
+          if (ki.field_d == 41 &&
+              this.field_K == 3 &&
+              this.field_q > 0) {
             this.field_q = this.field_q - 1;
             if (var3 == 0) {
               return;
             }
           }
-          if ((13 == ki.field_d) &&
-              (!this.field_C) &&
-              (4 != this.field_K)) {
+          if (13 == ki.field_d &&
+              !this.field_C &&
+              4 != this.field_K) {
             L22: {
               if (this.field_K == 1) {
                 ai.field_p = -1;
@@ -2575,8 +2575,8 @@ final class c extends ka {
                   break L22;
                 }
               }
-              if ((this.field_K != 6) &&
-                  (this.field_K != 2)) {
+              if (this.field_K != 6 &&
+                  this.field_K != 2) {
                 ai.field_p = oc.field_b;
                 if (var3 == 0) {
                   break L22;
@@ -2585,8 +2585,8 @@ final class c extends ka {
               ai.field_p = 0;
             }
             if (~this.field_K != ~ai.field_p) {
-              if ((this.field_K != 1) &&
-                  (this.field_K != 0)) {
+              if (this.field_K != 1 &&
+                  this.field_K != 0) {
                 return;
               }
               oc.field_b = this.field_K;

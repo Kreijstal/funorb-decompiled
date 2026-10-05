@@ -22,8 +22,8 @@ final class ca extends hf {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((param0 != null) &&
-              (0 != param0.length())) {
+          if (param0 != null &&
+              0 != param0.length()) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
               stackIn_7_0 = pj.field_f;

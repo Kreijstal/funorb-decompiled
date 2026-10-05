@@ -174,7 +174,7 @@ final class n extends q {
     }
 
     final static void c(byte param0) {
-        if ((Geoblox.field_y != null)) {
+        if (Geoblox.field_y != null) {
             Geoblox.field_y.h((byte) -104);
         }
         vk.field_d = new hi();
@@ -199,8 +199,8 @@ final class n extends q {
           }
           if (this.field_i instanceof nl) {
             var3 = ((nl) ((Object) this.field_i)).a((byte) -106);
-            if ((var3 != null) &&
-                (var3.a((byte) -105) != kk.field_w)) {
+            if (var3 != null &&
+                var3.a((byte) -105) != kk.field_w) {
               stackIn_9_0 = si.field_m;
               return stackIn_9_0;
             }
@@ -242,8 +242,8 @@ final class n extends q {
           if (this.field_i instanceof nl) {
             var3 = ((nl) ((Object) this.field_i)).a((byte) -118);
             if (var3 != null) {
-              if ((var3.a((byte) -105) == kk.field_w) &&
-                  (!param1.equals(this.field_i.field_s))) {
+              if (var3.a((byte) -105) == kk.field_w &&
+                  !param1.equals(this.field_i.field_s)) {
                 stackIn_8_0 = sj.field_b;
                 return stackIn_8_0;
               }
@@ -271,7 +271,7 @@ final class n extends q {
     }
 
     final static sl d(byte param0) {
-        if ((uf.field_l == kd.field_b)) {
+        if (uf.field_l == kd.field_b) {
             throw new IllegalStateException();
         }
         int var1 = 28 % ((-79 - param0) / 44);

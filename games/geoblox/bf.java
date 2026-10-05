@@ -180,8 +180,8 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
           if (param2 != 14164) {
             return;
           }
-          if ((param4 >= vb.field_e) &&
-              (param4 < vb.field_k)) {
+          if (param4 >= vb.field_e &&
+              param4 < vb.field_k) {
             var11 = param4 + var8 * vb.field_f;
             var12 = var10 + 1 - var8 >> 1;
             while (true) {
@@ -194,8 +194,8 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               continue;
             }
           }
-          if ((param0 >= vb.field_i) &&
-              (vb.field_d > var6)) {
+          if (param0 >= vb.field_i &&
+              vb.field_d > var6) {
             var11 = var7 + vb.field_f * param0;
             var12 = -var7 + 1 + var9 >> 1;
             while (true) {
@@ -208,8 +208,8 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               continue;
             }
           }
-          if ((var5_int >= vb.field_e) &&
-              (vb.field_k > var5_int)) {
+          if (var5_int >= vb.field_e &&
+              vb.field_k > var5_int) {
             var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
             var12 = -var8 + 1 + var10 >> 1;
             while (true) {
@@ -222,8 +222,8 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               continue;
             }
           }
-          if ((vb.field_i <= param0) &&
-              (vb.field_d > var6)) {
+          if (vb.field_i <= param0 &&
+              vb.field_d > var6) {
             var11 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
             var12 = 1 - (-var9 + var7) >> 1;
             while (true) {

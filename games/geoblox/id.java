@@ -17,7 +17,7 @@ final class id {
 
     final static void a(boolean param0) {
         tl var1 = (tl) ((Object) n.field_l.e(1));
-        if ((var1 == null)) {
+        if (var1 == null) {
             throw new IllegalStateException();
         }
         vb.a(var1.field_q, var1.field_j, var1.field_k);

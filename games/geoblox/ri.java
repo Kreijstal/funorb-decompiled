@@ -35,8 +35,8 @@ final class ri {
             CharSequence var12 = null;
             var9 = Geoblox.field_C;
             try {
-              if ((null == oc.field_e) &&
-                  (!w.a(param0, 52))) {
+              if (null == oc.field_e &&
+                  !w.a(param0, 52)) {
                 stackIn_5_0 = -1;
                 return stackIn_5_0;
               }
@@ -53,8 +53,8 @@ final class ri {
                 cm.a(-1, -1);
                 pk.field_l = oe.field_T;
               }
-              if ((oe.field_T == pk.field_l) &&
-                  (el.b(30000, 1))) {
+              if (oe.field_T == pk.field_l &&
+                  el.b(30000, 1)) {
                 var6_int = eh.field_d.c((byte) 34);
                 eh.field_d.field_f = 0;
                 if (var6_int != 0) {
@@ -65,8 +65,8 @@ final class ri {
                   pk.field_l = f.field_hb;
                 }
               }
-              if ((f.field_hb == pk.field_l) &&
-                  (el.b(30000, 8))) {
+              if (f.field_hb == pk.field_l &&
+                  el.b(30000, 8)) {
                 ak.field_a = eh.field_d.b(2901);
                 eh.field_d.field_f = 0;
                 uk.a(26, param2, param0, ih.field_a, param3);
@@ -77,14 +77,14 @@ final class ri {
                 ri.a(false, (String) null, 95, false, (String) null, 13);
               }
               L6: {
-                if ((da.field_g == pk.field_l) &&
-                    (el.b(30000, 1))) {
+                if (da.field_g == pk.field_l &&
+                    el.b(30000, 1)) {
                   var6_int = eh.field_d.c((byte) 34);
                   eh.field_d.field_f = 0;
                   fl.field_b = null;
                   me.field_l = var6_int;
-                  if ((var6_int != 0) &&
-                      (var6_int != 1)) {
+                  if (var6_int != 0 &&
+                      var6_int != 1) {
                     if (var6_int != 8) {
                       pk.field_l = ac.field_v;
                       p.field_k = -1;
@@ -99,8 +99,8 @@ final class ri {
                   pk.field_l = da.field_f;
                 }
               }
-              if ((da.field_f == pk.field_l) &&
-                  (nf.a(false))) {
+              if (da.field_f == pk.field_l &&
+                  nf.a(false)) {
                 oa.field_c = eh.field_d.b(2901);
                 oc.field_f = eh.field_d.c((byte) 34);
                 eh.field_d.c((byte) 34);
@@ -144,8 +144,8 @@ final class ri {
                 if (var6 != null) {
                   tc.a(100, var6, k.c(112));
                 }
-                if ((og.field_n <= 0) &&
-                    (!fe.field_b)) {
+                if (og.field_n <= 0 &&
+                    !fe.field_b) {
                   try {
                     wk.a((byte) -6, k.c(107), "unzap");
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -171,11 +171,11 @@ final class ri {
                 stackIn_78_0 = me.field_l;
                 return stackIn_78_0;
               }
-              if ((pk.field_l == ac.field_v) &&
-                  (nf.a(false))) {
+              if (pk.field_l == ac.field_v &&
+                  nf.a(false)) {
                 jl.a((byte) -118);
-                if ((me.field_l == 7) &&
-                    (!ck.field_e)) {
+                if (me.field_l == 7 &&
+                    !ck.field_e) {
                   ck.field_e = true;
                   stackIn_86_0 = -1;
                   return stackIn_86_0;

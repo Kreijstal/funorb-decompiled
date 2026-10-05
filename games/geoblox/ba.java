@@ -61,7 +61,7 @@ final class ba implements Runnable {
     }
 
     final void d(int param0) throws IOException {
-        if ((this.field_f)) {
+        if (this.field_f) {
             return;
         }
         if (param0 >= -79) {
@@ -185,7 +185,7 @@ final class ba implements Runnable {
     }
 
     final int c(int param0) throws IOException {
-        if ((this.field_f)) {
+        if (this.field_f) {
             return 0;
         }
         if (param0 != -17422) {

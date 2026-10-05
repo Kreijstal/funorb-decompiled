@@ -221,8 +221,8 @@ abstract class m extends rc {
             var9 = var13;
             continue;
           }
-          if ((var14 == 62) &&
-              (var9 != -1)) {
+          if (var14 == 62 &&
+              var9 != -1) {
             var15 = param0.substring(var9 + 1, var13).toLowerCase();
             var9 = -1;
             discarded$0 = field_r.append('<');
@@ -250,64 +250,64 @@ abstract class m extends rc {
                               }
                             } else {
                               var4 = var4 + this.a('®');
-                              if ((this.field_x != null) &&
-                                  (var10 != 0)) {
+                              if (this.field_x != null &&
+                                  var10 != 0) {
                                 var4 = var4 + this.field_x[(var10 << 8) + 174];
                               }
                               var10 = 174;
                             }
                           } else {
                             var4 = var4 + this.a('©');
-                            if ((this.field_x != null) &&
-                                (var10 != 0)) {
+                            if (this.field_x != null &&
+                                var10 != 0) {
                               var4 = var4 + this.field_x[(var10 << 8) + 169];
                             }
                             var10 = 169;
                           }
                         } else {
                           var4 = var4 + this.a('€');
-                          if ((this.field_x != null) &&
-                              (var10 != 0)) {
+                          if (this.field_x != null &&
+                              var10 != 0) {
                             var4 = var4 + this.field_x[(var10 << 8) + 128];
                           }
                           var10 = 8364;
                         }
                       } else {
                         var4 = var4 + this.a('×');
-                        if ((this.field_x != null) &&
-                            (var10 != 0)) {
+                        if (this.field_x != null &&
+                            var10 != 0) {
                           var4 = var4 + this.field_x[(var10 << 8) + 215];
                         }
                         var10 = 215;
                       }
                     } else {
                       var4 = var4 + this.a('­');
-                      if ((this.field_x != null) &&
-                          (var10 != 0)) {
+                      if (this.field_x != null &&
+                          var10 != 0) {
                         var4 = var4 + this.field_x[(var10 << 8) + 173];
                       }
                       var10 = 173;
                     }
                   } else {
                     var4 = var4 + this.a(' ');
-                    if ((this.field_x != null) &&
-                        (var10 != 0)) {
+                    if (this.field_x != null &&
+                        var10 != 0) {
                       var4 = var4 + this.field_x[(var10 << 8) + 160];
                     }
                     var10 = 160;
                   }
                 } else {
                   var4 = var4 + this.a('>');
-                  if ((this.field_x != null) &&
-                      (var10 != 0)) {
+                  if (this.field_x != null &&
+                      var10 != 0) {
                     var4 = var4 + this.field_x[(var10 << 8) + 62];
                   }
                   var10 = 62;
                 }
               } else {
                 var4 = var4 + this.a('<');
-                if ((this.field_x != null) &&
-                    (var10 != 0)) {
+                if (this.field_x != null &&
+                    var10 != 0) {
                   var4 = var4 + this.field_x[(var10 << 8) + 60];
                 }
                 var10 = 60;
@@ -329,8 +329,8 @@ abstract class m extends rc {
             discarded$3 = field_r.append((char) var14);
             var14 = (char)(qc.a((char) var14, true) & 255);
             var4 = var4 + this.field_v[var14];
-            if ((this.field_x != null) &&
-                (var10 != 0)) {
+            if (this.field_x != null &&
+                var10 != 0) {
               var4 = var4 + this.field_x[(var10 << 8) + var14];
             }
             var10 = var14;
@@ -348,8 +348,8 @@ abstract class m extends rc {
             } else {
               stackIn_68_2 = var11;
             }
-            if ((stackIn_67_0 > stackIn_67_1[stackIn_68_2]) &&
-                (var6 >= 0)) {
+            if (stackIn_67_0 > stackIn_67_1[stackIn_68_2] &&
+                var6 >= 0) {
               param2[var11] = field_r.toString().substring(var5, var6 - var8);
               var11++;
               var5 = var6;
@@ -496,13 +496,13 @@ abstract class m extends rc {
           param10 = this.field_p;
         }
         var12 = new int[]{param3};
-        if ((param4 < this.field_o + this.field_q + param10) &&
-            (param4 < param10 + param10)) {
+        if (param4 < this.field_o + this.field_q + param10 &&
+            param4 < param10 + param10) {
           var12 = null;
         }
         var13 = this.a(param0, var12, field_E);
-        if ((param9 == 3) &&
-            (var13 == 1)) {
+        if (param9 == 3 &&
+            var13 == 1) {
           param9 = 1;
         }
         if (param9 != 0) {
@@ -627,8 +627,8 @@ abstract class m extends rc {
             var6++;
             continue;
           }
-          if ((var7 == 62) &&
-              (var2 != -1)) {
+          if (var7 == 62 &&
+              var2 != -1) {
             var8 = param0.substring(var2 + 1, var6).toLowerCase();
             var2 = -1;
             if (!var8.equals("lt")) {
@@ -685,8 +685,8 @@ abstract class m extends rc {
           }
           var7 = (char)(qc.a((char) var7, true) & 255);
           var4 = var4 + this.field_v[var7];
-          if ((this.field_x != null) &&
-              (var3 != 0)) {
+          if (this.field_x != null &&
+              var3 != 0) {
             var4 = var4 + this.field_x[(var3 << 8) + var7];
           }
           var3 = var7;
@@ -793,8 +793,8 @@ abstract class m extends rc {
             var7++;
             continue;
           }
-          if ((var8 == 62) &&
-              (var4 != -1)) {
+          if (var8 == 62 &&
+              var4 != -1) {
             var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
             var4 = -1;
             if (!var9_ref_String.equals("lt")) {
@@ -863,8 +863,8 @@ abstract class m extends rc {
             continue;
           }
           var8 = (char)(qc.a((char) var8, true) & 255);
-          if ((this.field_x != null) &&
-              (var5 != 0)) {
+          if (this.field_x != null &&
+              var5 != 0) {
             param1 = param1 + this.field_x[(var5 << 8) + var8];
           }
           var9 = this.field_J[var8];
@@ -915,8 +915,8 @@ abstract class m extends rc {
         var6 = 2147483647;
         var7 = -2147483648;
         for (var8 = 0; var8 < 256; var8++) {
-          if ((this.field_C[var8] < var6) &&
-              (this.field_I[var8] != 0)) {
+          if (this.field_C[var8] < var6 &&
+              this.field_I[var8] != 0) {
             var6 = this.field_C[var8];
           }
           if (this.field_C[var8] + this.field_I[var8] <= var7) {

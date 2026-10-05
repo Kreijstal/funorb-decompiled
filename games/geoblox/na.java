@@ -140,8 +140,8 @@ final class na extends ha {
             return;
           }
           param4 = param7;
-          if ((param2 > 0) &&
-              (param1[param2 - 1] == -1)) {
+          if (param2 > 0 &&
+              param1[param2 - 1] == -1) {
             param4--;
             param2++;
             param3++;

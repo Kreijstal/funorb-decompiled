@@ -25,7 +25,7 @@ class rc extends hf {
         if (param0 > -43) {
             return (String) null;
         }
-        if ((null == wd.field_f)) {
+        if (null == wd.field_f) {
             return "";
         }
         return wd.field_f;
@@ -41,7 +41,7 @@ class rc extends hf {
     }
 
     final void a(byte param0) {
-        if ((this.field_l == null)) {
+        if (this.field_l == null) {
             return;
         }
         this.field_l.field_k = this.field_k;

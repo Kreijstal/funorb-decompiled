@@ -23,7 +23,7 @@ final class kh implements Runnable {
         if (mi.field_C < 2) {
             return j.field_lb;
         }
-        if ((dd.field_J != null)) {
+        if (dd.field_J != null) {
             if (!dd.field_J.a(0)) {
                 return ri.field_c;
             }
@@ -38,7 +38,7 @@ final class kh implements Runnable {
         if (!l.field_h.a("commonui", (byte) -127)) {
             return wi.field_F + " - " + l.field_h.a(0, "commonui") + "%";
         }
-        if (!(dc.field_c.a(0))) {
+        if (!dc.field_c.a(0)) {
             return ik.field_b;
         }
         if (!dc.field_c.a("commonui", (byte) -125)) {

@@ -178,8 +178,8 @@ final class ci {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((ih.field_c.a(-87)) &&
-              (!param1.equals(ih.field_c.b(19491)))) {
+          if (ih.field_c.a(-87) &&
+              !param1.equals(ih.field_c.b(19491))) {
             ih.field_c = bf.a((byte) 86, param1);
           }
           if (param0 != -1) {
@@ -282,8 +282,8 @@ final class ci {
             stackIn_5_0 = var8;
             return stackIn_5_0;
           }
-          if ((param0 != null) &&
-              (param0[0] <= 0)) {
+          if (param0 != null &&
+              param0[0] <= 0) {
             return null;
           }
           var9 = fg.a(this.field_c, param2, param3);
@@ -341,8 +341,8 @@ final class ci {
             stackIn_6_0 = var8;
             return stackIn_6_0;
           }
-          if ((param0 != null) &&
-              (param0[0] <= 0)) {
+          if (param0 != null &&
+              param0[0] <= 0) {
             stackIn_10_0 = null;
             return (gd) (stackIn_10_0);
           }

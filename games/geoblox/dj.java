@@ -46,9 +46,9 @@ class dj extends hk {
               var7 = (cc) ((Object) this.field_q);
               var6 = var7.a((el) (this), qa.field_a, -15539, param1, ue.field_e, param3);
               if (-1 != var6) {
-                if ((this.field_G) &&
-                    (this.field_J > var6) &&
-                    (this.field_L < var6)) {
+                if (this.field_G &&
+                    this.field_J > var6 &&
+                    this.field_L < var6) {
                   var6 = this.field_J;
                 }
                 this.field_H = var6;
@@ -121,7 +121,7 @@ class dj extends hk {
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if ((param3 != 0)) {
+        if (param3 != 0) {
             var6[4] = ef.a(0, param3, 64);
         }
         return var5;
@@ -196,7 +196,7 @@ class dj extends hk {
         if (param1 >= -114) {
             this.j(-114);
         }
-        if (!(kj.field_o[81])) {
+        if (!kj.field_o[81]) {
             this.field_L = this.field_H;
         }
     }
@@ -221,8 +221,8 @@ class dj extends hk {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if ((super.a(param0, 104, param2, param3, param4, param5, param6)) &&
-              (this.field_q instanceof cc)) {
+          if (super.a(param0, 104, param2, param3, param4, param5, param6) &&
+              this.field_q instanceof cc) {
             var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.field_a, -15539, param0, ue.field_e, param2);
             if (var8_int != -1) {
               stackIn_5_1 = var8_int;
@@ -240,8 +240,8 @@ class dj extends hk {
             if (this.field_G) {
               this.field_L = this.j((byte) 77);
               this.field_H = this.h((byte) -57);
-              if ((0 < this.field_H) &&
-                  (this.field_s.charAt(this.field_H - 1) == 32)) {
+              if (0 < this.field_H &&
+                  this.field_s.charAt(this.field_H - 1) == 32) {
                 this.field_H = this.field_H - 1;
               }
               this.field_J = this.field_H;
@@ -290,8 +290,8 @@ class dj extends hk {
         cc var6;
         long var7;
         var5 = -124 % ((param2 - 1) / 43);
-        if ((this.field_q != null) &&
-            (param3 == 0)) {
+        if (this.field_q != null &&
+            param3 == 0) {
           this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
           if (this.field_q instanceof cc) {
             var6 = (cc) ((Object) this.field_q);
@@ -374,13 +374,13 @@ class dj extends hk {
           if (param2 == 62) {
             return false;
           }
-          if ((32 <= param2) &&
-              (param2 <= 126)) {
+          if (32 <= param2 &&
+              param2 <= 126) {
             if (this.field_H != this.field_L) {
               this.g(0);
             }
-            if (((-1 == this.field_M) ||
-                  (!(this.field_s.length() >= this.field_M)))) {
+            if (-1 == this.field_M ||
+                  !(this.field_s.length() >= this.field_M)) {
               if (this.field_H >= this.field_s.length()) {
                 this.field_s = this.field_s + param2;
                 dupTemp$0 = this.field_s.length();
@@ -445,18 +445,18 @@ class dj extends hk {
                     this.m((byte) 111);
                     return true;
                   }
-                  if ((kj.field_o[82]) &&
-                      (param0 == 65)) {
+                  if (kj.field_o[82] &&
+                      param0 == 65) {
                     this.h(112);
                     return true;
                   }
-                  if ((kj.field_o[82]) &&
-                      (param0 == 66)) {
+                  if (kj.field_o[82] &&
+                      param0 == 66) {
                     this.i(-23161);
                     return true;
                   }
-                  if ((kj.field_o[82]) &&
-                      (67 == param0)) {
+                  if (kj.field_o[82] &&
+                      67 == param0) {
                     this.f(82);
                     return true;
                   }
@@ -552,8 +552,8 @@ class dj extends hk {
           }
           this.field_s = param1;
           var5 = param1.length();
-          if ((this.field_M != -1) &&
-              (this.field_M < var5)) {
+          if (this.field_M != -1 &&
+              this.field_M < var5) {
             this.field_s = this.field_s.substring(0, this.field_M);
           }
           dupTemp$1 = this.field_s.length();
@@ -581,7 +581,7 @@ class dj extends hk {
         if (param0 >= -16) {
             return;
         }
-        if (((this.field_u instanceof ga))) {
+        if (this.field_u instanceof ga) {
             ((ga) ((Object) this.field_u)).a((dj) (this), (byte) 74);
         }
     }

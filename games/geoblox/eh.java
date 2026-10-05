@@ -43,8 +43,8 @@ final class eh {
           if (param2 != -51) {
             field_a = (String) null;
           }
-          if ((var6 > 0) &&
-              (var6 < 50)) {
+          if (var6 > 0 &&
+              var6 < 50) {
             if (var6 >= 20) {
               if (var6 >= 30) {
                 var7 = 256 * (-var6 + 50) / 20;
@@ -64,8 +64,8 @@ final class eh {
             var6 = -125 + gb.field_f;
             if (param2 != -51) {
               field_a = (String) null;
-              if ((var6 > 0) &&
-                  (var6 < 50)) {
+              if (var6 > 0 &&
+                  var6 < 50) {
                 if (var6 >= 20) {
                   if (var6 >= 30) {
                     var7 = 256 * (-var6 + 50) / 20;
@@ -151,8 +151,8 @@ final class eh {
           var6 = -125 + gb.field_f;
           if (param2 != -51) {
             field_a = (String) null;
-            if ((var6 > 0) &&
-                (var6 < 50)) {
+            if (var6 > 0 &&
+                var6 < 50) {
               if (var6 >= 20) {
                 if (var6 >= 30) {
                   var7 = 256 * (-var6 + 50) / 20;
@@ -166,8 +166,8 @@ final class eh {
               }
             }
           } else {
-            if ((var6 > 0) &&
-                (var6 < 50)) {
+            if (var6 > 0 &&
+                var6 < 50) {
               if (var6 < 20) {
                 var7 = var6 * 256 / 20;
                 cd.field_l.c(var3, var4, var7);

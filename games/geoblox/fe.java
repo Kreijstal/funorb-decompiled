@@ -35,8 +35,8 @@ final class fe {
             String stackIn_19_2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              if ((param1.field_j[param1.field_f] == 31) &&
-                  (-117 == param1.field_j[1 + param1.field_f])) {
+              if (param1.field_j[param1.field_f] == 31 &&
+                  -117 == param1.field_j[1 + param1.field_f]) {
                 if (this.field_i == null) {
                   this.field_i = new java.util.zip.Inflater(true);
                 }

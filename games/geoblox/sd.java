@@ -84,16 +84,16 @@ final class sd extends pb {
         int var19 = 0;
         var19 = Geoblox.field_C;
         try {
-          if ((param5 >= 0) &&
-              (param8 < mh.field_h)) {
-            if ((0 > param1) &&
-                (param0 < 0) &&
-                (param6 < 0)) {
+          if (param5 >= 0 &&
+              param8 < mh.field_h) {
+            if (0 > param1 &&
+                param0 < 0 &&
+                param6 < 0) {
               return;
             }
-            if ((param1 >= mh.field_c) &&
-                (param0 >= mh.field_c) &&
-                (mh.field_c <= param6)) {
+            if (param1 >= mh.field_c &&
+                param0 >= mh.field_c &&
+                mh.field_c <= param6) {
               return;
             }
             var14 = -param8 + param5;
@@ -167,8 +167,8 @@ final class sd extends pb {
                         ib.a(57, param4, var16, param2, var17 + var18);
                       }
                     } else {
-                      if ((var17 >= 0) &&
-                          (mh.field_c > var17)) {
+                      if (var17 >= 0 &&
+                          mh.field_c > var17) {
                         ib.a(-61, param4, var17 + var16, param2, var18);
                       }
                     }
@@ -210,8 +210,8 @@ final class sd extends pb {
               if (mh.field_c > var17) {
                 var18 = (var10 >> 16) - (var9_int >> 16);
                 if (var18 == 0) {
-                  if ((var17 >= 0) &&
-                      (mh.field_c > var17)) {
+                  if (var17 >= 0 &&
+                      mh.field_c > var17) {
                     ib.a(-67, param4, var17 + var15, param2, var18);
                   }
                 } else {

@@ -122,16 +122,16 @@ final class d implements Runnable {
                         } else {
                           if (var2_int == 8) {
                             var18 = (Object[]) (var9.field_f);
-                            if ((this.field_h) &&
-                                (((Class) (var18[0])).getClassLoader() == null)) {
+                            if (this.field_h &&
+                                ((Class) (var18[0])).getClassLoader() == null) {
                               throw new SecurityException();
                             }
                             var9.field_b = ((Class) (var18[0])).getDeclaredMethod((String) (var18[1]), (Class[]) (var18[2]));
                           } else {
                             if (var2_int == 9) {
                               var17 = (Object[]) (var9.field_f);
-                              if ((this.field_h) &&
-                                  (null == ((Class) (var17[0])).getClassLoader())) {
+                              if (this.field_h &&
+                                  null == ((Class) (var17[0])).getClassLoader()) {
                                 throw new SecurityException();
                               }
                               var9.field_b = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
@@ -187,8 +187,8 @@ final class d implements Runnable {
                                                 var3_ref = d.a((byte) 19, field_f, "", (String) (var9.field_f));
                                                 var9.field_b = var3_ref;
                                               } else {
-                                                if ((this.field_h) &&
-                                                    (var2_int == 14)) {
+                                                if (this.field_h &&
+                                                    var2_int == 14) {
                                                   var3_int = var9.field_c;
                                                   var4_int = var9.field_g;
                                                   if (!this.field_l) {
@@ -198,8 +198,8 @@ final class d implements Runnable {
                                                   this.field_a.a(-71, var4_int, var3_int);
                                                   break L7;
                                                 }
-                                                if ((this.field_h) &&
-                                                    (var2_int == 15)) {
+                                                if (this.field_h &&
+                                                    var2_int == 15) {
                                                   stackIn_76_0 = (var9.field_c == 0) ? 0 : 1;
                                                   var3_int = stackIn_76_0;
                                                   var12 = (java.awt.Component) (var9.field_f);
@@ -210,8 +210,8 @@ final class d implements Runnable {
                                                   Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_u, new Object[]{var12, new Boolean(var3_int != 0)});
                                                   break L7;
                                                 }
-                                                if ((!this.field_l) &&
-                                                    (var2_int == 17)) {
+                                                if (!this.field_l &&
+                                                    var2_int == 17) {
                                                   var11 = (Object[]) (var9.field_f);
                                                   Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_u, new Object[]{var11[0], var11[1], new Integer(var9.field_c), new Integer(var9.field_g), var11[2]});
                                                 } else {
@@ -223,8 +223,8 @@ final class d implements Runnable {
                                                       throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
                                                     var8 = (String) (var9.field_f);
-                                                    if ((!var8.startsWith("http://")) &&
-                                                        (!var8.startsWith("https://"))) {
+                                                    if (!var8.startsWith("http://") &&
+                                                        !var8.startsWith("https://")) {
                                                       throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
                                                     var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
@@ -350,8 +350,8 @@ final class d implements Runnable {
             var6 = 0;
             while (var6 < var5.length) {
               var8 = var5[var6];
-              if ((0 < var8.length()) &&
-                  (!new File(var8).exists())) {
+              if (0 < var8.length() &&
+                  !new File(var8).exists()) {
                 var6++;
                 continue;
               }

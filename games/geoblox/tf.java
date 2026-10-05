@@ -14,7 +14,7 @@ final class tf {
             return (hf) null;
         }
         hf var2 = this.field_c;
-        if ((this.field_a == var2)) {
+        if (this.field_a == var2) {
             this.field_c = null;
             return null;
         }
@@ -46,8 +46,8 @@ final class tf {
         int var2;
         int var3;
         var3 = Geoblox.field_C;
-        if ((null != kf.field_c) &&
-            (!ag.field_j[param1])) {
+        if (null != kf.field_c &&
+            !ag.field_j[param1]) {
           var2 = param1;
           if (var2 != 4) {
             if (3 != var2) {
@@ -203,7 +203,7 @@ final class tf {
             return (hf) null;
         }
         hf var2 = this.field_a.field_c;
-        if ((this.field_a == var2)) {
+        if (this.field_a == var2) {
             this.field_c = null;
             return null;
         }

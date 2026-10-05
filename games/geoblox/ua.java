@@ -88,8 +88,8 @@ final class ua extends hf {
         int var6;
         float[] var7;
         byte[] var12;
-        if ((param0 != null) &&
-            (param0[0] <= 0)) {
+        if (param0 != null &&
+            param0[0] <= 0) {
           return null;
         }
         if (this.field_E == null) {
@@ -100,8 +100,8 @@ final class ua extends hf {
           this.field_x = 0;
         }
         while (this.field_x < this.field_p.length) {
-          if ((param0 != null) &&
-              (param0[0] <= 0)) {
+          if (param0 != null &&
+              param0[0] <= 0) {
             return null;
           }
           var7 = this.c(this.field_x);
@@ -478,8 +478,8 @@ final class ua extends hf {
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
-        if ((var3 != 0) &&
-            (var5 == 0)) {
+        if (var3 != 0 &&
+            var5 == 0) {
           var8 = (var4 >> 2) - (field_v >> 2);
           var9 = (var4 >> 2) + (field_v >> 2);
           var10 = field_v >> 1;
@@ -488,8 +488,8 @@ final class ua extends hf {
           var9 = var7;
           var10 = var4 >> 1;
         }
-        if ((var3 != 0) &&
-            (var6 == 0)) {
+        if (var3 != 0 &&
+            var6 == 0) {
           var11 = var4 - (var4 >> 2) - (field_v >> 2);
           var12 = var4 - (var4 >> 2) + (field_v >> 2);
           var13 = field_v >> 1;

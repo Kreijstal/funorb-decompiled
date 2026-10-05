@@ -72,8 +72,8 @@ final class ck {
           var7 = 0;
           var8 = bh.a((byte) 81, var6) >> 8;
           var9 = fi.a(var6, 2048) >> 8;
-          if ((qa.field_a != -1) &&
-              (ue.field_e != -1)) {
+          if (qa.field_a != -1 &&
+              ue.field_e != -1) {
             var7 = -320 + qa.field_a;
             var9 = -128;
             var8 = -ue.field_e + 240;
@@ -132,8 +132,8 @@ final class ck {
         var2 = Geoblox.field_C;
         try {
           if (!tf.a((byte) 124)) {
-            if ((vl.field_n != null) &&
-                (vl.field_n.field_c)) {
+            if (vl.field_n != null &&
+                vl.field_n.field_c) {
               jk.a((byte) -87);
               oh.field_b.a(false, new ij(oh.field_b, ei.field_hb));
             }

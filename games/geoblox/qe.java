@@ -40,19 +40,19 @@ final class qe {
                 continue;
               }
               if (var10[var8].field_f == param2) {
-                if ((param5 != 0) &&
-                    (param5 != var10[var8].field_a)) {
+                if (param5 != 0 &&
+                    param5 != var10[var8].field_a) {
                   continue;
                 }
-                if ((var7_int != 0) &&
-                    (param0 >= var10[var8].field_h)) {
+                if (var7_int != 0 &&
+                    param0 >= var10[var8].field_h) {
                   continue;
                 }
                 var7_int = 1;
                 param0 = var10[var8].field_h;
               }
             }
-            if ((var7_int == 0)) {
+            if (var7_int == 0) {
               return null;
             }
           }
@@ -98,8 +98,8 @@ final class qe {
         RuntimeException var1 = null;
         var2 = Geoblox.field_C;
         try {
-          if ((ji.field_h != 0) &&
-              (ji.field_h < 21)) {
+          if (ji.field_h != 0 &&
+              ji.field_h < 21) {
             fa.field_b = fa.field_b + 10;
           }
           fa.field_b = fa.field_b + param0;

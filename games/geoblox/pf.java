@@ -25,12 +25,12 @@ final class pf extends ee implements ga, pl {
           var3 = (pk) null;
           pf.a(-108, (pk) null);
         }
-        if ((((param1 < 48)) ||
-              ((param1 > 57))) &&
-            (((param1 < 65)) ||
-              ((param1 > 90))) &&
-            (((param1 < 97)) ||
-              ((param1 > 122)))) {
+        if ((param1 < 48 ||
+              param1 > 57) &&
+            (param1 < 65 ||
+              param1 > 90) &&
+            (param1 < 97 ||
+              param1 > 122)) {
           stackIn_13_0 = false;
         } else {
           stackIn_13_0 = true;
@@ -81,8 +81,8 @@ final class pf extends ee implements ga, pl {
                 var4 = var9.h(76);
                 var5 = (se) ((Object) sj.field_g.g(0));
                 while (var5 != null) {
-                  if (((var5.field_g != var3) ||
-                      (var5.field_j != var4))) {
+                  if (var5.field_g != var3 ||
+                      var5.field_j != var4) {
                     var5 = (se) ((Object) sj.field_g.d(1));
                     continue;
                   }
@@ -167,7 +167,7 @@ final class pf extends ee implements ga, pl {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        if ((this.field_L != null)) {
+        if (this.field_L != null) {
             ng.field_F.a(this.field_L, this.field_v + param0 + 20, 15 + this.field_m + param1, -40 + this.field_r, this.field_h, 16777215, -1, 1, 0, ng.field_F.field_o);
         }
         if (null != this.field_M) {
@@ -265,8 +265,8 @@ final class pf extends ee implements ga, pl {
         try {
           var13 = param2.b(16925);
           var8 = param3.b(16925);
-          if ((oc.field_e == null) &&
-              (!w.a(false, 52))) {
+          if (oc.field_e == null &&
+              !w.a(false, 52)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
@@ -325,12 +325,12 @@ final class pf extends ee implements ga, pl {
             cm.a(-1, -1);
             pk.field_l = field_K;
           }
-          if ((field_K == pk.field_l) &&
-              (el.b(30000, 1))) {
+          if (field_K == pk.field_l &&
+              el.b(30000, 1)) {
             var9 = eh.field_d.c((byte) 34);
             eh.field_d.field_f = 0;
-            if ((var9 >= 100) &&
-                (var9 <= 105)) {
+            if (var9 >= 100 &&
+                var9 <= 105) {
               pk.field_l = v.field_l;
               si.field_i = new String[var9 - 100];
             } else {
@@ -370,8 +370,8 @@ final class pf extends ee implements ga, pl {
               }
             }
           }
-          if ((pk.field_l == qh.field_F) &&
-              (nf.a(false))) {
+          if (pk.field_l == qh.field_F &&
+              nf.a(false)) {
             if (me.field_l != 255) {
               kh.field_a = eh.field_d.e((byte) 98);
             } else {
@@ -681,9 +681,9 @@ final class pf extends ee implements ga, pl {
     }
 
     private final void g(int param0) {
-        if (((wh.e(param0)) ||
-            (!(this.field_J.field_s.length() <= 0) &&
-              !(0 >= this.field_P.field_s.length())))) {
+        if (wh.e(param0) ||
+            !(this.field_J.field_s.length() <= 0) &&
+              !(0 >= this.field_P.field_s.length())) {
           ef.a(this.field_P.field_s, (byte) 66, this.field_J.field_s);
         }
     }
@@ -734,8 +734,8 @@ final class pf extends ee implements ga, pl {
           }
           ((pf) (this)).field_I = stackIn_10_1;
           if (this.field_N) {
-            if (((this.field_C) ||
-                (this.field_I))) {
+            if (this.field_C ||
+                this.field_I) {
               throw new IllegalStateException();
             }
           }
@@ -828,8 +828,8 @@ final class pf extends ee implements ga, pl {
             this.field_m = this.field_m + 35;
           }
           if (this.field_G != null) {
-            if ((!this.field_N) &&
-                (!this.field_I)) {
+            if (!this.field_N &&
+                !this.field_I) {
               this.field_G.a(20, 40, (byte) -55, this.field_m, 8);
               this.field_m = this.field_m + 25;
             } else {

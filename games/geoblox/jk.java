@@ -15,7 +15,7 @@ final class jk {
         vl.field_n.a(0, ka.field_i);
         if (param0 <= -14) {
             vl.field_n = null;
-            if ((null != rb.field_d)) {
+            if (null != rb.field_d) {
                 rb.field_d.b((byte) -101);
             }
             f.field_kb.requestFocus();
@@ -24,7 +24,7 @@ final class jk {
         d var2 = (d) null;
         jk.a((java.awt.Frame) null, 17, (d) null);
         vl.field_n = null;
-        if ((null != rb.field_d)) {
+        if (null != rb.field_d) {
             rb.field_d.b((byte) -101);
         }
         f.field_kb.requestFocus();
@@ -112,8 +112,8 @@ final class jk {
           for (var3 = 0; var2_int > var3; var3++) {
             var4 = param1.charAt(var3);
             if (45 == var4) {
-              if (((var3 == 0) ||
-                  (var3 == -1 + var2_int))) {
+              if (var3 == 0 ||
+                  var3 == -1 + var2_int) {
                 stackIn_18_0 = ii.field_h;
                 return stackIn_18_0;
               }

@@ -78,8 +78,8 @@ final class ad extends ia {
         RuntimeException var4 = null;
         int var5 = 0;
         try {
-          if (((this.field_k.field_m[param1.field_t] & 4) != 0) &&
-              (param1.field_y < 0)) {
+          if ((this.field_k.field_m[param1.field_t] & 4) != 0 &&
+              param1.field_y < 0) {
             var4_int = this.field_k.field_n[param1.field_t] / qk.field_j;
             var5 = (-param1.field_B + (1048575 + var4_int)) / var4_int;
             param1.field_B = 1048575 & param1.field_B + param2 * var4_int;
@@ -196,7 +196,7 @@ final class ad extends ia {
         if (var1 == null) {
             return null;
         }
-        if ((null != var1.field_u)) {
+        if (null != var1.field_u) {
             return (ia) ((Object) var1.field_u);
         }
         return this.c();
@@ -220,8 +220,8 @@ final class ad extends ia {
         int var10 = 0;
         kl var11 = null;
         try {
-          if (((4 & this.field_k.field_m[param4.field_t]) != 0) &&
-              (param4.field_y < 0)) {
+          if ((4 & this.field_k.field_m[param4.field_t]) != 0 &&
+              param4.field_y < 0) {
             var7_int = this.field_k.field_n[param4.field_t] / qk.field_j;
             while (true) {
               var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;

@@ -76,8 +76,8 @@ final class bm {
         try {
           var18 = new qc(v.a(param1, -1));
           var4 = var18.c((byte) 34);
-          if ((5 <= var4) &&
-              (var4 <= 7)) {
+          if (5 <= var4 &&
+              var4 <= 7) {
             if (var4 < 6) {
               this.field_g = 0;
             } else {

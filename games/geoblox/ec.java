@@ -55,8 +55,8 @@ final class ec {
         int var12 = 0;
         var11 = Geoblox.field_C;
         try {
-          if ((0 == h.field_a) &&
-              (0 < wb.field_b)) {
+          if (0 == h.field_a &&
+              0 < wb.field_b) {
             if (w.field_f) {
               return false;
             }
@@ -98,8 +98,8 @@ final class ec {
           var12 = 0;
           var1_int = var12;
           while (var12 < h.field_a) {
-            if ((-1 + h.field_a > var12) &&
-                (nk.field_f[var12] == nk.field_f[var12 + 1])) {
+            if (-1 + h.field_a > var12 &&
+                nk.field_f[var12] == nk.field_f[var12 + 1]) {
               nk.field_f[var12] = 0;
             } else {
               var2 = (nk.field_f[var12] & 1072693248) >> 20;
@@ -108,9 +108,9 @@ final class ec {
               var5 = tl.field_g[var2];
               var6 = tl.field_g[var3];
               var7 = tl.field_g[var4];
-              if ((var5.field_E <= 0) &&
-                  (var6.field_E <= 0) &&
-                  (var7.field_E <= 0)) {
+              if (var5.field_E <= 0 &&
+                  var6.field_E <= 0 &&
+                  var7.field_E <= 0) {
                 td.a(-348, fl.field_c[31]);
                 gf.field_f = gf.field_f + 1;
                 if (gf.field_f > 1) {
@@ -150,7 +150,7 @@ final class ec {
 
     final static void a(int param0) {
         ph var1 = (ph) ((Object) el.field_p.g(param0 ^ param0));
-        if ((var1 == null)) {
+        if (var1 == null) {
             jl.a((byte) -122);
             return;
         }

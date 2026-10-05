@@ -213,16 +213,16 @@ final class ed {
             field_f[var14] = 0;
           }
         }
-        if ((this.field_h > 0) &&
-            (this.field_r > 0)) {
+        if (this.field_h > 0 &&
+            this.field_r > 0) {
           var11 = (int)((double)this.field_h * var3);
           for (var12 = var11; var12 < param0; var12++) {
             field_f[var12] = field_f[var12] + field_f[var12 - var11] * this.field_r / 100;
           }
         }
         {
-          if (((!(this.field_e.field_b[0] <= 0)) ||
-              (!(this.field_e.field_b[1] <= 0)))) {
+          if (!(this.field_e.field_b[0] <= 0) ||
+              !(this.field_e.field_b[1] <= 0)) {
             this.field_k.a();
             var11 = this.field_k.a(param0 + 1);
             var12 = this.field_e.a(0, (float)var11 / 65536.0f);

@@ -119,15 +119,15 @@ final class p extends hf {
                   continue;
                 }
               } else {
-                if ((null != param2.field_L) &&
-                    (param2.field_d != null) &&
-                    (param2.field_C != null) &&
-                    (param2.field_x != null) &&
-                    (null != param2.field_a) &&
-                    (param2.field_y != null) &&
-                    (param2.field_l != null) &&
-                    (null != param2.field_p) &&
-                    (param2.field_b != null)) {
+                if (null != param2.field_L &&
+                    param2.field_d != null &&
+                    param2.field_C != null &&
+                    param2.field_x != null &&
+                    null != param2.field_a &&
+                    param2.field_y != null &&
+                    param2.field_l != null &&
+                    null != param2.field_p &&
+                    param2.field_b != null) {
                   var23 = 0;
                   while (!(~var23 <= ~param2.field_f)) {
                     var24 = param2.field_L[var23];

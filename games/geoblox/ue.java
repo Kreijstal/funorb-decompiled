@@ -21,7 +21,7 @@ final class ue {
         if (param1 != 6) {
             field_g = (String) null;
         }
-        if ((this.field_a != null)) {
+        if (this.field_a != null) {
             param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_i) + 6;
         }
         return param0;
@@ -43,7 +43,7 @@ final class ue {
         if (param0 != -128) {
             this.b(23, -122);
         }
-        if ((null != this.field_a)) {
+        if (null != this.field_a) {
             param1 = (int)((long)param1 * (long)this.field_h / (long)this.field_i);
         }
         return param1;
@@ -94,8 +94,8 @@ final class ue {
           while (var8 < var9) {
             var12 = ((double)var8 - var6) * 3.141592653589793;
             var14 = var10;
-            if ((((var12 < -0.0001)) ||
-                ((0.0001 < var12)))) {
+            if (var12 < -0.0001 ||
+                0.0001 < var12) {
               var14 = var14 * (Math.sin(var12) / var12);
             }
             var14 = var14 * (Math.cos(0.2243994752564138 * (-var6 + (double)var8)) * 0.46 + 0.54);

@@ -21,10 +21,10 @@ final class di {
                 var5 = this.field_b.a(1, -28153, 32767 & param1);
             }
             var3 = new og();
-            if ((var5 != null)) {
+            if (var5 != null) {
                 var3.a(0, new qc(var5));
             }
-            if ((param1 >= 32768)) {
+            if (param1 >= 32768) {
                 var3.f((byte) 119);
             }
             this.field_f.a(-126, (long)param1, var3);

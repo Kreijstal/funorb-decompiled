@@ -43,8 +43,8 @@ final class eg extends hf {
         int var10 = 0;
         CharSequence var11 = null;
         try {
-          if ((2 <= param2) &&
-              (param2 <= 36)) {
+          if (2 <= param2 &&
+              param2 <= 36) {
             var4_int = 0;
             var5 = 0;
             var6 = 0;
@@ -61,19 +61,19 @@ final class eg extends hf {
                     var4_int = 1;
                     break L3;
                   }
-                  if ((var9 == 43) &&
-                      (param3)) {
+                  if (var9 == 43 &&
+                      param3) {
                     break L3;
                   }
                 }
-                if ((48 <= var9) &&
-                    (var9 <= 57)) {
+                if (48 <= var9 &&
+                    var9 <= 57) {
                   var9 -= 48;
-                } else if ((65 <= var9) &&
-                    (90 >= var9)) {
+                } else if (65 <= var9 &&
+                    90 >= var9) {
                   var9 -= 55;
-                } else if ((var9 >= 97) &&
-                    (122 >= var9)) {
+                } else if (var9 >= 97 &&
+                    122 >= var9) {
                   var9 -= 87;
                 } else {
                   throw new NumberFormatException();

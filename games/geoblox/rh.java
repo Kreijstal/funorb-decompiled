@@ -44,9 +44,9 @@ final class rh {
             }
             if (null == var2.field_K) {
               var2.b(true);
-              if ((3 == var2.field_z) &&
-                  (var2.field_t) &&
-                  (0 >= var2.field_E)) {
+              if (3 == var2.field_z &&
+                  var2.field_t &&
+                  0 >= var2.field_E) {
                 w.field_f = true;
               }
               if (var1_float < (var2.field_o - 320.0f) * (-320.0f + var2.field_o) + (var2.field_v - 240.0f) * (var2.field_v - 240.0f)) {
@@ -75,7 +75,7 @@ final class rh {
     }
 
     final int c(int param0, int param1) {
-        if (!(this.b(param1, 3))) {
+        if (!this.b(param1, 3)) {
             return 0;
         }
         if (param0 != -9467) {
@@ -167,7 +167,7 @@ final class rh {
         if (param1 != -1) {
             return ((boolean[]) (this.field_f[3]))[0];
         }
-        if (!(this.a(0))) {
+        if (!this.a(0)) {
             return false;
         }
         if (0 > param2 || param0 < 0 || this.field_c.field_k.length <= param2 || this.field_c.field_k[param2] <= param0) {
@@ -301,7 +301,7 @@ final class rh {
         if (!this.a(0)) {
             return null;
         }
-        if ((this.field_c.field_k.length == 1)) {
+        if (this.field_c.field_k.length == 1) {
             return this.a(0, param0 - 56472, param1);
         }
         if (param0 != 28319) {
@@ -310,17 +310,17 @@ final class rh {
         if (!this.b(param1, 3)) {
             return null;
         }
-        if ((this.field_c.field_k[param1] == 1)) {
+        if (this.field_c.field_k[param1] == 1) {
             return this.a(param1, param0 ^ -872, 0);
         }
         throw new RuntimeException();
     }
 
     final synchronized boolean a(byte param0, int param1) {
-        if (!(this.b(param1, 3))) {
+        if (!this.b(param1, 3)) {
             return false;
         }
-        if ((this.field_f[param1] != null)) {
+        if (this.field_f[param1] != null) {
             return true;
         }
         if (param0 != 102) {
@@ -414,10 +414,10 @@ final class rh {
           }
           L4: {
             if (param2 != null) {
-              if (((param2[0] != 0) ||
-                  (param2[1] != 0) ||
-                  (param2[2] != 0) ||
-                  (0 != param2[3]))) {
+              if (param2[0] != 0 ||
+                  param2[1] != 0 ||
+                  param2[2] != 0 ||
+                  0 != param2[3]) {
                 var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
                 var24 = var34;
                 var9 = var24;
@@ -577,14 +577,14 @@ final class rh {
     }
 
     final synchronized boolean a(byte param0, int param1, int param2) {
-        if (!(this.b(param2, -1, param1))) {
+        if (!this.b(param2, -1, param1)) {
             return false;
         }
         if (param0 != 37) {
             return true;
         }
-        if ((null != this.field_e[param1]) &&
-            ((this.field_e[param1][param2] != null))) {
+        if (null != this.field_e[param1] &&
+            this.field_e[param1][param2] != null) {
             return true;
         }
         if (this.field_f[param1] != null) {
@@ -616,8 +616,8 @@ final class rh {
             return (byte[]) (stackIn_4_0);
           }
           var5 = null;
-          if (((this.field_e[param0] == null) ||
-              (null == this.field_e[param0][param3]))) {
+          if (this.field_e[param0] == null ||
+              null == this.field_e[param0][param3]) {
             if (!this.a(param3, 4, param2, param0)) {
               this.a(param0, -118);
               if (!this.a(param3, 4, param2, param0)) {
@@ -888,7 +888,7 @@ final class rh {
 
     final synchronized int b(byte param0, int param1) {
         boolean discarded$0 = false;
-        if (!(this.b(param1, 3))) {
+        if (!this.b(param1, 3)) {
             return 0;
         }
         if (null != this.field_f[param1]) {
@@ -924,15 +924,15 @@ final class rh {
           for (var5 = 0; var5 < var4; var5++) {
             var2_long = var2_long * 37L;
             var6 = param0.charAt(var5);
-            if ((var6 >= 65) &&
-                (var6 <= 90)) {
+            if (var6 >= 65 &&
+                var6 <= 90) {
               var2_long = var2_long + (long)(-65 + (1 + var6));
-            } else if ((var6 >= 97) &&
-                (var6 <= 122)) {
+            } else if (var6 >= 97 &&
+                var6 <= 122) {
               var2_long = var2_long + (long)(-96 + var6);
             } else {
-              if ((48 <= var6) &&
-                  (57 >= var6)) {
+              if (48 <= var6 &&
+                  57 >= var6) {
                 var2_long = var2_long + (long)(-48 + var6 + 27);
               }
             }

@@ -71,8 +71,8 @@ class ff implements dh, cc {
               var12 = this.field_i;
               if (var12 != 0) {
                 if (var12 != 2) {
-                  if ((var12 != 3) &&
-                      (var12 != 1)) {
+                  if (var12 != 3 &&
+                      var12 != 1) {
                   }
                   var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> 1) + this.field_n.field_o;
                 } else {
@@ -82,8 +82,8 @@ class ff implements dh, cc {
                 var11 = this.field_n.field_o;
               }
               var12 = this.field_g;
-              if ((var12 != 0) &&
-                  (var12 != 3)) {
+              if (var12 != 0 &&
+                  var12 != 3) {
                 if (var12 == 1) {
                   this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                   break L0;
@@ -154,8 +154,8 @@ class ff implements dh, cc {
           var6 = this.field_i;
           if (var6 != 0) {
             if (var6 != 2) {
-              if ((var6 != 3) &&
-                  (var6 == 1)) {
+              if (var6 != 3 &&
+                  var6 == 1) {
               }
               var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
             } else {
@@ -165,8 +165,8 @@ class ff implements dh, cc {
             var5 = this.field_n.field_o;
           }
           var6 = this.field_g;
-          if ((var6 != 0) &&
-              (var6 != 3)) {
+          if (var6 != 0 &&
+              var6 != 3) {
             if (var6 == 1) {
               if (!(param1.field_w instanceof vc)) {
                 return;
@@ -472,7 +472,7 @@ class ff implements dh, cc {
     }
 
     public void a(int param0, int param1, int param2, boolean param3, el param4) {
-        if ((null == this.field_n)) {
+        if (null == this.field_n) {
             return;
         }
         try {

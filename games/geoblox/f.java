@@ -84,7 +84,7 @@ class f extends qf implements pl {
     }
 
     final static void i(byte param0) {
-        if ((vl.field_n != null)) {
+        if (vl.field_n != null) {
             return;
         }
         if (param0 >= -48) {
@@ -104,7 +104,7 @@ class f extends qf implements pl {
     }
 
     final void h(byte param0) {
-        if (!(this.field_I)) {
+        if (!this.field_I) {
             return;
         }
         this.field_I = false;
@@ -217,8 +217,8 @@ class f extends qf implements pl {
           if (30 > gi.field_e % param0) {
             uf.field_b = 0 + ka.field_h;
           }
-          if ((el.field_o.field_x) &&
-              (gi.field_e % 18 == 0)) {
+          if (el.field_o.field_x &&
+              gi.field_e % 18 == 0) {
             if (gg.field_b == 0) {
               if (!pf.field_D) {
                 g.field_j = g.field_j % 4;
@@ -317,22 +317,22 @@ class f extends qf implements pl {
         } else {
           var1_int = -ka.field_h + uf.field_b;
           if (1 != jk.field_d) {
-            if ((2 == jk.field_d) &&
-                (5 > var1_int)) {
+            if (2 == jk.field_d &&
+                5 > var1_int) {
               uf.field_b = uf.field_b + 1;
             } else {
               if (0 == jk.field_d) {
                 if (var1_int < 3) {
                   uf.field_b = uf.field_b + 1;
                 } else {
-                  if ((0 == jk.field_d) &&
-                      (3 < var1_int)) {
+                  if (0 == jk.field_d &&
+                      3 < var1_int) {
                     uf.field_b = uf.field_b - 1;
                   }
                 }
               } else {
-                if ((0 == jk.field_d) &&
-                    (3 < var1_int)) {
+                if (0 == jk.field_d &&
+                    3 < var1_int) {
                   uf.field_b = uf.field_b - 1;
                 }
               }
@@ -342,8 +342,8 @@ class f extends qf implements pl {
             if (30 > gi.field_e % param0) {
               uf.field_b = 0 + ka.field_h;
             }
-            if ((el.field_o.field_x) &&
-                (gi.field_e % 18 == 0)) {
+            if (el.field_o.field_x &&
+                gi.field_e % 18 == 0) {
               if (gg.field_b == 0) {
                 if (!pf.field_D) {
                   g.field_j = g.field_j % 4;
@@ -437,22 +437,22 @@ class f extends qf implements pl {
             return;
           }
           if (var1_int <= 1) {
-            if ((2 == jk.field_d) &&
-                (5 > var1_int)) {
+            if (2 == jk.field_d &&
+                5 > var1_int) {
               uf.field_b = uf.field_b + 1;
             } else {
               if (0 == jk.field_d) {
                 if (var1_int < 3) {
                   uf.field_b = uf.field_b + 1;
                 } else {
-                  if ((0 == jk.field_d) &&
-                      (3 < var1_int)) {
+                  if (0 == jk.field_d &&
+                      3 < var1_int) {
                     uf.field_b = uf.field_b - 1;
                   }
                 }
               } else {
-                if ((0 == jk.field_d) &&
-                    (3 < var1_int)) {
+                if (0 == jk.field_d &&
+                    3 < var1_int) {
                   uf.field_b = uf.field_b - 1;
                 }
               }

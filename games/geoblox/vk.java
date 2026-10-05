@@ -36,8 +36,8 @@ abstract class vk {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
           }
-          if (((param0 == null) ||
-                (param0.length != var4_int))) {
+          if (param0 == null ||
+                param0.length != var4_int) {
             param0 = new byte[var4_int];
           }
           var5 = param1.e((byte) -17, 3);

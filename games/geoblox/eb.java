@@ -56,20 +56,20 @@ final class eb {
             this.a(0, var5, -123);
             return false;
           }
-          if ((var5.field_l >= 0) &&
-              (!var5.field_i.a((byte) 102, var5.field_l))) {
+          if (var5.field_l >= 0 &&
+              !var5.field_i.a((byte) 102, var5.field_l)) {
             this.a(var5.field_i.b((byte) 36, var5.field_l), var5, -119);
             return false;
           }
-          if ((null != var5.field_f) &&
-              (!var5.field_i.a(var5.field_f, (byte) -126))) {
+          if (null != var5.field_f &&
+              !var5.field_i.a(var5.field_f, (byte) -126)) {
             this.a(var5.field_i.a(0, var5.field_f), var5, -123);
             return false;
           }
-          if ((var5.field_l < 0) &&
-              (var5.field_f == null) &&
-              (null != var5.field_m) &&
-              (!var5.field_i.b(true))) {
+          if (var5.field_l < 0 &&
+              var5.field_f == null &&
+              null != var5.field_m &&
+              !var5.field_i.b(true)) {
             this.a(var5.field_i.b((byte) 106), var5, -108);
             return false;
           }
@@ -105,7 +105,7 @@ final class eb {
                 }
                 return -1;
             }
-            if ((param0 == 51)) {
+            if (param0 == 51) {
                 return 2;
             }
             if (wg.field_i.field_b < 2) {

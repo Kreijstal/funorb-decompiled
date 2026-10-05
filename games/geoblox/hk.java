@@ -20,8 +20,8 @@ class hk extends el {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this.field_D) &&
-              (this.a(param4, -1, param5, param0, param2))) {
+          if (this.field_D &&
+              this.a(param4, -1, param5, param0, param2)) {
             this.a((byte) -116, param6);
             this.field_f = param3;
             if (null != this.field_u) {
@@ -82,8 +82,8 @@ class hk extends el {
                 if (gf.field_a == this.field_f) {
                     return;
                 }
-                if ((this.a(qa.field_a, -1, ue.field_e, param1, param3)) &&
-                    ((gf.field_a == 0))) {
+                if (this.a(qa.field_a, -1, ue.field_e, param1, param3) &&
+                    gf.field_a == 0) {
                     this.a(ue.field_e - param1, -28922, qa.field_a - param3, this.field_f);
                 }
                 this.a(param3, qa.field_a, !param0 ? true : false, param2, param1, ue.field_e);
@@ -108,8 +108,8 @@ class hk extends el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.e((byte) 54)) {
-            if (((param0 == 84) ||
-                (param0 == 83))) {
+            if (param0 == 84 ||
+                param0 == 83) {
               this.a(-1, -28922, -1, 1);
               return true;
             }
@@ -185,12 +185,12 @@ class hk extends el {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this.field_D) &&
-              (this.field_z)) {
+          if (this.field_D &&
+              this.field_z) {
             param1.d(-128);
             this.field_A = true;
-            if ((null != this.field_u) &&
-                (this.field_u instanceof rk)) {
+            if (null != this.field_u &&
+                this.field_u instanceof rk) {
               ((rk) ((Object) this.field_u)).a(3520, (el) (this), this.field_A);
             }
             if (param0 <= -30) {

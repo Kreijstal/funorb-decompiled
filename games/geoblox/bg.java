@@ -39,8 +39,8 @@ final class bg extends m {
           var10 = var10 + var12;
           var9 = var9 + var12;
         }
-        if ((param3 > 0) &&
-            (param4 > 0)) {
+        if (param3 > 0 &&
+            param4 > 0) {
           if (vb.field_a == null) {
             bg.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {

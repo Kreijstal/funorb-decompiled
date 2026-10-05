@@ -159,8 +159,8 @@ final class hi extends ee implements ta, pl {
         var40 = Geoblox.field_C;
         try {
           var44 = param5;
-          if ((null != var44.field_n) &&
-              (var44.field_v > 1)) {
+          if (null != var44.field_n &&
+              var44.field_v > 1) {
             var60 = var44.field_n;
             va.a(0, var60, 0, uh.field_x, (byte) -85);
           } else {
@@ -227,11 +227,11 @@ final class hi extends ee implements ta, pl {
               stackIn_33_0 = -1;
             }
             var20 = stackIn_33_0;
-            if ((l.field_i != null) &&
-                (param5.field_G != null) &&
-                (param5.field_G.length > var14) &&
-                (param5.field_G[var14] != -1) &&
-                (l.field_i.length > param5.field_G[var14])) {
+            if (l.field_i != null &&
+                param5.field_G != null &&
+                param5.field_G.length > var14 &&
+                param5.field_G[var14] != -1 &&
+                l.field_i.length > param5.field_G[var14]) {
               stackIn_40_0 = l.field_i[param5.field_G[var14]];
             } else {
               stackIn_40_0 = null;
@@ -243,8 +243,8 @@ final class hi extends ee implements ta, pl {
             var25 = dj.field_N[var16];
             var26 = sh.field_x[var17];
             var27 = dj.field_N[var17];
-            if ((var18 == var19) &&
-                (var20 == var19)) {
+            if (var18 == var19 &&
+                var20 == var19) {
               var28 = var54[var18];
               var29 = var64[var18];
               if (var21 != null) {
@@ -319,10 +319,10 @@ final class hi extends ee implements ta, pl {
           for (var7 = 0; var7 < var6_int; var7++) {
             L1: {
               var8 = param0.charAt(param2 + var7);
-              if ((((0 >= var8)) ||
-                  ((var8 >= 128)))) {
-                if ((((var8 < 160)) ||
-                    ((var8 > 255)))) {
+              if (0 >= var8 ||
+                  var8 >= 128) {
+                if (var8 < 160 ||
+                    var8 > 255) {
                   if (var8 == 8364) {
                     param1[var7 + param4] = (byte)-128;
                     break L1;

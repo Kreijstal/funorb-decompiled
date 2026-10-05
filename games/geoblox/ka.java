@@ -77,8 +77,8 @@ abstract class ka {
           if (ki.field_d == 97) {
             this.a((byte) 90, param0);
           } else {
-            if (((ki.field_d == 84) ||
-                (ki.field_d == 83))) {
+            if (ki.field_d == 84 ||
+                ki.field_d == 83) {
               this.b(param0, (byte) -2);
             }
           }
@@ -122,9 +122,9 @@ abstract class ka {
 
     int a(int param0, int param1, byte param2) {
         int var4;
-        if ((this.field_j <= param0) &&
-            (param0 < this.field_f) &&
-            (this.field_k <= param1)) {
+        if (this.field_j <= param0 &&
+            param0 < this.field_f &&
+            this.field_k <= param1) {
           if (param2 < 20) {
             return 81;
           }
@@ -167,8 +167,8 @@ abstract class ka {
               this.field_g = false;
             }
           } else {
-            if ((gf.field_a != 0) &&
-                (this.field_g)) {
+            if (gf.field_a != 0 &&
+                this.field_g) {
               var2 = this.field_b;
               if (var2 == -1) {
                 break L0;

@@ -151,8 +151,8 @@ final class r extends f implements pl {
                 stackIn_22_0 = (var3 != 0) ? 0 : 1;
                 var3 = stackIn_22_0;
               } else {
-                if ((var5 == 34) &&
-                    (var3 == 0)) {
+                if (var5 == 34 &&
+                    var3 == 0) {
                   stackIn_27_0 = ii.field_h;
                   return stackIn_27_0;
                 }
@@ -166,9 +166,9 @@ final class r extends f implements pl {
             L1: {
               var5 = param0.charAt(var4);
               if (var5 == 46) {
-                if ((0 != var4) &&
-                    (var4 != -1 + var2_int) &&
-                    (var3 == 0)) {
+                if (0 != var4 &&
+                    var4 != -1 + var2_int &&
+                    var3 == 0) {
                   var3 = 1;
                   break L1;
                 }
@@ -210,7 +210,7 @@ final class r extends f implements pl {
     }
 
     public final void a(int param0, byte param1, int param2, int param3, hk param4) {
-        if ((this.field_vb)) {
+        if (this.field_vb) {
             b.a(true, false, false);
             return;
         }
@@ -230,10 +230,10 @@ final class r extends f implements pl {
         if (param0 != -1) {
             field_sb = (String) null;
         }
-        if ((this.field_I) &&
-            (!(this.field_wb))) {
+        if (this.field_I &&
+            !this.field_wb) {
             var2 = n.d((byte) 93);
-            if ((var2 != null)) {
+            if (var2 != null) {
                 this.a(false, var2, (byte) -69);
             }
         }

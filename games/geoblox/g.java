@@ -109,11 +109,11 @@ final class g extends q {
         try {
           var3 = this.field_n.field_s.toLowerCase();
           var4 = param0.toLowerCase();
-          if ((0 < var3.length()) &&
-              (var4.length() > 0)) {
+          if (0 < var3.length() &&
+              var4.length() > 0) {
             var5 = var3.lastIndexOf("@");
-            if ((0 <= var5) &&
-                (var3.length() - 1 > var5)) {
+            if (0 <= var5 &&
+                var3.length() - 1 > var5) {
               var6 = var3.substring(0, var5);
               var7 = var3.substring(var5 + 1);
               if (var4.indexOf(var6) >= 0) {

@@ -173,9 +173,9 @@ final class vb {
             return;
           }
           if (param0 + param2 > field_e) {
-            if ((param0 < field_k) &&
-                (param1 + param3 >= field_i) &&
-                (param1 < field_d)) {
+            if (param0 < field_k &&
+                param1 + param3 >= field_i &&
+                param1 < field_d) {
               var10 = var6 + (var7 - param4) * field_f;
               var11 = var8 + (var7 - param4) * field_f;
               var12 = var6 + var7 * field_f;
@@ -188,10 +188,10 @@ final class vb {
               var19 = 0;
               var20 = param4 * param4;
               var21 = var20 - var18;
-              if ((param0 >= field_e) &&
-                  (param0 + param2 < field_k) &&
-                  (param1 >= field_i) &&
-                  (param1 + param3 < field_d)) {
+              if (param0 >= field_e &&
+                  param0 + param2 < field_k &&
+                  param1 >= field_i &&
+                  param1 + param3 < field_d) {
                 for (var22 = var12; var22 <= var14; var22 = var22 + field_f) {
                   field_c[var22 - var18] = param5;
                 }
@@ -257,36 +257,36 @@ final class vb {
                 if (var18 < var19) {
                   return;
                 }
-                if ((var7 - var18 >= field_i) &&
-                    (var7 - var18 < field_d)) {
-                  if ((var6 - var19 >= field_e) &&
-                      (var6 - var19 < field_k)) {
+                if (var7 - var18 >= field_i &&
+                    var7 - var18 < field_d) {
+                  if (var6 - var19 >= field_e &&
+                      var6 - var19 < field_k) {
                     field_c[var10 - var19] = param5;
                   }
-                  if ((var8 + var19 >= field_e) &&
-                      (var8 + var19 < field_k)) {
+                  if (var8 + var19 >= field_e &&
+                      var8 + var19 < field_k) {
                     field_c[var11 + var19] = param5;
                   }
                 }
-                if ((var7 - var19 >= field_i) &&
-                    (var7 - var19 < field_d)) {
-                  if ((var6 - var18 >= field_e) &&
-                      (var6 - var18 < field_k)) {
+                if (var7 - var19 >= field_i &&
+                    var7 - var19 < field_d) {
+                  if (var6 - var18 >= field_e &&
+                      var6 - var18 < field_k) {
                     field_c[var12 - var18] = param5;
                   }
-                  if ((var8 + var18 >= field_e) &&
-                      (var8 + var18 < field_k)) {
+                  if (var8 + var18 >= field_e &&
+                      var8 + var18 < field_k) {
                     field_c[var13 + var18] = param5;
                   }
                 }
-                if ((var9 + var19 >= field_i) &&
-                    (var9 + var19 < field_d)) {
-                  if ((var6 - var18 >= field_e) &&
-                      (var6 - var18 < field_k)) {
+                if (var9 + var19 >= field_i &&
+                    var9 + var19 < field_d) {
+                  if (var6 - var18 >= field_e &&
+                      var6 - var18 < field_k) {
                     field_c[var14 - var18] = param5;
                   }
-                  if ((var8 + var18 >= field_e) &&
-                      (var8 + var18 < field_k)) {
+                  if (var8 + var18 >= field_e &&
+                      var8 + var18 < field_k) {
                     field_c[var15 + var18] = param5;
                   }
                 }
@@ -296,8 +296,8 @@ final class vb {
                 if (var9 + var18 >= field_d) {
                   continue;
                 }
-                if ((var6 - var19 >= field_e) &&
-                    (var6 - var19 < field_k)) {
+                if (var6 - var19 >= field_e &&
+                    var6 - var19 < field_k) {
                   field_c[var16 - var19] = param5;
                 }
                 if (var8 + var19 < field_e) {
@@ -640,8 +640,8 @@ final class vb {
         }
         L4: while (var14 < param1) {
           while (true) {
-            if ((var19 > var15) &&
-                (var18 > var15)) {
+            if (var19 > var15 &&
+                var18 > var15) {
               var20 = param0 - var16 + 1;
               if (var20 < field_e) {
                 var20 = field_e;
@@ -815,8 +815,8 @@ final class vb {
         }
         L4: while (var6 < param1) {
           while (true) {
-            if ((var11 > var7) &&
-                (var10 > var7)) {
+            if (var11 > var7 &&
+                var10 > var7) {
               var12 = param0 - var8 + 1;
               if (var12 < field_e) {
                 var12 = field_e;
@@ -926,8 +926,8 @@ final class vb {
           }
           while (param1 <= param3) {
             var6 = param0 >> 16;
-            if ((var6 >= field_e) &&
-                (var6 < field_k)) {
+            if (var6 >= field_e &&
+                var6 < field_k) {
               field_c[var6 + param1 * field_f] = param4;
             }
             param0 = param0 + var5;
@@ -949,8 +949,8 @@ final class vb {
         }
         while (param0 <= param2) {
           var6 = param1 >> 16;
-          if ((var6 >= field_i) &&
-              (var6 < field_d)) {
+          if (var6 >= field_i &&
+              var6 < field_d) {
             field_c[param0 + var6 * field_f] = param4;
           }
           param1 = param1 + var5;
@@ -980,9 +980,9 @@ final class vb {
             return;
           }
           if (param0 + param2 >= field_e) {
-            if ((param0 - param2 < field_k) &&
-                (param1 + param2 >= field_i) &&
-                (param1 - param2 < field_d)) {
+            if (param0 - param2 < field_k &&
+                param1 + param2 >= field_i &&
+                param1 - param2 < field_d) {
               var4 = param0 + param1 * field_f;
               var5 = var4;
               var6 = var4 - param2 * field_f;
@@ -991,10 +991,10 @@ final class vb {
               var9 = 0;
               param2 = param2 * param2;
               var10 = param2 - var8;
-              if ((param0 - var8 >= field_e) &&
-                  (param0 + var8 < field_k) &&
-                  (param1 - var8 >= field_i) &&
-                  (param1 + var8 < field_d)) {
+              if (param0 - var8 >= field_e &&
+                  param0 + var8 < field_k &&
+                  param1 - var8 >= field_i &&
+                  param1 + var8 < field_d) {
                 field_c[var4 - var8] = param3;
                 field_c[var4 + var8] = param3;
                 field_c[var6] = param3;
@@ -1025,43 +1025,43 @@ final class vb {
                   continue;
                 }
               }
-              if ((param0 - var8 >= field_e) &&
-                  (param1 >= field_i) &&
-                  (param1 < field_d)) {
+              if (param0 - var8 >= field_e &&
+                  param1 >= field_i &&
+                  param1 < field_d) {
                 field_c[var4 - var8] = param3;
               }
-              if ((param0 + var8 < field_k) &&
-                  (param1 >= field_i) &&
-                  (param1 < field_d)) {
+              if (param0 + var8 < field_k &&
+                  param1 >= field_i &&
+                  param1 < field_d) {
                 field_c[var4 + var8] = param3;
               }
               if (param1 - var8 >= field_i) {
                 if (param0 >= field_e) {
                   if (param0 < field_k) {
                     field_c[var6] = param3;
-                    if ((param1 + var8 < field_d) &&
-                        (param0 >= field_e) &&
-                        (param0 < field_k)) {
+                    if (param1 + var8 < field_d &&
+                        param0 >= field_e &&
+                        param0 < field_k) {
                       field_c[var7] = param3;
                     }
                   } else {
-                    if ((param1 + var8 < field_d) &&
-                        (param0 >= field_e) &&
-                        (param0 < field_k)) {
+                    if (param1 + var8 < field_d &&
+                        param0 >= field_e &&
+                        param0 < field_k) {
                       field_c[var7] = param3;
                     }
                   }
                 } else {
-                  if ((param1 + var8 < field_d) &&
-                      (param0 >= field_e) &&
-                      (param0 < field_k)) {
+                  if (param1 + var8 < field_d &&
+                      param0 >= field_e &&
+                      param0 < field_k) {
                     field_c[var7] = param3;
                   }
                 }
               } else {
-                if ((param1 + var8 < field_d) &&
-                    (param0 >= field_e) &&
-                    (param0 < field_k)) {
+                if (param1 + var8 < field_d &&
+                    param0 >= field_e &&
+                    param0 < field_k) {
                   field_c[var7] = param3;
                 }
               }
@@ -1080,36 +1080,36 @@ final class vb {
                 if (var8 < var9) {
                   return;
                 }
-                if ((param1 - var8 >= field_i) &&
-                    (param1 - var8 < field_d)) {
-                  if ((param0 - var9 >= field_e) &&
-                      (param0 - var9 < field_k)) {
+                if (param1 - var8 >= field_i &&
+                    param1 - var8 < field_d) {
+                  if (param0 - var9 >= field_e &&
+                      param0 - var9 < field_k) {
                     field_c[var6 - var9] = param3;
                   }
-                  if ((param0 + var9 >= field_e) &&
-                      (param0 + var9 < field_k)) {
+                  if (param0 + var9 >= field_e &&
+                      param0 + var9 < field_k) {
                     field_c[var6 + var9] = param3;
                   }
                 }
-                if ((param1 - var9 >= field_i) &&
-                    (param1 - var9 < field_d)) {
-                  if ((param0 - var8 >= field_e) &&
-                      (param0 - var8 < field_k)) {
+                if (param1 - var9 >= field_i &&
+                    param1 - var9 < field_d) {
+                  if (param0 - var8 >= field_e &&
+                      param0 - var8 < field_k) {
                     field_c[var4 - var8] = param3;
                   }
-                  if ((param0 + var8 >= field_e) &&
-                      (param0 + var8 < field_k)) {
+                  if (param0 + var8 >= field_e &&
+                      param0 + var8 < field_k) {
                     field_c[var4 + var8] = param3;
                   }
                 }
-                if ((param1 + var9 >= field_i) &&
-                    (param1 + var9 < field_d)) {
-                  if ((param0 - var8 >= field_e) &&
-                      (param0 - var8 < field_k)) {
+                if (param1 + var9 >= field_i &&
+                    param1 + var9 < field_d) {
+                  if (param0 - var8 >= field_e &&
+                      param0 - var8 < field_k) {
                     field_c[var5 - var8] = param3;
                   }
-                  if ((param0 + var8 >= field_e) &&
-                      (param0 + var8 < field_k)) {
+                  if (param0 + var8 >= field_e &&
+                      param0 + var8 < field_k) {
                     field_c[var5 + var8] = param3;
                   }
                 }
@@ -1119,8 +1119,8 @@ final class vb {
                 if (param1 + var8 >= field_d) {
                   continue;
                 }
-                if ((param0 - var9 >= field_e) &&
-                    (param0 - var9 < field_k)) {
+                if (param0 - var9 >= field_e &&
+                    param0 - var9 < field_k) {
                   field_c[var7 - var9] = param3;
                 }
                 if (param0 + var9 < field_e) {
@@ -1283,8 +1283,8 @@ final class vb {
         }
         L4: while (var11 < var7) {
           while (true) {
-            if ((var16 > var12) &&
-                (var15 > var12)) {
+            if (var16 > var12 &&
+                var15 > var12) {
               var17 = var6 - var13 + 1;
               if (var17 < field_e) {
                 var17 = field_e;
@@ -1431,8 +1431,8 @@ final class vb {
         int[] var27;
         int[] var28;
         int[] var29;
-        if (((field_g == null) ||
-              (!(field_g.length >= param8)))) {
+        if (field_g == null ||
+              !(field_g.length >= param8)) {
           field_g = new int[param8];
           field_h = new int[param8];
           field_j = new int[param8];

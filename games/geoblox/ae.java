@@ -177,8 +177,8 @@ final class ae {
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_f) {
-            if ((var2 != 0) &&
-                (ua.b() == 0)) {
+            if (var2 != 0 &&
+                ua.b() == 0) {
               this.field_a[var14] = 0;
               var14++;
               continue;

@@ -59,8 +59,8 @@ final class ul {
             field_a = (dm) null;
           }
           while (var3 != null) {
-            if (((!(var3.field_m <= 1)) ||
-                (!(var3.field_N <= 1)))) {
+            if (!(var3.field_m <= 1) ||
+                !(var3.field_N <= 1)) {
               var3.field_K = bh.field_c;
               stackIn_10_0 = (var3.field_m <= 1) ? 0 : 1;
               var4 = stackIn_10_0;
@@ -80,8 +80,8 @@ final class ul {
                   stackIn_27_0 = 0;
                 }
                 var8 = stackIn_27_0;
-                if (((var7 != 0) ||
-                    (var8 != 0))) {
+                if (var7 != 0 ||
+                    var8 != 0) {
                   for (var9 = var6 + 1; var9 < var3.field_L; var9++) {
                     if (var8 != 0) {
                       stackIn_38_0 = (var3.field_n[var9].field_C == var3.field_C) ? 1 : 0;
@@ -95,8 +95,8 @@ final class ul {
                       stackIn_44_0 = 0;
                     }
                     var11 = stackIn_44_0;
-                    if (((var10 != 0) ||
-                        (var11 != 0))) {
+                    if (var10 != 0 ||
+                        var11 != 0) {
                       var3.field_n[var6].field_K = bh.field_c;
                       var3.field_n[var9].field_K = bh.field_c;
                       var13 = var3.field_n[var6].field_H;
@@ -110,8 +110,8 @@ final class ul {
                       if (var11 != 0) {
                         dd.field_D = dd.field_D + 1;
                       }
-                      if ((var11 != 0) &&
-                          (var10 != 0)) {
+                      if (var11 != 0 &&
+                          var10 != 0) {
                       }
                       if (var10 != 0) {
                         dk.field_b = dk.field_b + 1;

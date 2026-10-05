@@ -132,10 +132,10 @@ final class pi extends vf {
         dm var19;
         var14 = Geoblox.field_C;
         var6 = this.field_M.a((byte) -105);
-        if ((var6 != bf.field_g) &&
-            (var6 != si.field_n)) {
+        if (var6 != bf.field_g &&
+            var6 != si.field_n) {
           var5 = this.field_M.c(-21666);
-          if ((var5 == null)) {
+          if (var5 == null) {
             var5 = this.field_N;
           }
         } else {

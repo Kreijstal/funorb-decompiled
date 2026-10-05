@@ -100,7 +100,7 @@ final class cm extends cj {
               var16 = 0;
               var17 = 0;
               var18 = var27.c((byte) 34);
-              if ((0 < var18)) {
+              if (0 < var18) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.c((byte) 34);
                   var21 = id.field_b[var20].field_d;
@@ -117,8 +117,8 @@ final class cm extends cj {
                     }
                     var12++;
                   }
-                  if ((var21 != null) &&
-                      (ge.a(var21, (byte) 12))) {
+                  if (var21 != null &&
+                      ge.a(var21, (byte) 12)) {
                     var8[1][var13] = wd.field_f;
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
@@ -130,8 +130,8 @@ final class cm extends cj {
                       var11[1][incrementValue$3] = var27.a((byte) -122);
                     }
                   }
-                  if ((var14 < var6) &&
-                      (!id.field_b[var20].field_c)) {
+                  if (var14 < var6 &&
+                      !id.field_b[var20].field_c) {
                     id.field_b[var20].field_c = true;
                     var8[2][var14] = var21;
                     var9[2][var14] = id.field_b[var20].field_a;
@@ -192,10 +192,10 @@ final class cm extends cj {
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
             if (null != oc.field_e) {
-              if ((((param1 < 0)) ||
-                  (pk.field_l == eh.field_b))) {
-                if ((0 == fj.field_q.field_f) &&
-                    (~oa.a(-12520) < ~(10000L + v.field_r))) {
+              if (param1 < 0 ||
+                  pk.field_l == eh.field_b) {
+                if (0 == fj.field_q.field_f &&
+                    ~oa.a(-12520) < ~(10000L + v.field_r)) {
                   fj.field_q.a(param1, (byte) -76);
                 }
                 if (param0 > ~fj.field_q.field_f) {
@@ -247,8 +247,8 @@ final class cm extends cj {
         do {
           var4++;
           this.field_c = this.field_c + param1;
-        } while ((var4 < 10) &&
-              (~this.field_c > ~this.field_e));
+        } while (var4 < 10 &&
+              ~this.field_c > ~this.field_e);
         if (this.field_e > this.field_c) {
           this.field_c = this.field_e;
         }
@@ -261,8 +261,8 @@ final class cm extends cj {
         long var2 = System.nanoTime();
         long var4 = -this.field_i + var2;
         this.field_i = var2;
-        if ((-5000000000L < var4) &&
-            ((5000000000L > var4))) {
+        if (-5000000000L < var4 &&
+            5000000000L > var4) {
             this.field_f[this.field_d] = var4;
             if (this.field_g < 1) {
                 this.field_g = this.field_g + 1;

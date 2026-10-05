@@ -134,8 +134,8 @@ final class al {
                 var4 = uj.a(';', true, var3);
                 for (var5 = 0; var5 < var4.length; var5++) {
                   var6 = var4[var5].indexOf('=');
-                  if ((var6 >= 0) &&
-                      (var4[var5].substring(0, var6).trim().equals(var8))) {
+                  if (var6 >= 0 &&
+                      var4[var5].substring(0, var6).trim().equals(var8)) {
                     return true;
                   }
                 }
@@ -172,7 +172,7 @@ final class al {
     }
 
     final static String b(int param0) {
-        if ((tf.field_d == kd.field_b)) {
+        if (tf.field_d == kd.field_b) {
             return oc.field_a;
         }
         if (tf.field_d == si.field_g) {

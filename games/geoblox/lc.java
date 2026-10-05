@@ -22,7 +22,7 @@ final class lc {
         try {
           var1 = (ja) ((Object) wd.field_e.g(0));
           do {
-            if ((var1 == null)) {
+            if (var1 == null) {
               if (param0 != 255) {
                 field_b = -11;
               }
@@ -31,22 +31,22 @@ final class lc {
             var1.b(true);
             var1 = (ja) ((Object) wd.field_e.d(1));
           } while (var10 == 0);
-          if ((((((kj.field_o[99]) &&
-                (ji.field_r.c(13519)))) ||
-              (!(~kb.field_c <= ~kc.field_a))) ||
-              ((ul.field_b == 0) &&
-                !(el.field_o.field_Y)))) {
-            if ((0 < wd.field_e.a(param0 ^ -170)) &&
-                (!el.field_o.field_N)) {
+          if (kj.field_o[99] &&
+                ji.field_r.c(13519) ||
+              !(~kb.field_c <= ~kc.field_a) ||
+              ul.field_b == 0 &&
+                !el.field_o.field_Y) {
+            if (0 < wd.field_e.a(param0 ^ -170) &&
+                !el.field_o.field_N) {
               ji.field_r.a(-48, wd.field_e.b((byte) -124));
               hd.f(2);
               kc.field_a = 0;
             }
           }
           kc.field_a = kc.field_a + 1;
-          if ((wd.field_e.a(param0 ^ 143) < 3) &&
-              (ma.c((byte) -53)) &&
-              (!el.field_o.b(true))) {
+          if (wd.field_e.a(param0 ^ 143) < 3 &&
+              ma.c((byte) -53) &&
+              !el.field_o.b(true)) {
             var1 = (ja) ((Object) ra.field_a.b((byte) -101));
             if (null != var1) {
               var2 = 2.0 * Math.random() * 3.141592653589793;

@@ -39,7 +39,7 @@ abstract class dd extends ee {
     boolean f(int param0) {
         int var2 = this.g(-75);
         int var3 = -this.field_H + var2;
-        if ((~var3 < param0)) {
+        if (~var3 < param0) {
             this.field_H = this.field_H + (var3 + 8 - 1) / 8;
         }
         if (var3 < 0) {
@@ -159,12 +159,12 @@ abstract class dd extends ee {
         el var2 = super.f((byte) -62);
         if (param0 > -60) {
             this.field_I = false;
-            if ((var2 != null)) {
+            if (var2 != null) {
                 return var2;
             }
             return (el) (this);
         }
-        if ((var2 != null)) {
+        if (var2 != null) {
             return var2;
         }
         return (el) (this);
@@ -176,7 +176,7 @@ abstract class dd extends ee {
             return;
         }
         if (256 <= this.field_H) {
-            if ((param3 != 0)) {
+            if (param3 != 0) {
                 return;
             }
             this.b(this.field_v + param0, 20, param1 + this.field_m);

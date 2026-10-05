@@ -9,8 +9,8 @@ final class jc {
     final static void a(int param0, boolean param1) {
         int var3;
         var3 = Geoblox.field_C;
-        if ((7 == param0) &&
-            (ka.field_h != 36)) {
+        if (7 == param0 &&
+            ka.field_h != 36) {
           ka.field_h = 36;
           pa.field_g = 110;
           nd.field_a = 6;
@@ -50,10 +50,10 @@ final class jc {
                     }
                   }
                 } else {
-                  if ((12 != ka.field_h) &&
-                      (ka.field_h != 24) &&
-                      (30 != ka.field_h) &&
-                      (36 != ka.field_h)) {
+                  if (12 != ka.field_h &&
+                      ka.field_h != 24 &&
+                      30 != ka.field_h &&
+                      36 != ka.field_h) {
                     td.a(-348, fl.field_c[26]);
                   }
                   nd.field_a = 2;
@@ -61,10 +61,10 @@ final class jc {
                 }
               }
             } else {
-              if ((ka.field_h != 0) &&
-                  (24 != ka.field_h) &&
-                  (ka.field_h != 30) &&
-                  (ka.field_h != 36)) {
+              if (ka.field_h != 0 &&
+                  24 != ka.field_h &&
+                  ka.field_h != 30 &&
+                  ka.field_h != 36) {
                 td.a(-348, fl.field_c[25]);
               }
               ka.field_h = 0;
@@ -73,10 +73,10 @@ final class jc {
           } else {
             field_a = (dm) null;
             if (param0 == 0) {
-              if ((ka.field_h != 0) &&
-                  (24 != ka.field_h) &&
-                  (ka.field_h != 30) &&
-                  (ka.field_h != 36)) {
+              if (ka.field_h != 0 &&
+                  24 != ka.field_h &&
+                  ka.field_h != 30 &&
+                  ka.field_h != 36) {
                 td.a(-348, fl.field_c[25]);
               }
               ka.field_h = 0;
@@ -108,10 +108,10 @@ final class jc {
                     }
                   }
                 } else {
-                  if ((12 != ka.field_h) &&
-                      (ka.field_h != 24) &&
-                      (30 != ka.field_h) &&
-                      (36 != ka.field_h)) {
+                  if (12 != ka.field_h &&
+                      ka.field_h != 24 &&
+                      30 != ka.field_h &&
+                      36 != ka.field_h) {
                     td.a(-348, fl.field_c[26]);
                   }
                   nd.field_a = 2;

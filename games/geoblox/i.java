@@ -121,8 +121,8 @@ final class i {
           var6 = param0 * 3;
           var7 = var5_int - 10;
           oe.l(0);
-          if ((param2.field_v > 0) &&
-              (null != param2.field_n)) {
+          if (param2.field_v > 0 &&
+              null != param2.field_n) {
             ma.a((byte) -35);
           }
           ch.field_b = 0;
@@ -152,11 +152,11 @@ final class i {
                   }
                 }
                 var12 = bj.field_j[var9];
-                if ((-2147483648 == var12)) {
+                if (-2147483648 == var12) {
                   break L4;
                 }
                 var13 = bj.field_j[var10];
-                if ((-2147483648 == var13)) {
+                if (-2147483648 == var13) {
                   break L4;
                 }
                 var14 = bj.field_j[var11];
@@ -184,8 +184,8 @@ final class i {
                     var18 = stackIn_39_0;
                     pj.field_i[var18] = var8;
                     ch.field_d[var16] = 1 + var17;
-                    if ((0 < param2.field_v) &&
-                        (null != param2.field_n)) {
+                    if (0 < param2.field_v &&
+                        null != param2.field_n) {
                       dupTemp$0 = param2.field_n[var8];
                       uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
                     }
@@ -199,8 +199,8 @@ final class i {
             }
             break;
           }
-          if ((stackIn_49_0 > ~param2.field_v) &&
-              (null != param2.field_n)) {
+          if (stackIn_49_0 > ~param2.field_v &&
+              null != param2.field_n) {
             var8 = 0;
             var9 = 0;
             while (!(uh.field_x.length <= var9)) {
@@ -269,8 +269,8 @@ final class i {
           var6 = param0 * 3;
           var7 = var5_int - 10;
           oe.l(0);
-          if ((param2.field_v > 0) &&
-              (null != param2.field_n)) {
+          if (param2.field_v > 0 &&
+              null != param2.field_n) {
             ma.a((byte) -35);
           }
           ch.field_b = 0;
@@ -300,11 +300,11 @@ final class i {
                   }
                 }
                 var12 = bj.field_j[var9];
-                if ((-2147483648 == var12)) {
+                if (-2147483648 == var12) {
                   break L4;
                 }
                 var13 = bj.field_j[var10];
-                if ((-2147483648 == var13)) {
+                if (-2147483648 == var13) {
                   break L4;
                 }
                 var14 = bj.field_j[var11];
@@ -332,8 +332,8 @@ final class i {
                     var18 = stackIn_39_0;
                     pj.field_i[var18] = var8;
                     ch.field_d[var16] = 1 + var17;
-                    if ((0 < param2.field_v) &&
-                        (null != param2.field_n)) {
+                    if (0 < param2.field_v &&
+                        null != param2.field_n) {
                       dupTemp$0 = param2.field_n[var8];
                       uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
                     }
@@ -347,8 +347,8 @@ final class i {
             }
             break;
           }
-          if ((stackIn_49_0 > ~param2.field_v) &&
-              (null != param2.field_n)) {
+          if (stackIn_49_0 > ~param2.field_v &&
+              null != param2.field_n) {
             var8 = 0;
             var9 = 0;
             while (!(uh.field_x.length <= var9)) {

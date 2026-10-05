@@ -34,9 +34,9 @@ final class fc {
           var1 = (ja) ((Object) bh.field_c.g(0));
           while (var1 != null) {
             var1.b(true);
-            if (((5 == var1.field_z) ||
-                (var1.field_z == 7) ||
-                (var1.field_z == 8))) {
+            if (5 == var1.field_z ||
+                var1.field_z == 7 ||
+                var1.field_z == 8) {
               pf.field_D = false;
               if (var1.field_G >= 3) {
                 ra.field_a.a(-115, var1);
@@ -53,7 +53,7 @@ final class fc {
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {
-        if ((hj.field_a == 11)) {
+        if (hj.field_a == 11) {
             w.a(31);
         }
         if (!param0) {

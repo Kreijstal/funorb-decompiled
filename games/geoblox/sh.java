@@ -56,8 +56,8 @@ abstract class sh extends el implements ql {
           if (param5 <= param0 + 1) {
             return;
           }
-          if ((param0 + 5 < param5) &&
-              (param3 != param2)) {
+          if (param0 + 5 < param5 &&
+              param3 != param2) {
             var7_int = (1 & (param3 & param2)) + (param2 >> 1) + (param3 >> 1);
             var8 = param0;
             var9 = param3;
@@ -160,11 +160,11 @@ abstract class sh extends el implements ql {
             return false;
           }
           var3 = oa.a(-12520);
-          if ((ab.field_b != 0) &&
-              (pc.field_f < 0)) {
+          if (ab.field_b != 0 &&
+              pc.field_f < 0) {
             var5_ref_ma = (ma) ((Object) va.field_c.g(0));
-            if ((var5_ref_ma != null) &&
-                (var3 > var5_ref_ma.field_f)) {
+            if (var5_ref_ma != null &&
+                var3 > var5_ref_ma.field_f) {
               var5_ref_ma.a(false);
               p.field_k = var5_ref_ma.field_g.length;
               eh.field_d.field_f = 0;
@@ -269,8 +269,8 @@ abstract class sh extends el implements ql {
 
     el e(int param0) {
         el var2 = this.field_A;
-        if ((var2 != null) &&
-            ((var2.e((byte) 54)))) {
+        if (var2 != null &&
+            var2.e((byte) 54)) {
             return var2;
         }
         if (param0 == -4863) {
@@ -282,8 +282,8 @@ abstract class sh extends el implements ql {
     }
 
     void a(int param0, int param1, byte param2, int param3) {
-        if ((0 == param3) &&
-            ((this.field_q != null))) {
+        if (0 == param3 &&
+            this.field_q != null) {
             this.field_q.a(param0, -50, param1, true, (el) (this));
         }
         int var5 = 85 % ((param2 - 1) / 43);
@@ -361,9 +361,9 @@ abstract class sh extends el implements ql {
     String c(byte param0) {
         String var3 = null;
         String var2 = super.c(param0);
-        if ((this.field_A != null)) {
+        if (this.field_A != null) {
             var3 = this.field_A.c((byte) 69);
-            if ((var3 != null)) {
+            if (var3 != null) {
                 return var3;
             }
         }
@@ -505,9 +505,9 @@ abstract class sh extends el implements ql {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((null != this.field_A) &&
-              (this.field_A.e((byte) 54)) &&
-              (this.field_A.a(param0, 13, param2, param3))) {
+          if (null != this.field_A &&
+              this.field_A.e((byte) 54) &&
+              this.field_A.a(param0, 13, param2, param3)) {
             return true;
           }
           if (param1 != 13) {

@@ -90,8 +90,8 @@ final class nb {
           stackIn_21_7 = 0.0f;
           stackIn_21_8 = (float)param3;
           stackIn_21_9 = (float)(-param3 + 240);
-          if ((var12 != 2) &&
-              (1 != var12)) {
+          if (var12 != 2 &&
+              1 != var12) {
             stackIn_23_10 = -1;
           } else {
             stackIn_23_10 = param2;

@@ -75,13 +75,13 @@ final class sl {
           }
           while (var2_int > var4) {
             var5 = param0.charAt(var4);
-            if ((var5 >= 65) &&
-                (var5 <= 90)) {
+            if (var5 >= 65 &&
+                var5 <= 90) {
               var3[var4] = (char)(-65 + (var5 + 97));
-            } else if ((((var5 < 97)) ||
-                  ((var5 > 122))) &&
-                (((var5 < 48)) ||
-                  ((var5 > 57)))) {
+            } else if ((var5 < 97 ||
+                  var5 > 122) &&
+                (var5 < 48 ||
+                  var5 > 57)) {
               var3[var4] = (char)95;
             } else {
               var3[var4] = (char)var5;

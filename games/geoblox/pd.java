@@ -22,7 +22,7 @@ final class pd {
     public final void exit() {
         if (this.field_b != null) {
             this.field_a.setDisplayMode(this.field_b);
-            if (!(this.field_a.getDisplayMode().equals(this.field_b))) {
+            if (!this.field_a.getDisplayMode().equals(this.field_b)) {
                 throw new RuntimeException("");
             }
             this.field_b = null;
@@ -102,8 +102,8 @@ final class pd {
               continue;
             }
             var10 = var7[var9].getRefreshRate();
-            if ((var8 != 0) &&
-                (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4))) {
+            if (var8 != 0 &&
+                Math.abs(-var6 + var10) >= Math.abs(-var6 + param4)) {
               var9++;
               continue;
             }

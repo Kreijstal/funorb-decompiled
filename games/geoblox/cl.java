@@ -35,8 +35,8 @@ final class cl {
           if (tf.field_d == si.field_g) {
             return null;
           }
-          if ((si.field_g == va.field_e) &&
-              (param1.equals(cg.field_k))) {
+          if (si.field_g == va.field_e &&
+              param1.equals(cg.field_k)) {
             si.field_g = uf.field_l;
             stackIn_8_0 = me.field_g;
             return stackIn_8_0;

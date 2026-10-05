@@ -20,8 +20,8 @@ final class ak {
             return true;
           }
           var3 = bj.a(32, param1);
-          if ((param0.indexOf(param1) == -1) &&
-              (-1 == param0.indexOf(var3))) {
+          if (param0.indexOf(param1) == -1 &&
+              -1 == param0.indexOf(var3)) {
             stackIn_15_0 = (param0.startsWith(param1)) || (param0.startsWith(var3)) || (param0.endsWith(param1)) || (param0.endsWith(var3));
             return stackIn_15_0;
           }
@@ -66,8 +66,8 @@ final class ak {
         try {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if ((!em.a((char) var3, 97)) &&
-                (!rc.a(-58, (char) var3))) {
+            if (!em.a((char) var3, 97) &&
+                !rc.a(-58, (char) var3)) {
               return true;
             }
           }

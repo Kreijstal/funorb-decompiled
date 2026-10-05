@@ -144,7 +144,7 @@ class ee extends el implements ql {
               var5 = new gb(this.field_z);
               var5.a(var4, (byte) 123);
               var6 = (el) ((Object) var5.c(26));
-              while ((var6 != null)) {
+              while (var6 != null) {
                 if (!var6.a((byte) -39, param1)) {
                   var6 = (el) ((Object) var5.c(26));
                   continue;
@@ -208,8 +208,8 @@ class ee extends el implements ql {
 
     void a(int param0, int param1, byte param2, int param3) {
         int var8 = Geoblox.field_C;
-        if ((param3 == 0) &&
-            ((this.field_q != null))) {
+        if (param3 == 0 &&
+            this.field_q != null) {
             this.field_q.a(param0, -9, param1, true, (el) (this));
         }
         int var6 = -58 % ((param2 - 1) / 43);
@@ -286,7 +286,7 @@ class ee extends el implements ql {
               var5 = new gb(this.field_z);
               var5.a((byte) 56, var4);
               var6 = (el) ((Object) var5.a((byte) 114));
-              while ((var6 != null)) {
+              while (var6 != null) {
                 if (!var6.a((byte) -56, param0)) {
                   var6 = (el) ((Object) var5.a((byte) 114));
                   continue;
@@ -437,8 +437,8 @@ class ee extends el implements ql {
           var8 = (el) ((Object) var9.c((byte) 88));
           while (var8 != null) {
             if (var8.a(120)) {
-              if ((var8.e((byte) 54)) &&
-                  (var8.a(param0, 13, param2, param3))) {
+              if (var8.e((byte) 54) &&
+                  var8.a(param0, 13, param2, param3)) {
                 return true;
               }
               var8 = (el) ((Object) var9.a((byte) 110));
@@ -570,8 +570,8 @@ class ee extends el implements ql {
           var9 = (el) ((Object) var11.c((byte) 88));
           while (var9 != null) {
             if (var9.a(127)) {
-              if ((var9.e((byte) 54)) &&
-                  (var9.a(param0, param1, param2, param3 + 0, param4, param5, param6))) {
+              if (var9.e((byte) 54) &&
+                  var9.a(param0, param1, param2, param3 + 0, param4, param5, param6)) {
                 return true;
               }
               var9 = (el) ((Object) var11.a((byte) 124));

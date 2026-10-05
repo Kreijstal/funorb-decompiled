@@ -58,11 +58,11 @@ final class vc extends dk {
             this.field_a = null;
             return;
           }
-          if ((this.field_p == param3) &&
-              (this.field_d) &&
-              (this.field_k == 2) &&
-              (null != this.field_n) &&
-              (this.field_n.equals(param4))) {
+          if (this.field_p == param3 &&
+              this.field_d &&
+              this.field_k == 2 &&
+              null != this.field_n &&
+              this.field_n.equals(param4)) {
             return;
           }
           this.field_p = param3;
@@ -136,8 +136,8 @@ final class vc extends dk {
         if (param3 > -89) {
             field_j = (dm) null;
         }
-        if ((this.field_p == param4 && this.field_d && 0 == this.field_k && this.field_n != null) &&
-            ((this.field_n.equals(param2)))) {
+        if (this.field_p == param4 && this.field_d && 0 == this.field_k && this.field_n != null &&
+            this.field_n.equals(param2)) {
             return;
         }
         try {
@@ -188,15 +188,15 @@ final class vc extends dk {
             this.field_a = null;
             return;
           }
-          if ((param4 == this.field_p) &&
-              (!this.field_d) &&
-              (this.field_k == param6) &&
-              (this.field_m == param0) &&
-              (this.field_e == param3) &&
-              (param7 == this.field_o) &&
-              (param5 == this.field_l) &&
-              (null != this.field_n) &&
-              (this.field_n.equals(param2))) {
+          if (param4 == this.field_p &&
+              !this.field_d &&
+              this.field_k == param6 &&
+              this.field_m == param0 &&
+              this.field_e == param3 &&
+              param7 == this.field_o &&
+              param5 == this.field_l &&
+              null != this.field_n &&
+              this.field_n.equals(param2)) {
             return;
           }
           this.field_o = param7;
@@ -210,8 +210,8 @@ final class vc extends dk {
           var16 = new String[param1 + param4.b(param2, param5)];
           var17 = var16;
           var10 = Math.max(1, param4.a(param2, new int[]{param5}, var17));
-          if ((this.field_m == 3) &&
-              (var10 == 1)) {
+          if (this.field_m == 3 &&
+              var10 == 1) {
             this.field_m = 1;
           }
           this.field_a = new lk[var10];

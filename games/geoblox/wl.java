@@ -19,17 +19,17 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           nk.field_e = 0;
           var2_int = param0.getKeyCode();
-          if ((var2_int >= 0) &&
-              (oe.field_P.length > var2_int)) {
+          if (var2_int >= 0 &&
+              oe.field_P.length > var2_int) {
             var2_int = oe.field_P[var2_int];
-            if (((var2_int & 128) != 0)) {
+            if ((var2_int & 128) != 0) {
               var2_int = -1;
             }
           } else {
             var2_int = -1;
           }
-          if ((ii.field_c >= 0) &&
-              (var2_int >= 0)) {
+          if (ii.field_c >= 0 &&
+              var2_int >= 0) {
             gf.field_c[ii.field_c] = var2_int;
             ii.field_c = 127 & 1 + ii.field_c;
             if (gk.field_b == ii.field_c) {
@@ -45,9 +45,9 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
           }
           var3 = param0.getModifiers();
-          if (((var3 & 10) == 0) &&
-              (85 != var2_int) &&
-              (var2_int != 10)) {
+          if ((var3 & 10) == 0 &&
+              85 != var2_int &&
+              var2_int != 10) {
             return;
           }
           param0.consume();
@@ -81,7 +81,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-            if ((je.field_j != null)) {
+            if (je.field_j != null) {
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0 && var2_int != 65535 && tc.a((byte) -112, (char) var2_int)) {
                     var3 = 1 + ba.field_c & 127;
@@ -109,14 +109,14 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (je.field_j != null) {
             nk.field_e = 0;
             var2_int = param0.getKeyCode();
-            if ((var2_int >= 0) &&
-                (oe.field_P.length > var2_int)) {
+            if (var2_int >= 0 &&
+                oe.field_P.length > var2_int) {
               var2_int = oe.field_P[var2_int] & -129;
             } else {
               var2_int = -1;
             }
-            if ((ii.field_c >= 0) &&
-                (0 <= var2_int)) {
+            if (ii.field_c >= 0 &&
+                0 <= var2_int) {
               gf.field_c[ii.field_c] = ~var2_int;
               ii.field_c = 1 + ii.field_c & 127;
               if (gk.field_b == ii.field_c) {

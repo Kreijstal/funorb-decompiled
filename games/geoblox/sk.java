@@ -34,26 +34,26 @@ final class sk {
           }
           var2 = -1L;
           var4 = -1L;
-          if ((this.field_c >= this.field_g) &&
-              (~((long)this.field_i + this.field_g) < ~this.field_c)) {
+          if (this.field_c >= this.field_g &&
+              ~((long)this.field_i + this.field_g) < ~this.field_c) {
             var2 = this.field_c;
           } else {
-            if ((this.field_c <= this.field_g) &&
-                (~this.field_g > ~(this.field_c + (long)this.field_d))) {
+            if (this.field_c <= this.field_g &&
+                ~this.field_g > ~(this.field_c + (long)this.field_d)) {
               var2 = this.field_g;
             }
           }
-          if ((~this.field_g > ~(this.field_c + (long)this.field_d)) &&
-              (this.field_g + (long)this.field_i >= (long)this.field_d + this.field_c)) {
+          if (~this.field_g > ~(this.field_c + (long)this.field_d) &&
+              this.field_g + (long)this.field_i >= (long)this.field_d + this.field_c) {
             var4 = (long)this.field_d + this.field_c;
           } else {
-            if ((~((long)this.field_i + this.field_g) < ~this.field_c) &&
-                (~(this.field_c + (long)this.field_d) <= ~((long)this.field_i + this.field_g))) {
+            if (~((long)this.field_i + this.field_g) < ~this.field_c &&
+                ~(this.field_c + (long)this.field_d) <= ~((long)this.field_i + this.field_g)) {
               var4 = this.field_g + (long)this.field_i;
             }
           }
-          if ((var2 > -1L) &&
-              (var4 > var2)) {
+          if (var2 > -1L &&
+              var4 > var2) {
             var6 = (int)(var4 - var2);
             sf.a(this.field_j, (int)(-this.field_c + var2), this.field_h, (int)(-this.field_g + var2), var6);
           }
@@ -104,9 +104,9 @@ final class sk {
             if (param1 + param2 > param0.length) {
               throw new ArrayIndexOutOfBoundsException(-param0.length + param2 + param1);
             }
-            if ((-1L != this.field_c) &&
-                (this.field_f >= this.field_c) &&
-                ((long)this.field_d + this.field_c >= (long)param1 + this.field_f)) {
+            if (-1L != this.field_c &&
+                this.field_f >= this.field_c &&
+                (long)this.field_d + this.field_c >= (long)param1 + this.field_f) {
               sf.a(this.field_j, (int)(-this.field_c + this.field_f), param0, param2, param1);
               this.field_f = this.field_f + (long)param1;
               return;
@@ -117,8 +117,8 @@ final class sk {
             if (param3 != 9868) {
               sk.a(-115);
             }
-            if ((~this.field_f <= ~this.field_g) &&
-                (~((long)this.field_i + this.field_g) < ~this.field_f)) {
+            if (~this.field_f <= ~this.field_g &&
+                ~((long)this.field_i + this.field_g) < ~this.field_f) {
               var9_int = (int)((long)this.field_i - this.field_f + this.field_g);
               if (param1 < var9_int) {
                 var9_int = param1;
@@ -175,27 +175,27 @@ final class sk {
                 }
               }
               var9 = -1L;
-              if ((~this.field_c <= ~var5_long) &&
-                  (~this.field_c > ~((long)var8 + var5_long))) {
+              if (~this.field_c <= ~var5_long &&
+                  ~this.field_c > ~((long)var8 + var5_long)) {
                 var9 = this.field_c;
               } else {
-                if ((~this.field_c >= ~var5_long) &&
-                    (var5_long < this.field_c + (long)this.field_d)) {
+                if (~this.field_c >= ~var5_long &&
+                    var5_long < this.field_c + (long)this.field_d) {
                   var9 = var5_long;
                 }
               }
               var11 = -1L;
-              if ((~var5_long > ~((long)this.field_d + this.field_c)) &&
-                  ((long)var8 + var5_long >= (long)this.field_d + this.field_c)) {
+              if (~var5_long > ~((long)this.field_d + this.field_c) &&
+                  (long)var8 + var5_long >= (long)this.field_d + this.field_c) {
                 var11 = this.field_c + (long)this.field_d;
               } else {
-                if ((this.field_c < var5_long + (long)var8) &&
-                    (~(var5_long + (long)var8) >= ~(this.field_c + (long)this.field_d))) {
+                if (this.field_c < var5_long + (long)var8 &&
+                    ~(var5_long + (long)var8) >= ~(this.field_c + (long)this.field_d)) {
                   var11 = (long)var8 + var5_long;
                 }
               }
-              if ((var9 > -1L) &&
-                  (var9 < var11)) {
+              if (var9 > -1L &&
+                  var9 < var11) {
                 var13 = (int)(-var9 + var11);
                 sf.a(this.field_j, (int)(var9 - this.field_c), param0, var7 + (int)(-var5_long + var9), var13);
                 if (var11 > this.field_f) {
@@ -258,8 +258,8 @@ final class sk {
                 this.b((byte) 99);
               }
             }
-            if ((-1L != this.field_c) &&
-                ((long)param0 + this.field_f > (long)this.field_j.length + this.field_c)) {
+            if (-1L != this.field_c &&
+                (long)param0 + this.field_f > (long)this.field_j.length + this.field_c) {
               var5_int = (int)((long)this.field_j.length + this.field_c - this.field_f);
               sf.a(param2, param1, this.field_j, (int)(-this.field_c + this.field_f), var5_int);
               this.field_f = this.field_f + (long)var5_int;
@@ -303,26 +303,26 @@ final class sk {
             }
             var5_long = -1L;
             var7 = -1L;
-            if ((~this.field_g >= ~this.field_f) &&
-                (~this.field_f > ~(this.field_g + (long)this.field_i))) {
+            if (~this.field_g >= ~this.field_f &&
+                ~this.field_f > ~(this.field_g + (long)this.field_i)) {
               var5_long = this.field_f;
             } else {
-              if ((~this.field_g <= ~this.field_f) &&
-                  (~this.field_g > ~(this.field_f + (long)param0))) {
+              if (~this.field_g <= ~this.field_f &&
+                  ~this.field_g > ~(this.field_f + (long)param0)) {
                 var5_long = this.field_g;
               }
             }
-            if ((~this.field_g > ~((long)param0 + this.field_f)) &&
-                (~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0))) {
+            if (~this.field_g > ~((long)param0 + this.field_f) &&
+                ~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0)) {
               var7 = this.field_f + (long)param0;
             } else {
-              if ((this.field_f < this.field_g + (long)this.field_i) &&
-                  (~(this.field_g + (long)this.field_i) >= ~(this.field_f + (long)param0))) {
+              if (this.field_f < this.field_g + (long)this.field_i &&
+                  ~(this.field_g + (long)this.field_i) >= ~(this.field_f + (long)param0)) {
                 var7 = (long)this.field_i + this.field_g;
               }
             }
-            if ((var5_long > -1L) &&
-                (~var5_long > ~var7)) {
+            if (var5_long > -1L &&
+                ~var5_long > ~var7) {
               var9 = (int)(-var5_long + var7);
               sf.a(param2, (int)(var5_long + ((long)param1 - this.field_f)), this.field_h, (int)(var5_long - this.field_g), var9);
             }
@@ -387,7 +387,7 @@ final class sk {
     }
 
     final void a(int param0, long param1) throws IOException {
-        if ((param1 < 0L)) {
+        if (param1 < 0L) {
             throw new IOException();
         }
         int var4 = -65 / ((-57 - param0) / 37);

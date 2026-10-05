@@ -45,7 +45,7 @@ final class gi implements Iterable {
     final void a(long param0, int param1, hf param2) {
         hf var5 = null;
         try {
-            if ((param2.field_c != null)) {
+            if (param2.field_c != null) {
                 param2.a(false);
             }
             var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];

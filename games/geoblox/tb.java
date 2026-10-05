@@ -262,16 +262,16 @@ final class tb {
               param0.field_G = param0.field_G + 1;
               param0.field_q = var14;
               tb.d(param0);
-              if ((param0.field_G == param0.field_q + 1) &&
-                  (param0.field_k == 0)) {
+              if (param0.field_G == param0.field_q + 1 &&
+                  param0.field_k == 0) {
                 var26 = 1;
                 continue L1;
               }
               var26 = 0;
               continue L1;
             }
-            if ((var13 != 0) &&
-                (var13 != 1)) {
+            if (var13 != 0 &&
+                var13 != 1) {
               var33 = var13 - 1;
               if (var33 < 16) {
                 var30 = param0.field_y[0];
@@ -307,7 +307,7 @@ final class tb {
                 }
                 param0.field_y[0] = param0.field_y[0] - 1;
                 param0.field_e[param0.field_y[0]] = (byte)var1;
-                if ((param0.field_y[0] == 0)) {
+                if (param0.field_y[0] == 0) {
                   var29 = 4095;
                   for (var27 = 15; var27 >= 0; var27--) {
                     for (var28 = 15; var28 >= 0; var28--) {
@@ -371,7 +371,7 @@ final class tb {
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-            } while ((var13 == 0) || (var13 == 1));
+            } while (var13 == 0 || var13 == 1);
             var15++;
             var1 = param0.field_x[param0.field_e[param0.field_y[0]] & 255];
             param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;

@@ -34,7 +34,7 @@ final class wd {
     }
 
     final void a(rc param0, boolean param1) {
-        if ((param0.field_l != null)) {
+        if (param0.field_l != null) {
             param0.a((byte) 45);
         }
         param0.field_k = this.field_g.field_k;
@@ -97,7 +97,7 @@ final class wd {
 
     final void a(int param0, rc param1) {
         try {
-            if ((param1.field_l != null)) {
+            if (param1.field_l != null) {
                 param1.a((byte) 62);
             }
             int var3_int = -75 % ((param0 - 62) / 46);
@@ -172,8 +172,8 @@ final class wd {
           if (!param0) {
             field_f = (String) null;
           }
-          if ((param1 == 0L) &&
-              (param2 != null)) {
+          if (param1 == 0L &&
+              param2 != null) {
             stackIn_9_0 = new nk(param2, param3);
             return (df) ((Object) stackIn_9_0);
           }

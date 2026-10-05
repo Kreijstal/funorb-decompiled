@@ -141,7 +141,7 @@ final class ne {
     }
 
     final int b(int param0) {
-        if ((this.field_i == param0)) {
+        if (this.field_i == param0) {
             this.a(-125);
             this.field_i = 256;
         }

@@ -42,7 +42,7 @@ abstract class dk {
         if (null != this.field_a) {
           var3 = this.field_a;
           var4 = 0;
-          while ((var3.length > var4)) {
+          while (var3.length > var4) {
             var5 = var3[var4];
             if (var5 == null) {
               var4++;
@@ -88,8 +88,8 @@ abstract class dk {
             var10 = param3.charAt(var9);
             if (var10 != 60) {
               if (var10 != 62) {
-                if ((var6 == 0) &&
-                    (32 == var10)) {
+                if (var6 == 0 &&
+                    32 == var10) {
                   var5_int++;
                 }
               } else {
@@ -180,8 +180,8 @@ abstract class dk {
         if (param0 != -3111) {
           field_b = 49;
         }
-        if ((null != this.field_a) &&
-            (this.field_a.length > 0)) {
+        if (null != this.field_a &&
+            this.field_a.length > 0) {
           stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
         } else {
           stackIn_7_0 = 0;
@@ -214,9 +214,9 @@ abstract class dk {
         int var8;
         int var9;
         var9 = Geoblox.field_C;
-        if ((null != this.field_a) &&
-            (this.field_a.length != 0) &&
-            (this.field_a[0].field_d <= param2)) {
+        if (null != this.field_a &&
+            this.field_a.length != 0 &&
+            this.field_a[0].field_d <= param2) {
           if (this.field_a[-1 + this.field_a.length].field_a < param2) {
             return -1;
           }
@@ -227,8 +227,8 @@ abstract class dk {
           var5 = -2 % ((15 - param1) / 32);
           for (var6 = 0; var6 < this.field_a.length; var6++) {
             var7 = this.field_a[var6];
-            if ((param2 >= var7.field_d) &&
-                (var7.field_a >= param2)) {
+            if (param2 >= var7.field_d &&
+                var7.field_a >= param2) {
               var8 = var7.a(-79, param0);
               if (-1 != var8) {
                 return var4 + var8;

@@ -107,7 +107,7 @@ final class kc {
                   stackIn_12_0 = var1.field_K;
                   if (var9 == 0) {
                     if (stackIn_12_0 != a.field_d) {
-                      if ((var1.field_B)) {
+                      if (var1.field_B) {
                         fa.field_a = true;
                       }
                     } else {
@@ -130,7 +130,7 @@ final class kc {
                 }
                 var1 = (ja) ((Object) ((tf) (Object) stackIn_12_0).g(0));
                 while (true) {
-                  if ((var1 == null)) {
+                  if (var1 == null) {
                     re.field_j = false;
                     el.field_o.field_B = true;
                     stackIn_56_0 = 0;
@@ -141,7 +141,7 @@ final class kc {
                   stackIn_15_0 = stackOut_14_0;
                   if (var9 == 0) {
                     L10: {
-                      if ((stackIn_15_0)) {
+                      if (stackIn_15_0) {
                         break L10;
                       }
                       var11 = new wd();
@@ -173,7 +173,7 @@ final class kc {
                                     if (var8 != null) {
                                       stackIn_51_0 = var8;
                                       stackIn_51_1 = var7;
-                                      if (((stackIn_51_0 != stackIn_51_1))) {
+                                      if (stackIn_51_0 != stackIn_51_1) {
                                         var8 = (ja) ((Object) var13.a(-45));
                                         continue;
                                       }
@@ -204,7 +204,7 @@ final class kc {
                             break L10;
                           }
                           var5_ref_ja = (ja) ((Object) var13.a(true));
-                          while ((var5_ref_ja != null)) {
+                          while (var5_ref_ja != null) {
                             var5_ref_ja.field_K = ji.field_r;
                             var5_ref_ja.field_t = false;
                             var5_ref_ja.field_B = true;
@@ -236,7 +236,7 @@ final class kc {
                   break;
                 }
                 var1_int = stackIn_56_0;
-                while ((1000 > var1_int)) {
+                while (1000 > var1_int) {
                   pk.field_o[var1_int] = false;
                   var1_int++;
                   if (var9 != 0) {
@@ -251,9 +251,9 @@ final class kc {
           }
           var2_ref_ja = (ja) ((Object) a.field_d.g(0));
           while (var2_ref_ja != null) {
-            if (((null != var2_ref_ja.field_K) ||
-                ((w.field_f) &&
-                  (var2_ref_ja.field_t)))) {
+            if (null != var2_ref_ja.field_K ||
+                w.field_f &&
+                  var2_ref_ja.field_t) {
               L39: {
                 L40: {
                   re.field_j = true;
@@ -289,8 +289,8 @@ final class kc {
                       break L40;
                     }
                   }
-                  if ((var2_ref_ja.field_K != bh.field_c) &&
-                      (!w.field_f)) {
+                  if (var2_ref_ja.field_K != bh.field_c &&
+                      !w.field_f) {
                     break L40;
                   }
                   var3_int = 0;
@@ -311,13 +311,13 @@ final class kc {
                   var2_ref_ja.field_r = 50;
                   bh.field_c.a(-100, var2_ref_ja);
                   var2_ref_ja.field_G = 0;
-                  if ((var2_ref_ja.field_t) &&
-                      (w.field_f)) {
+                  if (var2_ref_ja.field_t &&
+                      w.field_f) {
                     stackIn_88_0 = (int)var2_ref_ja.field_v;
                     stackIn_88_1 = (int)var2_ref_ja.field_o;
                     stackIn_88_2 = 117;
-                    if ((var2_ref_ja.field_z != 4) &&
-                        (var2_ref_ja.field_z != 3)) {
+                    if (var2_ref_ja.field_z != 4 &&
+                        var2_ref_ja.field_z != 3) {
                       stackIn_90_3 = 10;
                     } else {
                       stackIn_90_3 = 100;
@@ -347,7 +347,7 @@ final class kc {
           var2 = -23 / ((param0 - 69) / 46);
           var3 = (ja) ((Object) bh.field_c.g(0));
           while (true) {
-            if ((var3 == null)) {
+            if (var3 == null) {
               if (w.field_f) {
                 jc.a(3, false);
                 jl.field_t = false;

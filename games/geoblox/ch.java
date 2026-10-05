@@ -26,8 +26,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if ((null != kg.field_m) &&
-              (this != kg.field_m)) {
+          if (null != kg.field_m &&
+              this != kg.field_m) {
             stackIn_10_0 = kg.field_m.getDocumentBase();
             return stackIn_10_0;
           }
@@ -284,22 +284,22 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       L4: {
                         if (d.field_o != null) {
                           var1 = d.field_o.toLowerCase();
-                          if ((-1 == ((String) (var1)).indexOf("sun")) &&
-                              (((String) (var1)).indexOf("apple") == -1)) {
+                          if (-1 == ((String) (var1)).indexOf("sun") &&
+                              ((String) (var1)).indexOf("apple") == -1) {
                             break L4;
                           }
                           var2 = d.field_t;
-                          if (((var2.equals("1.1")) ||
-                              (var2.startsWith("1.1.")) ||
-                              (var2.equals("1.2")) ||
-                              (var2.startsWith("1.2.")) ||
-                              (var2.equals("1.3")) ||
-                              (var2.startsWith("1.3.")) ||
-                              (var2.equals("1.4")) ||
-                              (var2.startsWith("1.4.")) ||
-                              (var2.equals("1.5")) ||
-                              (var2.startsWith("1.5.")) ||
-                              (var2.equals("1.6.0")))) {
+                          if (var2.equals("1.1") ||
+                              var2.startsWith("1.1.") ||
+                              var2.equals("1.2") ||
+                              var2.startsWith("1.2.") ||
+                              var2.equals("1.3") ||
+                              var2.startsWith("1.3.") ||
+                              var2.equals("1.4") ||
+                              var2.startsWith("1.4.") ||
+                              var2.equals("1.5") ||
+                              var2.startsWith("1.5.") ||
+                              var2.equals("1.6.0")) {
                             this.a((byte) 79, "wrongjava");
                             if (var5 == 0) {
                               break L1;
@@ -349,8 +349,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             if (var5 != 0) {
                               break L11;
                             }
-                            if ((stackIn_78_0 >= stackIn_78_1) &&
-                                (var3 <= 57)) {
+                            if (stackIn_78_0 >= stackIn_78_1 &&
+                                var3 <= 57) {
                               var2_int = 10 * var2_int - 48 + var3;
                               var1_int++;
                               continue;
@@ -442,8 +442,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if ((kg.field_m != null) &&
-              (this != kg.field_m)) {
+          if (kg.field_m != null &&
+              this != kg.field_m) {
             stackIn_8_0 = kg.field_m.getAppletContext();
             return stackIn_8_0;
           }
@@ -529,8 +529,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this == qa.field_d) &&
-              (!ad.field_p)) {
+          if (this == qa.field_d &&
+              !ad.field_p) {
             ka.field_a = 0L;
             return;
           }
@@ -589,8 +589,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           var11 = var11.substring(var11.lastIndexOf(' ') + 1);
           var11 = var11.substring(1 + var11.lastIndexOf('\t'));
           var2 = var2 + var11;
-          if ((var9 != -1) &&
-              (-1 != var10)) {
+          if (var9 != -1 &&
+              -1 != var10) {
             var12 = var8.indexOf(".java:", var9);
             if (var12 >= 0) {
               var2 = var2 + var8.substring(var12 + 5, var10);
@@ -616,8 +616,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         if (null != sg.field_a) {
           return null;
         }
-        if ((null != kg.field_m) &&
-            (kg.field_m != this)) {
+        if (null != kg.field_m &&
+            kg.field_m != this) {
           return kg.field_m.getCodeBase();
         }
         return super.getCodeBase();
@@ -662,8 +662,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           var4 = tl.field_l[ij.field_cb];
           tl.field_l[ij.field_cb] = var2_long;
           ij.field_cb = 31 & 1 + ij.field_cb;
-          if ((var4 != 0L) &&
-              (var2_long > var4)) {
+          if (var4 != 0L &&
+              var2_long > var4) {
           }
           var6 = this;
           synchronized (var6) {
@@ -690,11 +690,11 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if ((qa.field_d == this) &&
-              (!ad.field_p)) {
+          if (qa.field_d == this &&
+              !ad.field_p) {
             dl.field_c = true;
-            if ((oe.field_S) &&
-                (-Geoblox.field_D + oa.a(-12520) > 1000L)) {
+            if (oe.field_S &&
+                -Geoblox.field_D + oa.a(-12520) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (~var2.width > ~qb.field_G) {
@@ -781,7 +781,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 while (true) {
                   if (var8.field_a == 0) {
                     bc.a(0, 10L);
-                    if ((var9 == 0)) {
+                    if (var9 == 0) {
                       continue;
                     }
                   }
@@ -827,8 +827,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if ((kg.field_m != null) &&
-              (this != kg.field_m)) {
+          if (kg.field_m != null &&
+              this != kg.field_m) {
             stackIn_10_0 = kg.field_m.getParameter(param0);
             return stackIn_10_0;
           }
@@ -864,8 +864,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           var4 = pb.field_p[fe.field_k];
           pb.field_p[fe.field_k] = var2_long;
           fe.field_k = 31 & fe.field_k + 1;
-          if ((0L != var4) &&
-              (var4 < var2_long)) {
+          if (0L != var4 &&
+              var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
             ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
           }
@@ -877,8 +877,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               dl.field_c = true;
               f.field_kb.setSize(kh.field_d, ok.field_c);
               f.field_kb.setVisible(true);
-              if (((sg.field_a == null) ||
-                  (he.field_a != null))) {
+              if (sg.field_a == null ||
+                  he.field_a != null) {
                 f.field_kb.setLocation(qa.field_b, hk.field_B);
                 if (Geoblox.field_C == 0) {
                   break L2;
@@ -901,8 +901,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this == qa.field_d) &&
-              (!ad.field_p)) {
+          if (this == qa.field_d &&
+              !ad.field_p) {
             ka.field_a = 4000L + oa.a(-12520);
             return;
           }

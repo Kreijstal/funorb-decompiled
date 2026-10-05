@@ -16,10 +16,10 @@ final class tc {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          if ((((0 >= param1)) ||
-                ((128 <= param1))) &&
-              (((param1 < 160)) ||
-                ((255 < param1)))) {
+          if ((0 >= param1 ||
+                128 <= param1) &&
+              (param1 < 160 ||
+                255 < param1)) {
             if (param0 != -112) {
               field_b = (String) null;
             }

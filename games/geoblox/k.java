@@ -25,7 +25,7 @@ final class k implements Iterator {
     }
 
     final static java.applet.Applet c(int param0) {
-        if ((kg.field_m != null)) {
+        if (kg.field_m != null) {
             return kg.field_m;
         }
         if (param0 <= 104) {

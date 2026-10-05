@@ -134,8 +134,8 @@ final class si {
             field_n = (lh) null;
           }
           var6 = param0.c(120, param3);
-          if ((var6 != null) &&
-              (null != param0.field_n)) {
+          if (var6 != null &&
+              null != param0.field_n) {
             if (this.field_e < 0) {
               return;
             }

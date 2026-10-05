@@ -92,8 +92,8 @@ final class pa {
         int var9 = 0;
         int var10 = 0;
         try {
-          if ((2 <= param2) &&
-              (param2 <= 36)) {
+          if (2 <= param2 &&
+              param2 <= 36) {
             var4_int = 0;
             var5 = 0;
             var6 = 0;
@@ -109,19 +109,19 @@ final class pa {
                     var4_int = 1;
                     break L3;
                   }
-                  if ((var9 == 43) &&
-                      (param1)) {
+                  if (var9 == 43 &&
+                      param1) {
                     break L3;
                   }
                 }
-                if ((var9 >= 48) &&
-                    (var9 <= 57)) {
+                if (var9 >= 48 &&
+                    var9 <= 57) {
                   var9 -= 48;
-                } else if ((var9 >= 65) &&
-                    (var9 <= 90)) {
+                } else if (var9 >= 65 &&
+                    var9 <= 90) {
                   var9 -= 55;
-                } else if ((var9 >= 97) &&
-                    (var9 <= 122)) {
+                } else if (var9 >= 97 &&
+                    var9 <= 122) {
                   var9 -= 87;
                 } else {
                   return false;
@@ -177,8 +177,8 @@ final class pa {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
             try {
-              if ((d.field_b.startsWith("win")) &&
-                  (gh.a(param0, false))) {
+              if (d.field_b.startsWith("win") &&
+                  gh.a(param0, false)) {
                 return;
               }
               try {

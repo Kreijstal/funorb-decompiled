@@ -105,8 +105,8 @@ final class ub {
               var7++;
             }
           }
-          if (((var4 != 0) ||
-                (this.field_e[1] != this.field_e[0]))) {
+          if (var4 != 0 ||
+                this.field_e[1] != this.field_e[0]) {
             param1.b(param0);
           }
         } else {

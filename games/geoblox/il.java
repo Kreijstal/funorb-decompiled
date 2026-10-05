@@ -210,8 +210,8 @@ final class il extends dm {
             var19 = param2 >> 16 & 255;
             var20 = param2 >> 8 & 255;
             var21 = param2 & 255;
-            if ((var19 == var20) &&
-                (var20 == var21)) {
+            if (var19 == var20 &&
+                var20 == var21) {
               if (var19 > 128) {
                 var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
               } else {
@@ -444,10 +444,10 @@ final class il extends dm {
               var35 = var30;
               var36 = var31;
               var37 = var20;
-              if ((var35 >= 0) &&
-                  (var36 >= 0) &&
-                  (var35 - (this.field_r << 12) < 0) &&
-                  (var36 - (this.field_m << 12) < 0)) {
+              if (var35 >= 0 &&
+                  var36 >= 0 &&
+                  var35 - (this.field_r << 12) < 0 &&
+                  var36 - (this.field_m << 12) < 0) {
                 while (var37 < 0) {
                   var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
                   var39 = vb.field_c[var34];
@@ -471,8 +471,8 @@ final class il extends dm {
               var35 = var30;
               var36 = var31 + (var28 * var26 >> 4);
               var37 = var20;
-              if ((var35 >= 0) &&
-                  (var35 - (this.field_r << 12) < 0)) {
+              if (var35 >= 0 &&
+                  var35 - (this.field_r << 12) < 0) {
                 if (var36 < 0) {
                   var32 = (var26 - 1 - var36) / var26;
                   var37 = var37 + var32;
@@ -507,8 +507,8 @@ final class il extends dm {
             var35 = var30;
             var36 = var31 + (var28 * var26 >> 4);
             var37 = var20;
-            if ((var35 >= 0) &&
-                (var35 - (this.field_r << 12) < 0)) {
+            if (var35 >= 0 &&
+                var35 - (this.field_r << 12) < 0) {
               var32 = var36 - (this.field_m << 12);
               if (var36 - (this.field_m << 12) >= 0) {
                 var32 = (var26 - var32) / var26;
@@ -546,8 +546,8 @@ final class il extends dm {
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31;
               var37 = var20;
-              if ((var36 >= 0) &&
-                  (var36 - (this.field_m << 12) < 0)) {
+              if (var36 >= 0 &&
+                  var36 - (this.field_m << 12) < 0) {
                 if (var35 < 0) {
                   var32 = (var27 - 1 - var35) / var27;
                   var37 = var37 + var32;
@@ -679,8 +679,8 @@ final class il extends dm {
             var35 = var30 + (var28 * var27 >> 4);
             var36 = var31;
             var37 = var20;
-            if ((var36 >= 0) &&
-                (var36 - (this.field_m << 12) < 0)) {
+            if (var36 >= 0 &&
+                var36 - (this.field_m << 12) < 0) {
               var32 = var35 - (this.field_r << 12);
               if (var35 - (this.field_r << 12) >= 0) {
                 var32 = (var27 - var32) / var27;
