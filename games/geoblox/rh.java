@@ -441,11 +441,7 @@ final class rh {
             var11_ref_RuntimeException = decompiledCaughtException;
             stackIn_38_0 = var11_ref_RuntimeException;
             stackIn_38_1 = new StringBuilder();
-            if (param2 == null) {
-              stackIn_39_2 = false;
-            } else {
-              stackIn_39_2 = true;
-            }
+            stackIn_39_2 = !(param2 == null);
             throw t.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(gg.a(var9, param1 + 95, var9.length)).append(" ").append(gg.a(var9, param1 ^ 73, var9.length - 2)).append(" ").append(this.field_c.field_q[param3]).append(" ").append(this.field_c.field_m).toString());
           }
           if (this.field_h) {

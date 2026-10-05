@@ -29,14 +29,10 @@ final class em {
         if (param1 != 97) {
           field_a = (String) null;
         }
-        if ((65 > param0 ||
+        stackIn_10_0 = !((65 > param0 ||
               param0 > 90) &&
             (97 > param0 ||
-              param0 > 122)) {
-          stackIn_10_0 = false;
-        } else {
-          stackIn_10_0 = true;
-        }
+              param0 > 122));
         return stackIn_10_0;
     }
 

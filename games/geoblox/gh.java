@@ -876,11 +876,7 @@ final class gh {
           if (te.field_a > 0) {
             pk.field_r = pk.field_r.substring(1) + te.field_a;
             if (pk.field_r.equalsIgnoreCase("fog")) {
-              if (this.field_s) {
-                stackIn_304_1 = false;
-              } else {
-                stackIn_304_1 = true;
-              }
+              stackIn_304_1 = !(this.field_s);
               ((gh) (this)).field_s = stackIn_304_1;
             }
             if (oc.field_f >= 2 &&
@@ -934,11 +930,7 @@ final class gh {
             this.field_C = true;
           }
           if (jg.field_g == ki.field_d) {
-            if (this.field_E) {
-              stackIn_359_1 = false;
-            } else {
-              stackIn_359_1 = true;
-            }
+            stackIn_359_1 = !(this.field_E);
             ((gh) (this)).field_E = stackIn_359_1;
             jc.a(7, false);
           }
@@ -967,11 +959,7 @@ final class gh {
               }
             }
             if (32 == ki.field_d) {
-              if (this.field_Q) {
-                stackIn_388_1 = false;
-              } else {
-                stackIn_388_1 = true;
-              }
+              stackIn_388_1 = !(this.field_Q);
               ((gh) (this)).field_Q = stackIn_388_1;
             }
             if (ki.field_d == 65) {
@@ -989,19 +977,11 @@ final class gh {
             }
             if (ki.field_d == 1) {
               this.field_K = true;
-              if (this.field_j) {
-                stackIn_408_1 = false;
-              } else {
-                stackIn_408_1 = true;
-              }
+              stackIn_408_1 = !(this.field_j);
               ((gh) (this)).field_j = stackIn_408_1;
             }
             if (2 == ki.field_d) {
-              if (this.field_N) {
-                stackIn_416_1 = false;
-              } else {
-                stackIn_416_1 = true;
-              }
+              stackIn_416_1 = !(this.field_N);
               ((gh) (this)).field_N = stackIn_416_1;
               this.field_K = true;
             }
@@ -1049,11 +1029,7 @@ final class gh {
               cd.a((byte) 82);
             }
             if (ki.field_d == 12) {
-              if (this.field_V) {
-                stackIn_455_1 = false;
-              } else {
-                stackIn_455_1 = true;
-              }
+              stackIn_455_1 = !(this.field_V);
               ((gh) (this)).field_V = stackIn_455_1;
             }
             if (36 == ki.field_d) {

@@ -288,11 +288,7 @@ final class sk {
             if (this.field_f != this.field_b) {
               stackIn_19_0 = this.field_a;
               stackIn_19_1 = this.field_f;
-              if (param3) {
-                stackIn_20_2 = false;
-              } else {
-                stackIn_20_2 = true;
-              }
+              stackIn_20_2 = !(param3);
               ((pa) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
               this.field_b = this.field_f;
             }

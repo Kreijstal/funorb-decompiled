@@ -41,11 +41,7 @@ final class kb {
             return;
           }
           stackIn_11_0 = param1 ^ 6648;
-          if (rd.field_u >= 13) {
-            stackIn_12_1 = false;
-          } else {
-            stackIn_12_1 = true;
-          }
+          stackIn_12_1 = !(rd.field_u >= 13);
           me.field_g = hh.a(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
           ci.a((String[]) null, 416577356);

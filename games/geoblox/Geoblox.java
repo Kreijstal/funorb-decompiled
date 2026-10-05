@@ -620,18 +620,10 @@ public final class Geoblox extends wf {
           vl.field_n.a(0, ka.field_i);
           vl.field_n = null;
         }
-        if (null == vl.field_n) {
-          stackIn_9_1 = false;
-        } else {
-          stackIn_9_1 = true;
-        }
+        stackIn_9_1 = !(null == vl.field_n);
         this.b(stackIn_9_1, 19660);
         if (cf.field_k) {
-          if (param0) {
-            stackIn_14_1 = false;
-          } else {
-            stackIn_14_1 = true;
-          }
+          stackIn_14_1 = !(param0);
           this.f(stackIn_14_1);
           cf.field_k = false;
         }

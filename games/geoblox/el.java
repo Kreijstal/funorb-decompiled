@@ -128,11 +128,7 @@ class el extends hf {
             stackIn_5_1 = 1;
           }
           if (stackIn_4_0 == stackIn_5_1) {
-            if (var5_int == 0) {
-              stackIn_10_1 = false;
-            } else {
-              stackIn_10_1 = true;
-            }
+            stackIn_10_1 = !(var5_int == 0);
             ((el) (this)).field_l = stackIn_10_1;
             if (this.field_u != null) {
               if (!(this.field_u instanceof lg)) {

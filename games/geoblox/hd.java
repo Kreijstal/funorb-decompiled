@@ -90,11 +90,7 @@ final class hd extends sh {
           this.field_A = param4;
           this.field_C = param7;
           this.field_F = param8;
-          if (!param5) {
-            stackIn_4_1 = false;
-          } else {
-            stackIn_4_1 = true;
-          }
+          stackIn_4_1 = !(!param5);
           ((hd) (this)).field_B = stackIn_4_1;
           this.field_K = param6;
           this.field_J = param10;

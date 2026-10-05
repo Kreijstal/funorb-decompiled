@@ -34,11 +34,7 @@ final class tg extends com.ms.dll.Callback {
           this.field_d = true;
         }
         if (var5 == this.field_b) {
-          if (!param1) {
-            stackIn_28_1 = false;
-          } else {
-            stackIn_28_1 = true;
-          }
+          stackIn_28_1 = !(!param1);
           ((tg) (this)).field_e = stackIn_28_1;
         } else {
           if (0 != this.field_b) {
@@ -54,11 +50,7 @@ final class tg extends com.ms.dll.Callback {
             this.field_b = var5;
             this.field_c = com.ms.win32.User32.SetWindowLong(this.field_b, -4, this);
           }
-          if (!param1) {
-            stackIn_22_1 = false;
-          } else {
-            stackIn_22_1 = true;
-          }
+          stackIn_22_1 = !(!param1);
           ((tg) (this)).field_e = stackIn_22_1;
         }
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);

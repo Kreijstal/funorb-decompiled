@@ -231,11 +231,7 @@ class dj extends hk {
             }
             this.a(stackIn_5_1, (byte) -123);
             var8_long = oa.a(-12520);
-            if (var8_long - this.field_P >= 250L) {
-              stackIn_8_1 = false;
-            } else {
-              stackIn_8_1 = true;
-            }
+            stackIn_8_1 = !(var8_long - this.field_P >= 250L);
             ((dj) (this)).field_G = stackIn_8_1;
             if (this.field_G) {
               this.field_L = this.j((byte) 77);

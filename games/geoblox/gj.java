@@ -51,11 +51,7 @@ final class gj extends fj {
             return;
           }
           stackIn_6_0 = -106;
-          if (rd.field_u >= 13) {
-            stackIn_7_1 = false;
-          } else {
-            stackIn_7_1 = true;
-          }
+          stackIn_7_1 = !(rd.field_u >= 13);
           dl.field_a = hh.a(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

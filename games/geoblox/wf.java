@@ -389,16 +389,8 @@ abstract class wf extends ch {
               jg.field_d != null) {
             stackIn_100_0 = 2274;
             stackIn_100_1 = jg.field_d;
-            if (ri.field_a) {
-              stackIn_101_2 = false;
-            } else {
-              stackIn_101_2 = true;
-            }
-            if (ri.field_a) {
-              stackIn_104_3 = false;
-            } else {
-              stackIn_104_3 = true;
-            }
+            stackIn_101_2 = !(ri.field_a);
+            stackIn_104_3 = !(ri.field_a);
             og.a(stackIn_100_0, stackIn_100_1, stackIn_101_2, stackIn_104_3);
           }
           if (p.field_m) {
@@ -485,11 +477,7 @@ abstract class wf extends ch {
           }
         } else {
           stackIn_3_1 = false;
-          if (vl.field_n == null) {
-            stackIn_4_2 = false;
-          } else {
-            stackIn_4_2 = true;
-          }
+          stackIn_4_2 = !(vl.field_n == null);
           discarded$56 = this.a(stackIn_3_1, stackIn_4_2, -1);
         }
         if (param0 < 104) {

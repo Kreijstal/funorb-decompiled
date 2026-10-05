@@ -609,11 +609,7 @@ final class bj extends nh {
           }
           this.field_i = param4;
           this.field_y = param2;
-          if (!param8) {
-            stackIn_7_1 = false;
-          } else {
-            stackIn_7_1 = true;
-          }
+          stackIn_7_1 = !(!param8);
           ((bj) (this)).field_w = stackIn_7_1;
           this.field_x = param6;
           this.field_f = param3;
