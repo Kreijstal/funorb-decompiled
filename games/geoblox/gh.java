@@ -755,38 +755,37 @@ final class gh {
                     break;
                 }
                 var4_int = (kd.field_c + qa.field_a + he.field_d + ki.field_d) % 5;
-                if (var4_int != 0) {
-                  if (1 != var4_int) {
-                    if (2 != var4_int) {
-                      if (var4_int == 3) {
-                        sc.field_f = sc.field_f + 1;
-                        el.field_g = el.field_g + lb.field_b;
-                        if (var5 == 0) {
-                          break L30;
-                        }
-                      }
-                      if (4 != var4_int) {
-                        break L30;
-                      }
-                      el.field_g = el.field_g - lb.field_b;
-                      sc.field_f = sc.field_f - 1;
-                      if (var5 == 0) {
-                        break L30;
-                      }
+                switch (var4_int) {
+                  case 3:
+                    sc.field_f = sc.field_f + 1;
+                    el.field_g = el.field_g + lb.field_b;
+                    if (var5 == 0) {
+                      break L30;
                     }
+                  default:
+                    break L30;
+                  case 4:
+                    el.field_g = el.field_g - lb.field_b;
+                    sc.field_f = sc.field_f - 1;
+                    if (var5 == 0) {
+                      break L30;
+                    }
+                  case 2:
                     lb.field_b = lb.field_b - 1;
                     el.field_g = el.field_g - sc.field_f;
                     if (var5 == 0) {
                       break L30;
                     }
-                  }
-                  lb.field_b = lb.field_b + 1;
-                  el.field_g = el.field_g + sc.field_f;
-                  if (var5 == 0) {
-                    break L30;
-                  }
+                  case 1:
+                    lb.field_b = lb.field_b + 1;
+                    el.field_g = el.field_g + sc.field_f;
+                    if (var5 == 0) {
+                      break L30;
+                    }
+                  case 0:
+                    dc.field_a = dc.field_a | el.field_g + lb.field_b << 17;
+                    break;
                 }
-                dc.field_a = dc.field_a | el.field_g + lb.field_b << 17;
               }
             }
             L44: {

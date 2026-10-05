@@ -367,73 +367,60 @@ final class hi extends ee implements ta, pl {
                     param1[param4 + var7] = (byte)-117;
                     break L1;
                   }
-                  if (var8 == 338) {
-                    param1[var7 + param4] = (byte)-116;
-                    break L1;
-                  }
-                  if (381 == var8) {
-                    param1[var7 + param4] = (byte)-114;
-                    break L1;
-                  }
-                  if (var8 == 8216) {
-                    param1[param4 + var7] = (byte)-111;
-                    break L1;
-                  }
-                  if (var8 == 8217) {
-                    param1[param4 + var7] = (byte)-110;
-                    break L1;
-                  }
-                  if (var8 == 8220) {
-                    param1[var7 + param4] = (byte)-109;
-                    break L1;
-                  }
-                  if (var8 == 8221) {
-                    param1[param4 + var7] = (byte)-108;
-                    break L1;
-                  }
-                  if (8226 == var8) {
-                    param1[param4 + var7] = (byte)-107;
-                    break L1;
-                  }
-                  if (8211 == var8) {
-                    param1[var7 + param4] = (byte)-106;
-                    break L1;
-                  }
-                  if (var8 == 8212) {
-                    param1[param4 + var7] = (byte)-105;
-                    break L1;
-                  }
-                  if (var8 == 732) {
-                    param1[var7 + param4] = (byte)-104;
-                    break L1;
-                  }
-                  if (var8 == 8482) {
-                    param1[param4 + var7] = (byte)-103;
-                    break L1;
-                  }
-                  if (var8 == 353) {
-                    param1[param4 + var7] = (byte)-102;
-                    break L1;
-                  }
-                  if (var8 == 8250) {
-                    param1[var7 + param4] = (byte)-101;
-                    break L1;
-                  }
-                  if (339 == var8) {
-                    param1[var7 + param4] = (byte)-100;
-                    break L1;
-                  }
-                  if (var8 == 382) {
-                    param1[var7 + param4] = (byte)-98;
-                    break L1;
-                  }
-                  if (var8 != 376) {
-                    param1[var7 + param4] = (byte)63;
-                    break L1;
-                  }
-                  param1[var7 + param4] = (byte)-97;
-                  break L1;
-                }
+                      switch (var8) {
+                        case 338:
+                          param1[var7 + param4] = (byte)-116;
+                          break L1;
+                        case 381:
+                          param1[var7 + param4] = (byte)-114;
+                          break L1;
+                        case 8216:
+                          param1[param4 + var7] = (byte)-111;
+                          break L1;
+                        case 8217:
+                          param1[param4 + var7] = (byte)-110;
+                          break L1;
+                        case 8220:
+                          param1[var7 + param4] = (byte)-109;
+                          break L1;
+                        case 8221:
+                          param1[param4 + var7] = (byte)-108;
+                          break L1;
+                        case 8226:
+                          param1[param4 + var7] = (byte)-107;
+                          break L1;
+                        case 8211:
+                          param1[var7 + param4] = (byte)-106;
+                          break L1;
+                        case 8212:
+                          param1[param4 + var7] = (byte)-105;
+                          break L1;
+                        case 732:
+                          param1[var7 + param4] = (byte)-104;
+                          break L1;
+                        case 8482:
+                          param1[param4 + var7] = (byte)-103;
+                          break L1;
+                        case 353:
+                          param1[param4 + var7] = (byte)-102;
+                          break L1;
+                        case 8250:
+                          param1[var7 + param4] = (byte)-101;
+                          break L1;
+                        case 339:
+                          param1[var7 + param4] = (byte)-100;
+                          break L1;
+                        case 382:
+                          param1[var7 + param4] = (byte)-98;
+                          break L1;
+                        default:
+                          param1[var7 + param4] = (byte)63;
+                          break L1;
+                        case 376:
+                          param1[var7 + param4] = (byte)-97;
+                          break L1;
+                      }
+                    }
               }
               param1[param4 + var7] = (byte)var8;
             }
