@@ -362,15 +362,7 @@ final class GameScreen extends MenuScreen {
           if (this.screenId != 0 &&
               this.screenId != 1 &&
               this.screenId != 4) {
-            panelHeightSelection: {
-              if (2 == this.screenId) {
-                panelHeight = 235;
-                if (clientControlFlowGuard == 0) {
-                  break panelHeightSelection;
-                }
-              }
-              panelHeight = 285;
-            }
+            panelHeight = (2 == this.screenId) && (clientControlFlowGuard == 0) ? (235) : (285);
             panelPlacementSelection: {
               panelLeftOrTextYOrOverlayAlphaOrCurtainX = 120;
               if (this.screenId == 3) {
@@ -2322,15 +2314,7 @@ final class GameScreen extends MenuScreen {
                 break menuButtonLayoutAndFrame;
               }
             }
-            tutorialOrScoreButtonWidth: {
-              if (this.screenId != 3) {
-                buttonWidth = 160;
-                if (clientControlFlowGuard == 0) {
-                  break tutorialOrScoreButtonWidth;
-                }
-              }
-              buttonWidth = 123;
-            }
+            buttonWidth = (this.screenId != 3) && (clientControlFlowGuard == 0) ? (160) : (123);
             footerButtonGeometry: {
               itemColumnOrPressOffset = (rowY + (-280 - this.firstItemY)) / this.itemSpacing;
               buttonTextCenter = 320 + (buttonWidth + 20) * (itemColumnOrPressOffset - 1);

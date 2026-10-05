@@ -7,24 +7,66 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/47c5d782cd5ac344bb386186af12a48777a60f6f/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/47e13e4019e6aea26fb2b8200f8abe6c7c99ff51/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 191)
+## Current readability (pass 192)
 
-The export has 18,402 guarded names and 117,447 Java identifier edits, plus 11
-class-name literal edits and 676 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,400 guarded names and 117,445 Java identifier edits, plus 11
+class-name literal edits and 672 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,470 bindings, reproduce and
+compile and compare 136,468 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
-Menu rendering falls from 372 to 304 lines and ten to four block labels.
+Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current late switch completion (pass 191)
+## Current guarded value selection (pass 192)
+
+Two screen-render blocks now assign their values directly with conditional
+expressions. The generic java-tools rule retains each condition's evaluation
+and effects, then reads the original captured primitive keep-value guard.
+Both values must be total primitive expressions with the same Java type;
+neither the guard nor the fallback may read the destination. Calls, fields,
+arrays, unboxing, division, mutations and protected boundaries refuse this
+proof. No client control-flag value is assumed, and no game names are hardcoded.
+
+Only `c.java` changes: two methods lose two labels, six wrapper blocks,
+two duplicate local stores and 16 lines. `GameScreen.renderScreen` falls from
+304 to 296 body lines and four to three labels. Seven surviving label ordinals
+migrate explicitly. All 18,393 unaffected complete naming objects remain exact.
+There are 18,400 rules and 19,446 dictionary identities, with 117,445 identifier,
+11 literal and 672 label edits (118,128 total). The 303 sources compile and
+compare 136,468 ordinary bindings, preserving all 388 overrides.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/guardedLocalAssignmentRecovery.test.js`
+passes eight focused groups, including 30,240 independent native completion
+cases across six contexts and 378 primitive-type cases across nine models.
+They cover partial callback effects, null unboxing, overflow, finally overrides,
+monitor release, narrowing, NaN, signed zero and large integer precision.
+The selected regression suite passes 174 tests with one existing optional skip.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks exact expected bytes for all 303 raw files, independently attributed
+primitive guards/values/local stores, the two consumed exits, all 5,089 surviving
+transfer destinations and protected scopes, every surviving occurrence binding,
+retired/migrated labels, complete naming objects and compilation.
+The dictionary reverses all 303 files byte exactly. Publication tests, scoped
+native gameplay/result probes and current/fresh sibling reproduction checks pass.
+Earlier proof objects, fixed bytecode inputs and frozen naming/native pins remain.
+
+Five bodies still have labels and at least 300 lines; screen rendering remains
+labeled below that threshold. Forty-one unsupported field names remain.
+Whole-game/browser/phone equivalence and heap/presented-FPS targets are unverified.
+The tracked **decompiler-source** Git tar SHA-256 is
+`6fcfc89be07a6ea93b391b2cf5b847061f47b963a35d66088f5bba5350978fef`.
+
+## Previous late switch completion (pass 191)
 
 Late nested dispatch recovery can create a terminal switch after switch-frame
 cleanup has already run. The emitter now applies the existing destination and
