@@ -844,12 +844,12 @@ abstract class SpriteState extends DualLinkNode {
                         seedScanComparisonLeft = 24;
                         seedScanComparisonRight = seedByteIndex;
                       }
-                      if (seedScanComparisonLeft <= seedScanComparisonRight) {
-                        throw new IOException();
-                      }
-                      seedReadContinuation = 0;
                       break;
                     }
+                    if (seedScanComparisonLeft <= seedScanComparisonRight) {
+                      throw new IOException();
+                    }
+                    seedReadContinuation = 0;
                   } catch (java.lang.Exception seedReadFailure) {
                     caughtSeedThrowable = seedReadFailure;
                     seedReadFailureFallback: {

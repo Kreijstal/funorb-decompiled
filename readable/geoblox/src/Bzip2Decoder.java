@@ -528,15 +528,15 @@ final class Bzip2Decoder {
                   remainingOutputBytes--;
                   continue;
                 }
-                if (remainingOutputBytes == 0) {
-                  remainingRunLength = 1;
-                  break runEmissionBeforeStateCommit;
-                }
-                outputBytes[outputPosition] = (byte)runByte;
-                outputPosition++;
-                remainingOutputBytes--;
                 break;
               }
+              if (remainingOutputBytes == 0) {
+                remainingRunLength = 1;
+                break runEmissionBeforeStateCommit;
+              }
+              outputBytes[outputPosition] = (byte)runByte;
+              outputPosition++;
+              remainingOutputBytes--;
             }
             while (blockBytesConsumed != blockEndPosition) {
               sharedTransformTableSnapshot = transformTableAlias;

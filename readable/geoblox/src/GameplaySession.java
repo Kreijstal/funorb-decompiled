@@ -472,9 +472,9 @@ final class GameplaySession {
               minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
               grayLevelForComparisonOrCompositeEnabled = 1;
             }
-            DebugOverviewCompositor.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, CacheFileState.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
             break;
           }
+          DebugOverviewCompositor.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, CacheFileState.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
         }
         gameplayOrTutorialOverlay: {
           if (!this.tutorialMode) {

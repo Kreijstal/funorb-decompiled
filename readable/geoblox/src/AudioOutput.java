@@ -373,19 +373,19 @@ class AudioOutput {
                 continue;
               }
             }
-            for (priorityPassThenCleanupBucket = 0; priorityPassThenCleanupBucket < 8; priorityPassThenCleanupBucket++) {
-              cleanupStream = this.priorityQueueHeads[priorityPassThenCleanupBucket];
-              queueHeadsAlias = this.priorityQueueHeads;
-              bucketMaskThenCleanupIndex = priorityPassThenCleanupBucket;
-              this.priorityQueueTails[priorityPassThenCleanupBucket] = null;
-              queueHeadsAlias[bucketMaskThenCleanupIndex] = null;
-              while (cleanupStream != null) {
-                previousStreamOrNextCleanupStream = ((PcmStream) (cleanupStream)).scheduledNextStream;
-                ((PcmStream) (cleanupStream)).scheduledNextStream = null;
-                cleanupStream = previousStreamOrNextCleanupStream;
-              }
-            }
             break;
+          }
+          for (priorityPassThenCleanupBucket = 0; priorityPassThenCleanupBucket < 8; priorityPassThenCleanupBucket++) {
+            cleanupStream = this.priorityQueueHeads[priorityPassThenCleanupBucket];
+            queueHeadsAlias = this.priorityQueueHeads;
+            bucketMaskThenCleanupIndex = priorityPassThenCleanupBucket;
+            this.priorityQueueTails[priorityPassThenCleanupBucket] = null;
+            queueHeadsAlias[bucketMaskThenCleanupIndex] = null;
+            while (cleanupStream != null) {
+              previousStreamOrNextCleanupStream = ((PcmStream) (cleanupStream)).scheduledNextStream;
+              ((PcmStream) (cleanupStream)).scheduledNextStream = null;
+              cleanupStream = previousStreamOrNextCleanupStream;
+            }
           }
         }
         if (this.framesUntilReschedule < 0) {

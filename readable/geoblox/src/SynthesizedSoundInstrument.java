@@ -268,19 +268,19 @@ final class SynthesizedSoundInstrument {
                   var15 += 128;
                   continue;
                 }
-                while (var14 < sampleCount) {
-                  var16 = 0;
-                  for (var17 = var14 + var12 - sampleCount; var17 < var12; var17++) {
-                    var16 = var16 + (int)((long)sampleBuffer[var14 + var12 - 1 - var17] * (long)SoundFilter.coefficientsQ16[0][var17] >> 16);
-                  }
-                  for (var17 = 0; var17 < var13; var17++) {
-                    var16 = var16 - (int)((long)sampleBuffer[var14 - 1 - var17] * (long)SoundFilter.coefficientsQ16[1][var17] >> 16);
-                  }
-                  sampleBuffer[var14] = var16;
-                  var11 = this.filterEnvelope.advance(sampleCount + 1);
-                  var14++;
-                }
                 break;
+              }
+              while (var14 < sampleCount) {
+                var16 = 0;
+                for (var17 = var14 + var12 - sampleCount; var17 < var12; var17++) {
+                  var16 = var16 + (int)((long)sampleBuffer[var14 + var12 - 1 - var17] * (long)SoundFilter.coefficientsQ16[0][var17] >> 16);
+                }
+                for (var17 = 0; var17 < var13; var17++) {
+                  var16 = var16 - (int)((long)sampleBuffer[var14 - 1 - var17] * (long)SoundFilter.coefficientsQ16[1][var17] >> 16);
+                }
+                sampleBuffer[var14] = var16;
+                var11 = this.filterEnvelope.advance(sampleCount + 1);
+                var14++;
               }
             }
           }
