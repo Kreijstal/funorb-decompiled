@@ -272,73 +272,60 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
                     encodedBytes[characterIndex] = (byte)-117;
                     break encodedTextCharacter;
                   }
-                  if (338 == characterCode) {
-                    encodedBytes[characterIndex] = (byte)-116;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 381) {
-                    encodedBytes[characterIndex] = (byte)-114;
-                    break encodedTextCharacter;
-                  }
-                  if (8216 == characterCode) {
-                    encodedBytes[characterIndex] = (byte)-111;
-                    break encodedTextCharacter;
-                  }
-                  if (8217 == characterCode) {
-                    encodedBytes[characterIndex] = (byte)-110;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 8220) {
-                    encodedBytes[characterIndex] = (byte)-109;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 8221) {
-                    encodedBytes[characterIndex] = (byte)-108;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 8226) {
-                    encodedBytes[characterIndex] = (byte)-107;
-                    break encodedTextCharacter;
-                  }
-                  if (8211 == characterCode) {
-                    encodedBytes[characterIndex] = (byte)-106;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 8212) {
-                    encodedBytes[characterIndex] = (byte)-105;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 732) {
-                    encodedBytes[characterIndex] = (byte)-104;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 8482) {
-                    encodedBytes[characterIndex] = (byte)-103;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 353) {
-                    encodedBytes[characterIndex] = (byte)-102;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 8250) {
-                    encodedBytes[characterIndex] = (byte)-101;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 339) {
-                    encodedBytes[characterIndex] = (byte)-100;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode == 382) {
-                    encodedBytes[characterIndex] = (byte)-98;
-                    break encodedTextCharacter;
-                  }
-                  if (characterCode != 376) {
-                    encodedBytes[characterIndex] = (byte)63;
-                    break encodedTextCharacter;
-                  }
-                  encodedBytes[characterIndex] = (byte)-97;
-                  break encodedTextCharacter;
-                }
+                      switch (characterCode) {
+                        case 338:
+                          encodedBytes[characterIndex] = (byte)-116;
+                          break encodedTextCharacter;
+                        case 381:
+                          encodedBytes[characterIndex] = (byte)-114;
+                          break encodedTextCharacter;
+                        case 8216:
+                          encodedBytes[characterIndex] = (byte)-111;
+                          break encodedTextCharacter;
+                        case 8217:
+                          encodedBytes[characterIndex] = (byte)-110;
+                          break encodedTextCharacter;
+                        case 8220:
+                          encodedBytes[characterIndex] = (byte)-109;
+                          break encodedTextCharacter;
+                        case 8221:
+                          encodedBytes[characterIndex] = (byte)-108;
+                          break encodedTextCharacter;
+                        case 8226:
+                          encodedBytes[characterIndex] = (byte)-107;
+                          break encodedTextCharacter;
+                        case 8211:
+                          encodedBytes[characterIndex] = (byte)-106;
+                          break encodedTextCharacter;
+                        case 8212:
+                          encodedBytes[characterIndex] = (byte)-105;
+                          break encodedTextCharacter;
+                        case 732:
+                          encodedBytes[characterIndex] = (byte)-104;
+                          break encodedTextCharacter;
+                        case 8482:
+                          encodedBytes[characterIndex] = (byte)-103;
+                          break encodedTextCharacter;
+                        case 353:
+                          encodedBytes[characterIndex] = (byte)-102;
+                          break encodedTextCharacter;
+                        case 8250:
+                          encodedBytes[characterIndex] = (byte)-101;
+                          break encodedTextCharacter;
+                        case 339:
+                          encodedBytes[characterIndex] = (byte)-100;
+                          break encodedTextCharacter;
+                        case 382:
+                          encodedBytes[characterIndex] = (byte)-98;
+                          break encodedTextCharacter;
+                        default:
+                          encodedBytes[characterIndex] = (byte)63;
+                          break encodedTextCharacter;
+                        case 376:
+                          encodedBytes[characterIndex] = (byte)-97;
+                          break encodedTextCharacter;
+                      }
+                    }
               }
               encodedBytes[characterIndex] = (byte)characterCode;
             }

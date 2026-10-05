@@ -755,38 +755,37 @@ final class GameplaySession {
                     break;
                 }
                 inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
-                if (inputDerivedModuloIndex != 0) {
-                  if (1 != inputDerivedModuloIndex) {
-                    if (2 != inputDerivedModuloIndex) {
-                      if (inputDerivedModuloIndex == 3) {
-                        AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                        UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                        if (clientControlFlowGuard == 0) {
-                          break positiveRotationAndStateUpdate;
-                        }
-                      }
-                      if (4 != inputDerivedModuloIndex) {
-                        break positiveRotationAndStateUpdate;
-                      }
-                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
-                      AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
-                      if (clientControlFlowGuard == 0) {
-                        break positiveRotationAndStateUpdate;
-                      }
+                switch (inputDerivedModuloIndex) {
+                  case 3:
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break positiveRotationAndStateUpdate;
                     }
+                  default:
+                    break positiveRotationAndStateUpdate;
+                  case 4:
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
+                    if (clientControlFlowGuard == 0) {
+                      break positiveRotationAndStateUpdate;
+                    }
+                  case 2:
                     SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
                     UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       break positiveRotationAndStateUpdate;
                     }
-                  }
-                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break positiveRotationAndStateUpdate;
-                  }
+                  case 1:
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break positiveRotationAndStateUpdate;
+                    }
+                  case 0:
+                    AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter << 17;
+                    break;
                 }
-                AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter << 17;
               }
             }
             fastForwardAndRotationSnapshot: {
