@@ -627,54 +627,54 @@ final class ua extends hf {
               var26++;
               continue;
             }
-            for (var26 = 0; var26 < var17_int; var26++) {
-              var20_ref_float__[var26] = var20_ref_float__[2 * var26 + 1];
-            }
-            for (var26 = 0; var26 < var19; var26++) {
-              var20_ref_float__[var4 - 1 - 2 * var26] = var20_ref_float__[4 * var26];
-              var20_ref_float__[var4 - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 1];
-              var20_ref_float__[var4 - var18_int - 1 - 2 * var26] = var20_ref_float__[4 * var26 + 2];
-              var20_ref_float__[var4 - var18_int - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 3];
-            }
-            for (var26 = 0; var26 < var19; var26++) {
-              var27 = var23[2 * var26];
-              var28 = var23[2 * var26 + 1];
-              var29 = var20_ref_float__[var17_int + 2 * var26];
-              var30 = var20_ref_float__[var17_int + 2 * var26 + 1];
-              var31 = var20_ref_float__[var4 - 2 - 2 * var26];
-              var32 = var20_ref_float__[var4 - 1 - 2 * var26];
-              var33 = var28 * (var29 - var31) + var27 * (var30 + var32);
-              var20_ref_float__[var17_int + 2 * var26] = (var29 + var31 + var33) * 0.5f;
-              var20_ref_float__[var4 - 2 - 2 * var26] = (var29 + var31 - var33) * 0.5f;
-              var33 = var28 * (var30 + var32) - var27 * (var29 - var31);
-              var20_ref_float__[var17_int + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
-              var20_ref_float__[var4 - 1 - 2 * var26] = (-var30 + var32 + var33) * 0.5f;
-            }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26 + 1];
-              var20_ref_float__[var17_int - 1 - var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26];
-            }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
-            }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var26] = var20_ref_float__[var18_int + var26];
-            }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var18_int + var26] = -var20_ref_float__[var18_int - var26 - 1];
-            }
-            for (var26 = 0; var26 < var18_int; var26++) {
-              var20_ref_float__[var17_int + var26] = var20_ref_float__[var4 - var26 - 1];
-            }
-            for (var26 = var8; var26 < var9; var26++) {
-              var27 = (float)Math.sin(((double)(var26 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
-              field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
-            }
-            for (var26 = var11; var26 < var12; var26++) {
-              var27 = (float)Math.sin(((double)(var26 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
-              field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
-            }
             break;
+          }
+          for (var26 = 0; var26 < var17_int; var26++) {
+            var20_ref_float__[var26] = var20_ref_float__[2 * var26 + 1];
+          }
+          for (var26 = 0; var26 < var19; var26++) {
+            var20_ref_float__[var4 - 1 - 2 * var26] = var20_ref_float__[4 * var26];
+            var20_ref_float__[var4 - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 1];
+            var20_ref_float__[var4 - var18_int - 1 - 2 * var26] = var20_ref_float__[4 * var26 + 2];
+            var20_ref_float__[var4 - var18_int - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 3];
+          }
+          for (var26 = 0; var26 < var19; var26++) {
+            var27 = var23[2 * var26];
+            var28 = var23[2 * var26 + 1];
+            var29 = var20_ref_float__[var17_int + 2 * var26];
+            var30 = var20_ref_float__[var17_int + 2 * var26 + 1];
+            var31 = var20_ref_float__[var4 - 2 - 2 * var26];
+            var32 = var20_ref_float__[var4 - 1 - 2 * var26];
+            var33 = var28 * (var29 - var31) + var27 * (var30 + var32);
+            var20_ref_float__[var17_int + 2 * var26] = (var29 + var31 + var33) * 0.5f;
+            var20_ref_float__[var4 - 2 - 2 * var26] = (var29 + var31 - var33) * 0.5f;
+            var33 = var28 * (var30 + var32) - var27 * (var29 - var31);
+            var20_ref_float__[var17_int + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
+            var20_ref_float__[var4 - 1 - 2 * var26] = (-var30 + var32 + var33) * 0.5f;
+          }
+          for (var26 = 0; var26 < var18_int; var26++) {
+            var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26 + 1];
+            var20_ref_float__[var17_int - 1 - var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26];
+          }
+          for (var26 = 0; var26 < var18_int; var26++) {
+            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
+          }
+          for (var26 = 0; var26 < var18_int; var26++) {
+            var20_ref_float__[var26] = var20_ref_float__[var18_int + var26];
+          }
+          for (var26 = 0; var26 < var18_int; var26++) {
+            var20_ref_float__[var18_int + var26] = -var20_ref_float__[var18_int - var26 - 1];
+          }
+          for (var26 = 0; var26 < var18_int; var26++) {
+            var20_ref_float__[var17_int + var26] = var20_ref_float__[var4 - var26 - 1];
+          }
+          for (var26 = var8; var26 < var9; var26++) {
+            var27 = (float)Math.sin(((double)(var26 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
+            field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
+          }
+          for (var26 = var11; var26 < var12; var26++) {
+            var27 = (float)Math.sin(((double)(var26 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
+            field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
           }
         }
         var17 = null;

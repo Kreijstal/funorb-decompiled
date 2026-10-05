@@ -528,15 +528,15 @@ final class tb {
                   var10--;
                   continue;
                 }
-                if (var10 == 0) {
-                  var3 = 1;
-                  break L1;
-                }
-                var8[var9] = (byte)var2;
-                var9++;
-                var10--;
                 break;
               }
+              if (var10 == 0) {
+                var3 = 1;
+                break L1;
+              }
+              var8[var9] = (byte)var2;
+              var9++;
+              var10--;
             }
             while (var4 != var12) {
               var15 = var14;

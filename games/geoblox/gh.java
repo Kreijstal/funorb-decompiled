@@ -472,9 +472,9 @@ final class gh {
               stackIn_168_0 = vb.field_b;
               stackIn_168_1 = 1;
             }
-            ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, vb.field_f, 0);
             break;
           }
+          ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, vb.field_f, 0);
         }
         L48: {
           if (!this.field_Y) {

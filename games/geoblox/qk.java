@@ -373,19 +373,19 @@ class qk {
                 continue;
               }
             }
-            for (var6 = 0; var6 < 8; var6++) {
-              var7 = this.field_a[var6];
-              var8 = this.field_a;
-              var9 = var6;
-              this.field_b[var6] = null;
-              var8[var9] = null;
-              while (var7 != null) {
-                var10 = ((ia) (var7)).field_h;
-                ((ia) (var7)).field_h = null;
-                var7 = var10;
-              }
-            }
             break;
+          }
+          for (var6 = 0; var6 < 8; var6++) {
+            var7 = this.field_a[var6];
+            var8 = this.field_a;
+            var9 = var6;
+            this.field_b[var6] = null;
+            var8[var9] = null;
+            while (var7 != null) {
+              var10 = ((ia) (var7)).field_h;
+              ((ia) (var7)).field_h = null;
+              var7 = var10;
+            }
           }
         }
         if (this.field_u < 0) {

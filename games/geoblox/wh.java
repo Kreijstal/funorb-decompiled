@@ -844,12 +844,12 @@ abstract class wh extends rc {
                         stackIn_17_0 = 24;
                         stackIn_17_1 = var3_int;
                       }
-                      if (stackIn_17_0 <= stackIn_17_1) {
-                        throw new IOException();
-                      }
-                      decompiledRegionSelector0 = 0;
                       break;
                     }
+                    if (stackIn_17_0 <= stackIn_17_1) {
+                      throw new IOException();
+                    }
+                    decompiledRegionSelector0 = 0;
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L7: {

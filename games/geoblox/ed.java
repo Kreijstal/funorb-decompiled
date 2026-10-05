@@ -268,19 +268,19 @@ final class ed {
                   var15 += 128;
                   continue;
                 }
-                while (var14 < param0) {
-                  var16 = 0;
-                  for (var17 = var14 + var12 - param0; var17 < var12; var17++) {
-                    var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
-                  }
-                  for (var17 = 0; var17 < var13; var17++) {
-                    var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
-                  }
-                  field_f[var14] = var16;
-                  var11 = this.field_k.a(param0 + 1);
-                  var14++;
-                }
                 break;
+              }
+              while (var14 < param0) {
+                var16 = 0;
+                for (var17 = var14 + var12 - param0; var17 < var12; var17++) {
+                  var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
+                }
+                for (var17 = 0; var17 < var13; var17++) {
+                  var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
+                }
+                field_f[var14] = var16;
+                var11 = this.field_k.a(param0 + 1);
+                var14++;
               }
             }
           }
